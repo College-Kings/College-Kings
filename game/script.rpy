@@ -30,9 +30,9 @@ init python:
 
 default persistent.ep = 7
 
-default steam = False
+default steam = True
 
-default developer = True
+default developer = False
 
 define config.steam_appid = 1463120
 
@@ -503,6 +503,7 @@ jump phoneaa
 # The game starts here.
 
 label start:
+    show screen typoNotesOverlay
     $ addReplies()
     $ _game_menu_screen = "ingmenu"
     # Show a background. This uses a placeholder by default, but you can
