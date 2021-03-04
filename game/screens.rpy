@@ -233,7 +233,7 @@ screen choice(items, time=3):
         },
         1: {
             "background": "Right",
-            "pos": (1035, 907),
+            "pos": (1005, 907),
             "padding": (90, 21)
         },
         2: {
