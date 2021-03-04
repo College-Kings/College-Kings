@@ -1609,13 +1609,12 @@ label v07:
 
         label phoneam:
 
-            # if Kiwi wasn't opened:
-                # "(I should check out what Emily posted.)"
-                #jump phoneam
+            if kiwii_firstTime:
+                "(I should check out what Emily posted on Kiwii.)"
+                jump phoneam              
 
             if not rileyMessage1.reply:
                 "(I need to respond to some of these messages.)"
-
                 jump phoneam
 
             else:
