@@ -1,1 +1,11 @@
+game/cache
+game/fonts
+game/gui
+game/images
+game/music
+game/saves
+game/sounds
+game/tl
+
 *.rpyc
+*.zip
