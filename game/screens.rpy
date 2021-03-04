@@ -218,6 +218,7 @@ style input:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
+
 screen choice(items, time=3):
     image "gui/curves.png"
     style_prefix "choice"
@@ -226,27 +227,33 @@ screen choice(items, time=3):
 
     default menuButtonsConfig = {
         0: {
-            "background": "left",
+            "background": "Left",
             "pos": (210, 907),
             "padding": (50, 21)
         },
         1: {
-            "background": "right",
+            "background": "Right",
             "pos": (1035, 907),
             "padding": (90, 21)
         },
         2: {
-            "background": "top",
+            "background": "Top",
             "pos": (600, 780),
             "padding": (0, 21) # Centered
         }
     }
     
     for count, item in enumerate(items):
+        
+        ### Requires menu disable function from jwt.rpy
+        $ disabled = False
+        if "(disabled)" in item.caption:
+            $ disabled = True
+
         if count < len(menuButtonsConfig):
-            textbutton item.caption:
-                if " (disabled)" in item.caption:
-                    idle_background "gui/{}white.png".format(menuButtonsConfig[count]["background"])
+            textbutton item.caption.replace(" (disabled)", ""):
+                if disabled:
+                    background "gui/{}white.png".format(menuButtonsConfig[count]["background"])
                 else:
                     idle_background "gui/{}blue.png".format(menuButtonsConfig[count]["background"])
                     action [item.action, SetVariable("ischoice", False)]
