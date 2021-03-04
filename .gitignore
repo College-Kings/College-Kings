@@ -8,5 +8,16 @@ game/saves
 game/sounds
 game/tl
 
+lib/
+renpy/
+
+CollegeKings.py
+CollegeKings.sh
+gradle.properties.txt
+log.txt
+Stored Script.txt
+traceback.txt
+
 *.rpyc
 *.zip
+*.exe
