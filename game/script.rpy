@@ -13227,7 +13227,7 @@ label bo_bd:
     with dissolve
 
     au "Yeah, okay... whatever."
-
+    $ renpy.end_replay()
     scene s264 # you going back to your dorm
     with Fade (1,0,1)
 
