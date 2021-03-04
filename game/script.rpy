@@ -699,7 +699,7 @@ label phonea:
         "No":
             $ wt = 0
             jump aa_b
-            
+
     label aa_a:
         hide s14
         show s14a
