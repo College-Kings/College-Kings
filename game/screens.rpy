@@ -236,8 +236,8 @@ screen choice(items, time=3):
             "padding": (90, 21)
         },
         2: {
-            "background": "left",
-            "pos": (620, 780),
+            "background": "top",
+            "pos": (600, 780),
             "padding": (0, 21) # Centered
         }
     }
@@ -246,11 +246,11 @@ screen choice(items, time=3):
         if count < len(menuButtonsConfig):
             textbutton item.caption:
                 if " (disabled)" in item.caption:
-                    action NullAction()
+                    idle_background "gui/{}white.png".format(menuButtonsConfig[count]["background"])
                 else:
+                    idle_background "gui/{}blue.png".format(menuButtonsConfig[count]["background"])
                     action [item.action, SetVariable("ischoice", False)]
                 hover_background "gui/{}white.png".format(menuButtonsConfig[count]["background"])
-                idle_background "gui/{}blue.png".format(menuButtonsConfig[count]["background"])
                 pos menuButtonsConfig[count]["pos"]
                 padding  menuButtonsConfig[count]["padding"]
                 xysize (706, 104)
