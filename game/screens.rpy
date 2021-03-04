@@ -220,35 +220,43 @@ style input:
 
 screen choice(items, time=3):
     image "gui/curves.png"
-
     style_prefix "choice"
-
-
 
     timer 0.001 action SetVariable("ischoice", True)
 
-    hbox xpos 209 ypos 907 spacing -3:
-
-        for i in items:
-            if i == items[0]:
-                textbutton i.caption action [ i.action, SetVariable("ischoice", False) ]:
-                    hover_background "gui/leftwhite.png"
-                    idle_background "gui/leftblue.png"
-                    xpadding 50
-                    ypadding 21
-                    xsize 800
-                    text_size 40
-
-
-            else:
-                textbutton i.caption action [ i.action, SetVariable("ischoice", False) ]:
-                    hover_background "gui/rightwhite.png"
-                    idle_background "gui/rightblue.png"
-                    xpadding 90
-                    ypadding 21
-                    xsize 800
-                    text_size 40
-
+    default menuButtonsConfig = {
+        0: {
+            "background": "left",
+            "pos": (210, 907),
+            "padding": (50, 21)
+        },
+        1: {
+            "background": "right",
+            "pos": (1035, 907),
+            "padding": (90, 21)
+        },
+        2: {
+            "background": "left",
+            "pos": (620, 780),
+            "padding": (0, 21) # Centered
+        }
+    }
+    
+    for count, item in enumerate(items):
+        if count < len(menuButtonsConfig):
+            textbutton item.caption:
+                if " (disabled)" in item.caption:
+                    action NullAction()
+                else:
+                    action [item.action, SetVariable("ischoice", False)]
+                hover_background "gui/{}white.png".format(menuButtonsConfig[count]["background"])
+                idle_background "gui/{}blue.png".format(menuButtonsConfig[count]["background"])
+                pos menuButtonsConfig[count]["pos"]
+                padding  menuButtonsConfig[count]["padding"]
+                xysize (706, 104)
+                text_size 40
+                if count > 1:
+                    text_xalign 0.5
 
 
     if realkcttut == 1:
@@ -358,9 +366,6 @@ screen choice(items, time=3):
 
         timer time repeat False action [ Hide('countdown'), Jump("choicetimer") ]
         bar value AnimatedValue(0, time, time, time) at alpha_dissolve # assuming you're using the alpha_dissolve transform from the wiki
-
-
-
 
 style choicetuttext is text:
     font "fonts/OpenSans.ttf"
