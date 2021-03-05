@@ -2974,7 +2974,7 @@ screen thx():
     if steam == False:
         add "images/newthx.png"
     else:
-        add "images/newsteamend.png" # steam
+        add "images/newsteamend.jpg" # steam
 
     if steam == False:
         imagebutton:
@@ -2988,8 +2988,8 @@ screen thx():
         imagebutton:# steam
             ypos 677
             xpos 394
-            idle "images/get2.png"
-            hover "images/discordend.png"
+            idle "images/discordbutton1.png"
+            hover "images/discordbutton2.png"
             action OpenURL ("http://discord.collegekingsgame.com")
 
     textbutton "Main Menu":
