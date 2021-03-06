@@ -11,6 +11,8 @@ game/tl
 lib/
 renpy/
 
+game/unren-dev.rpy
+
 CollegeKings.py
 CollegeKings.sh
 errors.txt

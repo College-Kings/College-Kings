@@ -21,7 +21,7 @@ init python:
         laurenMessage20.addReply("Sure, I'll come pick you up", "larep20a")
         laurenMessage22.addReply("Sounds good, when were you thinking?", "larep22a")
         laurenMessage23.addReply("Sure, I'll come pick you up", "larep23a")
-        laurenMessage22.addReply("Sounds good, when were you thinking?", "larep25a")
+        laurenMessage25.addReply("Sounds good, when were you thinking?", "larep25a")
         laurenMessage25.addReply("Sorry, I can't I'm really busy today", "larep25b")
 
         emilyMessage3.addReply("Hey, sorry I lost track of time. You up?", "emrep3a")

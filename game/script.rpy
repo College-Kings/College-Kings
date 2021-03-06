@@ -503,7 +503,6 @@ jump phoneaa
 # The game starts here.
 
 label start:
-    show screen typoNotesOverlay
     $ addReplies()
     $ _game_menu_screen = "ingmenu"
     # Show a background. This uses a placeholder by default, but you can
