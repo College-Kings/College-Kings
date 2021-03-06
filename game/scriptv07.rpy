@@ -3810,7 +3810,7 @@ label v07:
     else:
 
         if joinapes == True:
-            u "(Pledging starts at soon, I told Grayson I'd join the Apes, but is that really the right call? I mean the Wolves party was sick...)"
+            u "(Pledging starts soon, I told Grayson I'd join the Apes, but is that really the right call? I mean the Wolves party was sick...)"
 
             u "(But in the Apes, I can finally be someone. I can be a winner. Grayson may have done some questionable shit in the past, but he also said a lot of stuff that resonated with me...)"
 
@@ -3839,7 +3839,7 @@ label v07:
                     jump pledgewolves
         else:
 
-            u "(Pledging starts at soon, I told Grayson I wouldn't join the Apes, but is that really the right call? I mean he did say some things that really resonated with me...)"
+            u "(Pledging starts soon, I told Grayson I wouldn't join the Apes, but is that really the right call? I mean he did say some things that really resonated with me...)"
 
             u "(I'm pretty sure their pledging is at the same time as the Wolves, so I might be able to just go to the Apes' house and tell Grayson I changed my mind.)"
 
@@ -18174,7 +18174,7 @@ label aSigns_2:
 
     cl "*Laughs* Hey!"
 
-    cl "I assure you it's cleaner than you're dorm."
+    cl "I assure you it's cleaner than your dorm."
 
     scene sfr4cl57c
     with dissolve
