@@ -43,3 +43,34 @@ define am = Character("Amber", who_color="#fc3158", who_outlines=[ (2, "#000000"
 define ki = Character("Kim", who_color="#fc3d39", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
 define ad = Character("Adam", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
 define co = Character("Counselor", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+#0.6
+define waiter = Character("Waiter", who_color="#5fc9f8", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+define host = Character("Host", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+define poet1 = Character("Lisa", who_color="#fc3158", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+define poet2 = Character("Martin", who_color="#fd9426", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+define poet3 = Character("Samantha", who_color="#147efb", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+define guya = Character("Peter", who_color="#5fc9f8", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+define guyb = Character("Harry", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+define finn = Character("Finn", who_color="#5fc9f8", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+define guyd = Character("Perry", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+define se = Character("Sebastian", who_color="#147efb", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+define guyc = Character("Marcus", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+define matt = Character("Matt", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+#0.7
+define cal = Character("Caleb", who_color="#83d81c", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ]) # Ape pledge
+define coop = Character("Cooper", who_color="#11af68", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ]) # Ape pledge
+define kai = Character("Kai", who_color="#1caedb", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ]) # Ape pledge
+
+define wes = Character("Wesley", who_color="#db6f1c", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ]) # Ape
+define par = Character("Parker", who_color="#a815f2", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ]) # Ape
+
+define rg1 = Character("Angelica", who_color="#db6f1c", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+define rg2 = Character("Elisa", who_color="#a815f2", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+
+define nerd = Character("Nerd", who_color="#147efb", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+define xav = Character("Xavier", who_color="#147efb", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+define jax = Character("Jaxon", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+
+define teach = Character("Teacher", who_color="#147efb", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+define class1 = Character("Class", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+define sa = Character("Samantha", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])

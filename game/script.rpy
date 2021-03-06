@@ -1,32 +1,4 @@
-
-
-init python:
-    achievement.register("open_wound")
-    achievement.register("no_hard_feelings")
-    achievement.register("keep_it_moving")
-    achievement.register("romeo")
-    achievement.register("big_mouth")
-    achievement.register("mixed_feelings")
-    achievement.register("the_notorious")
-    achievement.register("a_new_beginning")
-    achievement.register("over_it")
-    achievement.register("not_now_mom")
-    achievement.register("lips_dont_lie")
-    achievement.register("truth_hurts")
-    achievement.register("relight_the_fire")
-    achievement.register("rematch")
-    achievement.register("keen_eye")
-    achievement.register("on_the_low")
-    achievement.register("peta_public_enemy")
-    achievement.register("snitch")
-    achievement.register("bros_before_hoes")
-    achievement.register("monkey_business")
-    achievement.register("not_my_business")
-    achievement.register("reignition")
-    achievement.register("credulous")
-    achievement.register("seems_fishy")
-    achievement.register("strike")
-    achievement.sync()
+# steam and developer options
 
 default persistent.ep = 7
 
@@ -35,9 +7,6 @@ default steam = True
 default developer = True
 
 define config.steam_appid = 1463120
-
-
-default firstkisslauren = False
 
 #Splashscreen
 label splashscreen:
