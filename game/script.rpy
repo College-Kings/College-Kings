@@ -32,7 +32,7 @@ default persistent.ep = 7
 
 default steam = True
 
-default developer = False
+default developer = True
 
 define config.steam_appid = 1463120
 
