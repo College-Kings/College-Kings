@@ -84,7 +84,7 @@ init -1 python:
     achievement.register("ecstatic")
     achievement.register("homecomingqueen")
     achievement.register("lee_way")
-    achievement.register("playing_with_fire	")
+    achievement.register("playing_with_fire")
     achievement.register("silverback")
     achievement.register("slow_and_steady")
     achievement.register("true_to_self")
