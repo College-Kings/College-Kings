@@ -1,44 +1,5 @@
-<<<<<<< HEAD
+
 # steam and developer options
-=======
-
-
-init python:
-    achievement.register("open_wound")
-    achievement.register("no_hard_feelings")
-    achievement.register("keep_it_moving")
-    achievement.register("romeo")
-    achievement.register("big_mouth")
-    achievement.register("mixed_feelings")
-    achievement.register("the_notorious")
-    achievement.register("a_new_beginning")
-    achievement.register("over_it")
-    achievement.register("not_now_mom")
-    achievement.register("lips_dont_lie")
-    achievement.register("truth_hurts")
-    achievement.register("relight_the_fire")
-    achievement.register("rematch")
-    achievement.register("keen_eye")
-    achievement.register("on_the_low")
-    achievement.register("peta_public_enemy")
-    achievement.register("snitch")
-    achievement.register("bros_before_hoes")
-    achievement.register("monkey_business")
-    achievement.register("not_my_business")
-    achievement.register("reignition")
-    achievement.register("credulous")
-    achievement.register("seems_fishy")
-    achievement.register("strike")
-    achievement.register("ecstatic")
-    achievement.register("homecomingqueen")
-    achievement.register("lee_way")
-    achievement.register("playing_with_fire	")
-    achievement.register("silverback")
-    achievement.register("slow_and_steady")
-    achievement.register("true_to_self")
-    achievement.register("wolfpack")
-    achievement.sync()
->>>>>>> 16be704a21f694ab229dc9e327d886ecf4632bb1
 
 default persistent.ep = 7
 
