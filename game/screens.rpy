@@ -483,7 +483,7 @@ screen ingmenu():
 
                 hbox:
                     xalign 0.5
-                    yalign 0.1
+                    yalign 0.02
                     text "Save name: "
                     frame:
                         ymaximum 50
@@ -614,7 +614,7 @@ screen ingmenu():
 
             hbox:
                 xalign 0.5
-                yalign 0.1
+                yalign 0.05
                 text "Save name: "
                 frame:
                     ymaximum 50
