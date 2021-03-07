@@ -260,7 +260,7 @@ screen choice(items, time=3):
                 hover_background "gui/{}white.png".format(menuButtonsConfig[count]["background"])
                 pos menuButtonsConfig[count]["pos"]
                 padding  menuButtonsConfig[count]["padding"]
-                xysize (706, 104)
+                xysize (800, 104)
                 text_size 40
                 if count > 1:
                     text_xalign 0.5
@@ -2986,8 +2986,8 @@ screen thx():
 
     else:
         imagebutton:# steam
-            ypos 677
-            xpos 394
+            ypos 700
+            xalign 0.5
             idle "images/discordbutton1.png"
             hover "images/discordbutton2.png"
             action OpenURL ("http://discord.collegekingsgame.com")
