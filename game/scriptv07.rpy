@@ -14435,7 +14435,7 @@ label aSigns_2:
     scene sfr4pe21
     with dissolve
 
-    pe "We should this again sometime."
+    pe "We should do this again sometime."
 
     scene sfr4pe21a
     with dissolve

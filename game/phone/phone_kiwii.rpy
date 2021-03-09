@@ -484,7 +484,7 @@ label kiwii_firstTime:
     play sound "sounds/vibrate.mp3"
     if emilyrs:
         $ contact_Riley.newMessage(rileyMessage3)
-    if bowling:
+    if bowling and emilyrs:
         $ contact_Penelope.newMessage(penelopeMessage4)
     if emilyrs and laurenrs:
         $ contact_Lauren.newMessage(laurenMessage15)
