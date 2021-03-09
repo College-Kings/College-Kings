@@ -12916,7 +12916,7 @@ label bo_bd:
     scene anew6
     with dissolve
 
-    au "You have a nice cock, I could get used this."
+    au "You have a nice cock, I could get used to this."
 
 
     scene anew6b

@@ -217,7 +217,6 @@ screen kiwiiTemplate():
         button:
             xysize(56, 55)
             pos (932, 845)
-            # hover_background "#00640080"
             action Show("kiwiiApp")
 
         button:
@@ -228,7 +227,6 @@ screen kiwiiTemplate():
         button:
             xysize(30, 30)
             pos (1085, 870)
-            # background "#00640080"
             action Show("kiwiiPreferences")
 
         button:
@@ -258,8 +256,6 @@ screen kiwiiPreferences():
                 if count > 0:
                     action SetVariable("count", count - 1)
                 text_style "kiwii_PrefTextButton"
-
-            # text "{}".format(count)
 
             textbutton ">":
                 if count + 1 < len(profilePictures):
