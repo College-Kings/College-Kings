@@ -3856,37 +3856,12 @@ label v07:
 
                 "Pledge to the Apes":
 
-                    $ silverback = True
-                    if steam == False:
-                        image silverback = "images/silverback.png"
-                        show silverback:
-                            xpos 0
-                            ypos -200
-                            linear 0.5 xpos 0 ypos 0
-                            pause 2.0
-                            linear 0.5 xpos 0 ypos -200
-                    else:
-                        $ achievement.grant("silverback")
-                        $ achievement.sync()
-
                     u "(Fuck it. I'm gonna be winner, no matter what it costs. I'ma go to the Apes' house and tell Grayson I changed my mind.)"
 
                     jump pledgeapes
 
 
                 "Pledge to the Wolves":
-                    $ wolfpack = True
-                    if steam == False:
-                        image wolfpack = "images/wolfpack.png"
-                        show wolfpack:
-                            xpos 0
-                            ypos -200
-                            linear 0.5 xpos 0 ypos 0
-                            pause 2.0
-                            linear 0.5 xpos 0 ypos -200
-                    else:
-                        $ achievement.grant("wolfpack")
-                        $ achievement.sync()
 
                     u "(Nah, Grayson's done more than enough questionable shit. The Wolves been nothing but good to me. I'ma pledge to the Wolves.)"
 
@@ -3898,6 +3873,18 @@ label v07:
     $ contact_Autumn.unlock()
     $ addPoint("bro", 1)
     $ joinwolves = True
+    $ wolfpack = True
+    if steam == False:
+        image wolfpack = "images/wolfpack.png"
+        show wolfpack:
+            xpos 0
+            ypos -200
+            linear 0.5 xpos 0 ypos 0
+            pause 2.0
+            linear 0.5 xpos 0 ypos -200
+    else:
+        $ achievement.grant("wolfpack")
+        $ achievement.sync()
 
     scene s756 # Camera - third person, MC walking through town during evening wearing jeans
     with fade
@@ -5085,6 +5072,19 @@ label v07:
     $ contact_Autumn.unlock()
     $ addPoint("tm", 3) # I think more TM points for joining the Apes makes sense
     $ joinwolves = False
+    $ silverback = True
+    if steam == False:
+        image silverback = "images/silverback.png"
+        show silverback:
+            xpos 0
+            ypos -200
+            linear 0.5 xpos 0 ypos 0
+            pause 2.0
+            linear 0.5 xpos 0 ypos -200
+    else:
+        $ achievement.grant("silverback")
+        $ achievement.sync()
+
 
     scene s756 # Not a new render
     with fade
