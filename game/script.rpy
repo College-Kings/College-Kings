@@ -37,7 +37,6 @@ label splashscreen:
 
 ###########
 ###########
-hujglkjlkjhkljhkljhkljhkljhkljhkljhkljhkljh
 
 
 
