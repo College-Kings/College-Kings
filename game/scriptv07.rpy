@@ -1,100 +1,3 @@
-default follownora = False
-default noraclose = True
-default rileyrs = False
-default kiwii = False
-default penelopemad = False
-default tellpenelope = False
-default laurenemily = 0
-default politics = False
-default protest = False
-default signs = False
-default seenlauren = False
-default laurenimre= False
-default beachfirstkiss = False
-default tasks = 0
-default stoodUpToCam = False
-default punchedCam = False
-default cameronSisNumber = False # Cameron's little sister's number
-default apesTask1 = False # Cameron telling MC to call Chloe
-default wolvesTask1 = False
-default wolvesTask2 = False
-default wolvesTask3 = False
-default wolvesTask4 = False
-default madeFunOfLee = False
-default apesTask2Try = False
-default apesTask2Success = False
-default joinwolves = True
-default fr4chloe = False
-default fr4ryan = False
-default fr4aubrey = False
-default fr4riley = False
-default fr4aaron = False
-default fr4cameron = False
-default fr4mason = False
-default fr4elijah = False
-default fr4nora = False
-default fr4nora2 = False
-default fr4chris = False
-default fr4lauren = False
-default fr4msrose = False
-default fr4penelope = False
-default fr4imre = False
-default fr4grayson = False
-default fr4emily = False
-default fr4samantha = False
-default preventgrayson = False
-default penelopesextoys = False
-default penelopetruths = 0
-default apesVids = 0
-default cop = False
-default bathroomblowjob = False
-default ryandefendchloe = False
-default focusonlauren = False
-default chloesad = False
-default lockerroomchloe = False
-default fr4noriley = False
-default fr4chloe2 = False
-default rileysex = False
-default ending = "riley"
-default chloers = False
-default amberrs = False
-default penelopers = False
-default walkedRileyHome = False
-default amberEcstasyOffer = False # Whether Amber asked you to join her
-default hcGirl = "na"
-default hcAsked = [] # hcAsked.append("girl_name") to add
-default consoledSam = False
-default emilyText = False
-default laurenpt = 0
-
-default ecstatic = False
-default homecomingqueen = False
-default leeway = False
-default playingwithfire = False
-default silverback = False
-default slowandsteady = False
-default truetoself = False
-default wolfpack = False
-
-default nobeach = False
-
-define cal = Character("Caleb", who_color="#83d81c", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ]) # Ape pledge
-define coop = Character("Cooper", who_color="#11af68", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ]) # Ape pledge
-define kai = Character("Kai", who_color="#1caedb", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ]) # Ape pledge
-
-define wes = Character("Wesley", who_color="#db6f1c", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ]) # Ape
-define par = Character("Parker", who_color="#a815f2", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ]) # Ape
-
-define rg1 = Character("Angelica", who_color="#db6f1c", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
-define rg2 = Character("Elisa", who_color="#a815f2", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
-
-define nerd = Character("Nerd", who_color="#147efb", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
-define xav = Character("Xavier", who_color="#147efb", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
-define jax = Character("Jaxon", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
-
-define teach = Character("Teacher", who_color="#147efb", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
-define class1 = Character("Class", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
-define sa = Character("Samantha", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
 
 label after_load:
     $ addReplies()
@@ -3907,7 +3810,7 @@ label v07:
     else:
 
         if joinapes == True:
-            u "(Pledging starts at soon, I told Grayson I'd join the Apes, but is that really the right call? I mean the Wolves party was sick...)"
+            u "(Pledging starts soon, I told Grayson I'd join the Apes, but is that really the right call? I mean the Wolves party was sick...)"
 
             u "(But in the Apes, I can finally be someone. I can be a winner. Grayson may have done some questionable shit in the past, but he also said a lot of stuff that resonated with me...)"
 
@@ -3936,7 +3839,7 @@ label v07:
                     jump pledgewolves
         else:
 
-            u "(Pledging starts at soon, I told Grayson I wouldn't join the Apes, but is that really the right call? I mean he did say some things that really resonated with me...)"
+            u "(Pledging starts soon, I told Grayson I wouldn't join the Apes, but is that really the right call? I mean he did say some things that really resonated with me...)"
 
             u "(I'm pretty sure their pledging is at the same time as the Wolves, so I might be able to just go to the Apes' house and tell Grayson I changed my mind.)"
 
@@ -3953,37 +3856,12 @@ label v07:
 
                 "Pledge to the Apes":
 
-                    $ silverback = True
-                    if steam == False:
-                        image silverback = "images/silverback.png"
-                        show silverback:
-                            xpos 0
-                            ypos -200
-                            linear 0.5 xpos 0 ypos 0
-                            pause 2.0
-                            linear 0.5 xpos 0 ypos -200
-                    else:
-                        $ achievement.grant("silverback")
-                        $ achievement.sync()
-
                     u "(Fuck it. I'm gonna be winner, no matter what it costs. I'ma go to the Apes' house and tell Grayson I changed my mind.)"
 
                     jump pledgeapes
 
 
                 "Pledge to the Wolves":
-                    $ wolfpack = True
-                    if steam == False:
-                        image wolfpack = "images/wolfpack.png"
-                        show wolfpack:
-                            xpos 0
-                            ypos -200
-                            linear 0.5 xpos 0 ypos 0
-                            pause 2.0
-                            linear 0.5 xpos 0 ypos -200
-                    else:
-                        $ achievement.grant("wolfpack")
-                        $ achievement.sync()
 
                     u "(Nah, Grayson's done more than enough questionable shit. The Wolves been nothing but good to me. I'ma pledge to the Wolves.)"
 
@@ -3995,6 +3873,18 @@ label v07:
     $ contact_Autumn.unlock()
     $ addPoint("bro", 1)
     $ joinwolves = True
+    $ wolfpack = True
+    if steam == False:
+        image wolfpack = "images/wolfpack.png"
+        show wolfpack:
+            xpos 0
+            ypos -200
+            linear 0.5 xpos 0 ypos 0
+            pause 2.0
+            linear 0.5 xpos 0 ypos -200
+    else:
+        $ achievement.grant("wolfpack")
+        $ achievement.sync()
 
     scene s756 # Camera - third person, MC walking through town during evening wearing jeans
     with fade
@@ -5182,6 +5072,19 @@ label v07:
     $ contact_Autumn.unlock()
     $ addPoint("tm", 3) # I think more TM points for joining the Apes makes sense
     $ joinwolves = False
+    $ silverback = True
+    if steam == False:
+        image silverback = "images/silverback.png"
+        show silverback:
+            xpos 0
+            ypos -200
+            linear 0.5 xpos 0 ypos 0
+            pause 2.0
+            linear 0.5 xpos 0 ypos -200
+    else:
+        $ achievement.grant("silverback")
+        $ achievement.sync()
+
 
     scene s756 # Not a new render
     with fade
@@ -14532,7 +14435,7 @@ label aSigns_2:
     scene sfr4pe21
     with dissolve
 
-    pe "We should this again sometime."
+    pe "We should do this again sometime."
 
     scene sfr4pe21a
     with dissolve
@@ -15608,7 +15511,7 @@ label aSigns_2:
 
             ri "I just feel like we could be doing much more fun things."
 
-            ri "I'm sure you're date would understand if you'd let her know you had to leave early..."
+            ri "I'm sure your date would have understood if you had let her known you had to leave early..."
 
             scene sfr4ri51c
             with dissolve
@@ -15675,7 +15578,7 @@ label aSigns_2:
 
             ri "I'd just rather hang out with a friend."
 
-            ri "I'm sure you're date would understand if you'd let her know you had to leave early..."
+            ri "I'm sure your date would have understood if you had let her known you had to leave early..."
 
             scene sfr4ri51a
             with dissolve
@@ -18271,7 +18174,7 @@ label aSigns_2:
 
     cl "*Laughs* Hey!"
 
-    cl "I assure you it's cleaner than you're dorm."
+    cl "I assure you it's cleaner than your dorm."
 
     scene sfr4cl57c
     with dissolve
