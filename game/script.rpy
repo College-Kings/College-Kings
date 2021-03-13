@@ -2131,7 +2131,7 @@ label phonea:
         call screen phone
 
         label phonef:
-        if not laurenMessage2.reply: # Edited
+        if contact_Lauren.replies: # Edited
             scene s61
             with dissolve
             imre "Did you ask?"
@@ -3843,7 +3843,7 @@ label av_b:
 
     label phoneg:
     label repeata:
-    if not ryanMessage1.reply:
+    if contact_Ryan.replies:
 
         u "(I should really check who texted me.)"
 
@@ -5457,7 +5457,7 @@ label fr2end:
 
         $ temp_MessageNot = True
         $ phoneexit = "phoneo"
-        if not laurenMessage4.reply:
+        if contact_Lauren.replies:
             $ contact_Lauren.newMessage("Hello?? Can we please talk today?")
             $ contact_Lauren.addReply("Yeah, SV cafe in 20 mins?", "larep8a")
             $ contact_Lauren.addReply("Sorry, I can't", "larep8b")
@@ -5474,7 +5474,7 @@ label fr2end:
         scene s96g
         with dissolve
 
-        if not laurenMessage8a.reply and not laurenMessage8b.reply:
+        if contact_Lauren.replies:
             u "(Damn, my phone's blowing up. I should probably check my messages.)"
 
             jump repeatb
@@ -8113,11 +8113,11 @@ label bo_bd:
     u "(Oh , I just got a message.)"
     label phoneq:
     label repeatc:
-    if aubreyMessage2.reply == False:
+    if contact_Aubrey.replies:
         u "(I should check my messages.)"
         jump repeatc
 
-    elif not aubreyMessage7.reply:
+    elif contact_Aubrey.replies:
         u "(I should really reply to Aubrey.)"
         jump repeatc
 
@@ -8300,7 +8300,7 @@ label bo_bd:
     label phoner:
     label repeatg:
 
-    if not aubreyMessage8.reply:
+    if contact_Aubrey.replies:
 
         u "(Aubrey's waiting for me, I need to let her know whether I'm coming or not.)"
 
@@ -11993,9 +11993,9 @@ label bo_bd:
                 label repeatk:
                 label phones:
 
-                if not aubreyMessage14.reply and not aubreyMessage14a.reply and not aubreyMessage14b.reply:
+                if contact_Aubrey.replies:
 
-                    if not msgApp.notification:
+                    if msgApp.notification:
 
                         u "(I should really reply to Aubrey.)"
 
@@ -12217,7 +12217,7 @@ label bo_bd:
             label repeatl:
             label phonet:
 
-            if not aubreyMessage14.reply and not aubreyMessage14a.reply and not aubreyMessage14b.reply:
+            if contact_Aubrey.replies:
 
                 if not msgApp.notification:
 
@@ -12500,7 +12500,7 @@ label bo_bd:
         label repeatm:
         label phoneu:
 
-        if not aubreyMessage14.reply and not aubreyMessage14a.reply and not aubreyMessage14b.reply:
+        if contact_Aubrey.replies:
 
             if not msgApp.notification:
 
@@ -15852,7 +15852,7 @@ label bo_bd:
     call screen messager(contact_Chloe)
     label phonev:
 
-    if not chloeMessage3.reply:
+    if contact_Chloe.replies:
         $ showphone = True
         u "(I should message Chloe about meeting up later.)"
 
@@ -17183,7 +17183,7 @@ label bo_bd:
 
     label phonew:
 
-    if not joshMessage8.reply:
+    if conatct_Josh.replies:
 
         u "(I should probably reply to my messages.)"
 
@@ -17191,7 +17191,7 @@ label bo_bd:
 
     else:
 
-        if joshMessage14.reply == "I can't, sorry.":
+        if contact_Josh.messages[-1].reply == "I can't, sorry.":
 
             u "(Fucking hell, I forgot how persistent Josh could be...)"
             $ showphone = False
@@ -17238,7 +17238,7 @@ label bo_bd:
 
     jo "What's up, bro?"
 
-    if joshMessage12.reply:
+    if contact_Josh.replie:
 
         jo "Picture of Amber did it, eh?"
 
@@ -18846,7 +18846,7 @@ label bo_bd:
 
     else:
 
-        if joshMessage14.reply == "I can't, sorry.":
+        if contact_Josh.messages[-1].reply == "I can't, sorry.":
             $ contact_Amber.newMessage("Hey, it's Amber")
             $ contact_Amber.newMessage("Josh gave me your number")
             $ contact_Amber.newMessage("How come you didn't show up yesterday? Everything okay? xx")
@@ -18875,7 +18875,7 @@ label bo_bd:
 
         label phonex:
 
-        if laurenMessage13.reply:
+        if contact_Lauren.replies:
 
             $ showphone = False
             u "(Time to get ready.)"

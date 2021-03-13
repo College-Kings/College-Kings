@@ -1516,20 +1516,20 @@ label v07:
                 "(I should check out what Emily posted on Kiwii.)"
                 jump phoneam              
 
-            if not rileyMessage1.reply:
+            if contact_Riley.replies:
                 "(I need to respond to some of these messages.)"
                 jump phoneam
 
             else:
 
                 if bowling == True:
-                    if not penelopeMessage4.reply:
+                    if contact_Penelope.replies:
                         "(I should answer Penelope.)"
                         jump phoneam
 
                 if laurenrs == True:
 
-                    if not laurenMessage17.reply:
+                    if contact_Lauren.replies:
                         "(I should respond to Lauren.)"
 
                         jump phoneam
@@ -1776,7 +1776,7 @@ label v07:
 
 
         label phonean:
-        if not rileyMessage7.reply:
+        if contact_Riley.replies:
             u "(I should respond to Riley.)"
             jump phonean
         else:
@@ -2835,7 +2835,7 @@ label v07:
 
         label phoneao:
 
-        if not laurenMessage20.reply and not laurenMessage19.reply and not laurenMessage23.reply and not laurenMessage25.reply:
+        if contact_Lauren.replies:
 
             u "(I should probably reply.)"
 
@@ -5850,7 +5850,7 @@ label v07:
 
                 label phonebb:
 
-                if not emilyMessage3.reply:
+                if contact_Emily.replies:
 
                     u "(I should text Emily that I lost track of time.)"
 
@@ -9429,7 +9429,7 @@ if rileyrs:
 
     label rtnow:
 
-    if not rileyMessage8.reply:
+    if contact_Riley.replies:
         u "(I should check my messages.)"
         jump rtnow
     elif rileysex:
@@ -9818,7 +9818,7 @@ label risex: # Riley sex scene
     $ showphone = True
 
     label phoneba:
-    if not autumnMessage3.reply:
+    if contact_Autumn.replies:
         u "(I should probably check my messages.)"
 
         jump phoneba
