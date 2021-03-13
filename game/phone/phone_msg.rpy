@@ -6,19 +6,37 @@ init python:
             self.newMessages = newMessages
             self.locked = locked
             self.messages = []
+            self.replies = []
             contacts.append(self)
 
         def newMessage(self, message):
+            message = Message(self, message)
             self.newMessages = True
-            msgApp.newNotification()
-            contacts.insert(0, contacts.pop(contacts.index(self)))
+            contacts.insert(0, contacts.pop(contacts.index(self))) # Moves contact to the top when recieving a new message
             if message not in self.messages:
                 self.messages.append(message)
+
+        def newImgMessage(self, img):
+            message = ImageMessage(self, img)
+            self.newMessages = True
+            contacts.insert(0, contacts.pop(contacts.index(self))) # Moves contact to the top when recieving a new message
+            if message not in self.messages:
+                self.messages.append(message)
+
+        def addReply(self, message, label):
+            reply = Reply(message, label)
+            self.replies.append(reply)
+            self.newMessages = True
 
         def seenMessage(self):
             self.newMessages = False
             if not any([contact.newMessages for contact in contacts]):
                 msgApp.seenNotification()
+
+        def selectedReply(self, reply):
+            self.messages.append(reply)
+            self.messages[-1].reply = reply
+            self.replies = []
 
         def unlock(self):
             self.locked = False
@@ -27,37 +45,27 @@ init python:
         def __init__(self, contact, msg):
             self.contact = contact
             self.msg = msg
-            self.replies = []
-            self.reply = False
-            tempMessages.append(self)
+            self.reply = None
 
-        def addReply(self, reply, label):
-            reply = [reply, label]
-            if reply not in self.replies and not self.reply:
-                self.replies.append(reply)
-
-        def selectedReply(self, reply):
-            self.reply = reply[0]
-            self.replies = []
-
-    class ImageMessage(Message):
+    class ImageMessage():
         def __init__(self, contact, image):
             self.contact = contact
             self.image = image
-            self.replies = []
-            self.reply = False
-            tempMessages.append(self)
+
+    class Reply:
+        def __init__(self, message, label):
+            self.message = message
+            self.label = label
 
 init offset = -1
 default contacts = []
-default tempMessages = []
 
 screen contactsscreen():
     tag phoneTag
 
     use phoneTemplate:
 
-        add "images/contactsscreen.png" at truecenter
+        add "images/contactsscreen.png" at truecenter ## Contact Screen Background
 
         fixed:
             xysize(375, 78)
@@ -80,9 +88,10 @@ screen contactsscreen():
 
                         add contact.profilePicture yalign 0.5 xpos 20
                         text contact.name style "nametext" yalign 0.5 xpos 100
-                        # text "{}".format(contact.newMessages) style "nametext" yalign 0.5 xpos 275
-                        if contact.newMessages or (contact.messages and contact.messages[-1].replies):
+
+                        if contact.newMessages: # or (contact.messages and contact.messages[-1].replies)
                             add "images/contactmsgnot.png" yalign 0.5 xpos 275
+
                         imagebutton:
                             idle "images/contactbutton.png" align(0.5, 0.5)
                             action [Function(renpy.retain_after_load), Show("messager", contact=contact)]
@@ -97,7 +106,7 @@ screen messager(contact=None):
 
     use phoneTemplate:
 
-        add "images/msg.png" at truecenter
+        add "images/msg.png" at truecenter ## Messenger Screen Background
 
         fixed:
             xysize(374, 112)
@@ -128,38 +137,32 @@ screen messager(contact=None):
                             idle message.image
                             style "msgleft"
                             action Show("phone_image", img=message.image)
-                    elif message.msg: # <---
+                    elif isinstance(message, Message):
                         textbutton message.msg style "msgleft"
-                    if message.reply:
-                        textbutton message.reply style "msgright"
+                    elif isinstance(message, Reply):
+                        textbutton message.message style "msgright"
 
-        if contact.messages:
-            if contact.messages[-1].replies:
+        if contact.replies:
                 hbox:
                     xalign 0.5
                     ypos 855
 
                     textbutton "Reply":
                         style "replybox"
-                        action Show("reply", message=contact.messages[-1])
+                        action Show("reply", contact=contact)
 
-    if kiwii == True:
+    if kiwii:
         timer 0.1 action Show ("popup19")
 
 
-
-
-screen reply(message=None):
-
-    python:
-        yadj.value = yadjValue
+screen reply(contact=None):
 
     vbox xpos 1200 yalign 0.84 spacing 15:
 
-        for reply in message.replies:
-            textbutton reply[0]:
+        for reply in contact.replies:
+            textbutton reply.message:
                 style "replies_style"
-                action [Hide("reply"), Hide("messager"), Function(message.selectedReply, reply), Jump(reply[1])]
+                action [Hide("reply"), Hide("messager"), Function(contact.selectedReply, reply), Call(reply.label)]
 
 
 screen phone_image(img=None):

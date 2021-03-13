@@ -1,8 +1,3 @@
-
-label after_load:
-    $ addReplies()
-    return
-
 label emrep4a:
 call screen messager(contact_Emily)
 
@@ -1427,7 +1422,8 @@ label v07:
         play sound "sounds/vibrate.mp3"
         $ phoneexit = "phoneam"
         $ contact_Riley.unlock()
-        $ contact_Riley.newMessage(rileyMessage1)
+        $ contact_Riley.newMessage("Are you and Emily back together?")
+        $ contact_Riley.addReply("What are you talking about???", "rirep1a")
         pause 0.5
 
         scene s713b # mc looks at his phone
@@ -1440,7 +1436,7 @@ label v07:
         call screen messager(contact_Riley)
 
         label rirep1a:
-        $ contact_Riley.newMessage(rileyMessage2)
+        $ contact_Riley.newMessage("Check Kiwii...")
         $ kiwii = True
         call screen messager(contact_Riley)
 
@@ -1455,30 +1451,34 @@ label v07:
         call screen phone # this comes before opening kiwii
 
         label rirep3a:
-        $ contact_Riley.newMessage(rileyMessage4)
+        $ contact_Riley.newMessage("Okay... just looked like it")
+        $ contact_Riley.addReply("Well we're not.", "rirep4a")
         call screen messager(contact_Riley)
 
         label rirep4a:
-        $ contact_Riley.newMessage(rileyMessage5)
+        $ contact_Riley.newMessage("k")
         call screen messager(contact_Riley)
 
         label perep4a:
         $ addPoint("bro", 1)
-        $ contact_Penelope.newMessage(penelopeMessage5)
+        $ contact_Penelope.newMessage("Okay...")
         $ tellpenelope = True
         call screen messager(contact_Penelope)
 
         label perep4b:
         $ tellpenelope = False
-        $ contact_Penelope.newMessage(penelopeMessage5)
+        $ contact_Penelope.newMessage("Okay...")
         call screen messager(contact_Penelope)
 
         label larep16a:
-        $ contact_Lauren.newMessage(laurenMessage17)
+        $ contact_Lauren.newMessage("What is there to talk about? How could you betray me like that?!")
+        $ contact_Lauren.addReply("Please, it's just a big misunderstanding", "larep17a")
+
         call screen messager(contact_Lauren)
 
         label larep17a:
-        $ contact_Lauren.newMessage(laurenMessage18)
+        $ contact_Lauren.newMessage("Fine. I'm in my dorm, we can talk now.")
+
         call screen messager(contact_Lauren)
 
         label KiwiiPost1_reply1:
@@ -1752,7 +1752,8 @@ label v07:
         play sound "sounds/vibrate.mp3"
         $ phoneexit = "phoneam"
         $ contact_Riley.unlock()
-        $ contact_Riley.newMessage(rileyMessage6)
+        $ contact_Riley.newMessage("Hey, how come you're not on Kiwii?")
+        $ contact_Riley.addReply("What's that?", "rirep6a")
         $ phoneexit = "phonean"
 
         pause 0.5
@@ -1765,7 +1766,8 @@ label v07:
         jump phonean
 
         label rirep6a:
-        $ contact_Riley.newMessage(rileyMessage7)
+        $ contact_Riley.newMessage("It's a new social media app, you should give it a try")
+        $ contact_Riley.addReply("Okay, I'll have a look", "rirep7a")
         call screen messager(contact_Riley)
 
         label rirep7a:
@@ -2810,19 +2812,24 @@ label v07:
 
             if laurenrs == True:
 
-                $ contact_Lauren.newMessage(laurenMessage20)
+                $ contact_Lauren.newMessage("Wanna go now babe?")
+                $ contact_Lauren.addReply("Sure, I'll come pick you up", "larep20a")
 
             else:
 
-                $ contact_Lauren.newMessage(laurenMessage19)
+                $ contact_Lauren.newMessage("Wanna go now?")
+                $ contact_Lauren.addReply("Sure, I'll come pick you up", "larep19a")
 
         else:
 
-            $ contact_Lauren.newMessage(laurenMessage21)
+            $ contact_Lauren.newMessage("Hey :)")
             if laurenrs:
-                $ contact_Lauren.newMessage(laurenMessage22)
+                $ contact_Lauren.newMessage("You wanna go to the beach today?")
+                $ contact_Lauren.addReply("Sounds good, when were you thinking?", "larep22a")
             else:
-                $ contact_Lauren.newMessage(laurenMessage25)
+                $ contact_Lauren.newMessage("You wanna go to the beach today?")
+                $ contact_Lauren.addReply("Sounds good, when were you thinking?", "larep25a")
+                $ contact_Lauren.addReply("Sorry, I can't I'm really busy today", "larep25b")
 
         " "
 
@@ -2848,28 +2855,31 @@ label v07:
             jump beachlauren
 
         label larep19a:
-            $ contact_Lauren.newMessage(laurenMessage24)
+            $ contact_Lauren.newMessage("Great :)")
             call screen messager(contact_Lauren)
 
         label larep20a:
-            $ contact_Lauren.newMessage(laurenMessage24)
+            $ contact_Lauren.newMessage("Great :)")
             call screen messager(contact_Lauren)
 
         label larep22a:
-            $ contact_Lauren.newMessage(laurenMessage23)
+            $ contact_Lauren.newMessage("How about now?")
+            $ contact_Lauren.addReply("Sure, I'll come pick you up", "larep23a")
             call screen messager(contact_Lauren)
 
         label larep23a:
-            $ contact_Lauren.newMessage(laurenMessage24)
+            $ contact_Lauren.newMessage("Great :)")
             call screen messager(contact_Lauren)
 
         label larep25a:
-            $ contact_Lauren.newMessage(laurenMessage23)
+            $ contact_Lauren.newMessage("How about now?")
+            $ contact_Lauren.addReply("Sure, I'll come pick you up", "larep23a")
             call screen messager(contact_Lauren)
 
         label larep25b:
             $ nobeach = True
-            $ contact_Lauren.newMessage(laurenMessage26)
+            $ contact_Lauren.newMessage("Oh okay, another time then.")
+
             call screen messager(contact_Lauren)
 
 
@@ -3810,7 +3820,7 @@ label v07:
     else:
 
         if joinapes == True:
-            u "(Pledging starts soon, I told Grayson I'd join the Apes, but is that really the right call? I mean the Wolves party was sick...)"
+            u "(Pledging starts at soon, I told Grayson I'd join the Apes, but is that really the right call? I mean the Wolves party was sick...)"
 
             u "(But in the Apes, I can finally be someone. I can be a winner. Grayson may have done some questionable shit in the past, but he also said a lot of stuff that resonated with me...)"
 
@@ -3839,7 +3849,7 @@ label v07:
                     jump pledgewolves
         else:
 
-            u "(Pledging starts soon, I told Grayson I wouldn't join the Apes, but is that really the right call? I mean he did say some things that really resonated with me...)"
+            u "(Pledging starts at soon, I told Grayson I wouldn't join the Apes, but is that really the right call? I mean he did say some things that really resonated with me...)"
 
             u "(I'm pretty sure their pledging is at the same time as the Wolves, so I might be able to just go to the Apes' house and tell Grayson I changed my mind.)"
 
@@ -3856,12 +3866,37 @@ label v07:
 
                 "Pledge to the Apes":
 
+                    $ silverback = True
+                    if steam == False:
+                        image silverback = "images/silverback.png"
+                        show silverback:
+                            xpos 0
+                            ypos -200
+                            linear 0.5 xpos 0 ypos 0
+                            pause 2.0
+                            linear 0.5 xpos 0 ypos -200
+                    else:
+                        $ achievement.grant("silverback")
+                        $ achievement.sync()
+
                     u "(Fuck it. I'm gonna be winner, no matter what it costs. I'ma go to the Apes' house and tell Grayson I changed my mind.)"
 
                     jump pledgeapes
 
 
                 "Pledge to the Wolves":
+                    $ wolfpack = True
+                    if steam == False:
+                        image wolfpack = "images/wolfpack.png"
+                        show wolfpack:
+                            xpos 0
+                            ypos -200
+                            linear 0.5 xpos 0 ypos 0
+                            pause 2.0
+                            linear 0.5 xpos 0 ypos -200
+                    else:
+                        $ achievement.grant("wolfpack")
+                        $ achievement.sync()
 
                     u "(Nah, Grayson's done more than enough questionable shit. The Wolves been nothing but good to me. I'ma pledge to the Wolves.)"
 
@@ -3873,18 +3908,6 @@ label v07:
     $ contact_Autumn.unlock()
     $ addPoint("bro", 1)
     $ joinwolves = True
-    $ wolfpack = True
-    if steam == False:
-        image wolfpack = "images/wolfpack.png"
-        show wolfpack:
-            xpos 0
-            ypos -200
-            linear 0.5 xpos 0 ypos 0
-            pause 2.0
-            linear 0.5 xpos 0 ypos -200
-    else:
-        $ achievement.grant("wolfpack")
-        $ achievement.sync()
 
     scene s756 # Camera - third person, MC walking through town during evening wearing jeans
     with fade
@@ -5072,19 +5095,6 @@ label v07:
     $ contact_Autumn.unlock()
     $ addPoint("tm", 3) # I think more TM points for joining the Apes makes sense
     $ joinwolves = False
-    $ silverback = True
-    if steam == False:
-        image silverback = "images/silverback.png"
-        show silverback:
-            xpos 0
-            ypos -200
-            linear 0.5 xpos 0 ypos 0
-            pause 2.0
-            linear 0.5 xpos 0 ypos -200
-    else:
-        $ achievement.grant("silverback")
-        $ achievement.sync()
-
 
     scene s756 # Not a new render
     with fade
@@ -5833,7 +5843,7 @@ label v07:
                 $ addPoint("bf", 1)
                 $ showphone = True
                 $ phoneexit = "phonebb"
-                $ contact_Emily.newMessage(emilyMessage3)
+                $ emilyMessage3.addReply("Hey, sorry I lost track of time. You up?", "emrep3a")
 
                 label emrep3a:
                 call screen messager(contact_Emily)
@@ -5880,7 +5890,8 @@ label v07:
     if emilyText:
         play sound "sounds/vibrate.mp3"
         $ showphone = True
-        $ contact_Emily.newMessage(emilyMessage4)
+        $ contact_Emily.newMessage("It's okay. You'll get the surprise another time...")
+        $ contact_Emily.addReply("Excting :)", "emrep4a")
         $ phoneexit = "phonebc"
 
 
@@ -9407,7 +9418,9 @@ if rileyrs:
 
     play sound "sounds/vibrate.mp3"
 
-    $ contact_Riley.newMessage(rileyMessage8)
+    $ contact_Riley.newMessage("Wanna come over? ;)")
+    $ contact_Riley.addReply("Sure, on my way :)", "rirep8a")
+    $ contact_Riley.addReply("Sorry I'm really exhausted. Another time", "rirep8b")
     $ phoneexit = "rtnow"
     $ showphone = True
 
@@ -9445,12 +9458,12 @@ else:
 
 label rirep8a:
 $ rileysex = True
-$ contact_Riley.newMessage(rileyMessage9)
+$ contact_Riley.newMessage("Yayyy")
 call screen messager(contact_Riley)
 
 label rirep8b:
 $ rileysex = False
-$ contact_Riley.newMessage(rileyMessage10)
+$ contact_Riley.newMessage("Oh oki")
 call screen messager(contact_Riley)
 
 label rileysexscene:
@@ -9797,8 +9810,9 @@ label risex: # Riley sex scene
 ########## SCENE 36 MAKING SIGNS W/ AUTUMN
 
     label signs_with_autumn:
-    $ contact_Autumn.newMessage(autumnMessage1)
-    $ contact_Autumn.newMessage(autumnMessage2)
+    $ contact_Autumn.newMessage("Hey, it's Autumn.")
+    $ contact_Autumn.newMessage("I'm just about to start making signs. Do you still want to join?")
+    $ contact_Autumn.addReply("Yes, of course. I'd love to.", "autrep1a")
     $ phoneexit = "phoneba"
     play sound "sounds/vibrate.mp3"
     $ showphone = True
@@ -9815,11 +9829,12 @@ label risex: # Riley sex scene
         jump signs_with_autumn2
 
     label autrep1a:
-    $ contact_Autumn.newMessage(autumnMessage3)
+    $ contact_Autumn.newMessage("Great. I'm at the Deer's House. Do you know how to get there?")
+    $ contact_Autumn.addReply("Yeah, I think I do. On my way.", "autrep2a")
     call screen messager(contact_Autumn)
 
     label autrep2a:
-    $ contact_Autumn.newMessage(autumnMessage4)
+    $ contact_Autumn.newMessage("Alright, see you soon.")
     call screen messager(contact_Autumn)
 
     label signs_with_autumn2:
@@ -14435,7 +14450,7 @@ label aSigns_2:
     scene sfr4pe21
     with dissolve
 
-    pe "We should do this again sometime."
+    pe "We should this again sometime."
 
     scene sfr4pe21a
     with dissolve
@@ -15511,7 +15526,7 @@ label aSigns_2:
 
             ri "I just feel like we could be doing much more fun things."
 
-            ri "I'm sure your date would have understood if you had let her known you had to leave early..."
+            ri "I'm sure you're date would understand if you'd let her know you had to leave early..."
 
             scene sfr4ri51c
             with dissolve
@@ -15578,7 +15593,7 @@ label aSigns_2:
 
             ri "I'd just rather hang out with a friend."
 
-            ri "I'm sure your date would have understood if you had let her known you had to leave early..."
+            ri "I'm sure you're date would understand if you'd let her know you had to leave early..."
 
             scene sfr4ri51a
             with dissolve
@@ -18174,7 +18189,7 @@ label aSigns_2:
 
     cl "*Laughs* Hey!"
 
-    cl "I assure you it's cleaner than your dorm."
+    cl "I assure you it's cleaner than you're dorm."
 
     scene sfr4cl57c
     with dissolve
