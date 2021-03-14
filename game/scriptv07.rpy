@@ -3075,7 +3075,7 @@ label v07:
                     scene s742
                     with dissolve
 
-                    la "I'm happy for you, seems like you guys really have a strong friendship and that's really important when you love together."
+                    la "I'm happy for you, seems like you guys really have a strong friendship and that's really important when you live together."
 
                     scene s742b # lauren slightly annoyed
                     with dissolve
@@ -3490,7 +3490,7 @@ label v07:
                     scene s742
                     with dissolve
 
-                    la "I'm happy for you, seems like you guys really have a strong friendship and that's really important when you love together."
+                    la "I'm happy for you, seems like you guys really have a strong friendship and that's really important when you live together."
 
                     scene s742b # lauren slightly annoyed
                     with dissolve

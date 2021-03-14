@@ -5915,7 +5915,7 @@ screen hc_info():
             if autumnmad:
                 $ tmpMsg += "I think Autumn might be mad at me, so I probably shouldn’t ask her."
             else:
-                $ tmpMsg += "Autumn and aren’t really close, but I’ll never know if she’d say yes if I don’t try."
+                $ tmpMsg += "Autumn and I aren’t really close, but I’ll never know if she’d say yes if I don’t try."
     elif tmpGirl == "chloe":
         if laurenrs:
             $ tmpMsg += "Lauren would kill me if I asked someone other than her."
