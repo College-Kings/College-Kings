@@ -260,7 +260,7 @@ screen choice(items, time=3):
                 hover_background "gui/{}white.png".format(menuButtonsConfig[count]["background"])
                 pos menuButtonsConfig[count]["pos"]
                 padding  menuButtonsConfig[count]["padding"]
-                xysize (706, 104)
+                xysize (800, 104)
                 text_size 40
                 if count > 1:
                     text_xalign 0.5
@@ -483,7 +483,7 @@ screen ingmenu():
 
                 hbox:
                     xalign 0.5
-                    yalign 0.1
+                    yalign 0.02
                     text "Save name: "
                     frame:
                         ymaximum 50
@@ -614,7 +614,7 @@ screen ingmenu():
 
             hbox:
                 xalign 0.5
-                yalign 0.1
+                yalign 0.05
                 text "Save name: "
                 frame:
                     ymaximum 50
@@ -2974,7 +2974,7 @@ screen thx():
     if steam == False:
         add "images/newthx.png"
     else:
-        add "images/newsteamend.png" # steam
+        add "images/newsteamend.jpg" # steam
 
     if steam == False:
         imagebutton:
@@ -2986,10 +2986,10 @@ screen thx():
 
     else:
         imagebutton:# steam
-            ypos 677
-            xpos 394
-            idle "images/get2.png"
-            hover "images/discordend.png"
+            ypos 700
+            xalign 0.5
+            idle "images/discordbutton1.png"
+            hover "images/discordbutton2.png"
             action OpenURL ("http://discord.collegekingsgame.com")
 
     textbutton "Main Menu":
@@ -5915,7 +5915,7 @@ screen hc_info():
             if autumnmad:
                 $ tmpMsg += "I think Autumn might be mad at me, so I probably shouldn’t ask her."
             else:
-                $ tmpMsg += "Autumn and aren’t really close, but I’ll never know if she’d say yes if I don’t try."
+                $ tmpMsg += "Autumn and I aren’t really close, but I’ll never know if she’d say yes if I don’t try."
     elif tmpGirl == "chloe":
         if laurenrs:
             $ tmpMsg += "Lauren would kill me if I asked someone other than her."

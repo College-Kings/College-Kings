@@ -1,105 +1,3 @@
-default follownora = False
-default noraclose = True
-default rileyrs = False
-default kiwii = False
-default penelopemad = False
-default tellpenelope = False
-default laurenemily = 0
-default politics = False
-default protest = False
-default signs = False
-default seenlauren = False
-default laurenimre= False
-default beachfirstkiss = False
-default tasks = 0
-default stoodUpToCam = False
-default punchedCam = False
-default cameronSisNumber = False # Cameron's little sister's number
-default apesTask1 = False # Cameron telling MC to call Chloe
-default wolvesTask1 = False
-default wolvesTask2 = False
-default wolvesTask3 = False
-default wolvesTask4 = False
-default madeFunOfLee = False
-default apesTask2Try = False
-default apesTask2Success = False
-default joinwolves = True
-default fr4chloe = False
-default fr4ryan = False
-default fr4aubrey = False
-default fr4riley = False
-default fr4aaron = False
-default fr4cameron = False
-default fr4mason = False
-default fr4elijah = False
-default fr4nora = False
-default fr4nora2 = False
-default fr4chris = False
-default fr4lauren = False
-default fr4msrose = False
-default fr4penelope = False
-default fr4imre = False
-default fr4grayson = False
-default fr4emily = False
-default fr4samantha = False
-default preventgrayson = False
-default penelopesextoys = False
-default penelopetruths = 0
-default apesVids = 0
-default cop = False
-default bathroomblowjob = False
-default ryandefendchloe = False
-default focusonlauren = False
-default chloesad = False
-default lockerroomchloe = False
-default fr4noriley = False
-default fr4chloe2 = False
-default rileysex = False
-default ending = "riley"
-default chloers = False
-default amberrs = False
-default penelopers = False
-default walkedRileyHome = False
-default amberEcstasyOffer = False # Whether Amber asked you to join her
-default hcGirl = "na"
-default hcAsked = [] # hcAsked.append("girl_name") to add
-default consoledSam = False
-default emilyText = False
-default laurenpt = 0
-
-default ecstatic = False
-default homecomingqueen = False
-default leeway = False
-default playingwithfire = False
-default silverback = False
-default slowandsteady = False
-default truetoself = False
-default wolfpack = False
-
-default nobeach = False
-
-define cal = Character("Caleb", who_color="#83d81c", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ]) # Ape pledge
-define coop = Character("Cooper", who_color="#11af68", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ]) # Ape pledge
-define kai = Character("Kai", who_color="#1caedb", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ]) # Ape pledge
-
-define wes = Character("Wesley", who_color="#db6f1c", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ]) # Ape
-define par = Character("Parker", who_color="#a815f2", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ]) # Ape
-
-define rg1 = Character("Angelica", who_color="#db6f1c", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
-define rg2 = Character("Elisa", who_color="#a815f2", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
-
-define nerd = Character("Nerd", who_color="#147efb", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
-define xav = Character("Xavier", who_color="#147efb", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
-define jax = Character("Jaxon", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
-
-define teach = Character("Teacher", who_color="#147efb", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
-define class1 = Character("Class", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
-define sa = Character("Samantha", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
-
-label after_load:
-    $ addReplies()
-    return
-
 label emrep4a:
 call screen messager(contact_Emily)
 
@@ -1524,7 +1422,8 @@ label v07:
         play sound "sounds/vibrate.mp3"
         $ phoneexit = "phoneam"
         $ contact_Riley.unlock()
-        $ contact_Riley.newMessage(rileyMessage1)
+        $ contact_Riley.newMessage("Are you and Emily back together?")
+        $ contact_Riley.addReply("What are you talking about???", "rirep1a")
         pause 0.5
 
         scene s713b # mc looks at his phone
@@ -1537,7 +1436,7 @@ label v07:
         call screen messager(contact_Riley)
 
         label rirep1a:
-        $ contact_Riley.newMessage(rileyMessage2)
+        $ contact_Riley.newMessage("Check Kiwii...")
         $ kiwii = True
         call screen messager(contact_Riley)
 
@@ -1552,30 +1451,34 @@ label v07:
         call screen phone # this comes before opening kiwii
 
         label rirep3a:
-        $ contact_Riley.newMessage(rileyMessage4)
+        $ contact_Riley.newMessage("Okay... just looked like it")
+        $ contact_Riley.addReply("Well we're not.", "rirep4a")
         call screen messager(contact_Riley)
 
         label rirep4a:
-        $ contact_Riley.newMessage(rileyMessage5)
+        $ contact_Riley.newMessage("k")
         call screen messager(contact_Riley)
 
         label perep4a:
         $ addPoint("bro", 1)
-        $ contact_Penelope.newMessage(penelopeMessage5)
+        $ contact_Penelope.newMessage("Okay...")
         $ tellpenelope = True
         call screen messager(contact_Penelope)
 
         label perep4b:
         $ tellpenelope = False
-        $ contact_Penelope.newMessage(penelopeMessage5)
+        $ contact_Penelope.newMessage("Okay...")
         call screen messager(contact_Penelope)
 
         label larep16a:
-        $ contact_Lauren.newMessage(laurenMessage17)
+        $ contact_Lauren.newMessage("What is there to talk about? How could you betray me like that?!")
+        $ contact_Lauren.addReply("Please, it's just a big misunderstanding", "larep17a")
+
         call screen messager(contact_Lauren)
 
         label larep17a:
-        $ contact_Lauren.newMessage(laurenMessage18)
+        $ contact_Lauren.newMessage("Fine. I'm in my dorm, we can talk now.")
+
         call screen messager(contact_Lauren)
 
         label KiwiiPost1_reply1:
@@ -1613,20 +1516,20 @@ label v07:
                 "(I should check out what Emily posted on Kiwii.)"
                 jump phoneam              
 
-            if not rileyMessage1.reply:
+            if contact_Riley.replies:
                 "(I need to respond to some of these messages.)"
                 jump phoneam
 
             else:
 
                 if bowling == True:
-                    if not penelopeMessage4.reply:
+                    if contact_Penelope.replies:
                         "(I should answer Penelope.)"
                         jump phoneam
 
                 if laurenrs == True:
 
-                    if not laurenMessage17.reply:
+                    if contact_Lauren.replies:
                         "(I should respond to Lauren.)"
 
                         jump phoneam
@@ -1849,7 +1752,8 @@ label v07:
         play sound "sounds/vibrate.mp3"
         $ phoneexit = "phoneam"
         $ contact_Riley.unlock()
-        $ contact_Riley.newMessage(rileyMessage6)
+        $ contact_Riley.newMessage("Hey, how come you're not on Kiwii?")
+        $ contact_Riley.addReply("What's that?", "rirep6a")
         $ phoneexit = "phonean"
 
         pause 0.5
@@ -1862,7 +1766,8 @@ label v07:
         jump phonean
 
         label rirep6a:
-        $ contact_Riley.newMessage(rileyMessage7)
+        $ contact_Riley.newMessage("It's a new social media app, you should give it a try")
+        $ contact_Riley.addReply("Okay, I'll have a look", "rirep7a")
         call screen messager(contact_Riley)
 
         label rirep7a:
@@ -1871,7 +1776,7 @@ label v07:
 
 
         label phonean:
-        if not rileyMessage7.reply:
+        if contact_Riley.replies:
             u "(I should respond to Riley.)"
             jump phonean
         else:
@@ -2907,25 +2812,30 @@ label v07:
 
             if laurenrs == True:
 
-                $ contact_Lauren.newMessage(laurenMessage20)
+                $ contact_Lauren.newMessage("Wanna go now babe?")
+                $ contact_Lauren.addReply("Sure, I'll come pick you up", "larep20a")
 
             else:
 
-                $ contact_Lauren.newMessage(laurenMessage19)
+                $ contact_Lauren.newMessage("Wanna go now?")
+                $ contact_Lauren.addReply("Sure, I'll come pick you up", "larep19a")
 
         else:
 
-            $ contact_Lauren.newMessage(laurenMessage21)
+            $ contact_Lauren.newMessage("Hey :)")
             if laurenrs:
-                $ contact_Lauren.newMessage(laurenMessage22)
+                $ contact_Lauren.newMessage("You wanna go to the beach today?")
+                $ contact_Lauren.addReply("Sounds good, when were you thinking?", "larep22a")
             else:
-                $ contact_Lauren.newMessage(laurenMessage25)
+                $ contact_Lauren.newMessage("You wanna go to the beach today?")
+                $ contact_Lauren.addReply("Sounds good, when were you thinking?", "larep25a")
+                $ contact_Lauren.addReply("Sorry, I can't I'm really busy today", "larep25b")
 
         " "
 
         label phoneao:
 
-        if not laurenMessage20.reply and not laurenMessage19.reply and not laurenMessage23.reply and not laurenMessage25.reply:
+        if contact_Lauren.replies:
 
             u "(I should probably reply.)"
 
@@ -2945,28 +2855,31 @@ label v07:
             jump beachlauren
 
         label larep19a:
-            $ contact_Lauren.newMessage(laurenMessage24)
+            $ contact_Lauren.newMessage("Great :)")
             call screen messager(contact_Lauren)
 
         label larep20a:
-            $ contact_Lauren.newMessage(laurenMessage24)
+            $ contact_Lauren.newMessage("Great :)")
             call screen messager(contact_Lauren)
 
         label larep22a:
-            $ contact_Lauren.newMessage(laurenMessage23)
+            $ contact_Lauren.newMessage("How about now?")
+            $ contact_Lauren.addReply("Sure, I'll come pick you up", "larep23a")
             call screen messager(contact_Lauren)
 
         label larep23a:
-            $ contact_Lauren.newMessage(laurenMessage24)
+            $ contact_Lauren.newMessage("Great :)")
             call screen messager(contact_Lauren)
 
         label larep25a:
-            $ contact_Lauren.newMessage(laurenMessage23)
+            $ contact_Lauren.newMessage("How about now?")
+            $ contact_Lauren.addReply("Sure, I'll come pick you up", "larep23a")
             call screen messager(contact_Lauren)
 
         label larep25b:
             $ nobeach = True
-            $ contact_Lauren.newMessage(laurenMessage26)
+            $ contact_Lauren.newMessage("Oh okay, another time then.")
+
             call screen messager(contact_Lauren)
 
 
@@ -3162,7 +3075,7 @@ label v07:
                     scene s742
                     with dissolve
 
-                    la "I'm happy for you, seems like you guys really have a strong friendship and that's really important when you love together."
+                    la "I'm happy for you, seems like you guys really have a strong friendship and that's really important when you live together."
 
                     scene s742b # lauren slightly annoyed
                     with dissolve
@@ -3577,7 +3490,7 @@ label v07:
                     scene s742
                     with dissolve
 
-                    la "I'm happy for you, seems like you guys really have a strong friendship and that's really important when you love together."
+                    la "I'm happy for you, seems like you guys really have a strong friendship and that's really important when you live together."
 
                     scene s742b # lauren slightly annoyed
                     with dissolve
@@ -5930,14 +5843,14 @@ label v07:
                 $ addPoint("bf", 1)
                 $ showphone = True
                 $ phoneexit = "phonebb"
-                $ contact_Emily.newMessage(emilyMessage3)
+                $ emilyMessage3.addReply("Hey, sorry I lost track of time. You up?", "emrep3a")
 
                 label emrep3a:
                 call screen messager(contact_Emily)
 
                 label phonebb:
 
-                if not emilyMessage3.reply:
+                if contact_Emily.replies:
 
                     u "(I should text Emily that I lost track of time.)"
 
@@ -5977,7 +5890,8 @@ label v07:
     if emilyText:
         play sound "sounds/vibrate.mp3"
         $ showphone = True
-        $ contact_Emily.newMessage(emilyMessage4)
+        $ contact_Emily.newMessage("It's okay. You'll get the surprise another time...")
+        $ contact_Emily.addReply("Excting :)", "emrep4a")
         $ phoneexit = "phonebc"
 
 
@@ -9504,7 +9418,9 @@ if rileyrs:
 
     play sound "sounds/vibrate.mp3"
 
-    $ contact_Riley.newMessage(rileyMessage8)
+    $ contact_Riley.newMessage("Wanna come over? ;)")
+    $ contact_Riley.addReply("Sure, on my way :)", "rirep8a")
+    $ contact_Riley.addReply("Sorry I'm really exhausted. Another time", "rirep8b")
     $ phoneexit = "rtnow"
     $ showphone = True
 
@@ -9513,7 +9429,7 @@ if rileyrs:
 
     label rtnow:
 
-    if not rileyMessage8.reply:
+    if contact_Riley.replies:
         u "(I should check my messages.)"
         jump rtnow
     elif rileysex:
@@ -9542,12 +9458,12 @@ else:
 
 label rirep8a:
 $ rileysex = True
-$ contact_Riley.newMessage(rileyMessage9)
+$ contact_Riley.newMessage("Yayyy")
 call screen messager(contact_Riley)
 
 label rirep8b:
 $ rileysex = False
-$ contact_Riley.newMessage(rileyMessage10)
+$ contact_Riley.newMessage("Oh oki")
 call screen messager(contact_Riley)
 
 label rileysexscene:
@@ -9894,14 +9810,15 @@ label risex: # Riley sex scene
 ########## SCENE 36 MAKING SIGNS W/ AUTUMN
 
     label signs_with_autumn:
-    $ contact_Autumn.newMessage(autumnMessage1)
-    $ contact_Autumn.newMessage(autumnMessage2)
+    $ contact_Autumn.newMessage("Hey, it's Autumn.")
+    $ contact_Autumn.newMessage("I'm just about to start making signs. Do you still want to join?")
+    $ contact_Autumn.addReply("Yes, of course. I'd love to.", "autrep1a")
     $ phoneexit = "phoneba"
     play sound "sounds/vibrate.mp3"
     $ showphone = True
 
     label phoneba:
-    if not autumnMessage3.reply:
+    if contact_Autumn.replies:
         u "(I should probably check my messages.)"
 
         jump phoneba
@@ -9912,11 +9829,12 @@ label risex: # Riley sex scene
         jump signs_with_autumn2
 
     label autrep1a:
-    $ contact_Autumn.newMessage(autumnMessage3)
+    $ contact_Autumn.newMessage("Great. I'm at the Deer's House. Do you know how to get there?")
+    $ contact_Autumn.addReply("Yeah, I think I do. On my way.", "autrep2a")
     call screen messager(contact_Autumn)
 
     label autrep2a:
-    $ contact_Autumn.newMessage(autumnMessage4)
+    $ contact_Autumn.newMessage("Alright, see you soon.")
     call screen messager(contact_Autumn)
 
     label signs_with_autumn2:
