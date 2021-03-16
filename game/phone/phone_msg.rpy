@@ -23,8 +23,13 @@ init python:
             if message not in self.messages:
                 self.messages.append(message)
 
-        def addReply(self, message, label):
+        def addReply(self, message, label=None):
             reply = Reply(message, label)
+            self.replies.append(reply)
+            self.newMessages = True
+
+        def addImgReply(self, image, label=None):
+            reply = ImgReply(image, label)
             self.replies.append(reply)
             self.newMessages = True
 
@@ -53,8 +58,13 @@ init python:
             self.image = image
 
     class Reply:
-        def __init__(self, message, label):
+        def __init__(self, message, label=None):
             self.message = message
+            self.label = label
+
+    class ImgReply:
+        def __init__(self, image, label=None):
+            self.image = image
             self.label = label
 
 init offset = -1
@@ -134,15 +144,20 @@ screen messager(contact=None):
 
             vbox:
                 for message in contact.messages:
-                    if isinstance(message, ImageMessage):
+                    if isinstance(message, Message):
+                        textbutton message.msg style "msgleft"
+                    elif isinstance(message, ImageMessage):
                         imagebutton:
                             idle message.image
                             style "msgleft"
                             action Show("phone_image", img=message.image)
-                    elif isinstance(message, Message):
-                        textbutton message.msg style "msgleft"
                     elif isinstance(message, Reply):
                         textbutton message.message style "msgright"
+                    elif isinstance(message, ImgReply):
+                        imagebutton:
+                            idle message.image
+                            style "msgright"
+                            action Show("phone_image", img=message.image)
 
         if contact.replies:
                 hbox:
@@ -162,9 +177,21 @@ screen reply(contact=None):
     vbox xpos 1200 yalign 0.84 spacing 15:
 
         for reply in contact.replies:
-            textbutton reply.message:
-                style "replies_style"
-                action [Hide("reply"), Hide("messager"), Function(contact.selectedReply, reply), Call(reply.label)]
+            if isinstance(reply, Reply):
+                textbutton reply.message:
+                    style "replies_style"
+                    if reply.label:
+                        action [Hide("reply"), Hide("messager"), Function(contact.selectedReply, reply), Call(reply.label)]
+                    else:
+                        action [Function(contact.selectedReply, reply), Hide("reply")]
+            elif isinstance(reply, ImgReply):
+                imagebutton:
+                    idle reply.image
+                    style "replies_style"
+                    if reply.label:
+                        action [Hide("reply"), Hide("messager"), Function(contact.selectedReply, reply), Call(reply.label)]
+                    else:
+                        action [Function(contact.selectedReply, reply), Hide("reply")]
 
 
 screen phone_image(img=None):

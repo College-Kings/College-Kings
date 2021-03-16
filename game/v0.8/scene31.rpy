@@ -202,7 +202,7 @@ label tec_cont:
     else:
         jump tec_end_time
 
-jump fl_w_lau:
+label fl_w_lau:
     u "You're too beautiful. It's distracting."
 
     scene v8stec8b # FPP. Same camera as v8stec8, Lauren looking flattered, mouth open.
@@ -232,7 +232,7 @@ jump fl_w_lau:
 
     jump tec_end_time
 
-jump no_fl_w_lau:
+label no_fl_w_lau:
     u "I don't know who thought a 9 a.m. Econ class was a good idea."
 
     scene v8stec8

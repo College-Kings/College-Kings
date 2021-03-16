@@ -118,74 +118,74 @@ label caf_w_aub:
 
     else:
 
-    u "Eating alone?"
+        u "Eating alone?"
 
-    scene scaf8a
-    with dissolve
+        scene scaf8a
+        with dissolve
 
-    au "Well it is just breakfast. Do I always have to be with someone?"
+        au "Well it is just breakfast. Do I always have to be with someone?"
 
-    scene scaf8
-    with dissolve
+        scene scaf8
+        with dissolve
 
-    u "No, just figured you know last night, homecoming. Everyone seemed to be with someone."
+        u "No, just figured you know last night, homecoming. Everyone seemed to be with someone."
 
-    scene scaf8d
-    with dissolve
+        scene scaf8d
+        with dissolve
 
-    au "Well I guess, even if I was with someone, I don't need them following me around the next day."
+        au "Well I guess, even if I was with someone, I don't need them following me around the next day."
 
-    scene scaf8
-    with dissolve
+        scene scaf8
+        with dissolve
 
-    u "True. I feel you on that one."
+        u "True. I feel you on that one."
 
-    scene scaf8a
-    with dissolve
+        scene scaf8a
+        with dissolve
 
-    au "So, you enjoy your night?"
+        au "So, you enjoy your night?"
 
-    scene scaf8
-    with dissolve
+        scene scaf8
+        with dissolve
 
-    u "Yeah. It was cool. Yours?"
+        u "Yeah. It was cool. Yours?"
 
-    scene scaf8a
-    with dissolve
+        scene scaf8a
+        with dissolve
 
-    au "I actually had a lot of fun at the dance."
+        au "I actually had a lot of fun at the dance."
 
-    scene scaf8
-    with dissolve
+        scene scaf8
+        with dissolve
 
-    u "That's good. Your dress looked great."
+        u "That's good. Your dress looked great."
 
-    scene scaf8a
-    with dissolve
+        scene scaf8a
+        with dissolve
 
-    au "Thanks. Not so much of an evening gown girl, but I liked the dress I found."
+        au "Thanks. Not so much of an evening gown girl, but I liked the dress I found."
 
-    scene scaf8
-    with dissolve
+        scene scaf8
+        with dissolve
 
-    u "Yeah, good pick."
+        u "Yeah, good pick."
 
-    scene scaf8e
-    with dissolve
+        scene scaf8e
+        with dissolve
 
-    au "So you got a lot going on today?"
+        au "So you got a lot going on today?"
 
-    scene scaf9
-    with dissolve
+        scene scaf9
+        with dissolve
 
-    u "Hold on, I'm gonna take this."
+        u "Hold on, I'm gonna take this."
 
-    scene scaf9a # TPP. Same camera as scaf9a, Show MC walking away from the table now on the phone, MC mouth closed. Aubrey neutral expression mouth open.
-    with dissolve
+        scene scaf9a # TPP. Same camera as scaf9a, Show MC walking away from the table now on the phone, MC mouth closed. Aubrey neutral expression mouth open.
+        with dissolve
 
-    au "Okay."
+        au "Okay."
 
-    jump au_prot_call
+        jump au_prot_call
 
 label au_prot_call:
     scene scaf10 # TPP. Show MC stood in a corner of the café on the phone to Autumn, neutral expression, mouth open.
@@ -200,12 +200,12 @@ label au_prot_call:
     scene scaf10a
     with dissolve
 
-menu:
-    "Go to the protest":
-        addPoint("bf", 1)
-        jump caf_prot_au
-    "Don't go to the protest":
-        jump caf_no_prot_au
+    menu:
+        "Go to the protest":
+            $ addPoint("bf", 1)
+            jump caf_prot_au
+        "Don't go to the protest":
+            jump caf_no_prot_au
 
 label caf_prot_au:
     scene scaf10
@@ -310,3 +310,8 @@ label caf_no_prot_au:
     with dissolve
 
     u "Nah. Can I have a bite? I'm starving."
+
+    if joinwolves:
+        jump after_prot_wolves
+    else:
+        jump after_prot_dorm

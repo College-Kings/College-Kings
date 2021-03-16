@@ -220,3 +220,4 @@ label hoco_amb_morning:
     pause 0.5
 
     # - CONTINUE at dorm/Wolves house -
+    jump aft_amb_night

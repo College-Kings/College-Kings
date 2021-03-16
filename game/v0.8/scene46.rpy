@@ -40,20 +40,20 @@ label v8_ending:
         with dissolve
 
         $ contact_Imre.newMessage("Dude, you see this shit on Kiwii?")
-        $ contact_MC,.addReply("No, what?")
+        $ contact_Imre.addReply("No, what?")
         $ contact_Imre.newMessage("IDK, it's crazy")
 
-        $ newKiwiiPost = KiwiiPost("Aubrey", **"IMAGE"**, "[image: red square]", **numberLikes=999**)
-        $ contact_Penelope.addReply("???")
-        $ contact_Riley.addReply("What?")
+        # $ newKiwiiPost = KiwiiPost("Aubrey", **"IMAGE"**, "[image: red square]", **numberLikes=999**) # Need Image and Caption and NumberLikes
+        # $ newKiwiiPost.addReply("???", numberLikes=999)
+        # $ newKiwiiPost.addReply("What?", numberLikes=999)
 
-        $ newKiwiiPost = KiwiiPost("Chris", **"IMAGE"**, "[image:red square]", **numberLikes=999**)
-        $ contact_Sebastian.addReply("Dude?")
-        $ contact_Riley.addReply("Wtf is going on? It's everywhere")
-
-        $ newKiwiiPost = KiwiiPost("Grayson", **"IMAGE"**, "[image: red square]", **numberLikes=999**)
-        $ contact_Kai.addReply("Bout time!")
-        $ contact_Chloe.addReply("Seriously?")
+        # $ newKiwiiPost = KiwiiPost("Chris", **"IMAGE"**, "[image:red square]", **numberLikes=999**) # Need Image and Caption and NumberLikes
+        # $ newKiwiiPost.addReply("Dude?", numberLikes=999)
+        # $ newKiwiiPost.addReply("Wtf is going on? It's everywhere", numberLikes=999)
+ 
+        # $ newKiwiiPost = KiwiiPost("Grayson", **"IMAGE"**, "[image: red square]", **numberLikes=999**) # Need Image and Caption and NumberLikes
+        # $ newKiwiiPost.addReply("Bout time!", numberLikes=999)
+        # $ newKiwiiPost.addReply("Seriously?", numberLikes=999)
 
         scene v8send4 # TPP. Show MC, MC looks really confused.
         with dissolve
@@ -101,17 +101,17 @@ label v8_ending:
         $ contact_MC.addReply("I don't know. What is it?")
         $ contact_Ryan.newMessage("Fuckin check it out man. Crazy shit")
 
-        $ newKiwiiPost = KiwiiPost("Aubrey", **"IMAGE"**, "[image: red square]", **numberLikes=999**)
-        $ contact_Penelope.addReply("???")
-        $ contact_Riley.addReply("What?")
+        # $ newKiwiiPost = KiwiiPost("Aubrey", **"IMAGE"**, "[image: red square]", **numberLikes=999**)
+        # $ newKiwiiPost.addReply("???", numberLikes=999)
+        # $ newKiwiiPost.addReply("What?", numberLikes=999)
 
-        $ newKiwiiPost = KiwiiPost("Chris", **"IMAGE"**, "[image:red square]", **numberLikes=999**)
-        $ contact_Sebastian.addReply("Dude?")
-        $ contact_Riley.addReply("Wtf is going on? It's everywhere")
+        # $ newKiwiiPost = KiwiiPost("Chris", **"IMAGE"**, "[image:red square]", **numberLikes=999**)
+        # $ newKiwiiPost.addReply("Dude?", numberLikes=999)
+        # $ newKiwiiPost.addReply("Wtf is going on? It's everywhere", numberLikes=999)
 
-        $ newKiwiiPost = KiwiiPost("Grayson", **"IMAGE"**, "[image: red square]", **numberLikes=999**)
-        $ contact_Kai.addReply("Bout time!")
-        $ contact_Chloe.addReply("Seriously?")
+        # $ newKiwiiPost = KiwiiPost("Grayson", **"IMAGE"**, "[image: red square]", **numberLikes=999**)
+        # $ newKiwiiPost.addReply("Bout time!", numberLikes=999)
+        # $ newKiwiiPost.addReply("Seriously?", numberLikes=999)
 
         u "(What the...?)"
 

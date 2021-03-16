@@ -74,11 +74,11 @@ label prot_w_au:
 
     menu:
         "Pretend you know what you're doing":
-            addPoint("bro", 1)
+            $ addPoint("bro", 1)
             jump prot_w_au_wing
 
         "Ask about wwhat you need to do":
-            addPoint("bf", 1)
+            $ addPoint("bf", 1)
             jump prot_w_au_no_wing
 
 label prot_w_au_wing:
@@ -190,7 +190,7 @@ label prot_w_au_1:
 
     menu:
         "Pretend to know about the new legislation":
-            addPoint("tm", 1)
+            $ addPoint("tm", 1)
             jump prot_w_au_leg
         "Choice 2":
             jump prot_w_au_no_leg

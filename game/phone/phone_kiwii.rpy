@@ -37,7 +37,7 @@ init python:
             if comment not in self.comments:
                 self.comments.append(comment)
 
-        def addReply(self, reply, label, numberLikes=0, mentions=None):
+        def addReply(self, reply, label=None, numberLikes=0, mentions=None):
             reply = KiwiiReply(reply, label, numberLikes, mentions)
             if reply not in self.replies:
                 self.replies.append(reply)
@@ -88,7 +88,7 @@ init python:
             return str(rv)
 
     class KiwiiReply(KiwiiComment):
-        def __init__(self, reply, label, numberLikes=0, mentions=None):
+        def __init__(self, reply, label=None, numberLikes=0, mentions=None):
             self.reply = reply
             self.label = label
 
@@ -405,7 +405,10 @@ screen kiwiiPost(post):
                 textbutton reply.reply:
                     style "kiwii_reply"
                     text_style "kiwii_ReplyText"
-                    action [Function(reply.selectedReply, post), Jump(reply.label)]
+                    if reply.label:
+                        action [Function(reply.selectedReply, post), Jump(reply.label)]
+                    else:
+                        action Function(reply.selectedReply, post)
 
 screen liked_kiwii():
     tag phoneTag

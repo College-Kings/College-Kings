@@ -69,7 +69,7 @@ label for_w_gray_cont:
     menu:
         "Go along with it":
             $ addPoint("bro", 1)
-            jump
+            jump forest_fugazi
         "Stay quiet":
             $ addPoint("bf", 1)
 

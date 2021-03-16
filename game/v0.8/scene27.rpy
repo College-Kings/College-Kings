@@ -93,6 +93,7 @@ label mon_eve_room_josh:
             with dissolve
 
             # jump josh's house
+            jump josh_room
 
     else:
         scene v8spd8 # TPP. Show MC sat in his Apes room at his desk on his phone.
@@ -183,3 +184,4 @@ label mon_eve_room_josh:
             with dissolve
 
             # jump josh's house
+            jump josh_room

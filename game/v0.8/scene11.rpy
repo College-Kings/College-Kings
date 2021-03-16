@@ -185,3 +185,5 @@ label wolves_gym_end:
 
     scene v9sgym14a # TPP. Same camera as v8sgym14, MC mouth closed, eyes closed.
     with dissolve
+
+    jump mc_wolves_sun_morn

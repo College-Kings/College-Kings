@@ -59,30 +59,30 @@ label steak_w_chloe:
         with dissolve
 
         if chloers:
-        u "Perfect romantic afternoon with my best girl..."
+            u "Perfect romantic afternoon with my best girl..."
 
-        scene v8s
-        with dissolve
-        cl "*giggles* You are such a flirt"
+            scene v8s
+            with dissolve
+            cl "*giggles* You are such a flirt"
 
-        scene v8s
-        with dissolve
-        u "What? You're definitely the best at certain things"
+            scene v8s
+            with dissolve
+            u "What? You're definitely the best at certain things"
 
-        scene v8s
-        with dissolve
-        cl "And you have a lot of experience in that area?"
+            scene v8s
+            with dissolve
+            cl "And you have a lot of experience in that area?"
 
-        scene v8s
-        with dissolve
-        u "Not nearly enough, but I'm sure we can fix that"
+            scene v8s
+            with dissolve
+            u "Not nearly enough, but I'm sure we can fix that"
 
-        scene v8s
-        with dissolve
-        cl "I'm sure you'll try"
+            scene v8s
+            with dissolve
+            cl "I'm sure you'll try"
 
-        scene v8s
-        with dissolve
+            scene v8s
+            with dissolve
 
     if not chloers:
         u "Yeah, great place for a platonic lunch date between friends"
@@ -153,7 +153,7 @@ label steak_no_flirt_w_chloe:
 
     jump steak_w_chloe_cont
 
-label steak_w_chloe_cont
+label steak_w_chloe_cont:
     cl "Let's order before I eat my chopsticks"
 
     scene v8s
@@ -515,9 +515,11 @@ label steak_w_chloe_cont_3:
     with dissolve
 
     if chloers:
+        pass
     # -MC kisses Chloe-
 
     if not chloers:
+        pass
     # -MC waves at Chloe-
 
     # -Continue after Chloe-

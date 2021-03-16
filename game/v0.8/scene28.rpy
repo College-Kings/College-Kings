@@ -756,3 +756,4 @@ label check_on_josh:
     with dissolve
 
     # -Transition to Scene 29-
+    jump after_drugs

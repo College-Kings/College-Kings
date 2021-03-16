@@ -34,27 +34,27 @@ label tue_night_in_room:
         with dissolve
 
         $ contact_Sebastian.newMessage("Yo dude, just wanted to let you know... tonight was fun.")
-        $ contact_MC.addReply("Sure was... but can be even better, right?")
+        $ contact_Sebastian.addReply("Sure was... but can be even better, right?")
         $ contact_Sebastian.addReply("Sure can! You'll see what being a Wolf is all about.")
-        $ contact_MC.addReply("Looking forward to it. :)")
+        $ contact_Sebastian.addReply("Looking forward to it. :)")
 
         u "(Let's just see what Chloe's up to)"
 
         if chloers:
-            $ contact_MC.newMessage("I'm thinking about you...")
+            $ contact_Chloe.addReply("I'm thinking about you...")
             $ contact_Chloe.newMessage("Really?")
-            $ contact_MC.newMessage("Well, about the thing you do best, really.")
+            $ contact_Chloe.addReply("Well, about the thing you do best, really.")
             $ contact_Chloe.newMessage("Mmmh, I can almost feel it in my mouth. :)")
-            $ contact_MC.newMessage("I think I'm gonna keep it all in for our next meeting. :)")
+            $ contact_Chloe.addReply("I think I'm gonna keep it all in for our next meeting. :)")
             $ contact_Chloe.newMessage("And now I'm hungry.")
-            $ contact_MC.newMessage(";D")
+            $ contact_Chloe.addReply(";D")
 
         if not chloers:
-            $ contact_MC.newMessage("I've had a really crazy night...")
+            $ contact_Chloe.addReply("I've had a really crazy night...")
             $ contact_Chloe.newMessage("And you chose me to tell about it? :)")
-            $ contact_MC.newMessage("Oh c'mon, you've got a great pair of eyes. :)")
+            $ contact_Chloe.addReply("Oh c'mon, you've got a great pair of eyes. :)")
             $ contact_Chloe.newMessage("Maybe some other time. These eyes need some rest atm.")
-            $ contact_MC.newMessage("Sure, later.")
+            $ contact_Chloe.addReply("Sure, later.")
 
         scene v8star7 # TPP. Show MC putting his phone down on the bed and standing back up.
         with dissolve
@@ -113,29 +113,29 @@ label tue_night_in_room:
         with dissolve
 
         $ contact_Grayson.newMessage("Yo Ape, still ready for the surprise?")
-        $ contact_MC.addReply("Are we still doing this?")
-        $ contact_Grayson.addReply("It's just so damn tempting. But you won't regret it.")
-        $ contact_MC.addReply("Now I'm fucking couting on it!")
-        $ contact_Grayson.addReply("Couting on it or not, [name], it's happening!")
-        $ contact_MC.addReply(":P")
+        $ contact_Grayson.addReply("Are we still doing this?")
+        $ contact_Grayson.newMessage("It's just so damn tempting. But you won't regret it.")
+        $ contact_Grayson.addReply("Now I'm fucking couting on it!")
+        $ contact_Grayson.newMessage("Couting on it or not, [name], it's happening!")
+        $ contact_Grayson.addReply(":P")
 
         u "(Let's just see what Chloe's up to)"
 
         if chloers:
-            $ contact_MC.newMessage("I'm thinking about you...")
+            $ contact_Chloe.addReply("I'm thinking about you...")
             $ contact_Chloe.newMessage("Really?")
-            $ contact_MC.newMessage("Well, about the thing you do best, really.")
+            $ contact_Chloe.addReply("Well, about the thing you do best, really.")
             $ contact_Chloe.newMessage("Mmmh, I can almost feel it in my mouth. :)")
-            $ contact_MC.newMessage("I think I'm gonna keep it all in for our next meeting. :)")
+            $ contact_Chloe.addReply("I think I'm gonna keep it all in for our next meeting. :)")
             $ contact_Chloe.newMessage("And now I'm hungry.")
-            $ contact_MC.newMessage(";D")
+            $ contact_Chloe.addReply(";D")
 
         if not chloers:
-            $ contact_MC.newMessage("I've had a really crazy night...")
+            $ contact_Chloe.addReply("I've had a really crazy night...")
             $ contact_Chloe.newMessage("And you chose me to tell about it? :)")
-            $ contact_MC.newMessage("Oh c'mon, you've got a great pair of eyes. :)")
+            $ contact_Chloe.addReply("Oh c'mon, you've got a great pair of eyes. :)")
             $ contact_Chloe.newMessage("Maybe some other time. These eyes need some rest atm.")
-            $ contact_MC.newMessage("Sure, later.")
+            $ contact_Chloe.addReply("Sure, later.")
 
         scene v8star16 # TPP. Show MC putting his phone down on the bed and standing back up.
         with dissolve

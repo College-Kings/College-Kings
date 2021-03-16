@@ -3,6 +3,7 @@
 # Outfits: MC Outfit 3, Riley Outfit 2, Aubrey Outfit 3
 # Time: Monday Afternoon
 
+label s26:
     scene v8sopt1 # FPP. Sweeping shot of Riley and Aubrey in the Opticians looking at glasses.
     with fade
 
