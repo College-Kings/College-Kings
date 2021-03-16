@@ -5788,6 +5788,8 @@ label fr2end:
 
         if adamtut == True:
             jump fkcon
+        elif s28_LarsFight:
+            jump s28_LarsFightCont
         else:
             call screen ft1
 
@@ -5930,6 +5932,9 @@ label fr2end:
 
         if adamtut == True:
             call screen af3
+
+        elif s28_LarsFight:
+            call screen s28_LarsKeybindOptions
 
         else:
 

@@ -47,7 +47,7 @@ init python:
             self.msg = msg
             self.reply = None
 
-    class ImageMessage():
+    class ImageMessage:
         def __init__(self, contact, image):
             self.contact = contact
             self.image = image
@@ -109,9 +109,11 @@ screen messager(contact=None):
         add "images/msg.png" at truecenter ## Messenger Screen Background
 
         fixed:
-            xysize(374, 112)
+            xysize(375, 112)
             xalign 0.5
             ypos 168
+
+            add "#00ff0080"
 
             imagebutton:
                 idle "images/msgarrow.png"

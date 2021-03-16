@@ -4412,7 +4412,7 @@ screen skiptut():
         yalign 0.58
 
     textbutton "No" style "endfr":
-        action Jump ("stb")
+        action Jump ("s28_LarsFightCont")
         text_align 0.5
         xalign 0.43
         yalign 0.58
