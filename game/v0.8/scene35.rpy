@@ -522,3 +522,4 @@ label steak_w_chloe_cont_3:
 
     # -Continue after Chloe-
     # -Mc walks back to his dorm-
+    jump v8_julia_call

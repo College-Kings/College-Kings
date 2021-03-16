@@ -54,3 +54,4 @@ with dissolve
 # -MC looks puzzled, scratches his head, then follows-
 
 # -Scene continues in scene 41-
+jump walk_home_hosp

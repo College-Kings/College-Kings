@@ -215,3 +215,4 @@ label walk_to_dean:
     u "(Holy shit, I did it! Now I gotta call Penelope when I get back)"
 
     # -Fade to MC back in his room and start of scene 22-
+    jump s22

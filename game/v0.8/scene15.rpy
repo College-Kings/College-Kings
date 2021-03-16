@@ -158,3 +158,4 @@ label no_help_pen:
     u "(Damn, I hope she'll be okay)"
 
     # SCENE 16 #
+    jump mc_wolves_sun_aft
