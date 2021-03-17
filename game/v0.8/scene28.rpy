@@ -693,7 +693,7 @@ label beat_by_lars:
 
     pause 0.5
 
-    scene v8sdd36 # TPP. Show Josh getting hit over the head by Joe with his metal pipe, MC lay on the ground, Lars looking down at MC with a smile, Josh wincing in pain falling to the ground.
+    scene v8sdd11a # TPP. Show Josh getting hit over the head by Joe with his metal pipe, MC lay on the ground, Lars looking down at MC with a smile, Josh wincing in pain falling to the ground.
     with dissolve
 
     pause 0.5
@@ -703,17 +703,17 @@ label beat_by_lars:
 
     je "A valiant effort, hero, but not good enough. Let's go Lars."
 
-    scene v8sdd38 # TPP. Show Joe and Lars leaving the scene, one of them is grabbing the drugs from Josh.
+    scene v8sdd33 # TPP. Show Joe and Lars leaving the scene, one of them is grabbing the drugs from Josh.
     with dissolve
 
     pause 0.5
 
-    scene v8sdd38a # TPP. Same camera as v8sdd38, Joe and Lars leaving the alley.
+    scene v8sdd33a # TPP. Same camera as v8sdd38, Joe and Lars leaving the alley.
     with dissolve
 
     pause 0.5
 
-    scene v8sdd39 # TPP. Show MC getting up from the ground, pain expression.
+    scene v8sdd34a # TPP. Show MC getting up from the ground, pain expression.
     with dissolve
 
     jump check_on_josh
