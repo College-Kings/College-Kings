@@ -1,12 +1,12 @@
 define bugTesting_Scenes = [
     ["start", "Start of Game"],
-    ["gf_b", "After Evelyn Date"],
     ["v07", "Start of v07"],
     ["conyourdorm", "Wednesday Morning"],
     ["rightafterbeach", "Wednesday Evening"],
     ["ep7_before_history", "Thursday Morning"],
     ["after_cam_history", "Asking girls to hoco"],
     ["fr4", "Homecoming Free Roam"],
+    ["drug_deal_w_josh", "Scene 28 (Fight)"]
 
 ]
 
