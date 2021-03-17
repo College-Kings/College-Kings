@@ -31,7 +31,7 @@ label after_prot_wolves:
     u "(Just in time)"
 
     scene v8sprot25 # TPP. Show Sebastian now in MC's room pointing at the books on his desk, Sebastian mouth open.
-    with dissovle
+    with dissolve
 
     se "Looks like I showed up just in time."
 

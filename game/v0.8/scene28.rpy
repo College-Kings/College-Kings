@@ -281,7 +281,7 @@ label int_deal_w_josh:
             with hpunch # Is the full punch animated? Do we need "hpunch"?
 
             pause 0.5
-            jump larsAttack
+            jump lars_McAttack
 
     label mc_LarsKickBlock: # MC Kicks Lars (Blocks)
 
@@ -292,7 +292,7 @@ label int_deal_w_josh:
             with hpunch
 
             pause 0.5
-            jump larsAttack
+            jump lars_McAttack
 
 
     label mc_LarsJabsHit: # MC Jabs Lars (Hits/No Block)
@@ -309,7 +309,7 @@ label int_deal_w_josh:
             with hpunch # Is the full punch animated? Do we need "hpunch"?
 
             pause 0.5
-            jump larsAttack
+            jump lars_McAttack
 
     label mc_LarsJabsBlock: # MC Jabs Lars (Blocks)
 
@@ -320,7 +320,7 @@ label int_deal_w_josh:
             with hpunch
 
             pause 0.5
-            jump larsAttack
+            jump lars_McAttack
 
 
     label mc_LarsHooksHit: # MC Hooks Lars (Hits/No Block)
@@ -337,7 +337,7 @@ label int_deal_w_josh:
             with hpunch # Is the full punch animated? Do we need "hpunch"?
 
             pause 0.5
-            jump larsAttack
+            jump lars_McAttack
 
     label mc_LarsHooksBlock: # MC Hooks Lars (Blocks)
 
@@ -348,7 +348,7 @@ label int_deal_w_josh:
             with hpunch
 
             pause 0.5
-            jump larsAttack
+            jump lars_McAttack
 
 
     label mc_LarsBodyhookHit: # MC Body Hooks Lars (Hits/No Block)
@@ -365,7 +365,7 @@ label int_deal_w_josh:
             with hpunch # Is the full punch animated? Do we need "hpunch"?
 
             pause 0.5
-            jump larsAttack
+            jump lars_McAttack
 
     label mc_LarsBodyhookBlock: # MC Body Hooks Lars (Blocks)
 
@@ -376,7 +376,7 @@ label int_deal_w_josh:
             with hpunch
 
             pause 0.5
-            jump larsAttack
+            jump lars_McAttack
 
 
     label lars_McKickHit: # Lars Kicks MC (Hits/No Block)
