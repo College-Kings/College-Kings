@@ -62,7 +62,7 @@ label hosp_climb_seb:
     menu:
         "Climb the hospital":
             $ addPoint("bro", 1)
-            $ addpoint("tm", 1)
+            $ addPoint("tm", 1)
             $ climbwseb = True
             jump climb_the_hos
         "Don't climb the hospital":
@@ -230,7 +230,7 @@ label climb_the_hos:
     scene v8shos26b # FPP. Same camera as v8shos26, Sebastian looking to his side at camera, slight devastation expression, mouth open.
     with dissolve
 
-    sa "Noooooo! I forgot my binoculars!"
+    se "Noooooo! I forgot my binoculars!"
 
     scene v8shos26c # FPP. Same camera as v8shos26, Sebastian looking to his side at camera, sad expression, mouth closed.
     with dissolve

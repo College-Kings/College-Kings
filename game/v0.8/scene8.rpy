@@ -77,7 +77,7 @@ label prot_w_au:
             $ addPoint("bro", 1)
             jump prot_w_au_wing
 
-        "Ask about wwhat you need to do":
+        "Ask about what you need to do":
             $ addPoint("bf", 1)
             jump prot_w_au_no_wing
 
@@ -291,7 +291,9 @@ label prot_w_au_no_leg:
     scene v8sprot3d
     with dissolve
 
-    aut "It's sickening if you ask me. A man shouldn't be able to say a woman has to carry a baby to full term. Abortions are there for reasons. Women being assaulted, women who can't afford it. I mean if someone wants to bring a child in the world, they need to be prepared. That's how so many kids end up in foster care."
+    aut "It's sickening if you ask me. A man shouldn't be able to say a woman has to carry a baby to full term. Abortions are there for reasons. Women being assaulted, women who can't afford it."
+    
+    aut "I mean if someone wants to bring a child in the world, they need to be prepared. That's how so many kids end up in foster care."
 
     scene v8sprot3e
     with dissolve
