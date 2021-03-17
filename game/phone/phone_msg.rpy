@@ -123,8 +123,6 @@ screen messager(contact=None):
             xalign 0.5
             ypos 168
 
-            add "#00ff0080"
-
             imagebutton:
                 idle "images/msgarrow.png"
                 action [Show("contactsscreen"), Hide("messager"), Hide("reply")]
