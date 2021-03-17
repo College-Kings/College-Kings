@@ -3,7 +3,7 @@
 # Outfits: MC Outfit 2, Ryan Outfit 1, Lauren Outfit 3, Ms. Rose Outfit 1, Riley Outfit 4 (Make sure to use .duf where Riley is wearing glasses)
 # Time: Tuesday Morning
 
-label eco_tues_morn:
+label v8_tues_eco_class:
     scene v8stec1 # FPP. Sweeping shot of the economics class, show Riley, Lauren and Ryan all sat on the back row.
     with fade
 

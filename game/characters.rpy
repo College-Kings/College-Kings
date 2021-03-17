@@ -74,3 +74,7 @@ define jax = Character("Jaxon", who_color="#fecb2e", who_outlines=[ (2, "#000000
 define teach = Character("Teacher", who_color="#147efb", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
 define class1 = Character("Class", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
 define sa = Character("Samantha", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+
+#0.8
+define de = Character("The Dean", who_color="#fc3d39", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
+define je = Character("Joe", who_color="#53d769", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])

@@ -9515,41 +9515,41 @@ label script06:
 
     u "Not sure yet."
 
-    scene sfr3ri3c # finn comfortable
+    scene sfr3ri3d # finn comfortable
     with dissolve
 
     finn "Tough getting in, but once you're in, it's the best place to be."
 
-    scene sfr3ri3d
+    scene sfr3ri3c
     with dissolve
 
     u "Yeah, seems like what everyone is saying around here. You know Imre?"
 
-    scene sfr3ri3c
+    scene sfr3ri3d
     with dissolve
 
     finn "Imre... Oh, he's Bence's younger brother, right?"
 
-    scene sfr3ri3d
+    scene sfr3ri3c
     with dissolve
 
     u "Uhh... yeah, if Bence is the name of his older brother."
 
     u "He used to be a Wolf, right?"
 
-    scene sfr3ri3c
+    scene sfr3ri3d
     with dissolve
 
     finn "Yeah , I mean he's kind of a legend around here."
 
     finn "He was fight king two years in a row. It's crazy."
 
-    scene sfr3ri3d
+    scene sfr3ri3c
     with dissolve
 
     u "Wow... Imre's got big shoes to fill."
 
-    scene sfr3ri3c
+    scene sfr3ri3d
     with dissolve
 
     finn "We all do."

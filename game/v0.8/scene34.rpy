@@ -148,6 +148,7 @@ label phn_chloe13_none:
 label phn_chloe13_done:
     if chloeSteakHouse:
         u "(Guess I'm meeting Chloe.)"
+        jump steak_w_chloe
     else:
         u "(I should check in with Julia.)"
     jump v8_julia_call
