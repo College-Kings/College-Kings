@@ -6,7 +6,6 @@ define bugTesting_Scenes = [
     ["rightafterbeach", "Wednesday Evening"],
     ["ep7_before_history", "Thursday Morning"],
     ["after_cam_history", "Asking girls to hoco"],
-    ["risex", "RileySex"],
     ["fr4", "Homecoming Free Roam"],
 
 ]

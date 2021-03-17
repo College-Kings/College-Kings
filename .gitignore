@@ -1,4 +1,5 @@
 game/bugTesting/images
+game/bugTesting/_bugTesting.txt
 game/cache
 game/fonts
 game/gui
@@ -7,11 +8,10 @@ game/music
 game/saves
 game/sounds
 game/tl
+game/unren-dev.rpy
 
 lib/
 renpy/
-
-game/unren-dev.rpy
 
 CollegeKings.py
 CollegeKings.sh

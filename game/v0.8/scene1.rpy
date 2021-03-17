@@ -238,4 +238,4 @@ label v08_la_start:
     with dissolve
     la "Okay babe. Byeee."
 
-    jump v08_sat_morning
+    jump aft_amb_night

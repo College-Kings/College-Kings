@@ -258,7 +258,7 @@ label caf_prot_au:
 
     pause 0.5
 
-    jump prot_with_au
+    jump prot_w_au
 
 label caf_no_prot_au:
     scene scaf10

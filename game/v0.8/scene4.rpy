@@ -176,4 +176,4 @@ label v08_ri_start_fr:
     with dissolve
     ri "Byeee."
 
-    jump v08_sat_morning
+    jump aft_amb_night
