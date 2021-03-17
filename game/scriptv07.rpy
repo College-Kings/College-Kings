@@ -18292,7 +18292,7 @@ label ending7:
     if persistent.ep == 7:
         jump end7
     else:
-        jump start8
+        jump v08_start
 
 label end7:
     scene savenow
@@ -18301,4 +18301,4 @@ label end7:
     if persistent.ep == 7:
         jump end_credits
     else:
-        jump start8
+        jump v08_start

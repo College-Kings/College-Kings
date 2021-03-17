@@ -130,9 +130,4 @@ label walk_home_w_gray:
 
     pause 0.5
 
-    scene v8swbg8 # TPP. Show MC entering his Apes room, MC looking tired.
-    with dissolve
-
-    pause 0.5
-
     jump tue_night_in_room
