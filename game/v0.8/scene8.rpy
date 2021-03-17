@@ -192,7 +192,7 @@ label prot_w_au_1:
         "Pretend to know about the new legislation":
             $ addPoint("tm", 1)
             jump prot_w_au_leg
-        "Choice 2":
+        "Don't know about the legislation":
             jump prot_w_au_no_leg
 
 label prot_w_au_leg:
