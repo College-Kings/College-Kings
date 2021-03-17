@@ -173,14 +173,14 @@ label int_deal_w_josh:
         $ stance = 1
         $ larshealth = 6
         $ youhealth = 3
-        jump larsSimStart
+        jump s28_LarsStartFight
 
     label s28_LarsAutoWin:
         $ simLarsFight = True
         $ stance = 1
         $ youhealth = 100000
         $ larshealth = 3
-        jump larsSimStart
+        jump s28_LarsStartFight
 
     label s28_LarsStartFight:
         $ simLarsFight = False

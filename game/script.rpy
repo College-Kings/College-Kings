@@ -28,11 +28,11 @@ init python:
     achievement.register("strike")
     achievement.sync()
 
-default persistent.ep = 7
+define persistent.ep = 8
 
-default steam = True
+define steam = True
 
-default developer = True
+define developer = True
 
 define config.steam_appid = 1463120
 
