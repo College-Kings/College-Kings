@@ -175,7 +175,7 @@ label steak_no_flirt_w_chloe:
 
     jump steak_w_chloe_cont
 
-label steak_w_chloe_cont
+label steak_w_chloe_cont:
     scene v8steak3d
     with dissolve
 
@@ -287,7 +287,7 @@ label steak_w_chloe_serious:
 
     jump steak_w_chloe_cont_2
 
-label steak_w_chloe_cont_2
+label steak_w_chloe_cont_2:
     scene v8steak11 # TPP. Show the waiter walking over to the table holding Chloe and MC's food, Both looking at the waiter, both smile, Chloe mouth open.
     with dissolve
 
