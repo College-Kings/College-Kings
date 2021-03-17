@@ -21,6 +21,7 @@ log.txt
 Stored Script.txt
 traceback.txt
 
+*.bat
 *.rpa
 *.rpyc
 *.zip
