@@ -324,7 +324,7 @@ label steak_w_chloe_cont_2:
 
         u "Find out what? How insane you are or how you taste?"
 
-        scene v8steak13c # FPP. Same camera as v8steak13, Chloe chuckling, mouth open.
+        scene v8steak13d # FPP. Same camera as v8steak13, Chloe chuckling, mouth open.
         with dissolve
 
         cl "*giggles* Both!"
@@ -342,7 +342,7 @@ label steak_w_chloe_cont_2:
 
         u "(Oh, God that's hot)"
 
-        scene v8steak13c
+        scene v8steak13d
         with dissolve
 
         cl "Delicious!"
@@ -357,7 +357,7 @@ label steak_w_chloe_cont_2:
 
     u "Is that even possible?"
 
-    scene v8steak13c
+    scene v8steak13d
     with dissolve
 
     cl "No, probably not. Haha."
@@ -397,7 +397,7 @@ label steak_w_chloe_cont_2:
 
     u "It's not so easy for guys. People aren't storming castles to get at us."
 
-    scene v8steak13c
+    scene v8steak13d
     with dissolve
 
     cl "Castles? *giggles*"
@@ -466,7 +466,7 @@ label steak_w_chloe_dirty:
 
     u "I don't have a roommate so I don't need one. But if I had you in my room, I'd barricade the door and booby trap it."
 
-    scene v8steak15d # FPP. Same camera as v8steak15, Chloe laugh, mouth open.
+    scene v8steak13d # FPP. Same camera as v8steak15, Chloe laugh, mouth open.
     with dissolve
 
     cl "You said booby."
@@ -476,7 +476,7 @@ label steak_w_chloe_dirty:
 label steak_w_chloe_dirty_no:
     u "Me too. Those extra veggies really did it."
 
-    scene v8steak15d # FPP. Same camera as v8steak15, Chloe laugh, mouth open.
+    scene v8steak13d # FPP. Same camera as v8steak15, Chloe laugh, mouth open.
     with dissolve
 
     cl "Now you just have to work it off!"
@@ -499,7 +499,7 @@ label steak_w_chloe_dirty_no:
     jump steak_w_chloe_cont_3
 
 label steak_w_chloe_cont_3:
-    scene v8steak15e # FPP. Same camera as v8steak15, Chloe neutral expression, mouth open.
+    scene v8steak13f # FPP. Same camera as v8steak15, Chloe neutral expression, mouth open.
     with dissolve
 
     cl "I better get back to the house. The girls go nuts when I'm not there to keep them in order."
@@ -584,7 +584,7 @@ label steak_w_chloe_cont_3:
 
     u "Take care of yourself."
 
-    scene v8steak19 # FPP. Show Chloe at her front door.
+    scene v8steak19a # FPP. Show Chloe at her front door.
     with dissolve
 
     cl "You too."
@@ -598,10 +598,27 @@ label steak_w_chloe_cont_3:
         scene v8steak21 # FPP. Show Chloe entering her house.
         with dissolve
 
+        pause 0.5
+
+        scene v8steak22
+        with dissolve
+
+        pause 0.5
+
         jump v8_julia_call
 
     if not chloers:
         scene v8steak21 # FPP. Show Chloe entering her house.
         with dissolve
 
+        pause 0.5
+
+        scene v8steak22
+        with dissolve
+
+        pause 0.5
+
         jump v8_julia_call
+        
+        
+        

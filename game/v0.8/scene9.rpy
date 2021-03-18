@@ -28,6 +28,8 @@ label after_prot_wolves:
     scene v8sprot24 # FPP. Show the closed door of MC's room as Sebastian is knocking on the door.
     with dissolve
 
+    u "*Knock* *Knock*"
+
     u "(Just in time)"
 
     scene v8sprot25 # TPP. Show Sebastian now in MC's room pointing at the books on his desk, Sebastian mouth open.

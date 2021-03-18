@@ -155,7 +155,7 @@ label no_help_pen:
     scene v8spen11 # TPP. Show MC leaving Penelope's dorm, MC neutral expression, Penelope still looks a bit sad but slightly smiling.
     with dissolve
 
-    u "(Damn, I hope she'll be okay)"
+    u "(Damn, I hope she'll be okay.)"
 
     # SCENE 16 #
     jump mc_wolves_sun_aft

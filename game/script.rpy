@@ -17188,7 +17188,7 @@ label bo_bd:
 
     label phonew:
 
-    if conatct_Josh.replies:
+    if contact_Josh.replies:
 
         u "(I should probably reply to my messages.)"
 

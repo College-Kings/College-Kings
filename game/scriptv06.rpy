@@ -61,7 +61,7 @@ label amrep12b:
 $ amrep12 = 2
 $ addPoint("bf", 1)
 $ contact_Amber.newMessage("I'm glad you like it xx")
-$ conatct_Amber.addReply( "I hope there's more of that in the future :P", "amrep16a")
+$ contact_Amber.addReply( "I hope there's more of that in the future :P", "amrep16a")
 call screen messager(contact_Amber)
 
 label amrep13a:
@@ -4234,7 +4234,7 @@ label script06:
 
             $ contact_Aubrey.newMessage("Hey, I know it's late... but wanna come over?")
             $ contact_Aubrey.addReply("Yeah, sure.", "aubrep16a")
-            $ conatct_Aubrey.addReply("Sorry, I can't tonight.", "aubrep16b")
+            $ contact_Aubrey.addReply("Sorry, I can't tonight.", "aubrep16b")
             $ showphone = True
             $ msgnot = 1
             $ aubmsgnot = 1
