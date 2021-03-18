@@ -1,40 +1,15 @@
 
 
-init python:
-    achievement.register("open_wound")
-    achievement.register("no_hard_feelings")
-    achievement.register("keep_it_moving")
-    achievement.register("romeo")
-    achievement.register("big_mouth")
-    achievement.register("mixed_feelings")
-    achievement.register("the_notorious")
-    achievement.register("a_new_beginning")
-    achievement.register("over_it")
-    achievement.register("not_now_mom")
-    achievement.register("lips_dont_lie")
-    achievement.register("truth_hurts")
-    achievement.register("relight_the_fire")
-    achievement.register("rematch")
-    achievement.register("keen_eye")
-    achievement.register("on_the_low")
-    achievement.register("peta_public_enemy")
-    achievement.register("snitch")
-    achievement.register("bros_before_hoes")
-    achievement.register("monkey_business")
-    achievement.register("not_my_business")
-    achievement.register("reignition")
-    achievement.register("credulous")
-    achievement.register("seems_fishy")
-    achievement.register("strike")
-    achievement.sync()
+#steam and developer options
 
-define persistent.ep = 8
+default persistent.ep = 7
 
-define steam = True
+default steam = True
 
-define developer = True
+default developer = False
 
 define config.steam_appid = 1463120
+
 
 #Splashscreen
 label splashscreen:
@@ -165,7 +140,7 @@ else:
     $ achievement.sync()
 
 
-$ contact_Emily.newMessage("Cool :)")
+$ contact_Emily.newMessage(emilyMessage2a)
 call screen messager(contact_Emily)
 
 label emrep1b:
@@ -182,7 +157,7 @@ else:
     $ achievement.grant("open_wound")
     $ achievement.sync()
 $ addPoint("tm", 1)
-$ contact_Emily.newMessage("Ugh :/")
+$ contact_Emily.newMessage(emilyMessage2b)
 call screen messager(contact_Emily)
 
 label stats:
@@ -191,14 +166,11 @@ $ freeroamtut = 0
 call screen stats
 
 label larep1a:
-$ contact_Lauren.newMessage("Yeah sounds good :) Where do you wanna meet?")
-$ contact_Lauren.addReply("Just come to dorm 109 at 8", "larep2a")
+$ contact_Lauren.newMessage(laurenMessage1)
 call screen messager(contact_Lauren)
 
 label larep2a:
-$ contact_Lauren.newMessage("Okay, will do")
-$ contact_Lauren.addReply("See you later, cutie", "larep3a")
-$ contact_Lauren.addReply("Cool", "larep3b")
+$ contact_Lauren.newMessage(laurenMessage2)
 call screen messager(contact_Lauren)
 
 label larep3a:
@@ -211,18 +183,17 @@ call screen messager(contact_Lauren)
 label larep4a:
 $ larep4 = 1
 $ addPoint("bf", 1)
-$ contact_Lauren.newMessage("Cool :)")
+$ contact_Lauren.newMessage(laurenMessage5a)
 call screen messager(contact_Lauren)
 
 label larep4b:
 $ larep4 = 2
 $ addPoint("tm", 1)
-$ contact_Lauren.newMessage("Idk, it's just feels kinda weird now. Can we please just talk tomorrow?")
-$ contact_Lauren.addReply("Fine", "larep5b")
+$ contact_Lauren.newMessage(laurenMessage5b)
 call screen messager(contact_Lauren)
 
 label larep5b:
-$ contact_Lauren.newMessage(":)")
+$ contact_Lauren.newMessage(laurenMessage6)
 call screen messager(contact_Lauren)
 
 label jurep1a:
@@ -235,9 +206,8 @@ call screen messager(contact_Julia)
 
 label ryrep1a:
 $ ryanreply = 1
-$ contact_Ryan.newMessage("Haha, trust me, you're not gonna want to leave once you see all the hot chicks there.")
-$ contact_Ryan.newMessage("Just meet me in front of the Apes' frat house at 9.")
-$ contact_Ryan.addReply("Okay, will do.", "ryrep3a")
+$ contact_Ryan.newMessage(ryanMessage2)
+$ contact_Ryan.newMessage(ryanMessage3)
 call screen messager(contact_Ryan)
 
 label ryrep3a:
@@ -245,16 +215,12 @@ call screen messager(contact_Ryan)
 
 label ryrep4a:
 $ addPoint("bro", 1)
-$ contact_Ryan.newMessage("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe")
-$ contact_Ryan.addReply("Whatever", "ryrep5a")
-$ contact_Ryan.addReply("Don't you dare defend that guy", "ryrep5b")
+$ contact_Ryan.newMessage(ryanMessage5)
 call screen messager(contact_Ryan)
 
 label ryrep4b:
 $ addPoint("tm", 1)
-$ contact_Ryan.newMessage("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe")
-$ contact_Ryan.addReply("Whatever", "ryrep5a")
-$ contact_Ryan.addReply("Don't you dare defend that guy", "ryrep5b")
+$ contact_Ryan.newMessage(ryanMessage5)
 call screen messager(contact_Ryan)
 
 label ryrep5a:
@@ -263,15 +229,14 @@ call screen messager(contact_Ryan)
 
 label ryrep5b:
 $ addPoint("tm", 1)
-$ contact_Ryan.newMessage("Sorry...")
+$ contact_Ryan.newMessage(ryanMessage6)
 call screen messager(contact_Ryan)
 
 label larep8a:
 $ larep8 = 1
 $ meetlauren = True
 $ addPoint("bf", 1)
-$ contact_Lauren.newMessage("Great, I'll see you then :)")
-
+$ contact_Lauren.newMessage(laurenMessage11)
 call screen messager(contact_Lauren)
 
 label larep8b:
@@ -289,24 +254,21 @@ else:
     $ achievement.grant("mixed_feelings")
     $ achievement.sync()
 $ addPoint("tm", 1)
-$ contact_Lauren.newMessage("Is everything okay?")
-$ contact_Lauren.addReply("Yeah, I'm fine.", "larep9a")
+$ contact_Lauren.newMessage(laurenMessage9)
 call screen messager(contact_Lauren)
 
 label larep9a:
-$ contact_Lauren.newMessage("Okay...")
+$ contact_Lauren.newMessage(laurenMessage10)
 call screen messager(contact_Lauren)
 
 label jorep3a:
 $ addPoint("bro", 1)
-$ contact_Josh.newMessage("It's fine, you go get her.")
+$ contact_Josh.newMessage(joshMessage4)
 call screen messager(contact_Josh)
 
 label jorep3b:
 $ addPoint("bf", 1)
-$ contact_Josh.newMessage("Nah, you don't want a bitch like her.")
-$ contact_Josh.addReply("Yeah, I guess you're right.","jorep5a")
-$ contact_Josh.addReply("Dude, what the fuck?!", "jorep5b")
+$ contact_Josh.newMessage(joshMessage5)
 call screen messager(contact_Josh)
 
 label jorep4a:
@@ -314,16 +276,14 @@ call screen messager(contact_Josh)
 
 label jorep5a:
 $ addPoint("bro", 1)
-$ contact_Josh.newMessage("Hahaha, I'm just kidding, yo.")
-$ contact_Josh.newMessage("Of course I gave her your number.")
-$ contact_Josh.addReply("Damn, you got me.", "jorep7a")
+$ contact_Josh.newMessage(joshMessage6)
+$ contact_Josh.newMessage(joshMessage7)
 call screen messager(contact_Josh)
 
 label jorep5b:
 $ addPoint("tm", 1)
-$ contact_Josh.newMessage("Hahaha, I'm just kidding, yo.")
-$ contact_Josh.newMessage("Of course I gave her your number.")
-$ contact_Josh.addReply("Damn, you got me.", "jorep7a")
+$ contact_Josh.newMessage(joshMessage6)
+$ contact_Josh.newMessage(joshMessage7)
 call screen messager(contact_Josh)
 
 label jorep7a:
@@ -331,20 +291,17 @@ call screen messager(contact_Josh)
 
 label aubrep2a:
 $ addPoint("bro", 1)
-$ contact_Aubrey.newMessage("Yeah, I mean they had a thing a while ago but she broke it off 'cause he lied about some shit.")
-$ contact_Aubrey.newMessage("So... tomorrow?")
-$ contact_Aubrey.addReply("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume.", "aubrep2b")
+$ contact_Aubrey.newMessage(aubreyMessage3)
+$ contact_Aubrey.newMessage(aubreyMessage4)
 call screen messager(contact_Aubrey)
 
 label aubrep2b:
 $ addPoint("bf", 1)
-$ contact_Aubrey.newMessage("I've got dance practice tonight :(")
-$ contact_Aubrey.addReply("I'm not talking tonight, I can pick you up right now.", "aubrep5a")
+$ contact_Aubrey.newMessage(aubreyMessage5)
 call screen messager(contact_Aubrey)
 
 label aubrep5a:
-$ contact_Aubrey.newMessage("Oh wow, that's spontaneous, I like it haha.\n\nI guess come to the Chicks' house whenever you're ready and then we can go costume shopping.")
-$ contact_Aubrey.addReply("Cool, I'll be 20 mins.", "aubrep7a")
+$ contact_Aubrey.newMessage(aubreyMessage7)
 call screen messager(contact_Aubrey)
 
 label aubrep7a:
@@ -355,31 +312,28 @@ call screen messager(contact_Aubrey)
 label aubrep8a:
 $ costumeaubrey = True
 $ addPoint("bf", 1)
-$ contact_Aubrey.newMessage("Good :)")
+$ contact_Aubrey.newMessage(aubreyMessage10)
 call screen messager(contact_Aubrey)
 
 label aubrep8b:
 $ costumeaubrey = False
 $ addPoint("tm", 1)
-$ contact_Aubrey.newMessage("Oh, okay. Guess we'll have to postpone the costume buying.")
+$ contact_Aubrey.newMessage(aubreyMessage9)
 call screen messager(contact_Aubrey)
 
 label aubrep12aa:
-$ contact_Aubrey.newMessage("My room has a window facing the backyard. Can you climb in through there instead of using the front door?")
-$ contact_Aubrey.newMessage("I'll leave it open.")
-$ contact_Aubrey.addReply("Uhm... sure.", "aubrep14a")
+$ contact_Aubrey.newMessage(aubreyMessage13a)
+$ contact_Aubrey.newMessage(aubreyMessage14a)
 call screen messager(contact_Aubrey)
 
 label aubrep12a:
-$ contact_Aubrey.newMessage("My room has a window facing the backyard. Can you climb in through there? I'll leave it open.")
-$ contact_Aubrey.newMessage("I'd prefer if none of the girls saw you.")
-$ contact_Aubrey.addReply("Uhm... sure.", "aubrep14a")
+$ contact_Aubrey.newMessage(aubreyMessage13)
+$ contact_Aubrey.newMessage(aubreyMessage14)
 call screen messager(contact_Aubrey)
 
 label aubrep12ab:
-$ contact_Aubrey.newMessage("My room has a window facing the backyard. Can you climb in through there instead of using the front door?")
-$ contact_Aubrey.newMessage("I'll leave it open.")
-$ contact_Aubrey.addReply("Uhm... sure.", "aubrep14ab")
+$ contact_Aubrey.newMessage(aubreyMessage13b)
+$ contact_Aubrey.newMessage(aubreyMessage14b)
 call screen messager(contact_Aubrey)
 
 label aubrep14a:
@@ -393,153 +347,135 @@ $ aubrep14 = 1
 call screen messager(contact_Aubrey)
 
 label clrep2a:
-$ contact_Chloe.newMessage("I'm really busy today, but I could do tonight after 11 or so.")
-$ contact_Chloe.addReply("Alright, cool. I'll be at yours for 11", "clrep3a")
+$ contact_Chloe.newMessage(chloeMessage3)
 call screen messager(contact_Chloe)
 
 label clrep3a:
 $ clrep3 = 1
-$ contact_Chloe.newMessage("Sounds good :)")
-
+$ contact_Chloe.newMessage(chloeMessage4)
 call screen messager(contact_Chloe)
 
 
 label jorep8a:
 $ addPoint("bro", 1)
-$ contact_Josh.newMessage("Dope")
-$ contact_Josh.newMessage("Come by 995 Sereno Drive at 8, it's my friends house.")
+$ contact_Josh.newMessage(joshMessage9)
+$ contact_Josh.newMessage(joshMessage10)
 call screen messager(contact_Josh)
 
 label jorep8b:
-$ contact_Josh.newMessage("Aww, come on. You'll be back by 11.")
-$ contact_Josh.newImgMessage("images/text1.jpg")
-$ contact_Josh.newMessage("I told my friend Amber about you and she really wants to meet you.")
-$ contact_Josh.addReply("Alright, I'll come.", "jorep12a")
-$ contact_Josh.addReply("Josh, I don't know, man. I don't wanna be late.", "jorep12b")
+$ contact_Josh.newMessage(joshMessage11)
+$ contact_Josh.newMessage(joshMessage12a)
+$ contact_Josh.newMessage(joshMessage12)
 call screen messager(contact_Josh)
 
 label jorep12a:
 $ jorep12 = 1
 $ joisreply = 0
 $ addPoint("bro", 1)
-$ contact_Josh.newMessage("Dope")
-$ contact_Josh.newMessage("Come by 995 Sereno Drive at 8, it's my friends house.")
+$ contact_Josh.newMessage(joshMessage9)
+$ contact_Josh.newMessage(joshMessage10)
 call screen messager(contact_Josh)
 
 label jorep12b:
-$ contact_Josh.newMessage("Remember how you told me in high school that you felt like you always missed out on all the crazy stories?")
-$ contact_Josh.newMessage("Don't miss out now.")
-$ contact_Josh.addReply("Fine, I'll come. But I need to go before 11.", "jorep14a")
-$ contact_Josh.addReply("I can't, sorry.", "jorep14b")
+$ contact_Josh.newMessage(joshMessage13)
+$ contact_Josh.newMessage(joshMessage14)
 call screen messager(contact_Josh)
 
 label jorep14a:
 $ jorep14 = 1
 $ joisreply = 0
-$ contact_Josh.newMessage("Dope")
-$ contact_Josh.newMessage("Come by 995 Sereno Drive at 8, it's my friends house.")
+$ contact_Josh.newMessage(joshMessage9)
+$ contact_Josh.newMessage(joshMessage10)
 call screen messager(contact_Josh)
 
 label jorep14b:
 $ jorep14 = 2
 $ joisreply = 0
 $ addPoint("bf", 1)
-$ contact_Josh.newMessage("This guy")
+$ contact_Josh.newMessage(joshMessage15)
 call screen messager(contact_Josh)
 
 label amrep3a:
 $ addPoint("bro", 1)
-$ contact_Amber.newMessage("Oh really? How are you gonna do that?")
-$ contact_Amber.addReply("I give some world-class massages", "amrep4a")
-$ contact_Amber.addReply("I'll stay longer next time", "amrep4b")
+$ contact_Amber.newMessage(amberMessage4)
 call screen messager(contact_Amber)
 
 label amrep3b:
-$ contact_Amber.newMessage("Oh okay, hope everything's okay xx")
-$ contact_Amber.addReply("Yeah, it's all good.", "amrep5a")
+$ contact_Amber.newMessage(amberMessage5)
 call screen messager(contact_Amber)
 
 label amrep4a:
 $ addPoint("tm", 1)
-$ contact_Amber.newMessage("That does sound enticing ;)")
-
+$ contact_Amber.newMessage(amberMessage6)
 call screen messager(contact_Amber)
 
 label amrep4b:
-$ contact_Amber.newMessage("Deal xx")
+$ contact_Amber.newMessage(amberMessage7)
 call screen messager(contact_Amber)
 
 label amrep5a:
-$ contact_Amber.newMessage("Deal xx")
+$ contact_Amber.newMessage(amberMessage7)
 call screen messager(contact_Amber)
 
 label amrep3aa:
 $ addPoint("bro", 1)
-$ contact_Amber.newMessage("Oh wow, I was just checking. :P")
-$ contact_Amber.addReply("Don't worry, you'll see me soon", "amrep4aa") # Edited
-$ contact_Amber.addReply("Haha, I'm fine.", "amrep4ba")
+$ contact_Amber.newMessage(amberMessage4a)
 call screen messager(contact_Amber)
 
 label amrep3ba:
-$ contact_Amber.newMessage("Oh okay, hope you're good xx")
-$ contact_Amber.addReply("Yeah, no worries", "amrep5aa")
+$ contact_Amber.newMessage(amberMessage5a)
 call screen messager(contact_Amber)
 
 label amrep4aa:
 $ addPoint("tm", 1)
-$ contact_Amber.newMessage("Was hoping xx")
-
+$ contact_Amber.newMessage(amberMessage6a)
 call screen messager(contact_Amber)
 
 label amrep4ba:
-$ contact_Amber.newMessage("That's good xx")
+$ contact_Amber.newMessage(amberMessage7a)
 call screen messager(contact_Amber)
 
 label amrep5aa:
-$ contact_Amber.newMessage("That's good xx")
+$ contact_Amber.newMessage(amberMessage7a)
 call screen messager(contact_Amber)
 
 label amrep3ab:
 $ addPoint("bro", 1)
-$ contact_Amber.newMessage("Oh shut up, I was just checking in")
-$ contact_Amber.addReply("Don't worry, you'll see me again", "amrep4ab")
-$ contact_Amber.addReply("Haha, I'm fine", "amrep4bb")
+$ contact_Amber.newMessage(amberMessage4b)
 call screen messager(contact_Amber)
 
 label amrep3bb:
-$ contact_Amber.newMessage("Oh okay, hope you're good xx")
-$ contact_Amber.addReply("Yeah, no worries", "amrep5ab")
+$ contact_Amber.newMessage(amberMessage5b)
 call screen messager(contact_Amber)
 
 label amrep4ab:
 $ addPoint("tm", 1)
-$ contact_Amber.newMessage("Was hoping xx")
-
+$ contact_Amber.newMessage(amberMessage6b)
 call screen messager(contact_Amber)
 
 label amrep4bb:
-$ contact_Amber.newMessage("That's good xx")
+$ contact_Amber.newMessage(amberMessage7b)
 call screen messager(contact_Amber)
 
 label amrep5ab:
-$ contact_Amber.newMessage("That's good xx")
+$ contact_Amber.newMessage(amberMessage7b)
 call screen messager(contact_Amber)
 
 label larep13a:
 $ larep13 = 1
-$ contact_Lauren.newMessage("Great :) Meet me at our economics' classroom.")
+$ contact_Lauren.newMessage(laurenMessage14)
 call screen messager(contact_Lauren)
 
 label amrep8a:
-$ contact_Amber.newMessage("Go somewhere where you're completely alone xx")
-$ contact_Amber.newMessage("I got a surprise for you ;)")
+$ contact_Amber.newMessage(amberMessage9)
+$ contact_Amber.newMessage(amberMessage10)
 jump phoneaa
 
 
 # The game starts here.
 
 label start:
-    # $ addReplies()
+    $ addReplies()
     $ _game_menu_screen = "ingmenu"
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -547,6 +483,14 @@ label start:
 
     #### Pre Questions
 
+    #if steam confirms DLC:
+    scene jwt
+    jany "Do you want to enable the walkthrough?"
+    call screen jwt
+    #else
+    jump jwtd
+
+label jwtd:
     call screen realmode
 
 label rme:
@@ -684,10 +628,16 @@ label starta:
     u "(Huh?)"
 
     $ wt = 1
-    # $ contact_Emily.newMessage(emilyMessage1)
-    $ contact_Emily.newMessage("Hey...\nI know we haven’t talked much after we broke up, but I just wanted to let you know that I didn’t get into Stanford, so I’ll be going to San Vallejo as well.\nGuess I’ll see you there. :)")
-    $ contact_Emily.addReply("Yeah... I’ll see you there.", "emrep1a")
-    $ contact_Emily.addReply("You cheated on me.\nGo to hell!", "emrep1b")
+    $ contact_Emily.newMessage(emilyMessage1)
+    # $ msgnot = 1
+    # $ emilymsgnot = 1
+    # $ emilymsg = 1
+    # $ emisreply = 1
+    # $ emilymsg1 = "Hey...\nI know we haven’t talked much after we broke up, but I just wanted to let you know that I didn’t get into Stanford, so I’ll be going to San Vallejo as well.\nGuess I’ll see you there. :)"
+    # $ emreply1a = "Yeah... I’ll see you there."
+    # $ emilymsg2 = "Cool :)"
+    # $ emreply1b = "You cheated on me.\nGo to hell!"
+    # $ emilymsg3 = "Ugh :/"
     $ showphone = True
 
     call screen phone
@@ -1481,13 +1431,15 @@ label phonea:
     $ phonetut = 0
     $ showphone = True
     $ phoneexit = "phonec"
-
+    $ msgnot = 1
+    $ jumsgnot = 1
+    $ jumsg = 1
     $ contact_Julia.unlock()
-
-    $ contact_Julia.newMessage("Hey honey,\nenjoy your time in college.\nStay safe and don't forget to visit me.\nLove you")
-    $ contact_Julia.addReply("Love you too.", "jurep1a")
-    $ contact_Julia.addReply("Thanks, Julia :)", "jurep1b")
-
+    $ juisreply = 1
+    $ contact_Julia.newMessage(juliaMessage1)
+    $ jumsg1 = "Hey honey,\nenjoy your time in college.\nStay safe and don't forget to visit me.\nLove you"
+    $ jurep1a = "Love you too."
+    $ jurep1b = "Thanks, Julia :)"
     play sound "sounds/vibrate.mp3"
     call screen freeroam1a
     with dissolve
@@ -1895,8 +1847,16 @@ label phonea:
         call screen endfreeroam
 
     label efra:
+        
+        if fr1adam != 1:
+            jump jwt_fradam1
+        else:
+            jump jwt_efra
 
+    label jwt_efra:
+    
         $ showphone = False
+        
         scene s59
         stop music fadeout 2.0
         play sound "sounds/knock.mp3"
@@ -2123,15 +2083,23 @@ label phonea:
         scene s61a
         with dissolve
         $ phoneexit = "phonef"
-
-        $ contact_Lauren.addReply("Hey Lauren, would you want to hang out with me and my friends tonight?", "larep1a")
-
+        $ laisreply = 1
+        $ lamsg = 1
+        $ lamsgnot = 1
+        $ msgnot = 1
+        $ contact_Lauren.newMessage(laurenMessage0)
+        $ lareply1a = "Hey Lauren, would you want to hang out with me and my friends tonight?"
+        $ lamsg1 = "Yeah sounds good :) Where do you wanna meet?"
+        $ lareply2a = "Just come to dorm 109 at 8"
+        $ lamsg2 = "Okay, will do"
+        $ lareply3a = "See you later, cutie"
+        $ lareply3b = "Cool"
         $ showphone = True
 
         call screen phone
 
         label phonef:
-        if contact_Lauren.replies: # Edited
+        if not laurenMessage2.reply: # Edited
             scene s61
             with dissolve
             imre "Did you ask?"
@@ -2835,7 +2803,7 @@ label phonea:
             $ sda = True
             jump dream
 
-        "Wake up":
+        "Wake up" if not jwt:
 
             $ sda = False
             jump skipdream
@@ -2862,17 +2830,32 @@ label phonea:
     with dissolve
     ri "Tell me what you want."
 
-    menu:
+    if jwt:
+        menu:
 
+            "Blowjob":
 
-        "Blowjob":
+                jump bg_b
 
-            jump bg_b
+            "Footjob":
 
-        "Footjob":
+                jump bg_c
+            
+            "Both":
+            
+                jump jwt_bg_b
 
-            jump bg_c
+    else:
+        
+        menu:
 
+            "Blowjob":
+
+                jump bg_b
+
+            "Footjob":
+
+                jump bg_c
 
     label bg_b:
 
@@ -3363,7 +3346,7 @@ u "A couple huh?"
 
 menu:
 
-    "You could get any guy.":
+    "You could get any guy." if not jwt:
 
         jump av_a
 
@@ -3433,7 +3416,7 @@ label av_b:
         menu:
 
 
-            "I'm still in love with my ex.":
+            "I'm still in love with my ex." if not jwt:
 
                 jump aw_a
 
@@ -3645,7 +3628,7 @@ label av_b:
                     $ lakiss = 1
                     jump ay_a
 
-                "Don't kiss her":
+                "Don't kiss her" if not jwt:
 
                     $ lakiss = 0
                     jump ay_b
@@ -3833,17 +3816,25 @@ label av_b:
     stop music fadeout 2.0
     play sound "sounds/vibrate.mp3"
     $ showphone = True
-
+    # $ ryanreply = 0
+    # $ ryisreply = 1
+    # $ ryfirst = 1
     $ contact_Ryan.unlock()
-
-    $ contact_Ryan.newMessage("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???")
-    $ contact_Ryan.addReply("Alright, but I'll only stay for a few hours.", "ryrep1a")
-
+    # $ rymsgnot = 1
+    # $ msgnot = 1
+    # $ rymsg = 1
+    $ contact_Ryan.newMessage(ryanMessage1)
+    # $ rymsg1 = "Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???"
+    # $ ryrep1a = "Alright, but I'll only stay for a few hours."
+    # $ rymsg2 = "Haha, trust me, you're not gonna want to leave once you see all the hot chicks there."
+    # $ rymsg3 = "Just meet me in front of the Apes' frat house at 9."
+    # $ ryrep2a = "Okay, will do."
     $ phoneexit = "phoneg"
 
+    " "
     label phoneg:
     label repeata:
-    if contact_Ryan.replies:
+    if not ryanMessage1.reply:
 
         u "(I should really check who texted me.)"
 
@@ -4473,10 +4464,19 @@ label av_b:
         else:
             if latext == 0:
                 play sound "sounds/vibrate.mp3"
-
-                $ contact_Lauren.newMessage("Hey :)\nSorry about today.\n\nCan we talk tomorrow?")
-                $ contact_Lauren.addReply("Yeah, sure.", "larep4a")
-                $ contact_Lauren.addReply("What is there to talk about?", "larep4b")
+                $ laisreply = 1
+                $ lamsgnot = 1
+                $ msgnot = 1
+                $ contact_Lauren.newMessage(laurenMessage4)
+                $ lamsg4 = "Hey :)\nSorry about today.\n\nCan we talk tomorrow?"
+                $ larep4a = "Yeah, sure."
+                $ larep4b = "What is there to talk about?"
+                $ lamsg5 = "Cool :)"
+                $ lamsg6 = "Idk, it's just feels kinda weird now. Can we please just talk tomorrow?"
+                $ larep6a = "Fine."
+                $ lamsg7 = ":)"
+                $ lamsg = 4
+                $ latext = 1
 
             $ phoneexit = "phonen"
 
@@ -5450,21 +5450,32 @@ label fr2end:
         queue sound "sounds/vibrate.mp3"
 
         $ showphone = True
-
-        $ contact_Ryan.newMessage("You okay?")
-        $ contact_Ryan.addReply("I'm fine", "ryrep4a")
-        $ contact_Ryan.addReply("No, wtf was that?! Fuck Grayson and fuck the Apes", "ryrep4b")
-
+        $ msgnot = 1
+        $ rymsgnot = 1
+        $ lamsgnot = 1
+        $ ryisreply = 1
+        $ rymsg = 4
+        $ contact_Ryan.newMessage(ryanMessage4)
+        $ rymsg4 = "You okay?"
+        $ ryrep4a = "I'm fine"
+        $ ryrep4b = "No, wtf was that?! Fuck Grayson and fuck the Apes"
+        $ rymsg5 = "Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"
+        $ ryrep5a = "Whatever"
+        $ ryrep5b = "Don't you dare defend that guy"
+        $ rymsg6 = "Sorry..."
+        $ lamsg = 8
+        $ larep8a = "Yeah, SV cafe in 20 mins?"
+        $ larep8b = "Sorry, I can't"
+        $ lamsg9 = "Is everything okay?"
+        $ larep9a = "Yeah, I'm fine."
+        $ lamsg10 = "Okay..."
+        $ lamsg11 = "Great, I'll see you then :)"
         $ temp_MessageNot = True
         $ phoneexit = "phoneo"
-        if contact_Lauren.replies:
-            $ contact_Lauren.newMessage("Hello?? Can we please talk today?")
-            $ contact_Lauren.addReply("Yeah, SV cafe in 20 mins?", "larep8a")
-            $ contact_Lauren.addReply("Sorry, I can't", "larep8b")
+        if not laurenMessage4.reply:
+            $ contact_Lauren.newMessage(laurenMessage8b)
         else:
-            $ contact_Lauren.newMessage("Are we still on for today? :)")
-            $ contact_Lauren.addReply("Yeah, SV cafe in 20 mins?", "larep8a")
-            $ contact_Lauren.addReply("Sorry, I can't", "larep8b")
+            $ contact_Lauren.newMessage(laurenMessage8a)
 
 
         " "
@@ -5474,7 +5485,7 @@ label fr2end:
         scene s96g
         with dissolve
 
-        if contact_Lauren.replies:
+        if not laurenMessage8a.reply and not laurenMessage8b.reply:
             u "(Damn, my phone's blowing up. I should probably check my messages.)"
 
             jump repeatb
@@ -5788,8 +5799,6 @@ label fr2end:
 
         if adamtut == True:
             jump fkcon
-        elif s28_LarsFight:
-            jump s28_LarsFightCont
         else:
             call screen ft1
 
@@ -5932,9 +5941,6 @@ label fr2end:
 
         if adamtut == True:
             call screen af3
-
-        elif s28_LarsFight:
-            call screen s28_LarsKeybindOptions
 
         else:
 
@@ -6648,12 +6654,6 @@ label fr2end:
 
     la "Ugh okay...I hope that's true. Anyway..."
 
-
-
-
-
-
-
     scene s130b
     with dissolve
     $ influencetut = True
@@ -6669,7 +6669,7 @@ label fr2end:
             $ addPoint("bf", 1)
             jump bl_a
 
-        "Let's forget about it.":
+        "Let's forget about it." if not jwt:
 
             $ addPoint("bro", 1)
             jump bl_b
@@ -6958,17 +6958,31 @@ label fr2end:
     $ showphone = True
     $ msgnot = 1
     $ contact_Josh.unlock()
-
-    $ contact_Josh.newMessage("Dude, I talked to this Aubrey chick the entire night and guess who's number she wanted...")
-    $ contact_Josh.newMessage("YOURS")
-    $ contact_Josh.newMessage("What a bitch...")
-    $ contact_Josh.addReply("Sorry, man. She doesn't know what she's missing.","jorep3a")
-    $ contact_Josh.addReply("Sooo, did you give it to her?", "jorep3b")
-
+    $ jomsgnot = 1
+    $ joisreply = 1
+    $ jomsg = 1
+    $ contact_Josh.newMessage(joshMessage1)
+    $ contact_Josh.newMessage(joshMessage2)
+    $ contact_Josh.newMessage(joshMessage3)
+    $ jomsg1 = "Dude, I talked to this Aubrey chick the entire night and guess who's number she wanted..."
+    $ jomsg2 = "YOURS"
+    $ jomsg3 = "What a bitch..."
+    $ jorep1a = "Sorry, man. She doesn't know what she's missing."
+    $ jorep1b = "Sooo, did you give it to her?"
+    $ jomsg4 = "It's fine, you go get her."
+    $ jorep4a = "Thanks, I'll try my best."
+    $ jomsg5 = "Nah, you don't want a bitch like her."
+    $ jorep5a = "Yeah, I guess you're right."
+    $ jorep5b = "Dude, what the fuck?!"
+    $ jomsg6 = "Hahaha, I'm just kidding, yo."
+    $ jomsg7 = "Of course I gave her your number."
+    $ jorep7a = "Damn, you got me."
     $ phoneexit = "phonep"
 
     scene s133
     with dissolve
+
+    " "
 
 
     label phonep:
@@ -7464,7 +7478,7 @@ label fr2end:
 
 
 
-        "No, sorry.":
+        "No, sorry." if not jwt:
             $ emilyandben = True
             $ forgiveemily = False
             $ addPoint("tm", 1)
@@ -8107,22 +8121,33 @@ label bo_bd:
     play sound "sounds/vibrate.mp3"
     $ phoneexit = "phoneq"
     $ showphone = True
-
+    $ msgnot = 1
     $ contact_Aubrey.unlock()
+    $ aubmsgnot = 1
+    $ aubisreply = 1
+    $ aubmsg = 1
+    $ contact_Aubrey.newMessage(aubreyMessage1)
+    $ contact_Aubrey.newMessage(aubreyMessage2)
+    $ aubmsg1 = "Hey,\nJosh gave me your number\n\nI hope your face is feeling better after the shit that Grayson pulled..."
+    $ aubmsg2 = "He's not even dating Chloe and you guys didn't even do anything so I don't know what he was thinking.\n\nAnyway, do you wanna like... hang out tomorrow?"
+    $ aubrep2a = "Wait they're not dating?"
+    $ aubrep2b = "My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."
+    $ aubmsg3 = "Yeah, I mean they had a thing a while ago but she broke it off 'cause he lied about some shit."
+    $ aubmsg4 = "So... tomorrow?"
+    $ aubmsg5 = "I've got dance practice tonight :("
+    $ aubrep5a = "I'm not talking tonight, I can pick you up right now."
+    $ aubmsg7 = "Oh wow, that's spontaneous, I like it haha.\n\nI guess come to the Chicks' house whenever you're ready and then we can go costume shopping."
+    $ aubrep7a = "Cool, I'll be 20 mins."
 
-    $ contact_Aubrey.newMessage("Hey,\nJosh gave me your number\n\nI hope your face is feeling better after the shit that Grayson pulled...")
-    $ contact_Aubrey.newMessage("He's not even dating Chloe and you guys didn't even do anything so I don't know what he was thinking.\n\nAnyway, do you wanna like... hang out tomorrow?")
-    $ contact_Aubrey.addReply("Wait they're not dating?", "aubrep2a")
-    $ contact_Aubrey.addReply("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume.", "aubrep2b")
 
     u "(Oh , I just got a message.)"
     label phoneq:
     label repeatc:
-    if contact_Aubrey.replies:
+    if aubreyMessage2.reply == False:
         u "(I should check my messages.)"
         jump repeatc
 
-    elif contact_Aubrey.replies:
+    elif not aubreyMessage7.reply:
         u "(I should really reply to Aubrey.)"
         jump repeatc
 
@@ -8290,13 +8315,17 @@ label bo_bd:
 
     play sound "sounds/vibrate.mp3"
     $ phoneexit = "phoner"
-
+    $ msgnot = 1
     $ contact_Aubrey.unlock()
-
-    $ contact_Aubrey.newMessage("Hey, are you nearby?")
-    $ contact_Aubrey.addReply("Yeah, I'm just on my way, I'll be right there.", "aubrep8a")
-    $ contact_Aubrey.addReply("Sorry, something came up and I can't make it.", "aubrep8b")
-
+    $ aubmsgnot = 1
+    $ aubisreply = 1
+    $ contact_Aubrey.newMessage(aubreyMessage8)
+    $ aubmsg = 8
+    $ aubmsg8 = "Hey, are you nearby?"
+    $ aubrep8a = "Yeah, I'm just on my way, I'll be right there."
+    $ aubrep8b = "Sorry, something came up and I can't make it."
+    $ aubmsg9 = "Oh, okay. Guess we'll have to postpone the costume buying."
+    $ aubmsg10 = "Good :)"
     $ showphone = True
 
     u "(Fuck, I totally forgot about Aubrey. I guess it's time to make a decision.)"
@@ -8305,7 +8334,7 @@ label bo_bd:
     label phoner:
     label repeatg:
 
-    if contact_Aubrey.replies:
+    if not aubreyMessage8.reply:
 
         u "(Aubrey's waiting for me, I need to let her know whether I'm coming or not.)"
 
@@ -8501,6 +8530,8 @@ label bo_bd:
 
     au "If there's any female ones in there, I'm trying them on."
 
+    jany "(walkthrough note) Make sure to try all of the costumes. If you don't you'll miss something."
+
     call screen costumes # choice between 3 costumes button try and button buy below, every time you try, Aubrey comes out in a different outfit, you can peek while changing
 
     # chnace to flirt with ev
@@ -8548,7 +8579,7 @@ label bo_bd:
                 $ addPoint("tm", 1)
                 jump bt_a
 
-            "Don't peek":
+            "Don't peek" if not jwt:
 
                 $ addPoint("bf", 1)
                 jump bt_b
@@ -8566,14 +8597,18 @@ label bo_bd:
 
 
             "Risk it":
-                $ caughtpeekingaubrey = renpy.random.choice([True, False])
+                if jwt:
+                    $ caughtpeekingaubrey = False
+                
+                else:
+                    $ caughtpeekingaubrey = renpy.random.choice([True, False])
 
                 if caughtpeekingaubrey == False:
                     jump br_aa
                 else:
                     jump caughta
 
-            "Stop peeking":
+            "Stop peeking" if not jwt:
 
                 jump br_ba
 
@@ -8721,7 +8756,7 @@ label bo_bd:
                 $ addPoint("tm", 1)
                 jump bv_a
 
-            "Don't peek":
+            "Don't peek" if not jwt:
 
                 $ addPoint("bf", 1)
                 jump bv_b
@@ -8739,14 +8774,18 @@ label bo_bd:
 
 
             "Risk it":
-                $ caughtpeekingaubrey = renpy.random.choice([True, False])
+                if jwt:
+                    $ caughtpeekingaubrey = False
+                
+                else:
+                    $ caughtpeekingaubrey = renpy.random.choice([True, False])
 
                 if caughtpeekingaubrey == False:
                     jump bw_a
                 else:
                     jump caughtb
 
-            "Stop peeking":
+            "Stop peeking" if not jwt:
 
                 jump bw_b
 
@@ -8911,7 +8950,7 @@ label bo_bd:
                 $ addPoint("tm", 1)
                 jump bz_a
 
-            "Don't peek":
+            "Don't peek" if not jwt:
 
                 $ addPoint("bf", 1)
                 jump bz_b
@@ -8929,13 +8968,18 @@ label bo_bd:
 
             "Risk it":
 
-                $ caughtpeekingaubrey = renpy.random.choice([True, False])
+                if jwt:
+                    $ caughtpeekingaubrey = False
+                
+                else:
+                    $ caughtpeekingaubrey = renpy.random.choice([True, False])
+                    
                 if caughtpeekingaubrey == False:
                     jump ca_a
                 else:
                     jump caughtc
 
-            "Stop peeking":
+            "Stop peeking" if not jwt:
 
                 jump ca_b
 
@@ -8980,7 +9024,7 @@ label bo_bd:
             $ influencetut = False
             jump by_a
 
-        "Fine.":
+        "Fine." if not jwt:
 
             $ addPoint("bf", 1)
             $ influencetut = False
@@ -8992,7 +9036,7 @@ label bo_bd:
 
     u "Oh come on, Aubrey. I wanna see."
 
-    if kct == "popular":
+    if kct == "popular" or jwt:
 
         call screen popup2
     else:
@@ -9181,6 +9225,7 @@ label bo_bd:
     pe "I'm actually really excited to buy a costume."
     pe "At my old college we weren't even allowed to wear costumes on Halloween, because of the dress code."
 
+    jany "(walkthrough note) Make sure to try all of the costumes. If you don't you'll miss something."
 
     call screen costumes # choice between 3 costumes button try and button buy below, every time you try, Aubrey comes out in a different outfit, you can peek while changing
 
@@ -9229,7 +9274,7 @@ label bo_bd:
                 $ addPoint("tm", 1)
                 jump cc_a
 
-            "Don't peek":
+            "Don't peek" if not jwt:
 
                 $ addPoint("bf", 1)
                 jump cc_b
@@ -9248,13 +9293,18 @@ label bo_bd:
 
             "Risk it":
 
-                $ caughtpeekingpenelope = renpy.random.choice([True, False])
+                if jwt:
+                    $ caughtpeekingpenelope = False
+                
+                else:
+                    $ caughtpeekingpenelope = renpy.random.choice([True, False])
+                    
                 if caughtpeekingpenelope == False:
                     jump cd_a
                 else:
                     jump caughtd
 
-            "Stop peeking":
+            "Stop peeking" if not jwt:
 
                 jump cd_b
 
@@ -9412,7 +9462,7 @@ label bo_bd:
                 $ addPoint("tm", 1)
                 jump cf_a
 
-            "Don't peek":
+            "Don't peek" if not jwt:
 
                 $ addPoint("bf", 1)
                 jump cf_b
@@ -9432,13 +9482,17 @@ label bo_bd:
 
             "Risk it":
 
-                $ caughtpeekingpenelope = renpy.random.choice([True, False])
+                if jwt:
+                    $ caughtpeekingpenelope = False
+                
+                else:
+                    $ caughtpeekingpenelope = renpy.random.choice([True, False])
                 if caughtpeekingpenelope == False:
                     jump cg_a
                 else:
                     jump caughte
 
-            "Stop peeking":
+            "Stop peeking" if not jwt:
 
                 jump cg_b
 
@@ -9588,7 +9642,7 @@ label bo_bd:
                 $ addPoint("tm", 1)
                 jump cj_a
 
-            "Don't peek":
+            "Don't peek" if not jwt:
 
                 $ addPoint("bf", 1)
                 jump cj_b
@@ -9608,13 +9662,17 @@ label bo_bd:
 
             "Risk it":
 
-                $ caughtpeekingpenelope = renpy.random.choice([True, False])
+                if jwt:
+                    $ caughtpeekingpenelope = False
+                
+                else:
+                    $ caughtpeekingpenelope = renpy.random.choice([True, False])
                 if caughtpeekingpenelope == False:
                     jump ck_a
                 else:
                     jump caughtf
 
-            "Stop peeking":
+            "Stop peeking" if not jwt:
 
                 jump ck_b
 
@@ -11732,7 +11790,7 @@ label bo_bd:
                 $ addPoint("bro", 1)
                 jump cx_a
 
-            "Leave it":
+            "Leave it" if not jwt:
 
                 $ addPoint("bf", 1)
                 jump cx_b
@@ -11785,7 +11843,7 @@ label bo_bd:
                 $ contact_Evelyn.unlock()
                 jump evea
 
-            "Be funny":
+            "Be funny" if not jwt:
 
                 $ evelynnumber = False
                 jump eveb
@@ -11989,18 +12047,24 @@ label bo_bd:
 
             # 1
                 $ aubmsg = 11
-                $ contact_Aubrey.newMessage("I wanna talk about what happened yesterday.")
-                $ contact_Aubrey.newMessage("Any chance that you could come over now?")
-                $ contact_Aubrey.addReply("Yeah, I can.", "aubrep12a")
-   
+                $ contact_Aubrey.newMessage(aubreyMessage11)
+                $ contact_Aubrey.newMessage(aubreyMessage12)
+                $ aubmsg11 = "I wanna talk about what happened yesterday."
+                $ aubmsg12 = "Any chance that you could come over now?"
+                $ aubrep12a = "Yeah, I can."
+                $ aubmsg13 = "My room has a window facing the backyard. Can you climb in through there? I'll leave it open."
+                $ aubmsg14 = "I'd prefer if none of the girls saw you."
+                $ aubrep14a = "Uhm... sure."
                 $ phoneexit = "phones"
+
+                " "
 
                 label repeatk:
                 label phones:
 
-                if contact_Aubrey.replies:
+                if not aubreyMessage14.reply and not aubreyMessage14a.reply and not aubreyMessage14b.reply:
 
-                    if msgApp.notification:
+                    if not msgApp.notification:
 
                         u "(I should really reply to Aubrey.)"
 
@@ -12211,10 +12275,14 @@ label bo_bd:
             label talkedout:
 
             $ aubmsg = 11
-            $ contact_Aubrey.newMessage("Hey, I really need your help.")
-            $ contact_Aubrey.newMessage("Any chance that you could come over now?")
-            $ contact_Aubrey.addReply("Yeah, I'll be right there..", "aubrep12aa")
-
+            $ contact_Aubrey.newMessage(aubreyMessage11a)
+            $ contact_Aubrey.newMessage(aubreyMessage12a)
+            $ aubmsg11a = "Hey, I really need your help."
+            $ aubmsg12a = "Any chance that you could come over now?"
+            $ aubrep12aa = "Yeah, I'll be right there.."
+            $ aubmsg13a = "My room has a window facing the backyard. Can you climb in through there instead of using the front door?"
+            $ aubmsg14a = "I'll leave it open."
+            $ aubrep14aa = "Uhm... sure."
             $ phoneexit = "phonet"
 
             " "
@@ -12222,7 +12290,7 @@ label bo_bd:
             label repeatl:
             label phonet:
 
-            if contact_Aubrey.replies:
+            if not aubreyMessage14.reply and not aubreyMessage14a.reply and not aubreyMessage14b.reply:
 
                 if not msgApp.notification:
 
@@ -12496,16 +12564,23 @@ label bo_bd:
 
 
     else: # you didn't meet aubrey
-        $ contact_Aubrey.newMessage("Hey, you know how you had to cancel on me yesterday and you really want to make it up to me?")
-        $ contact_Aubrey.newMessage("Wanna come over now?")
-        $ contact_Aubrey.addReply("Uhh... okay.", "aubrep12ab")
-
+        $ contact_Aubrey.newMessage(aubreyMessage11b)
+        $ contact_Aubrey.newMessage(aubreyMessage12b)
+        $ aubmsg = 11
+        $ aubmsg11 = "Hey, you know how you had to cancel on me yesterday and you really want to make it up to me?"
+        $ aubmsg12 = "Wanna come over now?"
+        $ aubrep12a = "Uhh... okay."
+        $ aubmsg13 = "My room has a window facing the backyard. Can you climb in through there instead of using the front door?"
+        $ aubmsg14 = "I'll leave it open."
+        $ aubrep14a = "Uhm... sure."
         $ phoneexit = "phoneu"
-        
+
+        " "
+
         label repeatm:
         label phoneu:
 
-        if contact_Aubrey.replies:
+        if not aubreyMessage14.reply and not aubreyMessage14a.reply and not aubreyMessage14b.reply:
 
             if not msgApp.notification:
 
@@ -12799,7 +12874,7 @@ label bo_bd:
             $ aubreysex = True
             jump aubsexa
 
-        "Stop it":
+        "Stop it" if not jwt:
             $ aubreysex = False
             jump aubsexb
 
@@ -13397,7 +13472,7 @@ label bo_bd:
             jump dd_a
 
 
-        "Don't answer":
+        "Don't answer" if not jwt:
             stop sound
             play sound "sounds/rejectcall.mp3"
 
@@ -13446,7 +13521,7 @@ label bo_bd:
                 $ addPoint("bf", 1)
                 jump de_a
 
-            "I can't, sorry.":
+            "I can't, sorry." if not jwt:
 
                 $ meetjulia = False
                 $ addPoint("tm", 1)
@@ -13890,7 +13965,7 @@ label bo_bd:
 
 
 
-        "I like her":
+        "I like her" if not jwt:
 
             $ rileykiss = False
             $ addPoint("bf", 1)
@@ -13954,7 +14029,7 @@ label bo_bd:
             $ addPoint("tm", 1)
             jump dj_a
 
-        "Don't kiss her":
+        "Don't kiss her" if not jwt:
 
             $ addPoint("bf", 1)
             $ rileykiss = False
@@ -14105,7 +14180,7 @@ label bo_bd:
 
 
 
-                "Tell her what happened.":
+                "Tell her what happened." if not jwt:
 
                     $ toldlauren = True
                     $ addPoint("bf", 1)
@@ -14283,7 +14358,7 @@ label bo_bd:
                 $ laurenkissb = True
                 jump dl_a
 
-            "Continue watching":
+            "Continue watching" if not jwt:
 
                 $ laurenkissb = False
                 jump dl_b
@@ -14320,7 +14395,7 @@ label bo_bd:
                 $ addPoint("tm", 1)
                 jump dm_a
 
-            "Keep hands to yourself":
+            "Keep hands to yourself" if not jwt:
 
                 $ addPoint("bf", 1)
                 jump dm_b
@@ -14338,7 +14413,7 @@ label bo_bd:
         menu:
 
 
-            "Keep going":
+            "Keep going" if not jwt:
 
                 $ addPoint("tm", 1)
                 $ laurentoofar = True
@@ -15696,7 +15771,7 @@ label bo_bd:
                     $ volleyball = True
                     jump dv_a
 
-                "Don't buy it":
+                "Don't buy it" if not jwt:
 
                     $ volleyball = False
                     jump dv_b
@@ -15750,7 +15825,7 @@ label bo_bd:
                     $ volleyball = True
                     jump dv_c
 
-                "Don't buy it":
+                "Don't buy it" if not jwt:
 
                     $ volleyball = False
                     jump dv_d
@@ -15847,17 +15922,23 @@ label bo_bd:
 
     u "(I should text Chloe and see if she wants to meet up... I need to find out if there's any truth in what Ryan said.)"
     $ contact_Chloe.unlock()
-    $ contact_Chloe.addReply("Hey Chloe, any chance you can meet up in a bit?", "clrep2a")
-
+    $ contact_Chloe.newMessage(chloeMessage1)
+    $ msgnot = 1
     $ showphone = True
-
+    $ clmsg = 1
+    $ clisreply = 1
+    $ clrep1a = "Hey Chloe"
+    $ clrep2a = "Any chance you can meet up in a bit?"
+    $ clmsg3 = "I'm really busy today, but I could do tonight after 11 or so."
+    $ clrep3a = "Alright, cool. I'll be at yours for 11"
+    $ clmsg4 = "Sounds good :)"
     $ phoneexit = "phonev"
 
     play music "music/mindie4.mp3"
     call screen messager(contact_Chloe)
     label phonev:
 
-    if contact_Chloe.replies:
+    if not chloeMessage3.reply:
         $ showphone = True
         u "(I should message Chloe about meeting up later.)"
 
@@ -17049,7 +17130,7 @@ label bo_bd:
 
             jump el_a
 
-        "Yeah, it was nice.":
+        "Yeah, it was nice." if not jwt:
 
             $ bowling = False
             jump el_b
@@ -17077,7 +17158,7 @@ label bo_bd:
             $ bowling = True
             jump penea
 
-        "Tease her":
+        "Tease her" if not jwt:
             $ addPoint("bro", 1)
             $ bowling = False
             jump peneb
@@ -17179,16 +17260,33 @@ label bo_bd:
 
     play music "music/m9punk.mp3"
 
-    $ showphone = True
-    $ contact_Josh.newMessage("Hey man, you wanna hang out with me and some friends tonight?")
-    $ contact_Josh.addReply("Uhh, sure.", "jorep8a")
-    $ contact_Josh.addReply("I'm meeting a friend at 11, so I can't really.", "jorep8b")
-    
-    $ phoneexit = "phonew"
 
+
+    $ msgnot = 1
+    $ jomsgnot = 1
+    $ joisreply = 1
+    $ showphone = True
+    $ contact_Josh.newMessage(joshMessage8)
+    $ jomsg = 8
+    $ jomsg8 = "Hey man, you wanna hang out with me and some friends tonight?"
+    $ jorep8a = "Uhh, sure."
+    $ jorep8b = "I'm meeting a friend at 11, so I can't really."
+    $ jomsg9 = "Dope"
+    $ jomsg10 = "Come by 995 Sereno Drive at 8, it's my friends house."
+    $ jomsg11 = "Aww, come on. You'll be back by 11."
+    $ jomsg12 = "I told my friend Amber about you and she really wants to meet you."
+    $ jorep12a = "Alright, I'll come."
+    $ jorep12b = "Josh, I don't know, man. I don't wanna be late."
+    $ jomsg13 = "Remember how you told me in high school that you felt like you always missed out on all the crazy stories?"
+    $ jomsg14 = "Don't miss out now."
+    $ jorep14a = "Fine, I'll come. But I need to go before 11."
+    $ jorep14b = "I can't, sorry."
+    $ jomsg15 = "This guy"
+    $ phoneexit = "phonew"
+    " "
     label phonew:
 
-    if contact_Josh.replies:
+    if not joshMessage8.reply:
 
         u "(I should probably reply to my messages.)"
 
@@ -17196,7 +17294,7 @@ label bo_bd:
 
     else:
 
-        if contact_Josh.messages[-1].reply == "I can't, sorry.":
+        if joshMessage14.reply == "I can't, sorry.":
 
             u "(Fucking hell, I forgot how persistent Josh could be...)"
             $ showphone = False
@@ -17243,7 +17341,7 @@ label bo_bd:
 
     jo "What's up, bro?"
 
-    if contact_Josh.replie:
+    if joshMessage12.reply:
 
         jo "Picture of Amber did it, eh?"
 
@@ -17505,7 +17603,7 @@ label bo_bd:
         "Alright, just for a bit.":
             jump jonewc
 
-        "Sorry, I really can't.":
+        "Sorry, I really can't." if not jwt:
             jump jonewd
 
 
@@ -17769,21 +17867,46 @@ label bo_bd:
 
     scene s361g
     with dissolve
-    u "*Drunk* Uhh..."
+    
+    if jwt:
+        
+        u "Uhh..."
+        
+        menu:
 
-    menu:
+
+
+            "Amber":
+
+                $ shotamber = True
+                jump eq_a
+
+            "Kim":
+    
+                $ shotamber = False
+                jump eq_b
+            
+            "Both":
+                
+                jump jwt_eq_b
+
+    else:
+        
+        u "*Drunk* Uhh..."
+        
+        menu:
 
 
 
-        "Amber":
+            "Amber":
 
-            $ shotamber = True
-            jump eq_a
+                $ shotamber = True
+                jump eq_a
 
-        "Kim":
+            "Kim":
 
-            $ shotamber = False
-            jump eq_b
+                $ shotamber = False
+                jump eq_b
 
     label eq_a:
 
@@ -17820,7 +17943,7 @@ label bo_bd:
             jump er_a
 
 
-        "Don't kiss her":
+        "Don't kiss her" if not jwt:
 
             $ addPoint("tm", 1)
             $ kissamber = False
@@ -17977,6 +18100,16 @@ label bo_bd:
     u "(Shit, I gotta go meet Chloe!)"
 
     stop sound
+
+    if jwt:
+        
+        u "Guys, I really gotta go."
+
+        u "Maybe I- I'll come back later."
+
+        stop music fadeout 2.0
+
+        jump jorepb
 
     u "*Drunk* Guys, I really gotta go."
 
@@ -18448,7 +18581,7 @@ label bo_bd:
             jump newchloea
 
 
-        "You're lying.":
+        "You're lying." if not jwt:
 
             $ addPoint("tm", 1)
             jump newchloeb
@@ -18843,44 +18976,80 @@ label bo_bd:
 
     #################
     if kissamber == True:
-        $ contact_Amber.newMessage("Hey, it's Amber")
-        $ contact_Amber.newMessage("Josh gave me your number")
-        $ contact_Amber.newMessage("You know, you never came back, I thought we were having a good time xx")
-        $ contact_Amber.addReply("We did, I'll make it up to you.", "amrep3a")
-        $ contact_Amber.addReply("Sorry, something came up.", "amrep3b")
+        $ contact_Amber.newMessage(amberMessage1)
+        $ contact_Amber.newMessage(amberMessage2)
+        $ contact_Amber.newMessage(amberMessage3)
+        $ ammsg1 = "Hey, it's Amber"
+        $ ammsg2 = "Josh gave me your number"
+        $ ammsg3 = "You know, you never came back, I thought we were having a good time xx"
+        $ amrep3a = "We did, I'll make it up to you."
+        $ amrep3b = "Sorry, something came up."
+        $ ammsg4 = "Oh really? How are you gonna do that?"
+        $ amrep4a = "I give some world-class massages"
+        $ amrep4b = "I'll stay longer next time"
+        $ ammsg5 = "Oh okay, hope everything's okay xx"
+        $ amrep5a = "Yeah, it's all good."
+        $ ammsg6 = "That does sound enticing ;)"
+        $ ammsg7 = "Deal xx"
 
     else:
 
-        if contact_Josh.messages[-1].reply == "I can't, sorry.":
-            $ contact_Amber.newMessage("Hey, it's Amber")
-            $ contact_Amber.newMessage("Josh gave me your number")
-            $ contact_Amber.newMessage("How come you didn't show up yesterday? Everything okay? xx")
-            $ contact_Amber.addReply("Wow, you really wanted to see me, huh?", "amrep3aa")
-            $ contact_Amber.addReply("Sorry, something came up.", "amrep3ba")
+        if joshMessage14.reply == "I can't, sorry.":
+            $ contact_Amber.newMessage(amberMessage1a)
+            $ contact_Amber.newMessage(amberMessage2a)
+            $ contact_Amber.newMessage(amberMessage3a)
+
+            $ ammsg1 = "Hey, it's Amber"
+            $ ammsg2 = "Josh gave me your number"
+            $ ammsg3 = "How come you didn't show up yesterday? Everything okay? xx"
+            $ amrep3a = "Wow, you really wanted to see me, huh?"
+            $ amrep3b = "Sorry, something came up."
+            $ ammsg4 = "Oh wow, I was just checking. :P"
+            $ amrep4a = "Don't worry, you'll see me soon"
+            $ amrep4b = "Haha, I'm fine."
+            $ ammsg5 = "Oh okay, hope you're good xx"
+            $ amrep5a = "Yeah, it's fine"
+            $ ammsg6 = "Was hoping xx"
+            $ ammsg7 = "That's good xx"
+
 
         else:
-            $ contact_Amber.newMessage("Hey, it's Amber")
-            $ contact_Amber.newMessage("Josh gave me your number")
-            $ contact_Amber.newMessage("You know, you never came back, everything okay?")
-            $ contact_Amber.addReply("Wow, you really missed me that much, huh?", "amrep3ab")
-            $ contact_Amber.addReply("Sorry, something came up.", "amrep3bb")
+            $ contact_Amber.newMessage(amberMessage1b)
+            $ contact_Amber.newMessage(amberMessage2b)
+            $ contact_Amber.newMessage(amberMessage3b)
+
+            $ ammsg1 = "Hey, it's Amber"
+            $ ammsg2 = "Josh gave me your number"
+            $ ammsg3 = "You know, you never came back, everything okay?"
+            $ amrep3a = "Wow, you really missed me that much, huh?"
+            $ amrep3b = "Sorry, something came up."
+            $ ammsg4 = "Oh shut up, I was just checking in"
+            $ amrep4a = "Don't worry, you'll see me again"
+            $ amrep4b = "Haha, I'm fine"
+            $ ammsg5 = "Oh okay, hope you're good xx"
+            $ amrep5a = "Yeah, it's fine"
+            $ ammsg6 = "Was hoping xx"
+            $ ammsg7 = "That's good xx"
 
 
     if toldlauren == False and laurentoofar == False:
         play sound "sounds/vibrate.mp3"
         $ phoneexit = "phonex"
-
+        $ laisreply = 1
+        $ lamsgnot = 1
         $ temp_MessageNot = True
-        $ contact_Lauren.newMessage("Hey")
-        $ contact_Lauren.newMessage("Wanna do the personality tests today at noon?")
-        $ contact_Lauren.addReply("Yeah, sure.", "larep13a")
-
+        $ contact_Lauren.newMessage(laurenMessage12)
+        $ contact_Lauren.newMessage(laurenMessage13)
+        $ lamsg12 = "Hey"
+        $ lamsg13 = "Wanna do the personality tests today at noon?"
+        $ larep13a = "Yeah, sure."
+        $ lamsg14 = "Great :) Meet me at our economics' classroom."
 
         u "(Oh shit, I'm getting a bunch of messages.)"
 
         label phonex:
 
-        if contact_Lauren.replies:
+        if laurenMessage13.reply:
 
             $ showphone = False
             u "(Time to get ready.)"
@@ -18964,7 +19133,7 @@ label bo_bd:
         menu:
 
 
-            "Complaints? I love it.":
+            "Complaints? I love it." if not jwt:
 
                 $ laurenpublic = True
                 $ addPoint("bf", 1)
@@ -19033,7 +19202,7 @@ label bo_bd:
                 $ addPoint("tm", 1)
                 jump ey_a
 
-            "Actually, a kiss is fine.":
+            "Actually, a kiss is fine." if not jwt:
 
                 $ laurenpublic = True
                 jump ey_b
@@ -20603,7 +20772,7 @@ label bo_bd:
             jump fg_a
 
 
-        "I don't like kissing in public.":
+        "I don't like kissing in public." if not jwt:
             $ addPoint("tm", 1)
 
             jump fg_b
@@ -20662,7 +20831,7 @@ label bo_bd:
 
             jump fh_a
 
-        "Actually, a kiss is fine.":
+        "Actually, a kiss is fine." if not jwt:
             $ laurenpublic = True
 
             jump fh_b
@@ -23008,9 +23177,15 @@ tell me!"
 
 
     if chloemad == True:
-        $ contact_Amber.newMessage("Hey, you alone? xx")
-        $ contact_Amber.addReply("I'm at the park, but I'm by myself.", "amrep8a")
-        
+        $ contact_Amber.newMessage(amberMessage8)
+        $ amisreply = 1
+        $ ammsgnot = 1
+        $ ammsg = 8
+        $ ammsg8a = 1
+        $ ammsg8 = "Hey, you alone? xx"
+        $ amrep8a = "I'm at the park, but I'm by myself."
+        $ ammsg9 = "Go somewhere where you're completely alone xx"
+        $ ammsg10 = "I got a surprise for you ;)"
         $ phoneexit = "phoneaa"
 
 
@@ -23032,10 +23207,16 @@ tell me!"
 
     else:
 
-        $ contact_Chloe.newMessage("I got some free time right now :)")
-        $ contact_Chloe.newMessage("Wanna go swimming?")
-        $ contact_Chloe.addReply("Any chance we could do it later? Or tomorrow?", "clrep5a")
-
+        $ clisreply = 1
+        $ clmsgnot = 1
+        $ clmsg = 4
+        $ clmsg4a = 1
+        $ contact_Chloe.newMessage(chloeMessage4a)
+        $ contact_Chloe.newMessage(chloeMessage5)
+        $ clmsg4b = "I got some free time right now :)"
+        $ clmsg5 = "Wanna go swimming?"
+        $ clrep5a = "Any chance we could do it later? Or tomorrow?"
+        $ clmsg6 = "I'm busy later tonight and I'm pretty much booked for the entire week :/"
         $ phoneexit = "phoneab"
 
 
