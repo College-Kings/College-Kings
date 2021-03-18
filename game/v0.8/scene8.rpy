@@ -183,7 +183,7 @@ label prot_w_au_1:
     scene v8sprot3d # FPP. Same camera as v8sprot3, Autumn looking serious, mouth open.
     with dissolve
 
-    aut "Have you heard about the new legislation being proposed on abortions."
+    aut "Have you heard about the new legislation being proposed on abortions?"
 
     scene v8sprot3e # FPP. Same camera as v8sprot3, Autumn looking serious, mouth closed.
     with dissolve
