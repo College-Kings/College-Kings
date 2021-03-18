@@ -38,6 +38,8 @@ label v08_la_start:
     with dissolve
     u "God, you're beautiful."
 
+    play sound "sounds/kiss.mp3"
+
     scene v8s4 # TPP (same angle as v8s3 but zoomed in to focus on faces and upper torsos). MC and Lauren making out passionately
     with dissolve
     pause 0.5
@@ -101,7 +103,7 @@ label v08_la_start:
 
     scene v8s5a
     with dissolve
-    la "And maybe even something mo- *yaaawn*{w=0.5}{nw}"
+    la "And maybe even something mo- *yaaawn*"
 
     scene v8s5b
     with dissolve
@@ -132,12 +134,14 @@ label v08_la_start:
     pause 0.8
 
     scene v8s6 # TPP (maybe from top). MC holding Lauren from back while spooning. It's morning and they're about to wake up.
-    with Fade(1, 0.5, 0.5)
+    with Fade(1, 0.5, 1)
     pause 0.5
 
     scene v8s6a # Same as v8s6 but MC woke up (just eyes open)
     with Dissolve(1)
     pause 0.5
+
+    play sound "sounds/kiss.mp3"
 
     scene v8s6b # MC kissing on Lauren's cheek (to wake her up)
     with dissolve
@@ -233,6 +237,8 @@ label v08_la_start:
     scene v8s7a
     with dissolve
     u "Meet me back when you're done?"
+
+    stop music fadeout 3
 
     scene v8s7
     with dissolve

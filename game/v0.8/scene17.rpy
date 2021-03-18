@@ -34,7 +34,7 @@ label phn_penelope6_a:
 
 label phn_penelope6_a1:
     $ contact_Penelope.newMessage("Thank you! :)")
-    $ penelopeMessage6_a.addReply("No problem. I'm here for you. Let me know if you need anything else.", "phn_penelope6_a1")
+    $ contact_Penelope.addReply("No problem. I'm here for you. Let me know if you need anything else.", "phn_penelope6_a1")
     call screen messager(contact_Penelope)
 
 label phn_penelope6_done:
