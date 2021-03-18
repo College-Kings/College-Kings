@@ -22,9 +22,9 @@ label v08_cl_start:
     with dissolve
     u "So bad."
 
+    play music "music/msexy.mp3"
     scene v8s13 # TPP (lateral shot). Chloe pushing MC (who is sitting) into the bed playfully with one hand
     with hpunch
-    play music "music/msexy.mp3"
     cl "Good."
 
     scene v8s14 # TPP (not a very close shot). MC is lying on the bed and Chloe is leaning on top of him (still not completely in bed) with one hand on MC's crotch, feeling the MC's dick. She's looking towards MC's face (not visible in shot) and talking. Make sure her body is visible fully. (Just to make it clear, MC's legs are still hanging out of bed, so they're not fully in)
@@ -49,7 +49,7 @@ label v08_cl_start:
 
     scene v8s17 # TPP. Shot of Chloe's hand rubbing MC's crotch
     with Dissolve(0.2)
-    pause 0.5
+    pause 1.5
 
     scene v8s16a
     with Dissolve(0.2)
@@ -76,17 +76,17 @@ label v08_cl_start:
     pause
 
     image v8s19dyn:
-        "v8s19b" with Dissolve(0.5) # Chloe licking side of MC's shaft (top) while looking into the camera teasingly
+        "v8s19b" with Dissolve(0.35) # Chloe licking side of MC's shaft (top) while looking into the camera teasingly
+        pause 1
+
+        "v8s19c" with Dissolve(0.35) # Same as v8s19b but licking a little lower
         pause 0.5
 
-        "v8s19c" with Dissolve(0.5) # Same as v8s19b but licking a little lower
-        pause 0.3
+        "v8s19d" with Dissolve(0.35) # Same as v8s19b but even lower, should not be fully at bottom of the dick though
+        pause 1
 
-        "v8s19d" with Dissolve(0.5) # Same as v8s19b but even lower, should not be fully at bottom of the dick though
+        "v8s19c" with Dissolve(0.35)
         pause 0.5
-
-        "v8s19c" with Dissolve(0.5)
-        pause 0.3
 
         repeat
 
@@ -102,13 +102,13 @@ label v08_cl_start:
     with dissolve
     u "You don't have to ask me twice."
 
-    image v8clbj1 = Movie(play="images/v8clbj1.webm", loop=True, image="images/v8clbj1end.jpg", start_image="images/v8clbj1start.jpg")
+    image v8clbj1 = Movie(play="images/v08/Scene 2/anims/v8clbj1.webm", loop=True, image="images/v08/Scene 2/anims/v8clbj1end.jpg", start_image="images/v08/Scene 2/anims/v8clbj1start.jpg")
     # Chloe slow blowjob animation. Should be FPP (She's looking into the camera)
-    image v8clbj2 = Movie(play="images/v8clbj2.webm", loop=True, image="images/v8clbj2end.jpg", start_image="images/v8clbj2start.jpg")
+    image v8clbj2 = Movie(play="images/v08/Scene 2/anims/v8clbj2.webm", loop=True, image="images/v08/Scene 2/anims/v8clbj2end.jpg", start_image="images/v08/Scene 2/anims/v8clbj2start.jpg")
     # Same animation as bj1 but different angle (maybe a close up or something)
-    image v8clbj1f = Movie(play="images/v8clbj1f.webm", loop=True, image="images/v8clbj1end.jpg", start_image="images/v8clbj1start.jpg")
+    image v8clbj1f = Movie(play="images/v08/Scene 2/anims/v8clbj1f.webm", loop=True, image="images/v08/Scene 2/anims/v8clbj1end.jpg", start_image="images/v08/Scene 2/anims/v8clbj1start.jpg")
     # Fast version of bj1 (need not be re-rendered)
-    image v8clbj2f = Movie(play="images/v8clbj2f.webm", loop=True, image="images/v8clbj2end.jpg", start_image="images/v8clbj2start.jpg")
+    image v8clbj2f = Movie(play="images/v08/Scene 2/anims/v8clbj2f.webm", loop=True, image="images/v08/Scene 2/anims/v8clbj2end.jpg", start_image="images/v08/Scene 2/anims/v8clbj2start.jpg")
     # Fast version of bj2 (need not be re-rendered)
     # Note the extra images - v8clbj1end, v8clbj1start, v8clbj2end, v8clbj2start
 
@@ -236,7 +236,7 @@ label v08_cl_start:
     with dissolve
     pause 1
 
-    play sound "sounds/doorclosed.mp3"
+    play sound "sounds/doorclose.mp3"
 
     scene v8s22d # Door closed and nobody in the shot
     with dissolve
@@ -246,10 +246,14 @@ label v08_cl_start:
     with dissolve
     u "(Damn, that came out of nowhere.)"
 
+    scene black
+    with Dissolve(1.5)
+    pause 1
+
     play sound "sounds/dooropen.mp3"
 
     scene v8s23a # Chloe opened the door and walking in with a sad, sorry face
-    with fade
+    with Dissolve(0.5)
     pause 0.5
 
     scene v8s23b # Chloe close up and talking with a sad, sorry face
