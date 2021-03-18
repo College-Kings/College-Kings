@@ -5,14 +5,17 @@
 
 label prot_w_au:
     scene v8sprot1 # FPP. Sweeping shot of the protest, lots of people holding signs, Autumn also in the protest holding a sign.
-    with fade
+    with Fade(0.75, 0.25, 0.75)
 
-    pause 0.5
+    pause 1.5
 
     scene v8sprot2 # FPP. Camera now closer to the proest, Autumn turns around and looks at camera, waving her arms, Autumn smile.
     with dissolve
 
     pause 0.5
+
+    play music "music/mindie5.mp3" fadein 2
+    queue music "music/mfunk.mp3"
 
     scene v8sprot3 # FPP. Close up of Autumn, Autumn smile, mouth open.
     with dissolve
@@ -51,22 +54,18 @@ label prot_w_au:
 
     scene v8sprot3
     with dissolve
-
     aut "Well, it's more about the message anyway."
 
     scene v8sprot3a
     with dissolve
-
     u "Yeah that's true."
 
     scene v8sprot6 # TPP. Show MC taking a look around at all the people at the protest, MC looks slightly nervous, mouth closed.
     with dissolve
-
-    pause 0.5
+    pause 1
 
     scene v8sprot3
     with dissolve
-
     aut "Ready?"
 
     scene v8sprot3a
@@ -74,10 +73,10 @@ label prot_w_au:
 
     menu:
         "Pretend you know what you're doing":
-            $ addPoint("bro", 1)
+            $ addPoint("tm", 1)
             jump prot_w_au_wing
 
-        "Ask about what you need to do":
+        "Ask what you need to do":
             $ addPoint("bf", 1)
             jump prot_w_au_no_wing
 
@@ -149,10 +148,11 @@ label prot_w_au_no_wing:
     scene v8sprot8 # FPP. Show Autumn holding up her sign facing the camera, mouth closed.
     with dissolve
 
-    pause 0.5
-
-    scene v8sprot8a # FPP. Same camera as v8sprot8, but Autumn mouth open
-    with dissolve
+    ###CHECK - removed because of missing image
+    # pause 0.5
+    #
+    # scene v8sprot8a # FPP. Same camera as v8sprot8, but Autumn mouth open
+    # with dissolve
 
     aut "And really you just say whatever you like, as long as it has a purpose. Haha. Watch. We won't stop until we're heard!"
 
@@ -183,16 +183,16 @@ label prot_w_au_1:
     scene v8sprot3d # FPP. Same camera as v8sprot3, Autumn looking serious, mouth open.
     with dissolve
 
-    aut "Have you heard about the new legislation being proposed on abortions?"
+    aut "Have you heard about the new legislation being proposed on abortions."
 
     scene v8sprot3e # FPP. Same camera as v8sprot3, Autumn looking serious, mouth closed.
     with dissolve
 
     menu:
-        "Pretend to know about the new legislation":
+        "Pretend you know about it":
             $ addPoint("tm", 1)
             jump prot_w_au_leg
-        "Don't know about the legislation":
+        "Admit you don't know":
             jump prot_w_au_no_leg
 
 label prot_w_au_leg:
@@ -229,7 +229,11 @@ label prot_w_au_leg:
 
     u "Fucked up."
 
-    scene v8sprot10 # TPP. Show shot of protestors protesting.
+    ###CHECK - removed because of missing image
+    # scene v8sprot10 # TPP. Show shot of protestors protesting.
+    # with dissolve
+
+    scene v8sprot8
     with dissolve
 
     aut "And that's why we're here right? To tell them that our bodies are our choice. We can't keep letting men think they have the say over everything."
@@ -257,6 +261,7 @@ label prot_w_au_leg:
     jump prot_w_au_2
 
 label prot_w_au_no_leg:
+    u "Honestly, I have no idea."
 
     scene v8sprot3f
     with dissolve
@@ -292,7 +297,7 @@ label prot_w_au_no_leg:
     with dissolve
 
     aut "It's sickening if you ask me. A man shouldn't be able to say a woman has to carry a baby to full term. Abortions are there for reasons. Women being assaulted, women who can't afford it."
-    
+
     aut "I mean if someone wants to bring a child in the world, they need to be prepared. That's how so many kids end up in foster care."
 
     scene v8sprot3e
@@ -313,7 +318,7 @@ label prot_w_au_no_leg:
     scene v8sprot11 # TPP. Show Autumn smiling at MC, protestors stood behind Autumn protesting, camera from behind MC, both mouths closed.
     with dissolve
 
-    pause 0.5
+    pause 1
 
     jump prot_w_au_2
 
@@ -334,7 +339,7 @@ label prot_w_au_2:
         scene v8sprot13 # TPP. Show Evelyn walking past MC, MC turns to look at Evenlyn walking past.
         with dissolve
 
-        pause 0.5
+        pause 1
 
         scene v8sprot12a
         with dissolve
@@ -533,8 +538,15 @@ label prot_w_au_end:
 
     u "Sounds good."
 
+    stop music fadeout 3
+
     scene v8sprot21 # FPP. Show MC walking away.
     with dissolve
+    pause 0.75
+
+    scene black
+    with Dissolve(1)
+    pause 0.5
 
     if joinwolves == True:
         jump after_prot_wolves

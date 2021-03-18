@@ -11,7 +11,7 @@ label v08_ri_start:
     with dissolve
     ri "I'd rather show you instead."
 
-    play music "music/msexy.mp3" ### check - Maybe add more sexy time music?
+    play music "music/msexy.mp3" ###CHECK - Maybe add more sexy time music?
 
     scene v8s26a # Riley's dress is off now. She's wearing a sexy red lingerie underneath and showing off her body, seductive expression and mouth closed
     with fade
@@ -69,22 +69,29 @@ label v08_ri_start:
     with dissolve
     pause 0.5
 
-    scene v8s28b # MC kissing/licking her pussy, deep into it
-    with dissolve
-    pause
-    ri "*Moans*"
-
-    scene v8s28c # Same as v8s28b but slightly different shot (head tilt, etc)
-    with dissolve
-    ri "Ahh... [name]..."
-
-    scene v8s28b
-    with dissolve
-    ri "I want to... *moans*"
-
     scene v8s28c
     with dissolve
-    ri "...ride you so badly right now!"
+    pause
+    ri "Ahh... [name]..."
+    ri "I want to... *moans* ride you so badly right now!"
+
+    # CHECK - Modified because of missing image (v8s28b)
+    # scene v8s28b # MC kissing/licking her pussy, deep into it
+    # with dissolve
+    # pause
+    # ri "*Moans*"
+
+    # scene v8s28c # Same as v8s28b but slightly different shot (head tilt, etc)
+    # with dissolve
+    # ri "Ahh... [name]..."
+
+    # scene v8s28b
+    # with dissolve
+    # ri "I want to... *moans*"
+
+    # scene v8s28c
+    # with dissolve
+    # ri "...ride you so badly right now!"
 
     scene v8s29 # TPP. MC is in the bed, turned towards Riley who is still standing and hand gesturing her to come. Camera behind Riley's ass and focus on it (DOF blur on MC). Note: s29 will be leading up to the posture in Animation 1 in three frames. Check at the end for reference (just posture, camera angle is different)
     with fade
@@ -193,7 +200,7 @@ label v08_ri_start:
     u "Ahh! I'm also close. Fuck!"
     ri "*Moans really loud*" with hpunch
     u "Did you-"
-    ri "Yes! Your turn now *moans*"
+    ri "Yes! *moans*"
     pause 2
     ri "Cum in me. I want it.{w} Now!!!"
     u "You sure?"
@@ -204,9 +211,10 @@ label v08_ri_start:
     scene v8s31 # TPP. Close up creampie shot. Slightly more than tip of the dick inside her and cum is leaking
     with flash
     pause
-    ri "Mmmmm!"
 
     stop music fadeout 3
+    
+    ri "Mmmmm!"
 
     scene v8s32 # TPP (not a close up). MC and Riley laying in bed facing each other in their underwear
     with Fade(0.5, 0.5, 0.5)

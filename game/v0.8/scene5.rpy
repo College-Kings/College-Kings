@@ -3,6 +3,7 @@
 # OUTFITS: SAME AS AMBER HOCO ENDING
 
 label hoco_amb_night:
+    stop music fadeout 2
     scene v8samb1 # TPP. Show Amber & MC laying on the floor in the living room. Amber begins to remove MC's pants. Amber mouth open, smile.
     with dissolve
 
@@ -12,6 +13,8 @@ label hoco_amb_night:
     with dissolve
 
     pause 0.5
+
+    play music "music/msexy.mp3"
 
     scene v8samb3 # FPP. Show Amber starting to give MC a blowjob. MC legs spread enough for Amber to fit in-between, Amber looking at MC (Camera). (If needed, place the camera slightly above MC's head to give a clear view, so need not be technically FPP. Just should look first person)
     with dissolve
@@ -57,7 +60,7 @@ label hoco_amb_night:
 
     pause 0.5
 
-    scene v9samb9 # TPP. Show a closeup of Amber putting her mouth on MC's penis. MC places his hands on Amber's head to start banging her mouth.
+    scene v8samb9 # TPP. Show a closeup of Amber putting her mouth on MC's penis. MC places his hands on Amber's head to start banging her mouth.
     with dissolve
 
     pause 0.5
@@ -94,6 +97,8 @@ label hoco_amb_night:
 
     am "Haha."
 
+    stop music fadeout 3
+
     scene v8samb11 # TPP. Show Amber lying back down on the floor, MC joins her, they both look tired.
     with dissolve
 
@@ -102,7 +107,7 @@ label hoco_amb_night:
     scene v8samb12 # TPP. Show Amber and MC lying on the floor, both asleep, camera overhead.
     with dissolve
 
-    pause 0.5
+    pause 0.8
 
     jump hoco_amb_morning
 
@@ -110,7 +115,7 @@ label hoco_amb_night:
 
 label hoco_amb_morning:
     scene v8samb13 # TPP. Same camera as v8samb12, it is now the next morning, MC sits up looking tired, mouth open, Amber still asleep.
-    with dissolve
+    with Fade(0.75, 0.5, 0.75)
 
     u "Uhh..."
 
@@ -123,6 +128,8 @@ label hoco_amb_morning:
     with dissolve
 
     u "Haha. Yeah."
+
+    play music "music/mfunk.mp3"
 
     scene v8samb16 # FPP. Close up of Amber, Amber mouth open, tired expression.
     with dissolve
@@ -214,9 +221,14 @@ label hoco_amb_morning:
 
     am "Of course. Anytime."
 
+    stop music fadeout 2.5
+
     scene v8samb20 # TPP. Show MC leaving Amber's kitchen, Camera from behind MC.
     with dissolve
+    pause 1
 
+    scene black
+    with Dissolve(1)
     pause 0.5
 
     # - CONTINUE at dorm/Wolves house -

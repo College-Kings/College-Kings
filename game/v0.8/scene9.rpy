@@ -7,7 +7,7 @@
 label after_prot_wolves:
     scene v8sprot22 # TPP. Show MC entering his wolves room.
     with fade
-
+    play sound "sounds/dooropen.mp3"
     pause 0.5
 
     scene v8sprot23 # TPP. Show MC sitting at his desk with an open book.
@@ -18,19 +18,22 @@ label after_prot_wolves:
     scene v8sprot23a # TPP. Same camera as v8sprot23, but MC has his head on desk.
     with dissolve
 
-    pause 0.5
+    pause 1
 
     scene v8sprot23b # TPP. Same camera as v8sprot23, but MC is now sat back up and looking fed up.
     with dissolve
 
     u "I'm never gonna get this shit."
 
+    play sound "sounds/knock.mp3"
+
     scene v8sprot24 # FPP. Show the closed door of MC's room as Sebastian is knocking on the door.
     with dissolve
 
-    u "*Knock* *Knock*"
+    u "(Just in time.)"
+    u "Come in!"
 
-    u "(Just in time)"
+    play sound "sounds/dooropen.mp3"
 
     scene v8sprot25 # TPP. Show Sebastian now in MC's room pointing at the books on his desk, Sebastian mouth open.
     with dissolve
@@ -58,7 +61,7 @@ label after_prot_wolves:
 label after_prot_dorm:
     scene v8sprot28 # TPP. Show MC entering his college dorm.
     with fade
-
+    play sound "sounds/dooropen.mp3"
     pause 0.5
 
     scene v8sprot29 # TPP. Show MC sitting on the edge of his bed. MC mouth open.

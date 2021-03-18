@@ -6,7 +6,9 @@ label aft_amb_night:
         scene scaf1 # TPP. Show MC lay on his bed on his phone in his wolves bedroom.
         with fade
 
-        pause 0.7
+        pause 1
+
+        play music "music/mchill1.mp3"
 
         scene scaf1a # TPP. As above but show MC sat on the edge of his bed, mouth open.
         with dissolve
@@ -15,6 +17,7 @@ label aft_amb_night:
 
         scene scaf2 # TPP. Show MC leaving his room, camera from behind.
         with dissolve
+        pause 0.7
 
         jump caf_w_aub
 
@@ -22,7 +25,9 @@ label aft_amb_night:
         scene scaf3 # TPP. Show MC lay on his bed on his phone in his college dorm.
         with fade
 
-        pause 0.7
+        pause 1
+
+        play music "music/mchill1.mp3"
 
         scene scaf3a # TPP. Show MC sat on the edge of his bed, mouth open.
         with dissolve
@@ -31,5 +36,6 @@ label aft_amb_night:
 
         scene scaf4 # TPP. Show MC leaving his dorm, camera from behind.
         with dissolve
+        pause 0.7
 
         jump caf_w_aub

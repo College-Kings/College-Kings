@@ -10,11 +10,13 @@ label v08_start:
         else:
             jump v08_ri_start_fr
     else:
-        jump v08_am_start
+        jump hoco_amb_night
 
     ### SCENE 1: Lauren v07 ending continued
 label v08_la_start:
     # Note to renderers: Make sure the clothes (they're in underwear) and any other props are the same as Lauren's ending in v07
+
+    stop music fadeout 3
 
     scene sfr4la31a # Old render
     with dissolve
@@ -243,5 +245,9 @@ label v08_la_start:
     scene v8s7
     with dissolve
     la "Okay babe. Byeee."
+
+    scene black
+    with Dissolve(1)
+    pause 0.5
 
     jump aft_amb_night

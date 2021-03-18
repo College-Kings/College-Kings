@@ -203,7 +203,6 @@ label after_drugs:
         with dissolve
         am "You did? How did you let this happen?"
 
-        ### PENDING - variable name needed
         if s28_fightWinner == "Mc": # MC beat the thugs:
             scene v8josh25c # Same as v8josh25b but Amber mouth closed
             with dissolve
