@@ -98,14 +98,16 @@ label v08_ri_start:
     with dissolve
     pause
 
-    image v8ricg1 = Movie(play="images/v8ricg1.webm", loop=True, image="images/v8ricg1end.jpg", start_image="images/v8ricg1start.jpg") # CG TPP
-    image v8ricg1f = Movie(play="images/v8ricg1f.webm", loop=True, image="images/v8ricg1end.jpg", start_image="images/v8ricg1start.jpg")
-    image v8ricg2 = Movie(play="images/v8ricg2.webm", loop=True, image="images/v8ricg2end.jpg", start_image="images/v8ricg2start.jpg") # CG FPP
-    image v8ricg2f = Movie(play="images/v8ricg2f.webm", loop=True, image="images/v8ricg2end.jpg", start_image="images/v8ricg2start.jpg")
-    image v8ridg1 = Movie(play="images/v8ridg1.webm", loop=True, image="images/v8ridg1end.jpg", start_image="images/v8ridg1start.jpg") # Doggy smooth
-    image v8ridg1f = Movie(play="images/v8ridg1f.webm", loop=True, image="images/v8ridg1end.jpg", start_image="images/v8ridg1start.jpg")
-    image v8ridg2 = Movie(play="images/v8ridg2.webm", loop=True, image="images/v8ridg2end.jpg", start_image="images/v8ridg2start.jpg") # Doggy rough
-    image v8ridg2f = Movie(play="images/v8ridg2f.webm", loop=True, image="images/v8ridg2end.jpg", start_image="images/v8ridg2start.jpg")
+    image v8ricg1 = Movie(play="images/v08/Scene 3/anims/v8ricg1.webm", loop=True, image="images/v08/Scene 3/anims/v8ricg1end.jpg", start_image="images/v08/Scene 3/anims/v8ricg1start.jpg") # CG TPP
+    image v8ricg1f = Movie(play="images/v08/Scene 3/anims/v8ricg1f.webm", loop=True, image="images/v08/Scene 3/anims/v8ricg1end.jpg", start_image="images/v08/Scene 3/anims/v8ricg1start.jpg")
+    image v8ricg2 = Movie(play="images/v08/Scene 3/anims/v8ricg2.webm", loop=True, image="images/v08/Scene 3/anims/v8ricg2end.jpg", start_image="images/v08/Scene 3/anims/v8ricg2start.jpg") # CG FPP
+    image v8ricg2f = Movie(play="images/v08/Scene 3/anims/v8ricg2f.webm", loop=True, image="images/v08/Scene 3/anims/v8ricg2end.jpg", start_image="images/v08/Scene 3/anims/v8ricg2start.jpg")
+    image v8ridg1 = Movie(play="images/v08/Scene 3/anims/v8ridg1.webm", loop=True, image="images/v08/Scene 3/anims/v8ridg1end.jpg", start_image="images/v08/Scene 3/anims/v8ridg1start.jpg") # Doggy smooth
+    image v8ridg1f = Movie(play="images/v08/Scene 3/anims/v8ridg1f.webm", loop=True, image="images/v08/Scene 3/anims/v8ridg1end.jpg", start_image="images/v08/Scene 3/anims/v8ridg1start.jpg")
+    image v8ridg2 = Movie(play="images/v08/Scene 3/anims/v8ridg2.webm", loop=True, image="images/v08/Scene 3/anims/v8ridg2end.jpg", start_image="images/v08/Scene 3/anims/v8ridg2start.jpg") # Doggy rough
+    image v8ridg2f = Movie(play="images/v08/Scene 3/anims/v8ridg2f.webm", loop=True, image="images/v08/Scene 3/anims/v8ridg2end.jpg", start_image="images/v08/Scene 3/anims/v8ridg2start.jpg")
+    image v8ridg3 = Movie(play="images/v08/Scene 3/anims/v8ridg3.webm", loop=True, image="images/v08/Scene 3/anims/v8ridg3end.jpg", start_image="images/v08/Scene 3/anims/v8ridg3start.jpg") # Doggy smooth angle 2
+    image v8ridg3f = Movie(play="images/v08/Scene 3/anims/v8ridg3f.webm", loop=True, image="images/v08/Scene 3/anims/v8ridg3end.jpg", start_image="images/v08/Scene 3/anims/v8ridg3start.jpg")
 
     scene v8ricg1
     with dissolve
@@ -153,6 +155,9 @@ label v08_ri_start:
     pause 5
     ri "Oh God! Yes!"
     pause
+
+    scene v8ridg3
+    with dissolve
     u "Ahh fuck!"
     ri "*Moans* Harder!"
 
@@ -162,6 +167,9 @@ label v08_ri_start:
     u "Hngh!"
     ri "Fuck yes! Just like that!"
     pause
+
+    scene v8ridg3f
+    with dissolve
     ri "*Moans loudly*"
     ri "Harder! Show me your... *moans*{w} best."
     u "Ahh! Get your hands here."
@@ -198,13 +206,17 @@ label v08_ri_start:
     pause
     ri "Mmmmm!"
 
+    stop music fadeout 3
+
     scene v8s32 # TPP (not a close up). MC and Riley laying in bed facing each other in their underwear
     with Fade(0.5, 0.5, 0.5)
-    pause 0.8
+    pause 1
 
     scene v8s33 # FPP. Riley talking, smiling, relaxed
     with dissolve
     ri "Fuck me. That was so good!"
+
+    play music "music/mlove.mp3" fadein 3
 
     scene v8s33a # Same as v8s33 but Riley mouth closed
     with dissolve
@@ -219,10 +231,10 @@ label v08_ri_start:
     u "Haha, glad to be of service!"
     ri "*Chuckles*"
 
-    play sound "sounds/kiss.mp3"
 
-    scene v8s33 # TPP. Close up of MC and Riley kissing from top
+    scene v8s33_2 # TPP. Close up of MC and Riley kissing from top
     with dissolve
+    play sound "sounds/kiss.mp3"
     pause 0.5
 
     scene v8s33a
@@ -267,10 +279,9 @@ label v08_ri_start:
     with dissolve
     ri "Good night, [name]."
 
-    play sound "sounds/kiss.mp3"
-
-    scene v8s33
+    scene v8s33_2
     with dissolve
+    play sound "sounds/kiss.mp3"
     pause 0.5
 
     scene v8s32a # MC on his back and Riley leaning over on him and sleeping
@@ -278,7 +289,7 @@ label v08_ri_start:
     pause 1
 
     scene v8s34 # FPP. MC waking up in bed looking at Riley writing something at her desk. She's still in underwear
-    with Fade(1, 0.75, 0.5)
+    with Fade(1.5, 0.75, 1)
     pause 1
     u "(She's up already.)"
 
@@ -378,9 +389,15 @@ label v08_ri_start:
     with fade
     u "Well... See you later."
 
+    stop music fadeout 3
+
     scene v8s37
     with dissolve
     ri "Hit me up when you're free. Byeee."
+
+    scene black
+    with Dissolve(1)
+    pause 0.5
 
     jump aft_amb_night
 
