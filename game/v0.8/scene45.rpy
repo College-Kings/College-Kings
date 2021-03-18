@@ -23,10 +23,6 @@ label tue_night_in_room:
         scene v8star4 # FPP. Show MC's phone on the desk lighting up as if he's got a notification.
         with dissolve
 
-        pause 0.5
-
-        scene v8star5 # TPP. Show MC grabbing the phone from his desk, looking at the phone.
-        with dissolve
 
         u "(Oh, it's Seb.)"
 
@@ -56,25 +52,7 @@ label tue_night_in_room:
             $ contact_Chloe.newMessage("Maybe some other time. These eyes need some rest atm.")
             $ contact_Chloe.addReply("Sure, later.")
 
-        scene v8star7 # TPP. Show MC putting his phone down on the bed and standing back up.
-        with dissolve
-
-        pause 0.5
-
-        scene v8star8 # TPP. Show MC stretching his neck and doing a bit of shadow boxing.
-        with dissolve
-
-        pause 1
-
-        scene v8star8a # TPP. Same camera as v8star8, MC shadow boxing a bit more.
-        with dissolve
-
         u "(Well I'll be damned... This could actually be more fun than I ever thought it could be.)"
-
-        scene v8star9 # TPP. Show MC going back to his bed to lie down again, chuckling.
-        with dissolve
-
-        pause 0.5
 
         scene v8star1
         with dissolve
@@ -100,11 +78,6 @@ label tue_night_in_room:
         u "(Especially tonight...)"
 
         scene v8star13 # FPP. Show MC's phone on the desk lighting up as if he's got a notification.
-        with dissolve
-
-        pause 0.5
-
-        scene v8star14 # TPP. Show MC grabbing the phone from his desk, looking at the phone.
         with dissolve
 
         u "(Grayson's texting me already? Haha...)"
@@ -137,25 +110,7 @@ label tue_night_in_room:
             $ contact_Chloe.newMessage("Maybe some other time. These eyes need some rest atm.")
             $ contact_Chloe.addReply("Sure, later.")
 
-        scene v8star16 # TPP. Show MC putting his phone down on the bed and standing back up.
-        with dissolve
-
-        pause 0.5
-
-        scene v8star17 # TPP. Show MC stretching his neck and doing a bit of shadow boxing.
-        with dissolve
-
-        pause 1
-
-        scene v8star17a # TPP. Same camera as v8star17, MC shadow boxing a bit more.
-        with dissolve
-
         u "(Well I'll be damned... This could actually be more fun than I ever thought it could be.)"
-
-        scene v8star18 # TPP. Show MC going back to his bed to lie down again, chuckling.
-        with dissolve
-
-        pause 0.5
 
         scene v8star10
         with dissolve
