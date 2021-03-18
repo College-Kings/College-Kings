@@ -21,7 +21,7 @@ label sun_eve_room:
             $ contact_Amber.addReply("What can I say? You're hot")
             $ contact_Amber.newMessage("You're pretty hot yourself and I'm... thinking about things")
             $ contact_Amber.addReply("What kind of things? Same things I'm thinking? ;)")
-            $ contact_Amber.newMessage("I think so", "s19_reply1")
+            $ contact_Amber.newMessage("I think so")
 
             label s19_reply1:
                 menu:

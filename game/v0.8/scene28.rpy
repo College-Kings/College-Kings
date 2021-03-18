@@ -522,7 +522,7 @@ label int_deal_w_josh:
             call screen s28_mcLarsAttack
 
 
-    label mc_LarsFightEnd: # MC wins fight against Lars
+    label mc_larsFightEnd: # MC wins fight against Lars
         # scene 
         pause 1.0
         play sound "sounds/fall.mp3"

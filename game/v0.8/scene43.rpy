@@ -72,6 +72,7 @@ label for_w_gray_cont:
             jump forest_fugazi
         "Stay quiet":
             $ addPoint("bf", 1)
+            jump forest_no_fugazi
 
 
     ### ERROR: -MC can choose to go along with it or stay quiet ###

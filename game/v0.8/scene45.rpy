@@ -30,7 +30,7 @@ label tue_night_in_room:
         with dissolve
 
         $ contact_Sebastian.newMessage("Yo dude, just wanted to let you know... tonight was fun.")
-        $ contact_Sebastian.addReply("Sure was... but can be even better, right?")
+        $ contact_Sebastian.addReply("Sure was... but it can be even better, right?")
         $ contact_Sebastian.addReply("Sure can! You'll see what being a Wolf is all about.")
         $ contact_Sebastian.addReply("Looking forward to it. :)")
 
