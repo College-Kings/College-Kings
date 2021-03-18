@@ -1,9 +1,10 @@
 # Scene 7 - Cafe With Aubrey
 # Note to renderers, MC wearing outfit 3, Aubrey wearing outfit 1.
+default v8AutProtest = False
 
 label caf_w_aub:
     scene scaf5 # FPP. Sweeping shot of inside the cafe, show Aubrey sat at a table on her own.
-    with fade
+    with Fade(0.75, 0.25, 0.75)
 
     pause 0.5
 
@@ -52,7 +53,7 @@ label caf_w_aub:
         scene scaf8
         with dissolve
 
-        u "Should've woke up next to me."
+        u "Should've woken up next to me."
 
         scene scaf8c # FPP. Same camera as scaf8, Aubrey laugh, mouth open.
         with dissolve
@@ -106,15 +107,26 @@ label caf_w_aub:
 
         scene scaf8e # FPP. Same camera as scaf8, Aubrey neutral expression, mouth open.
         with dissolve
-
         au "You have a lot going on today?"
 
-        scene scaf9 # TPP. Show MC and Aubrey, MC has his phone in hand as Autumn is calling him. Aubrey neutral expression, MC neutral expression mouth open.
-        with dissolve
+        if protest:
 
-        u "Hold on, let me get this."
+            play sound "sounds/call.mp3"
 
-        jump au_prot_call
+            scene scaf9 # TPP. Show MC and Aubrey, MC has his phone in hand as Autumn is calling him. Aubrey neutral expression, MC neutral expression mouth open.
+            with dissolve
+
+            u "Hold on, let me get this."
+
+            scene scaf9a # TPP. Same camera as scaf9a, Show MC walking away from the table now on the phone, MC mouth closed. Aubrey neutral expression mouth open.
+            with dissolve
+            play sound "sounds/answercall.mp3"
+            au "Okay."
+
+            jump au_prot_call
+
+        else:
+            jump cafe_no_call
 
     else:
 
@@ -172,20 +184,55 @@ label caf_w_aub:
 
         scene scaf8e
         with dissolve
-
         au "So you got a lot going on today?"
 
-        scene scaf9
-        with dissolve
+        if protest:
 
-        u "Hold on, I'm gonna take this."
+            play sound "sounds/call.mp3"
 
-        scene scaf9a # TPP. Same camera as scaf9a, Show MC walking away from the table now on the phone, MC mouth closed. Aubrey neutral expression mouth open.
-        with dissolve
+            scene scaf9
+            with dissolve
 
-        au "Okay."
+            u "Hold on, I'm gonna take this."
 
-        jump au_prot_call
+            scene scaf9a # TPP. Same camera as scaf9a, Show MC walking away from the table now on the phone, MC mouth closed. Aubrey neutral expression mouth open.
+            with dissolve
+            play sound "sounds/answercall.mp3"
+            au "Okay."
+
+            jump au_prot_call
+
+        else:
+            jump cafe_no_call
+
+label cafe_no_call:
+scene scaf8
+with dissolve
+if joinwolves:
+    u "Nothing in particular except for some of the Wolves' stuff."
+else:
+    u "Apes joining ceremony is tonight, so there's that."
+u "What about you?"
+
+scene scaf8a
+with dissolve
+au "Same old, same old."
+
+scene scaf8
+with dissolve
+u "Mhm. Can I have a bite? I'm starving."
+
+stop music fadeout 2
+
+scene black
+with Dissolve(1)
+pause 0.5
+
+if joinwolves:
+    jump after_prot_wolves
+else:
+    jump after_prot_dorm
+
 
 label au_prot_call:
     scene scaf10 # TPP. Show MC stood in a corner of the café on the phone to Autumn, neutral expression, mouth open.
@@ -203,8 +250,10 @@ label au_prot_call:
     menu:
         "Go to the protest":
             $ addPoint("bf", 1)
+            $ v8AutProtest = True
             jump caf_prot_au
         "Don't go to the protest":
+            $ v8AutProtest = False
             jump caf_no_prot_au
 
 label caf_prot_au:
@@ -252,6 +301,8 @@ label caf_prot_au:
     with dissolve
 
     au "Yeah."
+
+    stop music fadeout 2
 
     scene scaf14 # TPP. Show MC walking towards the cafe door, leaving the cafe, Camera from behind MC.
     with dissolve
@@ -310,6 +361,12 @@ label caf_no_prot_au:
     with dissolve
 
     u "Nah. Can I have a bite? I'm starving."
+
+    stop music fadeout 2
+
+    scene black
+    with Dissolve(1)
+    pause 0.5
 
     if joinwolves:
         jump after_prot_wolves

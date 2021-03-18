@@ -276,4 +276,8 @@ label v08_cl_start:
     with dissolve
     cl "Sorry, [name]. See you another time."
 
+    scene black
+    with Dissolve(1)
+    pause 0.5
+
     jump aft_amb_night

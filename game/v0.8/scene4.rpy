@@ -2,28 +2,28 @@
 label v08_ri_start_fr:
     # Note to renderers: Make sure the MC is in his suit and Riley is in her HoCo dress. Any other props are the same as Riley's friendship ending in v07
 
-    scene sfr4ri56 # Old render
+    scene v8s40
     with dissolve
     ri "I'm bisexual."
 
-    scene sfr4ri56a # Old render
+    scene v8s40a
     with dissolve
     u "Really!?"
 
-    scene sfr4ri56
+    scene v8s40
     with dissolve
     ri "Yeah, and I haven't told anyone except you."
 
-    scene sfr4ri56a
+    scene v8s40a
     with dissolve
     u "So why now? Why me?"
 
-    scene sfr4ri56
+    scene v8s40
     with dissolve
     ri "I think I want to experiment with other girls."
 
     if upstairs == "aubrey":
-        scene sfr4ri56a
+        scene v8s40a
         with dissolve
         u "Did you know Aubrey is bisexual?"
 
@@ -72,7 +72,7 @@ label v08_ri_start_fr:
         u "You know, that's actually pretty hot."
 
     else:
-        scene sfr4ri56a
+        scene v8s40a
         with dissolve
         u "That's pretty hot."
 
@@ -100,11 +100,11 @@ label v08_ri_start_fr:
     with dissolve
     ri "Yeah, yeah."
 
-    scene sfr4ri56a
+    scene v8s40a
     with dissolve
     u "So you hooked up with other girls before?"
 
-    scene sfr4ri56
+    scene v8s40
     with dissolve
     ri "Never. I mean... not like that. Just made out."
 
@@ -115,12 +115,14 @@ label v08_ri_start_fr:
     scene v8s40c
     with dissolve
     u "Don't we all?"
-
-    scene v8s40g # Riley rolling eyes, cute and smiling, mouth closed
-    with dissolve
     ri "..."
 
-    scene sfr4ri56a
+    ###CHECK - removed because of missing image
+    # scene v8s40g # Riley rolling eyes, cute and smiling, mouth closed
+    # with dissolve
+    # ri "..."
+
+    scene v8s40a
     with dissolve
     u "So, I'm just saying, if you're ever nervous, you know for your first full on female hook up, just call me."
 
@@ -144,11 +146,11 @@ label v08_ri_start_fr:
     with dissolve
     pause 1
 
-    scene sfr4ri56a
+    scene v8s40a
     with dissolve
     u "Tired?"
 
-    scene sfr4ri56
+    scene v8s40
     with dissolve
     ri "Yeah."
 
@@ -156,24 +158,28 @@ label v08_ri_start_fr:
     with dissolve
     pause 1
 
-    scene sfr4ri56a
+    scene v8s40
     with dissolve
     ri "It's pretty late."
 
-    scene sfr4ri56
+    scene v8s40a
     with dissolve
     u "Yeah, I'm gonna head home."
 
-    scene sfr4ri56a
+    scene v8s40
     with dissolve
     ri "Okay. Talk soon?"
 
-    scene sfr4ri5
+    scene v8s40a
     with dissolve
     u "Sure, bye."
 
     scene v8s40d
     with dissolve
     ri "Byeee."
+
+    scene black
+    with Dissolve(1)
+    pause 0.5
 
     jump aft_amb_night
