@@ -1,5 +1,6 @@
 label after_load:
     python:
+        persistent.ep = 8
         before_contacts = contacts.copy()
         contacts = []
         contact_Emily = Contact("Emily", "emilyprofilepic", locked=False)
