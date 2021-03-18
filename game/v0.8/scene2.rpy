@@ -272,4 +272,4 @@ label v08_cl_start:
     with dissolve
     cl "Sorry, [name]. See you another time."
 
-    jump v08_sat_morning
+    jump aft_amb_night

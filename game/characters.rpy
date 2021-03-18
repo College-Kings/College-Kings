@@ -43,7 +43,7 @@ define am = Character("Amber", who_color="#fc3158", who_outlines=[ (2, "#000000"
 define ki = Character("Kim", who_color="#fc3d39", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
 define ad = Character("Adam", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
 define co = Character("Counselor", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
-#0.6
+# 0.6
 define waiter = Character("Waiter", who_color="#5fc9f8", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
 define host = Character("Host", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
 define poet1 = Character("Lisa", who_color="#fc3158", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
@@ -56,7 +56,7 @@ define guyd = Character("Perry", who_color="#fecb2e", who_outlines=[ (2, "#00000
 define se = Character("Sebastian", who_color="#147efb", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
 define guyc = Character("Marcus", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
 define matt = Character("Matt", who_color="#fecb2e", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
-#0.7
+# 0.7
 define cal = Character("Caleb", who_color="#83d81c", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ]) # Ape pledge
 define coop = Character("Cooper", who_color="#11af68", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ]) # Ape pledge
 define kai = Character("Kai", who_color="#1caedb", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ]) # Ape pledge

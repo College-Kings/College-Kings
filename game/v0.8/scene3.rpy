@@ -382,7 +382,7 @@ label v08_ri_start:
     with dissolve
     ri "Hit me up when you're free. Byeee."
 
-    jump v08_sat_morning
+    jump aft_amb_night
 
     ### Animation references:
     # MC and Riley in Riley's dorm, on her bed. Both of them fully naked. Please use Riley's expressions according to the animation mood.
