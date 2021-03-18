@@ -206,6 +206,10 @@ init -1:
                 "username": "MC",
                 "profilePicture": profilePictures[0]
             }
+            "Caleb": {
+                "username": "Aleb",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/calebpp.png"
+            }
         }
 
 screen kiwiiTemplate():
