@@ -3,26 +3,31 @@
 # Outfits: MC Outfit 2, Ryan Outfit 1, Grayson Outfit 2, Cameron Outfit 3, Samantha Outfit 1
 # Time: Sunday Afternoon
 
-label sun_aft_apes_house:
-    scene v8sahs1 # TPP. Show Ryan and MC sat on the sofa in the apes living room, chatting and chilling.
-    with fade
+default sideWithCameron = False
 
-    pause 0.5
+label sun_aft_apes_house:
+    ###CHECK - removed because of missing render
+    # scene v8sahs1 # TPP. Show Ryan and MC sat on the sofa in the apes living room, chatting and chilling.
+    # with fade
+
+    # pause 0.5
+
+    scene black
+    with Fade(0.75, 0.25, 0.5)
+    sa "Cameron, what are you-"
 
     scene v8sahs2 # TPP. Show Cameron barging through the front door of the apes house, dragging Samantha with him. Cameron looking really angry, Samantha looking upset/annoyed.
-    with dissolve
-
-    pause 0.5
+    with hpunch
+    pause 1
 
     scene v8sahs3 # TPP. MC and Ryan jump up from the sofa, looking at eachother. Both looking concerned.
     with dissolve
-
     u "(What the hell?)"
 
     scene v8sahs4 # FPP. Show Cameron and Samantha stood opposite eachother in the hallway of the apes house, Cameron holding Samantha's arm. Cameron really angry, Samantha upset/annoyed.
     with dissolve
 
-    u "(Uh oh, this isn't gonna be good)"
+    u "(Uh oh, this isn't gonna be good.)"
 
     scene v8sahs4a # FPP. Same camera as v8sahs4, Cameron no longer holding Samantha's arm, Cameron really angry, Samantha upset/annoyed, Samantha mouth open.
     with dissolve
@@ -122,17 +127,21 @@ label sun_aft_apes_house:
     scene v8sahs8c # FPP. Same camera as v8sahs8, Samantha slight smile, mouth closed.
     with dissolve
 
-    u "Just being a..."
+    u "Just being a-"
+
+    stop music fadeout 0.5
 
     scene v8sahs9 # TPP. Show Samantha and MC looking at the door to Samantha's room, confused expressions (due to comotion downstairs), Samantha mouth open.
     with dissolve
 
-    sa "Oh shit..."
+    sa "Oh shit!"
 
     scene v8sahs8d # FPP. Same camera as v8sahs8, Samantha looking worried, mouth closed.
     with dissolve
 
-    u "Stay here, I'll go see what's up"
+    u "Stay here, I'll go see what's up."
+
+    play music "music/m13punk.mp3"
 
     scene v8sahs10 # TPP. Show MC walking down the stairs of the Apes house. Cameron and Grayson stood at the bottom (in the hallway) opposite eachother, both angry.
     with dissolve
@@ -160,16 +169,18 @@ label sun_aft_apes_house:
     menu:
         "Side with Grayson":
             $ addPoint("tm", 1)
+            $ sideWithCameron = False
             jump sun_aft_grayson
         "Side with Cameron":
             $ addPoint("bro", 1)
+            $ sideWithCameron = True
             jump sun_aft_cameron
 
 label sun_aft_grayson:
     scene v8sahs11d # FPP. Same camera as v8sahs11, Cameron and Grayson both turn to look at camera, mouths closed.
     with dissolve
 
-    u "Cameron, I see his point. Not exactly a good place for your sister to stay, especially with her uhh...problem"
+    u "Cameron, I see his point. Not exactly a good place for your sister to stay, especially with her uhh... problem."
 
     scene v8sahs12 # FPP. Close up Cameron, Cameron looking really angry, mouth open. Grayson stood in the background, neutral expression, looking at Cameron & MC.
     with dissolve
@@ -200,6 +211,8 @@ label sun_aft_grayson:
 
     pause 0.5
 
+    play sound "sounds/doorclose.mp3"
+
     scene v8sahs15 # FPP. Close up Cameron, Cameron looking really angry, mouth closed.
     with dissolve
 
@@ -210,10 +223,12 @@ label sun_aft_grayson:
 
     ca "Like you care. Go kiss Grayson's ass some more. I'm outta here."
 
+    stop music fadeout 2
+
     scene v8sahs16 # TPP. Show Cameron walking away from MC, Cameron really annoyed, mouth closed.
     with dissolve
 
-    u "(Damn, I just can't win with that guy)"
+    u "(Damn, I just can't win with that guy.)"
 
     jump sun_eve_room
 
@@ -236,12 +251,12 @@ label sun_aft_cameron:
     scene v8sahs18 # FPP. Cameron and Grayson both turn to face the camera (where MC is), Grayson looking annoyed, Cameron slightly less annoyed, both mouths closed.
     with dissolve
 
-    u "We're all brothers here. We should stand behind Cameron in this, is all I'm saying"
+    u "We're all brothers here. We should stand behind Cameron in this, is all I'm saying."
 
     scene v8sahs18a # FPP. Same camera as v8sahs18, Grayson waving hand dismissively, looking annoyed, mouth open.
     with dissolve
 
-    gr "This isn't your concern. I'm dealing with this, not you"
+    gr "This isn't your concern. I'm dealing with this, not you."
 
     scene v8sahs13
     with dissolve
@@ -258,10 +273,15 @@ label sun_aft_cameron:
 
     pause 0.5
 
+    play sound "sounds/doorclose.mp3"
+    stop music
+
     scene v8sahs15b # FPP. Same camera as v8sahs15, Cameron neutral expression, mouth closed.
     with dissolve
 
     u "Hey Cameron, you okay?"
+
+    play music "music/m11punk.mp3" fadein 1
 
     scene v8sahs15c # FPP. Same camera as v8sahs15, Cameron neutral expression, mouth open.
     with dissolve
@@ -286,11 +306,15 @@ label sun_aft_cameron:
     scene v8sahs15d
     with dissolve
 
-    ca "Haha, I wouldn't go that far. But you ain't all bad"
+    ca "Haha, I wouldn't go that far. But you ain't all bad."
 
-    scene v8sahs19 # TPP. Show Cameron walking away from MC, Cameron slight smile, mouth closed.
+    ###CHECK - replaced because missing render
+    # scene v8sahs19 # TPP. Show Cameron walking away from MC, Cameron slight smile, mouth closed.
+    # with dissolve
+
+    scene v8sahs16
     with dissolve
 
-    u "(Well, that's a start)"
+    u "(Well, that's a start.)"
 
     jump sun_eve_room

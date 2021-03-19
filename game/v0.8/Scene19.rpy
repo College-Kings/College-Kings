@@ -9,7 +9,7 @@ label sun_eve_room:
         with fade
 
         if not laurenrs:
-            # -Phone buzzes-
+            play sound "sounds/vibrate.mp3"
             $ contact_Amber.newMessage("Hey u up?")
             $ contact_Amber.addReply("Always for you ;)", "s19_reply1")
             call screen messager(contact_Amber)
@@ -181,7 +181,7 @@ label sun_eve_room:
         with fade
 
         if not laurenrs:
-            # -Phone buzzes-
+            play sound "sounds/vibrate.mp3"
             $ contact_Amber.newMessage("Hey u up?")
             $ contact_Amber.addReply("Always for you ;)", "s19_reply30")
             call screen message(contact_Amber)
