@@ -99,7 +99,7 @@ screen contactsscreen():
                         add contact.profilePicture yalign 0.5 xpos 20
                         text contact.name style "nametext" yalign 0.5 xpos 100
 
-                        if contact.newMessages: # or (contact.messages and contact.messages[-1].replies)
+                        if contact.newMessages or (contact.messages and contact.messages[-1].replies):
                             add "images/contactmsgnot.png" yalign 0.5 xpos 275
 
                         imagebutton:

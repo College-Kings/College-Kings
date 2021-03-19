@@ -1,6 +1,7 @@
 label after_load:
     python:
         persistent.ep = 8
+        
         before_contacts = contacts.copy()
         contacts = []
         contact_Emily = Contact("Emily", "emilyprofilepic", locked=False)
@@ -16,5 +17,14 @@ label after_load:
         contact_Riley = Contact("Riley", "rileyprofilepic", locked=False)
         contact_Autumn = Contact("Autumn", "autumnprofilepic", locked=False)
         contact_Imre = Contact("Imre", "imreprofilepic", locked=False)
+
+        try:
+            for before_contact in before_contacts:
+                for contact in contacts:
+                    if before_contact.name == contact.name:
+                        for message in before_contact.messages:
+                            contact.newMessage(message.msg)
+                        break
+        except: pass
 
 return

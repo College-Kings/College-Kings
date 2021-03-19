@@ -20,17 +20,17 @@ label hoco_amb_night:
     with dissolve
     pause 1
 
-    image v8am1bj1 = Movie(play="images/v8am1bj1.webm", loop=True, image="images/v8am1bj1end.jpg", start_image="images/v8am1bj1start.jpg") # BJ FPP
-    image v8am1bj1f = Movie(play="images/v8am1bj1f.webm", loop=True, image="images/v8am1bj1end.jpg", start_image="images/v8am1bj1start.jpg")
+    image v8am1bj1 = Movie(play="images/v08/Scene 5/v8am1bj1.webm", loop=True, image="images/v08/Scene 5/ambj000.jpg", start_image="images/v08/Scene 5/ambj000.jpg") # BJ FPP
+    image v8am1bj1f = Movie(play="images/v08/Scene 5/v8am1bj1f.webm", loop=True, image="images/v08/Scene 5/ambj000.jpg", start_image="images/v08/Scene 5/ambj000.jpg")
 
-    image v8am1miss1 = Movie(play="images/v8am1miss1.webm", loop=True, image="images/v8am1miss1end.jpg", start_image="images/v8am1miss1start.jpg") # Missionary (?) TPP 1
-    image v8am1miss1f = Movie(play="images/v8am1miss1f.webm", loop=True, image="images/v8am1miss1end.jpg", start_image="images/v8am1miss1start.jpg")
+    image v8am1miss1 = Movie(play="images/v08/Scene 5/v8am1miss1.webm", loop=True, image="images/v08/Scene 5/am3_00.jpg", start_image="images/v08/Scene 5/am3_00.jpg") # Missionary (?) TPP 1
+    image v8am1miss1f = Movie(play="images/v08/Scene 5/v8am1miss1f.webm", loop=True, image="images/v08/Scene 5/am3_00.jpg", start_image="images/v08/Scene 5/am3_00.jpg")
 
-    image v8am1miss2 = Movie(play="images/v8am1miss2.webm", loop=True, image="images/v8am1miss2end.jpg", start_image="images/v8am1miss2start.jpg") # Missionary (?) TPP 2
-    image v8am1miss2f = Movie(play="images/v8am1miss2f.webm", loop=True, image="images/v8am1miss2end.jpg", start_image="images/v8am1miss2start.jpg")
+    image v8am1miss2 = Movie(play="images/v08/Scene 5/v8am1miss2.webm", loop=True, image="images/v08/Scene 5/am4_00.jpg", start_image="images/v08/Scene 5/am4_00.jpg") # Missionary (?) TPP 2
+    image v8am1miss2f = Movie(play="images/v08/Scene 5/v8am1miss2f.webm", loop=True, image="images/v08/Scene 5/am4_00.jpg", start_image="images/v08/Scene 5/am4_00.jpg")
 
-    image v8am1dt1 = Movie(play="images/v8am1dt1.webm", loop=True, image="images/v8am1dt1end.jpg", start_image="images/v8am1dt1start.jpg") # Deep throat TPP
-    image v8am1dt1f = Movie(play="images/v8am1dt1f.webm", loop=True, image="images/v8am1dt1end.jpg", start_image="images/v8am1dt1start.jpg")
+    image v8am1dt1 = Movie(play="images/v08/Scene 5/v8am1dt1.webm", loop=True, image="images/v08/Scene 5/amff00.jpg", start_image="images/v08/Scene 5/amff00.jpg") # Deep throat TPP
+    image v8am1dt1f = Movie(play="images/v08/Scene 5/v8am1dt1f.webm", loop=True, image="images/v08/Scene 5/amff00.jpg", start_image="images/v08/Scene 5/amff00.jpg")
 
     scene v8am1bj1
     with dissolve

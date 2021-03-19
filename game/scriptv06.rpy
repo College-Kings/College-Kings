@@ -4197,7 +4197,7 @@ label script06:
             label phoneag:
             stop music fadeout 2.0
 
-            if contact_aubrey.replies:
+            if contact_Aubrey.replies:
 
 
                 u "(I should check my messages.)"
