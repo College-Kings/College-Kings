@@ -5,11 +5,14 @@
 
 ### SCENE 12: APES CEREMONY
 label apes_join_ceremony:
-    pause 0.5 # For continuity with scene9
 
     scene v8apes1 # TPP. MC in his new outfit looking at himself in the mirror in his dorm with a confident smile, mouth closed
     with fade
     u "(Looking good there, [name].)"
+
+    play music "music/mindie1.mp3" fadein 2
+    queue music ["music/m15punk.mp3", "music/m2punk.mp3"]
+
     if ending == "riley" and rileyrs:
         u "(I hope I run into Riley tonight. Last night was great.)"
     elif ending == "riley":
@@ -125,6 +128,10 @@ label apes_join_ceremony:
         with dissolve
         gr "And right under [name], our number two spot is Ryan!"
 
+        scene v8apes8a
+        with dissolve
+        ry "Wohoo!!!"
+
         scene v8apes6a
         with dissolve
         gr "And our last spot goes to... Caleb!"
@@ -142,7 +149,7 @@ label apes_join_ceremony:
 
         scene v8apes8a # TPP. Close up shot of Ryan very excited, smiling wide
         with dissolve
-        pause
+        ry "Wohoo!!!"
 
         scene v8apes10
         with dissolve
@@ -182,7 +189,7 @@ label apes_join_ceremony:
 
         scene v8apes8a
         with dissolve
-        pause
+        ry "Wohoo!!!"
 
         scene v8apes10
         with dissolve
@@ -223,7 +230,7 @@ label apes_join_ceremony:
 
         scene v8apes8a
         with dissolve
-        pause
+        ry "Wohoo!!!"
 
         scene v8apes10
         with dissolve
@@ -364,7 +371,7 @@ label apes_faceoff_task:
     scene v8apes6d
     with dissolve
     gr "...[name]!"
-    u "(*Sigh* Finally.)"
+    u "*Sigh* (Finally.)"
 
     scene v8apes12a
     with dissolve
@@ -383,7 +390,7 @@ label apes_faceoff_task:
 
 label after_apes_ranking:
     scene v8apes6
-    with dissolve
+    with fade
     gr "Apes, please escort the two losers out of the house."
 
     scene v8apes17 # TPP. Mason taking Kai out of the room, grabbing him by the arm (as if by force). Kai looking disappointed
@@ -393,7 +400,7 @@ label after_apes_ranking:
         u "(Whew, glad I made it in somehow. Last thing I need right now is Cameron kicking me out of here.)"
 
     scene v8apes17a # Sam taking Cooper out of the room, grabbing him by the arm (as if by force). Cooper looking disappointed
-    with dissolve
+    with fade
     pause 0.5
     gr "While they're at it, others follow me to the den. We have a party to start!"
 

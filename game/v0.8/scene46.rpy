@@ -8,13 +8,13 @@ label v8_ending:
         scene v8send1 # TPP. Show MC lying on his Wolves bed, looking tired.
         with dissolve
 
-        u "(Man what a crazy day)"
+        u "(Man, what a crazy day!)"
 
         if climbwseb:
-            u "(I can't believe Sebastian got me to climb that hospital. But I did it)"
+            u "(I can't believe Sebastian got me to climb that hospital. But I did it!)"
 
         if not climbwseb:
-            u "(I hope Sebastian doesn't think less of me for chickening out at the hospital. Wasn't very wolflike of me)"
+            u "(I hope Sebastian doesn't think less of me for chickening out at the hospital. Wasn't very wolflike of me.)"
 
         scene v8send2 # FPP. Show MC's phone on his bed, buzzing as if it has got a notification.
         with dissolve
@@ -66,7 +66,7 @@ label v8_ending:
         scene v8send5 # TPP. Show MC lying on his Apes bed, looking tired.
         with dissolve
 
-        u "(Man what a crazy day)"
+        u "(Man, what a crazy day!)"
 
         if not hesitantwgrayson:
             u "(Grayson and I really hit it off in the woods, though that was some creepy shit. I think I made some headway with him, though)"

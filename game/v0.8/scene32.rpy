@@ -23,7 +23,7 @@ label mr_aft_class:
         scene v8saec4 # TPP. Show MC looking at Ryan, MC shrugging, unsure expression, Ryan confused expression, mouth closed.
         with dissolve
 
-        u "(I'm sure Ms. Rose doesn't want anyone knowing her business)"
+        u "(I'm sure Ms. Rose doesn't want anyone knowing her business.)"
 
         scene v8saec5 # TPP. Show MC walking to the front of the class, everyone else leaving through the door.
         with dissolve
@@ -84,7 +84,7 @@ label ask_rose_more_q:
     jump aec_rose_end
 
 label no_ask_rose_more_q:
-    u "(I'm sure she doesn't want to think about this stuff at school)"
+    u "(I'm sure she doesn't want to think about this stuff at school.)"
 
     jump aec_rose_end
 

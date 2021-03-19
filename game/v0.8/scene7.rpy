@@ -90,20 +90,21 @@ label caf_w_aub:
 
         au "Yeah I actually did."
 
-        scene scaf8
-        with dissolve
+        if ending != "amber":
+            scene scaf8
+            with dissolve
 
-        u "Your dress was sexy as fuck."
+            u "Your dress was sexy as fuck."
 
-        scene scaf8a
-        with dissolve
+            scene scaf8a
+            with dissolve
 
-        au "You didn't think I'd show up in something ugly?"
+            au "You didn't think I'd show up in something ugly?"
 
-        scene scaf8
-        with dissolve
+            scene scaf8
+            with dissolve
 
-        u "Just saying, it looked good."
+            u "Just saying, it looked good."
 
         scene scaf8e # FPP. Same camera as scaf8, Aubrey neutral expression, mouth open.
         with dissolve
@@ -167,20 +168,22 @@ label caf_w_aub:
 
         au "I actually had a lot of fun at the dance."
 
-        scene scaf8
-        with dissolve
+        if ending != "amber":
 
-        u "That's good. Your dress looked great."
+            scene scaf8
+            with dissolve
 
-        scene scaf8a
-        with dissolve
+            u "That's good. Your dress looked great."
 
-        au "Thanks. Not so much of an evening gown girl, but I liked the dress I found."
+            scene scaf8a
+            with dissolve
 
-        scene scaf8
-        with dissolve
+            au "Thanks. Not so much of an evening gown girl, but I liked the dress I found."
 
-        u "Yeah, good pick."
+            scene scaf8
+            with dissolve
+
+            u "Yeah, good pick."
 
         scene scaf8e
         with dissolve
@@ -315,12 +318,12 @@ label caf_no_prot_au:
     scene scaf10
     with dissolve
 
-    u "Hey, sorry meant to call you earlier. Woke up and I'm feeling really under the weather today."
+    u "Hey, sorry. Meant to call you earlier. Woke up and I'm feeling really under the weather today."
 
     scene scaf10a
     with dissolve
 
-    aut "Oh.. yeah, it's cool!"
+    aut "Oh... yeah, it's cool!"
 
     scene scaf10
     with dissolve

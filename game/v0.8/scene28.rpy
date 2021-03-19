@@ -705,7 +705,7 @@ label check_on_josh:
     scene v8sdd21
     with dissolve
 
-    u "We don't have time for this. We gotta go. C'mon, lets get you home"
+    u "We don't have time for this. We gotta go. C'mon, let's get you home."
 
     scene v8sdd22 # TPP. Show MC helping Josh stand up, Josh really acting very injured.
     with dissolve

@@ -300,7 +300,7 @@ label watching_seb_climb:
     scene v8shos37 # TPP. Show MC waving back up at Sebastian, MC bored expression, mouth closed.
     with dissolve
 
-    u "(Man, this is boring)"
+    u "(Man, this is boring.)"
 
     scene v8shos36a # FPP. Same camera as v8shos36, Sebastian hands around his mouth like he is shouting down, mouth open.
     with dissolve
