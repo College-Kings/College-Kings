@@ -5,7 +5,7 @@
 
 label walk_home_w_gray:
     scene v8swbg1 # TPP. Show MC and Grayson walking down the path outside of the front of the Apes house, towards the entrance.
-    with fade
+    with Fade(0.75, 0.25, 0.75)
 
     pause 0.5
 
@@ -124,6 +124,8 @@ label walk_home_w_gray:
     with dissolve
 
     gr "No promises."
+
+    stop music fadeout 3
 
     scene v8swbg7 # TPP. Show Grayson entering a room, MC walking to his Apes room.
     with dissolve

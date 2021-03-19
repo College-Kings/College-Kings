@@ -7,7 +7,7 @@
 label walk_home_hosp:
     if climbwseb:
         scene v8sbws1 # TPP. Show MC and Sebastian walking together next to eachother through the park.
-        with fade
+        with Fade(0.75, 0.25, 0.75)
 
         pause 0.5
 
@@ -164,14 +164,17 @@ label walk_home_hosp:
 
         u "Damn you!!"
 
+        stop music fadeout 3
+
         scene v8sbws9 # TPP. Show MC catching up to Sebastian sprinting, Sebastian looking behind him laughing at MC.
         with dissolve
+        pause 0.5
 
         jump v8_ending
 
     else:
         scene v8sbws10 # TPP. ! RETURN CHARACTERS TO SAME POSITIONS AS V8SBWS1 ! Show MC and Sebastian, Sebastian walking slightly infront of MC.
-        with dissolve
+        with Fade(0.75, 0.25, 0.75)
 
         u "You know..."
 

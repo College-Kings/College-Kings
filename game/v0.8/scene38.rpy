@@ -15,12 +15,15 @@ label seb_in_room:
 
     pause 0.5
 
-    # Door knocking sound
+    play sound "sounds/knock.mp3"
 
     scene v8ssir2 # FPP. Show the closed door of MCs room.
     with dissolve
 
     u "(Wonder who that is.)"
+
+    play music "music/m15punk.mp3"
+    queue music ["music/m16punk.mp3", "music/m7punk.mp3"]
 
     scene v8ssir3 # TPP. Show MC going to the door and opening it, show Sebastian stood on the other side, Sebastian smile, mouth open.
     with dissolve
@@ -107,7 +110,7 @@ label seb_in_room:
     scene v8ssir8c # FPP. Same camera as v8ssir8, Sebastian now looking back at camera, laugh, mouth open.
     with dissolve
 
-    se "Fuck man, do I! Haha. I've always just been a 'Do It Yourself' kind of guy, even  for stupid and small things."
+    se "Fuck man, do I! Haha. I've always just been a \"Do It Yoursel\" kind of guy, even  for stupid and small things."
 
     scene v8ssir8d # FPP. Same cabera as v8ssir8, Sebastian smile, mouth closed.
     with dissolve
@@ -171,5 +174,6 @@ label seb_in_room:
 
     scene v8ssir13 # TPP. Show MC and Sebastian leaving MC's Wolves room.
     with dissolve
+    pause 0.5
 
     jump hosp_climb_seb

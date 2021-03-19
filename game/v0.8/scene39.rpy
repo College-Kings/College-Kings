@@ -3,11 +3,12 @@
 # Outfits: MC Outfit 2, Sebastian Outfit 1
 # Time: Tuesday Night
 
+default climbwseb = False
+
 label hosp_climb_seb:
-    default climbwseb = False
 
     scene v8shos1 # TPP. Show MC and Sebastian stood at the hospital, show the hospital, MC and Sebastian looking up at the top of it. Try and portray the scale of the hospital.
-    with fade
+    with Fade(0.75, 0.25, 0.75)
 
     pause 0.5
 
@@ -75,7 +76,7 @@ label climb_the_hos:
     scene v8shos7 # TPP. Show MC grabbing the mask from Sebastian and putting it on, Sebastian smile, mouth open.
     with dissolve
 
-    se "Looks like our cub is climbing his way up to becoming a wolf. -Puts on an identical mask-  Hell yeah!"
+    se "Looks like our cub is climbing his way up to becoming a wolf. Hell yeah!"
 
     scene v8shos8 # FPP. Show Sebastian beginning to walk towards the flag pole, Sebastian now wearing black mask(mask 9) also, Sebastian, smile, mouth closed.
     with dissolve
