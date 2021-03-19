@@ -36,6 +36,8 @@ label after_drugs:
         jo "*Groans*"
 
     play sound "sounds/dooropen.mp3"
+    play music "music/mlove2.mp3"
+    queue music "music/mchill1.mp3"
 
     scene v8josh14 # TPP (This is the next scene for both v8josh12a and v8josh13, in different paths of course, so both the transitions should look smooth). Show MC opening the room door (half open) with Josh still taking support from MC
     with dissolve
@@ -275,7 +277,7 @@ label after_drugs:
             with dissolve
             u "(What is she up to?)"
 
-            # play sound "sounds/flush.mp3"
+            play sound "sounds/flush.mp3"
             pause 0.5
 
             scene v8josh27a # Amber walking towards the couch to sit beside MC, looking at him neutral expression. MC neutral expression, mouth open
@@ -560,6 +562,8 @@ label after_drugs:
     with dissolve
     am "Aww, thanks. Goodnight, [name]!"
 
+    stop music fadeout 3
+
     scene v8josh31a
     with dissolve
     u "Night, Amber."
@@ -660,6 +664,8 @@ label tues_morning_at_joshs:
         u "(Oh, looks like Amber is up already.)"
         u "(I should get dressed and see how Josh is doing.)"
 
+        play music "music/mfunk.mp3"
+
         scene v8josh39 # FPP. MC walking down the stairs into the kitchen, no others should be seen in the shot (For context, Josh is making breakfast and Amber is sitting at the table talking to Josh but they should not be visible in this shot)
         with dissolve
         jo "No, I'm telling you I got this."
@@ -754,6 +760,7 @@ label tues_morning_at_joshs:
         scene v8josh44b
         with dissolve
         am "We did! *laughs*"
+        stop music fadeout 3
         u "*Laughs*"
 
         jump v8_tues_eco_class
@@ -767,6 +774,8 @@ label tues_morning_at_joshs:
         with dissolve
         u "(Oh, looks like Josh and Amber are up already.)"
         u "(Guess I better get up and see how he is.)"
+
+        play music "music/mfunk.mp3"
 
         scene v8josh38 # FPP. MC walking into the kitchen but just outside it, so no others should be seen in the shot (For context, Josh is making breakfast and Amber is sitting at the table talking to Josh but they should not be visible in this shot)
         with dissolve
@@ -849,6 +858,8 @@ label tues_morning_at_joshs:
         scene v8josh44a
         with dissolve
         am "Uh uh. Shut up. Just sit there and wait for your food."
+
+        stop music fadeout 3
 
         scene v8josh44
         with dissolve

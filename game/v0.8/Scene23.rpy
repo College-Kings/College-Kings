@@ -10,6 +10,8 @@ label josh_calls_you:
 
         pause 0.5
 
+        play sound "sounds/call.mp3"
+
         scene v8sjc2 # TPP. Show MC's phone ringing on his bed, it's Josh on the caller ID.
         with dissolve
 
@@ -19,6 +21,8 @@ label josh_calls_you:
         with dissolve
 
         pause 0.5
+
+        play sound "sounds/answercall.mp3"
 
         scene v8sjc4 # TPP. Show MC stood up in his room on the phone to Josh, MC slightly confused expression, mouth open.
         with dissolve
@@ -60,7 +64,8 @@ label josh_calls_you:
 
         jo "Awesome! See you then bro!"
 
-        # -Josh hangs up-
+        play sound "sounds/rejectcall.mp3"
+        stop music fadeout 3
 
         scene v8sjc5 # TPP. Show MC hanging up the phone.
         with dissolve
@@ -76,6 +81,8 @@ label josh_calls_you:
 
         pause 0.5
 
+        play sound "sounds/call.mp3"
+
         scene v8sjc8 # TPP. Show MC's phone ringing on his bed, it's Josh on the caller ID.
         with dissolve
 
@@ -85,6 +92,8 @@ label josh_calls_you:
         with dissolve
 
         pause 0.5
+
+        play sound "sounds/answercall.mp3"
 
         scene v8sjc10 # TPP. Show MC stood up in his room on the phone to Josh, MC slightly confused expression, mouth open.
         with dissolve
@@ -126,7 +135,10 @@ label josh_calls_you:
 
         jo "Awesome! See you then bro!"
 
+        play sound "sounds/rejectcall.mp3"
+
         # -Josh hangs up-
+        stop music fadeout 3
 
         scene v8sjc5 # TPP. Show MC hanging up the phone.
         with dissolve

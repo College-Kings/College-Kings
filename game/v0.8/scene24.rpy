@@ -10,6 +10,8 @@ label josh_room:
     with fade
     u "(What does Josh want now? He sounded a bit nervous on the phone.)"
 
+    play music "music/m16punk.mp3" fadein 2
+
     scene v8josh2 # TPP (far shot). Showing Josh waiting outside his room, standing against a wall just looking at the ground, nervous, mouth closed. MC walking towards Josh, neutral expression, mouth closed
     with dissolve
     pause 0.5
@@ -113,6 +115,8 @@ label josh_room:
             with hpunch
             pause 0.5
             u "(Fuck. I should go after him, but I don't want to get caught up in that shit. Guess I'll go back to my room.)"
+
+    stop music fadeout 2
 
     scene v8josh6 # TPP. Show MC walking away from Josh's room, neutral expression, mouth closed
     with dissolve

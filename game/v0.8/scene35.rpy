@@ -5,9 +5,12 @@
 
 label steak_w_chloe:
     scene v8steak1 # FPP. Sweeping shot of the steak house, so Chloe sat at a table.
-    with fade
+    with Fade(0.75, 0.25, 0.75)
 
-    pause 0.5
+    pause 1
+
+    play music "music/mlove.mp3"
+    queue music ["music/mhappy.mp3", "music/mindie1.mp3"]
 
     scene v8steak2 # TPP. Show MC sitting down at the table with Chloe.
     with dissolve
@@ -300,7 +303,7 @@ label steak_w_chloe_cont_2:
     scene v8steak13 # FPP. Show Chloe, food on table infront of Chloe, Chloe looking at her food, Chloe neutral expression, mouth closed.
     with dissolve
 
-    if chloers and ending == "chloe":
+    if ending == "chloe":
         u "You'd taste better."
 
         scene v8steak13a # FPP. Same camera as v8steak13, Chloe looking at camera, flirty smile, mouth open.
@@ -329,7 +332,7 @@ label steak_w_chloe_cont_2:
 
         cl "*giggles* Both!"
 
-    if not chloers:
+    else:
         u "Here try it."
 
         scene v8steak14 # TPP. Show MC offering a piece of his food out to Chloe.

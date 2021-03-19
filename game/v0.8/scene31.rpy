@@ -5,7 +5,7 @@
 
 label v8_tues_eco_class:
     scene v8stec1 # FPP. Sweeping shot of the economics class, show Riley, Lauren and Ryan all sat on the back row.
-    with fade
+    with Fade(0.75, 0.25, 0.75)
 
     pause 0.5
 
@@ -13,6 +13,8 @@ label v8_tues_eco_class:
     with dissolve
 
     pause 0.5
+
+    play music "music/m16punk.mp3"
 
     scene v8stec3 # FPP. Show Ms Rose stood at the front of the class, mouth open looking around at class, mouth open.
     with dissolve
@@ -137,6 +139,7 @@ label v8_tues_eco_class:
 
         menu:
             "Confide in Ryan":
+                $ addPoint("bro", 1)
                 jump tec_conf_ryan
             "Play it cool":
                 jump tec_cool_ryan
@@ -195,6 +198,7 @@ label tec_cont:
 
         menu:
             "Flirt with Lauren":
+                $ addPoint("bf", 1)
                 jump fl_w_lau
             "Don't flirt with Lauren":
                 jump no_fl_w_lau
@@ -277,7 +281,7 @@ label tec_lau_off:
     scene v8stec8a
     with dissolve
 
-    u "(Whew)"
+    u "(Whew!)"
 
     jump tec_end_time
 
@@ -295,9 +299,31 @@ label tec_end_time:
 
     ro "Who wants to tell the class what they know about the free market?"
 
+    stop music fadeout 2
+
+    play sound "sounds/clock2.mp3"
+    scene clocka
+    with fade
+    pause 0.5
+
+    scene clockb
+    with dissolve
+    pause 0.5
+
+    scene clockc
+    with dissolve
+    pause 0.5
+
+    scene clockd
+    with dissolve
+    pause 0.5
+
+    scene clocke
+    with dissolve
+    pause 0.5
+
     scene v8stec12
     with dissolve
-
     if laurenrs:
         u "(That's my girl)"
 

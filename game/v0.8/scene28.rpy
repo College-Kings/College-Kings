@@ -11,6 +11,7 @@ default simLarsFight = False
 default s28_LarsFight = False
 
 label drug_deal_w_josh:
+    stop music fadeout 2
     scene v8sdd1 # TPP. Show a long shot of the alley, Josh and MC, next to eachother walking down the alley cautiosly. Camera from behind Josh and MC.
     with fade
 
@@ -75,6 +76,8 @@ label drug_deal_w_josh:
     with dissolve
 
     pause 0.5
+
+    play music "music/m3punk.mp3"
 
     scene v8dd4c # FPP. Same camera as v8sdd4, Joe and Lars looking at the camera, angry expression, Joe now holding the pipe in one hand only. Joe mouth open.
     with dissolve
