@@ -3,6 +3,8 @@
 # Outfits: MC Outfit 3, Sebastian Outfit 1
 # Time: Saturday Night
 
+default openedUpToSeb = False
+
 label work_with_seb:
     scene v8sgym4 # TPP. Show MC and Sebastian walking over to a punching bag in the gym.
     with dissolve
@@ -10,12 +12,12 @@ label work_with_seb:
     pause 0.5
 
     scene v8sgym5 # FPP. Show Sebastian punching the punching bag. Sebastian mouth open.
-    with dissolve
+    with hpunch
 
     se "This is every teacher who flunked me!"
 
     scene v8sgym6 # TPP. Show MC punching the punching bag. MC mouth open.
-    with dissolve
+    with hpunch
 
     u "And this is every guy who stole my girl!"
 
@@ -30,7 +32,7 @@ label work_with_seb:
     se "This is where I spend most of my time. Ladies love muscles."
 
     scene v8sgym9 # TPP. Show Sebastian and MC lifting weights, MC tense expression, mouth closed, Sebastian mouth open.
-    with dissolve
+    with fade
 
     se "Twenty-eight... Twenty-nine... Thirty..."
 
@@ -61,8 +63,10 @@ label work_with_seb:
     menu:
         "Open up to Sebastian":
             $ addPoint("bro", 1)
+            $ openedUpToSeb = True
             jump wolves_gym_conf
         "Play it cool":
+            $ openedUpToSeb = False
             jump wolves_gym_cool
 
 label wolves_gym_conf:
@@ -104,6 +108,8 @@ label wolves_gym_conf:
 
     u "One... Two... Three..."
 
+    jump wolves_gym_end
+
 label wolves_gym_cool:
     scene v8sgym10a
     with dissolve
@@ -144,7 +150,7 @@ label wolves_gym_cool:
 
 label wolves_gym_end:
     scene v8sgym12 # FPP. Show Sebastian, slightly worried, mouth open.
-    with dissolve
+    with Fade(0.75, 0.25, 0.75)
 
     se "Shit, it's late. I never finished my chem homework."
 
@@ -176,14 +182,16 @@ label wolves_gym_end:
     scene v8sgym13 # TPP. Show MC entering his room, looking exhausted.
     with fade
 
-    pause 0.5
+    pause 1
+
+    stop music fadeout 3
 
     scene v8sgym14 # TPP. Show MC lying down on his bed, looking really tired.
     with dissolve
 
     u "(That workout has tired me out, I can catch up on studying tomorrow.)"
 
-    scene v9sgym14a # TPP. Same camera as v8sgym14, MC mouth closed, eyes closed.
+    scene v8sgym14a # TPP. Same camera as v8sgym14, MC mouth closed, eyes closed.
     with dissolve
 
     jump mc_wolves_sun_morn
