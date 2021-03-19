@@ -71,8 +71,6 @@ label phn_riley11_a2:
 
 label phn_riley11_done:
     if joinwolves:
-        scene v8monroom3 # TPP. Show MC leaving his room in Wolves house, smiling a little, mouth closed
-        with dissolve
         u "(Guess I'm not gonna be bored to death after all.)"
 
     else:

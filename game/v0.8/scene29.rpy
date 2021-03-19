@@ -520,7 +520,7 @@ label after_drugs:
     with dissolve
     u "Funny. Kind. Really pretty and is always smiling."
 
-    scene v8josh31e # Amber sarcastic smile, mouth open
+    scene v8josh31c # Amber sarcastic smile, mouth open
     with dissolve
     am "Pretty, huh? You like her?"
 

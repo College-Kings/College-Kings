@@ -79,12 +79,12 @@ label drug_deal_w_josh:
 
     play music "music/m3punk.mp3"
 
-    scene v8dd4c # FPP. Same camera as v8sdd4, Joe and Lars looking at the camera, angry expression, Joe now holding the pipe in one hand only. Joe mouth open.
+    scene v8sdd4c # FPP. Same camera as v8sdd4, Joe and Lars looking at the camera, angry expression, Joe now holding the pipe in one hand only. Joe mouth open.
     with dissolve
 
     je "See, this is where you're under the wrong impression you're in control of this situation. My buddy here, Lars, has a quick temper and fists like rock. Pretty sure I don't gotta spell shit out for ya, do I?"
 
-    scene v8dd5b # TPP. Same camera as v8sdd5, Josh looking nervous but trying to hide it, Joe and Lars angry expression, MC looking nervous, everyone else mouth closed, Josh mouth open,
+    scene v8sdd5b # TPP. Same camera as v8sdd5, Josh looking nervous but trying to hide it, Joe and Lars angry expression, MC looking nervous, everyone else mouth closed, Josh mouth open,
     with dissolve
 
     jo "Spell out what? You've got the cash, I've got the shit, what's the problem?"
@@ -569,11 +569,6 @@ label no_int_deal_w_josh:
     je "You call the cops, I'll find you and pull your tongue down and tie it to your dick, got it?"
 
     scene v8sdd29 # FPP. Show either Joe or Lars picking up the drugs the other is walking away. Josh on the ground in pain. Josh looking injured and bruised.
-    with dissolve
-
-    pause 0.5
-
-    scene v8sdd30 # TPP. Show Joe and Lars next to eachother leaving the scene, Josh on the ground in pain, MC watching Joe and Lars walk away.
     with dissolve
 
     pause 0.5

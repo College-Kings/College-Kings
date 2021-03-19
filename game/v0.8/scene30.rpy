@@ -207,11 +207,11 @@ label amber_sex_at_joshs:
     am "I'm gonna come! [name] I'm gonna come!!"
 
     u "I think I'm close too."
-    am "Come in my ass [name]. *Moans* Fill it up good!"
+    am "Cocgt_119ass [name]. *Moans* Fill it up good!"
     pause 3
 
     scene v8amber12 # TPP. Close up of MC's penis inside Amber's a-hole with cum leaking outside
-    with flash
+    with fcgt_119
     pause 0.5
 
     scene v8amber12
