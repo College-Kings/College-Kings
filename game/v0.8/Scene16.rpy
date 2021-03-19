@@ -9,6 +9,8 @@ label mc_wolves_sun_aft:
 
     pause 0.5
 
+    play music "music/mindie1.mp3" fadein 1
+
     scene v8smcrm2 # TPP. Show MC sitting on the edge of his bed.
     with dissolve
 
@@ -38,6 +40,8 @@ label mc_apes_sun_aft:
     with fade
 
     pause 0.5
+
+    play music "music/mindie1.mp3" fadein 1
 
     scene v8smcrm4 # TPP. Show MC sitting on the edge of his bed.
     with dissolve

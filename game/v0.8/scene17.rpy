@@ -34,7 +34,6 @@ label phn_penelope6_a:
 
 label phn_penelope6_a1:
     $ contact_Penelope.newMessage("Thank you! :)")
-    $ contact_Penelope.addReply("No problem. I'm here for you. Let me know if you need anything else.", "phn_penelope6_a1")
     call screen messager(contact_Penelope)
 
 label phn_penelope6_done:
@@ -55,7 +54,7 @@ label phn_penelope6_done:
 
     scene v8rose0 # TPP. MC gesturing to his books across the floor, chuckling, mouth closed. Chris chuckling, mouth open
     with dissolve
-    ch "Same, bro."
+    ch "Heh! Same, bro."
 
     scene v8rose2
     with dissolve
@@ -72,6 +71,8 @@ label phn_penelope6_done:
     with dissolve
     ch "She's having some trouble with her old man. I don't know all the details..."
     ch "...but she sounded very upset when I ran into her a few minutes ago and I said we'd help."
+
+    stop music fadeout 3
 
     scene v8rose2a
     with dissolve
@@ -92,6 +93,8 @@ label phn_penelope6_done:
     scene v8rose5a # Same as v8rose5 but mouth closed and she's looking into the camera
     with dissolve
     u "When will he be back?"
+
+    play music "music/msad.mp3" fadein 1
 
     scene v8rose5b # Rose upset, not smiling anymore and mouth open. She's looking into the camera
     with dissolve
@@ -118,7 +121,7 @@ label phn_penelope6_done:
     with dissolve
     u "Are you alright, Ms. Rose?"
 
-    scene v8rose5f # Rose touching her cheek as if it hurts and a bruise can be seen on her arm (make that stand out so it can't be missed), mouth open. Tears still in her eyes. She's looking away from the camera as if trying to avoid eye contact
+    scene v8rose5g # Rose touching her cheek as if it hurts and a bruise can be seen on her arm (make that stand out so it can't be missed), mouth open. Tears still in her eyes. She's looking away from the camera as if trying to avoid eye contact
     with dissolve
     ro "I'm alright, th-thank you. It... it's been a long time coming. I just want it to be over with."
 
@@ -285,41 +288,41 @@ label phn_penelope6_done:
 
     play sound "sounds/answercall.mp3"
 
-    scene v8rose15 # TPP. MC moves to a side away from the convo with Rose and Chris to take a call. He's holding the phone to his head, neutral expression, mouth open
+    scene v8rose15a # TPP. MC moves to a side away from the convo with Rose and Chris to take a call. He's holding the phone to his head, neutral expression, mouth open
     with dissolve
     u "Hey Lauren, what's up?"
 
-    scene v8rose15a # Same as v8rose15 but MC mouth closed
+    scene v8rose15 # Same as v8rose15a but MC mouth closed
     with dissolve
     la "Hey [name], you wanna meet up? I've had enough Econ assignments for the day."
 
-    scene v8rose15
+    scene v8rose15a
     with dissolve
     u "Listen, I'm in the middle of something..."
 
     if laurenrs:
-        scene v8rose15a
+        scene v8rose15
         with dissolve
         la "Whatcha doooin?"
 
-        scene v8rose15
+        scene v8rose15a
         with dissolve
         u "Helping a... friend."
 
-        scene v8rose15a
+        scene v8rose15
         with dissolve
         la "OK... talk later I guess?"
 
-        scene v8rose15
+        scene v8rose15a
         with dissolve
         u "Yeah, bye."
 
     else:
-        scene v8rose15a
+        scene v8rose15
         with dissolve
         la "Oh, well let me know if you get time later."
 
-        scene v8rose15
+        scene v8rose15a
         with dissolve
         u "Sure, bye."
 
@@ -329,7 +332,7 @@ label phn_penelope6_done:
     with dissolve
     ro "...been so angry lately."
 
-    scene v8rose5f
+    scene v8rose5g
     with dissolve
     ro "I thought he was doing better but last night..."
 
@@ -369,6 +372,8 @@ label phn_penelope6_done:
     scene v8rose17
     with dissolve
     imre "And this room is done!"
+
+    stop music fadeout 3
 
     scene v8rose18 # Shot of Aaron and Finn loading stuff into the truck. The truck should be filled more than in v8rose3
     with dissolve
