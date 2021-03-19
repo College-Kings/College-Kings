@@ -7,33 +7,37 @@
 label mon_morning_room:
     if joinwolves == True:
         scene v8sdea1 # TPP. Show MC waking up on his bed in Wolves room.
-        with fade
+        with Fade(0.75, 0.25, 0.75)
 
-        u "(I gotta go talk to the Dean today about Penelope. I better get ready)"
+        u "(I gotta go talk to the dean today about Penelope. I better get ready)"
+
+        play music "music/mindie2.mp3" fadein 2
 
         scene v8sdea2 # TPP. Show MC getting ready in his Wolves room.
         with dissolve
 
-        pause 0.5
+        pause 1
 
         jump walk_to_dean
 
     else:
         scene v8sdea3 # TPP. Show MC waking up on his bed in Apes room.
-        with fade
+        with Fade(0.75, 0.25, 0.75)
 
-        u "(I gotta go talk to the Dean today about Penelope. I better get ready)"
+        u "(I gotta go talk to the dean today about Penelope. I better get ready)"
+
+        play music "music/mindie2.mp3" fadein 2
 
         scene v8sdea4 # TPP. Show MC getting ready in his Apes room.
         with dissolve
 
-        pause 0.5
+        pause 1
 
         jump walk_to_dean
 
     label walk_to_dean:
         scene v8sdea5 # TPP. Show MC walking through the College on his way to the dean's office. MC looking slightly nervous.
-        with fade
+        with Fade(0.75, 0.25, 0.75)
 
         u "(Excuse me, Dean, can I...no, that won't work.)"
 
@@ -68,7 +72,7 @@ label mon_morning_room:
         scene v8sdea8 # TPP. Show the Dean gesturing MC to take a seat at her desk. Dean mouth open.
         with dissolve
 
-        pause 0.5
+        pause 1
 
         scene v8sdea9 # TPP. Show the Dean now sat at her desk with MC sat opposite her.
         with dissolve

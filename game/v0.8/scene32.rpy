@@ -7,8 +7,9 @@ label mr_aft_class:
     if joinwolves:
         scene v8saec1 # TPP. Show everyone in the class standing up from their seats in preparation to leave the class.
         with dissolve
-
         pause 0.5
+
+        play music "music/mindie3.mp3"
 
         scene v8saec2 # FPP. Show Ms. Rose looking at MC (Camera), gesturing to come over, neutral expression, mouth open.
         with dissolve
@@ -106,7 +107,10 @@ label aec_rose_end:
 
     pause 0.5
 
+    stop music fadeout 2
+
     scene v8saec8 # TPP. Show MC now wear the exit of the class room, MC smile waving to Ms. Rose, Ms. Rose smile waving back.
     with dissolve
+    pause 0.5
 
     jump hallway_w_nora

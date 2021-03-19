@@ -16,6 +16,9 @@ label amber_sex_at_joshs:
     with dissolve
     pause
 
+    play music "music/msexy.mp3"
+    play sound "sounds/kiss.mp3"
+
     scene v8amber4 # TPP. Amber and MC standing in front of the bed (with MC towards the bed), making out passionately with Amber holding MC's head
     with dissolve
     pause 1
@@ -261,7 +264,8 @@ label amber_sex_at_joshs:
     pause 1
 
     scene black
-    with dissolve
+    with Dissolve(1)
+    pause 0.5
 
     jump tues_morning_at_joshs
 

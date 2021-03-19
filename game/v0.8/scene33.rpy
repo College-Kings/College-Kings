@@ -3,13 +3,18 @@
 # Outfits: MC Outfit 2, Nora Outfit
 # Time: Tuesday Morning
 
+default noralikes = False
+default helpedNora = False
+
 label hallway_w_nora:
-    default noralikes = False
 
     scene v8shal1 # TPP. Show MC walking down the college hallways, Nora walking towards MC in the distance with brochures in hand.
     with fade
 
     pause 0.5
+
+    play music "music/mchill2.mp3"
+    queue music "music/mindie4.mp3"
 
     scene v8shal2 # TPP. Show MC continuing to walk down the hallway, MC notices Nora and Nora notices MC.
     with dissolve
@@ -17,27 +22,22 @@ label hallway_w_nora:
     if noramad:
         scene v8shal3 # FPP. Close up Nora, Nora neutral expression, mouth open.
         with dissolve
-
         no "Hey, [name]... uh... got a sec?"
 
         scene v8shal3a # FPP. Same camera as v8shal3, Nora neutral expression, mouth closed.
         with dissolve
-
         u "Sure."
 
         scene v8shal3
         with dissolve
-
         no "We got off to a rough start, but can we just get past that?"
 
         scene v8shal3a
         with dissolve
-
         u "Sure, I'm not upset. I'd like to be friends."
 
         scene v8shal3
         with dissolve
-
         no "Good because..."
 
         $ noramad = False
@@ -45,15 +45,13 @@ label hallway_w_nora:
 
         jump cont_nora_hall
 
-    if not noramad:
+    else:
         scene v8shal3b # FPP. Same camera as v8shal3, Nora smile, mouth open.
         with dissolve
-
         no "Hey! [name] I'd like to speak with you."
 
         scene v8shal3c # FPP. Same camera as v8shal3, Nora smile, mouth closed.
         with dissolve
-
         u "Sure! What's up?"
 
         $ noralikes = True
@@ -94,7 +92,7 @@ label nora_trip_exc:
     jump cont_nora_hall_2
 
 label nora_trip_nerv:
-    u "Wow that sounds awesome...ly expensive."
+    u "Wow that sounds awesome{w}...ly expensive."
 
     scene v8shal3
     with dissolve
@@ -202,8 +200,10 @@ label cont_nora_hall_3:
     menu:
         "Help Nora":
             $ addPoint("bf", 1)
+            $ helpedNora = True
             jump hallway_help_nora
         "Don't help Nora":
+            $ helpedNora = False
             jump hallway_no_help_nora
 
 label hallway_help_nora:
@@ -251,6 +251,7 @@ label hallway_help_nora:
 
     scene v8shal6 # TPP. Show MC walking away in the opposite direction to Nora after having handed out the flyers Nora gave him.
     with dissolve
+    pause 0.5
 
     jump v8_tues_noon
 
@@ -276,5 +277,6 @@ label hallway_no_help_nora:
 
     scene v8shal6a # TPP. Same camera as v8shal6, MC now walking away in the opposite direction to Nora, MC holding some flyers.
     with dissolve
+    pause 0.5
 
     jump v8_tues_noon

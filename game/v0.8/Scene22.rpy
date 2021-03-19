@@ -6,7 +6,7 @@
 label s22:
     if joinwolves == True:
         scene v8spc1 # TPP. Show MC sat on the edge of his bed in Wolves room.
-        with fade
+        with Fade(0.75, 0.25, 0.75)
 
         u "(Hope she answers.)"
 
@@ -18,7 +18,7 @@ label s22:
         scene v8spc2 # TPP. Camera from infront of MC, show him on the phone, neutral expression, mouth open.
         with dissolve
 
-        u "Penelope? Its [name]"
+        u "Penelope? Its [name]."
 
         scene v8spc2a # TPP. Same camera as vaspc2, MC mouth closed.
         with dissolve
@@ -90,7 +90,7 @@ label s22:
 
     else:
         scene v8spc3 # TPP. Show MC sat on the edge of his bed in Apes room.
-        with fade
+        with Fade(0.75, 0.25, 0.75)
 
         u "(Hope she answers.)"
 

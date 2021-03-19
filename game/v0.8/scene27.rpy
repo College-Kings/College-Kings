@@ -6,11 +6,12 @@
 label mon_eve_room_josh:
     if joinwolves:
         scene v8spd1 # TPP. Show MC sat in his Wolves room at his desk on his phone.
-        with fade
+        with Fade(0.75, 0.25, 0.75)
+        pause 0.5
 
-        # -MC's phone buzzes with a text alert-
+        play sound "sounds/vibrate.mp3"
 
-        u "(Let's see who this is)"
+        u "(Let's see who this is.)"
 
         if helpJosh:
             $ contact_Josh.newMessage("Hey bro! It's time! Meet me at mine, okay?")
@@ -24,7 +25,7 @@ label mon_eve_room_josh:
             scene v8spd2a # TPP. Same camera as v8spd2, MC now fully stood up. Show MC removing his jumper, revealing the shirt from Outfit 2, (Back 2 School T, Mat 3).
             with dissolve
 
-            u "(Fuck, I have a bad feeling about this)"
+            u "(Fuck, I have a bad feeling about this.)"
 
             scene v8spd3 # TPP. Show MC leaving his wolves room, now wearing outfit 2, jumper fully off, slight concerned expression.
             with dissolve
@@ -34,7 +35,7 @@ label mon_eve_room_josh:
             scene v8spd4 # FPP. Distant shot of Josh waiting outside his room leaning against the wall waiting, Josh looking slightly nervous.
             with fade
 
-            u "(Ahh there's Josh)"
+            u "(Ahh there's Josh.)"
 
             scene v8spd5 # TPP. MC now stood infront of Josh, MC and Josh fist bump, Josh smiling, MC looking slightly concerned. Josh mouth open.
             with dissolve
@@ -91,17 +92,19 @@ label mon_eve_room_josh:
 
             scene v8spd3
             with dissolve
+            pause 0.5
 
             # jump josh's house
             jump after_drugs
 
     else:
         scene v8spd8 # TPP. Show MC sat in his Apes room at his desk on his phone.
-        with fade
+        with Fade(0.75, 0.25, 0.75)
+        pause 0.5
 
-        # -MC's phone buzzes with a text alert-
+        play sound "sounds/vibrate.mp3"
 
-        u "(Let's see who this is)"
+        u "(Let's see who this is.)"
 
         if helpJosh:
             $ contact_Josh.newMessage("Hey bro! It's time! Meet me at mine, okay?")
@@ -115,7 +118,7 @@ label mon_eve_room_josh:
             scene v8spd9a # TPP. Same camera as v8spd9, MC now fully stood up. Show MC removing his jumper, revealing the shirt from Outfit 2, (Back 2 School T, Mat 3).
             with dissolve
 
-            u "(Fuck, I have a bad feeling about this)"
+            u "(Fuck, I have a bad feeling about this.)"
 
             scene v8spd10 # TPP. Show MC leaving his apes room, now wearing outfit 2, jumper fully off, slight concerned expression.
             with dissolve
@@ -125,7 +128,7 @@ label mon_eve_room_josh:
             scene v8spd4 # FPP. Distant shot of Josh waiting outside his room leaning against the wall waiting, Josh looking slightly nervous.
             with fade
 
-            u "(Ahh there's Josh)"
+            u "(Ahh there's Josh.)"
 
             scene v8spd5 # TPP. MC now stood infront of Josh, MC and Josh fist bump, Josh smiling, MC looking slightly concerned. Josh mouth open.
             with dissolve
@@ -135,7 +138,7 @@ label mon_eve_room_josh:
             scene v8spd6 # FPP. Close up Josh, Josh smile, mouth closed.
             with dissolve
 
-            u "I guess so. Let's go"
+            u "I guess so. Let's go."
 
             scene v8spd6a # FPP. Same camera as v8spd6, Josh smile, mouth open.
             with dissolve
@@ -182,6 +185,7 @@ label mon_eve_room_josh:
 
             scene v8spd10
             with dissolve
+            pause 0.5
 
             # jump josh's house
             jump josh_room

@@ -5,7 +5,11 @@
 
 label s26:
     scene v8sopt1 # FPP. Sweeping shot of Riley and Aubrey in the Opticians looking at glasses.
-    with fade
+    with Fade(0.75, 0.25, 0.75)
+    pause 0.5
+
+    play music "music/mindie4.mp3" fadein 2
+    queue music "music/mchill2.mp3"
 
     if laurenrs:
         u "(Ahhh, there's Aubrey and Riley')"
@@ -361,6 +365,8 @@ label after_glasses_choice:
                 with dissolve
 
                 ri "*whispers* Careful what you wish for."
+
+                jump opti_end
     else:
         jump opti_end
 

@@ -5,6 +5,7 @@
 
 
 label v8_tues_evening:
+    stop music fadeout 2
     if joinwolves:
         scene v8ster1 # TPP. Show MC sat at his desk in his Wolves room, make sure MC's phone is visible on the desk. MC studying.
         with fade
@@ -24,7 +25,7 @@ label v8_tues_evening:
             $ contact_Lauren.addReply("Kiss you*:)")
             $ contact_Lauren.newMessage(":)")
 
-        if not laurenrs:
+        else::
             $ contact_Lauren.addReply("Hey there, could you help me with studying?")
             $ contact_Lauren.newMessage("Umm, sure?")
             $ contact_Lauren.addReply("I'm puzzled just as much as I was back on that bench...")
@@ -40,7 +41,7 @@ label v8_tues_evening:
             $ contact_Riley.newMessage("I'll be the judge of that. :)")
             $ contact_Riley.addReply("Can't wait. :)")
 
-        if not rileyrs:
+        else:
             $ contact_Riley.addReply("I have a serious question to ask you.")
             $ contact_Riley.newMessage("What is it?")
             $ contact_Riley.addReply("You get to chose between options A and B.")
@@ -78,7 +79,7 @@ label v8_tues_evening:
             $ contact_Lauren.addReply("Kiss you*:)")
             $ contact_Lauren.newMessage(":)")
 
-        if not laurenrs:
+        else:
             $ contact_Lauren.addReply("Hey there, could you help me with studying?")
             $ contact_Lauren.newMessage("Umm, sure?")
             $ contact_Lauren.addReply("I'm puzzled just as much as I was back on that bench...")
@@ -94,7 +95,7 @@ label v8_tues_evening:
             $ contact_Riley.newMessage("I'll be the judge of that. :)")
             $ contact_Riley.addReply("Can't wait. :)")
 
-        if not rileyrs:
+        else:
             $ contact_Riley.addReply("I have a serious question to ask you.")
             $ contact_Riley.newMessage("What is it?")
             $ contact_Riley.addReply("You get to chose between options A and B.")
