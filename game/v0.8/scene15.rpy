@@ -107,7 +107,7 @@ label help_pen:
     scene v8spen8a # FPP. Same camera as v8spen8, Penelope upset, mouth open.
     with dissolve
 
-    pe "I don't know. Why would he listen to you or me?"
+    pe "I don't know. Why would she listen to you or me?"
 
     scene v8spen8
     with dissolve
