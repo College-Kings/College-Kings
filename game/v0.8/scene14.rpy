@@ -17,6 +17,8 @@ label mc_wolves_sun_morn:
 
     $ contact_Penelope.newMessage("[name] I'm really scared! I am in so much trouble! I need you! Please come over??")
     $ contact_Penelope.addReply("Ok try to stay calm. I'll be right over.")
+    call screen messager(contact_Penelope)
+    
     $ phoneexit = "v8_s14_pen_text"
     $ showphone = True
 
