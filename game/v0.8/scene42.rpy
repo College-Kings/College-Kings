@@ -9,6 +9,9 @@ label gray_in_room:
 
     u "(What the?!)"
 
+    play music "music/m15punk.mp3"
+    queue music ["music/m16punk.mp3", "music/m7punk.mp3"]
+
     scene v8sgir2 # FPP. Show Grayson barging through MC's door, slight intimidating expression, Grayson mouth open.
     with dissolve
 
@@ -27,7 +30,7 @@ label gray_in_room:
     scene v8sgir4 # TPP. Show MC getting up from his desk to follow Grayson, Grayson looking at MC with intimidating expression, MC confused expression.
     with dissolve
 
-    u "(So fucking weird, dude)"
+    u "(So fucking weird, dude.)"
 
     scene v8sgir5 # TPP. Show Grayson leaving MC's room with MC trailing behind him.
     with dissolve
