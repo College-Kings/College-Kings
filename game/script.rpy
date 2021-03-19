@@ -17242,7 +17242,7 @@ label bo_bd:
 
     jo "What's up, bro?"
 
-    if contact_Josh.replie:
+    if jorep12 == 1:
 
         jo "Picture of Amber did it, eh?"
 
