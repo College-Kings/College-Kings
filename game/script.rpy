@@ -5268,12 +5268,11 @@ label fr2end:
     " "
     scene s120a
     with dissolve
+    pause 0.5
 
-    scene s1
     stop music
     #####punch
     $ renpy.movie_cutscene("punchdemo.webm", loops=0)
-    scene s1
 
     " "
 
