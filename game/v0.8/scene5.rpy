@@ -154,7 +154,7 @@ label hoco_amb_morning:
     scene v8samb18 # FPP. Now sat at a table in Amber's kitchen. Show MC's plate and him playing around with the food on the plate.
     with dissolve
 
-    u "So where's your parents? I mean you have this whole house to yourself."
+    u "So where are your parents? I mean you have this whole house to yourself."
 
     scene v8samb19 # FPP. Close up of Amber sat opposite MC at the table, Amber neutral expression, mouth open.
     with dissolve
