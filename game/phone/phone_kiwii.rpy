@@ -490,12 +490,13 @@ label kiwii_firstTime:
     $ kiwii_firstTime = False
     play sound "sounds/vibrate.mp3"
     if emilyrs:
-        $ contact_Riley.newMessage(rileyMessage3)
+        $ contact_Riley.addReply("We're not back together", "rirep3a")
     if bowling and emilyrs:
-        $ contact_Penelope.newMessage(penelopeMessage4)
+        $ contact_Penelope.newMessage("I didn't know you and Emily were a thing...")
     if emilyrs and laurenrs:
-        $ contact_Lauren.newMessage(laurenMessage15)
-        $ contact_Lauren.newMessage(laurenMessage16)
+        $ contact_Lauren.newMessage("I saw what Emily posted. I really thought you liked me...")
+        $ contact_Lauren.newMessage("I guess we're done now, so please just delete my number.")
+        $ contact_Lauren.addReply("Lauren can we please just talk about it? I can explain", "larep16a")
     call screen kiwiiPreferences()
 
 style kiwii_PrefTextButton is button_text:

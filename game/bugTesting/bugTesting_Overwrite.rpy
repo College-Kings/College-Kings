@@ -400,3 +400,5 @@ screen quick_menu():
 
             textbutton "Cheats":
                 action Show("bugTesting_cheatMenu")
+
+        use typoNotesOverlay

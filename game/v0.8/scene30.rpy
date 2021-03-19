@@ -55,17 +55,17 @@ label amber_sex_at_joshs:
     else:
         am "Oh wow, I could get used to this."
 
-    image v8am2bj1 = Movie(play="images/v8am2bj1.webm", loop=True, image="images/v8am2bj1end.jpg", start_image="images/v8am2bj1start.jpg") # BJ TPP
-    image v8am2bj1f = Movie(play="images/v8am2bj1f.webm", loop=True, image="images/v8am2bj1end.jpg", start_image="images/v8am2bj1start.jpg")
+    image v8am2bj1 = Movie(play="images/v08/Scene 30/v8am2bj1.webm", loop=True, image="images/v08/Scene 30/2ambj_000.jpg", start_image="images/v08/Scene 30/2ambj_000.jpg") # BJ TPP
+    image v8am2bj1f = Movie(play="images/v08/Scene 30/v8am2bj1f.webm", loop=True, image="images/v08/Scene 30/2ambj_000.jpg", start_image="images/v08/Scene 30/2ambj_000.jpg")
 
-    image v8am2cg1 = Movie(play="images/v8am2cg1.webm", loop=True, image="images/v8am2cg1end.jpg", start_image="images/v8am2cg1start.jpg") # CG FPP
-    image v8am2cg1f = Movie(play="images/v8am2cg1f.webm", loop=True, image="images/v8am2cg1end.jpg", start_image="images/v8am2cg1start.jpg")
+    image v8am2cg1 = Movie(play="images/v08/Scene 30/v8am2cg1.webm", loop=True, image="images/v08/Scene 30/cf_00.jpg", start_image="images/v08/Scene 30/cf_00.jpg") # CG FPP
+    image v8am2cg1f = Movie(play="images/v08/Scene 30/v8am2cg1f.webm", loop=True, image="images/v08/Scene 30/cf_00.jpg", start_image="images/v08/Scene 30/cf_00.jpg")
 
-    image v8am2cg2 = Movie(play="images/v8am2cg2.webm", loop=True, image="images/v8am2cg2end.jpg", start_image="images/v8am2cg2start.jpg") # CG TPP
-    image v8am2cg2f = Movie(play="images/v8am2cg2f.webm", loop=True, image="images/v8am2cg2end.jpg", start_image="images/v8am2cg2start.jpg")
+    image v8am2cg2 = Movie(play="images/v08/Scene 30/v8am2cg2.webm", loop=True, image="images/v08/Scene 30/cgt_00.jpg", start_image="images/v08/Scene 30/cgt_00.jpg") # CG TPP
+    image v8am2cg2f = Movie(play="images/v08/Scene 30/v8am2cg2f.webm", loop=True, image="images/v08/Scene 30/cgt_00.jpg", start_image="images/v08/Scene 30/cgt_00.jpg")
 
-    image v8am2dg1 = Movie(play="images/v8am2dg1.webm", loop=True, image="images/v8am2dg1end.jpg", start_image="images/v8am2dg1start.jpg") # Doggy 1 (close up of penetration)
-    image v8am2dg1f = Movie(play="images/v8am2dg1f.webm", loop=True, image="images/v8am2dg1end.jpg", start_image="images/v8am2dg1start.jpg")
+    image v8am2dg1 = Movie(play="images/v08/Scene 30/v8am2dg1.webm", loop=True, image="images/v08/Scene 30/cgt_000.jpg", start_image="images/v08/Scene 30/cgt_000.jpg") # Doggy 1 (close up of penetration)
+    image v8am2dg1f = Movie(play="images/v08/Scene 30/v8am2dg1f.webm", loop=True, image="images/v08/Scene 30/cgt_000.jpg", start_image="images/v08/Scene 30/cgt_000.jpg")
 
     scene v8am2bj1
     with dissolve
