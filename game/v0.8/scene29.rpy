@@ -558,7 +558,7 @@ label after_drugs:
 
     scene v8josh31
     with dissolve
-    am "Aww, thanks. Goodnight, [name]"
+    am "Aww, thanks. Goodnight, [name]!"
 
     scene v8josh31a
     with dissolve

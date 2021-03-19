@@ -15526,7 +15526,7 @@ label aSigns_2:
 
             ri "I just feel like we could be doing much more fun things."
 
-            ri "I'm sure you're date would understand if you'd let her know you had to leave early..."
+            ri "I'm sure your date would understand if you'd let her know you had to leave early..."
 
             scene sfr4ri51c
             with dissolve
@@ -15593,7 +15593,7 @@ label aSigns_2:
 
             ri "I'd just rather hang out with a friend."
 
-            ri "I'm sure you're date would understand if you'd let her know you had to leave early..."
+            ri "I'm sure your date would understand if you'd let her know you had to leave early..."
 
             scene sfr4ri51a
             with dissolve

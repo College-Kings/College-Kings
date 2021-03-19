@@ -8,7 +8,7 @@ label tue_night_in_room:
         scene v8star1 # TPP. Show MC lying on his bed in his Wolves room staring at the ceiling.
         with fade
 
-        u "(Things are getting pretty interesting, lately)"
+        u "(Things are getting pretty interesting, lately.)"
 
         scene v8star2 # TPP. Show MC getting up from his bed and walking over to the window.
         with dissolve
@@ -34,7 +34,7 @@ label tue_night_in_room:
         $ contact_Sebastian.addReply("Sure can! You'll see what being a Wolf is all about.")
         $ contact_Sebastian.addReply("Looking forward to it. :)")
 
-        u "(Let's just see what Chloe's up to)"
+        u "(Let's just see what Chloe's up to.)"
 
         if chloers:
             $ contact_Chloe.addReply("I'm thinking about you...")
@@ -65,7 +65,7 @@ label tue_night_in_room:
         scene v8star10 # TPP. Show MC lying on his bed in his Apes room staring at the ceiling.
         with dissolve
 
-        u "(Things are getting pretty interesting, lately)"
+        u "(Things are getting pretty interesting, lately.)"
 
         scene v8star11 # TPP. Show MC getting up from his bed and walking over to the window.
         with dissolve
@@ -92,7 +92,7 @@ label tue_night_in_room:
         $ contact_Grayson.newMessage("Couting on it or not, [name], it's happening!")
         $ contact_Grayson.addReply(":P")
 
-        u "(Let's just see what Chloe's up to)"
+        u "(Let's just see what Chloe's up to.)"
 
         if chloers:
             $ contact_Chloe.addReply("I'm thinking about you...")

@@ -147,7 +147,7 @@ label cont_nora_hall_2:
     scene v8shal3c
     with dissolve
 
-    u "(I've never seen Nora excited about anything)"
+    u "(I've never seen Nora excited about anything.)"
 
     scene v8shal3b
     with dissolve
@@ -171,7 +171,7 @@ label nora_hall_eu_go:
     jump cont_nora_hall_3
 
 label nora_hall_eu_no:
-    u "(Hmm, it's still a lot of money but I don't want to upset Nora)"
+    u "(Hmm, it's still a lot of money but I don't want to upset Nora.)"
 
     jump cont_nora_hall_3
 
@@ -207,7 +207,7 @@ label cont_nora_hall_3:
             jump hallway_no_help_nora
 
 label hallway_help_nora:
-    u "(I kinda like this nicer Nora)"
+    u "(I kinda like this nicer Nora.)"
 
     scene v8shal3c
     with dissolve
@@ -255,7 +255,7 @@ label hallway_help_nora:
     jump v8_tues_noon
 
 label hallway_no_help_nora:
-    u "(I'm already late)"
+    u "(I'm already late.)"
 
     u "I would but I don't have much time."
 

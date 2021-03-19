@@ -45,12 +45,12 @@ label seb_in_room:
     scene v8ssir5a # FPP. Same camera as v8ssir5, Sebastian mouth closed.
     with dissolve
 
-    u "Yeah! It's great. Can't think of anything I'm missing"
+    u "Yeah! It's great. Can't think of anything I'm missing."
 
     scene v8ssir5b # FPP. Same camera as v8ssir5, Sebastian chuckle, mouth open.
     with dissolve
 
-    se "Except some deco on the walls eh? Hahaha"
+    se "Except some deco on the walls eh? Hahaha!"
 
     scene v8ssir5c # FPP. Same camera as v8ssir5, Sebastian smile, mouth closed.
     with dissolve
@@ -85,7 +85,7 @@ label seb_in_room:
     scene v8ssir8 # FPP. Show Sebastian sat in MC's chair backwards, his arms on the seat's back, Sebastian neutral expression, mouth open.
     with dissolve
 
-    se "Nothing major, man. Just wanted to ask a small favor"
+    se "Nothing major, man. Just wanted to ask a small favor."
 
     scene v8ssir8a # FPP. Same camera as v8ssir8, Sebastian mouth closed.
     with dissolve
@@ -107,7 +107,7 @@ label seb_in_room:
     scene v8ssir8c # FPP. Same camera as v8ssir8, Sebastian now looking back at camera, laugh, mouth open.
     with dissolve
 
-    se "Fuck man, do I! Haha. I've always just been a 'Do It Yourself' kind of guy, even  for stupid and small things"
+    se "Fuck man, do I! Haha. I've always just been a 'Do It Yourself' kind of guy, even  for stupid and small things."
 
     scene v8ssir8d # FPP. Same cabera as v8ssir8, Sebastian smile, mouth closed.
     with dissolve
