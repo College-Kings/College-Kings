@@ -11,7 +11,7 @@ label v8_scene24_wolves:
     u "(I gotta get out of here. Wonder what everyone's up to.)"
 
     # Kiwii Pic Description (mcpost1w.png, 1920x1080): Selfie of MC sitting at his desk in Wolves house, looking bored and showing his books/laptop in the frame. Should be continuation of v8monroom1
-    $ mcKiwiiPost = KiwiiPost("MC", "images/mcpost1w.png", "Ugh someone save me pls", 2)
+    $ mcKiwiiPost = KiwiiPost("MC", "images/mcpost1w.png", "Ugh someone save me pls", numberLikes=2)
     $ showphone = True
     $ phoneexit = "phn_riley11_setup"
 
@@ -30,7 +30,7 @@ label v8_scene24_apes:
     u "(I gotta get out of here. Wonder what everyone's up to.)"
 
     # Kiwii Pic Description (mcpost1a.png, 1920x1080): Selfie of MC sitting at his desk in Apes house, looking bored and showing his books/laptop in the frame. Should be continuation of v8monroom2
-    $ mcKiwiiPost = KiwiiPost("MC", "images/mcpost1a.png", "Ugh someone save me pls", 2)
+    $ mcKiwiiPost = KiwiiPost("MC", "images/mcpost1a.png", "Ugh someone save me pls", numberLikes=2)
     $ showphone = True
     $ phoneexit = "phn_riley11_setup"
 
@@ -63,7 +63,7 @@ label phn_riley11_a:
     call screen messager(contact_Riley)
 
 label phn_riley11_a1:
-    $ contact_Riley.newMessage(contact_Riley, "I don't know. Why don't you come with me and Aubrey to try some on?")
+    $ contact_Riley.newMessage("I don't know. Why don't you come with me and Aubrey to try some on?")
     $ rileyMessage11_a1.addReply("Sure! Meet you there?", "phn_riley11_a2")
     call screen messager(contact_Riley)
 
