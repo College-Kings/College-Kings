@@ -115,7 +115,7 @@ screen s28_LarsKeybindOptions():
 screen s28_mcLarsAttack():
 
     if larsStance == 1:
-        # image "images/afstancejab.jpg"
+        image "images\v08\Scene 28\fight images\LarsStance - Jab.jpg"
 
         key q:
             action Jump ("mc_LarsJabsHit")
@@ -158,8 +158,8 @@ screen s28_mcLarsAttack():
         timer reactiona action Jump("lars_McAttack")
 
 
-    if adamstance == 2:
-        image "images/afstancehook.jpg"
+    if larsStance == 2:
+        image "images\v08\Scene 28\fight images\LarsStance - Bodyhook.jpg"
 
         key q:
             action Jump ("mc_LarsJabsBlock")
@@ -203,8 +203,8 @@ screen s28_mcLarsAttack():
         timer reactiona action Jump("lars_McAttack")
 
 
-    if adamstance == 3:
-        image "images/afstancebody.jpg"
+    if larsStance == 3:
+        image "images\v08\Scene 28\fight images\LarsStance - Hook.jpg"
 
         key q:
             action Jump ("mc_LarsJabsBlock")
@@ -245,10 +245,10 @@ screen s28_mcLarsAttack():
 
         timer reactiona action Jump("lars_McAttack")
 
-    if adamstance == 4:
+    if larsStance == 4:
 
 
-        image "images/afstancekick.jpg"
+        image "images\v08\Scene 28\fight images\LarsStance - Kick.jpg"
 
         key q:
             action Jump ("mc_LarsJabsBlock")
@@ -293,7 +293,7 @@ screen s28_mcLarsAttack():
 screen s28_larsMcAttack():
 
     if larsAttack == 1: # A
-        # image "images/af13pic.jpg"
+        image "images\v08\Scene 28\fight images\larshookend.jpg"
 
         key q:
             action Jump ("lars_McHookBlock")
@@ -336,8 +336,8 @@ screen s28_larsMcAttack():
         timer reaction action Jump("lars_McHookHit")
 
 
-    if adamattack == 2:
-        # image "images/af14pic.jpg"
+    if larsAttack == 2:
+        image "images\v08\Scene 28\fight images\larsjabend.jpg"
 
         key q:
             action Jump ("lars_McJabHit")
@@ -378,8 +378,8 @@ screen s28_larsMcAttack():
 
         timer reaction action Jump("lars_McJabHit")
 
-    if adamattack == 3:
-        # image "images/af15pic.jpg"
+    if larsAttack == 3:
+        image "images\v08\Scene 28\fight images\larsbodyend.jpg"
 
         key q:
             action Jump ("lars_McBodyhookHit")
@@ -420,8 +420,8 @@ screen s28_larsMcAttack():
 
         timer reaction action Jump("lars_McBodyhookHit")
 
-    if adamattack == 4:
-        image "images/af16pic.jpg"
+    if larsAttack == 4:
+        image "images\v08\Scene 28\fight images\larskickend.jpg"
 
         key q:
             action Jump ("lars_McKickHit")
@@ -431,8 +431,6 @@ screen s28_larsMcAttack():
             action Jump ("lars_McKickHit")
         key r:
             action Jump ("lars_McKickBlock")
-
-        timer reaction action Jump("lars_McKickHit")
 
         imagebutton:
             idle "images/hookblock.png"
@@ -461,3 +459,5 @@ screen s28_larsMcAttack():
             xalign 0.115
             yalign 0.6
             action Jump ("lars_McKickBlock")
+
+        timer reaction action Jump("lars_McKickHit")

@@ -21,9 +21,13 @@ label mc_wolves_sun_morn:
     scene v8ssm2a # TPP. Same camera as v8ssm2, but MC now has phone in hand.
     with dissolve
 
+    $ phoneexit = "penelope_dorm_hack"
+    $ showphone = True
+
     $ contact_Penelope.newMessage("[name] I'm really scared! I am in so much trouble! I need you! Please come over??")
 
     $ contact_Penelope.addReply("Ok try to stay calm. I'll be right over.")
+    call screen messager(contact_Penelope)
 
     pause 0.5
 
@@ -48,6 +52,7 @@ label mc_apes_sun_morn:
     $ contact_Penelope.newMessage("[name] I'm really scared! I am in so much trouble! I need you! Please come over??")
 
     $ contact_Penelope.addReply("Ok try to stay calm. I'll be right over.")
+    call screen messager(contact_Penelope)
 
     pause 0.5
 

@@ -173,14 +173,26 @@ label int_deal_w_josh:
         $ stance = 1
         $ larshealth = 6
         $ youhealth = 3
-        jump s28_LarsStartFight
+
+        $ youdmg = 0
+        $ larsdmg = 0
+        $ larsStance = renpy.random.choice([1, 2, 3, 4])
+        $ larsAttack = renpy.random.choice([1, 2, 3, 4])
+        $ larsSimulation = renpy.random.choice([1, 2, 3, 4, 5, 6])
+        jump lars_McAttack
 
     label s28_LarsAutoWin:
         $ simLarsFight = True
         $ stance = 1
         $ youhealth = 100000
         $ larshealth = 3
-        jump s28_LarsStartFight
+
+        $ youdmg = 0
+        $ larsdmg = 0
+        $ larsStance = renpy.random.choice([1, 2, 3, 4])
+        $ larsAttack = renpy.random.choice([1, 2, 3, 4])
+        $ larsSimulation = renpy.random.choice([1, 2, 3, 4, 5, 6])
+        jump lars_McAttack
 
     label s28_LarsStartFight:
         $ simLarsFight = False
@@ -189,15 +201,12 @@ label int_deal_w_josh:
     label lars_McAttack:
         $ stance = 2
 
-        if youdmg >= youhealth:
-            jump lars_McFightEnd
-
         if larsAttack == 1:
 
-            # scene 
+            scene larshook
             pause 0.6 # Trial Error
 
-            # scene 
+            scene larshookend
             $ larsStance = renpy.random.choice([1, 2, 3, 4]) # Lars next defensive stance
             $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6]) # What attack you're gonna pick next
 
@@ -212,10 +221,10 @@ label int_deal_w_josh:
 
         if larsAttack == 2:
 
-            scene af14
+            scene larsjab
             $ renpy.pause(0.5)
 
-            scene af14pic
+            scene larsjabend
             $ larsStance = renpy.random.choice([1, 2, 3, 4])
             $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
 
@@ -230,10 +239,10 @@ label int_deal_w_josh:
 
         if larsAttack == 3:
 
-            scene af15
+            scene larsbody
             $ renpy.pause(0.7)
 
-            scene af15pic
+            scene larsbodyend
             $ larsStance = renpy.random.choice([1, 2, 3, 4])
             $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
 
@@ -248,10 +257,10 @@ label int_deal_w_josh:
 
         if larsAttack == 4:
 
-            scene af16
+            scene larskick
             $ renpy.pause(0.6)
 
-            scene af16pic
+            scene larskickend
             $ larsStance = renpy.random.choice([1, 2, 3, 4])
             $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
 
@@ -265,117 +274,83 @@ label int_deal_w_josh:
                 call screen s28_larsMcAttack
 
     ### Add image defines + Start/End Images
+    image mckickhit = Movie(play="images/mckickhit.webm", start_image="images/mckickhitstart.jpg", image="images/mckickhitend.jpg", loop = False)
+    image mckickblocked = Movie(play="images/mckickblocked.webm", start_image="images/mckickblockedstart.jpg", image="images/mckickblockedend.jpg", loop = False)
+    image mcbodyhit = Movie(play="images/mcbodyhit.webm", start_image="images/mcbodyhitstart.jpg", image="images/mcbodyhitend.jpg", loop = False)
+    image mcbodyblocked = Movie(play="images/mcbodyblocked.webm", start_image="images/mcbodyblockedstart.jpg", image="images/mcbodyblockedend.jpg", loop = False)
+    image mcjabhit = Movie(play="images/mcjabhit.webm", start_image="images/mcjabhitstart.jpg", image="images/mcjabhitend.jpg", loop = False)
+    image mcjabblocked = Movie(play="images/mcjabblocked.webm", start_image="images/mcjabblockedstart.jpg", image="images/mcjabblockedend.jpg", loop = False)
+    image mchookhit = Movie(play="images/mchookhit.webm", start_image="images/mchookhitstart.jpg", image="images/mchookhitend.jpg", loop = False)
+    image mchookblocked = Movie(play="images/mchookblocked.webm", start_image="images/mchookblockedstart.jpg", image="images/mchookblockedend.jpg", loop = False)
+    image larsjab = Movie(play="images/larsjab.webm", start_image="images/larsjabstart.jpg", image="images/larsjabend.jpg", loop = False)
+    image larshook = Movie(play="images/larshook.webm", start_image="images/larshookstart.jpg", image="images/larshookend.jpg", loop = False)
+    image larskick = Movie(play="images/larskick.webm", start_image="images/larskickstart.jpg", image="images/larskickend.jpg", loop = False)
+    image larsbody = Movie(play="images/larsbody.webm", start_image="images/larsbodystart.jpg", image="images/larsbodyend.jpg", loop = False)
 
     # label Attacker_TargetAction
     label mc_LarsKickHit: # MC Kicks Lars (Hits/No Block)
 
+        $ larsdmg += 1
+        scene mckickhit 
+        pause 0.7 # Trial/Error
         if larsdmg >= larshealth:
             jump mc_larsFightEnd
-
-        else:
-            $ larsdmg += 1
-            # scene 
-            pause 0.7 # Trial/Error
-            play sound "sounds/ks.mp3"
-            # scene 
-            with hpunch # Is the full punch animated? Do we need "hpunch"?
-
-            pause 0.5
-            jump lars_McAttack
+        jump lars_McAttack
 
     label mc_LarsKickBlock: # MC Kicks Lars (Blocks)
 
-            # scene 
+            scene mckickblocked 
             pause 0.7 # Trial/Error
-            play sound "sounds/ks.mp3"
-            # scene 
-            with hpunch
-
-            pause 0.5
             jump lars_McAttack
 
 
     label mc_LarsJabsHit: # MC Jabs Lars (Hits/No Block)
 
+
+        $ larsdmg += 1
+        scene mcjabhit
+        pause 0.7 # Trial/Error
         if larsdmg >= larshealth:
             jump mc_larsFightEnd
-
-        else:
-            $ larsdmg += 1
-            # scene 
-            pause 0.7 # Trial/Error
-            play sound "sounds/js.mp3"
-            # scene 
-            with hpunch # Is the full punch animated? Do we need "hpunch"?
-
-            pause 0.5
-            jump lars_McAttack
+        jump lars_McAttack
 
     label mc_LarsJabsBlock: # MC Jabs Lars (Blocks)
 
-            # scene 
+            scene mcjabblocked
             pause 0.7 # Trial/Error
-            play sound "sounds/bs.mp3"
-            # scene 
-            with hpunch
-
-            pause 0.5
             jump lars_McAttack
 
 
     label mc_LarsHooksHit: # MC Hooks Lars (Hits/No Block)
 
+        $ larsdmg += 1
+        scene mchookhit
+        pause 0.7 # Trial/Error
         if larsdmg >= larshealth:
             jump mc_larsFightEnd
-
-        else:
-            $ larsdmg += 1
-            # scene 
-            pause 0.7 # Trial/Error
-            play sound "sounds/hs.mp3"
-            # scene 
-            with hpunch # Is the full punch animated? Do we need "hpunch"?
-
-            pause 0.5
-            jump lars_McAttack
+        jump lars_McAttack
 
     label mc_LarsHooksBlock: # MC Hooks Lars (Blocks)
 
-            # scene 
+            scene mchookblocked 
             pause 0.7 # Trial/Error
-            play sound "sounds/bs.mp3"
-            # scene 
-            with hpunch
-
-            pause 0.5
             jump lars_McAttack
 
 
     label mc_LarsBodyhookHit: # MC Body Hooks Lars (Hits/No Block)
 
+
+        $ larsdmg += 1
+        scene mcbodyhit
+        pause 0.7 # Trial/Error
         if larsdmg >= larshealth:
             jump mc_larsFightEnd
-
-        else:
-            $ larsdmg += 1
-            # scene 
-            pause 0.7 # Trial/Error
-            play sound "sounds/hs.mp3"
-            # scene 
-            with hpunch # Is the full punch animated? Do we need "hpunch"?
-
-            pause 0.5
-            jump lars_McAttack
+        jump lars_McAttack
 
     label mc_LarsBodyhookBlock: # MC Body Hooks Lars (Blocks)
 
-            # scene 
+            scene mcbodyblocked 
             pause 0.7 # Trial/Error
-            play sound "sounds/bs.mp3"
-            # scene 
-            with hpunch
-
-            pause 0.5
             jump lars_McAttack
 
 
@@ -383,19 +358,19 @@ label int_deal_w_josh:
 
         play sound "sounds/ks.mp3"
         $ youdmg += 1
-        # scene adamkickhit
+        scene lars-kick-hit
         with hpunch
 
         pause 0.5
         $ stance = 1
         $ larsAttack = renpy.random.choice([1, 2, 3, 4])
-        $ larsSimulation = renpy.random.choice([1, 2, 3, 4])
+        $ larsSimulation = renpy.random.choice([1, 2, 3, 4, 5, 6])
         jump mc_larsAttack
 
     label lars_McKickBlock: # Lars Kicks MC (Hits/No Block)
 
         play sound "sounds/ks.mp3"
-        # scene adamkickblock
+        scene lars-kick-block
         with hpunch
 
         pause 0.5
@@ -408,19 +383,21 @@ label int_deal_w_josh:
 
         play sound "sounds/js.mp3"
         $ youdmg += 1
-        # scene adamjabhit
+        scene lars-jab-hit
         with hpunch
 
         pause 0.5
         $ stance = 1
         $ larsAttack = renpy.random.choice([1, 2, 3, 4])
         $ larsSimulation = renpy.random.choice([1, 2, 3, 4])
+        if youdmg >= youhealth:
+                jump lars_McFightEnd
         jump mc_larsAttack
 
     label lars_McJabBlock: # Lars Kicks MC (Hits/No Block)
 
         play sound "sounds/bs.mp3"
-        # scene adamjabblock
+        scene lars-jab-block
         with hpunch
 
         pause 0.5
@@ -433,19 +410,21 @@ label int_deal_w_josh:
 
         play sound "sounds/hs.mp3"
         $ youdmg += 1
-        # scene adamhookhit
+        scene lars-hook-hit
         with hpunch
 
         pause 0.5
         $ stance = 1
         $ larsAttack = renpy.random.choice([1, 2, 3, 4])
         $ larsSimulation = renpy.random.choice([1, 2, 3, 4])
+        if youdmg >= youhealth:
+                jump lars_McFightEnd
         jump mc_larsAttack
 
     label lars_McHookBlock: # Lars Kicks MC (Hits/No Block)
 
         play sound "sounds/bs.mp3"
-        # scene adamhookblock
+        scene lars-hook-block
         with hpunch
 
         pause 0.5
@@ -458,7 +437,7 @@ label int_deal_w_josh:
 
         play sound "sounds/hs.mp3"
         $ youdmg += 1
-        # scene adambodyhit
+        scene lars-body-hit
         with hpunch
 
         pause 0.5
@@ -470,7 +449,7 @@ label int_deal_w_josh:
     label lars_McBodyhookBlock: # Lars Kicks MC (Hits/No Block)
 
         play sound "sounds/bs.mp3"
-        # scene adambodyblock
+        scene lars-body-block
         with hpunch
 
         pause 0.5
@@ -523,31 +502,12 @@ label int_deal_w_josh:
 
 
     label mc_larsFightEnd: # MC wins fight against Lars
-        # scene 
-        pause 1.0
-        play sound "sounds/fall.mp3"
-        $ stance = 0
-        $ youdmg = 0
-        $ s28_fightWinner = "MC"
-        # scene 
-        with vpunch
-        pause
+        jump beat_lars
 
     label lars_McFightEnd: # MC loses fight against Lars
-        # scene 
-        pause 1.0
-        play sound "sounds/fall.mp3"
-        $ stance = 0
-        $ youdmg = 0
-        $ s28_fightWinner = "Lars"
-        # scene 
-        with vpunch
-        pause
-
-    if s28_fightWinner == "MC":
-        jump beat_lars
-    else:
         jump beat_by_lars
+
+
 
 label beat_lars:
     scene v8sdd11 # TPP. Show Josh and Joe fighting, Joe is swinging the pipe he has to hit Josh over the head, Josh looking concerned, Joe looking angry.

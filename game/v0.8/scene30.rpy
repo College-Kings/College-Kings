@@ -67,9 +67,6 @@ label amber_sex_at_joshs:
     image v8am2dg1 = Movie(play="images/v8am2dg1.webm", loop=True, image="images/v8am2dg1end.jpg", start_image="images/v8am2dg1start.jpg") # Doggy 1 (close up of penetration)
     image v8am2dg1f = Movie(play="images/v8am2dg1f.webm", loop=True, image="images/v8am2dg1end.jpg", start_image="images/v8am2dg1start.jpg")
 
-    image v8am2dg2 = Movie(play="images/v8am2dg2.webm", loop=True, image="images/v8am2dg2end.jpg", start_image="images/v8am2dg2start.jpg") # Doggy 2 (full scene)
-    image v8am2dg2f = Movie(play="images/v8am2dg2f.webm", loop=True, image="images/v8am2dg2end.jpg", start_image="images/v8am2dg2start.jpg")
-
     scene v8am2bj1
     with dissolve
     pause
@@ -180,17 +177,6 @@ label amber_sex_at_joshs:
     am "*Moans loudly* Oh yes baby! I love it!"
     pause 2
     u "Oh fuck Amber, you're amazing!"
-    pause
-
-    scene v8am2dg2
-    with dissolve
-    pause 2
-    am "*Moans* Yes! Just like that! Yes!!"
-    pause 1
-    u "I'm gonna go faster now, so hold yourself."
-
-    scene v8am2dg2f
-    with dissolve
     pause 3
     am "OH YES! OHH YESSS!!"
     u "Shh! SHH! Don't shout, you don't wanna wake Josh up."
@@ -203,13 +189,8 @@ label amber_sex_at_joshs:
     pause 3
     am "I'm gonna come! [name] I'm gonna come!!"
 
-    scene v8am2dg2f
-    with dissolve
     u "I think I'm close too."
     am "Come in my ass [name]. *Moans* Fill it up good!"
-
-    scene v8am2dg1f
-    with dissolve
     pause 3
 
     scene v8amber12 # TPP. Close up of MC's penis inside Amber's a-hole with cum leaking outside

@@ -119,7 +119,7 @@ label help_pen:
 
     pause 0.5
 
-    scene v9spen8d # FPP. Same camera as v8spen8, Penelope dries her eyes and regains some composure. Penelope mouth open.
+    scene v8spen8d # FPP. Same camera as v8spen8, Penelope dries her eyes and regains some composure. Penelope mouth open.
     with dissolve
 
     pe "Thanks, [name]. This means the world to me. Really."

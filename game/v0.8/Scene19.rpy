@@ -3,9 +3,6 @@
 # Outfits: MC Outfit 2
 # Time: Sunday Evening
 
-default s19_dickPic = False
-default s19_dateEmily = False
-
 label sun_eve_room:
     if joinwolves:
         scene v8sser1 # TPP. Show MC lying on his Wolves bed on his phone.
@@ -37,7 +34,10 @@ label sun_eve_room:
                 
             label s19_reply5:
                 $ contact_Amber.newMessage("It's only fair, right? Make us even")
-                # $ contact_Amber.ImgReply(**[w_dick_pic]**, "s19_reply6") # Need Image
+                if joinwolves:
+                    $ contact_Amber.addImgReply("images/v08/Scene19/text_images/w_dick_pic.jpg", "s19_reply6")
+                else:
+                    $ contact_Amber.addImgReply("images/v08/Scene19/text_images/a_dick_pic.jpg", "s19_reply6")
                 call screen messager(contact_Amber)
             label s19_reply6:
                 $ contact_Amber.newMessage("Wow, better than I thought")
@@ -52,7 +52,7 @@ label sun_eve_room:
                 $ contact_Amber.addReply("Now? What about you?", "s19_reply9")
                 call screen messager(contact_Amber)
             label s19_reply9:
-                # $ contact_Amber.newImgMessage(**[amb_pussy_pic]**)
+                $ contact_Amber.newImgMessage("images/v08/Scene19/text_images/amb_pussy_pic.jpg")
                 $ contact_Amber.addReply("Aw fuck", "s19_reply10")
                 call screen messager(contact_Amber)
             label s19_reply10:
@@ -93,6 +93,7 @@ label sun_eve_room:
             label s19_reply17:
                 $ contact_Amber.newMessage("You're so cute! But it's time for bed. Dream about me ;)")
                 $ contact_Amber.addReply("With pleasure! Night!", "s19_replyCont1")
+                call screen messager(contact_Amber)
 
             label s19_reply18:
                 $ contact_Amber.newMessage("Good. Maybe someday we can think about things in the same room and see what happens")

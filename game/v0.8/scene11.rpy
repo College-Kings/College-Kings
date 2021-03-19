@@ -183,7 +183,7 @@ label wolves_gym_end:
 
     u "(That workout has tired me out, I can catch up on studying tomorrow.)"
 
-    scene v9sgym14a # TPP. Same camera as v8sgym14, MC mouth closed, eyes closed.
+    scene v8sgym14a # TPP. Same camera as v8sgym14, MC mouth closed, eyes closed.
     with dissolve
 
     jump mc_wolves_sun_morn

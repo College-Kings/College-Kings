@@ -18,20 +18,38 @@ label hoco_amb_night:
 
     scene v8samb3 # FPP. Show Amber starting to give MC a blowjob. MC legs spread enough for Amber to fit in-between, Amber looking at MC (Camera). (If needed, place the camera slightly above MC's head to give a clear view, so need not be technically FPP. Just should look first person)
     with dissolve
+    pause 1
 
-    # AMBER BLOWJOB ANIMATION 1 #
+    image v8am1bj1 = Movie(play="images/v8am1bj1.webm", loop=True, image="images/v8am1bj1end.jpg", start_image="images/v8am1bj1start.jpg") # BJ FPP
+    image v8am1bj1f = Movie(play="images/v8am1bj1f.webm", loop=True, image="images/v8am1bj1end.jpg", start_image="images/v8am1bj1start.jpg")
+
+    image v8am1miss1 = Movie(play="images/v8am1miss1.webm", loop=True, image="images/v8am1miss1end.jpg", start_image="images/v8am1miss1start.jpg") # Missionary (?) TPP 1
+    image v8am1miss1f = Movie(play="images/v8am1miss1f.webm", loop=True, image="images/v8am1miss1end.jpg", start_image="images/v8am1miss1start.jpg")
+
+    image v8am1miss2 = Movie(play="images/v8am1miss2.webm", loop=True, image="images/v8am1miss2end.jpg", start_image="images/v8am1miss2start.jpg") # Missionary (?) TPP 2
+    image v8am1miss2f = Movie(play="images/v8am1miss2f.webm", loop=True, image="images/v8am1miss2end.jpg", start_image="images/v8am1miss2start.jpg")
+
+    image v8am1dt1 = Movie(play="images/v8am1dt1.webm", loop=True, image="images/v8am1dt1end.jpg", start_image="images/v8am1dt1start.jpg") # Deep throat TPP
+    image v8am1dt1f = Movie(play="images/v8am1dt1f.webm", loop=True, image="images/v8am1dt1end.jpg", start_image="images/v8am1dt1start.jpg")
+
+    scene v8am1bj1
+    with dissolve
 
     u "Ah fuck. Ahhhh."
+
+    scene v8am1bj1f
+    with dissolve
+    pause
 
     scene v8samb4 # FPP. Show MC and Amber standing up, MC begins to remove Amber's underwear. Amber removing MC's shirt so they are now both naked. Both smiling.
     with dissolve
 
-    pause 0.5
+    pause 1
 
     scene v8samb5 # FPP. Show Amber lying down on the sofa without underwear. Amber looking at the camera, smiling.
     with dissolve
 
-    pause 0.5
+    pause 1
 
     scene v8samb6 # TPP. Show Amber with one leg on MC, MC begins to bang Amber whilst holding her leg with one hand. Amber's eyes roll back in her head. Amber mouth open. Camera from the side.
     with dissolve
@@ -48,12 +66,30 @@ label hoco_amb_night:
 
     am "Ahh ah ahhh."
 
-    # AMBER SEX ANIMATION 2 #
+    scene v8am1miss1
+    with dissolve
+    pause
+    am "*Moans*"
+
+    scene v8am1miss2
+    with dissolve
+    pause
+
+    scene v8am1miss2f
+    with dissolve
+    pause 2
+    u "Ahh fuck!"
+
+    scene v8am1miss1f
+    with dissolve
+    pause
+    am "You want me to finish you off?"
+    u "With pleasure!"
 
     scene v8samb7 # FPP. Amber begins to stand up from the sofa. Amber flirty expression.
     with dissolve
 
-    pause 0.5
+    pause 1
 
     scene v8samb8 # TPP. Show MC sitting on the edge of the Sofa, Amber sits on thje floor against the sofa with hands on it for support.
     with dissolve
@@ -65,7 +101,18 @@ label hoco_amb_night:
 
     pause 0.5
 
-    # AMBER DEEPTHROAT ANIMATION 3 #
+    scene v8am1dt1
+    with dissolve
+    pause
+
+    scene v8am1dt1f
+    with dissolve
+    pause
+    u "I'm gonna-"
+
+    scene v8am1dt1end
+    with hpunch
+    u "Ahh!"
 
     scene v8samb10 # FPP. Closeup of Amber still sat on the floor looking at the camera, smile.
     with dissolve

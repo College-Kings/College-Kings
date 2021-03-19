@@ -271,10 +271,6 @@ screen choice(items, time=3):
                     if count > 1:
                         xalign 0.5
 
-                add "#00ff0080":
-                    align(0.5, 0.5)
-                    xoffset menuButtonsConfig[count]["xoffset"]
-
 
     if realkcttut == 1:
 
