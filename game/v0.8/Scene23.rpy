@@ -13,7 +13,7 @@ label josh_calls_you:
         scene v8sjc2 # TPP. Show MC's phone ringing on his bed, it's Josh on the caller ID.
         with dissolve
 
-        u "(Wonder who's calling)"
+        u "(Wonder who's calling.)"
 
         scene v8sjc3 # TPP. Show MC walking over to his phone on his bed to pick it up.
         with dissolve
@@ -65,7 +65,7 @@ label josh_calls_you:
         scene v8sjc5 # TPP. Show MC hanging up the phone.
         with dissolve
 
-        u "(Well, I guess I'll head over there then)"
+        u "(Well, I guess I'll head over there then.)"
 
         scene v8sjc6 # TPP. Show MC leaving his Wolves room.
         with dissolve
@@ -79,7 +79,7 @@ label josh_calls_you:
         scene v8sjc8 # TPP. Show MC's phone ringing on his bed, it's Josh on the caller ID.
         with dissolve
 
-        u "(Wonder who's calling)"
+        u "(Wonder who's calling.)"
 
         scene v8sjc9 # TPP. Show MC walking over to his phone on his bed to pick it up.
         with dissolve
@@ -131,7 +131,7 @@ label josh_calls_you:
         scene v8sjc5 # TPP. Show MC hanging up the phone.
         with dissolve
 
-        u "(Well, I guess I'll head over there then)"
+        u "(Well, I guess I'll head over there then.)"
 
         scene v8sjc6 # TPP. Show MC leaving his Apes room.
         with dissolve

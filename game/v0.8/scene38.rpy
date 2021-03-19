@@ -20,7 +20,7 @@ label seb_in_room:
     scene v8ssir2 # FPP. Show the closed door of MCs room.
     with dissolve
 
-    u "(Wonder who that is)"
+    u "(Wonder who that is.)"
 
     scene v8ssir3 # TPP. Show MC going to the door and opening it, show Sebastian stood on the other side, Sebastian smile, mouth open.
     with dissolve

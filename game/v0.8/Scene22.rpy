@@ -8,7 +8,7 @@ label s22:
         scene v8spc1 # TPP. Show MC sat on the edge of his bed in Wolves room.
         with fade
 
-        u "(Hope she answers)"
+        u "(Hope she answers.)"
 
         scene v8spc1a # TPP. Same camera as v8spc1, Show MC now with phone to ear.
         with dissolve
@@ -92,7 +92,7 @@ label s22:
         scene v8spc3 # TPP. Show MC sat on the edge of his bed in Apes room.
         with fade
 
-        u "(Hope she answers)"
+        u "(Hope she answers.)"
 
         scene v8spc3a # TPP. Same camera as v8spc3, Show MC now with phone to ear.
         with dissolve
@@ -102,7 +102,7 @@ label s22:
         scene v8spc4 # TPP. Camera from infront of MC, show him on the phone, neutral expression, mouth open.
         with dissolve
 
-        u "Penelope? Its [name]"
+        u "Penelope? Its [name]."
 
         scene v8spc4a # TPP. Same camera as vaspc4, MC mouth closed.
         with dissolve
@@ -167,7 +167,7 @@ label s22:
         scene v8spc3b # TPP. Same camera as v8spc3, Show MC hanging up the call.
         with dissolve
 
-        u "(Well, nothing else to do besides wait and hope for the best)"
+        u "(Well, nothing else to do besides wait and hope for the best.)"
 
         scene v8spc3
         with dissolve

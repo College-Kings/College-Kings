@@ -318,12 +318,12 @@ label caf_no_prot_au:
     scene scaf10
     with dissolve
 
-    u "Hey, sorry meant to call you earlier. Woke up and I'm feeling really under the weather today."
+    u "Hey, sorry. Meant to call you earlier. Woke up and I'm feeling really under the weather today."
 
     scene scaf10a
     with dissolve
 
-    aut "Oh.. yeah, it's cool!"
+    aut "Oh... yeah, it's cool!"
 
     scene scaf10
     with dissolve
