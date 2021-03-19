@@ -61,7 +61,7 @@ label steak_w_chloe:
 
         cl "Yeah, I smell this place every day on the way back to my room and I just had to give it a try."
 
-        scene v8s3steak3a
+        scene v8steak3a
         with dissolve
 
         u "I'm glad you asked me to join you."
@@ -131,7 +131,7 @@ label steak_flirt_w_chloe:
 
     $ up_for_more = True
     if steam == False:
-        image up_for_more = "images/achievements/upformore.png"
+        image up_for_more = "images/v08/achievements/upformore.png"
         show up_for_more:
             xpos 0
             ypos -200
@@ -296,7 +296,7 @@ label steak_w_chloe_serious:
 
     cl "*giggles* I appreciate the offer, but you're off the hook. I just wanted to hang out and gorge myself on sushi."
 
-    scene v8s
+    scene v8steak3
     with dissolve
 
     u "Well, I can sure help you there!"
@@ -532,7 +532,7 @@ label steak_w_chloe_cont_3:
 
     u "Really? They don't sit around braiding each other's hair and having tea parties?"
 
-    scene v8steak15d
+    scene v8steak15b
     with dissolve
 
     cl "*giggles* That's only on Tuesdays."

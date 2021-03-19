@@ -28,7 +28,7 @@ label amber_sex_at_joshs:
 
     $ get_a_room = True
     if steam == False:
-        image get_a_room = "images/achievements/getaroom.png"
+        image get_a_room = "images/v08/achievements/getaroom.png"
         show get_a_room:
             xpos 0
             ypos -200
