@@ -229,17 +229,17 @@ screen choice(items, time=3):
         0: {
             "background": "Left",
             "pos": (210, 907),
-            "padding": (50, 21)
+            "xoffset": 0
         },
         1: {
             "background": "Right",
             "pos": (1005, 907),
-            "padding": (90, 21)
+            "xoffset": 50
         },
         2: {
             "background": "Top",
             "pos": (600, 780),
-            "padding": (0, 21) # Centered
+            "xoffset": 0 # Centered
         }
     }
     
@@ -251,19 +251,25 @@ screen choice(items, time=3):
             $ disabled = True
 
         if count < len(menuButtonsConfig):
-            textbutton item.caption.replace(" (disabled)", ""):
-                if disabled:
-                    background "gui/{}white.png".format(menuButtonsConfig[count]["background"])
-                else:
-                    idle_background "gui/{}blue.png".format(menuButtonsConfig[count]["background"])
-                    action [item.action, SetVariable("ischoice", False)]
-                hover_background "gui/{}white.png".format(menuButtonsConfig[count]["background"])
+            fixed:
+                xysize (660, 104)
                 pos menuButtonsConfig[count]["pos"]
-                padding  menuButtonsConfig[count]["padding"]
-                xysize (800, 104)
-                text_size 40
-                if count > 1:
-                    text_xalign 0.5
+
+                imagebutton:
+                    if disabled:
+                        idle "gui/{}white.png".format(menuButtonsConfig[count]["background"])
+                    else:
+                        idle "gui/{}blue.png".format(menuButtonsConfig[count]["background"])
+                        action [item.action, SetVariable("ischoice", False)]
+                    hover "gui/{}white.png".format(menuButtonsConfig[count]["background"])
+
+                text item.caption.replace(" (disabled)", ""):
+                    align(0.5, 0.5)
+                    xoffset menuButtonsConfig[count]["xoffset"]
+                    yalign 0.5
+                    size 40
+                    if count > 1:
+                        xalign 0.5
 
 
     if realkcttut == 1:

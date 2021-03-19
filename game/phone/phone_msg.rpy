@@ -146,14 +146,14 @@ screen messager(contact=None):
                         textbutton message.msg style "msgleft"
                     elif isinstance(message, ImageMessage):
                         imagebutton:
-                            idle message.image
+                            idle Transform(message.image, size=(307, 173))
                             style "msgleft"
                             action Show("phone_image", img=message.image)
                     elif isinstance(message, Reply):
                         textbutton message.message style "msgright"
                     elif isinstance(message, ImgReply):
                         imagebutton:
-                            idle message.image
+                            idle Transform(message.image, size=(307, 173))
                             style "msgright"
                             action Show("phone_image", img=message.image)
 
@@ -184,7 +184,7 @@ screen reply(contact=None):
                         action [Function(contact.selectedReply, reply), Hide("reply")]
             elif isinstance(reply, ImgReply):
                 imagebutton:
-                    idle reply.image
+                    idle Transform(reply.image, zoom=0.15)
                     style "replies_style"
                     if reply.label:
                         action [Hide("reply"), Hide("messager"), Function(contact.selectedReply, reply), Call(reply.label)]
@@ -198,7 +198,10 @@ screen phone_image(img=None):
             bigImage = os.path.splitext(img)[0] + "big" + os.path.splitext(img)[1]
 
     add "images/darker.png"
-    add bigImage at truecenter
+    if renpy.loadable(bigImage):
+        add bigImage at truecenter
+    else:
+        add img at truecenter
 
     imagebutton:
         idle "images/bigbutton.png"

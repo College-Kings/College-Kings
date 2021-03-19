@@ -242,7 +242,7 @@ label hallway_help_nora:
     scene v8shal9
     with dissolve
 
-    no "No proble, see you soon."
+    no "No problem, see you soon."
 
     scene v8shal9a
     with dissolve
