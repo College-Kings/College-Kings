@@ -122,7 +122,7 @@ label hoco_amb_morning:
     scene v8samb14 # TPP. Show MC getting dressed, Amber now wakes up and sits up, Amber mouth open, both looking tired.
     with dissolve
 
-    am "Oh shit. Must of passed out on the floor last night."
+    am "Oh shit. Must've passed out on the floor last night."
 
     scene v8samb15 # FPP. Show Amber starting to get dressed, Amber look tired, mouth closed.
     with dissolve
