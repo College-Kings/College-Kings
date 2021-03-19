@@ -4,6 +4,7 @@
 # Time: Tuesday Night
 
 label tue_night_in_room:
+    stop music fadeout 2
     if joinwolves:
         scene v8star1 # TPP. Show MC lying on his bed in his Wolves room staring at the ceiling.
         with fade
