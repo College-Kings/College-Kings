@@ -59,4 +59,5 @@ if contact_Penelope.replies:
     jump v8_s14_pen_text
 else:
     $ showphone = False
+    u "(That sounded serious. What got her all upset so sudden?)"
     jump penelope_dorm_hack
