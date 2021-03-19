@@ -122,7 +122,7 @@ label hoco_amb_morning:
     scene v8samb14 # TPP. Show MC getting dressed, Amber now wakes up and sits up, Amber mouth open, both looking tired.
     with dissolve
 
-    am "Oh shit. Must of passed out on the floor last night."
+    am "Oh shit. Must've passed out on the floor last night."
 
     scene v8samb15 # FPP. Show Amber starting to get dressed, Amber look tired, mouth closed.
     with dissolve
@@ -154,7 +154,7 @@ label hoco_amb_morning:
     scene v8samb18 # FPP. Now sat at a table in Amber's kitchen. Show MC's plate and him playing around with the food on the plate.
     with dissolve
 
-    u "So where's your parents? I mean you have this whole house to yourself."
+    u "So where are your parents? I mean you have this whole house to yourself."
 
     scene v8samb19 # FPP. Close up of Amber sat opposite MC at the table, Amber neutral expression, mouth open.
     with dissolve
@@ -204,7 +204,7 @@ label hoco_amb_morning:
     scene v8samb19a
     with dissolve
 
-    u "Yeah.. Well I'm gonna head out. Probably tried to sleep more. I still feel pretty exhausted."
+    u "Yeah... Well, I'm gonna head out. Probably gonna try to sleep more. I still feel pretty exhausted."
 
     scene v8samb19
     with dissolve

@@ -203,7 +203,7 @@ label after_drugs:
         with dissolve
         am "You did? How did you let this happen?"
 
-        if s28_fightWinner == "Mc": # MC beat the thugs:
+        if s28_fightWinner == "MC": # MC beat the thugs:
             scene v8josh25c # Same as v8josh25b but Amber mouth closed
             with dissolve
             u "I tried to stop it. There were two of them and one had a pipe."
@@ -558,7 +558,7 @@ label after_drugs:
 
     scene v8josh31
     with dissolve
-    am "Aww, thanks. Goodnight, [name]"
+    am "Aww, thanks. Goodnight, [name]!"
 
     scene v8josh31a
     with dissolve

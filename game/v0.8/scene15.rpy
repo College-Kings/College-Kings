@@ -3,21 +3,25 @@
 # Outfits: MC Outfit 2
 # Time: Sunday Morning
 
+default penHelpDean = False
+
 label penelope_dorm_hack:
     scene v8spen1 # FPP. Long shot of the hallway leading up to Penelope's dorm.
-    with fade
-
+    with Fade(0.75, 0.25, 0.75)
     pause 0.5
+
+    play sound "sounds/knock.mp3"
 
     scene v8spen2 # TPP. Show MC knocking on Penelope's dorm door.
     with dissolve
-
     pause 0.5
 
     scene v8spen2a # TPP. Same camera as v8spen2, MC now stood infront of the door, no longer knocking.
     with dissolve
 
     pe "It's open!"
+
+    play music "music/msad.mp3" fadein 2
 
     scene v8spen3 # FPP. Now inside Penelope's dorm, show Penelope sitting on her bed, crying.
     with dissolve
@@ -42,22 +46,26 @@ label penelope_dorm_hack:
     scene v8spen5a # FPP. Same camera as v8spen5, Penelope trying to compose herself, mouth open.
     with dissolve
 
-    pe "*Sniffles* O-okay, remember when you saw me in the hall at Hoco? And I was on the phone?"
+    pe "*Sniffles* O-okay."
 
-    scene v8spen5b # FPP. Same camera as v8spen5, Penelope trying to compose herself, mouth closed.
-    with dissolve
+    if fr4penelope:
+        pe "Remember when you saw me in the hall at Hoco? And I was on the phone?"
 
-    u "Yeah, I remember. You seemed really upset on the phone."
+        scene v8spen5b # FPP. Same camera as v8spen5, Penelope trying to compose herself, mouth closed.
+        with dissolve
 
-    scene v8spen5a
-    with dissolve
+        u "Yeah, I remember. You seemed really upset on the phone."
 
-    pe "Well I was talking to my friend who got kicked out of her college, Jenny, and she couldn't get into any s-school because of what happened at her..."
+        scene v8spen5a
+        with dissolve
+
+        pe "Well I was talking to my friend who got kicked out of her college, Jenny, and she couldn't get into any s-school because she..."
+    else:
+        pe "My friend Jenny got kicked out of her college recently, and she couldn't get into any s-school because she..."
 
     scene v8spen5c # FPP. Same camera as v8spen5, Penelope looking away from the camera (to her side). Mouth open.
     with dissolve
-
-    pe "Last school, so I hacked into San Vallejo's registry and enrolled her here, only I-I got caught somehow."
+    pe "...because of what happened at her last school. So I hacked into San Vallejo's registry and enrolled her here, only I-I got caught somehow."
 
     scene v8spen5a
     with dissolve
@@ -85,14 +93,16 @@ label penelope_dorm_hack:
     menu:
         "Offer to help Penelope":
             $ addPoint ("bf", 1)
+            $ penHelpDean = True
             jump help_pen
 
         "Offer to support Penelope":
+            $ penHelpDean = False
             jump no_help_pen
 
 label help_pen:
 
-    u "If you want, I can talk to the Dean on Monday on your behalf. I'm sure we could work something out if we tried and be smart about it."
+    u "If you want, I can talk to the dean on Monday on your behalf. I'm sure we could work something out if we tried and be smart about it."
 
     scene v8spen8a # FPP. Same camera as v8spen8, Penelope upset, mouth open.
     with dissolve
@@ -112,27 +122,37 @@ label help_pen:
     scene v8spen8c # FPP. Same camera as v8spen8, Penelope still upset but also slightly smiling, mouth closed.
     with dissolve
 
-    u "Yeah? We got this. First thing Monday morning, I'll go see the Dean, okay?"
+    u "Yeah? We got this. First thing Monday morning, I'll go see the dean, okay?"
 
     scene v8spen9 # FPP. Show Penelope hugging MC. Penelope smiling.
     with dissolve
 
     pause 0.5
 
-    scene v9spen8d # FPP. Same camera as v8spen8, Penelope dries her eyes and regains some composure. Penelope mouth open.
+    scene v8spen8d # FPP. Same camera as v8spen8, Penelope dries her eyes and regains some composure. Penelope mouth open.
     with dissolve
 
     pe "Thanks, [name]. This means the world to me. Really."
 
-    scene v8spen9 # TPP. Show Penelope hugging MC. Both smiling. MC mouth open.
+    scene v8spen9a # TPP. Show Penelope hugging MC. Both smiling. MC mouth open.
     with dissolve
 
     u "That's what friends are for."
 
+    stop music fadeout 3
+
     scene v8spen10 # TPP. Show MC leaving Penelope's dorm, Penelope still sat on edge of bed looking cheered up, looking at MC, MC neutral expression.
     with dissolve
+    pause 0.5
 
-    # SCENE 16 #
+    scene black
+    with Dissolve(1)
+    pause 0.5
+
+    if joinwolves:
+        jump mc_wolves_sun_aft
+    else:
+        jump mc_apes_sun_aft
 
 label no_help_pen:
 
@@ -147,15 +167,27 @@ label no_help_pen:
 
     u "It's not a problem. You hang in there, okay?"
 
-    scene v8spen8e # FPP. Same camera as v8spen8, Penelope nodding her head and smiling softly.
+    ###CHECK - removed because of missing image
+    # scene v8spen8e # FPP. Same camera as v8spen8, Penelope nodding her head and smiling softly.
+    # with dissolve
+
+    scene v8spen8b
     with dissolve
+    pe "Okay."
 
-    pause 0.5
+    stop music fadeout 3
 
-    scene v8spen11 # TPP. Show MC leaving Penelope's dorm, MC neutral expression, Penelope still looks a bit sad but slightly smiling.
+    ###CHECK - removed because of missing image
+    # scene v8spen11 # TPP. Show MC leaving Penelope's dorm, MC neutral expression, Penelope still looks a bit sad but slightly smiling.
+    # with dissolve
+
+    scene v8spen10
     with dissolve
 
     u "(Damn, I hope she'll be okay.)"
 
     # SCENE 16 #
-    jump mc_wolves_sun_aft
+    if joinwolves:
+        jump mc_wolves_sun_aft
+    else:
+        jump mc_apes_sun_aft

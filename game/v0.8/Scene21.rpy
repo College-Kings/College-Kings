@@ -37,7 +37,8 @@ label mon_morning_room:
 
         u "(Excuse me, Dean, can I...no, that won't work.)"
 
-        u "(Good morning, Dean, might I have a minute of your time?...yeah that's better.)"
+        u "(Good morning, Dean. Might I have a minute of your time?)"
+        u "(Yeah, that's better.)"
 
         scene v8sdea6 # FPP. Show MC inside the Dean's office where the dean is talking to her secretary.
         with fade
@@ -52,12 +53,12 @@ label mon_morning_room:
         scene v8sdea7a # FPP. Same camera as v8sdea7, dean slight smile, mouth closed.
         with dissolve
 
-        u "Good morning Mrs. Harrison. My name is [name] Might I have a-a minute of your time?"
+        u "Good morning Mrs. Harrison. My name is [name]. Might I have a-a minute of your time?"
 
         scene v8sdea7b # FPP. Same camera as v8sdea7, dean looking at her watch on her wrist, mouth closed.
         with dissolve
 
-        u "(Fuck, I'm nervous)"
+        u "(Fuck, I'm nervous.)"
 
         scene v8sdea7
         with dissolve
@@ -134,14 +135,14 @@ label mon_morning_room:
         scene v8sdea10d # FPP. Same camera as v8sdea10, dean places her hands on the desk and leans forward slightly, neutral expression, mouth closed.
         with dissolve
 
-        u "(Fuck this bitch)"
+        u "(Fuck this bitch!)"
 
         scene v8sdea10a
         with dissolve
 
         u "Ma'am, I am asking you to understand that not everyone is perfect, that we all make mistakes. I am asking that you be lenient with her. She did what she did from a good place. From her heart."
 
-        u "Wouldn't you do stupid things for those you care about? Ma'am."
+        u "Wouldn't you do stupid things for those you care about?{w}... Ma'am."
 
         scene v8sdea10e # FPP. Same camera as v8sdea10, slight smile, mouth open.
         with dissolve
@@ -208,12 +209,12 @@ label mon_morning_room:
         scene v8sdea11a
         with dissolve
 
-        de "Good day, [name]"
+        de "Good day, [name]."
 
         scene v8sdea12 # TPP. Show MC leaning the dean's office, MC smiling.
         with dissolve
 
-        u "(Holy shit, I did it! Now I gotta call Penelope when I get back)"
+        u "(Holy shit, I did it! Now I gotta call Penelope when I get back.)"
 
         # -Fade to MC back in his room and start of scene 22-
         jump s22

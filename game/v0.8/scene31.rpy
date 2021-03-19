@@ -27,7 +27,7 @@ label v8_tues_eco_class:
     scene v8stec4 # TPP. Show MC in his seat yawning, looking tired, mouth closed.
     with dissolve
 
-    u "(It's too early for this stuff)"
+    u "(It's too early for this stuff.)"
 
     scene v8stec5 # FPP. Close up Riley, Riley turns to the side in her seat to look at camera (MC). Riley smile, mouth closed.
     with dissolve

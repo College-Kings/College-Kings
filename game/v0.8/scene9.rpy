@@ -26,6 +26,7 @@ label after_prot_wolves:
     u "I'm never gonna get this shit."
 
     play sound "sounds/knock.mp3"
+    "*Knock knock knock*"
 
     scene v8sprot24 # FPP. Show the closed door of MC's room as Sebastian is knocking on the door.
     with dissolve
@@ -70,6 +71,7 @@ label after_prot_dorm:
     u "Might as well get ready for the ceremony."
 
     scene v8sprot30 # TPP. Show MC getting ready in his dorm for the Apes ceremony.
-    with dissolve
+    with fade
+    pause 0.5
 
     jump apes_join_ceremony

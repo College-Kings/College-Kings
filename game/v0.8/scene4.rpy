@@ -115,12 +115,10 @@ label v08_ri_start_fr:
     scene v8s40c
     with dissolve
     u "Don't we all?"
-    ri "..."
 
-    ###CHECK - removed because of missing image
-    # scene v8s40g # Riley rolling eyes, cute and smiling, mouth closed
-    # with dissolve
-    # ri "..."
+    scene v8s40g # Riley rolling eyes, cute and smiling, mouth closed
+    with dissolve
+    ri "..."
 
     scene v8s40a
     with dissolve

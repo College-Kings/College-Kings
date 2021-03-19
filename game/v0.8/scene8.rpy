@@ -296,7 +296,7 @@ label prot_w_au_no_leg:
     scene v8sprot3d
     with dissolve
 
-    aut "It's sickening if you ask me. A man shouldn't be able to say a woman has to carry a baby to full term. Abortions are there for reasons. Women being assaulted, women who can't afford it."
+    aut "It's sickening, if you ask me. A man has no business telling a woman what she can and cannot do with her body, and neither does the government. Abortions are legal for a multitude of reasons."
 
     aut "I mean if someone wants to bring a child in the world, they need to be prepared. That's how so many kids end up in foster care."
 
@@ -516,7 +516,7 @@ label prot_w_au_end:
     scene v8sprot20c # FPP. Same camera as v8sprot20, protestors in the background are now leaving, Autumn smile, mouth closed.
     with dissolve
 
-    u "Yeah was just gonna say, I'm feeling a bit tired. Was gonna head back."
+    u "Yeah, well, I'm feeling pretty tired. Think I'll head back."
 
     scene v8sprot20b
     with dissolve

@@ -55,7 +55,7 @@ label phn_chloe11:
 
     else:
         $ showphone = False
-        u "(I have to get going.)"
+        u "(Gotta get going.)"
         jump phn_chloe11_done
 
 label phn_chloe11_a:
@@ -70,18 +70,17 @@ label phn_chloe11_a1:
 
 label phn_chloe11_b:
     $ chloeMsg11Reply = 2
-    $ contact_Chloe = Message("Aww, I like talking to you too. You're sweet.")
+    $ contact_Chloe.newMessage("Aww, I like talking to you too. You're sweet.")
     $ contact_Chloe.addReply("Sweet? Not hot? Or sexy? Or... anything but sweet?", "phn_chloe11_b1")
-
     call screen messager(contact_Chloe)
 
 label phn_chloe11_b1:
-    $ contact_Chloe = Message("Sweet and cute ;)")
-    $ chloeMessage11_b1.addReply("I'll take it. For now. Talk to you when I get settled.", "phn_chloe11_b2")
+    $ contact_Chloe.newMessage("Sweet and cute ;)")
+    $ contact_Chloe.addReply("I'll take it. For now. Talk to you when I get settled.", "phn_chloe11_b2")
     call screen messager(contact_Chloe)
 
 label phn_chloe11_b2:
-    $ chloeMessage11_b2 = Message(contact_Chloe, "Good night.")
+    $ contact_Chloe.newMessage("Good night.")
     call screen messager(contact_Chloe)
 
 label phn_chloe11_done:
@@ -260,7 +259,7 @@ label phn_chloe11_done:
 
         scene v8apes30 # FPP. Same as v8apes29 but MC is looking Chloe up and down. So maybe just tilt the camera to show Chloe's body
         with dissolve
-        pause 0.5
+        pause
 
         scene v8apes29c
         with dissolve
@@ -296,7 +295,7 @@ label phn_chloe11_done:
 
     scene v8apes33 # TPP. MC walking towards where Cameron is sitting. Cameron doesn't notice him and has similar expression as in v8apes32
     with dissolve
-    pause 0.5
+    pause 1
 
     scene v8apes33a # MC sits beside him, Cameron notices him now
     with dissolve
@@ -400,11 +399,11 @@ label phn_chloe11_done:
     u "What about your family? Any brothers or sisters who can come help?"
     u "Or better yet, your parents? They would definitely know what to do."
 
-    scene v8apes37d
+    scene v8apes37a
     with dissolve
     ca "My parents are the reason she's going through this. I'm surprised I'm not in an alley with a needle in my arm!"
 
-    scene v8apes37e
+    scene v8apes37
     with dissolve
     u "Wanna talk about it? Get it off your chest?"
 
@@ -474,7 +473,7 @@ label phn_chloe11_done:
     u "Yeah, let's talk later. I got your back."
 
     scene v8apes38 # TPP. Showing MC, Cameron and Ryan just chitchatting on the couches in the den. A couple of empty beer bottles by their side. Cameron laughing and talking. Ryan laughing and talking. MC laughing (It's really late at night now)
-    with Fade(1, 0.2, 0.5)
+    with Fade(1.25, 0.75, 0.5)
     ca "That was my worst fucking rodeo ever! I couldn't sleep peacefully that night."
     ry "Oh man *laughs*"
 
@@ -490,15 +489,18 @@ label phn_chloe11_done:
     with dissolve
     ma "Well, g'night then. I'm gonna doze off."
 
+    stop music fadeout 3
+
     scene v8apes40 # FPP. Showing Ryan and Cameron walking out of the den. MC behind them
     with dissolve
-    pause 0.5
+    pause 1
 
     scene v8apes41 # TPP. Showing MC going to bed in his new room in underwear
-    with Fade(0.3, 0.1, 0.3)
-    pause 0.5
+    with Fade(0.5, 0.5, 0.5)
+    pause 1
 
     scene black
-    with Fade(1, 0.1, 0.1)
+    with Dissolve(1)
+    pause 0.5
 
     jump mc_apes_sun_morn
