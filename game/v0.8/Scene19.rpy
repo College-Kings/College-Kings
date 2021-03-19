@@ -3,8 +3,8 @@
 # Outfits: MC Outfit 2
 # Time: Sunday Evening
 
-default s19_dickPic = False
-default s19_dateEmily = False
+default amberDickPic = False
+default v8_dateEmily = False
 
 label sun_eve_room:
     if joinwolves:
@@ -12,7 +12,7 @@ label sun_eve_room:
         with fade
 
         if not laurenrs:
-            # -Phone buzzes-
+            play sound "sounds/vibrate.mp3"
             $ contact_Amber.newMessage("Hey u up?")
             $ contact_Amber.addReply("Always for you ;)")
             $ contact_Amber.newMessage("That's what I was hoping to hear")
@@ -26,11 +26,11 @@ label sun_eve_room:
             label s19_reply1:
                 menu:
                     "Send Amber a dick picture":
-                        $ s19_dickPic = True
+                        $ amberDickPic = True
                     "Don't send Amber a dick picture":
-                        $ s19_dickPic = False
+                        $ amberDickPic = False
                 
-            if s19_dickPic:
+            if amberDickPic:
                 $ contact_Amber.addReply("Wanna see what thinking about you has done to me?")
                 $ contact_Amber.newMessage("It's only fair, right? Make us even")
                 # $ contact_Amber.ImgReply(**[w_dick_pic]**)
@@ -75,7 +75,7 @@ label sun_eve_room:
                 $ contact_Amber.newMessage("Well, sleep tight then ;)")
 
         if laurenrs:
-            # -MC's phone buzzes-
+            play sound "sounds/vibrate.mp3"
             $ contact_Lauren.newMessage("Hey, Sweetie, what are you up to?")
             $ contact_Lauren.addReply("Nothing, just catching up on some homework. You having a good night?")
             $ contact_Lauren.newMessage("It would be better if you were here...")
@@ -89,7 +89,7 @@ label sun_eve_room:
 
         ### ERROR: -Continue after choices- [MC still in bed] ###
         if forgiveemily:
-            # -MC's phone buzzes-
+            play sound "sounds/vibrate.mp3"
             ### ERROR: (Aww, she couldn't get enough of me) [I figure this line works for either scenario but let me know if I should change it] ###
             $ contact_Emily.newMessage("Hey, I was thinking")
             $ contact_Emily.addReply("Uh oh that can't be good ;)")
@@ -101,12 +101,12 @@ label sun_eve_room:
             label s19_reply2:
                 menu:
                     "Go on a date with Emily":
-                        $ s19_dateEmily = True
+                        $ v8_dateEmily = True
                     "Don't go on a date with Emily":
-                        $ s19_dateEmily = False
+                        $ v8_dateEmily = False
 
 
-            if s19_dateEmily:
+            if v8_dateEmily:
                 $ contact_Emily.addReply("Sure! Sounds like fun. I can be there in a few minutes")
                 $ contact_Emily.newMessage("Great! See you there!")
 
@@ -139,7 +139,7 @@ label sun_eve_room:
         with fade
 
         if not laurenrs:
-            # -Phone buzzes-
+            play sound "sounds/vibrate.mp3"
             $ contact_Amber.newMessage("Hey u up?")
             $ contact_Amber.addReply("Always for you ;)")
             $ contact_Amber.newMessage("That's what I was hoping to hear")
@@ -153,11 +153,11 @@ label sun_eve_room:
             label s19_reply3:
                 menu:
                     "Send Amber a dick picture":
-                        $ s19_dickPic = True
+                        $ amberDickPic = True
                     "Don't send Amber a dick picture":
-                        $ s19_dickPic = False
+                        $ amberDickPic = False
 
-            if s19_dickPic:
+            if amberDickPic:
                 $ contact_Amber.addReply("Wanna see what thinking about you has done to me?")
                 $ contact_Amber.newMessage("It's only fair, right? Make us even")
                 # $ contact_Amber.newImgMessage(**[a_dick_pic]**)
@@ -202,7 +202,7 @@ label sun_eve_room:
                 $ contact_Amber.newMessage("Well, sleep tight then ;)")
 
         if laurenrs:
-            # -MC's phone buzzes-
+            play sound "sounds/vibrate.mp3"
             $ contact_Lauren.newMessage("Hey, Sweetie, what are you up to?")
             $ contact_Lauren.addReply("Nothing, just catching up on some homework. You having a good night?")
             $ contact_Lauren.newMessage("It would be better if you were here...")
@@ -216,7 +216,7 @@ label sun_eve_room:
 
         ### ERROR: -Continue after choices- [MC still in bed] ###
         if forgiveemily:
-            # -MC's phone buzzes-
+            play sound "sounds/vibrate.mp3"
             ### ERROR: (Aww, she couldn't get enough of me) [I figure this line works for either scenario but let me know if I should change it] ###
             $ contact_Emily.newMessage("Hey, I was thinking")
             $ contact_Emily.addReply("Uh oh that can't be good ;)")
@@ -228,14 +228,14 @@ label sun_eve_room:
             label s19_reply4:
                 menu:
                     "Go on a date with Emily":
-                        $ s19_dateEmily = True
+                        $ v8_dateEmily = True
                     "Don't go on a date with Emily":
-                        $ s19_dateEmily = False
+                        $ v8_dateEmily = False
 
             # -Continue text with Emily-
             # -MC Can choose to accept the date or decline-
             # -If MC chooses to accept the date-
-            if s19_dateEmily:
+            if v8_dateEmily:
                 $ contact_Emily.addReply("Sure! Sounds like fun. I can be there in a few minutes")
                 $ contact_Emily.newMessage("Great! See you there!")
 
