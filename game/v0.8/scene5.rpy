@@ -204,7 +204,7 @@ label hoco_amb_morning:
     scene v8samb19a
     with dissolve
 
-    u "Yeah.. Well I'm gonna head out. Probably tried to sleep more. I still feel pretty exhausted."
+    u "Yeah... Well, I'm gonna head out. Probably gonna try to sleep more. I still feel pretty exhausted."
 
     scene v8samb19
     with dissolve
