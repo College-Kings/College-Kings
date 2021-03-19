@@ -70,6 +70,7 @@ label after_prot_dorm:
     u "Might as well get ready for the ceremony."
 
     scene v8sprot30 # TPP. Show MC getting ready in his dorm for the Apes ceremony.
-    with dissolve
+    with fade
+    pause 0.5
 
     jump apes_join_ceremony
