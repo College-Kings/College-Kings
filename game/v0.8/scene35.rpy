@@ -125,6 +125,20 @@ label steak_w_chloe:
                 jump steak_no_flirt_w_chloe
 
 label steak_flirt_w_chloe:
+
+    $ up_for_more = True
+    if steam == False:
+        image up_for_more = "images/achievements/upformore.png"
+        show up_for_more:
+            xpos 0
+            ypos -200
+            linear 0.5 xpos 0 ypos 0
+            pause 2.0
+            linear 0.5 xpos 0 ypos -200
+    else:
+        $ achievement.grant("up_for_more")
+        $ achievement.sync()
+
     u "Unlesssss..."
 
     scene v8steak3d # FPP. Same camera as v8steak3, Chloe neutral expression, mouth open.

@@ -22,6 +22,20 @@ label amber_sex_at_joshs:
 
     scene v8amber4a # Amber pulls back her head and is speaking now while looking into the MC's eyes seductively
     with dissolve
+
+    $ get_a_room = True
+    if steam == False:
+        image get_a_room = "images/achievements/getaroom.png"
+        show get_a_room:
+            xpos 0
+            ypos -200
+            linear 0.5 xpos 0 ypos 0
+            pause 2.0
+            linear 0.5 xpos 0 ypos -200
+    else:
+        $ achievement.grant("get_a_room")
+        $ achievement.sync()
+
     if ending == "amber":
         am "I've been waiting for this since the last time."
 

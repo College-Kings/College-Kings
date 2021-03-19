@@ -591,6 +591,19 @@ label dodged_pipe:
     scene v8sdd14 # TPP. Show MC looking up at Joe who is in shock, MC starts to stand up in preparation to plant a huge uppercut on Joe's chin. Lars on the ground. MC focused expression, MC mouth open.
     with dissolve
 
+    $ ip_man = True
+    if steam == False:
+        image ip_man = "images/achievements/ipman.png"
+        show ip_man:
+            xpos 0
+            ypos -200
+            linear 0.5 xpos 0 ypos 0
+            pause 2.0
+            linear 0.5 xpos 0 ypos -200
+    else:
+        $ achievement.grant("ip_man")
+        $ achievement.sync()
+
     u "Fuck you!"
 
     scene v8sdd15 # TPP. Show MC uppercuting Joe, camera from the side, MC looks focused, Joe winces in pain as he takes the uppercut square to the chin.
@@ -717,3 +730,4 @@ label check_on_josh:
 
     # -Transition to Scene 29-
     jump after_drugs
+oi

@@ -169,18 +169,7 @@ label phn_chloe11_done:
             u "I'm already behind on my work. I really need to focus."
 
             ### Maybe change the achievement name ###
-            $ gradesovergirls = True
-            if steam == False:
-                image gradesovergirls = "images/gradesovergirls.png"
-                show gradesovergirls:
-                    xpos 0
-                    ypos -200
-                    linear 0.5 xpos 0 ypos 0
-                    pause 2.0
-                    linear 0.5 xpos 0 ypos -200
-            else:
-                $ achievement.grant("grades_over_girls")
-                $ achievement.sync()
+            
 
             u "Don't want to get kicked out of school now that I'm finally an Ape!"
 
