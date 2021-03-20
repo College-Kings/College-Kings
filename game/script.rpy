@@ -30,9 +30,9 @@ init python:
 
 define persistent.ep = 8
 
-define steam = True
+define steam = False
 
-define developer = True
+define developer = False
 
 define config.steam_appid = 1463120
 
