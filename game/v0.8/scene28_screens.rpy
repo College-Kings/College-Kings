@@ -88,8 +88,8 @@ screen s28_LarsSelectDifficulty():
             action Jump ("s28_LarsHardDifficulty")
 
 screen s28_LarsKeybindOptions():
-     tag fightScreen
-   image "images/fightchoice.png"
+    tag fightScreen
+    image "images/fightchoice.png"
 
     text "Keybinding":
         xalign 0.5
