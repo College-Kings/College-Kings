@@ -147,34 +147,34 @@ label sun_eve_room:
                 $ contact_Emily.addReply("I would but it's getting late and I haven't even started Mr. Lee's project", "s19_reply27")
                 call screen messager(contact_Emily)
 
-                    label s19_reply26:
-                        $ contact_Emily.newMessage("Great! See you there!")
-                        call screen messager(contact_Emily)
-                        jump emily_arcade
+                label s19_reply26:
+                    $ contact_Emily.newMessage("Great! See you there!")
+                    call screen messager(contact_Emily)
+                    jump emily_arcade
 
-                    label s19_reply27:
-                        $ contact_Emily.newMessage("You sure you're not mad?")
-                        $ contact_Emily.addReply("No, not at all. Just beat. I'd love to go some other time", "s19_reply28")
-                        call screen messager(contact_Emily)
-                    label s19_reply28:
-                        $ contact_Emily.newMessage("Okay talk to you soon")
-                        $ contact_Emily.addReply("Goodnight", "s19_reply29")
-                        call screen messager(contact_Emily)
-                    label s19_reply29:
-                        scene v8sser1a # TPP. Same camera as v8sser1, show MC lying on his side as if to go to sleep.
-                        with dissolve
+                label s19_reply27:
+                    $ contact_Emily.newMessage("You sure you're not mad?")
+                    $ contact_Emily.addReply("No, not at all. Just beat. I'd love to go some other time", "s19_reply28")
+                    call screen messager(contact_Emily)
+                label s19_reply28:
+                    $ contact_Emily.newMessage("Okay talk to you soon")
+                    $ contact_Emily.addReply("Goodnight", "s19_reply29")
+                    call screen messager(contact_Emily)
+                label s19_reply29:
+                    scene v8sser1a # TPP. Same camera as v8sser1, show MC lying on his side as if to go to sleep.
+                    with dissolve
 
-                        u "(I think I'll get an early night)"
+                    u "(I think I'll get an early night)"
 
-                        jump mon_morning_room
+                    jump mon_morning_room
 
-        else:
-            scene v8sser1a
-            with dissolve
+            else:
+                scene v8sser1a
+                with dissolve
 
-            u "(I think I'll get an early night)"
+                u "(I think I'll get an early night)"
 
-            jump mon_morning_room
+                jump mon_morning_room
 
     else:
         scene v8sser4 # TPP. Show MC sat on his Apes bed on his phone.
