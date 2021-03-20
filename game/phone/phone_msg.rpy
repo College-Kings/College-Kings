@@ -105,7 +105,7 @@ screen contactsscreen():
                         add contact.profilePicture yalign 0.5 xpos 20
                         text contact.name style "nametext" yalign 0.5 xpos 100
 
-                        if contact.messages[-1].replies:
+                        if contact.messages and contact.messages[-1].replies:
                             add "images/contactmsgnot.png" yalign 0.5 xpos 275
 
                         imagebutton:
@@ -148,7 +148,7 @@ screen messager(contact=None):
 
             vbox:
                 for message in contact.messages:
-                    if isinstance(message, Message):
+                    if isinstance(message, Message) and message.msg.strip():
                         textbutton message.msg style "msgleft"
                     elif isinstance(message, ImageMessage):
                         imagebutton:
@@ -163,7 +163,7 @@ screen messager(contact=None):
                             style "msgright"
                             action Show("phone_image", img=message.image)
 
-        if contact.messages[-1].replies:
+        if contact.messages and contact.messages[-1].replies:
                 hbox:
                     xalign 0.5
                     ypos 855
