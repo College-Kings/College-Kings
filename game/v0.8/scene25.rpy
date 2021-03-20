@@ -17,7 +17,6 @@ label v8_scene24_wolves:
 
     scene v8monroom1a # MC looking at his phone now, neutral expression, mouth closed. Rest is same as v8monroom1
     with fade
-    call screen kiwiiApp()
 
     u "*Sigh*"
     jump phn_riley11_setup
@@ -36,7 +35,6 @@ label v8_scene24_apes:
 
     scene v8monroom2a # MC looking at his phone now, neutral expression, mouth closed. Rest is same as v8monroom2
     with fade
-    call screen kiwiiApp()
 
     u "*Sigh*"
     jump phn_riley11_setup
@@ -73,8 +71,6 @@ label phn_riley11_a2:
 
 label phn_riley11_done:
     if joinwolves:
-        scene v8monroom3 # TPP. Show MC leaving his room in Wolves house, smiling a little, mouth closed
-        with dissolve
         u "(Guess I'm not gonna be bored to death after all.)"
 
     else:

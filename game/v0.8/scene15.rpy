@@ -102,6 +102,19 @@ label penelope_dorm_hack:
 
 label help_pen:
 
+    $ thick_and_thin = True
+    if steam == False:
+        image thick_and_thin = "images/v08/achievements/thickandthin.png"
+        show thick_and_thin:
+            xpos 0
+            ypos -200
+            linear 0.5 xpos 0 ypos 0
+            pause 2.0
+            linear 0.5 xpos 0 ypos -200
+    else:
+        $ achievement.grant("thick_and_thin")
+        $ achievement.sync()
+
     u "If you want, I can talk to the dean on Monday on your behalf. I'm sure we could work something out if we tried and be smart about it."
 
     scene v8spen8a # FPP. Same camera as v8spen8, Penelope upset, mouth open.

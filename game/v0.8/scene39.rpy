@@ -47,17 +47,17 @@ label hosp_climb_seb:
 
     u "I feel pretty alive as it is..."
 
-    scene v8shoc4 # FPP. Show Sebastian pointing towards the American flag pole infront of the hospital ambulance entrance, Sebastian neutral expression, mouth open.
+    scene v8shos4 # FPP. Show Sebastian pointing towards the American flag pole infront of the hospital ambulance entrance, Sebastian neutral expression, mouth open.
     with dissolve
 
     se "That's our way up."
 
-    scene v8shoc5 # TPP. Show Sebastian handing MC a face covering mask, MC concerned expression, Sebastian grin, mouth open.
+    scene v8shos5 # TPP. Show Sebastian handing MC a face covering mask, MC concerned expression, Sebastian grin, mouth open.
     with dissolve
 
     se "Here's little something to cover up that pretty, worried face. In case \"someone sees us\"..."
 
-    scene v8shoc6 # FPP. Show Sebastian holding the mask out for MC to grab, Sebastian smile, mouth closed.
+    scene v8shos6 # FPP. Show Sebastian holding the mask out for MC to grab, Sebastian smile, mouth closed.
     with dissolve
 
     menu:
@@ -337,10 +337,5 @@ label watching_seb_climb:
     with dissolve
 
     se "I don't want to talk about it. Let's just leave."
-
-    scene v8shos42 # TPP. Show Sebastian walking away from the hospital with MC trailing behind him.
-    with dissolve
-
-    pause 0.5
 
     jump walk_home_hosp

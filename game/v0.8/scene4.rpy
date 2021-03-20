@@ -116,9 +116,7 @@ label v08_ri_start_fr:
     with dissolve
     u "Don't we all?"
 
-    scene v8s40g # Riley rolling eyes, cute and smiling, mouth closed
-    with dissolve
-    ri "..."
+    pause 0.5
 
     scene v8s40a
     with dissolve
@@ -140,7 +138,7 @@ label v08_ri_start_fr:
     with dissolve
     u "Anytime."
 
-    scene v8s40h # Riley yawns
+    scene v8s40g # Riley yawns
     with dissolve
     pause 1
 

@@ -25,7 +25,7 @@ label v8_tues_evening:
             $ contact_Lauren.addReply("Kiss you*:)")
             $ contact_Lauren.newMessage(":)")
 
-        else::
+        else:
             $ contact_Lauren.addReply("Hey there, could you help me with studying?")
             $ contact_Lauren.newMessage("Umm, sure?")
             $ contact_Lauren.addReply("I'm puzzled just as much as I was back on that bench...")

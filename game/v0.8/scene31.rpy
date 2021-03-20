@@ -322,18 +322,4 @@ label tec_end_time:
     with dissolve
     pause 0.5
 
-    scene v8stec12
-    with dissolve
-    if laurenrs:
-        u "(That's my girl)"
-
-        # Show time montage until 10 AM.
-
-        jump mr_aft_class
-
-    else:
-        pause 0.5
-
-        # Show time montage until 10 AM.
-
-        jump mr_aft_class
+    jump mr_aft_class
