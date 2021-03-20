@@ -2131,7 +2131,7 @@ label phonea:
         call screen phone
 
         label phonef:
-        if contact_Lauren.replies: # Edited
+        if contact_Lauren.messages[-1].replies: # Edited
             scene s61
             with dissolve
             imre "Did you ask?"
@@ -3843,7 +3843,7 @@ label av_b:
 
     label phoneg:
     label repeata:
-    if contact_Ryan.replies:
+    if contact_Ryan.messages[-1].replies:
 
         u "(I should really check who texted me.)"
 
@@ -5456,7 +5456,7 @@ label fr2end:
 
         $ temp_MessageNot = True
         $ phoneexit = "phoneo"
-        if contact_Lauren.replies:
+        if contact_Lauren.messages[-1].replies:
             $ contact_Lauren.newMessage("Hello?? Can we please talk today?")
             $ contact_Lauren.addReply("Yeah, SV cafe in 20 mins?", "larep8a")
             $ contact_Lauren.addReply("Sorry, I can't", "larep8b")
@@ -5473,7 +5473,7 @@ label fr2end:
         scene s96g
         with dissolve
 
-        if contact_Lauren.replies:
+        if contact_Lauren.messages[-1].replies:
             u "(Damn, my phone's blowing up. I should probably check my messages.)"
 
             jump repeatb
@@ -8117,11 +8117,11 @@ label bo_bd:
     u "(Oh, I just got a message.)"
     label phoneq:
     label repeatc:
-    if contact_Aubrey.replies:
+    if contact_Aubrey.messages[-1].replies:
         u "(I should check my messages.)"
         jump repeatc
 
-    elif contact_Aubrey.replies:
+    elif contact_Aubrey.messages[-1].replies:
         u "(I should really reply to Aubrey.)"
         jump repeatc
 
@@ -8304,7 +8304,7 @@ label bo_bd:
     label phoner:
     label repeatg:
 
-    if contact_Aubrey.replies:
+    if contact_Aubrey.messages[-1].replies:
 
         u "(Aubrey's waiting for me, I need to let her know whether I'm coming or not.)"
 
@@ -11997,7 +11997,7 @@ label bo_bd:
                 label repeatk:
                 label phones:
 
-                if contact_Aubrey.replies:
+                if contact_Aubrey.messages[-1].replies:
 
                     if msgApp.notification:
 
@@ -12221,7 +12221,7 @@ label bo_bd:
             label repeatl:
             label phonet:
 
-            if contact_Aubrey.replies:
+            if contact_Aubrey.messages[-1].replies:
 
                 if not msgApp.notification:
 
@@ -12504,7 +12504,7 @@ label bo_bd:
         label repeatm:
         label phoneu:
 
-        if contact_Aubrey.replies:
+        if contact_Aubrey.messages[-1].replies:
 
             if not msgApp.notification:
 
@@ -15856,7 +15856,7 @@ label bo_bd:
     call screen messager(contact_Chloe)
     label phonev:
 
-    if contact_Chloe.replies:
+    if contact_Chloe.messages[-1].replies:
         $ showphone = True
         u "(I should message Chloe about meeting up later.)"
 
@@ -17187,7 +17187,7 @@ label bo_bd:
 
     label phonew:
 
-    if contact_Josh.replies:
+    if contact_Josh.messages[-1].replies:
 
         u "(I should probably reply to my messages.)"
 
@@ -18879,7 +18879,7 @@ label bo_bd:
 
         label phonex:
 
-        if contact_Lauren.replies:
+        if contact_Lauren.messages[-1].replies:
 
             $ showphone = False
             u "(Time to get ready.)"

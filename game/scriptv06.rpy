@@ -493,7 +493,7 @@ label script06:
 
     label phonead:
 
-    if contact_Amber.replies:
+    if contact_Amber.messages[-1].replies:
         u "(Time to text Amber.)"
         jump phonead
     else:
@@ -522,7 +522,7 @@ label script06:
 
     label phoneac:
 
-    if contact_Chloe.replies:
+    if contact_Chloe.messages[-1].replies:
         u "(I should reply to Chloe.)"
 
         call screen messager(contact_Chloe)
@@ -1203,7 +1203,7 @@ label script06:
 
             label phoneae:
 
-            if contact_Amber.replies:
+            if contact_Amber.messages[-1].replies:
                 u "(I should probably reply to my messages.)"
 
                 jump phoneae
@@ -1263,7 +1263,7 @@ label script06:
 
     label phoneaf:
 
-    if contact_Amber.replies:
+    if contact_Amber.messages[-1].replies:
         u "(I should probably reply to my messages.)"
         jump phoneaf
     else:
@@ -4188,7 +4188,7 @@ label script06:
             label phoneag:
             stop music fadeout 2.0
 
-            if contact_Aubrey.replies:
+            if contact_Aubrey.messages[-1].replies:
 
 
                 u "(I should check my messages.)"
@@ -4248,7 +4248,7 @@ label script06:
             scene s565 # mc sitting at his desk
             with dissolve
 
-            if contact_Aubrey.replies:
+            if contact_Aubrey.messages[-1].replies:
 
                 u "(I should probably reply to Aubrey.)"
 

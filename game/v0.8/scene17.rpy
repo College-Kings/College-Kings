@@ -20,7 +20,7 @@ label msrose_moving:
     u "(Should I check how Penelope's doing?)"
 
     label phn_penelope6:
-    if contact_Penelope.replies:
+    if contact_Penelope.messages[-1].replies:
         u "(I should talk to Penelope.)"
         jump phn_penelope6
     else:
