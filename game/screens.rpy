@@ -377,7 +377,7 @@ screen choice(items, time=3):
 
     if timed == True:
 
-        timer time repeat False action [ Hide('countdown'), Jump("choicetimer") ]
+        timer time repeat False action [ SetVariable("timed", False), Hide('countdown'), Jump("choicetimer") ]
         bar value AnimatedValue(0, time, time, time) at alpha_dissolve # assuming you're using the alpha_dissolve transform from the wiki
 
 style choicetuttext is text:
