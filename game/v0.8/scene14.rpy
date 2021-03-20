@@ -54,7 +54,7 @@ label mc_apes_sun_morn:
 
 
 label v8_s14_pen_text:
-if contact_Penelope.replies:
+if contact_Penelope.messages[-1].replies:
     u "(I should reply to her.)"
     jump v8_s14_pen_text
 else:

@@ -49,7 +49,7 @@ label after_apes_ceremony:
     call screen messager(contact_Chloe)
 
 label phn_chloe11:
-    if contact_Chloe.replies:
+    if contact_Chloe.messages[-1].replies:
         u "(I should probably reply.)"
         jump phn_chloe11
 

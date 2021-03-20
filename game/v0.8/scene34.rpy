@@ -42,7 +42,7 @@ pause
 call screen messager(contact_Chloe)
 
 label phn_chloe13:
-if contact_Chloe.replies:
+if contact_Chloe.messages[-1].replies:
     u "(I should talk Chloe.)"
     jump phn_chloe13
 

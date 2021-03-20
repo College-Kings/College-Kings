@@ -1516,7 +1516,7 @@ label v07:
                 "(I should check out what Emily posted on Kiwii.)"
                 jump phoneam              
 
-            if contact_Riley.replies:
+            if contact_Riley.messages[-1].replies:
                 "(I need to respond to some of these messages.)"
                 jump phoneam
 
@@ -1529,7 +1529,7 @@ label v07:
 
                 if laurenrs == True:
 
-                    if contact_Lauren.replies:
+                    if contact_Lauren.messages[-1].replies:
                         "(I should respond to Lauren.)"
 
                         jump phoneam
@@ -1776,7 +1776,7 @@ label v07:
 
 
         label phonean:
-        if contact_Riley.replies:
+        if contact_Riley.messages[-1].replies:
             u "(I should respond to Riley.)"
             jump phonean
         else:
@@ -2835,7 +2835,7 @@ label v07:
 
         label phoneao:
 
-        if contact_Lauren.replies:
+        if contact_Lauren.messages[-1].replies:
 
             u "(I should probably reply.)"
 
@@ -5850,7 +5850,7 @@ label v07:
 
                 label phonebb:
 
-                if contact_Emily.replies:
+                if contact_Emily.messages[-1].replies:
 
                     u "(I should text Emily that I lost track of time.)"
 
@@ -9429,7 +9429,7 @@ if rileyrs:
 
     label rtnow:
 
-    if contact_Riley.replies:
+    if contact_Riley.messages[-1].replies:
         u "(I should check my messages.)"
         jump rtnow
     elif rileysex:
@@ -9818,7 +9818,7 @@ label risex: # Riley sex scene
     $ showphone = True
 
     label phoneba:
-    if contact_Autumn.replies:
+    if contact_Autumn.messages[-1].replies:
         u "(I should probably check my messages.)"
 
         jump phoneba

@@ -163,7 +163,7 @@ screen messager(contact=None):
                             style "msgright"
                             action Show("phone_image", img=message.image)
 
-        if contact.replies:
+        if contact.messages[-1].replies:
                 hbox:
                     xalign 0.5
                     ypos 855
