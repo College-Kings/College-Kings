@@ -29,7 +29,7 @@ label msrose_moving:
 
 label phn_penelope6_a:
     $ contact_Penelope.newMessage("Better, thanks to you")
-    $ contact_Penelope.addReply("No problem. I'm here for you. Let me know if you need anything else.", "phn_penelope6_done")
+    $ contact_Penelope.addReply("No problem. I'm here for you. Let me know if you need anything else.", "phn_penelope6_a1")
     call screen messager(contact_Penelope)
 
 label phn_penelope6_a1:
