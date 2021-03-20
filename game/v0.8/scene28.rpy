@@ -505,9 +505,15 @@ label int_deal_w_josh:
 
 
     label mc_larsFightEnd: # MC wins fight against Lars
+        hide screen s28_larsMcAttack
+        hide screen s28_mcLarsAttack
+
         jump beat_lars
 
     label lars_McFightEnd: # MC loses fight against Lars
+        hide screen s28_larsMcAttack
+        hide screen s28_mcLarsAttack
+        
         jump beat_by_lars
 
 
