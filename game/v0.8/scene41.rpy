@@ -112,7 +112,7 @@ label walk_home_hosp:
         scene v8sbws5b
         with dissolve
 
-        u "I think we've litteraly reached the peak, so let's stop before the entire talk becomes too... happy, you know what I mean?"
+        u "I think we've literally reached the peak, so let's stop before the entire talk becomes too... happy, you know what I mean?"
 
         scene v8sbws5a
         with dissolve
@@ -266,7 +266,7 @@ label walk_home_hosp:
         scene v8sbws13c
         with dissolve
 
-        se "Each next floor is making everyone else looking smaller to you. You grow, dude. Litteraly, above everyone else..."
+        se "Each next floor is making everyone else looking smaller to you. You grow, dude. Literally, above everyone else..."
 
         scene v8sbws13d
         with dissolve

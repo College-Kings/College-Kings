@@ -124,7 +124,7 @@ label wolves_gym_cool:
     scene v8sgym9a
     with dissolve
 
-    u "Not sure I'll ever be that. But the girls seems to like the muscles."
+    u "Not sure I'll ever be that. But the girls seem to like the muscles."
 
     scene v8sgym9c # TPP. Same camera as v8sgym9, MC mouth closed, Sebastian laugh, mouth open.
     with dissolve
