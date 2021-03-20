@@ -3,7 +3,7 @@ screen skipTutS28():
     add "images/endfr.png"
     text "Would you like to play the fighting tutorial?" style "endfree"
     textbutton "Yes" style "endfr":
-        action Jump("s28_fightTut")
+        action Jump("sta")
         text_align 0.5
         xalign 0.57
         yalign 0.58

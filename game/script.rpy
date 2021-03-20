@@ -685,7 +685,6 @@ label starta:
 
     $ wt = 1
     $ phoneexit = "phonea"
-    # $ contact_Emily.newMessage(emilyMessage1)
     $ contact_Emily.newMessage("Hey...\nI know we haven’t talked much after we broke up, but I just wanted to let you know that I didn’t get into Stanford, so I’ll be going to San Vallejo as well.\nGuess I’ll see you there. :)")
     $ contact_Emily.addReply("Yeah... I’ll see you there.", "emrep1a")
     $ contact_Emily.addReply("You cheated on me.\nGo to hell!", "emrep1b")
@@ -17195,7 +17194,7 @@ label bo_bd:
 
     else:
 
-        if contact_Josh.messages[-1].reply.message == "I can't, sorry.":
+        if contact_Josh.messages[-2].reply.message == "I can't, sorry.":
 
             u "(Fucking hell, I forgot how persistent Josh could be...)"
             $ showphone = False
@@ -18879,7 +18878,7 @@ label bo_bd:
 
         label phonex:
 
-        if contact_Lauren.messages[-1].replies:
+        if not contact_Lauren.messages[-1].replies:
 
             $ showphone = False
             u "(Time to get ready.)"

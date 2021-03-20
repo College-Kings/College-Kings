@@ -152,14 +152,14 @@ screen messager(contact=None):
                         textbutton message.msg style "msgleft"
                     elif isinstance(message, ImageMessage):
                         imagebutton:
-                            idle Transform(message.image, zoom=0.16)
+                            idle Transform(message.image, size=(307, 173))
                             style "msgleft"
                             action Show("phone_image", img=message.image)
                     elif isinstance(message, Reply):
                         textbutton message.message style "msgright"
                     elif isinstance(message, ImgReply):
                         imagebutton:
-                            idle Transform(message.image, zoom=0.16)
+                            idle Transform(message.image, size=(307, 173))
                             style "msgright"
                             action Show("phone_image", img=message.image)
 

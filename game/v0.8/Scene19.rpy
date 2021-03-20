@@ -35,9 +35,9 @@ label sun_eve_room:
             label s19_reply5:
                 $ contact_Amber.newMessage("It's only fair, right? Make us even")
                 if joinwolves:
-                    $ contact_Amber.addImgReply("images/v08/Scene19/text_images/w_dick_pic.jpg", "s19_reply6")
+                    $ contact_Amber.addImgReply("images/v08/Scene19/w_dick_pic.jpg", "s19_reply6")
                 else:
-                    $ contact_Amber.addImgReply("images/v08/Scene19/text_images/a_dick_pic.jpg", "s19_reply6")
+                    $ contact_Amber.addImgReply("images/v08/Scene19/a_dick_pic.jpg", "s19_reply6")
                 call screen messager(contact_Amber)
             label s19_reply6:
                 $ contact_Amber.newMessage("Wow, better than I thought")

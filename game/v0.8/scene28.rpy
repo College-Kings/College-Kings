@@ -9,6 +9,7 @@ default larsdmg = 0
 default larshealth = 0
 default simLarsFight = False
 default s28_LarsFight = False
+default s28_fightWinner = "MC"
 
 label drug_deal_w_josh:
     stop music fadeout 2
@@ -507,12 +508,14 @@ label int_deal_w_josh:
     label mc_larsFightEnd: # MC wins fight against Lars
         hide screen s28_larsMcAttack
         hide screen s28_mcLarsAttack
+        $ s28_fightWinner = "MC"
 
         jump beat_lars
 
     label lars_McFightEnd: # MC loses fight against Lars
         hide screen s28_larsMcAttack
         hide screen s28_mcLarsAttack
+        $ s28_fightWinner = "Lars"
         
         jump beat_by_lars
 

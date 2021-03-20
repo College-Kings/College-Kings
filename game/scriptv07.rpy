@@ -1523,7 +1523,7 @@ label v07:
             else:
 
                 if bowling == True:
-                    if contact_Penelope.replies:
+                    if contact_Penelope.messages[-1].replies:
                         "(I should answer Penelope.)"
                         jump phoneam
 
@@ -5843,7 +5843,7 @@ label v07:
                 $ addPoint("bf", 1)
                 $ showphone = True
                 $ phoneexit = "phonebb"
-                $ emilyMessage3.addReply("Hey, sorry I lost track of time. You up?", "emrep3a")
+                $ contact_Emily.addReply("Hey, sorry I lost track of time. You up?", "emrep3a")
 
                 label emrep3a:
                 call screen messager(contact_Emily)
