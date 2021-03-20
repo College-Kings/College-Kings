@@ -136,45 +136,45 @@ label sun_eve_room:
                 ### ERROR: (Aww, she couldn't get enough of me) [I figure this line works for either scenario but let me know if I should change it] ###
                 $ contact_Emily.newMessage("Hey, I was thinking")
                 $ contact_Emily.addReply("Uh oh that can't be good ;)", "s19_reply25")
-                call screen messager(contact_Amber)
+                call screen messager(contact_Emily)
 
                 label s19_reply25:
                     $ contact_Emily.newMessage("Wanna meet up at the arcade?")
 
-            if hcGirl == "emily":
-                $ contact_Emily.newMessage("I feel so bad about homecoming and want to make it up to you. My treat!")
+                if hcGirl == "emily":
+                    $ contact_Emily.newMessage("I feel so bad about homecoming and want to make it up to you. My treat!")
                 $ contact_Emily.addReply("Sure! Sounds like fun. I can be there in a few minutes", "s19_reply26")
                 $ contact_Emily.addReply("I would but it's getting late and I haven't even started Mr. Lee's project", "s19_reply27")
                 call screen messager(contact_Emily)
 
-                label s19_reply26:
-                    $ contact_Emily.newMessage("Great! See you there!")
-                    call screen messager(contact_Emily)
-                    jump emily_arcade
+                    label s19_reply26:
+                        $ contact_Emily.newMessage("Great! See you there!")
+                        call screen messager(contact_Emily)
+                        jump emily_arcade
 
-                label s19_reply27:
-                    $ contact_Emily.newMessage("You sure you're not mad?")
-                    $ contact_Emily.addReply("No, not at all. Just beat. I'd love to go some other time", "s19_reply28")
-                    call screen messager(contact_Emily)
-                label s19_reply28:
-                    $ contact_Emily.newMessage("Okay talk to you soon")
-                    $ contact_Emily.addReply("Goodnight", "s19_reply29")
-                    call screen messager(contact_Emily)
-                label s19_reply29:
-                    scene v8sser1a # TPP. Same camera as v8sser1, show MC lying on his side as if to go to sleep.
-                    with dissolve
+                    label s19_reply27:
+                        $ contact_Emily.newMessage("You sure you're not mad?")
+                        $ contact_Emily.addReply("No, not at all. Just beat. I'd love to go some other time", "s19_reply28")
+                        call screen messager(contact_Emily)
+                    label s19_reply28:
+                        $ contact_Emily.newMessage("Okay talk to you soon")
+                        $ contact_Emily.addReply("Goodnight", "s19_reply29")
+                        call screen messager(contact_Emily)
+                    label s19_reply29:
+                        scene v8sser1a # TPP. Same camera as v8sser1, show MC lying on his side as if to go to sleep.
+                        with dissolve
 
-                    u "(I think I'll get an early night)"
+                        u "(I think I'll get an early night)"
 
-                    jump mon_morning_room
+                        jump mon_morning_room
 
-            else:
-                scene v8sser1a
-                with dissolve
+        else:
+            scene v8sser1a
+            with dissolve
 
-                u "(I think I'll get an early night)"
+            u "(I think I'll get an early night)"
 
-                jump mon_morning_room
+            jump mon_morning_room
 
     else:
         scene v8sser4 # TPP. Show MC sat on his Apes bed on his phone.
@@ -310,34 +310,34 @@ label sun_eve_room:
 
                 if hcGirl == "emily":
                     $ contact_Emily.newMessage("I feel so bad about homecoming and want to make it up to you. My treat!")
-                    $ contact_Emily.addReply("Sure! Sounds like fun. I can be there in a few minutes", "s19_reply55")
-                    $ contact_Emily.addReply("I would but it's getting late and I haven't even started Mr. Lee's project", "s19_reply56")
+                $ contact_Emily.addReply("Sure! Sounds like fun. I can be there in a few minutes", "s19_reply55")
+                $ contact_Emily.addReply("I would but it's getting late and I haven't even started Mr. Lee's project", "s19_reply56")
+                call screen messager(contact_Emily)
+
+                # -Continue text with Emily-
+                # -MC Can choose to accept the date or decline-
+                # -If MC chooses to accept the date-
+                label s19_reply55:
+                    $ contact_Emily.newMessage("Great! See you there!")
                     call screen messager(contact_Emily)
+                    jump emily_arcade
 
-                    # -Continue text with Emily-
-                    # -MC Can choose to accept the date or decline-
-                    # -If MC chooses to accept the date-
-                    label s19_reply55:
-                        $ contact_Emily.newMessage("Great! See you there!")
-                        call screen messager(contact_Emily)
-                        jump emily_arcade
+                label s19_reply56:
+                    # -If MC chooses to decline the date-
+                    $ contact_Emily.newMessage("You sure you're not mad?")
+                    $ contact_Emily.addReply("No, not at all. Just beat. I'd love to go some other time", "s19_reply57")
+                    call screen messager(contact_Emily)
+                label s19_reply57:
+                    $ contact_Emily.newMessage("Okay talk to you soon")
+                    $ contact_Emily.addReply("Goodnight", "s19_reply58")
+                    call screen messager(contact_Emily)
+                label s19_reply58:
+                    scene v8sser4a # TPP. Same camera as v8sser4, show MC lying on his side as if to go to sleep.
+                    with dissolve
 
-                    label s19_reply56:
-                        # -If MC chooses to decline the date-
-                        $ contact_Emily.newMessage("You sure you're not mad?")
-                        $ contact_Emily.addReply("No, not at all. Just beat. I'd love to go some other time", "s19_reply57")
-                        call screen messager(contact_Emily)
-                    label s19_reply57:
-                        $ contact_Emily.newMessage("Okay talk to you soon")
-                        $ contact_Emily.addReply("Goodnight", "s19_reply58")
-                        call screen messager(contact_Emily)
-                    label s19_reply58:
-                        scene v8sser4a # TPP. Same camera as v8sser4, show MC lying on his side as if to go to sleep.
-                        with dissolve
+                    u "(I think I'll get an early night)"
 
-                        u "(I think I'll get an early night)"
-
-                        jump mon_morning_room
+                    jump mon_morning_room
 
             else:
                 scene v8sser4a
