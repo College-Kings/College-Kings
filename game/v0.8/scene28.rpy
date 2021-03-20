@@ -544,7 +544,7 @@ label beat_lars:
         "Duck":
             $ timed = False
             jump dodged_pipe
-        "Don't duck":
+        "...":
             $ timed = False
             jump hit_with_pipe
 
@@ -595,6 +595,8 @@ label dodged_pipe:
     scene v8sdd14 # TPP. Show MC looking up at Joe who is in shock, MC starts to stand up in preparation to plant a huge uppercut on Joe's chin. Lars on the ground. MC focused expression, MC mouth open.
     with dissolve
 
+    $ renpy.end_replay()
+
     $ ip_man = True
     if steam == False:
         image ip_man = "images/v08/achievements/ipman.png"
@@ -644,6 +646,8 @@ label hit_with_pipe:
 
     scene v8sdd32 # TPP. Show MC on the ground in pain, Joe standing over him menacingly, Joe mouth open.
     with dissolve
+
+    $ renpy.end_replay()
 
     je "Hahaha, see ya, 'hero'."
 

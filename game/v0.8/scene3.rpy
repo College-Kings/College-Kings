@@ -224,6 +224,8 @@ label v08_ri_start:
     with dissolve
     ri "Fuck me. That was so good!"
 
+    $ renpy.end_replay()
+
     play music "music/mlove.mp3" fadein 3
 
     scene v8s33a # Same as v8s33 but Riley mouth closed

@@ -224,6 +224,8 @@ label amber_sex_at_joshs:
     with dissolve
     am "My God, you were amazing."
 
+    $ renpy.end_replay()
+
     scene v8amber14a # Same as v8amber14 but Amber mouth closed (And MC mouth open if visible)
     with dissolve
     u "Me? YOU were amazing!"

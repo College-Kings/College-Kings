@@ -121,7 +121,7 @@ label steak_w_chloe:
 
         menu:
             "Flirt with Chloe":
-                $ addPoint("bf")
+                $ addPoint("bf", 1)
                 jump steak_flirt_w_chloe
 
             "Don't flirt with Chloe":
