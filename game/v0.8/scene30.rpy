@@ -16,9 +16,6 @@ label amber_sex_at_joshs:
     with dissolve
     pause
 
-    play music "music/msexy.mp3"
-    play sound "sounds/kiss.mp3"
-
     scene v8amber4 # TPP. Amber and MC standing in front of the bed (with MC towards the bed), making out passionately with Amber holding MC's head
     with dissolve
     pause 1
@@ -207,14 +204,14 @@ label amber_sex_at_joshs:
     am "I'm gonna come! [name] I'm gonna come!!"
 
     u "I think I'm close too."
-    am "Cocgt_119ass [name]. *Moans* Fill it up good!"
+    am "Come in my ass [name]. *Moans* Fill it up good!"
     pause 3
 
-    scene v8amber12 # TPP. Close up of MC's penis inside Amber's a-hole with cum leaking outside
-    with fcgt_119
+    scene cgt_119 # TPP. Close up of MC's penis inside Amber's a-hole with cum leaking outside
+    with flash
     pause 0.5
 
-    scene v8amber12
+    scene cgt_119
     with flash
     u "OHHHHH!"
     am "*Moans*"
@@ -264,8 +261,7 @@ label amber_sex_at_joshs:
     pause 1
 
     scene black
-    with Dissolve(1)
-    pause 0.5
+    with dissolve
 
     jump tues_morning_at_joshs
 
