@@ -4158,7 +4158,7 @@ screen achievements():
                     vbox spacing -10:
                         textbutton "not my business" style "ach"
 
-                        textbutton "Don't disturb Ms.Rose" style "ach2"
+                        textbutton "Don't disturb Ms. Rose" style "ach2"
 
                 else:
                     vbox:

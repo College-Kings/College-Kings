@@ -105,10 +105,10 @@ label drug_deal_w_josh:
     je "If I were you, I'd just hand over the shit now before you end up with a nice, shiny dent in your skull. Save Lars the effort. You dig?"
 
     menu:
-        "Intervine":
+        "Intervene":
             $ addPoint("bro", 1)
             jump int_deal_w_josh
-        "Don't Intervine":
+        "Don't Intervene":
             jump no_int_deal_w_josh
 
 label int_deal_w_josh:
