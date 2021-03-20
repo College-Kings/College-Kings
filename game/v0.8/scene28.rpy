@@ -285,10 +285,10 @@ label int_deal_w_josh:
     image mcjabblocked = Movie(play="images/v08/Scene 28/mcjabblocked.webm", start_image="images/v08/Scene 28/mcjabblockedstart.jpg", image="images/v08/Scene 28/mcjabblockedend.jpg", loop = False)
     image mchookhit = Movie(play="images/v08/Scene 28/mchookhit.webm", start_image="images/v08/Scene 28/mchookhitstart.jpg", image="images/v08/Scene 28/mchookhitend.jpg", loop = False)
     image mchookblocked = Movie(play="images/v08/Scene 28/mchookblocked.webm", start_image="images/v08/Scene 28/mchookblockedstart.jpg", image="images/v08/Scene 28/mchookblockedend.jpg", loop = False)
-    image larsjab = Movie(play="images/v08/Scene 28/larsjab.webm", start_image="images/v08/Scene 28/larsjabstart.jpg", image="images/v08/Scene 28/larsjabend.jpg", loop = False)
-    image larshook = Movie(play="images/v08/Scene 28/larshook.webm", start_image="images/v08/Scene 28/larshookstart.jpg", image="images/v08/Scene 28/larshookend.jpg", loop = False)
-    image larskick = Movie(play="images/v08/Scene 28/larskick.webm", start_image="images/v08/Scene 28/larskickstart.jpg", image="images/v08/Scene 28/larskickend.jpg", loop = False)
-    image larsbody = Movie(play="images/v08/Scene 28/larsbody.webm", start_image="images/v08/Scene 28/larsbodystart.jpg", image="images/v08/Scene 28/larsbodyend.jpg", loop = False)
+    image larsjab = Movie(play="images/v08/Scene 28/larsjab.mp4", start_image="images/v08/Scene 28/larsjabstart.jpg", image="images/v08/Scene 28/larsjabend.jpg", loop = False)
+    image larshook = Movie(play="images/v08/Scene 28/larshook.mp4", start_image="images/v08/Scene 28/larshookstart.jpg", image="images/v08/Scene 28/larshookend.jpg", loop = False)
+    image larskick = Movie(play="images/v08/Scene 28/larskick.mp4", start_image="images/v08/Scene 28/larskickstart.jpg", image="images/v08/Scene 28/larskickend.jpg", loop = False)
+    image larsbody = Movie(play="images/v08/Scene 28/larsbody.mp4", start_image="images/v08/Scene 28/larsbodystart.jpg", image="images/v08/Scene 28/larsbodyend.jpg", loop = False)
 
     # label Attacker_TargetAction
     label mc_LarsKickHit: # MC Kicks Lars (Hits/No Block)
