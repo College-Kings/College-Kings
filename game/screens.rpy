@@ -4446,6 +4446,31 @@ screen scenegal():
             hover "images/gallery8outline.png"
             action Replay ("brbj", locked = False)
 
+        imagebutton:
+            idle "images/gallery/gallery9.png"
+            hover "images/gallery/gallery9outline.png"
+            action Replay ("v08_cl_start", locked = False)
+
+        imagebutton:
+            idle "images/gallery/gallery10.png"
+            hover "images/gallery/gallery10outline.png"
+            action Replay ("v08_ri_start", locked = False)
+
+        imagebutton:
+            idle "images/gallery/gallery11.png"
+            hover "images/gallery/gallery11outline.png"
+            action Replay ("hoco_amb_night", locked = False)
+
+        imagebutton:
+            idle "images/gallery/gallery12.png"
+            hover "images/gallery/gallery12outline.png"
+            action Replay ("s28_LarsFight", locked = False)
+
+        imagebutton:
+            idle "images/gallery/gallery13.png"
+            hover "images/gallery/gallery13outline.png"
+            action Replay ("amber_sex_at_joshs", locked = False)
+
 
 
 screen skiptut():

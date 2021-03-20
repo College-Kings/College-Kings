@@ -129,6 +129,8 @@ label hoco_amb_night:
 
     u "Damn. That was fucking good."
 
+    $ renpy.end_replay()
+
     scene v8samb10b # FPP. Same camera as v8samb10, Amber mouth open, slight laugh.
     with dissolve
 

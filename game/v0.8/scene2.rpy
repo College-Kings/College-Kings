@@ -191,6 +191,8 @@ label v08_cl_start:
     cl "Oh yes!"
     cl "Stop teasing already!"
 
+    $ renpy.end_replay()
+
     play sound "sounds/knock.mp3"
     stop music
 
