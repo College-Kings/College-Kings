@@ -1,4 +1,5 @@
 screen skipTutS28():
+    tag fightScreen
     add "images/endfr.png"
     text "Would you like to play the fighting tutorial?" style "endfree"
     textbutton "Yes" style "endfr":
@@ -14,6 +15,7 @@ screen skipTutS28():
         yalign 0.58
 
 screen s28_LarsFightChoice():
+    tag fightScreen
     image "images/fightchoice.png"
 
     text "Fighting":
@@ -53,6 +55,7 @@ screen s28_LarsFightChoice():
 
 
 screen s28_LarsSelectDifficulty():
+    tag fightScreen
     image "images/fightchoice.png"
 
     text "Difficulty":
@@ -85,7 +88,8 @@ screen s28_LarsSelectDifficulty():
             action Jump ("s28_LarsHardDifficulty")
 
 screen s28_LarsKeybindOptions():
-    image "images/fightchoice.png"
+     tag fightScreen
+   image "images/fightchoice.png"
 
     text "Keybinding":
         xalign 0.5
@@ -113,6 +117,7 @@ screen s28_LarsKeybindOptions():
             action Jump ("s28_LarsStartFight")
 
 screen s28_mcLarsAttack():
+    tag fightScreen
 
     if larsStance == 1:
         image "images\v08\Scene 28\fight images\LarsStance - Jab.jpg"
@@ -291,6 +296,7 @@ screen s28_mcLarsAttack():
 
 
 screen s28_larsMcAttack():
+    tag fightScreen
 
     if larsAttack == 1: # A
         image "images\v08\Scene 28\fight images\larshookend.jpg"
