@@ -97,26 +97,37 @@ label v8_ending:
         scene v8send7a # TPP. Same camera as v8send7, MC checking his phone, looking confused.
         with dissolve
 
+        $ showphone = True
+        $ phoneexit = "s46_kiwiiContinue"
+
         $ contact_Ryan.newMessage("What the hell's happening on Kiwii?")
         $ contact_MC.addReply("I don't know. What is it?")
         $ contact_Ryan.newMessage("Fuckin check it out man. Crazy shit")
 
-        # $ newKiwiiPost = KiwiiPost("Aubrey", **"IMAGE"**, "[image: red square]", **numberLikes=999**)
+        $ newKiwiiPost = KiwiiPost("Aubrey", "images/v08/kiwii/red_square.jpg", "[image: red square]", numberLikes=renpy.random.randint(100, 200))
         # $ newKiwiiPost.addReply("???", numberLikes=999)
         # $ newKiwiiPost.addReply("What?", numberLikes=999)
 
-        # $ newKiwiiPost = KiwiiPost("Chris", **"IMAGE"**, "[image:red square]", **numberLikes=999**)
+        $ newKiwiiPost = KiwiiPost("Chris", "images/v08/kiwii/red_square.jpg", "[image: red square]", numberLikes=renpy.random.randint(100, 200))
         # $ newKiwiiPost.addReply("Dude?", numberLikes=999)
         # $ newKiwiiPost.addReply("Wtf is going on? It's everywhere", numberLikes=999)
 
-        # $ newKiwiiPost = KiwiiPost("Grayson", **"IMAGE"**, "[image: red square]", **numberLikes=999**)
+        $ newKiwiiPost = KiwiiPost("Grayson", "images/v08/kiwii/red_square.jpg", "[image: red square]", numberLikes=renpy.random.randint(100, 200))
         # $ newKiwiiPost.addReply("Bout time!", numberLikes=999)
         # $ newKiwiiPost.addReply("Seriously?", numberLikes=999)
+
+        label s46_kiwiiContinue:
+
+            if contact_Ryan.replies:
+                "I should really check out Kiwii"
+                jump s46_kiwiiContinue
 
         u "(What the...?)"
 
         scene v8send8 # TPP. Show MC, MC looks really confused.
         with dissolve
+
+        $ showphone = False
 
         jump ending8
 

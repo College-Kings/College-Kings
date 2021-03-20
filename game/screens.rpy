@@ -4204,6 +4204,46 @@ screen achievements():
                     vbox:
                         textbutton "strike" style "ach3"
 
+                if get_a_room == True:
+                    vbox spacing -10:
+                        textbutton "get a room" style "ach"
+
+                        textbutton "Sleep With Amber at Josh's" style "ach2"
+
+                else:
+                    vbox:
+                        textbutton "get a room" style "ach3"      
+
+                if ip_man == True:
+                    vbox spacing -10:
+                        textbutton "ip man" style "ach"
+
+                        textbutton "Win The Alley Fight" style "ach2"
+
+                else:
+                    vbox:
+                        textbutton "ip man" style "ach3"      
+
+                if thick_and_thin == True:
+                    vbox spacing -10:
+                        textbutton "thick and thin" style "ach"
+
+                        textbutton "Help Penelope" style "ach2"
+
+                else:
+                    vbox:
+                        textbutton "thick and thin" style "ach3"                 
+
+                if up_for_more == True:
+                    vbox spacing -10:
+                        textbutton "up for more" style "ach"
+
+                        textbutton "Flirt With Chloe" style "ach2"
+
+                else:
+                    vbox:
+                        textbutton "up for more" style "ach3"                                                                       
+
 style ach is button:
     background "#d4af37"
     xalign 0.5

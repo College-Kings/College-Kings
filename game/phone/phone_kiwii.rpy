@@ -125,7 +125,7 @@ init -1:
 
     default kiwiiPosts = []
     default liked_kiwiPosts = []
-    default kiwiiUsers = {
+    define kiwiiUsers = {
             "Adam": {
                 "username": "A.D.A.M.",
                 "profilePicture": "images/Phone/Kiwii/Profile Pictures/adpp.png"

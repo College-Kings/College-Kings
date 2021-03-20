@@ -308,7 +308,7 @@ label walk_home_hosp:
 
         se "I'm not talking about no fucking cats!"
 
-        scene v8sbwd13d
+        scene v8sbws13d
         with dissolve
 
         u "Right, haha..."

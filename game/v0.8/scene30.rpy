@@ -16,15 +16,26 @@ label amber_sex_at_joshs:
     with dissolve
     pause
 
-    play music "music/msexy.mp3"
-    play sound "sounds/kiss.mp3"
-
     scene v8amber4 # TPP. Amber and MC standing in front of the bed (with MC towards the bed), making out passionately with Amber holding MC's head
     with dissolve
     pause 1
 
     scene v8amber4a # Amber pulls back her head and is speaking now while looking into the MC's eyes seductively
     with dissolve
+
+    $ get_a_room = True
+    if steam == False:
+        image get_a_room = "images/v08/achievements/getaroom.png"
+        show get_a_room:
+            xpos 0
+            ypos -200
+            linear 0.5 xpos 0 ypos 0
+            pause 2.0
+            linear 0.5 xpos 0 ypos -200
+    else:
+        $ achievement.grant("get_a_room")
+        $ achievement.sync()
+
     if ending == "amber":
         am "I've been waiting for this since the last time."
 
@@ -196,11 +207,11 @@ label amber_sex_at_joshs:
     am "Come in my ass [name]. *Moans* Fill it up good!"
     pause 3
 
-    scene v8amber12 # TPP. Close up of MC's penis inside Amber's a-hole with cum leaking outside
+    scene cgt_119 # TPP. Close up of MC's penis inside Amber's a-hole with cum leaking outside
     with flash
     pause 0.5
 
-    scene v8amber12
+    scene cgt_119
     with flash
     u "OHHHHH!"
     am "*Moans*"
@@ -250,8 +261,7 @@ label amber_sex_at_joshs:
     pause 1
 
     scene black
-    with Dissolve(1)
-    pause 0.5
+    with dissolve
 
     jump tues_morning_at_joshs
 

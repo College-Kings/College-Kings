@@ -16,12 +16,12 @@ label for_w_gray:
 
     gr "Sit."
 
-    scene v8sfor3 # FPP. You're now sat on the rock, show Grayson sitting on a rock opposite you.
+    scene v8sfor2 # FPP. You're now sat on the rock, show Grayson sitting on a rock opposite you.
     with dissolve
 
     pause 0.5
 
-    scene v8sfor3a # FPP. Same camera as v8sfor3, Grayson now sat on the rock, looking at camera.
+    scene v8sfor8e # FPP. Same camera as v8sfor3, Grayson now sat on the rock, looking at camera.
     with dissolve
 
     menu:
@@ -35,7 +35,7 @@ label for_w_gray:
 label for_w_gray_q:
     u "Um, where's everyone else?"
 
-    scene v8sfor3b # FPP. Same camera as v8sfor3, Grayson stern expression, mouth open.
+    scene v8sfor8d # FPP. Same camera as v8sfor3, Grayson stern expression, mouth open.
     with dissolve
 
     gr "They don't matter. You're what matters."
@@ -45,7 +45,7 @@ label for_w_gray_q:
 label for_w_gray_no_q:
     u "(I wonder where everyone else is)"
 
-    scene v8sfor3b
+    scene v8sfor8d
     with dissolve
 
     gr "I bet you're wondering why I brought you here. And not all the other Apes."
@@ -53,7 +53,7 @@ label for_w_gray_no_q:
     jump for_w_gray_cont
 
 label for_w_gray_cont:
-    scene v8sfor3c # FPP. Same camera as v8sfor3, Grayson slight grin, mouth open.
+    scene v8sfor8c # FPP. Same camera as v8sfor3, Grayson slight grin, mouth open.
     with dissolve
 
     gr "I see something in you, [name]. Something big."
@@ -381,17 +381,17 @@ label for_w_gray_hesitate:
 
     gr "Louder!"
 
-    scene v8sfor17c # FPP. Same camera as v8sfor17, Grayson pacing around again, looking elsewhere, intense expression, mouth closed.
+    scene v8sfor17a # FPP. Same camera as v8sfor17, Grayson pacing around again, looking elsewhere, intense expression, mouth closed.
     with dissolve
 
     u "I'm sure!"
 
-    scene v8sfor17d # FPP. Same camera as v8sfor17, Grayson looking at camera again, intense expression, pounding chest, shouting louder, mouth open
+    scene v8sfor17b # FPP. Same camera as v8sfor17, Grayson looking at camera again, intense expression, pounding chest, shouting louder, mouth open
     with dissolve
 
     gr "*yells* I'M SURE!"
 
-    scene v8sfor17e # FPP. Same camera as v8sfor17, Grayson looking at camera, intense expression, pounding chest, mouth closed.
+    scene v8sfor17 # FPP. Same camera as v8sfor17, Grayson looking at camera, intense expression, pounding chest, mouth closed.
     with dissolve
 
     u "*yells* I'M SURE!"

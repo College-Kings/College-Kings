@@ -421,9 +421,4 @@ label opti_end:
 
     u "Bye."
 
-    scene v8sopt28 # TPP. Show everyone leaving the opticians, Riley and Aubrey leaving together, MC behind them.
-    with dissolve
-
-    pause 0.5
-
     jump mon_eve_room_josh
