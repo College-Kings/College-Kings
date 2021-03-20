@@ -101,7 +101,7 @@ label v8_ending:
         $ phoneexit = "s46_kiwiiContinue"
 
         $ contact_Ryan.newMessage("What the hell's happening on Kiwii?")
-        $ contact_MC.addReply("I don't know. What is it?")
+        $ contact_Ryan.addReply("I don't know. What is it?")
         $ contact_Ryan.newMessage("Fuckin check it out man. Crazy shit")
 
         $ newKiwiiPost = KiwiiPost("Aubrey", "images/v08/kiwii/red_square.jpg", "[image: red square]", numberLikes=renpy.random.randint(100, 200))
