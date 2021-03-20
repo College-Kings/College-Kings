@@ -81,13 +81,13 @@ call screen messager(contact_Amber)
 label aubrep16a:
 $ aubrep16 = 1
 $ meetaubrey = True
-$ contact_Aubrey.newMessage("I guess you didn't want my surprise :/")#
-$ contact_Aubrey.addReply("Sorry something important came up and I didn't have time.", "amrep17a")
+$ contact_Aubrey.newMessage(":)")
 call screen messager(contact_Aubrey)
 
 label aubrep16b:
 $ aubrep16 = 2
 $ meetaubrey = False
+$ contact_Aubrey.newMessage("Oh, okay")
 call screen messager(contact_Aubrey)
 
 label aubrep19a:
