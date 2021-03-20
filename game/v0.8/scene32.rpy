@@ -60,7 +60,7 @@ label mr_aft_class:
         with dissolve
 
         menu:
-            "Ask more question":
+            "Ask more questions":
                 $ addPoint("bf", 1)
                 jump ask_rose_more_q
             "Leave":
