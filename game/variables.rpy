@@ -228,22 +228,7 @@ default snitch = False
 default chooseimre = True
 default meetchloe = False
 default imreforgives = False
-# default clrep8 = 0
-# default clrep6 = 0
-# default amrep11 = 0
-# default amrep12 = 0
-# default amrep13 = 0
-# default amrep16 = 0
 default chloecaught = False
-# default amrep17 = 0
-# default amrep18 = 0
-# default amrep21 = 0
-# default clmsg4a = 0
-# default ammsg17a = 0
-# default ammsg21a = 0
-# default clrep9 = 0
-# default clmsg9a = 0
-# default ammsg8a = 0
 default kct = "popular"
 default showkct = True
 default v06 = True #kinda ;D
@@ -394,7 +379,11 @@ default wolfpack = False
 
 default nobeach = False
 
-
+# 0.8
+default get_a_room = False
+default ip_man = False
+default thick_and_thin = False
+default up_for_more = False
 
 
 ## Kiwii Vars

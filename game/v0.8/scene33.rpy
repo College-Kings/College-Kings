@@ -260,7 +260,7 @@ label hallway_no_help_nora:
 
     u "I would but I don't have much time."
 
-    scene v8shal3g # FPP. Same camera as v8shal3, Nora visibly irritated, mouth closed.
+    scene v8shal3e # FPP. Same camera as v8shal3, Nora visibly irritated, mouth closed.
     with dissolve
 
     u "Here, give me a couple flyers and I'll pass them out on my way."

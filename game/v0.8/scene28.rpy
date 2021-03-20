@@ -79,12 +79,12 @@ label drug_deal_w_josh:
 
     play music "music/m3punk.mp3"
 
-    scene v8dd4c # FPP. Same camera as v8sdd4, Joe and Lars looking at the camera, angry expression, Joe now holding the pipe in one hand only. Joe mouth open.
+    scene v8sdd4c # FPP. Same camera as v8sdd4, Joe and Lars looking at the camera, angry expression, Joe now holding the pipe in one hand only. Joe mouth open.
     with dissolve
 
     je "See, this is where you're under the wrong impression you're in control of this situation. My buddy here, Lars, has a quick temper and fists like rock. Pretty sure I don't gotta spell shit out for ya, do I?"
 
-    scene v8dd5b # TPP. Same camera as v8sdd5, Josh looking nervous but trying to hide it, Joe and Lars angry expression, MC looking nervous, everyone else mouth closed, Josh mouth open,
+    scene v8sdd5b # TPP. Same camera as v8sdd5, Josh looking nervous but trying to hide it, Joe and Lars angry expression, MC looking nervous, everyone else mouth closed, Josh mouth open,
     with dissolve
 
     jo "Spell out what? You've got the cash, I've got the shit, what's the problem?"
@@ -105,10 +105,10 @@ label drug_deal_w_josh:
     je "If I were you, I'd just hand over the shit now before you end up with a nice, shiny dent in your skull. Save Lars the effort. You dig?"
 
     menu:
-        "Intervine":
+        "Intervene":
             $ addPoint("bro", 1)
             jump int_deal_w_josh
-        "Don't Intervine":
+        "Don't Intervene":
             jump no_int_deal_w_josh
 
 label int_deal_w_josh:
@@ -277,15 +277,15 @@ label int_deal_w_josh:
                 call screen s28_larsMcAttack
 
     ### Add image defines + Start/End Images
-    image mckickhit = Movie(play="images/v08/Scene 28/mckickhit.webm", start_image="images/v08/Scene 28/mckickhitstart.jpg", image="images/v08/Scene 28/ckickhitend.jpg", loop = False)
+    image mckickhit = Movie(play="images/v08/Scene 28/mckickhit.webm", start_image="images/v08/Scene 28/mckickhitstart.jpg", image="images/v08/Scene 28/mckickhitend.jpg", loop = False)
     image mckickblocked = Movie(play="images/v08/Scene 28/mckickblocked.webm", start_image="images/v08/Scene 28/mckickblockedstart.jpg", image="images/v08/Scene 28/mckickblockedend.jpg", loop = False)
-    image mcbodyhit = Movie(play="images/v08/Scene 28/mcbodyhit.webm", start_image="images/v08/Scene 28/mcbodyhitstart.jpg", image="images/v08/Scene 28/mcbodyhitend.jpg", loop = False)
+    image mcbodyhit = Movie(play="images/v08/Scene 28/mcbodyhit.webm", start_image="images/v08/Scene 28/mcbodyhookstart.jpg", image="images/v08/Scene 28/mcbodyhitend.jpg", loop = False)
     image mcbodyblocked = Movie(play="images/v08/Scene 28/mcbodyblocked.webm", start_image="images/v08/Scene 28/mcbodyblockedstart.jpg", image="images/v08/Scene 28/mcbodyblockedend.jpg", loop = False)
     image mcjabhit = Movie(play="images/v08/Scene 28/mcjabhit.webm", start_image="images/v08/Scene 28/mcjabhitstart.jpg", image="images/v08/Scene 28/mcjabhitend.jpg", loop = False)
     image mcjabblocked = Movie(play="images/v08/Scene 28/mcjabblocked.webm", start_image="images/v08/Scene 28/mcjabblockedstart.jpg", image="images/v08/Scene 28/mcjabblockedend.jpg", loop = False)
     image mchookhit = Movie(play="images/v08/Scene 28/mchookhit.webm", start_image="images/v08/Scene 28/mchookhitstart.jpg", image="images/v08/Scene 28/mchookhitend.jpg", loop = False)
     image mchookblocked = Movie(play="images/v08/Scene 28/mchookblocked.webm", start_image="images/v08/Scene 28/mchookblockedstart.jpg", image="images/v08/Scene 28/mchookblockedend.jpg", loop = False)
-    image larsjab = Movie(play="images/v08/Scene 28/larsjab.webm", start_image="images/v08/Scene 28/larsjabstart.jpg", image="images/v08/Scene 28/arsjabend.jpg", loop = False)
+    image larsjab = Movie(play="images/v08/Scene 28/larsjab.webm", start_image="images/v08/Scene 28/larsjabstart.jpg", image="images/v08/Scene 28/larsjabend.jpg", loop = False)
     image larshook = Movie(play="images/v08/Scene 28/larshook.webm", start_image="images/v08/Scene 28/larshookstart.jpg", image="images/v08/Scene 28/larshookend.jpg", loop = False)
     image larskick = Movie(play="images/v08/Scene 28/larskick.webm", start_image="images/v08/Scene 28/larskickstart.jpg", image="images/v08/Scene 28/larskickend.jpg", loop = False)
     image larsbody = Movie(play="images/v08/Scene 28/larsbody.webm", start_image="images/v08/Scene 28/larsbodystart.jpg", image="images/v08/Scene 28/larsbodyend.jpg", loop = False)
@@ -573,11 +573,6 @@ label no_int_deal_w_josh:
 
     pause 0.5
 
-    scene v8sdd30 # TPP. Show Joe and Lars next to eachother leaving the scene, Josh on the ground in pain, MC watching Joe and Lars walk away.
-    with dissolve
-
-    pause 0.5
-
     jump check_on_josh
 
 label dodged_pipe:
@@ -593,6 +588,19 @@ label dodged_pipe:
 
     scene v8sdd14 # TPP. Show MC looking up at Joe who is in shock, MC starts to stand up in preparation to plant a huge uppercut on Joe's chin. Lars on the ground. MC focused expression, MC mouth open.
     with dissolve
+
+    $ ip_man = True
+    if steam == False:
+        image ip_man = "images/v08/achievements/ipman.png"
+        show ip_man:
+            xpos 0
+            ypos -200
+            linear 0.5 xpos 0 ypos 0
+            pause 2.0
+            linear 0.5 xpos 0 ypos -200
+    else:
+        $ achievement.grant("ip_man")
+        $ achievement.sync()
 
     u "Fuck you!"
 

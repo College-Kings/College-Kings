@@ -26,3 +26,6 @@ traceback.txt
 *.rpyc
 *.zip
 *.exe
+
+
+.vscode/

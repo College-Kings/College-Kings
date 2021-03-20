@@ -30,9 +30,9 @@ init python:
 
 define persistent.ep = 8
 
-define steam = True
+define steam = False
 
-define developer = True
+define developer = False
 
 define config.steam_appid = 1463120
 
@@ -684,6 +684,7 @@ label starta:
     u "(Huh?)"
 
     $ wt = 1
+    $ phoneexit = "phonea"
     # $ contact_Emily.newMessage(emilyMessage1)
     $ contact_Emily.newMessage("Hey...\nI know we haven’t talked much after we broke up, but I just wanted to let you know that I didn’t get into Stanford, so I’ll be going to San Vallejo as well.\nGuess I’ll see you there. :)")
     $ contact_Emily.addReply("Yeah... I’ll see you there.", "emrep1a")
@@ -692,7 +693,6 @@ label starta:
 
     call screen phone
 
-$ phoneexit = "phonea"
 
 label phonea:
     $ wt = 0
@@ -8061,7 +8061,7 @@ label bo_ad:
 
     u "(Why can't life be more like porn...? Sex with her would take any pain away.)"
 
-    u "Uhm... no, that's fine. I doesn't hurt too badly."
+    u "Uhm... no, that's fine. It doesn't hurt too badly."
 
     scene s152c
     with dissolve
@@ -8114,7 +8114,7 @@ label bo_bd:
     $ contact_Aubrey.addReply("Wait they're not dating?", "aubrep2a")
     $ contact_Aubrey.addReply("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume.", "aubrep2b")
 
-    u "(Oh , I just got a message.)"
+    u "(Oh, I just got a message.)"
     label phoneq:
     label repeatc:
     if contact_Aubrey.replies:
@@ -10914,7 +10914,7 @@ label bo_bd:
 
 
 
-    u "(Okay, It's 11:50 pm. Time to go to the gym to meet Chloe.)"
+    u "(Okay, it's 11:50 pm. Time to go to the gym to meet Chloe.)"
 
     u "(I really hope she actually shows up.)"
 
@@ -12896,7 +12896,7 @@ label bo_bd:
     scene anew6
     with dissolve
 
-    au "You have a nice cock, I could get used this."
+    au "You have a nice cock, I could get used to this."
 
 
     scene anew6b
@@ -16126,7 +16126,7 @@ label bo_bd:
                 scene s334g
                 with dissolve
 
-                u "You mean since you rescued me from Cameron?."
+                u "You mean since you rescued me from Cameron?"
 
                 scene s334f
                 with dissolve
@@ -16350,7 +16350,7 @@ label bo_bd:
     scene s340a  # Ryan closer and standing up
     with dissolve
 
-    u "Ryan, can we talk about yesterday?."
+    u "Ryan, can we talk about yesterday?"
 
     scene s341 # Ryan close up apolegetic
     with dissolve
@@ -16874,7 +16874,7 @@ label bo_bd:
         scene s345f
         with dissolve
 
-        pe "Well, me too!. Wanna sit down?"
+        pe "Well, me too! Wanna sit down?"
 
         scene s345g
         with dissolve
@@ -18491,7 +18491,7 @@ label bo_bd:
     scene s376a # you opening your eyes
     with dissolve
 
-    u "(Alright, time for an new day.)"
+    u "(Alright, time for a new day.)"
     if volleyball == True:
 
         scene s376b # yawning and turning around
@@ -19661,7 +19661,7 @@ label bo_bd:
     scene s387a # even closer, dog on the left side
     with dissolve
 
-    la "Now it's up to you, will you actively decide to kill the dog to save a human life or will you idly stand by and let the her die?"
+    la "Now it's up to you, will you actively decide to kill the dog to save a human life or will you idly stand by and let her die?"
 
     scene s388b
     with dissolve
@@ -22538,7 +22538,7 @@ tell me!"
     scene s430d # adam looking at chris (your bottom perspective stillk)
     with dissolve
 
-    ad "You think I'm scared of you , Chris?"
+    ad "You think I'm scared of you, Chris?"
 
     scene s432 # no longer your perspective: Chris and Adam about 1-2 metres apart staring each other down.
     with dissolve
@@ -22622,7 +22622,7 @@ tell me!"
     scene s428b
     with dissolve
 
-    ch "Well, you gave him a nose bleed, so you must have landed at least one good punch."
+    ch "Well, you gave him a nosebleed, so you must have landed at least one good punch."
 
     ch "Also, fighting can be learned. We care about loyalty. And you trying to avenge your friend like that, without much fighting experience, that's honorable."
 

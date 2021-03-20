@@ -124,7 +124,7 @@ label wolves_gym_cool:
     scene v8sgym9a
     with dissolve
 
-    u "Not sure I'll ever be that. But the girls seems to like the muscles."
+    u "Not sure I'll ever be that. But the girls seem to like the muscles."
 
     scene v8sgym9c # TPP. Same camera as v8sgym9, MC mouth closed, Sebastian laugh, mouth open.
     with dissolve
@@ -179,24 +179,10 @@ label wolves_gym_end:
 
     u "I won't. G'night."
 
-    scene v8sgym13 # TPP. Show MC entering his room, looking exhausted.
-    with fade
-
-    pause 1
-
     stop music fadeout 3
 
-    scene v8sgym14 # TPP. Show MC lying down on his bed, looking really tired.
-    with dissolve
-
-    u "(That workout has tired me out, I can catch up on studying tomorrow.)"
-
-    scene v8sgym14a # TPP. Same camera as v8sgym14, MC mouth closed, eyes closed.
-    with dissolve
-    pause 0.5
-
     scene black
-    with Dissolve(1)
+    with fade
     pause 0.5
 
     jump mc_wolves_sun_morn

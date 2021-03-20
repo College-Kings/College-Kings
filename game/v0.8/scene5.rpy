@@ -110,7 +110,7 @@ label hoco_amb_night:
     pause
     u "I'm gonna-"
 
-    scene v8am1dt1end
+    scene amff00
     with hpunch
     u "Ahh!"
 
