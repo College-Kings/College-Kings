@@ -62,7 +62,7 @@ label phn_riley11_a:
 
 label phn_riley11_a1:
     $ contact_Riley.newMessage("I don't know. Why don't you come with me and Aubrey to try some on?")
-    $ rileyMessage11_a1.addReply("Sure! Meet you there?", "phn_riley11_a2")
+    $ contact_Riley.addReply("Sure! Meet you there?", "phn_riley11_a2")
     call screen messager(contact_Riley)
 
 label phn_riley11_a2:
