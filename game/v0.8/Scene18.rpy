@@ -87,7 +87,7 @@ label sun_aft_apes_house:
     scene v8sahs5 # FPP. Show Samantha walking up the stairs of the Apes house, Camera from the bottom of the stairs looking up.
     with dissolve
 
-    u "(She shouldn't be alone right now. I should talk to her)"
+    u "(She shouldn't be alone right now. I should talk to her.)"
 
     scene v8sahs6 # TPP. Show MC walking up the stairs of the Apes house.
     with dissolve
