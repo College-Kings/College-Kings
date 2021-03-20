@@ -5,9 +5,9 @@ init python:
             self.user = user
             self.image = image
 
-            if not mentions: self.mentions = []
-            elif isinstance(mentions, str): self.mentions = [mentions]
-            else: self.mentions = mentions
+            if isinstance(mentions, basestring): self.mentions = [mentions]
+            elif isinstance(mentions, list): self.mentions = mentions
+            else: self.mentions = []
 
             self.caption = caption
             self.numberLikes = numberLikes
@@ -70,9 +70,9 @@ init python:
             self.user = user
             self.text = text
 
-            if not mentions: self.mentions = []
-            elif isinstance(mentions, str): self.mentions = [mentions]
-            else: self.mentions = mentions
+            if isinstance(mentions, basestring): self.mentions = [mentions]
+            elif isinstance(mentions, list): self.mentions = mentions
+            else: self.mentions = []
 
             self.numberLikes = numberLikes
             self.liked = liked
@@ -92,9 +92,9 @@ init python:
             self.reply = reply
             self.label = label
 
-            if not mentions: self.mentions = []
-            elif isinstance(mentions, str): self.mentions = [mentions]
-            else: self.mentions = mentions
+            if isinstance(mentions, basestring): self.mentions = [mentions]
+            elif isinstance(mentions, list): self.mentions = mentions
+            else: self.mentions = []
 
 
             if kct == "popular": self.numberLikes = int(round(numberLikes * 1.5))
