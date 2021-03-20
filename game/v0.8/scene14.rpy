@@ -54,10 +54,10 @@ label mc_apes_sun_morn:
 
 
 label v8_s14_pen_text:
-if contact_Penelope.messages[-1].replies:
-    u "(I should reply to her.)"
-    jump v8_s14_pen_text
-else:
-    $ showphone = False
-    u "(That sounded serious. What got her all upset so sudden?)"
-    jump penelope_dorm_hack
+    if contact_Penelope.messages[-1].replies:
+        u "(I should reply to her.)"
+        jump v8_s14_pen_text
+    else:
+        $ showphone = False
+        u "(That sounded serious. What got her all upset so sudden?)"
+        jump penelope_dorm_hack

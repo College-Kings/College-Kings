@@ -4,6 +4,9 @@
 # Time: Sunday Evening
 
 label sun_eve_room:
+    $ showphone = True
+    $ phoneexit = "s19_phoneExit"
+
     if joinwolves:
         scene v8sser1 # TPP. Show MC lying on his Wolves bed on his phone.
         with fade
@@ -35,9 +38,9 @@ label sun_eve_room:
             label s19_reply5:
                 $ contact_Amber.newMessage("It's only fair, right? Make us even")
                 if joinwolves:
-                    $ contact_Amber.addImgReply("images/v08/Scene19/w_dick_pic.jpg", "s19_reply6")
+                    $ contact_Amber.addImgReply("images/v08/Scene 19/w_dick_pic.jpg", "s19_reply6")
                 else:
-                    $ contact_Amber.addImgReply("images/v08/Scene19/a_dick_pic.jpg", "s19_reply6")
+                    $ contact_Amber.addImgReply("images/v08/Scene 19/a_dick_pic.jpg", "s19_reply6")
                 call screen messager(contact_Amber)
             label s19_reply6:
                 $ contact_Amber.newMessage("Wow, better than I thought")
@@ -52,7 +55,7 @@ label sun_eve_room:
                 $ contact_Amber.addReply("Now? What about you?", "s19_reply9")
                 call screen messager(contact_Amber)
             label s19_reply9:
-                $ contact_Amber.newImgMessage("images/v08/Scene19/text_images/amb_pussy_pic.jpg")
+                $ contact_Amber.newImgMessage("images/v08/Scene 19/amb_pussy_pic.jpg")
                 $ contact_Amber.addReply("Aw fuck", "s19_reply10")
                 call screen messager(contact_Amber)
             label s19_reply10:
@@ -278,7 +281,7 @@ label sun_eve_room:
         else:
             # -MC's phone buzzes-
             $ contact_Lauren.newMessage("Hey, Sweetie, what are you up to?")
-            $ contact_Lauren.addReply("Nothing, just catching up on some homework. You having a good night?")
+            $ contact_Lauren.addReply("Nothing, just catching up on some homework. You having a good night?", "s19_reply50")
             call screen messager(contact_Lauren)
             label s19_reply50:
                 $ contact_Lauren.newMessage("It would be better if you were here...")
@@ -346,3 +349,8 @@ label sun_eve_room:
                 u "(I think I'll get an early night)"
 
                 jump mon_morning_room
+
+label s19_phoneExit:
+    if contact_Emily.messages[-1].replies or contact_Penelope.messages[-1].replies:
+        jump sun_eve_room
+    jump mon_morning_room
