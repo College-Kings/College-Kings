@@ -684,6 +684,7 @@ label starta:
     u "(Huh?)"
 
     $ wt = 1
+    $ phoneexit = "phonea"
     # $ contact_Emily.newMessage(emilyMessage1)
     $ contact_Emily.newMessage("Hey...\nI know we haven’t talked much after we broke up, but I just wanted to let you know that I didn’t get into Stanford, so I’ll be going to San Vallejo as well.\nGuess I’ll see you there. :)")
     $ contact_Emily.addReply("Yeah... I’ll see you there.", "emrep1a")
@@ -692,7 +693,6 @@ label starta:
 
     call screen phone
 
-$ phoneexit = "phonea"
 
 label phonea:
     $ wt = 0
