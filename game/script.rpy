@@ -32,7 +32,7 @@ define persistent.ep = 8
 
 define steam = False
 
-define developer = False
+define developer = True
 
 define config.steam_appid = 1463120
 
