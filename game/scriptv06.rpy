@@ -1198,6 +1198,7 @@ label script06:
             $ ammsgnot = 1
             $ ammsg = 17
             $ contact_Amber.newMessage("I guess you didn't want my surprise :/")
+            $ contact_Amber.addReply("Sorry something important came up and I didn't have time.", "amrep17a")
 
             $ ammsg17a = 1
             $ ammsg17 = "I guess you didn't want my surprise :/"
