@@ -2425,7 +2425,7 @@ style slider_pref_slider:
 #######################
 screen stats():
 
-        add "images/phonescreen.png" at truecenter
+    use phoneTemplate:
 
         add "images/stats.png" at truecenter
         if noexit == False:

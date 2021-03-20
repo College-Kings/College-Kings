@@ -17195,7 +17195,7 @@ label bo_bd:
 
     else:
 
-        if contact_Josh.messages[-1].reply == "I can't, sorry.":
+        if contact_Josh.messages[-1].reply.message == "I can't, sorry.":
 
             u "(Fucking hell, I forgot how persistent Josh could be...)"
             $ showphone = False
@@ -18850,7 +18850,7 @@ label bo_bd:
 
     else:
 
-        if contact_Josh.messages[-1].reply == "I can't, sorry.":
+        if contact_Josh.messages[-1].reply.message == "I can't, sorry.":
             $ contact_Amber.newMessage("Hey, it's Amber")
             $ contact_Amber.newMessage("Josh gave me your number")
             $ contact_Amber.newMessage("How come you didn't show up yesterday? Everything okay? xx")

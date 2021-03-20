@@ -1193,20 +1193,10 @@ label script06:
         if chloemad == True: # Amber texts why you never got back to her
             play sound "sounds/vibrate.mp3"
             $ showphone = True
-            $ msgnot = 1
-            $ amisreply = 1
-            $ ammsgnot = 1
-            $ ammsg = 17
+
             $ contact_Amber.newMessage("I guess you didn't want my surprise :/")
             $ contact_Amber.addReply("Sorry something important came up and I didn't have time.", "amrep17a")
 
-            $ ammsg17a = 1
-            $ ammsg17 = "I guess you didn't want my surprise :/"
-            $ amrep17a = "Sorry something important came up and I didn't have time."
-            $ amrep18a = "I'm alone now, if the surprise is still on ;)"
-            $ amrep18b = "I'll make it up to you tho"
-            $ ammsg19 = "Moment's passed..."
-            $ ammsg20 = "You better xx"
             $ phoneexit = "phoneae"
 
             " "
