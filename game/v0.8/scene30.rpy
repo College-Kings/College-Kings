@@ -78,7 +78,7 @@ label amber_sex_at_joshs:
     image v8am2cg2 = Movie(play="images/v08/Scene 30/v8am2cg2.webm", loop=True, image="images/v08/Scene 30/cgt_00.jpg", start_image="images/v08/Scene 30/cgt_00.jpg") # CG TPP
     image v8am2cg2f = Movie(play="images/v08/Scene 30/v8am2cg2f.webm", loop=True, image="images/v08/Scene 30/cgt_00.jpg", start_image="images/v08/Scene 30/cgt_00.jpg")
 
-    image v8am2dg1 = Movie(play="images/v08/Scene 30/v8am2dg1.webm", loop=True, image="images/v08/Scene 30/cgt_000.jpg", start_image="images/v08/Scene 30/cgt_000.jpg") # Doggy 1 (close up of penetration)
+    image v8am2dg1 = Movie(play="images/v08/Scene 30/v8am2dg1f.webm", loop=True, image="images/v08/Scene 30/cgt_000.jpg", start_image="images/v08/Scene 30/cgt_000.jpg") # Doggy 1 (close up of penetration)
     image v8am2dg1f = Movie(play="images/v08/Scene 30/v8am2dg1f.webm", loop=True, image="images/v08/Scene 30/cgt_000.jpg", start_image="images/v08/Scene 30/cgt_000.jpg")
 
     scene v8am2bj1

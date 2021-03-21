@@ -212,7 +212,7 @@ init -1:
             },
             "Parker": {
                 "username": "Parker",
-                "profilePicture": "https://cdn.discordapp.com/attachments/778214108369387530/822528644525719572/parkerpp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/parkerpp.png"
             }
         }
 

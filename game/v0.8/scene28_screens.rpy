@@ -120,7 +120,7 @@ screen s28_mcLarsAttack():
     tag fightScreen
 
     if larsStance == 1:
-        add "images/v08/Scene 28/fight images/LarsStance - Jab.jpg"
+        add "images/v08/Scene 28/LarsStance - Jab.jpg"
 
         key q:
             action Jump ("mc_LarsJabsHit")

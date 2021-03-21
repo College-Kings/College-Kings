@@ -4405,6 +4405,9 @@ screen scenegal():
         spacing 40
         xpos 78
         ypos 200
+        scrollbars "vertical"
+        draggable True
+        mousewheel True
 
         imagebutton:
             idle "images/gallery1new.png"

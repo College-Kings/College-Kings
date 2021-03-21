@@ -351,6 +351,6 @@ label sun_eve_room:
                 jump mon_morning_room
 
 label s19_phoneExit:
-    if contact_Emily.messages[-1].replies or contact_Penelope.messages[-1].replies:
+    if contact_Emily.getReplies() or contact_Lauren.getReplies()
         jump sun_eve_room
     jump mon_morning_room

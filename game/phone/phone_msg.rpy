@@ -11,14 +11,16 @@ init python:
         def newMessage(self, message):
             message = Message(self, message)
             self.newMessages = True
-            contacts.insert(0, contacts.pop(contacts.index(self))) # Moves contact to the top when recieving a new message
+            try: contacts.insert(0, contacts.pop(contacts.index(self))) # Moves contact to the top when recieving a new message
+            except Exception: pass
             if message not in self.messages:
                 self.messages.append(message)
 
         def newImgMessage(self, img):
             message = ImageMessage(self, img)
             self.newMessages = True
-            contacts.insert(0, contacts.pop(contacts.index(self))) # Moves contact to the top when recieving a new message
+            try: contacts.insert(0, contacts.pop(contacts.index(self))) # Moves contact to the top when recieving a new message
+            except Exception: pass
             if message not in self.messages:
                 self.messages.append(message)
 
@@ -50,6 +52,12 @@ init python:
 
         def unlock(self):
             self.locked = False
+
+        def getReplies(self):
+            try:
+                return self.messages[-1].replies
+            except Exception:
+                return False
 
     class Message:
         def __init__(self, contact, msg):
