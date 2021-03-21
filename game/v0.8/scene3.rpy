@@ -168,7 +168,7 @@ label v08_ri_start:
     u "Ahh fuck!"
     ri "*Moans* Harder!"
 
-    scene v8ridg1f
+    scene v8ridg1
     with dissolve
     pause 3
     u "Hngh!"
