@@ -188,4 +188,4 @@ label mon_eve_room_josh:
             pause 0.5
 
             # jump josh's house
-            jump josh_room
+            jump after_drugs
