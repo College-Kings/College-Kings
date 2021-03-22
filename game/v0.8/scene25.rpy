@@ -12,8 +12,8 @@ label v8_scene24_wolves:
 
     # Kiwii Pic Description (mcpost1w.png, 1920x1080): Selfie of MC sitting at his desk in Wolves house, looking bored and showing his books/laptop in the frame. Should be continuation of v8monroom1
     # $ mcKiwiiPost = KiwiiPost("MC", "images/mcpost1w.png", "Ugh someone save me pls", numberLikes=2)
-    $ showphone = True
-    $ phoneexit = "phn_riley11_setup"
+    # $ showphone = True
+    # $ phoneexit = "phn_riley11_setup"
 
     scene v8monroom1a # MC looking at his phone now, neutral expression, mouth closed. Rest is same as v8monroom1
     with fade
@@ -30,8 +30,8 @@ label v8_scene24_apes:
 
     # Kiwii Pic Description (mcpost1a.png, 1920x1080): Selfie of MC sitting at his desk in Apes house, looking bored and showing his books/laptop in the frame. Should be continuation of v8monroom2
     # $ mcKiwiiPost = KiwiiPost("MC", "images/mcpost1a.png", "Ugh someone save me pls", numberLikes=2)
-    $ showphone = True
-    $ phoneexit = "phn_riley11_setup"
+    # $ showphone = True
+    # $ phoneexit = "phn_riley11_setup"
 
     scene v8monroom2a # MC looking at his phone now, neutral expression, mouth closed. Rest is same as v8monroom2
     with fade
