@@ -152,7 +152,7 @@ label sun_eve_room:
 
                 label s19_reply26:
                     $ contact_Emily.newMessage("Great! See you there!")
-                    call screen messager(contact_Emily)
+                    $ phoneexit = "emily_arcade"
                     jump emily_arcade
 
                 label s19_reply27:
@@ -322,7 +322,7 @@ label sun_eve_room:
                 # -If MC chooses to accept the date-
                 label s19_reply55:
                     $ contact_Emily.newMessage("Great! See you there!")
-                    call screen messager(contact_Emily)
+                    $ phoneexit = "emily_arcade"
                     jump emily_arcade
 
                 label s19_reply56:
