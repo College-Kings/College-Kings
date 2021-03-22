@@ -114,7 +114,7 @@ label v08_ri_start:
     image v8ridg2 = Movie(play="images/v08/Scene 3/v8ridg2.webm", loop=True, image="images/v08/Scene 3/risex4_000.jpg", start_image="images/v08/Scene 3/risex4_000.jpg") # Doggy rough
     image v8ridg2f = Movie(play="images/v08/Scene 3/v8ridg2f.webm", loop=True, image="images/v08/Scene 3/risex4_000.jpg", start_image="images/v08/Scene 3/risex4_000.jpg")
     image v8ridg3 = Movie(play="images/v08/Scene 3/v8ridg3.webm", loop=True, image="images/v08/Scene 3/risex5_00.jpg", start_image="images/v08/Scene 3/risex5_00.jpg") # Doggy smooth angle 2
-    image v8ridg3f = Movie(play="images/v08/Scene 3/v8ridg3f.webm", loop=True, image="images/v08/Scene 3/risex5_00.jpg", start_image="images/v08/Scene 3/risex5_00.jpg")
+    image v8ridg3f = Movie(play="images/v08/Scene 3/v8ridg3.webm", loop=True, image="images/v08/Scene 3/risex5_00.jpg", start_image="images/v08/Scene 3/risex5_00.jpg")
 
     scene v8ricg1
     with dissolve
