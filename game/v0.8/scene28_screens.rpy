@@ -164,7 +164,7 @@ screen s28_mcLarsAttack():
 
 
     if larsStance == 2:
-        add "images/v08/Scene 28/fight images/LarsStance - Bodyhook.jpg"
+        add "images/v08/Scene 28/LarsStance - Bodyhook.jpg"
 
         key q:
             action Jump ("mc_LarsJabsBlock")
@@ -209,7 +209,7 @@ screen s28_mcLarsAttack():
 
 
     if larsStance == 3:
-        add "images/v08/Scene 28/fight images/LarsStance - Hook.jpg"
+        add "images/v08/Scene 28/LarsStance - Hook.jpg"
 
         key q:
             action Jump ("mc_LarsJabsBlock")
@@ -251,7 +251,7 @@ screen s28_mcLarsAttack():
         timer reactiona action Jump("lars_McAttack")
 
     if larsStance == 4:
-        add "images/v08/Scene 28/fight images/LarsStance - Kick.jpg"
+        add "images/v08/Scene 28/LarsStance - Kick.jpg"
 
         key q:
             action Jump ("mc_LarsJabsBlock")
@@ -341,7 +341,7 @@ screen s28_larsMcAttack():
 
 
     if larsAttack == 2:
-        add "images/v08/Scene 28/fight images/larsjabend.jpg"
+        add "images/v08/Scene 28/larsjabend.jpg"
 
         key q:
             action Jump ("lars_McJabHit")
