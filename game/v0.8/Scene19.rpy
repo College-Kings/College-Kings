@@ -39,9 +39,9 @@ label sun_eve_room:
             label s19_reply5:
                 $ contact_Amber.newMessage("It's only fair, right? Make us even")
                 if joinwolves:
-                    $ contact_Amber.addImgReply("images/v08/Scene 19/w_dick_pic.jpg", "s19_reply6")
+                    $ contact_Amber.addImgReply("images/v08/Scene 19/w_dick_pic.webp", "s19_reply6")
                 else:
-                    $ contact_Amber.addImgReply("images/v08/Scene 19/a_dick_pic.jpg", "s19_reply6")
+                    $ contact_Amber.addImgReply("images/v08/Scene 19/a_dick_pic.webp", "s19_reply6")
                 call screen messager(contact_Amber)
             label s19_reply6:
                 $ contact_Amber.newMessage("Wow, better than I thought")
@@ -56,7 +56,7 @@ label sun_eve_room:
                 $ contact_Amber.addReply("Now? What about you?", "s19_reply9")
                 call screen messager(contact_Amber)
             label s19_reply9:
-                $ contact_Amber.newImgMessage("images/v08/Scene 19/amb_pussy_pic.jpg")
+                $ contact_Amber.newImgMessage("images/v08/Scene 19/amb_pussy_pic.webp")
                 $ contact_Amber.addReply("Aw fuck", "s19_reply10")
                 call screen messager(contact_Amber)
             label s19_reply10:
@@ -212,9 +212,9 @@ label sun_eve_room:
             label s19_reply34:
                 $ contact_Amber.newMessage("It's only fair, right? Make us even")
                 if joinwolves:
-                    $ contact_Amber.addImgReply("images/v08/Scene 19/w_dick_pic.jpg", "s19_reply6")
+                    $ contact_Amber.addImgReply("images/v08/Scene 19/w_dick_pic.webp", "s19_reply6")
                 else:
-                    $ contact_Amber.addImgReply("images/v08/Scene 19/a_dick_pic.jpg", "s19_reply6")
+                    $ contact_Amber.addImgReply("images/v08/Scene 19/a_dick_pic.webp", "s19_reply6")
                 call screen messager(contact_Amber)
             label s19_reply35:
                 $ contact_Amber.newMessage("Wow, better than I thought")
@@ -229,7 +229,7 @@ label sun_eve_room:
                 $ contact_Amber.addReply("Now? What about you?", "s19_reply38")
                 call screen messager(contact_Amber)
             label s19_reply38:
-                $ contact_Amber.newImgMessage("images/v08/Scene 19/amb_pussy_pic.jpg")
+                $ contact_Amber.newImgMessage("images/v08/Scene 19/amb_pussy_pic.webp")
                 $ contact_Amber.addReply("Aw fuck", "s19_reply39")
                 call screen messager(contact_Amber)
             label s19_reply39:

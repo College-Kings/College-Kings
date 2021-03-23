@@ -87,7 +87,7 @@ screen contactsscreen():
 
     use phoneTemplate:
 
-        add "images/contactsscreen.png" at truecenter ## Contact Screen Background
+        add "images/contactsscreen.webp" at truecenter ## Contact Screen Background
 
         fixed:
             xysize(375, 78)
@@ -112,10 +112,10 @@ screen contactsscreen():
                         text contact.name style "nametext" yalign 0.5 xpos 100
 
                         if contact.messages and contact.messages[-1].replies:
-                            add "images/contactmsgnot.png" yalign 0.5 xpos 275
+                            add "images/contactmsgnot.webp" yalign 0.5 xpos 275
 
                         imagebutton:
-                            idle "images/contactbutton.png" align(0.5, 0.5)
+                            idle "images/contactbutton.webp" align(0.5, 0.5)
                             action [Function(renpy.retain_after_load), Show("messager", contact=contact)]
 
 
@@ -128,7 +128,7 @@ screen messager(contact=None):
 
     use phoneTemplate:
 
-        add "images/msg.png" at truecenter ## Messenger Screen Background
+        add "images/msg.webp" at truecenter ## Messenger Screen Background
 
         fixed:
             xysize(375, 112)
@@ -136,7 +136,7 @@ screen messager(contact=None):
             ypos 168
 
             imagebutton:
-                idle "images/msgarrow.png"
+                idle "images/msgarrow.webp"
                 action [Show("contactsscreen"), Hide("messager"), Hide("reply")]
                 yalign 0.5
 
@@ -209,12 +209,12 @@ screen phone_image(img=None):
         if os.path.splitext(img)[0][-3:] != "big":
             bigImage = os.path.splitext(img)[0] + "big" + os.path.splitext(img)[1]
 
-    add "images/darker.png"
+    add "images/darker.webp"
     if renpy.loadable(bigImage):
         add bigImage at truecenter
     else:
         add img at truecenter
 
     imagebutton:
-        idle "images/bigbutton.png"
+        idle "images/bigbutton.webp"
         action Hide("phone_image")

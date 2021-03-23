@@ -152,7 +152,7 @@ define config.save_directory = "CollegeKings"
 ##
 ## The icon displayed on the taskbar or dock.
 
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "gui/window_icon.webp"
 
 
 ## Build configuration #########################################################
@@ -193,11 +193,11 @@ init python:
     ## To archive files, classify them as 'archive'.
 
     # build.classify('game/bugTesting/*.rpy', 'bugTesting')
-    # build.classify('game/bugTesting/images/*.png', 'bugTesting')
+    # build.classify('game/bugTesting/images/*.webp', 'bugTesting')
 
-    # build.classify('game/**.jpg', 'media')
+    # build.classify('game/**.webp', 'media')
     # build.classify('game/**.mp4', 'media')
-    # build.classify('game/**.png', 'media')
+    # build.classify('game/**.webp', 'media')
     # build.classify('game/**.webm', 'media')
     # build.classify('game/**.ttf', 'media')
     # build.classify('game/**.otf', 'media')

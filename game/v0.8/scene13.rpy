@@ -17,7 +17,7 @@ label after_apes_ceremony:
     # [Grayson has made a Kiwii post that MC, Ryan, and Caleb are the new Apes. If MC got first place, Grayson also says Congrats to the prodigal son, [name] for getting our top score. Looks like somebody's coming for my throne!]
 
     # Kiwii post pic description: Grayson popping a champagne in Apes den with MC, Ryan and Caleb around him (make sure they're wearing the same outfits as in scene 12)
-    $ KiwiiPost6 = KiwiiPost("Grayson", "images/grpost1.png", "%s, Ryan and Caleb are the new proud Apes! I can see this fight season turning out well for us!" % name, numberLikes=renpy.random.randint(320, 350))
+    $ KiwiiPost6 = KiwiiPost("Grayson", "images/grpost1.webp", "%s, Ryan and Caleb are the new proud Apes! I can see this fight season turning out well for us!" % name, numberLikes=renpy.random.randint(320, 350))
     if apesVids == 4:
         $ KiwiiPost6.addComment("Grayson", "And congrats to the prodigal son, %s, for getting the perfect score. Looks like somebody's coming for my throne!" % name, numberLikes=renpy.random.randint(140, 150))
     $ KiwiiPost6.addComment("Ryan", "Apes baby! Woohoooo!!!", numberLikes=renpy.random.randint(60, 70))

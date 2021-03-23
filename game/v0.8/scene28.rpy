@@ -278,18 +278,18 @@ label int_deal_w_josh:
                 call screen s28_larsMcAttack
 
     ### Add image defines + Start/End Images
-    image mckickhit = Movie(play="images/v08/Scene 28/mckickhit.webm", start_image="images/v08/Scene 28/mckickhitstart.jpg", image="images/v08/Scene 28/mckickhitend.jpg", loop = False)
-    image mckickblocked = Movie(play="images/v08/Scene 28/mckickblocked.webm", start_image="images/v08/Scene 28/mckickblockedstart.jpg", image="images/v08/Scene 28/mckickblockedend.jpg", loop = False)
-    image mcbodyhit = Movie(play="images/v08/Scene 28/mcbodyhit.webm", start_image="images/v08/Scene 28/mcbodyhookstart.jpg", image="images/v08/Scene 28/mcbodyhitend.jpg", loop = False)
-    image mcbodyblocked = Movie(play="images/v08/Scene 28/mcbodyblocked.webm", start_image="images/v08/Scene 28/mcbodyblockedstart.jpg", image="images/v08/Scene 28/mcbodyblockedend.jpg", loop = False)
-    image mcjabhit = Movie(play="images/v08/Scene 28/mcjabhit.webm", start_image="images/v08/Scene 28/mcjabhitstart.jpg", image="images/v08/Scene 28/mcjabhitend.jpg", loop = False)
-    image mcjabblocked = Movie(play="images/v08/Scene 28/mcjabblocked.webm", start_image="images/v08/Scene 28/mcjabblockedstart.jpg", image="images/v08/Scene 28/mcjabblockedend.jpg", loop = False)
-    image mchookhit = Movie(play="images/v08/Scene 28/mchookhit.webm", start_image="images/v08/Scene 28/mchookhitstart.jpg", image="images/v08/Scene 28/mchookhitend.jpg", loop = False)
-    image mchookblocked = Movie(play="images/v08/Scene 28/mchookblocked.webm", start_image="images/v08/Scene 28/mchookblockedstart.jpg", image="images/v08/Scene 28/mchookblockedend.jpg", loop = False)
-    image larsjab = Movie(play="images/v08/Scene 28/larsjab.webm", start_image="images/v08/Scene 28/larsjabstart.jpg", image="images/v08/Scene 28/larsjabend.jpg", loop = False)
-    image larshook = Movie(play="images/v08/Scene 28/larshook.webm", start_image="images/v08/Scene 28/larshookstart.jpg", image="images/v08/Scene 28/larshookend.jpg", loop = False)
-    image larskick = Movie(play="images/v08/Scene 28/larskick.webm", start_image="images/v08/Scene 28/larskickstart.jpg", image="images/v08/Scene 28/larskickend.jpg", loop = False)
-    image larsbody = Movie(play="images/v08/Scene 28/larsbody.webm", start_image="images/v08/Scene 28/larsbodystart.jpg", image="images/v08/Scene 28/larsbodyend.jpg", loop = False)
+    image mckickhit = Movie(play="images/v08/Scene 28/mckickhit.webm", start_image="images/v08/Scene 28/mckickhitstart.webp", image="images/v08/Scene 28/mckickhitend.webp", loop = False)
+    image mckickblocked = Movie(play="images/v08/Scene 28/mckickblocked.webm", start_image="images/v08/Scene 28/mckickblockedstart.webp", image="images/v08/Scene 28/mckickblockedend.webp", loop = False)
+    image mcbodyhit = Movie(play="images/v08/Scene 28/mcbodyhit.webm", start_image="images/v08/Scene 28/mcbodyhookstart.webp", image="images/v08/Scene 28/mcbodyhitend.webp", loop = False)
+    image mcbodyblocked = Movie(play="images/v08/Scene 28/mcbodyblocked.webm", start_image="images/v08/Scene 28/mcbodyblockedstart.webp", image="images/v08/Scene 28/mcbodyblockedend.webp", loop = False)
+    image mcjabhit = Movie(play="images/v08/Scene 28/mcjabhit.webm", start_image="images/v08/Scene 28/mcjabhitstart.webp", image="images/v08/Scene 28/mcjabhitend.webp", loop = False)
+    image mcjabblocked = Movie(play="images/v08/Scene 28/mcjabblocked.webm", start_image="images/v08/Scene 28/mcjabblockedstart.webp", image="images/v08/Scene 28/mcjabblockedend.webp", loop = False)
+    image mchookhit = Movie(play="images/v08/Scene 28/mchookhit.webm", start_image="images/v08/Scene 28/mchookhitstart.webp", image="images/v08/Scene 28/mchookhitend.webp", loop = False)
+    image mchookblocked = Movie(play="images/v08/Scene 28/mchookblocked.webm", start_image="images/v08/Scene 28/mchookblockedstart.webp", image="images/v08/Scene 28/mchookblockedend.webp", loop = False)
+    image larsjab = Movie(play="images/v08/Scene 28/larsjab.webm", start_image="images/v08/Scene 28/larsjabstart.webp", image="images/v08/Scene 28/larsjabend.webp", loop = False)
+    image larshook = Movie(play="images/v08/Scene 28/larshook.webm", start_image="images/v08/Scene 28/larshookstart.webp", image="images/v08/Scene 28/larshookend.webp", loop = False)
+    image larskick = Movie(play="images/v08/Scene 28/larskick.webm", start_image="images/v08/Scene 28/larskickstart.webp", image="images/v08/Scene 28/larskickend.webp", loop = False)
+    image larsbody = Movie(play="images/v08/Scene 28/larsbody.webm", start_image="images/v08/Scene 28/larsbodystart.webp", image="images/v08/Scene 28/larsbodyend.webp", loop = False)
 
     # label Attacker_TargetAction
     label mc_LarsKickHit: # MC Kicks Lars (Hits/No Block)
@@ -606,7 +606,7 @@ label dodged_pipe:
 
     $ ip_man = True
     if steam == False:
-        image ip_man = "images/v08/achievements/ipman.png"
+        image ip_man = "images/v08/achievements/ipman.webp"
         show ip_man:
             xpos 0
             ypos -200
