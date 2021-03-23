@@ -5,11 +5,12 @@
 
 label sun_eve_room:
     $ showphone = True
-    $ phoneexit = "s19_phoneExit"
 
     if joinwolves:
         scene v8sser1 # TPP. Show MC lying on his Wolves bed on his phone.
         with fade
+        $ phoneexit = "s19_replyCont1"
+
 
         if not laurenrs:
             play sound "sounds/vibrate.mp3"
@@ -180,6 +181,8 @@ label sun_eve_room:
                 jump mon_morning_room
 
     else:
+        $ phoneexit = "s19_replyCont2"
+
         scene v8sser4 # TPP. Show MC sat on his Apes bed on his phone.
         with fade
 
@@ -208,7 +211,10 @@ label sun_eve_room:
 
             label s19_reply34:
                 $ contact_Amber.newMessage("It's only fair, right? Make us even")
-                # $ contact_Amber.newImgMessage(**[a_dick_pic]**, "s19_reply35")
+                if joinwolves:
+                    $ contact_Amber.addImgReply("images/v08/Scene 19/w_dick_pic.jpg", "s19_reply6")
+                else:
+                    $ contact_Amber.addImgReply("images/v08/Scene 19/a_dick_pic.jpg", "s19_reply6")
                 call screen messager(contact_Amber)
             label s19_reply35:
                 $ contact_Amber.newMessage("Wow, better than I thought")
@@ -223,7 +229,7 @@ label sun_eve_room:
                 $ contact_Amber.addReply("Now? What about you?", "s19_reply38")
                 call screen messager(contact_Amber)
             label s19_reply38:
-                # $ contact_Amber.newImgMessage(**[amb_pussy_pic]**)
+                $ contact_Amber.newImgMessage("images/v08/Scene 19/amb_pussy_pic.jpg")
                 $ contact_Amber.addReply("Aw fuck", "s19_reply39")
                 call screen messager(contact_Amber)
             label s19_reply39:
@@ -276,7 +282,6 @@ label sun_eve_room:
             label s19_reply49:
                 $ contact_Amber.newMessage("Well, sleep tight then ;)")
                 call screen messager(contact_Amber)
-                jump s19_replyCont2
 
         else:
             # -MC's phone buzzes-
