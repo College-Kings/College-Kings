@@ -151,39 +151,39 @@ label homescreen:
 
 
 label emrep1a:
-$ nohardfeelings = True
-if steam == False:
-    image nohardfeelings = "images/nohardfeelings.webp"
-    show nohardfeelings:
-        xpos 0
-        ypos -200
-        linear 0.5 xpos 0 ypos 0
-        pause 2.0
-        linear 0.5 xpos 0 ypos -200
-else:
-    $ achievement.grant("no_hard_feelings")
-    $ achievement.sync()
+    $ nohardfeelings = True
+    if steam == False:
+        image nohardfeelings = "images/nohardfeelings.webp"
+        show nohardfeelings:
+            xpos 0
+            ypos -200
+            linear 0.5 xpos 0 ypos 0
+            pause 2.0
+            linear 0.5 xpos 0 ypos -200
+    else:
+        $ achievement.grant("no_hard_feelings")
+        $ achievement.sync()
 
 
-$ contact_Emily.newMessage("Cool :)")
-call screen messager(contact_Emily)
+    $ contact_Emily.newMessage("Cool :)")
+    call screen messager(contact_Emily)
 
 label emrep1b:
-$ openwound = True
-if steam == False:
-    image openwound = "images/openwound.webp"
-    show openwound:
-        xpos 0
-        ypos -200
-        linear 0.5 xpos 0 ypos 0
-        pause 2.0
-        linear 0.5 xpos 0 ypos -200
-else:
-    $ achievement.grant("open_wound")
-    $ achievement.sync()
-$ addPoint("tm", 1)
-$ contact_Emily.newMessage("Ugh :/")
-call screen messager(contact_Emily)
+    $ openwound = True
+    if steam == False:
+        image openwound = "images/openwound.webp"
+        show openwound:
+            xpos 0
+            ypos -200
+            linear 0.5 xpos 0 ypos 0
+            pause 2.0
+            linear 0.5 xpos 0 ypos -200
+    else:
+        $ achievement.grant("open_wound")
+        $ achievement.sync()
+    $ addPoint("tm", 1)
+    $ contact_Emily.newMessage("Ugh :/")
+    call screen messager(contact_Emily)
 
 label stats:
 $ statsnot = 0
