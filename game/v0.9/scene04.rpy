@@ -148,7 +148,7 @@ scene v9dream8b # Show MC raising his arms like he's the winner, confident smile
 with dissolve
 pause 2
 
-$ renpy.music.set_volume(0.4, "sound")
+$ renpy.music.set_volume(0.4, channel="sound")
 # play sound "sounds/boo.mp3"
 pause 0.5
 
@@ -156,7 +156,7 @@ scene v9dream8c # MC turned his head to look at someone unseen in the frame, loo
 with dissolve
 u "(Huh?)"
 
-$ renpy.music.set_volume(1, "sound")
+$ renpy.music.set_volume(1, channel="sound")
 # play sound "sounds/boo.mp3"
 
 u "(Are they booing me? I'll show them.)"
@@ -394,7 +394,7 @@ scene v9dream8b
 with dissolve
 pause 2
 
-$ renpy.music.set_volume(0.4, "sound")
+$ renpy.music.set_volume(0.4, channel="sound")
 # play sound "sounds/boo.mp3"
 pause 0.5
 
@@ -402,7 +402,7 @@ scene v9dream8c
 with dissolve
 u "(Huh?)"
 
-$ renpy.music.set_volume(1, "sound")
+$ renpy.music.set_volume(1, channel="sound")
 # play sound "sounds/boo.mp3"
 
 u "(Are they booing me? I'll show them.)"
