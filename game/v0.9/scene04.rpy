@@ -148,7 +148,7 @@ scene v9dream8b # Show MC raising his arms like he's the winner, confident smile
 with dissolve
 pause 2
 
-$ renpy.music.set_volume(0.4, "sound")
+$ renpy.music.set_volume(0.4, channel="sound")
 # play sound "sounds/boo.mp3"
 pause 0.5
 
@@ -156,7 +156,7 @@ scene v9dream8c # MC turned his head to look at someone unseen in the frame, loo
 with dissolve
 u "(Huh?)"
 
-$ renpy.music.set_volume(1, "sound")
+$ renpy.music.set_volume(1, channel="sound")
 # play sound "sounds/boo.mp3"
 
 u "(Are they booing me? I'll show them.)"
@@ -394,7 +394,7 @@ scene v9dream8b
 with dissolve
 pause 2
 
-$ renpy.music.set_volume(0.4, "sound")
+$ renpy.music.set_volume(0.4, channel="sound")
 # play sound "sounds/boo.mp3"
 pause 0.5
 
@@ -402,7 +402,7 @@ scene v9dream8c
 with dissolve
 u "(Huh?)"
 
-$ renpy.music.set_volume(1, "sound")
+$ renpy.music.set_volume(1, channel="sound")
 # play sound "sounds/boo.mp3"
 
 u "(Are they booing me? I'll show them.)"
@@ -566,11 +566,11 @@ u "(I don't like this dream anymore.)"
 u "Wake up, [name]. WAKE UP!"
 
 # play sound "sounds/suck_in_whoosh.mp3"
-# pause n # (Pause length should be precisely the length of the above audio clip)
+# $ renpy.pause(renpy.music.get_duration(channel="sound")) 
 stop music
 
-scene black
-with Dissolve(0.1)
-pause 1
+# scene black
+# with Dissolve(0.1)
+# pause 1
 
 jump v9_dream_wakeup
