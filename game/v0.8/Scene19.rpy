@@ -157,6 +157,7 @@ label sun_eve_room:
                     jump emily_arcade
 
                 label s19_reply27:
+                    $ phoneexit = "mon_morning_room"
                     $ contact_Emily.newMessage("You sure you're not mad?")
                     $ contact_Emily.addReply("No, not at all. Just beat. I'd love to go some other time", "s19_reply28")
                     call screen messager(contact_Emily)
@@ -331,6 +332,7 @@ label sun_eve_room:
                     jump emily_arcade
 
                 label s19_reply56:
+                    $ phoneexit = "mon_morning_room"
                     # -If MC chooses to decline the date-
                     $ contact_Emily.newMessage("You sure you're not mad?")
                     $ contact_Emily.addReply("No, not at all. Just beat. I'd love to go some other time", "s19_reply57")

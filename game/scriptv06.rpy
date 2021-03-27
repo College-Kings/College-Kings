@@ -5178,7 +5178,7 @@ label script06:
     play music "sounds/driving1.mp3"
     image carbacknight = Movie(play="images/carbacknight.webm")
 
-    scene carbacknight
+    show carbacknight
 
     show s579a # Grayson close up driving mouth closed arrogant / devious smile mouth closed
     with fade
