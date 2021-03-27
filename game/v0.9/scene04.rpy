@@ -566,11 +566,11 @@ u "(I don't like this dream anymore.)"
 u "Wake up, [name]. WAKE UP!"
 
 # play sound "sounds/suck_in_whoosh.mp3"
-# pause n # (Pause length should be precisely the length of the above audio clip)
+# $ renpy.pause(renpy.music.get_duration(channel="sound")) 
 stop music
 
-scene black
-with Dissolve(0.1)
-pause 1
+# scene black
+# with Dissolve(0.1)
+# pause 1
 
 jump v9_dream_wakeup
