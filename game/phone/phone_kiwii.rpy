@@ -120,7 +120,7 @@ init python:
 
 
 init -1:
-    define profilePictures = [ "images/Phone/Kiwii/Profile Pictures/mcpp1.webp", "images/Phone/Kiwii/Profile Pictures/mcpp2.webp", "images/Phone/Kiwii/Profile Pictures/mcpp3.webp", "images/Phone/Kiwii/Profile Pictures/mcpp4.webp" ]
+    define profilePictures = [ "images/Phone/Kiwii/Profile Pictures/mcpp1.png", "images/Phone/Kiwii/Profile Pictures/mcpp2.png", "images/Phone/Kiwii/Profile Pictures/mcpp3.png", "images/Phone/Kiwii/Profile Pictures/mcpp4.png" ]
     default profilePictures_count = 0
 
     default kiwiiPosts = []
@@ -128,79 +128,79 @@ init -1:
     default kiwiiUsers = {
             "Adam": {
                 "username": "A.D.A.M.",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/adpp.webp"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/adpp.png"
             },
             "Imre": {
                 "username": "BadBoyImre",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/impp.webp"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/impp.png"
             },
             "Mason": {
                 "username": "Mason_Mas",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/masonpp.webp"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/masonpp.png"
             },
             "Ryan": {
                 "username": "Ryanator",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/rypp.webp"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/rypp.png"
             },
             "Cameron": {
                 "username": "Cameroon",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/capp.webp"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/capp.png"
             },
             "Chris": {
                 "username": "Chriscuit",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/chpp.webp"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/chpp.png"
             },
             "Elijah": {
                 "username": "Elijah_Woods",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/elpp.webp"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/elpp.png"
             },
             "Grayson": {
                 "username": "G-rayson",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/grpp.webp"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/grpp.png"
             },
             "Josh": {
                 "username": "Josh80085",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/jopp.webp"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/jopp.png"
             },
             "Aubrey": {
                 "username": "Aubs123",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/aupp.webp"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/aupp.png"
             },
             "Amber": {
                 "username": "Amber_xx",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/ampp.webp"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/ampp.png"
             },
             "Kim": {
                 "username": "KimPlausible",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/kimpp.webp"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/kimpp.png"
             },
             "Nora": {
                 "username": "Nora_12",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/nopp.webp"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/nopp.png"
             },
             "Penelope": {
                 "username": "Penelopeeps",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/pepp.webp"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/pepp.png"
             },
             "Lauren": {
                 "username": "LoLoLauren",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/lapp.webp"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/lapp.png"
             },
             "Autumn": {
                 "username": "Its_Fall",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/autpp.webp"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/autpp.png"
             },
             "Riley": {
                 "username": "RileyReads",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/ripp.webp"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/ripp.png"
             },
             "Emily": {
                 "username": "emilyyyy",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/empp.webp"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/empp.png"
             },
             "Chloe": {
                 "username": "Chloe101",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/clpp.webp"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/clpp.png"
             },
             "MC": {
                 "username": "MC",
@@ -208,17 +208,17 @@ init -1:
             },
             "Caleb": {
                 "username": "Aleb",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/calebpp.webp"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/calebpp.png"
             },
             "Parker": {
                 "username": "Parker",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/parkerpp.webp"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/parkerpp.png"
             }
         }
 
 screen kiwiiTemplate():
     use phoneTemplate:
-        add Transform("images/Phone/Kiwii/AppAssets/Background.webp", size=(376, 744)) at truecenter
+        add Transform("images/Phone/Kiwii/AppAssets/Background.jpg", size=(376, 744)) at truecenter
 
         transclude
 
@@ -312,7 +312,7 @@ screen kiwiiApp():
             for post in reversed(kiwiiPosts):
                 fixed:
                     xysize (350, 350)
-                    add "images/Phone/Kiwii/AppAssets/Post.webp"
+                    add "images/Phone/Kiwii/AppAssets/Post.png"
 
                     hbox:
                         spacing 10
@@ -338,9 +338,9 @@ screen kiwiiApp():
                         spacing 5
 
                         imagebutton:
-                            idle "images/Phone/Kiwii/AppAssets/Like.webp"
-                            hover "images/Phone/Kiwii/AppAssets/LikePress.webp"
-                            selected_idle "images/Phone/Kiwii/AppAssets/LikePress.webp"
+                            idle "images/Phone/Kiwii/AppAssets/Like.png"
+                            hover "images/Phone/Kiwii/AppAssets/LikePress.png"
+                            selected_idle "images/Phone/Kiwii/AppAssets/LikePress.png"
                             selected post.liked
                             action Function(post.toggleLike)
                         frame:
@@ -351,8 +351,8 @@ screen kiwiiApp():
                             text "{}".format(post.numberLikes) style "kiwii_LikeCounter"
 
                     imagebutton:
-                        idle "images/Phone/Kiwii/AppAssets/Comment.webp"
-                        hover "images/Phone/Kiwii/AppAssets/CommentHover.webp"
+                        idle "images/Phone/Kiwii/AppAssets/Comment.png"
+                        hover "images/Phone/Kiwii/AppAssets/CommentHover.png"
                         action Show("kiwiiPost", post=post)
                         xoffset 290
                         yoffset 220
@@ -395,9 +395,9 @@ screen kiwiiPost(post):
                         align(0.95, 1.0)
 
                         imagebutton:
-                            idle "images/Phone/Kiwii/AppAssets/Like.webp"
-                            hover "images/Phone/Kiwii/AppAssets/LikePress.webp"
-                            selected_idle "images/Phone/Kiwii/AppAssets/LikePress.webp"
+                            idle "images/Phone/Kiwii/AppAssets/Like.png"
+                            hover "images/Phone/Kiwii/AppAssets/LikePress.png"
+                            selected_idle "images/Phone/Kiwii/AppAssets/LikePress.png"
                             selected comment.liked
                             action Function(comment.toggleLike)
 
@@ -437,7 +437,7 @@ screen liked_kiwii():
             for post in reversed(liked_kiwiPosts):
                 fixed:
                     xysize (350, 350)
-                    add "images/Phone/Kiwii/AppAssets/Post.webp"
+                    add "images/Phone/Kiwii/AppAssets/Post.png"
 
                     hbox:
                         spacing 10
@@ -463,9 +463,9 @@ screen liked_kiwii():
                         spacing 5
 
                         imagebutton:
-                            idle "images/Phone/Kiwii/AppAssets/Like.webp"
-                            hover "images/Phone/Kiwii/AppAssets/LikePress.webp"
-                            selected_idle "images/Phone/Kiwii/AppAssets/LikePress.webp"
+                            idle "images/Phone/Kiwii/AppAssets/Like.png"
+                            hover "images/Phone/Kiwii/AppAssets/LikePress.png"
+                            selected_idle "images/Phone/Kiwii/AppAssets/LikePress.png"
                             selected post.liked
                             action Function(post.toggleLike)
                         frame:
@@ -476,8 +476,8 @@ screen liked_kiwii():
                             text "{}".format(post.numberLikes) style "kiwii_LikeCounter"
 
                     imagebutton:
-                        idle "images/Phone/Kiwii/AppAssets/Comment.webp"
-                        hover "images/Phone/Kiwii/AppAssets/CommentHover.webp"
+                        idle "images/Phone/Kiwii/AppAssets/Comment.png"
+                        hover "images/Phone/Kiwii/AppAssets/CommentHover.png"
                         action Show("kiwiiPost", post=post)
                         xoffset 290
                         yoffset 220
