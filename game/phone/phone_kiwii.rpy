@@ -65,6 +65,12 @@ init python:
             self.index = kiwiiPosts.index(self)
             kiwiiPosts.remove(self)
 
+        def getReplies(self):
+            try:
+                return replies
+            except Exception:
+                return False
+
     class KiwiiComment(KiwiiPost):
         def __init__(self, user, text, numberLikes=0, liked=False, mentions=None):
             self.user = user
