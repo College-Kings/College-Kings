@@ -58,26 +58,26 @@ else:
 label v9_phn_riley1_a1:
 $ contact_Riley.newMessage("A couple of us wanted to go to the lake. Wanna join us?")
 $ contact_Riley.addReply("I dunno, feeling kind of crappy.", "v9_phn_riley1_a2")
-$ call screen messager(contact_Riley)
+call screen messager(contact_Riley)
 
 label v9_phn_riley1_a2:
 $ contact_Riley.newMessage("Oh, c'mon, it's gonna be fun! :)")
 $ contact_Riley.addReply("Who's gonna be there?", "v9_phn_riley1_a3")
-$ call screen messager(contact_Riley)
+call screen messager(contact_Riley)
 
 label v9_phn_riley1_a3:
 $ contact_Riley.newMessage("Ryan and Aubrey.")
 $ contact_Riley.addReply("I guess I could go. Could use some fresh air.", "v9_phn_riley1_a4")
-$ call screen messager(contact_Riley)
+call screen messager(contact_Riley)
 
 label v9_phn_riley1_a4:
 $ contact_Riley.newMessage("You'll love it! Meet you in 30 minutes?")
 $ contact_Riley.addReply("Yeah, see ya soon.", "v9_phn_riley1_a5")
-$ call screen messager(contact_Riley)
+call screen messager(contact_Riley)
 
 label v9_phn_riley1_a5:
 $ contact_Riley.newMessage("See you!")
-$ call screen messager(contact_Riley)
+call screen messager(contact_Riley)
 
 label v9_phn_riley1_done:
 if joinwolves:
