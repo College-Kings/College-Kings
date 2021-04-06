@@ -376,7 +376,7 @@ label dtl_cont1:
     scene v9dtl3b
     with dissolve
 
-    ri "99% no, 100% hell no."
+    ri "99\% no, 100\% hell no."
 
     scene v9dtl2a
     with dissolve
