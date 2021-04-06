@@ -21,7 +21,7 @@ label room_wed_night:
         if aubreyrs:
             u "(Well I can't really decide on my favorite moment of the day, but dude, Aubrey...)"
 
-        if rileyrs:
+        elif rileyrs:
             u "(Well I can't really decide on my favorite moment of the day, but dude, Riley...)"
 
         else: 
@@ -74,7 +74,7 @@ label room_wed_night:
         if aubreyrs:
             u "(Well I can't really decide on my favorite moment of the day, but dude, Aubrey...)"
 
-        if rileyrs:
+        elif rileyrs:
             u "(Well I can't really decide on my favorite moment of the day, but dude, Riley...)"
 
         else: 
