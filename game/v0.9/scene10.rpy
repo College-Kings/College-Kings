@@ -15,7 +15,7 @@ label v9_history_class:
     pause 1
 
     scene v9hc3 # FPP. Show Mr. Lee stood at the front of the class looking at camera, Mr. Lee neutral expression, mouth open.
-    with dissovlve
+    with dissolve
 
     lee "[name], so nice of you to join us."
 
