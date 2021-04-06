@@ -247,7 +247,7 @@ label sun_eve_room:
                 call screen messager(contact_Amber)
             label s19_reply42:
                 $ contact_Amber.newMessage("I'm close. Will you finish with me?")
-                $ contact_Amber.addReply("Oh, God yes!")
+                $ contact_Amber.addReply("Oh, God yes!", "s19_reply43")
                 call screen messager(contact_Amber)
             label s19_reply43:
                 scene v8sser5 # TPP. Show MC jerking off.
@@ -312,7 +312,7 @@ label sun_eve_room:
                 # -MC's phone buzzes-
                 ### ERROR: (Aww, she couldn't get enough of me) [I figure this line works for either scenario but let me know if I should change it] ###
                 $ contact_Emily.newMessage("Hey, I was thinking")
-                $ contact_Emily.addReply("Uh oh that can't be good ;)")
+                $ contact_Emily.addReply("Uh oh that can't be good ;)", "s19_reply54")
                 call screen messager(contact_Emily)
                 label s19_reply54:
                     $ contact_Emily.newMessage("Wanna meet up at the arcade?")
