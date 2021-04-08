@@ -63,7 +63,7 @@ label v9_thur_room_w_cam_punch:
     
     call screen phone
 
-    menu:
+    menu v9_s15_phoneExit_Punch:
         "Brag":
             $ addPoint("tm", 1)
             jump v9_thur_room_w_cam_brag
@@ -143,7 +143,7 @@ label v9_thur_room_w_cam_cont1:
     with dissolve
     sa "Everyone's gonna be scared of you now. It was a smart move."
 
-    Scene v9trc4g
+    scene v9trc4g
     with dissolve
     u "I didn't do it on purpose. It just happened, but yeah, won't hurt."
 
@@ -164,7 +164,7 @@ label v9_thur_room_w_cam_cont1:
         
 label v9_thur_room_w_cam_drink:
     scene v9trc4h # FPP. Same camera as v9trc4, Cameron with beer in right hand samantha stood by side, cameron happy look,samantha worried look,  mouths closed
-    label with dissolve
+    with dissolve
     u "Just one!"
 
     scene v9trc4i # FPP. Same camera as v9trc4, Cameron drinking beer,samantha stood by side, samantha worried look, mouths closed
@@ -227,7 +227,7 @@ label v9_thur_room_w_cam_cont2:
 
 label v9_thur_room_w_cam_no_punch:
     scene v9trc2c # FPP. Same camera as v9trc2, Cameron mouth open, samantha mouth closed
-    with label
+    with dissolve
     ca "[name], what the fuck?"
 
     scene v9trc4g
@@ -268,20 +268,20 @@ label v9_thur_room_w_cam_no_punch:
     sa "You better check it."
 
 
-$ phoneexit = "v9_s15_phoneExit_no_Punch"
+    $ phoneexit = "v9_s15_phoneExit_no_Punch"
 
-$ s15KiwiiPost = KiwiiPost("Sebastion", "images/v09/scene 12/v9hlw20.webp")
-$ s15KiwiiPost.addComment("Chris", "Wow, hope he's OK!", numberLikes=renpy.random.randint(100, 200))
-$ s15KiwiiPost.addComment("Cameron", "Ahhhh! Preview of Saturday's Freshman Brawl!", numberLikes=renpy.random.randint(150, 170))
-call screen phone
+    $ s15KiwiiPost = KiwiiPost("Sebastian", "images/v09/scene 12/v9hlw20.webp")
+    $ s15KiwiiPost.addComment("Chris", "Wow, hope he's OK!", numberLikes=renpy.random.randint(100, 200))
+    $ s15KiwiiPost.addComment("Cameron", "Ahhhh! Preview of Saturday's Freshman Brawl!", numberLikes=renpy.random.randint(150, 170))
+    call screen phone
 
-    menu:
+    menu v9_s15_phoneExit_no_Punch:
         "Shrug It Off":
             jump v9_thur_room_w_cam_shrugg_off
         "Get Defensive":
             $ addPoint("tm", 1)
             jump v9_thur_room_w_cam_defensive
-        
+
 label v9_thur_room_w_cam_shrugg_off:
     scene v9trc4g
     with dissolve
