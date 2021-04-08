@@ -55,7 +55,7 @@ label room_wed_night:
         scene v9wnr7 # TPP. Show MC leaving his room, now dressed wearing outfit 2.
         with dissolve
 
-        # jump scene10
+        jump v9_history_class
 
     else: 
         scene v9wnr8 # TPP. Show MC sitting on his Apes bed looking tired.
