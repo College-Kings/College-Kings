@@ -269,7 +269,7 @@ label v9_hc_cont4:
 
     u "Imagine this... the year is 950, and your ship just landed at port. There's a bald burly guard waiting to take his dues off you. Behind him is your next target... a line of small wooden huts, ripe for plundering."
 
-    jump v9_hc_viking
+    jump v9_hc_demo
     
 label v9_hc_return:
     scene v9hc23 # TPP. Show Pen cam MC with their props, Mr. Lee stood looking at them, lee mouth open.
