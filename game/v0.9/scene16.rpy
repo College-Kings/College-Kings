@@ -2,10 +2,13 @@
 # Locations: MC Apes/Wolves Room, Emily's Dorm
 # Characters: MC (Outfit 1), Emily (Outfit 4)
 # Time: Thursday Night
+# Kiwii Images: v9emiKiwii (Emily's Cleavage)
 
-default v9_sex_w_em = False
+
 
 label v9_room_thur_night:
+    default v9_sex_w_em = False
+
     if joinwolves:
         scene v9emi1 # TPP. Show MC sat on his bed in his Wolves room, looking tired.
         with fade
@@ -16,14 +19,35 @@ label v9_room_thur_night:
             scene v9emi1a # TPP. Same camera as v9emi1, MC now on his phone on his bed.
             with dissolve
 
+            play sound "sounds/vibrate.mp3"
+
             u "(Ugh, now what)"
 
-            ### ERROR: New Message Emily I'm bored. Come hang out ###
-            ### ERROR: New Reply1 Sure! Gimme a sec ###
+            $ phoneexit = "s16_PhoneContinueW"
 
-            ### ERROR: New Reply2 It's kinda late ###
-            ### ERROR: New ImageMessage Emily [cleavage] ###
-            ### ERROR: New Reply2 Be right there! ###
+            $ contact_Emily.newMessage("I'm bored. Come hang out.")
+            $ contact_Emily.addReply("Sure! Gimme a sec.", "s16_PhoneContinueW")
+            $ contact_Emily.addReply("It's kinda late", "s16_Reply1")
+            $ showphone = True
+            call screen phone
+
+            label s16_Reply1:
+                $ contact_Emily.newImgMessage("images/v09/scene 16/v9emiKiwii.webp")
+                $ contact_Emily.addReply("Be right there!", "s16_Reply1a")
+
+                call screen messager(contact_Emily)
+
+            label s16_Reply1a:
+                $ contact_Emily.newMessage("See you soon!")
+
+                call screen messager(contact_Emily)
+
+            label s16_PhoneContinueW:
+                if contact_Emily.messages[-1].replies:
+                    "(I should reply to Emily.)"
+                    jump s16_PhoneContinueW
+
+            $ showphone = False
 
             scene v9emi2 # TPP. Show MC getting up from his bed and leaving his Wolves room.
             with dissolve
@@ -45,14 +69,29 @@ label v9_room_thur_night:
             scene v9emi4a # TPP. Same camera as v9emi4, MC now on his phone on his bed.
             with dissolve
 
+            play sound "sounds/vibrate.mp3"
+
             u "(Ugh, now what)"
 
-            ### ERROR: New Message Emily I'm bored. Come hang out ###
-            ### ERROR: New Reply1 Sure! Gimme a sec ###
+            $ phoneexit = "s16_PhoneContinueA"
 
-            ### ERROR: New Reply2 It's kinda late ###
-            ### ERROR: New ImageMessage Emily [cleavage] ###
-            ### ERROR: New Reply2 Be right there! ###
+            $ contact_Emily.newMessage("I'm bored. Come hang out.")
+            $ contact_Emily.addReply("Sure! Gimme a sec.", "s16_PhoneContinueA")
+            $ contact_Emily.addReply("It's kinda late", "s16_Reply2")
+            $ showphone = True
+            call screen phone
+
+            label s16_Reply2:
+                $ contact_Emily.newImgMessage("images/v09/scene 16/v9emiKiwii.webp")
+                $ contact_Emily.addReply("Be right there!", "s16_PhoneContinueA")
+                call screen messager(contact_Emily)
+
+            label s16_PhoneContinueA:
+                if contact_Emily.messages[-1].replies:
+                    "(I should reply to Emily.)"
+                    jump s16_PhoneContinueA
+
+            $ showphone = False
 
             scene v9emi5 # TPP. Show MC getting up from his bed and leaving his Apes room.
             with dissolve
@@ -407,17 +446,17 @@ label v9_emily_dorm:
 
     em "You ain't seen nothing yet."
 
-    image v9emibj = Movie(play="images/v09/Scene 16/v9emibj.webm", loop=True, image="images/v09/Scene 16/v9emibjStart.webp", start_image="images/v09/Scene 16/v9emibjStart.webp") # FPP. Emily on her knees giving MC a blowjob who is sat on the edge of Emily's bed.
-    image v9emibjf = Movie(play="images/v09/Scene 16/v9emibjf.webm", loop=True, image="images/v09/Scene 16/v9emibjStart.webp", start_image="images/v09/Scene 16/v9emibjStart.webp")
+    # image v9emibj = Movie(play="images/v09/Scene 16/v9emibj.webm", loop=True, image="images/v09/Scene 16/v9emibjStart.webp", start_image="images/v09/Scene 16/v9emibjStart.webp") # FPP. Emily on her knees giving MC a blowjob who is sat on the edge of Emily's bed.
+    # image v9emibjf = Movie(play="images/v09/Scene 16/v9emibjf.webm", loop=True, image="images/v09/Scene 16/v9emibjStart.webp", start_image="images/v09/Scene 16/v9emibjStart.webp")
 
-    image v9emimi = Movie(play="images/v09/Scene 16/v9emimi.webm", loop=True, image="images/v09/Scene 16/v9emimiStart.webp", start_image="images/v09/Scene 16/v9emimiStart.webp") # TPP. MC and Emily, missionary, camera from the side, try and show as much action as possible.
-    image v9emimif = Movie(play="images/v09/Scene 16/v9emimif.webm", loop=True, image="images/v09/Scene 16/v9emimiStart.webp", start_image="images/v09/Scene 16/v9emimiStart.webp")
+    # image v9emimi = Movie(play="images/v09/Scene 16/v9emimi.webm", loop=True, image="images/v09/Scene 16/v9emimiStart.webp", start_image="images/v09/Scene 16/v9emimiStart.webp") # TPP. MC and Emily, missionary, camera from the side, try and show as much action as possible.
+    # image v9emimif = Movie(play="images/v09/Scene 16/v9emimif.webm", loop=True, image="images/v09/Scene 16/v9emimiStart.webp", start_image="images/v09/Scene 16/v9emimiStart.webp")
 
-    image v9emicg = Movie(play="images/v09/Scene 16/v9emicg.webm", loop=True, image="images/v09/Scene 16/v9emicgStart.webp", start_image="images/v09/Scene 16/v9emicgStart.webp") # FPP. Show Emily riding MC's penis (cowgirl). First person perspective as if MC is looking at her whilst lying down.
-    image v9emicgf = Movie(play="images/v09/Scene 16/v9emicgf.webm", loop=True, image="images/v09/Scene 16/v9emicgStart.webp", start_image="images/v09/Scene 16/v9emicgStart.webp")
+    # image v9emicg = Movie(play="images/v09/Scene 16/v9emicg.webm", loop=True, image="images/v09/Scene 16/v9emicgStart.webp", start_image="images/v09/Scene 16/v9emicgStart.webp") # FPP. Show Emily riding MC's penis (cowgirl). First person perspective as if MC is looking at her whilst lying down.
+    # image v9emicgf = Movie(play="images/v09/Scene 16/v9emicgf.webm", loop=True, image="images/v09/Scene 16/v9emicgStart.webp", start_image="images/v09/Scene 16/v9emicgStart.webp")
 
-    image v9emian = Movie(play="images/v09/Scene 16/v9emian.webm", loop=True, image="images/v09/Scene 16/v9emianStart.webp", start_image="images/v09/Scene 16/v9emianStart.webp") # TPP. MC and Emily, doggy style Anal show as much action as possible.
-    image v9emianf = Movie(play="images/v09/Scene 16/v9emianf.webm", loop=True, image="images/v09/Scene 16/v9emianStart.webp", start_image="images/v09/Scene 16/v9emianStart.webp")
+    # image v9emian = Movie(play="images/v09/Scene 16/v9emian.webm", loop=True, image="images/v09/Scene 16/v9emianStart.webp", start_image="images/v09/Scene 16/v9emianStart.webp") # TPP. MC and Emily, doggy style Anal show as much action as possible.
+    # image v9emianf = Movie(play="images/v09/Scene 16/v9emianf.webm", loop=True, image="images/v09/Scene 16/v9emianStart.webp", start_image="images/v09/Scene 16/v9emianStart.webp")
 
     scene v9emibj
     with dissolve
@@ -479,38 +518,6 @@ label v9_emily_dorm:
     with dissolve
 
     pause 1
-
-    # scene v9emi21 # FPP. Close up of Emily's pussy, MC about to insert 2 fingers inside.
-    # with dissolve
-
-    # pause 0.75
-
-    # scene v9emi21a # FPP. Samer camera as v9emi21, MC's fingers now fully inserted.
-    # with vpunch
-    
-    # pause 0.75
-
-    # scene v9emifi
-    # with dissolve
-    # pause
-
-    # em "Ohhh, God."
-    # u "You like that?"
-    # em "You're right on the spot."
-    # em "Ohhhh my god!"
-
-    # scene v9emifif
-    # with dissolve
-    # pause
-
-    # u "How about this?"
-    # em "*Moans* Fuuuuuck!!"
-    # em "I'm gonna cum!"
-
-    # scene v9emi22 # TPP. Show MC removing his fingers, looking at Emily, Emily looking at MC, Emily looking pleasured.
-    # with dissolve
-
-    # pause 1
 
     scene v9emi23 # FPP. Show Emily looking at camera, Emily, flirty grin, mouth open.
     with dissolve
@@ -769,45 +776,121 @@ label v9_thur_night_aft_em_w:
 
         u "(I need to get some sleep)"
 
-    if hl_punch:
-        ### $ contact_Lindsey.newMessage("Hey, how you feeling?")
-        ### $ contact_Better.addReply("now that I'm talking to you")
-        ### $ contact_Lindsey.newMessage("I was thinking about you")
-        ### $ contact_Oh?.addReply("Anything fun?")
-        ### $ contact_Lindsey.newMessage("Maybe ;)")
-        ### $ contact_I'd.addReply("love to hear more")
-        ### $ contact_Lindsey.newMessage("What do you think about me checking on you again tomorrow?")
-        ### $ contact_1.addReply("I think I should get punched more often!")
-        ### $ contact_Lindsey.newMessage("You're so sweet. Goodnight")
+    $ contact_Lindsey.unlock()
+    $ phoneexit = "s16_ContinueW1"
 
-        ### $ contact_I'm.addReply("OK. It's really not that bad")
-        ### $ contact_Lindsey.newMessage("I just couldn't stop worrying about you")
-        ### $ contact_That's.addReply("very nice of you")
-        ### $ contact_Lindsey.newMessage("Can I check on you again tomorrow?")
-        ### $ contact_Sure!.addReply("Anytime")
-        ### $ contact_Lindsey.newMessage("Good. And maybe we can meet up, let me get a good look at you before the Brawl.")
-        ### $ contact_I'd.addReply("love to!")
-        ### $ contact_Lindsey.newMessage("Great. Goodnight.")
+    if hl_punch:
+        $ contact_Lindsey.newMessage("How are you doing tonight?")
+        $ contact_Lindsey.addReply("Better now that I'm talking to you", "s16_ReplyLinW1")
+        $ contact_Lindsey.addReply("Super. You getting ready for bed?", "s16_ReplyLinW2")
+        $ showphone = True
+        call screen phone
+
+        label s16_ReplyLinW1:
+            $ contact_Lindsey.newMessage("I see you're still riding high from that fight")
+            $ contact_Lindsey.addReply("Maybe a little. But I'm still happy you texted", "s16_ReplyLinW3")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinW2:
+            $ contact_Lindsey.newMessage("Yeah, just wanted to say hi. I was thinking about you")
+            $ contact_Lindsey.addReply("Oooh, anything interesting? ;)", "s16_ReplyLinW4")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinW3:
+            $ contact_Lindsey.newMessage("I just wanted to say goodnight... and I was thinking about you")
+            $ contact_Lindsey.addReply("I'll definitely be thinking about you now instead of sleeping ;)", "s16_ReplyLinW5")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinW4:
+            $ contact_Lindsey.newMessage("A little ;)")
+            $ contact_Lindsey.addReply("Do tell!", "s16_ReplyLinW6")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinW5:
+            $ contact_Lindsey.newMessage("Can I text you before the Brawl?")
+            $ contact_Lindsey.addReply("YES! Can't wait. Goodnight to you too", "s16_ReplyLinW5a")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinW5a:
+            $ contact_Lindsey.newMessage("Goodnight")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinW6:
+            $ contact_Lindsey.newMessage("Maybe after the Brawl... if you win")
+            $ contact_Lindsey.addReply("I sure will now!", "s16_ReplyLinW7")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinW7:
+            $ contact_Lindsey.newMessage("Fingers crossed. Goodnight!")
+
+            call screen messager(contact_Lindsey)
 
     if not hl_punch:
-        ### $ contact_Lindsey.newMessage("How are you doing tonight?")
-        ### $ contact_Better.addReply("now that I'm talking to you")
-        ### $ contact_Lindsey.newMessage("I see you're still riding high from that fight")
-        ### $ contact_Maybe.addReply("a little. But I'm still happy you texted")
-        ### $ contact_Lindsey.newMessage("I just wanted to say goodnight... and I was thinking about you")
-        ### $ contact_I'll.addReply("definitely be thinking about you now instead of sleeping ;)")
-        ### $ contact_Lindsey.newMessage("Can I text you before the Brawl?")
-        ### $ contact_YES!.addReply("Can't wait. Goodnight to you too")
+        $ contact_Lindsey.newMessage("Hey, how you feeling?")
+        $ contact_Lindsey.addReply("Better now that I'm talking to you", "s16_ReplyLinW8")
+        $ contact_Lindsey.addReply("I'm ok, it's really not that bad", "s16_ReplyLinW9")
+        $ showphone = True
+        call screen phone
 
-        ### $ contact_Super..addReply("You getting ready for bed?")
-        ### $ contact_Lindsey.newMessage("Yeah, just wanted to say hi. I was thinking about you.")
-        ### $ contact_Oooh,.addReply("anything interesting? ;)")
-        ### $ contact_Lindsey.newMessage("A little ;)")
-        ### $ contact_Do.addReply("tell")
-        ### $ contact_Lindsey.newMessage("Maybe after the Brawl... if you win")
-        ### $ contact_I.addReply("sure will now!")
-        ### $ contact_Lindsey.newMessage("Fingers crossed. Goodnight!")
-        ### $ contact_Goodnight.addReply("")
+        label s16_ReplyLinW8:
+            $ contact_Lindsey.newMessage("I was thinking about you")
+            $ contact_Lindsey.addReply("Oh? Anything fun?", "s16_ReplyLinW10")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinW9:
+            $ contact_Lindsey.newMessage("I just couldn't stop worrying about you")
+            $ contact_Lindsey.addReply("That's very nice of you", "s16_ReplyLinW11")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinW10:
+            $ contact_Lindsey.newMessage("Maybe ;)")
+            $ contact_Lindsey.addReply("I'd love to hear more", "s16_ReplyLinW12")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinW11:
+            $ contact_Lindsey.newMessage("Can I check on you again tomorrow?")
+            $ contact_Lindsey.addReply("Sure! Anytime", "s16_ReplyLinW13")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinW12:
+            $ contact_Lindsey.newMessage("What do you think about me checking on you again tomorrow?")
+            $ contact_Lindsey.addReply("I think I should get punched more often!", "s16_ReplyLinW14")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinW13:
+            $ contact_Lindsey.newMessage("Good, maybe we can meet up, let me get a good look at you before the Brawl")
+            $ contact_Lindsey.addReply("I'd love too!", "s16_ReplyLinW15")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinW14:
+            $ contact_Lindsey.newMessage("You're so sweet, goodnight :)")
+            $ contact_Lindsey.addReply("Goodnight", "s16_ContinueW1")
+
+        label s16_ReplyLinW15:
+            $ contact_Lindsey.newMessage("Great, goodnight :)")
+            $ contact_Lindsey.addReply("Goodnight", "s16_ContinueW")
+
+            call screen messager(contact_Lindsey)
+
+    label s16_ContinueW1:
+        if contact_Lindsey.messages[-1].replies:
+            "(I should reply to Lindsey.)"
+            jump s16_ContinueW1
+
+        $ showphone = False
 
     scene v9emi3a # TPP. Same camera as v9emi3, MC puts his phone down and smiles.
     with dissolve
@@ -837,47 +920,118 @@ label v9_thur_night_aft_em_a:
 
         u "(I need to get some sleep)"
 
-    # -MC's phone buzzes-
+    $ contact_Lindsey.unlock()
+    $ phoneexit = "s16_ContinueA1"
 
     if hl_punch:
-        ### $ contact_Lindsey.newMessage("Hey, how you feeling?")
-        ### $ contact_Better.addReply("now that I'm talking to you")
-        ### $ contact_Lindsey.newMessage("I was thinking about you")
-        ### $ contact_Oh?.addReply("Anything fun?")
-        ### $ contact_Lindsey.newMessage("Maybe ;)")
-        ### $ contact_I'd.addReply("love to hear more")
-        ### $ contact_Lindsey.newMessage("What do you think about me checking on you again tomorrow?")
-        ### $ contact_1.addReply("I think I should get punched more often!")
-        ### $ contact_Lindsey.newMessage("You're so sweet. Goodnight")
+        $ contact_Lindsey.newMessage("How are you doing tonight?")
+        $ contact_Lindsey.addReply("Better now that I'm talking to you", "s16_ReplyLinA1")
+        $ contact_Lindsey.addReply("Super. You getting ready for bed?", "s16_ReplyLinA2")
+        $ showphone = True
+        call screen phone
 
-        ### $ contact_I'm.addReply("OK. It's really not that bad")
-        ### $ contact_Lindsey.newMessage("I just couldn't stop worrying about you")
-        ### $ contact_That's.addReply("very nice of you")
-        ### $ contact_Lindsey.newMessage("Can I check on you again tomorrow?")
-        ### $ contact_Sure!.addReply("Anytime")
-        ### $ contact_Lindsey.newMessage("Good. And maybe we can meet up, let me get a good look at you before the Brawl.")
-        ### $ contact_I'd.addReply("love to!")
-        ### $ contact_Lindsey.newMessage("Great. Goodnight.")
+        label s16_ReplyLinA1:
+            $ contact_Lindsey.newMessage("I see you're still riding high from that fight")
+            $ contact_Lindsey.addReply("Maybe a little. But I'm still happy you texted", "s16_ReplyLinA3")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinA2:
+            $ contact_Lindsey.newMessage("Yeah, just wanted to say hi. I was thinking about you")
+            $ contact_Lindsey.addReply("Oooh, anything interesting? ;)", "s16_ReplyLinA4")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinA3:
+            $ contact_Lindsey.newMessage("I just wanted to say goodnight... and I was thinking about you")
+            $ contact_Lindsey.addReply("I'll definitely be thinking about you now instead of sleeping ;)", "s16_ReplyLinA5")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinA4:
+            $ contact_Lindsey.newMessage("A little ;)")
+            $ contact_Lindsey.addReply("Do tell!", "s16_ReplyLinA6")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinA5:
+            $ contact_Lindsey.newMessage("Can I text you before the Brawl?")
+            $ contact_Lindsey.addReply("YES! Can't wait. Goodnight to you too", "s16_ReplyLinA5a")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinA5a:
+            $ contact_Lindsey.newMessage("Goodnight")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinA6:
+            $ contact_Lindsey.newMessage("Maybe after the Brawl... if you win")
+            $ contact_Lindsey.addReply("I sure will now!", "s16_ReplyLinA7")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinA7:
+            $ contact_Lindsey.newMessage("Fingers crossed. Goodnight!")
+
+            call screen messager(contact_Lindsey)
 
     if not hl_punch:
-        ### $ contact_Lindsey.newMessage("How are you doing tonight?")
-        ### $ contact_Better.addReply("now that I'm talking to you")
-        ### $ contact_Lindsey.newMessage("I see you're still riding high from that fight")
-        ### $ contact_Maybe.addReply("a little. But I'm still happy you texted")
-        ### $ contact_Lindsey.newMessage("I just wanted to say goodnight... and I was thinking about you")
-        ### $ contact_I'll.addReply("definitely be thinking about you now instead of sleeping ;)")
-        ### $ contact_Lindsey.newMessage("Can I text you before the Brawl?")
-        ### $ contact_YES!.addReply("Can't wait. Goodnight to you too")
+        $ contact_Lindsey.newMessage("Hey, how you feeling?")
+        $ contact_Lindsey.addReply("Better now that I'm talking to you", "s16_ReplyLinA8")
+        $ contact_Lindsey.addReply("I'm ok, it's really not that bad", "s16_ReplyLinA9")
+        $ showphone = True
+        call screen phone
 
-        ### $ contact_Super..addReply("You getting ready for bed?")
-        ### $ contact_Lindsey.newMessage("Yeah, just wanted to say hi. I was thinking about you.")
-        ### $ contact_Oooh,.addReply("anything interesting? ;)")
-        ### $ contact_Lindsey.newMessage("A little ;)")
-        ### $ contact_Do.addReply("tell")
-        ### $ contact_Lindsey.newMessage("Maybe after the Brawl... if you win")
-        ### $ contact_I.addReply("sure will now!")
-        ### $ contact_Lindsey.newMessage("Fingers crossed. Goodnight!")
-        ### $ contact_Goodnight.addReply("")
+        label s16_ReplyLinA8:
+            $ contact_Lindsey.newMessage("I was thinking about you")
+            $ contact_Lindsey.addReply("Oh? Anything fun?", "s16_ReplyLinA10")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinA9:
+            $ contact_Lindsey.newMessage("I just couldn't stop worrying about you")
+            $ contact_Lindsey.addReply("That's very nice of you", "s16_ReplyLinA11")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinA10:
+            $ contact_Lindsey.newMessage("Maybe ;)")
+            $ contact_Lindsey.addReply("I'd love to hear more", "s16_ReplyLinA12")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinA11:
+            $ contact_Lindsey.newMessage("Can I check on you again tomorrow?")
+            $ contact_Lindsey.addReply("Sure! Anytime", "s16_ReplyLinA13")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinA12:
+            $ contact_Lindsey.newMessage("What do you think about me checking on you again tomorrow?")
+            $ contact_Lindsey.addReply("I think I should get punched more often!", "s16_ReplyLinA14")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinA13:
+            $ contact_Lindsey.newMessage("Good, maybe we can meet up, let me get a good look at you before the Brawl")
+            $ contact_Lindsey.addReply("I'd love too!", "s16_ReplyLinA15")
+
+            call screen messager(contact_Lindsey)
+
+        label s16_ReplyLinA14:
+            $ contact_Lindsey.newMessage("You're so sweet, goodnight :)")
+
+        label s16_ReplyLinA15:
+            $ contact_Lindsey.newMessage("Great, goodnight :)")
+
+            call screen messager(contact_Lindsey)
+
+    label s16_ContinueA1:
+        if contact_Lindsey.messages[-1].replies:
+            "(I should reply to Lindsey.)"
+            jump s16_ContinueA1
+        $ showphone = False
 
     scene v9emi6a # TPP. Same camera as v9emi6, MC puts his phone down and smiles.
     with dissolve
@@ -894,26 +1048,4 @@ label v9_thur_night_aft_em_a:
 
     jump v9_room_fri_morn
 
-    # Animation References:
-    # Emily and MC in Emily's dorm, Thursday Night, MC wearing outfit 1, Emily wearing outfit 4. Mood - Mix of Passionate and Horny.
-
-    # Animation 1 - Blowjob (v9emibj):
-    # - Clothing: MC no pants, wearing shirt (from Outfit 1). Emily fully clothed (Outfit 4).
-    # - Description: MC is sat on the edge of Emily's bed, Emily on her knees on the floor infront of MC giving MC a blowjob. (Slow/Medium Pace)
-    # - Camera: FPP from MC's perspective looking down at Emily.
-
-    # Animation 2 - Missionary (v9emimi):
-    # - Clothing: Both naked
-    # - Description: MC and Emily missionary, Emily on her bed with her head on pillow, MC on top of her, eye contact if possible. (Medium Pace)
-    # - Camera: TPP camera from the side, try and show as much action as possible.
-
-    # Animation 3 - Cowgirl (v9emicg):
-    # - Clothing: Both naked
-    # - Description: MC now lying where Emily was in Animation 2, Emily riding MC, Emily looking at camera if possible. (Medium/Fast Pace)
-    # - Camera: FPP from MC's perspective, try and show as much of Emily as possible.
-
-    # Animation 4 - Doggy Anal (v9emian):
-    # - Clothing: Both naked
-    # - Description: Emily now in a doggy style position on her bed. Her head should be where her pillow is at the top of her bed. MC behind her holding Emily's hips (Anal). (Medium/Fast Pace)
-    # - Camera: TPP, try and make sure that the anal is clearly visible and is the main focus of the scene.
 
