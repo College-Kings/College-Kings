@@ -106,6 +106,14 @@ label after_load:
             "Parker": {
                 "username": "Parker",
                 "profilePicture": "images/Phone/Kiwii/Profile Pictures/parkerpp.webp"
+            },
+            "Sebastian": {
+                "username": "Kai",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/sebastianpp.webp"
+            },
+            "Kai": {
+                "username": "Kai",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/kaipp.webp"
             }
         }
 
