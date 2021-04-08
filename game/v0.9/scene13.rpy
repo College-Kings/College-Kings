@@ -13,7 +13,7 @@ label thurs_aft_room:
         scene v9tar1a # TPP. Same camera as v9tar1, MC turns the page of his book.
         with dissolve
 
-        if punchinhall:
+        if hl_punch:
             u "(Well, that guy got what he deserved, either way. And seems like I did put up quite a show for the hotness across the hallway)"
 
         else:
@@ -55,7 +55,7 @@ label thurs_aft_room:
         scene v9tar5a # TPP. Same camera as v9tar1, MC turns the page of his book.
         with dissolve
 
-        if punchinhall:
+        if hl_punch:
             u "(Well, that guy got what he deserved, either way. And seems like I did put up quite a show for the hotness across the hallway)"
 
         else:
