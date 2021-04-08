@@ -219,7 +219,7 @@ label v9_thur_room_w_seb_cont1:
     ma "And here's to that, aaaah-ooooooh!!"
 
     scene v9trs7 # TPP. Show everyone grabbing a beer and making a toast.
-    with dissolves
+    with dissolve
 
     pause 1
 
