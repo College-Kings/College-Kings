@@ -275,11 +275,11 @@ label v9_dinner_w_rose_cont2:
     menu:
         "Try Helping Out Again":
             $ addPoint("bf", 1)
-            jump v9_dinner_w_rose_help
+            jump v9_dinner_w_rose_help2
         "Wait":
             jump v9_dinner_w_rose_wait
         
-label v9_dinner_w_rose_help:
+label v9_dinner_w_rose_help2:
     scene v9damr12f # FPP. Same camera as v9damr12, Show Ms. Rose now stood at the end of table, Imre seated to MC's right,neutral expressions,  Ms. Rose mouth closed, Imre mouth closed
     with dissolve
     u "Please, let me help. I need to get up and move around."
