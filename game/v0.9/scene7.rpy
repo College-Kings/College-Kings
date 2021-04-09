@@ -29,13 +29,13 @@ screen endfr5():
     add "images/endfr.png"
     text "Are you sure you want to end the free roam?" style "endfree"
     textbutton "Yes" style "endfr":
-        action Jump fr5ryan3
+        action Jump("fr5ryan3")
         text_align 0.5
         xalign 0.57
         yalign 0.58
 
     textbutton "No" style "endfr":
-        action Jump fr5zoomout
+        action Jump("fr5zoomout")
         text_align 0.5
         xalign 0.43
         yalign 0.58
