@@ -881,7 +881,7 @@ label v9_thur_night_aft_em_w:
 
         label s16_ReplyLinW15:
             $ contact_Lindsey.newMessage("Great, goodnight :)")
-            $ contact_Lindsey.addReply("Goodnight", "s16_ContinueW")
+            $ contact_Lindsey.addReply("Goodnight", "s16_ContinueW1")
 
             call screen messager(contact_Lindsey)
 
