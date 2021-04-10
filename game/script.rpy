@@ -5940,10 +5940,10 @@ label fr2end:
             r = renpy.input("Which button should be kick / block leg?")
             if r == "": r = "r"
 
-        if adamtut == True:
+        if s28_LarsFight:
             call screen af3
 
-        elif s28_LarsFight:
+        elif adamtut:
             call screen s28_LarsKeybindOptions
 
         else:
