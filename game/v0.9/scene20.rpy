@@ -78,7 +78,7 @@ label v9_room_fri_aft_contW:
 
     jump v9_room_w_chris
 
-label v9_room_fro_aft_contA:
+label v9_room_fri_aft_contA:
     scene v9rfa4a # TPP. Same camera as v9rfa4, show MC placing his phone on his desk.
     with dissolve
 
