@@ -28,7 +28,7 @@ label v9_driving_home_lake:
     scene v9dhl1
     with dissolve
 
-    ry "You just don't get it. The point is I was born with no fear. And I wasn't afraid ever since. -closed his eyes smiling, looking confident-"
+    ry "You just don't get it. The point is I was born with no fear. And I wasn't afraid ever since."
 
     scene v9dhl3 # TPP. Show Aubrey (sat in Drivers seat, same as scene 6) Aubrey looking forward, mouth open.
     with dissolve

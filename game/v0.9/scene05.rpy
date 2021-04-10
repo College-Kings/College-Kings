@@ -87,7 +87,7 @@ if joinwolves:
 
     scene v9dream22 # TPP. (MC out of bed now) Show MC doing a quick right hand jab, looking serious with a determined smile, mouth closed
     with dissolve
-    u "(But fuck it, I'm not gonna puss out. I can do this this!)"
+    u "(But fuck it, I'm not gonna puss out. I can do this!)"
     u "(Gotta get going if I wanna meet the guys in 30.)"
 
     scene black
@@ -103,7 +103,7 @@ else:
 
     scene v9dream25 # TPP. Same as v9dream22 but in MC's room in Apes house
     with dissolve
-    u "(But fuck it, I'm not gonna puss out. I can do this this!)"
+    u "(But fuck it, I'm not gonna puss out. I can do this!)"
     u "(Gotta get going if I wanna meet the guys in 30.)"
 
     scene black

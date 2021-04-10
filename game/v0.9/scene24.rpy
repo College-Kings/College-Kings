@@ -258,7 +258,7 @@ label v9_walk_w_sam_cont2:
 
     scene v9wws8b
     with dissolve
-    sa "That would be nice.#"
+    sa "That would be nice."
 
     scene v9wws8a
     with dissolve
