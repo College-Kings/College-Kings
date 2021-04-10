@@ -18,6 +18,97 @@ label after_load:
         contact_Autumn = Contact("Autumn", "autumnprofilepic", locked=False)
         contact_Imre = Contact("Imre", "imreprofilepic", locked=False)
 
+        kiwiiUsers = {
+            "Adam": {
+                "username": "A.D.A.M.",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/adpp.png"
+            },
+            "Imre": {
+                "username": "BadBoyImre",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/impp.png"
+            },
+            "Mason": {
+                "username": "Mason_Mas",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/masonpp.png"
+            },
+            "Ryan": {
+                "username": "Ryanator",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/rypp.png"
+            },
+            "Cameron": {
+                "username": "Cameroon",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/capp.png"
+            },
+            "Chris": {
+                "username": "Chriscuit",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/chpp.png"
+            },
+            "Elijah": {
+                "username": "Elijah_Woods",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/elpp.png"
+            },
+            "Grayson": {
+                "username": "G-rayson",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/grpp.png"
+            },
+            "Josh": {
+                "username": "Josh80085",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/jopp.png"
+            },
+            "Aubrey": {
+                "username": "Aubs123",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/aupp.png"
+            },
+            "Amber": {
+                "username": "Amber_xx",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/ampp.png"
+            },
+            "Kim": {
+                "username": "KimPlausible",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/kimpp.png"
+            },
+            "Nora": {
+                "username": "Nora_12",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/nopp.png"
+            },
+            "Penelope": {
+                "username": "Penelopeeps",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/pepp.png"
+            },
+            "Lauren": {
+                "username": "LoLoLauren",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/lapp.png"
+            },
+            "Autumn": {
+                "username": "Its_Fall",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/autpp.png"
+            },
+            "Riley": {
+                "username": "RileyReads",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/ripp.png"
+            },
+            "Emily": {
+                "username": "emilyyyy",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/empp.png"
+            },
+            "Chloe": {
+                "username": "Chloe101",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/clpp.png"
+            },
+            "MC": {
+                "username": "MC",
+                "profilePicture": profilePictures[0]
+            },
+            "Caleb": {
+                "username": "Aleb",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/calebpp.png"
+            },
+            "Parker": {
+                "username": "Parker",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/parkerpp.png"
+            }
+        }
+
         try:
             for before_contact in before_contacts:
                 for contact in contacts:
@@ -25,6 +116,6 @@ label after_load:
                         for message in before_contact.messages:
                             contact.newMessage(message.msg)
                         break
-        except: pass
+        except Exception: pass
 
 return

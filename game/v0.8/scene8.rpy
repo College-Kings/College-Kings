@@ -183,7 +183,7 @@ label prot_w_au_1:
     scene v8sprot3d # FPP. Same camera as v8sprot3, Autumn looking serious, mouth open.
     with dissolve
 
-    aut "Have you heard about the new legislation being proposed on abortions."
+    aut "Have you heard about the new legislation being proposed on abortions?"
 
     scene v8sprot3e # FPP. Same camera as v8sprot3, Autumn looking serious, mouth closed.
     with dissolve
@@ -397,7 +397,7 @@ label prot_w_au_2:
         scene v8sprot16c # FPP. Same camera as v8sprot16, Evelyn laugh, mouth open.
         with dissolve
 
-        ev "Haha. Well, no. I had a great time. But honestly, it's a turn on. A guy coming out to a woman's protest for woman's rights. That's what I think a real men should be about."
+        ev "Haha. Well, no. I had a great time. But honestly, it's a turn on. A guy coming out to a woman's protest for women's rights. That's what I think a real man should be about."
 
         scene v8sprot16a
         with dissolve
@@ -422,7 +422,7 @@ label prot_w_au_2:
         scene v8sprot17 # TPP. Show MC and Evelyn stood together, MC slight wink, smile, mouth open, Evelyn mouth closed, neutral expression.
         with dissolve
 
-        u "That's awesome. Glad to see you're pursuing you're dreams... That's such a turn on."
+        u "That's awesome. Glad to see you're pursuing your dreams... That's such a turn on."
 
         scene v8sprot16c
         with dissolve

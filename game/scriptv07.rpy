@@ -182,7 +182,7 @@ label v07:
     scene s674
     with dissolve
 
-    ch "I mean he barely got hit. He dodged almost every punch thrown at him based on his opponents micro expressions."
+    ch "I mean he barely got hit. He dodged almost every punch thrown at him based on his opponents' micro expressions."
 
     scene s674a
     with dissolve
@@ -1516,20 +1516,20 @@ label v07:
                 "(I should check out what Emily posted on Kiwii.)"
                 jump phoneam              
 
-            if contact_Riley.replies:
+            if contact_Riley.messages[-1].replies:
                 "(I need to respond to some of these messages.)"
                 jump phoneam
 
             else:
 
                 if bowling == True:
-                    if contact_Penelope.replies:
+                    if contact_Penelope.messages[-1].replies:
                         "(I should answer Penelope.)"
                         jump phoneam
 
                 if laurenrs == True:
 
-                    if contact_Lauren.replies:
+                    if contact_Lauren.messages[-1].replies:
                         "(I should respond to Lauren.)"
 
                         jump phoneam
@@ -1548,7 +1548,7 @@ label v07:
 
         u "(Okay... I need to call Emily right now.)"
 
-        u "(What the fuck was the she thinking?!)"
+        u "(What the fuck was she thinking?!)"
 
         stop sound
 
@@ -1776,7 +1776,7 @@ label v07:
 
 
         label phonean:
-        if contact_Riley.replies:
+        if contact_Riley.messages[-1].replies:
             u "(I should respond to Riley.)"
             jump phonean
         else:
@@ -2291,7 +2291,7 @@ label v07:
     scene s717d
     with dissolve
 
-    la "And how am I supposed to believe you? That's your ex. You use to hook up with her. What would stop you now?"
+    la "And how am I supposed to believe you? That's your ex. You used to hook up with her. What would stop you now?"
 
     scene s717e
     with dissolve
@@ -2560,7 +2560,7 @@ label v07:
         scene s727
         with dissolve
 
-        aut "Oh animal rights, how fascinating. I have to admit, I haven't done much research into the Western Animal Movement... would you care to elaborate on it's exact purpose and goals?"
+        aut "Oh animal rights, how fascinating. I have to admit, I haven't done much research into the Western Animal Movement... would you care to elaborate on its exact purpose and goals?"
 
         scene s727a
         with dissolve
@@ -2835,7 +2835,7 @@ label v07:
 
         label phoneao:
 
-        if contact_Lauren.replies:
+        if contact_Lauren.messages[-1].replies:
 
             u "(I should probably reply.)"
 
@@ -3112,7 +3112,7 @@ label v07:
                     scene s742d
                     with dissolve
 
-                    la "Aww... I hope so to."
+                    la "Aww... I hope so too."
 
                     scene s742e
                     with dissolve
@@ -3527,7 +3527,7 @@ label v07:
                     scene s742d
                     with dissolve
 
-                    la "Aww... I hope so to."
+                    la "Aww... I hope so too."
 
                     scene s742e
                     with dissolve
@@ -3820,7 +3820,7 @@ label v07:
     else:
 
         if joinapes == True:
-            u "(Pledging starts at soon, I told Grayson I'd join the Apes, but is that really the right call? I mean the Wolves party was sick...)"
+            u "(Pledging starts soon, I told Grayson I'd join the Apes, but is that really the right call? I mean the Wolves party was sick...)"
 
             u "(But in the Apes, I can finally be someone. I can be a winner. Grayson may have done some questionable shit in the past, but he also said a lot of stuff that resonated with me...)"
 
@@ -3849,7 +3849,7 @@ label v07:
                     jump pledgewolves
         else:
 
-            u "(Pledging starts at soon, I told Grayson I wouldn't join the Apes, but is that really the right call? I mean he did say some things that really resonated with me...)"
+            u "(Pledging starts soon, I told Grayson I wouldn't join the Apes, but is that really the right call? I mean he did say some things that really resonated with me...)"
 
             u "(I'm pretty sure their pledging is at the same time as the Wolves, so I might be able to just go to the Apes' house and tell Grayson I changed my mind.)"
 
@@ -5406,7 +5406,7 @@ label v07:
 
             scene s843d
             with dissolve
-            ca "What? You a bitch?{w} Too afraid."
+            ca "What? You a bitch?{w} Too afraid?"
 
             scene s843e
             with dissolve
@@ -5843,14 +5843,14 @@ label v07:
                 $ addPoint("bf", 1)
                 $ showphone = True
                 $ phoneexit = "phonebb"
-                $ emilyMessage3.addReply("Hey, sorry I lost track of time. You up?", "emrep3a")
+                $ contact_Emily.addReply("Hey, sorry I lost track of time. You up?", "emrep3a")
 
                 label emrep3a:
                 call screen messager(contact_Emily)
 
                 label phonebb:
 
-                if contact_Emily.replies:
+                if contact_Emily.messages[-1].replies:
 
                     u "(I should text Emily that I lost track of time.)"
 
@@ -6342,7 +6342,7 @@ label v07:
 
         scene s884b # Lee talking to the class with his finger pointing up, and his usual creepy smile. MC just looking around
         with dissolve
-        lee "Did you guys know that although vikings appear to come off as straggly, they were actually quite known for their cleanliness."
+        lee "Did you guys know that although vikings appear to come off as straggly, they were actually quite known for their cleanliness?"
         lee "They usually bathed once a week!"
 
         scene s885 # Close up of Penelope in her costume grossed out and talking
@@ -8313,7 +8313,7 @@ scene scc57 # FPP. Same as scc57.
 with dissolve
 
 ca "Wanna know what happened?"
-ca "My little sister has been clean for 3 months off of heroine and my buddy calls me and tells that she's off with some junkie."
+ca "My little sister has been clean for 3 months off of heroin and my buddy calls me and tells that she's off with some junkie."
 ca "A junkie she had told me she cut ties with."
 
 scene scc57a # FPP. Same as scc57a.
@@ -9429,7 +9429,7 @@ if rileyrs:
 
     label rtnow:
 
-    if contact_Riley.replies:
+    if contact_Riley.messages[-1].replies:
         u "(I should check my messages.)"
         jump rtnow
     elif rileysex:
@@ -9818,7 +9818,7 @@ label risex: # Riley sex scene
     $ showphone = True
 
     label phoneba:
-    if contact_Autumn.replies:
+    if contact_Autumn.messages[-1].replies:
         u "(I should probably check my messages.)"
 
         jump phoneba
@@ -10144,7 +10144,7 @@ label aSigns_2:
 
     pause 0.5
 
-    scene shr2 #fpp As he walks he passes by Ms.Rose who is setting up Homecoming decorations ideally on some kinda of small latter.
+    scene shr2 #fpp As he walks he passes by Ms. Rose who is setting up Homecoming decorations ideally on some kinda of small latter.
     with dissolve
 
     scene shr2b # ms rose turns around and looks at you
@@ -10536,7 +10536,7 @@ label aSigns_2:
     scene sfr4am9 # close up amber looking at you from lying on the floor
     with dissolve
 
-    am "I decided to live! I was tired of trying to fit into my parents ideas of who I should be. So I just said fuck it."
+    am "I decided to live! I was tired of trying to fit into my parents' ideas of who I should be. So I just said fuck it."
 
     scene sfr4am9a
     with dissolve
@@ -10753,7 +10753,7 @@ label aSigns_2:
     scene sfr4cl3b # nora turns around and yells.
     with dissolve
 
-    no "Chloeee! Your dates here."
+    no "Chloeee! Your date's here."
 
     scene sfr4cl3f # chloe walks towards you in a dress, smiling
     with fade
@@ -10982,7 +10982,7 @@ label aSigns_2:
     scene sfr4cl17
     with dissolve
 
-    aa "Well... no. But, I did watch a lot music videos."
+    aa "Well... no. But, I did watch a lot of music videos."
 
     scene sfr4cl17a
     with dissolve
@@ -10997,7 +10997,7 @@ label aSigns_2:
     scene sfr4cl19 # cloe up chloe looking into the group
     with dissolve
 
-    cl "You ask someone a \" Would you rather...\"-question and after answering that person gets to ask the next question to someone else."
+    cl "You ask someone a \"Would you rather...\"-question and after answering that person gets to ask the next question to someone else."
 
     cl "I'ma start."
 
@@ -11349,7 +11349,7 @@ label aSigns_2:
     scene sfr4em5c # emily drinks straight from the bottle
     with dissolve
 
-    u "Jeuss, you still drink from the bottle? You really haven't changed, haha."
+    u "Jesus, you still drink from the bottle? You really haven't changed, haha."
 
     scene sfr4em5d # emily holds to bottle out to you
     with dissolve
@@ -11953,7 +11953,7 @@ label aSigns_2:
     scene sfr4la11a
     with dissolve
 
-    u "Yeah, I think Ms Rose did a lot of that, I saw her earlier."
+    u "Yeah, I think Ms. Rose did a lot of that, I saw her earlier."
 
     scene sfr4la11
     with dissolve
@@ -12016,7 +12016,7 @@ label aSigns_2:
     scene sfr4la13b # lauren looking past you, moving her head
     with dissolve
 
-    la "Oh look, Ms.Rose is here. Let's say hi."
+    la "Oh look, Ms. Rose is here. Let's say hi."
 
     scene sfr4la13c
     with dissolve
@@ -12046,7 +12046,7 @@ label aSigns_2:
     scene sfr4la16a
     with dissolve
 
-    u "Hey Ms.Rose."
+    u "Hey Ms. Rose."
 
     scene sfr4la16b # ms rose looking at you
     with dissolve
@@ -12800,7 +12800,7 @@ label aSigns_2:
     scene sfr4ri14 #Ryan and Mc pick up their beers and chug them.
     with dissolve
 
-    ry "Beginners luck. Let's go again."
+    ry "Beginner's luck. Let's go again."
 
     scene sfr4ri15 # you look down at your cup ready to flip it
     with dissolve
@@ -13814,7 +13814,7 @@ label aSigns_2:
         scene sfr4em28
         with dissolve
 
-        ri "Oh me too. Where's Emily?."
+        ri "Oh, me too. Where's Emily?"
 
         scene sfr4em28a
         with dissolve
@@ -14450,7 +14450,7 @@ label aSigns_2:
     scene sfr4pe21
     with dissolve
 
-    pe "We should this again sometime."
+    pe "We should do this again sometime."
 
     scene sfr4pe21a
     with dissolve
@@ -16155,7 +16155,7 @@ label aSigns_2:
 
     scene sfr4cl47 #Ryan and Chloe are having a heated argument.
 
-    cl "Are you fucking kidding me ,Ryan? You're so full of shit."
+    cl "Are you fucking kidding me, Ryan? You're so full of shit."
 
     scene sfr4cl48 #close up ryan looking  annoyed at chloe
     with dissolve
@@ -16458,7 +16458,7 @@ label aSigns_2:
     scene sfr4la26c
     with dissolve
 
-    u "Aw come on Ms.Rose, you've put up a pretty amazing event here!"
+    u "Aw come on Ms. Rose, you've put up a pretty amazing event here!"
 
     scene sfr4la27 # close up lauren looking at ms rose smiling
     with dissolve
@@ -16502,7 +16502,7 @@ label aSigns_2:
             scene sfr4la27b
             with dissolve
 
-            la "Ms.Rose and I were just talking about the last essay."
+            la "Ms. Rose and I were just talking about the last essay."
 
             scene sfr4la27c
             with dissolve
@@ -16531,7 +16531,7 @@ label aSigns_2:
 
         "Focus on Ms. Rose":
 
-            u "So Ms.Rose, what was homecoming like when you were in college?"
+            u "So Ms. Rose, what was homecoming like when you were in college?"
 
             u "So like 5 years ago."
 
@@ -16548,7 +16548,7 @@ label aSigns_2:
             scene sfr4la27b
             with dissolve
 
-            la "Ms.Rose and I were just talking about the last essay."
+            la "Ms. Rose and I were just talking about the last essay."
 
             scene sfr4la27c
             with dissolve
@@ -16613,7 +16613,7 @@ label aSigns_2:
     scene sfr4la26c
     with dissolve
 
-    u "Aw come on Ms.Rose, you've put up a pretty amazing event here!"
+    u "Aw come on Ms. Rose, you've put up a pretty amazing event here!"
 
     scene sfr4la26b
     with dissolve
@@ -18189,7 +18189,7 @@ label aSigns_2:
 
     cl "*Laughs* Hey!"
 
-    cl "I assure you it's cleaner than you're dorm."
+    cl "I assure you it's cleaner than your dorm."
 
     scene sfr4cl57c
     with dissolve

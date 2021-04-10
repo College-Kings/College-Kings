@@ -493,7 +493,7 @@ label script06:
 
     label phonead:
 
-    if contact_Amber.replies:
+    if contact_Amber.messages[-1].replies:
         u "(Time to text Amber.)"
         jump phonead
     else:
@@ -522,7 +522,7 @@ label script06:
 
     label phoneac:
 
-    if contact_Chloe.replies:
+    if contact_Chloe.messages[-1].replies:
         u "(I should reply to Chloe.)"
 
         call screen messager(contact_Chloe)
@@ -1193,27 +1193,17 @@ label script06:
         if chloemad == True: # Amber texts why you never got back to her
             play sound "sounds/vibrate.mp3"
             $ showphone = True
-            $ msgnot = 1
-            $ amisreply = 1
-            $ ammsgnot = 1
-            $ ammsg = 17
+
             $ contact_Amber.newMessage("I guess you didn't want my surprise :/")
             $ contact_Amber.addReply("Sorry something important came up and I didn't have time.", "amrep17a")
 
-            $ ammsg17a = 1
-            $ ammsg17 = "I guess you didn't want my surprise :/"
-            $ amrep17a = "Sorry something important came up and I didn't have time."
-            $ amrep18a = "I'm alone now, if the surprise is still on ;)"
-            $ amrep18b = "I'll make it up to you tho"
-            $ ammsg19 = "Moment's passed..."
-            $ ammsg20 = "You better xx"
             $ phoneexit = "phoneae"
 
             " "
 
             label phoneae:
 
-            if contact_Amber.replies:
+            if contact_Amber.messages[-1].replies:
                 u "(I should probably reply to my messages.)"
 
                 jump phoneae
@@ -1273,7 +1263,7 @@ label script06:
 
     label phoneaf:
 
-    if contact_Amber.replies:
+    if contact_Amber.messages[-1].replies:
         u "(I should probably reply to my messages.)"
         jump phoneaf
     else:
@@ -2098,7 +2088,7 @@ label script06:
 
     if laurenrs == True:
 
-        u "(Homecoming. Hm. Lauren would probably pissed if I didn't ask her...)"
+        u "(Homecoming. Hm. Lauren would probably be pissed if I didn't ask her...)"
 
     else:
 
@@ -2408,7 +2398,7 @@ label script06:
         scene s524e
         with dissolve
 
-        u "Because we'll go out to a nice dinner. It'll be much more enjoyable than a girls night and the best part: it's on me."
+        u "Because we'll go out to a nice dinner. It'll be much more enjoyable than a girls' night and the best part: it's on me."
 
         scene s524d
         with dissolve
@@ -3396,7 +3386,7 @@ label script06:
     scene em18c
     with dissolve
 
-    u "You're going to the Wolves'rush party too?"
+    u "You're going to the Wolves' rush party too?"
 
     scene em18b
     with dissolve
@@ -4198,7 +4188,7 @@ label script06:
             label phoneag:
             stop music fadeout 2.0
 
-            if contact_Aubrey.replies:
+            if contact_Aubrey.messages[-1].replies:
 
 
                 u "(I should check my messages.)"
@@ -4258,7 +4248,7 @@ label script06:
             scene s565 # mc sitting at his desk
             with dissolve
 
-            if contact_Aubrey.replies:
+            if contact_Aubrey.messages[-1].replies:
 
                 u "(I should probably reply to Aubrey.)"
 
@@ -6882,7 +6872,7 @@ label script06:
         scene s629 #Close up Riley flirty smile
         with dissolve
 
-        ri "How did you pull that off? You just perfomed a lullaby and everyone was clapping at the end."
+        ri "How did you pull that off? You just performed a lullaby and everyone was clapping at the end."
 
         scene s629a
         with dissolve
@@ -7361,7 +7351,7 @@ label script06:
         scene s655c
         with dissolve
 
-        u "Wait you hacked into your school to improve your grades? Come on that's hillarious."
+        u "Wait you hacked into your school to improve your grades? Come on that's hilarious."
 
         scene s655b
         with dissolve
@@ -7634,12 +7624,12 @@ label script06:
         scene s663
         with dissolve
 
-        imre "Not only are we gonna meet all the Wolves, but there are gonna be some fiesty mamacitas."
+        imre "Not only are we gonna meet all the Wolves, but there are gonna be some feisty mamacitas."
 
         scene s663a
         with dissolve
 
-        u "*Laughs* Fiesty mamacitas? Seriously?"
+        u "*Laughs* Feisty mamacitas? Seriously?"
 
         scene s663
         with dissolve
@@ -8122,7 +8112,7 @@ label script06:
 
     scene sfr3jo3c
     with dissolve
-    u "*Deep breath* Okay, ouch. That felt a little unecessary, not gonna lie."
+    u "*Deep breath* Okay, ouch. That felt a little unnecessary, not gonna lie."
 
     scene sfr3jo3
     with dissolve
@@ -9098,7 +9088,7 @@ label script06:
         scene sfr3ch2b
         with dissolve
 
-        ch "There's a whole lot of us. Harry, he got jumped, was traumatized from it. We got his back. Sebastian, Aaron, Marcus. The list go on."
+        ch "There's a whole lot of us. Harry, he got jumped, was traumatized from it. We got his back. Sebastian, Aaron, Marcus. The list goes on."
 
         if joinapes == True:
 
@@ -9258,7 +9248,7 @@ label script06:
         scene sfr3ch2b
         with dissolve
 
-        ch "There's a whole lot of us. Harry, he got jumped, was traumatized from it. We got his back. Sebastian, Aaron, Marcus. The list go on."
+        ch "There's a whole lot of us. Harry, he got jumped, was traumatized from it. We got his back. Sebastian, Aaron, Marcus. The list goes on."
 
         if joinapes == True:
 
@@ -9448,7 +9438,7 @@ label script06:
     scene sfr3ri2a
     with dissolve
 
-    u "Yeah... I feel like he might has ulterior motives."
+    u "Yeah... I feel like he might have ulterior motives."
 
     scene sfr3ri2d
     with dissolve
@@ -9541,7 +9531,7 @@ label script06:
     scene sfr3ri3d
     with dissolve
 
-    finn "Yeah , I mean he's kind of a legend around here."
+    finn "Yeah, I mean he's kind of a legend around here."
 
     finn "He was fight king two years in a row. It's crazy."
 
@@ -11799,7 +11789,7 @@ label script06:
     scene sufr3ri2
     with dissolve
 
-    ri "Yeah, it's nice to be somehwere a bit more quiet after being right next to really loud speakers the entire night."
+    ri "Yeah, it's nice to be somewhere a bit more quiet after being right next to really loud speakers the entire night."
 
     scene sufr3ri2a
     with dissolve

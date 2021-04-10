@@ -9,6 +9,7 @@ default larsdmg = 0
 default larshealth = 0
 default simLarsFight = False
 default s28_LarsFight = False
+default s28_fightWinner = "MC"
 
 label drug_deal_w_josh:
     stop music fadeout 2
@@ -105,10 +106,10 @@ label drug_deal_w_josh:
     je "If I were you, I'd just hand over the shit now before you end up with a nice, shiny dent in your skull. Save Lars the effort. You dig?"
 
     menu:
-        "Intervine":
+        "Intervene":
             $ addPoint("bro", 1)
             jump int_deal_w_josh
-        "Don't Intervine":
+        "Don't Intervene":
             jump no_int_deal_w_josh
 
 label int_deal_w_josh:
@@ -132,8 +133,8 @@ label int_deal_w_josh:
 
     label s28_LarsFight:
         $ s28_LarsFight = True
-        if not fighttom and not fightadam:
-            call screen skipTutS28
+        # if not fighttom and not fightadam:
+        #     call screen skipTutS28
 
     label s28_LarsFightCont:
 
@@ -505,9 +506,21 @@ label int_deal_w_josh:
 
 
     label mc_larsFightEnd: # MC wins fight against Lars
+        hide screen s28_larsMcAttack
+        hide screen s28_mcLarsAttack
+        $ youdmg = 0
+        $ stance = 0
+        $ s28_fightWinner = "MC"
+
         jump beat_lars
 
     label lars_McFightEnd: # MC loses fight against Lars
+        hide screen s28_larsMcAttack
+        hide screen s28_mcLarsAttack
+        $ youdmg = 0
+        $ stance = 0
+        $ s28_fightWinner = "Lars"
+        
         jump beat_by_lars
 
 
@@ -538,7 +551,7 @@ label beat_lars:
         "Duck":
             $ timed = False
             jump dodged_pipe
-        "Don't duck":
+        "...":
             $ timed = False
             jump hit_with_pipe
 
@@ -589,6 +602,8 @@ label dodged_pipe:
     scene v8sdd14 # TPP. Show MC looking up at Joe who is in shock, MC starts to stand up in preparation to plant a huge uppercut on Joe's chin. Lars on the ground. MC focused expression, MC mouth open.
     with dissolve
 
+    $ renpy.end_replay()
+
     $ ip_man = True
     if steam == False:
         image ip_man = "images/v08/achievements/ipman.png"
@@ -638,6 +653,8 @@ label hit_with_pipe:
 
     scene v8sdd32 # TPP. Show MC on the ground in pain, Joe standing over him menacingly, Joe mouth open.
     with dissolve
+
+    $ renpy.end_replay()
 
     je "Hahaha, see ya, 'hero'."
 

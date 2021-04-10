@@ -530,7 +530,7 @@ label em_arcade_2:
     with dissolve
     pause 0.5
 
-    jump sun_eve_room
+    jump mon_morning_room
 
 label em_arcade_1:
     scene v8arcade4a
@@ -854,7 +854,7 @@ label em_arcade_1:
             with dissolve
             pause 0.5
 
-            jump sun_eve_room
+            jump mon_morning_room
 
         "Good night":
             if laurenrs:
@@ -885,7 +885,7 @@ label em_arcade_1:
             with dissolve
             pause 0.5
 
-            jump sun_eve_room
+            jump mon_morning_room
 
 label em_arcade_4:
     scene v8arcade4a
@@ -1303,7 +1303,7 @@ label em_arcade_4:
             with dissolve
             pause 0.5
 
-            jump sun_eve_room
+            jump mon_morning_room
 
         "Good night":
             if laurenrs:
@@ -1334,7 +1334,7 @@ label em_arcade_4:
             with dissolve
             pause 0.5
 
-            jump sun_eve_room
+            jump mon_morning_room
 
 label em_arcade_3:
     scene v8arcade4a
@@ -1630,4 +1630,4 @@ label em_arcade_3:
     with dissolve
     pause 0.5
 
-    jump sun_eve_room
+    jump mon_morning_room

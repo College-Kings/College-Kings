@@ -5,9 +5,9 @@ init python:
             self.user = user
             self.image = image
 
-            if not mentions: self.mentions = []
-            elif isinstance(mentions, str): self.mentions = [mentions]
-            else: self.mentions = mentions
+            if isinstance(mentions, basestring): self.mentions = [mentions]
+            elif isinstance(mentions, list): self.mentions = mentions
+            else: self.mentions = []
 
             self.caption = caption
             self.numberLikes = numberLikes
@@ -70,9 +70,9 @@ init python:
             self.user = user
             self.text = text
 
-            if not mentions: self.mentions = []
-            elif isinstance(mentions, str): self.mentions = [mentions]
-            else: self.mentions = mentions
+            if isinstance(mentions, basestring): self.mentions = [mentions]
+            elif isinstance(mentions, list): self.mentions = mentions
+            else: self.mentions = []
 
             self.numberLikes = numberLikes
             self.liked = liked
@@ -92,9 +92,9 @@ init python:
             self.reply = reply
             self.label = label
 
-            if not mentions: self.mentions = []
-            elif isinstance(mentions, str): self.mentions = [mentions]
-            else: self.mentions = mentions
+            if isinstance(mentions, basestring): self.mentions = [mentions]
+            elif isinstance(mentions, list): self.mentions = mentions
+            else: self.mentions = []
 
 
             if kct == "popular": self.numberLikes = int(round(numberLikes * 1.5))
@@ -121,11 +121,11 @@ init python:
 
 init -1:
     define profilePictures = [ "images/Phone/Kiwii/Profile Pictures/mcpp1.png", "images/Phone/Kiwii/Profile Pictures/mcpp2.png", "images/Phone/Kiwii/Profile Pictures/mcpp3.png", "images/Phone/Kiwii/Profile Pictures/mcpp4.png" ]
-    default count = 0
+    default profilePictures_count = 0
 
     default kiwiiPosts = []
     default liked_kiwiPosts = []
-    define kiwiiUsers = {
+    default kiwiiUsers = {
             "Adam": {
                 "username": "A.D.A.M.",
                 "profilePicture": "images/Phone/Kiwii/Profile Pictures/adpp.png"
@@ -209,6 +209,10 @@ init -1:
             "Caleb": {
                 "username": "Aleb",
                 "profilePicture": "images/Phone/Kiwii/Profile Pictures/calebpp.png"
+            },
+            "Parker": {
+                "username": "Parker",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/parkerpp.png"
             }
         }
 
@@ -246,7 +250,7 @@ screen kiwiiTemplate():
 screen kiwiiPreferences():
     tag phoneTag
 
-    $ kiwiiUsers["MC"]["profilePicture"] = profilePictures[count]
+    $ kiwiiUsers["MC"]["profilePicture"] = profilePictures[profilePictures_count]
 
     use kiwiiTemplate:
 
@@ -257,13 +261,13 @@ screen kiwiiPreferences():
             align(0.5, 0.48)
 
             textbutton "<":
-                if count > 0:
-                    action SetVariable("count", count - 1)
+                if profilePictures_count > 0:
+                    action SetVariable("profilePictures_count", profilePictures_count - 1)
                 text_style "kiwii_PrefTextButton"
 
             textbutton ">":
-                if count + 1 < len(profilePictures):
-                    action SetVariable("count", count + 1)
+                if profilePictures_count + 1 < len(profilePictures):
+                    action SetVariable("profilePictures_count", profilePictures_count + 1)
                 text_style "kiwii_PrefTextButton"
 
         vbox:

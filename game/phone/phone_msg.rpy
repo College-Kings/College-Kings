@@ -6,31 +6,36 @@ init python:
             self.newMessages = newMessages
             self.locked = locked
             self.messages = []
-            self.replies = []
             contacts.append(self)
 
         def newMessage(self, message):
             message = Message(self, message)
             self.newMessages = True
-            contacts.insert(0, contacts.pop(contacts.index(self))) # Moves contact to the top when recieving a new message
-            if message not in self.messages:
-                self.messages.append(message)
+            try: contacts.insert(0, contacts.pop(contacts.index(self))) # Moves contact to the top when recieving a new message
+            except Exception: pass
+            self.messages.append(message)
 
         def newImgMessage(self, img):
             message = ImageMessage(self, img)
             self.newMessages = True
-            contacts.insert(0, contacts.pop(contacts.index(self))) # Moves contact to the top when recieving a new message
-            if message not in self.messages:
-                self.messages.append(message)
+            try: contacts.insert(0, contacts.pop(contacts.index(self))) # Moves contact to the top when recieving a new message
+            except Exception: pass
+            self.messages.append(message)
 
         def addReply(self, message, label=None):
             reply = Reply(message, label)
-            self.replies.append(reply)
+            try: self.messages[-1].replies.append(reply)
+            except Exception:
+                self.newMessage("")
+                self.messages[-1].replies.append(reply)
             self.newMessages = True
 
         def addImgReply(self, image, label=None):
             reply = ImgReply(image, label)
-            self.replies.append(reply)
+            try: self.messages[-1].replies.append(reply)
+            except Exception:
+                self.newMessage("")
+                self.messages[-1].replies.append(reply)
             self.newMessages = True
 
         def seenMessage(self):
@@ -41,16 +46,23 @@ init python:
         def selectedReply(self, reply):
             self.messages.append(reply)
             self.messages[-1].reply = reply
-            self.replies = []
+            self.messages[-1].replies = []
 
         def unlock(self):
             self.locked = False
+
+        def getReplies(self):
+            try:
+                return self.messages[-1].replies
+            except Exception:
+                return False
 
     class Message:
         def __init__(self, contact, msg):
             self.contact = contact
             self.msg = msg
-            self.reply = None
+            self.replies = []
+            self.reply = Reply("")
 
     class ImageMessage:
         def __init__(self, contact, image):
@@ -99,7 +111,7 @@ screen contactsscreen():
                         add contact.profilePicture yalign 0.5 xpos 20
                         text contact.name style "nametext" yalign 0.5 xpos 100
 
-                        if contact.newMessages or (contact.messages and contact.messages[-1].replies):
+                        if contact.messages and contact.messages[-1].replies:
                             add "images/contactmsgnot.png" yalign 0.5 xpos 275
 
                         imagebutton:
@@ -142,7 +154,7 @@ screen messager(contact=None):
 
             vbox:
                 for message in contact.messages:
-                    if isinstance(message, Message):
+                    if isinstance(message, Message) and message.msg.strip():
                         textbutton message.msg style "msgleft"
                     elif isinstance(message, ImageMessage):
                         imagebutton:
@@ -157,7 +169,7 @@ screen messager(contact=None):
                             style "msgright"
                             action Show("phone_image", img=message.image)
 
-        if contact.replies:
+        if contact.messages and contact.messages[-1].replies:
                 hbox:
                     xalign 0.5
                     ypos 855
@@ -174,7 +186,7 @@ screen reply(contact=None):
 
     vbox xpos 1200 yalign 0.84 spacing 15:
 
-        for reply in contact.replies:
+        for reply in contact.messages[-1].replies:
             if isinstance(reply, Reply):
                 textbutton reply.message:
                     style "replies_style"

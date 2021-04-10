@@ -377,7 +377,7 @@ screen choice(items, time=3):
 
     if timed == True:
 
-        timer time repeat False action [ Hide('countdown'), Jump("choicetimer") ]
+        timer time repeat False action [ SetVariable("timed", False), Hide('countdown'), Jump("choicetimer") ]
         bar value AnimatedValue(0, time, time, time) at alpha_dissolve # assuming you're using the alpha_dissolve transform from the wiki
 
 style choicetuttext is text:
@@ -2425,7 +2425,7 @@ style slider_pref_slider:
 #######################
 screen stats():
 
-        add "images/phonescreen.png" at truecenter
+    use phoneTemplate:
 
         add "images/stats.png" at truecenter
         if noexit == False:
@@ -4158,7 +4158,7 @@ screen achievements():
                     vbox spacing -10:
                         textbutton "not my business" style "ach"
 
-                        textbutton "Don't disturb Ms.Rose" style "ach2"
+                        textbutton "Don't disturb Ms. Rose" style "ach2"
 
                 else:
                     vbox:
@@ -4405,6 +4405,9 @@ screen scenegal():
         spacing 40
         xpos 78
         ypos 200
+        scrollbars "vertical"
+        draggable True
+        mousewheel True
 
         imagebutton:
             idle "images/gallery1new.png"
@@ -4445,6 +4448,31 @@ screen scenegal():
             idle "images/gallery8.png"
             hover "images/gallery8outline.png"
             action Replay ("brbj", locked = False)
+
+        imagebutton:
+            idle "images/gallery/gallery9.png"
+            hover "images/gallery/gallery9outline.png"
+            action Replay ("v08_cl_start", locked = False)
+
+        imagebutton:
+            idle "images/gallery/gallery10.png"
+            hover "images/gallery/gallery10outline.png"
+            action Replay ("v08_ri_start", locked = False)
+
+        imagebutton:
+            idle "images/gallery/gallery11.png"
+            hover "images/gallery/gallery11outline.png"
+            action Replay ("hoco_amb_night", locked = False)
+
+        imagebutton:
+            idle "images/gallery/gallery12.png"
+            hover "images/gallery/gallery12outline.png"
+            action Replay ("s28_LarsFight", locked = False)
+
+        imagebutton:
+            idle "images/gallery/gallery13.png"
+            hover "images/gallery/gallery13outline.png"
+            action Replay ("amber_sex_at_joshs", locked = False)
 
 
 

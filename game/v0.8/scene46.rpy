@@ -101,7 +101,7 @@ label v8_ending:
         $ phoneexit = "s46_kiwiiContinue"
 
         $ contact_Ryan.newMessage("What the hell's happening on Kiwii?")
-        $ contact_MC.addReply("I don't know. What is it?")
+        $ contact_Ryan.addReply("I don't know. What is it?")
         $ contact_Ryan.newMessage("Fuckin check it out man. Crazy shit")
 
         $ newKiwiiPost = KiwiiPost("Aubrey", "images/v08/kiwii/red_square.jpg", "[image: red square]", numberLikes=renpy.random.randint(100, 200))
@@ -118,7 +118,7 @@ label v8_ending:
 
         label s46_kiwiiContinue:
 
-            if contact_Ryan.replies:
+            if contact_Ryan.messages[-1].replies:
                 "I should really check out Kiwii"
                 jump s46_kiwiiContinue
 

@@ -78,7 +78,7 @@ label amber_sex_at_joshs:
     image v8am2cg2 = Movie(play="images/v08/Scene 30/v8am2cg2.webm", loop=True, image="images/v08/Scene 30/cgt_00.jpg", start_image="images/v08/Scene 30/cgt_00.jpg") # CG TPP
     image v8am2cg2f = Movie(play="images/v08/Scene 30/v8am2cg2f.webm", loop=True, image="images/v08/Scene 30/cgt_00.jpg", start_image="images/v08/Scene 30/cgt_00.jpg")
 
-    image v8am2dg1 = Movie(play="images/v08/Scene 30/v8am2dg1.webm", loop=True, image="images/v08/Scene 30/cgt_000.jpg", start_image="images/v08/Scene 30/cgt_000.jpg") # Doggy 1 (close up of penetration)
+    image v8am2dg1 = Movie(play="images/v08/Scene 30/v8am2dg1f.webm", loop=True, image="images/v08/Scene 30/cgt_000.jpg", start_image="images/v08/Scene 30/cgt_000.jpg") # Doggy 1 (close up of penetration)
     image v8am2dg1f = Movie(play="images/v08/Scene 30/v8am2dg1f.webm", loop=True, image="images/v08/Scene 30/cgt_000.jpg", start_image="images/v08/Scene 30/cgt_000.jpg")
 
     scene v8am2bj1
@@ -223,6 +223,8 @@ label amber_sex_at_joshs:
     scene v8amber14 # TPP (MC and Amber in same position as v8amber13) but camera moved closer to focus on Amber. Amber satisfied look, smiling, mouth open. MC's face need not be in the frame but if it is, his mouth is closed. Amber should not be looking at the MC, but staring into the distance
     with dissolve
     am "My God, you were amazing."
+
+    $ renpy.end_replay()
 
     scene v8amber14a # Same as v8amber14 but Amber mouth closed (And MC mouth open if visible)
     with dissolve
