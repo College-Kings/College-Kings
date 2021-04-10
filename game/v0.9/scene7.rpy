@@ -1540,6 +1540,6 @@ with dissolve
 
 ri "Let me grab our stuff."
 
-jump v9_
+jump v9_driving_home_lake
 
 # -the scene continues in scene 8-

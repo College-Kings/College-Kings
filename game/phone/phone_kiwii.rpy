@@ -124,7 +124,6 @@ init python:
 
         return rv
 
-
 init -1:
     define profilePictures = [ "images/Phone/Kiwii/Profile Pictures/mcpp1.webp", "images/Phone/Kiwii/Profile Pictures/mcpp2.webp", "images/Phone/Kiwii/Profile Pictures/mcpp3.webp", "images/Phone/Kiwii/Profile Pictures/mcpp4.webp" ]
     default profilePictures_count = 0
