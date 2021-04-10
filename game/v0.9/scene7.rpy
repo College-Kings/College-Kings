@@ -541,18 +541,6 @@ $ showphone = True
 
 call screen fr5lakefull
 
-label fr5ryan2:
-
-$ showphone = False
-
-scene fr5lakefull
-
-u "(I better leave that thickhead enjoy the view, haha.)"
-
-$ showphone = True
-
-call screen fr5lakefull
-
 
 # -if you click on Riley-
 
