@@ -42,46 +42,58 @@ screen endfr5():
 
 label v9_before_lake_fr:
 
+scene fr5lakefull
+with dissolve
+
+
 $ showphone = True
+
+$ phoneexit = "fr5zoomout"
 
 label fr5zoomout:
 
+$ phoneexit = "fr5zoomout"
+
+scene fr5lakefull
+
+call screen fr5lakefull
+
 screen fr5lakefull(): ###### LAKE ZOOM OUT SCREEN
 
-    add "images/v09/scene 7/fr5lakefull.webp" #IMAGE NEEDS TO BE RENDERED
+    add "images/v09/scene 7/fr5lakefull.webp"
 
     imagebutton: #switch to zoomed in view
-        ypos 0 # needs adjustment
-        xpos 0 # needs adjustment
-        idle "images/fr5zoomin.webp"
-        hover "images/fr5zoominhover.webp"
+        ypos 540
+        xpos 550
+        idle "images/v09/scene 7/fr5zoomin.webp"
+        hover "images/v09/scene 7/fr5zoominhover.webp"
         action Jump ("fr5zoomin")
 
     imagebutton: # RYAN
-        ypos 0 # needs adjustment
-        xpos 0 # needs adjustment
-        idle "images/fr5zoomin.webp"
-        hover "images/fr5zoominhover.webp"
+        ypos 506
+        xpos 935
+        idle "images/v09/scene 7/fr5ryan.webp"
+        hover "images/v09/scene 7/fr5ryanhover.webp"
         if not fr5ryan:
             action Jump ("fr5ryan1")
         else:
             action Jump ("fr5ryan2")
 
     imagebutton: # DOGWALKER
-        ypos 0 # needs adjustment
-        xpos 0 # needs adjustment
-        idle "images/fr5dogwalker.webp"
-        hover "images/fr5zoominhover.webp"
+        ypos 576
+        xpos 1590
+        idle "images/v09/scene 7/fr5dogwalker.webp"
+        hover "images/v09/scene 7/fr5dogwalkerhover.webp"
         if not fr5dogwalker:
             action Jump ("fr5dogwalker1")
         else:
             action Jump ("fr5dogwalker2")
 
     imagebutton: # TREEGUY
-        ypos 0 # needs adjustment
-        xpos 0 # needs adjustment
-        idle "images/fr5treeguy.webp"
-        hover "images/fr5treeguyhover.webp"
+        ypos 540
+        xpos 75
+        idle "images/v09/scene 7/fr5treeguy.webp"
+        hover "images/v09/scene 7/fr5treeguyhover.webp"
         if not fr5treeguy:
             action Jump ("fr5treeguy1")
         else:
@@ -89,40 +101,42 @@ screen fr5lakefull(): ###### LAKE ZOOM OUT SCREEN
 
 label fr5zoomin:
 
+$ phoneexit = "fr5zoomin"
+
+scene fr5lakezoomin
+
+call screen fr5lakezoomin
+
 screen fr5lakezoomin(): ###### LAKE ZOOM OUT SCREEN
 
-    add "images/v09/scene 7/fr5lakezoomin.webp" #IMAGE NEEDS TO BE RENDERED
+    add "images/v09/scene 7/fr5lakezoomin.webp"
 
     imagebutton: #switch to zoomed out view
-        ypos 0 # needs adjustment
-        xpos 0 # needs adjustment
-        idle "images/fr5zoomout.webp"
-        hover "images/fr5zoomouthover.webp"
+        ypos 900
+        xpos 350
+        idle "images/v09/scene 7/fr5zoomout.webp"
+        hover "images/v09/scene 7/fr5zoomouthover.webp"
         action Jump ("fr5zoomout")
 
     imagebutton: # AUBREY
-        ypos 0 # needs adjustment
-        xpos 0 # needs adjustment
-        idle "images/fr5aubrey.webp"
-        hover "images/fr5aubreyhover.webp"
+        ypos 567
+        xpos 244
+        idle "images/v09/scene 7/fr5aubrey.webp"
+        hover "images/v09/scene 7/fr5aubreyhover.webp"
         if not fr5aubrey:
             action Jump ("fr5aubrey1")
         else:
             action Jump ("fr5aubrey2")
 
     imagebutton: # RILEY
-        ypos 0 # needs adjustment
-        xpos 0 # needs adjustment
-        idle "images/fr5riley.webp"
-        hover "images/fr5rileyhover.webp"
+        ypos 329
+        xpos 1523
+        idle "images/v09/scene 7/fr5riley.webp"
+        hover "images/v09/scene 7/fr5rileyhover.webp"
         if not fr5riley:
             action Jump ("fr5riley1")
         else:
             action Jump ("fr5riley2")
-
-
-# -If you click on Ryan-
-# -Conversation is different depending if you are an Ape or a Wolf-
 
 label fr5ryan1:
 
@@ -167,7 +181,6 @@ if joinwolves:
     with dissolve
 
     menu:
-
         "Mention the wolves":
 
             u "And to me, getting into Wolves really feels like a pretty good choice."
@@ -213,8 +226,6 @@ if joinwolves:
             with dissolve
 
             ry "Shut up!"
-
-
 
         "Play it cool":
             u "Frat or not, it all comes down to the looks. And one could not deny your boy's handsome as fuck, haha."
@@ -535,16 +546,9 @@ else:
 
     ry "You do that, man."
 
-# -It's back to free roam. If you click on Ryan again MC think's to himself-
-
 $ showphone = True
 
 call screen fr5lakefull
-
-
-# -if you click on Riley-
-
-# -two different conversations, depending on if rileyrs or notrileyrs-
 
 label fr5riley1:
 
@@ -575,9 +579,6 @@ if rileyrs:
 
     scene v9slake2c
     with dissolve
-
-    # -MC comes closer, with faces just inches apart-
-    # -MC can choose to kiss her or to blow air-
 
     menu:
 
@@ -718,7 +719,6 @@ call screen fr5lakezoomin
 label fr5riley2:
 
 scene fr5lakezoomin
-with dissolve
 
 $ showphone = False 
 
@@ -1269,6 +1269,8 @@ call screen fr5lakefull
 label fr5treeguy2:
 
 $ showphone = False
+
+scene fr5lakefull
 
 u "(I should leave him alone.)"
 
