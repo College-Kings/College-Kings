@@ -59,7 +59,7 @@ label v9_room_fri_eve:
 
         u "Come in!"
         
-        jump v9_train_w_wolves
+        jump v9_fri_training_w_wolves
 
     else:
         scene v9rfe3 # TPP. Show MC on his bed in Apes room reading a book.
