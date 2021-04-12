@@ -110,7 +110,7 @@ label v9_driving_home_lake:
     scene v9dhl3a # TPP. Same camera as v9dhl3, Aubrey mouth closed.
     with dissolve
 
-    u "He was really confused, so he looked below his wheel to see if something broke. But the moment he lifted his head back up -everyone turned to MC like they are expecting someting to happen- Bang! -everyone flinch- He hit something with his car!"
+    u "He was really confused, so he looked below his wheel to see if something broke. But the moment he lifted his head back up Bang! He hit something with his car!"
 
     scene v9dhl1b
     with dissolve
