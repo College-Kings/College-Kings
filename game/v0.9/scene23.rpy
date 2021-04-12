@@ -428,7 +428,7 @@ label v9_dinner_w_rose_cont3:
     with dissolve
     ch "Oh, no! Well, at least you got an upgrade out of the deal. I wish we'd have stayed to help you setup, though."
 
-    scene v9damr6e
+    scene v9damr3
     with dissolve
     ro "Nonsense. You boys helped so much! Really, I'm so thankful."
 
