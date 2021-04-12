@@ -74,13 +74,35 @@ label v9_room_w_chris:
     scene v9rwc5 # TPP. Show MC checking his phone.
     with dissolve
 
-    ### $ contact_Hey,.addReply("how's it going?")
-    ### $ contact_Julia.newMessage("Hey! I was just thinking about you. How's school?")
-    ### $ contact_Good..addReply("About to go have dinner with some of the guys in my building.")
-    ### $ contact_Julia.newMessage("I'm glad you're making friends. I'm so proud of you.")
-    ### $ contact_Aww,.addReply("don't make me blush. They'll be here any second. Talk to you later.")
-    ### $ contact_Julia.newMessage("<3")
-    ### ERROR: -After a short bit, Chris comes out with Imre, Finn, and a couple other Wolves- [any random wolves from 8.17] ###
+    $ phoneexit = "s21_PhoneContinue"
+
+    $ contact_Julia.addReply("Hey, how's it going?", "s21_JulReply1")
+    $ showphone = True
+    call screen phone
+
+    label s21_JulReply1:
+        $ contact_Julia.newMessage("Hey! I was just thinking about you, how's school?")
+        $ contact_Julia.addReply("Good! About to go have dinner with some of the guys in my house", "s21_JulReply2")
+
+        call screen messager(contact_Julia)
+
+    label s21_JulReply2:
+        $ contact_Julia.newMessage("I'm glad you're making friends, I'm so proud of you!")
+        $ contact_Julia.addReply("Aww don't make me blush! They'll be here any second, I'll talk to you later", "s21_JulReply3")
+
+        call screen messager(contact_Julia)
+
+    label s21_JulReply3:
+        $ contact_Julia.newMessage("<3")
+
+        call screen messager(contact_Julia)
+
+    label s21_PhoneContinue:
+        if contact_Julia.messages[-1].replies:
+            "(I should text Julia.)"
+            jump s21_PhoneContinue
+
+    $ showphone = False    
 
     pause 1
 
