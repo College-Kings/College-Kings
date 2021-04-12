@@ -93,7 +93,7 @@ label v9_sat_hit_gym:
             scene v9atg6 # FPP. Show gym door as MC exits
             with dissolve
             
-            jump v9v9_room_sat_aft
+            jump v9_room_sat_aft
 
         label v9_sat_hit_gym_forget:
             scene v9atg3
