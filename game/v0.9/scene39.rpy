@@ -47,7 +47,7 @@ label v9_hang_w_linds:
 
     pause 1
 
-    if no hl_punch:
+    if not hl_punch:
 
         scene v9hwl5 # FPP. Show Lindsey, concerned, mouth open.
         with dissolve
