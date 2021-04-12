@@ -336,11 +336,6 @@ label v9_at_warehouse:
         menu:
             "Say Something":
                 $ addPoint("tm", 1)
-
-                u "(He's sure amped up, but what's Sebastian got to do with it?)"
-
-            "Keep Quiet":
-
                 u "Um... what's up with Cam?"
 
                 scene v9aaw12d # FPP. Same camera as v9aaw12, Grayson turns to face cameron, Cameron looks at Grayson, Cameron angry, Grayson serious, Grayson mouth open.
@@ -352,6 +347,10 @@ label v9_at_warehouse:
                 with dissolve
 
                 u "(Wait? For what? What the hell is happening?)"
+
+            "Keep Quiet":
+                u "(He's sure amped up, but what's Sebastian got to do with it?)"
+
 
         scene v9aaw12e # FPP. Same camera as v9aaw12, Grayson gestures cameron to come over, Grayson serious expression, mouth open.
         with dissolve
