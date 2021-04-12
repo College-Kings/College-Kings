@@ -103,8 +103,6 @@ label v9_room_w_chris:
             jump s21_PhoneContinue
 
     $ showphone = False    
-    ### $ contact_Julia.newMessage("<3")
-    ### ERROR: -After a short bit, Chris comes out with Imre, Finn, and a couple other Wolves- [any random wolves from 8.17] ###
 
     pause 1
 
