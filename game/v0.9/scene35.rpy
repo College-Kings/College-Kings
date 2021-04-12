@@ -16,7 +16,7 @@ label v9_room_sat_aft:
         u "(How much longer do I have?)"
 
         scene v9rsa3 # TPP. Show MC now on his back on his bed, looking at his phone (don't show phone screen)
-        with disslovle
+        with dissolve
         
         pause 1
 
@@ -46,7 +46,7 @@ label v9_room_sat_aft:
         u "(How much longer do I have?)"
 
         scene v9rsa7 # TPP. Show MC now on his back on his bed, looking at his phone (don't show phone screen)
-        with disslovle
+        with dissolve
         
         pause 1
 

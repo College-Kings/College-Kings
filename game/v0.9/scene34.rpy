@@ -240,7 +240,7 @@ label v9_ri_sex:
     pause 0.75
 
     scene v9rilmi # Pls ignore as animation
-    with disccolve
+    with dissolve
 
     ri "Ahhhh. I love how you feel inside me."
     u "That's all you. You're amazing."
