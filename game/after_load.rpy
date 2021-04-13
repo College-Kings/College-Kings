@@ -98,4 +98,10 @@ label after_load:
                 "profilePicture": "images/Phone/Kiwii/Profile Pictures/kaipp.webp"
             }
         }
+
+    msgApp.image = "images/messagesicon.webp"
+    statsApp.image = "images/statsicon.webp"
+    achApp.image = "images/achicon.webp"
+    kiwiiApp.image = "images/Phone/Kiwii/AppAssets/kiwii.webp"
+
     return
