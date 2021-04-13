@@ -277,7 +277,7 @@ label v9_hall_no_punch:
     scene v9hlw24b # FPP. Same camera as v9hlw24, smile, mouth closed.
     with dissolve
 
-    u "And I've felt worse. That prick, catching me off guard. That stings the most. -makes a face like he's in pain- Ouch."
+    u "And I've felt worse. That prick, catching me off guard. That stings the most. Ouch."
 
     scene v9hlw24a
     with dissolve
