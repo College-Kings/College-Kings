@@ -26,7 +26,7 @@ default joinAubreyLake = False
 # FREEROAM SCREENS
 
 screen endfr5():
-    add "images/endfr.png"
+    add "images/endfr.webp"
     text "Are you sure you want to end the free roam?" style "endfree"
     textbutton "Yes" style "endfr":
         action Jump("fr5ryan3")
