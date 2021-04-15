@@ -12,48 +12,22 @@ label v9_ri_sex:
     scene v9ris2 # FPP. Show Riley, make sure her chest is in view, Riley's nipples should be poky in her shirt. Riley smile, mouth closed.
     with dissolve
 
-    menu:
-        "Greet Riley":
-            u "Hi."
+    u "Hi."
 
-            scene v9ris2a # FPP. Same camera as v9ris2, smile, mouth open.
-            with dissolve
+    scene v9ris2a # FPP. Same camera as v9ris2, smile, mouth open.
+    with dissolve
 
-            ri "Hi. That was fast?"
+    ri "Hi. That was fast?"
 
-            scene v9ris2
-            with dissolve
+    scene v9ris2
+    with dissolve
 
-            u "I was close by."
+    u "I was close by."
 
-            scene v9ris2a
-            with dissolve
+    scene v9ris2a
+    with dissolve
 
-            ri "Mmmhmm. Come on in."           
-
-        "Joke":
-            $ addPoint("tm", 1)
-            $ addPoint("bro", 1)
-
-            scene v9ris3 # FPP. Show Riley chest with her nipples poking through her shirt.
-            with dissolve
-        
-            u "Your headlights are on."
-
-            scene v9ris2a
-            with dissolve
-
-            ri "Did you think that would work?"
-
-            scene v9ris2
-            with dissolve
-
-            u "Maybe."
-
-            scene v9ris2a
-            with dissolve
-
-            ri "You're lucky you're so cute. Come in."
+    ri "Mmmhmm. Come on in."           
 
     scene v9ris4 # FPP. Show Riley (as if MC and her are sat on Rileys bed). Smile, mouth closed.
     with fade
