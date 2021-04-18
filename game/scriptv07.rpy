@@ -856,7 +856,7 @@ label v07:
 
                 no "Cheated on someone."
 
-                if laurenrs and aubreyrs or laurenrs and emilyrs:
+                if (laurenrs and aubreyrs) or (laurenrs and emilyrs):
 
                     scene s703 # showing mc drinking
                     with dissolve
@@ -7467,7 +7467,9 @@ label v07:
 
     elif kct == "loyal" or beachfirstkiss:
         $ hcGirl = "lauren"
-        call screen kctpopup("lauren_hc_yes")
+        
+        if kct == "loyal":
+            call screen kctpopup("lauren_hc_yes")
 
         label lauren_hc_yes:
         $ laurenrs = True

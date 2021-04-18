@@ -99,9 +99,17 @@ label after_load:
             }
         }
 
-    msgApp.image = "images/messagesicon.webp"
-    statsApp.image = "images/statsicon.webp"
-    achApp.image = "images/achicon.webp"
-    kiwiiApp.image = "images/Phone/Kiwii/AppAssets/kiwii.webp"
+        for app in applications:
+            app.image = os.splitext(message.image)[0] + ".webp"
+
+        for kiwiiPost in kiwiiPosts:
+            kiwiiPost.image = os.splitext(message.image)[0] + ".webp"
+
+        for contact in contacts:
+            for message in messages:
+                try:
+                    message.image = os.splitext(message.image)[0] + ".webp"
+                    print(message.image)
+                except Exception: pass
 
     return

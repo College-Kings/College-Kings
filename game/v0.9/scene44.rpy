@@ -97,7 +97,7 @@ label v9_warehouse_lindsey:
 
                 u "(You really screwed that one up. But you gotta get your head in the game.)"
 
-    if not lindseyfirstkiss:
+    elif not lindseyfirstkiss:
         u "Oh, hey! You alright? Sorry about that."
 
         scene v9wwl3b
@@ -202,7 +202,7 @@ label v9_warehouse_lindsey:
                 scene v9wwl4b
                 with dissolve
 
-    if lindseyfirstkiss:
+    elif lindseyfirstkiss:
         u "Oh, shit! Hey! Are you alright?"
 
         scene v9wwl3b
