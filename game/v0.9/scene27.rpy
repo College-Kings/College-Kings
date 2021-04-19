@@ -52,7 +52,7 @@ label v9_train_w_apes:
 
         scene v9twa1b
         with dissolve
-        
+
         u "Who?"
 
         scene v9twa1c
@@ -285,56 +285,59 @@ label v9_train_w_apes:
 
         menu:
             "Ask For Help":
+                scene v9twa5a
+                with dissolvea
 
-                scene v9twa5
-                with dissolve
                 u "You can show me some moves so I don't embarrass the fuck out of myself. And this house."
 
-                scene v9twa5a
+                scene v9twa5
                 with dissolve
 
                 ca "Smart man. I'd hate to have to knock your ass out so soon after your last beating."
 
-                scene v9twa5
+                scene v9twa5a
                 with dissolve
 
                 u "*grumbling* Thank you."
 
-                scene v9twa5a
+                scene v9twa5
                 with dissolve
 
                 ca "Great! Over here!"
 
             "Stay Quiet":
-                jump v9_train_w_apes_quiet
-        
-                scene v9twa5
+                $ addPoint("bf", 1)
+
+                scene v9twa5a
                 with dissolve
 
                 u "(Great. If he's gonna make Caleb puke on the weight bench, I can't wait to see what he has in store for me.)"
 
-                scene v9twa5a
+                scene v9twa5
                 with dissolve
 
                 ca "Well? What should I do with you?"
 
                 ca "Can't even stand up for yourself against one of us. How do you expect to represent the house in the Brawl?"
 
-                scene v9twa5
+                scene v9twa5a
                 with dissolve
 
                 u "(Not like I was asked if I wanted to fight in the first place.)"
 
                 u "Look. I was just trying not to fight in the middle of school. You want me to get expelled or something? Geez."
 
-                scene v9twa5a
+                scene v9twa5
                 with dissolve
 
                 ca "Come here."
 
+        scene v9twa7
+        with dissolve
+
         ca "If you were a Wolf and you knew your opponent was a pussy who got his ass knocked out, what would you be thinking?"
 
-        scene v9twa5
+        scene v9twa7a
         with dissolve
 
         u "(No, tell me how you REALLY feel.)"
