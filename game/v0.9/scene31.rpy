@@ -218,7 +218,7 @@ label v9_sat_cafe:
         u "(Okay...)"
 
     else: 
-        scene v9cwn10d # FPP. Same camera as v9cwn10, smirk, mouth open.
+        scene v9cwn10f
         with dissolve
 
         unknown "You're the guy that got his ass kicked on Kiwii right?"
