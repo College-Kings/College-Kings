@@ -6,6 +6,8 @@ label v9_dinner_w_rose:
     scene v9damr1 # FPP. Fade in at Ms. Rose's house
     with fade
 
+    pause 1
+
     scene v9damr2 # FPP. show Chris knocking on Ms. Rose's door
     with fade
 
