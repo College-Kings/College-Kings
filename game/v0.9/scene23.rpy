@@ -515,4 +515,6 @@ label v9_dinner_w_rose_cont4:
     scene v9damr20 # FPP. Show Rear shot of Imre, outside Ms. Rose house
     with dissolve
 
+    pause
+
     jump v9_room_fri_eve
