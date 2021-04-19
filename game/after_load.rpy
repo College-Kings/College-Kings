@@ -1,3 +1,6 @@
+init python:
+    import os
+
 label after_load:
     python:
         kiwiiUsers = {
@@ -100,16 +103,16 @@ label after_load:
         }
 
         for app in applications:
-            app.image = os.splitext(message.image)[0] + ".webp"
+            app.image = os.path.splitext(app.image)[0] + ".webp"
 
         for kiwiiPost in kiwiiPosts:
-            kiwiiPost.image = os.splitext(message.image)[0] + ".webp"
+            kiwiiPost.image = os.path.splitext(kiwiiPost.image)[0] + ".webp"
 
         for contact in contacts:
-            for message in messages:
+            for message in contact.messages:
                 try:
-                    message.image = os.splitext(message.image)[0] + ".webp"
+                    message.image = os.path.splitext(message.image)[0] + ".webp"
                     print(message.image)
-                except Exception: pass
+                except AttributeError: continue
 
     return
