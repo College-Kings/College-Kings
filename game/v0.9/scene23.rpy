@@ -1,6 +1,6 @@
 # SCENE 23: Dinner At Ms. Roses
 # Locations: Ms. Rose House
-# Characters: Ms. Rose(Outfit 1), MC (Outfit 3), Chris(Outfit 2), Imre(Outfit 1), Finn(Outfit 3), 
+# Characters: Ms. Rose(Outfit 1), MC (Outfit 3), Chris(Outfit 2), Imre(Outfit 1), Finn(Outfit 3),
 # Time: Friday Afternoon
 label v9_dinner_w_rose:
     scene v9damr1 # FPP. Fade in at Ms. Rose's house
@@ -49,7 +49,7 @@ label v9_dinner_w_rose:
             jump v9_dinner_w_rose_help
         "Stay With The Wolves":
             jump v9_dinner_w_rose_stay
-        
+
 
 label v9_dinner_w_rose_help:
 
@@ -139,7 +139,7 @@ label v9_dinner_w_rose_cont1:
             jump v9_dinner_w_rose_work
         "Talk About Viking Assignment":
             jump v9_dinner_w_rose_viking
-        
+
 
 label v9_dinner_w_rose_work:
     scene v9damr9
@@ -219,7 +219,7 @@ label v9_dinner_w_rose_cont2:
     with dissolve
     u "You can always open a restaurant if you get tired of dealing with college kids, Ms. Rose."
 
-    scene v9damr12
+    scene v9damr12a2
     with dissolve
     ro "I couldn't imagine life without my students, especially good ones like you boys."
 
@@ -227,7 +227,7 @@ label v9_dinner_w_rose_cont2:
     with dissolve
     ch "We're just glad we could help."
 
-    scene v9damr12
+    scene v9damr12a3 #Ms Rose now talking to Chris - mouth open
     with dissolve
     ro "You did help, so much."
 
@@ -235,11 +235,11 @@ label v9_dinner_w_rose_cont2:
     with dissolve
     u "You're a great teacher, Ms. Rose, and we all want you to be happy. We're here if you need anything."
 
-    scene v9damr12
+    scene v9damr12a2
     with dissolve
     ro "What I need now is for you boys to finish off this lasagne-"
 
-    scene v9damr14 # FPP. Show finn, sat to left of mc at table, slight smile, mouth open
+    scene v9damr14c # FPP. Show finn, sat to left of mc at table, slight smile, mouth open
     with dissolve
     finn "Yes, ma'am!"
 
@@ -251,7 +251,7 @@ label v9_dinner_w_rose_cont2:
     with dissolve
     u "I'm stuffed."
 
-    scene v9damr13
+    scene v9damr13d
     with dissolve
     ch "Me too. I can't move."
 
@@ -259,11 +259,11 @@ label v9_dinner_w_rose_cont2:
     with dissolve
     ro "Don't give up now. I haven't served dessert."
 
-    scene v9damr14
+    scene v9damr14c
     with dissolve
     finn "Oooh, dessert!"
 
-    scene v9damr9a
+    scene v9damr9b
     with dissolve
     imre "Still, Finn? How?"
 
@@ -275,11 +275,11 @@ label v9_dinner_w_rose_cont2:
     menu:
         "Try Helping Out Again":
             $ addPoint("bf", 1)
-            jump v9_dinner_w_rose_help2
+            jump v9_dinner_w_rose_help
         "Wait":
             jump v9_dinner_w_rose_wait
-        
-label v9_dinner_w_rose_help2:
+
+label v9_dinner_w_rose_help:
     scene v9damr12f # FPP. Same camera as v9damr12, Show Ms. Rose now stood at the end of table, Imre seated to MC's right,neutral expressions,  Ms. Rose mouth closed, Imre mouth closed
     with dissolve
     u "Please, let me help. I need to get up and move around."
@@ -345,15 +345,15 @@ label v9_dinner_w_rose_wait:
     jump v9_dinner_w_rose_cont3
 
 label v9_dinner_w_rose_cont3:
-    scene v9damr13
+    scene v9damr13a #FPP Chris rubbing hands together looking at his pie
     with dissolve
     ch "OK, you convinced me. I'll have some dessert!"
 
-    scene v9damr12
+    scene v9damr12a4
     with dissolve
     ro "Nobody can resist Grandma Ruth's famous Caramel Apple Pie!"
 
-    scene v9damr12g # FPP. same camera as v9damr12, neutral expressions,  Ms. Rose mouth closed, Imre mouth closed, pie on table
+    scene v9damr12g # TPP - Closeup of Rosa looking down the table (not into camera), mouth open slight smile
     with dissolve
     u "Best pie I've ever had!"
 
@@ -361,15 +361,15 @@ label v9_dinner_w_rose_cont3:
     with dissolve
     imre "I'd be the size of a sumo wrestler if I frew up with Grandma Ruth!"
 
-    scene v9damr12
+    scene v9damr12a4
     with dissolve
     ro "She did her best to make sure my dad was! Haha."
 
-    scene v9damr13
+    scene v9damr13b #FPP Chris full smile/chuckle looking at Ms Rose mouth open. Miss Rose smiling mouth closed looking towards Finn (Out of shot)
     with dissolve
     ch "Whoa! You actually filled Finn up, Ms. Rose! I don't think that's ever happened!"
 
-    scene v9damr14
+    scene v9damr14b # FPP Finn mouth open chuckling towards Mr Rose (out of shot) slouching holding stomach
     with dissolve
     finn "I don't either!"
 
@@ -388,19 +388,19 @@ label v9_dinner_w_rose_cont3:
 
     scene v9damr12a
     with dissolve
-    
+
     pause 1
 
-    scene v9damr13a # FPP. Same camera as v9damr13, Show Chris stood opposite side of table from camera, excited smile, closed
+    scene v9damr13c # TPP. Same camera as v9damr13, Show Chris trying to stand opposite side of table from camera, excited smile, closed Ms Rose halting him mouth open pleading
     with dissolve
     ro "No, no, no. Sit."
 
     scene v9damr12e # FPP. same camera as v9damr12, Show Ms. Rose leaving room, Imre seated to MC's right,neutral expressions,  Ms. Rose mouth closed, Imre mouth closed
     with dissolve
 
-    pause 1 
+    pause 1
 
-    scene v9damr12g
+    scene v9damr12h
     with dissolve
     ro "How about a quick tour before the evening ends?"
 
@@ -420,15 +420,15 @@ label v9_dinner_w_rose_cont3:
     with dissolve
     imre "Nice TV, Ms. Rose. Is it new?"
 
-    scene v9damr3
+    scene v9damr16a
     with dissolve
     ro "Yes. I dropped the one you helped me move. Got it all the way here and tipped it over when I was plugging it in."
 
-    scene v9damr6a
+    scene v9damr6a2
     with dissolve
     ch "Oh, no! Well, at least you got an upgrade out of the deal. I wish we'd have stayed to help you setup, though."
 
-    scene v9damr3
+    scene v9damr16a
     with dissolve
     ro "Nonsense. You boys helped so much! Really, I'm so thankful."
 
@@ -453,22 +453,22 @@ label v9_dinner_w_rose_cont3:
 
     else:
         jump v9_room_fri_eve
-        
+
 label v9_dinner_w_rose_cont4:
     # -Ms. Rose pulls MC aside-
-    scene v9damr2f # FPP. Same camera as v9damr2, show Ms. Rose opens door with a nervous smile, mouth open
+    scene v9damr2f2 # TPP - Rosa Grabbing MC's arm gently as he walks out the door, her mouth open, nervous expression. MC turning to look at Rosa neutral face. Eyes locked to eachother
     with dissolve
     ro "Um, [name], can I talk to you for a moment?"
 
-    scene v9damr2d # FPP. Same camera as v9damr2, show Ms. Rose opens door with a nervous smile, mouth closed
+    scene v9damr2f3 # TPP - Same as 2f2 MC head turned towards the door and mouth open almost shouting.
     with dissolve
     u "Sure. Guys, I'll catch up to you."
 
-    scene v9damr2f
+    scene v9damr2f # FPP Closeup of rosa, nervous eyes into camera mouth open a if talking quietly.
     with dissolve
     ro "I just wanted to say an extra thank you to you."
 
-    scene v9damr2d
+    scene v9damr2d # FPP same as 2f, mouth closed.
     with dissolve
     u "For what?"
 
@@ -488,27 +488,27 @@ label v9_dinner_w_rose_cont4:
     with dissolve
     u "What's the point of being part of a community if you can't help your fellow man...or woman. Haha."
 
-    scene v9damr2e # FPP. Same camera as v9damr2, show Ms. Rose opens door with a nervous smile, reaching out to place hand on MC arm, mouth open
+    scene v9damr2e # TPP , show Ms. Rose opens door with a nervous smile, reaching out to place hand on MC arm, mouth open
     with dissolve
     ro "You're going to be an excellent contribution to society. Your parents did a great job with you, [name]."
 
-    scene v9damr2d
+    scene v9damr2g # Same cam as 2d but ms rose much closer, hand down now shy smile mouth closed.
     with dissolve
     u "I'll be sure to tell them you said so."
 
-    scene v9damr2f
+    scene v9damr2h ## Same cam as 2d but ms rose much closer, hand down now shy smile mouth open.
     with dissolve
     ro "You take care heading back to the dorms. Hope I didn't keep you too long."
 
-    scene v9damr2d
+    scene v9damr2g
     with dissolve
     u "I'm sure they're waiting for me up ahead. We stick together."
 
-    scene v9damr2f
+    scene v9damr2h
     with dissolve
     ro "Good. You have a good night."
 
-    scene v9damr2d
+    scene v9damr2g
     with dissolve
     u "You too."
 
