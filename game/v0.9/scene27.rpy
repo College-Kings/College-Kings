@@ -116,6 +116,8 @@ label v9_train_w_apes_cont1:
         jump v9_train_w_apes_cont2
 
 label v9_train_w_apes_cont2:
+    scene v9twa5b # FPP. Same Camera as v9twa7, Show cameron punching bag, neutral expersion, mouth open
+    with dissolve
     ca "If you assholes think you're making a fool out of this house tomorrow, you got another thing coming."
 
     if hl_punch:
@@ -172,36 +174,36 @@ label v9_train_w_apes_cont3:
                 jump v9_train_w_apes_cont_humble
 
         label v9_train_w_apes_cont_humble:
-            scene v9twa4a # FPP. Show Cameron, hands behind back, serious look, mouth open
+            scene v9twa5a # FPP. Show Cameron, hands behind back, serious look, mouth open
             with dissolve
 
             u "Aww, I don't know. It wasn't that big a deal."
 
-            scene v9twa5a
+            scene v9twa5
             with dissolve
 
             ca "Nonsense!"
 
             ca "You're our main event! That's why we gotta make extra sure you're ready."
 
-            scene v9twa4a
+            scene v9twa5a
             with dissolve
 
             u "I feel alright."
 
-            scene v9twa5a
+            scene v9twa5
             with dissolve
 
             ca "Alright? Alright's not good enough! Let's go!"
 
             jump v9_train_w_apes_cont4
         label v9_train_w_apes_cont_conf:
-            scene v9twa4a
+            scene v9twa5a
             with dissolve
 
             u "Yeah, I dropped that guy!"
 
-            scene v9twa5a
+            scene v9twa5
             with dissolve
 
             ca "Not so fast. There's more to being a champion than one lucky punch."
@@ -312,7 +314,7 @@ label v9_train_w_apes_concerned:
     jump v9_train_w_apes_cont5
 
 label v9_train_w_apes_cont5:
-    scene v9twa4a
+    scene v9twa5
     with dissolve
 
     ca "Well, well, well."
