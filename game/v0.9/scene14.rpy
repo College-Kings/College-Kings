@@ -41,7 +41,7 @@ label v9_thur_w_punch:
     scene v9trs3c # FPP. Same camera as v9trs3, both smiling, Sebastian mouth closed, Marcus mouth open.
     with dissolve
 
-    ma "Of course I can, haha! Our boy is a fucking star!"
+    guyc "Of course I can, haha! Our boy is a fucking star!"
 
     scene v9trs3b
     with dissolve
@@ -56,7 +56,7 @@ label v9_thur_w_punch:
     scene v9trs3d # FPP. Same camera as v9trs3, both shocked, Marcus mouth open.
     with dissolve
 
-    ma "Holy shit, he doesn't know?!"
+    guyc "Holy shit, he doesn't know?!"
 
     scene v9trs3e # FPP. Same camera as v9trs3, both shocked, Sebastian mouth open.
     with dissolve
@@ -71,7 +71,7 @@ label v9_thur_w_punch:
     scene v9trs3c
     with dissolve
 
-    ma "Did you check Kiwii out, man?"
+    guyc "Did you check Kiwii out, man?"
 
     scene v9trs3b
     with dissolve
@@ -96,7 +96,7 @@ label v9_thur_w_punch:
     scene v9trs5a # FPP. Same camera as v9trs5, both smiling, Marcus mouth open.
     with dissolve
 
-    ma "Made us proud, bro."
+    guyc "Made us proud, bro."
 
     scene v9trs4a # TPP. Same camera as v9trs4, Show MC looking at his phone in hand.
     with dissolve
@@ -113,7 +113,7 @@ label v9_thur_w_punch:
     scene v9trs5a
     with dissolve
 
-    ma "Fuck yeah! Seems the training did you well. Just like it should!"
+    guyc "Fuck yeah! Seems the training did you well. Just like it should!"
 
     if kct == "loyal":
 
@@ -135,7 +135,7 @@ label v9_thur_w_punch:
         scene v9trs5c # FPP. Same camera as v9trs5, both neutral, Marcus mouth open.
         with dissolve
 
-        ma "Well if he attacked first, people can vouch for you."
+        guyc "Well if he attacked first, people can vouch for you."
 
         scene v9trs5d # FPP. Same camera as v9trs5, both neutral, Sebastian mouth open.
         with dissolve
@@ -145,7 +145,7 @@ label v9_thur_w_punch:
         scene v9trs5a
         with dissolve
 
-        ma "A pretty badass self-defense, haha."
+        guyc "A pretty badass self-defense, haha."
 
         scene v9trs5b
         with dissolve
@@ -155,7 +155,7 @@ label v9_thur_w_punch:
         scene v9trs5a
         with dissolve
 
-        ma "We're always there."
+        guyc "We're always there."
 
         scene v9trs5
         with dissolve
@@ -178,7 +178,7 @@ label v9_thur_w_punch:
         scene v9trs5a
         with dissolve
 
-        ma "I can almost feel it, as if I was there watching."
+        guyc "I can almost feel it, as if I was there watching."
 
         scene v9trs5b
         with dissolve
@@ -188,7 +188,7 @@ label v9_thur_w_punch:
         scene v9trs5c
         with dissolve
 
-        ma "Oh no, no! We are always there."
+        guyc "Oh no, no! We are always there."
 
         scene v9trs5
         with dissolve
@@ -206,7 +206,7 @@ label v9_thur_room_w_seb_cont1:
     scene v9trs5a
     with dissolve
 
-    ma "I'll let that slide, Mr. Showoff."
+    guyc "I'll let that slide, Mr. Showoff."
 
     scene v9trs5
     with dissolve
@@ -216,7 +216,7 @@ label v9_thur_room_w_seb_cont1:
     scene v9trs6 # TPP. Show Marcus lifting up a pack of beers, everyone smiling, Marcus mouth open.
     with dissolve
 
-    ma "And here's to that, aaaah-ooooooh!!"
+    guyc "And here's to that, aaaah-ooooooh!!"
 
     scene v9trs7 # TPP. Show everyone grabbing a beer and making a toast.
     with dissolve
@@ -236,7 +236,7 @@ label v9_thur_room_w_seb_cont1:
     scene v9trs8a # FPP. Same camera as v9trs8, Marcus now with beer in the air, both smiling, Marcus mouth open.   
     with dissolve
 
-    ma "For [name]!"
+    guyc "For [name]!"
 
     scene v9trs8b # FPP. Same camera as v9trs8, both beers in the air, both smiling, mouths closed.
     with dissolve
@@ -252,7 +252,7 @@ label v9_thur_room_w_seb_cont1:
     scene v9trs5a
     with dissolve
 
-    ma "Two days left before the Freshman Brawl."
+    guyc "Two days left before the Freshman Brawl."
 
     scene v9trs5
     with dissolve
@@ -267,7 +267,7 @@ label v9_thur_room_w_seb_cont1:
     scene v9trs5a
     with dissolve
 
-    ma "Trust me, [name]. I can see it in you."
+    guyc "Trust me, [name]. I can see it in you."
 
     scene v9trs5
     with dissolve
@@ -277,7 +277,7 @@ label v9_thur_room_w_seb_cont1:
     scene v9trs5a
     with dissolve
 
-    ma "You will see."
+    guyc "You will see."
 
     scene v9trs5b
     with dissolve
@@ -292,7 +292,7 @@ label v9_thur_room_w_seb_cont1:
     scene v9trs5a
     with dissolve
 
-    ma "More beer!"
+    guyc "More beer!"
 
     scene v9trs5b
     with dissolve
@@ -320,7 +320,7 @@ label v9_thur_w_no_punch:
     scene v9trs3d
     with dissolve
 
-    ma "Heard? Fucking saw it, dude."
+    guyc "Heard? Fucking saw it, dude."
 
     scene v9trs3f
     with dissolve
@@ -347,7 +347,7 @@ label v9_thur_w_no_punch:
     scene v9trs5c
     with dissolve
 
-    ma "Shit [name], what was that all about?"
+    guyc "Shit [name], what was that all about?"
 
     scene v9trs5e # FPP. Same camera as v9trs5, both neutral, mouths closed.
     with dissolve
@@ -367,7 +367,7 @@ label v9_thur_w_no_punch:
     scene v9trs5c
     with dissolve
 
-    ma "Did seem pretty dirty to me, yeah."
+    guyc "Did seem pretty dirty to me, yeah."
 
     scene v9trs5e
     with dissolve
@@ -387,7 +387,7 @@ label v9_thur_w_no_punch:
     scene v9trs5c
     with dissolve
 
-    ma "I think you should see a lesson here."
+    guyc "I think you should see a lesson here."
 
     scene v9trs5e
     with dissolve
@@ -422,7 +422,7 @@ label v9_thur_w_no_punch:
     scene v9trs5c
     with dissolve
 
-    ma "Damn right. Upwards and proud."
+    guyc "Damn right. Upwards and proud."
 
     scene v9trs5d
     with dissolve
@@ -442,7 +442,7 @@ label v9_thur_w_no_punch:
     scene v9trs5c
     with dissolve
 
-    ma "And now is your time to learn your lesson."
+    guyc "And now is your time to learn your lesson."
 
     scene v9trs5e
     with dissolve
@@ -482,7 +482,7 @@ label v9_thur_w_no_punch:
     scene v9trs5a
     with dissolve
 
-    ma "We toast!"
+    guyc "We toast!"
 
     scene v9trs5b
     with dissolve
@@ -497,7 +497,7 @@ label v9_thur_w_no_punch:
     scene v9trs8a
     with dissolve
 
-    ma "For the nosebleeder [name], haha!"
+    guyc "For the nosebleeder [name], haha!"
 
     scene v9trs8b
     with dissolve
@@ -522,7 +522,7 @@ label v9_thur_w_no_punch:
     scene v9trs5a
     with dissolve
 
-    ma "Yeah?"
+    guyc "Yeah?"
 
     scene v9trs5b
     with dissolve
