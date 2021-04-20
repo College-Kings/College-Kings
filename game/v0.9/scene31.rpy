@@ -34,7 +34,7 @@ label v9_sat_cafe_w_nora:
 
     u "I think you're right to see it the way you do. Your partner should come first regardless, and even though all of this seems important now, it's all temporary."
 
-    scene v9cwn3B # FPP. Same camera as v9cwn3, smile, mouth open.
+    scene v9cwn3b # FPP. Same camera as v9cwn3, smile, mouth open.
     with dissolve
 
     no "Wow, under that thick skull you're not as dull as the rest of those meat heads."
