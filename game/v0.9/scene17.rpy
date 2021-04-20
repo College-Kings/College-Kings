@@ -56,7 +56,7 @@ label v9_room_fri_morn:
             call screen messager(contact_Lauren)
 
         label s17_PhoneContinueW:
-            if contact_Lauren.messages[-1]:
+            if contact_Lauren.messages[-1].replies:
                 "(I should text Lauren.)"
                 jump s17_PhoneContinueW
 
@@ -104,7 +104,7 @@ label v9_room_fri_morn:
             call screen messager(contact_Lauren)
 
         label s17_PhoneContinueA:
-            if contact_Lauren.messages[-1]:
+            if contact_Lauren.messages[-1].replies:
                 "(I should text Lauren.)"
                 jump s17_PhoneContinueA
 
