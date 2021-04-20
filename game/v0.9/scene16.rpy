@@ -1046,6 +1046,8 @@ label v9_thur_night_aft_em_a:
     scene black
     with dissolve
 
+    pause 1
+
     jump v9_room_fri_morn
 
 
