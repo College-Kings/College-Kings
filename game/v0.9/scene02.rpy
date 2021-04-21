@@ -264,7 +264,7 @@ else:
 label v9_phn_ryan1_a1:
 $ contact_Ryan.newMessage("Yeah, you ready?")
 $ contact_Ryan.addReply("Hell no! But we need to get ready!", "v9_phn_ryan1_a1a1")
-$ contact_Ryan.addReply("I think so, actually. You and Sebastian really helped", "v9_phn_ryan1_a1b1")
+$ contact_Ryan.addReply("I think so, actually. You and Cameron really helped", "v9_phn_ryan1_a1b1")
 call screen messager(contact_Ryan)
 
 label v9_phn_ryan1_a1a1:
