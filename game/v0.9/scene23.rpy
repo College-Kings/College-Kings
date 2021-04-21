@@ -385,7 +385,7 @@ label v9_dinner_w_rose:
     scene v9damr9a
     with dissolve
 
-    imre "I'd be the size of a sumo wrestler if I frew up with Grandma Ruth!"
+    imre "I'd be the size of a sumo wrestler if I grew up with Grandma Ruth!"
 
     scene v9damr12a4
     with dissolve
