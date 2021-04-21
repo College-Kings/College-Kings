@@ -50,6 +50,8 @@ label v9_room_fri_eve:
                     "(I should text Lauren.)"
                     jump s25_ContinueW
 
+            $ showphone = False
+
         scene v9rfe2 # TPP. Show MC's door.
         with dissolve
 
@@ -106,6 +108,8 @@ label v9_room_fri_eve:
                 if contact_Lauren.messages[-1].replies:
                     "(I should text Lauren.)"
                     jump s25_ContinueA
+
+            $ showphone = False
 
         scene v9rfe4 # TPP. Show MC's door.
         with dissolve
