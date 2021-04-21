@@ -6177,11 +6177,11 @@ label script06:
     $ ammsgnot = 1
     $ amisreply = 1
 
+    $ contact_Penelope.unlock()
 
     if bowling == True:
 
         $ contact_Penelope.addReply("Hey, you wanna go bowling today? I'm free this afternoon", "perep1a")
-        $ contact_Penelope.unlock()
         $ showphone = 1
         $ phoneexit = "phoneak"
 

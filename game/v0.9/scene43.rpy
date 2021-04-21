@@ -47,7 +47,7 @@ label v9_warehouse_josh:
     scene v9jka2
     with dissolve
 
-    u "We know they're right about that! Got a fancy annoucer voice whipped up already? I'm sure you were up all night practicing it in the mirror."
+    u "We know they're right about that! Got a fancy announcer voice whipped up already? I'm sure you were up all night practicing it in the mirror."
 
     u "Ladies and gentlemen..."
 
@@ -104,7 +104,7 @@ label v9_warehouse_josh:
     scene v9jka5 # TPP. Show Josh in the middle of the ring, wearing outfit 2, pacing around as if he's making an announcement, mouth open.
     with dissolve
 
-    jo "(WWE Annoucer Voice) Lovely, lovely ladies...and dudes, I'm your beloved annoucer Josh AKA Mr. Have-A-Good-Time."
+    jo "(WWE announcer Voice) Lovely, lovely ladies...and dudes, I'm your beloved announcer Josh AKA Mr. Have-A-Good-Time."
 
     scene v9jka4a
     with dissolve

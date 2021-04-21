@@ -143,7 +143,7 @@ label v9_at_warehouse:
 
         else:
             # -If MC got punched in 12-
-            u "(Oh, God what if they booo me when I get in the ring?)"
+            u "(Oh, God what if they boo me when I get in the ring?)"
 
             show glitch
             play sound "sounds/glitch.mp3"
