@@ -52,30 +52,6 @@ label v9_satmorn_gfb_walk:
 
         jump v9_sat_cafe_w_nora
     else:
-        scene v9gfb2
-        with dissolve
-        no "Oh wow, I'm sorry."
-
-        scene v9gfb3
-        with dissolve
-        u "(laughs) You're sorry? I'm the one that was staring into the sun. Are you okay?"
-
-        scene v9gfb3a
-        with dissolve
-        no "Wow..."
-
-        scene v9gfb3
-        with dissolve
-        u "Wow what?"
-
-        scene v9gfb3a
-        with dissolve
-        no "I'm just realizing it's been so long since someone's actually asked me that."
-
-        scene v9gfb3
-        with dissolve
-        u "Well, we all need to hear it now and again."
-
         scene v9gfb3b
         with dissolve
         no "That's true. Anyway, I gotta go. See you around."
