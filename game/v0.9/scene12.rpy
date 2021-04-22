@@ -378,22 +378,22 @@ label v9_hall_no_punch:
 
     u "That you will."
 
-    scene v9hwl30a # FPP. Same camera as v9hlw30, Lindsey turns around and looks at camera, mouth open.
+    scene v9hlw30a # FPP. Same camera as v9hlw30, Lindsey turns around and looks at camera, mouth open.
     with dissolve
 
     li "Bye."
 
-    scene v9hwl30b # FPP. Same camera as v9hlw30, Lindsey still turned around, blows a kiss to MC (Camera).
+    scene v9hlw30b # FPP. Same camera as v9hlw30, Lindsey still turned around, blows a kiss to MC (Camera).
     with dissolve
 
     pause 1
 
-    scene v9hwl31 # TPP. Show MC lying down on the bed.
+    scene v9hlw31 # TPP. Show MC lying down on the bed.
     with dissolve
      
     u "(Well fuck it, if it wasn't the best punch outcome I have ever had.)"
 
-    scene v9hwl31a # TPP. Same camera as v9hlw31, MC checking his nose with his hand, nose no longer bleeding.
+    scene v9hlw31a # TPP. Same camera as v9hlw31, MC checking his nose with his hand, nose no longer bleeding.
     with dissolve
 
     u "(I think the bleeding has stopped. At least for now.)"
