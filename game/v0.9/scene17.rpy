@@ -87,7 +87,7 @@ label v9_room_fri_morn:
 
         u "(Is this guy my fucking dad? Jesus.)"
 
-        scene v9fmr6a # TPP. Same camera as v9fmr6, show MC checking his phone.
+        scene v9fmr7 # TPP. Same camera as v9fmr6, show MC checking his phone.
         with dissolve
 
         play sound "sounds/vibrate.mp3"
