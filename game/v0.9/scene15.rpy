@@ -68,7 +68,7 @@ label v9_thur_room_w_cam_punch:
     label v9_s15_phoneExit_Punch:
         if s15KiwiiPost.getReplies():
             "(I should check Kiwii)"
-            jump s15_v9_s15_phoneExit_Punch
+            jump v9_s15_phoneExit_Punch
 
     menu:
         "Brag":
