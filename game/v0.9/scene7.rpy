@@ -955,9 +955,9 @@ menu:
 
             image v9slake17vid = Movie (play="images/v09/scene 7/v9slake17vid.webm", loop = True, image = "images/v09/scene 7/v9slake17vidend.webp", start_image = "images/v09/scene 7/v9slake17vidstart.webp")
             image v9slake18vid = Movie (play="images/v09/scene 7/v9slake18vid.webm", loop = True, image = "images/v09/scene 7/v9slake18vidend.webp", start_image = "images/v09/scene 7/v9slake18vidstart.webp")
-            image v9slake18vidfast = Movie (play="images/v09/scene 7/v9slake18vid.webm", loop = True, image = "images/v09/scene 7/v9slake18vidend.webp", start_image = "images/v09/scene 7/v9slake18vidstart.webp")
+            image v9slake18vidfast = Movie (play="images/v09/scene 7/v9slake18vidf.webm", loop = True, image = "images/v09/scene 7/v9slake18vidend.webp", start_image = "images/v09/scene 7/v9slake18vidstart.webp")
             image v9slake19vid = Movie (play="images/v09/scene 7/v9slake19vid.webm", loop = True, image = "images/v09/scene 7/v9slake19vidend.webp", start_image = "images/v09/scene 7/v9slake19vidstart.webp")
-            image v9slake19vidfast = Movie (play="images/v09/scene 7/v9slake19vid.webm", loop = True, image = "images/v09/scene 7/v9slake19vidend.webp", start_image = "images/v09/scene 7/v9slake19vidstart.webp")
+            image v9slake19vidfast = Movie (play="images/v09/scene 7/v9slake19vidf.webm", loop = True, image = "images/v09/scene 7/v9slake19vidend.webp", start_image = "images/v09/scene 7/v9slake19vidstart.webp")
 
             scene v9slake17vid # mc and aubrey make out animation
             with dissolve
