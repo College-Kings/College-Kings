@@ -102,7 +102,9 @@ label v9_room_w_chris:
             "(I should text Julia.)"
             jump s21_PhoneContinue
 
-    $ showphone = False    
+    $ showphone = False
+
+    u "(I should probably head over to Ms. Roses.)"
 
     pause 1
 
