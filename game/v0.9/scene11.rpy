@@ -196,7 +196,7 @@ label v9_hc_demo_riches:
 
     pe "Just what I like to hear, Sir [name]."
 
-    pe "I promised my new bride riches beyond her wildest dreams and I must deliver."
+    pe "I promised my new bride riches beyond her wildest dreams and I must deliver, even if it means escalating the war to the West."
 
     scene v9demo8
     with dissolve
