@@ -93,7 +93,7 @@ label after_load:
                 "profilePicture": "images/Phone/Kiwii/Profile Pictures/parkerpp.webp"
             },
             "Sebastian": {
-                "username": "Kai",
+                "username": "Big Seb",
                 "profilePicture": "images/Phone/Kiwii/Profile Pictures/sebastianpp.webp"
             },
             "Kai": {
