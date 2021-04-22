@@ -193,7 +193,7 @@ label v9_thur_room_w_cam_no_drink:
     with dissolve
     u "I don't think we should."
 
-    scene v9trc5b # FPP. Close up on samantha, Worried look, mouth open
+    scene v9trc5a # FPP. Close up on samantha, Worried look, mouth open
     with dissolve
     sa "Don't do that on my account. I can handle it."
 
