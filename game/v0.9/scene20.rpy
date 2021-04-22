@@ -47,9 +47,9 @@ label v9_room_fri_aft:
         $ phoneexit = "s20_phoneExitA"
 
         $ s20KiwiiPost = KiwiiPost("Grayson", "images/v09/scene 20/s20KiwiiApe.webp", "Where my APES at?", numberLikes=renpy.random.randint(200, 300))
-        $ s20KiwiiPost.addComment("Cameron", "Where'd you get that pic of me?", numberLikes=renpy.random.randint(200, 250))
-        $ s20KiwiiPost.addComment("Ryan", "You wish Cam. That's totally me!", numberLikes=renpy.random.randint(200, 250))
-        $ s20KiwiiPost.addReply("Right here!", "s20Reply1", numberLikes=renpy.random.randint(100, 200))
+        $ s20KiwiiPost.addComment("Cameron", "The BEST Ape is right here!", numberLikes=renpy.random.randint(200, 250))
+        $ s20KiwiiPost.addComment("Ryan", "I'm SO ready!", numberLikes=renpy.random.randint(200, 250))
+        $ s20KiwiiPost.addReply("Let's go!!", "s20Reply1", numberLikes=renpy.random.randint(100, 200))
 
         call screen phone
 
