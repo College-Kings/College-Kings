@@ -72,7 +72,7 @@ label v9_room_fri_morn:
 
         gr "Wake up, [name] Ape's aren't lazy assholes. Get up. Go be productive. Oh, and I'd avoid the toilet. Cameron backed it up again."
 
-        scene v9fm5a # FPP. Same camera as v9fmr5, Grayson mouth closed.
+        scene v9fmr5a # FPP. Same camera as v9fmr5, Grayson mouth closed.
         with dissolve
 
         u "(drowsy) Uhh, yeah ok. I'm up, and ewww."
