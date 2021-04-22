@@ -8,6 +8,8 @@ label v9_lau_dorm:
     scene v9lau1 # TPP. Show MC walking up the hallway to Lauren's dorm.
     with fade
 
+    play music "music/v09/Scene 19/Track Scene 19.mp3" fadein 2
+
     pause 0.8
 
     scene v9lau2 # TPP. Show MC knocking on Lauren's dorm door.
@@ -645,6 +647,8 @@ label v9_lau_dorm_no_kiss:
     with dissolve
     
     pause 1
+
+    stop music fadeout 3
 
     scene black
     with dissolve

@@ -7,6 +7,8 @@ label v9_run_w_ryan:
     scene v9rwr1 # TPP. Show Ryan walking through MC's door into his room.
     with dissolve
 
+    play music "music/v09/Scene 21/Track Scene 37.mp3" fadein 2
+
     pause 1
 
     scene v9rwr2 # FPP. Show Ryan, smile, mouth open.
@@ -170,6 +172,8 @@ label v9_run_w_ryan:
 
     scene v9rwr14 # TPP. Show Ryan walking away on his own.
     with dissolve
+
+    stop music fadeout 3
 
     pause 1
     

@@ -14,6 +14,8 @@ label v9_room_w_sam:
     scene v9rwsa2 # TPP. Show MC getting up from his desk to answer his door.
     with dissolve
 
+    play music "music/v09/Scene 21/Track Scene 21 & 22.mp3" fadein 2
+
     pause 0.8
 
     scene v9rwsa3 # FPP. Show Lindsey stood outside MC's door, Lindsey mouth closed.
@@ -264,6 +266,8 @@ label v9_room_w_sam:
 
     scene black
     with dissolve
+
+    stop music fadeout 3
 
     pause 0.5
 

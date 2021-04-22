@@ -7,6 +7,8 @@ label v9_room_w_chris:
     scene v9rwc1 # TPP. Show MC sat at his desk, continuing on from v9fra2a.
     with dissolve
 
+    play music "music/v09/Scene 21/Track Scene 21 & 22.mp3" fadein 2
+
     pause 1
 
     scene v9rwc2 # TPP. Show MC's wolves door.
@@ -105,6 +107,8 @@ label v9_room_w_chris:
     $ showphone = False
 
     u "(I should probably head over to Ms. Roses.)"
+
+    stop music fadeout 3
 
     pause 1
 

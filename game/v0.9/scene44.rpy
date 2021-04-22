@@ -9,6 +9,8 @@ label v9_warehouse_lindsey:
 
     u "(I need a breather. I should go see what this lineup looks like. Prepare myself for the night.)"
 
+    play music "music/v09/Scene 44/Track Scene 44.mp3" fadein 2
+
     scene v9wwl2 # TPP. Show MC continuing to walk, he bumps into Lindsey as he is walking.
     with dissolve
 
@@ -43,7 +45,7 @@ label v9_warehouse_lindsey:
         scene v9wwl3
         with dissolve
 
-        u "Oh, yes of course."
+        u "Oh, yes of course." 
 
         scene v9wwl4 # FPP. Show Lindsey walking away.
         with dissolve
@@ -363,5 +365,7 @@ label v9_warehouse_lindsey:
     with dissolve
 
     u "(Focus.)"
+
+    stop music fadeout 3
 
     jump v9_ending

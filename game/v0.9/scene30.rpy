@@ -7,6 +7,8 @@ label v9_satmorn_gfb_walk:
     scene v9gfb1 # FPP. MC on sidewalk, looking at the horizon, sun barely risen
     with fade
 
+    play music "music/v09/Scene 30/Track Scene 30.mp3" fadein 2
+
     pause 1
 
     scene v9gfb2 # FPP. Nora very close to mc, Surprised look, mouth open
@@ -49,6 +51,8 @@ label v9_satmorn_gfb_walk:
         scene v9gfb3
         with dissolve
         u "Sounds great! I know a cafe right around the corner."
+        
+        stop music fadeout 3
 
         jump v9_sat_cafe_w_nora
     else:
@@ -59,5 +63,7 @@ label v9_satmorn_gfb_walk:
         scene v9gfb3c
         with dissolve
         u "Yeah, of course."
+
+        stop music fadeout 3
 
         jump v9_sat_cafe

@@ -10,6 +10,8 @@ label v9_hang_w_linds:
     scene v9hwl1 # TPP. Show MC knocking on the door of the chicks house.
     with fade
 
+    play music "music/v09/Scene 39/Track Scene 39_1.mp3" fadein 2
+
     pause 1
 
     scene v9hwl2 # FPP. Show Lindsey opening to the door, Lindsey smile, mouth open.
@@ -193,6 +195,11 @@ label v9_hang_w_linds:
 
             scene v9hwl8 # FPP. Close up of Lindsey, as if she is about to go in for a kiss with MC (camera).
             with dissolve
+            
+            stop music fadeout 3
+
+            play music "music/v09/Scene 39/Track Scene 39_2.mp3" fadein 2
+
 
             menu:
                 "Make Out With Lindsey":
@@ -256,6 +263,8 @@ label v9_hang_w_linds:
 
                     u "(No! Shit!)"
 
+                    stop music fadeout 3
+                    
                     scene v9hwl10 # FPP. Show Lindsey (camera as if MC has gotten off the bed but Lindsey still on it). Lindsey a little sad, mouth closed.
                     with dissolve
 

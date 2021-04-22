@@ -8,6 +8,8 @@ label v9_call_w_lindsey:
         scene v9cwl1 # TPP. Show MC on his bed in his Wolves room, phone in hand, looking tired.
         with fade
 
+        play music "music/v09/Scene 28/Track Scene 28.mp3" fadein 2
+
         u "(What a jam-packed day. And this wasn't even the real deal. Tomorrow is showtime. I didn't see myself going down this road when I started college, but I'm in too deep now. There's no way I'll lose, no way in hell.)"
 
         play sound "sounds/calling.mp3"
@@ -251,6 +253,8 @@ label v9_call_w_lindsey:
 
         scene black
         with dissolve
+
+        stop music fadeout 3
 
         pause 1
 

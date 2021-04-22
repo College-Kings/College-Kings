@@ -7,6 +7,8 @@ label v9_sat_cafe_w_nora:
     scene v9cwn1 # TPP. Show MC and Nora walking to a table in the cafe.
     with fade
 
+    play music "music/v09/Scene 31/Track Scene 31.mp3" fadein 2
+
     pause 1
 
     scene v9cwn2 # TPP. Show Nora and MC taking a seat at the table.
@@ -242,5 +244,7 @@ label v9_sat_cafe:
     with fade
 
     u "(Well, let the crazy begin.)"
+
+    stop music fadeout 3
 
     jump v9_sat_gym

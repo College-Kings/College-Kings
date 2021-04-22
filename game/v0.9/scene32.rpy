@@ -10,6 +10,8 @@ label v9_sat_gym:
     with fade
     u "(I should probably freshen up my skills.)"
 
+    play music "music/v09/Scene 32/Track Scene 32.mp3" fadein 2
+
     menu:
         "Hit The Gym":
             jump v9_sat_hit_gym
@@ -188,10 +190,13 @@ label v9_sat_skip_gym:
                 jump s32_PhoneContinue
 
         if v9_sex_with_riley:
+            stop music fadeout 3
             jump v9_ri_sex
         
         else:
+            stop music fadeout 3
             jump v9_room_sat_aft
 
     else:
+        stop music fadeout 3
         jump v9_room_sat_aft

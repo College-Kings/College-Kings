@@ -13,6 +13,8 @@ label v9_walk_li_txt:
 
     u "(I may need some help if they run into each other again)"
 
+    play music "music/v09/Scene 38/Track Scene 38.mp3" fadein 2
+
     scene v9wlt1a # TPP. Same camera as v9wlt1, MC checking his phone.
     with dissolve
     
@@ -68,13 +70,17 @@ label v9_walk_li_txt:
     if hangOutWithLindsey:
         u "(I suppose I should head to see Lindsey)"
 
+        stop music fadeout 3
+
         jump v9_hang_w_linds
     
     else:
         u "(Shit)"
 
         if joinwolves:
+            stop music fadeout 3
             jump v9_wolves_pre_fight
 
         else:
+            stop music fadeout 3
             jump v9_apes_pre_fight

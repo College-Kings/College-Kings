@@ -7,6 +7,8 @@ label v9_ri_sex:
     scene v9ris1 # TPP. Show MC outside Riley's dorm knocking on the door.
     with fade
 
+    play music "music/v09/Scene 34/Track Scene 34_1.mp3" fadein 2
+
     pause 1
 
     scene v9ris2 # FPP. Show Riley, make sure her chest is in view, Riley's nipples should be poky in her shirt. Riley smile, mouth closed.
@@ -88,8 +90,12 @@ label v9_ri_sex:
 
     pause 1
 
+    stop music fadeout 3
+
     scene v9ris7a # TPP. Same camera as v9ris7a, MC now wearing no pants, Riley looking at MC seductively.
     with dissolve
+
+    play music "music/v09/Scene 34/Track Scene 34_2.mp3" fadein 3
 
     pause 1
 
@@ -327,10 +333,14 @@ label v9_ri_sex:
 
     pause 1
 
+    stop music fadeout 3
+
     scene v9ris23 # FPP. Show Riley, now lying next to MC, smile, mouth closed.
     with dissolve
 
     u "Do you... need anything?"
+
+    play music "music/v09/Scene 34/Track Scene 34_3.mp3" fadein 3
 
     scene v9ris23a # FPP. Same camera as v9ris23, smile, mouth open.
     with dissolve
@@ -365,6 +375,8 @@ label v9_ri_sex:
     scene black
     with fade
 
+    stop music fadeout 3
+    
     pause 1
 
     scene v9ris24 # TPP. Show Riley waking MC up, Riley fully clothed, MC still naked.

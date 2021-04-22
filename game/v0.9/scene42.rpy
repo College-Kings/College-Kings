@@ -8,6 +8,8 @@ label v9_at_warehouse:
         scene v9aaw1 # FPP. Show Sebastian removing the blindfold being removed from Camera, blurry image (As if adjusting to the light).
         with fade
         
+        play music "music/v09/Scene 42/Track Scene 42.mp3" fadein 2
+
         pause 1
 
         scene v9aaw1a # FPP. Same camera as v9aaw1, Sebastian stood infront of MC smiling, mouth closed.
@@ -237,6 +239,8 @@ label v9_at_warehouse:
         scene v9aaw8 # FPP. Show Cameron removing the blindfold being removed from Camera, blurry image (As if adjusting to the light).
         with fade
 
+        play music "music/v09/Scene 42/Track Scene 42.mp3" fadein 2
+
         pause 1
 
         scene v9aaw8a # FPP. Same camera as v9aaw8, Cameron stood infront of MC, looking agitated, mouth closed. (Image no longer blurry going forward)
@@ -458,15 +462,8 @@ label v9_at_warehouse:
         scene v9aaw16 # TPP. Show Ryan Caleb and MC stood next to eachother, Cameron walking away agitated expression, mouths closed.
         with dissolve
 
+        stop music fadeout 3
+
         pause 1
-
-        scene v9aaw17 # TPP. Show MC walking away to somewhere else in the warehouse.
-        with dissolve
-
-    if hl_punch:
-        u "(Alright, [name], let's go see where you're gonna become a star.)"
-
-    else:
-        u "(Alright, [name], let's go see where you'll get your ass handed to you.)"
 
     jump v9_warehouse_josh

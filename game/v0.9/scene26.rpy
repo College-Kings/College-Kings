@@ -49,6 +49,8 @@ label v9_fri_training_w_wolves:
 
     pause 1
 
+    play music "music/v09/Scene 26/Track Scene 26 & 27.mp3" fadein 2
+
     scene v9tww5 # FPP. Show Chris, neutral expression, mouth open.
     with dissolve
 
@@ -631,6 +633,8 @@ label v9_fri_training_w_wolves:
 
     scene v9tww22 # TPP. Show everyone leaving the gym, pledges looking tired, chris smile.
     with dissolve
+
+    stop music fadeout 3
 
     pause 1
 

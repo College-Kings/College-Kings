@@ -7,6 +7,8 @@ label v9_run_w_imre:
     scene v9rwi1 # TPP. Show Imre walking through MC's door into his room.
     with dissolve
 
+    play music "music/v09/Scene 36/Track Scene 36.mp3" fadein 2
+
     pause 1
 
     scene v9rwi2 # FPP. Show Imre, smile, mouth open
@@ -195,6 +197,8 @@ label v9_run_w_imre:
 
     scene v9rwi14 # TPP. Show Imre walking away on his own.
     with dissolve
+
+    stop music fadeout 3
 
     pause 1
 

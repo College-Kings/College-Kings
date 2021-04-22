@@ -52,6 +52,8 @@ label v9_wolves_pre_fight:
 
     u "More than ready!"
 
+    play music "music/v09/Scene 40/Track Scene 40 & 41.mp3" fadein 2
+
     scene v9wpf5b # FPP. Same camera as v9wpf5, neutral expression, mouth open.
     with dissolve
 
@@ -101,5 +103,7 @@ label v9_wolves_pre_fight:
     with dissolve
 
     se "Let's go!"
+
+    stop music fadeout 3
 
     jump v9_at_warehouse
