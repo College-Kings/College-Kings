@@ -1,5 +1,3 @@
-
-
 init python:
     achievement.register("open_wound")
     achievement.register("no_hard_feelings")
@@ -28,7 +26,7 @@ init python:
     achievement.register("strike")
     achievement.sync()
 
-define persistent.ep = 9
+    persistent.ep = 9
 
 define steam = False
 
