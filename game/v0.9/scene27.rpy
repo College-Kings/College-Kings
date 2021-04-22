@@ -286,7 +286,7 @@ label v9_train_w_apes:
         menu:
             "Ask For Help":
                 scene v9twa5a
-                with dissolvea
+                with dissolve
 
                 u "You can show me some moves so I don't embarrass the fuck out of myself. And this house."
 
