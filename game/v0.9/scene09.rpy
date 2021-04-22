@@ -8,6 +8,8 @@ label room_wed_night:
         scene v9wnr1 # TPP. Show MC sitting on his Wolves bed looking tired.
         with fade
 
+        play music "music/v09/Scene 9/Track Scene 9.mp3" fadein 3
+
         pause 1
 
         scene v9wnr2 # TPP. Show MC now lay on his bed, sighing.
@@ -31,6 +33,13 @@ label room_wed_night:
         with dissolve
 
         u "(The thing I should really be worried about is that Brawl. But after today I think I feel more confident. Day was pretty inspiring)"
+
+        stop music fadeout 3
+
+        scene black
+        with dissolve
+
+        pause 1
 
         scene v9wnr4 # TPP. Show MC waking up from sleep, yawning, mouth open. TIME NOW MORNING. WEARING UNDERWEAR.
         with fade
@@ -61,6 +70,8 @@ label room_wed_night:
         scene v9wnr8 # TPP. Show MC sitting on his Apes bed looking tired.
         with fade
 
+        play music "music/v09/Scene 9/Track Scene 9.mp3" fadein 3
+
         pause 1
 
         scene v9wnr9 # TPP. Show MC now lay on his bed, sighing.
@@ -84,6 +95,13 @@ label room_wed_night:
         with dissolve
 
         u "(The thing I should really be worried about is that Brawl. But after today I think I feel more confident. Day was pretty inspiring)"
+
+        stop music fadeout 3
+
+        scene black
+        with dissolve
+
+        pause 1
 
         scene v9wnr11 # TPP. Show MC waking up from sleep, yawning, mouth open. TIME NOW MORNING. WEARING UNDERWEAR.
         with fade

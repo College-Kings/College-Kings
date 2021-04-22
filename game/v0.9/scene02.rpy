@@ -7,6 +7,9 @@ define unkfem = Character("Female voice", who_color="#fc3158", who_outlines=[ (2
 default mcBrawlStance3 = False
 
 label v9_start_apes:
+
+play music "music/v09/Scene 1 & 2/Track Scene 1 & 2.mp3" fadein 3
+
 u "(I need to find out what's going on. This is insane!)"
 
 scene v9apost1 # TPP. MC outside Cameron's room, knocking the door, confused, mouth closed
@@ -185,6 +188,9 @@ menu:
 
         scene v9apost3f # Cameron slammed the door and went inside, so just show a closed door
         with hpunch
+
+        stop music fadeout 3
+
         pause
 
     "Hesitant reply":
@@ -217,9 +223,14 @@ menu:
         pause
         u "(Saturday? Oh, shit!)"
 
+        stop music fadeout 3
+
 scene v9apost6 # TPP. MC IN UNDERWEAR FROM NOW ON AND IT SHOULD BE DARK INSIDE THE ROOM. Show MC flexing one of his arms, looking at himself in mirror inside his room, neutral expression, mouth closed
 with Fade(0.75, 0.25, 0.75)
 pause 0.5
+
+play music "music/v09/Scene 3/Track Scene 3.mp3" fadein 3
+
 u "(Better amp up my workouts. Ryan too.)"
 
 scene v9apost7 # TPP (maybe from top). Show MC lying on his bed in his room, looking at his phone, neutral expression, mouth closed
@@ -239,6 +250,8 @@ if contact_Ryan.messages[-1].replies:
 else:
     $ showphone = False
 
+    
+
     scene v9apost7a # MC places his phone down on his bed, and is just lying on it now, thinking, mouth closed
     with dissolve
     u "(Freshman Brawl... sounds intense.)"
@@ -250,6 +263,8 @@ else:
 
     u "(Why is it so soon though? This Saturday?!)"
     u "*Sigh* (I gotta sleep.)"
+
+    stop music fadeout 3
 
     scene v9apost7b # Same as v9wpost7a but MC's eyes closed
     with dissolve

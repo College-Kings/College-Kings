@@ -45,6 +45,7 @@ label v9_before_lake_fr:
 scene fr5lakefull
 with dissolve
 
+play music "music/v09/Scene 7/Track Scene 7.mp3" fadein 3
 
 $ showphone = True
 
@@ -1541,6 +1542,8 @@ scene v9slake15
 with dissolve
 
 ri "Let me grab our stuff."
+
+stop music fadeout 3
 
 jump v9_driving_home_lake
 

@@ -7,6 +7,8 @@ label v9_history_class:
     scene v9hc1 # TPP. Show MC running down the college college hallway towards Mr. Lees class, camera from behind.
     with fade
 
+    play music "music/v09/Scene 10/Track Scene 10.mp3" fadein 3
+
     pause 1
 
     scene v9hc2 # TPP. Show MC walking through the door into Mr. Lees class, MC looks out of breath.
@@ -264,6 +266,8 @@ label v9_hc_cont4:
 
     lee "[name], Penelope, and Cameron. Show us what you came up with."
 
+    stop music fadeout 3
+
     scene black
     with fade
 
@@ -274,6 +278,8 @@ label v9_hc_cont4:
 label v9_hc_return:
     scene v9hc23 # TPP. Show Pen cam MC with their props, Mr. Lee stood looking at them, lee mouth open.
     with fade
+
+    play music "music/v09/Scene 10/Track Scene 10.mp3" fadein 3
 
     lee "Great job! I'm impressed. That's going to be hard to beat."
 
@@ -290,7 +296,7 @@ label v9_hc_return:
     scene v9hc26 # TPP. Show MC sitting back at his desk.
     with dissolve
 
-    stop music fadeout 2.0
+    stop music fadeout 2
     
     scene clocka
     with fade

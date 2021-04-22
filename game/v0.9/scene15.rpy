@@ -7,6 +7,8 @@ label v9_thur_room_w_cam:
     scene v9trc1 # TPP. Show MC laid on bed, eyes closed, mouth shut
     with fade
 
+    play music "music/v09/Scene 15/Track Scene 14 & 15.mp3" fadein 2
+    
     pause 1
 
     scene v9trc2 # TPP. Show Cameron and Samantha entering bedroom, 
@@ -431,6 +433,8 @@ label v9_thur_room_w_cam_cont5:
 
     scene v9trc10 # FPP. Show Cameron and Samantha leaving room, neutral faces, mouths closed
     with dissolve
+
+    stop music fadeout 3
 
     pause 1
 

@@ -9,6 +9,8 @@ label drive_to_lake:
     scene v9dtl1 # TPP. Show Aubrey from the side (as if from Riley's perspective). Aubrey looking at the road ahead, mouth open.
     with fade
 
+    play music "music/v09/Scene 6/Track Scene 6.mp3" fadein 3
+
     au "So I'm telling you guys, the lake is the best..."
 
     scene v9dtl2 # FPP. Show Ryan from the side (as if MC is sat next to him). Ryan looking in the direction of Aubrey in the drivers seat, mouth open.
@@ -517,5 +519,7 @@ label dtl_cont1:
     with dissolve
 
     u "Well, what are we waiting for?"
+
+    stop music fadeout 3
 
     jump v9_before_lake_fr

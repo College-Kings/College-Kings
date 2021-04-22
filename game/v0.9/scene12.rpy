@@ -65,6 +65,8 @@ label v9_hall_apol:
 
     unknown "Watch where you're fucking walking, bitch!"
 
+    play music "music/v09/Scene 12/Track Scene 12_1.mp3" fadein 2
+
     jump v9_hall_cont1
 
 label v9_hall_calm:
@@ -79,6 +81,8 @@ label v9_hall_calm:
     with dissolve
 
     unknown "Fuck you!"
+
+    play music "music/v09/Scene 12/Track Scene 12_1.mp3" fadein 2
 
     jump v9_hall_cont1
 
@@ -175,8 +179,12 @@ label v9_hall_punch:
     else: 
         u "But you've seen it, guys. He was asking for it. And totally deserved what he got. One less douchebag in the hallways, I guess."
 
+    stop music fadeout 2
+    
     scene v9hlw12 # FPP. Show Lindsey and another girl who are a distance away from the camera, Lindsey looking at camera (MC). Lindsey smile.
     with dissolve
+
+    play music "music/v09/Scene 12/Track Scene 12_2.mp3" fadein 2
 
     pause 1
 
@@ -230,6 +238,8 @@ label v9_hall_punch:
 
     u "(I guess I will call you, Lindsey. Maybe. A bit later. Now I should get back to my room.)"
 
+    stop music fadeout 2
+
     jump thurs_aft_room
     
 label v9_hall_no_punch:
@@ -259,8 +269,12 @@ label v9_hall_no_punch:
 
     u "(Shit.)"
 
+    stop music fadeout 2
+
     scene v9hlw23 # TPP. Show MC now sat up against the wall with a bleeding nose, Lindsey kneeling infront of MC, Lindsey concerned, mouth open.
     with dissolve
+
+    play music "music/v09/Scene 12/Track Scene 12_2.mp3" fadein 2
 
     li "Are you okay?"
 
@@ -390,6 +404,8 @@ label v9_hall_no_punch:
 
     scene v9hlw32 # TPP. Show MC leaving the first aid room.
     with dissolve
+
+    stop music fadeout 2
 
     pause 1
 

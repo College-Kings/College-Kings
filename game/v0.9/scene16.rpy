@@ -441,6 +441,8 @@ label v9_emily_dorm:
 
     u "Oh God. I've missed this."
 
+    play music "music/v09/Scene 16/Scene Track 16.mp3" fadein 2
+
     scene v9emi13b # FPP. Same camera as v9emi13, on her knees on the floor looking up at camera, seductive expression, Emily mouth open.
     with dissolve
 
@@ -755,6 +757,8 @@ label v9_emily_dorm:
 
     em "I know."
 
+    stop music fadeout 3
+    
     $ v9_sex_w_em = True
     
     if joinwolves:

@@ -15,6 +15,8 @@ label v9_thur_room_w_seb:
     scene v9trs2 # TPP. Show MC getting up from his chair towards the door to open it.
     with dissolve
 
+    play music "music/v09/Scene 15/Track Scene 14 & 15.mp3" fadein 2
+
     "Fuck dude, open up!"
 
     if hl_punch:
@@ -541,6 +543,8 @@ label v9_thur_w_no_punch:
 
     scene black
     with dissolve
+
+    stop music fadeout 3
 
     pause 1
 

@@ -6,6 +6,8 @@
 label v9_hc_demo:
     scene v9demo1 # FPP. Show shot of Cameron and Penelope stood on the docks. Cameron looks annoyed (Penelope with beard, Cameron with wig)
     with fade
+
+    play music "music/v09/Scene 11/Track Scene 11.mp3" fadein 3
    
     pause 1
 
@@ -74,6 +76,8 @@ label v9_hc_demo:
 
     pause 1
 
+    stop music fadeout 1
+
     scene v9demo6 # TPP. Back in Mr. Lee's classroom, show Cameron looking at his phone, Mr. Lee, MC and Penelope looking it at sternly.
     with fade
 
@@ -86,6 +90,8 @@ label v9_hc_demo:
 
     scene v9demo7 # TPP. Show MC approaching Cameron, Penelope and the guard from the side, all are looking at MC, neutral expressions, camera from behind MC.
     with fade
+
+    play music "music/v09/Scene 11/Track Scene 11.mp3" fadein 3
     
     pause 1
 
@@ -280,5 +286,7 @@ label v9_hc_demo_cont3:
     with dissolve
 
     ca "Yes, Your Majesty."
+
+    stop music fadeout 2
 
     jump v9_hc_return

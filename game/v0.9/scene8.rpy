@@ -8,6 +8,8 @@ label v9_driving_home_lake:
     scene v9dhl1 # TPP. Show Ryan (As if Ryan sat next to MC in the back of Aubrey's car same as Scene 6), Ryan neutral, mouth open.
     with fade
 
+    play music "music/v09/Scene 8/Track Scene 8_1.mp3" fadein 3
+
     ry "And that's how I won the scary challenge and was the only one who entered that house."
 
     scene v9dhl1a # TPP. Same camera as v9dhl1, Ryan mouth closed.
@@ -31,6 +33,7 @@ label v9_driving_home_lake:
     ry "You just don't get it. The point is I was born with no fear. And I wasn't afraid ever since."
 
     scene v9dhl3 # TPP. Show Aubrey (sat in Drivers seat, same as scene 6) Aubrey looking forward, mouth open.
+
     with dissolve
 
     au "Yeah right! That's just some stupid kids challenge. That proves nothing."
@@ -97,8 +100,12 @@ label v9_driving_home_lake:
 
     ry "What?!"
 
+    stop music fadeout 1
+
     scene v9dhl1a
     with dissolve
+
+    play music "music/v09/Scene 8/Track Scene 8_2.mp3" fadein 3
 
     u "He heard a loud noise from under the hood."
 
@@ -242,8 +249,12 @@ label v9_driving_home_lake:
 
     u "No. The car battery has gone haywire, sparking and all. It was causing all the problems."
 
+    stop music fadeout 1
+
     scene v9dhl2
     with dissolve
+
+    play music "music/v09/Scene 8/Track Scene 8_3.mp3" fadein 1
 
     ri "Whaaaat?! You are joking, right!"
 
@@ -316,6 +327,8 @@ label v9_driving_home_lake:
     with dissolve
 
     u "No, I just need to hear this now, haha."
+
+    stop music fadeout 2
 
     scene black
     with fade

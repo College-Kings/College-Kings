@@ -11,7 +11,7 @@
 default dreamFightChoice = "na"
 
 label v9_dream:
-stop music fadeout 1
+play music "music/v09/Scene 4/Track Scene 4.mp3" fadein 3
 play sound "sounds/swoosh.mp3"
 
 scene v9dream1 # TPP (camera from the front so the void is not fully visible yet). MC standing near an open door (as if he just entered it) behind which there is the black void, nervous, mouth closed
@@ -567,7 +567,7 @@ u "Wake up, [name]. WAKE UP!"
 
 # play sound "sounds/suck_in_whoosh.mp3"
 # $ renpy.pause(renpy.music.get_duration(channel="sound")) 
-stop music
+stop music fadeout 0.5
 
 # scene black
 # with Dissolve(0.1)
