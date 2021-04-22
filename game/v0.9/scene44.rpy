@@ -359,7 +359,7 @@ label v9_warehouse_lindsey:
 
     pause 1
 
-    scene v9wwl9 # TPP. Show MC continuing to walk through the warehouse, he should be near the entrance of the warehouse.
+    scene v9wwl1 # TPP. Show MC continuing to walk through the warehouse, he should be near the entrance of the warehouse.
     with dissolve
 
     u "(Focus.)"
