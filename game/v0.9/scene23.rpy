@@ -177,8 +177,6 @@ label v9_dinner_w_rose:
             u "*laughs* I'm sure some desperate virgin will have pity on you."
 
         "Talk About Viking Assignment":
-            jump v9_dinner_w_rose_viking
-
             scene v9damr9
             with dissolve
 
