@@ -65,7 +65,12 @@ label v9_thur_room_w_cam_punch:
     
     call screen phone
 
-    menu v9_s15_phoneExit_Punch:
+    label v9_s15_phoneExit_Punch:
+        if s15KiwiiPost.getReplies():
+            "(I should check Kiwii)"
+            jump s15_v9_s15_phoneExit_Punch
+
+    menu:
         "Brag":
             $ addPoint("tm", 1)
             jump v9_thur_room_w_cam_brag
@@ -155,7 +160,6 @@ label v9_thur_room_w_cam_cont1:
 
     scene v9trc4a
     with dissolve
-    # -Cameron grabs the two beers and offers one to MC-
 
     menu:
         "Drink":
@@ -165,8 +169,6 @@ label v9_thur_room_w_cam_cont1:
             jump v9_thur_room_w_cam_no_drink
         
 label v9_thur_room_w_cam_drink:
-    scene v9trc4h # FPP. Same camera as v9trc4, Cameron with beer in right hand samantha stood by side, cameron happy look,samantha worried look,  mouths closed
-    with dissolve
     u "Just one!"
 
     scene v9trc4i # FPP. Same camera as v9trc4, Cameron drinking beer,samantha stood by side, samantha worried look, mouths closed
@@ -174,14 +176,12 @@ label v9_thur_room_w_cam_drink:
 
     pause 1
 
-    scene v9trc5a # FPP. Close up on samantha, Worried look, mouth closed
-    with dissolve
-    u "Aw shit!"
-
     scene v9trc4j # FPP. Same camera as v9trc4, cam neutral look, samantha worried look, Cameron mouth closed, Samantha mouth closed
     with dissolve
-    # -MC puts the beer down-
-    u "I'm sorry, Sam. I got carried away. Cam, get those bottles out of here!"
+
+    u "Aw shit!"
+
+    u "I'm sorry, Sam. Cam, get those bottles out of here!"
 
     scene v9trc4k # FPP. Same camera as v9trc4, cam neutral look samantha nervous smile, Cameron mouth closed, Samantha mouth open
     with dissolve
@@ -189,26 +189,25 @@ label v9_thur_room_w_cam_drink:
     jump v9_thur_room_w_cam_cont2
 
 label v9_thur_room_w_cam_no_drink:
-    scene v9trc5a 
-    with dissolve
     u "I don't think we should."
 
-    scene v9trc5a # FPP. Close up on samantha, Worried look, mouth open
+    scene v9trc4k # FPP. Close up on samantha, Worried look, mouth open
     with dissolve
     sa "Don't do that on my account. I can handle it."
 
-    scene v9trc6b # FPP. Close up on Cameron, neutral look, mouth closed
+    scene v9trc4i # FPP. Close up on Cameron, neutral look, mouth closed
     with dissolve
     u "Nah, I need to keep a clear head for...studying."
 
     scene v9trc4i
     with dissolve
-    ca "Suit yourself, dude."
+
+    pause 1
 
     jump v9_thur_room_w_cam_cont2
 
 label v9_thur_room_w_cam_cont2:
-    scene v9trc2a # FPP. Same camera as v9trc2, Cameron mouth closed, samantha mouth open
+    scene v9trc4f
     with dissolve
     sa "You're gonna have your pick of the Apes groupies now."
 
@@ -217,7 +216,7 @@ label v9_thur_room_w_cam_cont2:
     u "(We have groupies?)"
     u "It'll blow over soon. Next time Cam gets drunk and kisses a tree..."
 
-    scene v9trc4e
+    scene v9trc4c
     with dissolve
     ca "Who told you about that? Grayson? That dick!"
 
@@ -228,30 +227,21 @@ label v9_thur_room_w_cam_cont2:
     jump v9_thur_room_w_cam_cont5
 
 label v9_thur_room_w_cam_no_punch:
-    scene v9trc2c # FPP. Same camera as v9trc2, Cameron mouth open, samantha mouth closed
+    scene v9trc4e # FPP. Same camera as v9trc2, Cameron mouth open, samantha mouth closed
     with dissolve
     ca "[name], what the fuck?"
 
-    scene v9trc4g
-    with dissolve
-    u "No, please, come on in."
-
-    scene v9trc2d # FPP. Same camera as v9trc2, Cameron slams door behind samantha
-    with dissolve
-
-    pause 1
-
-    scene v9trc4k
+    scene v9trc4f
     with dissolve
     sa "Are you OK?"
 
-    scene v9trc4b
+    scene v9trc4g
     with dissolve
     u "What?"
 
     scene v9trc4e
     with dissolve
-    ca "It's all over school. You're a laughingstock! You've been an Ape for how long? Already embarrassing the house!"
+    ca "It's all over school. You're a laughing stock! You've been an Ape for how long? Already embarrassing the house!"
 
     scene v9trc4g
     with dissolve
@@ -263,7 +253,7 @@ label v9_thur_room_w_cam_no_punch:
 
     scene v9trc4g
     with dissolve
-    u "No. I was just chilling until King Kong over here barged in."
+    u "No. I was just chilling, until King Kong over here barged in."
 
     scene v9trc4f
     with dissolve
@@ -275,9 +265,15 @@ label v9_thur_room_w_cam_no_punch:
     $ s15KiwiiPost = KiwiiPost("Sebastian", "images/v09/scene 12/v9hlw20.webp")
     $ s15KiwiiPost.addComment("Chris", "Wow, hope he's OK!", numberLikes=renpy.random.randint(100, 200))
     $ s15KiwiiPost.addComment("Cameron", "Ahhhh! Preview of Saturday's Freshman Brawl!", numberLikes=renpy.random.randint(150, 170))
+
     call screen phone
 
-    menu v9_s15_phoneExit_no_Punch:
+    label v9_s15_phoneExit_no_Punch:
+        if s15KiwiiPost.getReplies():
+            "(I should check Kiwii)"
+            jump v9_s15_phoneExit_no_Punch
+
+    menu:
         "Shrug It Off":
             jump v9_thur_room_w_cam_shrugg_off
         "Get Defensive":
@@ -308,20 +304,20 @@ label v9_thur_room_w_cam_shrugg_off:
     jump v9_thur_room_w_cam_cont3
 
 label v9_thur_room_w_cam_defensive:
-    scene v9trc6c
+    scene v9trc6d # FPP. Same camera as v9trc6a Close up on Cameron, annoyed look, mouth closed
     with dissolve
     u "He blindsided me. What the fuck was I supposed to do?"
 
-    scene v9trc6d # FPP. Same camera as v9trc6a Close up on Cameron, annoyed look, mouth closed
+    scene v9trc6c 
     with dissolve
     # -MC gets in Cameron's face-
     ca "You were supposed to knock his ass out like a real Ape!"
 
-    scene v9trc6c
+    scene v9trc6d
     with dissolve
     u "And get expelled in my first semester? No thank you!"
 
-    scene v9trc6d
+    scene v9trc6c
     with dissolve
     ca "How can we count on you this weekend if you can't handle one fucking guy?"
 
@@ -335,7 +331,7 @@ label v9_thur_room_w_cam_defensive:
     jump v9_thur_room_w_cam_cont3
 
 label v9_thur_room_w_cam_cont3:
-    scene v9trc4d
+    scene v9trc4f
     with dissolve
     sa "Sit down. I want to check you out."
 
@@ -362,7 +358,7 @@ label v9_thur_room_w_cam_protest:
 
 
 label v9_thur_room_w_cam_follow:
-    scene v9trc4l # FPP. Same camera as v9trc4, cam neutral look samantha nervous smile, Cameron mouth closed, Samantha mouth closed
+    scene v9trc4g # FPP. Same camera as v9trc4, cam neutral look samantha nervous smile, Cameron mouth closed, Samantha mouth closed
     with dissolve
     u "(Yes, ma'am, I'll move to the bed... even if your asshole brother's standing right there!)"
 
@@ -389,7 +385,7 @@ label v9_thur_room_w_cam_cont4:
     with dissolve
     u "See, nothing to worry about."
 
-    scene v9trc9c # FPP. Same camera as v9trc9 Show Samanta stood up next to Cameron (from MC's Perspective sat on bed), Samantha happy smile, Cameron annoyed look look, cam mouth closed, samantha mouth open
+    scene v9trc9d # FPP. Same camera as v9trc9 Show Samanta stood up next to Cameron (from MC's Perspective sat on bed), Samantha happy smile, Cameron annoyed look look, cam mouth closed, samantha mouth open
     with dissolve
     ca "You better be ready for the Brawl. That's all I got to say."
 
@@ -403,17 +399,17 @@ label v9_thur_room_w_cam_cont4:
         scene v9trc9b
         with dissolve
         u "Good, I've had more than enough of you. Why don't you leave so me and your sister can get better acquainted?"
+
+        scene v9trc9c
+        with dissolve
+        sa "You look fine. But please take care of yourself. Get some rest before the fight."
+
+        scene v9trc9b
+        with dissolve
+        u "Of course. Thank you."
         jump v9_thur_room_w_cam_cont5
 
 label v9_thur_room_w_cam_cont5:
-    scene v9trc9c
-    with dissolve
-    sa "You look fine. But please take care of yourself. Get some rest before the fight."
-
-    scene v9trc9b
-    with dissolve
-    u "Of course. Thank you."
-
     scene v9trc9c
     with dissolve
     sa "Come on, Cam. Let's leave [name] to whatever he was doing."
