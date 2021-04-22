@@ -221,11 +221,6 @@ label v9_hall_punch:
 
     unknown "I was told to give you this. Sigh."
 
-    scene v9hlw17 # TPP. Show MC grabbing the piece of paper from the girl.
-    with dissolve
-
-    pause 0.8
-
     scene v9hlw16a # FPP. Same camera as v9hlw16, show the girl now walking away from the camera.
     with dissolve
 
