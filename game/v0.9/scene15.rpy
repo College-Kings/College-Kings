@@ -7,7 +7,7 @@ label v9_thur_room_w_cam:
     scene v9trc1 # TPP. Show MC laid on bed, eyes closed, mouth shut
     with fade
 
-    play music "music/v09/Scene 15/Track Scene 14 & 15.mp3" fadein 2
+    play music "music/v09/Scene 14 & 15/Track Scene 14 & 15.mp3" fadein 2
     
     pause 1
 

@@ -15,7 +15,7 @@ label v9_thur_room_w_seb:
     scene v9trs2 # TPP. Show MC getting up from his chair towards the door to open it.
     with dissolve
 
-    play music "music/v09/Scene 15/Track Scene 14 & 15.mp3" fadein 2
+    play music "music/v09/Scene 14 & 15/Track Scene 14 & 15.mp3" fadein 2
 
     "Fuck dude, open up!"
 
