@@ -8,6 +8,8 @@ label v9_walk_w_sam:
     with fade  
     sa "Thanks for walking with me."
 
+    play music "music/v09/Scene 24/Track Scene 24.mp3" fadein 2
+
     menu:
         "Joke Around":
             $ addPoint("bf", 1)
@@ -160,23 +162,23 @@ label v9_walk_w_sam_cameron:
     with dissolve
     u "Don't mention it."
 
-    scene v9wws9 # FPP. Show Samantha now infront of an open green in the parkm, neutral face, mouth open
+    scene v9wws11a # FPP. Show Samantha now infront of an open green in the parkm, neutral face, mouth open
     with dissolve
     sa "I know, I know, Apes stick together."
 
-    scene v9wws9a # FPP. Same camera as v9wws9, Show Samantha now infront of an open green in the park, neutral face, mouth closed
+    scene v9wws11 # FPP. Same camera as v9wws9, Show Samantha now infront of an open green in the park, neutral face, mouth closed
     with dissolve
     u "Always."
 
-    scene v9wws9
+    scene v9wws11a
     with dissolve
     sa "It's nice to have that. Cam and I had it rough growing up. It felt like we only had each other."
 
-    scene v9wws9a
+    scene v9wws11
     with dissolve
     u "And now you have all of us. The whole house is here for you."
 
-    scene v9wws9
+    scene v9wws11a
     with dissolve
     sa "It'll take some getting used to."
 
@@ -309,6 +311,8 @@ label v9_walk_w_sam_cont3:
     scene v9wws12a
     with dissolve
     sa "See ya."
+
+    stop music fadeout 3
 
     scene v9wws12
     with dissolve
