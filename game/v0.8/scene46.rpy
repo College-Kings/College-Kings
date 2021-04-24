@@ -43,15 +43,15 @@ label v8_ending:
         $ contact_Imre.addReply("No, what?")
         $ contact_Imre.newMessage("IDK, it's crazy")
 
-        # $ newKiwiiPost = KiwiiPost("Aubrey", **"IMAGE"**, "[image: red square]", **numberLikes=999**) # Need Image and Caption and NumberLikes
+        $ newKiwiiPost = KiwiiPost("Aubrey", "images/v08/kiwii/red_square.webp", "[[image red square]", numberLikes=renpy.random.randint(100, 200))
         # $ newKiwiiPost.addReply("???", numberLikes=999)
         # $ newKiwiiPost.addReply("What?", numberLikes=999)
 
-        # $ newKiwiiPost = KiwiiPost("Chris", **"IMAGE"**, "[image:red square]", **numberLikes=999**) # Need Image and Caption and NumberLikes
+        $ newKiwiiPost = KiwiiPost("Chris", "images/v08/kiwii/red_square.webp", "[[image red square]", numberLikes=renpy.random.randint(100, 200))
         # $ newKiwiiPost.addReply("Dude?", numberLikes=999)
         # $ newKiwiiPost.addReply("Wtf is going on? It's everywhere", numberLikes=999)
- 
-        # $ newKiwiiPost = KiwiiPost("Grayson", **"IMAGE"**, "[image: red square]", **numberLikes=999**) # Need Image and Caption and NumberLikes
+
+        $ newKiwiiPost = KiwiiPost("Grayson", "images/v08/kiwii/red_square.webp", "[[image red square]", numberLikes=renpy.random.randint(100, 200))
         # $ newKiwiiPost.addReply("Bout time!", numberLikes=999)
         # $ newKiwiiPost.addReply("Seriously?", numberLikes=999)
 
@@ -104,15 +104,15 @@ label v8_ending:
         $ contact_Ryan.addReply("I don't know. What is it?")
         $ contact_Ryan.newMessage("Fuckin check it out man. Crazy shit")
 
-        $ newKiwiiPost = KiwiiPost("Aubrey", "images/v08/kiwii/red_square.webp", "[image: red square]", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost("Aubrey", "images/v08/kiwii/red_square.webp", "[[image red square]", numberLikes=renpy.random.randint(100, 200))
         # $ newKiwiiPost.addReply("???", numberLikes=999)
         # $ newKiwiiPost.addReply("What?", numberLikes=999)
 
-        $ newKiwiiPost = KiwiiPost("Chris", "images/v08/kiwii/red_square.webp", "[image: red square]", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost("Chris", "images/v08/kiwii/red_square.webp", "[[image red square]", numberLikes=renpy.random.randint(100, 200))
         # $ newKiwiiPost.addReply("Dude?", numberLikes=999)
         # $ newKiwiiPost.addReply("Wtf is going on? It's everywhere", numberLikes=999)
 
-        $ newKiwiiPost = KiwiiPost("Grayson", "images/v08/kiwii/red_square.webp", "[image: red square]", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost("Grayson", "images/v08/kiwii/red_square.webp", "[[image red square]", numberLikes=renpy.random.randint(100, 200))
         # $ newKiwiiPost.addReply("Bout time!", numberLikes=999)
         # $ newKiwiiPost.addReply("Seriously?", numberLikes=999)
 
