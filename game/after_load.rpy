@@ -120,4 +120,10 @@ label after_load:
                 chloers = True
         except NameError: pass
 
+        contact_Lindsey.unlock()
+        contact_Penelope.unlock()
+
+        if contact_Lindsey not in contacts:
+            contacts.append(contact_Lindsey)
+
     return
