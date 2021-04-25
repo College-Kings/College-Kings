@@ -346,7 +346,7 @@ label v9_room_sat_aft:
         label s35_PhoneContinueA:
             if contact_Chloe.messages[-1].replies:
                 "(I should reply to Chloe.)"
-                jump s35_PhoneContinueW
+                jump s35_PhoneContinueA
 
         $ showphone = False
 
