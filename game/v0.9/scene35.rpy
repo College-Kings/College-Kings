@@ -62,4 +62,4 @@ label v9_room_sat_aft:
 
         u "Ugh!"
 
-        jump v9_run_w_ryan     
+        jump v9_run_w_ryan
