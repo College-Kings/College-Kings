@@ -4475,7 +4475,25 @@ screen scenegal():
             hover "images/gallery/gallery13outline.webp"
             action Replay ("amber_sex_at_joshs", locked = False)
 
+        imagebutton:
+            idle Transform("images/placeholder.webp", size=(400, 226))
+            hover Transform("images/placeholder.webp", size=(400, 226))
+            action Replay ("v9_aubrey_scene_lake", locked = False)
 
+        imagebutton:
+            idle Transform("images/placeholder.webp", size=(400, 226))
+            hover Transform("images/placeholder.webp", size=(400, 226))
+            action Replay ("v9_emily_dorm", locked = False)
+
+        imagebutton:
+            idle Transform("images/placeholder.webp", size=(400, 226))
+            hover Transform("images/placeholder.webp", size=(400, 226))
+            action Replay ("v9_ri_sex", locked = False)
+
+        imagebutton:
+            idle Transform("images/placeholder.webp", size=(400, 226))
+            hover Transform("images/placeholder.webp", size=(400, 226))
+            action Replay ("v9_make_out_w_lin", locked = False)
 
 screen skiptut():
     add "images/endfr.webp"
