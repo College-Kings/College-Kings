@@ -907,137 +907,139 @@ menu:
 
         if aubreyrs:
 
-            scene v9slake6
-            with dissolve
+            label v9_aubrey_scene_lake:
+
+                scene v9slake6
+                with dissolve
 
 
-            au "Wow, you keep on surprising me, [name]. And you are right, I did think of something fun just now."
+                au "Wow, you keep on surprising me, [name]. And you are right, I did think of something fun just now."
 
-            scene v9slake6a
-            with dissolve
+                scene v9slake6a
+                with dissolve
 
-            u "What could that be?"
+                u "What could that be?"
 
-            scene v9slake6b
-            with dissolve
+                scene v9slake6b
+                with dissolve
 
-            au "It can't be told. It has to be shown. Come with me."
+                au "It can't be told. It has to be shown. Come with me."
 
-            scene v9slake7 # They swim for a bit into a location between some rocks on the shore, where it's hard for anyone to see them, but they stay in water 
-            with Dissolve(1)
+                scene v9slake7 # They swim for a bit into a location between some rocks on the shore, where it's hard for anyone to see them, but they stay in water 
+                with Dissolve(1)
 
-            pause 0.5
+                pause 0.5
 
-            scene v9slake8a # FPP close up, same as 6 from angle and closeness, just in new, more remote location. aubrey flirty mouth closed
-            with dissolve
+                scene v9slake8a # FPP close up, same as 6 from angle and closeness, just in new, more remote location. aubrey flirty mouth closed
+                with dissolve
 
-            u "What is this?"
+                u "What is this?"
 
-            scene v9slake8 # same as 8a, mouth open
-            with dissolve
+                scene v9slake8 # same as 8a, mouth open
+                with dissolve
 
-            au "It's my secret place. Do you like it?"
+                au "It's my secret place. Do you like it?"
 
-            scene v9slake9 # Showing closeup only Aubrey's hand grabbing mc's crotch underwater
-            with vpunch
+                scene v9slake9 # Showing closeup only Aubrey's hand grabbing mc's crotch underwater
+                with vpunch
 
-            u "Oh I like THAT."
-           
-            scene v9slake8
-            with dissolve
-
-            au "Come. Follow me"
-
-            scene v9slake16 #TPP mc and aubrey are lying next to each other on a large rock in the middle of the lake, mc's underpants need to be wet
-            with fade
+                u "Oh I like THAT."
             
-            au "Now, where were we?"
+                scene v9slake8
+                with dissolve
 
-            image v9slake17vid = Movie (play="images/v09/scene 7/v9slake17vid.webm", loop = True, image = "images/v09/scene 7/v9slake17vidend.webp", start_image = "images/v09/scene 7/v9slake17vidstart.webp")
-            image v9slake18vid = Movie (play="images/v09/scene 7/v9slake18vid.webm", loop = True, image = "images/v09/scene 7/v9slake18vidend.webp", start_image = "images/v09/scene 7/v9slake18vidstart.webp")
-            image v9slake18vidfast = Movie (play="images/v09/scene 7/v9slake18vidf.webm", loop = True, image = "images/v09/scene 7/v9slake18vidend.webp", start_image = "images/v09/scene 7/v9slake18vidstart.webp")
-            image v9slake19vid = Movie (play="images/v09/scene 7/v9slake19vid.webm", loop = True, image = "images/v09/scene 7/v9slake19vidend.webp", start_image = "images/v09/scene 7/v9slake19vidstart.webp")
-            image v9slake19vidfast = Movie (play="images/v09/scene 7/v9slake19vidf.webm", loop = True, image = "images/v09/scene 7/v9slake19vidend.webp", start_image = "images/v09/scene 7/v9slake19vidstart.webp")
+                au "Come. Follow me"
 
-            scene v9slake17vid # mc and aubrey make out animation
-            with dissolve
-            
-            " "
+                scene v9slake16 #TPP mc and aubrey are lying next to each other on a large rock in the middle of the lake, mc's underpants need to be wet
+                with fade
+                
+                au "Now, where were we?"
 
-            scene v9slake18 # aubreys hand on mc's dick over wet underpants
-            with dissolve
+                image v9slake17vid = Movie (play="images/v09/scene 7/v9slake17vid.webm", loop = True, image = "images/v09/scene 7/v9slake17vidend.webp", start_image = "images/v09/scene 7/v9slake17vidstart.webp")
+                image v9slake18vid = Movie (play="images/v09/scene 7/v9slake18vid.webm", loop = True, image = "images/v09/scene 7/v9slake18vidend.webp", start_image = "images/v09/scene 7/v9slake18vidstart.webp")
+                image v9slake18vidfast = Movie (play="images/v09/scene 7/v9slake18vidf.webm", loop = True, image = "images/v09/scene 7/v9slake18vidend.webp", start_image = "images/v09/scene 7/v9slake18vidstart.webp")
+                image v9slake19vid = Movie (play="images/v09/scene 7/v9slake19vid.webm", loop = True, image = "images/v09/scene 7/v9slake19vidend.webp", start_image = "images/v09/scene 7/v9slake19vidstart.webp")
+                image v9slake19vidfast = Movie (play="images/v09/scene 7/v9slake19vidf.webm", loop = True, image = "images/v09/scene 7/v9slake19vidend.webp", start_image = "images/v09/scene 7/v9slake19vidstart.webp")
 
-            au "Let's see what we got here."
+                scene v9slake17vid # mc and aubrey make out animation
+                with dissolve
+                
+                " "
 
-            scene v9slake18vid # aubrey handjob slow, TPP
-            with fade
+                scene v9slake18 # aubreys hand on mc's dick over wet underpants
+                with dissolve
 
-            u "Damn..."
+                au "Let's see what we got here."
 
-            " "
+                scene v9slake18vid # aubrey handjob slow, TPP
+                with fade
 
-            scene v9slake19vid # aubrey handjob slow, FPP
-            with dissolve
+                u "Damn..."
 
-            au "You like this?"
+                " "
 
-            " "
+                scene v9slake19vid # aubrey handjob slow, FPP
+                with dissolve
 
-            scene v9slake18vidfast # aubrey handjob fast, TPP (Not rendered again)
-            with dissolve
+                au "You like this?"
 
-            u "Fuck, yeah. It feels soo good!"
+                " "
 
-            " "
+                scene v9slake18vidfast # aubrey handjob fast, TPP (Not rendered again)
+                with dissolve
 
-            scene v9slake19vidfast # aubrey handjob fast, FPP
-            with dissolve
+                u "Fuck, yeah. It feels soo good!"
 
-            au "You like this?"
+                " "
 
-            " "
+                scene v9slake19vidfast # aubrey handjob fast, FPP
+                with dissolve
 
-            scene v9slake20 # close up mc cumshot
-            with flash
+                au "You like this?"
 
-            pause 0.5
+                " "
 
-            scene v9slake20a # same as 20, cum over aubrey's hand
-            with flash
+                scene v9slake20 # close up mc cumshot
+                with flash
 
-            pause 1.0
+                pause 0.5
 
-            scene v9slake21a # FPP close up Aubrey looking at you, mouth closed flirty curious smile looking at mc
-            with dissolve
+                scene v9slake20a # same as 20, cum over aubrey's hand
+                with flash
 
-            u "Wow..."
+                pause 1.0
 
-            scene v9slake21 # same as 21a, mouth open
-            with dissolve
+                scene v9slake21a # FPP close up Aubrey looking at you, mouth closed flirty curious smile looking at mc
+                with dissolve
 
-            au "Haha, I knew you'd like it."
+                u "Wow..."
 
-            au "We should probably swim back before the others notice we're missing though."
+                scene v9slake21 # same as 21a, mouth open
+                with dissolve
 
-            scene v9slake21a
-            with dissolve
+                au "Haha, I knew you'd like it."
 
-            u "You sure you don't want me to do you?"
+                au "We should probably swim back before the others notice we're missing though."
 
-            scene v9slake21 
-            with dissolve
+                scene v9slake21a
+                with dissolve
 
-            au "Haha, don't worry. We'll just spend more time on me next time."
+                u "You sure you don't want me to do you?"
 
-            scene v9slake21a
-            with dissolve
+                scene v9slake21 
+                with dissolve
 
-            u "That does sound fair, haha."
+                au "Haha, don't worry. We'll just spend more time on me next time."
 
-            scene black
-            with dissolve
+                scene v9slake21a
+                with dissolve
 
-            pause 0.3
+                u "That does sound fair, haha."
+
+                scene black
+                with dissolve
+
+                pause 0.3
 
         else:
 
