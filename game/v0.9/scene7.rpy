@@ -1040,7 +1040,7 @@ menu:
                 with dissolve
 
                 pause 0.3
-
+                $ renpy.end_replay()
         else:
 
             scene v9slake6b

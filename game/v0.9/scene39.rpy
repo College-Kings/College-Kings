@@ -311,7 +311,7 @@ label v9_hang_w_linds:
                     with dissolve
 
                     pause 1
-
+                    $ renpy.end_replay()
                 "Pull Away":
                     if chloers:
                         $ addPoint("bf", 1)

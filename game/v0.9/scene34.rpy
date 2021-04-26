@@ -376,7 +376,7 @@ label v9_ri_sex:
     with fade
 
     stop music fadeout 3
-    
+    $ renpy.end_replay()
     pause 1
 
     scene v9ris24 # TPP. Show Riley waking MC up, Riley fully clothed, MC still naked.
