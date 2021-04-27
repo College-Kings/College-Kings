@@ -64,6 +64,7 @@ label v8_tues_evening:
             if contact_Lauren.messages[-1].replies:
                 u "I should reply to Lauren"
                 jump v8s37_phoneContinue1
+            $ phoneexit = "v8s37_phoneContinue2"
 
         if rileyrs:
             $ contact_Riley.addReply("If your legs were lies, you could call me a liar. For I would be gladly spreading them.", "v8s37_phoneReply8")
@@ -175,6 +176,7 @@ label v8_tues_evening:
             if contact_Lauren.messages[-1].replies:
                 u "I should reply to Lauren"
                 jump v8s37_phoneContinue3
+            $ phoneexit = "v8s37_phoneContinue4"
 
         if rileyrs:
             $ contact_Riley.addReply("If your legs were lies, you could call me a liar. For I would be gladly spreading them.", "v8s37_phoneReply21")
@@ -191,21 +193,21 @@ label v8_tues_evening:
                 call screen messager(contact_Riley)
 
         else:
-            $ contact_Riley.addReply("I have a serious question to ask you.")
+            $ contact_Riley.addReply("I have a serious question to ask you.", "v8s37_phoneReply23")
 
             label v8s37_phoneReply23:
                 $ contact_Riley.newMessage("What is it?")
-                $ contact_Riley.addReply("You get to chose between options A and B.")
+                $ contact_Riley.addReply("You get to chose between options A and B.", "v8s37_phoneReply24")
                 call screen messager(contact_Riley)
 
             label v8s37_phoneReply24:
                 $ contact_Riley.newMessage("OK?")
-                $ contact_Riley.addReply("Option A is to make out with Mr. Lee.")
+                $ contact_Riley.addReply("Option A is to make out with Mr. Lee.", "v8s37_phoneReply25")
                 call screen messager(contact_Riley)
 
             label v8s37_phoneReply25:
                 $ contact_Riley.newMessage("B. I choose B. Option B.")
-                $ contact_Riley.addReply("Haha")
+                $ contact_Riley.addReply("Haha", "v8s37_phoneReply26")
                 call screen messager(contact_Riley)
 
             label v8s37_phoneReply26:

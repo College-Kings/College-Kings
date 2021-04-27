@@ -107,6 +107,9 @@ label after_load:
 
         for kiwiiPost in kiwiiPosts:
             kiwiiPost.image = os.path.splitext(kiwiiPost.image)[0] + ".webp"
+            if kiwiiPost.caption[0] == "[" and kiwiiPost.caption[1] != "[":
+                kiwiiPost.caption = "[" + kiwiiPost.caption
+
 
         for contact in contacts:
             for message in contact.messages:
