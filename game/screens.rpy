@@ -5817,7 +5817,7 @@ screen aubreysexoverlay():
 screen letter1():
 
     add "images/darker.webp"
-    add "images/emilyletter.webp"
+    add Transform("images/emilyletter.webp", size=(764, 1080))
 
     button:
         xsize 1920

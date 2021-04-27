@@ -64,6 +64,7 @@ label v9_walk_li_txt:
             "(I should reply to Lindsey.)"
             jump s38_PhoneContinue
 
+    $ showphone = False
     scene v9wlt2 # TPP. Show MC putting his phone away and continue to walk on.
     with dissolve
 
