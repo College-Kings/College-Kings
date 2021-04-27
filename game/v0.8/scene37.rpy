@@ -163,8 +163,8 @@ label v8_tues_evening:
                 call screen messager(contact_Lauren)
 
             label v8s37_phoneReply19:
-                $ contact_Lauren.newMessage("You texted me just to make that reference, right?", "v8s37_phoneReply20")
-                $ contact_Lauren.addReply("Maybe?")
+                $ contact_Lauren.newMessage("You texted me just to make that reference, right?",)
+                $ contact_Lauren.addReply("Maybe?", "v8s37_phoneReply20")
                 call screen messager(contact_Lauren)
 
             label v8s37_phoneReply20:
