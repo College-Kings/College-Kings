@@ -5,12 +5,6 @@
 # Please save each scene as some scenes continue from previous scenes as I had to move things around. This is my bad - I have noted when you need to go back in render descriptions.
 # It's probably best to look at the rpy file to get a better understand of the timeline of the renders.
 
-default larsdmg = 0
-default larshealth = 0
-default simLarsFight = False
-default s28_LarsFight = False
-default s28_fightWinner = "MC"
-
 label drug_deal_w_josh:
     stop music fadeout 2
     scene v8sdd1 # TPP. Show a long shot of the alley, Josh and MC, next to eachother walking down the alley cautiosly. Camera from behind Josh and MC.

@@ -4,9 +4,6 @@
 # Time: Tuesday afternoon
 # Note: There's two versions for MC's renders in this scene. They're both the same essentially except one of them is in Wolves house (starting with "v8room20") and the other is in Apes house (starting with "v8room21")
 
-# Variables and definitions
-default chloeSteakHouse = False
-
 label v8_tues_noon:
 if ending != "chloe" and chloemad:
     if joinwolves:

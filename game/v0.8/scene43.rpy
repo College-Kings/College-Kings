@@ -3,7 +3,6 @@
 # Outfits: MC Outfit 2, Grayson Outfit 2
 # Time: Tuesday Night
 
-default hesitantwgrayson = False
 label for_w_gray:
 
     scene v8sfor1 # TPP. Show Grayson and MC walking through the forest, MC trailing behind Grayson.

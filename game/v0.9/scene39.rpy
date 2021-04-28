@@ -3,9 +3,6 @@
 # Characters: MC (Outfit 3), Lindsey (Outfit 1)
 # Time: Saturday Evening
 
-default playCoolWLins = False
-default lindseyfirstkiss = False
-
 label v9_hang_w_linds:
     scene v9hwl1 # TPP. Show MC knocking on the door of the chicks house.
     with fade

@@ -3,7 +3,7 @@
 # Outfits: MC Outfit 2
 # Time: Sunday Morning
 
-default penHelpDean = False
+
 
 label penelope_dorm_hack:
     scene v8spen1 # FPP. Long shot of the hallway leading up to Penelope's dorm.

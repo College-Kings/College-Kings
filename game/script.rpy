@@ -63,11 +63,6 @@ label splashscreen:
 ###########
 ###########
 
-
-
-
-default flash = Fade(.25, 0, .75, color="#fff")
-
 label pref:
 
 call screen preferences

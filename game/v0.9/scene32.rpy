@@ -3,8 +3,6 @@
 # Characters: MC (Outfit 3when outside gym,Outfit 4 when inside gym ), Evelyn (Outfit 4)
 # Time: Saturday Morning
 
-default v9_sex_with_riley = False
-
 label v9_sat_gym:
     scene v9atg1 # TPP. Show MC outside the Gym, neutral face, mouth closed
     with fade

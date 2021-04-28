@@ -3,8 +3,6 @@
 # Characters: MC (outfit 3), Josh (outfit 1)
 # Time: Monday morning to noon
 
-default helpJosh = False
-
 label josh_room:
     scene v8josh1 # TPP. Showing MC walking in the streets, thinking, mouth closed
     with fade

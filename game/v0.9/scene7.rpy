@@ -11,16 +11,6 @@
 
 # -You get to choose who to approach, in any order you like. If you click on either Aubrey or Riley, camera zooms in on the two-
 
-
-# VARIABLES
-
-default fr5ryan = False
-default fr5dogwalker = False
-default fr5treeguy = False
-default fr5aubrey = False
-default fr5riley = False
-default joinAubreyLake = False
-
 ########################## FREEROAM 5: LAKE
 
 # FREEROAM SCREENS

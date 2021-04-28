@@ -4,10 +4,6 @@
 # Characters needed: MC (outfit 3), Grayson (outfit 3), Chloe (outfit 2 or put together some other revealing outfit), Caleb (outfit 1), Cameron (outfit 3), Ryan (outfit 1), Sam (outfit 2), Mason (outfit 1), Some other random chick in a revealing outfit
 # Time: Saturday evening to night
 
-# Variable defaults and definitions
-default chloeMsg11Reply = 0
-default rejectedApesFun = False
-
 # SCENE 13: MOVING INTO THE APES
 label after_apes_ceremony:
     scene v8apes21 # TPP. MC in his dorm packing his bag (finished it), smiling and mouth closed

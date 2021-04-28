@@ -8,8 +8,6 @@
 # spotlight.mp3 - Spotlight turning on. Something like this - https://elements.envato.com/spotlight-on-the-stage-Y75JH62
 # suck_in_whoosh.mp3 - Something like the first part in this audio https://elements.envato.com/suck-in-whoosh-5VSEHLA (build up and then sudden stop)
 
-default dreamFightChoice = "na"
-
 label v9_dream:
 play music "music/v09/Scene 4/Track Scene 4.mp3" fadein 3
 play sound "sounds/swoosh.mp3"

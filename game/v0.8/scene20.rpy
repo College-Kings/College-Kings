@@ -8,10 +8,7 @@
 
 init python:
     renpy.music.register_channel("ambience", mixer="sfx", loop=True)
-
-
-default emilyArcade = 0 # 1 for RS and simple bet; 2 for RS and making it interesting; 3 for no RS and simple bet; 4 for no RS and making it interesting
-default kissedEmilyArcade = False
+    
 define ann = Character("Speaker Announcement", who_color="#fd9426", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
 define empl = Character("Employee", who_color="#5fc9f8", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
 

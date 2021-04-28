@@ -3,9 +3,6 @@
 # Outfits: MC Outfit 2, Nora Outfit
 # Time: Tuesday Morning
 
-default noralikes = False
-default helpedNora = False
-
 label hallway_w_nora:
 
     scene v8shal1 # TPP. Show MC walking down the college hallways, Nora walking towards MC in the distance with brochures in hand.

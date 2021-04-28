@@ -4,7 +4,6 @@
 # Time: Tuesday night
 
 define unkfem = Character("Female voice", who_color="#fc3158", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
-default mcBrawlStance3 = False
 
 label v9_start_apes:
 
