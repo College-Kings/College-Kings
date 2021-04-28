@@ -1,23 +1,8 @@
+init python:
+    import os
+
 label after_load:
     python:
-        persistent.ep = 8
-        
-        before_contacts = contacts.copy()
-        contacts = []
-        contact_Emily = Contact("Emily", "emilyprofilepic", locked=False)
-        contact_Lauren = Contact("Lauren", "laurenprofilepic", locked=False)
-        contact_Julia = Contact("Julia", "juliaprofilepic", locked=False)
-        contact_Ryan = Contact("Ryan", "ryanprofilepic", locked=False)
-        contact_Josh = Contact("Josh", "joshprofilepic", locked=False)
-        contact_Aubrey = Contact("Aubrey", "aubreyprofilepic", locked=False)
-        contact_Chloe = Contact("Chloe", "chloeprofilepic", locked=False)
-        contact_Evelyn = Contact("Evelyn", "evelynprofilepic", locked=False)
-        contact_Amber = Contact("Amber", "amberprofilepic", locked=False)
-        contact_Penelope = Contact("Penelope", "penelopeprofilepic", locked=False)
-        contact_Riley = Contact("Riley", "rileyprofilepic", locked=False)
-        contact_Autumn = Contact("Autumn", "autumnprofilepic", locked=False)
-        contact_Imre = Contact("Imre", "imreprofilepic", locked=False)
-
         kiwiiUsers = {
             "Adam": {
                 "username": "A.D.A.M.",
@@ -105,17 +90,40 @@ label after_load:
             },
             "Parker": {
                 "username": "Parker",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/parkerpp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/parkerpp.webp"
+            },
+            "Sebastian": {
+                "username": "Big Seb",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/sebastianpp.webp"
+            },
+            "Kai": {
+                "username": "Kai",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/kaipp.webp"
             }
         }
 
-        try:
-            for before_contact in before_contacts:
-                for contact in contacts:
-                    if before_contact.name == contact.name:
-                        for message in before_contact.messages:
-                            contact.newMessage(message.msg)
-                        break
-        except Exception: pass
+        for app in applications:
+            app.image = os.path.splitext(app.image)[0] + ".webp"
 
-return
+        for kiwiiPost in kiwiiPosts:
+            kiwiiPost.image = os.path.splitext(kiwiiPost.image)[0] + ".webp"
+            if kiwiiPost.caption[0] == "[" and kiwiiPost.caption[1] != "[":
+                kiwiiPost.caption = "[" + kiwiiPost.caption
+
+
+        for contact in contacts:
+            if contact.messages: contact.unlock()
+            for message in contact.messages:
+                try:
+                    message.image = os.path.splitext(message.image)[0] + ".webp"
+                except AttributeError: continue
+                
+        try:
+            if chlorers: chloers = True
+        except NameError: pass
+
+        if contact_Lindsey not in contacts:
+            contacts.append(contact_Lindsey)
+
+        contact_Lindsey.profilePicture = "lindseyprofilepic"
+    return

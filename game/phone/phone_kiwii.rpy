@@ -65,6 +65,12 @@ init python:
             self.index = kiwiiPosts.index(self)
             kiwiiPosts.remove(self)
 
+        def getReplies(self):
+            try:
+                return replies
+            except Exception:
+                return False
+
     class KiwiiComment(KiwiiPost):
         def __init__(self, user, text, numberLikes=0, liked=False, mentions=None):
             self.user = user
@@ -117,7 +123,6 @@ init python:
                 rv += comment.numberLikes
 
         return rv
-
 
 init -1:
     define profilePictures = [ "images/Phone/Kiwii/Profile Pictures/mcpp1.png", "images/Phone/Kiwii/Profile Pictures/mcpp2.png", "images/Phone/Kiwii/Profile Pictures/mcpp3.png", "images/Phone/Kiwii/Profile Pictures/mcpp4.png" ]
@@ -212,7 +217,15 @@ init -1:
             },
             "Parker": {
                 "username": "Parker",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/parkerpp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/parkerpp.webp"
+            },
+            "Sebastian": {
+                "username": "Big Seb",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/sebastianpp.webp"
+            },
+            "Kai": {
+                "username": "Kai",
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/kaipp.webp"
             }
         }
 

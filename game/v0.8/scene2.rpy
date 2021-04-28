@@ -1,5 +1,6 @@
 ### SCENE 2: Chloe v07 ending continued
 label v08_cl_start:
+    $ chloers = True
     # Note to renderers: Make sure the MC is in his suit and any other props are the same as Chloe's ending in v07
     stop music fadeout 3
 

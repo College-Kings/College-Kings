@@ -5178,7 +5178,7 @@ label script06:
     play music "sounds/driving1.mp3"
     image carbacknight = Movie(play="images/carbacknight.webm")
 
-    scene carbacknight
+    show carbacknight
 
     show s579a # Grayson close up driving mouth closed arrogant / devious smile mouth closed
     with fade
@@ -6177,20 +6177,12 @@ label script06:
     $ ammsgnot = 1
     $ amisreply = 1
 
+    $ contact_Penelope.unlock()
 
     if bowling == True:
 
         $ contact_Penelope.addReply("Hey, you wanna go bowling today? I'm free this afternoon", "perep1a")
-        $ contact_Penelope.unlock()
         $ showphone = 1
-        $ peisreply = 1
-        $ pemsg = 1
-        $ pemsgnot = 1
-        $ perep1a = "Hey, you wanna go bowling today? I'm free this afternoon"
-        $ pemsg1 = "Yeah, sounds good :)"
-        $ pemsg2 = "I have a lecture at 2:30 but I can go straight to the bowling alley afterwards"
-        $ pemsg3 = "Meet there at 4?"
-        $ perep3a = "Yesss, see you there"
         $ phoneexit = "phoneak"
 
         u "(I should ask Penelope whether she wants to do bowling this afternoon.)"

@@ -856,7 +856,7 @@ label v07:
 
                 no "Cheated on someone."
 
-                if laurenrs and aubreyrs or laurenrs and emilyrs:
+                if (laurenrs and aubreyrs) or (laurenrs and emilyrs):
 
                     scene s703 # showing mc drinking
                     with dissolve
@@ -7467,7 +7467,9 @@ label v07:
 
     elif kct == "loyal" or beachfirstkiss:
         $ hcGirl = "lauren"
-        call screen kctpopup("lauren_hc_yes")
+        
+        if kct == "loyal":
+            call screen kctpopup("lauren_hc_yes")
 
         label lauren_hc_yes:
         $ laurenrs = True
@@ -7695,7 +7697,7 @@ label v07:
 
         ri "Uhm, okay. See you there."
 
-        scene s960 # mc walking through the hallway disapointed with the slipper in his hand.
+        scene s960 # mc walking through the hallway disappointed with the slipper in his hand.
         with fade
 
         u "(Guess I'm asking someone else.)"
@@ -7986,7 +7988,7 @@ menu:
         jump av_no_glue
 
 label av_no_glue:
-scene scc18 # FPP. Show Cameron disapointed expression, mouth closed.
+scene scc18 # FPP. Show Cameron disappointed expression, mouth closed.
 with dissolve
 
 u "Nah. This is just dumb. I'm not gonna get arrested for vandalism or something stupid."
@@ -14269,12 +14271,12 @@ label aSigns_2:
     scene sfr4pe15b # penelope and mc slow dancing pose 2, penelope cute nervous
     with dissolve
 
-    pe "About everything. About going to homecoming with you. I don't know I didn't wanna disapoint you!"
+    pe "About everything. About going to homecoming with you. I don't know I didn't wanna disappoint you!"
 
     scene sfr4pe15c
     with dissolve
 
-    u "Penelope come on! You could never disapoint me. I asked you for a reason."
+    u "Penelope come on! You could never disappoint me. I asked you for a reason."
 
     scene sfr4pe15
     with dissolve
@@ -14771,7 +14773,7 @@ label aSigns_2:
 
     no "I'm gonna go grab a drink."
 
-    scene sfr4no2b # chris looking at nora not smiling more like disapointed
+    scene sfr4no2b # chris looking at nora not smiling more like disappointed
     with dissolve
 
     ch "Uhm... now? Alright, well I'll be here."
@@ -15548,22 +15550,22 @@ label aSigns_2:
 
                     u "Riley, I- I can't ditch my date like that."
 
-                    scene sfr4ri51d # riley disapointed
+                    scene sfr4ri51d # riley disappointed
                     with dissolve
 
                     ri "Oh, alright... I guess I'm going home by myself then."
 
-                    scene sfr4ri51e # riley disapointed
+                    scene sfr4ri51e # riley disappointed
                     with dissolve
 
                     u "Sorry about that."
 
-                    scene sfr4ri51d # riley disapointed
+                    scene sfr4ri51d # riley disappointed
                     with dissolve
 
                     ri "It's okay. Bye bye."
 
-                    scene sfr4ri51e # riley disapointed
+                    scene sfr4ri51e # riley disappointed
                     with dissolve
 
                     u "Bye Riley."
@@ -15614,22 +15616,22 @@ label aSigns_2:
 
                     u "*Chuckles* I can't ditch my date like that."
 
-                    scene sfr4ri51d # riley disapointed
+                    scene sfr4ri51d # riley disappointed
                     with dissolve
 
                     ri "Oh, alright... I guess I'm going home by myself then."
 
-                    scene sfr4ri51e # riley disapointed
+                    scene sfr4ri51e # riley disappointed
                     with dissolve
 
                     u "Sorry about that."
 
-                    scene sfr4ri51d # riley disapointed
+                    scene sfr4ri51d # riley disappointed
                     with dissolve
 
                     ri "It's okay. Bye bye."
 
-                    scene sfr4ri51e # riley disapointed
+                    scene sfr4ri51e # riley disappointed
                     with dissolve
 
                     u "Bye Riley."
@@ -16099,7 +16101,7 @@ label aSigns_2:
 
                 $ addPoint("tm", 1)
 
-                scene sfr4ri39d # aubrey a bit disapointed
+                scene sfr4ri39d # aubrey a bit disappointed
                 with dissolve
 
                 au "Oh yeah, of course. Well I'll see you later then."

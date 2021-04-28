@@ -4474,7 +4474,25 @@ screen scenegal():
             hover "images/gallery/gallery13outline.png"
             action Replay ("amber_sex_at_joshs", locked = False)
 
+        imagebutton:
+            idle Transform("images/gallery/gallery14.webp", size=(400, 226))
+            hover Transform("images/gallery/gallery14_Hover.webp", size=(400, 226))
+            action Replay ("v9_aubrey_scene_lake", locked = False)
 
+        imagebutton:
+            idle Transform("images/gallery/gallery15.webp", size=(400, 226))
+            hover Transform("images/gallery/gallery15_Hover.webp", size=(400, 226))
+            action Replay ("v9_emily_dorm", locked = False)
+
+        imagebutton:
+            idle Transform("images/gallery/gallery16.webp", size=(400, 226))
+            hover Transform("images/gallery/gallery16_Hover.webp", size=(400, 226))
+            action Replay ("v9_ri_sex", locked = False)
+
+        imagebutton:
+            idle Transform("images/gallery/gallery17.webp", size=(400, 226))
+            hover Transform("images/gallery/gallery17_Hover.webp", size=(400, 226))
+            action Replay ("v9_make_out_w_lin", locked = False)
 
 screen skiptut():
     add "images/endfr.png"
@@ -5796,9 +5814,9 @@ screen aubreysexoverlay():
             action Jump ("naubclimax")
 
 screen letter1():
+    add "images/darker.webp"
+    add Transform("images/emilyletter.webp", size=(764, 1080))
 
-    add "images/darker.png"
-    add "images/emilyletter.png"
 
     button:
         xsize 1920

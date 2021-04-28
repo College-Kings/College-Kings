@@ -1,5 +1,3 @@
-
-
 init python:
     achievement.register("open_wound")
     achievement.register("no_hard_feelings")
@@ -28,11 +26,11 @@ init python:
     achievement.register("strike")
     achievement.sync()
 
-define persistent.ep = 8
+    persistent.ep = 9
 
 define steam = False
 
-define developer = False
+define developer = True
 
 define config.steam_appid = 1463120
 
@@ -5928,10 +5926,10 @@ label fr2end:
             r = renpy.input("Which button should be kick / block leg?")
             if r == "": r = "r"
 
-        if adamtut == True:
+        if s28_LarsFight:
             call screen af3
 
-        elif s28_LarsFight:
+        elif adamtut:
             call screen s28_LarsKeybindOptions
 
         else:

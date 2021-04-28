@@ -16,6 +16,7 @@ define ann = Character("Speaker Announcement", who_color="#fd9426", who_outlines
 define empl = Character("Employee", who_color="#5fc9f8", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
 
 label emily_arcade:
+    $ showphone = False
     $ renpy.music.set_volume(1, channel="ambience")
 
     scene v8arcade1 # TPP. MC walking into the arcade building, Emily can be seen waiting for him inside
