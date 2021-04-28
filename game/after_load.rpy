@@ -1,5 +1,9 @@
-init python:
+init -1 python:
     import os
+
+    if renpy.loadable("phonescript.rpy") or renpy.loadable("phonescript.rpyc"):
+        os.remove(os.path.join(config.basedir, "game", "phone", "phonescript.rpy"))
+        os.remove(os.path.join(config.basedir, "game", "phone", "phonescript.rpyc"))
 
 label after_load:
     python:
