@@ -30,7 +30,7 @@ default applications = []
 
 screen phoneTemplate():
 
-    add "images/phonescreen.webp"
+    add "images/phonescreen.png"
 
     if not noexit:
         textbutton "Exit Phone" action [Hide("reply"), Jump("exitphone")] style "phonebutton"
@@ -83,7 +83,7 @@ screen tutorial():
             "Lastly, if you ever need to get to the homescreen, just click the bottom border of the phone, or the phone icon.",
         ]
 
-        add "images/tutback.webp":
+        add "images/tutback.png":
             yalign 0.5
             xpos 1200
 
@@ -96,7 +96,7 @@ screen tutorial():
                 spacing 150
 
                 imagebutton:
-                    idle "images/whitearrowleft.webp"
+                    idle "images/whitearrowleft.png"
                     if phonetutpage > 1:
                         action SetVariable("phonetutpage", phonetutpage -1)
                     else:
@@ -105,7 +105,7 @@ screen tutorial():
                 text "{} of {}".format(phonetutpage, len(phoneTuts)) style "tutorialtextnum" yalign(0.5)
 
                 imagebutton:
-                    idle "images/whitearrowright.webp"
+                    idle "images/whitearrowright.png"
                     if phonetutpage < 5:
                         action SetVariable("phonetutpage", phonetutpage +1)
                     else:

@@ -103,13 +103,13 @@ label v08_cl_start:
     with dissolve
     u "You don't have to ask me twice."
 
-    image v8clbj1 = Movie(play="images/v08/Scene 2/v8clbj1.webm", loop=True, image="images/v08/Scene 2/clbj1_000.webp", start_image="images/v08/Scene 2/clbj1_000.webp")
+    image v8clbj1 = Movie(play="images/v08/Scene 2/v8clbj1.webm", loop=True, image="images/v08/Scene 2/clbj1_000.png", start_image="images/v08/Scene 2/clbj1_000.png")
     # Chloe slow blowjob animation. Should be FPP (She's looking into the camera)
-    image v8clbj2 = Movie(play="images/v08/Scene 2/v8clbj2.webm", loop=True, image="images/v08/Scene 2/clbj2_000.webp", start_image="images/v08/Scene 2/clbj2_000.webp")
+    image v8clbj2 = Movie(play="images/v08/Scene 2/v8clbj2.webm", loop=True, image="images/v08/Scene 2/clbj2_000.jpg", start_image="images/v08/Scene 2/clbj2_000.jpg")
     # Same animation as bj1 but different angle (maybe a close up or something)
-    image v8clbj1f = Movie(play="images/v08/Scene 2/v8clbj1f.webm", loop=True, image="images/v08/Scene 2/clbj1_000.webp", start_image="images/v08/Scene 2/clbj1_000.webp")
+    image v8clbj1f = Movie(play="images/v08/Scene 2/v8clbj1f.webm", loop=True, image="images/v08/Scene 2/clbj1_000.png", start_image="images/v08/Scene 2/clbj1_000.png")
     # Fast version of bj1 (need not be re-rendered)
-    image v8clbj2f = Movie(play="images/v08/Scene 2/v8clbj2f.webm", loop=True, image="images/v08/Scene 2/clbj2_000.webp", start_image="images/v08/Scene 2/clbj2_000.webp")
+    image v8clbj2f = Movie(play="images/v08/Scene 2/v8clbj2f.webm", loop=True, image="images/v08/Scene 2/clbj2_000.jpg", start_image="images/v08/Scene 2/clbj2_000.jpg")
     # Fast version of bj2 (need not be re-rendered)
     # Note the extra images - v8clbj1end, v8clbj1start, v8clbj2end, v8clbj2start
 

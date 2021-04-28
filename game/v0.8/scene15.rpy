@@ -104,7 +104,7 @@ label help_pen:
 
     $ thick_and_thin = True
     if steam == False:
-        image thick_and_thin = "images/v08/achievements/thickandthin.webp"
+        image thick_and_thin = "images/v08/achievements/thickandthin.png"
         show thick_and_thin:
             xpos 0
             ypos -200

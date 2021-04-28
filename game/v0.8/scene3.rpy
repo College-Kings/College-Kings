@@ -105,16 +105,16 @@ label v08_ri_start:
     with dissolve
     pause
 
-    image v8ricg1 = Movie(play="images/v08/Scene 3/v8ricg1.webm", loop=True, image="images/v08/Scene 3/risex000.webp", start_image="images/v08/Scene 3/risex000.webp") # CG TPP
-    image v8ricg1f = Movie(play="images/v08/Scene 3/v8ricg1f.webm", loop=True, image="images/v08/Scene 3/risex000.webp", start_image="images/v08/Scene 3/risex000.webp")
-    image v8ricg2 = Movie(play="images/v08/Scene 3/v8ricg2.webm", loop=True, image="images/v08/Scene 3/risex2_000.webp", start_image="images/v08/Scene 3/risex2_000.webp") # CG FPP
-    image v8ricg2f = Movie(play="images/v08/Scene 3/v8ricg2f.webm", loop=True, image="images/v08/Scene 3/risex2_000.webp", start_image="images/v08/Scene 3/risex2_000.webp")
-    image v8ridg1 = Movie(play="images/v08/Scene 3/v8ridg1.webm", loop=True, image="images/v08/Scene 3/risex3000.webp", start_image="images/v08/Scene 3/risex3000.webp") # Doggy smooth
-    image v8ridg1f = Movie(play="images/v08/Scene 3/v8ridg1.webm", loop=True, image="images/v08/Scene 3/risex3000.webp", start_image="images/v08/Scene 3/risex3000.webp")
-    image v8ridg2 = Movie(play="images/v08/Scene 3/v8ridg2.webm", loop=True, image="images/v08/Scene 3/risex4_000.webp", start_image="images/v08/Scene 3/risex4_000.webp") # Doggy rough
-    image v8ridg2f = Movie(play="images/v08/Scene 3/v8ridg2f.webm", loop=True, image="images/v08/Scene 3/risex4_000.webp", start_image="images/v08/Scene 3/risex4_000.webp")
-    image v8ridg3 = Movie(play="images/v08/Scene 3/v8ridg3.webm", loop=True, image="images/v08/Scene 3/risex5_00.webp", start_image="images/v08/Scene 3/risex5_00.webp") # Doggy smooth angle 2
-    image v8ridg3f = Movie(play="images/v08/Scene 3/v8ridg3.webm", loop=True, image="images/v08/Scene 3/risex5_00.webp", start_image="images/v08/Scene 3/risex5_00.webp")
+    image v8ricg1 = Movie(play="images/v08/Scene 3/v8ricg1.webm", loop=True, image="images/v08/Scene 3/risex000.jpg", start_image="images/v08/Scene 3/risex000.jpg") # CG TPP
+    image v8ricg1f = Movie(play="images/v08/Scene 3/v8ricg1f.webm", loop=True, image="images/v08/Scene 3/risex000.jpg", start_image="images/v08/Scene 3/risex000.jpg")
+    image v8ricg2 = Movie(play="images/v08/Scene 3/v8ricg2.webm", loop=True, image="images/v08/Scene 3/risex2_000.jpg", start_image="images/v08/Scene 3/risex2_000.jpg") # CG FPP
+    image v8ricg2f = Movie(play="images/v08/Scene 3/v8ricg2f.webm", loop=True, image="images/v08/Scene 3/risex2_000.jpg", start_image="images/v08/Scene 3/risex2_000.jpg")
+    image v8ridg1 = Movie(play="images/v08/Scene 3/v8ridg1.webm", loop=True, image="images/v08/Scene 3/risex3000.jpg", start_image="images/v08/Scene 3/risex3000.jpg") # Doggy smooth
+    image v8ridg1f = Movie(play="images/v08/Scene 3/v8ridg1.webm", loop=True, image="images/v08/Scene 3/risex3000.jpg", start_image="images/v08/Scene 3/risex3000.jpg")
+    image v8ridg2 = Movie(play="images/v08/Scene 3/v8ridg2.webm", loop=True, image="images/v08/Scene 3/risex4_000.jpg", start_image="images/v08/Scene 3/risex4_000.jpg") # Doggy rough
+    image v8ridg2f = Movie(play="images/v08/Scene 3/v8ridg2f.webm", loop=True, image="images/v08/Scene 3/risex4_000.jpg", start_image="images/v08/Scene 3/risex4_000.jpg")
+    image v8ridg3 = Movie(play="images/v08/Scene 3/v8ridg3.webm", loop=True, image="images/v08/Scene 3/risex5_00.jpg", start_image="images/v08/Scene 3/risex5_00.jpg") # Doggy smooth angle 2
+    image v8ridg3f = Movie(play="images/v08/Scene 3/v8ridg3.webm", loop=True, image="images/v08/Scene 3/risex5_00.jpg", start_image="images/v08/Scene 3/risex5_00.jpg")
 
     scene v8ricg1
     with dissolve

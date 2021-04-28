@@ -96,7 +96,7 @@ screen bugTesting_cheatMenu():
     default shownCheatMenu = "general"
 
     add "#23272a"
-    add "/bugTesting/images/cheatMenuBackground.webp"
+    add "/bugTesting/images/cheatMenuBackground.png"
 
     fixed:
         xysize (1536, 99)
@@ -117,8 +117,8 @@ screen bugTesting_cheatMenu():
 
     imagebutton:
         action Hide("bugTesting_cheatMenu"), Hide("bugTesting_cheatMenuValues"), SetVariable("quick_menu", True)
-        idle "/bugTesting/images/cheatMenuBackButton.webp"
-        hover im.MatrixColor("/bugTesting/images/cheatMenuBackButton.webp", im.matrix.brightness(0.2))
+        idle "/bugTesting/images/cheatMenuBackButton.png"
+        hover im.MatrixColor("/bugTesting/images/cheatMenuBackButton.png", im.matrix.brightness(0.2))
         pos (1666, 50)
 
 screen bugTesting_cheatMenuValues(cheatMenuChar="General"):

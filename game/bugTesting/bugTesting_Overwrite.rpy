@@ -4,13 +4,13 @@ screen quick_menu():
     zorder 100
 
     if fantasy == 1:
-        image "images/fantasyoverlay.webp"
+        image "images/fantasyoverlay.png"
 
     if wton == True:
 
         if wt == 1:
 
-            image "images/tutback.webp":
+            image "images/tutback.png":
                 ypos -385
                 xpos 20
             vbox xpos 30  ypos 40 spacing 20:
@@ -20,7 +20,7 @@ screen quick_menu():
 
         if wt == 2:
 
-            image "images/tutback.webp":
+            image "images/tutback.png":
                 ypos -385
                 xpos 20
             vbox xpos 30  ypos 40 spacing 20:
@@ -30,7 +30,7 @@ screen quick_menu():
 
         if wt == 3:
 
-            image "images/tutback.webp":
+            image "images/tutback.png":
                 ypos -385
                 xpos 20
             vbox xpos 30  ypos 40 spacing 20:
@@ -83,9 +83,9 @@ screen quick_menu():
         if showphone: # Edited
             imagebutton:
                 if any([application.notification for application in applications]):
-                    idle "images/phoneiconnot.webp"
+                    idle "images/phoneiconnot.png"
                 else:
-                    idle "images/phoneicon.webp"
+                    idle "images/phoneicon.png"
                 yalign 0.05
                 xalign 0.999
                 action Jump ("homescreen")
@@ -94,13 +94,13 @@ screen quick_menu():
 
         if freeroamtut == 1:
 
-            image "images/tutback.webp":
+            image "images/tutback.png":
                 ypos 100 #+300
                 xpos 1240 #+260
 
             imagebutton:
-                idle "images/whitearrowleft.webp"
-                hover "images/whitearrowleft.webp"
+                idle "images/whitearrowleft.png"
+                hover "images/whitearrowleft.png"
                 ypos 720
                 xpos 1260
                 if freeroamtutpage > 1:
@@ -109,8 +109,8 @@ screen quick_menu():
                     action SetVariable("freeroamtutpage", 3)
 
             imagebutton:
-                idle "images/whitearrowright.webp"
-                hover "images/whitearrowright.webp"
+                idle "images/whitearrowright.png"
+                hover "images/whitearrowright.png"
                 ypos 720
                 xpos 1740
                 if freeroamtutpage < 3:
@@ -133,7 +133,7 @@ screen quick_menu():
     if stance == 1:
 
         if firstfight == True:
-            image "images/background.webp"
+            image "images/background.png"
 
 
             text "[w]":
@@ -174,26 +174,26 @@ screen quick_menu():
                 yalign 0.7
 
             imagebutton:
-                idle "images/jab.webp"
-                hover "images/jab.webp"
+                idle "images/jab.png"
+                hover "images/jab.png"
                 xalign 0.06
                 yalign 0.5
 
             imagebutton:
-                idle "images/hook.webp"
-                hover "images/hook.webp"
+                idle "images/hook.png"
+                hover "images/hook.png"
                 xalign 0.115
                 yalign 0.4
 
 
             imagebutton:
-                idle "images/kick.webp"
-                hover "images/kick.webp"
+                idle "images/kick.png"
+                hover "images/kick.png"
                 xalign 0.115
                 yalign 0.61
         else:
 
-            image "images/background.webp"
+            image "images/background.png"
 
 
             text "[w]":
@@ -234,27 +234,27 @@ screen quick_menu():
                 yalign 0.7
 
             imagebutton:
-                idle "images/jab.webp"
-                hover "images/jab.webp"
+                idle "images/jab.png"
+                hover "images/jab.png"
                 xalign 0.06
                 yalign 0.5
 
             imagebutton:
-                idle "images/hook.webp"
-                hover "images/hook.webp"
+                idle "images/hook.png"
+                hover "images/hook.png"
                 xalign 0.115
                 yalign 0.4
 
 
             imagebutton:
-                idle "images/kick.webp"
-                hover "images/kick.webp"
+                idle "images/kick.png"
+                hover "images/kick.png"
                 xalign 0.115
                 yalign 0.61
 
             imagebutton:
-                idle "images/body.webp"
-                hover "images/body.webp"
+                idle "images/body.png"
+                hover "images/body.png"
                 xalign 0.172
                 yalign 0.5
 
@@ -262,7 +262,7 @@ screen quick_menu():
 
     if stance == 2:
         if firstfight == True:
-            image "images/background.webp"
+            image "images/background.png"
 
             text "[w]":
                 font "fonts/freshman.ttf"
@@ -302,24 +302,24 @@ screen quick_menu():
                 yalign 0.7
 
             imagebutton:
-                idle "images/hookblock.webp"
-                hover "images/hookblock.webp"
+                idle "images/hookblock.png"
+                hover "images/hookblock.png"
                 xalign 0.06
                 yalign 0.5
 
             imagebutton:
-                idle "images/jabblock.webp"
-                hover "images/jabblock.webp"
+                idle "images/jabblock.png"
+                hover "images/jabblock.png"
                 xalign 0.115
                 yalign 0.4
 
             imagebutton:
-                idle "images/kickblock.webp"
-                hover "images/kickblock.webp"
+                idle "images/kickblock.png"
+                hover "images/kickblock.png"
                 xalign 0.115
                 yalign 0.6
         else:
-            image "images/background.webp"
+            image "images/background.png"
 
             text "[w]":
                 font "fonts/freshman.ttf"
@@ -359,35 +359,35 @@ screen quick_menu():
                 yalign 0.7
 
             imagebutton:
-                idle "images/hookblock.webp"
-                hover "images/hookblock.webp"
+                idle "images/hookblock.png"
+                hover "images/hookblock.png"
                 xalign 0.06
                 yalign 0.5
 
             imagebutton:
-                idle "images/jabblock.webp"
-                hover "images/jabblock.webp"
+                idle "images/jabblock.png"
+                hover "images/jabblock.png"
                 xalign 0.115
                 yalign 0.4
 
             imagebutton:
-                idle "images/kickblock.webp"
-                hover "images/kickblock.webp"
+                idle "images/kickblock.png"
+                hover "images/kickblock.png"
                 xalign 0.115
                 yalign 0.6
             imagebutton:
-                idle "images/bodyblock.webp"
-                hover "images/bodyblock.webp"
+                idle "images/bodyblock.png"
+                hover "images/bodyblock.png"
                 xalign 0.172
                 yalign 0.5
 
 
     if youdmg == 3:
-        image "images/3 hits.webp"
+        image "images/3 hits.png"
     if youdmg == 4:
-        image "images/4 hits.webp"
+        image "images/4 hits.png"
     if youdmg >= 5:
-        image "images/5 hits.webp"
+        image "images/5 hits.png"
 
 
     if renpy.loadable("/bugTesting/bugTesting.rpy") and developer:

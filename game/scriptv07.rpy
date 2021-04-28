@@ -467,7 +467,7 @@ label v07:
 
     $ truetoself = True
     if steam == False:
-        image truetoself = "images/truetoself.webp"
+        image truetoself = "images/truetoself.png"
         show truetoself:
             xpos 0
             ypos -200
@@ -1389,7 +1389,7 @@ label v07:
 
     pause 0.5
 
-    $ KiwiiPost1 = KiwiiPost("Chloe", "images/clpost1.webp", "I'll always follow the sun :)", numberLikes=186)
+    $ KiwiiPost1 = KiwiiPost("Chloe", "images/clpost1.png", "I'll always follow the sun :)", numberLikes=186)
     $ KiwiiPost1.addComment("Grayson","Check your DMs", 14)
     $ KiwiiPost1.addComment("Ryan", "Whore.", 1)
     $ KiwiiPost1.addComment("Aubrey", "What I wouldn't give for your body...", 32)
@@ -1400,13 +1400,13 @@ label v07:
     $ KiwiiPost1.addReply("You're so beautiful!", "KiwiiPost1_reply1", numberLikes=renpy.random.randint(2, 8))
     $ KiwiiPost1.addReply("I got some sun in my room...", "KiwiiPost1_reply2", numberLikes=renpy.random.randint(20, 30))
 
-    $ KiwiiPost2 = KiwiiPost("Lauren", "images/lapost1.webp", "Wishing I could go back...", numberLikes=39)
+    $ KiwiiPost2 = KiwiiPost("Lauren", "images/lapost1.png", "Wishing I could go back...", numberLikes=39)
     $ KiwiiPost2.addComment("Autumn","That was such a great vacation!", 2)
     $ KiwiiPost2.addComment("Penelope", "Looks beautiful", 3)
     $ KiwiiPost2.addReply("You're a cutie!", "KiwiiPost2_reply1", numberLikes=renpy.random.randint(3, 10))
     $ KiwiiPost2.addReply("Winter vacations are the best", "KiwiiPost2_reply2", numberLikes=renpy.random.randint(10, 17))
 
-    $ KiwiiPost3 = KiwiiPost("Aubrey", "images/aupost1.webp", "Finally changed my profile pic!", numberLikes=133)
+    $ KiwiiPost3 = KiwiiPost("Aubrey", "images/aupost1.png", "Finally changed my profile pic!", numberLikes=133)
     $ KiwiiPost3.addComment("Cameron","You put the hot into thot", 2)
     $ KiwiiPost3.addComment("Josh", "You still single?", 3)
     $ KiwiiPost3.addComment("Riley", "I'm sooo jealous of your hair!", 6)
@@ -1414,7 +1414,7 @@ label v07:
     $ KiwiiPost3.addReply("I'd destroy you in Air hockey!", "KiwiiPost3_reply1", mentions ="Aubrey", numberLikes=renpy.random.randint(15, 25))
 
     if emilyrs: # first riley texts, then once you've opened the app you get 2 more messages.
-        $ KiwiiPost4 = KiwiiPost("Emily", "images/empost1.webp", "Finally fate brings us back together. What doesn't kill us only makes us stronger.", numberLikes=82)
+        $ KiwiiPost4 = KiwiiPost("Emily", "images/empost1.png", "Finally fate brings us back together. What doesn't kill us only makes us stronger.", numberLikes=82)
         $ KiwiiPost4.addComment("Riley","You guys are so cute", 5)
         $ KiwiiPost4.addComment("Aubrey", "GORGEOUS", 8)
         $ KiwiiPost4.addComment("Josh", "Woah, you guys back together??", 3)
@@ -2938,7 +2938,7 @@ label v07:
 ########### SCENE 11 Beach trip with Lauren
     label beachlauren:
     stop music fadeout 2
-    image s738avid = Movie (play="images/s738avid.webm", loop = False, image = "images/s738avid75.webp", start_image = "images/s738avid16.webp")
+    image s738avid = Movie (play="images/s738avid.webm", loop = False, image = "images/s738avid75.jpg", start_image = "images/s738avid16.jpg")
 
     scene s734 # mc walking through dorm hallways
     with fade
@@ -3868,7 +3868,7 @@ label v07:
 
                     $ silverback = True
                     if steam == False:
-                        image silverback = "images/silverback.webp"
+                        image silverback = "images/silverback.png"
                         show silverback:
                             xpos 0
                             ypos -200
@@ -3887,7 +3887,7 @@ label v07:
                 "Pledge to the Wolves":
                     $ wolfpack = True
                     if steam == False:
-                        image wolfpack = "images/wolfpack.webp"
+                        image wolfpack = "images/wolfpack.png"
                         show wolfpack:
                             xpos 0
                             ypos -200
@@ -5882,7 +5882,7 @@ label v07:
     scene s865 # Camera - TPP. MC waking up yawning in bed. No black eye
     with Fade(1,0,1)
     if joinwolves:
-        $ KiwiiPost5 = KiwiiPost("Chris", "images/chpost1.webp", "One of us!", numberLikes=133, mentions = "MC")
+        $ KiwiiPost5 = KiwiiPost("Chris", "images/chpost1.png", "One of us!", numberLikes=133, mentions = "MC")
         $ KiwiiPost5.addComment("Cameron","Losers", 3)
         $ KiwiiPost5.addComment("Imre","Hell yeah bro!", 14)
         $ KiwiiPost5.addComment("Aubrey", "Wohoo!", 35)
@@ -6906,7 +6906,7 @@ label v07:
 
             $ leeway = True
             if steam == False:
-                image leeway = "images/lee-way.webp"
+                image leeway = "images/lee-way.png"
                 show leeway:
                     xpos 0
                     ypos -200
@@ -9536,15 +9536,15 @@ label risex: # Riley sex scene
     show screen rileysexoverlay
     show screen rileysexoverlaybutton
 
-    image risexvid1 = Movie (play="images/risexvid1.webm", loop = True, image = "images/risex1vid20.webp", start_image = "images/risex1vid00.webp")
-    image risexvid2s = Movie (play="images/risexvid2s.webm", loop = True, image = "images/rivid378.webp", start_image = "images/rivid360.webp")
-    image risexvid2f = Movie (play="images/risexvid2f.webm", loop = True, image = "images/rivid378.webp", start_image = "images/rivid360.webp")
-    image risexvid3s = Movie (play="images/risexvid3s.webm", loop = True, image = "images/rivid498.webp", start_image = "images/rivid478.webp")
-    image risexvid3f = Movie (play="images/risexvid3f.webm", loop = True, image = "images/rivid498.webp", start_image = "images/rivid478.webp")
-    image risexvid6s = Movie (play="images/risexvid6s.webm", loop = True, image = "images/rivid7_068.webp", start_image = "images/rivid7_052.webp")
-    image risexvid6f = Movie (play="images/risexvid6f.webm", loop = True, image = "images/rivid7_068.webp", start_image = "images/rivid7_052.webp")
-    image risexvid7 = Movie (play="images/risexvid7.webm", loop = True, image = "images/rivid8070.webp", start_image = "images/rivid8052.webp")
-    image risexvid8 = Movie (play="images/risexvid8.webm", loop = False, image = "images/rivid8070.webp", start_image = "images/rivid8052.webp")
+    image risexvid1 = Movie (play="images/risexvid1.webm", loop = True, image = "images/risex1vid20.jpg", start_image = "images/risex1vid00.jpg")
+    image risexvid2s = Movie (play="images/risexvid2s.webm", loop = True, image = "images/rivid378.jpg", start_image = "images/rivid360.jpg")
+    image risexvid2f = Movie (play="images/risexvid2f.webm", loop = True, image = "images/rivid378.jpg", start_image = "images/rivid360.jpg")
+    image risexvid3s = Movie (play="images/risexvid3s.webm", loop = True, image = "images/rivid498.jpg", start_image = "images/rivid478.jpg")
+    image risexvid3f = Movie (play="images/risexvid3f.webm", loop = True, image = "images/rivid498.jpg", start_image = "images/rivid478.jpg")
+    image risexvid6s = Movie (play="images/risexvid6s.webm", loop = True, image = "images/rivid7_068.jpg", start_image = "images/rivid7_052.jpg")
+    image risexvid6f = Movie (play="images/risexvid6f.webm", loop = True, image = "images/rivid7_068.jpg", start_image = "images/rivid7_052.jpg")
+    image risexvid7 = Movie (play="images/risexvid7.webm", loop = True, image = "images/rivid8070.jpg", start_image = "images/rivid8052.jpg")
+    image risexvid8 = Movie (play="images/risexvid8.webm", loop = False, image = "images/rivid8070.jpg", start_image = "images/rivid8052.jpg")
 
 
     scene risex1a # Riley shirt fully off, flirty grin (first person)
@@ -10433,7 +10433,7 @@ label aSigns_2:
 
     $ ecstatic = True
     if steam == False:
-        image ecstatic = "images/ecstatic.webp"
+        image ecstatic = "images/ecstatic.png"
         show ecstatic:
             xpos 0
             ypos -200
@@ -16011,10 +16011,10 @@ label aSigns_2:
 
                 label brbj:
 
-                image ri42vid = Movie (play="images/ri42vid.webm", loop = True, image = "images/ri42vid20.webp", start_image = "images/ri42vid00.webp")
-                image ri42vidperspective = Movie (play="images/ri42vidperspective.webm", loop = True, image = "images/ri42vidperspective20.webp", start_image = "images/ri42vidperspective00.webp")
-                image ri42vidfast = Movie (play="images/ri42vidfast.webm", loop = True, image = "images/ri42vid20.webp", start_image = "images/ri42vid00.webp")
-                image ri42vidperspectivefast = Movie (play="images/ri42vidperspectivefast.webm", loop = True, image = "images/ri42vidperspective20.webp", start_image = "images/ri42vidperspective00.webp")
+                image ri42vid = Movie (play="images/ri42vid.webm", loop = True, image = "images/ri42vid20.jpg", start_image = "images/ri42vid00.jpg")
+                image ri42vidperspective = Movie (play="images/ri42vidperspective.webm", loop = True, image = "images/ri42vidperspective20.jpg", start_image = "images/ri42vidperspective00.jpg")
+                image ri42vidfast = Movie (play="images/ri42vidfast.webm", loop = True, image = "images/ri42vid20.jpg", start_image = "images/ri42vid00.jpg")
+                image ri42vidperspectivefast = Movie (play="images/ri42vidperspectivefast.webm", loop = True, image = "images/ri42vidperspective20.jpg", start_image = "images/ri42vidperspective00.jpg")
 
                 scene sfr4ri42 # fpp # in the bathroom looking down at your pants where aubrey is on her knees in front of you about to open your pants
                 with fade
@@ -17923,7 +17923,7 @@ label aSigns_2:
 
     $ slowandsteady = True
     if steam == False:
-        image slowandsteady = "images/slowandsteady.webp"
+        image slowandsteady = "images/slowandsteady.png"
         show slowandsteady:
             xpos 0
             ypos -200
@@ -18087,7 +18087,7 @@ label aSigns_2:
 
     $ playingwithfire = True
     if steam == False:
-        image playingwithfire = "images/playingwithfire.webp"
+        image playingwithfire = "images/playingwithfire.png"
         show playingwithfire:
             xpos 0
             ypos -200
@@ -18208,7 +18208,7 @@ label aSigns_2:
 
     $ homecomingqueen = True
     if steam == False:
-        image homecomingqueen = "images/homecomingqueen.webp"
+        image homecomingqueen = "images/homecomingqueen.png"
         show homecomingqueen:
             xpos 0
             ypos -200
