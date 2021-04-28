@@ -146,7 +146,7 @@ label homescreen:
 label emrep1a:
 $ nohardfeelings = True
 if steam == False:
-    image nohardfeelings = "images/nohardfeelings.png"
+    image nohardfeelings = "images/nohardfeelings.webp"
     show nohardfeelings:
         xpos 0
         ypos -200
@@ -164,7 +164,7 @@ call screen messager(contact_Emily)
 label emrep1b:
 $ openwound = True
 if steam == False:
-    image openwound = "images/openwound.png"
+    image openwound = "images/openwound.webp"
     show openwound:
         xpos 0
         ypos -200
@@ -271,7 +271,7 @@ label larep8b:
 $ larep8 = 2
 $ mixedfeelings = True
 if steam == False:
-    image mixedfeelings = "images/mixedfeelings.png"
+    image mixedfeelings = "images/mixedfeelings.webp"
     show mixedfeelings:
         xpos 0
         ypos -200
@@ -405,7 +405,7 @@ call screen messager(contact_Josh)
 
 label jorep8b:
 $ contact_Josh.newMessage("Aww, come on. You'll be back by 11.")
-$ contact_Josh.newImgMessage("images/text1.jpg")
+$ contact_Josh.newImgMessage("images/text1.webp")
 $ contact_Josh.newMessage("I told my friend Amber about you and she really wants to meet you.")
 $ contact_Josh.addReply("Alright, I'll come.", "jorep12a")
 $ contact_Josh.addReply("Josh, I don't know, man. I don't wanna be late.", "jorep12b")
@@ -535,7 +535,7 @@ label start:
     # $ addReplies()
     $ _game_menu_screen = "ingmenu"
     # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
+    # add a file (named either "bg room.webp" or "bg room.webp") to the
     # images directory to show it.
 
     #### Pre Questions
@@ -819,7 +819,7 @@ label phonea:
     ju "Well, this is it. San Vallejo College."
 
 
-    image intro = Movie(play="images/intro.webm", start_image="images/s1.jpg", image="images/s1.jpg", loop = False)
+    image intro = Movie(play="images/intro.webm", start_image="images/s1.webp", image="images/s1.webp", loop = False)
 
 
     show intro
@@ -1806,7 +1806,7 @@ label phonea:
 
             $ keepitmoving = True
             if steam == False:
-                image keepitmoving = "images/keepitmoving.png"
+                image keepitmoving = "images/keepitmoving.webp"
                 show keepitmoving:
                     xpos 0
                     ypos -200
@@ -3040,7 +3040,7 @@ label phonea:
 
     ri "Cum inside me, [name]! Please fill me up!"
 
-    image sdacum2 = Movie (play="images/sdacum2.webm", image = "images/aftercum.jpg", loop = False)
+    image sdacum2 = Movie (play="images/sdacum2.webm", image = "images/aftercum.webp", loop = False)
     scene aftercum
     show sdacum2
     with dissolve
@@ -3650,7 +3650,7 @@ label av_b:
 
                     $ romeo = True
                     if steam == False:
-                        image romeo = "images/romeo.png"
+                        image romeo = "images/romeo.webp"
                         show romeo:
                             xpos 0
                             ypos -200
@@ -4514,7 +4514,7 @@ label av_b:
 
             $ bigmouth = True
             if steam == False:
-                image bigmouth = "images/bigmouth.png"
+                image bigmouth = "images/bigmouth.webp"
                 show bigmouth:
                     xpos 0
                     ypos -200
@@ -5564,7 +5564,7 @@ label fr2end:
 
     u "Dude, she wanted to talk to me. She was happy that you left. You bored her."
     scene push12
-    image tompush = Movie(play="images/tompush.webm", start_image="images/126a.jpg", image="images/push12.jpg", loop = False)
+    image tompush = Movie(play="images/tompush.webm", start_image="images/126a.webp", image="images/push12.webp", loop = False)
 
 
     scene tompush
@@ -5589,33 +5589,33 @@ label fr2end:
         " "
 
     $ stance = 1
-    image abo = "images/abo.png"
-    image aboq = "images/q button.png"
-    image abow = "images/w button.png"
-    image abor = "images/r button.png"
-    image abod = "images/abod.png"
-    image bboq = "images/block q.png"
-    image bbow = "images/block w.png"
-    image bbor = "images/block r.png"
-    image 3hits = "images/3 hits.png"
-    image 4hits = "images/4 hits.png"
-    image 5hits = "images/5 hits.png"
-    image jab2movie = Movie(play="images/jab2.webm", start_image="images/jab2start.jpg", image="images/jab2pic.jpg", loop = False)
-    image tomfinishmovie = Movie(play="images/tomfinish.webm", start_image="images/tomfinishstart.jpg", image="images/tomfinish.jpg", loop = False)
-    image youfinishmovie = Movie(play="images/youfinish.webm", start_image="images/youfinishstart.jpg", image="images/youfinish.jpg", loop = False)
-    image hook2movie = Movie(play="images/hook2.webm", start_image="images/hook2start.jpg", image="images/hook2pic.jpg", loop = False)
-    image kick1movie = Movie(play="images/kick1.webm", start_image="images/kick1start.jpg", image="images/kick1pic.jpg", loop = False)
-    image tomjabmovie = Movie(play="images/tomjab.webm", start_image="images/tomjabstart.jpg", image="images/tomjab.jpg", loop = False)
-    image tomkickmovie = Movie(play="images/tomkick.webm", start_image="images/tomkickstart.jpg", image="images/tomkick.jpg", loop = False)
-    image kick2movie = Movie(play="images/kick2.webm", start_image="images/kick2start.jpg", image="images/kick2pic.jpg", loop = False)
-    image tomhookmovie = Movie(play="images/tomhook.webm", start_image="images/tomhookstart.jpg", image="images/tomhook.jpg", loop = False)
-    image hook1movie = Movie(play="images/hook1.webm", start_image="images/hook1start.jpg", image="images/hook1pic.jpg", loop = False)
-    image jab1movie = Movie(play="images/jab1.webm", start_image="images/jab1start.jpg", image="images/jab1pic.jpg", loop = False)
-    image hookcountermovie = Movie(play="images/hookcounter.webm", start_image="images/hookcounterstart.jpg", image="images/hookcounter.jpg", loop = False)
-    image jabcountermovie = Movie(play="images/jabcounter.webm", start_image="images/jabcounterstart.jpg", image="images/jabcounter.jpg", loop = False)
+    image abo = "images/abo.webp"
+    image aboq = "images/q button.webp"
+    image abow = "images/w button.webp"
+    image abor = "images/r button.webp"
+    image abod = "images/abod.webp"
+    image bboq = "images/block q.webp"
+    image bbow = "images/block w.webp"
+    image bbor = "images/block r.webp"
+    image 3hits = "images/3 hits.webp"
+    image 4hits = "images/4 hits.webp"
+    image 5hits = "images/5 hits.webp"
+    image jab2movie = Movie(play="images/jab2.webm", start_image="images/jab2start.webp", image="images/jab2pic.webp", loop = False)
+    image tomfinishmovie = Movie(play="images/tomfinish.webm", start_image="images/tomfinishstart.webp", image="images/tomfinish.webp", loop = False)
+    image youfinishmovie = Movie(play="images/youfinish.webm", start_image="images/youfinishstart.webp", image="images/youfinish.webp", loop = False)
+    image hook2movie = Movie(play="images/hook2.webm", start_image="images/hook2start.webp", image="images/hook2pic.webp", loop = False)
+    image kick1movie = Movie(play="images/kick1.webm", start_image="images/kick1start.webp", image="images/kick1pic.webp", loop = False)
+    image tomjabmovie = Movie(play="images/tomjab.webm", start_image="images/tomjabstart.webp", image="images/tomjab.webp", loop = False)
+    image tomkickmovie = Movie(play="images/tomkick.webm", start_image="images/tomkickstart.webp", image="images/tomkick.webp", loop = False)
+    image kick2movie = Movie(play="images/kick2.webm", start_image="images/kick2start.webp", image="images/kick2pic.webp", loop = False)
+    image tomhookmovie = Movie(play="images/tomhook.webm", start_image="images/tomhookstart.webp", image="images/tomhook.webp", loop = False)
+    image hook1movie = Movie(play="images/hook1.webm", start_image="images/hook1start.webp", image="images/hook1pic.webp", loop = False)
+    image jab1movie = Movie(play="images/jab1.webm", start_image="images/jab1start.webp", image="images/jab1pic.webp", loop = False)
+    image hookcountermovie = Movie(play="images/hookcounter.webm", start_image="images/hookcounterstart.webp", image="images/hookcounter.webp", loop = False)
+    image jabcountermovie = Movie(play="images/jabcounter.webm", start_image="images/jabcounterstart.webp", image="images/jabcounter.webp", loop = False)
 
-    image farrow1 = "images/farrow1.png"
-    image targets = "images/targets.png"
+    image farrow1 = "images/farrow1.webp"
+    image targets = "images/targets.webp"
     scene tomstancekick
     with dissolve
 
@@ -6518,7 +6518,7 @@ label fr2end:
         if reaction == 0.5:
             $ thenotorious = True
             if steam == False:
-                image thenotorious = "images/thenotorious.png"
+                image thenotorious = "images/thenotorious.webp"
                 show thenotorious:
                     xpos 0
                     ypos -200
@@ -6726,7 +6726,7 @@ label fr2end:
 
         $ anewbeginning = True
         if steam == False:
-            image anewbeginning = "images/anewbeginning.png"
+            image anewbeginning = "images/anewbeginning.webp"
             show anewbeginning:
                 xpos 0
                 ypos -200
@@ -7523,15 +7523,15 @@ label bo_ad:
 
 
 
-    image s145far = ("images/s145far.png")
-    image s145 = ("images/s145.png")
-    image s145a = ("images/s145a.png")
-    image s145b = ("images/s145b.png")
-    image s145c = ("images/s145c.png")
-    image s145d = ("images/s145d.png")
-    image s145e = ("images/s145e.png")
-    image s145bl = ("images/s145bl.png")
-    image s145f = ("images/s145f.png")
+    image s145far = ("images/s145far.webp")
+    image s145 = ("images/s145.webp")
+    image s145a = ("images/s145a.webp")
+    image s145b = ("images/s145b.webp")
+    image s145c = ("images/s145c.webp")
+    image s145d = ("images/s145d.webp")
+    image s145e = ("images/s145e.webp")
+    image s145bl = ("images/s145bl.webp")
+    image s145f = ("images/s145f.webp")
 
 
     scene carback
@@ -7827,7 +7827,7 @@ label bo_ad:
 
     $ overit = True
     if steam == False:
-        image overit = "images/overit.png"
+        image overit = "images/overit.webp"
         show overit:
             xpos 0
             ypos -200
@@ -11350,7 +11350,7 @@ label bo_bd:
     scene s227 # you kissing
     with dissolve
 
-    image glitch = ("images/glitch.png")
+    image glitch = ("images/glitch.webp")
 
     pause 0.5
 
@@ -12761,25 +12761,25 @@ label bo_bd:
     $ _game_menu_screen = "ingmenu"
 
 
-    image aub1 = Movie (play="images/aub1.webm", loop = False, image = "images/aub1.jpg", start_image = "images/aub1start.jpg")
-    image aub2 = Movie (play="images/aub2.webm", loop = True, image = "images/aub2.jpg", start_image = "images/aub1.jpg")
-    image aub3 = Movie (play="images/aub3.webm", loop = False, image = "images/aub3.jpg", start_image = "images/aub3start.jpg")
-    image aub4 = Movie (play="images/aub4.webm", loop = True, image = "images/aub4.jpg", start_image = "images/aub4start.jpg")
-    image aub5 = Movie (play="images/aub5.webm", loop = False, image = "images/aub5.jpg", start_image = "images/aub5start.jpg")
-    image aub7 = Movie (play="images/aub7.webm", loop = True, image = "images/aub7.jpg", start_image = "images/aub7start.jpg")
-    image aub8 = Movie (play="images/aub8.webm", loop = False, image = "images/aub8.jpg", start_image = "images/aub8start.jpg")
-    image asexnew1 = Movie (play="images/asexnew1.webm", loop = True, image = "images/asexnew1end.jpg", start_image = "images/asexnew1start.jpg")
-    image asexnew2 = Movie (play="images/asexnew2.webm", loop = True, image = "images/asexnew2end.jpg", start_image = "images/asexnew2start.jpg")
-    image asexnew3 = Movie (play="images/asexnew3.webm", loop = True, image = "images/asexnew3end.jpg", start_image = "images/asexnew3start.jpg")
-    image asexnew4 = Movie (play="images/asexnew4.webm", loop = True, image = "images/asexnew4end.jpg", start_image = "images/asexnew4start.jpg")
-    image asexnew5 = Movie (play="images/asexnew5.webm", loop = True, image = "images/asexnew5end.jpg", start_image = "images/asexnew5start.jpg")
-    image asexnew6 = Movie (play="images/asexnew6.webm", loop = True, image = "images/asexnew4end.jpg", start_image = "images/asexnew4start.jpg")
-    image asexnew7 = Movie (play="images/asexnew7.webm", loop = True, image = "images/asexnew5end.jpg", start_image = "images/asexnew5start.jpg")
-    image asexnew9 = Movie (play="images/asexnew9.webm", loop = True, image = "images/asexnew8end.jpg", start_image = "images/asexnew8start.jpg")
-    image asexnew10 = Movie (play="images/asexnew10.webm", loop = True, image = "images/asexnew8end.jpg", start_image = "images/asexnew8start.jpg")
-    image asexnew11 = Movie (play="images/asexnew11.webm", loop = True, image = "images/asexnew11end.jpg", start_image = "images/asexnew11start.jpg")
-    image asexnew12 = Movie (play="images/asexnew12.webm", loop = True, image = "images/asexnew11end.jpg", start_image = "images/asexnew11start.jpg")
-    image asexnew13 = Movie (play="images/asexnew13.webm", loop = False, image = "images/asexnew13end.jpg", start_image = "images/asexnew13start.jpg")
+    image aub1 = Movie (play="images/aub1.webm", loop = False, image = "images/aub1.webp", start_image = "images/aub1start.webp")
+    image aub2 = Movie (play="images/aub2.webm", loop = True, image = "images/aub2.webp", start_image = "images/aub1.webp")
+    image aub3 = Movie (play="images/aub3.webm", loop = False, image = "images/aub3.webp", start_image = "images/aub3start.webp")
+    image aub4 = Movie (play="images/aub4.webm", loop = True, image = "images/aub4.webp", start_image = "images/aub4start.webp")
+    image aub5 = Movie (play="images/aub5.webm", loop = False, image = "images/aub5.webp", start_image = "images/aub5start.webp")
+    image aub7 = Movie (play="images/aub7.webm", loop = True, image = "images/aub7.webp", start_image = "images/aub7start.webp")
+    image aub8 = Movie (play="images/aub8.webm", loop = False, image = "images/aub8.webp", start_image = "images/aub8start.webp")
+    image asexnew1 = Movie (play="images/asexnew1.webm", loop = True, image = "images/asexnew1end.webp", start_image = "images/asexnew1start.webp")
+    image asexnew2 = Movie (play="images/asexnew2.webm", loop = True, image = "images/asexnew2end.webp", start_image = "images/asexnew2start.webp")
+    image asexnew3 = Movie (play="images/asexnew3.webm", loop = True, image = "images/asexnew3end.webp", start_image = "images/asexnew3start.webp")
+    image asexnew4 = Movie (play="images/asexnew4.webm", loop = True, image = "images/asexnew4end.webp", start_image = "images/asexnew4start.webp")
+    image asexnew5 = Movie (play="images/asexnew5.webm", loop = True, image = "images/asexnew5end.webp", start_image = "images/asexnew5start.webp")
+    image asexnew6 = Movie (play="images/asexnew6.webm", loop = True, image = "images/asexnew4end.webp", start_image = "images/asexnew4start.webp")
+    image asexnew7 = Movie (play="images/asexnew7.webm", loop = True, image = "images/asexnew5end.webp", start_image = "images/asexnew5start.webp")
+    image asexnew9 = Movie (play="images/asexnew9.webm", loop = True, image = "images/asexnew8end.webp", start_image = "images/asexnew8start.webp")
+    image asexnew10 = Movie (play="images/asexnew10.webm", loop = True, image = "images/asexnew8end.webp", start_image = "images/asexnew8start.webp")
+    image asexnew11 = Movie (play="images/asexnew11.webm", loop = True, image = "images/asexnew11end.webp", start_image = "images/asexnew11start.webp")
+    image asexnew12 = Movie (play="images/asexnew12.webm", loop = True, image = "images/asexnew11end.webp", start_image = "images/asexnew11start.webp")
+    image asexnew13 = Movie (play="images/asexnew13.webm", loop = False, image = "images/asexnew13end.webp", start_image = "images/asexnew13start.webp")
 
     scene aub1start
     with dissolve
@@ -13497,7 +13497,7 @@ label bo_bd:
 
         $ notnowmom = True
         if steam == False:
-            image notnowmom = "images/notnowmom.png"
+            image notnowmom = "images/notnowmom.webp"
             show notnowmom:
                 xpos 0
                 ypos -200
@@ -13955,13 +13955,13 @@ label bo_bd:
 
     label dj_a:
 
-    image rikiss2 = Movie (play="images/rikiss.webm", loop = False, image = "images/rikiss.jpg", start_image = "images/rikiss.jpg")
+    image rikiss2 = Movie (play="images/rikiss.webm", loop = False, image = "images/rikiss.webp", start_image = "images/rikiss.webp")
 
     show rikiss2
 
     $ lipsdontlie = True
     if steam == False:
-        image lipsdontlie = "images/lipsdontlie.png"
+        image lipsdontlie = "images/lipsdontlie.webp"
         show lipsdontlie:
             xpos 0
             ypos -200
@@ -14172,7 +14172,7 @@ label bo_bd:
 
             $ truthhurts = True
             if steam == False:
-                image truthhurts = "images/truthhurts.png"
+                image truthhurts = "images/truthhurts.webp"
                 show truthhurts:
                     xpos 0
                     ypos -200
@@ -15326,11 +15326,11 @@ label bo_bd:
 
         ######### THE FOLLOWING IMAGES HAVE TO BE RENDERED WITH NOT BACKGROUND AS A VIDEO OF MOVING ROADS WILL BE INSERTED
 
-        image s316 = "images/s316.png" # Julia looking forward talking smiling
-        image s316a = "images/s316a.png" # Julia looking forward talking smiling mouth closed
-        image s316c = "images/s316c.png" # Julia looking forward curious
-        image s316d = "images/s316d.png" # Julia looking forward curious mouth closed
-        image s316b = "images/s316b.png" # Julia looking at you smiling mouth open
+        image s316 = "images/s316.webp" # Julia looking forward talking smiling
+        image s316a = "images/s316a.webp" # Julia looking forward talking smiling mouth closed
+        image s316c = "images/s316c.webp" # Julia looking forward curious
+        image s316d = "images/s316d.webp" # Julia looking forward curious mouth closed
+        image s316b = "images/s316b.webp" # Julia looking at you smiling mouth open
 
 
 
@@ -15461,7 +15461,7 @@ label bo_bd:
 
         $ relightthefire = True
         if steam == False:
-            image relightthefire = "images/relightthefire.png"
+            image relightthefire = "images/relightthefire.webp"
             show relightthefire:
                 xpos 0
                 ypos -200
@@ -15696,7 +15696,7 @@ label bo_bd:
 
             $ rematch = True
             if steam == False:
-                image rematch = "images/rematch.png"
+                image rematch = "images/rematch.webp"
                 show rematch:
                     xpos 0
                     ypos -200
@@ -16488,7 +16488,7 @@ label bo_bd:
 
                 $ keeneye = True
                 if steam == False:
-                    image keeneye = "images/keeneye.png"
+                    image keeneye = "images/keeneye.webp"
                     show keeneye:
                         xpos 0
                         ypos -200
@@ -19032,7 +19032,7 @@ label bo_bd:
         label ey_a:
         $ onthelow = True
         if steam == False:
-            image onthelow = "images/onthelow.png"
+            image onthelow = "images/onthelow.webp"
             show onthelow:
                 xpos 0
                 ypos -200
@@ -19696,7 +19696,7 @@ label bo_bd:
         if la2 == True:
             $ petapublicenemy = True
             if steam == False:
-                image petapublicenemy = "images/petapublicenemy.png"
+                image petapublicenemy = "images/petapublicenemy.webp"
                 show petapublicenemy:
                     xpos 0
                     ypos -200
@@ -20661,7 +20661,7 @@ label bo_bd:
     label fh_a:
     $ onthelow = True
     if steam == False:
-        image onthelow = "images/onthelow.png"
+        image onthelow = "images/onthelow.webp"
         show onthelow:
             xpos 0
             ypos -200
@@ -21406,7 +21406,7 @@ tell me!"
 
     label fk_a:
     stop music fadeout 2.0
-    image af2 = Movie(play="images/af2.webm", start_image="images/af2start.jpg", image="images/af2pic.jpg", loop = False)
+    image af2 = Movie(play="images/af2.webm", start_image="images/af2start.webp", image="images/af2pic.webp", loop = False)
 
 
     play sound "sounds/hs.mp3"
@@ -21508,20 +21508,20 @@ tell me!"
 
     #### Define videos for adam fight
     $ stance = 1
-    image af5 = Movie(play="images/af5.webm", start_image="images/af5start.jpg", image="images/af5pic.jpg", loop = False)
-    image af6 = Movie(play="images/af6.webm", start_image="images/af6start.jpg", image="images/af6pic.jpg", loop = False)
-    image af7 = Movie(play="images/af7.webm", start_image="images/af7start.jpg", image="images/af7pic.jpg", loop = False)
-    image af8 = Movie(play="images/af8.webm", start_image="images/af8start.jpg", image="images/af8pic.jpg", loop = False)
-    image af9 = Movie(play="images/af9.webm", start_image="images/af9start.jpg", image="images/af9pic.jpg", loop = False)
-    image af10 = Movie(play="images/af10.webm", start_image="images/af10start.jpg", image="images/af10pic.jpg", loop = False)
-    image af11 = Movie(play="images/af11.webm", start_image="images/af11start.jpg", image="images/af11pic.jpg", loop = False)
-    image af12 = Movie(play="images/af12.webm", start_image="images/af12start.jpg", image="images/af12pic.jpg", loop = False)
-    image af13 = Movie(play="images/af13.webm", start_image="images/af13start.jpg", image="images/af13pic.jpg", loop = False)
-    image af14 = Movie(play="images/af14.webm", start_image="images/af14start.jpg", image="images/af14pic.jpg", loop = False)
-    image af15 = Movie(play="images/af15.webm", start_image="images/af15start.jpg", image="images/af15pic.jpg", loop = False)
-    image af16 = Movie(play="images/af16.webm", start_image="images/af16start.jpg", image="images/af16pic.jpg", loop = False)
-    image youfinishadam = Movie(play="images/youfinishadam.webm", start_image="images/youfinishadamstart.jpg", image="images/youfinishadampic.jpg", loop = False)
-    image adamfinish = Movie(play="images/adamfinish.webm", start_image="images/adamfinishstart.jpg", image="images/adamfinishpic.jpg", loop = False)
+    image af5 = Movie(play="images/af5.webm", start_image="images/af5start.webp", image="images/af5pic.webp", loop = False)
+    image af6 = Movie(play="images/af6.webm", start_image="images/af6start.webp", image="images/af6pic.webp", loop = False)
+    image af7 = Movie(play="images/af7.webm", start_image="images/af7start.webp", image="images/af7pic.webp", loop = False)
+    image af8 = Movie(play="images/af8.webm", start_image="images/af8start.webp", image="images/af8pic.webp", loop = False)
+    image af9 = Movie(play="images/af9.webm", start_image="images/af9start.webp", image="images/af9pic.webp", loop = False)
+    image af10 = Movie(play="images/af10.webm", start_image="images/af10start.webp", image="images/af10pic.webp", loop = False)
+    image af11 = Movie(play="images/af11.webm", start_image="images/af11start.webp", image="images/af11pic.webp", loop = False)
+    image af12 = Movie(play="images/af12.webm", start_image="images/af12start.webp", image="images/af12pic.webp", loop = False)
+    image af13 = Movie(play="images/af13.webm", start_image="images/af13start.webp", image="images/af13pic.webp", loop = False)
+    image af14 = Movie(play="images/af14.webm", start_image="images/af14start.webp", image="images/af14pic.webp", loop = False)
+    image af15 = Movie(play="images/af15.webm", start_image="images/af15start.webp", image="images/af15pic.webp", loop = False)
+    image af16 = Movie(play="images/af16.webm", start_image="images/af16start.webp", image="images/af16pic.webp", loop = False)
+    image youfinishadam = Movie(play="images/youfinishadam.webm", start_image="images/youfinishadamstart.webp", image="images/youfinishadampic.webp", loop = False)
+    image adamfinish = Movie(play="images/adamfinish.webm", start_image="images/adamfinishstart.webp", image="images/adamfinishpic.webp", loop = False)
 
 
     label adamkick1:
@@ -22208,7 +22208,7 @@ tell me!"
 
     $ snitch = True
     if steam == False:
-        image snitch = "images/snitch.png"
+        image snitch = "images/snitch.webp"
         show snitch:
             xpos 0
             ypos -200

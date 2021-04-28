@@ -44,7 +44,7 @@ label clrep8a:
 call screen messager(contact_Chloe)
 
 label amrep11a:
-$ contact_Amber.newImgMessage("images/text2.jpg") 
+$ contact_Amber.newImgMessage("images/text2.webp") 
 $ contact_Amber.addReply("Woah, what was that for?", "amrep12a")
 $ contact_Amber.addReply("Oh wow, you're so fucking hot", "amrep12b")
 call screen messager(contact_Amber)
@@ -370,7 +370,7 @@ label script06:
     $ showphone = False
     $ brosbeforehoes = True
     if steam == False:
-        image brosbeforehoes = "images/brosbeforehoes.png"
+        image brosbeforehoes = "images/brosbeforehoes.webp"
         show brosbeforehoes:
             xpos 0
             ypos -200
@@ -884,7 +884,7 @@ label script06:
 
         $ credulous = True
         if steam == False:
-            image credulous = "images/credulous.png"
+            image credulous = "images/credulous.webp"
             show credulous:
                 xpos 0
                 ypos -200
@@ -2067,7 +2067,7 @@ label script06:
 
     $ notmybusiness = True
     if steam == False:
-        image notmybusiness = "images/notmybusiness.png"
+        image notmybusiness = "images/notmybusiness.webp"
         show notmybusiness:
             xpos 0
             ypos -200
@@ -2082,7 +2082,7 @@ label script06:
 
     u "(Huh, what's this?)"
 
-    image flyer = "images/flyer.png"
+    image flyer = "images/flyer.webp"
 
     show flyer
 
@@ -2591,14 +2591,14 @@ label script06:
 
     label fw_a:
 
-    image emvid1 = Movie (play="images/emvid1.webm", loop = True, image = "images/em1end.jpg", start_image = "images/em1start.jpg")
-    image emvid2 = Movie (play="images/emvid2.webm", loop = True, image = "images/em2end.jpg", start_image = "images/em2start.jpg")
-    image emvid3 = Movie (play="images/emvid3.webm", loop = True, image = "images/em3end.jpg", start_image = "images/em3start.jpg")
-    image emvid4 = Movie (play="images/emvid4.webm", loop = True, image = "images/em4end.jpg", start_image = "images/em4start.jpg")
-    image emvid6 = Movie (play="images/emvid6.webm", loop = True, image = "images/em6end.jpg", start_image = "images/em6start.jpg")
-    image emvid7 = Movie (play="images/emvid7.webm", loop = True, image = "images/em7end.jpg", start_image = "images/em7start.jpg")
-    image emvid8 = Movie (play="images/emvid8.webm", loop = True, image = "images/em8end.jpg", start_image = "images/em8start.jpg")
-    image emvid9 = Movie (play="images/emvid9.webm", loop = False, image = "images/em9end.jpg", start_image = "images/em9start.jpg")
+    image emvid1 = Movie (play="images/emvid1.webm", loop = True, image = "images/em1end.webp", start_image = "images/em1start.webp")
+    image emvid2 = Movie (play="images/emvid2.webm", loop = True, image = "images/em2end.webp", start_image = "images/em2start.webp")
+    image emvid3 = Movie (play="images/emvid3.webm", loop = True, image = "images/em3end.webp", start_image = "images/em3start.webp")
+    image emvid4 = Movie (play="images/emvid4.webm", loop = True, image = "images/em4end.webp", start_image = "images/em4start.webp")
+    image emvid6 = Movie (play="images/emvid6.webm", loop = True, image = "images/em6end.webp", start_image = "images/em6start.webp")
+    image emvid7 = Movie (play="images/emvid7.webm", loop = True, image = "images/em7end.webp", start_image = "images/em7start.webp")
+    image emvid8 = Movie (play="images/emvid8.webm", loop = True, image = "images/em8end.webp", start_image = "images/em8start.webp")
+    image emvid9 = Movie (play="images/emvid9.webm", loop = False, image = "images/em9end.webp", start_image = "images/em9start.webp")
 
     # aceept call sound
 
@@ -3107,7 +3107,7 @@ label script06:
 
     $ reignition = True
     if steam == False:
-        image reignition = "images/reignition.png"
+        image reignition = "images/reignition.webp"
         show reignition:
             xpos 0
             ypos -200
@@ -3150,7 +3150,7 @@ label script06:
         play music "music/msexy.mp3"
         $ reignition = True
         if steam == False:
-            image reignition = "images/reignition.png"
+            image reignition = "images/reignition.webp"
             show reignition:
                 xpos 0
                 ypos -200
@@ -4589,20 +4589,20 @@ label script06:
     label gf:
     $ _game_menu_screen = "ingmenu"
 
-    image naubvid0 = Movie (play="images/naubvid0.webm", loop = False, image = "images/naub0end.jpg", start_image = "images/naub0start.jpg")
-    image naubvid1 = Movie (play="images/naubvid1v.webm", loop = True, image = "images/naub1end.jpg", start_image = "images/naub1start.jpg")
-    image naubvid2 = Movie (play="images/naubvid2.webm", loop = True, image = "images/naub2end.jpg", start_image = "images/naub2start.jpg")
-    image naubvid3 = Movie (play="images/naubvid3.webm", loop = True, image = "images/naub3end.jpg", start_image = "images/naub3start.jpg")
-    image naubvid4 = Movie (play="images/naubvid4.webm", loop = True, image = "images/naub4end.jpg", start_image = "images/naub4start.jpg")
-    image naubvid5 = Movie (play="images/naubvid5v.webm", loop = True, image = "images/naub5end.jpg", start_image = "images/naub5start.jpg")
-    image naubvid6 = Movie (play="images/naubvid6.webm", loop = True, image = "images/naub6end.jpg", start_image = "images/naub6start.jpg")
-    image naubvid7 = Movie (play="images/naubvid7.webm", loop = False, image = "images/naub7end.jpg", start_image = "images/naub7start.jpg")
-    image naubvid8 = Movie (play="images/naubvid8.webm", loop = True, image = "images/naub8end.jpg", start_image = "images/naub8start.jpg")
-    image naubvid9 = Movie (play="images/naubvid9.webm", loop = True, image = "images/naub9end.jpg", start_image = "images/naub9start.jpg")
-    image naubvid10 = Movie (play="images/naubvid10.webm", loop = True, image = "images/naub10end.jpg", start_image = "images/naub10start.jpg")
-    image naubvid11 = Movie (play="images/naubvid11.webm", loop = True, image = "images/naub11end.jpg", start_image = "images/naub11start.jpg")
-    image naubvid12 = Movie (play="images/naubvid12.webm", loop = True, image = "images/naub12end.jpg", start_image = "images/naub12start.jpg")
-    image naubvid13 = Movie (play="images/naubvid13.webm", loop = False, image = "images/naub13end.jpg", start_image = "images/naub13start.jpg")
+    image naubvid0 = Movie (play="images/naubvid0.webm", loop = False, image = "images/naub0end.webp", start_image = "images/naub0start.webp")
+    image naubvid1 = Movie (play="images/naubvid1v.webm", loop = True, image = "images/naub1end.webp", start_image = "images/naub1start.webp")
+    image naubvid2 = Movie (play="images/naubvid2.webm", loop = True, image = "images/naub2end.webp", start_image = "images/naub2start.webp")
+    image naubvid3 = Movie (play="images/naubvid3.webm", loop = True, image = "images/naub3end.webp", start_image = "images/naub3start.webp")
+    image naubvid4 = Movie (play="images/naubvid4.webm", loop = True, image = "images/naub4end.webp", start_image = "images/naub4start.webp")
+    image naubvid5 = Movie (play="images/naubvid5v.webm", loop = True, image = "images/naub5end.webp", start_image = "images/naub5start.webp")
+    image naubvid6 = Movie (play="images/naubvid6.webm", loop = True, image = "images/naub6end.webp", start_image = "images/naub6start.webp")
+    image naubvid7 = Movie (play="images/naubvid7.webm", loop = False, image = "images/naub7end.webp", start_image = "images/naub7start.webp")
+    image naubvid8 = Movie (play="images/naubvid8.webm", loop = True, image = "images/naub8end.webp", start_image = "images/naub8start.webp")
+    image naubvid9 = Movie (play="images/naubvid9.webm", loop = True, image = "images/naub9end.webp", start_image = "images/naub9start.webp")
+    image naubvid10 = Movie (play="images/naubvid10.webm", loop = True, image = "images/naub10end.webp", start_image = "images/naub10start.webp")
+    image naubvid11 = Movie (play="images/naubvid11.webm", loop = True, image = "images/naub11end.webp", start_image = "images/naub11start.webp")
+    image naubvid12 = Movie (play="images/naubvid12.webm", loop = True, image = "images/naub12end.webp", start_image = "images/naub12start.webp")
+    image naubvid13 = Movie (play="images/naubvid13.webm", loop = False, image = "images/naub13end.webp", start_image = "images/naub13start.webp")
 
     stop music fadeout 2.0
     play music "music/msexy.mp3"
@@ -5061,7 +5061,7 @@ label script06:
         $ phoneexit = "phoneaj"
 
         if meetaubrey == True:
-            $ contact_Aubrey.newImgMessage("images/text3.jpg")
+            $ contact_Aubrey.newImgMessage("images/text3.webp")
             $ contact_Aubrey.newMessage("Still shaking from earlier")
             $ contact_Aubrey.addReply("Hahaha, we should definitely do this more ;)", "aubrep19a")
             $ aubmsg19 = "Still shaking from earlier"
@@ -5069,7 +5069,7 @@ label script06:
 
 
         else:
-            $ contact_Aubrey.newImgMessage("images/text3.jpg")
+            $ contact_Aubrey.newImgMessage("images/text3.webp")
             $ contact_Aubrey.newMessage("You missed out today")
             $ contact_Aubrey.addReply("Daaaamn, I'll be there next time", "aubrep19aa")
             $ aubmsg19a = "You missed out today"
@@ -5109,7 +5109,7 @@ label script06:
 
     $ seemsfishy = True
     if steam == False:
-        image seemsfishy = "images/seemsfishy.png"
+        image seemsfishy = "images/seemsfishy.webp"
         show seemsfishy:
             xpos 0
             ypos -200
@@ -5553,7 +5553,7 @@ label script06:
     # handshake clap sound
     $ monkeybusiness = True
     if steam == False:
-        image monkeybusiness = "images/monkeybusiness.png"
+        image monkeybusiness = "images/monkeybusiness.webp"
         show monkeybusiness:
             xpos 0
             ypos -200
@@ -7467,7 +7467,7 @@ label script06:
 
         $ strike = True
         if steam == False:
-            image strike = "images/strike.png"
+            image strike = "images/strike.webp"
             show strike:
                 xpos 0
                 ypos -200

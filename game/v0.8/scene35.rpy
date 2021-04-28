@@ -131,7 +131,7 @@ label steak_flirt_w_chloe:
 
     $ up_for_more = True
     if steam == False:
-        image up_for_more = "images/v08/achievements/upformore.png"
+        image up_for_more = "images/v08/achievements/upformore.webp"
         show up_for_more:
             xpos 0
             ypos -200

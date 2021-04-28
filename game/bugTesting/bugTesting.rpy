@@ -18,8 +18,8 @@ screen bugTesting_SceneSelect():
 
     imagebutton:
         action Hide("bugTesting_SceneSelect"), SetVariable("quick_menu", True)
-        idle "/bugTesting/images/cheatMenuBackButton.png"
-        hover im.MatrixColor("/bugTesting/images/cheatMenuBackButton.png", im.matrix.brightness(0.2))
+        idle "/bugTesting/images/cheatMenuBackButton.webp"
+        hover im.MatrixColor("/bugTesting/images/cheatMenuBackButton.webp", im.matrix.brightness(0.2))
         pos (1666, 50)
 
     text "Bug Testing Scene Select" style "modTextHeader" align (0.5, 0.1)

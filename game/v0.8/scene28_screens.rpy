@@ -1,6 +1,6 @@
 screen skipTutS28():
     tag fightScreen
-    add "images/endfr.png"
+    add "images/endfr.webp"
     text "Would you like to play the fighting tutorial?" style "endfree"
     textbutton "Yes" style "endfr":
         action Jump("sta")
@@ -16,7 +16,7 @@ screen skipTutS28():
 
 screen s28_LarsFightChoice():
     tag fightScreen
-    image "images/fightchoice.png"
+    image "images/fightchoice.webp"
 
     text "Fighting":
         xalign 0.5
@@ -56,7 +56,7 @@ screen s28_LarsFightChoice():
 
 screen s28_LarsSelectDifficulty():
     tag fightScreen
-    image "images/fightchoice.png"
+    image "images/fightchoice.webp"
 
     text "Difficulty":
         xalign 0.5
@@ -89,7 +89,7 @@ screen s28_LarsSelectDifficulty():
 
 screen s28_LarsKeybindOptions():
     tag fightScreen
-    image "images/fightchoice.png"
+    image "images/fightchoice.webp"
 
     text "Keybinding":
         xalign 0.5
@@ -120,7 +120,7 @@ screen s28_mcLarsAttack():
     tag fightScreen
 
     if larsStance == 1:
-        add "images/v08/Scene 28/LarsStance - Jab.jpg"
+        add "images/v08/Scene 28/LarsStance - Jab.webp"
 
         key q:
             action Jump ("mc_LarsJabsHit")
@@ -132,29 +132,29 @@ screen s28_mcLarsAttack():
             action Jump ("mc_LarsKickBlock")
 
         imagebutton:
-            idle "images/jab.png"
-            hover "images/jab.png"
+            idle "images/jab.webp"
+            hover "images/jab.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("mc_LarsJabsHit")
 
         imagebutton:
-            idle "images/hook.png"
-            hover "images/hook.png"
+            idle "images/hook.webp"
+            hover "images/hook.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("mc_LarsHooksBlock")
 
         imagebutton:
-            idle "images/body.png"
-            hover "images/body.png"
+            idle "images/body.webp"
+            hover "images/body.webp"
             xalign 0.172
             yalign 0.5
             action Jump ("mc_LarsBodyhookBlock")
 
         imagebutton:
-            idle "images/kick.png"
-            hover "images/kick.png"
+            idle "images/kick.webp"
+            hover "images/kick.webp"
             xalign 0.115
             yalign 0.61
             action Jump ("mc_LarsKickBlock")
@@ -164,7 +164,7 @@ screen s28_mcLarsAttack():
 
 
     if larsStance == 2:
-        add "images/v08/Scene 28/LarsStance - Bodyhook.jpg"
+        add "images/v08/Scene 28/LarsStance - Bodyhook.webp"
 
         key q:
             action Jump ("mc_LarsJabsBlock")
@@ -176,29 +176,29 @@ screen s28_mcLarsAttack():
             action Jump ("mc_LarsKickBlock")
 
         imagebutton:
-            idle "images/jab.png"
-            hover "images/jab.png"
+            idle "images/jab.webp"
+            hover "images/jab.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("mc_LarsJabsBlock")
 
         imagebutton:
-            idle "images/hook.png"
-            hover "images/hook.png"
+            idle "images/hook.webp"
+            hover "images/hook.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("mc_LarsHooksBlock")
 
         imagebutton:
-            idle "images/body.png"
-            hover "images/body.png"
+            idle "images/body.webp"
+            hover "images/body.webp"
             xalign 0.172
             yalign 0.5
             action Jump ("mc_LarsBodyhookHit")
 
         imagebutton:
-            idle "images/kick.png"
-            hover "images/kick.png"
+            idle "images/kick.webp"
+            hover "images/kick.webp"
             xalign 0.115
             yalign 0.61
             action Jump ("mc_LarsKickBlock")
@@ -209,7 +209,7 @@ screen s28_mcLarsAttack():
 
 
     if larsStance == 3:
-        add "images/v08/Scene 28/LarsStance - Hook.jpg"
+        add "images/v08/Scene 28/LarsStance - Hook.webp"
 
         key q:
             action Jump ("mc_LarsJabsBlock")
@@ -221,29 +221,29 @@ screen s28_mcLarsAttack():
             action Jump ("mc_LarsKickBlock")
 
         imagebutton:
-            idle "images/jab.png"
-            hover "images/jab.png"
+            idle "images/jab.webp"
+            hover "images/jab.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("mc_LarsJabsBlock")
 
         imagebutton:
-            idle "images/hook.png"
-            hover "images/hook.png"
+            idle "images/hook.webp"
+            hover "images/hook.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("mc_LarsHooksHit")
 
         imagebutton:
-            idle "images/body.png"
-            hover "images/body.png"
+            idle "images/body.webp"
+            hover "images/body.webp"
             xalign 0.172
             yalign 0.5
             action Jump ("mc_LarsBodyhookBlock")
 
         imagebutton:
-            idle "images/kick.png"
-            hover "images/kick.png"
+            idle "images/kick.webp"
+            hover "images/kick.webp"
             xalign 0.115
             yalign 0.61
             action Jump ("mc_LarsKickBlock")
@@ -251,7 +251,7 @@ screen s28_mcLarsAttack():
         timer reactiona action Jump("lars_McAttack")
 
     if larsStance == 4:
-        add "images/v08/Scene 28/LarsStance - Kick.jpg"
+        add "images/v08/Scene 28/LarsStance - Kick.webp"
 
         key q:
             action Jump ("mc_LarsJabsBlock")
@@ -263,29 +263,29 @@ screen s28_mcLarsAttack():
             action Jump ("mc_LarsKickHit")
 
         imagebutton:
-            idle "images/jab.png"
-            hover "images/jab.png"
+            idle "images/jab.webp"
+            hover "images/jab.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("mc_LarsJabsBlock")
 
         imagebutton:
-            idle "images/hook.png"
-            hover "images/hook.png"
+            idle "images/hook.webp"
+            hover "images/hook.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("mc_LarsHooksBlock")
 
         imagebutton:
-            idle "images/body.png"
-            hover "images/body.png"
+            idle "images/body.webp"
+            hover "images/body.webp"
             xalign 0.172
             yalign 0.5
             action Jump ("mc_LarsBodyhookBlock")
 
         imagebutton:
-            idle "images/kick.png"
-            hover "images/kick.png"
+            idle "images/kick.webp"
+            hover "images/kick.webp"
             xalign 0.115
             yalign 0.61
             action Jump ("mc_LarsKickHit")
@@ -297,7 +297,7 @@ screen s28_larsMcAttack():
     tag fightScreen
 
     if larsAttack == 1: # A
-        add "images/v08/Scene 28/larshookend.jpg"
+        add "images/v08/Scene 28/larshookend.webp"
 
         key q:
             action Jump ("lars_McHookBlock")
@@ -309,29 +309,29 @@ screen s28_larsMcAttack():
             action Jump ("lars_McHookHit")
 
         imagebutton:
-            idle "images/hookblock.png"
-            hover "images/hookblock.png"
+            idle "images/hookblock.webp"
+            hover "images/hookblock.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("lars_McHookBlock")
 
         imagebutton:
-            idle "images/jabblock.png"
-            hover "images/jabblock.png"
+            idle "images/jabblock.webp"
+            hover "images/jabblock.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("lars_McHookHit")
 
         imagebutton:
-            idle "images/bodyblock.png"
-            hover "images/bodyblock.png"
+            idle "images/bodyblock.webp"
+            hover "images/bodyblock.webp"
             xalign 0.172
             yalign 0.5
             action Jump ("lars_McHookHit")
 
         imagebutton:
-            idle "images/kickblock.png"
-            hover "images/kickblock.png"
+            idle "images/kickblock.webp"
+            hover "images/kickblock.webp"
             xalign 0.115
             yalign 0.6
             action Jump ("lars_McHookHit")
@@ -341,7 +341,7 @@ screen s28_larsMcAttack():
 
 
     if larsAttack == 2:
-        add "images/v08/Scene 28/larsjabend.jpg"
+        add "images/v08/Scene 28/larsjabend.webp"
 
         key q:
             action Jump ("lars_McJabHit")
@@ -353,29 +353,29 @@ screen s28_larsMcAttack():
             action Jump ("lars_McJabHit")
 
         imagebutton:
-            idle "images/hookblock.png"
-            hover "images/hookblock.png"
+            idle "images/hookblock.webp"
+            hover "images/hookblock.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("lars_McJabHit")
 
         imagebutton:
-            idle "images/jabblock.png"
-            hover "images/jabblock.png"
+            idle "images/jabblock.webp"
+            hover "images/jabblock.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("lars_McJabBlock")
 
         imagebutton:
-            idle "images/bodyblock.png"
-            hover "images/bodyblock.png"
+            idle "images/bodyblock.webp"
+            hover "images/bodyblock.webp"
             xalign 0.172
             yalign 0.5
             action Jump ("lars_McJabHit")
 
         imagebutton:
-            idle "images/kickblock.png"
-            hover "images/kickblock.png"
+            idle "images/kickblock.webp"
+            hover "images/kickblock.webp"
             xalign 0.115
             yalign 0.6
             action Jump ("lars_McJabHit")
@@ -383,7 +383,7 @@ screen s28_larsMcAttack():
         timer reaction action Jump("lars_McJabHit")
 
     if larsAttack == 3:
-        add "images/v08/Scene 28/larsbodyend.jpg"
+        add "images/v08/Scene 28/larsbodyend.webp"
 
         key q:
             action Jump ("lars_McBodyhookHit")
@@ -395,29 +395,29 @@ screen s28_larsMcAttack():
             action Jump ("lars_McBodyhookHit")
 
         imagebutton:
-            idle "images/hookblock.png"
-            hover "images/hookblock.png"
+            idle "images/hookblock.webp"
+            hover "images/hookblock.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("lars_McBodyhookHit")
 
         imagebutton:
-            idle "images/jabblock.png"
-            hover "images/jabblock.png"
+            idle "images/jabblock.webp"
+            hover "images/jabblock.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("lars_McBodyhookHit")
 
         imagebutton:
-            idle "images/bodyblock.png"
-            hover "images/bodyblock.png"
+            idle "images/bodyblock.webp"
+            hover "images/bodyblock.webp"
             xalign 0.172
             yalign 0.5
             action Jump ("lars_McBodyhookBlock")
 
         imagebutton:
-            idle "images/kickblock.png"
-            hover "images/kickblock.png"
+            idle "images/kickblock.webp"
+            hover "images/kickblock.webp"
             xalign 0.115
             yalign 0.6
             action Jump ("lars_McBodyhookHit")
@@ -425,7 +425,7 @@ screen s28_larsMcAttack():
         timer reaction action Jump("lars_McBodyhookHit")
 
     if larsAttack == 4:
-        image "images/v08/Scene 28/larskickend.jpg"
+        image "images/v08/Scene 28/larskickend.webp"
 
         key q:
             action Jump ("lars_McKickHit")
@@ -437,29 +437,29 @@ screen s28_larsMcAttack():
             action Jump ("lars_McKickBlock")
 
         imagebutton:
-            idle "images/hookblock.png"
-            hover "images/hookblock.png"
+            idle "images/hookblock.webp"
+            hover "images/hookblock.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("lars_McKickHit")
 
         imagebutton:
-            idle "images/jabblock.png"
-            hover "images/jabblock.png"
+            idle "images/jabblock.webp"
+            hover "images/jabblock.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("lars_McKickHit")
 
         imagebutton:
-            idle "images/bodyblock.png"
-            hover "images/bodyblock.png"
+            idle "images/bodyblock.webp"
+            hover "images/bodyblock.webp"
             xalign 0.172
             yalign 0.5
             action Jump ("lars_McKickHit")
 
         imagebutton:
-            idle "images/kickblock.png"
-            hover "images/kickblock.png"
+            idle "images/kickblock.webp"
+            hover "images/kickblock.webp"
             xalign 0.115
             yalign 0.6
             action Jump ("lars_McKickBlock")
