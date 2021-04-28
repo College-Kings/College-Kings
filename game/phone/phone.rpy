@@ -17,9 +17,6 @@ init python:
             if not os.path.splitext(self.image)[0][-3:] == "not":
                 self.image = os.path.splitext(self.image)[0] + "not" + os.path.splitext(self.image)[1]
 
-            # if achievementsnot == 1: - Achievements Screen Notification Var
-            # if statsnot == 1: - Stats Screen Notification Var
-
         def seenNotification(self):
             self.notification = False
             if os.path.splitext(self.image)[0][-3:] == "not":

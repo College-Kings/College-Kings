@@ -60,7 +60,6 @@ label v9_thur_room_w_cam_punch:
 
     $ s15KiwiiPost = KiwiiPost("Grayson", "images/v09/scene 12/v9hlw8b.webp", "That's my boy! Go [name]! Fuck yeah!", numberLikes=renpy.random.randint(100, 200))
     $ s15KiwiiPost.addComment("Cameron", "Fuckin' A!", numberLikes=renpy.random.randint(100, 200))
-    $ s15KiwiiPost.addComment("Kai", "Knocked the fuck out!", numberLikes=renpy.random.randint(150, 170))
     $ s15KiwiiPost.addComment("Riley", "Knew he had it in him!", numberLikes=renpy.random.randint(200, 250))
     
     call screen phone

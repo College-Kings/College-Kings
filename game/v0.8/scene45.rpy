@@ -30,28 +30,62 @@ label tue_night_in_room:
         scene v8star6 # TPP. Show MC sat on the edge of his bed checking his phone.
         with dissolve
 
+        $ showphone = True
+        $ phoneexit = "v8s45_phoneContinue1"
+
         $ contact_Sebastian.newMessage("Yo dude, just wanted to let you know... tonight was fun.")
-        $ contact_Sebastian.addReply("Sure was... but it can be even better, right?")
-        $ contact_Sebastian.addReply("Sure can! You'll see what being a Wolf is all about.")
-        $ contact_Sebastian.addReply("Looking forward to it. :)")
+        $ contact_Sebastian.addReply("Sure was... but it can be even better, right?", "v8s45_phoneReply1")
+        call screen phone
+
+        label v8s45_phoneReply1:
+            $ contact_Sebastian.newMessage("Sure can! You'll see what being a Wolf is all about.")
+            $ contact_Sebastian.addReply("Looking forward to it. :)", "v8s45_phoneContinue1")
+            call screen messager(contact_Sebastian)
+
+        label v8s45_phoneContinue1:
+            if contact_Sebastian.messages[-1].replies:
+                u "I should really check my phone."
+                jump v8s45_phoneContinue1
+            $ phoneexit = "v8s45_phoneContinue2"
 
         u "(Let's just see what Chloe's up to.)"
 
         if chloers:
-            $ contact_Chloe.addReply("I'm thinking about you...")
-            $ contact_Chloe.newMessage("Really?")
-            $ contact_Chloe.addReply("Well, about the thing you do best, really.")
-            $ contact_Chloe.newMessage("Mmmh, I can almost feel it in my mouth. :)")
-            $ contact_Chloe.addReply("I think I'm gonna keep it all in for our next meeting. :)")
-            $ contact_Chloe.newMessage("And now I'm hungry.")
-            $ contact_Chloe.addReply(";D")
+            $ contact_Chloe.addReply("I'm thinking about you...", "v8s45_phoneReply2")
+            call screen phone
 
-        if not chloers:
-            $ contact_Chloe.addReply("I've had a really crazy night...")
-            $ contact_Chloe.newMessage("And you chose me to tell about it? :)")
-            $ contact_Chloe.addReply("Oh c'mon, you've got a great pair of eyes. :)")
-            $ contact_Chloe.newMessage("Maybe some other time. These eyes need some rest atm.")
-            $ contact_Chloe.addReply("Sure, later.")
+            label v8s45_phoneReply2:
+                $ contact_Chloe.newMessage("Really?")
+                $ contact_Chloe.addReply("Well, about the thing you do best, really.", "v8s45_phoneReply3")
+                call screen messager(contact_Chloe)
+
+            label v8s45_phoneReply3:
+                $ contact_Chloe.newMessage("Mmmh, I can almost feel it in my mouth. :)")
+                $ contact_Chloe.addReply("I think I'm gonna keep it all in for our next meeting. :)", "v8s45_phoneReply4")
+                call screen messager(contact_Chloe)
+
+            label v8s45_phoneReply4:
+                $ contact_Chloe.newMessage("And now I'm hungry.")
+                $ contact_Chloe.addReply(";D", "v8s45_phoneContinue2")
+                call screen messager(contact_Chloe)
+
+        else:
+            $ contact_Chloe.addReply("I've had a really crazy night...", "v8s45_phoneReply5")
+            call screen phone
+
+            label v8s45_phoneReply5:
+                $ contact_Chloe.newMessage("And you chose me to tell about it? :)")
+                $ contact_Chloe.addReply("Oh c'mon, you've got a great pair of eyes. :)", "v8s45_phoneReply6")
+            
+            label v8s45_phoneReply6:
+                $ contact_Chloe.newMessage("Maybe some other time. These eyes need some rest atm.")
+                $ contact_Chloe.addReply("Sure, later.", "v8s45_phoneContinue2")
+
+        label v8s45_phoneContinue2:
+            if contact_Chloe.messages[-1].replies:
+                u "I should really check my phone."
+                jump v8s45_phoneContinue2
+            $ showphone = False
 
         u "(Well I'll be damned... This could actually be more fun than I ever thought it could be.)"
 
@@ -86,30 +120,70 @@ label tue_night_in_room:
         scene v8star15 # TPP. Show MC sat on the edge of his bed checking his phone.
         with dissolve
 
+        $ showphone = True
+        $ phoneexit = "v8s45_phoneContinue3"
+
         $ contact_Grayson.newMessage("Yo Ape, still ready for the surprise?")
-        $ contact_Grayson.addReply("Are we still doing this?")
-        $ contact_Grayson.newMessage("It's just so damn tempting. But you won't regret it.")
-        $ contact_Grayson.addReply("Now I'm fucking couting on it!")
-        $ contact_Grayson.newMessage("Couting on it or not, [name], it's happening!")
-        $ contact_Grayson.addReply(":P")
+        $ contact_Grayson.addReply("Are we still doing this?", "v8s45_phoneReply7")
+        call screen phone
+
+        label v8s45_phoneReply7:
+            $ contact_Grayson.newMessage("It's just so damn tempting. But you won't regret it.")
+            $ contact_Grayson.addReply("Now I'm fucking couting on it!", "v8s45_phoneReply8")
+            call screen messager(contact_Grayson)
+
+        label v8s45_phoneReply8:
+            $ contact_Grayson.newMessage("Couting on it or not, [name], it's happening!")
+            $ contact_Grayson.addReply(":P", "v8s45_phoneContinue4")
+            call screen messager(contact_Grayson)
+
+        label v8s45_phoneContinue4:
+            if contact_Grayson.messages[-1].replies:
+                u "I need to check my phone"
+                jump v8s45_phoneContinue4
+            $ phoneexit = "v8s45_phoneContinue5"
 
         u "(Let's just see what Chloe's up to.)"
 
         if chloers:
-            $ contact_Chloe.addReply("I'm thinking about you...")
-            $ contact_Chloe.newMessage("Really?")
-            $ contact_Chloe.addReply("Well, about the thing you do best, really.")
-            $ contact_Chloe.newMessage("Mmmh, I can almost feel it in my mouth. :)")
-            $ contact_Chloe.addReply("I think I'm gonna keep it all in for our next meeting. :)")
-            $ contact_Chloe.newMessage("And now I'm hungry.")
-            $ contact_Chloe.addReply(";D")
+            $ contact_Chloe.addReply("I'm thinking about you...", "v8s45_phoneReply9")
+            call screen phone
+
+            label v8s45_phoneReply9:
+                $ contact_Chloe.newMessage("Really?")
+                $ contact_Chloe.addReply("Well, about the thing you do best, really.", "v8s45_phoneReply10")
+                call screen messager(contact_Chloe)
+
+            label v8s45_phoneReply10:
+                $ contact_Chloe.newMessage("Mmmh, I can almost feel it in my mouth. :)")
+                $ contact_Chloe.addReply("I think I'm gonna keep it all in for our next meeting. :)", "v8s45_phoneReply11")
+                call screen messager(contact_Chloe)
+
+            label v8s45_phoneReply11:
+                $ contact_Chloe.newMessage("And now I'm hungry.")
+                $ contact_Chloe.addReply(";D", "v8s45_phoneContinue6")
+                call screen messager(contact_Chloe)
 
         if not chloers:
-            $ contact_Chloe.addReply("I've had a really crazy night...")
-            $ contact_Chloe.newMessage("And you chose me to tell about it? :)")
-            $ contact_Chloe.addReply("Oh c'mon, you've got a great pair of eyes. :)")
-            $ contact_Chloe.newMessage("Maybe some other time. These eyes need some rest atm.")
-            $ contact_Chloe.addReply("Sure, later.")
+            $ contact_Chloe.addReply("I've had a really crazy night...", "v8s45_phoneReply12")
+            call screen phone
+
+            label v8s45_phoneReply12:
+                $ contact_Chloe.newMessage("And you chose me to tell about it? :)")
+                $ contact_Chloe.addReply("Oh c'mon, you've got a great pair of eyes. :)", "v8s45_phoneReply13")
+                call screen messager(contact_Chloe)
+
+            label v8s45_phoneReply13:
+                $ contact_Chloe.newMessage("Maybe some other time. These eyes need some rest atm.")
+                $ contact_Chloe.addReply("Sure, later.", "v8s45_phoneContinue6")
+                call screen messager(contact_Chloe)
+
+
+        label v8s45_phoneContinue6:
+            if contact_Chloe.messages[-1].replies:
+                u "I should check my phone"
+                jump v8s45_phoneContinue6
+            $ showphone = False
 
         u "(Well I'll be damned... This could actually be more fun than I ever thought it could be.)"
 

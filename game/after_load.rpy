@@ -115,12 +115,10 @@ label after_load:
             for message in contact.messages:
                 try:
                     message.image = os.path.splitext(message.image)[0] + ".webp"
-                    print(message.image)
                 except AttributeError: continue
                 
         try:
-            if chlorers:
-                chloers = True
+            if chlorers: chloers = True
         except NameError: pass
 
         contact_Lindsey.unlock()
