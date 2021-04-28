@@ -8,9 +8,6 @@
 
 init python:
     renpy.music.register_channel("ambience", mixer="sfx", loop=True)
-    
-define ann = Character("Speaker Announcement", who_color="#fd9426", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
-define empl = Character("Employee", who_color="#5fc9f8", who_outlines=[ (2, "#000000") ], what_outlines=[ (2, "#000000") ])
 
 label emily_arcade:
     $ showphone = False

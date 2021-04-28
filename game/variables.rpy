@@ -320,6 +320,7 @@ default emilyArcade = 0
 default kissedEmilyArcade = False
 default helpJosh = False
 
+    ## Fight Vars
 default larsdmg = 0
 default larshealth = 0
 default simLarsFight = False
