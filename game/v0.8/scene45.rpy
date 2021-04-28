@@ -123,6 +123,8 @@ label tue_night_in_room:
         $ showphone = True
         $ phoneexit = "v8s45_phoneContinue3"
 
+        $ contact_Grayson.unlock()
+
         $ contact_Grayson.newMessage("Yo Ape, still ready for the surprise?")
         $ contact_Grayson.addReply("Are we still doing this?", "v8s45_phoneReply7")
         call screen phone
@@ -137,10 +139,10 @@ label tue_night_in_room:
             $ contact_Grayson.addReply(":P", "v8s45_phoneContinue4")
             call screen messager(contact_Grayson)
 
-        label v8s45_phoneContinue4:
+        label v8s45_phoneContinue3:
             if contact_Grayson.messages[-1].replies:
                 u "I need to check my phone"
-                jump v8s45_phoneContinue4
+                jump v8s45_phoneContinue3
             $ phoneexit = "v8s45_phoneContinue5"
 
         u "(Let's just see what Chloe's up to.)"
@@ -161,7 +163,7 @@ label tue_night_in_room:
 
             label v8s45_phoneReply11:
                 $ contact_Chloe.newMessage("And now I'm hungry.")
-                $ contact_Chloe.addReply(";D", "v8s45_phoneContinue6")
+                $ contact_Chloe.addReply(";D", "v8s45_phoneContinue4")
                 call screen messager(contact_Chloe)
 
         if not chloers:
@@ -175,14 +177,14 @@ label tue_night_in_room:
 
             label v8s45_phoneReply13:
                 $ contact_Chloe.newMessage("Maybe some other time. These eyes need some rest atm.")
-                $ contact_Chloe.addReply("Sure, later.", "v8s45_phoneContinue6")
+                $ contact_Chloe.addReply("Sure, later.", "v8s45_phoneContinue4")
                 call screen messager(contact_Chloe)
 
 
-        label v8s45_phoneContinue6:
+        label v8s45_phoneContinue4:
             if contact_Chloe.messages[-1].replies:
                 u "I should check my phone"
-                jump v8s45_phoneContinue6
+                jump v8s45_phoneContinue4
             $ showphone = False
 
         u "(Well I'll be damned... This could actually be more fun than I ever thought it could be.)"

@@ -112,6 +112,7 @@ label after_load:
 
 
         for contact in contacts:
+            if contact.messages: contact.unlock()
             for message in contact.messages:
                 try:
                     message.image = os.path.splitext(message.image)[0] + ".webp"
@@ -120,9 +121,6 @@ label after_load:
         try:
             if chlorers: chloers = True
         except NameError: pass
-
-        contact_Lindsey.unlock()
-        contact_Penelope.unlock()
 
         if contact_Lindsey not in contacts:
             contacts.append(contact_Lindsey)
