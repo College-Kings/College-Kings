@@ -7,7 +7,6 @@
 
 
 label v9_room_thur_night:
-    default v9_sex_w_em = False
 
     if joinwolves:
         scene v9emi1 # TPP. Show MC sat on his bed in his Wolves room, looking tired.

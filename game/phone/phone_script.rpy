@@ -1,7 +1,7 @@
-default msgApp = Application("Messages", "images/messagesicon.png", "contactsscreen")
-default statsApp = Application("Stats", "images/statsicon.png", "stats", locked=True)
-default achApp = Application("Achievements", "images/achicon.png", "achievements")
-default kiwiiApp = Application("Kiwii", "images/Phone/Kiwii/AppAssets/kiwii.png", "kiwiiApp", locked=True)
+default msgApp = Application("Messages", "images/messagesicon.webp", "contactsscreen")
+default statsApp = Application("Stats", "images/statsicon.webp", "stats", locked=True)
+default achApp = Application("Achievements", "images/achicon.webp", "achievements")
+default kiwiiApp = Application("Kiwii", "images/Phone/Kiwii/AppAssets/kiwii.webp", "kiwiiApp", locked=True)
 
 default contact_Emily = Contact("Emily", "emilyprofilepic", locked=False)
 default contact_Lauren = Contact("Lauren", "laurenprofilepic")

@@ -3,8 +3,6 @@
 # Outfits: MC Outfit 2, Ryan Outfit 1, Grayson Outfit 2, Cameron Outfit 3, Samantha Outfit 1
 # Time: Sunday Afternoon
 
-default sideWithCameron = False
-
 label sun_aft_apes_house:
     ###CHECK - removed because of missing render
     # scene v8sahs1 # TPP. Show Ryan and MC sat on the sofa in the apes living room, chatting and chilling.

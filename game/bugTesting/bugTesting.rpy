@@ -7,19 +7,18 @@ define bugTesting_Scenes = [
     ["after_cam_history", "Asking girls to hoco"],
     ["fr4", "Homecoming Free Roam"],
     ["drug_deal_w_josh", "Scene 28 (Fight)"]
-
 ]
 
 screen bugTesting_SceneSelect():
     modal True
     zorder 200
-
+    
     add "#23272a"
 
     imagebutton:
         action Hide("bugTesting_SceneSelect"), SetVariable("quick_menu", True)
-        idle "/bugTesting/images/cheatMenuBackButton.png"
-        hover im.MatrixColor("/bugTesting/images/cheatMenuBackButton.png", im.matrix.brightness(0.2))
+        idle "/bugTesting/images/cheatMenuBackButton.webp"
+        hover im.MatrixColor("/bugTesting/images/cheatMenuBackButton.webp", im.matrix.brightness(0.2))
         pos (1666, 50)
 
     text "Bug Testing Scene Select" style "modTextHeader" align (0.5, 0.1)

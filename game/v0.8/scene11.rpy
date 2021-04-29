@@ -3,8 +3,6 @@
 # Outfits: MC Outfit 3, Sebastian Outfit 1
 # Time: Saturday Night
 
-default openedUpToSeb = False
-
 label work_with_seb:
     scene v8sgym4 # TPP. Show MC and Sebastian walking over to a punching bag in the gym.
     with dissolve

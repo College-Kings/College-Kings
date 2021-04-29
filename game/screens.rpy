@@ -53,38 +53,38 @@ style prompt_text is gui_text:
 
 style bar:
     ysize gui.bar_size
-    left_bar Frame("gui/bar/left.png", gui.bar_borders, tile=gui.bar_tile)
-    right_bar Frame("gui/bar/right.png", gui.bar_borders, tile=gui.bar_tile)
+    left_bar Frame("gui/bar/left.webp", gui.bar_borders, tile=gui.bar_tile)
+    right_bar Frame("gui/bar/right.webp", gui.bar_borders, tile=gui.bar_tile)
 
 style vbar:
     xsize gui.bar_size
-    top_bar Frame("gui/bar/top.png", gui.vbar_borders, tile=gui.bar_tile)
-    bottom_bar Frame("gui/bar/bottom.png", gui.vbar_borders, tile=gui.bar_tile)
+    top_bar Frame("gui/bar/top.webp", gui.vbar_borders, tile=gui.bar_tile)
+    bottom_bar Frame("gui/bar/bottom.webp", gui.vbar_borders, tile=gui.bar_tile)
 
 style scrollbar:
     ysize gui.scrollbar_size
-    base_bar Frame("gui/scrollbar/horizontal_[prefix_]bar.png", gui.scrollbar_borders, tile=gui.scrollbar_tile)
-    thumb Frame("gui/scrollbar/horizontal_[prefix_]thumb.png", gui.scrollbar_borders, tile=gui.scrollbar_tile)
+    base_bar Frame("gui/scrollbar/horizontal_[prefix_]bar.webp", gui.scrollbar_borders, tile=gui.scrollbar_tile)
+    thumb Frame("gui/scrollbar/horizontal_[prefix_]thumb.webp", gui.scrollbar_borders, tile=gui.scrollbar_tile)
 
 style vscrollbar:
     xsize gui.scrollbar_size
-    base_bar Frame("gui/scrollbar/vertical_[prefix_]bar.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
-    thumb Frame("gui/scrollbar/vertical_[prefix_]thumb.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
+    base_bar Frame("gui/scrollbar/vertical_[prefix_]bar.webp", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
+    thumb Frame("gui/scrollbar/vertical_[prefix_]thumb.webp", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
 
 style slider:
     ysize gui.slider_size
-    base_bar Frame("gui/slider/horizontal_[prefix_]bar.png", gui.slider_borders, tile=gui.slider_tile)
-    thumb "gui/slider/horizontal_[prefix_]thumb.png"
+    base_bar Frame("gui/slider/horizontal_[prefix_]bar.webp", gui.slider_borders, tile=gui.slider_tile)
+    thumb "gui/slider/horizontal_[prefix_]thumb.webp"
 
 style vslider:
     xsize gui.slider_size
-    base_bar Frame("gui/slider/vertical_[prefix_]bar.png", gui.vslider_borders, tile=gui.slider_tile)
-    thumb "gui/slider/vertical_[prefix_]thumb.png"
+    base_bar Frame("gui/slider/vertical_[prefix_]bar.webp", gui.vslider_borders, tile=gui.slider_tile)
+    thumb "gui/slider/vertical_[prefix_]thumb.webp"
 
 
 style frame:
     padding gui.frame_borders.padding
-    background Frame("gui/frame.png", gui.frame_borders, tile=gui.frame_tile)
+    background Frame("gui/frame.webp", gui.frame_borders, tile=gui.frame_tile)
 
 
 
@@ -147,7 +147,7 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Image("gui/textbox.webp", xalign=0.5, yalign=1.0)
 
 style namebox:
     xpos gui.name_xpos
@@ -156,7 +156,7 @@ style namebox:
     ypos gui.name_ypos
     ysize gui.namebox_height
 
-    background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    background Frame("gui/namebox.webp", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
 
 style say_label:
@@ -220,7 +220,7 @@ style input:
 
 
 screen choice(items, time=3):
-    image "gui/curves.png"
+    image "gui/curves.webp"
     style_prefix "choice"
 
     timer 0.001 action SetVariable("ischoice", True)
@@ -257,11 +257,11 @@ screen choice(items, time=3):
 
                 imagebutton:
                     if disabled:
-                        idle "gui/{}white.png".format(menuButtonsConfig[count]["background"])
+                        idle "gui/{}white.webp".format(menuButtonsConfig[count]["background"])
                     else:
-                        idle "gui/{}blue.png".format(menuButtonsConfig[count]["background"])
+                        idle "gui/{}blue.webp".format(menuButtonsConfig[count]["background"])
                         action [item.action, SetVariable("ischoice", False)]
-                    hover "gui/{}white.png".format(menuButtonsConfig[count]["background"])
+                    hover "gui/{}white.webp".format(menuButtonsConfig[count]["background"])
 
                 text item.caption.replace(" (disabled)", ""):
                     align(0.5, 0.5)
@@ -274,13 +274,13 @@ screen choice(items, time=3):
 
     if realkcttut == 1:
 
-        image "images/tutback.png":
+        image "images/tutback.webp":
             ypos 100 #+300
             xpos 1240 #+260
 
         imagebutton:
-            idle "images/whitearrowleft.png"
-            hover "images/whitearrowleft.png"
+            idle "images/whitearrowleft.webp"
+            hover "images/whitearrowleft.webp"
             ypos 720
             xpos 1260
             if kctpage > 1:
@@ -289,8 +289,8 @@ screen choice(items, time=3):
                 action SetVariable("kctpage", 5)
 
         imagebutton:
-            idle "images/whitearrowright.png"
-            hover "images/whitearrowright.png"
+            idle "images/whitearrowright.webp"
+            hover "images/whitearrowright.webp"
             ypos 720
             xpos 1740
             if kctpage < 5:
@@ -319,13 +319,13 @@ screen choice(items, time=3):
 
     if influencetut == True:
 
-        image "images/tutback.png":
+        image "images/tutback.webp":
             ypos 100 #+300
             xpos 1240 #+260
 
         imagebutton:
-            idle "images/whitearrowleft.png"
-            hover "images/whitearrowleft.png"
+            idle "images/whitearrowleft.webp"
+            hover "images/whitearrowleft.webp"
             ypos 720
             xpos 1260
             if itpage > 1:
@@ -334,8 +334,8 @@ screen choice(items, time=3):
                 action SetVariable("itpage", 4)
 
         imagebutton:
-            idle "images/whitearrowright.png"
-            hover "images/whitearrowright.png"
+            idle "images/whitearrowright.webp"
+            hover "images/whitearrowright.webp"
             ypos 720
             xpos 1740
             if itpage < 4:
@@ -360,7 +360,7 @@ screen choice(items, time=3):
 
 
     if showkct == True:
-        image "gui/kct.png"
+        image "gui/kct.webp"
         text "[kct]":
             ypos 18
             #xalign 0.975
@@ -427,7 +427,7 @@ style choice_button_text is default:
 
 screen ingmenu():
 
-    add "gui/savepage.png"
+    add "gui/savepage.webp"
 
     if realmode == True:
 
@@ -674,13 +674,13 @@ screen quick_menu():
     zorder 100
 
     if fantasy == 1:
-        image "images/fantasyoverlay.png"
+        image "images/fantasyoverlay.webp"
 
     if wton == True:
 
         if wt == 1:
 
-            image "images/tutback.png":
+            image "images/tutback.webp":
                 ypos -385
                 xpos 20
             vbox xpos 30  ypos 40 spacing 20:
@@ -690,7 +690,7 @@ screen quick_menu():
 
         if wt == 2:
 
-            image "images/tutback.png":
+            image "images/tutback.webp":
                 ypos -385
                 xpos 20
             vbox xpos 30  ypos 40 spacing 20:
@@ -700,7 +700,7 @@ screen quick_menu():
 
         if wt == 3:
 
-            image "images/tutback.png":
+            image "images/tutback.webp":
                 ypos -385
                 xpos 20
             vbox xpos 30  ypos 40 spacing 20:
@@ -751,9 +751,9 @@ screen quick_menu():
         if showphone: # Edited
             imagebutton:
                 if any([application.notification for application in applications]):
-                    idle "images/phoneiconnot.png"
+                    idle "images/phoneiconnot.webp"
                 else:
-                    idle "images/phoneicon.png"
+                    idle "images/phoneicon.webp"
                 yalign 0.05
                 xalign 0.999
                 action Jump ("homescreen")
@@ -762,13 +762,13 @@ screen quick_menu():
 
         if freeroamtut == 1:
 
-            image "images/tutback.png":
+            image "images/tutback.webp":
                 ypos 100 #+300
                 xpos 1240 #+260
 
             imagebutton:
-                idle "images/whitearrowleft.png"
-                hover "images/whitearrowleft.png"
+                idle "images/whitearrowleft.webp"
+                hover "images/whitearrowleft.webp"
                 ypos 720
                 xpos 1260
                 if freeroamtutpage > 1:
@@ -777,8 +777,8 @@ screen quick_menu():
                     action SetVariable("freeroamtutpage", 3)
 
             imagebutton:
-                idle "images/whitearrowright.png"
-                hover "images/whitearrowright.png"
+                idle "images/whitearrowright.webp"
+                hover "images/whitearrowright.webp"
                 ypos 720
                 xpos 1740
                 if freeroamtutpage < 3:
@@ -801,7 +801,7 @@ screen quick_menu():
     if stance == 1:
 
         if firstfight == True:
-            image "images/background.png"
+            image "images/background.webp"
 
 
             text "[w]":
@@ -842,26 +842,26 @@ screen quick_menu():
                 yalign 0.7
 
             imagebutton:
-                idle "images/jab.png"
-                hover "images/jab.png"
+                idle "images/jab.webp"
+                hover "images/jab.webp"
                 xalign 0.06
                 yalign 0.5
 
             imagebutton:
-                idle "images/hook.png"
-                hover "images/hook.png"
+                idle "images/hook.webp"
+                hover "images/hook.webp"
                 xalign 0.115
                 yalign 0.4
 
 
             imagebutton:
-                idle "images/kick.png"
-                hover "images/kick.png"
+                idle "images/kick.webp"
+                hover "images/kick.webp"
                 xalign 0.115
                 yalign 0.61
         else:
 
-            image "images/background.png"
+            image "images/background.webp"
 
 
             text "[w]":
@@ -902,27 +902,27 @@ screen quick_menu():
                 yalign 0.7
 
             imagebutton:
-                idle "images/jab.png"
-                hover "images/jab.png"
+                idle "images/jab.webp"
+                hover "images/jab.webp"
                 xalign 0.06
                 yalign 0.5
 
             imagebutton:
-                idle "images/hook.png"
-                hover "images/hook.png"
+                idle "images/hook.webp"
+                hover "images/hook.webp"
                 xalign 0.115
                 yalign 0.4
 
 
             imagebutton:
-                idle "images/kick.png"
-                hover "images/kick.png"
+                idle "images/kick.webp"
+                hover "images/kick.webp"
                 xalign 0.115
                 yalign 0.61
 
             imagebutton:
-                idle "images/body.png"
-                hover "images/body.png"
+                idle "images/body.webp"
+                hover "images/body.webp"
                 xalign 0.172
                 yalign 0.5
 
@@ -930,7 +930,7 @@ screen quick_menu():
 
     if stance == 2:
         if firstfight == True:
-            image "images/background.png"
+            image "images/background.webp"
 
             text "[w]":
                 font "fonts/freshman.ttf"
@@ -970,24 +970,24 @@ screen quick_menu():
                 yalign 0.7
 
             imagebutton:
-                idle "images/hookblock.png"
-                hover "images/hookblock.png"
+                idle "images/hookblock.webp"
+                hover "images/hookblock.webp"
                 xalign 0.06
                 yalign 0.5
 
             imagebutton:
-                idle "images/jabblock.png"
-                hover "images/jabblock.png"
+                idle "images/jabblock.webp"
+                hover "images/jabblock.webp"
                 xalign 0.115
                 yalign 0.4
 
             imagebutton:
-                idle "images/kickblock.png"
-                hover "images/kickblock.png"
+                idle "images/kickblock.webp"
+                hover "images/kickblock.webp"
                 xalign 0.115
                 yalign 0.6
         else:
-            image "images/background.png"
+            image "images/background.webp"
 
             text "[w]":
                 font "fonts/freshman.ttf"
@@ -1027,35 +1027,35 @@ screen quick_menu():
                 yalign 0.7
 
             imagebutton:
-                idle "images/hookblock.png"
-                hover "images/hookblock.png"
+                idle "images/hookblock.webp"
+                hover "images/hookblock.webp"
                 xalign 0.06
                 yalign 0.5
 
             imagebutton:
-                idle "images/jabblock.png"
-                hover "images/jabblock.png"
+                idle "images/jabblock.webp"
+                hover "images/jabblock.webp"
                 xalign 0.115
                 yalign 0.4
 
             imagebutton:
-                idle "images/kickblock.png"
-                hover "images/kickblock.png"
+                idle "images/kickblock.webp"
+                hover "images/kickblock.webp"
                 xalign 0.115
                 yalign 0.6
             imagebutton:
-                idle "images/bodyblock.png"
-                hover "images/bodyblock.png"
+                idle "images/bodyblock.webp"
+                hover "images/bodyblock.webp"
                 xalign 0.172
                 yalign 0.5
 
 
     if youdmg == 3:
-        image "images/3 hits.png"
+        image "images/3 hits.webp"
     if youdmg == 4:
-        image "images/4 hits.png"
+        image "images/4 hits.webp"
     if youdmg >= 5:
-        image "images/5 hits.png"
+        image "images/5 hits.webp"
 
 style wttext is text:
     font "fonts/OpenSans.ttf"
@@ -1102,29 +1102,29 @@ screen navigation():
     if main_menu:
 
         imagebutton:
-            idle "images/play2.png"
-            hover "images/play3.png"
+            idle "images/play2.webp"
+            hover "images/play3.webp"
             action Start ()
             xpos 79
             ypos 147
 
         imagebutton:
-            idle "images/load2.png"
-            hover "images/load3.png"
+            idle "images/load2.webp"
+            hover "images/load3.webp"
             action ShowMenu("load")
             xpos 759
             ypos 147
 
         imagebutton:
-            idle "images/patreon2.png"
-            hover "images/patreon4.png"
+            idle "images/patreon2.webp"
+            hover "images/patreon4.webp"
             action OpenURL ("https://www.patreon.com/collegekings")
             xpos 1401
             ypos 147
 
         imagebutton:
-            idle "images/patreon2.png"
-            hover "images/discord2.png"
+            idle "images/patreon2.webp"
+            hover "images/discord2.webp"
             action OpenURL ("http://discord.collegekingsgame.com")
             xpos 1401
             if steam == False:
@@ -1134,29 +1134,29 @@ screen navigation():
 
 
         imagebutton:
-            idle "images/settings2.png"
-            hover "images/settings3.png"
+            idle "images/settings2.webp"
+            hover "images/settings3.webp"
             action ShowMenu("preferences")
             xpos 79
             ypos 457
 
         imagebutton:
-            idle "images/quit2.png"
-            hover "images/quit3.png"
+            idle "images/quit2.webp"
+            hover "images/quit3.webp"
             action Quit(confirm= main_menu)
             xpos 531
             ypos 457
 
         imagebutton:
-            idle "images/scene2.png"
-            hover "images/scene1.png"
+            idle "images/scene2.webp"
+            hover "images/scene1.webp"
             action Jump ("scenegal")
             xpos 79
             ypos 346
 
         imagebutton:
-            idle "images/patreon2.png"
-            hover "images/website3.png"
+            idle "images/patreon2.webp"
+            hover "images/website3.webp"
             action OpenURL("http://collegekingsgame.com")
             xpos 1401
             if steam == False:
@@ -1457,7 +1457,7 @@ screen save():
 
     modal True
 
-    add "gui/savepage.png"
+    add "gui/savepage.webp"
 
     tag menu
 
@@ -1468,7 +1468,7 @@ screen load():
 
     modal True
 
-    add "gui/loadpage.png"
+    add "gui/loadpage.webp"
 
     tag menu
 
@@ -1602,7 +1602,7 @@ style slot_button_text:
 
 screen preferences():
 
-    add "gui/settingspage.png"
+    add "gui/settingspage.webp"
 
     modal True
 
@@ -1753,7 +1753,7 @@ style radio_vbox:
 
 style radio_button:
     properties gui.button_properties("radio_button")
-    foreground "gui/button/radio_[prefix_]foreground.png"
+    foreground "gui/button/radio_[prefix_]foreground.webp"
 
 style radio_button_text:
     properties gui.button_text_properties("radio_button")
@@ -1763,7 +1763,7 @@ style check_vbox:
 
 style check_button:
     properties gui.button_properties("check_button")
-    foreground "gui/button/check_[prefix_]foreground.png"
+    foreground "gui/button/check_[prefix_]foreground.webp"
 
 style check_button_text:
     properties gui.button_text_properties("check_button")
@@ -2056,7 +2056,7 @@ screen confirm(message, yes_action, no_action):
 
     style_prefix "confirm"
 
-    add "gui/overlay/confirm.png"
+    add "gui/overlay/confirm.webp"
 
     frame:
 
@@ -2087,7 +2087,7 @@ style confirm_button is gui_medium_button
 style confirm_button_text is gui_medium_button_text
 
 style confirm_frame:
-    background Frame([ "gui/confirm_frame.png", "gui/frame.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
+    background Frame([ "gui/confirm_frame.webp", "gui/frame.webp"], gui.confirm_frame_borders, tile=gui.frame_tile)
     padding gui.confirm_frame_borders.padding
     xalign .5
     yalign .5
@@ -2147,7 +2147,7 @@ style skip_triangle is skip_text
 
 style skip_frame:
     ypos gui.skip_ypos
-    background Frame("gui/skip.png", gui.skip_frame_borders, tile=gui.frame_tile)
+    background Frame("gui/skip.webp", gui.skip_frame_borders, tile=gui.frame_tile)
     padding gui.skip_frame_borders.padding
 
 style skip_text:
@@ -2191,7 +2191,7 @@ style notify_text is gui_text
 style notify_frame:
     ypos gui.notify_ypos
 
-    background Frame("gui/notify.png", gui.notify_frame_borders, tile=gui.frame_tile)
+    background Frame("gui/notify.webp", gui.notify_frame_borders, tile=gui.frame_tile)
     padding gui.notify_frame_borders.padding
 
 style notify_text:
@@ -2273,7 +2273,7 @@ style nvl_window:
     xfill True
     yfill True
 
-    background "gui/nvl.png"
+    background "gui/nvl.webp"
     padding gui.nvl_borders.padding
 
 style nvl_entry:
@@ -2348,19 +2348,19 @@ screen quick_menu():
 
 style window:
     variant "small"
-    background "gui/phone/textbox.png"
+    background "gui/phone/textbox.webp"
 
 style radio_button:
     variant "small"
-    foreground "gui/phone/button/radio_[prefix_]foreground.png"
+    foreground "gui/phone/button/radio_[prefix_]foreground.webp"
 
 style check_button:
     variant "small"
-    foreground "gui/phone/button/check_[prefix_]foreground.png"
+    foreground "gui/phone/button/check_[prefix_]foreground.webp"
 
 style nvl_window:
     variant "small"
-    background "gui/phone/nvl.png"
+    background "gui/phone/nvl.webp"
 
 style main_menu_frame:
     variant "small"
@@ -2381,38 +2381,38 @@ style pref_vbox:
 style bar:
     variant "small"
     ysize gui.bar_size
-    left_bar Frame("gui/phone/bar/left.png", gui.bar_borders, tile=gui.bar_tile)
-    right_bar Frame("gui/phone/bar/right.png", gui.bar_borders, tile=gui.bar_tile)
+    left_bar Frame("gui/phone/bar/left.webp", gui.bar_borders, tile=gui.bar_tile)
+    right_bar Frame("gui/phone/bar/right.webp", gui.bar_borders, tile=gui.bar_tile)
 
 style vbar:
     variant "small"
     xsize gui.bar_size
-    top_bar Frame("gui/phone/bar/top.png", gui.vbar_borders, tile=gui.bar_tile)
-    bottom_bar Frame("gui/phone/bar/bottom.png", gui.vbar_borders, tile=gui.bar_tile)
+    top_bar Frame("gui/phone/bar/top.webp", gui.vbar_borders, tile=gui.bar_tile)
+    bottom_bar Frame("gui/phone/bar/bottom.webp", gui.vbar_borders, tile=gui.bar_tile)
 
 style scrollbar:
     variant "small"
     ysize gui.scrollbar_size
-    base_bar Frame("gui/phone/scrollbar/horizontal_[prefix_]bar.png", gui.scrollbar_borders, tile=gui.scrollbar_tile)
-    thumb Frame("gui/phone/scrollbar/horizontal_[prefix_]thumb.png", gui.scrollbar_borders, tile=gui.scrollbar_tile)
+    base_bar Frame("gui/phone/scrollbar/horizontal_[prefix_]bar.webp", gui.scrollbar_borders, tile=gui.scrollbar_tile)
+    thumb Frame("gui/phone/scrollbar/horizontal_[prefix_]thumb.webp", gui.scrollbar_borders, tile=gui.scrollbar_tile)
 
 style vscrollbar:
     variant "small"
     xsize gui.scrollbar_size
-    base_bar Frame("gui/phone/scrollbar/vertical_[prefix_]bar.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
-    thumb Frame("gui/phone/scrollbar/vertical_[prefix_]thumb.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
+    base_bar Frame("gui/phone/scrollbar/vertical_[prefix_]bar.webp", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
+    thumb Frame("gui/phone/scrollbar/vertical_[prefix_]thumb.webp", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
 
 style slider:
     variant "small"
     ysize gui.slider_size
-    base_bar Frame("gui/phone/slider/horizontal_[prefix_]bar.png", gui.slider_borders, tile=gui.slider_tile)
-    thumb "gui/phone/slider/horizontal_[prefix_]thumb.png"
+    base_bar Frame("gui/phone/slider/horizontal_[prefix_]bar.webp", gui.slider_borders, tile=gui.slider_tile)
+    thumb "gui/phone/slider/horizontal_[prefix_]thumb.webp"
 
 style vslider:
     variant "small"
     xsize gui.slider_size
-    base_bar Frame("gui/phone/slider/vertical_[prefix_]bar.png", gui.vslider_borders, tile=gui.slider_tile)
-    thumb "gui/phone/slider/vertical_[prefix_]thumb.png"
+    base_bar Frame("gui/phone/slider/vertical_[prefix_]bar.webp", gui.vslider_borders, tile=gui.slider_tile)
+    thumb "gui/phone/slider/vertical_[prefix_]thumb.webp"
 
 style slider_pref_vbox:
     variant "small"
@@ -2427,21 +2427,21 @@ screen stats():
 
     use phoneTemplate:
 
-        add "images/stats.png" at truecenter
+        add "images/stats.webp" at truecenter
         if noexit == False:
             textbutton "Exit Phone" action Jump("exitphone") style"phonebutton"
 
-        image "images/tutback.png":
+        image "images/tutback.webp":
             yalign 0.5
             xpos 1200
 
-        image "images/KCTdiagram.png":
+        image "images/KCTdiagram.webp":
             yalign 0.5
             xalign 0.05
 
         imagebutton:
-            idle "images/whitearrowleft.png"
-            hover "images/whitearrowleft.png"
+            idle "images/whitearrowleft.webp"
+            hover "images/whitearrowleft.webp"
             yalign 0.55
             xpos 1220
             if statspage > 1:
@@ -2450,8 +2450,8 @@ screen stats():
                 action SetVariable("statspage", 3)
 
         imagebutton:
-            idle "images/whitearrowright.png"
-            hover "images/whitearrowright.png"
+            idle "images/whitearrowright.webp"
+            hover "images/whitearrowright.webp"
             yalign 0.55
             xpos 1700
             if statspage < 3:
@@ -2473,7 +2473,7 @@ screen stats():
             size 25
             color "#ffffff"
 
-        image "images/statscircle.png":
+        image "images/statscircle.webp":
             xpos 520
             ypos 273
 
@@ -2665,12 +2665,12 @@ style statstextnum is text:
 
 
 screen freeroam1a():
-    add "images/s50.jpg"
+    add "images/s50.webp"
     imagebutton:
         yalign 0.12
         xalign 0.86
-        idle "images/fr1riley.png"
-        hover "images/fr1rileyhover.png"
+        idle "images/fr1riley.webp"
+        hover "images/fr1rileyhover.webp"
 
         if fr1riley == 0:
             action Jump ("fr1riley1")
@@ -2680,8 +2680,8 @@ screen freeroam1a():
     imagebutton:
         yalign 0.195
         xalign 0.335
-        idle "images/fr1elijah.png"
-        hover "images/fr1elijahoverh.png"
+        idle "images/fr1elijah.webp"
+        hover "images/fr1elijahoverh.webp"
 
         if fr1elijah == 0:
             action Jump ("fr1elijah1")
@@ -2692,40 +2692,40 @@ screen freeroam1a():
     imagebutton:
         yalign 0.07
         xalign 0.65
-        idle "images/fr1b.png"
-        hover "images/fr1bhover.png"
+        idle "images/fr1b.webp"
+        hover "images/fr1bhover.webp"
         action Jump ("fr1b")
 
 screen freeroam1b():
-    add "images/s55.jpg"
+    add "images/s55.webp"
     imagebutton:
         yalign 0.5
         xalign 0.685
-        idle "images/fr1chris.png"
-        hover "images/fr1chrishover.png"
+        idle "images/fr1chris.webp"
+        hover "images/fr1chrishover.webp"
         action Jump ("fr1chris1")
 
     imagebutton:
         yalign 0.38
         xalign 0.21
-        idle "images/fr1c.png"
-        hover "images/fr1chover.png"
+        idle "images/fr1c.webp"
+        hover "images/fr1chover.webp"
         action Jump ("fr1c")
 
     imagebutton:
         yalign 1.0
         xalign 0.23
-        idle "images/backchris.png"
-        hover "images/backchrishover.png"
+        idle "images/backchris.webp"
+        hover "images/backchrishover.webp"
         action Jump ("fr1a1")
 
 screen freeroam1b2():
-    add "images/s56.jpg"
+    add "images/s56.webp"
     imagebutton:
         yalign 0.53
         xalign 0.74
-        idle "images/fr1nora.png"
-        hover "images/fr1norahover.png"
+        idle "images/fr1nora.webp"
+        hover "images/fr1norahover.webp"
         if fr1nora == 0:
             action Jump ("fr1nora1")
 
@@ -2735,25 +2735,25 @@ screen freeroam1b2():
     imagebutton:
         yalign 0.38
         xalign 0.21
-        idle "images/fr1c.png"
-        hover "images/fr1chover.png"
+        idle "images/fr1c.webp"
+        hover "images/fr1chover.webp"
         action Jump ("fr1c")
 
     imagebutton:
         yalign 1.0
         xalign 0.23
-        idle "images/backchris.png"
-        hover "images/backchrishover.png"
+        idle "images/backchris.webp"
+        hover "images/backchrishover.webp"
         action Jump ("fr1a1")
 
 
 screen freeroam1c():
-    add "images/s58.jpg"
+    add "images/s58.webp"
     imagebutton:
         yalign 0.025
         xalign 0.26
-        idle "images/fr1dorm.png"
-        hover "images/fr1dormhover.png"
+        idle "images/fr1dorm.webp"
+        hover "images/fr1dormhover.webp"
         if fr1adam == 0:
             action Jump ("fr1adam1")
 
@@ -2763,19 +2763,19 @@ screen freeroam1c():
     imagebutton:
         yalign 0.05
         xalign 0.82
-        idle "images/fr1yours.png"
-        hover "images/fr1yourshover.png"
+        idle "images/fr1yours.webp"
+        hover "images/fr1yourshover.webp"
         action Jump ("fr1end")
 
     imagebutton:
         yalign 1.0
         xalign 0.5
-        idle "images/dormback.png"
-        hover "images/dormbackhover.png"
+        idle "images/dormback.webp"
+        hover "images/dormbackhover.webp"
         action Jump ("fr1b2")
 
 screen endfreeroam():
-    add "images/endfr.png"
+    add "images/endfr.webp"
     text "Are you sure you want to end free roam?" style "endfree"
     textbutton "Yes" style "endfr":
         action Jump ("frcontinue")
@@ -2814,15 +2814,15 @@ style endfree is text:
 screen freeroam2a(): #outside
 
     if samtalk == 0:
-        add "images/s100.jpg"
+        add "images/s100.webp"
     else:
-        add "images/s100a.jpg"
+        add "images/s100a.webp"
 
     imagebutton:
         yalign 1.0
         xalign 0.43
-        idle "images/fr2sam.png"
-        hover "images/fr2samh.png"
+        idle "images/fr2sam.webp"
+        hover "images/fr2samh.webp"
         if samtalk == 0:
             action Jump ("fr2sam")
         else:
@@ -2831,8 +2831,8 @@ screen freeroam2a(): #outside
     imagebutton:
         yalign 0
         xalign 0.482
-        idle "images/fr2door.png" #inside
-        hover "images/fr2doorh.png"
+        idle "images/fr2door.webp" #inside
+        hover "images/fr2doorh.webp"
         if fr2door == 0:
             action Jump ("fr2door")
         else:
@@ -2841,13 +2841,13 @@ screen freeroam2a(): #outside
 
 screen freeroam2b():
 
-    add "images/s102.jpg"
+    add "images/s102.webp"
 
     imagebutton:
         yalign 1.0
         xalign 0.515
-        idle "images/fr2josh.png"
-        hover "images/fr2joshh.png"
+        idle "images/fr2josh.webp"
+        hover "images/fr2joshh.webp"
         if joshtalk == 0:
             action Jump ("fr2josh")
         else:
@@ -2856,22 +2856,22 @@ screen freeroam2b():
     imagebutton:
         yalign 1.0
         xalign 1.0
-        idle "images/fr2pool.png" #pool room
-        hover "images/fr2poolh.png"
+        idle "images/fr2pool.webp" #pool room
+        hover "images/fr2poolh.webp"
         action Jump ("fr2pool")
 
     imagebutton:
         yalign 1.0
         xalign 0.5
-        idle "images/fr2outside.png" ### back outside
-        hover "images/fr2outsideh.png"
+        idle "images/fr2outside.webp" ### back outside
+        hover "images/fr2outsideh.webp"
         action Jump ("fr2outside")
 
     imagebutton:
         yalign 0.4
         xalign 0.242
-        idle "images/fr2courtney.png"
-        hover "images/fr2courtneyh.png"
+        idle "images/fr2courtney.webp"
+        hover "images/fr2courtneyh.webp"
         if courtneytalk == 0:
             action Jump ("fr2courtney")
         else:
@@ -2880,26 +2880,26 @@ screen freeroam2b():
     imagebutton:
         yalign 1.0
         xalign 0
-        idle "images/fr2camp.png"
-        hover "images/fr2camph.png"
+        idle "images/fr2camp.webp"
+        hover "images/fr2camph.webp"
         action Jump ("fr2camp")
 
     imagebutton:
         yalign 0
         xalign 0.42
-        idle "images/fr2stairs.png"
-        hover "images/fr2stairsh.png"
+        idle "images/fr2stairs.webp"
+        hover "images/fr2stairsh.webp"
         action Jump ("fr2stairs")
 
 screen freeroam2c(): ###pool room
 
-    add "images/s104.jpg"
+    add "images/s104.webp"
 
     imagebutton:
         yalign 1.0
         xalign 1.0
-        idle "images/fr2mason.png"
-        hover "images/fr2masonh.png"
+        idle "images/fr2mason.webp"
+        hover "images/fr2masonh.webp"
         if masontalk == 1:
             action Jump ("fr2mason2")
         else:
@@ -2908,8 +2908,8 @@ screen freeroam2c(): ###pool room
     imagebutton:
         yalign 0.38
         xalign 0.52
-        idle "images/fr2katy.png"
-        hover "images/fr2katyh.png"
+        idle "images/fr2katy.webp"
+        hover "images/fr2katyh.webp"
         if katytalk == 1:
             action Jump ("fr2katy2")
         else:
@@ -2918,37 +2918,37 @@ screen freeroam2c(): ###pool room
     imagebutton:
         yalign 1.0
         xalign 0.5
-        idle "images/backpool.png"
-        hover "images/backpoolh.png"
+        idle "images/backpool.webp"
+        hover "images/backpoolh.webp"
         action Jump ("fr2poolback")
 
 screen freeroam2d(): ###camp room
 
-    add "images/s106.jpg"
+    add "images/s106.webp"
 
     imagebutton:
         yalign 1.0
         xalign 0.21
-        idle "images/fr2chloe.png"
-        hover "images/fr2chloeh.png"
+        idle "images/fr2chloe.webp"
+        hover "images/fr2chloeh.webp"
         action Jump ("fr2chloe")
 
     imagebutton:
         yalign 1.0
         xalign 0.5
-        idle "images/fr2campback.png"
-        hover "images/fr2campbackh.png"
+        idle "images/fr2campback.webp"
+        hover "images/fr2campbackh.webp"
         action Jump ("fr2campback")
 
 screen freeroam2e(): ###stairs
 
-    add "images/s105.jpg"
+    add "images/s105.webp"
 
     imagebutton:
         yalign 1.0
         xalign 0.5
-        idle "images/fr2grayson.png"
-        hover "images/fr2graysonh.png"
+        idle "images/fr2grayson.webp"
+        hover "images/fr2graysonh.webp"
         if graysontalk == 1:
             action Jump ("fr2grayson2")
         else:
@@ -2957,12 +2957,12 @@ screen freeroam2e(): ###stairs
     imagebutton:
         yalign 1.0
         xalign 0.5
-        idle "images/fr2down.png"
-        hover "images/fr2downh.png"
+        idle "images/fr2down.webp"
+        hover "images/fr2downh.webp"
         action Jump ("fr2down")
 
 screen endfreeroam2():
-    add "images/endfr.png"
+    add "images/endfr.webp"
     text "Are you sure you want to end free roam?" style "endfree"
     textbutton "Yes" style "endfr":
         action Jump ("fr2end")
@@ -2978,24 +2978,24 @@ screen endfreeroam2():
 
 screen thx():
     if steam == False:
-        add "images/newthx.png"
+        add "images/newthx.webp"
     else:
-        add "images/newsteamend.jpg" # steam
+        add "images/newsteamend.webp" # steam
 
     if steam == False:
         imagebutton:
             ypos 677
             xpos 394
-            idle "images/supportdevelopmentblank.png"
-            hover "images/supportdevelopment.png"
+            idle "images/supportdevelopmentblank.webp"
+            hover "images/supportdevelopment.webp"
             action OpenURL ("https://www.patreon.com/collegekings")
 
     else:
         imagebutton:# steam
             ypos 700
             xalign 0.5
-            idle "images/discordbutton1.png"
-            hover "images/discordbutton2.png"
+            idle "images/discordbutton1.webp"
+            hover "images/discordbutton2.webp"
             action OpenURL ("http://discord.collegekingsgame.com")
 
     textbutton "Main Menu":
@@ -3010,7 +3010,7 @@ screen thx():
 ######## General fighting screens.
 
 screen ft1():
-    image "images/fightchoice.png"
+    image "images/fightchoice.webp"
 
     text "Fighting":
         xalign 0.5
@@ -3048,7 +3048,7 @@ screen ft1():
         action Jump ("autowin")
 
 screen ft2():
-    image "images/fightchoice.png"
+    image "images/fightchoice.webp"
 
     text "Difficulty":
         xalign 0.5
@@ -3080,7 +3080,7 @@ screen ft2():
             action Jump ("hard")
 
 screen ft3():
-    image "images/fightchoice.png"
+    image "images/fightchoice.webp"
 
     text "Keybinding":
         xalign 0.5
@@ -3109,20 +3109,20 @@ screen ft3():
 
 
 screen realmode():
-    image "images/REALLIFEMODE.jpg"
+    image "images/REALLIFEMODE.webp"
 
     imagebutton:
         ypos 683
         xpos 417
-        idle "images/rlmt.png"
-        hover "images/enable.jpg"
+        idle "images/rlmt.webp"
+        hover "images/enable.webp"
         action Jump ("rme")
 
     imagebutton:
         ypos 683
         xpos 1016
-        idle "images/rlmt.png"
-        hover "images/disable.jpg"
+        idle "images/rlmt.webp"
+        hover "images/disable.webp"
         action Jump ("rmd")
 
 
@@ -3130,7 +3130,7 @@ screen realmode():
 ######## POPUP
 
 screen popup1():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! Your Key Character Trait {b}Loyal{/b} has just changed the outcome of a decision someone was making." style "endfree"
 
@@ -3141,7 +3141,7 @@ screen popup1():
         yalign 0.58
 
 screen popup2():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! Your Key Character Trait {b}Popular{/b} has just changed the outcome of a decision someone was making." style "endfree"
 
@@ -3152,7 +3152,7 @@ screen popup2():
         yalign 0.58
 
 screen popup3():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! Your Key Character Trait {b}Confident{/b} has just changed the outcome of a decision someone was making." style "endfree"
 
@@ -3163,7 +3163,7 @@ screen popup3():
         yalign 0.58
 
 screen popup4():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! Your Key Character Trait {b}Confident{/b} has just changed the outcome of a decision someone was making." style "endfree"
 
@@ -3175,7 +3175,7 @@ screen popup4():
 
 
 screen popup5():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! You have learned a new fighting move: {b}Body Hook{/b}." style "endfree"
 
@@ -3186,7 +3186,7 @@ screen popup5():
         yalign 0.58
 
 screen popup6():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! Your Key Character Trait {b}Loyal{/b} has just changed the outcome of a decision someone was making." style "endfree"
 
@@ -3197,7 +3197,7 @@ screen popup6():
         yalign 0.58
 
 screen popup7():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! Your Key Character Trait {b}Loyal{/b} has just changed the outcome of a decision someone was making." style "endfree"
 
@@ -3209,7 +3209,7 @@ screen popup7():
 
 
 screen popup8():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! Your Key Character Trait {b}Confident{/b} has just changed the outcome of a decision someone was making." style "endfree"
 
@@ -3220,7 +3220,7 @@ screen popup8():
         yalign 0.58
 
 screen popup9():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! Your Key Character Trait {b}Loyal{/b} has just changed the outcome of a decision someone was making." style "endfree"
 
@@ -3231,7 +3231,7 @@ screen popup9():
         yalign 0.58
 
 screen popup10():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! Your Key Character Trait {b}Loyal{/b} has just changed the outcome of a decision someone was making." style "endfree"
 
@@ -3242,7 +3242,7 @@ screen popup10():
         yalign 0.58
 
 screen popup11():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! Your Key Character Trait {b}Loyal{/b} has just changed the outcome of a decision someone was making." style "endfree"
 
@@ -3253,7 +3253,7 @@ screen popup11():
         yalign 0.58
 
 screen popup12():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! Your Key Character Trait {b}Popular{/b} has just changed the outcome of a decision someone was making." style "endfree"
 
@@ -3264,7 +3264,7 @@ screen popup12():
         yalign 0.58
 
 screen popup13():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! You have learned a new fighting move: {b}Uppercut{/b}." style "endfree"
 
@@ -3275,7 +3275,7 @@ screen popup13():
         yalign 0.58
 
 screen popup14():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! Your Key Character Trait {b}Confident{/b} has just changed the way your actions were perceived." style "endfree"
 
@@ -3286,7 +3286,7 @@ screen popup14():
         yalign 0.58
 
 screen popup15():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! Your Key Character Trait {b}Popular{/b} has just changed the outcome of a decision someone was making." style "endfree"
 
@@ -3297,7 +3297,7 @@ screen popup15():
         yalign 0.58
 
 screen popup16():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! Your Key Character Trait {b}Popular{/b} has just changed the outcome of a decision someone was making." style "endfree"
 
@@ -3308,7 +3308,7 @@ screen popup16():
         yalign 0.58
 
 screen popup17():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! Your Key Character Trait {b}Confident{/b} has just changed the outcome of a decision someone was making." style "endfree"
 
@@ -3319,7 +3319,7 @@ screen popup17():
         yalign 0.58
 
 screen popup18():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! Your Key Character Trait {b}Confident{/b} has just changed the outcome of a decision someone was making." style "endfree"
 
@@ -3330,7 +3330,7 @@ screen popup18():
         yalign 0.58
 
 screen popup19():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "You've just unlocked the social media app Kiwii! Open it now from the homescreen." style "endfree"
 
@@ -3341,7 +3341,7 @@ screen popup19():
         yalign 0.58
 
 screen popup20():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! Your Key Character Trait {b}Loyal{/b} has just changed the outcome of a decision someone was making." style "endfree"
 
@@ -3352,7 +3352,7 @@ screen popup20():
         yalign 0.58
 
 screen popup21():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! Your Key Character Trait {b}Loyal{/b} has just changed the outcome of a decision someone was making." style "endfree"
 
@@ -3363,7 +3363,7 @@ screen popup21():
         yalign 0.58
 
 screen popup22():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! Your Key Character Trait {b}Loyal{/b} has just changed the outcome of a decision someone was making." style "endfree"
 
@@ -3374,7 +3374,7 @@ screen popup22():
         yalign 0.58
 
 screen popup23():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! Your Key Character Trait {b}Confident{/b} has just changed the outcome of a decision someone was making." style "endfree"
 
@@ -3385,7 +3385,7 @@ screen popup23():
         yalign 0.58
 
 screen popup24():
-    image "images/endfr.png"
+    image "images/endfr.webp"
 
     text "Congratulations! Your Key Character Trait {b}Popular{/b} has just changed the outcome of a decision someone was making." style "endfree"
 
@@ -3401,7 +3401,7 @@ screen popup24():
 
 screen tomtut1():
 
-    image "images/tomstancekick.jpg"
+    image "images/tomstancekick.webp"
 
 
     key w:
@@ -3412,23 +3412,23 @@ screen tomtut1():
         action Jump ("tomtut1kick")
 
     imagebutton:
-        idle "images/jab.png"
-        hover "images/jab.png"
+        idle "images/jab.webp"
+        hover "images/jab.webp"
         xalign 0.06
         yalign 0.5
         action Jump ("tomtut1jab")
 
     imagebutton:
-        idle "images/hook.png"
-        hover "images/hook.png"
+        idle "images/hook.webp"
+        hover "images/hook.webp"
         xalign 0.115
         yalign 0.4
         action Jump ("tomtut1hook")
 
 
     imagebutton:
-        idle "images/kick.png"
-        hover "images/kick.png"
+        idle "images/kick.webp"
+        hover "images/kick.webp"
         xalign 0.115
         yalign 0.61
         action Jump ("tomtut1kick")
@@ -3436,7 +3436,7 @@ screen tomtut1():
 
 screen kickcounter():
 
-    image "images/tomhook.jpg"
+    image "images/tomhook.webp"
 
     key q:
         action Jump ("tuthookblock")
@@ -3446,22 +3446,22 @@ screen kickcounter():
         action Jump ("tuthookhit2")
 
     imagebutton:
-        idle "images/hookblock.png"
-        hover "images/hookblock.png"
+        idle "images/hookblock.webp"
+        hover "images/hookblock.webp"
         xalign 0.06
         yalign 0.5
         action Jump ("tuthookblock")
 
     imagebutton:
-        idle "images/jabblock.png"
-        hover "images/jabblock.png"
+        idle "images/jabblock.webp"
+        hover "images/jabblock.webp"
         xalign 0.115
         yalign 0.4
         action Jump ("tuthookhit1")
 
     imagebutton:
-        idle "images/kickblock.png"
-        hover "images/kickblock.png"
+        idle "images/kickblock.webp"
+        hover "images/kickblock.webp"
         xalign 0.115
         yalign 0.6
         action Jump ("tuthookhit2")
@@ -3469,7 +3469,7 @@ screen kickcounter():
 
 screen hookcounter():
 
-    image "images/hookcounter.jpg"
+    image "images/hookcounter.webp"
 
 
     key q:
@@ -3480,29 +3480,29 @@ screen hookcounter():
         action Jump ("tutjabhit2")
 
     imagebutton:
-        idle "images/hookblock.png"
-        hover "images/hookblock.png"
+        idle "images/hookblock.webp"
+        hover "images/hookblock.webp"
         xalign 0.06
         yalign 0.5
         action Jump ("tutjabhit")
 
     imagebutton:
-        idle "images/jabblock.png"
-        hover "images/jabblock.png"
+        idle "images/jabblock.webp"
+        hover "images/jabblock.webp"
         xalign 0.115
         yalign 0.4
         action Jump ("tutjabblock")
 
     imagebutton:
-        idle "images/kickblock.png"
-        hover "images/kickblock.png"
+        idle "images/kickblock.webp"
+        hover "images/kickblock.webp"
         xalign 0.115
         yalign 0.6
         action Jump ("tutjabhit2")
 
 screen jabcounter():
 
-    image "images/jabcounter.jpg"
+    image "images/jabcounter.webp"
 
 
     key q:
@@ -3513,22 +3513,22 @@ screen jabcounter():
         action Jump ("tuthookhit4")
 
     imagebutton:
-        idle "images/hookblock.png"
-        hover "images/hookblock.png"
+        idle "images/hookblock.webp"
+        hover "images/hookblock.webp"
         xalign 0.06
         yalign 0.5
         action Jump ("tuthookblock2")
 
     imagebutton:
-        idle "images/jabblock.png"
-        hover "images/jabblock.png"
+        idle "images/jabblock.webp"
+        hover "images/jabblock.webp"
         xalign 0.115
         yalign 0.4
         action Jump ("tuthookhit3")
 
     imagebutton:
-        idle "images/kickblock.png"
-        hover "images/kickblock.png"
+        idle "images/kickblock.webp"
+        hover "images/kickblock.webp"
         xalign 0.115
         yalign 0.6
         action Jump ("tuthookhit4")
@@ -3541,7 +3541,7 @@ screen youattack():
     if tomstance == 1:
 
 
-        image "images/tomstancekick.jpg"
+        image "images/tomstancekick.webp"
 
         key r:
             action Jump ("tomkick1")
@@ -3551,23 +3551,23 @@ screen youattack():
             action Jump ("tomkick3")
 
         imagebutton:
-            idle "images/jab.png"
-            hover "images/jab.png"
+            idle "images/jab.webp"
+            hover "images/jab.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("tomkick3")
 
         imagebutton:
-            idle "images/hook.png"
-            hover "images/hook.png"
+            idle "images/hook.webp"
+            hover "images/hook.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("tomkick2")
 
 
         imagebutton:
-            idle "images/kick.png"
-            hover "images/kick.png"
+            idle "images/kick.webp"
+            hover "images/kick.webp"
             xalign 0.115
             yalign 0.61
             action Jump ("tomkick1")
@@ -3577,7 +3577,7 @@ screen youattack():
 
 
     if tomstance == 2:
-        image "images/tomstancehook.jpg"
+        image "images/tomstancehook.webp"
 
         key w:
             action Jump ("tomhook1")
@@ -3587,23 +3587,23 @@ screen youattack():
             action Jump ("tomhook3")
 
         imagebutton:
-            idle "images/jab.png"
-            hover "images/jab.png"
+            idle "images/jab.webp"
+            hover "images/jab.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("tomhook2")
 
         imagebutton:
-            idle "images/hook.png"
-            hover "images/hook.png"
+            idle "images/hook.webp"
+            hover "images/hook.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("tomhook1")
 
 
         imagebutton:
-            idle "images/kick.png"
-            hover "images/kick.png"
+            idle "images/kick.webp"
+            hover "images/kick.webp"
             xalign 0.115
             yalign 0.61
             action Jump ("tomhook3")
@@ -3613,7 +3613,7 @@ screen youattack():
 
 
     if tomstance == 3:
-        image "images/tomstancejab.jpg"
+        image "images/tomstancejab.webp"
 
         key q:
             action Jump ("tomjab1")
@@ -3623,23 +3623,23 @@ screen youattack():
             action Jump ("tomjab3")
 
         imagebutton:
-            idle "images/jab.png"
-            hover "images/jab.png"
+            idle "images/jab.webp"
+            hover "images/jab.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("tomjab1")
 
         imagebutton:
-            idle "images/hook.png"
-            hover "images/hook.png"
+            idle "images/hook.webp"
+            hover "images/hook.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("tomjab2")
 
 
         imagebutton:
-            idle "images/kick.png"
-            hover "images/kick.png"
+            idle "images/kick.webp"
+            hover "images/kick.webp"
             xalign 0.115
             yalign 0.61
             action Jump ("tomjab3")
@@ -3651,7 +3651,7 @@ screen youattack():
 screen tomattack():
 
     if tomattack == 1:
-        image "images/tomhook.jpg"
+        image "images/tomhook.webp"
 
         key r:
             action Jump ("tomhookhit")
@@ -3661,22 +3661,22 @@ screen tomattack():
             action Jump ("tomhookhit2")
 
         imagebutton:
-            idle "images/hookblock.png"
-            hover "images/hookblock.png"
+            idle "images/hookblock.webp"
+            hover "images/hookblock.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("tomhookblocked")
 
         imagebutton:
-            idle "images/jabblock.png"
-            hover "images/jabblock.png"
+            idle "images/jabblock.webp"
+            hover "images/jabblock.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("tomhookhit")
 
         imagebutton:
-            idle "images/kickblock.png"
-            hover "images/kickblock.png"
+            idle "images/kickblock.webp"
+            hover "images/kickblock.webp"
             xalign 0.115
             yalign 0.6
             action Jump ("tomhookhit2")
@@ -3685,7 +3685,7 @@ screen tomattack():
 
 
     if tomattack == 2:
-        image "images/tomjab.jpg"
+        image "images/tomjab.webp"
 
         key q:
             action Jump ("tomjabhit")
@@ -3695,22 +3695,22 @@ screen tomattack():
             action Jump ("tomjabhit2")
 
         imagebutton:
-            idle "images/hookblock.png"
-            hover "images/hookblock.png"
+            idle "images/hookblock.webp"
+            hover "images/hookblock.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("tomjabhit")
 
         imagebutton:
-            idle "images/jabblock.png"
-            hover "images/jabblock.png"
+            idle "images/jabblock.webp"
+            hover "images/jabblock.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("tomjabblocked")
 
         imagebutton:
-            idle "images/kickblock.png"
-            hover "images/kickblock.png"
+            idle "images/kickblock.webp"
+            hover "images/kickblock.webp"
             xalign 0.115
             yalign 0.6
             action Jump ("tomjabhit2")
@@ -3718,7 +3718,7 @@ screen tomattack():
         timer reaction action Jump("timer5")
 
     if tomattack == 3:
-        image "images/tomkick.jpg"
+        image "images/tomkick.webp"
 
         key w:
             action Jump ("tomkickhit")
@@ -3729,22 +3729,22 @@ screen tomattack():
 
 
         imagebutton:
-            idle "images/hookblock.png"
-            hover "images/hookblock.png"
+            idle "images/hookblock.webp"
+            hover "images/hookblock.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("tomkickhit")
 
         imagebutton:
-            idle "images/jabblock.png"
-            hover "images/jabblock.png"
+            idle "images/jabblock.webp"
+            hover "images/jabblock.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("tomkickhit2")
 
         imagebutton:
-            idle "images/kickblock.png"
-            hover "images/kickblock.png"
+            idle "images/kickblock.webp"
+            hover "images/kickblock.webp"
             xalign 0.115
             yalign 0.6
             action Jump ("tomkickblocked")
@@ -3754,11 +3754,11 @@ screen tomattack():
 
 screen costumes():
 
-    image "images/costumes.png"
+    image "images/costumes.webp"
 
     imagebutton:
-        idle "images/try.png"
-        hover "images/tryh.png"
+        idle "images/try.webp"
+        hover "images/tryh.webp"
         ypos 802
         xpos 256
         if costumeaubrey == True:
@@ -3769,8 +3769,8 @@ screen costumes():
             if caughtpeekingpenelope == False:
                 action Jump ("try1p")
     imagebutton:
-        idle "images/try.png"
-        hover "images/tryh.png"
+        idle "images/try.webp"
+        hover "images/tryh.webp"
         ypos 802
         xpos 738
         if costumeaubrey == True:
@@ -3780,8 +3780,8 @@ screen costumes():
             if caughtpeekingpenelope == False:
                 action Jump ("try2p")
     imagebutton:
-        idle "images/try.png"
-        hover "images/tryh.png"
+        idle "images/try.webp"
+        hover "images/tryh.webp"
         ypos 802
         xpos 1219
         if costumeaubrey == True:
@@ -3791,8 +3791,8 @@ screen costumes():
             if caughtpeekingpenelope == False:
                 action Jump ("try3p")
     imagebutton:
-        idle "images/try.png"
-        hover "images/buyh.png"
+        idle "images/try.webp"
+        hover "images/buyh.webp"
         ypos 935
         xpos 256
         if costumeaubrey == True:
@@ -3806,8 +3806,8 @@ screen costumes():
             else:
                 action Jump ("buy1p")
     imagebutton:
-        idle "images/try.png"
-        hover "images/buyh.png"
+        idle "images/try.webp"
+        hover "images/buyh.webp"
         ypos 935
         xpos 738
         if costumeaubrey == True:
@@ -3821,8 +3821,8 @@ screen costumes():
             else:
                 action Jump ("buy2p")
     imagebutton:
-        idle "images/try.png"
-        hover "images/buyh.png"
+        idle "images/try.webp"
+        hover "images/buyh.webp"
         ypos 935
         xpos 1219
         if costumeaubrey == True:
@@ -3839,7 +3839,7 @@ screen costumes():
 
 
 screen surebuy1():
-    add "images/endfr.png"
+    add "images/endfr.webp"
     text "Once you decide which outfit to buy, you will no longer be able to play through all of the \"Try\" scenes. Are you sure you want to continue?" style "endfree"
     textbutton "Yes" style "endfr":
         action Jump ("buy1")
@@ -3854,7 +3854,7 @@ screen surebuy1():
         yalign 0.58
 
 screen surebuy2():
-    add "images/endfr.png"
+    add "images/endfr.webp"
     text "Once you decide which outfit to buy, you will no longer be able to play through all of the \"Try\" scenes. Are you sure you want to continue?" style "endfree"
     textbutton "Yes" style "endfr":
         action Jump ("buy2")
@@ -3869,7 +3869,7 @@ screen surebuy2():
         yalign 0.58
 
 screen surebuy3():
-    add "images/endfr.png"
+    add "images/endfr.webp"
     text "Once you decide which outfit to buy, you will no longer be able to play through all of the \"Try\" scenes. Are you sure you want to continue?" style "endfree"
     textbutton "Yes" style "endfr":
         action Jump ("buy3")
@@ -3884,7 +3884,7 @@ screen surebuy3():
         yalign 0.58
 
 screen surebuy1p():
-    add "images/endfr.png"
+    add "images/endfr.webp"
     text "Once you decide which outfit to buy, you will no longer be able to play through all of the \"Try\" scenes. Are you sure you want to continue?" style "endfree"
     textbutton "Yes" style "endfr":
         action Jump ("buy1p")
@@ -3899,7 +3899,7 @@ screen surebuy1p():
         yalign 0.58
 
 screen surebuy2p():
-    add "images/endfr.png"
+    add "images/endfr.webp"
     text "Once you decide which outfit to buy, you will no longer be able to play through all of the \"Try\" scenes. Are you sure you want to continue?" style "endfree"
     textbutton "Yes" style "endfr":
         action Jump ("buy2p")
@@ -3914,7 +3914,7 @@ screen surebuy2p():
         yalign 0.58
 
 screen surebuy3p():
-    add "images/endfr.png"
+    add "images/endfr.webp"
     text "Once you decide which outfit to buy, you will no longer be able to play through all of the \"Try\" scenes. Are you sure you want to continue?" style "endfree"
     textbutton "Yes" style "endfr":
         action Jump ("buy3p")
@@ -3930,9 +3930,9 @@ screen surebuy3p():
 
 screen achievements():
 
-        add "images/phonescreen.png" at truecenter
+    use phoneTemplate:
 
-        add "images/stats.png" at truecenter
+        add "images/stats.webp" at truecenter
         if noexit == False:
             textbutton "Exit Phone" action Jump("exitphone") style"phonebutton"
 
@@ -4286,78 +4286,78 @@ style ach3_text is text:
 
 screen girls():
 
-    image "images/girls.jpg"
+    image "images/girls.webp"
 
     imagebutton:
-        idle "images/girl.png"
-        hover "images/girlhover.png"
+        idle "images/girl.webp"
+        hover "images/girlhover.webp"
         ypos 360
         xpos 110
         action Jump ("juchloe")
 
     imagebutton:
-        idle "images/girl.png"
-        hover "images/girlhover.png"
+        idle "images/girl.webp"
+        hover "images/girlhover.webp"
         ypos 360
         xpos 693
         action Jump ("juaubrey")
 
     imagebutton:
-        idle "images/girl.png"
-        hover "images/girlhover.png"
+        idle "images/girl.webp"
+        hover "images/girlhover.webp"
         ypos 360
         xpos 1277
         action Jump ("julauren")
 
     imagebutton:
-        idle "images/girl.png"
-        hover "images/girlhover.png"
+        idle "images/girl.webp"
+        hover "images/girlhover.webp"
         ypos 670
         xpos 110
         action Jump ("juriley")
 
     imagebutton:
-        idle "images/girl.png"
-        hover "images/girlhover.png"
+        idle "images/girl.webp"
+        hover "images/girlhover.webp"
         ypos 670
         xpos 693
         action Jump ("juemily")
 
     imagebutton:
-        idle "images/girl.png"
-        hover "images/girlhover.png"
+        idle "images/girl.webp"
+        hover "images/girlhover.webp"
         ypos 670
         xpos 1277
         action Jump ("jupenelope")
 
 screen aubsex():
 
-    image "images/sexpos.png"
+    image "images/sexpos.webp"
 
     imagebutton:
-        idle "images/sexposbutton.png"
-        hover "images/sexposbutton.png"
+        idle "images/sexposbutton.webp"
+        hover "images/sexposbutton.webp"
         ypos 150
         xpos 36
         action Jump ("amiss")
 
     imagebutton:
-        idle "images/sexposbutton.png"
-        hover "images/sexposbutton.png"
+        idle "images/sexposbutton.webp"
+        hover "images/sexposbutton.webp"
         ypos 335
         xpos 36
         action Jump ("acow")
 
     imagebutton:
-        idle "images/sexposbutton.png"
-        hover "images/sexposbutton.png"
+        idle "images/sexposbutton.webp"
+        hover "images/sexposbutton.webp"
         ypos 531
         xpos 36
         action Jump ("abj")
 
     imagebutton:
-        idle "images/sexposbutton.png"
-        hover "images/sexposbutton.png"
+        idle "images/sexposbutton.webp"
+        hover "images/sexposbutton.webp"
         ypos 727
         xpos 36
         action Jump ("acream")
@@ -4366,12 +4366,12 @@ screen aubsex():
 screen spoiler():
 
     if steam == False:
-        add "images/menu4.jpg"
+        add "images/menu4.webp"
     else:
-        add "images/menu4steam.jpg"
-    add "images/darker.png"
+        add "images/menu4steam.webp"
+    add "images/darker.webp"
 
-    add "images/endfr.png"
+    add "images/endfr.webp"
     text "Warning: The scene gallery contains spoilers for the story of the game. Are you sure you want to continue?" style "endfree"
     textbutton "Yes" style "endfr":
         action Jump ("spoilergo")
@@ -4391,11 +4391,11 @@ screen scenegal():
 
     tag menu
 
-    add "Images/scenegalleryblank.jpg"
+    add "Images/scenegalleryblank.webp"
 
     imagebutton:
-        idle "images/backtransp.png"
-        hover "images/back.png"
+        idle "images/backtransp.webp"
+        hover "images/back.webp"
         ypos 933
         xpos 79
         action Return()
@@ -4403,75 +4403,77 @@ screen scenegal():
     vpgrid:
         cols 4
         spacing 40
+        pos (78, 200)
         xpos 78
         ypos 200
+        ysize 700
         scrollbars "vertical"
         draggable True
         mousewheel True
 
         imagebutton:
-            idle "images/gallery1new.png"
-            hover "images/gallery1.png"
+            idle "images/gallery1new.webp"
+            hover "images/gallery1.webp"
             action Replay ("ga", locked = False)
 
         imagebutton:
-            idle "images/gallery2new.png"
-            hover "images/gallery2.png"
+            idle "images/gallery2new.webp"
+            hover "images/gallery2.webp"
             action Replay ("gb", locked = False)
 
         imagebutton:
-            idle "images/gallery3new.png"
-            hover "images/gallery3.png"
+            idle "images/gallery3new.webp"
+            hover "images/gallery3.webp"
             action Replay ("gc", locked = False)
 
         imagebutton:
-            idle "images/gallery4new.png"
-            hover "images/gallery4.png"
+            idle "images/gallery4new.webp"
+            hover "images/gallery4.webp"
             action Replay ("fkcon", locked = False)
 
         imagebutton:
-            idle "images/gallery6.png"
-            hover "images/gallery6outline.png"
+            idle "images/gallery6.webp"
+            hover "images/gallery6outline.webp"
             action Replay ("ge", locked = False)
 
         imagebutton:
-            idle "images/gallery5.png"
-            hover "images/gallery5outline.png"
+            idle "images/gallery5.webp"
+            hover "images/gallery5outline.webp"
             action Replay ("gf", locked = False)
 
         imagebutton:
-            idle "images/gallery7.png"
-            hover "images/gallery7outline.png"
+            idle "images/gallery7.webp"
+            hover "images/gallery7outline.webp"
             action Replay ("rileysexscene", locked = False)
 
         imagebutton:
-            idle "images/gallery8.png"
-            hover "images/gallery8outline.png"
+            idle "images/gallery8.webp"
+            hover "images/gallery8outline.webp"
             action Replay ("brbj", locked = False)
 
         imagebutton:
-            idle "images/gallery/gallery9.png"
-            hover "images/gallery/gallery9outline.png"
+            idle "images/gallery/gallery9.webp"
+            hover "images/gallery/gallery9outline.webp"
             action Replay ("v08_cl_start", locked = False)
 
         imagebutton:
-            idle "images/gallery/gallery10.png"
-            hover "images/gallery/gallery10outline.png"
+            idle "images/gallery/gallery10.webp"
+            hover "images/gallery/gallery10outline.webp"
             action Replay ("v08_ri_start", locked = False)
 
         imagebutton:
-            idle "images/gallery/gallery11.png"
-            hover "images/gallery/gallery11outline.png"
+            idle "images/gallery/gallery11.webp"
+            hover "images/gallery/gallery11outline.webp"
             action Replay ("hoco_amb_night", locked = False)
 
         imagebutton:
-            idle "images/gallery/gallery12.png"
-            hover "images/gallery/gallery12outline.png"
+            idle "images/gallery/gallery12.webp"
+            hover "images/gallery/gallery12outline.webp"
             action Replay ("s28_LarsFight", locked = False)
 
         imagebutton:
-            idle "images/gallery/gallery13.png"
-            hover "images/gallery/gallery13outline.png"
+            idle "images/gallery/gallery13.webp"
+            hover "images/gallery/gallery13outline.webp"
             action Replay ("amber_sex_at_joshs", locked = False)
 
         imagebutton:
@@ -4495,7 +4497,7 @@ screen scenegal():
             action Replay ("v9_make_out_w_lin", locked = False)
 
 screen skiptut():
-    add "images/endfr.png"
+    add "images/endfr.webp"
     text "Would you like to play the fighting tutorial?" style "endfree"
     textbutton "Yes" style "endfr":
         action Jump ("sta")
@@ -4511,48 +4513,48 @@ screen skiptut():
 
 screen getaccess():
 
-    add "images/earlyaccess2.jpg"
+    add "images/earlyaccess2.webp"
 
 
     imagebutton:
         ypos 770
         xpos 540
-        idle "images/get2.png"
-        hover "images/get.png"
+        idle "images/get2.webp"
+        hover "images/get.webp"
         action OpenURL ("https://www.patreon.com/collegekings")
 
 screen texta():
 
-    add "images/darker.png"
-    add "images/text1big.jpg" at truecenter
+    add "images/darker.webp"
+    add "images/text1big.webp" at truecenter
 
     imagebutton:
-        idle "images/bigbutton.png"
-        hover "images/bigbutton.png"
+        idle "images/bigbutton.webp"
+        hover "images/bigbutton.webp"
         action Hide ("texta")
 
 screen textb():
 
-    add "images/darker.png"
-    add "images/text2big.jpg" at truecenter
+    add "images/darker.webp"
+    add "images/text2big.webp" at truecenter
 
     imagebutton:
-        idle "images/bigbutton.png"
-        hover "images/bigbutton.png"
+        idle "images/bigbutton.webp"
+        hover "images/bigbutton.webp"
         action Hide ("textb")
 
 screen textc():
 
-    add "images/darker.png"
-    add "images/text3big.jpg" at truecenter
+    add "images/darker.webp"
+    add "images/text3big.webp" at truecenter
 
     imagebutton:
-        idle "images/bigbutton.png"
-        hover "images/bigbutton.png"
+        idle "images/bigbutton.webp"
+        hover "images/bigbutton.webp"
         action Hide ("textc")
 
 screen trolleyskip():
-    add "images/endfr.png"
+    add "images/endfr.webp"
     text "The trolley problem involves hypothetical people and/or animals being run over by a train and can be a lot to handle. The following scene might make you feel uncomfortable or uneasy. If you prefer to skip the trolley problem scene, you can click skip right now.":
         style "endfree"
         yoffset 20
@@ -4571,7 +4573,7 @@ screen trolleyskip():
 
 
 screen skiptut2():
-    add "images/endfr.png"
+    add "images/endfr.webp"
     text "Since this is your first fight, would you like to play the fighting tutorial?" style "endfree"
     textbutton "Yes" style "endfr":
         action Jump ("gb")
@@ -4586,7 +4588,7 @@ screen skiptut2():
         yalign 0.58
 
 screen af():
-    image "images/fightchoice.png"
+    image "images/fightchoice.webp"
 
     text "Fighting":
         xalign 0.5
@@ -4625,7 +4627,7 @@ screen af():
 
 
 screen af2():
-    image "images/fightchoice.png"
+    image "images/fightchoice.webp"
 
     text "Difficulty":
         xalign 0.5
@@ -4666,7 +4668,7 @@ screen af2():
             action Jump ("hard2")
 
 screen af3():
-    image "images/fightchoice.png"
+    image "images/fightchoice.webp"
 
     text "Keybinding":
         xalign 0.5
@@ -4697,7 +4699,7 @@ screen af3():
             action Jump ("letsgoadam")
 
 screen keys1():
-    image "images/fightchoice.png"
+    image "images/fightchoice.webp"
 
     text "Keybinding":
         xalign 0.5
@@ -4729,7 +4731,7 @@ screen keys1():
             action Jump ("letsgoadam")
 
 screen keys2():
-    image "images/fightchoice.png"
+    image "images/fightchoice.webp"
 
     text "Keybinding":
         xalign 0.5
@@ -4761,7 +4763,7 @@ screen keys2():
             action Jump ("letsgoadam")
 
 screen keys3():
-    image "images/fightchoice.png"
+    image "images/fightchoice.webp"
 
     text "Keybinding":
         xalign 0.5
@@ -4793,7 +4795,7 @@ screen keys3():
             action Jump ("letsgoadam")
 
 screen keys4():
-    image "images/fightchoice.png"
+    image "images/fightchoice.webp"
 
     text "Keybinding":
         xalign 0.5
@@ -4833,7 +4835,7 @@ screen keys4():
 screen youattack2():
 
     if adamstance == 1:
-        image "images/afstancejab.jpg"
+        image "images/afstancejab.webp"
 
         key q:
             action Jump ("adamjab1")
@@ -4845,29 +4847,29 @@ screen youattack2():
             action Jump ("adamkick2")
 
         imagebutton:
-            idle "images/jab.png"
-            hover "images/jab.png"
+            idle "images/jab.webp"
+            hover "images/jab.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("adamjab1")
 
         imagebutton:
-            idle "images/hook.png"
-            hover "images/hook.png"
+            idle "images/hook.webp"
+            hover "images/hook.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("adamhook2")
 
         imagebutton:
-            idle "images/body.png"
-            hover "images/body.png"
+            idle "images/body.webp"
+            hover "images/body.webp"
             xalign 0.172
             yalign 0.5
             action Jump ("adambody2")
 
         imagebutton:
-            idle "images/kick.png"
-            hover "images/kick.png"
+            idle "images/kick.webp"
+            hover "images/kick.webp"
             xalign 0.115
             yalign 0.61
             action Jump ("adamkick2")
@@ -4877,7 +4879,7 @@ screen youattack2():
 
 
     if adamstance == 2:
-        image "images/afstancehook.jpg"
+        image "images/afstancehook.webp"
 
         key q:
             action Jump ("adamjab2")
@@ -4889,29 +4891,29 @@ screen youattack2():
             action Jump ("adamkick2")
 
         imagebutton:
-            idle "images/jab.png"
-            hover "images/jab.png"
+            idle "images/jab.webp"
+            hover "images/jab.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("adamjab2")
 
         imagebutton:
-            idle "images/hook.png"
-            hover "images/hook.png"
+            idle "images/hook.webp"
+            hover "images/hook.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("adamhook1")
 
         imagebutton:
-            idle "images/body.png"
-            hover "images/body.png"
+            idle "images/body.webp"
+            hover "images/body.webp"
             xalign 0.172
             yalign 0.5
             action Jump ("adambody2")
 
         imagebutton:
-            idle "images/kick.png"
-            hover "images/kick.png"
+            idle "images/kick.webp"
+            hover "images/kick.webp"
             xalign 0.115
             yalign 0.61
             action Jump ("adamkick2")
@@ -4922,7 +4924,7 @@ screen youattack2():
 
 
     if adamstance == 3:
-        image "images/afstancebody.jpg"
+        image "images/afstancebody.webp"
 
         key q:
             action Jump ("adamjab2")
@@ -4934,29 +4936,29 @@ screen youattack2():
             action Jump ("adamkick2")
 
         imagebutton:
-            idle "images/jab.png"
-            hover "images/jab.png"
+            idle "images/jab.webp"
+            hover "images/jab.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("adamjab2")
 
         imagebutton:
-            idle "images/hook.png"
-            hover "images/hook.png"
+            idle "images/hook.webp"
+            hover "images/hook.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("adamhook2")
 
         imagebutton:
-            idle "images/body.png"
-            hover "images/body.png"
+            idle "images/body.webp"
+            hover "images/body.webp"
             xalign 0.172
             yalign 0.5
             action Jump ("adambody1")
 
         imagebutton:
-            idle "images/kick.png"
-            hover "images/kick.png"
+            idle "images/kick.webp"
+            hover "images/kick.webp"
             xalign 0.115
             yalign 0.61
             action Jump ("adamkick2")
@@ -4966,7 +4968,7 @@ screen youattack2():
     if adamstance == 4:
 
 
-        image "images/afstancekick.jpg"
+        image "images/afstancekick.webp"
 
         key q:
             action Jump ("adamjab2")
@@ -4978,29 +4980,29 @@ screen youattack2():
             action Jump ("adamkick1")
 
         imagebutton:
-            idle "images/jab.png"
-            hover "images/jab.png"
+            idle "images/jab.webp"
+            hover "images/jab.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("adamjab2")
 
         imagebutton:
-            idle "images/hook.png"
-            hover "images/hook.png"
+            idle "images/hook.webp"
+            hover "images/hook.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("adamhook2")
 
         imagebutton:
-            idle "images/body.png"
-            hover "images/body.png"
+            idle "images/body.webp"
+            hover "images/body.webp"
             xalign 0.172
             yalign 0.5
             action Jump ("adambody2")
 
         imagebutton:
-            idle "images/kick.png"
-            hover "images/kick.png"
+            idle "images/kick.webp"
+            hover "images/kick.webp"
             xalign 0.115
             yalign 0.61
             action Jump ("adamkick1")
@@ -5014,7 +5016,7 @@ screen youattack2():
 screen adamattack():
 
     if adamattack == 1:
-        image "images/af13pic.jpg"
+        image "images/af13pic.webp"
 
         key q:
             action Jump ("adamhookblocked")
@@ -5026,29 +5028,29 @@ screen adamattack():
             action Jump ("adamhookhit")
 
         imagebutton:
-            idle "images/hookblock.png"
-            hover "images/hookblock.png"
+            idle "images/hookblock.webp"
+            hover "images/hookblock.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("adamhookblocked")
 
         imagebutton:
-            idle "images/jabblock.png"
-            hover "images/jabblock.png"
+            idle "images/jabblock.webp"
+            hover "images/jabblock.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("adamhookhit")
 
         imagebutton:
-            idle "images/bodyblock.png"
-            hover "images/bodyblock.png"
+            idle "images/bodyblock.webp"
+            hover "images/bodyblock.webp"
             xalign 0.172
             yalign 0.5
             action Jump ("adamhookhit")
 
         imagebutton:
-            idle "images/kickblock.png"
-            hover "images/kickblock.png"
+            idle "images/kickblock.webp"
+            hover "images/kickblock.webp"
             xalign 0.115
             yalign 0.6
             action Jump ("adamhookhit")
@@ -5058,7 +5060,7 @@ screen adamattack():
 
 
     if adamattack == 2:
-        image "images/af14pic.jpg"
+        image "images/af14pic.webp"
 
         key q:
             action Jump ("adamjabhit")
@@ -5070,29 +5072,29 @@ screen adamattack():
             action Jump ("adamjabhit")
 
         imagebutton:
-            idle "images/hookblock.png"
-            hover "images/hookblock.png"
+            idle "images/hookblock.webp"
+            hover "images/hookblock.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("adamjabhit")
 
         imagebutton:
-            idle "images/jabblock.png"
-            hover "images/jabblock.png"
+            idle "images/jabblock.webp"
+            hover "images/jabblock.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("adamjabblocked")
 
         imagebutton:
-            idle "images/bodyblock.png"
-            hover "images/bodyblock.png"
+            idle "images/bodyblock.webp"
+            hover "images/bodyblock.webp"
             xalign 0.172
             yalign 0.5
             action Jump ("adamjabhit")
 
         imagebutton:
-            idle "images/kickblock.png"
-            hover "images/kickblock.png"
+            idle "images/kickblock.webp"
+            hover "images/kickblock.webp"
             xalign 0.115
             yalign 0.6
             action Jump ("adamjabhit")
@@ -5100,7 +5102,7 @@ screen adamattack():
         timer reaction action Jump("adamjabhit")
 
     if adamattack == 3:
-        image "images/af15pic.jpg"
+        image "images/af15pic.webp"
 
         key q:
             action Jump ("adambodyhit")
@@ -5112,29 +5114,29 @@ screen adamattack():
             action Jump ("adambodyhit")
 
         imagebutton:
-            idle "images/hookblock.png"
-            hover "images/hookblock.png"
+            idle "images/hookblock.webp"
+            hover "images/hookblock.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("adambodyhit")
 
         imagebutton:
-            idle "images/jabblock.png"
-            hover "images/jabblock.png"
+            idle "images/jabblock.webp"
+            hover "images/jabblock.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("adambodyhit")
 
         imagebutton:
-            idle "images/bodyblock.png"
-            hover "images/bodyblock.png"
+            idle "images/bodyblock.webp"
+            hover "images/bodyblock.webp"
             xalign 0.172
             yalign 0.5
             action Jump ("adambodyblocked")
 
         imagebutton:
-            idle "images/kickblock.png"
-            hover "images/kickblock.png"
+            idle "images/kickblock.webp"
+            hover "images/kickblock.webp"
             xalign 0.115
             yalign 0.6
             action Jump ("adambodyhit")
@@ -5142,7 +5144,7 @@ screen adamattack():
         timer reaction action Jump("adambodyhit")
 
     if adamattack == 4:
-        image "images/af16pic.jpg"
+        image "images/af16pic.webp"
 
         key q:
             action Jump ("adamkickhit")
@@ -5156,40 +5158,40 @@ screen adamattack():
         timer reaction action Jump("adamkickhit")
 
         imagebutton:
-            idle "images/hookblock.png"
-            hover "images/hookblock.png"
+            idle "images/hookblock.webp"
+            hover "images/hookblock.webp"
             xalign 0.06
             yalign 0.5
             action Jump ("adamkickhit")
 
         imagebutton:
-            idle "images/jabblock.png"
-            hover "images/jabblock.png"
+            idle "images/jabblock.webp"
+            hover "images/jabblock.webp"
             xalign 0.115
             yalign 0.4
             action Jump ("adamkickhit")
 
         imagebutton:
-            idle "images/bodyblock.png"
-            hover "images/bodyblock.png"
+            idle "images/bodyblock.webp"
+            hover "images/bodyblock.webp"
             xalign 0.172
             yalign 0.5
             action Jump ("adamkickhit")
 
         imagebutton:
-            idle "images/kickblock.png"
-            hover "images/kickblock.png"
+            idle "images/kickblock.webp"
+            hover "images/kickblock.webp"
             xalign 0.115
             yalign 0.6
             action Jump ("adamkickblocked")
 
 screen trolleya(time=3): # I set a default reaction time of 5 seconds
 
-    image "images/trolleylever.jpg"
+    image "images/trolleylever.webp"
 
     imagebutton:
-        idle "images/leverno.png"
-        hover "images/lever.png"
+        idle "images/leverno.webp"
+        hover "images/lever.webp"
         ypos 150
         xpos 125
         action Jump ("trolleyab")
@@ -5200,11 +5202,11 @@ screen trolleya(time=3): # I set a default reaction time of 5 seconds
 
 screen trolleyb(time=3): # I set a default reaction time of 5 seconds
 
-    image "images/trolleylever.jpg"
+    image "images/trolleylever.webp"
 
     imagebutton:
-        idle "images/leverno.png"
-        hover "images/lever.png"
+        idle "images/leverno.webp"
+        hover "images/lever.webp"
         ypos 150
         xpos 125
         action Jump ("trolleybb")
@@ -5216,11 +5218,11 @@ screen trolleyb(time=3): # I set a default reaction time of 5 seconds
 
 screen trolleyc(time=3): # I set a default reaction time of 5 seconds
 
-    image "images/trolleylever.jpg"
+    image "images/trolleylever.webp"
 
     imagebutton:
-        idle "images/leverno.png"
-        hover "images/lever.png"
+        idle "images/leverno.webp"
+        hover "images/lever.webp"
         ypos 150
         xpos 125
         action Jump ("trolleycb")
@@ -5340,7 +5342,7 @@ style imgright is button:
 ########################## FREEROAM 3 : WOLVES RUSH PARTY
 
 screen endfreeroam3():
-    add "images/endfr.png"
+    add "images/endfr.webp"
     text "Are you sure you want to end free roam?" style "endfree"
     textbutton "Yes" style "endfr":
         action Jump ("fr3chris3")
@@ -5357,13 +5359,13 @@ screen endfreeroam3():
 
 screen fr3garden():
     if kimpuke == False:
-        add "images/fr3garden.jpg" # location picture
+        add "images/fr3garden.webp" # location picture
 
         imagebutton: #Josh button
             ypos 430
             xpos 1195
-            idle "images/fr3gardenjoshblank.png"
-            hover "images/fr3gardenjosh.png"
+            idle "images/fr3gardenjoshblank.webp"
+            hover "images/fr3gardenjosh.webp"
 
             if fr3josh == False:
                 action Jump ("fr3josh1")
@@ -5376,57 +5378,57 @@ screen fr3garden():
 
     else:
 
-        add "images/fr3garden2.jpg"
+        add "images/fr3garden2.webp"
 
     imagebutton: #Go inside
         ypos 190
         xpos 485
-        idle "images/fr3gardendoorblank.png"
-        hover "images/fr3gardendoor.png"
+        idle "images/fr3gardendoorblank.webp"
+        hover "images/fr3gardendoor.webp"
         action Jump ("labelfr3downstairs")
 
 
 screen fr3downstairs():
 
-    add "images/fr3downstairs.jpg" # location picture
+    add "images/fr3downstairs.webp" # location picture
 
     imagebutton: #Go outside
         ypos 900
         xpos 440
-        idle "images/fr3downstairsbackblank.png"
-        hover "images/fr3downstairsback.png"
+        idle "images/fr3downstairsbackblank.webp"
+        hover "images/fr3downstairsback.webp"
         action Jump ("labelfr3garden")
 
     imagebutton: #Go upstairs
         ypos 0
         xpos 940
-        idle "images/fr3downstairsstairsblank.png"
-        hover "images/fr3downstairsstairs.png"
+        idle "images/fr3downstairsstairsblank.webp"
+        hover "images/fr3downstairsstairs.webp"
         action Jump ("labelfr3upstairs")
 
     imagebutton: #Go living room
         ypos 70
         xpos 360
-        idle "images/fr3downstairsdoorblank.png"
-        hover "images/fr3downstairsdoor.png"
+        idle "images/fr3downstairsdoorblank.webp"
+        hover "images/fr3downstairsdoor.webp"
         action Jump ("labelfr3livingroom")
 
     imagebutton: #Go kitchen
         ypos 368
         xpos 1486
-        idle "images/fr3downstairsrightblank.png"
-        hover "images/fr3downstairsright.png"
+        idle "images/fr3downstairsrightblank.webp"
+        hover "images/fr3downstairsright.webp"
         action Jump ("labelfr3kitchen2")
 
 screen fr3livingroom():
 
-    add "images/fr3livingroom.jpg" # location picture
+    add "images/fr3livingroom.webp" # location picture
 
     imagebutton: #guy1 button
         ypos 392
         xpos 760
-        idle "images/fr3livingroomsofablank.png"
-        hover "images/fr3livingroomsofa.png"
+        idle "images/fr3livingroomsofablank.webp"
+        hover "images/fr3livingroomsofa.webp"
 
         if fr3guy == False:
             action Jump ("fr3guy1")
@@ -5437,8 +5439,8 @@ screen fr3livingroom():
     imagebutton: #Aubrey button
         ypos 254
         xpos 804
-        idle "images/fr3livingroomaubreyblank.png"
-        hover "images/fr3livingroomaubrey.png"
+        idle "images/fr3livingroomaubreyblank.webp"
+        hover "images/fr3livingroomaubrey.webp"
 
         if fr3aubrey == False:
             action Jump ("fr3aubrey1")
@@ -5456,26 +5458,26 @@ screen fr3livingroom():
     imagebutton: #Go back
         ypos 915
         xpos 432
-        idle "images/fr3livingroombackblank.png"
-        hover "images/fr3livingroomback.png"
+        idle "images/fr3livingroombackblank.webp"
+        hover "images/fr3livingroomback.webp"
         action Jump ("labelfr3downstairs")
 
     imagebutton: #Go kitchen
         ypos 106
         xpos 1700
-        idle "images/fr3livingroomdoorblank.png"
-        hover "images/fr3livingroomdoor.png"
+        idle "images/fr3livingroomdoorblank.webp"
+        hover "images/fr3livingroomdoor.webp"
         action Jump ("labelfr3kitchen")
 
 screen fr3kitchen():
 
-    add "images/fr3kitchen.jpg" # location picture
+    add "images/fr3kitchen.webp" # location picture
 
     imagebutton: #chris button
         ypos 60
         xpos 1147
-        idle "images/fr3kitchenchrisblank.png"
-        hover "images/fr3kitchenchrisn.png"
+        idle "images/fr3kitchenchrisblank.webp"
+        hover "images/fr3kitchenchrisn.webp"
 
         if fr3chris == False:
             action Jump ("fr3chris1")
@@ -5486,8 +5488,8 @@ screen fr3kitchen():
     imagebutton: #Matt button
         ypos 139
         xpos 1048
-        idle "images/fr3kitchenmattblank.png"
-        hover "images/fr3kitchenmatt.png"
+        idle "images/fr3kitchenmattblank.webp"
+        hover "images/fr3kitchenmatt.webp"
 
         if fr3matt == False:
             action Jump ("fr3matt1")
@@ -5498,22 +5500,22 @@ screen fr3kitchen():
     imagebutton: # Go Kitchen 2
         ypos 99
         xpos 0
-        idle "images/fr3kitchenleftblank.png"
-        hover "images/fr3kitchenleft.png"
+        idle "images/fr3kitchenleftblank.webp"
+        hover "images/fr3kitchenleft.webp"
         action Jump ("labelfr3kitchen2")
 
     imagebutton: # Go Living room
         ypos 100
         xpos 0
-        idle "images/fr3kitchenlivingdoorblank.png"
-        hover "images/fr3kitchenlivingdoor.png"
+        idle "images/fr3kitchenlivingdoorblank.webp"
+        hover "images/fr3kitchenlivingdoor.webp"
         action Jump ("labelfr3livingroom")
 
     imagebutton: #Riley button
         ypos 270
         xpos 328
-        idle "images/fr3kitchenrileyblank.png"
-        hover "images/fr3kitchenriley.png"
+        idle "images/fr3kitchenrileyblank.webp"
+        hover "images/fr3kitchenriley.webp"
 
         if fr3riley == False:
             action Jump ("fr3riley1")
@@ -5526,65 +5528,65 @@ screen fr3kitchen():
 
 screen fr3kitchen2():
 
-    add "images/fr3kitchen2.jpg" # location picture
+    add "images/fr3kitchen2.webp" # location picture
 
     imagebutton: # Go Ktichen
         ypos 836
         xpos 358
-        idle "images/fr3kitchen2backblank.png"
-        hover "images/fr3kitchen2back.png"
+        idle "images/fr3kitchen2backblank.webp"
+        hover "images/fr3kitchen2back.webp"
         action Jump ("labelfr3kitchen")
 
     imagebutton: # Go Middleroom
         ypos 65
         xpos 0
-        idle "images/fr3kitchen2doorblank.png"
-        hover "images/fr3kitchen2door.png"
+        idle "images/fr3kitchen2doorblank.webp"
+        hover "images/fr3kitchen2door.webp"
         action Jump ("labelfr3middleroom")
 
     imagebutton: # Go downstairs hallway
         ypos 245
         xpos 1364
-        idle "images/fr3kitchen2rightblank.png"
-        hover "images/fr3kitchen2right.png"
+        idle "images/fr3kitchen2rightblank.webp"
+        hover "images/fr3kitchen2right.webp"
         action Jump ("labelfr3downstairs")
 
 
 screen fr3middleroom():
 
-    add "images/fr3middleroom.jpg" # location picture
+    add "images/fr3middleroom.webp" # location picture
 
     imagebutton: # Go Kitchen2
         ypos 0
         xpos 50
-        idle "images/fr3middleroomleftblank.png"
-        hover "images/fr3middleroomleft.png"
+        idle "images/fr3middleroomleftblank.webp"
+        hover "images/fr3middleroomleft.webp"
         action Jump ("labelfr3kitchen2")
 
     imagebutton: # Downstairs bathroom
         ypos 106
         xpos 700
-        idle "images/fr3middleroommiddleblank.png"
-        hover "images/fr3middleroommiddle.png"
+        idle "images/fr3middleroommiddleblank.webp"
+        hover "images/fr3middleroommiddle.webp"
         action Jump ("fr3dsbathroom")
 
     imagebutton: # Go garage
         ypos 0
         xpos 1210
-        idle "images/fr3middleroomrightblank.png"
-        hover "images/fr3middleroomright.png"
+        idle "images/fr3middleroomrightblank.webp"
+        hover "images/fr3middleroomright.webp"
         action Jump ("labelfr3garage")
 
 
 screen fr3garage():
     if kimpuke == False:
-        add "images/fr3garage.jpg" # location picture
+        add "images/fr3garage.webp" # location picture
 
         imagebutton: #Amber button
             ypos 235
             xpos 345
-            idle "images/fr3garageamberblank.png"
-            hover "images/fr3garageamber.png"
+            idle "images/fr3garageamberblank.webp"
+            hover "images/fr3garageamber.webp"
 
             if fr3amber == False:
                 action Jump ("fr3amber1")
@@ -5596,13 +5598,13 @@ screen fr3garage():
                     action Jump ("fr3amber2")
 
     else:
-        add "images/fr3garage2.jpg"
+        add "images/fr3garage2.webp"
 
     imagebutton: #sebastian button
         ypos 168
         xpos 1338
-        idle "images/fr3garagefightblank.png"
-        hover "images/fr3garagefight.png"
+        idle "images/fr3garagefightblank.webp"
+        hover "images/fr3garagefight.webp"
 
         if fr3sebastian == False:
             action Jump ("fr3sebastian1")
@@ -5614,41 +5616,41 @@ screen fr3garage():
     imagebutton: # Go back to middleroom
         ypos 877
         xpos 473
-        idle "images/fr3garagebackblank.png"
-        hover "images/fr3garageback.png"
+        idle "images/fr3garagebackblank.webp"
+        hover "images/fr3garageback.webp"
         action Jump ("labelfr3middleroom")
 
 
 screen fr3upstairs():
 
-    add "images/fr3upstairs.jpg" # location picture
+    add "images/fr3upstairs.webp" # location picture
 
     imagebutton: # Go backdownstairs
         yalign 1.0
         xalign 0.5
-        idle "images/fr3upstairsbackblank.png"
-        hover "images/fr3upstairsback.png"
+        idle "images/fr3upstairsbackblank.webp"
+        hover "images/fr3upstairsback.webp"
         action Jump ("labelfr3downstairs")
 
     imagebutton: # go office
         ypos 140
         xpos 1125
-        idle "images/fr3upstairsrightblank.png"
-        hover "images/fr3upstairsright.png"
+        idle "images/fr3upstairsrightblank.webp"
+        hover "images/fr3upstairsright.webp"
         action Jump ("fr3office")
 
     imagebutton: # Go roofroom
         ypos 115
         xpos 922
-        idle "images/fr3upstairsmiddleblank.png"
-        hover "images/fr3upstairsmiddle.png"
+        idle "images/fr3upstairsmiddleblank.webp"
+        hover "images/fr3upstairsmiddle.webp"
         action Jump ("labelfr3roofroom")
 
     imagebutton: #chloe button
         ypos 25
         xpos 490
-        idle "images/fr3upstairsleftblank.png"
-        hover "images/fr3upstairsleft.png"
+        idle "images/fr3upstairsleftblank.webp"
+        hover "images/fr3upstairsleft.webp"
 
         if fr3chloe == False:
             action Jump ("fr3chloe1")
@@ -5658,61 +5660,61 @@ screen fr3upstairs():
 
 screen fr3office():
 
-    add "images/fr3office.jpg" # location picture
+    add "images/fr3office.webp" # location picture
 
     imagebutton: # Go back out of office
         ypos 847
         xpos 440
-        idle "images/fr3officebackblank.png"
-        hover "images/fr3officeback.png"
+        idle "images/fr3officebackblank.webp"
+        hover "images/fr3officeback.webp"
         action Jump ("labelfr3upstairs")
 
     imagebutton: # picture
         ypos 115
         xpos 100
-        idle "images/fr3officephotoblank.png"
-        hover "images/fr3officephoto.png"
+        idle "images/fr3officephotoblank.webp"
+        hover "images/fr3officephoto.webp"
         action Jump ("fr3picture")
 
     imagebutton: # certificate
         ypos 212
         xpos 1240
-        idle "images/fr3officecertificateblank.png"
-        hover "images/fr3officecertificate.png"
+        idle "images/fr3officecertificateblank.webp"
+        hover "images/fr3officecertificate.webp"
         action Jump ("fr3certificate")
 
     imagebutton: # books
         ypos 593
         xpos 1382
-        idle "images/fr3officebooksblank.png"
-        hover "images/fr3officebooks.png"
+        idle "images/fr3officebooksblank.webp"
+        hover "images/fr3officebooks.webp"
         action Jump ("fr3books")
 
     imagebutton: # trophies
         yalign 1.0
         xpos 1480
-        idle "images/fr3officetrophyblank.png"
-        hover "images/fr3officetrophy.png"
+        idle "images/fr3officetrophyblank.webp"
+        hover "images/fr3officetrophy.webp"
         action Jump ("fr3trophies")
 
 
 
 screen fr3roofroom():
 
-    add "images/fr3roofroom.jpg" # location picture
+    add "images/fr3roofroom.webp" # location picture
 
     imagebutton: # Go back
         yalign 1.0
         xpos 500
-        idle "images/fr3roofroombackblank.png"
-        hover "images/fr3roofroomback.png"
+        idle "images/fr3roofroombackblank.webp"
+        hover "images/fr3roofroomback.webp"
         action Jump ("labelfr3upstairs")
 
     imagebutton: #Window (Nora) button
         ypos 50
         xpos 327
-        idle "images/fr3roofroomwindowblank.png"
-        hover "images/fr3roofroomwindow.png"
+        idle "images/fr3roofroomwindowblank.webp"
+        hover "images/fr3roofroomwindow.webp"
 
         if fr3nora == False:
             action Jump ("fr3nora1")
@@ -5740,28 +5742,28 @@ screen emilysexoverlay():
         ypos 10
 
         imagebutton:
-            idle "images/emhead.png"
-            hover "images/emhead.png"
+            idle "images/emhead.webp"
+            hover "images/emhead.webp"
             action Jump ("emhead")
 
         imagebutton:
-            idle "images/emfacefuck.png"
-            hover "images/emfacefuck.png"
+            idle "images/emfacefuck.webp"
+            hover "images/emfacefuck.webp"
             action Jump ("emfacefuck")
 
         imagebutton:
-            idle "images/embehind.png"
-            hover "images/embehind.png"
+            idle "images/embehind.webp"
+            hover "images/embehind.webp"
             action Jump ("embehind")
 
         imagebutton:
-            idle "images/embutterfly.png"
-            hover "images/embutterfly.png"
+            idle "images/embutterfly.webp"
+            hover "images/embutterfly.webp"
             action Jump ("embutterfly")
 
         imagebutton:
-            idle "images/emclimax.png"
-            hover "images/emclimax.png"
+            idle "images/emclimax.webp"
+            hover "images/emclimax.webp"
             action Jump ("emclimax")
 
 screen aubreysexoverlaybutton():
@@ -5784,33 +5786,33 @@ screen aubreysexoverlay():
         ypos 10
 
         imagebutton:
-            idle "images/naubblowjob.png"
-            hover "images/naubblowjob.png"
+            idle "images/naubblowjob.webp"
+            hover "images/naubblowjob.webp"
             action Jump ("naubblowjob")
 
         imagebutton:
-            idle "images/naub69.png"
-            hover "images/naub69.png"
+            idle "images/naub69.webp"
+            hover "images/naub69.webp"
             action Jump ("naub69")
 
         imagebutton:
-            idle "images/naubfingering.png"
-            hover "images/naubfingering.png"
+            idle "images/naubfingering.webp"
+            hover "images/naubfingering.webp"
             action Jump ("naubfingering")
 
         imagebutton:
-            idle "images/naubmissionary.png"
-            hover "images/naubmissionary.png"
+            idle "images/naubmissionary.webp"
+            hover "images/naubmissionary.webp"
             action Jump ("naubmissionary")
 
         imagebutton:
-            idle "images/naubbehind.png"
-            hover "images/naubbehind.png"
+            idle "images/naubbehind.webp"
+            hover "images/naubbehind.webp"
             action Jump ("naubbehind")
 
         imagebutton:
-            idle "images/naubclimax.png"
-            hover "images/naubclimax.png"
+            idle "images/naubclimax.webp"
+            hover "images/naubclimax.webp"
             action Jump ("naubclimax")
 
 screen letter1():
@@ -5830,7 +5832,7 @@ screen letter1():
     # hc_girlreject - a semi-transparent red "X" mark with a semi-transparent grey background to show when hovered on girls when they cannot be asked or have already been asked
 default tmpGirl = "none"
 screen hc_select():
-    add "images/homecomingchoice.jpg"
+    add "images/homecomingchoice.webp"
     use hc_info()
 
     vpgrid:
@@ -5842,16 +5844,16 @@ screen hc_select():
 
         if "amber" not in hcAsked and not laurenrs:
             imagebutton:
-                idle "images/HCAmber.png"
-                hover "images/HCAmber2.png"
+                idle "images/HCAmber.webp"
+                hover "images/HCAmber2.webp"
                 hovered SetVariable("tmpGirl", "amber")
                 ypos # 1
                 xpos # 1
                 action Jump("hc_asking_amber")
         else:
             imagebutton:
-                idle "images/HCAmber3.png"
-                hover "images/HCAmber23.png"
+                idle "images/HCAmber3.webp"
+                hover "images/HCAmber23.webp"
                 hovered SetVariable("tmpGirl", "amber")
                 ypos # 1
                 xpos # 1
@@ -5859,16 +5861,16 @@ screen hc_select():
 
         if "aubrey" not in hcAsked and not laurenrs:
             imagebutton:
-                idle "images/HCAubrey.png"
-                hover "images/HCAubrey2.png"
+                idle "images/HCAubrey.webp"
+                hover "images/HCAubrey2.webp"
                 hovered SetVariable("tmpGirl", "aubrey")
                 ypos # 1
                 xpos # 2
                 action Jump("hc_asking_aubrey")
         else:
             imagebutton:
-                idle "images/HCAubrey3.png"
-                hover "images/HCAubrey23.png"
+                idle "images/HCAubrey3.webp"
+                hover "images/HCAubrey23.webp"
                 hovered SetVariable("tmpGirl", "aubrey")
                 ypos # 1
                 xpos # 2
@@ -5876,16 +5878,16 @@ screen hc_select():
 
         if "autumn" not in hcAsked and not laurenrs and not autumnmad:
             imagebutton:
-                idle "images/HCAutumn.png"
-                hover "images/HCAutumn2.png"
+                idle "images/HCAutumn.webp"
+                hover "images/HCAutumn2.webp"
                 hovered SetVariable("tmpGirl", "autumn")
                 ypos # 1
                 xpos # 3
                 action Jump("hc_asking_autumn")
         else:
             imagebutton:
-                idle "images/HCAutumn3.png"
-                hover "images/HCAutumn23.png"
+                idle "images/HCAutumn3.webp"
+                hover "images/HCAutumn23.webp"
                 hovered SetVariable("tmpGirl", "autumn")
                 ypos # 1
                 xpos # 3
@@ -5893,16 +5895,16 @@ screen hc_select():
 
         if "chloe" not in hcAsked and not laurenrs and not chloemad:
             imagebutton:
-                idle "images/HCChloe.png"
-                hover "images/HCChloe2.png"
+                idle "images/HCChloe.webp"
+                hover "images/HCChloe2.webp"
                 hovered SetVariable("tmpGirl", "chloe")
                 ypos # 2
                 xpos # 1
                 action Jump("hc_asking_chloe")
         else:
             imagebutton:
-                idle "images/HCChloe3.png"
-                hover "images/HCChloe23.png"
+                idle "images/HCChloe3.webp"
+                hover "images/HCChloe23.webp"
                 hovered SetVariable("tmpGirl", "chloe")
                 ypos # 2
                 xpos # 1
@@ -5910,16 +5912,16 @@ screen hc_select():
 
         if "emily" not in hcAsked and not laurenrs and forgiveemily:
             imagebutton:
-                idle "images/HCEmily.png"
-                hover "images/HCEmily2.png"
+                idle "images/HCEmily.webp"
+                hover "images/HCEmily2.webp"
                 hovered SetVariable("tmpGirl", "emily")
                 ypos # 2
                 xpos # 2
                 action Jump("hc_asking_emily")
         else:
             imagebutton:
-                idle "images/HCEmily3.png"
-                hover "images/HCEmily23.png"
+                idle "images/HCEmily3.webp"
+                hover "images/HCEmily23.webp"
                 hovered SetVariable("tmpGirl", "emily")
                 ypos # 2
                 xpos # 2
@@ -5927,16 +5929,16 @@ screen hc_select():
 
         if "lauren" not in hcAsked and not laurenemily == 3: # Can ask her if she did not break up for suggesting an open relationship
             imagebutton:
-                idle "images/HCLauren.png"
-                hover "images/HCLauren2.png"
+                idle "images/HCLauren.webp"
+                hover "images/HCLauren2.webp"
                 hovered SetVariable("tmpGirl", "lauren")
                 ypos # 2
                 xpos # 3
                 action Jump("hc_asking_lauren")
         else:
             imagebutton:
-                idle "images/HCLauren3.png"
-                hover "images/HCLauren23.png"
+                idle "images/HCLauren3.webp"
+                hover "images/HCLauren23.webp"
                 hovered SetVariable("tmpGirl", "lauren")
                 ypos # 2
                 xpos # 3
@@ -5944,16 +5946,16 @@ screen hc_select():
 
         if "penelope" not in hcAsked and not laurenrs:
             imagebutton:
-                idle "images/HCPenelope.png"
-                hover "images/HCPenelope2.png"
+                idle "images/HCPenelope.webp"
+                hover "images/HCPenelope2.webp"
                 hovered SetVariable("tmpGirl", "penelope")
                 ypos # 3
                 xpos # 1
                 action Jump("hc_asking_penelope")
         else:
             imagebutton:
-                idle "images/HCPenelope3.png"
-                hover "images/HCPenelope23.png"
+                idle "images/HCPenelope3.webp"
+                hover "images/HCPenelope23.webp"
                 hovered SetVariable("tmpGirl", "penelope")
                 ypos # 3
                 xpos # 1
@@ -5961,16 +5963,16 @@ screen hc_select():
 
         if "riley" not in hcAsked and not laurenrs:
             imagebutton:
-                idle "images/HCRiley.png"
-                hover "images/HCRiley2.png"
+                idle "images/HCRiley.webp"
+                hover "images/HCRiley2.webp"
                 hovered SetVariable("tmpGirl", "riley")
                 ypos # 3
                 xpos # 2
                 action Jump("hc_asking_riley")
         else:
             imagebutton:
-                idle "images/HCRiley3.png"
-                hover "images/HCRiley23.png"
+                idle "images/HCRiley3.webp"
+                hover "images/HCRiley23.webp"
                 hovered SetVariable("tmpGirl", "riley")
                 ypos # 3
                 xpos # 2
@@ -6061,7 +6063,7 @@ screen hc_info():
 ########################## FREEROAM 4 : HOMECOMING
 
 screen endfr4(labelYes, labelNo, girl):
-    add "images/endfr.png"
+    add "images/endfr.webp"
     text "Are you sure you want to end the free roam with [girl]?" style "endfree"
     textbutton "Yes" style "endfr":
         action Jump (labelYes)
@@ -6081,46 +6083,46 @@ screen fr4dancefloor():
 
     if hcGirl == "chloe":
         if fr4nora and not fr4nora2:
-            add "images/fr4dancefloorchloedatenonora.jpg"
+            add "images/fr4dancefloorchloedatenonora.webp"
         else:
-            add "images/fr4dancefloorchloedate.jpg"
+            add "images/fr4dancefloorchloedate.webp"
 
     elif hcGirl == "emily":
         if fr4nora and not fr4nora2:
-            add "images/fr4danceflooremilydatenonora.jpg"
+            add "images/fr4danceflooremilydatenonora.webp"
         else:
-            add "images/fr4danceflooremilydate.jpg"
+            add "images/fr4danceflooremilydate.webp"
 
     elif hcGirl == "lauren":
         if fr4nora and not fr4nora2:
-            add "images/fr4dancefloorlaurendatenonora.jpg"
+            add "images/fr4dancefloorlaurendatenonora.webp"
         else:
-            add "images/fr4dancefloorlaurendate.jpg"
+            add "images/fr4dancefloorlaurendate.webp"
 
     elif hcGirl == "penelope":
         if fr4nora and not fr4nora2:
-            add "images/fr4dancefloorpenelopedatenonora.jpg"
+            add "images/fr4dancefloorpenelopedatenonora.webp"
         else:
-            add "images/fr4dancefloorpenelopedate.jpg"
+            add "images/fr4dancefloorpenelopedate.webp"
 
     elif hcGirl == "riley":
         if fr4nora and not fr4nora2:
-            add "images/fr4dancefloorrileydatenonora.jpg"
+            add "images/fr4dancefloorrileydatenonora.webp"
         else:
-            add "images/fr4dancefloorrileydate.jpg"
+            add "images/fr4dancefloorrileydate.webp"
 
     else:
         if fr4nora and not fr4nora2:
-            add "images/fr4dancefloornodatenonora.jpg"
+            add "images/fr4dancefloornodatenonora.webp"
         else:
-            add "images/fr4dancefloornodate.jpg"
+            add "images/fr4dancefloornodate.webp"
 
     if not fr4nora or fr4nora2:
         imagebutton:
             ypos 0
             xpos 0
-            idle "images/fr4dancefloornora.png"
-            hover "images/fr4dancefloornorahover.png"
+            idle "images/fr4dancefloornora.webp"
+            hover "images/fr4dancefloornorahover.webp"
             if fr4nora2:
 
                 action Jump ("fr4nora3")
@@ -6131,8 +6133,8 @@ screen fr4dancefloor():
         imagebutton:
             ypos 0
             xpos 150
-            idle "images/fr4dancefloorchris.png"
-            hover "images/fr4dancefloorchrishover.png"
+            idle "images/fr4dancefloorchris.webp"
+            hover "images/fr4dancefloorchrishover.webp"
             action Jump ("fr4chris1")
 
 
@@ -6140,8 +6142,8 @@ screen fr4dancefloor():
     imagebutton:
         ypos 50
         xpos 1100
-        idle "images/fr4dancefloorelijah.png"
-        hover "images/fr4dancefloorelijahhover.png"
+        idle "images/fr4dancefloorelijah.webp"
+        hover "images/fr4dancefloorelijahhover.webp"
         if not fr4elijah:
             action Jump ("fr4elijah1")
         else:
@@ -6150,8 +6152,8 @@ screen fr4dancefloor():
     imagebutton:
         ypos 85
         xpos 905
-        idle "images/fr4dancefloormason.png"
-        hover "images/fr4dancefloormasonhover.png"
+        idle "images/fr4dancefloormason.webp"
+        hover "images/fr4dancefloormasonhover.webp"
         if not fr4mason:
             action Jump ("fr4mason1")
         else:
@@ -6163,8 +6165,8 @@ screen fr4dancefloor():
         imagebutton:
             ypos 30
             xpos 645
-            idle "images/fr4dancefloorchloe.png"
-            hover "images/fr4dancefloorchloehover.png"
+            idle "images/fr4dancefloorchloe.webp"
+            hover "images/fr4dancefloorchloehover.webp"
             action Jump ("fr4chloedate")
 
     elif hcGirl == "emily":
@@ -6172,8 +6174,8 @@ screen fr4dancefloor():
         imagebutton:
             ypos 0
             xpos 615
-            idle "images/fr4danceflooremily.png"
-            hover "images/fr4danceflooremilyhover.png"
+            idle "images/fr4danceflooremily.webp"
+            hover "images/fr4danceflooremilyhover.webp"
             action Jump ("fr4emilydate")
 
     elif hcGirl == "lauren":
@@ -6181,8 +6183,8 @@ screen fr4dancefloor():
         imagebutton:
             ypos 0
             xpos 617
-            idle "images/fr4dancefloorlauren.png"
-            hover "images/fr4dancefloorlaurenhover.png"
+            idle "images/fr4dancefloorlauren.webp"
+            hover "images/fr4dancefloorlaurenhover.webp"
             action Jump ("fr4laurendate")
 
     elif hcGirl == "penelope":
@@ -6190,37 +6192,37 @@ screen fr4dancefloor():
         imagebutton:
             ypos 0
             xpos 655
-            idle "images/fr4dancefloorpenelope.png"
-            hover "images/fr4dancefloorpenelopehover.png"
+            idle "images/fr4dancefloorpenelope.webp"
+            hover "images/fr4dancefloorpenelopehover.webp"
             action Jump ("fr4penelopedate")
 
     elif hcGirl == "riley":
         imagebutton:
             ypos 25
             xpos 675
-            idle "images/fr4dancefloorriley.png"
-            hover "images/fr4dancefloorrileyhover.png"
+            idle "images/fr4dancefloorriley.webp"
+            hover "images/fr4dancefloorrileyhover.webp"
             action Jump ("fr4rileydate")
 
     imagebutton:
         yalign 1.0
         xalign 0.5
-        idle "images/fr4bottom.png"
-        hover "images/fr4bottomhover.png"
+        idle "images/fr4bottom.webp"
+        hover "images/fr4bottomhover.webp"
         action Jump ("labelfr4gymentrance")
 
     imagebutton:
         yalign 0.5
         xalign 0
-        idle "images/fr4left.png"
-        hover "images/fr4lefthover.png"
+        idle "images/fr4left.webp"
+        hover "images/fr4lefthover.webp"
         action Jump ("labelfr4gymleft")
 
     imagebutton:
         yalign 0.5
         xalign 1.0
-        idle "images/fr4right.png"
-        hover "images/fr4righthover.png"
+        idle "images/fr4right.webp"
+        hover "images/fr4righthover.webp"
         action Jump ("labelfr4gymright")
 
 
@@ -6228,49 +6230,49 @@ screen fr4gymleft():
 
     if hcGirl == "chloe":
         if fr4riley:
-            add "images/fr4gymleftnochloenoriley.jpg"
+            add "images/fr4gymleftnochloenoriley.webp"
         else:
-            add "images/fr4gymleftnochloe.jpg"
+            add "images/fr4gymleftnochloe.webp"
 
     elif hcGirl == "riley":
 
         if fr4chloe:
-            add "images/fr4gymleftnochloenoriley.jpg"
+            add "images/fr4gymleftnochloenoriley.webp"
         else:
-            add "images/fr4gymleftnoriley.jpg"
+            add "images/fr4gymleftnoriley.webp"
 
     else:
         if fr4riley and fr4chloe:
-            add "images/fr4gymleftnochloenoriley.jpg"
+            add "images/fr4gymleftnochloenoriley.webp"
         elif fr4riley:
-            add "images/fr4gymleftnoriley.jpg"
+            add "images/fr4gymleftnoriley.webp"
         elif fr4chloe:
-            add "images/fr4gymleftnochloe.jpg"
+            add "images/fr4gymleftnochloe.webp"
         else:
-            add "images/fr4gymleft.jpg"
+            add "images/fr4gymleft.webp"
 
     if not hcGirl == "chloe":
         if not fr4chloe:
             imagebutton:
                 ypos 190
                 xpos 375
-                idle "images/fr4gymleftchloe.png"
-                hover "images/fr4gymleftchloehover.png"
+                idle "images/fr4gymleftchloe.webp"
+                hover "images/fr4gymleftchloehover.webp"
                 action Jump ("fr4chloe1")
         else:
             imagebutton:
                 ypos 195
                 xpos 63
-                idle "images/fr4gymleftryan.png"
-                hover "images/fr4gymleftryanhover.png"
+                idle "images/fr4gymleftryan.webp"
+                hover "images/fr4gymleftryanhover.webp"
                 action Jump ("fr4ryan3")
 
     else:
         imagebutton:
             ypos 195
             xpos 63
-            idle "images/fr4gymleftryan.png"
-            hover "images/fr4gymleftryanhover.png"
+            idle "images/fr4gymleftryan.webp"
+            hover "images/fr4gymleftryanhover.webp"
             action Jump ("fr4ryan1")
 
     if not hcGirl == "riley" and not fr4riley:
@@ -6278,8 +6280,8 @@ screen fr4gymleft():
         imagebutton:
             ypos 215
             xpos 1485
-            idle "images/fr4gymleftriley.png"
-            hover "images/fr4gymleftrileyhover.png"
+            idle "images/fr4gymleftriley.webp"
+            hover "images/fr4gymleftrileyhover.webp"
             action Jump ("fr4riley1")
 
     else:
@@ -6287,8 +6289,8 @@ screen fr4gymleft():
         imagebutton:
             ypos 225
             xpos 1520
-            idle "images/fr4gymleftaubrey.png"
-            hover "images/fr4gymleftaubreyhover.png"
+            idle "images/fr4gymleftaubrey.webp"
+            hover "images/fr4gymleftaubreyhover.webp"
             if not fr4aubrey:
                 action Jump ("fr4aubrey1")
             else:
@@ -6297,24 +6299,24 @@ screen fr4gymleft():
     imagebutton:
         yalign 1.0
         xalign 0.5
-        idle "images/fr4bottom.png"
-        hover "images/fr4bottomhover.png"
+        idle "images/fr4bottom.webp"
+        hover "images/fr4bottomhover.webp"
         action Jump ("labelfr4dancefloor")
 
 screen fr4gymright():
 
     if hcGirl == "lauren":
-        add "images/fr4gymrightnolauren.jpg"
+        add "images/fr4gymrightnolauren.webp"
     else:
-        add "images/fr4gymright.jpg"
+        add "images/fr4gymright.webp"
 
 
     if not hcGirl == "lauren":
         imagebutton:
             ypos 355
             xpos 1492
-            idle "images/fr4gymrightlauren.png"
-            hover "images/fr4gymrightlaurenhover.png"
+            idle "images/fr4gymrightlauren.webp"
+            hover "images/fr4gymrightlaurenhover.webp"
             if not fr4lauren:
                 action Jump ("fr4lauren1")
             else:
@@ -6323,8 +6325,8 @@ screen fr4gymright():
         imagebutton:
             ypos 335
             xpos 1775
-            idle "images/fr4gymrightmsrose.png"
-            hover "images/fr4gymrightmsrosehover.png"
+            idle "images/fr4gymrightmsrose.webp"
+            hover "images/fr4gymrightmsrosehover.webp"
             if not fr4msrose:
                 action Jump ("fr4msrose1")
             else:
@@ -6333,8 +6335,8 @@ screen fr4gymright():
     imagebutton:
         ypos 360
         xpos 0
-        idle "images/fr4gymrightcameron.png"
-        hover "images/fr4gymrightcameronhover.png"
+        idle "images/fr4gymrightcameron.webp"
+        hover "images/fr4gymrightcameronhover.webp"
         if not fr4cameron:
             action Jump ("fr4cameron1")
         else:
@@ -6343,42 +6345,42 @@ screen fr4gymright():
     imagebutton:
         yalign 1.0
         xalign 0.5
-        idle "images/fr4bottom.png"
-        hover "images/fr4bottomhover.png"
+        idle "images/fr4bottom.webp"
+        hover "images/fr4bottomhover.webp"
         action Jump ("labelfr4dancefloor")
 
 screen fr4gymentrance():
 
     if fr4riley and not fr4noriley and fr4nora and not fr4nora2:
-        add "images/fr4gymentrancerileynora.jpg"
+        add "images/fr4gymentrancerileynora.webp"
     elif fr4riley and not fr4noriley:
-        add "images/fr4gymentranceriley.jpg"
+        add "images/fr4gymentranceriley.webp"
     elif fr4nora and not fr4nora2:
-        add "images/fr4gymentrancenora.jpg"
+        add "images/fr4gymentrancenora.webp"
     else:
-        add "images/fr4gymentrance.jpg"
+        add "images/fr4gymentrance.webp"
 
     if fr4riley and not fr4noriley:
         imagebutton:
             ypos 318
             xpos 365
-            idle "images/fr4gymentranceriley.png"
-            hover "images/fr4gymentrancerileyhover.png"
+            idle "images/fr4gymentranceriley.webp"
+            hover "images/fr4gymentrancerileyhover.webp"
             action Jump ("fr4riley2")
 
     if fr4nora and not fr4nora2:
         imagebutton:
             ypos 315
             xpos 0
-            idle "images/fr4gymentrancenora.png"
-            hover "images/fr4gymentrancenorahover.png"
+            idle "images/fr4gymentrancenora.webp"
+            hover "images/fr4gymentrancenorahover.webp"
             action Jump ("fr4nora2")
 
     imagebutton:
         ypos 440
         xpos 1235
-        idle "images/fr4gymentranceaaron.png"
-        hover "images/fr4gymentranceaaronhover.png"
+        idle "images/fr4gymentranceaaron.webp"
+        hover "images/fr4gymentranceaaronhover.webp"
         if not fr4aaron:
             action Jump ("fr4aaron1")
         else:
@@ -6387,60 +6389,60 @@ screen fr4gymentrance():
     imagebutton:
         yalign 1.0
         xalign 0.5
-        idle "images/fr4bottom.png"
-        hover "images/fr4bottomhover.png"
+        idle "images/fr4bottom.webp"
+        hover "images/fr4bottomhover.webp"
         action Jump ("labelfr4dancefloor")
 
     imagebutton:
         ypos 285
         xpos 710
-        idle "images/fr4gymentrancedoor.png"
-        hover "images/fr4gymentrancedoorhover.png"
+        idle "images/fr4gymentrancedoor.webp"
+        hover "images/fr4gymentrancedoorhover.webp"
         action Jump ("labelfr4hallwaygymexit")
 
 ### Hallway ###
 
 screen fr4hallwaygymexit():
 
-    add "images/fr4hallwaygymexit.jpg"
+    add "images/fr4hallwaygymexit.webp"
 
     imagebutton:
         yalign 1.0
         xalign 0.5
-        idle "images/fr4bottom.png"
-        hover "images/fr4bottomhover.png"
+        idle "images/fr4bottom.webp"
+        hover "images/fr4bottomhover.webp"
         action Jump ("labelfr4gymentrance")
 
     imagebutton:
         yalign 0.5
         xalign 1.0
-        idle "images/fr4right.png"
-        hover "images/fr4righthover.png"
+        idle "images/fr4right.webp"
+        hover "images/fr4righthover.webp"
         action Jump ("labelfr4hallwaybathroom")
 
     imagebutton:
         yalign 0.5
         xalign 0
-        idle "images/fr4left.png"
-        hover "images/fr4lefthover.png"
+        idle "images/fr4left.webp"
+        hover "images/fr4lefthover.webp"
         action Jump ("labelfr4hallway")
 
 screen fr4hallwaybathroom():
 
-    add "images/fr4hallwaybathroom.jpg"
+    add "images/fr4hallwaybathroom.webp"
 
     imagebutton:
         yalign 1.0
         xalign 0.5
-        idle "images/fr4bottom.png"
-        hover "images/fr4bottomhover.png"
+        idle "images/fr4bottom.webp"
+        hover "images/fr4bottomhover.webp"
         action Jump ("labelfr4hallwaygymexit")
 
     imagebutton:
         ypos 130
         xpos 737
-        idle "images/fr4hallwaybathroomdoor.png"
-        hover "images/fr4hallwaybathroomdoorhover.png"
+        idle "images/fr4hallwaybathroomdoor.webp"
+        hover "images/fr4hallwaybathroomdoorhover.webp"
         if not fr4imre:
             action Jump ("fr4imre1")
         else:
@@ -6451,21 +6453,21 @@ screen fr4hallway():
 
     if not hcGirl == "penelope":
         if fr4chloe and preventgrayson:
-            add "images/fr4hallwaychloe.jpg"
+            add "images/fr4hallwaychloe.webp"
         else:
-            add "images/fr4hallway.jpg"
+            add "images/fr4hallway.webp"
     else:
         if fr4chloe and preventgrayson:
-            add "images/fr4hallwaynopenelopechloe.jpg"
+            add "images/fr4hallwaynopenelopechloe.webp"
         else:
-            add "images/fr4hallwaynopenelope.jpg"
+            add "images/fr4hallwaynopenelope.webp"
 
     if fr4chloe and preventgrayson:
         imagebutton:
             ypos 175
             xpos 1035
-            idle "images/fr4hallwaychloe.png"
-            hover "images/fr4hallwaychloehover.png"
+            idle "images/fr4hallwaychloe.webp"
+            hover "images/fr4hallwaychloehover.webp"
             if not fr4chloe2:
                 action Jump ("fr4chloe2")
             else:
@@ -6475,8 +6477,8 @@ screen fr4hallway():
         imagebutton:
             ypos 105
             xpos 535
-            idle "images/fr4hallwaypenelope.png"
-            hover "images/fr4hallwaypenelopehover.png"
+            idle "images/fr4hallwaypenelope.webp"
+            hover "images/fr4hallwaypenelopehover.webp"
             if not fr4penelope:
                 action Jump ("fr4penelope1")
             else:
@@ -6485,38 +6487,38 @@ screen fr4hallway():
     imagebutton:
         ypos 70
         xpos 770
-        idle "images/fr4hallwaycornerpath.png"
-        hover "images/fr4hallwaycornerpathhover.png"
+        idle "images/fr4hallwaycornerpath.webp"
+        hover "images/fr4hallwaycornerpathhover.webp"
         action Jump ("labelfr4hallwaycorner")
 
     imagebutton:
         ypos 160
         xpos 835
-        idle "images/fr4hallwaydoor.png"
-        hover "images/fr4hallwaydoorhover.png"
+        idle "images/fr4hallwaydoor.webp"
+        hover "images/fr4hallwaydoorhover.webp"
         action Jump ("labelfr4outsidestairs")
 
     imagebutton:
         yalign 1.0
         xalign 0.5
-        idle "images/fr4bottom.png"
-        hover "images/fr4bottomhover.png"
+        idle "images/fr4bottom.webp"
+        hover "images/fr4bottomhover.webp"
         action Jump ("labelfr4hallwaygymexit")
 
 screen fr4hallwaycorner():
 
     if not fr4grayson:
-        add "images/fr4hallwaycorner.jpg"
+        add "images/fr4hallwaycorner.webp"
     elif preventgrayson:
-        add "images/fr4hallwaycornernumber.jpg"
+        add "images/fr4hallwaycornernumber.webp"
     else:
-        add "images/fr4hallwaycornernograyson.jpg"
+        add "images/fr4hallwaycornernograyson.webp"
 
     imagebutton:
         ypos 205
         xpos 875
-        idle "images/fr4hallwaycornerdoor.png"
-        hover "images/fr4hallwaycornerdoorhover.png"
+        idle "images/fr4hallwaycornerdoor.webp"
+        hover "images/fr4hallwaycornerdoorhover.webp"
         if fr4chloe and not preventgrayson:
             action Jump ("fr4lockerroomchloe")
         else:
@@ -6526,16 +6528,16 @@ screen fr4hallwaycorner():
         imagebutton:
             ypos 395
             xpos 320
-            idle "images/fr4hallwaycornergrayson.png"
-            hover "images/fr4hallwaycornergraysonhover.png"
+            idle "images/fr4hallwaycornergrayson.webp"
+            hover "images/fr4hallwaycornergraysonhover.webp"
             action Jump ("fr4grayson1")
 
 
     imagebutton:
         yalign 1.0
         xalign 0.5
-        idle "images/fr4bottom.png"
-        hover "images/fr4bottomhover.png"
+        idle "images/fr4bottom.webp"
+        hover "images/fr4bottomhover.webp"
         action Jump ("labelfr4hallway")
 
 ### Outside ###
@@ -6543,16 +6545,16 @@ screen fr4hallwaycorner():
 screen fr4outsidestairs():
 
     if not hcGirl == "emily":
-        add "images/fr4outsidestairs.jpg"
+        add "images/fr4outsidestairs.webp"
     else:
-        add "images/fr4outsidestairsnoemily.jpg"
+        add "images/fr4outsidestairsnoemily.webp"
 
     if not hcGirl == "emily":
         imagebutton:
             ypos 295
             xpos 520
-            idle "images/fr4outsidestairsemily.png"
-            hover "images/fr4outsidestairsemilyhover.png"
+            idle "images/fr4outsidestairsemily.webp"
+            hover "images/fr4outsidestairsemilyhover.webp"
             if not fr4emily:
                 action Jump ("fr4emily1")
             else:
@@ -6561,26 +6563,26 @@ screen fr4outsidestairs():
     imagebutton:
         yalign 1.0
         xalign 0.5
-        idle "images/fr4bottom.png"
-        hover "images/fr4bottomhover.png"
+        idle "images/fr4bottom.webp"
+        hover "images/fr4bottomhover.webp"
         action Jump ("labelfr4hallway")
 
     imagebutton:
         yalign 0.5
         xalign 1.0
-        idle "images/fr4right.png"
-        hover "images/fr4righthover.png"
+        idle "images/fr4right.webp"
+        hover "images/fr4righthover.webp"
         action Jump ("labelfr4outsidestreet")
 
 screen fr4outsidestreet():
 
-    add "images/fr4outsidestreet.jpg"
+    add "images/fr4outsidestreet.webp"
 
     imagebutton:
         ypos 340
         xpos 830
-        idle "images/fr4outsidestreet.png"
-        hover "images/fr4outsidestreethover.png"
+        idle "images/fr4outsidestreet.webp"
+        hover "images/fr4outsidestreethover.webp"
         if not fr4samantha:
             action Jump ("fr4samantha1")
         else:
@@ -6589,13 +6591,13 @@ screen fr4outsidestreet():
     imagebutton:
         yalign 1.0
         xalign 0.5
-        idle "images/fr4bottom.png"
-        hover "images/fr4bottomhover.png"
+        idle "images/fr4bottom.webp"
+        hover "images/fr4bottomhover.webp"
         action Jump ("labelfr4outsidestairs")
 
 # Generic screen for showing KCT popups
 screen kctpopup(labelname):
-    image "images/endfr.png"
+    image "images/endfr.webp"
     text "Congratulations! Your Key Character Trait {b}[kct!c]{/b} has just changed the outcome of a decision someone was making." style "endfree"
     textbutton "OK" style "endfr":
         action Jump(labelname)
@@ -6623,21 +6625,21 @@ screen rileysexoverlay():
         ypos 10
 
         imagebutton:
-            idle "images/riblowjob.png"
-            hover "images/riblowjob.png"
+            idle "images/riblowjob.webp"
+            hover "images/riblowjob.webp"
             action Jump ("riblowjob")
 
         imagebutton:
-            idle "images/rifingering.png"
-            hover "images/rifingering.png"
+            idle "images/rifingering.webp"
+            hover "images/rifingering.webp"
             action Jump ("rifingering")
 
         imagebutton:
-            idle "images/rimissionary.png"
-            hover "images/rimissionary.png"
+            idle "images/rimissionary.webp"
+            hover "images/rimissionary.webp"
             action Jump ("rimissionary")
 
         imagebutton:
-            idle "images/riclimax.png"
-            hover "images/riclimax.png"
+            idle "images/riclimax.webp"
+            hover "images/riclimax.webp"
             action Jump ("riclimax")

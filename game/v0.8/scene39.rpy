@@ -3,8 +3,6 @@
 # Outfits: MC Outfit 2, Sebastian Outfit 1
 # Time: Tuesday Night
 
-default climbwseb = False
-
 label hosp_climb_seb:
 
     scene v8shos1 # TPP. Show MC and Sebastian stood at the hospital, show the hospital, MC and Sebastian looking up at the top of it. Try and portray the scale of the hospital.

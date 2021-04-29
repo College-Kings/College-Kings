@@ -3,8 +3,6 @@
 # Characters: MC (Outfit 5)
 # Time: Saturday Afternoon
 
-default hangOutWithLindsey = False
-
 label v9_walk_li_txt:
     scene v9wlt1 # TPP. Show MC walking through the park on his own, looking stressed.
     with fade
