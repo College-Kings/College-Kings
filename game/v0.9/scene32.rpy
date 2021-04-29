@@ -3,8 +3,6 @@
 # Characters: MC (Outfit 3when outside gym,Outfit 4 when inside gym ), Evelyn (Outfit 4)
 # Time: Saturday Morning
 
-default v9_sex_with_riley = False
-
 label v9_sat_gym:
     scene v9atg1 # TPP. Show MC outside the Gym, neutral face, mouth closed
     with fade
@@ -75,12 +73,12 @@ label v9_sat_hit_gym:
 
             pause 1
 
-            scene v9atg5 # TPP. Show MC Punching punching bag, neutral face, like this > https://www.featurepics.com/StockImage/20171103/man-and-punch-bag-stock-image-4549185.jpg
+            scene v9atg5 # TPP. Show MC Punching punching bag, neutral face, like this > https://www.featurepics.com/StockImage/20171103/man-and-punch-bag-stock-image-4549185.webp
             with dissolve
 
             pause 0.5
 
-            scene v9atg5a # TPP. Same camera as v9atg5, show MC in boxing stance infront of punching bag, neutral face, like this > https://biomechanicsofboxing.weebly.com/uploads/2/5/2/3/25234795/8322860_orig.jpg
+            scene v9atg5a # TPP. Same camera as v9atg5, show MC in boxing stance infront of punching bag, neutral face, like this > https://biomechanicsofboxing.weebly.com/uploads/2/5/2/3/25234795/8322860_orig.webp
             with dissolve
 
             scene v9atg5

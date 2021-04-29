@@ -4,7 +4,6 @@
 # Time: Thursday Morning
 
 label v9_hallway:
-    default hl_punch = False
 
     scene v9hlw1 # TPP. Show MC walking down the hallway on his own, lost in his own thoughts.
     with dissolve

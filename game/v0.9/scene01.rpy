@@ -3,9 +3,6 @@
 # Characters: MC (outfit 2), Chris (Outfit 1)
 # Time: Tuesday night
 
-default mcBrawlStance1 = False
-default mcBrawlStance2 = False
-
 label start9:
 if joinwolves:
     jump v9_start_wolves

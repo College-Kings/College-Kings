@@ -1,7 +1,5 @@
 # Scene 7 - Cafe With Aubrey
 # Note to renderers, MC wearing outfit 3, Aubrey wearing outfit 1.
-default v8AutProtest = False
-
 label caf_w_aub:
     scene scaf5 # FPP. Sweeping shot of inside the cafe, show Aubrey sat at a table on her own.
     with Fade(0.75, 0.25, 0.75)

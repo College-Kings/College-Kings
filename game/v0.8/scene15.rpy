@@ -3,7 +3,7 @@
 # Outfits: MC Outfit 2
 # Time: Sunday Morning
 
-default penHelpDean = False
+
 
 label penelope_dorm_hack:
     scene v8spen1 # FPP. Long shot of the hallway leading up to Penelope's dorm.
@@ -104,7 +104,7 @@ label help_pen:
 
     $ thick_and_thin = True
     if steam == False:
-        image thick_and_thin = "images/v08/achievements/thickandthin.png"
+        image thick_and_thin = "images/v08/achievements/thickandthin.webp"
         show thick_and_thin:
             xpos 0
             ypos -200

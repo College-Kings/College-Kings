@@ -5,8 +5,6 @@
 # Ms. Rose flashback pic (used as a prop in a few renders): Ms. Rose and her husband with him having his hand over her waist. Rose is happy in the pic. Use a random model for the husband (his face won't be shown to the viewer) and maybe a different outfit for Rose.
 # Please look at the rpy file along with the render table to get a good idea of the scene's dynamics
 
-# Variable defaults and definitions
-default consoledRose = True
 
 label msrose_moving:
 

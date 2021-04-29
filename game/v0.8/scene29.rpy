@@ -8,9 +8,6 @@
 # TV_amb.mp3 - Generic TV show sound for ambience
 # flush.mp3 - Toilet flushing sound
 
-default amberSexOfferAtJoshs = False
-default amberSexAtJoshs = False
-
 label after_drugs:
     if not helpJosh:
         scene v8josh10 # TPP. Showing Josh sitting on the ground outside his room door supporting himself using the wall

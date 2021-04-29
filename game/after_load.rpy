@@ -1,84 +1,88 @@
-init python:
+init -1 python:
     import os
+
+    if renpy.loadable("phonescript.rpy") or renpy.loadable("phonescript.rpyc"):
+        os.remove(os.path.join(config.basedir, "game", "phone", "phonescript.rpy"))
+        os.remove(os.path.join(config.basedir, "game", "phone", "phonescript.rpyc"))
 
 label after_load:
     python:
         kiwiiUsers = {
             "Adam": {
                 "username": "A.D.A.M.",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/adpp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/adpp.webp"
             },
             "Imre": {
                 "username": "BadBoyImre",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/impp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/impp.webp"
             },
             "Mason": {
                 "username": "Mason_Mas",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/masonpp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/masonpp.webp"
             },
             "Ryan": {
                 "username": "Ryanator",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/rypp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/rypp.webp"
             },
             "Cameron": {
                 "username": "Cameroon",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/capp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/capp.webp"
             },
             "Chris": {
                 "username": "Chriscuit",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/chpp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/chpp.webp"
             },
             "Elijah": {
                 "username": "Elijah_Woods",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/elpp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/elpp.webp"
             },
             "Grayson": {
                 "username": "G-rayson",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/grpp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/grpp.webp"
             },
             "Josh": {
                 "username": "Josh80085",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/jopp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/jopp.webp"
             },
             "Aubrey": {
                 "username": "Aubs123",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/aupp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/aupp.webp"
             },
             "Amber": {
                 "username": "Amber_xx",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/ampp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/ampp.webp"
             },
             "Kim": {
                 "username": "KimPlausible",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/kimpp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/kimpp.webp"
             },
             "Nora": {
                 "username": "Nora_12",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/nopp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/nopp.webp"
             },
             "Penelope": {
                 "username": "Penelopeeps",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/pepp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/pepp.webp"
             },
             "Lauren": {
                 "username": "LoLoLauren",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/lapp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/lapp.webp"
             },
             "Autumn": {
                 "username": "Its_Fall",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/autpp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/autpp.webp"
             },
             "Riley": {
                 "username": "RileyReads",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/ripp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/ripp.webp"
             },
             "Emily": {
                 "username": "emilyyyy",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/empp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/empp.webp"
             },
             "Chloe": {
                 "username": "Chloe101",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/clpp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/clpp.webp"
             },
             "MC": {
                 "username": "MC",
@@ -86,10 +90,18 @@ label after_load:
             },
             "Caleb": {
                 "username": "Aleb",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/calebpp.png"
+                "profilePicture": "images/Phone/Kiwii/Profile Pictures/calebpp.webp"
             },
             "Parker": {
                 "username": "Parker",
+
+    
+          
+            
+          
+    
+    
+  
                 "profilePicture": "images/Phone/Kiwii/Profile Pictures/parkerpp.webp"
             },
             "Sebastian": {
@@ -101,16 +113,12 @@ label after_load:
                 "profilePicture": "images/Phone/Kiwii/Profile Pictures/kaipp.webp"
             }
         }
-
         for app in applications:
             app.image = os.path.splitext(app.image)[0] + ".webp"
-
         for kiwiiPost in kiwiiPosts:
             kiwiiPost.image = os.path.splitext(kiwiiPost.image)[0] + ".webp"
             if kiwiiPost.caption[0] == "[" and kiwiiPost.caption[1] != "[":
                 kiwiiPost.caption = "[" + kiwiiPost.caption
-
-
         for contact in contacts:
             if contact.messages: contact.unlock()
             for message in contact.messages:
@@ -121,9 +129,7 @@ label after_load:
         try:
             if chlorers: chloers = True
         except NameError: pass
-
         if contact_Lindsey not in contacts:
             contacts.append(contact_Lindsey)
-
         contact_Lindsey.profilePicture = "lindseyprofilepic"
     return
