@@ -7,13 +7,12 @@ define bugTesting_Scenes = [
     ["after_cam_history", "Asking girls to hoco"],
     ["fr4", "Homecoming Free Roam"],
     ["drug_deal_w_josh", "Scene 28 (Fight)"]
-
 ]
 
 screen bugTesting_SceneSelect():
     modal True
     zorder 200
-
+    
     add "#23272a"
 
     imagebutton:

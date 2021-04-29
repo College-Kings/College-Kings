@@ -130,10 +130,11 @@ label sun_eve_room:
                 call screen messager(contact_Lauren)
             label s19_reply24:
                 $ contact_Lauren.newMessage("Goodnight")
-                $ contact_Lauren.addReply("Goodnight")
+                $ contact_Lauren.addReply("Goodnight", "s19_replyCont1")
                 call screen messager(contact_Lauren)
 
         ### ERROR: -Continue after choices- [MC still in bed] ###
+        label s19_replyCont1:
             if forgiveemily:
                 # -MC's phone buzzes-
                 ### ERROR: (Aww, she couldn't get enough of me) [I figure this line works for either scenario but let me know if I should change it] ###
@@ -153,7 +154,7 @@ label sun_eve_room:
                 label s19_reply26:
                     $ contact_Emily.newMessage("Great! See you there!")
                     $ phoneexit = "emily_arcade"
-                    call screen messager(contact_Emily)
+                    jump emily_arcade
 
                 label s19_reply27:
                     $ phoneexit = "s19_phoneExit"
@@ -302,7 +303,7 @@ label sun_eve_room:
                 call screen messager(contact_Lauren)
             label s19_reply53:
                 $ contact_Lauren.newMessage("Goodnight")
-                $ contact_Lauren.addReply("Goodnight")
+                $ contact_Lauren.addReply("Goodnight", "s19_replyCont2")
                 call screen messager(contact_Lauren)
 
         label s19_replyCont2:
@@ -328,7 +329,7 @@ label sun_eve_room:
                 label s19_reply55:
                     $ contact_Emily.newMessage("Great! See you there!")
                     $ phoneexit = "emily_arcade"
-                    call screen messager(contact_Emily)
+                    jump emily_arcade
 
                 label s19_reply56:
                     $ phoneexit = "s19_phoneExit"

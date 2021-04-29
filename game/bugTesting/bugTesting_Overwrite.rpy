@@ -1,5 +1,4 @@
 screen quick_menu():
-
     ## Ensure this appears on top of other screens.
     zorder 100
 
@@ -14,7 +13,6 @@ screen quick_menu():
                 ypos -385
                 xpos 20
             vbox xpos 30  ypos 40 spacing 20:
-
                 text "Walkthrough" style "wttextnum" xoffset 180
                 text "2. reply: +1 troublemaker (needed for Confident & Popular). Neither option cuts off Emily's path."  style "wttext" xoffset 10
 
@@ -24,7 +22,6 @@ screen quick_menu():
                 ypos -385
                 xpos 20
             vbox xpos 30  ypos 40 spacing 20:
-
                 text "Walkthrough" style "wttextnum" xoffset 180
                 text "Choice 1: +1 troublemaker (needed for Confident & Popular). Choice 2: +1 boyfriend (needed for Loyal & Confident)"  style "wttext" xoffset 10
 
@@ -34,23 +31,16 @@ screen quick_menu():
                 ypos -385
                 xpos 20
             vbox xpos 30  ypos 40 spacing 20:
-
                 text "Walkthrough" style "wttextnum" xoffset 180
                 text "Open your phone to get a detailed breakdown of the stats system in the stats app."  style "wttext" xoffset 10
-
-
-
     if quick_menu:
-
         
         if realmode == True:
             if ischoice == False:
                 hbox:
                     style_prefix "quick"
-
                     xalign 0.5
                     yalign 1.0
-
                     textbutton _("History") action ShowMenu('history')
                     textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
                     textbutton _("Auto") action Preference("auto-forward", "toggle")
@@ -59,16 +49,14 @@ screen quick_menu():
                     textbutton _("Q.Load") action QuickLoad()
                     textbutton _("Prefs") action ShowMenu('preferences')
 
-
-
         else:
 
             if quick_menu:
                 hbox:
                     style_prefix "quick"
-
                     xalign 0.5
                     yalign 1.0
+
                     textbutton _("Back") action Rollback()
                     textbutton _("History") action ShowMenu('history')
                     textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
@@ -77,7 +65,6 @@ screen quick_menu():
                     textbutton _("Q.Save") action QuickSave()
                     textbutton _("Q.Load") action QuickLoad()
                     textbutton _("Prefs") action ShowMenu('preferences')
-
 
 
         if showphone: # Edited
@@ -89,7 +76,6 @@ screen quick_menu():
                 yalign 0.05
                 xalign 0.999
                 action Jump ("homescreen")
-
 
 
         if freeroamtut == 1:
@@ -136,7 +122,7 @@ screen quick_menu():
             image "images/background.webp"
 
 
-            text "[w]":
+            text "[w]":  
                 font "fonts/freshman.ttf"
                 size 100
                 if hl == 2:

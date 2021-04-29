@@ -144,39 +144,40 @@ label homescreen:
 
 
 label emrep1a:
-$ nohardfeelings = True
-if steam == False:
-    image nohardfeelings = "images/nohardfeelings.webp"
-    show nohardfeelings:
-        xpos 0
-        ypos -200
-        linear 0.5 xpos 0 ypos 0
-        pause 2.0
-        linear 0.5 xpos 0 ypos -200
-else:
-    $ achievement.grant("no_hard_feelings")
-    $ achievement.sync()
+    $ nohardfeelings = True
+    if steam == False:
+        image nohardfeelings = "images/nohardfeelings.webp"
+        show nohardfeelings:
+            xpos 0
+            ypos -200
+            linear 0.5 xpos 0 ypos 0
+            pause 2.0
+            linear 0.5 xpos 0 ypos -200
+    else:
+        $ achievement.grant("no_hard_feelings")
+        $ achievement.sync()
 
 
-$ contact_Emily.newMessage("Cool :)")
-call screen messager(contact_Emily)
+    $ contact_Emily.newMessage("Cool :)")
+    call screen messager(contact_Emily)
 
 label emrep1b:
-$ openwound = True
-if steam == False:
-    image openwound = "images/openwound.webp"
-    show openwound:
-        xpos 0
-        ypos -200
-        linear 0.5 xpos 0 ypos 0
-        pause 2.0
-        linear 0.5 xpos 0 ypos -200
-else:
-    $ achievement.grant("open_wound")
-    $ achievement.sync()
-$ addPoint("tm", 1)
-$ contact_Emily.newMessage("Ugh :/")
-call screen messager(contact_Emily)
+    $ openwound = True
+    if steam == False:
+        image openwound = "images/openwound.webp"
+        show openwound:
+            xpos 0
+            ypos -200
+            linear 0.5 xpos 0 ypos 0
+            pause 2.0
+            linear 0.5 xpos 0 ypos -200
+    else:
+        $ achievement.grant("open_wound")
+        $ achievement.sync()
+
+    $ addPoint("tm", 1)
+    $ contact_Emily.newMessage("Ugh :/")
+    call screen messager(contact_Emily)
 
 label stats:
 $ statsnot = 0
@@ -601,46 +602,50 @@ label starta:
     u "Mhmm... I'll be right down."
     u "(What am I doing dreaming about Emily?!)"
 
-    scene s3a
+    scene s3
+
+    show s3a
     with Fade(1, 0, 1)
+
     ju "Good morning, honey."
 
-    scene s3
+    hide s3a
     with dissolve
 
     u "Morning, Julia."
 
-    scene s3a
+    show s3a
     with dissolve
-
 
     ju "Are you excited for today?"
 
-    scene s3
+    hide s3a
     with dissolve
 
     u "Excited?"
 
-    scene s3a
+    show s3a
     with dissolve
 
     ju "Honey, it's your first day of college. That's a big deal!"
 
-    scene s3
+    hide s3a
     with dissolve
 
     u "I guess you're right."
 
-    scene s3b
+    show s3b
     with dissolve
     ju "Have you packed all your stuff? Have you printed out all the documents you need? Have you-"
 
-    scene s3c
+    hide s3b
+    show s3c
     with dissolve
 
     u "Julia, it's fine. I packed yesterday."
 
-    scene s3d
+    hide s3c
+    show s3d
     with dissolve
     ju "Look at you, all grown-up. I'm so proud of you."
 
@@ -650,22 +655,29 @@ label starta:
     ju "You better not forget to come visit."
     u "I'll think about it, if you make lasagna."
 
-    scene s3d
+    show s3d
     with dissolve
 
     ju "I'm sure that could be arranged."
 
     ju "Anyway, we should get ready, you don't wanna be late on your first day of college!"
 
-    scene s3e
+    hide s3d
+    show s3e
     with dissolve
+
     u "Oh you're dropping me off? I was gonna take the train."
-    scene s3d
+
+    hide s3e
+    show s3d
     with dissolve
 
     ju "No way you're robbing me of the chance to embarrass you in front of your new friends."
-    scene s3e
+
+    hide s3d
+    show s3e
     with dissolve
+
     u "Thanks, Julia... I'll be 20 minutes."
 
     scene s11

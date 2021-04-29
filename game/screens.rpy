@@ -3930,7 +3930,7 @@ screen surebuy3p():
 
 screen achievements():
 
-        add "images/phonescreen.webp" at truecenter
+    use phoneTemplate:
 
         add "images/stats.webp" at truecenter
         if noexit == False:
@@ -4403,8 +4403,10 @@ screen scenegal():
     vpgrid:
         cols 4
         spacing 40
+        pos (78, 200)
         xpos 78
         ypos 200
+        ysize 700
         scrollbars "vertical"
         draggable True
         mousewheel True
