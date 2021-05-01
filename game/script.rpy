@@ -26,7 +26,7 @@ init python:
     achievement.register("strike")
     achievement.sync()
 
-    persistent.ep = 9
+    persistent.ep = 10
 
 define steam = False
 

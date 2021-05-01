@@ -44,7 +44,7 @@ label ending9:
     if persistent.ep == 9:
         jump end9
     else:
-        jump start10
+        jump v10start
 
 label end9:
     scene savenow
@@ -53,6 +53,6 @@ label end9:
     if persistent.ep == 9:
         jump end_credits
     else:
-        jump start10
+        jump v10start
 
 # <3 ~Lew

@@ -1104,7 +1104,7 @@ screen navigation():
         imagebutton:
             idle "images/play2.webp"
             hover "images/play3.webp"
-            action Start ()
+            action Start("int_deal_w_josh")
             xpos 79
             ypos 147
 
@@ -1753,7 +1753,7 @@ style radio_vbox:
 
 style radio_button:
     properties gui.button_properties("radio_button")
-    foreground "gui/button/radio_[prefix_]foreground.webp"
+    foreground "gui/button/radio_[prefix_]foreground.png"
 
 style radio_button_text:
     properties gui.button_text_properties("radio_button")
@@ -1763,7 +1763,7 @@ style check_vbox:
 
 style check_button:
     properties gui.button_properties("check_button")
-    foreground "gui/button/check_[prefix_]foreground.webp"
+    foreground "gui/button/check_[prefix_]foreground.png"
 
 style check_button_text:
     properties gui.button_text_properties("check_button")
