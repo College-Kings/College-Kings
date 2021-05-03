@@ -1,7 +1,8 @@
 # SCENE 1: CHRIS' ROOM POSTS
 # Locations: MC's room in Wolves house, Chris' room in Wolves house
 # Characters: MC (outfit 2), Chris (Outfit 1)
-# Time: Tuesday night
+# Time: Tuesday night # this should be day
+
 
 label start9:
 if joinwolves:
