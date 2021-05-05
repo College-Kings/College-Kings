@@ -225,7 +225,7 @@ default reignition = False
 default seemsfishy = False
 default strike = False
 
-# 0.7
+# 7.0
 default follownora = False
 default noraclose = True
 default rileyrs = False
@@ -304,7 +304,7 @@ default truetoself = False
 default wolfpack = False
 default nobeach = False
 
-# 0.8
+# 8.0
 default get_a_room = False
 default ip_man = False
 default thick_and_thin = False
@@ -335,7 +335,7 @@ default chloeSteakHouse = False
 default climbwseb = False
 default hesitantwgrayson = False
 
-# 0.9
+# 9.0
 default mcBrawlStance1 = False
 default mcBrawlStance2 = False
 default mcBrawlStance3 = False
@@ -352,3 +352,5 @@ default v9_sex_with_riley = False
 default hangOutWithLindsey = False
 default playCoolWLins = False
 default lindseyfirstkiss = False
+
+# 10.0
