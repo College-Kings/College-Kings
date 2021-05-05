@@ -77,6 +77,7 @@ label healthCheck:
 
 label startAttack:
     if attacker in enemies:
+        pass
         
 
     # if fight_type.startswith("sim"):
