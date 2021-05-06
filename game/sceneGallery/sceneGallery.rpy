@@ -38,6 +38,24 @@ init python:
     SceneGallery("v9_ri_sex")
     SceneGallery("v9_make_out_w_lin")
 
+screen spoiler():
+    add "images/darker.webp"
+
+    add "images/endfr.webp"
+    text "Warning: The scene gallery contains spoilers for the story of the game. Are you sure you want to continue?" style "endfree"
+
+    textbutton "Yes":
+        style "endfr"
+        text_align 0.5
+        align (0.43, 0.58)
+        action [Show("scenegal"), Hide("spoiler")]
+
+    textbutton "No":
+        style "endfr"
+        text_align 0.5
+        align (0.57, 0.58)
+        action Hide("spoiler")
+
 screen scenegal():
     tag menu
 

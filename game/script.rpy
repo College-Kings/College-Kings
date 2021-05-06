@@ -29,14 +29,12 @@ init python:
     persistent.ep = 10
 
 define steam = False
-
 define developer = True
-
 define config.steam_appid = 1463120
 
 
 label splashscreen:
-    # Get AT List
+    # Get Animation/Transform List
     show nohardfeelings at achievementShow
     $ achievementAtList = renpy.get_at_list("nohardfeelings")
     hide nohardfeelings

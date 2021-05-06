@@ -4355,31 +4355,6 @@ screen aubsex():
         xpos 36
         action Jump ("acream")
 
-
-screen spoiler():
-
-    if steam == False:
-        add "images/menu4.webp"
-    else:
-        add "images/menu4steam.webp"
-    add "images/darker.webp"
-
-    add "images/endfr.webp"
-    text "Warning: The scene gallery contains spoilers for the story of the game. Are you sure you want to continue?" style "endfree"
-    textbutton "Yes" style "endfr":
-        action Jump ("spoilergo")
-        text_align 0.5
-        xalign 0.57
-        yalign 0.58
-
-    textbutton "No" style "endfr":
-        text_align 0.5
-        xalign 0.43
-        yalign 0.58
-        action Return ()
-
-    tag menu
-
 screen skiptut():
     add "images/endfr.webp"
     text "Would you like to play the fighting tutorial?" style "endfree"
