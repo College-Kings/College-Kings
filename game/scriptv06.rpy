@@ -3141,7 +3141,6 @@ label script06:
     pause 0.5
 
     label emsex_a:
-    label ge:
     $ _game_menu_screen = "ingmenu"
     scene emvid2
     with dissolve
@@ -4585,8 +4584,6 @@ label script06:
     label aubreysexb: # aubreysex scene
     $ aubreyrs = True
     $ aubreysex2 = True
-
-    label gf:
     $ _game_menu_screen = "ingmenu"
 
     image naubvid0 = Movie (play="images/naubvid0.webm", loop = False, image = "images/naub0end.webp", start_image = "images/naub0start.webp")

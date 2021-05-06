@@ -2742,7 +2742,6 @@ label phonea:
 
     label sexdream1:
 
-    label ga:
     $ _game_menu_screen = "ingmenu"
 
     scene s1  ### close to the kitchen counter
@@ -12728,8 +12727,6 @@ label bo_bd:
     label continuel:
     label continuem:
 
-
-    label gc:
     $ _game_menu_screen = "ingmenu"
 
 
