@@ -1,3 +1,8 @@
+# Achievements
+image nohardfeelings = "images/nohardfeelings.webp"
+image openwound = "images/openwound.webp"
+
+# Splash Screen
 image splashone = "images/splash1.webp"
 image splashtwo = "images/splash2.webp"
 image splashthree = "images/splash 3.webp"

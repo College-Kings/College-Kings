@@ -34,8 +34,14 @@ define developer = True
 
 define config.steam_appid = 1463120
 
-#Splashscreen
+
 label splashscreen:
+    # Get AT List
+    show nohardfeelings at achievementShow
+    $ achievementAtList = renpy.get_at_list("nohardfeelings")
+    hide nohardfeelings
+
+    # Splashscreen
     scene black
     with Pause(1)
 
@@ -57,43 +63,11 @@ label splashscreen:
 
     return
 
-
-# The script of the game goes in this file.
-
-###########
-###########
-
-label pref:
-
-call screen preferences
-
-label rmlon:
-    $ realmode = True
-    $ config.rollback_enabled = False
-    $ wton = False
-    $ showkct = False
-    call screen preferences
-
-label rmloff:
-    $ realmode = False
-    $ config.rollback_enabled = True
-    call screen preferences
-
 label scenegal:
     call screen spoiler
 
 label spoilergo:
     call screen scenegal
-
-label showkcton:
-    $ showkct = True
-    call screen preferences
-
-label showkctoff:
-    $ showkct = False
-    call screen preferences
-
-
 
 label rollbackfalse:
     define config.rollback_enabled = False
@@ -140,44 +114,6 @@ label homescreen:
         scene s106
 
     call screen phone
-
-
-
-label emrep1a:
-    $ nohardfeelings = True
-    if steam == False:
-        image nohardfeelings = "images/nohardfeelings.webp"
-        show nohardfeelings:
-            xpos 0
-            ypos -200
-            linear 0.5 xpos 0 ypos 0
-            pause 2.0
-            linear 0.5 xpos 0 ypos -200
-    else:
-        $ achievement.grant("no_hard_feelings")
-        $ achievement.sync()
-
-
-    $ contact_Emily.newMessage("Cool :)")
-    call screen messager(contact_Emily)
-
-label emrep1b:
-    $ openwound = True
-    if steam == False:
-        image openwound = "images/openwound.webp"
-        show openwound:
-            xpos 0
-            ypos -200
-            linear 0.5 xpos 0 ypos 0
-            pause 2.0
-            linear 0.5 xpos 0 ypos -200
-    else:
-        $ achievement.grant("open_wound")
-        $ achievement.sync()
-
-    $ addPoint("tm", 1)
-    $ contact_Emily.newMessage("Ugh :/")
-    call screen messager(contact_Emily)
 
 label stats:
 $ statsnot = 0
@@ -566,6 +502,8 @@ label starta:
 
     em "I know what I did was bad..."
 
+
+
     em "But I'll do anything to make it up to you."
 
     scene s0b
@@ -689,11 +627,33 @@ label starta:
     u "(Huh?)"
 
     $ wt = 1
-    $ phoneexit = "phonea"
-    $ contact_Emily.newMessage("Hey...\nI know we haven’t talked much after we broke up, but I just wanted to let you know that I didn’t get into Stanford, so I’ll be going to San Vallejo as well.\nGuess I’ll see you there. :)")
-    $ contact_Emily.addReply("Yeah... I’ll see you there.", "emrep1a")
-    $ contact_Emily.addReply("You cheated on me.\nGo to hell!", "emrep1b")
-    $ showphone = True
+    
+    python:
+        def v1s1Reply1():
+            nohardfeelings = True
+            if steam == False:
+                renpy.show("nohardfeelings", at_list=achievementAtList)
+            else:
+                achievement.grant("no_hard_feelings")
+                achievement.sync()
+
+            contact_Emily.newMessage("Cool :)")
+
+        def v1s2Reply2():
+            openwound = True
+            if steam == False:
+                renpy.show("openwound", at_list=achievementAtList)
+            else:
+                achievement.grant("open_wound")
+                achievement.sync()
+
+            addPoint("tm", 1)
+            contact_Emily.newMessage("Ugh :/")
+
+        contact_Emily.newMessage("Hey...\nI know we haven’t talked much after we broke up, but I just wanted to let you know that I didn’t get into Stanford, so I’ll be going to San Vallejo as well.\nGuess I’ll see you there. :)", queue=False)
+        contact_Emily.addReply("Yeah... I’ll see you there.", v1s1Reply1)
+        contact_Emily.addReply("You cheated on me.\nGo to hell!", v1s2Reply2)
+        showphone = True
 
     call screen phone
 

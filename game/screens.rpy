@@ -1104,7 +1104,7 @@ screen navigation():
         imagebutton:
             idle "images/play2.webp"
             hover "images/play3.webp"
-            action Start("int_deal_w_josh")
+            action Start()
             xpos 79
             ypos 147
 
@@ -1601,87 +1601,89 @@ style slot_button_text:
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
 screen preferences():
+    tag menu
+    modal True
 
     add "gui/settingspage.webp"
 
-    modal True
-
-    tag menu
-
-
-    hbox xalign 0.1645 yalign 0.265 spacing 136:
+    # Display settings
+    hbox:
+        align (0.1645, 0.265)
+        spacing 136
         style_prefix "check"
 
-        textbutton _("window") action Preference("display", "window"):
+        textbutton _("window"):
+            action Preference("display", "window")
             text_size 45
-        textbutton _("fullscreen") action Preference("display", "fullscreen"):
+        textbutton _("fullscreen"):
+            action Preference("display", "fullscreen")
             text_size 45
 
-    hbox xalign 0.122 yalign 0.468 spacing 35:
+    # Skip settings
+    hbox:
+        align (0.122, 0.468)
+        spacing 35
         style_prefix "check"
-        textbutton _("Unseen Text") action Preference("skip", "toggle"):
+
+        textbutton _("Unseen Text"):
+            action Preference("skip", "toggle")
             text_size 28
-        textbutton _("After Choices") action Preference("after choices", "toggle"):
+        textbutton _("After Choices"):
+            action Preference("after choices", "toggle")
             text_size 28
-        textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle")):
+        textbutton _("Transitions"):
+            action InvertSelected(Preference("transitions", "toggle"))
             text_size 28
 
+    # Real Life settings
+    hbox:
+        align (0.195, 0.671)
+        spacing 300
 
-    hbox xalign 0.19 yalign 0.671 spacing 300:
-        style_prefix "radio"
-        if realmode == True:
-            textbutton _("On") action Jump ("rmlon") text_color "#FFD166":
+        if realmode:
+            textbutton _("On"):
+                action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("wton", False), SetVariable("showkct", False)]
+                text_color "#FFD166"
                 text_size 45
-            textbutton _("Off") action Jump ("rmloff"):
+            textbutton _("Off"):
+                action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True)]
                 text_size 45
         else:
-            textbutton _("On") action Jump ("rmlon"):
+            textbutton _("On"):
+                action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("wton", False), SetVariable("showkct", False)]
                 text_size 45
-            textbutton _("Off") action Jump ("rmloff") text_color "#FFD166":
+            textbutton _("Off"):
+                action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True)]
+                text_color "#FFD166"
                 text_size 45
 
-    hbox xalign 0.19 yalign 0.874 spacing 300:
-        style_prefix "radio"
+    # KCT settings
+    hbox:
+        align (0.195, 0.874)
+        spacing 300
 
-        if showkct == True:
-            textbutton _("On") action Jump ("showkcton") text_color "#FFD166":
+        if showkct:
+            textbutton _("On"):
+                action SetVariable("showkct", True)
+                text_color "#FFD166"
                 text_size 45
-            textbutton _("Off") action Jump ("showkctoff"):
+            textbutton _("Off"):
+                action SetVariable("showkct", False)
                 text_size 45
         else:
-            textbutton _("On") action Jump ("showkcton"):
+            textbutton _("On"):
+                action SetVariable("showkct", True)
                 text_size 45
-            textbutton _("Off") action Jump ("showkctoff") text_color "#FFD166":
+            textbutton _("Off"):
+                action SetVariable("showkct", False)
+                text_color "#FFD166"
                 text_size 45
 
-
-
-
-        #    hbox spacing 20:
-        #        style_prefix "radio"
-        #        label _("Allow Rollback")
-        #        if config.rollback_enabled == True:
-        #            textbutton _("True") action Jump ("rollbacktrue") text_color "#FFD166"
-        #            textbutton _("False") action Jump ("rollbackfalse")
-        #        else:
-        #            textbutton _("True") action Jump ("rollbacktrue")
-        #            textbutton _("False") action Jump ("rollbackfalse") text_color "#FFD166"
-
-            ## Additional vboxes of type "radio_pref" or "check_pref" can be
-            ## added here, to add additional creator-defined preferences.
-
-
-
-
+    # Sliders
     style_prefix "slider"
-
-
-
-
     bar value Preference("text speed"):
         xpos 1020
         ypos 330
-
 
     bar value Preference("auto-forward time"):
         xpos 1020
@@ -1689,28 +1691,19 @@ screen preferences():
 
 
     if config.has_music:
-
-
-
         bar value Preference("music volume"):
             xpos 1020
             ypos 742
 
     if config.has_sound:
-
-
-
         bar value Preference("sound volume"):
             xpos 1020
             ypos 892
 
-
-    hbox xpos 1500 ypos 1015:
-
-
-        textbutton _("Return"):
-            style "return_button"
-            action Return ()
+    textbutton _("Return"):
+        style "return_button"
+        pos (1500, 1050)
+        action Return ()
 
 style pref_label is gui_label
 style pref_label_text is gui_label_text
@@ -4386,115 +4379,6 @@ screen spoiler():
         action Return ()
 
     tag menu
-
-screen scenegal():
-
-    tag menu
-
-    add "Images/scenegalleryblank.webp"
-
-    imagebutton:
-        idle "images/backtransp.webp"
-        hover "images/back.webp"
-        ypos 933
-        xpos 79
-        action Return()
-
-    vpgrid:
-        cols 4
-        spacing 40
-        pos (78, 200)
-        xpos 78
-        ypos 200
-        ysize 700
-        scrollbars "vertical"
-        draggable True
-        mousewheel True
-
-        imagebutton:
-            idle "images/gallery1new.webp"
-            hover "images/gallery1.webp"
-            action Replay ("ga", locked = False)
-
-        imagebutton:
-            idle "images/gallery2new.webp"
-            hover "images/gallery2.webp"
-            action Replay ("gb", locked = False)
-
-        imagebutton:
-            idle "images/gallery3new.webp"
-            hover "images/gallery3.webp"
-            action Replay ("gc", locked = False)
-
-        imagebutton:
-            idle "images/gallery4new.webp"
-            hover "images/gallery4.webp"
-            action Replay ("fkcon", locked = False)
-
-        imagebutton:
-            idle "images/gallery6.webp"
-            hover "images/gallery6outline.webp"
-            action Replay ("ge", locked = False)
-
-        imagebutton:
-            idle "images/gallery5.webp"
-            hover "images/gallery5outline.webp"
-            action Replay ("gf", locked = False)
-
-        imagebutton:
-            idle "images/gallery7.webp"
-            hover "images/gallery7outline.webp"
-            action Replay ("rileysexscene", locked = False)
-
-        imagebutton:
-            idle "images/gallery8.webp"
-            hover "images/gallery8outline.webp"
-            action Replay ("brbj", locked = False)
-
-        imagebutton:
-            idle "images/gallery/gallery9.webp"
-            hover "images/gallery/gallery9outline.webp"
-            action Replay ("v08_cl_start", locked = False)
-
-        imagebutton:
-            idle "images/gallery/gallery10.webp"
-            hover "images/gallery/gallery10outline.webp"
-            action Replay ("v08_ri_start", locked = False)
-
-        imagebutton:
-            idle "images/gallery/gallery11.webp"
-            hover "images/gallery/gallery11outline.webp"
-            action Replay ("hoco_amb_night", locked = False)
-
-        imagebutton:
-            idle "images/gallery/gallery12.webp"
-            hover "images/gallery/gallery12outline.webp"
-            action Replay ("s28_LarsFight", locked = False)
-
-        imagebutton:
-            idle "images/gallery/gallery13.webp"
-            hover "images/gallery/gallery13outline.webp"
-            action Replay ("amber_sex_at_joshs", locked = False)
-
-        imagebutton:
-            idle Transform("images/gallery/gallery14.webp", size=(400, 226))
-            hover Transform("images/gallery/gallery14_Hover.webp", size=(400, 226))
-            action Replay ("v9_aubrey_scene_lake", locked = False)
-
-        imagebutton:
-            idle Transform("images/gallery/gallery15.webp", size=(400, 226))
-            hover Transform("images/gallery/gallery15_Hover.webp", size=(400, 226))
-            action Replay ("v9_emily_dorm", locked = False)
-
-        imagebutton:
-            idle Transform("images/gallery/gallery16.webp", size=(400, 226))
-            hover Transform("images/gallery/gallery16_Hover.webp", size=(400, 226))
-            action Replay ("v9_ri_sex", locked = False)
-
-        imagebutton:
-            idle Transform("images/gallery/gallery17.webp", size=(400, 226))
-            hover Transform("images/gallery/gallery17_Hover.webp", size=(400, 226))
-            action Replay ("v9_make_out_w_lin", locked = False)
 
 screen skiptut():
     add "images/endfr.webp"

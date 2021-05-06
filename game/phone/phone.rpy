@@ -32,8 +32,8 @@ screen phoneTemplate():
 
     add "images/phonescreen.webp"
 
-    if not noexit:
-        textbutton "Exit Phone" action [Hide("reply"), Jump("exitphone")] style "phonebutton"
+    if renpy.get_screen("phone"):
+        textbutton "Exit Phone" action [Hide("tutorial"), Return()] style "phonebutton"
 
     if phonetut and not renpy.get_screen("tutorial"):
         use tutorial
@@ -46,7 +46,7 @@ screen phoneTemplate():
             xalign 0.5
             ypos 906
             style "phonehome"
-            action Jump ("homescreen")
+            action Show("phone")
 
 
 screen phone():

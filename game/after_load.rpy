@@ -94,14 +94,6 @@ label after_load:
             },
             "Parker": {
                 "username": "Parker",
-
-    
-          
-            
-          
-    
-    
-  
                 "profilePicture": "images/Phone/Kiwii/Profile Pictures/parkerpp.webp"
             },
             "Sebastian": {
@@ -113,23 +105,28 @@ label after_load:
                 "profilePicture": "images/Phone/Kiwii/Profile Pictures/kaipp.webp"
             }
         }
+
         for app in applications:
             app.image = os.path.splitext(app.image)[0] + ".webp"
+
         for kiwiiPost in kiwiiPosts:
             kiwiiPost.image = os.path.splitext(kiwiiPost.image)[0] + ".webp"
             if kiwiiPost.caption[0] == "[" and kiwiiPost.caption[1] != "[":
                 kiwiiPost.caption = "[" + kiwiiPost.caption
+
         for contact in contacts:
-            if contact.messages: contact.unlock()
-            for message in contact.messages:
-                try:
-                    message.image = os.path.splitext(message.image)[0] + ".webp"
-                except AttributeError: continue
+            try:
+                for message in contact.messages:
+                    try: message.image = os.path.splitext(message.image)[0] + ".webp"
+                    except AttributeError: continue
+
+                    contact.seenMessages.append(message)
+            except Exception: pass
                 
         try:
             if chlorers: chloers = True
         except NameError: pass
-        if contact_Lindsey not in contacts:
-            contacts.append(contact_Lindsey)
+
         contact_Lindsey.profilePicture = "lindseyprofilepic"
+
     return

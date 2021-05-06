@@ -1,68 +1,110 @@
 init python:
     class Contact:
-        def __init__(self, name, profilePicture, newMessages=False, locked=True):
+        def __init__(self, name, profilePicture, locked=True):
             self.name = name
             self.profilePicture = profilePicture
-            self.newMessages = newMessages
             self.locked = locked
-            self.messages = []
+            self.newMessages = False
+            self.sentMessages = []
+            self.pendingMessages = []
             contacts.append(self)
 
-        def newMessage(self, message):
+        def newMessage(self, message, queue=True):
             message = Message(self, message)
-            self.newMessages = True
+
             try: contacts.insert(0, contacts.pop(contacts.index(self))) # Moves contact to the top when recieving a new message
             except Exception: pass
-            self.messages.append(message)
 
-        def newImgMessage(self, img):
+            # Add message to queue
+            if queue:
+                self.pendingMessages.append(message)
+            else:
+                self.pendingMessages = []
+                self.sentMessages.append(message)
+
+            self.unlock()
+            self.newMessages = True
+            return message
+
+        def newImgMessage(self, img, queue=True):
             message = ImageMessage(self, img)
-            self.newMessages = True
+
             try: contacts.insert(0, contacts.pop(contacts.index(self))) # Moves contact to the top when recieving a new message
             except Exception: pass
-            self.messages.append(message)
 
-        def addReply(self, message, label=None):
-            reply = Reply(message, label)
-            try: self.messages[-1].replies.append(reply)
-            except Exception:
-                self.newMessage("")
-                self.messages[-1].replies.append(reply)
+            # Add message to queue
+            if queue:
+                self.pendingMessages.append(message)
+            else:
+                self.pendingMessages = []
+                self.sentMessages.append(message)
+
+            self.unlock()
             self.newMessages = True
+            return message
 
-        def addImgReply(self, image, label=None):
+        def addReply(self, message, func):
+            reply = Reply(message, func)
+
+            # Append reply to last sent message
+            try:
+                if self.pendingMessages:
+                    self.pendingMessages[-1].replies.append(reply)
+                else:
+                    self.sentMessages[-1].replies.append(reply)
+            except Exception:
+                message = self.newMessage("")
+                message.replies.append(reply)
+
+            self.unlock()
+
+        def addImgReply(self, image, var=None, value=0):
             reply = ImgReply(image, label)
-            try: self.messages[-1].replies.append(reply)
+
+            # Append reply to last sent message
+            try:
+                if self.pendingMessages:
+                    self.pendingMessages[-1].replies.append(reply)
+                else:
+                    self.sentMessages[-1].replies.append(reply)
             except Exception:
                 self.newMessage("")
-                self.messages[-1].replies.append(reply)
-            self.newMessages = True
+                self.pendingMessages[-1].replies.append(reply)
+
+            self.unlock()
 
         def seenMessage(self):
-            self.newMessages = False
             if not any([contact.newMessages for contact in contacts]):
                 msgApp.seenNotification()
 
         def selectedReply(self, reply):
-            self.messages.append(reply)
-            self.messages[-1].reply = reply
-            self.messages[-1].replies = []
+            self.sentMessages.append(reply)
+            self.sentMessages[-1].reply = reply
+            self.sentMessages[-1].replies = []
+
+            reply.func()
+
+            # Send next queued message
+            try:
+                self.sentMessages.append(self.pendingMessages[0])
+            except IndexError: pass
 
         def unlock(self):
+            if self not in contacts:
+                contacts.append(self)
             self.locked = False
 
         def getReplies(self):
             try:
-                return self.messages[-1].replies
-            except Exception:
-                return False
+                return self.seenMessage[-1].replies
+            except Exception: return False
 
     class Message:
         def __init__(self, contact, msg):
             self.contact = contact
             self.msg = msg
             self.replies = []
-            self.reply = Reply("")
+            self.reply = None
 
     class ImageMessage:
         def __init__(self, contact, image):
@@ -70,14 +112,14 @@ init python:
             self.image = image
 
     class Reply:
-        def __init__(self, message, label=None):
+        def __init__(self, message, func):
             self.message = message
-            self.label = label
+            self.func = func
 
     class ImgReply:
-        def __init__(self, image, label=None):
+        def __init__(self, image, func):
             self.image = image
-            self.label = label
+            self.func = func
 
 init offset = -1
 default contacts = []
@@ -111,7 +153,7 @@ screen contactsscreen():
                         add contact.profilePicture yalign 0.5 xpos 20
                         text contact.name style "nametext" yalign 0.5 xpos 100
 
-                        if contact.messages and contact.messages[-1].replies:
+                        if contact.sentMessages and contact.sentMessages[-1].replies:
                             add "images/contactmsgnot.webp" yalign 0.5 xpos 275
 
                         imagebutton:
@@ -153,7 +195,7 @@ screen messager(contact=None):
             pos(773, 282)
 
             vbox:
-                for message in contact.messages:
+                for message in contact.sentMessages:
                     if isinstance(message, Message) and message.msg.strip():
                         textbutton message.msg style "msgleft"
                     elif isinstance(message, ImageMessage):
@@ -169,7 +211,7 @@ screen messager(contact=None):
                             style "msgright"
                             action Show("phone_image", img=message.image)
 
-        if contact.messages and contact.messages[-1].replies:
+        if contact.sentMessages and contact.sentMessages[-1].replies:
                 hbox:
                     xalign 0.5
                     ypos 855
@@ -186,22 +228,22 @@ screen reply(contact=None):
 
     vbox xpos 1200 yalign 0.84 spacing 15:
 
-        for reply in contact.messages[-1].replies:
+        for reply in contact.sentMessages[-1].replies:
             if isinstance(reply, Reply):
                 textbutton reply.message:
                     style "replies_style"
-                    if reply.label:
-                        action [Hide("reply"), Hide("messager"), Function(contact.selectedReply, reply), Call(reply.label)]
+                    if reply.func:
+                        action [Hide("reply"), Function(contact.selectedReply, reply), Function(reply.func)]
                     else:
-                        action [Function(contact.selectedReply, reply), Hide("reply")]
+                        action [Hide("reply"), Function(contact.selectedReply, reply)]
             elif isinstance(reply, ImgReply):
                 imagebutton:
                     idle Transform(reply.image, zoom=0.15)
                     style "replies_style"
-                    if reply.label:
-                        action [Hide("reply"), Hide("messager"), Function(contact.selectedReply, reply), Call(reply.label)]
+                    if reply.func:
+                        action [Hide("reply"), Function(contact.selectedReply, reply), Function(reply.func)]
                     else:
-                        action [Function(contact.selectedReply, reply), Hide("reply")]
+                        action [Hide("reply"), Function(contact.selectedReply, reply)]
 
 
 screen phone_image(img=None):

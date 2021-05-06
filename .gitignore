@@ -1,4 +1,5 @@
 College Kings 9.1.2 Patch/
+.vscode/
 
 game/bugTesting/images
 game/bugTesting/_bugTesting.txt
@@ -10,23 +11,11 @@ game/music
 game/saves
 game/sounds
 game/tl
-game/unren-dev.rpy
 
-lib/
-renpy/
-
-CollegeKings.py
-CollegeKings.sh
-errors.txt
-gradle.properties.txt
 log.txt
-Stored Script.txt
 traceback.txt
+project.json
 
-*.bat
 *.rpa
 *.rpyc
-*.zip
-*.exe
 
-.vscode/
