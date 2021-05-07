@@ -36,7 +36,11 @@ screen phoneIcon():
             idle "phone/images/phoneiconnot.webp"
         else:
             idle "phone/images/phoneicon.webp"
-        action Call("enterPhone")
+        
+        if freeRoam:
+            action Show("phone")
+        else:
+            action Call("enterPhone")
         align (0.999, 0.05)
 
 label enterPhone:
@@ -48,7 +52,12 @@ screen phoneTemplate():
     add "images/phonescreen.webp"
 
     if renpy.get_screen("phone"):
-        textbutton "Exit Phone" action [Hide("tutorial"), Show("phoneIcon"), Return()] style "phonebutton"
+        textbutton "Exit Phone":
+            style "phonebutton"
+            if freeRoam:
+                action [Hide("tutorial"), Hide("phone")]
+            else:
+                action [Hide("tutorial"), Return()]
 
     transclude
 

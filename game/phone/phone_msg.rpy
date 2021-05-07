@@ -43,7 +43,7 @@ init python:
             self.newMessages = True
             return message
 
-        def addReply(self, message, func):
+        def addReply(self, message, func=None):
             reply = Reply(message, func)
 
             # Append reply to last sent message
@@ -58,8 +58,8 @@ init python:
 
             self.unlock()
 
-        def addImgReply(self, image, var=None, value=0):
-            reply = ImgReply(image, label)
+        def addImgReply(self, image, func):
+            reply = ImgReply(image, func)
 
             # Append reply to last sent message
             try:
@@ -82,11 +82,15 @@ init python:
             self.sentMessages[-1].reply = reply
             self.sentMessages[-1].replies = []
 
-            reply.func()
+            if reply.func:
+                reply.func()
 
-            # Send next queued message
+            # Send next queued message(s)
             try:
-                self.sentMessages.append(self.pendingMessages[0])
+                while True:
+                    self.sentMessages.append(self.pendingMessages.pop(0))
+                    if self.getReplies():
+                        break
             except IndexError: pass
 
         def unlock(self):
@@ -112,12 +116,12 @@ init python:
             self.image = image
 
     class Reply:
-        def __init__(self, message, func):
+        def __init__(self, message, func=None):
             self.message = message
             self.func = func
 
     class ImgReply:
-        def __init__(self, image, func):
+        def __init__(self, image, func=None):
             self.image = image
             self.func = func
 
@@ -232,18 +236,13 @@ screen reply(contact=None):
             if isinstance(reply, Reply):
                 textbutton reply.message:
                     style "replies_style"
-                    if reply.func:
-                        action [Hide("reply"), Function(contact.selectedReply, reply), Function(reply.func)]
-                    else:
-                        action [Hide("reply"), Function(contact.selectedReply, reply)]
+                    action [Hide("reply"), Function(contact.selectedReply, reply)]
+
             elif isinstance(reply, ImgReply):
                 imagebutton:
                     idle Transform(reply.image, zoom=0.15)
                     style "replies_style"
-                    if reply.func:
-                        action [Hide("reply"), Function(contact.selectedReply, reply), Function(reply.func)]
-                    else:
-                        action [Hide("reply"), Function(contact.selectedReply, reply)]
+                    action [Hide("reply"), Function(contact.selectedReply, reply)]
 
 
 screen phone_image(img=None):

@@ -4,11 +4,13 @@ define config.default_music_volume = 1
 define config.default_sfx_volume = 1
 
 default achievementAtList = None
+default freeRoam = False
 
     ## Kiwii Vars
 default kiwii_firstTime = True
 
 # 1.0 - 6.0
+default v1_sda = False
 default evelynmove = False
 default name = "Alex"
 default realmode = False
@@ -38,8 +40,7 @@ default funofelijah = False
 default v1_freeRoam1_chrisGone = False
 default v1_talkToRiley = False
 default juliaismom = 0
-default laurenlike = 0
-default fr2door = 0
+default v1_laurenPoints = 0
 default v1_hitOnNora = False
 default simtomfight = False
 default simyou = 1
@@ -53,7 +54,19 @@ default ischoice = False
 default emilyandben = False
 default forgiveemily = False
 default costumeaubrey = True
-default lakiss = 0
+default v1_laurenKiss = False
+default v1_kissLauren = False
+
+    # Free roam 2
+default v1_samTalk = False
+default v1_fr2door = False
+default v1_joshTalk = False
+default v1_aubreywannafight = False
+default v1_graysontalk = False
+default v1_courtneyTalk = False
+default v1_masontalk = False
+default v1_katytalk = False
+
 default caughtpeekingaubrey = False
 default caughtpeekingpenelope = False
 default try1done = False

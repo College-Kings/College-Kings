@@ -52,16 +52,6 @@ label larep5b:
 $ contact_Lauren.newMessage(":)")
 call screen messager(contact_Lauren)
 
-label ryrep1a:
-$ ryanreply = 1
-$ contact_Ryan.newMessage("Haha, trust me, you're not gonna want to leave once you see all the hot chicks there.")
-$ contact_Ryan.newMessage("Just meet me in front of the Apes' frat house at 9.")
-$ contact_Ryan.addReply("Okay, will do.", "ryrep3a")
-call screen messager(contact_Ryan)
-
-label ryrep3a:
-call screen messager(contact_Ryan)
-
 label ryrep4a:
 $ addPoint("bro", 1)
 $ contact_Ryan.newMessage("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe")
@@ -362,8 +352,8 @@ label start:
     $ achievementAtList = renpy.get_at_list("nohardfeelings")
     hide nohardfeelings
 
-    show screen phoneIcon
     call screen realmode
+    show screen phoneIcon
 
 label v1:
     play music "music/msexy.mp3"
@@ -1230,12 +1220,13 @@ label v1:
     #         addPoint("bro", 1)
 
     $ contact_Julia.newMessage("Hey honey,\nenjoy your time in college.\nStay safe and don't forget to visit me.\nLove you", queue=False)
-    # $ contact_Julia.addReply("Love you too.", v1_reply2)
-    # $ contact_Julia.addReply("Thanks, Julia :)", v1_reply3)
+    # $ contact_Julia.addReply("Love you too.", v1_reply3)
+    # $ contact_Julia.addReply("Thanks, Julia :)", v1_reply4)
 
     play sound "sounds/vibrate.mp3"
     
     # Enter free roam
+    $ freeRoam = True
     show screen freeRoamTutorial
     call screen v1_freeRoam1_1
     with dissolve
@@ -1786,24 +1777,20 @@ label efra:
     with dissolve
 
     python:
-        def v1_reply5():
-            contact_Lauren.newMessage("Yeah sounds good :) Where do you wanna meet?")
-            contact_Lauren.addReply("Just come to dorm 109 at 8", v1_reply4)
+        # def v1_reply5():
+        #     addPoint("bf", 1)
 
-        def v1_reply6():
-            contact_Lauren.newMessage("Okay, will do")
-            contact_Lauren.addReply("See you later, cutie", v1_reply5)
-            contact_Lauren.addReply("Cool")
+        contact_Lauren.addReply("Hey Lauren, would you want to hang out with me and my friends tonight?")
+        contact_Lauren.newMessage("Yeah sounds good :) Where do you wanna meet?")
+        contact_Lauren.addReply("Just come to dorm 109 at 8")
+        contact_Lauren.newMessage("Okay, will do")
+        # contact_Lauren.addReply("See you later, cutie", v1_reply5)
+        contact_Lauren.addReply("Cool")
 
-        def v1_reply7():
-            addPoint("bf", 1)
 
-        contact_Lauren.addReply("Hey Lauren, would you want to hang out with me and my friends tonight?", v1_reply3)
-    
     label v1_phoneCheck1:
+        call screen phone
         if contact_Lauren.getReplies():
-            call screen phone
-
             scene s61
             with dissolve
             imre "Did you ask?"
@@ -2044,46 +2031,32 @@ label efra:
     la "I think I'll drink."
 
     menu:
-
-
         "You're missing out":
+            scene s73gr
+            with dissolve
 
-            jump ao_a
+            u "Wow... you're missing out, Lauren."
+
+            scene s73ar
+            with dissolve
+
+            la "I guess we'll never know."
 
         "Dodged a bullet there.":
-
             $ addPoint("tm", 1)
-            jump ao_b
 
-    label ao_a:
-        scene s73gr
-        with dissolve
+            scene s73gr
+            with dissolve
 
-        u "Wow... you're missing out, Lauren."
+            u "Phew, dodged a bullet there."
 
-        scene s73ar
-        with dissolve
+            scene s72f
+            with dissolve
 
-        la "I guess we'll never know."
+            imre "Damn..."
 
-        jump ao_ad
-    label ao_b:
-        scene s73gr
-        with dissolve
-
-        u "Phew, dodged a bullet there."
-
-        scene s72f
-        with dissolve
-
-        imre "Damn..."
-
-        jump ao_bd
-
-    label ao_ad:
     scene s72f
     with dissolve
-    label ao_bd:
 
     imre "Okay, it's your turn to dare someone, Lauren."
 
@@ -2139,95 +2112,65 @@ label efra:
     ri "Take your shirt off."
 
     menu:
-
-
         "Take your shirt off":
-
             $ addPoint("tm", 1)
-            $ shirtoff = 1
-            jump ap_a
+
+            scene s76
+            with dissolve
+
+            u "There you go. Happy now?"
+
+            scene s71cf
+            with dissolve
+
+            ri "Very happy."
+
+            scene s71ef
+            with dissolve
+
+            u "Well then, Riley, I dare you to also take your shirt off."
 
         "Drink instead":
+            scene s76a
+            with dissolve
 
-            $ shirtoff = 0
-            jump ap_b
+            " "
 
-    label ap_a:
-        scene s76
-        with dissolve
+            scene s71bf
+            with dissolve
 
-        u "There you go. Happy now?"
+            ri "Really? That was such an easy dare."
 
-        scene s71cf
-        with dissolve
+            scene s71ef
+            with dissolve
 
-        ri "Very happy."
+            u "If that's what you think, then I dare you to take your shirt off."
 
-        scene s71ef
-        with dissolve
+    scene s71bl
+    with dissolve
+    ri "What?! Can he just dare me back like that?"
 
-        u "Well then, Riley, I dare you to also take your shirt off."
+    scene s72r
+    with dissolve
 
-        jump ap_ad
-    label ap_b:
-        scene s76a
-        with dissolve
+    imre "Normally it's not allowed, but I think for this one we'll make an exception."
 
-        " "
+    scene s71cf
+    with dissolve
 
-        scene s71bf
-        with dissolve
+    ri "I'm not wearing a bra."
 
-        ri "Really? That was such an easy dare."
-
-        scene s71ef
-        with dissolve
-
-        u "If that's what you think, then I dare you to take your shirt off."
-
-        jump ap_bd
-
-        label ap_ad:
-        label ap_bd:
-
-        scene s71bl
-        with dissolve
-        ri "What?! Can he just dare me back like that?"
-
-        scene s72r
-        with dissolve
-
-        imre "Normally it's not allowed, but I think for this one we'll make an exception."
-
-        scene s71cf
-        with dissolve
-
-        ri "I'm not wearing a bra."
-
-        imre "Nnnnnnice."
+    imre "Nnnnnnice."
 
 
-        scene s71cf
-        with dissolve
-        ri "So I feel like that dare is kinda unfair."
+    scene s71cf
+    with dissolve
+    ri "So I feel like that dare is kinda unfair."
 
+    menu:
+        "Do it, or drink.":
+            $ addPoint("bro", 1)
 
-
-        menu:
-
-
-
-            "Do it, or drink.":
-
-                $ addPoint("bro", 1)
-                jump ar_a
-
-            "You're right.":
-
-                $ addPoint("bf", 1)
-                jump ar_b
-
-        label ar_a:
             scene s71ef
             with dissolve
             u "You gotta do the dare, or drink."
@@ -2241,62 +2184,46 @@ label efra:
             with dissolve
 
             " "
-            jump ar_ad
 
-        label ar_b:
+        "You're right.":
+            $ addPoint("bf", 1)
+            
             scene s71ef
             with dissolve
             u "You're right, let's continue."
-            jump ar_bd
 
-        label ar_ad:
-        label ar_bd:
+    scene s73cf
+    with dissolve
 
-        scene s73cf
-        with dissolve
+    la "Guys, I don't wanna kill the vibe, but we have class pretty early tomorrow and I don't wanna be late for my first Economics class."
 
-        la "Guys, I don't wanna kill the vibe, but we have class pretty early tomorrow and I don't wanna be late for my first Economics class."
+    scene s72ef
+    with dissolve
 
-        scene s72ef
-        with dissolve
+    imre "What? But we were just getting started."
 
-        imre "What? But we were just getting started."
+    scene s71cf
+    with dissolve
 
-        scene s71cf
-        with dissolve
+    ri "She's right, we should get going. We'll see you tomorrow."
 
-        ri "She's right, we should get going. We'll see you tomorrow."
+    scene s71ef
+    with dissolve
 
-        scene s71ef
-        with dissolve
+    u "Alright, see ya."
 
-        u "Alright, see ya."
+    stop music fadeout 2.0
 
-        stop music fadeout 2.0
+    ### Late night talk with Imre.
+    scene s80
+    with Fade(1, 0, 1)
+    play music "music/msad.mp3"
+    imre "Man, I can't wait to bang this Riley chick."
 
-####### Late night talk with Imre.
+    menu:
+        "Riley's mine.":
+            $ addPoint("tm", 1)
 
-        scene s80
-        with Fade(1, 0, 1)
-        play music "music/msad.mp3"
-        $ rileyfight = 0
-        imre "Man, I can't wait to bang this Riley chick."
-
-        menu:
-
-
-
-            "Riley's mine.":
-
-                $ addPoint("tm", 1)
-                jump as_a
-
-            "They're both hot.":
-
-                $ addPoint("bro", 1)
-                jump as_b
-
-        label as_a:
             scene s79b
             with dissolve
             u "What? I want Riley. You can have Lauren."
@@ -2305,146 +2232,122 @@ label efra:
             with dissolve
             imre "What the hell man?! I invited Riley. Back off."
 
-
             menu:
-
-
-
                 "You're right, sorry.":
-
                     $ addPoint("bro", 1)
-                    jump at_a
+
+                    scene s79a
+                    with dissolve
+                    u "You're right, Riley is yours. I'm sorry."
+
+                    scene s80a
+                    with dissolve
+
+                    imre "It's fine bro, I get it. She is really cute."
 
                 "She wants me.":
-
                     $ addPoint("tm", 1)
-                    $ rileyfight = 1
-                    jump at_b
 
-            label at_a:
-                scene s79a
-                with dissolve
-                u "You're right, Riley is yours. I'm sorry."
+                    scene s79b
+                    with dissolve
+                    u "She wanted to see ME shirtless, not you. Face it, she wants me."
 
-                scene s80a
-                with dissolve
+                    scene s80e
+                    with dissolve
 
-                imre "It's fine bro, I get it. She is really cute."
+                    imre "Man, that was drink or dare, get over yourself."
 
-                jump at_ad
-            label at_b:
-                scene s79b
-                with dissolve
-                u "She wanted to see ME shirtless, not you. Face it, she wants me."
+                    imre "What happened to bros before hoes..."
 
-                scene s80e
-                with dissolve
+                    scene s79a
+                    with dissolve
 
-                imre "Man, that was drink or dare, get over yourself."
+                    u "Shit... You're right, sorry. I shouldn't have..."
 
-                imre "What happened to bros before hoes..."
+                    scene s80a
+                    with dissolve
+                    imre "It's alright man, I get it."
+                    scene s80
+                    with dissolve
+                    imre "Trust me, we're gonna bang so many chicks this year. All we need is confidence..."
+                    jump at_bd
 
-                scene s79a
-                with dissolve
+        "They're both hot.":
+            $ addPoint("bro", 1)
 
-                u "Shit... You're right, sorry. I shouldn't have..."
-
-                scene s80a
-                with dissolve
-                imre "It's alright man, I get it."
-                scene s80
-                with dissolve
-                imre "Trust me, we're gonna bang so many chicks this year. All we need is confidence..."
-                jump at_bd
-
-    label as_b:
-        scene s79
-        with dissolve
-        u "Hahaha, to be honest they're both pretty hot."
-
-        jump as_bd
-
-    label as_ad:
-    label as_bd:
-    label at_ad:
-        scene s80
-        with dissolve
-
-        imre "Oh man, we're gonna bang so many chicks this year. Trust me, all you need is confidence..."
-        label at_bd:
-        imre "And to be part of a frat."
-
-        if v1_freeRoam1_aubrey:
-
-            scene s79a
+            scene s79
             with dissolve
+            u "Hahaha, to be honest they're both pretty hot."
 
-            u "Why do people keep saying that? I saw a guy fucking a really hot chick in the room opposite to ours."
+    scene s80
+    with dissolve
 
-            u "And all the frat guys live in the frat houses right? So he got chicks without being in a frat."
+    imre "Oh man, we're gonna bang so many chicks this year. Trust me, all you need is confidence..."
 
+label at_bd:
+    imre "And to be part of a frat."
 
-        else:
-
-            scene s79a
-            with dissolve
-
-            u "Why do people keep saying that? I've heard from some girls that they date guys that aren't in a frat."
-
-        scene s80a
-        with dissolve
-        imre "Man, I'm not saying it's impossible, but why make it so hard for yourself?"
-
-        imre "Being in a frat is the easiest way to get girls, plus you get to fight."
-
-        scene s79d
-        with dissolve
-
-        u "But I don't wanna fight man! I'm scared, okay?!"
-
-        u "I don't know how to fight, I don't know how to pick up girls, I don't know anything about college life."
-
-        scene s80a
-        with dissolve
-
-        imre "It's alright man, don't beat yourself up."
-
-        imre "Look, I'm a first year too, but the Wolves are a brotherhood. They support each other."
-
-        imre "You'll learn everything over time. And trust me, fighting is a lot more fun than you'd think."
-
+    if v1_freeRoam1_aubrey:
         scene s79a
         with dissolve
 
-        u "It might be right for you, but frat life is just not for me."
+        u "Why do people keep saying that? I saw a guy fucking a really hot chick in the room opposite to ours."
+        u "And all the frat guys live in the frat houses right? So he got chicks without being in a frat."
 
-        u "I'm not a fighter and I don't want to be one."
-
-        scene s80a
-        with dissolve
-
-        imre "Alright man, good night."
-
+    else:
         scene s79a
         with dissolve
 
-        u "Night."
+        u "Why do people keep saying that? I've heard from some girls that they date guys that aren't in a frat."
 
-        stop music fadeout 2.0
+    scene s80a
+    with dissolve
+    imre "Man, I'm not saying it's impossible, but why make it so hard for yourself?"
 
-        jump sexdream1
+    imre "Being in a frat is the easiest way to get girls, plus you get to fight."
 
+    scene s79d
+    with dissolve
 
-    ######### sexdream
+    u "But I don't wanna fight man! I'm scared, okay?!"
 
-    label sexdream1:
+    u "I don't know how to fight, I don't know how to pick up girls, I don't know anything about college life."
 
-    $ _game_menu_screen = "ingmenu"
+    scene s80a
+    with dissolve
+
+    imre "It's alright man, don't beat yourself up."
+
+    imre "Look, I'm a first year too, but the Wolves are a brotherhood. They support each other."
+
+    imre "You'll learn everything over time. And trust me, fighting is a lot more fun than you'd think."
+
+    scene s79a
+    with dissolve
+
+    u "It might be right for you, but frat life is just not for me."
+
+    u "I'm not a fighter and I don't want to be one."
+
+    scene s80a
+    with dissolve
+
+    imre "Alright man, good night."
+
+    scene s79a
+    with dissolve
+
+    u "Night."
+
+    stop music fadeout 2.0
+
+    ### Sex dream
 
     scene s1  ### close to the kitchen counter
     with Fade (1,0,1)
 
     ri "Wow, you guys have a really nice house."
+
     show screen fantasyOverlay
     scene sda1a
     with dissolve
@@ -2484,251 +2387,210 @@ label efra:
     scene sdakisso
     with dissolve
 
-
     " "
     u "(Okay, this is definitely a dream, but I do like where this is going.)"
+
     menu:
-
-
         "Keep dreaming":
+            $ v1_sda = True
 
-            $ sda = True
-            jump dream
+            scene sda3a
+            with fade
+
+            ri "*Chuckles* You're hard already."
+
+            scene sda3
+            with dissolve
+
+            ri "Oh wow."
+
+            scene sda4
+            with dissolve
+
+            ri "How does that feel?"
+
+            scene sda3a
+            with dissolve
+            ri "Tell me what you want."
+
+            menu:
+                "Blowjob":
+                    scene sda3b
+                    with dissolve
+
+                    u "I want you to suck my dick."
+
+                    scene sda3a
+                    with dissolve
+
+                    ri "I was hoping you'd say that."
+
+                    image sdabj = Movie (play="images/sdabj.webm", loop = True, image = "images/s1")
+                    image sdabjf = Movie (play="images/sdabjf.webm", loop = True, image = "images/sda4e")
+
+                    show sdabj
+                    with fade
+                    u "You look so pretty with my cock in your mouth."
+
+                    ri "*Gasp* You taste so good."
+
+                    ri "Just make sure you don't come yet."
+
+                    u "I won't, I won't. You can go faster."
+
+                    show sdabjf
+                    with dissolve
+
+                    ri "*Gasp* Like this?"
+
+                    u "Fuuuuck. Yes, exactly like that."
+
+                    u "I can't hold it much longer."
+
+                    ri "*Gasp* Okay enough, I need your dick inside of me."
+
+                "Footjob":
+
+                    scene sda3b
+                    with dissolve
+
+                    u "I want you to use your feet."
+
+                    scene sda3a
+                    with dissolve
+
+                    ri "I was hoping you'd say that."
+
+                    show sdafj
+                    with fade
+                    ri "Wow, I've never done this before. Does it feel good?"
+
+                    u "Yes, it feels fantastic, Riley."
+
+                    ri "Just make sure you don't cum yet."
+
+                    u "I won't, I won't. You can go faster."
+
+                    show sdafjf
+                    with dissolve
+
+                    ri "Like this?"
+
+                    u "Fuuuuck. Yes, exactly like that."
+
+                    u "I can't hold it much longer."
+
+                    ri "Okay enough, I need your dick inside of me."
+
+            scene sda4e
+            with fade
+
+            ri "What's next?"
+
+            scene sda4b ## grabbing her shoulders
+            with dissolve
+
+            u "I'll show you what's next."
+
+            scene sda4c ## turning her around
+            with dissolve
+            u "Bend over."
+
+            scene sda4d ## grabing her neck
+            with dissolve
+            pause (0.5)
+            scene sda5 ## slamming her onto the counter
+            with vpunch
+
+            ri "Fuck yes, [name]!"
+
+            scene sda5a # her face on the counter to the side with your arm pushing her down
+            with dissolve
+
+            ri "Yes! I love it when you dominate me."
+
+            scene sda60
+            with dissolve
+
+            pause 0.3
+            play sound "sounds/slap.mp3"
+            scene sda60a
+            with vpunch
+
+            ri "*Squeals*"
+
+            scene sda60
+            with dissolve
+
+            pause 0.3
+            play sound "sounds/slap.mp3"
+            scene sda60a
+            with vpunch
+
+            ri "Harder!"
+
+            scene sda60
+            with dissolve
+
+            pause 0.3
+            play sound "sounds/slap.mp3"
+            scene sda60a
+            with vpunch
+
+            ri "*Squeals*"
+
+            scene sda7
+            with dissolve #her face looking back at you
+
+            ri "Please... fuck me. I want you so bad."
+
+            scene sda7a ## her face on the counter
+            with vpunch
+
+            ri "Oh my god!"
+
+            show sdasex
+            with dissolve
+
+            ri "Yesss! Faster!"
+
+            ri "You feel so good inside of me, [name]."
+
+            u "(She's so fucking hot.)"
+
+            ri "Don't stop!"
+
+            ri "[name], I'm gonna cum!"
+
+            u "I can't hold it any longer!"
+
+            scene sda7a
+            with dissolve
+
+            ri "Cum inside me, [name]! Please fill me up!"
+
+            scene aftercum
+            show sdacum2
+            with dissolve
+
+            u "Hngh..."
+
+            scene sda7
+            with dissolve
+
+            ri "My legs are shaking."
 
         "Wake up":
-
-            $ sda = False
-            jump skipdream
-
-    label dream:
-    scene sda3a
-    with fade
-
-    ri "*Chuckles* You're hard already."
-
-    ### your pants down
-
-    scene sda3
-    with dissolve
-
-    ri "Oh wow."
-
-    scene sda4
-    with dissolve
-
-    ri "How does that feel?"
-
-    scene sda3a
-    with dissolve
-    ri "Tell me what you want."
-
-    menu:
-
-
-        "Blowjob":
-
-            jump bg_b
-
-        "Footjob":
-
-            jump bg_c
-
-
-    label bg_b:
-
-        scene sda3b
-        with dissolve
-
-        u "I want you to suck my dick."
-
-        scene sda3a
-        with dissolve
-
-        ri "I was hoping you'd say that."
-
-        image sdabj = Movie (play="images/sdabj.webm", loop = True, image = "images/s1")
-        image sdabjf = Movie (play="images/sdabjf.webm", loop = True, image = "images/sda4e")
-
-        show sdabj
-        with fade
-        u "You look so pretty with my cock in your mouth."
-
-        ri "*Gasp* You taste so good."
-
-        ri "Just make sure you don't come yet."
-
-        u "I won't, I won't. You can go faster."
-
-        show sdabjf
-        with dissolve
-
-        ri "*Gasp* Like this?"
-
-        u "Fuuuuck. Yes, exactly like that."
-
-        u "I can't hold it much longer."
-
-        ri "*Gasp* Okay enough, I need your dick inside of me."
-
-        jump bg_bd
-
-    label bg_c:
-
-        scene sda3b
-        with dissolve
-
-        u "I want you to use your feet."
-
-        scene sda3a
-        with dissolve
-
-        ri "I was hoping you'd say that."
-
-
-
-        image sdafj = Movie (play="images/sdafj.webm", loop = True, image = "images/s1")
-        image sdafjf = Movie (play="images/sdafjf.webm", loop = True, image = "images/sda4e")
-
-        show sdafj
-        with fade
-        ri "Wow, I've never done this before. Does it feel good?"
-
-        u "Yes, it feels fantastic, Riley."
-
-        ri "Just make sure you don't cum yet."
-
-        u "I won't, I won't. You can go faster."
-
-        show sdafjf
-        with dissolve
-
-        ri "Like this?"
-
-        u "Fuuuuck. Yes, exactly like that."
-
-        u "I can't hold it much longer."
-
-        ri "Okay enough, I need your dick inside of me."
-
-        jump bg_cd
-
-
-
-    label bg_ad:
-    label bg_bd:
-    label bg_cd:
-
-    scene sda4e
-    with fade
-
-    ri "What's next?"
-
-    scene sda4b ## grabbing her shoulders
-    with dissolve
-
-    u "I'll show you what's next."
-
-    scene sda4c ## turning her around
-    with dissolve
-    u "Bend over."
-
-    scene sda4d ## grabing her neck
-    with dissolve
-    pause (0.5)
-    scene sda5 ## slamming her onto the counter
-    with vpunch
-
-    ri "Fuck yes, [name]!"
-
-    scene sda5a # her face on the counter to the side with your arm pushing her down
-    with dissolve
-
-    ri "Yes! I love it when you dominate me."
-
-    scene sda60
-    with dissolve
-
-    pause 0.3
-    play sound "sounds/slap.mp3"
-    scene sda60a
-    with vpunch
-
-    ri "*Squeals*"
-
-    scene sda60
-    with dissolve
-
-    pause 0.3
-    play sound "sounds/slap.mp3"
-    scene sda60a
-    with vpunch
-
-    ri "Harder!"
-
-    scene sda60
-    with dissolve
-
-    pause 0.3
-    play sound "sounds/slap.mp3"
-    scene sda60a
-    with vpunch
-
-    ri "*Squeals*"
-
-    scene sda7
-    with dissolve #her face looking back at you
-
-    ri "Please... fuck me. I want you so bad."
-
-
-    scene sda7a ## her face on the counter
-    with vpunch
-
-    ri "Oh my god!"
-
-    image sdasex = Movie (play="images/sdasex.webm", loop = True, image = "images/sda7a")
-
-    show sdasex
-    with dissolve
-
-    ri "Yesss! Faster!"
-
-    ri "You feel so good inside of me, [name]."
-
-    u "(She's so fucking hot.)"
-
-    ri "Don't stop!"
-
-    ri "[name], I'm gonna cum!"
-
-    u "I can't hold it any longer!"
-
-    scene sda7a
-    with dissolve
-
-    ri "Cum inside me, [name]! Please fill me up!"
-
-    image sdacum2 = Movie (play="images/sdacum2.webm", image = "images/aftercum.webp", loop = False)
-    scene aftercum
-    show sdacum2
-    with dissolve
-    u "Hngh..."
-
-    scene sda7
-    with dissolve
-
-    ri "My legs are shaking."
-    label skipdream:
+            pass
 
     hide screen fantasyOverlay
 
     stop music fadeout 2.0
     $ renpy.end_replay()
 
-    ####next morning in your dorm, Imre seems to be gone.
+    ### Next morning in your dorm, Imre seems to be gone.
 
-
-    if sda == True:
+    if v1_sda:
         scene s81
         with Fade (1,0,1)
 
@@ -2794,7 +2656,6 @@ label efra:
         with dissolve
 
         ri "Imre doesn't need to take economics for his course and Lauren, I don't know."
-
 
     scene s83a #sits down
     with fade
@@ -2891,218 +2752,182 @@ label efra:
     la "Yep... she's just so annoying. I wish I could still move dorms."
 
     menu:
-
         "Move in with me?":
-
             $ addPoint("bf", 1)
-            jump au_a
+
+            scene s87a
+            with dissolve
+            u "You should move in with me."
+
+            scene s87b
+            with dissolve
+
+            la "Haha definitely, I'm sure Imre would looove to swap rooms with me."
+
+            la "It's fine, it was just such a bad start to the day. I really didn't wanna be late to my first real class."
+
+            scene s87c
+            with dissolve
+            u "How about we go to the park this afternoon? I'll bring some sandwiches and we'll make your day better."
 
         "Bad roommates suck.":
-
             $ addPoint("bro", 1)
-            jump au_b
 
-    label au_a:
-        scene s87a
-        with dissolve
-        u "You should move in with me."
+            scene s87a
+            with dissolve
+            u "I get that, bad roommates suck."
 
-        scene s87b
-        with dissolve
+            scene s87
+            with dissolve
 
-        la "Haha definitely, I'm sure Imre would looove to swap rooms with me."
+            la "It was just such a bad start into the day. I really didn't wanna be late to my first real class."
 
-        la "It's fine, it was just such a bad start to the day. I really didn't wanna be late to my first real class."
+            scene s87a
+            with dissolve
+            u "How about we go to the park this afternoon? I'll bring some sandwiches and we'll make your day better."
 
-        scene s87c
-        with dissolve
-        u "How about we go to the park this afternoon? I'll bring some sandwiches and we'll make your day better."
-
-        jump au_ad
-    label au_b:
-        scene s87a
-        with dissolve
-        u "I get that, bad roommates suck."
-
-        scene s87
-        with dissolve
-
-        la "It was just such a bad start into the day. I really didn't wanna be late to my first real class."
-
-        scene s87a
-        with dissolve
-        u "How about we go to the park this afternoon? I'll bring some sandwiches and we'll make your day better."
-
-        jump au_bd
-
-
-        label au_ad:
-        label au_bd:
-
-        scene s87b
-        with dissolve
-        stop music fadeout 2.0
-
-        la "Yeah, I'd like that."
-
-###### park with Lauren (secret sharing)
-
-scene s88
-with Fade (1,0,1)
-
-play music "music/mlove1.mp3"
-play sound "sounds/park.mp3"
-
-la "This park is really nice. I've never been here before."
-
-scene s88a
-with dissolve
-
-u "Oh, are you from here?"
-
-scene s89
-with dissolve
-
-la "Yeah, my family lives about 20 minutes from here."
-
-scene s89a
-with dissolve
-
-u "Oh cool."
-
-u "Lauren, I gotta be honest..."
-
-u "I've got good news, but I've also got some bad news."
-
-scene s89b
-with dissolve
-
-la "Alright, tell me."
-
-scene s89d
-with dissolve
-
-u "So, the good news is that I made us some delicious sandwiches."
-
-scene s89
-with dissolve
-
-la "That's so cute!"
-
-scene s89a
-with dissolve
-
-u "The bad news is that I forgot them in my dorm and Imre has probably eaten them by now."
-
-scene s89b
-with dissolve
-
-la "Haha, oh wow. So you're just gonna tease me with the possibility of eating a delicious sandwich only to then take that away from me?"
-
-la "That's some pretty messed up stuff."
-
-scene s89d
-with dissolve
-
-u "If it makes you feel any better, I'm just as disappointed as you are."
-
-scene s89e #(Lauren drinking)
-with dissolve
-" "
-u "So... what do you think of the guys at San Vallejo?"
-
-scene s89b
-with dissolve
-
-la "I've met a couple cute guys so far..."
-
-scene s89d
-with dissolve
-
-u "A couple huh?"
-
-menu:
-
-    "You could get any guy.":
-
-        jump av_a
-
-    "Yet, you're here with me.":
-
-        $ laurenlike += 1
-        jump av_b
-
-label av_a:
-    scene s89d
+    scene s87b
     with dissolve
-    u "I bet you could get any guy you want."
+    stop music fadeout 2.0
 
-    scene s89f
-    with dissolve
-    la "Uhm... thanks. Not really though, haha."
+    la "Yeah, I'd like that."
 
-    jump av_ad
-label av_b:
-    scene s89d
+    ### park with Lauren (secret sharing)
+
+    scene s88
+    with Fade (1,0,1)
+
+    play music "music/mlove1.mp3"
+    play sound "sounds/park.mp3"
+
+    la "This park is really nice. I've never been here before."
+
+    scene s88a
     with dissolve
-    u "And yet, you're here with me. How surprising."
+
+    u "Oh, are you from here?"
+
+    scene s89
+    with dissolve
+
+    la "Yeah, my family lives about 20 minutes from here."
+
+    scene s89a
+    with dissolve
+
+    u "Oh cool."
+
+    u "Lauren, I gotta be honest..."
+
+    u "I've got good news, but I've also got some bad news."
 
     scene s89b
     with dissolve
-    la "Okay Casanova, I'm pretty sure you invited me and not the other way around."
+
+    la "Alright, tell me."
 
     scene s89d
     with dissolve
-    u "Let's not get caught up on the details."
 
-    u "I'm gonna assume that there's no jealous boyfriend or ex that'll beat me up after this?"
+    u "So, the good news is that I made us some delicious sandwiches."
+
     scene s89
     with dissolve
-    la "Don't worry, I haven't had a boyfriend since 10th grade."
-    jump av_bd
 
-    label av_bd:
-        scene s89f
-        with dissolve
-    label av_ad:
-        la "I haven't even..."
+    la "That's so cute!"
 
-        la "Never mind..."
+    scene s89a
+    with dissolve
 
-        scene s89g
-        with dissolve
+    u "The bad news is that I forgot them in my dorm and Imre has probably eaten them by now."
 
-        u "Oh come on! You can tell me."
+    scene s89b
+    with dissolve
 
-        scene s89f
-        with dissolve
+    la "Haha, oh wow. So you're just gonna tease me with the possibility of eating a delicious sandwich only to then take that away from me?"
 
-        la "I'd rather not, it's kinda embarrassing."
+    la "That's some pretty messed up stuff."
 
-        scene s89g
-        with dissolve
+    scene s89d
+    with dissolve
 
-        u "I'll tell you one of my secrets as well."
+    u "If it makes you feel any better, I'm just as disappointed as you are."
 
-        scene s89b
-        with dissolve
+    scene s89e #(Lauren drinking)
+    with dissolve
+    " "
+    u "So... what do you think of the guys at San Vallejo?"
 
-        la "Fine, but you have to start."
+    scene s89b
+    with dissolve
 
+    la "I've met a couple cute guys so far..."
 
-        menu:
+    scene s89d
+    with dissolve
 
+    u "A couple huh?"
 
-            "I'm still in love with my ex.":
+    menu:
+        "You could get any guy.":
+            scene s89d
+            with dissolve
+            u "I bet you could get any guy you want."
 
-                jump aw_a
+            scene s89f
+            with dissolve
+            la "Uhm... thanks. Not really though, haha."
 
-            "I've broken into an Ikea.":
+        "Yet, you're here with me.":
+            $ v1_laurenPoints += 1
 
-                $ laurenlike += 1
-                jump aw_b
+            scene s89d
+            with dissolve
+            u "And yet, you're here with me. How surprising."
 
-        label aw_a:
+            scene s89b
+            with dissolve
+            la "Okay Casanova, I'm pretty sure you invited me and not the other way around."
+
+            scene s89d
+            with dissolve
+            u "Let's not get caught up on the details."
+
+            u "I'm gonna assume that there's no jealous boyfriend or ex that'll beat me up after this?"
+            scene s89
+            with dissolve
+            la "Don't worry, I haven't had a boyfriend since 10th grade."
+
+            scene s89f
+            with dissolve
+
+    la "I haven't even..."
+
+    la "Never mind..."
+
+    scene s89g
+    with dissolve
+
+    u "Oh come on! You can tell me."
+
+    scene s89f
+    with dissolve
+
+    la "I'd rather not, it's kinda embarrassing."
+
+    scene s89g
+    with dissolve
+
+    u "I'll tell you one of my secrets as well."
+
+    scene s89b
+    with dissolve
+
+    la "Fine, but you have to start."
+
+    menu:
+        "I'm still in love with my ex.":
+
             scene s89d
             with dissolve
             u "Hmmm... okay. I'm - I'm still in love with my... ex."
@@ -3125,9 +2950,9 @@ label av_b:
 
             u "Now it's time for your secret."
 
-            jump aw_ad
+        "I've broken into an Ikea.":
 
-        label aw_b:
+            $ v1_laurenPoints += 1
             scene s89d
             with dissolve
             u "Hmm... okay. A couple years ago me and my best friend Josh saw this video of a guy staying 24 hours in an Ikea store."
@@ -3175,212 +3000,167 @@ label av_b:
 
             u "I'm glad you're amused, because now it's time for your secret."
 
-            jump aw_bd
+    scene s89f
+    with dissolve
 
-        label aw_ad:
-        label aw_bd:
+    la "Right... almost forgot about that."
 
-            scene s89f
-            with dissolve
+    la "I...I haven't actually had sex before."
 
-            la "Right... almost forgot about that."
+    scene s89g
+    with dissolve
 
-            la "I...I haven't actually had sex before."
+    u "You?"
 
-            scene s89g
-            with dissolve
+    scene s89f
+    with dissolve
 
-            u "You?"
+    la "I mean I've done stuff... just not sex."
 
-            scene s89f
-            with dissolve
+    scene s89g
+    with dissolve
 
-            la "I mean I've done stuff... just not sex."
+    u "You haven't had sex?"
 
-            scene s89g
-            with dissolve
+    scene s89f
+    with dissolve
 
-            u "You haven't had sex?"
+    la "Yeah..."
 
-            scene s89f
-            with dissolve
+    scene s89g
+    with dissolve
 
-            la "Yeah..."
+    u "Your vagina - has never seen a penis?"
 
-            scene s89g
-            with dissolve
+    scene s89f
+    with dissolve
 
-            u "Your vagina - has never seen a penis?"
+    la "Right, but..."
 
-            scene s89f
-            with dissolve
+    scene s89g
+    with dissolve
 
-            la "Right, but..."
+    u "Your donut - has not been glazed?"
 
-            scene s89g
-            with dissolve
+    scene s89f
+    with dissolve
 
-            u "Your donut - has not been glazed?"
+    la "Yes, but..."
 
-            scene s89f
-            with dissolve
+    scene s89g
+    with dissolve
 
-            la "Yes, but..."
+    u "Your jigsaw puzzle - has not been completed?"
 
-            scene s89g
-            with dissolve
+    scene s89
+    with dissolve
 
-            u "Your jigsaw puzzle - has not been completed?"
+    la "Okay, how many of these did you have ready to go?"
+
+    scene s89a
+    with dissolve
+
+    u "Haha, just enough to show my surprise."
+
+    scene s89
+    with dissolve
+
+    la "Oh come on, it's not that weird."
+
+    scene s89a
+    with dissolve
+
+    u "It's not weird, it's just..."
+
+
+    menu:
+        "You're really beautiful.":
+            $ addPoint("bf", 1)
+
+            u "You know... you're really beautiful."
 
             scene s89
             with dissolve
+            la "Awww."
 
-            la "Okay, how many of these did you have ready to go?"
+        "You're not ugly.":
+            $ addPoint("bro", 1)
 
-            scene s89a
+            u "You know... you're not ugly."
+
+            scene s89b
             with dissolve
 
-            u "Haha, just enough to show my surprise."
+            la "Wow, how flattering."
 
-            scene s89
-            with dissolve
+    scene s89k
+    with dissolve
 
-            la "Oh come on, it's not that weird."
+    u "(Is this the moment to kiss her?)"
 
-            scene s89a
-            with dissolve
+    menu:
+        "Kiss her":
+            $ v1_laurenKiss = True
 
-            u "It's not weird, it's just..."
+            if v1_laurenPoints == 2:
+                scene s90
+                with dissolve # kiss
+                $ v1_kissLauren = True
 
-
-            menu:
-
-
-                "You're really beautiful.":
-
-                    $ addPoint("bf", 1)
-                    jump ax_a
-
-                "You're not ugly.":
-
-                    $ addPoint("bro", 1)
-                    jump ax_b
-
-            label ax_a:
-
-                u "You know... you're really beautiful."
-
-                scene s89
-                with dissolve
-                la "Awww."
-
-                jump ax_ad
-
-            label ax_b:
-
-                u "You know... you're not ugly."
-
-                scene s89b
-                with dissolve
-
-                la "Wow, how flattering."
-
-                jump ax_bd
-
-
-            label ax_ad:
-            label ax_bd:
-
-            scene s89k
-            with dissolve
-
-            u "(Is this the moment to kiss her?)"
-
-
-            menu:
-
-
-                "Kiss her":
-
-                    $ lakiss = 1
-                    jump ay_a
-
-                "Don't kiss her":
-
-                    $ lakiss = 0
-                    jump ay_b
-
-            label ay_a:
-                if laurenlike >= 2:
-                    scene s90
-                    with dissolve # kiss
-                    $ firstkisslauren = True
-
-                    $ romeo = True
-                    if not steam:
-                        image romeo = "images/romeo.webp"
-                        show romeo:
-                            xpos 0
-                            ypos -200
-                            linear 0.5 xpos 0 ypos 0
-                            pause 2.0
-                            linear 0.5 xpos 0 ypos -200
-                    else:
-                        $ achievement.grant("romeo")
-                        $ achievement.sync()
-
-                    play sound "sounds/kiss.mp3"
-                    " "
-                    scene s90a
-                    with dissolve
-                    " "
+                $ romeo = True
+                if not steam:
+                    show romeo at achievementShow
                 else:
-                    scene s90a
-                    with dissolve
-                    " "
-                jump ay_ad
+                    $ achievement.grant("romeo")
+                    $ achievement.sync()
 
-            label ay_b:
-                scene s90b # you scratching your head
-                with dissolve
+                play sound "sounds/kiss.mp3"
+
                 " "
-                jump ay_bd
 
-            label ay_ad:
+                scene s90a
+                with dissolve
 
-            label ay_bd:
-
-
-            scene s89h
-            with dissolve
-
-            la "Uhh... [name]... I..."
-            la "I should go."
-
-            scene s91 ##Lauren stood up
-            with dissolve
-
-            u "Lauren, wait!"
-
-            scene s91a #Lauren turns around
-            with dissolve
-
-            la "Sorry, but..."
-            la "I'll see you tomorrow, [name]."
-
-            scene s92 # you head in hands
-            with dissolve
-
-            if lakiss == 1:
-                u "(Fuck... why did I try to kiss her?! That just made everything weird.)"
+                " "
 
             else:
-                u "(Fuck... should I have kissed her? Now it's just weird between us.)"
+                scene s90a
+                with dissolve
 
+                " "
 
-            jump next_scenea
-########## Back in your dorm with Imre
-    label next_scenea:
+        "Don't kiss her":
+
+            scene s90b # you scratching your head
+            with dissolve
+            " "
+
+    scene s89h
+    with dissolve
+
+    la "Uhh... [name]... I..."
+    la "I should go."
+
+    scene s91 ##Lauren stood up
+    with dissolve
+
+    u "Lauren, wait!"
+
+    scene s91a #Lauren turns around
+    with dissolve
+
+    la "Sorry, but..."
+    la "I'll see you tomorrow, [name]."
+
+    scene s92 # you head in hands
+    with dissolve
+
+    if v1_laurenKiss:
+        u "(Fuck... why did I try to kiss her?! That just made everything weird.)"
+    else:
+        u "(Fuck... should I have kissed her? Now it's just weird between us.)"
+
+    ### Back in your dorm with Imre
     stop music fadeout 2.0
 
     stop sound
@@ -3417,34 +3197,28 @@ label av_b:
 
     imre "I take it your date didn't go as planned?"
 
-    if lakiss == 1:
+    if v1_laurenKiss and v1_laurenPoints == 2:
+        scene s96a
+        with dissolve
+        u "I just don't get it..."
 
-        if laurenlike >= 2:
-            scene s96a
-            with dissolve
-            u "I just don't get it..."
+        u "I kissed her... and for a second she kissed me back."
 
-            u "I kissed her... and for a second she kissed me back."
+        u "But then she pulled away and left."
 
-            u "But then she pulled away and left."
+        u "And now it's all just super weird."
 
-            u "And now it's all just super weird."
+    elif v1_laurenKiss:
+        scene s96a
+        with dissolve
 
-            jump nextscenec
+        u "I just don't get it..."
 
-        else:
-            scene s96a
-            with dissolve
+        u "She gave me all the signs, so I went for a kiss."
 
-            u "I just don't get it..."
+        u "But she pulled away and left."
 
-            u "She gave me all the signs, so I went for a kiss."
-
-            u "But she pulled away and left."
-
-            u "And now it's all just super weird."
-
-            jump nextscened
+        u "And now it's all just super weird."
 
     else:
         scene s96a
@@ -3459,12 +3233,6 @@ label av_b:
         u "And then she just left..."
 
         u "And now it's all just super weird."
-
-        jump nextscenee
-
-    label nextscenec:
-    label nextscened:
-    label nextscenee:
 
     scene s96
     with dissolve
@@ -3488,58 +3256,52 @@ label av_b:
 
     u "I guess..."
 
-    label backtophone:
     scene s96c
     stop music fadeout 2.0
     play sound "sounds/vibrate.mp3"
 
-    $ contact_Ryan.newMessage("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???")
-    $ contact_Ryan.addReply("Alright, but I'll only stay for a few hours.", "ryrep1a")
+    $ contact_Ryan.newMessage("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???", queue=False)
+    $ contact_Ryan.addReply("Alright, but I'll only stay for a few hours.")
+    $ contact_Ryan.newMessage("Haha, trust me, you're not gonna want to leave once you see all the hot chicks there.")
+    $ contact_Ryan.newMessage("Just meet me in front of the Apes' frat house at 9.")
+    $ contact_Ryan.addReply("Okay, will do.")
 
-    label phoneg:
     label repeata:
-    if contact_Ryan.messages[-1].replies:
+        call screen phone
+        if contact_Ryan.getReplies():
+            u "(I should really check who texted me.)"
+            jump repeata
 
-        u "(I should really check who texted me.)"
+    scene s96c
+    with dissolve
+    
+    play music "music/m3punk.mp3"
 
-        jump repeata
+    u "Actually dude, I can't make tonight. I'm going to the Apes' rush party with my friend."
 
-    else:
-        scene s96c
-        with dissolve
-        
+    scene s96d
+    with dissolve
 
-        play music "music/m3punk.mp3"
+    imre "Man, fuck the Apes! What do you want there anyways?!"
 
-        u "Actually dude, I can't make tonight. I'm going to the Apes' rush party with my friend."
+    scene s96e
+    with dissolve
 
-        scene s96d
-        with dissolve
+    u "Look, I know you don't like them, but I told my friend I'd go with him."
 
-        imre "Man, fuck the Apes! What do you want there anyways?!"
+    scene s96d
+    with dissolve
 
-        scene s96e
-        with dissolve
+    imre "Whatever dude, do what the fuck you want. I'm outta here."
 
-        u "Look, I know you don't like them, but I told my friend I'd go with him."
+    scene s96g
+    with fade
 
-        scene s96d
-        with dissolve
+    u "(Great... now I've fucked up two friendships today.)"
 
-        imre "Whatever dude, do what the fuck you want. I'm outta here."
+    stop music fadeout 2.0
 
-        scene s96g
-        with fade
-
-        u "(Great... now I've fucked up two friendships today.)"
-
-        stop music fadeout 2.0
-
-        jump nextscenef
-
-
-    #### In front of the ape's house ryan is texting
-    label nextscenef:
+    ### In front of the ape's house ryan is texting
     scene s97
     with Fade (1,0,1)
 
@@ -3596,304 +3358,250 @@ label av_b:
 
     #freeroam2
 
-    $ latext = 0
-    
-    $ samtalk = 0
-    $ joshtalk = 0
-    $ graysontalk = 0
-    $ courtneytalk = 0
-    $ masontalk = 0
-    $ katytalk = 0
-
-    label phoneh:
     call screen freeroam2a
 
-    label fr2sam:
-        
-        $ samtalk = 1
-        scene s101
-        sam "... and that's why I purposefully lost that fight."
+label v1_freeRoam2_sam:
+    $ v1_samTalk = True
 
-        scene s101a
-        with dissolve
+    scene s101
+    sam "... and that's why I purposefully lost that fight."
 
-        karen "I'm pretty sure I heard you scream \"help\" multiple times."
+    scene s101a
+    with dissolve
 
-        ry "Hey man, are you an Ape?"
+    karen "I'm pretty sure I heard you scream \"help\" multiple times."
 
-        scene s101c
-        with dissolve
+    ry "Hey man, are you an Ape?"
 
-        sam "Yeah, what's up man?"
+    scene s101c
+    with dissolve
 
-        scene s101b
-        with dissolve
+    sam "Yeah, what's up man?"
 
-        ry "Aren't you guys supposed to wear your jackets for the rush party?"
+    scene s101b
+    with dissolve
 
-        scene s101c
-        with dissolve
+    ry "Aren't you guys supposed to wear your jackets for the rush party?"
 
-        sam "What are you, the jacket police? It's warm outside, I'm not gonna wear a jacket, jeez."
+    scene s101c
+    with dissolve
 
-        scene s101b
-        with dissolve
+    sam "What are you, the jacket police? It's warm outside, I'm not gonna wear a jacket, jeez."
 
-        ry "Uhh... I didn't mean to..."
+    scene s101b
+    with dissolve
 
-        scene s101c
-        with dissolve
+    ry "Uhh... I didn't mean to..."
 
-        sam "Yeah and now piss off man, I'm trying to score here."
+    scene s101c
+    with dissolve
 
-        scene s101d
-        with dissolve
+    sam "Yeah and now piss off man, I'm trying to score here."
 
-        karen "What?! I have a boyfriend."
+    scene s101d
+    with dissolve
 
-        scene s101e
-        with dissolve
+    karen "What?! I have a boyfriend."
 
-        sam "Wait what?! You've led me on all night!"
+    scene s101e
+    with dissolve
 
-        scene s101f
-        with dissolve
+    sam "Wait what?! You've led me on all night!"
 
-        karen "We were just talking, that's what friends do!"
+    scene s101f
+    with dissolve
 
-        u "(We should probably leave them alone before we get dragged into this.)"
+    karen "We were just talking, that's what friends do!"
 
-        
+    u "(We should probably leave them alone before we get dragged into this.)"
 
-        call screen freeroam2a
+    call screen v1_freeRoam2_1
 
-    label fr2sam2:
+label v1_freeRoam2_sam2:
 
-        scene s100a
+    scene s100a
 
-        u "(I don't wanna risk getting dragged into their argument.)"
+    u "(I don't wanna risk getting dragged into their argument.)"
 
-        call screen freeroam2a
+    call screen v1_freeRoam2_1
 
-    label fr2door:
-        play music "music/mparty2.mp3"
+label v1_freeRoam2_door:
+    play music "music/mparty2.mp3"
 
-        queue music [ "music/mparty3.mp3", "music/mparty4.mp3" ]
-        
-        $ fr2door = 1
-        scene s103
+    queue music [ "music/mparty3.mp3", "music/mparty4.mp3" ]
+    
+    $ v1_fr2door = True
+    scene s103
 
-        ry "Alright man, I'm gonna look around, I'll see you in a bit."
+    ry "Alright man, I'm gonna look around, I'll see you in a bit."
 
-        scene s103a
+    scene s103a
 
-        u "Cool."
+    u "Cool."
 
-        u "(Great, now I'm all on my own.)"
+    u "(Great, now I'm all on my own.)"
 
-        
+    call screen v1_freeRoam2_2
 
-        call screen freeroam2b
+label v1_freeRoam2_pool:
+    if not v1_joshTalk:
+        scene s102
 
-    label phonej:
-    label fr2door2:
-    label fr2poolback:
-    label fr2campback:
-    label fr2down:
-        call screen freeroam2b
+        u "(I should talk to Josh first, I haven't seen him in a while.)"
 
-    label fr2outside:
-    label phonek:
-        call screen freeroam2a
+        call screen v1_freeRoam2_2
+    else:
+        call screen v1_freeRoam2_3
 
-    label fr2pool:
-        if joshtalk == 0:
+label v1_freeRoam2_courtney:
+    $ v1_courtneyTalk = True
 
-            scene s102
+    scene fr2co1
 
-            u "(I should talk to Josh first, I haven't seen him in a while.)"
+    u "Hey there."
 
-            call screen freeroam2b
+    scene fr2co2
+    with dissolve
 
-    label phonel:
+    courtney "Ughh, get in line. You're not getting in there before me."
 
-        call screen freeroam2c
+    scene fr2co2a
+    with dissolve
 
-    label fr2courtney:
+    u "Sorry, in where exactly?"
 
-        
+    scene fr2co2
+    with dissolve
 
-        $ courtneytalk = 1
+    courtney "The bathroom??? I've been waiting for over an hour."
 
-        scene fr2co1
+    scene fr2co2a
+    with dissolve
 
-        u "Hey there."
+    u "You've been waiting for over an hour?! Are you sure that's the bathroom? That seems way too long."
 
-        scene fr2co2
-        with dissolve
+    scene fr2co2b
+    with dissolve
 
-        courtney "Ughh, get in line. You're not getting in there before me."
+    courtney "Oh my god, how stupid do you think I am?! I think I know what the bathroom looks like."
 
-        scene fr2co2a
-        with dissolve
+    scene fr2co2c
+    with dissolve
 
-        u "Sorry, in where exactly?"
+    u "You are aware that this is literally just a regular white door, right? There's like 10 of these in this house."
 
-        scene fr2co2
-        with dissolve
+    scene fr2co2b
+    with dissolve
 
-        courtney "The bathroom??? I've been waiting for over an hour."
+    courtney "Just leave me alone, perv."
 
-        scene fr2co2a
-        with dissolve
+    scene fr2co2c
+    with dissolve
 
-        u "You've been waiting for over an hour?! Are you sure that's the bathroom? That seems way too long."
+    u "What?? I didn't even... whatever."
 
-        scene fr2co2b
-        with dissolve
+    call screen v1_freeRoam2_2
 
-        courtney "Oh my god, how stupid do you think I am?! I think I know what the bathroom looks like."
+label fr2courtney2:
+    scene fr2co2
+    with dissolve
 
-        scene fr2co2c
-        with dissolve
+    courtney "I said leave me alone, perv."
 
-        u "You are aware that this is literally just a regular white door, right? There's like 10 of these in this house."
+    scene fr2co2a
+    with dissolve
 
-        scene fr2co2b
-        with dissolve
+    u "Right..."
 
-        courtney "Just leave me alone, perv."
+    call screen v1_freeRoam2_2
 
-        scene fr2co2c
-        with dissolve
+label v1_freeRoam2_josh:
+    $ v1_joshTalk = True
 
-        u "What?? I didn't even... whatever."
+    scene fr2jo1a
 
-        
+    jo "[name]! I didn't know you're also going to San Vallejo. *sniff*"
 
-        call screen freeroam2b
+    jo "This is uhhh... Aubrey!"
 
-    label fr2courtney2:
+    scene fr2jo2a
+    with dissolve
 
-        
+    au "Hey, nice to meet you."
 
-        scene fr2co2
-        with dissolve
+    scene fr2jo2b
+    with dissolve
 
-        courtney "I said leave me alone, perv."
+    if v1_freeRoam1_aubrey:
+        u "(Holy shit, is this the girl that got fucked in the dorm opposite of ours?!)"
 
-        scene fr2co2a
-        with dissolve
+        u "(She's so fucking hot.)"
 
-        u "Right..."
+    else:
+        u "(Damn, she's hot)"
 
-        
+    u "Hey, I'm-"
 
-        call screen freeroam2b
+    scene fr2jo2c
+    with dissolve
 
+    au "Let me guess, [name]."
 
-    label fr2josh:
+    scene fr2jo2d
+    with dissolve
 
-        
+    u "Haha. Wow, you're good."
 
-        $ joshtalk = 1
-        scene fr2jo1a
+    scene fr2jo2a
+    with dissolve
 
-        jo "[name]! I didn't know you're also going to San Vallejo. *sniff*"
+    au "I try my best."
 
-        jo "This is uhhh... Aubrey!"
+    scene fr2jo1a
+    with dissolve
 
-        scene fr2jo2a
-        with dissolve
+    jo "You know, me and [name] go way back. *sniff*"
 
-        au "Hey, nice to meet you."
+    jo "Best friends through all of middle school."
 
-        scene fr2jo2b
-        with dissolve
-        if v1_freeRoam1_aubrey:
-            u "(Holy shit, is this the girl that got fucked in the dorm opposite of ours?!)"
+    jo "I mean, we drifted apart in high school, but... *sniff*"
 
-            u "(She's so fucking hot.)"
+    jo "Now we're reunited, baby! "
 
-        else:
+    scene fr2jo1b
+    with dissolve
 
-            u "(Damn, she's hot)"
+    u "Josh, are you okay?"
 
-        u "Hey, I'm-"
+    scene fr2jo1c
+    with dissolve
 
-        scene fr2jo2c
-        with dissolve
+    jo "Yeah. *sniff* Yeah, I'm - I'm fine."
 
-        au "Let me guess, [name]."
+    jo "It's just uhhh... hay fever, you know."
 
-        scene fr2jo2d
-        with dissolve
+    scene fr2jo1d
+    with dissolve
 
-        u "Haha. Wow, you're good."
+    u "(Right, sure it is.)"
 
-        scene fr2jo2a
-        with dissolve
+    scene fr2jo2c
+    with dissolve
 
-        au "I try my best."
+    au "So... [name], does that mean you're a freshman as well?"
 
-        scene fr2jo1a
-        with dissolve
+    scene fr2jo2d
+    with dissolve
 
-        jo "You know, me and [name] go way back. *sniff*"
+    u "Yeah, what about you?"
 
-        jo "Best friends through all of middle school."
+    scene fr2jo2a
+    with dissolve
 
-        jo "I mean, we drifted apart in high school, but... *sniff*"
+    au "Oh no, I'm a junior, vice president of the Chicks actually."
 
-        jo "Now we're reunited, baby! "
-
-        scene fr2jo1b
-        with dissolve
-
-        u "Josh, are you okay?"
-
-        scene fr2jo1c
-        with dissolve
-
-        jo "Yeah. *sniff* Yeah, I'm - I'm fine."
-
-        jo "It's just uhhh... hay fever, you know."
-
-        scene fr2jo1d
-        with dissolve
-
-        u "(Right, sure it is.)"
-
-        scene fr2jo2c
-        with dissolve
-
-        au "So... [name], does that mean you're a freshman as well?"
-
-        scene fr2jo2d
-        with dissolve
-
-        u "Yeah, what about you?"
-
-        scene fr2jo2a
-        with dissolve
-
-        au "Oh no, I'm a junior, vice president of the Chicks actually."
-
-
-        menu:
-
-
-            "Flirt":
-
-                jump az_a
-
-            "Ask if she likes fighters":
-
-                $ addPoint("bf", 1)
-                jump az_b
-
-        label az_a:
-
+    menu:
+        "Flirt":
             scene fr2jo2b
             with dissolve
 
@@ -3907,72 +3615,57 @@ label av_b:
             au "Nothing wrong with warming up the new batch of fighters, is there?"
 
             menu:
-
-
                 "Say you're a fighter":
-
                     $ addPoint("tm", 1)
-                    $ aubreywannafight = 1
-                    jump ba_a
+                    $ v1_aubreywannafight = True
+
+                    scene fr2jo2d
+                    with dissolve
+
+                    u "Well, you're certainly warming up the right guy."
+
+                    scene fr2jo2c
+                    with dissolve
+
+                    au "And why is that?"
+
+                    scene fr2jo2d
+                    with dissolve
+
+                    u "Cause I'll be the next Fight King."
+
+                    u "(Shit, why did I say that?? I don't even know how to fight and I don't really want to either.)"
+
+                    scene fr2jo2a
+                    with dissolve
+
+                    au "Oh wow, big words. Have you met Grayson yet? I'm sure he'd like your confidence."
+
+                    scene fr2jo2b
+                    with dissolve
+
+                    u "Who's Grayson?"
 
                 "Say you're not a fighter":
+                    scene fr2jo2b
+                    with dissolve
 
-                    $ aubreywannafight = 0
-                    jump ba_b
+                    u "Oh, I don't really plan on becoming a fighter."
 
-            label ba_a:
+                    scene fr2jo2e
+                    with dissolve
 
-                scene fr2jo2d
-                with dissolve
+                    au "Really? Well, then what are you doing at the Apes' rush party?"
 
-                u "Well, you're certainly warming up the right guy."
+                    au "Grayson doesn't accept non-fighters."
 
-                scene fr2jo2c
-                with dissolve
+                    scene fr2jo2f
+                    with dissolve
 
-                au "And why is that?"
+                    u "Who's Grayson?"
 
-                scene fr2jo2d
-                with dissolve
-
-                u "Cause I'll be the next Fight King."
-
-                u "(Shit, why did I say that?? I don't even know how to fight and I don't really want to either.)"
-
-                scene fr2jo2a
-                with dissolve
-
-                au "Oh wow, big words. Have you met Grayson yet? I'm sure he'd like your confidence."
-
-                scene fr2jo2b
-                with dissolve
-
-                u "Who's Grayson?"
-
-                jump ba_ad
-
-            label ba_b:
-
-                scene fr2jo2b
-                with dissolve
-
-                u "Oh, I don't really plan on becoming a fighter."
-
-                scene fr2jo2e
-                with dissolve
-
-                au "Really? Well, then what are you doing at the Apes' rush party?"
-
-                au "Grayson doesn't accept non-fighters."
-
-                scene fr2jo2f
-                with dissolve
-
-                u "Who's Grayson?"
-
-                jump ba_bd
-
-        label az_b:
+        "Ask if she likes fighters":
+            $ addPoint("bf", 1)
 
             scene fr2jo2b
             with dissolve
@@ -3992,139 +3685,109 @@ label av_b:
 
 
                 "I'll be the next Fight King.":
-
                     $ addPoint("tm", 1)
-                    $ aubreywannafight = 1
-                    jump bb_a
+                    $ v1_aubreywannafight = True
+
+                    scene fr2jo2d
+                    with dissolve
+
+                    u "Hell yeah! I'll be the next Fight King."
+
+                    u "(Shit, why did I say that?? I don't even know how to fight and I don't really want to either.)"
+
+                    scene fr2jo2a
+                    with dissolve
+
+                    au "Oh wow, big words. Have you met Grayson yet? I'm sure he'd like your confidence."
+
+                    scene fr2jo2b
+                    with dissolve
+
+                    u "Who's Grayson?"
 
                 "No, that's not for me.":
+                    scene fr2jo2b
+                    with dissolve
 
-                    $ aubreywannafight = 0
-                    jump bb_b
+                    u "No, I don't think that's for me."
 
-            label bb_a:
+                    scene fr2jo2e
+                    with dissolve
 
-                scene fr2jo2d
-                with dissolve
+                    au "Really? Well, then what are you doing at the Apes' rush party?"
 
-                u "Hell yeah! I'll be the next Fight King."
+                    au "Grayson doesn't accept non-fighters."
 
-                u "(Shit, why did I say that?? I don't even know how to fight and I don't really want to either.)"
+                    scene fr2jo2f
+                    with dissolve
 
-                scene fr2jo2a
-                with dissolve
+                    u "Who's Grayson?"
 
-                au "Oh wow, big words. Have you met Grayson yet? I'm sure he'd like your confidence."
+    scene fr2jo2a
+    with dissolve
 
-                scene fr2jo2b
-                with dissolve
+    au "He's the president of the Apes and the current Fight King."
 
-                u "Who's Grayson?"
+    if v1_aubreywannafight:
+        au "I think he's upstairs, but I'm not sure."
 
-                jump bb_ad
-
-            label bb_b:
-
-                scene fr2jo2b
-                with dissolve
-
-                u "No, I don't think that's for me."
-
-                scene fr2jo2e
-                with dissolve
-
-                au "Really? Well, then what are you doing at the Apes' rush party?"
-
-                au "Grayson doesn't accept non-fighters."
-
-                scene fr2jo2f
-                with dissolve
-
-                u "Who's Grayson?"
-
-                jump bb_bd
-
-
-        label ba_ad:
-        label ba_bd:
-        label bb_ad:
-        label bb_bd:
-
-        scene fr2jo2a
+        scene fr2jo2b
         with dissolve
 
-        au "He's the president of the Apes and the current Fight King."
+        u "Alright, I'll leave you guys alone and look around a bit more. Maybe I'll even talk to Grayson."
 
-        if aubreywannafight == 1:
+    else:
+        au "You'll never know, maybe if you meet some of the Apes, you'll change your mind about fighting."
 
-            au "I think he's upstairs, but I'm not sure."
-
-            scene fr2jo2b
-            with dissolve
-
-            u "Alright, I'll leave you guys alone and look around a bit more. Maybe I'll even talk to Grayson."
-        else:
-
-            au "You'll never know, maybe if you meet some of the Apes, you'll change your mind about fighting."
-
-            scene fr2jo2b
-            with dissolve
-
-            u "(I doubt it, but I guess it won't hurt to talk to some of them.)"
-
-            u "Alright, I'll leave you guys alone and look around a bit more."
-
-        scene fr2jo2a
+        scene fr2jo2b
         with dissolve
 
-        au "I'll see you later, [name]."
+        u "(I doubt it, but I guess it won't hurt to talk to some of them.)"
 
-        scene fr2jo1a
-        with dissolve
+        u "Alright, I'll leave you guys alone and look around a bit more."
 
-        jo "Yeah bro, hit me up sometime."
+    scene fr2jo2a
+    with dissolve
 
-        
+    au "I'll see you later, [name]."
+
+    scene fr2jo1a
+    with dissolve
+
+    jo "Yeah bro, hit me up sometime."
+
+    call screen v1_freeRoam2_2
+
+label v1_freeRoam2_josh2:
+
+    scene s102
+
+    u "(I should talk to some other people around here and make some new friends.)"
+
+    call screen v1_freeRoam2_2
+
+label fr2stairs:
+    if not v1_joshTalk:
+        scene s102
+
+        u "(I should talk to Josh first, I haven't seen him in a while.)"
 
         call screen freeroam2b
 
-    label fr2josh2:
+label fr2camp:
+    if not v1_joshTalk:
 
         scene s102
 
-        u "(I should talk to some other people around here and make some new friends.)"
+        u "(I should talk to Josh first, I haven't seen him in a while.)"
 
         call screen freeroam2b
+    else:
+        play sound "sounds/vibrate.mp3"
 
-    label fr2stairs:
-        if joshtalk == 0:
-
-            scene s102
-
-            u "(I should talk to Josh first, I haven't seen him in a while.)"
-
-            call screen freeroam2b
-
-    label phonem:
-
-        call screen freeroam2e
-
-
-    label fr2camp:
-        if joshtalk == 0:
-
-            scene s102
-
-            u "(I should talk to Josh first, I haven't seen him in a while.)"
-
-            call screen freeroam2b
-        else:
-            if latext == 0:
-                play sound "sounds/vibrate.mp3"
-
-                $ contact_Lauren.newMessage("Hey :)\nSorry about today.\n\nCan we talk tomorrow?")
-                $ contact_Lauren.addReply("Yeah, sure.", "larep4a")
-                $ contact_Lauren.addReply("What is there to talk about?", "larep4b")
+        $ contact_Lauren.newMessage("Hey :)\nSorry about today.\n\nCan we talk tomorrow?")
+        $ contact_Lauren.addReply("Yeah, sure.", "larep4a")
+        $ contact_Lauren.addReply("What is there to talk about?", "larep4b")
 
     label fr2dontend:
     label phonen:
@@ -6320,9 +5983,9 @@ label fr2end:
 
     label bl_a:
 
-    if lakiss == 1:
+    if v1_laurenKiss:
 
-        if laurenlike >= 2:
+        if v1_laurenPoints >= 2:
             scene s130c
             with dissolve
             u "I know you stopped kissing me after about a second..."
@@ -6361,7 +6024,7 @@ label fr2end:
 
     $ influencetut = False
 
-    if kct == "loyal" or firstkisslauren:
+    if kct == "loyal" or v1_kissLauren:
 
         $ laurenrs = True
         if kct == "loyal":
@@ -6518,7 +6181,7 @@ label fr2end:
     scene s130a
     with dissolve
 
-    if lakiss == 1:
+    if v1_laurenKiss:
 
         u "That was uhm... nothing."
 

@@ -25,12 +25,13 @@ screen endFreeRoamConfirm(continueLabel):
 
     textbutton "Yes":
         style "endfr"
-        action [Hide("endFreeRoamConfirm"), Jump(continueLabel)]
+        action [Hide("endFreeRoamConfirm"), SetVariable("freeRoam", False), Jump(continueLabel)]
         text_align 0.5
-        align (0.57, 0.58)
+        align (0.43, 0.58)
 
     textbutton "No":
         style "endfr"
         action Hide("endFreeRoamConfirm")
         text_align 0.5
-        align (0.43, 0.58)
+        align (0.57, 0.58)
+        
