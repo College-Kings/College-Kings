@@ -32,12 +32,11 @@ label after_apes_ceremony:
     $ KiwiiPost6.addComment("Amber", "Congrats people!!!", mentions=["MC", "Ryan", "Caleb"], numberLikes=renpy.random.randint(50, 60))
     $ KiwiiPost6.addComment("Caleb", "Thanks everyone!", numberLikes=renpy.random.randint(20, 30))
 
-    $ phoneexit = "phn_chloe11"
     $ contact_Chloe.newMessage("Congrats on getting in. Looks like we'll be seeing a lot of each other.")
     $ contact_Chloe.addReply("Exactly how much is a lot? ;)", "phn_chloe11_a")
     $ contact_Chloe.addReply("Hope so. I like talking to you.", "phn_chloe11_b")
 
-    $ showphone = True
+    
     play sound "sounds/vibrate.mp3"
 
     scene v8apes21a # MC looking at his phone, mouth closed
@@ -50,7 +49,7 @@ label phn_chloe11:
         jump phn_chloe11
 
     else:
-        $ showphone = False
+        
         u "(Gotta get going.)"
         jump phn_chloe11_done
 

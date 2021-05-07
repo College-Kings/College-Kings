@@ -2,37 +2,6 @@ screen quick_menu():
     ## Ensure this appears on top of other screens.
     zorder 100
 
-    if fantasy == 1:
-        image "images/fantasyoverlay.webp"
-
-    if wton == True:
-
-        if wt == 1:
-
-            image "images/tutback.webp":
-                ypos -385
-                xpos 20
-            vbox xpos 30  ypos 40 spacing 20:
-                text "Walkthrough" style "wttextnum" xoffset 180
-                text "2. reply: +1 troublemaker (needed for Confident & Popular). Neither option cuts off Emily's path."  style "wttext" xoffset 10
-
-        if wt == 2:
-
-            image "images/tutback.webp":
-                ypos -385
-                xpos 20
-            vbox xpos 30  ypos 40 spacing 20:
-                text "Walkthrough" style "wttextnum" xoffset 180
-                text "Choice 1: +1 troublemaker (needed for Confident & Popular). Choice 2: +1 boyfriend (needed for Loyal & Confident)"  style "wttext" xoffset 10
-
-        if wt == 3:
-
-            image "images/tutback.webp":
-                ypos -385
-                xpos 20
-            vbox xpos 30  ypos 40 spacing 20:
-                text "Walkthrough" style "wttextnum" xoffset 180
-                text "Open your phone to get a detailed breakdown of the stats system in the stats app."  style "wttext" xoffset 10
     if quick_menu:
         
         if realmode == True:
@@ -65,56 +34,6 @@ screen quick_menu():
                     textbutton _("Q.Save") action QuickSave()
                     textbutton _("Q.Load") action QuickLoad()
                     textbutton _("Prefs") action ShowMenu('preferences')
-
-
-        if showphone: # Edited
-            imagebutton:
-                if any([application.notification for application in applications]):
-                    idle "images/phoneiconnot.webp"
-                else:
-                    idle "images/phoneicon.webp"
-                yalign 0.05
-                xalign 0.999
-                action Jump ("homescreen")
-
-
-        if freeroamtut == 1:
-
-            image "images/tutback.webp":
-                ypos 100 #+300
-                xpos 1240 #+260
-
-            imagebutton:
-                idle "images/whitearrowleft.webp"
-                hover "images/whitearrowleft.webp"
-                ypos 720
-                xpos 1260
-                if freeroamtutpage > 1:
-                    action SetVariable("freeroamtutpage", freeroamtutpage -1)
-                else:
-                    action SetVariable("freeroamtutpage", 3)
-
-            imagebutton:
-                idle "images/whitearrowright.webp"
-                hover "images/whitearrowright.webp"
-                ypos 720
-                xpos 1740
-                if freeroamtutpage < 3:
-                    action SetVariable("freeroamtutpage", freeroamtutpage +1)
-                else:
-                    action SetVariable("freeroamtutpage", 1)
-
-            text "Tutorial" style "choicetextnum" ypos 530 xpos 1490
-
-            if freeroamtutpage == 1:
-                text "At certain parts of the game, you’ll unlock free roam."  style "choicetuttext"
-                text "1 of 3" style "choicetextnum"
-            if freeroamtutpage == 2:
-                text "During free roam, you choose where you go and who you want to talk to next." style "choicetuttext"
-                text "2 of 3" style "choicetextnum"
-            if freeroamtutpage == 3:
-                text "You will also be able to use your phone and you might just find some hidden content." style "choicetuttext"
-                text "3 of 3" style "choicetextnum"
 
     if stance == 1:
 

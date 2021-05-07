@@ -76,10 +76,8 @@ label v9_room_w_chris:
     scene v9rwc5 # TPP. Show MC checking his phone.
     with dissolve
 
-    $ phoneexit = "s21_PhoneContinue"
-
     $ contact_Julia.addReply("Hey, how's it going?", "s21_JulReply1")
-    $ showphone = True
+    
     call screen phone
 
     label s21_JulReply1:
@@ -104,7 +102,7 @@ label v9_room_w_chris:
             "(I should text Julia.)"
             jump s21_PhoneContinue
 
-    $ showphone = False
+    
 
     u "(I should probably head over to Ms. Roses.)"
 

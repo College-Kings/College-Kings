@@ -53,7 +53,7 @@ init python:
                 else:
                     self.sentMessages[-1].replies.append(reply)
             except Exception:
-                message = self.newMessage("")
+                message = self.newMessage("", queue=False)
                 message.replies.append(reply)
 
             self.unlock()
@@ -68,7 +68,7 @@ init python:
                 else:
                     self.sentMessages[-1].replies.append(reply)
             except Exception:
-                self.newMessage("")
+                self.newMessage("", queue=False)
                 self.pendingMessages[-1].replies.append(reply)
 
             self.unlock()
@@ -96,7 +96,7 @@ init python:
 
         def getReplies(self):
             try:
-                return self.seenMessage[-1].replies
+                return self.sentMessages[-1].replies
             except Exception: return False
 
     class Message:

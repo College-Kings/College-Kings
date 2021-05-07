@@ -17,8 +17,7 @@ label mc_wolves_sun_morn:
 
     $ contact_Penelope.newMessage("[name] I'm really scared! I am in so much trouble! I need you! Please come over??")
     $ contact_Penelope.addReply("Ok try to stay calm. I'll be right over.")
-    $ phoneexit = "v8_s14_pen_text"
-    $ showphone = True
+    
 
     play sound "sounds/vibrate.mp3"
 
@@ -41,8 +40,7 @@ label mc_apes_sun_morn:
 
     $ contact_Penelope.newMessage("[name] I'm really scared! I am in so much trouble! I need you! Please come over??")
     $ contact_Penelope.addReply("Ok try to stay calm. I'll be right over.")
-    $ phoneexit = "v8_s14_pen_text"
-    $ showphone = True
+    
 
     play sound "sounds/vibrate.mp3"
 
@@ -58,6 +56,6 @@ label v8_s14_pen_text:
         u "(I should reply to her.)"
         jump v8_s14_pen_text
     else:
-        $ showphone = False
+        
         u "(That sounded serious. What got her all upset so sudden?)"
         jump penelope_dorm_hack

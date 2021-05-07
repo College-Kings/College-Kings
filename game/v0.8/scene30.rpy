@@ -24,7 +24,7 @@ label amber_sex_at_joshs:
     with dissolve
 
     $ get_a_room = True
-    if steam == False:
+    if not steam:
         image get_a_room = "images/v08/achievements/getaroom.webp"
         show get_a_room:
             xpos 0

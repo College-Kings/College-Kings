@@ -134,11 +134,6 @@ call screen messager(contact_Amber)
 
 label script06:
 
-
-    $ contact_Ryan.unlock()
-    $ contact_Julia.unlock()
-    $ contact_Amber.unlock()
-
     if aubreysex == True:
         $ aubreyrs = True
 
@@ -207,7 +202,7 @@ label script06:
 
 
     label imrecona: # Find Imre
-    $ showphone = False
+    
     u "(I need to find Imre and apologize. He's probably in our dorm room.)"
 
 
@@ -367,9 +362,9 @@ label script06:
     jump continuebb
 
     label imreconb: # Help Imre
-    $ showphone = False
+    
     $ brosbeforehoes = True
-    if steam == False:
+    if not steam:
         image brosbeforehoes = "images/brosbeforehoes.webp"
         show brosbeforehoes:
             xpos 0
@@ -474,7 +469,7 @@ label script06:
     scene s475 # MC in a remote location
     with fade
     $ contact_Amber.addReply("I'm all by myself now.", "amrep11a")
-    $ showphone = True
+    
     $ msgnot = 1
     $ amisreply = 1
     $ ammsgnot = 1
@@ -489,7 +484,6 @@ label script06:
     $ ammsg15 = "Maybe if you're lucky xx"
     $ ammsg16 = "I'm glad you like it xx"
     $ amrep16a = "I hope there's more of that in the future :P"
-    $ phoneexit = "phonead"
 
     label phonead:
 
@@ -497,7 +491,7 @@ label script06:
         u "(Time to text Amber.)"
         jump phonead
     else:
-        $ showphone = False
+        
         u "(Amber is so fucking hot, I hope she sends more pictures like that in the future.)"
 
         u "(Although I feel like I could've just received this in the park.)"
@@ -515,8 +509,7 @@ label script06:
     $ clmsg7 = "That's what I like to hear :*"
     $ clmsg8 = "Meet me at the school's swimming pool"
     $ clrep8a = "Cool, see you there"
-    $ phoneexit = "phoneac"
-    $ showphone = True
+    
 
     call screen messager(contact_Chloe)
 
@@ -527,7 +520,7 @@ label script06:
 
         call screen messager(contact_Chloe)
     else:
-        $ showphone = False
+        
         jump continuebc
 
     label continuebc:
@@ -883,7 +876,7 @@ label script06:
     label fq_b:
 
         $ credulous = True
-        if steam == False:
+        if not steam:
             image credulous = "images/credulous.webp"
             show credulous:
                 xpos 0
@@ -1192,12 +1185,10 @@ label script06:
     if chooseimre == True:
         if chloemad == True: # Amber texts why you never got back to her
             play sound "sounds/vibrate.mp3"
-            $ showphone = True
+            
 
             $ contact_Amber.newMessage("I guess you didn't want my surprise :/")
             $ contact_Amber.addReply("Sorry something important came up and I didn't have time.", "amrep17a")
-
-            $ phoneexit = "phoneae"
 
             " "
 
@@ -1229,7 +1220,7 @@ label script06:
                 jump ambertexts
 
             else: # no one texts you
-                $ showphone = False
+                
                 jump continuebd
 
 
@@ -1238,7 +1229,7 @@ label script06:
     label ambertexts:
 
     play sound "sounds/vibrate.mp3"
-    $ showphone = True
+    
     $ msgnot = 1
     $ amisreply = 1
     $ ammsgnot = 1
@@ -1257,7 +1248,6 @@ label script06:
     $ ammsg15 = "Maybe if you're lucky xx"
     $ ammsg16 = "I'm glad you like it xx"
     $ amrep16a = "I hope there's more of that in the future :P"
-    $ phoneexit = "phoneaf"
 
     " "
 
@@ -1267,13 +1257,13 @@ label script06:
         u "(I should probably reply to my messages.)"
         jump phoneaf
     else:
-        $ showphone = False
+        
         u "(Amber is so fucking hot, I hope she sends more pictures like that in the future.)"
         jump continuebd
 
 
     label continuebd:
-    $ showphone = False
+    
 
     scene s483 # FIRST PERSON: Looking at your bed
     with fade
@@ -2066,7 +2056,7 @@ label script06:
     with fade
 
     $ notmybusiness = True
-    if steam == False:
+    if not steam:
         image notmybusiness = "images/notmybusiness.webp"
         show notmybusiness:
             xpos 0
@@ -2474,7 +2464,7 @@ label script06:
 
         play sound "sounds/swoosh.mp3"
 
-        $ fantasy = True
+        show screen fantasyOverlay
 
         scene s387a # even closer, dog on the left side
         with flash
@@ -2494,7 +2484,7 @@ label script06:
 
         pause 1.0
 
-        $ fantasy = False
+        hide screen fantasyOverlay
         play sound "sounds/swoosh.mp3"
         scene s525
         with flash
@@ -3106,7 +3096,7 @@ label script06:
     with dissolve
 
     $ reignition = True
-    if steam == False:
+    if not steam:
         image reignition = "images/reignition.webp"
         show reignition:
             xpos 0
@@ -3148,7 +3138,7 @@ label script06:
     if reignition == False:
         play music "music/msexy.mp3"
         $ reignition = True
-        if steam == False:
+        if not steam:
             image reignition = "images/reignition.webp"
             show reignition:
                 xpos 0
@@ -4171,7 +4161,7 @@ label script06:
             $ contact_Aubrey.newMessage("Hey, I know it's late... but wanna come over?")
             $ contact_Aubrey.addReply("Yeah, sure.", "aubrep16a")
             $ contact_Aubrey.addReply("Sorry, I can't tonight.", "aubrep16b")
-            $ showphone = True
+            
             $ msgnot = 1
             $ aubmsgnot = 1
             $ aubmsg = 16
@@ -4180,7 +4170,6 @@ label script06:
             $ aubrep16b = "Sorry, I can't tonight."
             $ aubmsg17 = ":)"
             $ aubmsg18 = ":("
-            $ phoneexit = "phoneag"
 
             " "
 
@@ -4197,7 +4186,7 @@ label script06:
 
             else:
 
-                $ showphone = False
+                
 
                 if meetaubrey == True:
 
@@ -4225,7 +4214,7 @@ label script06:
             $ contact_Aubrey.newMessage("Hey, I know it's late... but wanna come over?")
             $ contact_Aubrey.addReply("Yeah, sure.", "aubrep16a")
             $ contact_Aubrey.addReply("Sorry, I can't tonight.", "aubrep16b")
-            $ showphone = True
+            
             $ msgnot = 1
             $ aubmsgnot = 1
             $ aubmsg = 16
@@ -4234,7 +4223,6 @@ label script06:
             $ aubrep16b = "Sorry, I can't tonight."
             $ aubmsg17 = ":)"
             $ aubmsg18 = ":("
-            $ phoneexit = "phoneah"
 
 
             u "(Shit, it's already 10:30? Wonder what Aubrey's messaging about.)"
@@ -4255,7 +4243,7 @@ label script06:
 
             else:
 
-                $ showphone = False
+                
 
                 if meetaubrey == True:
 
@@ -5050,12 +5038,11 @@ label script06:
 
 
         play sound "sounds/vibrate.mp3"
-        $ showphone = True
+        
         $ aubmsg19a = 1
         $ msgnot = 1
         $ aubmsgnot = 1
         $ aubmsg = 19
-        $ phoneexit = "phoneaj"
 
         if meetaubrey == True:
             $ contact_Aubrey.newImgMessage("images/text3.webp")
@@ -5079,7 +5066,7 @@ label script06:
         pause 0.5
 
     label phoneaj:
-    $ showphone = False
+    
     scene s573a # mc looks at his phone (you can only see the bakc of the phone)
     with dissolve
 
@@ -5105,7 +5092,7 @@ label script06:
     label aftergraysona:
 
     $ seemsfishy = True
-    if steam == False:
+    if not steam:
         image seemsfishy = "images/seemsfishy.webp"
         show seemsfishy:
             xpos 0
@@ -5497,7 +5484,7 @@ label script06:
     play sound "sounds/swoosh.mp3"
     scene s63d
     with flash
-    $ fantasy = True
+    show screen fantasyOverlay
 
     imre "Exactly, which is also why I'm joining the Wolves."
 
@@ -5523,7 +5510,7 @@ label script06:
 
     imre "It is, but my brother used to be a Wolf and he told me about all the shady shit that the Apes would do."
 
-    $ fantasy = False
+    hide screen fantasyOverlay
     play sound "sounds/swoosh.mp3"
     scene s581g
     with flash
@@ -5549,7 +5536,7 @@ label script06:
     with dissolve
     # handshake clap sound
     $ monkeybusiness = True
-    if steam == False:
+    if not steam:
         image monkeybusiness = "images/monkeybusiness.webp"
         show monkeybusiness:
             xpos 0
@@ -5834,7 +5821,7 @@ label script06:
     label wakeupa:
     stop sound
     $ timed = False
-    $ fantasy = False
+    hide screen fantasyOverlay
     play sound "sounds/swoosh.mp3"
     scene s586b # you wake up in disstress
     with flash
@@ -6157,7 +6144,7 @@ label script06:
     scene s609 # mc walking home by himself after the gym
     with fade
 
-    $ showphone = True
+    
     $ msgnot = 1
     $ ammsg = 22
     $ contact_Amber.newMessage("Heyy, what are you up to? xx")
@@ -6174,13 +6161,9 @@ label script06:
     $ ammsgnot = 1
     $ amisreply = 1
 
-    $ contact_Penelope.unlock()
-
     if bowling == True:
 
         $ contact_Penelope.addReply("Hey, you wanna go bowling today? I'm free this afternoon", "perep1a")
-        $ showphone = 1
-        $ phoneexit = "phoneak"
 
         u "(I should ask Penelope whether she wants to do bowling this afternoon.)"
 
@@ -6204,14 +6187,11 @@ label script06:
 
 
             pause 0.5
-            $ showphone = 0
 
             jump aftergymb
 
 
     else:
-
-        $ phoneexit = "phoneal"
 
         " "
 
@@ -6224,7 +6204,7 @@ label script06:
 
 
     label aftergymb:
-    $ showphone = False
+    
     stop music fadeout 2.0
 
     scene s610 # you back in your dorm doing work at your desk in your regular clothes, "a few hours later transition"
@@ -7463,7 +7443,7 @@ label script06:
         with dissolve
 
         $ strike = True
-        if steam == False:
+        if not steam:
             image strike = "images/strike.webp"
             show strike:
                 xpos 0
@@ -7886,7 +7866,7 @@ label script06:
     ####### WOLVES RUSH PARTY FREE ROAM freeroam3 freeroam 3 free roam 3
 
     label wolvesfr2:
-    $ showphone = True
+    
     play music "music/mparty2.mp3"
 
     queue music [ "music/mparty3.mp3", "music/mparty4.mp3"]
@@ -7898,52 +7878,42 @@ label script06:
 
     label labelfr3garden:
         scene fr3garden
-        $ phoneexit = "labelfr3garden"
         call screen fr3garden
 
     label labelfr3downstairs:
         scene fr3downstairs
-        $ phoneexit = "labelfr3downstairs"
         call screen fr3downstairs
 
     label labelfr3livingroom:
         scene fr3livingroom
-        $ phoneexit = "labelfr3livingroom"
         call screen fr3livingroom
 
     label labelfr3kitchen:
         scene fr3kitchen
-        $ phoneexit = "labelfr3kitchen"
         call screen fr3kitchen
 
     label labelfr3kitchen2:
         scene fr3kitchen2
-        $ phoneexit = "labelfr3kitchen2"
         call screen fr3kitchen2
 
     label labelfr3middleroom:
         scene fr3middleroom
-        $ phoneexit = "labelfr3middleroom"
         call screen fr3middleroom
 
     label labelfr3garage:
         scene fr3garage
-        $ phoneexit = "labelfr3garage"
         call screen fr3garage
 
     label labelfr3upstairs:
         scene fr3upstairs
-        $ phoneexit = "labelfr3upstairs"
         call screen fr3upstairs
 
     label labelfr3office:
         scene fr3office
-        $ phoneexit = "labelfr3office"
         call screen fr3office
 
     label labelfr3roofroom:
         scene fr3roofroom
-        $ phoneexit = "labelfr3roofroom"
         call screen fr3roofroom
 
     #~Ground floor~
@@ -7954,7 +7924,7 @@ label script06:
 
     $ fr3josh = True
 
-    $ showphone = False
+    
 
     scene sfr3jo1 # opening: josh and kim sitting on porch super high, with some filled and some empty shots on the ground
 
@@ -8130,19 +8100,19 @@ label script06:
 
     jo "Bye G."
 
-    $ showphone = True
+    
 
     jump labelfr3garden
 
     label fr3josh2:
 
-    $ showphone = False
+    
 
     scene fr3garden
 
     u "(I already talked to them, not sure I'm down for more Kim right now.)"
 
-    $ showphone = True
+    
 
     jump labelfr3garden
 
@@ -8154,7 +8124,7 @@ label script06:
 
     $ fr3guy = True
 
-    $ showphone = False
+    
 
     scene sfr3guy1 #showing guy 1 and guy 2 on the couch having a discusison
 
@@ -8265,7 +8235,7 @@ label script06:
 
     u "Alright, I'ma leave you guys to it."
 
-    $ showphone = True
+    
 
     jump labelfr3livingroom
 
@@ -8320,19 +8290,19 @@ label script06:
 
     u "Alright, I'ma leave you guys to it."
 
-    $ showphone = True
+    
 
     jump labelfr3livingroom
 
     label fr3guy2:
 
-    $ showphone = False
+    
 
     scene fr3livingroom
 
     u "(No way I'm getting dragged back into that argument.)"
 
-    $ showphone = True
+    
 
     jump labelfr3livingroom
 
@@ -8340,7 +8310,7 @@ label script06:
     #*If you click on Aubrey & Emily*
     $ fr3aubrey = True
 
-    $ showphone = False
+    
 
     scene sfr3au1 # Opening : EMily and aubrey standing with beer bottle, Aubrey mouth open curious smile
 
@@ -8402,7 +8372,7 @@ label script06:
 
             au "Okay, bye."
 
-            $ showphone = True
+            
             jump labelfr3livingroom
 
         else: #If you didn't forgive Emily and had sex with Aubrey:
@@ -8454,7 +8424,7 @@ label script06:
 
             u "Nah, it's cool. Just saying hi, I'll go talk to some of the other people here."
 
-            $ showphone = True
+            
 
             jump labelfr3livingroom
 
@@ -8601,7 +8571,7 @@ label script06:
 
             u "*Chuckles* I'm sure we will."
 
-            $ showphone = True
+            
 
             jump labelfr3livingroom
 
@@ -8643,7 +8613,7 @@ label script06:
 
             u "Uhm... anyway, I'ma check out the rest of this party. See you guys later."
 
-            $ showphone = True
+            
 
             jump labelfr3livingroom
 
@@ -8783,7 +8753,7 @@ label script06:
 
             au "Byeee."
 
-            $ showphone = True
+            
 
             jump labelfr3livingroom
 
@@ -8841,32 +8811,32 @@ label script06:
 
             u "*Chuckles* I'd hope so."
 
-            $ showphone = True
+            
 
             jump labelfr3livingroom
 
 
     label fr3aubrey2:
-    $ showphone = False
+    
 
     scene fr3livingroom
 
     u "(I should check out other parts of the party as well.)"
 
-    $ showphone = True
+    
 
     jump labelfr3livingroom
 
     label fr3dsbathroom:
 
-    $ showphone = False
+    
 
     #locked door sound
     scene fr3bathroomdoor
 
     u "(Hmm... locked)"
 
-    $ showphone = True
+    
 
     jump labelfr3middleroom
 
@@ -8874,7 +8844,7 @@ label script06:
 
     label fr3matt1:
 
-    $ showphone = False
+    
     $ fr3matt = True
 
     scene sfr3ma1 # close up matt looking at fridge
@@ -8901,26 +8871,26 @@ label script06:
 
     u "You know what? Nevermind."
 
-    $ showphone = True
+    
 
     jump labelfr3kitchen
 
     label fr3matt2:
 
-    $ showphone = False
+    
 
     scene fr3kitchen
 
     u "(I'm not going over there again.)"
 
-    $ showphone = True
+    
 
     jump labelfr3kitchen
 
 
     label fr3chris1:
 
-    $ showphone = False
+    
     $ fr3chris = True
 
     if fightadam == True: #If you fought Adam:
@@ -9115,7 +9085,7 @@ label script06:
 
         u "Okay, will do."
 
-        $ showphone = True
+        
 
         jump labelfr3kitchen
 
@@ -9270,13 +9240,13 @@ label script06:
 
         ch "There's something else I wanna show you."
 
-        $ showphone = True
+        
 
         jump labelfr3kitchen
 
     label fr3riley1: #If you click on Riley and finn*
 
-    $ showphone = False
+    
     $ fr3riley = True
 
     scene sfr3ri1 #Riley and finn are sitting at the table talking.
@@ -9476,7 +9446,7 @@ label script06:
 
     ri "Okay, see you later then."
 
-    $ showphone = True
+    
     jump labelfr3kitchen
 
     label gz_b:
@@ -9549,17 +9519,17 @@ label script06:
 
     ri "Okay, see you later then."
 
-    $ showphone = True
+    
     jump labelfr3kitchen
 
     label fr3riley2:
 
-    $ showphone = False
+    
 
     scene fr3kitchen
 
     u "(I should look around more first.)"
-    $ showphone = True
+    
     jump labelfr3kitchen
 
 
@@ -9568,7 +9538,7 @@ label script06:
     #Sebastian is guiding Guy #5 through some punches., they're both not wearing a shirt
 
     label fr3sebastian1:
-    $ showphone = False
+    
     $ fr3sebastian = True
 
     scene sfr3se1 # sebestian teaching guyd how to fight
@@ -9648,21 +9618,21 @@ label script06:
 
     u "Cool, will do."
 
-    $ showphone = True
+    
     jump labelfr3garage
 
     label fr3sebastian2:
-    $ showphone = False
+    
 
     scene fr3garage
 
     u "(Maybe I'll join them a bit later.)"
 
-    $ showphone = True
+    
     jump labelfr3garage
 
     label fr3amber1:
-    $ showphone = False
+    
     $ fr3amber = True
 
     scene sfr3am1 #Amber is sitting watching the guys workout and drinking a beer
@@ -9804,19 +9774,19 @@ label script06:
 
     am "Bye bye."
 
-    $ showphone = True
+    
 
     jump labelfr3garage
 
     label fr3amber2:
 
-    $ showphone = False
+    
 
     scene fr3garage
 
     u "(I think I've heard enough about shirtless guys for now.)"
 
-    $ showphone = True
+    
 
     jump labelfr3garage
 
@@ -9829,7 +9799,7 @@ label script06:
     label fr3nora1:
 
     $ fr3nora = True
-    $ showphone = False
+    
 
     scene sfr3no1 #Nora is sitting on the rooftop smoking. MC comes and sits down next to her.
 
@@ -10115,7 +10085,7 @@ label script06:
 
     u "Fine. But you're wrong about Chloe."
 
-    $ showphone = True
+    
 
     jump labelfr3roofroom
 
@@ -10216,26 +10186,26 @@ label script06:
 
     u "Anytime."
 
-    $ showphone = True
+    
 
     jump labelfr3roofroom
 
     label fr3nora2:
 
-    $ showphone = False
+    
 
     scene fr3roofroom
 
     u "(I should let Nora smoke in peace.)"
 
-    $ showphone = True
+    
 
     jump labelfr3roofroom
 
     #Location 6: bathroom
     label fr3chloe1:
     $ fr3chloe = True
-    $ showphone = False
+    
 
     scene sfr3cl1 #in front of closed bathroom door
 
@@ -10295,7 +10265,7 @@ label script06:
 
             u "Fine..."
 
-            $ showphone = True
+            
 
             jump labelfr3upstairs
 
@@ -10437,7 +10407,7 @@ label script06:
 
     # door smashing sound
 
-    $ showphone = True
+    
 
     jump labelfr3upstairs
 
@@ -10528,19 +10498,19 @@ label script06:
 
     #door closing sound
 
-    $ showphone = True
+    
 
     jump labelfr3upstairs
 
     label fr3chloe2:
 
-    $ showphone = False
+    
 
     scene fr3upstairs
 
     u "(I should give her some space.)"
 
-    $ showphone = True
+    
 
     jump labelfr3upstairs
 
@@ -10549,7 +10519,7 @@ label script06:
 
     label fr3office:
 
-    $ showphone = False
+    
 
 
     scene fr3office
@@ -10558,7 +10528,7 @@ label script06:
 
         u "(It's filled with all of these historic Wolves' relics.)"
     $ fr3office = True
-    $ showphone = True
+    
 
     if relics == 4:
 
@@ -10575,7 +10545,7 @@ label script06:
     #*If you click on a photo on the wall*
     #MC sees an old picture of the wolves.
 
-    $ showphone = False
+    
 
     scene sfr3picture # close up photo with Imre's older brother
 
@@ -10583,7 +10553,7 @@ label script06:
 
     u "That must be Imre's older brother. They do look alike."
 
-    $ showphone = True
+    
 
     if relics == 4:
 
@@ -10597,7 +10567,7 @@ label script06:
 
     $ relics += 1
 
-    $ showphone = False
+    
 
     scene sfr3trophies # close up of 7 trophies
 
@@ -10607,7 +10577,7 @@ label script06:
 
     u "(That's crazy...)"
 
-    $ showphone = True
+    
 
     if relics == 4:
 
@@ -10623,13 +10593,13 @@ label script06:
 
     $ relics += 1
 
-    $ showphone = False
+    
 
     scene sfr3certificate # close up of ceritifcate
 
     u "Wow. This frat has been around for decades."
 
-    $ showphone = True
+    
 
     if relics == 4:
 
@@ -10646,13 +10616,13 @@ label script06:
 
     $ relics += 1
 
-    $ showphone = False
+    
 
     scene sfr3books # close up of bookshelf
 
     u "I doubt any of these guys actually read any of these. Haha."
 
-    $ showphone = True
+    
 
     if relics == 4:
 
@@ -10667,7 +10637,7 @@ label script06:
 
     $ relics += 1
 
-    $ showphone = False
+    
 
     scene fr3office
 
@@ -10691,7 +10661,7 @@ label script06:
 
             u "(Definitely not Nora, she seems too caught up in her fight with Chloe.)"
 
-    $ showphone = True
+    
 
     jump labelfr3office
 
@@ -10703,7 +10673,7 @@ label script06:
 
     label fr3aubrey3:
 
-    $ showphone = False
+    
 
     scene sfr3au1
 
@@ -10778,7 +10748,7 @@ label script06:
 
                 u "Oh okay."
 
-                $ showphone = True
+                
 
                 jump labelfr3livingroom
 
@@ -10804,7 +10774,6 @@ label script06:
 
     else:
         u "(I've already asked Aubrey.)"
-        $ showphone = 1
         jump labelfr3livingroom
 
 
@@ -10837,7 +10806,6 @@ label script06:
 
     else:
         u "(No way I'm asking Emily.)"
-        $ showphone = 1
         jump labelfr3livingroom
 
     #*If you click on Amber*
@@ -10845,7 +10813,7 @@ label script06:
 
     label fr3amber3:
 
-    $ showphone = False
+    
 
     $ askedamber = True
 
@@ -10929,7 +10897,7 @@ label script06:
 
         am "Okay."
 
-        $ showphone = False
+        
 
         jump labelfr3garage
 
@@ -10940,7 +10908,7 @@ label script06:
     label fr3josh3:
 
     $ askedkim = True
-    $ showphone = False
+    
 
     scene sfr3jo1
 
@@ -10968,7 +10936,7 @@ label script06:
 
         u "What? You know, on second thought maybe it's better if you stay here."
 
-        $ showphone = True
+        
 
         jump labelfr3garden
 
@@ -10994,7 +10962,7 @@ label script06:
 
         u "Great conversation. On second thought, I might ask someone else."
 
-        $ showphone = True
+        
 
         jump labelfr3garden
 
@@ -11003,7 +10971,7 @@ label script06:
 
     label fr3riley3:
 
-    $ showphone = False
+    
     $ askedriley = 0
     $ upstairs = "riley"
 
@@ -11196,7 +11164,7 @@ label script06:
 
                 u "(I should probably talk to Chris soon.)"
 
-                $ showphone = True
+                
 
                 jump labelfr3office
 
@@ -11217,7 +11185,7 @@ label script06:
 
                 u "(I should probably talk to Chris soon.)"
 
-                $ showphone = True
+                
 
                 jump labelfr3office
 
@@ -11423,7 +11391,7 @@ label script06:
 
                         u "(I should probably talk to Chris soon.)"
 
-                        $ showphone = True
+                        
 
                         jump labelfr3office
 
@@ -11444,7 +11412,7 @@ label script06:
 
                         u "(I should probably talk to Chris soon.)"
 
-                        $ showphone = True
+                        
 
                         jump labelfr3office
 
@@ -11498,7 +11466,7 @@ label script06:
 
                 u "(I should probably talk to Chris soon anyway.)"
 
-                $ showphone = True
+                
 
                 jump labelfr3office
 
@@ -11615,7 +11583,7 @@ label script06:
 
     em "I'll see you later."
 
-    $ showphone = False
+    
 
     jump labelfr3office
 
@@ -11756,7 +11724,7 @@ label script06:
 
     $ kimpuke = True
 
-    $ showphone = True
+    
 
     jump labelfr3office
 
@@ -11871,7 +11839,7 @@ label script06:
 
         u "Alright."
 
-        $ showphone = True
+        
 
         jump labelfr3office
 
@@ -11958,7 +11926,7 @@ label script06:
 
         ri "Good luck. I'll see you later."
 
-        $ showphone = True
+        
 
         jump labelfr3office
 
@@ -11972,7 +11940,7 @@ label script06:
     jump labelfr3kitchen
 
     label fr3chris3: ### ENDING
-    $ showphone = False
+    
 
     scene sfr3ch2
 

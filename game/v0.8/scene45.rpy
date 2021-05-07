@@ -30,9 +30,6 @@ label tue_night_in_room:
         scene v8star6 # TPP. Show MC sat on the edge of his bed checking his phone.
         with dissolve
 
-        $ showphone = True
-        $ phoneexit = "v8s45_phoneContinue1"
-
         $ contact_Sebastian.newMessage("Yo dude, just wanted to let you know... tonight was fun.")
         $ contact_Sebastian.addReply("Sure was... but it can be even better, right?", "v8s45_phoneReply1")
         call screen phone
@@ -46,7 +43,6 @@ label tue_night_in_room:
             if contact_Sebastian.messages[-1].replies:
                 u "I should really check my phone."
                 jump v8s45_phoneContinue1
-            $ phoneexit = "v8s45_phoneContinue2"
 
         u "(Let's just see what Chloe's up to.)"
 
@@ -85,7 +81,7 @@ label tue_night_in_room:
             if contact_Chloe.messages[-1].replies:
                 u "I should really check my phone."
                 jump v8s45_phoneContinue2
-            $ showphone = False
+            
 
         u "(Well I'll be damned... This could actually be more fun than I ever thought it could be.)"
 
@@ -120,11 +116,6 @@ label tue_night_in_room:
         scene v8star15 # TPP. Show MC sat on the edge of his bed checking his phone.
         with dissolve
 
-        $ showphone = True
-        $ phoneexit = "v8s45_phoneContinue3"
-
-        $ contact_Grayson.unlock()
-
         $ contact_Grayson.newMessage("Yo Ape, still ready for the surprise?")
         $ contact_Grayson.addReply("Are we still doing this?", "v8s45_phoneReply7")
         call screen phone
@@ -143,7 +134,6 @@ label tue_night_in_room:
             if contact_Grayson.messages[-1].replies:
                 u "I need to check my phone"
                 jump v8s45_phoneContinue3
-            $ phoneexit = "v8s45_phoneContinue5"
 
         u "(Let's just see what Chloe's up to.)"
 
@@ -185,7 +175,7 @@ label tue_night_in_room:
             if contact_Chloe.messages[-1].replies:
                 u "I should check my phone"
                 jump v8s45_phoneContinue4
-            $ showphone = False
+            
 
         u "(Well I'll be damned... This could actually be more fun than I ever thought it could be.)"
 

@@ -48,7 +48,7 @@ screen spoiler():
         style "endfr"
         text_align 0.5
         align (0.43, 0.58)
-        action [Show("scenegal"), Hide("spoiler")]
+        action [Show("sceneGallery"), Hide("spoiler")]
 
     textbutton "No":
         style "endfr"
@@ -56,7 +56,7 @@ screen spoiler():
         align (0.57, 0.58)
         action Hide("spoiler")
 
-screen scenegal():
+screen sceneGallery():
     tag menu
 
     add "sceneGallery/images/sceneGalleryBackground.webp"
@@ -79,5 +79,5 @@ screen scenegal():
     imagebutton:
         idle "images/backtransp.webp"
         hover "images/back.webp"
-        pos (933, 79)
-        action Return()
+        pos (79, 933)
+        action Show("main_menu")

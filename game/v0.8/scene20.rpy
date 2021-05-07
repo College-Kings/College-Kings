@@ -10,7 +10,7 @@ init python:
     renpy.music.register_channel("ambience", mixer="sfx", loop=True)
 
 label emily_arcade:
-    $ showphone = False
+    
     $ renpy.music.set_volume(1, channel="ambience")
 
     scene v8arcade1 # TPP. MC walking into the arcade building, Emily can be seen waiting for him inside

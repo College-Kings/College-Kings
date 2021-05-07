@@ -16,10 +16,9 @@ if joinwolves:
     play sound "sounds/vibrate.mp3"
     u "(Hmm?)"
 
-    $ phoneexit = "v9_phn_riley1"
     $ contact_Riley.newMessage("Hey, [name]. You awake?")
     $ contact_Riley.addReply("Hey Riley, yeah I'm up, is everything okay?", "v9_phn_riley1_a1")
-    $ showphone = True
+    
 
     scene v9dream20b # MC lying on bed looking at his phone, neutral expression, mouth closed
     with dissolve
@@ -37,10 +36,9 @@ else:
     play sound "sounds/vibrate.mp3"
     u "(Hmm?)"
 
-    $ phoneexit = "v9_phn_riley1"
     $ contact_Riley.newMessage("Hey, [name]. You awake?")
     $ contact_Riley.addReply("Hey Riley, yeah I'm up, is everything okay??", "v9_phn_riley1_a1")
-    $ showphone = True
+    
 
     scene v9dream23b # Same as v9dream20b but in MC's room in Apes house
     with dissolve
@@ -52,7 +50,7 @@ if contact_Riley.messages[-1].replies:
     jump v9_phn_riley1
 
 else:
-    $ showphone = False
+    
     jump v9_phn_riley1_done
 
 label v9_phn_riley1_a1:

@@ -466,7 +466,7 @@ label v07:
     with dissolve
 
     $ truetoself = True
-    if steam == False:
+    if not steam:
         image truetoself = "images/truetoself.webp"
         show truetoself:
             xpos 0
@@ -1420,8 +1420,6 @@ label v07:
         $ KiwiiPost4.addComment("Josh", "Woah, you guys back together??", 3)
         $ KiwiiPost4.addReply("No, we're not.", "KiwiiPost4_reply1", mentions ="Josh", numberLikes=renpy.random.randint(5, 15))
         play sound "sounds/vibrate.mp3"
-        $ phoneexit = "phoneam"
-        $ contact_Riley.unlock()
         $ contact_Riley.newMessage("Are you and Emily back together?")
         $ contact_Riley.addReply("What are you talking about???", "rirep1a")
         pause 0.5
@@ -1429,7 +1427,7 @@ label v07:
         scene s713b # mc looks at his phone
         with dissolve
 
-        $ showphone = True
+        
 
         u "(What the hell?)"
 
@@ -1539,7 +1537,7 @@ label v07:
 
         label continueee:
 
-        $ showphone = False
+        
 
         scene s714a # mc calm mouth closed
         with dissolve # mc sitting on his bed shirtless with his phone to his head, like he's on the phone
@@ -1750,11 +1748,8 @@ label v07:
 
     else:
         play sound "sounds/vibrate.mp3"
-        $ phoneexit = "phoneam"
-        $ contact_Riley.unlock()
         $ contact_Riley.newMessage("Hey, how come you're not on Kiwii?")
         $ contact_Riley.addReply("What's that?", "rirep6a")
-        $ phoneexit = "phonean"
 
         pause 0.5
 
@@ -1762,7 +1757,7 @@ label v07:
         with dissolve
 
         u "(Huh? What did Riley text me?)"
-        $ showphone = True
+        
         jump phonean
 
         label rirep6a:
@@ -1780,7 +1775,7 @@ label v07:
             u "(I should respond to Riley.)"
             jump phonean
         else:
-            $ showphone = False
+            
             scene s713b2 # mc looks up to the window in the same position of 713b
             with dissolve
             u "(It's a nice day for a walk. It'll do me good.)"
@@ -2803,9 +2798,6 @@ label v07:
 
     if not laurenmad and not nobeach:
 
-        $ showphone = True
-        $ phoneexit = "phoneao"
-
         play sound "sounds/vibrate.mp3"
 
         if seenlauren == True:
@@ -2843,13 +2835,13 @@ label v07:
 
         elif nobeach:
 
-            $ showphone = False
+            
             u "(Time to finish my history assignment...)"
             jump nobeach
 
 
         else:
-            $ showphone = False
+            
             u "(Gotta put on my swim trunks and pick up Lauren.)"
 
             jump beachlauren
@@ -3807,8 +3799,6 @@ label v07:
 
     u "(Oh shit, it's almost six already!)"
 
-    $ contact_Autumn.unlock()
-
     if meetgrayson == False:
 
         u "(Wolves pledging starts soon... is it stupid of me to wanna pledge now? I didn't think frat life was for me..."
@@ -3867,7 +3857,7 @@ label v07:
                 "Pledge to the Apes":
 
                     $ silverback = True
-                    if steam == False:
+                    if not steam:
                         image silverback = "images/silverback.webp"
                         show silverback:
                             xpos 0
@@ -3886,7 +3876,7 @@ label v07:
 
                 "Pledge to the Wolves":
                     $ wolfpack = True
-                    if steam == False:
+                    if not steam:
                         image wolfpack = "images/wolfpack.webp"
                         show wolfpack:
                             xpos 0
@@ -3905,7 +3895,6 @@ label v07:
 
 ####### SCENE 13 PLEDGING THE WOLVES
     label pledgewolves:
-    $ contact_Autumn.unlock()
     $ addPoint("bro", 1)
     $ joinwolves = True
 
@@ -5092,7 +5081,6 @@ label v07:
 
 ######## SCENE 14 APES
     label pledgeapes:
-    $ contact_Autumn.unlock()
     $ addPoint("tm", 3) # I think more TM points for joining the Apes makes sense
     $ joinwolves = False
 
@@ -5841,8 +5829,6 @@ label v07:
             "Text her":
                 $ emilyText = True
                 $ addPoint("bf", 1)
-                $ showphone = True
-                $ phoneexit = "phonebb"
                 $ contact_Emily.addReply("Hey, sorry I lost track of time. You up?", "emrep3a")
 
                 label emrep3a:
@@ -5857,7 +5843,7 @@ label v07:
                     call screen messager(contact_Emily)
 
                 else:
-                    $ showphone = False
+                    
                     u "(I guess she's asleep.)"
 
             "Don't text her":
@@ -5889,17 +5875,16 @@ label v07:
 
     if emilyText:
         play sound "sounds/vibrate.mp3"
-        $ showphone = True
+        
         $ contact_Emily.newMessage("It's okay. You'll get the surprise another time...")
         $ contact_Emily.addReply("Excting :)", "emrep4a")
-        $ phoneexit = "phonebc"
 
 
     " "
     label phonebc:
     play music "music/mindie2.mp3"
     queue music [ "music/m16punk.mp3", "music/mindie1.mp3" ]
-    $ showphone = False
+    
     if imremad:
         scene s866 # Camera - TPP (shot should not include Imre's bed). MC sitting up on his bed, mouth closed.
         with dissolve
@@ -6905,7 +6890,7 @@ label v07:
             with vpunch
 
             $ leeway = True
-            if steam == False:
+            if not steam:
                 image leeway = "images/lee-way.webp"
                 show leeway:
                     xpos 0
@@ -9423,8 +9408,7 @@ if rileyrs:
     $ contact_Riley.newMessage("Wanna come over? ;)")
     $ contact_Riley.addReply("Sure, on my way :)", "rirep8a")
     $ contact_Riley.addReply("Sorry I'm really exhausted. Another time", "rirep8b")
-    $ phoneexit = "rtnow"
-    $ showphone = True
+    
 
     " "
 
@@ -9435,7 +9419,7 @@ if rileyrs:
         u "(I should check my messages.)"
         jump rtnow
     elif rileysex:
-        $ showphone = False
+        
         u "(Guess I'm not going to sleep yet.)"
         jump rileysexscene
 
@@ -9815,9 +9799,8 @@ label risex: # Riley sex scene
     $ contact_Autumn.newMessage("Hey, it's Autumn.")
     $ contact_Autumn.newMessage("I'm just about to start making signs. Do you still want to join?")
     $ contact_Autumn.addReply("Yes, of course. I'd love to.", "autrep1a")
-    $ phoneexit = "phoneba"
     play sound "sounds/vibrate.mp3"
-    $ showphone = True
+    
 
     label phoneba:
     if contact_Autumn.messages[-1].replies:
@@ -9827,7 +9810,7 @@ label risex: # Riley sex scene
 
     else:
         u "(Alright, let's get going to Autumn's.)"
-        $ showphone = False
+        
         jump signs_with_autumn2
 
     label autrep1a:
@@ -10432,7 +10415,7 @@ label aSigns_2:
     with dissolve
 
     $ ecstatic = True
-    if steam == False:
+    if not steam:
         image ecstatic = "images/ecstatic.webp"
         show ecstatic:
             xpos 0
@@ -13040,8 +13023,7 @@ label aSigns_2:
                 scene fr4dancefloornodatenonora
             else:
                 scene fr4dancefloornodate
-        $ showphone = True
-        $ phoneexit = "labelfr4dancefloor"
+        
         call screen fr4dancefloor
 
     label labelfr4gymleft:
@@ -13067,8 +13049,7 @@ label aSigns_2:
                 scene fr4gymleftnochloe
             else:
                 scene fr4gymleft
-        $ showphone = True
-        $ phoneexit = "labelfr4gymleft"
+        
         call screen fr4gymleft
 
     label labelfr4gymright:
@@ -13076,8 +13057,7 @@ label aSigns_2:
             scene fr4gymrightnolauren
         else:
             scene fr4gymright
-        $ showphone = True
-        $ phoneexit = "labelfr4gymright"
+
         call screen fr4gymright
 
     label labelfr4gymentrance:
@@ -13089,20 +13069,17 @@ label aSigns_2:
             scene fr4gymentrancenora
         else:
             scene fr4gymentrance
-        $ showphone = True
-        $ phoneexit = "labelfr4gymentrance"
+        
         call screen fr4gymentrance
 
     label labelfr4hallwaygymexit:
         scene fr4hallwaygymexit
-        $ showphone = True
-        $ phoneexit = "labelfr4hallwaygymexit"
+
         call screen fr4hallwaygymexit
 
     label labelfr4hallwaybathroom:
         scene fr4hallwaybathroom
-        $ showphone = True
-        $ phoneexit = "labelfr4hallwaybathroom"
+
         call screen fr4hallwaybathroom
 
     label labelfr4hallway:
@@ -13116,8 +13093,7 @@ label aSigns_2:
                 scene fr4hallwaynopenelopechloe
             else:
                 scene fr4hallwaynopenelope
-        $ showphone = True
-        $ phoneexit = "labelfr4hallway"
+
         call screen fr4hallway
 
     label labelfr4hallwaycorner:
@@ -13127,8 +13103,7 @@ label aSigns_2:
             scene fr4hallwaycornernumber
         else:
             scene fr4hallwaycornernograyson
-        $ showphone = True
-        $ phoneexit = "labelfr4hallwaycorner"
+
         call screen fr4hallwaycorner
 
     label labelfr4outsidestairs:
@@ -13136,14 +13111,12 @@ label aSigns_2:
             scene fr4outsidestairs
         else:
             scene fr4outsidestairsnoemily
-        $ showphone = True
-        $ phoneexit = "labelfr4outsidestairs"
+        
         call screen fr4outsidestairs
 
     label labelfr4outsidestreet:
         scene fr4outsidestreet
-        $ showphone = True
-        $ phoneexit = "labelfr4outsidestreet"
+        
         call screen fr4outsidestreet
 
     ##### GYM #####
@@ -13153,7 +13126,7 @@ label aSigns_2:
     label fr4chloedate: ### ENDS FREEROAM
     call screen endfr4("fr4chloedate2", "labelfr4dancefloor", "Chloe")
     label fr4chloedate2:
-    $ showphone = False
+    
 
     scene sfr4cl31 # fpp close up chloe smiling on dancefloor
 
@@ -13581,7 +13554,7 @@ label aSigns_2:
     label fr4emilydate: ### ENDS FREEROAM
     call screen endfr4("fr4emilydate2", "labelfr4dancefloor", "Emily")
     label fr4emilydate2:
-    $ showphone = False
+    
 
     scene sfr4em20 #fpp close up emily dancing very drunkenly
 
@@ -13843,7 +13816,7 @@ label aSigns_2:
     label fr4laurendate: ### ENDS FREEROAM
     call screen endfr4("fr4laurendate2", "labelfr4dancefloor", "Lauren")
     label fr4laurendate2:
-    $ showphone = False
+    
 
     scene sfr4la19a # close up lauren smiling mouth closed
 
@@ -14093,7 +14066,7 @@ label aSigns_2:
     label fr4penelopedate: ### ENDS FREEROAM
     call screen endfr4("fr4penelopedate2", "labelfr4dancefloor", "Penelope")
     label fr4penelopedate2:
-    $ showphone = False
+    
 
     scene sfr4pe14 # fpp penelope turned around dancing close up
 
@@ -14562,7 +14535,7 @@ label aSigns_2:
     label fr4rileydate: ### ENDS FREEROAM
     call screen endfr4("fr4rileydate2", "labelfr4dancefloor", "Riley")
     label fr4rileydate2:
-    $ showphone = False
+    
 
     #Talking to riley & she's your date:
     #MC approaches Riley on the dance floor.
@@ -14755,7 +14728,7 @@ label aSigns_2:
 
     $ fr4nora = True
 
-    $ showphone = False
+    
 
     #MC approaches Chris and Nora on the dance floor.
 
@@ -14888,7 +14861,7 @@ label aSigns_2:
 
     label fr4chris1:
 
-    $ showphone = False
+    
 
     if hcGirl == "chloe":
         if fr4nora and not fr4nora2:
@@ -14936,7 +14909,7 @@ label aSigns_2:
 
     $ fr4elijah = True
 
-    $ showphone = False
+    
 
     scene sfr4el1 #Elijah is dancing really dorky with poet 1
 
@@ -15040,7 +15013,7 @@ label aSigns_2:
         else:
             scene fr4dancefloornodate
 
-    $ showphone = False
+    
 
     u "(I'll let him dance.)"
 
@@ -15050,7 +15023,7 @@ label aSigns_2:
 
     $ fr4mason = True
 
-    $ showphone = False
+    
 
     scene sfr4ma1 #showing mason and rg dancing, Mason is aggressively grabbing her ass. she's really enjoying
 
@@ -15098,7 +15071,7 @@ label aSigns_2:
         else:
             scene fr4dancefloornodate
 
-    $ showphone = False
+    
 
     u "(I don't wanna go back to them, that was weird.)"
 
@@ -15142,7 +15115,7 @@ label aSigns_2:
         else:
             scene fr4dancefloornodate
 
-    $ showphone = False
+    
 
     u "(I've already talked to both of them.)"
 
@@ -15154,7 +15127,7 @@ label aSigns_2:
 
     $ fr4aaron = True
 
-    $ showphone = False
+    
 
     scene sfr4aa1 # showing aaron trying to talk lindsey into something but she's not interested
 
@@ -15352,7 +15325,7 @@ label aSigns_2:
     else:
         scene fr4gymentrance
 
-    $ showphone = False
+    
 
     u "(Not sure I wanna be dragged back into their discussion.)"
 
@@ -15361,7 +15334,7 @@ label aSigns_2:
     label fr4riley2: #ENDS FREE ROAM
     call screen endfr4("fr4riley22", "labelfr4gymentrance", "Riley")
     label fr4riley22:
-    $ showphone = False
+    
 
     scene sfr4ri50 # showing riley getting a drink
 
@@ -15643,7 +15616,7 @@ label aSigns_2:
 
     $ fr4nora2 = True
 
-    $ showphone = False
+    
 
     scene sfr4no4 # nora grabbing a drink
 
@@ -15826,7 +15799,7 @@ label aSigns_2:
 
     $ fr4riley = True
 
-    $ showphone = False
+    
 
     scene sfr4ri34 #fpp Aubrey and Riley are taking pictures together and posing by kissing each other on the cheek.
 
@@ -15909,7 +15882,7 @@ label aSigns_2:
 
     $ fr4aubrey = True
 
-    $ showphone = False
+    
 
     if fr4riley:
 
@@ -16138,7 +16111,7 @@ label aSigns_2:
         else:
             scene fr4gymleft
 
-    $ showphone = False
+    
 
     u "(I should talk to some of the other people here as well.)"
 
@@ -16153,7 +16126,7 @@ label aSigns_2:
 
         $ chloesad = True
 
-    $ showphone = False
+    
 
     scene sfr4cl47 #Ryan and Chloe are having a heated argument.
 
@@ -16259,7 +16232,7 @@ label aSigns_2:
 
     $ fr4ryan = True
 
-    $ showphone = False
+    
 
     if hcGirl == "chloe":
         if fr4riley:
@@ -16315,7 +16288,7 @@ label aSigns_2:
 
     $ fr4ryan = True
 
-    $ showphone = False
+    
 
     u "(Not sure I could handle more Ryan right now.)"
 
@@ -16327,7 +16300,7 @@ label aSigns_2:
 
     $ fr4cameron = True
 
-    $ showphone = False
+    
 
     scene sfr4ca1 # Cameron is turned away and the random girl looks annoyed
 
@@ -16411,7 +16384,7 @@ label aSigns_2:
     else:
         scene fr4gymright
 
-    $ showphone = False
+    
 
     u "(Cameron doesn't seem to be in the greatest of moods. I feel like going back there isn't a smart move.)"
 
@@ -16421,7 +16394,7 @@ label aSigns_2:
 
     $ fr4lauren = True
 
-    $ showphone = False
+    
 
     scene sfr4la25 # fpp lauren & ms rose talking
 
@@ -16586,7 +16559,7 @@ label aSigns_2:
     else:
         scene fr4gymright
 
-    $ showphone = False
+    
 
     u "(I'd rather not talk about the economics essay I forgot to turn in.)"
 
@@ -16596,7 +16569,7 @@ label aSigns_2:
 
     $ fr4msrose = True
 
-    $ showphone = False
+    
 
     scene sfr4la26b # ms rose looking at you smiling eye brow raised
 
@@ -16673,7 +16646,7 @@ label aSigns_2:
     else:
         scene fr4gymright
 
-    $ showphone = False
+    
 
     u "(I'd rather not talk about the economics essay I forgot to turn in.)"
 
@@ -16689,7 +16662,7 @@ label aSigns_2:
 
     $ fr4imre = True
 
-    $ showphone = False
+    
 
 
 
@@ -16745,7 +16718,7 @@ label aSigns_2:
 
     scene fr4hallwaybathroom
 
-    $ showphone = False
+    
 
     u "(I think I've heard enough of Imre's moaning for now.)"
 
@@ -16757,7 +16730,7 @@ label aSigns_2:
 
     $ fr4penelope = True
 
-    $ showphone = False
+    
 
     scene sfr4pe24 #fpp penelope on hte phone turned away from you
 
@@ -16884,7 +16857,7 @@ label aSigns_2:
         else:
             scene fr4hallwaynopenelope
 
-    $ showphone = False
+    
 
     u "(Penelope's on the phone, so I should probably leave her be.)"
 
@@ -16893,7 +16866,7 @@ label aSigns_2:
     label fr4chloe2: ### ENDS FREE ROAM
     call screen endfr4("fr4chloe22", "labelfr4hallway", "Chloe")
     label fr4chloe22:
-    $ showphone = False
+    
     $ fr4chloe2 = True
 
     if not chloemad or ryandefendchloe:
@@ -17063,7 +17036,7 @@ label aSigns_2:
         jump labelfr4hallway
 
     label fr4chloe3:
-    $ showphone = False
+    
 
     if not hcGirl == "penelope":
         if fr4chloe and preventgrayson:
@@ -17086,7 +17059,7 @@ label aSigns_2:
 
     $ fr4grayson = True
 
-    $ showphone = False
+    
 
     scene sfr4gr1 # grayson about to spray the wall
 
@@ -17274,13 +17247,13 @@ label aSigns_2:
 
     u "(No one in here.)"
 
-    $ showphone = False
+    
 
     jump labelfr4hallwaycorner
 
     label fr4lockerroomchloe: ### ENDS FREE ROAM
 
-    $ showphone = False
+    
 
     call screen endfr4("fr4lockerroomchloe2", "labelfr4hallwaycorner", "Chloe")
 
@@ -17576,7 +17549,7 @@ label aSigns_2:
 
     $ fr4emily = True
 
-    $ showphone = False
+    
 
     $ forgiveemily = True
 
@@ -17661,7 +17634,7 @@ label aSigns_2:
 
     label fr4emily2:
 
-    $ showphone = False
+    
 
     scene fr4outsidestairs
 
@@ -17675,7 +17648,7 @@ label aSigns_2:
 
     $ fr4samantha = True
 
-    $ showphone = False
+    
 
     scene sfr4sa1 #fpp from the side / behind Samantha and Sebastian outside. You can't see their mouthThey are smoking a blunt and laughing.
 
@@ -17880,7 +17853,7 @@ label aSigns_2:
 
     label fr4samantha2:
 
-    $ showphone = False
+    
 
     scene fr4outsidestreet
 
@@ -17922,7 +17895,7 @@ label aSigns_2:
     with dissolve
 
     $ slowandsteady = True
-    if steam == False:
+    if not steam:
         image slowandsteady = "images/slowandsteady.webp"
         show slowandsteady:
             xpos 0
@@ -18086,7 +18059,7 @@ label aSigns_2:
     with dissolve
 
     $ playingwithfire = True
-    if steam == False:
+    if not steam:
         image playingwithfire = "images/playingwithfire.webp"
         show playingwithfire:
             xpos 0
@@ -18207,7 +18180,7 @@ label aSigns_2:
     with fade
 
     $ homecomingqueen = True
-    if steam == False:
+    if not steam:
         image homecomingqueen = "images/homecomingqueen.webp"
         show homecomingqueen:
             xpos 0

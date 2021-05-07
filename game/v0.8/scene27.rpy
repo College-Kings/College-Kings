@@ -10,12 +10,11 @@ label mon_eve_room_josh:
         pause 0.5
 
         play sound "sounds/vibrate.mp3"
-        $ showphone = True
+        
 
         u "(Let's see who this is.)"
 
         if helpJosh:
-            $ phoneexit = "v8s27_phoneContinue1"
             
             $ contact_Josh.newMessage("Hey bro! It's time! Meet me at mine, okay?")
             $ contact_Josh.addReply("Okay, I'm on my way.", "v8s27_phoneContinue1")
@@ -24,7 +23,7 @@ label mon_eve_room_josh:
                 if contact_Josh.messages[-1].replies:
                     u "I should really check my phone"
                     jump v8s27_phoneContinue1
-                $ showphone = False
+                
 
             scene v8spd2 # TPP. Show MC getting up from his desk.
             with dissolve
@@ -89,7 +88,6 @@ label mon_eve_room_josh:
             jump drug_deal_w_josh
 
         else:
-            $ phoneexit = "v8s27_phoneContinue2"
 
             $ contact_Josh.newMessage("Hey bro, I got robbed and my ass kicked bad! Really wish you came with me, man.")
             $ contact_Josh.addReply("Fuck! Are you ok??", "v8s27_phoneReply1")
@@ -103,7 +101,7 @@ label mon_eve_room_josh:
                 if contact_Josh.messages[-1].replies:
                     u "I should really check my phone"
                     jump v8s27_phoneContinue2
-                $ showphone = False
+                
                     
             scene v8spd2
             with dissolve
@@ -123,11 +121,10 @@ label mon_eve_room_josh:
         pause 0.5
 
         play sound "sounds/vibrate.mp3"
-        $ showphone = True
+        
         u "(Let's see who this is.)"
 
         if helpJosh:
-            $ phoneexit = "v8s27_phoneContinue3"
 
             $ contact_Josh.newMessage("Hey bro! It's time! Meet me at mine, okay?")
             $ contact_Josh.addReply("Okay, I'm on my way.", "v8s27_phoneContinue3")
@@ -136,7 +133,7 @@ label mon_eve_room_josh:
                 if contact_Josh.messages[-1].replies:
                     u "I should really check my phone"
                     jump v8s27_phoneContinue3
-                $ showphone = False
+                
 
             scene v8spd9 # TPP. Show MC getting up from his desk. (Apes)
             with dissolve
@@ -201,7 +198,6 @@ label mon_eve_room_josh:
             jump drug_deal_w_josh
 
         else:
-            $ phoneexit = "v8s27_phoneContinue4"
 
             $ contact_Josh.newMessage("Hey bro, I got robbed and my ass kicked bad! Really wish you came with me, man.")
             $ contact_Josh.addReply("Fuck! Are you ok??", "v8s27_phoneReply2")
@@ -214,7 +210,7 @@ label mon_eve_room_josh:
                 if contact_Josh.messages[-1].replies:
                     u "I should really check my phone"
                     jump v8s27_phoneContinue4
-                $ showphone = False
+                
 
             scene v8spd9
             with dissolve

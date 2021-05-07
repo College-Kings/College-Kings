@@ -23,11 +23,10 @@ label v9_room_fri_eve:
 
             u "(Wonder how Lauren's doing with the Deers charity)"
 
-            $ phoneexit = "s25_ContinueW"
 
             $ contact_Lauren.addReply("How's it going? You still doing our statue idea?", "s25_LauReplyW1")
 
-            $ showphone = True
+            
             call screen phone
 
             label s25_LauReplyW1:
@@ -52,7 +51,7 @@ label v9_room_fri_eve:
                     "(I should text Lauren.)"
                     jump s25_ContinueW
 
-            $ showphone = False
+            
 
         scene v9rfe2 # TPP. Show MC's door.
         with dissolve
@@ -84,11 +83,10 @@ label v9_room_fri_eve:
 
             u "(Wonder how Lauren's doing with the Deers charity)"
 
-            $ phoneexit = "s25_ContinueA"
 
             $ contact_Lauren.addReply("How's it going? You still doing our statue idea?", "s25_LauReplyA1")
 
-            $ showphone = True
+            
             call screen phone
 
             label s25_LauReplyA1:
@@ -113,7 +111,7 @@ label v9_room_fri_eve:
                     "(I should text Lauren.)"
                     jump s25_ContinueA
 
-            $ showphone = False
+            
 
         scene v9rfe4 # TPP. Show MC's door.
         with dissolve

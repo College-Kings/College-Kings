@@ -96,9 +96,7 @@ label v8_ending:
 
         scene v8send7a # TPP. Same camera as v8send7, MC checking his phone, looking confused.
         with dissolve
-
-        $ showphone = True
-        $ phoneexit = "s46_kiwiiContinue"
+        
 
         $ contact_Ryan.newMessage("What the hell's happening on Kiwii?")
         $ contact_Ryan.addReply("I don't know. What is it?")
@@ -127,7 +125,7 @@ label v8_ending:
         scene v8send8 # TPP. Show MC, MC looks really confused.
         with dissolve
 
-        $ showphone = False
+        
 
         jump ending8
 

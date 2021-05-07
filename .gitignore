@@ -15,7 +15,7 @@ game/tl
 log.txt
 traceback.txt
 project.json
+errors.txt
 
 *.rpa
 *.rpyc
-

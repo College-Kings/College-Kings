@@ -8,9 +8,8 @@
 
 label msrose_moving:
 
-    $ phoneexit = "phn_penelope6"
     $ contact_Penelope.addReply("Hey, how you holding up?", "phn_penelope6_a")
-    $ showphone = True
+    
 
     scene v8rose1 # TPP. MC sitting on his bed in his room (Wolves) and looking at his phone. Neutral expression, mouth closed. If the floor is visible, there should be a few books strewn randomly
     with Fade(0.75, 0.25, 0.75)
@@ -22,7 +21,7 @@ label msrose_moving:
         u "(I should talk to Penelope.)"
         jump phn_penelope6
     else:
-        $ showphone = False
+        
         jump phn_penelope6_done
 
 label phn_penelope6_a:

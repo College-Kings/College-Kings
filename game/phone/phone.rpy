@@ -28,15 +28,27 @@ init python:
 init offset = -1
 default applications = []
 
+screen phoneIcon():
+    zorder 100
+
+    imagebutton:
+        if any([application.notification for application in applications]):
+            idle "phone/images/phoneiconnot.webp"
+        else:
+            idle "phone/images/phoneicon.webp"
+        action Call("enterPhone")
+        align (0.999, 0.05)
+
+label enterPhone:
+    call screen phone
+
+
 screen phoneTemplate():
 
     add "images/phonescreen.webp"
 
     if renpy.get_screen("phone"):
-        textbutton "Exit Phone" action [Hide("tutorial"), Return()] style "phonebutton"
-
-    if phonetut and not renpy.get_screen("tutorial"):
-        use tutorial
+        textbutton "Exit Phone" action [Hide("tutorial"), Show("phoneIcon"), Return()] style "phonebutton"
 
     transclude
 
@@ -67,48 +79,7 @@ screen phone():
                             idle Transform(app.image, size=(100, 100))
                             if app.name == "Kiwii" and kiwii_firstTime:
                                 action Jump("kiwii_firstTime")
-                            elif app.name == "Messages" or app.name == "Kiwii":
-                                action [Function(renpy.retain_after_load), Show(app.screen)]
                             else:
-                                action Jump(app.screen)
+                                action [Function(renpy.retain_after_load), Show(app.screen)]
+                                
                         text app.name style "applabels"
-
-screen tutorial():
-
-        default phoneTuts = [
-            "This is the phone screen. You can access your phone whenever the phone icon in the top right corner appears.",
-            "Blue dots show notifications. New notifications are usually accommpanied by a buzz sound. Currently you have a new message waiting for you.",
-            "How you reply to messages matters just as much as any other decision.",
-            "Over the course of the game you will also unlock all kinds of new apps, such as statistics or social media platforms.",
-            "Lastly, if you ever need to get to the homescreen, just click the bottom border of the phone, or the phone icon.",
-        ]
-
-        add "images/tutback.webp":
-            yalign 0.5
-            xpos 1200
-
-        fixed:
-            xysize(650, 85)
-            pos(1200, 550)
-
-            hbox:
-                align(0.5, 0.5)
-                spacing 150
-
-                imagebutton:
-                    idle "images/whitearrowleft.webp"
-                    if phonetutpage > 1:
-                        action SetVariable("phonetutpage", phonetutpage -1)
-                    else:
-                        action SetVariable("phonetutpage", 5)
-
-                text "{} of {}".format(phonetutpage, len(phoneTuts)) style "tutorialtextnum" yalign(0.5)
-
-                imagebutton:
-                    idle "images/whitearrowright.webp"
-                    if phonetutpage < 5:
-                        action SetVariable("phonetutpage", phonetutpage +1)
-                    else:
-                        action SetVariable("phonetutpage", 1)
-
-        text phoneTuts[phonetutpage -1] style "tutorialtext"

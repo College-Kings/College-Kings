@@ -4,12 +4,11 @@
 # Time: Sunday Evening
 
 label sun_eve_room:
-    $ showphone = True
+    
 
     if joinwolves:
         scene v8sser1 # TPP. Show MC lying on his Wolves bed on his phone.
         with fade
-        $ phoneexit = "s19_phoneExit"
 
 
         if not laurenrs:
@@ -153,11 +152,9 @@ label sun_eve_room:
 
                 label s19_reply26:
                     $ contact_Emily.newMessage("Great! See you there!")
-                    $ phoneexit = "emily_arcade"
                     jump emily_arcade
 
                 label s19_reply27:
-                    $ phoneexit = "s19_phoneExit"
                     $ contact_Emily.newMessage("You sure you're not mad?")
                     $ contact_Emily.addReply("No, not at all. Just beat. I'd love to go some other time", "s19_reply28")
                     call screen messager(contact_Emily)
@@ -182,7 +179,6 @@ label sun_eve_room:
                 jump mon_morning_room
 
     else:
-        $ phoneexit = "s19_phoneExit"
 
         scene v8sser4 # TPP. Show MC sat on his Apes bed on his phone.
         with fade
@@ -328,11 +324,9 @@ label sun_eve_room:
                 # -If MC chooses to accept the date-
                 label s19_reply55:
                     $ contact_Emily.newMessage("Great! See you there!")
-                    $ phoneexit = "emily_arcade"
                     jump emily_arcade
 
                 label s19_reply56:
-                    $ phoneexit = "s19_phoneExit"
                     # -If MC chooses to decline the date-
                     $ contact_Emily.newMessage("You sure you're not mad?")
                     $ contact_Emily.addReply("No, not at all. Just beat. I'd love to go some other time", "s19_reply57")

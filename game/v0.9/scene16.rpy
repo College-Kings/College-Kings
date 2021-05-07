@@ -22,12 +22,10 @@ label v9_room_thur_night:
 
             u "(Ugh, now what)"
 
-            $ phoneexit = "s16_PhoneContinueW"
-
             $ contact_Emily.newMessage("I'm bored. Come hang out.")
             $ contact_Emily.addReply("Sure! Gimme a sec.", "s16_PhoneContinueW")
             $ contact_Emily.addReply("It's kinda late", "s16_Reply1")
-            $ showphone = True
+            
             call screen phone
 
             label s16_Reply1:
@@ -46,7 +44,7 @@ label v9_room_thur_night:
                     "(I should reply to Emily.)"
                     jump s16_PhoneContinueW
 
-            $ showphone = False
+            
 
             scene v9emi2 # TPP. Show MC getting up from his bed and leaving his Wolves room.
             with dissolve
@@ -72,12 +70,10 @@ label v9_room_thur_night:
 
             u "(Ugh, now what)"
 
-            $ phoneexit = "s16_PhoneContinueA"
-
             $ contact_Emily.newMessage("I'm bored. Come hang out.")
             $ contact_Emily.addReply("Sure! Gimme a sec.", "s16_PhoneContinueA")
             $ contact_Emily.addReply("It's kinda late", "s16_Reply2")
-            $ showphone = True
+            
             call screen phone
 
             label s16_Reply2:
@@ -90,7 +86,7 @@ label v9_room_thur_night:
                     "(I should reply to Emily.)"
                     jump s16_PhoneContinueA
 
-            $ showphone = False
+            
 
             scene v9emi5 # TPP. Show MC getting up from his bed and leaving his Apes room.
             with dissolve
@@ -779,14 +775,11 @@ label v9_thur_night_aft_em_w:
 
         u "(I need to get some sleep)"
 
-    $ contact_Lindsey.unlock()
-    $ phoneexit = "s16_ContinueW1"
-
     if hl_punch:
         $ contact_Lindsey.newMessage("How are you doing tonight?")
         $ contact_Lindsey.addReply("Better now that I'm talking to you", "s16_ReplyLinW1")
         $ contact_Lindsey.addReply("Super. You getting ready for bed?", "s16_ReplyLinW2")
-        $ showphone = True
+        
         call screen phone
 
         label s16_ReplyLinW1:
@@ -839,7 +832,7 @@ label v9_thur_night_aft_em_w:
         $ contact_Lindsey.newMessage("Hey, how you feeling?")
         $ contact_Lindsey.addReply("Better now that I'm talking to you", "s16_ReplyLinW8")
         $ contact_Lindsey.addReply("I'm ok, it's really not that bad", "s16_ReplyLinW9")
-        $ showphone = True
+        
         call screen phone
 
         label s16_ReplyLinW8:
@@ -894,7 +887,7 @@ label v9_thur_night_aft_em_w:
             "(I should reply to Lindsey.)"
             jump s16_ContinueW1
 
-        $ showphone = False
+        
 
     scene v9emi3a # TPP. Same camera as v9emi3, MC puts his phone down and smiles.
     with dissolve
@@ -924,14 +917,11 @@ label v9_thur_night_aft_em_a:
 
         u "(I need to get some sleep)"
 
-    $ contact_Lindsey.unlock()
-    $ phoneexit = "s16_ContinueA1"
-
     if hl_punch:
         $ contact_Lindsey.newMessage("How are you doing tonight?")
         $ contact_Lindsey.addReply("Better now that I'm talking to you", "s16_ReplyLinA1")
         $ contact_Lindsey.addReply("Super. You getting ready for bed?", "s16_ReplyLinA2")
-        $ showphone = True
+        
         call screen phone
 
         label s16_ReplyLinA1:
@@ -984,7 +974,7 @@ label v9_thur_night_aft_em_a:
         $ contact_Lindsey.newMessage("Hey, how you feeling?")
         $ contact_Lindsey.addReply("Better now that I'm talking to you", "s16_ReplyLinA8")
         $ contact_Lindsey.addReply("I'm ok, it's really not that bad", "s16_ReplyLinA9")
-        $ showphone = True
+        
         call screen phone
 
         label s16_ReplyLinA8:
@@ -1034,7 +1024,7 @@ label v9_thur_night_aft_em_a:
         if contact_Lindsey.messages[-1].replies:
             "(I should reply to Lindsey.)"
             jump s16_ContinueA1
-        $ showphone = False
+        
 
     scene v9emi6a # TPP. Same camera as v9emi6, MC puts his phone down and smiles.
     with dissolve

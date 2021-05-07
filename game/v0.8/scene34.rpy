@@ -33,8 +33,8 @@ if ending == "chloe":
     $ contact_Chloe.addReply("Hey, sexy :* Haven't seen you in a while", "phn_chloe12_a1")
 else:
     $ contact_Chloe.addReply("Hey, how you been?", "phn_chloe12_b1")
-$ phoneexit = "phn_chloe13"
-$ showphone = True
+    
+
 pause
 call screen messager(contact_Chloe)
 
@@ -44,7 +44,7 @@ if contact_Chloe.messages[-1].replies:
     jump phn_chloe13
 
 else:
-    $ showphone = False
+    
     jump phn_chloe13_done
 
 label phn_chloe12_a1:

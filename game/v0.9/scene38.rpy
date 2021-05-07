@@ -20,11 +20,9 @@ label v9_walk_li_txt:
 
     u "(Please no more drama)"
 
-    $ phoneexit = "s38_PhoneContinue"
-
     $ contact_Lindsey.newMessage("Hey Freshmeat! How's it hangin?")
     $ contact_Lindsey.addReply("Hey Linds ;)", "s38_LinReply1")
-    $ showphone = True
+    
     call screen phone
     
     label s38_LinReply1:
@@ -62,7 +60,7 @@ label v9_walk_li_txt:
             "(I should reply to Lindsey.)"
             jump s38_PhoneContinue
 
-    $ showphone = False
+    
     scene v9wlt2 # TPP. Show MC putting his phone away and continue to walk on.
     with dissolve
 

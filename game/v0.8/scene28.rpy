@@ -607,7 +607,7 @@ label dodged_pipe:
     $ renpy.end_replay()
 
     $ ip_man = True
-    if steam == False:
+    if not steam:
         image ip_man = "images/v08/achievements/ipman.webp"
         show ip_man:
             xpos 0

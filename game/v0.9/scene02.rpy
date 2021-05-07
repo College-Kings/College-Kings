@@ -234,8 +234,6 @@ scene v9apost7 # TPP (maybe from top). Show MC lying on his bed in his room, loo
 with dissolve
 pause 0.5
 
-$ showphone = True
-$ phoneexit = "v9_phn_ryan1"
 $ contact_Ryan.addReply("You here yet?", "v9_phn_ryan1_a1")
 call screen messager(contact_Ryan)
 
@@ -245,7 +243,7 @@ if contact_Ryan.messages[-1].replies:
     jump v9_phn_ryan1
 
 else:
-    $ showphone = False
+    
 
     
 

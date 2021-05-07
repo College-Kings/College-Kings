@@ -22,11 +22,9 @@ label v9_room_sat_aft:
 
         u "(I wonder who this is)"
 
-        $ phoneexit = "s35_PhoneContinueW"
-
         $ contact_Chloe.newMessage("Hey [name], what you up to?")
         $ contact_Chloe.addReply("Nothing much. Just relaxing. I'm kind of tired.", "s35_ChloeReplyW1")
-        $ showphone = True
+        
         call screen phone
 
         label s35_ChloeReplyW1:
@@ -166,7 +164,7 @@ label v9_room_sat_aft:
                 "(I should reply to Chloe.)"
                 jump s35_PhoneContinueW
 
-        $ showphone = False
+        
 
         scene v9rsa3a # TPP. Same camera as v9rsa3, MC puts his phone down and yawns.
         with dissolve
@@ -200,11 +198,9 @@ label v9_room_sat_aft:
 
         u "(I wonder who this is)"
 
-        $ phoneexit = "s35_PhoneContinueA"
-
         $ contact_Chloe.newMessage("Hey [name], what you up to?")
         $ contact_Chloe.addReply("Nothing much. Just relaxing. I'm kind of tired.", "s35_ChloeReplyA1")
-        $ showphone = True
+        
         call screen phone
 
         label s35_ChloeReplyA1:
@@ -344,7 +340,7 @@ label v9_room_sat_aft:
                 "(I should reply to Chloe.)"
                 jump s35_PhoneContinueA
 
-        $ showphone = False
+        
 
         scene v9rsa7a # TPP. Same camera as v9rsa3, MC puts his phone down and yawns.
         with dissolve

@@ -15,9 +15,6 @@ label v8_tues_evening:
         scene v8ster2 # TPP. Show MC still sat at his desk but now on his phone.
         with dissolve
 
-        $ showphone = True
-        $ phoneexit = "v8s37_phoneContinue1"
-
         if laurenrs:
             $ contact_Lauren.addReply("Still fine with drinking instead of making out with me?", "v8s37_phoneReply1")
             call screen messager(contact_Lauren)
@@ -64,7 +61,6 @@ label v8_tues_evening:
             if contact_Lauren.messages[-1].replies:
                 u "I should reply to Lauren"
                 jump v8s37_phoneContinue1
-            $ phoneexit = "v8s37_phoneContinue2"
 
         if rileyrs:
             $ contact_Riley.addReply("If your legs were lies, you could call me a liar. For I would be gladly spreading them.", "v8s37_phoneReply8")
@@ -107,7 +103,7 @@ label v8_tues_evening:
             if contact_Riley.messages[-1].replies:
                 u "I should reply to Riley"
                 jump v8s37_phoneContinue1
-            $ showphone = False
+            
 
         u "(I guess this is just not my day for studying. Great job, [name]!)"
 
@@ -126,9 +122,6 @@ label v8_tues_evening:
 
         scene v8ster5 # TPP. Show MC still sat at his desk but now on his phone.
         with dissolve
-
-        $ showphone = True
-        $ phoneexit = "v8s37_phoneContinue3"
 
         if laurenrs:
             $ contact_Lauren.addReply("Still fine with drinking instead of making out with me?", "v8s37_phoneReply14")
@@ -176,7 +169,6 @@ label v8_tues_evening:
             if contact_Lauren.messages[-1].replies:
                 u "I should reply to Lauren"
                 jump v8s37_phoneContinue3
-            $ phoneexit = "v8s37_phoneContinue4"
 
         if rileyrs:
             $ contact_Riley.addReply("If your legs were lies, you could call me a liar. For I would be gladly spreading them.", "v8s37_phoneReply21")
@@ -218,7 +210,7 @@ label v8_tues_evening:
             if contact_Riley.messages[-1].replies:
                 u "I should reply to my phone"
                 jump v8s37_phoneContinue2
-            $ showphone = False
+            
 
         u "(I guess this is just not my day for studying. Great job, [name]!)"
 

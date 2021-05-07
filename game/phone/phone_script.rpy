@@ -2,7 +2,7 @@ default msgApp = Application("Messages", "images/messagesicon.webp", "contactssc
 default statsApp = Application("Stats", "images/statsicon.webp", "stats", locked=True)
 default achApp = Application("Achievements", "images/achicon.webp", "achievements")
 default kiwiiApp = Application("Kiwii", "images/Phone/Kiwii/AppAssets/kiwii.webp", "kiwiiApp", locked=True)
-default fightApp = Application("Fight App", "images/statsicon.webp", "fightApp")
+default fightApp = Application("Fight App", "images/statsicon.webp", "fightApp", locked=True)
 default simplrApp = Application("Simplr", "images/statsicon.webp", "simplrApp")
 
 default contact_Emily = Contact("Emily", "emilyprofilepic", locked=False)

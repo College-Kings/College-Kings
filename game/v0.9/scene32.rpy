@@ -140,11 +140,9 @@ label v9_sat_skip_gym:
 
         u "(Oh, who's that?)"
 
-        $ phoneexit = "s32_PhoneContinue"
-
         $ contact_Riley.newMessage("Hey, what's up? Wanna come over?")
         $ contact_Riley.addReply("I really shouldn't. Big day tomorrow. Stressed out", "s32_RiReply1")
-        $ showphone = True
+        
         call screen phone
 
         label s32_RiReply1:

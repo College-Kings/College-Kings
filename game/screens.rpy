@@ -272,51 +272,6 @@ screen choice(items, time=3):
                         xalign 0.5
 
 
-    if realkcttut == 1:
-
-        image "images/tutback.webp":
-            ypos 100 #+300
-            xpos 1240 #+260
-
-        imagebutton:
-            idle "images/whitearrowleft.webp"
-            hover "images/whitearrowleft.webp"
-            ypos 720
-            xpos 1260
-            if kctpage > 1:
-                action SetVariable("kctpage", kctpage -1)
-            else:
-                action SetVariable("kctpage", 5)
-
-        imagebutton:
-            idle "images/whitearrowright.webp"
-            hover "images/whitearrowright.webp"
-            ypos 720
-            xpos 1740
-            if kctpage < 5:
-                action SetVariable("kctpage", kctpage +1)
-            else:
-                action SetVariable("kctpage", 1)
-
-        text "Tutorial" style "choicetextnum" ypos 530 xpos 1490
-
-        if kctpage == 1:
-            text "Your decisions strongly influence the way the story progresses and how other characters perceive you." style "choicetuttext"
-            text "1 of 5" style "choicetextnum"
-        if kctpage == 2:
-            text "With each choice you’ll either gain Bro, Boyfriend or Troublemaker points." style "choicetuttext"
-            text "2 of 5" style "choicetextnum"
-        if kctpage == 3:
-            text "Bros put the squad first, boyfriends show strong affinity towards a few selected individuals and troublemakers seek thrills and take risks." style "choicetuttext"
-            text "3 of 5" style "choicetextnum"
-        if kctpage == 4:
-            text "These points are then used to identify your Key Character Trait (KCT).  Each KCT will unlock different possibilities and choices, but you can only have one active at a time." style "choicetuttext"
-            text "4 of 5" style "choicetextnum"
-        if kctpage == 5:
-            text "You can read more about each individual KCT in the Stats app on your phone." style "choicetuttext"
-            text "5 of 5" style "choicetextnum"
-
-
     if influencetut == True:
 
         image "images/tutback.webp":
@@ -394,8 +349,6 @@ style choicetextnum is text:
     size 25
     color "#FFD166"
     text_align 0.5
-    xpos 1530
-    ypos 740
 
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
@@ -673,43 +626,6 @@ screen quick_menu():
     ## Ensure this appears on top of other screens.
     zorder 100
 
-    if fantasy == 1:
-        image "images/fantasyoverlay.webp"
-
-    if wton == True:
-
-        if wt == 1:
-
-            image "images/tutback.webp":
-                ypos -385
-                xpos 20
-            vbox xpos 30  ypos 40 spacing 20:
-
-                text "Walkthrough" style "wttextnum" xoffset 180
-                text "2. reply: +1 troublemaker (needed for Confident & Popular). Neither option cuts off Emily's path."  style "wttext" xoffset 10
-
-        if wt == 2:
-
-            image "images/tutback.webp":
-                ypos -385
-                xpos 20
-            vbox xpos 30  ypos 40 spacing 20:
-
-                text "Walkthrough" style "wttextnum" xoffset 180
-                text "Choice 1: +1 troublemaker (needed for Confident & Popular). Choice 2: +1 boyfriend (needed for Loyal & Confident)"  style "wttext" xoffset 10
-
-        if wt == 3:
-
-            image "images/tutback.webp":
-                ypos -385
-                xpos 20
-            vbox xpos 30  ypos 40 spacing 20:
-
-                text "Walkthrough" style "wttextnum" xoffset 180
-                text "Open your phone to get a detailed breakdown of the stats system in the stats app."  style "wttext" xoffset 10
-
-
-
     if quick_menu:
         if realmode == True:
             if ischoice == False:
@@ -745,58 +661,6 @@ screen quick_menu():
                     textbutton _("Q.Save") action QuickSave()
                     textbutton _("Q.Load") action QuickLoad()
                     textbutton _("Prefs") action ShowMenu('preferences')
-
-
-
-        if showphone: # Edited
-            imagebutton:
-                if any([application.notification for application in applications]):
-                    idle "images/phoneiconnot.webp"
-                else:
-                    idle "images/phoneicon.webp"
-                yalign 0.05
-                xalign 0.999
-                action Jump ("homescreen")
-
-
-
-        if freeroamtut == 1:
-
-            image "images/tutback.webp":
-                ypos 100 #+300
-                xpos 1240 #+260
-
-            imagebutton:
-                idle "images/whitearrowleft.webp"
-                hover "images/whitearrowleft.webp"
-                ypos 720
-                xpos 1260
-                if freeroamtutpage > 1:
-                    action SetVariable("freeroamtutpage", freeroamtutpage -1)
-                else:
-                    action SetVariable("freeroamtutpage", 3)
-
-            imagebutton:
-                idle "images/whitearrowright.webp"
-                hover "images/whitearrowright.webp"
-                ypos 720
-                xpos 1740
-                if freeroamtutpage < 3:
-                    action SetVariable("freeroamtutpage", freeroamtutpage +1)
-                else:
-                    action SetVariable("freeroamtutpage", 1)
-
-            text "Tutorial" style "choicetextnum" ypos 530 xpos 1490
-
-            if freeroamtutpage == 1:
-                text "At certain parts of the game, you’ll unlock free roam."  style "choicetuttext"
-                text "1 of 3" style "choicetextnum"
-            if freeroamtutpage == 2:
-                text "During free roam, you choose where you go and who you want to talk to next." style "choicetuttext"
-                text "2 of 3" style "choicetextnum"
-            if freeroamtutpage == 3:
-                text "You will also be able to use your phone and you might just find some hidden content." style "choicetuttext"
-                text "3 of 3" style "choicetextnum"
 
     if stance == 1:
 
@@ -1127,7 +991,7 @@ screen navigation():
             hover "images/discord2.webp"
             action OpenURL ("http://discord.collegekingsgame.com")
             xpos 1401
-            if steam == False:
+            if not steam:
                 ypos 417
             else:
                 ypos 147 #steam version
@@ -1150,7 +1014,7 @@ screen navigation():
         imagebutton:
             idle "images/scene2.webp"
             hover "images/scene1.webp"
-            action Jump ("scenegal")
+            action Show("spoiler")
             xpos 79
             ypos 346
 
@@ -1159,7 +1023,7 @@ screen navigation():
             hover "images/website3.webp"
             action OpenURL("http://collegekingsgame.com")
             xpos 1401
-            if steam == False:
+            if not steam:
                 ypos 687
             else:
                 ypos 592 #steam version
@@ -1642,7 +1506,7 @@ screen preferences():
 
         if realmode:
             textbutton _("On"):
-                action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("wton", False), SetVariable("showkct", False)]
+                action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False)]
                 text_color "#FFD166"
                 text_size 45
             textbutton _("Off"):
@@ -1650,7 +1514,7 @@ screen preferences():
                 text_size 45
         else:
             textbutton _("On"):
-                action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("wton", False), SetVariable("showkct", False)]
+                action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False)]
                 text_size 45
             textbutton _("Off"):
                 action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True)]
@@ -2415,374 +2279,6 @@ style slider_pref_slider:
     variant "small"
     xsize 900
 
-#######################
-screen stats():
-
-    use phoneTemplate:
-
-        add "images/stats.webp" at truecenter
-        if noexit == False:
-            textbutton "Exit Phone" action Jump("exitphone") style"phonebutton"
-
-        image "images/tutback.webp":
-            yalign 0.5
-            xpos 1200
-
-        image "images/KCTdiagram.webp":
-            yalign 0.5
-            xalign 0.05
-
-        imagebutton:
-            idle "images/whitearrowleft.webp"
-            hover "images/whitearrowleft.webp"
-            yalign 0.55
-            xpos 1220
-            if statspage > 1:
-                action SetVariable("statspage", statspage -1)
-            else:
-                action SetVariable("statspage", 3)
-
-        imagebutton:
-            idle "images/whitearrowright.webp"
-            hover "images/whitearrowright.webp"
-            yalign 0.55
-            xpos 1700
-            if statspage < 3:
-                action SetVariable("statspage", statspage +1)
-            else:
-                action SetVariable("statspage", 1)
-
-        text "KCT":
-            xalign 0.5
-            yalign 0.23
-            font "fonts/Freshman.ttf"
-            size 80
-            color "#000000"
-
-        text "This is your current Key Character Trait.\nIt's based on your choices & behavior.\nYou can only have one KCT at a time.":
-            xpos 250
-            ypos 150
-            font "fonts/OpenSans.ttf"
-            size 25
-            color "#ffffff"
-
-        image "images/statscircle.webp":
-            xpos 520
-            ypos 273
-
-        vbox:
-            if statspage == 1:
-                text "Popular" style "statstitle":
-                    color "#53d769"
-                    xpos 1417
-                text "Popular individuals are loved by the crowd and are often considered for important decisions. They prioritize their image and status over helping others." style "statstext"
-                text "1 of 3" style "statstextnum"
-
-            if statspage == 2:
-                text "Loyal" style "statstitle":
-                    color "#fecb2e"
-                    xpos 1442
-                text "Loyal individuals care about other people and gain trust easily. They are known to be responsible, but can be a bit of a buzzkill when it comes to doing crazy stuff." style "statstext"
-                text "2 of 3" style "statstextnum"
-
-            if statspage == 3:
-                text "Confident" style "statstitle":
-                    color "#fc3d39"
-                    xpos 1420
-                text "Confident individuals don’t rely on others to join them in their actions. They don’t crave their friends' approval, however they can be perceived as egotistical." style "statstext"
-                text "3 of 3" style "statstextnum"
-
-
-        vbox xpos 780 ypos 400 spacing 80:
-            text "1.":
-                font "fonts/Freshman.ttf"
-                color "#000000"
-                size 50
-            text "2.":
-                font "fonts/Freshman.ttf"
-                size 50
-                color "#000000"
-            text "3.":
-                font "fonts/Freshman.ttf"
-                size 50
-                color "#000000"
-
-        vbox xalign 0.5 yalign 0.5 spacing 80:
-            if [popular] >= [loyal] >= [confident]:
-                text "Popular":
-                    text_align 0.0
-                    color "#53d769"
-                    font "fonts/Freshman.ttf"
-                    size 50
-
-                text "Loyal":
-                    text_align 0.0
-                    color "#fecb2e"
-                    font "fonts/Freshman.ttf"
-                    size 50
-
-                text "Confident":
-                    text_align 0.0
-                    color "#fc3d39"
-                    font "fonts/Freshman.ttf"
-                    size 50
-
-            if [popular] >= [confident] > [loyal]:
-                vbox xpos 25 ypos 17 spacing 80:
-
-                    text "Popular":
-                        text_align 0.0
-                        color "#53d769"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-                    text "Confident":
-                        text_align 0.0
-                        color "#fc3d39"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-                    text "Loyal":
-                        text_align 0.0
-                        color "#fecb2e"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-            if [loyal] > [popular] >= [confident]:
-                vbox xpos 25 ypos 17 spacing 80:
-                    text "Loyal":
-                        text_align 0.0
-                        color "#fecb2e"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-                    text "Popular":
-                        text_align 0.0
-                        color "#53d769"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-                    text "Confident":
-                        text_align 0.0
-                        color "#fc3d39"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-            if [loyal] >= [confident] > [popular]:
-                vbox xpos 25 ypos 17 spacing 80:
-                    text "Loyal":
-                        text_align 0.0
-                        color "#fecb2e"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-                    text "Confident":
-                        text_align 0.0
-                        color "#fc3d39"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-                    text "Popular":
-                        text_align 0.0
-                        color "#53d769"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-
-
-            if [confident] > [loyal] > [popular]:
-                vbox xpos 25 ypos 17 spacing 80:
-
-                    text "Confident":
-                        text_align 0.0
-                        color "#fc3d39"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-                    text "Loyal":
-                        text_align 0.0
-                        color "#fecb2e"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-                    text "Popular":
-                        text_align 0.0
-                        color "#53d769"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-            if [confident] > [popular] >= [loyal]:
-                vbox xpos 25 ypos 17 spacing 80:
-
-                    text "Confident":
-                        text_align 0.0
-                        color "#fc3d39"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-                    text "Popular":
-                        text_align 0.0
-                        color "#53d769"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-                    text "Loyal":
-                        text_align 0.0
-                        color "#fecb2e"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-
-style statstitle is text:
-    font "fonts/Freshman.ttf"
-    size 35
-    text_align 0.5
-    ypos 380
-
-style statstext is text:
-    font "fonts/OpenSans.ttf"
-    size 25
-    color "#ffffff"
-    text_align 0.5
-    xpos 1260
-    ypos 400
-    xmaximum 550
-
-style statstextnum is text:
-    font "fonts/Freshman.ttf"
-    size 25
-    color "#ffffff"
-    text_align 0.5
-    xpos 1490
-    ypos 430
-
-
-screen freeroam1a():
-    add "images/s50.webp"
-    imagebutton:
-        yalign 0.12
-        xalign 0.86
-        idle "images/fr1riley.webp"
-        hover "images/fr1rileyhover.webp"
-
-        if fr1riley == 0:
-            action Jump ("fr1riley1")
-
-        else:
-            action Jump ("fr1riley2")
-    imagebutton:
-        yalign 0.195
-        xalign 0.335
-        idle "images/fr1elijah.webp"
-        hover "images/fr1elijahoverh.webp"
-
-        if fr1elijah == 0:
-            action Jump ("fr1elijah1")
-
-        else:
-            action Jump ("fr1elijah2")
-
-    imagebutton:
-        yalign 0.07
-        xalign 0.65
-        idle "images/fr1b.webp"
-        hover "images/fr1bhover.webp"
-        action Jump ("fr1b")
-
-screen freeroam1b():
-    add "images/s55.webp"
-    imagebutton:
-        yalign 0.5
-        xalign 0.685
-        idle "images/fr1chris.webp"
-        hover "images/fr1chrishover.webp"
-        action Jump ("fr1chris1")
-
-    imagebutton:
-        yalign 0.38
-        xalign 0.21
-        idle "images/fr1c.webp"
-        hover "images/fr1chover.webp"
-        action Jump ("fr1c")
-
-    imagebutton:
-        yalign 1.0
-        xalign 0.23
-        idle "images/backchris.webp"
-        hover "images/backchrishover.webp"
-        action Jump ("fr1a1")
-
-screen freeroam1b2():
-    add "images/s56.webp"
-    imagebutton:
-        yalign 0.53
-        xalign 0.74
-        idle "images/fr1nora.webp"
-        hover "images/fr1norahover.webp"
-        if fr1nora == 0:
-            action Jump ("fr1nora1")
-
-        else:
-            action Jump ("fr1nora2")
-
-    imagebutton:
-        yalign 0.38
-        xalign 0.21
-        idle "images/fr1c.webp"
-        hover "images/fr1chover.webp"
-        action Jump ("fr1c")
-
-    imagebutton:
-        yalign 1.0
-        xalign 0.23
-        idle "images/backchris.webp"
-        hover "images/backchrishover.webp"
-        action Jump ("fr1a1")
-
-
-screen freeroam1c():
-    add "images/s58.webp"
-    imagebutton:
-        yalign 0.025
-        xalign 0.26
-        idle "images/fr1dorm.webp"
-        hover "images/fr1dormhover.webp"
-        if fr1adam == 0:
-            action Jump ("fr1adam1")
-
-        else:
-            action Jump ("fr1adam2")
-
-    imagebutton:
-        yalign 0.05
-        xalign 0.82
-        idle "images/fr1yours.webp"
-        hover "images/fr1yourshover.webp"
-        action Jump ("fr1end")
-
-    imagebutton:
-        yalign 1.0
-        xalign 0.5
-        idle "images/dormback.webp"
-        hover "images/dormbackhover.webp"
-        action Jump ("fr1b2")
-
-screen endfreeroam():
-    add "images/endfr.webp"
-    text "Are you sure you want to end free roam?" style "endfree"
-    textbutton "Yes" style "endfr":
-        action Jump ("frcontinue")
-        text_align 0.5
-        xalign 0.57
-        yalign 0.58
-
-    textbutton "No" style "endfr":
-        action Jump ("frgoback")
-        text_align 0.5
-        xalign 0.43
-        yalign 0.58
-
-
 style endfr is button:
         xpos 1260
         ypos 400
@@ -2970,12 +2466,12 @@ screen endfreeroam2():
         yalign 0.58
 
 screen thx():
-    if steam == False:
+    if not steam:
         add "images/newthx.webp"
     else:
         add "images/newsteamend.webp" # steam
 
-    if steam == False:
+    if not steam:
         imagebutton:
             ypos 677
             xpos 394
@@ -3099,26 +2595,6 @@ screen ft3():
         textbutton "Start Fight":
             text_size 40
             action Jump ("letsgo")
-
-
-screen realmode():
-    image "images/REALLIFEMODE.webp"
-
-    imagebutton:
-        ypos 683
-        xpos 417
-        idle "images/rlmt.webp"
-        hover "images/enable.webp"
-        action Jump ("rme")
-
-    imagebutton:
-        ypos 683
-        xpos 1016
-        idle "images/rlmt.webp"
-        hover "images/disable.webp"
-        action Jump ("rmd")
-
-
 
 ######## POPUP
 
@@ -3920,322 +3396,6 @@ screen surebuy3p():
         text_align 0.5
         xalign 0.43
         yalign 0.58
-
-screen achievements():
-
-    use phoneTemplate:
-
-        add "images/stats.webp" at truecenter
-        if noexit == False:
-            textbutton "Exit Phone" action Jump("exitphone") style"phonebutton"
-
-        text "achievements":
-            color "#000000"
-            font "fonts/Freshman.ttf"
-            size 45
-            ypos 200
-            xalign 0.5
-
-        viewport:
-            mousewheel True
-            xanchor -780
-            yanchor -280
-            xmaximum 358
-            ymaximum 600
-
-    ########### copy paste messages here
-            vbox spacing 10:
-
-                if openwound == True:
-                    vbox spacing -10:
-                        textbutton "open wound" style "ach"
-
-                        textbutton "Tell off Emily" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "open wound" style "ach3"
-
-                if nohardfeelings == True:
-                    vbox spacing -10:
-                        textbutton "no hard feelings" style "ach"
-
-                        textbutton "Play nice with Emily" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "no hard feelings" style "ach3"
-
-
-                if keepitmoving == True:
-                    vbox spacing -10:
-                        textbutton "keep it moving" style "ach"
-
-                        textbutton "Hit on Nora" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "keep it moving" style "ach3"
-
-                if romeo == True:
-                    vbox spacing -10:
-                        textbutton "romeo" style "ach"
-
-                        textbutton "Kiss Lauren" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "romeo" style "ach3"
-
-                if bigmouth == True:
-                    vbox spacing -10:
-                        textbutton "big mouth" style "ach"
-
-                        textbutton "Threaten Cameron" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "big mouth" style "ach3"
-
-                if mixedfeelings == True:
-                    vbox spacing -10:
-                        textbutton "mixed feelings" style "ach"
-
-                        textbutton "Decline Lauren" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "mixed feelings" style "ach3"
-
-                if thenotorious == True:
-                    vbox spacing -10:
-                        textbutton "the notorious" style "ach"
-
-                        textbutton "Win your first fight" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "the notorious" style "ach3"
-
-                if anewbeginning == True:
-                    vbox spacing -10:
-                        textbutton "a new beginning" style "ach"
-
-                        textbutton "Lauren likes you" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "a new beginning" style "ach3"
-
-                if overit == True:
-                    vbox spacing -10:
-                        textbutton "over it" style "ach"
-
-                        textbutton "Let Benjamin make a move" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "over it" style "ach3"
-
-
-                if notnowmom == True:
-                    vbox spacing -10:
-                        textbutton "not now, mom" style "ach"
-
-                        textbutton "Decline Julia's call" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "not now, mom" style "ach3"
-
-                if lipsdontlie == True:
-                    vbox spacing -10:
-                        textbutton "lips don't lie" style "ach"
-
-                        textbutton "Kiss Riley in the Park" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "lips don't lie" style "ach3"
-
-                if truthhurts == True:
-                    vbox spacing -10:
-                        textbutton "truth hurts" style "ach"
-
-                        textbutton "Tell Lauren about Aubrey" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "truth hurts" style "ach3"
-
-                if relightthefire == True:
-                    vbox spacing -10:
-                        textbutton "relight the fire" style "ach"
-
-                        textbutton "Tell Julia about Emily" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "relight the fire" style "ach3"
-
-                if rematch == True:
-                    vbox spacing -10:
-                        textbutton "rematch" style "ach"
-
-                        textbutton "Buy Chloe the volleyball" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "rematch" style "ach3"
-
-                if keeneye == True:
-                    vbox spacing -10:
-                        textbutton "keen eye" style "ach"
-
-                        textbutton "Pick the muffin" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "keen eye" style "ach3"
-                if onthelow == True:
-                    vbox spacing -10:
-                        textbutton "on the low" style "ach"
-
-                        textbutton "Deny PDA with Lauren" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "on the low" style "ach3"
-
-                if petapublicenemy == True:
-                    vbox spacing -10:
-                        textbutton "peta public enemy" style "ach"
-
-                        textbutton "Kill dog as animal lover" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "peta public enemy" style "ach3"
-
-                if snitch == True:
-                    vbox spacing -10:
-                        textbutton "snitch" style "ach"
-
-                        textbutton "Tell the school" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "snitch" style "ach3"
-
-                if brosbeforehoes == True:
-                    vbox spacing -10:
-                        textbutton "bros before hoes" style "ach"
-
-                        textbutton "Help Imre" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "bros before hoes" style "ach3"
-
-                if monkeybusiness == True:
-                    vbox spacing -10:
-                        textbutton "monkey business" style "ach"
-
-                        textbutton "Join the Apes" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "monkey business" style "ach3"
-
-                if notmybusiness == True:
-                    vbox spacing -10:
-                        textbutton "not my business" style "ach"
-
-                        textbutton "Don't disturb Ms. Rose" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "not my business" style "ach3"
-
-                if reignition == True:
-                    vbox spacing -10:
-                        textbutton "reignition" style "ach"
-
-                        textbutton "Kiss Emily back" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "reignition" style "ach3"
-
-                if credulous == True:
-                    vbox spacing -10:
-                        textbutton "credulous" style "ach"
-
-                        textbutton "Trust Chloe" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "credulous" style "ach3"
-
-                if seemsfishy == True:
-                    vbox spacing -10:
-                        textbutton "seems fishy" style "ach"
-
-                        textbutton "Don't meet Grayson" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "seems fishy" style "ach3"
-
-                if strike == True:
-                    vbox spacing -10:
-                        textbutton "strike" style "ach"
-
-                        textbutton "Kiss Penelope" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "strike" style "ach3"
-
-                if get_a_room == True:
-                    vbox spacing -10:
-                        textbutton "get a room" style "ach"
-
-                        textbutton "Sleep With Amber at Josh's" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "get a room" style "ach3"      
-
-                if ip_man == True:
-                    vbox spacing -10:
-                        textbutton "ip man" style "ach"
-
-                        textbutton "Win The Alley Fight" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "ip man" style "ach3"      
-
-                if thick_and_thin == True:
-                    vbox spacing -10:
-                        textbutton "thick and thin" style "ach"
-
-                        textbutton "Help Penelope" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "thick and thin" style "ach3"                 
-
-                if up_for_more == True:
-                    vbox spacing -10:
-                        textbutton "up for more" style "ach"
-
-                        textbutton "Flirt With Chloe" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "up for more" style "ach3"                                                                       
 
 style ach is button:
     background "#d4af37"
@@ -5108,14 +4268,6 @@ style tutorialtext is text:
     xpos 1270
     ypos 400
     xmaximum 500
-
-style tutorialtextnum is text:
-    font "fonts/Freshman.ttf"
-    size 25
-    color "#FFD166"
-    text_align 0.5
-    xpos 1490
-    ypos 580
 
 style applabels is text:
     font "fonts/OpenSans.ttf"

@@ -1,37 +1,11 @@
 init python:
-    achievement.register("open_wound")
-    achievement.register("no_hard_feelings")
-    achievement.register("keep_it_moving")
-    achievement.register("romeo")
-    achievement.register("big_mouth")
-    achievement.register("mixed_feelings")
-    achievement.register("the_notorious")
-    achievement.register("a_new_beginning")
-    achievement.register("over_it")
-    achievement.register("not_now_mom")
-    achievement.register("lips_dont_lie")
-    achievement.register("truth_hurts")
-    achievement.register("relight_the_fire")
-    achievement.register("rematch")
-    achievement.register("keen_eye")
-    achievement.register("on_the_low")
-    achievement.register("peta_public_enemy")
-    achievement.register("snitch")
-    achievement.register("bros_before_hoes")
-    achievement.register("monkey_business")
-    achievement.register("not_my_business")
-    achievement.register("reignition")
-    achievement.register("credulous")
-    achievement.register("seems_fishy")
-    achievement.register("strike")
-    achievement.sync()
-
     persistent.ep = 10
 
 define steam = False
 define developer = True
 define config.steam_appid = 1463120
 
+define _game_menu_screen = "ingmenu"
 
 label splashscreen:
     # Get Animation/Transform List
@@ -61,81 +35,6 @@ label splashscreen:
 
     return
 
-label scenegal:
-    call screen spoiler
-
-label spoilergo:
-    call screen scenegal
-
-label rollbackfalse:
-    define config.rollback_enabled = False
-    call screen preferences
-
-label rollbacktrue:
-    define config.rollback_enabled = True
-    call screen preferences
-
-
-label exitphone:
-$ renpy.jump("".join([phoneexit]))
-
-label frcontinue:
-$ renpy.jump("".join([endfrlabel]))
-
-label frgoback:
-$ renpy.jump("".join([backfrlabel]))
-
-label achievements:
-    $ achievementsnot = 0
-    call screen achievements
-
-label homescreen:
-    #### fr1
-    if phoneexit == "phonec":
-        scene s50
-    if phoneexit == "phoned":
-        scene s55
-    if phoneexit == "phonedtwo":
-        scene s56
-    if phoneexit == "phonee":
-        scene s58
-    ###### fr2
-    if phoneexit == "phoneh":
-        scene s100
-    if phoneexit == "phonej":
-        scene s102
-    if phoneexit == "phonel":
-        scene s104
-    if phoneexit == "phonem":
-        scene s105
-    if phoneexit == "phonen":
-        scene s106
-
-    call screen phone
-
-label stats:
-$ statsnot = 0
-$ freeroamtut = 0
-call screen stats
-
-label larep1a:
-$ contact_Lauren.newMessage("Yeah sounds good :) Where do you wanna meet?")
-$ contact_Lauren.addReply("Just come to dorm 109 at 8", "larep2a")
-call screen messager(contact_Lauren)
-
-label larep2a:
-$ contact_Lauren.newMessage("Okay, will do")
-$ contact_Lauren.addReply("See you later, cutie", "larep3a")
-$ contact_Lauren.addReply("Cool", "larep3b")
-call screen messager(contact_Lauren)
-
-label larep3a:
-$ addPoint("bf", 1)
-call screen messager(contact_Lauren)
-
-label larep3b:
-call screen messager(contact_Lauren)
-
 label larep4a:
 $ larep4 = 1
 $ addPoint("bf", 1)
@@ -152,14 +51,6 @@ call screen messager(contact_Lauren)
 label larep5b:
 $ contact_Lauren.newMessage(":)")
 call screen messager(contact_Lauren)
-
-label jurep1a:
-$ addPoint("bf", 1)
-call screen messager(contact_Julia)
-
-label jurep1b:
-$ addPoint("bro", 1)
-call screen messager(contact_Julia)
 
 label ryrep1a:
 $ ryanreply = 1
@@ -205,7 +96,7 @@ call screen messager(contact_Lauren)
 label larep8b:
 $ larep8 = 2
 $ mixedfeelings = True
-if steam == False:
+if not steam:
     image mixedfeelings = "images/mixedfeelings.webp"
     show mixedfeelings:
         xpos 0
@@ -465,42 +356,23 @@ jump phoneaa
 
 
 # The game starts here.
-
 label start:
-    # $ addReplies()
-    $ _game_menu_screen = "ingmenu"
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.webp" or "bg room.webp") to the
-    # images directory to show it.
+    # Get Animation/Transform List
+    show nohardfeelings at achievementShow
+    $ achievementAtList = renpy.get_at_list("nohardfeelings")
+    hide nohardfeelings
 
-    #### Pre Questions
-
+    show screen phoneIcon
     call screen realmode
 
-label rme:
-    $ realmode = True
-    $ config.rollback_enabled = False
-    $ showkct = False
-    jump starta
-
-label rmd:
-    $ realmode = False
-    $ config.rollback_enabled = True
-    $ showkct = True
-    jump starta
-
-#Chapter 1
-label starta:
-
-    # Part 0: Dream
+label v1:
     play music "music/msexy.mp3"
-    $ fantasy = True
+    show screen fantasyOverlay
+
     scene s0a
     with dissolve
 
     em "I know what I did was bad..."
-
-
 
     em "But I'll do anything to make it up to you."
 
@@ -508,11 +380,10 @@ label starta:
     with dissolve
 
     em "Anything."
-    $ fantasy = False
-    #Part 1: Meeting Julia
+
+    hide screen fantasyOverlay
     stop music fadeout 2.0
-    #$ renpy.random.shuffle (playlist1)
-    #$ renpy.music.queue (playlist1, fadein=2)
+
     scene s1
     with Fade(1, 0, 1)
 
@@ -530,16 +401,16 @@ label starta:
 
     scene s2
     with dissolve
-    ju "Breakfast is ready!"
 
+    ju "Breakfast is ready!"
 
     scene s1a
     with dissolve
+
     u "Mhmm... I'll be right down."
     u "(What am I doing dreaming about Emily?!)"
 
     scene s3
-
     show s3a
     with Fade(1, 0, 1)
 
@@ -618,52 +489,50 @@ label starta:
 
     scene s11
     with Fade(1, 0, 1)
+    
     u "(I better not lose this bag, Julia loves it.)"
 
     play sound "sounds/vibrate.mp3"
 
     u "(Huh?)"
-
-    $ wt = 1
     
+    # Emily's messages
     python:
-        def v1s1Reply1():
-            nohardfeelings = True
-            if steam == False:
-                renpy.show("nohardfeelings", at_list=achievementAtList)
-            else:
-                achievement.grant("no_hard_feelings")
-                achievement.sync()
+    #     def v1_reply1():
+    #         nohardfeelings = True
+    #         if not steam:
+    #             renpy.show("nohardfeelings", at_list=achievementAtList)
+    #         else:
+    #             achievement.grant("no_hard_feelings")
+    #             achievement.sync()
 
-            contact_Emily.newMessage("Cool :)")
+    #         contact_Emily.newMessage("Cool :)")
 
-        def v1s2Reply2():
-            openwound = True
-            if steam == False:
-                renpy.show("openwound", at_list=achievementAtList)
-            else:
-                achievement.grant("open_wound")
-                achievement.sync()
+    #     def v1_reply2():
+    #         openwound = True
+    #         if not steam:
+    #             renpy.show("openwound", at_list=achievementAtList)
+    #         else:
+    #             achievement.grant("open_wound")
+    #             achievement.sync()
 
-            addPoint("tm", 1)
-            contact_Emily.newMessage("Ugh :/")
+    #         addPoint("tm", 1)
+    #         contact_Emily.newMessage("Ugh :/")
 
         contact_Emily.newMessage("Hey...\nI know we haven’t talked much after we broke up, but I just wanted to let you know that I didn’t get into Stanford, so I’ll be going to San Vallejo as well.\nGuess I’ll see you there. :)", queue=False)
-        contact_Emily.addReply("Yeah... I’ll see you there.", v1s1Reply1)
-        contact_Emily.addReply("You cheated on me.\nGo to hell!", v1s2Reply2)
-        showphone = True
+        # contact_Emily.addReply("Yeah... I’ll see you there.", v1_reply1)
+        # contact_Emily.addReply("You cheated on me.\nGo to hell!", v1_reply2)
 
+    show screen phoneTutorial
     call screen phone
-
-
-label phonea:
-    $ wt = 0
-    $ phonetut = 0
-    $ showphone = False
+    hide screen phoneTutorial
+    
     stop music fadeout 2.0
     scene s11
     with dissolve
+
     u "(Fuck, I really don't want to see her again after what happened.\nHopefully I can avoid her as much as possible.)"
+
     scene carback
     show s14
     with fade
@@ -672,79 +541,71 @@ label phonea:
     ju "You know, when I was in college, there were these fraternities and sororities that everyone wanted to join."
 
     ju "I always thought they were stupid. Binge drinking, idiotic challenges and fighting..."
+
     hide s14
     show s14a
     with dissolve
+
     u "Mhm...."
+
     hide s14a
     show s14
     with dissolve
-    ju "You're not planning on joining one of those, are you?"
-    $ wt = 2
-    menu:
 
+    ju "You're not planning on joining one of those, are you?"
+
+    show screen kctTutorial
+    menu:
         "Could be fun":
-            $ wt = 0
-            jump aa_a
+            hide s14
+            show s14a
+            with dissolve
+            $ addPoint("tm", 1)
+
+            u "I don't know... it might be fun."
 
         "No":
-            $ wt = 0
-            jump aa_b
+            hide s14
+            show s14a
+            with dissolve
+            $ addPoint("bf", 1)
 
-    label aa_a:
-        hide s14
-        show s14a
-        with dissolve
-        $ addPoint("tm", 1)
+            u "No, I don't think so, Julia."
 
-        u "I don't know... it might be fun."
-
-        jump aa_da
-
-    label aa_b:
-        hide s14
-        show s14a
-        with dissolve
-        $ addPoint("bf", 1)
-
-        u "No, I don't think so, Julia."
-
-        jump aa_db
-
-    label aa_da:
-    label aa_db:
+    hide screen kctTutorial
 
     hide s14a
     show s15
     with dissolve
-    $ wt = 3
-    $ phoneexit = "phoneb"
-    $ showphone = True
-    # $ kcttut = 0
+
     $ statsApp.unlock()
-    $ realkcttut = 0
+
     play sound "sounds/vibrate.mp3"
-    $ statsnot = 1
+
     ju "Fraternities can be dangerous, honey."
-    label phoneb:
-    $ wt = 0
-    $ showphone = False
+    
     hide s15
     show s14
     with dissolve
+
     ju "My boyfriend in college almost got suspended because he had to steal one of the lecturer's underwear."
+
     hide s14
     show s14a
     with dissolve
+
     u "*Chuckles*"
+
     hide s14a
     show s14
     with dissolve
+
     ju "Believe me, it's not as fun as it sounds."
 
     hide s14
     show s14a
     with dissolve
+
     u "Relax, Julia. Over the last couple years colleges have become a lot stricter."
 
     u "I doubt stuff like that happens anymore."
@@ -752,51 +613,55 @@ label phonea:
     hide s14a
     show s14b
     with dissolve
+
     ju "Well, that would be a relief."
 
     hide s14b
     show s16
     with dissolve
+
     ju "Anyways..."
 
     hide s16
     show s14b
     with dissolve
+
     ju "Sophia told me that Josh is also going to San Vallejo."
 
     hide s14b
     show s14c
     with dissolve
+
     u "You hang out with Josh's mom?"
 
     hide s14c
     show s15
     with dissolve
+
     ju "We go to the same nail salon."
-    image collegepan = Movie(play="images/collegepan.webm")
 
     hide s15
     show s14a
     with dissolve
+
     u "Whatever... me and Josh haven't really talked much lately."
 
     u "(I wonder if he's still dealing...)"
+
     stop music fadeout 2.0
+
     car "*stops*"
-#########Intro
+
     scene homepage2
     with Fade(1, 0, 1)
+
     ju "Well, this is it. San Vallejo College."
-
-
-    image intro = Movie(play="images/intro.webm", start_image="images/s1.webp", image="images/s1.webp", loop = False)
-
 
     show intro
     with flash
+
     " "
 
-################Intro
     scene s17a
     with Fade(1, 0, 1)
 
@@ -813,6 +678,7 @@ label phonea:
 
     scene s18
     with dissolve
+
     " "
 
     scene s19
@@ -837,9 +703,6 @@ label phonea:
 
     u "I won't, I'll see you soon."
 
-
-#Part 3:
-
     scene s25
     with Fade(1, 0, 1)
 
@@ -857,7 +720,6 @@ label phonea:
     ma "Dude, that's my sister you're talking about!"
 
     stop music fadeout 2.0
-
 
     scene s28
     with hpunch
@@ -885,6 +747,7 @@ label phonea:
     with dissolve
 
     aut "Leave him alone Cameron."
+
     aut "Otherwise I'll post the pics and I'm sure you don't want that."
 
     scene s32
@@ -896,12 +759,11 @@ label phonea:
 
     stop music fadeout 2.0
 
-    $ wt = 4
-
     scene s33
     with dissolve
 
     aut "You okay?"
+
     scene s33a
     with dissolve
 
@@ -915,6 +777,7 @@ label phonea:
     with dissolve
 
     aut "I'm Autumn."
+
     aut "You're new here right?"
 
     scene s33d
@@ -922,76 +785,57 @@ label phonea:
 
     u "Yeah, is it that obvious?"
 
-
     scene s33c
     with dissolve
+
     aut "It's just that most people would avoid bumping into Cameron at any cost."
 
-
     menu:
-
         "Flirt":
+            scene s33d
+            with dissolve
 
-            jump ad_a
+            u "It's not as bad if you get to meet a pretty girl afterwards."
+
+            scene s33
+            with dissolve
+
+            aut "Uhm..."
+
+            scene s33d
+            with dissolve
+
+            u "(Way to make her uncomfortable, Casanova.)"
+
+            scene s33c
+            with dissolve
+
+            aut "Anyways, I gotta go. Nice to meet you."
 
         "Inquire":
+            scene s33d
+            with dissolve
 
-            jump ad_b
+            u "Why is that?"
 
-    label ad_a:
-        scene s33d
-        with dissolve
+            scene s36
+            with dissolve
 
-        u "It's not as bad if you get to meet a pretty girl afterwards."
+            aut "He's uhm-"
 
-        scene s33
-        with dissolve
+            aut "Let's just say he doesn't have the best of tempers."
+            scene s33c
+            with dissolve
+            aut "Anyways, I gotta go. Nice to meet you."
 
-        aut "Uhm..."
+    scene s39
+    with dissolve
 
-        scene s33d
-        with dissolve
+    u "(Damn... she was really cute. Hopefully I'll get to see her again.)"
 
-        u "(Way to make her uncomfortable, Casanova.)"
+    u "(I should probably go to my induction class right now.)"
 
-        scene s33c
-        with dissolve
-
-        aut "Anyways, I gotta go. Nice to meet you."
-
-        jump ad_da
-
-    label ad_b:
-        scene s33d
-        with dissolve
-
-        u "Why is that?"
-
-        scene s36
-        with dissolve
-
-        aut "He's uhm-"
-
-        aut "Let's just say he doesn't have the best of tempers."
-        scene s33c
-        with dissolve
-        aut "Anyways, I gotta go. Nice to meet you."
-
-        jump ad_db
-
-    label ad_da:
-    label ad_db:
-
-        scene s39
-        with dissolve
-
-        u "(Damn... she was really cute. Hopefully I'll get to see her again.)"
-
-        u "(I should probably go to my induction class right now.)"
-
-        stop music fadeout 2.0
-
-###Part 4
+    stop music fadeout 2.0
 
     scene s40
     with Fade(1, 0, 1) #you're late and everyone's looking at you rose bend over laptop
@@ -1012,7 +856,6 @@ label phonea:
 
     scene s42
     with fade
-#you next to ryan"
 
     ry "Nice job being late on your first day, man."
 
@@ -1124,37 +967,26 @@ label phonea:
     with fade
     ro "It seems that Elijah here fixed the laptop and we can start the induction. Thank you, Elijah."
 
-
     menu:
-
-
         "Make fun of Elijah":
+            scene s46a
+            with dissolve
 
-            jump ag_a
+            u "Wow Elijah, way to start the fun."
+
+            $ funofelijah = True
+            $ addPoint("tm", 1)
+
+            scene s46b
+            with dissolve
+            el "..."
 
         "Stay quiet":
-
-            jump ag_b
-
-    label ag_a:
-        scene s46a
-        with dissolve
-        u "Wow Elijah, way to start the fun."
-        $ funofelijah = 1
-        $ addPoint("tm", 1)
-
-        scene s46b
-        with dissolve
-        el "..."
-
-        jump ag_da
-
-    label ag_b:
-    $ funofelijah = 0
-    label ag_da:
+            pass
 
     scene s84a
     with dissolve
+
     ro "Here at San Vallejo College most courses start their first year with the same three classes: Biology, Economics and History."
 
     ro "Alcohol, smoking and any form of violence whilst on College grounds is strictly forbidden."
@@ -1223,355 +1055,303 @@ label phonea:
     la "Sorry... I overheard you guys talking and I just wanted to say that... this fighting thing? It's really stupid."
 
     menu:
-
         "Agree":
-
             $ addPoint("bf", 1)
-            jump af_a
-
-        "Disagree":
-
-            $ addPoint("tm", 1)
-            jump af_b
-
-    label af_a:
-        scene s50a
-        with dissolve
-
-        u "It really is."
-
-        u "Does that mean not all girls here are into the fighting?"
-        scene s52
-        with dissolve
-        la "Not at all, pretty much any girl that's part of the Deer hates it."
-
-        jump af_da
-
-    label af_b:
-        scene s50a
-        with dissolve
-
-        u "I mean it is kinda cool, I just wish I knew how to fight."
-
-        scene s51
-        with dissolve
-
-        la "It's not cool, it's dangerous!"
-
-        la "You know, there's a bunch of girls that would rather date a guy that doesn't fight."
-
-        scene s51a
-        with dissolve
-        u "Really?"
-
-        scene s49
-        with dissolve
-        la "Yeah, most of the Deer for example."
-
-        jump af_db
-
-    label af_da:
-    label af_db:
-
-
-        scene s51a
-        with dissolve
-        u "The Deer?"
-
-        scene s52
-        with dissolve
-        la "They're one of the two sororities at San Vallejo. My sister Autumn is their president, so I know most of them quite well."
-
-        scene s53a
-        with dissolve
-        u "Autumn? I've actually met her just before this class."
-
-        scene s52
-        with dissolve
-        la "You did? I hope she didn't weird you out. She can be a bit much."
-
-        scene s51a
-        with dissolve
-        u "Really? She was super nice to me."
-
-        scene s49
-        with dissolve
-        la "Well... she's really passionate about political stuff and that can be a bit annoying haha."
-
-        menu:
-
-
-            "Don't defend Autumn":
-
-                jump ah_a
-
-            "Defend Autumn":
-
-                $ addPoint("bf", 1)
-                jump ah_b
-
-        label ah_a:
-            scene s50a
-            with dissolve
-            u "Yeah, I get that."
-
-            scene s54
-            with dissolve
-            la "I bet you think she's cute, don't you?"
-
-
-
-            menu:
-                "You're cuter":
-
-                    jump aj_a
-
-                "Yeah, kinda":
-
-                    $ addPoint("bf", 1)
-                    jump aj_b
-
-
-
-        label ah_b:
-            scene s50a
-            with dissolve
-            u "I think that's pretty cool."
-
-            scene s54
-            with dissolve
-            la "Ohhh... so you think she's cute?"
-
-
-            menu:
-                "You're cuter":
-
-                    jump aj_a
-
-                "Yeah, kinda":
-
-                    $ addPoint("bf", 1)
-                    jump aj_b
-
-            label aj_a:
-                scene s53a
-                with dissolve
-
-                u "I think you're cuter."
-
-                scene s54
-                with dissolve
-                la "Haha, prince charming huh?"
-
-                scene s53a
-                with dissolve
-
-                u "Only for the right girl."
-
-                jump aj_da
-
-            label aj_b:
-                scene s53a
-                with dissolve
-                u "Yeah, she's kinda cute."
-
-                scene s49
-                with dissolve
-
-                la "She's always been the pretty one."
-                scene s53a
-                with dissolve
-                u "Oh cmon, you're just as pretty."
-
-                scene s54
-                with dissolve
-
-                la "Smooth, haha."
-
-                jump aj_db
-
-            label aj_da:
-            label aj_db:
-
-            scene s53a
-            with dissolve
-
-            u "We should hang out sometime, what's your number?"
-
-            scene s54
-            with dissolve
-
-            la "Wow, you don't even know my name and you're gonna ask for my number?"
 
             scene s50a
             with dissolve
 
-            u "Uhhhh..."
+            u "It really is."
 
-            scene s49
-            with dissolve
-
-            la "I'm just kidding, I'm Lauren. I'll put my number into your phone."
-            scene s53a
-            with dissolve
-
-            u "Haha phew... I'm [name] by the way."
-
-            u "I'll text you later then, Lauren."
+            u "Does that mean not all girls here are into the fighting?"
 
             scene s52
             with dissolve
 
-            la "Sounds good. I'll see you later."
+            la "Not at all, pretty much any girl that's part of the Deer hates it."
 
-            # $ lauren_number = 1 - DELETE
-            $ contact_Lauren.unlock()
+        "Disagree":
+            $ addPoint("tm", 1)
+
+            scene s50a
+            with dissolve
+
+            u "I mean it is kinda cool, I just wish I knew how to fight."
+
+            scene s51
+            with dissolve
+
+            la "It's not cool, it's dangerous!"
+
+            la "You know, there's a bunch of girls that would rather date a guy that doesn't fight."
+
+            scene s51a
+            with dissolve
+            u "Really?"
+
+            scene s49
+            with dissolve
+            la "Yeah, most of the Deer for example."
+
+    scene s51a
+    with dissolve
+    u "The Deer?"
+
+    scene s52
+    with dissolve
+    la "They're one of the two sororities at San Vallejo. My sister Autumn is their president, so I know most of them quite well."
+
+    scene s53a
+    with dissolve
+    u "Autumn? I've actually met her just before this class."
+
+    scene s52
+    with dissolve
+    la "You did? I hope she didn't weird you out. She can be a bit much."
+
+    scene s51a
+    with dissolve
+    u "Really? She was super nice to me."
+
+    scene s49
+    with dissolve
+    la "Well... she's really passionate about political stuff and that can be a bit annoying haha."
+
+    menu:
+        "Don't defend Autumn":
+            scene s50a
+            with dissolve
+
+            u "Yeah, I get that."
+
+            scene s54
+            with dissolve
+
+            la "I bet you think she's cute, don't you?"
+
+        "Defend Autumn":
+            $ addPoint("bf", 1)
+
+            scene s50a
+            with dissolve
+
+            u "I think that's pretty cool."
+
+            scene s54
+            with dissolve
+
+            la "Ohhh... so you think she's cute?"
+
+    menu:
+        "You're cuter":
+            scene s53a
+            with dissolve
+
+            u "I think you're cuter."
+
+            scene s54
+            with dissolve
+            la "Haha, prince charming huh?"
+
+            scene s53a
+            with dissolve
+
+            u "Only for the right girl."
+
+        "Yeah, kinda":
+            $ addPoint("bf", 1)
+
+            scene s53a
+            with dissolve
+            u "Yeah, she's kinda cute."
+
+            scene s49
+            with dissolve
+
+            la "She's always been the pretty one."
+            scene s53a
+            with dissolve
+            u "Oh cmon, you're just as pretty."
+
+            scene s54
+            with dissolve
+
+            la "Smooth, haha."
+
+    scene s53a
+    with dissolve
+
+    u "We should hang out sometime, what's your number?"
+
+    scene s54
+    with dissolve
+
+    la "Wow, you don't even know my name and you're gonna ask for my number?"
+
+    scene s50a
+    with dissolve
+
+    u "Uhhhh..."
+
+    scene s49
+    with dissolve
+
+    la "I'm just kidding, I'm Lauren. I'll put my number into your phone."
+    scene s53a
+    with dissolve
+
+    u "Haha phew... I'm [name] by the way."
+
+    u "I'll text you later then, Lauren."
+
+    scene s52
+    with dissolve
+
+    la "Sounds good. I'll see you later."
 
     stop music fadeout 2.0
 
 # Part 5 Free roam in the halls
-    scene s50 #hallway 1 without freeroam
+    scene s50 # hallway 1 without freeroam
     with Fade(1, 0, 1)
 
     u "(I should probably go to my new dorm, but I might as well explore for a bit beforehand.)"
 
     play music "music/mchill2.mp3"
 
-    scene s50 #freeroam
+    scene s50 # freeroam
     with dissolve
-    $ freeroamtut = 1
-    $ phonetut = 0
-    $ showphone = True
-    $ phoneexit = "phonec"
 
-    $ contact_Julia.unlock()
+    # python:
+    #     def v1_reply3():
+    #         addPoint("bf", 1)
 
-    $ contact_Julia.newMessage("Hey honey,\nenjoy your time in college.\nStay safe and don't forget to visit me.\nLove you")
-    $ contact_Julia.addReply("Love you too.", "jurep1a")
-    $ contact_Julia.addReply("Thanks, Julia :)", "jurep1b")
+    #     def v1_reply4():
+    #         addPoint("bro", 1)
+
+    $ contact_Julia.newMessage("Hey honey,\nenjoy your time in college.\nStay safe and don't forget to visit me.\nLove you", queue=False)
+    # $ contact_Julia.addReply("Love you too.", v1_reply2)
+    # $ contact_Julia.addReply("Thanks, Julia :)", v1_reply3)
 
     play sound "sounds/vibrate.mp3"
-    call screen freeroam1a
+    
+    # Enter free roam
+    show screen freeRoamTutorial
+    call screen v1_freeRoam1_1
     with dissolve
 
-
-    label fr1a1:
-    label fr1a2:
-        call screen freeroam1a
-
-    label fr1riley1:
-        $ talktori = 1
-        $ showphone = False
-        $ freeroamtut = 0
+    label v1_freeRoam1_riley:
+        $ v1_talkToRiley = True
+        
         scene s50ri
+
         u "Hey, you were the girl sitting next to Elijah!"
+
         scene s50ri1
         with dissolve
+
         ri "Haha, you caught me. That's what I'm known for."
+
         scene s50ri1a
         with dissolve
+
         u "I'm [name]."
+
         scene s50ri1
         with dissolve
+
         ri "I'm Riley."
+
         scene s50ri2
         with dissolve
+
         ri "So what did you think of Ms. Rose?"
 
         menu:
             "She's hot.":
-
                 $ addPoint("bro", 1)
-                jump ak_a
+
+                scene s50ri2a
+                with dissolve
+
+                u "Oh, she's super hot."
+
+                scene s50ri1
+                with dissolve
+
+                ri "Haha, I meant her teaching style."
+
+                scene s50ri1a
+                with dissolve
+
+                u "Ooops... I mean, yeah me too."
+
+                scene s50ri4
+                with dissolve
+
+                ri "You didn't pay much attention did you?"
+
+                scene s50ri2a
+                with dissolve
+
+                u "To be fair, the induction talk was reeeally boring."
+
+                scene s50ri1
+                with dissolve
+
+                ri "Trueee, I wish I had sat further back. I had to look like I was engaged the entire time, or I would have left a bad first impression."
+
+                scene s50ri1a
+                with dissolve
+                u "Next time, just sit with me. Sitting in the last row is where it's at."
+
+                scene s50ri4
+                with dissolve
+
+                ri "Hmmm.. I'll think about it."
 
             "She seems nice.":
+                scene s50ri2a
+                with dissolve
 
-                jump ak_b
+                u "I guess she seems pretty nice. I didn't really pay much attention haha."
 
-        label ak_a:
-            scene s50ri2a
-            with dissolve
+                scene s50ri1
+                with dissolve
 
-            u "Oh, she's super hot."
+                ri "Yeah, I wish I had sat further back. I had to look like I was engaged the entire time, or I would have left a bad first impression."
 
-            scene s50ri1
-            with dissolve
+                scene s50ri1a
+                with dissolve
 
-            ri "Haha, I meant her teaching style."
+                u "Next time, just sit with me. Sitting in the last row is where it's at."
 
-            scene s50ri1a
-            with dissolve
+                scene s50ri4
+                with dissolve
 
-            u "Ooops... I mean, yeah me too."
+                ri "Hmmm.. I'll think about it."
 
-            scene s50ri4
-            with dissolve
+        $ v1_freeRoam1_riley = True
+        call screen v1_freeRoam1_1
+        with dissolve
 
-            ri "You didn't pay much attention did you?"
-
-            scene s50ri2a
-            with dissolve
-
-            u "To be fair, the induction talk was reeeally boring."
-
-            scene s50ri1
-            with dissolve
-
-            ri "Trueee, I wish I had sat further back. I had to look like I was engaged the entire time, or I would have left a bad first impression."
-
-            scene s50ri1a
-            with dissolve
-            u "Next time, just sit with me. Sitting in the last row is where it's at."
-
-            scene s50ri4
-            with dissolve
-
-            ri "Hmmm.. I'll think about it."
-            $ fr1riley = 1
-            $ showphone = True
-            call screen freeroam1a
-            with dissolve
-
-            label ak_b:
-            scene s50ri2a
-            with dissolve
-            u "I guess she seems pretty nice. I didn't really pay much attention haha."
-
-            scene s50ri1
-            with dissolve
-
-            ri "Yeah, I wish I had sat further back. I had to look like I was engaged the entire time, or I would have left a bad first impression."
-
-            scene s50ri1a
-            with dissolve
-            u "Next time, just sit with me. Sitting in the last row is where it's at."
-
-            scene s50ri4
-            with dissolve
-
-            ri "Hmmm.. I'll think about it."
-            $ fr1riley = 1
-            $ showphone = True
-            call screen freeroam1a
-            with dissolve
-
-    label fr1riley2:
-        $ showphone = False
+    label v1_freeRoam1_riley2:
         scene s50ri1a
+
         u "You should really consider sitting in the last row."
+
         scene s50ri1
         with dissolve
-        ri "Yeah.. you're probably right haha."
-        $ showphone = True
-        call screen freeroam1a
 
-    label fr1elijah1:
-        $ freeroamtut = 0
-        $ showphone = False
+        ri "Yeah.. you're probably right haha."
+        
+        call screen v1_freeRoam1_1
+
+    label v1_freeRoam1_elijah:
         scene s50el
         u "Hey, you're Elijah right?"
 
-        if funofelijah == 1:
+        if funofelijah:
             scene s50el1
             with dissolve
 
@@ -1593,10 +1373,8 @@ label phonea:
             el "Rush party? Please."
 
             el "I got invited to the Frogs' Chess Night."
-            jump elcontinue1
 
         else:
-
             scene s50el1
             with dissolve
 
@@ -1614,94 +1392,63 @@ label phonea:
 
             el "I'll be going to the Frogs' Chess Night."
 
-            jump elcontinue2
+        scene s50el2a
+        with dissolve
 
-            label elcontinue1:
-            label elcontinue2:
+        u "More animal names...? Go on, tell me about the Frogs..."
+
+        scene s50el2
+        with dissolve
+
+        el "The Frogs are the elite fraternity at San Vallejo."
+        el "Only the brightest of minds are allowed to join."
+
+        menu:
+            "So... the nerds?":
+                $ addPoint("tm", 1)
+
                 scene s50el2a
                 with dissolve
 
-                u "More animal names...? Go on, tell me about the Frogs..."
+                u "Sooo... the nerds?"
 
-                scene s50el2
+                scene s50el1
                 with dissolve
 
-                el "The Frogs are the elite fraternity at San Vallejo."
-                el "Only the brightest of minds are allowed to join."
+                el "How dare you defy the frogs like that?!"
 
-                menu:
+                el "Just get out of my face."
 
-                    "So... the nerds?":
+            "That's cool.":
+                $ addPoint("bf", 1)
 
-                        $ addPoint("tm", 1)
-                        jump al_a
+                scene s50el2a
+                with dissolve
+                u "I think that's pretty cool."
 
-                    "That's cool.":
+                scene s50el1
+                with dissolve
 
-                        $ addPoint("bf", 1)
-                        jump al_b
+                el "It's not \"cool\"! It's prestigious and an incredible opportunity."
 
-                label al_a:
-                    scene s50el2a
-                    with dissolve
+                el "Now go and bother someone else."
+                
+        $ v1_freeRoam1_elijah = True
 
-                    u "Sooo... the nerds?"
+        call screen v1_freeRoam1_1
 
-                    scene s50el1
-                    with dissolve
-
-                    el "How dare you defy the frogs like that?!"
-
-                    el "Just get out of my face."
-                    $ showphone = True
-                    $ fr1elijah = 1
-
-                    call screen freeroam1a
-
-                label al_b:
-                    scene s50el2a
-                    with dissolve
-                    u "I think that's pretty cool."
-
-                    scene s50el1
-                    with dissolve
-
-                    el "It's not \"cool\"! It's prestigious and an incredible opportunity."
-
-                    el "Now go and bother someone else."
-                    $ showphone = True
-                    $ fr1elijah = 1
-
-                    call screen freeroam1a
-    label fr1elijah2:
-        $ showphone = False
+    label v1_freeRoam1_elijah2:
+        
         scene s50el1a
         u "Elijah?"
 
         scene s50el1
         with dissolve
         el "Leave me alone."
-        $ showphone = True
-        call screen freeroam1a
+        
+        call screen v1_freeRoam1_1
 
-    label fr1b2:
-    label fr1b:
-        $ phoneexit = "phoned"
-        $ freeroamtut = 0
-        if chrisgone == 0:
-            call screen freeroam1b
-        else:
-            label phonedtwo:
-            call screen freeroam1b2
-
-    label phonec:
-        call screen freeroam1a
-
-    label phoned:
-        call screen freeroam1b
-
-    label fr1chris1:
-        $ showphone = False
+    label v1_freeRoam1_chris:
         scene s55ch1
         ch "Babe... you know I gotta prepare our rush party."
 
@@ -1741,14 +1488,11 @@ label phonea:
         ch "Bye babe."
 
         no "Bye."
-        $ chrisgone = 1
-        $ showphone = True
-        $ phoneexit = "phonedtwo"
-        call screen freeroam1b2
+        $ v1_freeRoam1_chrisGone = True
+        
+        call screen v1_freeRoam1_2
 
-    label fr1nora1:
-        $ showphone = False
-        $ fr1nora = 1
+    label v1_freeRoam1_nora:
         scene s56no1a
         u "Hey, could you tell me where the dorms are?"
 
@@ -1756,216 +1500,177 @@ label phonea:
         with dissolve
         no "They're right through the doors behind you."
 
-
         menu:
-
             "Flirt":
-
                 $ addPoint("tm", 1)
-                $ hitonnora = 1
-                jump am_a
+                $ v1_hitOnNora = True
+
+                scene s56no1a
+                with dissolve
+
+                $ keepitmoving = True
+                if not steam:
+                    show keepitmoving at achievementShow
+                else:
+                    $ achievement.grant("keep_it_moving")
+                    $ achievement.sync()
+
+                u "Actually, I knew that. I just wanted to talk to you 'cause you're really cute."
+
+                scene s56no1
+                with dissolve
+                no "Look, I've got a boyfriend, so keep it moving."
 
             "Leave":
+                scene s56no1a
+                with dissolve
 
-                $ hitonnora = 0
-                jump am_b
+                u "Thanks."
 
-        label am_a:
-            scene s56no1a
-            with dissolve
+    $ v1_freeRoam1_nora = True
+    call screen v1_freeRoam1_2
 
-            $ keepitmoving = True
-            if steam == False:
-                image keepitmoving = "images/keepitmoving.webp"
-                show keepitmoving:
-                    xpos 0
-                    ypos -200
-                    linear 0.5 xpos 0 ypos 0
-                    pause 2.0
-                    linear 0.5 xpos 0 ypos -200
-            else:
-                $ achievement.grant("keep_it_moving")
-                $ achievement.sync()
-
-            u "Actually, I knew that. I just wanted to talk to you 'cause you're really cute."
-
-            scene s56no1
-            with dissolve
-            no "Look, I've got a boyfriend, so keep it moving."
-            $ showphone = True
-            call screen freeroam1b2
-
-        label am_b:
-            scene s56no1a
-            with dissolve
-
-            u "Thanks."
-            $ showphone = True
-            call screen freeroam1b2
-
-    label fr1nora2:
+    label v1_freeRoam1_nora2:
         scene s56no1a
-        $ showphone = False
+        
         u "Uhm..."
-        if hitonnora == 1:
-
+        if v1_hitOnNora:
             scene s56no1
             with dissolve
             no "Dude, keep it moving."
-            $ showphone = True
-            call screen freeroam1b2
+
         else:
             scene s56no1
             with dissolve
             no "I'm busy."
-            $ showphone = True
-            call screen freeroam1b2
 
-    label fr1c:
-        $ phoneexit = "phonee"
-        call screen freeroam1c
-    label bfra:
-    label phonee:
-        call screen freeroam1c
+        call screen v1_freeRoam1_2
 
-    label fr1adam1:
+    label v1_freeRoam1_aubrey:
         scene adamaubrey36
         stop music fadeout 2.0
-
-        $ showphone = False
-        image adam1 = Movie(play="images/adamau.webm")
         play music "music/msexy.mp3"
         show adam1
+
         au "Ohhh shit, that feels good!"
         u "(Oh my god... she's so fucking hot.)"
         au "YESSSSS, FASTER!"
         u "(I should probably stop peeking, before I get caught.)"
-        $ fr1adam = 1
-        $ showphone = True
-        stop music fadeout 2.0
-        call screen freeroam1c
 
-    label fr1adam2:
+        $ v1_freeRoam1_aubrey = 1
+        
+        stop music fadeout 2.0
+        call screen v1_freeRoam1_3
+
+    label v1_freeRoam1_aubrey2:
         scene s58
         u "I shouldn't risk peeking again."
-        call screen freeroam1c
+        call screen v1_freeRoam1_3
 
-
-
-    label fr1end:
+    label v1_freeRoam1_end:
         scene s58
         call screen endfreeroam
 
-    label efra:
+label efra:
+    scene s59
+    stop music fadeout 2.0
+    play sound "sounds/knock.mp3"
+    
+    "*Knock knock knock*"
 
-        $ showphone = False
-        scene s59
-        stop music fadeout 2.0
-        play sound "sounds/knock.mp3"
-        "*Knock knock knock*"
+    scene s60
+    with dissolve
 
-        scene s60
-        with dissolve
+    play music "music/m16punk.mp3"
 
-        play music "music/m16punk.mp3"
+    imre "Yooo, what's up my man?"
 
-        imre "Yooo, what's up my man?"
+    scene s60a
+    with dissolve
 
-        scene s60a
-        with dissolve
+    u "Hey man, I'm your new roommate."
 
-        u "Hey man, I'm your new roommate."
+    scene s60
+    with dissolve
 
-        scene s60
-        with dissolve
+    imre "Aww, sick! Come in!"
 
-        imre "Aww, sick! Come in!"
+    scene s62
+    with dissolve
 
-        scene s62
-        with dissolve
+    imre "This is your bed. I took the other one 'cause I'm hoping for some sexy noises from the chick next door."
 
-        imre "This is your bed. I took the other one 'cause I'm hoping for some sexy noises from the chick next door."
+    scene s62a
+    with dissolve
+    u "Oh, does she make a lot of \"sexy noises\"?"
 
-        scene s62a
-        with dissolve
-        u "Oh, does she make a lot of \"sexy noises\"?"
+    scene s63d
+    with dissolve
 
-        scene s63d
-        with dissolve
+    imre "I don't know, it's my first day. But a man can dream."
 
-        imre "I don't know, it's my first day. But a man can dream."
+    imre "I'm Imre by the way."
 
-        imre "I'm Imre by the way."
+    scene s63e
+    with dissolve
 
-        scene s63e
-        with dissolve
+    u "I'm [name]... did you say Imre? First time I'm hearing that name."
+    scene s63d
+    with dissolve
+    imre "It's Hungarian. My family and I moved to the States about eight years ago."
+    scene s63e
+    with dissolve
 
-        u "I'm [name]... did you say Imre? First time I'm hearing that name."
-        scene s63d
-        with dissolve
-        imre "It's Hungarian. My family and I moved to the States about eight years ago."
-        scene s63e
-        with dissolve
+    u "Oh that's cool."
 
-        u "Oh that's cool."
+    scene s63d
+    with dissolve
+    imre "And, I got some weights as well, so we can get a pump before going to parties."
+    scene s63e
+    with dissolve
+    u "Haha, seems like you got it all figured out."
 
-        scene s63d
-        with dissolve
-        imre "And, I got some weights as well, so we can get a pump before going to parties."
-        scene s63e
-        with dissolve
-        u "Haha, seems like you got it all figured out."
+    scene s63d
+    with dissolve
 
-        scene s63d
-        with dissolve
+    imre "Exactly, which is also why I'm joining the Wolves."
 
-        imre "Exactly, which is also why I'm joining the Wolves."
+    scene s63e
+    with dissolve
 
-        scene s63e
-        with dissolve
+    u "The Wolves? I thought the Apes were the best frat to get girls?"
 
-        u "The Wolves? I thought the Apes were the best frat to get girls?"
+    scene s64
+    with dissolve
 
-        scene s64
-        with dissolve
+    imre "Who told you that?! That's bullshit."
 
-        imre "Who told you that?! That's bullshit."
+    imre "The Apes are disloyal pieces of shit. The Wolves are real brothers and they get mad pussy."
 
-        imre "The Apes are disloyal pieces of shit. The Wolves are real brothers and they get mad pussy."
+    scene s64a
+    with dissolve
 
-        scene s64a
-        with dissolve
+    u "Didn't you say it's your first day? How do you know the frats so well?"
 
-        u "Didn't you say it's your first day? How do you know the frats so well?"
+    scene s63
+    with dissolve
 
-        scene s63
-        with dissolve
+    imre "It is, but my brother used to be a Wolf and he told me about all the shady shit that the Apes would do."
 
-        imre "It is, but my brother used to be a Wolf and he told me about all the shady shit that the Apes would do."
+    scene s63a
+    with dissolve
 
-        scene s63a
-        with dissolve
+    u "I heard the Apes won last year's Summer Showdown."
 
-        u "I heard the Apes won last year's Summer Showdown."
-
-        scene s63
-        with dissolve
-        imre "Yeah they did, but that doesn't mean shit. The Wolves have won 5 out of the last 10 years."
+    scene s63
+    with dissolve
+    imre "Yeah they did, but that doesn't mean shit. The Wolves have won 5 out of the last 10 years."
 
 
-        menu:
+    menu:
+        "So, they're equally good?":
+            $ addPoint("tm", 1)
 
-            "So, they're equally good?":
-
-                $ addPoint("tm", 1)
-                jump an_a
-
-            "The Wolves sound sick.":
-
-                $ addPoint("bro", 1)
-                jump an_b
-
-        label an_a:
             scene s63a
             with dissolve
 
@@ -1981,9 +1686,12 @@ label phonea:
 
             u "I feel like your math doesn't add up there."
 
-            jump an_ad
+            scene s63d
+            with dissolve
 
-        label an_b:
+        "The Wolves sound sick.":
+            $ addPoint("bro", 1)
+
             scene s64a
             with dissolve
             u " Honestly, after listening to you, the Wolves sound sick!"
@@ -1993,107 +1701,109 @@ label phonea:
 
             imre "Yeahhhh! They fucking are man. That's what I've been trying to tell you."
 
-            jump an_bd
+    imre "Honestly I think you'd make a great Wolf as well."
 
-        label an_ad:
-        scene s63d
-        with dissolve
-        label an_bd:
+    scene s63e
+    with dissolve
 
+    u "I don't know how to fight haha, so it's probably not for me."
 
-        imre "Honestly I think you'd make a great Wolf as well."
+    scene s63d
+    with dissolve
 
-        scene s63e
-        with dissolve
+    imre "Man, fighting's easy. They teach you everything. I've been training with my brother and it's so much fun."
 
-        u "I don't know how to fight haha, so it's probably not for me."
+    scene s63e
+    with dissolve
+    u "Hmm... I'll give it a think."
 
-        scene s63d
-        with dissolve
+    scene s63d
+    with dissolve
 
-        imre "Man, fighting's easy. They teach you everything. I've been training with my brother and it's so much fun."
+    imre "You're definitely going to the Wolves' rush party with me."
 
-        scene s63e
-        with dissolve
-        u "Hmm... I'll give it a think."
+    scene s63e
+    with dissolve
 
-        scene s63d
-        with dissolve
+    u "Fine..."
 
-        imre "You're definitely going to the Wolves' rush party with me."
+    u "(Great... another party where I won't fit in.)"
 
-        scene s63e
-        with dissolve
+    scene s63d
+    with dissolve
 
-        u "Fine..."
+    imre "That's the spirit!"
 
-        u "(Great... another party where I won't fit in.)"
+    scene s61
+    with fade
 
-        scene s63d
-        with dissolve
+    imre "By the way, I met a hot fresher today and she's coming over later to hang out with me and my friends."
 
-        imre "That's the spirit!"
+    scene s61a
+    with dissolve
 
-        scene s61
-        with fade
+    u "Oh, so your friends are coming as well?"
 
-        imre "By the way, I met a hot fresher today and she's coming over later to hang out with me and my friends."
+    scene s61
+    with dissolve
 
-        scene s61a
-        with dissolve
+    imre "See, that's where you come in. None of my friends went to San Vallejo."
+    imre "Instead, I thought my new roommate could invite a cute girl as well, so that it's not as awkward?"
 
-        u "Oh, so your friends are coming as well?"
+    scene s61a
+    with dissolve
 
-        scene s61
-        with dissolve
+    u "But... you didn't even know me at the time. What if I was a huge dick to you? Or-"
 
-        imre "See, that's where you come in. None of my friends went to San Vallejo."
-        imre "Instead, I thought my new roommate could invite a cute girl as well, so that it's not as awkward?"
+    scene s61
+    with dissolve
 
-        scene s61a
-        with dissolve
+    imre "You gotta risk it for a biscuit. Or in this case... the pussy."
 
-        u "But... you didn't even know me at the time. What if I was a huge dick to you? Or-"
+    scene s61a
+    with dissolve
 
-        scene s61
-        with dissolve
+    u "Fair enough. Only problem is, I don't actually know that many people here. It is also my first day after all."
 
-        imre "You gotta risk it for a biscuit. Or in this case... the pussy."
+    scene s61
+    with dissolve
 
-        scene s61a
-        with dissolve
+    imre "Oh come on. There's gotta be some girl that you've talked to today?"
 
-        u "Fair enough. Only problem is, I don't actually know that many people here. It is also my first day after all."
+    scene s61a
+    with dissolve
 
-        scene s61
-        with dissolve
+    u "(I guess I could ask Lauren...)"
 
-        imre "Oh come on. There's gotta be some girl that you've talked to today?"
+    u "Alright, I think I know who I could ask."
 
-        scene s61a
-        with dissolve
+    scene s61
+    with dissolve
 
-        u "(I guess I could ask Lauren...)"
+    imre "It better be a girl."
 
-        u "Alright, I think I know who I could ask."
+    scene s61a
+    with dissolve
 
-        scene s61
-        with dissolve
+    python:
+        def v1_reply5():
+            contact_Lauren.newMessage("Yeah sounds good :) Where do you wanna meet?")
+            contact_Lauren.addReply("Just come to dorm 109 at 8", v1_reply4)
 
-        imre "It better be a girl."
+        def v1_reply6():
+            contact_Lauren.newMessage("Okay, will do")
+            contact_Lauren.addReply("See you later, cutie", v1_reply5)
+            contact_Lauren.addReply("Cool")
 
-        scene s61a
-        with dissolve
-        $ phoneexit = "phonef"
+        def v1_reply7():
+            addPoint("bf", 1)
 
-        $ contact_Lauren.addReply("Hey Lauren, would you want to hang out with me and my friends tonight?", "larep1a")
+        contact_Lauren.addReply("Hey Lauren, would you want to hang out with me and my friends tonight?", v1_reply3)
+    
+    label v1_phoneCheck1:
+        if contact_Lauren.getReplies():
+            call screen phone
 
-        $ showphone = True
-
-        call screen phone
-
-        label phonef:
-        if contact_Lauren.messages[-1].replies: # Edited
             scene s61
             with dissolve
             imre "Did you ask?"
@@ -2102,28 +1812,23 @@ label phonea:
             with dissolve
             u "Oops I forgot."
 
-            call screen phone
+            jump v1_phoneCheck1
 
-        else:
-            $ showphone = False
-            scene s61a
-            with dissolve
+    scene s61a
+    with dissolve
 
-            u "Okay man I did it."
+    u "Okay man I did it."
 
-            scene s61c
-            with dissolve
+    scene s61c
+    with dissolve
 
-            imre "Awesome! Get ready for a wild night, my man."
+    imre "Awesome! Get ready for a wild night, my man."
 
-            scene s65
-            with Fade(1, 0, 1)
-            stop music fadeout 2.0
-            " "
+    scene s65
+    with Fade(1, 0, 1)
+    stop music fadeout 2.0
+    " "
 
-            jump continueonea
-
-    label continueonea:
     play sound "sounds/knock.mp3"
     "*Knock knock knock*"
 
@@ -2140,7 +1845,7 @@ label phonea:
     with dissolve
     imre "Hey, come on in Riley. This is my roommate [name]."
 
-    if talktori == 1:
+    if v1_talkToRiley:
         scene s67
         with dissolve
         ri "Yeah, we've met."
@@ -2153,8 +1858,6 @@ label phonea:
         with dissolve
         u "Yeah, we were in the same induction class."
 
-        jump talktoria
-
     else:
         scene s67
         with dissolve
@@ -2163,10 +1866,6 @@ label phonea:
         scene s67a
         with dissolve
         u "Yeah, that's right. Good to see you again."
-        jump talktorib
-
-    label talktoria:
-    label talktorib:
 
     scene s68
     with fade
@@ -2675,7 +2374,7 @@ label phonea:
         label at_bd:
         imre "And to be part of a frat."
 
-        if fr1adam == 1:
+        if v1_freeRoam1_aubrey:
 
             scene s79a
             with dissolve
@@ -2746,7 +2445,7 @@ label phonea:
     with Fade (1,0,1)
 
     ri "Wow, you guys have a really nice house."
-    $ fantasy = True
+    show screen fantasyOverlay
     scene sda1a
     with dissolve
 
@@ -3021,7 +2720,7 @@ label phonea:
     ri "My legs are shaking."
     label skipdream:
 
-    $ fantasy = False
+    hide screen fantasyOverlay
 
     stop music fadeout 2.0
     $ renpy.end_replay()
@@ -3618,7 +3317,7 @@ label av_b:
                     $ firstkisslauren = True
 
                     $ romeo = True
-                    if steam == False:
+                    if not steam:
                         image romeo = "images/romeo.webp"
                         show romeo:
                             xpos 0
@@ -3793,14 +3492,9 @@ label av_b:
     scene s96c
     stop music fadeout 2.0
     play sound "sounds/vibrate.mp3"
-    $ showphone = True
-
-    $ contact_Ryan.unlock()
 
     $ contact_Ryan.newMessage("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???")
     $ contact_Ryan.addReply("Alright, but I'll only stay for a few hours.", "ryrep1a")
-
-    $ phoneexit = "phoneg"
 
     label phoneg:
     label repeata:
@@ -3813,7 +3507,7 @@ label av_b:
     else:
         scene s96c
         with dissolve
-        $ showphone = False
+        
 
         play music "music/m3punk.mp3"
 
@@ -3903,8 +3597,7 @@ label av_b:
     #freeroam2
 
     $ latext = 0
-    $ showphone = True
-    $ phoneexit = "phoneh"
+    
     $ samtalk = 0
     $ joshtalk = 0
     $ graysontalk = 0
@@ -3916,7 +3609,7 @@ label av_b:
     call screen freeroam2a
 
     label fr2sam:
-        $ showphone = False
+        
         $ samtalk = 1
         scene s101
         sam "... and that's why I purposefully lost that fight."
@@ -3970,7 +3663,7 @@ label av_b:
 
         u "(We should probably leave them alone before we get dragged into this.)"
 
-        $ showphone = True
+        
 
         call screen freeroam2a
 
@@ -3986,9 +3679,8 @@ label av_b:
         play music "music/mparty2.mp3"
 
         queue music [ "music/mparty3.mp3", "music/mparty4.mp3" ]
-        $ showphone = False
+        
         $ fr2door = 1
-        $ phoneexit = "phonej"
         scene s103
 
         ry "Alright man, I'm gonna look around, I'll see you in a bit."
@@ -3999,7 +3691,7 @@ label av_b:
 
         u "(Great, now I'm all on my own.)"
 
-        $ showphone = True
+        
 
         call screen freeroam2b
 
@@ -4008,11 +3700,9 @@ label av_b:
     label fr2poolback:
     label fr2campback:
     label fr2down:
-        $ phoneexit = "phonej"
         call screen freeroam2b
 
     label fr2outside:
-        $ phoneexit = "phonek"
     label phonek:
         call screen freeroam2a
 
@@ -4024,15 +3714,14 @@ label av_b:
             u "(I should talk to Josh first, I haven't seen him in a while.)"
 
             call screen freeroam2b
-        else:
-            $ phoneexit = "phonel"
+
     label phonel:
 
         call screen freeroam2c
 
     label fr2courtney:
 
-        $ showphone = False
+        
 
         $ courtneytalk = 1
 
@@ -4080,13 +3769,13 @@ label av_b:
 
         u "What?? I didn't even... whatever."
 
-        $ showphone = True
+        
 
         call screen freeroam2b
 
     label fr2courtney2:
 
-        $ showphone = False
+        
 
         scene fr2co2
         with dissolve
@@ -4098,14 +3787,14 @@ label av_b:
 
         u "Right..."
 
-        $ showphone = True
+        
 
         call screen freeroam2b
 
 
     label fr2josh:
 
-        $ showphone = False
+        
 
         $ joshtalk = 1
         scene fr2jo1a
@@ -4121,7 +3810,7 @@ label av_b:
 
         scene fr2jo2b
         with dissolve
-        if fr1adam == 1:
+        if v1_freeRoam1_aubrey:
             u "(Holy shit, is this the girl that got fucked in the dorm opposite of ours?!)"
 
             u "(She's so fucking hot.)"
@@ -4395,7 +4084,7 @@ label av_b:
 
         jo "Yeah bro, hit me up sometime."
 
-        $ showphone = True
+        
 
         call screen freeroam2b
 
@@ -4415,9 +4104,7 @@ label av_b:
             u "(I should talk to Josh first, I haven't seen him in a while.)"
 
             call screen freeroam2b
-        else:
 
-            $ phoneexit = "phonem"
     label phonem:
 
         call screen freeroam2e
@@ -4439,15 +4126,13 @@ label av_b:
                 $ contact_Lauren.addReply("Yeah, sure.", "larep4a")
                 $ contact_Lauren.addReply("What is there to talk about?", "larep4b")
 
-            $ phoneexit = "phonen"
-
     label fr2dontend:
     label phonen:
         call screen freeroam2d
 
     label fr2mason:
 
-        $ showphone = False
+        
         $ masontalk = 1
 
         scene fr2ma1
@@ -4482,7 +4167,7 @@ label av_b:
             with dissolve
 
             $ bigmouth = True
-            if steam == False:
+            if not steam:
                 image bigmouth = "images/bigmouth.webp"
                 show bigmouth:
                     xpos 0
@@ -4535,7 +4220,7 @@ label av_b:
 
             u "(Oh no, what have I gotten myself into?!)"
 
-            $ showphone = True
+            
 
             call screen freeroam2c
 
@@ -4594,7 +4279,7 @@ label av_b:
 
             u "(Oh no, what have I gotten myself into?!)"
 
-            $ showphone = True
+            
 
             call screen freeroam2c
 
@@ -4608,7 +4293,7 @@ label av_b:
 
     label fr2katy:
 
-        $ showphone = False
+        
 
         $ katytalk = 1
 
@@ -4701,14 +4386,14 @@ label av_b:
 
         u "(I'm definitely not going back there.)"
 
-        $ showphone = True
+        
 
         call screen freeroam2c
 
     label fr2grayson:
 
         $ graysontalk = 1
-        $ showphone = False
+        
 
         scene fr2gr1
 
@@ -4768,7 +4453,7 @@ label av_b:
 
         u "(Is that this Grayson guy that Aubrey talked about? He sounds like even more of a dick than Cameron.)"
 
-        $ showphone = True
+        
         call screen freeroam2e
 
     label fr2grayson2:
@@ -4789,7 +4474,7 @@ label fr2end:
 
 
     stop music fadeout 2.0
-    $ showphone = False
+    
     scene chloelook:
         subpixel True
         size (1920, 1080) crop (0, 0, 7680, 4320) #first tuple is the size of game screen, second is size of picture in pixels
@@ -5409,14 +5094,13 @@ label fr2end:
         play sound "sounds/vibrate.mp3"
         queue sound "sounds/vibrate.mp3"
 
-        $ showphone = True
+        
 
         $ contact_Ryan.newMessage("You okay?")
         $ contact_Ryan.addReply("I'm fine", "ryrep4a")
         $ contact_Ryan.addReply("No, wtf was that?! Fuck Grayson and fuck the Apes", "ryrep4b")
 
         $ temp_MessageNot = True
-        $ phoneexit = "phoneo"
         if contact_Lauren.messages[-1].replies:
             $ contact_Lauren.newMessage("Hello?? Can we please talk today?")
             $ contact_Lauren.addReply("Yeah, SV cafe in 20 mins?", "larep8a")
@@ -5440,7 +5124,7 @@ label fr2end:
             jump repeatb
 
         else:
-            $ showphone = False
+            
             if meetlauren == True:
                 u "(Well, time to head to the cafe to meet Lauren.)"
 
@@ -6486,7 +6170,7 @@ label fr2end:
     label youfinish:
         if reaction == 0.5:
             $ thenotorious = True
-            if steam == False:
+            if not steam:
                 image thenotorious = "images/thenotorious.webp"
                 show thenotorious:
                     xpos 0
@@ -6694,7 +6378,7 @@ label fr2end:
         with dissolve
 
         $ anewbeginning = True
-        if steam == False:
+        if not steam:
             image anewbeginning = "images/anewbeginning.webp"
             show anewbeginning:
                 xpos 0
@@ -6915,9 +6599,8 @@ label fr2end:
 
     play sound "sounds/vibrate.mp3"
 
-    $ showphone = True
+    
     $ msgnot = 1
-    $ contact_Josh.unlock()
 
     $ contact_Josh.newMessage("Dude, I talked to this Aubrey chick the entire night and guess who's number she wanted...")
     $ contact_Josh.newMessage("YOURS")
@@ -6925,14 +6608,12 @@ label fr2end:
     $ contact_Josh.addReply("Sorry, man. She doesn't know what she's missing.","jorep3a")
     $ contact_Josh.addReply("Sooo, did you give it to her?", "jorep3b")
 
-    $ phoneexit = "phonep"
-
     scene s133
     with dissolve
 
 
     label phonep:
-    $ showphone = False
+    
 
     u "(Time to sit through another boring ass lecture.)"
 
@@ -7313,7 +6994,7 @@ label fr2end:
 
     no "Looks like he got beaten up."
 
-    if hitonnora == 1:
+    if v1_hitOnNora:
 
         scene s142a # both mouths shut
         with dissolve
@@ -7795,7 +7476,7 @@ label bo_ad:
     with dissolve
 
     $ overit = True
-    if steam == False:
+    if not steam:
         image overit = "images/overit.webp"
         show overit:
             xpos 0
@@ -8065,10 +7746,6 @@ label bo_bd:
 
     # text from aubrey
     play sound "sounds/vibrate.mp3"
-    $ phoneexit = "phoneq"
-    $ showphone = True
-
-    $ contact_Aubrey.unlock()
 
     $ contact_Aubrey.newMessage("Hey,\nJosh gave me your number\n\nI hope your face is feeling better after the shit that Grayson pulled...")
     $ contact_Aubrey.newMessage("He's not even dating Chloe and you guys didn't even do anything so I don't know what he was thinking.\n\nAnyway, do you wanna like... hang out tomorrow?")
@@ -8087,7 +7764,7 @@ label bo_bd:
         jump repeatc
 
     label continuec:
-    $ showphone = False
+    
 
     play music "music/mlove.mp3"
 
@@ -8249,15 +7926,12 @@ label bo_bd:
     u "Ugh... alright."
 
     play sound "sounds/vibrate.mp3"
-    $ phoneexit = "phoner"
-
-    $ contact_Aubrey.unlock()
 
     $ contact_Aubrey.newMessage("Hey, are you nearby?")
     $ contact_Aubrey.addReply("Yeah, I'm just on my way, I'll be right there.", "aubrep8a")
     $ contact_Aubrey.addReply("Sorry, something came up and I can't make it.", "aubrep8b")
 
-    $ showphone = True
+    
 
     u "(Fuck, I totally forgot about Aubrey. I guess it's time to make a decision.)"
 
@@ -8273,7 +7947,7 @@ label bo_bd:
 
     else:
 
-        $ showphone = False
+        
 
         if costumeaubrey == True:
 
@@ -10238,7 +9912,6 @@ label bo_bd:
 
         "Be smart":
             $ evelynnumber = True
-            $ contact_Evelyn.unlock()
             jump evelyna
 
         "Be funny":
@@ -10469,8 +10142,6 @@ label bo_bd:
     with dissolve
 
     cl "Haha, I guess I'll have to... for safety reasons."
-
-    $ contact_Chloe.unlock()
 
     scene s204d # chloe kissing you on the cheek
     with dissolve
@@ -11278,7 +10949,7 @@ label bo_bd:
 
     pause 1.0
 
-    $ fantasy = True
+    show screen fantasyOverlay
 
     play music "music/mhorror.mp3"
     scene s226 # Dream with emily, fighting over a stuffed animal in bed
@@ -11397,7 +11068,7 @@ label bo_bd:
 
     u "NO! This is wrong. Just get out! Leave me alone!"
 
-    $ fantasy = False
+    hide screen fantasyOverlay
 
 
     stop music fadeout 2.0
@@ -11742,7 +11413,6 @@ label bo_bd:
 
             "Be smart":
                 $ evelynnumber = True
-                $ contact_Evelyn.unlock()
                 jump evea
 
             "Be funny":
@@ -11933,7 +11603,7 @@ label bo_bd:
     $ msgnot = 1
     $ aubmsgnot = 1
     $ aubisreply = 1
-    $ showphone = True
+    
 
     play sound "sounds/vibrate.mp3"
 
@@ -11952,8 +11622,6 @@ label bo_bd:
                 $ contact_Aubrey.newMessage("I wanna talk about what happened yesterday.")
                 $ contact_Aubrey.newMessage("Any chance that you could come over now?")
                 $ contact_Aubrey.addReply("Yeah, I can.", "aubrep12a")
-   
-                $ phoneexit = "phones"
 
                 label repeatk:
                 label phones:
@@ -11974,7 +11642,7 @@ label bo_bd:
 
                 else:
 
-                    $ showphone = False
+                    
 
                     u "Sorry Imre, something came up. You're gonna have to go back by yourself, I gotta go."
 
@@ -12175,8 +11843,6 @@ label bo_bd:
             $ contact_Aubrey.newMessage("Any chance that you could come over now?")
             $ contact_Aubrey.addReply("Yeah, I'll be right there..", "aubrep12aa")
 
-            $ phoneexit = "phonet"
-
             " "
 
             label repeatl:
@@ -12198,7 +11864,7 @@ label bo_bd:
 
             else:
 
-                $ showphone = False
+                
 
                 u "Sorry Imre, something came up. You're gonna have to go back by yourself, I gotta go."
 
@@ -12459,8 +12125,6 @@ label bo_bd:
         $ contact_Aubrey.newMessage("Hey, you know how you had to cancel on me yesterday and you really want to make it up to me?")
         $ contact_Aubrey.newMessage("Wanna come over now?")
         $ contact_Aubrey.addReply("Uhh... okay.", "aubrep12ab")
-
-        $ phoneexit = "phoneu"
         
         label repeatm:
         label phoneu:
@@ -12480,7 +12144,7 @@ label bo_bd:
             jump repeatm
 
         else:
-            $ showphone = False
+            
 
             u "Sorry Imre, something came up. You're gonna have to go back by yourself, I gotta go."
 
@@ -13463,7 +13127,7 @@ label bo_bd:
         with dissolve
 
         $ notnowmom = True
-        if steam == False:
+        if not steam:
             image notnowmom = "images/notnowmom.webp"
             show notnowmom:
                 xpos 0
@@ -13927,7 +13591,7 @@ label bo_bd:
     show rikiss2
 
     $ lipsdontlie = True
-    if steam == False:
+    if not steam:
         image lipsdontlie = "images/lipsdontlie.webp"
         show lipsdontlie:
             xpos 0
@@ -14138,7 +13802,7 @@ label bo_bd:
             with dissolve
 
             $ truthhurts = True
-            if steam == False:
+            if not steam:
                 image truthhurts = "images/truthhurts.webp"
                 show truthhurts:
                     xpos 0
@@ -15102,7 +14766,7 @@ label bo_bd:
     pause 0.5
     play music "music/mhorror.mp3"
 
-    $ fantasy = True
+    show screen fantasyOverlay
 
     scene s305 # Chloe closeup, she looks cute moutth clsoed, background should be wishy washy
     with flash
@@ -15149,7 +14813,7 @@ label bo_bd:
 
     u "Ahhh! Stop! Stop!"
 
-    $ fantasy = False
+    hide screen fantasyOverlay
 
     stop music fadeout 2.0
 
@@ -15427,7 +15091,7 @@ label bo_bd:
         with dissolve
 
         $ relightthefire = True
-        if steam == False:
+        if not steam:
             image relightthefire = "images/relightthefire.webp"
             show relightthefire:
                 xpos 0
@@ -15662,7 +15326,7 @@ label bo_bd:
             label dv_a:
 
             $ rematch = True
-            if steam == False:
+            if not steam:
                 image rematch = "images/rematch.webp"
                 show rematch:
                     xpos 0
@@ -15804,29 +15468,24 @@ label bo_bd:
     with Fade (1,0,1)### you sitting on your bed with your phone in your hand //
 
     u "(I should text Chloe and see if she wants to meet up... I need to find out if there's any truth in what Ryan said.)"
-    $ contact_Chloe.unlock()
     $ contact_Chloe.addReply("Hey Chloe, any chance you can meet up in a bit?", "clrep2a")
-
-    $ showphone = True
-
-    $ phoneexit = "phonev"
 
     play music "music/mindie4.mp3"
     call screen messager(contact_Chloe)
     label phonev:
 
     if contact_Chloe.messages[-1].replies:
-        $ showphone = True
+        
         u "(I should message Chloe about meeting up later.)"
 
         jump phonev
 
     else:
-        $ showphone = False
+        
         jump continuey
 
     label continuey:
-    $ showphone = False
+    
     scene s330a # same as 330 but you looking up
     with dissolve
 
@@ -16454,7 +16113,7 @@ label bo_bd:
                 with dissolve
 
                 $ keeneye = True
-                if steam == False:
+                if not steam:
                     image keeneye = "images/keeneye.webp"
                     show keeneye:
                         xpos 0
@@ -17137,12 +16796,10 @@ label bo_bd:
 
     play music "music/m9punk.mp3"
 
-    $ showphone = True
+    
     $ contact_Josh.newMessage("Hey man, you wanna hang out with me and some friends tonight?")
     $ contact_Josh.addReply("Uhh, sure.", "jorep8a")
     $ contact_Josh.addReply("I'm meeting a friend at 11, so I can't really.", "jorep8b")
-    
-    $ phoneexit = "phonew"
 
     label phonew:
 
@@ -17157,13 +16814,13 @@ label bo_bd:
         if contact_Josh.messages[-2].reply.message == "I can't, sorry.":
 
             u "(Fucking hell, I forgot how persistent Josh could be...)"
-            $ showphone = False
+            
             jump jorepb
 
         else:
 
             u "(Okay, I need to make sure that I don't forget about meeting Chloe.)"
-            $ showphone = False
+            
             jump jorepa
 
 
@@ -18792,10 +18449,9 @@ label bo_bd:
 
     #### Amber text
     play sound "sounds/vibrate.mp3"
-    $ showphone = True
+    
     $ msgnot = 1
     $ ammsgnot = 1
-    $ contact_Amber.unlock()
     $ ammsg = 1
     $ amisreply = 1
 
@@ -18826,7 +18482,6 @@ label bo_bd:
 
     if toldlauren == False and laurentoofar == False:
         play sound "sounds/vibrate.mp3"
-        $ phoneexit = "phonex"
 
         $ temp_MessageNot = True
         $ contact_Lauren.newMessage("Hey")
@@ -18840,7 +18495,7 @@ label bo_bd:
 
         if not contact_Lauren.messages[-1].replies:
 
-            $ showphone = False
+            
             u "(Time to get ready.)"
 
             jump continuez
@@ -18856,9 +18511,6 @@ label bo_bd:
 
 
     else:
-
-
-        $ phoneexit = "phoney"
         label phoney:
 
         "(Maybe it's Lauren and she wants to talk about what happened? I should definitely check.)"
@@ -18866,7 +18518,7 @@ label bo_bd:
 
 
         if not msgApp.notification:
-            $ showphone = False
+            
             jump continueaf
 
         else:
@@ -18998,7 +18650,7 @@ label bo_bd:
 
         label ey_a:
         $ onthelow = True
-        if steam == False:
+        if not steam:
             image onthelow = "images/onthelow.webp"
             show onthelow:
                 xpos 0
@@ -19662,7 +19314,7 @@ label bo_bd:
     if trolleyb == True:
         if la2 == True:
             $ petapublicenemy = True
-            if steam == False:
+            if not steam:
                 image petapublicenemy = "images/petapublicenemy.webp"
                 show petapublicenemy:
                     xpos 0
@@ -20627,7 +20279,7 @@ label bo_bd:
 
     label fh_a:
     $ onthelow = True
-    if steam == False:
+    if not steam:
         image onthelow = "images/onthelow.webp"
         show onthelow:
             xpos 0
@@ -20843,7 +20495,7 @@ recover."
 
     play sound "sounds/swoosh.mp3"
 
-    $ fantasy = True
+    show screen fantasyOverlay
 
     scene s409 #MC and Emily are in a park, eating ice cream. Emily puts some on MC's nose. MC chases her as she runs away laughing.
     with flash
@@ -20918,7 +20570,7 @@ recover."
 
     pause 0.5
     play sound "sounds/swoosh.mp3"
-    $ fantasy = False
+    hide screen fantasyOverlay
     scene s408a
     with flash
 
@@ -22174,7 +21826,7 @@ tell me!"
     stop music fadeout 2.0
 
     $ snitch = True
-    if steam == False:
+    if not steam:
         image snitch = "images/snitch.webp"
         show snitch:
             xpos 0
@@ -22949,9 +22601,6 @@ tell me!"
 
 
     $ noexit = True
-    $ contact_Chloe.unlock()
-    $ contact_Amber.unlock()
-
 
 
 
@@ -22968,8 +22617,7 @@ tell me!"
     if chloemad == True:
         $ contact_Amber.newMessage("Hey, you alone? xx")
         $ contact_Amber.addReply("I'm at the park, but I'm by myself.", "amrep8a")
-        
-        $ phoneexit = "phoneaa"
+
 
 
         call screen contactsscreen
@@ -22993,8 +22641,6 @@ tell me!"
         $ contact_Chloe.newMessage("I got some free time right now :)")
         $ contact_Chloe.newMessage("Wanna go swimming?")
         $ contact_Chloe.addReply("Any chance we could do it later? Or tomorrow?", "clrep5a")
-
-        $ phoneexit = "phoneab"
 
 
         call screen contactsscreen
@@ -23029,7 +22675,7 @@ tell me!"
 
     play music "music/vocal.mp3"
 
-    if steam == False:
+    if not steam:
         show screen getaccess
         with dissolve
         " "

@@ -12,8 +12,7 @@ label v8_scene24_wolves:
 
     # Kiwii Pic Description (mcpost1w.webp, 1920x1080): Selfie of MC sitting at his desk in Wolves house, looking bored and showing his books/laptop in the frame. Should be continuation of v8monroom1
     # $ mcKiwiiPost = KiwiiPost("MC", "images/mcpost1w.webp", "Ugh someone save me pls", numberLikes=2)
-    # $ showphone = True
-    # $ phoneexit = "phn_riley11_setup"
+    # 
 
     scene v8monroom1a # MC looking at his phone now, neutral expression, mouth closed. Rest is same as v8monroom1
     with fade
@@ -30,8 +29,7 @@ label v8_scene24_apes:
 
     # Kiwii Pic Description (mcpost1a.webp, 1920x1080): Selfie of MC sitting at his desk in Apes house, looking bored and showing his books/laptop in the frame. Should be continuation of v8monroom2
     # $ mcKiwiiPost = KiwiiPost("MC", "images/mcpost1a.webp", "Ugh someone save me pls", numberLikes=2)
-    # $ showphone = True
-    # $ phoneexit = "phn_riley11_setup"
+    # 
 
     scene v8monroom2a # MC looking at his phone now, neutral expression, mouth closed. Rest is same as v8monroom2
     with fade
@@ -40,7 +38,6 @@ label v8_scene24_apes:
     jump phn_riley11_setup
 
 label phn_riley11_setup:
-    $ phoneexit = "phn_riley11"
     $ contact_Riley.newMessage("Bad day?")
     $ contact_Riley.addReply("I've read the same page four times :/", "phn_riley11_a")
     play sound "sounds/vibrate.mp3"
@@ -52,7 +49,7 @@ label phn_riley11:
         jump phn_riley11
 
     else:
-        $ showphone = False
+        
         jump phn_riley11_done
 
 label phn_riley11_a:

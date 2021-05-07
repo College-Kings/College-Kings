@@ -37,13 +37,7 @@ with dissolve
 
 play music "music/v09/Scene 7/Track Scene 7.mp3" fadein 3
 
-$ showphone = True
-
-$ phoneexit = "fr5zoomout"
-
 label fr5zoomout:
-
-$ phoneexit = "fr5zoomout"
 
 scene fr5lakefull
 
@@ -92,8 +86,6 @@ screen fr5lakefull(): ###### LAKE ZOOM OUT SCREEN
 
 label fr5zoomin:
 
-$ phoneexit = "fr5zoomin"
-
 scene fr5lakezoomin
 
 call screen fr5lakezoomin
@@ -133,7 +125,7 @@ label fr5ryan1:
 
 $ fr5ryan = True
 
-$ showphone = False
+
 
 if joinwolves:
 
@@ -537,7 +529,7 @@ else:
 
     ry "You do that, man."
 
-$ showphone = True
+
 
 call screen fr5lakefull
 
@@ -545,7 +537,7 @@ label fr5riley1:
 
 $ fr5riley = True
 
-$ showphone = False
+
 
 scene v9slake2 #FPP Close up as if sitting next to Riley, you look at her from the side, Riley is sitting on the pier, with her legs hanging over the ledge, Riley looking at the lake. -
 
@@ -704,18 +696,18 @@ if not rileyrs:
 
     ri "Weirdo!"
 
-$ showphone = True 
+ 
 call screen fr5lakezoomin
 
 label fr5riley2:
 
 scene fr5lakezoomin
 
-$ showphone = False 
+ 
 
 u "(I've already talked to her.)"
 
-$ showphone = True 
+ 
 call screen fr5lakezoomin
 
 
@@ -725,7 +717,7 @@ label fr5aubrey1:
 
 $ fr5aubrey = True
 
-$ showphone = False
+
 
 scene v9slake4a # FPP close up aubrey swimming in the lake, very close to you, looking at you still on land. You're standing so she's looking up smiling, mouth closed.
 
@@ -1118,20 +1110,20 @@ menu:
 
             au "Alright, see you later."
 
-$ showphone = True
+
 
 call screen fr5lakezoomin
 
 label fr5aubrey2:
 
-$ showphone = False
+
 
 scene fr5lakezoomin
 
 # -if you click on Aubrey again, MC thinks to himself-
 u "(I should look around a bit more.)"
 
-$ showphone = True
+
 
 call screen fr5lakezoomin
 
@@ -1141,7 +1133,7 @@ label fr5treeguy1:
 
 $ fr5treeguy = True
 
-$ showphone = False
+
 
 scene v9slake10 # FPP close up of guy under the tree sleeping sitting leaned to the tree
 
@@ -1253,7 +1245,7 @@ with dissolve
 
 u "Sure. See ya around."
 
-$ showphone = True
+
 
 call screen fr5lakefull
 
@@ -1261,13 +1253,13 @@ call screen fr5lakefull
 
 label fr5treeguy2:
 
-$ showphone = False
+
 
 scene fr5lakefull
 
 u "(I should leave him alone.)"
 
-$ showphone = True
+
 
 call screen fr5lakefull
 
@@ -1277,7 +1269,7 @@ label fr5dogwalker1:
 
 $ fr5dogwalker = True
 
-$ showphone = False
+
 
 scene v9slake11a #FPP close up of dogwalker petting his dog excited, looking at the dog, mouth closed
 
@@ -1425,7 +1417,7 @@ else:
 
     # what if you don't know oscar
 
-$ showphone = True
+
 
 call screen fr5lakefull
 
@@ -1437,11 +1429,11 @@ label fr5dogwalker2:
 
 scene fr5lakefull
 
-$ showphone = False
+
 
 u "(I'm not going near that dog again.)"
 
-$ showphone = True
+
 
 call screen fr5lakefull
 
@@ -1455,7 +1447,7 @@ call screen endfr5
 
 label fr5ryan3:
 
-$ showphone = False
+
 
 scene v9slake12 #TPP showing aubrey, ryan, mc  and riley sitting on the picnic matt, it's evening now.
 with fade

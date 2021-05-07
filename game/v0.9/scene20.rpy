@@ -19,8 +19,6 @@ label v9_room_fri_aft:
         scene v9rfa2 # TPP. Show MC sat at his desk on his phone.
         with dissolve
 
-        $ phoneexit = "s20_phoneExitW"
-
         $ s20KiwiiPost = KiwiiPost("Chris", "images/v09/scene 20/s20KiwiiWolf.webp", "Who's ready?!", numberLikes=renpy.random.randint(200, 300))
         $ s20KiwiiPost.addComment("Imre", "Ding! Ding! Ding!", numberLikes=renpy.random.randint(200, 250))
         $ s20KiwiiPost.addComment("Cameron", "Whatever man! You're going down!", numberLikes=renpy.random.randint(200, 250))
@@ -44,7 +42,6 @@ label v9_room_fri_aft:
         scene v9rfa4 # TPP. Show MC sat at his desk on his phone.
         with dissolve
        
-        $ phoneexit = "s20_phoneExitA"
 
         $ s20KiwiiPost = KiwiiPost("Grayson", "images/v09/scene 20/s20KiwiiApe.webp", "Where my APES at?", numberLikes=renpy.random.randint(200, 300))
         $ s20KiwiiPost.addComment("Cameron", "The BEST Ape is right here!", numberLikes=renpy.random.randint(200, 250))
