@@ -8486,7 +8486,7 @@ label eve1:
 
             ev "You too."
 
-label v1_endShop
+label v1_endShop:
     stop music fadeout 2.0
 
     scene s196
