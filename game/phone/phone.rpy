@@ -48,6 +48,8 @@ label enterPhone:
 
 
 screen phoneTemplate():
+    if freeRoam:
+        modal True
 
     add "images/phonescreen.webp"
 

@@ -121,3 +121,44 @@ screen freeRoamTutorial():
                     action SetVariable("freeRoamTutorialPage", freeRoamTutorialPage + 1)
                 else:
                     action SetVariable("freeRoamTutorialPage", 1)
+
+screen influenceTutorial():
+    zorder 100
+
+    default influenceTutorials = [
+        "When people make important decisions on how they feel about you, they consider what kind of a person you are.",
+        "Your Key Character Trait (Loyal, Popular or Confident) has a strong influence on how other characters react to your behavior.",
+        "Some people value a popular leader, some care more about loyalty than status and some are drawn to confidence.",
+        "Your decisions matter and have long time effects, as you can only have one KCT at a time. So think about what kind of person you want to be."
+    ]
+
+    add "images/tutback.webp":
+        pos (1240, 100)
+
+    text "Tutorial" style "choicetextnum" pos (1490, 530)
+
+    text influenceTutorials[influenceTutorialPage -1] style "choicetuttext"
+
+    fixed:
+        xysize(650, 85)
+        pos(1240, 720)
+
+        hbox:
+            align(0.5, 0.5)
+            spacing 150
+
+            imagebutton:
+                idle "images/whitearrowleft.webp"
+                if influenceTutorialPage > 1:
+                    action SetVariable("influenceTutorialPage", influenceTutorialPage - 1)
+                else:
+                    action SetVariable("influenceTutorialPage", len(influenceTutorials))
+
+            text "{} of {}".format(influenceTutorialPage, len(influenceTutorials)) style "choicetextnum" yalign 0.5
+
+            imagebutton:
+                idle "images/whitearrowright.webp"
+                if influenceTutorialPage < len(influenceTutorials):
+                    action SetVariable("influenceTutorialPage", influenceTutorialPage + 1)
+                else:
+                    action SetVariable("influenceTutorialPage", 1)

@@ -142,6 +142,7 @@ screen v1_freeRoam2_1(): # outside
 
 
 screen v1_freeRoam2_2():
+    tag v1_freeRoam2
 
     add "images/s102.webp"
 
@@ -177,104 +178,163 @@ screen v1_freeRoam2_2():
         if not v1_courtneyTalk:
             action Jump("v1_freeRoam2_courtney")
         else:
-            action Jump("fr2courtney2")
+            action Jump("v1_freeRoam2_courtney2")
 
+    # Left room
     imagebutton:
-        yalign 1.0
-        xalign 0
+        align (0, 1.0)
         idle "images/fr2camp.webp"
         hover "images/fr2camph.webp"
-        action Jump ("fr2camp")
+        action Jump("v1_freeRoam2_camp")
 
+    # Stairs
     imagebutton:
-        yalign 0
-        xalign 0.42
+        align (0.42, 0)
         idle "images/fr2stairs.webp"
         hover "images/fr2stairsh.webp"
-        action Jump ("fr2stairs")
+        action Jump("v1_freeRoam2_stairs")
 
 
 screen v1_freeRoam2_3():
+    tag v1_freeRoam2
 
     add "images/s104.webp"
 
+    # Mason character
     imagebutton:
-        yalign 1.0
-        xalign 1.0
+        align (1.0, 1.0)
         idle "images/fr2mason.webp"
         hover "images/fr2masonh.webp"
-        if masontalk == 1:
-            action Jump ("fr2mason2")
+        if not v1_masonTalk:
+            action Jump("v1_freeRoam2_mason")
         else:
-            action Jump ("fr2mason")
+            action Jump("v1_freeRoam2_mason2")
 
+    # Katy character
     imagebutton:
-        yalign 0.38
-        xalign 0.52
+        align (0.52, 0.38)
         idle "images/fr2katy.webp"
         hover "images/fr2katyh.webp"
-        if katytalk == 1:
-            action Jump ("fr2katy2")
+        if not v1_katyTalk:
+            action Jump("v1_freeRoam2_katy")
         else:
-            action Jump ("fr2katy")
+            action Jump("v1_freeRoam2_katy2")
 
+    # Back - Hallway
     imagebutton:
-        yalign 1.0
-        xalign 0.5
+        align (0.5, 1.0)
         idle "images/backpool.webp"
         hover "images/backpoolh.webp"
-        action Jump ("fr2poolback")
+        action Show("v1_freeRoam2_2")
 
-screen freeroam2d(): ###camp room
+screen v1_freeRoam2_4():
+    tag v1_freeRoam2
 
     add "images/s106.webp"
 
+    # Chloe character
     imagebutton:
         yalign 1.0
         xalign 0.21
         idle "images/fr2chloe.webp"
         hover "images/fr2chloeh.webp"
-        action Jump ("fr2chloe")
+        action Show("endFreeRoamConfirm", continueLabel="v1_freeRoam2_end")
 
     imagebutton:
         yalign 1.0
         xalign 0.5
         idle "images/fr2campback.webp"
         hover "images/fr2campbackh.webp"
-        action Jump ("fr2campback")
+        action Show("v1_freeRoam2_2")
 
-screen freeroam2e(): ###stairs
+screen v1_freeRoam2_5():
+    tag v1_freeRoam2
 
     add "images/s105.webp"
 
+    # Grayson room
     imagebutton:
         yalign 1.0
         xalign 0.5
         idle "images/fr2grayson.webp"
         hover "images/fr2graysonh.webp"
-        if graysontalk == 1:
-            action Jump ("fr2grayson2")
+        if not v1_graysonTalk:
+            action Jump("v1_freeRoam2_grayson")
         else:
-            action Jump ("fr2grayson")
+            action Jump("v1_freeRoam2_grayson2")
 
     imagebutton:
         yalign 1.0
         xalign 0.5
         idle "images/fr2down.webp"
         hover "images/fr2downh.webp"
-        action Jump ("fr2down")
+        action Show("v1_freeRoam2_2")
 
-screen endfreeroam2():
-    add "images/endfr.webp"
-    text "Are you sure you want to end free roam?" style "endfree"
-    textbutton "Yes" style "endfr":
-        action Jump ("fr2end")
-        text_align 0.5
-        xalign 0.57
-        yalign 0.58
+screen costumes():
+    add "images/costumes.webp"
 
-    textbutton "No" style "endfr":
-        action Jump ("fr2dontend")
-        text_align 0.5
-        xalign 0.43
-        yalign 0.58
+    imagebutton:
+        idle "images/try.webp"
+        hover "images/tryh.webp"
+        pos (256, 802)
+        if costumeaubrey and not caughtpeekingaubrey:
+            action Jump ("try1")
+        elif not caughtpeekingpenelope:
+            action Jump ("try1p")
+                
+    imagebutton:
+        idle "images/try.webp"
+        hover "images/tryh.webp"
+        pos (738, 802)
+        if costumeaubrey and not caughtpeekingaubrey:
+            action Jump ("try2")
+        elif not caughtpeekingpenelope:
+            action Jump ("try2p")
+
+    imagebutton:
+        idle "images/try.webp"
+        hover "images/tryh.webp"
+        pos (1219, 802)
+        if costumeaubrey and not caughtpeekingaubrey:
+            action Jump ("try3")
+        elif not caughtpeekingpenelope:
+            action Jump ("try3p")
+
+    imagebutton:
+        idle "images/try.webp"
+        hover "images/buyh.webp"
+        pos (256, 935)
+        if costumeaubrey and auboutfits <= 3:
+            action Jump ("surebuy1")
+        elif costumeaubrey:
+            action Jump ("buy1")
+        elif penoutfits <= 3:
+            action Jump ("surebuy1p")
+        else:
+            action Jump ("buy1p")
+
+    imagebutton:
+        idle "images/try.webp"
+        hover "images/buyh.webp"
+        pos (738, 935)
+        if costumeaubrey and auboutfits <= 3:
+            action Jump ("surebuy2")
+        elif costumeaubrey:
+            action Jump ("buy2")
+        elif penoutfits <= 3:
+            action Jump ("surebuy2p")
+        else:
+            action Jump ("buy2p")
+
+    imagebutton:
+        idle "images/try.webp"
+        hover "images/buyh.webp"
+        pos (1219, 935)
+        if costumeaubrey and auboutfits <= 3:
+            action Jump ("surebuy3")
+        elif costumeaubrey:
+            action Jump ("buy3")
+        elif penoutfits <= 3:
+            action Jump ("surebuy3p")
+        else:
+            action Jump ("buy3p")
