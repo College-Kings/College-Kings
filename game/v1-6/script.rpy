@@ -16,7 +16,7 @@ label splashscreen:
     # Splashscreen
     scene black
     with Pause(1)
-
+dwad
     show splashone
     with dissolve
     with Pause(2)
