@@ -37,7 +37,7 @@ label v1:
 
     play music "music/m15punk.mp3"
 
-    $ name = renpy.input("What's your name?", default="Alex").strip() or "Alex"
+    $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
     $ kiwiiUsers["MC"]["username"] = name
 
     u "Hmm...?"
@@ -4261,7 +4261,7 @@ label v1_freeRoam2_end:
         def v1_reply8():
             addPoint("bro", 1)
             contact_Ryan.newMessage(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
-            contact_Ryan.addReply(_("Whatever",) v1_reply9)
+            contact_Ryan.addReply(_("Whatever"), v1_reply9)
             contact_Ryan.addReply(_("Don't you dare defend that guy"), v1_reply10)
 
         def v1_reply9():
@@ -6640,8 +6640,8 @@ label bo_bd:
             contact_Aubrey.newMessage(_("Oh wow, that's spontaneous, I like it haha.\n\nI guess come to the Chicks' house whenever you're ready and then we can go costume shopping."))
             contact_Aubrey.addReply(_("Cool, I'll be 20 mins."))
 
-        contact_Aubrey.newMessage(_("Hey,\nJosh gave me your number\n\nI hope your face is feeling better after the shit that Grayson pulled...")
-        contact_Aubrey.newMessage(_("He's not even dating Chloe and you guys didn't even do anything so I don't know what he was thinking.\n\nAnyway, do you wanna like... hang out tomorrow?")
+        contact_Aubrey.newMessage(_("Hey,\nJosh gave me your number\n\nI hope your face is feeling better after the shit that Grayson pulled..."))
+        contact_Aubrey.newMessage(_("He's not even dating Chloe and you guys didn't even do anything so I don't know what he was thinking.\n\nAnyway, do you wanna like... hang out tomorrow?"))
         contact_Aubrey.addReply(_("Wait they're not dating?"), v1_reply18)
         contact_Aubrey.addReply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v1_reply19)
 
