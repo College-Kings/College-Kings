@@ -4274,7 +4274,7 @@ label v1_freeRoam2_end:
         def v1_reply11():
             addPoint("tm", 1)
             contact_Ryan.newMessage(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
-            contact_Ryan.addReply(_("Whatever")), v1_reply9)
+            contact_Ryan.addReply(_("Whatever"), v1_reply9)
             contact_Ryan.addReply(_("Don't you dare defend that guy"), v1_reply10)
 
         contact_Ryan.newMessage(_("You okay?"), queue=False)
