@@ -4492,13 +4492,12 @@ label v1_freeRoam2_end:
 
 
         def v1_reply12():
-            setattr("meetlauren")
-            meetlauren = True
+            setattr(store, "meetlauren", True)
             addPoint("bf", 1)
             contact_Lauren.newMessage("Great, I'll see you then :)")
 
         def v1_reply13():
-            mixedfeelings = True
+            setattr(store, "mixedfeelings", True)
             if not steam:
                 renpy.show("mixedfeelings", at_list=achievementAtList)
             else:
@@ -7364,7 +7363,7 @@ label try1new:
 ######### VIKING AUBREY
 
 ############ KNIGHT AUBREY
-label try2
+label try2:
     if try2done == True:
         jump try2done
     else:
@@ -7532,7 +7531,6 @@ label try3done:
     call screen costumes
 
 label try3new:
-
     $ auboutfits += 1
 
     scene s171 # in changing room
@@ -7592,81 +7590,64 @@ label try3new:
             hide screen influenceTutorial
             $ addPoint("tm", 1)
 
-            jump by_a
+            u "Oh come on, Aubrey. I wanna see."
+
+            if kct == "popular":
+                call screen popup2
+            else:
+                au "Sorry but... I'm gonna get dressed again."
+
+
+                u "Alright, fine."
+
+                jump by_bd
+
+            label popup2:
+
+                au "Okay, fine. Just for you."
+
+                scene s175 # showing u in costume and aubrey in custome
+                with Fade (1,0,1)
+
+                pause 0.5
+
+                scene s176a # aubrey like  I told you
+                with dissolve
+
+                u "Holy shit, you weren't exaggerating. That is revealing."
+
+                scene s176
+                with dissolve
+
+                au "See what I mean now? Can I get dressed again?"
+
+                scene s176a
+                with dissolve
+
+                u "You sure you don't wanna keep this on for the rest of the day?"
+
+                scene s176b # aub laughing
+                with dissolve
+
+                au "Haha yes. I hope you got a good look, 'cause I'm changing back."
+
+                au "Also, this cowboy outfit is probably the worst thing I've ever seen anyone wear."
+
+                au "So let's get out of these outfits."
+
+                call screen costumes
 
         "Fine.":
             hide screen influenceTutorial
             $ addPoint("bf", 1)
-            $ influencetut = False
-            jump by_b
 
+            u "Alright, fine."
 
+            u "Then get dressed quickly, so that you can see my costume."
 
-    label by_a:
+            au "Yeah, just give me a minute."
 
-    u "Oh come on, Aubrey. I wanna see."
-
-    if kct == "popular":
-
-        call screen popup2
-    else:
-
-        jump by_ad
-
-    label popup2:
-
-    au "Okay, fine. Just for you."
-
-    scene s175 # showing u in costume and aubrey in custome
-    with Fade (1,0,1)
-
-    pause 0.5
-
-    scene s176a # aubrey like  I told you
-    with dissolve
-
-    u "Holy shit, you weren't exaggerating. That is revealing."
-
-    scene s176
-    with dissolve
-
-    au "See what I mean now? Can I get dressed again?"
-
-    scene s176a
-    with dissolve
-
-    u "You sure you don't wanna keep this on for the rest of the day?"
-
-    scene s176b # aub laughing
-    with dissolve
-
-    au "Haha yes. I hope you got a good look, 'cause I'm changing back."
-
-    au "Also, this cowboy outfit is probably the worst thing I've ever seen anyone wear."
-
-    au "So let's get out of these outfits."
-
-    call screen costumes
-
-
-    label by_ad:
-
-    au "Sorry but... I'm gonna get dressed again."
-
-
-    u "Alright, fine."
-
-    jump by_bd
-
-    label by_b:
-
-    u "Alright, fine."
-
-    u "Then get dressed quickly, so that you can see my costume."
-
-    au "Yeah, just give me a minute."
-
-    label by_bd:
+label by_bd:
     scene s173 # showing u in costume and aubrey in regular clothes
     with Fade (1,0,1)
 
@@ -7692,38 +7673,26 @@ label try3new:
     call screen costumes
 
 ######### COWBOY AUBREY
+label surebuy1:
+    call screen surebuy1
 
+label surebuy2:
+    call screen surebuy2
 
+label surebuy3:
+    call screen surebuy3
 
-    label surebuy1:
-        call screen surebuy1
+label surebuy1p:
+    call screen surebuy1p
 
-    label surebuy2:
-        call screen surebuy2
+label surebuy2p:
+    call screen surebuy2p
 
-    label surebuy3:
-        call screen surebuy3
-
-    label surebuy1p:
-        call screen surebuy1p
-
-    label surebuy2p:
-        call screen surebuy2p
-
-    label surebuy3p:
-        call screen surebuy3p
-
-
-
-
-
+label surebuy3p:
+    call screen surebuy3p
 
 ######################SHOPPING WITH PENELOPE shop2
-
-    label cspe:
-
-
-
+label cspe:
     scene s158v2
     with Fade (1,0,1)
 
@@ -7759,13 +7728,10 @@ label try3new:
 
     ev "If you want, I can check if we still have some in the back, but it'll be a limited selection."
 
-
     scene s159dv2
     with dissolve
 
     pe "Yes, that would be amazing. We'd really appreciate it, thank you."
-
-
 
     scene s161v2 # in changing rooms room
     with Fade (1,0,1)
@@ -7795,24 +7761,20 @@ label try3new:
     pe "I'm actually really excited to buy a costume."
     pe "At my old college we weren't even allowed to wear costumes on Halloween, because of the dress code."
 
-
     call screen costumes # choice between 3 costumes button try and button buy below, every time you try, Aubrey comes out in a different outfit, you can peek while changing
 
     # chnace to flirt with ev
     # chance to get caught when risky peeking
 
-
-
 ############ VIKING PENELOPE shop3
-    label try1p: # viking
-
-    if try4done == True:
+label try1p: # viking
+    if try4done:
         jump try4done
     else:
         $ try4done = True
         jump try4new
 
-    label try4done:
+label try4done:
     scene s163
     with Fade (1,0,1)
 
@@ -7823,68 +7785,45 @@ label try3new:
     call screen costumes
 
 
-    label try4new:
+label try4new:
+    $ penoutfits += 1
 
-        $ penoutfits += 1
+    scene s163 # in changing room
+    with Fade (1,0,1)
 
-        scene s163 # in changing room
-        with Fade (1,0,1)
+    u "(Alright, rocking the Viking look.)"
 
-        u "(Alright, rocking the Viking look.)"
+    u "(I wonder what Penelope is changing in to.)"
 
-        u "(I wonder what Penelope is changing in to.)"
+    menu:
+        "Peek":
+            $ addPoint("tm", 1)
 
-        menu:
+            scene s183 # penelope changing bad view
+            with dissolve
 
+            u "(Holy shit, if I could just stick my head through a bit further, I could get a way better view.)"
 
+            menu:
+                "Risk it":
+                    $ caughtpeekingpenelope = renpy.random.choice([True, False])
 
-            "Peek":
+                    if not caughtpeekingpenelope:
+                        scene s183a # pen changing good view
+                        with dissolve
 
-                $ addPoint("tm", 1)
-                jump cc_a
+                        u "(Oh my god, her ass is so nice.)"
 
-            "Don't peek":
+                        u "(I should stop peeking now, or I'll get caught.)"
 
-                $ addPoint("bf", 1)
-                jump cc_b
+                    else:
+                        jump caughtd
 
+                "Stop peeking":
+                    pass
 
-    label cc_a:
-
-        scene s183 # penelope changing bad view
-        with dissolve
-
-        u "(Holy shit, if I could just stick my head through a bit further, I could get a way better view.)"
-
-        menu:
-
-
-
-            "Risk it":
-
-                $ caughtpeekingpenelope = renpy.random.choice([True, False])
-                if caughtpeekingpenelope == False:
-                    jump cd_a
-                else:
-                    jump caughtd
-
-            "Stop peeking":
-
-                jump cd_b
-
-    label cd_a:
-        scene s183a # pen changing good view
-        with dissolve
-
-        u "(Oh my god, her ass is so nice.)"
-
-        u "(I should stop peeking now, or I'll get caught.)"
-
-        jump cd_ad
-
-    label cc_b:
-    label cd_b:
-    label cd_ad:
+        "Don't peek":
+            $ addPoint("bf", 1)
 
     scene s163
     with dissolve
@@ -7922,79 +7861,62 @@ label try3new:
     with dissolve
     pe "So uhm... what do you think of my outfit?"
 
-
     menu:
-
-
         "You look beautiful.":
-
             $ addPoint("bf", 1)
-            jump ce_a
+
+            scene s179a
+            with dissolve
+
+            u "You look beautiful. Do you like it?"
+
+            scene s179b # romantic smile
+            with dissolve
+
+            pe "Awww, thank you."
+
+            pe "Yeah, it's kinda cool."
+
+            if penoutfits < 3:
+                pe "Should we try some other outfits?"
+
+            else:
+                pe "Are you ready to buy an outfit?"
 
         "I guess it's nice":
-
             $ addPoint("bro", 1)
-            jump ce_b
 
-    label ce_a:
-        scene s179a
-        with dissolve
+            scene s179a
+            with dissolve
 
-        u "You look beautiful. Do you like it?"
+            u "I guess it's kinda nice. What do you think"
 
-        scene s179b # romantic smile
-        with dissolve
+            scene s179b # romantic smile
+            with dissolve
 
-        pe "Awww, thank you."
+            pe "I like it, but I'm not sure."
 
-        pe "Yeah, it's kinda cool."
+            if penoutfits < 3:
+                pe "Should we try some other outfits?"
 
-        if penoutfits < 3:
+            else:
+                pe "Are you ready to buy an outfit?"
 
-            pe "Should we try some other outfits?"
-
-        else:
-
-
-            pe "Are you ready to buy an outfit?"
-
-        call screen costumes
-
-    label ce_b:
-        scene s179a
-        with dissolve
-
-        u "I guess it's kinda nice. What do you think"
-
-        scene s179b # romantic smile
-        with dissolve
-
-        pe "I like it, but I'm not sure."
-
-        if penoutfits < 3:
-
-            pe "Should we try some other outfits?"
-
-        else:
-
-
-            pe "Are you ready to buy an outfit?"
-
-        call screen costumes
+    call screen costumes
 
 
 ######### VIKING PEN
 
 ############ KNIGHT PEN shop4
-    label try2p:
+label try2p:
 
-    if try5done == True:
+    if try5done:
         jump try5done
     else:
         $ try5done = True
         jump try5new
 
-    label try5done:
+label try5done:
     scene s167
     with Fade (1,0,1)
 
@@ -8005,70 +7927,44 @@ label try3new:
     call screen costumes
 
 
-    label try5new:
+label try5new:
+    $ penoutfits += 1
 
-        $ penoutfits += 1
+    scene s167 # in changing room
+    with Fade (1,0,1)
 
-        scene s167 # in changing room
-        with Fade (1,0,1)
+    u "(I definitely do not fit into these shoulder pads.)"
 
-        u "(I definitely do not fit into these shoulder pads.)"
+    u "(Penelope is changing right next to me...)"
 
-        u "(Penelope is changing right next to me...)"
+    menu:
+        "Peek":
+            $ addPoint("tm", 1)
 
+            scene s183 # pen changing bad view
+            with dissolve
 
-        menu:
+            u "(Wow... if I could just stick my head through a bit further, I could get a way better view."
 
+            menu:
+                "Risk it":
+                    $ caughtpeekingpenelope = renpy.random.choice([True, False])
 
+                    if not caughtpeekingpenelope:
+                        scene s183a
+                        with dissolve
 
-            "Peek":
+                        u "(Damn, what I wouldn't give to touch her ass right now.)"
 
-                $ addPoint("tm", 1)
-                jump cf_a
+                        u "(I should stop peeking now, or I risk getting caught.)"
+                    else:
+                        jump caughte
 
-            "Don't peek":
+                "Stop peeking":
+                    pass
 
-                $ addPoint("bf", 1)
-                jump cf_b
-
-
-    label cf_a:
-
-        scene s183 # pen changing bad view
-        with dissolve
-
-        u "(Wow... if I could just stick my head through a bit further, I could get a way better view."
-
-
-        menu:
-
-
-
-            "Risk it":
-
-                $ caughtpeekingpenelope = renpy.random.choice([True, False])
-                if caughtpeekingpenelope == False:
-                    jump cg_a
-                else:
-                    jump caughte
-
-            "Stop peeking":
-
-                jump cg_b
-
-    label cg_a:
-        scene s183a
-        with dissolve
-
-        u "(Damn, what I wouldn't give to touch her ass right now.)"
-
-        u "(I should stop peeking now, or I risk getting caught.)"
-
-        jump cg_ad
-
-    label cf_b:
-    label cg_b:
-    label cg_ad:
+        "Don't peek":
+            $ addPoint("bf", 1)
 
     scene s167
     with dissolve
