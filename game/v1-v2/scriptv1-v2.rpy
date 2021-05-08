@@ -149,7 +149,7 @@ label v1:
                 achievement.grant("no_hard_feelings")
                 achievement.sync()
 
-            contact_Emily.newMessage("Cool :)")
+            contact_Emily.newMessage(_("Cool :)"))
 
         def v1_reply2():
             setattr(store, "openwound", True)
@@ -160,11 +160,11 @@ label v1:
                 achievement.sync()
 
             addPoint("tm", 1)
-            contact_Emily.newMessage("Ugh :/")
+            contact_Emily.newMessage(_("Ugh :/"))
 
-        contact_Emily.newMessage("Hey...\nI know we haven’t talked much after we broke up, but I just wanted to let you know that I didn’t get into Stanford, so I’ll be going to San Vallejo as well.\nGuess I’ll see you there. :)", queue=False)
-        contact_Emily.addReply("Yeah... I’ll see you there.", v1_reply1)
-        contact_Emily.addReply("You cheated on me.\nGo to hell!", v1_reply2)
+        contact_Emily.newMessage(_("Hey...\nI know we haven’t talked much after we broke up, but I just wanted to let you know that I didn’t get into Stanford, so I’ll be going to San Vallejo as well.\nGuess I’ll see you there. :)"), queue=False)
+        contact_Emily.addReply(_("Yeah... I’ll see you there."), v1_reply1)
+        contact_Emily.addReply(_("You cheated on me.\nGo to hell!"), v1_reply2)
 
     show screen phoneTutorial
     call screen phone
@@ -872,9 +872,9 @@ label v1:
         def v1_reply4():
             addPoint("bro", 1)
 
-        contact_Julia.newMessage("Hey honey,\nenjoy your time in college.\nStay safe and don't forget to visit me.\nLove you", queue=False)
-        contact_Julia.addReply("Love you too.", v1_reply3)
-        contact_Julia.addReply("Thanks, Julia :)", v1_reply4)
+        contact_Julia.newMessage(_("Hey honey,\nenjoy your time in college.\nStay safe and don't forget to visit me.\nLove you"), queue=False)
+        contact_Julia.addReply(_("Love you too."), v1_reply3)
+        contact_Julia.addReply(_("Thanks, Julia :)"), v1_reply4)
 
     play sound "sounds/vibrate.mp3"
     
@@ -1429,12 +1429,12 @@ label efra:
         def v1_reply5():
             addPoint("bf", 1)
 
-        contact_Lauren.addReply("Hey Lauren, would you want to hang out with me and my friends tonight?")
-        contact_Lauren.newMessage("Yeah sounds good :) Where do you wanna meet?")
-        contact_Lauren.addReply("Just come to dorm 109 at 8")
-        contact_Lauren.newMessage("Okay, will do")
-        contact_Lauren.addReply("See you later, cutie", v1_reply5)
-        contact_Lauren.addReply("Cool")
+        contact_Lauren.addReply(_("Hey Lauren, would you want to hang out with me and my friends tonight?"))
+        contact_Lauren.newMessage(_("Yeah sounds good :) Where do you wanna meet?"))
+        contact_Lauren.addReply(_("Just come to dorm 109 at 8"))
+        contact_Lauren.newMessage(_("Okay, will do"))
+        contact_Lauren.addReply(_("See you later, cutie"), v1_reply5)
+        contact_Lauren.addReply(_("Cool"))
 
 
     label v1_phoneCheck1:
@@ -2908,12 +2908,12 @@ label at_bd:
     scene s96c
     stop music fadeout 2.0
     play sound "sounds/vibrate.mp3"
-
-    $ contact_Ryan.newMessage("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???", queue=False)
-    $ contact_Ryan.addReply("Alright, but I'll only stay for a few hours.")
-    $ contact_Ryan.newMessage("Haha, trust me, you're not gonna want to leave once you see all the hot chicks there.")
-    $ contact_Ryan.newMessage("Just meet me in front of the Apes' frat house at 9.")
-    $ contact_Ryan.addReply("Okay, will do.")
+    python:
+        contact_Ryan.newMessage(_("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???"), queue=False)
+        contact_Ryan.addReply(_("Alright, but I'll only stay for a few hours."))
+        contact_Ryan.newMessage(_("Haha, trust me, you're not gonna want to leave once you see all the hot chicks there."))
+        contact_Ryan.newMessage(_("Just meet me in front of the Apes' frat house at 9."))
+        contact_Ryan.addReply(_("Okay, will do."))
 
     label repeata:
         call screen phone
@@ -3437,17 +3437,17 @@ label v1_freeRoam2_camp:
         python:
             def v1_reply6():
                 addPoint("bf", 1)
-                contact_Lauren.newMessage("Cool :)")
+                contact_Lauren.newMessage(_("Cool :)"))
 
             def v1_reply7():
                 addPoint("tm", 1)
-                contact_Lauren.newMessage("Idk, it's just feels kinda weird now. Can we please just talk tomorrow?")
-                contact_Lauren.addReply("Fine")
-                contact_Lauren.newMessage(":)")
+                contact_Lauren.newMessage(_("Idk, it's just feels kinda weird now. Can we please just talk tomorrow?"))
+                contact_Lauren.addReply(_("Fine"))
+                contact_Lauren.newMessage(_(":)"))
 
-            contact_Lauren.newMessage("Hey :)\nSorry about today.\n\nCan we talk tomorrow?", queue=False)
-            contact_Lauren.addReply("Yeah, sure.", v1_reply6)
-            contact_Lauren.addReply("What is there to talk about?", v1_reply7)
+            contact_Lauren.newMessage(_("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"), queue=False)
+            contact_Lauren.addReply(_("Yeah, sure.", v1_reply6))
+            contact_Lauren.addReply(_("What is there to talk about?"), v1_reply7)
 
         call screen v1_freeRoam2_4
 
@@ -4260,32 +4260,32 @@ label v1_freeRoam2_end:
     python:
         def v1_reply8():
             addPoint("bro", 1)
-            contact_Ryan.newMessage("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe")
-            contact_Ryan.addReply("Whatever", v1_reply9)
-            contact_Ryan.addReply("Don't you dare defend that guy", v1_reply10)
+            contact_Ryan.newMessage(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
+            contact_Ryan.addReply(_("Whatever",) v1_reply9)
+            contact_Ryan.addReply(_("Don't you dare defend that guy"), v1_reply10)
 
         def v1_reply9():
             addPoint("bro", 1)
 
         def v1_reply10():
             addPoint("tm", 1)
-            contact_Ryan.newMessage("Sorry...")
+            contact_Ryan.newMessage(_("Sorry..."))
 
         def v1_reply11():
             addPoint("tm", 1)
-            contact_Ryan.newMessage("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe")
-            contact_Ryan.addReply("Whatever", v1_reply9)
-            contact_Ryan.addReply("Don't you dare defend that guy", v1_reply10)
+            contact_Ryan.newMessage(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
+            contact_Ryan.addReply(_("Whatever")), v1_reply9)
+            contact_Ryan.addReply(_("Don't you dare defend that guy"), v1_reply10)
 
-        contact_Ryan.newMessage("You okay?", queue=False)
-        contact_Ryan.addReply("I'm fine", v1_reply8)
-        contact_Ryan.addReply("No, wtf was that?! Fuck Grayson and fuck the Apes", "ryrep4b")
+        contact_Ryan.newMessage(_("You okay?"), queue=False)
+        contact_Ryan.addReply(_("I'm fine"), v1_reply8)
+        contact_Ryan.addReply(_("No, wtf was that?! Fuck Grayson and fuck the Apes"), v1_reply11)
 
 
         def v1_reply12():
             setattr(store, "meetlauren", True)
             addPoint("bf", 1)
-            contact_Lauren.newMessage("Great, I'll see you then :)")
+            contact_Lauren.newMessage(_("Great, I'll see you then :)"))
 
         def v1_reply13():
             setattr(store, "mixedfeelings", True)
@@ -4296,18 +4296,18 @@ label v1_freeRoam2_end:
                 achievement.sync()
 
             addPoint("tm", 1)
-            contact_Lauren.newMessage("Is everything okay?")
-            contact_Lauren.addReply("Yeah, I'm fine.")
-            contact_Lauren.newMessage("Okay...")
+            contact_Lauren.newMessage(_("Is everything okay?"))
+            contact_Lauren.addReply(_("Yeah, I'm fine."))
+            contact_Lauren.newMessage(_("Okay..."))
 
         if contact_Lauren.getReplies():
-            contact_Lauren.newMessage("Hello?? Can we please talk today?", queue=False)
-            contact_Lauren.addReply("Yeah, SV cafe in 20 mins?", v1_reply12)
-            contact_Lauren.addReply("Sorry, I can't", v1_reply13)
+            contact_Lauren.newMessage(_("Hello?? Can we please talk today?"), queue=False)
+            contact_Lauren.addReply(_("Yeah, SV cafe in 20 mins?"), v1_reply12)
+            contact_Lauren.addReply(_("Sorry, I can't"), v1_reply13)
         else:
-            contact_Lauren.newMessage("Are we still on for today? :)", queue=False)
-            contact_Lauren.addReply("Yeah, SV cafe in 20 mins?", v1_reply12)
-            contact_Lauren.addReply("Sorry, I can't", v1_reply13)
+            contact_Lauren.newMessage(_("Are we still on for today? :)"), queue=False)
+            contact_Lauren.addReply(_("Yeah, SV cafe in 20 mins?"), v1_reply12)
+            contact_Lauren.addReply(_("Sorry, I can't"), v1_reply13)
 
     " "
 
@@ -5638,31 +5638,31 @@ label history2:
     python:
         def v1_reply14():
             addPoint("bro", 1)
-            contact_Josh.newMessage("It's fine, you go get her.")
+            contact_Josh.newMessage(_("It's fine, you go get her."))
 
         def v1_reply15():
             addPoint("bf", 1)
-            contact_Josh.newMessage("Nah, you don't want a bitch like her.")
-            contact_Josh.addReply("Yeah, I guess you're right.", v1_reply16)
-            contact_Josh.addReply("Dude, what the fuck?!", v1_reply17)
+            contact_Josh.newMessage(_("Nah, you don't want a bitch like her."))
+            contact_Josh.addReply(_("Yeah, I guess you're right."), v1_reply16)
+            contact_Josh.addReply(_("Dude, what the fuck?!"), v1_reply17)
 
         def v1_reply16():
             addPoint("bro", 1)
-            contact_Josh.newMessage("Hahaha, I'm just kidding, yo.")
-            contact_Josh.newMessage("Of course I gave her your number.")
-            contact_Josh.addReply("Damn, you got me.")
+            contact_Josh.newMessage(_("Hahaha, I'm just kidding, yo."))
+            contact_Josh.newMessage(_("Of course I gave her your number."))
+            contact_Josh.addReply(_("Damn, you got me."))
 
         def v1_reply17():
             addPoint("tm", 1)
-            contact_Josh.newMessage("Hahaha, I'm just kidding, yo.")
-            contact_Josh.newMessage("Of course I gave her your number.")
-            contact_Josh.addReply("Damn, you got me.")
+            contact_Josh.newMessage(_("Hahaha, I'm just kidding, yo."))
+            contact_Josh.newMessage(_("Of course I gave her your number."))
+            contact_Josh.addReply(_("Damn, you got me."))
 
-        contact_Josh.newMessage("Dude, I talked to this Aubrey chick the entire night and guess who's number she wanted...", queue=False)
-        contact_Josh.newMessage("YOURS")
-        contact_Josh.newMessage("What a bitch...")
-        contact_Josh.addReply("Sorry, man. She doesn't know what she's missing.", v1_reply14)
-        contact_Josh.addReply("Sooo, did you give it to her?", v1_reply15)
+        contact_Josh.newMessage(_("Dude, I talked to this Aubrey chick the entire night and guess who's number she wanted..."), queue=False)
+        contact_Josh.newMessage(_("YOURS"))
+        contact_Josh.newMessage(_("What a bitch..."))
+        contact_Josh.addReply(_("Sorry, man. She doesn't know what she's missing."), v1_reply14)
+        contact_Josh.addReply(_("Sooo, did you give it to her?"), v1_reply15)
 
     scene s133
     with dissolve
@@ -6629,21 +6629,21 @@ label bo_bd:
     python:
         def v1_reply18():
             addPoint("bro", 1)
-            contact_Aubrey.newMessage("Yeah, I mean they had a thing a while ago but she broke it off 'cause he lied about some shit.")
-            contact_Aubrey.newMessage("So... tomorrow?")
-            contact_Aubrey.addReply("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume.", v1_reply19)
+            contact_Aubrey.newMessage(_("Yeah, I mean they had a thing a while ago but she broke it off 'cause he lied about some shit."))
+            contact_Aubrey.newMessage(_("So... tomorrow?"))
+            contact_Aubrey.addReply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v1_reply19)
 
         def v1_reply19():
             addPoint("bf", 1)
-            contact_Aubrey.newMessage("I've got dance practice tonight :(")
-            contact_Aubrey.addReply("I'm not talking tonight, I can pick you up right now.")
-            contact_Aubrey.newMessage("Oh wow, that's spontaneous, I like it haha.\n\nI guess come to the Chicks' house whenever you're ready and then we can go costume shopping.")
-            contact_Aubrey.addReply("Cool, I'll be 20 mins.")
+            contact_Aubrey.newMessage(_("I've got dance practice tonight :("))
+            contact_Aubrey.addReply(_("I'm not talking tonight, I can pick you up right now."))
+            contact_Aubrey.newMessage(_("Oh wow, that's spontaneous, I like it haha.\n\nI guess come to the Chicks' house whenever you're ready and then we can go costume shopping."))
+            contact_Aubrey.addReply(_("Cool, I'll be 20 mins."))
 
-        contact_Aubrey.newMessage("Hey,\nJosh gave me your number\n\nI hope your face is feeling better after the shit that Grayson pulled...")
-        contact_Aubrey.newMessage("He's not even dating Chloe and you guys didn't even do anything so I don't know what he was thinking.\n\nAnyway, do you wanna like... hang out tomorrow?")
-        contact_Aubrey.addReply("Wait they're not dating?", v1_reply18)
-        contact_Aubrey.addReply("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume.", v1_reply19)
+        contact_Aubrey.newMessage(_("Hey,\nJosh gave me your number\n\nI hope your face is feeling better after the shit that Grayson pulled...")
+        contact_Aubrey.newMessage(_("He's not even dating Chloe and you guys didn't even do anything so I don't know what he was thinking.\n\nAnyway, do you wanna like... hang out tomorrow?")
+        contact_Aubrey.addReply(_("Wait they're not dating?"), v1_reply18)
+        contact_Aubrey.addReply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v1_reply19)
 
     u "(Oh, I just got a message.)"
 
@@ -6813,16 +6813,16 @@ label bo_bd:
         def v1_reply20():
             setattr(store, "costumeaubrey", True)
             addPoint("bf", 1)
-            contact_Aubrey.newMessage("Good :)")
+            contact_Aubrey.newMessage(_("Good :)"))
 
         def v1_reply21():
             setattr(store, "costumeaubrey", False)
             addPoint("tm", 1)
-            contact_Aubrey.newMessage("Oh, okay. Guess we'll have to postpone the costume buying.")
+            contact_Aubrey.newMessage(_("Oh, okay. Guess we'll have to postpone the costume buying."))
 
-        contact_Aubrey.newMessage("Hey, are you nearby?")
-        contact_Aubrey.addReply("Yeah, I'm just on my way, I'll be right there.", v1_reply20)
-        contact_Aubrey.addReply("Sorry, something came up and I can't make it.", v1_reply21)
+        contact_Aubrey.newMessage(_("Hey, are you nearby?"))
+        contact_Aubrey.addReply(_("Yeah, I'm just on my way, I'll be right there."), v1_reply20)
+        contact_Aubrey.addReply(_("Sorry, something came up and I can't make it."), v1_reply21)
 
     u "(Fuck, I totally forgot about Aubrey. I guess it's time to make a decision.)"
 
