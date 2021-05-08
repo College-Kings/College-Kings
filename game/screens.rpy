@@ -3021,7 +3021,7 @@ screen surebuy1():
         yalign 0.58
 
     textbutton "No" style "endfr":
-        action Jump ("gocostumes1")
+        action Jump ("v1_gocostumes")
         text_align 0.5
         xalign 0.43
         yalign 0.58
@@ -3036,7 +3036,7 @@ screen surebuy2():
         yalign 0.58
 
     textbutton "No" style "endfr":
-        action Jump ("gocostumes2")
+        action Jump ("v1_gocostumes")
         text_align 0.5
         xalign 0.43
         yalign 0.58
@@ -3051,7 +3051,7 @@ screen surebuy3():
         yalign 0.58
 
     textbutton "No" style "endfr":
-        action Jump ("gocostumes3")
+        action Jump ("v1_gocostumes")
         text_align 0.5
         xalign 0.43
         yalign 0.58
@@ -3066,7 +3066,7 @@ screen surebuy1p():
         yalign 0.58
 
     textbutton "No" style "endfr":
-        action Jump ("gocostumes4")
+        action Jump ("v1_gocostumes")
         text_align 0.5
         xalign 0.43
         yalign 0.58
@@ -3081,7 +3081,7 @@ screen surebuy2p():
         yalign 0.58
 
     textbutton "No" style "endfr":
-        action Jump ("gocostumes5")
+        action Jump ("v1_gocostumes")
         text_align 0.5
         xalign 0.43
         yalign 0.58
@@ -3096,7 +3096,7 @@ screen surebuy3p():
         yalign 0.58
 
     textbutton "No" style "endfr":
-        action Jump ("gocostumes6")
+        action Jump ("v1_gocostumes")
         text_align 0.5
         xalign 0.43
         yalign 0.58

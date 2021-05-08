@@ -29,7 +29,7 @@ label v10start:
         scene v10sta3b # FPP. Same camera as v10sta3, Imre and ryan grappling each other, sebastian pulling away imre, cameron pulling away ryan, angry faces, imre/ryan/cameron closed mouths, Sebastian mouth open.
         with dissolve 
     
-        Ryan "No! This is my fight! Don't fucking interfere!"
+        ry "No! This is my fight! Don't fucking interfere!"
 
         scene v10sta3c # FPP. Same camera as v10sta3, Show Cameron smacks Ryan on the back of the head, cameron angry face, ryan slight angry face, cameron mouth open, ryan mouth closed
         with dissolve
