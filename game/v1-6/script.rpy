@@ -28,7 +28,7 @@ label splashscreen:
     show splashthree
     with dissolve
     with Pause(2)
-
+    # Test 2
     scene black
     with dissolve
     with Pause(1)
