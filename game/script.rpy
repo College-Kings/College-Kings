@@ -35,6 +35,16 @@ label splashscreen:
 
     return
 
+# The game starts here.
+label start:
+    # Get Animation/Transform List
+    show nohardfeelings at achievementShow
+    $ achievementAtList = renpy.get_at_list("nohardfeelings")
+    hide nohardfeelings
+
+    call screen realmode
+    show screen phoneIcon
+
 label end_credits:
     stop music fadeout 2.0
     play music "music/vocal.mp3"
