@@ -614,8 +614,6 @@ label imrecond: # Meet Chloe
 
             cl "I'll be right back."
 
-            jump fo_ad
-
         "You should get that.":
             $ addPoint("bro", 1)
 
