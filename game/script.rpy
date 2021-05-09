@@ -34,3 +34,19 @@ label splashscreen:
     with Pause(1)
 
     return
+
+label end_credits:
+    stop music fadeout 2.0
+    play music "music/vocal.mp3"
+
+    if not steam:
+        show screen getaccess
+        with dissolve
+        " "
+        hide screen getaccess
+
+    show credits:
+        ypos 50
+        xalign 0.5
+
+    call screen thx

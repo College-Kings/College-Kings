@@ -1,91 +1,3 @@
-label amrep3a:
-$ addPoint("bro", 1)
-$ contact_Amber.newMessage("Oh really? How are you gonna do that?")
-$ contact_Amber.addReply("I give some world-class massages", "amrep4a")
-$ contact_Amber.addReply("I'll stay longer next time", "amrep4b")
-call screen messager(contact_Amber)
-
-label amrep3b:
-$ contact_Amber.newMessage("Oh okay, hope everything's okay xx")
-$ contact_Amber.addReply("Yeah, it's all good.", "amrep5a")
-call screen messager(contact_Amber)
-
-label amrep4a:
-$ addPoint("tm", 1)
-$ contact_Amber.newMessage("That does sound enticing ;)")
-
-call screen messager(contact_Amber)
-
-label amrep4b:
-$ contact_Amber.newMessage("Deal xx")
-call screen messager(contact_Amber)
-
-label amrep5a:
-$ contact_Amber.newMessage("Deal xx")
-call screen messager(contact_Amber)
-
-label amrep3aa:
-$ addPoint("bro", 1)
-$ contact_Amber.newMessage("Oh wow, I was just checking. :P")
-$ contact_Amber.addReply("Don't worry, you'll see me soon", "amrep4aa") # Edited
-$ contact_Amber.addReply("Haha, I'm fine.", "amrep4ba")
-call screen messager(contact_Amber)
-
-label amrep3ba:
-$ contact_Amber.newMessage("Oh okay, hope you're good xx")
-$ contact_Amber.addReply("Yeah, no worries", "amrep5aa")
-call screen messager(contact_Amber)
-
-label amrep4aa:
-$ addPoint("tm", 1)
-$ contact_Amber.newMessage("Was hoping xx")
-
-call screen messager(contact_Amber)
-
-label amrep4ba:
-$ contact_Amber.newMessage("That's good xx")
-call screen messager(contact_Amber)
-
-label amrep5aa:
-$ contact_Amber.newMessage("That's good xx")
-call screen messager(contact_Amber)
-
-label amrep3ab:
-$ addPoint("bro", 1)
-$ contact_Amber.newMessage("Oh shut up, I was just checking in")
-$ contact_Amber.addReply("Don't worry, you'll see me again", "amrep4ab")
-$ contact_Amber.addReply("Haha, I'm fine", "amrep4bb")
-call screen messager(contact_Amber)
-
-label amrep3bb:
-$ contact_Amber.newMessage("Oh okay, hope you're good xx")
-$ contact_Amber.addReply("Yeah, no worries", "amrep5ab")
-call screen messager(contact_Amber)
-
-label amrep4ab:
-$ addPoint("tm", 1)
-$ contact_Amber.newMessage("Was hoping xx")
-
-call screen messager(contact_Amber)
-
-label amrep4bb:
-$ contact_Amber.newMessage("That's good xx")
-call screen messager(contact_Amber)
-
-label amrep5ab:
-$ contact_Amber.newMessage("That's good xx")
-call screen messager(contact_Amber)
-
-label larep13a:
-$ larep13 = 1
-$ contact_Lauren.newMessage("Great :) Meet me at our economics' classroom.")
-call screen messager(contact_Lauren)
-
-label amrep8a:
-$ contact_Amber.newMessage("Go somewhere where you're completely alone xx")
-$ contact_Amber.newMessage("I got a surprise for you ;)")
-jump phoneaa
-
 label v5start:
     scene s373 # nora approaching
     with dissolve
@@ -94,153 +6,120 @@ label v5start:
 
     menu:
         "It's Chloe.":
+            scene s374a # nora close up questioning
+            with dissolve
 
-            jump ev_a
+            u "*Drunk* It's Chloe... I just- I just wanted to talk to her..."
+
+            u "*Drunk* And now she's all mad and I don't even know what happened."
+
+            scene s374c2 # nora thinking mouth close
+
+            no "Hmmm..."
+
+            scene s374b # mouth open
+            with dissolve
+
+            no "Chloe can be a bit overdramatic sometimes, you know."
+
+            no "Maybe she'll calm down by tomorrow."
+
+            scene s374c
+            with dissolve
+
+            u "*Drunk* Right..."
+
+            scene s374b
+            with dissolve
+
+            no "Hey, it's none of my business, but... what did you guys talk about that made you wanna punch a wall after?"
+
+            menu:
+                "Tell her":
+                    scene s374c
+                    with dissolve
+
+                    u "*Drunk* My uhm, my friend, he- he said that Chloe did some shady shit in the past and I just had to find out the truth!"
+
+                    scene s374d# nora slight laugh, cocky
+                    with dissolve
+
+                    no "And what did you find out?"
+
+                    scene s374e
+                    with dissolve
+
+                    u "*Drunk* Nothing! I think all I did was ruin our relationship..."
+
+                    scene s374d
+                    with dissolve
+
+                    no "Yeah, that sounds about right."
+
+                    scene s374e
+                    with dissolve
+
+                    u "*Drunk* What- What do you mean?"
+
+                    scene s374b
+                    with dissolve
+
+                    no "Dude, you're drunk, upset and don't even know the whole story. What did you think was gonna happen when you talk to her?"
+
+                    scene s374c
+                    with dissolve
+
+                    u "*Drunk* I don't know..."
+
+                    u "*Drunk* What do you mean the whole story?"
+
+                    scene s374d
+                    with dissolve
+
+                    no "It's late, I really don't wanna get into it. But hey, let me know how your little love story ends."
+
+                    no "Night, [name]."
+
+                    scene s374e
+                    with dissolve
+
+                    u "*Drunk* Night..."
+
+                "Say you gotta go":
+                    scene s374c
+                    with dissolve
+
+                    u "*Drunk* Uhhh... nothing. It's not important."
+
+                    u "*Drunk* I should uhm... probably go home now, it's late."
+
+                    scene s374d
+                    with dissolve
+
+                    no "Alright, well let me know how your little love story ends."
+
+                    no "Night, [name]."
+
+                    scene s374c
+                    with dissolve
+
+                    u "*Drunk* Night..."
 
         "It's nothing.":
+            scene s374a
+            with dissolve
 
-            jump ev_b
+            u "*Drunk* It's- it's nothing. I gotta go, I'll see you around, Nora."
 
-    label ev_a:
+            scene s374b
+            with dissolve
 
-    scene s374a # nora close up questioning
-    with dissolve
+            no "Alright, well let's hope you and our house don't get into another fight in the future."
 
-    u "*Drunk* It's Chloe... I just- I just wanted to talk to her..."
+            scene s374c
+            with dissolve
 
-    u "*Drunk* And now she's all mad and I don't even know what happened."
-
-    scene s374c2 # nora thinking mouth close
-
-    no "Hmmm..."
-
-    scene s374b # mouth open
-    with dissolve
-
-
-    no "Chloe can be a bit overdramatic sometimes, you know."
-
-    no "Maybe she'll calm down by tomorrow."
-
-
-    scene s374c
-    with dissolve
-
-    u "*Drunk* Right..."
-
-    scene s374b
-    with dissolve
-
-    no "Hey, it's none of my business, but... what did you guys talk about that made you wanna punch a wall after?"
-
-    menu:
-
-
-
-        "Tell her":
-
-            jump ew_a
-
-        "Say you gotta go":
-
-            jump ew_b
-
-    label ew_a:
-
-    scene s374c
-    with dissolve
-
-    u "*Drunk* My uhm, my friend, he- he said that Chloe did some shady shit in the past and I just had to find out the truth!"
-
-    scene s374d# nora slight laugh, cocky
-    with dissolve
-
-    no "And what did you find out?"
-
-    scene s374e
-    with dissolve
-
-    u "*Drunk* Nothing! I think all I did was ruin our relationship..."
-
-    scene s374d
-    with dissolve
-
-    no "Yeah, that sounds about right."
-
-    scene s374e
-    with dissolve
-
-    u "*Drunk* What- What do you mean?"
-
-    scene s374b
-    with dissolve
-
-    no "Dude, you're drunk, upset and don't even know the whole story. What did you think was gonna happen when you talk to her?"
-
-    scene s374c
-    with dissolve
-
-    u "*Drunk* I don't know..."
-
-    u "*Drunk* What do you mean the whole story?"
-
-    scene s374d
-    with dissolve
-
-    no "It's late, I really don't wanna get into it. But hey, let me know how your little love story ends."
-
-    no "Night, [name]."
-
-    scene s374e
-    with dissolve
-
-    u "*Drunk* Night..."
-
-    jump ew_ad
-
-    label ew_b:
-
-    scene s374c
-    with dissolve
-
-    u "*Drunk* Uhhh... nothing. It's not important."
-
-    u "*Drunk* I should uhm... probably go home now, it's late."
-
-    scene s374d
-    with dissolve
-
-    no "Alright, well let me know how your little love story ends."
-
-    no "Night, [name]."
-
-    scene s374c
-    with dissolve
-
-    u "*Drunk* Night..."
-
-    jump ev_bd
-
-    label ev_b:
-
-    scene s374a
-    with dissolve
-
-    u "*Drunk* It's- it's nothing. I gotta go, I'll see you around, Nora."
-
-    scene s374b
-    with dissolve
-
-    no "Alright, well let's hope you and our house don't get into another fight in the future."
-
-    scene s374c
-    with dissolve
-
-    u "*Drunk* Yeah, right..."
-
-    label ew_ad:
-    label ev_bd:
-
+            u "*Drunk* Yeah, right..."
 
     scene s375 # You walking home
     with Fade (1,0,1)
@@ -261,8 +140,7 @@ label v5start:
     queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
 
     u "(Oh man, I drank way too much last night...)"
-    if volleyball == True:
-
+    if volleyball:
         scene s376b # yawning and turning around
         with dissolve
 
@@ -277,6 +155,7 @@ label v5start:
         with dissolve
 
         u "(I completely forgot I bought this. I guess I can't really give it to Chloe anymore now, can I?)"
+
     else:
         scene s376b
         with dissolve
@@ -292,8 +171,7 @@ label v5start:
 
     ############ Chloe Talk New
 
-    label jorepb:
-
+label jorepb:
     scene jonew1 #transition "a bit later", walking to chloe
     with Fade (1,0,1)
 
@@ -349,342 +227,294 @@ label v5start:
     with dissolve
     cl "I didn't do anything shady. Grayson is just spreading lies like he always is."
 
-
     menu:
-
-
-
         "I believe you.":
-
             $ addPoint("bf", 1)
-            jump newchloea
+            $ chloemad = False
 
+            scene s370
+            with dissolve
+
+            u "I believe you. I just had to make sure, you know?"
+
+            scene clna
+            with dissolve
+
+            cl "Yeah, I get that."
+
+            cl "Hey I don't have that much more time tonight, but how about we hang out tomorrow?"
+
+            scene clnb
+            with dissolve
+
+            u "Yeah, sounds great. I'll see you then, good night."
+
+            scene clna
+            with dissolve
+
+            cl "Good night, [name]."
+
+            scene s375 # You walking home
+            with Fade (1,0,1)
+
+            u "(Good thing I didn't get drunk, that could have very easily gone wrong and ended in a big fight with Chloe.)"
+
+            scene s376 # you in bed laying on your side looking at the wall
+            with Fade (2,0,2)
+
+            pause 0.5
+
+            scene s376a # you opening your eyes
+            with dissolve
+
+            u "(Alright, time for a new day.)"
+
+            if volleyball:
+                scene s376b # yawning and turning around
+                with dissolve
+
+                u "*Yawns*"
+
+                scene s376c # surpisde
+                with dissolve
+
+                pause 0.5
+
+                scene s377a # showing volleyball
+                with dissolve
+
+                u "(I completely forgot I bought this. I should give it to Chloe when we hang out later today.)"
+
+            else:
+                scene s376b
+                with dissolve
+
+                u "*Yawns*"
+
+            scene s376d # you touching your eye
+            with dissolve
+
+            u "(Hey, my eye is starting to heal...)"
+
+            jump newchloec
 
         "You're lying.":
-
             $ addPoint("tm", 1)
-            jump newchloeb
 
-    label newchloea:
+            scene s370a
+            with dissolve
 
-    $ chloemad = False
+            u "You're lying. Yeah sure, the hottest girl in school wants me, the freshman who got beaten up at his first college party."
 
-    scene s370
-    with dissolve
+            scene s370e
+            with dissolve
 
-    u "I believe you. I just had to make sure, you know?"
+            u "That seems realistic, right?!"
 
-    scene clna
-    with dissolve
+            scene s370d # chloe sad desperate
+            with dissolve
 
-    cl "Yeah, I get that."
+            cl "[name], I don't care about the fighting, or any of that shit. What Grayson did to you was pathetic. I like you 'cause you were funny and kind and ... and you cared."
 
-    cl "Hey I don't have that much more time tonight, but how about we hang out tomorrow?"
+            scene s370e
+            with dissolve
 
-    scene clnb
-    with dissolve
+            u "Then why did you go after Grayson instead of helping me up when he knocked me out??"
 
-    u "Yeah, sounds great. I'll see you then, good night."
+            scene s370d
+            with dissolve
 
-    scene clna
-    with dissolve
+            cl "I- I..."
 
-    cl "Good night, [name]."
+            cl "I told him to stop, okay?? I didn't know if he was gonna hurt you even more."
 
-    scene s375 # You walking home
-    with Fade (1,0,1)
+            scene s370e
+            with dissolve
 
-    u "(Good thing I didn't get drunk, that could have very easily gone wrong and ended in a big fight with Chloe.)"
+            u "*Ryan said that you just saw his punch as a personal attack and didn't give one fuck about me being hurt. And you know what? Maybe he's right!"
 
-    scene s376 # you in bed laying on your side looking at the wall
-    with Fade (2,0,2)
+            scene s370d
+            with dissolve
 
-    pause 0.5
+            cl "What have I ever done for you not to fucking trust me one bit?!"
 
-    scene s376a # you opening your eyes
-    with dissolve
+            scene s370e
+            with dissolve
 
-    u "(Alright, time for a new day.)"
-    if volleyball == True:
+            u "Apparently a bunch of shady shit in the past!"
 
-        scene s376b # yawning and turning around
-        with dissolve
+            scene s370f # Chloe really sad
+            with dissolve
 
-        u "*Yawns*"
+            cl "*Gasp*"
 
-        scene s376c # surpisde
-        with dissolve
+            cl "You know how you can be sure I wasn't just using you?"
 
-        pause 0.5
+            cl "Because if I was using you, I would probably try to seduce you back into trusting me right now."
 
-        scene s377a # showing volleyball
-        with dissolve
+            cl "But don't worry, I don't want that. We're done."
 
-        u "(I completely forgot I bought this. I should give it to Chloe when we hang out later today.)"
-    else:
-        scene s376b
-        with dissolve
+            scene s371
+            with dissolve # scene chloe walking back into her house
 
-        u "*Yawns*"
+            u "Chloe!"
 
-    scene s376d # you touching your eye
-    with dissolve
+            play sound "sounds/slam.mp3"
 
-    u "(Hey, my eye is starting to heal...)"
+            scene s371a
+            with hpunch #scene door slam
 
-    jump newchloec
+            "*Door slam*"
 
-    label newchloeb:
+            scene s372 # you in front of wall angry
+            with dissolve
 
-    scene s370a
-    with dissolve
+            u "HNGGGG!"
 
-    u "You're lying. Yeah sure, the hottest girl in school wants me, the freshman who got beaten up at his first college party."
+            play sound "sounds/facepunch1.mp3"
 
-    scene s370e
-    with dissolve
+            scene s372a # you punch the wall
+            with vpunch
 
-    u "That seems realistic, right?!"
+            pause 0.5
 
-    scene s370d # chloe sad desperate
-    with dissolve
+            scene s372b # your hand hurts you hold it, it's bloody
+            with dissolve
 
-    cl "[name], I don't care about the fighting, or any of that shit. What Grayson did to you was pathetic. I like you 'cause you were funny and kind and ... and you cared."
+            u "Ah, fuck!"
 
-    scene s370e
-    with dissolve
+            unknown "[name], is that you??"
 
-    u "Then why did you go after Grayson instead of helping me up when he knocked me out??"
+            scene s372c # you turn your head
+            with dissolve
 
-    scene s370d
-    with dissolve
+            stop music fadeout 2.0
 
-    cl "I- I..."
+            " "
 
-    cl "I told him to stop, okay?? I didn't know if he was gonna hurt you even more."
+            u "Oh shit..."
 
-    scene s370e
-    with dissolve
+            scene s373 # nora approaching
+            with dissolve
+            play music "music/m16punk.mp3"
+            no "What are you doing here? And why did you just punch the wall?"
 
-    u "*Ryan said that you just saw his punch as a personal attack and didn't give one fuck about me being hurt. And you know what? Maybe he's right!"
+            menu:
+                "It's Chloe.":
+                    scene s374a # nora close up questioning
+                    with dissolve
 
-    scene s370d
-    with dissolve
+                    u "It's Chloe... I just- I just wanted to talk to her..."
 
-    cl "What have I ever done for you not to fucking trust me one bit?!"
+                    u "But it just got out of control..."
 
-    scene s370e
-    with dissolve
-    u "Apparently a bunch of shady shit in the past!"
+                    scene s374c2 # nora thinking mouth close
 
+                    no "Hmmm..."
 
-    scene s370f # Chloe really sad
-    with dissolve
+                    scene s374b # mouth open
+                    with dissolve
 
-    cl "*Gasp*"
+                    no "Chloe can be a bit overdramatic sometimes, you know."
 
-    cl "You know how you can be sure I wasn't just using you?"
+                    no "Maybe she'll calm down by tomorrow."
 
-    cl "Because if I was using you, I would probably try to seduce you back into trusting me right now."
+                    scene s374c
+                    with dissolve
 
-    cl "But don't worry, I don't want that. We're done."
+                    u "Right..."
 
-    scene s371
-    with dissolve # scene chloe walking back into her house
+                    scene s374b
+                    with dissolve
 
-    u "Chloe!"
+                    no "Hey, it's none of my business, but... what did you guys talk about that made you wanna punch a wall after?"
 
-    play sound "sounds/slam.mp3"
+                    menu:
+                        "Tell her":
+                            scene s374c
+                            with dissolve
 
-    scene s371a
-    with hpunch #scene door slam
+                            u "My uhm, my friend said that Chloe did some shady shit in the past and I just had to find out the truth."
 
-    "*Door slam*"
+                            scene s374d# nora slight laugh, cocky
+                            with dissolve
 
-    scene s372 # you in front of wall angry
-    with dissolve
+                            no "And what did you find out?"
 
-    u "HNGGGG!"
+                            scene s374e
+                            with dissolve
 
-    play sound "sounds/facepunch1.mp3"
+                            u "Nothing! I think all I did was ruin our relationship..."
 
-    scene s372a # you punch the wall
-    with vpunch
+                            scene s374d
+                            with dissolve
 
-    pause 0.5
+                            no "Yeah, that sounds about right."
 
-    scene s372b # your hand hurts you hold it, it's bloody
-    with dissolve
+                            scene s374e
+                            with dissolve
 
-    u "Ah, fuck!"
+                            u "What- What do you mean?"
 
-    unknown "[name], is that you??"
+                            scene s374b
+                            with dissolve
 
-    scene s372c # you turn your head
-    with dissolve
+                            no "Dude, you're upset and don't even know the whole story. What did you think was gonna happen when you talk to her?"
 
-    stop music fadeout 2.0
+                            scene s374c
+                            with dissolve
 
-    " "
+                            u "I don't know..."
 
-    u "Oh shit..."
+                            u "What do you mean the whole story?"
 
-    scene s373 # nora approaching
-    with dissolve
-    play music "music/m16punk.mp3"
-    no "What are you doing here? And why did you just punch the wall?"
+                            scene s374d
+                            with dissolve
 
-    menu:
+                            no "It's late, I really don't wanna get into it. But hey, let me know how your little love story ends."
 
+                            no "Night, [name]."
 
+                            scene s374e
+                            with dissolve
 
-        "It's Chloe.":
+                            u "Night..."
 
-            jump nna
+                        "Say you gotta go":
+                            scene s374c
+                            with dissolve
 
-        "It's nothing.":
+                            u "Uhhh... nothing. It's not important."
 
-            jump nnb
+                            u "I should uhm... probably go home now, it's late."
 
-    label nna:
+                            scene s374d
+                            with dissolve
 
-    scene s374a # nora close up questioning
-    with dissolve
+                            no "Alright, well let me know how your little love story ends."
 
-    u "It's Chloe... I just- I just wanted to talk to her..."
+                            no "Night, [name]."
 
-    u "But it just got out of control..."
+                            scene s374c
+                            with dissolve
 
-    scene s374c2 # nora thinking mouth close
+                            u "Night..."
 
-    no "Hmmm..."
+                "It's nothing.":
+                    scene s374a
+                    with dissolve
 
-    scene s374b # mouth open
-    with dissolve
+                    u "It's- it's nothing. I gotta go, I'll see you around, Nora."
 
+                    scene s374b
+                    with dissolve
 
-    no "Chloe can be a bit overdramatic sometimes, you know."
+                    no "Alright, well let's hope you and our house don't get into another fight in the future."
 
-    no "Maybe she'll calm down by tomorrow."
+                    scene s374c
+                    with dissolve
 
-
-    scene s374c
-    with dissolve
-
-    u "Right..."
-
-    scene s374b
-    with dissolve
-
-    no "Hey, it's none of my business, but... what did you guys talk about that made you wanna punch a wall after?"
-
-    menu:
-
-
-
-        "Tell her":
-
-            jump nnc
-
-        "Say you gotta go":
-
-            jump nnd
-
-    label nnc:
-
-    scene s374c
-    with dissolve
-
-    u "My uhm, my friend said that Chloe did some shady shit in the past and I just had to find out the truth."
-
-    scene s374d# nora slight laugh, cocky
-    with dissolve
-
-    no "And what did you find out?"
-
-    scene s374e
-    with dissolve
-
-    u "Nothing! I think all I did was ruin our relationship..."
-
-    scene s374d
-    with dissolve
-
-    no "Yeah, that sounds about right."
-
-    scene s374e
-    with dissolve
-
-    u "What- What do you mean?"
-
-    scene s374b
-    with dissolve
-
-    no "Dude, you're upset and don't even know the whole story. What did you think was gonna happen when you talk to her?"
-
-    scene s374c
-    with dissolve
-
-    u "I don't know..."
-
-    u "What do you mean the whole story?"
-
-    scene s374d
-    with dissolve
-
-    no "It's late, I really don't wanna get into it. But hey, let me know how your little love story ends."
-
-    no "Night, [name]."
-
-    scene s374e
-    with dissolve
-
-    u "Night..."
-
-    jump nncd
-
-    label nnd:
-
-    scene s374c
-    with dissolve
-
-    u "Uhhh... nothing. It's not important."
-
-    u "I should uhm... probably go home now, it's late."
-
-    scene s374d
-    with dissolve
-
-    no "Alright, well let me know how your little love story ends."
-
-    no "Night, [name]."
-
-    scene s374c
-    with dissolve
-
-    u "Night..."
-
-    jump nnbd
-
-    label nnb:
-
-    scene s374a
-    with dissolve
-
-    u "It's- it's nothing. I gotta go, I'll see you around, Nora."
-
-    scene s374b
-    with dissolve
-
-    no "Alright, well let's hope you and our house don't get into another fight in the future."
-
-    scene s374c
-    with dissolve
-
-    u "Yeah, right..."
-
-    label nncd:
-    label nnbd:
+                    u "Yeah, right..."
 
     scene s375 # You walking home
     with Fade (1,0,1)
@@ -706,8 +536,7 @@ label v5start:
 
     pause 0.5
 
-    if volleyball == True:
-
+    if volleyball:
         scene s376b # yawning and turning around
         with dissolve
 
@@ -722,6 +551,7 @@ label v5start:
         with dissolve
 
         u "(I completely forgot I bought this. I guess I can't really give it to Chloe anymore now, can I?)"
+
     else:
         scene s376b
         with dissolve
@@ -733,96 +563,124 @@ label v5start:
 
     u "(At least my eye is starting to heal...)"
 
-
-    label newchloec:
-
+label newchloec:
 
     scene s376e
     with dissolve
 
     #### Amber text
     play sound "sounds/vibrate.mp3"
-    
-    $ msgnot = 1
-    $ ammsgnot = 1
-    $ ammsg = 1
-    $ amisreply = 1
 
     #################
-    if kissamber == True:
-        $ contact_Amber.newMessage("Hey, it's Amber")
-        $ contact_Amber.newMessage("Josh gave me your number")
-        $ contact_Amber.newMessage("You know, you never came back, I thought we were having a good time xx")
-        $ contact_Amber.addReply("We did, I'll make it up to you.", "amrep3a")
-        $ contact_Amber.addReply("Sorry, something came up.", "amrep3b")
 
-    else:
+    python:
+        def v5_reply1():
+            addPoint("bro", 1)
+            contact_Amber.newMessage("Oh really? How are you gonna do that?")
+            contact_Amber.addReply("I give some world-class massages", v5_reply2)
+            contact_Amber.addReply("I'll stay longer next time", v5_reply3)
 
-        if contact_Josh.messages[-1].reply.message == "I can't, sorry.":
-            $ contact_Amber.newMessage("Hey, it's Amber")
-            $ contact_Amber.newMessage("Josh gave me your number")
-            $ contact_Amber.newMessage("How come you didn't show up yesterday? Everything okay? xx")
-            $ contact_Amber.addReply("Wow, you really wanted to see me, huh?", "amrep3aa")
-            $ contact_Amber.addReply("Sorry, something came up.", "amrep3ba")
+        def v5_reply2():
+            addPoint("tm", 1)
+            contact_Amber.newMessage("That does sound enticing ;)")
+
+        def v5_reply3():
+            contact_Amber.newMessage("Deal xx")
+
+        def v5_reply4():
+            contact_Amber.newMessage("Oh okay, hope everything's okay xx")
+            contact_Amber.addReply("Yeah, it's all good.")
+            contact_Amber.newMessage("Deal xx")
+
+        def v5_reply5():
+            addPoint("bro", 1)
+            contact_Amber.newMessage("Oh wow, I was just checking. :P")
+            contact_Amber.addReply("Don't worry, you'll see me soon", v5_reply6)
+            contact_Amber.addReply("Haha, I'm fine.", v5_reply7)
+
+        def v5_reply6():
+            addPoint("tm", 1)
+            contact_Amber.newMessage("Was hoping xx")
+
+        def v5_reply7():
+            contact_Amber.newMessage("That's good xx")
+
+        def v5_reply8():
+            contact_Amber.newMessage("Oh okay, hope you're good xx")
+            contact_Amber.addReply("Yeah, no worries")
+            contact_Amber.newMessage("That's good xx")
+
+        def v5_reply9():
+            addPoint("bro", 1)
+            contact_Amber.newMessage("Oh shut up, I was just checking in")
+            contact_Amber.addReply("Don't worry, you'll see me again", v5_reply10)
+            contact_Amber.addReply("Haha, I'm fine", v5_reply11)
+
+        def v5_reply10():
+            addPoint("tm", 1)
+            contact_Amber.newMessage("Was hoping xx")
+
+        def v5_reply11():
+            contact_Amber.newMessage("That's good xx")
+
+        def v5_reply12():
+            contact_Amber.newMessage("Oh okay, hope you're good xx")
+            contact_Amber.addReply("Yeah, no worries")
+            contact_Amber.newMessage("That's good xx")
+
+        if kissamber:
+            contact_Amber.newMessage("Hey, it's Amber", queue=False)
+            contact_Amber.newMessage("Josh gave me your number")
+            contact_Amber.newMessage("You know, you never came back, I thought we were having a good time xx")
+            contact_Amber.addReply("We did, I'll make it up to you.", v5_reply1)
+            contact_Amber.addReply("Sorry, something came up.", v5_reply4)
+
+        elif contact_Josh.messages[-2].reply.message == "I can't, sorry.":
+            contact_Amber.newMessage("Hey, it's Amber", queue=False)
+            contact_Amber.newMessage("Josh gave me your number")
+            contact_Amber.newMessage("How come you didn't show up yesterday? Everything okay? xx")
+            contact_Amber.addReply("Wow, you really wanted to see me, huh?", v5_reply5)
+            contact_Amber.addReply("Sorry, something came up.", v5_reply8)
 
         else:
-            $ contact_Amber.newMessage("Hey, it's Amber")
-            $ contact_Amber.newMessage("Josh gave me your number")
-            $ contact_Amber.newMessage("You know, you never came back, everything okay?")
-            $ contact_Amber.addReply("Wow, you really missed me that much, huh?", "amrep3ab")
-            $ contact_Amber.addReply("Sorry, something came up.", "amrep3bb")
+            contact_Amber.newMessage("Hey, it's Amber", queue=False)
+            contact_Amber.newMessage("Josh gave me your number")
+            contact_Amber.newMessage("You know, you never came back, everything okay?")
+            contact_Amber.addReply("Wow, you really missed me that much, huh?", v5_reply9)
+            contact_Amber.addReply("Sorry, something came up.", v5_reply12)
 
-
-    if toldlauren == False and laurentoofar == False:
+    if not toldlauren and not laurentoofar:
         play sound "sounds/vibrate.mp3"
 
-        $ contact_Lauren.newMessage("Hey")
-        $ contact_Lauren.newMessage("Wanna do the personality tests today at noon?")
-        $ contact_Lauren.addReply("Yeah, sure.", "larep13a")
-
+        python:
+            contact_Lauren.newMessage("Hey", queue=False)
+            contact_Lauren.newMessage("Wanna do the personality tests today at noon?")
+            contact_Lauren.addReply("Yeah, sure.")
+            contact_Lauren.newMessage("Great :) Meet me at our economics' classroom.")
 
         u "(Oh shit, I'm getting a bunch of messages.)"
 
         label phonex:
+            call screen phone
+            if contact_Lauren.getReplies():
+                u "(I should probably reply to some of them.)"
 
-        if not contact_Lauren.messages[-1].replies:
-
+                jump phonex
             
-            u "(Time to get ready.)"
-
-            jump continuez
-
-        else:
-
-            u "(I should probably reply to some of them.)"
-
-            jump phonex
-
-
-
-
+        u "(Time to get ready.)"
 
     else:
         label phoney:
+            call screen phone
+            if contact_Amber.getReplies():
+                "(Maybe it's Lauren and she wants to talk about what happened? I should definitely check.)"
+                jump phoney
 
-        "(Maybe it's Lauren and she wants to talk about what happened? I should definitely check.)"
-
-
-
-        if not msgApp.notification:
-            
-            jump continueaf
-
-        else:
-            jump phoney
-
-
-
+        jump continueaf
 
     ############### Lauren personality tests
 
-    label continuez:
-
+label continuez:
     pause 0.5
 
     scene s377 # in front of class, door is open
@@ -842,8 +700,7 @@ label v5start:
 
     # Kiss in public
 
-    if laurenkissb == True:
-
+    if laurenkissb:
         scene s379a # lauren kisses you
         with dissolve
         play sound "sounds/kiss.mp3"
@@ -851,6 +708,7 @@ label v5start:
 
         scene s380a
         with dissolve
+
         u "*Chuckles* Is that how we greet each other now?"
 
         scene s380 #lauren close up smiling
@@ -864,129 +722,97 @@ label v5start:
         u "(If we kiss in public, other girls are bound to find out that I'm dating Lauren.)"
 
         menu:
-
-
             "Complaints? I love it.":
-
                 $ laurenpublic = True
                 $ addPoint("bf", 1)
-                jump ex_a
 
+                u "Complaints? I love kissing you. I can't wait till we say goodbye and I can kiss you again. *Laughs*"
+
+                scene s380
+                with dissolve
+
+                la "*Tsk* I feel like you saying you can't wait for us to finish hanging out isn't as romantic as you may think."
+
+                scene s380a
+                with dissolve
+
+                u "Hahaha, oops."
 
             "I don't like kissing in public.":
-
                 $ addPoint("tm", 1)
-                jump ex_b
 
-        label ex_a:
+                u "Uhm, actually do you mind if we don't do that in public?"
 
-        u "Complaints? I love kissing you. I can't wait till we say goodbye and I can kiss you again. *Laughs*"
+                scene s380b # lauren sadish
+                with dissolve
 
-        scene s380
-        with dissolve
+                la "Oh.... yeah, of course, I'm sorry, I didn't-"
 
-        la "*Tsk* I feel like you saying you can't wait for us to finish hanging out isn't as romantic as you may think."
+                scene s380c
+                with dissolve
 
-        scene s380a
-        with dissolve
+                u "It's not that I don't like kissing you, it's just..."
 
-        u "Hahaha, oops."
+                u "I'm not really into public displays of affection."
 
-        jump ex_ad
+                u "It's uhm... how I was raised."
 
-        label ex_b:
+                scene s380d # lauren suspicious
+                with dissolve
 
-        u "Uhm, actually do you mind if we don't do that in public?"
+                la "Oh, and a little kiss like that is already too much?"
 
-        scene s380b # lauren sadish
-        with dissolve
+                la "I wasn't talking about a full on make out session, haha"
 
-        la "Oh.... yeah, of course, I'm sorry, I didn't-"
+                la "Also, it's not like anyone will see us here."
 
-        scene s380c
-        with dissolve
+                scene s380e
+                with dissolve
 
-        u "It's not that I don't like kissing you, it's just..."
+                u "(Shit, she's pushing back. But if I want to avoid other girls finding out about us, I can't just kiss her in public.)"
 
-        u "I'm not really into public displays of affection."
+                menu:
+                    "Sorry, not in public.":
+                        $ laurenpublic = False
+                        $ addPoint("tm", 1)
+                        $ onthelow = True
 
-        u "It's uhm... how I was raised."
+                        if not steam:
+                            show onthelow at achievementShow
 
-        scene s380d # lauren suspicious
-        with dissolve
+                        else:
+                            $ achievement.grant("on_the_low")
+                            $ achievement.sync()
 
-        la "Oh, and a little kiss like that is already too much?"
+                        u "Sorry, but can we just make sure we're alone before we do stuff like that. I just feel uncomfortable even just kissing in public."
 
-        la "I wasn't talking about a full on make out session, haha"
+                        scene s380b
+                        with dissolve
 
-        la "Also, it's not like anyone will see us here."
+                        la "Okay, yeah. No public display of affection, I get it..."
 
-        scene s380e
-        with dissolve
-        u "(Shit, she's pushing back. But if I want to avoid other girls finding out about us, I can't just kiss her in public.)"
+                        scene s380c
+                        with dissolve
 
-        menu:
+                    "Actually, a kiss is fine.":
+                        $ laurenpublic = True
 
+                        u "Actually, you're right, sorry. A kiss is fine."
 
+                        u "Let's just not go overboard, haha."
 
-            "Sorry, not in public.":
+                        scene s380
+                        with dissolve
 
-                $ laurenpublic = False
-                $ addPoint("tm", 1)
-                jump ey_a
+                        la "Yeah, of course."
 
-            "Actually, a kiss is fine.":
+                        scene s380f # lauren flirty
+                        with dissolve
 
-                $ laurenpublic = True
-                jump ey_b
+                        la "At least not in public."
 
-        label ey_a:
-        $ onthelow = True
-        if not steam:
-            image onthelow = "images/onthelow.webp"
-            show onthelow:
-                xpos 0
-                ypos -200
-                linear 0.5 xpos 0 ypos 0
-                pause 2.0
-                linear 0.5 xpos 0 ypos -200
-        else:
-            $ achievement.grant("on_the_low")
-            $ achievement.sync()
-
-        u "Sorry, but can we just make sure we're alone before we do stuff like that. I just feel uncomfortable even just kissing in public."
-
-        scene s380b
-        with dissolve
-
-        la "Okay, yeah. No public display of affection, I get it..."
-
-        scene s380c
-        with dissolve
-
-        jump ey_ad
-
-        label ey_b:
-
-        u "Actually, you're right, sorry. A kiss is fine."
-
-        u "Let's just not go overboard, haha."
-
-        scene s380
-        with dissolve
-
-        la "Yeah, of course."
-
-        scene s380f # lauren flirty
-        with dissolve
-
-        la "At least not in public."
-
-        scene s380g
-        with dissolve
-
-        jump ey_bd
-
+                        scene s380g
+                        with dissolve
 
     else:
         scene s380a
@@ -996,20 +822,9 @@ label v5start:
 
         jump continueag
 
-
-
-
-
-    ###### continue
-
-    label ex_ad:
-    label ey_ad:
-    label ey_bd:
-
     u "Anyways, why exactly are we doing this in a classroom?"
 
-    label continueag:
-
+label continueag:
     $ trolley = True
 
     scene s380
@@ -1032,16 +847,13 @@ label v5start:
 
     u "Uhm, sure."
 
-    label gotest:
-
+label gotest:
     scene s380
     with dissolve
 
-
     la "Alright, let's get started, shall we?"
 
-    label gokissb:
-
+label gokissb:
     scene s381 #you and lauren sitting across each other lauren with paper in her hand.
     with fade
 
@@ -1064,252 +876,187 @@ label v5start:
 
     scene s382b # la reading of papers
     with dissolve
+
     la "Statement one: I struggle making difficult decisions."
 
     menu:
-
-
-
-
         "Agree":
-
             $ la1 = True
             $ addPoint("bf", 1)
-            jump ez_a
 
+            scene s382a
+            with dissolve
+
+            u "Agree."
 
         "Disagree":
-
             $ la1 = False
             $ addPoint("tm", 1)
-            jump ez_b
 
-    label ez_a:
+            scene s382a
+            with dissolve
 
-    scene s382a
-    with dissolve
-
-    u "Agree."
-
-    jump ez_ad
-
-    label ez_b:
-
-    scene s382a
-    with dissolve
-
-    u "Disagree."
-
-    label ez_ad:
+            u "Disagree."
 
     scene s382b
     with dissolve
+
     la "Two: I consider myself an animal lover."
 
     menu:
-
-
-
-
         "Agree":
-
             $ addPoint("bf", 1)
             $ addPoint("bro", 1)
             $ la2 = True
-            jump ez_c
 
+            scene s382a
+            with dissolve
+
+            u "Uhm... agree I guess."
 
         "Disagree":
-
             $ addPoint("tm", 1)
             $ la2 = False
-            jump ez_d
 
-    label ez_c:
+            scene s382a
+            with dissolve
 
-    scene s382a
-    with dissolve
+            u "Hmm... disagree I guess."
 
-    u "Uhm... agree I guess."
+            scene s382
+            with dissolve
 
-    jump ez_cd
-
-    label ez_d:
-
-    scene s382a
-    with dissolve
-
-    u "Hmm... disagree I guess."
-
-    scene s382
-    with dissolve
-
-    la "Huh."
-
-    label ez_cd:
+            la "Huh."
 
     scene s382b # la reading of papers
     with dissolve
+
     la "Three: I consider myself a relationship person."
 
     menu:
-
-
-
-
         "Agree":
-
             $ addPoint("bf", 1)
             $ la3 = True
-            jump ez_e
 
+            scene s382a
+            with dissolve
+
+            u "I definitely do."
+
+            if laurenrs:
+                scene s382d # Lauren cheeky flirty smile
+                with dissolve
+
+                la "Right answer."
+
+                scene s382e
+                with dissolve
+
+                u "Woah, I thought there was no right answer."
+
+                scene s382d
+                with dissolve
+
+                la "Well, I may have lied about that."
+
+                scene s382e
+                with dissolve
+
+                u "*Chuckles* I feel like this personality test is just a pretext so you can vet me."
+
+                scene s382d
+                with dissolve
+
+                la "That is certainly a possibility."
+
+                scene s382e
+                with dissolve
+
+                u "Am I passing?"
+
+                scene s382d
+                with dissolve
+
+                la "So far..."
+
+            else:
+                scene s382
+                with dissolve
+
+                la "Haha, I thought you were gonna say no."
+
+                scene s382a
+                with dissolve
+
+                u "Really? Why?"
+
+                scene s382
+                with dissolve
+
+                la "I don't know, you hang out with a lot of different girls, right?"
+
+                scene s382a
+                with dissolve
+
+                u "Yeah, but that doesn't mean that I don't just have eyes for one of them."
+
+                scene s382e
+                with dissolve
+
+                pause 0.5
 
         "Disagree":
-
             $ addPoint("bro", 1)
             $ la3 = False
-            jump ez_f
 
-    label ez_e:
+            scene s382a
+            with dissolve
 
+            u "Not really, sooo... disagree."
 
+            if laurenrs:
+                $ addPoint("tm", 1)
 
-    scene s382a
-    with dissolve
+                scene s382f # Lauren passive agressive
+                with dissolve
 
-    u "I definitely do."
+                la "Well that's good to know."
 
-    if laurenrs == True:
+                scene s382g
+                with dissolve
 
-        scene s382d # Lauren cheeky flirty smile
-        with dissolve
+                u "Lauren, it's not like-"
 
-        la "Right answer."
+                scene s382f
+                with dissolve
 
-        scene s382e
-        with dissolve
+                la "Let's just move on."
 
-        u "Woah, I thought there was no right answer."
+            else:
+                scene s382d
+                with dissolve
 
-        scene s382d
-        with dissolve
+                la "That's what I thought, haha."
 
-        la "Well, I may have lied about that."
+                scene s382e
+                with dissolve
 
-        scene s382e
-        with dissolve
+                u "Really? Why?"
 
-        u "*Chuckles* I feel like this personality test is just a pretext so you can vet me."
+                scene s382
+                with dissolve
 
-        scene s382d
-        with dissolve
+                la "I don't know, you hang out with a lot of different girls, right?"
 
-        la "That is certainly a possibility."
+                scene s382a
+                with dissolve
 
-        scene s382e
-        with dissolve
+                u "Yeah, I guess that's true."
 
-        u "Am I passing?"
+                scene s382e
+                with dissolve
 
-        scene s382d
-        with dissolve
-
-        la "So far..."
-
-        jump continueah
-
-    else:
-
-        scene s382
-        with dissolve
-
-        la "Haha, I thought you were gonna say no."
-
-        scene s382a
-        with dissolve
-
-        u "Really? Why?"
-
-        scene s382
-        with dissolve
-
-        la "I don't know, you hang out with a lot of different girls, right?"
-
-        scene s382a
-        with dissolve
-
-        u "Yeah, but that doesn't mean that I don't just have eyes for one of them."
-
-        scene s382e
-        with dissolve
-
-        pause 0.5
-
-        jump continueaj
-
-
-
-    label ez_f:
-
-    scene s382a
-    with dissolve
-
-    u "Not really, sooo... disagree."
-
-    if laurenrs == True:
-
-        $ addPoint("tm", 1)
-
-        scene s382f # Lauren passive agressive
-        with dissolve
-
-        la "Well that's good to know."
-
-        scene s382g
-        with dissolve
-
-        u "Lauren, it's not like-"
-
-        scene s382f
-        with dissolve
-
-        la "Let's just move on."
-
-        jump continueak
-
-    else:
-
-        scene s382d
-        with dissolve
-
-        la "That's what I thought, haha."
-
-        scene s382e
-        with dissolve
-
-        u "Really? Why?"
-
-        scene s382
-        with dissolve
-
-        la "I don't know, you hang out with a lot of different girls, right?"
-
-        scene s382a
-        with dissolve
-
-        u "Yeah, I guess that's true."
-
-        scene s382e
-        with dissolve
-
-        pause 0.5
-
-        jump continueal
-
-    label continueah:
-    label continueaj:
-    label continueak:
-    label continueal:
+                pause 0.5
 
     scene s382
     with dissolve
@@ -1328,44 +1075,30 @@ label v5start:
 
     la "Have you heard of the trolley problem?"
 
-
     menu:
-
         "Yes.":
+            scene s382a
+            with dissolve
 
-            jump fa_a
+            u "Yeah, it's about choosing who the train runs over right?"
+
+            scene s382
+            with dissolve
+
+            la "Uhm yeah, that's broadly it."
+
+            jump fa_ad
 
         "No.":
+            scene s382a
+            with dissolve
 
-            jump fa_b
+            u "Uhm, no I don't think so."
 
-    label fa_a:
+            scene s382
+            with dissolve
 
-    scene s382a
-    with dissolve
-
-    u "Yeah, it's about choosing who the train runs over right?"
-
-    scene s382
-    with dissolve
-
-    la "Uhm yeah, that's broadly it."
-
-    jump fa_ad
-
-    label fa_b:
-
-    scene s382a
-    with dissolve
-
-    u "Uhm, no I don't think so."
-
-    scene s382
-    with dissolve
-
-    la "Hmm, maybe it's best if you just experience it."
-
-    label fa_ad:
+            la "Hmm, maybe it's best if you just experience it."
 
     la "Okay, I want you to rest your head on the table and close your eyes."
 
@@ -1393,7 +1126,7 @@ label v5start:
 
     call screen trolleyskip
 
-    label continuetrolley:
+label continuetrolley:
     stop music fadeout 2.0
 
     play music "sounds/train.mp3"
@@ -1412,14 +1145,11 @@ label v5start:
 
     u "Okay, yeah."
 
-    if la1 == True:
-
+    if la1:
         la "You said that you struggle making difficult decisions, let's see how that impacts your behavior in the following situation."
 
     else:
-
         la "You said that you don't struggle making difficult decisions, let's see how if that's still true in the following situation."
-
 
     la "As the train's moving forward you come closer to an intersection."
 
@@ -1440,11 +1170,13 @@ label v5start:
 
     scene s388a
     with dissolve
+
     la "You can decide to switch the lever, but remember, you're on a timer. If you don't switch the lever within a few seconds, the train will keep its current course."
+
     play sound "sounds/countdown.mp3"
     call screen trolleya
 
-    label trolleyaa: # you don't press the lever
+label trolleyaa: # you don't press the lever
     stop sound
     $ addPoint("bf", 1)
     $ trolleya = False
@@ -1463,14 +1195,13 @@ label v5start:
 
     jump continueam
 
-    label trolleyab: # you do press the lever
+label trolleyab: # you do press the lever
     stop sound
     $ addPoint("bro", 1)
     $ trolleya = True
     play sound "sounds/lever.mp3"
     scene s388e #you press lever
     with dissolve
-
 
     pause 0.5
 
@@ -1481,7 +1212,7 @@ label v5start:
 
     u "Holy fuck..."
 
-    label continueam:
+label continueam:
     stop music
 
     scene s382a
@@ -1496,84 +1227,71 @@ label v5start:
 
     la "Are you okay with doing another one?"
 
-
     menu:
-
-
-
         "Yeah, let's do it.":
+            scene s382a
+            with dissolve
 
-            jump fb_a
+            u "Yeah, let's do it."
+
+            scene s382a
+            with dissolve
+
+            la "Alright, imagine yourself back on the train, moving as fast as before."
+
+            scene s383a
+            with Fade (1,0,0.5)
+
+            play music "sounds/train.mp3"
+
+            u "Okay, done."
+
+            scene s383
+            with dissolve
+
+            la "Look out the front again."
+
+            scene s384
+            with dissolve
+
+            u "Alright."
+
+            if la2:
+                la "You said that you consider yourself an animal lover. Let's test how much you really love animals."
+
+            else:
+                la "You said that you wouldn't consider yourself an animal lover. Hopefully that'll make the next scenario easier."
+
+            la "As the train's moving forward you come closer to another intersection."
+
+            scene s385 #far from intersection
+            with dissolve
+
+            la "The train's heading to the right side of the intersection, where this time only one person's scared for their life."
+
+            scene s386b # closer, woman on the right appears
+            with dissolve
+
+            la "Just as last time, you can flick the lever in order for the train to switch to the left track. However, this time there's a dog sitting on the other track."
+
+            scene s387a # even closer, dog on the left side
+            with dissolve
+
+            la "Now it's up to you, will you actively decide to kill the dog to save a human life or will you idly stand by and let her die?"
+
+            scene s388b
+            with dissolve
+
+            la "You can decide to switch the lever, but remember, you're on a timer. If you don't switch the lever within a few seconds, the train will keep its current course."
+            
+            play sound "sounds/countdown.mp3"
+            call screen trolleyb
 
         "I'd rather not.":
-
             $ trolleyskip = 2
             jump fb_b
 
-    label fb_a:
-
-
-    scene s382a
-    with dissolve
-
-    u "Yeah, let's do it."
-
-    scene s382a
-    with dissolve
-
-    la "Alright, imagine yourself back on the train, moving as fast as before."
-
-    scene s383a
-    with Fade (1,0,0.5)
-
-    play music "sounds/train.mp3"
-
-    u "Okay, done."
-
-    scene s383
-    with dissolve
-
-    la "Look out the front again."
-
-    scene s384
-    with dissolve
-
-    u "Alright."
-
-    if la2 == True:
-
-        la "You said that you consider yourself an animal lover. Let's test how much you really love animals."
-
-    else:
-
-        la "You said that you wouldn't consider yourself an animal lover. Hopefully that'll make the next scenario easier."
-
-
-    la "As the train's moving forward you come closer to another intersection."
-
-    scene s385 #far from intersection
-    with dissolve
-
-    la "The train's heading to the right side of the intersection, where this time only one person's scared for their life."
-
-    scene s386b # closer, woman on the right appears
-    with dissolve
-
-    la "Just as last time, you can flick the lever in order for the train to switch to the left track. However, this time there's a dog sitting on the other track."
-
-    scene s387a # even closer, dog on the left side
-    with dissolve
-
-    la "Now it's up to you, will you actively decide to kill the dog to save a human life or will you idly stand by and let her die?"
-
-    scene s388b
-    with dissolve
-
-    la "You can decide to switch the lever, but remember, you're on a timer. If you don't switch the lever within a few seconds, the train will keep its current course."
-    play sound "sounds/countdown.mp3"
-    call screen trolleyb
-
-    label trolleyba: # you don't press the lever
+label trolleyba: # you don't press the lever
     stop sound
     $ trolleyb = False
     $ addPoint("tm", 1)
@@ -1589,7 +1307,7 @@ label v5start:
 
     jump continuean
 
-    label trolleybb: # you do press the lever
+label trolleybb: # you do press the lever
     stop sound
     $ trolleyb = True
     play sound "sounds/lever.mp3"
@@ -1603,24 +1321,18 @@ label v5start:
     scene s390a # your face full of blood
     with vpunch
 
-    if trolleyb == True:
-        if la2 == True:
-            $ petapublicenemy = True
-            if not steam:
-                image petapublicenemy = "images/petapublicenemy.webp"
-                show petapublicenemy:
-                    xpos 0
-                    ypos -200
-                    linear 0.5 xpos 0 ypos 0
-                    pause 2.0
-                    linear 0.5 xpos 0 ypos -200
-            else:
-                $ achievement.grant("peta_public_enemy")
-                $ achievement.sync()
+    if trolleyb and la2:
+        $ petapublicenemy = True
+        if not steam:
+            show petapublicenemy at achievementShow:
+
+        else:
+            $ achievement.grant("peta_public_enemy")
+            $ achievement.sync()
 
     u "Ahh fuck!"
 
-    label continuean:
+label continuean:
     stop music
 
     scene s382a
@@ -1635,82 +1347,72 @@ label v5start:
     la "Are you okay with doing the last one?"
 
     menu:
-
-
-
         "Yeah, okay.":
+            scene s382a
+            with dissolve
 
-            jump fb_c
+            u "Yeah, okay."
+
+            scene s382a
+            with dissolve
+
+            la "Alright, imagine yourself back on the train for one last time, moving as fast as before."
+
+            scene s383a
+            with Fade (1,0,0.5)
+            play music "sounds/train.mp3"
+
+            u "Okay, I'm on the train."
+
+            scene s383
+            with dissolve
+
+            la "Look out the front again."
+
+            scene s384
+            with dissolve
+
+            u "Sure thing."
+
+            if la3:
+                la "You said that you consider yourself a relationship person, let's put that to the test."
+
+            else:
+                la "You said that you wouldn't consider yourself a relationship person, let's put that to the test."
+
+            la "As the train's moving forward you come closer to another intersection."
+
+            scene s385 #far from intersection
+            with dissolve
+
+            la "The train's heading to the right side of the intersection, where this time there's five people again, scared for their lives."
+
+            scene s386a
+            with dissolve
+
+            la "As always, you can flick the lever in order for the train to switch to the left track. However, this time on the other track it's your ex-girlfriend Emily."
+
+            u "Lauren, what the fuck?! How do you even know about Emily?"
+
+            scene s387b # even closer, emily
+            with dissolve
+
+            la "There's no time for this right now. Will you actively decide to kill Emily to save five human lives or will you let the train run it's course, keeping her alive but killing five people in the process?"
+
+            scene s388c
+            with dissolve
+
+            la "You can decide to switch the lever, but remember, you're on a timer. If you don't switch the lever within a few seconds, the train will keep its current course."
+           
+            play sound "sounds/countdown.mp3"
+            call screen trolleyc
 
         "I'd rather not.":
-
             $ trolleyskip = 1
+
             jump fb_b
 
-
-    label fb_c:
-
-    scene s382a
-    with dissolve
-
-    u "Yeah, okay."
-
-    scene s382a
-    with dissolve
-
-    la "Alright, imagine yourself back on the train for one last time, moving as fast as before."
-
-    scene s383a
-    with Fade (1,0,0.5)
-    play music "sounds/train.mp3"
-
-    u "Okay, I'm on the train."
-
-    scene s383
-    with dissolve
-
-    la "Look out the front again."
-
-    scene s384
-    with dissolve
-
-    u "Sure thing."
-
-    if la3 == True:
-
-        la "You said that you consider yourself a relationship person, let's put that to the test."
-
-    else:
-
-        la "You said that you wouldn't consider yourself a relationship person, let's put that to the test."
-
-
-    la "As the train's moving forward you come closer to another intersection."
-
-    scene s385 #far from intersection
-    with dissolve
-
-    la "The train's heading to the right side of the intersection, where this time there's five people again, scared for their lives."
-
-    scene s386a
-    with dissolve
-
-    la "As always, you can flick the lever in order for the train to switch to the left track. However, this time on the other track it's your ex-girlfriend Emily."
-
-    u "Lauren, what the fuck?! How do you even know about Emily?"
-
-    scene s387b # even closer, emily
-    with dissolve
-
-    la "There's no time for this right now. Will you actively decide to kill Emily to save five human lives or will you let the train run it's course, keeping her alive but killing five people in the process?"
-
-    scene s388c
-    with dissolve
-    la "You can decide to switch the lever, but remember, you're on a timer. If you don't switch the lever within a few seconds, the train will keep its current course."
-    play sound "sounds/countdown.mp3"
-    call screen trolleyc
-
-    label trolleyca: # you don't press the lever
+label trolleyca: # you don't press the lever
     stop sound
     $ trolleyc = False
     $ addPoint("bro", 1)
@@ -1729,14 +1431,13 @@ label v5start:
 
     jump continueao
 
-    label trolleycb: # you do press the lever
+label trolleycb: # you do press the lever
     stop sound
     $ trolleyc = True
     $ addPoint("bf", 1)
     play sound "sounds/lever.mp3"
     scene s388e #you press lever
     with dissolve
-
 
     pause 0.5
 
@@ -1747,7 +1448,7 @@ label v5start:
 
     u "Oh my god!"
 
-    label continueao:
+label continueao:
     stop music
 
     scene s382a
@@ -1762,140 +1463,126 @@ label v5start:
     la "Sorry, I had to ask around in order to find a weak spot. My psych professor said this was essential for the last problem to work."
 
     menu:
-
-
-
         "At least we're done now.":
-
             $ addPoint("bf", 1)
             $ laurenokay = True
-            jump fc_a
+
+            scene s382a
+            with dissolve
+
+            u "*Sigh* It's okay, at least we're done now."
+
+            scene s382
+            with dissolve
+
+            la "Exactly, I'll let you know once I have analyzed the results."
+
+            scene s382d
+            with dissolve
+
+            la "In the meantime, I could use a coffee, wanna come with me?"
+
+            scene s382e
+            with dissolve
+
+            u "Sorry, Lauren. As much as I'd like to, I gotta pick up Imre from the hospital."
+
+            scene s382
+            with dissolve
+
+            la "Oh, alright."
+
+            scene s382a
+            with dissolve
+
+            u "I'll see you later, okay?"
+
+            scene s382
+            with dissolve
+
+            la "Yeah."
+
+            if laurenpublic:
+                la "Are we still gonna kiss goodbye?"
+
+                scene s382a
+                with dissolve
+
+                u "Oh yeah, of course."
+
+                scene s392 # you and her accross table
+                with dissolve
+
+                pause 0.5
+
+                scene s392a # kiss
+                play sound "sounds/kiss.mp3"
+
+                pause 0.5
+
+                scene s392
+                with dissolve
+
+                scene s382a
+                with dissolve
+
+                u "Alright, bye."
+
+                scene s382
+                with dissolve
+
+                la "Bye."
+
+            jump hospitala
 
         "That was too far.":
-
             $ addPoint("tm", 1)
             $ laurenokay = False
-            jump fc_b
 
-    label fc_a:
+            scene s382a
+            with dissolve
 
-    scene s382a
-    with dissolve
+            u "Lauren, that was too fucking far. What are you, some mad scientist?"
 
-    u "*Sigh* It's okay, at least we're done now."
+            scene s382h # lauren sorry
+            with dissolve
 
-    scene s382
-    with dissolve
+            la "[name], I'm sorry, please."
 
-    la "Exactly, I'll let you know once I have analyzed the results."
+            la "How about we get a coffee and talk about it?"
 
-    scene s382d
-    with dissolve
+            scene s382j
+            with dissolve
 
-    la "In the meantime, I could use a coffee, wanna come with me?"
+            u "Uhm, I gotta pick up Imre from the hospital now."
 
-    scene s382e
-    with dissolve
+            scene s382h
+            with dissolve
 
-    u "Sorry, Lauren. As much as I'd like to, I gotta pick up Imre from the hospital."
+            la "Oh, okay, yeah."
 
-    scene s382
-    with dissolve
+            scene s382j
+            with dissolve
 
-    la "Oh, alright."
+            u "I'll see you later, okay?"
 
-    scene s382a
-    with dissolve
+            scene s382h
+            with dissolve
 
-    u "I'll see you later, okay?"
+            la "Yeah."
 
-    scene s382
-    with dissolve
+            jump hospitala
 
-    la "Yeah."
-
-    if laurenpublic == True:
-
-        la "Are we still gonna kiss goodbye?"
-
-        scene s382a
-        with dissolve
-
-        u "Oh yeah, of course."
-
-        scene s392 # you and her accross table
-        with dissolve
-
-        pause 0.5
-
-        scene s392a # kiss
-        play sound "sounds/kiss.mp3"
-
-        pause 0.5
-
-        scene s392
-        with dissolve
-
-        scene s382a
-        with dissolve
-
-        u "Alright, bye."
-
-        scene s382
-        with dissolve
-
-        la "Bye."
-
-    jump hospitala
-
-
-    label fc_b:
-
-    scene s382a
-    with dissolve
-
-    u "Lauren, that was too fucking far. What are you, some mad scientist?"
-
-    scene s382h # lauren sorry
-    with dissolve
-
-    la "[name], I'm sorry, please."
-
-    la "How about we get a coffee and talk about it?"
-
-    scene s382j
-    with dissolve
-
-    u "Uhm, I gotta pick up Imre from the hospital now."
-
-    scene s382h
-    with dissolve
-
-    la "Oh, okay, yeah."
-
-    scene s382j
-    with dissolve
-
-    u "I'll see you later, okay?"
-
-    scene s382h
-    with dissolve
-
-    la "Yeah."
-
-    jump hospitalb
-
-
-    label skiptrolley:
+label skiptrolley:
     $ trolleyskip = 3
     scene s382
     with fade
+
     jump skiptrolleya
 
     ######## Skip trolley
 
-    label fb_b:
-
+label fb_b:
     scene s382a
     with dissolve
 
@@ -1909,8 +1596,6 @@ label v5start:
     label skiptrolleya:
 
     play music "music/mindie5.mp3"
-
-
 
     la "That'd be all. I'll let you know once I have analyzed the results."
 
@@ -1939,8 +1624,7 @@ label v5start:
 
     la "Yeah."
 
-    if laurenpublic == True:
-
+    if laurenpublic:
         la "Are we still gonna kiss goodbye?"
 
         scene s382a
@@ -1971,136 +1655,99 @@ label v5start:
 
         la "Bye."
 
-    jump hospitalc
-
-
+    jump hospitala
 
     ############ Lauren apology option
 
-    label continueaf:
+label continueaf:
     u "(Damn, it wasn't from Lauren... I wonder if she's still mad at me.)"
 
     menu:
-
-
-
         "I should go apologize":
-
             $ apologize = True
-            jump fd_a
+
+            u "(I should go apologize.)"
+
+            if not autumnmad:
+                u "(Hopefully Autumn has already put in a good word for me.)"
+
+            scene s393 #you infront of Laurens dorm
+            with Fade(1,0,1)
+
+            u "(Alright, this is Lauren's dorm.)"
+
+            scene s393a # you knock
+            with dissolve
+            play sound "sounds/knock.mp3"
+
+            "*Knock knock knock*"
+
+            scene s393
+            with dissolve
+
+            unknown "Who is it?"
+
+            u "It's [name], is Lauren there?"
+
+            if laurentoofar:
+                unknown "Oh, you're the fucker that tried to molest her, right?"
+
+                menu:
+                    "I'm someone else":
+                        $ addPoint("tm", 1)
+
+                        u "What? No, I'm just a friend looking for her, where is she?"
+
+                        if kct == "confident":
+                            call screen popup8
+
+                            label popup8:
+                                unknown "Uhm, alright, she's at some classroom for her personality test thing."
+
+                                u "Thanks"
+
+                        else:
+                            unknown "Yeah, right. Fuck off."
+
+                            $ apologize = False
+
+                            u "(Shit, I don't have time to search her all around campus... I guess I'll have to apologize to her another time.)"
+
+                            u "(I should probably pick up Riley so that we can go and get Imre)"
+
+                            jump hospitala
+
+                    "I didn't mean to":
+                        $ addPoint("bf", 1)
+
+                        u "I didn't mean to... it was a misunderstanding!"
+
+                        unknown "Yeah, right. Fuck off."
+                        $ apologize = False
+
+                        u "(Shit, I don't have time to search her all around campus... I guess I'll have to apologize to her another time.)"
+
+                        u "(I should probably pick up Riley so that we can go and get Imre)"
+
+                        jump hospitala
+
+            else:
+                unknown "Oh, you're the guy she cried about, right?"
+
+                unknown "She's not here, I think she's in some classroom for her personality test thing."
 
         "I'll give her time":
-
-            $ apologize = False
-            jump fd_b
-
-    label fd_b:
-
-    u "(Maybe I should give her a bit more time.)"
-
-    if autumnmad == False:
-
-        u "(Afterall, Autumn said she'd talk to her.)"
-
-    u "(It's probably time to go pick up Imre with Riley anyways.)"
-
-    jump hospitala
-
-    label fd_a: ############ Lauren Apology
-
-    u "(I should go apologize.)"
-
-    if autumnmad == False:
-
-        u "(Hopefully Autumn has already put in a good word for me.)"
-
-    scene s393 #you infront of Laurens dorm
-    with Fade(1,0,1)
-
-    u "(Alright, this is Lauren's dorm.)"
-
-    scene s393a # you knock
-    with dissolve
-    play sound "sounds/knock.mp3"
-    "*Knock knock knock*"
-
-    scene s393
-    with dissolve
-
-    unknown "Who is it?"
-
-    u "It's [name], is Lauren there?"
-
-    if laurentoofar == True:
-
-        unknown "Oh, you're the fucker that tried to molest her, right?"
-
-        menu:
-
-
-
-            "I'm someone else":
-
-                $ addPoint("tm", 1)
-                jump fe_a
-
-            "I didn't mean to":
-
-                $ addPoint("bf", 1)
-                jump fe_b
-
-        label fe_a:
-
-        u "What? No, I'm just a friend looking for her, where is she?"
-
-        if kct == "confident":
-
-            call screen popup8
-
-            label popup8:
-
-            unknown "Uhm, alright, she's at some classroom for her personality test thing."
-
-            u "Thanks"
-
-            jump apo
-
-
-
-        else:
-
-            unknown "Yeah, right. Fuck off."
             $ apologize = False
 
-            u "(Shit, I don't have time to search her all around campus... I guess I'll have to apologize to her another time.)"
+            u "(Maybe I should give her a bit more time.)"
 
-            u "(I should probably pick up Riley so that we can go and get Imre)"
+            if not autumnmad:
+
+                u "(Afterall, Autumn said she'd talk to her.)"
+
+            u "(It's probably time to go pick up Imre with Riley anyways.)"
 
             jump hospitala
-
-        label fe_b:
-
-        u "I didn't mean to... it was a misunderstanding!"
-
-        unknown "Yeah, right. Fuck off."
-        $ apologize = False
-
-        u "(Shit, I don't have time to search her all around campus... I guess I'll have to apologize to her another time.)"
-
-        u "(I should probably pick up Riley so that we can go and get Imre)"
-
-        jump hospitala
-
-
-    else:
-
-        unknown "Oh, you're the guy she cried about, right?"
-
-        unknown "She's not here, I think she's in some classroom for her personality test thing."
-
-        jump apo
-
-    label apo:
 
     scene s394 ## you pulling on locked door
     with Fade (1,0,1)
@@ -2129,25 +1776,20 @@ label v5start:
     scene s380b
     with dissolve
 
-    if laurentoofar == True:
+    if laurentoofar and autumnmad:
+        la "[name], what are you doing here?"
 
-        if autumnmad == True:
+        scene s380c
+        with dissolve
 
-            la "[name], what are you doing here?"
+        u "Listen, I wanted to apologize, I went too far and I'm sorry."
 
-            scene s380c
-            with dissolve
+        u "I- I just got carried away."
 
-            u "Listen, I wanted to apologize, I went too far and I'm sorry."
+        if kct == "loyal":
+            call screen popup9
 
-            u "I- I just got carried away."
-
-            if kct == "loyal":
-
-                call screen popup9
-
-                label popup9:
-
+            label popup9:
                 scene s380b
                 with dissolve
 
@@ -2194,115 +1836,102 @@ label v5start:
 
                 jump gotest
 
-
-
-            else:
-
-                la "When you continued pushing your hand up my thigh after I told you I didn't want it, you... you made me feel disgusting."
-
-                la "I trusted you and you? You didn't seem to care one bit."
-
-                scene s380c
-                with dissolve
-
-                u "Lauren, I-"
-
-                scene s380b
-                with dissolve
-
-                la "Please just give me some time. I really don't wanna see you right now."
-
-                scene s380c
-                with dissolve
-
-                u "Yeah, of course, sorry."
-
-                u "(Fuck... but it's probably time to go pick up Imre with Riley anyways.)"
-
-                $ laurenmad = True
-
-                jump hospitala
-
         else:
+            la "When you continued pushing your hand up my thigh after I told you I didn't want it, you... you made me feel disgusting."
 
-            la "[name], what are you doing here?"
+            la "I trusted you and you? You didn't seem to care one bit."
 
             scene s380c
             with dissolve
 
-            u "Listen, I wanted to apologize, I went too far and I'm sorry."
-
-            u "I- I just got carried away."
+            u "Lauren, I-"
 
             scene s380b
             with dissolve
 
-            la "When you continued pushing your hand up my thigh after I told you I didn't want it, you... you made me feel disgusting."
-
-            la "But my sister helped me understand that you just made a mistake and I really don't wanna be mad you."
-
-            la "That's if you're okay with just being friends again for now?"
+            la "Please just give me some time. I really don't wanna see you right now."
 
             scene s380c
             with dissolve
 
-            u "Yeah, of course."
+            u "Yeah, of course, sorry."
 
-            scene s380
-            with dissolve
+            u "(Fuck... but it's probably time to go pick up Imre with Riley anyways.)"
 
-            la "Good."
+            $ laurenmad = True
 
-            scene s380a
-            with dissolve
+            jump hospitala
 
-            u "What are you doing here anyways?"
+    elif laurentoofar:
+        la "[name], what are you doing here?"
 
-            scene s380d
-            with dissolve
+        scene s380c
+        with dissolve
 
-            la "For my psychology class I need someone to do a personality test with me which I can then analyze, but my friend just cancelled on me."
+        u "Listen, I wanted to apologize, I went too far and I'm sorry."
 
-            scene s380e
-            with dissolve
+        u "I- I just got carried away."
 
-            u "I can do it."
+        scene s380b
+        with dissolve
 
-            scene s380
-            with dissolve
+        la "When you continued pushing your hand up my thigh after I told you I didn't want it, you... you made me feel disgusting."
 
-            la "Really? That'd be amazing."
+        la "But my sister helped me understand that you just made a mistake and I really don't wanna be mad you."
 
-            scene s380a
-            with dissolve
+        la "That's if you're okay with just being friends again for now?"
 
-            u "Yeah, sure."
+        scene s380c
+        with dissolve
 
-            jump gotest
+        u "Yeah, of course."
 
+        scene s380
+        with dissolve
 
+        la "Good."
 
+        scene s380a
+        with dissolve
 
+        u "What are you doing here anyways?"
 
+        scene s380d
+        with dissolve
 
-    else:
+        la "For my psychology class I need someone to do a personality test with me which I can then analyze, but my friend just cancelled on me."
 
-        if autumnmad == True:
+        scene s380e
+        with dissolve
 
-            la "[name], what are you doing here?"
+        u "I can do it."
 
-            scene s380c
-            with dissolve
+        scene s380
+        with dissolve
 
-            u "Listen, I wanted to apologize, I was being insensitive and I'm sorry."
+        la "Really? That'd be amazing."
 
-            u "I- I just wanted to be honest with you."
+        scene s380a
+        with dissolve
 
-            if kct == "loyal":
+        u "Yeah, sure."
 
-                call screen popup10
+        jump gotest
 
-                label popup10:
+    elif autumnmad:
+        la "[name], what are you doing here?"
+
+        scene s380c
+        with dissolve
+
+        u "Listen, I wanted to apologize, I was being insensitive and I'm sorry."
+
+        u "I- I just wanted to be honest with you."
+
+        if kct == "loyal":
+            call screen popup10
+
+            label popup10:
 
                 $ laurenrs = True
 
@@ -2362,81 +1991,18 @@ label v5start:
 
                 pause 0.5
 
-                jump gokiss
-
-
-
-            else:
-
-                scene s380b
-                with dissolve
-
-                la "Thinking of you with another girl made me feel really weird."
-
-                la "I don't wanna be mad at you, but can we just put a pause on the whole dating thing for now and go back to just being friends again?"
-
-                scene s380c
-                with dissolve
-
-                u "Uhm... yeah, of course."
-
-                scene s380
-                with dissolve
-
-                la "Good."
-
-                scene s380a
-                with dissolve
-
-                u "What are you doing here anyways?"
-
-                scene s380d
-                with dissolve
-
-                la "For my psychology class I need someone to do a personality test with me which I can then analyze, but my friend just cancelled on me."
-
-                scene s380e
-                with dissolve
-
-                u "I can do it."
-
-                scene s380
-                with dissolve
-
-                la "Really? That'd be amazing."
-
-                scene s380a
-                with dissolve
-
-                u "Yeah, sure."
-
-                jump gotest
-
-
-
-
         else:
-
-            $ laurenrs = True
-
             scene s380b
             with dissolve
 
             la "Thinking of you with another girl made me feel really weird."
 
-            la "But my sister really helped me understand that I shouldn't be mad at you for it."
+            la "I don't wanna be mad at you, but can we just put a pause on the whole dating thing for now and go back to just being friends again?"
 
-            scene s380
+            scene s380c
             with dissolve
 
-            la "So, how about we just continue where we left off?"
-
-            scene s380a
-            with dissolve
-
-            u "Yeah, I'd love that."
-
-            u "And don't worry, now that I know how important this is to you, I'll count it as us dating from now on."
+            u "Uhm... yeah, of course."
 
             scene s380
             with dissolve
@@ -2468,22 +2034,70 @@ label v5start:
 
             u "Yeah, sure."
 
-            scene s379a
-            with dissolve
+            jump gotest
 
-            play sound "sounds/kiss.mp3"
+    else:
+        $ laurenrs = True
 
-            pause 0.5
+        scene s380b
+        with dissolve
 
-            jump gokiss
+        la "Thinking of you with another girl made me feel really weird."
 
+        la "But my sister really helped me understand that I shouldn't be mad at you for it."
 
+        scene s380
+        with dissolve
 
+        la "So, how about we just continue where we left off?"
 
-    label gokiss:
+        scene s380a
+        with dissolve
+
+        u "Yeah, I'd love that."
+
+        u "And don't worry, now that I know how important this is to you, I'll count it as us dating from now on."
+
+        scene s380
+        with dissolve
+
+        la "Good."
+
+        scene s380a
+        with dissolve
+
+        u "What are you doing here anyways?"
+
+        scene s380d
+        with dissolve
+
+        la "For my psychology class I need someone to do a personality test with me which I can then analyze, but my friend just cancelled on me."
+
+        scene s380e
+        with dissolve
+
+        u "I can do it."
+
+        scene s380
+        with dissolve
+
+        la "Really? That'd be amazing."
+
+        scene s380a
+        with dissolve
+
+        u "Yeah, sure."
+
+        scene s379a
+        with dissolve
+
+        play sound "sounds/kiss.mp3"
+
+        pause 0.5
 
     scene s380a
     with dissolve
+
     u "*Chuckles* What was that for?"
 
     scene s380 #lauren close up smiling
@@ -2493,141 +2107,115 @@ label v5start:
 
     scene s380a
     with dissolve
+
     u "(If we kiss in public, other girls are bound to find out that I'm dating Lauren.)"
 
     menu:
-
-
         "Complaints? I love it.":
             $ laurenpublic = True
-
             $ addPoint("bf", 1)
-            jump fg_a
+
+            u "Complaints? Kissing you rules."
+
+            scene s380f
+            with dissolve
+
+            la "That's what I wanted to hear."
+
+            la "Alright, let's get started with the test, shall we?"
+
+            jump gokissb
 
 
         "I don't like kissing in public.":
             $ addPoint("tm", 1)
 
-            jump fg_b
+            u "Uhm, actually do you mind if we don't do that in public?"
 
-    label fg_a:
+            scene s380b # lauren sadish
+            with dissolve
 
-    u "Complaints? Kissing you rules."
+            la "Oh.... yeah, of course, I'm sorry, I didn't-"
 
-    scene s380f
-    with dissolve
+            scene s380c
+            with dissolve
 
-    la "That's what I wanted to hear."
+            u "It's not that I don't like kissing you, it's just..."
 
-    la "Alright, let's get started with the test, shall we?"
+            u "I'm not really into public displays of affection."
 
-    jump gokissb
+            u "It's uhm... how I was raised."
 
-    label fg_b:
+            scene s380d # lauren suspicious
+            with dissolve
 
-    u "Uhm, actually do you mind if we don't do that in public?"
+            la "Oh, and a little kiss like that is already too much?"
 
-    scene s380b # lauren sadish
-    with dissolve
+            la "I wasn't talking about a full on make out session, haha"
 
-    la "Oh.... yeah, of course, I'm sorry, I didn't-"
+            la "Also, it's not like anyone will see us here."
 
-    scene s380c
-    with dissolve
+            scene s380e
+            with dissolve
 
-    u "It's not that I don't like kissing you, it's just..."
+            u "(Shit, she's pushing back. But if I want to avoid other girls finding out about us, I can't just kiss her in public.)"
 
-    u "I'm not really into public displays of affection."
+            menu:
+                "Sorry, not in public.":
+                    $ laurenpublic = False
+                    $ addPoint("tm", 1)
+                    $ onthelow = True
 
-    u "It's uhm... how I was raised."
+                    if not steam:
+                        show onthelow at achievementShow
 
-    scene s380d # lauren suspicious
-    with dissolve
+                    else:
+                        $ achievement.grant("on_the_low")
+                        $ achievement.sync()
 
-    la "Oh, and a little kiss like that is already too much?"
+                    u "Sorry, but can we just make sure we're alone before we do stuff like that. I just feel uncomfortable even just kissing in public."
 
-    la "I wasn't talking about a full on make out session, haha"
+                    scene s380b
+                    with dissolve
 
-    la "Also, it's not like anyone will see us here."
+                    la "Okay, yeah. No public display of affection, I get it..."
 
-    scene s380e
-    with dissolve
-    u "(Shit, she's pushing back. But if I want to avoid other girls finding out about us, I can't just kiss her in public.)"
+                    la "Let's just get started with the test."
 
-    menu:
+                    jump gokissb
 
+                "Actually, a kiss is fine.":
+                    $ laurenpublic = True
 
+                    u "Actually, you're right, sorry. A kiss is fine."
 
-        "Sorry, not in public.":
-            $ laurenpublic = False
-            $ addPoint("tm", 1)
+                    u "Let's just not go overboard, haha."
 
-            jump fh_a
+                    scene s380
+                    with dissolve
 
-        "Actually, a kiss is fine.":
-            $ laurenpublic = True
+                    la "Yeah, of course."
 
-            jump fh_b
+                    scene s380f # lauren flirty
+                    with dissolve
 
-    label fh_a:
-    $ onthelow = True
-    if not steam:
-        image onthelow = "images/onthelow.webp"
-        show onthelow:
-            xpos 0
-            ypos -200
-            linear 0.5 xpos 0 ypos 0
-            pause 2.0
-            linear 0.5 xpos 0 ypos -200
-    else:
-        $ achievement.grant("on_the_low")
-        $ achievement.sync()
+                    la "At least not in public."
 
-    u "Sorry, but can we just make sure we're alone before we do stuff like that. I just feel uncomfortable even just kissing in public."
+                    scene s380g
+                    with dissolve
 
-    scene s380b
-    with dissolve
+                    u "Hahaha."
 
-    la "Okay, yeah. No public display of affection, I get it..."
+                    scene s380f
+                    with dissolve
 
-    la "Let's just get started with the test."
+                    la "Let's get started with the test, shall we?"
 
-    jump gokissb
-
-    label fh_b:
-
-    u "Actually, you're right, sorry. A kiss is fine."
-
-    u "Let's just not go overboard, haha."
-
-    scene s380
-    with dissolve
-
-    la "Yeah, of course."
-
-    scene s380f # lauren flirty
-    with dissolve
-
-    la "At least not in public."
-
-    scene s380g
-    with dissolve
-
-    u "Hahaha."
-
-    scene s380f
-    with dissolve
-
-    la "Let's get started with the test, shall we?"
-
-    jump gokissb
-
+                    jump gokissb
 
     ############## Bus to hospital with Riley
 
-    label hospitala:
-    label hospitalb:
-    label hospitalc:
+label hospitala:
     stop music fadeout 2.0
 
     play music "sounds/bus.mp3"
@@ -2644,17 +2232,14 @@ label v5start:
     scene s400 #Riley close up emphatic
     with dissolve
 
-    ri "You know Imre, he'll be fine. I'm sure
-         once he's fully recovered he'll be
-         twice as strong as before."
+    ri "You know Imre, he'll be fine. I'm sure once he's fully recovered he'll be twice as strong as before."
 
     scene s400c # riley gigle mouth closed
     with dissolve
 
     ri "*Giggles*"
 
-    u "*Laughingly* Yeah, you're right. He's relentless. You should see how he
-         trains me."
+    u "*Laughingly* Yeah, you're right. He's relentless. You should see how he trains me."
 
     scene s400b
     with dissolve
@@ -2719,8 +2304,7 @@ label v5start:
     scene s403b # Imre smiling in pain
     with dissolve
 
-    imre "Ah, yeah, shit. Still tryin' to
-recover."
+    imre "Ah, yeah, shit. Still tryin' to recover."
 
     scene s403c
     with dissolve
@@ -2730,8 +2314,7 @@ recover."
     scene s403b
     with dissolve
 
-    imre "It's cool, just a couple of broken
-         ribs."
+    imre "It's cool, just a couple of broken ribs."
 
     scene s403c
     with dissolve
@@ -2746,9 +2329,7 @@ recover."
     scene s404b
     with dissolve
 
-    ri "Alright, I know you two love birds have
-         a lot to catch up on, but I really
-         don't wanna miss the next bus."
+    ri "Alright, I know you two love birds have a lot to catch up on, but I really don't wanna miss the next bus."
 
     scene s404c
     with dissolve
@@ -2764,12 +2345,8 @@ recover."
 
     pause 1.0
 
-
-
     scene s407 #Riley, MC, and Imre are now all sitting on the bus towards the back.
     with fade
-
-
 
     play music "sounds/bus.mp3"
 
@@ -2799,7 +2376,6 @@ recover."
 
     em "You got some ice cream on your nose?"
 
-
     scene s409b # both laughing, you wiping the ice cream off
     with dissolve
 
@@ -2809,7 +2385,6 @@ recover."
 
     scene s410 #MC and Emily are dancing in the moonlight. MC presses his face into her hair as he holds her.
     with flash
-
 
     pause 0.5
 
@@ -2863,6 +2438,7 @@ recover."
     pause 0.5
     play sound "sounds/swoosh.mp3"
     hide screen fantasyOverlay
+
     scene s408a
     with flash
 
@@ -2913,6 +2489,7 @@ recover."
     with dissolve
 
     imre "Bye, Riley."
+    
     play music "music/m4punk.mp3"
 
     scene s417 # you opening dorm door but Imre is walking somewhere else?
@@ -2938,9 +2515,7 @@ recover."
     scene s418a
     with dissolve
 
-    u "You really think you're gonna go fight
-         that guy right now? You just got out
-         of the hospital. You need to rest."
+    u "You really think you're gonna go fight that guy right now? You just got out of the hospital. You need to rest."
 
     scene s418
     with dissolve
@@ -2955,36 +2530,27 @@ recover."
     scene s418b # Imre angry
     with dissolve
 
-    imre "I'm not gonna let this motherfucker think
-         he can just come and lay one on me."
+    imre "I'm not gonna let this motherfucker think he can just come and lay one on me."
 
     scene s418c
     with dissolve
 
-    u "You ever think if you try and fight
-         like this, he's just gonna lay a
-         second one on you?"
+    u "You ever think if you try and fight like this, he's just gonna lay a second one on you?"
 
     scene s418b
     with dissolve
 
-    imre "Don't fucking tell me when I can fight or not.
-         I know myself. This is about me and
-         him. I'll make him remember who
-         he's fucking with."
+    imre "Don't fucking tell me when I can fight or not. I know myself. This is about me and him. I'll make him remember who he's fucking with."
 
     scene s418c
     with dissolve
 
-    u "Imre, you need to chill out for a
-         second and think this through. You've gone crazy!"
+    u "Imre, you need to chill out for a second and think this through. You've gone crazy!"
 
     scene s418b
     with dissolve
 
-    imre "I have thought this through. I'm not
-         gonna sit here looking like a little
-         bitch. I'm gonna make him regret what he did."
+    imre "I have thought this through. I'm not gonna sit here looking like a little bitch. I'm gonna make him regret what he did."
 
     scene s418c
     with dissolve
@@ -3103,14 +2669,12 @@ recover."
     scene s420c
     with dissolve
 
-    u "Wait, did you say, first door on the
-left?"
+    u "Wait, did you say, first door on the left?"
 
     scene s420b
     with dissolve
 
-    au "Yes. Why? Is something wrong? Just
-tell me!"
+    au "Yes. Why? Is something wrong? Just tell me!"
 
     scene s420d #name puts the phone down
     with dissolve
@@ -3135,8 +2699,7 @@ tell me!"
     scene s420g
     with dissolve
 
-    u "Hey, sorry, I'll call you back Aubrey.
-         I gotta go."
+    u "Hey, sorry, I'll call you back Aubrey. I gotta go."
 
     scene s420e # phone away from ear
     with dissolve
@@ -3147,6 +2710,7 @@ tell me!"
     with dissolve
 
     play sound "sounds/rejectcall.mp3"
+
     u "*Hangs up*"
 
     scene s422 # mc charges towards door
@@ -3165,153 +2729,116 @@ tell me!"
     u "*Deep breath*"
 
     menu:
-
-
-
         "Confront Adam":
-
             $ addPoint("bro", 1)
             $ confrontadam = True
-            jump fj_a
+
+            scene s397
+            with dissolve
+
+            play sound "sounds/knock.mp3"
+
+            "*Knock knock knock*"
+
+            play sound "sounds/dooropen.mp3"
+
+            scene s398
+            with dissolve
+
+            ad "Wrong dorm, pissbag. Now fuck off."
+
+            menu:
+                "Punch him":
+                    $ fightadam = True
+                    $ addPoint("tm", 1)
+
+                    jump fk_a
+
+                "Talk to him":
+                    $ addPoint("bf", 1)
+
+                    scene s398a
+                    with dissolve
+
+                    u "You're Adam, right? Look, you beat up my friend Imre and-"
+
+                    scene s398b
+                    with dissolve
+
+                    ad "Ahh yeah, I remember, that was quite fun."
+
+                    scene s398
+                    with dissolve
+
+                    ad "So what are you gonna do about it, bitch?"
+
+                    menu:
+                        "Punch him":
+                            $ fightadam = True
+                            $ addPoint("tm", 1)
+
+                            jump fk_a
+
+                        "Threaten to tell school":
+                            $ addPoint("bf", 1)
+
+                            scene s398a
+                            with dissolve
+
+                            u "You find him and apologize or I'll tell the fucking school and you'll get kicked out and maybe even assault charges thrown your way."
+
+                            scene s398
+                            with dissolve
+
+                            ad "You do that and I'll come back for you and unlike your friend, you'll never leave the fucking hospital again."
+
+                            ad "Now fuck off."
+
+                            play sound "sounds/slam.mp3"
+
+                            scene s398c
+                            with vpunch
+
+                            u "(Fuck...)"
+
+                            u "(Great, if I tell the school about this, Imre will be pissed at me and Adam will try to fucking kill me, but if I don't, Imre is gonna get himself killed trying to get revenge.)"
+
+                            menu:
+                                "Tell the school":
+                                    $ tellschool = True
+                                    $ addPoint("bf", 1)
+
+                                    jump fl_a
+
+                                "Keep it to yourself":
+                                    $ tellschool = False
+                                    $ addPoint("bro", 1)
+
+                                    jump fl_b
 
         "Leave it":
-
             $ addPoint("bf", 1)
             $ confrontadam = False
-            jump fj_b
 
-    label fj_b:
+            scene s397b
+            with dissolve
 
-    scene s397b
-    with dissolve
+            u "(It's not like I can do anything against him anyways...)"
+            u "(Maybe I should tell the school, but Imre would be super pissed and Adam might try and kill me for it.)"
+            u "(On the other hand, if I don't tell the school Imre might actually get himself killed trying to get revenge.)"
 
-    u "(It's not like I can do anything against him anyways...)"
+            menu:
+                "Tell the school":
 
-    u "(Maybe I should tell the school, but Imre would be super pissed and Adam might try and kill me for it.)"
-    u "(On the other hand, if I don't tell the school Imre might actually get himself killed trying to get revenge.)"
+                    $ tellschool = True
+                    $ addPoint("bf", 1)
+                    jump fl_a
 
-    menu:
+                "Keep it to yourself":
 
-
-
-        "Tell the school":
-
-            $ tellschool = True
-            $ addPoint("bf", 1)
-            jump fl_a
-
-        "Keep it to yourself":
-
-            $ tellschool = False
-            $ addPoint("bro", 1)
-            jump fl_b
-
-
-    label fj_a:
-
-    scene s397
-    with dissolve
-
-    play sound "sounds/knock.mp3"
-
-    "*Knock knock knock*"
-
-    play sound "sounds/dooropen.mp3"
-
-    scene s398
-    with dissolve
-
-    ad "Wrong dorm, pissbag. Now fuck off."
-
-
-    menu:
-
-
-
-        "Punch him":
-
-            $ fightadam = True
-            $ addPoint("tm", 1)
-            jump fk_a
-
-        "Talk to him":
-
-            $ addPoint("bf", 1)
-            jump fk_b
-
-    label fk_b:
-    scene s398a
-    with dissolve
-
-    u "You're Adam, right? Look, you beat up my friend Imre and-"
-
-    scene s398b
-    with dissolve
-
-    ad "Ahh yeah, I remember, that was quite fun."
-
-    scene s398
-    with dissolve
-
-    ad "So what are you gonna do about it, bitch?"
-
-    menu:
-
-
-
-        "Punch him":
-
-            $ fightadam = True
-            $ addPoint("tm", 1)
-            jump fk_a
-
-        "Threaten to tell school":
-
-            $ addPoint("bf", 1)
-            jump fk_c
-
-    label fk_c:
-
-    scene s398a
-    with dissolve
-
-    u "You find him and apologize or I'll tell the fucking school and you'll get kicked out and maybe even assault charges thrown your way."
-
-    scene s398
-    with dissolve
-
-    ad "You do that and I'll come back for you and unlike your friend, you'll never leave the fucking hospital again."
-
-    ad "Now fuck off."
-
-    play sound "sounds/slam.mp3"
-
-    scene s398c
-    with vpunch
-
-    u "(Fuck...)"
-
-    u "(Great, if I tell the school about
-     this, Imre will be pissed at me and Adam will try to fucking kill me, but if I don't, Imre
-     is gonna get himself killed trying to
-     get revenge.)"
-
-
-    menu:
-
-
-
-        "Tell the school":
-
-            $ tellschool = True
-            $ addPoint("bf", 1)
-            jump fl_a
-
-        "Keep it to yourself":
-
-            $ tellschool = False
-            $ addPoint("bro", 1)
-            jump fl_b
+                    $ tellschool = False
+                    $ addPoint("bro", 1)
+                    jump fl_b
 
 ########## Adam fight
 
@@ -3419,21 +2946,6 @@ tell me!"
 
     #### Define videos for adam fight
     $ stance = 1
-    image af5 = Movie(play="images/af5.webm", start_image="images/af5start.webp", image="images/af5pic.webp", loop = False)
-    image af6 = Movie(play="images/af6.webm", start_image="images/af6start.webp", image="images/af6pic.webp", loop = False)
-    image af7 = Movie(play="images/af7.webm", start_image="images/af7start.webp", image="images/af7pic.webp", loop = False)
-    image af8 = Movie(play="images/af8.webm", start_image="images/af8start.webp", image="images/af8pic.webp", loop = False)
-    image af9 = Movie(play="images/af9.webm", start_image="images/af9start.webp", image="images/af9pic.webp", loop = False)
-    image af10 = Movie(play="images/af10.webm", start_image="images/af10start.webp", image="images/af10pic.webp", loop = False)
-    image af11 = Movie(play="images/af11.webm", start_image="images/af11start.webp", image="images/af11pic.webp", loop = False)
-    image af12 = Movie(play="images/af12.webm", start_image="images/af12start.webp", image="images/af12pic.webp", loop = False)
-    image af13 = Movie(play="images/af13.webm", start_image="images/af13start.webp", image="images/af13pic.webp", loop = False)
-    image af14 = Movie(play="images/af14.webm", start_image="images/af14start.webp", image="images/af14pic.webp", loop = False)
-    image af15 = Movie(play="images/af15.webm", start_image="images/af15start.webp", image="images/af15pic.webp", loop = False)
-    image af16 = Movie(play="images/af16.webm", start_image="images/af16start.webp", image="images/af16pic.webp", loop = False)
-    image youfinishadam = Movie(play="images/youfinishadam.webm", start_image="images/youfinishadamstart.webp", image="images/youfinishadampic.webp", loop = False)
-    image adamfinish = Movie(play="images/adamfinish.webm", start_image="images/adamfinishstart.webp", image="images/adamfinishpic.webp", loop = False)
-
 
     label adamkick1:
 
@@ -4096,10 +3608,7 @@ tell me!"
         else:
             call screen youattack2
 
-
-
-
-    label fl_b: # keep it to yourself
+label fl_b: # keep it to yourself
     $ tellschool = False
 
     u "(It's best if I keep to myself. Telling the school would turn both Imre and Adam against me...)"
@@ -4110,26 +3619,18 @@ tell me!"
 
     jump findimre
 
-
-    label fl_a:  # tell the school
-
+label fl_a:  # tell the school
     $ tellschool = True
 
     stop music fadeout 2.0
 
     $ snitch = True
     if not steam:
-        image snitch = "images/snitch.webp"
-        show snitch:
-            xpos 0
-            ypos -200
-            linear 0.5 xpos 0 ypos 0
-            pause 2.0
-            linear 0.5 xpos 0 ypos -200
+        show snitch at achievementShow:
+
     else:
         $ achievement.grant("snitch")
         $ achievement.sync()
-
 
     u "(I need to tell the school, it's the only way to sort this out.)"
 
@@ -4151,24 +3652,17 @@ tell me!"
     scene s425a
     with dissolve
 
-    u "Well, kinda hard to say. Not trying to
-         start any issues, but I need to protect my friend."
+    u "Well, kinda hard to say. Not trying to start any issues, but I need to protect my friend."
 
     scene s425b # counselor contemplating
     with dissolve
 
-    co "Mhm. I see. I can only help you, if you tell me the
-         problem. Also you can be assured that whatever you tell me, your identity will be
-         kept confidential. Feel free to share
-         what's weighing on you."
+    co "Mhm. I see. I can only help you, if you tell me the problem. Also you can be assured that whatever you tell me, your identity will be kept confidential. Feel free to share what's weighing on you."
 
     scene s425c
     with dissolve
 
-    u "A close friend of
-         mine got jumped by this guy. He got
-         beat up pretty bad, broken ribs and
-         all."
+    u "A close friend of mine got jumped by this guy. He got beat up pretty bad, broken ribs and all."
 
     scene s425b #counselor empathy
     with dissolve
@@ -4178,9 +3672,7 @@ tell me!"
     scene s425c
     with dissolve
 
-    u "And now my friend, who isn't even
-         fully recovered, is out trying to get
-         revenge. He was this close to internal bleeding last time, if he gets beat up again..."
+    u "And now my friend, who isn't even fully recovered, is out trying to get revenge. He was this close to internal bleeding last time, if he gets beat up again..."
 
     scene s425b
     with dissolve
@@ -4188,7 +3680,6 @@ tell me!"
     co "I understand. I'll do my best to ensure your friend does not suffer any more violence."
 
     co "What is your friend's name?"
-
 
     scene s425c
     with dissolve
@@ -4208,10 +3699,7 @@ tell me!"
     scene s425
     with dissolve
 
-    co "Thank you, that will be all. I'm sorry about what happened
-         to your friend, please try and
-         keep a close eye on him until we can
-         get this all sorted."
+    co "Thank you, that will be all. I'm sorry about what happened to your friend, please try and keep a close eye on him until we can get this all sorted."
 
     scene s425a
     with dissolve
@@ -4253,7 +3741,6 @@ tell me!"
     with dissolve
 
     co "A lot of students never tell us about their problems until it's too late to solve them. It's not \"uncool\" or \"cowardly\" to speak up."
-
     co "It's brave."
 
     scene s426b
@@ -4270,8 +3757,7 @@ tell me!"
 
     jump findimre
 
-
-    label youfinishadam: #### You beat adam
+label youfinishadam: #### You beat adam
     $ renpy.end_replay()
     $ winadam = True
 
@@ -4314,89 +3800,79 @@ tell me!"
     ch "Christ man, you're a natural. Have you considered joining a frat?"
 
     menu:
-
-
-
         "Yeah, I'm interested.":
-
             $ addPoint("bro", 1)
-            jump fm_a
+
+            scene s428a
+            with dissolve
+
+            u "Yeah, I'm definitely interested. Especially in the Wolves."
+
+            scene s428b #chris convincing
+            with dissolve
+
+            ch "That's what I like to hear. Not a single freshman last year could have beaten up Adam. I assume you're gonna be at our rush party on Tuesday?"
+
+            scene s428a
+            with dissolve
+
+            u "Yeah, I'll definitely be there."
+
+            scene s428
+            with dissolve
+
+            ch "Cool, I'll see you then. Come talk to me when you're there."
+
+            scene s428a
+            with dissolve
+
+            u "Yeah, will do."
+
+            scene s427
+            with dissolve
+
+            stop music fadeout 2.0
+
+            u "(Actually, I should probably go find Imre and tell him about what happened.)"
+
+            jump findimre
 
         "Not really.":
-
             $ addPoint("bf", 1)
-            jump fm_b
 
-    label fm_b:
-    scene s428a
-    with dissolve
+            scene s428a
+            with dissolve
 
-    u "Not really, I'm not a fighter, okay? This was a one time thing, I had no choice."
+            u "Not really, I'm not a fighter, okay? This was a one time thing, I had no choice."
 
-    scene s428b #chris convincing / understanding
-    with dissolve
+            scene s428b #chris convincing / understanding
+            with dissolve
 
-    ch "Not a single freshman last year could have beaten up Adam. You have talent, man. Come to our rush party on Tuesday, I promise you, you won't regret it."
+            ch "Not a single freshman last year could have beaten up Adam. You have talent, man. Come to our rush party on Tuesday, I promise you, you won't regret it."
 
-    scene s428a
-    with dissolve
+            scene s428a
+            with dissolve
 
-    u "I promised my friend I'd go anyways. So yeah, I'll be there."
+            u "I promised my friend I'd go anyways. So yeah, I'll be there."
 
-    scene s428
-    with dissolve
+            scene s428
+            with dissolve
 
-    ch "That's good. I'll see you then, come talk to me when you're there."
+            ch "That's good. I'll see you then, come talk to me when you're there."
 
-    scene s428a
-    with dissolve
+            scene s428a
+            with dissolve
 
-    u "Yeah, will do."
+            u "Yeah, will do."
 
-    scene s427
-    with dissolve
+            scene s427
+            with dissolve
 
-    u "(Actually, I should probably go find Imre and tell him about what happened.)"
+            u "(Actually, I should probably go find Imre and tell him about what happened.)"
 
-    jump findimre
+            jump findimre
 
-    label fm_a:
-
-    scene s428a
-    with dissolve
-
-    u "Yeah, I'm definitely interested. Especially in the Wolves."
-
-    scene s428b #chris convincing
-    with dissolve
-
-    ch "That's what I like to hear. Not a single freshman last year could have beaten up Adam. I assume you're gonna be at our rush party on Tuesday?"
-
-    scene s428a
-    with dissolve
-
-    u "Yeah, I'll definitely be there."
-
-    scene s428
-    with dissolve
-
-    ch "Cool, I'll see you then. Come talk to me when you're there."
-
-    scene s428a
-    with dissolve
-
-    u "Yeah, will do."
-
-    scene s427
-    with dissolve
-
-    stop music fadeout 2.0
-
-    u "(Actually, I should probably go find Imre and tell him about what happened.)"
-
-    jump findimre
-
-    label adamfinish: ###Adam beats you
+label adamfinish: ###Adam beats you
     $ renpy.end_replay()
     $ winadam = False
 
@@ -4555,10 +4031,7 @@ tell me!"
 
     u "(But first, I gotta wash the blood of my face.)"
 
-    jump findimre
-
-    label findimre:
-
+label findimre:
     play music "music/m16punk.mp3"
 
     #### montage of you looking for Imre
@@ -4597,277 +4070,257 @@ tell me!"
     scene s439a
     with dissolve
 
-    if fightadam == True:
+    if fightadam and winadam :
+        $ imremad = True
+        u "Actually, I uhm... I found Adam."
 
-        if winadam == True:
-            $ imremad = True
-            u "Actually, I uhm... I found Adam."
+        scene s439b # Imre surprised but still a bit mad
+        with dissolve
 
-            scene s439b # Imre surprised but still a bit mad
-            with dissolve
+        imre "Where? Where is he?"
 
-            imre "Where? Where is he?"
+        scene s439c
+        with dissolve
 
-            scene s439c
-            with dissolve
+        u "He lives in the dorm opposite to us. But I already paid him a visit."
 
-            u "He lives in the dorm opposite to us. But I already paid him a visit."
+        scene s439b
+        with dissolve
 
-            scene s439b
-            with dissolve
+        imre "Fuck you mean you paid him a visit?"
 
-            imre "Fuck you mean you paid him a visit?"
+        scene s439c
+        with dissolve
 
-            scene s439c
-            with dissolve
+        u "I beat him up. Knocked him out. Told him to leave you alone."
 
-            u "I beat him up. Knocked him out. Told him to leave you alone."
+        scene s439
+        with dissolve
 
-            scene s439
-            with dissolve
+        imre "You did what?! What the fuck is wrong with you?!"
 
-            imre "You did what?! What the fuck is wrong with you?!"
+        scene s439a
+        with dissolve
 
-            scene s439a
-            with dissolve
+        u "What?? That's what you wanted, right? He got beaten up."
 
-            u "What?? That's what you wanted, right? He got beaten up."
+        scene s440 # Imre stands up angry
+        with dissolve
 
-            scene s440 # Imre stands up angry
-            with dissolve
+        imre "I wanted to beat him up! He was mine! You knew he was mine!"
 
-            imre "I wanted to beat him up! He was mine! You knew he was mine!"
+        scene s440a
+        with dissolve
 
-            scene s440a
-            with dissolve
+        u "Imre, I-"
 
-            u "Imre, I-"
+        scene s440
+        with dissolve
 
-            scene s440
-            with dissolve
+        imre "You pretend like you're not a fighter, like you're not a Wolf..."
 
-            imre "You pretend like you're not a fighter, like you're not a Wolf..."
+        imre "Well turns out you were right about one of those. Go join the fucking Apes!"
 
-            imre "Well turns out you were right about one of those. Go join the fucking Apes!"
+        scene s441 # Imre storms off
+        with dissolve
 
-            scene s441 # Imre storms off
-            with dissolve
+        u "Imre!"
 
-            u "Imre!"
+        scene s441a # Imre gone
+        with dissolve
 
-            scene s441a # Imre gone
-            with dissolve
+        u "Fuck!"
 
-            u "Fuck!"
+    elif fightadam:
+        u "Actually, I uhm... I found Adam."
 
-            jump continueba
+        scene s439b # Imre surprised but still a bit mad
+        with dissolve
 
-        else:
-            u "Actually, I uhm... I found Adam."
+        imre "Where? Where is he?"
 
-            scene s439b # Imre surprised but still a bit mad
-            with dissolve
+        scene s439c
+        with dissolve
 
-            imre "Where? Where is he?"
+        u "He lives in the dorm opposite to us. I confronted him when I found out, but it got out of control and he beat me up."
 
-            scene s439c
-            with dissolve
+        u "Luckily Chris stepped in, otherwise he would've sent me to the hospital as well."
 
-            u "He lives in the dorm opposite to us. I confronted him when I found out, but it got out of control and he beat me up."
+        scene s439d # Imre slight cocky smile
+        with dissolve
 
-            u "Luckily Chris stepped in, otherwise he would've sent me to the hospital as well."
+        imre "Well that was fucking stupid of you, wasn't it?"
 
-            scene s439d # Imre slight cocky smile
-            with dissolve
+        imre "I told you, I don't need your help, I got this."
 
-            imre "Well that was fucking stupid of you, wasn't it?"
+        scene s439e
+        with dissolve
 
-            imre "I told you, I don't need your help, I got this."
+        u "Yeah sorry, it's just... I don't wanna pick you up from the hospital again."
 
-            scene s439e
-            with dissolve
+        scene s439d
+        with dissolve
 
-            u "Yeah sorry, it's just... I don't wanna pick you up from the hospital again."
+        imre "I'll get a cab next time."
 
-            scene s439d
-            with dissolve
+        scene s439e
+        with dissolve
 
-            imre "I'll get a cab next time."
+        u "You know that's not what I meant."
 
-            scene s439e
-            with dissolve
+        scene s439f # imre serious
+        with dissolve
 
-            u "You know that's not what I meant."
+        imre "Look, I really appreciate that you're trying to help, but I know what I'm doing, okay?"
 
-            scene s439f # imre serious
-            with dissolve
+        scene s439g
+        with dissolve
 
-            imre "Look, I really appreciate that you're trying to help, but I know what I'm doing, okay?"
+        u "Okay."
 
-            scene s439g
-            with dissolve
+        u "Are you gonna try and fight him now?"
 
-            u "Okay."
+        scene s439f
+        with dissolve
 
-            u "Are you gonna try and fight him now?"
+        imre "I have to do this."
 
-            scene s439f
-            with dissolve
+        scene s439g
+        with dissolve
 
-            imre "I have to do this."
+        u "Can I at least-"
 
-            scene s439g
-            with dissolve
+        scene s439f
+        with dissolve
 
-            u "Can I at least-"
+        imre "[name], please. Go take a walk. Let me handle this myself."
 
-            scene s439f
-            with dissolve
+        scene s439g
+        with dissolve
 
-            imre "[name], please. Go take a walk. Let me handle this myself."
+        u "Alright. Good luck, man."
 
-            scene s439g
-            with dissolve
+    elif tellschool:
+        $ imremad = True
+        u "Actually, I uhm... I found Adam."
 
-            u "Alright. Good luck, man."
+        scene s439b # Imre surprised but still a bit mad
+        with dissolve
 
-            jump continueba
+        imre "Where? Where is he?"
 
+        scene s439c
+        with dissolve
+
+        u "He lives in the dorm opposite to us. But there's something else I need to tell you."
+
+        u "I told the school about what happened. They're gonna take care of it."
+
+        scene s439
+        with dissolve
+
+        imre "You did what?! What the fuck is wrong with you?!"
+
+        scene s439a
+        with dissolve
+
+        u "Look, I know that's not what you wanted, but-"
+
+        scene s440 # Imre stands up angry
+        with dissolve
+
+        imre "I told you to stay out of it! Now if I touch him the school will kick both of us out!"
+
+        scene s440a
+        with dissolve
+
+        u "Imre, I-"
+
+        scene s440
+        with dissolve
+
+        imre "I knew you weren't a fucking fighter, but I didn't know you were such a snitch!"
+
+        imre "Stay the fuck out of my life!"
+
+        scene s441 # Imre storms off
+        with dissolve
+
+        u "Imre!"
+
+        scene s441a # Imre gone
+        with dissolve
+
+        u "Fuck!"
 
     else:
-        if tellschool == True:
+        u "Actually, I uhm... I found Adam."
 
-            $ imremad = True
-            u "Actually, I uhm... I found Adam."
+        scene s439b # Imre surprised but still a bit mad
+        with dissolve
 
-            scene s439b # Imre surprised but still a bit mad
-            with dissolve
+        imre "Where? Where is he?"
 
-            imre "Where? Where is he?"
+        scene s439c
+        with dissolve
 
-            scene s439c
-            with dissolve
+        u "You really wanna know? He lives in the dorm opposite to us."
 
-            u "He lives in the dorm opposite to us. But there's something else I need to tell you."
+        u "But you can't do this, man! At least not by yourself, let me come with you and we'll take him on together."
 
-            u "I told the school about what happened. They're gonna take care of it."
+        scene s439d # Imre slight cocky smile
+        with dissolve
 
-            scene s439
-            with dissolve
+        imre "I told you, I don't need your help, I got this."
 
-            imre "You did what?! What the fuck is wrong with you?!"
+        scene s439e
+        with dissolve
 
-            scene s439a
-            with dissolve
+        u "I get that, but... I don't wanna pick you up from the hospital again."
 
-            u "Look, I know that's not what you wanted, but-"
+        scene s439d
+        with dissolve
 
-            scene s440 # Imre stands up angry
-            with dissolve
+        imre "I'll get a cab next time."
 
-            imre "I told you to stay out of it! Now if I touch him the school will kick both of us out!"
+        scene s439e
+        with dissolve
 
-            scene s440a
-            with dissolve
+        u "You know that's not what I meant."
 
-            u "Imre, I-"
+        scene s439f # imre serious
+        with dissolve
 
-            scene s440
-            with dissolve
+        imre "Look, I really appreciate that you're trying to help, but I know what I'm doing, okay?"
 
-            imre "I knew you weren't a fucking fighter, but I didn't know you were such a snitch!"
+        scene s439g
+        with dissolve
 
-            imre "Stay the fuck out of my life!"
+        u "Okay."
 
-            scene s441 # Imre storms off
-            with dissolve
+        u "Are you gonna try and fight him now?"
 
-            u "Imre!"
+        scene s439f
+        with dissolve
 
-            scene s441a # Imre gone
-            with dissolve
+        imre "I have to do this."
 
-            u "Fuck!"
+        scene s439g
+        with dissolve
 
-            jump continueba
+        u "Can I at least-"
 
-        else:
+        scene s439f
+        with dissolve
 
-            u "Actually, I uhm... I found Adam."
+        imre "[name], please. Go take a walk, distract yourself. Let me handle this myself."
 
-            scene s439b # Imre surprised but still a bit mad
-            with dissolve
+        scene s439g
+        with dissolve
 
-            imre "Where? Where is he?"
+        u "Alright. Good luck, man."
 
-            scene s439c
-            with dissolve
-
-            u "You really wanna know? He lives in the dorm opposite to us."
-
-            u "But you can't do this, man! At least not by yourself, let me come with you and we'll take him on together."
-
-            scene s439d # Imre slight cocky smile
-            with dissolve
-
-            imre "I told you, I don't need your help, I got this."
-
-            scene s439e
-            with dissolve
-
-            u "I get that, but... I don't wanna pick you up from the hospital again."
-
-            scene s439d
-            with dissolve
-
-            imre "I'll get a cab next time."
-
-            scene s439e
-            with dissolve
-
-            u "You know that's not what I meant."
-
-            scene s439f # imre serious
-            with dissolve
-
-            imre "Look, I really appreciate that you're trying to help, but I know what I'm doing, okay?"
-
-            scene s439g
-            with dissolve
-
-            u "Okay."
-
-            u "Are you gonna try and fight him now?"
-
-            scene s439f
-            with dissolve
-
-            imre "I have to do this."
-
-            scene s439g
-            with dissolve
-
-            u "Can I at least-"
-
-            scene s439f
-            with dissolve
-
-            imre "[name], please. Go take a walk, distract yourself. Let me handle this myself."
-
-            scene s439g
-            with dissolve
-
-            u "Alright. Good luck, man."
-
-            jump continueba
-
-
-
-
-    label continueba:
     stop music fadeout 2.0
-
-
 
     scene s442 # you on a park bench depressed
     with Fade (1,0,1)
@@ -4875,26 +4328,18 @@ tell me!"
 
     queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
 
-    if imremad == True:
-
+    if imremad:
         u "(How the fuck did everything go so wrong??)"
         u "(A couple hours ago Imre was so happy to see me and now he probably hates me...)"
 
         u "(I need to go and talk to him again. He's probably in our dorm.)"
 
-
     else:
-
         u "(What am I doing? Adam could be beating Imre senseless at our dorms right now.)"
 
         u "(I know Imre said he didn't want me to help him, but I can't just do nothing.)"
 
     ##text message # You can text Amber you don't have time for this.
-
-
-    $ noexit = True
-
-
 
     scene s442a # you stand up
     with dissolve
@@ -4903,79 +4348,44 @@ tell me!"
 
     u "(Maybe that's Imre...)"
 
+    if chloemad:
+        python:
+            contact_Amber.newMessage("Hey, you alone? xx")
+            contact_Amber.addReply("I'm at the park, but I'm by myself.")
+            contact_Amber.newMessage("Go somewhere where you're completely alone xx")
+            contact_Amber.newMessage("I got a surprise for you ;)")
 
+        call screen phone
 
-
-    if chloemad == True:
-        $ contact_Amber.newMessage("Hey, you alone? xx")
-        $ contact_Amber.addReply("I'm at the park, but I'm by myself.", "amrep8a")
-
-
-
-        call screen contactsscreen
-
-        label phoneaa:
-
-
-        show screen messager(contact=contact_Amber)
         pause 0.5
+
         u "(Fuck, I don't have time for Amber right now, but I really wanna find out what surprise she has.)"
-        hide screen messager
-        if imremad == True:
+
+        if imremad:
             u "(I gotta make a decision. Should I find Imre, or keep talking to Amber?)"
         else:
             u "(I gotta make a decision. Should I help Imre, or keep talking to Amber?)"
 
-        jump endaa
-
     else:
+        python:
+            contact_Chloe.newMessage("I got some free time right now :)")
+            contact_Chloe.newMessage("Wanna go swimming?")
+            contact_Chloe.addReply("Any chance we could do it later? Or tomorrow?")
+            contact_Chloe.newMessage("I'm busy later tonight and I'm pretty much booked for the entire week :/")
 
-        $ contact_Chloe.newMessage("I got some free time right now :)")
-        $ contact_Chloe.newMessage("Wanna go swimming?")
-        $ contact_Chloe.addReply("Any chance we could do it later? Or tomorrow?", "clrep5a")
+        call screen phone
 
-
-        call screen contactsscreen
-
-        label phoneab:
-        show screen messager(contact=contact_Chloe)
         pause 0.5
+
         u "(Fuck, I don't have time for this right now, but going swimming with Chloe sounds like the best possible way to get closer to her.)"
 
-        hide screen messager
-
-        if imremad == True:
+        if imremad:
             u "(I gotta make a decision. Should I find Imre, or meet Chloe?)"
         else:
             u "(I gotta make a decision. Should I help Imre, or meet Chloe?)"
-        jump endaa
 
-    label endaa:
-
-    $ noexit = False
-    if v06 == True:
+label endaa:
+    if persistent.ep > 5:
         jump script06
     else:
         jump end_credits
-
-
-    label end_credits:
-
-    stop music fadeout 2.0
-    image credits = Movie(play="images/credits.webm", Loop = True)
-
-
-    play music "music/vocal.mp3"
-
-    if not steam:
-        show screen getaccess
-        with dissolve
-        " "
-        hide screen getaccess
-
-
-    show credits:
-        ypos 50
-        xalign 0.5
-
-    call screen thx

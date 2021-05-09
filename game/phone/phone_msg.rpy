@@ -84,6 +84,7 @@ init python:
 
             if reply.func:
                 reply.func()
+                reply.func = None
 
             # Send next queued message(s)
             try:

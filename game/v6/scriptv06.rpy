@@ -29,10 +29,6 @@ $ clrep9 = 1
 $ contact_Chloe.newMessage("Okay")
 call screen messager(contact_Chloe)
 
-label clrep5a:
-$ contact_Chloe.newMessage("I'm busy later tonight and I'm pretty much booked for the entire week :/")
-jump phoneab
-
 label clrep6a:
 $ clrep6 = 1
 $ contact_Chloe.newMessage("That's what I like to hear :*")

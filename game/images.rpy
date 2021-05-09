@@ -1,3 +1,8 @@
+# Splash Screen
+image splashone = "images/splash1.webp"
+image splashtwo = "images/splash2.webp"
+image splashthree = "images/splash 3.webp"
+
 # Achievements
 image nohardfeelings = "images/nohardfeelings.webp"
 image openwound = "images/openwound.webp"
@@ -14,11 +19,9 @@ image lipsdontlie = "images/lipsdontlie.webp"
 image relightthefire = "images/relightthefire.webp"
 image rematch = "images/rematch.webp"
 image keeneye = "images/keeneye.webp"
-
-# Splash Screen
-image splashone = "images/splash1.webp"
-image splashtwo = "images/splash2.webp"
-image splashthree = "images/splash 3.webp"
+image onthelow = "images/onthelow.webp"
+image petapublicenemy = "images/petapublicenemy.webp"
+image snitch = "images/snitch.webp"
 
 # v1.0 - v2.0
 image s14 = "images/s14.webp"
@@ -104,3 +107,22 @@ image s316a = "images/s316a.webp" # Julia looking forward talking smiling mouth 
 image s316c = "images/s316c.webp" # Julia looking forward curious
 image s316d = "images/s316d.webp" # Julia looking forward curious mouth closed
 image s316b = "images/s316b.webp" # Julia looking at you smiling mouth open
+
+# v5.0 - v6.0
+image af5 = Movie(play="images/af5.webm", start_image="images/af5start.webp", image="images/af5pic.webp", loop = False)
+image af6 = Movie(play="images/af6.webm", start_image="images/af6start.webp", image="images/af6pic.webp", loop = False)
+image af7 = Movie(play="images/af7.webm", start_image="images/af7start.webp", image="images/af7pic.webp", loop = False)
+image af8 = Movie(play="images/af8.webm", start_image="images/af8start.webp", image="images/af8pic.webp", loop = False)
+image af9 = Movie(play="images/af9.webm", start_image="images/af9start.webp", image="images/af9pic.webp", loop = False)
+image af10 = Movie(play="images/af10.webm", start_image="images/af10start.webp", image="images/af10pic.webp", loop = False)
+image af11 = Movie(play="images/af11.webm", start_image="images/af11start.webp", image="images/af11pic.webp", loop = False)
+image af12 = Movie(play="images/af12.webm", start_image="images/af12start.webp", image="images/af12pic.webp", loop = False)
+image af13 = Movie(play="images/af13.webm", start_image="images/af13start.webp", image="images/af13pic.webp", loop = False)
+image af14 = Movie(play="images/af14.webm", start_image="images/af14start.webp", image="images/af14pic.webp", loop = False)
+image af15 = Movie(play="images/af15.webm", start_image="images/af15start.webp", image="images/af15pic.webp", loop = False)
+image af16 = Movie(play="images/af16.webm", start_image="images/af16start.webp", image="images/af16pic.webp", loop = False)
+image youfinishadam = Movie(play="images/youfinishadam.webm", start_image="images/youfinishadamstart.webp", image="images/youfinishadampic.webp", loop = False)
+image adamfinish = Movie(play="images/adamfinish.webm", start_image="images/adamfinishstart.webp", image="images/adamfinishpic.webp", loop = False)
+
+# Misc
+image credits = Movie(play="images/credits.webm", Loop = True)
