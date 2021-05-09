@@ -53,7 +53,7 @@ default reactiona = 1.0
 default ischoice = False
 default emilyandben = False
 default forgiveemily = False
-default costumeaubrey = True
+default costumeaubrey = False
 default v1_laurenKiss = False
 default v1_kissLauren = False
 

@@ -1,3 +1,31 @@
+init python:
+    # Josh messages
+    def v4_reply1():
+        addPoint("bro", 1)
+        contact_Josh.newMessage(_("Dope"))
+        contact_Josh.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
+
+    def v4_reply2():
+        contact_Josh.newMessage(_("Aww, come on. You'll be back by 11."))
+        contact_Josh.newImgMessage("images/text1.webp")
+        contact_Josh.newMessage(_("I told my friend Amber about you and she really wants to meet you."))
+        contact_Josh.addReply(_("Alright, I'll come."), v4_reply1)
+        contact_Josh.addReply(_("Josh, I don't know, man. I don't wanna be late."), v4_reply3)
+
+    def v4_reply3():
+        contact_Josh.newMessage(_("Remember how you told me in high school that you felt like you always missed out on all the crazy stories?"))
+        contact_Josh.newMessage(_("Don't miss out now."))
+        contact_Josh.addReply(_("Fine, I'll come. But I need to go before 11."), v4_reply4)
+        contact_Josh.addReply(_("I can't, sorry."), v4_reply5)
+
+    def v4_reply4():
+        contact_Josh.newMessage(_("Dope"))
+        contact_Josh.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
+
+    def v4_reply5():
+        addPoint("bf", 1)
+        contact_Josh.newMessage(_("This guy"))
+
 label v4start:
     play music "music/m4punk.mp3"
 
@@ -1024,11 +1052,10 @@ label v4start:
 
     u "(I should text Chloe and see if she wants to meet up... I need to find out if there's any truth in what Ryan said.)"
 
-    python:
-        contact_Chloe.addReply(_("Hey Chloe, any chance you can meet up in a bit?"))
-        contact_Chloe.newMessage(_("I'm really busy today, but I could do tonight after 11 or so."))
-        contact_Chloe.addReply(_("Alright, cool. I'll be at yours for 11"))
-        contact_Chloe.newMessage(_("Sounds good :)"))
+    $ contact_Chloe.addReply(_("Hey Chloe, any chance you can meet up in a bit?"))
+    $ contact_Chloe.newMessage(_("I'm really busy today, but I could do tonight after 11 or so."))
+    $ contact_Chloe.addReply(_("Alright, cool. I'll be at yours for 11"))
+    $ contact_Chloe.newMessage(_("Sounds good :)"))
 
     play music "music/mindie4.mp3"
 
@@ -2140,36 +2167,9 @@ label continueab:
 
     play music "music/m9punk.mp3"
 
-    python:
-        def v4_reply1():
-            addPoint("bro", 1)
-            contact_Josh.newMessage(_("Dope"))
-            contact_Josh.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
-
-        def v4_reply2():
-            contact_Josh.newMessage(_("Aww, come on. You'll be back by 11."))
-            contact_Josh.newImgMessage("images/text1.webp")
-            contact_Josh.newMessage(_("I told my friend Amber about you and she really wants to meet you."))
-            contact_Josh.addReply(_("Alright, I'll come."), v4_reply1)
-            contact_Josh.addReply(_("Josh, I don't know, man. I don't wanna be late."), v4_reply3)
-
-        def v4_reply3():
-            contact_Josh.newMessage(_("Remember how you told me in high school that you felt like you always missed out on all the crazy stories?"))
-            contact_Josh.newMessage(_("Don't miss out now."))
-            contact_Josh.addReply(_("Fine, I'll come. But I need to go before 11."), v4_reply4)
-            contact_Josh.addReply(_("I can't, sorry."), v4_reply5)
-
-        def v4_reply4():
-            contact_Josh.newMessage(_("Dope"))
-            contact_Josh.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
-
-        def v4_reply5():
-            addPoint("bf", 1)
-            contact_Josh.newMessage(_("This guy"))
-
-        contact_Josh.newMessage(_("Hey man, you wanna hang out with me and some friends tonight?"), queue=False)
-        contact_Josh.addReply(_("Uhh, sure."), v4_reply1)
-        contact_Josh.addReply(_("I'm meeting a friend at 11, so I can't really."), v4_reply2)
+    $ contact_Josh.newMessage(_("Hey man, you wanna hang out with me and some friends tonight?"), queue=False)
+    $ contact_Josh.addReply(_("Uhh, sure."), v4_reply1)
+    $ contact_Josh.addReply(_("I'm meeting a friend at 11, so I can't really."), v4_reply2)
 
     label phonew:
         call screen phone
