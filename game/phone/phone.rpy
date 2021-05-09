@@ -84,6 +84,7 @@ screen phoneTemplate():
 
 screen phone():
     tag phoneTag
+    modal True
 
     use phoneTemplate:
 

@@ -1571,7 +1571,7 @@ label conl:
         else: # not caught peeking but met
             label talkedout:
                 $ contact_Aubrey.newMessage(_("Hey, I really need your help."), queue=False)
-                $ contact_Aubrey.newMessage(_("Any chance that you could come over now?"))
+                $ contact_Aubrey.newMessage(_("Any chance that you could come over now?"), queue=False)
                 $ contact_Aubrey.addReply(_("Yeah, I'll be right there.."))
                 $ contact_Aubrey.newMessage(_("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
                 $ contact_Aubrey.newMessage(_("I'll leave it open."))
@@ -1768,66 +1768,65 @@ label conl:
                         $ addPoint("tm", 1)
                         $ addPoint("bro", 1)
 
-                        scene s254m
-                        with dissolve
+                scene s254m
+                with dissolve
 
-                        u "Dare me."
+                u "Dare me."
 
-                        scene s254l
-                        with dissolve
+                scene s254l
+                with dissolve
 
-                        au "Uhm... okay. Take your pants off."
+                au "Uhm... okay. Take your pants off."
 
-                        scene s254m
-                        with dissolve
+                scene s254m
+                with dissolve
 
-                        u "What?? I'm not gonna take my pants off."
+                u "What?? I'm not gonna take my pants off."
 
-                        u "You gotta give me something I can actually do."
+                u "You gotta give me something I can actually do."
 
-                        scene s254l
-                        with dissolve
+                scene s254l
+                with dissolve
 
-                        au "I did! It's totally doable."
+                au "I did! It's totally doable."
 
-                        scene s254m
-                        with dissolve
+                scene s254m
+                with dissolve
 
-                        u "I can't just-"
+                u "I can't just-"
 
-                        scene s254l
-                        with dissolve
+                scene s254l
+                with dissolve
 
-                        au "Yeah, you can. See?"
+                au "Yeah, you can. See?"
 
-                        scene s254aa ## aubrey and you standing
-                        with dissolve
+                scene s254aa ## aubrey and you standing
+                with dissolve
 
-                        pause 0.5
+                pause 0.5
 
-                        scene s254ab # aubrey grabbing your pants
-                        with dissolve
+                scene s254ab # aubrey grabbing your pants
+                with dissolve
 
-                        pause 0.5
+                pause 0.5
 
-                        scene s254ac # your pants down aubrey forward
-                        with dissolve
+                scene s254ac # your pants down aubrey forward
+                with dissolve
 
-                        u "Did you just?"
+                u "Did you just?"
 
-                        scene s256a
-                        with dissolve
+                scene s256a
+                with dissolve
 
-                        au "Yeah..."
+                au "Yeah..."
 
     else: # you didn't meet aubrey
-        python:
-            contact_Aubrey.newMessage(_("Hey, you know how you had to cancel on me yesterday and you really want to make it up to me?"), queue=False)
-            contact_Aubrey.newMessage(_("Wanna come over now?"))
-            contact_Aubrey.addReply(_("Uhh... okay."))
-            contact_Aubrey.newMessage(_("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
-            contact_Aubrey.newMessage(_("I'll leave it open."))
-            contact_Aubrey.addReply(_("Uhm... sure."))
+        $ contact_Aubrey.newMessage(_("Hey, you know how you had to cancel on me yesterday and you really want to make it up to me?"), queue=False)
+        $ contact_Aubrey.newMessage(_("Wanna come over now?"), queue=False)
+        $ contact_Aubrey.addReply(_("Uhh... okay."))
+        $ contact_Aubrey.newMessage(_("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
+        $ contact_Aubrey.newMessage(_("I'll leave it open."))
+        $ contact_Aubrey.addReply(_("Uhm... sure."))
 
         label repeatm:
             call screen phone
@@ -2060,158 +2059,158 @@ label conl:
         scene aub1start
         with dissolve
 
-        menu:
-            "Kiss her":
-                $ aubreysex = True
+    menu:
+        "Kiss her":
+            $ aubreyrs = True
 
-                stop music fadeout 2.0
-                play music "music/msexy.mp3"
+            stop music fadeout 2.0
+            play music "music/msexy.mp3"
 
-                scene aub1
-                pause 1.0
+            scene aub1
+            pause 1.0
 
-                scene aub2
+            scene aub2
 
-                " "
+            " "
 
-                scene anew1 # aubrey after kiss laughingly
-                with dissolve
+            scene anew1 # aubrey after kiss laughingly
+            with dissolve
 
-                au "Is this such a good idea?"
+            au "Is this such a good idea?"
 
-                scene anew1a
-                with dissolve
+            scene anew1a
+            with dissolve
 
-                u "What's the worst that could happen?"
+            u "What's the worst that could happen?"
 
-                scene anew2 # right hand in her pants
-                with dissolve
+            scene anew2 # right hand in her pants
+            with dissolve
 
-                pause 0.5
+            pause 0.5
 
-                scene anew3 # close up of her face aroused
-                with dissolve
+            scene anew3 # close up of her face aroused
+            with dissolve
 
-                au "*Quiet moan* Ohhh okay... definitely a good idea."
+            au "*Quiet moan* Ohhh okay... definitely a good idea."
 
-                scene anew4 # left hand on her boobs
-                with dissolve
+            scene anew4 # left hand on her boobs
+            with dissolve
 
-                pause 0.5
+            pause 0.5
 
-                scene anew4a # her hands lift her bra up
-                with dissolve
+            scene anew4a # her hands lift her bra up
+            with dissolve
 
-                pause 0.5
+            pause 0.5
 
-                scene anew4b # her no bra
-                with dissolve
+            scene anew4b # her no bra
+            with dissolve
 
-                u "Wow..."
+            u "Wow..."
 
-                scene anew2
-                with dissolve
+            scene anew2
+            with dissolve
 
-                au "*Moans*"
+            au "*Moans*"
 
-                scene asexnew1
+            scene asexnew1
 
-                au "Oh, [name]!"
+            au "Oh, [name]!"
 
-                au "Fuck..."
+            au "Fuck..."
 
-                scene anew5 # you grab her pants
-                with dissolve
+            scene anew5 # you grab her pants
+            with dissolve
 
-                pause 0.5
+            pause 0.5
 
-                scene anew5a # her pants down
-                with dissolve
+            scene anew5a # her pants down
+            with dissolve
 
-                pause 0.5
+            pause 0.5
 
-                scene anew5b # your hand on her panties
-                with dissolve
+            scene anew5b # your hand on her panties
+            with dissolve
 
-                au "Wait."
+            au "Wait."
 
-                scene anew3a
-                with dissolve
+            scene anew3a
+            with dissolve
 
-                au "Now it's my turn."
+            au "Now it's my turn."
 
-                scene s257c # aubrey underwear
-                with dissolve
+            scene s257c # aubrey underwear
+            with dissolve
 
-                " "
+            " "
 
-                scene aub3
+            scene aub3
 
-                pause 1.5
+            pause 1.5
 
-                scene anew6
-                with dissolve
+            scene anew6
+            with dissolve
 
-                au "You have a nice cock, I could get used to this."
+            au "You have a nice cock, I could get used to this."
 
-                scene anew6b
-                with dissolve
+            scene anew6b
+            with dissolve
 
-                au "*Kiss*"
+            au "*Kiss*"
 
-                scene anew6c
-                with dissolve
+            scene anew6c
+            with dissolve
 
-                au "*Kiss*"
+            au "*Kiss*"
 
-                scene anew6d
-                with dissolve
+            scene anew6d
+            with dissolve
 
-                au "*Kiss*"
+            au "*Kiss*"
 
-            "Stop it":
-                scene s254c
-                with dissolve
+        "Stop it":
+            scene s254c
+            with dissolve
 
-                u "Okay, you know what? That's enough. We shouldn't go any further than this."
+            u "Okay, you know what? That's enough. We shouldn't go any further than this."
 
-                scene s254
-                with dissolve
+            scene s254
+            with dissolve
 
-                au "Go further? What do you mean?"
+            au "Go further? What do you mean?"
 
-                scene s254a
-                with dissolve
+            scene s254a
+            with dissolve
 
-                u "That look you just gave me... we were both thinking about it. It's just not a good idea."
+            u "That look you just gave me... we were both thinking about it. It's just not a good idea."
 
-                scene s254
-                with dissolve
+            scene s254
+            with dissolve
 
-                au "I wasn't thinking anything."
+            au "I wasn't thinking anything."
 
-                scene s254a
-                with dissolve
+            scene s254a
+            with dissolve
 
-                u "Maybe it's best if I go now."
+            u "Maybe it's best if I go now."
 
-                scene s254
-                with dissolve
+            scene s254
+            with dissolve
 
-                au "Yeah, okay... whatever."
-                $ renpy.end_replay()
-                scene s264 # you going back to your dorm
-                with Fade (1,0,1)
+            au "Yeah, okay... whatever."
+            $ renpy.end_replay()
+            scene s264 # you going back to your dorm
+            with Fade (1,0,1)
 
-                u "(Oh god, did I just turn down Aubrey, or was I just reading into it?)"
+            u "(Oh god, did I just turn down Aubrey, or was I just reading into it?)"
 
-                u "(I just don't know if it would be a good idea if we were to hook up. What if she tells Chloe? Would Chloe be okay with it?)"
+            u "(I just don't know if it would be a good idea if we were to hook up. What if she tells Chloe? Would Chloe be okay with it?)"
 
-                u "(Also, I barely know her...)"
+            u "(Also, I barely know her...)"
 
-                stop music fadeout 2.0
+            stop music fadeout 2.0
 
-                jump aubsexad
+            jump aubsexad
 
 
 label abj:
@@ -3170,7 +3169,7 @@ label continueq:
 
         la "So, what did you do all day?"
 
-        if aubreysex:
+        if aubreyrs:
             scene s287a # lauren closeup while walking her mouth closed  FIRST PERSON
             with dissolve
             u "(Okay, time to make a decision. Should I tell her about what happened with Aubrey?)"

@@ -108,7 +108,6 @@ default dontanswerjulia = False
 default notnowmom = False
 default lipsdontlie = False
 default truthhurts = False
-default aubreysex = False
 default revengeadam = False
 default liejulia = False
 default girl = ""

@@ -1,78 +1,35 @@
+init python:
+    def v6_reply1():
+        addPoint("bro", 1)
+        contact_Amber.newMessage("I'm playing drink or dare and got dared to send an underwear pic to a guy.")
+        contact_Amber.addReply("And you chose me, huh?", v6_reply2)
+        contact_Amber.addReply("Feel free to do so anytime :)", v6_reply3)
+
+    def v6_reply2():
+        addPoint("bro", 1)
+        contact_Amber.newMessage("Maybe I picked someone at random ;)")
+
+    def v6_reply3():
+        addPoint("bf", 1)
+        contact_Amber.newMessage("Maybe if you're lucky xx")
+
+    def v6_reply4():
+        addPoint("bf", 1)
+        contact_Amber.newMessage("I'm glad you like it xx")
+        contact_Amber.addReply( "I hope there's more of that in the future :P")
+        contact_Amber.newMessage("Maybe if you're lucky xx")
+
+    def v6_reply5():
+        addPoint("tm", 1)
+        addPoint("bro", 1)
+        contact_Amber.newMessage("Moment's passed...")
+
+    def v6_reply6():
+        addPoint("bf", 1)
+        contact_Amber.newMessage("You better xx")
 
 label choicetimer:
-$ renpy.jump("".join([timerexit]))
-
-
-
-label amrep17a:
-$ contact_Amber.addReply("I'm alone now, if the surprise is still on ;)", "amrep18a")
-$ contact_Amber.addReply("I'll make it up to you tho", "amrep18b")
-call screen messager(contact_Amber)
-
-label amrep18a:
-$ addPoint("tm", 1)
-$ addPoint("bro", 1)
-$ amrep18 = 1
-$ contact_Amber.newMessage("Moment's passed...")
-
-call screen messager(contact_Amber)
-
-label amrep18b:
-$ amrep18 = 2
-$ addPoint("bf", 1)
-$ contact_Amber.newMessage("You better xx")
-call screen messager(contact_Amber)
-
-
-label clrep9a:
-$ clrep9 = 1
-$ contact_Chloe.newMessage("Okay")
-call screen messager(contact_Chloe)
-
-label clrep6a:
-$ clrep6 = 1
-$ contact_Chloe.newMessage("That's what I like to hear :*")
-$ contact_Chloe.newMessage("Meet me at the school's swimming pool")
-$ contact_Chloe.addReply("Cool, see you there", "clrep8a")
-call screen messager(contact_Chloe)
-
-label clrep8a:
-call screen messager(contact_Chloe)
-
-label amrep11a:
-$ contact_Amber.newImgMessage("images/text2.webp") 
-$ contact_Amber.addReply("Woah, what was that for?", "amrep12a")
-$ contact_Amber.addReply("Oh wow, you're so fucking hot", "amrep12b")
-call screen messager(contact_Amber)
-
-label amrep12a:
-$ amrep12 = 1
-$ addPoint("bro", 1)
-$ contact_Amber.newMessage("I'm playing drink or dare and got dared to send an underwear pic to a guy.")
-$ contact_Amber.addReply("And you chose me, huh?", "amrep13a")
-$ contact_Amber.addReply("Feel free to do so anytime :)", "amrep13b")
-call screen messager(contact_Amber)
-
-label amrep12b:
-$ amrep12 = 2
-$ addPoint("bf", 1)
-$ contact_Amber.newMessage("I'm glad you like it xx")
-$ contact_Amber.addReply( "I hope there's more of that in the future :P", "amrep16a")
-call screen messager(contact_Amber)
-
-label amrep13a:
-$ addPoint("bro", 1)
-$ contact_Amber.newMessage("Maybe I picked someone at random ;)")
-call screen messager(contact_Amber)
-
-label amrep13b:
-$ addPoint("bf", 1)
-$ contact_Amber.newMessage("Maybe if you're lucky xx")
-call screen messager(contact_Amber)
-
-label amrep16a:
-$ contact_Amber.newMessage("Maybe if you're lucky xx")
-call screen messager(contact_Amber)
+    $ renpy.jump("".join([timerexit]))
 
 label aubrep16a:
 $ aubrep16 = 1
@@ -129,78 +86,74 @@ $ homeworkout = False
 call screen messager(contact_Amber)
 
 label v6start:
+    if imremad and chloemad:
+        menu:
+            "Find Imre":
+                $ addPoint("bro", 1)
+                $ chooseimre = True
+                $ meetchloe = False
 
-    if aubreysex == True:
-        $ aubreyrs = True
+                jump imrecona
 
-    if imremad == True:
-        if chloemad == True:
-            menu:
+            "Keep talking to Amber":
+                $ addPoint("tm", 1)
+                $ chooseimre = False
+                $ meetchloe = False
 
-                "Find Imre":
-                    $ addPoint("bro", 1)
-                    $ chooseimre = True
-                    $ meetchloe = False
-                    jump imrecona
+                jump imreconc
 
-                "Keep talking to Amber":
-                    $ addPoint("tm", 1)
-                    $ chooseimre = False
-                    $ meetchloe = False
-                    jump imreconc
+    elif imremad:
+        menu:
+            "Find Imre":
+                $ addPoint("bro", 1)
+                $ chooseimre = True
+                $ meetchloe = False
 
-        else:
-            menu:
+                jump imrecona
 
-                "Find Imre":
-                    $ addPoint("bro", 1)
-                    $ chooseimre = True
-                    $ meetchloe = False
-                    jump imrecona
+            "Meet Chloe":
+                $ addPoint("bf", 1)
+                $ chooseimre = False
+                $ meetchloe = True
 
-                "Meet Chloe":
-                    $ addPoint("bf", 1)
-                    $ chooseimre = False
-                    $ meetchloe = True
-                    jump imrecond
+                jump imrecond
 
+
+    elif chloemad:
+        menu:
+            "Help Imre":
+                $ addPoint("bro", 1)
+                $ chooseimre = True
+                $ meetchloe = False
+
+                jump imreconb
+
+            "Keep talking to Amber":
+                $ addPoint("tm", 1)
+                $ chooseimre = False
+                $ meetchloe = False
+
+                jump imreconc
 
     else:
-        if chloemad == True:
-            menu:
+        menu:
+            "Help Imre":
+                $ addPoint("bro", 1)
+                $ chooseimre = True
+                $ meetchloe = False
 
-                "Help Imre":
-                    $ addPoint("bro", 1)
-                    $ chooseimre = True
-                    $ meetchloe = False
-                    jump imreconb
+                jump imreconb
 
-                "Keep talking to Amber":
-                    $ addPoint("tm", 1)
-                    $ chooseimre = False
-                    $ meetchloe = False
-                    jump imreconc
+            "Meet Chloe":
+                $ addPoint("bf", 1)
+                $ chooseimre = False
+                $ meetchloe = True
 
-        else:
-            menu:
-
-                "Help Imre":
-                    $ addPoint("bro", 1)
-                    $ chooseimre = True
-                    $ meetchloe = False
-                    jump imreconb
-
-                "Meet Chloe":
-                    $ addPoint("bf", 1)
-                    $ chooseimre = False
-                    $ meetchloe = True
-                    jump imrecond
+                jump imrecond
 
 
-    label imrecona: # Find Imre
-    
+label imrecona: # Find Imre
     u "(I need to find Imre and apologize. He's probably in our dorm room.)"
-
 
     scene s443 # you entering dorm
     with fade
@@ -229,117 +182,100 @@ label v6start:
     imre "You decided what was right for me, without even asking. You got no type of loyalty at all!"
 
     menu:
-
-
-
         "Explain yourself":
             $ addPoint("bro", 1)
-            jump fn_a
+
+            scene s445c
+            with dissolve
+
+            u "Look, you're injured and I don't want you to bleed internally. I did what I had to!"
+
+            u "You know our friendship comes first, but sometimes loyalty means protecting each other even if we don't wanna be protected."
+
+            if kct == "loyal":
+                call screen popup11
+
+                label popup11:
+                    $ imreforgives = True
+
+                    scene s445
+                    with dissolve
+
+                    imre "Even if you're right, that was my fight..."
+
+                    scene s445a
+                    with dissolve
+
+                    u "I'm sorry, you'll get your revenge someday... but not while you're injured."
+
+                    scene s445
+                    with dissolve
+
+                    imre "Yeah, I guess..."
+
+                    scene s447 # Imre sits down contemplating looking at the floor
+                    with dissolve
+
+                    pause 0.5
+
+                    u "Does that mean you're staying?"
+
+                    scene s447a # Imre looks at you
+                    with dissolve
+
+                    imre "Alright."
+
+                    scene s447a2
+                    with dissolve
+
+                    u "Brothers?"
+
+                    scene s447a # Imre thoughtful
+                    with dissolve
+
+                    imre "Brothers."
+
+                    imre "I need some time to think. I'll see you later."
+
+                    scene s447a2
+                    with dissolve
+
+                    u "Alright, let me know if there's anything else I can do."
+
+                    scene s450b # Imre stands up and walks away
+                    with dissolve
+
+                    pause 0.5
+
+                    scene s450c # Imre gone
+                    with dissolve
+
+                    pause 0.5
+
+                    jump continuebb
+
+            else:
+                $ imreforgives = False
+                scene s445b
+                with dissolve
+
+                imre "Fuck do you know about loyalty?! You just wanna be in control!"
 
         "Apologize":
             $ addPoint("bf", 1)
             $ imreforgives = False
-            jump fn_b
 
-    label fn_a:
+            scene s445c
+            with dissolve
 
-    scene s445c
-    with dissolve
+            u "I'm sorry. I shouldn't have done what I did."
 
-    u "Look, you're injured and I don't want you to bleed internally. I did what I had to!"
+            u "I'm really sorry."
 
-    u "You know our friendship comes first, but sometimes loyalty means protecting each other even if we don't wanna be protected."
+            scene s445b
+            with dissolve
 
-    if kct == "loyal":
-
-        call screen popup11
-
-        label popup11:
-        $ imreforgives = True
-
-        scene s445
-        with dissolve
-
-        imre "Even if you're right, that was my fight..."
-
-        scene s445a
-        with dissolve
-
-        u "I'm sorry, you'll get your revenge someday... but not while you're injured."
-
-        scene s445
-        with dissolve
-
-        imre "Yeah, I guess..."
-
-        scene s447 # Imre sits down contemplating looking at the floor
-        with dissolve
-
-        pause 0.5
-
-        u "Does that mean you're staying?"
-
-        scene s447a # Imre looks at you
-        with dissolve
-
-        imre "Alright."
-
-        scene s447a2
-        with dissolve
-
-        u "Brothers?"
-
-        scene s447a # Imre thoughtful
-        with dissolve
-
-        imre "Brothers."
-
-        imre "I need some time to think. I'll see you later."
-
-        scene s447a2
-        with dissolve
-
-        u "Alright, let me know if there's anything else I can do."
-
-
-        scene s450b # Imre stands up and walks away
-        with dissolve
-
-        pause 0.5
-
-        scene s450c # Imre gone
-        with dissolve
-
-        pause 0.5
-
-        jump continuebb
-
-    else:
-        $ imreforgives = False
-        scene s445b
-        with dissolve
-
-        imre "Fuck do you know about loyalty?! You just wanna be in control!"
-
-        jump fn_ad
-
-
-
-    label fn_b:
-
-    scene s445c
-    with dissolve
-
-    u "I'm sorry. I shouldn't have done what I did."
-
-    u "I'm really sorry."
-
-    scene s445b
-    with dissolve
-
-    imre "Fuck you! Your shitty apologies mean nothing!"
-
-    label fn_ad:
+            imre "Fuck you! Your shitty apologies mean nothing!"
 
     imre "I'm fucking done with you! I'm staying with a friend 'till they find me a new dorm."
 
@@ -357,17 +293,11 @@ label v6start:
 
     jump continuebb
 
-    label imreconb: # Help Imre
-    
+label imreconb: # Help Imre
     $ brosbeforehoes = True
     if not steam:
-        image brosbeforehoes = "images/brosbeforehoes.webp"
-        show brosbeforehoes:
-            xpos 0
-            ypos -200
-            linear 0.5 xpos 0 ypos 0
-            pause 2.0
-            linear 0.5 xpos 0 ypos -200
+        show brosbeforehoes at achievementShow
+
     else:
         $ achievement.grant("bros_before_hoes")
         $ achievement.sync()
@@ -457,69 +387,48 @@ label v6start:
 
     jump continuebb
 
-    label imreconc: # Keep talking to Amber
+label imreconc: # Keep talking to Amber
     u "(Fuck it, Imre can wait.)"
 
     u "(I know a spot where I'm completely alone...)"
 
     scene s475 # MC in a remote location
     with fade
-    $ contact_Amber.addReply("I'm all by myself now.", "amrep11a")
-    
-    $ msgnot = 1
-    $ amisreply = 1
-    $ ammsgnot = 1
-    $ ammsg = 11
-    $ amrep11a = "I'm all by myself now."
-    $ amrep12a = "Woah, what was that for?"
-    $ amrep12b = "Oh wow, you're so fucking hot"
-    $ ammsg13 = "I'm playing drink or dare and got dared to send an underwear pic to a guy."
-    $ amrep13a = "And you chose me, huh?"
-    $ amrep13b = "Feel free to do so anytime :)"
-    $ ammsg14 = "Maybe I picked someone at random ;)"
-    $ ammsg15 = "Maybe if you're lucky xx"
-    $ ammsg16 = "I'm glad you like it xx"
-    $ amrep16a = "I hope there's more of that in the future :P"
+
+    $ contact_Amber.addReply("I'm all by myself now.")
+    $ contact_Amber.newImgMessage("images/text2.webp") 
+    $ contact_Amber.addReply("Woah, what was that for?", v6_reply1)
+    $ contact_Amber.addReply("Oh wow, you're so fucking hot", v6_reply4)
 
     label phonead:
+        call screen phone
+        if contact_Amber.getReplies():
+            u "(Time to text Amber.)"
+            jump phonead
 
-    if contact_Amber.messages[-1].replies:
-        u "(Time to text Amber.)"
-        jump phonead
-    else:
-        
-        u "(Amber is so fucking hot, I hope she sends more pictures like that in the future.)"
+    u "(Amber is so fucking hot, I hope she sends more pictures like that in the future.)"
 
-        u "(Although I feel like I could've just received this in the park.)"
+    u "(Although I feel like I could've just received this in the park.)"
 
-        u "(I should probably go back to my dorm and check on Imre now.)"
+    u "(I should probably go back to my dorm and check on Imre now.)"
 
-        jump fs_bd
+    jump fs_bd
 
-    label imrecond: # Meet Chloe
+label imrecond: # Meet Chloe
     u "(Fuck it, Chloe's more important.)"
-    $ clmsg = 6
-    $ clisreply = 1
-    $ contact_Chloe.addReply("I'll make time for you :)", "clrep6a")
-    $ clrep6a = "I'll make time for you :)"
-    $ clmsg7 = "That's what I like to hear :*"
-    $ clmsg8 = "Meet me at the school's swimming pool"
-    $ clrep8a = "Cool, see you there"
-    
 
-    call screen messager(contact_Chloe)
+    $ contact_Chloe.addReply("I'll make time for you :)")
+    $ contact_Chloe.newMessage("That's what I like to hear :*")
+    $ contact_Chloe.newMessage("Meet me at the school's swimming pool")
+    $ contact_Chloe.addReply("Cool, see you there")
 
     label phoneac:
+        call screen phone
+        if contact_Chloe.getReplies():
+            u "(I should reply to Chloe.)"
+            
+            jump phoneac
 
-    if contact_Chloe.messages[-1].replies:
-        u "(I should reply to Chloe.)"
-
-        call screen messager(contact_Chloe)
-    else:
-        
-        jump continuebc
-
-    label continuebc:
     stop music fadeout 2.0
 
     u "(Time to go swimming with the hottest girl in school...)"
@@ -674,59 +583,49 @@ label v6start:
     pause 0.5
 
     play sound "sounds/ring.mp3"
+
     "*Phone rings*"
 
     scene s459b # Chloe pulls back
     with dissolve
 
     menu:
-
         "Just let it ring.":
             $ addPoint("tm", 1)
             $ addPoint("bf", 1)
-            jump fo_a
+
+            scene s460a # FIRST PERSON: chloe close up, she's turned around looking at her phone
+            with dissolve
+
+            u "Just let it ring..."
+
+            scene s460b # chloe looks back at you with a smiling likde "you're stupid" kinda playful
+            with dissolve
+
+            cl "What if it's important?"
+
+            scene s460c
+            with dissolve
+
+            u "*Sighs* Alright."
+
+            scene s460b
+            with dissolve
+
+            cl "I'll be right back."
 
         "You should get that.":
             $ addPoint("bro", 1)
-            jump fo_b
 
-    label fo_a:
+            scene s460a
+            with dissolve
 
-    scene s460a # FIRST PERSON: chloe close up, she's turned around looking at her phone
-    with dissolve
+            u "You should probably get that, huh?"
 
-    u "Just let it ring..."
+            scene s460b
+            with dissolve
 
-    scene s460b # chloe looks back at you with a smiling likde "you're stupid" kinda playful
-    with dissolve
-
-    cl "What if it's important?"
-
-    scene s460c
-    with dissolve
-
-    u "*Sighs* Alright."
-
-    scene s460b
-    with dissolve
-
-    cl "I'll be right back."
-
-    jump fo_ad
-
-    label fo_b:
-
-    scene s460a
-    with dissolve
-
-    u "You should probably get that, huh?"
-
-    scene s460b
-    with dissolve
-
-    cl "Yeah... I'll be right back."
-
-    label fo_ad:
+            cl "Yeah... I'll be right back."
 
     scene s460d # cl swims towards her phone
     with dissolve
@@ -779,42 +678,29 @@ label v6start:
     with dissolve
 
     menu:
-
         "Ask about the call":
             $ addPoint("bf", 1)
-            jump fp_a
+
+            scene s463a # chloe sits down next to you with towel , mc looks at her mouth open
+            with dissolve
+
+            u "So, who called you?"
+
+            scene s464 # FIRST PERSON chloe close up sitting next to you wrapped in a towel
+            with dissolve
+
+            cl "Oh, just a friend."
 
         "Don't ask":
             $ addPoint("bro", 1)
-            jump fp_b
 
-    label fp_a:
+            scene s463b # same as s463a but mouth closed
+            with dissolve
 
-    scene s463a # chloe sits down next to you with towel , mc looks at her mouth open
-    with dissolve
+            pause 0.5
 
-    u "So, who called you?"
-
-    scene s464 # FIRST PERSON chloe close up sitting next to you wrapped in a towel
-    with dissolve
-
-    cl "Oh, just a friend."
-
-
-
-    jump fp_ad
-
-    label fp_b:
-
-    scene s463b # same as s463a but mouth closed
-    with dissolve
-
-    pause 0.5
-
-    scene s464
-    with dissolve
-
-    label fp_ad:
+            scene s464
+            with dissolve
 
     cl "I gotta go soon, but this was really fun."
 
@@ -859,210 +745,179 @@ label v6start:
     u "(I wonder if she's meeting up with another guy, it did sound kinda suspicious.)"
 
     menu:
-
-
         "Follow her":
             $ addPoint("tm", 1)
-            jump fq_a
+
+            scene s466a # chloe walked a bit further
+            with dissolve
+
+            u "(I should follow her. What if Ryan wasn't so wrong about Chloe after all?)"
+
+            scene s467 #Mc follows Chloe , some place
+            with fade
+
+            pause 0.5
+
+            scene s468 # mc hiding behind bush, can't see who chloe's talking to
+            with dissolve
+
+            cl "Heyyy!"
+
+            scene s468a # Aubrey hugs Chloe, becomes visible
+            with dissolve
+
+            au "Did you just come out of the shower?"
+
+            scene s468b
+            with dissolve
+
+            u "(Phew, it's just Aubrey. I should probably get out of here before they find me...)"
+
+            u "(I wonder if they talk about me though. I could just stay a bit longer.)"
+
+            menu:
+                "Stay and listen":
+                    $ chloemad = True
+                    $ chloecaught = True
+                    $ addPoint("tm", 1)
+
+                    scene s469 # chloe and Aubrey close up talking
+                    with dissolve
+
+                    cl "I was swimming, actually."
+
+                    scene s469a
+                    with dissolve
+
+                    au "Uhh, with who?"
+
+                    scene s469
+                    with dissolve
+
+                    cl "With [name]."
+
+                    scene s469a
+                    with dissolve
+
+                    au "He's cute, isn't he?"
+
+                    scene s469
+                    with dissolve
+
+                    cl "And he, like, actually cares... unlike some other guys."
+
+                    scene s469a
+                    with dissolve
+
+                    au "Yeah, unlike Grayson."
+
+                    scene s469
+                    with dissolve
+
+                    cl "Exactly."
+
+                    play sound "sounds/twig.mp3"
+
+                    scene s469b # both girls look in your direction but not directly at you
+                    with dissolve
+
+                    "*Twig cracks*"
+
+                    u "(Shit.)"
+
+                    scene s469c
+                    with dissolve
+
+                    cl "What was that?"
+
+                    scene s470 # First person: Chloe comes closer and spots you, you're sitll hiding in the bush so she looks down
+                    with dissolve
+
+                    cl "[name]?!"
+
+                    u "I... uh... I can explain."
+
+                    scene s471 #FIRST PERSON:Aubrey face  suprised slight laughing but not upset(she's standing behind chloe to one side, enough not to be in chloe's shots following, now you stood up so camera is eye height
+                    with dissolve
+
+                    au "Were you spying on us?"
+
+                    scene s471a
+                    with dissolve
+
+                    u "No I... I was just worried you know."
+
+                    scene s472 # FIRST PERSON: Chloe looking at you eyeheight mad
+                    with dissolve
+
+                    cl "About what?"
+
+                    scene s472a
+                    with dissolve
+
+                    u "Nothing, I just thought..."
+
+                    scene s472
+                    with dissolve
+
+                    cl "Do you not trust me? What? Did you think I was off meeting up with another guy?!"
+
+                    scene s472a
+                    with dissolve
+
+                    u "It's not like that, it's just... the phone call, I-"
+
+                    scene s472
+                    with dissolve
+
+                    cl "That was from Aubrey. I can't believe you..."
+
+                    scene s472b # chloe turns towards aubrey
+                    with dissolve
+
+                    cl "Come on Aubrey."
+
+                    scene s473 # chloe and Aubrey walk away
+                    with dissolve
+
+                    u "Chloe! Chloe wait! Ugh..."
+
+                    scene s473a
+                    with dissolve
+
+                    pause 0.5
+
+                    scene s474 # Mc walking ghome depressed
+                    with fade
+
+                    u "*Sighs*"
+
+                "Leave":
+                    $ addPoint("bro", 1)
+
+                    u "(No, I should just get out of here and stop spying on her.)"
 
         "Trust her":
             $ addPoint("bf", 1)
-            jump fq_b
+            $ credulous = True
 
-    label fq_b:
+            if not steam:
+                show credulous at achievementShow:
 
-        $ credulous = True
-        if not steam:
-            image credulous = "images/credulous.webp"
-            show credulous:
-                xpos 0
-                ypos -200
-                linear 0.5 xpos 0 ypos 0
-                pause 2.0
-                linear 0.5 xpos 0 ypos -200
-        else:
-            $ achievement.grant("credulous")
-            $ achievement.sync()
+            else:
+                $ achievement.grant("credulous")
+                $ achievement.sync()
 
-        u "(I shouldn't spy on her. It's not right.)"
+            u "(I shouldn't spy on her. It's not right.)"
 
-        jump fs_bd
-
-    label fq_a:
-
-    scene s466a # chloe walked a bit further
-    with dissolve
-
-    u "(I should follow her. What if Ryan wasn't so wrong about Chloe after all?)"
-
-    scene s467 #Mc follows Chloe , some place
-    with fade
-
-    pause 0.5
-
-    scene s468 # mc hiding behind bush, can't see who chloe's talking to
-    with dissolve
-
-    cl "Heyyy!"
-
-    scene s468a # Aubrey hugs Chloe, becomes visible
-    with dissolve
-
-    au "Did you just come out of the shower?"
-
-    scene s468b
-    with dissolve
-
-    u "(Phew, it's just Aubrey. I should probably get out of here before they find me...)"
-
-    u "(I wonder if they talk about me though. I could just stay a bit longer.)"
-
-    menu:
-
-
-
-        "Stay and listen":
-            $ chloemad = True
-            $ chloecaught = True
-            $ addPoint("tm", 1)
-            jump fs_a
-
-
-        "Leave":
-            $ addPoint("bro", 1)
-            jump fs_b
-
-    label fs_b:
-
-    u "(No, I should just get out of here and stop spying on her.)"
-
-    jump fs_bd
-
-    label fs_a:
-
-    scene s469 # chloe and Aubrey close up talking
-    with dissolve
-
-    cl "I was swimming, actually."
-
-    scene s469a
-    with dissolve
-
-    au "Uhh, with who?"
-
-    scene s469
-    with dissolve
-
-    cl "With [name]."
-
-    scene s469a
-    with dissolve
-
-    au "He's cute, isn't he?"
-
-    scene s469
-    with dissolve
-
-    cl "And he, like, actually cares... unlike some other guys."
-
-    scene s469a
-    with dissolve
-
-    au "Yeah, unlike Grayson."
-
-    scene s469
-    with dissolve
-
-    cl "Exactly."
-
-    play sound "sounds/twig.mp3"
-
-    scene s469b # both girls look in your direction but not directly at you
-    with dissolve
-
-    "*Twig cracks*"
-
-    u "(Shit.)"
-
-    scene s469c
-    with dissolve
-
-    cl "What was that?"
-
-    scene s470 # First person: Chloe comes closer and spots you, you're sitll hiding in the bush so she looks down
-    with dissolve
-
-    cl "[name]?!"
-
-    u "I... uh... I can explain."
-
-    scene s471 #FIRST PERSON:Aubrey face  suprised slight laughing but not upset(she's standing behind chloe to one side, enough not to be in chloe's shots following, now you stood up so camera is eye height
-    with dissolve
-
-    au "Were you spying on us?"
-
-    scene s471a
-    with dissolve
-
-    u "No I... I was just worried you know."
-
-    scene s472 # FIRST PERSON: Chloe looking at you eyeheight mad
-    with dissolve
-
-    cl "About what?"
-
-    scene s472a
-    with dissolve
-
-    u "Nothing, I just thought..."
-
-    scene s472
-    with dissolve
-
-    cl "Do you not trust me? What? Did you
-         think I was off meeting up with
-         another guy?!"
-
-
-    scene s472a
-    with dissolve
-
-    u "It's not like that, it's just... the
-         phone call, I-"
-
-    scene s472
-    with dissolve
-
-    cl "That was from Aubrey. I
-         can't believe you..."
-
-    scene s472b # chloe turns towards aubrey
-    with dissolve
-    cl "Come on Aubrey."
-
-    scene s473 # chloe and Aubrey walk away
-    with dissolve
-
-    u "Chloe! Chloe wait! Ugh..."
-
-    scene s473a
-    with dissolve
-
-    pause 0.5
-
-    scene s474 # Mc walking ghome depressed
-    with fade
-
-    u "*Sighs*"
-
-    label fs_bd: # opening the room of your dorm after not choosing Imre, if imremad = True, find a note of him moved out, if = False, he's gone and you call imre and he tells you that ADAM wasnt in his dorm, you have the same talk as if you had visited him over the phone
+    # opening the room of your dorm after not choosing Imre, if imremad = True, find a note of him moved out, if = False, he's gone and you call imre and he tells you that ADAM wasnt in his dorm, you have the same talk as if you had visited him over the phone
     play sound "sounds/dooropen.mp3"
     scene s476 # you Entering your dorm room # cant look inside yet
     with Fade (1,0,1)
 
     pause 1.0
 
-    if imremad == True:
+    if imremad:
         scene s477 # FIRST PERSON you look at Imre's bed, all his stuff is gone, you find a note on his bed
         with dissolve
 
@@ -1091,10 +946,7 @@ label v6start:
 
         u "*Sighs*"
 
-        jump continuebb
-
     else:
-
         scene s480 # you come into your dorm but Imre's stuff is still there
         with dissolve
 
@@ -1167,9 +1019,6 @@ label v6start:
 
         play sound "sounds/rejectcall.mp3"
 
-        jump continuebb
-
-    label continuebb:
     scene s482 # transition slide from your dorm, you doing something
     with Fade (1,0,1)
 
@@ -1178,72 +1027,41 @@ label v6start:
     # amber texts if chloemad false
     # if you chose imre chloe and amber both text you dpeending on chloemad that you msised out etc.
 
-    if chooseimre == True:
-        if chloemad == True: # Amber texts why you never got back to her
+    # $ contact_Amber.newImgMessage("images/text2.webp") 
+    # $ contact_Amber.addReply("Woah, what was that for?", v6_reply1)
+    # $ contact_Amber.addReply("Oh wow, you're so fucking hot", v6_reply4)
+
+    if chooseimre and chloemad: # Amber texts why you never got back to her
             play sound "sounds/vibrate.mp3"
             
-
-            $ contact_Amber.newMessage("I guess you didn't want my surprise :/")
-            $ contact_Amber.addReply("Sorry something important came up and I didn't have time.", "amrep17a")
+            $ contact_Amber.newMessage("I guess you didn't want my surprise :/", queue=False)
+            $ contact_Amber.addReply("Sorry something important came up and I didn't have time.")
+            $ contact_Amber.addReply("I'm alone now, if the surprise is still on ;)", "amrep18a")
+            $ contact_Amber.addReply("I'll make it up to you tho", "amrep18b")
 
             " "
 
             label phoneae:
+                call screen phone
+                if contact_Amber.messages[-1].replies:
+                    u "(I should probably reply to my messages.)"
 
-            if contact_Amber.messages[-1].replies:
-                u "(I should probably reply to my messages.)"
+                    jump phoneae
+            jump continuebd
 
-                jump phoneae
-            else:
-                jump continuebd
+    elif chooseimre: # Amber texts you about the pic, chloe texts you about you not responding
+        play sound "sounds/vibrate.mp3"
+        $ contact_Chloe.newMessage("I guess we'll do it another time...", queue=False)
+        $ contact_Chloe.addReply("Sorry, something really important came up. Definitely another time")
+        $ contact_Chloe.newMessage("Okay")
 
-
-        else: # Amber texts you about the pic, chloe texts you about you not responding
-            $ clisreply = 1
-            play sound "sounds/vibrate.mp3"
-            $ contact_Chloe.newMessage("I guess we'll do it another time...")
-            $ contact_Chloe.addReply("Sorry, something really important came up. Definitely another time", "clrep9a")
-            $ clmsgnot = 1
-            $ clmsg = 9
-            $ clmsg9a = 1
-            $ clmsg9 = "I guess we'll do it another time..."
-            $ clrep9a = "Sorry, something really important came up. Definitely another time"
-            $ clmsg10 = "Okay."
-            jump ambertexts
-    else:
-        if chloemad == True:
-            if chloecaught == True: # Amber texts you about the pic
-                jump ambertexts
-
-            else: # no one texts you
-                
-                jump continuebd
-
-
-        else: # Amber texts you about the pic
-            jump ambertexts
-    label ambertexts:
-
+    elif chloemad and not chloecaught:
+        jump continuebd
+            
     play sound "sounds/vibrate.mp3"
     
-    $ msgnot = 1
-    $ amisreply = 1
-    $ ammsgnot = 1
     $ contact_Amber.newMessage("Hey, you alone? xx")
     $ contact_Amber.addReply("Yeah, I'm in my dorm, why?", "amrep11a")
-    $ ammsg21a = 1
-    $ ammsg = 21
-    $ ammsg21 = "Hey, you alone? xx"
-    $ amrep21a = "Yeah, I'm in my dorm, why?"
-    $ amrep12a = "Woah, what was that for?"
-    $ amrep12b = "Oh wow, you're so fucking hot"
-    $ ammsg13 = "I'm playing drink or dare and got dared to send an underwear pic to a guy."
-    $ amrep13a = "And you chose me, huh?"
-    $ amrep13b = "Feel free to do so anytime :)"
-    $ ammsg14 = "Maybe I picked someone at random ;)"
-    $ ammsg15 = "Maybe if you're lucky xx"
-    $ ammsg16 = "I'm glad you like it xx"
-    $ amrep16a = "I hope there's more of that in the future :P"
 
     " "
 

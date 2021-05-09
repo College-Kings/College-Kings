@@ -2177,7 +2177,7 @@ label continueab:
             u "(I should probably reply to my messages.)"
             jump phonew
 
-    if contact_Josh.sentMessages[-2].reply.message == "I can't, sorry.":
+    if contact_Josh.sentMessages[-2].reply and contact_Josh.sentMessages[-2].reply.message == "I can't, sorry.":
         u "(Fucking hell, I forgot how persistent Josh could be...)"
         jump jorepb
 
@@ -2208,7 +2208,7 @@ label continueab:
 
     jo "What's up, bro?"
 
-    if contact_Josh.sentMessages[-2].reply.message == "Alright, I'll come.":
+    if contact_Josh.sentMessages[-2].reply and contact_Josh.sentMessages[-2].reply.message == "Alright, I'll come.":
         jo "Picture of Amber did it, eh?"
 
         scene s353b
