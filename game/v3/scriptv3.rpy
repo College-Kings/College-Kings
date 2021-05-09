@@ -2062,7 +2062,7 @@ label conl:
 
         menu:
             "Kiss her":
-                $ aubreysex = True
+                $ aubreyrs = True
 
                 stop music fadeout 2.0
                 play music "music/msexy.mp3"
@@ -3170,7 +3170,7 @@ label continueq:
 
         la "So, what did you do all day?"
 
-        if aubreysex:
+        if aubreyrs:
             scene s287a # lauren closeup while walking her mouth closed  FIRST PERSON
             with dissolve
             u "(Okay, time to make a decision. Should I tell her about what happened with Aubrey?)"
