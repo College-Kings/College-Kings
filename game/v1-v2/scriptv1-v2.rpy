@@ -6649,7 +6649,7 @@ label bo_bd:
     play sound "sounds/vibrate.mp3"
 
     $ contact_Aubrey.newMessage(_("Hey,\nJosh gave me your number\n\nI hope your face is feeling better after the shit that Grayson pulled..."), queue=False)
-    $ contact_Aubrey.newMessage(_("He's not even dating Chloe and you guys didn't even do anything so I don't know what he was thinking.\n\nAnyway, do you wanna like... hang out tomorrow?"))
+    $ contact_Aubrey.newMessage(_("He's not even dating Chloe and you guys didn't even do anything so I don't know what he was thinking.\n\nAnyway, do you wanna like... hang out tomorrow?"), queue=False)
     $ contact_Aubrey.addReply(_("Wait they're not dating?"), v1_reply18)
     $ contact_Aubrey.addReply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v1_reply19)
 
@@ -6817,7 +6817,7 @@ label bo_bd:
 
     play sound "sounds/vibrate.mp3"
 
-    $ contact_Aubrey.newMessage(_("Hey, are you nearby?"))
+    $ contact_Aubrey.newMessage(_("Hey, are you nearby?"), queue=False)
     $ contact_Aubrey.addReply(_("Yeah, I'm just on my way, I'll be right there."), v1_reply20)
     $ contact_Aubrey.addReply(_("Sorry, something came up and I can't make it."), v1_reply21)
 
