@@ -279,7 +279,7 @@ screen costumes():
         pos (256, 802)
         if costumeaubrey and not caughtpeekingaubrey:
             action Jump ("try1")
-        elif not caughtpeekingpenelope:
+        elif not costumeaubrey and not caughtpeekingpenelope:
             action Jump ("try1p")
                 
     imagebutton:
@@ -288,7 +288,7 @@ screen costumes():
         pos (738, 802)
         if costumeaubrey and not caughtpeekingaubrey:
             action Jump ("try2")
-        elif not caughtpeekingpenelope:
+        elif not costumeaubrey and not caughtpeekingpenelope:
             action Jump ("try2p")
 
     imagebutton:
@@ -297,7 +297,7 @@ screen costumes():
         pos (1219, 802)
         if costumeaubrey and not caughtpeekingaubrey:
             action Jump ("try3")
-        elif not caughtpeekingpenelope:
+        elif not costumeaubrey and not caughtpeekingpenelope:
             action Jump ("try3p")
 
     imagebutton:
