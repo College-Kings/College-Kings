@@ -81,3 +81,6 @@ define empl = Character("Employee", who_color="#5fc9f8", who_outlines=[ (2, "#00
 
 # 9.0.0
 define unkfem = Character("Female voice", who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+
+# 10.0.0
+define jen = Character("Jenny", who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
