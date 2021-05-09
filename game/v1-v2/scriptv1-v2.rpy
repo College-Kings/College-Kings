@@ -3446,7 +3446,7 @@ label v1_freeRoam2_camp:
                 contact_Lauren.newMessage(_(":)"))
 
             contact_Lauren.newMessage(_("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"), queue=False)
-            contact_Lauren.addReply(_("Yeah, sure.", v1_reply6))
+            contact_Lauren.addReply(_("Yeah, sure."), v1_reply6)
             contact_Lauren.addReply(_("What is there to talk about?"), v1_reply7)
 
         call screen v1_freeRoam2_4
