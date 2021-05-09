@@ -636,7 +636,7 @@ label newchloec:
         $ contact_Amber.addReply(_("We did, I'll make it up to you."), v5_reply1)
         $ contact_Amber.addReply(_("Sorry, something came up."), v5_reply4)
 
-    elif contact_Josh.sentMessages[-2].reply.message == "I can't, sorry.":
+    elif contact_Josh.sentMessages[-2].reply and contact_Josh.sentMessages[-2].reply.message == "I can't, sorry.":
         $ contact_Amber.newMessage(_("Hey, it's Amber"), queue=False)
         $ contact_Amber.newMessage(_("Josh gave me your number"), queue=False)
         $ contact_Amber.newMessage(_("How come you didn't show up yesterday? Everything okay? xx"), queue=False)
