@@ -54,12 +54,23 @@ screen phoneTemplate():
     add "images/phonescreen.webp"
 
     if renpy.get_screen("phone"):
+        button:
+            if freeRoam:
+                action [Hide("tutorial"), Hide("phone")]
+            else:
+                action [Hide("tutorial"), Return()]
+
         textbutton "Exit Phone":
             style "phonebutton"
             if freeRoam:
                 action [Hide("tutorial"), Hide("phone")]
             else:
                 action [Hide("tutorial"), Return()]
+
+    button:
+        align (0.5, 0.5)
+        xysize (400, 800)
+        action NullAction()
 
     transclude
 
