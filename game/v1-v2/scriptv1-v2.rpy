@@ -8533,4 +8533,4 @@ label v1_endShop:
 
     u "(The Wolves... huh.)"
 
-    jump v3start
+jump v3start
