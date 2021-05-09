@@ -22,6 +22,8 @@ image keeneye = "images/keeneye.webp"
 image onthelow = "images/onthelow.webp"
 image petapublicenemy = "images/petapublicenemy.webp"
 image snitch = "images/snitch.webp"
+image brosbeforehoes = "images/brosbeforehoes.webp"
+image credulous = "images/credulous.webp"
 
 # v1.0 - v2.0
 image s14 = "images/s14.webp"
