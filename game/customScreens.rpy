@@ -5,13 +5,13 @@ screen realmode():
         pos (417, 683)
         idle "images/rlmt.webp"
         hover "images/enable.webp"
-        action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False), Jump("v1start")]
+        action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False), Show("phoneIcon"), Jump("v1start")]
 
     imagebutton:
         pos (1016, 683)
         idle "images/rlmt.webp"
         hover "images/disable.webp"
-        action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True), SetVariable("showkct", True), Jump("v1start")]
+        action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True), SetVariable("showkct", True), Show("phoneIcon"), Jump("v1start")]
 
 
 screen fantasyOverlay():
