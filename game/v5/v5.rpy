@@ -636,7 +636,7 @@ label newchloec:
         $ contact_Amber.addReply(_("We did, I'll make it up to you."), v5_reply1)
         $ contact_Amber.addReply(_("Sorry, something came up."), v5_reply4)
 
-    elif contact_Josh.messages[-2].reply.message == "I can't, sorry.":
+    elif contact_Josh.sentMessages[-2].reply.message == "I can't, sorry.":
         $ contact_Amber.newMessage(_("Hey, it's Amber"), queue=False)
         $ contact_Amber.newMessage(_("Josh gave me your number"), queue=False)
         $ contact_Amber.newMessage(_("How come you didn't show up yesterday? Everything okay? xx"), queue=False)
@@ -4347,7 +4347,7 @@ label findimre:
     u "(Maybe that's Imre...)"
 
     if chloemad:
-        $ contact_Amber.newMessage(_("Hey, you alone? xx"))
+        $ contact_Amber.newMessage(_("Hey, you alone? xx"), queue=False)
         $ contact_Amber.addReply(_("I'm at the park, but I'm by myself."))
         $ contact_Amber.newMessage(_("Go somewhere where you're completely alone xx"))
         $ contact_Amber.newMessage(_("I got a surprise for you ;)"))
@@ -4364,8 +4364,8 @@ label findimre:
             u "(I gotta make a decision. Should I help Imre, or keep talking to Amber?)"
 
     else:
-        $ contact_Chloe.newMessage(_("I got some free time right now :)"))
-        $ contact_Chloe.newMessage(_("Wanna go swimming?"))
+        $ contact_Chloe.newMessage(_("I got some free time right now :)"), queue=False)
+        $ contact_Chloe.newMessage(_("Wanna go swimming?"), queue=False)
         $ contact_Chloe.addReply(_("Any chance we could do it later? Or tomorrow?"))
         $ contact_Chloe.newMessage(_("I'm busy later tonight and I'm pretty much booked for the entire week :/"))
 
