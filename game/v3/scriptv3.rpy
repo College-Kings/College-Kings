@@ -1821,13 +1821,12 @@ label conl:
                         au "Yeah..."
 
     else: # you didn't meet aubrey
-        python:
-            contact_Aubrey.newMessage(_("Hey, you know how you had to cancel on me yesterday and you really want to make it up to me?"), queue=False)
-            contact_Aubrey.newMessage(_("Wanna come over now?"))
-            contact_Aubrey.addReply(_("Uhh... okay."))
-            contact_Aubrey.newMessage(_("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
-            contact_Aubrey.newMessage(_("I'll leave it open."))
-            contact_Aubrey.addReply(_("Uhm... sure."))
+        $ contact_Aubrey.newMessage(_("Hey, you know how you had to cancel on me yesterday and you really want to make it up to me?"), queue=False)
+        $ contact_Aubrey.newMessage(_("Wanna come over now?"), queue=False)
+        $ contact_Aubrey.addReply(_("Uhh... okay."))
+        $ contact_Aubrey.newMessage(_("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
+        $ contact_Aubrey.newMessage(_("I'll leave it open."))
+        $ contact_Aubrey.addReply(_("Uhm... sure."))
 
         label repeatm:
             call screen phone
