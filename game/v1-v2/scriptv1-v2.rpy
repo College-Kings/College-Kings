@@ -5681,8 +5681,8 @@ label history2:
     play sound "sounds/vibrate.mp3"
 
     $ contact_Josh.newMessage(_("Dude, I talked to this Aubrey chick the entire night and guess who's number she wanted..."), queue=False)
-    $ contact_Josh.newMessage(_("YOURS"))
-    $ contact_Josh.newMessage(_("What a bitch..."))
+    $ contact_Josh.newMessage(_("YOURS"), queue=False)
+    $ contact_Josh.newMessage(_("What a bitch..."), queue=False)
     $ contact_Josh.addReply(_("Sorry, man. She doesn't know what she's missing."), v1_reply14)
     $ contact_Josh.addReply(_("Sooo, did you give it to her?"), v1_reply15)
 
