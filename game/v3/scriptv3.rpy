@@ -1,5 +1,4 @@
 label v3start:
-    return # TEMP
     stop music fadeout 2.0
 
     scene s200 ## u reading a magazine on your bed (a couple hours later on cover)
@@ -1068,8 +1067,6 @@ label conl:
             scene s240d # you doing complicated kick
             with vpunch
 
-
-
             pause 0.2
 
             scene s240d2 # you on the floor
@@ -1365,7 +1362,6 @@ label conl:
 
     imre "Yeah, no worries. Let me know if you wanna come with me next time as well."
 
-
     scene s251a
     with dissolve
 
@@ -1374,12 +1370,6 @@ label conl:
     play sound "sounds/vibrate.mp3"
 
 
-
-# label aubrep12ab:
-# $ contact_Aubrey.newMessage("My room has a window facing the backyard. Can you climb in through there instead of using the front door?")
-# $ contact_Aubrey.newMessage("I'll leave it open.")
-# $ contact_Aubrey.addReply("Uhm... sure.")
-# call screen messager(contact_Aubrey)
 
     if costumeaubrey: # did you meet aubrey?
 
@@ -1716,16 +1706,243 @@ label conl:
                     "Truth":
                         $ addPoint("bf", 1)
 
-                        jump da_a
+                        scene s254h
+                        with dissolve
+
+                        u "Truth."
+
+                        scene s254l
+                        with dissolve
+
+                        au "How many girls have you slept with?"
+
+                        scene s254m
+                        with dissolve
+
+                        u "Two, both ex-girlfriends."
+
+                        scene s254g
+                        with dissolve
+
+                        au "One of them's Emily, right?"
+
+                        au "Nora told me about her, she seems nice."
+
+                        scene s254h
+                        with dissolve
+
+                        u "Yeah, right... It's your turn."
+
+                        scene s254l
+                        with dissolve
+
+                        au "Give me a dare."
+
+                        scene s254m
+                        with dissolve
+
+                        u "Touch both your elbows in front of your chest."
+
+                        scene s254p
+                        with dissolve
+
+                        au "Like this?"
+
+                        scene s254q
+                        with dissolve
+
+                        au "Oh, I see. Very funny."
+
+                        scene s254r
+                        with dissolve
+
+                        u "Haha, I thought you did great."
+
+                        scene s254l
+                        with dissolve
+
+                        au "Okay, now it's your turn again."
 
 
                     "Dare":
                         $ addPoint("tm", 1)
                         $ addPoint("bro", 1)
 
-                        jump da_b
+                        scene s254m
+                        with dissolve
 
-                label da_a:
+                        u "Dare me."
+
+                        scene s254l
+                        with dissolve
+
+                        au "Uhm... okay. Take your pants off."
+
+                        scene s254m
+                        with dissolve
+
+                        u "What?? I'm not gonna take my pants off."
+
+                        u "You gotta give me something I can actually do."
+
+                        scene s254l
+                        with dissolve
+
+                        au "I did! It's totally doable."
+
+                        scene s254m
+                        with dissolve
+
+                        u "I can't just-"
+
+                        scene s254l
+                        with dissolve
+
+                        au "Yeah, you can. See?"
+
+                        scene s254aa ## aubrey and you standing
+                        with dissolve
+
+                        pause 0.5
+
+                        scene s254ab # aubrey grabbing your pants
+                        with dissolve
+
+                        pause 0.5
+
+                        scene s254ac # your pants down aubrey forward
+                        with dissolve
+
+                        u "Did you just?"
+
+                        scene s256a
+                        with dissolve
+
+                        au "Yeah..."
+
+    else: # you didn't meet aubrey
+        python:
+            contact_Aubrey.newMessage("Hey, you know how you had to cancel on me yesterday and you really want to make it up to me?", queue=False)
+            contact_Aubrey.newMessage("Wanna come over now?")
+            contact_Aubrey.addReply("Uhh... okay.")
+            contact_Aubrey.newMessage("My room has a window facing the backyard. Can you climb in through there instead of using the front door?")
+            contact_Aubrey.newMessage("I'll leave it open.")
+            contact_Aubrey.addReply("Uhm... sure.")
+
+        label repeatm:
+            call screen phone
+            if contact_Aubrey.getReplies():
+                u "(I should probably check my phone.)"
+                jump repeatm
+
+        u "Sorry Imre, something came up. You're gonna have to go back by yourself, I gotta go."
+
+        scene s251b
+        with dissolve
+
+        imre "A booty call this early in the day? Respect, my man."
+
+        scene s251c
+        with dissolve
+
+        u "Imre, not everything is about sex, haha. I'll see you later."
+
+        scene s251b
+        with dissolve
+
+        imre "I'll see you, player."
+
+        stop music fadeout 2.0
+
+        scene s252 # you in Aubrey's backyard looking at the house
+        with Fade (1,0,1)
+
+        u "(Okay, let's see. Which one's her room?)"
+
+        play music "music/m4punk.mp3"
+
+        u "(Oh no, the only open window is on the second floor.)"
+
+        u "(Yeah, why would she want to mention that anyway...)"
+
+        scene s253 ###### CLIMBING UP THE WINDOW SCENE
+        with dissolve
+
+        pause 0.5
+
+        play sound "sounds/leaves.mp3"
+
+        scene s253a
+        with dissolve
+
+        pause 0.5
+
+        scene s253b
+        with dissolve
+
+        pause 0.5
+
+        stop sound
+
+        play sound "sounds/thud.mp3"
+
+        scene s253c
+        with dissolve
+
+        pause 0.5
+
+        ##################
+
+        scene s254fars ## looking into Aubrey's room
+        with fade
+
+        au "[name], you made it."
+
+        scene s254h
+        with dissolve
+
+        u "Yeah, I did. So, how can I make it up to you?"
+
+        scene s254g
+        with dissolve
+
+        au "I'm really bored... you wanna do something?"
+
+        scene s254h
+        with dissolve
+
+        u "Sure, what do you wanna do?"
+
+        scene s254g
+        with dissolve
+
+        au "Let's play truth or dare."
+
+        scene s254h
+        with dissolve
+
+        u "Okay, you start."
+
+        scene s254l
+        with dissolve
+
+        au "Uhm... Truth."
+
+        scene s254m
+        with dissolve
+
+        u "Have you ever kissed a girl?"
+
+        scene s254g
+        with dissolve
+
+        au "Once, Chloe. But it was just a quick mouth on mouth, no tongue."
+
+        au "Your turn."
+
+        menu:
+            "Truth":
+                $ addPoint("bf", 1)
 
                 scene s254h
                 with dissolve
@@ -1784,478 +2001,225 @@ label conl:
 
                 au "Okay, now it's your turn again."
 
-                label da_b:
+            "Dare":
+                $ addPoint("tm", 1)
+                $ addPoint("bro", 1)
 
-                scene s254m
+        scene s254m
+        with dissolve
+
+        u "Dare me."
+
+        scene s254l
+        with dissolve
+
+        au "Uhm... okay. Take your pants off."
+
+        scene s254m
+        with dissolve
+
+        u "What?? I'm not gonna take my pants off."
+
+        u "You gotta give me something I can actually do."
+
+        scene s254l
+        with dissolve
+
+        au "I did! It's totally doable."
+
+        scene s254m
+        with dissolve
+
+        u "I can't just-"
+
+        scene s254l
+        with dissolve
+
+        au "Yeah, you can. See?"
+
+        scene s254aa ## aubrey and you standing
+        with dissolve
+
+        pause 0.5
+
+        scene s254ab # aubrey grabbing your pants
+        with dissolve
+
+        pause 0.5
+
+        scene s254ac # your pants down aubrey forward
+        with dissolve
+
+        u "Did you just?"
+
+        scene s256a
+        with dissolve
+
+        au "Yeah..."
+
+        scene aub1start
+        with dissolve
+
+        menu:
+            "Kiss her":
+                $ aubreysex = True
+
+                stop music fadeout 2.0
+                play music "music/msexy.mp3"
+
+                scene aub1
+                pause 1.0
+
+                scene aub2
+
+                " "
+
+                scene anew1 # aubrey after kiss laughingly
                 with dissolve
 
-                u "Dare me."
+                au "Is this such a good idea?"
 
-                scene s254l
+                scene anew1a
                 with dissolve
 
-                au "Uhm... okay. Take your pants off."
+                u "What's the worst that could happen?"
 
-                scene s254m
-                with dissolve
-
-                u "What?? I'm not gonna take my pants off."
-
-                u "You gotta give me something I can actually do."
-
-                scene s254l
-                with dissolve
-
-                au "I did! It's totally doable."
-
-                scene s254m
-                with dissolve
-
-                u "I can't just-"
-
-                scene s254l
-                with dissolve
-
-                au "Yeah, you can. See?"
-
-                scene s254aa ## aubrey and you standing
+                scene anew2 # right hand in her pants
                 with dissolve
 
                 pause 0.5
 
-                scene s254ab # aubrey grabbing your pants
+                scene anew3 # close up of her face aroused
+                with dissolve
+
+                au "*Quiet moan* Ohhh okay... definitely a good idea."
+
+                scene anew4 # left hand on her boobs
                 with dissolve
 
                 pause 0.5
 
-                scene s254ac # your pants down aubrey forward
+                scene anew4a # her hands lift her bra up
                 with dissolve
 
-                u "Did you just?"
+                pause 0.5
 
-                scene s256a
+                scene anew4b # her no bra
                 with dissolve
 
-                au "Yeah..."
+                u "Wow..."
 
+                scene anew2
+                with dissolve
 
+                au "*Moans*"
 
+                scene asexnew1
 
-    else: # you didn't meet aubrey
-        $ contact_Aubrey.newMessage("Hey, you know how you had to cancel on me yesterday and you really want to make it up to me?")
-        $ contact_Aubrey.newMessage("Wanna come over now?")
-        $ contact_Aubrey.addReply("Uhh... okay.", "aubrep12ab")
-        
-        label repeatm:
-        label phoneu:
+                au "Oh, [name]!"
 
-        if contact_Aubrey.messages[-1].replies:
+                au "Fuck..."
 
-            if not msgApp.notification:
+                scene anew5 # you grab her pants
+                with dissolve
 
-                u "(I should really reply to Aubrey.)"
+                pause 0.5
 
-            else:
+                scene anew5a # her pants down
+                with dissolve
 
-                u "(I should probably check my phone.)"
+                pause 0.5
 
+                scene anew5b # your hand on her panties
+                with dissolve
 
+                au "Wait."
 
-            jump repeatm
+                scene anew3a
+                with dissolve
 
-        else:
-            
+                au "Now it's my turn."
 
-            u "Sorry Imre, something came up. You're gonna have to go back by yourself, I gotta go."
+                scene s257c # aubrey underwear
+                with dissolve
 
-            scene s251b
-            with dissolve
+                " "
 
-            imre "A booty call this early in the day? Respect, my man."
+                scene aub3
 
-            scene s251c
-            with dissolve
+                pause 1.5
 
-            u "Imre, not everything is about sex, haha. I'll see you later."
+                scene anew6
+                with dissolve
 
-            scene s251b
-            with dissolve
+                au "You have a nice cock, I could get used to this."
 
-            imre "I'll see you, player."
+                scene anew6b
+                with dissolve
 
-            stop music fadeout 2.0
+                au "*Kiss*"
 
-            scene s252 # you in Aubrey's backyard looking at the house
-            with Fade (1,0,1)
+                scene anew6c
+                with dissolve
 
-            u "(Okay, let's see. Which one's her room?)"
+                au "*Kiss*"
 
-            play music "music/m4punk.mp3"
+                scene anew6d
+                with dissolve
 
-            u "(Oh no, the only open window is on the second floor.)"
+                au "*Kiss*"
 
-            u "(Yeah, why would she want to mention that anyway...)"
+            "Stop it":
+                scene s254c
+                with dissolve
 
-            scene s253 ###### CLIMBING UP THE WINDOW SCENE
-            with dissolve
+                u "Okay, you know what? That's enough. We shouldn't go any further than this."
 
-            pause 0.5
+                scene s254
+                with dissolve
 
-            play sound "sounds/leaves.mp3"
+                au "Go further? What do you mean?"
 
-            scene s253a
-            with dissolve
+                scene s254a
+                with dissolve
 
-            pause 0.5
+                u "That look you just gave me... we were both thinking about it. It's just not a good idea."
 
-            scene s253b
-            with dissolve
+                scene s254
+                with dissolve
 
-            pause 0.5
+                au "I wasn't thinking anything."
 
-            stop sound
+                scene s254a
+                with dissolve
 
-            play sound "sounds/thud.mp3"
+                u "Maybe it's best if I go now."
 
-            scene s253c
-            with dissolve
+                scene s254
+                with dissolve
 
-            pause 0.5
+                au "Yeah, okay... whatever."
+                $ renpy.end_replay()
+                scene s264 # you going back to your dorm
+                with Fade (1,0,1)
 
-            ##################
+                u "(Oh god, did I just turn down Aubrey, or was I just reading into it?)"
 
-            scene s254fars ## looking into Aubrey's room
-            with fade
+                u "(I just don't know if it would be a good idea if we were to hook up. What if she tells Chloe? Would Chloe be okay with it?)"
 
-            au "[name], you made it."
+                u "(Also, I barely know her...)"
 
-            scene s254h
-            with dissolve
+                stop music fadeout 2.0
 
-            u "Yeah, I did. So, how can I make it up to you?"
+                jump aubsexad
 
 
-            scene s254g
-            with dissolve
-
-            au "I'm really bored... you wanna do something?"
-
-            scene s254h
-            with dissolve
-
-            u "Sure, what do you wanna do?"
-
-            scene s254g
-            with dissolve
-
-            au "Let's play truth or dare."
-
-            scene s254h
-            with dissolve
-
-            u "Okay, you start."
-
-            scene s254l
-            with dissolve
-
-            au "Uhm... Truth."
-
-            scene s254m
-            with dissolve
-
-            u "Have you ever kissed a girl?"
-
-            scene s254g
-            with dissolve
-
-            au "Once, Chloe. But it was just a quick mouth on mouth, no tongue."
-
-            au "Your turn."
-
-
-            menu:
-
-                "Truth":
-
-                    $ addPoint("bf", 1)
-                    jump db_a
-
-
-                "Dare":
-
-                    $ addPoint("tm", 1)
-                    $ addPoint("bro", 1)
-                    jump db_b
-
-            label db_a:
-
-            scene s254h
-            with dissolve
-
-            u "Truth."
-
-            scene s254l
-            with dissolve
-
-            au "How many girls have you slept with?"
-
-            scene s254m
-            with dissolve
-
-            u "Two, both ex-girlfriends."
-
-            scene s254g
-            with dissolve
-
-            au "One of them's Emily, right?"
-
-            au "Nora told me about her, she seems nice."
-
-            scene s254h
-            with dissolve
-
-            u "Yeah, right... It's your turn."
-
-            scene s254l
-            with dissolve
-
-            au "Give me a dare."
-
-            scene s254m
-            with dissolve
-
-            u "Touch both your elbows in front of your chest."
-
-            scene s254p
-            with dissolve
-
-            au "Like this?"
-
-            scene s254q
-            with dissolve
-
-            au "Oh, I see. Very funny."
-
-            scene s254r
-            with dissolve
-
-            u "Haha, I thought you did great."
-
-            scene s254l
-            with dissolve
-
-            au "Okay, now it's your turn again."
-
-            label db_b:
-
-            scene s254m
-            with dissolve
-
-            u "Dare me."
-
-            scene s254l
-            with dissolve
-
-            au "Uhm... okay. Take your pants off."
-
-            scene s254m
-            with dissolve
-
-            u "What?? I'm not gonna take my pants off."
-
-            u "You gotta give me something I can actually do."
-
-            scene s254l
-            with dissolve
-
-            au "I did! It's totally doable."
-
-            scene s254m
-            with dissolve
-
-            u "I can't just-"
-
-            scene s254l
-            with dissolve
-
-            au "Yeah, you can. See?"
-
-            scene s254aa ## aubrey and you standing
-            with dissolve
-
-            pause 0.5
-
-            scene s254ab # aubrey grabbing your pants
-            with dissolve
-
-            pause 0.5
-
-            scene s254ac # your pants down aubrey forward
-            with dissolve
-
-
-            u "Did you just?"
-
-            scene s256a
-            with dissolve
-
-            au "Yeah..."
-
-    image aub1 = Movie (play="images/aub1.webm", loop = False, image = "images/aub1.webp", start_image = "images/aub1start.webp")
-    image aub2 = Movie (play="images/aub2.webm", loop = True, image = "images/aub2.webp", start_image = "images/aub1.webp")
-    image aub3 = Movie (play="images/aub3.webm", loop = False, image = "images/aub3.webp", start_image = "images/aub3start.webp")
-    image aub4 = Movie (play="images/aub4.webm", loop = True, image = "images/aub4.webp", start_image = "images/aub4start.webp")
-    image aub5 = Movie (play="images/aub5.webm", loop = False, image = "images/aub5.webp", start_image = "images/aub5start.webp")
-    image aub7 = Movie (play="images/aub7.webm", loop = True, image = "images/aub7.webp", start_image = "images/aub7start.webp")
-    image aub8 = Movie (play="images/aub8.webm", loop = False, image = "images/aub8.webp", start_image = "images/aub8start.webp")
-    image asexnew1 = Movie (play="images/asexnew1.webm", loop = True, image = "images/asexnew1end.webp", start_image = "images/asexnew1start.webp")
-    image asexnew2 = Movie (play="images/asexnew2.webm", loop = True, image = "images/asexnew2end.webp", start_image = "images/asexnew2start.webp")
-    image asexnew3 = Movie (play="images/asexnew3.webm", loop = True, image = "images/asexnew3end.webp", start_image = "images/asexnew3start.webp")
-    image asexnew4 = Movie (play="images/asexnew4.webm", loop = True, image = "images/asexnew4end.webp", start_image = "images/asexnew4start.webp")
-    image asexnew5 = Movie (play="images/asexnew5.webm", loop = True, image = "images/asexnew5end.webp", start_image = "images/asexnew5start.webp")
-    image asexnew6 = Movie (play="images/asexnew6.webm", loop = True, image = "images/asexnew4end.webp", start_image = "images/asexnew4start.webp")
-    image asexnew7 = Movie (play="images/asexnew7.webm", loop = True, image = "images/asexnew5end.webp", start_image = "images/asexnew5start.webp")
-    image asexnew9 = Movie (play="images/asexnew9.webm", loop = True, image = "images/asexnew8end.webp", start_image = "images/asexnew8start.webp")
-    image asexnew10 = Movie (play="images/asexnew10.webm", loop = True, image = "images/asexnew8end.webp", start_image = "images/asexnew8start.webp")
-    image asexnew11 = Movie (play="images/asexnew11.webm", loop = True, image = "images/asexnew11end.webp", start_image = "images/asexnew11start.webp")
-    image asexnew12 = Movie (play="images/asexnew12.webm", loop = True, image = "images/asexnew11end.webp", start_image = "images/asexnew11start.webp")
-    image asexnew13 = Movie (play="images/asexnew13.webm", loop = False, image = "images/asexnew13end.webp", start_image = "images/asexnew13start.webp")
-
-    scene aub1start
-    with dissolve
-
-    menu:
-
-        "Kiss her":
-            $ aubreysex = True
-            jump aubsexa
-
-        "Stop it":
-            $ aubreysex = False
-            jump aubsexb
-
-
-    label aubsexa:
-
-    stop music fadeout 2.0
-    play music "music/msexy.mp3"
-
-    scene aub1
-    pause 1.0
-
-
-
-    scene aub2
-
-    " "
-
-    scene anew1 # aubrey after kiss laughingly
-    with dissolve
-
-    au "Is this such a good idea?"
-
-    scene anew1a
-    with dissolve
-
-    u "What's the worst that could happen?"
-
-    scene anew2 # right hand in her pants
-    with dissolve
-
-    pause 0.5
-
-    scene anew3 # close up of her face aroused
-    with dissolve
-
-    au "*Quiet moan* Ohhh okay... definitely a good idea."
-
-    scene anew4 # left hand on her boobs
-    with dissolve
-
-    pause 0.5
-
-    scene anew4a # her hands lift her bra up
-    with dissolve
-
-    pause 0.5
-
-    scene anew4b # her no bra
-    with dissolve
-
-    u "Wow..."
-
-    scene anew2
-    with dissolve
-
-    au "*Moans*"
-
-
-    scene asexnew1
-
-    au "Oh, [name]!"
-
-    au "Fuck..."
-
-    scene anew5 # you grab her pants
-    with dissolve
-
-    pause 0.5
-
-    scene anew5a # her pants down
-    with dissolve
-
-    pause 0.5
-
-    scene anew5b # your hand on her panties
-    with dissolve
-
-    au "Wait."
-
-    scene anew3a
-    with dissolve
-
-    au "Now it's my turn."
-
-    scene s257c # aubrey underwear
-    with dissolve
-
-    " "
-
-    scene aub3
-
-    pause 1.5
-
-    scene anew6
-    with dissolve
-
-    au "You have a nice cock, I could get used to this."
-
-
-    scene anew6b
-    with dissolve
-
-    au "*Kiss*"
-
-    scene anew6c
-    with dissolve
-
-    au "*Kiss*"
-
-    scene anew6d
-    with dissolve
-
-    au "*Kiss*"
-
-
-
-    label abj:
-
+label abj:
     show screen aubsex
     scene asexnew2start # aub bj start
     with dissolve
 
     pause 0.2
-
 
     scene asexnew2 #bj first person
     with dissolve
@@ -2279,7 +2243,6 @@ label conl:
 
     scene s258e # you bent down to kiss her
     with dissolve
-
 
     scene aub5
 
@@ -2324,14 +2287,11 @@ label conl:
 
     pause 0.5
 
-    label amiss:
-
+label amiss:
     scene s259e
     with vpunch
 
     pause 0.5
-
-
 
     scene asexnew4 # slow sex angle 1
 
@@ -2367,14 +2327,11 @@ label conl:
 
     pause 0.5
 
-    label acow:
-
+label acow:
     scene anew8 # aubrey sitting up on you
     with dissolve
 
     au "You ready for round two?"
-
-
 
     scene asexnew9 # slow sex angle 1
 
@@ -2402,8 +2359,7 @@ label conl:
 
     au "Cum in me! It's okay, I'm on the pill."
 
-    label acream:
-
+label acream:
     scene asexnew13 # cum
     with dissolve
 
@@ -2470,59 +2426,10 @@ label conl:
 
     u "(I can't believe I just had sex with Aubrey... that was amazing.)"
 
-    if laurenrs == True:
-
+    if laurenrs:
         u "(I wonder if Lauren would be upset if she knew. I guess I'll have to decide how honest I wanna be on our date tonight.)"
 
-
-    jump aubsexad
-
-    label aubsexb:
-
-    scene s254c
-    with dissolve
-
-    u "Okay, you know what? That's enough. We shouldn't go any further than this."
-
-    scene s254
-    with dissolve
-
-    au "Go further? What do you mean?"
-
-    scene s254a
-    with dissolve
-
-    u "That look you just gave me... we were both thinking about it. It's just not a good idea."
-
-    scene s254
-    with dissolve
-
-    au "I wasn't thinking anything."
-
-    scene s254a
-    with dissolve
-
-    u "Maybe it's best if I go now."
-
-    scene s254
-    with dissolve
-
-    au "Yeah, okay... whatever."
-    $ renpy.end_replay()
-    scene s264 # you going back to your dorm
-    with Fade (1,0,1)
-
-    u "(Oh god, did I just turn down Aubrey, or was I just reading into it?)"
-
-    u "(I just don't know if it would be a good idea if we were to hook up. What if she tells Chloe? Would Chloe be okay with it?)"
-
-    u "(Also, I barely know her...)"
-
-    stop music fadeout 2.0
-
-    label aubsexad:
-
-
+label aubsexad:
     pause 0.5
 
     play music "music/mchill1.mp3"
@@ -2532,47 +2439,37 @@ label conl:
 
 ### Meet Lauren
 
-    if laurenrs == False: # you're not dating Lauren
-
+    if not laurenrs: # you're not dating Lauren
         scene s265 # lauren sitting in front of your door
         with dissolve
 
         u "Lauren? What are you doing here?"
 
-        if meetlauren == True: # you've met lauren in the cafe
-            if laawk == True:
+        if meetlauren and laawk: # you've met lauren in the cafe
+            scene s266 # Lauren closeup awkward
+            with dissolve
 
-                scene s266 # Lauren closeup awkward
-                with dissolve
+            la "Hey, uhm..."
 
-                la "Hey, uhm..."
+            la "I'm here to ask you for a favor... as a friend."
 
-                la "I'm here to ask you for a favor... as a friend."
+            scene s266a
+            with dissolve
 
-                scene s266a
-                with dissolve
+            u "Uhm, okay... What is it?"
 
-                u "Uhm, okay... What is it?"
+        elif meetlauren:
+            scene s266b # lauren closeup smiling
+            with dissolve
 
-                jump continuen
+            la "Heyyy. I need a favor."
 
-            else:
+            scene s266c
+            with dissolve
 
-                scene s266b # lauren closeup smiling
-                with dissolve
-
-                la "Heyyy. I need a favor."
-
-                scene s266c
-                with dissolve
-
-                u "Alright, how can I help?"
-
-                jump continueo
+            u "Alright, how can I help?"
 
         else:
-
-
             scene s266 # Lauren closeup awkward
             with dissolve
 
@@ -2585,14 +2482,10 @@ label conl:
 
             u "Uhm, okay. What is it?"
 
-            jump continuep
     else:
-
         jump continueq
 
-    label continuen:
-    label continueo:
-    label continuep:
+label continuen:
 
     scene s267 # lauren sitting
     with dissolve
@@ -2623,49 +2516,31 @@ label conl:
     la "Would you wanna be my test subject?"
 
     menu:
-
-
         "I'd love to.":
-
             $ addPoint("bf", 1)
-            jump dc_a
+
+            scene s268a
+            with dissolve
+
+            u "Yeah, I'd love to."
 
         "I don't know...":
-
             $ addPoint("tm", 1)
-            jump dc_b
 
-    label dc_a:
+            scene s268a
+            with dissolve
 
-        scene s268a
-        with dissolve
+            u "I don't know, Lauren. Sounds kinda weird."
 
-        u "Yeah, I'd love to."
+            scene s268
+            with dissolve
 
-        jump dc_ad
+            la "[name], pleaaase. It's just answering a few questions."
 
-    label dc_b:
+            scene s268a
+            with dissolve
 
-        scene s268a
-        with dissolve
-
-        u "I don't know, Lauren. Sounds kinda weird."
-
-        scene s268
-        with dissolve
-
-        la "[name], pleaaase. It's just answering a few questions."
-
-        scene s268a
-        with dissolve
-
-        u "Okay, fine."
-
-        jump dc_bd
-
-    label dc_ad:
-    label dc_bd:
-
+            u "Okay, fine."
 
     scene s268 # Lauren happy
     with dissolve
@@ -2697,9 +2572,7 @@ label conl:
 
     u "Alright, just send me a text."
 
-    label continueq:
-
-
+label continueq:
     scene s270 #showing you laying on your bed in your dorm thinking // top down camera slight angle
     with Fade (1,0,1)
 
@@ -2718,15 +2591,82 @@ label conl:
     u "Huh? Julia's calling me."
 
     menu:
-
-
         "Answer":
             stop sound
             play sound "sounds/answercall.mp3"
-
             $ addPoint("bf", 1)
-            jump dd_a
 
+            scene s270b # you answer, hold phone next to your ear
+            with dissolve
+
+            u "Hey, Julia!"
+
+            scene s271 # showing Julia in her kitchen on the phone smiling
+            with dissolve
+
+            ju "Hey honey, how are you?"
+
+            scene s270b # you answer, hold phone next to your ear
+            with dissolve
+
+            u "I'm good, what's up?"
+
+            scene s271 # you answer, hold phone next to your ear
+            with dissolve
+
+            ju "I was wondering if you would like to go shopping with me tomorrow morning?"
+
+            ju "I would pick you up and you could tell me all about your first week at college."
+
+            ju "And maybe we can buy you a nice new outfit for whatever girl you met?"
+
+            scene s270c # you on the phone  concerned
+            with dissolve
+
+            u "(Shit... if I meet her, she'll see my bruises and get really worried.)"
+
+            menu:
+                "Shopping sounds great.":
+                    $ meetjulia = True
+                    $ addPoint("bf", 1)
+
+                    u "Yeah, shopping sounds great, Julia."
+
+                    u "I'll see you tomorrow then."
+
+                    scene s271
+                    with dissolve
+
+                    ju "Okay, honey. I'll call you when I'm at San Vallejo."
+
+                    scene s270b
+                    with dissolve
+
+                    u "Alright, bye."
+
+                    scene s271
+                    with dissolve
+
+                    ju "Bye, honey."
+
+                    play sound "sounds/rejectcall.mp3"
+
+                "I can't, sorry.":
+                    $ addPoint("tm", 1)
+
+                    u "Sorry, Julia... I'm really busy this weekend."
+
+                    scene s271a # Julia on the phone, a bit disappointed / sad
+                    with dissolve
+
+                    ju "Oh... okay, honey. Next time then."
+
+                    scene s270c
+                    with dissolve
+
+                    u "Yeah... next time."
+
+                    play sound "sounds/rejectcall.mp3"
 
         "Don't answer":
             stop sound
@@ -2734,131 +2674,20 @@ label conl:
 
             $ addPoint("tm", 1)
             $ dontanswerjulia = True
-            jump dd_b
+            # phone call declined sound
 
-    label dd_a:
+            scene s270
+            with dissolve
 
-        scene s270b # you answer, hold phone next to your ear
-        with dissolve
+            $ notnowmom = True
+            if not steam:
+                show notnowmom at achievementShow
 
-        u "Hey, Julia!"
+            else:
+                $ achievement.grant("not_now_mom")
+                $ achievement.sync()
 
-        scene s271 # showing Julia in her kitchen on the phone smiling
-        with dissolve
-
-        ju "Hey honey, how are you?"
-
-        scene s270b # you answer, hold phone next to your ear
-        with dissolve
-
-        u "I'm good, what's up?"
-
-        scene s271 # you answer, hold phone next to your ear
-        with dissolve
-
-
-        ju "I was wondering if you would like to go shopping with me tomorrow morning?"
-
-        ju "I would pick you up and you could tell me all about your first week at college."
-
-        ju "And maybe we can buy you a nice new outfit for whatever girl you met?"
-
-
-        scene s270c # you on the phone  concerned
-        with dissolve
-        u "(Shit... if I meet her, she'll see my bruises and get really worried.)"
-
-
-        menu:
-
-            "Shopping sounds great.":
-
-                $ meetjulia = True
-                $ addPoint("bf", 1)
-                jump de_a
-
-            "I can't, sorry.":
-
-                $ meetjulia = False
-                $ addPoint("tm", 1)
-                jump de_b
-
-    label de_a:
-
-        u "Yeah, shopping sounds great, Julia."
-
-        u "I'll see you tomorrow then."
-
-        scene s271
-        with dissolve
-
-        ju "Okay, honey. I'll call you when I'm at San Vallejo."
-
-        scene s270b
-        with dissolve
-
-        u "Alright, bye."
-
-        scene s271
-        with dissolve
-
-        ju "Bye, honey."
-
-        play sound "sounds/rejectcall.mp3"
-
-        jump de_ad
-
-    label de_b:
-
-        u "Sorry, Julia... I'm really busy this weekend."
-
-        scene s271a # Julia on the phone, a bit disappointed / sad
-        with dissolve
-
-        ju "Oh... okay, honey. Next time then."
-
-        scene s270c
-        with dissolve
-
-        u "Yeah... next time."
-
-        play sound "sounds/rejectcall.mp3"
-
-        jump de_bd
-
-
-
-    label dd_b:
-
-        # phone call declined sound
-
-        scene s270
-        with dissolve
-
-        $ notnowmom = True
-        if not steam:
-            image notnowmom = "images/notnowmom.webp"
-            show notnowmom:
-                xpos 0
-                ypos -200
-                linear 0.5 xpos 0 ypos 0
-                pause 2.0
-                linear 0.5 xpos 0 ypos -200
-        else:
-            $ achievement.grant("not_now_mom")
-            $ achievement.sync()
-
-        u "(I don't really feel like talking to her right now.)"
-
-        jump continuer
-
-    label continuer:
-    label de_ad:
-    label de_bd:
-
-
-
-
+            u "(I don't really feel like talking to her right now.)"
 
     scene s270
     with fade
@@ -2909,78 +2738,59 @@ label conl:
     with dissolve
     ri "Is that all you think about, Ryan?"
 
-
     menu:
-
-
         "Compliment Riley":
-
             $ addPoint("bf", 1)
-            jump df_a
+
+            scene s273d # Riley looking at ryan joking annoyed but her mouth is closed, ryan looking at her with a grin
+            with dissolve
+
+            u "I think Riley is all the hottie I need."
+
+            scene s273e #Riley lookin happy (awww face) at you mouth open, ryan looking slightly annoyed at you , his head slightly tilted (like cmon man) mouth closed
+            with dissolve
+
+            ri "Awww, thank you."
+
+            scene s273f # same as 273e but ryan mouth open and riley closed
+            with dissolve
+
+            ry "This guy..."
+
+            ry "So, you coming, or what?"
+
+            scene s273g # same as 273f but both mouths closed
+            with dissolve
+
+            u "Yeah, alright. Let me just change out of my gym clothes."
 
         "Agree with Ryan":
-
             $ addPoint("bro", 1)
-            jump df_b
 
+            scene s273d
+            with dissolve
 
-    label df_a:
+            u "Well, count me in then."
 
-        scene s273d # Riley looking at ryan joking annoyed but her mouth is closed, ryan looking at her with a grin
-        with dissolve
+            scene s273h # Riley lookign jokingly annoyed at you mouth open, ryan looking happy at you grinning mouth closed
+            with dissolve
 
-        u "I think Riley is all the hottie I need."
+            ri "Of course that's what made you wanna go. Why do I even spend time with you guys?"
 
-        scene s273e #Riley lookin happy (awww face) at you mouth open, ryan looking slightly annoyed at you , his head slightly tilted (like cmon man) mouth closed
-        with dissolve
+            scene s273j # same as 273h but riley mouth closed
+            with dissolve
 
-        ri "Awww, thank you."
+            u "Oh come on, Riley. You're one of the hotties."
 
-        scene s273f # same as 273e but ryan mouth open and riley closed
-        with dissolve
+            scene s273h
+            with dissolve
 
-        ry "This guy..."
+            ri "What a sincere compliment. Are you ready to go then?"
 
-        ry "So, you coming, or what?"
+            scene s273j
+            with dissolve
 
-        scene s273g # same as 273f but both mouths closed
-        with dissolve
-
-        u "Yeah, alright. Let me just change out of my gym clothes."
-
-        jump df_ad
-
-    label df_b:
-
-        scene s273d
-        with dissolve
-
-        u "Well, count me in then."
-
-        scene s273h # Riley lookign jokingly annoyed at you mouth open, ryan looking happy at you grinning mouth closed
-        with dissolve
-
-        ri "Of course that's what made you wanna go. Why do I even spend time with you guys?"
-
-        scene s273j # same as 273h but riley mouth closed
-        with dissolve
-
-        u "Oh come on, Riley. You're one of the hotties."
-
-        scene s273h
-        with dissolve
-
-        ri "What a sincere compliment. Are you ready to go then?"
-
-        scene s273j
-        with dissolve
-
-        u "Yeah, let me just change out of my gym clothes."
-
-        jump df_bd
-
-    label df_ad:
-    label df_bd:
+            u "Yeah, let me just change out of my gym clothes."
 
     scene s274 # you different clothes, riley and ryan in the park, riley preparing the picnic blanket, all happy.  you talking."
     with Fade (1,0,1)
@@ -3094,38 +2904,26 @@ label conl:
 
     u "You don't know what you're talking about! Chloe likes me. She went after Grayson 'cause someone needed to."
 
-
     menu:
-
-
         "Insult Ryan":
-
             $ addPoint("tm", 1)
-            jump dg_a
+            
+            u "Cause you were too fucking pussy to do it yourself."
+
+            scene s275e
+            with dissolve
+
+            ry "Fuck you! I looked after you, I brought you home!"
+
+            ry "Chloe is playing you! Like she played Grayson! Don't fucking fall for it."
+
+            scene s275f
+            with dissolve
+
+            u "You don't know Chloe at all! You're just fucking jealous!"
 
         "Walk away":
-
             $ addPoint("bro", 1)
-            jump dg_b
-
-    label dg_a:
-
-    u "Cause you were too fucking pussy to do it yourself."
-
-    scene s275e
-    with dissolve
-
-    ry "Fuck you! I looked after you, I brought you home!"
-
-    ry "Chloe is playing you! Like she played Grayson! Don't fucking fall for it."
-
-    scene s275f
-    with dissolve
-
-    u "You don't know Chloe at all! You're just fucking jealous!"
-
-
-    label dg_b:
 
     scene s276b #RIley sad and concerned
     with dissolve
@@ -3173,7 +2971,6 @@ label conl:
 
     play music "music/mlove1.mp3"
 
-
     scene s279 # Riley arriving at the spot behind the cabin , emphatic
     with dissolve
 
@@ -3214,137 +3011,89 @@ label conl:
     scene s281 # close up riley sitting empathy FIRST PERSON
     with dissolve
 
-
     ri "So what's going on between you and Chloe? She's the president of the Chicks, right?"
 
     menu:
-
-
-
         "I like her":
-
-            $ rileykiss = False
             $ addPoint("bf", 1)
-            jump dh_a
 
+            scene s281a
+            with dissolve
+
+            u "Yeah, we met at the Apes' rush party and I really like her."
+
+            u "We haven't done anything yet, but I feel like we really have a connection, you know?"
+
+            scene s281b # riley a bit dissappointed
+            with dissolve
+
+            ri "Oh uhm... yeah, that sounds really good. I'm happy for you."
 
         "She's into me.":
-
             $ addPoint("tm", 1)
-            jump dh_b
 
-    label dh_a:
+            scene s281a
+            with dissolve
 
-    scene s281a
-    with dissolve
+            u "Yeah, I mean it's nothing serious. She's really into me, but I don't know how I feel yet."
 
-    u "Yeah, we met at the Apes' rush party and I really like her."
+            u "You know, keeping my options open?"
 
-    u "We haven't done anything yet, but I feel like we really have a connection, you know?"
+            scene s281d #riley cute smile
+            with dissolve
 
-    scene s281b # riley a bit dissappointed
-    with dissolve
+            ri "I can certainly see why she'd be into you."
 
-    ri "Oh uhm... yeah, that sounds really good. I'm happy for you."
+            scene s281e
+            with dissolve
 
+            u "What do you mean?"
 
-    jump dh_ad
+            scene s281d
+            with dissolve
 
-    label dh_b:
+            ri "You're attractive and charismatic and-"
 
-    scene s281a
-    with dissolve
+            menu:
+                "Kiss her":
+                    $ rileykiss = True
+                    $ addPoint("tm", 1)
 
-    u "Yeah, I mean it's nothing serious. She's really into me, but I don't know how I feel yet."
+                    show rikiss2
 
-    u "You know, keeping my options open?"
+                    $ lipsdontlie = True
+                    if not steam:
+                        show lipsdontlie at achievementShow
+                        
+                    else:
+                        $ achievement.grant("lips_dont_lie")
+                        $ achievement.sync()
 
+                    " "
 
-    scene s281d #riley cute smile
-    with dissolve
+                    scene s281f # riley stunned but happy
+                    with dissolve
 
-    ri "I can certainly see why she'd be into you."
+                    ri "*Blushes* Uhm..."
 
-    scene s281e
-    with dissolve
+                    scene s281g
+                    with dissolve
 
-    u "What do you mean?"
+                    u "Sorry, I just had to."
 
-    scene s281d
-    with dissolve
+                    scene s281f # riley stunned but happy
+                    with dissolve
 
+                    ri "I'm glad you did."
 
-    ri "You're attractive and charismatic and-"
+                "Don't kiss her":
+                    $ addPoint("bf", 1)
 
-    menu:
+                    ri "Just a really great guy."
 
+                    scene s281e
 
-        "Kiss her":
-
-            $ rileykiss = True
-            $ addPoint("tm", 1)
-            jump dj_a
-
-        "Don't kiss her":
-
-            $ addPoint("bf", 1)
-            $ rileykiss = False
-            jump dj_b
-
-
-
-    label dj_a:
-
-    image rikiss2 = Movie (play="images/rikiss.webm", loop = False, image = "images/rikiss.webp", start_image = "images/rikiss.webp")
-
-    show rikiss2
-
-    $ lipsdontlie = True
-    if not steam:
-        image lipsdontlie = "images/lipsdontlie.webp"
-        show lipsdontlie:
-            xpos 0
-            ypos -200
-            linear 0.5 xpos 0 ypos 0
-            pause 2.0
-            linear 0.5 xpos 0 ypos -200
-    else:
-        $ achievement.grant("lips_dont_lie")
-        $ achievement.sync()
-
-    " "
-
-    scene s281f # riley stunned but happy
-    with dissolve
-
-    ri "*Blushes* Uhm..."
-
-    scene s281g
-    with dissolve
-
-    u "Sorry, I just had to."
-
-    scene s281f # riley stunned but happy
-    with dissolve
-
-    ri "I'm glad you did."
-
-    jump dj_ad
-
-    label dj_b:
-
-    ri "Just a really great guy."
-
-    scene s281e
-
-    u "Thanks, Riley."
-
-    jump dj_bd
-
-
-    label dh_ad:
-    label dj_ad:
-    label dj_bd:
+                    u "Thanks, Riley."
 
     scene s281
     with dissolve
@@ -3368,9 +3117,7 @@ label conl:
 
     stop music fadeout 2.0
 
-
-    if laurenrs == True: #LAUREN MOVIES
-
+    if laurenrs: #LAUREN MOVIES
         play music "music/mindie2.mp3"
 
         scene s282  ## later that day transition pic
@@ -3379,7 +3126,6 @@ label conl:
         u "(I can't believe I'm finally going on a real date with Lauren...)"
 
         u "(I better not fuck this up.)"
-
 
         scene s284 # Knocking on lauren's dorm
         with Fade (1,0,1)
@@ -3424,115 +3170,88 @@ label conl:
 
         la "So, what did you do all day?"
 
-
-
-        if aubreysex == True:
-
+        if aubreysex:
             scene s287a # lauren closeup while walking her mouth closed  FIRST PERSON
             with dissolve
             u "(Okay, time to make a decision. Should I tell her about what happened with Aubrey?)"
 
             menu:
-
-
-
                 "Tell her what happened.":
-
                     $ toldlauren = True
                     $ addPoint("bf", 1)
                     $ laurenrs = False
-                    jump dk_a
+
+                    u "(Lauren values honesty and we're not in a relationship yet, so she'll probably be understanding as long as I tell her the truth.)"
+
+                    u "Okay listen, I need to tell you something."
+
+                    scene s287
+                    with dissolve
+
+                    la "What is it?"
+
+                    scene s287a
+                    with dissolve
+
+                    u "This morning Aubrey invited me over..."
+
+                    u "... and we had sex."
+
+                    scene s287b # Lauren sad and shocked
+                    with dissolve
+
+                    la "What?"
+
+                    scene s287c
+                    with dissolve
+
+                    u "I know how much you care about honesty and I wanted to start this right."
+
+                    scene s287b
+                    with dissolve
+
+                    la "You had sex with another girl... right before our first date?"
+
+                    scene s287c
+                    with dissolve
+
+                    u "Yeah, but it's not like we're in a relationship. You see, I did nothing wrong."
+
+                    scene s287b
+                    with dissolve
+
+                    la "Right... Well great job on finding a loophole."
+                    la "I don't think I wanna do this anymore."
+
+                    scene s287d #la walks away the direction you cam from, her back to you (she turns around)
+                    with dissolve
+
+                    u "But we're not even dating?! I was just being real!"
+
+                    scene s287e # Lauren turns around sad and slightly angry
+                    with dissolve
+
+                    la "Be real with someone else then."
+
+                    scene s287f # Lauren gone
+                    with dissolve
+
+                    $ truthhurts = True
+                    if not steam:
+                        show truthhurts at achievementShow
+                        
+                    else:
+                        $ achievement.grant("truth_hurts")
+                        $ achievement.sync()
+
+                    u "(Fuck me... I guess that's what honesty gets you.)"
+
+                    jump dk_ad
 
                 "Don't tell her.":
-
-                    $ toldlauren = False
                     $ addPoint("tm", 1)
-                    jump dk_b
 
-        else:
-            $ toldlauren = False
-            jump dk_bb
-
-        label dk_a:
-
-            u "(Lauren values honesty and we're not in a relationship yet, so she'll probably be understanding as long as I tell her the truth.)"
-
-            u "Okay listen, I need to tell you something."
-
-            scene s287
-            with dissolve
-
-            la "What is it?"
-
-            scene s287a
-            with dissolve
-
-            u "This morning Aubrey invited me over..."
-
-            u "... and we had sex."
-
-            scene s287b # Lauren sad and shocked
-            with dissolve
-
-            la "What?"
-
-            scene s287c
-            with dissolve
-
-            u "I know how much you care about honesty and I wanted to start this right."
-
-            scene s287b
-            with dissolve
-
-            la "You had sex with another girl... right before our first date?"
-
-            scene s287c
-            with dissolve
-
-            u "Yeah, but it's not like we're in a relationship. You see, I did nothing wrong."
-
-            scene s287b
-            with dissolve
-
-            la "Right... Well great job on finding a loophole."
-            la "I don't think I wanna do this anymore."
-
-            scene s287d #la walks away the direction you cam from, her back to you (she turns around)
-            with dissolve
-
-            u "But we're not even dating?! I was just being real!"
-
-            scene s287e # Lauren turns around sad and slightly angry
-            with dissolve
-
-            la "Be real with someone else then."
-
-            scene s287f # Lauren gone
-            with dissolve
-
-            $ truthhurts = True
-            if not steam:
-                image truthhurts = "images/truthhurts.webp"
-                show truthhurts:
-                    xpos 0
-                    ypos -200
-                    linear 0.5 xpos 0 ypos 0
-                    pause 2.0
-                    linear 0.5 xpos 0 ypos -200
-            else:
-                $ achievement.grant("truth_hurts")
-                $ achievement.sync()
-
-            u "(Fuck me... I guess that's what honesty gets you.)"
-
-            jump dk_ad
-
-
-        label dk_b:
-
-        u "(Lauren seems to value loyalty, she might be upset if she finds out and I don't wanna ruin our date before it even started.)"
-
-        label dk_bb:
+                    u "(Lauren seems to value loyalty, she might be upset if she finds out and I don't wanna ruin our date before it even started.)"
 
         scene s287a # lauren closeup while walking her mouth closed  FIRST PERSON
         with dissolve
@@ -3602,165 +3321,112 @@ label conl:
         scene s289d # lauren smiling flirty back getting her face closer to yours
         with dissolve
 
-
         la "*Whispers* I was just making sure you're safe."
 
         menu:
-
-
-
             "Kiss her":
-
                 $ laurenkissb = True
-                jump dl_a
+
+                scene laurenkiss2 #self explanatory, same camera as s289
+                with dissolve
+
+                pause 2.0
+
+                menu:
+                    "Reach under her skirt":
+                        $ addPoint("tm", 1)
+
+                        scene s291a # same camera angle but your hand is under her skirt
+                        with dissolve
+
+                        pause 0.5
+
+                        la "[name], I don't think I want to do this."
+
+                        menu:
+                            "Keep going":
+                                $ addPoint("tm", 1)
+                                $ laurentoofar = True
+                                $ laurenrs = False
+
+                                scene s291b # your hand moves further up
+                                with dissolve
+
+                                pause 0.5
+
+                                scene s290f # lauren horny face
+                                with dissolve
+
+                                la "*Moans quietly*"
+
+                                stop music fadeout 2.0
+
+                                play sound "sounds/slap.mp3"
+
+                                scene s291c # lauren smacks your hand away
+                                with hpunch
+
+                                pause 0.5
+
+                                scene s290g # lauren upset
+                                with dissolve
+
+                                la "I told you I don't want to do this!"
+
+                                scene s289f #Lauren standing up
+                                with dissolve
+
+                                pause 0.5
+
+                                scene s289g # you showing remorse head in hands // lauren gone
+                                with dissolve
+
+                                u "(Shit, I pushed it too far.)"
+
+                                jump dk_ad
+
+                            "Stop":
+                                $ addPoint("bf", 1)
+
+                                scene s290b
+                                with dissolve
+
+                                la "Thank you, I just need some time."
+
+                                pause 0.5
+
+                                scene s290e # Lauren looking back at the movie screen with cute expression
+                                with dissolve
+
+                                pause 0.5
+
+                    "Keep hands to yourself":
+                        $ addPoint("bf", 1)
+
+                        pause 1.0
+
+                        scene s290c
+                        with dissolve
+
+                        pause 0.5
+
+                        scene s290e # Lauren looking back at the movie screen with cute expression
+                        with dissolve
+
+                        pause 0.5
 
             "Continue watching":
+                scene s290c
+                with dissolve
 
-                $ laurenkissb = False
-                jump dl_b
+                pause 0.5
 
-        label dl_b:
+                scene s290e # Lauren looking back at the movie screen with cute expression
+                with dissolve
 
-        scene s290c
-        with dissolve
+                pause 0.5
 
-        pause 0.5
-
-        scene s290e # Lauren looking back at the movie screen with cute expression
-        with dissolve
-
-        pause 0.5
-
-        jump dl_bd
-
-
-        label dl_a:
-
-        scene laurenkiss2 #self explanatory, same camera as s289
-        with dissolve
-
-        pause 2.0
-
-
-
-
-        menu:
-
-            "Reach under her skirt":
-
-                $ addPoint("tm", 1)
-                jump dm_a
-
-            "Keep hands to yourself":
-
-                $ addPoint("bf", 1)
-                jump dm_b
-
-        label dm_a:
-
-        scene s291a # same camera angle but your hand is under her skirt
-        with dissolve
-
-        pause 0.5
-
-        la "[name], I don't think I want to do this."
-
-
-        menu:
-
-
-            "Keep going":
-
-                $ addPoint("tm", 1)
-                $ laurentoofar = True
-                $ laurenrs = False
-                jump dn_a
-
-
-            "Stop":
-
-                $ addPoint("bf", 1)
-                jump dn_b
-
-
-        label dn_a:
-
-        scene s291b # your hand moves further up
-        with dissolve
-
-        pause 0.5
-
-        scene s290f # lauren horny face
-        with dissolve
-
-        la "*Moans quietly*"
-
-        stop music fadeout 2.0
-
-        play sound "sounds/slap.mp3"
-
-
-        scene s291c # lauren smacks your hand away
-        with hpunch
-
-        pause 0.5
-
-        scene s290g # lauren upset
-        with dissolve
-
-        la "I told you I don't want to do this!"
-
-        scene s289f #Lauren standing up
-        with dissolve
-
-        pause 0.5
-
-        scene s289g # you showing remorse head in hands // lauren gone
-        with dissolve
-
-        u "(Shit, I pushed it too far.)"
-
-        jump dn_ad
-
-
-        label dn_b:
-
-        scene s290b
-        with dissolve
-
-        la "Thank you, I just need some time."
-
-        pause 0.5
-
-        scene s290e # Lauren looking back at the movie screen with cute expression
-        with dissolve
-
-        pause 0.5
-
-        jump dn_bd
-
-
-        label dm_b:
-
-        pause 1.0
-
-        scene s290c
-        with dissolve
-
-        pause 0.5
-
-        scene s290e # Lauren looking back at the movie screen with cute expression
-        with dissolve
-
-        pause 0.5
-
-        jump dm_bd
-
-    ##### after movie
-        label dn_bd:
-        label dm_bd:
-        label dl_bd:
-
+        # after movie
         stop music fadeout 2.0
 
         scene lanew1 # walking through park at night
@@ -3871,14 +3537,7 @@ label conl:
 
         stop music fadeout 2.0
 
-
-        jump continuet
-
-
-
-
     else:
-
         scene s282a  ## you in your dorm: It's the same day but It's nighttime now on laptop
         with Fade (1,0,1)
 
@@ -3890,23 +3549,16 @@ label conl:
 
         jump continues
 
-    label dk_ad:
-    label dn_ad:
-    label continuet:
-
+label dk_ad:
     stop music fadeout 2.0
-
 
     scene s282b  ## you in your dorm: later that night on your laptop
     with Fade (1,0,1)
 
     pause 1
 
-    label continues: # This is after the date
-
-
+label continues: # This is after the date
     play music "music/horror2.mp3"
-
 
     play sound "sounds/call.mp3"
 
@@ -3926,7 +3578,6 @@ label conl:
 
     scene s295a
     with dissolve
-
 
     unknown "Hello sir, am I talking to [name]?"
 

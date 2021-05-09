@@ -8,13 +8,15 @@ image mixedfeelings = "images/mixedfeelings.webp"
 image thenotorious = "images/thenotorious.webp"
 image anewbeginning = "images/anewbeginning.webp"
 image overit = "images/overit.webp"
+image notnowmom = "images/notnowmom.webp"
+image truthhurts = "images/truthhurts.webp"
 
 # Splash Screen
 image splashone = "images/splash1.webp"
 image splashtwo = "images/splash2.webp"
 image splashthree = "images/splash 3.webp"
 
-# v1 - v6
+# v1.0 - v2.0
 image s14 = "images/s14.webp"
 image s14a = "images/s14a.webp"
 image s14b = "images/s14b.webp"
@@ -68,3 +70,27 @@ image s145d = ("images/s145d.webp")
 image s145e = ("images/s145e.webp")
 image s145bl = ("images/s145bl.webp")
 image s145f = ("images/s145f.webp")
+
+# v3.0
+image aub1 = Movie (play="images/aub1.webm", loop = False, image = "images/aub1.webp", start_image = "images/aub1start.webp")
+image aub2 = Movie (play="images/aub2.webm", loop = True, image = "images/aub2.webp", start_image = "images/aub1.webp")
+image aub3 = Movie (play="images/aub3.webm", loop = False, image = "images/aub3.webp", start_image = "images/aub3start.webp")
+image aub4 = Movie (play="images/aub4.webm", loop = True, image = "images/aub4.webp", start_image = "images/aub4start.webp")
+image aub5 = Movie (play="images/aub5.webm", loop = False, image = "images/aub5.webp", start_image = "images/aub5start.webp")
+image aub7 = Movie (play="images/aub7.webm", loop = True, image = "images/aub7.webp", start_image = "images/aub7start.webp")
+image aub8 = Movie (play="images/aub8.webm", loop = False, image = "images/aub8.webp", start_image = "images/aub8start.webp")
+image asexnew1 = Movie (play="images/asexnew1.webm", loop = True, image = "images/asexnew1end.webp", start_image = "images/asexnew1start.webp")
+image asexnew2 = Movie (play="images/asexnew2.webm", loop = True, image = "images/asexnew2end.webp", start_image = "images/asexnew2start.webp")
+image asexnew3 = Movie (play="images/asexnew3.webm", loop = True, image = "images/asexnew3end.webp", start_image = "images/asexnew3start.webp")
+image asexnew4 = Movie (play="images/asexnew4.webm", loop = True, image = "images/asexnew4end.webp", start_image = "images/asexnew4start.webp")
+image asexnew5 = Movie (play="images/asexnew5.webm", loop = True, image = "images/asexnew5end.webp", start_image = "images/asexnew5start.webp")
+image asexnew6 = Movie (play="images/asexnew6.webm", loop = True, image = "images/asexnew4end.webp", start_image = "images/asexnew4start.webp")
+image asexnew7 = Movie (play="images/asexnew7.webm", loop = True, image = "images/asexnew5end.webp", start_image = "images/asexnew5start.webp")
+image asexnew9 = Movie (play="images/asexnew9.webm", loop = True, image = "images/asexnew8end.webp", start_image = "images/asexnew8start.webp")
+image asexnew10 = Movie (play="images/asexnew10.webm", loop = True, image = "images/asexnew8end.webp", start_image = "images/asexnew8start.webp")
+image asexnew11 = Movie (play="images/asexnew11.webm", loop = True, image = "images/asexnew11end.webp", start_image = "images/asexnew11start.webp")
+image asexnew12 = Movie (play="images/asexnew12.webm", loop = True, image = "images/asexnew11end.webp", start_image = "images/asexnew11start.webp")
+image asexnew13 = Movie (play="images/asexnew13.webm", loop = False, image = "images/asexnew13end.webp", start_image = "images/asexnew13start.webp")
+
+image rikiss2 = Movie (play="images/rikiss.webm", loop = False, image = "images/rikiss.webp", start_image = "images/rikiss.webp")
+image lipsdontlie = "images/lipsdontlie.webp"
