@@ -19,6 +19,8 @@ screen fantasyOverlay():
 
 
 screen endFreeRoamConfirm(continueLabel):
+    modal True
+    
     add "images/endfr.webp"
 
     text "Are you sure you want to end free roam?" style "endfree"
