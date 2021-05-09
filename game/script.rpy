@@ -43,7 +43,7 @@ label start:
     hide nohardfeelings
 
     call screen realmode
-    show screen phoneIcon
+
 
 label end_credits:
     stop music fadeout 2.0
