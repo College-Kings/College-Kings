@@ -1370,52 +1370,53 @@ label meet_lauren2:
                 if kct == "loyal":
                     call screen popup1
 
-                scene s131 ### Lauren grabbing your hand on the table
-                with dissolve
+                label popup1:
+                    scene s131 ### Lauren grabbing your hand on the table
+                    with dissolve
 
-                " "
+                    " "
 
-                scene s130d # Lauren romancing at you holding your hand
-                with dissolve
+                    scene s130d # Lauren romancing at you holding your hand
+                    with dissolve
 
-                $ anewbeginning = True
-                if not steam:
-                    show anewbeginning at achievementShow
-                else:
-                    $ achievement.grant("a_new_beginning")
-                    $ achievement.sync()
+                    $ anewbeginning = True
+                    if not steam:
+                        show anewbeginning at achievementShow
+                    else:
+                        $ achievement.grant("a_new_beginning")
+                        $ achievement.sync()
 
-                la "Maybe you're right."
+                    la "Maybe you're right."
 
-                scene s130e
-                with dissolve
-
-                u "Then let's go on a date. A real date."
-
-                u "How about the movies? Tomorrow night."
-
-                scene s130d
-                with dissolve
-
-                la "Okay yeah, let's do it."
-
-                scene s130e
-                with dissolve
-
-                u "I'm really sorry, I'm late for class, but I'll see you tomorrow."
-
-                scene s130d
-                with dissolve
-
-                la "Alright, see you tomorrow."
-
-                if fighttom and not wintom:
                     scene s130e
                     with dissolve
 
-                    u "(I should probably wash the blood off my face in the restroom before I go to class.)"
+                    u "Then let's go on a date. A real date."
 
-                jump history
+                    u "How about the movies? Tomorrow night."
+
+                    scene s130d
+                    with dissolve
+
+                    la "Okay yeah, let's do it."
+
+                    scene s130e
+                    with dissolve
+
+                    u "I'm really sorry, I'm late for class, but I'll see you tomorrow."
+
+                    scene s130d
+                    with dissolve
+
+                    la "Alright, see you tomorrow."
+
+                    if fighttom and not wintom:
+                        scene s130e
+                        with dissolve
+
+                        u "(I should probably wash the blood off my face in the restroom before I go to class.)"
+
+                    jump history
 
             else:
                 scene s130f # lauren flustered
