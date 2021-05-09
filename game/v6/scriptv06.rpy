@@ -128,7 +128,7 @@ $ addPoint("bf", 1)
 $ homeworkout = False
 call screen messager(contact_Amber)
 
-label script06:
+label v6start:
 
     if aubreysex == True:
         $ aubreyrs = True

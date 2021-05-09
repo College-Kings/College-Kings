@@ -4384,6 +4384,6 @@ label findimre:
 
 label endaa:
     if persistent.ep > 5:
-        jump script06
+        jump v6start
     else:
         jump end_credits
