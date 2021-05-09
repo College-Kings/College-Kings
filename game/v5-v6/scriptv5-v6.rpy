@@ -1,95 +1,3 @@
-init python:
-    persistent.ep = 10
-
-define steam = False
-define developer = True
-define config.steam_appid = 1463120
-
-define _game_menu_screen = "ingmenu"
-
-label splashscreen:
-    # Get Animation/Transform List
-    show nohardfeelings at achievementShow
-    $ achievementAtList = renpy.get_at_list("nohardfeelings")
-    hide nohardfeelings
-
-    # Splashscreen
-    scene black
-    with Pause(1)
-
-    show splashone
-    with dissolve
-    with Pause(2)
-
-    show splashtwo
-    with dissolve
-    with Pause(2)
-
-    show splashthree
-    with dissolve
-    with Pause(2)
-
-    scene black
-    with dissolve
-    with Pause(1)
-
-    return
-
-label clrep2a:
-$ contact_Chloe.newMessage("I'm really busy today, but I could do tonight after 11 or so.")
-$ contact_Chloe.addReply("Alright, cool. I'll be at yours for 11", "clrep3a")
-call screen messager(contact_Chloe)
-
-label clrep3a:
-$ clrep3 = 1
-$ contact_Chloe.newMessage("Sounds good :)")
-
-call screen messager(contact_Chloe)
-
-
-label jorep8a:
-$ addPoint("bro", 1)
-$ contact_Josh.newMessage("Dope")
-$ contact_Josh.newMessage("Come by 995 Sereno Drive at 8, it's my friends house.")
-call screen messager(contact_Josh)
-
-label jorep8b:
-$ contact_Josh.newMessage("Aww, come on. You'll be back by 11.")
-$ contact_Josh.newImgMessage("images/text1.webp")
-$ contact_Josh.newMessage("I told my friend Amber about you and she really wants to meet you.")
-$ contact_Josh.addReply("Alright, I'll come.", "jorep12a")
-$ contact_Josh.addReply("Josh, I don't know, man. I don't wanna be late.", "jorep12b")
-call screen messager(contact_Josh)
-
-label jorep12a:
-$ jorep12 = 1
-$ joisreply = 0
-$ addPoint("bro", 1)
-$ contact_Josh.newMessage("Dope")
-$ contact_Josh.newMessage("Come by 995 Sereno Drive at 8, it's my friends house.")
-call screen messager(contact_Josh)
-
-label jorep12b:
-$ contact_Josh.newMessage("Remember how you told me in high school that you felt like you always missed out on all the crazy stories?")
-$ contact_Josh.newMessage("Don't miss out now.")
-$ contact_Josh.addReply("Fine, I'll come. But I need to go before 11.", "jorep14a")
-$ contact_Josh.addReply("I can't, sorry.", "jorep14b")
-call screen messager(contact_Josh)
-
-label jorep14a:
-$ jorep14 = 1
-$ joisreply = 0
-$ contact_Josh.newMessage("Dope")
-$ contact_Josh.newMessage("Come by 995 Sereno Drive at 8, it's my friends house.")
-call screen messager(contact_Josh)
-
-label jorep14b:
-$ jorep14 = 2
-$ joisreply = 0
-$ addPoint("bf", 1)
-$ contact_Josh.newMessage("This guy")
-call screen messager(contact_Josh)
-
 label amrep3a:
 $ addPoint("bro", 1)
 $ contact_Amber.newMessage("Oh really? How are you gonna do that?")
@@ -185,16 +93,11 @@ label v5start:
     no "What are you doing here? And why did you just punch the wall?"
 
     menu:
-
-
-
         "It's Chloe.":
-            $ tellnora = 1
 
             jump ev_a
 
         "It's nothing.":
-            $ tellnora = 0
 
             jump ev_b
 
@@ -236,12 +139,10 @@ label v5start:
 
         "Tell her":
 
-            $ tellnora = 2
             jump ew_a
 
         "Say you gotta go":
 
-            $ tellnora = 1
             jump ew_b
 
     label ew_a:
@@ -639,12 +540,10 @@ label v5start:
 
         "It's Chloe.":
 
-            $ tellnora = 1
             jump nna
 
         "It's nothing.":
 
-            $ tellnora = 0
             jump nnb
 
     label nna:
@@ -685,12 +584,10 @@ label v5start:
 
         "Tell her":
 
-            $ tellnora = 2
             jump nnc
 
         "Say you gotta go":
 
-            $ tellnora = 1
             jump nnd
 
     label nnc:
