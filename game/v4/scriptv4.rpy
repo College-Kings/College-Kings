@@ -52,153 +52,117 @@ label v4start:
     with dissolve
     imre "Yeah whatever... *winces in pain* he caught me by surprise, it wasn't a fair fight."
 
-
     menu:
-
-
         "You should be more careful.":
-
             $ addPoint("bf", 1)
-            jump do_a
+
+            scene s297a
+            with dissolve
+
+            u "Imre, you need to be more careful, man!"
+
+            u "You can't just try and fight everyone, what if he had a knife?"
+
+            scene s297d
+            with dissolve
+
+            imre "I told you, it wasn't a fair fight! I'll fuck him up when I get out."
+
+            menu:
+                "Let me help.":
+                    $ revengeadam = True
+                    $ addPoint("bro", 1)
+
+                    scene s297a
+                    with dissolve
+
+                    u "At least let me help you."
+
+                    scene s297
+                    with dissolve
+
+                    imre "Nah, this is my fight *winces in pain*."
+
+                    imre "If you wanna help, pick me up when I get out of here."
+
+                    scene s297a
+                    with dissolve
+
+                    u "The nurse said you need to stay in here for two more days so I'll pick you up on Sunday, alright?"
+
+                    scene s297
+                    with dissolve
+
+                    imre "Alright, player. *winces in pain*"
+
+                    scene s297a
+                    with dissolve
+
+                    u "I'll see you then, get better soon."
+
+                "That's a dumb idea.":
+                    $ addPoint("bf", 1)
+
+                    scene s297a
+                    with dissolve
+
+                    u "Dude, that's a dumb idea. He sounds dangerous, just go to the cops!"
+
+                    scene s297d
+                    with dissolve
+
+                    imre "I'll fuck him up myself! *winces in pain* Or do I look like a bitch to you?"
+
+                    scene s297a
+                    with dissolve
+
+                    u "No, just think about it, okay?"
+
+                    u "The nurse said you'd be in here for two more days. I'll pick you up on Sunday alright?"
+
+                    scene s297
+                    with dissolve
+
+                    imre "Alright, player. *winces in pain*"
+
+                    scene s297a
+                    with dissolve
+
+                    u "I'll see you then, get better soon."
 
         "Let's fuck him up.":
-
             $ addPoint("bro", 1)
             $ addPoint("tm", 1)
             $ revengeadam = True
-            jump do_b
 
+            scene s297a
+            with dissolve
 
-    label do_a:
+            u "Fuck that guy, let's fuck him up!"
 
-    scene s297a
-    with dissolve
+            scene s297
+            with dissolve
 
-    u "Imre, you need to be more careful, man!"
+            imre "Nah, this is my fight *winces in pain*."
 
-    u "You can't just try and fight everyone, what if he had a knife?"
+            imre "I'll be okay... but could you pick me up when I get out?"
 
-    scene s297d
-    with dissolve
+            scene s297a
+            with dissolve
 
-    imre "I told you, it wasn't a fair fight! I'll fuck him up when I get out."
+            u "Yeah of course, the nurse said you need to stay in here for two more days so I'll come back on Sunday, alright?"
 
-    menu:
+            scene s297
+            with dissolve
 
-        "Let me help.":
+            imre "Alright, player. *winces in pain*"
 
-            $ revengeadam = True
-            $ addPoint("bro", 1)
-            jump dp_a
+            scene s297a
+            with dissolve
 
-        "That's a dumb idea.":
-
-            $ revengeadam = False
-            $ addPoint("bf", 1)
-            jump dp_b
-
-    label dp_a:
-
-    scene s297a
-    with dissolve
-
-    u "At least let me help you."
-
-    scene s297
-    with dissolve
-
-    imre "Nah, this is my fight *winces in pain*."
-
-    imre "If you wanna help, pick me up when I get out of here."
-
-    scene s297a
-    with dissolve
-
-    u "The nurse said you need to stay in here for two more days so I'll pick you up on Sunday, alright?"
-
-    scene s297
-    with dissolve
-
-    imre "Alright, player. *winces in pain*"
-
-    scene s297a
-    with dissolve
-
-    u "I'll see you then, get better soon."
-
-    jump dp_ad
-
-    label dp_b:
-
-    scene s297a
-    with dissolve
-
-    u "Dude, that's a dumb idea. He sounds dangerous, just go to the cops!"
-
-    scene s297d
-    with dissolve
-
-    imre "I'll fuck him up myself! *winces in pain* Or do I look like a bitch to you?"
-
-    scene s297a
-    with dissolve
-
-    u "No, just think about it, okay?"
-
-    u "The nurse said you'd be in here for two more days. I'll pick you up on Sunday alright?"
-
-    scene s297
-    with dissolve
-
-    imre "Alright, player. *winces in pain*"
-
-    scene s297a
-    with dissolve
-
-    u "I'll see you then, get better soon."
-
-    jump dp_bd
-
-    label do_b:
-
-    scene s297a
-    with dissolve
-
-    u "Fuck that guy, let's fuck him up!"
-
-    scene s297
-    with dissolve
-
-    imre "Nah, this is my fight *winces in pain*."
-
-    imre "I'll be okay... but could you pick me up when I get out?"
-
-    scene s297a
-    with dissolve
-
-    u "Yeah of course, the nurse said you need to stay in here for two more days so I'll come back on Sunday, alright?"
-
-    scene s297
-    with dissolve
-
-    imre "Alright, player. *winces in pain*"
-
-    scene s297a
-    with dissolve
-
-    u "I'll see you then, get better soon."
-
-    jump do_bd
-
-
-
-    label dp_bd:
-    label do_bd:
-    label dp_ad:
+            u "I'll see you then, get better soon."
 
     stop music fadeout 2.0
-
-
 
     scene s298 # shows a cab in the night from outside with you in the back possibly not seeing you due to dark windows
     with Fade (1,0,1)
@@ -279,7 +243,6 @@ label v4start:
 
     play sound "sounds/dooropen.mp3"
 
-
     scene s301 # Showing you from the back looking over your shoulder in front of open door with Riley standing outside sad
     with dissolve
 
@@ -322,57 +285,39 @@ label v4start:
 
     ri "I mean you did seem quite angry at the park today..."
 
-
     menu:
-
-
         "Take responsibility":
-
             $ addPoint("bro", 1)
             $ addPoint("bf", 1)
-            jump dq_a
+
+            scene s303c
+            with dissolve
+
+            u "Yeah... I'm sorry. I shouldn't have acted out like that. Tomorrow I'll talk to Ryan and make things right."
+
+            scene s303
+            with dissolve
+
+            ri "I think that'd be good."
+
+            scene s303a
+            with dissolve
 
         "Blame Ryan":
-
             $ addPoint("tm", 1)
-            jump dq_b
 
-    label dq_a:
+            scene s303c
+            with dissolve
 
-    scene s303c
-    with dissolve
+            u "That's just 'cause Ryan was completely out of line..."
 
-    u "Yeah... I'm sorry. I shouldn't have acted out like that. Tomorrow I'll talk to Ryan and make things right."
+            scene s303b
+            with dissolve
 
-    scene s303
-    with dissolve
+            ri "Right... sorry for bringing it up."
 
-    ri "I think that'd be good."
-
-    scene s303a
-    with dissolve
-
-    jump dq_ad
-
-    label dq_b:
-
-    scene s303c
-    with dissolve
-
-    u "That's just 'cause Ryan was completely out of line..."
-
-    scene s303b
-    with dissolve
-
-    ri "Right... sorry for bringing it up."
-
-    scene s303c
-    with dissolve
-
-    jump dq_bd
-
-    label dq_ad:
-    label dq_bd:
+            scene s303c
+            with dissolve
 
     u "Hey, isn't it kinda crazy that we all just met at the beginning of the week?"
 
@@ -413,9 +358,7 @@ label v4start:
 
     ri "Uhm... no, I don't think so. I like Imre, but he can be a bit gross, haha."
 
-
-    if rileykiss == True:
-
+    if rileykiss:
         scene s303e
         with dissolve
 
@@ -436,10 +379,7 @@ label v4start:
 
         ri "I'm just kidding, haha."
 
-        jump continueu
-
     else:
-
         scene s303e
         with dissolve
 
@@ -460,59 +400,32 @@ label v4start:
 
         ri "Right..."
 
-        jump continuev
-
-
-    label continueu:
-    label continuev:
-
     ri "It's getting quite late, I should probably head back to my dorm."
 
     menu:
-
         "Ask her to sleep here":
+            scene s304 # showing you sitting on bed, riley stood up, you looking at her, she's walking towards the door but still close to the bed
+            with dissolve
 
-            jump dr_a
+            u "Or... you could sleep here. I mean, Imre's bed certainly isn't taken tonight."
 
+            scene s304a # riley turning around smile
+            with dissolve
+
+            ri "Haha, I don't wanna find out what's underneath those covers."
 
         "Don't ask":
+            scene s304
+            with dissolve
 
-            jump dr_b
+            u "Yeah, thank you for coming though."
 
-    label dr_a:
+            scene s304a
+            with dissolve
 
-        scene s304 # showing you sitting on bed, riley stood up, you looking at her, she's walking towards the door but still close to the bed
-        with dissolve
+            ri "Not a problem at all."
 
-        u "Or... you could sleep here. I mean, Imre's bed certainly isn't taken tonight."
-
-        scene s304a # riley turning around smile
-        with dissolve
-
-        ri "Haha, I don't wanna find out what's underneath those covers."
-
-        jump dr_ad
-
-
-    label dr_b:
-
-        scene s304
-        with dissolve
-
-        u "Yeah, thank you for coming though."
-
-        scene s304a
-        with dissolve
-
-        ri "Not a problem at all."
-
-        jump dr_bd
-
-    label dr_ad:
-    label dr_bd:
     stop music fadeout 2.0
-
-
 
     ######### CHLOE DREAM:
 
@@ -585,7 +498,6 @@ label v4start:
 ############## END CHLOE DREAM
 
 
-
 ########## NEXT MORNING (SATURDAY)
 
     scene s310 # you yawning in bed in the morning
@@ -593,8 +505,7 @@ label v4start:
 
     u "*Yawn*"
 
-    if meetjulia == True:
-
+    if meetjulia:
         play music "music/m11punk.mp3"
 
         scene s310a # no logner yawning
@@ -631,99 +542,68 @@ label v4start:
         ju "Oh my god, honey! What happened to your eye??"
 
         menu:
-
-
             "Someone punched me.":
-
                 $ addPoint("bf", 1)
-                $ liejulia = False
-                jump du_a
+
+                scene s315a
+                with dissolve
+
+                u "I was at a party and some guy punched me out of nowhere."
+
+                u "It's okay though. You don't need to worry."
+
+                scene s315b # julia empathy
+                with dissolve
+
+                ju "Oh honey, that's horrible! Have you told the college? I don't want you to feel unsafe."
+
+                scene s315c
+                with dissolve
+
+                u "No, it's fine. My roommate's actually been teaching me self-defense."
+
+                scene s315b
+                with dissolve
+
+                ju "Well that's nice of him... I just hope you never have to use it."
+
+                scene s315c
+                with dissolve
+
+                u "Please don't worry, Julia. It was just a one time thing."
+
+                scene s315d # Julia emphatic smile
+                with dissolve
+
+                ju "Okay honey, let's go shopping then."
 
             "It was an accident.":
-
                 $ addPoint("tm", 1)
                 $ liejulia = True
-                jump du_b
 
-        label du_a:
+                scene s315a
+                with dissolve
 
-        scene s315a
-        with dissolve
+                u "I was playing volleyball with some friends and got hit be the ball when I wasn't looking."
 
-        u "I was at a party and some guy punched me out of nowhere."
+                scene s315b # julia empathy
+                with dissolve
 
-        u "It's okay though. You don't need to worry."
+                ju "Oh honey, that volleyball must have been made out of steel."
 
-        scene s315b # julia empathy
-        with dissolve
+                scene s315c
+                with dissolve
 
-        ju "Oh honey, that's horrible! Have you told the college? I don't want you to feel unsafe."
+                u "It was just a bit unfortunate, no big deal. It doesn't hurt much."
 
-        scene s315c
-        with dissolve
+                scene s315d # Julia emphatic smile
+                with dissolve
 
-        u "No, it's fine. My roommate's actually been teaching me self-defense."
+                ju "Well that's a relief. Let's go shopping then."
 
-        scene s315b
-        with dissolve
-
-        ju "Well that's nice of him... I just hope you never have to use it."
-
-        scene s315c
-        with dissolve
-
-        u "Please don't worry, Julia. It was just a one time thing."
-
-        scene s315d # Julia emphatic smile
-        with dissolve
-
-        ju "Okay honey, let's go shopping then."
-
-        jump du_ad
-
-        label du_b:
-
-        scene s315a
-        with dissolve
-
-        u "I was playing volleyball with some friends and got hit be the ball when I wasn't looking."
-
-        scene s315b # julia empathy
-        with dissolve
-
-        ju "Oh honey, that volleyball must have been made out of steel."
-
-        scene s315c
-        with dissolve
-
-        u "It was just a bit unfortunate, no big deal. It doesn't hurt much."
-
-        scene s315d # Julia emphatic smile
-        with dissolve
-
-        ju "Well that's a relief. Let's go shopping then."
-
-        jump du_bd
-
-        label du_ad:
-        label du_bd:
         stop music fadeout 2.0
 
-
-
         ######### THE FOLLOWING IMAGES HAVE TO BE RENDERED WITH NOT BACKGROUND AS A VIDEO OF MOVING ROADS WILL BE INSERTED
-
-        image s316 = "images/s316.webp" # Julia looking forward talking smiling
-        image s316a = "images/s316a.webp" # Julia looking forward talking smiling mouth closed
-        image s316c = "images/s316c.webp" # Julia looking forward curious
-        image s316d = "images/s316d.webp" # Julia looking forward curious mouth closed
-        image s316b = "images/s316b.webp" # Julia looking at you smiling mouth open
-
-
-
-
-
-
         scene carback
         show s316
         with Fade (1,0,1)
@@ -752,309 +632,282 @@ label v4start:
         call screen girls
 
         label juchloe:
+            $ girl = "Chloe"
 
+            u "There's this girl called Chloe..."
 
-        $ girl = "Chloe"
+            u "A couple nights ago we went to the gym at midnight just to play volleyball, it was super fun."
 
-        u "There's this girl called Chloe..."
+            u "It's just uhm... never mind."
 
-        u "A couple nights ago we went to the gym at midnight just to play volleyball, it was super fun."
+            hide s316a
+            hide s316d
+            show s316c
+            with dissolve
 
-        u "It's just uhm... never mind."
+            ju "What is it, honey? You know you can always talk to me."
 
+            hide s316c
+            show s316d
+            with dissolve
 
-        hide s316a
-        hide s316d
-        show s316c
-        with dissolve
+            u "Just my friend said some bad stuff about her and I don't know what to believe."
 
-        ju "What is it, honey? You know you can always talk to me."
+            hide s316d
+            show s316
+            with dissolve
 
-        hide s316c
-        show s316d
-        with dissolve
+            ju "Well have you talked to her about it?"
 
-        u "Just my friend said some bad stuff about her and I don't know what to believe."
+            hide s316
+            show s316a
+            with dissolve
 
-        hide s316d
-        show s316
-        with dissolve
+            u "Not yet, but I'll ask her if we can talk today."
 
-        ju "Well have you talked to her about it?"
+            hide s316a
+            show s316b
+            with dissolve
 
-        hide s316
-        show s316a
-        with dissolve
+            ju "I think that's a good idea. I'm sure you'll figure it out."
 
-        u "Not yet, but I'll ask her if we can talk today."
+            hide s316b
+            show s316a
+            with dissolve
 
-        hide s316a
-        show s316b
-        with dissolve
+            u "Thanks, Julia."
 
-        ju "I think that's a good idea. I'm sure you'll figure it out."
-
-        hide s316b
-        show s316a
-        with dissolve
-
-        u "Thanks, Julia."
-
-
-
-        jump jucona
-
+            jump jucon2
 
         label juaubrey:
+            $ girl = "Aubrey"
 
-        $ girl = "Aubrey"
+            u "There's this girl called Aubrey..."
 
-        u "There's this girl called Aubrey..."
+            u "She's really fun and kinda wild. She just does stuff you wouldn't expect."
 
-        u "She's really fun and kinda wild. She just does stuff you wouldn't expect."
+            jump jucon1
 
-        jump juconb
+            label julauren:
 
-        label julauren:
+            $ girl = "Lauren"
 
-        $ girl = "Lauren"
+            u "There's this girl called Lauren..."
 
-        u "There's this girl called Lauren..."
+            u "She's really sweet, but also funny."
 
-        u "She's really sweet, but also funny."
-
-        jump juconc
+            jump jucon1
 
         label juriley:
+            $ girl = "Riley"
 
-        $ girl = "Riley"
+            u "There's this girl called Riley..."
 
-        u "There's this girl called Riley..."
+            u "She's fun, but also really honest and that makes her great to talk to."
 
-        u "She's fun, but also really honest and that makes her great to talk to."
-
-        jump jucond
+            jump jucon1
 
         label juemily:
+            $ girl = "Emily"
 
+            u "Actually, it's Emily..."
 
-        $ girl = "Emily"
+            hide s316a
+            show s316c
+            with dissolve
 
-        u "Actually, it's Emily..."
+            $ relightthefire = True
+            if not steam:
+                show relightthefire at achievementShow
+            else:
+                $ achievement.grant("relight_the_fire")
+                $ achievement.sync()
 
-        hide s316a
-        show s316c
-        with dissolve
+            ju "Emily? I thought you guys broke up?"
 
-        $ relightthefire = True
-        if not steam:
-            image relightthefire = "images/relightthefire.webp"
-            show relightthefire:
-                xpos 0
-                ypos -200
-                linear 0.5 xpos 0 ypos 0
-                pause 2.0
-                linear 0.5 xpos 0 ypos -200
-        else:
-            $ achievement.grant("relight_the_fire")
-            $ achievement.sync()
+            hide s316c
+            show s316d
+            with dissolve
 
-        ju "Emily? I thought you guys broke up?"
+            u "Yeah, but I think she's changed. She seems to be really sorry for what she did."
 
-        hide s316c
-        show s316d
-        with dissolve
+            u "I don't know... we just get along so well."
 
-        u "Yeah, but I think she's changed. She seems to be really sorry for what she did."
-
-        u "I don't know... we just get along so well."
-
-        jump jucone
+            jump jucon1
 
         label jupenelope:
+            $ girl = "Penelope"
 
-        $ girl = "Penelope"
+            u "There's this girl called Penelope..."
 
-        u "There's this girl called Penelope..."
+            u "She's a little quirky, but I really like that about her. It's different."
 
-        u "She's a little quirky, but I really like that about her. It's different."
+            jump jucon1
 
-        jump juconf
+        label jucon1:
+            hide s316a
+            hide s316d
+            show s316
+            with dissolve
 
-        label juconb:
-        label juconc:
-        label jucond:
-        label jucone:
-        label juconf:
+            ju "Aww honeeey! That sounds great, I'm really happy for you."
 
-        hide s316a
-        hide s316d
-        show s316
-        with dissolve
+            hide s316
+            show s316a
+            with dissolve
 
-        ju "Aww honeeey! That sounds great, I'm really happy for you."
+            u "Thanks, Julia."
 
-        hide s316
-        show s316a
-        with dissolve
+        label jucon2:
+            stop music fadeout 2.0
 
-        u "Thanks, Julia."
+            scene s317 # you and julia at the start of clothing store there are some people there.
+            with Fade (1,0,1)
 
-        label jucona:
-        stop music fadeout 2.0
+            play music "music/m16punk.mp3"
+            queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
 
+            ju "You know, I haven't been shopping in quite some time, this is gonna be fun."
 
-        scene s317 # you and julia at the start of clothing store there are some people there.
-        with Fade (1,0,1)
+            scene s318 #FIRST PERSON: Julia close up smiling looking at you
+            with dissolve
 
-        play music "music/m16punk.mp3"
-        queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
+            ju "If you find something you like, just let me know, I'll pay for it. I know how tight money can be as a student."
 
-        ju "You know, I haven't been shopping in quite some time, this is gonna be fun."
+            scene s318a
+            with dissolve
 
-        scene s318 #FIRST PERSON: Julia close up smiling looking at you
-        with dissolve
+            u "You don't have to do that..."
 
-        ju "If you find something you like, just let me know, I'll pay for it. I know how tight money can be as a student."
+            scene s318
+            with dissolve
 
-        scene s318a
-        with dissolve
+            ju "It's fine, honey. You wouldn't believe all the things I did for money when I was a student."
 
-        u "You don't have to do that..."
+            ju "Let's go find you some nice clothes."
 
-        scene s318
-        with dissolve
+            scene s319 # FIRST PERSON Julia looking at clothes, Julia maybe holding onto one particular shirt // MAKE SURE THERE'S A SIMILAR LOOKING SHIRT TO TRY ON DOG
+            with fade
 
-        ju "It's fine, honey. You wouldn't believe all the things I did for money when I was a student."
+            ju "What do you think of this one, honey?"
 
-        ju "Let's go find you some nice clothes."
+            # anchor
 
-        scene s319 # FIRST PERSON Julia looking at clothes, Julia maybe holding onto one particular shirt // MAKE SURE THERE'S A SIMILAR LOOKING SHIRT TO TRY ON DOG
-        with fade
+            scene s319a
+            with dissolve
 
-        ju "What do you think of this one, honey?"
+            u "Yeah, I like it."
 
-        # anchor
+            scene s319b
+            with dissolve
 
-        scene s319a
-        with dissolve
+            ju "How about you try it on and if I find anything else nice I'll bring it to you?"
 
-        u "Yeah, I like it."
+            scene s319a
+            with dissolve
 
-        scene s319b
-        with dissolve
+            u "Okay, sure."
 
-        ju "How about you try it on and if I find anything else nice I'll bring it to you?"
+            scene s320 # You by yourself in a changing room with out shirt, just about to put on the new shirt
+            with fade
 
-        scene s319a
-        with dissolve
+            pause 0.5
 
-        u "Okay, sure."
+            play sound "sounds/knock.mp3"
 
-        scene s320 # You by yourself in a changing room with out shirt, just about to put on the new shirt
-        with fade
+            "*Knock knock knock*"
 
-        pause 0.5
+            scene s320a # you turn around to look at door
+            with dissolve
 
-        play sound "sounds/knock.mp3"
+            ju "Honey, you in there?"
 
-        "*Knock knock knock*"
+            scene s321# FIrst person: looking at closed changing room door
+            with dissolve
 
-        scene s320a # you turn around to look at door
-        with dissolve
+            u "Yeah, just wai-"
 
-        ju "Honey, you in there?"
+            scene s321a # julia coming thorugh
+            with dissolve
 
-        scene s321# FIrst person: looking at closed changing room door
-        with dissolve
+            ju "I found you a nice sweater that you might like."
 
-        u "Yeah, just wai-"
+            scene s321b # julia inside door closed now
+            with dissolve
 
+            u "Uhm.. thanks."
 
+            scene s322 # showing you reaching for shirt to try on I guess? and julia
+            with dissolve
 
-        scene s321a # julia coming thorugh
-        with dissolve
+            u "You didn't even leave me time to try this one on though."
 
-        ju "I found you a nice sweater that you might like."
+            scene s322a #julia mouth open smiling as if it was obvious
+            with dissolve
 
-        scene s321b # julia inside door closed now
-        with dissolve
+            ju "Well do it now, I wanna see what it looks like on you."
 
-        u "Uhm.. thanks."
+            scene s322b # julia feeling your biceps
+            with dissolve
 
-        scene s322 # showing you reaching for shirt to try on I guess? and julia
-        with dissolve
+            ju "You've put on a bit of muscle, honey."
 
-        u "You didn't even leave me time to try this one on though."
+            scene s322c # julia puts her arm away
+            with dissolve
 
-        scene s322a #julia mouth open smiling as if it was obvious
-        with dissolve
+            u "Uhm... thanks."
 
-        ju "Well do it now, I wanna see what it looks like on you."
+            scene s323 # Julia close up  FIRST PERSON, she looks at your torso smiling
+            with fade
 
-        scene s322b # julia feeling your biceps
-        with dissolve
+            ju "Wow, it looks great! What do you think, honey?"
 
-        ju "You've put on a bit of muscle, honey."
+            scene s323a # julia looking back at your face mouth closed
+            with dissolve
 
-        scene s322c # julia puts her arm away
-        with dissolve
+            u "Yeah, it looks good. It's just a bit tight around the neck."
 
-        u "Uhm... thanks."
+            scene s323b # julia know it better smile
+            with dissolve
 
-        scene s323 # Julia close up  FIRST PERSON, she looks at your torso smiling
-        with fade
+            ju "That's because you didn't adjust the collar correctly."
 
-        ju "Wow, it looks great! What do you think, honey?"
+            scene s323c # julia arms on your collar
+            with dissolve
 
-        scene s323a # julia looking back at your face mouth closed
-        with dissolve
+            ju "Here, let me help you."
 
-        u "Yeah, it looks good. It's just a bit tight around the neck."
+            scene s323d # her arm moves slightly
+            with dissolve
 
-        scene s323b # julia know it better smile
-        with dissolve
+            ju "How's that?"
 
-        ju "That's because you didn't adjust the collar correctly."
+            scene s323a
+            with dissolve
 
-        scene s323c # julia arms on your collar
-        with dissolve
+            u "Yeah, that's better. Thanks."
 
-        ju "Here, let me help you."
+            scene s323b
+            with dissolve
 
-        scene s323d # her arm moves slightly
-        with dissolve
+            ju "Okay, I'm gonna look around some more. Let me know when you're ready to buy something."
 
-        ju "How's that?"
+            scene s323a
+            with dissolve
 
-        scene s323a
-        with dissolve
+            u "Alright."
 
-        u "Yeah, that's better. Thanks."
+            scene s324 # FIRST PERSON: Julia form the side looking through clothes
+            with fade
 
-        scene s323b
-        with dissolve
+            u "Julia, you ready to go?"
 
-        ju "Okay, I'm gonna look around some more. Let me know when you're ready to buy something."
+            scene s325 #you and Julia walking through mall
+            with fade
 
-        scene s323a
-        with dissolve
-
-        u "Alright."
-
-        scene s324 # FIRST PERSON: Julia form the side looking through clothes
-        with fade
-
-        u "Julia, you ready to go?"
-
-
-        scene s325 #you and Julia walking through mall
-        with fade
-
-        pause 0.5
+            pause 0.5
 
         if girl == "Chloe":
-
             scene s325a # julia points at shop window with cool volleyball
             with dissolve
 
@@ -1065,52 +918,31 @@ label v4start:
 
             ju "Wouldn't that make a great gift for her?"
 
-
             menu:
-
-
                 "Buy it":
-
                     $ volleyball = True
-                    jump dv_a
+                    $ rematch = True
+
+                    if not steam:
+                        show rematch at achievementShow
+
+                    else:
+                        $ achievement.grant("rematch")
+                        $ achievement.sync()
+
+                    u "Yeah, you're right. Maybe I could give it to her when we talk about what Ryan said."
+
+                    ju "That's a great idea, honey."
 
                 "Don't buy it":
 
-                    $ volleyball = False
-                    jump dv_b
+                    u "Uhm... I don't know. I wanna talk to her about what Ryan said first."
 
-            label dv_a:
+                    ju "Alright, honey. It was just an idea."
 
-            $ rematch = True
-            if not steam:
-                image rematch = "images/rematch.webp"
-                show rematch:
-                    xpos 0
-                    ypos -200
-                    linear 0.5 xpos 0 ypos 0
-                    pause 2.0
-                    linear 0.5 xpos 0 ypos -200
-            else:
-                $ achievement.grant("rematch")
-                $ achievement.sync()
-
-            u "Yeah, you're right. Maybe I could give it to her when we talk about what Ryan said."
-
-            ju "That's a great idea, honey."
-
-            jump dv_ad
-
-            label dv_b:
-
-            u "Uhm... I don't know. I wanna talk to her about what Ryan said first."
-
-            ju "Alright, honey. It was just an idea."
-
-
-            jump dv_bd
+                    jump dv_dd
 
         else:
-
             scene s325b # you lookign at shop window with cool volley
             with dissolve
 
@@ -1119,36 +951,20 @@ label v4start:
             scene s326
             with dissolve
 
-
-
             menu:
-
                 "Buy it":
-
                     $ volleyball = True
-                    jump dv_c
+
+                    u "Hold up, Julia. I wanna buy this volleyball as gift for... a friend."
+
+                    ju "Alright, honey."
 
                 "Don't buy it":
-
                     $ volleyball = False
-                    jump dv_d
 
-        label dv_c:
+                    u "(I should probably talk to her about what Ryan said first and clear things up.)"
 
-        u "Hold up, Julia. I wanna buy this volleyball as gift for... a friend."
-
-        ju "Alright, honey."
-
-        jump dv_cd
-
-        label dv_d:
-
-        u "(I should probably talk to her about what Ryan said first and clear things up.)"
-
-        jump dv_dd
-
-        label dv_ad:
-        label dv_cd:
+                    jump dv_dd
 
         scene s327 # FIRST PERSON inside shop talking to cashier with volleyball on the cash register thing
         with fade
@@ -1174,31 +990,23 @@ label v4start:
 
         clerk "Thank you. Have a nice day."
 
-        jump dv_add
-
-        label dv_add:
         label dv_dd:
-        label dv_bd:
+            scene s328 # Showing you and Julia in the car driving back
+            with Fade (1,0,1)
 
-        scene s328 # Showing you and Julia in the car driving back
-        with Fade (1,0,1)
+            pause 0.5
 
-        pause 0.5
+            scene s329 # you talking to juliaa (very close, about to hug)
+            with Fade (1,0,1)
 
-        scene s329 # you talking to juliaa (very close, about to hug)
-        with Fade (1,0,1)
+            ju "Thanks for coming along, honey. It was really nice to see you."
 
-        ju "Thanks for coming along, honey. It was really nice to see you."
+            scene s329a # hugging
+            with dissolve
 
-        scene s329a # hugging
-        with dissolve
-
-        u "Yeah Julia, it was fun. I'll see you again soon."
-
-        jump continuew
+            u "Yeah Julia, it was fun. I'll see you again soon."
 
     else:
-
         scene s310a
         with dissolve
 
@@ -1209,38 +1017,27 @@ label v4start:
 
         u "(Alright, all finished.)"
 
-        jump continuex
-
-    label continuew:
-    label continuex:
     stop music fadeout 2.0
-
-
-
-
-
 
     scene s330
     with Fade (1,0,1)### you sitting on your bed with your phone in your hand //
 
     u "(I should text Chloe and see if she wants to meet up... I need to find out if there's any truth in what Ryan said.)"
-    $ contact_Chloe.addReply("Hey Chloe, any chance you can meet up in a bit?", "clrep2a")
+
+    python:
+        contact_Chloe.addReply(_("Hey Chloe, any chance you can meet up in a bit?"))
+        contact_Chloe.newMessage(_("I'm really busy today, but I could do tonight after 11 or so."))
+        contact_Chloe.addReply(_("Alright, cool. I'll be at yours for 11"))
+        contact_Chloe.newMessage(_("Sounds good :)"))
 
     play music "music/mindie4.mp3"
-    call screen messager(contact_Chloe)
+
     label phonev:
+        call screen phone
+        if contact_Chloe.getReplies():
+            u "(I should message Chloe about meeting up later.)"
 
-    if contact_Chloe.messages[-1].replies:
-        
-        u "(I should message Chloe about meeting up later.)"
-
-        jump phonev
-
-    else:
-        
-        jump continuey
-
-    label continuey:
+            jump phonev
     
     scene s330a # same as 330 but you looking up
     with dissolve
@@ -1270,153 +1067,115 @@ label v4start:
 
     u "(Oh that's Lauren's sister Autumn...)"
 
-    if laurenrs == False:
+    if not laurenrs and toldlauren:
+        $ addPoint("tm", 1)
 
-        if toldlauren == True:
-            $ addPoint("tm", 1)
-            u "(Hopefully Lauren didn't tell her about what happened...)"
+        u "(Hopefully Lauren didn't tell her about what happened...)"
 
-            scene s334 # FIRST PERSON close up Autumn studying in front of you opposite of hte table (you're above since you're standing
-            with dissolve
+        scene s334 # FIRST PERSON close up Autumn studying in front of you opposite of hte table (you're above since you're standing
+        with dissolve
 
-            u "Uhm... hey Autumn."
+        u "Uhm... hey Autumn."
 
-            scene s334a # autumn looks up slightly surprised mouth closed
-            with dissolve
+        scene s334a # autumn looks up slightly surprised mouth closed
+        with dissolve
 
-            pause 0.5
+        pause 0.5
 
-            scene s334b # Autumn dissapointed
-            with dissolve
+        scene s334b # Autumn dissapointed
+        with dissolve
 
-            aut "Please leave me alone..."
+        aut "Please leave me alone..."
 
-            menu:
-
-
-                "Apologize":
-
-                    jump ea_a
-
-                "Sit somewhere else":
-
-                    $ autumnmad = True
-                    jump ea_b
-
-
-            label ea_a:
-
-            scene s334c
-            with dissolve
-
-            u "I'm sorry and I can see why Lauren would be upset."
-
-            u "But... I can't change what happened, I was just trying to be honest."
-
-            u "You have to believe me. I care about Lauren, I'd never do anything to hurt her."
-
-
-            if kct == "loyal":
-                call screen popup6
-                label popup6:
-                $ autumnmad = False
-                scene s334d # autumn emphatic
-                with dissolve
-
-                aut "Hm... I know you guys weren't serious or anything yet."
-
-                aut "But... you really hurt Lauren."
-
-
-
-                scene s334e
-                with dissolve
-
-                u "I know and I'm really sorry. It won't happen again, I promise."
-
-                scene s334d
-                with dissolve
-
-                aut "I believe you. At least you were honest about it and I don't think many guys would be."
-
-                aut "I'll talk to Lauren about it."
-
-                scene s334e
-                with dissolve
-
-                u "Thank you. Does that mean I can keep sitting here?"
-
-                scene s334f #autumn kind smile
-                with dissolve
-
-                aut "Yeah, I guess."
-
-                jump ea_ad
-
-
-            else:
-                $ autumnmad = True
-                scene s334b
-                with dissolve
-
-                au "Right. Well actions speak louder than words, [name]."
-
-                au "Now please leave me alone."
-
+        menu:
+            "Apologize":
                 scene s334c
                 with dissolve
 
-                u "Fine. I'll sit somewhere else."
+                u "I'm sorry and I can see why Lauren would be upset."
 
-                jump readmontaged
+                u "But... I can't change what happened, I was just trying to be honest."
 
+                u "You have to believe me. I care about Lauren, I'd never do anything to hurt her."
 
-                label ea_b:
-                label eb_b:
+                if kct == "loyal":
+                    call screen popup6
+
+                    label popup6:
+                        scene s334d # autumn emphatic
+                        with dissolve
+
+                        aut "Hm... I know you guys weren't serious or anything yet."
+
+                        aut "But... you really hurt Lauren."
+
+                        scene s334e
+                        with dissolve
+
+                        u "I know and I'm really sorry. It won't happen again, I promise."
+
+                        scene s334d
+                        with dissolve
+
+                        aut "I believe you. At least you were honest about it and I don't think many guys would be."
+
+                        aut "I'll talk to Lauren about it."
+
+                        scene s334e
+                        with dissolve
+
+                        u "Thank you. Does that mean I can keep sitting here?"
+
+                        scene s334f #autumn kind smile
+                        with dissolve
+
+                        aut "Yeah, I guess."
+
+                        jump autumnsita
+
+                else:
                     $ autumnmad = True
+                    scene s334b
+                    with dissolve
+
+                    au "Right. Well actions speak louder than words, [name]."
+
+                    au "Now please leave me alone."
+
                     scene s334c
                     with dissolve
 
                     u "Fine. I'll sit somewhere else."
 
-                    jump readmontagec
+                    jump readmontagea
+
+            "Sit somewhere else":
+                $ autumnmad = True
+
+                jump ea_b
 
 
-        else:
+    elif not laurenrs and laurentoofar:
+        $ addPoint("tm", 1)
 
-            if laurentoofar == True:
-                $ addPoint("tm", 1)
-                u "(Hopefully Lauren didn't tell her about what happened...)"
+        u "(Hopefully Lauren didn't tell her about what happened...)"
 
-                scene s334
-                with dissolve
+        scene s334
+        with dissolve
 
-                u "Uhm... hey Autumn."
+        u "Uhm... hey Autumn."
 
-                scene s334a
-                with dissolve
+        scene s334a
+        with dissolve
 
-                pause 0.5
+        pause 0.5
 
-                scene s334b
-                with dissolve
-                aut "Go away, creep."
+        scene s334b
+        with dissolve
+        aut "Go away, creep."
 
-
-                menu:
-
-                    "Apologize":
-
-                        jump eb_a
-
-                    "Sit somewhere else":
-
-                        $ autumnmad = True
-                        jump eb_b
-
-
-                label eb_a:
-
+        menu:
+            "Apologize":
                 scene s334c
                 with dissolve
 
@@ -1426,46 +1185,45 @@ label v4start:
 
                 u "You have to believe me. I care about Lauren, I'd never do anything to hurt her."
 
-
-
                 if kct == "loyal":
                     call screen popup7
+
                     label popup7:
-                    $ autumnmad = False
-                    scene s334d # autumn emphatic
-                    with dissolve
+                        $ autumnmad = False
+                        scene s334d # autumn emphatic
+                        with dissolve
 
-                    aut "[name]... I don't know."
+                        aut "[name]... I don't know."
 
-                    aut "What you did was really messed up... you should have stopped when she told you to."
+                        aut "What you did was really messed up... you should have stopped when she told you to."
 
-                    scene s334e
-                    with dissolve
+                        scene s334e
+                        with dissolve
 
-                    u "I know and I'm really sorry. I'll never do anything like that again, I promise."
+                        u "I know and I'm really sorry. I'll never do anything like that again, I promise."
 
-                    scene s334d
-                    with dissolve
+                        scene s334d
+                        with dissolve
 
-                    aut "Hmmm... I mean I can understand that stuff like this can happen. It's just..."
+                        aut "Hmmm... I mean I can understand that stuff like this can happen. It's just..."
 
-                    aut "You know what? I'll talk to Lauren about it."
+                        aut "You know what? I'll talk to Lauren about it."
 
-                    scene s334e
-                    with dissolve
+                        scene s334e
+                        with dissolve
 
-                    u "Thank you. Does that mean I can keep sitting here?"
+                        u "Thank you. Does that mean I can keep sitting here?"
 
-                    scene s334f #autumn kind smile
-                    with dissolve
+                        scene s334f #autumn kind smile
+                        with dissolve
 
-                    aut "Yeah, alright."
+                        aut "Yeah, alright."
 
-                    jump eb_ad
-
+                        jump autumnsita
 
                 else:
                     $ autumnmad = True
+                    
                     scene s334b
                     with dissolve
 
@@ -1478,51 +1236,54 @@ label v4start:
 
                     u "Fine. I'll sit somewhere else."
 
-                    jump readmontaged
+                    jump readmontagea
 
-            else:
-                $ addPoint("bf", 1)
-                scene s334
-                with dissolve
+            "Sit somewhere else":
+                $ autumnmad = True
 
-                u "Uhm... hey Autumn."
-
-                scene s334a
-                with dissolve
-
-                pause 0.5
-
-                scene s334f
-                with dissolve
-
-                aut "Hey, [name]. Haven't seen you in a while."
-
-                scene s334g
-                with dissolve
-
-                u "You mean since you rescued me from Cameron?"
-
-                scene s334f
-                with dissolve
-
-                aut "Well, I wasn't gonna put it like that."
-
-                scene s334g
-                with dissolve
-
-                u "Haha it's okay, I'm still grateful. Do you mind if I sit down?"
-
-                scene s334f
-                with dissolve
-
-                aut "Not at all."
-
-                jump autumnsitb
+                jump ea_b
 
 
+    elif not laurenrs:
+        $ addPoint("bf", 1)
+        scene s334
+        with dissolve
+
+        u "Uhm... hey Autumn."
+
+        scene s334a
+        with dissolve
+
+        pause 0.5
+
+        scene s334f
+        with dissolve
+
+        aut "Hey, [name]. Haven't seen you in a while."
+
+        scene s334g
+        with dissolve
+
+        u "You mean since you rescued me from Cameron?"
+
+        scene s334f
+        with dissolve
+
+        aut "Well, I wasn't gonna put it like that."
+
+        scene s334g
+        with dissolve
+
+        u "Haha it's okay, I'm still grateful. Do you mind if I sit down?"
+
+        scene s334f
+        with dissolve
+
+        aut "Not at all."
+
+        jump autumnsita
 
     else:
-
         $ addPoint("bf", 1)
         scene s334
         with dissolve
@@ -1555,12 +1316,17 @@ label v4start:
 
         jump autumnsita
 
+label ea_b:
+    $ autumnmad = True
+    scene s334c
+    with dissolve
 
-    label autumnsita:
-    label autumnsitb:
-    label ea_ad:
-    label eb_ad:
+    u "Fine. I'll sit somewhere else."
 
+    jump readmontagea
+
+
+label autumnsita:
     scene s335 # you sititng opposite to autumn eyeheight FIRST PERSON she's curious
     with dissolve
 
@@ -1652,14 +1418,8 @@ label v4start:
 
     aut "Yeah, I should get back to my research as well."
 
-
-    label readmontaged:
-    label readmontagea:
-    label readmontageb:
-    label readmontagec:
-
+label readmontagea:
     stop music fadeout 2.0
-
 
     scene s336 # you from front sitting down looking at the books cover.
     with fade
@@ -1694,78 +1454,60 @@ label v4start:
     u "(Oh shit, there's Ryan.)"
 
     menu:
-
-
         "Talk to him":
-
             $ addPoint("bro", 1)
-            jump ec_a
+
+            scene s339 #you walking closer to Ryan
+            with dissolve
+
+            u "(Time to talk it out.)"
+
+            scene s339a # Ryan looks over at you
+            with dissolve
+
+            ry "[name]?"
+
+            pause 0.5
+
+            scene s340a  # Ryan closer and standing up
+            with dissolve
+
+            u "Ryan, can we talk about yesterday?"
+
+            scene s341 # Ryan close up apolegetic
+            with dissolve
+
+            ry "Yeah, man. I messed up, I'm sorry."
 
         "Ignore him":
-
             $ addPoint("tm", 1)
-            jump ec_b
 
+            scene s339 #you walking closer to Ryan
+            with dissolve
 
-    label ec_a:
+            u "(I'll just walk straight past him.)"
 
-    scene s339 #you walking closer to Ryan
-    with dissolve
+            scene s339a # Ryan looks over at you
+            with dissolve
 
-    u "(Time to talk it out.)"
+            ry "[name]?"
 
-    scene s339a # Ryan looks over at you
-    with dissolve
+            pause 0.5
 
-    ry "[name]?"
+            scene s340  # Ryan closer and standing up
+            with dissolve
 
-    pause 0.5
+            ry "Hey, can we talk?"
 
-    scene s340a  # Ryan closer and standing up
-    with dissolve
+            scene s341a # Ryan close up mouth closed
+            with dissolve
 
-    u "Ryan, can we talk about yesterday?"
+            u "Ok, let's talk."
 
-    scene s341 # Ryan close up apolegetic
-    with dissolve
+            scene s341
+            with dissolve
 
-    ry "Yeah, man. I messed up, I'm sorry."
-
-    jump ec_ad
-
-    label ec_b:
-
-    scene s339 #you walking closer to Ryan
-    with dissolve
-
-    u "(I'll just walk straight past him.)"
-
-    scene s339a # Ryan looks over at you
-    with dissolve
-
-    ry "[name]?"
-
-    pause 0.5
-
-    scene s340  # Ryan closer and standing up
-    with dissolve
-
-    ry "Hey, can we talk?"
-
-    scene s341a # Ryan close up mouth closed
-    with dissolve
-
-    u "Ok, let's talk."
-
-    scene s341
-    with dissolve
-
-    ry "Look, man. I messed up, I'm sorry."
-
-    jump ec_bd
-
-    label ec_ad:
-    label ec_bd:
+            ry "Look, man. I messed up, I'm sorry."
 
     ry "I didn't mean to attack you like that. I just wanted to let you know about the things that I've heard. "
 
@@ -1797,7 +1539,6 @@ label v4start:
 
     scene s341c # fist bump
     with dissolve
-
 
     u "Yeah, we're cool."
 
@@ -1835,48 +1576,103 @@ label v4start:
     scene s343 # First person inside cafe # show penelope with coffe on laptop
     with dissolve
 
-    if costumeaubrey == False: # costume w pen
-        if caughtpeekingpenelope == True:
-            if caughtpeekingpenelopecounter == True:
-                jump continueaa
+    if (not costumeaubrey and caughtpeekingpenelope and caughtpeekingpenelopecounter) or (not caughtpeekingpenelope) : # costume w pen
+        u "(Oh, Penelope's here, I should probably say hi.)"
 
-            else: # caught
-                u "(Shit, Penelope's here. I wonder if she's still mad at me...)"
+        scene s345 #standing in front of Penelope she looking down
+        with dissolve
 
-                u "(Maybe I should buy her something and apologize for peeking on her.)"
+        u "Penelope?"
 
-                scene s344 # in front of counter
+        scene s345a # pe looking up
+        with dissolve
+
+        pause 0.5
+
+        scene s349 #pen and you
+        with dissolve
+
+        pe "[name]!!!"
+
+        pause 0.5
+
+        scene s349a # she's standing up
+        with dissolve
+
+        pause 0.5
+
+        scene s349b # pen hugging you
+        with dissolve
+
+        pe "Heyyy!"
+
+        scene s349c # she standing in front of you smiling
+        with dissolve
+        pe "How did you know I was gonna be here?"
+
+        menu:
+            "Magic Powers.":
+                $ addPoint("bro", 1)
+
+                scene s349d
                 with dissolve
-                clerk "Hello sir, what I can do for you?"
 
-                menu:
+                u "Magic powers, of course."
 
+                scene s349e # pe touches your arm
+                with dissolve
 
-                    "Buy Penelope a muffin":
+                pe "Haha, you're stupid."
 
-                        $ addPoint("bf", 1)
-                        $ muffin = True
-                        $ caughtpeekingpenelopecounter = True
-                        jump ed_a
+                scene s349c
+                with dissolve
 
-                    "Buy Penelope a coffee":
+                pe "You wanna sit down?"
 
-                        $ muffin = False
-                        jump ed_b
+                scene s349d
+                with dissolve
 
-                label ed_a:
+                u "Yeah, sure."
+
+            "I didn't.":
+                $ addPoint("bf", 1)
+
+                scene s349d
+                with dissolve
+
+                u "I didn't, but I'm glad I came now"
+
+                scene s349c
+                with dissolve
+
+                pe "Well, me too! Wanna sit down?"
+
+                scene s349d
+                with dissolve
+
+                u "Yeah, sure."
+
+    elif not caughtpeekingpenelopecounter: # caught
+        u "(Shit, Penelope's here. I wonder if she's still mad at me...)"
+
+        u "(Maybe I should buy her something and apologize for peeking on her.)"
+
+        scene s344 # in front of counter
+        with dissolve
+        clerk "Hello sir, what I can do for you?"
+
+        menu:
+            "Buy Penelope a muffin":
+                $ addPoint("bf", 1)
+                $ muffin = True
+                $ caughtpeekingpenelopecounter = True
+
                 scene s344a
                 with dissolve
 
                 $ keeneye = True
                 if not steam:
-                    image keeneye = "images/keeneye.webp"
-                    show keeneye:
-                        xpos 0
-                        ypos -200
-                        linear 0.5 xpos 0 ypos 0
-                        pause 2.0
-                        linear 0.5 xpos 0 ypos -200
+                    show keeneye at achievementShow:
                 else:
                     $ achievement.grant("keen_eye")
                     $ achievement.sync()
@@ -1888,9 +1684,7 @@ label v4start:
 
                 clerk "Coming right up, sir."
 
-                jump ed_ad
-
-                label ed_b:
+            "Buy Penelope a coffee":
                 scene s344a
                 with dissolve
 
@@ -1901,82 +1695,64 @@ label v4start:
 
                 clerk "Coming right up, sir."
 
-                jump ed_bd
+        scene s345 #standing in front of Penelope she looking down
+        with fade
 
+        u "Penelope?"
 
-                label ed_ad:
-                label ed_bd:
+        scene s345a # pe looking up
+        with dissolve
 
-                scene s345 #standing in front of Penelope she looking down
-                with fade
+        pause 0.5
 
-                u "Penelope?"
+        scene s345b # pe upset
+        with dissolve
 
-                scene s345a # pe looking up
-                with dissolve
+        pe "Wha- what are you doing here, [name]?"
 
-                pause 0.5
+        scene s345c
+        with dissolve
 
-                scene s345b # pe upset
-                with dissolve
+        u "Look I'm sorry for what happened."
 
-                pe "Wha- what are you doing here, [name]?"
+        scene s345b
+        with dissolve
 
-                scene s345c
-                with dissolve
+        pe "Just- just go please. I don't feel comfortable around you anymore."
 
-                u "Look I'm sorry for what happened."
+        scene s345c
+        with dissolve
 
-                scene s345b
-                with dissolve
+        if muffin:
+            u "Penelope, please... I brought you this muffin, I mean I saw you already had a coffee."
 
-                pe "Just- just go please. I don't feel comfortable around you anymore."
+            u "I'm really sorry. Please can we just forget about it?"
 
-                scene s345c
-                with dissolve
+            scene s345b
+            with dissolve
 
-                if muffin == True:
+            pe "Oh, that's really nice... I mean no, I mean I don't know. You broke my trust..."
 
-                    u "Penelope, please... I brought you this muffin, I mean I saw you already had a coffee."
+            pe "I thought you were my friend."
 
-                    u "I'm really sorry. Please can we just forget about it?"
+            scene s345c
+            with dissolve
 
-                    scene s345b
-                    with dissolve
+            u "I am your friend... come on."
 
-                    pe "Oh, that's really nice... I mean no, I mean I don't know. You broke my trust..."
+            scene s345d #pen forgiving
+            with dissolve
 
-                    pe "I thought you were my friend."
+            pe "Okay uhm... you can sit down if you want."
 
-                    scene s345c
-                    with dissolve
+            scene s346 # you sitting in front of pen, her hands on table
+            with dissolve
+            u "Again, I'm really sorry."
 
-                    u "I am your friend... come on."
+            menu:
+                "Grab her hand":
+                    $ addPoint("bf", 1)
 
-                    scene s345d #pen forgiving
-                    with dissolve
-
-                    pe "Okay uhm... you can sit down if you want."
-
-                    scene s346 # you sitting in front of pen, her hands on table
-                    with dissolve
-                    u "Again, I'm really sorry."
-
-                    menu:
-
-
-
-                        "Grab her hand":
-
-                            $ addPoint("bf", 1)
-                            jump ef_a
-
-                        "Leave it":
-
-                            jump ef_b
-
-
-                    label ef_a:
                     scene s347 # your hand grabbing her hand
                     with dissolve
 
@@ -1990,197 +1766,78 @@ label v4start:
                     scene s346c
                     with dissolve
 
-
-
                     menu:
-
                         "Kiss her":
-
                             $ addPoint("tm", 1)
                             $ penelopekiss = True
-                            jump eg_a
+
+                            scene s348 # you reaching for kiss, she's pulled away
+                            with dissolve
+
+                            pe "[name], what are you doing??"
+
+                            scene s348a # u awkward head scratching
+                            with dissolve
+
+                            u "Uhh... I uhm-"
+
+                            scene s348b
+                            with dissolve
+
+                            pe "Just 'cause I forgive you doesn't mean we have something."
+
+                            scene s348a
+                            with dissolve
+
+                            u "Uhm, I should probably get going. Good to see you."
+
+                            jump continueac
 
                         "Don't kiss her":
-
                             jump eg_b
 
-                    label eg_a:
-
-                    scene s348 # you reaching for kiss, she's pulled away
-                    with dissolve
-
-                    pe "[name], what are you doing??"
-
-                    scene s348a # u awkward head scratching
-                    with dissolve
-
-                    u "Uhh... I uhm-"
-
-                    scene s348b
-                    with dissolve
-
-                    pe "Just 'cause I forgive you doesn't mean we have something."
-
-                    scene s348a
-                    with dissolve
-
-                    u "Uhm, I should probably get going. Good to see you."
-
-                    jump eg_ad
-
-                    label ef_b:
-
+                "Leave it":
                     scene s346b # penelope slight smile
                     with dissolve
 
                     pe "It's okay."
 
-                    label eg_b:
+            label eg_b:
+                scene s346c
+                with dissolve
 
-                    scene s346c
-                    with dissolve
+                u "Anyways, are you excited for history next week?"
 
-                    u "Anyways, are you excited for history next week?"
+                jump ef_bd
 
-                    jump ef_bd
+        else:
+            u "Penelope, please... I got you a coffee."
 
+            u "I'm really sorry. Please can we just forget about it?"
 
-
-
-
-                else:
-
-                    u "Penelope, please... I got you a coffee."
-
-                    u "I'm really sorry. Please can we just forget about it?"
-
-                    scene s345b
-                    with dissolve
-
-                    pe "I already have a coffee. I don't need another one."
-
-                    pe "I- I thought you were my friend and then you broke my trust."
-
-                    scene s345c # pen
-                    with dissolve
-
-                    u "Penelope, I never-"
-
-                    scene s345b
-                    with dissolve
-
-                    pe "Stop! Just leave please. I don't wanna be friends with someone I can't trust."
-
-                    scene s345c
-                    with dissolve
-
-                    u "Alright... sorry."
-
-                    jump continueac
-
-
-        else: # not caught
-            label continueaa:
-
-            u "(Oh, Penelope's here, I should probably say hi.)"
-
-            scene s345 #standing in front of Penelope she looking down
+            scene s345b
             with dissolve
 
-            u "Penelope?"
+            pe "I already have a coffee. I don't need another one."
 
-            scene s345a # pe looking up
+            pe "I- I thought you were my friend and then you broke my trust."
+
+            scene s345c # pen
             with dissolve
 
-            pause 0.5
+            u "Penelope, I never-"
 
-            scene s349 #pen and you
+            scene s345b
             with dissolve
 
-            pe "[name]!!!"
+            pe "Stop! Just leave please. I don't wanna be friends with someone I can't trust."
 
-            pause 0.5
-
-            scene s349a # she's standing up
+            scene s345c
             with dissolve
 
-            pause 0.5
+            u "Alright... sorry."
 
-            scene s349b # pen hugging you
-            with dissolve
-
-            pe "Heyyy!"
-
-            scene s349c # she standing in front of you smiling
-            with dissolve
-            pe "How did you know I was gonna be here?"
-
-            menu:
-
-
-
-                "Magic Powers.":
-
-                    $ addPoint("bro", 1)
-                    jump eh_a
-
-                "I didn't.":
-
-                    $ addPoint("bf", 1)
-                    jump eh_b
-
-
-            label eh_a:
-            scene s349d
-            with dissolve
-
-            u "Magic powers, of course."
-
-            scene s349e # pe touches your arm
-            with dissolve
-
-            pe "Haha, you're stupid."
-
-            scene s349c
-            with dissolve
-
-            pe "You wanna sit down?"
-
-            scene s349d
-            with dissolve
-
-            u "Yeah, sure."
-
-            jump eh_ad
-
-            label eh_b:
-
-            scene s349d
-            with dissolve
-
-            u "I didn't, but I'm glad I came now"
-
-            scene s349c
-            with dissolve
-
-            pe "Well, me too! Wanna sit down?"
-
-            scene s349d
-            with dissolve
-
-            u "Yeah, sure."
-
-
-
-
-
-
-
-
-
-
-
-
+            jump continueac
 
     else: #shopping w aub
         u "(Oh, Penelope's here, I should probably say hi.)"
@@ -2204,72 +1861,50 @@ label v4start:
         pe "How did you know I was gonna be here?"
 
         menu:
-
-
-
             "Magic Powers.":
-
                 $ addPoint("bro", 1)
-                jump ej_a
+
+                scene s345g
+                with dissolve
+
+                u "Magic powers, of course."
+
+                scene s345f
+                with dissolve
+
+                pe "Haha, you're stupid."
+
+                pe "You wanna sit down?"
+
+                scene s345g
+                with dissolve
+
+                u "Yeah, sure."
 
             "I didn't.":
-
                 $ addPoint("bf", 1)
-                jump ej_b
 
+                scene s345g
+                with dissolve
 
-        label ej_a:
-        scene s345g
-        with dissolve
+                u "I didn't, but I'm glad I came now."
 
-        u "Magic powers, of course."
+                scene s345f
+                with dissolve
 
-        scene s345f
-        with dissolve
+                pe "Well, me too! Wanna sit down?"
 
-        pe "Haha, you're stupid."
+                scene s345g
+                with dissolve
 
-        pe "You wanna sit down?"
-
-        scene s345g
-        with dissolve
-
-        u "Yeah, sure."
-
-        jump ej_ad
-
-        label ej_b:
-
-        scene s345g
-        with dissolve
-
-        u "I didn't, but I'm glad I came now."
-
-        scene s345f
-        with dissolve
-
-        pe "Well, me too! Wanna sit down?"
-
-        scene s345g
-        with dissolve
-
-        u "Yeah, sure."
-
-        jump ej_bd
-
-    #### Sitting down
-    label eh_bd:
-    label eh_ad:
-    label ej_ad:
-    label ej_bd:
+                u "Yeah, sure."
 
     scene s350a #FIRST PERSON sititng across penelope smiling
     with dissolve
 
     u "Soo... are you excited for the history costume party next week?"
 
-    label ef_bd:
-
+label ef_bd:
     scene s350
     with dissolve
 
@@ -2303,7 +1938,6 @@ label v4start:
     with dissolve
 
     u "Haha, Penelope, that's not very convincing... Are you ok? You're acting weird."
-
 
     scene s350f # pen upset
     with dissolve
@@ -2356,157 +1990,115 @@ label v4start:
     u "Now we're getting into an interesting topic."
 
     menu:
-
-
-
         "We should watch some.":
-
             $ addPoint("tm", 1)
-            $ pornpen = 1
-            jump ek_a
+
+            u "You know, we should watch some together sometime."
+
+            scene s350k
+            with dissolve
+
+            pe "*Laughs* Ewww... I don't think we should"
+
+            scene s350l
+            with dissolve
+
+            u "The offer still stands, if you change your mind."
+
+            scene s350k
+            with dissolve
+
+            pe "Right, thank you."
 
         "You should try it.":
-
             $ addPoint("bro", 1)
-            $ pornpen = 2
-            jump ek_b
 
-    label ek_a:
+            u "You know, you should try it sometime."
 
-    u "You know, we should watch some together sometime."
+            scene s350k
+            with dissolve
 
-    scene s350k
-    with dissolve
+            pe "*Laughs* I don't know, I don't think I'd like it."
 
-    pe "*Laughs* Ewww... I don't think we should"
+            scene s350l
+            with dissolve
 
-    scene s350l
-    with dissolve
-
-    u "The offer still stands, if you change your mind."
-
-    scene s350k
-    with dissolve
-
-    pe "Right, thank you."
-
-    jump ek_ad
-
-
-    label ek_b:
-
-    u "You know, you should try it sometime."
-
-    scene s350k
-    with dissolve
-
-    pe "*Laughs* I don't know, I don't think I'd like it."
-
-    scene s350l
-    with dissolve
-
-    u "Haha, I think you'd be surprised."
-
-    label ek_ad:
+            u "Haha, I think you'd be surprised."
 
     scene s350
     with dissolve
+
     pe "I have to go now and meet my friend. It uhm, it was nice to see you though."
 
-
     menu:
-
-
-
         "You wanna go bowling?":
+            scene s350a
+            with dissolve
 
-            jump el_a
+            u "It was nice to see you too."
+
+            u "Hey, you wanna go bowling with me sometime next week?"
+
+            scene s350d
+            with dissolve
+
+            pe "I don't know, I have sooo much studying to do..."
+
+            menu:
+                "Encourage her":
+                    $ addPoint("bf", 1)
+                    $ bowling = True
+
+                    scene s350e
+                    with dissolve
+
+                    u "Come on, having some fun won't ruin your grades, I promise."
+
+                    scene s350k
+                    with dissolve
+
+                    pe "Hmmm... alright. Let's go bowling next week."
+
+                    scene s350l
+                    with dissolve
+
+                    u "Cool, I'll see you."
+
+                    scene s350k
+                    with dissolve
+
+                    pe "Yeah, uhm, see you soon."
+
+                    jump el_ad
+
+                "Tease her":
+                    $ addPoint("bro", 1)
+                    $ bowling = False
+
+                    scene s350e
+                    with dissolve
+
+                    u "What, scared you can't beat me?"
+
+                    scene s350d
+                    with dissolve
+
+                    pe "Sorry, I- I really can't. I need to study."
+
+                    scene s350e
+                    with dissolve
+
+                    u "Alright... no worries. I'll see you."
+
+                    scene s350d
+                    with dissolve
+
+                    pe "Yeah, uhm, see you soon."
+
+                    jump el_ad
 
         "Yeah, it was nice.":
-
             $ bowling = False
-            jump el_b
-
-    label el_a:
-
-    scene s350a
-    with dissolve
-
-    u "It was nice to see you too."
-
-    u "Hey, you wanna go bowling with me sometime next week?"
-
-    scene s350d
-    with dissolve
-
-    pe "I don't know, I have sooo much studying to do..."
-
-    menu:
-
-
-
-        "Encourage her":
-            $ addPoint("bf", 1)
-            $ bowling = True
-            jump penea
-
-        "Tease her":
-            $ addPoint("bro", 1)
-            $ bowling = False
-            jump peneb
-
-
-    label penea:
-
-    scene s350e
-    with dissolve
-
-    u "Come on, having some fun won't ruin your grades, I promise."
-
-    scene s350k
-    with dissolve
-
-    pe "Hmmm... alright. Let's go bowling next week."
-
-    scene s350l
-    with dissolve
-
-    u "Cool, I'll see you."
-
-    scene s350k
-    with dissolve
-
-    pe "Yeah, uhm, see you soon."
-
-    jump el_ad
-
-    label peneb:
-
-    scene s350e
-    with dissolve
-
-    u "What, scared you can't beat me?"
-
-    scene s350d
-    with dissolve
-
-    pe "Sorry, I- I really can't. I need to study."
-
-    scene s350e
-    with dissolve
-
-    u "Alright... no worries. I'll see you."
-
-    scene s350d
-    with dissolve
-
-    pe "Yeah, uhm, see you soon."
-
-    jump el_ad
-
-
-
-    label el_b:
 
     scene s350a
     with dissolve
@@ -2523,13 +2115,11 @@ label v4start:
 
     u "Yeah, see you later."
 
-    jump el_bd
+    jump el_ad
 
     #### After cafe
 
-    label continueac:
-    label eg_ad:
-
+label continueac:
     scene s351 # you walking back
     with fade
 
@@ -2537,61 +2127,66 @@ label v4start:
 
     jump continueab
 
-    label el_bd:
-    label el_ad:
-
+label el_ad:
     scene s351
     with fade
 
     u "(I wonder what Penelope was doing on that laptop...)"
 
-    label continueab:
+label continueab:
     stop music fadeout 2.0
 
     play sound "sounds/vibrate.mp3"
 
     play music "music/m9punk.mp3"
 
-    
-    $ contact_Josh.newMessage("Hey man, you wanna hang out with me and some friends tonight?")
-    $ contact_Josh.addReply("Uhh, sure.", "jorep8a")
-    $ contact_Josh.addReply("I'm meeting a friend at 11, so I can't really.", "jorep8b")
+    python:
+        def v4_reply1():
+            addPoint("bro", 1)
+            contact_Josh.newMessage(_("Dope"))
+            contact_Josh.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
+
+        def v4_reply2():
+            contact_Josh.newMessage(_("Aww, come on. You'll be back by 11."))
+            contact_Josh.newImgMessage("images/text1.webp")
+            contact_Josh.newMessage(_("I told my friend Amber about you and she really wants to meet you."))
+            contact_Josh.addReply(_("Alright, I'll come."), v4_reply1)
+            contact_Josh.addReply(_("Josh, I don't know, man. I don't wanna be late."), v4_reply3)
+
+        def v4_reply3():
+            contact_Josh.newMessage(_("Remember how you told me in high school that you felt like you always missed out on all the crazy stories?"))
+            contact_Josh.newMessage(_("Don't miss out now."))
+            contact_Josh.addReply(_("Fine, I'll come. But I need to go before 11."), v4_reply4)
+            contact_Josh.addReply(_("I can't, sorry."), v4_reply5)
+
+        def v4_reply4():
+            contact_Josh.newMessage(_("Dope"))
+            contact_Josh.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
+
+        def v4_reply5():
+            addPoint("bf", 1)
+            contact_Josh.newMessage(_("This guy"))
+
+        contact_Josh.newMessage(_("Hey man, you wanna hang out with me and some friends tonight?"), queue=False)
+        contact_Josh.addReply(_("Uhh, sure."), v4_reply1)
+        contact_Josh.addReply(_("I'm meeting a friend at 11, so I can't really."), v4_reply2)
 
     label phonew:
+        call screen phone
+        if contact_Josh.getReplies():
+            u "(I should probably reply to my messages.)"
+            jump phonew
 
-    if contact_Josh.messages[-1].replies:
-
-        u "(I should probably reply to my messages.)"
-
-        jump phonew
+    if contact_Josh.sentMessages[-2].reply.message == "I can't, sorry.":
+        u "(Fucking hell, I forgot how persistent Josh could be...)"
+        jump jorepb
 
     else:
-
-        if contact_Josh.messages[-2].reply.message == "I can't, sorry.":
-
-            u "(Fucking hell, I forgot how persistent Josh could be...)"
-            
-            jump jorepb
-
-        else:
-
-            u "(Okay, I need to make sure that I don't forget about meeting Chloe.)"
-            
-            jump jorepa
-
-
-
-
-
-
-
-    # in the uber transition
-    label jorepa:
+        u "(Okay, I need to make sure that I don't forget about meeting Chloe.)"
 
     stop music fadeout 2.0
     scene s352
     with Fade (1,0,1)
-
 
     pause 0.7
 
@@ -2611,14 +2206,12 @@ label v4start:
     scene s353a # josh opens door
     with dissolve
 
-
     jo "What's up, bro?"
 
-    if jorep12 == 1:
-
+    if contact_Josh.sentMessages[-2].reply.message == "Alright, I'll come.":
         jo "Picture of Amber did it, eh?"
 
-        scene s353b#
+        scene s353b
         with dissolve
 
         u "Oh, shut up."
@@ -2628,16 +2221,8 @@ label v4start:
 
         jo "Hahaha."
 
-        jump continuead
-
     else:
-
         jo "Come in."
-
-        jump continueae
-
-    label continuead:
-    label continueae:
 
     scene s354 # standing in living room First Person
     with dissolve
@@ -2659,7 +2244,6 @@ label v4start:
 
     jo "So, what's your drink of choice?"
 
-
     scene s355a
     with dissolve
 
@@ -2669,7 +2253,6 @@ label v4start:
     with dissolve
 
     jo "Alright, champ. Coming up."
-
 
     scene s356 # close up of amber and kim
     with dissolve
@@ -2695,48 +2278,33 @@ label v4start:
     with dissolve
     jo "I see you've taken my spot."
 
-
     menu:
-
-
-
         "I can move.":
-
             $ addPoint("bf", 1)
             $ addPoint("bro", 1)
-            jump en_a
+
+            scene s359a
+            with dissolve
+
+            u "Oh, I can move if you want."
+
+            scene s359
+            with dissolve
+
+            jo "Hahaha, buddy I'm just kidding, stay put."
 
         "It's my spot now.":
-
             $ addPoint("tm", 1)
-            jump en_b
 
-    label en_a:
-    scene s359a
-    with dissolve
+            scene s359a
+            with dissolve
 
-    u "Oh, I can move if you want."
+            u "Yeah, I guess it's my spot now."
 
-    scene s359
-    with dissolve
+            scene s359
+            with dissolve
 
-    jo "Hahaha, buddy I'm just kidding, stay put."
-
-    jump en_ad
-
-    label en_b:
-
-    scene s359a
-    with dissolve
-
-    u "Yeah, I guess it's my spot now."
-
-    scene s359
-    with dissolve
-
-    jo "Damn, alright. Hahaha."
-
-    label en_ad:
+            jo "Damn, alright. Hahaha."
 
     scene s357 # amber leaning forward curious
     with dissolve
@@ -2771,43 +2339,26 @@ label v4start:
     scene s357a
     with dissolve
 
-
     menu:
-
         "I'll join the Wolves.":
-
             $ addPoint("bro", 1)
-            jump eo_a
+
+            u "I'll join the Wolves."
+
+            scene s361b # josh looking at Kim happy
+            with dissolve
+
+            jo "See? I knew he was a fighter."
 
         "I don't know yet.":
-
             $ addPoint("bf", 1)
-            jump eo_b
 
-    label eo_a:
+            u "I don't know yet."
 
-    u "I'll join the Wolves."
+            scene s360a # kim laughing at you
+            with dissolve
 
-    scene s361b # josh looking at Kim happy
-    with dissolve
-
-    jo "See? I knew he was a fighter."
-
-    jump eo_ad
-
-    label eo_b:
-
-    u "I don't know yet."
-
-    scene s360a # kim laughing at you
-    with dissolve
-
-    ki "Ha! Classic Frog."
-
-    jump eo_bd
-
-    label eo_ad:
-    label eo_bd:
+            ki "Ha! Classic Frog."
 
     scene s357d # laughing smile amber
     with dissolve
@@ -2847,76 +2398,51 @@ label v4start:
     jo "The rules are simple. The phone gives us tasks and how many sips to drink if we lose or are selected in some way or another."
 
     menu:
-
-
-
         "Sounds good.":
             $ addPoint("bro", 1)
-            jump jonewa
+
+            scene s361g
+            with dissolve
+
+            u "Cool, sounds good."
 
         "I should stop here.":
             $ addPoint("bf", 1)
-            jump jonewb
 
+            scene s361f
+            with dissolve
 
-    label jonewb:
+            u "Uhm, actually... I should stop here. I really have to go see my friend soon and I don't wanna be too drunk."
 
-    scene s361f
-    with dissolve
+            scene s357
+            with dissolve
 
-    u "Uhm, actually... I should stop here. I really have to go see my friend soon and I don't wanna be too drunk."
+            am "Oh come on, just stay a bit longer. You never know what you might miss out on."
 
-    scene s357
-    with dissolve
+            menu:
+                "Alright, just for a bit.":
+                    scene s357a
+                    with dissolve
 
-    am "Oh come on, just stay a bit longer. You never know what you might miss out on."
+                    u "Alright, I'll stay a bit longer, let's play."
 
-    menu:
+                    scene s357
+                    with dissolve
 
-        "Alright, just for a bit.":
-            jump jonewc
+                    am "Good choice."
 
-        "Sorry, I really can't.":
-            jump jonewd
+                "Sorry, I really can't.":
+                    scene s357a
+                    with dissolve
 
+                    u "Sorry, I really gotta go. But maybe I'll uhm... come back later."
 
-    label jonewd:
-
-    scene s357a
-    with dissolve
-
-    u "Sorry, I really gotta go. But maybe I'll uhm... come back later."
-
-    jump jorepb
-
-    label jonewc:
-
-    scene s357a
-    with dissolve
-
-    u "Alright, I'll stay a bit longer, let's play."
-
-    scene s357
-    with dissolve
-
-    am "Good choice."
-
-    jump jonewe
-
-    label jonewa:
-
-    scene s361g
-    with dissolve
-
-    u "Cool, sounds good."
-
-    label jonewe:
+                    jump jorepb
 
     scene jomon2 # josh looking down at phone
     with dissolve
 
     jo "I just gotta put in our names."
-
 
     # montage style evening
 
@@ -2938,39 +2464,27 @@ label v4start:
 
     u "Uhhh..."
 
-
     menu:
-
-
-
         "Do a handstand":
-
             $ addPoint("bro", 1)
-            jump ep_a
 
         "Drink three sips":
-
             $ addPoint("bf", 1)
-            jump ep_b
+            
+            u "I'll drink."
 
-    label ep_b:
+            scene jomon5 # you drinking
+            with dissolve
 
-    u "I'll drink."
+            pause 0.5
 
-    scene jomon5 # you drinking
-    with dissolve
+            scene s357
+            with dissolve
 
-    pause 0.5
+            am "Oh come on, I wanna see you do a handstand."
 
-    scene s357
-    with dissolve
-
-    am "Oh come on, I wanna see you do a handstand."
-
-    scene s357a
-    with dissolve
-
-    label ep_a:
+            scene s357a
+            with dissolve
 
     u "You know what, I'll do it."
 
@@ -3073,7 +2587,6 @@ label v4start:
 
     am "Hahaha."
 
-
     scene joclock4 # ALL DRINKING
     with Dissolve (1)
 
@@ -3108,7 +2621,6 @@ label v4start:
     scene jomon11 # cups on table # cups hits table sound
     with Dissolve (1)
 
-
     pause 0.5
 
     scene jomon2 # josh drunkenly reading off phone
@@ -3137,210 +2649,153 @@ label v4start:
 
     jo "Or Kim?"
 
-
     scene s361g
     with dissolve
     u "*Drunk* Uhh..."
 
     menu:
-
-
-
         "Amber":
-
             $ shotamber = True
-            jump eq_a
+
+            scene jomon14 # amber in bra ready for shot of her body
+            with fade
+
+            jo "*Drunk* Alright [name], lick the salt off her collarbone, drink the shot out of her belly button and bite the lime out of her mouth."
+
+            scene jomon14a
+            with dissolve
+
+            pause 0.5
+
+            scene jomon14b
+            with dissolve
+
+            pause 0.5
+
+            scene jomon14c
+            with dissolve
+
+            pause 0.5
+
+            scene jomon15 # close up of you with lemon in mouth right above ambers face
+            with dissolve
+
+            menu:
+                "Kiss her":
+                    $ addPoint("tm", 1)
+                    $ kissamber = True
+
+                    play sound "sounds/spit.mp3"
+
+                    scene jomon15a # spits out lemon
+                    with dissolve
+
+                    u "*Spits*"
+
+                    scene jomon15b # kiss
+                    with dissolve
+
+                    pause 1.0
+
+                    play sound "sounds/phonealarm.mp3"
+
+                    "*Phone alarm goes off*"
+
+                    scene jomon15c # you pull away and look down
+                    with dissolve
+
+                    pause 0.5
+
+                "Don't kiss her":
+                    $ addPoint("tm", 1)
+                    $ kissamber = False
+
+                    play sound "sounds/spit.mp3"
+
+                    scene jomon15a # spits out lemon
+                    with dissolve
+
+                    u "*Spits*"
+
+                    play sound "sounds/phonealarm.mp3"
+
+                    scene jomon15c # you pull away and look down
+                    with dissolve
+
+                    "*Phone alarm ringing*"
 
         "Kim":
-
             $ shotamber = False
-            jump eq_b
 
-    label eq_a:
+            scene jomon16 # kim in bra ready for shot of her body
+            with fade
 
-    scene jomon14 # amber in bra ready for shot of her body
-    with fade
+            jo "*Drunk* Alright [name], lick the salt off her collarbone, drink the shot out of her belly button and bite the lime out of her mouth."
 
-    jo "*Drunk* Alright [name], lick the salt off her collarbone, drink the shot out of her belly button and bite the lime out of her mouth."
+            scene jomon16a
+            with dissolve
 
-    scene jomon14a
-    with dissolve
+            pause 0.5
 
-    pause 0.5
+            scene jomon16b
+            with dissolve
 
-    scene jomon14b
-    with dissolve
+            pause 0.5
 
-    pause 0.5
+            scene jomon16c
+            with dissolve
 
-    scene jomon14c
-    with dissolve
+            pause 0.5
 
-    pause 0.5
+            scene jomon17 # close up of you with lemon in mouth right above ambers face
+            with dissolve
 
-    scene jomon15 # close up of you with lemon in mouth right above ambers face
-    with dissolve
+            menu:
+                "Kiss her":
+                    $ addPoint("tm", 1)
+                    $ kisskim = True
 
+                    play sound "sounds/spit.mp3"
 
-    menu:
+                    scene jomon17a # spits out lemon
+                    with dissolve
 
-        "Kiss her":
+                    u "*Spit sound*"
 
-            $ addPoint("tm", 1)
-            $ kissamber = True
-            jump er_a
+                    scene jomon17b # kiss but she pulls aways
+                    with dissolve
 
+                    ki "Mhhh... no."
 
-        "Don't kiss her":
+                    scene jomon17b2
+                    with dissolve
 
-            $ addPoint("tm", 1)
-            $ kissamber = False
-            jump er_b
+                    play sound "sounds/phonealarm.mp3"
 
+                    "*Phone alarm goes off*"
 
+                    scene jomon17c # you look down at your phone
+                    with dissolve
 
+                    pause 0.5
 
-    label er_a:
+                "Don't kiss her":
+                    $ addPoint("tm", 1)
+                    $ kisskim = False
 
-    play sound "sounds/spit.mp3"
+                    play sound "sounds/spit.mp3"
 
-    scene jomon15a # spits out lemon
-    with dissolve
+                    scene jomon17a # spits out lemon
+                    with dissolve
 
-    u "*Spits*"
+                    u "*Spits*"
 
-    scene jomon15b # kiss
-    with dissolve
+                    play sound "sounds/phonealarm.mp3"
 
-    pause 1.0
+                    scene jomon17c # you look down at your phone
+                    with dissolve
 
-    play sound "sounds/phonealarm.mp3"
-
-    "*Phone alarm goes off*"
-
-    scene jomon15c # you pull away and look down
-    with dissolve
-
-    pause 0.5
-
-    jump er_ad
-
-    label er_b:
-
-    play sound "sounds/spit.mp3"
-
-    scene jomon15a # spits out lemon
-    with dissolve
-
-    u "*Spits*"
-
-    play sound "sounds/phonealarm.mp3"
-
-    scene jomon15c # you pull away and look down
-    with dissolve
-
-    "*Phone alarm ringing*"
-
-    jump er_bd
-
-    label eq_b:
-
-    scene jomon16 # kim in bra ready for shot of her body
-    with fade
-
-    jo "*Drunk* Alright [name], lick the salt off her collarbone, drink the shot out of her belly button and bite the lime out of her mouth."
-
-    scene jomon16a
-    with dissolve
-
-    pause 0.5
-
-    scene jomon16b
-    with dissolve
-
-    pause 0.5
-
-    scene jomon16c
-    with dissolve
-
-    pause 0.5
-
-    scene jomon17 # close up of you with lemon in mouth right above ambers face
-    with dissolve
-
-
-    menu:
-
-        "Kiss her":
-
-            $ addPoint("tm", 1)
-            $ kisskim = True
-            jump es_a
-
-
-        "Don't kiss her":
-
-            $ addPoint("tm", 1)
-            $ kisskim = False
-            jump es_b
-
-
-
-
-    label es_a:
-
-    play sound "sounds/spit.mp3"
-
-    scene jomon17a # spits out lemon
-    with dissolve
-
-    u "*Spit sound*"
-
-    scene jomon17b # kiss but she pulls aways
-    with dissolve
-
-    ki "Mhhh... no."
-
-    scene jomon17b2
-    with dissolve
-
-    play sound "sounds/phonealarm.mp3"
-
-    "*Phone alarm goes off*"
-
-    scene jomon17c # you look down at your phone
-    with dissolve
-
-    pause 0.5
-
-    jump es_ad
-
-    label es_b:
-
-    play sound "sounds/spit.mp3"
-
-    scene jomon17a # spits out lemon
-    with dissolve
-
-    u "*Spits*"
-
-    play sound "sounds/phonealarm.mp3"
-
-    scene jomon17c # you look down at your phone
-    with dissolve
-
-    "*Phone alarm ringing*"
-
-    jump es_bd
-
-
-
-############# WALK TO CHLOE paranoia
-
-    label er_ad:
-    label er_bd:
-    label es_ad:
-    label es_bd:
+                    "*Phone alarm ringing*"
 
     scene s362 # looking at your phone # chloe Alarm
     with dissolve
@@ -3361,7 +2816,6 @@ label v4start:
     u "(*Drunk* Okay, I- I just gotta ask her straight up.)"
 
     u "(*Drunk* Does she- does she like me or is she just- just using me to get back at Grayson?)"
-
 
     ############## At Chloe
 
@@ -3426,40 +2880,28 @@ label v4start:
     cl "Well there you have it! Grayson put him up to this, just to fuck with me! I didn't do anything shady!"
 
     menu:
-
-
-
         "Accuse her of lying":
-
             $ addPoint("tm", 1)
-            jump eu_a
-
-
-        "Ask about the punch":
 
             scene s370c
             with dissolve
-            jump eu_b
 
+            u "*Drunk* You're lying! Yeah sure, the hottest girl in school wants me, the freshman who got beaten up at his first college party."
 
-    label eu_a:
+            u "*Drunk* Pretty realistic, isn't it?!"
 
-    scene s370c
-    with dissolve
+            scene s370d # chloe sad desperate
+            with dissolve
 
-    u "*Drunk* You're lying! Yeah sure, the hottest girl in school wants me, the freshman who got beaten up at his first college party."
+            cl "[name], I don't care about the fighting, or any of that shit. What Grayson did to you was pathetic. I like you 'cause you were funny and kind and ... and you cared."
 
-    u "*Drunk* Pretty realistic, isn't it?!"
+            scene s370e
+            with dissolve
 
-    scene s370d # chloe sad desperate
-    with dissolve
+        "Ask about the punch":
+            scene s370c
+            with dissolve
 
-    cl "[name], I don't care about the fighting, or any of that shit. What Grayson did to you was pathetic. I like you 'cause you were funny and kind and ... and you cared."
-
-    scene s370e
-    with dissolve
-
-    label eu_b:
     u "*Drunk* Really?? Then why did you go after Grayson instead of helping me up when he knocked me out??"
 
     scene s370d
@@ -3481,8 +2923,8 @@ label v4start:
 
     scene s370e
     with dissolve
-    u "*Drunk* Apparently a bunch of shady shit in the past!"
 
+    u "*Drunk* Apparently a bunch of shady shit in the past!"
 
     scene s370f # Chloe really sad
     with dissolve

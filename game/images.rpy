@@ -10,6 +10,10 @@ image anewbeginning = "images/anewbeginning.webp"
 image overit = "images/overit.webp"
 image notnowmom = "images/notnowmom.webp"
 image truthhurts = "images/truthhurts.webp"
+image lipsdontlie = "images/lipsdontlie.webp"
+image relightthefire = "images/relightthefire.webp"
+image rematch = "images/rematch.webp"
+image keeneye = "images/keeneye.webp"
 
 # Splash Screen
 image splashone = "images/splash1.webp"
@@ -93,4 +97,10 @@ image asexnew12 = Movie (play="images/asexnew12.webm", loop = True, image = "ima
 image asexnew13 = Movie (play="images/asexnew13.webm", loop = False, image = "images/asexnew13end.webp", start_image = "images/asexnew13start.webp")
 
 image rikiss2 = Movie (play="images/rikiss.webm", loop = False, image = "images/rikiss.webp", start_image = "images/rikiss.webp")
-image lipsdontlie = "images/lipsdontlie.webp"
+
+# v4.0
+image s316 = "images/s316.webp" # Julia looking forward talking smiling
+image s316a = "images/s316a.webp" # Julia looking forward talking smiling mouth closed
+image s316c = "images/s316c.webp" # Julia looking forward curious
+image s316d = "images/s316d.webp" # Julia looking forward curious mouth closed
+image s316b = "images/s316b.webp" # Julia looking at you smiling mouth open

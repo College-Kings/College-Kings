@@ -3140,53 +3140,6 @@ style ach3_text is text:
     size 30
     xoffset 10
 
-
-screen girls():
-
-    image "images/girls.webp"
-
-    imagebutton:
-        idle "images/girl.webp"
-        hover "images/girlhover.webp"
-        ypos 360
-        xpos 110
-        action Jump ("juchloe")
-
-    imagebutton:
-        idle "images/girl.webp"
-        hover "images/girlhover.webp"
-        ypos 360
-        xpos 693
-        action Jump ("juaubrey")
-
-    imagebutton:
-        idle "images/girl.webp"
-        hover "images/girlhover.webp"
-        ypos 360
-        xpos 1277
-        action Jump ("julauren")
-
-    imagebutton:
-        idle "images/girl.webp"
-        hover "images/girlhover.webp"
-        ypos 670
-        xpos 110
-        action Jump ("juriley")
-
-    imagebutton:
-        idle "images/girl.webp"
-        hover "images/girlhover.webp"
-        ypos 670
-        xpos 693
-        action Jump ("juemily")
-
-    imagebutton:
-        idle "images/girl.webp"
-        hover "images/girlhover.webp"
-        ypos 670
-        xpos 1277
-        action Jump ("jupenelope")
-
 screen aubsex():
 
     image "images/sexpos.webp"

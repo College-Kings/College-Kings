@@ -1379,12 +1379,12 @@ label conl:
                 jump talkedout
 
             else: # caught and she's mad
-                $ contact_Aubrey.newMessage("I wanna talk about what happened yesterday.", queue=False)
-                $ contact_Aubrey.newMessage("Any chance that you could come over now?")
-                $ contact_Aubrey.addReply("Yeah, I can.")
-                $ contact_Aubrey.newMessage("My room has a window facing the backyard. Can you climb in through there? I'll leave it open.")
-                $ contact_Aubrey.newMessage("I'd prefer if none of the girls saw you.")
-                $ contact_Aubrey.addReply("Uhm... sure.")
+                $ contact_Aubrey.newMessage(_("I wanna talk about what happened yesterday."), queue=False)
+                $ contact_Aubrey.newMessage(_("Any chance that you could come over now?"))
+                $ contact_Aubrey.addReply(_("Yeah, I can."))
+                $ contact_Aubrey.newMessage(_("My room has a window facing the backyard. Can you climb in through there? I'll leave it open."))
+                $ contact_Aubrey.newMessage(_("I'd prefer if none of the girls saw you."))
+                $ contact_Aubrey.addReply(_("Uhm... sure."))
 
                 label repeatk:
                     call screen phone
@@ -1570,12 +1570,12 @@ label conl:
 
         else: # not caught peeking but met
             label talkedout:
-                $ contact_Aubrey.newMessage("Hey, I really need your help.", queue=False)
-                $ contact_Aubrey.newMessage("Any chance that you could come over now?")
-                $ contact_Aubrey.addReply("Yeah, I'll be right there..")
-                $ contact_Aubrey.newMessage("My room has a window facing the backyard. Can you climb in through there instead of using the front door?")
-                $ contact_Aubrey.newMessage("I'll leave it open.")
-                $ contact_Aubrey.addReply("Uhm... sure.")
+                $ contact_Aubrey.newMessage(_("Hey, I really need your help."), queue=False)
+                $ contact_Aubrey.newMessage(_("Any chance that you could come over now?"))
+                $ contact_Aubrey.addReply(_("Yeah, I'll be right there.."))
+                $ contact_Aubrey.newMessage(_("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
+                $ contact_Aubrey.newMessage(_("I'll leave it open."))
+                $ contact_Aubrey.addReply(_("Uhm... sure."))
 
                 " "
 
@@ -1822,12 +1822,12 @@ label conl:
 
     else: # you didn't meet aubrey
         python:
-            contact_Aubrey.newMessage("Hey, you know how you had to cancel on me yesterday and you really want to make it up to me?", queue=False)
-            contact_Aubrey.newMessage("Wanna come over now?")
-            contact_Aubrey.addReply("Uhh... okay.")
-            contact_Aubrey.newMessage("My room has a window facing the backyard. Can you climb in through there instead of using the front door?")
-            contact_Aubrey.newMessage("I'll leave it open.")
-            contact_Aubrey.addReply("Uhm... sure.")
+            contact_Aubrey.newMessage(_("Hey, you know how you had to cancel on me yesterday and you really want to make it up to me?"), queue=False)
+            contact_Aubrey.newMessage(_("Wanna come over now?"))
+            contact_Aubrey.addReply(_("Uhh... okay."))
+            contact_Aubrey.newMessage(_("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
+            contact_Aubrey.newMessage(_("I'll leave it open."))
+            contact_Aubrey.addReply(_("Uhm... sure."))
 
         label repeatm:
             call screen phone
