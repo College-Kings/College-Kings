@@ -616,9 +616,9 @@ label after_drugs:
                 $ amberSexAtJoshs = True
                 $ amberrs = True
                 if laurenrs:
-                    $ addPoint("tm", 1)
+                    $ addPoint("tm")
                 else:
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
 
                 u "*Whispers* Fuck yes! Let's go!"
 
@@ -628,7 +628,7 @@ label after_drugs:
                 $ amberSexAtJoshs = False
                 $ amberrs = False
                 if laurenrs:
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
 
                 u "*Whispers* Sorry Amber, I'm not feeling it tonight."
 

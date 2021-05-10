@@ -202,12 +202,12 @@ label v07:
     menu:
 
         "Why aren't you on here?":
-            $ addPoint("bro", 1)
-            $ addPoint("tm", 1)
+            $ addPoint("bro")
+            $ addPoint("tm")
             jump hg_a
 
         "That's really impressive.":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             jump hg_b
 
     label hg_a:
@@ -428,12 +428,12 @@ label v07:
 
             "Walk Riley home":
                 $ follownora = False
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
                 jump hd_a
 
             "Go after Nora":
                 $ follownora = True
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
                 jump hd_b
 
     else:
@@ -449,14 +449,14 @@ label v07:
 
             "Go after Nora":
                 u "(I should go after her and make sure she's okay.)"
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
                 $ follownora = True
                 jump hd_bd
 
             "Leave her alone":
                 u "(I should leave her alone, she probably just wants to be alone right now.)"
                 u "(It's late anyway, I better go home.)"
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
                 $ follownora = False
                 jump conwalkhome
 
@@ -1026,13 +1026,13 @@ label v07:
 
         "Keep it friendly":
             if laurenrs == True:
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
             jump he_a
 
         "Start flirting":
             if laurenrs == True:
-                $ addPoint("tm", 1)
-            $ addPoint("bro", 1)
+                $ addPoint("tm")
+            $ addPoint("bro")
             jump he_b
 
 
@@ -1228,14 +1228,14 @@ label v07:
 
         "Yeah, I'd like that.":
             if laurenrs == True or emilyrs == True:
-                $ addPoint("tm", 1)
-            $ addPoint("bro", 1)
+                $ addPoint("tm")
+            $ addPoint("bro")
             $ rileyrs = True
             jump hf_a
 
         "Uhm... I shouldn't.":
             if laurenrs == True or emilyrs == True:
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
             jump hf_b
 
     label hf_b:
@@ -1451,7 +1451,7 @@ label v07:
         call screen messager(contact_Riley)
 
         label perep4a:
-        $ addPoint("bro", 1)
+        $ addPoint("bro")
         $ contact_Penelope.newMessage("Okay...")
         $ tellpenelope = True
         call screen messager(contact_Penelope)
@@ -1474,17 +1474,17 @@ label v07:
 
         label KiwiiPost1_reply1:
             $ KiwiiPost1.addComment("Cameron", "Lol, pussy", mentions="MC", numberLikes=renpy.random.randint(1, 10))
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             call screen kiwiiPost(KiwiiPost1)
 
         label KiwiiPost1_reply2:
             $ KiwiiPost1.addComment("Imre", "Slide into her DMs bro!", mentions="MC", numberLikes=renpy.random.randint(5, 15))
-            $ addPoint("bro", 1)
-            $ addPoint("tm", 1)
+            $ addPoint("bro")
+            $ addPoint("tm")
             call screen kiwiiPost(KiwiiPost1)
 
         label KiwiiPost2_reply1:
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             call screen kiwiiPost(KiwiiPost2)
 
         label KiwiiPost2_reply2:
@@ -1492,12 +1492,12 @@ label v07:
             call screen kiwiiPost(KiwiiPost2)
 
         label KiwiiPost3_reply1:
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
             $ KiwiiPost3.addComment("Aubrey", "Bring it on!", mentions="MC", numberLikes=renpy.random.randint(15, 35))
             call screen kiwiiPost(KiwiiPost3)
 
         label KiwiiPost4_reply1:
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
             $ KiwiiPost4.addComment("Josh", "lol", mentions="MC", numberLikes=renpy.random.randint(3, 7))
             call screen kiwiiPost(KiwiiPost4)
 
@@ -1548,12 +1548,12 @@ label v07:
         menu:
 
             "Be calm":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
                 jump hh_a
 
 
             "Get angry":
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
                 jump hh_b
 
         label hh_b:
@@ -2026,13 +2026,13 @@ label v07:
     menu:
 
         "Come clean about Emily":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             jump hj_a
 
         "Deny the cheating":
             $ laurenemily = 1
-            $ addPoint("bro", 1)
-            $ addPoint("tm", 1)
+            $ addPoint("bro")
+            $ addPoint("tm")
             jump hj_b
 
 
@@ -2080,13 +2080,13 @@ label v07:
 
         "This won't happen again.":
             $ laurenemily = 2
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             jump hk_a
 
         "Open relationship?":
             $ laurenemily = 3
-            $ addPoint("bro", 1)
-            $ addPoint("tm", 1)
+            $ addPoint("bro")
+            $ addPoint("tm")
             jump hk_b
 
 
@@ -2436,9 +2436,9 @@ label v07:
 
             "Almost as cute as you.":
                 if laurenrs == True:
-                    $ addPoint("tm", 1)
+                    $ addPoint("tm")
                 else:
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
 
                 jump hl_a
 
@@ -2502,13 +2502,13 @@ label v07:
         menu:
 
             "Yes, of course.":
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
                 $ politics = True
                 jump hm_a
 
 
             "No, not really.":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
                 $ politics = False
                 jump hm_b
 
@@ -2590,12 +2590,12 @@ label v07:
         menu:
 
             "Can I join?":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
                 $ protest = True
                 jump hn_a
 
             "That's really cool.":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
                 $ protest = False
                 jump hn_b
 
@@ -3046,8 +3046,8 @@ label v07:
 
             menu:
                 "Tell her it's fine":
-                    $ addPoint("bro", 1)
-                    $ addPoint("tm", 1)
+                    $ addPoint("bro")
+                    $ addPoint("tm")
 
                     u "Good, great. You know how he is. It's just uhm... really good."
 
@@ -3072,7 +3072,7 @@ label v07:
 
                 "Tell her he moved out":
                     $ laurenimre = True
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
 
                     u "Uhm... Imre and I had a fight and he moved out..."
 
@@ -3461,8 +3461,8 @@ label v07:
 
             menu:
                 "Tell her it's fine":
-                    $ addPoint("bro", 1)
-                    $ addPoint("tm", 1)
+                    $ addPoint("bro")
+                    $ addPoint("tm")
 
                     u "Good, great. You know how he is. It's just uhm... really good."
 
@@ -3487,7 +3487,7 @@ label v07:
 
                 "Tell her he moved out":
                     $ laurenimre = True
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
 
                     u "Uhm... Imre and I had a fight and he moved out..."
 
@@ -3564,11 +3564,11 @@ label v07:
         menu:
 
             "You're cute.":
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
                 jump hq_a
 
             "I won't.":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
                 jump hq_b
 
         label hq_a:
@@ -3595,7 +3595,7 @@ label v07:
                     jump hr_a
 
                 "Don't risk it":
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
                     $ beachfirstkiss = False
                     jump hr_b
 
@@ -3882,7 +3882,7 @@ label v07:
 
 ####### SCENE 13 PLEDGING THE WOLVES
     label pledgewolves:
-    $ addPoint("bro", 1)
+    $ addPoint("bro")
     $ joinwolves = True
 
     scene s756 # Camera - third person, MC walking through town during evening wearing jeans
@@ -4119,7 +4119,7 @@ label v07:
     menu:
         "Eliminate Imre":
             $ wolvesTask1 = False
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s768a
             with dissolve
@@ -4128,7 +4128,7 @@ label v07:
         "Decline":
             $ wolvesTask1 = True
             $ tasks += 1
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s768a
             with dissolve
@@ -4260,8 +4260,8 @@ label v07:
     menu:
         "Get the call":
             $ wolvesTask2 = False
-            $ addPoint("bf", 1)
-            $ addPoint("tm", 1)
+            $ addPoint("bf")
+            $ addPoint("tm")
 
             scene s779 # Close up of MC leaving out of the tub, mouth open
             with dissolve
@@ -4273,7 +4273,7 @@ label v07:
         "Continue the challenge":
             $ tasks += 1
             $ wolvesTask2 = True
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             u "I'll get it later. I'm in this to win."
             ch "That's the spirit!"
@@ -4687,8 +4687,8 @@ label v07:
     with dissolve
     menu:
         "Do it":
-            $ addPoint("tm", 1)
-            $ addPoint("bro", 1)
+            $ addPoint("tm")
+            $ addPoint("bro")
 
             u "Why not, you should do it."
 
@@ -4705,7 +4705,7 @@ label v07:
             no "Okaaay, well I'll mark that down."
 
         "Of course not":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "Isn't that obvious? You don't do it."
 
@@ -4799,8 +4799,8 @@ label v07:
             if laurenrs:
                 $ addPoint("tm", 2)
             else:
-                $ addPoint("tm", 1)
-                $ addPoint("bf", 1)
+                $ addPoint("tm")
+                $ addPoint("bf")
 
             ### NEW ACHIEVEMENT UNLOCK? ###
             scene s793c # Nora still leaning into the MC. MC tilts forward his head and goes for a kiss
@@ -4846,9 +4846,9 @@ label v07:
         "Pull away":
             $ tasks += 1
             $ wolvesTask4 = True
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
             if laurenrs:
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
             scene s793f # MC tilts back when Nora is tilting towards him. MC talking, Nora mouth closed
             with dissolve
@@ -5348,7 +5348,7 @@ label v07:
 
     menu:
         "Stand up to him":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
             $ stoodUpToCam = True
 
             scene s843a # Cameron threatening and mouth closed
@@ -5394,7 +5394,7 @@ label v07:
             jump ep7_fight_cam
 
         "Hold yourself back":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
             $ stoodUpToCam = False
             pause 0.5
 
@@ -5426,7 +5426,7 @@ label v07:
     menu:
         "Punch him":
             $ punchedCam = True
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s846b # MC throws a punch but Cameron blocks it
             with hpunch
@@ -5451,8 +5451,8 @@ label v07:
 
         "Retreat":
             $ punchedCam = False
-            $ addPoint("bf", 1)
-            $ addPoint("bro", 1)
+            $ addPoint("bf")
+            $ addPoint("bro")
 
             scene s846c # Same as s846 but Cameron mouth closed
             with dissolve
@@ -5594,7 +5594,7 @@ label v07:
     menu:
         "Take the slip":
             $ cameronSisNumber = True
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s856
             with dissolve
@@ -5606,7 +5606,7 @@ label v07:
 
         "Decline":
             $ cameronSisNumber = False
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s856
             with dissolve
@@ -5675,15 +5675,15 @@ label v07:
         "Call her":
             $ apesTask1 = True
             $ apesVids += 1
-            $ addPoint("bro", 1)
-            $ addPoint("bf", 1)
+            $ addPoint("bro")
+            $ addPoint("bf")
 
             u "Okay"
             jump chloe_call_cameron
 
         "Refuse to do it":
             $ apesTask1 = False
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             u "Nah, I'm not calling Chloe."
 
@@ -5815,7 +5815,7 @@ label v07:
         menu:
             "Text her":
                 $ emilyText = True
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
                 $ contact_Emily.addReply("Hey, sorry I lost track of time. You up?", "emrep3a")
 
                 label emrep3a:
@@ -5836,7 +5836,7 @@ label v07:
             "Don't text her":
                 $ forgiveemily = False
                 $ emilyText = False
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
 
                 u "(Nah, I've had enough of her.)"
 
@@ -6333,7 +6333,7 @@ label v07:
 
         menu:
             "Defend yourself":
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
                 $ madeFunOfLee = True
 
                 scene s886 # Camera - TPP (Similar to s884 but closer). MC confident and talking looking at Lee. Lee mouth closed and looking at the MC
@@ -6394,7 +6394,7 @@ label v07:
                 jump after_history
 
             "Stay silent":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
                 $ madeFunOfLee = False
 
                 scene s886c # MC looking down in embarrassment. Lee looking at MC. Both mouths closed
@@ -6725,7 +6725,7 @@ label v07:
 
     menu:
         "Make fun of his costume":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             u "You serious bro? Elvis? Is that how far you could think back? Hahaha."
 
@@ -6738,7 +6738,7 @@ label v07:
             u "Disagree, but what's up?"
 
         "Just say hello":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             u "Hey, what's up?"
 
@@ -6796,7 +6796,7 @@ label v07:
     menu:
         "Do it":
             $ apesTask2Try = True
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             u "Fine! If you're that interested in looking at Mr. Lee's naked ass."
 
@@ -6808,7 +6808,7 @@ label v07:
 
         "That's stupid and risky":
             $ apesTask2Try = False
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "Nah, that's stupid as fuck. I'm not getting kicked out of school just to join the Apes."
 
@@ -6849,7 +6849,7 @@ label v07:
     menu: # 3 second timer default
         "Pull it":
             $ apesTask2Success = True
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
             $ apesVids += 1
             $ timed = False
             stop sound
@@ -7039,7 +7039,7 @@ label v07:
         am "How about we skip the dance together? I promise it'll be a lot more fun."
         menu:
             "Alright, I'm in.":
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
                 $ hcGirl = "amber"
                 $ amberrs = True
 
@@ -7059,7 +7059,7 @@ label v07:
                 jump after_hc_selection
 
             "I'd rather go to the dance.":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
                 scene s919e
                 with dissolve
@@ -7945,12 +7945,12 @@ else:
 
 menu:
     "Do it":
-        $ addPoint("tm", 1)
+        $ addPoint("tm")
         $ apesVids += 1
         jump av_glue
 
     "Don't do it":
-        $ addPoint("bf", 1)
+        $ addPoint("bf")
         jump av_no_glue
 
 label av_no_glue:
@@ -8071,10 +8071,10 @@ with dissolve
 
 menu:
     "Do it":
-        $ addPoint("tm", 1)
+        $ addPoint("tm")
         jump av_crickets
     "Don't do it":
-        $ addPoint("bf", 1)
+        $ addPoint("bf")
         jump av_no_crickets
 
 label av_crickets:
@@ -8117,7 +8117,7 @@ $ timerexit = "av_crickets_no_drop"
 
 menu:
     "Drop the crickets":
-        $ addPoint("tm", 1)
+        $ addPoint("tm")
         $ apesVids += 1
         $ timed = False
         jump av_crickets_drop
@@ -8414,11 +8414,11 @@ with dissolve
 menu:
     "Console Samantha":
         $ consoledSam = True
-        $ addPoint("bf", 1)
+        $ addPoint("bf")
         jump av_sam
     "Leave her be":
         $ consoledSam = False
-        $ addPoint("bro", 1)
+        $ addPoint("bro")
         jump av_no_sam
 
 label av_sam:
@@ -9877,7 +9877,7 @@ label risex: # Riley sex scene
             jump aSigns_witty
 
         "Same something direct":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             jump aSigns_direct
 
 label aSigns_direct:
@@ -10988,7 +10988,7 @@ label aSigns_2:
     menu:
 
         "Aubrey":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
             scene sfr4cl21a # aubrey looking at you smiling mouth closed
             with dissolve
 
@@ -11006,7 +11006,7 @@ label aSigns_2:
 
 
         "Lindsey":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             u "I'm gonna go with Lindsey. Sorry, Aubrey."
 
@@ -11037,8 +11037,8 @@ label aSigns_2:
     menu:
 
         "Ask something sexual":
-            $ addPoint("bro", 1)
-            $ addPoint("tm", 1)
+            $ addPoint("bro")
+            $ addPoint("tm")
 
             u "Would you rather have a threesome with two guys, or a guy and a girl?"
 
@@ -11066,7 +11066,7 @@ label aSigns_2:
             with dissolve
 
         "Ask something funny":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "Would you rather fight 100 hamster sized zebras or one zebra sized hamster?"
 
@@ -11119,8 +11119,8 @@ label aSigns_2:
     menu:
 
         "Joke around":
-            $ addPoint("bro", 1)
-            $ addPoint("tm", 1)
+            $ addPoint("bro")
+            $ addPoint("tm")
 
             u "And then on the other side of me, you're sitting. So that's really cool too."
 
@@ -11130,7 +11130,7 @@ label aSigns_2:
             cl "*Laughs* Oh wow! You're unbelievable."
 
         "Keep it romantic":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "We'll make this the best night ever."
 
@@ -11427,7 +11427,7 @@ label aSigns_2:
 
         "Of course.":
 
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             u "Of course. Dancing is like riding a bicycle. You don't unlearn that."
 
@@ -11440,7 +11440,7 @@ label aSigns_2:
 
         "I'm not sure.":
 
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "I'm not sure... I haven't properly done couple dancing since high school."
 
@@ -11836,7 +11836,7 @@ label aSigns_2:
     menu:
 
         "Keep it light":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             u "I'm not surprised."
 
@@ -11847,7 +11847,7 @@ label aSigns_2:
 
 
         "Reassure her":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "I'm sure you're not that bad."
 
@@ -12107,7 +12107,7 @@ label aSigns_2:
     menu:
 
         "Enter her room":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
             play sound "sounds/dooropen.mp3"
             scene sfr4pe1b # showing mc entering her room, door still only half open, cant see penelope or much in the room
             with dissolve
@@ -12147,7 +12147,7 @@ label aSigns_2:
             u "Wow You look... stunning."
 
         "Knock again":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene sfr4pe1 #you knocking on penelopes door
             with dissolve
@@ -12263,7 +12263,7 @@ label aSigns_2:
 
         "Ask about sex toys":
             $ penelopesextoys = True
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             u "Come on, were you hiding your sex toys?"
 
@@ -12308,7 +12308,7 @@ label aSigns_2:
 
 
         "Ask about drugs":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             u "I bet it was weed."
 
@@ -14755,7 +14755,7 @@ label aSigns_2:
         menu:
 
             "Give Chris advice":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
                 u "You ever thought of just taking her home?"
 
@@ -14801,7 +14801,7 @@ label aSigns_2:
 
             "Agree":
 
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
                 u "Yeah, seems like it. But you're enjoying yourself at least?"
 
                 scene sfr4no2
@@ -14897,7 +14897,7 @@ label aSigns_2:
     menu:
 
         "Say hi to Elijah":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "Cool moves, man."
 
@@ -14913,8 +14913,8 @@ label aSigns_2:
 
 
         "Make fun of Elijah":
-            $ addPoint("tm", 1)
-            $ addPoint("bro", 1)
+            $ addPoint("tm")
+            $ addPoint("bro")
 
 
             u "You dance like a clown, man."
@@ -15126,7 +15126,7 @@ label aSigns_2:
 
         "Back up Aaron":
 
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             if joinwolves or hcGirl == "chloe":
 
@@ -15208,7 +15208,7 @@ label aSigns_2:
 
         "Side with Lindsey":
 
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             if joinwolves or hcGirl == "chloe":
 
@@ -15491,7 +15491,7 @@ label aSigns_2:
 
                 "Alright, let's go.":
 
-                    $ addPoint("tm", 1)
+                    $ addPoint("tm")
 
                     u "Alright. Let me tell my date that I gotta leave early and let's go."
 
@@ -15499,7 +15499,7 @@ label aSigns_2:
 
 
                 "I can't ditch my date.":
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
                     $ fr4noriley = True
 
                     u "Riley, I- I can't ditch my date like that."
@@ -15557,7 +15557,7 @@ label aSigns_2:
             menu:
 
                 "Alright, let's go.":
-                    $ addPoint("tm", 1)
+                    $ addPoint("tm")
 
                     u "Alright. Let me tell my date that I gotta leave early and let's go."
 
@@ -15565,7 +15565,7 @@ label aSigns_2:
 
 
                 "I can't ditch my date.":
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
                     $ fr4noriley = True
 
                     u "*Chuckles* I can't ditch my date like that."
@@ -15634,7 +15634,7 @@ label aSigns_2:
 
                 "Agree with Nora.":
 
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
 
                     u "Sorry, that must suck. He should be spending time with you."
 
@@ -15670,7 +15670,7 @@ label aSigns_2:
 
                 "Defend Chris.":
 
-                    $ addPoint("bro", 1)
+                    $ addPoint("bro")
                     $ fr3nora = False
 
 
@@ -15952,7 +15952,7 @@ label aSigns_2:
 
             "Alright, let's go.":
 
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
 
                 $ bathroomblowjob = True
 
@@ -16053,7 +16053,7 @@ label aSigns_2:
 
             "I'm not really feeling it.":
 
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
 
                 scene sfr4ri39d # aubrey a bit disappointed
                 with dissolve
@@ -16151,8 +16151,8 @@ label aSigns_2:
         "Defend Chloe":
             $ ryandefendchloe = True
             $ chloemad = False
-            $ addPoint("bf", 1)
-            $ addPoint("tm", 1)
+            $ addPoint("bf")
+            $ addPoint("tm")
 
             scene sfr4cl48a
             with dissolve
@@ -16185,7 +16185,7 @@ label aSigns_2:
             u "Shut up, man. Not cool."
 
         "Say nothing":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene sfr4cl49
             with dissolve
@@ -16659,9 +16659,9 @@ label aSigns_2:
 
             "Say something to Imre":
 
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
 
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
 
                 u "*Laughs* Imre?"
 
@@ -16682,7 +16682,7 @@ label aSigns_2:
 
             "Leave them alone":
 
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
                 u "(I should probably leave these two alone.)"
 
@@ -16784,7 +16784,7 @@ label aSigns_2:
     menu:
 
         "I like your dress.":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             u "I really like your dress."
 
@@ -16807,7 +16807,7 @@ label aSigns_2:
             with dissolve
 
         "I'll let you get back.":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
 
 
@@ -16897,7 +16897,7 @@ label aSigns_2:
 
             "You got this.":
 
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
                 u "You got this."
 
@@ -16954,7 +16954,7 @@ label aSigns_2:
 
             "Or we could just leave.":
 
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
 
                 u "Or we could just leave right now and not look back..."
 
@@ -17080,7 +17080,7 @@ label aSigns_2:
 
             "Don't do that.":
 
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
                 u "Hey man, don't do that. That's a real dick move."
 
@@ -17133,7 +17133,7 @@ label aSigns_2:
 
             "Alright, enjoy.":
 
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
 
                 u "Alright, enjoy."
 
@@ -17179,7 +17179,7 @@ label aSigns_2:
             "Don't do that.":
                 $ preventgrayson = True
 
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
                 u "Hey man, don't do that. That's a real dick move."
 
@@ -17210,7 +17210,7 @@ label aSigns_2:
 
             "Alright, enjoy.":
 
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
 
                 u "Alright, enjoy."
 
@@ -17319,7 +17319,7 @@ label aSigns_2:
 
                 "Of course you can.":
 
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
 
                     u "Of course you can."
 
@@ -17378,7 +17378,7 @@ label aSigns_2:
 
                 "Let's get out of here.":
 
-                    $ addPoint("tm", 1)
+                    $ addPoint("tm")
 
                     u "You don't have to. Let's just get out of here."
 

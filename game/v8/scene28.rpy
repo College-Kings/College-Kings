@@ -101,7 +101,7 @@ label drug_deal_w_josh:
 
     menu:
         "Intervene":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
             jump int_deal_w_josh
         "Don't Intervene":
             jump no_int_deal_w_josh
@@ -641,7 +641,7 @@ label dodged_pipe:
 
     menu:
         "Kick Joe":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
             jump volley_joe
 
         "Walk away":

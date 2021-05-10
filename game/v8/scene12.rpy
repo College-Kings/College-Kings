@@ -299,7 +299,7 @@ label apes_faceoff_task:
 
     menu:
         "Wish them good luck":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             u "Good luck, guys!"
 
@@ -309,7 +309,7 @@ label apes_faceoff_task:
             coop "Let the best man win."
 
         "Just get to the task":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
     scene black
     with dissolve

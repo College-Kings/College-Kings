@@ -179,7 +179,7 @@ label v9_emily_dorm:
 
     menu:
         "Let Emily Gloat":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "You're just so much better than me."
 
@@ -219,7 +219,7 @@ label v9_emily_dorm:
             em "You always were a slick one, [name]."
 
         "Say You Were Winning":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             u "I was one second away from the holy grail."
 
@@ -289,7 +289,7 @@ label v9_emily_dorm:
 
         menu:
             "Brag":
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
 
                 u "I guess that makes you my Adrian."
 
@@ -309,7 +309,7 @@ label v9_emily_dorm:
                 em "Well, in that case..."
 
             "Play It Off":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
 
                 u "Aww, you don't have anything to worry about. One punch isn't gonna change me."
 
@@ -374,7 +374,7 @@ label v9_emily_dorm:
 
         menu:
             "Be Macho":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
 
                 u "I've been training. Gotta learn to take a punch as much as land one."
 

@@ -60,7 +60,7 @@ label work_with_seb:
 
     menu:
         "Open up to Sebastian":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
             $ openedUpToSeb = True
             jump wolves_gym_conf
         "Play it cool":

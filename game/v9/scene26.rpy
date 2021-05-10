@@ -61,7 +61,7 @@ label v9_fri_training_w_wolves:
 
     menu: 
         "Answer": 
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             u "The Brawl."
 
@@ -71,7 +71,7 @@ label v9_fri_training_w_wolves:
             ch "Right."
 
         "Keep Quiet":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
     
             pause 1
 
@@ -106,7 +106,7 @@ label v9_fri_training_w_wolves:
 
     menu: 
         "Make Joke": 
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             u "I think punching an Ape's thick skull is gonna be like hitting a wall."
 
@@ -116,7 +116,7 @@ label v9_fri_training_w_wolves:
             ch "Yes, I'm sure it will be."
 
         "Agree":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             u "(I don't want to interrupt.)"
    
@@ -273,7 +273,7 @@ label v9_fri_training_w_wolves:
         
         menu: 
             "Be cocky": 
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
 
                 u "Never know."
 
@@ -288,7 +288,7 @@ label v9_fri_training_w_wolves:
                 u "What's that?"
 
             "Agree":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
 
                 u "Yeah that was kinda lucky."
 
@@ -357,7 +357,7 @@ label v9_fri_training_w_wolves:
 
         menu: 
             "Hit First": 
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
 
                 u "Hit first."
 
@@ -377,7 +377,7 @@ label v9_fri_training_w_wolves:
                 ch "So you have to be ready for it."
 
             "Run":
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
 
                 u "Run!"
 
@@ -529,7 +529,7 @@ label v9_fri_training_w_wolves:
     
         menu:
             "Agree":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
 
                 u "Yeah, I know."
 

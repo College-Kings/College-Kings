@@ -18,27 +18,27 @@ init python:
             achievement.grant("open_wound")
             achievement.sync()
 
-        addPoint("tm", 1)
+        addPoint("tm")
         contact_Emily.newMessage(_("Ugh :/"))
 
     # Julia messages
     def v1_reply3():
-        addPoint("bf", 1)
+        addPoint("bf")
 
     def v1_reply4():
-        addPoint("bro", 1)
+        addPoint("bro")
 
     # Lauren messages
     def v1_reply5():
-        addPoint("bf", 1)
+        addPoint("bf")
 
     # Lauren messages
     def v1_reply6():
-        addPoint("bf", 1)
+        addPoint("bf")
         contact_Lauren.newMessage(_("Cool :)"))
 
     def v1_reply7():
-        addPoint("tm", 1)
+        addPoint("tm")
         contact_Lauren.newMessage(_("Idk, it's just feels kinda weird now. Can we please just talk tomorrow?"))
         contact_Lauren.addReply(_("Fine"))
         contact_Lauren.newMessage(_(":)"))
@@ -216,7 +216,7 @@ label v1start:
             hide s14
             show s14a
             with dissolve
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             u "I don't know... it might be fun."
 
@@ -224,7 +224,7 @@ label v1start:
             hide s14
             show s14a
             with dissolve
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "No, I don't think so, Julia."
 
@@ -631,7 +631,7 @@ label v1start:
             u "Wow Elijah, way to start the fun."
 
             $ funofelijah = True
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s46b
             with dissolve
@@ -712,7 +712,7 @@ label v1start:
 
     menu:
         "Agree":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene s50a
             with dissolve
@@ -727,7 +727,7 @@ label v1start:
             la "Not at all, pretty much any girl that's part of the Deer hates it."
 
         "Disagree":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s50a
             with dissolve
@@ -786,7 +786,7 @@ label v1start:
             la "I bet you think she's cute, don't you?"
 
         "Defend Autumn":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene s50a
             with dissolve
@@ -815,7 +815,7 @@ label v1start:
             u "Only for the right girl."
 
         "Yeah, kinda":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene s53a
             with dissolve
@@ -919,7 +919,7 @@ label v1start:
 
         menu:
             "She's hot.":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
 
                 scene s50ri2a
                 with dissolve
@@ -1055,7 +1055,7 @@ label v1start:
 
         menu:
             "So... the nerds?":
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
 
                 scene s50el2a
                 with dissolve
@@ -1070,7 +1070,7 @@ label v1start:
                 el "Just get out of my face."
 
             "That's cool.":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
                 scene s50el2a
                 with dissolve
@@ -1152,7 +1152,7 @@ label v1start:
 
         menu:
             "Flirt":
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
                 $ v1_hitOnNora = True
 
                 scene s56no1a
@@ -1315,7 +1315,7 @@ label efra:
 
     menu:
         "So, they're equally good?":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s63a
             with dissolve
@@ -1336,7 +1336,7 @@ label efra:
             with dissolve
 
         "The Wolves sound sick.":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s64a
             with dissolve
@@ -1693,7 +1693,7 @@ label efra:
             la "I guess we'll never know."
 
         "Dodged a bullet there.":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s73gr
             with dissolve
@@ -1763,7 +1763,7 @@ label efra:
 
     menu:
         "Take your shirt off":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s76
             with dissolve
@@ -1819,7 +1819,7 @@ label efra:
 
     menu:
         "Do it, or drink.":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s71ef
             with dissolve
@@ -1836,7 +1836,7 @@ label efra:
             " "
 
         "You're right.":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             
             scene s71ef
             with dissolve
@@ -1872,7 +1872,7 @@ label efra:
 
     menu:
         "Riley's mine.":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s79b
             with dissolve
@@ -1884,7 +1884,7 @@ label efra:
 
             menu:
                 "You're right, sorry.":
-                    $ addPoint("bro", 1)
+                    $ addPoint("bro")
 
                     scene s79a
                     with dissolve
@@ -1896,7 +1896,7 @@ label efra:
                     imre "It's fine bro, I get it. She is really cute."
 
                 "She wants me.":
-                    $ addPoint("tm", 1)
+                    $ addPoint("tm")
 
                     scene s79b
                     with dissolve
@@ -1923,7 +1923,7 @@ label efra:
                     jump at_bd
 
         "They're both hot.":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s79
             with dissolve
@@ -2403,7 +2403,7 @@ label at_bd:
 
     menu:
         "Move in with me?":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene s87a
             with dissolve
@@ -2421,7 +2421,7 @@ label at_bd:
             u "How about we go to the park this afternoon? I'll bring some sandwiches and we'll make your day better."
 
         "Bad roommates suck.":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s87a
             with dissolve
@@ -2725,7 +2725,7 @@ label at_bd:
 
     menu:
         "You're really beautiful.":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "You know... you're really beautiful."
 
@@ -2734,7 +2734,7 @@ label at_bd:
             la "Awww."
 
         "You're not ugly.":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             u "You know... you're not ugly."
 
@@ -3265,7 +3265,7 @@ label v1_freeRoam2_josh:
 
             menu:
                 "Say you're a fighter":
-                    $ addPoint("tm", 1)
+                    $ addPoint("tm")
                     $ v1_aubreywannafight = True
 
                     scene fr2jo2d
@@ -3314,7 +3314,7 @@ label v1_freeRoam2_josh:
                     u "Who's Grayson?"
 
         "Ask if she likes fighters":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene fr2jo2b
             with dissolve
@@ -3334,7 +3334,7 @@ label v1_freeRoam2_josh:
 
 
                 "I'll be the next Fight King.":
-                    $ addPoint("tm", 1)
+                    $ addPoint("tm")
                     $ v1_aubreywannafight = True
 
                     scene fr2jo2d
@@ -3459,8 +3459,8 @@ label v1_freeRoam2_mason:
 
     menu:
         "Yeah, he better watch out.":
-            $ addPoint("tm", 1)
-            $ addPoint("bro", 1)
+            $ addPoint("tm")
+            $ addPoint("bro")
 
             scene fr2ma1a
             with dissolve
@@ -3780,7 +3780,7 @@ label v1_freeRoam2_end:
 
     menu:
         "You're right, I'll talk to her.":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s108e
             with dissolve
@@ -3885,7 +3885,7 @@ label v1_freeRoam2_end:
 
     menu:
         "Apologize":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "I'm really sorry for interrupting your conversation."
 
@@ -3900,7 +3900,7 @@ label v1_freeRoam2_end:
             u "In that case, you're very welcome."
 
         "Make fun of him":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             u "Don't worry, I'm not gonna start talking about my rock collection."
 
@@ -3980,7 +3980,7 @@ label v1_freeRoam2_end:
 
     menu:
         "Empathize":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene s116a
             with dissolve
@@ -3993,7 +3993,7 @@ label v1_freeRoam2_end:
             cl "It really was."
 
         "Poke fun":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s116a
             with dissolve

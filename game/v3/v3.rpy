@@ -146,7 +146,7 @@ label v3start:
 
     menu:
         "You're crazy.":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s206c
             with dissolve
@@ -154,7 +154,7 @@ label v3start:
             u "Hahaha, man you're crazy."
 
         "That's not cool.":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             $ notcool = True
 
             scene s206c
@@ -205,7 +205,7 @@ label v3start:
 
     menu:
         "Hell yeah.":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s208a
             with dissolve
@@ -504,7 +504,7 @@ label conl:
 
     menu:
         "Ask her about it":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s216 # chloe walking next to the volleyball
             with dissolve
@@ -537,7 +537,7 @@ label conl:
             cl "Haha, good."
 
         "Don't question it":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
     scene s216c # cl grabs volleyball
     with fade
@@ -598,7 +598,7 @@ label conl:
 
     menu:
         "Win the game":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             # volleybal hit sounds
 
@@ -630,7 +630,7 @@ label conl:
             u "I'm sure you'll get me next time."
 
         "Let her win":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene s218c # you missing the ball
             with vpunch
@@ -1055,7 +1055,7 @@ label conl:
 
     menu:
         "Show off":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s240
             with dissolve
@@ -1158,7 +1158,7 @@ label conl:
 
         menu:
             "Approach her":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
 
                 scene s244
                 with fade
@@ -1262,7 +1262,7 @@ label conl:
                         u "(Damn, that didn't go as planned...)"
 
             "Leave it":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
     scene s247 # imre coming back
     with fade
@@ -1515,8 +1515,8 @@ label conl:
 
                 menu:
                     "Take off your clothes":
-                        $ addPoint("bf", 1)
-                        $ addPoint("bro", 1)
+                        $ addPoint("bf")
+                        $ addPoint("bro")
 
                         scene s256b #showing you pulling down your pants
                         with dissolve
@@ -1534,7 +1534,7 @@ label conl:
                         pause 0.5
 
                     "Refuse":
-                        $ addPoint("tm", 1)
+                        $ addPoint("tm")
 
                         scene s254e
                         with dissolve
@@ -1702,7 +1702,7 @@ label conl:
 
                 menu:
                     "Truth":
-                        $ addPoint("bf", 1)
+                        $ addPoint("bf")
 
                         scene s254h
                         with dissolve
@@ -1763,8 +1763,8 @@ label conl:
 
 
                     "Dare":
-                        $ addPoint("tm", 1)
-                        $ addPoint("bro", 1)
+                        $ addPoint("tm")
+                        $ addPoint("bro")
 
                 scene s254m
                 with dissolve
@@ -1939,7 +1939,7 @@ label conl:
 
         menu:
             "Truth":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
                 scene s254h
                 with dissolve
@@ -1999,8 +1999,8 @@ label conl:
                 au "Okay, now it's your turn again."
 
             "Dare":
-                $ addPoint("tm", 1)
-                $ addPoint("bro", 1)
+                $ addPoint("tm")
+                $ addPoint("bro")
 
         scene s254m
         with dissolve
@@ -2514,7 +2514,7 @@ label continuen:
 
     menu:
         "I'd love to.":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene s268a
             with dissolve
@@ -2522,7 +2522,7 @@ label continuen:
             u "Yeah, I'd love to."
 
         "I don't know...":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s268a
             with dissolve
@@ -2591,7 +2591,7 @@ label continueq:
         "Answer":
             stop sound
             play sound "sounds/answercall.mp3"
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene s270b # you answer, hold phone next to your ear
             with dissolve
@@ -2625,7 +2625,7 @@ label continueq:
             menu:
                 "Shopping sounds great.":
                     $ meetjulia = True
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
 
                     u "Yeah, shopping sounds great, Julia."
 
@@ -2649,7 +2649,7 @@ label continueq:
                     play sound "sounds/rejectcall.mp3"
 
                 "I can't, sorry.":
-                    $ addPoint("tm", 1)
+                    $ addPoint("tm")
 
                     u "Sorry, Julia... I'm really busy this weekend."
 
@@ -2669,7 +2669,7 @@ label continueq:
             stop sound
             play sound "sounds/rejectcall.mp3"
 
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
             $ dontanswerjulia = True
             # phone call declined sound
 
@@ -2737,7 +2737,7 @@ label continueq:
 
     menu:
         "Compliment Riley":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene s273d # Riley looking at ryan joking annoyed but her mouth is closed, ryan looking at her with a grin
             with dissolve
@@ -2762,7 +2762,7 @@ label continueq:
             u "Yeah, alright. Let me just change out of my gym clothes."
 
         "Agree with Ryan":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s273d
             with dissolve
@@ -2903,7 +2903,7 @@ label continueq:
 
     menu:
         "Insult Ryan":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
             
             u "Cause you were too fucking pussy to do it yourself."
 
@@ -2920,7 +2920,7 @@ label continueq:
             u "You don't know Chloe at all! You're just fucking jealous!"
 
         "Walk away":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
     scene s276b #RIley sad and concerned
     with dissolve
@@ -3012,7 +3012,7 @@ label continueq:
 
     menu:
         "I like her":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene s281a
             with dissolve
@@ -3027,7 +3027,7 @@ label continueq:
             ri "Oh uhm... yeah, that sounds really good. I'm happy for you."
 
         "She's into me.":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s281a
             with dissolve
@@ -3054,7 +3054,7 @@ label continueq:
             menu:
                 "Kiss her":
                     $ rileykiss = True
-                    $ addPoint("tm", 1)
+                    $ addPoint("tm")
 
                     show rikiss2
 
@@ -3084,7 +3084,7 @@ label continueq:
                     ri "I'm glad you did."
 
                 "Don't kiss her":
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
 
                     ri "Just a really great guy."
 
@@ -3175,7 +3175,7 @@ label continueq:
             menu:
                 "Tell her what happened.":
                     $ toldlauren = True
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
                     $ laurenrs = False
 
                     u "(Lauren values honesty and we're not in a relationship yet, so she'll probably be understanding as long as I tell her the truth.)"
@@ -3246,7 +3246,7 @@ label continueq:
                     jump dk_ad
 
                 "Don't tell her.":
-                    $ addPoint("tm", 1)
+                    $ addPoint("tm")
 
                     u "(Lauren seems to value loyalty, she might be upset if she finds out and I don't wanna ruin our date before it even started.)"
 
@@ -3331,7 +3331,7 @@ label continueq:
 
                 menu:
                     "Reach under her skirt":
-                        $ addPoint("tm", 1)
+                        $ addPoint("tm")
 
                         scene s291a # same camera angle but your hand is under her skirt
                         with dissolve
@@ -3342,7 +3342,7 @@ label continueq:
 
                         menu:
                             "Keep going":
-                                $ addPoint("tm", 1)
+                                $ addPoint("tm")
                                 $ laurentoofar = True
                                 $ laurenrs = False
 
@@ -3383,7 +3383,7 @@ label continueq:
                                 jump dk_ad
 
                             "Stop":
-                                $ addPoint("bf", 1)
+                                $ addPoint("bf")
 
                                 scene s290b
                                 with dissolve
@@ -3398,7 +3398,7 @@ label continueq:
                                 pause 0.5
 
                     "Keep hands to yourself":
-                        $ addPoint("bf", 1)
+                        $ addPoint("bf")
 
                         pause 1.0
 

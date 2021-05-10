@@ -49,7 +49,7 @@ label v9_room_sat_aft:
             call screen messager(contact_Chloe)
 
         label s35_ChloeReplyWRs3:
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             jump s35_ChloeReplyWRs3a
 
         label s35_ChloeReplyWRs3a:
@@ -59,7 +59,7 @@ label v9_room_sat_aft:
             call screen messager(contact_Chloe)
 
         label s35_ChloeReplyWRs4:
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
             jump s35_ChloeReplyWRs4a
 
         label s35_ChloeReplyWRs4a:
@@ -109,7 +109,7 @@ label v9_room_sat_aft:
             call screen messager(contact_Chloe)
 
         label s35_ChloeReplyWRs13:
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             jump s35_ChloeReplyWRs13a
 
         label s35_ChloeReplyWRs13a:
@@ -225,7 +225,7 @@ label v9_room_sat_aft:
             call screen messager(contact_Chloe)
 
         label s35_ChloeReplyARs3:
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             jump s35_ChloeReplyARs3a
 
         label s35_ChloeReplyARs3a:
@@ -235,7 +235,7 @@ label v9_room_sat_aft:
             call screen messager(contact_Chloe)
 
         label s35_ChloeReplyARs4:
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
             jump s35_ChloeReplyARs4a
 
         label s35_ChloeReplyARs4a:
@@ -285,7 +285,7 @@ label v9_room_sat_aft:
             call screen messager(contact_Chloe)
 
         label s35_ChloeReplyARs13:
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             jump s35_ChloeReplyARs13a
 
         label s35_ChloeReplyARs13a:

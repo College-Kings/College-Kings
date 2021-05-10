@@ -1,31 +1,31 @@
 init python:
     def v6_reply1():
-        addPoint("bro", 1)
+        addPoint("bro")
         contact_Amber.newMessage("I'm playing drink or dare and got dared to send an underwear pic to a guy.")
         contact_Amber.addReply("And you chose me, huh?", v6_reply2)
         contact_Amber.addReply("Feel free to do so anytime :)", v6_reply3)
 
     def v6_reply2():
-        addPoint("bro", 1)
+        addPoint("bro")
         contact_Amber.newMessage("Maybe I picked someone at random ;)")
 
     def v6_reply3():
-        addPoint("bf", 1)
+        addPoint("bf")
         contact_Amber.newMessage("Maybe if you're lucky xx")
 
     def v6_reply4():
-        addPoint("bf", 1)
+        addPoint("bf")
         contact_Amber.newMessage("I'm glad you like it xx")
         contact_Amber.addReply( "I hope there's more of that in the future :P")
         contact_Amber.newMessage("Maybe if you're lucky xx")
 
     def v6_reply5():
-        addPoint("tm", 1)
-        addPoint("bro", 1)
+        addPoint("tm")
+        addPoint("bro")
         contact_Amber.newMessage("Moment's passed...")
 
     def v6_reply6():
-        addPoint("bf", 1)
+        addPoint("bf")
         contact_Amber.newMessage("You better xx")
 
     def v6_reply7():
@@ -41,7 +41,7 @@ init python:
         contact_Amber.newMessage("Yeah maybe we should xx")
 
     def v6_reply10():
-        addPoint("bf", 1)
+        addPoint("bf")
         setattr(store, "homrworkout", False)
 
 label choicetimer:
@@ -51,14 +51,14 @@ label v6start:
     if imremad and chloemad:
         menu:
             "Find Imre":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
                 $ chooseimre = True
                 $ meetchloe = False
 
                 jump imrecona
 
             "Keep talking to Amber":
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
                 $ chooseimre = False
                 $ meetchloe = False
 
@@ -67,14 +67,14 @@ label v6start:
     elif imremad:
         menu:
             "Find Imre":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
                 $ chooseimre = True
                 $ meetchloe = False
 
                 jump imrecona
 
             "Meet Chloe":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
                 $ chooseimre = False
                 $ meetchloe = True
 
@@ -84,14 +84,14 @@ label v6start:
     elif chloemad:
         menu:
             "Help Imre":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
                 $ chooseimre = True
                 $ meetchloe = False
 
                 jump imreconb
 
             "Keep talking to Amber":
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
                 $ chooseimre = False
                 $ meetchloe = False
 
@@ -100,14 +100,14 @@ label v6start:
     else:
         menu:
             "Help Imre":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
                 $ chooseimre = True
                 $ meetchloe = False
 
                 jump imreconb
 
             "Meet Chloe":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
                 $ chooseimre = False
                 $ meetchloe = True
 
@@ -145,7 +145,7 @@ label imrecona: # Find Imre
 
     menu:
         "Explain yourself":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s445c
             with dissolve
@@ -223,7 +223,7 @@ label imrecona: # Find Imre
                 imre "Fuck do you know about loyalty?! You just wanna be in control!"
 
         "Apologize":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             $ imreforgives = False
 
             scene s445c
@@ -552,8 +552,8 @@ label imrecond: # Meet Chloe
 
     menu:
         "Just let it ring.":
-            $ addPoint("tm", 1)
-            $ addPoint("bf", 1)
+            $ addPoint("tm")
+            $ addPoint("bf")
 
             scene s460a # FIRST PERSON: chloe close up, she's turned around looking at her phone
             with dissolve
@@ -576,7 +576,7 @@ label imrecond: # Meet Chloe
             cl "I'll be right back."
 
         "You should get that.":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s460a
             with dissolve
@@ -640,7 +640,7 @@ label imrecond: # Meet Chloe
 
     menu:
         "Ask about the call":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene s463a # chloe sits down next to you with towel , mc looks at her mouth open
             with dissolve
@@ -653,7 +653,7 @@ label imrecond: # Meet Chloe
             cl "Oh, just a friend."
 
         "Don't ask":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s463b # same as s463a but mouth closed
             with dissolve
@@ -707,7 +707,7 @@ label imrecond: # Meet Chloe
 
     menu:
         "Follow her":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s466a # chloe walked a bit further
             with dissolve
@@ -740,7 +740,7 @@ label imrecond: # Meet Chloe
                 "Stay and listen":
                     $ chloemad = True
                     $ chloecaught = True
-                    $ addPoint("tm", 1)
+                    $ addPoint("tm")
 
                     scene s469 # chloe and Aubrey close up talking
                     with dissolve
@@ -854,12 +854,12 @@ label imrecond: # Meet Chloe
                     u "*Sighs*"
 
                 "Leave":
-                    $ addPoint("bro", 1)
+                    $ addPoint("bro")
 
                     u "(No, I should just get out of here and stop spying on her.)"
 
         "Trust her":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             $ credulous = True
 
             if not steam:
@@ -1336,7 +1336,7 @@ label continuebd:
 
             menu:
                 "Call after her":
-                    $ addPoint("bro", 1)
+                    $ addPoint("bro")
 
                     scene s493b # Lauren at door
                     with dissolve
@@ -1349,7 +1349,7 @@ label continuebd:
                     u "Damn it."
 
                 "Leave her be":
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
 
                     scene s493b
                     with dissolve
@@ -1604,7 +1604,7 @@ label continuebd:
 
     menu:
         "What do you want?":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s501e
             with dissolve
@@ -1617,7 +1617,7 @@ label continuebd:
             gr "Join the Apes."
 
         "I guess we are.":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s501e
             with dissolve
@@ -1677,7 +1677,7 @@ label continuebd:
 
     menu:
         "Check it out":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             $ checkonrose = True
 
             scene s505 # First Person: Enter classrom, only Ms Rose at her laptop crying
@@ -1761,7 +1761,7 @@ label continuebd:
             with fade
 
         "Don't disturb":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
             $ checkonrose = False
 
             scene s510 # Mc arrives at his dorm, down at his door there's a flyer (Matt's design)
@@ -2004,7 +2004,7 @@ label continuebd:
 
         menu:
             "It'll be an adventure.":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
                 $ evelyndate = False
 
                 scene s524e
@@ -2049,7 +2049,7 @@ label continuebd:
                 u "Damnit."
 
             "It'll be a nice dinner.":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
                 $ evelyndate = True
 
                 scene s524e
@@ -2205,7 +2205,7 @@ label continuebd:
         "Accept call":
             stop sound
             play sound "sounds/answercall.mp3"
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             # aceept call sound
             if not forgiveemily:
@@ -2252,7 +2252,7 @@ label continuebd:
                 menu:
                     "Fine, I'll come.":
                         $ meetemily = True
-                        $ addPoint("bf", 1)
+                        $ addPoint("bf")
 
                         scene s531b # mc empathy
                         with dissolve
@@ -2331,18 +2331,18 @@ label continuebd:
 
                         menu:
                             "Be understanding":
-                                $ addPoint("bf", 1)
+                                $ addPoint("bf")
 
                                 jump fz_a
 
                             "Be baffled":
-                                $ addPoint("tm", 1)
+                                $ addPoint("tm")
 
                                 jump fz_b
 
                     "No. (Hang up)":
                         $ meetemily = False
-                        $ addPoint("tm", 1)
+                        $ addPoint("tm")
 
                         scene s531
                         with dissolve
@@ -2452,13 +2452,13 @@ label continuebd:
                 menu:
                     "Be understanding":
                         $ forgiveemily = True
-                        $ addPoint("bf", 1)
+                        $ addPoint("bf")
 
                         jump fz_a
 
                     "Be baffled":
                         $ forgiveemily = False
-                        $ addPoint("tm", 1)
+                        $ addPoint("tm")
 
                         jump fz_b
 
@@ -2466,7 +2466,7 @@ label continuebd:
         "Reject call":
             stop sound
             play sound "sounds/rejectcall.mp3"
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
             $ meetemily = False
 
             scene s531d
@@ -3178,7 +3178,7 @@ label fy_bd: # not gone to Emily's
 
         menu:
             "Hot":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
 
                 scene s550a
                 with dissolve
@@ -3191,7 +3191,7 @@ label fy_bd: # not gone to Emily's
                 ev "*Smirks* Of course you were."
 
             "Stunning":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
                 scene s550a
                 with dissolve
@@ -3343,7 +3343,7 @@ label fy_bd: # not gone to Emily's
 
         menu:
             "Make a joke":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
 
                 u "So uhm, is this the only eggplant you're looking to eat tonight?"
 
@@ -3360,7 +3360,7 @@ label fy_bd: # not gone to Emily's
                 pause 0.5
 
             "Say something smart":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
                 u "So did you hear about the new discoveries they made on Mars recently?"
 
@@ -3451,7 +3451,7 @@ label fy_bd: # not gone to Emily's
 
         menu:
             "Ask about her job":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
                 $ evelynrs = False
 
                 scene s558d
@@ -3487,7 +3487,7 @@ label fy_bd: # not gone to Emily's
                 u "(This date really isn't getting better.)"
 
             "Ask about her dreams":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
                 $ evelynrs = True
 
                 scene s558d
@@ -3633,9 +3633,9 @@ label fy_bd: # not gone to Emily's
                 "Kiss her":
                     $ kissevelyn = True
                     if laurenrs:
-                        $ addPoint("tm", 1)
+                        $ addPoint("tm")
                     else:
-                        $ addPoint("bf", 1)
+                        $ addPoint("bf")
 
                     scene s563 # showing you and evelyn standing close to each other, smiling at each other
                     with dissolve
@@ -3656,9 +3656,9 @@ label fy_bd: # not gone to Emily's
                 "Don't kiss her":
                     $ kissevelyn = False
                     if laurenrs:
-                        $ addPoint("bf", 1)
+                        $ addPoint("bf")
                     else:
-                        $ addPoint("bro", 1)
+                        $ addPoint("bro")
 
         scene s562
         with dissolve
@@ -3841,8 +3841,8 @@ label fy_bd: # not gone to Emily's
 
     menu:
         "A few different girls.":
-            $ addPoint("bro", 1)
-            $ addPoint("tm", 1)
+            $ addPoint("bro")
+            $ addPoint("tm")
 
             u "You know, a few different girls."
 
@@ -3870,8 +3870,8 @@ label fy_bd: # not gone to Emily's
 
                 menu:
                     "I think you know.":
-                        $ addPoint("bro", 1)
-                        $ addPoint("tm", 1)
+                        $ addPoint("bro")
+                        $ addPoint("tm")
 
                         u "I think you know."
 
@@ -3886,8 +3886,8 @@ label fy_bd: # not gone to Emily's
                         au "I think I do."
 
                     "We're just friends.":
-                        $ addPoint("bf", 1)
-                        $ addPoint("tm", 1)
+                        $ addPoint("bf")
+                        $ addPoint("tm")
 
                         u "Uhm, Aubrey I think we should just stay friends."
 
@@ -3906,7 +3906,7 @@ label fy_bd: # not gone to Emily's
                         jump aubreytalk
 
         "No one, really.":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "No one, really."
 
@@ -3936,8 +3936,8 @@ label fy_bd: # not gone to Emily's
 
                 menu:
                     "You got me.":
-                        $ addPoint("bro", 1)
-                        $ addPoint("tm", 1)
+                        $ addPoint("bro")
+                        $ addPoint("tm")
 
                         u "You got me."
 
@@ -3952,8 +3952,8 @@ label fy_bd: # not gone to Emily's
                         au "That's what I thought."
 
                     "I'm not seducing you.":
-                        $ addPoint("bf", 1)
-                        $ addPoint("tm", 1)
+                        $ addPoint("bf")
+                        $ addPoint("tm")
 
                         u "Uhm, Aubrey I'm not trying to seduce you."
 
@@ -4461,7 +4461,7 @@ label afteraubrey:
     menu:
         "Meet Grayson":
             $ meetgrayson = True
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             u "(I wanna hear what he has to say.)"
 
@@ -4645,7 +4645,7 @@ label afteraubrey:
 
             menu:
                 "Empathize":
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
 
                     u "Man, I'm sorry. That's really terrible. I didn't know you had it so rough."
 
@@ -4668,7 +4668,7 @@ label afteraubrey:
                     gr "Good. We're here by the way."
 
                 "Question":
-                    $ addPoint("tm", 1)
+                    $ addPoint("tm")
 
                     u "That story sure sounds an awful lot like Cinderella."
 
@@ -4836,7 +4836,7 @@ label afteraubrey:
 
             menu:
                 "I'm in.":
-                    $ addPoint("tm", 1)
+                    $ addPoint("tm")
                     $ joinapes = True
 
                     u "Okay, I'm in."
@@ -4933,7 +4933,7 @@ label afteraubrey:
                     stop music fadeout 2.0
 
                 "I'm not in.":
-                    $ addPoint("bro", 1)
+                    $ addPoint("bro")
                     $ joinapes = False
 
                     u "Sorry, Grayson. But I don't wanna be an Ape."
@@ -4994,7 +4994,7 @@ label afteraubrey:
 
         "Stay home":
             $ meetgrayson = False
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
             $ seemsfishy = True
 
             if not steam:
@@ -5057,7 +5057,7 @@ label afteraubrey:
 
     menu:
         "Save Lauren":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             $ save = 1
             $ timed = False
 
@@ -5081,7 +5081,7 @@ label afteraubrey:
             jump wakeupa
 
         "Save Riley":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
             $ save = 2
             $ timed = False
 
@@ -5593,7 +5593,7 @@ label wakeupa:
 
     menu:
         "Praise her":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "That was incredible."
 
@@ -5613,8 +5613,8 @@ label wakeupa:
             ri "Honestly, she's so brave. My heart goes out to her."
 
         "Mock her":
-            $ addPoint("bro", 1)
-            $ addPoint("tm", 1)
+            $ addPoint("bro")
+            $ addPoint("tm")
 
             scene s614a
             with dissolve
@@ -5679,7 +5679,7 @@ label wakeupa:
 
     menu:
         "Praise him":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "Honestly, that was kinda profound."
 
@@ -5699,8 +5699,8 @@ label wakeupa:
             ri "Pff, you're ridiculous."
 
         "Mock him":
-            $ addPoint("bro", 1)
-            $ addPoint("tm", 1)
+            $ addPoint("bro")
+            $ addPoint("tm")
 
             u "Okay, that was bad. He might as well perform whale sounds."
 
@@ -5774,8 +5774,8 @@ label wakeupa:
 
     menu:
         "Praise her":
-            $ addPoint("bro", 1)
-            $ addPoint("tm", 1)
+            $ addPoint("bro")
+            $ addPoint("tm")
 
             u "She was good."
 
@@ -5805,7 +5805,7 @@ label wakeupa:
             ri "Yeah, right."
 
         "Mock her":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "Man, that girl was into herself. You think she runs her own fan club?"
 
@@ -5856,7 +5856,7 @@ label wakeupa:
 
     menu:
         "Okay, I'll do it.":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
             $ perform = 1
 
             u "Okay, I'll do it."
@@ -5888,7 +5888,7 @@ label wakeupa:
 
             menu:
                 "Act out a lullaby.":
-                    $ addPoint("bro", 1)
+                    $ addPoint("bro")
 
                     if kct == "confident":
                         call screen kctPopup
@@ -5958,7 +5958,7 @@ label wakeupa:
                         "*Crowd applauds"
 
                 "Make something up.":
-                    $ addPoint("tm", 1)
+                    $ addPoint("tm")
 
                     scene s627g
                     with dissolve
@@ -5987,7 +5987,7 @@ label wakeupa:
                     "*Crowd applauds"
 
         "No way I'm doing that.":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             $ perform = 0
 
             u "No. No way. I'm not going up there."
@@ -6567,10 +6567,10 @@ label wakeupa:
             "Kiss her":
                 $ kisspenelope = True
                 if laurenrs:
-                    $ addPoint("tm", 1)
-                    $ addPoint("bro", 1)
+                    $ addPoint("tm")
+                    $ addPoint("bro")
                 else:
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
 
                 scene s658k
                 with dissolve
@@ -6614,7 +6614,7 @@ label wakeupa:
             "Say Goodbye":
                 $ kisspenelope = False
                 if laurenrs:
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
 
         u "I gotta go now and get ready for the Wolves' party, but I'll see you soon, okay?"
 
@@ -7052,7 +7052,7 @@ label v6_fr3josh1:
 
     menu:
         "Take the shot":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
             $ takeshot = True
 
             u "Fuck it. Why not."
@@ -7076,7 +7076,7 @@ label v6_fr3josh1:
             with dissolve
 
         "Decline":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             $ takeshot = False
 
             u "Nah, I'm good."
@@ -7236,7 +7236,7 @@ label v6_fr3guy1:
 
     menu:
         "Kylie":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
             $ kylie = True
 
             u "Yeah I agree, Kylie's way hotter."
@@ -7289,7 +7289,7 @@ label v6_fr3guy1:
             u "Alright, I'ma leave you guys to it."
 
         "Kourtney":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             $ kylie = False
 
             u "Definitely Kourtney."
@@ -7550,7 +7550,7 @@ label v6_fr3aubrey1:
 
         menu:
             "Anything for a girl like that.":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
                 $ simp = True
 
                 u "Anything for a girl like that..."
@@ -7591,8 +7591,8 @@ label v6_fr3aubrey1:
                 u "*Chuckles* I'm sure we will."
 
             "What people do for pussy...":
-                $ addPoint("tm", 1)
-                $ addPoint("bro", 1)
+                $ addPoint("tm")
+                $ addPoint("bro")
                 $ simp = False
 
                 u "What people do for pussy, am I right?"
@@ -7701,7 +7701,7 @@ label v6_fr3aubrey1:
 
         menu:
             "I was in love.":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
                 $ simp = True
 
                 u "What can I say? I was young and in love."
@@ -7754,8 +7754,8 @@ label v6_fr3aubrey1:
                 au "Byeee."
 
             "It was nothing.":
-                $ addPoint("tm", 1)
-                $ addPoint("bro", 1)
+                $ addPoint("tm")
+                $ addPoint("bro")
                 $ simp = False
 
                 u "Really, it was nothing. Was so long ago."
@@ -8317,7 +8317,7 @@ label v6_fr3riley1: #If you click on Riley and finn*
 
     menu:
         "Ask Riley something":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             $ askfinn = False
 
             scene sfr3ri2a
@@ -8386,7 +8386,7 @@ label v6_fr3riley1: #If you click on Riley and finn*
             ri "Okay, see you later then."
 
         "Ask Finn something":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
             $ askfinn = True
 
             scene sfr3ri3a
@@ -8613,7 +8613,7 @@ label v6_fr3amber1:
 
     menu:
         "You're such a tease.":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             u "Wow. You're such a tease."
 
@@ -8626,7 +8626,7 @@ label v6_fr3amber1:
             with dissolve
 
         "Not gonna happen.":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "Mhhh... I don't think that's gonna happen."
 
@@ -8955,7 +8955,7 @@ label v6_fr3nora1:
     menu:
         "Defend Chloe":
             $ noramad = True
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "Chloe's not manipulative. She's just being bad mouthed because people like you see her as a threat."
 
@@ -8981,7 +8981,7 @@ label v6_fr3nora1:
             u "Fine. But you're wrong about Chloe."
 
         "Don't defend Chloe":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
             $ noramad = False
 
             u "Yeah, it sounds kinda messed up."
@@ -9208,7 +9208,7 @@ label v6_fr3chloe1:
 
     menu:
         "Maybe you should step down.":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             $ chloemad = True
 
             u "You ever think, maybe you should step down?"
@@ -9270,8 +9270,8 @@ label v6_fr3chloe1:
             u "Fine..."
 
         "Nora's being stupid.":
-            $ addPoint("bro", 1)
-            $ addPoint("tm", 1)
+            $ addPoint("bro")
+            $ addPoint("tm")
 
             u "Nora's being stupid. You're a great president. You're smart, you're driven and you care so much..."
 
@@ -9898,8 +9898,8 @@ label upstairsaubrey:
 
         menu:
             "We could lock the door.":
-                $ addPoint("bro", 1)
-                $ addPoint("tm", 1)
+                $ addPoint("bro")
+                $ addPoint("tm")
 
                 u "But we could also lock the door and be quiet..."
 
@@ -9918,7 +9918,7 @@ label upstairsaubrey:
                 u "(I should probably talk to Chris soon.)"
 
             "It was nice talking.":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
                 u "It was nice talking though."
 
@@ -10046,7 +10046,7 @@ label upstairsaubrey:
 
         menu:
             "He turned down a threesome?!":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
 
                 scene sufr3au2c
                 with dissolve
@@ -10112,8 +10112,8 @@ label upstairsaubrey:
 
                 menu:
                     "We could lock the door.":
-                        $ addPoint("bro", 1)
-                        $ addPoint("tm", 1)
+                        $ addPoint("bro")
+                        $ addPoint("tm")
 
                         u "But we could also lock the door and be quiet..."
 
@@ -10130,7 +10130,7 @@ label upstairsaubrey:
                         u "(I should probably talk to Chris soon.)"
 
                     "At least we got to talk.":
-                        $ addPoint("bf", 1)
+                        $ addPoint("bf")
 
                         u "At least we got to talk a bit, haha."
 
@@ -10145,7 +10145,7 @@ label upstairsaubrey:
                         u "(I should probably talk to Chris soon.)"
 
             "I kinda get what he means.":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
                 $ simp = True
                 $ aubreyrs = False
 

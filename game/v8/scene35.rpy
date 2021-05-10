@@ -121,7 +121,7 @@ label steak_w_chloe:
 
         menu:
             "Flirt with Chloe":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
                 jump steak_flirt_w_chloe
 
             "Don't flirt with Chloe":
@@ -248,7 +248,7 @@ label steak_w_chloe_cont:
     menu:
         "Ask to see Chloe's muscles":
             jump steak_w_chloe_muscles
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
         "Turn the conversation serious":
             jump steak_w_chloe_serious
 
@@ -448,7 +448,7 @@ label steak_w_chloe_cont_2:
         menu:
             "Say a dirty joke":
                 jump steak_w_chloe_dirty
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
             "Don't say a joke":
                 jump steak_w_chloe_dirty_no
 

@@ -94,7 +94,7 @@ label v9_lau_dorm:
     if laurenrs == True or beachfirstkiss == True:
         menu:
             "Offer Lauren a Back Rub":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
                 u "Here, let me help."
 
@@ -119,7 +119,7 @@ label v9_lau_dorm:
                 la "Yeah! Let's get to work."
 
             "Offer Lauren a Hug":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
             
                 u "Aww, come here."
 
@@ -151,7 +151,7 @@ label v9_lau_dorm:
     else:
         menu:
             "Offer Guidance":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
 
                 u "It's simple. Start with your main goal and work your way back to what to do now."
 
@@ -176,7 +176,7 @@ label v9_lau_dorm:
                 u "(Whew!)"
 
             "Just Listen":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
                 u "What part's giving you the most trouble? How can I help?"
 
@@ -233,7 +233,7 @@ label v9_lau_dorm:
             u "No! We can top that!"
 
         "Support Lauren":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
         
             u "Hmm. I see why you're stressed. But don't worry. We can come up with something just as awesome."
 
@@ -511,7 +511,7 @@ label v9_lau_dorm:
         if laurenrs:
             menu:
                 "Flirt":
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
 
                     u "One might say, your hero?"
 
@@ -521,7 +521,7 @@ label v9_lau_dorm:
                     la "One might."
 
                 "Be Romantic":
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
 
                     u "I just want you to know you can count on me. Always."
 
@@ -564,7 +564,7 @@ label v9_lau_dorm:
         if beachfirstkiss == True and laurenrs == False and kct == "loyal":
             menu:
                 "Kiss Lauren":
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
 
                     jump v9_lau_dorm_kiss
 
@@ -585,7 +585,7 @@ label v9_lau_dorm:
 
         menu:
             "Credit Lauren":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
                 u "It's gonna be a great event. Those Deer will be begging you to host every event from now on."
 

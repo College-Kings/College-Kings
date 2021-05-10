@@ -41,7 +41,7 @@ label v9_sat_hit_gym:
 
         menu:
             "Convince Her":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
                 jump v9_sat_hit_gym_convince
             "Forget It":
                 jump v9_sat_hit_gym_forget

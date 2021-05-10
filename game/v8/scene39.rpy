@@ -60,8 +60,8 @@ label hosp_climb_seb:
 
     menu:
         "Climb the hospital":
-            $ addPoint("bro", 1)
-            $ addPoint("tm", 1)
+            $ addPoint("bro")
+            $ addPoint("tm")
             $ climbwseb = True
             jump climb_the_hos
         "Don't climb the hospital":

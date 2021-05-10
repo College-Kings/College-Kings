@@ -1,51 +1,27 @@
 init -1 python:
-    def addPoint(var, count = 1): # Add "count" number of points to variable "var"
-        # Import all the global variables you use in the function
-        global bro
-        global boyfriend
-        global troublemaker
-        global loyal
-        global popular
-        global confident
-        global kct # New variable that stores the order of traits
+    def addPoint(var, value=1): 
 
-        if var == "bro":
-            bro += count
-        elif var == "bf":
-            boyfriend += count
-        elif var == "tm":
-            troublemaker += count
+        # Find and update the component variables
+        varConversion = { "bro": "bro", "bf": "boyfriend", "tm": "troublemaker" }
+        try: setattr(store, varConversion[var], getattr(store, varConversion[var]) + value)
+        except KeyError: raise NameError("Name '{}' is not defined".format(var))
 
         # Update the trait points whenever one of the above variables are changed
         popular = bro * troublemaker / boyfriend
         loyal = bro * boyfriend / troublemaker
         confident = boyfriend * troublemaker / bro
 
-        oldkct = kct
+        oldKCT = kct
 
         # Decide the new order of traits based on the updated values
-        if popular >= loyal:
-            if loyal >= confident:
-                kct = "popular"
-            else:
-                if popular >= confident:
-                    kct = "popular"
-                else:
-                    kct = "confident"
-        else:
-            if popular >= confident:
-                kct = "loyal"
-            else:
-                if loyal >= confident:
-                    kct = "loyal"
-                else:
-                    kct = "confident"
+        kctDict = { "popular": popular, "confident": confident, "loyal": loyal }
 
-        if not kct == oldkct:
+        kct = max(kctDict, key=kctDict.get)
+
+        if kct != oldKCT:
             renpy.notify("Your KCT has changed to " + kct)
-        return
         
-    # mark disabled choices
+    # Mark disabled choices
     if getattr(renpy.display.get_info(), 'oldmenu', None) is None:
         renpy.display.get_info().oldmenu = renpy.exports.menu
 

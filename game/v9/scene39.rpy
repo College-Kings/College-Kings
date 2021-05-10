@@ -80,7 +80,7 @@ label v9_hang_w_linds:
         menu:
             "Play It Cool":
                 $ playCoolWLins = True
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
 
                 u "Damn right! You gonna be there to cheer me on?"
 
@@ -110,7 +110,7 @@ label v9_hang_w_linds:
                 li "Sure do." 
 
             "Get Real":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
                 u "I'm sure everyone's expecting me to fall in my first fight."
 
@@ -148,10 +148,10 @@ label v9_hang_w_linds:
     menu:
         "Let Lindsey Grab Your Hand":
             if chloers:
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
 
             else:
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
             
             scene v9hwl6a # TPP. Same camera as v9hwl6, Lindsey now holding MC's hand, looking into his eyes.
             with dissolve
@@ -201,10 +201,10 @@ label v9_hang_w_linds:
             menu:
                 "Make Out With Lindsey":
                     if chloers:
-                        $ addPoint("tm", 1)
+                        $ addPoint("tm")
                     
                     else:
-                        $ addPoint("bf", 1)
+                        $ addPoint("bf")
 
                     $ lindseyfirstkiss = True
                     
@@ -311,7 +311,7 @@ label v9_hang_w_linds:
                     $ renpy.end_replay()
                 "Pull Away":
                     if chloers:
-                        $ addPoint("bf", 1)
+                        $ addPoint("bf")
                         
                     scene v9hwl7b # TPP. Same camera as v9hwl7, Show MC pulling away from Lindsey who is trying to kiss him.
                     with dissolve

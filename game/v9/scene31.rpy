@@ -56,7 +56,7 @@ label v9_sat_cafe_w_nora:
 
     menu:
         "Correct Waiter":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             u "Actually, we're just friends."
 
@@ -118,7 +118,7 @@ label v9_sat_cafe_w_nora:
             with dissolve
 
         "Don't Correct Waiter":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene v9cwn3c
             with fade

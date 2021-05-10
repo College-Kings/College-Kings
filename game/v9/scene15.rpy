@@ -69,7 +69,7 @@ label v9_thur_room_w_cam_punch:
 
     menu:
         "Brag":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
             jump v9_thur_room_w_cam_brag
         "Be humble":
             jump v9_thur_room_w_cam_humble
@@ -160,7 +160,7 @@ label v9_thur_room_w_cam_cont1:
 
     menu:
         "Drink":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
             jump v9_thur_room_w_cam_drink
         "Don't Drink":
             jump v9_thur_room_w_cam_no_drink
@@ -271,7 +271,7 @@ label v9_thur_room_w_cam_no_punch:
         "Shrug It Off":
             jump v9_thur_room_w_cam_shrugg_off
         "Get Defensive":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
             jump v9_thur_room_w_cam_defensive
 
 label v9_thur_room_w_cam_shrugg_off:
@@ -335,7 +335,7 @@ label v9_thur_room_w_cam_cont3:
 
     menu:
         "Protest":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
             jump v9_thur_room_w_cam_protest
         "Follow Orders":
             jump v9_thur_room_w_cam_follow
