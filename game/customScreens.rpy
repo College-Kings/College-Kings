@@ -1,4 +1,6 @@
 screen realmode():
+    modal True
+    
     add "images/REALLIFEMODE.webp"
 
     imagebutton:
@@ -36,4 +38,43 @@ screen endFreeRoamConfirm(continueLabel):
         action Hide("endFreeRoamConfirm")
         text_align 0.5
         align (0.57, 0.58)
-        
+
+
+screen kiwiiPopup():
+    modal True
+
+    add "images/endfr.png"
+
+    text "You've just unlocked the social media app Kiwii! Open it now from the homescreen." style "endfree"
+
+    textbutton "OK":
+        style "endfr"
+        action Hide("kiwiiPopup")
+        text_align 0.5
+        align (0.5, 0.58)
+
+
+screen fightPopup(fightMove):
+    modal True
+    add "images/endfr.png"
+
+    text "Congratulations! You have learned a new fighting move: {b}[fightMove]{/b}." style "endfree"
+
+    textbutton "OK" style "endfr":
+        action Return()
+        text_align 0.5
+        align (0.5, 0.58)
+
+
+screen kctPopup():
+    modal True
+
+    add "images/endfr.webp"
+
+    text "Congratulations! Your Key Character Trait {b}[kct]{/b} has just changed the outcome of a decision someone was making." style "endfree"
+
+    textbutton "OK":
+        style "endfr"
+        action Return()
+        text_align 0.5
+        align (0.5, 0.58)
