@@ -295,7 +295,7 @@ screen quick_menu():
         image "images/5 hits.webp"
 
 
-    if renpy.loadable("/bugTesting/bugTesting.rpy") and developer:
+    if renpy.loadable("/bugTesting/bugTesting.rpy") and config.developer:
         hbox:
             style_prefix "quick"
             align (1.0, 1.0)

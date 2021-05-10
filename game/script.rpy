@@ -2,7 +2,10 @@ init python:
     persistent.ep = 10
 
 define steam = False
-define developer = True
+define config.developer = True
+define config.console = True
+
+
 define config.steam_appid = 1463120
 
 define _game_menu_screen = "ingmenu"
