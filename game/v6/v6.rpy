@@ -1019,7 +1019,7 @@ label continuebb:
             
     play sound "sounds/vibrate.mp3"
     
-    $ contact_Amber.newMessage("Hey, you alone? xx")
+    $ contact_Amber.newMessage("Hey, you alone? xx", queue=False)
     $ contact_Amber.addReply("Yeah, I'm in my dorm, why?")
     $ contact_Amber.newImgMessage("images/text2.webp")
     $ contact_Amber.addReply("Woah, what was that for?", v6_reply1)
@@ -3680,7 +3680,7 @@ label fy_bd: # not gone to Emily's
             u "(We never really clicked. That probably means I missed my shot with her...)"
 
         play sound "sounds/vibrate.mp3"
-        $ contact_Aubrey.newMessage("Hey, I know it's late... but wanna come over?")
+        $ contact_Aubrey.newMessage("Hey, I know it's late... but wanna come over?", queue=False)
         $ contact_Aubrey.addReply("Yeah, sure.", v6_reply7)
         $ contact_Aubrey.addReply("Sorry, I can't tonight.", v6_reply8)
 
@@ -3706,7 +3706,7 @@ label fy_bd: # not gone to Emily's
         scene s546 # phone close up, it's 10:30 pm, message from Aubrey
         with dissolve
 
-        $ contact_Aubrey.newMessage("Hey, I know it's late... but wanna come over?")
+        $ contact_Aubrey.newMessage("Hey, I know it's late... but wanna come over?", queue=False)
         $ contact_Aubrey.addReply("Yeah, sure.", v6_reply7)
         $ contact_Aubrey.addReply("Sorry, I can't tonight.", v6_reply8)
 
@@ -4434,13 +4434,13 @@ label afteraubrey:
         play sound "sounds/vibrate.mp3"
 
         if meetaubrey:
-            $ contact_Aubrey.newImgMessage("images/text3.webp")
-            $ contact_Aubrey.newMessage("Still shaking from earlier")
+            $ contact_Aubrey.newImgMessage("images/text3.webp", queue=False)
+            $ contact_Aubrey.newMessage("Still shaking from earlier", queue=False)
             $ contact_Aubrey.addReply("Hahaha, we should definitely do this more ;)")
 
         else:
-            $ contact_Aubrey.newImgMessage("images/text3.webp")
-            $ contact_Aubrey.newMessage("You missed out today")
+            $ contact_Aubrey.newImgMessage("images/text3.webp", queue=False)
+            $ contact_Aubrey.newMessage("You missed out today", queue=False)
             $ contact_Aubrey.addReply("Daaaamn, I'll be there next time")
 
         " "
@@ -5430,7 +5430,7 @@ label wakeupa:
     scene s609 # mc walking home by himself after the gym
     with fade
     
-    $ contact_Amber.newMessage("Heyy, what are you up to? xx")
+    $ contact_Amber.newMessage("Heyy, what are you up to? xx", queue=False)
     $ contact_Amber.addReply("Just walking back from the gym wbu?")
     $ contact_Amber.newMessage("Going to my next lecture x_x")
     $ contact_Amber.newMessage("Which gym do you go to? Maybe we can go together at some point")
