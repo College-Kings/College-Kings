@@ -232,7 +232,7 @@ screen messager(contact=None):
                         action Show("reply", contact=contact)
 
     if kiwii:
-        timer 0.1 action Show ("popup19")
+        timer 0.1 action Show("kiwiiPopup")
 
 
 screen reply(contact=None):
