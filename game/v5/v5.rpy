@@ -4376,8 +4376,7 @@ label findimre:
         else:
             u "(I gotta make a decision. Should I help Imre, or meet Chloe?)"
 
-label endaa:
-    if persistent.ep == 5:
-        jump v6start
-    else:
-        jump end_credits
+if persistent.ep == 5:
+    jump v6start
+else:
+    jump end_credits
