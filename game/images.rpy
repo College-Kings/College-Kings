@@ -24,6 +24,12 @@ image petapublicenemy = "images/petapublicenemy.webp"
 image snitch = "images/snitch.webp"
 image brosbeforehoes = "images/brosbeforehoes.webp"
 image credulous = "images/credulous.webp"
+image notmybusiness = "images/notmybusiness.webp"
+image flyer = "images/flyer.webp"
+image reignition = "images/reignition.webp"
+image seemsfishy = "images/seemsfishy.webp"
+image monkeybusiness = "images/monkeybusiness.webp"
+image strike = "images/strike.webp"
 
 # v1.0 - v2.0
 image s14 = "images/s14.webp"
@@ -110,7 +116,7 @@ image s316c = "images/s316c.webp" # Julia looking forward curious
 image s316d = "images/s316d.webp" # Julia looking forward curious mouth closed
 image s316b = "images/s316b.webp" # Julia looking at you smiling mouth open
 
-# v5.0 - v6.0
+# v5.0
 image af5 = Movie(play="images/af5.webm", start_image="images/af5start.webp", image="images/af5pic.webp", loop = False)
 image af6 = Movie(play="images/af6.webm", start_image="images/af6start.webp", image="images/af6pic.webp", loop = False)
 image af7 = Movie(play="images/af7.webm", start_image="images/af7start.webp", image="images/af7pic.webp", loop = False)
@@ -125,6 +131,33 @@ image af15 = Movie(play="images/af15.webm", start_image="images/af15start.webp",
 image af16 = Movie(play="images/af16.webm", start_image="images/af16start.webp", image="images/af16pic.webp", loop = False)
 image youfinishadam = Movie(play="images/youfinishadam.webm", start_image="images/youfinishadamstart.webp", image="images/youfinishadampic.webp", loop = False)
 image adamfinish = Movie(play="images/adamfinish.webm", start_image="images/adamfinishstart.webp", image="images/adamfinishpic.webp", loop = False)
+
+# v6.0
+image emvid1 = Movie (play="images/emvid1.webm", loop = True, image = "images/em1end.webp", start_image = "images/em1start.webp")
+image emvid2 = Movie (play="images/emvid2.webm", loop = True, image = "images/em2end.webp", start_image = "images/em2start.webp")
+image emvid3 = Movie (play="images/emvid3.webm", loop = True, image = "images/em3end.webp", start_image = "images/em3start.webp")
+image emvid4 = Movie (play="images/emvid4.webm", loop = True, image = "images/em4end.webp", start_image = "images/em4start.webp")
+image emvid6 = Movie (play="images/emvid6.webm", loop = True, image = "images/em6end.webp", start_image = "images/em6start.webp")
+image emvid7 = Movie (play="images/emvid7.webm", loop = True, image = "images/em7end.webp", start_image = "images/em7start.webp")
+image emvid8 = Movie (play="images/emvid8.webm", loop = True, image = "images/em8end.webp", start_image = "images/em8start.webp")
+image emvid9 = Movie (play="images/emvid9.webm", loop = False, image = "images/em9end.webp", start_image = "images/em9start.webp")
+
+image naubvid0 = Movie (play="images/naubvid0.webm", loop = False, image = "images/naub0end.webp", start_image = "images/naub0start.webp")
+image naubvid1 = Movie (play="images/naubvid1v.webm", loop = True, image = "images/naub1end.webp", start_image = "images/naub1start.webp")
+image naubvid2 = Movie (play="images/naubvid2.webm", loop = True, image = "images/naub2end.webp", start_image = "images/naub2start.webp")
+image naubvid3 = Movie (play="images/naubvid3.webm", loop = True, image = "images/naub3end.webp", start_image = "images/naub3start.webp")
+image naubvid4 = Movie (play="images/naubvid4.webm", loop = True, image = "images/naub4end.webp", start_image = "images/naub4start.webp")
+image naubvid5 = Movie (play="images/naubvid5v.webm", loop = True, image = "images/naub5end.webp", start_image = "images/naub5start.webp")
+image naubvid6 = Movie (play="images/naubvid6.webm", loop = True, image = "images/naub6end.webp", start_image = "images/naub6start.webp")
+image naubvid7 = Movie (play="images/naubvid7.webm", loop = False, image = "images/naub7end.webp", start_image = "images/naub7start.webp")
+image naubvid8 = Movie (play="images/naubvid8.webm", loop = True, image = "images/naub8end.webp", start_image = "images/naub8start.webp")
+image naubvid9 = Movie (play="images/naubvid9.webm", loop = True, image = "images/naub9end.webp", start_image = "images/naub9start.webp")
+image naubvid10 = Movie (play="images/naubvid10.webm", loop = True, image = "images/naub10end.webp", start_image = "images/naub10start.webp")
+image naubvid11 = Movie (play="images/naubvid11.webm", loop = True, image = "images/naub11end.webp", start_image = "images/naub11start.webp")
+image naubvid12 = Movie (play="images/naubvid12.webm", loop = True, image = "images/naub12end.webp", start_image = "images/naub12start.webp")
+image naubvid13 = Movie (play="images/naubvid13.webm", loop = False, image = "images/naub13end.webp", start_image = "images/naub13start.webp")
+
+image carbacknight = Movie(play="images/carbacknight.webm")
 
 # Misc
 image credits = Movie(play="images/credits.webm", Loop = True)
