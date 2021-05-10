@@ -19,12 +19,31 @@ init -1 python:
 label after_load:
     python:
         for app in applications:
-            app.image = os.path.splitext(app.image)[0] + ".webp"
+            if os.path.splitext(app.img)[0].endswith("not"):
+                app.img = os.path.splitext(app.img)[0][:-3] + os.path.splitext(app.img)[1]
+
+            try: app.img = app.image
+            except AttributeError: pass
+            
+            try: app.homeScreen = app.screen
+            except AttributeError: pass
+            
+            app.img = os.path.splitext(app.img)[0] + ".webp"
 
         for kiwiiPost in kiwiiPosts:
-            kiwiiPost.image = os.path.splitext(kiwiiPost.image)[0] + ".webp"
             if kiwiiPost.caption[0] == "[" and kiwiiPost.caption[1] != "[":
                 kiwiiPost.caption = "[" + kiwiiPost.caption
+
+            try: kiwiiPost.img = kiwiiPost.image
+            except AttributeError: pass
+            
+            kiwiiPost.image = os.path.splitext(kiwiiPost.image)[0] + ".webp"
+
+            try: kiwiiPost.sentComments = kiwiiPost.comments
+            except AttributeError: pass
+
+            try: kiwiiPost.message = kiwiiPost.caption
+            except AttributeError: pass
 
         for contact in contacts:
             try:

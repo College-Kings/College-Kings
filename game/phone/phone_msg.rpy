@@ -2,7 +2,7 @@ init python:
     class Contact:
         def __init__(self, name, profilePicture, locked=True):
             self.name = name
-            self.profilePicture = profilePicture
+            self.profilePicture = "images/phone/messages/profilePictures/{}".format(profilePicture)
             self.locked = locked
             self.newMessages = False
             self.sentMessages = []
@@ -82,9 +82,11 @@ init python:
             self.sentMessages[-1].reply = reply
             self.sentMessages[-1].replies = []
 
-            if reply.func:
+            try:
                 reply.func()
                 reply.func = None
+            except TypeError:
+                pass
 
             # Send next queued message(s)
             try:
