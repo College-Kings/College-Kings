@@ -1362,8 +1362,6 @@ label meet_lauren2:
 
                 u "And I should have. There was something real there. Between us."
 
-            hide screen influenceTutorial
-
             if kct == "loyal" or v1_kissLauren:
                 $ laurenrs = True
 
@@ -1416,8 +1414,6 @@ label meet_lauren2:
 
                         u "(I should probably wash the blood off my face in the restroom before I go to class.)"
 
-                    jump history
-
             else:
                 scene s130f # lauren flustered
                 with dissolve
@@ -1456,8 +1452,6 @@ label meet_lauren2:
 
                             u "(I should probably wash the blood off my face before I go.)"
 
-                        jump history
-
                     "You're right.":
                         $ laawk = True
 
@@ -1480,8 +1474,6 @@ label meet_lauren2:
                             with dissolve
 
                             u "(I should probably wash the blood off my face in the restroom before I go to class.)"
-
-                        jump history
 
         "Let's forget about it.":
             $ addPoint("bro", 1)
@@ -1528,9 +1520,8 @@ label meet_lauren2:
 
                 u "(I should probably wash the blood off my face in the restroom before I go.)"
 
-            jump history
-
-label history:
+    hide screen influenceTutorial
+    
     scene s133
     with Fade (1,0,1)
 

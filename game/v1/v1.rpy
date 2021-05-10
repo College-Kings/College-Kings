@@ -3435,9 +3435,10 @@ label v1_freeRoam2_camp:
     else:
         play sound "sounds/vibrate.mp3"
 
-        $ contact_Lauren.newMessage(_("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"), queue=False)
-        $ contact_Lauren.addReply(_("Yeah, sure."), v1_reply6)
-        $ contact_Lauren.addReply(_("What is there to talk about?"), v1_reply7)
+        if not contact_Lauren.getMessage("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"):
+            $ contact_Lauren.newMessage(_("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"), queue=False)
+            $ contact_Lauren.addReply(_("Yeah, sure."), v1_reply6)
+            $ contact_Lauren.addReply(_("What is there to talk about?"), v1_reply7)
 
         call screen v1_freeRoam2_4
 

@@ -104,10 +104,16 @@ init python:
                 return self.sentMessages[-1].replies
             except Exception: return False
 
+        def getMessage(self, message):
+            for msg in self.sentMessages:
+                if message == msg.message:
+                    return msg
+            return False
+
     class Message:
-        def __init__(self, contact, msg):
+        def __init__(self, contact, message):
             self.contact = contact
-            self.msg = msg
+            self.message = message
             self.replies = []
             self.reply = None
 
@@ -201,8 +207,8 @@ screen messager(contact=None):
 
             vbox:
                 for message in contact.sentMessages:
-                    if isinstance(message, Message) and message.msg.strip():
-                        textbutton message.msg style "msgleft"
+                    if isinstance(message, Message) and message.message.strip():
+                        textbutton message.message style "msgleft"
                     elif isinstance(message, ImageMessage):
                         imagebutton:
                             idle Transform(message.image, size=(307, 173))
