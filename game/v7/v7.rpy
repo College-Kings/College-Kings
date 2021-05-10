@@ -745,9 +745,7 @@ label v07:
 
                 $ noraclose = True
 
-                call screen popup17
-
-                label popup17:
+                call screen kctPopup
 
                 scene s699f # nora curious smile
                 with dissolve
@@ -1194,9 +1192,8 @@ label v07:
 
         if kct == "confident":
 
-            call screen popup18
+            call screen kctPopup
 
-            label popup18:
             jump conrileydorm
 
         else:
@@ -1427,8 +1424,6 @@ label v07:
         scene s713b # mc looks at his phone
         with dissolve
 
-        
-
         u "(What the hell?)"
 
         call screen messager(contact_Riley)
@@ -1438,10 +1433,8 @@ label v07:
         $ kiwii = True
         call screen messager(contact_Riley)
 
-        label popup19:
         $ kiwii = False
         $ kiwiiApp.unlock()
-        hide screen popup19
         # unlock kiwii and create profile
         call screen phone # this comes before opening kiwii
         ## after opening kiwii
@@ -1896,9 +1889,7 @@ label v07:
 
         if kct == "loyal":
             $ laurenmad = False
-            call screen popup20
-
-            label popup20:
+            call screen kctPopup
 
             scene s717
             with dissolve
@@ -2168,9 +2159,7 @@ label v07:
 
     if kct == "loyal":
 
-        call screen popup21
-
-        label popup21:
+        call screen kctPopup
 
         $ laurenrs = True
         $ laurenmad = True
@@ -2641,9 +2630,7 @@ label v07:
 
             if kct == "loyal":
 
-                call screen popup22
-
-                label popup22:
+                call screen kctPopup
 
                 $ signs = True
 
@@ -7034,9 +7021,8 @@ label v07:
     am "Sorry [name]."
 
     if kct == "popular":
-        call screen kctpopup("amber_hc_yes")
+        call screen kctPopup
 
-        label amber_hc_yes:
         $ amberEcstasyOffer = True
 
         scene s919d # Amber flirty and talking
@@ -7309,9 +7295,7 @@ label v07:
         $ hcGirl = "chloe"
 
         if kct == "popular":
-            call screen kctpopup("chloe_hc_yes")
-
-        label chloe_hc_yes:
+            call screen kctPopup
 
         scene s937d # chloe smiling eyebrow raised
         with dissolve
@@ -7454,9 +7438,8 @@ label v07:
         $ hcGirl = "lauren"
         
         if kct == "loyal":
-            call screen kctpopup("lauren_hc_yes")
+            call screen kctPopup
 
-        label lauren_hc_yes:
         $ laurenrs = True
 
         scene s967b # lauren laughing
@@ -7621,9 +7604,7 @@ label v07:
         $ rileyrs = True
 
         if kct == "confident":
-            call screen kctpopup("riley_hc_yes")
-
-        label riley_hc_yes:
+            call screen kctPopup
 
         scene s959b # riley excited
         with dissolve
@@ -17117,8 +17098,7 @@ label aSigns_2:
 
                     $ preventgrayson = True
 
-                    call screen popup23
-                    label popup23:
+                    call screen kctPopup
 
                     scene sfr4gr1b
                     with dissolve
@@ -17403,9 +17383,7 @@ label aSigns_2:
                     u "You don't have to. Let's just get out of here."
 
                     if kct == "popular":
-                        call screen popup24
-
-                        label popup24:
+                        call screen kctPopup
 
                         scene sfr4cl52b
                         with dissolve

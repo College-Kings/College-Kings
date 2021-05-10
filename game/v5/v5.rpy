@@ -1697,12 +1697,11 @@ label continueaf:
                         u "What? No, I'm just a friend looking for her, where is she?"
 
                         if kct == "confident":
-                            call screen popup8
+                            call screen kctPopup
 
-                            label popup8:
-                                unknown "Uhm, alright, she's at some classroom for her personality test thing."
+                            unknown "Uhm, alright, she's at some classroom for her personality test thing."
 
-                                u "Thanks"
+                            u "Thanks"
 
                         else:
                             unknown "Yeah, right. Fuck off."
@@ -1785,54 +1784,53 @@ label continueaf:
         u "I- I just got carried away."
 
         if kct == "loyal":
-            call screen popup9
+            call screen kctPopup
 
-            label popup9:
-                scene s380b
-                with dissolve
+            scene s380b
+            with dissolve
 
-                la "When you continued pushing your hand up my thigh after I told you I didn't want it, you... you made me feel disgusting."
+            la "When you continued pushing your hand up my thigh after I told you I didn't want it, you... you made me feel disgusting."
 
-                la "But I know that you're really sorry and I don't wanna be mad at you."
+            la "But I know that you're really sorry and I don't wanna be mad at you."
 
-                la "That's if you're okay with just being friends again for now?"
+            la "That's if you're okay with just being friends again for now?"
 
-                scene s380c
-                with dissolve
+            scene s380c
+            with dissolve
 
-                u "Yeah, of course."
+            u "Yeah, of course."
 
-                scene s380
-                with dissolve
+            scene s380
+            with dissolve
 
-                la "Good."
+            la "Good."
 
-                scene s380a
-                with dissolve
+            scene s380a
+            with dissolve
 
-                u "What are you doing here anyways?"
+            u "What are you doing here anyways?"
 
-                scene s380d
-                with dissolve
+            scene s380d
+            with dissolve
 
-                la "For my psychology class I need someone to do a personality test with me which I can then analyze, but my friend just cancelled on me."
+            la "For my psychology class I need someone to do a personality test with me which I can then analyze, but my friend just cancelled on me."
 
-                scene s380e
-                with dissolve
+            scene s380e
+            with dissolve
 
-                u "I can do it."
+            u "I can do it."
 
-                scene s380
-                with dissolve
+            scene s380
+            with dissolve
 
-                la "Really? That'd be amazing."
+            la "Really? That'd be amazing."
 
-                scene s380a
-                with dissolve
+            scene s380a
+            with dissolve
 
-                u "Yeah, sure."
+            u "Yeah, sure."
 
-                jump gotest
+            jump gotest
 
         else:
             la "When you continued pushing your hand up my thigh after I told you I didn't want it, you... you made me feel disgusting."
@@ -1927,67 +1925,65 @@ label continueaf:
         u "I- I just wanted to be honest with you."
 
         if kct == "loyal":
-            call screen popup10
+            call screen kctPopup
 
-            label popup10:
+            $ laurenrs = True
 
-                $ laurenrs = True
+            scene s380b
+            with dissolve
 
-                scene s380b
-                with dissolve
+            la "Thinking of you with another girl made me feel really weird."
 
-                la "Thinking of you with another girl made me feel really weird."
+            la "But I know that I shouldn't be mad because we weren't technically dating or anything."
 
-                la "But I know that I shouldn't be mad because we weren't technically dating or anything."
+            scene s380
+            with dissolve
 
-                scene s380
-                with dissolve
+            la "So, how about we just continue where we left off?"
 
-                la "So, how about we just continue where we left off?"
+            scene s380a
+            with dissolve
 
-                scene s380a
-                with dissolve
+            u "Yeah, I'd love that."
 
-                u "Yeah, I'd love that."
+            u "And don't worry, now that I know how important this is to you, I'll count it as us dating from now on."
 
-                u "And don't worry, now that I know how important this is to you, I'll count it as us dating from now on."
+            scene s380
+            with dissolve
 
-                scene s380
-                with dissolve
+            la "Good."
 
-                la "Good."
+            scene s380a
+            with dissolve
 
-                scene s380a
-                with dissolve
+            u "What are you doing here anyways?"
 
-                u "What are you doing here anyways?"
+            scene s380d
+            with dissolve
 
-                scene s380d
-                with dissolve
+            la "For my psychology class I need someone to do a personality test with me which I can then analyze, but my friend just cancelled on me."
 
-                la "For my psychology class I need someone to do a personality test with me which I can then analyze, but my friend just cancelled on me."
+            scene s380e
+            with dissolve
 
-                scene s380e
-                with dissolve
+            u "I can do it."
 
-                u "I can do it."
+            scene s380
+            with dissolve
 
-                scene s380
-                with dissolve
+            la "Really? That'd be amazing."
 
-                la "Really? That'd be amazing."
+            scene s380a
+            with dissolve
 
-                scene s380a
-                with dissolve
+            u "Yeah, sure."
 
-                u "Yeah, sure."
+            scene s379a
+            with dissolve
 
-                scene s379a
-                with dissolve
+            play sound "sounds/kiss.mp3"
 
-                play sound "sounds/kiss.mp3"
-
-                pause 0.5
+            pause 0.5
 
         else:
             scene s380b
@@ -4381,7 +4377,7 @@ label findimre:
             u "(I gotta make a decision. Should I help Imre, or meet Chloe?)"
 
 label endaa:
-    if persistent.ep > 5:
+    if persistent.ep == 5:
         jump v6start
     else:
         jump end_credits

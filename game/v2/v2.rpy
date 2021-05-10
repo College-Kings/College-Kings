@@ -1366,53 +1366,52 @@ label meet_lauren2:
                 $ laurenrs = True
 
                 if kct == "loyal":
-                    call screen popup1
+                    call screen kctPopup
 
-                label popup1:
-                    scene s131 ### Lauren grabbing your hand on the table
-                    with dissolve
+                scene s131 ### Lauren grabbing your hand on the table
+                with dissolve
 
-                    " "
+                " "
 
-                    scene s130d # Lauren romancing at you holding your hand
-                    with dissolve
+                scene s130d # Lauren romancing at you holding your hand
+                with dissolve
 
-                    $ anewbeginning = True
-                    if not steam:
-                        show anewbeginning at achievementShow
-                    else:
-                        $ achievement.grant("a_new_beginning")
-                        $ achievement.sync()
+                $ anewbeginning = True
+                if not steam:
+                    show anewbeginning at achievementShow
+                else:
+                    $ achievement.grant("a_new_beginning")
+                    $ achievement.sync()
 
-                    la "Maybe you're right."
+                la "Maybe you're right."
 
+                scene s130e
+                with dissolve
+
+                u "Then let's go on a date. A real date."
+
+                u "How about the movies? Tomorrow night."
+
+                scene s130d
+                with dissolve
+
+                la "Okay yeah, let's do it."
+
+                scene s130e
+                with dissolve
+
+                u "I'm really sorry, I'm late for class, but I'll see you tomorrow."
+
+                scene s130d
+                with dissolve
+
+                la "Alright, see you tomorrow."
+
+                if fighttom and not wintom:
                     scene s130e
                     with dissolve
 
-                    u "Then let's go on a date. A real date."
-
-                    u "How about the movies? Tomorrow night."
-
-                    scene s130d
-                    with dissolve
-
-                    la "Okay yeah, let's do it."
-
-                    scene s130e
-                    with dissolve
-
-                    u "I'm really sorry, I'm late for class, but I'll see you tomorrow."
-
-                    scene s130d
-                    with dissolve
-
-                    la "Alright, see you tomorrow."
-
-                    if fighttom and not wintom:
-                        scene s130e
-                        with dissolve
-
-                        u "(I should probably wash the blood off my face in the restroom before I go to class.)"
+                    u "(I should probably wash the blood off my face in the restroom before I go to class.)"
 
             else:
                 scene s130f # lauren flustered
@@ -3223,49 +3222,46 @@ label try3new:
             u "Oh come on, Aubrey. I wanna see."
 
             if kct == "popular":
-                call screen popup2
+                call screen kctPopup
             else:
                 au "Sorry but... I'm gonna get dressed again."
-
 
                 u "Alright, fine."
 
                 jump by_bd
 
-            label popup2:
+            au "Okay, fine. Just for you."
 
-                au "Okay, fine. Just for you."
+            scene s175 # showing u in costume and aubrey in custome
+            with Fade (1,0,1)
 
-                scene s175 # showing u in costume and aubrey in custome
-                with Fade (1,0,1)
+            pause 0.5
 
-                pause 0.5
+            scene s176a # aubrey like  I told you
+            with dissolve
 
-                scene s176a # aubrey like  I told you
-                with dissolve
+            u "Holy shit, you weren't exaggerating. That is revealing."
 
-                u "Holy shit, you weren't exaggerating. That is revealing."
+            scene s176
+            with dissolve
 
-                scene s176
-                with dissolve
+            au "See what I mean now? Can I get dressed again?"
 
-                au "See what I mean now? Can I get dressed again?"
+            scene s176a
+            with dissolve
 
-                scene s176a
-                with dissolve
+            u "You sure you don't wanna keep this on for the rest of the day?"
 
-                u "You sure you don't wanna keep this on for the rest of the day?"
+            scene s176b # aub laughing
+            with dissolve
 
-                scene s176b # aub laughing
-                with dissolve
+            au "Haha yes. I hope you got a good look, 'cause I'm changing back."
 
-                au "Haha yes. I hope you got a good look, 'cause I'm changing back."
+            au "Also, this cowboy outfit is probably the worst thing I've ever seen anyone wear."
 
-                au "Also, this cowboy outfit is probably the worst thing I've ever seen anyone wear."
+            au "So let's get out of these outfits."
 
-                au "So let's get out of these outfits."
-
-                call screen costumes
+            call screen costumes
 
         "Fine.":
             hide screen influenceTutorial
@@ -3874,23 +3870,21 @@ label v1_caughtContinue:
             u "What are you talking about? You probably just saw my foot."
 
             if kct == "confident":
-                call screen popup3
+                call screen kctPopup
 
-                label popup3:
+                $ caughtpeekingaubreycounter = True
 
-                    $ caughtpeekingaubreycounter = True
+                scene s177d # aub embarassed
+                with dissolve
 
-                    scene s177d # aub embarassed
-                    with dissolve
+                au "Wait really?"
 
-                    au "Wait really?"
+                au "Ooops, I guess never mind, let's just buy a costume."
 
-                    au "Ooops, I guess never mind, let's just buy a costume."
+                scene s177e
+                with dissolve
 
-                    scene s177e
-                    with dissolve
-
-                    u "Yeah, it's fine. I'll pick one."
+                u "Yeah, it's fine. I'll pick one."
 
             else:
                 scene s177b # aubrey disappointed
@@ -3999,9 +3993,7 @@ label v1_caughtContinue_pen:
             u "What are you talking about? You probably just saw my foot."
 
             if kct == "confident":
-                call screen popup4
-
-                label popup4:
+                call screen kctPopup
 
                 $ caughtpeekingpenelopecounter = True
 

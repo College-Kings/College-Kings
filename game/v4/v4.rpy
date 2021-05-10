@@ -1126,39 +1126,38 @@ label v4start:
                 u "You have to believe me. I care about Lauren, I'd never do anything to hurt her."
 
                 if kct == "loyal":
-                    call screen popup6
+                    call screen kctPopup
 
-                    label popup6:
-                        scene s334d # autumn emphatic
-                        with dissolve
+                    scene s334d # autumn emphatic
+                    with dissolve
 
-                        aut "Hm... I know you guys weren't serious or anything yet."
+                    aut "Hm... I know you guys weren't serious or anything yet."
 
-                        aut "But... you really hurt Lauren."
+                    aut "But... you really hurt Lauren."
 
-                        scene s334e
-                        with dissolve
+                    scene s334e
+                    with dissolve
 
-                        u "I know and I'm really sorry. It won't happen again, I promise."
+                    u "I know and I'm really sorry. It won't happen again, I promise."
 
-                        scene s334d
-                        with dissolve
+                    scene s334d
+                    with dissolve
 
-                        aut "I believe you. At least you were honest about it and I don't think many guys would be."
+                    aut "I believe you. At least you were honest about it and I don't think many guys would be."
 
-                        aut "I'll talk to Lauren about it."
+                    aut "I'll talk to Lauren about it."
 
-                        scene s334e
-                        with dissolve
+                    scene s334e
+                    with dissolve
 
-                        u "Thank you. Does that mean I can keep sitting here?"
+                    u "Thank you. Does that mean I can keep sitting here?"
 
-                        scene s334f #autumn kind smile
-                        with dissolve
+                    scene s334f #autumn kind smile
+                    with dissolve
 
-                        aut "Yeah, I guess."
+                    aut "Yeah, I guess."
 
-                        jump autumnsita
+                    jump autumnsita
 
                 else:
                     $ autumnmad = True
@@ -1213,40 +1212,39 @@ label v4start:
                 u "You have to believe me. I care about Lauren, I'd never do anything to hurt her."
 
                 if kct == "loyal":
-                    call screen popup7
+                    call screen kctPopup
 
-                    label popup7:
-                        $ autumnmad = False
-                        scene s334d # autumn emphatic
-                        with dissolve
+                    $ autumnmad = False
+                    scene s334d # autumn emphatic
+                    with dissolve
 
-                        aut "[name]... I don't know."
+                    aut "[name]... I don't know."
 
-                        aut "What you did was really messed up... you should have stopped when she told you to."
+                    aut "What you did was really messed up... you should have stopped when she told you to."
 
-                        scene s334e
-                        with dissolve
+                    scene s334e
+                    with dissolve
 
-                        u "I know and I'm really sorry. I'll never do anything like that again, I promise."
+                    u "I know and I'm really sorry. I'll never do anything like that again, I promise."
 
-                        scene s334d
-                        with dissolve
+                    scene s334d
+                    with dissolve
 
-                        aut "Hmmm... I mean I can understand that stuff like this can happen. It's just..."
+                    aut "Hmmm... I mean I can understand that stuff like this can happen. It's just..."
 
-                        aut "You know what? I'll talk to Lauren about it."
+                    aut "You know what? I'll talk to Lauren about it."
 
-                        scene s334e
-                        with dissolve
+                    scene s334e
+                    with dissolve
 
-                        u "Thank you. Does that mean I can keep sitting here?"
+                    u "Thank you. Does that mean I can keep sitting here?"
 
-                        scene s334f #autumn kind smile
-                        with dissolve
+                    scene s334f #autumn kind smile
+                    with dissolve
 
-                        aut "Yeah, alright."
+                    aut "Yeah, alright."
 
-                        jump autumnsita
+                    jump autumnsita
 
                 else:
                     $ autumnmad = True

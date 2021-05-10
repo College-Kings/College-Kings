@@ -1346,9 +1346,7 @@ label conl:
     scene s249a
     with vpunch
 
-    call screen popup5
-
-    label popup5:
+    call screen fightPopup("Body Hook")
 
     play music "music/m16punk.mp3"
 
