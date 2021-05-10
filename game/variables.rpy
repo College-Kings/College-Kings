@@ -354,3 +354,9 @@ default playCoolWLins = False
 default lindseyfirstkiss = False
 
 # 10.0
+default jennyLike = 0
+default penelopeLike = 0
+default mrleeLike = 0
+default v10_inv_pen_cafe = False
+default v10_simplr_known = False
+default v10_reassure_jenny = False
