@@ -362,3 +362,4 @@ default aubreyLike = 0
 default v10_inv_pen_cafe = False
 default v10_simplr_known = False
 default v10_reassure_jenny = False
+default v10_chloe_rematch = False
