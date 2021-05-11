@@ -379,3 +379,4 @@ default v10_ryan_win = False
 default v10_imre_fight = False
 default v10_imre_fight = False
 default v10_ms_r_interfere = False
+default v10_josh_alley_yes = False
