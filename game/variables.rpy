@@ -116,7 +116,6 @@ default autumnmad = False
 default muffin = False
 default penelopekiss = False
 default bowling = False
-default jorep12 = 0 # Restored to determine a dialogue
 default shotamber = True
 default kissamber = False
 default kisskim = False
