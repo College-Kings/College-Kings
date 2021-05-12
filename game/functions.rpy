@@ -11,14 +11,15 @@ init -1 python:
         loyal = bro * boyfriend / troublemaker
         confident = boyfriend * troublemaker / bro
 
-        oldKCT = kct
+        oldKCT = getattr(store, "kct")
 
         # Decide the new order of traits based on the updated values
         kctDict = { "popular": popular, "confident": confident, "loyal": loyal }
 
-        kct = max(kctDict, key=kctDict.get)
+        newKCT = max(kctDict, key=kctDict.get)
+        setattr(store, "kct", newKCT)
 
-        if kct != oldKCT:
+        if newKCT != oldKCT:
             renpy.notify("Your KCT has changed to " + kct)
         
     # Mark disabled choices
