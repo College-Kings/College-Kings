@@ -2,7 +2,7 @@ init python:
     class KiwiiPost:
         def __init__(self, user, img, message="", mentions=None, numberLikes=0, comments=None):
             self.user = user
-            self.img = "images/phone/kiwii/posts/{}".format(img))
+            self.img = "images/phone/kiwii/posts/{}".format(img)
             self.message = message
 
             if isinstance(mentions, basestring): self.mentions = [mentions]
@@ -21,6 +21,8 @@ init python:
             self.getProfilePicture()
 
             kiwiiPosts.append(self)
+
+            kiwiiApp.unlock()
             kiwiiApp.notification = True
 
         def toggleLike(self):
@@ -522,19 +524,6 @@ screen kiwii_image(img):
         idle Transform(img, zoom=0.85)
         action Hide("kiwii_image")
         align (0.5, 0.5)
-
-label kiwii_firstTime:
-    $ kiwii_firstTime = False
-    play sound "sounds/vibrate.mp3"
-    if emilyrs:
-        $ contact_Riley.addReply("We're not back together", "rirep3a")
-    if bowling and emilyrs:
-        $ contact_Penelope.newMessage("I didn't know you and Emily were a thing...")
-    if emilyrs and laurenrs:
-        $ contact_Lauren.newMessage("I saw what Emily posted. I really thought you liked me...")
-        $ contact_Lauren.newMessage("I guess we're done now, so please just delete my number.")
-        $ contact_Lauren.addReply("Lauren can we please just talk about it? I can explain", "larep16a")
-    call screen kiwiiPreferences()
 
 style kiwii_PrefTextButton is button_text:
     font "fonts/OpenSans-Bold.ttf"
