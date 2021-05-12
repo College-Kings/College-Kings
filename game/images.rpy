@@ -30,6 +30,14 @@ image reignition = "images/reignition.webp"
 image seemsfishy = "images/seemsfishy.webp"
 image monkeybusiness = "images/monkeybusiness.webp"
 image strike = "images/strike.webp"
+image truetoself = "images/truetoself.webp"
+image silverback = "images/silverback.webp"
+image wolfpack = "images/wolfpack.webp"
+image leeway = "images/lee-way.webp"
+image ecstatic = "images/ecstatic.webp"
+image slowandsteady = "images/slowandsteady.webp"
+image playingwithfire = "images/playingwithfire.webp"
+image homecomingqueen = "images/homecomingqueen.webp"
 
 # v1.0 - v2.0
 image s14 = "images/s14.webp"
@@ -158,6 +166,26 @@ image naubvid12 = Movie (play="images/naubvid12.webm", loop = True, image = "ima
 image naubvid13 = Movie (play="images/naubvid13.webm", loop = False, image = "images/naub13end.webp", start_image = "images/naub13start.webp")
 
 image carbacknight = Movie(play="images/carbacknight.webm")
+
+# v7.0
+image s738avid = Movie (play="images/s738avid.webm", loop = False, image = "images/s738avid75.webp", start_image = "images/s738avid16.webp")
+
+image risexvid1 = Movie (play="images/risexvid1.webm", loop = True, image = "images/risex1vid20.webp", start_image = "images/risex1vid00.webp")
+image risexvid2s = Movie (play="images/risexvid2s.webm", loop = True, image = "images/rivid378.webp", start_image = "images/rivid360.webp")
+image risexvid2f = Movie (play="images/risexvid2f.webm", loop = True, image = "images/rivid378.webp", start_image = "images/rivid360.webp")
+image risexvid3s = Movie (play="images/risexvid3s.webm", loop = True, image = "images/rivid498.webp", start_image = "images/rivid478.webp")
+image risexvid3f = Movie (play="images/risexvid3f.webm", loop = True, image = "images/rivid498.webp", start_image = "images/rivid478.webp")
+image risexvid6s = Movie (play="images/risexvid6s.webm", loop = True, image = "images/rivid7_068.webp", start_image = "images/rivid7_052.webp")
+image risexvid6f = Movie (play="images/risexvid6f.webm", loop = True, image = "images/rivid7_068.webp", start_image = "images/rivid7_052.webp")
+image risexvid7 = Movie (play="images/risexvid7.webm", loop = True, image = "images/rivid8070.webp", start_image = "images/rivid8052.webp")
+image risexvid8 = Movie (play="images/risexvid8.webm", loop = False, image = "images/rivid8070.webp", start_image = "images/rivid8052.webp")
+
+image ri42vid = Movie (play="images/ri42vid.webm", loop = True, image = "images/ri42vid20.webp", start_image = "images/ri42vid00.webp")
+image ri42vidperspective = Movie (play="images/ri42vidperspective.webm", loop = True, image = "images/ri42vidperspective20.webp", start_image = "images/ri42vidperspective00.webp")
+image ri42vidfast = Movie (play="images/ri42vidfast.webm", loop = True, image = "images/ri42vid20.webp", start_image = "images/ri42vid00.webp")
+image ri42vidperspectivefast = Movie (play="images/ri42vidperspectivefast.webm", loop = True, image = "images/ri42vidperspective20.webp", start_image = "images/ri42vidperspective00.webp")
+
+
 
 # Misc
 image credits = Movie(play="images/credits.webm", Loop = True)
