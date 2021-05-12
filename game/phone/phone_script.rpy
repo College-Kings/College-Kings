@@ -3,7 +3,7 @@ default statsApp = Application("Stats", "stats/appAssets/statsIcon.webp", "stats
 default achApp = Application("Achievements", "achievements/appAssets/achievementsIcon.webp", "achievements")
 default kiwiiApp = Application("Kiwii", "kiwii/appAssets/kiwiiIcon.webp", "kiwiiApp", locked=False)
 default fightApp = Application("Fights", "fights/appAssets/messagesIcon.webp", "fightApp", locked=True)
-default simplrApp = Application("Simplr", "simplr/appAssets/messagesIcon.webp", "simplrApp", locked=False)
+default simplrApp = Application("Simplr", "simplr/appAssets/simplrIcon.webp", "simplrApp", locked=False)
 
 default contact_Emily = Contact("Emily", "emilyprofilepic.webp")
 default contact_Lauren = Contact("Lauren", "laurenprofilepic.webp")
