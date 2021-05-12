@@ -236,8 +236,6 @@ label v1start:
 
     $ statsApp.unlock()
 
-    play sound "sounds/vibrate.mp3"
-
     ju "Fraternities can be dangerous, honey."
     
     hide s15
