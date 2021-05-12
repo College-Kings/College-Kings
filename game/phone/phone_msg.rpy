@@ -233,7 +233,7 @@ screen messager(contact=None):
                         style "replybox"
                         action Show("reply", contact=contact)
 
-    if kiwii:
+    if kiwii_firstTime:
         timer 0.1 action Show("kiwiiPopup")
 
 
