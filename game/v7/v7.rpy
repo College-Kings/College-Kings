@@ -1,14 +1,56 @@
-label emrep4a:
-call screen messager(contact_Emily)
+init python:
+    def v7_kiwiiReply1():
+        KiwiiPost1.addComment("Cameron", "Lol, pussy", mentions="MC", numberLikes=renpy.random.randint(1, 10))
+        addPoint("bf")
 
-label start7:
-label v07:
+    def v7_kiwiiReply2():
+        KiwiiPost1.addComment("Imre", "Slide into her DMs bro!", mentions="MC", numberLikes=renpy.random.randint(5, 15))
+        addPoint("bro")
+        addPoint("tm")
 
+    def v7_kiwiiReply3():
+        addPoint("bf")
+
+    def v7_kiwiiReply4():
+        KiwiiPost2.addComment("Autumn", "Yeah, they really are", mentions="MC", numberLikes=renpy.random.randint(8, 18))
+    
+    def v7_kiwiiReply5():
+        addPoint("bro")
+        KiwiiPost3.addComment("Aubrey", "Bring it on!", mentions="MC", numberLikes=renpy.random.randint(15, 35))
+
+    def v7_kiwiiReply6():
+        addPoint("tm")
+        KiwiiPost4.addComment("Josh", "lol", mentions="MC", numberLikes=renpy.random.randint(3, 7))
+
+    def v7_msgReply1():
+        setattr(store, "tellpenelope", True)
+        addPoint("bro")
+        contact_Penelope.newMessage("Okay...")
+
+    def v7_msgReply2():
+        contact_Penelope.newMessage("Okay...")
+
+    def v7_msgReply3():
+        contact_Lauren.newMessage("How about now?")
+        contact_Lauren.addReply("Sure, I'll come pick you up")
+        contact_Lauren.newMessage("Great :)")
+
+    def v7_msgReply4():
+        setattr(store, "nobeach", True)
+        contact_Lauren.newMessage("Oh okay, another time then.")
+
+    def v7_msgReply5():
+        setattr(store, "rileysex", True)
+        contact_Riley.newMessage("Yayyy")
+
+    def v7_msgReply6():
+        contact_Riley.newMessage("Oh oki")
+
+label v7start:
     if caughtpeekingpenelope and not caughtpeekingpenelopecounter:
         $ penelopemad = True
     elif penelopekiss:
         $ penelopemad = True
-
 
 ######## SCENE 1 Chris in Wolves secret room
     scene s673 # #showing the room (not showing you or chris)with 6v large portraits and one empty frame on the wall
@@ -200,45 +242,34 @@ label v07:
     with dissolve
 
     menu:
-
         "Why aren't you on here?":
             $ addPoint("bro")
             $ addPoint("tm")
-            jump hg_a
+
+            u "So, I don't know if it's weird asking, but if you're not one of the Fight Kings, how come you're the current president?"
+
+            scene s674
+            with dissolve
+
+            ch "Well the year before me, Chuck was president. It was his last year, so I got voted in."
+
+            ch "We need a new president every one or two years so some presidents aren't Fight Kings."
+
+            ch "Of course my goal is to become one and get on that wall."
+
+            ch "But I also believe that being president whilst someone else wins for the Wolves is just as big of an honor as winning yourself."
+
+            ch "A good leader doesn't need to be the best fighter."
+
+            scene s674a
+            with dissolve
+
+            u "Yeah, I can see that. But winning must be surreal too."
 
         "That's really impressive.":
             $ addPoint("bf")
-            jump hg_b
 
-    label hg_a:
-
-    u "So, I don't know if it's weird asking, but if you're not one of the Fight Kings, how come you're the current president?"
-
-    scene s674
-    with dissolve
-
-    ch "Well the year before me, Chuck was president. It was his last year, so I got voted in."
-
-    ch "We need a new president every one or two years so some presidents aren't Fight Kings."
-
-    ch "Of course my goal is to become one and get on that wall."
-
-    ch "But I also believe that being president whilst someone else wins for the Wolves is just as big of an honor as winning yourself."
-
-    ch "A good leader doesn't need to be the best fighter."
-
-    scene s674a
-    with dissolve
-
-    u "Yeah, I can see that. But winning must be surreal too."
-
-    jump hg_ad
-
-    label hg_b:
-
-    u "That's really impressive. Winning the entire tournament must be surreal."
-
-    label hg_ad:
+            u "That's really impressive. Winning the entire tournament must be surreal."
 
     scene s674
     with dissolve
@@ -284,13 +315,11 @@ label v07:
     u "(I should go back down too.)"
 
 ######## SCENE 2 End of the Party
-
     play music "music/mparty2.mp3"
 
     queue music [ "music/mparty3.mp3", "music/mparty4.mp3"]
 
     if imremad:
-
         scene s680 # showing mc in Wolves house living room where Aaron is talking to Aubrey
         with fade
 
@@ -333,9 +362,7 @@ label v07:
 
         u "(Dammit.)"
 
-
     else:
-
         scene s680 # showing mc in living room where Aaron is talking to Aubrey
         with fade
 
@@ -368,13 +395,7 @@ label v07:
 
         u "(I guess I'm going home without him.)"
 
-
-    if fr3riley == True and askfinn == False:
-
-        if upstairs == "riley" and joinapes == True:
-            jump nonoriri
-
-
+    if fr3riley and not askfinn and upstairs != "riley" and not joinapes:
         ri "[name]?"
 
         scene s683a #Closeup riley mouth closed standing in kitchen curious
@@ -391,8 +412,6 @@ label v07:
         with dissolve
 
         u "Uhm-"
-
-    label nonoriri:
 
     scene s684 # showing Nora and Chris arguing
     with dissolve
@@ -414,111 +433,89 @@ label v07:
 
     ch "I swear she finds new reasons to get upset every day."
 
-    if fr3riley == True and askfinn == False:
-
-        if upstairs == "riley" and joinapes == True:
-            jump nonoririb
-
+    if fr3riley and not askfinn:
         scene s683
         with dissolve
 
         ri "Soo? Are you walking me home?"
 
         menu:
-
             "Walk Riley home":
                 $ follownora = False
                 $ addPoint("bro")
-                jump hd_a
+
+                scene s683a
+                with dissolve
+
+                $ truetoself = True
+                if not steam:
+                    show truetoself at achievementShow
+                else:
+                    $ achievement.grant("true_to_self")
+                    $ achievement.sync()
+
+                u "Uhh, yeah of course."
+
+                scene s683b # Riley smiling
+                with dissolve
+
+                ri "Great, let's go."
+
+                jump hd_ad
 
             "Go after Nora":
                 $ follownora = True
                 $ addPoint("tm")
-                jump hd_b
+
+                scene s683a
+                with dissolve
+
+                u "Uhm... I don't mean to do this, but I told a friend I was gonna catch up with him since yesterday and it just slipped my mind."
+
+                scene s683d # Riley a bit sad
+                with dissolve
+
+                ri "Really? Okay..."
+
+                scene s683e
+                with dissolve
+
+                u "Yeah, I'm really sorry. I just completely spaced it."
+
+                scene s683d
+                with dissolve
+
+                ri "Yeah, it's okay. I asked you after. It's cool."
+
+                scene s683e
+                with dissolve
+
+                u "Thanks. Get home safe."
 
     else:
-
-        label nonoririb:
-
         scene s686 # First person looking at backyard door that nora just walked out of
         with dissolve
 
         u "(Wow, Nora seemed really upset...)"
 
         menu:
-
             "Go after Nora":
                 u "(I should go after her and make sure she's okay.)"
+
                 $ addPoint("bf")
                 $ follownora = True
-                jump hd_bd
 
             "Leave her alone":
                 u "(I should leave her alone, she probably just wants to be alone right now.)"
                 u "(It's late anyway, I better go home.)"
+
                 $ addPoint("bro")
                 $ follownora = False
+
                 jump conwalkhome
 
-    label hd_a:
-
-    scene s683a
-    with dissolve
-
-    $ truetoself = True
-    if not steam:
-        image truetoself = "images/truetoself.webp"
-        show truetoself:
-            xpos 0
-            ypos -200
-            linear 0.5 xpos 0 ypos 0
-            pause 2.0
-            linear 0.5 xpos 0 ypos -200
-    else:
-        $ achievement.grant("true_to_self")
-        $ achievement.sync()
-
-    u "Uhh, yeah of course."
-
-    scene s683b # Riley smiling
-    with dissolve
-
-    ri "Great, let's go."
-
-    jump hd_ad
-
-    label hd_b:
-
-    scene s683a
-    with dissolve
-
-    u "Uhm... I don't mean to do this, but I told a friend I was gonna catch up with him since yesterday and it just slipped my mind."
-
-    scene s683d # Riley a bit sad
-    with dissolve
-
-    ri "Really? Okay..."
-
-    scene s683e
-    with dissolve
-
-    u "Yeah, I'm really sorry. I just completely spaced it."
-
-    scene s683d
-    with dissolve
-
-    ri "Yeah, it's okay. I asked you after. It's cool."
-
-    scene s683e
-    with dissolve
-
-    u "Thanks. Get home safe."
-
-    jump hd_bd
-
 ####### SCENE 3 Outside with Nora
-
-    label hd_bd:
+label hd_bd:
     stop music fadeout 1
     play sound "sounds/dooropen.mp3"
     scene s688 # You walk open the backyard door
@@ -539,7 +536,6 @@ label v07:
     pause 0.5
 
     if not fr3nora:
-
         scene s699 # Close up Nora upset, a bit passive aggressive
         with dissolve
 
@@ -600,396 +596,376 @@ label v07:
 
         u "(It's really late so I might as well go home now.)"
 
-        jump conwalkhome
+    elif noramad:
+        scene s699
+        with dissolve
+
+        no "What do you want?"
+
+        scene s699a
+        with dissolve
+
+        u "Just wanted to make sure you're okay."
+
+        scene s699
+        with dissolve
+
+        no "Why? So you can accuse me of being a jealous bitch again?"
+
+        scene s699a
+        with dissolve
+
+        u "Okay first of all, that's not what I said. Also I just saw you run out and I was concerned. That's all."
+
+        scene s699
+        with dissolve
+
+        no "Can you just leave me alone? I don't need another lecture."
+
+        scene s699a
+        with dissolve
+
+        u "Nora, I didn't-"
+
+        scene s699b
+        with dissolve
+
+        no "Please."
+
+        scene s699c
+        with dissolve
+
+        u "Yeah, alright. Sorry."
+
+        scene s700 # showing mc walking back inside
+        with dissolve
+
+        u "(It's really late so I might as well go home now.)"
 
     else:
+        scene s699
+        with dissolve
 
-        if noramad == True:
+        no "Yes?"
 
-            scene s699
+        scene s699a
+        with dissolve
+
+        u "I saw you run out, you looked pretty upset."
+
+        scene s699b
+        with dissolve
+
+        no "Yeah, just feels like a load of shit tonight. One thing after the other."
+
+        scene s699c
+        with dissolve
+
+        u "You wanna talk about it?"
+
+        scene s699b
+        with dissolve
+
+        no "It's just Chris... Sometimes he makes me feel like I don't even matter to him.. He's so, so, he just cares about the frat so much more than about me."
+
+        scene s699c
+        with dissolve
+
+        u "I'm sure Chris cares about you much more than he shows."
+
+        scene s699b
+        with dissolve
+
+        no "Maybe... Like it's fine that he's president and all and that's important, but he's been with everyone all night."
+
+        no "I just wanted to know if he would wanna go to bed soon so we can at least have some private couple time this week."
+
+        scene s699b
+        with dissolve
+
+        u "Yeah, I get that. Like you should make time for each other. You make time for him as well when you're busy, right?"
+
+        scene s699d # Nora still a bit sad but also hopeful that you believe her
+        with dissolve
+
+        no "Yeah, right. So you don't think I'm overreacting?"
+
+        scene s699e
+        with dissolve
+
+        u "Not at all."
+
+        scene s699d
+        with dissolve
+
+        no "And he doesn't see it at all. Every time I try to say something to him, he tells me that I'm being selfish and don't care about the Wolves at all."
+
+        no "I'm literally so supportive of him... It's annoying that he doesn't even see that."
+
+        scene s699e
+        with dissolve
+
+        u "I can imagine."
+
+        u "You know what I think you need right now?"
+
+        scene s699d
+        with dissolve
+
+        no "What?"
+
+        scene s699e
+        with dissolve
+
+        u "I think you need someone to cheer you up."
+
+        scene s699b
+        with dissolve
+
+        no "And you let me guess, you're that someone."
+
+        scene s699c
+        with dissolve
+
+        u "Come on let's do something fun. It'll take your mind of things."
+
+        if kct == "confident":
+            $ noraclose = True
+            call screen kctPopup
+
+            scene s699f # nora curious smile
             with dissolve
 
-            no "What do you want?"
+            no "Okay, let me hear it."
 
-            scene s699a
+            scene s699g
             with dissolve
 
-            u "Just wanted to make sure you're okay."
+            u "Let's play never have I ever."
 
-            scene s699
+            scene s699f
             with dissolve
 
-            no "Why? So you can accuse me of being a jealous bitch again?"
+            no "Really? You can't be serious."
 
-            scene s699a
+            scene s699g
             with dissolve
 
-            u "Okay first of all, that's not what I said. Also I just saw you run out and I was concerned. That's all."
+            u "It'll be fun. Come on!"
 
-            scene s699
+            scene s699f
             with dissolve
 
-            no "Can you just leave me alone? I don't need another lecture."
+            no "We don't even have drinks."
 
-            scene s699a
+            scene s699g
             with dissolve
 
-            u "Nora, I didn't-"
-
-            scene s699b
-            with dissolve
-
-            no "Please."
-
-            scene s699c
-            with dissolve
-
-            u "Yeah, alright. Sorry."
+            u "Give me one second."
 
             scene s700 # showing mc walking back inside
             with dissolve
 
-            u "(It's really late so I might as well go home now.)"
+            pause 0.5
 
-            jump conwalkhome
-
-        else:
-
-            scene s699
+            scene s700a # mc grabbing two beers from the fridge
             with dissolve
 
-            no "Yes?"
+            pause 0.5
 
-            scene s699a
+            scene s700b # mc comes back to Nora with 2 beers, handing one to Nora
             with dissolve
 
-            u "I saw you run out, you looked pretty upset."
+            u "Here you go."
 
-            scene s699b
+            scene s701 # Nora and mc sitting down on the ground
             with dissolve
 
-            no "Yeah, just feels like a load of shit tonight. One thing after the other."
+            no "Alright, fine. You start."
 
-            scene s699c
+            scene s702a # Close up Nora sitting down looking at you slight smile and eyebrow raised a bit mouth closed
             with dissolve
 
-            u "You wanna talk about it?"
+            u "Alright, let's see... Uh.. Never have I ever... stolen a car."
 
-            scene s699b
+            scene s702b # Nora drinks
             with dissolve
 
-            no "It's just Chris... Sometimes he makes me feel like I don't even matter to him.. He's so, so, he just cares about the frat so much more than about me."
+            u "What!? You serious! That one I thought for sure was just a shot in the dark. Haha."
 
-            scene s699c
+            scene s702d # Nora laughing/ smiling
             with dissolve
 
-            u "I'm sure Chris cares about you much more than he shows."
+            no "Nothing crazy. Was just my parent's car. I was like 13."
 
-            scene s699b
+            scene s702e
             with dissolve
 
-            no "Maybe... Like it's fine that he's president and all and that's important, but he's been with everyone all night."
+            u "Man, you're wild."
 
-            no "I just wanted to know if he would wanna go to bed soon so we can at least have some private couple time this week."
-
-            scene s699b
+            scene s702f # Nora flirty
             with dissolve
 
-            u "Yeah, I get that. Like you should make time for each other. You make time for him as well when you're busy, right?"
+            no "Okay, my turn. Hmm... Never have I ever... been hit in the face."
 
-            scene s699d # Nora still a bit sad but also hopeful that you believe her
+            scene s702g
             with dissolve
 
-            no "Yeah, right. So you don't think I'm overreacting?"
+            u "Oh come on, that's not even fair."
 
-            scene s699e
+            scene s703 # showing mc drinking
             with dissolve
 
-            u "Not at all."
+            no "*Laughs* I like to win."
 
-            scene s699d
+            scene s702g
             with dissolve
 
-            no "And he doesn't see it at all. Every time I try to say something to him, he tells me that I'm being selfish and don't care about the Wolves at all."
+            u "Alright, you wanna play like that? Never have I ever hooked up with a guy."
 
-            no "I'm literally so supportive of him... It's annoying that he doesn't even see that."
-
-            scene s699e
+            scene s702f # Nora flirty
             with dissolve
 
-            u "I can imagine."
+            no "Oh wow."
 
-            u "You know what I think you need right now?"
-
-            scene s699d
+            scene s702b
             with dissolve
 
-            no "What?"
+            u "You brought this onto yourself."
 
-            scene s699e
+            scene s702f
             with dissolve
 
-            u "I think you need someone to cheer you up."
+            no "Never have I ever..."
 
-            scene s699b
-            with dissolve
+            no "Cheated on someone."
 
-            no "And you let me guess, you're that someone."
-
-            scene s699c
-            with dissolve
-
-            u "Come on let's do something fun. It'll take your mind of things."
-
-            if kct == "confident":
-
-                $ noraclose = True
-
-                call screen kctPopup
-
-                scene s699f # nora curious smile
-                with dissolve
-
-                no "Okay, let me hear it."
-
-                scene s699g
-                with dissolve
-
-                u "Let's play never have I ever."
-
-                scene s699f
-                with dissolve
-
-                no "Really? You can't be serious."
-
-                scene s699g
-                with dissolve
-
-                u "It'll be fun. Come on!"
-
-                scene s699f
-                with dissolve
-
-                no "We don't even have drinks."
-
-                scene s699g
-                with dissolve
-
-                u "Give me one second."
-
-                scene s700 # showing mc walking back inside
-                with dissolve
-
-                pause 0.5
-
-                scene s700a # mc grabbing two beers from the fridge
-                with dissolve
-
-                pause 0.5
-
-                scene s700b # mc comes back to Nora with 2 beers, handing one to Nora
-                with dissolve
-
-                u "Here you go."
-
-                scene s701 # Nora and mc sitting down on the ground
-                with dissolve
-
-                no "Alright, fine. You start."
-
-                scene s702a # Close up Nora sitting down looking at you slight smile and eyebrow raised a bit mouth closed
-                with dissolve
-
-                u "Alright, let's see... Uh.. Never have I ever... stolen a car."
-
-                scene s702b # Nora drinks
-                with dissolve
-
-                u "What!? You serious! That one I thought for sure was just a shot in the dark. Haha."
-
-                scene s702d # Nora laughing/ smiling
-                with dissolve
-
-                no "Nothing crazy. Was just my parent's car. I was like 13."
-
-                scene s702e
-                with dissolve
-
-                u "Man, you're wild."
-
-                scene s702f # Nora flirty
-                with dissolve
-
-                no "Okay, my turn. Hmm... Never have I ever... been hit in the face."
-
-                scene s702g
-                with dissolve
-
-                u "Oh come on, that's not even fair."
-
+            if (laurenrs and aubreyrs) or (laurenrs and emilyrs):
                 scene s703 # showing mc drinking
                 with dissolve
 
-                no "*Laughs* I like to win."
+                no "Oh you pig."
 
                 scene s702g
                 with dissolve
 
-                u "Alright, you wanna play like that? Never have I ever hooked up with a guy."
-
-                scene s702f # Nora flirty
-                with dissolve
-
-                no "Oh wow."
-
-                scene s702b
-                with dissolve
-
-                u "You brought this onto yourself."
+                u "It's complicated."
 
                 scene s702f
                 with dissolve
 
-                no "Never have I ever..."
-
-                no "Cheated on someone."
-
-                if (laurenrs and aubreyrs) or (laurenrs and emilyrs):
-
-                    scene s703 # showing mc drinking
-                    with dissolve
-
-                    no "Oh you pig."
-
-                    scene s702g
-                    with dissolve
-
-                    u "It's complicated."
-
-                    scene s702f
-                    with dissolve
-
-                    no "Sure."
-
-                    scene s702g
-                    with dissolve
-
-
-                else:
-
-                    scene s702g
-                    with dissolve
-
-                    u "Nope, not me."
-
-                u "Hmm... Never have I ever... hooked up with someone of the same gender."
-
-                scene s702f
-                with dissolve
-
-                no "Not yet, but I really want to."
+                no "Sure."
 
                 scene s702g
                 with dissolve
-
-                u "Woah, really?"
-
-                scene s702f
-                with dissolve
-
-                no "Yeah I just wanna explore another girls body and maybe oil each other up completely naked."
-
-                scene s702g
-                with dissolve
-
-                u "Damn..."
-
-                scene s702f
-                with dissolve
-
-                no "And then... maybe we can invite you to join us?"
-
-                scene s702g
-                with dissolve
-
-                u "I uh-"
-
-                u "Oh, you're just messing with me."
-
-                scene s702d
-                with dissolve
-
-                no "*Laughs* Of course I'm just messing with you. You are aware that my boyfriend is like 20 feet away from us, right?"
-
-                scene s702e
-                with dissolve
-
-                u "I was just playing along for the jokes, honestly."
-
-                scene s702d
-                with dissolve
-
-                no "Sure you were."
-
-                no "Anyway, I think I should probably call it a night. I'm beat."
-
-                scene s702e
-                with dissolve
-
-                u "Yeah, it's super late."
-
-                scene s702d
-                with dissolve
-
-                no "But thanks for cheering me up. I needed it."
-
-                scene s702e
-                with dissolve
-
-                u "Yeah, of course."
-
-                u "Well, good night and I'll see you soon."
-
-                scene s702d
-                with dissolve
-
-                no "Yeah, good night."
-
-                scene s703
-                with dissolve
-
-                u "(Time to go home.)"
-
-                jump conwalkhome
 
             else:
-
-                scene s699b
+                scene s702g
                 with dissolve
 
-                no "Honestly, I'm just not in the mood. I kind of just want to be alone right now."
+                u "Nope, not me."
 
-                scene s699c
-                with dissolve
+            u "Hmm... Never have I ever... hooked up with someone of the same gender."
 
-                u "Oh, okay. I'll leave you be."
+            scene s702f
+            with dissolve
 
-                scene s699b
-                with dissolve
+            no "Not yet, but I really want to."
 
-                no "Thanks."
+            scene s702g
+            with dissolve
 
-                scene s700
-                with dissolve
+            u "Woah, really?"
 
-                u "(Time to go home, I guess.)"
+            scene s702f
+            with dissolve
 
-                jump conwalkhome
+            no "Yeah I just wanna explore another girls body and maybe oil each other up completely naked."
+
+            scene s702g
+            with dissolve
+
+            u "Damn..."
+
+            scene s702f
+            with dissolve
+
+            no "And then... maybe we can invite you to join us?"
+
+            scene s702g
+            with dissolve
+
+            u "I uh-"
+
+            u "Oh, you're just messing with me."
+
+            scene s702d
+            with dissolve
+
+            no "*Laughs* Of course I'm just messing with you. You are aware that my boyfriend is like 20 feet away from us, right?"
+
+            scene s702e
+            with dissolve
+
+            u "I was just playing along for the jokes, honestly."
+
+            scene s702d
+            with dissolve
+
+            no "Sure you were."
+
+            no "Anyway, I think I should probably call it a night. I'm beat."
+
+            scene s702e
+            with dissolve
+
+            u "Yeah, it's super late."
+
+            scene s702d
+            with dissolve
+
+            no "But thanks for cheering me up. I needed it."
+
+            scene s702e
+            with dissolve
+
+            u "Yeah, of course."
+
+            u "Well, good night and I'll see you soon."
+
+            scene s702d
+            with dissolve
+
+            no "Yeah, good night."
+
+            scene s703
+            with dissolve
+
+            u "(Time to go home.)"
+
+        else:
+            scene s699b
+            with dissolve
+
+            no "Honestly, I'm just not in the mood. I kind of just want to be alone right now."
+
+            scene s699c
+            with dissolve
+
+            u "Oh, okay. I'll leave you be."
+
+            scene s699b
+            with dissolve
+
+            no "Thanks."
+
+            scene s700
+            with dissolve
+
+            u "(Time to go home, I guess.)"
 
 ####### SCENE 4 Walking Home by yourself
-
-    label conwalkhome:
-
+label conwalkhome:
     stop music fadeout 2
 
     scene s704 # mc walking home by himself at night
@@ -999,10 +975,8 @@ label v07:
 
     jump conyourdorm
 
-
 ######## SCENE 5 Walking Riley Home
-
-    label hd_ad:
+label hd_ad:
     $ walkedRileyHome = True
     stop music fadeout 2
 
@@ -1023,180 +997,61 @@ label v07:
     with dissolve
 
     menu:
-
         "Keep it friendly":
-            if laurenrs == True:
+            if laurenrs:
                 $ addPoint("bf")
-            jump he_a
 
-        "Start flirting":
-            if laurenrs == True:
-                $ addPoint("tm")
-            $ addPoint("bro")
-            jump he_b
+            u "I'm glad. A lot of the Wolves seem really cool. How's classes going? Finish the econ assignment yet?"
 
+            scene s706b # riley serious
+            with dissolve
 
+            ri "I did, but I might rewrite it. Just feel like I could add a few more references."
 
-    label he_a:
-    u "I'm glad. A lot of the Wolves seem really cool. How's classes going? Finish the econ assignment yet?"
+            scene s706c
+            with dissolve
 
-    scene s706b # riley serious
-    with dissolve
+            u "I do too. We need like ten I think. How many do you have?"
 
-    ri "I did, but I might rewrite it. Just feel like I could add a few more references."
+            scene s706d # riley "embarrassed smile"
+            with dissolve
 
-    scene s706c
-    with dissolve
+            ri "35."
 
-    u "I do too. We need like ten I think. How many do you have?"
+            scene s706c
+            with dissolve
 
-    scene s706d # riley "embarrassed smile"
-    with dissolve
+            u "35?! Are you kidding me? I have two."
 
-    ri "35."
+            scene s706d # riley "embarrassed smile"
+            with dissolve
 
-    scene s706c
-    with dissolve
+            ri "*Chuckles* Well I got carried away a bit. But I still feel like there's more to add."
 
-    u "35?! Are you kidding me? I have two."
+            scene s706c
+            with dissolve
 
-    scene s706d # riley "embarrassed smile"
-    with dissolve
+            u "*Laughs* You're aware you're dragging all of our grades down cause they grade the assignments comparatively."
 
-    ri "*Chuckles* Well I got carried away a bit. But I still feel like there's more to add."
+            scene s706
+            with dissolve
 
-    scene s706c
-    with dissolve
+            ri "*Chuckles* Well maybe you should have added more references yourself then."
 
-    u "*Laughs* You're aware you're dragging all of our grades down cause they grade the assignments comparatively."
+            scene s706a
+            with dissolve
 
-    scene s706
-    with dissolve
+            u "You're impossible."
 
-    ri "*Chuckles* Well maybe you should have added more references yourself then."
+            scene s707 # opening  mc and riley in front of Riley's dorm, riley looking at mc, dorm door closed, riley mouth open smiling
+            with fade
 
-    scene s706a
-    with dissolve
+            ri "Thanks for bringing me home."
 
-    u "You're impossible."
+            scene s708a # riley smiling mouth closed close up
+            with dissolve
 
-    scene s707 # opening  mc and riley in front of Riley's dorm, riley looking at mc, dorm door closed, riley mouth open smiling
-    with fade
-
-    ri "Thanks for bringing me home."
-
-    scene s708a # riley smiling mouth closed close up
-    with dissolve
-
-    u "No worries, it was a nice walk."
-
-    scene s708 # riley smiling
-    with dissolve
-
-    ri "Good night."
-
-    scene s708a
-    with dissolve
-
-    u "Yeah, good night. Sleep well."
-
-    stop music fadeout 2
-
-    scene s709 # you walking through the dorm hallways to his dorm
-    with fade
-
-    pause 0.5
-
-    jump conyourdorm
-
-    label he_b:
-
-    u "I'd imagine. Plus you saved the best for last."
-
-    scene s706d
-    with dissolve
-
-    ri "The best?"
-
-    scene s706e
-    with dissolve
-
-    u "Well you're walking home with me, aren't you?"
-
-    scene s706
-    with dissolve
-
-    ri "*Chuckles* Oh wow."
-
-    scene s706a
-    with dissolve
-
-    u "You know, you look really good tonight."
-
-    scene s706f # riley flirting
-    with dissolve
-
-    ri "I know."
-
-    scene s706g
-    with dissolve
-
-    u "*Laughs* What? I did so not expect that response."
-
-    scene s706
-    with dissolve
-
-    ri "*Laughs* It sounded a lot cooler in my head."
-
-    if kct == "confident":
-
-        ri "I just thought. I'd give it a [name]-style response."
-
-        scene s706a
-        with dissolve
-
-        u "[name]-style?"
-
-        scene s706
-        with dissolve
-
-        ri "Yeah, you know how cocky you are. *Chuckles*"
-
-        u "*Laughs* Unbelievable, I was just giving you a nice compliment and that's how you respond?"
-
-    scene s706f
-    with dissolve
-
-    ri "You look good too."
-
-    scene s706g
-    with dissolve
-
-    u "*Chuckles* Don't even think you can save this."
-
-    scene s707 # opening  mc and riley in front of Riley's dorm, riley looking at mc, dorm door closed, riley mouth open smiling
-    with fade
-
-    ri "Thanks for bringing me home."
-
-    scene s708a # riley smiling mouth closed close up
-    with dissolve
-
-    u "No worries, it was a nice walk."
-
-    if rileykiss == True:
-
-        jump conrileydorm
-
-    else:
-
-        if kct == "confident":
-
-            call screen kctPopup
-
-            jump conrileydorm
-
-        else:
+            u "No worries, it was a nice walk."
 
             scene s708 # riley smiling
             with dissolve
@@ -1217,7 +1072,107 @@ label v07:
 
             jump conyourdorm
 
-    label conrileydorm:
+        "Start flirting":
+            if laurenrs :
+                $ addPoint("tm")
+
+            $ addPoint("bro")
+
+            u "I'd imagine. Plus you saved the best for last."
+
+            scene s706d
+            with dissolve
+
+            ri "The best?"
+
+            scene s706e
+            with dissolve
+
+            u "Well you're walking home with me, aren't you?"
+
+            scene s706
+            with dissolve
+
+            ri "*Chuckles* Oh wow."
+
+            scene s706a
+            with dissolve
+
+            u "You know, you look really good tonight."
+
+            scene s706f # riley flirting
+            with dissolve
+
+            ri "I know."
+
+            scene s706g
+            with dissolve
+
+            u "*Laughs* What? I did so not expect that response."
+
+            scene s706
+            with dissolve
+
+            ri "*Laughs* It sounded a lot cooler in my head."
+
+            if kct == "confident":
+
+                ri "I just thought. I'd give it a [name]-style response."
+
+                scene s706a
+                with dissolve
+
+                u "[name]-style?"
+
+                scene s706
+                with dissolve
+
+                ri "Yeah, you know how cocky you are. *Chuckles*"
+
+                u "*Laughs* Unbelievable, I was just giving you a nice compliment and that's how you respond?"
+
+            scene s706f
+            with dissolve
+
+            ri "You look good too."
+
+            scene s706g
+            with dissolve
+
+            u "*Chuckles* Don't even think you can save this."
+
+            scene s707 # opening  mc and riley in front of Riley's dorm, riley looking at mc, dorm door closed, riley mouth open smiling
+            with fade
+
+            ri "Thanks for bringing me home."
+
+            scene s708a # riley smiling mouth closed close up
+            with dissolve
+
+            u "No worries, it was a nice walk."
+
+            if not rileykiss and kct == "confident":
+                call screen kctPopup
+
+            else:
+                scene s708 # riley smiling
+                with dissolve
+
+                ri "Good night."
+
+                scene s708a
+                with dissolve
+
+                u "Yeah, good night. Sleep well."
+
+                stop music fadeout 2
+
+                scene s709 # you walking through the dorm hallways to his dorm
+                with fade
+
+                pause 0.5
+
+                jump conyourdorm
 
     scene s708b # riley slightly embarassed / cute
     with dissolve
@@ -1225,153 +1180,142 @@ label v07:
     ri "Hey uhm... do you maybe wanna come in?"
 
     menu:
-
         "Yeah, I'd like that.":
-            if laurenrs == True or emilyrs == True:
+            if laurenrs or emilyrs:
                 $ addPoint("tm")
+
             $ addPoint("bro")
             $ rileyrs = True
-            jump hf_a
+
+            u "Yeah, I'd like that."
+
+            scene s708
+            with dissolve
+
+            ri "Okay, but we have to be quiet. My roommate is sleeping."
+
+            scene s708a
+            with dissolve
+
+            u "Of course."
+
+            play sound "sounds/dooropen.mp3"
+
+            scene s710 # First Person Riley quietly walking in her dorm in front of you # ALL RILEY DORM renders should be regular lighting and I'll make it dark in photoshop
+            with dissolve
+
+            pause 0.5
+
+            scene s711 # FIRST PERSON: Riley lies down in her bed under the blanket
+            with dissolve
+
+            pause 0.5
+
+            scene s711a # Riley turns towards you, holds up the blanket to let you in and whispers to you
+            with dissolve
+
+            ri "*Whispers* Are you gonna come?"
+
+            scene s712a # closeup  First person: Riley looking at you slightly seductive but also slightly smiling mouth closed
+            with dissolve
+
+            u "*Whispers* This is like a James Bond movie."
+
+            scene s712
+            with dissolve
+
+            ri "*Whispers* Cause of all the sneaking?"
+
+            scene s712a
+            with dissolve
+
+            u "*Whispers* No, cause of the pretty girl."
+
+            scene s712
+            with dissolve
+
+            ri "*Laughs*"
+
+            scene s712d # riley close up face, worried
+            with dissolve
+
+            ri "*Whispers* Shit. That was way too loud."
+
+            scene s712e
+            with dissolve
+
+            u "*Whispers* Don't worry I don't think your roommate woke up."
+
+            scene s712d # riley close up face, worried
+            with dissolve
+
+            ri "*Whispers* I really don't want her to. Maybe we can do this some other time?"
+
+            scene s712e
+            with dissolve
+
+            u "*Whispers* Really?"
+
+            scene s712d
+            with dissolve
+
+            ri "*Whispers*It's too risky, I don't think I could control myself."
+
+            scene s712e
+            with dissolve
+
+            u "*Whispers* But-"
+
+            scene s712
+            with dissolve
+
+            ri "*Whispers* We'll find another night."
+
+            scene s712a
+            with dissolve
+
+            u "*Chuckles* *Whispers* Okay, deal."
+
+            u "*Whispers* I'm gonna go home now then. Good night. Sleep well."
+
+            stop music fadeout 4.0
+
+            scene s712b
+            with dissolve
+
+            ri "*Whispers* Yeah, sounds good. Good night."
+
+
+            scene s709 # you walking through the dorm hallways to his dorm
+            with fade
+
+            pause 0.5
 
         "Uhm... I shouldn't.":
-            if laurenrs == True or emilyrs == True:
+            if laurenrs or emilyrs:
                 $ addPoint("bf")
-            jump hf_b
 
-    label hf_b:
+            u "Uhm... I probably shouldn't. It's quite late."
 
-    u "Uhm... I probably shouldn't. It's quite late."
+            scene s708b
+            with dissolve
 
-    scene s708b
-    with dissolve
+            ri "Oh yeah, of course. Uhm... good night."
 
-    ri "Oh yeah, of course. Uhm... good night."
+            scene s708c
+            with dissolve
 
-    scene s708c
-    with dissolve
+            u "Yeah, good night."
 
-    u "Yeah, good night."
+            stop music fadeout 2
 
-    stop music fadeout 2
+            scene s709 # you walking through the dorm hallways to his dorm
+            with fade
 
-    scene s709 # you walking through the dorm hallways to his dorm
-    with fade
-
-    pause 0.5
-
-    jump conyourdorm
-
-    label hf_a:
-
-    u "Yeah, I'd like that."
-
-    scene s708
-    with dissolve
-
-    ri "Okay, but we have to be quiet. My roommate is sleeping."
-
-    scene s708a
-    with dissolve
-
-    u "Of course."
-
-    play sound "sounds/dooropen.mp3"
-
-    scene s710 # First Person Riley quietly walking in her dorm in front of you # ALL RILEY DORM renders should be regular lighting and I'll make it dark in photoshop
-    with dissolve
-
-    pause 0.5
-
-    scene s711 # FIRST PERSON: Riley lies down in her bed under the blanket
-    with dissolve
-
-    pause 0.5
-
-    scene s711a # Riley turns towards you, holds up the blanket to let you in and whispers to you
-    with dissolve
-
-    ri "*Whispers* Are you gonna come?"
-
-    scene s712a # closeup  First person: Riley looking at you slightly seductive but also slightly smiling mouth closed
-    with dissolve
-
-    u "*Whispers* This is like a James Bond movie."
-
-    scene s712
-    with dissolve
-
-    ri "*Whispers* Cause of all the sneaking?"
-
-    scene s712a
-    with dissolve
-
-    u "*Whispers* No, cause of the pretty girl."
-
-    scene s712
-    with dissolve
-
-    ri "*Laughs*"
-
-    scene s712d # riley close up face, worried
-    with dissolve
-
-    ri "*Whispers* Shit. That was way too loud."
-
-    scene s712e
-    with dissolve
-
-    u "*Whispers* Don't worry I don't think your roommate woke up."
-
-    scene s712d # riley close up face, worried
-    with dissolve
-
-    ri "*Whispers* I really don't want her to. Maybe we can do this some other time?"
-
-    scene s712e
-    with dissolve
-
-    u "*Whispers* Really?"
-
-    scene s712d
-    with dissolve
-
-    ri "*Whispers*It's too risky, I don't think I could control myself."
-
-    scene s712e
-    with dissolve
-
-    u "*Whispers* But-"
-
-    scene s712
-    with dissolve
-
-    ri "*Whispers* We'll find another night."
-
-    scene s712a
-    with dissolve
-
-    u "*Chuckles* *Whispers* Okay, deal."
-
-    u "*Whispers* I'm gonna go home now then. Good night. Sleep well."
-
-    stop music fadeout 4.0
-
-    scene s712b
-    with dissolve
-
-    ri "*Whispers* Yeah, sounds good. Good night."
-
-
-    scene s709 # you walking through the dorm hallways to his dorm
-    with fade
-
-    pause 0.5
-
+            pause 0.5
 
 ########## SCENE 6 MC IN DORM
-
-    label conyourdorm:
-
+label conyourdorm:
     scene s713 # mc lying in bed at night sleeping
     with dissolve
 
@@ -1386,39 +1330,63 @@ label v07:
 
     pause 0.5
 
-    $ KiwiiPost1 = KiwiiPost("Chloe", "images/clpost1.webp", "I'll always follow the sun :)", numberLikes=186)
-    $ KiwiiPost1.addComment("Grayson","Check your DMs", 14)
-    $ KiwiiPost1.addComment("Ryan", "Whore.", 1)
-    $ KiwiiPost1.addComment("Aubrey", "What I wouldn't give for your body...", 32)
-    $ KiwiiPost1.addComment("Elijah", "If you ever need a tutor, I'm free on Wednesdays and Fridays.", 2)
-    $ KiwiiPost1.addComment("Imre", "SO FUCKING HOT WTFFF", 10)
-    $ KiwiiPost1.addComment("Emily", "Where did you get that bikini?", 18, mentions = "Chloe")
-    $ KiwiiPost1.addComment("Chloe", "I can't remember :(", 11, mentions = "Emily")
-    $ KiwiiPost1.addReply("You're so beautiful!", "KiwiiPost1_reply1", numberLikes=renpy.random.randint(2, 8))
-    $ KiwiiPost1.addReply("I got some sun in my room...", "KiwiiPost1_reply2", numberLikes=renpy.random.randint(20, 30))
+    $ kiwiiPost1 = KiwiiPost("Chloe", "clpost1.webp", "I'll always follow the sun :)", numberLikes=186)
+    $ kiwiiPost1.addComment("Grayson","Check your DMs", 14)
+    $ kiwiiPost1.addComment("Ryan", "Whore.", 1)
+    $ kiwiiPost1.addComment("Aubrey", "What I wouldn't give for your body...", 32)
+    $ kiwiiPost1.addComment("Elijah", "If you ever need a tutor, I'm free on Wednesdays and Fridays.", 2)
+    $ kiwiiPost1.addComment("Imre", "SO FUCKING HOT WTFFF", 10)
+    $ kiwiiPost1.addComment("Emily", "Where did you get that bikini?", 18, mentions="Chloe")
+    $ kiwiiPost1.addComment("Chloe", "I can't remember :(", 11, mentions="Emily")
+    $ kiwiiPost1.addReply("You're so beautiful!", v7_kiwiiReply1, numberLikes=renpy.random.randint(2, 8))
+    $ kiwiiPost1.addReply("I got some sun in my room...", v7_kiwiiReply2, numberLikes=renpy.random.randint(20, 30))
 
-    $ KiwiiPost2 = KiwiiPost("Lauren", "images/lapost1.webp", "Wishing I could go back...", numberLikes=39)
-    $ KiwiiPost2.addComment("Autumn","That was such a great vacation!", 2)
-    $ KiwiiPost2.addComment("Penelope", "Looks beautiful", 3)
-    $ KiwiiPost2.addReply("You're a cutie!", "KiwiiPost2_reply1", numberLikes=renpy.random.randint(3, 10))
-    $ KiwiiPost2.addReply("Winter vacations are the best", "KiwiiPost2_reply2", numberLikes=renpy.random.randint(10, 17))
+    $ kiwiiPost2 = KiwiiPost("Lauren", "images/lapost1.webp", "Wishing I could go back...", numberLikes=39)
+    $ kiwiiPost2.addComment("Autumn","That was such a great vacation!", 2)
+    $ kiwiiPost2.addComment("Penelope", "Looks beautiful", 3)
+    $ kiwiiPost2.addReply("You're a cutie!", v7_kiwiiReply3, numberLikes=renpy.random.randint(3, 10))
+    $ kiwiiPost2.addReply("Winter vacations are the best", v7_kiwiiReply4, numberLikes=renpy.random.randint(10, 17))
 
-    $ KiwiiPost3 = KiwiiPost("Aubrey", "images/aupost1.webp", "Finally changed my profile pic!", numberLikes=133)
-    $ KiwiiPost3.addComment("Cameron","You put the hot into thot", 2)
-    $ KiwiiPost3.addComment("Josh", "You still single?", 3)
-    $ KiwiiPost3.addComment("Riley", "I'm sooo jealous of your hair!", 6)
-    $ KiwiiPost3.addComment("Chloe", "Most beautiful girl in the world", 6)
-    $ KiwiiPost3.addReply("I'd destroy you in Air hockey!", "KiwiiPost3_reply1", mentions ="Aubrey", numberLikes=renpy.random.randint(15, 25))
+    $ kiwiiPost3 = KiwiiPost("Aubrey", "images/aupost1.webp", "Finally changed my profile pic!", numberLikes=133)
+    $ kiwiiPost3.addComment("Cameron","You put the hot into thot", 2)
+    $ kiwiiPost3.addComment("Josh", "You still single?", 3)
+    $ kiwiiPost3.addComment("Riley", "I'm sooo jealous of your hair!", 6)
+    $ kiwiiPost3.addComment("Chloe", "Most beautiful girl in the world", 6)
+    $ kiwiiPost3.addReply("I'd destroy you in Air hockey!", v7_kiwiiReply5, mentions="Aubrey", numberLikes=renpy.random.randint(15, 25))
+
+label kiwii_firstTime:
+    $ kiwii_firstTime = False
+    play sound "sounds/vibrate.mp3"
+    if emilyrs:
+        $ contact_Riley.addReply("We're not back together")
+        $ contact_Riley.newMessage("Okay... just looked like it")
+        $ contact_Riley.addReply("Well we're not.", "rirep4a")
+        $ contact_Riley.newMessage("k")
+    if bowling and emilyrs:
+        $ contact_Penelope.newMessage("I didn't know you and Emily were a thing...", queue=False)
+        $ contact_Penelope.addReply("We're not a thing", v7_msgReply1)
+        $ contact_Penelope.addReply("It was a one time thing", v7_msgReply2)
+    if emilyrs and laurenrs:
+        $ contact_Lauren.newMessage("I saw what Emily posted. I really thought you liked me...", queue=False)
+        $ contact_Lauren.newMessage("I guess we're done now, so please just delete my number.", queue=False)
+        $ contact_Lauren.addReply("Lauren can we please just talk about it? I can explain")
+        $ contact_Lauren.newMessage("What is there to talk about? How could you betray me like that?!")
+        $ contact_Lauren.addReply("Please, it's just a big misunderstanding")
+        $ contact_Lauren.newMessage("Fine. I'm in my dorm, we can talk now.")
+    call screen kiwiiPreferences
 
     if emilyrs: # first riley texts, then once you've opened the app you get 2 more messages.
-        $ KiwiiPost4 = KiwiiPost("Emily", "images/empost1.webp", "Finally fate brings us back together. What doesn't kill us only makes us stronger.", numberLikes=82)
-        $ KiwiiPost4.addComment("Riley","You guys are so cute", 5)
-        $ KiwiiPost4.addComment("Aubrey", "GORGEOUS", 8)
-        $ KiwiiPost4.addComment("Josh", "Woah, you guys back together??", 3)
-        $ KiwiiPost4.addReply("No, we're not.", "KiwiiPost4_reply1", mentions ="Josh", numberLikes=renpy.random.randint(5, 15))
+        $ kiwiiPost4 = KiwiiPost("Emily", "images/empost1.webp", "Finally fate brings us back together. What doesn't kill us only makes us stronger.", numberLikes=82)
+        $ kiwiiPost4.addComment("Riley","You guys are so cute", 5)
+        $ kiwiiPost4.addComment("Aubrey", "GORGEOUS", 8)
+        $ kiwiiPost4.addComment("Josh", "Woah, you guys back together??", 3)
+        $ kiwiiPost4.addReply("No, we're not.", v7_kiwiiReply6, mentions="Josh", numberLikes=renpy.random.randint(5, 15))
+
         play sound "sounds/vibrate.mp3"
-        $ contact_Riley.newMessage("Are you and Emily back together?")
-        $ contact_Riley.addReply("What are you talking about???", "rirep1a")
+        $ contact_Riley.newMessage("Are you and Emily back together?", queue=False)
+        $ contact_Riley.addReply("What are you talking about???")
+        $ contact_Riley.newMessage("Check Kiwii...")
+
         pause 0.5
 
         scene s713b # mc looks at his phone
@@ -1426,111 +1394,24 @@ label v07:
 
         u "(What the hell?)"
 
-        call screen messager(contact_Riley)
-
-        label rirep1a:
-        $ contact_Riley.newMessage("Check Kiwii...")
-        $ kiwii = True
-        call screen messager(contact_Riley)
-
-        $ kiwii = False
-        $ kiwiiApp.unlock()
-        # unlock kiwii and create profile
-        call screen phone # this comes before opening kiwii
-        ## after opening kiwii
-
-        call screen phone # this comes before opening kiwii
-
-        label rirep3a:
-        $ contact_Riley.newMessage("Okay... just looked like it")
-        $ contact_Riley.addReply("Well we're not.", "rirep4a")
-        call screen messager(contact_Riley)
-
-        label rirep4a:
-        $ contact_Riley.newMessage("k")
-        call screen messager(contact_Riley)
-
-        label perep4a:
-        $ addPoint("bro")
-        $ contact_Penelope.newMessage("Okay...")
-        $ tellpenelope = True
-        call screen messager(contact_Penelope)
-
-        label perep4b:
-        $ tellpenelope = False
-        $ contact_Penelope.newMessage("Okay...")
-        call screen messager(contact_Penelope)
-
-        label larep16a:
-        $ contact_Lauren.newMessage("What is there to talk about? How could you betray me like that?!")
-        $ contact_Lauren.addReply("Please, it's just a big misunderstanding", "larep17a")
-
-        call screen messager(contact_Lauren)
-
-        label larep17a:
-        $ contact_Lauren.newMessage("Fine. I'm in my dorm, we can talk now.")
-
-        call screen messager(contact_Lauren)
-
-        label KiwiiPost1_reply1:
-            $ KiwiiPost1.addComment("Cameron", "Lol, pussy", mentions="MC", numberLikes=renpy.random.randint(1, 10))
-            $ addPoint("bf")
-            call screen kiwiiPost(KiwiiPost1)
-
-        label KiwiiPost1_reply2:
-            $ KiwiiPost1.addComment("Imre", "Slide into her DMs bro!", mentions="MC", numberLikes=renpy.random.randint(5, 15))
-            $ addPoint("bro")
-            $ addPoint("tm")
-            call screen kiwiiPost(KiwiiPost1)
-
-        label KiwiiPost2_reply1:
-            $ addPoint("bf")
-            call screen kiwiiPost(KiwiiPost2)
-
-        label KiwiiPost2_reply2:
-            $ KiwiiPost2.addComment("Autumn", "Yeah, they really are", mentions="MC", numberLikes=renpy.random.randint(8, 18))
-            call screen kiwiiPost(KiwiiPost2)
-
-        label KiwiiPost3_reply1:
-            $ addPoint("bro")
-            $ KiwiiPost3.addComment("Aubrey", "Bring it on!", mentions="MC", numberLikes=renpy.random.randint(15, 35))
-            call screen kiwiiPost(KiwiiPost3)
-
-        label KiwiiPost4_reply1:
-            $ addPoint("tm")
-            $ KiwiiPost4.addComment("Josh", "lol", mentions="MC", numberLikes=renpy.random.randint(3, 7))
-            call screen kiwiiPost(KiwiiPost4)
+        call screen phone
 
         label phoneam:
-
             if kiwii_firstTime:
                 "(I should check out what Emily posted on Kiwii.)"
                 jump phoneam              
 
-            if contact_Riley.messages[-1].replies:
+            elif contact_Riley.getReplies():
                 "(I need to respond to some of these messages.)"
                 jump phoneam
 
-            else:
+            elif bowling and contact_Penelope.getReplies():
+                "(I should answer Penelope.)"
+                jump phoneam
 
-                if bowling == True:
-                    if contact_Penelope.messages[-1].replies:
-                        "(I should answer Penelope.)"
-                        jump phoneam
-
-                if laurenrs == True:
-
-                    if contact_Lauren.messages[-1].replies:
-                        "(I should respond to Lauren.)"
-
-                        jump phoneam
-
-                jump continueee
-
-
-        label continueee:
-
-        
+            elif laurenrs and contact_Lauren.getReplies():
+                "(I should respond to Lauren.)"
+                jump phoneam
 
         scene s714a # mc calm mouth closed
         with dissolve # mc sitting on his bed shirtless with his phone to his head, like he's on the phone
@@ -1546,203 +1427,200 @@ label v07:
         em "Hey, babe."
 
         menu:
-
             "Be calm":
                 $ addPoint("bf")
-                jump hh_a
 
+                scene s714
+                with dissolve
+                #If you decide to be calm:
+
+                u "Emily."
+
+                scene s714a
+                with dissolve
+
+                em "Yeah?"
+
+                scene s714
+                with dissolve
+
+                u "*Takes a deep breath*"
+
+                scene s714a
+                with dissolve
+
+                em "Something wrong?"
+
+                scene s714a
+                with dissolve
+
+                u "Yeah."
+
+                scene s714a
+                with dissolve
+
+                em "What happened?"
+
+                scene s714
+                with dissolve
+
+                u "That picture you posted. I need you to take it down."
+
+                scene s714a
+                with dissolve
+
+                em "Why?"
+
+                scene s714
+                with dissolve
+
+                u "Because I just don't feel comfortable with the photo. A lot of people think we're back together and the photo really does look like we are."
+
+                scene s714a
+                with dissolve
+
+                em "And you don't want that?"
+
+                scene s714
+                with dissolve
+
+                u "Look, I don't know what the future holds, but right now I don't wanna get back together."
+
+                scene s714a
+                with dissolve
+
+                em "It's not like we were kissing or anything on the picture."
+
+                scene s714
+                with dissolve
+
+                u "Yeah but... but you knew exactly what message it'd send out to everyone."
+
+                scene s714a
+                with dissolve
+
+                em "Sorry... I just-"
+
+                scene s714
+                with dissolve
+
+                u "Please just take it down."
+
+                scene s714a
+                with dissolve
+
+                em "Okay, I will. I'm sorry."
+
+                scene s714
+                with dissolve
+
+                u "I gotta go."
+
+                scene s714a
+                with dissolve
+
+                em "Oh, yeah... Okay. Sorry."
+
+                play sound "sounds/rejectcall.mp3"
+                scene s714d
+                with dissolve
+                u "*Sighs*"
+
+                $ kiwiiPost4.hidePost()
+
+                if laurenrs:
+                    u "(Time to make things right with Lauren.)"
+                    jump thisbelauren
+
+                else:
+                    u "(I need to clear my head. Maybe going for a walk will help.)"
+
+                    if laurenmad:
+                        u "(But I should probably stop by Lauren's dorm first and see if we can talk things out... She's still mad at me and it really sucks.)"
+                        jump apologylauren
+                        
+                    else:
+                        jump thisbewalk
 
             "Get angry":
                 $ addPoint("tm")
-                jump hh_b
 
-        label hh_b:
+                scene s714b # mc angry mouth open
+                with dissolve
 
-        scene s714b # mc angry mouth open
-        with dissolve
+                u "Emily, what the fuck?!"
 
-        u "Emily, what the fuck?!"
+                scene s714c
+                with dissolve
 
-        scene s714c
-        with dissolve
+                em "Jeez. What are you getting so worked up about?"
 
-        em "Jeez. What are you getting so worked up about?"
+                scene s714b
+                with dissolve
 
-        scene s714b
-        with dissolve
+                u "Don't play stupid Emily. You know why I'm pissed."
 
-        u "Don't play stupid Emily. You know why I'm pissed."
+                scene s714c
+                with dissolve
 
-        scene s714c
-        with dissolve
+                em "Is this about the photo I posted?"
 
-        em "Is this about the photo I posted?"
+                scene s714b
+                with dissolve
 
-        scene s714b
-        with dissolve
+                u "Hell yeah, this is about the photo you posted. What else would I be pissed about?!"
 
-        u "Hell yeah, this is about the photo you posted. What else would I be pissed about?!"
+                scene s714c
+                with dissolve
 
-        scene s714c
-        with dissolve
+                em "It's just a photo! I don't understand why you're getting so upset."
 
-        em "It's just a photo! I don't understand why you're getting so upset."
+                scene s714b
+                with dissolve
 
-        scene s714b
-        with dissolve
+                u "You purposefully made it look like we're back together and you know we're not. We hooked up, big deal."
+                scene s714c
+                with dissolve
 
-        u "You purposefully made it look like we're back together and you know we're not. We hooked up, big deal."
-        scene s714c
-        with dissolve
+                em "Okay, okay. Calm down. You don't need to raise your voice at me."
 
-        em "Okay, okay. Calm down. You don't need to raise your voice at me."
+                scene s714b
+                with dissolve
 
-        scene s714b
-        with dissolve
+                u "You know that we're not getting back together, right???"
 
-        u "You know that we're not getting back together, right???"
+                scene s714c
+                with dissolve
 
-        scene s714c
-        with dissolve
+                em "Yeah, I mean... I was just- I just really enjoyed spending time with you again..."
 
-        em "Yeah, I mean... I was just- I just really enjoyed spending time with you again..."
+                scene s714b
+                with dissolve
 
-        scene s714b
-        with dissolve
+                u "Take the fucking post down. We're done. This is done."
 
-        u "Take the fucking post down. We're done. This is done."
+                scene s714d # mc looking dpeesperate holding his phone in front of his face mouth closed
+                with dissolve
+                play sound "sounds/rejectcall.mp3"
 
-        scene s714d # mc looking dpeesperate holding his phone in front of his face mouth closed
-        with dissolve
-        play sound "sounds/rejectcall.mp3"
+                u "(I forgot how fucking crazy she is...)"
 
-        u "(I forgot how fucking crazy she is...)"
+                $ kiwiiPost4.removePost()
 
-        $ KiwiiPost4.hidePost()
+                if laurenrs:
+                    u "(Time to make things right with Lauren.)"
+                    jump thisbelauren
 
-        if laurenrs == True:
-            u "(Time to make things right with Lauren.)"
-            jump thisbelauren
-        else:
-            u "(I need to clear my head. Maybe going for a walk will help.)"
-            jump thisbewalk
-
-        label hh_a:
-        scene s714
-        with dissolve
-        #If you decide to be calm:
-
-        u "Emily."
-
-        scene s714a
-        with dissolve
-
-        em "Yeah?"
-
-        scene s714
-        with dissolve
-
-        u "*Takes a deep breath*"
-
-        scene s714a
-        with dissolve
-
-        em "Something wrong?"
-
-        scene s714a
-        with dissolve
-
-        u "Yeah."
-
-        scene s714a
-        with dissolve
-
-        em "What happened?"
-
-        scene s714
-        with dissolve
-
-        u "That picture you posted. I need you to take it down."
-
-        scene s714a
-        with dissolve
-
-        em "Why?"
-
-        scene s714
-        with dissolve
-
-        u "Because I just don't feel comfortable with the photo. A lot of people think we're back together and the photo really does look like we are."
-
-        scene s714a
-        with dissolve
-
-        em "And you don't want that?"
-
-        scene s714
-        with dissolve
-
-        u "Look, I don't know what the future holds, but right now I don't wanna get back together."
-
-        scene s714a
-        with dissolve
-
-        em "It's not like we were kissing or anything on the picture."
-
-        scene s714
-        with dissolve
-
-        u "Yeah but... but you knew exactly what message it'd send out to everyone."
-
-        scene s714a
-        with dissolve
-
-        em "Sorry... I just-"
-
-        scene s714
-        with dissolve
-
-        u "Please just take it down."
-
-        scene s714a
-        with dissolve
-
-        em "Okay, I will. I'm sorry."
-
-        scene s714
-        with dissolve
-
-        u "I gotta go."
-
-        scene s714a
-        with dissolve
-
-        em "Oh, yeah... Okay. Sorry."
-
-        play sound "sounds/rejectcall.mp3"
-        scene s714d
-        with dissolve
-        u "*Sighs*"
-
-        $ KiwiiPost4.hidePost()
-
-        if laurenrs == True:
-            u "(Time to make things right with Lauren.)"
-            jump thisbelauren
-        else:
-            u "(I need to clear my head. Maybe going for a walk will help.)"
-
-            if laurenmad == True:
-                u "(But I should probably stop by Lauren's dorm first and see if we can talk things out... She's still mad at me and it really sucks.)"
-
-                jump apologylauren
-            else:
-                jump thisbewalk
+                else:
+                    u "(I need to clear my head. Maybe going for a walk will help.)"
+                    jump thisbewalk
 
     else:
         play sound "sounds/vibrate.mp3"
-        $ contact_Riley.newMessage("Hey, how come you're not on Kiwii?")
-        $ contact_Riley.addReply("What's that?", "rirep6a")
+        $ contact_Riley.newMessage("Hey, how come you're not on Kiwii?", queue=False)
+        $ contact_Riley.addReply("What's that?")
+        $ contact_Riley.newMessage("It's a new social media app, you should give it a try")
+        $ contact_Riley.addReply("Okay, I'll have a look")
 
         pause 0.5
 
@@ -1750,41 +1628,26 @@ label v07:
         with dissolve
 
         u "(Huh? What did Riley text me?)"
-        
-        jump phonean
-
-        label rirep6a:
-        $ contact_Riley.newMessage("It's a new social media app, you should give it a try")
-        $ contact_Riley.addReply("Okay, I'll have a look", "rirep7a")
-        call screen messager(contact_Riley)
-
-        label rirep7a:
-        $ kiwii = True
-        call screen messager(contact_Riley)
-
 
         label phonean:
-        if contact_Riley.messages[-1].replies:
-            u "(I should respond to Riley.)"
-            jump phonean
-        else:
+            if contact_Riley.getReplies():
+                u "(I should respond to Riley.)"
+                jump phonean
             
-            scene s713b2 # mc looks up to the window in the same position of 713b
-            with dissolve
-            u "(It's a nice day for a walk. It'll do me good.)"
+        scene s713b2 # mc looks up to the window in the same position of 713b
+        with dissolve
+        u "(It's a nice day for a walk. It'll do me good.)"
 
-            if laurenmad == True:
-                u "(But I should probably stop by Lauren's dorm first and see if we can talk things out... She's still mad at me and it really sucks.)"
+        if laurenmad:
+            u "(But I should probably stop by Lauren's dorm first and see if we can talk things out... She's still mad at me and it really sucks.)"
 
-                jump apologylauren
-            else:
-                jump thisbewalk
+        else:
+            jump thisbewalk
 
 
 ##### SCENE 7 LAUREN'S DORM
-    label apologylauren:
+label apologylauren:
     $ seenlauren = True
-
     $ laurenrs = False
 
     stop music fadeout 2
@@ -1815,15 +1678,13 @@ label v07:
     scene s717a
     with dissolve
 
-    if apologize == False:
-
+    if not apologize:
         u "Listen, I wanted to apologize, I'm sorry for what I did and I hope you can forgive me. I was gonna apologize a few days ago, but I wanted to give you some more time."
 
     else:
-
         u "Listen, I know you said you needed more time, but it's been a few days and I just really want to be friends again... I know I messed up."
 
-    if autumnmad == False:
+    if not autumnmad:
         $ laurenmad = False
         scene s717
         with dissolve
@@ -1843,7 +1704,6 @@ label v07:
         la "Hey, I was gonna go to the beach today with Autumn, but she's got to work. Do you wanna go?"
 
         menu:
-
             "Sounds great!":
                 scene s717c
                 with dissolve
@@ -1873,6 +1733,65 @@ label v07:
 
                 la "Oh okay, no problem. See you soon."
 
+        scene s718 # mc walking back to his dorm
+        with fade
+
+        u "(I'm glad Lauren's no longer mad at me.)"
+
+        u "(It's also a nice day for a walk... Couldn't hurt to stretch my legs.)"
+
+        jump thisbewalk
+
+    elif kct == "loyal":
+        $ laurenmad = False
+        call screen kctPopup
+
+        scene s717
+        with dissolve
+
+        la "Yeah... I thought a lot about it and I understand that you didn't do it with ill intentions."
+
+        la "Look I've missed you as friend to talk to and I'd just like everything to get back to normal."
+
+        scene s717a
+        with dissolve
+
+        u "Great, that's what I want too."
+
+        scene s717b # Lauren smiling
+        with dissolve
+
+        la "Hey, I was gonna go to the beach today with Autumn, but she's got to work. Do you wanna go?"
+
+        menu:
+            "Sounds great!":
+                scene s717c
+                with dissolve
+
+                u "Yeah, that sounds great! Just let me know."
+
+                scene s717b
+                with dissolve
+
+                la "Okay, will do. I'll see you then!"
+
+                scene s717c
+                with dissolve
+
+                u "Cool, see you then."
+
+            "I can't today.":
+                $ nobeach = True
+
+                scene s717c
+                with dissolve
+
+                u "Sorry, I'm quite busy today, but I'll see you soon, okay?"
+
+                scene s717
+                with dissolve
+
+                la "Oh okay, no problem. See you soon."
 
         scene s718 # mc walking back to his dorm
         with fade
@@ -1883,110 +1802,42 @@ label v07:
 
         jump thisbewalk
 
-
-
     else:
+        $ laurenmad = True
+        scene s717
+        with dissolve
 
-        if kct == "loyal":
-            $ laurenmad = False
-            call screen kctPopup
+        la "Yeah... I thought a lot about it and I understand that you didn't do it with ill intentions."
 
-            scene s717
-            with dissolve
+        la "We can be friends again, but it might take some time for everything to go back to normal. I'm still unsure about how I feel."
 
-            la "Yeah... I thought a lot about it and I understand that you didn't do it with ill intentions."
+        scene s717a
+        with dissolve
 
-            la "Look I've missed you as friend to talk to and I'd just like everything to get back to normal."
+        u "That's totally fine. I'm glad we can be friends again."
 
-            scene s717a
-            with dissolve
+        scene s717
+        with dissolve
 
-            u "Great, that's what I want too."
+        la "Me too... I guess I'll see you around."
 
-            scene s717b # Lauren smiling
-            with dissolve
+        scene s717a
+        with dissolve
 
-            la "Hey, I was gonna go to the beach today with Autumn, but she's got to work. Do you wanna go?"
+        u "Uhm yeah, okay, cool."
 
-            menu:
+        u "See you around."
 
-                "Sounds great!":
-                    scene s717c
-                    with dissolve
+        scene s718 # mc walking back to his dorm
+        with fade
 
-                    u "Yeah, that sounds great! Just let me know."
+        u "(Not ideal, but at least she's willing to be friends again...)"
 
-                    scene s717b
-                    with dissolve
+        u "(I could really use a walk to clear my head.)"
 
-                    la "Okay, will do. I'll see you then!"
+        jump thisbewalk
 
-                    scene s717c
-                    with dissolve
-
-                    u "Cool, see you then."
-
-                "I can't today.":
-                    $ nobeach = True
-
-                    scene s717c
-                    with dissolve
-
-                    u "Sorry, I'm quite busy today, but I'll see you soon, okay?"
-
-                    scene s717
-                    with dissolve
-
-                    la "Oh okay, no problem. See you soon."
-
-
-            scene s718 # mc walking back to his dorm
-            with fade
-
-            u "(I'm glad Lauren's no longer mad at me.)"
-
-            u "(It's also a nice day for a walk... Couldn't hurt to stretch my legs.)"
-
-            jump thisbewalk
-
-
-        else:
-            $ laurenmad = True
-            scene s717
-            with dissolve
-
-            la "Yeah... I thought a lot about it and I understand that you didn't do it with ill intentions."
-
-            la "We can be friends again, but it might take some time for everything to go back to normal. I'm still unsure about how I feel."
-
-            scene s717a
-            with dissolve
-
-            u "That's totally fine. I'm glad we can be friends again."
-
-            scene s717
-            with dissolve
-
-            la "Me too... I guess I'll see you around."
-
-            scene s717a
-            with dissolve
-
-            u "Uhm yeah, okay, cool."
-
-            u "See you around."
-
-            scene s718 # mc walking back to his dorm
-            with fade
-
-            u "(Not ideal, but at least she's willing to be friends again...)"
-
-            u "(I could really use a walk to clear my head.)"
-
-            jump thisbewalk
-
-    label thisbelauren:
-
+label thisbelauren:
     $ seenlauren = True
     scene s715 # mc walking through dorm hallways
     with fade
@@ -2024,339 +1875,303 @@ label v07:
     with dissolve
 
     menu:
-
         "Come clean about Emily":
             $ addPoint("bf")
-            jump hj_a
+
+            u "I'm just gonna come right out and say it."
+
+            scene s717
+            with dissolve
+
+            la "What?"
+
+            scene s717a
+            with dissolve
+
+            u "Yes, I did hook up with Emily. And before you say anything, I entirely regret it. I don't know what I was thinking. "
+
+            scene s717e # lauren sad mouth closed
+            with dissolve
+
+            la "*Takes a deep breath*"
+
+            scene s717d
+            with dissolve
+
+            la "Then why'd you do it?"
+
+            scene s717e
+            with dissolve
+
+            u "I don't know, Lauren! I wish I had an answer for you, I really do. But I don't know why I did it."
+
+            u "I mean she just kissed me and old feelings came up... and stuff happened."
+
+            scene s717f # Lauren really sad
+            with dissolve
+
+            la "*Sniff* It just doesn't make sense, why are we even dating if you're just gonna hook up with any girl you see???"
+
+            scene s717g
+            with dissolve
+
+            menu:
+                "This won't happen again.":
+                    $ laurenemily = 2
+                    $ addPoint("bf")
+
+                    u "Like I said, it was a stupid mistake. After it happened, I realized that's not what I want at all."
+
+                    scene s717f
+                    with dissolve
+
+                    la "Then what is it you want?"
+
+                    scene s717g
+                    with dissolve
+
+                    u "You. Of course I want you. That's all I want. I promise. It's never gonna happen again."
+
+                    if kct == "loyal":
+                        call screen kctPopup
+
+                        $ laurenrs = True
+                        $ laurenmad = True
+                        $ autumnmad = True
+
+                        scene s717
+                        with dissolve
+
+                        la "*Takes a deep breath* I need some time to process this. Could I just be alone for a while?"
+
+                        scene s717a
+                        with dissolve
+
+                        u "Of course. Take all the time you need."
+
+                        scene s718 # mc walking back to his dorm
+                        with fade
+
+                        u "(Not ideal, but at least we're still dating...)"
+
+                        u "(I could really use a walk to clear my head.)"
+
+                    else:
+                        $ laurenrs = False
+                        $ laurenmad = True
+                        $ autumnmad = True
+
+                        scene s717d
+                        with dissolve
+
+                        la "No, I can't do this [name]."
+
+                        scene s717e
+                        with dissolve
+
+                        u "What do you mean?"
+
+                        scene s717d
+                        with dissolve
+
+                        la "This, I can't do this. I can't do us. "
+
+                        scene s717e
+                        with dissolve
+
+                        u "I told you I was sorry Lauren. It won't ever happen again."
+
+                        scene s717f
+                        with dissolve
+
+                        la "I can't trust you. And without trust, there isn't a relationship. If you do it once, it means you'll do it again."
+
+                        scene s717g
+                        with dissolve
+
+                        u "Lauren-"
+
+                        scene s717f
+                        with dissolve
+
+                        la "I think you should go right now."
+
+                        scene s717g
+                        with dissolve
+
+                        u "No, I'm not leaving."
+
+                        scene s717f
+                        with dissolve
+
+                        la "Just go. I'm done. You want to go hookup with her again, you can. Because we're not dating anymore."
+
+                        scene s717g
+                        with dissolve
+
+                        u "Lauren, stop."
+
+                        scene s717f
+                        with dissolve
+
+                        la "I don't want to see you right now. Please just leave."
+
+                        scene s717g
+                        with dissolve
+
+                        u "Fine. I'll go."
+
+                        play sound "sounds/doorclose.mp3"
+                        scene s717k # door closed
+                        with vpunch
+
+                        pause 0.5
+
+                        u "(Fuck...)"
+
+                        u "(I need to go for a walk and clear my head.)"
+
+                "Open relationship?":
+                    $ laurenemily = 3
+                    $ addPoint("bro")
+                    $ addPoint("tm")
+                    $ laurenrs = False
+                    $ laurenmad = True
+                    $ autumnmad = True
+
+                    u "Maybe we just rushed into this. "
+
+                    u "I mean, I really like you and I wanna be with you... but this is college."
+
+                    u "Have you ever thought about having an open relationship?"
+
+                    scene s717d
+                    with dissolve
+
+                    la "An open relationship? Like you'd be sleeping with other girls whilst we're dating?"
+
+                    scene s717e
+                    with dissolve
+
+                    u "I mean yeah... I mean you'd be free to date other people as well. We could even try something with just a second girl-"
+
+                    scene s717h# Lauren slightly angry and in disbelief
+                    with dissolve
+
+                    la "Okay, we're done."
+
+                    scene s717j
+                    with dissolve
+
+                    u "Lauren, I didn't-"
+
+                    scene s717h
+                    with dissolve
+
+                    la "I said we're done!"
+
+                    play sound "sounds/doorclose.mp3"
+                    scene s717k # door closed
+                    with vpunch
+
+                    pause 0.5
+
+                    u "(Fuck...)"
+
+                    u "(I need to go for a walk and clear my head.)"
 
         "Deny the cheating":
             $ laurenemily = 1
             $ addPoint("bro")
             $ addPoint("tm")
-            jump hj_b
+            $ laurenrs = True
+            $ laurenmad = False
 
+            u "I know how this looks."
 
+            u "I didn't cheat on you."
 
-    label hj_a:
+            scene s717d
+            with dissolve
 
-    u "I'm just gonna come right out and say it."
+            la "And how am I supposed to believe you? That's your ex. You used to hook up with her. What would stop you now?"
 
-    scene s717
-    with dissolve
+            scene s717e
+            with dissolve
 
-    la "What?"
+            u "Emily is crazy. She's still in love with me and she's trying to destroy what we have."
 
-    scene s717a
-    with dissolve
+            scene s717d
+            with dissolve
 
-    u "Yes, I did hook up with Emily. And before you say anything, I entirely regret it. I don't know what I was thinking. "
+            la "You're just saying that."
 
-    scene s717e # lauren sad mouth closed
-    with dissolve
+            scene s717e
+            with dissolve
 
-    la "*Takes a deep breath*"
+            u "No, she knows I'm with you and she's desperately trying to get me back. That's why she's posted this."
 
-    scene s717d
-    with dissolve
+            u "She knows that stuff like this can easily weaken a relationship, but we can't let it weaken ours."
 
-    la "Then why'd you do it?"
+            scene s717
+            with dissolve
 
-    scene s717e
-    with dissolve
+            la "So you didn't hook up with her?"
 
-    u "I don't know, Lauren! I wish I had an answer for you, I really do. But I don't know why I did it."
+            scene s717a
+            with dissolve
 
-    u "I mean she just kissed me and old feelings came up... and stuff happened."
+            u "No! I'm telling you she's just crazy."
 
-    scene s717f # Lauren really sad
-    with dissolve
+            scene s717b
+            with dissolve
 
-    la "*Sniff* It just doesn't make sense, why are we even dating if you're just gonna hook up with any girl you see???"
+            la "Okay... I believe you."
 
-    scene s717g
-    with dissolve
+            scene s717c
+            with dissolve
 
-    menu:
+            u "Thank god."
 
-        "This won't happen again.":
-            $ laurenemily = 2
-            $ addPoint("bf")
-            jump hk_a
+            scene s717b
+            with dissolve
 
-        "Open relationship?":
-            $ laurenemily = 3
-            $ addPoint("bro")
-            $ addPoint("tm")
-            jump hk_b
+            la "Let's show Emily that she can't tear us apart with stupid accusations."
 
+            scene s717c
+            with dissolve
 
+            u "Yes!"
 
+            scene s717b
+            with dissolve
 
-    label hk_b:
+            la "I was gonna go to the beach with Autumn later, but she has to work. Why don't we go?"
 
-    $ laurenrs = False
-    $ laurenmad = True
-    $ autumnmad = True
+            scene s717c
+            with dissolve
 
-    u "Maybe we just rushed into this. "
+            u "Yeah, I'd love that. Just let me know when."
 
-    u "I mean, I really like you and I wanna be with you... but this is college."
+            scene s717b
+            with dissolve
 
-    u "Have you ever thought about having an open relationship?"
+            la "Okay, I'll text you. See you later."
 
-    scene s717d
-    with dissolve
+            scene s717c
+            with dissolve
 
-    la "An open relationship? Like you'd be sleeping with other girls whilst we're dating?"
+            u "Great, see you."
 
-    scene s717e
-    with dissolve
+            scene s718 # mc walking back to his dorm
+            with fade
 
-    u "I mean yeah... I mean you'd be free to date other people as well. We could even try something with just a second girl-"
+            u "(Okay, I know lying to Lauren was wrong, but I just couldn't let her find out...)"
 
-    scene s717h# Lauren slightly angry and in disbelief
-    with dissolve
+            u "(I should go for a walk and clear my head.)"
 
-    la "Okay, we're done."
-
-    scene s717j
-    with dissolve
-
-    u "Lauren, I didn't-"
-
-    scene s717h
-    with dissolve
-
-    la "I said we're done!"
-
-    play sound "sounds/doorclose.mp3"
-    scene s717k # door closed
-    with vpunch
-
-    pause 0.5
-
-    u "(Fuck...)"
-
-    u "(I need to go for a walk and clear my head.)"
-
-    jump thisbewalk
-
-
-
-    label hk_a:
-
-    u "Like I said, it was a stupid mistake. After it happened, I realized that's not what I want at all."
-
-    scene s717f
-    with dissolve
-
-    la "Then what is it you want?"
-
-    scene s717g
-    with dissolve
-
-    u "You. Of course I want you. That's all I want. I promise. It's never gonna happen again."
-
-    if kct == "loyal":
-
-        call screen kctPopup
-
-        $ laurenrs = True
-        $ laurenmad = True
-        $ autumnmad = True
-
-        scene s717
-        with dissolve
-
-        la "*Takes a deep breath* I need some time to process this. Could I just be alone for a while?"
-
-        scene s717a
-        with dissolve
-
-        u "Of course. Take all the time you need."
-
-        scene s718 # mc walking back to his dorm
-        with fade
-
-        u "(Not ideal, but at least we're still dating...)"
-
-        u "(I could really use a walk to clear my head.)"
-
-        jump thisbewalk
-
-    else:
-
-        $ laurenrs = False
-        $ laurenmad = True
-        $ autumnmad = True
-
-        scene s717d
-        with dissolve
-
-        la "No, I can't do this [name]."
-
-        scene s717e
-        with dissolve
-
-        u "What do you mean?"
-
-        scene s717d
-        with dissolve
-
-        la "This, I can't do this. I can't do us. "
-
-        scene s717e
-        with dissolve
-
-        u "I told you I was sorry Lauren. It won't ever happen again."
-
-        scene s717f
-        with dissolve
-
-        la "I can't trust you. And without trust, there isn't a relationship. If you do it once, it means you'll do it again."
-
-        scene s717g
-        with dissolve
-
-        u "Lauren-"
-
-        scene s717f
-        with dissolve
-
-        la "I think you should go right now."
-
-        scene s717g
-        with dissolve
-
-        u "No, I'm not leaving."
-
-        scene s717f
-        with dissolve
-
-        la "Just go. I'm done. You want to go hookup with her again, you can. Because we're not dating anymore."
-
-        scene s717g
-        with dissolve
-
-        u "Lauren, stop."
-
-        scene s717f
-        with dissolve
-
-        la "I don't want to see you right now. Please just leave."
-
-        scene s717g
-        with dissolve
-
-        u "Fine. I'll go."
-
-        play sound "sounds/doorclose.mp3"
-        scene s717k # door closed
-        with vpunch
-
-        pause 0.5
-
-        u "(Fuck...)"
-
-        u "(I need to go for a walk and clear my head.)"
-
-        jump thisbewalk
-
-    label hj_b:
-
-    $ laurenrs = True
-    $ laurenmad = False
-
-
-    u "I know how this looks."
-
-    u "I didn't cheat on you."
-
-    scene s717d
-    with dissolve
-
-    la "And how am I supposed to believe you? That's your ex. You used to hook up with her. What would stop you now?"
-
-    scene s717e
-    with dissolve
-
-    u "Emily is crazy. She's still in love with me and she's trying to destroy what we have."
-
-    scene s717d
-    with dissolve
-
-    la "You're just saying that."
-
-    scene s717e
-    with dissolve
-
-    u "No, she knows I'm with you and she's desperately trying to get me back. That's why she's posted this."
-
-    u "She knows that stuff like this can easily weaken a relationship, but we can't let it weaken ours."
-
-    scene s717
-    with dissolve
-
-    la "So you didn't hook up with her?"
-
-    scene s717a
-    with dissolve
-
-    u "No! I'm telling you she's just crazy."
-
-    scene s717b
-    with dissolve
-
-    la "Okay... I believe you."
-
-    scene s717c
-    with dissolve
-
-    u "Thank god."
-
-    scene s717b
-    with dissolve
-
-    la "Let's show Emily that she can't tear us apart with stupid accusations."
-
-    scene s717c
-    with dissolve
-
-    u "Yes!"
-
-    scene s717b
-    with dissolve
-
-    la "I was gonna go to the beach with Autumn later, but she has to work. Why don't we go?"
-
-    scene s717c
-    with dissolve
-
-    u "Yeah, I'd love that. Just let me know when."
-
-    scene s717b
-    with dissolve
-
-    la "Okay, I'll text you. See you later."
-
-    scene s717c
-    with dissolve
-
-    u "Great, see you."
-
-    scene s718 # mc walking back to his dorm
-    with fade
-
-    u "(Okay, I know lying to Lauren was wrong, but I just couldn't let her find out...)"
-
-    u "(I should go for a walk and clear my head.)"
-
-    jump thisbewalk
-
-    ######## SCENE 8 Walk / Dog Shelter
-
-    label thisbewalk:
-
+######## SCENE 8 Walk / Dog Shelter
+label thisbewalk:
     scene s719 #mc on a walk outside in town
     with fade
     stop music fadeout 2
@@ -2374,8 +2189,7 @@ label v07:
 
     u "(Shit... just remembered that tomorrow's also my next history lecture. Gotta make sure to remember wearing that stupid costume I bought...)"
 
-    if autumnmad == False:
-
+    if not autumnmad:
         scene s721 # close up of dogshelter shop window
         with dissolve
 
@@ -2433,34 +2247,21 @@ label v07:
         with dissolve
 
         menu:
-
             "Almost as cute as you.":
-                if laurenrs == True:
+                if laurenrs:
                     $ addPoint("tm")
                 else:
                     $ addPoint("bf")
 
-                jump hl_a
+                u "Almost as cute as you"
+
+                scene s727b # close up autumn uncomfortable
+                with dissolve
+
+                aut "Uhhh..."
 
             "Yeah, he really is.":
-                jump hl_b
-
-
-        label hl_a:
-        u "Almost as cute as you"
-
-        scene s727b # close up autumn uncomfortable
-        with dissolve
-
-        aut "Uhhh..."
-
-        jump hl_ad
-
-        label hl_b:
-
-        u "Yeah, he really is."
-
-        label hl_ad:
+                u "Yeah, he really is."
 
         scene s726 # mc looking down playing with oscar
         with dissolve
@@ -2500,79 +2301,67 @@ label v07:
         with dissolve
 
         menu:
-
             "Yes, of course.":
                 $ addPoint("tm")
                 $ politics = True
-                jump hm_a
 
+                u "Yes, of course. I guess we all have something. Am I right?"
+
+                scene s727
+                with dissolve
+
+                aut "You'd be surprised. Politics tend to scare people."
+
+                scene s727a
+                with dissolve
+
+                u "Yeah, but if we're not the ones fighting for change, then who is?"
+
+                scene s727
+                with dissolve
+
+                aut "So what is your cause then?"
+
+                scene s727a
+                with dissolve
+
+                u "Uhm... my cause is..."
+
+                scene s728 # close up of a poster on the wall that says "Western Animal movement"
+                with dissolve
+
+                u "The uhm Western... Animal movement."
+
+                scene s727
+                with dissolve
+
+                aut "Oh animal rights, how fascinating. I have to admit, I haven't done much research into the Western Animal Movement... would you care to elaborate on its exact purpose and goals?"
+
+                scene s727a
+                with dissolve
+
+                u "You know, uhm... it's like animal rights but more in the west."
+
+                scene s726
+                with dissolve
+
+                u "Cause uhm... the eastern animal rights are uhm good. But the west, you know. I mean, that's where we gotta focus our energy."
+
+                scene s727
+                with dissolve
+
+                aut "Oh, alright. I'll definitely check it out."
 
             "No, not really.":
                 $ addPoint("bro")
                 $ politics = False
-                jump hm_b
 
-        label hm_a:
+                u "No, not really. I'm not really into politics myself."
 
-        u "Yes, of course. I guess we all have something. Am I right?"
+                scene s727d
+                with dissolve
 
-        scene s727
-        with dissolve
-
-        aut "You'd be surprised. Politics tend to scare people."
-
-        scene s727a
-        with dissolve
-
-        u "Yeah, but if we're not the ones fighting for change, then who is?"
-
-        scene s727
-        with dissolve
-
-        aut "So what is your cause then?"
-
-        scene s727a
-        with dissolve
-
-        u "Uhm... my cause is..."
-
-        scene s728 # close up of a poster on the wall that says "Western Animal movement"
-        with dissolve
-
-        u "The uhm Western... Animal movement."
-
-        scene s727
-        with dissolve
-
-        aut "Oh animal rights, how fascinating. I have to admit, I haven't done much research into the Western Animal Movement... would you care to elaborate on its exact purpose and goals?"
-
-        scene s727a
-        with dissolve
-
-        u "You know, uhm... it's like animal rights but more in the west."
-
-        scene s726
-        with dissolve
-
-        u "Cause uhm... the eastern animal rights are uhm good. But the west, you know. I mean, that's where we gotta focus our energy."
-
-        scene s727
-        with dissolve
-
-        aut "Oh, alright. I'll definitely check it out."
-
-        jump hm_ad
-
-        label hm_b:
-
-        u "No, not really. I'm not really into politics myself."
-
-        scene s727d
-        with dissolve
-
-        aut "Oh, okay."
-
-        label hm_ad:
+                aut "Oh, okay."
 
         scene s726a
         with dissolve
@@ -2588,101 +2377,81 @@ label v07:
         with dissolve
 
         menu:
-
             "Can I join?":
                 $ addPoint("bf")
                 $ protest = True
-                jump hn_a
+
+                u "Really? Any chance I can join you?"
+
+                scene s727
+                with dissolve
+
+                aut "You sure?"
+
+                scene s727a
+                with dissolve
+
+                u "Yeah, I'd love to help."
+                if politics:
+                    $ signs = True
+
+                    scene s727
+                    with dissolve
+
+                    aut "Wow, I'm surprised. But if you really want to then sure. I was gonna make my sign on Friday, if you want to join?"
+
+                    scene s727a
+                    with dissolve
+
+                    u "Yeah, definitely. Just let me know when you're making them."
+
+                elif kct == "loyal":
+                    call screen kctPopup
+
+                    $ signs = True
+
+                    scene s727
+                    with dissolve
+
+                    aut "Wow, I'm surprised. But if you really want to then sure. I was gonna make my sign on Friday, if you want to join?"
+
+                    scene s727a
+                    with dissolve
+
+                    u "Yeah, definitely. Just let me know when you're making them."
+
+                    scene s727
+                    with dissolve
+
+                    aut "Great, I will."
+
+                else:
+                    $ signs = False
+
+                    scene s727
+                    with dissolve
+
+                    aut "Uhm, yeah. I'll see you there on Saturday then."
+
+                    scene s727a
+                    with dissolve
+
+                    u "Great, sounds good."
+
+                    scene s727
+                    with dissolve
 
             "That's really cool.":
                 $ addPoint("bro")
                 $ protest = False
-                jump hn_b
-
-        label hn_a:
-
-        u "Really? Any chance I can join you?"
-
-        scene s727
-        with dissolve
-
-        aut "You sure?"
-
-        scene s727a
-        with dissolve
-
-        u "Yeah, I'd love to help."
-        if politics == True:
-
-            $ signs = True
-
-            scene s727
-            with dissolve
-
-            aut "Wow, I'm surprised. But if you really want to then sure. I was gonna make my sign on Friday, if you want to join?"
-
-            scene s727a
-            with dissolve
-
-            u "Yeah, definitely. Just let me know when you're making them."
-
-        else:
-
-            if kct == "loyal":
-
-                call screen kctPopup
-
-                $ signs = True
-
-                scene s727
-                with dissolve
-
-                aut "Wow, I'm surprised. But if you really want to then sure. I was gonna make my sign on Friday, if you want to join?"
-
-                scene s727a
-                with dissolve
-
-                u "Yeah, definitely. Just let me know when you're making them."
-
-                scene s727
-                with dissolve
-
-                aut "Great, I will."
-
-
-            else:
-
                 $ signs = False
 
-                scene s727
-                with dissolve
-
-                aut "Uhm, yeah. I'll see you there on Saturday then."
-
-                scene s727a
-                with dissolve
-
-                u "Great, sounds good."
+                u "That's really cool."
 
                 scene s727
                 with dissolve
 
-
-
-        jump hn_ad
-
-        label hn_b:
-
-        $ signs = False
-
-        u "That's really cool."
-
-        scene s727
-        with dissolve
-
-        aut "Yeah, thanks."
-
-        label hn_ad:
+                aut "Yeah, thanks."
 
         aut "Anyway, I gotta get back to work soon."
 
@@ -2703,8 +2472,7 @@ label v07:
 
         aut "Yeah, no problem."
 
-        if signs == True:
-
+        if signs:
             aut "I'll see you on Friday."
 
             scene s727a
@@ -2717,8 +2485,6 @@ label v07:
 
     u "(Alright, time to get back to my dorm...)"
 
-
-
     ######## SCENE 9 - PENELOPE IN FRONT OF YOUR DORM
     scene s718
     with fade
@@ -2726,8 +2492,7 @@ label v07:
     pause 0.5
     play music "music/mhappy.mp3"
 
-    if penelopemad == True:
-
+    if penelopemad:
         scene s731 # First person, Penelope sitting in front of your dorm door
         with dissolve
 
@@ -2776,152 +2541,107 @@ label v07:
         u "Yeah, sounds good."
 
     ############## SCENE 10 - MC IN HIS DORM WEDNESDAY NOON
-
     scene s733 # mc in his dorm
     with fade
 
     pause 0.5
 
-
     if not laurenmad and not nobeach:
-
         play sound "sounds/vibrate.mp3"
 
-        if seenlauren == True:
+        if seenlauren and laurenrs:
+            $ contact_Lauren.newMessage("Wanna go now babe?", queue=False)
+            $ contact_Lauren.addReply("Sure, I'll come pick you up")
+            $ contact_Lauren.newMessage("Great :)")
 
-            if laurenrs == True:
-
-                $ contact_Lauren.newMessage("Wanna go now babe?")
-                $ contact_Lauren.addReply("Sure, I'll come pick you up", "larep20a")
-
-            else:
-
-                $ contact_Lauren.newMessage("Wanna go now?")
-                $ contact_Lauren.addReply("Sure, I'll come pick you up", "larep19a")
+        elif seenlauren:
+            $ contact_Lauren.newMessage("Wanna go now?", queue=False)
+            $ contact_Lauren.addReply("Sure, I'll come pick you up")
+            $ contact_Lauren.newMessage("Great :)")
 
         else:
+            $ contact_Lauren.newMessage("Hey :)", queue=False)
 
-            $ contact_Lauren.newMessage("Hey :)")
             if laurenrs:
-                $ contact_Lauren.newMessage("You wanna go to the beach today?")
-                $ contact_Lauren.addReply("Sounds good, when were you thinking?", "larep22a")
+                $ contact_Lauren.newMessage("You wanna go to the beach today?", queue=False)
+                $ contact_Lauren.addReply("Sounds good, when were you thinking?")
+                $ contact_Lauren.newMessage("How about now?")
+                $ contact_Lauren.addReply("Sure, I'll come pick you up")
+                $ contact_Lauren.newMessage("Great :)")
+
             else:
-                $ contact_Lauren.newMessage("You wanna go to the beach today?")
-                $ contact_Lauren.addReply("Sounds good, when were you thinking?", "larep25a")
-                $ contact_Lauren.addReply("Sorry, I can't I'm really busy today", "larep25b")
+                $ contact_Lauren.newMessage("You wanna go to the beach today?", queue=False)
+                $ contact_Lauren.addReply("Sounds good, when were you thinking?", v7_msgReply3)
+                $ contact_Lauren.addReply("Sorry, I can't I'm really busy today", v7_msgReply4)
 
         " "
 
         label phoneao:
+            if contact_Lauren.getReplies():
+                u "(I should probably reply.)"
+                jump phoneao
 
-        if contact_Lauren.messages[-1].replies:
-
-            u "(I should probably reply.)"
-
-            jump phoneao
-
-        elif nobeach:
-
-            
+        if nobeach:
             u "(Time to finish my history assignment...)"
             jump nobeach
 
-
         else:
-            
             u "(Gotta put on my swim trunks and pick up Lauren.)"
-
             jump beachlauren
 
-        label larep19a:
-            $ contact_Lauren.newMessage("Great :)")
-            call screen messager(contact_Lauren)
-
-        label larep20a:
-            $ contact_Lauren.newMessage("Great :)")
-            call screen messager(contact_Lauren)
-
-        label larep22a:
-            $ contact_Lauren.newMessage("How about now?")
-            $ contact_Lauren.addReply("Sure, I'll come pick you up", "larep23a")
-            call screen messager(contact_Lauren)
-
-        label larep23a:
-            $ contact_Lauren.newMessage("Great :)")
-            call screen messager(contact_Lauren)
-
-        label larep25a:
-            $ contact_Lauren.newMessage("How about now?")
-            $ contact_Lauren.addReply("Sure, I'll come pick you up", "larep23a")
-            call screen messager(contact_Lauren)
-
-        label larep25b:
-            $ nobeach = True
-            $ contact_Lauren.newMessage("Oh okay, another time then.")
-
-            call screen messager(contact_Lauren)
-
-
     else:
-
-
         u "(Ugh... I still gotta finish my history assignment before tomorrow.)"
 
         # lauren post on kiwii
-
         label nobeach:
-        scene s733 # mc working at desk
-        with fade
-
-        pause 0.5
-
-        if emilyrs == True:
-            scene s733a #mc turns his head to look at the door
-            with dissolve
+            scene s733 # mc working at desk
+            with fade
 
             pause 0.5
 
-            scene s751 #shows a letter that's been slipped under the door.
-            with dissolve
+            if emilyrs:
+                scene s733a #mc turns his head to look at the door
+                with dissolve
 
-            u "(Huh?)"
+                pause 0.5
 
-            scene s752 # mc walks towards letter
-            with dissolve
+                scene s751 #shows a letter that's been slipped under the door.
+                with dissolve
 
-            pause 0.5
+                u "(Huh?)"
 
-            scene s752a # mc picks it up
-            with dissolve
+                scene s752 # mc walks towards letter
+                with dissolve
 
-            pause 0.5
+                pause 0.5
 
-            show screen letter1
+                scene s752a # mc picks it up
+                with dissolve
 
-            " "
+                pause 0.5
 
-            #em "Dear MC, I'm really sorry I posted that picture. I should have said something to you about it before. I guess I have to admit that I kind of miss you and I miss us being together. But most of all, I'd really like to make it up to you. Meet me at my dorm tonight at midnight. I'll have a surprise waiting for you xoxo."
-            hide screen letter1
-            scene s752b # mc walks to his desk with the letter in his hand
-            with dissolve
+                show screen letter1
 
-            u "(Emily is just hot and cold... I'll have to see how I feel about it at midnight, but giving her yet another chance doesn't seem like a great idea.)"
+                " "
 
-            scene s755a # mc walking towards his bed and starts looking at his phone but you can't see the screen in jeans
-            with dissolve
+                #em "Dear MC, I'm really sorry I posted that picture. I should have said something to you about it before. I guess I have to admit that I kind of miss you and I miss us being together. But most of all, I'd really like to make it up to you. Meet me at my dorm tonight at midnight. I'll have a surprise waiting for you xoxo."
+                hide screen letter1
+                scene s752b # mc walks to his desk with the letter in his hand
+                with dissolve
 
-        jump afterbeach
+                u "(Emily is just hot and cold... I'll have to see how I feel about it at midnight, but giving her yet another chance doesn't seem like a great idea.)"
 
+                scene s755a # mc walking towards his bed and starts looking at his phone but you can't see the screen in jeans
+                with dissolve
 
+            jump afterbeach
 
 ########### SCENE 11 Beach trip with Lauren
-    label beachlauren:
+label beachlauren:
     stop music fadeout 2
-    image s738avid = Movie (play="images/s738avid.webm", loop = False, image = "images/s738avid75.webp", start_image = "images/s738avid16.webp")
 
     scene s734 # mc walking through dorm hallways
     with fade
-
 
     pause 0.5
 
@@ -2934,7 +2654,7 @@ label v07:
 
     play sound "sounds/dooropen.mp3"
 
-    if laurenrs == True:
+    if laurenrs:
         play music "music/mlove2.mp3"
         queue music [ "music/mlove.mp3", "music/mlove1.mp3" ]
 
@@ -2942,7 +2662,6 @@ label v07:
         with dissolve
 
         la "Heyyy!"
-
 
         scene s736a # lauren passionately kisses mc
         with dissolve
@@ -3042,8 +2761,7 @@ label v07:
         scene s742a
         with dissolve
 
-        if imremad == True:
-
+        if imremad:
             menu:
                 "Tell her it's fine":
                     $ addPoint("bro")
@@ -3067,8 +2785,6 @@ label v07:
                     u "Yeah..."
 
                     u "I mean he's teaching me how to fight and everything..."
-
-                    jump ho_a
 
                 "Tell her he moved out":
                     $ laurenimre = True
@@ -3098,16 +2814,8 @@ label v07:
 
                     u "It kinda sucks cause he was teaching me how to fight."
 
-                    jump ho_a
-
-
         else:
-
             u "Really good, we're getting along really well and he's teaching me how to fight.."
-
-            jump ho_a
-
-        label ho_a:
 
         scene s742b
         with dissolve
@@ -3144,7 +2852,7 @@ label v07:
 
         la "So uhm... which frat are you gonna join then?"
 
-        if joinapes == True:
+        if joinapes:
             scene s742g
             with dissolve
 
@@ -3188,7 +2896,6 @@ label v07:
             la "Okay..."
 
         else:
-
             u "I mean pledging starts tonight, but I'm pretty sure I'm gonna join the Wolves."
 
             scene s742
@@ -3327,11 +3034,11 @@ label v07:
         la "Yeah, goodbye."
 
     else:
-
         scene s737
         with dissolve
 
         la "Oh hey, you're early."
+
         play music "music/mlove.mp3"
         queue music [ "music/mlove2.mp3", "music/mlove1.mp3" ]
 
@@ -3391,8 +3098,7 @@ label v07:
 
         la "Anything new with you lately?"
 
-        if emilyrs == True:
-
+        if emilyrs:
             scene s742a
             with dissolve
 
@@ -3421,7 +3127,6 @@ label v07:
             u "Anyways, anything new with you?"
 
         else:
-
             scene s742a
             with dissolve
 
@@ -3457,8 +3162,7 @@ label v07:
         scene s742a
         with dissolve
 
-        if imremad == True:
-
+        if imremad:
             menu:
                 "Tell her it's fine":
                     $ addPoint("bro")
@@ -3482,8 +3186,6 @@ label v07:
                     u "Yeah..."
 
                     u "I mean he's teaching me how to fight and everything..."
-
-                    jump ho_b
 
                 "Tell her he moved out":
                     $ laurenimre = True
@@ -3513,16 +3215,8 @@ label v07:
 
                     u "It kinda sucks cause he was teaching me how to fight."
 
-                    jump ho_b
-
-
         else:
-
             u "Really good, we're getting along really well and he's teaching me how to fight.."
-
-            jump ho_b
-
-        label ho_b:
 
         scene s742b
         with dissolve
@@ -3562,108 +3256,84 @@ label v07:
         la "I mean... I just don't want you to end up in the hospital."
 
         menu:
-
             "You're cute.":
                 $ addPoint("tm")
-                jump hq_a
+
+                scene s742e
+                with dissolve
+
+                u "You're cute when you worry about me."
+
+                scene s742
+                with dissolve
+
+                la "*Giggles* Oh shut up."
+
+                scene s742a
+                with dissolve
+
+                if kct == "loyal":
+                    menu:
+                        "Kiss her":
+                            $ beachfirstkiss = True
+
+                            play sound "sounds/kiss.mp3"
+                            scene s743e # you kiss Lauren
+                            with dissolve
+
+                            pause 1.0
+
+                            scene s743 # showing both mc and Lauren from a close angle, lauren leaning closer to him, no one else around, mouth open flirting
+                            with dissolve
+
+                            la "Why'd you stop?"
+
+                            scene s743a # lauren climbs on top of mc, mc opens mouth surprised smile
+                            with dissolve
+
+                            u "*Chuckles* Huh?"
+
+                            scene s743b # lauren very close to mcs face, mc has his hands on her hips, mc mouth open flirty
+                            with dissolve
+
+                            la "I mean it's just us here..."
+
+                            scene s743c # lauren push mc down so that he's laying with his back on the sand / towel and starts kissing him
+                            with vpunch
+
+                            pause 0.5
+
+                            scene s743apic
+                            with dissolve
+
+                            " "
+
+                            la "*Quiet moan* Mhmmm..."
+
+
+                            scene s745 # lauren mouth open, mc mouth closed
+                            with dissolve
+
+                            la "I'm really glad we're here together."
+
+                            scene s745a # close up of Lauren lying on top mc, mc mouth open lauren mouth closed, both smiling
+                            with dissolve
+
+                            u "Yeah, me too."
+
+                        "Don't risk it":
+                            $ addPoint("bf")
+                            $ beachfirstkiss = False
+
+                            u "*Chuckles*"
+
+                else:
+                    u "*Chuckles*"
 
             "I won't.":
                 $ addPoint("bf")
-                jump hq_b
 
-        label hq_a:
-
-        scene s742e
-        with dissolve
-
-        u "You're cute when you worry about me."
-
-        scene s742
-        with dissolve
-
-        la "*Giggles* Oh shut up."
-
-        scene s742a
-        with dissolve
-
-        if kct == "loyal":
-
-            menu:
-
-                "Kiss her":
-                    $ beachfirstkiss = True
-                    jump hr_a
-
-                "Don't risk it":
-                    $ addPoint("bf")
-                    $ beachfirstkiss = False
-                    jump hr_b
-
-        else:
-
-            jump hr_b
-
-        label hr_a:
-
-        play sound "sounds/kiss.mp3"
-        scene s743e # you kiss Lauren
-        with dissolve
-
-        pause 1.0
-
-        scene s743 # showing both mc and Lauren from a close angle, lauren leaning closer to him, no one else around, mouth open flirting
-        with dissolve
-
-        la "Why'd you stop?"
-
-        scene s743a # lauren climbs on top of mc, mc opens mouth surprised smile
-        with dissolve
-
-        u "*Chuckles* Huh?"
-
-        scene s743b # lauren very close to mcs face, mc has his hands on her hips, mc mouth open flirty
-        with dissolve
-
-        la "I mean it's just us here..."
-
-        scene s743c # lauren push mc down so that he's laying with his back on the sand / towel and starts kissing him
-        with vpunch
-
-        pause 0.5
-
-        scene s743apic
-        with dissolve
-
-        " "
-
-        la "*Quiet moan* Mhmmm..."
-
-
-        scene s745 # lauren mouth open, mc mouth closed
-        with dissolve
-
-        la "I'm really glad we're here together."
-
-        scene s745a # close up of Lauren lying on top mc, mc mouth open lauren mouth closed, both smiling
-        with dissolve
-
-        u "Yeah, me too."
-
-        jump sundown
-
-        label hr_b:
-
-        u "*Chuckles*"
-
-        jump sundown
-
-        label hq_b:
-
-        u "I won't... don't worry."
-
-        jump sundown
-
-        label sundown:
+                u "I won't... don't worry."
 
         scene s746 #OpeningL the lighting should be early evening now, time has passed, Lauren and mc laying on the respective blankets
         with Fade(1,0,1)
@@ -3690,8 +3360,7 @@ label v07:
 
         pause 0.5
 
-        if laurenrs == True or beachfirstkiss:
-
+        if laurenrs or beachfirstkiss:
             scene s749b
             with dissolve
 
@@ -3729,7 +3398,6 @@ label v07:
             la "Yeah, goodbye."
 
         else:
-
             scene s749b
             with dissolve
 
@@ -3756,12 +3424,8 @@ label v07:
 
         pause 0.5
 
-        jump rightafterbeach
-
 ########## SCENE 12: MC BACK AT DORM WEDNESDAY EVENING
-    label rightafterbeach:
-
-    if emilyrs == True:
+    if emilyrs:
         play sound "sounds/dooropen.mp3"
         scene s753 # mc opens his dorm door and looks on the ground, there's a letter
         with dissolve
@@ -3782,26 +3446,20 @@ label v07:
     scene s755 # mc walking towards his bed and starts looking at his phone but you can't see the screen in swim trunks
     with dissolve
 
-    label afterbeach:
-
+label afterbeach:
     u "(Oh shit, it's almost six already!)"
 
-    if meetgrayson == False:
-
+    if not meetgrayson:
         u "(Wolves pledging starts soon... is it stupid of me to wanna pledge now? I didn't think frat life was for me..."
 
         u "(But after everything that happened I feel like I gotta at least try and get in, otherwise I'll miss out on too much.)"
 
-        jump pledgewolves
-
-    else:
-
-        if joinapes == True:
+    elif joinapes:
             u "(Pledging starts soon, I told Grayson I'd join the Apes, but is that really the right call? I mean the Wolves party was sick...)"
 
             u "(But in the Apes, I can finally be someone. I can be a winner. Grayson may have done some questionable shit in the past, but he also said a lot of stuff that resonated with me...)"
 
-            if imremad == True:
+            if imremad:
                 u "(On the other hand, Imre would hate me even more if I pledged the Apes...)"
             else:
                 u "(On the other hand, Imre would hate me if I pledged the Apes...)"
@@ -3811,77 +3469,55 @@ label v07:
             u "(Time to make a decision.)"
 
             menu:
-
                 "Pledge to the Apes":
-
                     u "(Fuck it. I'm gonna be winner, no matter what it costs. Time to pledge to the Apes.)"
 
                     jump pledgeapes
 
-
                 "Pledge to the Wolves":
-
                     u "(Grayson might kill me when he finds out, but I can't join the Apes. I gotta pledge to the Wolves.)"
 
-                    jump pledgewolves
+    else:
+        u "(Pledging starts soon, I told Grayson I wouldn't join the Apes, but is that really the right call? I mean he did say some things that really resonated with me...)"
+
+        u "(I'm pretty sure their pledging is at the same time as the Wolves, so I might be able to just go to the Apes' house and tell Grayson I changed my mind.)"
+
+        if imremad:
+            u "(But even so, the Wolves party was sick and Imre would hate me even more if I pledged the Apes...)"
         else:
+            u "(But even so, the Wolves party was sick and Imre would hate me if I pledged the Apes...)"
 
-            u "(Pledging starts soon, I told Grayson I wouldn't join the Apes, but is that really the right call? I mean he did say some things that really resonated with me...)"
+        u "(When I came to San Vallejo I didn't even think frat life was for me, but after everything that happened I feel like I gotta at least try and get into one of these. Otherwise I'll miss out on too much.)"
 
-            u "(I'm pretty sure their pledging is at the same time as the Wolves, so I might be able to just go to the Apes' house and tell Grayson I changed my mind.)"
+        u "(Time to make a decision.)"
 
-            if imremad == True:
-                u "(But even so, the Wolves party was sick and Imre would hate me even more if I pledged the Apes...)"
-            else:
-                u "(But even so, the Wolves party was sick and Imre would hate me if I pledged the Apes...)"
+        menu:
+            "Pledge to the Apes":
 
-            u "(When I came to San Vallejo I didn't even think frat life was for me, but after everything that happened I feel like I gotta at least try and get into one of these. Otherwise I'll miss out on too much.)"
+                $ silverback = True
+                if not steam:
+                    show silverback at achievementShow
+                else:
+                    $ achievement.grant("silverback")
+                    $ achievement.sync()
 
-            u "(Time to make a decision.)"
+                u "(Fuck it. I'm gonna be winner, no matter what it costs. I'ma go to the Apes' house and tell Grayson I changed my mind.)"
 
-            menu:
+                jump pledgeapes
 
-                "Pledge to the Apes":
+            "Pledge to the Wolves":
+                $ wolfpack = True
+                if not steam:
+                    show wolfpack at achievementShow
+                else:
+                    $ achievement.grant("wolfpack")
+                    $ achievement.sync()
 
-                    $ silverback = True
-                    if not steam:
-                        image silverback = "images/silverback.webp"
-                        show silverback:
-                            xpos 0
-                            ypos -200
-                            linear 0.5 xpos 0 ypos 0
-                            pause 2.0
-                            linear 0.5 xpos 0 ypos -200
-                    else:
-                        $ achievement.grant("silverback")
-                        $ achievement.sync()
-
-                    u "(Fuck it. I'm gonna be winner, no matter what it costs. I'ma go to the Apes' house and tell Grayson I changed my mind.)"
-
-                    jump pledgeapes
-
-
-                "Pledge to the Wolves":
-                    $ wolfpack = True
-                    if not steam:
-                        image wolfpack = "images/wolfpack.webp"
-                        show wolfpack:
-                            xpos 0
-                            ypos -200
-                            linear 0.5 xpos 0 ypos 0
-                            pause 2.0
-                            linear 0.5 xpos 0 ypos -200
-                    else:
-                        $ achievement.grant("wolfpack")
-                        $ achievement.sync()
-
-                    u "(Nah, Grayson's done more than enough questionable shit. The Wolves been nothing but good to me. I'ma pledge to the Wolves.)"
-
-                    jump pledgewolves
+                u "(Nah, Grayson's done more than enough questionable shit. The Wolves been nothing but good to me. I'ma pledge to the Wolves.)"
 
 
 ####### SCENE 13 PLEDGING THE WOLVES
-    label pledgewolves:
+label pledgewolves:
     $ addPoint("bro")
     $ joinwolves = True
 
@@ -3894,30 +3530,35 @@ label v07:
     pause 0.7
 
     if imremad:
-
         scene s757a # Imre notices MC, so he is now looking at the camera and waves
         with dissolve
+
         u "(Wait, is he waving at {i}me{/i}?)"
 
         play music "music/m11punk.mp3"
         scene s758 # Camera - third person. MC and Imre close up. Imre talking mouth open, MC confused look mouth closed. No others visible in the scene preferably
         with dissolve
+
         imre "Was wondering where you were."
 
         scene s758a # Same expressions but MC is now talking
         with dissolve
+
         u "Really?"
 
         scene s758b # Imre talking and MC has normal expression now
         with dissolve
+
         imre "Yeah man, I know we had our differences. But at the end of the day, we're still bros."
 
         scene s758c # MC happy and talking
         with dissolve
+
         u "Happy to hear that man. And not just any bros, we're gonna be frat bros!"
 
         scene s758b
         with dissolve
+
         imre "Hell yeah!"
 
         scene s758d # Imre and MC fist bump, but MC applies force
@@ -4161,6 +3802,7 @@ label v07:
 
     scene s766c # Chris looking slightly away from camera with mouth closed. Imre and Xavier looking at Chris with their mouths closed
     with dissolve
+
     if not wolvesTask1:
         play sound "sounds/swoosh.mp3"
         u "(What the fuck!?)"
@@ -4268,7 +3910,6 @@ label v07:
             u "Shit, I gotta get that."
 
             ch "And therefore Perry wins! Congrats Perry!"
-            jump chloe_call
 
         "Continue the challenge":
             $ tasks += 1
@@ -4278,19 +3919,18 @@ label v07:
             u "I'll get it later. I'm in this to win."
             ch "That's the spirit!"
 
-    scene s780 # Close up of perry leaving the tub, mouth open
-    with dissolve
-    guyd "Damn. I tried my best."
+            scene s780 # Close up of perry leaving the tub, mouth open
+            with dissolve
+            guyd "Damn. I tried my best."
 
-    scene s775
-    with dissolve
-    imre "You did it man!"
-    ch "Grats [name]. Good job!"
+            scene s775
+            with dissolve
+            imre "You did it man!"
+            ch "Grats [name]. Good job!"
 
-    jump aftercall
+            jump aftercall
 
-    label chloe_call:
-
+label chloe_call:
     scene sphone1 # mc on the phone mouth open
     with dissolve
 
@@ -4299,7 +3939,7 @@ label v07:
     scene sphone1a # mc on the phone mouth closed tense
     with dissolve
 
-    if chloemad == True:
+    if chloemad:
 
         cl "Hey [name]... can we talk right now?"
 
@@ -4332,76 +3972,71 @@ label v07:
 
         u "(How weird...)"
 
+    elif fr3chloe:
+        cl "Hey [name]... just wanted to say thanks for yesterday."
+
+        scene sphone1 # mc on the phone mouth open
+        with dissolve
+
+        u "Of course. Is that why you're calling?"
+
+        scene sphone1a # mc on the phone mouth closed
+        with dissolve
+
+        cl "Uhm yeah... sorry, I know pledging is going on right now... I just-"
+
+        cl "Oh, shit Aubrey's calling me, I gotta get back. But thanks... for everything. I'll talk to you soon."
+
+        scene sphone1 # mc on the phone mouth open
+        with dissolve
+
+        u "Sounds good."
+
+        play sound "sounds/rejectcall.mp3"
+
+        scene sphone1a # mc on the phone mouth closed
+        with dissolve
+
+        "*Chloe hangs up*"
+
+        scene sphone2 # mc looks at his phone, you can't see the screen
+        with dissolve
+
+        u "(I wonder what she was about to say.)"
+
     else:
+        cl "Hey [name]... can you talk right now?"
 
-        if fr3chloe == True:
-            cl "Hey [name]... just wanted to say thanks for yesterday."
+        scene sphone1 # mc on the phone mouth open
+        with dissolve
 
-            scene sphone1 # mc on the phone mouth open
-            with dissolve
+        u "Uhm... right now is bad. Is it urgent?"
 
-            u "Of course. Is that why you're calling?"
+        scene sphone1a # mc on the phone mouth closed
+        with dissolve
 
-            scene sphone1a # mc on the phone mouth closed
-            with dissolve
+        cl "Uhhh no, I just-."
 
-            cl "Uhm yeah... sorry, I know pledging is going on right now... I just-"
+        cl "You know what... never mind."
 
-            cl "Oh, shit Aubrey's calling me, I gotta get back. But thanks... for everything. I'll talk to you soon."
+        scene sphone1 # mc on the phone mouth open
+        with dissolve
 
-            scene sphone1 # mc on the phone mouth open
-            with dissolve
+        u "I mean I can-"
 
-            u "Sounds good."
+        play sound "sounds/rejectcall.mp3"
 
-            play sound "sounds/rejectcall.mp3"
+        scene sphone1a # mc on the phone mouth closed
+        with dissolve
 
-            scene sphone1a # mc on the phone mouth closed
-            with dissolve
+        "*Chloe hangs up*"
 
-            "*Chloe hangs up*"
+        scene sphone2 # mc looks at his phone, you can't see the screen
+        with dissolve
 
-            scene sphone2 # mc looks at his phone, you can't see the screen
-            with dissolve
+        u "(What was that about?)"
 
-            u "(I wonder what she was about to say.)"
-
-        else:
-            cl "Hey [name]... can you talk right now?"
-
-            scene sphone1 # mc on the phone mouth open
-            with dissolve
-
-            u "Uhm... right now is bad. Is it urgent?"
-
-            scene sphone1a # mc on the phone mouth closed
-            with dissolve
-
-            cl "Uhhh no, I just-."
-
-            cl "You know what... never mind."
-
-            scene sphone1 # mc on the phone mouth open
-            with dissolve
-
-            u "I mean I can-"
-
-            play sound "sounds/rejectcall.mp3"
-
-            scene sphone1a # mc on the phone mouth closed
-            with dissolve
-
-            "*Chloe hangs up*"
-
-            scene sphone2 # mc looks at his phone, you can't see the screen
-            with dissolve
-
-            u "(What was that about?)"
-
-
-
-    label aftercall:
-
+label aftercall:
     scene s781 # Slide saying "Honesty Challenge"
     with fade
     pause 1.5
@@ -4533,7 +4168,7 @@ label v07:
 
     ch "And last but not least, [name]."
 
-    if laurenrs == True and aubreyrs == True or laurenrs == True and emilyrs == True:
+    if (laurenrs and aubreyrs) or (laurenrs and emilyrs):
         ch "Is it true that you recently cheated on the girl you're currently dating?"
 
         scene s786c # chris looking directly at you mouth closed
@@ -4592,7 +4227,6 @@ label v07:
                 with dissolve
 
                 ch "Oh... sure."
-
 
     scene s786 # chris looking directly at you mouth open
     with dissolve
@@ -4744,6 +4378,7 @@ label v07:
     else:
         scene s791b
         with dissolve
+
     no "Seduce my friend's English teacher? Hell no."
     u "*Laugh*"
 
@@ -4864,6 +4499,7 @@ label v07:
             else:
                 scene s791b
                 with dissolve
+
             no "You passed!"
 
             if noramad:
@@ -4872,6 +4508,7 @@ label v07:
             else:
                 scene s791c
                 with dissolve
+
             u "What?"
 
             if noramad:
@@ -4880,6 +4517,7 @@ label v07:
             else:
                 scene s791b
                 with dissolve
+
             no "That was the real test, and you passed it!"
 
             if noramad:
@@ -4888,10 +4526,12 @@ label v07:
             else:
                 scene s791c
                 with dissolve
+
             u "Wait, really? That's great!"
 
     scene s794 # Camera - first person. Nora moves to the door and knocks while talking
     with dissolve
+
     if wolvesTask4:
         no "Aaron, the test is done and he passed."
     else:
@@ -4950,66 +4590,61 @@ label v07:
 
         aa "Perry."
 
+    elif tasks == 3:
+        aa "The first place goes to..."
 
+        scene s795b
+        with dissolve
+
+        aa "Imre."
+
+        scene s795
+        with dissolve
+
+        aa "The second place goes to..."
+
+        scene s795a
+        with dissolve
+
+        aa "[name]."
+
+        scene s795
+        with dissolve
+
+        aa "And the third place goes to..."
+
+        scene s795c
+        with dissolve
+
+        aa "Perry."
 
     else:
-        if tasks == 3:
+        aa "The first place goes to..."
 
-            aa "The first place goes to..."
+        scene s795b
+        with dissolve
 
-            scene s795b
-            with dissolve
+        aa "Imre."
 
-            aa "Imre."
+        scene s795
+        with dissolve
 
-            scene s795
-            with dissolve
+        aa "The second place goes to..."
 
-            aa "The second place goes to..."
+        scene s795c
+        with dissolve
 
-            scene s795a
-            with dissolve
+        aa "Perry."
 
-            aa "[name]."
+        scene s795
+        with dissolve
 
-            scene s795
-            with dissolve
+        aa "And the third place goes to..."
 
-            aa "And the third place goes to..."
+        scene s795a
+        with dissolve
 
-            scene s795c
-            with dissolve
-
-            aa "Perry."
-
-        else:
-
-            aa "The first place goes to..."
-
-            scene s795b
-            with dissolve
-
-            aa "Imre."
-
-            scene s795
-            with dissolve
-
-            aa "The second place goes to..."
-
-            scene s795c
-            with dissolve
-
-            aa "Perry."
-
-            scene s795
-            with dissolve
-
-            aa "And the third place goes to..."
-
-            scene s795a
-            with dissolve
-
-            aa "[name]."
+        aa "[name]."
 
     scene s795b
     with dissolve
@@ -5067,12 +4702,13 @@ label v07:
     jump after_pledges
 
 ######## SCENE 14 APES
-    label pledgeapes:
+label pledgeapes:
     $ addPoint("tm", 3) # I think more TM points for joining the Apes makes sense
     $ joinwolves = False
 
     scene s756 # Not a new render
     with fade
+    
     if joinapes:
         u "(Man, can't believe I'm doing this. Wonder what it's gonna be like if I get in.)"
     else:
@@ -5391,8 +5027,6 @@ label v07:
             with dissolve
             ca "Then get in the ring with me."
 
-            jump ep7_fight_cam
-
         "Hold yourself back":
             $ addPoint("bro")
             $ stoodUpToCam = False
@@ -5407,7 +5041,7 @@ label v07:
 
             jump ep7_cam_picture
 
-    label ep7_fight_cam:
+label ep7_fight_cam:
     scene s845 # Camera - TPP. Cameron inside the MMA ring, MC outside the ring. Cameron gesturing the MC to climb up with one hand and holding a fist with the other.
     with dissolve
     ca "Get in and show me what you got!"
@@ -5469,8 +5103,7 @@ label v07:
 
             ca "Come with me. I'm gonna show you something."
 
-    label ep7_cam_picture:
-
+label ep7_cam_picture:
     play sound "sounds/dooropen.mp3"
     scene s849 # Camera - TPP. MC and Cameron entering a room (Need not show what's inside the room in the shot, they're just entering through the door.)
     with fade
@@ -5679,7 +5312,6 @@ label v07:
             $ addPoint("bf")
 
             u "Okay"
-            jump chloe_call_cameron
 
         "Refuse to do it":
             $ apesTask1 = False
@@ -5711,14 +5343,14 @@ label v07:
 
             jump after_pledges
 
-    label chloe_call_cameron:
     scene snew860a # close up mc on the phone mouth closed a bit nervous
     with dissolve
 
     play sound "sounds/calling.mp3"
     pause 2
     stop sound
-    if chloemad == True:
+
+    if chloemad:
         play sound "sounds/answercall.mp3"
         cl "What do you want, [name]?"
 
@@ -5735,7 +5367,6 @@ label v07:
         play sound "sounds/rejectcall.mp3"
 
         "*Chloe hangs up*"
-
 
     else:
         play sound "sounds/answercall.mp3"
@@ -5775,8 +5406,6 @@ label v07:
 
         "*Chloe hangs up*"
 
-
-
     scene snew861 #close up Cameron  holding his phone up like he was filming you, cunning smile
     with dissolve
     ca "Well done, man. Show her who's boss."
@@ -5794,13 +5423,12 @@ label v07:
     with dissolve
     ca "We'll do more videos tomorrow, tiger."
 
-    jump after_pledges
-
 ########## SCENE 15 WALKING HOME AFTER PLEDGING
-    label after_pledges:
+label after_pledges:
 
     scene s861 # Camera - TPP. MC walking home at night through the town after Apes pledging
     with fade
+
     if apesTask1 or joinwolves:
         pause 0.5
     else:
@@ -5809,29 +5437,23 @@ label v07:
     scene s861a # MC walking home at night through the town, different shot
     with dissolve
 
-
     if emilyrs: # Please confirm this is the right condition for her to send an apology letter to the MC
         u "(Oh my god, I completely forgot about Emily. Wonder if she's still up.)"
+
         menu:
             "Text her":
                 $ emilyText = True
                 $ addPoint("bf")
+
                 $ contact_Emily.addReply("Hey, sorry I lost track of time. You up?", "emrep3a")
 
-                label emrep3a:
-                call screen messager(contact_Emily)
-
                 label phonebb:
+                    call screen phone
+                    if contact_Emily.getReplies():
+                        u "(I should text Emily that I lost track of time.)"
+                        jump phonebb
 
-                if contact_Emily.messages[-1].replies:
-
-                    u "(I should text Emily that I lost track of time.)"
-
-                    call screen messager(contact_Emily)
-
-                else:
-                    
-                    u "(I guess she's asleep.)"
+                u "(I guess she's asleep.)"
 
             "Don't text her":
                 $ forgiveemily = False
@@ -5845,30 +5467,27 @@ label v07:
 
     scene s483 # Old render - looking at your bed in FPP
     with fade
+
     u "(Today was so packed... Can't wait to just fall asleep.)"
 
-
 ########## SCENE 16 WAKING UP IN YOUR DORM ON THURSDAY BLACK EYE GONE!!! NEW MC MODEL
-
-    label ep7_before_history:
-
     scene s865 # Camera - TPP. MC waking up yawning in bed. No black eye
     with Fade(1,0,1)
+
     if joinwolves:
-        $ KiwiiPost5 = KiwiiPost("Chris", "images/chpost1.webp", "One of us!", numberLikes=133, mentions = "MC")
-        $ KiwiiPost5.addComment("Cameron","Losers", 3)
-        $ KiwiiPost5.addComment("Imre","Hell yeah bro!", 14)
-        $ KiwiiPost5.addComment("Aubrey", "Wohoo!", 35)
+        $ kiwiiPost5 = KiwiiPost("Chris", "chpost1.webp", "One of us!", numberLikes=133, mentions="MC")
+        $ kiwiiPost5.addComment("Cameron", "Losers", 3)
+        $ kiwiiPost5.addComment("Imre", "Hell yeah bro!", 14)
+        $ kiwiiPost5.addComment("Aubrey", "Wohoo!", 35)
 
     if emilyText:
         play sound "sounds/vibrate.mp3"
         
-        $ contact_Emily.newMessage("It's okay. You'll get the surprise another time...")
-        $ contact_Emily.addReply("Excting :)", "emrep4a")
-
+        $ contact_Emily.newMessage("It's okay. You'll get the surprise another time...", queue=False)
+        $ contact_Emily.addReply("Excting :)")
 
     " "
-    label phonebc:
+
     play music "music/mindie2.mp3"
     queue music [ "music/m16punk.mp3", "music/mindie1.mp3" ]
     
@@ -5876,7 +5495,6 @@ label v07:
         scene s866 # Camera - TPP (shot should not include Imre's bed). MC sitting up on his bed, mouth closed.
         with dissolve
         u "(Oh shit, it's history class today, isn't it? Gotta wear that costume.)"
-
 
         if costume == 1: # Viking
             scene s867 # MC in Viking costume looking at a mirror and laughing a little
@@ -5908,9 +5526,7 @@ label v07:
         with dissolve
         pause 0.5
 
-        jump history_class
-
-    if joinwolves:
+    elif joinwolves:
         scene s866
         with dissolve
         imre "Morning."
@@ -5980,8 +5596,6 @@ label v07:
             with dissolve
             imre "Yeah."
 
-            jump history_class
-
         elif costume == 2:
             scene s871 # Camera - TPP. MC and Imre close up in their room wearing their costumes (MC as Knight). Neutral expressions and mouths closed
             with fade
@@ -6016,8 +5630,6 @@ label v07:
             u "You ready to go?"
             imre "Mhm."
 
-            jump history_class
-
         else: # cowboy
             scene s872 # Camera - TPP. MC and Imre close up in their room wearing their costumes (MC as Cowboy). Neutral expressions and mouths closed
             with fade
@@ -6050,8 +5662,6 @@ label v07:
             scene s870
             with dissolve
             imre "Yeah, let's go."
-
-            jump history_class
 
     else:
         scene s866
@@ -6125,13 +5735,10 @@ label v07:
         with dissolve
         u "Yeah, let's go."
 
-        jump history_class
-
 ########## SCENE 17 HISTORY LECTURE Comments for Finn: Marked with "###"
 
     ###Copy paste transcribed script into right spot, add defaults and defines at the start of the script
 
-    label history_class:
     scene s875 # Camera - TPP, Scene - History class, so everyone is in their costumes. Note that MC can be Viking, Knight or Cowboy.(### So MC shouldn't be in this.) Shot showing Penelope sitting in the first row and Lee standing near the board looking towards the students.
     with fade
     pause 1
@@ -6153,70 +5760,69 @@ label v07:
         with dissolve
         pause 0.5
 
-    if imremad:
-        if joinwolves:
-            scene s878 # Camera - FPP. MC sitting beside Imre. Imre looking at MC with a bored/uninterested expression. Imre mouth closed
-            with dissolve
-            u "Hey."
+    if imremad and joinwolves:
+        scene s878 # Camera - FPP. MC sitting beside Imre. Imre looking at MC with a bored/uninterested expression. Imre mouth closed
+        with dissolve
+        u "Hey."
 
-            scene s878a # Imre mouth open
-            with dissolve
-            imre "Hey man."
+        scene s878a # Imre mouth open
+        with dissolve
+        imre "Hey man."
 
-            scene s878
-            with dissolve
-            u "What's up?"
+        scene s878
+        with dissolve
+        u "What's up?"
 
-            scene s878a
-            with dissolve
-            imre "Oh, uh... not much. Just here."
+        scene s878a
+        with dissolve
+        imre "Oh, uh... not much. Just here."
 
-            scene s878b # Imre looking forward as if ignoring the MC, mouth closed
-            with dissolve
-            u "Mhm."
+        scene s878b # Imre looking forward as if ignoring the MC, mouth closed
+        with dissolve
+        u "Mhm."
 
-            scene s878c # Same as s878b but mouth open
-            with dissolve
-            imre "Nice costume dude."
+        scene s878c # Same as s878b but mouth open
+        with dissolve
+        imre "Nice costume dude."
 
-            scene s878b
-            with dissolve
-            u "Haha... yeah."
+        scene s878b
+        with dissolve
+        u "Haha... yeah."
 
-            scene s878
-            with dissolve
-            u "So, the Wolves. You stoked or what?"
+        scene s878
+        with dissolve
+        u "So, the Wolves. You stoked or what?"
 
-            scene s878d # Imre looking at the camera and smiling a little, mouth open
-            with dissolve
-            imre "Man, I've been waiting for this day for a while."
+        scene s878d # Imre looking at the camera and smiling a little, mouth open
+        with dissolve
+        imre "Man, I've been waiting for this day for a while."
 
-            scene s878e # Same as s878d but mouth closed
-            with dissolve
-            u "Haha, thought so."
+        scene s878e # Same as s878d but mouth closed
+        with dissolve
+        u "Haha, thought so."
 
-            scene s878d
-            with dissolve
-            imre "Yeah, I'm ready to start fighting already."
+        scene s878d
+        with dissolve
+        imre "Yeah, I'm ready to start fighting already."
 
-            scene s878e
-            with dissolve
-            u "Oh, so you've been training."
+        scene s878e
+        with dissolve
+        u "Oh, so you've been training."
 
-            scene s878d
-            with dissolve
-            imre "Of course! And I think we should start training together again."
-            imre "But this time in the Wolves gym, it's gonna be awesome!"
+        scene s878d
+        with dissolve
+        imre "Of course! And I think we should start training together again."
+        imre "But this time in the Wolves gym, it's gonna be awesome!"
 
-        else:
-            scene s878b
-            with dissolve
-            pause
-            u "Hey."
+    elif imremad:
+        scene s878b
+        with dissolve
+        pause
+        u "Hey."
 
-            scene s878c
-            with dissolve
-            imre "Hey."
+        scene s878c
+        with dissolve
+        imre "Hey."
 
     else:
         scene s878f # Imre leaning towards MC (as if whispering) while looking towards Lee and laughing, mouth open.
@@ -6452,7 +6058,7 @@ label v07:
     with dissolve
     lee "Well, Cameron you may go sit back down. But next time try Google or even better, your history book!"
 
-    label after_history:
+label after_history:
     scene clocka
     with fade
     pause 0.5
@@ -6479,12 +6085,9 @@ label v07:
 
     pause 0.5
 
-    jump pen_after_history
-
 ### Now you mark the next scene and write down the name like below:
 
 ########## SCENE 18 PENELOPE AFTER HISTORY
-    label pen_after_history:
     # MC and Pen talking in classroom after class ### the next scene only works inside the classroom so this shouldn't be in the hallway
     if emilyrs and bowling:
         scene s891 # Camera - FPP (far shot). Penelope in classroom about to walk out (away from the camera) in her costume
@@ -6711,12 +6314,8 @@ label v07:
 
     if joinwolves:
         jump after_cam_history
-    else:
-        jump cam_task_2
 
 ########## SCENE 19 CAMERON AFTER HISTORY
-
-    label cam_task_2:
     ### Here I deleted the render since Cameron can just shout at when you're looking in a different direction from before
     ca "Hey shitface, come here."
 
@@ -6804,8 +6403,6 @@ label v07:
             with dissolve
             ca "Haha, fuck you! Lemme get the cam running."
 
-            jump lee_pants_task
-
         "That's stupid and risky":
             $ apesTask2Try = False
             $ addPoint("bf")
@@ -6829,7 +6426,6 @@ label v07:
 
             jump after_cam_history
 
-    label lee_pants_task:
     scene s903 # Shot of Lee writing something on the board as seen from Cameron's phone (He is standing at the door. Need not render the whole classroom, make it look like he zoomed in and add camera interface.) MC is not visible in the shot
     with fade
     ca "{size=-10}Whenever you're ready shitface.{/size}"
@@ -6878,13 +6474,7 @@ label v07:
 
             $ leeway = True
             if not steam:
-                image leeway = "images/lee-way.webp"
-                show leeway:
-                    xpos 0
-                    ypos -200
-                    linear 0.5 xpos 0 ypos 0
-                    pause 2.0
-                    linear 0.5 xpos 0 ypos -200
+                show leeway at achievementShow
             else:
                 $ achievement.grant("lee_way")
                 $ achievement.sync()
@@ -6897,7 +6487,7 @@ label v07:
         "...":
             jump lee_pants_fail
 
-    label lee_pants_fail:
+label lee_pants_fail:
     $ timed = False
     $ apesTask2Success = False
     stop sound
@@ -6941,12 +6531,8 @@ label v07:
     ca "You better fuckin' finish the task next time."
     u "(Damn it! At least Mr. Lee didn't get suspicious.)"
 
-    jump after_cam_history
-
 ########## SCENE 20 BACK AT YOUR DORM
-
-
-    label after_cam_history:
+label after_cam_history:
     stop music
     scene s911 # Camera - TPP. MC outside his room opening the door.
     with fade
@@ -6963,7 +6549,7 @@ label v07:
     call screen hc_select
 
     # If chose to go alone
-    label hc_no_girl:
+label hc_no_girl:
     $ hcGirl = "alone"
 
     u "*sigh* (I think it might be for the best if I go to homecoming all by myself.)"
@@ -6972,7 +6558,7 @@ label v07:
 ########## SCENE 21 ASKING AMBER
 
     # Amber promposal
-    label hc_asking_amber:
+label hc_asking_amber:
     $ hcAsked.append("amber")
     u "(I wonder if Amber will be interested. Let's see what she has to say about it.)"
 
@@ -7101,11 +6687,10 @@ label v07:
 
         call screen hc_select
 
-
 ########## SCENE 22 ASKING AUBREY
 
     # Aubrey promposal
-    label hc_asking_aubrey:
+label hc_asking_aubrey:
     $ hcAsked.append("aubrey")
     u "(I'll text Aubrey to meet me at the beach.)"
 
@@ -7163,7 +6748,6 @@ label v07:
         scene s976
         with dissolve
 
-
     au "Haha, alright. Bye."
 
     scene s976d #aubrye gone
@@ -7172,11 +6756,9 @@ label v07:
 
     call screen hc_select
 
-
 ########## SCENE 23 ASKING AUTUMN
-
     # Autumn promposal
-    label hc_asking_autumn:
+label hc_asking_autumn:
     $ hcAsked.append("autumn")
     u "(I'll surprise her.)"
 
@@ -7248,9 +6830,8 @@ label v07:
 
 
 ########## SCENE 24 ASKING CHLOE
-
     # Chloe promposal
-    label hc_asking_chloe:
+label hc_asking_chloe:
     $ hcAsked.append("chloe")
     u "(I wonder where Chloe even is right now.)"
 
@@ -7260,12 +6841,10 @@ label v07:
     pause 0.5
 
     if volleyball:
-
         scene s936# Camera - TPP. Chloe runs towards Mc who's kneeling on the path with the blue volleyball that says "Hoco?" on it
         with dissolve
 
     else:
-
         scene s936a# Camera - TPP. Chloe runs towards Mc who's kneeling on the path with a rose
         with dissolve
 
@@ -7311,7 +6890,6 @@ label v07:
         jump after_hc_selection
 
     else:
-
         scene s937f # chloe empathy, sorry
         with dissolve
 
@@ -7340,8 +6918,7 @@ label v07:
 
 
 ########## SCENE 25 ASKING EMILY
-
-    label hc_asking_emily:
+label hc_asking_emily:
     $ hcAsked.append("emily")
     $ hcGirl = "emily"
 
@@ -7381,12 +6958,11 @@ label v07:
 
     jump after_hc_selection
 
-
 ########## SCENE 26 ASKING LAUREN
-
     # Lauren promposal
-    label hc_asking_lauren:
+label hc_asking_lauren:
     $ hcAsked.append("lauren")
+
     if laurenrs:
         u "(Of course I'm gonna ask Lauren.)"
     else:
@@ -7462,7 +7038,6 @@ label v07:
         jump after_hc_selection
 
     else:
-
         scene s967d # lauren sorry, empathy
         with dissolve
         la "[name]..."
@@ -7496,11 +7071,9 @@ label v07:
 
         call screen hc_select
 
-
 ########## SCENE 27 ASKING PENELOPE
-
     # Penelope promposal
-    label hc_asking_penelope:
+label hc_asking_penelope:
     $ hcAsked.append("penelope")
     $ hcGirl = "penelope"
 
@@ -7535,7 +7108,6 @@ label v07:
     u "Will you go to homecoming with me?"
 
     if emilyrs or not bowling:
-
         scene s957 # fpp close up penelope unsure smili ng
         with dissolve
 
@@ -7552,7 +7124,6 @@ label v07:
         pe "Okay! I'll go with you!"
 
     else:
-
         scene s957b # penelope exciting
         with dissolve
 
@@ -7576,8 +7147,7 @@ label v07:
     jump after_hc_selection
 
 ########## SCENE 28 ASKING RILEY
-
-    label hc_asking_riley:
+label hc_asking_riley:
     $ hcAsked.append("riley")
 
     scene s958 #mc knocks on riley's dorm door, glass slipper in on hand
@@ -7670,48 +7240,38 @@ label v07:
 
         call screen hc_select
 
-
-
-
 ### SCENE 29: Back to dorm after promposals
 label after_hc_selection:
+    if hcGirl == "amber":
+        jump thurs_night_dorm
 
-if hcGirl == "amber":
-
-    jump thurs_night_dorm
-
-else:
-        jump suit_rental
 
 ### SCENE 30 and 31: Buying a suit
 label suit_rental:
+    scene s992 # tpp you in a suit store at counter
+    with fade
+    clerk "Good evening, sir! How may I help you?"
 
-scene s992 # tpp you in a suit store at counter
-with fade
-clerk "Good evening, sir! How may I help you?"
+    scene s993a # Same as s993 but Employee mouth closed
+    with dissolve
+    u "Hey, I need to rent a suit for homecoming."
 
-scene s993a # Same as s993 but Employee mouth closed
-with dissolve
-u "Hey, I need to rent a suit for homecoming."
+    scene s993
+    with dissolve
+    clerk "Of course, sir. Follow me."
+    stop music fadeout 2
 
-scene s993
-with dissolve
-clerk "Of course, sir. Follow me."
-stop music fadeout 2
+    scene s994 #you walking out with a shopping bag
+    with fade
 
-scene s994 #you walking out with a shopping bag
-with fade
+    u "(Well that didn't take as long as expected.)"
 
-u "(Well that didn't take as long as expected.)"
-
-
-jump thurs_night_dorm
+    jump thurs_night_dorm
 
 
 ### SCENE 32: AFTER TUDEXO SHOPPING
 label thurs_night_dorm:
-if joinwolves:
-    if imremad:
+    if joinwolves and imremad:
         scene s1002 # Camera - TPP. MC packing his bag, same as the one he has in scene 34
         with fade
 
@@ -7720,7 +7280,8 @@ if joinwolves:
         u "(Alright, time for the Wolves ceremony...)"
 
         u "(Can't believe I'm actually moving into the Wolves house. Kinda crazy.)"
-    else:
+
+    elif joinwolves:
         scene s1002
         with fade
         pause 0.7
@@ -7740,795 +7301,758 @@ if joinwolves:
 
         imre "I knooow. It's gonna be insane, bro."
 
+        jump wolves_ceremony
 
-    jump wolves_ceremony
-
-else:
-    jump cameron_thurs_tasks
-
-
+    else:
+        jump cameron_thurs_tasks
 
 ########## SCENE 33 CHALLENGES W/ CAMERON
-
     #If you joined the apes:
     #A knock is heard at the door of MC's dorm. MC opens the door and finds Cameron standing in the doorway.
 
 label cameron_thurs_tasks:
-play music "music/mchill1.mp3"
-scene scc1 # TPP. Shot of MC sat in his room on end of his bed.
-with fade
+    play music "music/mchill1.mp3"
+    scene scc1 # TPP. Shot of MC sat in his room on end of his bed.
+    with fade
 
-pause 0.5
+    pause 0.5
 
-play sound "sounds/knock.mp3"
-scene scc1a # TPP. As above but MC turns his head to look at door.
-with dissolve
-
-"*Knock knock knock*"
-play sound "sounds/dooropen.mp3"
-scene scc2 # FPP. Show MC door, now open, Cameron stood in threshold, neutral expression.
-with dissolve
-
-pause 0.5
-
-if apesVids > 0:
-    scene scc3 # FPP. Closeup of Cameron, neutral expression, mouth closed.
+    play sound "sounds/knock.mp3"
+    scene scc1a # TPP. As above but MC turns his head to look at door.
     with dissolve
 
-    u "Hey Cameron. What's up?"
-
-    scene scc3a # FPP. As above, mouth open.
-    with dissolve
-
-    ca "You ready for more video challenges?"
-
-    scene scc3 # FPP. Same as scc3.
-    with dissolve
-
-    u "Uh.. sure."
-
-    scene scc4 # TPP. Show MC and Cameron fist bumping, smile on both faces.
+    "*Knock knock knock*"
+    play sound "sounds/dooropen.mp3"
+    scene scc2 # FPP. Show MC door, now open, Cameron stood in threshold, neutral expression.
     with dissolve
 
     pause 0.5
 
-    scene scc5 # FPP. Show Cameron mouth open, smile.
+    if apesVids > 0:
+        scene scc3 # FPP. Closeup of Cameron, neutral expression, mouth closed.
+        with dissolve
+
+        u "Hey Cameron. What's up?"
+
+        scene scc3a # FPP. As above, mouth open.
+        with dissolve
+
+        ca "You ready for more video challenges?"
+
+        scene scc3 # FPP. Same as scc3.
+        with dissolve
+
+        u "Uh.. sure."
+
+        scene scc4 # TPP. Show MC and Cameron fist bumping, smile on both faces.
+        with dissolve
+
+        pause 0.5
+
+        scene scc5 # FPP. Show Cameron mouth open, smile.
+        with dissolve
+
+        ca "Hell yeah! That's what I like to hear. Let's go."
+
+        scene scc5a # FPP. As above, mouth closed.
+        with dissolve
+
+        u "Alright."
+
+    else:
+        scene scc6 # FPP. Same as scc3 but Cameron slight angry expression, mouth closed, arms crossed.
+        with dissolve
+
+        u "Oh uh, hey Cameron. What's up?"
+
+        scene scc6a # FPP. As scc6, mouth open.
+        with dissolve
+
+        ca "Time for video challenges. But this time don't fuck things up. I'm not gonna be on the losing side."
+
+        scene scc6 # FPP. Same as scc6.
+        with dissolve
+
+        u "Uh, yeah. Okay."
+
+        scene scc7 # TPP. Show MC and Cameron looking at eachother awkwardly. Cameron slight angry expression, MC slight confused expression.
+        with dissolve
+
+        pause 0.5
+
+        scene scc7a # TPP. As above, but show Cameron walking away and MC following him.
+        with dissolve
+
+        pause 0.5
+
+    scene scc8 # TPP. Show MC and Cameron walking down hallway with Adam in view walking towards the pair with knife in hand, Adam looking angry but scared.
+    with fade
+    pause 0.5
+
+    stop music
+
+    scene scc8a # TPP. As above but Adam now infront of MC and Cameron who are stood next to eachother, Cameron looking angry, MC dumbfounded.
     with dissolve
+    ad "Last time you're fucking with me, pissbag."
 
-    ca "Hell yeah! That's what I like to hear. Let's go."
-
-    scene scc5a # FPP. As above, mouth closed.
+    scene scc9 # TPP. Close up of cameron now infront of MC, very angry with mouth open, MC stood behind Cameron looking confused.
     with dissolve
+    pause 0.5
 
-    u "Alright."
+    ca "What the fuck you gonna do?"
 
-else:
-    scene scc6 # FPP. Same as scc3 but Cameron slight angry expression, mouth closed, arms crossed.
-    with dissolve
-
-    u "Oh uh, hey Cameron. What's up?"
-
-    scene scc6a # FPP. As scc6, mouth open.
-    with dissolve
-
-    ca "Time for video challenges. But this time don't fuck things up. I'm not gonna be on the losing side."
-
-    scene scc6 # FPP. Same as scc6.
-    with dissolve
-
-    u "Uh, yeah. Okay."
-
-    scene scc7 # TPP. Show MC and Cameron looking at eachother awkwardly. Cameron slight angry expression, MC slight confused expression.
+    scene scc10 # FPP. Close up of Adam looking angry/scared, Adam's hand with knife in view.
     with dissolve
 
     pause 0.5
 
-    scene scc7a # TPP. As above, but show Cameron walking away and MC following him.
+    play music "music/m13punk.mp3"
+    scene scc11 # TPP. Show Cameron grabbing Adam and throwing him to the ground.
+    with hpunch
+
+    pause 0.5
+
+    scene scc12 # TPP. Adam now on the ground, Cameron crouched over him, Cameron mouth open very angry expression.
+    with dissolve
+
+    ca "You gonna stab me fucker?!{w} Then fucking do it!"
+    ca "Stab me you pussy!" with hpunch
+
+    scene scc13 # TPP. Show Cameron grabbing the wrist of Adam's hand that holds the knife.
+    with dissolve
+    pause 0.5
+
+    scene scc13a # TPP. As above but Cameron now points the knife directly into his own stomach. Cameron mouth open EXTREMELY angry.
+    with dissolve
+
+    ca "Fuckin' do it I said. Here's your shot."
+    ca "I said DO IT! STAB ME YOU LITTLE BITCH!" with vpunch
+
+    scene scc13b # TPP. As above, Adam looks extremely scared, Cameron mouth closed.
     with dissolve
 
     pause 0.5
 
-scene scc8 # TPP. Show MC and Cameron walking down hallway with Adam in view walking towards the pair with knife in hand, Adam looking angry but scared.
-with fade
-pause 0.5
-
-stop music
-
-scene scc8a # TPP. As above but Adam now infront of MC and Cameron who are stood next to eachother, Cameron looking angry, MC dumbfounded.
-with dissolve
-ad "Last time you're fucking with me, pissbag."
-
-scene scc9 # TPP. Close up of cameron now infront of MC, very angry with mouth open, MC stood behind Cameron looking confused.
-with dissolve
-pause 0.5
-
-ca "What the fuck you gonna do?"
-
-scene scc10 # FPP. Close up of Adam looking angry/scared, Adam's hand with knife in view.
-with dissolve
-
-pause 0.5
-
-play music "music/m13punk.mp3"
-scene scc11 # TPP. Show Cameron grabbing Adam and throwing him to the ground.
-with hpunch
-
-pause 0.5
-
-scene scc12 # TPP. Adam now on the ground, Cameron crouched over him, Cameron mouth open very angry expression.
-with dissolve
-
-ca "You gonna stab me fucker?!{w} Then fucking do it!"
-ca "Stab me you pussy!" with hpunch
-
-scene scc13 # TPP. Show Cameron grabbing the wrist of Adam's hand that holds the knife.
-with dissolve
-pause 0.5
-
-scene scc13a # TPP. As above but Cameron now points the knife directly into his own stomach. Cameron mouth open EXTREMELY angry.
-with dissolve
-
-ca "Fuckin' do it I said. Here's your shot."
-ca "I said DO IT! STAB ME YOU LITTLE BITCH!" with vpunch
-
-scene scc13b # TPP. As above, Adam looks extremely scared, Cameron mouth closed.
-with dissolve
-
-pause 0.5
-
-scene scc13c # TPP. As above but Cameron let's go of Adam, Cameron mouth open, less angry expression.
-with dissolve
-
-ca "That's what I fucking thought."
-
-scene scc14 # FPP. Show Adam running away down the hallway.
-with dissolve
-pause 0.5
-
-scene scc15 # FPP. Close up on Cameron, neutral expression, mouth closed.
-with dissolve
-
-u "Can't believe you just did that. Thank you."
-
-scene scc15a # TPP. As above, mouth open.
-with dissolve
-
-ca "Remember one thing. When someone comes at you like that, you show 'em who's on top."
-ca "Be fearless. That scares the shit outta them. Got it?"
-
-scene scc15 # FPP. Same as scc15
-with dissolve
-
-u "Damn, yeah."
-
-stop music fadeout 2
-scene scc15b # FPP. Same as scc15a but Cameron gesturing MC with his hand to come with him. Mouth open.
-with dissolve
-
-ca "Good. Let's get on it now. We got videos to make."
-
-
-scene scc16 # TPP. Show Cameron and stood looking at eachother in campus, MC mouth open.
-with fade
-
-u "Alright, what's up first?"
-
-play music "music/m15punk.mp3"
-queue music [ "music/m11punk.mp3", "music/m6punk.mp3" ]
-
-scene scc17 # FPP. Close up Cameon, with heavy dute construction glue in hand, grin on face.
-with dissolve
-
-u "What's that for?"
-
-scene scc17a # FPP. As above, mouth open.
-with dissolve
-
-ca "You're going to stick classroom doors shut. It will take them 20 minutes just to open one with this glue."
-
-scene scc17 # FPP. Same as scc17.
-with dissolve
-
-u "You serious? This like a high school prank."
-
-if apesVids > 0:
-    scene scc17a # FPP. Same as scc17a.
+    scene scc13c # TPP. As above but Cameron let's go of Adam, Cameron mouth open, less angry expression.
     with dissolve
 
-    ca "This one is an easy one. Trust me."
+    ca "That's what I fucking thought."
 
-else:
-    scene scc17a # FPP. Same as scc17a.
+    scene scc14 # FPP. Show Adam running away down the hallway.
     with dissolve
-
-    ca "C'mon. Stop being a pussy man. This is an easy one."
-
-menu:
-    "Do it":
-        $ addPoint("tm")
-        $ apesVids += 1
-        jump av_glue
-
-    "Don't do it":
-        $ addPoint("bf")
-        jump av_no_glue
-
-label av_no_glue:
-scene scc18 # FPP. Show Cameron disappointed expression, mouth closed.
-with dissolve
-
-u "Nah. This is just dumb. I'm not gonna get arrested for vandalism or something stupid."
-
-scene scc18a # FPP. As above, shaking head, mouth open.
-with dissolve
-
-ca "Fine, whatever dude. We'll do something else then."
-
-jump av_chal_2
-
-label av_glue:
-scene scc19 # TPP. Show MC grabbing the glue from Cameron, Cameron smile, MC mouth open.
-with dissolve
-
-u "Okay, I'll do it. But how many doors?"
-
-scene scc20 # FPP. Close up Cameron, hands by side, laugh, mouth open.
-with dissolve
-
-ca "10. At the least."
-
-scene scc20a # FPP. As above, mouth closed.
-with dissolve
-
-u "Okay."
-
-scene scc21 # TPP. Show MC and Cameron walking down college hallway towards a classrom door, Cameron laughing.
-with fade
-
-pause 0.5
-
-scene scc22 # TPP. Show MC infront of classroom door, taking the cap off the glue and looking around to make sure no one is watching. Show Cameron laughing whilst recording MC on his phone.
-with dissolve
-
-pause 0.5
-
-scene scc22a # TPP. As above, MC now applying glue to door.
-with dissolve
-
-pause 0.5
-
-scene scc23 # TPP. As above, but different door.
-with dissolve
-
-pause 0.5
-
-scene scc24 # TPP. As above, but different door.
-with dissolve
-
-pause 0.5
-
-jump av_chal_2
-
-label av_chal_2:
-scene scc25a2 # TPP. Cameron and MC back on campus looking at eachother again, Cameron smile, Cameron mouth open.
-with fade
-
-ca "This one's gonna be a bit more fun."
-
-scene scc25 # FPP. Close up Cameron, smile, mouth closed.
-with dissolve
-
-u "Fun? Enlighten me."
-
-scene scc25a # FPP. As above, mouth open.
-with dissolve
-
-ca "Girls, topless."
-
-scene scc25 # FPP. Same as scc25.
-with dissolve
-
-u "Okay, you got me. I'm listening."
-
-scene scc25b # FPP. Same as scc25a but hands in shot as if he's explaining something.
-with dissolve
-
-ca "Here's how it's gonna go."
-
-scene scc26 # TPP. Show Cameron reaching into his backpack, for a container of crickets.
-with dissolve
-
-pause 0.5
-
-scene scc27 # FPP. Same as scc25 but Cameron now has container of crickets in hand and is laughing, mouth closed.
-with dissolve
-
-u "Bro, that's nasty."
-
-scene scc27a # FPP. Same as scc27, mouth open
-with dissolve
-
-ca "Exactly. You're gonna stand on a patio above. I'm gonna knock on the girls' door and hide. When they come out, you're gonna pour them out on top of them while I record."
-
-scene scc27 # FPP. Same as scc27.
-with dissolve
-
-u "Hahaha. And you think this will work?"
-
-scene scc27a # FPP. Sane as scc27a.
-with dissolve
-
-ca "No fuckin' idea! But if you wanna prove that you're down with the cause, you gotta do it."
-
-if apesVids > 0:
-    ca "This one is the best of the lot. Just sayin'."
-
-else:
-    ca "If you pussy out on this one, my respect for you is lost."
-
-scene scc27 # FPP. Same as scc27.
-with dissolve
-
-menu:
-    "Do it":
-        $ addPoint("tm")
-        jump av_crickets
-    "Don't do it":
-        $ addPoint("bf")
-        jump av_no_crickets
-
-label av_crickets:
-scene scc28 # TPP. Show MC and Cameron high fiving, smile on both faces, MC mouth open.
-with dissolve
-
-u "Fuck it. Let's do it."
-
-scene scc28a # TPP. As above, no longer high fiving, Cameron pointing at MC, MC mouth closed, Cameron mouth open.
-with dissolve
-
-ca "That's what I'm talking about!"
-
-scene scc29 # TPP. Show MC  standing on a patio, Cameron knocking on a door.
-with fade
-
-pause 0.5
-
-scene scc29a # TPP. As above but Cameron running away.
-with dissolve
-
-pause 0.5
-
-scene scc29b # TPP. As above, Cameron now hiding behind some bushes, two girls come out of door in skimpy pajamas.
-with dissolve
-
-pause 0.5
-
-scene scc30 # FPP. Show Cameron hiding behind the bushes gesturing MC to drop the crickets.
-with dissolve
-
-pause 0.5
-
-scene scc31 # FPP. Show the girls looking around confused below MC, MC's hands holding crickets in view.
-with dissolve
-
-# CRICKET DROP TIMER
-$ timed = True
-$ timerexit = "av_crickets_no_drop"
-
-menu:
-    "Drop the crickets":
-        $ addPoint("tm")
-        $ apesVids += 1
-        $ timed = False
-        jump av_crickets_drop
-
-    "...":
-        jump av_crickets_no_drop
-
-label av_crickets_drop:
-scene scc31a # FPP. As above but, show MC arms turning the container of crickets upside down with them falling out.
-with dissolve
-
-u "Here we go!"
-
-scene scc32 # FPP. Show the girls screaming and removing their tops. Cameron laughing whilst filming on his phone in bushes.
-with dissolve
-
-pause 0.5
-
-scene scc32a # FPP. Show the girls screaming and removing their tops. Cameron laughing whilst filming on his phone in bushes.
-with dissolve
-
-pause 0.5
-
-scene scc33 # FPP. Show the girls with tops off, really angry, walking back inside.
-with dissolve
-
-pause 0.5
-
-scene scc34 # FPP. Show Cameron and MC back at campus, Cameron hugs MC, smile on both faces.
-with fade
-
-pause 0.5
-
-scene scc25a # FPP. Same as scc25a.
-with dissolve
-
-ca "That was sick!"
-
-scene scc25 # FPP. Same as scc25.
-with dissolve
-
-u "Haha, yeah. They were pretty hot. Good pick."
-
-scene scc15a # FPP. Same as scc15a.
-with dissolve
-
-ca "I know where the good ones are. You ready for the next?"
-
-scene scc15 # FPP. Same as scc15.
-with dissolve
-
-u "Yeah."
-
-jump cam_phone
-
-label av_crickets_no_drop:
-$ timed = False
-scene scc35 # FPP. Show the girls looking around confused.
-with dissolve
-
-pause 0.5
-
-scene scc36 # FPP. Show Cameron still hiding behind the bushes, angry expression.
-with dissolve
-
-pause 0.5
-
-scene scc37 # TPP. Show Cameron and MC back at campus stood together, Cameron angry expression.
-with fade
-
-ca "What the hell man?"
-
-u "I missed my shot! I was gonna do it!"
-
-ca "Yeah well, next time act faster. I don't have time for this bullshit."
-
-jump cam_phone
-
-label av_no_crickets:
-
-scene scc27a # TPP. Show Cameron and MC back at campus stood together, Cameron angry expression.
-with dissolve
-
-ca "Man, you're such a pussy!"
-
-scene scc27 # TPP. Show Cameron and MC back at campus stood together, Cameron angry expression.
-with dissolve
-
-u "I'm not doing that, it's just cruel."
-
-scene scc27a # TPP. Show Cameron and MC back at campus stood together, Cameron angry expression.
-with dissolve
-
-ca "Whatever, let's move on."
-
-label cam_phone:
-
-scene scc25b # TPP. Show Cameron and MC back at campus stood together, Cameron angry expression.
-with dissolve
-
-ca "This next one's gonn-"
-play sound "sounds/ring.mp3"
-
-ca "Hold on."
-
-scene scc54 # FPP. Show Cameron stood still, Cameron answers phone and places it next to ear, Cameron mouth open. Cameron facing  to the side.
-with dissolve
-
-
-ca "Yeah....{w} What do you mean?{w} My little sister? Where?"
-ca "Just fuckin' tell me where dude!"
-stop sound fadeout 1
-ca "Fuck. I'm going there right now."
-
-scene scc54a # FPP. Same as above, Cameron no longer on phone, angry expression.
-with dissolve
-
-pause 0.5
-
-scene scc54b # FPP. Cameron now look at Camera looking angry, mouth open.
-with dissolve
-
-ca "We'll continue this again."
-
-scene scc56 # TPP. Show Cameron running away, MC chasing after him, MC mouth open.
-with dissolve
-
-u "Hey, hey! Where you going?"
-
-scene scc57 # FPP. Cameron turns around, mouth open, angry expression.
-with dissolve
-
-ca "None of your business."
-
-scene scc57a # As above, mouth closed.
-with dissolve
-
-u "C'mon man what happened?"
-
-scene scc57b # FPP. Cameron mouth open, neutral expression.
-with dissolve
-
-ca "Just some shit I gotta deal with."
-
-scene scc57c # FPP. As above, mouth closed.
-with dissolve
-
-u "You okay?"
-
-scene scc57d # FPP. Cameron turns back around, angry expression, mouth open.
-with dissolve
-
-ca "Yeah! I'm fine!"
-
-scene scc58 # TPP. Show MC grabbing Cameron's arm as he is walking away, MC mouth open.
-with dissolve
-
-u "Man, just tell me what happened. Maybe I can help you out."
-
-scene scc57 # FPP. Same as scc57.
-with dissolve
-
-ca "Wanna know what happened?"
-ca "My little sister has been clean for 3 months off of heroin and my buddy calls me and tells that she's off with some junkie."
-ca "A junkie she had told me she cut ties with."
-
-scene scc57a # FPP. Same as scc57a.
-with dissolve
-pause 0.5
-
-scene scc59 # TPP. Show Cameron walking away MC mouth open.
-with dissolve
-
-u "So, you're gonna go get her now?"
-
-scene scc59a # TPP. As above, MC mouth closed, Cameron turns head behind him mouth open.
-with dissolve
-
-ca "Of course I'm gonna go get her."
-
-scene scc59 # TPP. As above, Cameron mouth closed, turns his head back forward, MC mouth open.
-with dissolve
-
-u "Well, lemme tag along. I'll back you up."
-
-scene scc59a # TPP. As above, Cameron continues to walk away mouth open.
-with dissolve
-
-ca "Alright, fine. Who knows what will go down."
-#Getting cameron's sister:
-#Cameron and MC arrive to a run down house. Cameron begins banging on the front door. No one answers, but music and talking is heard. Cameron bangs on the door again, but again no answers.
-
-scene scc60 # FPP. Show Cameron banging on the door of a house, angry expression, mouth open.
-with fade
-
-ca "Open the fucking door! Samantha!"
-
-scene scc60a # FPP. As above, but Cameron is now kicking the door.
-with vpunch
-
-pause 0.5
-play music "music/mhorror.mp3"
-
-scene scc63 # FPP. Show Cameron's sister sat in a chair tying a belt around her arm while the girl holds a syringe in her hand.
-with Dissolve(1)
-
-pause 0.5
-
-scene scc64 # FPP. Close up Cameron, now in the house, REALLY ANGRY, MOUTH WIDE OPEN.
-with dissolve
-
-ca "What the fuck?!"
-
-scene scc65 # FPP. Show Samantha, startled expression.
-with dissolve
-
-pause 0.5
-
-scene scc65a # FPP. As above, Samantha mouth open.
-with dissolve
-
-sa "Cameron?"
-
-scene scc64 # FPP. Same as scc64.
-with dissolve
-
-ca "What the fuck do you think you're doing?"
-
-scene scc65 # TPP. Samantha stands up and get's in Cameron's face looking really pissed off, Cameron also looking pissed off, MC stood behind Cameron.
-with dissolve
-pause 0.5
-#Samantha is slightly out of it, but still stands to get in Cameron's face.
-
-scene scc66 # FPP. Close up Samanatha, mouth open, angry, looking out of it.
-with dissolve
-
-sa "What am I doing? What the hell are you doing here?!"
-
-scene scc64 # FPP. Same as scc64.
-with dissolve
-
-ca "It's like I have to fucking babysit you 24-7!"
-
-scene scc66 # FPP. Same as scc66 but shoutier.
-with dissolve
-
-sa "I'm an adult! I can take care of myself!"
-
-scene scc64 # FPP. Same as scc64 but Cameron is a little less angry.
-with dissolve
-
-ca "You're fucking 18, Sam! You're hardly an adult!{w} And clearly you can't take care of yourself."
-ca "What do you want me to do? Stand around while I watch you kill yourself?!"
-ca "You're my little sister for God's sake!"
-
-scene scc66b # FPP. Same as scc66 but Samantha turns around facing away from camera.
-with dissolve
-
-pause 0.5
-
-scene scc66c # FPP. Same as above but Samantha turns her head around towards camera, shouting.
-with dissolve
-
-sa "Just fuck off Cameron!{w} Go home!"
-
-scene scc67 # TPP. Show Cameron grabbing Samantha's arm and she is trying to walk away. Cameron angry, mouth closed.
-with vpunch
-
-ca "Don't you dare talk to me like that! You're leaving.{w} NOW!"
-
-scene scc68 # TPP. Show Cameron pulling Samantha towards the front door of the house trying to get her outside.
-with dissolve
-
-pause 0.5
-
-scene scc68a # TPP. As above, Cameron looks at Samantha's friends, shouts and points with his free hand, mouth open.
-with dissolve
-
-ca "Don't you fucking dare drag her into this shit again!"
-
-scene scc69 # TPP. Show Cameron pulling Samantha but now outside.
-with dissolve
-
-pause 0.5
-
-scene scc70 # TPP. Show Cameron pointing at Samantha, angry face, mouth open, Samantha looks upset and still out of it.
-with dissolve
-
-ca "I cannot fucking believe you Samantha."
-
-scene scc71 # FPP. Show Cameron walking off with phone to ear. Samantha sat on sidewalk, crying.
-with dissolve
-
-menu:
-    "Console Samantha":
-        $ consoledSam = True
-        $ addPoint("bf")
-        jump av_sam
-    "Leave her be":
-        $ consoledSam = False
-        $ addPoint("bro")
-        jump av_no_sam
-
-label av_sam:
-scene scc72 # TPP. Show MC sat on the sidewalk next to Samantha, MC looking at Samantha mouth open, Samantha head in hands crying.
-with dissolve
-
-u "Hey, you know he only wants the best for you."
-
-scene scc73 # FPP. Close up Samantha, crying looking at Camera, mouth open.
-with dissolve
-
-sa "Yeah, well, he has a shitty way of showing it."
-
-scene scc73a # FPP. As above, mouth closed.
-with dissolve
-
-u "Yeah, maybe it's just the only way he knows to show that he cares."
-u "You know, that stuff can really kill you. He doesn't want that for his little sister."
-
-scene scc73 # FPP. As above, head slightly down, eyes looking at camera, mouth open.
-with dissolve
-
-sa "I know. I just can't help it."
-
-scene scc73a # FPP. As above, mouth closed.
-with dissolve
-
-u "It's hard, I bet. But even though I don't know you, I think you can do it."
-u "You've done it before, haven't you?"
-
-scene scc73 # FPP. Same as scc73.
-with dissolve
-
-sa "Yeah."
-
-scene scc73a # FPP. Same as scc73b.
-with dissolve
-
-u "Then you can definitely do it again. And in the end it'll all be worth it. Trust me."
-
-scene scc73d # FPP. Samantha looks at camera and smileS, still upset.
-with dissolve
-
-pause 0.5
-
-scene scc74 # TPP. Show Samantha hugging MC.
-with dissolve
-
-pause 0.5
-
-scene scc73e # FPP. Same as scc73d, less upset, mouth open.
-with dissolve
-
-sa "Thank you, really."
-
-label av_no_sam:
-
-if apesVids > 3:
-    scene scc75 # FPP. Same camera as scc73. Show Cameron kneeling infront of Samantha but looking at Camera, slight smile, Samantha too upset but not too bad.
-    with dissolve
-
     pause 0.5
 
-    scene scc75a # FPP. Same as above, Cameron now looking at Samantha, mouth open.
+    scene scc15 # FPP. Close up on Cameron, neutral expression, mouth closed.
     with dissolve
 
-    ca "Hey, time to go."
+    u "Can't believe you just did that. Thank you."
+
+    scene scc15a # TPP. As above, mouth open.
+    with dissolve
+
+    ca "Remember one thing. When someone comes at you like that, you show 'em who's on top."
+    ca "Be fearless. That scares the shit outta them. Got it?"
+
+    scene scc15 # FPP. Same as scc15
+    with dissolve
+
+    u "Damn, yeah."
 
     stop music fadeout 2
-
-    scene scc75 # FPP. Same as above, Cameron mouth closed.
+    scene scc15b # FPP. Same as scc15a but Cameron gesturing MC with his hand to come with him. Mouth open.
     with dissolve
 
-    u "Okay. Bye guys."
+    ca "Good. Let's get on it now. We got videos to make."
 
-    scene scc75a # FPP. Cameron and Samantha get up and start walking away.
+
+    scene scc16 # TPP. Show Cameron and stood looking at eachother in campus, MC mouth open.
+    with fade
+
+    u "Alright, what's up first?"
+
+    play music "music/m15punk.mp3"
+    queue music [ "music/m11punk.mp3", "music/m6punk.mp3" ]
+
+    scene scc17 # FPP. Close up Cameon, with heavy dute construction glue in hand, grin on face.
+    with dissolve
+
+    u "What's that for?"
+
+    scene scc17a # FPP. As above, mouth open.
+    with dissolve
+
+    ca "You're going to stick classroom doors shut. It will take them 20 minutes just to open one with this glue."
+
+    scene scc17 # FPP. Same as scc17.
+    with dissolve
+
+    u "You serious? This like a high school prank."
+
+    if apesVids > 0:
+        scene scc17a # FPP. Same as scc17a.
+        with dissolve
+
+        ca "This one is an easy one. Trust me."
+
+    else:
+        scene scc17a # FPP. Same as scc17a.
+        with dissolve
+
+        ca "C'mon. Stop being a pussy man. This is an easy one."
+
+    menu:
+        "Do it":
+            $ addPoint("tm")
+            $ apesVids += 1
+
+            scene scc19 # TPP. Show MC grabbing the glue from Cameron, Cameron smile, MC mouth open.
+            with dissolve
+
+            u "Okay, I'll do it. But how many doors?"
+
+            scene scc20 # FPP. Close up Cameron, hands by side, laugh, mouth open.
+            with dissolve
+
+            ca "10. At the least."
+
+            scene scc20a # FPP. As above, mouth closed.
+            with dissolve
+
+            u "Okay."
+
+            scene scc21 # TPP. Show MC and Cameron walking down college hallway towards a classrom door, Cameron laughing.
+            with fade
+
+            pause 0.5
+
+            scene scc22 # TPP. Show MC infront of classroom door, taking the cap off the glue and looking around to make sure no one is watching. Show Cameron laughing whilst recording MC on his phone.
+            with dissolve
+
+            pause 0.5
+
+            scene scc22a # TPP. As above, MC now applying glue to door.
+            with dissolve
+
+            pause 0.5
+
+            scene scc23 # TPP. As above, but different door.
+            with dissolve
+
+            pause 0.5
+
+            scene scc24 # TPP. As above, but different door.
+            with dissolve
+
+            pause 0.5
+
+        "Don't do it":
+            $ addPoint("bf")
+
+            scene scc18 # FPP. Show Cameron disappointed expression, mouth closed.
+            with dissolve
+
+            u "Nah. This is just dumb. I'm not gonna get arrested for vandalism or something stupid."
+
+            scene scc18a # FPP. As above, shaking head, mouth open.
+            with dissolve
+
+            ca "Fine, whatever dude. We'll do something else then."
+
+    scene scc25a2 # TPP. Cameron and MC back on campus looking at eachother again, Cameron smile, Cameron mouth open.
+    with fade
+
+    ca "This one's gonna be a bit more fun."
+
+    scene scc25 # FPP. Close up Cameron, smile, mouth closed.
+    with dissolve
+
+    u "Fun? Enlighten me."
+
+    scene scc25a # FPP. As above, mouth open.
+    with dissolve
+
+    ca "Girls, topless."
+
+    scene scc25 # FPP. Same as scc25.
+    with dissolve
+
+    u "Okay, you got me. I'm listening."
+
+    scene scc25b # FPP. Same as scc25a but hands in shot as if he's explaining something.
+    with dissolve
+
+    ca "Here's how it's gonna go."
+
+    scene scc26 # TPP. Show Cameron reaching into his backpack, for a container of crickets.
+    with dissolve
+
+    pause 0.5
+
+    scene scc27 # FPP. Same as scc25 but Cameron now has container of crickets in hand and is laughing, mouth closed.
+    with dissolve
+
+    u "Bro, that's nasty."
+
+    scene scc27a # FPP. Same as scc27, mouth open
+    with dissolve
+
+    ca "Exactly. You're gonna stand on a patio above. I'm gonna knock on the girls' door and hide. When they come out, you're gonna pour them out on top of them while I record."
+
+    scene scc27 # FPP. Same as scc27.
+    with dissolve
+
+    u "Hahaha. And you think this will work?"
+
+    scene scc27a # FPP. Sane as scc27a.
+    with dissolve
+
+    ca "No fuckin' idea! But if you wanna prove that you're down with the cause, you gotta do it."
+
+    if apesVids > 0:
+        ca "This one is the best of the lot. Just sayin'."
+
+    else:
+        ca "If you pussy out on this one, my respect for you is lost."
+
+    scene scc27 # FPP. Same as scc27.
+    with dissolve
+
+    menu:
+        "Do it":
+            $ addPoint("tm")
+
+            scene scc28 # TPP. Show MC and Cameron high fiving, smile on both faces, MC mouth open.
+            with dissolve
+
+            u "Fuck it. Let's do it."
+
+            scene scc28a # TPP. As above, no longer high fiving, Cameron pointing at MC, MC mouth closed, Cameron mouth open.
+            with dissolve
+
+            ca "That's what I'm talking about!"
+
+            scene scc29 # TPP. Show MC  standing on a patio, Cameron knocking on a door.
+            with fade
+
+            pause 0.5
+
+            scene scc29a # TPP. As above but Cameron running away.
+            with dissolve
+
+            pause 0.5
+
+            scene scc29b # TPP. As above, Cameron now hiding behind some bushes, two girls come out of door in skimpy pajamas.
+            with dissolve
+
+            pause 0.5
+
+            scene scc30 # FPP. Show Cameron hiding behind the bushes gesturing MC to drop the crickets.
+            with dissolve
+
+            pause 0.5
+
+            scene scc31 # FPP. Show the girls looking around confused below MC, MC's hands holding crickets in view.
+            with dissolve
+
+            # CRICKET DROP TIMER
+            $ timed = True
+            $ timerexit = "av_crickets_no_drop"
+
+            menu:
+                "Drop the crickets":
+                    $ addPoint("tm")
+                    $ apesVids += 1
+                    $ timed = False
+
+                    scene scc31a # FPP. As above but, show MC arms turning the container of crickets upside down with them falling out.
+                    with dissolve
+
+                    u "Here we go!"
+
+                    scene scc32 # FPP. Show the girls screaming and removing their tops. Cameron laughing whilst filming on his phone in bushes.
+                    with dissolve
+
+                    pause 0.5
+
+                    scene scc32a # FPP. Show the girls screaming and removing their tops. Cameron laughing whilst filming on his phone in bushes.
+                    with dissolve
+
+                    pause 0.5
+
+                    scene scc33 # FPP. Show the girls with tops off, really angry, walking back inside.
+                    with dissolve
+
+                    pause 0.5
+
+                    scene scc34 # FPP. Show Cameron and MC back at campus, Cameron hugs MC, smile on both faces.
+                    with fade
+
+                    pause 0.5
+
+                    scene scc25a # FPP. Same as scc25a.
+                    with dissolve
+
+                    ca "That was sick!"
+
+                    scene scc25 # FPP. Same as scc25.
+                    with dissolve
+
+                    u "Haha, yeah. They were pretty hot. Good pick."
+
+                    scene scc15a # FPP. Same as scc15a.
+                    with dissolve
+
+                    ca "I know where the good ones are. You ready for the next?"
+
+                    scene scc15 # FPP. Same as scc15.
+                    with dissolve
+
+                    u "Yeah."
+
+                "...":
+                    label av_crickets_no_drop:
+                        $ timed = False
+                        scene scc35 # FPP. Show the girls looking around confused.
+                        with dissolve
+
+                        pause 0.5
+
+                        scene scc36 # FPP. Show Cameron still hiding behind the bushes, angry expression.
+                        with dissolve
+
+                        pause 0.5
+
+                        scene scc37 # TPP. Show Cameron and MC back at campus stood together, Cameron angry expression.
+                        with fade
+
+                        ca "What the hell man?"
+
+                        u "I missed my shot! I was gonna do it!"
+
+                        ca "Yeah well, next time act faster. I don't have time for this bullshit."
+
+        "Don't do it":
+            $ addPoint("bf")
+
+            scene scc27a # TPP. Show Cameron and MC back at campus stood together, Cameron angry expression.
+            with dissolve
+
+            ca "Man, you're such a pussy!"
+
+            scene scc27 # TPP. Show Cameron and MC back at campus stood together, Cameron angry expression.
+            with dissolve
+
+            u "I'm not doing that, it's just cruel."
+
+            scene scc27a # TPP. Show Cameron and MC back at campus stood together, Cameron angry expression.
+            with dissolve
+
+            ca "Whatever, let's move on."
+
+    scene scc25b # TPP. Show Cameron and MC back at campus stood together, Cameron angry expression.
+    with dissolve
+
+    ca "This next one's gonn-"
+    play sound "sounds/ring.mp3"
+
+    ca "Hold on."
+
+    scene scc54 # FPP. Show Cameron stood still, Cameron answers phone and places it next to ear, Cameron mouth open. Cameron facing  to the side.
+    with dissolve
+
+
+    ca "Yeah....{w} What do you mean?{w} My little sister? Where?"
+    ca "Just fuckin' tell me where dude!"
+    stop sound fadeout 1
+    ca "Fuck. I'm going there right now."
+
+    scene scc54a # FPP. Same as above, Cameron no longer on phone, angry expression.
+    with dissolve
+
+    pause 0.5
+
+    scene scc54b # FPP. Cameron now look at Camera looking angry, mouth open.
+    with dissolve
+
+    ca "We'll continue this again."
+
+    scene scc56 # TPP. Show Cameron running away, MC chasing after him, MC mouth open.
+    with dissolve
+
+    u "Hey, hey! Where you going?"
+
+    scene scc57 # FPP. Cameron turns around, mouth open, angry expression.
+    with dissolve
+
+    ca "None of your business."
+
+    scene scc57a # As above, mouth closed.
+    with dissolve
+
+    u "C'mon man what happened?"
+
+    scene scc57b # FPP. Cameron mouth open, neutral expression.
+    with dissolve
+
+    ca "Just some shit I gotta deal with."
+
+    scene scc57c # FPP. As above, mouth closed.
+    with dissolve
+
+    u "You okay?"
+
+    scene scc57d # FPP. Cameron turns back around, angry expression, mouth open.
+    with dissolve
+
+    ca "Yeah! I'm fine!"
+
+    scene scc58 # TPP. Show MC grabbing Cameron's arm as he is walking away, MC mouth open.
+    with dissolve
+
+    u "Man, just tell me what happened. Maybe I can help you out."
+
+    scene scc57 # FPP. Same as scc57.
+    with dissolve
+
+    ca "Wanna know what happened?"
+    ca "My little sister has been clean for 3 months off of heroin and my buddy calls me and tells that she's off with some junkie."
+    ca "A junkie she had told me she cut ties with."
+
+    scene scc57a # FPP. Same as scc57a.
     with dissolve
     pause 0.5
-    #Cameron and Samantha leave.
 
-    scene scc76 # TPP. Show MC stood up, Cameron and Samantha walking but Cameron turns his head, mouth open.
+    scene scc59 # TPP. Show Cameron walking away MC mouth open.
     with dissolve
 
-    ca "Bye."
+    u "So, you're gonna go get her now?"
 
-    jump av_mc_dorm
-
-else:
-    #If you didn't do most of your tasks:
-    #Cameron seems a bit irritated by this. He grabs Samantha by the arm and pulls her up.
-
-    scene scc77 # FPP. Cameron leans down and grabs Samantha's arm and starts pulls her up. Cameron agitated expression, mouth open.
+    scene scc59a # TPP. As above, MC mouth closed, Cameron turns head behind him mouth open.
     with dissolve
 
-    ca "Time to go."
+    ca "Of course I'm gonna go get her."
 
-    sa "Ugh."
-
-    stop music fadeout 2
-
-    scene scc78 # TPP. Show Samantha and Cameron walking away, MC stood up looking at them, mouth ope.
+    scene scc59 # TPP. As above, Cameron mouth closed, turns his head back forward, MC mouth open.
     with dissolve
 
-    u "Uh, okay bye guys."
+    u "Well, lemme tag along. I'll back you up."
+
+    scene scc59a # TPP. As above, Cameron continues to walk away mouth open.
+    with dissolve
+
+    ca "Alright, fine. Who knows what will go down."
+    #Getting cameron's sister:
+    #Cameron and MC arrive to a run down house. Cameron begins banging on the front door. No one answers, but music and talking is heard. Cameron bangs on the door again, but again no answers.
+
+    scene scc60 # FPP. Show Cameron banging on the door of a house, angry expression, mouth open.
+    with fade
+
+    ca "Open the fucking door! Samantha!"
+
+    scene scc60a # FPP. As above, but Cameron is now kicking the door.
+    with vpunch
+
+    pause 0.5
+    play music "music/mhorror.mp3"
+
+    scene scc63 # FPP. Show Cameron's sister sat in a chair tying a belt around her arm while the girl holds a syringe in her hand.
+    with Dissolve(1)
 
     pause 0.5
 
-    jump av_mc_dorm
+    scene scc64 # FPP. Close up Cameron, now in the house, REALLY ANGRY, MOUTH WIDE OPEN.
+    with dissolve
 
-label av_mc_dorm:
+    ca "What the fuck?!"
+
+    scene scc65 # FPP. Show Samantha, startled expression.
+    with dissolve
+
+    pause 0.5
+
+    scene scc65a # FPP. As above, Samantha mouth open.
+    with dissolve
+
+    sa "Cameron?"
+
+    scene scc64 # FPP. Same as scc64.
+    with dissolve
+
+    ca "What the fuck do you think you're doing?"
+
+    scene scc65 # TPP. Samantha stands up and get's in Cameron's face looking really pissed off, Cameron also looking pissed off, MC stood behind Cameron.
+    with dissolve
+    pause 0.5
+    #Samantha is slightly out of it, but still stands to get in Cameron's face.
+
+    scene scc66 # FPP. Close up Samanatha, mouth open, angry, looking out of it.
+    with dissolve
+
+    sa "What am I doing? What the hell are you doing here?!"
+
+    scene scc64 # FPP. Same as scc64.
+    with dissolve
+
+    ca "It's like I have to fucking babysit you 24-7!"
+
+    scene scc66 # FPP. Same as scc66 but shoutier.
+    with dissolve
+
+    sa "I'm an adult! I can take care of myself!"
+
+    scene scc64 # FPP. Same as scc64 but Cameron is a little less angry.
+    with dissolve
+
+    ca "You're fucking 18, Sam! You're hardly an adult!{w} And clearly you can't take care of yourself."
+    ca "What do you want me to do? Stand around while I watch you kill yourself?!"
+    ca "You're my little sister for God's sake!"
+
+    scene scc66b # FPP. Same as scc66 but Samantha turns around facing away from camera.
+    with dissolve
+
+    pause 0.5
+
+    scene scc66c # FPP. Same as above but Samantha turns her head around towards camera, shouting.
+    with dissolve
+
+    sa "Just fuck off Cameron!{w} Go home!"
+
+    scene scc67 # TPP. Show Cameron grabbing Samantha's arm and she is trying to walk away. Cameron angry, mouth closed.
+    with vpunch
+
+    ca "Don't you dare talk to me like that! You're leaving.{w} NOW!"
+
+    scene scc68 # TPP. Show Cameron pulling Samantha towards the front door of the house trying to get her outside.
+    with dissolve
+
+    pause 0.5
+
+    scene scc68a # TPP. As above, Cameron looks at Samantha's friends, shouts and points with his free hand, mouth open.
+    with dissolve
+
+    ca "Don't you fucking dare drag her into this shit again!"
+
+    scene scc69 # TPP. Show Cameron pulling Samantha but now outside.
+    with dissolve
+
+    pause 0.5
+
+    scene scc70 # TPP. Show Cameron pointing at Samantha, angry face, mouth open, Samantha looks upset and still out of it.
+    with dissolve
+
+    ca "I cannot fucking believe you Samantha."
+
+    scene scc71 # FPP. Show Cameron walking off with phone to ear. Samantha sat on sidewalk, crying.
+    with dissolve
+
+    menu:
+        "Console Samantha":
+            $ consoledSam = True
+            $ addPoint("bf")
+
+            scene scc72 # TPP. Show MC sat on the sidewalk next to Samantha, MC looking at Samantha mouth open, Samantha head in hands crying.
+            with dissolve
+
+            u "Hey, you know he only wants the best for you."
+
+            scene scc73 # FPP. Close up Samantha, crying looking at Camera, mouth open.
+            with dissolve
+
+            sa "Yeah, well, he has a shitty way of showing it."
+
+            scene scc73a # FPP. As above, mouth closed.
+            with dissolve
+
+            u "Yeah, maybe it's just the only way he knows to show that he cares."
+            u "You know, that stuff can really kill you. He doesn't want that for his little sister."
+
+            scene scc73 # FPP. As above, head slightly down, eyes looking at camera, mouth open.
+            with dissolve
+
+            sa "I know. I just can't help it."
+
+            scene scc73a # FPP. As above, mouth closed.
+            with dissolve
+
+            u "It's hard, I bet. But even though I don't know you, I think you can do it."
+            u "You've done it before, haven't you?"
+
+            scene scc73 # FPP. Same as scc73.
+            with dissolve
+
+            sa "Yeah."
+
+            scene scc73a # FPP. Same as scc73b.
+            with dissolve
+
+            u "Then you can definitely do it again. And in the end it'll all be worth it. Trust me."
+
+            scene scc73d # FPP. Samantha looks at camera and smileS, still upset.
+            with dissolve
+
+            pause 0.5
+
+            scene scc74 # TPP. Show Samantha hugging MC.
+            with dissolve
+
+            pause 0.5
+
+            scene scc73e # FPP. Same as scc73d, less upset, mouth open.
+            with dissolve
+
+            sa "Thank you, really."
+
+        "Leave her be":
+            $ consoledSam = False
+            $ addPoint("bro")
+
+    if apesVids > 3:
+        scene scc75 # FPP. Same camera as scc73. Show Cameron kneeling infront of Samantha but looking at Camera, slight smile, Samantha too upset but not too bad.
+        with dissolve
+
+        pause 0.5
+
+        scene scc75a # FPP. Same as above, Cameron now looking at Samantha, mouth open.
+        with dissolve
+
+        ca "Hey, time to go."
+
+        stop music fadeout 2
+
+        scene scc75 # FPP. Same as above, Cameron mouth closed.
+        with dissolve
+
+        u "Okay. Bye guys."
+
+        scene scc75a # FPP. Cameron and Samantha get up and start walking away.
+        with dissolve
+        pause 0.5
+        #Cameron and Samantha leave.
+
+        scene scc76 # TPP. Show MC stood up, Cameron and Samantha walking but Cameron turns his head, mouth open.
+        with dissolve
+
+        ca "Bye."
+
+    else:
+        #If you didn't do most of your tasks:
+        #Cameron seems a bit irritated by this. He grabs Samantha by the arm and pulls her up.
+
+        scene scc77 # FPP. Cameron leans down and grabs Samantha's arm and starts pulls her up. Cameron agitated expression, mouth open.
+        with dissolve
+
+        ca "Time to go."
+
+        sa "Ugh."
+
+        stop music fadeout 2
+
+        scene scc78 # TPP. Show Samantha and Cameron walking away, MC stood up looking at them, mouth ope.
+        with dissolve
+
+        u "Uh, okay bye guys."
+
+        pause 0.5
 
     scene scc79 # TPP. Show MC in bed in dorm about to sleep but eyes open lookin at the ceiling
     with Fade(0.75, 0.25, 0.75)
@@ -8537,15 +8061,13 @@ label av_mc_dorm:
 
     jump rileytext
 
-
 ########## SCENE 34 WOLVES CEREMONY
-
-    label wolves_ceremony:
-
+label wolves_ceremony:
     scene swc0 # FPP. Show Finn & Marcus standing at the entrace to the Wolves house as you are walking towards the house. Finn & Marcus chatting, Wolves house in view.
     with fade
     play music "music/muffledparty.mp3"
-    if imremad == False:
+
+    if not imremad:
         scene swc1 # FPP. Close up on Finn, mouth open with smile, welcoming gesture with hand.
         with dissolve
 
@@ -8649,7 +8171,6 @@ label av_mc_dorm:
     with dissolve
 
     if tasks > 3: # MC, Imre, Perry
-
         ch "First up... [name]!"
 
         scene swc19 # TPP. Show everone clapping/cheering. Show MC walking towards Chris who has Wolves jacket in hand, camera from behind MC looking at Wolves.
@@ -9376,80 +8897,58 @@ label av_mc_dorm:
 
     u "I should probably get some sleep."
 
-    jump rileytext
-
 ############# RILEY TEXT
 
 label rileytext:
+    if rileyrs:
+        play sound "sounds/vibrate.mp3"
 
-if rileyrs:
-
-    play sound "sounds/vibrate.mp3"
-
-    $ contact_Riley.newMessage("Wanna come over? ;)")
-    $ contact_Riley.addReply("Sure, on my way :)", "rirep8a")
-    $ contact_Riley.addReply("Sorry I'm really exhausted. Another time", "rirep8b")
-    
-
-    " "
-
-
-    label rtnow:
-
-    if contact_Riley.messages[-1].replies:
-        u "(I should check my messages.)"
-        jump rtnow
-    elif rileysex:
+        $ contact_Riley.newMessage("Wanna come over? ;)", queue=False)
+        $ contact_Riley.addReply("Sure, on my way :)", "rirep8a")
+        $ contact_Riley.addReply("Sorry I'm really exhausted. Another time", "rirep8b")
         
+        " "
+
+        label rtnow:
+            if contact_Riley.getReplies():
+                u "(I should check my messages.)"
+                jump rtnow
+            
         u "(Guess I'm not going to sleep yet.)"
         jump rileysexscene
 
 
-if joinwolves:
-    scene swc91 # TPP. Show MC in bed going to sleep
-    with dissolve
+    if joinwolves:
+        scene swc91 # TPP. Show MC in bed going to sleep
+        with dissolve
 
-    jump scene35
+        jump scene35
 
-else:
+    else:
+        scene swc96 # TPP. Show MC in bed going to sleep
+        with dissolve
 
-    scene swc96 # TPP. Show MC in bed going to sleep
-    with dissolve
-
-    jump scene35a
+        jump scene35a
 
 ########## BEFORE SCENE 35: RILEY SEX SCENE
-
 #### RIley Sex Scene, if rileyrs = True,  you get a message in your dorm from Riley telling you that her roommate isnt home and if you wanna come over. Since you already did stuff, you say yes.
 # It's thurday night
-
-label rirep8a:
-$ rileysex = True
-$ contact_Riley.newMessage("Yayyy")
-call screen messager(contact_Riley)
-
-label rirep8b:
-$ rileysex = False
-$ contact_Riley.newMessage("Oh oki")
-call screen messager(contact_Riley)
-
 label rileysexscene:
-if joinwolves == True:
-    stop music fadeout 2.0
-    scene preri1 # You walking through the night to riley
-    with fade
+    if joinwolves:
+        stop music fadeout 2.0
+        scene preri1 # You walking through the night to riley
+        with fade
 
-    pause 0.5
-    jump ridrm
-else:
-    stop music fadeout 2.0
-    scene preri2 # You walking through the dorms
-    with fade
+        pause 0.5
 
-    pause 0.5
-    jump ridrm
+    else:
+        stop music fadeout 2.0
+        scene preri2 # You walking through the dorms
+        with fade
 
-label ridrm: # Pre-cursor to sex with Riley
+        pause 0.5
+
+# Pre-cursor to sex with Riley
     $ rileyrs = True
     scene ridrm1 # You knocking on Riley's dorm door (third person)
     with dissolve
@@ -9468,7 +8967,6 @@ label ridrm: # Pre-cursor to sex with Riley
     scene ridrm2b
     with vpunch
     play music "music/msexy.mp3"
-
 
     pause 0.5
 
@@ -9494,23 +8992,9 @@ label ridrm: # Pre-cursor to sex with Riley
     with dissolve
     u "I like that sound of that."
 
-    jump risex
-
-label risex: # Riley sex scene
-
+# Riley sex scene
     show screen rileysexoverlay
     show screen rileysexoverlaybutton
-
-    image risexvid1 = Movie (play="images/risexvid1.webm", loop = True, image = "images/risex1vid20.webp", start_image = "images/risex1vid00.webp")
-    image risexvid2s = Movie (play="images/risexvid2s.webm", loop = True, image = "images/rivid378.webp", start_image = "images/rivid360.webp")
-    image risexvid2f = Movie (play="images/risexvid2f.webm", loop = True, image = "images/rivid378.webp", start_image = "images/rivid360.webp")
-    image risexvid3s = Movie (play="images/risexvid3s.webm", loop = True, image = "images/rivid498.webp", start_image = "images/rivid478.webp")
-    image risexvid3f = Movie (play="images/risexvid3f.webm", loop = True, image = "images/rivid498.webp", start_image = "images/rivid478.webp")
-    image risexvid6s = Movie (play="images/risexvid6s.webm", loop = True, image = "images/rivid7_068.webp", start_image = "images/rivid7_052.webp")
-    image risexvid6f = Movie (play="images/risexvid6f.webm", loop = True, image = "images/rivid7_068.webp", start_image = "images/rivid7_052.webp")
-    image risexvid7 = Movie (play="images/risexvid7.webm", loop = True, image = "images/rivid8070.webp", start_image = "images/rivid8052.webp")
-    image risexvid8 = Movie (play="images/risexvid8.webm", loop = False, image = "images/rivid8070.webp", start_image = "images/rivid8052.webp")
-
 
     scene risex1a # Riley shirt fully off, flirty grin (first person)
     with fade
@@ -9602,8 +9086,7 @@ label risex: # Riley sex scene
 
     pause 0.5
 
-    label rifingering:
-
+label rifingering:
     scene risexvid3s
     with dissolve
     ri "*Moans* Mhmmmm..."
@@ -9619,7 +9102,7 @@ label risex: # Riley sex scene
     ri "*Moans* Ahhhh yes!"
     " "
 
-    label rimissionary:
+label rimissionary:
     scene risexvid7 # Riley cowgirl on MC, Riley pleasure expression
     with dissolve
     ri "*Moans louder* Holy shit!"
@@ -9633,11 +9116,9 @@ label risex: # Riley sex scene
 
     ri "Yesss! Me too!"
 
-    label riclimax:
-
+label riclimax:
     scene risexvid8 # Riley cowgirl on MC, Riley pleasure expression
     with dissolve
-
 
     pause 0.5
 
@@ -9655,8 +9136,6 @@ label risex: # Riley sex scene
     with fade
     stop music fadeout 2.0
 
-
-
     ri "This was amazing."
     ri "I wish you could stay, but I think my roommate will be home soon."
 
@@ -9672,7 +9151,7 @@ label risex: # Riley sex scene
     with dissolve
     u "Yeah, see you tomorrow."
 
-    if joinwolves == True:
+    if joinwolves:
         scene preri1a # You walking through the night back home
         with fade
 
@@ -9687,123 +9166,107 @@ label risex: # Riley sex scene
 ########## SCENE 35 MC AT DORM / WOLVES ROOM AT NIGHT
 
     if joinwolves: # IN WOLVES ROOM
-
         scene swc91 # TPP. Show MC in bed going to sleep
         with fade
 
         label scene35:
+            pause 0.5
 
+            #- CONTINUE at Friday Morning -
+            scene swc92 # TPP. Show MC in bed, waking up, camera from corner of room.
+            with Fade(2,0,2)
+            play music "music/mindie1.mp3"
 
-        pause 0.5
-
-        #- CONTINUE at Friday Morning -
-        scene swc92 # TPP. Show MC in bed, waking up, camera from corner of room.
-        with Fade(2,0,2)
-        play music "music/mindie1.mp3"
-
-        queue music [ "music/mindie2.mp3", "music/mindie3.mp3", "music/mindie5.mp3" ]
-
-        pause 0.5
-
-        scene swc93 # TPP. MC waking up, sat on the edge of his bed, looking tired.
-        with dissolve
-
-        pause 0.5
-
-        if signs == True:
-
-            jump signs_with_autumn
-        else:
-            scene swc95 # TPP. Show MC stood up, yawning, getting ready.
-            with dissolve
-
-            u "Not much to do right now, I suppose I can study for a bit."
-
-            scene sas17 # TPP. Show MC working at his desk in wolves room
-            with fade
-
-            u "(Shit, I need a book from the library.)"
+            queue music [ "music/mindie2.mp3", "music/mindie3.mp3", "music/mindie5.mp3" ]
 
             pause 0.5
 
-            jump walking_through_hallways
+            scene swc93 # TPP. MC waking up, sat on the edge of his bed, looking tired.
+            with dissolve
+
+            pause 0.5
+
+            if signs:
+                jump signs_with_autumn
+
+            else:
+                scene swc95 # TPP. Show MC stood up, yawning, getting ready.
+                with dissolve
+
+                u "Not much to do right now, I suppose I can study for a bit."
+
+                scene sas17 # TPP. Show MC working at his desk in wolves room
+                with fade
+
+                u "(Shit, I need a book from the library.)"
+
+                pause 0.5
+
+                jump walking_through_hallways
 
     else: # in DORM
-
         scene swc96 # TPP. Show MC in bed going to sleep
         with fade
 
         label scene35a:
+            pause 0.5
 
-        pause 0.5
+            #- CONTINUE at Friday Morning -
+            scene swc97 # TPP. Show MC in bed, waking up, camera from corner of room.
+            with Fade(2,0,2)
+            play music "music/mindie1.mp3"
 
-        #- CONTINUE at Friday Morning -
-        scene swc97 # TPP. Show MC in bed, waking up, camera from corner of room.
-        with Fade(2,0,2)
-        play music "music/mindie1.mp3"
-
-        queue music [ "music/mindie2.mp3", "music/mindie3.mp3", "music/mindie5.mp3"]
-
-        pause 0.5
-
-        scene swc98 # TPP. MC waking up, sat on the edge of his bed, looking tired.
-        with dissolve
-
-        pause 0.5
-
-        if signs == True:
-
-            jump signs_with_autumn
-        else:
-            scene swc99 # TPP. Show MC stood up, yawning, getting ready.
-            with dissolve
-
-            u "Not much to do right now, I suppose I can study for a bit."
-
-            scene swc100 # TPP. Show MC working at his desk
-            with fade
+            queue music [ "music/mindie2.mp3", "music/mindie3.mp3", "music/mindie5.mp3"]
 
             pause 0.5
 
-            scene swc101
+            scene swc98 # TPP. MC waking up, sat on the edge of his bed, looking tired.
             with dissolve
-
-            u "(Shit, I need a book from the library.)"
 
             pause 0.5
 
-            jump walking_through_hallways
+            if signs:
+                jump signs_with_autumn
+
+            else:
+                scene swc99 # TPP. Show MC stood up, yawning, getting ready.
+                with dissolve
+
+                u "Not much to do right now, I suppose I can study for a bit."
+
+                scene swc100 # TPP. Show MC working at his desk
+                with fade
+
+                pause 0.5
+
+                scene swc101
+                with dissolve
+
+                u "(Shit, I need a book from the library.)"
+
+                pause 0.5
+
+                jump walking_through_hallways
 
 ########## SCENE 36 MAKING SIGNS W/ AUTUMN
+label signs_with_autumn:
+    $ contact_Autumn.newMessage("Hey, it's Autumn.", queue=False)
+    $ contact_Autumn.newMessage("I'm just about to start making signs. Do you still want to join?", queue=False)
+    $ contact_Autumn.addReply("Yes, of course. I'd love to.")
+    $ contact_Autumn.newMessage("Great. I'm at the Deer's House. Do you know how to get there?")
+    $ contact_Autumn.addReply("Yeah, I think I do. On my way.")
+    $ contact_Autumn.newMessage("Alright, see you soon.")
 
-    label signs_with_autumn:
-    $ contact_Autumn.newMessage("Hey, it's Autumn.")
-    $ contact_Autumn.newMessage("I'm just about to start making signs. Do you still want to join?")
-    $ contact_Autumn.addReply("Yes, of course. I'd love to.", "autrep1a")
     play sound "sounds/vibrate.mp3"
-    
 
     label phoneba:
-    if contact_Autumn.messages[-1].replies:
-        u "(I should probably check my messages.)"
+        if contact_Autumn.getReplies():
+            u "(I should probably check my messages.)"
 
-        jump phoneba
+            jump phoneba
 
-    else:
-        u "(Alright, let's get going to Autumn's.)"
-        
-        jump signs_with_autumn2
-
-    label autrep1a:
-    $ contact_Autumn.newMessage("Great. I'm at the Deer's House. Do you know how to get there?")
-    $ contact_Autumn.addReply("Yeah, I think I do. On my way.", "autrep2a")
-    call screen messager(contact_Autumn)
-
-    label autrep2a:
-    $ contact_Autumn.newMessage("Alright, see you soon.")
-    call screen messager(contact_Autumn)
-
-    label signs_with_autumn2:
+    u "(Alright, let's get going to Autumn's.)"
+    
     u "(I should probably get going right away.)"
     stop music fadeout 2.0
     scene sas2 # TPP. Show MC knocking on the door of the Deer's house.
@@ -9874,58 +9337,49 @@ label risex: # Riley sex scene
 
     menu:
         "Say something witty":
-            jump aSigns_witty
+
+            u "Girls just want to have FUNdamental rights."
+
+            scene sas8 # TPP. Show MC and Autumn sat down, MC mouth opening gesturing with his hands as if to explain something.
+            with dissolve
+
+            u "You know Fun! Fundamental!"
+
+            scene sas9 # FPP. Close up Autumn, mouth open laughing.
+            with dissolve
+
+            aut "Ohhhhh hahaha! That's a take on that Cyndi Lauper song."
+
+            scene sas9a # FPP. As above, mouth closed.
+            with dissolve
+
+            u "Exactly!"
+
+            scene sas9b # FPP. As above, grin, mouth open.
+            with dissolve
+
+            aut "Clever, very clever! Love it."
+
+            scene sas9c # FPP. As above, mouth closed.
+            with dissolve
+
+            u "Thanks."
 
         "Same something direct":
             $ addPoint("bf")
-            jump aSigns_direct
 
-label aSigns_direct:
-    u "Men against misogyny."
+            u "Men against misogyny."
 
-    scene sas7f # FPP. As above but big smile, mouth open.
-    with dissolve
+            scene sas7f # FPP. As above but big smile, mouth open.
+            with dissolve
 
-    aut "I like that! It's direct and it also has a nice ring to it. It's amazing how misogynistic most guys are in college these days. Refreshing to know you stand with women."
+            aut "I like that! It's direct and it also has a nice ring to it. It's amazing how misogynistic most guys are in college these days. Refreshing to know you stand with women."
 
-    scene sas7e # FPP. Same as sas73e.
-    with dissolve
+            scene sas7e # FPP. Same as sas73e.
+            with dissolve
 
-    u "Yeah. It's an issue for sure."
+            u "Yeah. It's an issue for sure."
 
-    jump aSigns_2
-
-label aSigns_witty:
-    u "Girls just want to have FUNdamental rights."
-
-    scene sas8 # TPP. Show MC and Autumn sat down, MC mouth opening gesturing with his hands as if to explain something.
-    with dissolve
-
-    u "You know Fun! Fundamental!"
-
-    scene sas9 # FPP. Close up Autumn, mouth open laughing.
-    with dissolve
-
-    aut "Ohhhhh hahaha! That's a take on that Cyndi Lauper song."
-
-    scene sas9a # FPP. As above, mouth closed.
-    with dissolve
-
-    u "Exactly!"
-
-    scene sas9b # FPP. As above, grin, mouth open.
-    with dissolve
-
-    aut "Clever, very clever! Love it."
-
-    scene sas9c # FPP. As above, mouth closed.
-    with dissolve
-
-    u "Thanks."
-
-    jump aSigns_2
-
-label aSigns_2:
     scene sas9d # FPP. As above, slight smile, open mouth.
     with dissolve
 
@@ -10099,12 +9553,8 @@ label aSigns_2:
     scene sas15 # TPP. Show Autumn walking MC out.
     with dissolve
 
-    jump walking_through_hallways
-
 ########## SCENE 37 SETTING UP HOMECOMING W/ MS ROSE
-
-    label walking_through_hallways:
-
+label walking_through_hallways:
     scene shr1 # tpp MC walks through the hallways.
     with fade
 
@@ -10204,11 +9654,8 @@ label aSigns_2:
 
     pause 0.5
 
-
 ######## SCENE 38 BACK IN YOUR DORM FRIDAY EVENING
-
     if joinwolves:
-
         stop music fadeout 2.0
 
         scene sfr4mc2 # mc in his wolves' room studying
@@ -10217,7 +9664,6 @@ label aSigns_2:
         pause 0.5
 
     else:
-
         stop music fadeout 2.0
         scene sfr4mc1 # mc in his dorm studying
         with fade
@@ -10232,7 +9678,6 @@ label aSigns_2:
     queue music [ "music/mdates2.mp3", "music/mchill1.mp3", "music/mfunk.mp3"]
 
     if hcGirl == "amber":
-
         u "(Probably should get going to Amber's soon.)"
 
         u "(I don't know about doing drugs. Molly? Fuck, I don't know...)"
@@ -10242,48 +9687,42 @@ label aSigns_2:
         jump amberhocodate
 
     else:
-
         u "(I should probably start getting my suit on and get ready for homecoming.)"
 
         if joinwolves:
             scene sfr4mc4 # mc adjusting his suit in his Wolves' room
             with fade
+
         else:
             scene sfr4mc3 # mc adjusting his suit in his drom
             with fade
 
         if hcGirl == "chloe":
-
             u "(Time to pick up Chloe. Can't believe she's actually my date...)"
 
             jump chloehocodate
 
         elif hcGirl == "emily":
-
             u "(Time to pick up Emily. Let's hope this goes well...)"
 
             jump emilyhocodate
 
         elif hcGirl == "lauren":
-
             u "(Time to pick up Lauren. I bet she looks stunning in her dress...)"
 
             jump laurenhocodate
 
         elif hcGirl == "penelope":
-
             u "(Time to pick up Penelope. She's gonna make a great date...)"
 
             jump penelopehocodate
 
         elif hcGirl == "riley":
-
             u "(Time to pick up Riley. This is gonna be an amazing night...)"
 
             jump rileyhocodate
 
         else:
-
             u "(I'm sure going without a date has a lot of advantages...)"
 
             scene sfr4mc5 # mc in a suit going to homecoming by himself
@@ -10305,8 +9744,7 @@ label aSigns_2:
 
 ############### SCENE 44 DATE: AMBER
 
-    label amberhocodate:
-
+label amberhocodate:
     scene sfr4am1 #mc in white t-shirt walking through the suburbs
     with fade
 
@@ -10397,13 +9835,7 @@ label aSigns_2:
 
     $ ecstatic = True
     if not steam:
-        image ecstatic = "images/ecstatic.webp"
-        show ecstatic:
-            xpos 0
-            ypos -200
-            linear 0.5 xpos 0 ypos 0
-            pause 2.0
-            linear 0.5 xpos 0 ypos -200
+        show ecstatic at achievementShow
     else:
         $ achievement.grant("ecstatic")
         $ achievement.sync()
@@ -10695,9 +10127,7 @@ label aSigns_2:
     jump fr4amberending
 
 ############### SCENE 39 HOMECOMING DATE: CHLOE
-
-    label chloehocodate:
-
+label chloehocodate:
     scene sfr4cl1 #mc in suit walking through the town
     with fade
 
@@ -10732,7 +10162,6 @@ label aSigns_2:
     with dissolve
 
     if joinwolves:
-
         cl "This is Lindsey by the way."
 
     else:
@@ -10986,7 +10415,6 @@ label aSigns_2:
     with dissolve
 
     menu:
-
         "Aubrey":
             $ addPoint("bro")
             scene sfr4cl21a # aubrey looking at you smiling mouth closed
@@ -11004,7 +10432,6 @@ label aSigns_2:
 
             au "This man's got taste!"
 
-
         "Lindsey":
             $ addPoint("tm")
 
@@ -11020,7 +10447,6 @@ label aSigns_2:
 
             li "Watch out, Aaron."
 
-
     scene sfr4cl21a # aubrey looking at you smiling mouth closed
     with dissolve
 
@@ -11035,7 +10461,6 @@ label aSigns_2:
     with dissolve
 
     menu:
-
         "Ask something sexual":
             $ addPoint("bro")
             $ addPoint("tm")
@@ -11083,7 +10508,6 @@ label aSigns_2:
             scene sfr4cl22a
             with dissolve
 
-
     # honk sound #check - add honk.mp3 sound file
     play sound "sounds/honk.mp3"
     "*Honk*"
@@ -11117,7 +10541,6 @@ label aSigns_2:
     with dissolve
 
     menu:
-
         "Joke around":
             $ addPoint("bro")
             $ addPoint("tm")
@@ -11255,8 +10678,7 @@ label aSigns_2:
 
 ############### SCENE 40 HOMECOMING DATE: EMILY
 
-    label emilyhocodate:
-
+label emilyhocodate:
     scene sfr4em1 #mc in a suit walking through dorm hallways
     with fade
 
@@ -11424,9 +10846,7 @@ label aSigns_2:
     with dissolve
 
     menu:
-
         "Of course.":
-
             $ addPoint("bro")
 
             u "Of course. Dancing is like riding a bicycle. You don't unlearn that."
@@ -11439,7 +10859,6 @@ label aSigns_2:
             em "Show me then."
 
         "I'm not sure.":
-
             $ addPoint("bf")
 
             u "I'm not sure... I haven't properly done couple dancing since high school."
@@ -11448,7 +10867,6 @@ label aSigns_2:
             with dissolve
 
             em "All the more reason to do a trial run."
-
 
     scene sfr4em9 # showing you standing up after taking emily's hand
     with dissolve
@@ -11491,9 +10909,7 @@ label aSigns_2:
     with dissolve
 
     menu:
-
         "Kiss her lips":
-
             scene sfr4em12a # mc kisses her on the lips
             with dissolve
 
@@ -11502,10 +10918,7 @@ label aSigns_2:
             scene sfr4em12d # mc and emily faces really close, emily mouth open
             with dissolve
 
-
-
         "Kiss her neck":
-
             scene sfr4em12b # mc kisses her neck
             with dissolve
 
@@ -11518,7 +10931,6 @@ label aSigns_2:
 
             scene sfr4em12d # mc and emily faces really close, emily mouth open
             with dissolve
-
 
     em "I miss this."
 
@@ -11705,8 +11117,7 @@ label aSigns_2:
 
 ############### SCENE 41 HOMECOMING DATE: LAUREN
 
-    label laurenhocodate:
-
+label laurenhocodate:
     scene sfr4em1 #mc in a suit walking through dorm hallways
     with fade
 
@@ -11746,7 +11157,6 @@ label aSigns_2:
     la "Oh, get in here."
 
     if laurenrs:
-
         scene sfr4la2 # showing lauren and mc kissing
         with dissolve
 
@@ -11834,7 +11244,6 @@ label aSigns_2:
     with dissolve
 
     menu:
-
         "Keep it light":
             $ addPoint("bro")
 
@@ -11845,7 +11254,6 @@ label aSigns_2:
 
             la "Oh wow."
 
-
         "Reassure her":
             $ addPoint("bf")
 
@@ -11855,7 +11263,6 @@ label aSigns_2:
             with dissolve
 
             la "*Chuckles* Then you're in for a surprise."
-
 
     scene sfr4la7a
     with dissolve
@@ -12081,10 +11488,8 @@ label aSigns_2:
 
     jump labelfr4dancefloor
 
-
 ############### SCENE 42 HOMECOMING DATE: PENELOPE
-
-    label penelopehocodate:
+label penelopehocodate:
 
     scene sfr4em1 #mc in a suit walking through dorm hallways
     with fade
@@ -12105,7 +11510,6 @@ label aSigns_2:
     u "Penelope?"
 
     menu:
-
         "Enter her room":
             $ addPoint("tm")
             play sound "sounds/dooropen.mp3"
@@ -12180,9 +11584,6 @@ label aSigns_2:
             with dissolve
 
             u "No worries. You look... stunning."
-
-
-
 
     scene sfr4pe4b # penelope cute smile awww
     with dissolve
@@ -12260,7 +11661,6 @@ label aSigns_2:
     with dissolve
 
     menu:
-
         "Ask about sex toys":
             $ penelopesextoys = True
             $ addPoint("tm")
@@ -12306,7 +11706,6 @@ label aSigns_2:
 
             pe "It was weird... but good. I don't know."
 
-
         "Ask about drugs":
             $ addPoint("bro")
 
@@ -12324,7 +11723,6 @@ label aSigns_2:
 
             scene sfr4pe6b
             with dissolve
-
 
     pe "Anyways... you wanna play a drinking game?"
 
@@ -12362,7 +11760,6 @@ label aSigns_2:
     with dissolve
 
     menu:
-
         "You didn't have four cats.":
 
             u "You definitely did not have four cats."
@@ -12386,8 +11783,6 @@ label aSigns_2:
 
             scene sfr4pe8a
             with dissolve
-
-
 
         "You didn't have six lizards.":
             $ penelopetruths += 1
@@ -12435,7 +11830,6 @@ label aSigns_2:
     with dissolve
 
     menu:
-
         "You didn't lose your virginity.":
             $ penelopetruths += 1
 
@@ -12465,7 +11859,6 @@ label aSigns_2:
             with dissolve
 
             pe "*Laughs* I'm just kidding! You should have seen your face though."
-
 
         "You didn't learn to drive.":
 
@@ -12585,9 +11978,7 @@ label aSigns_2:
     jump labelfr4dancefloor
 
 ############### SCENE 43 HOMECOMING DATE: RILEY
-
-    label rileyhocodate:
-
+label rileyhocodate:
     scene sfr4em1 #mc in a suit walking through dorm hallways
     with fade
 
@@ -12956,9 +12347,7 @@ label aSigns_2:
 
 ############# SCENE 45 HOMECOMING FREE ROAM
 ######
-
-    label fr4:
-
+label fr4:
     play music "music/mhoco1.mp3"
 
     queue music [ "music/mhoco2.mp3", "music/mhoco3.mp3", "music/mhoco4.mp3"]
@@ -12968,147 +12357,145 @@ label aSigns_2:
     #anchor
     #### room labels Navigation:
 
-    label labelfr4dancefloor:
-        if hcGirl == "chloe":
-            if fr4nora and not fr4nora2:
-                scene fr4dancefloorchloedatenonora
-            else:
-                scene fr4dancefloorchloedate
-
-        elif hcGirl == "emily":
-            if fr4nora and not fr4nora2:
-                scene fr4danceflooremilydatenonora
-            else:
-                scene fr4danceflooremilydate
-
-        elif hcGirl == "lauren":
-            if fr4nora and not fr4nora2:
-                scene fr4dancefloorlaurendatenonora
-            else:
-                scene fr4dancefloorlaurendate
-
-        elif hcGirl == "penelope":
-            if fr4nora and not fr4nora2:
-                scene fr4dancefloorpenelopedatenonora
-            else:
-                scene fr4dancefloorpenelopedate
-
-        elif hcGirl == "riley":
-            if fr4nora and not fr4nora2:
-                scene fr4dancefloorrileydatenonora
-            else:
-                scene fr4dancefloorrileydate
-
+label labelfr4dancefloor:
+    if hcGirl == "chloe":
+        if fr4nora and not fr4nora2:
+            scene fr4dancefloorchloedatenonora
         else:
-            if fr4nora and not fr4nora2:
-                scene fr4dancefloornodatenonora
-            else:
-                scene fr4dancefloornodate
-        
-        call screen fr4dancefloor
+            scene fr4dancefloorchloedate
 
-    label labelfr4gymleft:
-        if hcGirl == "chloe":
-            if fr4riley:
-                scene fr4gymleftnochloenoriley
-            else:
-                scene fr4gymleftnochloe
-
-        elif hcGirl == "riley":
-
-            if fr4chloe:
-                scene fr4gymleftnoriley
-            else:
-                scene fr4gymleftnochloenoriley
-
+    elif hcGirl == "emily":
+        if fr4nora and not fr4nora2:
+            scene fr4danceflooremilydatenonora
         else:
-            if fr4riley and fr4chloe:
-                scene fr4gymleftnochloenoriley
-            elif fr4riley:
-                scene fr4gymleftnoriley
-            elif fr4chloe:
-                scene fr4gymleftnochloe
-            else:
-                scene fr4gymleft
-        
-        call screen fr4gymleft
+            scene fr4danceflooremilydate
 
-    label labelfr4gymright:
-        if hcGirl == "lauren":
-            scene fr4gymrightnolauren
+    elif hcGirl == "lauren":
+        if fr4nora and not fr4nora2:
+            scene fr4dancefloorlaurendatenonora
         else:
-            scene fr4gymright
+            scene fr4dancefloorlaurendate
 
-        call screen fr4gymright
-
-    label labelfr4gymentrance:
-        if fr4riley and not fr4noriley and fr4nora and not fr4nora2:
-            scene fr4gymentrancerileynora
-        elif fr4riley and not fr4noriley:
-            scene fr4gymentranceriley
-        elif fr4nora and not fr4nora2:
-            scene fr4gymentrancenora
+    elif hcGirl == "penelope":
+        if fr4nora and not fr4nora2:
+            scene fr4dancefloorpenelopedatenonora
         else:
-            scene fr4gymentrance
-        
-        call screen fr4gymentrance
+            scene fr4dancefloorpenelopedate
 
-    label labelfr4hallwaygymexit:
-        scene fr4hallwaygymexit
-
-        call screen fr4hallwaygymexit
-
-    label labelfr4hallwaybathroom:
-        scene fr4hallwaybathroom
-
-        call screen fr4hallwaybathroom
-
-    label labelfr4hallway:
-        if not hcGirl == "penelope":
-            if fr4chloe and preventgrayson:
-                scene fr4hallwaychloe
-            else:
-                scene fr4hallway
+    elif hcGirl == "riley":
+        if fr4nora and not fr4nora2:
+            scene fr4dancefloorrileydatenonora
         else:
-            if fr4chloe and preventgrayson:
-                scene fr4hallwaynopenelopechloe
-            else:
-                scene fr4hallwaynopenelope
+            scene fr4dancefloorrileydate
 
-        call screen fr4hallway
-
-    label labelfr4hallwaycorner:
-        if not fr4grayson:
-            scene fr4hallwaycorner
-        elif preventgrayson:
-            scene fr4hallwaycornernumber
+    else:
+        if fr4nora and not fr4nora2:
+            scene fr4dancefloornodatenonora
         else:
-            scene fr4hallwaycornernograyson
+            scene fr4dancefloornodate
+    
+    call screen fr4dancefloor
 
-        call screen fr4hallwaycorner
-
-    label labelfr4outsidestairs:
-        if not hcGirl == "emily":
-            scene fr4outsidestairs
+label labelfr4gymleft:
+    if hcGirl == "chloe":
+        if fr4riley:
+            scene fr4gymleftnochloenoriley
         else:
-            scene fr4outsidestairsnoemily
-        
-        call screen fr4outsidestairs
+            scene fr4gymleftnochloe
 
-    label labelfr4outsidestreet:
-        scene fr4outsidestreet
-        
-        call screen fr4outsidestreet
+    elif hcGirl == "riley":
+
+        if fr4chloe:
+            scene fr4gymleftnoriley
+        else:
+            scene fr4gymleftnochloenoriley
+
+    else:
+        if fr4riley and fr4chloe:
+            scene fr4gymleftnochloenoriley
+        elif fr4riley:
+            scene fr4gymleftnoriley
+        elif fr4chloe:
+            scene fr4gymleftnochloe
+        else:
+            scene fr4gymleft
+    
+    call screen fr4gymleft
+
+label labelfr4gymright:
+    if hcGirl == "lauren":
+        scene fr4gymrightnolauren
+    else:
+        scene fr4gymright
+
+    call screen fr4gymright
+
+label labelfr4gymentrance:
+    if fr4riley and not fr4noriley and fr4nora and not fr4nora2:
+        scene fr4gymentrancerileynora
+    elif fr4riley and not fr4noriley:
+        scene fr4gymentranceriley
+    elif fr4nora and not fr4nora2:
+        scene fr4gymentrancenora
+    else:
+        scene fr4gymentrance
+    
+    call screen fr4gymentrance
+
+label labelfr4hallwaygymexit:
+    scene fr4hallwaygymexit
+
+    call screen fr4hallwaygymexit
+
+label labelfr4hallwaybathroom:
+    scene fr4hallwaybathroom
+
+    call screen fr4hallwaybathroom
+
+label labelfr4hallway:
+    if not hcGirl == "penelope":
+        if fr4chloe and preventgrayson:
+            scene fr4hallwaychloe
+        else:
+            scene fr4hallway
+    else:
+        if fr4chloe and preventgrayson:
+            scene fr4hallwaynopenelopechloe
+        else:
+            scene fr4hallwaynopenelope
+
+    call screen fr4hallway
+
+label labelfr4hallwaycorner:
+    if not fr4grayson:
+        scene fr4hallwaycorner
+    elif preventgrayson:
+        scene fr4hallwaycornernumber
+    else:
+        scene fr4hallwaycornernograyson
+
+    call screen fr4hallwaycorner
+
+label labelfr4outsidestairs:
+    if not hcGirl == "emily":
+        scene fr4outsidestairs
+    else:
+        scene fr4outsidestairsnoemily
+    
+    call screen fr4outsidestairs
+
+label labelfr4outsidestreet:
+    scene fr4outsidestreet
+    
+    call screen fr4outsidestreet
 
     ##### GYM #####
 
     ### LOCATION 1: DANCEFLOOR
-
-    label fr4chloedate: ### ENDS FREEROAM
+label fr4chloedate: ### ENDS FREEROAM
     call screen endfr4("fr4chloedate2", "labelfr4dancefloor", "Chloe")
-    label fr4chloedate2:
-    
 
+label fr4chloedate2:
     scene sfr4cl31 # fpp close up chloe smiling on dancefloor
 
     cl "Hey missed you over here."
@@ -13233,9 +12620,7 @@ label aSigns_2:
     u "(Hmm...)"
 
     menu:
-
         "Ask Nora to dance":
-
             scene sfr4cl34 # showing mc walking over to nora
             with dissolve
 
@@ -13251,131 +12636,117 @@ label aSigns_2:
 
             no "Uhm..."
 
-            if not noramad:
+            if not noramad and fr3nora:
+                #If Nora likes you:
+                no "Yeah, why not."
 
-                if fr3nora:
-                    #If Nora likes you:
+                scene sfr4cl35c
+                with dissolve
 
-                    no "Yeah, why not."
+                u "Cool."
 
-                    scene sfr4cl35c
-                    with dissolve
+                scene sfr4cl36 # TPP nora and mc slow dancing, nora slight smile
+                with Dissolve(1)
 
-                    u "Cool."
+                no "Guess we can't let our dates have all the fun."
 
-                    scene sfr4cl36 # TPP nora and mc slow dancing, nora slight smile
-                    with Dissolve(1)
+                scene sfr4cl36a
+                with dissolve
 
-                    no "Guess we can't let our dates have all the fun."
+                u "Exactly. You having a good night?"
 
-                    scene sfr4cl36a
-                    with dissolve
+                scene sfr4cl36b # new pose
+                with dissolve
 
-                    u "Exactly. You having a good night?"
+                no "Can't complain, well not too much at least. But you know Chris, Mr. Popular."
 
-                    scene sfr4cl36b # new pose
-                    with dissolve
+                scene sfr4cl36c
+                with dissolve
 
-                    no "Can't complain, well not too much at least. But you know Chris, Mr. Popular."
+                u "Well I'm glad you're at least having a good time."
 
-                    scene sfr4cl36c
-                    with dissolve
+                scene sfr4cl36
+                with dissolve
 
-                    u "Well I'm glad you're at least having a good time."
+                no "Haha at least the best I could in this shitty place."
 
-                    scene sfr4cl36
-                    with dissolve
+                scene sfr4cl36a
+                with dissolve
 
-                    no "Haha at least the best I could in this shitty place."
+                u "Oh come on. It's not that bad."
 
-                    scene sfr4cl36a
-                    with dissolve
+                scene sfr4cl36b
+                with dissolve
 
-                    u "Oh come on. It's not that bad."
+                no "Well it's not hell if that's what you mean."
 
-                    scene sfr4cl36b
-                    with dissolve
+                scene sfr4cl36c
+                with dissolve
 
-                    no "Well it's not hell if that's what you mean."
+                u "Haha."
 
-                    scene sfr4cl36c
-                    with dissolve
+                scene sfr4cl37 #Chloe and Chris walk up. they both have their tiara / crown in their hand no longer on their head
+                with dissolve
 
-                    u "Haha."
+                ch "You guys having fun?"
 
+                scene sfr4cl38a # close up chris smiling mouth closed
+                with dissolve
 
-                    scene sfr4cl37 #Chloe and Chris walk up. they both have their tiara / crown in their hand no longer on their head
-                    with dissolve
+                u "Haha yeah, congrats!"
 
-                    ch "You guys having fun?"
+                scene sfr4cl38
+                with dissolve
 
-                    scene sfr4cl38a # close up chris smiling mouth closed
-                    with dissolve
+                ch "Yeah, yeah. Thanks man."
 
-                    u "Haha yeah, congrats!"
+                scene sfr4cl39 # showing chris and nora, chris talking to nora
+                with dissolve
 
-                    scene sfr4cl38
-                    with dissolve
+                ch "Wanna get a drink?"
 
-                    ch "Yeah, yeah. Thanks man."
+                scene sfr4cl39a
+                with dissolve
 
-                    scene sfr4cl39 # showing chris and nora, chris talking to nora
-                    with dissolve
+                no "Sure."
 
-                    ch "Wanna get a drink?"
+                scene sfr4cl40 #Chris and Nora walk off.
+                with dissolve
 
-                    scene sfr4cl39a
-                    with dissolve
+                pause 0.5
 
-                    no "Sure."
+                scene sfr4cl41 # fpp close up chloe smiling at you
+                with dissolve
 
-                    scene sfr4cl40 #Chris and Nora walk off.
-                    with dissolve
+                cl "Now for that dance?"
 
-                    pause 0.5
+                scene sfr4cl41a
+                with dissolve
 
-                    scene sfr4cl41 # fpp close up chloe smiling at you
-                    with dissolve
+                u "Finally, haha."
 
-                    cl "Now for that dance?"
+                jump chloe_dance
 
-                    scene sfr4cl41a
-                    with dissolve
+            elif not noramad:
+                no "I don't really feel like dancing, sorry."
 
-                    u "Finally, haha."
+                scene sfr4cl35c
+                with dissolve
 
-                    jump chloe_dance
-
-                else:
-
-                    no "I don't really feel like dancing, sorry."
-
-                    scene sfr4cl35c
-                    with dissolve
-
-                    u "Oh, okay."
-
-                    jump walk_to_ryan
+                u "Oh, okay."
 
             else:
-
                 no "I don't."
 
                 scene sfr4cl35c
                 with dissolve
 
                 u "Uh, okay..."
-                jump walk_to_ryan
-
 
         "Leave her be":
-
             u "(I'll leave her be.)"
 
-            jump walk_to_ryan
-
-    label walk_to_ryan:
-
+label walk_to_ryan:
     scene sfr4cl42 #MC walks over to Ryan.
     with dissolve
 
@@ -13428,10 +12799,7 @@ label aSigns_2:
 
     u "Finally, haha."
 
-    jump chloe_dance
-
-    label chloe_dance:
-
+label chloe_dance:
     play music "music/mlove2.mp3"
 
     queue music [ "music/mlove.mp3", "music/mlove1.mp3"]
@@ -13532,11 +12900,10 @@ label aSigns_2:
 
     jump fr4chloeending
 
-    label fr4emilydate: ### ENDS FREEROAM
+label fr4emilydate: ### ENDS FREEROAM
     call screen endfr4("fr4emilydate2", "labelfr4dancefloor", "Emily")
-    label fr4emilydate2:
-    
 
+label fr4emilydate2:
     scene sfr4em20 #fpp close up emily dancing very drunkenly
 
     u "Woah woah woah. Slow down there."
@@ -13566,12 +12933,12 @@ label aSigns_2:
 
     pause 0.5
 
-    scene sfr4em22     #In the middle of dancing, Emily pulls a flask out of her dress
+    scene sfr4em22 # In the middle of dancing, Emily pulls a flask out of her dress
     with dissolve
 
     pause 0.5
 
-    scene sfr4em22b     #Emily turns around with flask in her hand looking at you smirking
+    scene sfr4em22b # Emily turns around with flask in her hand looking at you smirking
     with dissolve
 
     em "Look what I hid under my dress."
@@ -13655,9 +13022,7 @@ label aSigns_2:
     with dissolve
 
     menu:
-
         "Apologize":
-
             u "Look, I'm sorry. Just let me help you."
 
             scene sfr4em25b
@@ -13686,7 +13051,6 @@ label aSigns_2:
             em "*Throwing up*"
 
         "Get upset":
-
             $ forgiveemily = False
             $ emilyrs = False
 
@@ -13712,7 +13076,6 @@ label aSigns_2:
 
             em "*Throwing up*"
 
-
     scene sfr4em27 # mc walking towards the exit
     with dissolve
 
@@ -13727,7 +13090,6 @@ label aSigns_2:
     with dissolve
 
     if fr4noriley:
-
         u "Oh, hey Riley, didn't you say you wanted to go home?"
 
         scene sfr4em28
@@ -13794,11 +13156,10 @@ label aSigns_2:
 
         jump fr4rileyending
 
-    label fr4laurendate: ### ENDS FREEROAM
+label fr4laurendate: ### ENDS FREEROAM
     call screen endfr4("fr4laurendate2", "labelfr4dancefloor", "Lauren")
-    label fr4laurendate2:
-    
 
+label fr4laurendate2:
     scene sfr4la19a # close up lauren smiling mouth closed
 
     u "There's my beautiful lady."
@@ -13870,47 +13231,44 @@ label aSigns_2:
     "*Crowd cheers and applauds*"
 
     if not chloesad:
-
         scene sfr4stage4#Chloe runs up on stage
         with dissolve
 
         label fr4laurendatechloe:
+            "*Crowd continues to cheer*"
 
-        "*Crowd continues to cheer*"
+            cl "Thanks guys!"
 
-        cl "Thanks guys!"
+            scene sfr4stage5 #Ms. Rose puts a tiara on her.
+            with dissolve
 
-        scene sfr4stage5 #Ms. Rose puts a tiara on her.
-        with dissolve
+            ro "Congrats Chloe!"
 
-        ro "Congrats Chloe!"
+            scene sfr4stage6 # ms rose turns to the crowd
+            with dissolve
 
-        scene sfr4stage6 # ms rose turns to the crowd
-        with dissolve
+            ro "Let's give it up for Chris and Chloe!!"
 
-        ro "Let's give it up for Chris and Chloe!!"
+            scene sfr4stage7 # chris and chloe hand in hand bow
+            with dissolve
+            "*Crowd cheers and applauds*"
 
-        scene sfr4stage7 # chris and chloe hand in hand bow
-        with dissolve
-        "*Crowd cheers and applauds*"
+            scene sfr4stage6
+            with dissolve
 
-        scene sfr4stage6
-        with dissolve
+            ro "Now it is a tradition that the king and queen dance with each other."
 
-        ro "Now it is a tradition that the king and queen dance with each other."
+            scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
+            with dissolve
 
-        scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
-        with dissolve
+            pause 0.5
 
-        pause 0.5
+            scene sfr4stage9 # showing Chloe and Chris slow dancing together
+            with dissolve
 
-        scene sfr4stage9 # showing Chloe and Chris slow dancing together
-        with dissolve
-
-        pause 0.5
+            pause 0.5
 
     else:
-
         pause 0.5
 
         ro "Chloe?.... Chloe?"
@@ -13929,7 +13287,6 @@ label aSigns_2:
         with dissolve
 
         ro "Well, let's just start the dance back up then!"
-
 
     play music "music/mlove2.mp3"
 
@@ -14044,13 +13401,11 @@ label aSigns_2:
 
     jump fr4laurenending
 
-    label fr4penelopedate: ### ENDS FREEROAM
+label fr4penelopedate: ### ENDS FREEROAM
     call screen endfr4("fr4penelopedate2", "labelfr4dancefloor", "Penelope")
-    label fr4penelopedate2:
-    
 
+label fr4penelopedate2:
     scene sfr4pe14 # fpp penelope turned around dancing close up
-
 
     u "Hey, how's the dancing?"
 
@@ -14148,42 +13503,40 @@ label aSigns_2:
         with dissolve
 
         label fr4penelopedatechloe:
+            "*Crowd continues to cheer*"
 
-        "*Crowd continues to cheer*"
+            cl "Thanks guys!"
 
-        cl "Thanks guys!"
+            scene sfr4stage5 #Ms. Rose puts a tiara on her.
+            with dissolve
 
-        scene sfr4stage5 #Ms. Rose puts a tiara on her.
-        with dissolve
+            ro "Congrats Chloe!"
 
-        ro "Congrats Chloe!"
+            scene sfr4stage6 # ms rose turns to the crowd
+            with dissolve
 
-        scene sfr4stage6 # ms rose turns to the crowd
-        with dissolve
+            ro "Let's give it up for Chris and Chloe!!"
 
-        ro "Let's give it up for Chris and Chloe!!"
+            scene sfr4stage7 # chris and chloe hand in hand bow
+            with dissolve
+            "*Crowd cheers and applauds*"
 
-        scene sfr4stage7 # chris and chloe hand in hand bow
-        with dissolve
-        "*Crowd cheers and applauds*"
+            scene sfr4stage6
+            with dissolve
 
-        scene sfr4stage6
-        with dissolve
+            ro "Now it is a tradition that the king and queen dance with each other."
 
-        ro "Now it is a tradition that the king and queen dance with each other."
+            scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
+            with dissolve
 
-        scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
-        with dissolve
+            pause 0.5
 
-        pause 0.5
+            scene sfr4stage9 # showing Chloe and Chris slow dancing together
+            with dissolve
 
-        scene sfr4stage9 # showing Chloe and Chris slow dancing together
-        with dissolve
-
-        pause 0.5
+            pause 0.5
 
     else:
-
         pause 0.5
 
         ro "Chloe?.... Chloe?"
@@ -14442,7 +13795,6 @@ label aSigns_2:
     with dissolve
 
     if fr4noriley:
-
         u "Back to my dorm. Didn't you say you were going home a lot earlier?"
 
         scene sfr4pe23
@@ -14476,10 +13828,7 @@ label aSigns_2:
 
         jump fr4rileyending2
 
-
-
     else:
-
         u "Back to my dorm. You?"
 
         scene sfr4pe23
@@ -14513,11 +13862,10 @@ label aSigns_2:
 
         jump fr4rileyending2
 
-    label fr4rileydate: ### ENDS FREEROAM
+label fr4rileydate: ### ENDS FREEROAM
     call screen endfr4("fr4rileydate2", "labelfr4dancefloor", "Riley")
-    label fr4rileydate2:
-    
 
+label fr4rileydate2:
     #Talking to riley & she's your date:
     #MC approaches Riley on the dance floor.
 
@@ -14608,41 +13956,40 @@ label aSigns_2:
 
         label fr4rileydatechloe:
 
-        "*Crowd continues to cheer*"
+            "*Crowd continues to cheer*"
 
-        cl "Thanks guys!"
+            cl "Thanks guys!"
 
-        scene sfr4stage5 #Ms. Rose puts a tiara on her.
-        with dissolve
+            scene sfr4stage5 #Ms. Rose puts a tiara on her.
+            with dissolve
 
-        ro "Congrats Chloe!"
+            ro "Congrats Chloe!"
 
-        scene sfr4stage6 # ms rose turns to the crowd
-        with dissolve
+            scene sfr4stage6 # ms rose turns to the crowd
+            with dissolve
 
-        ro "Let's give it up for Chris and Chloe!!"
+            ro "Let's give it up for Chris and Chloe!!"
 
-        scene sfr4stage7 # chris and chloe hand in hand bow
-        with dissolve
-        "*Crowd cheers and applauds*"
+            scene sfr4stage7 # chris and chloe hand in hand bow
+            with dissolve
+            "*Crowd cheers and applauds*"
 
-        scene sfr4stage6
-        with dissolve
+            scene sfr4stage6
+            with dissolve
 
-        ro "Now it is a tradition that the king and queen dance with each other."
+            ro "Now it is a tradition that the king and queen dance with each other."
 
-        scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
-        with dissolve
+            scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
+            with dissolve
 
-        pause 0.5
+            pause 0.5
 
-        scene sfr4stage9 # showing Chloe and Chris slow dancing together
-        with dissolve
+            scene sfr4stage9 # showing Chloe and Chris slow dancing together
+            with dissolve
 
-        pause 0.5
+            pause 0.5
 
     else:
-
         pause 0.5
 
         ro "Chloe?.... Chloe?"
@@ -14661,8 +14008,6 @@ label aSigns_2:
         with dissolve
 
         ro "Well, let's just start the dance back up then!"
-
-
 
     scene sfr4ri31 # riley grinding on you pose 1
     with Dissolve(1)
@@ -14705,12 +14050,8 @@ label aSigns_2:
 
     jump fr4rileyending
 
-    label fr4nora1:
-
+label fr4nora1:
     $ fr4nora = True
-
-    
-
     #MC approaches Chris and Nora on the dance floor.
 
     scene sfr4no1 # showing chris and Nora dancing
@@ -14738,7 +14079,6 @@ label aSigns_2:
     pause 0.5
 
     if joinwolves:
-
         scene sfr4no2c
         with dissolve
 
@@ -14753,7 +14093,6 @@ label aSigns_2:
         with dissolve
 
         menu:
-
             "Give Chris advice":
                 $ addPoint("bf")
 
@@ -14800,7 +14139,6 @@ label aSigns_2:
                 u "Cool."
 
             "Agree":
-
                 $ addPoint("bro")
                 u "Yeah, seems like it. But you're enjoying yourself at least?"
 
@@ -14840,10 +14178,7 @@ label aSigns_2:
 
     jump labelfr4dancefloor
 
-    label fr4chris1:
-
-    
-
+label fr4chris1:
     if hcGirl == "chloe":
         if fr4nora and not fr4nora2:
             scene fr4dancefloorchloedatenonora
@@ -14884,18 +14219,12 @@ label aSigns_2:
 
     jump labelfr4dancefloor
 
-    label fr4elijah1:
-
-
-
+label fr4elijah1:
     $ fr4elijah = True
-
-    
 
     scene sfr4el1 #Elijah is dancing really dorky with poet 1
 
     menu:
-
         "Say hi to Elijah":
             $ addPoint("bf")
 
@@ -14910,7 +14239,6 @@ label aSigns_2:
             with dissolve
 
             u "*Chuckles* Keep it up."
-
 
         "Make fun of Elijah":
             $ addPoint("tm")
@@ -14930,7 +14258,6 @@ label aSigns_2:
             u "Sure thing, Krusty."
 
             if funofelijah:
-
                 scene sfr4el2d # elijah raging
                 with dissolve
 
@@ -14953,11 +14280,9 @@ label aSigns_2:
 
                 u "I'll leave you alone... Jesus."
 
-
     jump labelfr4dancefloor
 
-    label fr4elijah2:
-
+label fr4elijah2:
     if hcGirl == "chloe":
         if fr4nora and not fr4nora2:
             scene fr4dancefloorchloedatenonora
@@ -14994,17 +14319,12 @@ label aSigns_2:
         else:
             scene fr4dancefloornodate
 
-    
-
     u "(I'll let him dance.)"
 
     jump labelfr4dancefloor
 
-    label fr4mason1:
-
+label fr4mason1:
     $ fr4mason = True
-
-    
 
     scene sfr4ma1 #showing mason and rg dancing, Mason is aggressively grabbing her ass. she's really enjoying
 
@@ -15014,8 +14334,7 @@ label aSigns_2:
 
     jump labelfr4dancefloor
 
-    label fr4mason2:
-
+label fr4mason2:
     if hcGirl == "chloe":
         if fr4nora and not fr4nora2:
             scene fr4dancefloorchloedatenonora
@@ -15051,15 +14370,12 @@ label aSigns_2:
             scene fr4dancefloornodatenonora
         else:
             scene fr4dancefloornodate
-
-    
 
     u "(I don't wanna go back to them, that was weird.)"
 
     jump labelfr4dancefloor
 
-    label fr4nora3:
-
+label fr4nora3:
     if hcGirl == "chloe":
         if fr4nora and not fr4nora2:
             scene fr4dancefloorchloedatenonora
@@ -15095,20 +14411,14 @@ label aSigns_2:
             scene fr4dancefloornodatenonora
         else:
             scene fr4dancefloornodate
-
-    
 
     u "(I've already talked to both of them.)"
 
     jump labelfr4dancefloor
 
     ### LOCATION 2: GYM ENTRANCE
-
-    label fr4aaron1:
-
+label fr4aaron1:
     $ fr4aaron = True
-
-    
 
     scene sfr4aa1 # showing aaron trying to talk lindsey into something but she's not interested
 
@@ -15123,13 +14433,10 @@ label aSigns_2:
     with dissolve
 
     menu:
-
         "Back up Aaron":
-
             $ addPoint("bro")
 
             if joinwolves or hcGirl == "chloe":
-
                 u "Trust me, Aaron's a great guy and any girl would be lucky to go home with him."
 
                 scene sfr4aa3 # close up aaron smiling at you
@@ -15163,7 +14470,6 @@ label aSigns_2:
                 u "Yeah no worries, haha."
 
             else:
-
                 u "Trust me, Aaron's a great guy and any girl would be lucky to go home with him."
 
                 scene sfr4aa3 # close up aaron smiling at you
@@ -15207,11 +14513,9 @@ label aSigns_2:
                 u "Uhhh, bye."
 
         "Side with Lindsey":
-
             $ addPoint("bf")
 
             if joinwolves or hcGirl == "chloe":
-
                 u "You guys should stay. It's fun!"
 
                 scene sfr4aa3f # close up aaron looking at you annoyed
@@ -15245,7 +14549,6 @@ label aSigns_2:
                 u "Yeah no worries, haha."
 
             else:
-
                 u "You guys should stay. It's fun!"
 
                 scene sfr4aa3f # close up aaron looking at you annoyed
@@ -15295,8 +14598,7 @@ label aSigns_2:
 
     jump labelfr4gymentrance
 
-    label fr4aaron2:
-
+label fr4aaron2:
     if fr4riley and not fr4noriley and fr4nora and not fr4nora2:
         scene fr4gymentrancerileynora
     elif fr4riley and not fr4noriley:
@@ -15306,17 +14608,14 @@ label aSigns_2:
     else:
         scene fr4gymentrance
 
-    
-
     u "(Not sure I wanna be dragged back into their discussion.)"
 
     jump labelfr4gymentrance
 
-    label fr4riley2: #ENDS FREE ROAM
+label fr4riley2: #ENDS FREE ROAM
     call screen endfr4("fr4riley22", "labelfr4gymentrance", "Riley")
-    label fr4riley22:
-    
 
+label fr4riley22:
     scene sfr4ri50 # showing riley getting a drink
 
     u "Hey."
@@ -15383,47 +14682,45 @@ label aSigns_2:
     "*Crowd cheers and applauds*"
 
     if not chloesad:
-
         scene sfr4stage4#Chloe runs up on stage
         with dissolve
 
         label fr4alonechloe:
 
-        "*Crowd continues to cheer*"
+            "*Crowd continues to cheer*"
 
-        cl "Thanks guys!"
+            cl "Thanks guys!"
 
-        scene sfr4stage5 #Ms. Rose puts a tiara on her.
-        with dissolve
+            scene sfr4stage5 #Ms. Rose puts a tiara on her.
+            with dissolve
 
-        ro "Congrats Chloe!"
+            ro "Congrats Chloe!"
 
-        scene sfr4stage6 # ms rose turns to the crowd
-        with dissolve
+            scene sfr4stage6 # ms rose turns to the crowd
+            with dissolve
 
-        ro "Let's give it up for Chris and Chloe!!"
+            ro "Let's give it up for Chris and Chloe!!"
 
-        scene sfr4stage7 # chris and chloe hand in hand bow
-        with dissolve
-        "*Crowd cheers and applauds*"
+            scene sfr4stage7 # chris and chloe hand in hand bow
+            with dissolve
+            "*Crowd cheers and applauds*"
 
-        scene sfr4stage6
-        with dissolve
+            scene sfr4stage6
+            with dissolve
 
-        ro "Now it is a tradition that the king and queen dance with each other."
+            ro "Now it is a tradition that the king and queen dance with each other."
 
-        scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
-        with dissolve
+            scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
+            with dissolve
 
-        pause 0.5
+            pause 0.5
 
-        scene sfr4stage9 # showing Chloe and Chris slow dancing together
-        with dissolve
+            scene sfr4stage9 # showing Chloe and Chris slow dancing together
+            with dissolve
 
-        pause 0.5
+            pause 0.5
 
     else:
-
         pause 0.5
 
         ro "Chloe?.... Chloe?"
@@ -15459,145 +14756,129 @@ label aSigns_2:
     ri "Well we've been here for a few hours now and it's getting kinda boring."
 
 
-    if rileyrs:
+    if rileyrs and hcGirl == "alone":
 
-        if hcGirl == "alone":
+        scene sfr4ri51b
+        with dissolve
 
-            scene sfr4ri51b
-            with dissolve
+        ri "I just feel like we could be doing much more fun things..."
 
-            ri "I just feel like we could be doing much more fun things..."
+        scene sfr4ri51c
+        with dissolve
 
-            scene sfr4ri51c
-            with dissolve
+        u "Haha, I agree. Alright, let's go."
 
-            u "Haha, I agree. Alright, let's go."
+        jump fr4rileyending
 
-            jump fr4rileyending
+    elif rileyrs:
+        scene sfr4ri51b
+        with dissolve
 
-        else:
+        ri "I just feel like we could be doing much more fun things."
 
-            scene sfr4ri51b
-            with dissolve
+        ri "I'm sure your date would understand if you'd let her know you had to leave early..."
 
-            ri "I just feel like we could be doing much more fun things."
+        scene sfr4ri51c
+        with dissolve
 
-            ri "I'm sure your date would understand if you'd let her know you had to leave early..."
+        menu:
+            "Alright, let's go.":
+                $ addPoint("tm")
 
-            scene sfr4ri51c
-            with dissolve
+                u "Alright. Let me tell my date that I gotta leave early and let's go."
 
-            menu:
+                jump fr4rileyending
 
-                "Alright, let's go.":
+            "I can't ditch my date.":
+                $ addPoint("bf")
+                $ fr4noriley = True
 
-                    $ addPoint("tm")
+                u "Riley, I- I can't ditch my date like that."
 
-                    u "Alright. Let me tell my date that I gotta leave early and let's go."
+                scene sfr4ri51d # riley disappointed
+                with dissolve
 
-                    jump fr4rileyending
+                ri "Oh, alright... I guess I'm going home by myself then."
 
+                scene sfr4ri51e # riley disappointed
+                with dissolve
 
-                "I can't ditch my date.":
-                    $ addPoint("bf")
-                    $ fr4noriley = True
+                u "Sorry about that."
 
-                    u "Riley, I- I can't ditch my date like that."
+                scene sfr4ri51d # riley disappointed
+                with dissolve
 
-                    scene sfr4ri51d # riley disappointed
-                    with dissolve
+                ri "It's okay. Bye bye."
 
-                    ri "Oh, alright... I guess I'm going home by myself then."
+                scene sfr4ri51e # riley disappointed
+                with dissolve
 
-                    scene sfr4ri51e # riley disappointed
-                    with dissolve
+                u "Bye Riley."
 
-                    u "Sorry about that."
+                jump labelfr4gymentrance
 
-                    scene sfr4ri51d # riley disappointed
-                    with dissolve
+    elif hcGirl == "alone":
+        scene sfr4ri51
+        with dissolve
 
-                    ri "It's okay. Bye bye."
+        ri "I'd just rather hang out with a friend."
 
-                    scene sfr4ri51e # riley disappointed
-                    with dissolve
+        scene sfr4ri51b
+        with dissolve
 
-                    u "Bye Riley."
+        u "Yeah, agreed. Alright, let's go."
 
-                    jump labelfr4gymentrance
+        jump fr4rileyending
 
     else:
+        scene sfr4ri51
+        with dissolve
 
-        if hcGirl == "alone":
+        ri "I'd just rather hang out with a friend."
 
-            scene sfr4ri51
-            with dissolve
+        ri "I'm sure your date would understand if you'd let her know you had to leave early..."
 
-            ri "I'd just rather hang out with a friend."
+        scene sfr4ri51a
+        with dissolve
 
-            scene sfr4ri51b
-            with dissolve
+        menu:
+            "Alright, let's go.":
+                $ addPoint("tm")
 
-            u "Yeah, agreed. Alright, let's go."
+                u "Alright. Let me tell my date that I gotta leave early and let's go."
 
-            jump fr4rileyending
+                jump fr4rileyending
 
-        else:
+            "I can't ditch my date.":
+                $ addPoint("bf")
+                $ fr4noriley = True
 
-            scene sfr4ri51
-            with dissolve
+                u "*Chuckles* I can't ditch my date like that."
 
-            ri "I'd just rather hang out with a friend."
+                scene sfr4ri51d # riley disappointed
+                with dissolve
 
-            ri "I'm sure your date would understand if you'd let her know you had to leave early..."
+                ri "Oh, alright... I guess I'm going home by myself then."
 
-            scene sfr4ri51a
-            with dissolve
+                scene sfr4ri51e # riley disappointed
+                with dissolve
 
-            menu:
+                u "Sorry about that."
 
-                "Alright, let's go.":
-                    $ addPoint("tm")
+                scene sfr4ri51d # riley disappointed
+                with dissolve
 
-                    u "Alright. Let me tell my date that I gotta leave early and let's go."
+                ri "It's okay. Bye bye."
 
-                    jump fr4rileyending
+                scene sfr4ri51e # riley disappointed
+                with dissolve
 
+                u "Bye Riley."
 
-                "I can't ditch my date.":
-                    $ addPoint("bf")
-                    $ fr4noriley = True
+                jump labelfr4gymentrance
 
-                    u "*Chuckles* I can't ditch my date like that."
-
-                    scene sfr4ri51d # riley disappointed
-                    with dissolve
-
-                    ri "Oh, alright... I guess I'm going home by myself then."
-
-                    scene sfr4ri51e # riley disappointed
-                    with dissolve
-
-                    u "Sorry about that."
-
-                    scene sfr4ri51d # riley disappointed
-                    with dissolve
-
-                    ri "It's okay. Bye bye."
-
-                    scene sfr4ri51e # riley disappointed
-                    with dissolve
-
-                    u "Bye Riley."
-
-                    jump labelfr4gymentrance
-
-
-    label fr4nora2:
-
+label fr4nora2:
     $ fr4nora2 = True
-
-    
 
     scene sfr4no4 # nora grabbing a drink
 
@@ -15608,135 +14889,124 @@ label aSigns_2:
 
     pause 0.5
 
-    if not noramad:
+    if not noramad and fr3nora:
+        scene sfr4no5 # close up nora smile with a bit of holding back or "this dance is stupid" attitude
+        with dissolve
 
-        if fr3nora:
+        no "Heyyy. Having fun?"
 
-            scene sfr4no5 # close up nora smile with a bit of holding back or "this dance is stupid" attitude
-            with dissolve
+        scene sfr4no5a
+        with dissolve
 
-            no "Heyyy. Having fun?"
+        u "I am, but you don't seem to. *Chuckles*"
 
-            scene sfr4no5a
-            with dissolve
+        scene sfr4no5b # nora no emotion
+        with dissolve
 
-            u "I am, but you don't seem to. *Chuckles*"
+        no "I've never been big on dances. And Chris seems to just want to go off and hang out with everyone that's not me."
 
-            scene sfr4no5b # nora no emotion
-            with dissolve
+        scene sfr4no5c
+        with dissolve
 
-            no "I've never been big on dances. And Chris seems to just want to go off and hang out with everyone that's not me."
+        menu:
+            "Agree with Nora.":
+                $ addPoint("bf")
 
-            scene sfr4no5c
-            with dissolve
+                u "Sorry, that must suck. He should be spending time with you."
 
-            menu:
+                scene sfr4no5b
+                with dissolve
 
-                "Agree with Nora.":
+                no "I know, but I know he's his own person so I don't want to be a bitch about it, but tonight is a dance like it should be about the person he's dancing with."
 
-                    $ addPoint("bf")
+                scene sfr4no5c
+                with dissolve
 
-                    u "Sorry, that must suck. He should be spending time with you."
+                u "I agree. I wish I could help you out."
 
-                    scene sfr4no5b
-                    with dissolve
+                scene sfr4no5b
+                with dissolve
 
-                    no "I know, but I know he's his own person so I don't want to be a bitch about it, but tonight is a dance like it should be about the person he's dancing with."
+                no "It's okay. Thanks for uhm, you know, talking."
 
-                    scene sfr4no5c
-                    with dissolve
+                scene sfr4no5c
+                with dissolve
 
-                    u "I agree. I wish I could help you out."
+                u "That's okay.."
 
-                    scene sfr4no5b
-                    with dissolve
+                scene sfr4no5b
+                with dissolve
 
-                    no "It's okay. Thanks for uhm, you know, talking."
+                no "I should probably be getting back. I'll see you later."
 
-                    scene sfr4no5c
-                    with dissolve
+                scene sfr4no5c
+                with dissolve
 
-                    u "That's okay.."
+                u "Yeah, see ya."
 
-                    scene sfr4no5b
-                    with dissolve
+            "Defend Chris.":
+                $ addPoint("bro")
+                $ fr3nora = False
 
-                    no "I should probably be getting back. I'll see you later."
+                u "I mean I get where he's coming from. He's got his own priorities to deal with too. And he's president of a frat-"
 
-                    scene sfr4no5c
-                    with dissolve
+                scene sfr4no5b
+                with dissolve
 
-                    u "Yeah, see ya."
+                no "Yup. I get it."
 
-                "Defend Chris.":
+                scene sfr4no5c
+                with dissolve
 
-                    $ addPoint("bro")
-                    $ fr3nora = False
+                u "I'm just saying, try to see it out from his perspective. That's all."
 
+                scene sfr4no5b
+                with dissolve
 
-                    u "I mean I get where he's coming from. He's got his own priorities to deal with too. And he's president of a frat-"
+                no "I better get back, I'll see you around."
 
-                    scene sfr4no5b
-                    with dissolve
+                scene sfr4no5c
+                with dissolve
 
-                    no "Yup. I get it."
+                u "Uh, okay then."
 
-                    scene sfr4no5c
-                    with dissolve
+                scene sfr4no5b
+                with dissolve
 
-                    u "I'm just saying, try to see it out from his perspective. That's all."
+                no "Bye."
 
-                    scene sfr4no5b
-                    with dissolve
+    elif not noramad:
+        scene sfr4no5b
+        with dissolve
 
-                    no "I better get back, I'll see you around."
+        no "Hey."
 
-                    scene sfr4no5c
-                    with dissolve
+        scene sfr4no5c
+        with dissolve
 
-                    u "Uh, okay then."
+        u "You okay?"
 
-                    scene sfr4no5b
-                    with dissolve
+        scene sfr4no5b
+        with dissolve
 
-                    no "Bye."
+        no "Yeah... Is there anything you wanted?"
 
-        else:
+        scene sfr4no5c
+        with dissolve
 
-            scene sfr4no5b
-            with dissolve
+        u "No, uhm just wanted to check how you're doing."
 
-            no "Hey."
+        scene sfr4no5b
+        with dissolve
 
-            scene sfr4no5c
-            with dissolve
+        no "Oh, well I should probably get back. Bye."
 
-            u "You okay?"
+        scene sfr4no5c
+        with dissolve
 
-            scene sfr4no5b
-            with dissolve
-
-            no "Yeah... Is there anything you wanted?"
-
-            scene sfr4no5c
-            with dissolve
-
-            u "No, uhm just wanted to check how you're doing."
-
-            scene sfr4no5b
-            with dissolve
-
-            no "Oh, well I should probably get back. Bye."
-
-            scene sfr4no5c
-            with dissolve
-
-            u "Yeah uhm... bye."
-
-            jump labelfr4gymentrance
+        u "Yeah uhm... bye."
 
     else:
-
         scene sfr4no5d # nora annoyed
         with dissolve
 
@@ -15767,20 +15037,11 @@ label aSigns_2:
 
         u "Bye."
 
-        jump labelfr4gymentrance
-
     jump labelfr4gymentrance
 
-
-
-
     ### LOCATION 3: GYM LEFT SIDE
-
-    label fr4riley1:
-
+label fr4riley1:
     $ fr4riley = True
-
-    
 
     scene sfr4ri34 #fpp Aubrey and Riley are taking pictures together and posing by kissing each other on the cheek.
 
@@ -15840,7 +15101,6 @@ label aSigns_2:
 
     pause 0.5
 
-
     scene sfr4ri38 # ffp close up riley smiling at you standing next to you
     with dissolve
 
@@ -15855,18 +15115,12 @@ label aSigns_2:
     with dissolve
 
     au "Have fun you guys. I'm gonna take some more pictures."
-
-
     jump labelfr4gymleft
 
-    label fr4aubrey1:
-
+label fr4aubrey1:
     $ fr4aubrey = True
 
-    
-
     if fr4riley:
-
         scene sfr4ri39b # aubrey flirty
 
         au "*Chuckles* Weren't you gonna look around some more?"
@@ -15877,7 +15131,6 @@ label aSigns_2:
         u "I did... and now I'm back, haha."
 
     else:
-
         scene sfr4ri39
         with dissolve
 
@@ -15920,16 +15173,13 @@ label aSigns_2:
 
     u "Well, enjoy taking some more pictures. You better tag me on Kiwii, haha."
 
-
     if not aubreyrs:
-
         scene sfr4ri39
         with dissolve
 
         au "*Chuckles* Of course. I'll see you later."
 
     else:
-
         scene sfr4ri39b
         with dissolve
 
@@ -15949,11 +15199,8 @@ label aSigns_2:
         with dissolve
 
         menu:
-
             "Alright, let's go.":
-
                 $ addPoint("bro")
-
                 $ bathroomblowjob = True
 
                 u "Yeah, alright. Let's go."
@@ -15964,95 +15211,88 @@ label aSigns_2:
                 pause 0.5
 
                 label brbj:
+                    scene sfr4ri42 # fpp # in the bathroom looking down at your pants where aubrey is on her knees in front of you about to open your pants
+                    with fade
 
-                image ri42vid = Movie (play="images/ri42vid.webm", loop = True, image = "images/ri42vid20.webp", start_image = "images/ri42vid00.webp")
-                image ri42vidperspective = Movie (play="images/ri42vidperspective.webm", loop = True, image = "images/ri42vidperspective20.webp", start_image = "images/ri42vidperspective00.webp")
-                image ri42vidfast = Movie (play="images/ri42vidfast.webm", loop = True, image = "images/ri42vid20.webp", start_image = "images/ri42vid00.webp")
-                image ri42vidperspectivefast = Movie (play="images/ri42vidperspectivefast.webm", loop = True, image = "images/ri42vidperspective20.webp", start_image = "images/ri42vidperspective00.webp")
+                    au "Can I get a taste?"
 
-                scene sfr4ri42 # fpp # in the bathroom looking down at your pants where aubrey is on her knees in front of you about to open your pants
-                with fade
+                    scene sfr4ri42a #aubrey pulls down mcs pants
+                    with dissolve
 
-                au "Can I get a taste?"
+                    pause 0.5
 
-                scene sfr4ri42a #aubrey pulls down mcs pants
-                with dissolve
+                    scene sfr4ri42b # penis kissing / licking 1
+                    with dissolve
 
-                pause 0.5
+                    play sound "sounds/kiss.mp3"
 
-                scene sfr4ri42b # penis kissing / licking 1
-                with dissolve
+                    pause 0.5
 
-                play sound "sounds/kiss.mp3"
+                    scene ri42vid # aubrey blowjob slow
+                    with dissolve
 
-                pause 0.5
+                    u "Damn. ahh fuck."
 
-                scene ri42vid # aubrey blowjob slow
-                with dissolve
+                    " "
 
-                u "Damn. ahh fuck."
+                    scene ri42vidperspective # aubrey blowjob slow perspective
+                    with dissolve
 
-                " "
+                    u "You're so fucking good at this..."
 
-                scene ri42vidperspective # aubrey blowjob slow perspective
-                with dissolve
+                    " "
 
-                u "You're so fucking good at this..."
+                    scene ri42vidfast # aubrey blowjob fast
+                    with dissolve
 
-                " "
+                    u "Oh my god, keep going."
 
-                scene ri42vidfast # aubrey blowjob fast
-                with dissolve
+                    " "
 
-                u "Oh my god, keep going."
+                    scene ri42vidperspectivefast # aubrey blowjob fast perscpective
+                    with dissolve
 
-                " "
+                    u "Fuck, I'm gonna cum!"
 
-                scene ri42vidperspectivefast # aubrey blowjob fast perscpective
-                with dissolve
+                    " "
 
-                u "Fuck, I'm gonna cum!"
+                    scene sfr4ri43 # cumshot in air
+                    with flash
 
-                " "
+                    u "Ahhh fuck. Mmmmm."
 
-                scene sfr4ri43 # cumshot in air
-                with flash
+                    scene sfr4ri44 # cum on aubreys face,  flirty smiling
+                    with flash
 
-                u "Ahhh fuck. Mmmmm."
+                    au "*Grins* Seemed like you enjoyed it."
 
-                scene sfr4ri44 # cum on aubreys face,  flirty smiling
-                with flash
+                    scene sfr4ri44c
+                    with dissolve
 
-                au "*Grins* Seemed like you enjoyed it."
+                    au "*Gulp*"
 
-                scene sfr4ri44c
-                with dissolve
+                    u "That was amazing. I love how wild you are."
 
-                au "*Gulp*"
+                    scene sfr4ri44b
+                    with dissolve
 
-                u "That was amazing. I love how wild you are."
+                    au "Alright, I better get cleaned up. I guess I'll see you later"
 
-                scene sfr4ri44b
-                with dissolve
+                    scene sfr4ri44c
+                    with dissolve
 
-                au "Alright, I better get cleaned up. I guess I'll see you later"
+                    u "*Chuckles* You're really something else..."
 
-                scene sfr4ri44c
-                with dissolve
+                    scene sfr4ri44b
+                    with dissolve
 
-                u "*Chuckles* You're really something else..."
+                    au "Oh, I know."
 
-                scene sfr4ri44b
-                with dissolve
+                    $ renpy.end_replay()
 
-                au "Oh, I know."
-
-                $ renpy.end_replay()
-
-                jump labelfr4hallwaybathroom
+                    jump labelfr4hallwaybathroom
 
             "I'm not really feeling it.":
-
                 $ addPoint("tm")
 
                 scene sfr4ri39d # aubrey a bit disappointed
@@ -16067,8 +15307,7 @@ label aSigns_2:
 
     jump labelfr4gymleft
 
-    label fr4aubrey2:
-
+label fr4aubrey2:
     if hcGirl == "chloe":
         if fr4riley:
             scene fr4gymleftnochloenoriley
@@ -16092,22 +15331,16 @@ label aSigns_2:
         else:
             scene fr4gymleft
 
-    
-
     u "(I should talk to some of the other people here as well.)"
 
     jump labelfr4gymleft
 
-    label fr4chloe1:
-
+label fr4chloe1:
     $ fr4chloe = True
     $ fr4grayson = True
 
     if preventgrayson:
-
         $ chloesad = True
-
-    
 
     scene sfr4cl47 #Ryan and Chloe are having a heated argument.
 
@@ -16147,7 +15380,6 @@ label aSigns_2:
     with dissolve
 
     menu:
-
         "Defend Chloe":
             $ ryandefendchloe = True
             $ chloemad = False
@@ -16209,11 +15441,8 @@ label aSigns_2:
 
     jump labelfr4gymleft
 
-    label fr4ryan1:
-
+label fr4ryan1:
     $ fr4ryan = True
-
-    
 
     if hcGirl == "chloe":
         if fr4riley:
@@ -16242,8 +15471,7 @@ label aSigns_2:
 
     jump labelfr4gymleft
 
-    label fr4ryan3:
-
+label fr4ryan3:
     if hcGirl == "chloe":
         if fr4riley:
             scene fr4gymleftnochloenoriley
@@ -16269,19 +15497,13 @@ label aSigns_2:
 
     $ fr4ryan = True
 
-    
-
     u "(Not sure I could handle more Ryan right now.)"
 
     jump labelfr4gymleft
 
     ### LOCATION 4: GYM RIGHT SIDE
-
-    label fr4cameron1:
-
+label fr4cameron1:
     $ fr4cameron = True
-
-    
 
     scene sfr4ca1 # Cameron is turned away and the random girl looks annoyed
 
@@ -16293,7 +15515,6 @@ label aSigns_2:
     ca "God, all you do is complain."
 
     if joinwolves:
-
         scene sfr4ca2b # cameron looking at you pissed
         with dissolve
 
@@ -16355,28 +15576,21 @@ label aSigns_2:
 
         u "Jesus... I gotta go."
 
-
     jump labelfr4gymright
 
-    label fr4cameron2:
-
+label fr4cameron2:
     if hcGirl == "lauren":
         scene fr4gymrightnolauren
     else:
         scene fr4gymright
 
-    
-
     u "(Cameron doesn't seem to be in the greatest of moods. I feel like going back there isn't a smart move.)"
 
     jump labelfr4gymright
 
-    label fr4lauren1:
-
+label fr4lauren1:
     $ fr4lauren = True
-
     
-
     scene sfr4la25 # fpp lauren & ms rose talking
 
     la "Yeah, I guess I was just having trouble with that one."
@@ -16430,10 +15644,8 @@ label aSigns_2:
     with dissolve
 
     menu:
-
         "Focus on Lauren":
-
-            $focusonlauren = True
+            $ focusonlauren = True
 
             scene sfr4la27a
             with dissolve
@@ -16533,24 +15745,18 @@ label aSigns_2:
 
     jump labelfr4gymright
 
-    label fr4lauren2:
-
+label fr4lauren2:
     if hcGirl == "lauren":
         scene fr4gymrightnolauren
     else:
         scene fr4gymright
 
-    
-
     u "(I'd rather not talk about the economics essay I forgot to turn in.)"
 
     jump labelfr4gymright
 
-    label fr4msrose1:
-
+label fr4msrose1:
     $ fr4msrose = True
-
-    
 
     scene sfr4la26b # ms rose looking at you smiling eye brow raised
 
@@ -16620,14 +15826,11 @@ label aSigns_2:
 
     jump labelfr4gymright
 
-    label fr4msrose2:
-
+label fr4msrose2:
     if hcGirl == "lauren":
         scene fr4gymrightnolauren
     else:
         scene fr4gymright
-
-    
 
     u "(I'd rather not talk about the economics essay I forgot to turn in.)"
 
@@ -16639,13 +15842,8 @@ label aSigns_2:
 
     ### LOCATION 6: HALLWAYBATHROOM
 
-    label fr4imre1:
-
+label fr4imre1:
     $ fr4imre = True
-
-    
-
-
 
     scene sfr4im1 # fpp the bathroom, you can see legs in one of the stalls
 
@@ -16654,13 +15852,9 @@ label aSigns_2:
     unknown "*Moans* Fuck Mhmmm, yes!"
 
     if joinwolves:
-
         menu:
-
             "Say something to Imre":
-
                 $ addPoint("bro")
-
                 $ addPoint("tm")
 
                 u "*Laughs* Imre?"
@@ -16679,39 +15873,28 @@ label aSigns_2:
 
                 jump labelfr4hallwaybathroom
 
-
             "Leave them alone":
-
                 $ addPoint("bf")
 
                 u "(I should probably leave these two alone.)"
 
                 jump labelfr4hallwaybathroom
 
-
     else:
-
         u "(Ooops, I should probably leave these two alone.)"
 
         jump labelfr4hallwaybathroom
 
-    label fr4imre2:
-
+label fr4imre2:
     scene fr4hallwaybathroom
-
-    
 
     u "(I think I've heard enough of Imre's moaning for now.)"
 
     jump labelfr4hallway
 
     ### LOCATION 7: HALLWAY
-
-    label fr4penelope1:
-
+label fr4penelope1:
     $ fr4penelope = True
-
-    
 
     scene sfr4pe24 #fpp penelope on hte phone turned away from you
 
@@ -16782,7 +15965,6 @@ label aSigns_2:
     with dissolve
 
     menu:
-
         "I like your dress.":
             $ addPoint("bro")
 
@@ -16809,8 +15991,6 @@ label aSigns_2:
         "I'll let you get back.":
             $ addPoint("bf")
 
-
-
     u "Alright, well I'll let you get back to your friend. She sounds like she needs you more than I do."
 
     scene sfr4pe25
@@ -16825,8 +16005,7 @@ label aSigns_2:
 
     jump labelfr4hallway
 
-    label fr4penelope2:
-
+label fr4penelope2:
     if not hcGirl == "penelope":
         if fr4chloe and preventgrayson:
             scene fr4hallwaychloe
@@ -16838,20 +16017,17 @@ label aSigns_2:
         else:
             scene fr4hallwaynopenelope
 
-    
-
     u "(Penelope's on the phone, so I should probably leave her be.)"
 
     jump labelfr4hallway
 
-    label fr4chloe2: ### ENDS FREE ROAM
+label fr4chloe2: ### ENDS FREE ROAM
     call screen endfr4("fr4chloe22", "labelfr4hallway", "Chloe")
-    label fr4chloe22:
-    
+
+label fr4chloe22:
     $ fr4chloe2 = True
 
     if not chloemad or ryandefendchloe:
-
         scene sfr4cl53a # fpp close up chloe mad
 
         u "You okay?"
@@ -16894,9 +16070,7 @@ label aSigns_2:
         with dissolve
 
         menu:
-
             "You got this.":
-
                 $ addPoint("bf")
 
                 u "You got this."
@@ -16917,16 +16091,14 @@ label aSigns_2:
                 with fade
 
                 if hcGirl == "alone":
-
                     u "(I guess I'll watch it with someone.)"
 
-                    scene sfr4stage4#Chloe runs up on stage
+                    scene sfr4stage4 #Chloe runs up on stage
                     with fade
 
                     jump fr4alonechloe
 
                 elif hcGirl == "riley":
-
                     u "(I should probably get back to Riley.)"
 
                     scene sfr4stage4
@@ -16935,7 +16107,6 @@ label aSigns_2:
                     jump fr4rileydatechloe
 
                 elif hcGirl == "lauren":
-
                     u "(I should probably get back to Lauren.)"
 
                     scene sfr4stage4
@@ -16944,7 +16115,6 @@ label aSigns_2:
                     jump fr4laurendatechloe
 
                 elif hcGirl == "penelope":
-
                     u "(I should probably get back to Penelope.)"
 
                     scene sfr4stage4
@@ -16953,11 +16123,9 @@ label aSigns_2:
                     jump fr4penelopedatechloe
 
             "Or we could just leave.":
-
                 $ addPoint("tm")
 
                 u "Or we could just leave right now and not look back..."
-
 
                 scene sfr4cl53k # chloe flirty curious smile
                 with dissolve
@@ -16989,7 +16157,6 @@ label aSigns_2:
                 jump fr4chloeending
 
     else:
-
         scene sfr4cl53a # fpp close up chloe mad
 
         u "You okay?"
@@ -17016,9 +16183,7 @@ label aSigns_2:
 
         jump labelfr4hallway
 
-    label fr4chloe3:
-    
-
+label fr4chloe3:
     if not hcGirl == "penelope":
         if fr4chloe and preventgrayson:
             scene fr4hallwaychloe
@@ -17036,16 +16201,12 @@ label aSigns_2:
 
     ### LOCATION 8: HALLWAYCORNER
 
-    label fr4grayson1:
-
+label fr4grayson1:
     $ fr4grayson = True
-
-    
 
     scene sfr4gr1 # grayson about to spray the wall
 
     if joinwolves:
-
         u "What are you doing, Grayson?"
 
         scene sfr4gr1b # grayson looking at you annoyed intense
@@ -17077,9 +16238,7 @@ label aSigns_2:
         with dissolve
 
         menu:
-
             "Don't do that.":
-
                 $ addPoint("bf")
 
                 u "Hey man, don't do that. That's a real dick move."
@@ -17095,9 +16254,7 @@ label aSigns_2:
                 u "Whatever she did, I'm sure she doesn't deserve this."
 
                 if kct == "confident":
-
                     $ preventgrayson = True
-
                     call screen kctPopup
 
                     scene sfr4gr1b
@@ -17115,9 +16272,7 @@ label aSigns_2:
 
                     pause 0.5
 
-
                 else:
-
                     scene sfr4gr1b
                     with dissolve
 
@@ -17130,9 +16285,7 @@ label aSigns_2:
 
                     u "*Sighs* Fine."
 
-
             "Alright, enjoy.":
-
                 $ addPoint("tm")
 
                 u "Alright, enjoy."
@@ -17175,10 +16328,8 @@ label aSigns_2:
         with dissolve
 
         menu:
-
             "Don't do that.":
                 $ preventgrayson = True
-
                 $ addPoint("bf")
 
                 u "Hey man, don't do that. That's a real dick move."
@@ -17209,7 +16360,6 @@ label aSigns_2:
                 pause 0.5
 
             "Alright, enjoy.":
-
                 $ addPoint("tm")
 
                 u "Alright, enjoy."
@@ -17221,26 +16371,18 @@ label aSigns_2:
 
     jump labelfr4hallway
 
-    label fr4lockerroom:
-
+label fr4lockerroom:
     scene insidelockerroom
 
     u "(No one in here.)"
 
-    
-
     jump labelfr4hallwaycorner
 
-    label fr4lockerroomchloe: ### ENDS FREE ROAM
-
-    
-
+label fr4lockerroomchloe: ### ENDS FREE ROAM
     call screen endfr4("fr4lockerroomchloe2", "labelfr4hallwaycorner", "Chloe")
 
-    label fr4lockerroomchloe2:
-
+label fr4lockerroomchloe2:
     if lockerroomchloe == False:
-
         $ lockerroomchloe = True
 
         scene sfr4cl50 # mc knocking on lockerroom
@@ -17248,7 +16390,6 @@ label aSigns_2:
         u "Chloe? You in there?"
 
         if not chloemad or ryandefendchloe:
-
             scene sfr4cl51 # fpp close up of the door
             with dissolve
 
@@ -17316,9 +16457,7 @@ label aSigns_2:
             with dissolve
 
             menu:
-
                 "Of course you can.":
-
                     $ addPoint("bf")
 
                     u "Of course you can."
@@ -17339,7 +16478,6 @@ label aSigns_2:
                     with fade
 
                     if hcGirl == "alone":
-
                         u "(I guess I'll watch it with someone.)"
 
                         scene sfr4stage4#Chloe runs up on stage
@@ -17348,7 +16486,6 @@ label aSigns_2:
                         jump fr4alonechloe
 
                     elif hcGirl == "riley":
-
                         u "(I should probably get back to Riley.)"
 
                         scene sfr4stage4
@@ -17357,7 +16494,6 @@ label aSigns_2:
                         jump fr4rileydatechloe
 
                     elif hcGirl == "lauren":
-
                         u "(I should probably get back to Lauren.)"
 
                         scene sfr4stage4
@@ -17366,7 +16502,6 @@ label aSigns_2:
                         jump fr4laurendatechloe
 
                     elif hcGirl == "penelope":
-
                         u "(I should probably get back to Penelope.)"
 
                         scene sfr4stage4
@@ -17374,10 +16509,7 @@ label aSigns_2:
 
                         jump fr4penelopedatechloe
 
-
-
                 "Let's get out of here.":
-
                     $ addPoint("tm")
 
                     u "You don't have to. Let's just get out of here."
@@ -17415,7 +16547,6 @@ label aSigns_2:
                         jump fr4chloeending
 
                     else:
-
                         scene sfr4cl52b
                         with dissolve
 
@@ -17440,7 +16571,6 @@ label aSigns_2:
                         with fade
 
                         if hcGirl == "alone":
-
                             u "(I guess I'll watch it with someone.)"
 
                             scene sfr4stage4#Chloe runs up on stage
@@ -17449,7 +16579,6 @@ label aSigns_2:
                             jump fr4alonechloe
 
                         elif hcGirl == "riley":
-
                             u "(I should probably get back to Riley.)"
 
                             scene sfr4stage4
@@ -17458,7 +16587,6 @@ label aSigns_2:
                             jump fr4rileydatechloe
 
                         elif hcGirl == "lauren":
-
                             u "(I should probably get back to Lauren.)"
 
                             scene sfr4stage4
@@ -17467,7 +16595,6 @@ label aSigns_2:
                             jump fr4laurendatechloe
 
                         elif hcGirl == "penelope":
-
                             u "(I should probably get back to Penelope.)"
 
                             scene sfr4stage4
@@ -17476,11 +16603,9 @@ label aSigns_2:
                             jump fr4penelopedatechloe
 
                         else:
-
                             jump labelfr4hallwaycorner
 
         else:
-
             scene sfr4cl51 # fpp close up of the door
             with dissolve
 
@@ -17505,30 +16630,21 @@ label aSigns_2:
             jump labelfr4hallwaycorner
 
     else:
-
         scene sfr4cl51
 
         if chloemad and not ryandefendchloe:
-
             u "(I better leave her alone.)"
 
         else:
-
             u "(I don't really see the need to go in the right now.)"
 
         jump labelfr4hallwaycorner
 
-
     ##### OUTSIDE #####
 
     ### LOCATION 9: STAIRS
-
-    label fr4emily1:
-
+label fr4emily1:
     $ fr4emily = True
-
-    
-
     $ forgiveemily = True
 
     scene sfr4em29 # showing mc and emily mc stnading behind emily, she doesn't see him
@@ -17610,10 +16726,7 @@ label aSigns_2:
 
     jump labelfr4outsidestairs
 
-    label fr4emily2:
-
-    
-
+label fr4emily2:
     scene fr4outsidestairs
 
     u "(Emily said she needed some alone time, so I better leave her be.)"
@@ -17621,12 +16734,8 @@ label aSigns_2:
     jump labelfr4outsidestairs
 
     ### LOCATION 10: STREET
-
-    label fr4samantha1:
-
+label fr4samantha1:
     $ fr4samantha = True
-
-    
 
     scene sfr4sa1 #fpp from the side / behind Samantha and Sebastian outside. You can't see their mouthThey are smoking a blunt and laughing.
 
@@ -17689,7 +16798,6 @@ label aSigns_2:
     with dissolve
 
     if not joinwolves:
-
         sa "Wait, I know you... or... do I know you?"
 
         scene sfr4sa4d # sebastian looking at sam
@@ -17701,16 +16809,12 @@ label aSigns_2:
         with dissolve
 
     else:
-
         sa "Yeah... like an undercover cop?"
 
         scene sfr4sa5c
         with dissolve
 
-
-
     menu:
-
         "Play along":
             $ cop = True
             #If MC chooses to go along with it:
@@ -17757,10 +16861,7 @@ label aSigns_2:
 
             u "*Smirks*"
 
-
         "Tell them truth":
-
-
             u "I'm not a cop, haha."
 
             scene sfr4sa4
@@ -17788,9 +16889,7 @@ label aSigns_2:
                 with dissolve
 
                 u "Yeah..."
-
-
-
+            
             scene sfr4sa4h #Sebastian holds out a blunt.
             with dissolve
 
@@ -17826,21 +16925,15 @@ label aSigns_2:
 
             sa "Byeee."
 
-
     jump labelfr4outsidestreet
 
-    label fr4samantha2:
-
-    
-
+label fr4samantha2:
     scene fr4outsidestreet
 
     if cop:
-
         u "*Chuckles* (I've already messed with them enough.)"
 
     else:
-
         u "(I don't really wanna smoke weed right now.)"
 
     jump labelfr4outsidestreet
@@ -17848,8 +16941,7 @@ label aSigns_2:
 ##### ENDINGS ###
 
 ############### SCENE 46 LAUREN ENDING
-    label fr4laurenending:
-
+label fr4laurenending:
     $ ending = "lauren"
 
     scene sfr4la28 #fpp lauren walks towards the bed.
@@ -17874,13 +16966,7 @@ label aSigns_2:
 
     $ slowandsteady = True
     if not steam:
-        image slowandsteady = "images/slowandsteady.webp"
-        show slowandsteady:
-            xpos 0
-            ypos -200
-            linear 0.5 xpos 0 ypos 0
-            pause 2.0
-            linear 0.5 xpos 0 ypos -200
+        show slowandsteady at achievementShow
     else:
         $ achievement.grant("slow_and_steady")
         $ achievement.sync()
@@ -17981,11 +17067,10 @@ label aSigns_2:
 
     la "You could just turn the lights off..."
 
-    jump ending7
+    jump v7end
 
 ############### SCENE 47 RILEY ENDING (LEWD & NON-LEWD)
-    label fr4rileyending:
-
+label fr4rileyending:
     scene sfr4ri52 #MC and Riley are walking back through the dorm hallways.
     with fade
 
@@ -17994,7 +17079,6 @@ label aSigns_2:
     queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
 
     if rileyrs:
-
         ri "Sooo homecoming was pretty fun... but I bet the night could get even better."
 
         scene sfr4ri52a # mc turns his face towards her
@@ -18015,7 +17099,6 @@ label aSigns_2:
         ri "Took you a while there, haha."
 
     else:
-
         ri "Can't wait to get back, haha."
 
         scene sfr4ri52a # mc turns his face towards her
@@ -18023,9 +17106,7 @@ label aSigns_2:
 
         u "Yeah... all this dancing was exhausting *Chuckles*."
 
-
-    label fr4rileyending2:
-
+label fr4rileyending2:
     scene sfr4ri57 # tpp you grabbing something on Rileys desk and Riley sitting on her bed looking at you, you're not looking at her
     with fade
 
@@ -18038,13 +17119,7 @@ label aSigns_2:
 
     $ playingwithfire = True
     if not steam:
-        image playingwithfire = "images/playingwithfire.webp"
-        show playingwithfire:
-            xpos 0
-            ypos -200
-            linear 0.5 xpos 0 ypos 0
-            pause 2.0
-            linear 0.5 xpos 0 ypos -200
+        show playingwithfire at achievementShow
     else:
         $ achievement.grant("playing_with_fire")
         $ achievement.sync()
@@ -18062,13 +17137,12 @@ label aSigns_2:
     u "So, what's up?"
 
     if rileyrs:
-
         scene sfr4ri55  #tpp close up riley whispers into your ear
         with dissolve
 
         ri "*Whispers* I have a surprise for you."
 
-        jump ending7
+        jump v7end
 
     else:
         scene sfr4ri56 # ffp close up riley a bit nervous but also excited to tell you a secret
@@ -18086,16 +17160,14 @@ label aSigns_2:
 
         ri "I-"
 
-        jump ending7
+        jump v7end
 
 
 ############### SCENE 48 CHLOE ENDING
-    label fr4chloeending:
-
+label fr4chloeending:
     #At the dance MC approaches whoever his date his.
 
     if hcGirl == "emily" or hcGirl == "lauren" or hcGirl == "riley" or hcGirl == "penelope":
-
         scene sfr4cl54 # tpp you approaching chloe on the stairs outside
         with fade
 
@@ -18159,13 +17231,7 @@ label aSigns_2:
 
     $ homecomingqueen = True
     if not steam:
-        image homecomingqueen = "images/homecomingqueen.webp"
-        show homecomingqueen:
-            xpos 0
-            ypos -200
-            linear 0.5 xpos 0 ypos 0
-            pause 2.0
-            linear 0.5 xpos 0 ypos -200
+        show homecomingqueen at achievementShow
     else:
         $ achievement.grant("homecomingqueen")
         $ achievement.sync()
@@ -18225,11 +17291,10 @@ label aSigns_2:
     with dissolve
 
     " "
-    jump ending7
+    jump v7end
 
 ############### SCENE 48 AMBER ENDING
-    label fr4amberending:
-
+label fr4amberending:
     $ ending = "amber"
 
     scene sfr4am12f# amber flirtatious
@@ -18237,21 +17302,15 @@ label aSigns_2:
 
     am "I have another idea of what might feel good..."
 
-    jump ending7
+    jump v7end
 
+label v7end:
+    if persistent.ep < 8:
+        scene savenow
+        with Fade (1,0,1)
+        " "
 
-label ending7:
-
-    if persistent.ep == 7:
-        jump end7
-    else:
-        jump v08_start
-
-label end7:
-    scene savenow
-    with Fade (1,0,1)
-    " "
-    if persistent.ep == 7:
+    if persistent.ep < 8:
         jump end_credits
     else:
-        jump v08_start
+        jump v8start
