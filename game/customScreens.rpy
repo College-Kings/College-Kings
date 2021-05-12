@@ -43,7 +43,7 @@ screen endFreeRoamConfirm(continueLabel):
 screen kiwiiPopup():
     modal True
 
-    add "images/endfr.png"
+    add "images/endfr.webp"
 
     text "You've just unlocked the social media app Kiwii! Open it now from the homescreen." style "endfree"
 

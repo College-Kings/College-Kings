@@ -1,10 +1,10 @@
 init python:
 
     class Application:
-        def __init__(self, name, image, screen, notification=False, locked=False):
+        def __init__(self, name, img, homeScreen, notification=False, locked=False):
             self.name = name
-            self.image = image
-            self.screen = screen
+            self.img = "images/phone/{}".format(img)
+            self.homeScreen = homeScreen
             self.notification = notification
             self.locked = locked
             if notification:
@@ -14,13 +14,13 @@ init python:
 
         def newNotification(self):
             self.notification = True
-            if not os.path.splitext(self.image)[0][-3:] == "not":
-                self.image = os.path.splitext(self.image)[0] + "not" + os.path.splitext(self.image)[1]
+            if not os.path.splitext(self.img)[0].endswith("Notification"):
+                self.img = os.path.splitext(self.img)[0] + "Notification" + os.path.splitext(self.img)[1]
 
         def seenNotification(self):
             self.notification = False
-            if os.path.splitext(self.image)[0][-3:] == "not":
-                self.image = os.path.splitext(self.image)[0][:-3] + os.path.splitext(self.image)[1]
+            if os.path.splitext(self.img)[0].endswith("Notification"):
+                self.img = os.path.splitext(self.img)[0][:-3] + os.path.splitext(self.img)[1]
 
         def unlock(self):
             self.locked = False
@@ -33,9 +33,9 @@ screen phoneIcon():
 
     imagebutton:
         if any([application.notification for application in applications]):
-            idle "phone/images/phoneiconnot.webp"
+            idle "images/phone/phoneIconNotification.webp"
         else:
-            idle "phone/images/phoneicon.webp"
+            idle "images/phone/phoneIcon.webp"
         
         if freeRoam:
             action Show("phone")
@@ -98,10 +98,10 @@ screen phone():
                 if not app.locked:
                     vbox:
                         imagebutton:
-                            idle Transform(app.image, size=(100, 100))
+                            idle Transform(app.img, size=(100, 100))
                             if app.name == "Kiwii" and kiwii_firstTime:
                                 action Jump("kiwii_firstTime")
                             else:
-                                action [Function(renpy.retain_after_load), Show(app.screen)]
+                                action [Function(renpy.retain_after_load), Show(app.homeScreen)]
                                 
                         text app.name style "applabels"

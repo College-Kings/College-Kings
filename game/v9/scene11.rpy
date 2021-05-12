@@ -102,7 +102,7 @@ label v9_hc_demo:
         "Recognise the King":
             jump v9_hc_demo_rec
         "Don't recognise the King":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
             jump v9_hc_demo_norec
         
 label v9_hc_demo_rec:
@@ -163,7 +163,7 @@ label v9_hc_demo_cont1:
 
     menu:
         "Discuss War":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
             jump v9_hc_demo_war
         "Discuss Riches":
             jump v9_hc_demo_riches

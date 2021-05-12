@@ -2,20 +2,20 @@ init python:
 
     # Ryan messages
     def v2_reply1():
-        addPoint("bro", 1)
+        addPoint("bro")
         contact_Ryan.newMessage(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
         contact_Ryan.addReply(_("Whatever"), v2_reply2)
         contact_Ryan.addReply(_("Don't you dare defend that guy"), v2_reply3)
 
     def v2_reply2():
-        addPoint("bro", 1)
+        addPoint("bro")
 
     def v2_reply3():
-        addPoint("tm", 1)
+        addPoint("tm")
         contact_Ryan.newMessage(_("Sorry..."))
 
     def v2_reply4():
-        addPoint("tm", 1)
+        addPoint("tm")
         contact_Ryan.newMessage(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
         contact_Ryan.addReply(_("Whatever"), v2_reply2)
         contact_Ryan.addReply(_("Don't you dare defend that guy"), v2_reply3)
@@ -23,7 +23,7 @@ init python:
     # Lauren messages
     def v2_reply5():
         setattr(store, "meetlauren", True)
-        addPoint("bf", 1)
+        addPoint("bf")
         contact_Lauren.newMessage(_("Great, I'll see you then :)"))
 
     def v2_reply6():
@@ -36,36 +36,36 @@ init python:
 
     # Josh messages
     def v2_reply7():
-        addPoint("bro", 1)
+        addPoint("bro")
         contact_Josh.newMessage(_("It's fine, you go get her."))
 
     def v2_reply8():
-        addPoint("bf", 1)
+        addPoint("bf")
         contact_Josh.newMessage(_("Nah, you don't want a bitch like her."))
         contact_Josh.addReply(_("Yeah, I guess you're right."), v2_reply9)
         contact_Josh.addReply(_("Dude, what the fuck?!"), v2_reply10)
 
     def v2_reply9():
-        addPoint("bro", 1)
+        addPoint("bro")
         contact_Josh.newMessage(_("Hahaha, I'm just kidding, yo."))
         contact_Josh.newMessage(_("Of course I gave her your number."))
         contact_Josh.addReply(_("Damn, you got me."))
 
     def v2_reply10():
-        addPoint("tm", 1)
+        addPoint("tm")
         contact_Josh.newMessage(_("Hahaha, I'm just kidding, yo."))
         contact_Josh.newMessage(_("Of course I gave her your number."))
         contact_Josh.addReply(_("Damn, you got me."))
 
     # Aubrey messages
     def v2_reply11():
-        addPoint("bro", 1)
+        addPoint("bro")
         contact_Aubrey.newMessage(_("Yeah, I mean they had a thing a while ago but she broke it off 'cause he lied about some shit."))
         contact_Aubrey.newMessage(_("So... tomorrow?"))
         contact_Aubrey.addReply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v2_reply12)
 
     def v2_reply12():
-        addPoint("bf", 1)
+        addPoint("bf")
         contact_Aubrey.newMessage(_("I've got dance practice tonight :("))
         contact_Aubrey.addReply(_("I'm not talking tonight, I can pick you up right now."))
         contact_Aubrey.newMessage(_("Oh wow, that's spontaneous, I like it haha.\n\nI guess come to the Chicks' house whenever you're ready and then we can go costume shopping."))
@@ -73,11 +73,11 @@ init python:
 
     def v2_reply13():
         setattr(store, "costumeaubrey", True)
-        addPoint("bf", 1)
+        addPoint("bf")
         contact_Aubrey.newMessage(_("Good :)"))
 
     def v2_reply14():
-        addPoint("tm", 1)
+        addPoint("tm")
         contact_Aubrey.newMessage(_("Oh, okay. Guess we'll have to postpone the costume buying."))
 
 label v2start:
@@ -141,7 +141,7 @@ label v2start:
 
     menu:
         "Hmm... maybe.":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s123d
             with dissolve
@@ -152,7 +152,7 @@ label v2start:
             imre "Just think about it, okay? I'll see you later."
 
         "I'm not fighting.":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene s123d
             with dissolve
@@ -167,7 +167,7 @@ label v2start:
 
             menu:
                 "I'll think about it.":
-                    $ addPoint("bro", 1)
+                    $ addPoint("bro")
 
                     scene s123d
                     with dissolve
@@ -178,7 +178,7 @@ label v2start:
                     imre "That's all I'm asking for. I'll see you later."
 
                 "I won't fight.":
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
 
                     scene s123d
                     with dissolve
@@ -199,7 +199,7 @@ label v2start:
     $ contact_Ryan.addReply(_("I'm fine"), v2_reply1)
     $ contact_Ryan.addReply(_("No, wtf was that?! Fuck Grayson and fuck the Apes"), v2_reply4)
 
-    $ addPoint("tm", 1)
+    $ addPoint("tm")
     $ contact_Lauren.newMessage(_("Is everything okay?"))
     $ contact_Lauren.addReply(_("Yeah, I'm fine."))
     $ contact_Lauren.newMessage(_("Okay..."))
@@ -1227,7 +1227,7 @@ label youfinish:
     menu:
 
         "Kick him":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             play sound "sounds/js.mp3"
             scene yf
@@ -1236,7 +1236,7 @@ label youfinish:
             u "Fuck you!"
 
         "Walk away":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
 label v1_tomWalkAway:
     $ firstfight = False
@@ -1333,7 +1333,7 @@ label meet_lauren2:
 
     menu:
         "There was something there.":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             
             if v1_laurenKiss and v1_laurenPoints == 2:
                     scene s130c
@@ -1475,7 +1475,7 @@ label meet_lauren2:
                             u "(I should probably wash the blood off my face in the restroom before I go to class.)"
 
         "Let's forget about it.":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
             $ laawk = False
 
             scene s130a
@@ -1974,7 +1974,7 @@ label history2:
     menu:
         "Okay, I guess.":
             $ forgiveemily = True
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene s144c
             with dissolve
@@ -2001,7 +2001,7 @@ label history2:
         "No, sorry.":
             $ emilyandben = True
             $ forgiveemily = False
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s144c
             with dissolve
@@ -2046,7 +2046,7 @@ label bo_ad:
 
     menu:
         "Yeah, of course. (joke)":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             hide s145
             show s145a
@@ -2085,7 +2085,7 @@ label bo_ad:
             em "Maybe a little bit."
 
         "I'm still single.":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             hide s145
             show s145e
@@ -2120,7 +2120,7 @@ label bo_ad:
 
     menu:
         "It was adorable.":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             hide s145c
             show s145d
@@ -2137,7 +2137,7 @@ label bo_ad:
             em "It was so thoughtful."
 
         "It was so funny.":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             hide s145c
             show s145d
@@ -2262,7 +2262,7 @@ label bo_ad:
     menu:
         "Sure, knock yourself out.":
             $ emilyandben = True
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s148b
             with dissolve
@@ -2289,7 +2289,7 @@ label bo_ad:
 
         "Stay away from her.":
             $ emilyandben = False
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene s148b
             with dissolve
@@ -2308,8 +2308,8 @@ label bo_ad:
 
     menu:
         "Tell Emily about Benjamin":
-            $ addPoint("bf", 1)
-            $ addPoint("tm", 1)
+            $ addPoint("bf")
+            $ addPoint("tm")
 
             scene s149a
             with dissolve
@@ -2368,7 +2368,7 @@ label bo_ad:
                 u "As a receptionist."
 
         "Don't tell Emily":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s149a
             with dissolve
@@ -2889,7 +2889,7 @@ label try1new:
 
     menu:
         "Peek":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s164 # Aubrey changing bad view
             with dissolve
@@ -2915,7 +2915,7 @@ label try1new:
                     pass
 
         "Don't peek":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
     scene s163
     with dissolve
@@ -2944,7 +2944,7 @@ label try1new:
 
     menu:
         "It's kinda hot.":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene s166c
             with dissolve
@@ -2971,7 +2971,7 @@ label try1new:
                 au "Have you decided which one to buy yet?"
 
         "It's definitely something.":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s166c
             with dissolve
@@ -3024,7 +3024,7 @@ label try2new:
 
     menu:
         "Peek":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s168 # Aubrey changing bad view
             with dissolve
@@ -3050,7 +3050,7 @@ label try2new:
                     pass
 
         "Don't peek":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
     scene s167
     with dissolve
@@ -3076,7 +3076,7 @@ label try2new:
 
     menu:
         "looking mighty fine.":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "...looking mighty fine as well."
 
@@ -3103,7 +3103,7 @@ label try2new:
                 au "Are you gonna buy this one?"
 
         "certainly practical.":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             u "... certainly practical."
 
@@ -3171,7 +3171,7 @@ label try3new:
 
     menu:
         "Peek":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s172 # Aubrey changing bad view
             with dissolve
@@ -3196,7 +3196,7 @@ label try3new:
                     pass
 
         "Don't peek":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
     scene s171
     with dissolve
@@ -3217,7 +3217,7 @@ label try3new:
     menu:
         "Oh come on.":
             hide screen influenceTutorial
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             u "Oh come on, Aubrey. I wanna see."
 
@@ -3265,7 +3265,7 @@ label try3new:
 
         "Fine.":
             hide screen influenceTutorial
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "Alright, fine."
 
@@ -3423,7 +3423,7 @@ label try4new:
 
     menu:
         "Peek":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s183 # penelope changing bad view
             with dissolve
@@ -3449,7 +3449,7 @@ label try4new:
                     pass
 
         "Don't peek":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
     scene s163
     with dissolve
@@ -3489,7 +3489,7 @@ label try4new:
 
     menu:
         "You look beautiful.":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene s179a
             with dissolve
@@ -3510,7 +3510,7 @@ label try4new:
                 pe "Are you ready to buy an outfit?"
 
         "I guess it's nice":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s179a
             with dissolve
@@ -3565,7 +3565,7 @@ label try5new:
 
     menu:
         "Peek":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s183 # pen changing bad view
             with dissolve
@@ -3590,7 +3590,7 @@ label try5new:
                     pass
 
         "Don't peek":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
     scene s167
     with dissolve
@@ -3629,7 +3629,7 @@ label try5new:
 
     menu:
         "Flirt":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "Yeah, maybe it's like the costume of two lovers, you know... historically speaking."
 
@@ -3645,7 +3645,7 @@ label try5new:
                 pe "Are you ready to buy an outfit?"
 
         "Agree":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             u "Yeah, it would be a cool partner costume."
 
@@ -3697,7 +3697,7 @@ label try6new:
 
     menu:
         "Peek":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s180 # pen changing bad view
             with dissolve
@@ -3722,7 +3722,7 @@ label try6new:
                     pass
 
         "Don't peek":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
     scene s171
     with dissolve
@@ -3743,7 +3743,7 @@ label try6new:
 
     menu:
         "Oh come on.":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             u "Oh come on, Penelope. I wanna see."
 
@@ -3754,7 +3754,7 @@ label try6new:
             u "Alright, fine."
 
         "Fine.":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "Okay, fine."
 
@@ -3844,7 +3844,7 @@ label v1_caughtContinue:
 
     menu:
         "Apologize":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             $ caughtpeekingaubreycounter = True
 
             scene s177e
@@ -3862,7 +3862,7 @@ label v1_caughtContinue:
             au "How about we just buy a costume and get going?"
 
         "Deny it":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s177e
             with dissolve
@@ -3960,7 +3960,7 @@ label v1_caughtContinue_pen:
     menu:
         "Apologize":
             hide screen influenceTutorial
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene s186a
             with dissolve
@@ -3985,7 +3985,7 @@ label v1_caughtContinue_pen:
 
         "Deny it":
             hide screen influenceTutorial
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s186
             with dissolve
@@ -4225,7 +4225,7 @@ label eve1:
     menu:
         "Make a move.":
             $ evelynmove = True
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s188d
             with dissolve
@@ -4313,7 +4313,7 @@ label eve1:
                     u "(Damn, that didn't go as planned...)"
 
         "Leave":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene s188d
             with dissolve

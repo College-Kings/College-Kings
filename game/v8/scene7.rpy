@@ -250,7 +250,7 @@ label au_prot_call:
 
     menu:
         "Go to the protest":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             $ v8AutProtest = True
             jump caf_prot_au
         "Don't go to the protest":

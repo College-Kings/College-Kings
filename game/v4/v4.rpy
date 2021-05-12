@@ -1,7 +1,7 @@
 init python:
     # Josh messages
     def v4_reply1():
-        addPoint("bro", 1)
+        addPoint("bro")
         contact_Josh.newMessage(_("Dope"))
         contact_Josh.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
 
@@ -23,7 +23,7 @@ init python:
         contact_Josh.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
 
     def v4_reply5():
-        addPoint("bf", 1)
+        addPoint("bf")
         contact_Josh.newMessage(_("This guy"))
 
 label v4start:
@@ -82,7 +82,7 @@ label v4start:
 
     menu:
         "You should be more careful.":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene s297a
             with dissolve
@@ -99,7 +99,7 @@ label v4start:
             menu:
                 "Let me help.":
                     $ revengeadam = True
-                    $ addPoint("bro", 1)
+                    $ addPoint("bro")
 
                     scene s297a
                     with dissolve
@@ -129,7 +129,7 @@ label v4start:
                     u "I'll see you then, get better soon."
 
                 "That's a dumb idea.":
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
 
                     scene s297a
                     with dissolve
@@ -159,8 +159,8 @@ label v4start:
                     u "I'll see you then, get better soon."
 
         "Let's fuck him up.":
-            $ addPoint("bro", 1)
-            $ addPoint("tm", 1)
+            $ addPoint("bro")
+            $ addPoint("tm")
             $ revengeadam = True
 
             scene s297a
@@ -315,8 +315,8 @@ label v4start:
 
     menu:
         "Take responsibility":
-            $ addPoint("bro", 1)
-            $ addPoint("bf", 1)
+            $ addPoint("bro")
+            $ addPoint("bf")
 
             scene s303c
             with dissolve
@@ -332,7 +332,7 @@ label v4start:
             with dissolve
 
         "Blame Ryan":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s303c
             with dissolve
@@ -571,7 +571,7 @@ label v4start:
 
         menu:
             "Someone punched me.":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
                 scene s315a
                 with dissolve
@@ -606,7 +606,7 @@ label v4start:
                 ju "Okay honey, let's go shopping then."
 
             "It was an accident.":
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
                 $ liejulia = True
 
                 scene s315a
@@ -1095,7 +1095,7 @@ label v4start:
     u "(Oh that's Lauren's sister Autumn...)"
 
     if not laurenrs and toldlauren:
-        $ addPoint("tm", 1)
+        $ addPoint("tm")
 
         u "(Hopefully Lauren didn't tell her about what happened...)"
 
@@ -1182,7 +1182,7 @@ label v4start:
 
 
     elif not laurenrs and laurentoofar:
-        $ addPoint("tm", 1)
+        $ addPoint("tm")
 
         u "(Hopefully Lauren didn't tell her about what happened...)"
 
@@ -1270,7 +1270,7 @@ label v4start:
 
 
     elif not laurenrs:
-        $ addPoint("bf", 1)
+        $ addPoint("bf")
         scene s334
         with dissolve
 
@@ -1309,7 +1309,7 @@ label v4start:
         jump autumnsita
 
     else:
-        $ addPoint("bf", 1)
+        $ addPoint("bf")
         scene s334
         with dissolve
 
@@ -1480,7 +1480,7 @@ label readmontagea:
 
     menu:
         "Talk to him":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s339 #you walking closer to Ryan
             with dissolve
@@ -1505,7 +1505,7 @@ label readmontagea:
             ry "Yeah, man. I messed up, I'm sorry."
 
         "Ignore him":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s339 #you walking closer to Ryan
             with dissolve
@@ -1637,7 +1637,7 @@ label readmontagea:
 
         menu:
             "Magic Powers.":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
 
                 scene s349d
                 with dissolve
@@ -1660,7 +1660,7 @@ label readmontagea:
                 u "Yeah, sure."
 
             "I didn't.":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
                 scene s349d
                 with dissolve
@@ -1688,7 +1688,7 @@ label readmontagea:
 
         menu:
             "Buy Penelope a muffin":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
                 $ muffin = True
                 $ caughtpeekingpenelopecounter = True
 
@@ -1776,7 +1776,7 @@ label readmontagea:
 
             menu:
                 "Grab her hand":
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
 
                     scene s347 # your hand grabbing her hand
                     with dissolve
@@ -1793,7 +1793,7 @@ label readmontagea:
 
                     menu:
                         "Kiss her":
-                            $ addPoint("tm", 1)
+                            $ addPoint("tm")
                             $ penelopekiss = True
 
                             scene s348 # you reaching for kiss, she's pulled away
@@ -1887,7 +1887,7 @@ label readmontagea:
 
         menu:
             "Magic Powers.":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
 
                 scene s345g
                 with dissolve
@@ -1907,7 +1907,7 @@ label readmontagea:
                 u "Yeah, sure."
 
             "I didn't.":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
                 scene s345g
                 with dissolve
@@ -2016,7 +2016,7 @@ label ef_bd:
 
     menu:
         "We should watch some.":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             u "You know, we should watch some together sometime."
 
@@ -2036,7 +2036,7 @@ label ef_bd:
             pe "Right, thank you."
 
         "You should try it.":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             u "You know, you should try it sometime."
 
@@ -2071,7 +2071,7 @@ label ef_bd:
 
             menu:
                 "Encourage her":
-                    $ addPoint("bf", 1)
+                    $ addPoint("bf")
                     $ bowling = True
 
                     scene s350e
@@ -2097,7 +2097,7 @@ label ef_bd:
                     jump el_ad
 
                 "Tease her":
-                    $ addPoint("bro", 1)
+                    $ addPoint("bro")
                     $ bowling = False
 
                     scene s350e
@@ -2278,8 +2278,8 @@ label continueab:
 
     menu:
         "I can move.":
-            $ addPoint("bf", 1)
-            $ addPoint("bro", 1)
+            $ addPoint("bf")
+            $ addPoint("bro")
 
             scene s359a
             with dissolve
@@ -2292,7 +2292,7 @@ label continueab:
             jo "Hahaha, buddy I'm just kidding, stay put."
 
         "It's my spot now.":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s359a
             with dissolve
@@ -2339,7 +2339,7 @@ label continueab:
 
     menu:
         "I'll join the Wolves.":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             u "I'll join the Wolves."
 
@@ -2349,7 +2349,7 @@ label continueab:
             jo "See? I knew he was a fighter."
 
         "I don't know yet.":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "I don't know yet."
 
@@ -2397,7 +2397,7 @@ label continueab:
 
     menu:
         "Sounds good.":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene s361g
             with dissolve
@@ -2405,7 +2405,7 @@ label continueab:
             u "Cool, sounds good."
 
         "I should stop here.":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene s361f
             with dissolve
@@ -2464,10 +2464,10 @@ label continueab:
 
     menu:
         "Do a handstand":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
         "Drink three sips":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             
             u "I'll drink."
 
@@ -2680,7 +2680,7 @@ label continueab:
 
             menu:
                 "Kiss her":
-                    $ addPoint("tm", 1)
+                    $ addPoint("tm")
                     $ kissamber = True
 
                     play sound "sounds/spit.mp3"
@@ -2705,7 +2705,7 @@ label continueab:
                     pause 0.5
 
                 "Don't kiss her":
-                    $ addPoint("tm", 1)
+                    $ addPoint("tm")
                     $ kissamber = False
 
                     play sound "sounds/spit.mp3"
@@ -2750,7 +2750,7 @@ label continueab:
 
             menu:
                 "Kiss her":
-                    $ addPoint("tm", 1)
+                    $ addPoint("tm")
                     $ kisskim = True
 
                     play sound "sounds/spit.mp3"
@@ -2778,7 +2778,7 @@ label continueab:
                     pause 0.5
 
                 "Don't kiss her":
-                    $ addPoint("tm", 1)
+                    $ addPoint("tm")
                     $ kisskim = False
 
                     play sound "sounds/spit.mp3"
@@ -2879,7 +2879,7 @@ label continueab:
 
     menu:
         "Accuse her of lying":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene s370c
             with dissolve

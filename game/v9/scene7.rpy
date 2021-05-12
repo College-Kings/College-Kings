@@ -326,7 +326,7 @@ else:
 
         "Talk about your dream":
 
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             u "I'm not so sure about that. Last night I had a fucked up dream."
 
@@ -431,7 +431,7 @@ else:
 
         "Talk about the brawl":
 
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             # -if MC chooses to tell Ryan how excited he is about the Brawl-
 
@@ -567,7 +567,7 @@ if rileyrs:
 
         "Kiss her":
 
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene v9slake3 #TPP showing mc and riley kissing
             with dissolve
@@ -775,7 +775,7 @@ menu:
 
     "Don't join her":
 
-        $ addPoint("tm", 1)
+        $ addPoint("tm")
 
         u "That was a nice try, miss. But you must be mistaking me for a child, if you thought that would work."
 
@@ -811,7 +811,7 @@ menu:
 
     "Join her":
 
-        $ addPoint("bf", 1)
+        $ addPoint("bf")
 
         $ joinAubreyLake = True
 

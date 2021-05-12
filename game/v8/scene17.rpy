@@ -152,7 +152,7 @@ label phn_penelope6_done:
 
     menu:
         "Stay to console her":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             $ consoledRose = True
 
             u "(This is important. There are enough Wolves to move boxes quickly.)"
@@ -203,7 +203,7 @@ label phn_penelope6_done:
             ro "Awww, this was from before the accident. Before everything... How did this happen?"
 
         "Focus on moving the boxes":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
             $ consoledRose = False
 
             u "Don't worry. We'll be out of here in no time."

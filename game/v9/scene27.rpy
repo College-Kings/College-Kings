@@ -153,7 +153,7 @@ label v9_train_w_apes:
 
         menu:
             "Be Confident":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
 
                 scene v9twa5a
                 with dissolve
@@ -171,7 +171,7 @@ label v9_train_w_apes:
                 ca "When I get done with you, no punk will even THINK about starting shit again. You hear me?"
 
             "Be Humble":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
                 scene v9twa5a # FPP. Show Cameron, hands behind back, serious look, mouth open
                 with dissolve
@@ -239,7 +239,7 @@ label v9_train_w_apes:
 
         menu:
             "Be Pumped":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
 
                 scene v9twa8 # TPP. Show MC Punching bag, back to camera, in boxing stance
                 with dissolve
@@ -306,7 +306,7 @@ label v9_train_w_apes:
                 ca "Great! Over here!"
 
             "Stay Quiet":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
 
                 scene v9twa5a
                 with dissolve

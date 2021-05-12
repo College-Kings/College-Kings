@@ -52,7 +52,7 @@ screen achievements():
     
     use phoneTemplate:
 
-        add "phone/images/whiteBackground.webp" at truecenter
+        add "images/phone/whiteBackground.webp" at truecenter
 
         text "achievements":
             color "#000000"
@@ -74,7 +74,7 @@ screen achievements():
                     vbox:
                         spacing -10
                         
-                        textbutton achievement.achievement style "ach"
+                        textbutton achievement.achieve style "ach"
                         textbutton achievement.text style "ach2"
                 else:
-                    textbutton achievement.achievement style "ach3"
+                    textbutton achievement.achieve style "ach3"

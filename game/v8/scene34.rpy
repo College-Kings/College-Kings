@@ -60,7 +60,7 @@ label phn_chloe12_a2:
     call screen messager(contact_Chloe)
 
 label phn_chloe12_axa1:
-    $ addPoint("bf", 1)
+    $ addPoint("bf")
     $ contact_Chloe.newMessage("I bet you were")
     $ contact_Chloe.addReply("I miss them", "phn_chloe12_axa2")
     call screen messager(contact_Chloe)
@@ -101,7 +101,7 @@ label phn_chloe13_a2:
 
 label phn_chloe13_axa1:
     $ chloeSteakHouse = True
-    $ addPoint("bf", 1)
+    $ addPoint("bf")
     $ contact_Chloe.newMessage("Um... how's now? ;)")
     $ contact_Chloe.addReply("Now's perfect! Should I cum to your place or you wanna cum here? ;)", "phn_chloe13_axa2")
     call screen messager(contact_Chloe)
@@ -118,7 +118,7 @@ call screen messager(contact_Chloe)
 
 label phn_chloe13_axb1:
     $ chloeSteakHouse = True
-    $ addPoint("bf", 1)
+    $ addPoint("bf")
     $ contact_Chloe.newMessage("...")
     $ contact_Chloe.addReply("As friends", "phn_chloe13_axb2")
     call screen messager(contact_Chloe)

@@ -69,13 +69,13 @@ label emily_arcade:
 
         menu:
             "Take the bet":
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
                 $ emilyArcade = 1
 
                 jump em_arcade_1
 
             "Make it more interesting":
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
                 $ emilyArcade = 2
 
                 jump em_arcade_2
@@ -126,13 +126,13 @@ label emily_arcade:
 
         menu:
             "Take the bet":
-                $ addPoint("bro", 1)
+                $ addPoint("bro")
                 $ emilyArcade = 3
 
                 jump em_arcade_3
 
             "Make it more fun":
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
                 $ emilyArcade = 4
 
                 jump em_arcade_4
@@ -803,9 +803,9 @@ label em_arcade_1:
     menu:
         "Kiss her":
             if laurenrs:
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
             else:
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
             $ kissedEmilyArcade = True
 
             scene v8arcade24
@@ -853,7 +853,7 @@ label em_arcade_1:
 
         "Good night":
             if laurenrs:
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
             $ kissedEmilyArcade = False
 
             scene v8arcade23a
@@ -1252,9 +1252,9 @@ label em_arcade_4:
     menu:
         "Kiss her":
             if laurenrs:
-                $ addPoint("tm", 1)
+                $ addPoint("tm")
             else:
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
             $ kissedEmilyArcade = True
 
             scene v8arcade24
@@ -1302,7 +1302,7 @@ label em_arcade_4:
 
         "Good night":
             if laurenrs:
-                $ addPoint("bf", 1)
+                $ addPoint("bf")
             $ kissedEmilyArcade = False
 
             scene v8arcade23a

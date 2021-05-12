@@ -1,6 +1,12 @@
 define bugTesting_Scenes = [
     ["start", "Start of Game"],
-    ["v07", "Start of v07"],
+    ["v1start", "Start of v1"],
+    ["v2start", "Start of v2"],
+    ["v3start", "Start of v3"],
+    ["v4start", "Start of v4"],
+    ["v5start", "Start of v5"],
+    ["v6start", "Start of v6"],
+    ["v7start", "Start of v7"],
     ["conyourdorm", "Wednesday Morning"],
     ["rightafterbeach", "Wednesday Evening"],
     ["ep7_before_history", "Thursday Morning"],

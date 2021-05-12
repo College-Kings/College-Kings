@@ -132,7 +132,7 @@ label phn_chloe11_done:
 
     menu:
         "Party":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
             $ rejectedApesFun = False
 
             scene v8apes25d
@@ -148,7 +148,7 @@ label phn_chloe11_done:
             pause 0.5
 
         "Stay back and study":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             $ rejectedApesFun = True
 
             scene v8apes25d
@@ -307,7 +307,7 @@ label phn_chloe11_done:
 
     menu:
         "Press it":
-            $ addPoint("bro", 1)
+            $ addPoint("bro")
 
             scene v8apes34c
             with dissolve
@@ -318,7 +318,7 @@ label phn_chloe11_done:
             ca "It's just..."
 
         "Let it go":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
 
             scene v8apes34c
             with dissolve
