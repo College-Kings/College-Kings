@@ -118,7 +118,7 @@ screen v6_fr3kitchen():
         if not fr3chris:
             action Jump("v6_fr3chris1")
         else:
-            action Show("endFreeRoamConfirm", "v6_fr3chris3")
+            action Show("endFreeRoamConfirm", continueLabel="v6_fr3chris3")
 
     imagebutton: #Matt button
         pos (1048, 139)
@@ -134,7 +134,7 @@ screen v6_fr3kitchen():
         ypos 99
         idle "images/fr3kitchenleftblank.webp"
         hover "images/fr3kitchenleft.webp"
-        action Show("v6_fr3kitchen")
+        action Show("v6_fr3kitchen2")
 
     imagebutton: # Go Living room
         ypos 100
