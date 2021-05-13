@@ -1355,7 +1355,6 @@ label conyourdorm:
     $ kiwiiPost3.addReply("I'd destroy you in Air hockey!", v7_kiwiiReply5, mentions="Aubrey", numberLikes=renpy.random.randint(15, 25))
 
 label kiwii_firstTime:
-    $ kiwii_firstTime = False
     play sound "sounds/vibrate.mp3"
     if emilyrs:
         $ contact_Riley.addReply("We're not back together")
