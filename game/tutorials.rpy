@@ -13,6 +13,8 @@ screen phoneTutorial():
         yalign 0.5
         xpos 1200
 
+    text "Tutorial" style "choicetextnum" pos (1450, 360)
+
     fixed:
         xysize(650, 85)
         pos(1200, 550)
