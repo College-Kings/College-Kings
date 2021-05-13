@@ -49,14 +49,14 @@ screen kiwiiPopup():
 
     textbutton "OK":
         style "endfr"
-        action Hide("kiwiiPopup")
+        action [SetVariable("kiwii_firstTime", False), Hide("kiwiiPopup")]
         text_align 0.5
         align (0.5, 0.58)
 
 
 screen fightPopup(fightMove):
     modal True
-    add "images/endfr.png"
+    add "images/endfr.webp"
 
     text "Congratulations! You have learned a new fighting move: {b}[fightMove]{/b}." style "endfree"
 
