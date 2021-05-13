@@ -61,8 +61,7 @@ screen achievements():
             ypos 200
             xalign 0.5
 
-        vpgrid:
-            cols 1
+        viewport:
             spacing 10
             pos (780, 280)
             xysize (358, 600)
