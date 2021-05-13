@@ -52,7 +52,7 @@ init python:
                     self.pendingMessages[-1].replies.append(reply)
                 else:
                     self.sentMessages[-1].replies.append(reply)
-            except Exception:
+            except IndexError:
                 message = self.newMessage("", queue=False)
                 message.replies.append(reply)
 
@@ -123,6 +123,8 @@ init python:
         def __init__(self, contact, image):
             self.contact = contact
             self.image = image
+            self.replies = []
+            self.reply = None
 
     class Reply:
         def __init__(self, message, func=None):
