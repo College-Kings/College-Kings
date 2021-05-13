@@ -1079,7 +1079,7 @@ label continuebd:
             scene s486b # You bend down, you and Lauren kiss
             with dissolve
 
-            # kiss sound
+            play sound "sounds/kiss.mp3"
 
             "*Kiss*"
 
@@ -9309,7 +9309,7 @@ label v6_fr3chloe1:
 
             pause 0.5
 
-            # kiss sound
+            play sound "sounds/kiss.mp3"
 
             scene sfr3cl4a # chloe gives you a quick kiss
             with dissolve
