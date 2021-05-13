@@ -991,22 +991,22 @@ label continuebb:
     # if you chose imre chloe and amber both text you dpeending on chloemad that you msised out etc.
 
     if chooseimre and chloemad: # Amber texts why you never got back to her
-            play sound "sounds/vibrate.mp3"
-            
-            $ contact_Amber.newMessage("I guess you didn't want my surprise :/", queue=False)
-            $ contact_Amber.addReply("Sorry something important came up and I didn't have time.")
-            $ contact_Amber.addReply("I'm alone now, if the surprise is still on ;)", v6_reply5)
-            $ contact_Amber.addReply("I'll make it up to you tho", v6_reply6)
+        play sound "sounds/vibrate.mp3"
+        
+        $ contact_Amber.newMessage("I guess you didn't want my surprise :/", queue=False)
+        $ contact_Amber.addReply("Sorry something important came up and I didn't have time.")
+        $ contact_Amber.addReply("I'm alone now, if the surprise is still on ;)", v6_reply5)
+        $ contact_Amber.addReply("I'll make it up to you tho", v6_reply6)
 
-            " "
+        " "
 
-            label phoneae:
-                call screen phone
-                if contact_Amber.getReplies():
-                    u "(I should probably reply to my messages.)"
-                    jump phoneae
+        label phoneae:
+            call screen phone
+            if contact_Amber.getReplies():
+                u "(I should probably reply to my messages.)"
+                jump phoneae
 
-            jump continuebd
+        jump continuebd
 
     elif chooseimre: # Amber texts you about the pic, chloe texts you about you not responding
         play sound "sounds/vibrate.mp3"
@@ -7831,7 +7831,7 @@ label v6_fr3dsbathroom:
 
 
 #LOcation 3: kitchen/ dining room
-label fr3matt1:
+label v6_fr3matt1:
     $ fr3matt = True
 
     scene sfr3ma1 # close up matt looking at fridge
@@ -7861,7 +7861,7 @@ label fr3matt1:
     call screen v6_fr3kitchen
 
 
-label fr3matt2:
+label v6_fr3matt2:
     scene fr3kitchen
 
     u "(I'm not going over there again.)"
