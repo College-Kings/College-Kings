@@ -56,7 +56,7 @@ label v9_walk_li_txt:
         call screen messager(contact_Lindsey)
 
     label s38_PhoneContinue:
-        if contact_Lindsey.messages[-1].replies:
+        if contact_Lindsey.getReplies():
             "(I should reply to Lindsey.)"
             jump s38_PhoneContinue
 

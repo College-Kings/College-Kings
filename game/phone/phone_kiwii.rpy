@@ -30,9 +30,9 @@ init python:
 
             if self.liked: self.numberLikes += 1
             else: self.numberLikes -= 1
-
-        def addComment(self, user, message, numberLikes=0, liked=False, mentions=None, queue=True):
-            comment = KiwiiComment(user, message, numberLikes, liked, mentions)
+            
+        def addComment(self, user, message, numberLikes=0, mentions=None, queue=True):
+            comment = KiwiiComment(user, message, numberLikes, mentions)
             
             # Add message to queue
             if queue:
@@ -365,7 +365,7 @@ screen kiwiiApp():
                         imagebutton:
                             idle Transform(post.img, zoom=0.17)
                             action Show("kiwii_image", img=post.img)
-                        text post.getCaption() style "kiwii_CommentText" xalign 0.5
+                        text post.getMessage() style "kiwii_CommentText" xalign 0.5
 
                     hbox:
                         xoffset 20

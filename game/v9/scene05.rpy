@@ -45,7 +45,7 @@ else:
     call screen messager(contact_Riley)
 
 label v9_phn_riley1:
-if contact_Riley.messages[-1].replies:
+if contact_Riley.getReplies():
     u "(I should talk to Riley.)"
     jump v9_phn_riley1
 

@@ -238,7 +238,7 @@ $ contact_Ryan.addReply("You here yet?", "v9_phn_ryan1_a1")
 call screen messager(contact_Ryan)
 
 label v9_phn_ryan1:
-if contact_Ryan.messages[-1].replies:
+if contact_Ryan.getReplies():
     u "(I should talk to Ryan.)"
     jump v9_phn_ryan1
 

@@ -98,7 +98,7 @@ label v9_room_w_chris:
         call screen messager(contact_Julia)
 
     label s21_PhoneContinue:
-        if contact_Julia.messages[-1].replies:
+        if contact_Julia.getReplies():
             "(I should text Julia.)"
             jump s21_PhoneContinue
 

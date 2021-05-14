@@ -205,7 +205,7 @@ $ contact_Imre.addReply("You here yet?", "v9_phn_imre1_a1")
 call screen messager(contact_Imre)
 
 label v9_phn_imre1:
-if contact_Imre.messages[-1].replies:
+if contact_Imre.getReplies():
     u "(I should talk to Imre.)"
     jump v9_phn_imre1
 

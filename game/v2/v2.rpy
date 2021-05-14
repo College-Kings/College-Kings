@@ -2325,7 +2325,7 @@ label bo_ad:
             with dissolve
             em "What did you say?"
 
-            if emilyandben:
+            if not emilyandben:
                 scene s150b
                 with dissolve
 

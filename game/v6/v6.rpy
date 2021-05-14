@@ -44,6 +44,10 @@ init python:
         addPoint("bf")
         setattr(store, "homrworkout", False)
 
+    def v6_reply11():
+        contact_Amber.addReply("I'm alone now, if the surprise is still on ;)", v6_reply5)
+        contact_Amber.addReply("I'll make it up to you tho", v6_reply6)
+
 label choicetimer:
     $ renpy.jump("".join([timerexit]))
 
@@ -994,9 +998,7 @@ label continuebb:
         play sound "sounds/vibrate.mp3"
         
         $ contact_Amber.newMessage("I guess you didn't want my surprise :/", queue=False)
-        $ contact_Amber.addReply("Sorry something important came up and I didn't have time.")
-        $ contact_Amber.addReply("I'm alone now, if the surprise is still on ;)", v6_reply5)
-        $ contact_Amber.addReply("I'll make it up to you tho", v6_reply6)
+        $ contact_Amber.addReply("Sorry something important came up and I didn't have time.", v6_reply11)
 
         " "
 
@@ -1059,7 +1061,7 @@ label continuebd:
     scene s485 # you come into econimics class room # but you cant really see the peopkle sitting in there yet
     with Fade (1,0,1)
 
-    if laurentoofar or toldlauren and not apologize:
+    if (laurentoofar or toldlauren) and not apologize:
         $ laurenmad = True
 
     pause 0.5

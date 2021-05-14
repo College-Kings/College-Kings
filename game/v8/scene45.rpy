@@ -40,7 +40,7 @@ label tue_night_in_room:
             call screen messager(contact_Sebastian)
 
         label v8s45_phoneContinue1:
-            if contact_Sebastian.messages[-1].replies:
+            if contact_Sebastian.getReplies():
                 u "I should really check my phone."
                 jump v8s45_phoneContinue1
 
@@ -78,7 +78,7 @@ label tue_night_in_room:
                 $ contact_Chloe.addReply("Sure, later.", "v8s45_phoneContinue2")
 
         label v8s45_phoneContinue2:
-            if contact_Chloe.messages[-1].replies:
+            if contact_Chloe.getReplies():
                 u "I should really check my phone."
                 jump v8s45_phoneContinue2
             
@@ -131,7 +131,7 @@ label tue_night_in_room:
             call screen messager(contact_Grayson)
 
         label v8s45_phoneContinue3:
-            if contact_Grayson.messages[-1].replies:
+            if contact_Grayson.getReplies():
                 u "I need to check my phone"
                 jump v8s45_phoneContinue3
 
@@ -172,7 +172,7 @@ label tue_night_in_room:
 
 
         label v8s45_phoneContinue4:
-            if contact_Chloe.messages[-1].replies:
+            if contact_Chloe.getReplies():
                 u "I should check my phone"
                 jump v8s45_phoneContinue4
             

@@ -116,7 +116,7 @@ label v8_ending:
 
         label s46_kiwiiContinue:
 
-            if contact_Ryan.messages[-1].replies:
+            if contact_Ryan.getReplies():
                 "I should really check out Kiwii"
                 jump s46_kiwiiContinue
 

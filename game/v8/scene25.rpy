@@ -44,7 +44,7 @@ label phn_riley11_setup:
     call screen messager(contact_Riley)
 
 label phn_riley11:
-    if contact_Riley.messages[-1].replies:
+    if contact_Riley.getReplies():
         u "(I should talk to Riley.)"
         jump phn_riley11
 

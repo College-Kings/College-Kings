@@ -24,6 +24,8 @@ init python:
 
             self.unlock()
             self.newMessages = True
+            msgApp.newNotification()
+            
             return message
 
         def newImgMessage(self, img, queue=True):
@@ -41,6 +43,8 @@ init python:
 
             self.unlock()
             self.newMessages = True
+            msgApp.newNotification()
+
             return message
 
         def addReply(self, message, func=None):

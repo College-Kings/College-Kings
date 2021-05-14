@@ -58,7 +58,7 @@ label v8_tues_evening:
                 call screen messager(contact_Lauren)
 
         label v8s37_phoneContinue1:
-            if contact_Lauren.messages[-1].replies:
+            if contact_Lauren.getReplies():
                 u "I should reply to Lauren"
                 jump v8s37_phoneContinue1
 
@@ -100,7 +100,7 @@ label v8_tues_evening:
                 call screen messager(contact_Riley)
 
         label v8s37_phoneContinue2:
-            if contact_Riley.messages[-1].replies:
+            if contact_Riley.getReplies():
                 u "I should reply to Riley"
                 jump v8s37_phoneContinue1
             
@@ -166,7 +166,7 @@ label v8_tues_evening:
                 call screen messager(contact_Lauren)
 
         label v8s37_phoneContinue3:
-            if contact_Lauren.messages[-1].replies:
+            if contact_Lauren.getReplies():
                 u "I should reply to Lauren"
                 jump v8s37_phoneContinue3
 
@@ -207,7 +207,7 @@ label v8_tues_evening:
                 call screen messager(contact_Riley)
 
         label v8s37_phoneContinue4:
-            if contact_Riley.messages[-1].replies:
+            if contact_Riley.getReplies():
                 u "I should reply to my phone"
                 jump v8s37_phoneContinue2
             

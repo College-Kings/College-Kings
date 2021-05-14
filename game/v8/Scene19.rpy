@@ -13,7 +13,7 @@ label sun_eve_room:
 
         if not laurenrs:
             play sound "sounds/vibrate.mp3"
-            $ contact_Amber.newMessage("Hey u up?")
+            $ contact_Amber.newMessage("Hey u up?", queue=False)
             $ contact_Amber.addReply("Always for you ;)", "s19_reply1")
             call screen messager(contact_Amber)
 

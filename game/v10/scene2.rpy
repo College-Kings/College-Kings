@@ -17,14 +17,14 @@ label v10_ryan_v_perry:
     scene v10rvp2a # FPP. Same as rvp2, Chris and Perry both looking at eachother, Chris smile, Perry worried, Chris mouth open.
     with dissolve
 
-    ch "Of course you can. You're a Wolf. You got this! You'll feel better once you get in there."
+    ch "Of course you can. You're a wolf. You got this! You'll feel better once you get in there."
 
     scene v10rvp2b # FPP. Same as rvp2, Chris no longer has his hand on perry, Chris looks slightly concerned, perry with his hand on his stomach as if he's about to puke, Perry mouth open.
     with dissolve
 
     guyd "I'm gonna..."
 
-    scene v10rvp3 # TPP. Show Josh now looking in the direction of Perry, Josh looks a little confused.
+    scene v10rvp3 # TPP. Show Josh now looking in the direction of Perry, josh looks a little confused.
     with dissolve
 
     pause 1

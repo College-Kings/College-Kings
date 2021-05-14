@@ -46,6 +46,24 @@ init python:
     def v7_msgReply6():
         contact_Riley.newMessage("Oh oki")
 
+    def kiwii_firstTime():
+        if emilyrs:
+            contact_Riley.addReply("We're not back together")
+            contact_Riley.newMessage("Okay... just looked like it")
+            contact_Riley.addReply("Well we're not.", "rirep4a")
+            contact_Riley.newMessage("k")
+        if bowling and emilyrs:
+            contact_Penelope.newMessage("I didn't know you and Emily were a thing...", queue=False)
+            contact_Penelope.addReply("We're not a thing", v7_msgReply1)
+            contact_Penelope.addReply("It was a one time thing", v7_msgReply2)
+        if emilyrs and laurenrs:
+            contact_Lauren.newMessage("I saw what Emily posted. I really thought you liked me...", queue=False)
+            contact_Lauren.newMessage("I guess we're done now, so please just delete my number.", queue=False)
+            contact_Lauren.addReply("Lauren can we please just talk about it? I can explain")
+            contact_Lauren.newMessage("What is there to talk about? How could you betray me like that?!")
+            contact_Lauren.addReply("Please, it's just a big misunderstanding")
+            contact_Lauren.newMessage("Fine. I'm in my dorm, we can talk now.")
+
 label v7start:
     if caughtpeekingpenelope and not caughtpeekingpenelopecounter:
         $ penelopemad = True
@@ -1151,10 +1169,10 @@ label hd_ad:
 
             u "No worries, it was a nice walk."
 
-            if not rileykiss and kct == "confident":
+            if kct == "confident":
                 call screen kctPopup
 
-            else:
+            elif not rileykiss:
                 scene s708 # riley smiling
                 with dissolve
 
@@ -1330,8 +1348,10 @@ label conyourdorm:
 
     pause 0.5
 
+    $ kiwii_firstTime = True
+
     $ kiwiiPost1 = KiwiiPost("Chloe", "clpost1.webp", "I'll always follow the sun :)", numberLikes=186)
-    $ kiwiiPost1.addComment("Grayson","Check your DMs", 14)
+    $ kiwiiPost1.addComment("Grayson", "Check your DMs", 14)
     $ kiwiiPost1.addComment("Ryan", "Whore.", 1)
     $ kiwiiPost1.addComment("Aubrey", "What I wouldn't give for your body...", 32)
     $ kiwiiPost1.addComment("Elijah", "If you ever need a tutor, I'm free on Wednesdays and Fridays.", 2)
@@ -1353,26 +1373,6 @@ label conyourdorm:
     $ kiwiiPost3.addComment("Riley", "I'm sooo jealous of your hair!", 6)
     $ kiwiiPost3.addComment("Chloe", "Most beautiful girl in the world", 6)
     $ kiwiiPost3.addReply("I'd destroy you in Air hockey!", v7_kiwiiReply5, mentions="Aubrey", numberLikes=renpy.random.randint(15, 25))
-
-label kiwii_firstTime:
-    play sound "sounds/vibrate.mp3"
-    if emilyrs:
-        $ contact_Riley.addReply("We're not back together")
-        $ contact_Riley.newMessage("Okay... just looked like it")
-        $ contact_Riley.addReply("Well we're not.", "rirep4a")
-        $ contact_Riley.newMessage("k")
-    if bowling and emilyrs:
-        $ contact_Penelope.newMessage("I didn't know you and Emily were a thing...", queue=False)
-        $ contact_Penelope.addReply("We're not a thing", v7_msgReply1)
-        $ contact_Penelope.addReply("It was a one time thing", v7_msgReply2)
-    if emilyrs and laurenrs:
-        $ contact_Lauren.newMessage("I saw what Emily posted. I really thought you liked me...", queue=False)
-        $ contact_Lauren.newMessage("I guess we're done now, so please just delete my number.", queue=False)
-        $ contact_Lauren.addReply("Lauren can we please just talk about it? I can explain")
-        $ contact_Lauren.newMessage("What is there to talk about? How could you betray me like that?!")
-        $ contact_Lauren.addReply("Please, it's just a big misunderstanding")
-        $ contact_Lauren.newMessage("Fine. I'm in my dorm, we can talk now.")
-    call screen kiwiiPreferences
 
     if emilyrs: # first riley texts, then once you've opened the app you get 2 more messages.
         $ kiwiiPost4 = KiwiiPost("Emily", "images/empost1.webp", "Finally fate brings us back together. What doesn't kill us only makes us stronger.", numberLikes=82)
@@ -1396,13 +1396,13 @@ label kiwii_firstTime:
         call screen phone
 
         label phoneam:
-            if kiwii_firstTime:
-                "(I should check out what Emily posted on Kiwii.)"
-                jump phoneam              
-
-            elif contact_Riley.getReplies():
+            if contact_Riley.getReplies():
                 "(I need to respond to some of these messages.)"
                 jump phoneam
+
+            elif kiwii_firstTime:
+                "(I should check out what Emily posted on Kiwii.)"
+                jump phoneam              
 
             elif bowling and contact_Penelope.getReplies():
                 "(I should answer Penelope.)"
@@ -1525,7 +1525,7 @@ label kiwii_firstTime:
                 with dissolve
                 u "*Sighs*"
 
-                $ kiwiiPost4.hidePost()
+                $ kiwiiPost4.removePost()
 
                 if laurenrs:
                     u "(Time to make things right with Lauren.)"
@@ -7280,6 +7280,8 @@ label thurs_night_dorm:
 
         u "(Can't believe I'm actually moving into the Wolves house. Kinda crazy.)"
 
+        jump wolves_ceremony
+
     elif joinwolves:
         scene s1002
         with fade
@@ -7301,9 +7303,6 @@ label thurs_night_dorm:
         imre "I knooow. It's gonna be insane, bro."
 
         jump wolves_ceremony
-
-    else:
-        jump cameron_thurs_tasks
 
 ########## SCENE 33 CHALLENGES W/ CAMERON
     #If you joined the apes:

@@ -7,7 +7,7 @@ label v10_imre_vs_caleb:
     scene v10ivc1 # TPP. Show MC walking towards the ring, Josh in ring in tux, mouths closed, nerutal expressions-
     with fade
 
-    pause 1
+    pause 0.5
 
     scene v10ivc2 # FPP. Show Josh in the ring, mouth closed, slight smile
     with dissolve

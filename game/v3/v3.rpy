@@ -1149,7 +1149,7 @@ label conl:
 
     u "(Why do people come here so early in the morning just to work out?)"
 
-    if evelynmove:
+    if not evelynmove:
 
         scene s243 # evelyn working out
         with dissolve

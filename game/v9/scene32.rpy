@@ -181,7 +181,7 @@ label v9_sat_skip_gym:
             call screen messager(contact_Riley)
 
         label s32_PhoneContinue:
-            if contact_Riley.messages[-1].replies:
+            if contact_Riley.getReplies():
                 "(I should reply to Riley.)"
                 jump s32_PhoneContinue
 

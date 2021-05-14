@@ -32,7 +32,7 @@ label after_apes_ceremony:
     $ KiwiiPost6.addComment("Amber", "Congrats people!!!", mentions=["MC", "Ryan", "Caleb"], numberLikes=renpy.random.randint(50, 60))
     $ KiwiiPost6.addComment("Caleb", "Thanks everyone!", numberLikes=renpy.random.randint(20, 30))
 
-    $ contact_Chloe.newMessage("Congrats on getting in. Looks like we'll be seeing a lot of each other.")
+    $ contact_Chloe.newMessage("Congrats on getting in. Looks like we'll be seeing a lot of each other.", queue=False)
     $ contact_Chloe.addReply("Exactly how much is a lot? ;)", "phn_chloe11_a")
     $ contact_Chloe.addReply("Hope so. I like talking to you.", "phn_chloe11_b")
 
@@ -44,7 +44,7 @@ label after_apes_ceremony:
     call screen messager(contact_Chloe)
 
 label phn_chloe11:
-    if contact_Chloe.messages[-1].replies:
+    if contact_Chloe.getReplies():
         u "(I should probably reply.)"
         jump phn_chloe11
 

@@ -1,5 +1,5 @@
 ### v08 beginning. Variable definitions here
-label v08_start:
+label v8start:
     if ending == "lauren":
         jump v08_la_start
     elif ending == "chloe":

@@ -40,7 +40,7 @@ label v9_room_thur_night:
                 call screen messager(contact_Emily)
 
             label s16_PhoneContinueW:
-                if contact_Emily.messages[-1].replies:
+                if contact_Emily.getReplies():
                     "(I should reply to Emily.)"
                     jump s16_PhoneContinueW
 
@@ -82,7 +82,7 @@ label v9_room_thur_night:
                 call screen messager(contact_Emily)
 
             label s16_PhoneContinueA:
-                if contact_Emily.messages[-1].replies:
+                if contact_Emily.getReplies():
                     "(I should reply to Emily.)"
                     jump s16_PhoneContinueA
 
@@ -883,7 +883,7 @@ label v9_thur_night_aft_em_w:
             call screen messager(contact_Lindsey)
 
     label s16_ContinueW1:
-        if contact_Lindsey.messages[-1].replies:
+        if contact_Lindsey.getReplies():
             "(I should reply to Lindsey.)"
             jump s16_ContinueW1
 
@@ -1021,7 +1021,7 @@ label v9_thur_night_aft_em_a:
             call screen messager(contact_Lindsey)
 
     label s16_ContinueA1:
-        if contact_Lindsey.messages[-1].replies:
+        if contact_Lindsey.getReplies():
             "(I should reply to Lindsey.)"
             jump s16_ContinueA1
         

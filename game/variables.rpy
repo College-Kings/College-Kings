@@ -7,7 +7,7 @@ default achievementAtList = None
 default freeRoam = False
 
     ## Kiwii Vars
-default kiwii_firstTime = True
+default kiwii_firstTime = False
 
 # 1.0 - 6.0
 default v1_sda = False
@@ -367,7 +367,6 @@ default v10_simplr_known = False
 default v10_reassure_jenny = False
 default v10_chloe_rematch = False
 default v10_chloe_sexy = False
-# new
 default v10_help_nora_freeroam = False
 default makeSamCock = False
 default drinkWsam = False
@@ -384,3 +383,4 @@ default v10_watch_emi = False
 default v10_join_emi = False
 default v10_save_emi_cpr = False
 default v10_emi_nurse = False
+default v10_amber_condoms = False

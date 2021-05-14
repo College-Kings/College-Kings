@@ -18,17 +18,14 @@ init -1 python:
 
 label after_load:
     python:
-        for app in applications:
-            if os.path.splitext(app.img)[0].endswith("not"):
-                app.img = os.path.splitext(app.img)[0][:-3] + os.path.splitext(app.img)[1]
+        msgApp.img = "images/phone/messages/appAssets/messagesIcon.webp"
+        statsApp.img = "images/phone/stats/appAssets/statsIcon.webp"
+        achApp.img = "images/phone/achievements/appAssets/achievementsIcon.webp"
+        kiwiiApp.img = "images/phone/kiwii/appAssets/kiwiiIcon.webp"
 
-            try: app.img = app.image
-            except AttributeError: pass
-            
+        for app in applications:
             try: app.homeScreen = app.screen
             except AttributeError: pass
-            
-            app.img = os.path.splitext(app.img)[0] + ".webp"
 
         for kiwiiPost in kiwiiPosts:
             if kiwiiPost.caption[0] == "[" and kiwiiPost.caption[1] != "[":
@@ -46,6 +43,9 @@ label after_load:
             except AttributeError: pass
 
         for contact in contacts:
+            try: contact.pendingMessages
+            except AttributeError: contact.pendingMessages = []
+
             try:
                 for message in contact.messages:
                     try: message.image = os.path.splitext(message.image)[0] + ".webp"

@@ -1,14 +1,12 @@
 init python:
-
     class Application:
-        def __init__(self, name, img, homeScreen, notification=False, locked=False):
+        def __init__(self, name, img, homeScreen, locked=False):
             self.name = name
             self.img = "images/phone/{}".format(img)
             self.homeScreen = homeScreen
-            self.notification = notification
             self.locked = locked
-            if notification:
-                self.newNotification()
+            
+            self.notification = False
 
             applications.append(self)
 
@@ -100,7 +98,7 @@ screen phone():
                         imagebutton:
                             idle Transform(app.img, size=(100, 100))
                             if app.name == "Kiwii" and kiwii_firstTime:
-                                action Jump("kiwii_firstTime")
+                                action Function(kiwii_firstTime)
                             else:
                                 action [Function(renpy.retain_after_load), Show(app.homeScreen)]
                                 

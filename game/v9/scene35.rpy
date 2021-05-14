@@ -160,7 +160,7 @@ label v9_room_sat_aft:
             call screen messager(contact_Chloe)
 
         label s35_PhoneContinueW:
-            if contact_Chloe.messages[-1].replies:
+            if contact_Chloe.getReplies():
                 "(I should reply to Chloe.)"
                 jump s35_PhoneContinueW
 
@@ -336,7 +336,7 @@ label v9_room_sat_aft:
             call screen messager(contact_Chloe)
 
         label s35_PhoneContinueA:
-            if contact_Chloe.messages[-1].replies:
+            if contact_Chloe.getReplies():
                 "(I should reply to Chloe.)"
                 jump s35_PhoneContinueA
 
