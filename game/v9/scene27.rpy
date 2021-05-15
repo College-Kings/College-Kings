@@ -208,7 +208,7 @@ label v9_train_w_apes:
         scene v9twa7
         with dissolve
 
-        ca "Chris is no dumbass. He's seen your punch a thousand times by now and he's training those wolf cubs to strike first. They're gonna be worried about that punch, so we're not gonna give it to 'em."
+        ca "Chris is no dumbass. He's seen your punch a thousand times by now and he's training those Wolf cubs to strike first. They're gonna be worried about that punch, so we're not gonna give it to 'em."
 
         scene v9twa7a
         with dissolve
