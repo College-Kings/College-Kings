@@ -238,7 +238,7 @@ label v10_aft_walk_home:
                     scene v10smwh4c
                     with dissolve
 
-                    u "Sick, I'll let the organisers know."
+                    u "Sick, I'll let the organizers know."
 
             scene v10smwh4
             with dissolve
