@@ -159,7 +159,6 @@ default imreforgives = False
 default chloecaught = False
 default kct = "popular"
 default showkct = True
-default v06 = True #kinda ;D
 default laurenmad = False
 default checkonrose = False
 default evelyndate = False
