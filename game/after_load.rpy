@@ -46,6 +46,9 @@ label after_load:
             try: contact.pendingMessages
             except AttributeError: contact.pendingMessages = []
 
+            try: contact.sentMessages
+            except AttributeError: contact.sentMessages = []
+
             try:
                 for message in contact.messages:
                     try: message.image = os.path.splitext(message.image)[0] + ".webp"
