@@ -3,9 +3,6 @@
 # Characters: MC (outfit 2)
 # Time: Tuesday Evening
 
-init python:
-    def 
-
 label v8_tues_evening:
     stop music fadeout 2
     if joinwolves:
@@ -63,7 +60,7 @@ label v8_tues_evening:
             call screen phone
             if contact_Riley.getReplies():
                 u "I should reply to Riley"
-                jump v8s37_phoneContinue1
+                jump v8s37_phoneContinue2
 
         u "(I guess this is just not my day for studying. Great job, [name]!)"
 
@@ -128,7 +125,7 @@ label v8_tues_evening:
             call screen phone
             if contact_Riley.getReplies():
                 u "I should reply to my phone"
-                jump v8s37_phoneContinue2
+                jump v8s37_phoneContinue4
             
         u "(I guess this is just not my day for studying. Great job, [name]!)"
 

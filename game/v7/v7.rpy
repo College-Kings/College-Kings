@@ -1350,7 +1350,7 @@ label conyourdorm:
 
     $ kiwii_firstTime = True
 
-    $ kiwiiPost1 = KiwiiPost("Chloe", "clpost1.webp", "I'll always follow the sun :)", numberLikes=186)
+    $ kiwiiPost1 = KiwiiPost("Chloe", "v7/clpost1.webp", "I'll always follow the sun :)", numberLikes=186)
     $ kiwiiPost1.addComment("Grayson", "Check your DMs", 14)
     $ kiwiiPost1.addComment("Ryan", "Whore.", 1)
     $ kiwiiPost1.addComment("Aubrey", "What I wouldn't give for your body...", 32)
@@ -1361,13 +1361,13 @@ label conyourdorm:
     $ kiwiiPost1.addReply("You're so beautiful!", v7_kiwiiReply1, numberLikes=renpy.random.randint(2, 8))
     $ kiwiiPost1.addReply("I got some sun in my room...", v7_kiwiiReply2, numberLikes=renpy.random.randint(20, 30))
 
-    $ kiwiiPost2 = KiwiiPost("Lauren", "images/lapost1.webp", "Wishing I could go back...", numberLikes=39)
+    $ kiwiiPost2 = KiwiiPost("Lauren", "v7/lapost1.webp", "Wishing I could go back...", numberLikes=39)
     $ kiwiiPost2.addComment("Autumn","That was such a great vacation!", 2)
     $ kiwiiPost2.addComment("Penelope", "Looks beautiful", 3)
     $ kiwiiPost2.addReply("You're a cutie!", v7_kiwiiReply3, numberLikes=renpy.random.randint(3, 10))
     $ kiwiiPost2.addReply("Winter vacations are the best", v7_kiwiiReply4, numberLikes=renpy.random.randint(10, 17))
 
-    $ kiwiiPost3 = KiwiiPost("Aubrey", "images/aupost1.webp", "Finally changed my profile pic!", numberLikes=133)
+    $ kiwiiPost3 = KiwiiPost("Aubrey", "v7/aupost1.webp", "Finally changed my profile pic!", numberLikes=133)
     $ kiwiiPost3.addComment("Cameron","You put the hot into thot", 2)
     $ kiwiiPost3.addComment("Josh", "You still single?", 3)
     $ kiwiiPost3.addComment("Riley", "I'm sooo jealous of your hair!", 6)
@@ -1375,7 +1375,7 @@ label conyourdorm:
     $ kiwiiPost3.addReply("I'd destroy you in Air hockey!", v7_kiwiiReply5, mentions="Aubrey", numberLikes=renpy.random.randint(15, 25))
 
     if emilyrs: # first riley texts, then once you've opened the app you get 2 more messages.
-        $ kiwiiPost4 = KiwiiPost("Emily", "images/empost1.webp", "Finally fate brings us back together. What doesn't kill us only makes us stronger.", numberLikes=82)
+        $ kiwiiPost4 = KiwiiPost("Emily", "v7/empost1.webp", "Finally fate brings us back together. What doesn't kill us only makes us stronger.", numberLikes=82)
         $ kiwiiPost4.addComment("Riley","You guys are so cute", 5)
         $ kiwiiPost4.addComment("Aubrey", "GORGEOUS", 8)
         $ kiwiiPost4.addComment("Josh", "Woah, you guys back together??", 3)
@@ -5474,7 +5474,7 @@ label after_pledges:
     with Fade(1,0,1)
 
     if joinwolves:
-        $ kiwiiPost5 = KiwiiPost("Chris", "chpost1.webp", "One of us!", numberLikes=133, mentions="MC")
+        $ kiwiiPost5 = KiwiiPost("Chris", "v7/chpost1.webp", "One of us!", numberLikes=133, mentions="MC")
         $ kiwiiPost5.addComment("Cameron", "Losers", 3)
         $ kiwiiPost5.addComment("Imre", "Hell yeah bro!", 14)
         $ kiwiiPost5.addComment("Aubrey", "Wohoo!", 35)

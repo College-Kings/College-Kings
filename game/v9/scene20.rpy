@@ -19,7 +19,7 @@ label v9_room_fri_aft:
         scene v9rfa2 # TPP. Show MC sat at his desk on his phone.
         with dissolve
 
-        $ s20KiwiiPost = KiwiiPost("Chris", "images/v09/scene 20/s20KiwiiWolf.webp", "Who's ready?!", numberLikes=renpy.random.randint(200, 300))
+        $ s20KiwiiPost = KiwiiPost("Chris", "v9/s20KiwiiWolf.webp", "Who's ready?!", numberLikes=renpy.random.randint(200, 300))
         $ s20KiwiiPost.addComment("Imre", "Ding! Ding! Ding!", numberLikes=renpy.random.randint(200, 250))
         $ s20KiwiiPost.addComment("Cameron", "Whatever man! You're going down!", numberLikes=renpy.random.randint(200, 250))
         $ s20KiwiiPost.addReply("Fuck yeah!", "s20Reply1", numberLikes=renpy.random.randint(100, 200))
@@ -43,7 +43,7 @@ label v9_room_fri_aft:
         with dissolve
        
 
-        $ s20KiwiiPost = KiwiiPost("Grayson", "images/v09/scene 20/s20KiwiiApe.webp", "Where my APES at?", numberLikes=renpy.random.randint(200, 300))
+        $ s20KiwiiPost = KiwiiPost("Grayson", "v9/s20KiwiiApe.webp", "Where my APES at?", numberLikes=renpy.random.randint(200, 300))
         $ s20KiwiiPost.addComment("Cameron", "The BEST Ape is right here!", numberLikes=renpy.random.randint(200, 250))
         $ s20KiwiiPost.addComment("Ryan", "I'm SO ready!", numberLikes=renpy.random.randint(200, 250))
         $ s20KiwiiPost.addReply("Let's go!!", "s20Reply1", numberLikes=renpy.random.randint(100, 200))

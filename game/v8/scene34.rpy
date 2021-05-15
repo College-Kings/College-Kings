@@ -26,11 +26,11 @@ init python:
     def v8s34_reply4():
         contact_Chloe.newMessage("Can't say it's all done, but I sure am!")
         if ending == "chloe":
-            $ contact_Chloe.addReply("So when can I see you again?", v8s34_reply5)
+            contact_Chloe.addReply("So when can I see you again?", v8s34_reply5)
 
         else:
-            $ contact_Chloe.addReply("I'm actually getting hungry. Wanna go grab a bite?", v8s34_reply6)
-            $ contact_Chloe.addReply("I better get back to it. I have so much work to get done. Just wanted to check on you and see how you're doing.", v8s34_reply7)
+            contact_Chloe.addReply("I'm actually getting hungry. Wanna go grab a bite?", v8s34_reply6)
+            contact_Chloe.addReply("I better get back to it. I have so much work to get done. Just wanted to check on you and see how you're doing.", v8s34_reply7)
 
     def v8s34_reply5():
         setattr(store, "chloeSteakHouse", True)
@@ -51,12 +51,12 @@ init python:
         contact_Chloe.addReply("What are you in the mood for? Lady's choice", v8s34_reply8)
 
     def v8s34_reply7():
-        $ contact_Chloe.newMessage("It was nice talking to you")
-        $ contact_Chloe.addReply("You too")
+        contact_Chloe.newMessage("It was nice talking to you")
+        contact_Chloe.addReply("You too")
 
     def v8s34_reply8():
-        $ contact_Chloe.newMessage("There's a new Japanese place right down the road")
-        $ contact_Chloe.addReply("Sounds delicious. Meet you there!")
+        contact_Chloe.newMessage("There's a new Japanese place right down the road")
+        contact_Chloe.addReply("Sounds delicious. Meet you there!")
 
 label v8_tues_noon:
     if ending != "chloe" and chloemad:
