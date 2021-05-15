@@ -4,6 +4,19 @@
 # Characters needed: MC (outfit 3), Grayson (outfit 3), Chloe (outfit 2 or put together some other revealing outfit), Caleb (outfit 1), Cameron (outfit 3), Ryan (outfit 1), Sam (outfit 2), Mason (outfit 1), Some other random chick in a revealing outfit
 # Time: Saturday evening to night
 
+init python:
+    def v8s13_reply1(): # phn_chloe11_a
+        contact_Chloe.newMessage("Guess you'll have to wait and see ;)")
+        contact_Chloe.addReply("I'm moving my stuff now. How about we get started tonight?")
+        contact_Chloe.newMessage("You're such a flirt. Have a good night!")
+
+    def v8s13_reply2(): # phn_chloe11_b
+        contact_Chloe.newMessage("Aww, I like talking to you too. You're sweet.")
+        contact_Chloe.addReply("Sweet? Not hot? Or sexy? Or... anything but sweet?")
+        contact_Chloe.newMessage("Sweet and cute ;)")
+        contact_Chloe.addReply("I'll take it. For now. Talk to you when I get settled.")
+        contact_Chloe.newMessage("Good night.")
+
 # SCENE 13: MOVING INTO THE APES
 label after_apes_ceremony:
     scene v8apes21 # TPP. MC in his dorm packing his bag (finished it), smiling and mouth closed
@@ -13,9 +26,9 @@ label after_apes_ceremony:
     # [Grayson has made a Kiwii post that MC, Ryan, and Caleb are the new Apes. If MC got first place, Grayson also says Congrats to the prodigal son, [name] for getting our top score. Looks like somebody's coming for my throne!]
 
     # Kiwii post pic description: Grayson popping a champagne in Apes den with MC, Ryan and Caleb around him (make sure they're wearing the same outfits as in scene 12)
-    $ KiwiiPost6 = KiwiiPost("Grayson", "images/grpost1.webp", "%s, Ryan and Caleb are the new proud Apes! I can see this fight season turning out well for us!" % name, numberLikes=renpy.random.randint(320, 350))
+    $ KiwiiPost6 = KiwiiPost("Grayson", "images/grpost1.webp", "[name], Ryan and Caleb are the new proud Apes! I can see this fight season turning out well for us!", numberLikes=renpy.random.randint(320, 350))
     if apesVids == 4:
-        $ KiwiiPost6.addComment("Grayson", "And congrats to the prodigal son, %s, for getting the perfect score. Looks like somebody's coming for my throne!" % name, numberLikes=renpy.random.randint(140, 150))
+        $ KiwiiPost6.addComment("Grayson", "And congrats to the prodigal son, [name], for getting the perfect score. Looks like somebody's coming for my throne!", numberLikes=renpy.random.randint(140, 150))
     $ KiwiiPost6.addComment("Ryan", "Apes baby! Woohoooo!!!", numberLikes=renpy.random.randint(60, 70))
     $ KiwiiPost6.addComment("Caleb", "GO APES!!!", numberLikes=renpy.random.randint(60, 70))
     $ KiwiiPost6.addComment("Parker", "Congrats guys!", numberLikes=renpy.random.randint(40, 50))
@@ -33,50 +46,22 @@ label after_apes_ceremony:
     $ KiwiiPost6.addComment("Caleb", "Thanks everyone!", numberLikes=renpy.random.randint(20, 30))
 
     $ contact_Chloe.newMessage("Congrats on getting in. Looks like we'll be seeing a lot of each other.", queue=False)
-    $ contact_Chloe.addReply("Exactly how much is a lot? ;)", "phn_chloe11_a")
-    $ contact_Chloe.addReply("Hope so. I like talking to you.", "phn_chloe11_b")
+    $ contact_Chloe.addReply("Exactly how much is a lot? ;)", v8s13_reply1)
+    $ contact_Chloe.addReply("Hope so. I like talking to you.", v8s13_reply2)
 
-    
     play sound "sounds/vibrate.mp3"
 
     scene v8apes21a # MC looking at his phone, mouth closed
     with dissolve
-    call screen messager(contact_Chloe)
 
 label phn_chloe11:
+    call screen phone
     if contact_Chloe.getReplies():
         u "(I should probably reply.)"
         jump phn_chloe11
 
-    else:
-        
-        u "(Gotta get going.)"
-        jump phn_chloe11_done
-
-label phn_chloe11_a:
-    $ chloeMsg11Reply = 1
-    $ contact_Chloe.newMessage("Guess you'll have to wait and see ;)")
-    $ contact_Chloe.addReply("I'm moving my stuff now. How about we get started tonight?", "phn_chloe11_a1")
-    call screen messager(contact_Chloe)
-
-label phn_chloe11_a1:
-    $ contact_Chloe.newMessage("You're such a flirt. Have a good night!")
-    call screen messager(contact_Chloe)
-
-label phn_chloe11_b:
-    $ chloeMsg11Reply = 2
-    $ contact_Chloe.newMessage("Aww, I like talking to you too. You're sweet.")
-    $ contact_Chloe.addReply("Sweet? Not hot? Or sexy? Or... anything but sweet?", "phn_chloe11_b1")
-    call screen messager(contact_Chloe)
-
-label phn_chloe11_b1:
-    $ contact_Chloe.newMessage("Sweet and cute ;)")
-    $ contact_Chloe.addReply("I'll take it. For now. Talk to you when I get settled.", "phn_chloe11_b2")
-    call screen messager(contact_Chloe)
-
-label phn_chloe11_b2:
-    $ contact_Chloe.newMessage("Good night.")
-    call screen messager(contact_Chloe)
+    u "(Gotta get going.)"
+    jump phn_chloe11_done
 
 label phn_chloe11_done:
     scene v8apes22 # TPP. MC leaving out of his dorm with his bag, smiling and mouth closed
@@ -187,7 +172,7 @@ label phn_chloe11_done:
     with dissolve
     ry "Woohoooo!"
 
-    if chloeMsg11Reply == 1:
+    if contact_Chloe.getMessage("Guess you'll have to wait and see ;)"):
         scene v8apes28 # FPP. MC inside the room now and he notices Chloe and Caleb chitchatting
         with dissolve
         cl "(Oh, Chloe is here.)"

@@ -4,11 +4,10 @@ label v8start:
         jump v08_la_start
     elif ending == "chloe":
         jump v08_cl_start
+    elif ending == "riley" and rileyrs:
+        jump v08_ri_start
     elif ending == "riley":
-        if rileyrs:
-            jump v08_ri_start
-        else:
-            jump v08_ri_start_fr
+        jump v08_ri_start_fr
     else:
         jump hoco_amb_night
 

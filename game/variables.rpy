@@ -334,6 +334,8 @@ default chloeSteakHouse = False
 default climbwseb = False
 default hesitantwgrayson = False
 
+default chloeSteakHouse = False
+
 # 9.0
 default mcBrawlStance1 = False
 default mcBrawlStance2 = False

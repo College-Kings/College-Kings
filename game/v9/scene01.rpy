@@ -3,7 +3,7 @@
 # Characters: MC (outfit 2), Chris (Outfit 1)
 # Time: Tuesday night
 
-label start9:
+label v9start:
 if joinwolves:
     jump v9_start_wolves
 else:

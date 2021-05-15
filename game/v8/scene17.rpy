@@ -8,8 +8,10 @@
 
 label msrose_moving:
 
-    $ contact_Penelope.addReply("Hey, how you holding up?", "phn_penelope6_a")
-    
+    $ contact_Penelope.addReply("Hey, how you holding up?")
+    $ contact_Penelope.newMessage("Better, thanks to you")
+    $ contact_Penelope.addReply("No problem. I'm here for you. Let me know if you need anything else.")
+    $ contact_Penelope.newMessage("Thank you! :)")
 
     scene v8rose1 # TPP. MC sitting on his bed in his room (Wolves) and looking at his phone. Neutral expression, mouth closed. If the floor is visible, there should be a few books strewn randomly
     with Fade(0.75, 0.25, 0.75)
@@ -17,21 +19,10 @@ label msrose_moving:
     u "(Should I check how Penelope's doing?)"
 
     label phn_penelope6:
-    if contact_Penelope.getReplies():
-        u "(I should talk to Penelope.)"
-        jump phn_penelope6
-    else:
-        
-        jump phn_penelope6_done
-
-label phn_penelope6_a:
-    $ contact_Penelope.newMessage("Better, thanks to you")
-    $ contact_Penelope.addReply("No problem. I'm here for you. Let me know if you need anything else.", "phn_penelope6_a1")
-    call screen messager(contact_Penelope)
-
-label phn_penelope6_a1:
-    $ contact_Penelope.newMessage("Thank you! :)")
-    call screen messager(contact_Penelope)
+        call screen phone
+        if contact_Penelope.getReplies():
+            u "(I should talk to Penelope.)"
+            jump phn_penelope6
 
 label phn_penelope6_done:
     play sound "sounds/knock.mp3"

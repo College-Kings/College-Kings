@@ -48,8 +48,8 @@ init python:
 
     def kiwii_firstTime():
         if emilyrs:
-            contact_Riley.addReply(_("We're not back together")
-            contact_Riley.newMessage(_("Okay... just looked like it")
+            contact_Riley.addReply(_("We're not back together"))
+            contact_Riley.newMessage(_("Okay... just looked like it"))
             contact_Riley.addReply(_("Well we're not."))
             contact_Riley.newMessage(_("k"))
         if bowling and emilyrs:
