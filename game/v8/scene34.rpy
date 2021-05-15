@@ -96,7 +96,7 @@ label v8_tues_noon:
 label phn_chloe13:
     if contact_Chloe.getReplies():
         call screen phone
-        u "(I should talk Chloe.)"
+        u "(I should talk to Chloe.)"
         jump phn_chloe13
 
     if chloeSteakHouse:
