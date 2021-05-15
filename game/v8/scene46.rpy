@@ -114,7 +114,7 @@ label v8_ending:
         # $ newKiwiiPost.addReply("Bout time!", numberLikes=999)
         # $ newKiwiiPost.addReply("Seriously?", numberLikes=999)
 
-        call checkReplies(contact_Ryan)
+        call checkReplies(contact_Ryan) from _call_checkReplies_2
 
         u "(What the...?)"
 
