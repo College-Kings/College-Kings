@@ -1351,34 +1351,34 @@ label conyourdorm:
     $ kiwii_firstTime = True
 
     $ kiwiiPost1 = KiwiiPost("Chloe", "v7/clpost1.webp", "I'll always follow the sun :)", numberLikes=186)
-    $ kiwiiPost1.addComment("Grayson", "Check your DMs", 14)
-    $ kiwiiPost1.addComment("Ryan", "Whore.", 1)
-    $ kiwiiPost1.addComment("Aubrey", "What I wouldn't give for your body...", 32)
-    $ kiwiiPost1.addComment("Elijah", "If you ever need a tutor, I'm free on Wednesdays and Fridays.", 2)
-    $ kiwiiPost1.addComment("Imre", "SO FUCKING HOT WTFFF", 10)
-    $ kiwiiPost1.addComment("Emily", "Where did you get that bikini?", 18, mentions="Chloe")
-    $ kiwiiPost1.addComment("Chloe", "I can't remember :(", 11, mentions="Emily")
+    $ kiwiiPost1.addComment("Grayson", "Check your DMs", 14, queue=False)
+    $ kiwiiPost1.addComment("Ryan", "Whore.", 1, queue=False)
+    $ kiwiiPost1.addComment("Aubrey", "What I wouldn't give for your body...", 32, queue=False)
+    $ kiwiiPost1.addComment("Elijah", "If you ever need a tutor, I'm free on Wednesdays and Fridays.", 2, queue=False)
+    $ kiwiiPost1.addComment("Imre", "SO FUCKING HOT WTFFF", 10, queue=False)
+    $ kiwiiPost1.addComment("Emily", "Where did you get that bikini?", 18, mentions="Chloe", queue=False)
+    $ kiwiiPost1.addComment("Chloe", "I can't remember :(", 11, mentions="Emily", queue=False)
     $ kiwiiPost1.addReply("You're so beautiful!", v7_kiwiiReply1, numberLikes=renpy.random.randint(2, 8))
     $ kiwiiPost1.addReply("I got some sun in my room...", v7_kiwiiReply2, numberLikes=renpy.random.randint(20, 30))
 
     $ kiwiiPost2 = KiwiiPost("Lauren", "v7/lapost1.webp", "Wishing I could go back...", numberLikes=39)
-    $ kiwiiPost2.addComment("Autumn","That was such a great vacation!", 2)
-    $ kiwiiPost2.addComment("Penelope", "Looks beautiful", 3)
+    $ kiwiiPost2.addComment("Autumn","That was such a great vacation!", 2, queue=False)
+    $ kiwiiPost2.addComment("Penelope", "Looks beautiful", 3, queue=False)
     $ kiwiiPost2.addReply("You're a cutie!", v7_kiwiiReply3, numberLikes=renpy.random.randint(3, 10))
     $ kiwiiPost2.addReply("Winter vacations are the best", v7_kiwiiReply4, numberLikes=renpy.random.randint(10, 17))
 
     $ kiwiiPost3 = KiwiiPost("Aubrey", "v7/aupost1.webp", "Finally changed my profile pic!", numberLikes=133)
-    $ kiwiiPost3.addComment("Cameron","You put the hot into thot", 2)
-    $ kiwiiPost3.addComment("Josh", "You still single?", 3)
-    $ kiwiiPost3.addComment("Riley", "I'm sooo jealous of your hair!", 6)
-    $ kiwiiPost3.addComment("Chloe", "Most beautiful girl in the world", 6)
+    $ kiwiiPost3.addComment("Cameron","You put the hot into thot", 2, queue=False)
+    $ kiwiiPost3.addComment("Josh", "You still single?", 3, queue=False)
+    $ kiwiiPost3.addComment("Riley", "I'm sooo jealous of your hair!", 6, queue=False)
+    $ kiwiiPost3.addComment("Chloe", "Most beautiful girl in the world", 6, queue=False)
     $ kiwiiPost3.addReply("I'd destroy you in Air hockey!", v7_kiwiiReply5, mentions="Aubrey", numberLikes=renpy.random.randint(15, 25))
 
     if emilyrs: # first riley texts, then once you've opened the app you get 2 more messages.
         $ kiwiiPost4 = KiwiiPost("Emily", "v7/empost1.webp", "Finally fate brings us back together. What doesn't kill us only makes us stronger.", numberLikes=82)
-        $ kiwiiPost4.addComment("Riley","You guys are so cute", 5)
-        $ kiwiiPost4.addComment("Aubrey", "GORGEOUS", 8)
-        $ kiwiiPost4.addComment("Josh", "Woah, you guys back together??", 3)
+        $ kiwiiPost4.addComment("Riley","You guys are so cute", 5, queue=False)
+        $ kiwiiPost4.addComment("Aubrey", "GORGEOUS", 8, queue=False)
+        $ kiwiiPost4.addComment("Josh", "Woah, you guys back together??", 3, queue=False)
         $ kiwiiPost4.addReply("No, we're not.", v7_kiwiiReply6, mentions="Josh", numberLikes=renpy.random.randint(5, 15))
 
         play sound "sounds/vibrate.mp3"
@@ -5476,9 +5476,9 @@ label after_pledges:
 
     if joinwolves:
         $ kiwiiPost5 = KiwiiPost("Chris", "v7/chpost1.webp", "One of us!", numberLikes=133, mentions="MC")
-        $ kiwiiPost5.addComment("Cameron", "Losers", 3)
-        $ kiwiiPost5.addComment("Imre", "Hell yeah bro!", 14)
-        $ kiwiiPost5.addComment("Aubrey", "Wohoo!", 35)
+        $ kiwiiPost5.addComment("Cameron", "Losers", 3, queue=False)
+        $ kiwiiPost5.addComment("Imre", "Hell yeah bro!", 14, queue=False)
+        $ kiwiiPost5.addComment("Aubrey", "Wohoo!", 35, queue=False)
 
     if emilyText:
         play sound "sounds/vibrate.mp3"
