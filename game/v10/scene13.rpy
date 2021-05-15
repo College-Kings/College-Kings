@@ -4,7 +4,7 @@
 # Time: Sunday Morning
 label v10_wolves_redec:
     
-    if visited_lindsey: # RCS - variable for MC going to visit Lindsey
+    if v10s10_hangWLinds: # RCS - variable for MC going to visit Lindsey
         
         scene v10swhr1 # FPP. Show Wolve's House front door as MC approaches, returning from his visit to Lindsey.
         with fade
