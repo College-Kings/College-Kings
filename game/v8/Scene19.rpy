@@ -128,7 +128,7 @@ label sun_eve_room:
 
         if not laurenrs:
             play sound "sounds/vibrate.mp3"
-            $ contact_Amber.newMessage("Hey u up?")
+            $ contact_Amber.newMessage("Hey u up?", queue=False)
             $ contact_Amber.addReply("Always for you ;)", "s19_reply30")
             $ contact_Amber.newMessage("That's what I was hoping to hear")
             $ contact_Amber.addReply("I can be even more up if you want...", "s19_reply31")

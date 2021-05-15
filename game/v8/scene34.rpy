@@ -91,7 +91,7 @@ label v8_tues_noon:
         $ contact_Chloe.addReply("I was thinking about your lips :*", v8s34_reply1)
         $ contact_Chloe.addReply("Whatcha been up to?", v8s34_reply2)
     else:
-        $ contact_Chloe.addReply("Hey, how you been?", "phn_chloe12_b1")
+        $ contact_Chloe.addReply("Hey, how you been?", v8s34_reply3)
 
 label phn_chloe13:
     if contact_Chloe.getReplies():

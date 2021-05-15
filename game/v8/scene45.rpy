@@ -30,7 +30,7 @@ label tue_night_in_room:
         scene v8star6 # TPP. Show MC sat on the edge of his bed checking his phone.
         with dissolve
 
-        $ contact_Sebastian.newMessage("Yo dude, just wanted to let you know... tonight was fun.")
+        $ contact_Sebastian.newMessage("Yo dude, just wanted to let you know... tonight was fun.", queue=False)
         $ contact_Sebastian.addReply("Sure was... but it can be even better, right?")
         $ contact_Sebastian.newMessage("Sure can! You'll see what being a Wolf is all about.")
         $ contact_Sebastian.addReply("Looking forward to it. :)")
@@ -98,7 +98,7 @@ label tue_night_in_room:
         scene v8star15 # TPP. Show MC sat on the edge of his bed checking his phone.
         with dissolve
 
-        $ contact_Grayson.newMessage("Yo Ape, still ready for the surprise?")
+        $ contact_Grayson.newMessage("Yo Ape, still ready for the surprise?", queue=False)
         $ contact_Grayson.addReply("Are we still doing this?")
         $ contact_Grayson.newMessage("It's just so damn tempting. But you won't regret it.")
         $ contact_Grayson.addReply("Now I'm fucking couting on it!")
