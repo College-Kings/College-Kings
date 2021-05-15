@@ -50,7 +50,7 @@ init python:
         if emilyrs:
             contact_Riley.addReply("We're not back together")
             contact_Riley.newMessage("Okay... just looked like it")
-            contact_Riley.addReply("Well we're not.", "rirep4a")
+            contact_Riley.addReply("Well we're not.")
             contact_Riley.newMessage("k")
         if bowling and emilyrs:
             contact_Penelope.newMessage("I didn't know you and Emily were a thing...", queue=False)
