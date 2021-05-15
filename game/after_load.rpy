@@ -18,6 +18,7 @@ init -1 python:
 
 label after_load:
     python:
+        # Applications
         msgApp.img = "images/phone/messages/appAssets/messagesIcon.webp"
         statsApp.img = "images/phone/stats/appAssets/statsIcon.webp"
         achApp.img = "images/phone/achievements/appAssets/achievementsIcon.webp"
@@ -27,9 +28,10 @@ label after_load:
             try: app.homeScreen = app.screen
             except AttributeError: pass
 
+        # Kiwii
         for kiwiiPost in kiwiiPosts:
-            if kiwiiPost.caption[0] == "[" and kiwiiPost.caption[1] != "[":
-                kiwiiPost.caption = "[" + kiwiiPost.caption
+            try: kiwiiPost.message = kiwiiPost.caption
+            except AttributeError: pass
 
             try: kiwiiPost.img = kiwiiPost.image
             except AttributeError: pass
@@ -42,6 +44,7 @@ label after_load:
             try: kiwiiPost.message = kiwiiPost.caption
             except AttributeError: pass
 
+        # Contact/Messages
         for contact in contacts:
             try: contact.pendingMessages
             except AttributeError: contact.pendingMessages = []
@@ -59,11 +62,12 @@ label after_load:
 
                     contact.seenMessages.append(message)
             except Exception: pass
-                
+
+        contact_Lindsey.profilePicture = "lindseyprofilepic"
+
+        # Variables 
         try:
             if chlorers: chloers = True
         except NameError: pass
-
-        contact_Lindsey.profilePicture = "lindseyprofilepic"
 
     return
