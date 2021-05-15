@@ -63,7 +63,7 @@ label v9_room_sat_aft:
             jump s35_ChloeReplyWRs4a
 
         label s35_ChloeReplyWRs4a:
-            $ contact_Chloe.newImgMessage("images/v09/Scene 35/chloetxtimg.webp")
+            $ contact_Chloe.newImgMessage("images/v9/Scene 35/chloetxtimg.webp")
             $ contact_Chloe.addReply("OMG! I miss those!", "s35_ChloeReplyWRs5")
             $ contact_Chloe.addReply("OMG! You are magnificent!", "s35_ChloeReplyWRs5")
             call screen messager(contact_Chloe)
@@ -79,7 +79,7 @@ label v9_room_sat_aft:
             call screen messager(contact_Chloe)
 
         label s35_ChloeReplyWRs7:
-            $ contact_Chloe.addImgReply("images/v09/Scene 35/mcdickwolves.webp", "s35_ChloeReplyWRs8")
+            $ contact_Chloe.addImgReply("images/v9/Scene 35/mcdickwolves.webp", "s35_ChloeReplyWRs8")
             call screen messager(contact_Chloe)
 
         label s35_ChloeReplyWRs8:
@@ -239,7 +239,7 @@ label v9_room_sat_aft:
             jump s35_ChloeReplyARs4a
 
         label s35_ChloeReplyARs4a:
-            $ contact_Chloe.newImgMessage("images/v09/Scene 35/chloetxtimg.webp")
+            $ contact_Chloe.newImgMessage("images/v9/Scene 35/chloetxtimg.webp")
             $ contact_Chloe.addReply("OMG! I miss those!", "s35_ChloeReplyARs5")
             $ contact_Chloe.addReply("OMG! You are magnificent!", "s35_ChloeReplyARs5")
             call screen messager(contact_Chloe)
@@ -255,7 +255,7 @@ label v9_room_sat_aft:
             call screen messager(contact_Chloe)
 
         label s35_ChloeReplyARs7:
-            $ contact_Chloe.addImgReply("images/v09/Scene 35/mcdickapes.webp", "s35_ChloeReplyARs8")
+            $ contact_Chloe.addImgReply("images/v9/Scene 35/mcdickapes.webp", "s35_ChloeReplyARs8")
             call screen messager(contact_Chloe)
 
         label s35_ChloeReplyARs8:

@@ -8,7 +8,7 @@ label v9_sat_gym:
     with fade
     u "(I should probably freshen up my skills.)"
 
-    play music "music/v09/Scene 32/Track Scene 32.mp3" fadein 2
+    play music "music/v9/Scene 32/Track Scene 32.mp3" fadein 2
 
     menu:
         "Hit The Gym":

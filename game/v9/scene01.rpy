@@ -11,7 +11,7 @@ else:
 
 label v9_start_wolves:
 
-play music "music/v09/Scene 1 & 2/Track Scene 1 & 2.mp3" fadein 3
+play music "music/v9/Scene 1 & 2/Track Scene 1 & 2.mp3" fadein 3
 
 u "(I need to find out what's going on. This is insane!)"
 
@@ -190,7 +190,7 @@ scene v9wpost5 # TPP. Show MC leaving Chris' room, neutral expression, mouth clo
 with dissolve
 pause 0.75
 
-play music "music/v09/Scene 3/Track Scene 3.mp3" fadein 3
+play music "music/v9/Scene 3/Track Scene 3.mp3" fadein 3
 
 scene v9wpost6 # TPP. MC IN UNDERWEAR FROM NOW ON AND IT SHOULD BE DARK INSIDE THE ROOM. Show MC flexing one of his arms, looking at himself in mirror inside his room, neutral expression, mouth closed
 with Fade(0.75, 0.25, 0.75)

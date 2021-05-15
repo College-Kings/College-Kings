@@ -10,7 +10,7 @@ label v9_room_fri_eve:
 
         u "(I wonder how much Mr. Lee expects us to remember from everyone else's Viking scenes. I was too busy looking at the costumes to pay attention.)"
 
-        play music "music/v09/Scene 25/Track Scene 25.mp3" fadein 2
+        play music "music/v9/Scene 25/Track Scene 25.mp3" fadein 2
 
         scene v9rfe1a # TPP. Same camera as v9rfe1, show MC placing the book down and looking bored.
         with dissolve
@@ -70,7 +70,7 @@ label v9_room_fri_eve:
 
         u "(I wonder how much Mr. Lee expects us to remember from everyone else's Viking scenes. I was too busy looking at the costumes to pay attention.)"
 
-        play music "music/v09/Scene 25/Track Scene 25.mp3" fadein 2
+        play music "music/v9/Scene 25/Track Scene 25.mp3" fadein 2
 
         scene v9rfe3a # TPP. Same camera as v9rfe3, show MC placing the book down and looking bored.
         with dissolve

@@ -8,7 +8,7 @@ label v9_lau_dorm:
     scene v9lau1 # TPP. Show MC walking up the hallway to Lauren's dorm.
     with fade
 
-    play music "music/v09/Scene 19/Track Scene 19.mp3" fadein 2
+    play music "music/v9/Scene 19/Track Scene 19.mp3" fadein 2
 
     pause 0.8
 

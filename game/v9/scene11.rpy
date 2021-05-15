@@ -7,7 +7,7 @@ label v9_hc_demo:
     scene v9demo1 # FPP. Show shot of Cameron and Penelope stood on the docks. Cameron looks annoyed (Penelope with beard, Cameron with wig)
     with fade
 
-    play music "music/v09/Scene 11/Track Scene 11.mp3" fadein 3
+    play music "music/v9/Scene 11/Track Scene 11.mp3" fadein 3
    
     pause 1
 
@@ -91,7 +91,7 @@ label v9_hc_demo:
     scene v9demo7 # TPP. Show MC approaching Cameron, Penelope and the guard from the side, all are looking at MC, neutral expressions, camera from behind MC.
     with fade
 
-    play music "music/v09/Scene 11/Track Scene 11.mp3" fadein 3
+    play music "music/v9/Scene 11/Track Scene 11.mp3" fadein 3
     
     pause 1
 

@@ -271,33 +271,33 @@ label int_deal_w_josh:
                 call screen s28_larsMcAttack
 
     ### Add image defines + Start/End Images
-    image MC_Lars_Kick_hit = Movie(play="images/v08/Scene 28/mckickhit.webm", start_image="images/v08/Scene 28/mckickhitstart.webp", image="images/v08/Scene 28/mckickhitend.webp", loop = False)
-    image MC_Lars_Kick_block = Movie(play="images/v08/Scene 28/mckickblocked.webm", start_image="images/v08/Scene 28/mckickblockedstart.webp", image="images/v08/Scene 28/mckickblockedend.webp", loop = False)
-    image MC_Lars_BodyJab_hit = Movie(play="images/v08/Scene 28/mcbodyhit.webm", start_image="images/v08/Scene 28/mcbodyhookstart.webp", image="images/v08/Scene 28/mcbodyhitend.webp", loop = False)
-    image MC_Lars_BodyJab_block = Movie(play="images/v08/Scene 28/mcbodyblocked.webm", start_image="images/v08/Scene 28/mcbodyblockedstart.webp", image="images/v08/Scene 28/mcbodyblockedend.webp", loop = False)
-    image MC_Lars_Jab_hit = Movie(play="images/v08/Scene 28/mcjabhit.webm", start_image="images/v08/Scene 28/mcjabhitstart.webp", image="images/v08/Scene 28/mcjabhitend.webp", loop = False)
-    image MC_Lars_Jab_block = Movie(play="images/v08/Scene 28/mcjabblocked.webm", start_image="images/v08/Scene 28/mcjabblockedstart.webp", image="images/v08/Scene 28/mcjabblockedend.webp", loop = False)
-    image MC_Lars_Hook_hit = Movie(play="images/v08/Scene 28/mchookhit.webm", start_image="images/v08/Scene 28/mchookhitstart.webp", image="images/v08/Scene 28/mchookhitend.webp", loop = False)
-    image MC_Lars_Hook_block = Movie(play="images/v08/Scene 28/mchookblocked.webm", start_image="images/v08/Scene 28/mchookblockedstart.webp", image="images/v08/Scene 28/mchookblockedend.webp", loop = False)
-    image larsjab = Movie(play="images/v08/Scene 28/larsjab.webm", start_image="images/v08/Scene 28/larsjabstart.webp", image="images/v08/Scene 28/larsjabend.webp", loop = False)
-    image larshook = Movie(play="images/v08/Scene 28/larshook.webm", start_image="images/v08/Scene 28/larshookstart.webp", image="images/v08/Scene 28/larshookend.webp", loop = False)
-    image larskick = Movie(play="images/v08/Scene 28/larskick.webm", start_image="images/v08/Scene 28/larskickstart.webp", image="images/v08/Scene 28/larskickend.webp", loop = False)
-    image larsbody = Movie(play="images/v08/Scene 28/larsbody.webm", start_image="images/v08/Scene 28/larsbodystart.webp", image="images/v08/Scene 28/larsbodyend.webp", loop = False)
+    image MC_Lars_Kick_hit = Movie(play="images/v8/Scene 28/mckickhit.webm", start_image="images/v8/Scene 28/mckickhitstart.webp", image="images/v8/Scene 28/mckickhitend.webp", loop = False)
+    image MC_Lars_Kick_block = Movie(play="images/v8/Scene 28/mckickblocked.webm", start_image="images/v8/Scene 28/mckickblockedstart.webp", image="images/v8/Scene 28/mckickblockedend.webp", loop = False)
+    image MC_Lars_BodyJab_hit = Movie(play="images/v8/Scene 28/mcbodyhit.webm", start_image="images/v8/Scene 28/mcbodyhookstart.webp", image="images/v8/Scene 28/mcbodyhitend.webp", loop = False)
+    image MC_Lars_BodyJab_block = Movie(play="images/v8/Scene 28/mcbodyblocked.webm", start_image="images/v8/Scene 28/mcbodyblockedstart.webp", image="images/v8/Scene 28/mcbodyblockedend.webp", loop = False)
+    image MC_Lars_Jab_hit = Movie(play="images/v8/Scene 28/mcjabhit.webm", start_image="images/v8/Scene 28/mcjabhitstart.webp", image="images/v8/Scene 28/mcjabhitend.webp", loop = False)
+    image MC_Lars_Jab_block = Movie(play="images/v8/Scene 28/mcjabblocked.webm", start_image="images/v8/Scene 28/mcjabblockedstart.webp", image="images/v8/Scene 28/mcjabblockedend.webp", loop = False)
+    image MC_Lars_Hook_hit = Movie(play="images/v8/Scene 28/mchookhit.webm", start_image="images/v8/Scene 28/mchookhitstart.webp", image="images/v8/Scene 28/mchookhitend.webp", loop = False)
+    image MC_Lars_Hook_block = Movie(play="images/v8/Scene 28/mchookblocked.webm", start_image="images/v8/Scene 28/mchookblockedstart.webp", image="images/v8/Scene 28/mchookblockedend.webp", loop = False)
+    image larsjab = Movie(play="images/v8/Scene 28/larsjab.webm", start_image="images/v8/Scene 28/larsjabstart.webp", image="images/v8/Scene 28/larsjabend.webp", loop = False)
+    image larshook = Movie(play="images/v8/Scene 28/larshook.webm", start_image="images/v8/Scene 28/larshookstart.webp", image="images/v8/Scene 28/larshookend.webp", loop = False)
+    image larskick = Movie(play="images/v8/Scene 28/larskick.webm", start_image="images/v8/Scene 28/larskickstart.webp", image="images/v8/Scene 28/larskickend.webp", loop = False)
+    image larsbody = Movie(play="images/v8/Scene 28/larsbody.webm", start_image="images/v8/Scene 28/larsbodystart.webp", image="images/v8/Scene 28/larsbodyend.webp", loop = False)
 
-    image Lars_BodyJab_block = "images/v08/Scene 28/Lars_BodyJab_block.webp"
-    image Lars_BodyJab_hit = "images/v08/Scene 28/Lars_BodyJab_hit.webp"
-    image Lars_Hook_block = "images/v08/Scene 28/Lars_Hook_block.webp"
-    image Lars_Hook_hit = "images/v08/Scene 28/Lars_Hook_hit.webp"
-    image Lars_Jab_block = "images/v08/Scene 28/Lars_Jab_block.webp"
-    image Lars_Jab_hit = "images/v08/Scene 28/Lars_Jab_hit.webp"
-    image Lars_Kick_block = "images/v08/Scene 28/Lars_Jab_block.webp"
-    image Lars_Kick_hit = "images/v08/Scene 28/Lars_Jab_block.webp"
+    image Lars_BodyJab_block = "images/v8/Scene 28/Lars_BodyJab_block.webp"
+    image Lars_BodyJab_hit = "images/v8/Scene 28/Lars_BodyJab_hit.webp"
+    image Lars_Hook_block = "images/v8/Scene 28/Lars_Hook_block.webp"
+    image Lars_Hook_hit = "images/v8/Scene 28/Lars_Hook_hit.webp"
+    image Lars_Jab_block = "images/v8/Scene 28/Lars_Jab_block.webp"
+    image Lars_Jab_hit = "images/v8/Scene 28/Lars_Jab_hit.webp"
+    image Lars_Kick_block = "images/v8/Scene 28/Lars_Kick_block.webp"
+    image Lars_Kick_hit = "images/v8/Scene 28/Lars_Kick_hit.webp"
 
     # label Attacker_TargetAction
     label mc_LarsKickHit: # MC Kicks Lars (Hits/No Block)
 
         $ larsdmg += 1
-        scene mckickhit 
+        scene MC_Lars_Kick_hit 
         pause 0.7 # Trial/Error
         if larsdmg >= larshealth:
             jump mc_larsFightEnd
@@ -305,7 +305,7 @@ label int_deal_w_josh:
 
     label mc_LarsKickBlock: # MC Kicks Lars (Blocks)
 
-            scene mckickblocked 
+            scene MC_Lars_Kick_block 
             pause 0.7 # Trial/Error
             jump lars_McAttack
 
@@ -314,7 +314,7 @@ label int_deal_w_josh:
 
 
         $ larsdmg += 1
-        scene mcjabhit
+        scene MC_Lars_Jab_hit
         pause 0.7 # Trial/Error
         if larsdmg >= larshealth:
             jump mc_larsFightEnd
@@ -322,7 +322,7 @@ label int_deal_w_josh:
 
     label mc_LarsJabsBlock: # MC Jabs Lars (Blocks)
 
-            scene mcjabblocked
+            scene MC_Lars_Jab_block
             pause 0.7 # Trial/Error
             jump lars_McAttack
 
@@ -330,7 +330,7 @@ label int_deal_w_josh:
     label mc_LarsHooksHit: # MC Hooks Lars (Hits/No Block)
 
         $ larsdmg += 1
-        scene mchookhit
+        scene MC_Lars_Hook_hit
         pause 0.7 # Trial/Error
         if larsdmg >= larshealth:
             jump mc_larsFightEnd
@@ -338,7 +338,7 @@ label int_deal_w_josh:
 
     label mc_LarsHooksBlock: # MC Hooks Lars (Blocks)
 
-            scene mchookblocked 
+            scene MC_Lars_Hook_block 
             pause 0.7 # Trial/Error
             jump lars_McAttack
 
@@ -347,7 +347,7 @@ label int_deal_w_josh:
 
 
         $ larsdmg += 1
-        scene mcbodyhit
+        scene MC_Lars_BodyJab_hit
         pause 0.7 # Trial/Error
         if larsdmg >= larshealth:
             jump mc_larsFightEnd
@@ -355,7 +355,7 @@ label int_deal_w_josh:
 
     label mc_LarsBodyhookBlock: # MC Body Hooks Lars (Blocks)
 
-            scene mcbodyblocked 
+            scene MC_Lars_BodyJab_block 
             pause 0.7 # Trial/Error
             jump lars_McAttack
 
@@ -364,7 +364,7 @@ label int_deal_w_josh:
 
         play sound "sounds/ks.mp3"
         $ youdmg += 1
-        scene lars-kick-hit
+        scene Lars_Kick_hit
         with hpunch
 
         pause 0.5
@@ -376,7 +376,7 @@ label int_deal_w_josh:
     label lars_McKickBlock: # Lars Kicks MC (Hits/No Block)
 
         play sound "sounds/ks.mp3"
-        scene lars-kick-block
+        scene Lars_Kick_block
         with hpunch
 
         pause 0.5
@@ -389,7 +389,7 @@ label int_deal_w_josh:
 
         play sound "sounds/js.mp3"
         $ youdmg += 1
-        scene lars-jab-hit
+        scene Lars_Jab_hit
         with hpunch
 
         pause 0.5
@@ -403,7 +403,7 @@ label int_deal_w_josh:
     label lars_McJabBlock: # Lars Kicks MC (Hits/No Block)
 
         play sound "sounds/bs.mp3"
-        scene lars-jab-block
+        scene Lars_Hook_block
         with hpunch
 
         pause 0.5
@@ -416,7 +416,7 @@ label int_deal_w_josh:
 
         play sound "sounds/hs.mp3"
         $ youdmg += 1
-        scene lars-hook-hit
+        scene Lars_Hook_hit
         with hpunch
 
         pause 0.5
@@ -430,7 +430,7 @@ label int_deal_w_josh:
     label lars_McHookBlock: # Lars Kicks MC (Hits/No Block)
 
         play sound "sounds/bs.mp3"
-        scene lars-hook-block
+        scene Lars_Hook_block
         with hpunch
 
         pause 0.5
@@ -443,7 +443,7 @@ label int_deal_w_josh:
 
         play sound "sounds/hs.mp3"
         $ youdmg += 1
-        scene lars-body-hit
+        scene Lars_BodyJab_hit
         with hpunch
 
         pause 0.5
@@ -455,7 +455,7 @@ label int_deal_w_josh:
     label lars_McBodyhookBlock: # Lars Kicks MC (Hits/No Block)
 
         play sound "sounds/bs.mp3"
-        scene lars-body-block
+        scene Lars_BodyJab_block
         with hpunch
 
         pause 0.5
@@ -608,7 +608,7 @@ label dodged_pipe:
 
     $ ip_man = True
     if not steam:
-        image ip_man = "images/v08/achievements/ipman.webp"
+        image ip_man = "images/v8/achievements/ipman.webp"
         show ip_man:
             xpos 0
             ypos -200

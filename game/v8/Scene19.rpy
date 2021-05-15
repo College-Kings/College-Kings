@@ -7,10 +7,10 @@ init python:
     def v8s19_reply1(): # s19_reply5
         contact_Amber.newMessage("It's only fair, right? Make us even")
         if joinwolves:
-            contact_Amber.addImgReply("images/v08/Scene 19/w_dick_pic.webp")
+            contact_Amber.addImgReply("images/v8/Scene 19/w_dick_pic.webp")
 
         else:
-            contact_Amber.addImgReply("images/v08/Scene 19/a_dick_pic.webp", "s19_reply6")
+            contact_Amber.addImgReply("images/v8/Scene 19/a_dick_pic.webp", "s19_reply6")
 
         contact_Amber.newMessage("Wow, better than I thought")
         contact_Amber.addReply("So you thought about it?")
@@ -18,7 +18,7 @@ init python:
         contact_Amber.addReply("Aw man you're driving me crazy")
         contact_Amber.newMessage("So do something about it")
         contact_Amber.addReply("Now? What about you?")
-        contact_Amber.newImgMessage("images/v08/Scene 19/amb_pussy_pic.webp")
+        contact_Amber.newImgMessage("images/v8/Scene 19/amb_pussy_pic.webp")
         contact_Amber.addReply("Aw fuck", "s19_reply10")
         contact_Amber.newMessage("You like?")
         contact_Amber.addReply("I love! You're so hot!")

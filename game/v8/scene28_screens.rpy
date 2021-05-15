@@ -120,7 +120,7 @@ screen s28_mcLarsAttack():
     tag fightScreen
 
     if larsStance == 1:
-        add "images/v08/Scene 28/LarsStance - Jab.webp"
+        add "images/v8/Scene 28/LarsStance - Jab.webp"
 
         key q:
             action Jump ("mc_LarsJabsHit")
@@ -164,7 +164,7 @@ screen s28_mcLarsAttack():
 
 
     if larsStance == 2:
-        add "images/v08/Scene 28/LarsStance - Bodyhook.webp"
+        add "images/v8/Scene 28/LarsStance - Bodyhook.webp"
 
         key q:
             action Jump ("mc_LarsJabsBlock")
@@ -209,7 +209,7 @@ screen s28_mcLarsAttack():
 
 
     if larsStance == 3:
-        add "images/v08/Scene 28/LarsStance - Hook.webp"
+        add "images/v8/Scene 28/LarsStance - Hook.webp"
 
         key q:
             action Jump ("mc_LarsJabsBlock")
@@ -251,7 +251,7 @@ screen s28_mcLarsAttack():
         timer reactiona action Jump("lars_McAttack")
 
     if larsStance == 4:
-        add "images/v08/Scene 28/LarsStance - Kick.webp"
+        add "images/v8/Scene 28/LarsStance - Kick.webp"
 
         key q:
             action Jump ("mc_LarsJabsBlock")
@@ -297,7 +297,7 @@ screen s28_larsMcAttack():
     tag fightScreen
 
     if larsAttack == 1: # A
-        add "images/v08/Scene 28/larshookend.webp"
+        add "images/v8/Scene 28/larshookend.webp"
 
         key q:
             action Jump ("lars_McHookBlock")
@@ -341,7 +341,7 @@ screen s28_larsMcAttack():
 
 
     if larsAttack == 2:
-        add "images/v08/Scene 28/larsjabend.webp"
+        add "images/v8/Scene 28/larsjabend.webp"
 
         key q:
             action Jump ("lars_McJabHit")
@@ -383,7 +383,7 @@ screen s28_larsMcAttack():
         timer reaction action Jump("lars_McJabHit")
 
     if larsAttack == 3:
-        add "images/v08/Scene 28/larsbodyend.webp"
+        add "images/v8/Scene 28/larsbodyend.webp"
 
         key q:
             action Jump ("lars_McBodyhookHit")
@@ -425,7 +425,7 @@ screen s28_larsMcAttack():
         timer reaction action Jump("lars_McBodyhookHit")
 
     if larsAttack == 4:
-        image "images/v08/Scene 28/larskickend.webp"
+        image "images/v8/Scene 28/larskickend.webp"
 
         key q:
             action Jump ("lars_McKickHit")

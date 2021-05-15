@@ -1,10 +1,10 @@
-### SCENE 2: Chloe v07 ending continued
-label v08_cl_start:
+### SCENE 2: Chloe v7 ending continued
+label v8_cl_start:
     $ chloers = True
-    # Note to renderers: Make sure the MC is in his suit and any other props are the same as Chloe's ending in v07
+    # Note to renderers: Make sure the MC is in his suit and any other props are the same as Chloe's ending in v7
     stop music fadeout 3
 
-    scene v8s10: # TPP (will be a bottom to top linear pan shot, so the dimensions should be something like 1920x6000 or whatever height fits). Full body shot of Chloe standing (sexy pose) naked with her robe dropped on the ground (continuation of sfr4cl62 from v07)
+    scene v8s10: # TPP (will be a bottom to top linear pan shot, so the dimensions should be something like 1920x6000 or whatever height fits). Full body shot of Chloe standing (sexy pose) naked with her robe dropped on the ground (continuation of sfr4cl62 from v7)
         subpixel True
         yalign 1.0
         linear 6.0 yalign 0.0
@@ -103,13 +103,13 @@ label v08_cl_start:
     with dissolve
     u "You don't have to ask me twice."
 
-    image v8clbj1 = Movie(play="images/v08/Scene 2/v8clbj1.webm", loop=True, image="images/v08/Scene 2/clbj1_000.webp", start_image="images/v08/Scene 2/clbj1_000.webp")
+    image v8clbj1 = Movie(play="images/v8/Scene 2/v8clbj1.webm", loop=True, image="images/v8/Scene 2/clbj1_000.webp", start_image="images/v8/Scene 2/clbj1_000.webp")
     # Chloe slow blowjob animation. Should be FPP (She's looking into the camera)
-    image v8clbj2 = Movie(play="images/v08/Scene 2/v8clbj2.webm", loop=True, image="images/v08/Scene 2/clbj2_000.webp", start_image="images/v08/Scene 2/clbj2_000.webp")
+    image v8clbj2 = Movie(play="images/v8/Scene 2/v8clbj2.webm", loop=True, image="images/v8/Scene 2/clbj2_000.webp", start_image="images/v8/Scene 2/clbj2_000.webp")
     # Same animation as bj1 but different angle (maybe a close up or something)
-    image v8clbj1f = Movie(play="images/v08/Scene 2/v8clbj1f.webm", loop=True, image="images/v08/Scene 2/clbj1_000.webp", start_image="images/v08/Scene 2/clbj1_000.webp")
+    image v8clbj1f = Movie(play="images/v8/Scene 2/v8clbj1f.webm", loop=True, image="images/v8/Scene 2/clbj1_000.webp", start_image="images/v8/Scene 2/clbj1_000.webp")
     # Fast version of bj1 (need not be re-rendered)
-    image v8clbj2f = Movie(play="images/v08/Scene 2/v8clbj2f.webm", loop=True, image="images/v08/Scene 2/clbj2_000.webp", start_image="images/v08/Scene 2/clbj2_000.webp")
+    image v8clbj2f = Movie(play="images/v8/Scene 2/v8clbj2f.webm", loop=True, image="images/v8/Scene 2/clbj2_000.webp", start_image="images/v8/Scene 2/clbj2_000.webp")
     # Fast version of bj2 (need not be re-rendered)
     # Note the extra images - v8clbj1end, v8clbj1start, v8clbj2end, v8clbj2start
 

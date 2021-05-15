@@ -7,7 +7,7 @@ label v9_ri_sex:
     scene v9ris1 # TPP. Show MC outside Riley's dorm knocking on the door.
     with fade
 
-    play music "music/v09/Scene 34/Track Scene 34_1.mp3" fadein 2
+    play music "music/v9/Scene 34/Track Scene 34_1.mp3" fadein 2
 
     pause 1
 
@@ -95,24 +95,24 @@ label v9_ri_sex:
     scene v9ris7a # TPP. Same camera as v9ris7a, MC now wearing no pants, Riley looking at MC seductively.
     with dissolve
 
-    play music "music/v09/Scene 34/Track Scene 34_2.mp3" fadein 3
+    play music "music/v9/Scene 34/Track Scene 34_2.mp3" fadein 3
 
     pause 1
 
-    image v9rilbj = Movie(play="images/v09/Scene 34/v9rilbj.webm", loop=True, image="images/v09/Scene 34/v9rilbjStart.webp", start_image="images/v09/Scene 34/v9rilbjStart.webp") # FPP. Show Riley giving MC a blowjob, Camera from MC perspective.
-    image v9rilbjf = Movie(play="images/v09/Scene 34/v9rilbjf.webm", loop=True, image="images/v09/Scene 34/v9rilbjStart.webp", start_image="images/v09/Scene 34/v9rilbjStart.webp")
+    image v9rilbj = Movie(play="images/v9/Scene 34/v9rilbj.webm", loop=True, image="images/v9/Scene 34/v9rilbjStart.webp", start_image="images/v9/Scene 34/v9rilbjStart.webp") # FPP. Show Riley giving MC a blowjob, Camera from MC perspective.
+    image v9rilbjf = Movie(play="images/v9/Scene 34/v9rilbjf.webm", loop=True, image="images/v9/Scene 34/v9rilbjStart.webp", start_image="images/v9/Scene 34/v9rilbjStart.webp")
 
-    image v9rilli = Movie(play="images/v09/Scene 34/v9rilli.webm", loop=True, image="images/v09/Scene 34/v9rilliStart.webp", start_image="images/v09/Scene 34/v9rilliStart.webp") # TPP. Show MC going down on Riley, eating out her Clit.
-    image v9rillif = Movie(play="images/v09/Scene 34/v9rillif.webm", loop=True, image="images/v09/Scene 34/v9rilliStart.webp", start_image="images/v09/Scene 34/v9rilliStart.webp")
+    image v9rilli = Movie(play="images/v9/Scene 34/v9rilli.webm", loop=True, image="images/v9/Scene 34/v9rilliStart.webp", start_image="images/v9/Scene 34/v9rilliStart.webp") # TPP. Show MC going down on Riley, eating out her Clit.
+    image v9rillif = Movie(play="images/v9/Scene 34/v9rillif.webm", loop=True, image="images/v9/Scene 34/v9rilliStart.webp", start_image="images/v9/Scene 34/v9rilliStart.webp")
 
-    image v9rilmi = Movie(play="images/v09/Scene 34/v9rilmi.webm", loop=True, image="images/v09/Scene 34/v9rilmiStart.webp", start_image="images/v09/Scene 34/v9rilmiStart.webp") # TPP. Show MC and Riley missionary. Camera from the side.
-    image v9rilmif = Movie(play="images/v09/Scene 34/v9rilmif.webm", loop=True, image="images/v09/Scene 34/v9rilmiStart.webp", start_image="images/v09/Scene 34/v9rilmiStart.webp")
+    image v9rilmi = Movie(play="images/v9/Scene 34/v9rilmi.webm", loop=True, image="images/v9/Scene 34/v9rilmiStart.webp", start_image="images/v9/Scene 34/v9rilmiStart.webp") # TPP. Show MC and Riley missionary. Camera from the side.
+    image v9rilmif = Movie(play="images/v9/Scene 34/v9rilmif.webm", loop=True, image="images/v9/Scene 34/v9rilmiStart.webp", start_image="images/v9/Scene 34/v9rilmiStart.webp")
 
-    image v9rilcg = Movie(play="images/v09/Scene 34/v9rilcg.webm", loop=True, image="images/v09/Scene 34/v9rilcgStart.webp", start_image="images/v09/Scene 34/v9rilcgStart.webp") # FPP. Show Riley Missionary, Camera from MC's perspective.
-    image v9rilcgf = Movie(play="images/v09/Scene 34/v9rilcgf.webm", loop=True, image="images/v09/Scene 34/v9rilcgStart.webp", start_image="images/v09/Scene 34/v9rilcgStart.webp")
+    image v9rilcg = Movie(play="images/v9/Scene 34/v9rilcg.webm", loop=True, image="images/v9/Scene 34/v9rilcgStart.webp", start_image="images/v9/Scene 34/v9rilcgStart.webp") # FPP. Show Riley Missionary, Camera from MC's perspective.
+    image v9rilcgf = Movie(play="images/v9/Scene 34/v9rilcgf.webm", loop=True, image="images/v9/Scene 34/v9rilcgStart.webp", start_image="images/v9/Scene 34/v9rilcgStart.webp")
 
-    image v9rilhj = Movie(play="images/v09/Scene 34/v9rilhj.webm", loop=True, image="images/v09/Scene 34/v9rilhjStart.webp", start_image="images/v09/Scene 34/v9rilhjStart.webp") # FPP. Show Riley giving MC a handjob, Riley mouth wide open.
-    image v9rilhjf = Movie(play="images/v09/Scene 34/v9rilhjf.webm", loop=True, image="images/v09/Scene 34/v9rilhjStart.webp", start_image="images/v09/Scene 34/v9rilhjStart.webp")
+    image v9rilhj = Movie(play="images/v9/Scene 34/v9rilhj.webm", loop=True, image="images/v9/Scene 34/v9rilhjStart.webp", start_image="images/v9/Scene 34/v9rilhjStart.webp") # FPP. Show Riley giving MC a handjob, Riley mouth wide open.
+    image v9rilhjf = Movie(play="images/v9/Scene 34/v9rilhjf.webm", loop=True, image="images/v9/Scene 34/v9rilhjStart.webp", start_image="images/v9/Scene 34/v9rilhjStart.webp")
 
     scene v9rilbj # Pls ignore as animation
     with dissolve
@@ -340,7 +340,7 @@ label v9_ri_sex:
 
     u "Do you... need anything?"
 
-    play music "music/v09/Scene 34/Track Scene 34_3.mp3" fadein 3
+    play music "music/v9/Scene 34/Track Scene 34_3.mp3" fadein 3
 
     scene v9ris23a # FPP. Same camera as v9ris23, smile, mouth open.
     with dissolve

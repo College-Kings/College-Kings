@@ -1,19 +1,19 @@
-### v08 beginning. Variable definitions here
+### v8 beginning. Variable definitions here
 label v8start:
     if ending == "lauren":
-        jump v08_la_start
+        jump v8_la_start
     elif ending == "chloe":
-        jump v08_cl_start
+        jump v8_cl_start
     elif ending == "riley" and rileyrs:
-        jump v08_ri_start
+        jump v8_ri_start
     elif ending == "riley":
-        jump v08_ri_start_fr
+        jump v8_ri_start_fr
     else:
         jump hoco_amb_night
 
-    ### SCENE 1: Lauren v07 ending continued
-label v08_la_start:
-    # Note to renderers: Make sure the clothes (they're in underwear) and any other props are the same as Lauren's ending in v07
+    ### SCENE 1: Lauren v7 ending continued
+label v8_la_start:
+    # Note to renderers: Make sure the clothes (they're in underwear) and any other props are the same as Lauren's ending in v7
 
     stop music fadeout 3
 

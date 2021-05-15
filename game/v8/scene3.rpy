@@ -1,9 +1,9 @@
-### SCENE 3: v07 Riley romance ending continued
-label v08_ri_start:
-    # Note to renderers: Make sure the MC is in his suit and Riley is in her HoCo dress. Any other props are the same as Riley's lewd ending in v07. Context: MC and Riley are both sitting on her bed in her room and she's whispering in his ear
+### SCENE 3: v7 Riley romance ending continued
+label v8_ri_start:
+    # Note to renderers: Make sure the MC is in his suit and Riley is in her HoCo dress. Any other props are the same as Riley's lewd ending in v7. Context: MC and Riley are both sitting on her bed in her room and she's whispering in his ear
     stop music fadeout 2
 
-    scene v8s25 # Same as sfr4ri55 (from v07) but MC talking now
+    scene v8s25 # Same as sfr4ri55 (from v7) but MC talking now
     with dissolve
     u "Mhm... Tell me more."
 
@@ -105,16 +105,16 @@ label v08_ri_start:
     with dissolve
     pause
 
-    image v8ricg1 = Movie(play="images/v08/Scene 3/v8ricg1.webm", loop=True, image="images/v08/Scene 3/risex000.webp", start_image="images/v08/Scene 3/risex000.webp") # CG TPP
-    image v8ricg1f = Movie(play="images/v08/Scene 3/v8ricg1f.webm", loop=True, image="images/v08/Scene 3/risex000.webp", start_image="images/v08/Scene 3/risex000.webp")
-    image v8ricg2 = Movie(play="images/v08/Scene 3/v8ricg2.webm", loop=True, image="images/v08/Scene 3/risex2_000.webp", start_image="images/v08/Scene 3/risex2_000.webp") # CG FPP
-    image v8ricg2f = Movie(play="images/v08/Scene 3/v8ricg2f.webm", loop=True, image="images/v08/Scene 3/risex2_000.webp", start_image="images/v08/Scene 3/risex2_000.webp")
-    image v8ridg1 = Movie(play="images/v08/Scene 3/v8ridg1.webm", loop=True, image="images/v08/Scene 3/risex3000.webp", start_image="images/v08/Scene 3/risex3000.webp") # Doggy smooth
-    image v8ridg1f = Movie(play="images/v08/Scene 3/v8ridg1.webm", loop=True, image="images/v08/Scene 3/risex3000.webp", start_image="images/v08/Scene 3/risex3000.webp")
-    image v8ridg2 = Movie(play="images/v08/Scene 3/v8ridg2.webm", loop=True, image="images/v08/Scene 3/risex4_000.webp", start_image="images/v08/Scene 3/risex4_000.webp") # Doggy rough
-    image v8ridg2f = Movie(play="images/v08/Scene 3/v8ridg2f.webm", loop=True, image="images/v08/Scene 3/risex4_000.webp", start_image="images/v08/Scene 3/risex4_000.webp")
-    image v8ridg3 = Movie(play="images/v08/Scene 3/v8ridg3.webm", loop=True, image="images/v08/Scene 3/risex5_00.webp", start_image="images/v08/Scene 3/risex5_00.webp") # Doggy smooth angle 2
-    image v8ridg3f = Movie(play="images/v08/Scene 3/v8ridg3.webm", loop=True, image="images/v08/Scene 3/risex5_00.webp", start_image="images/v08/Scene 3/risex5_00.webp")
+    image v8ricg1 = Movie(play="images/v8/Scene 3/v8ricg1.webm", loop=True, image="images/v8/Scene 3/risex000.webp", start_image="images/v8/Scene 3/risex000.webp") # CG TPP
+    image v8ricg1f = Movie(play="images/v8/Scene 3/v8ricg1f.webm", loop=True, image="images/v8/Scene 3/risex000.webp", start_image="images/v8/Scene 3/risex000.webp")
+    image v8ricg2 = Movie(play="images/v8/Scene 3/v8ricg2.webm", loop=True, image="images/v8/Scene 3/risex2_000.webp", start_image="images/v8/Scene 3/risex2_000.webp") # CG FPP
+    image v8ricg2f = Movie(play="images/v8/Scene 3/v8ricg2f.webm", loop=True, image="images/v8/Scene 3/risex2_000.webp", start_image="images/v8/Scene 3/risex2_000.webp")
+    image v8ridg1 = Movie(play="images/v8/Scene 3/v8ridg1.webm", loop=True, image="images/v8/Scene 3/risex3000.webp", start_image="images/v8/Scene 3/risex3000.webp") # Doggy smooth
+    image v8ridg1f = Movie(play="images/v8/Scene 3/v8ridg1.webm", loop=True, image="images/v8/Scene 3/risex3000.webp", start_image="images/v8/Scene 3/risex3000.webp")
+    image v8ridg2 = Movie(play="images/v8/Scene 3/v8ridg2.webm", loop=True, image="images/v8/Scene 3/risex4_000.webp", start_image="images/v8/Scene 3/risex4_000.webp") # Doggy rough
+    image v8ridg2f = Movie(play="images/v8/Scene 3/v8ridg2f.webm", loop=True, image="images/v8/Scene 3/risex4_000.webp", start_image="images/v8/Scene 3/risex4_000.webp")
+    image v8ridg3 = Movie(play="images/v8/Scene 3/v8ridg3.webm", loop=True, image="images/v8/Scene 3/risex5_00.webp", start_image="images/v8/Scene 3/risex5_00.webp") # Doggy smooth angle 2
+    image v8ridg3f = Movie(play="images/v8/Scene 3/v8ridg3.webm", loop=True, image="images/v8/Scene 3/risex5_00.webp", start_image="images/v8/Scene 3/risex5_00.webp")
 
     scene v8ricg1
     with dissolve

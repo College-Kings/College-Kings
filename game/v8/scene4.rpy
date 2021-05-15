@@ -1,6 +1,6 @@
-### SCENE 4: v07 Riley friends ending continued
-label v08_ri_start_fr:
-    # Note to renderers: Make sure the MC is in his suit and Riley is in her HoCo dress. Any other props are the same as Riley's friendship ending in v07
+### SCENE 4: v7 Riley friends ending continued
+label v8_ri_start_fr:
+    # Note to renderers: Make sure the MC is in his suit and Riley is in her HoCo dress. Any other props are the same as Riley's friendship ending in v7
 
     scene v8s40
     with dissolve
@@ -27,7 +27,7 @@ label v08_ri_start_fr:
         with dissolve
         u "Did you know Aubrey is bisexual?"
 
-        scene v8s40 # sfr4ri56 from v07 continued, so keep the setting same. Riley surprised/intrigued a little and talking
+        scene v8s40 # sfr4ri56 from v7 continued, so keep the setting same. Riley surprised/intrigued a little and talking
         with dissolve
         ri "Wait, really?"
 

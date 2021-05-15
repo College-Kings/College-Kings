@@ -7,7 +7,7 @@ label v9_history_class:
     scene v9hc1 # TPP. Show MC running down the college college hallway towards Mr. Lees class, camera from behind.
     with fade
 
-    play music "music/v09/Scene 10/Track Scene 10.mp3" fadein 3
+    play music "music/v9/Scene 10/Track Scene 10.mp3" fadein 3
 
     pause 1
 
@@ -279,7 +279,7 @@ label v9_hc_return:
     scene v9hc23 # TPP. Show Pen cam MC with their props, Mr. Lee stood looking at them, lee mouth open.
     with fade
 
-    play music "music/v09/Scene 10/Track Scene 10.mp3" fadein 3
+    play music "music/v9/Scene 10/Track Scene 10.mp3" fadein 3
 
     lee "Great job! I'm impressed. That's going to be hard to beat."
 

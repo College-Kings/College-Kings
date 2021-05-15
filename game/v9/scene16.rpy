@@ -29,7 +29,7 @@ label v9_room_thur_night:
             call screen phone
 
             label s16_Reply1:
-                $ contact_Emily.newImgMessage("images/v09/scene 16/v9emiKiwii.webp")
+                $ contact_Emily.newImgMessage("images/v9/scene 16/v9emiKiwii.webp")
                 $ contact_Emily.addReply("Be right there!", "s16_Reply1a")
 
                 call screen messager(contact_Emily)
@@ -77,7 +77,7 @@ label v9_room_thur_night:
             call screen phone
 
             label s16_Reply2:
-                $ contact_Emily.newImgMessage("images/v09/scene 16/v9emiKiwii.webp")
+                $ contact_Emily.newImgMessage("images/v9/scene 16/v9emiKiwii.webp")
                 $ contact_Emily.addReply("Be right there!", "s16_PhoneContinueA")
                 call screen messager(contact_Emily)
 
@@ -436,24 +436,24 @@ label v9_emily_dorm:
 
     u "Oh God. I've missed this."
 
-    play music "music/v09/Scene 16/Scene Track 16.mp3" fadein 2
+    play music "music/v9/Scene 16/Scene Track 16.mp3" fadein 2
 
     scene v9emi13b # FPP. Same camera as v9emi13, on her knees on the floor looking up at camera, seductive expression, Emily mouth open.
     with dissolve
 
     em "You ain't seen nothing yet."
 
-    image v9emibj = Movie(play="images/v09/Scene 16/v9emibj.webm", loop=True, image="images/v09/Scene 16/v9emibjStart.webp", start_image="images/v09/Scene 16/v9emibjStart.webp") # FPP. Emily on her knees giving MC a blowjob who is sat on the edge of Emily's bed.
-    image v9emibjf = Movie(play="images/v09/Scene 16/v9emibjf.webm", loop=True, image="images/v09/Scene 16/v9emibjStart.webp", start_image="images/v09/Scene 16/v9emibjStart.webp")
+    image v9emibj = Movie(play="images/v9/Scene 16/v9emibj.webm", loop=True, image="images/v9/Scene 16/v9emibjStart.webp", start_image="images/v9/Scene 16/v9emibjStart.webp") # FPP. Emily on her knees giving MC a blowjob who is sat on the edge of Emily's bed.
+    image v9emibjf = Movie(play="images/v9/Scene 16/v9emibjf.webm", loop=True, image="images/v9/Scene 16/v9emibjStart.webp", start_image="images/v9/Scene 16/v9emibjStart.webp")
 
-    image v9emimi = Movie(play="images/v09/Scene 16/v9emimi.webm", loop=True, image="images/v09/Scene 16/v9emimiStart.webp", start_image="images/v09/Scene 16/v9emimiStart.webp") # TPP. MC and Emily, missionary, camera from the side, try and show as much action as possible.
-    image v9emimif = Movie(play="images/v09/Scene 16/v9emimif.webm", loop=True, image="images/v09/Scene 16/v9emimiStart.webp", start_image="images/v09/Scene 16/v9emimiStart.webp")
+    image v9emimi = Movie(play="images/v9/Scene 16/v9emimi.webm", loop=True, image="images/v9/Scene 16/v9emimiStart.webp", start_image="images/v9/Scene 16/v9emimiStart.webp") # TPP. MC and Emily, missionary, camera from the side, try and show as much action as possible.
+    image v9emimif = Movie(play="images/v9/Scene 16/v9emimif.webm", loop=True, image="images/v9/Scene 16/v9emimiStart.webp", start_image="images/v9/Scene 16/v9emimiStart.webp")
 
-    image v9emicg = Movie(play="images/v09/Scene 16/v9emicg.webm", loop=True, image="images/v09/Scene 16/v9emicgStart.webp", start_image="images/v09/Scene 16/v9emicgStart.webp") # FPP. Show Emily riding MC's penis (cowgirl). First person perspective as if MC is looking at her whilst lying down.
-    image v9emicgf = Movie(play="images/v09/Scene 16/v9emicgf.webm", loop=True, image="images/v09/Scene 16/v9emicgStart.webp", start_image="images/v09/Scene 16/v9emicgStart.webp")
+    image v9emicg = Movie(play="images/v9/Scene 16/v9emicg.webm", loop=True, image="images/v9/Scene 16/v9emicgStart.webp", start_image="images/v9/Scene 16/v9emicgStart.webp") # FPP. Show Emily riding MC's penis (cowgirl). First person perspective as if MC is looking at her whilst lying down.
+    image v9emicgf = Movie(play="images/v9/Scene 16/v9emicgf.webm", loop=True, image="images/v9/Scene 16/v9emicgStart.webp", start_image="images/v9/Scene 16/v9emicgStart.webp")
 
-    image v9emian = Movie(play="images/v09/Scene 16/v9emian.webm", loop=True, image="images/v09/Scene 16/v9emianStart.webp", start_image="images/v09/Scene 16/v9emianStart.webp") # TPP. MC and Emily, doggy style Anal show as much action as possible.
-    image v9emianf = Movie(play="images/v09/Scene 16/v9emianf.webm", loop=True, image="images/v09/Scene 16/v9emianStart.webp", start_image="images/v09/Scene 16/v9emianStart.webp")
+    image v9emian = Movie(play="images/v9/Scene 16/v9emian.webm", loop=True, image="images/v9/Scene 16/v9emianStart.webp", start_image="images/v9/Scene 16/v9emianStart.webp") # TPP. MC and Emily, doggy style Anal show as much action as possible.
+    image v9emianf = Movie(play="images/v9/Scene 16/v9emianf.webm", loop=True, image="images/v9/Scene 16/v9emianStart.webp", start_image="images/v9/Scene 16/v9emianStart.webp")
 
     scene v9emibj
     with dissolve

@@ -25,7 +25,7 @@ label amber_sex_at_joshs:
 
     $ get_a_room = True
     if not steam:
-        image get_a_room = "images/v08/achievements/getaroom.webp"
+        image get_a_room = "images/v8/achievements/getaroom.webp"
         show get_a_room:
             xpos 0
             ypos -200
@@ -69,17 +69,17 @@ label amber_sex_at_joshs:
     else:
         am "Oh wow, I could get used to this."
 
-    image v8am2bj1 = Movie(play="images/v08/Scene 30/v8am2bj1.webm", loop=True, image="images/v08/Scene 30/2ambj_000.webp", start_image="images/v08/Scene 30/2ambj_000.webp") # BJ TPP
-    image v8am2bj1f = Movie(play="images/v08/Scene 30/v8am2bj1f.webm", loop=True, image="images/v08/Scene 30/2ambj_000.webp", start_image="images/v08/Scene 30/2ambj_000.webp")
+    image v8am2bj1 = Movie(play="images/v8/Scene 30/v8am2bj1.webm", loop=True, image="images/v8/Scene 30/2ambj_000.webp", start_image="images/v8/Scene 30/2ambj_000.webp") # BJ TPP
+    image v8am2bj1f = Movie(play="images/v8/Scene 30/v8am2bj1f.webm", loop=True, image="images/v8/Scene 30/2ambj_000.webp", start_image="images/v8/Scene 30/2ambj_000.webp")
 
-    image v8am2cg1 = Movie(play="images/v08/Scene 30/v8am2cg1.webm", loop=True, image="images/v08/Scene 30/cf_00.webp", start_image="images/v08/Scene 30/cf_00.webp") # CG FPP
-    image v8am2cg1f = Movie(play="images/v08/Scene 30/v8am2cg1f.webm", loop=True, image="images/v08/Scene 30/cf_00.webp", start_image="images/v08/Scene 30/cf_00.webp")
+    image v8am2cg1 = Movie(play="images/v8/Scene 30/v8am2cg1.webm", loop=True, image="images/v8/Scene 30/cf_00.webp", start_image="images/v8/Scene 30/cf_00.webp") # CG FPP
+    image v8am2cg1f = Movie(play="images/v8/Scene 30/v8am2cg1f.webm", loop=True, image="images/v8/Scene 30/cf_00.webp", start_image="images/v8/Scene 30/cf_00.webp")
 
-    image v8am2cg2 = Movie(play="images/v08/Scene 30/v8am2cg2.webm", loop=True, image="images/v08/Scene 30/cgt_00.webp", start_image="images/v08/Scene 30/cgt_00.webp") # CG TPP
-    image v8am2cg2f = Movie(play="images/v08/Scene 30/v8am2cg2f.webm", loop=True, image="images/v08/Scene 30/cgt_00.webp", start_image="images/v08/Scene 30/cgt_00.webp")
+    image v8am2cg2 = Movie(play="images/v8/Scene 30/v8am2cg2.webm", loop=True, image="images/v8/Scene 30/cgt_00.webp", start_image="images/v8/Scene 30/cgt_00.webp") # CG TPP
+    image v8am2cg2f = Movie(play="images/v8/Scene 30/v8am2cg2f.webm", loop=True, image="images/v8/Scene 30/cgt_00.webp", start_image="images/v8/Scene 30/cgt_00.webp")
 
-    image v8am2dg1 = Movie(play="images/v08/Scene 30/v8am2dg1f.webm", loop=True, image="images/v08/Scene 30/cgt_000.webp", start_image="images/v08/Scene 30/cgt_000.webp") # Doggy 1 (close up of penetration)
-    image v8am2dg1f = Movie(play="images/v08/Scene 30/v8am2dg1f.webm", loop=True, image="images/v08/Scene 30/cgt_000.webp", start_image="images/v08/Scene 30/cgt_000.webp")
+    image v8am2dg1 = Movie(play="images/v8/Scene 30/v8am2dg1f.webm", loop=True, image="images/v8/Scene 30/cgt_000.webp", start_image="images/v8/Scene 30/cgt_000.webp") # Doggy 1 (close up of penetration)
+    image v8am2dg1f = Movie(play="images/v8/Scene 30/v8am2dg1f.webm", loop=True, image="images/v8/Scene 30/cgt_000.webp", start_image="images/v8/Scene 30/cgt_000.webp")
 
     scene v8am2bj1
     with dissolve

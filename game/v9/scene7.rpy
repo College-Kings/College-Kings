@@ -35,7 +35,7 @@ label v9_before_lake_fr:
 scene fr5lakefull
 with dissolve
 
-play music "music/v09/Scene 7/Track Scene 7.mp3" fadein 3
+play music "music/v9/Scene 7/Track Scene 7.mp3" fadein 3
 
 label fr5zoomout:
 
@@ -45,20 +45,20 @@ call screen fr5lakefull
 
 screen fr5lakefull(): ###### LAKE ZOOM OUT SCREEN
 
-    add "images/v09/scene 7/fr5lakefull.webp"
+    add "images/v9/scene 7/fr5lakefull.webp"
 
     imagebutton: #switch to zoomed in view
         ypos 540
         xpos 550
-        idle "images/v09/scene 7/fr5zoomin.webp"
-        hover "images/v09/scene 7/fr5zoominhover.webp"
+        idle "images/v9/scene 7/fr5zoomin.webp"
+        hover "images/v9/scene 7/fr5zoominhover.webp"
         action Jump ("fr5zoomin")
 
     imagebutton: # RYAN
         ypos 506
         xpos 935
-        idle "images/v09/scene 7/fr5ryan.webp"
-        hover "images/v09/scene 7/fr5ryanhover.webp"
+        idle "images/v9/scene 7/fr5ryan.webp"
+        hover "images/v9/scene 7/fr5ryanhover.webp"
         if not fr5ryan:
             action Jump ("fr5ryan1")
         else:
@@ -67,8 +67,8 @@ screen fr5lakefull(): ###### LAKE ZOOM OUT SCREEN
     imagebutton: # DOGWALKER
         ypos 576
         xpos 1590
-        idle "images/v09/scene 7/fr5dogwalker.webp"
-        hover "images/v09/scene 7/fr5dogwalkerhover.webp"
+        idle "images/v9/scene 7/fr5dogwalker.webp"
+        hover "images/v9/scene 7/fr5dogwalkerhover.webp"
         if not fr5dogwalker:
             action Jump ("fr5dogwalker1")
         else:
@@ -77,8 +77,8 @@ screen fr5lakefull(): ###### LAKE ZOOM OUT SCREEN
     imagebutton: # TREEGUY
         ypos 540
         xpos 75
-        idle "images/v09/scene 7/fr5treeguy.webp"
-        hover "images/v09/scene 7/fr5treeguyhover.webp"
+        idle "images/v9/scene 7/fr5treeguy.webp"
+        hover "images/v9/scene 7/fr5treeguyhover.webp"
         if not fr5treeguy:
             action Jump ("fr5treeguy1")
         else:
@@ -92,20 +92,20 @@ call screen fr5lakezoomin
 
 screen fr5lakezoomin(): ###### LAKE ZOOM OUT SCREEN
 
-    add "images/v09/scene 7/fr5lakezoomin.webp"
+    add "images/v9/scene 7/fr5lakezoomin.webp"
 
     imagebutton: #switch to zoomed out view
         ypos 900
         xpos 350
-        idle "images/v09/scene 7/fr5zoomout.webp"
-        hover "images/v09/scene 7/fr5zoomouthover.webp"
+        idle "images/v9/scene 7/fr5zoomout.webp"
+        hover "images/v9/scene 7/fr5zoomouthover.webp"
         action Jump ("fr5zoomout")
 
     imagebutton: # AUBREY
         ypos 567
         xpos 244
-        idle "images/v09/scene 7/fr5aubrey.webp"
-        hover "images/v09/scene 7/fr5aubreyhover.webp"
+        idle "images/v9/scene 7/fr5aubrey.webp"
+        hover "images/v9/scene 7/fr5aubreyhover.webp"
         if not fr5aubrey:
             action Jump ("fr5aubrey1")
         else:
@@ -114,8 +114,8 @@ screen fr5lakezoomin(): ###### LAKE ZOOM OUT SCREEN
     imagebutton: # RILEY
         ypos 329
         xpos 1523
-        idle "images/v09/scene 7/fr5riley.webp"
-        hover "images/v09/scene 7/fr5rileyhover.webp"
+        idle "images/v9/scene 7/fr5riley.webp"
+        hover "images/v9/scene 7/fr5rileyhover.webp"
         if not fr5riley:
             action Jump ("fr5riley1")
         else:
@@ -937,11 +937,11 @@ menu:
                 
                 au "Now, where were we?"
 
-                image v9slake17vid = Movie (play="images/v09/scene 7/v9slake17vid.webm", loop = True, image = "images/v09/scene 7/v9slake17vidend.webp", start_image = "images/v09/scene 7/v9slake17vidstart.webp")
-                image v9slake18vid = Movie (play="images/v09/scene 7/v9slake18vid.webm", loop = True, image = "images/v09/scene 7/v9slake18vidend.webp", start_image = "images/v09/scene 7/v9slake18vidstart.webp")
-                image v9slake18vidfast = Movie (play="images/v09/scene 7/v9slake18vidf.webm", loop = True, image = "images/v09/scene 7/v9slake18vidend.webp", start_image = "images/v09/scene 7/v9slake18vidstart.webp")
-                image v9slake19vid = Movie (play="images/v09/scene 7/v9slake19vid.webm", loop = True, image = "images/v09/scene 7/v9slake19vidend.webp", start_image = "images/v09/scene 7/v9slake19vidstart.webp")
-                image v9slake19vidfast = Movie (play="images/v09/scene 7/v9slake19vidf.webm", loop = True, image = "images/v09/scene 7/v9slake19vidend.webp", start_image = "images/v09/scene 7/v9slake19vidstart.webp")
+                image v9slake17vid = Movie (play="images/v9/scene 7/v9slake17vid.webm", loop = True, image = "images/v9/scene 7/v9slake17vidend.webp", start_image = "images/v9/scene 7/v9slake17vidstart.webp")
+                image v9slake18vid = Movie (play="images/v9/scene 7/v9slake18vid.webm", loop = True, image = "images/v9/scene 7/v9slake18vidend.webp", start_image = "images/v9/scene 7/v9slake18vidstart.webp")
+                image v9slake18vidfast = Movie (play="images/v9/scene 7/v9slake18vidf.webm", loop = True, image = "images/v9/scene 7/v9slake18vidend.webp", start_image = "images/v9/scene 7/v9slake18vidstart.webp")
+                image v9slake19vid = Movie (play="images/v9/scene 7/v9slake19vid.webm", loop = True, image = "images/v9/scene 7/v9slake19vidend.webp", start_image = "images/v9/scene 7/v9slake19vidstart.webp")
+                image v9slake19vidfast = Movie (play="images/v9/scene 7/v9slake19vidf.webm", loop = True, image = "images/v9/scene 7/v9slake19vidend.webp", start_image = "images/v9/scene 7/v9slake19vidstart.webp")
 
                 scene v9slake17vid # mc and aubrey make out animation
                 with dissolve

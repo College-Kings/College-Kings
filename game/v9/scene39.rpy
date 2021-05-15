@@ -7,7 +7,7 @@ label v9_hang_w_linds:
     scene v9hwl1 # TPP. Show MC knocking on the door of the chicks house.
     with fade
 
-    play music "music/v09/Scene 39/Track Scene 39_1.mp3" fadein 2
+    play music "music/v9/Scene 39/Track Scene 39_1.mp3" fadein 2
 
     pause 1
 
@@ -142,8 +142,8 @@ label v9_hang_w_linds:
     scene v9hwl6 # TPP. Show Lindsey reaching for MC's hand, compassionate expression, both looking at eachother.
     with dissolve
 
-    image v9links = Movie(play="images/v09/Scene 39/v9links.webm", loop=True, image="images/v09/Scene 39/v9linksStart.webp", start_image="images/v09/Scene 39/v9linksStart.webp") # TPP. MC and Lindsey passionately making out.
-    image v9linksf = Movie(play="images/v09/Scene 39/v9linksf.webm", loop=True, image="images/v09/Scene 39/v9linksStart.webp", start_image="images/v09/Scene 39/v9linksStart.webp")
+    image v9links = Movie(play="images/v9/Scene 39/v9links.webm", loop=True, image="images/v9/Scene 39/v9linksStart.webp", start_image="images/v9/Scene 39/v9linksStart.webp") # TPP. MC and Lindsey passionately making out.
+    image v9linksf = Movie(play="images/v9/Scene 39/v9linksf.webm", loop=True, image="images/v9/Scene 39/v9linksStart.webp", start_image="images/v9/Scene 39/v9linksStart.webp")
 
     menu:
         "Let Lindsey Grab Your Hand":
@@ -195,7 +195,7 @@ label v9_hang_w_linds:
             
             stop music fadeout 3
 
-            play music "music/v09/Scene 39/Track Scene 39_2.mp3" fadein 2
+            play music "music/v9/Scene 39/Track Scene 39_2.mp3" fadein 2
 
 
             menu:
