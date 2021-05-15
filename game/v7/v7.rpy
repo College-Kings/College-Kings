@@ -5445,7 +5445,7 @@ label after_pledges:
                 $ emilyText = True
                 $ addPoint("bf")
 
-                $ contact_Emily.addReply(_("Hey, sorry I lost track of time. You up?", "emrep3a")
+                $ contact_Emily.addReply(_("Hey, sorry I lost track of time. You up?"))
 
                 label phonebb:
                     call screen phone
@@ -9250,7 +9250,7 @@ label riclimax:
 
 ########## SCENE 36 MAKING SIGNS W/ AUTUMN
 label signs_with_autumn:
-    $ contact_Autumn.newMessage(_("Hey, it's Autumn.", queue=False)
+    $ contact_Autumn.newMessage(_("Hey, it's Autumn."), queue=False)
     $ contact_Autumn.newMessage(_("I'm just about to start making signs. Do you still want to join?"), queue=False)
     $ contact_Autumn.addReply(_("Yes, of course. I'd love to."))
     $ contact_Autumn.newMessage(_("Great. I'm at the Deer's House. Do you know how to get there?"))
