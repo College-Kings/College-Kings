@@ -398,7 +398,11 @@ screen kiwiiPost(post):
 
     use kiwiiTemplate:
 
-        add Transform(post.img, size=(376, 212)) xalign 0.5 ypos 265
+        imagebutton:
+            xalign 0.5
+            ypos 265
+            idle Transform(post.img, size=(376, 212))
+            action Show("kiwii_image", img=post.img)
 
         viewport:
             mousewheel True
