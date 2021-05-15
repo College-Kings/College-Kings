@@ -2576,6 +2576,7 @@ label thisbewalk:
         " "
 
         label phoneao:
+            call screen phone
             if contact_Lauren.getReplies():
                 u "(I should probably reply.)"
                 jump phoneao
@@ -8948,6 +8949,7 @@ label rileysexscene:
 
 # Pre-cursor to sex with Riley
     $ rileyrs = True
+    $ rileysex = True
     scene ridrm1 # You knocking on Riley's dorm door (third person)
     with dissolve
 

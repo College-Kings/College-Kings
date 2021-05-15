@@ -3718,6 +3718,7 @@ label fy_bd: # not gone to Emily's
             scene s565 # mc sitting at his desk
             with dissolve
 
+            call screen phone
             if contact_Aubrey.getReplies():
                 u "(I should probably reply to Aubrey.)"
                 jump v6_phoneah
