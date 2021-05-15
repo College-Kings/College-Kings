@@ -4,5 +4,5 @@ label checkReplies(contact=None, customMessage="I need to check my phone"):
     
     call screen phone
     if contact.getReplies():
-        u customMessage
+        u "[customMessage]"
         return checkReplies(contact)
