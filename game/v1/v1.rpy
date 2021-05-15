@@ -1991,7 +1991,7 @@ label at_bd:
 
     ### Sex dream
 
-    scene s1  ### close to the kitchen counter
+    scene sda1  ### close to the kitchen counter
     with Fade (1,0,1)
 
     ri "Wow, you guys have a really nice house."
@@ -4130,5 +4130,4 @@ label v1_freeRoam2_end:
     #####punch
     $ renpy.movie_cutscene("punchdemo.webm", loops=0)
 
-    " "
 jump v2start

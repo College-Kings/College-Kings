@@ -398,24 +398,24 @@ screen kiwiiPost(post):
 
     use kiwiiTemplate:
 
-        add Transform(post.img, size=(376, 212)) xalign 0.5 ypos 265
+        imagebutton:
+            xalign 0.5
+            ypos 265
+            idle Transform(post.img, size=(376, 212))
+            action Show("kiwii_image", img=post.img)
 
-        vpgrid:
-            cols 1
+        viewport:
             mousewheel True
             draggable True
             xysize(350, 362)
             xalign 0.5
             ypos 485
-            spacing 15
+            
+            vbox:
+                spacing 20
 
-            for comment in post.comments:
-                fixed:
-                    xsize 350
-                    ymaximum 90
-
+                for comment in post.sentComments:
                     vbox:
-                        xsize 300
                         spacing 5
 
                         hbox:
@@ -424,25 +424,28 @@ screen kiwiiPost(post):
                             add Transform(comment.getProfilePicture(), zoom=0.05)
                             text comment.getUsername() style "kiwii_ProfileName" yalign 0.5
 
-                        text comment.getText() style "kiwii_CommentText"
+                        hbox:
+                            xsize 275
+                            spacing 5
 
-                    hbox:
-                        align(0.95, 1.0)
+                            text comment.getMessage() style "kiwii_CommentText"
 
-                        imagebutton:
-                            idle "images/phone/Kiwii/AppAssets/Like.webp"
-                            hover "images/phone/Kiwii/AppAssets/LikePress.webp"
-                            selected_idle "images/phone/Kiwii/AppAssets/LikePress.webp"
-                            selected comment.liked
-                            action Function(comment.toggleLike)
+                        hbox:
+                            spacing 5
 
+                            imagebutton:
+                                idle "images/phone/Kiwii/AppAssets/Like.webp"
+                                hover "images/phone/Kiwii/AppAssets/LikePress.webp"
+                                selected_idle "images/phone/Kiwii/AppAssets/LikePress.webp"
+                                selected comment.liked
+                                action Function(comment.toggleLike)
+                            text "[comment.numberLikes]" style "kiwii_LikeCounter" yalign 0.5
 
-                        text "{}".format(comment.numberLikes) style "kiwii_LikeCounter" yalign 0.5 xoffset 5
-
-            null
-
-    if post.replies:
-        vbox xpos 1200 yalign 0.84 spacing 15:
+    if post.getReplies():
+        vbox:
+            xpos 1200
+            yalign 0.84
+            spacing 15
 
             for reply in post.replies:
                 textbutton reply.reply:

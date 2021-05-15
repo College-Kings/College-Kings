@@ -62,18 +62,20 @@ screen achievements():
             xalign 0.5
 
         viewport:
-            spacing 10
             pos (780, 280)
             xysize (358, 600)
             mousewheel True
             draggable True
 
-            for achievement in achievements:
-                if achievement.checkCondition():
-                    vbox:
-                        spacing -10
-                        
-                        textbutton achievement.achieve style "ach"
-                        textbutton achievement.text style "ach2"
-                else:
-                    textbutton achievement.achieve style "ach3"
+            vbox:
+                spacing 10
+                
+                for achievement in achievements:
+                    if achievement.checkCondition():
+                        vbox:
+                            spacing -10
+                            
+                            textbutton achievement.achieve style "ach"
+                            textbutton achievement.text style "ach2"
+                    else:
+                        textbutton achievement.achieve style "ach3"

@@ -36,7 +36,7 @@ label after_load:
             try: kiwiiPost.img = kiwiiPost.image
             except AttributeError: pass
             
-            kiwiiPost.image = os.path.splitext(kiwiiPost.image)[0] + ".webp"
+            kiwiiPost.img = os.path.splitext(kiwiiPost.img)[0] + ".webp"
 
             try: kiwiiPost.sentComments = kiwiiPost.comments
             except AttributeError: pass

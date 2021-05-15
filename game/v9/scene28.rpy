@@ -118,7 +118,7 @@ label v9_call_w_lindsey:
 
         play sound "sounds/rejectcall.mp3"
 
-        scene 
+        scene v9cwl3
         with dissolve
 
         u "(Was she hinting at something? \"I could be even sweeter\", what does that mean? Oh well, time to get some rest. I got a big day tomorrow.)"
