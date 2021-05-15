@@ -230,7 +230,7 @@ screen messager(contact=None):
                             style "msgright"
                             action Show("phone_image", img=message.image)
 
-        if contact.sentMessages and contact.sentMessages[-1].replies:
+        if contact.getReplies():
                 hbox:
                     xalign 0.5
                     ypos 855
