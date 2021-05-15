@@ -390,7 +390,7 @@ label dtl_cont1:
 
     ri "Quite the contrary."
 
-    scene v9dtl1b
+    scene v9dtl1d
     with dissolve
 
     au "And it's green, right?"
