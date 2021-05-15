@@ -25,7 +25,7 @@ label mc_wolves_sun_morn:
     with dissolve
     pause 0.5
 
-    call screen messager(contact_Penelope)
+    jump v8_s14_pen_text
 
 label mc_apes_sun_morn:
     scene v8ssm3 # TPP. Show MC waking up in his bed in his Apes room, MC yawning.
@@ -48,14 +48,14 @@ label mc_apes_sun_morn:
     with dissolve
     pause 0.5
 
-    call screen messager(contact_Penelope)
+    jump v8_s14_pen_text
 
 
 label v8_s14_pen_text:
+    call screen phone
     if contact_Penelope.getReplies():
         u "(I should reply to her.)"
         jump v8_s14_pen_text
-    else:
         
-        u "(That sounded serious. What got her all upset so sudden?)"
-        jump penelope_dorm_hack
+    u "(That sounded serious. What got her all upset so sudden?)"
+    jump penelope_dorm_hack

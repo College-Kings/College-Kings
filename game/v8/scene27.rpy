@@ -11,19 +11,17 @@ label mon_eve_room_josh:
 
         play sound "sounds/vibrate.mp3"
         
-
         u "(Let's see who this is.)"
 
         if helpJosh:
-            
             $ contact_Josh.newMessage("Hey bro! It's time! Meet me at mine, okay?")
-            $ contact_Josh.addReply("Okay, I'm on my way.", "v8s27_phoneContinue1")
+            $ contact_Josh.addReply("Okay, I'm on my way.")
 
             label v8s27_phoneContinue1:
+                call screen phone
                 if contact_Josh.getReplies():
                     u "I should really check my phone"
                     jump v8s27_phoneContinue1
-                
 
             scene v8spd2 # TPP. Show MC getting up from his desk.
             with dissolve
@@ -90,18 +88,15 @@ label mon_eve_room_josh:
         else:
 
             $ contact_Josh.newMessage("Hey bro, I got robbed and my ass kicked bad! Really wish you came with me, man.")
-            $ contact_Josh.addReply("Fuck! Are you ok??", "v8s27_phoneReply1")
-
-            label v8s27_phoneReply1:
-                $ contact_Josh.newMessage("No, man! I hurt everywhere! Plus my shit is gone!")
-                $ contact_Josh.addReply("Hold on, I'll be right over", "v8s27_phoneContinue2")
-                call screen messager(contact_Josh)
+            $ contact_Josh.addReply("Fuck! Are you ok??")
+            $ contact_Josh.newMessage("No, man! I hurt everywhere! Plus my shit is gone!")
+            $ contact_Josh.addReply("Hold on, I'll be right over")
 
             label v8s27_phoneContinue2:
+                call screen phone
                 if contact_Josh.getReplies():
                     u "I should really check my phone"
                     jump v8s27_phoneContinue2
-                
                     
             scene v8spd2
             with dissolve
@@ -127,9 +122,10 @@ label mon_eve_room_josh:
         if helpJosh:
 
             $ contact_Josh.newMessage("Hey bro! It's time! Meet me at mine, okay?")
-            $ contact_Josh.addReply("Okay, I'm on my way.", "v8s27_phoneContinue3")
+            $ contact_Josh.addReply("Okay, I'm on my way.")
 
             label v8s27_phoneContinue3:
+                call screen phone
                 if contact_Josh.getReplies():
                     u "I should really check my phone"
                     jump v8s27_phoneContinue3
@@ -198,20 +194,17 @@ label mon_eve_room_josh:
             jump drug_deal_w_josh
 
         else:
-
             $ contact_Josh.newMessage("Hey bro, I got robbed and my ass kicked bad! Really wish you came with me, man.")
-            $ contact_Josh.addReply("Fuck! Are you ok??", "v8s27_phoneReply2")
-
-            label v8s27_phoneReply2:
-                $ contact_Josh.newMessage("No, man! I hurt everywhere! Plus my shit is gone!")
-                $ contact_Josh.addReply("Hold on, I'll be right over", "v8s27_phoneContinue4")
+            $ contact_Josh.addReply("Fuck! Are you ok??")
+            $ contact_Josh.newMessage("No, man! I hurt everywhere! Plus my shit is gone!")
+            $ contact_Josh.addReply("Hold on, I'll be right over")
 
             label v8s27_phoneContinue4:
+                call screen phone
                 if contact_Josh.getReplies():
                     u "I should really check my phone"
                     jump v8s27_phoneContinue4
                 
-
             scene v8spd9
             with dissolve
 

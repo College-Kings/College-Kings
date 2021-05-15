@@ -39,7 +39,7 @@ label v8_ending:
         scene v8send3a # TPP. Same camera as v8send3, MC checking his phone, looking confused.
         with dissolve
 
-        $ contact_Imre.newMessage("Dude, you see this shit on Kiwii?")
+        $ contact_Imre.newMessage("Dude, you see this shit on Kiwii?", queue=False)
         $ contact_Imre.addReply("No, what?")
         $ contact_Imre.newMessage("IDK, it's crazy")
 
@@ -60,7 +60,7 @@ label v8_ending:
 
         u "(What the...?)"
 
-        jump ending8
+        jump v8end
 
     if not joinwolves:
         scene v8send5 # TPP. Show MC lying on his Apes bed, looking tired.
@@ -98,7 +98,7 @@ label v8_ending:
         with dissolve
         
 
-        $ contact_Ryan.newMessage("What the hell's happening on Kiwii?")
+        $ contact_Ryan.newMessage("What the hell's happening on Kiwii?", queue=False)
         $ contact_Ryan.addReply("I don't know. What is it?")
         $ contact_Ryan.newMessage("Fuckin check it out man. Crazy shit")
 
@@ -114,33 +114,22 @@ label v8_ending:
         # $ newKiwiiPost.addReply("Bout time!", numberLikes=999)
         # $ newKiwiiPost.addReply("Seriously?", numberLikes=999)
 
-        label s46_kiwiiContinue:
-
-            if contact_Ryan.getReplies():
-                "I should really check out Kiwii"
-                jump s46_kiwiiContinue
+        call checkReplies(contact_Ryan)
 
         u "(What the...?)"
 
         scene v8send8 # TPP. Show MC, MC looks really confused.
         with dissolve
 
-        
+        jump v8end
 
-        jump ending8
+label v8end:
+    if persistent.ep < 9:
+        scene savenow
+        with Fade (1,0,1)
+        " "
 
-label ending8:
-
-    if persistent.ep == 8:
-        jump end8
-    else:
-        jump start9
-
-label end8:
-    scene savenow
-    with Fade (1,0,1)
-    " "
-    if persistent.ep == 8:
+    if persistent.ep < 9:
         jump end_credits
     else:
-        jump start9
+        jump v9start

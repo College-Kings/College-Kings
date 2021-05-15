@@ -38,35 +38,21 @@ label v8_scene24_apes:
     jump phn_riley11_setup
 
 label phn_riley11_setup:
-    $ contact_Riley.newMessage("Bad day?")
-    $ contact_Riley.addReply("I've read the same page four times :/", "phn_riley11_a")
+    $ contact_Riley.newMessage("Bad day?", queue=False)
+    $ contact_Riley.addReply("I've read the same page four times :/")
+    $ contact_Riley.newMessage("At least you can read! I just found out I need glasses!")
+    $ contact_Riley.addReply("I think you'd look cute in glasses.")
+    $ contact_Riley.newMessage("I don't know. Why don't you come with me and Aubrey to try some on?")
+    $ contact_Riley.addReply("Sure! Meet you there?")
+    $ contact_Riley.newMessage("Great!")
     play sound "sounds/vibrate.mp3"
-    call screen messager(contact_Riley)
 
 label phn_riley11:
+    call screen phone
     if contact_Riley.getReplies():
         u "(I should talk to Riley.)"
         jump phn_riley11
 
-    else:
-        
-        jump phn_riley11_done
-
-label phn_riley11_a:
-    $ contact_Riley.newMessage("At least you can read! I just found out I need glasses!")
-    $ contact_Riley.addReply("I think you'd look cute in glasses.", "phn_riley11_a1")
-    call screen messager(contact_Riley)
-
-label phn_riley11_a1:
-    $ contact_Riley.newMessage("I don't know. Why don't you come with me and Aubrey to try some on?")
-    $ contact_Riley.addReply("Sure! Meet you there?", "phn_riley11_a2")
-    call screen messager(contact_Riley)
-
-label phn_riley11_a2:
-    $ contact_Riley.newMessage("Great!")
-    call screen messager(contact_Riley)
-
-label phn_riley11_done:
     if joinwolves:
         u "(Guess I'm not gonna be bored to death after all.)"
 
