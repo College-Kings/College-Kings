@@ -66,7 +66,7 @@ init python:
 
     def v2_reply12():
         addPoint("bf")
-        contact_Aubrey.newMessage(_("I've got dance practice tonight :("))
+        contact_Aubrey.newMessage(_("I've got dance practice tonight \n:("))
         contact_Aubrey.addReply(_("I'm not talking tonight, I can pick you up right now."))
         contact_Aubrey.newMessage(_("Oh wow, that's spontaneous, I like it haha.\n\nI guess come to the Chicks' house whenever you're ready and then we can go costume shopping."))
         contact_Aubrey.addReply(_("Cool, I'll be 20 mins."))
