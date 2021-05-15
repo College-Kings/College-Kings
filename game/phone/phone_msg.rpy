@@ -214,6 +214,8 @@ screen messager(contact=None):
             pos(773, 282)
 
             vbox:
+                spacing 5
+                
                 for message in contact.sentMessages:
                     if isinstance(message, Message) and message.message.strip():
                         textbutton message.message style "msgleft"

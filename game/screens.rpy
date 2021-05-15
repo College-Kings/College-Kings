@@ -3681,10 +3681,8 @@ style nametext is text:
 
 style msgleft is button:
     background "#CECECE"
-    xpadding 15
-    ypadding 5
+    padding (15, 5)
     xmaximum 350
-    ymargin 15
 
 style msgleft_text is text:
     color "#000000"
@@ -3693,11 +3691,10 @@ style msgleft_text is text:
 
 style msgright is button:
     background "#147efb"
-    xpadding 15
-    ypadding 5
-    xalign 1.0
-    xoffset 14
+    padding (15, 5)
     xmaximum 350
+    xalign 1.0
+    xoffset 15
 
 style msgright_text is text:
     color "#ffffff"
