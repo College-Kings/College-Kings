@@ -192,6 +192,7 @@ label v2start:
     scene s96g
     with fade
 
+    label bjj_bd: #for compatibility only
     play sound "sounds/vibrate.mp3"
     queue sound "sounds/vibrate.mp3"
 
@@ -233,6 +234,7 @@ label v2start:
 
         u "(Maybe taking a walk will relax me.)"
 
+    label walk1: #for compatibility only
     stop music fadeout 2.0
     scene s124
     with Fade (1,0,1)
@@ -279,6 +281,7 @@ label v2start:
                     jump v1_tomWalkAway
 
 label v1_tomShoutBack:
+label bk_a: #for compatibility only
     $ fighttom = True
 
     scene 126a # tom close up
@@ -1239,6 +1242,7 @@ label youfinish:
             $ addPoint("bro")
 
 label v1_tomWalkAway:
+label tf2: #for compatibility only
     $ firstfight = False
 
     $ renpy.end_replay()
@@ -1527,6 +1531,7 @@ label meet_lauren2:
     stop music fadeout 2.0
 
 label history2:
+label historye: #for compatibility only
     play sound "sounds/vibrate.mp3"
 
     $ contact_Josh.newMessage(_("Dude, I talked to this Aubrey chick the entire night and guess who's number she wanted..."), queue=False)
@@ -1697,6 +1702,7 @@ label history2:
 
         u "Okay... I guess I'll try it."
 
+    label nextsceneo: #for compatibility only
     scene s134g  ### in lecture room, asian teacher Mr.Lee far away
     with fade
 
@@ -2110,6 +2116,7 @@ label bo_ad:
     show s145d
     with dissolve
 
+    label bp_bd: #for compatibility only
     u "Hey, you remember the time you had your wisdom teeth pulled out and you looked like a hamster for 2 weeks straight?"
 
     hide s145d
@@ -2165,6 +2172,7 @@ label bo_ad:
 
             em "Haha, I'm not sure who told you that."
 
+    label bq_bd: #for compatibility only
     stop music
     play sound "sounds/busstop.mp3"
 
@@ -2301,6 +2309,7 @@ label bo_ad:
 
             ben "Fine, bro. Sorry for asking."
 
+    label br_bd: #for compatibility only
     scene s149 # emily in waiting room
     with fade
 
@@ -2402,6 +2411,7 @@ label bo_ad:
 
             u "Just wondering."
 
+    label bs_bd: #for compatibility only
     ### door opening benjamin coming in
     scene s151
     with dissolve
@@ -4325,6 +4335,7 @@ label eve1:
 
             ev "You too."
 
+label endshopb: #for compatibility only
 label v1_endShop:
     stop music fadeout 2.0
 
