@@ -44,7 +44,6 @@ init python:
         contact_Lauren.newMessage(_(":)"))
 
 label v1start:
-label starta: #for compatibility only
     play music "music/msexy.mp3"
     show screen fantasyOverlay
 
