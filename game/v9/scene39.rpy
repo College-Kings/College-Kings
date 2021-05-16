@@ -369,6 +369,7 @@ label v9_hang_w_linds:
                     with dissolve
 
                     pause 1
+                    $ renpy.end_replay()
 
             if joinwolves:
                 jump v9_wolves_pre_fight
@@ -426,6 +427,7 @@ label v9_hang_w_linds:
             with dissolve
             
             pause 1
+            $ renpy.end_replay()
     
             if joinwolves:
                 jump v9_wolves_pre_fight
