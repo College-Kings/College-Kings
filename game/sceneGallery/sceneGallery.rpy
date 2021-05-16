@@ -21,11 +21,11 @@ init python:
 
     ## SCENE GALLERY ITEMS HERE
     SceneGallery("sexdream1")
-    SceneGallery("bj_a")
+    SceneGallery("v1_tomShoutBack")
     SceneGallery("continuem")
     SceneGallery("fkcon")
-    SceneGallery("emsex_a")
     SceneGallery("aubreysexb")
+    SceneGallery("emsex_a")
     SceneGallery("rileysexscene")
     SceneGallery("brbj")
     SceneGallery("v8_cl_start")
