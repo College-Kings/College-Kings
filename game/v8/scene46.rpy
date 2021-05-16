@@ -14,7 +14,7 @@ label v8_ending:
             u "(I can't believe Sebastian got me to climb that hospital. But I did it!)"
 
         if not climbwseb:
-            u "(I hope Sebastian doesn't think less of me for chickening out at the hospital. Wasn't very wolflike of me.)"
+            u "(I hope Sebastian doesn't think less of me for chickening out at the hospital. Wasn't very Wolflike of me.)"
 
         scene v8send2 # FPP. Show MC's phone on his bed, buzzing as if it has got a notification.
         with dissolve

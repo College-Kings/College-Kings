@@ -169,7 +169,7 @@ label v9_dinner_w_rose:
             scene v9damr9a
             with dissolve
 
-            imre "Yeah, I'm nervous too. If I get my ass beat, i'll never get laid again!"
+            imre "Yeah, I'm nervous too. If I get my ass beat, I'll never get laid again!"
 
             scene v9damr9
             with dissolve
@@ -325,7 +325,7 @@ label v9_dinner_w_rose:
 
             scene v9damr4c
             with dissolve
-            u "Wow, you did all thise while unpacking? I would have burned the house down."
+            u "Wow, you did all this while unpacking? I would have burned the house down."
 
             scene v9damr4d
             with dissolve

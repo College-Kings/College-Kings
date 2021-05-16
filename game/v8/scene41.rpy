@@ -107,7 +107,7 @@ label walk_home_hosp:
         scene v8sbws5a
         with dissolve
 
-        se "Nothing breaks a wolf pack, man." #-puts on a mild smile on a serious face, and shows a firm fist while contracting the biceps-
+        se "Nothing breaks a Wolf pack, man." #-puts on a mild smile on a serious face, and shows a firm fist while contracting the biceps-
 
         scene v8sbws5b
         with dissolve
@@ -127,7 +127,7 @@ label walk_home_hosp:
         scene v8sbws5c # FPP. Same camera as v8sbws5, Sebastian neutral expression, mouth open.
         with dissolve
 
-        se "Some wolves take pride in their strength and some in being attractive."
+        se "Some Wolves take pride in their strength and some in being attractive."
 
         scene v8sbws5
         with dissolve
@@ -231,7 +231,7 @@ label walk_home_hosp:
         scene v8sbws13c # FPP. Same camera as v8sbws13, Sebastian smile, mouth open.
         with dissolve
 
-        se "No matter what we did, you did come with me and I appreciate it. That's how Marcus and I do things. That's how all wolves do things."
+        se "No matter what we did, you did come with me and I appreciate it. That's how Marcus and I do things. That's how all Wolves do things."
 
         scene v8sbws13d # FPP. Same camera as v8sbws13, Sebastian smile, mouth closed.
         with dissolve

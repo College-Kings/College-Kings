@@ -53,7 +53,7 @@ label work_with_seb:
     scene v8sgym10 # FPP. Close up Sebastian, Sebastian smile, mouth open.
     with dissolve
 
-    se "No problem, man. We wolves stick together."
+    se "No problem, man. We Wolves stick together."
 
     scene v8sgym10a # FPP. Close up Sebastian, Sebastian smile, mouth closed.
     with dissolve

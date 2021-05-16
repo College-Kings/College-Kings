@@ -164,7 +164,7 @@ if joinwolves:
     with dissolve
 
     menu:
-        "Mention the wolves":
+        "Mention the Wolves":
 
             u "And to me, getting into Wolves really feels like a pretty good choice."
 

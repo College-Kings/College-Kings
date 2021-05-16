@@ -74,7 +74,7 @@ label climb_the_hos:
     scene v8shos7 # TPP. Show MC grabbing the mask from Sebastian and putting it on, Sebastian smile, mouth open.
     with dissolve
 
-    se "Looks like our cub is climbing his way up to becoming a wolf. Hell yeah!"
+    se "Looks like our cub is climbing his way up to becoming a Wolf. Hell yeah!"
 
     scene v8shos8 # FPP. Show Sebastian beginning to walk towards the flag pole, Sebastian now wearing black mask(mask 9) also, Sebastian, smile, mouth closed.
     with dissolve
@@ -234,7 +234,7 @@ label climb_the_hos:
     scene v8shos26c # FPP. Same camera as v8shos26, Sebastian looking to his side at camera, sad expression, mouth closed.
     with dissolve
 
-    u "Hahah, oh my God, that \"Noooo\" almost sounded like a howl of the saddest wolf ever!"
+    u "Hahah, oh my God, that \"Noooo\" almost sounded like a howl of the saddest Wolf ever!"
 
     scene v8shos26d # FPP. Same camera as v8shos26. Sebastian looking to his side at camera, Sebastian laughing, mouth open as if he is howling.
     with dissolve
@@ -244,7 +244,7 @@ label climb_the_hos:
     scene v8shos26e # FPP. Same camera as v8shos26, Sebastian looking to his side at camera, Sebastian smile, mouth closed.
     with dissolve
 
-    u "Haha, yeah! Aaaah-ooooooh! Poor wolf won't be feasting his eyes on any Little Red Riding Hoods tonight, haha!"
+    u "Haha, yeah! Aaaah-ooooooh! Poor Wolf won't be feasting his eyes on any Little Red Riding Hoods tonight, haha!"
 
     scene v8shos28 # TPP. Show Sebastian punching MC softly on the shoulder, both laughing as they're sat on the edge of the hospital roof.
     with dissolve
@@ -259,7 +259,7 @@ label watching_seb_climb:
     scene v8shos29 # FPP. ! CONTINUATION FROM V8SHOS6 ! Show Sebastian dropping the mask he was holding for MC and shurgging, dissapointed expression, mouth open.
     with dissolve
 
-    se "Alright, cub. Let this wolf show you how it's done..."
+    se "Alright, cub. Let this Wolf show you how it's done..."
 
     scene v8shos30 # FPP. Show Sebastian now wearing the black mask (mask 9), walking towards the American flagpole infront of the hospital ambulance entrance.
     with dissolve

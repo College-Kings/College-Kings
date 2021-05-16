@@ -7776,7 +7776,7 @@ label v6_fr3aubrey1:
                 scene sfr3au3d
                 with dissolve
 
-                au "Sooo, you here to check out the wolves or the ladies tonight?"
+                au "Sooo, you here to check out the Wolves or the ladies tonight?"
 
                 scene sfr3au3e
                 with dissolve
@@ -9396,7 +9396,7 @@ label v6_fr3picture:
     #MC sees an old picture of the wolves.
     scene sfr3picture # close up photo with Imre's older brother
 
-    u "An old picture of the wolves..."
+    u "An old picture of the Wolves..."
 
     u "That must be Imre's older brother. They do look alike."
 

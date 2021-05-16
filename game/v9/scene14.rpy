@@ -48,7 +48,7 @@ label v9_thur_w_punch:
     scene v9trs3b
     with dissolve
 
-    se "Our cub is a famous wolf!"
+    se "Our cub is a famous Wolf!"
 
     scene v9trs3
     with dissolve
@@ -162,7 +162,7 @@ label v9_thur_w_punch:
         scene v9trs5
         with dissolve
 
-        se "With mind and soul, brother wolf."
+        se "With mind and soul, brother Wolf."
 
         jump v9_thur_room_w_seb_cont1
         
@@ -185,7 +185,7 @@ label v9_thur_w_punch:
         scene v9trs5b
         with dissolve
 
-        u "But you weren't. It was just a lone wolf there, fighting his battles, tsk tsk tsk."
+        u "But you weren't. It was just a lone Wolf there, fighting his battles, tsk tsk tsk."
 
         scene v9trs5c
         with dissolve
@@ -195,7 +195,7 @@ label v9_thur_w_punch:
         scene v9trs5
         with dissolve
 
-        se "If not in body, then with mind and soul, brother wolf!"
+        se "If not in body, then with mind and soul, brother Wolf!"
 
         jump v9_thur_room_w_seb_cont1
 
@@ -243,7 +243,7 @@ label v9_thur_room_w_seb_cont1:
     scene v9trs8b # FPP. Same camera as v9trs8, both beers in the air, both smiling, mouths closed.
     with dissolve
 
-    u "For the wolves!"
+    u "For the Wolves!"
 
     scene v9trs7a
     with dissolve
@@ -414,7 +414,7 @@ label v9_thur_w_no_punch:
     scene v9trs5d
     with dissolve
 
-    se "It just fucking what? If you are a wolf, there is no excuse. How do wolves walk?"
+    se "It just fucking what? If you are a Wolf, there is no excuse. How do Wolves walk?"
 
     scene v9trs5e
     with dissolve

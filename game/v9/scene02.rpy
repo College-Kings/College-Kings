@@ -163,7 +163,7 @@ menu:
 
         scene v9apost3b
         with dissolve
-        ca "Yeah, and I expect you to wipe the floor with those pussy wolves."
+        ca "Yeah, and I expect you to wipe the floor with those pussy Wolves."
 
         scene v9apost3c
         with dissolve

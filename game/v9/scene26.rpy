@@ -603,7 +603,7 @@ label v9_fri_training_w_wolves:
     scene v9tww20 # FPP. Show Chris, neutral, mouth open.
     with dissolve
 
-    ch "I gotta say I'm impressed. You all did way better than I expected tonight. You've got that fighting wolf pack spirit in you!"
+    ch "I gotta say I'm impressed. You all did way better than I expected tonight. You've got that fighting Wolf pack spirit in you!"
 
     ch "Now, we've done all we can training-wise. The only thing left for you to do is rest your weapons."
 
