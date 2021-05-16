@@ -1,16 +1,9 @@
 College Kings 9.1.2 Patch/
 .vscode/
 
-game/bugTesting/images
 game/bugTesting/_bugTesting.txt
 game/cache
-game/fonts
-game/gui
-game/images
-game/music
 game/saves
-game/sounds
-game/tl
 
 log.txt
 traceback.txt

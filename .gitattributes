@@ -1,0 +1,6 @@
+game/fonts/ filter=lfs diff=lfs merge=lfs -text
+game/gui/ filter=lfs diff=lfs merge=lfs -text
+game/images/ filter=lfs diff=lfs merge=lfs -text
+game/music/ filter=lfs diff=lfs merge=lfs -text
+game/sounds/ filter=lfs diff=lfs merge=lfs -text
+game/bugTesting/images/ filter=lfs diff=lfs merge=lfs -text
