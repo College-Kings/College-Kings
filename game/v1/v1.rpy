@@ -44,6 +44,7 @@ init python:
         contact_Lauren.newMessage(_(":)"))
 
 label v1start:
+label starta: #for compatibility only
     play music "music/msexy.mp3"
     show screen fantasyOverlay
 
@@ -230,6 +231,7 @@ label v1start:
 
     hide screen kctTutorial
 
+label aa_db: #for compatibility only
     hide s14a
     show s15
     with dissolve
@@ -482,6 +484,7 @@ label v1start:
             with dissolve
             aut "Anyways, I gotta go. Nice to meet you."
 
+label ad_db: #for compatibility only
     scene s39
     with dissolve
 
@@ -638,6 +641,7 @@ label v1start:
         "Stay quiet":
             pass
 
+label ag_da: #for compatibility only
     scene s84a
     with dissolve
 
@@ -747,6 +751,7 @@ label v1start:
             with dissolve
             la "Yeah, most of the Deer for example."
 
+label af_db: #for compatibility only
     scene s51a
     with dissolve
     u "The Deer?"
@@ -832,6 +837,7 @@ label v1start:
 
             la "Smooth, haha."
 
+label aj_db: #for compatibility only
     scene s53a
     with dissolve
 
@@ -887,6 +893,7 @@ label v1start:
     show screen freeRoamTutorial
     call screen v1_freeRoam1_1
     with dissolve
+label fr1a2: #for compatibility only
 
     label v1_freeRoam1_riley:
         $ v1_talkToRiley = True
@@ -1345,6 +1352,7 @@ label efra:
 
             imre "Yeahhhh! They fucking are man. That's what I've been trying to tell you."
 
+label an_bd: #for compatibility only
     imre "Honestly I think you'd make a great Wolf as well."
 
     scene s63e
@@ -1424,6 +1432,7 @@ label efra:
     scene s61
     with dissolve
 
+label phonef: #for compatibility only
     imre "It better be a girl."
 
     scene s61a
@@ -1464,6 +1473,7 @@ label efra:
     stop music fadeout 2.0
     " "
 
+label continueonea: #for compatibility only
     play sound "sounds/knock.mp3"
     "*Knock knock knock*"
 
@@ -1505,6 +1515,7 @@ label efra:
     scene s68
     with fade
 
+label talktorib: #for compatibility only
     ri "Sooo, is it just us three for tonight?"
 
     scene s68a
@@ -1706,6 +1717,7 @@ label efra:
     scene s72f
     with dissolve
 
+label ao_bd: #for compatibility only
     imre "Okay, it's your turn to dare someone, Lauren."
 
     scene s73bl
@@ -1794,6 +1806,7 @@ label efra:
 
             u "If that's what you think, then I dare you to take your shirt off."
 
+label ap_bd: #for compatibility only
     scene s71bl
     with dissolve
     ri "What?! Can he just dare me back like that?"
@@ -1843,6 +1856,7 @@ label efra:
     scene s73cf
     with dissolve
 
+label ar_bd: #for compatibility only
     la "Guys, I don't wanna kill the vibe, but we have class pretty early tomorrow and I don't wanna be late for my first Economics class."
 
     scene s72ef
@@ -1990,7 +2004,7 @@ label at_bd:
     stop music fadeout 2.0
 
     ### Sex dream
-
+label sexdream1: #for compatibility only
     scene sda1  ### close to the kitchen counter
     with Fade (1,0,1)
 
@@ -2438,6 +2452,7 @@ label at_bd:
     with dissolve
     stop music fadeout 2.0
 
+label au_bd: #for compatibility only
     la "Yeah, I'd like that."
 
     ### park with Lauren (secret sharing)
@@ -2549,6 +2564,7 @@ label at_bd:
             scene s89f
             with dissolve
 
+label av_ad: #for compatibility only
     la "I haven't even..."
 
     la "Never mind..."
@@ -2651,6 +2667,7 @@ label at_bd:
     scene s89f
     with dissolve
 
+label aw_bd:
     la "Right... almost forgot about that."
 
     la "I...I haven't actually had sex before."
@@ -2744,6 +2761,7 @@ label at_bd:
     scene s89k
     with dissolve
 
+label ax_bd: #for compatibility only
     u "(Is this the moment to kiss her?)"
 
     menu:
@@ -2786,6 +2804,7 @@ label at_bd:
     scene s89h
     with dissolve
 
+label ay_bd: #for compatibility only
     la "Uhh... [name]... I..."
     la "I should go."
 
@@ -2813,6 +2832,7 @@ label at_bd:
 
     stop sound
 
+label next_scenea: #for compatibility prior to v10
     scene s93
     with Fade (1,0,1) # Imre in your dorm
 
@@ -2902,6 +2922,7 @@ label at_bd:
     scene s96c
     with dissolve
 
+label backtophone: #for compatibility only
     u "I guess..."
 
     scene s96c
@@ -2949,6 +2970,7 @@ label at_bd:
 
     stop music fadeout 2.0
 
+label nextscenef: #for compatibility only
     ### In front of the ape's house ryan is texting
     scene s97
     with Fade (1,0,1)
@@ -3739,6 +3761,7 @@ label v1_freeRoam2_grayson2:
     call screen v1_freeRoam2_5
 
 label v1_freeRoam2_end:
+label fr2end: #for compatibility only
     stop music fadeout 2.0
     
     scene chloelook:
@@ -3841,6 +3864,7 @@ label v1_freeRoam2_end:
 
             cl "It's fine, haha. What's your name?"
 
+label bd_bd: #for compatibility only
     scene s112c
     with dissolve
 
@@ -3925,6 +3949,7 @@ label v1_freeRoam2_end:
     scene s112b
     with dissolve
 
+label be_bd: #for compatibility only
     cl "Hey, do you wanna go outside and sit down? I could really use some fresh air."
 
     scene s112c
@@ -4006,6 +4031,7 @@ label v1_freeRoam2_end:
     scene s116c
     with dissolve
 
+label bf_bd: #for compatibility only
     u "So, you're the president of the Chicks, right?"
 
     scene s116b
