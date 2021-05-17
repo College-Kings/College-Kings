@@ -43,7 +43,7 @@ label hallway_w_nora:
         jump cont_nora_hall
 
     else:
-        scene v8shal3b # FPP. Same camera as v8shal3, Nora smile, mouth open.
+        scene v8shal3d # FPP. Same camera as v8shal3, Nora smile, mouth open.
         with dissolve
         no "Hey! [name] I'd like to speak with you."
 
@@ -56,7 +56,7 @@ label hallway_w_nora:
         jump cont_nora_hall
 
 label cont_nora_hall:
-    scene v8shal3b
+    scene v8shal3d
     with dissolve
 
     no "I'm signing people up for the annual school trip to Europe."
@@ -144,7 +144,7 @@ label cont_nora_hall_2:
 
     u "(I've never seen Nora excited about anything.)"
 
-    scene v8shal3b
+    scene v8shal3d
     with dissolve
 
     no "So you gonna come?"
@@ -176,7 +176,7 @@ label cont_nora_hall_3:
 
     no "Here!"
 
-    scene v8shal3b
+    scene v8shal3d
     with dissolve
 
     no "If you know any friends who would be interested, tell them to come find me. Remember, I need ten people. Ten!"
