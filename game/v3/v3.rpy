@@ -3072,6 +3072,8 @@ label continueq:
                     $ addPoint("tm")
 
                     show rikiss2
+                    pause(1)
+                    play sound "sounds/kiss.mp3"
 
                     $ lipsdontlie = True
                     if not steam:
