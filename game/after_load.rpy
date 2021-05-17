@@ -35,7 +35,12 @@ label after_load:
 
             try: kiwiiPost.img = kiwiiPost.image
             except AttributeError: pass
-            
+
+            for i in range(7, 10):
+                if renpy.loadable("images/phone/kiwii/posts/v{}/{}".format(i, kiwiiPost.img.split("/")[-1])):
+                    kiwiiPost.img = "images/phone/kiwii/posts/v{}/{}".format(i, kiwiiPost.img.split("/")[-1])
+                    break
+
             kiwiiPost.img = os.path.splitext(kiwiiPost.img)[0] + ".webp"
 
             try: kiwiiPost.sentComments = kiwiiPost.comments
