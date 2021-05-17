@@ -7678,7 +7678,7 @@ label v6_fr3aubrey1:
         scene sfr3au3d
         with dissolve
 
-        au "Thank you"
+        au "Thank you."
 
         scene sfr3au2h
         with dissolve

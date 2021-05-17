@@ -205,7 +205,7 @@ label steak_w_chloe_cont:
     scene v8steak3b
     with dissolve
 
-    cl "*giggles* I'm a shrimp sauce kinda girl"
+    cl "*giggles* I'm a shrimp sauce kinda girl."
 
     scene v8steak3a
     with dissolve

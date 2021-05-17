@@ -108,7 +108,7 @@ label tue_night_in_room:
         label v8s45_phoneCheck:
             call screen phone
             if contact_Grayson.getReplies():
-                u "I need to check my phone"
+                u "I need to check my phone."
                 jump v8s45_phoneCheck
 
         u "(Let's just see what Chloe's up to.)"
@@ -132,7 +132,7 @@ label tue_night_in_room:
         label v8s45_phoneCheck2:
             call screen phone
             if contact_Chloe.getReplies():
-                u "I need to check my phone"
+                u "I need to check my phone."
                 jump v8s45_phoneCheck2
         
         u "(Well I'll be damned... This could actually be more fun than I ever thought it could be.)"

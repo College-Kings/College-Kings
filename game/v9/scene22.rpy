@@ -69,7 +69,7 @@ label v9_room_w_sam:
         scene v9rwsa6
         with dissolve
         
-        u "Aww don't worry about me. I'm used to these guys"
+        u "Aww don't worry about me. I'm used to these guys."
 
         scene v9rwsa6a
         with dissolve

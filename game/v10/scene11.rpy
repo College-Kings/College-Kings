@@ -74,7 +74,7 @@ label v10_linds_room:
     with dissolve
 
     u "Don't get me wrong it wasn't all that bad."
-    u "Living as if you're an only child with a stepmother that's set on spoiling you"
+    u "Living as if you're an only child with a stepmother that's set on spoiling you."
     u "Lots of love and attention in order to make up for the lack of blood relation isn't the worst life in the world. *Chuckles*"
 
     scene v10slds3b # FPP. Same camera as v10slds3. Show Lindsey, uncomfortable expression, mouth closed.

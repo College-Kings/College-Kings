@@ -117,7 +117,7 @@ label v8_ending:
         label v8s46_phoneCheck:
             call screen phone
             if contact_Ryan.getReplies():
-                u "I need to check my phone"
+                u "I need to check my phone."
                 jump v8s46_phoneCheck
 
         u "(What the...?)"

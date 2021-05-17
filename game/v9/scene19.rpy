@@ -101,7 +101,7 @@ label v9_lau_dorm:
                 scene v9lau8 # TPP. Show MC stood behind Lauren giving Lauren a backrub, Lauren smile, mouth closed.
                 with dissolve
 
-                la "Mmmm"
+                la "Mmmm..."
 
                 scene v9lau8a # TPP. Same camera as v9lau8a, Lauren smile, mouth open.
                 with dissolve

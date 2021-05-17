@@ -1728,7 +1728,7 @@ label efra:
     scene s71cl
     with dissolve
 
-    ri "Oh that's easy. Let's do it, Imre"
+    ri "Oh that's easy. Let's do it, Imre."
 
     scene s75
     with fade

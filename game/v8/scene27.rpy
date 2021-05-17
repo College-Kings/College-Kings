@@ -20,7 +20,7 @@ label mon_eve_room_josh:
             label v8s27_phoneContinue1:
                 call screen phone
                 if contact_Josh.getReplies():
-                    u "I should really check my phone"
+                    u "I should really check my phone."
                     jump v8s27_phoneContinue1
 
             scene v8spd2 # TPP. Show MC getting up from his desk.
@@ -95,7 +95,7 @@ label mon_eve_room_josh:
             label v8s27_phoneContinue2:
                 call screen phone
                 if contact_Josh.getReplies():
-                    u "I should really check my phone"
+                    u "I should really check my phone."
                     jump v8s27_phoneContinue2
                     
             scene v8spd2
@@ -127,7 +127,7 @@ label mon_eve_room_josh:
             label v8s27_phoneContinue3:
                 call screen phone
                 if contact_Josh.getReplies():
-                    u "I should really check my phone"
+                    u "I should really check my phone."
                     jump v8s27_phoneContinue3
                 
 
@@ -202,7 +202,7 @@ label mon_eve_room_josh:
             label v8s27_phoneContinue4:
                 call screen phone
                 if contact_Josh.getReplies():
-                    u "I should really check my phone"
+                    u "I should really check my phone."
                     jump v8s27_phoneContinue4
                 
             scene v8spd9

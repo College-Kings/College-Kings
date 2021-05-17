@@ -930,7 +930,7 @@ menu:
                 scene v9slake8
                 with dissolve
 
-                au "Come. Follow me"
+                au "Come. Follow me."
 
                 scene v9slake16 #TPP mc and aubrey are lying next to each other on a large rock in the middle of the lake, mc's underpants need to be wet
                 with fade

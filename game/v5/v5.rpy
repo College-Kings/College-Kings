@@ -766,7 +766,7 @@ label continuez:
 
                 la "Oh, and a little kiss like that is already too much?"
 
-                la "I wasn't talking about a full on make out session, haha"
+                la "I wasn't talking about a full on make out session, haha."
 
                 la "Also, it's not like anyone will see us here."
 
@@ -2152,7 +2152,7 @@ label continueaf:
 
             la "Oh, and a little kiss like that is already too much?"
 
-            la "I wasn't talking about a full on make out session, haha"
+            la "I wasn't talking about a full on make out session, haha."
 
             la "Also, it's not like anyone will see us here."
 

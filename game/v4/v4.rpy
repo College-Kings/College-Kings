@@ -1676,7 +1676,7 @@ label readmontagea:
                 scene s349d
                 with dissolve
 
-                u "I didn't, but I'm glad I came now"
+                u "I didn't, but I'm glad I came now."
 
                 scene s349c
                 with dissolve
@@ -2036,7 +2036,7 @@ label ef_bd:
             scene s350k
             with dissolve
 
-            pe "*Laughs* Ewww... I don't think we should"
+            pe "*Laughs* Ewww... I don't think we should."
 
             scene s350l
             with dissolve

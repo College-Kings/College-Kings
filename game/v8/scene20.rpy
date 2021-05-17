@@ -1014,7 +1014,7 @@ label em_arcade_4:
 
     scene v8arcade12
     with dissolve
-    em "Step aside. Let me show you how it's done"
+    em "Step aside. Let me show you how it's done."
 
     scene v8arcade13
     with dissolve
