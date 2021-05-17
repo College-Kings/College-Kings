@@ -447,7 +447,7 @@ screen kiwiiPost(post):
             yalign 0.84
             spacing 15
 
-            for reply in post.replies:
+            for reply in post.getReplies():
                 textbutton reply.reply:
                     style "kiwii_reply"
                     text_style "kiwii_ReplyText"
