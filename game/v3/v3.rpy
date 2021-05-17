@@ -1271,7 +1271,7 @@ label conl:
 
             "Leave it":
                 $ addPoint("bf")
-                label cx_b: #for compatibility only
+                label cx_ad: #for compatibility only
 
     scene s247 # imre coming back
     with fade
@@ -1522,6 +1522,8 @@ label conl:
 
                 au "You said you'd do anything to make it right."
 
+                label cy_a: #for compatibility only
+                label cy_b: #for compatibility only
                 menu:
                     "Take off your clothes":
                         $ addPoint("bf")
@@ -2549,6 +2551,7 @@ label continuen:
 
             u "Okay, fine."
 
+    label dc_bd: #for compatibility only
     scene s268 # Lauren happy
     with dissolve
 
@@ -2696,6 +2699,7 @@ label continueq:
 
             u "(I don't really feel like talking to her right now.)"
 
+    label de_bd: #for compatibility only
     scene s270
     with fade
     play sound "sounds/knock.mp3"
@@ -2799,6 +2803,7 @@ label continueq:
 
             u "Yeah, let me just change out of my gym clothes."
 
+    label df_bd: #for compatibility only
     scene s274 # you different clothes, riley and ryan in the park, riley preparing the picnic blanket, all happy.  you talking."
     with Fade (1,0,1)
 
@@ -3105,6 +3110,7 @@ label continueq:
     scene s281
     with dissolve
 
+    label dj_bd: #for compatibility only
     ri "You know, Ryan is probably waiting for me to come back. Are you sure you wanna leave?"
 
     scene s281a
@@ -3263,6 +3269,7 @@ label continueq:
         scene s287a # lauren closeup while walking her mouth closed  FIRST PERSON
         with dissolve
 
+        label dk_bb: #for compatibility only
         u "Uhm... I went picnicking with Riley and Ryan. What about you?"
 
         scene s287
@@ -3330,6 +3337,8 @@ label continueq:
 
         la "*Whispers* I was just making sure you're safe."
 
+        label dl_a: #for compatibility only
+        label dl_b: #for compatibility only
         menu:
             "Kiss her":
                 $ laurenkissb = True
