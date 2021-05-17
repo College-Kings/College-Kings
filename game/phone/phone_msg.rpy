@@ -109,7 +109,7 @@ init python:
         def getReplies(self):
             try:
                 return self.sentMessages[-1].replies
-            except Exception: return False
+            except IndexError: return False
 
         def getMessage(self, message):
             for msg in self.sentMessages:
@@ -178,7 +178,7 @@ screen contactsscreen():
 
                         imagebutton:
                             idle "images/contactbutton.webp" align(0.5, 0.5)
-                            action [Function(renpy.retain_after_load), Function(contact.seenMessage), (Show("messager", contact=contact)]
+                            action [Function(renpy.retain_after_load), Function(contact.seenMessage), Show("messager", contact=contact)]
 
 
 screen messager(contact=None):
