@@ -129,11 +129,11 @@ label tue_night_in_room:
             $ contact_Chloe.newMessage("Maybe some other time. These eyes need some rest atm.")
             $ contact_Chloe.addReply("Sure, later.")
 
-        label v8s45_phoneCheck:
+        label v8s45_phoneCheck2:
             call screen phone
             if contact_Chloe.getReplies():
                 u "I need to check my phone"
-                jump v8s45_phoneCheck
+                jump v8s45_phoneCheck2
         
         u "(Well I'll be damned... This could actually be more fun than I ever thought it could be.)"
 

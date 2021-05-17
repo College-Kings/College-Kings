@@ -43,9 +43,9 @@ label v10_walk_jenny_text:
         call screen messager(contact_Jenny)
 
     label v10s19_PhoneContinue:
-        if contact_Jenny.messages[-1].replies:
-        "(I should reply to Jenny.)"
-        jump v10s19_PhoneContinue      
+        if contact_Jenny.getReplies():
+            "(I should reply to Jenny.)"
+            jump v10s19_PhoneContinue      
 
     $ showphone = False
 
@@ -79,9 +79,9 @@ label v10_walk_jenny_text:
                 call screen messager(contact_Penelope)
 
             label v10s19_PhoneContinue1:
-                if contact_Penelope.messages[-1].replies:
-                "(I should text to Penelope.)"
-                jump v10s19_PhoneContinue1     
+                if contact_Penelope.getReplies():
+                    "(I should text to Penelope.)"
+                    jump v10s19_PhoneContinue1     
 
             $ showphone = False
 
