@@ -105,8 +105,11 @@ label tue_night_in_room:
         $ contact_Grayson.newMessage("Couting on it or not, [name], it's happening!")
         $ contact_Grayson.addReply(":P")
 
-        # New code
-        call checkReplies(contact_Grayson) from _call_checkReplies
+        label v8s45_phoneCheck:
+            call screen phone
+            if contact_Grayson.getReplies():
+                u "I need to check my phone"
+                jump v8s45_phoneCheck
 
         u "(Let's just see what Chloe's up to.)"
 
@@ -126,7 +129,11 @@ label tue_night_in_room:
             $ contact_Chloe.newMessage("Maybe some other time. These eyes need some rest atm.")
             $ contact_Chloe.addReply("Sure, later.")
 
-        call checkReplies(contact_Chloe) from _call_checkReplies_1
+        label v8s45_phoneCheck:
+            call screen phone
+            if contact_Chloe.getReplies():
+                u "I need to check my phone"
+                jump v8s45_phoneCheck
         
         u "(Well I'll be damned... This could actually be more fun than I ever thought it could be.)"
 
