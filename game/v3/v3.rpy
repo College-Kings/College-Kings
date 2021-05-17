@@ -162,6 +162,7 @@ label v3start:
 
             u "Dude, that's not cool. You're invading their privacy."
 
+    label cm_bd: #for compatibility only
     scene s206d # imre mebarassed
     with dissolve
 
@@ -228,6 +229,7 @@ label v3start:
 
             imre "Well that usually means she's better in bed 'cause she tries harder, go on."
 
+    label cp_bd: #for compatibility only
     if costumeaubrey:
         scene s208c
         with dissolve
@@ -505,6 +507,7 @@ label conl:
     menu:
         "Ask her about it":
             $ addPoint("tm")
+            label cq_a: #for compatibility only
 
             scene s216 # chloe walking next to the volleyball
             with dissolve
@@ -538,6 +541,7 @@ label conl:
 
         "Don't question it":
             $ addPoint("bf")
+            label cq_b: #for compatibility only
 
     scene s216c # cl grabs volleyball
     with fade
@@ -650,6 +654,7 @@ label conl:
 
             u "Oh I'll get you next time."
 
+    label cr_bd: #for compatibility only
     scene s220 # chloe walking down beneath net towards you
     with dissolve
 
@@ -1056,6 +1061,7 @@ label conl:
     menu:
         "Show off":
             $ addPoint("bro")
+            label cw_a: #for compatibility only
 
             scene s240
             with dissolve
@@ -1094,6 +1100,7 @@ label conl:
             u "Uhm yeah, sure."
 
         "Stick to what you know":
+            label cw_b: #for compatibility only
             pass
 
     scene s240
@@ -1159,6 +1166,7 @@ label conl:
         menu:
             "Approach her":
                 $ addPoint("bro")
+                label cx_a: #for compatibility only
 
                 scene s244
                 with fade
@@ -1263,6 +1271,7 @@ label conl:
 
             "Leave it":
                 $ addPoint("bf")
+                label cx_ad: #for compatibility only
 
     scene s247 # imre coming back
     with fade
@@ -1513,6 +1522,8 @@ label conl:
 
                 au "You said you'd do anything to make it right."
 
+                label cy_a: #for compatibility only
+                label cy_b: #for compatibility only
                 menu:
                     "Take off your clothes":
                         $ addPoint("bf")
@@ -2540,6 +2551,7 @@ label continuen:
 
             u "Okay, fine."
 
+    label dc_bd: #for compatibility only
     scene s268 # Lauren happy
     with dissolve
 
@@ -2687,6 +2699,7 @@ label continueq:
 
             u "(I don't really feel like talking to her right now.)"
 
+    label de_bd: #for compatibility only
     scene s270
     with fade
     play sound "sounds/knock.mp3"
@@ -2790,6 +2803,7 @@ label continueq:
 
             u "Yeah, let me just change out of my gym clothes."
 
+    label df_bd: #for compatibility only
     scene s274 # you different clothes, riley and ryan in the park, riley preparing the picnic blanket, all happy.  you talking."
     with Fade (1,0,1)
 
@@ -3096,6 +3110,7 @@ label continueq:
     scene s281
     with dissolve
 
+    label dj_bd: #for compatibility only
     ri "You know, Ryan is probably waiting for me to come back. Are you sure you wanna leave?"
 
     scene s281a
@@ -3254,6 +3269,7 @@ label continueq:
         scene s287a # lauren closeup while walking her mouth closed  FIRST PERSON
         with dissolve
 
+        label dk_bb: #for compatibility only
         u "Uhm... I went picnicking with Riley and Ryan. What about you?"
 
         scene s287
@@ -3321,6 +3337,8 @@ label continueq:
 
         la "*Whispers* I was just making sure you're safe."
 
+        label dl_a: #for compatibility only
+        label dl_b: #for compatibility only
         menu:
             "Kiss her":
                 $ laurenkissb = True

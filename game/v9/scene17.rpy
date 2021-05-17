@@ -68,7 +68,7 @@ label v9_room_fri_morn:
         scene v9fmr5 # FPP. Show Grayson looking into camera as ikf Grayson is looking at MC whilst MC is in bed. Stern Grayson expression, Camera looking up at Grayson, Grayson mouth open. (MC Apes Room)
         with fade
 
-        gr "Wake up, [name], Ape's aren't lazy assholes. Get up. Go be productive. Oh, and I'd avoid the toilet. Cameron backed it up again."
+        gr "Wake up, [name], Apes aren't lazy assholes. Get up. Go be productive. Oh, and I'd avoid the toilet. Cameron backed it up again."
 
         scene v9fmr5a # FPP. Same camera as v9fmr5, Grayson mouth closed.
         with dissolve
