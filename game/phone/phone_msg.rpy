@@ -78,6 +78,7 @@ init python:
             self.unlock()
 
         def seenMessage(self):
+            self.newMessages = False
             if not any([contact.newMessages for contact in contacts]):
                 msgApp.seenNotification()
 
@@ -177,7 +178,7 @@ screen contactsscreen():
 
                         imagebutton:
                             idle "images/contactbutton.webp" align(0.5, 0.5)
-                            action [Function(renpy.retain_after_load), Show("messager", contact=contact)]
+                            action [Function(renpy.retain_after_load), Function(contact.seenMessage), (Show("messager", contact=contact)]
 
 
 screen messager(contact=None):
@@ -185,7 +186,6 @@ screen messager(contact=None):
 
     python:
         yadj.value = yadjValue
-        contact.seenMessage()
 
     use phoneTemplate:
 

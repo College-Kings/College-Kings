@@ -18,7 +18,7 @@ init python:
         def seenNotification(self):
             self.notification = False
             if os.path.splitext(self.img)[0].endswith("Notification"):
-                self.img = os.path.splitext(self.img)[0][:-3] + os.path.splitext(self.img)[1]
+                self.img = os.path.splitext(self.img)[0][:-12] + os.path.splitext(self.img)[1]
 
         def unlock(self):
             self.locked = False
