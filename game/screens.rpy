@@ -4383,7 +4383,7 @@ screen fr4gymentrance():
         imagebutton:
             ypos 315
             xpos 0
-            idle "images/fr4gymentrancenora.webp"
+            idle "images/fr4gymentrancenoraidle.webp"
             hover "images/fr4gymentrancenorahover.webp"
             action Jump ("fr4nora2")
 
@@ -4592,7 +4592,7 @@ screen fr4outsidestreet():
     imagebutton:
         ypos 340
         xpos 830
-        idle "images/fr4outsidestreet.webp"
+        idle "images/fr4outsidestreetidle.webp"
         hover "images/fr4outsidestreethover.webp"
         if not fr4samantha:
             action Jump ("fr4samantha1")
