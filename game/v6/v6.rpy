@@ -51,6 +51,7 @@ init python:
 label choicetimer:
     $ renpy.jump("".join([timerexit]))
 
+label script06: #for compatibility only
 label v6start:
     if imremad and chloemad:
         menu:
@@ -592,6 +593,7 @@ label imrecond: # Meet Chloe
 
             cl "Yeah... I'll be right back."
 
+    label fo_ad: #for compatibility only
     scene s460d # cl swims towards her phone
     with dissolve
 
@@ -667,6 +669,7 @@ label imrecond: # Meet Chloe
             scene s464
             with dissolve
 
+    label fp_ad: #for compatibility only
     cl "I gotta go soon, but this was really fun."
 
     scene s464a
@@ -1488,6 +1491,7 @@ label continuebd:
 
     queue music [ "music/m9punk.mp3"]
 
+    label afterclass: #for compatibility only
     scene s494 # showing your and rileys backs leaving the classroom
     with dissolve
 
@@ -1631,6 +1635,7 @@ label continuebd:
 
             gr "So forget the Wolves, join the Apes."
 
+    label ft_ad: #for compatibility only
     gr "You got what it takes, the personality, the pull... and I'll teach you fighting myself."
 
     scene s501e
@@ -1777,6 +1782,7 @@ label continuebd:
                 $ achievement.grant("not_my_business")
                 $ achievement.sync()
 
+    label nr_bb: #for compatibility only
     u "(Huh, what's this?)"
 
     show flyer
@@ -1819,6 +1825,7 @@ label continuebd:
     scene s515a # mc looks at windowdetermined
     with dissolve
 
+    label continuebe: #for compatibility only
     u "(Fuck this, maybe going for a run will help me clear my mind)"
 
     scene s516 # Mc running in ruunning chlothes not at park
@@ -1947,6 +1954,7 @@ label continuebd:
 
     pause 1.0
 
+    label fu_b: #for compatibility only
     scene s523 # you stretching in the park
     with dissolve
 
@@ -2116,6 +2124,7 @@ label continuebd:
     else:
         pause 0.5
 
+    label lookdog: #for compatibility only
     if trolleyb:
         scene s525 # Looking at guy petting his dog
         with dissolve
@@ -2151,6 +2160,7 @@ label continuebd:
 
         u "*Breathing heavily*"
 
+    label runback: #for compatibility only
     play music "music/mindie5.mp3"
 
     scene s526 # you running back to your dorm
@@ -2192,6 +2202,8 @@ label continuebd:
 
             pause 0.5
 
+    label continuebf: #for compatibility only
+    label fw_a: #for compatibility only
     stop music fadeout 2.0
 
     play sound "sounds/call.mp3"
@@ -3126,6 +3138,7 @@ label fy_bd: # not gone to Emily's
 
         u "Jesus... Enjoy."
 
+    label continuebg: #for compatibility only
     scene s545 # you napping on your desk on top of your assignment, phone on the desk next to you
     with Fade (1,0,1)
 
@@ -3200,11 +3213,12 @@ label fy_bd: # not gone to Emily's
 
                 u "Actually, I was gonna say stunning."
 
-                scene s550b # evelyn geniune smile, flattered
+                scene s550b # evelyn genuine smile, flattered
                 with dissolve
 
                 ev "Oh, well thank you."
 
+        label gc_ad: #for compatibility only
         scene s550a
         with dissolve
 
@@ -3386,6 +3400,7 @@ label fy_bd: # not gone to Emily's
 
                 ev "Right."
 
+        label gd_ad: #for compatibility only
         scene s553m # evelyn about to stand up
         with dissolve
 
@@ -3571,6 +3586,7 @@ label fy_bd: # not gone to Emily's
 
                 ev "*Chuckles*"
 
+        label ge_ad: #for compatibility only
         scene s559 # Showing you and Evelyn outside of the restaurant at night, on something in the back it says "after date inc. It's after your date and you know it, even if it feels like time passed by quickly all of the sudden
         with fade
 
@@ -3662,6 +3678,7 @@ label fy_bd: # not gone to Emily's
                     else:
                         $ addPoint("bro")
 
+        label gf_b: #for compatibility only
         scene s562
         with dissolve
 
@@ -4466,6 +4483,7 @@ label afteraubrey:
             $ meetgrayson = True
             $ addPoint("tm")
 
+            label meetgrayson: #for compatibility only
             u "(I wanna hear what he has to say.)"
 
             scene s575 # mc sits alone at midnight on the front stairs of the college waiting.
@@ -4718,6 +4736,7 @@ label afteraubrey:
 
                     gr "We're here."
 
+            label wehere: #for compatibility only
             stop music fadeout 2.0
 
             scene s580 # Showing you and Grayson At night on a ledge, overlooking the city??? Or something else cool, Grayson looking into the distance
@@ -5008,6 +5027,7 @@ label afteraubrey:
 
             u "(Fuck Grayson, I'm not meeting him.)"
 
+    label aftergrayson: #for compatibility only
     stop music fadeout 2.0
 
     scene s586 # you lying in bed at night staring at the ceiling
@@ -5636,6 +5656,7 @@ label wakeupa:
 
             u "Right..."
 
+    label gn_ad: #for compatibility only
     scene s615
     with dissolve
 
@@ -5716,6 +5737,7 @@ label wakeupa:
             with dissolve
             u "You can say about art what you want, but this was like objectively bad. *Laughs*"
 
+    label go_ad: #for compatibility only
     scene s615
     with dissolve
 
@@ -5816,6 +5838,7 @@ label wakeupa:
             with dissolve
             ri "*Laughs* Probably."
 
+    label gp_ad: #for compatibility only
     scene s615
     with dissolve
 
@@ -6022,6 +6045,7 @@ label wakeupa:
 
             "*Crowd applauds*"
 
+    label afterps: #for compatibility only
     scene s628 # Showing Riley and you outside of the theatre room
     with fade
 
@@ -6106,6 +6130,7 @@ label wakeupa:
 
     u "Alright, I gotta get back."
 
+    label afterpsb: #for compatibility only
     if bowling:
 
         u "I'm going bowling with Penelope in a bit."
@@ -6632,6 +6657,7 @@ label wakeupa:
 
         pause 1.0
 
+    label readywolf: #for compatibility only
     stop music fadeout 2.0
     play music "music/m6punk.mp3"
 
