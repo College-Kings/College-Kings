@@ -220,7 +220,7 @@ label v10_sam_kitchen:
     scene v10skt4b
     with dissolve
 
-    sam "*Tispy* If you were an animal, what do you think you would be?"
+    sam "*Tipsy* If you were an animal, what do you think you would be?"
 
     scene v10skt4a
     with dissolve

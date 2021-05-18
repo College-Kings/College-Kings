@@ -169,7 +169,7 @@ label v10_econ_class:
     scene v10eco6
     with dissolve
 
-    ry "Someones in trouble."
+    ry "Someone's in trouble."
 
     scene v10eco6a # FPP. same 6, mouth closed
     with dissolve
