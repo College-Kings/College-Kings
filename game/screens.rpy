@@ -4454,7 +4454,7 @@ screen fr4hallway():
         imagebutton:
             ypos 175
             xpos 1035
-            idle "images/fr4hallwaychloe.webp"
+            idle "images/fr4hallwaychloeidle.webp"
             hover "images/fr4hallwaychloehover.webp"
             if not fr4chloe2:
                 action Jump ("fr4chloe2")
