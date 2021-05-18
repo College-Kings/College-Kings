@@ -1596,7 +1596,7 @@ label historye: #for compatibility only
         scene s136h # Imre holding his hands in front of mouth
         with dissolve
 
-        imre "Holy shit, you're a natural, dude"
+        imre "Holy shit, you're a natural, dude."
 
         scene s136d
         with dissolve
@@ -3525,7 +3525,7 @@ label try4new:
             scene s179a
             with dissolve
 
-            u "I guess it's kinda nice. What do you think"
+            u "I guess it's kinda nice. What do you think?"
 
             scene s179b # romantic smile
             with dissolve

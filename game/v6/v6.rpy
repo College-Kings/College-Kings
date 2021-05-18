@@ -5474,7 +5474,7 @@ label wakeupa:
         label phoneak:
             call screen phone
             if contact_Penelope.getReplies():
-                u "(I should really reply to Penelope.)"
+                u "(I should really text Penelope.)"
                 jump phoneak
 
         pause 0.5
@@ -7678,7 +7678,7 @@ label v6_fr3aubrey1:
         scene sfr3au3d
         with dissolve
 
-        au "Thank you"
+        au "Thank you."
 
         scene sfr3au2h
         with dissolve

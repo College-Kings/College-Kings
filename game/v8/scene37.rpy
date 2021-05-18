@@ -36,7 +36,7 @@ label v8_tues_evening:
         label v8s37_phoneContinue1:
             call screen phone
             if contact_Lauren.getReplies():
-                u "I should reply to Lauren"
+                u "I should reply to Lauren."
                 jump v8s37_phoneContinue1
 
         if rileyrs:
@@ -59,7 +59,7 @@ label v8_tues_evening:
         label v8s37_phoneContinue2:
             call screen phone
             if contact_Riley.getReplies():
-                u "I should reply to Riley"
+                u "I should reply to Riley."
                 jump v8s37_phoneContinue2
 
         u "(I guess this is just not my day for studying. Great job, [name]!)"
@@ -101,7 +101,7 @@ label v8_tues_evening:
 
         label v8s37_phoneContinue3:
             if contact_Lauren.getReplies():
-                u "I should reply to Lauren"
+                u "I should reply to Lauren."
                 jump v8s37_phoneContinue3
 
         if rileyrs:

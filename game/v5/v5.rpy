@@ -54,6 +54,8 @@ init python:
         contact_Amber.addReply(_("Yeah, no worries"))
         contact_Amber.newMessage(_("That's good xx"))
 
+label ev_a: #for compatibility only
+label ev_b: #for compatibility only
 label v5start:
     scene s373 # nora approaching
     with dissolve
@@ -177,6 +179,7 @@ label v5start:
 
             u "*Drunk* Yeah, right..."
 
+    label ev_bd: #for compatibility only
     scene s375 # You walking home
     with Fade (1,0,1)
 
@@ -572,6 +575,7 @@ label jorepb:
 
                     u "Yeah, right..."
 
+    label nnbd: #for compatibility only
     scene s375 # You walking home
     with Fade (1,0,1)
 
@@ -762,7 +766,7 @@ label continuez:
 
                 la "Oh, and a little kiss like that is already too much?"
 
-                la "I wasn't talking about a full on make out session, haha"
+                la "I wasn't talking about a full on make out session, haha."
 
                 la "Also, it's not like anyone will see us here."
 
@@ -1098,6 +1102,7 @@ label gokissb:
 
             la "Hmm, maybe it's best if you just experience it."
 
+    label fa_ad: #for compatibility only
     la "Okay, I want you to rest your head on the table and close your eyes."
 
     scene s382a
@@ -1746,6 +1751,7 @@ label continueaf:
 
             jump hospitala
 
+    label apo: #for compatibility only
     scene s394 ## you pulling on locked door
     with Fade (1,0,1)
 
@@ -2089,6 +2095,7 @@ label continueaf:
 
         pause 0.5
 
+    label gokiss: #for compatibility only
     scene s380a
     with dissolve
 
@@ -2145,7 +2152,7 @@ label continueaf:
 
             la "Oh, and a little kiss like that is already too much?"
 
-            la "I wasn't talking about a full on make out session, haha"
+            la "I wasn't talking about a full on make out session, haha."
 
             la "Also, it's not like anyone will see us here."
 
@@ -4314,6 +4321,7 @@ label findimre:
 
         u "Alright. Good luck, man."
 
+    label continueba: #for compatibility only
     stop music fadeout 2.0
 
     scene s442 # you on a park bench depressed

@@ -54,7 +54,7 @@ label v9_hc_demo:
     scene v9demo4c # TPP. Same camera as v9demo4, both still looking at eachother, Penelope smile, Cameron annoyed, Penelope mouth open, Cameron mouth closed.
     with dissolve
     
-    pe "Sure"
+    pe "Sure."
 
     scene v9demo4d # TPP. Same camera as v9demo4, both still looking at eachother, Penelope smile, Cameron annoyed, Cameron mouth open, Penelope mouth closed.
     with dissolve
@@ -231,7 +231,7 @@ label v9_hc_demo_cont2:
             jump v9_hc_demo_west
         
 label v9_hc_demo_west:
-    u "West, Your Majesty"
+    u "West, Your Majesty."
 
     scene v9demo10a
     with dissolve
@@ -251,7 +251,7 @@ label v9_hc_demo_west:
     jump v9_hc_demo_cont3
 
 label v9_hc_demo_north:
-    u "North, Your Majesty"
+    u "North, Your Majesty."
 
     scene v9demo10a
     with dissolve

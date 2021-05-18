@@ -107,7 +107,7 @@ label v9_hc_cont2:
     scene v9hc9 # FPP. Show Penelope getting up from her seat, smile, mouth open.
     with dissolve
 
-    pe "This is gonna be so cool"
+    pe "This is gonna be so cool."
 
     scene v9hc10 # FPP. Show Cameron getting up from his seat, grumpy, mouth open.
     with dissolve
@@ -155,7 +155,7 @@ label v9_hc_penelope:
     scene v9hc13
     with dissolve
 
-    pe "Ugh, boys"
+    pe "Ugh, boys."
 
     jump v9_hc_cont3
 
@@ -188,7 +188,7 @@ label v9_hc_cont3:
     scene v9hc19 # FPP. Close up Cameron looking grumpy, mouth closed.
     with dissolve
 
-    u "You don't want to do your work anyway. And besides, you look cute"
+    u "You don't want to do your work anyway. And besides, you look cute."
 
     scene v9hc20 # TPP. Show Cameron punching MC on the arm, MC laughing.
     with dissolve
@@ -246,12 +246,12 @@ label v9_hc_scared:
     scene v9hc21c
     with dissolve
 
-    ca "Let's just get it over with"
+    ca "Let's just get it over with."
 
     jump v9_hc_cont4
 
 label v9_hc_ready:
-    u "We got this"
+    u "We got this."
 
     scene v9hc21c
     with dissolve

@@ -132,7 +132,7 @@ menu:
     "Just ask him about the red square":
         $ addPoint("bro")
 
-        u "What's up with the red square? That's all I wanna know"
+        u "What's up with the red square? That's all I wanna know."
 
         scene v9apost3b
         with dissolve

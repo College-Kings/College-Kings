@@ -2252,7 +2252,7 @@ label thisbewalk:
                 else:
                     $ addPoint("bf")
 
-                u "Almost as cute as you"
+                u "Almost as cute as you."
 
                 scene s727b # close up autumn uncomfortable
                 with dissolve
@@ -11172,7 +11172,7 @@ label laurenhocodate:
     scene sfr4la3a
     with dissolve
 
-    u "Yeah, definitely. Thanks"
+    u "Yeah, definitely. Thanks."
 
     scene sfr4la3b # lauren walks to her desk
     with dissolve
@@ -16765,7 +16765,7 @@ label fr4samantha1:
     scene sfr4sa2a #Sebastian also stands up and follows, sam stands in front of the trees
     with dissolve
 
-    se "Hahahaha yeaaaah they are! They're like moving like walking hahaha"
+    se "Hahahaha yeaaaah they are! They're like moving like walking hahaha."
 
     scene sfr4sa3 # a bit closeup they're both standing in front of the trees
     with dissolve

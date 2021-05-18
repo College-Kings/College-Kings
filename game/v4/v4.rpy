@@ -190,6 +190,7 @@ label v4start:
 
             u "I'll see you then, get better soon."
 
+    label dp_ad: #for compatibility only
     stop music fadeout 2.0
 
     scene s298 # shows a cab in the night from outside with you in the back possibly not seeing you due to dark windows
@@ -347,6 +348,7 @@ label v4start:
             scene s303c
             with dissolve
 
+    label dq_bd: #for compatibility only
     u "Hey, isn't it kinda crazy that we all just met at the beginning of the week?"
 
     u "I mean so much has happened since then."
@@ -428,6 +430,7 @@ label v4start:
 
         ri "Right..."
 
+    label continuev: #for compatibility only
     ri "It's getting quite late, I should probably head back to my dorm."
 
     menu:
@@ -453,6 +456,7 @@ label v4start:
 
             ri "Not a problem at all."
 
+    label dr_bd: #for compatibility only
     stop music fadeout 2.0
 
     ######### CHLOE DREAM:
@@ -629,6 +633,7 @@ label v4start:
 
                 ju "Well that's a relief. Let's go shopping then."
 
+        label du_bd: #for compatibility only
         stop music fadeout 2.0
 
         ######### THE FOLLOWING IMAGES HAVE TO BE RENDERED WITH NOT BACKGROUND AS A VIDEO OF MOVING ROADS WILL BE INSERTED
@@ -994,6 +999,7 @@ label v4start:
 
                     jump dv_dd
 
+        label dv_cd: #for compatibility only
         scene s327 # FIRST PERSON inside shop talking to cashier with volleyball on the cash register thing
         with fade
 
@@ -1351,6 +1357,8 @@ label ea_b:
     jump readmontagea
 
 
+label eb_ad: #for compatibility only
+label ea_ad: #for compatibility only
 label autumnsita:
     scene s335 # you sititng opposite to autumn eyeheight FIRST PERSON she's curious
     with dissolve
@@ -1443,6 +1451,7 @@ label autumnsita:
 
     aut "Yeah, I should get back to my research as well."
 
+label readmontagec: #for compatibility only
 label readmontagea:
     stop music fadeout 2.0
 
@@ -1534,6 +1543,7 @@ label readmontagea:
 
             ry "Look, man. I messed up, I'm sorry."
 
+    label ec_bd: #for compatibility only
     ry "I didn't mean to attack you like that. I just wanted to let you know about the things that I've heard. "
 
     ry "You know, so she doesn't play you."
@@ -1602,6 +1612,7 @@ label readmontagea:
     with dissolve
 
     if (not costumeaubrey and caughtpeekingpenelope and caughtpeekingpenelopecounter) or (not caughtpeekingpenelope) : # costume w pen
+        label continueaa: #for compatibility only
         u "(Oh, Penelope's here, I should probably say hi.)"
 
         scene s345 #standing in front of Penelope she looking down
@@ -1665,7 +1676,7 @@ label readmontagea:
                 scene s349d
                 with dissolve
 
-                u "I didn't, but I'm glad I came now"
+                u "I didn't, but I'm glad I came now."
 
                 scene s349c
                 with dissolve
@@ -1720,6 +1731,7 @@ label readmontagea:
 
                 clerk "Coming right up, sir."
 
+        label ed_bd: #for compatibility only
         scene s345 #standing in front of Penelope she looking down
         with fade
 
@@ -1924,6 +1936,7 @@ label readmontagea:
 
                 u "Yeah, sure."
 
+    label ej_bd: #for compatibility only
     scene s350a #FIRST PERSON sititng across penelope smiling
     with dissolve
 
@@ -2023,7 +2036,7 @@ label ef_bd:
             scene s350k
             with dissolve
 
-            pe "*Laughs* Ewww... I don't think we should"
+            pe "*Laughs* Ewww... I don't think we should."
 
             scene s350l
             with dissolve
@@ -2048,6 +2061,7 @@ label ef_bd:
             scene s350l
             with dissolve
 
+            label ek_ad: #for compatibility only
             u "Haha, I think you'd be surprised."
 
     scene s350
@@ -2182,6 +2196,7 @@ label continueab:
     else:
         u "(Okay, I need to make sure that I don't forget about meeting Chloe.)"
 
+    label jorepa: #for compatibility only
     stop music fadeout 2.0
     scene s352
     with Fade (1,0,1)
@@ -2222,6 +2237,7 @@ label continueab:
     else:
         jo "Come in."
 
+    label continueae: #for compatibility only
     scene s354 # standing in living room First Person
     with dissolve
 
@@ -2304,6 +2320,7 @@ label continueab:
 
             jo "Damn, alright. Hahaha."
 
+    label en_ad: #for compatibility only
     scene s357 # amber leaning forward curious
     with dissolve
 
@@ -2358,6 +2375,7 @@ label continueab:
 
             ki "Ha! Classic Frog."
 
+    label eo_bd: #for compatibility only
     scene s357d # laughing smile amber
     with dissolve
 
@@ -2437,6 +2455,7 @@ label continueab:
 
                     jump jorepb
 
+    label jonewe: #for compatibility only
     scene jomon2 # josh looking down at phone
     with dissolve
 
@@ -2484,6 +2503,7 @@ label continueab:
             scene s357a
             with dissolve
 
+    label ep_a: #for compatibility only
     u "You know what, I'll do it."
 
     scene jomon3 # handstand
@@ -2795,6 +2815,7 @@ label continueab:
 
                     "*Phone alarm ringing*"
 
+    label es_bd: #for compatibility only
     scene s362 # looking at your phone # chloe Alarm
     with dissolve
 
@@ -2900,6 +2921,7 @@ label continueab:
             scene s370c
             with dissolve
 
+    label eu_b: #for compatibility only
     u "*Drunk* Really?? Then why did you go after Grayson instead of helping me up when he knocked me out??"
 
     scene s370d
