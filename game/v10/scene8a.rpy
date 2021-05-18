@@ -142,7 +142,7 @@ label v10_avoid_fight:
             scene v10frr5 # FPP. Show Grayson, worried look, mouth open
             with dissolve
 
-            gr "You okay, buddy? It looked like you were a bit overwhelmed there.?"
+            gr "You okay, buddy? It looked like you were a bit overwhelmed there?"
 
             scene v10frr5a # FPP. Same camera as v10frr5, Show Grayson, worried look, mouth closed
             with dissolve
