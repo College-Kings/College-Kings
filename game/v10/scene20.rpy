@@ -80,7 +80,7 @@ label v10_room_mon_night:
 
         play sound "sounds/vibrate.mp3"
 
-        $ contact_Josh.newMessage("So what do think!? Any good ones for you?")
+        $ contact_Josh.newMessage("So what do think!? Any good ones for you?", queue=False)
         $ contact_Josh.addReply("What are you talking about?")
         $ contact_Josh.newMessage("Wait, you don't know what I'm talking about? Everybody on campus knows about it. Except for you I guess.")
         $ contact_Josh.addReply("What does everyone know about?")
