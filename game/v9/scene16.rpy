@@ -810,8 +810,8 @@ label v9_thur_night_aft_em_w:
         $ contact_Lindsey.addReply("I'm ok, it's really not that bad", v9s16_reply4)
 
     label s16_ContinueW1:
+        call screen phone
         if contact_Lindsey.getReplies():
-            call screen phone
             "(I should reply to Lindsey.)"
             jump s16_ContinueW1
 
@@ -856,8 +856,8 @@ label v9_thur_night_aft_em_a:
         $ contact_Lindsey.addReply("I'm ok, it's really not that bad", v9s16_reply4)
 
     label s16_ContinueA1:
+        call screen phone
         if contact_Lindsey.getReplies():
-            call screen phone
             "(I should reply to Lindsey.)"
             jump s16_ContinueA1
 
