@@ -107,7 +107,7 @@ label v10_fight_result:
         if v10_imre_win:
             scene v10fr1
             with dissolve
-            jo "I think as we all expected, [name] has dominated! So ladies if you're itching for a winner tonight I found one."
+            jo "I think as we all expected, [name] has dominated! So ladies if you're itching for a winner tonight, I found one."
 
             jo "Anything from the man himself?"
 
