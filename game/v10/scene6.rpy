@@ -12,7 +12,7 @@ label v10_mc_vs_ryan_fight:
     scene v10mvr1a # FPP. Same camera as v10mvr1, Show imre and chris near ring, imre excited look, mouth closed chris mouth closed
     with dissolve
 
-    u "*Laughs* Yeah man, that fucking sick!"
+    u "*Laughs* Yeah man, that was fucking sick!"
 
     scene v10mvr1
     with dissolve

@@ -36,7 +36,7 @@ label v10_imre_vs_caleb:
 
     scene v10ivc3a # FPP. Same Camera as v10ivc3, Show Caleb, hand now slightly lowered looking like he's going to be sick, mouth open
     with dissolve
-    cal "I don't think I can do this. I feel...sick."
+    cal "I don't think I can do this. I feel... sick."
 
     scene v10ivc4 # FPP. Show Grayson, pointing at caleb, slight angry face, caleb hand over mouth, Grayson mouh open
     with dissolve

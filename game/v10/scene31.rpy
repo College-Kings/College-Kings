@@ -21,12 +21,12 @@ label v10_late_alley:
     scene v10all3 # FPP. Show Josh sat on floor, slight frown, mouth open
     with dissolve
 
-    jo "Look man, I haven't been, you know...getting any lately. I'm here for the girls."
+    jo "Look man, I haven't been, you know... getting any lately. I'm here for the girls."
 
     scene v10all4 # FPP. Show the 2 hookers, both mouths closed. Looking at each other
     with dissolve
 
-    u "Really? So the guy that ran was what...their pimp?"
+    u "Really? So the guy that ran was what... their pimp?"
 
     scene v10all3
     with dissolve

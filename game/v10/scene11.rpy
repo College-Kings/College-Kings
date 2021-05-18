@@ -164,7 +164,7 @@ label v10_linds_room:
 
     li "I don't have the motivation to do anything. School seems pointless, home seems pointless, everything seems pointless."
 
-    li " I know it's okay to be sad, but sometimes I'm not just sad... I get really angry.. I just...I can't believe she's really gone. And she's never coming back."
+    li " I know it's okay to be sad, but sometimes I'm not just sad... I get really angry... I just... I can't believe she's really gone. And she's never coming back."
 
     scene v10slds3d
     with dissolve
@@ -257,7 +257,7 @@ label v10_linds_room:
                         scene v10slds3c
                         with dissolve
 
-                        li "Yeah.. she was."
+                        li "Yeah... she was."
 
                     "Speak on her":
                         scene v10slds3e
@@ -323,7 +323,7 @@ label v10_linds_room:
                         scene v10slds3c
                         with dissolve
 
-                        li "Yeah.. she was."
+                        li "Yeah... she was."
 
                     "Speak on her":
                         scene v10slds3e

@@ -104,7 +104,7 @@ label v10_econ_class:
     scene v10eco7a # FPP. same 7, mouth closed
     with dissolve
 
-    u "(She's sure is in a good mood.)"
+    u "(She sure is in a good mood.)"
 
     scene v10eco7
     with dissolve
@@ -139,7 +139,7 @@ label v10_econ_class:
     with dissolve
 
 
-    la "That was an...interesting class."
+    la "That was an... interesting class."
 
     scene v10eco5
     with dissolve
@@ -185,7 +185,7 @@ label v10_econ_class:
     with dissolve
     if joinwolves:
         if v10_ms_r_kiss:
-            ro "I just wanted to see how you were doing after...everything."
+            ro "I just wanted to see how you were doing after... everything."
             
             scene v10eco8a # FPP. same 8, mouth closed.
             with dissolve
@@ -197,7 +197,7 @@ label v10_econ_class:
 
             ro "Yeah, uhm. I’m actually really happy."
         else:
-            ro "I just wanted to see how you were doing after...everything."
+            ro "I just wanted to see how you were doing after... everything."
 
             scene v10eco8a
             with dissolve
@@ -219,12 +219,12 @@ label v10_econ_class:
                 scene v10eco8a
                 with dissolve
 
-                u "You know MS. ROSE, I was actually hoping to talk to you about the other night."
+                u "You know Ms. Rose, I was actually hoping to talk to you about the other night."
 
                 scene v10eco8
                 with dissolve
 
-                ro "Please [name] , when we're alone you can call me Lorraine."
+                ro "Please [name], when we're alone you can call me Lorraine."
 
                 scene v10eco8a
                 with dissolve
@@ -269,7 +269,7 @@ label v10_econ_class:
                 scene v10eco8a
                 with dissolve
 
-                u "I'm glad to see you happy...Lorraine. *Chuckles*"
+                u "I'm glad to see you happy... Lorraine. *Chuckles*"
 
                 scene v10eco8
                 with dissolve
@@ -297,12 +297,12 @@ label v10_econ_class:
 
                 u "(It's obviously a private matter.)"
 
-                u "I'm glad to see you happy MS. ROSE."
+                u "I'm glad to see you happy Ms. Rose."
 
                 scene v10eco8
                 with dissolve
 
-                ro "Please [name] , when we're alone you can call me Lorraine."
+                ro "Please [name], when we're alone you can call me Lorraine."
 
                 scene v10eco8a
                 with dissolve
@@ -317,7 +317,7 @@ label v10_econ_class:
                 scene v10eco8a
                 with dissolve
 
-                u "You too...Lorraine. *Chuckles*"
+                u "You too... Lorraine. *Chuckles*"
 
     else:
 

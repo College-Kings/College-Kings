@@ -84,9 +84,9 @@ label v10_sun_morn:
             $ contact_Lindsey.newMessage("Hey, [name]... I know you have a lot on your mind right now with everything that happened yesterday...", queue=False)
             
         $ contact_Lindsey.newMessage("I've just been dealing with some stuff...", queue=False)
-        $ contact_Lindsey.newMessage("and I need someone to talk to", queue=False)
+        $ contact_Lindsey.newMessage("And I need someone to talk to", queue=False)
         $ contact_Lindsey.newMessage("Sorry, we don't even know each other that well", queue=False)
-        $ contact_Lindsey.newMessage("it's just, I feel like I can talk to you...", queue=False)
+        $ contact_Lindsey.newMessage("It's just, I feel like I can talk to you...", queue=False)
         $ contact_Lindsey.newMessage("I don't know, I'm sorry I don't wanna bother you", queue=False)
         $ contact_Lindsey.newMessage("Just forget what I said", queue=False)
         $ contact_Lindsey.addReply("If you need someone to talk I'll come over right now!", v10s10_reply1)
@@ -185,9 +185,9 @@ label v10_sun_morn:
             $ contact_Lindsey.newMessage("Hey, [name]... I know you have a lot on your mind right now with everything that happened yesterday...", queue=False)
             
         $ contact_Lindsey.newMessage("I've just been dealing with some stuff...", queue=False)
-        $ contact_Lindsey.newMessage("and I need someone to talk to", queue=False)
+        $ contact_Lindsey.newMessage("And I need someone to talk to", queue=False)
         $ contact_Lindsey.newMessage("Sorry, we don't even know each other that well", queue=False)
-        $ contact_Lindsey.newMessage("it's just, I feel like I can talk to you...", queue=False)
+        $ contact_Lindsey.newMessage("It's just, I feel like I can talk to you...", queue=False)
         $ contact_Lindsey.newMessage("I don't know, I'm sorry I don't wanna bother you", queue=False)
         $ contact_Lindsey.newMessage("Just forget what I said", queue=False)
         $ contact_Lindsey.addReply("If you need someone to talk I'll come over right now!", v10s10_reply1)

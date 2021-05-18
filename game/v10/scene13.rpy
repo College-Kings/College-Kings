@@ -14,12 +14,12 @@ label v10_wolves_redec:
         scene v10swhr2 # FPP. Show Chris standing in the kitchen (table and living room in background). Chris smiling, mouth closed.
         with dissolve
 
-        u "Hey Chris, I really appreciate the room and all, but I haven't had a chance to make it scream [name] yet. It cool if I jazz it up a bit?"
+        u "Hey Chris, I really appreciate the room and all, but I haven't had a chance to make it scream [name] yet. Is it cool if I jazz it up a bit?"
 
         scene v10swhr2a # FPP. Same camera angle as v10swhr2. Show Chris. Chris smiling, mouth open.
         with dissolve
 
-        ch "-laughs- I was wondering when you'd get tired of blank walls. There's some supplies in that closet. We're actually getting ready to decorate the whole house."
+        ch "*Laughs* I was wondering when you'd get tired of blank walls. There's some supplies in that closet. We're actually getting ready to decorate the whole house."
 
         scene v10swhr2
         with dissolve
@@ -69,7 +69,7 @@ label v10_wolves_redec:
         scene v10swhr5a # FPP. Show the closet door open, show Perry standing nearby, smiling, mouth open.
         with dissolve
 
-        guyd "-laughs- Yeah a little bit. What are you doing in the closet?"
+        guyd "*Laughs* Yeah a little bit. What are you doing in the closet?"
 
         scene v10swhr5
         with dissolve
@@ -165,12 +165,12 @@ label v10_wolves_redec:
                 scene v10swhr7c # FPP. Show Perry in MC's under construction room. Perry is smiling/looks amused, mouth closed.
                 with dissolve
 
-                u "-laughs- Are you serious!?"
+                u "*Laughs* Are you serious!?"
 
                 scene v10swhr7d # FPP. Show Perry in MC's under construction room. Perry is smiling/looks amused, mouth open.
                 with dissolve
 
-                guyd "-laughs- Sadly, yes. Regardless of me sick or not though the guys still weren't happy."
+                guyd "*Laughs* Sadly, yes. Regardless of me sick or not though the guys still weren't happy."
 
                 scene v10swhr7c
                 with dissolve
@@ -237,7 +237,7 @@ label v10_wolves_redec:
                 scene v10swhr5a
                 with fade
 
-                guyd "-laughs- Alright man."
+                guyd "*Laughs* Alright man."
 
                 scene v10swhr4d # TPP. Same camera as v10swhr4. Show MC grabbing supplies from the closet.
                 with fade
@@ -273,7 +273,7 @@ label v10_wolves_redec:
         scene v10swhr2a
         with dissolve
 
-        ch "*laughs* I was wondering when you'd get tired of blank walls. There's some supplies in that closet, we're actually getting ready to decorate the whole house."
+        ch "*Laughs* I was wondering when you'd get tired of blank walls. There's some supplies in that closet, we're actually getting ready to decorate the whole house."
 
         scene v10swhr2
         with dissolve
@@ -333,7 +333,7 @@ label v10_wolves_redec:
         scene v10swhr5a
         with dissolve
 
-        guyd "-laughs- Yeah, a little bit. What are you doing in the closet?"
+        guyd "*Laughs* Yeah, a little bit. What are you doing in the closet?"
 
         scene v10swhr5
         with dissolve
@@ -427,12 +427,12 @@ label v10_wolves_redec:
                 scene v10swhr7c
                 with dissolve
 
-                u "-laughs- Are you serious!?"
+                u "*Laughs* Are you serious!?"
 
                 scene v10swhr7d
                 with dissolve
 
-                guyd "-laughs- Sadly, yes. Regardless of me sick or not though the guys still weren't happy."
+                guyd "*Laughs* Sadly, yes. Regardless of me sick or not though the guys still weren't happy."
 
                 scene v10swhr7c
                 with dissolve
@@ -498,7 +498,7 @@ label v10_wolves_redec:
                 scene v10swhr5a
                 with fade
 
-                guyd "-laughs- Alright man."
+                guyd "*Laughs* Alright man."
 
                 scene v10swhr4d
                 with fade

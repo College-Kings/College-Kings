@@ -55,7 +55,7 @@ label v10_riley_vs_amber:
     scene v10rva9 # Amber holding Riley's arms behind her back
     with dissolve
 
-    am "*Whisper* I like holding you like this.."
+    am "*Whisper* I like holding you like this..."
 
     ri "Kinda hurts."
 
@@ -67,7 +67,7 @@ label v10_riley_vs_amber:
 
     ri "Alright!"
 
-    u "(Woah, that was...woah.)"
+    u "(Woah, that was... woah.)"
 
     scene v10rva10a # FPP. mouth closed
     with fade

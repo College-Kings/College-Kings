@@ -76,7 +76,7 @@ label v10_walk_jenny_text:
     scene v10swjt5 # FPP. Close up Lee, smile, mouth open.
     with dissolve
 
-    lee "Ah [name] , what are you doing out this late?"
+    lee "Ah [name], what are you doing out this late?"
 
     scene v10swjt5a # FPP. Same as 5, smile, mouth closed.
     with dissolve
@@ -120,7 +120,7 @@ label v10_walk_jenny_text:
     scene v10swjt5
     with dissolve
 
-    lee "By the time I get done reading and, grading papers and relaxing for a bit it will be."
+    lee "By the time I get done reading, grading papers and relaxing for a bit it will be."
 
     scene v10swjt5a
     with dissolve

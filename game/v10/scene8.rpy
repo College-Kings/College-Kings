@@ -70,7 +70,7 @@ label v10_fight_result:
             scene v10fr6 # TPP. Show Ryan helping MC get up, Ryan mouth open, Mc mouth closed
             with dissolve
 
-            ry "Hope you alright, man. Can't afford to be a friend in a fight. You good?"
+            ry "Hope you're alright, man. Can't afford to be a friend in a fight. You good?"
 
             scene v10fr7 # FPP. Show ryan in ring, neutral look, mouth closed
             with dissolve

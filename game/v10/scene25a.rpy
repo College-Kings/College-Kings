@@ -12,7 +12,7 @@ label v10_sam_kitchen:
     scene v10skt2 # FPP. Show Samantha Stood in the kitchen of the apes House. Big smile on face, mouth closed.
     with fade
 
-    u "What...what's going on? Everything okay? I came as fast as I could!"
+    u "What... what's going on? Everything okay? I came as fast as I could!"
 
     scene v10skt2a # FPP. same camera as v10skt2, Big smile on face, mouth open.
     with dissolve
@@ -30,13 +30,13 @@ label v10_sam_kitchen:
     sam "Could you make me a Sex on The Beach?"
 
     menu:
-        "Make Her A Cocktail ":
+        "Make Her A Cocktail":
             $ makeSamCock = True
             $ addPoint("bf", 1)
             $ samLike += 1
             scene v10skt2 
             with dissolve
-            u "*Sighs* You're something else you know that?  *Chuckles* I rushed all the way over here worried."
+            u "*Sighs* You're something else you know that? *Chuckles* I rushed all the way over here worried."
 
             scene v10skt2a
             with dissolve
@@ -145,7 +145,7 @@ label v10_sam_kitchen:
             scene v10skt4b
             with dissolve
 
-            sam "Yeah' from hard drugs. But I'm not gonna stop drinking a little cocktail once in a while. I've never had an alcohol problem."
+            sam "Yeah from hard drugs. But I'm not gonna stop drinking a little cocktail once in a while. I've never had an alcohol problem."
 
             scene v10skt4a
             with dissolve
@@ -166,7 +166,7 @@ label v10_sam_kitchen:
     scene v10skt4b
     with dissolve
 
-    sam "So what were you doing out? were you With one of your little girlfriends?"
+    sam "So what were you doing out? Were you with one of your little girlfriends?"
 
     menu:
         "Tease Her":
@@ -180,12 +180,12 @@ label v10_sam_kitchen:
             scene v10skt4b
             with dissolve
 
-            sam "I mean you're free to do what you want.. As long as when I call you come running. *Chuckles*"
+            sam "I mean you're free to do what you want... As long as when I call you come running. *Chuckles*"
         "No":
             $ samLike -= 1
             scene v10skt4a
             with dissolve
-            u "No, I was uhm...  doing things, you know. Not girl related things."
+            u "No, I was uhm... doing things, you know. Not girl related things."
 
             scene v10skt4b
             with dissolve
@@ -238,12 +238,12 @@ label v10_sam_kitchen:
             scene v10skt4a
             with dissolve
 
-            u "Haha, okay. Let's see...I'd be a lion."
+            u "Haha, okay. Let's see... I'd be a lion."
         "Eagle":
             scene v10skt4a
             with dissolve
 
-            u "Haha, okay. Let's see...I'd be an eagle."
+            u "Haha, okay. Let's see... I'd be an eagle."
 
 
     scene v10skt4b
@@ -263,14 +263,14 @@ label v10_sam_kitchen:
     scene v10skt5 # FPP. Show close up of Samantha, slight smile, mouth open
     with dissolve
 
-    sam "*drunk whisper* Let's make bunny babies."
+    sam "*Drunk whisper* Let's make bunny babies."
 
     scene v10skt5a # FPP. Same Camera as v10skt5, Show close up of Samantha, slight smile, mouth closed
     with dissolve
 
     u "(Oh shit, she's fucked up.)"
 
-    u "Oh god, alright...let's get you to sit down. You're clearly super drunk."
+    u "Oh god, alright... let's get you to sit down. You're clearly super drunk."
 
     scene v10skt5
     with dissolve
@@ -293,9 +293,9 @@ label v10_sam_kitchen:
 
     u "I guess me coming was an emergency, I definitely wouldn't want you drinking by yourself."
 
-    sam "*snoring*"
+    sam "*Snoring*"
 
-    u "( *Laughs* Wow, never have I seen more of a lightweight.)"
+    u "(*Laughs* Wow, never have I seen more of a lightweight.)"
 
     scene v10skt8 # FPP. Show The empty apes kitchen,
     with fade

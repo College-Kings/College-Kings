@@ -7,7 +7,7 @@ label v10_aft_walk_home:
     scene v10smwh1 # TPP. Show MC walking on the sidewalk. Normal expression, mouth closed.
     with fade
 
-    u "(Man, it feels like time is going by fast..)"
+    u "(Man, it feels like time is going by fast...)"
 
     scene v10smwh1a # TPP. Same camera as v10smwh1. MC stops on sidewalk outside of an alley because he sees something. Normal expression, mouth closed.
     with dissolve
@@ -36,7 +36,7 @@ label v10_aft_walk_home:
             scene v10smwh3a # FPP. Same camera as v10smwh3. Show Josh, normal/content expression, mouth open.
             with dissolve
 
-            jo "Hey [name] ! Surprised to see you up this early, must've had a really boring night."
+            jo "Hey [name]! Surprised to see you up this early, must've had a really boring night."
 
             if helpJosh: # If MC went to the drug deal with Josh
                 scene v10smwh3
@@ -87,7 +87,7 @@ label v10_aft_walk_home:
                     scene v10smwh3d # FPP. Same camera as v10smwh3. Show Josh, smiling, mouth open.
                     with dissolve
 
-                    jo "Trust me, you have nothing to worry about. That definitely taught me a lesson I won't forget *smiles* . I'm being smart."
+                    jo "Trust me, you have nothing to worry about. That definitely taught me a lesson I won't forget. *Smiles* I'm being smart."
 
                     scene v10smwh3
                     with dissolve

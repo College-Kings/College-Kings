@@ -21,7 +21,7 @@ label v10_cafe_w_jenny:
     scene v10scwj3 # TPP. Show MC walking towards a table in the café (now wearing outfit 9)
     with dissolve
 
-    u "(I wonder what Jenny's gonna be like. She could be just as wild as Aubrey. I wonder what she looks like. I wonder if she's hot... Maybe I shouldn't be thinking like that...maybe.)"
+    u "(I wonder what Jenny's gonna be like. She could be just as wild as Aubrey. I wonder what she looks like. I wonder if she's hot... Maybe I shouldn't be thinking like that... maybe.)"
 
     scene v10scwj4 # TPP. Show MC looking around whilst taking a seat at a table. (Make sure it is the table with four seats. Move one seat to the side: https://prnt.sc/12q1qkd)
     with dissolve
@@ -112,7 +112,7 @@ label v10_cafe_w_jenny:
         scene v10scwj7c
         with dissolve
 
-        u "As we both know, Penelope is a really nice and caring person, but sometimes, she cares a little too much.. Her kindness just gets in the way of her judgement."
+        u "As we both know, Penelope is a really nice and caring person, but sometimes, she cares a little too much... Her kindness just gets in the way of her judgement."
 
         scene v10scwj7
         with dissolve
@@ -121,7 +121,7 @@ label v10_cafe_w_jenny:
 
         scene v10scwj7a
 
-        u "Well...you."
+        u "Well... you."
 
         scene v10scwj7b
         with dissolve
@@ -149,7 +149,7 @@ label v10_cafe_w_jenny:
         scene v10scwj7d
         with dissolve
 
-        jen "So that's how I...oh my god, I should've known."
+        jen "So that's how I... oh my god, I should've known."
         jen "There was no way I was getting accepted, I had already given up." 
         jen "But Penelope just kept telling me not to worry about it and everything would work out."
         jen "Wow, this is all my fault. She wouldn't be in this mess if it wasn't for me. So much for being a good friend..."
@@ -221,7 +221,7 @@ label v10_cafe_w_jenny:
                     jen "Maybe I'll take you up on that some time."
 
             "Stay Friendly":
-                u "Yeah, they have really good muffins here as well.."
+                u "Yeah, they have really good muffins here as well..."
 
                 scene v10scwj7
                 with dissolve
@@ -280,7 +280,7 @@ label v10_cafe_w_jenny:
 
         pe "The school is taking action regarding the $15,000 fine. On Thursday I have to face the school's disciplinary board."
 
-        pe "I honestly can't believe this is really happening' [name], I didn't think they'd actually take it this far."
+        pe "I honestly can't believe this is really happening [name], I didn't think they'd actually take it this far."
 
         scene v10scwj11a # TPP. Same as 11, mouth closed.
         with dissolve
@@ -505,12 +505,12 @@ label v10_cafe_w_jenny:
         scene v10scwj18 # FPP. Show Jenny who is turning to Look at Penelope who is stood near the chair on the edge of the table. Both confused, Jenny mouth open.
         with dissolve
 
-        jen "Oh, heyyy.  I didn't know you were also coming."
+        jen "Oh, heyyy. I didn't know you were also coming."
 
         scene v10scwj19 # FPP. Show Jenny and Penelope (who is now sat down), both confused, mouths closed.
         with dissolve  
 
-        u "Yeah I should probably explain, I thought it'd be best if we all uhm...talk about the situation and laid everything out in the open."
+        u "Yeah I should probably explain, I thought it'd be best if we all uhm... talked about the situation and laid everything out in the open."
 
         scene v10scwj20 # TPP. Show Penelope (Camera infront of her same as 7), slight sad, mouth open.
         with dissolve
@@ -527,7 +527,7 @@ label v10_cafe_w_jenny:
 
         pe "I know I should've told you all of this before, or just not done it at all." 
 
-        pe "but do you remember when you and I talked about you getting accepted to this school?"
+        pe "But do you remember when you and I talked about you getting accepted to this school?"
 
         scene v10scwj7d
         with dissolve
@@ -537,7 +537,7 @@ label v10_cafe_w_jenny:
         scene v10scwj20
         with dissolve
 
-        pe "Yeah well...it worked out because I did something. I sort of uhm' hacked into the school and made sure you got accepted."
+        pe "Yeah well... it worked out because I did something. I sort of uhm hacked into the school and made sure you got accepted."
 
         scene v10scwj7d
         with dissolve
@@ -578,7 +578,7 @@ label v10_cafe_w_jenny:
         scene v10scwj20
         with dissolve
 
-        pe "Sadly, no. Part of my situation Jenny, as I already told [name] , involves a fine of $15,000 the school is handing me."
+        pe "Sadly, no. Part of my situation Jenny, as I already told [name], involves a fine of $15,000 the school is handing me."
 
         pe "On Thursday there's going to be hearing with the disciplinary board."
 
@@ -655,9 +655,9 @@ label v10_cafe_w_jenny:
 
                 pe "Oh my god, really? That'd mean so much to me."
 
-                pe "I don't know anything about hearings or arguing or' Thank you [name]."
+                pe "I don't know anything about hearings or arguing."
 
-                pe "I really don't know where my head would be if I didn't have you. to talk to."
+                pe "Thank you [name], I really don't know where my head would be if I didn't have you to talk to."
 
         scene v10scwj7a
         with dissolve
@@ -755,12 +755,12 @@ label v10_cafe_w_jenny:
         scene v10scwj21
         with dissolve
 
-        pe "See you around and thank you. For everything.."
+        pe "See you around and thank you. For everything..."
 
         scene v10scwj21a
         with dissolve
 
-        u "Anytime, I'll see you soon.."
+        u "Anytime, I'll see you soon..."
 
         scene v10scwj21
         with dissolve

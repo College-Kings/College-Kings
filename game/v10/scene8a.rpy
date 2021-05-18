@@ -46,7 +46,7 @@ label v10_avoid_fight:
 
             ch "And even now, here I am focusing on the guy that ran while everyone else, including Imre who did a spectacular job, is inside."
 
-            ch " Busting their ass to show them they belong to the Wolves. Tonight was supposed to be a night of accomplishment and celebration."
+            ch "Busting their ass to show them they belong to the Wolves. Tonight was supposed to be a night of accomplishment and celebration."
 
             ch "If this is how you're going to act when push comes to shove then think real hard about if this is even for you."
 
@@ -65,7 +65,7 @@ label v10_avoid_fight:
                     scene v10frr3b
                     with dissolve
 
-                    u "Yeah...FUCK IT! I'll do it."
+                    u "Yeah... FUCK IT! I'll do it."
 
                     scene v10frr3a
                     with dissolve
@@ -80,7 +80,7 @@ label v10_avoid_fight:
                     scene v10frr3a
                     with dissolve
 
-                    ch "It's probably best if you just go home . I don't think you wanna face the other Wolves right now."
+                    ch "It's probably best if you just go home. I don't think you wanna face the other Wolves right now."
 
                     scene v10frr3b
                     with dissolve
@@ -152,7 +152,7 @@ label v10_avoid_fight:
             scene v10frr5
             with dissolve
 
-            gr "Ahhh, so that's the issue. You know, you actually remind me of a pledge we had last year.. Him and I were real close."
+            gr "Ahhh, so that's the issue. You know, you actually remind me of a pledge we had last year... Him and I were real close."
 
             scene v10frr5a
             with dissolve

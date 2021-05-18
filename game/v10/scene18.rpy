@@ -31,12 +31,12 @@ label v10_call_with_lauren2:
                 scene v10scwl1
                 with dissolve
 
-                u "Just make things go as planned then, sounds easy enough. Nothings ever gone wrong at a college student hosted event *chuckles* ."
+                u "Just make things go as planned then, sounds easy enough. Nothings ever gone wrong at a college student hosted event. *Chuckles*"
 
                 scene v10scwl2
                 with dissolve
 
-                la "Very funny.."
+                la "Very funny..."
             
             "Be serious":
                 scene v10scwl1
@@ -186,7 +186,7 @@ label v10_call_with_lauren2:
                 scene v10scwl2
                 with dissolve
 
-                la "Never too late to start living for Lauren *chuckles* ."
+                la "Never too late to start living for Lauren. *Chuckles*"
 
                 scene v10scwl1
                 with dissolve
@@ -259,7 +259,7 @@ label v10_call_with_lauren2:
                     scene v10scwl1
                     with dissolve
                     
-                    u "Someday I do, I consider myself somewhat of a family man *chuckles* ."
+                    u "Someday I do, I consider myself somewhat of a family man. *Chuckles*"
 
                     scene v10scwl1a
                     with dissolve
@@ -320,7 +320,7 @@ label v10_call_with_lauren2:
         scene v10scwl1
         with dissolve
 
-        u "You’re making it too easy! If you’re not granting him the wish then you should be granting him the wish, but that would mean you wouldn’t grant him the wish and that-"
+        u "You’re making it too easy! If you’re not granting him the wish then you would be granting him the wish, but that would mean you wouldn’t grant him the wish and that-"
 
         scene v10scwl2
         with dissolve
@@ -384,12 +384,12 @@ label v10_call_with_lauren2:
                 scene v10scwl1
                 with dissolve
 
-                u "Just make things go as planned then, sounds easy enough. Nothings ever gone wrong at a college student hosted event *chuckles* ."
+                u "Just make things go as planned then, sounds easy enough. Nothings ever gone wrong at a college student hosted event. *Chuckles*"
 
                 scene v10saow3 
                 with dissolve
 
-                la "Very funny.."
+                la "Very funny..."
             
             "Be serious":
                 scene v10scwl1
@@ -539,7 +539,7 @@ label v10_call_with_lauren2:
                 scene v10saow3
                 with dissolve
 
-                la "Never too late to start living for Lauren *chuckles* ."
+                la "Never too late to start living for Lauren. *Chuckles*"
 
                 scene v10scwl1
                 with dissolve
@@ -612,7 +612,7 @@ label v10_call_with_lauren2:
                     scene v10scwl1
                     with dissolve
                     
-                    u "Someday I do, I consider myself somewhat of a family man *chuckles* ."
+                    u "Someday I do, I consider myself somewhat of a family man. *Chuckles*"
 
                     scene v10scwl1a
                     with dissolve
@@ -673,7 +673,7 @@ label v10_call_with_lauren2:
         scene v10scwl1
         with dissolve
 
-        u "You’re making it too easy! If you’re not granting him the wish then you should be granting him the wish, but that would mean you wouldn’t grant him the wish and that-"
+        u "You’re making it too easy! If you’re not granting him the wish then you would be granting him the wish, but that would mean you wouldn’t grant him the wish and that-"
 
         scene v10saow3
         with dissolve

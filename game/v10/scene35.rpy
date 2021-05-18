@@ -169,7 +169,7 @@ label v10_chloe_vs_nora:
     scene v10cvn11 # FPP. Show autumn mouth open
     with dissolve
 
-    aut "That was an...exciting start. Our next matchup is Emily and Aubrey."
+    aut "That was an... exciting start. Our next matchup is Emily and Aubrey."
 
     scene v10cvn12 # FPP. Show Emily and Aubrey entering the mud pool.
     with dissolve

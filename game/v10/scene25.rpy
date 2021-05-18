@@ -162,7 +162,7 @@ label v10_ms_rose_fight:
     if v10_ms_r_interfere:
         scene v10msf4b
         with dissolve
-        ro "Yes I'll be fine, I don't think he'd risk coming back after this. Thank you though, it means a lot to me that you came. Who knows what would have happened if you hadn't'"
+        ro "Yes I'll be fine, I don't think he'd risk coming back after this. Thank you though, it means a lot to me that you came. Who knows what would have happened if you hadn't"
 
         scene v10msf4a
         with dissolve
@@ -225,7 +225,7 @@ label v10_ms_rose_fight:
             scene v10msf5c # TPP. same camera as v10msf5, Show MS rose. Now having stepped back, embarrased smile, mouth open
             with dissolve
 
-            ro "Wow uhm...thank you [name}. For everything. I need to get back to work. Really, thank you."
+            ro "Wow uhm... thank you [name]. For everything. I need to get back to work. Really, thank you."
 
             scene v10msf4c # FPP. same camera as v10msf4, Now Show Ms Rose closing the door.
             with dissolve
@@ -245,7 +245,7 @@ label v10_ms_rose_fight:
             scene v10msf4a
             with dissolve
 
-            u "I guess if there's nothing else, uhm' I'll get back home. Call me if you need anything, Ms. Rose."
+            u "I guess if there's nothing else, uhm I'll get back home. Call me if you need anything, Ms. Rose."
 
             scene  v10msf4b
             with dissolve

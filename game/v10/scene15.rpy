@@ -39,7 +39,7 @@ label v10_call_with_lauren1:
             scene v10scwl1
             with dissolve
 
-            u "Sure,  I'm just chilling in my room. What's up?"
+            u "Sure, I'm just chilling in my room. What's up?"
 
         scene v10scwl2 # Ignore Render
         with dissolve
@@ -74,12 +74,12 @@ label v10_call_with_lauren1:
         scene v10scwl2
         with dissolve
 
-        la "Well I didn't really know what I wanted to talk about, I just wanted to talk *laughs* ."
+        la "Well I didn't really know what I wanted to talk about, I just wanted to talk. *Laughs*"
 
         scene v10scwl1
         with dissolve
 
-        u "Guess that means you're leaving the conversation planning to me *laughs* ?"
+        u "Guess that means you're leaving the conversation planning to me? *Laughs*"
 
         scene v10scwl2
         with dissolve
@@ -120,7 +120,7 @@ label v10_call_with_lauren1:
                 scene v10scwl2
                 with dissolve
 
-                la "So you just jump to the hardest difficulty huh *laughs* ?"
+                la "So you just jump to the hardest difficulty huh? *Laughs*"
 
                 scene v10scwl1
                 with dissolve
@@ -149,12 +149,12 @@ label v10_call_with_lauren1:
                 scene v10scwl1
                 with dissolve
 
-                u "*smiles* That's actually hilarious. But I won't do you like that. You actually were right."
+                u "*Smiles* That's actually hilarious. But I won't do you like that. You actually were right."
 
                 scene v10scwl1a
                 with dissolve
 
-                la "*laughs* Really?"
+                la "*Laughs* Really?"
 
                 scene v10scwl1
                 with dissolve
@@ -169,7 +169,7 @@ label v10_call_with_lauren1:
                 scene v10scwl1
                 with dissolve
 
-                u "Yeah to be fair, I kinda knew you were gonna follow up on them when I said them out loud. *chuckles*"
+                u "Yeah to be fair, I kinda knew you were gonna follow up on them when I said them out loud. *Chuckles*"
 
                 scene v10scwl2
                 with dissolve
@@ -179,7 +179,7 @@ label v10_call_with_lauren1:
                 scene v10scwl1
                 with dissolve
 
-                u "*laughs* First of all, sensation may be pushing it a bit. Second of all, I don't really tell anyone about it."
+                u "*Laughs* First of all, sensation may be pushing it a bit. Second of all, I don't really tell anyone about it."
                 
                 u "I mean it was all my grandmother's idea really."
                 
@@ -200,7 +200,7 @@ label v10_call_with_lauren1:
                 scene v10scwl1a
                 with dissolve
 
-                la "*laughs* Now you do!"
+                la "*Laughs* Now you do!"
 
                 scene v10scwl1
                 with dissolve
@@ -295,12 +295,12 @@ label v10_call_with_lauren1:
                             scene v10scwl2
                             with dissolve
 
-                            la "*laughs* Ewww, [name] stop it!"
+                            la "*Laughs* Ewww, [name] stop it!"
 
                             scene v10scwl1
                             with dissolve
 
-                            u "*laughs* What? I'm just saying!"
+                            u "*Laughs* What? I'm just saying!"
 
                             scene v10scwl2
                             with dissolve
@@ -310,7 +310,7 @@ label v10_call_with_lauren1:
                             scene v10scwl1
                             with dissolve
 
-                            u "*chuckles* Fine, we can do that too."
+                            u "*Chuckles* Fine, we can do that too."
 
                         else: # RCS - MC is not in a relationship with Lauren, and didn't makeout with her
                         
@@ -382,7 +382,7 @@ label v10_call_with_lauren1:
                     scene v10scwl1a
                     with dissolve
 
-                    la "Yeah, yeah yeah. *Laughs* Can we start already?"
+                    la "Yeah, yeah, yeah. *Laughs* Can we start already?"
 
                 else:
 
@@ -459,7 +459,7 @@ label v10_call_with_lauren1:
                 scene v10scwl1
                 with dissolve
 
-                u "Wait, what? Your birthday doesn't count as a holiday...well unless your birthday is on a holiday *laughs*."
+                u "Wait, what? Your birthday doesn't count as a holiday... well unless your birthday is on a holiday. *Laughs*"
 
                 scene v10scwl2
                 with dissolve
@@ -474,7 +474,7 @@ label v10_call_with_lauren1:
                 scene v10scwl2
                 with dissolve
 
-                la "I feel like a hint is hard to give without giving it away. Let's see, well...it's one of the major holidays."
+                la "I feel like a hint is hard to give without giving it away. Let's see, well... it's one of the major holidays."
 
                 scene v10scwl1
                 with dissolve
@@ -504,7 +504,7 @@ label v10_call_with_lauren1:
                 scene v10scwl2
                 with dissolve
 
-                la "Yeah, of course. You ever had school on Halloween? *chuckles* What did you think it was?"
+                la "Yeah, of course. You ever had school on Halloween? *Chuckles* What did you think it was?"
 
                 scene v10scwl1
                 with dissolve
@@ -514,12 +514,12 @@ label v10_call_with_lauren1:
                 scene v10scwl2
                 with dissolve
 
-                la "Celebrating and time off, and that does not sound like a holiday to you why? *laughs*"
+                la "Celebrating and time off, and that does not sound like a holiday to you why? *Laughs*"
 
                 scene v10scwl1
                 with dissolve
 
-                u "*chuckles* Huh, I guess you're right."
+                u "*Chuckles* Huh, I guess you're right."
 
                 scene v10scwl1
                 with dissolve
@@ -569,7 +569,7 @@ label v10_call_with_lauren1:
         scene v10saow2 # FPP. MC is looking out the window. Show Aubrey outside in gym clothes, smiling, mouth closed.
         with fade
 
-        u "Hey What's up? Also, did you just throw a pebble at my window? *chuckles*"
+        u "Hey What's up? Also, did you just throw a pebble at my window? *Chuckles*"
 
         scene v10saow2a # FPP. Same camera as v10saow2. MC is looking out the window. Show Aubrey, smiling, mouth open.
         with dissolve
@@ -657,12 +657,12 @@ label v10_call_with_lauren1:
                     scene v10scwl1
                     with dissolve
 
-                    u "Yeah everything's fine, had a bird at my window. *laughs*"
+                    u "Yeah everything's fine, had a bird at my window. *Laughs*"
 
                     scene v10scwl2 
                     with dissolve
 
-                    la "A bird took you that long? What'd you do, sing to it? *laughs*"
+                    la "A bird took you that long? What'd you do, sing to it? *Laughs*"
 
                     scene v10scwl1
                     with dissolve
@@ -750,12 +750,12 @@ label v10_call_with_lauren1:
                     scene v10scwl2 
                     with dissolve
 
-                    u "Yeah everything's fine, had a bird at my window. *laughs*"
+                    u "Yeah everything's fine, had a bird at my window. *Laughs*"
 
                     scene v10scwl1a
                     with dissolve
 
-                    la "A bird took you that long? What'd you do, sing to it? *laughs*"
+                    la "A bird took you that long? What'd you do, sing to it? *Laughs*"
 
                     scene v10scwl2 
                     with dissolve
@@ -798,7 +798,7 @@ label v10_call_with_lauren1:
             scene v10scwl1
             with dissolve
 
-            u "Sure,  I'm just chilling in my room. What's up?"
+            u "Sure, I'm just chilling in my room. What's up?"
 
         scene v10saow3 # TPP. Show MC in his Ape bedroom. MC is laying on his bed, phone to ear (talking to Lauren), smiling, mouth closed.
         with dissolve
@@ -833,12 +833,12 @@ label v10_call_with_lauren1:
         scene v10saow3
         with dissolve
 
-        la "Well I didn't really know what I wanted to talk about, I just wanted to talk *laughs* ."
+        la "Well I didn't really know what I wanted to talk about, I just wanted to talk. *Laughs*"
 
         scene v10scwl1
         with dissolve
 
-        u "Guess that means you're leaving the conversation planning to me *laughs* ?"
+        u "Guess that means you're leaving the conversation planning to me? *Laughs*"
 
         scene v10saow3
         with dissolve
@@ -879,7 +879,7 @@ label v10_call_with_lauren1:
                 scene v10saow3
                 with dissolve
 
-                la "So you just jump to the hardest difficulty huh *laughs* ?"
+                la "So you just jump to the hardest difficulty huh? *Laughs*"
 
                 scene v10scwl1
                 with dissolve
@@ -908,12 +908,12 @@ label v10_call_with_lauren1:
                 scene v10scwl1
                 with dissolve
 
-                u "*smiles* That's actually hilarious. But I won't do you like that. You actually were right."
+                u "*Smiles* That's actually hilarious. But I won't do you like that. You actually were right."
 
                 scene v10scwl1a
                 with dissolve
 
-                la "*laughs* Really?"
+                la "*Laughs* Really?"
 
                 scene v10scwl1
                 with dissolve
@@ -928,7 +928,7 @@ label v10_call_with_lauren1:
                 scene v10scwl1
                 with dissolve
 
-                u "Yeah to be fair, I kinda knew you were gonna follow up on them when I said them out loud. *chuckles*"
+                u "Yeah to be fair, I kinda knew you were gonna follow up on them when I said them out loud. *Chuckles*"
 
                 scene v10saow3
                 with dissolve
@@ -938,7 +938,7 @@ label v10_call_with_lauren1:
                 scene v10scwl1
                 with dissolve
 
-                u "*laughs* First of all, sensation may be pushing it a bit. Second of all, I don't really tell anyone about it."
+                u "*Laughs* First of all, sensation may be pushing it a bit. Second of all, I don't really tell anyone about it."
                 
                 u "I mean it was all my grandmother's idea really."
                 
@@ -959,7 +959,7 @@ label v10_call_with_lauren1:
                 scene v10saow3
                 with dissolve
 
-                la "*laughs* Now you do!"
+                la "*Laughs* Now you do!"
 
                 scene v10scwl1
                 with dissolve
@@ -1054,12 +1054,12 @@ label v10_call_with_lauren1:
                             scene v10scwl1a
                             with dissolve
 
-                            la "*laughs* Ewww, [name] stop it!"
+                            la "*Laughs* Ewww, [name] stop it!"
 
                             scene v10scwl1
                             with dissolve
 
-                            u "*laughs* What? I'm just saying!"
+                            u "*Laughs* What? I'm just saying!"
 
                             scene v10saow3
                             with dissolve
@@ -1069,7 +1069,7 @@ label v10_call_with_lauren1:
                             scene v10scwl1
                             with dissolve
 
-                            u "*chuckles* Fine, we can do that too."
+                            u "*Chuckles* Fine, we can do that too."
 
                         else: # RCS - MC is not in a relationship with Lauren, and didn't makeout with her
                         
@@ -1141,7 +1141,7 @@ label v10_call_with_lauren1:
                     scene v10saow3
                     with dissolve
 
-                    la "Yeah, yeah yeah. *Laughs* Can we start already?"
+                    la "Yeah, yeah, yeah. *Laughs* Can we start already?"
 
                 else:
 
@@ -1218,7 +1218,7 @@ label v10_call_with_lauren1:
                 scene v10scwl1
                 with dissolve
 
-                u "Wait, what? Your birthday doesn't count as a holiday...well unless your birthday is on a holiday *laughs*."
+                u "Wait, what? Your birthday doesn't count as a holiday... well unless your birthday is on a holiday. *Laughs*"
 
                 scene v10saow3
                 with dissolve
@@ -1233,7 +1233,7 @@ label v10_call_with_lauren1:
                 scene v10saow3
                 with dissolve
 
-                la "I feel like a hint is hard to give without giving it away. Let's see, well...it's one of the major holidays."
+                la "I feel like a hint is hard to give without giving it away. Let's see, well... it's one of the major holidays."
 
                 scene v10scwl1
                 with dissolve
@@ -1263,7 +1263,7 @@ label v10_call_with_lauren1:
                 scene v10saow3
                 with dissolve
 
-                la "Yeah, of course. You ever had school on Halloween? *chuckles* What did you think it was?"
+                la "Yeah, of course. You ever had school on Halloween? *Chuckles* What did you think it was?"
 
                 scene v10scwl1
                 with dissolve
@@ -1273,12 +1273,12 @@ label v10_call_with_lauren1:
                 scene v10saow3
                 with dissolve
 
-                la "Celebrating and time off, and that does not sound like a holiday to you why? *laughs*"
+                la "Celebrating and time off, and that does not sound like a holiday to you why? *Laughs*"
 
                 scene v10scwl1
                 with dissolve
 
-                u "*chuckles* Huh, I guess you're right."
+                u "*Chuckles* Huh, I guess you're right."
 
                 scene v10scwl1
                 with dissolve
@@ -1328,7 +1328,7 @@ label v10_call_with_lauren1:
         scene v10saow5 # FPP. MC is looking out the window. Show Aubrey outside, smiling, mouth closed.(apes)
         with dissolve
 
-        u "Hey What's up? Also, did you just throw a pebble at my window? *chuckles*"
+        u "Hey What's up? Also, did you just throw a pebble at my window? *Chuckles*"
 
         scene v10saow5a # FPP. Same camera as v10saow5. MC is looking out the window. Show Aubrey outside in gym clothes, smiling, mouth open.(apes)
         with dissolve
@@ -1411,12 +1411,12 @@ label v10_call_with_lauren1:
                     scene v10scwl1
                     with dissolve
 
-                    u "Yeah everything's fine, had a bird at my window. *laughs*"
+                    u "Yeah everything's fine, had a bird at my window. *Laughs*"
 
                     scene v10saow3
                     with dissolve
 
-                    la "A bird took you that long? What'd you do, sing to it? *laughs*"
+                    la "A bird took you that long? What'd you do, sing to it? *Laughs*"
 
                     scene v10scwl1
                     with dissolve
@@ -1499,12 +1499,12 @@ label v10_call_with_lauren1:
                     scene v10scwl1
                     with dissolve
 
-                    u "Yeah everything's fine, had a bird at my window. *laughs*"
+                    u "Yeah everything's fine, had a bird at my window. *Laughs*"
 
                     scene v10saow3
                     with dissolve
 
-                    la "A bird took you that long? What'd you do, sing to it? *laughs*"
+                    la "A bird took you that long? What'd you do, sing to it? *Laughs*"
 
                     scene v10scwl1
                     with dissolve
