@@ -64,6 +64,7 @@ init python:
             contact_Lauren.addReply(_("Please, it's just a big misunderstanding"))
             contact_Lauren.newMessage(_("Fine. I'm in my dorm, we can talk now."))
 
+label start7: #for compatibility only
 label v7start:
     if caughtpeekingpenelope and not caughtpeekingpenelopecounter:
         $ penelopemad = True
@@ -289,6 +290,7 @@ label v7start:
 
             u "That's really impressive. Winning the entire tournament must be surreal."
 
+    label hg_ad: #for compatibility only
     scene s674
     with dissolve
 
@@ -431,6 +433,7 @@ label v7start:
 
         u "Uhm-"
 
+    label nonoriri: #for compatibility only
     scene s684 # showing Nora and Chris arguing
     with dissolve
 
@@ -1192,6 +1195,7 @@ label hd_ad:
 
                 jump conyourdorm
 
+    label conrileydorm: #for compatibility only
     scene s708b # riley slightly embarassed / cute
     with dissolve
 
@@ -1411,6 +1415,7 @@ label conyourdorm:
                 "(I should respond to Lauren.)"
                 jump phoneam
 
+        label continueee: #for compatibility only
         scene s714a # mc calm mouth closed
         with dissolve # mc sitting on his bed shirtless with his phone to his head, like he's on the phone
 
@@ -3425,6 +3430,7 @@ label beachlauren:
         pause 0.5
 
 ########## SCENE 12: MC BACK AT DORM WEDNESDAY EVENING
+    label rightafterbeach: #for compatibility only
     if emilyrs:
         play sound "sounds/dooropen.mp3"
         scene s753 # mc opens his dorm door and looks on the ground, there's a letter
@@ -5343,6 +5349,7 @@ label ep7_cam_picture:
 
             jump after_pledges
 
+    label chloe_call_cameron: #for compatibility only
     scene snew860a # close up mc on the phone mouth closed a bit nervous
     with dissolve
 
@@ -5471,6 +5478,7 @@ label after_pledges:
     u "(Today was so packed... Can't wait to just fall asleep.)"
 
 ########## SCENE 16 WAKING UP IN YOUR DORM ON THURSDAY BLACK EYE GONE!!! NEW MC MODEL
+    label ep7_before_history: #for compatibility only
     scene s865 # Camera - TPP. MC waking up yawning in bed. No black eye
     with Fade(1,0,1)
 
@@ -5739,6 +5747,7 @@ label after_pledges:
 
     ###Copy paste transcribed script into right spot, add defaults and defines at the start of the script
 
+    label history_class: #for compatibility only
     scene s875 # Camera - TPP, Scene - History class, so everyone is in their costumes. Note that MC can be Viking, Knight or Cowboy.(### So MC shouldn't be in this.) Shot showing Penelope sitting in the first row and Lee standing near the board looking towards the students.
     with fade
     pause 1
@@ -6089,6 +6098,7 @@ label after_history:
 
 ########## SCENE 18 PENELOPE AFTER HISTORY
     # MC and Pen talking in classroom after class ### the next scene only works inside the classroom so this shouldn't be in the hallway
+    label pen_after_history: #for compatibility only
     if emilyrs and bowling:
         scene s891 # Camera - FPP (far shot). Penelope in classroom about to walk out (away from the camera) in her costume
         with fade
@@ -6317,6 +6327,7 @@ label after_history:
 
 ########## SCENE 19 CAMERON AFTER HISTORY
     ### Here I deleted the render since Cameron can just shout at when you're looking in a different direction from before
+    label cam_task_2: #for compatibility only
     ca "Hey shitface, come here."
 
     scene s901 # Camera - FPP. MC and Cameron convo inside the classroom (near the door). Cameron cunning smile, mouth closed
@@ -6426,6 +6437,7 @@ label after_history:
 
             jump after_cam_history
 
+    label lee_pants_task: #for compatibility only
     scene s903 # Shot of Lee writing something on the board as seen from Cameron's phone (He is standing at the door. Need not render the whole classroom, make it look like he zoomed in and add camera interface.) MC is not visible in the shot
     with fade
     ca "{size=-10}Whenever you're ready shitface.{/size}"
@@ -7557,6 +7569,7 @@ label cameron_thurs_tasks:
 
             ca "Fine, whatever dude. We'll do something else then."
 
+    label av_chal_2: #for compatibility only
     scene scc25a2 # TPP. Cameron and MC back on campus looking at eachother again, Cameron smile, Cameron mouth open.
     with fade
 
@@ -7748,6 +7761,7 @@ label cameron_thurs_tasks:
 
             ca "Whatever, let's move on."
 
+    label cam_phone: #for compatibility only
     scene scc25b # TPP. Show Cameron and MC back at campus stood together, Cameron angry expression.
     with dissolve
 
@@ -8005,6 +8019,7 @@ label cameron_thurs_tasks:
             $ consoledSam = False
             $ addPoint("bro")
 
+    label av_no_sam: #for compatibility only
     if apesVids > 3:
         scene scc75 # FPP. Same camera as scc73. Show Cameron kneeling infront of Samantha but looking at Camera, slight smile, Samantha too upset but not too bad.
         with dissolve
@@ -8053,6 +8068,7 @@ label cameron_thurs_tasks:
 
         pause 0.5
 
+    label av_mc_dorm: #for compatibility only
     scene scc79 # TPP. Show MC in bed in dorm about to sleep but eyes open lookin at the ceiling
     with Fade(0.75, 0.25, 0.75)
 
@@ -8994,6 +9010,7 @@ label rileysexscene:
     u "I like that sound of that."
 
 # Riley sex scene
+    label risex: #for compatibility only
     show screen rileysexoverlay
     show screen rileysexoverlaybutton
 
