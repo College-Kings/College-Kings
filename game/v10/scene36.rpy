@@ -56,18 +56,32 @@ label v10_emily_vs_aubrey:
 
     au "*Grunts*"
 
-    scene v10eva9 # eight is Emily sitting on top of Aubrey holding her arms behind her back
+    scene v10eva9a # aubrey mouth open
     with dissolve
 
     au "*Grunts*"
 
+    scene v10eva9 # emily mouth open
+    with dissolve
     em "You can give up anytime you want."
+
+    scene v10eva9a 
+    with dissolve
 
     au "Oww, but I don't want to give up."
 
+    scene v10eva9
+    with dissolve
+
     em "You sure?"
 
+    scene v10eva9a
+    with dissolve
+
     au "OWWW, OKAY OKAY! I give up."
+
+    scene v10eva9b # Emily victory pose
+    with dissolve
 
     ### ERROR: -After fight images ###
     scene v10eva10 # FPP. Show autumn mouth open
@@ -116,7 +130,7 @@ label v10_emily_vs_aubrey:
 
     ri "Ready?"
 
-    scene v10eva13a # same 13, amber mouth open
+    scene v10eva13 # same 13, amber mouth open
     with dissolve
 
     am "Haha, you'll find out."
