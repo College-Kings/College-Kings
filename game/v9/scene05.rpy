@@ -13,12 +13,6 @@ label v9_dream_wakeup:
         with dissolve
         u "(God I hate dreams. Most of the time, they're good. But sometimes...they really suck.)"
 
-        play sound "sounds/vibrate.mp3"
-        u "(Hmm?)"
-
-        scene v9dream20b # MC lying on bed looking at his phone, neutral expression, mouth closed
-        with dissolve
-
         $ contact_Riley.newMessage("Hey, [name]. You awake?", queue=False)
         $ contact_Riley.addReply("Hey Riley, yeah I'm up, is everything okay?")
         $ contact_Riley.newMessage("A couple of us wanted to go to the lake. Wanna join us?")
@@ -30,7 +24,12 @@ label v9_dream_wakeup:
         $ contact_Riley.newMessage("You'll love it! Meet you in 30 minutes?")
         $ contact_Riley.addReply("Yeah, see ya soon.")
         $ contact_Riley.newMessage("See you!")
-        call screen phone
+
+        play sound "sounds/vibrate.mp3"
+        u "(Hmm?)"
+
+        scene v9dream20b # MC lying on bed looking at his phone, neutral expression, mouth closed
+        with dissolve
 
     else:
         scene v9dream23 # TPP. Same as v9dream20 but in MC's room in Apes house
@@ -41,12 +40,6 @@ label v9_dream_wakeup:
         with dissolve
         u "(God I hate dreams. Most of the time, they're good. But sometimes...they really suck.)"
 
-        play sound "sounds/vibrate.mp3"
-        u "(Hmm?)"
-
-        scene v9dream23b # Same as v9dream20b but in MC's room in Apes house
-        with dissolve
-
         $ contact_Riley.newMessage("Hey, [name]. You awake?", queue=False)
         $ contact_Riley.addReply("Hey Riley, yeah I'm up, is everything okay?")
         $ contact_Riley.newMessage("A couple of us wanted to go to the lake. Wanna join us?")
@@ -58,10 +51,16 @@ label v9_dream_wakeup:
         $ contact_Riley.newMessage("You'll love it! Meet you in 30 minutes?")
         $ contact_Riley.addReply("Yeah, see ya soon.")
         $ contact_Riley.newMessage("See you!")
-        call screen phone
+
+        play sound "sounds/vibrate.mp3"
+        u "(Hmm?)"
+
+        scene v9dream23b # Same as v9dream20b but in MC's room in Apes house
+        with dissolve
 
 label v9_phn_riley1:
     if contact_Riley.getReplies():
+        call screen phone
         u "(I should talk to Riley.)"
         jump v9_phn_riley1
 
