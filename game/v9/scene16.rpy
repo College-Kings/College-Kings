@@ -70,7 +70,7 @@ label v9_room_thur_night:
 
             $ contact_Emily.newMessage("I'm bored. Come hang out.", queue=False)
             $ contact_Emily.addReply("Sure! Gimme a sec.")
-            $ contact_Emily.addReply("It's kinda late" v9s16_reply5)
+            $ contact_Emily.addReply("It's kinda late", v9s16_reply5)
 
             label s16_PhoneContinueW:
                 if contact_Emily.getReplies():
@@ -844,8 +844,6 @@ label v9_thur_night_aft_em_a:
         with dissolve
 
         u "(I need to get some sleep)"
-
-    def 
 
     if hl_punch:
         $ contact_Lindsey.newMessage("How are you doing tonight?")
