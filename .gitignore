@@ -16,6 +16,8 @@ Stored Script.txt
 traceback.txt
 project.json
 
+screenshot*
+
 *.bat
 *.rpa
 *.rpyc
