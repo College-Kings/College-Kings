@@ -218,7 +218,7 @@ label v9_hall_punch:
     scene v9hlw16 # FPP. Show the girl Lindsey was with, bored expression, holding out a piece of paper as if she's trying to pass it to MC, mouth open.
     with dissolve
 
-    unknown "I was told to give you this. Sigh."
+    unknown "I was told to give you this. *Sigh*."
 
     scene v9hlw16a # FPP. Same camera as v9hlw16, show the girl now walking away from the camera.
     with dissolve

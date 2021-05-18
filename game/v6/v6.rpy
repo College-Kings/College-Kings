@@ -5044,7 +5044,7 @@ label afteraubrey:
     #### Nightmare
     play music "music/mhorror.mp3"
     play sound "sounds/swoosh.mp3"
-    scene s587 # Showing you, lauren and Riley running through the forest terrified like someones after them
+    scene s587 # Showing you, lauren and Riley running through the forest terrified like someone's after them
     with flash
 
     ri "He's coming!"
