@@ -10,7 +10,7 @@ init python:
         contact_Lindsey.addReply("Maybe a little. But I'm still happy you texted")
         contact_Lindsey.newMessage("I just wanted to say goodnight... and I was thinking about you")
         contact_Lindsey.addReply("I'll definitely be thinking about you now instead of sleeping ;)")
-        contact_Lindsey.newMessage("Can I text you before the Brawl?"
+        contact_Lindsey.newMessage("Can I text you before the Brawl?")
         contact_Lindsey.addReply("YES! Can't wait. Goodnight to you too")
         contact_Lindsey.newMessage("Goodnight")
 
