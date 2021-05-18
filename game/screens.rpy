@@ -4352,7 +4352,7 @@ screen fr4gymentrance():
         imagebutton:
             ypos 318
             xpos 365
-            idle "images/fr4gymentranceriley.webp"
+            idle "images/fr4gymentrancerileyidle.webp"
             hover "images/fr4gymentrancerileyhover.webp"
             action Jump ("fr4riley2")
 
