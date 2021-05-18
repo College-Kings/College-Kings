@@ -110,7 +110,7 @@ label v10_sun_morn:
             jump v10_linds_room
 
         else:
-            jump v10_wolves_redecorate
+            jump v10_mc_clock_trans
 
     else:
         scene v10sum4 # TPP. Show MC in his Apes bed looking up at the ceiling, MC looks tired.
