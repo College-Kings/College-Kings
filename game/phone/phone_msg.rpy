@@ -211,12 +211,13 @@ screen messager(contact=None):
         viewport:
             yadjustment yadj
             mousewheel True
-            xysize(374, 556)
-            pos(773, 282)
+            pos (773, 282)
+            xysize (374, 550)
 
             vbox:
+                xsize 374
                 spacing 5
-                
+
                 for message in contact.sentMessages:
                     if isinstance(message, Message) and message.message.strip():
                         textbutton message.message style "msgleft"

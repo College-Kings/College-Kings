@@ -49,14 +49,14 @@ label after_load:
             try: kiwiiPost.message = kiwiiPost.caption
             except AttributeError: pass
 
-        # Contact/Messages
+        # Contact/Messages/Replies
         for contact in contacts:
             try: contact.pendingMessages
             except AttributeError: contact.pendingMessages = []
 
             try: contact.sentMessages
             except AttributeError: contact.sentMessages = []
-
+            
             try:
                 for message in contact.messages:
                     try: message.image = os.path.splitext(message.image)[0] + ".webp"
@@ -65,8 +65,12 @@ label after_load:
                     try: message.message = message.msg
                     except AttributeError: pass
 
-                    contact.seenMessages.append(message)
-            except Exception: pass
+                    contact.sentMessages.append(message)
+
+                    for reply in message.replies:
+                        try: reply.func
+                        except AttributeError: reply.func = None
+            except AttributeError: pass
 
         contact_Lindsey.profilePicture = "lindseyprofilepic"
 
@@ -74,5 +78,8 @@ label after_load:
         try:
             if chlorers: chloers = True
         except NameError: pass
+        try: kiwiiPost1
+        except: kiwii_firstTime = False
 
+    show screen phoneIcon
     return

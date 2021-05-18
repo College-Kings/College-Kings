@@ -168,10 +168,10 @@ label v10_sun_morn:
             $ contact_Josh.addReply("Whatever man.")
 
         call screen phone
-        label v10s10_PhoneContinueJoshW1:
+        label v10s10_PhoneContinueJoshW2:
             if contact_Josh.getReplies() or contact_Riley.getReplies():
                 u "(I should check my phone.)"
-                jump v10s10_PhoneContinueJoshW1
+                jump v10s10_PhoneContinueJoshW2
 
         if v10_imre_win:
             play sound "sounds/vibrate.mp3"

@@ -3678,29 +3678,6 @@ style nametext is text:
     size 25
     color "#000000"
 
-
-style msgleft is button:
-    background "#CECECE"
-    padding (15, 5)
-    xmaximum 350
-
-style msgleft_text is text:
-    color "#000000"
-    font "fonts/OpenSans.ttf"
-    size 20
-
-style msgright is button:
-    background "#147efb"
-    padding (15, 5)
-    xmaximum 350
-    xalign 1.0
-    xoffset 15
-
-style msgright_text is text:
-    color "#ffffff"
-    font "fonts/OpenSans.ttf"
-    size 20
-
 style replybox is button:
     background "#ffffff"
     xsize 250

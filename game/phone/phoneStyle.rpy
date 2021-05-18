@@ -23,12 +23,14 @@ style phonetext is text:
     size 40
     color "#000000"
 
+
+# phone_msg
 style msgleft is button:
     background "#CECECE"
-    xpadding 15
-    ypadding 5
+    padding (15, 5)
     xmaximum 350
     margin (10, 15)
+    xoffset 10
 
 style msgleft_text is text:
     color "#000000"
@@ -37,13 +39,13 @@ style msgleft_text is text:
 
 style msgright is button:
     background "#147efb"
-    xpadding 15
-    ypadding 5
-    xalign 1.0
-    # xoffset 14
+    padding (15, 5)
     xmaximum 350
+    xalign 1.0
+    xoffset -10
 
 style msgright_text is text:
     color "#ffffff"
     font "fonts/OpenSans.ttf"
     size 20
+
