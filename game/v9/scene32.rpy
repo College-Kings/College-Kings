@@ -3,6 +3,20 @@
 # Characters: MC (Outfit 3when outside gym,Outfit 4 when inside gym ), Evelyn (Outfit 4)
 # Time: Saturday Morning
 
+init python:
+    def v9s32_reply1():
+        contact_Riley.newMessage("So you're coming?")
+        contact_Riley.addReply("I hope so ;)")
+        contact_Riley.newMessage("See you in a few!")
+        setattr(store, "v9_sex_with_riley", True)
+
+    def v9s32_reply2():
+        contact_Riley.newMessage("But? :o")
+        contact_Riley.addReply("But I have to stay focused on the Brawl. There's a lot riding on my fight.")
+        contact_Riley.newMessage("Seriously?")
+        contact_Riley.addReply("I'm so sorry. You know I would any other day. Really.")
+        contact_Riley.newMessage("Ok well, your loss.")
+
 label v9_sat_gym:
     scene v9atg1 # TPP. Show MC outside the Gym, neutral face, mouth closed
     with fade
@@ -140,46 +154,13 @@ label v9_sat_skip_gym:
 
         u "(Oh, who's that?)"
 
-        $ contact_Riley.newMessage("Hey, what's up? Wanna come over?")
-        $ contact_Riley.addReply("I really shouldn't. Big day tomorrow. Stressed out", "s32_RiReply1")
+        $ contact_Riley.newMessage("Hey, what's up? Wanna come over?", queue=False)
+        $ contact_Riley.addReply("I really shouldn't. Big day tomorrow. Stressed out")
+        $ contact_Riley.newMessage("Duh, that's why I'm asking)")
+        $ contact_Riley.addReply("Well you shoulda led with that!", v9s32_reply1)
+        $ contact_Riley.addReply("Man, I'd really love to but...", v9s32_reply2)
         
         call screen phone
-
-        label s32_RiReply1:
-            $ contact_Riley.newMessage("Duh, that's why I'm asking)")
-            $ contact_Riley.addReply("Well you shoulda led with that!", "s32_RiReply2")
-            $ contact_Riley.addReply("Man, I'd really love to but...", "s32_RiReply3")
-
-            call screen messager(contact_Riley)
-        
-        label s32_RiReply2:
-            $ contact_Riley.newMessage("So you're coming?")
-            $ contact_Riley.addReply("I hope so ;)", "s32_RiReply4")
-
-            call screen messager(contact_Riley)
-
-        label s32_RiReply3:
-            $ contact_Riley.newMessage("But? :o")
-            $ contact_Riley.addReply("But I have to stay focused on the Brawl. There's a lot riding on my fight.", "s32_RiReply5")
-
-            call screen messager(contact_Riley)
-
-        label s32_RiReply4:
-            $ contact_Riley.newMessage("See you in a few!")
-            $ v9_sex_with_riley = True
-            call screen messager(contact_Riley)
-
-        label s32_RiReply5:
-            $ contact_Riley.newMessage("Seriously?")
-            $ contact_Riley.addReply("I'm so sorry. You know I would any other day. Really.", "s32_RiReply6")
-
-            call screen messager(contact_Riley)
-
-        label s32_RiReply6:
-            $ contact_Riley.newMessage("Ok well, your loss.")
-
-            call screen messager(contact_Riley)
-
         label s32_PhoneContinue:
             if contact_Riley.getReplies():
                 "(I should reply to Riley.)"
