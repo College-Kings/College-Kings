@@ -131,9 +131,10 @@ label int_deal_w_josh:
         $ allies = [mc]
         $ enemies = [lars]
 
-        $ _game_menu_screen = "ingmenu"
-
         call screen fightTutorial
+
+    label s28_LarsFightCont:
+        call screen s28_LarsFightChoice
 
     # Select Difficulty
     label s28_LarsFightDifficulty:

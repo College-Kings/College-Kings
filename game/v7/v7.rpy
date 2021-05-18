@@ -46,7 +46,7 @@ init python:
     def v7_msgReply6():
         contact_Riley.newMessage(_("Oh oki"))
 
-    def kiwii_firstTime():
+    def kiwii_firstTimeMessages():
         if emilyrs:
             contact_Riley.addReply(_("We're not back together"))
             contact_Riley.newMessage(_("Okay... just looked like it"))
@@ -1394,7 +1394,6 @@ label conyourdorm:
         u "(What the hell?)"
 
         call screen phone
-
         label phoneam:
             if contact_Riley.getReplies():
                 "(I need to respond to some of these messages.)"
@@ -1628,6 +1627,7 @@ label conyourdorm:
 
         u "(Huh? What did Riley text me?)"
 
+        call screen phone
         label phonean:
             if contact_Riley.getReplies():
                 u "(I should respond to Riley.)"
@@ -2575,8 +2575,8 @@ label thisbewalk:
 
         " "
 
+        call screen phone
         label phoneao:
-            call screen phone
             if contact_Lauren.getReplies():
                 u "(I should probably reply.)"
                 jump phoneao
@@ -5447,8 +5447,8 @@ label after_pledges:
 
                 $ contact_Emily.addReply(_("Hey, sorry I lost track of time. You up?"))
 
+                call screen phone
                 label phonebb:
-                    call screen phone
                     if contact_Emily.getReplies():
                         u "(I should text Emily that I lost track of time.)"
                         jump phonebb
@@ -8908,6 +8908,7 @@ label rileytext:
         
         " "
 
+        call screen phone
         label rtnow:
             if contact_Riley.getReplies():
                 u "(I should check my messages.)"
@@ -9259,6 +9260,7 @@ label signs_with_autumn:
 
     play sound "sounds/vibrate.mp3"
 
+    call screen phone
     label phoneba:
         if contact_Autumn.getReplies():
             u "(I should probably check my messages.)"

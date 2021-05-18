@@ -219,11 +219,10 @@ label v2start:
     scene s96g
     with dissolve
 
+    call screen phone
     label repeatb:
-        call screen phone
         if contact_Lauren.getReplies():
             u "(Damn, my phone's blowing up. I should probably check my messages.)"
-
             jump repeatb
 
     if meetlauren:
@@ -483,8 +482,8 @@ label gb:
 
         if adamtut == True:
             jump fkcon
-        # elif s28_LarsFight:
-        #     jump s28_LarsFightCont
+        elif s28_LarsFight:
+            call screen s28_LarsFightChoice
         else:
             call screen ft1
 
@@ -2514,8 +2513,8 @@ label bo_bd:
 
     u "(Oh, I just got a message.)"
 
+    call screen phone
     label repeatc:
-        call screen phone
         if contact_Aubrey.getReplies():
             u "(I should check my messages.)"
             jump repeatc
@@ -2682,8 +2681,8 @@ label bo_bd:
 
     u "(Fuck, I totally forgot about Aubrey. I guess it's time to make a decision.)"
 
+    call screen phone
     label repeatg:
-        call screen phone
         if contact_Aubrey.getReplies():
             u "(Aubrey's waiting for me, I need to let her know whether I'm coming or not.)"
 

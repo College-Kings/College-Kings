@@ -664,8 +664,8 @@ label newchloec:
 
         u "(Oh shit, I'm getting a bunch of messages.)"
 
+        call screen phone
         label phonex:
-            call screen phone
             if contact_Lauren.getReplies():
                 u "(I should probably reply to some of them.)"
 
@@ -674,8 +674,8 @@ label newchloec:
         u "(Time to get ready.)"
 
     else:
+        call screen phone
         label phoney:
-            call screen phone
             if contact_Amber.getReplies():
                 "(Maybe it's Lauren and she wants to talk about what happened? I should definitely check.)"
                 jump phoney

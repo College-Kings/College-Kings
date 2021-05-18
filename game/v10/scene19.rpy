@@ -19,35 +19,21 @@ label v10_walk_jenny_text:
 
     u "(Phone buzzing, I should get that.)"
 
-    $ phoneexit = "v10s19_PhoneContinue"
+    $ contact_Jenny.newMessage("Hey [name], this is Jenny, a friend of Penelope. I've noticed she's been acting a little off.", queue=False)
+    $ contact_Jenny.newMessage("Btw, I got your number from her phone when she was in the bathroom.", queue=False)
+    $ contact_Jenny.addReply("Hey... yeah, Penelope has actually been dealing with some pretty heavy stuff. Also, the number stealing is a tad creepy, haha.")
+    $ contact_Jenny.newMessage("I knew it!")
+    $ contact_Jenny.newMessage("I didn’t know any other way to get in contact with her new friends...")
+    $ contact_Jenny.addReply("I think it's best to tell you about it all in person, if you're cool with that?")
+    $ contact_Jenny.newMessage("Sure, when and where?")
+    $ contact_Jenny.addReply("Cafe off of Stevenson Street tomorrow morning?")
+    $ contact_Jenny.newMessage("Sounds good to me, thanks [name]!")
 
-    $ contact_Jenny.newMessage("Hey [name], this is Jenny, a friend of Penelope. I've noticed she's been acting a little off.")
-    $ contact_Jenny.newMessage("Btw, I got your number from her phone when she was in the bathroom.")
-    $ contact_Jenny.addReply("Hey... yeah, Penelope has actually been dealing with some pretty heavy stuff. Also, the number stealing is a tad creepy, haha.", "v10s19_ReplyJen1")
-    $ showphone = True
     call screen phone
-
-    label v10s19_ReplyJen1:
-        $ contact_Jenny.newMessage("I knew it!")
-        $ contact_Jenny.newMessage("I didn’t know any other way to get in contact with her new friends...")
-        $ contact_Jenny.addReply("I think it's best to tell you about it all in person, if you're cool with that?", "v10s19_ReplyJen2")
-        call screen messager(contact_Jenny)
-
-    label v10s19_ReplyJen2:
-        $ contact_Jenny.newMessage("Sure, when and where?")
-        $ contact_Jenny.addReply("Cafe off of Stevenson Street tomorrow morning?", "v10s19_ReplyJen3")
-        call screen messager(contact_Jenny)
-
-    label v10s19_ReplyJen3:
-        $ contact_Jenny.newMessage("Sounds good to me, thanks [name]!")
-        call screen messager(contact_Jenny)
-
     label v10s19_PhoneContinue:
         if contact_Jenny.getReplies():
             "(I should reply to Jenny.)"
-            jump v10s19_PhoneContinue      
-
-    $ showphone = False
+            jump v10s19_PhoneContinue
 
     u "(Hmm, maybe I should invite Penelope too, otherwise it’s just me and Jenny.)"
 
@@ -58,32 +44,19 @@ label v10_walk_jenny_text:
 
             u "(Yeah, I should invite her. Best if she's the one that breaks the news to her.)"
 
-            $ showphone = True
+            $ contact_Penelope.addReply("Hey, you free for coffee at the cafe in the morning?")
+            $ contact_Penelope.newMessage("Special occasion?")
+            $ contact_Penelope.addReply("Honestly, if you're okay with talking about it, I just wanted to see how you were doing with all the school stuff.")
+            $ contact_Penelope.newMessage("That’s sweet… thanks..")
+            $ contact_Penelope.addReply("So are you free to meet?")
+            $ contact_Penelope.newMessage("Yeah, of course. I’ll see you in the morning.")
+            $ contact_Penelope.addReply("See ya!")
 
-            $ contact_Penelope.addReply("Hey, you free for coffee at the cafe in the morning?", "v10s19_ReplyPen1")
             call screen phone
-
-            label v10s19_ReplyPen1:
-                $ contact_Penelope.newMessage("Special occasion?")
-                $ contact_Penelope.addReply("Honestly, if you're okay with talking about it, I just wanted to see how you were doing with all the school stuff.", "v10s19_ReplyPen2")
-                call screen messager(contact_Penelope)
-
-            label v10s19_ReplyPen2:
-                $ contact_Penelope.newMessage("That’s sweet… thanks..")
-                $ contact_Penelope.addReply("So are you free to meet?")
-                call screen messager(contact_Penelope)
-
-            label v10s19_ReplyPen3:
-                $ contact_Penelope.newMessage("Yeah, of course. I’ll see you in the morning.")
-                $ contact_Penelope.addReply("See ya!", "v10s19_PhoneContinue1")
-                call screen messager(contact_Penelope)
-
             label v10s19_PhoneContinue1:
                 if contact_Penelope.getReplies():
                     "(I should text to Penelope.)"
-                    jump v10s19_PhoneContinue1     
-
-            $ showphone = False
+                    jump v10s19_PhoneContinue1
 
             u "(I hope this goes smooth, Jenny hearing it from Penelope will probably help them both process the situation.)"
 

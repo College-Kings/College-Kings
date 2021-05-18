@@ -33,8 +33,8 @@ label v10_room_mon_night:
         $ contact_Josh.addReply("Oh yeah, I heard.", v10s20_reply1)
         $ contact_Josh.addReply("I have no idea what you're talking about.", v10s20_reply2)
 
+        call screen phone
         label v10s20_PhoneContinueW:
-            call screen phone
             if contact_Josh.getReplies():
                 "(I should reply to Josh.)"
                 jump v10s20_PhoneContinueW
@@ -89,8 +89,8 @@ label v10_room_mon_night:
         $ contact_Josh.addReply("Oh yeah, I heard.", v10s20_reply1)
         $ contact_Josh.addReply("I have no idea what you're talking about.", v10s20_reply2)
 
+        call screen phone
         label v10s20_PhoneContinue2:
-            call screen phone
             if contact_Josh.getReplies():
                 "(I should reply to Josh.)"
                 jump v10s20_PhoneContinue2
@@ -110,8 +110,6 @@ label v10_room_mon_night:
         # -MC unlocks Simplr-
         # -MC opens the Simplr app-
         # -MC uses the Simplr app-
-
-        $ showphone = False
 
         u "(Hmm, I can see why so many people are talking about it.)"
         u "(It would be kinda weird though if I saw someone I knew.)"

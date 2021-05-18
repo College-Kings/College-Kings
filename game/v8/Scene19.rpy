@@ -10,7 +10,7 @@ init python:
             contact_Amber.addImgReply("images/v8/Scene 19/w_dick_pic.webp")
 
         else:
-            contact_Amber.addImgReply("images/v8/Scene 19/a_dick_pic.webp", "s19_reply6")
+            contact_Amber.addImgReply("images/v8/Scene 19/a_dick_pic.webp")
 
         contact_Amber.newMessage("Wow, better than I thought")
         contact_Amber.addReply("So you thought about it?")
@@ -27,32 +27,19 @@ init python:
         contact_Amber.newMessage("And then what?")
         contact_Amber.addReply("I'd fuck you so good you'd scream my name")
         contact_Amber.newMessage("I'm close. Will you finish with me?")
-        contact_Amber.addReply("Oh, God yes!", v8s19_reply2)
+        contact_Amber.addReply("Oh, God yes!")
 
     def v8s19_reply2():
-        renpy.scene()
-        renpy.show("v8sser2") # TPP. Show MC jerking off.
-        renpy.with_statement("dissolve")
-
-        contact_Amber.newMessage("NOW!")
-        contact_Amber.addReply("NOW!")
-        contact_Amber.addReply("Holy shit, Amber! You're amazing!")
-        contact_Amber.newMessage("You weren't too bad yourself. Next time we need to do this in person")
-        contact_Amber.addReply("Give me 5 minutes ;)")
-        contact_Amber.newMessage("You're so cute! But it's time for bed. Dream about me ;)")
-        contact_Amber.addReply("With pleasure! Night!")
-
-    def v8s19_reply3():
         contact_Amber.newMessage("Good. Maybe someday we can think about things in the same room and see what happens")
         contact_Amber.addReply("Please do")
         contact_Amber.newMessage("I guess I better get back to studying. I keep getting distracted")
         contact_Amber.addReply("I'm not gonna be able to think of anything else now. I'm done studying")
         contact_Amber.newMessage("Well, sleep tight then ;)") 
 
-    def v8s19_reply4():
+    def v8s19_reply3():
         contact_Emily.newMessage("Great! See you there!")
 
-    def v8s19_reply5():
+    def v8s19_reply4():
         contact_Emily.newMessage("You sure you're not mad?")
         contact_Emily.addReply("No, not at all. Just beat. I'd love to go some other time")
         contact_Emily.newMessage("Okay talk to you soon")
@@ -76,7 +63,7 @@ label sun_eve_room:
             $ contact_Amber.addReply("What kind of things? Same things I'm thinking? ;)")
             $ contact_Amber.newMessage("I think so")
             $ contact_Amber.addReply("Wanna see what thinking about you has done to me?", v8s19_reply1)
-            $ contact_Amber.addReply("I look at your pic all the time...when I'm thinking about things", v8s19_reply3)
+            $ contact_Amber.addReply("I look at your pic all the time...when I'm thinking about things", v8s19_reply2)
 
         else:
             # -MC's phone buzzes-
@@ -93,6 +80,20 @@ label sun_eve_room:
 
         call screen phone
 
+        if contact_Amber.getMessage("Wanna see what thinking about you has done to me?"):
+            scene v8sser2
+            with dissolve
+
+            $ contact_Amber.newMessage("NOW!", queue=False)
+            $ contact_Amber.addReply("NOW!")
+            $ contact_Amber.addReply("Holy shit, Amber! You're amazing!")
+            $ contact_Amber.newMessage("You weren't too bad yourself. Next time we need to do this in person")
+            $ contact_Amber.addReply("Give me 5 minutes ;)")
+            $ contact_Amber.newMessage("You're so cute! But it's time for bed. Dream about me ;)")
+            $ contact_Amber.addReply("With pleasure! Night!")
+
+            call screen phone
+
         ### ERROR: -Continue after choices- [MC still in bed] ###
         label s19_replyCont1:
             if forgiveemily:
@@ -104,8 +105,8 @@ label sun_eve_room:
 
                 if hcGirl == "emily":
                     $ contact_Emily.newMessage("I feel so bad about homecoming and want to make it up to you. My treat!")
-                $ contact_Emily.addReply("Sure! Sounds like fun. I can be there in a few minutes", v8s19_reply4)
-                $ contact_Emily.addReply("I would but it's getting late and I haven't even started Mr. Lee's project", v8s19_reply5)
+                $ contact_Emily.addReply("Sure! Sounds like fun. I can be there in a few minutes", v8s19_reply3)
+                $ contact_Emily.addReply("I would but it's getting late and I haven't even started Mr. Lee's project", v8s19_reply4)
 
                 call screen phone
 
@@ -138,7 +139,7 @@ label sun_eve_room:
             $ contact_Amber.addReply("What kind of things? Same things I'm thinking? ;)", "s19_reply33")
             $ contact_Amber.newMessage("I think so")
             $ contact_Amber.addReply("Wanna see what thinking about you has done to me?", v8s19_reply1)
-            $ contact_Amber.addReply("I look at your pic all the time...when I'm thinking about things", v8s19_reply3)
+            $ contact_Amber.addReply("I look at your pic all the time...when I'm thinking about things", v8s19_reply2)
 
         else:
             # -MC's phone buzzes-
@@ -166,8 +167,8 @@ label sun_eve_room:
 
                 if hcGirl == "emily":
                     $ contact_Emily.newMessage("I feel so bad about homecoming and want to make it up to you. My treat!")
-                $ contact_Emily.addReply("Sure! Sounds like fun. I can be there in a few minutes", v8s19_reply4)
-                $ contact_Emily.addReply("I would but it's getting late and I haven't even started Mr. Lee's project", v8s19_reply5)
+                $ contact_Emily.addReply("Sure! Sounds like fun. I can be there in a few minutes", v8s19_reply3)
+                $ contact_Emily.addReply("I would but it's getting late and I haven't even started Mr. Lee's project", v8s19_reply4)
 
                 call screen phone
 
@@ -183,11 +184,3 @@ label sun_eve_room:
                 u "(I think I'll get an early night)"
 
             jump mon_morning_room
-
-label v8s19_phoneExit:
-    if contact_Emily.getReplies() or contact_Lauren.getReplies():
-        "I need to check my phone."
-        call screen phone
-        jump v8s19_phoneExit
-
-    jump mon_morning_room

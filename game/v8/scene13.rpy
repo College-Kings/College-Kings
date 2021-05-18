@@ -54,14 +54,14 @@ label after_apes_ceremony:
     scene v8apes21a # MC looking at his phone, mouth closed
     with dissolve
 
-label phn_chloe11:
     call screen phone
-    if contact_Chloe.getReplies():
-        u "(I should probably reply.)"
-        jump phn_chloe11
+    label phn_chloe11:
+        if contact_Chloe.getReplies():
+            u "(I should probably reply.)"
+            jump phn_chloe11
 
-    u "(Gotta get going.)"
-    jump phn_chloe11_done
+        u "(Gotta get going.)"
+        jump phn_chloe11_done
 
 label phn_chloe11_done:
     scene v8apes22 # TPP. MC leaving out of his dorm with his bag, smiling and mouth closed

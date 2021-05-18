@@ -17,8 +17,8 @@ label mon_eve_room_josh:
             $ contact_Josh.newMessage("Hey bro! It's time! Meet me at mine, okay?", queue=False)
             $ contact_Josh.addReply("Okay, I'm on my way.")
 
+            call screen phone
             label v8s27_phoneContinue1:
-                call screen phone
                 if contact_Josh.getReplies():
                     u "I should really check my phone."
                     jump v8s27_phoneContinue1
@@ -92,8 +92,8 @@ label mon_eve_room_josh:
             $ contact_Josh.newMessage("No, man! I hurt everywhere! Plus my shit is gone!")
             $ contact_Josh.addReply("Hold on, I'll be right over")
 
+            call screen phone
             label v8s27_phoneContinue2:
-                call screen phone
                 if contact_Josh.getReplies():
                     u "I should really check my phone."
                     jump v8s27_phoneContinue2
@@ -124,8 +124,8 @@ label mon_eve_room_josh:
             $ contact_Josh.newMessage("Hey bro! It's time! Meet me at mine, okay?", queue=False)
             $ contact_Josh.addReply("Okay, I'm on my way.")
 
+            call screen phone
             label v8s27_phoneContinue3:
-                call screen phone
                 if contact_Josh.getReplies():
                     u "I should really check my phone."
                     jump v8s27_phoneContinue3
@@ -199,8 +199,9 @@ label mon_eve_room_josh:
             $ contact_Josh.newMessage("No, man! I hurt everywhere! Plus my shit is gone!")
             $ contact_Josh.addReply("Hold on, I'll be right over")
 
+            call screen phone
             label v8s27_phoneContinue4:
-                call screen phone
+
                 if contact_Josh.getReplies():
                     u "I should really check my phone."
                     jump v8s27_phoneContinue4

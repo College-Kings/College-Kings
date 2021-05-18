@@ -121,8 +121,8 @@ init python:
             self.getProfilePicture()
 
     class KiwiiReply(KiwiiComment):
-        def __init__(self, reply, func=None, numberLikes=0, mentions=None):
-            self.reply = reply
+        def __init__(self, message, func=None, numberLikes=0, mentions=None):
+            self.message = message
             self.func = func
 
             if kct == "popular": self.numberLikes = round(numberLikes * 1.5)
@@ -448,13 +448,10 @@ screen kiwiiPost(post):
             spacing 15
 
             for reply in post.getReplies():
-                textbutton reply.reply:
+                textbutton reply.message:
                     style "kiwii_reply"
                     text_style "kiwii_ReplyText"
-                    if reply.label:
-                        action [Function(reply.selectedReply, post), Jump(reply.label)]
-                    else:
-                        action Function(reply.selectedReply, post)
+                    action [Hide("reply"), Function(post.selectedReply, reply)]
 
 screen liked_kiwii():
     tag phoneTag

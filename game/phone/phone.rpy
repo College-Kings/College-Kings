@@ -98,7 +98,7 @@ screen phone():
                         imagebutton:
                             idle Transform(app.img, size=(100, 100))
                             if app.name == "Kiwii" and kiwii_firstTime:
-                                action Function(kiwii_firstTime)
+                                action Function(kiwii_firstTimeMessages)
                             else:
                                 action [Function(renpy.retain_after_load), Show(app.homeScreen)]
                                 

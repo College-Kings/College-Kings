@@ -22,9 +22,7 @@ label v9_room_fri_aft:
         $ s20KiwiiPost = KiwiiPost("Chris", "v9/s20KiwiiWolf.webp", "Who's ready?!", numberLikes=renpy.random.randint(200, 300))
         $ s20KiwiiPost.addComment("Imre", "Ding! Ding! Ding!", numberLikes=renpy.random.randint(200, 250), queue=False)
         $ s20KiwiiPost.addComment("Cameron", "Whatever man! You're going down!", numberLikes=renpy.random.randint(200, 250), queue=False)
-        $ s20KiwiiPost.addReply("Fuck yeah!", "s20Reply1", numberLikes=renpy.random.randint(100, 200))
-
-        call screen phone
+        $ s20KiwiiPost.addReply("Fuck yeah!", numberLikes=renpy.random.randint(100, 200))
 
         pause 0.5
 
@@ -46,26 +44,16 @@ label v9_room_fri_aft:
         $ s20KiwiiPost = KiwiiPost("Grayson", "v9/s20KiwiiApe.webp", "Where my APES at?", numberLikes=renpy.random.randint(200, 300))
         $ s20KiwiiPost.addComment("Cameron", "The BEST Ape is right here!", numberLikes=renpy.random.randint(200, 250), queue=False)
         $ s20KiwiiPost.addComment("Ryan", "I'm SO ready!", numberLikes=renpy.random.randint(200, 250), queue=False)
-        $ s20KiwiiPost.addReply("Let's go!!", "s20Reply1", numberLikes=renpy.random.randint(100, 200))
-
-        call screen phone
+        $ s20KiwiiPost.addReply("Let's go!!", numberLikes=renpy.random.randint(100, 200))
 
         pause 0.5
 
-label s20Reply1:
-    call screen kiwiiPost(s20KiwiiPost)
-
-label s20_phoneExitW:
-    if s20KiwiiPost.getReplies():
-         "(I should check Kiwii)"
-         jump s20_phoneExitW
-    jump v9_room_fri_aft_contW
-
-label s20_phoneExitA:
-    if s20KiwiiPost.getReplies():
-        "(I should check Kiwii)"
-        jump s20_phoneExitA
-    jump v9_room_fri_aft_contA
+    call screen phone
+    label s20_phoneExitW:
+        if s20KiwiiPost.getReplies():
+            "(I should check Kiwii)"
+            jump s20_phoneExitW
+        jump v9_room_fri_aft_contW
 
 label v9_room_fri_aft_contW:
     scene v9rfa2a # TPP. Same camera as v9rfa2, show MC placing his phone on his desk.

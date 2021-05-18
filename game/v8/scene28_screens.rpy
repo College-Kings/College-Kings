@@ -9,7 +9,7 @@ screen skipTutS28():
         yalign 0.58
 
     textbutton "No" style "endfr":
-        action Jump ("s28_LarsFightCont")
+        action Show("s28_LarsFightChoice")
         text_align 0.5
         xalign 0.43
         yalign 0.58

@@ -47,8 +47,8 @@ label phn_riley11_setup:
     $ contact_Riley.newMessage("Great!")
     play sound "sounds/vibrate.mp3"
 
+call screen phone
 label phn_riley11:
-    call screen phone
     if contact_Riley.getReplies():
         u "(I should talk to Riley.)"
         jump phn_riley11

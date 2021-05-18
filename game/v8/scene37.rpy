@@ -33,8 +33,8 @@ label v8_tues_evening:
             $ contact_Lauren.newMessage("Seriously [name], I have things to do!")
             $ contact_Lauren.addReply("Later then.")
 
+        call screen phone
         label v8s37_phoneContinue1:
-            call screen phone
             if contact_Lauren.getReplies():
                 u "I should reply to Lauren."
                 jump v8s37_phoneContinue1
@@ -56,8 +56,8 @@ label v8_tues_evening:
             $ contact_Riley.addReply("Haha")
             $ contact_Riley.newMessage("*yuck*")
 
+        call screen phone
         label v8s37_phoneContinue2:
-            call screen phone
             if contact_Riley.getReplies():
                 u "I should reply to Riley."
                 jump v8s37_phoneContinue2
@@ -99,6 +99,7 @@ label v8_tues_evening:
             $ contact_Lauren.newMessage("Seriously [name], I have things to do!")
             $ contact_Lauren.addReply("Later then.")
 
+        call screen phone
         label v8s37_phoneContinue3:
             if contact_Lauren.getReplies():
                 u "I should reply to Lauren."
@@ -121,8 +122,8 @@ label v8_tues_evening:
             $ contact_Riley.addReply("Haha")
             $ contact_Riley.newMessage("*yuck*")
 
+        call screen phone
         label v8s37_phoneContinue4:
-            call screen phone
             if contact_Riley.getReplies():
                 u "I should reply to my phone"
                 jump v8s37_phoneContinue4

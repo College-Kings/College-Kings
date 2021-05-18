@@ -1445,8 +1445,8 @@ label efra:
     $ contact_Lauren.addReply(_("See you later, cutie"), v1_reply5)
     $ contact_Lauren.addReply(_("Cool"))
 
+    call screen phone
     label v1_phoneCheck1:
-        call screen phone
         if contact_Lauren.getReplies():
             scene s61
             with dissolve
@@ -2935,8 +2935,8 @@ label aw_bd:
     $ contact_Ryan.newMessage(_("Just meet me in front of the Apes' frat house at 9."))
     $ contact_Ryan.addReply(_("Okay, will do."))
 
+    call screen phone
     label repeata:
-        call screen phone
         if contact_Ryan.getReplies():
             u "(I should really check who texted me.)"
             jump repeata

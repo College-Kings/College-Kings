@@ -26,7 +26,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "9.9.8"
+define config.version = "9.9.9"
 
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.

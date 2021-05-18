@@ -93,9 +93,9 @@ label v8_tues_noon:
     else:
         $ contact_Chloe.addReply("Hey, how you been?", v8s34_reply3)
 
+call screen phone
 label phn_chloe13:
     if contact_Chloe.getReplies():
-        call screen phone
         u "(I should talk to Chloe.)"
         jump phn_chloe13
 

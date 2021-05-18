@@ -132,14 +132,15 @@ init python:
             self.reply = None
 
     class Reply:
-        def __init__(self, message, func=None):
+        def __init__(self, message, func=None, label=None):
             self.message = message
             self.func = func
 
     class ImgReply:
-        def __init__(self, image, func=None):
+        def __init__(self, image, func=None, label=None):
             self.image = image
             self.func = func
+            self.label = label
 
 init offset = -1
 default contacts = []
@@ -249,7 +250,7 @@ screen reply(contact=None):
 
     vbox xpos 1200 yalign 0.84 spacing 15:
 
-        for reply in contact.sentMessages[-1].replies:
+        for reply in contact.getReplies():
             if isinstance(reply, Reply):
                 textbutton reply.message:
                     style "replies_style"

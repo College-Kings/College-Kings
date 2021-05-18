@@ -24,34 +24,18 @@ label v9_room_fri_eve:
             u "(Wonder how Lauren's doing with the Deers charity)"
 
 
-            $ contact_Lauren.addReply("How's it going? You still doing our statue idea?", "s25_LauReplyW1")
+            $ contact_Lauren.addReply("How's it going? You still doing our statue idea?")
+            $ contact_Lauren.newMessage("Of course. I'm glad you talked me into it.")
+            $ contact_Lauren.addReply("Me too. I don't think anyone's tried something like this before. You'll be the talk of the school!")
+            $ contact_Lauren.newMessage("No, WE will. I couldn't have done it without your help.")
+            $ contact_Lauren.addReply("Don't mention it, talk soon?")
+            $ contact_Lauren.newMessage("Sure!")
 
-            
             call screen phone
-
-            label s25_LauReplyW1:
-                $ contact_Lauren.newMessage("Of course. I'm glad you talked me into it.")
-                $ contact_Lauren.addReply("Me too. I don't think anyone's tried something like this before. You'll be the talk of the school!", "s25_LauReplyW2")
-
-                call screen messager(contact_Lauren)
-
-            label s25_LauReplyW2:
-                $ contact_Lauren.newMessage("No, WE will. I couldn't have done it without your help.")
-                $ contact_Lauren.addReply("Don't mention it, talk soon?", "s25_LauReplyW3")
-
-                call screen messager(contact_Lauren)
-
-            label s25_LauReplyW3:
-                $ contact_Lauren.newMessage("Sure!")
-
-                call screen messager(contact_Lauren)
-
             label s25_ContinueW:
                 if contact_Lauren.getReplies():
                     "(I should text Lauren.)"
                     jump s25_ContinueW
-
-            
 
         scene v9rfe2 # TPP. Show MC's door.
         with dissolve
@@ -83,35 +67,18 @@ label v9_room_fri_eve:
 
             u "(Wonder how Lauren's doing with the Deers charity)"
 
-
-            $ contact_Lauren.addReply("How's it going? You still doing our statue idea?", "s25_LauReplyA1")
-
+            $ contact_Lauren.addReply("How's it going? You still doing our statue idea?")
+            $ contact_Lauren.newMessage("Of course. I'm glad you talked me into it.")
+            $ contact_Lauren.addReply("Me too. I don't think anyone's tried something like this before. You'll be the talk of the school!")
+            $ contact_Lauren.newMessage("No, WE will. I couldn't have done it without your help.")
+            $ contact_Lauren.addReply("Don't mention it, talk soon?")
+            $ contact_Lauren.newMessage("Sure!")
             
             call screen phone
-
-            label s25_LauReplyA1:
-                $ contact_Lauren.newMessage("Of course. I'm glad you talked me into it.")
-                $ contact_Lauren.addReply("Me too. I don't think anyone's tried something like this before. You'll be the talk of the school!", "s25_LauReplyA2")
-
-                call screen messager(contact_Lauren)
-
-            label s25_LauReplyA2:
-                $ contact_Lauren.newMessage("No, WE will. I couldn't have done it without your help.")
-                $ contact_Lauren.addReply("Don't mention it, talk soon?", "s25_LauReplyA3")
-
-                call screen messager(contact_Lauren)
-
-            label s25_LauReplyA3:
-                $ contact_Lauren.newMessage("Sure!")
-
-                call screen messager(contact_Lauren)
-
             label s25_ContinueA:
                 if contact_Lauren.getReplies():
                     "(I should text Lauren.)"
                     jump s25_ContinueA
-
-            
 
         scene v9rfe4 # TPP. Show MC's door.
         with dissolve

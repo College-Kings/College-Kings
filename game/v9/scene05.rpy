@@ -58,11 +58,11 @@ label v9_dream_wakeup:
         scene v9dream23b # Same as v9dream20b but in MC's room in Apes house
         with dissolve
 
-label v9_phn_riley1:
-    if contact_Riley.getReplies():
-        call screen phone
-        u "(I should talk to Riley.)"
-        jump v9_phn_riley1
+    call screen phone
+    label v9_phn_riley1:
+        if contact_Riley.getReplies():
+            u "(I should talk to Riley.)"
+            jump v9_phn_riley1
 
     jump v9_phn_riley1_done
 

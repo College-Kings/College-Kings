@@ -50,7 +50,6 @@ label mc_apes_sun_morn:
 
     jump v8_s14_pen_text
 
-
 label v8_s14_pen_text:
     call screen phone
     if contact_Penelope.getReplies():

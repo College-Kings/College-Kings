@@ -44,21 +44,15 @@ label v9_room_fri_morn:
 
         play sound "sounds/vibrate.mp3"
 
-        $ contact_Lauren.newMessage("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have.")
-        $ contact_Lauren.addReply("Sure, OMW!", "s17_LauReply1")
+        $ contact_Lauren.newMessage("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have.", queue=False)
+        $ contact_Lauren.addReply("Sure, OMW!")
+        $ contact_Lauren.newMessage("Ok :) See you soon!")
         
         call screen phone
-
-        label s17_LauReply1:
-            $ contact_Lauren.newMessage("Ok :) See you soon!")
-            call screen messager(contact_Lauren)
-
         label s17_PhoneContinueW:
             if contact_Lauren.getReplies():
                 "(I should text Lauren.)"
                 jump s17_PhoneContinueW
-
-        
 
         u "(I better get ready and head over there. Hope it's not too much work.)"
 
@@ -90,21 +84,15 @@ label v9_room_fri_morn:
 
         play sound "sounds/vibrate.mp3"
 
-        $ contact_Lauren.newMessage("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have.")
-        $ contact_Lauren.addReply("Sure, OMW!", "s17_LauReply2")
+        $ contact_Lauren.newMessage("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have.", queue=False)
+        $ contact_Lauren.addReply("Sure, OMW!")
+        $ contact_Lauren.newMessage("Ok :) See you soon!")
         
         call screen phone
-
-        label s17_LauReply2:
-            $ contact_Lauren.newMessage("Ok :) See you soon!")
-            call screen messager(contact_Lauren)
-
         label s17_PhoneContinueA:
             if contact_Lauren.getReplies():
                 "(I should text Lauren.)"
                 jump s17_PhoneContinueA
-
-        
 
         u "(I better get ready and head over there. Hope it's not too much work.)"
 
