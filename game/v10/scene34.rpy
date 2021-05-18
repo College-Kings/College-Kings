@@ -235,7 +235,7 @@ label v10_autumn_announcement:
 
     cl "This is gonna be fun!"
 
-    scene v10samw8A # TPP. Same camera as v10samw8. Show Chloe and Nora in the pool, Choe smiling with her mouth closed, Nora with her neutral expression, mouth open.
+    scene v10samw8a # TPP. Same camera as v10samw8. Show Chloe and Nora in the pool, Choe smiling with her mouth closed, Nora with her neutral expression, mouth open.
     with dissolve
 
     no "Oh shut up."
