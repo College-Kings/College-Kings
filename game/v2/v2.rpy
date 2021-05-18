@@ -279,8 +279,8 @@ label v2start:
 
                     jump v1_tomWalkAway
 
-label v1_tomShoutBack:
 label bk_a: #for compatibility only
+label v1_tomShoutBack:
     $ fighttom = True
 
     scene 126a # tom close up
@@ -1240,8 +1240,8 @@ label youfinish:
         "Walk away":
             $ addPoint("bro")
 
-label v1_tomWalkAway:
 label tf2: #for compatibility only
+label v1_tomWalkAway:
     $ firstfight = False
 
     $ renpy.end_replay()
@@ -1529,8 +1529,8 @@ label meet_lauren2:
 
     stop music fadeout 2.0
 
-label history2:
 label historye: #for compatibility only
+label history2:
     play sound "sounds/vibrate.mp3"
 
     $ contact_Josh.newMessage(_("Dude, I talked to this Aubrey chick the entire night and guess who's number she wanted..."), queue=False)
