@@ -99,9 +99,9 @@ label v9_hc_demo:
     with dissolve
 
     menu:
-        "Recognise the King":
+        "Recognize the King":
             jump v9_hc_demo_rec
-        "Don't recognise the King":
+        "Don't recognize the King":
             $ addPoint("tm")
             jump v9_hc_demo_norec
         
