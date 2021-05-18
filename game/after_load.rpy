@@ -28,7 +28,7 @@ label after_load:
             try: app.homeScreen = app.screen
             except AttributeError: pass
 
-        # Kiwii
+        # Kiwii Posts
         for kiwiiPost in kiwiiPosts:
             try: kiwiiPost.message = kiwiiPost.caption
             except AttributeError: pass
@@ -49,7 +49,18 @@ label after_load:
             try: kiwiiPost.message = kiwiiPost.caption
             except AttributeError: pass
 
-        # Contact/Messages/Replies
+            # Kiwii Replies
+            try:
+                for reply in kiwiiPost.replies:
+                    kiwiiPost.addReply(reply.reply, numberLikes=reply.numberLikes, mentions=reply.mentions)
+            except AttributeError: pass
+
+        # Contacts
+        contact_Lindsey.profilePicture = "lindseyprofilepic"
+
+        if contact_Lindsey not in contacts:
+            contacts.append(contact_Lindsey)
+
         for contact in contacts:
             try: contact.pendingMessages
             except AttributeError: contact.pendingMessages = []
@@ -57,6 +68,7 @@ label after_load:
             try: contact.sentMessages
             except AttributeError: contact.sentMessages = []
             
+            # Messages
             try:
                 for message in contact.messages:
                     try: message.image = os.path.splitext(message.image)[0] + ".webp"
@@ -65,14 +77,16 @@ label after_load:
                     try: message.message = message.msg
                     except AttributeError: pass
 
+                    try: message.replies
+                    except AttributeError: message.replies = []
+
                     contact.sentMessages.append(message)
 
+                    # Replies
                     for reply in message.replies:
                         try: reply.func
                         except AttributeError: reply.func = None
             except AttributeError: pass
-
-        contact_Lindsey.profilePicture = "lindseyprofilepic"
 
         # Variables 
         try:
