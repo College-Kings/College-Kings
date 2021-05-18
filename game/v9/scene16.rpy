@@ -805,7 +805,7 @@ label v9_thur_night_aft_em_w:
         $ contact_Lindsey.addReply("Super. You getting ready for bed?", v9s16_reply2)
 
     else:
-        $ contact_Lindsey.newMessage("Hey, how you feeling?")
+        $ contact_Lindsey.newMessage("Hey, how you feeling?", queue=False)
         $ contact_Lindsey.addReply("Better now that I'm talking to you", v9s16_reply3)
         $ contact_Lindsey.addReply("I'm ok, it's really not that bad", v9s16_reply4)
 
@@ -846,12 +846,12 @@ label v9_thur_night_aft_em_a:
         u "(I need to get some sleep)"
 
     if hl_punch:
-        $ contact_Lindsey.newMessage("How are you doing tonight?")
+        $ contact_Lindsey.newMessage("How are you doing tonight?", queue=False)
         $ contact_Lindsey.addReply("Better now that I'm talking to you", v9s16_reply1)
         $ contact_Lindsey.addReply("Super. You getting ready for bed?", v9s16_reply2)
 
     else:
-        $ contact_Lindsey.newMessage("Hey, how you feeling?")
+        $ contact_Lindsey.newMessage("Hey, how you feeling?", queue=False)
         $ contact_Lindsey.addReply("Better now that I'm talking to you", v9s16_reply3)
         $ contact_Lindsey.addReply("I'm ok, it's really not that bad", v9s16_reply4)
 
