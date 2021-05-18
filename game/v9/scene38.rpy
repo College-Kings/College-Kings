@@ -31,7 +31,7 @@ label v9_walk_li_txt:
 
     u "(Please no more drama)"
 
-    $ contact_Lindsey.newMessage("Hey Freshmeat! How's it hangin?")
+    $ contact_Lindsey.newMessage("Hey Freshmeat! How's it hangin?", queue=False)
     $ contact_Lindsey.addReply("Hey Linds ;)")
     $ contact_Lindsey.newMessage("I've decided to allow the nickname under one condition")
     $ contact_Lindsey.addReply("Really? And what's that?")
