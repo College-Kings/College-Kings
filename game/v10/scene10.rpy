@@ -211,4 +211,4 @@ label v10_sun_morn:
             jump v10_linds_room
 
         else:
-            jump v10_apes_sam
+            jump v10_mc_clock_trans
