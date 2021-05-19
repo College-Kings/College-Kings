@@ -83,7 +83,8 @@ label v10_emily_vs_aubrey:
     scene v10eva9b # Emily victory pose
     with dissolve
 
-    ### ERROR: -After fight images ###
+    pause
+
     scene v10eva10 # FPP. Show autumn mouth open
     with dissolve
 
