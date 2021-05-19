@@ -6,12 +6,12 @@
 init python:
     def v9s2_reply1():
         contact_Ryan.newMessage("Damn right! You heading to the gym?")
-        contact_Ryan.addReply("Naw, I'm spent. But I have a feeling I'll be spending a lot of my time in there", "v9_phn_ryan1_a1a2")
+        contact_Ryan.addReply("Naw, I'm spent. But I have a feeling I'll be spending a lot of my time in there")
         contact_Ryan.newMessage("Me too. See ya there!")
 
     def v9s2_reply2():
         contact_Ryan.newMessage("Lucky we did, huh? I think we got a hand up on those baby apes")
-        contact_Ryan.addReply("Damn right! We got this! We need to hit the gym soon... after I get some sleep. I'm bout to pass out", "v9_phn_ryan1_a1b2")
+        contact_Ryan.addReply("Damn right! We got this! We need to hit the gym soon... after I get some sleep. I'm bout to pass out")
         contact_Ryan.newMessage("Same! Talk soon")
 
 label v9_start_apes:

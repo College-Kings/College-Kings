@@ -214,8 +214,8 @@ label v9_start_wolves:
 
     $ contact_Imre.addReply("You here yet?")
     $ contact_Imre.newMessage("Yeah, you ready?")
-    $ contact_Imre.addReply("Hell no! But we need to get ready!", "v9_phn_imre1_a1a1")
-    $ contact_Imre.addReply("I think so, actually. You and Sebastian really helped", "v9_phn_imre1_a1b1")
+    $ contact_Imre.addReply("Hell no! But we need to get ready!", v9s1_reply1)
+    $ contact_Imre.addReply("I think so, actually. You and Sebastian really helped", v9s1_reply2)
     
     call screen phone
     label v9_phn_imre1:
