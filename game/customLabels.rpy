@@ -1,4 +1,4 @@
 
-label freeRoamSpokenToo(message="I have already spoken to this person", returnScreen):
+label freeRoamSpokenToo(message="I should probably talk to someone else", returnScreen):
     u "[message]"
     $ renpy.call_screen(returnScreen)
