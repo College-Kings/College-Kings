@@ -6,13 +6,13 @@
 init python:
     def v9s1_reply1():
         contact_Imre.newMessage("Damn right! You heading to the gym?")
-        contact_Imre.addReply("Naw, I'm spent. But I have a feeling I'll be spending a lot of my time in there", "v9_phn_imre1_a1a2")
+        contact_Imre.addReply("Naw, I'm spent. But I have a feeling I'll be spending a lot of my time in there")
         contact_Imre.newMessage("Me too. See ya there!")
 
 
     def v9s1_reply2():
         contact_Imre.newMessage("Lucky we did, huh? I think we got a hand up on those baby apes")
-        contact_Imre.addReply("Damn right! We got this! We need to hit the gym soon... after I get some sleep. I'm bout to pass out", "v9_phn_imre1_a1b2")
+        contact_Imre.addReply("Damn right! We got this! We need to hit the gym soon... after I get some sleep. I'm bout to pass out")
         contact_Imre.newMessage("Same! Talk soon")
 
 label v9start:
