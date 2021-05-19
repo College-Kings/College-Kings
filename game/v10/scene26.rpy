@@ -17,9 +17,9 @@ label v10_amber_skatepark:
 
     u "(I should get that.)"
 
-    contact_Amber.newMessage("Skatepark behind SVC, 10pm, bring a six pack.")
-    contact_Amber.addReply("Condoms or beer?", v10s26_reply1 )
-    contact_Amber.addReply("Alright sure")
+    $ contact_Amber.newMessage("Skatepark behind SVC, 10pm, bring a six pack.")
+    $ contact_Amber.addReply("Condoms or beer?", v10s26_reply1 )
+    $ contact_Amber.addReply("Alright sure")
 
 
     scene v10sasp1 # FPP. Show Amber, smiling, mouth closed.
@@ -57,7 +57,7 @@ label v10_amber_skatepark:
 
     u "Of course, here you go."
 
-    if amber_condoms == true: # variable for MC replying beer or condoms earlier
+    if amber_condoms: # variable for MC replying beer or condoms earlier
         scene v10sasp1c # FPP. Same camera as v10sasp1. Show Amber with a beer, smiling, mouth open.
         with dissolve
 
@@ -73,11 +73,11 @@ label v10_amber_skatepark:
 
         am "I'm just kidding. *Chuckles*"
             
-            if amberrs:
-                scene v10sasp1c
-                with dissolve
+        if amberrs:
+            scene v10sasp1c
+            with dissolve
 
-                am "Maybe."
+            am "Maybe."
 
     scene v10sasp2 # TPP. Show MC and Amber looking at Riley as she walks out of the library. MC normal expression, mouth closed. Amber smiling, mouth open.
     with dissolve
@@ -583,13 +583,12 @@ label v10_amber_skatepark:
 
                         u "Right, sorry."
 
-            scene v10sasp5g 
-            with dissolve
+        scene v10sasp5g 
+        with dissolve
 
-            pause 0.5
+        pause 0.5
 
-    else: # if not amberrs
-        
+    else:   
         scene v10sasp5a
         with fade
 
@@ -850,6 +849,7 @@ label v10_amber_skatepark:
 
                             scene v10sasp5i
                             with dissolve
+
                             menu:
                                 "Okay":
                                     scene v10sasp5i
@@ -878,12 +878,12 @@ label v10_amber_skatepark:
 
                                     u "Right, sorry."
 
-                        scene v10sasp5g
-                        with dissolve
+                    scene v10sasp5g
+                    with dissolve
 
-                        pause 0.5
+                    pause 0.5
 
-                else: # mc places hand on amber's leg without kct popular
+                else:
                     scene v10sasp5k # FPP. Same camera as v10sasp5. Show Amber glancing down at her leg, curious expression, mouth closed.
                     with dissolve
 
