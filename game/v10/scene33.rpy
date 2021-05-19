@@ -2765,12 +2765,12 @@ label v10s33_riley2:
 
             u "Riley you're up."
 
-            scene v10cfrriau9Other # FPP. Show Riley, on stage, mouth closed, stood normally.
+            scene v10cfrriauhat # Putting down/ picking up hat
             with dissolve
 
-            pause 0.5
+            pause 0.5            
 
-            scene v10cfrriauHat # Putting down/ picking up hat
+            scene v10cfrriau9other # FPP. Show Riley, on stage, mouth closed, stood normally.
             with dissolve
 
             pause 0.5
@@ -2780,10 +2780,10 @@ label v10s33_riley2:
 
             pause 0.5
 
-            scene v10cfrriau9b # FPP. Show Riley, on stage, mouth closed, like this https://static1.bigstockphoto.com/8/9/1/large2/198566380.jpg
-            with dissolve
+            # scene v10cfrriau9b # FPP. Show Riley, on stage, mouth closed, like this https://static1.bigstockphoto.com/8/9/1/large2/198566380.jpg
+            # with dissolve
 
-            pause 0.5
+            # pause 0.5
 
             scene v10cfrriau9c # FPP. Same 9b, now leant towards front leg, palms on floor.
             with dissolve
@@ -2805,7 +2805,7 @@ label v10s33_riley2:
 
             ri "The best dancers don't hold back."
 
-            scene v10cfr
+            scene v10cfrriau2a
             with dissolve
 
             au "True, that's why I'm about to win."
@@ -2912,7 +2912,7 @@ label v10s33_riley2:
 
     dg1 "Good job to both of you, but it's pretty obvious who won."
 
-    scene v10cfrriua9
+    scene v10cfrriau9
     with dissolve
 
     guyd "Yeah sorry, but it's pretty obvious."
@@ -2922,7 +2922,7 @@ label v10s33_riley2:
 
     dg1 "Riley."
 
-    scene v10cfrriua9
+    scene v10cfrriau9
     with dissolve
 
     guyd "Aubrey."
@@ -2940,7 +2940,7 @@ label v10s33_riley2:
 
             u "I gotta give it to Riley."
 
-            scene v10cfrriua9
+            scene v10cfrriau9
             with dissolve
 
             guyd "Guess a man knows what he likes."
@@ -3303,12 +3303,12 @@ label v10s33_riley2:
 
             u "Damnit."
 
-            scene v10cfrdg23a
+            scene v10cfrch2a
             with fade
 
             u "Okay, I'ma check out some other stations. I'll see you guys around."
 
-            scene v10cfrdg22
+            scene v10cfrch2
             with dissolve
 
             aa "See ya, good catching up."
@@ -3316,19 +3316,20 @@ label v10s33_riley2:
 
         "Don't play":
 
-            u "I don't want to hurt anyone's feelings over a game, I'm too good at this, it wouldn't be fair. Also, the presidency is all yours Chris. *Laughs*"
+            u "I don't want to hurt anyone's feelings over a game, I'm too good at this, it wouldn't be fair."
+            u "Also, the presidency is all yours Chris. *Laughs*"
 
             scene v10cfrch3
             with dissolve
 
             ch "Fair enough."
 
-            scene v10cfrdg23a
+            scene v10cfrch2a
             with dissolve
 
             u "I'll see you guys around."
 
-            scene v10cfr2
+            scene v10cfrch2
             with dissolve
 
             aa "See ya, good catching up."
@@ -3738,6 +3739,11 @@ label v10s33_emily1:
     $ v10s33_emily = True
 
     if not forgiveemily:
+        if v10s33_toldChloe:
+            scene fr6benchchloenoraatmudwrestling
+        else:
+            scene fr6bench
+
         u "(I don't feel like talking to her.)"
         
         call screen v10s33_bench
@@ -3983,7 +3989,11 @@ label v10s33_emily1:
 
 label v10s33_deergirl41:
 
-    scene # thrift screen
+    if v10s33_riley:
+        scene fr6thriftnoriley
+
+    else:
+        scene fr6thrift
 
     u "(I'd rather not get talked into buying one of these hats.)"
 
