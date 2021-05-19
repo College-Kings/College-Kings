@@ -213,7 +213,7 @@ label v10cfr33_autumn1:
 
     aut "Anyway, I better get back to running everything, see you around."
 
-    scene v10cfr
+    scene v10cfraut1c
     with dissolve
 
     u "See ya."
