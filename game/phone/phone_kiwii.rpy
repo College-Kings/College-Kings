@@ -415,31 +415,32 @@ screen kiwiiPost(post):
                 spacing 20
 
                 for comment in post.sentComments:
-                    vbox:
-                        spacing 5
-
-                        hbox:
-                            spacing 10
-
-                            add Transform(comment.getProfilePicture(), zoom=0.05)
-                            text comment.getUsername() style "kiwii_ProfileName" yalign 0.5
-
-                        hbox:
-                            xsize 275
+                    if comment.message.strip():
+                        vbox:
                             spacing 5
 
-                            text comment.getMessage() style "kiwii_CommentText"
+                            hbox:
+                                spacing 10
 
-                        hbox:
-                            spacing 5
+                                add Transform(comment.getProfilePicture(), zoom=0.05)
+                                text comment.getUsername() style "kiwii_ProfileName" yalign 0.5
 
-                            imagebutton:
-                                idle "images/phone/Kiwii/AppAssets/Like.webp"
-                                hover "images/phone/Kiwii/AppAssets/LikePress.webp"
-                                selected_idle "images/phone/Kiwii/AppAssets/LikePress.webp"
-                                selected comment.liked
-                                action Function(comment.toggleLike)
-                            text "[comment.numberLikes]" style "kiwii_LikeCounter" yalign 0.5
+                            hbox:
+                                xsize 275
+                                spacing 5
+
+                                text comment.getMessage() style "kiwii_CommentText"
+
+                            hbox:
+                                spacing 5
+
+                                imagebutton:
+                                    idle "images/phone/Kiwii/AppAssets/Like.webp"
+                                    hover "images/phone/Kiwii/AppAssets/LikePress.webp"
+                                    selected_idle "images/phone/Kiwii/AppAssets/LikePress.webp"
+                                    selected comment.liked
+                                    action Function(comment.toggleLike)
+                                text "[comment.numberLikes]" style "kiwii_LikeCounter" yalign 0.5
 
     if post.getReplies():
         vbox:
