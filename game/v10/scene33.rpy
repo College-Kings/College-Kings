@@ -2203,7 +2203,7 @@ label v10s33_deergirl21:
 
                         ro "What do you think [name]?"
 
-                        scene v10cfrcfrro3e # FPP. Same as 3d, both smiling, mouths closed.
+                        scene v10cfrcfrro5a # FPP. Same as 3d, both smiling, mouths closed.
                         with dissolve
 
                         u "Perfect!"
