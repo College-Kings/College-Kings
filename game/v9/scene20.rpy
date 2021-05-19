@@ -26,6 +26,13 @@ label v9_room_fri_aft:
 
         pause 0.5
 
+        call screen phone
+        label s20_phoneExit1:
+            if s20KiwiiPost.getReplies():
+                "(I should check Kiwii)"
+                jump s20_phoneExit1
+        jump v9_room_fri_aft_contA
+
     else:
         scene v9rfa3 # TPP. Show MC sat at his desk in his Apes room studying.
         with fade
@@ -48,11 +55,11 @@ label v9_room_fri_aft:
 
         pause 0.5
 
-    call screen phone
-    label s20_phoneExitW:
-        if s20KiwiiPost.getReplies():
-            "(I should check Kiwii)"
-            jump s20_phoneExitW
+        call screen phone
+        label s20_phoneExit2:
+            if s20KiwiiPost.getReplies():
+                "(I should check Kiwii)"
+                jump s20_phoneExit2
         jump v9_room_fri_aft_contW
 
 label v9_room_fri_aft_contW:

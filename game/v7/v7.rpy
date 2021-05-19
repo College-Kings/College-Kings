@@ -16,7 +16,7 @@ init python:
     
     def v7_kiwiiReply5():
         addPoint("bro")
-        KiwiiPost3.addComment("Aubrey", "Bring it on!", mentions="MC", numberLikes=renpy.random.randint(15, 35))
+        kiwiiPost3.addComment("Aubrey", "Bring it on!", mentions="MC", numberLikes=renpy.random.randint(15, 35))
 
     def v7_kiwiiReply6():
         addPoint("tm")
@@ -63,6 +63,9 @@ init python:
             contact_Lauren.newMessage(_("What is there to talk about? How could you betray me like that?!"))
             contact_Lauren.addReply(_("Please, it's just a big misunderstanding"))
             contact_Lauren.newMessage(_("Fine. I'm in my dorm, we can talk now."))
+
+    def v7_msgReply7():
+        setattr(store, kiwii_firstTime, True)
 
 label start7: #for compatibility only
 label v7start:
@@ -1352,8 +1355,6 @@ label conyourdorm:
 
     pause 0.5
 
-    $ kiwii_firstTime = True
-
     $ kiwiiPost1 = KiwiiPost("Chloe", "v7/clpost1.webp", "I'll always follow the sun :)", numberLikes=186)
     $ kiwiiPost1.addComment("Grayson", "Check your DMs", 14, queue=False)
     $ kiwiiPost1.addComment("Ryan", "Whore.", 1, queue=False)
@@ -1387,7 +1388,7 @@ label conyourdorm:
 
         play sound "sounds/vibrate.mp3"
         $ contact_Riley.newMessage(_("Are you and Emily back together?"), queue=False)
-        $ contact_Riley.addReply(_("What are you talking about???"))
+        $ contact_Riley.addReply(_("What are you talking about???"), v7_msgReply7)
         $ contact_Riley.newMessage(_("Check Kiwii..."))
 
         pause 0.5
@@ -1623,7 +1624,7 @@ label conyourdorm:
         $ contact_Riley.newMessage(_("Hey, how come you're not on Kiwii?"), queue=False)
         $ contact_Riley.addReply(_("What's that?"))
         $ contact_Riley.newMessage(_("It's a new social media app, you should give it a try"))
-        $ contact_Riley.addReply(_("Okay, I'll have a look"))
+        $ contact_Riley.addReply(_("Okay, I'll have a look"), v7_msgReply7)
 
         pause 0.5
 
