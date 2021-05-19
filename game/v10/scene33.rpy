@@ -2203,7 +2203,7 @@ label v10s33_deergirl21:
 
                         ro "What do you think [name]?"
 
-                        scene v10cfrcfrro5a # FPP. Same as 3d, both smiling, mouths closed.
+                        scene v10cfrcfrro3e # FPP. Same as 3d, both smiling, mouths closed.
                         with dissolve
 
                         u "Perfect!"
@@ -3584,8 +3584,7 @@ label v10s33_riley2:
         scene v10cfrry1c # FPP. Same as 1, ryan back at camera, awkwardly, mouth open.
         with dissolve
 
-        ry "Okay look, don't be mad, but the girl I'm talking about is Emily."
-        ry "I know you guys dated, but I...I really like her. Is it okay with you if I ask her out?"
+        ry "Okay look, don't be mad, but the girl I'm talking about is Emily. I know you guys dated, but I...I really like her. Is it okay with you if I ask her out?"
 
         scene v10cfrry1d # FPP. Same as 1, ryan looking at camera, awkwardly, mouth closed.
         with dissolve
@@ -3633,8 +3632,6 @@ label v10s33_riley2:
 
                 ry "Yeah yeah, uhm...that's cool. See you around."
 
-                pause
-
             "It's Not Okay": 
                 $ addPoint("tm")
             
@@ -3670,8 +3667,7 @@ label v10s33_riley2:
             scene v10cfrry5
             with dissolve
 
-            u "There's plenty of girls here that would be happy to talk to you."
-            u "Have you checked out the Win A Date booth? That girl's alright, go get a ticket."
+            u "There's plenty of girls here that would be happy to talk to you. Have you checked out the Win A Date booth? That girl's alright, go get a ticket."
 
             scene v10cfrry5a
             with dissolve
@@ -3714,8 +3710,7 @@ label v10s33_riley2:
             scene v10cfrry5a
             with dissolve
 
-            u "Damn man, sorry to hear that. There's plenty of girls here that would be happy to talk to you."
-            u "Have you checked out the Win A Date booth? That girl's alright, go get a ticket."
+            u "Damn man, sorry to hear that. There's plenty of girls here that would be happy to talk to you. Have you checked out the Win A Date booth? That girl's alright, go get a ticket."
 
             scene v10cfrry5
             with dissolve
