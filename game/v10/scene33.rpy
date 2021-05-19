@@ -577,7 +577,7 @@ screen v10cfr33_mudwrestling():
 
 label v10_charity_freeroam:
     # -MC arrives at the charity event and prior to the freeroam we have an image and a dialog line from MC-
-    scene Ent3
+    scene ent3
     with dissolve
 
     u "(Now this is an event!)"
