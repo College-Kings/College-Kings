@@ -3,7 +3,7 @@
 # Characters: MC (Outfit X), Lauren, (Outift X), Samantha (Outfit X), Mrs. Rose (Outfit X)
 # Time: Tuesday Evening
 
-default lauren_bake_sale = False
+default v10s33_laurenBakeSale = False
 
 label v10_lauren_room:
     scene v10lar1 # TPP Show MC knocking on Lauren's door.
@@ -50,7 +50,7 @@ label v10_lauren_room:
 
     menu:
         "Agree":
-            $ lauren_bake_sale = True
+            $ v10s33_laurenBakeSale = True
 
             $ addPoint("bf")
             scene v10lar3a
@@ -90,7 +90,7 @@ label v10_lauren_room:
             u "I really do."
 
             if kct == "loyal":
-                $ lauren_bake_sale = False
+                $ v10s33_laurenBakeSale = False
 
                 scene v10lar3b
                 with dissolve
@@ -103,7 +103,7 @@ label v10_lauren_room:
                 u "I'm sure it'll be fun."
 
             else: # KCT not Loyal
-                $ lauren_bake_sale = True
+                $ v10s33_laurenBakeSale = True
 
                 scene v10lar3d #FPP Same angle as v10lar3, Lauren looking down, sad expression, mouth open
                 with dissolve
@@ -429,7 +429,7 @@ label v10_lauren_room:
 
         la "Haha, yeah I'll think about it."
 
-        if lauren_bake_sale: # If Lauren is doing bake sale
+        if v10s33_laurenBakeSale: # If Lauren is doing bake sale
             scene v10lar3b
             with dissolve
 
