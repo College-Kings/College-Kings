@@ -31,7 +31,7 @@ label v9_room_fri_aft:
             if s20KiwiiPost.getReplies():
                 "(I should check Kiwii)"
                 jump s20_phoneExit1
-        jump v9_room_fri_aft_contA
+        jump v9_room_fri_aft_contW
 
     else:
         scene v9rfa3 # TPP. Show MC sat at his desk in his Apes room studying.
@@ -60,7 +60,7 @@ label v9_room_fri_aft:
             if s20KiwiiPost.getReplies():
                 "(I should check Kiwii)"
                 jump s20_phoneExit2
-        jump v9_room_fri_aft_contW
+        jump v9_room_fri_aft_contA
 
 label v9_room_fri_aft_contW:
     scene v9rfa2a # TPP. Same camera as v9rfa2, show MC placing his phone on his desk.
