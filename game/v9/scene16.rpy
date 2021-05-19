@@ -292,7 +292,7 @@ label v9_emily_dorm:
         scene v9emi11d
         with dissolve
 
-        em "You like?"
+        em "Am I still a good kisser??"
 
         scene v9emi11f
         with dissolve
