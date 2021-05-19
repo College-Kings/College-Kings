@@ -403,6 +403,7 @@ default v10s33_ryan = False
 default v10s33_msRose = False # & Mr Lee
 default v10s33_lindsey = False
 default v10s33_deergirl4 = False # add short dialogue
+default v10s33_deergirl11 = False
 default v10s33_toldChloe = False
 default v10s33_autwhypledge = False
 default v10s33_authereformud = False
