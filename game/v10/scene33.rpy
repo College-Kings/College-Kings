@@ -3631,8 +3631,6 @@ label v10s33_riley2:
 
                 ry "Yeah yeah, uhm... that's cool. See you around."
 
-                pause
-
             "It's Not Okay": 
                 $ addPoint("tm")
             
