@@ -993,7 +993,7 @@ label v10cfr33_deergirl11:
     call screen v10cfr33_stage
 
 label v10cfr33_chloe1:
-    $ v10cfr33_chloe = true
+    $ v10cfr33_chloe = True
     if chloemad:
 
         scene v10cfrcl1 # FPP. Show Chloe, mouth closed
@@ -3352,7 +3352,9 @@ label v10cfr33_riley2:
     scene v10cfrno1b # same 1, nora looking at mc, mouth open
     with dissolve
 
-    no "I'm more than good. I'm actually the one that suggested it to Autumn. A lot of us Chicks offered to help out today. Girls supporting girls and all that."
+    no "I'm more than good. I'm actually the one that suggested it to Autumn."
+    no "A lot of us Chicks offered to help out today."
+    no "Girls supporting girls and all that."
 
     scene v10cfrno1c #same 1b, mouth closed
     with dissolve
