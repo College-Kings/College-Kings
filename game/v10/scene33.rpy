@@ -2675,7 +2675,7 @@ label v10s33_riley2:
 
     ri "Right now?"
 
-    scene v10cfrriau2a
+    scene v10cfrriau2
     with dissolve
 
     au "What's wrong redhead? *Chuckles* Scared?"
