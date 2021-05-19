@@ -15,7 +15,7 @@
 
 label v10_charity_freeroam:
     # -MC arrives at the charity event and prior to the freeroam we have an image and a dialog line from MC-
-    scene ent3
+    scene ent7
     with dissolve
 
     u "(Now this is an event!)"
