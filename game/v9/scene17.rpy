@@ -44,9 +44,9 @@ label v9_room_fri_morn:
 
         play sound "sounds/vibrate.mp3"
 
-        $ contact_Lauren.newMessage("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have.", queue=False)
-        $ contact_Lauren.addReply("Sure, OMW!")
-        $ contact_Lauren.newMessage("Ok :) See you soon!")
+        $ contact_Lauren.newMessage(_("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have."), queue=False)
+        $ contact_Lauren.addReply(_("Sure, OMW!"))
+        $ contact_Lauren.newMessage(_("Ok :) See you soon!"))
         
         call screen phone
         label s17_PhoneContinueW:
@@ -84,9 +84,9 @@ label v9_room_fri_morn:
 
         play sound "sounds/vibrate.mp3"
 
-        $ contact_Lauren.newMessage("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have.", queue=False)
-        $ contact_Lauren.addReply("Sure, OMW!")
-        $ contact_Lauren.newMessage("Ok :) See you soon!")
+        $ contact_Lauren.newMessage(_("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have."), queue=False)
+        $ contact_Lauren.addReply(_("Sure, OMW!"))
+        $ contact_Lauren.newMessage(_("Ok :) See you soon!"))
         
         call screen phone
         label s17_PhoneContinueA:

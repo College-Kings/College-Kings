@@ -13,17 +13,17 @@ label v9_dream_wakeup:
         with dissolve
         u "(God I hate dreams. Most of the time, they're good. But sometimes...they really suck.)"
 
-        $ contact_Riley.newMessage("Hey, [name]. You awake?", queue=False)
-        $ contact_Riley.addReply("Hey Riley, yeah I'm up, is everything okay?")
-        $ contact_Riley.newMessage("A couple of us wanted to go to the lake. Wanna join us?")
-        $ contact_Riley.addReply("I dunno, feeling kind of crappy.")
-        $ contact_Riley.newMessage("Oh, c'mon, it's gonna be fun! :)")
-        $ contact_Riley.addReply("Who's gonna be there?")
-        $ contact_Riley.newMessage("Ryan and Aubrey.")
-        $ contact_Riley.addReply("I guess I could go. Could use some fresh air.")
-        $ contact_Riley.newMessage("You'll love it! Meet you in 30 minutes?")
-        $ contact_Riley.addReply("Yeah, see ya soon.")
-        $ contact_Riley.newMessage("See you!")
+        $ contact_Riley.newMessage(_("Hey, [name]. You awake?"), queue=False)
+        $ contact_Riley.addReply(_("Hey Riley, yeah I'm up, is everything okay?"))
+        $ contact_Riley.newMessage(_("A couple of us wanted to go to the lake. Wanna join us?"))
+        $ contact_Riley.addReply(_("I dunno, feeling kind of crappy."))
+        $ contact_Riley.newMessage(_("Oh, c'mon, it's gonna be fun! :)"))
+        $ contact_Riley.addReply(_("Who's gonna be there?"))
+        $ contact_Riley.newMessage(_("Ryan and Aubrey."))
+        $ contact_Riley.addReply(_("I guess I could go. Could use some fresh air."))
+        $ contact_Riley.newMessage(_("You'll love it! Meet you in 30 minutes?"))
+        $ contact_Riley.addReply(_("Yeah, see ya soon."))
+        $ contact_Riley.newMessage(_("See you!"))
 
         play sound "sounds/vibrate.mp3"
         u "(Hmm?)"
@@ -40,17 +40,17 @@ label v9_dream_wakeup:
         with dissolve
         u "(God I hate dreams. Most of the time, they're good. But sometimes...they really suck.)"
 
-        $ contact_Riley.newMessage("Hey, [name]. You awake?", queue=False)
-        $ contact_Riley.addReply("Hey Riley, yeah I'm up, is everything okay?")
-        $ contact_Riley.newMessage("A couple of us wanted to go to the lake. Wanna join us?")
-        $ contact_Riley.addReply("I dunno, feeling kind of crappy.")
-        $ contact_Riley.newMessage("Oh, c'mon, it's gonna be fun! :)")
-        $ contact_Riley.addReply("Who's gonna be there?")
-        $ contact_Riley.newMessage("Ryan and Aubrey.")
-        $ contact_Riley.addReply("I guess I could go. Could use some fresh air.")
-        $ contact_Riley.newMessage("You'll love it! Meet you in 30 minutes?")
-        $ contact_Riley.addReply("Yeah, see ya soon.")
-        $ contact_Riley.newMessage("See you!")
+        $ contact_Riley.newMessage(_("Hey, [name]. You awake?"), queue=False)
+        $ contact_Riley.addReply(_("Hey Riley, yeah I'm up, is everything okay?"))
+        $ contact_Riley.newMessage(_("A couple of us wanted to go to the lake. Wanna join us?"))
+        $ contact_Riley.addReply(_("I dunno, feeling kind of crappy."))
+        $ contact_Riley.newMessage(_("Oh, c'mon, it's gonna be fun! :)"))
+        $ contact_Riley.addReply(_("Who's gonna be there?"))
+        $ contact_Riley.newMessage(_("Ryan and Aubrey."))
+        $ contact_Riley.addReply(_("I guess I could go. Could use some fresh air."))
+        $ contact_Riley.newMessage(_("You'll love it! Meet you in 30 minutes?"))
+        $ contact_Riley.addReply(_("Yeah, see ya soon."))
+        $ contact_Riley.newMessage(_("See you!"))
 
         play sound "sounds/vibrate.mp3"
         u "(Hmm?)"

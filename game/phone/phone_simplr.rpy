@@ -100,7 +100,7 @@ screen simplr_app():
             pos (770, 168)
             xysize (375, 740)
 
-            add "images/phone/simplr/appAssets/background.png"
+            add "images/phone/simplr/appAssets/background.webp"
             
             # Top UI
             hbox:
@@ -110,16 +110,16 @@ screen simplr_app():
 
                 imagebutton:
                     yalign 0.5
-                    idle "images/phone/simplr/appAssets/profileIcon.png"
-                    hover "images/phone/simplr/appAssets/profileIconHover.png"
+                    idle "images/phone/simplr/appAssets/profileIcon.webp"
+                    hover "images/phone/simplr/appAssets/profileIconHover.webp"
                     action NullAction()
 
-                add "images/phone/simplr/appAssets/simplrLogo.png" yalign 0.5
+                add "images/phone/simplr/appAssets/simplrLogo.webp" yalign 0.5
 
                 imagebutton:
                     yalign 0.5
-                    idle "images/phone/simplr/appAssets/messageIcon.png"
-                    hover "images/phone/simplr/appAssets/messageIconHover.png"
+                    idle "images/phone/simplr/appAssets/messageIcon.webp"
+                    hover "images/phone/simplr/appAssets/messageIconHover.webp"
                     action Show("simplr_contacts")
 
             # Profile Picture
@@ -134,15 +134,15 @@ screen simplr_app():
 
                 imagebutton:
                     yalign 0.5
-                    idle "images/phone/simplr/appAssets/yesButton.png"
-                    hover "images/phone/simplr/appAssets/yesButtonHover.png"
+                    idle "images/phone/simplr/appAssets/yesButton.webp"
+                    hover "images/phone/simplr/appAssets/yesButtonHover.webp"
                     if simplr_contact:
                         action Function(simplr_contact.likedContact)
 
                 imagebutton:
                     yalign 0.5
-                    idle "images/phone/simplr/appAssets/noButton.png"
-                    hover "images/phone/simplr/appAssets/noButtonHover.png"
+                    idle "images/phone/simplr/appAssets/noButton.webp"
+                    hover "images/phone/simplr/appAssets/noButtonHover.webp"
                     if simplr_contact:
                         action Function(simplr_contact.removeContact)
 

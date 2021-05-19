@@ -5,14 +5,14 @@
 
 init python:
     def v9s38_reply1():
-        contact_Lindsey.newMessage("Great. See ya soon")
+        contact_Lindsey.newMessage(_("Great. See ya soon"))
         setattr(store, hangOutWithLindsey, True)
 
     def v9s38_reply2():
-        contact_Lindsey.newMessage(":(")
-        contact_Lindsey.addReply("Please don't hate me. You know I want to. I really, really want to.")
-        contact_Lindsey.newMessage("No hard feelings. Bye")
-        contact_Lindsey.addReply("Maybe after the fight?")
+        contact_Lindsey.newMessage(_(":("))
+        contact_Lindsey.addReply(_("Please don't hate me. You know I want to. I really, really want to."))
+        contact_Lindsey.newMessage(_("No hard feelings. Bye"))
+        contact_Lindsey.addReply(_("Maybe after the fight?"))
 
 label v9_walk_li_txt:
     scene v9wlt1 # TPP. Show MC walking through the park on his own, looking stressed.
@@ -31,13 +31,13 @@ label v9_walk_li_txt:
 
     u "(Please no more drama)"
 
-    $ contact_Lindsey.newMessage("Hey Freshmeat! How's it hangin?", queue=False)
-    $ contact_Lindsey.addReply("Hey Linds ;)")
-    $ contact_Lindsey.newMessage("I've decided to allow the nickname under one condition")
-    $ contact_Lindsey.addReply("Really? And what's that?")
-    $ contact_Lindsey.newMessage("Come hang out with me")
-    $ contact_Lindsey.addReply("Hell yeah! Be right there, Linds!", v9s38_reply1)
-    $ contact_Lindsey.addReply("Aww, I wish I could, but I gotta get ready for the brawl", v9s38_reply2)
+    $ contact_Lindsey.newMessage(_("Hey Freshmeat! How's it hangin?"), queue=False)
+    $ contact_Lindsey.addReply(_("Hey Linds ;)"))
+    $ contact_Lindsey.newMessage(_("I've decided to allow the nickname under one condition"))
+    $ contact_Lindsey.addReply(_("Really? And what's that?"))
+    $ contact_Lindsey.newMessage(_("Come hang out with me"))
+    $ contact_Lindsey.addReply(_("Hell yeah! Be right there, Linds!"), v9s38_reply1)
+    $ contact_Lindsey.addReply(_("Aww, I wish I could, but I gotta get ready for the brawl"), v9s38_reply2)
     
     call screen phone
     label s38_PhoneContinue:

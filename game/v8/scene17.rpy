@@ -8,10 +8,10 @@
 
 label msrose_moving:
 
-    $ contact_Penelope.addReply("Hey, how you holding up?")
-    $ contact_Penelope.newMessage("Better, thanks to you")
-    $ contact_Penelope.addReply("No problem. I'm here for you. Let me know if you need anything else.")
-    $ contact_Penelope.newMessage("Thank you! :)")
+    $ contact_Penelope.addReply(_("Hey, how you holding up?"))
+    $ contact_Penelope.newMessage(_("Better, thanks to you"))
+    $ contact_Penelope.addReply(_("No problem. I'm here for you. Let me know if you need anything else."))
+    $ contact_Penelope.newMessage(_("Thank you! :)"))
 
     scene v8rose1 # TPP. MC sitting on his bed in his room (Wolves) and looking at his phone. Neutral expression, mouth closed. If the floor is visible, there should be a few books strewn randomly
     with Fade(0.75, 0.25, 0.75)

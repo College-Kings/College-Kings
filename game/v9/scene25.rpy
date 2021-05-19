@@ -24,12 +24,12 @@ label v9_room_fri_eve:
             u "(Wonder how Lauren's doing with the Deers charity)"
 
 
-            $ contact_Lauren.addReply("How's it going? You still doing our statue idea?")
-            $ contact_Lauren.newMessage("Of course. I'm glad you talked me into it.")
-            $ contact_Lauren.addReply("Me too. I don't think anyone's tried something like this before. You'll be the talk of the school!")
-            $ contact_Lauren.newMessage("No, WE will. I couldn't have done it without your help.")
-            $ contact_Lauren.addReply("Don't mention it, talk soon?")
-            $ contact_Lauren.newMessage("Sure!")
+            $ contact_Lauren.addReply(_("How's it going? You still doing our statue idea?"))
+            $ contact_Lauren.newMessage(_("Of course. I'm glad you talked me into it."))
+            $ contact_Lauren.addReply(_("Me too. I don't think anyone's tried something like this before. You'll be the talk of the school!"))
+            $ contact_Lauren.newMessage(_("No, WE will. I couldn't have done it without your help."))
+            $ contact_Lauren.addReply(_("Don't mention it, talk soon?"))
+            $ contact_Lauren.newMessage(_("Sure!"))
 
             call screen phone
             label s25_ContinueW:
@@ -67,12 +67,12 @@ label v9_room_fri_eve:
 
             u "(Wonder how Lauren's doing with the Deers charity)"
 
-            $ contact_Lauren.addReply("How's it going? You still doing our statue idea?")
-            $ contact_Lauren.newMessage("Of course. I'm glad you talked me into it.")
-            $ contact_Lauren.addReply("Me too. I don't think anyone's tried something like this before. You'll be the talk of the school!")
-            $ contact_Lauren.newMessage("No, WE will. I couldn't have done it without your help.")
-            $ contact_Lauren.addReply("Don't mention it, talk soon?")
-            $ contact_Lauren.newMessage("Sure!")
+            $ contact_Lauren.addReply(_("How's it going? You still doing our statue idea?"))
+            $ contact_Lauren.newMessage(_("Of course. I'm glad you talked me into it."))
+            $ contact_Lauren.addReply(_("Me too. I don't think anyone's tried something like this before. You'll be the talk of the school!"))
+            $ contact_Lauren.newMessage(_("No, WE will. I couldn't have done it without your help."))
+            $ contact_Lauren.addReply(_("Don't mention it, talk soon?"))
+            $ contact_Lauren.newMessage(_("Sure!"))
             
             call screen phone
             label s25_ContinueA:

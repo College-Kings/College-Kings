@@ -14,8 +14,8 @@ label mon_eve_room_josh:
         u "(Let's see who this is.)"
 
         if helpJosh:
-            $ contact_Josh.newMessage("Hey bro! It's time! Meet me at mine, okay?", queue=False)
-            $ contact_Josh.addReply("Okay, I'm on my way.")
+            $ contact_Josh.newMessage(_("Hey bro! It's time! Meet me at mine, okay?"), queue=False)
+            $ contact_Josh.addReply(_("Okay, I'm on my way."))
 
             call screen phone
             label v8s27_phoneContinue1:
@@ -87,10 +87,10 @@ label mon_eve_room_josh:
 
         else:
 
-            $ contact_Josh.newMessage("Hey bro, I got robbed and my ass kicked bad! Really wish you came with me, man.", queue=False)
-            $ contact_Josh.addReply("Fuck! Are you ok??")
-            $ contact_Josh.newMessage("No, man! I hurt everywhere! Plus my shit is gone!")
-            $ contact_Josh.addReply("Hold on, I'll be right over")
+            $ contact_Josh.newMessage(_("Hey bro, I got robbed and my ass kicked bad! Really wish you came with me, man."), queue=False)
+            $ contact_Josh.addReply(_("Fuck! Are you ok??"))
+            $ contact_Josh.newMessage(_("No, man! I hurt everywhere! Plus my shit is gone!"))
+            $ contact_Josh.addReply(_("Hold on, I'll be right over"))
 
             call screen phone
             label v8s27_phoneContinue2:
@@ -121,8 +121,8 @@ label mon_eve_room_josh:
 
         if helpJosh:
 
-            $ contact_Josh.newMessage("Hey bro! It's time! Meet me at mine, okay?", queue=False)
-            $ contact_Josh.addReply("Okay, I'm on my way.")
+            $ contact_Josh.newMessage(_("Hey bro! It's time! Meet me at mine, okay?"), queue=False)
+            $ contact_Josh.addReply(_("Okay, I'm on my way."))
 
             call screen phone
             label v8s27_phoneContinue3:
@@ -194,10 +194,10 @@ label mon_eve_room_josh:
             jump drug_deal_w_josh
 
         else:
-            $ contact_Josh.newMessage("Hey bro, I got robbed and my ass kicked bad! Really wish you came with me, man.", queue=False)
-            $ contact_Josh.addReply("Fuck! Are you ok??")
-            $ contact_Josh.newMessage("No, man! I hurt everywhere! Plus my shit is gone!")
-            $ contact_Josh.addReply("Hold on, I'll be right over")
+            $ contact_Josh.newMessage(_("Hey bro, I got robbed and my ass kicked bad! Really wish you came with me, man."), queue=False)
+            $ contact_Josh.addReply(_("Fuck! Are you ok??"))
+            $ contact_Josh.newMessage(_("No, man! I hurt everywhere! Plus my shit is gone!"))
+            $ contact_Josh.addReply(_("Hold on, I'll be right over"))
 
             call screen phone
             label v8s27_phoneContinue4:

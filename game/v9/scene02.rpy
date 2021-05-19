@@ -5,14 +5,14 @@
 
 init python:
     def v9s2_reply1():
-        contact_Ryan.newMessage("Damn right! You heading to the gym?")
-        contact_Ryan.addReply("Naw, I'm spent. But I have a feeling I'll be spending a lot of my time in there")
-        contact_Ryan.newMessage("Me too. See ya there!")
+        contact_Ryan.newMessage(_("Damn right! You heading to the gym?"))
+        contact_Ryan.addReply(_("Naw, I'm spent. But I have a feeling I'll be spending a lot of my time in there"))
+        contact_Ryan.newMessage(_("Me too. See ya there!"))
 
     def v9s2_reply2():
-        contact_Ryan.newMessage("Lucky we did, huh? I think we got a hand up on those baby apes")
-        contact_Ryan.addReply("Damn right! We got this! We need to hit the gym soon... after I get some sleep. I'm bout to pass out")
-        contact_Ryan.newMessage("Same! Talk soon")
+        contact_Ryan.newMessage(_("Lucky we did, huh? I think we got a hand up on those baby apes"))
+        contact_Ryan.addReply(_("Damn right! We got this! We need to hit the gym soon... after I get some sleep. I'm bout to pass out"))
+        contact_Ryan.newMessage(_("Same! Talk soon"))
 
 label v9_start_apes:
 
@@ -245,10 +245,10 @@ label v9_start_apes:
     with dissolve
     pause 0.5
 
-    $ contact_Ryan.addReply("You here yet?")
-    $ contact_Ryan.newMessage("Yeah, you ready?")
-    $ contact_Ryan.addReply("Hell no! But we need to get ready!", v9s2_reply1)
-    $ contact_Ryan.addReply("I think so, actually. You and Cameron really helped", v9s2_reply2)
+    $ contact_Ryan.addReply(_("You here yet?"))
+    $ contact_Ryan.newMessage(_("Yeah, you ready?"))
+    $ contact_Ryan.addReply(_("Hell no! But we need to get ready!"), v9s2_reply1)
+    $ contact_Ryan.addReply(_("I think so, actually. You and Cameron really helped"), v9s2_reply2)
 
     call screen phone
     label v9_phn_ryan1:

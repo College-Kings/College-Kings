@@ -15,14 +15,14 @@ label v8_tues_evening:
         with dissolve
 
         if laurenrs:
-            $ contact_Lauren.addReply("Still fine with drinking instead of making out with me?")
-            $ contact_Lauren.newMessage("Of course, that drink was just my cup of tea. :)")
-            $ contact_Lauren.addReply("Oh haha, is that so? I think it at least poured a bit of courage in there.")
-            $ contact_Lauren.newMessage("Don't flatter yourself, witty cowboy. :)")
-            $ contact_Lauren.addReply("You flatter me, ma'am.")
-            $ contact_Lauren.newMessage("Miss you.")
-            $ contact_Lauren.addReply("Kiss you*:)")
-            $ contact_Lauren.newMessage(":)")
+            $ contact_Lauren.addReply(_("Still fine with drinking instead of making out with me?"))
+            $ contact_Lauren.newMessage(_("Of course, that drink was just my cup of tea. :)"))
+            $ contact_Lauren.addReply(_("Oh haha, is that so? I think it at least poured a bit of courage in there."))
+            $ contact_Lauren.newMessage(_("Don't flatter yourself, witty cowboy. :)"))
+            $ contact_Lauren.addReply(_("You flatter me, ma'am."))
+            $ contact_Lauren.newMessage(_("Miss you."))
+            $ contact_Lauren.addReply(_("Kiss you*:)"))
+            $ contact_Lauren.newMessage(_(":)"))
 
         else:
             $ contact_Lauren.addReply("Hey there, could you help me with studying?")

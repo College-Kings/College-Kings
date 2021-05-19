@@ -5,15 +5,14 @@
 
 init python:
     def v9s1_reply1():
-        contact_Imre.newMessage("Damn right! You heading to the gym?")
-        contact_Imre.addReply("Naw, I'm spent. But I have a feeling I'll be spending a lot of my time in there")
-        contact_Imre.newMessage("Me too. See ya there!")
-
+        contact_Imre.newMessage(_("Damn right! You heading to the gym?"))
+        contact_Imre.addReply(_("Naw, I'm spent. But I have a feeling I'll be spending a lot of my time in there"))
+        contact_Imre.newMessage("Me too. See ya there!"))
 
     def v9s1_reply2():
-        contact_Imre.newMessage("Lucky we did, huh? I think we got a hand up on those baby apes")
-        contact_Imre.addReply("Damn right! We got this! We need to hit the gym soon... after I get some sleep. I'm bout to pass out")
-        contact_Imre.newMessage("Same! Talk soon")
+        contact_Imre.newMessage(_("Lucky we did, huh? I think we got a hand up on those baby apes"))
+        contact_Imre.addReply(_("Damn right! We got this! We need to hit the gym soon... after I get some sleep. I'm bout to pass out"))
+        contact_Imre.newMessage(_("Same! Talk soon"))
 
 label v9start:
     if joinwolves:
@@ -212,10 +211,10 @@ label v9_start_wolves:
     with dissolve
     pause 0.5
 
-    $ contact_Imre.addReply("You here yet?")
-    $ contact_Imre.newMessage("Yeah, you ready?")
-    $ contact_Imre.addReply("Hell no! But we need to get ready!", v9s1_reply1)
-    $ contact_Imre.addReply("I think so, actually. You and Sebastian really helped", v9s1_reply2)
+    $ contact_Imre.addReply(_("You here yet?"))
+    $ contact_Imre.newMessage(_("Yeah, you ready?"))
+    $ contact_Imre.addReply(_("Hell no! But we need to get ready!"), v9s1_reply1)
+    $ contact_Imre.addReply(_("I think so, actually. You and Sebastian really helped"), v9s1_reply2)
     
     call screen phone
     label v9_phn_imre1:
