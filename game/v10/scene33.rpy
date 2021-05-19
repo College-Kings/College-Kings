@@ -1628,7 +1628,8 @@ label v10s33_deergirl21:
     scene v10cfrla1c
     with dissolve
 
-    u "Haha, yes I'm just playing around. I brought some money, but I'm not spending it on a cake. I'm not even hungry, I'd rather spend it on something a little bit more fun."
+    u "Haha, yes I'm just playing around. I brought some money, but I'm not spending it on a cake."
+    u "I'm not even hungry, I'd rather spend it on something a little bit more fun."
 
     scene v10cfrla1b
     with dissolve
