@@ -15,7 +15,7 @@
 
 label v10_charity_freeroam:
     # -MC arrives at the charity event and prior to the freeroam we have an image and a dialog line from MC-
-    scene v10cfr1
+    scene ent3
     with dissolve
 
     u "(Now this is an event!)"
@@ -993,7 +993,7 @@ label v10s33_deergirl11:
     call screen v10s33_stage
 
 label v10s33_chloe1:
-    $ v10s33_chloe = true
+    $ v10s33_chloe = True
     if chloemad:
 
         scene v10cfrcl1 # FPP. Show Chloe, mouth closed
@@ -3352,7 +3352,9 @@ label v10s33_riley2:
     scene v10cfrno1b # same 1, nora looking at mc, mouth open
     with dissolve
 
-    no "I'm more than good. I'm actually the one that suggested it to Autumn. A lot of us Chicks offered to help out today. Girls supporting girls and all that."
+    no "I'm more than good. I'm actually the one that suggested it to Autumn."
+    no "A lot of us Chicks offered to help out today."
+    no "Girls supporting girls and all that."
 
     scene v10cfrno1c #same 1b, mouth closed
     with dissolve
@@ -3735,8 +3737,7 @@ label v10s33_riley2:
     label v10s33_emily1:
     
     if not forgiveemily:
-
-        scene # bench screen
+        scene #
 
         u "(I don't feel like talking to her.)"
 
