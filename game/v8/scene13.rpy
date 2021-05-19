@@ -6,16 +6,16 @@
 
 init python:
     def v8s13_reply1(): # phn_chloe11_a
-        contact_Chloe.newMessage("Guess you'll have to wait and see ;)")
-        contact_Chloe.addReply("I'm moving my stuff now. How about we get started tonight?")
-        contact_Chloe.newMessage("You're such a flirt. Have a good night!")
+        contact_Chloe.newMessage(_("Guess you'll have to wait and see ;)"))
+        contact_Chloe.addReply(_("I'm moving my stuff now. How about we get started tonight?"))
+        contact_Chloe.newMessage(_("You're such a flirt. Have a good night!"))
 
     def v8s13_reply2(): # phn_chloe11_b
-        contact_Chloe.newMessage("Aww, I like talking to you too. You're sweet.")
-        contact_Chloe.addReply("Sweet? Not hot? Or sexy? Or... anything but sweet?")
-        contact_Chloe.newMessage("Sweet and cute ;)")
-        contact_Chloe.addReply("I'll take it. For now. Talk to you when I get settled.")
-        contact_Chloe.newMessage("Good night.")
+        contact_Chloe.newMessage(_("Aww, I like talking to you too. You're sweet."))
+        contact_Chloe.addReply(_("Sweet? Not hot? Or sexy? Or... anything but sweet?"))
+        contact_Chloe.newMessage(_("Sweet and cute ;)"))
+        contact_Chloe.addReply(_("I'll take it. For now. Talk to you when I get settled."))
+        contact_Chloe.newMessage(_("Good night."))
 
 # SCENE 13: MOVING INTO THE APES
 label after_apes_ceremony:
@@ -45,9 +45,9 @@ label after_apes_ceremony:
     $ KiwiiPost6.addComment("Amber", "Congrats people!!!", mentions=["MC", "Ryan", "Caleb"], numberLikes=renpy.random.randint(50, 60), queue=False)
     $ KiwiiPost6.addComment("Caleb", "Thanks everyone!", numberLikes=renpy.random.randint(20, 30), queue=False)
 
-    $ contact_Chloe.newMessage("Congrats on getting in. Looks like we'll be seeing a lot of each other.", queue=False)
-    $ contact_Chloe.addReply("Exactly how much is a lot? ;)", v8s13_reply1)
-    $ contact_Chloe.addReply("Hope so. I like talking to you.", v8s13_reply2)
+    $ contact_Chloe.newMessage(_("Congrats on getting in. Looks like we'll be seeing a lot of each other."), queue=False)
+    $ contact_Chloe.addReply(_("Exactly how much is a lot? ;)"), v8s13_reply1)
+    $ contact_Chloe.addReply(_("Hope so. I like talking to you."), v8s13_reply2)
 
     play sound "sounds/vibrate.mp3"
 
