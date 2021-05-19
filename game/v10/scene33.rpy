@@ -2293,7 +2293,6 @@ label v10s33_riley1:
     $ v10s33_riley = True
     
     scene v10cfrri1 # FPP. Show Riley at the thrift shop looking at a top, mouth open.
-    with dissolve
 
     ri "Okay, this is way too big for me."
 
