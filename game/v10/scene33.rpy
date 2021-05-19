@@ -2052,7 +2052,7 @@ label v10s33_deergirl21:
 
                         u "Of course not, you can trust me."
 
-                        scene v10cfrfrli4
+                        scene v10cfrfrli4b
                         with dissolve
 
                         li "Alright [name]."
