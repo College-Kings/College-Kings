@@ -3737,9 +3737,6 @@ label v10cfr33_riley2:
     label v10cfr33_emily1:
     
     if not forgiveemily:
-
-        scene # bench screen
-
         u "(I don't feel like talking to her.)"
 
         call screen v10cfr33_bench
