@@ -3734,16 +3734,13 @@ label v10s33_riley2:
 
             call screen v10s33_toilet
 
-    label v10s33_emily1:
-    
-    if not forgiveemily:
-        scene #
-
-        u "(I don't feel like talking to her.)"
-
-        call screen v10s33_bench
-
+label v10s33_emily1:
     $ v10s33_emily = True
+
+    if not forgiveemily:
+        u "(I don't feel like talking to her.)"
+        
+        call screen v10s33_bench
 
     scene v10cfrem1a #FPP, shows emily sat on the bench from the side as if mc is sitting next to her, looking at mc cute smile, mouth closed
 

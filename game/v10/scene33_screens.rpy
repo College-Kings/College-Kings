@@ -3,21 +3,23 @@ screen v10s33_entrance():
 
     # Background
     if not v10s33_toldChloe and v10s33_riley and not v10s33_ryan:
-        add "images/v10/scene 33/Ent1.webp"
+        $ v10s33_background = "images/v10/scene 33/Ent1.webp"
     if v10s33_toldChloe and v10s33_riley and not v10s33_ryan:
-        add "images/v10/scene 33/Ent2.webp"
+        $ v10s33_background = "images/v10/scene 33/Ent2.webp"
     if v10s33_toldChloe and not v10s33_riley and not v10s33_ryan:
-        add "images/v10/scene 33/Ent3.webp"
+        $ v10s33_background = "images/v10/scene 33/Ent3.webp"
     if not v10s33_toldChloe and v10s33_riley and v10s33_ryan:
-        add "images/v10/scene 33/Ent4.webp"
+        $ v10s33_background = "images/v10/scene 33/Ent4.webp"
     if not v10s33_toldChloe and not v10s33_riley and v10s33_ryan:
-        add "images/v10/scene 33/Ent5.webp"
+        $ v10s33_background = "images/v10/scene 33/Ent5.webp"
     if v10s33_toldChloe not v10s33_riley and v10s33_ryan:
-        add "images/v10/scene 33/Ent6.webp"
+        $ v10s33_background = "images/v10/scene 33/Ent6.webp"
     if not v10s33_toldChloe and not v10s33_riley and not v10s33_ryan:
-        add "images/v10/scene 33/Ent7.webp"
+        $ v10s33_background = "images/v10/scene 33/Ent7.webp"
     if v10s33_toldChloe and v10s33_riley and v10s33_ryan:
-        add "images/v10/scene 33/Ent8.webp"
+        $ v10s33_background = "images/v10/scene 33/Ent8.webp"
+
+    add v10s33_background
 
     # Cake statue - Right
     imagebutton:
@@ -46,9 +48,11 @@ screen v10s33_cakestatue():
     
     # Background
     if v10s33_laurenBakeSale:
-        add "images/v10/scene 33/fr6cake.webp"
+        $ v10s33_background = "images/v10/scene 33/fr6cake.webp"
     else:
-        add "images/v10/scene 33/fr6statue.webp"
+        $ v10s33_background = "images/v10/scene 33/fr6statue.webp"
+
+    add v10s33_background
 
     # Lauren - Bake sale
     if v10s33_laurenBakeSale:
@@ -59,7 +63,7 @@ screen v10s33_cakestatue():
             if not v10s33_lauren:
                 action Jump("v10s33_laurenbake1")
             else:
-                action Call("freeRoamSpokenToo", returnScreen="v10s33_cakestatue")
+                action Call("freeRoamSpokenToo", backgroundImg=v10s33_background, returnScreen="v10s33_cakestatue")
 
     # Lauren - Statue
     else:
@@ -70,7 +74,7 @@ screen v10s33_cakestatue():
             if not v10s33_lauren:
                 action Jump("v10s33_laurenstatue1")
             else:
-                action Call("freeRoamSpokenToo", returnScreen="v10s33_cakestatue")
+                action Call("freeRoamSpokenToo", backgroundImg=v10s33_background, returnScreen="v10s33_cakestatue")
 
     # Bench - Left
     imagebutton:
@@ -92,9 +96,11 @@ screen v10s33_bench():
 
     # Background
     if v10s33_toldChloe:
-        add "images/v10/scene 33/fr6benchchloenoraatmudwrestling.webp"
+        $ v10s33_background = "images/v10/scene 33/fr6benchchloenoraatmudwrestling.webp"
     else:
-        add "images/v10/scene 33/fr6bench.webp"
+        $ v10s33_background = "images/v10/scene 33/fr6bench.webp"
+
+    add v10s33_background
 
     # Emily
     imagebutton: 
@@ -104,7 +110,7 @@ screen v10s33_bench():
         if not v10s33_emily:
             action Jump("v10s33_emily1")
         else:
-            action Call("freeRoamSpokenToo", returnScreen="v10s33_bench")
+            action Call("freeRoamSpokenToo", backgroundImg=v10s33_background, returnScreen="v10s33_bench")
   
     # Centre aisle - Left
     imagebutton:
@@ -126,9 +132,11 @@ screen v10s33_toilet():
 
     # Background
     if v10s33_ryan:
-        add "images/v10/scene 33/fr6toiletwithryan.webp" #IMAGE NEEDS TO BE RENDERED
+        $ v10s33_background = "images/v10/scene 33/fr6toiletwithryan.webp" #IMAGE NEEDS TO BE RENDERED
     else:
-        add "images/v10/scene 33/fr6toilet.webp" #IMAGE NEEDS TO BE RENDERED
+        $ v10s33_background = "images/v10/scene 33/fr6toilet.webp" #IMAGE NEEDS TO BE RENDERED
+
+    add v10s33_background
 
     # Evelyn
     imagebutton:
@@ -138,7 +146,7 @@ screen v10s33_toilet():
         if not v10s33_evelyn:
             action Jump("v10s33_evelyn1")
         else:
-            action Call("freeRoamSpokenToo", returnScreen="v10s33_toilet")
+            action Call("freeRoamSpokenToo", backgroundImg=v10s33_background, returnScreen="v10s33_toilet")
 
     # Toilet Ryan
     if v10s33_ryan:            
@@ -149,7 +157,7 @@ screen v10s33_toilet():
             if not v10s33_ryanb:
                 action Jump("v10s33_toiletryan1")
             else:
-                action Call("freeRoamSpokenToo", returnScreen="v10s33_toilet")
+                action Call("freeRoamSpokenToo", backgroundImg=v10s33_background, returnScreen="v10s33_toilet")
 
     # Body paint - Right
     imagebutton:
@@ -171,9 +179,11 @@ screen v10s33_bodypaint():
 
     # Background
     if v10s33_riley:
-        add "images/v10/scene 33/fr6bodypaintnoriley.webp" #IMAGE NEEDS TO BE RENDERED
+        $ v10s33_background = "images/v10/scene 33/fr6bodypaintnoriley.webp" #IMAGE NEEDS TO BE RENDERED
     else:
-        add "images/v10/scene 33/fr6bodypaint.webp" #IMAGE NEEDS TO BE RENDERED
+        $ v10s33_background = "images/v10/scene 33/fr6bodypaint.webp" #IMAGE NEEDS TO BE RENDERED
+
+    add v10s33_background
 
     # Ms Rose
     imagebutton: 
@@ -183,7 +193,7 @@ screen v10s33_bodypaint():
         if not v10s33_msRose:
             action Jump("v10s33_msrose1")
         else:
-            action Call("freeRoamSpokenToo", returnScreen="v10s33_bodypaint")
+            action Call("freeRoamSpokenToo", backgroundImg=v10s33_background, returnScreen="v10s33_bodypaint")
 
     # Lindsey
     imagebutton: 
@@ -193,7 +203,7 @@ screen v10s33_bodypaint():
         if not v10s33_lindsey:
             action Jump("v10s33_lindsey1")
         else:
-            action Call("freeRoamSpokenToo", returnScreen="v10s33_bodypaint")
+            action Call("freeRoamSpokenToo", backgroundImg=v10s33_background, returnScreen="v10s33_bodypaint")
 
     # Thrift - Top
     imagebutton:
@@ -215,9 +225,11 @@ screen v10s33_thrift():
 
     # Background
     if v10s33_riley:
-        add "images/v10/scene 33/fr6thriftnoriley.webp" #IMAGE NEEDS TO BE RENDERED
+        $ v10s33_background = "images/v10/scene 33/fr6thriftnoriley.webp" #IMAGE NEEDS TO BE RENDERED
     else:
-        add "images/v10/scene 33/fr6thrift.webp" #IMAGE NEEDS TO BE RENDERED
+        $ v10s33_background = "images/v10/scene 33/fr6thrift.webp" #IMAGE NEEDS TO BE RENDERED
+
+    add v10s33_background
 
     # Deer Girl 4
     imagebutton: 
@@ -254,13 +266,15 @@ screen v10s33_stagefromleft():
 
     # Background 
     if v10s33_riley and v10s33_toldChloe:
-        add "images/v10/scene 33/fr6stagefromleftchloeandnoraatmudwrestlingwithrileyatstage.webp"
+        $ v10s33_background = "images/v10/scene 33/fr6stagefromleftchloeandnoraatmudwrestlingwithrileyatstage.webp"
     if v10s33_riley and not v10s33_toldChloe:
-        add "images/v10/scene 33/fr6stagewithrileyatstage.webp"
+        $ v10s33_background = "images/v10/scene 33/fr6stagewithrileyatstage.webp"
     if not v10s33_riley and v10s33_toldChloe:
-        add "images/v10/scene 33/fr6stagefromleftchloeandnoraatmudwrestling.webp"
+        $ v10s33_background = "images/v10/scene 33/fr6stagefromleftchloeandnoraatmudwrestling.webp"
     else not v10s33_riley and not v10s33_toldChloe:
-        add "images/v10/scene 33/fr6stageleft.webp"
+        $ v10s33_background = "images/v10/scene 33/fr6stageleft.webp"
+
+    add v10s33_background
 
     # Thrift - Bottom
     imagebutton:
@@ -282,9 +296,11 @@ screen v10s33_stage():
 
     # Background
     if v10s33_riley:
-        add "images/v10/scene 33/fr6stagewithriley.webp" #IMAGE NEEDS TO BE RENDERED
+        $ v10s33_background = "images/v10/scene 33/fr6stagewithriley.webp" #IMAGE NEEDS TO BE RENDERED
     else:
-        add "images/v10/scene 33/fr6stage.webp" #IMAGE NEEDS TO BE RENDERED
+        $ v10s33_background = "images/v10/scene 33/fr6stage.webp" #IMAGE NEEDS TO BE RENDERED
+
+    add v10s33_background
 
     # Aubrey
     if not v10s33_riley:   
@@ -295,7 +311,7 @@ screen v10s33_stage():
             if not v10s33_aubrey:
                 action Jump("v10s33_aubrey1")
             else:
-                action Call("freeRoamSpokenToo", returnScreen="v10s33_stage")
+                action Call("freeRoamSpokenToo", backgroundImg=v10s33_background, returnScreen="v10s33_stage")
 
     # Aubrey & Riley
     else:   
@@ -306,7 +322,7 @@ screen v10s33_stage():
             if not v10s33_aubreyriley:
                 action Jump("v10s33_aubreyriley1")
             else:
-                action Call("freeRoamSpokenToo", returnScreen="v10s33_stage")
+                action Call("freeRoamSpokenToo", backgroundImg=v10s33_background, returnScreen="v10s33_stage")
 
     # Deer girl 1
     imagebutton: 
@@ -316,7 +332,7 @@ screen v10s33_stage():
         if not v10s33_deergirl1:
             action Jump("v10s33_deergirl11")
         else:
-            action Call("freeRoamSpokenToo", returnScreen="v10s33_stage")
+            action Call("freeRoamSpokenToo", backgroundImg=v10s33_background, returnScreen="v10s33_stage")
 
     # Stage from left - Left
     imagebutton:
@@ -345,9 +361,11 @@ screen v10s33_bagtoss():
 
     # Background
     if v10s33_toldChloe:
-        add "images/v10/scene 33/fr6bagtossnonora.webp" #IMAGE NEEDS TO BE RENDERED
+        $ v10s33_background = "images/v10/scene 33/fr6bagtossnonora.webp" #IMAGE NEEDS TO BE RENDERED
     else:
-        add "images/v10/scene 33/fr6bagtoss.webp" #IMAGE NEEDS TO BE RENDERED
+        $ v10s33_background = "images/v10/scene 33/fr6bagtoss.webp" #IMAGE NEEDS TO BE RENDERED
+
+    add v10s33_background
 
     # Deer Girl 2
     imagebutton:
@@ -357,7 +375,7 @@ screen v10s33_bagtoss():
         if not v10s33_deergirl2:
             action Jump("v10s33_deergirl21")
         else:
-            action Call("freeRoamSpokenToo", returnScreen="v10s33_bagtoss")
+            action Call("freeRoamSpokenToo", backgroundImg=v10s33_background, returnScreen="v10s33_bagtoss")
 
     # Chris
     imagebutton:
@@ -367,7 +385,7 @@ screen v10s33_bagtoss():
         if not v10s33_chris:
             action Jump("v10s33_chris1")
         else:
-            action Call("freeRoamSpokenToo", returnScreen="v10s33_bagtoss")
+            action Call("freeRoamSpokenToo", backgroundImg=v10s33_background, returnScreen="v10s33_bagtoss")
 
     # Nora
     if not v10s33_toldChloe:
@@ -378,7 +396,7 @@ screen v10s33_bagtoss():
             if not v10s33_nora:
                 action Jump("v10s33_nora1")
             else:
-                action Call("freeRoamSpokenToo", returnScreen="v10s33_bagtoss")
+                action Call("freeRoamSpokenToo", backgroundImg=v10s33_background, returnScreen="v10s33_bagtoss")
 
     # Stage - Bottom
     imagebutton:
@@ -393,21 +411,23 @@ screen v10s33_centeraisle():
 
     # Background
     if v10s33_toldChloe and v10s33_riley and v10s33_ryan:
-        add "images/v10/scene 33/Mid8.webp"
+        $ v10s33_background = "images/v10/scene 33/Mid8.webp"
     if v10s33_toldChloe and v10s33_riley and not v10s33_ryan:
-        add "images/v10/scene 33/Mid2.webp"
+        $ v10s33_background = "images/v10/scene 33/Mid2.webp"
     if v10s33_toldChloe and not v10s33_riley and v10s33_ryan:
-        add "images/v10/scene 33/Mid6.webp"
+        $ v10s33_background = "images/v10/scene 33/Mid6.webp"
     if v10s33_toldChloe and not v10s33_riley and not v10s33_ryan:
-        add "images/v10/scene 33/Mid3.webp"
+        $ v10s33_background = "images/v10/scene 33/Mid3.webp"
     if not v10s33_toldChloe and v10s33_riley and v10s33_ryan:
-        add "images/v10/scene 33/Mid4.webp"
+        $ v10s33_background = "images/v10/scene 33/Mid4.webp"
     if not v10s33_toldChloe and v10s33_riley and not v10s33_ryan:
-        add "images/v10/scene 33/Mid1.webp"
+        $ v10s33_background = "images/v10/scene 33/Mid1.webp"
     if not v10s33_toldChloe and not v10s33_riley and v10s33_ryan:
-        add "images/v10/scene 33/Mid5.webp"
+        $ v10s33_background = "images/v10/scene 33/Mid5.webp"
     if not v10s33_toldChloe and not v10s33_riley and not v10s33_ryan:
-        add "images/v10/scene 33/Mid7.webp"
+        $ v10s33_background = "images/v10/scene 33/Mid7.webp"
+
+    add v10s33_background
 
     # Chloe
     if not v10s33_toldChloe:
@@ -418,7 +438,7 @@ screen v10s33_centeraisle():
             if not v10s33_chloe:
                 action Jump("v10s33_chloe1")
             else:
-                action Call("freeRoamSpokenToo", returnScreen="v10s33_centeraisle")
+                action Call("freeRoamSpokenToo", backgroundImg=v10s33_background, returnScreen="v10s33_centeraisle")
 
     # Deer Girl 3
     imagebutton:
@@ -428,7 +448,7 @@ screen v10s33_centeraisle():
         if not v10s33_deergirl3:
             action Jump("v10s33_deergirl31")
         else:
-            action Call("freeRoamSpokenToo", returnScreen="v10s33_centeraisle")
+            action Call("freeRoamSpokenToo", backgroundImg=v10s33_background, returnScreen="v10s33_centeraisle")
     
     # Ryan
     if not v10s33_ryan:
@@ -439,7 +459,7 @@ screen v10s33_centeraisle():
             if not v10s33_ryan:
                 action Jump("v10s33_ryan1")
             else:
-                action Call("freeRoamSpokenToo", returnScreen="v10s33_centeraisle")
+                action Call("freeRoamSpokenToo", backgroundImg=v10s33_background, returnScreen="v10s33_centeraisle")
 
     # Stage - Top
     imagebutton:
@@ -468,9 +488,11 @@ screen v10s33_mudwrestling():
 
     # Background
     if v10s33_toldChloe:
-        add "images/v10/scene 33/fr6mudwrestlingwithnoraandchloe.webp" #IMAGE NEEDS TO BE RENDERED
+        $ v10s33_background = "images/v10/scene 33/fr6mudwrestlingwithnoraandchloe.webp"
     else:
-        add "images/v10/scene 33/fr6mudwrestling.webp" #IMAGE NEEDS TO BE RENDERED
+        $ v10s33_background = "images/v10/scene 33/fr6mudwrestling.webp"
+
+    add v10s33_background
 
     # Amber
     imagebutton: 
@@ -480,7 +502,7 @@ screen v10s33_mudwrestling():
         if not v10s33_amber:
             action Jump("v10s33_amber1")
         else:
-            action Call("freeRoamSpokenToo", returnScreen="v10s33_mudwrestling")
+            action Call("freeRoamSpokenToo", backgroundImg=v10s33_background, returnScreen="v10s33_mudwrestling")
     
     # Autumn
     imagebutton: 
@@ -490,7 +512,7 @@ screen v10s33_mudwrestling():
         if not v10s33_autumn:
             action Jump("v10s33_autumn1")
         else:
-            action Show("endFreeRoamConfirm", continueLabel="v10_autumn_announcement")
+            action Show("endFreeRoamConfirm", backgroundImg=v10s33_background, continueLabel="v10_autumn_announcement")
 
     # Centre Aisle - Bottom
     imagebutton:
