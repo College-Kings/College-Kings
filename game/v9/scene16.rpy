@@ -199,69 +199,69 @@ label v9_emily_dorm:
     if emilyArcade:
         em "Not since I kicked your ass at the arcade!"
 
-    scene v9emi11a
-    with dissolve
+        scene v9emi11a
+        with dissolve
 
-    menu:
-        "Let Emily Gloat":
-            $ addPoint("bf")
+        menu:
+            "Let Emily Gloat":
+                $ addPoint("bf")
 
-            u "You're just so much better than me."
+                u "You're just so much better than me."
 
-            scene v9emi11
-            with dissolve
+                scene v9emi11
+                with dissolve
 
-            em "I think you bring out the best in me. I was at the top of my game."
+                em "I think you bring out the best in me. I was at the top of my game."
 
-            scene v9emi11a
-            with dissolve
+                scene v9emi11a
+                with dissolve
 
-            u "Does that mean I still owe you that last bet?"
+                u "Does that mean I still owe you that last bet?"
 
-            scene v9emi11
-            with dissolve
+                scene v9emi11
+                with dissolve
 
-            em "Oh yeah! And what was that again?"
+                em "Oh yeah! And what was that again?"
 
-            scene v9emi11a
-            with dissolve
+                scene v9emi11a
+                with dissolve
 
-            u "Oral."
+                u "Oral."
 
-            scene v9emi11
-            with dissolve
+                scene v9emi11
+                with dissolve
 
-            em "Pretty sure it was a kiss."
+                em "Pretty sure it was a kiss."
 
-            scene v9emi11a
-            with dissolve
+                scene v9emi11a
+                with dissolve
 
-            u "That's oral."
+                u "That's oral."
 
-            scene v9emi11d # FPP. Same camera as v9emi11, flirty expression, mouth open.
-            with dissolve
+                scene v9emi11d # FPP. Same camera as v9emi11, flirty expression, mouth open.
+                with dissolve
 
-            em "You always were a slick one, [name]."
+                em "You always were a slick one, [name]."
 
-        "Say You Were Winning":
-            $ addPoint("tm")
+            "Say You Were Winning":
+                $ addPoint("tm")
 
-            u "I was one second away from the holy grail."
+                u "I was one second away from the holy grail."
 
-            scene v9emi11e # FPP. Same camera as v9emi11, smug expression, mouth open.
-            with dissolve
+                scene v9emi11e # FPP. Same camera as v9emi11, smug expression, mouth open.
+                with dissolve
 
-            em "Remind me again what that final bet was?"
+                em "Remind me again what that final bet was?"
 
-            scene v9emi11a
-            with dissolve
+                scene v9emi11a
+                with dissolve
 
-            u "Oral."
+                u "Oral."
 
-            scene v9emi11
-            with dissolve
+                scene v9emi11
+                with dissolve
 
-            em "Close, but no."
+                em "Close, but no."
     
     scene v9emi11a
     with dissolve
