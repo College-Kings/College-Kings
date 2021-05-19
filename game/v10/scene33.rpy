@@ -20,11 +20,11 @@ label v10_charity_freeroam:
 
     u "(Now this is an event!)"
     $ freeRoam = True
-    call screen v10cfr33_entrance
+    call screen v10s33_entrance
 
-label v10cfr33_autumn1:
+label v10s33_autumn1:
 
-    $ v10cfr33_autumn = True
+    $ v10s33_autumn = True
 
     scene v10cfraut1a #FPP Show Autumn, Looking at mc, smile with stressed eyes, mouth closed
 
@@ -106,7 +106,7 @@ label v10cfr33_autumn1:
     menu:
 
         "Ask why":
-            $ v10cfr33_autwhypledge = True
+            $ v10s33_autwhypledge = True
             $ addPoint("bf", 1)
             $ autumnLike += 1
             u "Why wouldn't you expect her to pledge?"
@@ -147,7 +147,7 @@ label v10cfr33_autumn1:
     menu:
         
         "That's the main reason":
-            $ v10cfr33_authereformud = True
+            $ v10s33_authereformud = True
             $ addPoint("bro", 1)
             u "I'll be sure to try the other things too, but it's definitely the main attraction."
         
@@ -218,13 +218,13 @@ label v10cfr33_autumn1:
 
     u "See ya."
 
-    call screen v10cfr33_mudwrestling
+    call screen v10s33_mudwrestling
 
     # -Transition to Scene 34-
 
-label v10cfr33_deergirl11:
+label v10s33_deergirl11:
 
-    $ v10cfr33_deergirl11 = True
+    $ v10s33_deergirl11 = True
     scene v10cfrdg11 # FPP. Show dg1, looking towards perry out of shot, mouth open
     dg1 "Haha, I don't think I've met anyone less coordinated. It's the dab, it's pretty simple."
 
@@ -438,7 +438,7 @@ label v10cfr33_deergirl11:
 
         menu:
             "Make fun of Perry":
-                $ v10cfr33_make_fun_perry = True
+                $ v10s33_make_fun_perry = True
                 
                 scene v10cfrdg12c
                 with dissolve
@@ -461,11 +461,11 @@ label v10cfr33_deergirl11:
 
                 guyd "Thanks man."
 
-    call screen v10cfr33_stage
+    call screen v10s33_stage
 
-    label v10cfr33_aubrey1:
+    label v10s33_aubrey1:
 
-    $ v10cfr33_aubrey = True
+    $ v10s33_aubrey = True
 
     scene v10cfrau1 #FPP, Aubrey is doing the Zero Two TikTok dance, refer to https://youtu.be/4b69koOYry4, left pose
 
@@ -533,7 +533,7 @@ label v10cfr33_deergirl11:
 
             u "Sure."
             $ addPoint("bf", 1)
-            $ v10cfr33_audance = True
+            $ v10s33_audance = True
             $ aubreyLike += 1
             scene v10cfrau5 #TPP, Aubrey grabs MC holding his hands, they're both smiling, mouth closed
             with dissolve
@@ -562,7 +562,7 @@ label v10cfr33_deergirl11:
 
                 "Twirl her":
 
-                    $ v10cfr33_autwirl = True
+                    $ v10s33_autwirl = True
 
                     scene v10cfrau5c #same 5b, mc twirls aubrey start
                     with dissolve
@@ -932,7 +932,7 @@ label v10cfr33_deergirl11:
 
                 $ addPoint("bf")
 
-                $ v10cfr33_inviteaubrey = True
+                $ v10s33_inviteaubrey = True
 
                 u "Before I forget, do you know about the Europe trip?"
 
@@ -990,23 +990,23 @@ label v10cfr33_deergirl11:
 
     au "Alright, see ya."
 
-    call screen v10cfr33_stage
+    call screen v10s33_stage
 
-label v10cfr33_chloe1:
-    $ v10cfr33_chloe = true
+label v10s33_chloe1:
+    $ v10s33_chloe = true
     if chloemad:
 
         scene v10cfrcl1 # FPP. Show Chloe, mouth closed
         
         u "I think Chloe's still mad at me, I'd rather not talk to her."
-        call screen v10cfr33_mudwrestling
+        call screen v10s33_mudwrestling
 
-        label v10cfr33_chloe2:
+        label v10s33_chloe2:
         
         scene #mudwrestling screen
         u "(I already talked to her.)"
 
-        call screen v10cfr33_mudwrestling
+        call screen v10s33_mudwrestling
 
     scene v10cfrcl1 # FPP. Show Chloe, mouth closed
     with dissolve
@@ -1089,7 +1089,7 @@ label v10cfr33_chloe1:
 
     menu:
         "Date With Chloe":
-            $ v10cfr33_date_w_chloe = True
+            $ v10s33_date_w_chloe = True
             $ chloeLike += 1
             if chloers:
                 scene v10cfrcl1
@@ -1156,7 +1156,7 @@ label v10cfr33_chloe1:
         menu:
             "Tell Chloe About Nora":
                 $ chloeLike += 1
-                $ v10cfr33_tell_chloe_about_nora = True
+                $ v10s33_tell_chloe_about_nora = True
                 scene v10cfrcl1c # FPP. same1,slight angry look, closed
                 with dissolve
 
@@ -1215,7 +1215,7 @@ label v10cfr33_chloe1:
                 scene v10cfrcl4 # FPP. Show Chloe and nora storming off
                 with dissolve
 
-                call screen v10cfr33_mudwrestling
+                call screen v10s33_mudwrestling
             "Don't Tell Chloe":
 
                 scene v10cfrcl1
@@ -1234,7 +1234,7 @@ label v10cfr33_chloe1:
 
                     menu:
                         "Invite To Europe":
-                            $ v10cfr33_inv_chloe_eur = True
+                            $ v10s33_inv_chloe_eur = True
                             scene v10cfrcl1
                             with dissolve
                             
@@ -1248,7 +1248,7 @@ label v10cfr33_chloe1:
                             menu:
                                 "Convince Her":
                                     $ chloeLike += 1
-                                    $ v10cfr33_convince_chloe = True
+                                    $ v10s33_convince_chloe = True
                                     scene v10cfrcl1
                                     with dissolve
 
@@ -1294,11 +1294,11 @@ label v10cfr33_chloe1:
 
     u "Later."
 
-    call screen v10cfr33_centeraisle
+    call screen v10s33_centeraisle
 
-label v10cfr33_deergirl21:
+label v10s33_deergirl21:
 
-    $ v10cfr33_deergirl2 = True
+    $ v10s33_deergirl2 = True
     
     scene v10cfrdg21 #FPP Show DG2, Looking at mc, happy, cute smile, mouth open
 
@@ -1342,7 +1342,7 @@ label v10cfr33_deergirl21:
         "Make a joke":
 
             $ addPoint("bro")
-            $ v10cfr33_dg2joke = True
+            $ v10s33_dg2joke = True
 
             u "If I win the lingerie I get to see you in it right? *Chuckles*"
 
@@ -1406,12 +1406,12 @@ label v10cfr33_deergirl21:
 
             u "Yep, and that's my cue to leave. Thanks."
 
-    call screen v10cfr33_bagtoss
+    call screen v10s33_bagtoss
 
 
-    label v10cfr33_deergirl31:
+    label v10s33_deergirl31:
 
-    $ v10cfr33_deergirl3 = True
+    $ v10s33_deergirl3 = True
 
     scene v10cfrdg31a #FPP, showing dg3, sitting if she's seated,looking at you, crazy smile with a hint of sadness, mouth closed
     with dissolve
@@ -1456,7 +1456,7 @@ label v10cfr33_deergirl21:
 
             $ addPoint("bf")
 
-            $ v10cfr33_date_w_chloe = True
+            $ v10s33_date_w_chloe = True
 
             u "Well I'll take one."
 
@@ -1492,11 +1492,11 @@ label v10cfr33_deergirl21:
 
             dg3 "The good ones are always taken."
 
-    call screen v10cfr33_centeraisle
+    call screen v10s33_centeraisle
     
-    label v10cfr33_laurenbake1:
+    label v10s33_laurenbake1:
 
-    $ v10cfr33_lauren = True
+    $ v10s33_lauren = True
 
     if laurenrs:
 
@@ -1655,7 +1655,7 @@ label v10cfr33_deergirl21:
 
     if laurenrs:
 
-        $ v10cfr33_inv_lauren_europe = True
+        $ v10s33_inv_lauren_europe = True
 
         u "I know, I'd love some of...Lauren's Moist Muffins."
 
@@ -1688,7 +1688,7 @@ label v10cfr33_deergirl21:
             menu:
 
                 "Invite her to Europe":
-                    $ v10cfr33_inv_lauren_europe = True
+                    $ v10s33_inv_lauren_europe = True
                     $ addPoint ("bf")
 
                     u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
@@ -1731,9 +1731,9 @@ label v10cfr33_deergirl21:
 
     la "See ya."
 
-    call screen v10cfr33_cakestatue
+    call screen v10s33_cakestatue
 
-    label v10cfr33_laurenstatue1:
+    label v10s33_laurenstatue1:
 
     scene v10cfrla3 #FPP, lauren as statue, not looking at mc, mouth closed
     with dissolve
@@ -1884,7 +1884,7 @@ label v10cfr33_deergirl21:
 
     if laurenrs:
 
-        $ v10cfr33_inv_lauren_europe = True
+        $ v10s33_inv_lauren_europe = True
 
         u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
 
@@ -1905,7 +1905,7 @@ label v10cfr33_deergirl21:
             menu:
 
                 "Invite her to Europe":
-                    $ v10cfr33_inv_lauren_europe = True
+                    $ v10s33_inv_lauren_europe = True
                     $ addPoint ("bf")
 
                     u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
@@ -1948,10 +1948,10 @@ label v10cfr33_deergirl21:
 
     la "See ya."
 
-    call screen v10cfr33_cakestatue
+    call screen v10s33_cakestatue
 
-    label v10cfr33_lindsey1:
-        $ v10cfr33_lindsey = True
+    label v10s33_lindsey1:
+        $ v10s33_lindsey = True
         
         scene v10cfrfrli1 # FPP. Show Lindsey stood by the body paint stand in a bikini. Lindsey looking at camera, smile, mouth closed.
 
@@ -2060,7 +2060,7 @@ label v10cfr33_deergirl21:
                     "Don't Paint Lindsey":
                         u "*Laughs* You should."
 
-                $ v10cfr33_lindsey_compliment = True
+                $ v10s33_lindsey_compliment = True
 
             "Ask How She's Doing":
                 u "Hey Lindsey, how are you doing?"
@@ -2098,10 +2098,10 @@ label v10cfr33_deergirl21:
 
         li "Sounds good, see ya."
 
-        call screen v10cfr33_bodypaint
+        call screen v10s33_bodypaint
 
-    label v10cfr33_msrose1:
-        $ v10cfr33_msrose = True
+    label v10s33_msrose1:
+        $ v10s33_msRose = True
 
         scene v10cfrcfrro1 # FPP. Close up Lee and Rose, infront of the body painting booth having a conversation with eachother. Lee mouth open.
 
@@ -2174,7 +2174,7 @@ label v10cfr33_deergirl21:
 
                 menu:
                     "Encourage Her":
-                        $ v10cfr33_encourage_rose_paint = False
+                        $ v10s33_encourage_rose_paint = False
 
                         u "You sort of have to now, it's a matter of principle."
 
@@ -2243,7 +2243,7 @@ label v10cfr33_deergirl21:
                 if v10_help_nora_freeroam:
                     menu:
                         "Invite Ms. Rose To Europe":
-                            $ v10cfr33_inv_rose_europe = True
+                            $ v10s33_inv_rose_europe = True
 
                             u "I wanted to ask you Mr.Rose, are you planning on going on the Europe trip?"
 
@@ -2267,7 +2267,7 @@ label v10cfr33_deergirl21:
                         
             "Side With Ms. Rose":
                 $ mrroseLike += 1
-                $ v10cfr33_side_w_rose = True
+                $ v10s33_side_w_rose = True
             
                 u "I overheard your conversation and I have to be honest, body paint is sort of a kids game nowadays."
                 u "It may have been major a long time ago, but living in castles and riding horses was major a long time ago too. Bag toss is better."
@@ -2287,10 +2287,10 @@ label v10cfr33_deergirl21:
 
         u "I'll see you both in class."
 
-        call screen v10cfr33_bodypaint
+        call screen v10s33_bodypaint
 
-label v10cfr33_riley1:
-    $ v10cfr33_riley = True
+label v10s33_riley1:
+    $ v10s33_riley = True
     
     scene v10cfrri1 # FPP. Show Riley at the thrift shop looking at a top, mouth open.
     with dissolve
@@ -2559,7 +2559,7 @@ label v10cfr33_riley1:
 
     ri "Like I said, I'm a kind person. *Chuckles* Have you been to the dance stand?"
 
-    if v10cfr33_deergirl11 or v10cfr33_aubrey:
+    if v10s33_deergirl11 or v10s33_aubrey:
 
         scene v10cfrri2e
         with dissolve
@@ -2592,11 +2592,11 @@ label v10cfr33_riley1:
 
     u "See ya."
 
-    call screen v10cfr33_thrift
+    call screen v10s33_thrift
     ### ERROR: -If MC speaks to Riley again ###
-label v10cfr33_riley2:
+label v10s33_riley2:
 
-    $ v10cfr33_riley2 = True
+    $ v10s33_riley2 = True
     scene v10cfrriau1 # FPP. Show Riley and aubrey, Riley mouth open
     with dissolve
 
@@ -2689,7 +2689,7 @@ label v10cfr33_riley2:
     ri "Never, let's do it. But we need more judges."
 
 
-    if v10cfr33_deergirl11:
+    if v10s33_deergirl11:
     ### ERROR: -If spoke to DG1 and PERRY ###
 
         scene v10cfrriau3b # FPP. same 3a, mouth closed
@@ -2995,7 +2995,7 @@ label v10cfr33_riley2:
 
             u "No problem, see you guys later."
 
-            call screen v10cfr33_stage
+            call screen v10s33_stage
 
         "Aubrey":
             scene v10cfrriau2b
@@ -3033,10 +3033,10 @@ label v10cfr33_riley2:
 
             au "Can't wait to see that. *Laughs*"
 
-            call screen v10cfr33_stage
+            call screen v10s33_stage
 
 
-    label v10cfr33_amber1:
+    label v10s33_amber1:
 
     # -if things are awkward with Amber after the skatepark-   
     
@@ -3046,9 +3046,9 @@ label v10cfr33_riley2:
 
         u "(Things are a bit awkward between us, I'd rather avoid her today)"
 
-        call screen v10cfr33_mudwrestling
+        call screen v10s33_mudwrestling
 
-    $ v10cfr33_amber = True
+    $ v10s33_amber = True
 
     scene v10cfram1 #FPP Show Amber, Looking at mc, flirty smile, mouth open
     with dissolve
@@ -3149,7 +3149,7 @@ label v10cfr33_riley2:
 
             "Invite her to Europe":
 
-                $ v10cfr33_inv_amber_europe = True
+                $ v10s33_inv_amber_europe = True
 
                 u "Are you going on the Europe trip?"
 
@@ -3188,9 +3188,9 @@ label v10cfr33_riley2:
 
     u "You do that."
 
-    call screen v10cfr33_mudwrestling
+    call screen v10s33_mudwrestling
 
-    label v10cfr33_chris1:
+    label v10s33_chris1:
 
     if not joinwolves:
 
@@ -3198,9 +3198,9 @@ label v10cfr33_riley2:
         
         u "I should probably not be seen talking to the Wolves' frat leaders."
 
-        call screen v10cfr33_bagtoss
+        call screen v10s33_bagtoss
 
-    $ v10cfr33_chris = True
+    $ v10s33_chris = True
     
     scene v10cfrch1 #FPP showing Aaron and Chris looking at each other, like they were talking
     with dissolve
@@ -3243,7 +3243,7 @@ label v10cfr33_riley2:
     menu:
 
         "Play":
-            $ v10cfr33_playwithaaron = True
+            $ v10s33_playwithaaron = True
 
             scene v10cfrch2
             with dissolve
@@ -3338,11 +3338,11 @@ label v10cfr33_riley2:
 
             aa "See ya, good catching up."
 
-    call screen v10cfr33_bagtoss
+    call screen v10s33_bagtoss
 
-    label v10cfr33_nora1:
+    label v10s33_nora1:
 
-    $ v10cfr33_nora = True
+    $ v10s33_nora = True
 
     scene v10cfrno1 # fpp, from the side, nora playing bag toss, mouth closed concentrated
     with dissolve
@@ -3515,10 +3515,10 @@ label v10cfr33_riley2:
 
     no "Okay."
 
-    call screen v10cfr33_bagtoss
+    call screen v10s33_bagtoss
 
-    label v10cfr33_ryan1:
-        $ v10cfr33_ryan = True
+    label v10s33_ryan1:
+        $ v10s33_ryan = True
 
         scene v10cfrry1 # FPP. Close up Ryan stood by the central aisle, Ryan smile, mouth closed.
 
@@ -3591,7 +3591,7 @@ label v10cfr33_riley2:
             "It's Okay":
                 $ addPoint("bro")
                 $ ryanLike += 1
-                $ v10cfr33_ryan_flirt_emily = True
+                $ v10s33_ryan_flirt_emily = True
 
                 u "Don't you think it's weird to date your friend's ex? You can do what you want though, it doesn't bother me."
 
@@ -3645,16 +3645,16 @@ label v10cfr33_riley2:
 
         pause 0.75
 
-        call screen v10cfr33_centeraisle
+        call screen v10s33_centeraisle
 
-    label v10cfr33_toiletryan1:
-        $ v10cfr33_ryanb = True
+    label v10s33_toiletryan1:
+        $ v10s33_ryanb = True
         
         scene v10cfrry5 # FPP. Show Ryan at the toilets, Ryan slight upset, mouth closed.
 
         u "(He looks upset.)"
 
-        if not v10cfr33_ryan_flirt_emily:
+        if not v10s33_ryan_flirt_emily:
             u "Hey man, I didn't mean to ruin your mood."
 
             scene v10cfrry5a # FPP. Same as 5, ryan slight upset, mouth open.
@@ -3730,9 +3730,9 @@ label v10cfr33_riley2:
 
             u "Alright man, I'll leave you alone."
 
-            call screen v10cfr33_toilet
+            call screen v10s33_toilet
 
-    label v10cfr33_emily1:
+    label v10s33_emily1:
     
     if not forgiveemily:
 
@@ -3740,9 +3740,9 @@ label v10cfr33_riley2:
 
         u "(I don't feel like talking to her.)"
 
-        call screen v10cfr33_bench
+        call screen v10s33_bench
 
-    $ v10cfr33_emily = True
+    $ v10s33_emily = True
 
     scene v10cfrem1a #FPP, shows emily sat on the bench from the side as if mc is sitting next to her, looking at mc cute smile, mouth closed
 
@@ -3850,22 +3850,22 @@ label v10cfr33_riley2:
 
     u "Good luck."
 
-    call screen v10cfr33_bench
+    call screen v10s33_bench
     
-    label v10cfr33_evelyn1:
+    label v10s33_evelyn1:
 
     if not evelynrs and evelyndate:
-        $ v10cfr33_evelyn = True
+        $ v10s33_evelyn = True
 
         scene # toilet screen
 
         u "(What's she doing here? I'd rather avoid her after how our date went.)"
 
-        call screen v10cfr33_toilet
+        call screen v10s33_toilet
 
     elif not evelynrs and not evelyndate:
 
-        $ v10cfr33_evelyn = True
+        $ v10s33_evelyn = True
 
         scene v10cfrev1a #fpp, shows evelyn looking at mc, neutral expression mouth closed
 
@@ -3903,10 +3903,10 @@ label v10cfr33_riley2:
 
         u "Well, see you around."
 
-        call screen v10cfr33_toilet
+        call screen v10s33_toilet
 
     else:
-        $ v10cfr33_evelyn = True
+        $ v10s33_evelyn = True
 
         scene v10cfrev1a
 
@@ -3956,7 +3956,7 @@ label v10cfr33_riley2:
 
                 $ addPoint("bf")
 
-                $ v10cfr33_ev_date_now = True
+                $ v10s33_ev_date_now = True
 
                 u "Wanna go now?"
 
@@ -3981,12 +3981,12 @@ label v10cfr33_riley2:
 
         u "Well, I'll see you around then."
 
-        call screen v10cfr33_toilet
+        call screen v10s33_toilet
 
-label v10cfr33_deergirl41:
+label v10s33_deergirl41:
 
     scene # thrift screen
 
     u "(I'd rather not get talked into buying one of these hats.)"
 
-    call screen v10cfr33_thrift
+    call screen v10s33_thrift
