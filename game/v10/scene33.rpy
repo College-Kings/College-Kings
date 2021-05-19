@@ -3584,7 +3584,8 @@ label v10s33_riley2:
         scene v10cfrry1c # FPP. Same as 1, ryan back at camera, awkwardly, mouth open.
         with dissolve
 
-        ry "Okay look, don't be mad, but the girl I'm talking about is Emily. I know you guys dated, but I...I really like her. Is it okay with you if I ask her out?"
+        ry "Okay look, don't be mad, but the girl I'm talking about is Emily."
+        ry "I know you guys dated, but I...I really like her. Is it okay with you if I ask her out?"
 
         scene v10cfrry1d # FPP. Same as 1, ryan looking at camera, awkwardly, mouth closed.
         with dissolve
