@@ -68,7 +68,7 @@ label s26:
     scene v8sopt6 # FPP. Close up of Aubrey wearing Cat Eye Glasses with Black Material), Aubrey mouth open, flirty smile.
     with dissolve
 
-    au "What do you think? do you like it?"
+    au "What do you think? Do you like it?"
 
     scene v8sopt6a # FPP. Same camera as v8sopt6, Aubrey mouth closed.
     with dissolve

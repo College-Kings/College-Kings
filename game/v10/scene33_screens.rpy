@@ -132,7 +132,7 @@ screen v10s33_toilet(): # NO
 
     # Evelyn
     imagebutton:
-        pos (0, 0)
+        pos (613, 207)
         idle "images/v10/scene 33/fr6evelyn.webp"
         hover "images/v10/scene 33/fr6evelynhover.webp"
         if not v10s33_evelyn:
@@ -143,7 +143,7 @@ screen v10s33_toilet(): # NO
     # Toilet Ryan
     if v10s33_ryan:            
         imagebutton: 
-            pos (0, 0)
+            pos (812, 253)
             idle "images/v10/scene 33/fr6toiletryan.webp"
             hover "images/v10/scene 33/fr6toiletryanhover.webp"
             if not v10s33_ryanb:
@@ -177,7 +177,7 @@ screen v10s33_bodypaint():
 
     # Ms Rose
     imagebutton: 
-        pos (0, 0)
+        pos (473, 315)
         idle "images/v10/scene 33/fr6msrose.webp"
         hover "images/v10/scene 33/fr6msrosehover.webp"
         if not v10s33_msRose:
@@ -187,7 +187,7 @@ screen v10s33_bodypaint():
 
     # Lindsey
     imagebutton: 
-        pos (0, 0)
+        pos (783, 346)
         idle "images/v10/scene 33/fr6lindsey.webp"
         hover "images/v10/scene 33/fr6lindseyhover.webp"
         if not v10s33_lindsey:
@@ -221,7 +221,7 @@ screen v10s33_thrift():
 
     # Deer Girl 4
     imagebutton: 
-        pos (0, 0)
+        pos (629, 433)
         idle "images/v10/scene 33/fr6deergirl4.webp"
         hover "images/v10/scene 33/fr6deergirl4hover.webp"
         action Jump("v10s33_deergirl41")
@@ -229,7 +229,7 @@ screen v10s33_thrift():
     # Riley
     if not v10s33_riley:                
         imagebutton: 
-            pos (0, 0)
+            pos (391, 388)
             idle "images/v10/scene 33/fr6riley.webp"
             hover "images/v10/scene 33/fr6rileyhover.webp"
             action Jump("v10s33_riley1")
@@ -289,7 +289,7 @@ screen v10s33_stage():
     # Aubrey
     if not v10s33_riley:   
         imagebutton: 
-            pos (0, 0)
+            pos (1282, 322)
             idle "images/v10/scene 33/fr6aubrey.webp"
             hover "images/v10/scene 33/fr6aubreyhover.webp"
             if not v10s33_aubrey:
@@ -300,7 +300,7 @@ screen v10s33_stage():
     # Aubrey & Riley
     else:   
         imagebutton: 
-            pos (0, 0)
+            pos (1062, 168)
             idle "images/v10/scene 33/fr6aubreyriley.webp"
             hover "images/v10/scene 33/fr6aubreyrileyhover.webp"
             if not v10s33_aubreyriley:
@@ -310,7 +310,7 @@ screen v10s33_stage():
 
     # Deer girl 1
     imagebutton: 
-        pos (0, 0)
+        pos (650, 195)
         idle "images/v10/scene 33/fr6deergirl1.webp"
         hover "images/v10/scene 33/fr6deergirl1hover.webp"
         if not v10s33_deergirl1:
@@ -412,7 +412,7 @@ screen v10s33_centeraisle():
     # Chloe
     if not v10s33_toldChloe:
         imagebutton:
-            pos (0, 0)
+            pos (534, 331)
             idle "images/v10/scene 33/fr6chloe.webp"
             hover "images/v10/scene 33/fr6chloehover.webp"
             if not v10s33_chloe:
@@ -422,7 +422,7 @@ screen v10s33_centeraisle():
 
     # Deer Girl 3
     imagebutton:
-        pos (0, 0)
+        pos (180, 338)
         idle "images/v10/scene 33/fr6deergirl3.webp"
         hover "images/v10/scene 33/fr6deergirl3hover.webp"
         if not v10s33_deergirl3:
@@ -433,7 +433,7 @@ screen v10s33_centeraisle():
     # Ryan
     if not v10s33_ryan:
         imagebutton:
-            pos (0, 0)
+            pos (1290, 251)
             idle "images/v10/scene 33/fr6ryan.webp"
             hover "images/v10/scene 33/fr6ryanhover.webp"
             if not v10s33_ryan:

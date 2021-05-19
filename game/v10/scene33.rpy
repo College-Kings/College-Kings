@@ -15,7 +15,7 @@
 
 label v10_charity_freeroam:
     # -MC arrives at the charity event and prior to the freeroam we have an image and a dialog line from MC-
-    scene ent3
+    scene ent7
     with dissolve
 
     u "(Now this is an event!)"
@@ -213,7 +213,7 @@ label v10s33_autumn1:
 
     aut "Anyway, I better get back to running everything, see you around."
 
-    scene v10cfr
+    scene v10cfraut1c
     with dissolve
 
     u "See ya."
@@ -223,8 +223,8 @@ label v10s33_autumn1:
     # -Transition to Scene 34-
 
 label v10s33_deergirl11:
-
     $ v10s33_deergirl11 = True
+    
     scene v10cfrdg11 # FPP. Show dg1, looking towards perry out of shot, mouth open
     dg1 "Haha, I don't think I've met anyone less coordinated. It's the dab, it's pretty simple."
 
@@ -250,9 +250,6 @@ label v10s33_deergirl11:
     scene v10cfrdg12a # FPP. same 12,Show perry, looking at dg1 out of shot, mouth open
     with dissolve
     guyd "Only took me a thousand tries."
-
-    scene v10cfrdg14 # FPP. Show dg1 and perry, looking at camera, mouths closed.
-    with dissolve
     
     if joinwolves:
 
@@ -314,7 +311,7 @@ label v10s33_deergirl11:
 
         "Arm Arm Pose":
 
-            scene v10cfrdg13 # TPP. Show MC looking at camera, right hand held out to right, mouth closed.
+            scene v10cfrdg14 # TPP. Show MC looking at camera, right hand held out to right, mouth closed.
             with dissolve
 
             pause 0.5
@@ -400,7 +397,7 @@ label v10s33_deergirl11:
             scene v10cfrdg13e # TPP. same 13, silly face with jazz hands
             with dissolve
 
-            pause 0.5
+            pause 0.75
         "Lean face cross":
             
             scene v10cfrdg13d # TPP. same 13, leant forward arms down.
@@ -411,7 +408,7 @@ label v10s33_deergirl11:
             scene v10cfrdg13c # TPP. same 13, Show mc leant back arms crossed, mouth closed
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v10cfrdg13f # TPP same 13c, show mc Bumping into perry. perry mouth open
             with dissolve            
@@ -2052,7 +2049,7 @@ label v10s33_deergirl21:
 
                         u "Of course not, you can trust me."
 
-                        scene v10cfrfrli4
+                        scene v10cfrfrli4b
                         with dissolve
 
                         li "Alright [name]."
@@ -2203,7 +2200,7 @@ label v10s33_deergirl21:
 
                         ro "What do you think [name]?"
 
-                        scene v10cfrcfrro3e # FPP. Same as 3d, both smiling, mouths closed.
+                        scene v10cfrcfrro5a # FPP. Same as 3d, both smiling, mouths closed.
                         with dissolve
 
                         u "Perfect!"
@@ -2293,7 +2290,6 @@ label v10s33_riley1:
     $ v10s33_riley = True
     
     scene v10cfrri1 # FPP. Show Riley at the thrift shop looking at a top, mouth open.
-    with dissolve
 
     ri "Okay, this is way too big for me."
 
@@ -2505,7 +2501,6 @@ label v10s33_riley1:
     ri "Now this I can work with! What do you think?"
 
     menu:
-
         "It Looks Good":
             $ v10_ri_hat_good = True
             scene v10cfrri2e # FPP. same 2, cheeky smile,wearing a hat from here on, mouth closed
@@ -3584,7 +3579,8 @@ label v10s33_riley2:
         scene v10cfrry1c # FPP. Same as 1, ryan back at camera, awkwardly, mouth open.
         with dissolve
 
-        ry "Okay look, don't be mad, but the girl I'm talking about is Emily. I know you guys dated, but I...I really like her. Is it okay with you if I ask her out?"
+        ry "Okay look, don't be mad, but the girl I'm talking about is Emily."
+        ry "I know you guys dated, but I...I really like her. Is it okay with you if I ask her out?"
 
         scene v10cfrry1d # FPP. Same as 1, ryan looking at camera, awkwardly, mouth closed.
         with dissolve
@@ -3632,6 +3628,8 @@ label v10s33_riley2:
 
                 ry "Yeah yeah, uhm...that's cool. See you around."
 
+                pause
+
             "It's Not Okay": 
                 $ addPoint("tm")
             
@@ -3667,7 +3665,8 @@ label v10s33_riley2:
             scene v10cfrry5
             with dissolve
 
-            u "There's plenty of girls here that would be happy to talk to you. Have you checked out the Win A Date booth? That girl's alright, go get a ticket."
+            u "There's plenty of girls here that would be happy to talk to you."
+            u "Have you checked out the Win A Date booth? That girl's alright, go get a ticket."
 
             scene v10cfrry5a
             with dissolve
@@ -3710,7 +3709,8 @@ label v10s33_riley2:
             scene v10cfrry5a
             with dissolve
 
-            u "Damn man, sorry to hear that. There's plenty of girls here that would be happy to talk to you. Have you checked out the Win A Date booth? That girl's alright, go get a ticket."
+            u "Damn man, sorry to hear that. There's plenty of girls here that would be happy to talk to you."
+            u "Have you checked out the Win A Date booth? That girl's alright, go get a ticket."
 
             scene v10cfrry5
             with dissolve
