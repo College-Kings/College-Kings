@@ -3670,7 +3670,8 @@ label v10s33_riley2:
             scene v10cfrry5
             with dissolve
 
-            u "There's plenty of girls here that would be happy to talk to you. Have you checked out the Win A Date booth? That girl's alright, go get a ticket."
+            u "There's plenty of girls here that would be happy to talk to you."
+            u "Have you checked out the Win A Date booth? That girl's alright, go get a ticket."
 
             scene v10cfrry5a
             with dissolve
