@@ -1,5 +1,4 @@
 label v10_riley_vs_amber:
-
     scene v10rva1 # First is their fingers interlaced while facing each
     with fade
 
@@ -37,6 +36,9 @@ label v10_riley_vs_amber:
     with dissolve
     
     am "That was kinda hot?"
+
+    scene v10rva6a
+    with dissolve
     
     ri "I'm well practiced. *Laughs*"
 
@@ -57,21 +59,38 @@ label v10_riley_vs_amber:
 
     am "*Whisper* I like holding you like this..."
 
+    scene v10rva9a
+    with dissolve
+
     ri "Kinda hurts."
+
+    scene v10rva9
+    with dissolve    
 
     am "You can always give up."
 
+    scene v10rva9a
+    with dissolve
+
     ri "I'm not-"
+
+    scene v10rva9
+    with dissolve
 
     am "*Grunts*"
 
+    scene v10rva9b
+    with dissolve
+
     ri "Alright!"
+
+    scene v10rva9d
+    with dissolve
 
     u "(Woah, that was... woah.)"
 
     scene v10rva10a # FPP. mouth closed
     with fade
-    # -MC goes over to talk to Amber-
 
     u "A kiss? Is that even fair? *Laughs*"
 
