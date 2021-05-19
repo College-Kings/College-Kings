@@ -39,7 +39,6 @@ label v10_autumn_announcement:
 
     aut "Thanks everyone, means a lot. So our main event for today is of course the mud wrestling."
 
-
     scene v10samw4 # FPP. Same camera as v10samw4, smiling, mouth open as though yelling.
     with dissolve
 
@@ -159,6 +158,20 @@ label v10_autumn_announcement:
     scene v10samw6b # FPP. Same camera as v10samw6. Show Riley and Amber in the line-up of girls competing, both smiling, mouths closed.
     with fade
     menu:
+        "Root for Riley":
+            $ amberLike -= 1
+            $ rileyLike += 1
+            $ addPoint("bf")
+            scene v10samw6b
+            with dissolve
+
+            u "Riley, Riley!"
+
+            scene v10samw7
+            with dissolve
+
+            pause 0.75
+
         "Root for Amber":
             $ amberLike += 1
             $ rileyLike -= 1
@@ -176,18 +189,6 @@ label v10_autumn_announcement:
 
             u "*Laughs* Sure buddy."
         
-        "Root for Riley":
-            $ amberLike -= 1
-            $ rileyLike += 1
-            $ addPoint("bf")
-            scene v10samw6b
-            with dissolve
-
-            u "Riley, Riley!"
-
-            scene v10samw7
-            with dissolve
-
     scene v10samw1
     with fade
 
