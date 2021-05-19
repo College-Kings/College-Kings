@@ -98,7 +98,7 @@ screen v10s33_bench():
 
     # Emily
     imagebutton: 
-        pos (0, 0)
+        pos (942, 420)
         idle "images/v10/scene 33/fr6emily.webp"
         hover "images/v10/scene 33/fr6emilyhover.webp"
         if not v10s33_emily:
@@ -361,7 +361,7 @@ screen v10s33_bagtoss():
 
     # Chris
     imagebutton:
-        pos (0, 0)
+        pos (1032, 255)
         idle "images/v10/scene 33/fr6chris.webp"
         hover "images/v10/scene 33/fr6chrishover.webp"
         if not v10s33_chris:
@@ -372,7 +372,7 @@ screen v10s33_bagtoss():
     # Nora
     if not v10s33_toldChloe:
         imagebutton:
-            pos (0, 0)
+            pos (796, 326)
             idle "images/v10/scene 33/fr6nora.webp"
             hover "images/v10/scene 33/fr6norahover.webp"
             if not v10s33_nora:

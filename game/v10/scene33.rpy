@@ -3316,7 +3316,8 @@ label v10s33_riley2:
 
         "Don't play":
 
-            u "I don't want to hurt anyone's feelings over a game, I'm too good at this, it wouldn't be fair. Also, the presidency is all yours Chris. *Laughs*"
+            u "I don't want to hurt anyone's feelings over a game, I'm too good at this, it wouldn't be fair."
+            u "Also, the presidency is all yours Chris. *Laughs*"
 
             scene v10cfrch3
             with dissolve
@@ -3738,6 +3739,11 @@ label v10s33_emily1:
     $ v10s33_emily = True
 
     if not forgiveemily:
+        if v10s33_toldChloe:
+            scene fr6benchchloenoraatmudwrestling
+        else:
+            scene fr6bench
+
         u "(I don't feel like talking to her.)"
         
         call screen v10s33_bench
@@ -3983,7 +3989,11 @@ label v10s33_emily1:
 
 label v10s33_deergirl41:
 
-    scene # thrift screen
+    if v10s33_riley:
+        scene fr6thriftnoriley
+
+    else:
+        scene fr6thrift
 
     u "(I'd rather not get talked into buying one of these hats.)"
 
