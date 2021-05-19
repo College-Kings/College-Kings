@@ -7,7 +7,7 @@ init python:
     def v9s1_reply1():
         contact_Imre.newMessage(_("Damn right! You heading to the gym?"))
         contact_Imre.addReply(_("Naw, I'm spent. But I have a feeling I'll be spending a lot of my time in there"))
-        contact_Imre.newMessage("Me too. See ya there!"))
+        contact_Imre.newMessage(_("Me too. See ya there!"))
 
     def v9s1_reply2():
         contact_Imre.newMessage(_("Lucky we did, huh? I think we got a hand up on those baby apes"))
