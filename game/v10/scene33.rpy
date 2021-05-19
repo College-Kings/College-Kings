@@ -1153,11 +1153,10 @@ label v10s33_chloe1:
 
 
     if v10_nora_bitch_about_chloe:
-
         menu:
             "Tell Chloe About Nora":
                 $ chloeLike += 1
-                $ v10s33_tell_chloe_about_nora = True
+                $ v10s33_toldChloe = True
                 scene v10cfrcl1c # FPP. same1,slight angry look, closed
                 with dissolve
 
@@ -1217,6 +1216,7 @@ label v10s33_chloe1:
                 with dissolve
 
                 call screen v10s33_mudwrestling
+
             "Don't Tell Chloe":
 
                 scene v10cfrcl1
