@@ -391,6 +391,7 @@ default v10_amber_awkward = False
 
     # Freeroam
 default v10s33_riley = False
+default v10s33_riley2 = False
 default v10s33_emily = False
 default v10s33_lauren = False 
 default v10s33_evelyn = False
