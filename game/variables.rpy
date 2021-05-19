@@ -361,6 +361,7 @@ default samLike = 0
 default mrroseLike = 0
 default autumnLike = 0
 default emilyLike = 0
+default ryanLike = 0
 default v10_inv_pen_cafe = False
 default v10_simplr_known = False
 default v10_reassure_jenny = False
