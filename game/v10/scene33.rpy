@@ -3303,12 +3303,12 @@ label v10s33_riley2:
 
             u "Damnit."
 
-            scene v10cfrdg23a
+            scene v10cfrch2a
             with fade
 
             u "Okay, I'ma check out some other stations. I'll see you guys around."
 
-            scene v10cfrdg22
+            scene v10cfrch2
             with dissolve
 
             aa "See ya, good catching up."
@@ -3324,12 +3324,12 @@ label v10s33_riley2:
 
             ch "Fair enough."
 
-            scene v10cfrdg23a
+            scene v10cfrch2a
             with dissolve
 
             u "I'll see you guys around."
 
-            scene v10cfr2
+            scene v10cfrch2
             with dissolve
 
             aa "See ya, good catching up."
