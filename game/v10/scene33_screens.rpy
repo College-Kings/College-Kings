@@ -40,6 +40,7 @@ screen v10s33_entrance():
         hover "images/v10/scene 33/fr4tophover.webp"
         action Show("v10s33_centeraisle")
 
+
 screen v10s33_cakestatue():
     tag tag_freeRoam
     
@@ -85,6 +86,7 @@ screen v10s33_cakestatue():
         hover "images/v10/scene 33/fr4bottomhover.webp"
         action Show("v10s33_entrance")
 
+
 screen v10s33_bench():
     tag tag_freeRoam
 
@@ -103,10 +105,6 @@ screen v10s33_bench():
             action Jump("v10s33_emily1")
         else:
             action Call("freeRoamSpokenToo", returnScreen="v10s33_bench")
-
-    #LOCATIONS:
-        #centeraisle (left)
-        #cakestatue (bottom)
   
     # Centre aisle - Left
     imagebutton:
@@ -122,17 +120,18 @@ screen v10s33_bench():
         hover "images/v10/scene 33/fr4bottomhover.webp"
         action Show("v10s33_cakestatue")
         
-          
+ 
 screen v10s33_toilet():
     tag tag_freeRoam
 
+    # Background
     if v10s33_ryan:
         add "images/v10/scene 33/fr6toiletwithryan.webp" #IMAGE NEEDS TO BE RENDERED
     else:
         add "images/v10/scene 33/fr6toilet.webp" #IMAGE NEEDS TO BE RENDERED
 
-    #PEOPLE:
-    imagebutton: # Evelyn
+    # Evelyn
+    imagebutton:
         pos (0, 0)
         idle "images/v10/scene 33/fr6evelyn.webp"
         hover "images/v10/scene 33/fr6evelynhover.webp"
@@ -141,8 +140,9 @@ screen v10s33_toilet():
         else:
             action Call("freeRoamSpokenToo", returnScreen="v10s33_toilet")
 
+    # Toilet Ryan
     if v10s33_ryan:            
-        imagebutton: # Toilet Ryan
+        imagebutton: 
             pos (0, 0)
             idle "images/v10/scene 33/fr6toiletryan.webp"
             hover "images/v10/scene 33/fr6toiletryanhover.webp"
@@ -151,32 +151,32 @@ screen v10s33_toilet():
             else:
                 action Call("freeRoamSpokenToo", returnScreen="v10s33_toilet")
 
-    #LOCATIONS:
-        #bodypaint (right)
-        #entrance (bottom)
-
+    # Body paint - Right
     imagebutton:
         align (1.0, 0.5)
         idle "images/v10/scene 33/freeroamidle_hori.webp"
         hover "images/v10/scene 33/fr4righthover.webp"
         action Show("v10s33_bodypaint")
 
+    # Entrance - Bottom
     imagebutton:
         align (0.5, 1.0)
         idle "images/v10/scene 33/freeroamidle_vert.webp"
         hover "images/v10/scene 33/fr4bottomhover.webp"
         action Show("v10s33_entrance")
 
+
 screen v10s33_bodypaint():
     tag tag_freeRoam
 
+    # Background
     if v10s33_riley:
         add "images/v10/scene 33/fr6bodypaintnoriley.webp" #IMAGE NEEDS TO BE RENDERED
     else:
         add "images/v10/scene 33/fr6bodypaint.webp" #IMAGE NEEDS TO BE RENDERED
 
-    #PEOPLE:
-    imagebutton: # Ms Rose
+    # Ms Rose
+    imagebutton: 
         pos (0, 0)
         idle "images/v10/scene 33/fr6msrose.webp"
         hover "images/v10/scene 33/fr6msrosehover.webp"
@@ -184,7 +184,9 @@ screen v10s33_bodypaint():
             action Jump("v10s33_msrose1")
         else:
             action Call("freeRoamSpokenToo", returnScreen="v10s33_bodypaint")
-    imagebutton: # Lindsey
+
+    # Lindsey
+    imagebutton: 
         pos (0, 0)
         idle "images/v10/scene 33/fr6lindsey.webp"
         hover "images/v10/scene 33/fr6lindseyhover.webp"
@@ -192,104 +194,101 @@ screen v10s33_bodypaint():
             action Jump("v10s33_lindsey1")
         else:
             action Call("freeRoamSpokenToo", returnScreen="v10s33_bodypaint")
-    #LOCATIONS:
-        #thrift (top)
-        #toilet (bottom)
 
+    # Thrift - Top
     imagebutton:
         xalign 0.5
         idle "images/v10/scene 33/freeroamidle_vert.webp"
         hover "images/v10/scene 33/fr4tophover.webp"
         action Show("v10s33_thrift")
 
+    # Toilet - Bottom
     imagebutton:
         align (0.5, 1.0)
         idle "images/v10/scene 33/freeroamidle_vert.webp"
         hover "images/v10/scene 33/fr4bottomhover.webp"
         action Show("v10s33_toilet")
 
+
 screen v10s33_thrift():
     tag tag_freeRoam
 
+    # Background
     if v10s33_riley:
         add "images/v10/scene 33/fr6thriftnoriley.webp" #IMAGE NEEDS TO BE RENDERED
     else:
         add "images/v10/scene 33/fr6thrift.webp" #IMAGE NEEDS TO BE RENDERED
 
-    #PEOPLE:
-    imagebutton: # Deer Girl 4
+    # Deer Girl 4
+    imagebutton: 
         pos (0, 0)
         idle "images/v10/scene 33/fr6deergirl4.webp"
         hover "images/v10/scene 33/fr6deergirl4hover.webp"
         action Jump("v10s33_deergirl41")
 
+    # Riley
     if not v10s33_riley:                
-        imagebutton: # Riley
+        imagebutton: 
             pos (0, 0)
             idle "images/v10/scene 33/fr6riley.webp"
             hover "images/v10/scene 33/fr6rileyhover.webp"
             action Jump("v10s33_riley1")
 
-    #LOCATIONS:
-        #bodypaint (bottom)
-        #stagefromleft (top)
-
+    # Stage from left - Top
     imagebutton:
         xalign 0.5
         idle "images/v10/scene 33/freeroamidle_vert.webp"
         hover "images/v10/scene 33/fr4tophover.webp"
         action Show("v10s33_stagefromleft")
 
+    # Body paint - Bottom
     imagebutton:
         align (0.5, 1.0)
         idle "images/v10/scene 33/freeroamidle_vert.webp"
         hover "images/v10/scene 33/fr4bottomhover.webp"
         action Show("v10s33_bodypaint")
 
+
 screen v10s33_stagefromleft():
     tag tag_freeRoam
 
-    if v10s33_riley:
-        if v10s33_toldChloe:
-            add "images/v10/scene 33/fr6stagefromleftchloeandnoraatmudwrestlingwithrileyatstage.webp" #IMAGE NEEDS TO BE RENDERED
-        else:
-            add "images/v10/scene 33/fr6stagewithrileyatstage.webp" #IMAGE NEEDS TO BE RENDERED
-    else:
-        if v10s33_toldChloe:
-            add "images/v10/scene 33/fr6stagefromleftchloeandnoraatmudwrestling.webp" #IMAGE NEEDS TO BE RENDERED
-        else:
-            add "images/v10/scene 33/fr6stageleft.webp" #IMAGE NEEDS TO BE RENDERED
+    # Background 
+    if v10s33_riley and v10s33_toldChloe:
+        add "images/v10/scene 33/fr6stagefromleftchloeandnoraatmudwrestlingwithrileyatstage.webp"
+    if v10s33_riley and not v10s33_toldChloe:
+        add "images/v10/scene 33/fr6stagewithrileyatstage.webp"
+    if not v10s33_riley and v10s33_toldChloe:
+        add "images/v10/scene 33/fr6stagefromleftchloeandnoraatmudwrestling.webp"
+    else not v10s33_riley and not v10s33_toldChloe:
+        add "images/v10/scene 33/fr6stageleft.webp"
 
-    #PEOPLE:
-        #none
-
-    #LOCATIONS:
-        #thirft (bottom)
-        #stage (top)
-
+    # Thrift - Bottom
     imagebutton:
         xalign 0.5
         idle "images/v10/scene 33/freeroamidle_vert.webp"
         hover "images/v10/scene 33/fr4tophover.webp"
         action Show("v10s33_stage")
 
+    # Stage - Top
     imagebutton:
         align (0.5, 1.0)
         idle "images/v10/scene 33/freeroamidle_vert.webp"
         hover "images/v10/scene 33/fr4bottomhover.webp"
         action Show("v10s33_thrift")
 
+
 screen v10s33_stage():
     tag tag_freeRoam
 
+    # Background
     if v10s33_riley:
         add "images/v10/scene 33/fr6stagewithriley.webp" #IMAGE NEEDS TO BE RENDERED
     else:
         add "images/v10/scene 33/fr6stage.webp" #IMAGE NEEDS TO BE RENDERED
 
-    #PEOPLE:
+    # Aubrey
     if not v10s33_riley:   
-        imagebutton: # Aubrey
+        imagebutton: 
             pos (0, 0)
             idle "images/v10/scene 33/fr6aubrey.webp"
             hover "images/v10/scene 33/fr6aubreyhover.webp"
@@ -298,8 +297,9 @@ screen v10s33_stage():
             else:
                 action Call("freeRoamSpokenToo", returnScreen="v10s33_stage")
 
-    if v10s33_riley:   
-        imagebutton: # Aubrey & Riley
+    # Aubrey & Riley
+    else:   
+        imagebutton: 
             pos (0, 0)
             idle "images/v10/scene 33/fr6aubreyriley.webp"
             hover "images/v10/scene 33/fr6aubreyrileyhover.webp"
@@ -307,7 +307,9 @@ screen v10s33_stage():
                 action Jump("v10s33_aubreyriley1")
             else:
                 action Call("freeRoamSpokenToo", returnScreen="v10s33_stage")
-    imagebutton: # Deer girl 1
+
+    # Deer girl 1
+    imagebutton: 
         pos (0, 0)
         idle "images/v10/scene 33/fr6deergirl1.webp"
         hover "images/v10/scene 33/fr6deergirl1hover.webp"
@@ -316,40 +318,39 @@ screen v10s33_stage():
         else:
             action Call("freeRoamSpokenToo", returnScreen="v10s33_stage")
 
-    #LOCATIONS:
-        #stagefromleft (left)
-        #bagtoss (right)
-        #centeraisle (bottom)
-
+    # Stage from left - Left
     imagebutton:
         yalign 0.5
         idle "images/v10/scene 33/freeroamidle_hori.webp"
         hover "images/v10/scene 33/fr4lefthover.webp"
         action Show("v10s33_stagefromleft")
 
+    # Bag toss - Right
     imagebutton:
         align (1.0, 0.5)
         idle "images/v10/scene 33/freeroamidle_hori.webp"
         hover "images/v10/scene 33/fr4righthover.webp"
         action Show("v10s33_bagtoss")
 
+    # Centre aisle - Bottom
     imagebutton:
         align (0.5, 1.0)
         idle "images/v10/scene 33/freeroamidle_vert.webp"
         hover "images/v10/scene 33/fr4bottomhover.webp"
         action Show("v10s33_centeraisle")
 
+
 screen v10s33_bagtoss():
     tag tag_freeRoam
 
+    # Background
     if v10s33_toldChloe:
         add "images/v10/scene 33/fr6bagtossnonora.webp" #IMAGE NEEDS TO BE RENDERED
     else:
         add "images/v10/scene 33/fr6bagtoss.webp" #IMAGE NEEDS TO BE RENDERED
 
-    #PEOPLE:
-
-    imagebutton: # Deer Girl 2
+    # Deer Girl 2
+    imagebutton:
         pos (0, 0)
         idle "images/v10/scene 33/fr6deergirl2.webp"
         hover "images/v10/scene 33/fr6deergirl2.webp"
@@ -357,7 +358,9 @@ screen v10s33_bagtoss():
             action Jump("v10s33_deergirl21")
         else:
             action Call("freeRoamSpokenToo", returnScreen="v10s33_bagtoss")
-    imagebutton: # Chris
+
+    # Chris
+    imagebutton:
         pos (0, 0)
         idle "images/v10/scene 33/fr6chris.webp"
         hover "images/v10/scene 33/fr6chrishover.webp"
@@ -365,8 +368,10 @@ screen v10s33_bagtoss():
             action Jump("v10s33_chris1")
         else:
             action Call("freeRoamSpokenToo", returnScreen="v10s33_bagtoss")
+
+    # Nora
     if not v10s33_toldChloe:
-        imagebutton: # Nora
+        imagebutton:
             pos (0, 0)
             idle "images/v10/scene 33/fr6nora.webp"
             hover "images/v10/scene 33/fr6norahover.webp"
@@ -375,44 +380,38 @@ screen v10s33_bagtoss():
             else:
                 action Call("freeRoamSpokenToo", returnScreen="v10s33_bagtoss")
 
-    #LOCATIONS:
-        #stage (bottom)
-
+    # Stage - Bottom
     imagebutton:
         align (0.5, 1.0)
         idle "images/v10/scene 33/freeroamidle_vert.webp"
         hover "images/v10/scene 33/fr4bottomhover.webp"
         action Show("v10s33_stage")
 
+
 screen v10s33_centeraisle():
     tag tag_freeRoam
 
-    if v10s33_toldChloe:
-        if v10s33_riley:
-            if v10s33_ryan:
-                add "images/v10/scene 33/Mid8.webp" #IMAGE NEEDS TO BE RENDERED
-            else:
-                add "images/v10/scene 33/Mid2.webp" #IMAGE NEEDS TO BE RENDERED
-        else:
-            if v10s33_ryan:
-                add "images/v10/scene 33/Mid6.webp" #IMAGE NEEDS TO BE RENDERED
-            else:
-                add "images/v10/scene 33/Mid3.webp" #IMAGE NEEDS TO BE RENDERED
-    else:
-        if v10s33_riley:
-            if v10s33_ryan:
-                add "images/v10/scene 33/Mid4.webp" #IMAGE NEEDS TO BE RENDERED
-            else:
-                add "images/v10/scene 33/Mid1.webp" #IMAGE NEEDS TO BE RENDERED
-        else:
-            if v10s33_ryan:
-                add "images/v10/scene 33/Mid5.webp" #IMAGE NEEDS TO BE RENDERED
-            else:
-                add "images/v10/scene 33/Mid7.webp" #IMAGE NEEDS TO BE RENDERED
+    # Background
+    if v10s33_toldChloe and v10s33_riley and v10s33_ryan:
+        add "images/v10/scene 33/Mid8.webp"
+    if v10s33_toldChloe and v10s33_riley and not v10s33_ryan:
+        add "images/v10/scene 33/Mid2.webp"
+    if v10s33_toldChloe and not v10s33_riley and v10s33_ryan:
+        add "images/v10/scene 33/Mid6.webp"
+    if v10s33_toldChloe and not v10s33_riley and not v10s33_ryan:
+        add "images/v10/scene 33/Mid3.webp"
+    if not v10s33_toldChloe and v10s33_riley and v10s33_ryan:
+        add "images/v10/scene 33/Mid4.webp"
+    if not v10s33_toldChloe and v10s33_riley and not v10s33_ryan:
+        add "images/v10/scene 33/Mid1.webp"
+    if not v10s33_toldChloe and not v10s33_riley and v10s33_ryan:
+        add "images/v10/scene 33/Mid5.webp"
+    if not v10s33_toldChloe and not v10s33_riley and not v10s33_ryan:
+        add "images/v10/scene 33/Mid7.webp"
 
-    #PEOPLE:
+    # Chloe
     if not v10s33_toldChloe:
-        imagebutton: # chloe
+        imagebutton:
             pos (0, 0)
             idle "images/v10/scene 33/fr6chloe.webp"
             hover "images/v10/scene 33/fr6chloehover.webp"
@@ -421,7 +420,8 @@ screen v10s33_centeraisle():
             else:
                 action Call("freeRoamSpokenToo", returnScreen="v10s33_centeraisle")
 
-    imagebutton: # Deer Girl 3
+    # Deer Girl 3
+    imagebutton:
         pos (0, 0)
         idle "images/v10/scene 33/fr6deergirl3.webp"
         hover "images/v10/scene 33/fr6deergirl3hover.webp"
@@ -430,8 +430,9 @@ screen v10s33_centeraisle():
         else:
             action Call("freeRoamSpokenToo", returnScreen="v10s33_centeraisle")
     
+    # Ryan
     if not v10s33_ryan:
-        imagebutton: # Ryan
+        imagebutton:
             pos (0, 0)
             idle "images/v10/scene 33/fr6ryan.webp"
             hover "images/v10/scene 33/fr6ryanhover.webp"
@@ -440,39 +441,39 @@ screen v10s33_centeraisle():
             else:
                 action Call("freeRoamSpokenToo", returnScreen="v10s33_centeraisle")
 
-    #LOCATIONS:
-        #stage (top)
-        #mud wrestling (right)
-        #entrance (bottom)
-
+    # Stage - Top
     imagebutton:
         xalign 0.5
         idle "images/v10/scene 33/freeroamidle_vert.webp"
         hover "images/v10/scene 33/fr4tophover.webp"
         action Show("v10s33_stage")
 
+    # Mud Wrestling - Right
     imagebutton:
         align (1.0, 0.5)
         idle "images/v10/scene 33/freeroamidle_hori.webp"
         hover "images/v10/scene 33/fr4righthover.webp"
         action Show("v10s33_mudwrestling")
 
+    # Entrance - Bottom
     imagebutton:
         align (0.5, 1.0)
         idle "images/v10/scene 33/freeroamidle_vert.webp"
         hover "images/v10/scene 33/fr4bottomhover.webp"
         action Show("v10s33_entrance")
 
+
 screen v10s33_mudwrestling():
     tag tag_freeRoam
 
+    # Background
     if v10s33_toldChloe:
         add "images/v10/scene 33/fr6mudwrestlingwithnoraandchloe.webp" #IMAGE NEEDS TO BE RENDERED
     else:
         add "images/v10/scene 33/fr6mudwrestling.webp" #IMAGE NEEDS TO BE RENDERED
 
-    #PEOPLE:
-    imagebutton: # Amber
+    # Amber
+    imagebutton: 
         pos (0, 0)
         idle "images/v10/scene 33/fr6amber.webp"
         hover "images/v10/scene 33/fr6amberhover.webp"
@@ -480,8 +481,9 @@ screen v10s33_mudwrestling():
             action Jump("v10s33_amber1")
         else:
             action Call("freeRoamSpokenToo", returnScreen="v10s33_mudwrestling")
-        
-    imagebutton: # Autumn
+    
+    # Autumn
+    imagebutton: 
         pos (0, 0)
         idle "images/v10/scene 33/fr6autumn.webp"
         hover "images/v10/scene 33/fr6autumnhover.webp"
@@ -490,9 +492,7 @@ screen v10s33_mudwrestling():
         else:
             action Show("endFreeRoamConfirm", continueLabel="v10_autumn_announcement")
 
-    #LOCATIONS:
-        #center aisle (bottom)
-
+    # Centre Aisle - Bottom
     imagebutton:
         align (0.5, 1.0)
         idle "images/v10/scene 33/freeroamidle_vert.webp"
