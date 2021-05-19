@@ -3488,7 +3488,8 @@ label v10s33_riley2:
                     scene v10cfrno3d
                     with dissolve
 
-                    no "I just feel like she's fake. She pretends to be all fragile so she can get sympathy points from people. Just yesterday I heard her making a fuss in the hallway because Aubrey called her \"cute\". Like, are you kidding me?"
+                    no "I just feel like she's fake. She pretends to be all fragile so she can get sympathy points from people."
+                    no "Just yesterday I heard her making a fuss in the hallway because Aubrey called her \"cute\". Like, are you kidding me?"
 
                     scene v10cfrno3e
                     with dissolve
