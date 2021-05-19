@@ -12,7 +12,7 @@ screen v10s33_entrance():
         $ v10s33_background = "images/v10/scene 33/Ent4.webp"
     if not v10s33_toldChloe and not v10s33_riley and v10s33_ryan:
         $ v10s33_background = "images/v10/scene 33/Ent5.webp"
-    if v10s33_toldChloe not v10s33_riley and v10s33_ryan:
+    if v10s33_toldChloe and not v10s33_riley and v10s33_ryan:
         $ v10s33_background = "images/v10/scene 33/Ent6.webp"
     if not v10s33_toldChloe and not v10s33_riley and not v10s33_ryan:
         $ v10s33_background = "images/v10/scene 33/Ent7.webp"
@@ -271,7 +271,7 @@ screen v10s33_stagefromleft():
         $ v10s33_background = "images/v10/scene 33/fr6stagewithrileyatstage.webp"
     if not v10s33_riley and v10s33_toldChloe:
         $ v10s33_background = "images/v10/scene 33/fr6stagefromleftchloeandnoraatmudwrestling.webp"
-    else not v10s33_riley and not v10s33_toldChloe:
+    if not v10s33_riley and not v10s33_toldChloe:
         $ v10s33_background = "images/v10/scene 33/fr6stageleft.webp"
 
     add v10s33_background
