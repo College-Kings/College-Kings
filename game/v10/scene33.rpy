@@ -2554,7 +2554,7 @@ label v10s33_riley1:
 
     ri "Like I said, I'm a kind person. *Chuckles* Have you been to the dance stand?"
 
-    if v10s33_deergirl11 or v10s33_aubrey:
+    if v10s33_deergirl1 or v10s33_aubrey:
 
         scene v10cfrri2e
         with dissolve
