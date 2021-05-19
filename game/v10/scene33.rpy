@@ -3644,7 +3644,7 @@ label v10s33_riley2:
         scene v10cfrry4 # FPP. Show Ryan walking to wherever he is in his appearance at the toilets.
         with dissolve
 
-        pause 0.75
+        pause
 
         call screen v10s33_centeraisle
 
