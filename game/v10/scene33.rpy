@@ -43,7 +43,8 @@ label v10s33_autumn1:
     scene v10cfraut1
     with dissolve
 
-    aut "Little bumps and bruises here and there, but for the most part it did. Our little thrift sale was a last minute decision so I had to stay up all night sorting through old clothes."
+    aut "Little bumps and bruises here and there, but for the most part it did."
+    aut "Our little thrift sale was a last minute decision so I had to stay up all night sorting through old clothes."
 
     scene v10cfraut1a
     with dissolve
@@ -2050,7 +2051,7 @@ label v10s33_deergirl21:
 
                         u "Of course not, you can trust me."
 
-                        scene v10cfrfrli4b
+                        scene v10cfrli4f
                         with dissolve
 
                         li "Alright [name]."
