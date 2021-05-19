@@ -223,7 +223,7 @@ label v10s33_autumn1:
     # -Transition to Scene 34-
 
 label v10s33_deergirl11:
-    $ v10s33_deergirl11 = True
+    $ v10s33_deergirl1 = True
     
     scene v10cfrdg11 # FPP. Show dg1, looking towards perry out of shot, mouth open
     dg1 "Haha, I don't think I've met anyone less coordinated. It's the dab, it's pretty simple."
@@ -2554,7 +2554,7 @@ label v10s33_riley1:
 
     ri "Like I said, I'm a kind person. *Chuckles* Have you been to the dance stand?"
 
-    if v10s33_deergirl11 or v10s33_aubrey:
+    if v10s33_deergirl1 or v10s33_aubrey:
 
         scene v10cfrri2e
         with dissolve
@@ -2684,7 +2684,7 @@ label v10s33_riley2:
     ri "Never, let's do it. But we need more judges."
 
 
-    if v10s33_deergirl11:
+    if v10s33_deergirl1:
     ### ERROR: -If spoke to DG1 and PERRY ###
 
         scene v10cfrriau3b # FPP. same 3a, mouth closed
