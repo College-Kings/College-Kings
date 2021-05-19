@@ -87,8 +87,8 @@ label v10_autumn_announcement:
     with fade
     menu:
         "Root for Chloe":
-            $ ChloeLike += 1
-            $ NoraLike -= 1
+            $ chloeLike += 1
+            $ noraLike -= 1
             $ addPoint("bf")
             scene v10samw6 
             with dissolve
@@ -108,8 +108,8 @@ label v10_autumn_announcement:
                 pause 0.75
         
         "Root for Nora":
-            $ ChloeLike -= 1
-            $ NoraLike += 1
+            $ chloeLike -= 1
+            $ noraLike += 1
             $ v10_cvn_cheer_nora
             scene v10samw6 
             with dissolve
