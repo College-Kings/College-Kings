@@ -5,8 +5,7 @@
 
 default lauren_bake_sale = False
 
-label v10_lauren_room
-
+label v10_lauren_room:
     scene v10lar1 # TPP Show MC knocking on Lauren's door.
     with dissolve
     
@@ -430,7 +429,7 @@ label v10_lauren_room
 
         la "Haha, yeah I'll think about it."
 
-        if lauren_bake_sale # If Lauren is doing bake sale
+        if lauren_bake_sale: # If Lauren is doing bake sale
             scene v10lar3b
             with dissolve
 
