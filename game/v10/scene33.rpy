@@ -311,7 +311,7 @@ label v10s33_deergirl11:
 
         "Arm Arm Pose":
 
-            scene v10cfrdg13 # TPP. Show MC looking at camera, right hand held out to right, mouth closed.
+            scene v10cfrdg14 # TPP. Show MC looking at camera, right hand held out to right, mouth closed.
             with dissolve
 
             pause 0.5
@@ -397,7 +397,7 @@ label v10s33_deergirl11:
             scene v10cfrdg13e # TPP. same 13, silly face with jazz hands
             with dissolve
 
-            pause 0.5
+            pause 0.75
         "Lean face cross":
             
             scene v10cfrdg13d # TPP. same 13, leant forward arms down.
@@ -408,7 +408,7 @@ label v10s33_deergirl11:
             scene v10cfrdg13c # TPP. same 13, Show mc leant back arms crossed, mouth closed
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v10cfrdg13f # TPP same 13c, show mc Bumping into perry. perry mouth open
             with dissolve            
