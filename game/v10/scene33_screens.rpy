@@ -254,13 +254,13 @@ screen v10s33_stagefromleft():
 
     # Background 
     if v10s33_riley and v10s33_toldChloe:
-        add "images/v10/scene 33/fr6stagefromleftchloeandnoraatmudwrestlingwithrileyatstage.webp")
+        add "images/v10/scene 33/fr6stagefromleftchloeandnoraatmudwrestlingwithrileyatstage.webp"
     if v10s33_riley and not v10s33_toldChloe:
-        add "images/v10/scene 33/fr6stagewithrileyatstage.webp")
+        add "images/v10/scene 33/fr6stagewithrileyatstage.webp"
     if not v10s33_riley and v10s33_toldChloe:
-        add "images/v10/scene 33/fr6stagefromleftchloeandnoraatmudwrestling.webp")
+        add "images/v10/scene 33/fr6stagefromleftchloeandnoraatmudwrestling.webp"
     if not v10s33_riley and not v10s33_toldChloe:
-        add "images/v10/scene 33/fr6stageleft.webp")
+        add "images/v10/scene 33/fr6stageleft.webp"
 
     # Thrift - Bottom
     imagebutton:
@@ -282,9 +282,9 @@ screen v10s33_stage():
 
     # Background
     if v10s33_riley:
-        add "images/v10/scene 33/fr6stagewithriley.webp")
+        add "images/v10/scene 33/fr6stagewithriley.webp"
     else:
-        add "images/v10/scene 33/fr6stage.webp")
+        add "images/v10/scene 33/fr6stage.webp"
 
     # Aubrey
     if not v10s33_riley:   
