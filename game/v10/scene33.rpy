@@ -3231,7 +3231,7 @@ label v10s33_riley2:
 
     aa "Yeah everything is fine now. My mom and dad actually moved her in with them until she recovers, but things are looking good."
 
-    scene v10cfrch3
+    scene v10cfrch3b
     with dissolve
 
     ch "Now that you're back man, you and [name] should play a game. First one to get one in is the Wolves new president. *Laughs*"
