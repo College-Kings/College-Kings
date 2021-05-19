@@ -16,17 +16,20 @@
 label v10_charity_freeroam:
     # -MC arrives at the charity event and prior to the freeroam we have an image and a dialog line from MC-
     scene ent7
-    with dissolve
+    with fade
 
     u "(Now this is an event!)"
+
     $ freeRoam = True
-    call screen v10s33_entrance
+
+    jump v10s33_autumn1
 
 label v10s33_autumn1:
 
     $ v10s33_autumn = True
 
     scene v10cfraut1a #FPP Show Autumn, Looking at mc, smile with stressed eyes, mouth closed
+    with dissolve
 
     u "Hey Autumn! This is really nice."
 
@@ -219,7 +222,7 @@ label v10s33_autumn1:
 
     u "See ya."
 
-    call screen v10s33_mudwrestling
+    call screen v10s33_entrance
 
     # -Transition to Scene 34-
 
