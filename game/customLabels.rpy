@@ -1,5 +1,5 @@
 
-label freeRoamSpokenToo(message="I should probably talk to someone else", backgroundImg, returnScreen):
-    scene expression "[backgroundImg]"
-    u "[message]"
+label freeRoamSpokenToo(backgroundImg, returnScreen):
+    scene expression backgroundImg
+    u "I should probably talk to someone else"
     $ renpy.call_screen(returnScreen)
