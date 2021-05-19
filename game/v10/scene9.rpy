@@ -142,7 +142,7 @@ label v10_leave_fight:
         
         pause 0.5
 
-        if mc_beat_imre: # RCS - MC is an Ape and won the fight
+        if v10_imre_win: # RCS - MC is an Ape and won the fight
             scene v10sraf4a # TPP. Same camera as v10sraf4. Show MC sitting on the bed in his room. MC looks proud, mouth closed.
             with dissolve
 
@@ -153,7 +153,7 @@ label v10_leave_fight:
 
             u "(Today really didn't go as planned... This is the worst fucking feeling.)"
 
-        if mc_beat_imre: # RCS - MC is an Ape and won the fight
+        if v10_imre_win: # RCS - MC is an Ape and won the fight
             scene v10sraf4c # TPP. Same camera as v10sraf4. Show MC sitting on bed in his room. MC reacts to someone knocking on his door.
             with dissolve
             pause 0.5
