@@ -77,12 +77,12 @@ label v10_aubrey_house:
     scene v10auh1d # FPP Same angle as v10auh1, Aubrey expressionless, mouth closed
     with dissolve
 
-    u "So...was the gym busy?"
+    u "So... was the gym busy?"
 
     scene v10auh1e # FPP Same angle and expression as v10auh1d, Aubrey mouth open
     with dissolve
 
-    au "It kinda was. Usually it’s really quiet around this time, but all of the sudden it was packed.I left early to keep from beefing with this one girl."
+    au "It kinda was. Usually it’s really quiet around this time, but all of the sudden it was packed. I left early to keep from beefing with this one girl."
 
     scene v10auh1d
     with dissolve
@@ -464,7 +464,7 @@ label v10_aubrey_house:
                 scene v10auh6a # FPP Same Camera as v10auh6, Show Nora, inside hallway of Chicks house, looking down toward MC's junk, Nora looks disgusted, Nora mouth closed
                 with dissolve
 
-                u "Nora it's not what it.."
+                u "Nora, it's not what it-"
 
                 scene v10auh6b # FPP Same angle and expression as v10auh6, Nora mouth open
                 with dissolve
@@ -718,7 +718,7 @@ label v10_aubrey_room:
     scene v10auh8a
     with dissolve
 
-    au "Absolutely! I love the girls...I've gotten to know them all pretty well. They really make me laugh sometimes."
+    au "Absolutely! I love the girls... I've gotten to know them all pretty well. They really make me laugh sometimes."
 
     scene v10auh8c # FPP Same angle as v10auh8, Aubrey fake crying with her fists near her eyes
     with dissolve
