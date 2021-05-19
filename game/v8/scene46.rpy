@@ -39,9 +39,9 @@ label v8_ending:
         scene v8send3a # TPP. Same camera as v8send3, MC checking his phone, looking confused.
         with dissolve
 
-        $ contact_Imre.newMessage("Dude, you see this shit on Kiwii?", queue=False)
-        $ contact_Imre.addReply("No, what?")
-        $ contact_Imre.newMessage("IDK, it's crazy")
+        $ contact_Imre.newMessage(_("Dude, you see this shit on Kiwii?"), queue=False)
+        $ contact_Imre.addReply(_("No, what?"))
+        $ contact_Imre.newMessage(_("IDK, it's crazy"))
 
         $ newKiwiiPost = KiwiiPost("Aubrey", "v8/red_square.webp", "[[image: red square]", numberLikes=renpy.random.randint(100, 200))
         # $ newKiwiiPost.addReply("???", numberLikes=999)
@@ -98,9 +98,9 @@ label v8_ending:
         with dissolve
         
 
-        $ contact_Ryan.newMessage("What the hell's happening on Kiwii?", queue=False)
-        $ contact_Ryan.addReply("I don't know. What is it?")
-        $ contact_Ryan.newMessage("Fuckin check it out man. Crazy shit")
+        $ contact_Ryan.newMessage(_("What the hell's happening on Kiwii?"), queue=False)
+        $ contact_Ryan.addReply(_("I don't know. What is it?"))
+        $ contact_Ryan.newMessage(_("Fuckin check it out man. Crazy shit"))
 
         $ newKiwiiPost = KiwiiPost("Aubrey", "v8/red_square.webp", "[[image: red square]", numberLikes=renpy.random.randint(100, 200))
         # $ newKiwiiPost.addReply("???", numberLikes=999)
