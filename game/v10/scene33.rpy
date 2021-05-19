@@ -2043,7 +2043,7 @@ label v10s33_deergirl21:
                         scene v10cfrfrli4b # FPP. Same as 4, nervous, mouth open.
                         with dissolve
 
-                        li "You didn't draw anything bad did you."
+                        li "You didn't draw anything bad did you?"
 
                         scene v10cfrfrli4c # FPP. Same as 4, nervous, mouth closed.
                         with dissolve
