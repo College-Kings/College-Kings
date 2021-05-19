@@ -543,6 +543,7 @@ label v10_amber_skatepark:
                 u "(Damn, that really just happened. That was crazy.)"
            
             "Shut her down":
+                $ v10_amber_awkward = True
                 scene v10sasp5e
                 with dissolve
 
@@ -837,6 +838,7 @@ label v10_amber_skatepark:
                             u "(Damn, that really just happened. That was crazy.)"
 
                         "Shut her down":
+                            $ v10_amber_awkward = True
                             scene v10sasp5e
                             with dissolve
 

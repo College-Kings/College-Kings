@@ -43,7 +43,8 @@ label v10s33_autumn1:
     scene v10cfraut1
     with dissolve
 
-    aut "Little bumps and bruises here and there, but for the most part it did. Our little thrift sale was a last minute decision so I had to stay up all night sorting through old clothes."
+    aut "Little bumps and bruises here and there, but for the most part it did."
+    aut "Our little thrift sale was a last minute decision so I had to stay up all night sorting through old clothes."
 
     scene v10cfraut1a
     with dissolve
@@ -223,7 +224,7 @@ label v10s33_autumn1:
     # -Transition to Scene 34-
 
 label v10s33_deergirl11:
-    $ v10s33_deergirl11 = True
+    $ v10s33_deergirl1 = True
     
     scene v10cfrdg11 # FPP. Show dg1, looking towards perry out of shot, mouth open
     dg1 "Haha, I don't think I've met anyone less coordinated. It's the dab, it's pretty simple."
@@ -1628,7 +1629,8 @@ label v10s33_deergirl21:
     scene v10cfrla1c
     with dissolve
 
-    u "Haha, yes I'm just playing around. I brought some money, but I'm not spending it on a cake. I'm not even hungry, I'd rather spend it on something a little bit more fun."
+    u "Haha, yes I'm just playing around. I brought some money, but I'm not spending it on a cake."
+    u "I'm not even hungry, I'd rather spend it on something a little bit more fun."
 
     scene v10cfrla1b
     with dissolve
@@ -2042,14 +2044,14 @@ label v10s33_deergirl21:
                         scene v10cfrfrli4b # FPP. Same as 4, nervous, mouth open.
                         with dissolve
 
-                        li "You didn't draw anything bad did you."
+                        li "You didn't draw anything bad did you?"
 
                         scene v10cfrfrli4c # FPP. Same as 4, nervous, mouth closed.
                         with dissolve
 
                         u "Of course not, you can trust me."
 
-                        scene v10cfrfrli4b
+                        scene v10cfrli4f
                         with dissolve
 
                         li "Alright [name]."
@@ -2554,7 +2556,7 @@ label v10s33_riley1:
 
     ri "Like I said, I'm a kind person. *Chuckles* Have you been to the dance stand?"
 
-    if v10s33_deergirl11 or v10s33_aubrey:
+    if v10s33_deergirl1 or v10s33_aubrey:
 
         scene v10cfrri2e
         with dissolve
@@ -2684,7 +2686,7 @@ label v10s33_riley2:
     ri "Never, let's do it. But we need more judges."
 
 
-    if v10s33_deergirl11:
+    if v10s33_deergirl1:
     ### ERROR: -If spoke to DG1 and PERRY ###
 
         scene v10cfrriau3b # FPP. same 3a, mouth closed
@@ -2765,12 +2767,12 @@ label v10s33_riley2:
 
             u "Riley you're up."
 
-            scene v10cfrriau9Other # FPP. Show Riley, on stage, mouth closed, stood normally.
+            scene v10cfrriauhat # Putting down/ picking up hat
             with dissolve
 
-            pause 0.5
+            pause 0.5            
 
-            scene v10cfrriauHat # Putting down/ picking up hat
+            scene v10cfrriau9other # FPP. Show Riley, on stage, mouth closed, stood normally.
             with dissolve
 
             pause 0.5
@@ -2780,10 +2782,10 @@ label v10s33_riley2:
 
             pause 0.5
 
-            scene v10cfrriau9b # FPP. Show Riley, on stage, mouth closed, like this https://static1.bigstockphoto.com/8/9/1/large2/198566380.jpg
-            with dissolve
+            # scene v10cfrriau9b # FPP. Show Riley, on stage, mouth closed, like this https://static1.bigstockphoto.com/8/9/1/large2/198566380.jpg
+            # with dissolve
 
-            pause 0.5
+            # pause 0.5
 
             scene v10cfrriau9c # FPP. Same 9b, now leant towards front leg, palms on floor.
             with dissolve
@@ -2805,7 +2807,7 @@ label v10s33_riley2:
 
             ri "The best dancers don't hold back."
 
-            scene v10cfr
+            scene v10cfrriau2a
             with dissolve
 
             au "True, that's why I'm about to win."
@@ -2912,7 +2914,7 @@ label v10s33_riley2:
 
     dg1 "Good job to both of you, but it's pretty obvious who won."
 
-    scene v10cfrriua9
+    scene v10cfrriau9
     with dissolve
 
     guyd "Yeah sorry, but it's pretty obvious."
@@ -2922,7 +2924,7 @@ label v10s33_riley2:
 
     dg1 "Riley."
 
-    scene v10cfrriua9
+    scene v10cfrriau9
     with dissolve
 
     guyd "Aubrey."
@@ -2940,7 +2942,7 @@ label v10s33_riley2:
 
             u "I gotta give it to Riley."
 
-            scene v10cfrriua9
+            scene v10cfrriau9
             with dissolve
 
             guyd "Guess a man knows what he likes."
@@ -3303,12 +3305,12 @@ label v10s33_riley2:
 
             u "Damnit."
 
-            scene v10cfrdg23a
+            scene v10cfrch2a
             with fade
 
             u "Okay, I'ma check out some other stations. I'll see you guys around."
 
-            scene v10cfrdg22
+            scene v10cfrch2
             with dissolve
 
             aa "See ya, good catching up."
@@ -3316,19 +3318,20 @@ label v10s33_riley2:
 
         "Don't play":
 
-            u "I don't want to hurt anyone's feelings over a game, I'm too good at this, it wouldn't be fair. Also, the presidency is all yours Chris. *Laughs*"
+            u "I don't want to hurt anyone's feelings over a game, I'm too good at this, it wouldn't be fair."
+            u "Also, the presidency is all yours Chris. *Laughs*"
 
             scene v10cfrch3
             with dissolve
 
             ch "Fair enough."
 
-            scene v10cfrdg23a
+            scene v10cfrch2a
             with dissolve
 
             u "I'll see you guys around."
 
-            scene v10cfr2
+            scene v10cfrch2
             with dissolve
 
             aa "See ya, good catching up."
@@ -3738,6 +3741,11 @@ label v10s33_emily1:
     $ v10s33_emily = True
 
     if not forgiveemily:
+        if v10s33_toldChloe:
+            scene fr6benchchloenoraatmudwrestling
+        else:
+            scene fr6bench
+
         u "(I don't feel like talking to her.)"
         
         call screen v10s33_bench
@@ -3983,7 +3991,11 @@ label v10s33_emily1:
 
 label v10s33_deergirl41:
 
-    scene # thrift screen
+    if v10s33_riley:
+        scene fr6thriftnoriley
+
+    else:
+        scene fr6thrift
 
     u "(I'd rather not get talked into buying one of these hats.)"
 

@@ -130,13 +130,13 @@ label sun_eve_room:
         if not laurenrs:
             play sound "sounds/vibrate.mp3"
             $ contact_Amber.newMessage(_("Hey u up?"), queue=False)
-            $ contact_Amber.addReply(_("Always for you ;)", "s19_reply30"))
+            $ contact_Amber.addReply(_("Always for you ;)"))
             $ contact_Amber.newMessage(_("That's what I was hoping to hear"))
-            $ contact_Amber.addReply(_("I can be even more up if you want..."), "s19_reply31")
+            $ contact_Amber.addReply(_("I can be even more up if you want..."))
             $ contact_Amber.newMessage(_("Really? Just like that?"))
-            $ contact_Amber.addReply(_("What can I say? You're hot"), "s19_reply32")
+            $ contact_Amber.addReply(_("What can I say? You're hot"))
             $ contact_Amber.newMessage(_("You're pretty hot yourself and I'm... thinking about things"))
-            $ contact_Amber.addReply(_("What kind of things? Same things I'm thinking? ;)"), "s19_reply33")
+            $ contact_Amber.addReply(_("What kind of things? Same things I'm thinking? ;)"))
             $ contact_Amber.newMessage(_("I think so"))
             $ contact_Amber.addReply(_("Wanna see what thinking about you has done to me?"), v8s19_reply1)
             $ contact_Amber.addReply(_("I look at your pic all the time...when I'm thinking about things"), v8s19_reply2)

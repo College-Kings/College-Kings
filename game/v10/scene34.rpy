@@ -87,8 +87,8 @@ label v10_autumn_announcement:
     with fade
     menu:
         "Root for Chloe":
-            $ ChloeLike += 1
-            $ NoraLike -= 1
+            $ chloeLike += 1
+            $ noraLike -= 1
             $ addPoint("bf")
             scene v10samw6 
             with dissolve
@@ -108,8 +108,8 @@ label v10_autumn_announcement:
                 pause 0.75
         
         "Root for Nora":
-            $ ChloeLike -= 1
-            $ NoraLike += 1
+            $ chloeLike -= 1
+            $ noraLike += 1
             $ v10_cvn_cheer_nora
             scene v10samw6 
             with dissolve
@@ -136,7 +136,7 @@ label v10_autumn_announcement:
         "Root for Emily":
             $ v10_cvn_cheer_emily = True
             $ forgiveemily = True
-            $ EmilyLike += 1
+            $ emilyLike += 1
             $ addPoint("bf")
             scene v10samw6a
             with dissolve
@@ -145,7 +145,7 @@ label v10_autumn_announcement:
 
         
         "Root for Aubrey":
-            $ AubreyLike += 1
+            $ aubreyLike += 1
             scene v10samw7 
             with dissolve
 
@@ -160,8 +160,8 @@ label v10_autumn_announcement:
     with fade
     menu:
         "Root for Amber":
-            $ AmberLike += 1
-            $ RileyLike -= 1
+            $ amberLike += 1
+            $ rileyLike -= 1
             $ v10_cvn_cheer_amber
 
             scene v10samw7 
@@ -177,8 +177,8 @@ label v10_autumn_announcement:
             u "*Laughs* Sure buddy."
         
         "Root for Riley":
-            $ AmberLike -= 1
-            $ RileyLike += 1
+            $ amberLike -= 1
+            $ rileyLike += 1
             $ addPoint("bf")
             scene v10samw6b
             with dissolve
