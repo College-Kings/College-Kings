@@ -125,7 +125,7 @@ label v10_wolves_redec:
                 scene v10swhr7b # FPP. Show Perry in MC's under construction room. Perry has a slight embarrassed expression, mouth closed.
                 with dissolve
                 
-                u "Embarassing? What's up?"
+                u "Embarrassing? What's up?"
 
                 scene v10swhr7a
                 with dissolve
@@ -383,12 +383,12 @@ label v10_wolves_redec:
                 scene v10swhr7a
                 with dissolve
 
-                guyd "I was waiting for you to bring that up. It's kind of embarassing, man."
+                guyd "I was waiting for you to bring that up. It's kind of embarrassing, man."
 
                 scene v10swhr7b
                 with dissolve
 
-                u "Embarassing? How?"
+                u "Embarrassing? How?"
 
                 scene v10swhr7a
                 with dissolve

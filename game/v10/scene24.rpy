@@ -28,7 +28,7 @@ label v10_lauren_room:
 
     u "Hey Lauren."
 
-    scene v10lar3 # FPP MC and Lauren sitting on her bed. Show Lauren in her room, Lauren looking slightly embarassed, mouth open
+    scene v10lar3 # FPP MC and Lauren sitting on her bed. Show Lauren in her room, Lauren looking slightly embarrassed, mouth open
     with fade
 
     la "Okay I'm gonna confess, I had a little bit of a motive in having you come over."
@@ -268,7 +268,7 @@ label v10_lauren_room:
             "Suck her tits":
                 # MC starts kissing around her boobs and nipples. Ensure this scene is detailed and long, kissing all over her upper body
                 image v10lautk = Movie(play="images/v10/Scene 24/v10lautk.webm", loop=True, image="images/v10/Scene 24/v10lautkStart.webp", start_image="images/v10/Scene 24/v10lautkStart.webp") # TPP MC tenderly kissing Lauren on upper chest, holding her breast and playing with her nipple
-                image v10lautkf = Movie(play="images/v10/Scene 24/v10lautkf.webm", loop=True, image="iamges/v10/Scene 24/v10lautkStart.webp", start_image="iamges/v10/Scene 24/v10lautkStart.webp")
+                image v10lautkf = Movie(play="images/v10/Scene 24/v10lautkf.webm", loop=True, image="images/v10/Scene 24/v10lautkStart.webp", start_image="images/v10/Scene 24/v10lautkStart.webp")
 
                 scene v10lautk # MC starts kissing Lauren's upper chest while teasing her breast
                 with dissolve

@@ -12,7 +12,7 @@ label v10_mc_vs_imre_fight:
     scene v10mvi1a # FPP. Same camera as v10mvi1, Show Ryan and Grayson near ring,ryan mouth closed Grayson mouth closed
     with dissolve
 
-    u "Just beacuse we're-"
+    u "Just because we're-"
 
     scene v10mvi1b # FPP. Same camera as v10mvr1, Show ryan and Grayson near ring, ryan mouth closed Grayson mouth open
     with dissolve
@@ -22,7 +22,7 @@ label v10_mc_vs_imre_fight:
     scene v10mvr2 # Ignore this render, reused from scene 6
     with dissolve
 
-    jo "*Loud whipser* Hey, I got some plans tonight. How much longer is-"
+    jo "*Loud whisper* Hey, I got some plans tonight. How much longer is-"
 
     scene v10mvi1b
     with dissolve

@@ -94,7 +94,7 @@ label v10_chloe_vs_nora:
                         scene v10cvn9
                         with dissolve
 
-                        u "I think i'll leave her to it."
+                        u "I think I'll leave her to it."
 
             else:       
                 scene v10cvn9b # fpp same 9,big smile, mouth open

@@ -2244,7 +2244,7 @@ label v10s33_deergirl21:
                         "Invite Ms. Rose To Europe":
                             $ v10s33_inv_rose_europe = True
 
-                            u "I wanted to ask you Mr.Rose, are you planning on going on the Europe trip?"
+                            u "I wanted to ask you Mr. Rose, are you planning on going on the Europe trip?"
 
                             scene v10cfrcfrro1c
                             with dissolve
@@ -2254,7 +2254,7 @@ label v10s33_deergirl21:
                             scene v10cfrcfrro1d
                             with dissolve
 
-                            ro "Haha, Mr.Lee and I both may be going as chaperones. Nora and I have spoken about the trip quite a bit. She really wants to go."
+                            ro "Haha, Mr. Lee and I both may be going as chaperones. Nora and I have spoken about the trip quite a bit. She really wants to go."
 
                             scene v10cfrcfrro1e
                             with dissolve                        
@@ -3693,7 +3693,7 @@ label v10s33_riley2:
             u "Alright man, I'll leave you alone."
 
         else:
-            u "Hey man,you good?"
+            u "Hey man, you good?"
 
             scene v10cfrry5a 
             with dissolve

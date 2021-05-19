@@ -185,7 +185,7 @@ label v10_leave_fight:
                     scene v10sraf6c # FPP. Same camera as v10sraf6. Show Grayson, Cameron and Ryan. All smiling, Cameron mouth open.
                     with dissolve
 
-                    ca "Actually turning into a fighter... not a horible performance today."
+                    ca "Actually turning into a fighter... not a horrible performance today."
 
                     scene v10sraf6d # FPP. Same camera as v10sraf6. Show Grayson, Cameron and Ryan. All smiling, all mouths closed.
                     with dissolve
