@@ -9,7 +9,7 @@ default v10_cvn_cheer_amber = False
 label v10_autumn_announcement:
     
     scene v10samw1 # FPP. Show Autumn standing near the mud wrestling pool, smiling, mouth open.
-    with fade
+    with dissolve
 
     aut "Alright everyone, if you could all gather around."
 
