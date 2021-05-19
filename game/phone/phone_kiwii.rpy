@@ -61,7 +61,7 @@ init python:
             return reply
 
         def selectedReply(self, reply):
-            kiwiiPost.addComment("MC", reply.message, numberLikes=reply.numberLikes, mentions=reply.mentions)
+            self.addComment("MC", reply.message, numberLikes=reply.numberLikes, mentions=reply.mentions)
             self.sentComments[-1].reply = reply
             self.sentComments[-1].replies = []
 
@@ -137,7 +137,7 @@ init python:
         total = 0
 
         for post in kiwiiPosts:
-            for comment in post.comments:
+            for comment in post.sentComments:
                 if comment.user == "MC":
                     total += comment.numberLikes
             if post.user == "MC":

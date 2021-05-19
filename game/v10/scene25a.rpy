@@ -285,7 +285,7 @@ label v10_sam_kitchen:
     scene v10skt7 # FPP. MC and samantha now sat on sofa. Show Samantha slight smile, eyes closed, mouth closed
     with dissolve
 
-    if v10_sam_cock:
+    if makeSamCock:
         u "(Fuck, I put way too much alcohol in her cocktail...)"
 
     else:

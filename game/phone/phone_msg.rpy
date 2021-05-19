@@ -113,8 +113,12 @@ init python:
 
         def getMessage(self, message):
             for msg in self.sentMessages:
-                if message == msg.message:
-                    return msg
+                try:
+                    if message == msg.message:
+                        return msg
+                except AttributeError:
+                    if message == msg.image:
+                        return msg
             return False
 
     class Message:

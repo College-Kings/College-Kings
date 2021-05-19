@@ -187,7 +187,6 @@ screen v6_fr3middleroom():
     add "images/fr3middleroom.webp" # location picture
 
     imagebutton: # Go Kitchen2
-        ypos 0
         xpos 50
         idle "images/fr3middleroomleftblank.webp"
         hover "images/fr3middleroomleft.webp"
@@ -201,7 +200,6 @@ screen v6_fr3middleroom():
         action Jump("v6_fr3dsbathroom")
 
     imagebutton: # Go garage
-        ypos 0
         xpos 1210
         idle "images/fr3middleroomrightblank.webp"
         hover "images/fr3middleroomright.webp"
