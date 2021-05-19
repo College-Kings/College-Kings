@@ -993,7 +993,7 @@ label v10cfr33_deergirl11:
     call screen v10cfr33_stage
 
 label v10cfr33_chloe1:
-    $ v10cfr33_chloe = true
+    $ v10cfr33_chloe = True
     if chloemad:
 
         scene v10cfrcl1 # FPP. Show Chloe, mouth closed
