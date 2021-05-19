@@ -2593,7 +2593,7 @@ label v10s33_riley1:
     ### ERROR: -If MC speaks to Riley again ###
 label v10s33_riley2:
 
-    $ v10s33_riley2 = True
+    $ v10s33_aubreyriley = True
     scene v10cfrriau1 # FPP. Show Riley and aubrey, Riley mouth open
     with dissolve
 
