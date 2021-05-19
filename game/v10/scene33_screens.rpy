@@ -53,7 +53,7 @@ screen v10s33_cakestatue():
     # Lauren - Bake sale
     if v10s33_laurenBakeSale:
         imagebutton:
-            pos (0, 0)
+            pos (1579, 324)
             idle "images/v10/scene 33/fr6laurenbake.webp"
             hover "images/v10/scene 33/fr6laurenbakehover.webp"
             if not v10s33_lauren:
@@ -64,7 +64,7 @@ screen v10s33_cakestatue():
     # Lauren - Statue
     else:
         imagebutton:
-            pos (0, 0)
+            pos (1182, 139)
             idle "images/v10/scene 33/fr6laurenstatue.webp"
             hover "images/v10/scene 33/fr6laurenstatuehover.webp"
             if not v10s33_lauren:
@@ -474,7 +474,7 @@ screen v10s33_mudwrestling():
 
     # Amber
     imagebutton: 
-        pos (0, 0)
+        pos (1607, 320)
         idle "images/v10/scene 33/fr6amber.webp"
         hover "images/v10/scene 33/fr6amberhover.webp"
         if not v10s33_amber:
@@ -484,7 +484,7 @@ screen v10s33_mudwrestling():
     
     # Autumn
     imagebutton: 
-        pos (0, 0)
+        pos (1207, 299)
         idle "images/v10/scene 33/fr6autumn.webp"
         hover "images/v10/scene 33/fr6autumnhover.webp"
         if not v10s33_autumn:
