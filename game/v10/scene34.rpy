@@ -160,8 +160,8 @@ label v10_autumn_announcement:
     with fade
     menu:
         "Root for Amber":
-            $ AmberLike += 1
-            $ RileyLike -= 1
+            $ amberLike += 1
+            $ rileyLike -= 1
             $ v10_cvn_cheer_amber
 
             scene v10samw7 
@@ -177,8 +177,8 @@ label v10_autumn_announcement:
             u "*Laughs* Sure buddy."
         
         "Root for Riley":
-            $ AmberLike -= 1
-            $ RileyLike += 1
+            $ amberLike -= 1
+            $ rileyLike += 1
             $ addPoint("bf")
             scene v10samw6b
             with dissolve
