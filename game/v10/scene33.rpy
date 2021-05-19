@@ -3190,8 +3190,10 @@ label v10s33_riley2:
     label v10s33_chris1:
 
     if not joinwolves:
-
-        scene # bagtoss screen
+        if v10s33_toldChloe:
+            scene fr6bagtossnonora
+        else:
+            scene fr6bagtoss
         
         u "I should probably not be seen talking to the Wolves' frat leaders."
 
