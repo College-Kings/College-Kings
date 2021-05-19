@@ -3000,7 +3000,7 @@ label v10s33_riley2:
 
             u "I gotta give it to Aubrey."
 
-            scene v10cfrriua9
+            scene v10cfrriau9
             with dissolve
 
             guyd "Guess a man knows what he likes."
