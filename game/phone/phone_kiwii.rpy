@@ -131,9 +131,9 @@ init python:
             self.message = message
             self.func = func
 
-            if kct == "popular": self.numberLikes = round(numberLikes * 1.5)
-            elif kct == "confident": self.numberLikes = round(numberLikes * 1.2)
-            else: self.numberLikes = round(numberLikes * 1.0)
+            if kct == "popular": self.numberLikes = int(round(numberLikes * 1.5))
+            elif kct == "confident": self.numberLikes = int(round(numberLikes * 1.2))
+            else: self.numberLikes = int(round(numberLikes * 1.0))
 
             if isinstance(mentions, basestring): self.mentions = [mentions]
             elif isinstance(mentions, list): self.mentions = mentions
