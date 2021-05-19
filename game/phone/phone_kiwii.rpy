@@ -80,12 +80,18 @@ init python:
             except IndexError: pass
 
         def getUsername(self):
-            self.username = kiwiiUsers[self.user]["username"]
-            return self.username
+            try: 
+                self.username = kiwiiUsers[self.user]["username"]
+                return self.username
+            except KeyError: 
+                return None
 
         def getProfilePicture(self):
-            self.profilePicture = kiwiiUsers[self.user]["profilePicture"]
-            return self.profilePicture
+            try:
+                self.profilePicture = kiwiiUsers[self.user]["profilePicture"]
+                return self.profilePicture
+            except KeyError:
+                return None
 
         def getMessage(self):
             usernames = [kiwiiUsers[mention]["username"] for mention in self.mentions]
