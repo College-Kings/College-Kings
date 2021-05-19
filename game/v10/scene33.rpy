@@ -223,7 +223,7 @@ label v10s33_autumn1:
     # -Transition to Scene 34-
 
 label v10s33_deergirl11:
-    $ v10s33_deergirl11 = True
+    $ v10s33_deergirl1 = True
     
     scene v10cfrdg11 # FPP. Show dg1, looking towards perry out of shot, mouth open
     dg1 "Haha, I don't think I've met anyone less coordinated. It's the dab, it's pretty simple."
@@ -2684,7 +2684,7 @@ label v10s33_riley2:
     ri "Never, let's do it. But we need more judges."
 
 
-    if v10s33_deergirl11:
+    if v10s33_deergirl1:
     ### ERROR: -If spoke to DG1 and PERRY ###
 
         scene v10cfrriau3b # FPP. same 3a, mouth closed
@@ -2765,12 +2765,12 @@ label v10s33_riley2:
 
             u "Riley you're up."
 
-            scene v10cfrriau9Other # FPP. Show Riley, on stage, mouth closed, stood normally.
+            scene v10cfrriauhat # Putting down/ picking up hat
             with dissolve
 
-            pause 0.5
+            pause 0.5            
 
-            scene v10cfrriauHat # Putting down/ picking up hat
+            scene v10cfrriau9other # FPP. Show Riley, on stage, mouth closed, stood normally.
             with dissolve
 
             pause 0.5
@@ -2780,10 +2780,10 @@ label v10s33_riley2:
 
             pause 0.5
 
-            scene v10cfrriau9b # FPP. Show Riley, on stage, mouth closed, like this https://static1.bigstockphoto.com/8/9/1/large2/198566380.jpg
-            with dissolve
+            # scene v10cfrriau9b # FPP. Show Riley, on stage, mouth closed, like this https://static1.bigstockphoto.com/8/9/1/large2/198566380.jpg
+            # with dissolve
 
-            pause 0.5
+            # pause 0.5
 
             scene v10cfrriau9c # FPP. Same 9b, now leant towards front leg, palms on floor.
             with dissolve
@@ -2805,7 +2805,7 @@ label v10s33_riley2:
 
             ri "The best dancers don't hold back."
 
-            scene v10cfr
+            scene v10cfrriau2a
             with dissolve
 
             au "True, that's why I'm about to win."
@@ -2912,7 +2912,7 @@ label v10s33_riley2:
 
     dg1 "Good job to both of you, but it's pretty obvious who won."
 
-    scene v10cfrriua9
+    scene v10cfrriau9
     with dissolve
 
     guyd "Yeah sorry, but it's pretty obvious."
@@ -2922,7 +2922,7 @@ label v10s33_riley2:
 
     dg1 "Riley."
 
-    scene v10cfrriua9
+    scene v10cfrriau9
     with dissolve
 
     guyd "Aubrey."
@@ -2940,7 +2940,7 @@ label v10s33_riley2:
 
             u "I gotta give it to Riley."
 
-            scene v10cfrriua9
+            scene v10cfrriau9
             with dissolve
 
             guyd "Guess a man knows what he likes."
