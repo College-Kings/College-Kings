@@ -2504,7 +2504,6 @@ label v10s33_riley1:
     ri "Now this I can work with! What do you think?"
 
     menu:
-
         "It Looks Good":
             $ v10_ri_hat_good = True
             scene v10cfrri2e # FPP. same 2, cheeky smile,wearing a hat from here on, mouth closed
