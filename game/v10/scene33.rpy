@@ -1737,6 +1737,8 @@ label v10s33_deergirl21:
 
     label v10s33_laurenstatue1:
 
+    $ v10s33_lauren = True
+
     scene v10cfrla3 #FPP, lauren as statue, not looking at mc, mouth closed
     with dissolve
 
