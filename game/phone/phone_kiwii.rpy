@@ -74,7 +74,7 @@ init python:
             # Send next queued message(s)
             try:
                 while True:
-                    self.sentMessages.append(self.pendingMessages.pop(0))
+                    self.sentComments.append(self.pendingComments.pop(0))
                     if self.getReplies():
                         break
             except IndexError: pass

@@ -196,7 +196,7 @@ label v9_emily_dorm:
     scene v9emi11
     with dissolve
     
-    if emilyarcade:
+    if emilyArcade:
         em "Not since I kicked your ass at the arcade!"
 
     scene v9emi11a
