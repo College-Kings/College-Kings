@@ -6,7 +6,7 @@
 init python:
     def v9s38_reply1():
         contact_Lindsey.newMessage(_("Great. See ya soon"))
-        setattr(store, hangOutWithLindsey, True)
+        setattr(store, "hangOutWithLindsey", True)
 
     def v9s38_reply2():
         contact_Lindsey.newMessage(_(":("))
