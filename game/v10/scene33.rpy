@@ -15,7 +15,7 @@
 
 label v10_charity_freeroam:
     # -MC arrives at the charity event and prior to the freeroam we have an image and a dialog line from MC-
-    scene v10cfr1
+    scene ent3
     with dissolve
 
     u "(Now this is an event!)"
@@ -3737,6 +3737,8 @@ label v10cfr33_riley2:
     label v10cfr33_emily1:
     
     if not forgiveemily:
+        scene #
+
         u "(I don't feel like talking to her.)"
 
         call screen v10cfr33_bench
