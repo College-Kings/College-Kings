@@ -269,7 +269,7 @@ label v10_emily_course:
                 scene v10semi7
                 with dissolve
 
-                em "What are you...what are you doing here? I'm a little surprised to see you."
+                em "What are you... what are you doing here? I'm a little surprised to see you."
 
                 scene v10semi7a
                 with dissolve
@@ -279,7 +279,7 @@ label v10_emily_course:
                 scene v10semi7
                 with dissolve
 
-                em "Oh well...I've been trying out a lot of new things recently, a friend suggested this course so I'm trying it out."
+                em "Oh well... I've been trying out a lot of new things recently, a friend suggested this course so I'm trying it out."
 
                 scene v10semi7a
                 with dissolve

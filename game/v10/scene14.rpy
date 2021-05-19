@@ -57,12 +57,12 @@ label v10_14sam:
     scene v10ssap2
     with dissolve
 
-    u "*chuckles* Really? I didn't notice."
+    u "*Chuckles* Really? I didn't notice."
 
     scene v10ssap2b # FPP. Same camera as v10ssap2. Show Sam, smiling, mouth open.
     with dissolve
 
-    sam "*laughs* Yeah, it’s very subtle. But yeah, he's always been a hothead so it makes sense to me for a guy like him to fight and be in a frat like this, but you're not like him and yet you're in this frat too."
+    sam "*Laughs* Yeah, it’s very subtle. But yeah, he's always been a hothead so it makes sense to me for a guy like him to fight and be in a frat like this, but you're not like him and yet you're in this frat too."
 
     scene v10ssap2c # FPP. Same camera as v10ssap2. Show Sam, smiling, mouth closed.
     with dissolve
@@ -123,12 +123,12 @@ label v10_14sam:
             scene v10ssap2c
             with dissolve
 
-            u "Not quite. He announced that he was gonna be one of the chaperones for our senior prom and I knew his daughter just happened to be going to our school and graduating with me. Sooo... long story short, I asked his daughter to prom and - after some very painful back and forth-  she said yes. We danced all night and I tried to give him as much eye contact as I possibly could, it was so funny. To be honest, the girl really wasn't keen on it once she found out why I had asked her, but... totally worth it. *laughs*"
+            u "Not quite. He announced that he was gonna be one of the chaperones for our senior prom and I knew his daughter just happened to be going to our school and graduating with me. Sooo... long story short, I asked his daughter to prom and - after some very painful back and forth-  she said yes. We danced all night and I tried to give him as much eye contact as I possibly could, it was so funny. To be honest, the girl really wasn't keen on it once she found out why I had asked her, but... totally worth it. *Laughs*"
 
             scene v10ssap2b
             with dissolve
 
-            sam "*laughs* Remind me to never be a part of your revenge plans."
+            sam "*Laughs* Remind me to never be a part of your revenge plans."
 
             scene v10ssap2c
             with dissolve
@@ -141,7 +141,7 @@ label v10_14sam:
             scene v10ssap2c
             with dissolve
 
-            u "*chuckles* What's that supposed to mean?"
+            u "*Chuckles* What's that supposed to mean?"
 
             scene v10ssap2b
             with dissolve
@@ -156,7 +156,7 @@ label v10_14sam:
             scene v10ssap2b
             with dissolve
 
-            sam "*laughs* Was that your senior quote or something?"
+            sam "*Laughs* Was that your senior quote or something?"
 
             scene v10ssap2c
             with dissolve
@@ -166,7 +166,7 @@ label v10_14sam:
             scene v10ssap2b
             with dissolve
 
-            sam "*laughs* So you were the \"can I copy off of you\" kinda guy?"
+            sam "*Laughs* So you were the \"can I copy off of you\" kinda guy?"
 
             scene v10ssap2c
             with dissolve
@@ -227,7 +227,7 @@ label v10_14sam:
             scene v10ssap1e # TPP. Same camera as v10ssap1. Show MC and Sam sitting on the couch. Camera is standing nearby, angry expression, mouth closed. Sam is smiling, mouth open. MC is smiling, mouth closed.
             with dissolve
 
-            sam "*laughs*"
+            sam "*Laughs*"
 
             scene v10ssap1f # TPP. Same camera as v10ssap1. Show MC and Sam sitting on the couch. Camera is standing nearby, angry expression, mouth open. Sam looks pissed, mouth closed. MC has a normal expression, mouth closed.
             with dissolve
@@ -242,7 +242,7 @@ label v10_14sam:
             scene v10ssap1f 
             with dissolve
 
-            ca "*grunts*"
+            ca "*Grunts*"
 
             scene v10ssap1h # TPP. Same camera as v10ssap1. Show MC and Sam sitting on the couch. Camera is walking away, angry expression, mouth closed. Sam looks annoyed, mouth closed. MC has a normal expression, mouth closed.
             with dissolve
@@ -257,7 +257,7 @@ label v10_14sam:
             scene v10ssap2b
             with dissolve
 
-            sam "*chuckles* Oh shut up. And just so we're clear no one is calling dibs on me. I'm not some leftover lasagna."
+            sam "*Chuckles* Oh shut up. And just so we're clear no one is calling dibs on me. I'm not some leftover lasagna."
 
             scene v10ssap2c
             with dissolve
@@ -277,7 +277,7 @@ label v10_14sam:
             scene v10ssap2b
             with dissolve
 
-            sam "*laughs*"
+            sam "*Laughs*"
 
             scene v10ssap1i # TPP. Same camera as v10ssap1. Show MC and Sam sitting on the couch. Sam starts to stand up from the couch. Mouths closed, normal expressions.
             with dissolve

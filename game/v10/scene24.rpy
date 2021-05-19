@@ -156,7 +156,7 @@ label v10_lauren_room:
     scene v10lar3a
     with dissolve
 
-    u "Why not?  *Laughs*"
+    u "Why not? *Laughs*"
 
     scene v10lar3d
     with dissolve
@@ -227,12 +227,12 @@ label v10_lauren_room:
         scene v10lar6 # FPP Show Lauren's face close up from below, as if pinned underneath her, Lauren with a big smile, mouth closed
         with dissolve 
 
-        u "Oh no, you're too strong, I give up *laughs* ."
+        u "Oh no, you're too strong, I give up. *Laughs*"
 
         scene v10lar6a # FPP Same angle and expression as v10lar6, Lauren mouth open
         with dissolve
 
-        la "*laughs*"
+        la "*Laughs*"
 
         scene v10lar6b # FPP Same angle as v10lar6, Lauren with a seductive look, mouth closed
         with dissolve
@@ -247,7 +247,7 @@ label v10_lauren_room:
         scene v10lar7 # TPP Show Lauren on MC's lap facing him, MC arms around her waist, Lauren eyes closed and mouth open
         with dissolve
 
-        la "*moans*"
+        la "*Moans*"
 
         scene v10lar7a # TPP Same angle as v10lar7, Lauren with her arms up while MC removes her shirt while they kiss
         with dissolve
@@ -298,7 +298,7 @@ label v10_lauren_room:
                     scene v10lar7e # TPP Same angle as v10lar7, MC smiling, Lauren looks shy but happy, mouth open
                     with dissolve
 
-                    la "That was...fun."
+                    la "That was... fun."
 
                     scene v10lar8 # FPP Show Lauren, up close, topless, smiling with mouth closed
                     with dissolve
@@ -314,7 +314,7 @@ label v10_lauren_room:
                     scene v10lar3b
                     with fade
 
-                    la "I always enjoy spending time with you. With you I'm just...comfortable."
+                    la "I always enjoy spending time with you. With you I'm just... comfortable."
 
                     scene v10lar3c
                     with dissolve
@@ -341,7 +341,7 @@ label v10_lauren_room:
                     scene v10lar3
                     with dissolve
 
-                    la "It's fine, I'd just rather move...slower."
+                    la "It's fine, I'd just rather move... slower."
 
                     scene v10lar3a
                     with dissolve
@@ -351,7 +351,7 @@ label v10_lauren_room:
                     scene v10lar3
                     with dissolve
 
-                    la "All of my friends were a bit more...experienced before coming to SVC. Kinda wish I would've been too."
+                    la "All of my friends were a bit more... experienced before coming to SVC. Kinda wish I would've been too."
 
                     scene v10lar3c
                     with dissolve
@@ -374,7 +374,7 @@ label v10_lauren_room:
                 scene v10lar7e
                 with dissolve
 
-                la "That was...fun."
+                la "That was... fun."
 
                 scene v10lar8
                 with dissolve
@@ -391,7 +391,7 @@ label v10_lauren_room:
                 scene v10lar3b
                 with fade
 
-                la "I always enjoy spending time with you. With you I'm just...comfortable."
+                la "I always enjoy spending time with you. With you I'm just... comfortable."
 
                 scene v10lar3c
                 with dissolve

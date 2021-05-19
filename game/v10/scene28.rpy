@@ -31,12 +31,12 @@ label v10_talk_nora:
     scene v10hal1a
     with dissolve
 
-    no "An abroad trip is required for him to graduate. Otherwise he wouldn't be going, so I'm not too sure if I'm really that happy about him coming. I'm really looking forward to this trip and I don't want...\"us\" ruining it."
+    no "An abroad trip is required for him to graduate. Otherwise he wouldn't be going, so I'm not too sure if I'm really that happy about him coming. I'm really looking forward to this trip and I don't want... \"us\" ruining it."
 
     scene v10hal1
     with dissolve
 
-    u "Well I'll be there to make sure it's fun. *Chuckles* Where all are we going?"
+    u "Well I'll be there to make sure it's fun. *Chuckles* Where are we all going?"
 
     scene v10hal1a
     with dissolve
@@ -120,14 +120,14 @@ label v10_talk_nora:
         scene v10hal1
         with dissolve
 
-        u "I get that.."
+        u "I get that..."
     menu:
         "Help Nora":
             $ v10_help_nora_freeroam = True
 
             scene v10hal1
             with dissolve
-            u "The charity event is coming up tomorrow, I could try and find some people to go to."
+            u "The charity event is coming up tomorrow, I could try and find some people to go too."
 
             scene v10hal1b
             with dissolve

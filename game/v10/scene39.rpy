@@ -123,7 +123,7 @@ label v10_riley_walk:
     scene v10srwh3
     with dissolve
 
-    ri "Oh oh, you're gonna think this is hilarious. I was walking by the win a date booth right, and I saw Mr.Lee and Ms. Rose talking all excited so I listened for a little bit."
+    ri "Oh oh, you're gonna think this is hilarious. I was walking by the win a date booth right, and I saw Mr. Lee and Ms. Rose talking all excited so I listened for a little bit."
     
     ri "Did you know Mr. Lee ran for Mayor a few years ago?"
 
@@ -140,7 +140,7 @@ label v10_riley_walk:
     scene v10srwh3a
     with dissolve
 
-    u "I bet Ms.Rose got a kick out of that."
+    u "I bet Ms. Rose got a kick out of that."
 
     scene v10srwh3
     with dissolve
@@ -150,7 +150,7 @@ label v10_riley_walk:
     scene v10srwh3a
     with dissolve
 
-    u "As much as Cameron teases him, Mr.Lee could use a friend. *Chuckles*"
+    u "As much as Cameron teases him, Mr. Lee could use a friend. *Chuckles*"
 
     scene v10srwh3
     with dissolve

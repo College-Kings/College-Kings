@@ -41,7 +41,7 @@ label v10_chloe_hallway:
             "Cute":
                 $ addPoint("bf")
 
-                u "I'd say cute fits better.."
+                u "I'd say cute fits better..."
 
                 scene v10such3a
                 with dissolve
@@ -65,7 +65,7 @@ label v10_chloe_hallway:
                     scene v10such3d # FPP. Same as 3, aubrey smile, chloe awkward smile, Chloe mouth open.
                     with dissolve
 
-                    cl "Uhm...thanks."
+                    cl "Uhm... thanks."
 
                     scene v10such3e # FPP. Same as 3, aubrey smile, chloe awkward smile, Aubrey mouth open.
                     with dissolve
@@ -85,7 +85,7 @@ label v10_chloe_hallway:
                             $ addPoint("bf")
                             $ chloeLike += 1
 
-                            u "So uhm.. how have you been?"
+                            u "So uhm... how have you been?"
 
                             scene v10such5a # FPP. Same as 5, neutral, mouth open.
                             with dissolve
@@ -100,7 +100,7 @@ label v10_chloe_hallway:
                             scene v10such5a
                             with dissolve
 
-                            cl "Do you remember that time we uhm...played volleyball?"
+                            cl "Do you remember that time we uhm... played volleyball?"
 
                             scene v10such5
                             with dissolve
@@ -143,10 +143,10 @@ label v10_chloe_hallway:
                                     scene v10such5a
                                     with dissolve
 
-                                    cl "Oh, yeah okay...no worries. Guess I'll see you around then."
+                                    cl "Oh, yeah okay... no worries. Guess I'll see you around then."
 
                         "Leave":
-                            u "I should probably go to. Uhm' nice seeing you."
+                            u "I should probably go too. Uhm nice seeing you."
 
                             scene v10such5a
                             with dissolve
@@ -297,7 +297,7 @@ label v10_chloe_hallway:
                 scene v10such5
                 with dissolve
 
-                cl "Oh, yeah okay...no worries. Guess I'll see you around then."
+                cl "Oh, yeah okay... no worries. Guess I'll see you around then."
 
         scene v10such4d # TPP. Same as 4, Chloe walking away, MC watching her, Aubrey not in view.
         with dissolve

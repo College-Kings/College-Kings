@@ -16,7 +16,7 @@ label v10_aubrey_house:
         scene v10auh1a # FPP Same angle as v10auh1, Aubrey with slight smile and eyebrow raised, mouth open
         with dissolve
         
-        au "Just walking me home, huh?  No ulterior motive?"
+        au "Just walking me home, huh? No ulterior motive?"
 
         menu:
             "Other motive":
@@ -51,7 +51,7 @@ label v10_aubrey_house:
                 scene v10auh1a
                 with dissolve
 
-                au "Oh, that's too bad. I was hoping for just a little more. *laughs*"
+                au "Oh, that's too bad. I was hoping for just a little more. *Laughs*"
 
                 scene v10auh1b
                 with dissolve
@@ -99,12 +99,12 @@ label v10_aubrey_house:
     scene v10auh1
     with dissolve
 
-    u "How is she gonna be upset with you? You're not the one that cheated, he did *laughs*"
+    u "How is she gonna be upset with you? You're not the one that cheated, he did. *Laughs*"
 
     scene v10auh1c
     with dissolve
 
-    au "That's exactly what I told her. It’s not my fault your boyfriend has to stray cause you can’t please him in bed... *laughs*"
+    au "That's exactly what I told her. It’s not my fault your boyfriend has to stray cause you can’t please him in bed... *Laughs*"
 
     scene v10auh1b
     with dissolve
@@ -188,7 +188,7 @@ label v10_aubrey_house:
     scene v10auh1a
     with dissolve
 
-    au "*laughs* I didn't. Don't worry, you may get a chance to meet her soon. I'm pretty sure she's coming to visit."
+    au "*Laughs* I didn't. Don't worry, you may get a chance to meet her soon. I'm pretty sure she's coming to visit."
 
     scene v10auh1d
     with dissolve
@@ -409,7 +409,7 @@ label v10_aubrey_house:
 
                 u "Damn this feels good!"
 
-                au "*moaning*"
+                au "*Moaning*"
 
                 scene v10aubll # Fades to MC bracing Aubrey against him in standing missionary
                 with dissolve
@@ -425,7 +425,7 @@ label v10_aubrey_house:
 
                 au "Faster, [name]!"
 
-                au "*moaning*"
+                au "*Moaning*"
 
                 scene v10aubfa # Aubrey gets on her knees in front MC while he's standing to finish him off
                 with dissolve
@@ -439,7 +439,7 @@ label v10_aubrey_house:
 
                 au "Yes [name], cum on my face!"
 
-                au "*laughs* And scene."
+                au "*Laughs* And scene."
 
                 scene v10aubfa1 # FPP. camera looking down at Aubrey kneeling, Face covered in cum, mouth closed
                 with dissolve
@@ -515,7 +515,7 @@ label v10_aubrey_house:
                 scene v10auh2e # Same angle as v10auh2d, Aubrey mouth closed
                 with dissolve
 
-                u "*laughs* You won't believe what just happened!"
+                u "*Laughs* You won't believe what just happened!"
 
                 jump v10_aubrey_room
 
@@ -528,7 +528,7 @@ label v10_aubrey_house:
                 scene v10auh2f # FPP Same angle as v10auh2, no characters, show closed bathroom door
                 with dissolve
 
-                au "*laughs* Maybe next time."
+                au "*Laughs* Maybe next time."
 
                 scene v10auh3b # TPP Same angle as v10auh3a, MC leaning against wall by door to Chicks bathroom, slight smile, mouth closed
                 with dissolve
@@ -543,7 +543,7 @@ label v10_aubrey_house:
                 scene v10auh3b
                 with dissolve
 
-                au "Who me? I would never. *laughs*"
+                au "Who me? I would never. *Laughs*"
 
                 scene v10auh5k # FPP Same angle as v10auh5j, Aubrey from neck up, slight smile, mouth open
                 with dissolve
@@ -568,7 +568,7 @@ label v10_aubrey_house:
                 scene v10auh5j
                 with dissolve
 
-                u "*laughs* True."
+                u "*Laughs* True."
 
         "Say you'll wait":
             $ addPoint("bf", 1)
@@ -623,7 +623,7 @@ label v10_aubrey_house:
                 scene v10auh3b
                 with dissolve
 
-                au "Who me? I would never.*laughs* ."
+                au "Who me? I would never. *Laughs*"
 
                 scene v10auh5k
                 with dissolve
@@ -648,7 +648,7 @@ label v10_aubrey_house:
                 scene v10auh5j
                 with dissolve
 
-                u "*laughs* True."
+                u "*Laughs* True."
 
     scene v10auh2d
     with dissolve
@@ -664,7 +664,7 @@ label v10_aubrey_house:
             scene v10auh2g # FPP. Same angle as v10auh2d, Aubrey in new clothes, big smile and mouth open
             with dissolve
 
-            au "*laughs* They might be."
+            au "*Laughs* They might be."
 
         "Complain":
             scene v10auh2e
@@ -698,7 +698,7 @@ label v10_aubrey_room:
     scene v10auh8a # FPP Same angle as v10auh8, Aubrey with a big smile, mouth open
     with dissolve
 
-    au "Maybe we just take better care of it. *laughs*"
+    au "Maybe we just take better care of it. *Laughs*"
 
     scene v10auh8
     with dissolve
@@ -708,7 +708,7 @@ label v10_aubrey_room:
     scene v10auh8b # FPP Same angle and expression as v10auh8, Aubrey mouth open
     with dissolve
 
-    au "*smiles* My mom and my sister were both in the Chicks. So it’s kind of a family tradition."
+    au "*Smiles* My mom and my sister were both in the Chicks. So it’s kind of a family tradition."
 
     scene v10auh8
     with dissolve
@@ -733,7 +733,7 @@ label v10_aubrey_room:
     scene v10auh8a
     with dissolve
 
-    au "*laughs* I'm sorry, I'm sorry. I love the girls, but they crack me up. They take things way too seriously."
+    au "*Laughs* I'm sorry, I'm sorry. I love the girls, but they crack me up. They take things way too seriously."
 
     menu:
         "Defend them":
@@ -751,7 +751,7 @@ label v10_aubrey_room:
             scene v10auh8
             with dissolve
 
-            u "You really should do acting *laughs* !"
+            u "You really should do acting! *Laughs*"
 
             if bathroom_sex:
                 scene v10auh8e # Same angle as v10auh8, Aubrey with eyebrow raised, slight smile, mouth open
@@ -774,7 +774,7 @@ label v10_aubrey_room:
     scene v10auh8e
     with dissolve
 
-    au "Gotta keep up my reputation *chuckles*"
+    au "Gotta keep up my reputation. *Chuckles*"
 
     scene v10auh8
     with dissolve
@@ -784,7 +784,7 @@ label v10_aubrey_room:
     scene v10auh8a
     with dissolve
 
-    au "*smiles* Okay, see you soon."
+    au "*Smiles* Okay, see you soon."
 
     scene v10auh8
     with dissolve

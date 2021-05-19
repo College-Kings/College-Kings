@@ -130,7 +130,7 @@ label v10s33_autumn1:
     scene v10cfraut1
     with dissolve
 
-    aut "So...plan on sticking around?"
+    aut "So... plan on sticking around?"
 
     scene v10cfraut1a
     with dissolve
@@ -858,7 +858,7 @@ label v10s33_deergirl11:
 
     scene v10cfrau4b
     with dissolve
-    au "Okay last one, what about Ms.Rose?"
+    au "Okay last one, what about Ms. Rose?"
 
     scene v10cfrau4c
     with dissolve
@@ -906,7 +906,7 @@ label v10s33_deergirl11:
                 scene v10cfrau4f
                 with dissolve
 
-            au "What? You're definitely wrong on that one."
+                au "What? You're definitely wrong on that one."
 
     scene v10cfrau4a
     with dissolve
@@ -952,7 +952,7 @@ label v10s33_deergirl11:
                 scene v10cfrau4a
                 with dissolve
 
-                u "Well I'm planning on going and I was wondering if you wanna come with."
+                u "Well I'm planning on going and I was wondering if you wanna come with me."
 
                 scene v10cfrau4
                 with dissolve
@@ -967,7 +967,7 @@ label v10s33_deergirl11:
                 scene v10cfrau4
                 with dissolve
 
-                au "Then sure I go then."
+                au "Then sure I'll go then."
 
                 scene v10cfrau4a
                 with dissolve
@@ -1131,7 +1131,7 @@ label v10s33_chloe1:
 
                 cl "What? No, I was just thinking about what'd it'd be like to go on a date in a cartoon because in a cartoon anything could happen."
 
-                cl "I could be like' like a princess or something.. *Laughs*"
+                cl "I could be like... like a princess or something. *Laughs*"
 
                 scene v10cfrcl1
                 with dissolve
@@ -1221,7 +1221,7 @@ label v10s33_chloe1:
                 
                 u "(Let's not start anything.)"
 
-                u "That's good, it's best if  you guys are getting along."
+                u "That's good, it's best if you guys are getting along."
 
                 scene v10cfrcl1a
                 with dissolve
@@ -1266,7 +1266,7 @@ label v10s33_chloe1:
                                         scene v10cfrcl1a
                                         with dissolve
 
-                                        cl "Yeah,...I don't know."
+                                        cl "Yeah... I don't know."
 
                                 "Let Her Decide":
 
@@ -1320,7 +1320,7 @@ label v10s33_deergirl21:
     scene v10cfrdg21
     with dissolve
 
-    dg2 "Some people have done amazing, others...not so much. *Chuckles*"
+    dg2 "Some people have done amazing, others... not so much. *Chuckles*"
 
     scene v10cfrdg29 # showing sexual prizes
     with dissolve
@@ -1397,7 +1397,7 @@ label v10s33_deergirl21:
             scene v10cfrdg21
             with dissolve
             
-            dg2 "I'll put you in the category of those who did...not so well."
+            dg2 "I'll put you in the category of those who did... not so well."
 
             scene v10cfrdg21a
             with dissolve
@@ -1483,7 +1483,7 @@ label v10s33_deergirl21:
             scene v10cfrdg31e #same 1d, mouth closed
             with dissolve
 
-            u "Oh uhm...I have a girlfriend."
+            u "Oh uhm... I have a girlfriend."
 
             scene v10cfrdg31d
             with dissolve
@@ -1512,7 +1512,7 @@ label v10s33_deergirl21:
     else:
         scene v10cfrla1a
 
-    u "How are the sales going? Good I'm assuming.."
+    u "How are the sales going? Good I'm assuming..."
 
     scene v10cfrla1b #same 1,lauren sarcastic, slight concern, mouth open
     with dissolve
@@ -1579,7 +1579,7 @@ label v10s33_deergirl21:
     scene v10cfrla1a
     with dissolve
 
-    u "Haha, you know...a lot of people showed up. Even the not so social ones."
+    u "Haha, you know... a lot of people showed up. Even the not so social ones."
 
     scene v10cfrla1
     with dissolve
@@ -1656,7 +1656,7 @@ label v10s33_deergirl21:
 
         $ v10s33_inv_lauren_europe = True
 
-        u "I know, I'd love some of...Lauren's Moist Muffins."
+        u "I know, I'd love some of... Lauren's Moist Muffins."
 
         scene v10cfrla1d
         with dissolve
@@ -1723,7 +1723,7 @@ label v10s33_deergirl21:
 
 
 
-    u "I'm gonna check out some more stuff, I check back in later."
+    u "I'm gonna check out some more stuff, I'll check back in later."
 
     scene v10cfrla1
     with dissolve
@@ -1940,7 +1940,7 @@ label v10s33_deergirl21:
 
 
 
-    u "I'm gonna check out some more stuff, I check back in later."
+    u "I'm gonna check out some more stuff, I'll check back in later."
 
     scene v10cfrla3d
     with dissolve
@@ -2083,7 +2083,7 @@ label v10s33_deergirl21:
         scene v10cfrfrli6a # FPP. Same as 6, smile, mouth open.
         with dissolve
 
-        li "Sure am! I am so excited, I've never been out of the state let alone the country. And I think it'll' distract me from everything here."
+        li "Sure am! I am so excited, I've never been out of the state let alone the country. And I think it'll distract me from everything here."
 
         scene v10cfrfrli6
         with dissolve
@@ -2572,7 +2572,7 @@ label v10s33_riley1:
     scene v10cfrri2f
     with dissolve
 
-    ri "Haha, well I'm gonna go over there and show Aubrey my new hat. Wanna come with?"
+    ri "Haha, well I'm gonna go over there and show Aubrey my new hat. Wanna come with me?"
 
     scene v10cfrri2e
     with dissolve
@@ -3363,7 +3363,7 @@ label v10s33_riley2:
 
             $ addPoint("bro")
 
-            u "You should show me what you got...since you're such a pro."
+            u "You should show me what you got... since you're such a pro."
 
             scene v10cfrno1b
             with dissolve
@@ -3491,7 +3491,7 @@ label v10s33_riley2:
                     scene v10cfrno3e
                     with dissolve
 
-                    u "She can be a little...extra sometimes."
+                    u "She can be a little... extra sometimes."
 
                 "Defend Chloe":
                     $ addPoint("bf")
@@ -3583,7 +3583,7 @@ label v10s33_riley2:
         with dissolve
 
         ry "Okay look, don't be mad, but the girl I'm talking about is Emily."
-        ry "I know you guys dated, but I...I really like her. Is it okay with you if I ask her out?"
+        ry "I know you guys dated, but I... I really like her. Is it okay with you if I ask her out?"
 
         scene v10cfrry1d # FPP. Same as 1, ryan looking at camera, awkwardly, mouth closed.
         with dissolve
@@ -3629,7 +3629,7 @@ label v10s33_riley2:
                 scene v10cfrry3b # TPP. Same as 3, ryan dissapointed, emily awkward smile, ryan mouth open.
                 with dissolve
 
-                ry "Yeah yeah, uhm...that's cool. See you around."
+                ry "Yeah yeah, uhm... that's cool. See you around."
 
                 pause
 
@@ -3641,7 +3641,7 @@ label v10s33_riley2:
                 scene v10cfrry1c
                 with dissolve
 
-                ry "I just thought...nevermind. I get it. Later man."
+                ry "I just thought... nevermind. I get it. Later man."
 
         scene v10cfrry4 # FPP. Show Ryan walking to wherever he is in his appearance at the toilets.
         with dissolve
@@ -3707,7 +3707,7 @@ label v10s33_riley2:
             scene v10cfrry5a
             with dissolve
 
-            ry "I talked to Emily and she completely rejected me.."
+            ry "I talked to Emily and she completely rejected me..."
 
             scene v10cfrry5a
             with dissolve
@@ -3787,7 +3787,7 @@ label v10s33_emily1:
     scene v10cfrem1b
     with dissolve
 
-    em "All the guys here  just came to look at a bunch of cute girls."
+    em "All the guys here just came to look at a bunch of cute girls."
 
     scene v10cfrem1c
     with dissolve

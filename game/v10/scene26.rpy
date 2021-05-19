@@ -232,7 +232,7 @@ label v10_amber_skatepark:
     scene v10sasp4b # FPP. Same camera as v10sasp4. Show Amber and Riley with beers. Both smiling, Amber mouth open.
     with dissolve
 
-    am "Alright, never have I ever...damn what have I not done? Never had I ever been caught naked in public."
+    am "Alright, never have I ever... damn what have I not done? Never had I ever been caught naked in public."
 
     scene v10sasp4a
     with dissolve
@@ -405,7 +405,7 @@ label v10_amber_skatepark:
                 scene v10ambbjf
                 with dissolve
 
-                u "I didn't know you...oh shit!"
+                u "I didn't know you... oh shit!"
 
                 scene v10ambbjf
                 with dissolve
@@ -615,7 +615,7 @@ label v10_amber_skatepark:
                 u "Good to know."
            
             "No":
-                $ skater = false
+                $ skater = False
                 scene v10sasp5f
                 with dissolve
 
@@ -646,7 +646,7 @@ label v10_amber_skatepark:
                     
                     pause 0.75
 
-                    if skater == false:
+                    if skater == False:
                         scene v10sasp5j
                         with dissolve
                         
@@ -711,7 +711,7 @@ label v10_amber_skatepark:
                             scene v10ambbjf
                             with dissolve
 
-                            u "I didn't know you...oh shit!"
+                            u "I didn't know you... oh shit!"
 
                             scene v10ambbjf
                             with dissolve
