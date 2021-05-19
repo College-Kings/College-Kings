@@ -2244,7 +2244,7 @@ label v10s33_deergirl21:
                         "Invite Ms. Rose To Europe":
                             $ v10s33_inv_rose_europe = True
 
-                            u "I wanted to ask you Mr. Rose, are you planning on going on the Europe trip?"
+                            u "I wanted to ask you Ms. Rose, are you planning on going on the Europe trip?"
 
                             scene v10cfrcfrro1c
                             with dissolve
