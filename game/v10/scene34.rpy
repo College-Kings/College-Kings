@@ -136,7 +136,7 @@ label v10_autumn_announcement:
         "Root for Emily":
             $ v10_cvn_cheer_emily = True
             $ forgiveemily = True
-            $ EmilyLike += 1
+            $ emilyLike += 1
             $ addPoint("bf")
             scene v10samw6a
             with dissolve
@@ -145,7 +145,7 @@ label v10_autumn_announcement:
 
         
         "Root for Aubrey":
-            $ AubreyLike += 1
+            $ aubreyLike += 1
             scene v10samw7 
             with dissolve
 
