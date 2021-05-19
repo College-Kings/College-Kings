@@ -247,7 +247,7 @@ label v10_ms_rose_fight:
 
             u "I guess if there's nothing else, uhm I'll get back home. Call me if you need anything, Ms. Rose."
 
-            scene  v10msf4b
+            scene v10msf4b
             with dissolve
 
             ro "Uh, yeah. Thank you, [name]."

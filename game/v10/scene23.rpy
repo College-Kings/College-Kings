@@ -223,7 +223,7 @@ label v10_aft_walk_home:
                     scene v10smwh4b # FPP. Same camera as v10smwh4. Show Josh, smiling, mouth open.
                     with dissolve
 
-                    jo "Why didn't you lead with that?  How many girls are we talking about?"
+                    jo "Why didn't you lead with that? How many girls are we talking about?"
 
                     scene v10smwh4c
                     with dissolve

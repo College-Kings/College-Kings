@@ -162,7 +162,7 @@ label v10_call_with_lauren2:
 
         la "Uhm I don’t know. I love my parents, but there were times when I really felt like I needed a break from them."
         
-        la "My sister never really got along with them.  Her whole \"fight the system\" mindset. She was always her own person and to be honest, I've always respected that a lot about her."
+        la "My sister never really got along with them. Her whole \"fight the system\" mindset. She was always her own person and to be honest, I've always respected that a lot about her."
 
         scene v10scwl1b
         with dissolve
@@ -515,7 +515,7 @@ label v10_call_with_lauren2:
 
         la "Uhm I don’t know. I love my parents, but there were times when I really felt like I needed a break from them."
         
-        la "My sister never really got along with them.  Her whole \"fight the system\" mindset. She was always her own person and to be honest, I've always respected that a lot about her."
+        la "My sister never really got along with them. Her whole \"fight the system\" mindset. She was always her own person and to be honest, I've always respected that a lot about her."
 
         scene v10scwl1b
         with dissolve
