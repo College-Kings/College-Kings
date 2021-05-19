@@ -82,6 +82,6 @@ label v9_ryan_v_perry_fight:
 
     jo "You've heard it here first, Ryan came to fight!"
 
-    jump v10_mc_vs_imre_fight
+    jump v10_mc_vs_ryan_fight
 
     # -Transition to Scene 6-
