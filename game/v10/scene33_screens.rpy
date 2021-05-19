@@ -351,9 +351,9 @@ screen v10s33_bagtoss():
 
     # Deer Girl 2
     imagebutton:
-        pos (0, 0)
+        pos (89, 274)
         idle "images/v10/scene 33/fr6deergirl2.webp"
-        hover "images/v10/scene 33/fr6deergirl2.webp"
+        hover "images/v10/scene 33/fr6deergirl2hover.webp"
         if not v10s33_deergirl2:
             action Jump("v10s33_deergirl21")
         else:
@@ -372,7 +372,7 @@ screen v10s33_bagtoss():
     # Nora
     if not v10s33_toldChloe:
         imagebutton:
-            pos (796, 326)
+            pos (754, 293)
             idle "images/v10/scene 33/fr6nora.webp"
             hover "images/v10/scene 33/fr6norahover.webp"
             if not v10s33_nora:
