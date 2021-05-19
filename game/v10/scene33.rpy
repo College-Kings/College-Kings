@@ -250,9 +250,6 @@ label v10s33_deergirl11:
     scene v10cfrdg12a # FPP. same 12,Show perry, looking at dg1 out of shot, mouth open
     with dissolve
     guyd "Only took me a thousand tries."
-
-    scene v10cfrdg14 # FPP. Show dg1 and perry, looking at camera, mouths closed.
-    with dissolve
     
     if joinwolves:
 
