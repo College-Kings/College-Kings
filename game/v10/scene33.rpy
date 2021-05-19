@@ -2670,7 +2670,7 @@ label v10s33_riley2:
 
     au "Our friend Riley here has insisted she's better at dancing than me so her and I are getting ready to have a dance contest and you're going to judge."
 
-    scene v10cfrriau3a # FPP. Show Riley, slight smile mouth open, looking at camera
+    scene v10cfrriau3 # FPP. Show Riley, slight smile mouth open, looking at camera
     with dissolve
 
     ri "Right now?"
@@ -2680,7 +2680,7 @@ label v10s33_riley2:
 
     au "What's wrong redhead? *Chuckles* Scared?"
 
-    scene v10cfrriau3a
+    scene v10cfrriau3
     with dissolve
 
     ri "Never, let's do it. But we need more judges."
