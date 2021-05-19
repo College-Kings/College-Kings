@@ -362,6 +362,7 @@ default mrroseLike = 0
 default autumnLike = 0
 default emilyLike = 0
 default ryanLike = 0
+default noraLike = 0
 default v10_inv_pen_cafe = False
 default v10_simplr_known = False
 default v10_reassure_jenny = False
@@ -384,6 +385,7 @@ default v10_join_emi = False
 default v10_save_emi_cpr = False
 default v10_emi_nurse = False
 default v10_amber_condoms = False
+default v10_amber_awkward = False
 
     # Freeroam
 default v10s33_riley = False
