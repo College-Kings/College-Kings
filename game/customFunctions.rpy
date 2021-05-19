@@ -21,7 +21,7 @@ init -1 python:
 
         if newKCT != oldKCT:
             renpy.notify("Your KCT has changed to " + kct)
-        
+
     # Mark disabled choices
     if getattr(renpy.display.get_info(), 'oldmenu', None) is None:
         renpy.display.get_info().oldmenu = renpy.exports.menu
