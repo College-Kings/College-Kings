@@ -19,7 +19,7 @@ label v10_charity_freeroam:
     with dissolve
 
     u "(Now this is an event!)"
-
+    $ freeRoam = True
     call screen v10cfr33_entrance
 
 label v10cfr33_autumn1:
