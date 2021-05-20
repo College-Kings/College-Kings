@@ -57,7 +57,8 @@ label v9_wolves_pre_fight:
     scene v9wpf5b # FPP. Same camera as v9wpf5, neutral expression, mouth open.
     with dissolve
 
-    ch "A lot of people are going to be paying close attention tonight. Girls, frat brothers, enemies, friends and foes, everyone. But when you're in the ring don't think about anything except your opponent. No distractions, got it?"
+    ch "A lot of people are going to be paying close attention tonight. Girls, frat brothers, enemies, friends and foes, everyone."
+    ch "But when you're in the ring don't think about anything except your opponent. No distractions, got it?"
 
     scene v9wpf5c # FPP. Same camera as v9wpf5, neutral expression, mouth closed.
     with dissolve

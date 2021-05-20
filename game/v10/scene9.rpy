@@ -91,7 +91,7 @@ label v10_leave_fight:
 
                     pause 0.5
                 
-                elif not v10_ryan_fight: # RCS - MC is a Wolf and lost the fight
+                elif v10_ryan_fight: # RCS - MC is a Wolf and lost the fight
                     scene v10sraf3g
                     with dissolve
                     pause 0.5

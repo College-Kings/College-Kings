@@ -10,7 +10,8 @@ label v9_call_w_lindsey:
 
         play music "music/v9/Scene 28/Track Scene 28.mp3" fadein 2
 
-        u "(What a jam-packed day. And this wasn't even the real deal. Tomorrow is showtime. I didn't see myself going down this road when I started college, but I'm in too deep now. There's no way I'll lose, no way in hell.)"
+        u "(What a jam-packed day. And this wasn't even the real deal. Tomorrow is showtime.)"
+        u "(I didn't see myself going down this road when I started college, but I'm in too deep now. There's no way I'll lose, no way in hell.)"
 
         play sound "sounds/calling.mp3"
         pause 1
@@ -50,7 +51,8 @@ label v9_call_w_lindsey:
         scene v9cwl2
         with dissolve
 
-        li "Ha, guess you'll never know. Anyway though, I called to ask how you're feeling about the fight tomorrow, I gave you my number but you never called so I got your number from Aubrey."
+        li "Ha, guess you'll never know. Anyway though, I called to ask how you're feeling about the fight tomorrow?"
+        li "I gave you my number but you never called so I got your number from Aubrey."
 
         li "Anyway, this fight could be major for you. Think you'll come out on top?"
 
@@ -89,7 +91,8 @@ label v9_call_w_lindsey:
         scene v9cwl2
         with dissolve
 
-        li "Someone's looking to feel special before his big day I see. If you must know, some of my girlfriends were talking about some of this year's new fighters and your name came up so I thought I see how you were feeling."
+        li "Someone's looking to feel special before his big day I see."
+        li "If you must know, some of my girlfriends were talking about some of this year's new fighters and your name came up so I thought I see how you were feeling."
 
         scene v9cwl3b
         with dissolve
