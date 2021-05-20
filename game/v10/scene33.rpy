@@ -386,7 +386,7 @@ label v10s33_deergirl11:
     with dissolve
 
     menu:
-        "Cross lean face":
+        "Cross Lean Face":
 
             scene v10cfrdg13c # TPP. same 13, Show mc leant back arms crossed, mouth closed
             with dissolve
@@ -402,7 +402,7 @@ label v10s33_deergirl11:
             with dissolve
 
             pause 0.75
-        "Lean face cross":
+        "Lean Face Cross":
             
             scene v10cfrdg13d # TPP. same 13, leant forward arms down.
             with dissolve
