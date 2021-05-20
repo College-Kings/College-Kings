@@ -132,6 +132,13 @@ label v10_autumn_announcement:
     scene v10samw6a # FPP. Same camera as v10samw6. Show Emily and Aubrey in the line-up of girls competing, both smiling, mouths closed.
     with fade
     menu:
+        "Root for Aubrey":
+            $ aubreyLike += 1
+            scene v10samw7 
+            with dissolve
+
+            u "Okay Aubrey!"
+
         "Root for Emily":
             $ v10_cvn_cheer_emily = True
             $ forgiveemily = True
@@ -141,15 +148,7 @@ label v10_autumn_announcement:
             with dissolve
 
             u "Okay Emily!"
-
-        
-        "Root for Aubrey":
-            $ aubreyLike += 1
-            scene v10samw7 
-            with dissolve
-
-            u "Okay Aubrey!"
-
+            
     scene v10samw1
     with dissolve
 
