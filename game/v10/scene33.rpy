@@ -2177,7 +2177,7 @@ label v10s33_deergirl21:
 
                 menu:
                     "Encourage her":
-                        $ v10s33_encourage_rose_paint = False
+                        $ v10s33_encourage_rose_paint = True
 
                         u "You sort of have to now, it's a matter of principle."
 
