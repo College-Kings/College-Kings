@@ -370,11 +370,17 @@ label v10_aubrey_house:
                 image v10aubbj = Movie(play="images/v10/Scene 17/v10aubbj.webm", loop=True, image= "images/v10/Scene 17/v10aubbjStart.webp", start_image="images/v10/Scene 17/v10aubbjStart.webp") # TPP. Aubrey on her knees giving MC a blowjob who is sat on the toilet.
                 image v10aubbjf = Movie(play="images/v10/Scene 17/v10aubbjf.webm", loop=True, image= "images/v10/Scene 17/v10aubbjStart.webp", start_image="images/v10/Scene 17/v10aubbjStart.webp")
 
+                image v10aubbjtpp = Movie(play="images/v10/Scene 17/v10aubbjtpp.webm", loop=True, image= "images/v10/Scene 17/v10aubbjtppStart.webp", start_image="images/v10/Scene 17/v10aubbjtppStart.webp")
+                image v10aubbjtppf = Movie(play="images/v10/Scene 17/v10aubbjtppf.webm", loop=True, image= "images/v10/Scene 17/v10aubbjtppStart.webp", start_image="images/v10/Scene 17/v10aubbjtppStart.webp")
+
                 image v10aubcg = Movie(play="images/v10/Scene 17/v10aubcg.webm", loop=True, image= "images/v10/Scene 17/v10aubcgStart.webp", start_image="images/v10/Scene 17/v10aubcgStart.webp") # TPP. Aubrey riding MC cowgirl while he's sat on the toilet.
                 image v10aubcgf = Movie(play="images/v10/Scene 17/v10aubcgf.webm", loop=True, image= "images/v10/Scene 17/v10aubcgStart.webp", start_image="images/v10/Scene 17/v10aubcgStart.webp")
 
                 image v10aubll = Movie(play="images/v10/Scene 17/v10aubll.webm", loop=True, image= "images/v10/Scene 17/v10aubllStart.webp", start_image="images/v10/Scene 17/v10aubllStart.webp") # TPP. MC holding Aubreys leg up while he fucks her. 
                 image v10aubllf = Movie(play="images/v10/Scene 17/v10aubllf.webm", loop=True, image= "images/v10/Scene 17/v10aubllStart.webp", start_image="images/v10/Scene 17/v10aubllStart.webp")
+
+                image v10aubll2 = Movie(play="images/v10/Scene 17/v10aubll2.webm", loop=True, image= "images/v10/Scene 17/v10aubll2Start.webp", start_image="images/v10/Scene 17/v10aubll2Start.webp")
+                image v10aubll2f = Movie(play="images/v10/Scene 17/v10aubll2f.webm", loop=True, image= "images/v10/Scene 17/v10aubll2Start.webp", start_image="images/v10/Scene 17/v10aubll2Start.webp")
 
                 image v10aubfa = Movie(play="images/v10/Scene 17/v10aubfa.webm", loop=True, image= "images/v10/Scene 17/v10aubfaStart.webp", start_image="images/v10/Scene 17/v10aubfaStart.webp") # TPP. Aubrey on her knees giving MC a blowjob who is sat on the toilet.
                 image v10aubfaf = Movie(play="images/v10/Scene 17/v10aubfaf.webm", loop=True, image= "images/v10/Scene 17/v10aubfaStart.webp", start_image="images/v10/Scene 17/v10aubfaStart.webp")
@@ -394,6 +400,18 @@ label v10_aubrey_house:
                 u "(Damn, she’s good!)"
 
                 u "Fuck, Aubrey!"
+
+                scene v10aubbjtpp
+                with dissolve
+                pause
+
+                u "Oh fuck!"
+
+                scene v10aubbjtppf
+                with dissolve
+
+                u "Mhmmmm..."
+                u "That's fucking amazing."
 
                 scene v10aubcg # Aubrey then gets up and rides MC
                 with dissolve
@@ -426,6 +444,20 @@ label v10_aubrey_house:
                 au "Faster, [name]!"
 
                 au "*Moaning*"
+
+                scene v10aubll2
+                with dissolve
+                pause
+                
+                au "*Groans* Mhmmmmm."
+
+                au "Fuuuuuuck!"
+
+                scene v10aubll2f
+                with dissolve
+                pause 
+
+                au "This feel so good!"
 
                 scene v10aubfa # Aubrey gets on her knees in front MC while he's standing to finish him off
                 with dissolve
