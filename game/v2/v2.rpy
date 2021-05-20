@@ -482,8 +482,6 @@ label gb:
 
         if adamtut == True:
             jump fkcon
-        elif s28_LarsFight:
-            call screen s28_LarsFightChoice
         else:
             call screen ft1
 
@@ -606,33 +604,19 @@ label gb:
         scene jab1pic
         with dissolve
 
-        python:
-            w = renpy.input("Which button should be hook / block face?")
-            if w == "": w = "w"
+        $ w = renpy.input("Which button should be hook / block face?", default="w").strip() or "w"
 
         scene hook1pic
         with dissolve
 
-        python:
-            q = renpy.input("Which button should be jab / block head?")
-            if q == "": q = "q"
+        $ q = renpy.input("Which button should be hook / block face?", default="q").strip() or "q"
 
         scene kick1pic
         with dissolve
 
-        python:
-            r = renpy.input("Which button should be kick / block leg?")
-            if r == "": r = "r"
+        $ r = renpy.input("Which button should be hook / block face?", default="r").strip() or "r"
 
-        if s28_LarsFight:
-            call screen af3
-
-        # elif adamtut:
-        #     call screen s28_LarsKeybindOptions
-
-        else:
-            call screen ft3
-
+        return
 
     label tomkick1:
 
