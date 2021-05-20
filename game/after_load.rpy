@@ -1,25 +1,5 @@
-init -1 python:
+init python:
     import os
-
-    if renpy.loadable("bugTesting_Overwrite.rpy.rpy"):
-        os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpy.rpy"))
-    if renpy.loadable("bugTesting_Overwrite.rpy.rpyc"):
-        os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpy.rpyc"))
-
-    if renpy.loadable("phonescript.rpy"):
-        os.remove(os.path.join(config.basedir, "game", "phone", "phonescript.rpy"))
-    if renpy.loadable("phonescript.rpyc"):
-        os.remove(os.path.join(config.basedir, "game", "phone", "phonescript.rpyc"))
-    
-    if renpy.loadable("scriptv06.rpy"):
-        os.remove(os.path.join(config.basedir, "game", "scriptv06.rpy"))
-    if renpy.loadable("scriptv06.rpyc"):
-        os.remove(os.path.join(config.basedir, "game", "scriptv06.rpyc"))
-
-    if renpy.loadable("scriptv07.rpy"):
-        os.remove(os.path.join(config.basedir, "game", "scriptv07.rpy"))
-    if renpy.loadable("scriptv07.rpyc"):
-        os.remove(os.path.join(config.basedir, "game", "scriptv07.rpyc"))
 
 label after_load:
     python:
