@@ -1,17 +1,11 @@
-game/bugTesting/images
-game/cache
-game/fonts
-game/gui
-game/images
-game/music
-game/saves
-game/sounds
-game/tl
-
+College Kings 10.0 Patch/
+.vscode/
 lib/
 renpy/
 
-game/unren-dev.rpy
+game/bugTesting/_bugTesting.txt
+game/cache
+game/saves
 
 CollegeKings.py
 CollegeKings.sh
@@ -20,7 +14,13 @@ gradle.properties.txt
 log.txt
 Stored Script.txt
 traceback.txt
+project.json
 
+screenshot*
+
+*.bat
+*.rpa
 *.rpyc
 *.zip
 *.exe
+*.bak
