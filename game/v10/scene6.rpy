@@ -67,7 +67,349 @@ label v10_mc_vs_ryan_fight:
 
             jo "Same rules as before, just get it guys!"
 
-            # -Manual Fight-
+            # Ryan Fight
+            call screen fight_tutorialPopup
+
+            scene v10mvr6a
+
+            call screen fight_typeMenu
+
+            if fight_type == "normal":
+                $ simRyanFight = False
+                $ ryanStance = renpy.random.choice([1, 2, 3, 4])
+                $ ryanAttack = renpy.random.choice([1, 2, 3, 4])
+
+                call screen fight_selectDifficulty
+
+                call screen fight_keybindOptions
+            
+            elif fight_type == "simReal" or fight_type == "simWin":
+                $ simRyanFight = True
+                $ stance = 1
+
+                $ ryanStance = renpy.random.choice([1, 2, 3, 4])
+                $ ryanAttack = renpy.random.choice([1, 2, 3, 4])
+                $ ryanSimulation = renpy.random.choice([1, 2, 3, 4, 5, 6])
+
+            if fight_type == "simWin":
+                $ youHealth = 100000
+            else:
+                $ youHealth = 3
+
+            $ ryanHealth = 6
+            $ youDamage = 0
+            $ ryanDamage = 0
+
+            # Ryan attacks MC
+            label ryan_McAttack:
+                $ stance = 2 # Defence
+
+                show screen fight_overlay(stance="defend")
+                
+                # Ryan hook
+                if ryanAttack == 1:
+
+                    scene ryanhook
+                    pause 0.6 # Trial Error
+
+                    scene ryanhookend
+                    $ ryanStance = renpy.random.choice([1, 2, 3, 4]) # Ryan next defensive stance
+                    $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6]) # What attack you're gonna pick next
+
+                    if simRyanFight:
+                        if ryanSimulation in [1, 2, 3]: # simryan is ryan random attack
+                            jump ryan_McKickHit # REMEMBER switch attacks!
+                        else:
+                            jump ryan_McKickBlock
+
+                    else:
+                        call screen ryanFight_MCDefend(attack="Hook")
+
+                # Ryan jab
+                if ryanAttack == 2:
+
+                    scene ryanjab
+                    $ renpy.pause(0.5)
+
+                    scene ryanjabend
+                    $ ryanStance = renpy.random.choice([1, 2, 3, 4])
+                    $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
+
+                    if simRyanFight:
+                        if ryanSimulation in [1, 2, 3]:
+                            jump ryan_McJabHit
+                        else:
+                            jump ryan_McJabBlock
+
+                    else:
+                        call screen ryanFight_MCDefend(attack="Jab")
+
+                # Ryan body hook
+                if ryanAttack == 3:
+
+                    scene ryanbody
+                    $ renpy.pause(0.7)
+
+                    scene ryanbodyend
+                    $ ryanStance = renpy.random.choice([1, 2, 3, 4])
+                    $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
+
+                    if simRyanFight:
+                        if ryanSimulation in [1, 2, 3]:
+                            jump ryan_McHookHit
+                        else:
+                            jump ryan_McHookBlock
+
+                    else:
+                        call screen ryanFight_MCDefend(attack="BodyHook")
+
+                # Ryan kick
+                if ryanAttack == 4:
+
+                    scene ryankick
+                    $ renpy.pause(0.6)
+
+                    scene ryankickend
+                    $ ryanStance = renpy.random.choice([1, 2, 3, 4])
+                    $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
+
+                    if simRyanFight:
+                        if ryanSimulation in [1, 2, 3]:
+                            jump ryan_McBodyhookHit
+                        else:
+                            jump ryan_McBodyhookBlock
+
+                    else:
+                        call screen ryanFight_MCDefend(attack="Kick")
+
+
+            # label Attacker_TargetAction
+            label mc_ryanKickHit: # MC Kicks Ryan (Hits/No Block)
+
+                $ ryanDamage += 1
+                scene mc_ryan_Kick_hit 
+                pause 1 # Trial/Error
+                if ryanDamage >= ryanHealth:
+                    jump mc_ryanFightEnd
+                jump ryan_McAttack
+
+            label mc_ryanKickBlock: # MC Kicks Ryan (Blocks)
+
+                    scene mc_ryan_Kick_block 
+                    pause 0.7 # Trial/Error
+                    jump ryan_McAttack
+
+
+            label mc_ryanJabsHit: # MC Jabs Ryan (Hits/No Block)
+
+
+                $ ryanDamage += 1
+                scene mc_ryan_Jab_hit
+                pause 0.7 # Trial/Error
+                if ryanDamage >= ryanHealth:
+                    jump mc_ryanFightEnd
+                jump ryan_McAttack
+
+            label mc_ryanJabsBlock: # MC Jabs Ryan (Blocks)
+
+                    scene mc_ryan_Jab_block
+                    pause 0.7 # Trial/Error
+                    jump ryan_McAttack
+
+
+            label mc_ryanHooksHit: # MC Hooks Ryan (Hits/No Block)
+
+                $ ryanDamage += 1
+                scene mc_ryan_Hook_hit
+                pause 0.7 # Trial/Error
+                if ryanDamage >= ryanHealth:
+                    jump mc_ryanFightEnd
+                jump ryan_McAttack
+
+            label mc_ryanHooksBlock: # MC Hooks Ryan (Blocks)
+
+                    scene mc_ryan_Hook_block 
+                    pause 0.7 # Trial/Error
+                    jump ryan_McAttack
+
+
+            label mc_ryanBodyhookHit: # MC Body Hooks Ryan (Hits/No Block)
+
+
+                $ ryanDamage += 1
+                scene mc_ryan_BodyJab_hit
+                pause 0.7 # Trial/Error
+                if ryanDamage >= ryanHealth:
+                    jump mc_ryanFightEnd
+                jump ryan_McAttack
+
+            label mc_ryanBodyhookBlock: # MC Body Hooks Ryan (Blocks)
+
+                    scene mc_ryan_BodyJab_block 
+                    pause 0.7 # Trial/Error
+                    jump ryan_McAttack
+
+
+            label ryan_McKickHit: # Ryan Kicks MC (Hits/No Block)
+
+                play sound "sounds/ks.mp3"
+                $ youDamage += 1
+                scene Ryan_Kick_hit
+                with hpunch
+
+                pause 0.5
+                $ stance = 1
+                $ ryanAttack = renpy.random.choice([1, 2, 3, 4])
+                $ ryanSimulation = renpy.random.choice([1, 2, 3, 4, 5, 6])
+                jump mc_ryanAttack
+
+            label ryan_McKickBlock: # Ryan Kicks MC (Blocked)
+
+                play sound "sounds/ks.mp3"
+                scene Ryan_Kick_block
+                with hpunch
+
+                pause 0.5
+                $ stance = 1
+                $ ryanAttack = renpy.random.choice([1, 2, 3, 4])
+                $ ryanSimulation = renpy.random.choice([1, 2, 3, 4])
+                jump mc_ryanAttack
+
+            label ryan_McJabHit: # Ryan Kicks MC (Hits/No Block)
+
+                play sound "sounds/js.mp3"
+                $ youDamage += 1
+                scene Ryan_Jab_hit
+                with hpunch
+
+                pause 0.5
+                $ stance = 1
+                $ ryanAttack = renpy.random.choice([1, 2, 3, 4])
+                $ ryanSimulation = renpy.random.choice([1, 2, 3, 4])
+                if youDamage >= youHealth:
+                        jump ryan_McFightEnd
+                jump mc_ryanAttack
+
+            label ryan_McJabBlock: # Ryan Kicks MC (Hits/No Block)
+
+                play sound "sounds/bs.mp3"
+                scene Ryan_Hook_block
+                with hpunch
+
+                pause 0.5
+                $ stance = 1
+                $ ryanAttack = renpy.random.choice([1, 2, 3, 4])
+                $ ryanSimulation = renpy.random.choice([1, 2, 3, 4])
+                jump mc_ryanAttack
+
+            label ryan_McHookHit: # Ryan Kicks MC (Hits/No Block)
+
+                play sound "sounds/hs.mp3"
+                $ youDamage += 1
+                scene Ryan_Hook_hit
+                with hpunch
+
+                pause 0.5
+                $ stance = 1
+                $ ryanAttack = renpy.random.choice([1, 2, 3, 4])
+                $ ryanSimulation = renpy.random.choice([1, 2, 3, 4])
+                if youDamage >= youHealth:
+                        jump ryan_McFightEnd
+                jump mc_ryanAttack
+
+            label ryan_McHookBlock: # Ryan Kicks MC (Hits/No Block)
+
+                play sound "sounds/bs.mp3"
+                scene Ryan_Hook_block
+                with hpunch
+
+                pause 0.5
+                $ stance = 1
+                $ ryanAttack = renpy.random.choice([1, 2, 3, 4])
+                $ ryanSimulation = renpy.random.choice([1, 2, 3, 4])
+                jump mc_ryanAttack
+
+            label ryan_McBodyhookHit: # Ryan Kicks MC (Hits/No Block)
+
+                play sound "sounds/hs.mp3"
+                $ youDamage += 1
+                scene Ryan_BodyJab_hit
+                with hpunch
+
+                pause 0.5
+                $ stance = 1
+                $ ryanAttack = renpy.random.choice([1, 2, 3, 4])
+                $ ryanSimulation = renpy.random.choice([1, 2, 3, 4])
+                jump mc_ryanAttack
+
+            label ryan_McBodyhookBlock: # Ryan Kicks MC (Hits/No Block)
+
+                play sound "sounds/bs.mp3"
+                scene Ryan_BodyJab_block
+                with hpunch
+
+                pause 0.5
+                $ stance = 1
+                $ ryanAttack = renpy.random.choice([1, 2, 3, 4])
+                $ ryanSimulation = renpy.random.choice([1, 2, 3, 4])
+                jump mc_ryanAttack
+
+
+            label mc_ryanAttack:
+                if simRyanFight:
+                    if ryanStance == 1: # Jab Weakness
+                        if simyou == 1:
+                            jump mc_ryanBodyhookBlock
+                        if simyou == 2:
+                            jump mc_ryanHooksBlock
+                        if simyou == 3:
+                            jump mc_ryanKickBlock
+                        if simyou == 4 or simyou == 5 or simyou == 6:
+                            jump mc_ryanJabsHit
+                    if ryanStance == 2: # Hook Weakness
+                        if simyou == 1:
+                            jump mc_ryanHooksBlock
+                        if simyou == 2:
+                            jump mc_ryanJabsBlock
+                        if simyou == 3:
+                            jump mc_ryanKickBlock
+                        if simyou == 4 or simyou == 5 or simyou == 6:
+                            jump mc_ryanBodyhookHit
+                    if ryanStance == 3: # Body Hook Weakness
+                        if simyou == 1:
+                            jump mc_ryanJabsBlock
+                        if simyou == 2:
+                            jump mc_ryanHooksBlock
+                        if simyou == 3:
+                            jump mc_ryanKickBlock
+                        if simyou == 4 or simyou == 5 or simyou == 6:
+                            jump mc_ryanBodyhookBlock
+                    if ryanStance == 4: # Kick Weakness
+                        if simyou == 1:
+                            jump mc_ryanBodyhookBlock
+                        if simyou == 2:
+                            jump mc_ryanHooksBlock
+                        if simyou == 3:
+                            jump mc_ryanJabsBlock
+                        if simyou == 4 or simyou == 5 or simyou == 6:
+                            jump mc_ryanKickHit
+                else:
+                    call screen ryanFight_MCAttack
+
+
+            label mc_ryanFightEnd: # MC wins fight against Ryan
+                $ v10_ryan_win = False
+                jump ryan_fightEnd
+
+            label ryan_McFightEnd: # MC loses fight against Ryan
+                $ v10_ryan_win = True
+                jump ryan_fightEnd
+
+            label ryan_fightEnd:
+                hide screen ryanFight_MCAttack
+                hide screen ryanFight_MCDefend
+                $ youDamage = 0
+                $ stance = 0
 
             jump v10_fight_result
 
