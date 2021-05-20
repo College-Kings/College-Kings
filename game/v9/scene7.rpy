@@ -569,6 +569,8 @@ if rileyrs:
 
             $ addPoint("tm")
 
+            play sound "sounds/kiss.mp3"
+
             scene v9slake3 #TPP showing mc and riley kissing
             with dissolve
             
