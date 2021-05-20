@@ -2890,7 +2890,7 @@ label hospitala:
 
 
     label playf2:
-        $ youdmg = 0
+        $ youDamage = 0
         $ adamdmg = 0
         $ adamstance = renpy.random.choice([1, 2, 3, 4])
         $ adamattack = renpy.random.choice([1, 2, 3, 4])
@@ -2900,21 +2900,21 @@ label hospitala:
         $ reaction = 3
         $ reactiona = 3.2
         $ adamhealth = 5
-        $ youhealth = 5
+        $ youHealth = 5
         call screen af3
 
     label moderate2:
         $ reaction = 1.3
         $ reactiona = 1.5
         $ adamhealth = 6
-        $ youhealth = 3
+        $ youHealth = 3
         call screen af3
 
     label hard2:
         $ reaction = 0.5
         $ reactiona = 0.7
         $ adamhealth = 8
-        $ youhealth = 2
+        $ youHealth = 2
         call screen af3
 
 
@@ -2922,13 +2922,13 @@ label hospitala:
         $ simadamfight = True
         $ stance = 1
         $ adamhealth = 6
-        $ youhealth = 3
+        $ youHealth = 3
         jump adamsimstart
 
     label autowinadam:
         $ simadamfight = True
         $ stance = 1
-        $ youhealth = 100000
+        $ youHealth = 100000
         $ adamhealth = 3
         jump adamsimstart
 
@@ -2956,7 +2956,7 @@ label hospitala:
             $ renpy.pause(1)
             play sound "sounds/fall.mp3"
             $ stance = 0
-            $ youdmg = 0
+            $ youDamage = 0
             scene youfinishadamclose
             with vpunch
             $ renpy.pause()
@@ -2994,7 +2994,7 @@ label hospitala:
             $ renpy.pause(1)
             play sound "sounds/fall.mp3"
             $ stance = 0
-            $ youdmg = 0
+            $ youDamage = 0
             scene youfinishadamclose
             with vpunch
             $ renpy.pause()
@@ -3031,7 +3031,7 @@ label hospitala:
             $ renpy.pause(1)
             play sound "sounds/fall.mp3"
             $ stance = 0
-            $ youdmg = 0
+            $ youDamage = 0
             scene youfinishadamclose
             with vpunch
             $ renpy.pause()
@@ -3068,7 +3068,7 @@ label hospitala:
             $ renpy.pause(1)
             play sound "sounds/fall.mp3"
             $ stance = 0
-            $ youdmg = 0
+            $ youDamage = 0
             scene youfinishadamclose
             with vpunch
             $ renpy.pause()
@@ -3104,13 +3104,13 @@ label hospitala:
     label adamattack:
     $ stance = 2
 
-    if youdmg >= youhealth:
+    if youDamage >= youHealth:
 
         scene adamfinish
         $ renpy.pause(1.3)
         play sound "sounds/fall.mp3"
         $ stance = 0
-        $ youdmg = 0
+        $ youDamage = 0
         scene adamfinishclose
         with vpunch
 
@@ -3200,7 +3200,7 @@ label hospitala:
     label adamhookhit:
 
         play sound "sounds/hs.mp3"
-        $ youdmg += 1
+        $ youDamage += 1
         scene adamhookhit
         with hpunch
 
@@ -3303,7 +3303,7 @@ label hospitala:
     label adamjabhit:
 
         play sound "sounds/js.mp3"
-        $ youdmg += 1
+        $ youDamage += 1
         scene adamjabhit
         with hpunch
 
@@ -3406,7 +3406,7 @@ label hospitala:
     label adambodyhit:
 
         play sound "sounds/hs.mp3"
-        $ youdmg += 1
+        $ youDamage += 1
         scene adambodyhit
         with hpunch
 
@@ -3509,7 +3509,7 @@ label hospitala:
     label adamkickhit:
 
         play sound "sounds/ks.mp3"
-        $ youdmg += 1
+        $ youDamage += 1
         scene adamkickhit
         with hpunch
 
