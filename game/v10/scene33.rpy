@@ -2121,7 +2121,7 @@ label v10s33_deergirl21:
         scene v10cfrcfrro1
         with dissolve
 
-        lee "And painting doesn't. This is why I became a history teacher. Someone has to pass along the great traditions of our species."
+        lee "And painting doesn't? This is why I became a history teacher. Someone has to pass along the great traditions of our species."
 
         scene v10cfrcfrro1b # FPP. Same as 1, both mouths closed.
         with dissolve
