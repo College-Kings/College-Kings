@@ -12,7 +12,7 @@ init python:
         addPoint("bf")
 
     def v7_kiwiiReply4():
-        KiwiiPost2.addComment("Autumn", "Yeah, they really are", mentions="MC", numberLikes=renpy.random.randint(8, 18))
+        kiwiiPost2.addComment("Autumn", "Yeah, they really are", mentions="MC", numberLikes=renpy.random.randint(8, 18))
     
     def v7_kiwiiReply5():
         addPoint("bro")
@@ -20,7 +20,7 @@ init python:
 
     def v7_kiwiiReply6():
         addPoint("tm")
-        KiwiiPost4.addComment("Josh", "lol", mentions="MC", numberLikes=renpy.random.randint(3, 7))
+        kiwiiPost4.addComment("Josh", "lol", mentions="MC", numberLikes=renpy.random.randint(3, 7))
 
     def v7_msgReply1():
         setattr(store, "tellpenelope", True)
