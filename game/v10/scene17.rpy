@@ -474,7 +474,12 @@ label v10_aubrey_house:
                 au "*Laughs* And scene."
 
                 scene v10aubfa1 # FPP. camera looking down at Aubrey kneeling, Face covered in cum, mouth closed
-                with dissolve
+                with flash
+
+                pause 0.3
+
+                scene v10aubfa1
+                with flash
 
                 pause 
 
