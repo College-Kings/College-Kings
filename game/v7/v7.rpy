@@ -65,7 +65,7 @@ init python:
             contact_Lauren.newMessage(_("Fine. I'm in my dorm, we can talk now."))
 
     def v7_msgReply7():
-        setattr(store, kiwii_firstTime, True)
+        setattr(store, "kiwii_firstTime", True)
 
 label start7: #for compatibility only
 label v7start:
