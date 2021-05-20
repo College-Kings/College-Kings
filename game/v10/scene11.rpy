@@ -465,10 +465,10 @@ label v10_linds_room:
 
 
 if joinwolves: # I don't know this variable name
-    jump v10_perry_help_room
+    jump v10_wolves_redec
 
 else: # RCS - if MC is an ape?
-    jump v10_sam_livingroom
+    jump v10_apes_samantha
 
 
 
