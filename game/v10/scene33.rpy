@@ -618,7 +618,7 @@ label v10s33_deergirl11:
 
             au "I don't, high school prom date. *Laughs*"
 
-        "No Way":
+        "No way":
 
             $ aubreyLike -= 1
             $ addPoint("bro", 1)
