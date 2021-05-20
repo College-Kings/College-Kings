@@ -35,6 +35,7 @@ label v9_ryan_v_perry_fight:
     guyd "Let's dance, Ape."
 
     scene v10rpf6 # FPP. Show close up of Ryan, hand up gaurding his CHEST, mouth open
+    with dissolve
     ry "Apes don't dance, bitch. We fight!"
 
     scene v10rpf7 # TPP. Show Perry and ryan squaring up to each other in the ring, mouths closed
