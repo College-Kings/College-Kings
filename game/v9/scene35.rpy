@@ -25,16 +25,14 @@ init python:
         v9s35_reply5()
 
     def v9s35_reply5():
-        contact_Chloe.newImgMessage(_("images/v9/Scene 35/chloetxtimg.webp"))
-        contact_Chloe.addReply(_("OMG! I miss those!"), v9s35_reply6)
-        contact_Chloe.addReply(_("OMG! You are magnificent!"), "s35_ChloeReplyWRs5")
-    
-    def v9s35_reply6():
+        contact_Chloe.newImgMessage("images/v9/Scene 35/chloetxtimg.webp")
+        contact_Chloe.addReply(_("OMG! I miss those!"))
+        contact_Chloe.addReply(_("OMG! You are magnificent!"))
         contact_Chloe.newMessage(_("Thought you'd like that :)"))
         contact_Chloe.addReply(_("Like? I love it! That just made my whole day better."))
         contact_Chloe.newMessage(_("Awww, such a charmer haha. Your turn. Let me see yours."))
         contact_Chloe.addReply(_("Your wish is my command."))
-        contact_Chloe.addImgReply(_("images/v9/Scene 35/mcdickwolves.webp"))
+        contact_Chloe.addImgReply("images/v9/Scene 35/mcdickwolves.webp", newMessage=True)
         contact_Chloe.newMessage(_("God, I miss that cock. "))
         contact_Chloe.addReply(_("Can I come over? Haha."))
         contact_Chloe.newMessage(_("I wish. I have a lot to do for tomorrow, but that would be nice."))
