@@ -8925,8 +8925,8 @@ label rileytext:
         play sound "sounds/vibrate.mp3"
 
         $ contact_Riley.newMessage(_("Wanna come over? ;)"), queue=False)
-        $ contact_Riley.addReply("Sure, on my way :)", "rirep8a")
-        $ contact_Riley.addReply("Sorry I'm really exhausted. Another time", "rirep8b")
+        $ contact_Riley.addReply(_("Sure, on my way :)"), "rirep8a")
+        $ contact_Riley.addReply(_("Sorry I'm really exhausted. Another time"), "rirep8b")
         
         " "
 
