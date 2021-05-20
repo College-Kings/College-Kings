@@ -600,6 +600,7 @@ label v10_amber_skatepark:
         with dissolve
         menu:
             "Yes":
+                $ skater = True
                 scene v10sasp5f 
                 with dissolve
 
@@ -616,7 +617,6 @@ label v10_amber_skatepark:
                 u "Good to know."
            
             "No":
-                $ skater = False
                 scene v10sasp5f
                 with dissolve
 

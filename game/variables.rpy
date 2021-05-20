@@ -396,7 +396,7 @@ default v10_amber_condoms = False
 default v10_amber_awkward = False
 default v10_imre_win = False
 default v10s33_laurenBakeSale = False
-default skater = True
+default skater = False
     # Freeroam
 default v10s33_riley = False
 default v10s33_riley2 = False
