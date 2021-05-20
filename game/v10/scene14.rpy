@@ -2,7 +2,7 @@
 # Locations: MC - Apes Living Room
 # Characters: Sam (Outfit 2), MC (Outfit 1), Cameron (Outfit 3)
 # Time: Sunday Morning
-label v10_14sam:
+label v10_apes_samantha:
 
     scene v10ssap1 # TPP. Show MC in the Ape's living room. He's sitting on the couch, appearing exhausted, mouth closed.
     with fade
