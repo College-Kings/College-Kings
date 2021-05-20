@@ -5468,11 +5468,11 @@ label wakeupa:
     $ contact_Amber.addReply(_("Yeah, that's too bad :/"), v6_reply10)
 
     if bowling:
-        $ contact_Penelope.addReply("Hey, you wanna go bowling today? I'm free this afternoon")
-        $ contact_Penelope.newMessage("Yeah, sounds good :)")
-        $ contact_Penelope.newMessage("I have a lecture at 2:30 but I can go straight to the bowling alley afterwards")
-        $ contact_Penelope.newMessage("Meet there at 4?")
-        $ contact_Penelope.addReply("Yesss, see you there")
+        $ contact_Penelope.addReply(_("Hey, you wanna go bowling today? I'm free this afternoon"))
+        $ contact_Penelope.newMessage(_("Yeah, sounds good :)"))
+        $ contact_Penelope.newMessage(_("I have a lecture at 2:30 but I can go straight to the bowling alley afterwards"))
+        $ contact_Penelope.newMessage(_("Meet there at 4?"))
+        $ contact_Penelope.addReply(_("Yesss, see you there"))
 
         u "(I should ask Penelope whether she wants to do bowling this afternoon.)"
 
