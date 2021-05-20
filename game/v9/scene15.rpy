@@ -60,12 +60,7 @@ label v9_thur_room_w_cam_punch:
     $ s15KiwiiPost.addComment("Cameron", "Fuckin' A!", numberLikes=renpy.random.randint(100, 200), queue=False)
     $ s15KiwiiPost.addComment("Riley", "Knew he had it in him!", numberLikes=renpy.random.randint(200, 250), queue=False)
     
-    label v9_s15_phoneExit_Punch:
-        if s15KiwiiPost.getReplies():
-            call screen phone
-        if s15KiwiiPost.getReplies():
-            "(I should check Kiwii)"
-            jump v9_s15_phoneExit_Punch
+    "(I should check Kiwii)"
 
     menu:
         "Brag":
