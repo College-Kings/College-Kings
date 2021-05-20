@@ -11,6 +11,8 @@ default kiwii_firstTime = False
 
     ## Fight Vars
 default fight_type = "normal" # normal / simReal / simWin
+default reaction = 1.0
+default reactiona = 1.0
 
 # 1.0 - 6.0
 default v1_sda = False
@@ -51,8 +53,6 @@ default simtom = 1
 default tomdmg = 0
 default tomattack = 1
 default tomstance = 1
-default reaction = 1.0
-default reactiona = 1.0
 default ischoice = False
 default emilyandben = False
 default forgiveemily = False
