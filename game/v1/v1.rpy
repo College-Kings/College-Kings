@@ -130,8 +130,7 @@ label starta: #for compatibility only
 
     u "Julia, it's fine. I packed yesterday."
 
-    hide s3c
-    show s3d
+    scene v1jul1a
     with dissolve
     ju "Look at you, all grown-up. I'm so proud of you."
 
@@ -141,27 +140,24 @@ label starta: #for compatibility only
     ju "You better not forget to come visit."
     u "I'll think about it, if you make lasagna."
 
-    show s3d
+    scene v1jul1a
     with dissolve
 
     ju "I'm sure that could be arranged."
 
     ju "Anyway, we should get ready, you don't wanna be late on your first day of college!"
-
-    hide s3d
-    show s3e
+    
+    scene v1jul1
     with dissolve
 
     u "Oh you're dropping me off? I was gonna take the train."
 
-    hide s3e
-    show s3d
+    scene v1jul1a
     with dissolve
 
     ju "No way you're robbing me of the chance to embarrass you in front of your new friends."
 
-    hide s3d
-    show s3e
+    scene v1jul1
     with dissolve
 
     u "Thanks, Julia... I'll be 20 minutes."
