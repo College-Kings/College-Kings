@@ -495,7 +495,7 @@ label v10s33_deergirl11:
     scene v10cfrau2a # same 2, mouth closed
     with dissolve
 
-    u "You look like you know what you're doing-"
+    u "You look like you know what you're doing."
 
     scene v10cfrau2b # same 2, ironic "you don't say"-kinda smile, mouth open
     with dissolve
