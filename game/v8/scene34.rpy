@@ -20,7 +20,7 @@ init python:
 
     def v8s34_reply3():
         contact_Chloe.newMessage(_("Good. Bored. You?"))
-        contact_Chloe.addReply(_("Same!", "phn_chloe13_a1"))
+        contact_Chloe.addReply(_("Same!"))
         contact_Chloe.addReply(_("Did you finish studying?"), v8s34_reply4)
 
     def v8s34_reply4():
@@ -46,7 +46,7 @@ init python:
         setattr(store, "chloeSteakHouse", True)
         addPoint("bf")
         contact_Chloe.newMessage(_("..."))
-        contact_Chloe.addReply(_("As friends", "phn_chloe13_axb2"))
+        contact_Chloe.addReply(_("As friends"))
         contact_Chloe.newMessage(_("Ok, yeah. I'm actually starving!"))
         contact_Chloe.addReply(_("What are you in the mood for? Lady's choice"), v8s34_reply8)
 
