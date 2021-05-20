@@ -580,6 +580,8 @@ label v10_lauren_room:
         scene v10lar1a
         with fade
 
+        play sound "sounds/kiss.mp3"
+        
         pause 0.5
 
     $ renpy.end_replay()
