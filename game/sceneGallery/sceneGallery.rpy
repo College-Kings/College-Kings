@@ -28,17 +28,6 @@ init python:
     SceneGallery("emsex_a")
     SceneGallery("rileysexscene")
     SceneGallery("brbj")
-    SceneGallery("v8_cl_start")
-    SceneGallery("v8_ri_start")
-    SceneGallery("hoco_amb_night")
-    SceneGallery("int_deal_w_josh")
-    SceneGallery("amber_sex_at_joshs")
-    SceneGallery("v9_aubrey_scene_lake")
-    SceneGallery("v9_emily_dorm")
-    SceneGallery("v9_ri_sex")
-    SceneGallery("v9_make_out_w_lin")
-    #SceneGallery("v10_aubrey_house_sg") #awaiting gallery18.webp
-    #SceneGallery("v10_lauren_room_sg", scope={"laurenrs": True}) #awaiting gallery19.webp
 
 screen spoiler():
     add "images/darker.webp"

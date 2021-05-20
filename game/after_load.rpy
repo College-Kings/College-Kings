@@ -43,17 +43,10 @@ label after_load:
             except AttributeError: pass
 
             kiwiiPost.img = os.path.splitext(kiwiiPost.img)[0] + ".webp"
-
-            for i in range(7, 10):
-                if renpy.loadable("images/phone/kiwii/posts/v{}/{}".format(i, kiwiiPost.img.split("/")[-1])):
-                    kiwiiPost.img = "images/phone/kiwii/posts/v{}/{}".format(i, kiwiiPost.img.split("/")[-1])
-                    break
+            kiwiiPost.img = "images/phone/kiwii/posts/v7/{}".format(kiwiiPost.img.split("/")[-1])
 
             try: kiwiiPost.message = kiwiiPost.caption
             except AttributeError: pass
-
-            if kiwiiPost.message[0] == "[" and kiwiiPost.message[1] != "[":
-                kiwiiPost.message = "[" + kiwiiPost.message
 
             try: kiwiiPost.sentComments = kiwiiPost.comments
             except AttributeError: pass
@@ -110,9 +103,6 @@ label after_load:
             except AttributeError: pass
 
         # Variables 
-        try:
-            if chlorers: chloers = True
-        except NameError: pass
         try: kiwiiPost1
         except NameError: kiwii_firstTime = False
 
