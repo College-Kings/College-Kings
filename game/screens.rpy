@@ -709,10 +709,10 @@ screen navigation():
             hover "images/discord2.webp"
             action OpenURL ("http://discord.collegekingsgame.com")
             xpos 1401
-            if not steam:
+            if not config.enable_steam:
                 ypos 417
             else:
-                ypos 147 #steam version
+                ypos 147 # steam version
 
 
         imagebutton:
@@ -741,7 +741,7 @@ screen navigation():
             hover "images/website3.webp"
             action OpenURL("http://collegekingsgame.com")
             xpos 1401
-            if not steam:
+            if not config.enable_steam:
                 ypos 687
             else:
                 ypos 592 #steam version
@@ -2016,37 +2016,6 @@ style endfree is text:
         xalign 0.5
         yalign 0.42
         xmaximum 600
-
-screen thx():
-    if not steam:
-        add "images/newthx.webp"
-    else:
-        add "images/newsteamend.webp" # steam
-
-    if not steam:
-        imagebutton:
-            ypos 677
-            xpos 394
-            idle "images/supportdevelopmentblank.webp"
-            hover "images/supportdevelopment.webp"
-            action OpenURL ("https://www.patreon.com/collegekings")
-
-    else:
-        imagebutton:# steam
-            ypos 700
-            xalign 0.5
-            idle "images/discordbutton1.webp"
-            hover "images/discordbutton2.webp"
-            action OpenURL ("http://discord.collegekingsgame.com")
-
-    textbutton "Main Menu":
-        text_underline True
-        text_size 50
-        text_font "fonts/Freshman.ttf"
-        ypos 952
-        xalign 0.5
-        text_align 0.5
-        action MainMenu()
 
 ######## General fighting screens.
 

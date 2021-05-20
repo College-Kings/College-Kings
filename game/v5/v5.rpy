@@ -782,7 +782,7 @@ label continuez:
                         $ addPoint("tm")
                         $ onthelow = True
 
-                        if not steam:
+                        if not config.enable_steam:
                             show onthelow at achievementShow
 
                         else:
@@ -1327,7 +1327,7 @@ label trolleybb: # you do press the lever
 
     if trolleyb and la2:
         $ petapublicenemy = True
-        if not steam:
+        if not config.enable_steam:
             show petapublicenemy at achievementShow:
 
         else:
@@ -2168,7 +2168,7 @@ label continueaf:
                     $ addPoint("tm")
                     $ onthelow = True
 
-                    if not steam:
+                    if not config.enable_steam:
                         show onthelow at achievementShow
 
                     else:
@@ -3627,7 +3627,7 @@ label fl_a:  # tell the school
     stop music fadeout 2.0
 
     $ snitch = True
-    if not steam:
+    if not config.enable_steam:
         show snitch at achievementShow:
 
     else:

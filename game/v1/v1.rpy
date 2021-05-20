@@ -2,7 +2,7 @@ init python:
     # Emily's messages
     def v1_reply1():
         setattr(store, "nohardfeelings", True)
-        if not steam:
+        if not config.enable_steam:
             renpy.show("nohardfeelings", at_list=achievementAtList)
         else:
             achievement.grant("no_hard_feelings")
@@ -12,7 +12,7 @@ init python:
 
     def v1_reply2():
         setattr(store, "openwound", True)
-        if not steam:
+        if not config.enable_steam:
             renpy.show("openwound", at_list=achievementAtList)
         else:
             achievement.grant("open_wound")
@@ -1160,7 +1160,7 @@ label starta: #for compatibility only
                 with dissolve
 
                 $ keepitmoving = True
-                if not steam:
+                if not config.enable_steam:
                     show keepitmoving at achievementShow
                 else:
                     $ achievement.grant("keep_it_moving")
@@ -2773,7 +2773,7 @@ label aw_bd:
                 $ v1_kissLauren = True
 
                 $ romeo = True
-                if not steam:
+                if not config.enable_steam:
                     show romeo at achievementShow
                 else:
                     $ achievement.grant("romeo")
@@ -3486,7 +3486,7 @@ label v1_freeRoam2_mason:
             with dissolve
 
             $ bigmouth = True
-            if not steam:
+            if not config.enable_steam:
                 show bigmouth at achievementShow
             else:
                 $ achievement.grant("big_mouth")

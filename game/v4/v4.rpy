@@ -750,7 +750,7 @@ label v4start:
             with dissolve
 
             $ relightthefire = True
-            if not steam:
+            if not config.enable_steam:
                 show relightthefire at achievementShow
             else:
                 $ achievement.grant("relight_the_fire")
@@ -956,7 +956,7 @@ label v4start:
                     $ volleyball = True
                     $ rematch = True
 
-                    if not steam:
+                    if not config.enable_steam:
                         show rematch at achievementShow
 
                     else:
@@ -1707,7 +1707,7 @@ label readmontagea:
                 with dissolve
 
                 $ keeneye = True
-                if not steam:
+                if not config.enable_steam:
                     show keeneye at achievementShow:
                 else:
                     $ achievement.grant("keen_eye")

@@ -2694,7 +2694,7 @@ label continueq:
             with dissolve
 
             $ notnowmom = True
-            if not steam:
+            if not config.enable_steam:
                 show notnowmom at achievementShow
 
             else:
@@ -3080,7 +3080,7 @@ label continueq:
                     play sound "sounds/kiss.mp3"
 
                     $ lipsdontlie = True
-                    if not steam:
+                    if not config.enable_steam:
                         show lipsdontlie at achievementShow
                         
                     else:
@@ -3256,7 +3256,7 @@ label continueq:
                     with dissolve
 
                     $ truthhurts = True
-                    if not steam:
+                    if not config.enable_steam:
                         show truthhurts at achievementShow
                         
                     else:

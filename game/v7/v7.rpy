@@ -472,7 +472,7 @@ label v7start:
                 with dissolve
 
                 $ truetoself = True
-                if not steam:
+                if not config.enable_steam:
                     show truetoself at achievementShow
                 else:
                     $ achievement.grant("true_to_self")
@@ -3505,7 +3505,7 @@ label afterbeach:
             "Pledge to the Apes":
 
                 $ silverback = True
-                if not steam:
+                if not config.enable_steam:
                     show silverback at achievementShow
                 else:
                     $ achievement.grant("silverback")
@@ -3517,7 +3517,7 @@ label afterbeach:
 
             "Pledge to the Wolves":
                 $ wolfpack = True
-                if not steam:
+                if not config.enable_steam:
                     show wolfpack at achievementShow
                 else:
                     $ achievement.grant("wolfpack")
@@ -6491,7 +6491,7 @@ label after_history:
             with vpunch
 
             $ leeway = True
-            if not steam:
+            if not config.enable_steam:
                 show leeway at achievementShow
             else:
                 $ achievement.grant("lee_way")
@@ -9860,7 +9860,7 @@ label amberhocodate:
     with dissolve
 
     $ ecstatic = True
-    if not steam:
+    if not config.enable_steam:
         show ecstatic at achievementShow
     else:
         $ achievement.grant("ecstatic")
@@ -16991,7 +16991,7 @@ label fr4laurenending:
     with dissolve
 
     $ slowandsteady = True
-    if not steam:
+    if not config.enable_steam:
         show slowandsteady at achievementShow
     else:
         $ achievement.grant("slow_and_steady")
@@ -17144,7 +17144,7 @@ label fr4rileyending2:
     with dissolve
 
     $ playingwithfire = True
-    if not steam:
+    if not config.enable_steam:
         show playingwithfire at achievementShow
     else:
         $ achievement.grant("playing_with_fire")
@@ -17256,7 +17256,7 @@ label fr4chloeending:
     with fade
 
     $ homecomingqueen = True
-    if not steam:
+    if not config.enable_steam:
         show homecomingqueen at achievementShow
     else:
         $ achievement.grant("homecomingqueen")
@@ -17335,6 +17335,9 @@ label v7end:
         scene savenow
         with Fade (1,0,1)
         " "
+
+        if config.enable_steam:
+            call screen steam_end(link="https://store.steampowered.com/app/1624520/College_Kings__Act_II/")
 
     if persistent.ep < 8:
         jump end_credits

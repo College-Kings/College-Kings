@@ -38,7 +38,6 @@ image ecstatic = "images/ecstatic.webp"
 image slowandsteady = "images/slowandsteady.webp"
 image playingwithfire = "images/playingwithfire.webp"
 image homecomingqueen = "images/homecomingqueen.webp"
-image thick_and_thin = "images/v8/achievements/thickandthin.webp"
 
 # v1.0 - v2.0
 image s14 = "images/s14.webp"

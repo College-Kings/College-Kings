@@ -1,9 +1,9 @@
 init python:
     persistent.ep = 7
 
-define steam = False
-define config.developer = False
-define config.console = False
+define config.enable_steam = True
+define config.developer = True
+define config.console = True
 
 
 define config.steam_appid = 1463120
@@ -52,7 +52,7 @@ label end_credits:
     stop music fadeout 2.0
     play music "music/vocal.mp3"
 
-    if not steam:
+    if not config.enable_steam:
         show screen getaccess
         with dissolve
         " "
@@ -62,4 +62,4 @@ label end_credits:
         ypos 50
         xalign 0.5
 
-    call screen thx
+    call screen credits

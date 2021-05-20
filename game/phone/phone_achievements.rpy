@@ -42,10 +42,6 @@ init python:
     Achievement("credulous", "Trust Chloe", "credulous")
     Achievement("seems fishy", "Don't meet Grayson", "seemsfishy")
     Achievement("strike", "Kiss Penelope", "strike")
-    Achievement("get a room", "Sleep With Amber at Josh's", "get_a_room")
-    Achievement("ip man", "Win The Alley Fight", "ip_man")
-    Achievement("thick and thin", "Help Penelope", "thick_and_thin")
-    Achievement("up for more", "Flirt With Chloe", "up_for_more")
 
 screen achievements():
     tag phoneTag

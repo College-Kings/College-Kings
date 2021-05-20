@@ -13,8 +13,6 @@ default kiwii_firstTime = False
 default fight_type = "normal" # normal / simReal / simWin
 default reaction = 1.0
 default reactiona = 1.0
-default allies = [mc]
-default enemies = []
 
 # 1.0 - 6.0
 default v1_sda = False

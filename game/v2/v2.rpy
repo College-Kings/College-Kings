@@ -28,7 +28,7 @@ init python:
 
     def v2_reply6():
         setattr(store, "mixedfeelings", True)
-        if not steam:
+        if not config.enable_steam:
             renpy.show("mixedfeelings", at_list=achievementAtList)
         else:
             achievement.grant("mixed_feelings")
@@ -1204,7 +1204,7 @@ label gb:
 label youfinish:
     if reaction == 0.5:
         $ thenotorious = True
-        if not steam:
+        if not config.enable_steam:
             show thenotorious at achievementShow
         else:
             $ achievement.grant("the_notorious")
@@ -1365,7 +1365,7 @@ label meet_lauren2:
                 with dissolve
 
                 $ anewbeginning = True
-                if not steam:
+                if not config.enable_steam:
                     show anewbeginning at achievementShow
                 else:
                     $ achievement.grant("a_new_beginning")
@@ -2260,7 +2260,7 @@ label bo_ad:
             with dissolve
 
             $ overit = True
-            if not steam:
+            if not config.enable_steam:
                 show overit as achievementShow:
 
             else:

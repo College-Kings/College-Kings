@@ -261,7 +261,7 @@ label imrecona: # Find Imre
 
 label imreconb: # Help Imre
     $ brosbeforehoes = True
-    if not steam:
+    if not config.enable_steam:
         show brosbeforehoes at achievementShow
 
     else:
@@ -870,7 +870,7 @@ label imrecond: # Meet Chloe
             $ addPoint("bf")
             $ credulous = True
 
-            if not steam:
+            if not config.enable_steam:
                 show credulous at achievementShow:
 
             else:
@@ -1778,7 +1778,7 @@ label continuebd:
             with fade
 
             $ notmybusiness = True
-            if not steam:
+            if not config.enable_steam:
                 show notmybusiness at achievementShow
 
             else:
@@ -2722,7 +2722,7 @@ label emsex_c:
     with dissolve
 
     $ reignition = True
-    if not steam:
+    if not config.enable_steam:
         show reignition at achievementShow
     else:
         $ achievement.grant("reignition")
@@ -2758,7 +2758,7 @@ label emsex_a:
         play music "music/msexy.mp3"
 
         $ reignition = True
-        if not steam:
+        if not config.enable_steam:
             show reignition at achievementShow
         else:
             $ achievement.grant("reignition")
@@ -4873,7 +4873,7 @@ label afteraubrey:
                     # handshake clap sound
 
                     $ monkeybusiness = True
-                    if not steam:
+                    if not config.enable_steam:
                         show monkeybusiness at achievementShow
                     else:
                         $ achievement.grant("monkey_business")
@@ -5024,7 +5024,7 @@ label afteraubrey:
             $ addPoint("bro")
             $ seemsfishy = True
 
-            if not steam:
+            if not config.enable_steam:
                 show seemsfishy at achievementShow
             else:
                 $ achievement.grant("seems_fishy")
@@ -6628,7 +6628,7 @@ label wakeupa:
                 with dissolve
 
                 $ strike = True
-                if not steam:
+                if not config.enable_steam:
                     show strike at achievementShow
                 else:
                     $ achievement.grant("strike")
