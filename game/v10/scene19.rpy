@@ -41,6 +41,7 @@ label v10_walk_jenny_text:
     menu:
         "Invite Penelope":
             $ penelopelike += 1
+            $ v10_inv_pen_cafe = True
             $ addPoint("bf", 1)
 
             u "(Yeah, I should invite her. Best if she's the one that breaks the news to her.)"
