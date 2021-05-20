@@ -131,70 +131,46 @@ label int_deal_w_josh:
         $ allies = [mc]
         $ enemies = [lars]
 
-        call screen fightTutorial
+        call screen fight_tutorialPopup
 
         scene v8sdd10
 
         call screen fight_typeMenu
 
-    # Select Difficulty
-    label s28_LarsFightDifficulty:
-        $ youdmg = 0
-        $ larsdmg = 0
-        $ larsStance = renpy.random.choice([1, 2, 3, 4])
-        $ larsAttack = renpy.random.choice([1, 2, 3, 4])
-        call screen s28_LarsSelectDifficulty
+        if fight_type == "normal":
+            $ simLarsFight = False
+            $ youdmg = 0
+            $ larsdmg = 0
+            $ larsStance = renpy.random.choice([1, 2, 3, 4])
+            $ larsAttack = renpy.random.choice([1, 2, 3, 4])
 
-    label s28_LarsEasyDifficulty:
-        $ reaction = 3
-        $ reactiona = 3.2
-        $ larshealth = 5
-        $ youhealth = 5
-        call screen s28_LarsKeybindOptions
+            call screen fight_selectDifficulty
 
-    label s28_LarsModerateDifficulty:
-        $ reaction = 1.3
-        $ reactiona = 1.5
-        $ larshealth = 6
-        $ youhealth = 3
-        call screen s28_LarsKeybindOptions
-
-    label s28_LarsHardDifficulty:
-        $ reaction = 0.5
-        $ reactiona = 0.7
-        $ larshealth = 8
-        $ youhealth = 2
-        call screen s28_LarsKeybindOptions
+            call screen fight_keybindOptions
         
+        elif fight_type == "simReal":
+            $ simLarsFight = True
+            $ stance = 1
+            $ larshealth = 6
+            $ youhealth = 3
 
-    label s28_LarsSimulateFight:
-        $ simLarsFight = True
-        $ stance = 1
-        $ larshealth = 6
-        $ youhealth = 3
+            $ youdmg = 0
+            $ larsdmg = 0
+            $ larsStance = renpy.random.choice([1, 2, 3, 4])
+            $ larsAttack = renpy.random.choice([1, 2, 3, 4])
+            $ larsSimulation = renpy.random.choice([1, 2, 3, 4, 5, 6])
 
-        $ youdmg = 0
-        $ larsdmg = 0
-        $ larsStance = renpy.random.choice([1, 2, 3, 4])
-        $ larsAttack = renpy.random.choice([1, 2, 3, 4])
-        $ larsSimulation = renpy.random.choice([1, 2, 3, 4, 5, 6])
-        jump lars_McAttack
+        elif fight_type == "simWin":
+            $ simLarsFight = True
+            $ stance = 1
+            $ youhealth = 100000
+            $ larshealth = 3
 
-    label s28_LarsAutoWin:
-        $ simLarsFight = True
-        $ stance = 1
-        $ youhealth = 100000
-        $ larshealth = 3
-
-        $ youdmg = 0
-        $ larsdmg = 0
-        $ larsStance = renpy.random.choice([1, 2, 3, 4])
-        $ larsAttack = renpy.random.choice([1, 2, 3, 4])
-        $ larsSimulation = renpy.random.choice([1, 2, 3, 4, 5, 6])
-        jump lars_McAttack
-
-    label s28_LarsStartFight:
-        $ simLarsFight = False
+            $ youdmg = 0
+            $ larsdmg = 0
+            $ larsStance = renpy.random.choice([1, 2, 3, 4])
+            $ larsAttack = renpy.random.choice([1, 2, 3, 4])
+            $ larsSimulation = renpy.random.choice([1, 2, 3, 4, 5, 6])
 
 
     label lars_McAttack:
