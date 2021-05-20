@@ -472,11 +472,8 @@ label v7start:
                 with dissolve
 
                 $ truetoself = True
-                if not config.enable_steam:
-                    show truetoself at achievementShow
-                else:
-                    $ achievement.grant("true_to_self")
-                    $ achievement.sync()
+                $ grantAchievement("true_to_self")
+                    
 
                 u "Uhh, yeah of course."
 
@@ -3505,11 +3502,8 @@ label afterbeach:
             "Pledge to the Apes":
 
                 $ silverback = True
-                if not config.enable_steam:
-                    show silverback at achievementShow
-                else:
-                    $ achievement.grant("silverback")
-                    $ achievement.sync()
+                $ grantAchievement("silverback")
+                    
 
                 u "(Fuck it. I'm gonna be winner, no matter what it costs. I'ma go to the Apes' house and tell Grayson I changed my mind.)"
 
@@ -3517,11 +3511,8 @@ label afterbeach:
 
             "Pledge to the Wolves":
                 $ wolfpack = True
-                if not config.enable_steam:
-                    show wolfpack at achievementShow
-                else:
-                    $ achievement.grant("wolfpack")
-                    $ achievement.sync()
+                $ grantAchievement("wolfpack")
+                    
 
                 u "(Nah, Grayson's done more than enough questionable shit. The Wolves been nothing but good to me. I'ma pledge to the Wolves.)"
 
@@ -5498,7 +5489,7 @@ label after_pledges:
         play sound "sounds/vibrate.mp3"
         
         $ contact_Emily.newMessage(_("It's okay. You'll get the surprise another time..."), queue=False)
-        $ contact_Emily.addReply(_("Excting :)"))
+        $ contact_Emily.addReply(_("Exciting :)"))
 
     " "
 
@@ -6491,11 +6482,8 @@ label after_history:
             with vpunch
 
             $ leeway = True
-            if not config.enable_steam:
-                show leeway at achievementShow
-            else:
-                $ achievement.grant("lee_way")
-                $ achievement.sync()
+            $ grantAchievement("lee_way")
+                
 
             lee "Who was that?{w} {b}WHO WAS THAT?{/b}"
             ca "HAHAHA! FUCKIN' ACES!"
@@ -9860,11 +9848,8 @@ label amberhocodate:
     with dissolve
 
     $ ecstatic = True
-    if not config.enable_steam:
-        show ecstatic at achievementShow
-    else:
-        $ achievement.grant("ecstatic")
-        $ achievement.sync()
+    $ grantAchievement("ecstatic")
+        
 
     u "Now what?"
 
@@ -16991,11 +16976,8 @@ label fr4laurenending:
     with dissolve
 
     $ slowandsteady = True
-    if not config.enable_steam:
-        show slowandsteady at achievementShow
-    else:
-        $ achievement.grant("slow_and_steady")
-        $ achievement.sync()
+    $ grantAchievement("slow_and_steady")
+        
 
     la "I read that... if you cuddle in your underwear it increases the serotonin levels in your brain, which in turns means you live a longer, happier life."
 
@@ -17144,11 +17126,8 @@ label fr4rileyending2:
     with dissolve
 
     $ playingwithfire = True
-    if not config.enable_steam:
-        show playingwithfire at achievementShow
-    else:
-        $ achievement.grant("playing_with_fire")
-        $ achievement.sync()
+    $ grantAchievement("playing_with_fire")
+        
 
     ri "Sit down with me for a second."
 
@@ -17256,11 +17235,8 @@ label fr4chloeending:
     with fade
 
     $ homecomingqueen = True
-    if not config.enable_steam:
-        show homecomingqueen at achievementShow
-    else:
-        $ achievement.grant("homecomingqueen")
-        $ achievement.sync()
+    $ grantAchievement("homecomingqueen")
+        
 
     u "So this is your infamous room?"
 

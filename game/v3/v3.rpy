@@ -2694,12 +2694,8 @@ label continueq:
             with dissolve
 
             $ notnowmom = True
-            if not config.enable_steam:
-                show notnowmom at achievementShow
-
-            else:
-                $ achievement.grant("not_now_mom")
-                $ achievement.sync()
+            $ grantAchievement("not_now_mom")
+                
 
             u "(I don't really feel like talking to her right now.)"
 
@@ -3080,12 +3076,8 @@ label continueq:
                     play sound "sounds/kiss.mp3"
 
                     $ lipsdontlie = True
-                    if not config.enable_steam:
-                        show lipsdontlie at achievementShow
+                    $ grantAchievement("lips_dont_lie")
                         
-                    else:
-                        $ achievement.grant("lips_dont_lie")
-                        $ achievement.sync()
 
                     " "
 
@@ -3256,12 +3248,8 @@ label continueq:
                     with dissolve
 
                     $ truthhurts = True
-                    if not config.enable_steam:
-                        show truthhurts at achievementShow
+                    $ grantAchievement("truth_hurts")
                         
-                    else:
-                        $ achievement.grant("truth_hurts")
-                        $ achievement.sync()
 
                     u "(Fuck me... I guess that's what honesty gets you.)"
 

@@ -261,12 +261,8 @@ label imrecona: # Find Imre
 
 label imreconb: # Help Imre
     $ brosbeforehoes = True
-    if not config.enable_steam:
-        show brosbeforehoes at achievementShow
-
-    else:
-        $ achievement.grant("bros_before_hoes")
-        $ achievement.sync()
+    $ grantAchievement("bros_before_hoes")
+        
 
     u "(I need to help Imre, Adam will destroy him in his current condition.)"
 
@@ -869,13 +865,8 @@ label imrecond: # Meet Chloe
         "Trust her":
             $ addPoint("bf")
             $ credulous = True
-
-            if not config.enable_steam:
-                show credulous at achievementShow:
-
-            else:
-                $ achievement.grant("credulous")
-                $ achievement.sync()
+            $ grantAchievement("credulous")
+                
 
             u "(I shouldn't spy on her. It's not right.)"
 
@@ -1778,12 +1769,8 @@ label continuebd:
             with fade
 
             $ notmybusiness = True
-            if not config.enable_steam:
-                show notmybusiness at achievementShow
-
-            else:
-                $ achievement.grant("not_my_business")
-                $ achievement.sync()
+            $ grantAchievement("not_my_business")
+                
 
     label nr_bb: #for compatibility only
     u "(Huh, what's this?)"
@@ -2722,11 +2709,8 @@ label emsex_c:
     with dissolve
 
     $ reignition = True
-    if not config.enable_steam:
-        show reignition at achievementShow
-    else:
-        $ achievement.grant("reignition")
-        $ achievement.sync()
+    $ grantAchievement("reignition")
+        
 
     " "
 
@@ -2758,11 +2742,8 @@ label emsex_a:
         play music "music/msexy.mp3"
 
         $ reignition = True
-        if not config.enable_steam:
-            show reignition at achievementShow
-        else:
-            $ achievement.grant("reignition")
-            $ achievement.sync()
+        $ grantAchievement("reignition")
+            
 
     " "
 
@@ -4873,11 +4854,8 @@ label afteraubrey:
                     # handshake clap sound
 
                     $ monkeybusiness = True
-                    if not config.enable_steam:
-                        show monkeybusiness at achievementShow
-                    else:
-                        $ achievement.grant("monkey_business")
-                        $ achievement.sync()
+                    $ grantAchievement("monkey_business")
+                        
 
                     gr "That's what I'm talking about!"
 
@@ -5023,12 +5001,8 @@ label afteraubrey:
             $ meetgrayson = False
             $ addPoint("bro")
             $ seemsfishy = True
-
-            if not config.enable_steam:
-                show seemsfishy at achievementShow
-            else:
-                $ achievement.grant("seems_fishy")
-                $ achievement.sync()
+            $ grantAchievement("seems_fishy")
+                
 
             u "(Fuck Grayson, I'm not meeting him.)"
 
@@ -6628,11 +6602,8 @@ label wakeupa:
                 with dissolve
 
                 $ strike = True
-                if not config.enable_steam:
-                    show strike at achievementShow
-                else:
-                    $ achievement.grant("strike")
-                    $ achievement.sync()
+                $ grantAchievement("strike")
+                    
 
                 pe "*Giggles*"
 

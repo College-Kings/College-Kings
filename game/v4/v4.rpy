@@ -750,11 +750,8 @@ label v4start:
             with dissolve
 
             $ relightthefire = True
-            if not config.enable_steam:
-                show relightthefire at achievementShow
-            else:
-                $ achievement.grant("relight_the_fire")
-                $ achievement.sync()
+            $ grantAchievement("relight_the_fire")
+                
 
             ju "Emily? I thought you guys broke up?"
 
@@ -955,13 +952,8 @@ label v4start:
                 "Buy it":
                     $ volleyball = True
                     $ rematch = True
-
-                    if not config.enable_steam:
-                        show rematch at achievementShow
-
-                    else:
-                        $ achievement.grant("rematch")
-                        $ achievement.sync()
+                    $ grantAchievement("rematch")
+                        
 
                     u "Yeah, you're right. Maybe I could give it to her when we talk about what Ryan said."
 
@@ -1707,11 +1699,8 @@ label readmontagea:
                 with dissolve
 
                 $ keeneye = True
-                if not config.enable_steam:
-                    show keeneye at achievementShow:
-                else:
-                    $ achievement.grant("keen_eye")
-                    $ achievement.sync()
+                $ grantAchievement("keen_eye")
+                    
 
                 u "Can I get a muffin and a coffee please?"
 
