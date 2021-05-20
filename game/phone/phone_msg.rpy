@@ -85,7 +85,7 @@ init python:
 
         def seenMessage(self):
             self.newMessages = False
-            if not any([contact.newMessages for contact in contacts]):
+            if not any([contact.getReplies() for contact in contacts]):
                 msgApp.seenNotification()
 
         def selectedReply(self, reply):
