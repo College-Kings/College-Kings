@@ -211,4 +211,4 @@ image Lars_Kick_block = "images/v8/Scene 28/Lars_Kick_block.webp"
 image Lars_Kick_hit = "images/v8/Scene 28/Lars_Kick_hit.webp"
 
 # Misc
-image credits = Movie(play="images/credits.webm", Loop = True)
+image credits = Movie(play="images/credits.webm", loop = True)

@@ -16,9 +16,8 @@ init python:
             else: self.sentComments = comments
 
             self.pendingComments = []
-
-            self.getUsername()
-            self.getProfilePicture()
+            self.username = self.getUsername()
+            self.profilePicture = self.getProfilePicture()
 
             kiwiiPosts.append(self)
 
@@ -80,16 +79,14 @@ init python:
             except IndexError: pass
 
         def getUsername(self):
-            try: 
-                self.username = kiwiiUsers[self.user]["username"]
-                return self.username
+            try:
+                return kiwiiUsers[self.user]["username"]
             except KeyError: 
                 return None
 
         def getProfilePicture(self):
             try:
-                self.profilePicture = kiwiiUsers[self.user]["profilePicture"]
-                return self.profilePicture
+                return kiwiiUsers[self.user]["profilePicture"]
             except KeyError:
                 return None
 
@@ -122,8 +119,8 @@ init python:
             self.liked = False
             self.replies = []
             self.reply = None
-            self.getUsername()
-            self.getProfilePicture()
+            self.username = self.getUsername()
+            self.profilePicture = self.getProfilePicture()
 
     class KiwiiReply(KiwiiComment):
         def __init__(self, message, func=None, numberLikes=0, mentions=None):

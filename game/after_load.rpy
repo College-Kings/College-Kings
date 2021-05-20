@@ -31,7 +31,6 @@ label after_load:
         # Kiwii Users
         for user in kiwiiUsers:
             kiwiiUsers[user]["profilePicture"] = os.path.splitext(kiwiiUsers[user]["profilePicture"])[0].replace("Profile Pictures", "profilePictures") + ".webp"
-            
 
         # Kiwii Posts
         for kiwiiPost in kiwiiPosts:
@@ -54,11 +53,15 @@ label after_load:
             try: kiwiiPost.message = kiwiiPost.caption
             except AttributeError: pass
 
+            kiwiiPost.profilePicture = kiwiiPost.getProfilePicture()
+
             # Kiwii Comments
             for comment in kiwiiPost.sentComments:
                 try: comment.message = comment.text
                 except AttributeError: pass
 
+                comment.profilePicture = comment.getProfilePicture()
+                
             # Kiwii Replies
             try:
                 for reply in kiwiiPost.replies:
@@ -104,7 +107,7 @@ label after_load:
             if chlorers: chloers = True
         except NameError: pass
         try: kiwiiPost1
-        except: kiwii_firstTime = False
+        except NameError: kiwii_firstTime = False
 
     show screen phoneIcon
     return
