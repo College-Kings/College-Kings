@@ -725,10 +725,10 @@ label v10_aubrey_room:
     scene v10auh7 # TPP Show Aubrey and MC, sitting on bed in Aubrey's room, both with small smiles and mouths closed
     with fade
 
-    pause 0.5
+    pause 0.75
     
     scene v10auh8 # FPP Show Aubrey sitting on her bed, slight smile, mouth closed
-    with fade
+    with dissolve
 
     u "It's kinda unfair… you guys have a way nicer house than we do."
 
