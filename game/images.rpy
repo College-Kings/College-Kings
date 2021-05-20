@@ -186,7 +186,29 @@ image ri42vidperspective = Movie(play="images/ri42vidperspective.webm", image="i
 image ri42vidfast = Movie(play="images/ri42vidfast.webm", image="images/ri42vid20.webp", start_image="images/ri42vid00.webp")
 image ri42vidperspectivefast = Movie(play="images/ri42vidperspectivefast.webm", image="images/ri42vidperspective20.webp", start_image="images/ri42vidperspective00.webp")
 
+# v8.0
+    ## Fight Images
+image MC_Lars_Kick_hit = Movie(play="images/v8/Scene 28/mckickhit.webm", start_image="images/v8/Scene 28/mckickhitstart.webp", image="images/v8/Scene 28/mckickhitend.webp", loop = False)
+image MC_Lars_Kick_block = Movie(play="images/v8/Scene 28/mckickblocked.webm", start_image="images/v8/Scene 28/mckickblockedstart.webp", image="images/v8/Scene 28/mckickblockedend.webp", loop = False)
+image MC_Lars_BodyJab_hit = Movie(play="images/v8/Scene 28/mcbodyhit.webm", start_image="images/v8/Scene 28/mcbodyhookstart.webp", image="images/v8/Scene 28/mcbodyhitend.webp", loop = False)
+image MC_Lars_BodyJab_block = Movie(play="images/v8/Scene 28/mcbodyblocked.webm", start_image="images/v8/Scene 28/mcbodyblockedstart.webp", image="images/v8/Scene 28/mcbodyblockedend.webp", loop = False)
+image MC_Lars_Jab_hit = Movie(play="images/v8/Scene 28/mcjabhit.webm", start_image="images/v8/Scene 28/mcjabhitstart.webp", image="images/v8/Scene 28/mcjabhitend.webp", loop = False)
+image MC_Lars_Jab_block = Movie(play="images/v8/Scene 28/mcjabblocked.webm", start_image="images/v8/Scene 28/mcjabblockedstart.webp", image="images/v8/Scene 28/mcjabblockedend.webp", loop = False)
+image MC_Lars_Hook_hit = Movie(play="images/v8/Scene 28/mchookhit.webm", start_image="images/v8/Scene 28/mchookhitstart.webp", image="images/v8/Scene 28/mchookhitend.webp", loop = False)
+image MC_Lars_Hook_block = Movie(play="images/v8/Scene 28/mchookblocked.webm", start_image="images/v8/Scene 28/mchookblockedstart.webp", image="images/v8/Scene 28/mchookblockedend.webp", loop = False)
+image larsjab = Movie(play="images/v8/Scene 28/larsjab.webm", start_image="images/v8/Scene 28/larsjabstart.webp", image="images/v8/Scene 28/larsjabend.webp", loop = False)
+image larshook = Movie(play="images/v8/Scene 28/larshook.webm", start_image="images/v8/Scene 28/larshookstart.webp", image="images/v8/Scene 28/larshookend.webp", loop = False)
+image larskick = Movie(play="images/v8/Scene 28/larskick.webm", start_image="images/v8/Scene 28/larskickstart.webp", image="images/v8/Scene 28/larskickend.webp", loop = False)
+image larsbody = Movie(play="images/v8/Scene 28/larsbody.webm", start_image="images/v8/Scene 28/larsbodystart.webp", image="images/v8/Scene 28/larsbodyend.webp", loop = False)
 
+image Lars_BodyJab_block = "images/v8/Scene 28/Lars_BodyJab_block.webp"
+image Lars_BodyJab_hit = "images/v8/Scene 28/Lars_BodyJab_hit.webp"
+image Lars_Hook_block = "images/v8/Scene 28/Lars_Hook_block.webp"
+image Lars_Hook_hit = "images/v8/Scene 28/Lars_Hook_hit.webp"
+image Lars_Jab_block = "images/v8/Scene 28/Lars_Jab_block.webp"
+image Lars_Jab_hit = "images/v8/Scene 28/Lars_Jab_hit.webp"
+image Lars_Kick_block = "images/v8/Scene 28/Lars_Kick_block.webp"
+image Lars_Kick_hit = "images/v8/Scene 28/Lars_Kick_hit.webp"
 
 # Misc
 image credits = Movie(play="images/credits.webm", Loop = True)
