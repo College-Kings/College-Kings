@@ -48,7 +48,7 @@ label v9_hallway:
             $ timed = False
             jump v9_hall_apol
 
-        "Tell him To calm down":
+        "Tell him to calm down":
             $ addPoint("tm")
             $ timed = False
             jump v9_hall_calm
