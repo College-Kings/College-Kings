@@ -110,9 +110,6 @@ label after_load:
             except AttributeError: pass
 
         # Variables 
-        try:
-            if chlorers: chloers = True
-        except NameError: pass
         try: kiwiiPost1
         except NameError: kiwii_firstTime = False
 
