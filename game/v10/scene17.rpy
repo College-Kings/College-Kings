@@ -790,7 +790,7 @@ label v10_aubrey_room:
 
             u "You really should do acting! *Laughs*"
 
-            if bathroom_sex:
+            if aubrey_bathroom_sex:
                 scene v10auh8e # Same angle as v10auh8, Aubrey with eyebrow raised, slight smile, mouth open
                 with dissolve
 
