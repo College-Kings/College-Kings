@@ -566,27 +566,27 @@ label v10_call_with_lauren1:
 
         la "Yeah sure!"
 
-        scene v10saow2 # FPP. MC is looking out the window. Show Aubrey outside in gym clothes, smiling, mouth closed.
+        scene v10saow5 # FPP. MC is looking out the window. Show Aubrey outside in gym clothes, smiling, mouth closed.
         with fade
 
         u "Hey What's up? Also, did you just throw a pebble at my window? *Chuckles*"
 
-        scene v10saow2a # FPP. Same camera as v10saow2. MC is looking out the window. Show Aubrey, smiling, mouth open.
+        scene v10saow5a # FPP. Same camera as v10saow5. MC is looking out the window. Show Aubrey, smiling, mouth open.
         with dissolve
 
         au "That must have been the wind. I'm just on my way home from the gym."
 
         if aubreyrs: # RCS - MC is in a relationship with Aubrey
-            scene v10saow2a
+            scene v10saow5a
             with dissolve
 
             au "I'm gonna have the house all to myself since none of the girls are home. You wanna come over?"
 
-            scene v10saow2
+            scene v10saow5
             with dissolve
             menu:
                 "Walk her home":
-                    scene v10saow2
+                    scene v10saow5
                     with dissolve
 
                     u "Hell yeah, I'll be down in a second."
@@ -624,17 +624,17 @@ label v10_call_with_lauren1:
                     jump v10_aubrey_house
                 
                 "Don't walk her home": # RCS - there was nothing for this so I just used the stuff from no relationship w/ Aubrey branch
-                    scene v10saow2
+                    scene v10saow5
                     with dissolve
 
                     u "I'd love to, but I'm busy right now, sorry."
 
-                    scene v10saow2a
+                    scene v10saow5a
                     with dissolve
 
                     au "Oh okay, guess I'll see you around then."
 
-                    scene v10saow2
+                    scene v10saow5
                     with dissolve
 
                     u "See ya!"
@@ -670,16 +670,16 @@ label v10_call_with_lauren1:
                     u "Something like that."
 
         else: # RCS - MC is not in a relationship with Aubrey
-            scene v10saow2a
+            scene v10saow5a
             with dissolve
 
             au "It's kind of a long walk, wanna go with me and hang out?"
 
-            scene v10saow2
+            scene v10saow5
             with dissolve
             menu:
                 "Walk her home":
-                    scene v10saow2
+                    scene v10saow5
                     with dissolve
 
                     u "Yeah sure, I'll be right down."
@@ -717,17 +717,17 @@ label v10_call_with_lauren1:
                     jump v10_aubrey_house
             
                 "Don't walk her home":
-                    scene v10saow2
+                    scene v10saow5
                     with dissolve
 
                     u "I'd love to, but I'm busy right now, sorry."
 
-                    scene v10saow2a
+                    scene v10saow5a
                     with dissolve
 
                     au "Oh okay, guess I'll see you around then."
 
-                    scene v10saow2
+                    scene v10saow5
                     with dissolve
 
                     u "See ya!"
@@ -1350,11 +1350,6 @@ label v10_call_with_lauren1:
 
                     u "Hell yeah, I'll be down in a second."
 
-                    scene v10saow4d
-                    with dissolve
-                    
-                    pause 0.5
-
                     scene v10scwl1b
                     with fade
 
@@ -1383,17 +1378,17 @@ label v10_call_with_lauren1:
                     jump v10_aubrey_house
                 
                 "Don't walk her home": # RCS - there was nothing for this so I just used the stuff from no relationship w/ Aubrey branch
-                    scene v10saow2
+                    scene v10saow5
                     with dissolve
 
                     u "I'd love to, but I'm busy right now, sorry."
 
-                    scene v10saow2a
+                    scene v10saow5a
                     with dissolve
 
                     au "Oh okay, guess I'll see you around then."
 
-                    scene v10saow2
+                    scene v10saow5
                     with dissolve
 
                     u "See ya!"
@@ -1424,16 +1419,14 @@ label v10_call_with_lauren1:
                     u "Something like that."
 
         else: # RCS - MC is not in a relationship with Aubrey
-            scene v10saow2a
+            scene v10saow5a
             with dissolve
 
             au "It's kind of a long walk, wanna go with me and hang out?"
 
-            scene v10saow2
-            with dissolve
             menu:
                 "Walk her home":
-                    scene v10saow2
+                    scene v10saow5
                     with dissolve
 
                     u "Yeah sure, I'll be right down."
@@ -1471,17 +1464,17 @@ label v10_call_with_lauren1:
                     jump v10_aubrey_house
             
                 "Don't walk her home":
-                    scene v10saow2
+                    scene v10saow5
                     with dissolve
 
                     u "I'd love to, but I'm busy right now, sorry."
 
-                    scene v10saow2a
+                    scene v10saow5a
                     with dissolve
 
                     au "Oh okay, guess I'll see you around then."
 
-                    scene v10saow2
+                    scene v10saow5
                     with dissolve
 
                     u "See ya!"

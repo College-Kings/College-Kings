@@ -1000,14 +1000,14 @@ label v10s33_chloe1:
         scene v10cfrcl1 # FPP. Show Chloe, mouth closed
         
         u "I think Chloe's still mad at me, I'd rather not talk to her."
-        call screen v10s33_mudwrestling
+        call screen v10s33_centeraisle
 
         label v10s33_chloe2:
         
         scene #mudwrestling screen
         u "(I already talked to her.)"
 
-        call screen v10s33_mudwrestling
+        call screen v10s33_centeraisle
 
     scene v10cfrcl1 # FPP. Show Chloe, mouth closed
     with dissolve

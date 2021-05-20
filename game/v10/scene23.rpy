@@ -59,7 +59,7 @@ label v10_aft_walk_home:
 
                 jo "You know, I'm just chillin. Just hanging out in the-"
 
-            scene v10smwh3b # FPP. Same camera as v10smwh3. Show Josh looking down towards the ground, sheepish/slightly embarrassed expression, mouth open.
+            scene v10smwh3a # FPP. Same camera as v10smwh3. Show Josh looking down towards the ground, sheepish/slightly embarrassed expression, mouth open.
             with dissolve
 
             jo "It would seem kinda stupid to just be hanging out in the alley huh?"
@@ -69,7 +69,7 @@ label v10_aft_walk_home:
 
             u "Just a little bit."
 
-            scene v10smwh3b
+            scene v10smwh3a
             with dissolve
 
             jo "Look man, do we really have to talk about this?"
@@ -127,7 +127,9 @@ label v10_aft_walk_home:
                     scene v10smwh3a
                     with dissolve
 
-                    jo "I didn't go to the military! So he cut me off, said if I didn't spend at least four years in the military I wouldn't see a penny. So now I have to figure out how I'm gonna pay for school."
+                    jo "I didn't go to the military! So he cut me off."
+                    jo "He said if I didn't spend at least four years in the military I wouldn't see a penny."
+                    jo "So now I have to figure out how I'm gonna pay for school."
 
                     scene v10smwh3
                     with dissolve
@@ -137,7 +139,8 @@ label v10_aft_walk_home:
                     scene v10smwh3a
                     with dissolve
 
-                    jo "I was just gonna do it until I had enough, but I'm hoping I won't have to do it much longer. I met this guy and he might be able to get me a scholarship."
+                    jo "I was just gonna do it until I had enough, but I'm hoping I won't have to do it much longer."
+                    jo "I met this guy and he might be able to get me a scholarship."
 
                     scene v10smwh3e # FPP. Same camera as v10smwh3. Show Josh, smiling, mouth closed.
                     with dissolve
@@ -147,7 +150,8 @@ label v10_aft_walk_home:
                     scene v10smwh3d
                     with dissolve
 
-                    jo "Haha, he's some big shot. Can't remember his name honestly, but he's a bit intimidating. Kinda reminds me of my dad, but more flexible."
+                    jo "Haha, he's some big shot. Can't remember his name honestly, but he's a bit intimidating."
+                    jo "Kinda reminds me of my dad, but more flexible."
                 
                 "Let it go":
                     scene v10smwh3
