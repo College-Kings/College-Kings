@@ -94,8 +94,8 @@ screen stats():
                 size 50
                 color "#000000"
 
-        default KCT = { "Popular": popular, "Loyal": loyal, "Confident": confident }
-        default sortedKCT = [k for (k, v) in sorted(KCT.items(), key=lambda key_value: key_value[1])]
+        $ KCT = { "Popular": popular, "Loyal": loyal, "Confident": confident }
+        $ sortedKCT = [k for (k, v) in sorted(KCT.items(), key=lambda k: k[0])]
 
         vbox:
             align (0.5, 0.5)
