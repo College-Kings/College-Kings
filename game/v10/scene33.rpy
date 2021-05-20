@@ -1505,6 +1505,8 @@ label v10s33_deergirl21:
         scene v10cfrla2 #TPP showing Mc kissing Lauren over the table
         with dissolve
 
+        play sound "sounds/kiss.mp3"
+
         pause 0.5
 
         scene v10cfrla1a #same 1, mouth closed
