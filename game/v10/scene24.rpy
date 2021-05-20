@@ -6,6 +6,8 @@
 label v10_lauren_room:
     scene v10lar1 # TPP Show MC knocking on Lauren's door.
     with fade
+
+#    play sound "sounds/knock.mp3"
     
     pause 0.5
     
@@ -18,6 +20,8 @@ label v10_lauren_room:
 
         scene v10lar1a # TPP Same angle as v10lar1: MC and Lauren kiss at her door
         with dissolve
+
+        play sound "sounds/kiss.mp3"
 
         pause 0.5
 
@@ -580,6 +584,8 @@ label v10_lauren_room:
         scene v10lar1a
         with fade
 
+        play sound "sounds/kiss.mp3"
+        
         pause 0.5
 
     $ renpy.end_replay()
