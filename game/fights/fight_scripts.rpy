@@ -7,8 +7,8 @@ init python:
             setattr(store, "youHealth", 5)
             # New
             setattr(store, "reaction", 3.5)
-            for enemy in enemies:
-                enemy.damageMult = 1
+            # for enemy in enemies:
+            #     enemy.damageMult = 1
 
         elif difficulty == "normal":
             # Old
@@ -17,8 +17,8 @@ init python:
             setattr(store, "youHealth", 3)
             # New
             setattr(store, "reaction", 1.5)
-            for enemy in enemies:
-                enemy.damageMult = 2
+            # for enemy in enemies:
+            #     enemy.damageMult = 2
 
         else:
             # Old
@@ -27,5 +27,5 @@ init python:
             setattr(store, "youHealth", 2)
             # New
             setattr(store, "reaction", 0.5)
-            for enemy in enemies:
-                enemy.damageMult = 4
+            # for enemy in enemies:
+            #     enemy.damageMult = 4
