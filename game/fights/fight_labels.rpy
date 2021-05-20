@@ -38,6 +38,9 @@ label fightTutorialLabel:
     hide targets
     with dissolve
 
+    return
+
+
 label fight:
     if fight_type == "simWin":
         $ mc.health = 1000

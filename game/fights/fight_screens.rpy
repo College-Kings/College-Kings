@@ -6,12 +6,12 @@ screen fightTutorial():
 
     textbutton "Yes" style "endfr":
         align (0.43, 0.58)
-        action Jump("fightTutorialLabel")
+        action Call("fightTutorialLabel")
         text_align 0.5
 
     textbutton "No" style "endfr":
         align (0.57, 0.58)
-        action [Hide("fightTutorial"), Show("fight_typeMenu")]
+        action Return()
         text_align 0.5
 
 
