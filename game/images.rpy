@@ -223,7 +223,7 @@ image mc_ryan_Kick_block = Movie(play="images/v10/Scene 6/Animations/MC-KICKBLOC
 
 image ryanjab = Movie(play="images/v10/Scene 6/Animations/RYANJAB/RYANJAB.webm", start_image="images/v10/Scene 6/Animations/RYANJAB/ryanjabstart.webp", image="images/v10/Scene 6/Animations/RYANJAB/ryanJabEnd.webp", loop = False)
 image ryanhook = Movie(play="images/v10/Scene 6/Animations/RYANHOOK/RYANHOOK.webm", start_image="images/v10/Scene 6/Animations/RYANHOOK/ryanhookstart.webp", image="images/v10/Scene 6/Animations/RYANHOOK/ryanHookEnd.webp", loop = False)
-image ryanbody = Movie(play="images/v10/Scene 6/Animations/RYANBODYHOOK/RYANBODYHOOK.webm", start_image="images/v10/Scene 6/Animations/RYANBODYHOOK/ryanhookstart.webp", image="images/v10/Scene 6/Animations/RYANBODYHOOK/ryanBodyEnd.webp", loop = False)
+image ryanbody = Movie(play="images/v10/Scene 6/Animations/RYANBODYHOOK/RYANBODYHOOK.webm", start_image="images/v10/Scene 6/Animations/RYANBODYHOOK/ryanbodystart.webp", image="images/v10/Scene 6/Animations/RYANBODYHOOK/ryanBodyEnd.webp", loop = False)
 image ryankick = Movie(play="images/v10/Scene 6/Animations/RYANKICK/RYANKICK.webm", start_image="images/v10/Scene 6/Animations/RYANKICK/ryankickstart.webp", image="images/v10/Scene 6/Animations/RYANKICK/ryanKickEnd.webp", loop = False)
 
 image Ryan_BodyJab_hit = "images/v10/Scene 6/Animations/END/MCRYAN-BODYHIT-END.webp"
