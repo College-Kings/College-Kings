@@ -686,7 +686,7 @@ screen navigation():
         imagebutton:
             idle "images/play2.webp"
             hover "images/play3.webp"
-            action Start("v10_mc_vs_imre_fight")
+            action Start()
             xpos 79
             ypos 147
 
