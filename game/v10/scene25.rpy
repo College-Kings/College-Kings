@@ -101,7 +101,7 @@ label v10_ms_rose_fight:
             with dissolve
 
             pause 0.5
-        "Stay quiet":
+        "Stay Quiet":
             
             scene v10msf2c
             with dissolve
