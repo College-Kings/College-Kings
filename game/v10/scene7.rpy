@@ -51,6 +51,7 @@ label v10_mc_vs_imre_fight:
 
     menu:
         "Fight Imre":
+            $ v10_imre_fight = True
             scene v10mvi3 # FPP. Show Imre infront of camera in ring, mouth closed, hands raised ready to fight.
             with dissolve
 
@@ -399,6 +400,7 @@ label v10_mc_vs_imre_fight:
             label imre_fightEnd:
                 hide screen imreFight_MCAttack
                 hide screen imreFight_MCDefend
+                hide screen fight_overlay
                 $ youDamage = 0
                 $ stance = 0
 

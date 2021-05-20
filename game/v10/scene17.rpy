@@ -257,6 +257,7 @@ label v10_aubrey_house:
             $ addPoint("tm", 1)
 
             if aubreyrs: # Aubrey relationship check
+                label v10_aubrey_house_sg:
                 $ aubrey_bathroom_sex = True
                 
                 scene v10auh2b # FPP Same angle as v10auh2, show Aubrey at door to bathroom, turning to look at MC, mouth closed
@@ -497,6 +498,7 @@ label v10_aubrey_house:
                 with dissolve
 
                 u "(Oh shit, ughhhh...)"
+                $ renpy.end_replay()
 
                 scene v10auh6a # FPP Same Camera as v10auh6, Show Nora, inside hallway of Chicks house, looking down toward MC's junk, Nora looks disgusted, Nora mouth closed
                 with dissolve

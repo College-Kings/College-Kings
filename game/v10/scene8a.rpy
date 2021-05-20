@@ -3,7 +3,7 @@
 # Characters:MC (Outfit 7), Grayson (Outfit 3),Chris (Outfit 2)
 # Time: Saturday Night
 label v10_avoid_fight:
-    if v10_ryan_fight or v10_imre_fight == False:   
+    if v10_ryan_fight == False or v10_imre_fight == False:   
 
         scene v10frr1 # TPP. Show MC leaving the warehouse.(camera from inside wearhouse positioned behind mc)
         with dissolve
@@ -34,7 +34,7 @@ label v10_avoid_fight:
 
             ch "I'm going to try and be understanding, but it's really difficult for me to keep cool after I think about everything that's led up to this moment."
 
-            scene S764b # Ignore this render, old image from 0.4
+            scene S764 # Ignore this render, old image from 0.4
             with dissolve
 
             pause 0.4

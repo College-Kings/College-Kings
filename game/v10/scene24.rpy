@@ -199,7 +199,9 @@ label v10_lauren_room:
 
     u "You never know until you try."
 
+    label v10_lauren_room_sg:
     if laurenrs or v1_laurenKiss or laurenkissb: # If dating or have made out
+
         scene v10lar3g # FPP Same angle as v10lar3, Lauren looking seductive, mouth open
         with dissolve
 
@@ -580,6 +582,7 @@ label v10_lauren_room:
 
         pause 0.5
 
+    $ renpy.end_replay()
     if joinwolves:
         jump v10_ms_rose_fight
     else:

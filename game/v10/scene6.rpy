@@ -60,7 +60,7 @@ label v10_mc_vs_ryan_fight:
 
     menu:
         "Fight Ryan":
-
+            $ v10_ryan_fight = True
             scene v10mvr6a # FPP. Show Ryan infront of camera in ring, mouth open, hands raised ready to fight.
             with dissolve
             u "Question is, are you ready?"
@@ -408,13 +408,13 @@ label v10_mc_vs_ryan_fight:
             label ryan_fightEnd:
                 hide screen ryanFight_MCAttack
                 hide screen ryanFight_MCDefend
+                hide screen fight_overlay
                 $ youDamage = 0
                 $ stance = 0
 
             jump v10_fight_result
 
         "Don't Fight":
-            $ v10_ryan_fight = True
             scene v10mvr6a 
             with dissolve
 

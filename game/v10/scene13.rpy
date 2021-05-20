@@ -4,8 +4,6 @@
 # Time: Sunday Morning
 # If you need paint and brush use industrial clutter 2: https://mega.nz/file/4YgihJxL#CC_JVYehPM-krceVG1d7x-0K8MNhwfIAfwtLVDjrQ3I
 
-default v10_perry_help_room = False
-
 label v10_wolves_redec:
     if v10s10_hangWLinds:
         scene v10swhr1 # TPP. Show MC walking through the front door of the Wolves house.
