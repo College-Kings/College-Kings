@@ -30,7 +30,7 @@ label v10_sam_kitchen:
     sam "Could you make me a Sex on The Beach?"
 
     menu:
-        "Make Her A Cocktail":
+        "Make her a cocktail":
             $ makeSamCock = True
             $ addPoint("bf", 1)
             $ samLike += 1
@@ -87,7 +87,7 @@ label v10_sam_kitchen:
             sam "Scared of a little drink? You're not gonna make me drink all by myself are you?"
 
             menu:
-                "Drink With Her":
+                "Drink with her":
                     $ drinkWsam = True
                     $ addPoint("bf", 1)
                     $ samLike += 1
@@ -115,7 +115,7 @@ label v10_sam_kitchen:
                     scene v10skt4a
                     with dissolve
 
-        "Get Mad":
+        "Get mad":
             $ samLike -= 1
             $ addPoint("tm", 1)
             scene v10skt2
@@ -169,7 +169,7 @@ label v10_sam_kitchen:
     sam "So what were you doing out? Were you with one of your little girlfriends?"
 
     menu:
-        "Tease Her":
+        "Tease her":
             $ addPoint("bf", 1)
             $ samLike += 1
             scene v10skt4a

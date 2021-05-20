@@ -81,7 +81,7 @@ label v10_chloe_hallway:
                     with dissolve
 
                     menu:
-                        "Ask Chloe How She Is":
+                        "Ask Chloe how she is":
                             $ addPoint("bf")
                             $ chloeLike += 1
 
@@ -126,7 +126,7 @@ label v10_chloe_hallway:
                             with dissolve
 
                             menu:
-                                "Have A Rematch":
+                                "Have a Rematch":
                                     $ addPoint("bf")
                                     $ v10_chloe_rematch = True
 
@@ -134,7 +134,7 @@ label v10_chloe_hallway:
 
                                     jump v10_mc_chloe_gym
 
-                                "Decline A Rematch":
+                                "Decline a Rematch":
                                     $ addPoint("tm")
                                     $ chloeLike -= 1
 
@@ -272,7 +272,7 @@ label v10_chloe_hallway:
         with dissolve
 
         menu:
-            "Have A Rematch":
+            "Have a Rematch":
                 $ addPoint("bf")
                 $ v10_chloe_rematch = True
                 $ chloeLike += 1
@@ -291,7 +291,7 @@ label v10_chloe_hallway:
 
                 jump v10_mc_chloe_gym
 
-            "Decline A Rematch":
+            "Decline a Rematch":
                 u "I shouldn't, I have a lot to do. Sorry."
 
                 scene v10such5

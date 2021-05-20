@@ -406,7 +406,7 @@ label v10_mc_vs_imre_fight:
 
             jump v10_fight_result
 
-        "Don't Fight":
+        "Don't fight":
             scene v10mvi3 # FPP. Show Imre infront of camera in ring, mouth closed, hands raised ready to fight.
             with dissolve
 

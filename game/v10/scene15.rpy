@@ -274,7 +274,7 @@ label v10_call_with_lauren1:
 
                             u "What can I say, I'm a unique guy."
                     
-                    "Joke Around":
+                    "Joke around":
                         scene v10scwl2c 
                         with dissolve
                         
@@ -1033,7 +1033,7 @@ label v10_call_with_lauren1:
 
                             u "What can I say, I'm a unique guy."
                     
-                    "Joke Around":
+                    "Joke around":
                         scene v10saow3c
                         with dissolve
                         

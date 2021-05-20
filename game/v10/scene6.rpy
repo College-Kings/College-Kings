@@ -414,7 +414,7 @@ label v10_mc_vs_ryan_fight:
 
             jump v10_fight_result
 
-        "Don't Fight":
+        "Don't fight":
             scene v10mvr6a 
             with dissolve
 

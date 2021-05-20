@@ -146,7 +146,7 @@ label v10_emily_course:
 
                                 be "Looks like you two are really getting into it."                                
 
-                            "Don't Save Emily":
+                            "Don't save Emily":
                                 $ addPoint("tm")
                             
                                 u "Oh no, if only someone could save her."
@@ -170,7 +170,7 @@ label v10_emily_course:
                         with dissolve
 
                         menu:
-                            "Agree With Emily":
+                            "Agree with Emily":
                                 $ addPoint("bf")
                                 $ emilyLike += 1
 
@@ -183,7 +183,7 @@ label v10_emily_course:
 
                                 em "Amazing."
 
-                            "Disagree With Emily":
+                            "Disagree with Emily":
                                 u "I don't know. It was fun and all, but I think I'm not made to be a first responder."
 
                                 scene v10semi14
@@ -372,7 +372,7 @@ label v10_emily_course:
 
                                 be "Looks like you two are really getting into it."                                
 
-                            "Don't Save Emily":
+                            "Don't save Emily":
                                 $ addPoint("tm")
                             
                                 u "Oh no, if only someone could save her."
@@ -396,7 +396,7 @@ label v10_emily_course:
                         with dissolve
 
                         menu:
-                            "Agree With Emily":
+                            "Agree with Emily":
                                 $ addPoint("bf")
                                 $ emilyLike += 1
 
@@ -409,7 +409,7 @@ label v10_emily_course:
 
                                 em "Amazing."
 
-                            "Disagree With Emily":
+                            "Disagree with Emily":
                                 u "I don't know. It was fun and all, but I think I'm not made to be a first responder."
 
                                 scene v10semi14
