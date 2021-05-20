@@ -66,8 +66,9 @@ label v10_sun_morn:
             $ contact_Josh.newMessage("Haha, sure dude")
             $ contact_Josh.addReply("Whatever man.")
 
-        call screen phone
         label v10s10_PhoneContinueJoshW1:
+            if contact_Josh.getReplies() or contact_Riley.getReplies():
+                call screen phone
             if contact_Josh.getReplies() or contact_Riley.getReplies():
                 u "(I should check my phone.)"
                 jump v10s10_PhoneContinueJoshW1
@@ -92,8 +93,9 @@ label v10_sun_morn:
         $ contact_Lindsey.addReply("If you need someone to talk I'll come over right now!", v10s10_reply1)
         $ contact_Lindsey.addReply("Uhm okay. No worries, let me know if you need anything")
 
-        call screen phone
         label v10s10_PhoneContinueLinW:
+            if contact_Lindsey.getReplies():
+                call screen phone
             if contact_Lindsey.getReplies():
                 u "(I should reply to Lindsey.)"
                 jump v10s10_PhoneContinueLinW
@@ -167,8 +169,9 @@ label v10_sun_morn:
             $ contact_Josh.newMessage("Haha, sure dude")
             $ contact_Josh.addReply("Whatever man.")
 
-        call screen phone
         label v10s10_PhoneContinueJoshW2:
+            if contact_Josh.getReplies() or contact_Riley.getReplies():
+                call screen phone
             if contact_Josh.getReplies() or contact_Riley.getReplies():
                 u "(I should check my phone.)"
                 jump v10s10_PhoneContinueJoshW2
@@ -193,8 +196,9 @@ label v10_sun_morn:
         $ contact_Lindsey.addReply("If you need someone to talk I'll come over right now!", v10s10_reply1)
         $ contact_Lindsey.addReply("Uhm okay. No worries, let me know if you need anything")
 
-        call screen phone
         label v10s10_PhoneContinueLinA:
+            if contact_Lindsey.getReplies():
+                call screen phone
             if contact_Lindsey.getReplies():
                 u "(I should reply to Lindsey.)"
                 jump v10s10_PhoneContinueLinA

@@ -366,8 +366,9 @@ label imreconc: # Keep talking to Amber
     $ contact_Amber.addReply(_("Woah, what was that for?"), v6_reply1)
     $ contact_Amber.addReply(_("Oh wow, you're so fucking hot"), v6_reply4)
 
-    call screen phone
     label phonead:
+        if contact_Amber.getReplies():
+            call screen phone
         if contact_Amber.getReplies():
             u "(Time to text Amber.)"
             jump phonead
@@ -388,11 +389,11 @@ label imrecond: # Meet Chloe
     $ contact_Chloe.newMessage(_("Meet me at the school's swimming pool"))
     $ contact_Chloe.addReply(_("Cool, see you there"))
 
-    call screen phone
     label phoneac:
         if contact_Chloe.getReplies():
+            call screen phone
+        if contact_Chloe.getReplies():
             u "(I should reply to Chloe.)"
-            
             jump phoneac
 
     stop music fadeout 2.0
@@ -1005,8 +1006,9 @@ label continuebb:
 
         " "
 
-        call screen phone
         label phoneae:
+            if contact_Amber.getReplies():
+                call screen phone
             if contact_Amber.getReplies():
                 u "(I should probably reply to my messages.)"
                 jump phoneae
@@ -1032,8 +1034,9 @@ label continuebb:
 
     " "
 
-    call screen phone
     label phoneaf:
+        if contact_Amber.getReplies():
+            call screen phone
         if contact_Amber.getReplies():
             u "(I should probably reply to my messages.)"
             jump phoneaf
@@ -3705,9 +3708,10 @@ label fy_bd: # not gone to Emily's
 
         " "
 
-        call screen phone
         label phoneag:
             stop music fadeout 2.0
+            if contact_Aubrey.getReplies():
+                call screen phone
             if contact_Aubrey.getReplies():
                 u "(I should check my messages.)"
                 jump phoneag
@@ -3731,11 +3735,12 @@ label fy_bd: # not gone to Emily's
 
         u "(Shit, it's already 10:30? Wonder what Aubrey's messaging about.)"
 
-        call screen phone
         label v6_phoneah:
             scene s565 # mc sitting at his desk
             with dissolve
 
+            if contact_Aubrey.getReplies():
+                call screen phone
             if contact_Aubrey.getReplies():
                 u "(I should probably reply to Aubrey.)"
                 jump v6_phoneah
@@ -5473,6 +5478,8 @@ label wakeupa:
 
         call screen phone
         label phoneak:
+            if contact_Penelope.getReplies():
+                call screen phone
             if contact_Penelope.getReplies():
                 u "(I should really text Penelope.)"
                 jump phoneak

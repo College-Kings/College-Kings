@@ -114,8 +114,9 @@ label v8_ending:
         # $ newKiwiiPost.addReply("Bout time!", numberLikes=999)
         # $ newKiwiiPost.addReply("Seriously?", numberLikes=999)
 
-        call screen phone
         label v8s46_phoneCheck:
+            if contact_Ryan.getReplies():
+                call screen phone
             if contact_Ryan.getReplies():
                 u "I need to check my phone."
                 jump v8s46_phoneCheck

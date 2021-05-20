@@ -1393,8 +1393,9 @@ label conl:
                 $ contact_Aubrey.newMessage(_("I'd prefer if none of the girls saw you."))
                 $ contact_Aubrey.addReply(_("Uhm... sure."))
 
-                call screen phone
                 label repeatk:
+                    if contact_Aubrey.getReplies():
+                        call screen phone
                     if contact_Aubrey.getReplies():
                         u "(I should probably check my phone.)"
                         jump repeatk
@@ -1590,6 +1591,8 @@ label conl:
 
                 call screen phone
                 label repeatl:
+                    if contact_Aubrey.getReplies():
+                        call screen phone
                     if contact_Aubrey.getReplies():
                         u "(I should probably check my phone.)"
                         jump repeatl
@@ -1837,8 +1840,9 @@ label conl:
         $ contact_Aubrey.newMessage(_("I'll leave it open."))
         $ contact_Aubrey.addReply(_("Uhm... sure."))
 
-        call screen phone
         label repeatm:
+            if contact_Aubrey.getReplies():
+                call screen phone
             if contact_Aubrey.getReplies():
                 u "(I should probably check my phone.)"
                 jump repeatm

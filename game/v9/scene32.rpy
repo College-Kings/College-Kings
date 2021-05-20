@@ -160,8 +160,9 @@ label v9_sat_skip_gym:
         $ contact_Riley.addReply(_("Well you shoulda led with that!"), v9s32_reply1)
         $ contact_Riley.addReply(_("Man, I'd really love to but..."), v9s32_reply2)
         
-        call screen phone
         label s32_PhoneContinue:
+            if contact_Riley.getReplies():
+                call screen phone
             if contact_Riley.getReplies():
                 "(I should reply to Riley.)"
                 jump s32_PhoneContinue

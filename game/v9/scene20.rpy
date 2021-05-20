@@ -26,8 +26,9 @@ label v9_room_fri_aft:
 
         pause 0.5
 
-        call screen phone
         label s20_phoneExit1:
+            if s20KiwiiPost.getReplies():
+                call screen phone
             if s20KiwiiPost.getReplies():
                 "(I should check Kiwii)"
                 jump s20_phoneExit1
@@ -55,8 +56,9 @@ label v9_room_fri_aft:
 
         pause 0.5
 
-        call screen phone
         label s20_phoneExit2:
+            if s20KiwiiPost.getReplies():
+                call screen phone
             if s20KiwiiPost.getReplies():
                 "(I should check Kiwii)"
                 jump s20_phoneExit2

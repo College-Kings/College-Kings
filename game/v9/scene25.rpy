@@ -31,8 +31,9 @@ label v9_room_fri_eve:
             $ contact_Lauren.addReply(_("Don't mention it, talk soon?"))
             $ contact_Lauren.newMessage(_("Sure!"))
 
-            call screen phone
             label s25_ContinueW:
+                if contact_Lauren.getReplies():
+                    call screen phone
                 if contact_Lauren.getReplies():
                     "(I should text Lauren.)"
                     jump s25_ContinueW
@@ -74,8 +75,9 @@ label v9_room_fri_eve:
             $ contact_Lauren.addReply(_("Don't mention it, talk soon?"))
             $ contact_Lauren.newMessage(_("Sure!"))
             
-            call screen phone
             label s25_ContinueA:
+                if contact_Lauren.getReplies():
+                    call screen phone
                 if contact_Lauren.getReplies():
                     "(I should text Lauren.)"
                     jump s25_ContinueA
