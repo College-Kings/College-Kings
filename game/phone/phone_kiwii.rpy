@@ -54,7 +54,7 @@ init python:
                 else:
                     self.sentComments[-1].replies.append(reply)
             except Exception:
-                message = self.addComment(None, "", queue=False)
+                message = self.addComment("MC", "", queue=False)
                 message.replies.append(reply)
 
             kiwiiApp.notification = True
@@ -103,7 +103,6 @@ init python:
             return message
 
         def removePost(self):
-            self.index = kiwiiPosts.index(self)
             kiwiiPosts.remove(self)
 
         def getReplies(self):
@@ -154,79 +153,79 @@ init python:
     kiwiiUsers = {
         "Adam": {
             "username": "A.D.A.M.",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/adpp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/adpp.webp"
         },
         "Imre": {
             "username": "BadBoyImre",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/impp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/impp.webp"
         },
         "Mason": {
             "username": "Mason_Mas",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/masonpp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/masonpp.webp"
         },
         "Ryan": {
             "username": "Ryanator",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/rypp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/rypp.webp"
         },
         "Cameron": {
             "username": "Cameroon",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/capp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/capp.webp"
         },
         "Chris": {
             "username": "Chriscuit",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/chpp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/chpp.webp"
         },
         "Elijah": {
             "username": "Elijah_Woods",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/elpp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/elpp.webp"
         },
         "Grayson": {
             "username": "G-rayson",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/grpp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/grpp.webp"
         },
         "Josh": {
             "username": "Josh80085",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/jopp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/jopp.webp"
         },
         "Aubrey": {
             "username": "Aubs123",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/aupp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/aupp.webp"
         },
         "Amber": {
             "username": "Amber_xx",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/ampp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/ampp.webp"
         },
         "Kim": {
             "username": "KimPlausible",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/kimpp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/kimpp.webp"
         },
         "Nora": {
             "username": "Nora_12",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/nopp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/nopp.webp"
         },
         "Penelope": {
             "username": "Penelopeeps",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/pepp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/pepp.webp"
         },
         "Lauren": {
             "username": "LoLoLauren",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/lapp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/lapp.webp"
         },
         "Autumn": {
             "username": "Its_Fall",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/autpp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/autpp.webp"
         },
         "Riley": {
             "username": "RileyReads",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/ripp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/ripp.webp"
         },
         "Emily": {
             "username": "emilyyyy",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/empp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/empp.webp"
         },
         "Chloe": {
             "username": "Chloe101",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/clpp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/clpp.webp"
         },
         "MC": {
             "username": "MC",
@@ -234,24 +233,24 @@ init python:
         },
         "Caleb": {
             "username": "Aleb",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/calebpp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/calebpp.webp"
         },
         "Parker": {
             "username": "Parker",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/parkerpp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/parkerpp.webp"
         },
         "Sebastian": {
             "username": "Big Seb",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/sebastianpp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/sebastianpp.webp"
         },
         "Kai": {
             "username": "Kai",
-            "profilePicture": "images/phone/kiwii/Profile Pictures/kaipp.webp"
+            "profilePicture": "images/phone/kiwii/profilePictures/kaipp.webp"
         }
     }
 
 init -1:
-    define profilePictures = [ "images/phone/Kiwii/Profile Pictures/mcpp1.webp", "images/phone/Kiwii/Profile Pictures/mcpp2.webp", "images/phone/Kiwii/Profile Pictures/mcpp3.webp", "images/phone/Kiwii/Profile Pictures/mcpp4.webp" ]
+    define profilePictures = [ "images/phone/Kiwii/profilePictures/mcpp1.webp", "images/phone/Kiwii/profilePictures/mcpp2.webp", "images/phone/Kiwii/profilePictures/mcpp3.webp", "images/phone/Kiwii/profilePictures/mcpp4.webp" ]
     default profilePictures_count = 0
 
     default kiwiiPosts = []
