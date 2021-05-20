@@ -433,7 +433,7 @@ label v10s33_deergirl11:
     scene v10cfrdg11b
     with dissolve
 
-    dg1 "If you're interested in learning anymore dances, you know where to find me."
+    dg1 "If you're interested in learning any more dances, you know where to find me."
 
     if joinwolves:
 
