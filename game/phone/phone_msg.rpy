@@ -179,7 +179,7 @@ screen contactsscreen():
                         add contact.profilePicture yalign 0.5 xpos 20
                         text contact.name style "nametext" yalign 0.5 xpos 100
 
-                        if contact.sentMessages and contact.sentMessages[-1].replies:
+                        if contact.getReplies():
                             add "images/contactmsgnot.webp" yalign 0.5 xpos 275
 
                         imagebutton:
@@ -222,6 +222,8 @@ screen messager(contact=None):
             vbox:
                 xsize 374
                 spacing 5
+
+                null
 
                 for message in contact.sentMessages:
                     if isinstance(message, Message) and message.message.strip():
