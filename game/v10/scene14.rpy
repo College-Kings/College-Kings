@@ -350,4 +350,4 @@ label v10_apes_samantha:
 
             u "(He can really be a dick sometimes. Good ol' Cameron. I should head up to my room.)"
 
-jump v10_15 # jump to scene 15
+jump v10_call_with_lauren1 # jump to scene 15
