@@ -4,7 +4,6 @@ init python:
             self.name = name
             self.profilePicture = "images/phone/messages/profilePictures/{}".format(profilePicture)
             self.locked = locked
-            self.newMessages = False
             self.sentMessages = []
             self.pendingMessages = []
             contacts.append(self)
@@ -23,7 +22,6 @@ init python:
                 self.sentMessages.append(message)
 
             self.unlock()
-            self.newMessages = True
             msgApp.newNotification()
             
             return message
@@ -42,7 +40,6 @@ init python:
                 self.sentMessages.append(message)
 
             self.unlock()
-            self.newMessages = True
             msgApp.newNotification()
 
             return message
@@ -84,7 +81,6 @@ init python:
             self.unlock()
 
         def seenMessage(self):
-            self.newMessages = False
             if not any([contact.getReplies() for contact in contacts]):
                 msgApp.seenNotification()
 
