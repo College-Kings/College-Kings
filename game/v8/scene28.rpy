@@ -133,8 +133,9 @@ label int_deal_w_josh:
 
         call screen fightTutorial
 
-    label s28_LarsFightCont:
-        call screen s28_LarsFightChoice
+        scene v8sdd10
+
+        call screen fight_typeMenu
 
     # Select Difficulty
     label s28_LarsFightDifficulty:
