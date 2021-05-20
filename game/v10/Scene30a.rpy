@@ -144,9 +144,6 @@ label v10_emily_course:
 
                                 u "Don't you die on us!"
 
-                                scene v10semi13 # TPP. Show MC doing fake CPR on Emily, MC does it near herr breast, Emily smiles and blushes.
-                                with dissolve
-
                                 be "Looks like you two are really getting into it."                                
 
                             "Don't Save Emily":
@@ -372,9 +369,6 @@ label v10_emily_course:
                                 $ addPoint("bf")
 
                                 u "Don't you die on us!"
-
-                                scene v10semi13
-                                with dissolve
 
                                 be "Looks like you two are really getting into it."                                
 
