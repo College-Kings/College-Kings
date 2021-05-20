@@ -28,6 +28,10 @@ label after_load:
             try: app.homeScreen = app.screen
             except AttributeError: pass
 
+        # Kiwii Users
+        for user in kiwiiUsers:
+            kiwiiUsers[user]["profilePicture"] = os.path.splitext(kiwiiUsers[user]["profilePicture"])[0] + ".webp"
+
         # Kiwii Posts
         for kiwiiPost in kiwiiPosts:
             try: kiwiiPost.message = kiwiiPost.caption
