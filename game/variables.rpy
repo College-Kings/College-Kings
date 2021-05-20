@@ -9,6 +9,9 @@ default freeRoam = False
     ## Kiwii Vars
 default kiwii_firstTime = False
 
+    ## Fight Vars
+default fight_type = "normal" # normal / simReal / simWin
+
 # 1.0 - 6.0
 default v1_sda = False
 default evelynmove = False
