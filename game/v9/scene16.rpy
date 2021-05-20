@@ -205,7 +205,7 @@ label v9_emily_dorm:
         with dissolve
 
         menu:
-            "Let Emily Gloat":
+            "Let Emily gloat":
                 $ addPoint("bf")
 
                 u "You're just so much better than me."
@@ -245,7 +245,7 @@ label v9_emily_dorm:
 
                 em "You always were a slick one, [name]."
 
-            "Say You Were Winning":
+            "Say you were winning":
                 $ addPoint("tm")
 
                 u "I was one second away from the holy grail."
@@ -335,7 +335,7 @@ label v9_emily_dorm:
 
                 em "Well, in that case..."
 
-            "Play It Off":
+            "Play it off":
                 $ addPoint("bro")
 
                 u "Aww, you don't have anything to worry about. One punch isn't gonna change me."
@@ -420,7 +420,7 @@ label v9_emily_dorm:
 
                 em "Fine, then I won't be gentle."
 
-            "Be Dismissive":
+            "Be dismissive":
                 u "Yeah, it was a lucky shot, but I'm good."
 
                 scene v9emi11d

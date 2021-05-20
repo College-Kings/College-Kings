@@ -48,7 +48,7 @@ label v9_hallway:
             $ timed = False
             jump v9_hall_apol
 
-        "Tell Him To Calm Down":
+        "Tell him To calm down":
             $ addPoint("tm")
             $ timed = False
             jump v9_hall_calm
@@ -126,13 +126,13 @@ label v9_hall_cont1:
     $ timerexit = "v9_hall_no_punch"
 
     menu: 
-        "Punch The Guy": 
+        "Punch the guy": 
             $ addPoint("bro")
             $ timed = False
             $ hl_punch = True
             jump v9_hall_punch
 
-        "Don't Punch The Guy":
+        "Don't punch the guy":
             $ addPoint("tm")
             $ timed = False
             $ hl_punch = False

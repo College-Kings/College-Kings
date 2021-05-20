@@ -70,7 +70,7 @@ label v9_fri_training_w_wolves:
 
             ch "Right."
 
-        "Keep Quiet":
+        "Keep quiet":
             $ addPoint("tm")
     
             pause 1
@@ -105,7 +105,7 @@ label v9_fri_training_w_wolves:
     with dissolve
 
     menu: 
-        "Make Joke": 
+        "Make joke": 
             $ addPoint("tm")
 
             u "I think punching an Ape's thick skull is gonna be like hitting a wall."
@@ -356,7 +356,7 @@ label v9_fri_training_w_wolves:
         with dissolve
 
         menu: 
-            "Hit First": 
+            "Hit first": 
                 $ addPoint("bro")
 
                 u "Hit first."
@@ -439,7 +439,7 @@ label v9_fri_training_w_wolves:
         u "Nah, I'm not in my head."
 
         menu:
-            "Act Cool":
+            "Act cool":
                 $ addPoint ("tm", 1)
 
                 scene v9tww15a
@@ -452,7 +452,7 @@ label v9_fri_training_w_wolves:
 
                 u "How?"
 
-            "Ask For Help":
+            "Ask for help":
                 $ addPoint ("bro", 1)
 
                 u "I need it. I don't know what happened."
@@ -538,7 +538,7 @@ label v9_fri_training_w_wolves:
 
                 ch "So we use that to our advantage."
 
-            "Defend Yourself":
+            "Defend yourself":
                 $ addPoint ("tm", 1)
 
                 u "I mean, it's not my first fight ever. I can still have some tricks up my sleeve."

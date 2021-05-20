@@ -52,7 +52,7 @@ label v9_dinner_w_rose:
     ro "Coming right up."
 
     menu:
-        "Offer To Help":
+        "Offer to help":
             scene v9damr3b
             with dissolve
 
@@ -83,7 +83,7 @@ label v9_dinner_w_rose:
 
             pause 1
 
-        "Stay With The Wolves":
+        "Stay with the Wolves":
             scene v9damr6a # FPP. Same camera as v9damr6, Show Chris in living room, neutral face, mouth closed
             with dissolve
 
@@ -148,7 +148,7 @@ label v9_dinner_w_rose:
     with dissolve
 
     menu:
-        "Talk About Working Out":
+        "Talk about working out":
             $ addPoint("bro")
 
             scene v9damr9
@@ -176,7 +176,7 @@ label v9_dinner_w_rose:
 
             u "*Laughs* I'm sure some desperate virgin will have pity on you."
 
-        "Talk About Viking Assignment":
+        "Talk about Viking assignment":
             scene v9damr9
             with dissolve
 
@@ -303,7 +303,7 @@ label v9_dinner_w_rose:
     ro "Good! I'll go get it."
 
     menu:
-        "Offer to Help":
+        "Offer to help":
             $ addPoint("bf")
 
             scene v9damr12f # FPP. Same camera as v9damr12, Show Ms. Rose now stood at the end of table, Imre seated to MC's right,neutral expressions,  Ms. Rose mouth closed, Imre mouth closed

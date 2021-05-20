@@ -118,7 +118,7 @@ label v9_sat_cafe_w_nora:
             scene v9cwn7 # FPP. Show MC and Nora walking away in opposite directions.
             with dissolve
 
-        "Don't Correct Waiter":
+        "Don't correct Waiter":
             $ addPoint("bf")
 
             scene v9cwn3c

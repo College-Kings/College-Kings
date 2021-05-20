@@ -78,7 +78,7 @@ label v9_hang_w_linds:
         with dissolve
 
         menu:
-            "Play It Cool":
+            "Play it cool":
                 $ playCoolWLins = True
                 $ addPoint("bro")
 
@@ -109,7 +109,7 @@ label v9_hang_w_linds:
 
                 li "Sure do." 
 
-            "Get Real":
+            "Get real":
                 $ addPoint("bf")
 
                 u "I'm sure everyone's expecting me to fall in my first fight."
@@ -146,7 +146,7 @@ label v9_hang_w_linds:
     image v9linksf = Movie(play="images/v9/Scene 39/v9linksf.webm", loop=True, image="images/v9/Scene 39/v9linksStart.webp", start_image="images/v9/Scene 39/v9linksStart.webp")
 
     menu:
-        "Let Lindsey Grab Your Hand":
+        "Let Lindsey grab your hand":
             if chloers:
                 $ addPoint("tm")
 
@@ -199,7 +199,7 @@ label v9_hang_w_linds:
 
 
             menu:
-                "Make Out With Lindsey":
+                "Make out with Lindsey":
                     if chloers:
                         $ addPoint("tm")
                     
@@ -309,7 +309,7 @@ label v9_hang_w_linds:
 
                     pause 1
                     $ renpy.end_replay()
-                "Pull Away":
+                "Pull away":
                     if chloers:
                         $ addPoint("bf")
                         
@@ -377,7 +377,7 @@ label v9_hang_w_linds:
             else:
                 jump v9_apes_pre_fight
            
-        "Pull Away":
+        "Pull away":
             scene v9hwl6b # TPP. Same camera as v9hwl6, MC moves his hand away as Lindsey is about to grab it, Lindsey sad, MC confused.
             with dissolve
 
