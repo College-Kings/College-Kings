@@ -1000,14 +1000,14 @@ label v10s33_chloe1:
         scene v10cfrcl1 # FPP. Show Chloe, mouth closed
         
         u "I think Chloe's still mad at me, I'd rather not talk to her."
-        call screen v10s33_mudwrestling
+        call screen v10s33_centeraisle
 
         label v10s33_chloe2:
         
         scene #mudwrestling screen
         u "(I already talked to her.)"
 
-        call screen v10s33_mudwrestling
+        call screen v10s33_centeraisle
 
     scene v10cfrcl1 # FPP. Show Chloe, mouth closed
     with dissolve
@@ -1153,11 +1153,10 @@ label v10s33_chloe1:
 
 
     if v10_nora_bitch_about_chloe:
-
         menu:
             "Tell Chloe About Nora":
                 $ chloeLike += 1
-                $ v10s33_tell_chloe_about_nora = True
+                $ v10s33_toldChloe = True
                 scene v10cfrcl1c # FPP. same1,slight angry look, closed
                 with dissolve
 
@@ -1217,6 +1216,7 @@ label v10s33_chloe1:
                 with dissolve
 
                 call screen v10s33_mudwrestling
+
             "Don't Tell Chloe":
 
                 scene v10cfrcl1
@@ -1736,6 +1736,8 @@ label v10s33_deergirl21:
     call screen v10s33_cakestatue
 
     label v10s33_laurenstatue1:
+
+    $ v10s33_lauren = True
 
     scene v10cfrla3 #FPP, lauren as statue, not looking at mc, mouth closed
     with dissolve

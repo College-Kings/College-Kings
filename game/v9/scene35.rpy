@@ -141,8 +141,9 @@ label v9_room_sat_aft:
         else:
             $ contact_Chloe.addReply(_("Yeah haha, I feel wiped."), v9s35_reply8)
 
-        call screen phone
         label s35_PhoneContinueA:
+            if contact_Chloe.getReplies():
+                call screen phone
             if contact_Chloe.getReplies():
                 "(I should reply to Chloe.)"
                 jump s35_PhoneContinueA

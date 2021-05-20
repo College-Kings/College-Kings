@@ -1398,20 +1398,27 @@ label conyourdorm:
 
         u "(What the hell?)"
 
-        call screen phone
         label phoneam:
+            if contact_Riley.getReplies():
+                call screen phone
             if contact_Riley.getReplies():
                 "(I need to respond to some of these messages.)"
                 jump phoneam
 
             elif kiwii_firstTime:
+                call screen phone
+            elif kiwii_firstTime:
                 "(I should check out what Emily posted on Kiwii.)"
                 jump phoneam              
 
             elif bowling and contact_Penelope.getReplies():
+                call screen phone
+            elif bowling and contact_Penelope.getReplies():
                 "(I should answer Penelope.)"
                 jump phoneam
 
+            elif laurenrs and contact_Lauren.getReplies():
+                call screen phone
             elif laurenrs and contact_Lauren.getReplies():
                 "(I should respond to Lauren.)"
                 jump phoneam
@@ -1633,8 +1640,9 @@ label conyourdorm:
 
         u "(Huh? What did Riley text me?)"
 
-        call screen phone
         label phonean:
+            if contact_Riley.getReplies():
+                call screen phone
             if contact_Riley.getReplies():
                 u "(I should respond to Riley.)"
                 jump phonean
@@ -2581,8 +2589,9 @@ label thisbewalk:
 
         " "
 
-        call screen phone
         label phoneao:
+            if contact_Lauren.getReplies():
+                call screen phone
             if contact_Lauren.getReplies():
                 u "(I should probably reply.)"
                 jump phoneao
@@ -5457,6 +5466,8 @@ label after_pledges:
 
                 call screen phone
                 label phonebb:
+                    if contact_Emily.getReplies():
+                        call screen phone
                     if contact_Emily.getReplies():
                         u "(I should text Emily that I lost track of time.)"
                         jump phonebb
@@ -8925,8 +8936,9 @@ label rileytext:
         
         " "
 
-        call screen phone
         label rtnow:
+            if contact_Riley.getReplies():
+                call screen phone
             if contact_Riley.getReplies():
                 u "(I should check my messages.)"
                 jump rtnow
@@ -9278,11 +9290,11 @@ label signs_with_autumn:
 
     play sound "sounds/vibrate.mp3"
 
-    call screen phone
     label phoneba:
         if contact_Autumn.getReplies():
+            call screen phone
+        if contact_Autumn.getReplies():
             u "(I should probably check my messages.)"
-
             jump phoneba
 
     u "(Alright, let's get going to Autumn's.)"

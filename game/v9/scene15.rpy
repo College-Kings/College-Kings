@@ -60,8 +60,9 @@ label v9_thur_room_w_cam_punch:
     $ s15KiwiiPost.addComment("Cameron", "Fuckin' A!", numberLikes=renpy.random.randint(100, 200), queue=False)
     $ s15KiwiiPost.addComment("Riley", "Knew he had it in him!", numberLikes=renpy.random.randint(200, 250), queue=False)
     
-    call screen phone
     label v9_s15_phoneExit_Punch:
+        if s15KiwiiPost.getReplies():
+            call screen phone
         if s15KiwiiPost.getReplies():
             "(I should check Kiwii)"
             jump v9_s15_phoneExit_Punch
@@ -259,8 +260,9 @@ label v9_thur_room_w_cam_no_punch:
     $ s15KiwiiPost.addComment("Chris", "Wow, hope he's OK!", numberLikes=renpy.random.randint(100, 200), queue=False)
     $ s15KiwiiPost.addComment("Cameron", "Ahhhh! Preview of Saturday's Freshman Brawl!", numberLikes=renpy.random.randint(150, 170), queue=False)
 
-    call screen phone
     label v9_s15_phoneExit_no_Punch:
+        if s15KiwiiPost.getReplies():
+            call screen phone
         if s15KiwiiPost.getReplies():
             "(I should check Kiwii)"
             jump v9_s15_phoneExit_no_Punch

@@ -280,7 +280,7 @@ label v10_sam_kitchen:
     scene v10skt6 # FPP. Show Livingroom, sofa in view
     with fade
 
-    pause 0.5
+    pause 0.75
 
     scene v10skt7 # FPP. MC and samantha now sat on sofa. Show Samantha slight smile, eyes closed, mouth closed
     with dissolve
@@ -374,4 +374,4 @@ label v10_sam_kitchen:
     scene v10skt8c # FPP. same camera as v10skt8, Show Cameron leaving the kitchen
     with dissolve
 
-    jump v10_skate_park
+    jump v10_amber_skatepark

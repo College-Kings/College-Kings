@@ -392,7 +392,8 @@ default v10_save_emi_cpr = False
 default v10_emi_nurse = False
 default v10_amber_condoms = False
 default v10_amber_awkward = False
-
+default v10_imre_win = False
+default v10s33_laurenBakeSale = False
     # Freeroam
 default v10s33_riley = False
 default v10s33_riley2 = False

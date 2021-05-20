@@ -3,11 +3,9 @@
 # Characters: MC (Outfit X), Lauren, (Outift X), Samantha (Outfit X), Mrs. Rose (Outfit X)
 # Time: Tuesday Evening
 
-default v10s33_laurenBakeSale = False
-
 label v10_lauren_room:
     scene v10lar1 # TPP Show MC knocking on Lauren's door.
-    with dissolve
+    with fade
     
     pause 0.5
     
@@ -41,7 +39,8 @@ label v10_lauren_room:
     scene v10lar3
     with dissolve
 
-    la "Well, I looked into both the living statue and the bake sale for the charity event. I even spoke to my sister about it. I decided I'm just going to go ahead and do the bake sale."
+    la "Well, I looked into both the living statue and the bake sale for the charity event."
+    la "I even spoke to my sister about it. I decided I'm just going to go ahead and do the bake sale."
 
     la "It's the least nerve wrecking thing of the two. Plus, it'll raise more money."
 
@@ -119,7 +118,8 @@ label v10_lauren_room:
     scene v10lar3
     with dissolve
 
-    la "I'm hoping this event will let me connect more with my sister. We're close, but since college started I've noticed we've had very little time for each other."
+    la "I'm hoping this event will let me connect more with my sister."
+    la "We're close, but since college started I've noticed we've had very little time for each other."
 
     la "It's one of the reasons I wanted to join the Deers."
 
@@ -131,7 +131,8 @@ label v10_lauren_room:
     scene v10lar3
     with dissolve
 
-    la "Not really. She's either in the library busy, at a protest, doing Deer stuff or in class. I thought if I get involved in some of the things she's involved in we'd have more time for each other."
+    la "Not really. She's either in the library busy, at a protest, doing Deer stuff or in class."
+    la "I thought if I get involved in some of the things she's involved in we'd have more time for each other."
 
     scene v10lar3c
     with dissolve
@@ -198,7 +199,7 @@ label v10_lauren_room:
 
     u "You never know until you try."
 
-    if laurenrs or v10_made_out_lau: # If dating or have made out
+    if laurenrs or v1_laurenKiss or laurenkissb: # If dating or have made out
         scene v10lar3g # FPP Same angle as v10lar3, Lauren looking seductive, mouth open
         with dissolve
 
@@ -278,7 +279,7 @@ label v10_lauren_room:
                 with dissolve
                 pause
 
-                if laurenrs or (v10_made_out_lau and kct == loyal):            
+                if laurenrs or (v1_laurenKiss or laurenkissb and kct == loyal):            
                     image v10lauts = Movie(play="images/v10/Scene 24/v10lauts.webm", loop=True, image="images/v10/Scene 24/v10lautsStart.webp", start_image="images/v10/Scene 24/v10lautsStart.webp") # TPP MC's arms around Lauren's waist while he sucks on her nipple, Lauren eyes rolled back in pleasure
                     image v10lautsf = Movie(play="images/v10/Scene 24/v10lautsf.webm", loop=True, image="images/v10/Scene 24/v10lautsStart.webp", start_image="images/v10/Scene 24/v10lautsStart.webp")
 
@@ -417,7 +418,8 @@ label v10_lauren_room:
         scene v10lar3
         with dissolve
 
-        la "Honestly, that'd be one of the things I'd be most nervous about. Not necessarily the wrestling, I actually think I'd do good, but I'm sort of nervous about everyone watching me."
+        la "Honestly, that'd be one of the things I'd be most nervous about. Not necessarily the wrestling."
+        la "I actually think I'd do good, but I'm sort of nervous about everyone watching me."
 
         scene v10lar3c
         with dissolve
@@ -433,7 +435,8 @@ label v10_lauren_room:
             scene v10lar3b
             with dissolve
 
-            la "Oh, something funny actually happened the other day. I was at the banner place letting them know what I needed my bake sale sign to say."
+            la "Oh, something funny actually happened the other day."
+            la "I was at the banner place letting them know what I needed my bake sale sign to say."
             
             la "I told them \"Lauren's Choice Muffins.\" Tell me why I go to pick up the banner and it says \"Lauren's Moist Muffins\"?"
 
@@ -445,12 +448,14 @@ label v10_lauren_room:
             scene v10lar3b
             with dissolve
 
-            la "I could have, but some of the other Deers were with me and they loved the play on words. Though somewhat embarrassing, I just went with it."
+            la "I could have, but some of the other Deers were with me and they loved the play on words."
+            la "Though somewhat embarrassing, I just went with it."
 
             scene v10lar3c
             with dissolve
 
-            u "Hey, maybe it'll draw more customers. Imre probably wouldn't go to a bake sale, but I'm sure he'd be in line for some \"moist muffins.\" *Laughs*"
+            u "Hey, maybe it'll draw more customers. Imre probably wouldn't go to a bake sale."
+            u "But I'm sure he'd be in line for some \"moist muffins.\" *Laughs*"
 
             scene v10lar3f
             with dissolve
@@ -499,7 +504,7 @@ label v10_lauren_room:
 
     u "Uhm, hold on."
 
-    if Wolves:
+    if joinwolves:
         scene v10lar11 # FPP Show Mrs. Rose on phone, worried expression, mouth closed, plain black background
         with dissolve
 
@@ -508,7 +513,8 @@ label v10_lauren_room:
         scene v10lar10 # TPP Show MC sitting on Lauren's bed, holding phone to his ear, neutral expression, mouth closed
         with dissolve
 
-        ro "Hey [name], it's Ms. Rose, I'm sorry for calling this late, but I don't really know who else to turn to. My husband is outside parked in his car and just won't leave."
+        ro "Hey [name], it's Ms. Rose, I'm sorry for calling this late."
+        ro "but I don't really know who else to turn to. My husband is outside parked in his car and just won't leave."
         
         ro "I'm starting to feel a little unsafe."
 
@@ -574,4 +580,7 @@ label v10_lauren_room:
 
         pause 0.5
 
-jump v10_tues_room_night
+    if joinwolves:
+        jump v10_ms_rose_fight
+    else:
+        jump v10_sam_kitchen

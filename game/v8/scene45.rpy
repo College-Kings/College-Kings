@@ -35,8 +35,9 @@ label tue_night_in_room:
         $ contact_Sebastian.newMessage(_("Sure can! You'll see what being a Wolf is all about."))
         $ contact_Sebastian.addReply(_("Looking forward to it. :)"))
 
-        call screen phone
         label v8s45_phoneContinue1:
+            if contact_Sebastian.getReplies():
+                call screen phone
             if contact_Sebastian.getReplies():
                 u "I should really check my phone."
                 jump v8s45_phoneContinue1
@@ -59,8 +60,9 @@ label tue_night_in_room:
             $ contact_Chloe.newMessage(_("Maybe some other time. These eyes need some rest atm."))
             $ contact_Chloe.addReply(_("Sure, later."))
 
-        call screen phone
         label v8s45_phoneContinue2:
+            if contact_Chloe.getReplies():
+                call screen phone
             if contact_Chloe.getReplies():
                 u "I should really check my phone."
                 jump v8s45_phoneContinue2
@@ -105,8 +107,9 @@ label tue_night_in_room:
         $ contact_Grayson.newMessage(_("Couting on it or not, [name], it's happening!"))
         $ contact_Grayson.addReply(_(":P"))
 
-        call screen phone
         label v8s45_phoneCheck:
+            if contact_Grayson.getReplies():
+                call screen phone
             if contact_Grayson.getReplies():
                 u "I need to check my phone."
                 jump v8s45_phoneCheck
@@ -129,8 +132,9 @@ label tue_night_in_room:
             $ contact_Chloe.newMessage(_("Maybe some other time. These eyes need some rest atm."))
             $ contact_Chloe.addReply(_("Sure, later."))
 
-        call screen phone
         label v8s45_phoneCheck2:
+            if contact_Chloe.getReplies():
+                call screen phone
             if contact_Chloe.getReplies():
                 u "I need to check my phone."
                 jump v8s45_phoneCheck2

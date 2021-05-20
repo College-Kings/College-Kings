@@ -75,6 +75,8 @@ label josh_calls_you:
         scene v8sjc6 # TPP. Show MC leaving his Wolves room.
         with dissolve
 
+        pause 0.75
+
     else:
         scene v8sjc7 # TPP. Show MC sat at his desk in his Apes room chilling.
         with dissolve
@@ -140,12 +142,14 @@ label josh_calls_you:
         # -Josh hangs up-
         stop music fadeout 3
 
-        scene v8sjc5 # TPP. Show MC hanging up the phone.
+        scene v8sjc11 # TPP. Show MC hanging up the phone.
         with dissolve
 
         u "(Well, I guess I'll head over there then.)"
 
-        scene v8sjc6 # TPP. Show MC leaving his Apes room.
+        scene v8sjc12 # TPP. Show MC leaving his Apes room.
         with dissolve
+
+        pause 0.75
 
     jump josh_room

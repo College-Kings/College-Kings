@@ -54,8 +54,9 @@ label after_apes_ceremony:
     scene v8apes21a # MC looking at his phone, mouth closed
     with dissolve
 
-    call screen phone
     label phn_chloe11:
+        if contact_Chloe.getReplies():
+            call screen phone
         if contact_Chloe.getReplies():
             u "(I should probably reply.)"
             jump phn_chloe11

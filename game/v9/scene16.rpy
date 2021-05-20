@@ -72,8 +72,9 @@ label v9_room_thur_night:
             $ contact_Emily.addReply(_("Sure! Gimme a sec."))
             $ contact_Emily.addReply(_("It's kinda late"), v9s16_reply5)
 
-            call screen phone
             label s16_PhoneContinueW:
+                if contact_Emily.getReplies():
+                    call screen phone
                 if contact_Emily.getReplies():
                     "(I should reply to Emily.)"
                     jump s16_PhoneContinueW
@@ -106,8 +107,9 @@ label v9_room_thur_night:
             $ contact_Emily.addReply(_("Sure! Gimme a sec."))
             $ contact_Emily.addReply(_("It's kinda late"), v9s16_reply6)
             
-            call screen phone
             label s16_PhoneContinueA:
+                if contact_Emily.getReplies():
+                    call screen phone
                 if contact_Emily.getReplies():
                     "(I should reply to Emily.)"
                     jump s16_PhoneContinueA
@@ -810,8 +812,9 @@ label v9_thur_night_aft_em_w:
         $ contact_Lindsey.addReply(_("Better now that I'm talking to you"), v9s16_reply3)
         $ contact_Lindsey.addReply(_("I'm ok, it's really not that bad"), v9s16_reply4)
 
-    call screen phone
     label s16_ContinueW1:
+        if contact_Lindsey.getReplies():
+            call screen phone
         if contact_Lindsey.getReplies():
             "(I should reply to Lindsey.)"
             jump s16_ContinueW1
@@ -856,8 +859,9 @@ label v9_thur_night_aft_em_a:
         $ contact_Lindsey.addReply(_("Better now that I'm talking to you"), v9s16_reply3)
         $ contact_Lindsey.addReply(_("I'm ok, it's really not that bad"), v9s16_reply4)
 
-    call screen phone
     label s16_ContinueA1:
+        if contact_Lindsey.getReplies():
+            call screen phone
         if contact_Lindsey.getReplies():
             "(I should reply to Lindsey.)"
             jump s16_ContinueA1

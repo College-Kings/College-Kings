@@ -83,8 +83,9 @@ label v9_room_w_chris:
     $ contact_Julia.addReply(_("Aww don't make me blush! They'll be here any second, I'll talk to you later"))
     $ contact_Julia.newMessage(_("<3"))
     
-    call screen phone
     label s21_PhoneContinue:
+        if contact_Julia.getReplies():
+            call screen phone
         if contact_Julia.getReplies():
             "(I should text Julia.)"
             jump s21_PhoneContinue

@@ -1065,11 +1065,11 @@ label v4start:
 
     play music "music/mindie4.mp3"
 
-    call screen phone
     label phonev:
         if contact_Chloe.getReplies():
+            call screen phone
+        if contact_Chloe.getReplies():
             u "(I should message Chloe about meeting up later.)"
-
             jump phonev
     
     scene s330a # same as 330 but you looking up
@@ -2183,8 +2183,9 @@ label continueab:
     $ contact_Josh.addReply(_("Uhh, sure."), v4_reply1)
     $ contact_Josh.addReply(_("I'm meeting a friend at 11, so I can't really."), v4_reply2)
 
-    call screen phone
     label phonew:
+        if contact_Josh.getReplies():
+            call screen phone
         if contact_Josh.getReplies():
             u "(I should probably reply to my messages.)"
             jump phonew

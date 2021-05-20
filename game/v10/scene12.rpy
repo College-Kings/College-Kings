@@ -1,21 +1,21 @@
 label v10_mc_clock_trans:
     if joinwolves:
-        scene wOldClock10
+        scene woldclock10
         with dissolve
 
         pause 0.5
 
-        scene wOldClock11
+        scene woldclock11
         with dissolve
 
         pause 0.5
 
-        scene wOldClock12
+        scene woldclock12
         with dissolve
 
         pause 0.5
 
-        scene wOldClock1
+        scene woldclock1
         with dissolve
 
         pause 0.5
@@ -23,22 +23,22 @@ label v10_mc_clock_trans:
         jump v10_wolves_redec
     
     else:
-        scene aClock10
+        scene aclock10
         with dissolve
 
         pause 0.5
 
-        scene aClock11
+        scene aclock11
         with dissolve
 
         pause 0.5
 
-        scene aClock12
+        scene aclock12
         with dissolve
 
         pause 0.5
         
-        scene aClock1
+        scene aclock1
         with dissolve
 
         pause 0.5

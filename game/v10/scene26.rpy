@@ -13,7 +13,7 @@ init python:
 label v10_amber_skatepark:
 
     scene v10sasp14 # TPP. Show MC on sidewalk, walking home from rileys house.
-    with fade and vpunch
+    with fade
 
     u "(I should get that.)"
 
@@ -21,6 +21,7 @@ label v10_amber_skatepark:
     $ contact_Amber.addReply("Condoms or beer?", v10s26_reply1 )
     $ contact_Amber.addReply("Alright sure")
 
+    call screen phone
 
     scene v10sasp1 # FPP. Show Amber, smiling, mouth closed.
     with fade
@@ -57,7 +58,7 @@ label v10_amber_skatepark:
 
     u "Of course, here you go."
 
-    if amber_condoms: # variable for MC replying beer or condoms earlier
+    if v10_amber_condoms: # variable for MC replying beer or condoms earlier
         scene v10sasp1c # FPP. Same camera as v10sasp1. Show Amber with a beer, smiling, mouth open.
         with dissolve
 

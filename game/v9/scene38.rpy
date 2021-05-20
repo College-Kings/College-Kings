@@ -6,7 +6,7 @@
 init python:
     def v9s38_reply1():
         contact_Lindsey.newMessage(_("Great. See ya soon"))
-        setattr(store, hangOutWithLindsey, True)
+        setattr(store, "hangOutWithLindsey", True)
 
     def v9s38_reply2():
         contact_Lindsey.newMessage(_(":("))
@@ -39,8 +39,9 @@ label v9_walk_li_txt:
     $ contact_Lindsey.addReply(_("Hell yeah! Be right there, Linds!"), v9s38_reply1)
     $ contact_Lindsey.addReply(_("Aww, I wish I could, but I gotta get ready for the brawl"), v9s38_reply2)
     
-    call screen phone
     label s38_PhoneContinue:
+        if contact_Lindsey.getReplies():
+            call screen phone
         if contact_Lindsey.getReplies():
             "(I should reply to Lindsey.)"
             jump s38_PhoneContinue 

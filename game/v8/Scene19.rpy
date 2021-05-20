@@ -176,8 +176,8 @@ label sun_eve_room:
             $ contact_Emily.addReply(_("Uh oh that can't be good ;)"))
             $ contact_Emily.newMessage(_("Wanna meet up at the arcade?"))
 
-            if hcGirl == "emily":
-                $ contact_Emily.newMessage(_("I feel so bad about homecoming and want to make it up to you. My treat!"))
+                if hcGirl == "emily":
+                    $ contact_Emily.newMessage(_("I feel so bad about homecoming and want to make it up to you. My treat!"))
                 $ contact_Emily.addReply(_("Sure! Sounds like fun. I can be there in a few minutes"), v8s19_reply3)
                 $ contact_Emily.addReply(_("I would but it's getting late and I haven't even started Mr. Lee's project"), v8s19_reply4)
 
