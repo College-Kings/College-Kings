@@ -4,7 +4,6 @@ init python:
                 self.name = name
                 self.profilePicture = "images/phone/simplr/contacts/{}".format(profilePicture)
                 self.profilePictureLarge = "images/phone/simplr/contacts/{}".format(profilePictureLarge)
-                self.newMessages = False
                 self.sentMessages = []
                 self.pendingMessages = []
 
@@ -30,7 +29,6 @@ init python:
                     self.pendingMessages = []
                     self.sentMessages.append(message)
 
-                self.newMessages = True
                 if self in simplr_contacts: simplrApp.newNotification()
                 
                 return message
@@ -49,7 +47,6 @@ init python:
                     self.pendingMessages = []
                     self.sentMessages.append(message)
 
-                self.newMessages = True
                 if self in simplr_contacts: simplrApp.newNotification()
 
                 return message
@@ -81,8 +78,7 @@ init python:
                     self.pendingMessages[-1].replies.append(reply)
 
             def seenMessage(self):
-                self.newMessages = False
-                if not any([contact.newMessages for contact in simplr_contacts]):
+                if not any([contact.getReplies() for contact in simplr_contacts]):
                     simplrApp.seenNotification()
 
 init offset = -1

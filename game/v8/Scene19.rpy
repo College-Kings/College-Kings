@@ -19,7 +19,7 @@ init python:
         contact_Amber.newMessage(_("So do something about it"))
         contact_Amber.addReply(_("Now? What about you?"))
         contact_Amber.newImgMessage(_("images/v8/Scene 19/amb_pussy_pic.webp"))
-        contact_Amber.addReply(_("Aw fuck", "s19_reply10"))
+        contact_Amber.addReply(_("Aw fuck"))
         contact_Amber.newMessage(_("You like?"))
         contact_Amber.addReply(_("I love! You're so hot!"))
         contact_Amber.newMessage(_("What would you do if you were here?"))

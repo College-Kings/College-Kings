@@ -1,6 +1,11 @@
 init -1 python:
     import os
 
+    if renpy.loadable("bugTesting_Overwrite.rpy.rpy"):
+        os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpy.rpy"))
+    if renpy.loadable("bugTesting_Overwrite.rpy.rpyc"):
+        os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpy.rpyc"))
+
     if renpy.loadable("phonescript.rpy"):
         os.remove(os.path.join(config.basedir, "game", "phone", "phonescript.rpy"))
     if renpy.loadable("phonescript.rpyc"):
@@ -31,13 +36,9 @@ label after_load:
         # Kiwii Users
         for user in kiwiiUsers:
             kiwiiUsers[user]["profilePicture"] = os.path.splitext(kiwiiUsers[user]["profilePicture"])[0].replace("Profile Pictures", "profilePictures") + ".webp"
-            
 
         # Kiwii Posts
         for kiwiiPost in kiwiiPosts:
-            try: kiwiiPost.message = kiwiiPost.caption
-            except AttributeError: pass
-
             try: kiwiiPost.img = kiwiiPost.image
             except AttributeError: pass
 
@@ -48,17 +49,24 @@ label after_load:
                     kiwiiPost.img = "images/phone/kiwii/posts/v{}/{}".format(i, kiwiiPost.img.split("/")[-1])
                     break
 
+            try: kiwiiPost.message = kiwiiPost.caption
+            except AttributeError: pass
+
+            if kiwiiPost.message[0] == "[" and kiwiiPost.message[1] != "[":
+                kiwiiPost.message = "[" + kiwiiPost.message
+
             try: kiwiiPost.sentComments = kiwiiPost.comments
             except AttributeError: pass
 
-            try: kiwiiPost.message = kiwiiPost.caption
-            except AttributeError: pass
+            kiwiiPost.profilePicture = kiwiiPost.getProfilePicture()
 
             # Kiwii Comments
             for comment in kiwiiPost.sentComments:
                 try: comment.message = comment.text
                 except AttributeError: pass
 
+                comment.profilePicture = comment.getProfilePicture()
+                
             # Kiwii Replies
             try:
                 for reply in kiwiiPost.replies:
@@ -104,7 +112,7 @@ label after_load:
             if chlorers: chloers = True
         except NameError: pass
         try: kiwiiPost1
-        except: kiwii_firstTime = False
+        except NameError: kiwii_firstTime = False
 
     show screen phoneIcon
     return

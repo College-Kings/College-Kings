@@ -12,7 +12,7 @@ init python:
         addPoint("bf")
 
     def v7_kiwiiReply4():
-        KiwiiPost2.addComment("Autumn", "Yeah, they really are", mentions="MC", numberLikes=renpy.random.randint(8, 18))
+        kiwiiPost2.addComment("Autumn", "Yeah, they really are", mentions="MC", numberLikes=renpy.random.randint(8, 18))
     
     def v7_kiwiiReply5():
         addPoint("bro")
@@ -20,7 +20,7 @@ init python:
 
     def v7_kiwiiReply6():
         addPoint("tm")
-        KiwiiPost4.addComment("Josh", "lol", mentions="MC", numberLikes=renpy.random.randint(3, 7))
+        kiwiiPost4.addComment("Josh", "lol", mentions="MC", numberLikes=renpy.random.randint(3, 7))
 
     def v7_msgReply1():
         setattr(store, "tellpenelope", True)
@@ -1400,26 +1400,20 @@ label conyourdorm:
 
         label phoneam:
             if contact_Riley.getReplies():
-                call screen phone
+                call screen messager(contact_Riley)
             if contact_Riley.getReplies():
                 "(I need to respond to some of these messages.)"
                 jump phoneam
 
-            elif kiwii_firstTime:
-                call screen phone
-            elif kiwii_firstTime:
+            if kiwii_firstTime:
                 "(I should check out what Emily posted on Kiwii.)"
                 jump phoneam              
 
-            elif bowling and contact_Penelope.getReplies():
-                call screen phone
-            elif bowling and contact_Penelope.getReplies():
+            if bowling and contact_Penelope.getReplies():
                 "(I should answer Penelope.)"
                 jump phoneam
 
-            elif laurenrs and contact_Lauren.getReplies():
-                call screen phone
-            elif laurenrs and contact_Lauren.getReplies():
+            if laurenrs and contact_Lauren.getReplies():
                 "(I should respond to Lauren.)"
                 jump phoneam
 
@@ -1642,7 +1636,7 @@ label conyourdorm:
 
         label phonean:
             if contact_Riley.getReplies():
-                call screen phone
+                call screen messager(contact_Riley)
             if contact_Riley.getReplies():
                 u "(I should respond to Riley.)"
                 jump phonean
