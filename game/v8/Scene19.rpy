@@ -80,6 +80,7 @@ label sun_eve_room:
 
         call screen phone
 
+        # Show MC masturbating and continue conversation
         if contact_Amber.getMessage("Wanna see what thinking about you has done to me?"):
             scene v8sser2
             with dissolve
@@ -92,36 +93,35 @@ label sun_eve_room:
             $ contact_Amber.newMessage(_("You're so cute! But it's time for bed. Dream about me ;)"))
             $ contact_Amber.addReply(_("With pleasure! Night!"))
 
+        if forgiveemily:
+            # -MC's phone buzzes-
+            ### ERROR: (Aww, she couldn't get enough of me) [I figure this line works for either scenario but let me know if I should change it] ###
+            $ contact_Emily.newMessage(_("Hey, I was thinking"), queue=False)
+            $ contact_Emily.addReply(_("Uh oh that can't be good ;)"))
+            $ contact_Emily.newMessage(_("Wanna meet up at the arcade?"))
+
+            if hcGirl == "emily":
+                $ contact_Emily.newMessage(_("I feel so bad about homecoming and want to make it up to you. My treat!"))
+            $ contact_Emily.addReply(_("Sure! Sounds like fun. I can be there in a few minutes"), v8s19_reply3)
+            $ contact_Emily.addReply(_("I would but it's getting late and I haven't even started Mr. Lee's project"), v8s19_reply4)
+
             call screen phone
 
-        ### ERROR: -Continue after choices- [MC still in bed] ###
-        label s19_replyCont1:
-            if forgiveemily:
-                # -MC's phone buzzes-
-                ### ERROR: (Aww, she couldn't get enough of me) [I figure this line works for either scenario but let me know if I should change it] ###
-                $ contact_Emily.newMessage(_("Hey, I was thinking"), queue=False)
-                $ contact_Emily.addReply(_("Uh oh that can't be good ;)"))
-                $ contact_Emily.newMessage(_("Wanna meet up at the arcade?"))
+            if contact_Emily.getMessage("Great! See you there!"):
+                jump emily_arcade
 
-                if hcGirl == "emily":
-                    $ contact_Emily.newMessage(_("I feel so bad about homecoming and want to make it up to you. My treat!"))
-                $ contact_Emily.addReply(_("Sure! Sounds like fun. I can be there in a few minutes"), v8s19_reply3)
-                $ contact_Emily.addReply(_("I would but it's getting late and I haven't even started Mr. Lee's project"), v8s19_reply4)
+            scene v8sser1a # TPP. Same camera as v8sser1, show MC lying on his side as if to go to sleep.
+            with dissolve
 
-                call screen phone
+            u "(I think I'll get an early night)"
 
-                scene v8sser1a # TPP. Same camera as v8sser1, show MC lying on his side as if to go to sleep.
-                with dissolve
+        else:
+            scene v8sser1a
+            with dissolve
 
-                u "(I think I'll get an early night)"
+            u "(I think I'll get an early night)"
 
-            else:
-                scene v8sser1a
-                with dissolve
-
-                u "(I think I'll get an early night)"
-
-            jump mon_morning_room
+        jump mon_morning_room
 
     else:
         scene v8sser4 # TPP. Show MC sat on his Apes bed on his phone.
@@ -156,31 +156,45 @@ label sun_eve_room:
 
         call screen phone
 
-        label s19_replyCont2:
-            ### ERROR: -Continue after choices- [MC still in bed] ###
-            if forgiveemily:
-                # -MC's phone buzzes-
-                ### ERROR: (Aww, she couldn't get enough of me) [I figure this line works for either scenario but let me know if I should change it] ###
-                $ contact_Emily.newMessage(_("Hey, I was thinking"), queue=False)
-                $ contact_Emily.addReply(_("Uh oh that can't be good ;)"))
-                $ contact_Emily.newMessage(_("Wanna meet up at the arcade?"))
+        # Show MC masturbating and continue conversation
+        if contact_Amber.getMessage("Wanna see what thinking about you has done to me?"):
+            scene v8sser2
+            with dissolve
+
+            $ contact_Amber.newMessage(_("NOW!"), queue=False)
+            $ contact_Amber.addReply(_("NOW!"))
+            $ contact_Amber.addReply(_("Holy shit, Amber! You're amazing!"))
+            $ contact_Amber.newMessage(_("You weren't too bad yourself. Next time we need to do this in person"))
+            $ contact_Amber.addReply(_("Give me 5 minutes ;)"))
+            $ contact_Amber.newMessage(_("You're so cute! But it's time for bed. Dream about me ;)"))
+            $ contact_Amber.addReply(_("With pleasure! Night!"))
+            
+        if forgiveemily:
+            # -MC's phone buzzes-
+            ### ERROR: (Aww, she couldn't get enough of me) [I figure this line works for either scenario but let me know if I should change it] ###
+            $ contact_Emily.newMessage(_("Hey, I was thinking"), queue=False)
+            $ contact_Emily.addReply(_("Uh oh that can't be good ;)"))
+            $ contact_Emily.newMessage(_("Wanna meet up at the arcade?"))
 
             if hcGirl == "emily":
                 $ contact_Emily.newMessage(_("I feel so bad about homecoming and want to make it up to you. My treat!"))
                 $ contact_Emily.addReply(_("Sure! Sounds like fun. I can be there in a few minutes"), v8s19_reply3)
                 $ contact_Emily.addReply(_("I would but it's getting late and I haven't even started Mr. Lee's project"), v8s19_reply4)
 
-                call screen phone
+            call screen phone
 
-                scene v8sser4a # TPP. Same camera as v8sser4, show MC lying on his side as if to go to sleep.
-                with dissolve
+            if contact_Emily.getMessage("Great! See you there!"):
+                jump emily_arcade
 
-                u "(I think I'll get an early night)"
+            scene v8sser4a # TPP. Same camera as v8sser4, show MC lying on his side as if to go to sleep.
+            with dissolve
 
-            else:
-                scene v8sser4a
-                with dissolve
+            u "(I think I'll get an early night)"
 
-                u "(I think I'll get an early night)"
+        else:
+            scene v8sser4a
+            with dissolve
 
-            jump mon_morning_room
+            u "(I think I'll get an early night)"
+
+        jump mon_morning_room
