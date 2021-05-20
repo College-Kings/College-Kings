@@ -120,7 +120,7 @@ label v9_at_warehouse:
             "Talk About Ryan":
                 $ addPoint("tm")
 
-                u "*whispers* Hey, Im, if I draw Ryan first, want me to warm him up for you?"
+                u "*Whispers* Hey, Im, if I draw Ryan first, want me to warm him up for you?"
 
                 scene v9aaw5a # FPP. Same camera as v9aaw5a, Imre angry, mouth open.
                 with dissolve
@@ -128,7 +128,7 @@ label v9_at_warehouse:
                 imre "Fuck no! I want you to hand him over."
 
             "Keep Quiet":
-                u "(Better not rile him up)"
+                u "(Better not rile him up.)"
 
                 
         scene v9aaw4
@@ -141,7 +141,7 @@ label v9_at_warehouse:
 
         if hl_punch:
 
-            u "(I have a reputation to uphold)"
+            u "(I have a reputation to uphold.)"
 
         else:
             # -If MC got punched in 12-
@@ -312,7 +312,7 @@ label v9_at_warehouse:
             scene v9aaw11b # TPP. Same camera as v9aaw11, show Grayson stood right in MC's face, serious expression, mouth open.
             with dissolve
 
-            gr "*whispers* Don't let me down, freshman."
+            gr "*Whispers* Don't let me down, freshman."
 
         scene v9aaw12 # FPP. Show Grayson pacing around, Cameron stood behind Grayson agitated expression, looking at something out of view. Grayson serious expression, Mouths closed.
         with dissolve

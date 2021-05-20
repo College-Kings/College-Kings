@@ -381,7 +381,7 @@ else:
             scene v9slake1j
             with dissolve
 
-            u "I...I guess, so."
+            u "I... I guess, so."
 
             scene v9slake1h
             with dissolve

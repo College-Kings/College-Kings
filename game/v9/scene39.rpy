@@ -61,7 +61,7 @@ label v9_hang_w_linds:
         scene v9hwl5b # FPP. Same camera as v9hwl5, smile, mouth open.
         with dissolve
 
-        li "No, not like that, silly. Just...tired?"
+        li "No, not like that, silly. Just... tired?"
 
         scene v9hwl5c # FPP. Same camera as v9hwl5, smile, mouth closed.
         with dissolve
@@ -216,7 +216,7 @@ label v9_hang_w_linds:
                     scene v9hwl5c
                     with dissolve
 
-                    u "You taste like...caramel?" 
+                    u "You taste like... caramel?" 
 
                     scene v9hwl5b
                     with dissolve
@@ -267,7 +267,7 @@ label v9_hang_w_linds:
 
                     u "Dammit! I have to get ready for the Brawl."
 
-                    u "I'm so sorry. I really don't want to go...REALLY!"
+                    u "I'm so sorry. I really don't want to go... REALLY!"
 
                     scene v9hwl10a # FPP. Same camera as v9hwl10, Lindsey a little sad, mouth open.
                     with dissolve

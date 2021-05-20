@@ -24,7 +24,7 @@ label v9_walk_w_sam_joke:
 
     scene v9wws1b # FPP. Same camera as v9wws1, Show Samantha, in park, close to mc, surprised, mouth closed
     with dissolve    
-    u "No! No, not like that. Just...you kinda told me to come."
+    u "No! No, not like that. Just... you kinda told me to come."
 
     scene v9wws1c #Same camera as v9wws1, Show Samantha, in park, close to mc, nervous smile, mouth open
     with dissolve
@@ -66,7 +66,7 @@ label v9_walk_w_sam_cont1:
 
     scene v9wws4 # FPP. Show Samantha in park, looking into the distance at the park. Slight smile, mouth closed
     with dissolve
-    u "It's fine...as far as school goes. Only doing core classes right now."
+    u "It's fine... as far as school goes. Only doing core classes right now."
 
     scene v9wws4a # FPP. Same Camera as v9wws4, Show Samantha in park, looking into the distance at the park. Slight smile, mouth open
     with dissolve
@@ -82,12 +82,12 @@ label v9_walk_w_sam_cont1:
 
     scene v9wws4
     with dissolve
-    u "*laughs* No idea!"
+    u "*Laughs* No idea!"
 
     scene v9wws4b # FPP. Same Camera as v9wws4, Show Samantha in park, Now looking at MC. Slight smile, mouth open
     with dissolve
     sa "Good!"
-    sa "I mean...good I'm not the only one who doesn't have her shit figured out."
+    sa "I mean... good I'm not the only one who doesn't have her shit figured out."
 
     scene v9wws4c # FPP. Same Camera as v9wws4, Show Samantha in park, looking at MC. Slight smile, mouth closed
     with dissolve    
@@ -148,7 +148,7 @@ label v9_walk_w_sam_grayson:
 label v9_walk_w_sam_cameron: 
     scene v9wws8c # FPP. Same camera as v9wws8, Show Samantha, threes in background, nervous smile, mouth open
     with dissolve
-    sa "I was talking about you...us walking...together."
+    sa "I was talking about you... us walking... together."
 
     scene v9wws8d # FPP. Same camera as v9wws8, Show Samantha, threes in background, nervous smile, mouth closed
     with dissolve
@@ -196,7 +196,7 @@ label v9_walk_w_sam_cameron:
 
     scene v9wws10b # FPP. same camera as v9wws10, close up of samantha, in park, close to mc, laughing, mouth closed, open green behind her, mouth open
     with dissolve
-    sa "*laughs* True."
+    sa "*Laughs* True."
 
     jump v9_walk_w_sam_cont2
 
@@ -220,7 +220,7 @@ label v9_walk_w_sam_cont2:
 
     scene v9wws11
     with dissolve
-    u "*laughs*Sounds like it, huh? No, it's something my dad always said."
+    u "*Laughs* Sounds like it, huh? No, it's something my dad always said."
 
     scene v9wws11a
     with dissolve

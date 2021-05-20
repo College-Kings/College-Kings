@@ -74,7 +74,7 @@ label v9_hc_heckle:
     jump v9_hc_cont2
 
 label v9_hc_quiet:
-    u "(Not likely)"
+    u "(Not likely.)"
 
     jump v9_hc_cont2
 
@@ -97,7 +97,7 @@ label v9_hc_cont2:
     scene v9hc8c # FPP. Same camera as v9hc8, Mr. Lee now stood next to his desk looking at the class, mouth closed.
     with dissolve
 
-    u "(Awww, too bad)"
+    u "(Awww, too bad.)"
 
     scene v9hc8d # FPP. Same camera as v9hc8, Mr. Lee now stood next to his desk looking at the class, gesturing someone to come up, mouth open.
     with dissolve

@@ -16,7 +16,7 @@ label v9_room_w_chris:
 
     play sound "sounds/knock.mp3"
 
-    "*knock* *knock*"
+    "*Knock* *knock*"
 
     scene v9rwc3 # TPP. Show MC getting up from his chair to answer the door.
     with dissolve

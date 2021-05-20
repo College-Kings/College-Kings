@@ -122,7 +122,7 @@ label v9_driving_home_lake:
     scene v9ghl1b
     with dissolve
 
-    ry "Come on, you're...you're making this up!"
+    ry "Come on, you're... you're making this up!"
 
     scene v9ghl1c
     with dissolve
@@ -147,7 +147,7 @@ label v9_driving_home_lake:
     scene v9ghl2c # TPP. Same camera as v9ghl2, Riley smile, mouth closed.
     with dissolve
 
-    u "He carefully looked in the distance and truly did see a shadow on the road, not moving. It was about 40...no, 30 yards away."
+    u "He carefully looked in the distance and truly did see a shadow on the road, not moving. It was about 40... no, 30 yards away."
 
     scene v9ghl1b
     with dissolve

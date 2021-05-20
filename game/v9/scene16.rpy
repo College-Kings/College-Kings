@@ -58,7 +58,7 @@ label v9_room_thur_night:
         scene v9emi1 # TPP. Show MC sat on his bed in his Wolves room, looking tired.
         with fade
 
-        u "(Whew, glad to be alone...finally)"
+        u "(Whew, glad to be alone... finally)"
 
         if emilyrs:
             scene v9emi1a # TPP. Same camera as v9emi1, MC now on his phone on his bed.
@@ -66,7 +66,7 @@ label v9_room_thur_night:
 
             play sound "sounds/vibrate.mp3"
 
-            u "(Ugh, now what)"
+            u "(Ugh, now what.)"
 
             $ contact_Emily.newMessage(_("I'm bored. Come hang out."), queue=False)
             $ contact_Emily.addReply(_("Sure! Gimme a sec."))
@@ -93,7 +93,7 @@ label v9_room_thur_night:
         scene v9emi4 # TPP. Show MC sat on his bed in his Apes room, looking tired.
         with dissolve
 
-        u "(Whew, glad to be alone...finally)"
+        u "(Whew, glad to be alone... finally)"
 
         if emilyrs:
             scene v9emi4a # TPP. Same camera as v9emi4, MC now on his phone on his bed.
@@ -101,7 +101,7 @@ label v9_room_thur_night:
 
             play sound "sounds/vibrate.mp3"
 
-            u "(Ugh, now what)"
+            u "(Ugh, now what.)"
 
             $ contact_Emily.newMessage(_("I'm bored. Come hang out."))
             $ contact_Emily.addReply(_("Sure! Gimme a sec."))
@@ -178,7 +178,7 @@ label v9_emily_dorm:
         scene v9emi11c # FPP. Same camera as v9emi11, neutral expression, mouth closed.
         with dissolve
 
-        u "(Aw, great. Pity)"
+        u "(Aw, great. Pity.)"
 
         u "I'm alright. Just more attention than I'd like."
 
@@ -496,7 +496,7 @@ label v9_emily_dorm:
 
     u "Oh wowwww!"
     em "*Suck* *Suck*"
-    u "(I'm gonna blow if I don't do something)"
+    u "(I'm gonna blow if I don't do something.)"
 
     scene v9emi13a
     with dissolve
@@ -794,13 +794,13 @@ label v9_thur_night_aft_em_w:
         scene v9emi3 # TPP. Show MC on his bed on his phone looking exhausted.
         with fade
 
-        u "(I'm about to pass out)"
+        u "(I'm about to pass out.)"
 
     else:
         scene v9emi3
         with dissolve
 
-        u "(I need to get some sleep)"
+        u "(I need to get some sleep.)"
 
     if hl_punch:
         $ contact_Lindsey.newMessage(_("How are you doing tonight?"), queue=False)
@@ -841,13 +841,13 @@ label v9_thur_night_aft_em_a:
         scene v9emi6 # TPP. Show MC on his bed on his phone looking exhausted.
         with fade
 
-        u "(I'm about to pass out)"
+        u "(I'm about to pass out.)"
 
     else:
         scene v9emi6
         with dissolve
 
-        u "(I need to get some sleep)"
+        u "(I need to get some sleep.)"
 
     if hl_punch:
         $ contact_Lindsey.newMessage(_("How are you doing tonight?"), queue=False)

@@ -50,14 +50,14 @@ label v9_walk_li_txt:
     with dissolve
 
     if hangOutWithLindsey:
-        u "(I suppose I should head to see Lindsey)"
+        u "(I suppose I should head to see Lindsey.)"
 
         stop music fadeout 3
 
         jump v9_hang_w_linds
     
     else:
-        u "(Shit)"
+        u "(Shit.)"
 
         if joinwolves:
             stop music fadeout 3

@@ -45,7 +45,7 @@ label v9_lau_dorm:
         scene v9lau3b # FPP. Same camera as v9lau3, Lauren giggle, mouth closed.
         with dissolve
 
-        la "*giggles* Come in."
+        la "*Giggles* Come in."
 
     else:
         scene v9lau3

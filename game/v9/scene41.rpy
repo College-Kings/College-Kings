@@ -13,15 +13,15 @@ label v9_apes_pre_fight:
         scene v9apf1a # TPP. Same camera as v9apf1a, MC smile.
         with dissolve
 
-        u "(I can still taste the caramel)"
+        u "(I can still taste the caramel.)"
 
         scene v9apf1
         with dissolve
 
     else:
-        u "(I hope Lindsey's not mad at me. She's a nice girl. And she's really hot! I don't wanna blow it)"
+        u "(I hope Lindsey's not mad at me. She's a nice girl. And she's really hot! I don't wanna blow it.)"
 
-    u "(I suppose I should get ready for the Brawl)"
+    u "(I suppose I should get ready for the Brawl.)"
 
     scene v9apf2 # TPP. Show MC stood in the middle of his room now wearing outfit 7.
     with fade

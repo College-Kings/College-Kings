@@ -15,7 +15,7 @@ label room_wed_night:
         scene v9wnr2 # TPP. Show MC now lay on his bed, sighing.
         with dissolve
 
-        u "(Now this was not a bad day. I guess having fun like this is pretty cool too)"
+        u "(Now this was not a bad day. I guess having fun like this is pretty cool too.)"
 
         scene v9wnr2a # TPP. Same camera as v9wnr2, MC turns to his side and grabs his phone.
         with dissolve
@@ -32,7 +32,7 @@ label room_wed_night:
         scene v9wnr3 # TPP. Show MC lying on the opposite side to v9wnr2a, slight concerned expression, looking tired, no longer holding phone, mouth closed.
         with dissolve
 
-        u "(The thing I should really be worried about is that Brawl. But after today I think I feel more confident. Day was pretty inspiring)"
+        u "(The thing I should really be worried about is that Brawl. But after today I think I feel more confident. Day was pretty inspiring.)"
 
         stop music fadeout 3
 
@@ -77,7 +77,7 @@ label room_wed_night:
         scene v9wnr9 # TPP. Show MC now lay on his bed, sighing.
         with dissolve
 
-        u "(Now this was not a bad day. I guess having fun like this is pretty cool too)"
+        u "(Now this was not a bad day. I guess having fun like this is pretty cool too.)"
 
         scene v9wnr9a # TPP. Same camera as v9wnr2, MC turns to his side and grabs his phone.
         with dissolve
@@ -94,7 +94,7 @@ label room_wed_night:
         scene v9wnr10 # TPP. Show MC lying on the opposite side to v9wnr2a, slight concerned expression, looking tired, no longer holding phone, mouth closed.
         with dissolve
 
-        u "(The thing I should really be worried about is that Brawl. But after today I think I feel more confident. Day was pretty inspiring)"
+        u "(The thing I should really be worried about is that Brawl. But after today I think I feel more confident. Day was pretty inspiring.)"
 
         stop music fadeout 3
 

@@ -68,7 +68,7 @@ label v9_room_fri_morn:
         scene v9fmr5a # FPP. Same camera as v9fmr5, Grayson mouth closed.
         with dissolve
 
-        u "(drowsy) Uhh, yeah ok. I'm up, and ewww."
+        u "*Drowsy* Uhh, yeah ok. I'm up, and ewww."
 
         scene v9fmr5
         with dissolve

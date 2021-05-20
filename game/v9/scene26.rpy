@@ -138,7 +138,7 @@ label v9_fri_training_w_wolves:
     scene v9tww5g # FPP. Same camera as v9tww5, Chris pacing back to the same position priot to v9tww5c (center to camera), neutral expression, mouth open.
     with dissolve
 
-    ch "I wanna win this thing just as bad as the apes wanna win, maybe more since Grayson's already got the title on his side."
+    ch "I wanna win this thing just as bad as the Apes wanna win, maybe more since Grayson's already got the title on his side."
 
     scene v9tww5a
     with dissolve
@@ -159,9 +159,9 @@ label v9_fri_training_w_wolves:
         scene v9tww9 # TPP. Show Chris with his hand on MC's shoulder, Perry and Imre looking at Chris, MC smile, Chris smile, mouth open.
         with dissolve
 
-        ch "I can't tell you if the apes will be harder to beat than that guy, but they certainly won't be easier. The apes have a proven track record in the ring."
+        ch "I can't tell you if the Apes will be harder to beat than that guy, but they certainly won't be easier. The Apes have a proven track record in the ring."
 
-        ch "But... now we have our champ here. I know for a fact those apes are shitting their pants after that knockout."
+        ch "But... now we have our champ here. I know for a fact those Apes are shitting their pants after that knockout."
 
         scene v9tww9a # TPP. Same camera as v9tww9, all smiling, Imre mouth open.
         with dissolve
@@ -619,7 +619,7 @@ label v9_fri_training_w_wolves:
 
     ch "Don't worry. I'm not gonna say 'no women.'"
 
-    ch "Let's consider all forms of...stress relief...as rest, shall we?"
+    ch "Let's consider all forms of... stress relief... as rest, shall we?"
 
     scene v9tww21 # TPP. Show Imre, smile, mouth open.
     with dissolve

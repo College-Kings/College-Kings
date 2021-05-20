@@ -21,7 +21,7 @@ label v9_room_fri_eve:
             scene v9rfe1b # TPP. Same camera as v9rfe1, show MC on his phone.
             with dissolve    
 
-            u "(Wonder how Lauren's doing with the Deers charity)"
+            u "(Wonder how Lauren's doing with the Deers charity.)"
 
 
             $ contact_Lauren.addReply(_("How's it going? You still doing our statue idea?"))
@@ -43,7 +43,7 @@ label v9_room_fri_eve:
 
         play sound "sounds/knock.mp3"
 
-        "*knock* *knock*"
+        "*Knock* *knock*"
 
         u "Come in!"
         
@@ -66,7 +66,7 @@ label v9_room_fri_eve:
             scene v9rfe3b # TPP. Same camera as v9rfe3, show MC on his phone.
             with dissolve               
 
-            u "(Wonder how Lauren's doing with the Deers charity)"
+            u "(Wonder how Lauren's doing with the Deers charity.)"
 
             $ contact_Lauren.addReply(_("How's it going? You still doing our statue idea?"))
             $ contact_Lauren.newMessage(_("Of course. I'm glad you talked me into it."))
@@ -87,7 +87,7 @@ label v9_room_fri_eve:
 
         play sound "sounds/knock.mp3"
 
-        "*knock* *knock*"
+        "*Knock* *knock*"
 
         u "Come in!"
     
