@@ -369,6 +369,7 @@ default ryanLike = 0
 default noraLike = 0
 default amberLike = 0
 default rileyLike = 0
+default lindseyLike = 0
 default v10_inv_pen_cafe = False
 default v10_simplr_known = False
 default v10_reassure_jenny = False
