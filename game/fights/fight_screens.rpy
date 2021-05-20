@@ -1,5 +1,3 @@
-default fight_type = "normal" # normal / simReal / simWin
-
 screen fightTutorial():
     tag fightScreen
 
@@ -7,16 +5,66 @@ screen fightTutorial():
     text "Would you like to play the fighting tutorial?" style "endfree"
 
     textbutton "Yes" style "endfr":
+        align (0.43, 0.58)
         action Jump("fightTutorialLabel")
         text_align 0.5
-        xalign 0.57
-        yalign 0.58
 
     textbutton "No" style "endfr":
+        align (0.57, 0.58)
         action [Hide("fightTutorial"), Show("fight_typeMenu")]
         text_align 0.5
-        xalign 0.43
-        yalign 0.58
+
+
+screen fightTutorialKeys(highlight=None):
+    tag tag_fightTutorialKeys
+    add "images/fight_background.webp"
+
+    text "[w]":
+        align (0.122, 0.3)
+        style "fightTutorialText"
+        if highlight == 'w':
+            color "#d10000"
+        else:
+            color "#FFD166"
+
+    text "[q]":
+        align (0.02, 0.5)
+        style "fightTutorialText"
+        if highlight == 'q':
+            color "#d10000"
+        else:
+            color "#FFD166"
+
+    text "[e]":
+        align (0.235, 0.5)
+        style "fightTutorialText"
+        if highlight == 'e':
+            color "#d10000"
+        else:
+            color "#FFD166"
+
+    text "[r]":
+        align (0.122, 0.7)
+        style "fightTutorialText"
+        if highlight == 'r':
+            color "#d10000"
+        else:
+            color "#FFD166"
+
+    imagebutton:
+        align (0.06, 0.5)
+        idle "images/jab.webp"
+        hover "images/jab.webp"
+
+    imagebutton:
+        align (0.115, 0.4)
+        idle "images/hook.webp"
+        hover "images/hook.webp"
+
+    imagebutton:
+        align (0.115, 0.61)
+        idle "images/kick.webp"
+        hover "images/kick.webp"
 
 
 screen fight_typeMenu():
