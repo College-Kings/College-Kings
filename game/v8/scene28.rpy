@@ -103,7 +103,7 @@ label drug_deal_w_josh:
         "Intervene":
             $ addPoint("bro")
             jump int_deal_w_josh
-        "Don't Intervene":
+        "Don't intervene":
             jump no_int_deal_w_josh
 
 label int_deal_w_josh:
