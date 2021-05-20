@@ -261,4 +261,4 @@ label v10_ms_rose_fight:
 
     u "(Wait, her stepmom? Is Nora Ms. Rose's stepdaughter? What the fuck?!)"
 
-    jump v10_skate_park
+    jump v10_amber_skatepark
