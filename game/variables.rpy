@@ -13,6 +13,8 @@ default kiwii_firstTime = False
 default fight_type = "normal" # normal / simReal / simWin
 default reaction = 1.0
 default reactiona = 1.0
+default allies = [mc]
+default enemies = []
 
 # 1.0 - 6.0
 default v1_sda = False
@@ -24,8 +26,8 @@ default statsPage = 0
 default kctTutorialPage = 1
 default influenceTutorialPage = 1
 default stance = 0
-default youdmg = 0
-default youhealth = 5
+default youDamage = 0
+default youHealth = 5
 default influencetut = False
 default meetlauren = False
 default laurenrs = False
@@ -325,7 +327,6 @@ default helpJosh = False
 default larsdmg = 0
 default larshealth = 0
 default simLarsFight = False
-default s28_LarsFight = False
 default s28_fightWinner = "MC"
 
 default amberSexOfferAtJoshs = False
