@@ -1,9 +1,10 @@
 init python:
-    persistent.ep = 7
+    persistent.ep = 10
 
 define steam = False
-define config.developer = False
-define config.console = False
+define config.developer = True
+define config.console = True
+
 
 define config.steam_appid = 1463120
 

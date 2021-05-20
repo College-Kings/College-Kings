@@ -57,3 +57,52 @@ label fight_changeKeybinds:
     $ r = renpy.input("Which button should be hook / block face?", default="r").strip() or "r"
 
     return
+
+
+label fight:
+    if fight_type == "simWin":
+        $ mc.health = 1000
+
+    $ players = allies + enemies
+
+    $ attacker = getCurrentAttacker()
+    $ defender = getCurrentDefender()
+
+    jump healthCheck
+
+label healthCheck:
+
+    $ print("Attacker: MC {} : Defender: Lars {}".format(mc.health, lars.health))
+    if defender.health <= 0:
+        scene youfinishmovie
+        pause 1
+
+        play sound "sounds/fall.mp3"
+
+        $ attacker.reset()
+
+        scene youfinish
+        with vpunch
+        pause
+
+        jump youfinish
+    else:
+        python:
+            for player in allies + enemies:
+                player.selectDefence()
+
+        $ attacker = getCurrentAttacker()
+        $ defender = getCurrentDefender()
+
+        jump startAttack
+
+label startAttack:
+    if attacker in enemies:
+        pass
+        
+
+    # if fight_type.startswith("sim"):
+    #     $ attacker.attack(defender)
+    #     jump healthCheck
+    # else:
+    #     call screen noramlAttack
