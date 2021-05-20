@@ -1212,9 +1212,6 @@ label v10s33_chloe1:
 
                 no "OH YEAH, THEN GET IN THE RING ALREADY!"
 
-                scene v10cfrcl4 # FPP. Show Chloe and nora storming off
-                with dissolve
-
                 call screen v10s33_mudwrestling
 
             "Don't Tell Chloe":
