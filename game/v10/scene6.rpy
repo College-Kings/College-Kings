@@ -398,11 +398,11 @@ label v10_mc_vs_ryan_fight:
 
 
             label mc_ryanFightEnd: # MC wins fight against Ryan
-                $ v10_ryan_win = False
+                $ v10_ryan_win = True
                 jump ryan_fightEnd
 
             label ryan_McFightEnd: # MC loses fight against Ryan
-                $ v10_ryan_win = True
+                $ v10_ryan_win = False
                 jump ryan_fightEnd
 
             label ryan_fightEnd:
