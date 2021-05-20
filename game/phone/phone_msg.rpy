@@ -1,83 +1,151 @@
 init python:
     class Contact:
-        def __init__(self, name, profilePicture, newMessages=False, locked=True):
+        def __init__(self, name, profilePicture, locked=True):
             self.name = name
-            self.profilePicture = profilePicture
-            self.newMessages = newMessages
+            self.profilePicture = "images/phone/messages/profilePictures/{}".format(profilePicture)
             self.locked = locked
-            self.messages = []
+            self.sentMessages = []
+            self.pendingMessages = []
             contacts.append(self)
 
-        def newMessage(self, message):
+        def newMessage(self, message, queue=True):
             message = Message(self, message)
-            self.newMessages = True
+
             try: contacts.insert(0, contacts.pop(contacts.index(self))) # Moves contact to the top when recieving a new message
             except Exception: pass
-            self.messages.append(message)
 
-        def newImgMessage(self, img):
+            # Add message to queue
+            if queue:
+                self.pendingMessages.append(message)
+            else:
+                self.pendingMessages = []
+                self.sentMessages.append(message)
+
+            self.unlock()
+            msgApp.newNotification()
+            
+            return message
+
+        def newImgMessage(self, img, queue=True):
             message = ImageMessage(self, img)
-            self.newMessages = True
+
             try: contacts.insert(0, contacts.pop(contacts.index(self))) # Moves contact to the top when recieving a new message
             except Exception: pass
-            self.messages.append(message)
 
-        def addReply(self, message, label=None):
-            reply = Reply(message, label)
-            try: self.messages[-1].replies.append(reply)
-            except Exception:
-                self.newMessage("")
-                self.messages[-1].replies.append(reply)
-            self.newMessages = True
+            # Add message to queue
+            if queue:
+                self.pendingMessages.append(message)
+            else:
+                self.pendingMessages = []
+                self.sentMessages.append(message)
 
-        def addImgReply(self, image, label=None):
-            reply = ImgReply(image, label)
-            try: self.messages[-1].replies.append(reply)
-            except Exception:
-                self.newMessage("")
-                self.messages[-1].replies.append(reply)
-            self.newMessages = True
+            self.unlock()
+            msgApp.newNotification()
+
+            return message
+
+        def addReply(self, message, func=None, newMessage=False):
+            reply = Reply(message, func)
+
+            # Append reply to last sent message
+            try:
+                if newMessage:
+                    self.newMessage("")
+                    message.replies.append(reply)
+                elif self.pendingMessages:
+                    self.pendingMessages[-1].replies.append(reply)
+                else:
+                    self.sentMessages[-1].replies.append(reply)
+            except IndexError:
+                message = self.newMessage("", queue=False)
+                message.replies.append(reply)
+
+            self.unlock()
+
+        def addImgReply(self, image, func=None, newMessage=False):
+            reply = ImgReply(image, func)
+
+            # Append reply to last sent message
+            try:
+                if newMessage:
+                    message = self.newMessage("")
+                    message.replies.append(reply)
+                elif self.pendingMessages:
+                    self.pendingMessages[-1].replies.append(reply)
+                else:
+                    self.sentMessages[-1].replies.append(reply)
+            except IndexError:
+                message = self.newMessage("", queue=False)
+                message.replies.append(reply)
+
+            self.unlock()
 
         def seenMessage(self):
-            self.newMessages = False
-            if not any([contact.newMessages for contact in contacts]):
+            if not any([contact.getReplies() for contact in contacts]):
                 msgApp.seenNotification()
 
         def selectedReply(self, reply):
-            self.messages.append(reply)
-            self.messages[-1].reply = reply
-            self.messages[-1].replies = []
+            self.sentMessages.append(reply)
+            self.sentMessages[-1].reply = reply
+            self.sentMessages[-1].replies = []
+
+            try:
+                reply.func()
+                reply.func = None
+            except TypeError:
+                pass
+
+            # Send next queued message(s)
+            try:
+                while True:
+                    self.sentMessages.append(self.pendingMessages.pop(0))
+                    if self.getReplies():
+                        break
+            except IndexError: pass
 
         def unlock(self):
+            if self not in contacts:
+                contacts.append(self)
             self.locked = False
 
         def getReplies(self):
             try:
-                return self.messages[-1].replies
-            except Exception:
-                return False
+                return self.sentMessages[-1].replies
+            except IndexError: return False
+
+        def getMessage(self, message):
+            for msg in self.sentMessages:
+                try:
+                    if message == msg.message:
+                        return msg
+                except AttributeError:
+                    if message == msg.image:
+                        return msg
+            return False
 
     class Message:
-        def __init__(self, contact, msg):
+        def __init__(self, contact, message):
             self.contact = contact
-            self.msg = msg
+            self.message = message
             self.replies = []
-            self.reply = Reply("")
+            self.reply = None
 
     class ImageMessage:
         def __init__(self, contact, image):
             self.contact = contact
             self.image = image
+            self.replies = []
+            self.reply = None
 
     class Reply:
-        def __init__(self, message, label=None):
+        def __init__(self, message, func=None):
             self.message = message
-            self.label = label
+            self.func = func
 
     class ImgReply:
-        def __init__(self, image, label=None):
+        def __init__(self, image, func=None):
             self.image = image
-            self.label = label
+            self.func = func
 
 init offset = -1
 default contacts = []
@@ -111,12 +179,12 @@ screen contactsscreen():
                         add contact.profilePicture yalign 0.5 xpos 20
                         text contact.name style "nametext" yalign 0.5 xpos 100
 
-                        if contact.messages and contact.messages[-1].replies:
+                        if contact.getReplies():
                             add "images/contactmsgnot.webp" yalign 0.5 xpos 275
 
                         imagebutton:
                             idle "images/contactbutton.webp" align(0.5, 0.5)
-                            action [Function(renpy.retain_after_load), Show("messager", contact=contact)]
+                            action [Function(renpy.retain_after_load), Function(contact.seenMessage), Show("messager", contact=contact)]
 
 
 screen messager(contact=None):
@@ -124,7 +192,6 @@ screen messager(contact=None):
 
     python:
         yadj.value = yadjValue
-        contact.seenMessage()
 
     use phoneTemplate:
 
@@ -149,13 +216,18 @@ screen messager(contact=None):
         viewport:
             yadjustment yadj
             mousewheel True
-            xysize(374, 556)
-            pos(773, 282)
+            pos (773, 282)
+            xysize (374, 550)
 
             vbox:
-                for message in contact.messages:
-                    if isinstance(message, Message) and message.msg.strip():
-                        textbutton message.msg style "msgleft"
+                xsize 374
+                spacing 5
+
+                null
+
+                for message in contact.sentMessages:
+                    if isinstance(message, Message) and message.message.strip():
+                        textbutton message.message style "msgleft"
                     elif isinstance(message, ImageMessage):
                         imagebutton:
                             idle Transform(message.image, size=(307, 173))
@@ -169,7 +241,7 @@ screen messager(contact=None):
                             style "msgright"
                             action Show("phone_image", img=message.image)
 
-        if contact.messages and contact.messages[-1].replies:
+        if contact.getReplies():
                 hbox:
                     xalign 0.5
                     ypos 855
@@ -178,30 +250,28 @@ screen messager(contact=None):
                         style "replybox"
                         action Show("reply", contact=contact)
 
-    if kiwii:
-        timer 0.1 action Show ("popup19")
+    if kiwii_firstTime:
+        timer 0.1 action Show("kiwiiPopup")
 
 
 screen reply(contact=None):
 
-    vbox xpos 1200 yalign 0.84 spacing 15:
+    vbox:
+        xpos 1200
+        yalign 0.84
+        spacing 15
 
-        for reply in contact.messages[-1].replies:
+        for reply in contact.getReplies():
             if isinstance(reply, Reply):
                 textbutton reply.message:
                     style "replies_style"
-                    if reply.label:
-                        action [Hide("reply"), Hide("messager"), Function(contact.selectedReply, reply), Call(reply.label)]
-                    else:
-                        action [Function(contact.selectedReply, reply), Hide("reply")]
+                    action [Hide("reply"), Function(contact.selectedReply, reply)]
+
             elif isinstance(reply, ImgReply):
                 imagebutton:
                     idle Transform(reply.image, zoom=0.15)
                     style "replies_style"
-                    if reply.label:
-                        action [Hide("reply"), Hide("messager"), Function(contact.selectedReply, reply), Call(reply.label)]
-                    else:
-                        action [Function(contact.selectedReply, reply), Hide("reply")]
+                    action [Hide("reply"), Function(contact.selectedReply, reply)]
 
 
 screen phone_image(img=None):

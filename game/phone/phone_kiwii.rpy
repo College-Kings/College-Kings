@@ -1,237 +1,263 @@
 init python:
-
     class KiwiiPost:
-        def __init__(self, user, image, caption="", mentions=None, numberLikes=0, liked=False, comments=None, seen=False):
+        def __init__(self, user, img, message="", mentions=None, numberLikes=0, comments=None):
             self.user = user
-            self.image = image
+            self.img = "images/phone/kiwii/posts/{}".format(img)
+            self.message = message
 
             if isinstance(mentions, basestring): self.mentions = [mentions]
             elif isinstance(mentions, list): self.mentions = mentions
             else: self.mentions = []
 
-            self.caption = caption
             self.numberLikes = numberLikes
-            self.liked = liked
+            self.liked = False
 
-            if comments == None: self.comments = []
-            else: self.comments = comments
+            if comments == None: self.sentComments = []
+            else: self.sentComments = comments
 
-            self.seen = seen
-            self.replies = []
-
-            self.getUsername()
-            self.getProfilePicture()
+            self.pendingComments = []
+            self.username = self.getUsername()
+            self.profilePicture = self.getProfilePicture()
 
             kiwiiPosts.append(self)
 
+            kiwiiApp.unlock()
+            kiwiiApp.notification = True
+
         def toggleLike(self):
-            if self.liked:
-                self.liked = False
-                self.numberLikes -= 1
+            self.liked = not self.liked
+
+            if self.liked: self.numberLikes += 1
+            else: self.numberLikes -= 1
+            
+        def addComment(self, user, message, numberLikes=0, mentions=None, queue=True):
+            comment = KiwiiComment(user, message, numberLikes, mentions)
+            
+            # Add message to queue
+            if queue:
+                self.pendingComments.append(comment)
             else:
-                self.liked = True
-                self.numberLikes += 1
+                self.pendingComments = []
+                self.sentComments.append(comment)
+            
+            kiwiiApp.notification = True
+            return comment
 
-        def addComment(self, user, text, numberLikes=0, liked=False, mentions=None):
-            comment = KiwiiComment(user, text, numberLikes, liked, mentions)
-            if comment not in self.comments:
-                self.comments.append(comment)
+        def addReply(self, message, func=None, numberLikes=0, mentions=None):
+            reply = KiwiiReply(message, func, numberLikes, mentions)
+            
+            # Append reply to last sent message
+            try:
+                if self.pendingComments:
+                    self.pendingComments[-1].replies.append(reply)
+                else:
+                    self.sentComments[-1].replies.append(reply)
+            except Exception:
+                message = self.addComment("MC", "", queue=False)
+                message.replies.append(reply)
 
-        def addReply(self, reply, label=None, numberLikes=0, mentions=None):
-            reply = KiwiiReply(reply, label, numberLikes, mentions)
-            if reply not in self.replies:
-                self.replies.append(reply)
+            kiwiiApp.notification = True
+            return reply
+
+        def selectedReply(self, reply):
+            self.addComment("MC", reply.message, numberLikes=reply.numberLikes, mentions=reply.mentions)
+            self.sentComments[-1].reply = reply
+            self.sentComments[-1].replies = []
+
+            # Run reply function
+            try:
+                reply.func()
+                reply.func = None
+            except TypeError: pass
+
+            # Send next queued message(s)
+            try:
+                while True:
+                    self.sentComments.append(self.pendingComments.pop(0))
+                    if self.getReplies():
+                        break
+            except IndexError: pass
 
         def getUsername(self):
-            self.username = kiwiiUsers[self.user]["username"]
-            return self.username
+            try:
+                return kiwiiUsers[self.user]["username"]
+            except KeyError: 
+                return None
 
         def getProfilePicture(self):
-            self.profilePicture = kiwiiUsers[self.user]["profilePicture"]
-            return self.profilePicture
+            try:
+                return kiwiiUsers[self.user]["profilePicture"]
+            except KeyError:
+                return None
 
-        def getCaption(self):
+        def getMessage(self):
             usernames = [kiwiiUsers[mention]["username"] for mention in self.mentions]
 
-            rv = ", @".join(usernames)
-            if usernames: rv = "{{color=#3498DB}}{{b}}@{users}{{/b}}{{/color}} {text}".format(users=rv, text=self.caption)
-            else: rv = self.caption
-            return str(rv)
+            message = ", @".join(usernames)
+            if usernames: message = "{{color=#3498DB}}{{b}}@{users}{{/b}}{{/color}} {text}".format(users=message, text=self.message)
+            else: message = self.message
 
-        def seenPost(self):
-            self.seen = True
+            return message
 
-        def hidePost(self):
-            self.index = kiwiiPosts.index(self)
+        def removePost(self):
             kiwiiPosts.remove(self)
 
         def getReplies(self):
-            try:
-                return replies
-            except Exception:
-                return False
+            try: return self.sentComments[-1].replies
+            except Exception: return False
 
     class KiwiiComment(KiwiiPost):
-        def __init__(self, user, text, numberLikes=0, liked=False, mentions=None):
+        def __init__(self, user, message, numberLikes=0, mentions=None):
             self.user = user
-            self.text = text
+            self.message = message
+            self.numberLikes = numberLikes
 
             if isinstance(mentions, basestring): self.mentions = [mentions]
             elif isinstance(mentions, list): self.mentions = mentions
             else: self.mentions = []
 
-            self.numberLikes = numberLikes
-            self.liked = liked
-            self.getUsername()
-            self.getProfilePicture()
-
-        def getText(self):
-            usernames = [kiwiiUsers[mention]["username"] for mention in self.mentions]
-
-            rv = ", @".join(usernames)
-            if usernames: rv = "{{color=#3498DB}}{{b}}@{users}{{/b}}{{/color}} {text}".format(users=rv, text=self.text)
-            else: rv = self.text
-            return str(rv)
+            self.liked = False
+            self.replies = []
+            self.reply = None
+            self.username = self.getUsername()
+            self.profilePicture = self.getProfilePicture()
 
     class KiwiiReply(KiwiiComment):
-        def __init__(self, reply, label=None, numberLikes=0, mentions=None):
-            self.reply = reply
-            self.label = label
+        def __init__(self, message, func=None, numberLikes=0, mentions=None):
+            self.message = message
+            self.func = func
+
+            if kct == "popular": self.numberLikes = int(round(numberLikes * 1.5))
+            elif kct == "confident": self.numberLikes = int(round(numberLikes * 1.2))
+            else: self.numberLikes = int(round(numberLikes * 1.0))
 
             if isinstance(mentions, basestring): self.mentions = [mentions]
             elif isinstance(mentions, list): self.mentions = mentions
             else: self.mentions = []
 
-
-            if kct == "popular": self.numberLikes = int(round(numberLikes * 1.5))
-            elif kct == "loyal": self.numberLikes = int(round(numberLikes * 1.0))
-            else: self.numberLikes = int(round(numberLikes * 1.2))
-
-        def selectedReply(self, kiwiiPost):
-            kiwiiPost.addComment("MC", self.reply, self.numberLikes, mentions=self.mentions)
-            kiwiiPost.replies = []
-
-
     def totalLikes():
-        rv = 0
+        total = 0
 
         for post in kiwiiPosts:
-            for comment in post.comments:
+            for comment in post.sentComments:
                 if comment.user == "MC":
-                    rv += comment.numberLikes
+                    total += comment.numberLikes
             if post.user == "MC":
-                rv += comment.numberLikes
+                total += comment.numberLikes
 
-        return rv
+        return total
+
+    kiwiiUsers = {
+        "Adam": {
+            "username": "A.D.A.M.",
+            "profilePicture": "images/phone/kiwii/profilePictures/adpp.webp"
+        },
+        "Imre": {
+            "username": "BadBoyImre",
+            "profilePicture": "images/phone/kiwii/profilePictures/impp.webp"
+        },
+        "Mason": {
+            "username": "Mason_Mas",
+            "profilePicture": "images/phone/kiwii/profilePictures/masonpp.webp"
+        },
+        "Ryan": {
+            "username": "Ryanator",
+            "profilePicture": "images/phone/kiwii/profilePictures/rypp.webp"
+        },
+        "Cameron": {
+            "username": "Cameroon",
+            "profilePicture": "images/phone/kiwii/profilePictures/capp.webp"
+        },
+        "Chris": {
+            "username": "Chriscuit",
+            "profilePicture": "images/phone/kiwii/profilePictures/chpp.webp"
+        },
+        "Elijah": {
+            "username": "Elijah_Woods",
+            "profilePicture": "images/phone/kiwii/profilePictures/elpp.webp"
+        },
+        "Grayson": {
+            "username": "G-rayson",
+            "profilePicture": "images/phone/kiwii/profilePictures/grpp.webp"
+        },
+        "Josh": {
+            "username": "Josh80085",
+            "profilePicture": "images/phone/kiwii/profilePictures/jopp.webp"
+        },
+        "Aubrey": {
+            "username": "Aubs123",
+            "profilePicture": "images/phone/kiwii/profilePictures/aupp.webp"
+        },
+        "Amber": {
+            "username": "Amber_xx",
+            "profilePicture": "images/phone/kiwii/profilePictures/ampp.webp"
+        },
+        "Kim": {
+            "username": "KimPlausible",
+            "profilePicture": "images/phone/kiwii/profilePictures/kimpp.webp"
+        },
+        "Nora": {
+            "username": "Nora_12",
+            "profilePicture": "images/phone/kiwii/profilePictures/nopp.webp"
+        },
+        "Penelope": {
+            "username": "Penelopeeps",
+            "profilePicture": "images/phone/kiwii/profilePictures/pepp.webp"
+        },
+        "Lauren": {
+            "username": "LoLoLauren",
+            "profilePicture": "images/phone/kiwii/profilePictures/lapp.webp"
+        },
+        "Autumn": {
+            "username": "Its_Fall",
+            "profilePicture": "images/phone/kiwii/profilePictures/autpp.webp"
+        },
+        "Riley": {
+            "username": "RileyReads",
+            "profilePicture": "images/phone/kiwii/profilePictures/ripp.webp"
+        },
+        "Emily": {
+            "username": "emilyyyy",
+            "profilePicture": "images/phone/kiwii/profilePictures/empp.webp"
+        },
+        "Chloe": {
+            "username": "Chloe101",
+            "profilePicture": "images/phone/kiwii/profilePictures/clpp.webp"
+        },
+        "MC": {
+            "username": "MC",
+            "profilePicture": profilePictures[0]
+        },
+        "Caleb": {
+            "username": "Aleb",
+            "profilePicture": "images/phone/kiwii/profilePictures/calebpp.webp"
+        },
+        "Parker": {
+            "username": "Parker",
+            "profilePicture": "images/phone/kiwii/profilePictures/parkerpp.webp"
+        },
+        "Sebastian": {
+            "username": "Big Seb",
+            "profilePicture": "images/phone/kiwii/profilePictures/sebastianpp.webp"
+        },
+        "Kai": {
+            "username": "Kai",
+            "profilePicture": "images/phone/kiwii/profilePictures/kaipp.webp"
+        }
+    }
 
 init -1:
-    define profilePictures = [ "images/Phone/Kiwii/Profile Pictures/mcpp1.webp", "images/Phone/Kiwii/Profile Pictures/mcpp2.webp", "images/Phone/Kiwii/Profile Pictures/mcpp3.webp", "images/Phone/Kiwii/Profile Pictures/mcpp4.webp" ]
+    define profilePictures = [ "images/phone/Kiwii/profilePictures/mcpp1.webp", "images/phone/Kiwii/profilePictures/mcpp2.webp", "images/phone/Kiwii/profilePictures/mcpp3.webp", "images/phone/Kiwii/profilePictures/mcpp4.webp" ]
     default profilePictures_count = 0
 
     default kiwiiPosts = []
     default liked_kiwiPosts = []
-    default kiwiiUsers = {
-            "Adam": {
-                "username": "A.D.A.M.",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/adpp.webp"
-            },
-            "Imre": {
-                "username": "BadBoyImre",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/impp.webp"
-            },
-            "Mason": {
-                "username": "Mason_Mas",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/masonpp.webp"
-            },
-            "Ryan": {
-                "username": "Ryanator",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/rypp.webp"
-            },
-            "Cameron": {
-                "username": "Cameroon",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/capp.webp"
-            },
-            "Chris": {
-                "username": "Chriscuit",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/chpp.webp"
-            },
-            "Elijah": {
-                "username": "Elijah_Woods",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/elpp.webp"
-            },
-            "Grayson": {
-                "username": "G-rayson",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/grpp.webp"
-            },
-            "Josh": {
-                "username": "Josh80085",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/jopp.webp"
-            },
-            "Aubrey": {
-                "username": "Aubs123",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/aupp.webp"
-            },
-            "Amber": {
-                "username": "Amber_xx",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/ampp.webp"
-            },
-            "Kim": {
-                "username": "KimPlausible",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/kimpp.webp"
-            },
-            "Nora": {
-                "username": "Nora_12",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/nopp.webp"
-            },
-            "Penelope": {
-                "username": "Penelopeeps",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/pepp.webp"
-            },
-            "Lauren": {
-                "username": "LoLoLauren",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/lapp.webp"
-            },
-            "Autumn": {
-                "username": "Its_Fall",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/autpp.webp"
-            },
-            "Riley": {
-                "username": "RileyReads",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/ripp.webp"
-            },
-            "Emily": {
-                "username": "emilyyyy",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/empp.webp"
-            },
-            "Chloe": {
-                "username": "Chloe101",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/clpp.webp"
-            },
-            "MC": {
-                "username": "MC",
-                "profilePicture": profilePictures[0]
-            },
-            "Caleb": {
-                "username": "Aleb",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/calebpp.webp"
-            },
-            "Parker": {
-                "username": "Parker",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/parkerpp.webp"
-            },
-            "Sebastian": {
-                "username": "Big Seb",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/sebastianpp.webp"
-            },
-            "Kai": {
-                "username": "Kai",
-                "profilePicture": "images/Phone/Kiwii/Profile Pictures/kaipp.webp"
-            }
-        }
 
 screen kiwiiTemplate():
+    modal True
+
     use phoneTemplate:
-        add Transform("images/Phone/Kiwii/AppAssets/Background.webp", size=(376, 744)) at truecenter
+        add Transform("images/phone/Kiwii/AppAssets/Background.webp", size=(376, 744)) at truecenter
 
         transclude
 
@@ -262,6 +288,7 @@ screen kiwiiTemplate():
 
 screen kiwiiPreferences():
     tag phoneTag
+    modal True
 
     $ kiwiiUsers["MC"]["profilePicture"] = profilePictures[profilePictures_count]
 
@@ -303,13 +330,10 @@ screen kiwiiPreferences():
                 outlines [ (absolute(0), "#000", absolute(0), absolute(0)) ]
 
 
-
 screen kiwiiApp():
     tag phoneTag
 
-    python:
-        for post in kiwiiPosts:
-            post.seenPost()
+    $ kiwiiApp.notification = False
 
     use kiwiiTemplate:
 
@@ -325,7 +349,7 @@ screen kiwiiApp():
             for post in reversed(kiwiiPosts):
                 fixed:
                     xysize (350, 350)
-                    add "images/Phone/Kiwii/AppAssets/Post.webp"
+                    add "images/phone/Kiwii/AppAssets/Post.webp"
 
                     hbox:
                         spacing 10
@@ -341,9 +365,9 @@ screen kiwiiApp():
                         spacing 5
 
                         imagebutton:
-                            idle Transform(post.image, zoom=0.17)
-                            action Show("kiwii_image", img=post.image)
-                        text post.getCaption() style "kiwii_CommentText" xalign 0.5
+                            idle Transform(post.img, zoom=0.17)
+                            action Show("kiwii_image", img=post.img)
+                        text post.getMessage() style "kiwii_CommentText" xalign 0.5
 
                     hbox:
                         xoffset 20
@@ -351,9 +375,9 @@ screen kiwiiApp():
                         spacing 5
 
                         imagebutton:
-                            idle "images/Phone/Kiwii/AppAssets/Like.webp"
-                            hover "images/Phone/Kiwii/AppAssets/LikePress.webp"
-                            selected_idle "images/Phone/Kiwii/AppAssets/LikePress.webp"
+                            idle "images/phone/Kiwii/AppAssets/Like.webp"
+                            hover "images/phone/Kiwii/AppAssets/LikePress.webp"
+                            selected_idle "images/phone/Kiwii/AppAssets/LikePress.webp"
                             selected post.liked
                             action Function(post.toggleLike)
                         frame:
@@ -364,8 +388,8 @@ screen kiwiiApp():
                             text "{}".format(post.numberLikes) style "kiwii_LikeCounter"
 
                     imagebutton:
-                        idle "images/Phone/Kiwii/AppAssets/Comment.webp"
-                        hover "images/Phone/Kiwii/AppAssets/CommentHover.webp"
+                        idle "images/phone/Kiwii/AppAssets/Comment.webp"
+                        hover "images/phone/Kiwii/AppAssets/CommentHover.webp"
                         action Show("kiwiiPost", post=post)
                         xoffset 290
                         yoffset 220
@@ -376,60 +400,61 @@ screen kiwiiPost(post):
 
     use kiwiiTemplate:
 
-        add Transform(post.image, size=(376, 212)) xalign 0.5 ypos 265
+        imagebutton:
+            xalign 0.5
+            ypos 265
+            idle Transform(post.img, size=(376, 212))
+            action Show("kiwii_image", img=post.img)
 
-        vpgrid:
-            cols 1
+        viewport:
             mousewheel True
             draggable True
             xysize(350, 362)
             xalign 0.5
             ypos 485
+            
+            vbox:
+                spacing 20
+
+                for comment in post.sentComments:
+                    if comment.message.strip():
+                        vbox:
+                            spacing 5
+
+                            hbox:
+                                spacing 10
+
+                                add Transform(comment.getProfilePicture(), zoom=0.05)
+                                text comment.getUsername() style "kiwii_ProfileName" yalign 0.5
+
+                            hbox:
+                                xsize 275
+                                spacing 5
+
+                                text comment.getMessage() style "kiwii_CommentText"
+
+                            hbox:
+                                spacing 5
+
+                                imagebutton:
+                                    idle "images/phone/Kiwii/AppAssets/Like.webp"
+                                    hover "images/phone/Kiwii/AppAssets/LikePress.webp"
+                                    selected_idle "images/phone/Kiwii/AppAssets/LikePress.webp"
+                                    selected comment.liked
+                                    action Function(comment.toggleLike)
+                                text "[comment.numberLikes]" style "kiwii_LikeCounter" yalign 0.5
+
+    if post.getReplies():
+        vbox:
+            xpos 1200
+            yalign 0.84
             spacing 15
 
-            for comment in post.comments:
-                fixed:
-                    xsize 350
-                    ymaximum 90
-
-                    vbox:
-                        xsize 300
-                        spacing 5
-
-                        hbox:
-                            spacing 10
-
-                            add Transform(comment.getProfilePicture(), zoom=0.05)
-                            text comment.getUsername() style "kiwii_ProfileName" yalign 0.5
-
-                        text comment.getText() style "kiwii_CommentText"
-
-                    hbox:
-                        align(0.95, 1.0)
-
-                        imagebutton:
-                            idle "images/Phone/Kiwii/AppAssets/Like.webp"
-                            hover "images/Phone/Kiwii/AppAssets/LikePress.webp"
-                            selected_idle "images/Phone/Kiwii/AppAssets/LikePress.webp"
-                            selected comment.liked
-                            action Function(comment.toggleLike)
-
-
-                        text "{}".format(comment.numberLikes) style "kiwii_LikeCounter" yalign 0.5 xoffset 5
-
-            null
-
-    if post.replies:
-        vbox xpos 1200 yalign 0.84 spacing 15:
-
-            for reply in post.replies:
-                textbutton reply.reply:
+            for reply in post.getReplies():
+                textbutton reply.message:
                     style "kiwii_reply"
                     text_style "kiwii_ReplyText"
-                    if reply.label:
-                        action [Function(reply.selectedReply, post), Jump(reply.label)]
-                    else:
-                        action Function(reply.selectedReply, post)
+                    action [Hide("reply"), Function(post.selectedReply, reply)]
 
 screen liked_kiwii():
     tag phoneTag
@@ -450,7 +475,7 @@ screen liked_kiwii():
             for post in reversed(liked_kiwiPosts):
                 fixed:
                     xysize (350, 350)
-                    add "images/Phone/Kiwii/AppAssets/Post.webp"
+                    add "images/phone/Kiwii/AppAssets/Post.webp"
 
                     hbox:
                         spacing 10
@@ -466,8 +491,8 @@ screen liked_kiwii():
                         spacing 5
 
                         imagebutton:
-                            idle Transform(post.image, zoom=0.17)
-                            action Show("kiwii_image", img=post.image)
+                            idle Transform(post.img, zoom=0.17)
+                            action Show("kiwii_image", img=post.img)
                         text post.caption style "kiwii_CommentText" xalign 0.5
 
                     hbox:
@@ -476,9 +501,9 @@ screen liked_kiwii():
                         spacing 5
 
                         imagebutton:
-                            idle "images/Phone/Kiwii/AppAssets/Like.webp"
-                            hover "images/Phone/Kiwii/AppAssets/LikePress.webp"
-                            selected_idle "images/Phone/Kiwii/AppAssets/LikePress.webp"
+                            idle "images/phone/Kiwii/AppAssets/Like.webp"
+                            hover "images/phone/Kiwii/AppAssets/LikePress.webp"
+                            selected_idle "images/phone/Kiwii/AppAssets/LikePress.webp"
                             selected post.liked
                             action Function(post.toggleLike)
                         frame:
@@ -489,8 +514,8 @@ screen liked_kiwii():
                             text "{}".format(post.numberLikes) style "kiwii_LikeCounter"
 
                     imagebutton:
-                        idle "images/Phone/Kiwii/AppAssets/Comment.webp"
-                        hover "images/Phone/Kiwii/AppAssets/CommentHover.webp"
+                        idle "images/phone/Kiwii/AppAssets/Comment.webp"
+                        hover "images/phone/Kiwii/AppAssets/CommentHover.webp"
                         action Show("kiwiiPost", post=post)
                         xoffset 290
                         yoffset 220
@@ -502,19 +527,6 @@ screen kiwii_image(img):
         idle Transform(img, zoom=0.85)
         action Hide("kiwii_image")
         align (0.5, 0.5)
-
-label kiwii_firstTime:
-    $ kiwii_firstTime = False
-    play sound "sounds/vibrate.mp3"
-    if emilyrs:
-        $ contact_Riley.addReply("We're not back together", "rirep3a")
-    if bowling and emilyrs:
-        $ contact_Penelope.newMessage("I didn't know you and Emily were a thing...")
-    if emilyrs and laurenrs:
-        $ contact_Lauren.newMessage("I saw what Emily posted. I really thought you liked me...")
-        $ contact_Lauren.newMessage("I guess we're done now, so please just delete my number.")
-        $ contact_Lauren.addReply("Lauren can we please just talk about it? I can explain", "larep16a")
-    call screen kiwiiPreferences()
 
 style kiwii_PrefTextButton is button_text:
     font "fonts/OpenSans-Bold.ttf"

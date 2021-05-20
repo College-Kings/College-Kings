@@ -1,19 +1,11 @@
-College Kings 9.1.2 Patch/
-
-game/bugTesting/images
-game/bugTesting/_bugTesting.txt
-game/cache
-game/fonts
-game/gui
-game/images
-game/music
-game/saves
-game/sounds
-game/tl
-game/unren-dev.rpy
-
+College Kings 10.0 Patch/
+.vscode/
 lib/
 renpy/
+
+game/bugTesting/_bugTesting.txt
+game/cache
+game/saves
 
 CollegeKings.py
 CollegeKings.sh
@@ -22,11 +14,13 @@ gradle.properties.txt
 log.txt
 Stored Script.txt
 traceback.txt
+project.json
+
+screenshot*
 
 *.bat
 *.rpa
 *.rpyc
 *.zip
 *.exe
-
-.vscode/
+*.bak

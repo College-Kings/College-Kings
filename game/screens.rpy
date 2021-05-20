@@ -271,94 +271,6 @@ screen choice(items, time=3):
                     if count > 1:
                         xalign 0.5
 
-
-    if realkcttut == 1:
-
-        image "images/tutback.webp":
-            ypos 100 #+300
-            xpos 1240 #+260
-
-        imagebutton:
-            idle "images/whitearrowleft.webp"
-            hover "images/whitearrowleft.webp"
-            ypos 720
-            xpos 1260
-            if kctpage > 1:
-                action SetVariable("kctpage", kctpage -1)
-            else:
-                action SetVariable("kctpage", 5)
-
-        imagebutton:
-            idle "images/whitearrowright.webp"
-            hover "images/whitearrowright.webp"
-            ypos 720
-            xpos 1740
-            if kctpage < 5:
-                action SetVariable("kctpage", kctpage +1)
-            else:
-                action SetVariable("kctpage", 1)
-
-        text "Tutorial" style "choicetextnum" ypos 530 xpos 1490
-
-        if kctpage == 1:
-            text "Your decisions strongly influence the way the story progresses and how other characters perceive you." style "choicetuttext"
-            text "1 of 5" style "choicetextnum"
-        if kctpage == 2:
-            text "With each choice you’ll either gain Bro, Boyfriend or Troublemaker points." style "choicetuttext"
-            text "2 of 5" style "choicetextnum"
-        if kctpage == 3:
-            text "Bros put the squad first, boyfriends show strong affinity towards a few selected individuals and troublemakers seek thrills and take risks." style "choicetuttext"
-            text "3 of 5" style "choicetextnum"
-        if kctpage == 4:
-            text "These points are then used to identify your Key Character Trait (KCT).  Each KCT will unlock different possibilities and choices, but you can only have one active at a time." style "choicetuttext"
-            text "4 of 5" style "choicetextnum"
-        if kctpage == 5:
-            text "You can read more about each individual KCT in the Stats app on your phone." style "choicetuttext"
-            text "5 of 5" style "choicetextnum"
-
-
-    if influencetut == True:
-
-        image "images/tutback.webp":
-            ypos 100 #+300
-            xpos 1240 #+260
-
-        imagebutton:
-            idle "images/whitearrowleft.webp"
-            hover "images/whitearrowleft.webp"
-            ypos 720
-            xpos 1260
-            if itpage > 1:
-                action SetVariable("itpage", itpage -1)
-            else:
-                action SetVariable("itpage", 4)
-
-        imagebutton:
-            idle "images/whitearrowright.webp"
-            hover "images/whitearrowright.webp"
-            ypos 720
-            xpos 1740
-            if itpage < 4:
-                action SetVariable("itpage", itpage +1)
-            else:
-                action SetVariable("itpage", 1)
-
-        text "Tutorial" style "choicetextnum" ypos 530 xpos 1490
-
-        if itpage == 1:
-            text "When people make important decisions on how they feel about you, they consider what kind of a person you are." style "choicetuttext"
-            text "1 of 4" style "choicetextnum"
-        if itpage == 2:
-            text "Your Key Character Trait (Loyal, Popular or Confident) has a strong influence on how other characters react to your behavior." style "choicetuttext"
-            text "2 of 4" style "choicetextnum"
-        if itpage == 3:
-            text "Some people value a popular leader, some care more about loyalty than status and some are drawn to confidence." style "choicetuttext"
-            text "3 of 4" style "choicetextnum"
-        if itpage == 4:
-            text "Your decisions matter and have long time effects, as you can only have one KCT at a time. So think about what kind of person you want to be." style "choicetuttext"
-            text "4 of 4" style "choicetextnum"
-
-
     if showkct == True:
         image "gui/kct.webp"
         text "[kct]":
@@ -394,8 +306,6 @@ style choicetextnum is text:
     size 25
     color "#FFD166"
     text_align 0.5
-    xpos 1530
-    ypos 740
 
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
@@ -673,43 +583,6 @@ screen quick_menu():
     ## Ensure this appears on top of other screens.
     zorder 100
 
-    if fantasy == 1:
-        image "images/fantasyoverlay.webp"
-
-    if wton == True:
-
-        if wt == 1:
-
-            image "images/tutback.webp":
-                ypos -385
-                xpos 20
-            vbox xpos 30  ypos 40 spacing 20:
-
-                text "Walkthrough" style "wttextnum" xoffset 180
-                text "2. reply: +1 troublemaker (needed for Confident & Popular). Neither option cuts off Emily's path."  style "wttext" xoffset 10
-
-        if wt == 2:
-
-            image "images/tutback.webp":
-                ypos -385
-                xpos 20
-            vbox xpos 30  ypos 40 spacing 20:
-
-                text "Walkthrough" style "wttextnum" xoffset 180
-                text "Choice 1: +1 troublemaker (needed for Confident & Popular). Choice 2: +1 boyfriend (needed for Loyal & Confident)"  style "wttext" xoffset 10
-
-        if wt == 3:
-
-            image "images/tutback.webp":
-                ypos -385
-                xpos 20
-            vbox xpos 30  ypos 40 spacing 20:
-
-                text "Walkthrough" style "wttextnum" xoffset 180
-                text "Open your phone to get a detailed breakdown of the stats system in the stats app."  style "wttext" xoffset 10
-
-
-
     if quick_menu:
         if realmode == True:
             if ischoice == False:
@@ -746,316 +619,25 @@ screen quick_menu():
                     textbutton _("Q.Load") action QuickLoad()
                     textbutton _("Prefs") action ShowMenu('preferences')
 
-
-
-        if showphone: # Edited
-            imagebutton:
-                if any([application.notification for application in applications]):
-                    idle "images/phoneiconnot.webp"
-                else:
-                    idle "images/phoneicon.webp"
-                yalign 0.05
-                xalign 0.999
-                action Jump ("homescreen")
-
-
-
-        if freeroamtut == 1:
-
-            image "images/tutback.webp":
-                ypos 100 #+300
-                xpos 1240 #+260
-
-            imagebutton:
-                idle "images/whitearrowleft.webp"
-                hover "images/whitearrowleft.webp"
-                ypos 720
-                xpos 1260
-                if freeroamtutpage > 1:
-                    action SetVariable("freeroamtutpage", freeroamtutpage -1)
-                else:
-                    action SetVariable("freeroamtutpage", 3)
-
-            imagebutton:
-                idle "images/whitearrowright.webp"
-                hover "images/whitearrowright.webp"
-                ypos 720
-                xpos 1740
-                if freeroamtutpage < 3:
-                    action SetVariable("freeroamtutpage", freeroamtutpage +1)
-                else:
-                    action SetVariable("freeroamtutpage", 1)
-
-            text "Tutorial" style "choicetextnum" ypos 530 xpos 1490
-
-            if freeroamtutpage == 1:
-                text "At certain parts of the game, you’ll unlock free roam."  style "choicetuttext"
-                text "1 of 3" style "choicetextnum"
-            if freeroamtutpage == 2:
-                text "During free roam, you choose where you go and who you want to talk to next." style "choicetuttext"
-                text "2 of 3" style "choicetextnum"
-            if freeroamtutpage == 3:
-                text "You will also be able to use your phone and you might just find some hidden content." style "choicetuttext"
-                text "3 of 3" style "choicetextnum"
-
-    if stance == 1:
-
-        if firstfight == True:
-            image "images/background.webp"
-
-
-            text "[w]":
-                font "fonts/freshman.ttf"
-                size 100
-                if hl == 2:
-                    color "#d10000"
-                else:
-                    color "#FFD166"
-                xalign 0.122
-                yalign 0.3
-            text "[q]":
-                font "fonts/freshman.ttf"
-                size 100
-                if hl == 1:
-                    color "#d10000"
-                else:
-                    color "#FFD166"
-                xalign 0.02
-                yalign 0.5
-            text "[e]":
-                font "fonts/freshman.ttf"
-                size 100
-                if hl == 3:
-                    color "#d10000"
-                else:
-                    color "#FFD166"
-                xalign 0.235
-                yalign 0.5
-            text "[r]":
-                font "fonts/freshman.ttf"
-                size 100
-                if hl == 4:
-                    color "#d10000"
-                else:
-                    color "#FFD166"
-                xalign 0.122
-                yalign 0.7
-
-            imagebutton:
-                idle "images/jab.webp"
-                hover "images/jab.webp"
-                xalign 0.06
-                yalign 0.5
-
-            imagebutton:
-                idle "images/hook.webp"
-                hover "images/hook.webp"
-                xalign 0.115
-                yalign 0.4
-
-
-            imagebutton:
-                idle "images/kick.webp"
-                hover "images/kick.webp"
-                xalign 0.115
-                yalign 0.61
-        else:
-
-            image "images/background.webp"
-
-
-            text "[w]":
-                font "fonts/freshman.ttf"
-                size 100
-                if hl == 2:
-                    color "#d10000"
-                else:
-                    color "#FFD166"
-                xalign 0.122
-                yalign 0.3
-            text "[q]":
-                font "fonts/freshman.ttf"
-                size 100
-                if hl == 1:
-                    color "#d10000"
-                else:
-                    color "#FFD166"
-                xalign 0.02
-                yalign 0.5
-            text "[e]":
-                font "fonts/freshman.ttf"
-                size 100
-                if hl == 3:
-                    color "#d10000"
-                else:
-                    color "#FFD166"
-                xalign 0.235
-                yalign 0.5
-            text "[r]":
-                font "fonts/freshman.ttf"
-                size 100
-                if hl == 4:
-                    color "#d10000"
-                else:
-                    color "#FFD166"
-                xalign 0.122
-                yalign 0.7
-
-            imagebutton:
-                idle "images/jab.webp"
-                hover "images/jab.webp"
-                xalign 0.06
-                yalign 0.5
-
-            imagebutton:
-                idle "images/hook.webp"
-                hover "images/hook.webp"
-                xalign 0.115
-                yalign 0.4
-
-
-            imagebutton:
-                idle "images/kick.webp"
-                hover "images/kick.webp"
-                xalign 0.115
-                yalign 0.61
-
-            imagebutton:
-                idle "images/body.webp"
-                hover "images/body.webp"
-                xalign 0.172
-                yalign 0.5
-
-
-
-    if stance == 2:
-        if firstfight == True:
-            image "images/background.webp"
-
-            text "[w]":
-                font "fonts/freshman.ttf"
-                size 100
-                if hl == 2:
-                    color "#d10000"
-                else:
-                    color "#FFD166"
-                xalign 0.122
-                yalign 0.3
-            text "[q]":
-                font "fonts/freshman.ttf"
-                size 100
-                if hl == 1:
-                    color "#d10000"
-                else:
-                    color "#FFD166"
-                xalign 0.02
-                yalign 0.5
-            text "[e]":
-                font "fonts/freshman.ttf"
-                size 100
-                if hl == 3:
-                    color "#d10000"
-                else:
-                    color "#FFD166"
-                xalign 0.235
-                yalign 0.5
-            text "[r]":
-                font "fonts/freshman.ttf"
-                size 100
-                if hl == 4:
-                    color "#d10000"
-                else:
-                    color "#FFD166"
-                xalign 0.122
-                yalign 0.7
-
-            imagebutton:
-                idle "images/hookblock.webp"
-                hover "images/hookblock.webp"
-                xalign 0.06
-                yalign 0.5
-
-            imagebutton:
-                idle "images/jabblock.webp"
-                hover "images/jabblock.webp"
-                xalign 0.115
-                yalign 0.4
-
-            imagebutton:
-                idle "images/kickblock.webp"
-                hover "images/kickblock.webp"
-                xalign 0.115
-                yalign 0.6
-        else:
-            image "images/background.webp"
-
-            text "[w]":
-                font "fonts/freshman.ttf"
-                size 100
-                if hl == 2:
-                    color "#d10000"
-                else:
-                    color "#FFD166"
-                xalign 0.122
-                yalign 0.3
-            text "[q]":
-                font "fonts/freshman.ttf"
-                size 100
-                if hl == 1:
-                    color "#d10000"
-                else:
-                    color "#FFD166"
-                xalign 0.02
-                yalign 0.5
-            text "[e]":
-                font "fonts/freshman.ttf"
-                size 100
-                if hl == 3:
-                    color "#d10000"
-                else:
-                    color "#FFD166"
-                xalign 0.235
-                yalign 0.5
-            text "[r]":
-                font "fonts/freshman.ttf"
-                size 100
-                if hl == 4:
-                    color "#d10000"
-                else:
-                    color "#FFD166"
-                xalign 0.122
-                yalign 0.7
-
-            imagebutton:
-                idle "images/hookblock.webp"
-                hover "images/hookblock.webp"
-                xalign 0.06
-                yalign 0.5
-
-            imagebutton:
-                idle "images/jabblock.webp"
-                hover "images/jabblock.webp"
-                xalign 0.115
-                yalign 0.4
-
-            imagebutton:
-                idle "images/kickblock.webp"
-                hover "images/kickblock.webp"
-                xalign 0.115
-                yalign 0.6
-            imagebutton:
-                idle "images/bodyblock.webp"
-                hover "images/bodyblock.webp"
-                xalign 0.172
-                yalign 0.5
-
-
-    if youdmg == 3:
+    if youDamage == 3:
         image "images/3 hits.webp"
-    if youdmg == 4:
+    if youDamage == 4:
         image "images/4 hits.webp"
-    if youdmg >= 5:
+    if youDamage >= 5:
         image "images/5 hits.webp"
+
+    if renpy.loadable("/bugTesting/bugTesting.rpy") and config.developer:
+        hbox:
+            style_prefix "quick"
+            align (1.0, 1.0)
+
+            textbutton "Scene Select":
+                action Show("bugTesting_SceneSelect")
+
+            textbutton "Cheats":
+                action Show("bugTesting_cheatMenu")
+
+        use typoNotesOverlay
 
 style wttext is text:
     font "fonts/OpenSans.ttf"
@@ -1104,7 +686,7 @@ screen navigation():
         imagebutton:
             idle "images/play2.webp"
             hover "images/play3.webp"
-            action Start ()
+            action Start()
             xpos 79
             ypos 147
 
@@ -1127,7 +709,7 @@ screen navigation():
             hover "images/discord2.webp"
             action OpenURL ("http://discord.collegekingsgame.com")
             xpos 1401
-            if steam == False:
+            if not steam:
                 ypos 417
             else:
                 ypos 147 #steam version
@@ -1150,7 +732,7 @@ screen navigation():
         imagebutton:
             idle "images/scene2.webp"
             hover "images/scene1.webp"
-            action Jump ("scenegal")
+            action Show("spoiler")
             xpos 79
             ypos 346
 
@@ -1159,7 +741,7 @@ screen navigation():
             hover "images/website3.webp"
             action OpenURL("http://collegekingsgame.com")
             xpos 1401
-            if steam == False:
+            if not steam:
                 ypos 687
             else:
                 ypos 592 #steam version
@@ -1601,87 +1183,89 @@ style slot_button_text:
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
 screen preferences():
+    tag menu
+    modal True
 
     add "gui/settingspage.webp"
 
-    modal True
-
-    tag menu
-
-
-    hbox xalign 0.1645 yalign 0.265 spacing 136:
+    # Display settings
+    hbox:
+        align (0.1645, 0.265)
+        spacing 136
         style_prefix "check"
 
-        textbutton _("window") action Preference("display", "window"):
+        textbutton _("window"):
+            action Preference("display", "window")
             text_size 45
-        textbutton _("fullscreen") action Preference("display", "fullscreen"):
+        textbutton _("fullscreen"):
+            action Preference("display", "fullscreen")
             text_size 45
 
-    hbox xalign 0.122 yalign 0.468 spacing 35:
+    # Skip settings
+    hbox:
+        align (0.122, 0.468)
+        spacing 35
         style_prefix "check"
-        textbutton _("Unseen Text") action Preference("skip", "toggle"):
+
+        textbutton _("Unseen Text"):
+            action Preference("skip", "toggle")
             text_size 28
-        textbutton _("After Choices") action Preference("after choices", "toggle"):
+        textbutton _("After Choices"):
+            action Preference("after choices", "toggle")
             text_size 28
-        textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle")):
+        textbutton _("Transitions"):
+            action InvertSelected(Preference("transitions", "toggle"))
             text_size 28
 
+    # Real Life settings
+    hbox:
+        align (0.195, 0.671)
+        spacing 300
 
-    hbox xalign 0.19 yalign 0.671 spacing 300:
-        style_prefix "radio"
-        if realmode == True:
-            textbutton _("On") action Jump ("rmlon") text_color "#FFD166":
+        if realmode:
+            textbutton _("On"):
+                action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False)]
+                text_color "#FFD166"
                 text_size 45
-            textbutton _("Off") action Jump ("rmloff"):
+            textbutton _("Off"):
+                action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True)]
                 text_size 45
         else:
-            textbutton _("On") action Jump ("rmlon"):
+            textbutton _("On"):
+                action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False)]
                 text_size 45
-            textbutton _("Off") action Jump ("rmloff") text_color "#FFD166":
+            textbutton _("Off"):
+                action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True)]
+                text_color "#FFD166"
                 text_size 45
 
-    hbox xalign 0.19 yalign 0.874 spacing 300:
-        style_prefix "radio"
+    # KCT settings
+    hbox:
+        align (0.195, 0.874)
+        spacing 300
 
-        if showkct == True:
-            textbutton _("On") action Jump ("showkcton") text_color "#FFD166":
+        if showkct:
+            textbutton _("On"):
+                action SetVariable("showkct", True)
+                text_color "#FFD166"
                 text_size 45
-            textbutton _("Off") action Jump ("showkctoff"):
+            textbutton _("Off"):
+                action SetVariable("showkct", False)
                 text_size 45
         else:
-            textbutton _("On") action Jump ("showkcton"):
+            textbutton _("On"):
+                action SetVariable("showkct", True)
                 text_size 45
-            textbutton _("Off") action Jump ("showkctoff") text_color "#FFD166":
+            textbutton _("Off"):
+                action SetVariable("showkct", False)
+                text_color "#FFD166"
                 text_size 45
 
-
-
-
-        #    hbox spacing 20:
-        #        style_prefix "radio"
-        #        label _("Allow Rollback")
-        #        if config.rollback_enabled == True:
-        #            textbutton _("True") action Jump ("rollbacktrue") text_color "#FFD166"
-        #            textbutton _("False") action Jump ("rollbackfalse")
-        #        else:
-        #            textbutton _("True") action Jump ("rollbacktrue")
-        #            textbutton _("False") action Jump ("rollbackfalse") text_color "#FFD166"
-
-            ## Additional vboxes of type "radio_pref" or "check_pref" can be
-            ## added here, to add additional creator-defined preferences.
-
-
-
-
+    # Sliders
     style_prefix "slider"
-
-
-
-
     bar value Preference("text speed"):
         xpos 1020
         ypos 330
-
 
     bar value Preference("auto-forward time"):
         xpos 1020
@@ -1689,28 +1273,19 @@ screen preferences():
 
 
     if config.has_music:
-
-
-
         bar value Preference("music volume"):
             xpos 1020
             ypos 742
 
     if config.has_sound:
-
-
-
         bar value Preference("sound volume"):
             xpos 1020
             ypos 892
 
-
-    hbox xpos 1500 ypos 1015:
-
-
-        textbutton _("Return"):
-            style "return_button"
-            action Return ()
+    textbutton _("Return"):
+        style "return_button"
+        pos (1500, 1050)
+        action Return ()
 
 style pref_label is gui_label
 style pref_label_text is gui_label_text
@@ -1753,7 +1328,7 @@ style radio_vbox:
 
 style radio_button:
     properties gui.button_properties("radio_button")
-    foreground "gui/button/radio_[prefix_]foreground.webp"
+    foreground "gui/button/radio_[prefix_]foreground.png"
 
 style radio_button_text:
     properties gui.button_text_properties("radio_button")
@@ -1763,7 +1338,7 @@ style check_vbox:
 
 style check_button:
     properties gui.button_properties("check_button")
-    foreground "gui/button/check_[prefix_]foreground.webp"
+    foreground "gui/button/check_[prefix_]foreground.png"
 
 style check_button_text:
     properties gui.button_text_properties("check_button")
@@ -2422,374 +1997,6 @@ style slider_pref_slider:
     variant "small"
     xsize 900
 
-#######################
-screen stats():
-
-    use phoneTemplate:
-
-        add "images/stats.webp" at truecenter
-        if noexit == False:
-            textbutton "Exit Phone" action Jump("exitphone") style"phonebutton"
-
-        image "images/tutback.webp":
-            yalign 0.5
-            xpos 1200
-
-        image "images/KCTdiagram.webp":
-            yalign 0.5
-            xalign 0.05
-
-        imagebutton:
-            idle "images/whitearrowleft.webp"
-            hover "images/whitearrowleft.webp"
-            yalign 0.55
-            xpos 1220
-            if statspage > 1:
-                action SetVariable("statspage", statspage -1)
-            else:
-                action SetVariable("statspage", 3)
-
-        imagebutton:
-            idle "images/whitearrowright.webp"
-            hover "images/whitearrowright.webp"
-            yalign 0.55
-            xpos 1700
-            if statspage < 3:
-                action SetVariable("statspage", statspage +1)
-            else:
-                action SetVariable("statspage", 1)
-
-        text "KCT":
-            xalign 0.5
-            yalign 0.23
-            font "fonts/Freshman.ttf"
-            size 80
-            color "#000000"
-
-        text "This is your current Key Character Trait.\nIt's based on your choices & behavior.\nYou can only have one KCT at a time.":
-            xpos 250
-            ypos 150
-            font "fonts/OpenSans.ttf"
-            size 25
-            color "#ffffff"
-
-        image "images/statscircle.webp":
-            xpos 520
-            ypos 273
-
-        vbox:
-            if statspage == 1:
-                text "Popular" style "statstitle":
-                    color "#53d769"
-                    xpos 1417
-                text "Popular individuals are loved by the crowd and are often considered for important decisions. They prioritize their image and status over helping others." style "statstext"
-                text "1 of 3" style "statstextnum"
-
-            if statspage == 2:
-                text "Loyal" style "statstitle":
-                    color "#fecb2e"
-                    xpos 1442
-                text "Loyal individuals care about other people and gain trust easily. They are known to be responsible, but can be a bit of a buzzkill when it comes to doing crazy stuff." style "statstext"
-                text "2 of 3" style "statstextnum"
-
-            if statspage == 3:
-                text "Confident" style "statstitle":
-                    color "#fc3d39"
-                    xpos 1420
-                text "Confident individuals don’t rely on others to join them in their actions. They don’t crave their friends' approval, however they can be perceived as egotistical." style "statstext"
-                text "3 of 3" style "statstextnum"
-
-
-        vbox xpos 780 ypos 400 spacing 80:
-            text "1.":
-                font "fonts/Freshman.ttf"
-                color "#000000"
-                size 50
-            text "2.":
-                font "fonts/Freshman.ttf"
-                size 50
-                color "#000000"
-            text "3.":
-                font "fonts/Freshman.ttf"
-                size 50
-                color "#000000"
-
-        vbox xalign 0.5 yalign 0.5 spacing 80:
-            if [popular] >= [loyal] >= [confident]:
-                text "Popular":
-                    text_align 0.0
-                    color "#53d769"
-                    font "fonts/Freshman.ttf"
-                    size 50
-
-                text "Loyal":
-                    text_align 0.0
-                    color "#fecb2e"
-                    font "fonts/Freshman.ttf"
-                    size 50
-
-                text "Confident":
-                    text_align 0.0
-                    color "#fc3d39"
-                    font "fonts/Freshman.ttf"
-                    size 50
-
-            if [popular] >= [confident] > [loyal]:
-                vbox xpos 25 ypos 17 spacing 80:
-
-                    text "Popular":
-                        text_align 0.0
-                        color "#53d769"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-                    text "Confident":
-                        text_align 0.0
-                        color "#fc3d39"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-                    text "Loyal":
-                        text_align 0.0
-                        color "#fecb2e"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-            if [loyal] > [popular] >= [confident]:
-                vbox xpos 25 ypos 17 spacing 80:
-                    text "Loyal":
-                        text_align 0.0
-                        color "#fecb2e"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-                    text "Popular":
-                        text_align 0.0
-                        color "#53d769"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-                    text "Confident":
-                        text_align 0.0
-                        color "#fc3d39"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-            if [loyal] >= [confident] > [popular]:
-                vbox xpos 25 ypos 17 spacing 80:
-                    text "Loyal":
-                        text_align 0.0
-                        color "#fecb2e"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-                    text "Confident":
-                        text_align 0.0
-                        color "#fc3d39"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-                    text "Popular":
-                        text_align 0.0
-                        color "#53d769"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-
-
-            if [confident] > [loyal] > [popular]:
-                vbox xpos 25 ypos 17 spacing 80:
-
-                    text "Confident":
-                        text_align 0.0
-                        color "#fc3d39"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-                    text "Loyal":
-                        text_align 0.0
-                        color "#fecb2e"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-                    text "Popular":
-                        text_align 0.0
-                        color "#53d769"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-            if [confident] > [popular] >= [loyal]:
-                vbox xpos 25 ypos 17 spacing 80:
-
-                    text "Confident":
-                        text_align 0.0
-                        color "#fc3d39"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-                    text "Popular":
-                        text_align 0.0
-                        color "#53d769"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-                    text "Loyal":
-                        text_align 0.0
-                        color "#fecb2e"
-                        font "fonts/Freshman.ttf"
-                        size 50
-
-
-style statstitle is text:
-    font "fonts/Freshman.ttf"
-    size 35
-    text_align 0.5
-    ypos 380
-
-style statstext is text:
-    font "fonts/OpenSans.ttf"
-    size 25
-    color "#ffffff"
-    text_align 0.5
-    xpos 1260
-    ypos 400
-    xmaximum 550
-
-style statstextnum is text:
-    font "fonts/Freshman.ttf"
-    size 25
-    color "#ffffff"
-    text_align 0.5
-    xpos 1490
-    ypos 430
-
-
-screen freeroam1a():
-    add "images/s50.webp"
-    imagebutton:
-        yalign 0.12
-        xalign 0.86
-        idle "images/fr1riley.webp"
-        hover "images/fr1rileyhover.webp"
-
-        if fr1riley == 0:
-            action Jump ("fr1riley1")
-
-        else:
-            action Jump ("fr1riley2")
-    imagebutton:
-        yalign 0.195
-        xalign 0.335
-        idle "images/fr1elijah.webp"
-        hover "images/fr1elijahoverh.webp"
-
-        if fr1elijah == 0:
-            action Jump ("fr1elijah1")
-
-        else:
-            action Jump ("fr1elijah2")
-
-    imagebutton:
-        yalign 0.07
-        xalign 0.65
-        idle "images/fr1b.webp"
-        hover "images/fr1bhover.webp"
-        action Jump ("fr1b")
-
-screen freeroam1b():
-    add "images/s55.webp"
-    imagebutton:
-        yalign 0.5
-        xalign 0.685
-        idle "images/fr1chris.webp"
-        hover "images/fr1chrishover.webp"
-        action Jump ("fr1chris1")
-
-    imagebutton:
-        yalign 0.38
-        xalign 0.21
-        idle "images/fr1c.webp"
-        hover "images/fr1chover.webp"
-        action Jump ("fr1c")
-
-    imagebutton:
-        yalign 1.0
-        xalign 0.23
-        idle "images/backchris.webp"
-        hover "images/backchrishover.webp"
-        action Jump ("fr1a1")
-
-screen freeroam1b2():
-    add "images/s56.webp"
-    imagebutton:
-        yalign 0.53
-        xalign 0.74
-        idle "images/fr1nora.webp"
-        hover "images/fr1norahover.webp"
-        if fr1nora == 0:
-            action Jump ("fr1nora1")
-
-        else:
-            action Jump ("fr1nora2")
-
-    imagebutton:
-        yalign 0.38
-        xalign 0.21
-        idle "images/fr1c.webp"
-        hover "images/fr1chover.webp"
-        action Jump ("fr1c")
-
-    imagebutton:
-        yalign 1.0
-        xalign 0.23
-        idle "images/backchris.webp"
-        hover "images/backchrishover.webp"
-        action Jump ("fr1a1")
-
-
-screen freeroam1c():
-    add "images/s58.webp"
-    imagebutton:
-        yalign 0.025
-        xalign 0.26
-        idle "images/fr1dorm.webp"
-        hover "images/fr1dormhover.webp"
-        if fr1adam == 0:
-            action Jump ("fr1adam1")
-
-        else:
-            action Jump ("fr1adam2")
-
-    imagebutton:
-        yalign 0.05
-        xalign 0.82
-        idle "images/fr1yours.webp"
-        hover "images/fr1yourshover.webp"
-        action Jump ("fr1end")
-
-    imagebutton:
-        yalign 1.0
-        xalign 0.5
-        idle "images/dormback.webp"
-        hover "images/dormbackhover.webp"
-        action Jump ("fr1b2")
-
-screen endfreeroam():
-    add "images/endfr.webp"
-    text "Are you sure you want to end free roam?" style "endfree"
-    textbutton "Yes" style "endfr":
-        action Jump ("frcontinue")
-        text_align 0.5
-        xalign 0.57
-        yalign 0.58
-
-    textbutton "No" style "endfr":
-        action Jump ("frgoback")
-        text_align 0.5
-        xalign 0.43
-        yalign 0.58
-
-
 style endfr is button:
         xpos 1260
         ypos 400
@@ -2810,179 +2017,13 @@ style endfree is text:
         yalign 0.42
         xmaximum 600
 
-
-screen freeroam2a(): #outside
-
-    if samtalk == 0:
-        add "images/s100.webp"
-    else:
-        add "images/s100a.webp"
-
-    imagebutton:
-        yalign 1.0
-        xalign 0.43
-        idle "images/fr2sam.webp"
-        hover "images/fr2samh.webp"
-        if samtalk == 0:
-            action Jump ("fr2sam")
-        else:
-            action Jump ("fr2sam2")
-
-    imagebutton:
-        yalign 0
-        xalign 0.482
-        idle "images/fr2door.webp" #inside
-        hover "images/fr2doorh.webp"
-        if fr2door == 0:
-            action Jump ("fr2door")
-        else:
-            action Jump ("fr2door2")
-
-
-screen freeroam2b():
-
-    add "images/s102.webp"
-
-    imagebutton:
-        yalign 1.0
-        xalign 0.515
-        idle "images/fr2josh.webp"
-        hover "images/fr2joshh.webp"
-        if joshtalk == 0:
-            action Jump ("fr2josh")
-        else:
-            action Jump ("fr2josh2")
-
-    imagebutton:
-        yalign 1.0
-        xalign 1.0
-        idle "images/fr2pool.webp" #pool room
-        hover "images/fr2poolh.webp"
-        action Jump ("fr2pool")
-
-    imagebutton:
-        yalign 1.0
-        xalign 0.5
-        idle "images/fr2outside.webp" ### back outside
-        hover "images/fr2outsideh.webp"
-        action Jump ("fr2outside")
-
-    imagebutton:
-        yalign 0.4
-        xalign 0.242
-        idle "images/fr2courtney.webp"
-        hover "images/fr2courtneyh.webp"
-        if courtneytalk == 0:
-            action Jump ("fr2courtney")
-        else:
-            action Jump ("fr2courtney2")
-
-    imagebutton:
-        yalign 1.0
-        xalign 0
-        idle "images/fr2camp.webp"
-        hover "images/fr2camph.webp"
-        action Jump ("fr2camp")
-
-    imagebutton:
-        yalign 0
-        xalign 0.42
-        idle "images/fr2stairs.webp"
-        hover "images/fr2stairsh.webp"
-        action Jump ("fr2stairs")
-
-screen freeroam2c(): ###pool room
-
-    add "images/s104.webp"
-
-    imagebutton:
-        yalign 1.0
-        xalign 1.0
-        idle "images/fr2mason.webp"
-        hover "images/fr2masonh.webp"
-        if masontalk == 1:
-            action Jump ("fr2mason2")
-        else:
-            action Jump ("fr2mason")
-
-    imagebutton:
-        yalign 0.38
-        xalign 0.52
-        idle "images/fr2katy.webp"
-        hover "images/fr2katyh.webp"
-        if katytalk == 1:
-            action Jump ("fr2katy2")
-        else:
-            action Jump ("fr2katy")
-
-    imagebutton:
-        yalign 1.0
-        xalign 0.5
-        idle "images/backpool.webp"
-        hover "images/backpoolh.webp"
-        action Jump ("fr2poolback")
-
-screen freeroam2d(): ###camp room
-
-    add "images/s106.webp"
-
-    imagebutton:
-        yalign 1.0
-        xalign 0.21
-        idle "images/fr2chloe.webp"
-        hover "images/fr2chloeh.webp"
-        action Jump ("fr2chloe")
-
-    imagebutton:
-        yalign 1.0
-        xalign 0.5
-        idle "images/fr2campback.webp"
-        hover "images/fr2campbackh.webp"
-        action Jump ("fr2campback")
-
-screen freeroam2e(): ###stairs
-
-    add "images/s105.webp"
-
-    imagebutton:
-        yalign 1.0
-        xalign 0.5
-        idle "images/fr2grayson.webp"
-        hover "images/fr2graysonh.webp"
-        if graysontalk == 1:
-            action Jump ("fr2grayson2")
-        else:
-            action Jump ("fr2grayson")
-
-    imagebutton:
-        yalign 1.0
-        xalign 0.5
-        idle "images/fr2down.webp"
-        hover "images/fr2downh.webp"
-        action Jump ("fr2down")
-
-screen endfreeroam2():
-    add "images/endfr.webp"
-    text "Are you sure you want to end free roam?" style "endfree"
-    textbutton "Yes" style "endfr":
-        action Jump ("fr2end")
-        text_align 0.5
-        xalign 0.57
-        yalign 0.58
-
-    textbutton "No" style "endfr":
-        action Jump ("fr2dontend")
-        text_align 0.5
-        xalign 0.43
-        yalign 0.58
-
 screen thx():
-    if steam == False:
+    if not steam:
         add "images/newthx.webp"
     else:
         add "images/newsteamend.webp" # steam
 
-    if steam == False:
+    if not steam:
         imagebutton:
             ypos 677
             xpos 394
@@ -3106,296 +2147,6 @@ screen ft3():
         textbutton "Start Fight":
             text_size 40
             action Jump ("letsgo")
-
-
-screen realmode():
-    image "images/REALLIFEMODE.webp"
-
-    imagebutton:
-        ypos 683
-        xpos 417
-        idle "images/rlmt.webp"
-        hover "images/enable.webp"
-        action Jump ("rme")
-
-    imagebutton:
-        ypos 683
-        xpos 1016
-        idle "images/rlmt.webp"
-        hover "images/disable.webp"
-        action Jump ("rmd")
-
-
-
-######## POPUP
-
-screen popup1():
-    image "images/endfr.webp"
-
-    text "Congratulations! Your Key Character Trait {b}Loyal{/b} has just changed the outcome of a decision someone was making." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup1")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-screen popup2():
-    image "images/endfr.webp"
-
-    text "Congratulations! Your Key Character Trait {b}Popular{/b} has just changed the outcome of a decision someone was making." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup2")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-screen popup3():
-    image "images/endfr.webp"
-
-    text "Congratulations! Your Key Character Trait {b}Confident{/b} has just changed the outcome of a decision someone was making." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup3")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-screen popup4():
-    image "images/endfr.webp"
-
-    text "Congratulations! Your Key Character Trait {b}Confident{/b} has just changed the outcome of a decision someone was making." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup4")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-
-screen popup5():
-    image "images/endfr.webp"
-
-    text "Congratulations! You have learned a new fighting move: {b}Body Hook{/b}." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup5")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-screen popup6():
-    image "images/endfr.webp"
-
-    text "Congratulations! Your Key Character Trait {b}Loyal{/b} has just changed the outcome of a decision someone was making." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup6")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-screen popup7():
-    image "images/endfr.webp"
-
-    text "Congratulations! Your Key Character Trait {b}Loyal{/b} has just changed the outcome of a decision someone was making." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup7")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-
-screen popup8():
-    image "images/endfr.webp"
-
-    text "Congratulations! Your Key Character Trait {b}Confident{/b} has just changed the outcome of a decision someone was making." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup8")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-screen popup9():
-    image "images/endfr.webp"
-
-    text "Congratulations! Your Key Character Trait {b}Loyal{/b} has just changed the outcome of a decision someone was making." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup9")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-screen popup10():
-    image "images/endfr.webp"
-
-    text "Congratulations! Your Key Character Trait {b}Loyal{/b} has just changed the outcome of a decision someone was making." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup10")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-screen popup11():
-    image "images/endfr.webp"
-
-    text "Congratulations! Your Key Character Trait {b}Loyal{/b} has just changed the outcome of a decision someone was making." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup11")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-screen popup12():
-    image "images/endfr.webp"
-
-    text "Congratulations! Your Key Character Trait {b}Popular{/b} has just changed the outcome of a decision someone was making." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup12")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-screen popup13():
-    image "images/endfr.webp"
-
-    text "Congratulations! You have learned a new fighting move: {b}Uppercut{/b}." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup13")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-screen popup14():
-    image "images/endfr.webp"
-
-    text "Congratulations! Your Key Character Trait {b}Confident{/b} has just changed the way your actions were perceived." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup14")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-screen popup15():
-    image "images/endfr.webp"
-
-    text "Congratulations! Your Key Character Trait {b}Popular{/b} has just changed the outcome of a decision someone was making." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup15")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-screen popup16():
-    image "images/endfr.webp"
-
-    text "Congratulations! Your Key Character Trait {b}Popular{/b} has just changed the outcome of a decision someone was making." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup16")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-screen popup17():
-    image "images/endfr.webp"
-
-    text "Congratulations! Your Key Character Trait {b}Confident{/b} has just changed the outcome of a decision someone was making." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup17")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-screen popup18():
-    image "images/endfr.webp"
-
-    text "Congratulations! Your Key Character Trait {b}Confident{/b} has just changed the outcome of a decision someone was making." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup18")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-screen popup19():
-    image "images/endfr.webp"
-
-    text "You've just unlocked the social media app Kiwii! Open it now from the homescreen." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup19")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-screen popup20():
-    image "images/endfr.webp"
-
-    text "Congratulations! Your Key Character Trait {b}Loyal{/b} has just changed the outcome of a decision someone was making." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup20")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-screen popup21():
-    image "images/endfr.webp"
-
-    text "Congratulations! Your Key Character Trait {b}Loyal{/b} has just changed the outcome of a decision someone was making." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup21")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-screen popup22():
-    image "images/endfr.webp"
-
-    text "Congratulations! Your Key Character Trait {b}Loyal{/b} has just changed the outcome of a decision someone was making." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup22")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-screen popup23():
-    image "images/endfr.webp"
-
-    text "Congratulations! Your Key Character Trait {b}Confident{/b} has just changed the outcome of a decision someone was making." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup23")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-screen popup24():
-    image "images/endfr.webp"
-
-    text "Congratulations! Your Key Character Trait {b}Popular{/b} has just changed the outcome of a decision someone was making." style "endfree"
-
-    textbutton "OK" style "endfr":
-        action Jump ("popup24")
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
-
-
 
 ########### FIGHT with Tom
 
@@ -3751,93 +2502,6 @@ screen tomattack():
 
         timer reaction action Jump("timer6")
 
-
-screen costumes():
-
-    image "images/costumes.webp"
-
-    imagebutton:
-        idle "images/try.webp"
-        hover "images/tryh.webp"
-        ypos 802
-        xpos 256
-        if costumeaubrey == True:
-            if caughtpeekingaubrey == False:
-                action Jump ("try1")
-
-        else:
-            if caughtpeekingpenelope == False:
-                action Jump ("try1p")
-    imagebutton:
-        idle "images/try.webp"
-        hover "images/tryh.webp"
-        ypos 802
-        xpos 738
-        if costumeaubrey == True:
-            if caughtpeekingaubrey == False:
-                action Jump ("try2")
-        else:
-            if caughtpeekingpenelope == False:
-                action Jump ("try2p")
-    imagebutton:
-        idle "images/try.webp"
-        hover "images/tryh.webp"
-        ypos 802
-        xpos 1219
-        if costumeaubrey == True:
-            if caughtpeekingaubrey == False:
-                action Jump ("try3")
-        else:
-            if caughtpeekingpenelope == False:
-                action Jump ("try3p")
-    imagebutton:
-        idle "images/try.webp"
-        hover "images/buyh.webp"
-        ypos 935
-        xpos 256
-        if costumeaubrey == True:
-            if auboutfits <= 3:
-                action Jump ("surebuy1")
-            else:
-                action Jump ("buy1")
-        else:
-            if penoutfits <= 3:
-                action Jump ("surebuy1p")
-            else:
-                action Jump ("buy1p")
-    imagebutton:
-        idle "images/try.webp"
-        hover "images/buyh.webp"
-        ypos 935
-        xpos 738
-        if costumeaubrey == True:
-            if auboutfits <= 3:
-                action Jump ("surebuy2")
-            else:
-                action Jump ("buy2")
-        else:
-            if penoutfits <= 3:
-                action Jump ("surebuy2p")
-            else:
-                action Jump ("buy2p")
-    imagebutton:
-        idle "images/try.webp"
-        hover "images/buyh.webp"
-        ypos 935
-        xpos 1219
-        if costumeaubrey == True:
-            if auboutfits <= 3:
-                action Jump ("surebuy3")
-            else:
-                action Jump ("buy3")
-        else:
-            if penoutfits <= 3:
-                action Jump ("surebuy3p")
-            else:
-                action Jump ("buy3p")
-
-
-
 screen surebuy1():
     add "images/endfr.webp"
     text "Once you decide which outfit to buy, you will no longer be able to play through all of the \"Try\" scenes. Are you sure you want to continue?" style "endfree"
@@ -3848,7 +2512,7 @@ screen surebuy1():
         yalign 0.58
 
     textbutton "No" style "endfr":
-        action Jump ("gocostumes1")
+        action Jump ("v1_gocostumes")
         text_align 0.5
         xalign 0.43
         yalign 0.58
@@ -3863,7 +2527,7 @@ screen surebuy2():
         yalign 0.58
 
     textbutton "No" style "endfr":
-        action Jump ("gocostumes2")
+        action Jump ("v1_gocostumes")
         text_align 0.5
         xalign 0.43
         yalign 0.58
@@ -3878,7 +2542,7 @@ screen surebuy3():
         yalign 0.58
 
     textbutton "No" style "endfr":
-        action Jump ("gocostumes3")
+        action Jump ("v1_gocostumes")
         text_align 0.5
         xalign 0.43
         yalign 0.58
@@ -3893,7 +2557,7 @@ screen surebuy1p():
         yalign 0.58
 
     textbutton "No" style "endfr":
-        action Jump ("gocostumes4")
+        action Jump ("v1_gocostumes")
         text_align 0.5
         xalign 0.43
         yalign 0.58
@@ -3908,7 +2572,7 @@ screen surebuy2p():
         yalign 0.58
 
     textbutton "No" style "endfr":
-        action Jump ("gocostumes5")
+        action Jump ("v1_gocostumes")
         text_align 0.5
         xalign 0.43
         yalign 0.58
@@ -3923,326 +2587,10 @@ screen surebuy3p():
         yalign 0.58
 
     textbutton "No" style "endfr":
-        action Jump ("gocostumes6")
+        action Jump ("v1_gocostumes")
         text_align 0.5
         xalign 0.43
         yalign 0.58
-
-screen achievements():
-
-    use phoneTemplate:
-
-        add "images/stats.webp" at truecenter
-        if noexit == False:
-            textbutton "Exit Phone" action Jump("exitphone") style"phonebutton"
-
-        text "achievements":
-            color "#000000"
-            font "fonts/Freshman.ttf"
-            size 45
-            ypos 200
-            xalign 0.5
-
-        viewport:
-            mousewheel True
-            xanchor -780
-            yanchor -280
-            xmaximum 358
-            ymaximum 600
-
-    ########### copy paste messages here
-            vbox spacing 10:
-
-                if openwound == True:
-                    vbox spacing -10:
-                        textbutton "open wound" style "ach"
-
-                        textbutton "Tell off Emily" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "open wound" style "ach3"
-
-                if nohardfeelings == True:
-                    vbox spacing -10:
-                        textbutton "no hard feelings" style "ach"
-
-                        textbutton "Play nice with Emily" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "no hard feelings" style "ach3"
-
-
-                if keepitmoving == True:
-                    vbox spacing -10:
-                        textbutton "keep it moving" style "ach"
-
-                        textbutton "Hit on Nora" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "keep it moving" style "ach3"
-
-                if romeo == True:
-                    vbox spacing -10:
-                        textbutton "romeo" style "ach"
-
-                        textbutton "Kiss Lauren" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "romeo" style "ach3"
-
-                if bigmouth == True:
-                    vbox spacing -10:
-                        textbutton "big mouth" style "ach"
-
-                        textbutton "Threaten Cameron" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "big mouth" style "ach3"
-
-                if mixedfeelings == True:
-                    vbox spacing -10:
-                        textbutton "mixed feelings" style "ach"
-
-                        textbutton "Decline Lauren" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "mixed feelings" style "ach3"
-
-                if thenotorious == True:
-                    vbox spacing -10:
-                        textbutton "the notorious" style "ach"
-
-                        textbutton "Win your first fight" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "the notorious" style "ach3"
-
-                if anewbeginning == True:
-                    vbox spacing -10:
-                        textbutton "a new beginning" style "ach"
-
-                        textbutton "Lauren likes you" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "a new beginning" style "ach3"
-
-                if overit == True:
-                    vbox spacing -10:
-                        textbutton "over it" style "ach"
-
-                        textbutton "Let Benjamin make a move" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "over it" style "ach3"
-
-
-                if notnowmom == True:
-                    vbox spacing -10:
-                        textbutton "not now, mom" style "ach"
-
-                        textbutton "Decline Julia's call" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "not now, mom" style "ach3"
-
-                if lipsdontlie == True:
-                    vbox spacing -10:
-                        textbutton "lips don't lie" style "ach"
-
-                        textbutton "Kiss Riley in the Park" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "lips don't lie" style "ach3"
-
-                if truthhurts == True:
-                    vbox spacing -10:
-                        textbutton "truth hurts" style "ach"
-
-                        textbutton "Tell Lauren about Aubrey" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "truth hurts" style "ach3"
-
-                if relightthefire == True:
-                    vbox spacing -10:
-                        textbutton "relight the fire" style "ach"
-
-                        textbutton "Tell Julia about Emily" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "relight the fire" style "ach3"
-
-                if rematch == True:
-                    vbox spacing -10:
-                        textbutton "rematch" style "ach"
-
-                        textbutton "Buy Chloe the volleyball" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "rematch" style "ach3"
-
-                if keeneye == True:
-                    vbox spacing -10:
-                        textbutton "keen eye" style "ach"
-
-                        textbutton "Pick the muffin" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "keen eye" style "ach3"
-                if onthelow == True:
-                    vbox spacing -10:
-                        textbutton "on the low" style "ach"
-
-                        textbutton "Deny PDA with Lauren" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "on the low" style "ach3"
-
-                if petapublicenemy == True:
-                    vbox spacing -10:
-                        textbutton "peta public enemy" style "ach"
-
-                        textbutton "Kill dog as animal lover" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "peta public enemy" style "ach3"
-
-                if snitch == True:
-                    vbox spacing -10:
-                        textbutton "snitch" style "ach"
-
-                        textbutton "Tell the school" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "snitch" style "ach3"
-
-                if brosbeforehoes == True:
-                    vbox spacing -10:
-                        textbutton "bros before hoes" style "ach"
-
-                        textbutton "Help Imre" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "bros before hoes" style "ach3"
-
-                if monkeybusiness == True:
-                    vbox spacing -10:
-                        textbutton "monkey business" style "ach"
-
-                        textbutton "Join the Apes" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "monkey business" style "ach3"
-
-                if notmybusiness == True:
-                    vbox spacing -10:
-                        textbutton "not my business" style "ach"
-
-                        textbutton "Don't disturb Ms. Rose" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "not my business" style "ach3"
-
-                if reignition == True:
-                    vbox spacing -10:
-                        textbutton "reignition" style "ach"
-
-                        textbutton "Kiss Emily back" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "reignition" style "ach3"
-
-                if credulous == True:
-                    vbox spacing -10:
-                        textbutton "credulous" style "ach"
-
-                        textbutton "Trust Chloe" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "credulous" style "ach3"
-
-                if seemsfishy == True:
-                    vbox spacing -10:
-                        textbutton "seems fishy" style "ach"
-
-                        textbutton "Don't meet Grayson" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "seems fishy" style "ach3"
-
-                if strike == True:
-                    vbox spacing -10:
-                        textbutton "strike" style "ach"
-
-                        textbutton "Kiss Penelope" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "strike" style "ach3"
-
-                if get_a_room == True:
-                    vbox spacing -10:
-                        textbutton "get a room" style "ach"
-
-                        textbutton "Sleep With Amber at Josh's" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "get a room" style "ach3"      
-
-                if ip_man == True:
-                    vbox spacing -10:
-                        textbutton "ip man" style "ach"
-
-                        textbutton "Win The Alley Fight" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "ip man" style "ach3"      
-
-                if thick_and_thin == True:
-                    vbox spacing -10:
-                        textbutton "thick and thin" style "ach"
-
-                        textbutton "Help Penelope" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "thick and thin" style "ach3"                 
-
-                if up_for_more == True:
-                    vbox spacing -10:
-                        textbutton "up for more" style "ach"
-
-                        textbutton "Flirt With Chloe" style "ach2"
-
-                else:
-                    vbox:
-                        textbutton "up for more" style "ach3"                                                                       
 
 style ach is button:
     background "#d4af37"
@@ -4283,53 +2631,6 @@ style ach3_text is text:
     size 30
     xoffset 10
 
-
-screen girls():
-
-    image "images/girls.webp"
-
-    imagebutton:
-        idle "images/girl.webp"
-        hover "images/girlhover.webp"
-        ypos 360
-        xpos 110
-        action Jump ("juchloe")
-
-    imagebutton:
-        idle "images/girl.webp"
-        hover "images/girlhover.webp"
-        ypos 360
-        xpos 693
-        action Jump ("juaubrey")
-
-    imagebutton:
-        idle "images/girl.webp"
-        hover "images/girlhover.webp"
-        ypos 360
-        xpos 1277
-        action Jump ("julauren")
-
-    imagebutton:
-        idle "images/girl.webp"
-        hover "images/girlhover.webp"
-        ypos 670
-        xpos 110
-        action Jump ("juriley")
-
-    imagebutton:
-        idle "images/girl.webp"
-        hover "images/girlhover.webp"
-        ypos 670
-        xpos 693
-        action Jump ("juemily")
-
-    imagebutton:
-        idle "images/girl.webp"
-        hover "images/girlhover.webp"
-        ypos 670
-        xpos 1277
-        action Jump ("jupenelope")
-
 screen aubsex():
 
     image "images/sexpos.webp"
@@ -4361,140 +2662,6 @@ screen aubsex():
         ypos 727
         xpos 36
         action Jump ("acream")
-
-
-screen spoiler():
-
-    if steam == False:
-        add "images/menu4.webp"
-    else:
-        add "images/menu4steam.webp"
-    add "images/darker.webp"
-
-    add "images/endfr.webp"
-    text "Warning: The scene gallery contains spoilers for the story of the game. Are you sure you want to continue?" style "endfree"
-    textbutton "Yes" style "endfr":
-        action Jump ("spoilergo")
-        text_align 0.5
-        xalign 0.57
-        yalign 0.58
-
-    textbutton "No" style "endfr":
-        text_align 0.5
-        xalign 0.43
-        yalign 0.58
-        action Return ()
-
-    tag menu
-
-screen scenegal():
-
-    tag menu
-
-    add "Images/scenegalleryblank.webp"
-
-    imagebutton:
-        idle "images/backtransp.webp"
-        hover "images/back.webp"
-        ypos 933
-        xpos 79
-        action Return()
-
-    vpgrid:
-        cols 4
-        spacing 40
-        pos (78, 200)
-        xpos 78
-        ypos 200
-        ysize 700
-        scrollbars "vertical"
-        draggable True
-        mousewheel True
-
-        imagebutton:
-            idle "images/gallery1new.webp"
-            hover "images/gallery1.webp"
-            action Replay ("ga", locked = False)
-
-        imagebutton:
-            idle "images/gallery2new.webp"
-            hover "images/gallery2.webp"
-            action Replay ("gb", locked = False)
-
-        imagebutton:
-            idle "images/gallery3new.webp"
-            hover "images/gallery3.webp"
-            action Replay ("gc", locked = False)
-
-        imagebutton:
-            idle "images/gallery4new.webp"
-            hover "images/gallery4.webp"
-            action Replay ("fkcon", locked = False)
-
-        imagebutton:
-            idle "images/gallery6.webp"
-            hover "images/gallery6outline.webp"
-            action Replay ("ge", locked = False)
-
-        imagebutton:
-            idle "images/gallery5.webp"
-            hover "images/gallery5outline.webp"
-            action Replay ("gf", locked = False)
-
-        imagebutton:
-            idle "images/gallery7.webp"
-            hover "images/gallery7outline.webp"
-            action Replay ("rileysexscene", locked = False)
-
-        imagebutton:
-            idle "images/gallery8.webp"
-            hover "images/gallery8outline.webp"
-            action Replay ("brbj", locked = False)
-
-        imagebutton:
-            idle "images/gallery/gallery9.webp"
-            hover "images/gallery/gallery9outline.webp"
-            action Replay ("v08_cl_start", locked = False)
-
-        imagebutton:
-            idle "images/gallery/gallery10.webp"
-            hover "images/gallery/gallery10outline.webp"
-            action Replay ("v08_ri_start", locked = False)
-
-        imagebutton:
-            idle "images/gallery/gallery11.webp"
-            hover "images/gallery/gallery11outline.webp"
-            action Replay ("hoco_amb_night", locked = False)
-
-        imagebutton:
-            idle "images/gallery/gallery12.webp"
-            hover "images/gallery/gallery12outline.webp"
-            action Replay ("s28_LarsFight", locked = False)
-
-        imagebutton:
-            idle "images/gallery/gallery13.webp"
-            hover "images/gallery/gallery13outline.webp"
-            action Replay ("amber_sex_at_joshs", locked = False)
-
-        imagebutton:
-            idle Transform("images/gallery/gallery14.webp", size=(400, 226))
-            hover Transform("images/gallery/gallery14_Hover.webp", size=(400, 226))
-            action Replay ("v9_aubrey_scene_lake", locked = False)
-
-        imagebutton:
-            idle Transform("images/gallery/gallery15.webp", size=(400, 226))
-            hover Transform("images/gallery/gallery15_Hover.webp", size=(400, 226))
-            action Replay ("v9_emily_dorm", locked = False)
-
-        imagebutton:
-            idle Transform("images/gallery/gallery16.webp", size=(400, 226))
-            hover Transform("images/gallery/gallery16_Hover.webp", size=(400, 226))
-            action Replay ("v9_ri_sex", locked = False)
-
-        imagebutton:
-            idle Transform("images/gallery/gallery17.webp", size=(400, 226))
-            hover Transform("images/gallery/gallery17_Hover.webp", size=(400, 226))
-            action Replay ("v9_make_out_w_lin", locked = False)
 
 screen skiptut():
     add "images/endfr.webp"
@@ -5250,14 +3417,6 @@ style tutorialtext is text:
     ypos 400
     xmaximum 500
 
-style tutorialtextnum is text:
-    font "fonts/Freshman.ttf"
-    size 25
-    color "#FFD166"
-    text_align 0.5
-    xpos 1490
-    ypos 580
-
 style applabels is text:
     font "fonts/OpenSans.ttf"
     size 15
@@ -5279,32 +3438,6 @@ style nametext is text:
     font "fonts/OpenSans-Bold.ttf"
     size 25
     color "#000000"
-
-
-style msgleft is button:
-    background "#CECECE"
-    xpadding 15
-    ypadding 5
-    xmaximum 350
-    ymargin 15
-
-style msgleft_text is text:
-    color "#000000"
-    font "fonts/OpenSans.ttf"
-    size 20
-
-style msgright is button:
-    background "#147efb"
-    xpadding 15
-    ypadding 5
-    xalign 1.0
-    xoffset 14
-    xmaximum 350
-
-style msgright_text is text:
-    color "#ffffff"
-    font "fonts/OpenSans.ttf"
-    size 20
 
 style replybox is button:
     background "#ffffff"
@@ -5337,390 +3470,6 @@ style imgright is button:
     xalign 1.0
     xoffset 14
     xmaximum 350
-
-
-########################## FREEROAM 3 : WOLVES RUSH PARTY
-
-screen endfreeroam3():
-    add "images/endfr.webp"
-    text "Are you sure you want to end free roam?" style "endfree"
-    textbutton "Yes" style "endfr":
-        action Jump ("fr3chris3")
-        text_align 0.5
-        xalign 0.57
-        yalign 0.58
-
-    textbutton "No" style "endfr":
-        action Jump ("fr3stay")
-        text_align 0.5
-        xalign 0.43
-        yalign 0.58
-
-
-screen fr3garden():
-    if kimpuke == False:
-        add "images/fr3garden.webp" # location picture
-
-        imagebutton: #Josh button
-            ypos 430
-            xpos 1195
-            idle "images/fr3gardenjoshblank.webp"
-            hover "images/fr3gardenjosh.webp"
-
-            if fr3josh == False:
-                action Jump ("fr3josh1")
-
-            else:
-                if relics >= 5 and upstairs == "nobody" and askedkim == False: #Asking people for upstairs
-                    action Jump ("fr3josh3")
-                else:
-                    action Jump ("fr3josh2")
-
-    else:
-
-        add "images/fr3garden2.webp"
-
-    imagebutton: #Go inside
-        ypos 190
-        xpos 485
-        idle "images/fr3gardendoorblank.webp"
-        hover "images/fr3gardendoor.webp"
-        action Jump ("labelfr3downstairs")
-
-
-screen fr3downstairs():
-
-    add "images/fr3downstairs.webp" # location picture
-
-    imagebutton: #Go outside
-        ypos 900
-        xpos 440
-        idle "images/fr3downstairsbackblank.webp"
-        hover "images/fr3downstairsback.webp"
-        action Jump ("labelfr3garden")
-
-    imagebutton: #Go upstairs
-        ypos 0
-        xpos 940
-        idle "images/fr3downstairsstairsblank.webp"
-        hover "images/fr3downstairsstairs.webp"
-        action Jump ("labelfr3upstairs")
-
-    imagebutton: #Go living room
-        ypos 70
-        xpos 360
-        idle "images/fr3downstairsdoorblank.webp"
-        hover "images/fr3downstairsdoor.webp"
-        action Jump ("labelfr3livingroom")
-
-    imagebutton: #Go kitchen
-        ypos 368
-        xpos 1486
-        idle "images/fr3downstairsrightblank.webp"
-        hover "images/fr3downstairsright.webp"
-        action Jump ("labelfr3kitchen2")
-
-screen fr3livingroom():
-
-    add "images/fr3livingroom.webp" # location picture
-
-    imagebutton: #guy1 button
-        ypos 392
-        xpos 760
-        idle "images/fr3livingroomsofablank.webp"
-        hover "images/fr3livingroomsofa.webp"
-
-        if fr3guy == False:
-            action Jump ("fr3guy1")
-
-        else:
-            action Jump ("fr3guy2")
-
-    imagebutton: #Aubrey button
-        ypos 254
-        xpos 804
-        idle "images/fr3livingroomaubreyblank.webp"
-        hover "images/fr3livingroomaubrey.webp"
-
-        if fr3aubrey == False:
-            action Jump ("fr3aubrey1")
-
-        else:
-            if relics >= 5 and upstairs == "nobody":#Asking people for upstairs
-                if askedemily == True and askedaubrey == True:
-                    action Jump ("fr3aubrey2")
-                else:
-                    action Jump ("fr3aubrey3")
-            else:
-                action Jump ("fr3aubrey2")
-
-
-    imagebutton: #Go back
-        ypos 915
-        xpos 432
-        idle "images/fr3livingroombackblank.webp"
-        hover "images/fr3livingroomback.webp"
-        action Jump ("labelfr3downstairs")
-
-    imagebutton: #Go kitchen
-        ypos 106
-        xpos 1700
-        idle "images/fr3livingroomdoorblank.webp"
-        hover "images/fr3livingroomdoor.webp"
-        action Jump ("labelfr3kitchen")
-
-screen fr3kitchen():
-
-    add "images/fr3kitchen.webp" # location picture
-
-    imagebutton: #chris button
-        ypos 60
-        xpos 1147
-        idle "images/fr3kitchenchrisblank.webp"
-        hover "images/fr3kitchenchrisn.webp"
-
-        if fr3chris == False:
-            action Jump ("fr3chris1")
-
-        else:
-            action Jump ("fr3chris2")
-
-    imagebutton: #Matt button
-        ypos 139
-        xpos 1048
-        idle "images/fr3kitchenmattblank.webp"
-        hover "images/fr3kitchenmatt.webp"
-
-        if fr3matt == False:
-            action Jump ("fr3matt1")
-
-        else:
-            action Jump ("fr3matt2")
-
-    imagebutton: # Go Kitchen 2
-        ypos 99
-        xpos 0
-        idle "images/fr3kitchenleftblank.webp"
-        hover "images/fr3kitchenleft.webp"
-        action Jump ("labelfr3kitchen2")
-
-    imagebutton: # Go Living room
-        ypos 100
-        xpos 0
-        idle "images/fr3kitchenlivingdoorblank.webp"
-        hover "images/fr3kitchenlivingdoor.webp"
-        action Jump ("labelfr3livingroom")
-
-    imagebutton: #Riley button
-        ypos 270
-        xpos 328
-        idle "images/fr3kitchenrileyblank.webp"
-        hover "images/fr3kitchenriley.webp"
-
-        if fr3riley == False:
-            action Jump ("fr3riley1")
-
-        else:
-            if relics >= 5 and upstairs == "nobody" and askedriley == False:#Asking people for upstairs
-                action Jump ("fr3riley3")
-            else:
-                action Jump ("fr3riley2")
-
-screen fr3kitchen2():
-
-    add "images/fr3kitchen2.webp" # location picture
-
-    imagebutton: # Go Ktichen
-        ypos 836
-        xpos 358
-        idle "images/fr3kitchen2backblank.webp"
-        hover "images/fr3kitchen2back.webp"
-        action Jump ("labelfr3kitchen")
-
-    imagebutton: # Go Middleroom
-        ypos 65
-        xpos 0
-        idle "images/fr3kitchen2doorblank.webp"
-        hover "images/fr3kitchen2door.webp"
-        action Jump ("labelfr3middleroom")
-
-    imagebutton: # Go downstairs hallway
-        ypos 245
-        xpos 1364
-        idle "images/fr3kitchen2rightblank.webp"
-        hover "images/fr3kitchen2right.webp"
-        action Jump ("labelfr3downstairs")
-
-
-screen fr3middleroom():
-
-    add "images/fr3middleroom.webp" # location picture
-
-    imagebutton: # Go Kitchen2
-        ypos 0
-        xpos 50
-        idle "images/fr3middleroomleftblank.webp"
-        hover "images/fr3middleroomleft.webp"
-        action Jump ("labelfr3kitchen2")
-
-    imagebutton: # Downstairs bathroom
-        ypos 106
-        xpos 700
-        idle "images/fr3middleroommiddleblank.webp"
-        hover "images/fr3middleroommiddle.webp"
-        action Jump ("fr3dsbathroom")
-
-    imagebutton: # Go garage
-        ypos 0
-        xpos 1210
-        idle "images/fr3middleroomrightblank.webp"
-        hover "images/fr3middleroomright.webp"
-        action Jump ("labelfr3garage")
-
-
-screen fr3garage():
-    if kimpuke == False:
-        add "images/fr3garage.webp" # location picture
-
-        imagebutton: #Amber button
-            ypos 235
-            xpos 345
-            idle "images/fr3garageamberblank.webp"
-            hover "images/fr3garageamber.webp"
-
-            if fr3amber == False:
-                action Jump ("fr3amber1")
-
-            else:
-                if relics >= 5 and upstairs == "nobody" and askedamber == False: #Asking people for upstairs
-                    action Jump ("fr3amber3")
-                else:
-                    action Jump ("fr3amber2")
-
-    else:
-        add "images/fr3garage2.webp"
-
-    imagebutton: #sebastian button
-        ypos 168
-        xpos 1338
-        idle "images/fr3garagefightblank.webp"
-        hover "images/fr3garagefight.webp"
-
-        if fr3sebastian == False:
-            action Jump ("fr3sebastian1")
-
-        else:
-            action Jump ("fr3sebastian2")
-
-
-    imagebutton: # Go back to middleroom
-        ypos 877
-        xpos 473
-        idle "images/fr3garagebackblank.webp"
-        hover "images/fr3garageback.webp"
-        action Jump ("labelfr3middleroom")
-
-
-screen fr3upstairs():
-
-    add "images/fr3upstairs.webp" # location picture
-
-    imagebutton: # Go backdownstairs
-        yalign 1.0
-        xalign 0.5
-        idle "images/fr3upstairsbackblank.webp"
-        hover "images/fr3upstairsback.webp"
-        action Jump ("labelfr3downstairs")
-
-    imagebutton: # go office
-        ypos 140
-        xpos 1125
-        idle "images/fr3upstairsrightblank.webp"
-        hover "images/fr3upstairsright.webp"
-        action Jump ("fr3office")
-
-    imagebutton: # Go roofroom
-        ypos 115
-        xpos 922
-        idle "images/fr3upstairsmiddleblank.webp"
-        hover "images/fr3upstairsmiddle.webp"
-        action Jump ("labelfr3roofroom")
-
-    imagebutton: #chloe button
-        ypos 25
-        xpos 490
-        idle "images/fr3upstairsleftblank.webp"
-        hover "images/fr3upstairsleft.webp"
-
-        if fr3chloe == False:
-            action Jump ("fr3chloe1")
-
-        else:
-            action Jump ("fr3chloe2")
-
-screen fr3office():
-
-    add "images/fr3office.webp" # location picture
-
-    imagebutton: # Go back out of office
-        ypos 847
-        xpos 440
-        idle "images/fr3officebackblank.webp"
-        hover "images/fr3officeback.webp"
-        action Jump ("labelfr3upstairs")
-
-    imagebutton: # picture
-        ypos 115
-        xpos 100
-        idle "images/fr3officephotoblank.webp"
-        hover "images/fr3officephoto.webp"
-        action Jump ("fr3picture")
-
-    imagebutton: # certificate
-        ypos 212
-        xpos 1240
-        idle "images/fr3officecertificateblank.webp"
-        hover "images/fr3officecertificate.webp"
-        action Jump ("fr3certificate")
-
-    imagebutton: # books
-        ypos 593
-        xpos 1382
-        idle "images/fr3officebooksblank.webp"
-        hover "images/fr3officebooks.webp"
-        action Jump ("fr3books")
-
-    imagebutton: # trophies
-        yalign 1.0
-        xpos 1480
-        idle "images/fr3officetrophyblank.webp"
-        hover "images/fr3officetrophy.webp"
-        action Jump ("fr3trophies")
-
-
-
-screen fr3roofroom():
-
-    add "images/fr3roofroom.webp" # location picture
-
-    imagebutton: # Go back
-        yalign 1.0
-        xpos 500
-        idle "images/fr3roofroombackblank.webp"
-        hover "images/fr3roofroomback.webp"
-        action Jump ("labelfr3upstairs")
-
-    imagebutton: #Window (Nora) button
-        ypos 50
-        xpos 327
-        idle "images/fr3roofroomwindowblank.webp"
-        hover "images/fr3roofroomwindow.webp"
-
-        if fr3nora == False:
-            action Jump ("fr3nora1")
-
-        else:
-            action Jump ("fr3nora2")
 
 screen emilysexoverlaybutton():
 
@@ -6364,7 +4113,7 @@ screen fr4gymentrance():
         imagebutton:
             ypos 318
             xpos 365
-            idle "images/fr4gymentranceriley.webp"
+            idle "images/fr4gymentrancerileyidle.webp"
             hover "images/fr4gymentrancerileyhover.webp"
             action Jump ("fr4riley2")
 
@@ -6372,7 +4121,7 @@ screen fr4gymentrance():
         imagebutton:
             ypos 315
             xpos 0
-            idle "images/fr4gymentrancenora.webp"
+            idle "images/fr4gymentrancenoraidle.webp"
             hover "images/fr4gymentrancenorahover.webp"
             action Jump ("fr4nora2")
 
@@ -6466,7 +4215,7 @@ screen fr4hallway():
         imagebutton:
             ypos 175
             xpos 1035
-            idle "images/fr4hallwaychloe.webp"
+            idle "images/fr4hallwaychloeidle.webp"
             hover "images/fr4hallwaychloehover.webp"
             if not fr4chloe2:
                 action Jump ("fr4chloe2")
@@ -6581,7 +4330,7 @@ screen fr4outsidestreet():
     imagebutton:
         ypos 340
         xpos 830
-        idle "images/fr4outsidestreet.webp"
+        idle "images/fr4outsidestreetidle.webp"
         hover "images/fr4outsidestreethover.webp"
         if not fr4samantha:
             action Jump ("fr4samantha1")
@@ -6594,16 +4343,6 @@ screen fr4outsidestreet():
         idle "images/fr4bottom.webp"
         hover "images/fr4bottomhover.webp"
         action Jump ("labelfr4outsidestairs")
-
-# Generic screen for showing KCT popups
-screen kctpopup(labelname):
-    image "images/endfr.webp"
-    text "Congratulations! Your Key Character Trait {b}[kct!c]{/b} has just changed the outcome of a decision someone was making." style "endfree"
-    textbutton "OK" style "endfr":
-        action Jump(labelname)
-        text_align 0.5
-        xalign 0.5
-        yalign 0.58
 
 screen rileysexoverlaybutton():
 
