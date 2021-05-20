@@ -26,8 +26,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "0.7.4"
-
+define config.version = "9.9.10"
 
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
@@ -152,7 +151,7 @@ define config.save_directory = "CollegeKings"
 ##
 ## The icon displayed on the taskbar or dock.
 
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "gui/window_icon.webp"
 
 
 ## Build configuration #########################################################
@@ -180,7 +179,9 @@ init python:
 
     ## Classify files as None to exclude them from the built distributions.
 
-    build.archive("media", "all")
+    # build.archive("media", "all")
+    # build.archive("bugTesting", "all")
+    # build.archive("scripts", "all")
 
     build.classify('**~', None)
     build.classify('**.bak', None)
@@ -190,10 +191,18 @@ init python:
 
     ## To archive files, classify them as 'archive'.
 
-    build.classify('game/**.jpg', 'media')
-    build.classify('game/**.mp4', 'media')
-    build.classify('game/**.png', 'media')
-    build.classify('game/**.webm', 'media')
+    # build.classify('game/bugTesting/*.rpy', 'bugTesting')
+    # build.classify('game/bugTesting/images/*.webp', 'bugTesting')
+
+    # build.classify('game/**.webp', 'media')
+    # build.classify('game/**.mp4', 'media')
+    # build.classify('game/**.webp', 'media')
+    # build.classify('game/**.webm', 'media')
+    # build.classify('game/**.ttf', 'media')
+    # build.classify('game/**.otf', 'media')
+    # build.classify('game/**.mp3', 'media')
+
+    # build.classify('game/**.rpy', 'scripts')
 
     ## Files matching documentation patterns are duplicated in a mac app build,
     ## so they appear in both the app and the zip file.

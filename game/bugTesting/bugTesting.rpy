@@ -1,26 +1,30 @@
 define bugTesting_Scenes = [
     ["start", "Start of Game"],
-    ["gf_b", "After Evelyn Date"],
-    ["v07", "Start of v07"],
+    ["v1start", "Start of v1"],
+    ["v2start", "Start of v2"],
+    ["v3start", "Start of v3"],
+    ["v4start", "Start of v4"],
+    ["v5start", "Start of v5"],
+    ["v6start", "Start of v6"],
+    ["v7start", "Start of v7"],
     ["conyourdorm", "Wednesday Morning"],
     ["rightafterbeach", "Wednesday Evening"],
     ["ep7_before_history", "Thursday Morning"],
     ["after_cam_history", "Asking girls to hoco"],
-    ["risex", "RileySex"],
     ["fr4", "Homecoming Free Roam"],
-
+    ["drug_deal_w_josh", "Scene 28 (Fight)"]
 ]
 
 screen bugTesting_SceneSelect():
     modal True
     zorder 200
-
+    
     add "#23272a"
 
     imagebutton:
         action Hide("bugTesting_SceneSelect"), SetVariable("quick_menu", True)
-        idle "/bugTesting/images/cheatMenuBackButton.png"
-        hover im.MatrixColor("/bugTesting/images/cheatMenuBackButton.png", im.matrix.brightness(0.2))
+        idle "/bugTesting/images/cheatMenuBackButton.webp"
+        hover im.MatrixColor("/bugTesting/images/cheatMenuBackButton.webp", im.matrix.brightness(0.2))
         pos (1666, 50)
 
     text "Bug Testing Scene Select" style "modTextHeader" align (0.5, 0.1)
