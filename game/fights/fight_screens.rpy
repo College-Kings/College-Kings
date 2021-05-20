@@ -907,7 +907,7 @@ screen imreFight_MCDefend(attack=None):
     tag fightScreen
 
     if attack == "Hook": # A
-        add "images/v10/Scene 7/IMREHOOK/imreHookEnd.webp"
+        add "images/v10/Scene 7/Animations/IMREHOOK/imreHookEnd.webp"
 
         key q:
             action Jump ("imre_McHookBlock")
@@ -950,7 +950,7 @@ screen imreFight_MCDefend(attack=None):
 
 
     if attack == "Jab":
-        add "images/v10/Scene 7/IMREJAB/imreJabEnd.webp"
+        add "images/v10/Scene 7/Animations/IMREJAB/imreJabEnd.webp"
 
         key q:
             action Jump ("imre_McJabHit")
@@ -992,7 +992,7 @@ screen imreFight_MCDefend(attack=None):
         timer reaction action Jump("imre_McJabHit")
 
     if attack == "BodyHook":
-        add "images/v10/Scene 7/IMREBODYHOOK/imreBodyEnd.webp"
+        add "images/v10/Scene 7/Animations/IMREBODYHOOK/imreBodyEnd.webp"
 
         key q:
             action Jump ("imre_McBodyhookHit")
@@ -1034,7 +1034,7 @@ screen imreFight_MCDefend(attack=None):
         timer reaction action Jump("imre_McBodyhookHit")
 
     if attack == "Kick":
-        image "images/v10/Scene 7/IMREKICK/imreKickEnd.webp"
+        image "images/v10/Scene 7/Animations/IMREKICK/imreKickEnd.webp"
 
         key q:
             action Jump ("imre_McKickHit")
@@ -1081,7 +1081,7 @@ screen imreFight_MCAttack():
     tag fightScreen
 
     if imreStance == 1:
-        add "images/v10/Scene 7/END/imreStance - Jab.webp"
+        add "images/v10/Scene 7/Animations/END/imreStance - Jab.webp"
 
         key q:
             action Jump ("mc_imreJabsHit")
@@ -1125,7 +1125,7 @@ screen imreFight_MCAttack():
 
 
     if imreStance == 2:
-        add "images/v10/Scene 7/END/imreStance - Bodyhook.webp"
+        add "images/v10/Scene 7/Animations/END/imreStance - Bodyhook.webp"
 
         key q:
             action Jump ("mc_imreJabsBlock")
@@ -1170,7 +1170,7 @@ screen imreFight_MCAttack():
 
 
     if imreStance == 3:
-        add "images/v10/Scene 7/END/imreStance - Hook.webp"
+        add "images/v10/Scene 7/Animations/END/imreStance - Hook.webp"
 
         key q:
             action Jump ("mc_imreJabsBlock")
@@ -1212,7 +1212,7 @@ screen imreFight_MCAttack():
         timer reactiona action Jump("imre_McAttack")
 
     if imreStance == 4:
-        add "images/v10/Scene 7/END/imreStance - Kick.webp"
+        add "images/v10/Scene 7/Animations/END/imreStance - Kick.webp"
 
         key q:
             action Jump ("mc_imreJabsBlock")
