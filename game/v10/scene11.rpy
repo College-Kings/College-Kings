@@ -4,7 +4,6 @@
 # Time: Sunday Morning
 
 label v10_linds_room:
-    $ v10s10_hangWLinds = True
 
     scene v10slds1 # TPP. Show MC arriving at the door to Lindsey's house and knocking. Normal expression, mouth closed.
     with fade
@@ -111,7 +110,7 @@ label v10_linds_room:
             scene v10slds3
             with dissolve
 
-            li " If you've heard about it then I'm sure others have as well *sighs* , we all know bad news travels faster than good news."
+            li "If you've heard about it then I'm sure others have as well *sighs* , we all know bad news travels faster than good news."
 
         "No, I had no clue":
             scene v10slds3a
@@ -164,7 +163,7 @@ label v10_linds_room:
 
     li "I don't have the motivation to do anything. School seems pointless, home seems pointless, everything seems pointless."
 
-    li " I know it's okay to be sad, but sometimes I'm not just sad... I get really angry... I just... I can't believe she's really gone. And she's never coming back."
+    li "I know it's okay to be sad, but sometimes I'm not just sad... I get really angry... I just... I can't believe she's really gone. And she's never coming back."
 
     scene v10slds3d
     with dissolve
