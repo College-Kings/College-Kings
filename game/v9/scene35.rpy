@@ -84,10 +84,6 @@ label v9_room_sat_aft:
         scene v9rsa3 # TPP. Show MC now on his back on his bed, looking at his phone (don't show phone screen)
         with dissolve
         
-        play sound "sounds/vibrate.mp3"
-
-        u "(I wonder who this is)"
-
         $ contact_Chloe.newMessage(_("Hey [name], what you up to?"), queue=False)
         $ contact_Chloe.addReply(_("Nothing much. Just relaxing. I'm kind of tired."))
         $ contact_Chloe.newMessage(_("Awwww. Long day?"))
@@ -95,9 +91,14 @@ label v9_room_sat_aft:
             $ contact_Chloe.addReply(_("Yeah haha, I feel wiped."), v9s35_reply1)
         else:
             $ contact_Chloe.addReply(_("Yeah haha, I feel wiped."), v9s35_reply8)
+    
+        play sound "sounds/vibrate.mp3"
 
-        call screen phone
+        u "(I wonder who this is)"
+
         label s35_PhoneContinueW:
+            if contact_Chloe.getReplies():
+                call screen phone
             if contact_Chloe.getReplies():
                 "(I should reply to Chloe.)"
                 jump s35_PhoneContinueW

@@ -276,8 +276,9 @@ label v10_aft_walk_home:
         contact_Lauren.addReply("Sure, on my way")
         contact_Lauren.newMessage(":)")
 
-    call screen phone
     label v10s23_phoneCheckLau:
+        if contact_Lauren.getReplies():
+            call screen phone
         if contact_Lauren.getReplies():
             u "(I should reply to Lauren)"
 
