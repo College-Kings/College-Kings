@@ -179,7 +179,7 @@ label v10_econ_class:
     scene v10eco7
     with dissolve
 
-    u "Yeah"
+    u "Yeah?"
 
     scene v10eco8 # FPP. MC now stood infront of Ms rose at front of class, Show Ms. Rose, mouth open
     with dissolve
