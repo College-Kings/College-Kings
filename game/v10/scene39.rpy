@@ -103,7 +103,7 @@ label v10_riley_walk:
         scene v10srwh3a
         with dissolve
 
-        u "Yeah, that's true"
+        u "Yeah, that's true."
 
     scene v10srwh3a
     with dissolve
