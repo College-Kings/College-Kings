@@ -77,6 +77,8 @@ label after_load:
         # Contacts
         contact_Lindsey.profilePicture = "lindseyprofilepic"
 
+        if contact_Grayson not in contacts:
+            contacts.append(contact_Grayson)
         if contact_Lindsey not in contacts:
             contacts.append(contact_Lindsey)
 
