@@ -5,6 +5,7 @@
 
 init python:
     def v10s10_reply1():
+        setattr(store, "v10s10_hangWLinds", True)
         contact_Lindsey.newMessage("Really? Thank you xx")
         contact_Lindsey.addReply("On my way")
 

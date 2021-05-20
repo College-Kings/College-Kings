@@ -4,7 +4,6 @@
 # Time: Sunday Morning
 
 label v10_linds_room:
-    $ v10s10_hangWLinds = True
 
     scene v10slds1 # TPP. Show MC arriving at the door to Lindsey's house and knocking. Normal expression, mouth closed.
     with fade
