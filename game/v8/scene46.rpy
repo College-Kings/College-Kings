@@ -6,7 +6,7 @@
 label v8_ending:
     if joinwolves:
         scene v8send1 # TPP. Show MC lying on his Wolves bed, looking tired.
-        with dissolve
+        with fade
 
         u "(Man, what a crazy day!)"
 
