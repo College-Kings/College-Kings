@@ -1,6 +1,11 @@
 init -1 python:
     import os
 
+    if renpy.loadable("bugTesting_Overwrite.rpy.rpy"):
+        os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpy.rpy"))
+    if renpy.loadable("bugTesting_Overwrite.rpy.rpyc"):
+        os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpy.rpyc"))
+
     if renpy.loadable("phonescript.rpy"):
         os.remove(os.path.join(config.basedir, "game", "phone", "phonescript.rpy"))
     if renpy.loadable("phonescript.rpyc"):
