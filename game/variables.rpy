@@ -375,6 +375,7 @@ default v10_reassure_jenny = False
 default v10_chloe_rematch = False
 default v10_chloe_sexy = False
 default v10_help_nora_freeroam = False
+default v10_perry_help_room = False
 default makeSamCock = False
 default drinkWsam = False
 default v10_ms_r_interfere = False
