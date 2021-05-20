@@ -29,9 +29,8 @@ label v10_tues_room_night:
             label v10s32_phoneCheckW:
                 if contact_Lauren.getReplies():
                     call screen phone
-
+                if contact_Lauren.getReplies():
                     u "(I should reply to Lauren)"
-
                     jump v10s32_phoneCheckW
 
             scene v10strn2b # TPP. Same as 2, MC no longer on his phone, subtle smile.
@@ -89,9 +88,8 @@ label v10_tues_room_night:
             label v10s32_phoneCheckA:
                 if contact_Lauren.getReplies():
                     call screen phone
-
+                if contact_Lauren.getReplies():
                     u "(I should reply to Lauren)"
-
                     jump v10s32_phoneCheckA
 
             scene v10strn7b # TPP. Same as 2, MC no longer on his phone, subtle smile.

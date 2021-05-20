@@ -216,8 +216,9 @@ label v9_start_wolves:
     $ contact_Imre.addReply(_("Hell no! But we need to get ready!"), v9s1_reply1)
     $ contact_Imre.addReply(_("I think so, actually. You and Sebastian really helped"), v9s1_reply2)
     
-    call screen phone
     label v9_phn_imre1:
+        if contact_Imre.getReplies():
+            call screen phone
         if contact_Imre.getReplies():
             u "(I should talk to Imre.)"
             jump v9_phn_imre1

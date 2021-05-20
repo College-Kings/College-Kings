@@ -280,11 +280,11 @@ label v10_aft_walk_home:
         contact_Lauren.addReply("Sure, on my way")
         contact_Lauren.newMessage(":)")
 
-    call screen phone
     label v10s23_phoneCheckLau:
         if contact_Lauren.getReplies():
+            call screen phone
+        if contact_Lauren.getReplies():
             u "(I should reply to Lauren)"
-
             jump v10s23_phoneCheckLau
 
     scene v10smwh1d # TPP. Same camera as v10smwh1. MC is looking at his phone.

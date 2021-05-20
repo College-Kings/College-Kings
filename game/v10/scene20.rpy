@@ -33,8 +33,9 @@ label v10_room_mon_night:
         $ contact_Josh.addReply("Oh yeah, I heard.", v10s20_reply1)
         $ contact_Josh.addReply("I have no idea what you're talking about.", v10s20_reply2)
 
-        call screen phone
         label v10s20_PhoneContinueW:
+            if contact_Josh.getReplies():
+                call screen phone
             if contact_Josh.getReplies():
                 "(I should reply to Josh.)"
                 jump v10s20_PhoneContinueW
@@ -89,8 +90,9 @@ label v10_room_mon_night:
         $ contact_Josh.addReply("Oh yeah, I heard.", v10s20_reply1)
         $ contact_Josh.addReply("I have no idea what you're talking about.", v10s20_reply2)
 
-        call screen phone
         label v10s20_PhoneContinue2:
+            if contact_Josh.getReplies():
+                call screen phone
             if contact_Josh.getReplies():
                 "(I should reply to Josh.)"
                 jump v10s20_PhoneContinue2

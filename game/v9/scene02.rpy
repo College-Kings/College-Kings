@@ -250,8 +250,9 @@ label v9_start_apes:
     $ contact_Ryan.addReply(_("Hell no! But we need to get ready!"), v9s2_reply1)
     $ contact_Ryan.addReply(_("I think so, actually. You and Cameron really helped"), v9s2_reply2)
 
-    call screen phone
     label v9_phn_ryan1:
+        if contact_Ryan.getReplies():
+            call screen phone
         if contact_Ryan.getReplies():
             u "(I should talk to Ryan.)"
             jump v9_phn_ryan1
