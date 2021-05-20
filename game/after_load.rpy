@@ -1,6 +1,11 @@
 init -1 python:
     import os
 
+    if renpy.loadable("bugTesting_Overwrite.rpy.rpy"):
+        os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpy.rpy"))
+    if renpy.loadable("bugTesting_Overwrite.rpy.rpyc"):
+        os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpy.rpyc"))
+
     if renpy.loadable("phonescript.rpy"):
         os.remove(os.path.join(config.basedir, "game", "phone", "phonescript.rpy"))
     if renpy.loadable("phonescript.rpyc"):
@@ -34,9 +39,6 @@ label after_load:
 
         # Kiwii Posts
         for kiwiiPost in kiwiiPosts:
-            try: kiwiiPost.message = kiwiiPost.caption
-            except AttributeError: pass
-
             try: kiwiiPost.img = kiwiiPost.image
             except AttributeError: pass
 
@@ -47,10 +49,13 @@ label after_load:
                     kiwiiPost.img = "images/phone/kiwii/posts/v{}/{}".format(i, kiwiiPost.img.split("/")[-1])
                     break
 
-            try: kiwiiPost.sentComments = kiwiiPost.comments
+            try: kiwiiPost.message = kiwiiPost.caption
             except AttributeError: pass
 
-            try: kiwiiPost.message = kiwiiPost.caption
+            if kiwiiPost.message[0] == "[" and kiwiiPost.message[1] != "[":
+                kiwiiPost.message = "[" + kiwiiPost.message
+
+            try: kiwiiPost.sentComments = kiwiiPost.comments
             except AttributeError: pass
 
             kiwiiPost.profilePicture = kiwiiPost.getProfilePicture()
