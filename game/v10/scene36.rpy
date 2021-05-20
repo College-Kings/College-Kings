@@ -33,7 +33,7 @@ label v10_emily_vs_aubrey:
     scene v10eva5 # fourth is Aubrey wrapping her legs around Emily and Emily getting her head free,
     with dissolve
 
-    em "*grunts*"
+    em "*Grunts*"
 
     aa "I like where this is going!"
 

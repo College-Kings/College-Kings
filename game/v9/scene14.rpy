@@ -10,7 +10,7 @@ label v9_thur_room_w_seb:
 
     play sound "sounds/knock.mp3"
 
-    "*knock* *knock* *knock*"
+    "*Knock* *knock* *knock*"
 
     scene v9trs2 # TPP. Show MC getting up from his chair towards the door to open it.
     with dissolve
@@ -439,7 +439,7 @@ label v9_thur_w_no_punch:
     scene v9trs5d
     with dissolve
 
-    se "Pussy aside, there is time a time and place for everything. And that was your time to get punched."
+    se "Pussy aside, there is a time and place for everything. And that was your time to get punched."
 
     scene v9trs5c
     with dissolve

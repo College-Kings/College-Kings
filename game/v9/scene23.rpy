@@ -122,7 +122,7 @@ label v9_dinner_w_rose:
     scene v9damr3
     with dissolve
 
-    ro "*laughs* I'll give you an extra helping to be sure it's fed properly."
+    ro "*Laughs* I'll give you an extra helping to be sure it's fed properly."
 
     scene v9damr3a # FPP. Same camera as v9damr3, Show Ms. Rose in living room, neutral look, mouth open, arm up, palm open, pointing to dining room
     with dissolve
@@ -174,7 +174,7 @@ label v9_dinner_w_rose:
             scene v9damr9
             with dissolve
 
-            u "*laughs* I'm sure some desperate virgin will have pity on you."
+            u "*Laughs* I'm sure some desperate virgin will have pity on you."
 
         "Talk About Viking Assignment":
             scene v9damr9
@@ -205,7 +205,7 @@ label v9_dinner_w_rose:
             scene v9damr9a
             with dissolve
 
-            imre "*laughs* I don't think Cam has to try that hard to fail."
+            imre "*Laughs* I don't think Cam has to try that hard to fail."
 
     scene v9damr10 # FPP. Show Ms. Rose entering the dining room with a large lasange, slight smile, mouth closed
     with dissolve
@@ -215,7 +215,7 @@ label v9_dinner_w_rose:
     scene v9damr11 # FPP. Show Ms. Rose setting lasange on table, slight smile, mouth closed
     with dissolve
 
-    u "*laughs* Now I think I have a tapeworm, too!"
+    u "*Laughs* Now I think I have a tapeworm, too!"
 
     scene v9damr12 # FPP. Show Ms. Rose Sat at the end of table, Imre seated to MC's right,neutral expressions,  Ms. Rose mouth open, Imre mouth closed
     with dissolve
@@ -347,7 +347,7 @@ label v9_dinner_w_rose:
         "Wait":
             scene v9damr9
             with dissolve
-            u "(I wanna help but she said not to get up)"
+            u "(I wanna help but she said not to get up.)"
 
             scene v9damr9a
             with dissolve
@@ -521,7 +521,7 @@ label v9_dinner_w_rose:
         scene v9damr2g
         with dissolve
 
-        u "What's the point of being part of a community if you can't help your fellow man...or woman. Haha."
+        u "What's the point of being part of a community if you can't help your fellow man... or woman. Haha."
 
         scene v9damr2h # FPP. Same camera as v9damr2, show Ms. Rose opens door with a nervous smile, reaching out to place hand on MC arm, mouth open
         with dissolve

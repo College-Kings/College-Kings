@@ -30,7 +30,7 @@ label v9_room_fri_aft:
             if s20KiwiiPost.getReplies():
                 call screen phone
             if s20KiwiiPost.getReplies():
-                "(I should check Kiwii)"
+                "(I should check Kiwii.)"
                 jump s20_phoneExit1
         jump v9_room_fri_aft_contW
 
@@ -60,7 +60,7 @@ label v9_room_fri_aft:
             if s20KiwiiPost.getReplies():
                 call screen phone
             if s20KiwiiPost.getReplies():
-                "(I should check Kiwii)"
+                "(I should check Kiwii.)"
                 jump s20_phoneExit2
         jump v9_room_fri_aft_contA
 
@@ -68,7 +68,7 @@ label v9_room_fri_aft_contW:
     scene v9rfa2a # TPP. Same camera as v9rfa2, show MC placing his phone on his desk.
     with dissolve
 
-    u "(They're really hyping this thing up. I need to get some workouts in before it's too late)"
+    u "(They're really hyping this thing up. I need to get some workouts in before it's too late.)"
 
     jump v9_room_w_chris
 
@@ -76,6 +76,6 @@ label v9_room_fri_aft_contA:
     scene v9rfa4a # TPP. Same camera as v9rfa4, show MC placing his phone on his desk.
     with dissolve
 
-    u "(They're really hyping this thing up. I need to get some workouts in before it's too late)"
+    u "(They're really hyping this thing up. I need to get some workouts in before it's too late.)"
 
     jump v9_room_w_sam

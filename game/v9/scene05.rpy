@@ -11,7 +11,7 @@ label v9_dream_wakeup:
 
         scene v9dream20a # MC turns to the side with his hand supporting his head, neutral expression, mouth closed
         with dissolve
-        u "(God I hate dreams. Most of the time, they're good. But sometimes...they really suck.)"
+        u "(God I hate dreams. Most of the time, they're good. But sometimes... they really suck.)"
 
         $ contact_Riley.newMessage(_("Hey, [name]. You awake?"), queue=False)
         $ contact_Riley.addReply(_("Hey Riley, yeah I'm up, is everything okay?"))

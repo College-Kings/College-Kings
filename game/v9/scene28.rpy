@@ -92,7 +92,7 @@ label v9_call_w_lindsey:
         with dissolve
 
         li "Someone's looking to feel special before his big day I see."
-        li "If you must know, some of my girlfriends were talking about some of this year's new fighters and your name came up so I thought I see how you were feeling."
+        li "If you must know, some of my girlfriends were talking about some of this year's new fighters and your name came up so I thought I'd see how you were feeling."
 
         scene v9cwl3b
         with dissolve
@@ -140,7 +140,8 @@ label v9_call_w_lindsey:
         scene v9cwl1 # TPP. Show MC on his bed in his Apes room, phone in hand, looking tired.
         with fade
 
-        u "(What a jam-packed day. And this wasn't even the real deal. Tomorrow is showtime. I didn't see myself going down this road when I started college, but I'm in too deep now. There's no way I'll lose, no way in hell.)"
+        u "(What a jam-packed day. And this wasn't even the real deal. Tomorrow is showtime.)"
+        u "(I didn't see myself going down this road when I started college, but I'm in too deep now. There's no way I'll lose, no way in hell.)"
 
         play sound "sounds/calling.mp3"
         pause 1
@@ -217,7 +218,8 @@ label v9_call_w_lindsey:
         scene v9cwl2
         with dissolve
 
-        li "Someone's looking to feel special before his big day I see. If you must know, some of my girlfriends were talking about some of this year's new fighters and your name came up so I thought I see how you were feeling."
+        li "Someone's looking to feel special before his big day I see."
+        li "If you must know, some of my girlfriends were talking about some of this year's new fighters and your name came up so I thought I'd see how you were feeling."
 
         scene v9cwl1b
         with dissolve

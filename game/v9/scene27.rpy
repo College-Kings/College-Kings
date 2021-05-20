@@ -298,7 +298,7 @@ label v9_train_w_apes:
                 scene v9twa5a
                 with dissolve
 
-                u "*grumbling* Thank you."
+                u "*Grumbling* Thank you."
 
                 scene v9twa5
                 with dissolve

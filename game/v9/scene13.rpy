@@ -14,7 +14,7 @@ label thurs_aft_room:
         with dissolve
 
         if hl_punch:
-            u "(Well, that guy got what he deserved, either way. And seems like I did put up quite a show for the hotness across the hallway)"
+            u "(Well, that guy got what he deserved, either way. And seems like I did put up quite a show for the hotness across the hallway.)"
 
         else:
             u "(Shouldn't have taken my eyes off that fucker. Catching me off guard like that. But at least I got Lindsey's number, so it wasn't all bad.)"
@@ -37,7 +37,7 @@ label thurs_aft_room:
         scene v9tar3a # TPP. Same camera as v9tar3, MC mouth closed.
         with dissolve
 
-        u "(I guess I got too used to the company around here. Things aren't really fun when alone)"
+        u "(I guess I got too used to the company around here. Things aren't really fun when alone.)"
 
         scene v9tar4 # TPP. Show MC leaning further back in his chair, playing legs on desk.
         with dissolve
@@ -56,7 +56,7 @@ label thurs_aft_room:
         with dissolve
 
         if hl_punch:
-            u "(Well, that guy got what he deserved, either way. And seems like I did put up quite a show for the hotness across the hallway)"
+            u "(Well, that guy got what he deserved, either way. And seems like I did put up quite a show for the hotness across the hallway.)"
 
         else:
             u "(Shouldn't have taken my eyes off that fucker. Catching me off guard like that. But at least I got Lindsey's number, so it wasn't all bad.)"
@@ -79,7 +79,7 @@ label thurs_aft_room:
         scene v9tar7a # TPP. Same camera as v9tar3, MC mouth closed.
         with dissolve
 
-        u "(I guess I got too used to the company around here. Things aren't really fun when alone)"
+        u "(I guess I got too used to the company around here. Things aren't really fun when alone.)"
 
         scene v9tar8 # TPP. Show MC leaning further back in his chair, playing legs on desk.
         with dissolve

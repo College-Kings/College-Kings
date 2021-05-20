@@ -13,15 +13,15 @@ label v9_wolves_pre_fight:
         scene v9wpf1a # TPP. Same camera as v9wpf1, MC smiling.
         with dissolve
 
-        u "(I can still taste the caramel)"
+        u "(I can still taste the caramel.)"
 
         scene v9wpf1
         with dissolve
 
     else:
-        u "(I hope Lindsey's not mad at me. She's a nice girl. And she's really hot! I don't wanna blow it)"
+        u "(I hope Lindsey's not mad at me. She's a nice girl. And she's really hot! I don't wanna blow it.)"
 
-    u "(I suppose I should get ready for the Brawl)"
+    u "(I suppose I should get ready for the Brawl.)"
 
     scene v9wpf2 # TPP. Show MC stood in his room now wearing outfit 2.
     with fade
@@ -33,7 +33,7 @@ label v9_wolves_pre_fight:
 
     play sound "sounds/knock.mp3"
 
-    "*knock* *knock*"
+    "*Knock* *knock*"
 
     u "Come in!"
 

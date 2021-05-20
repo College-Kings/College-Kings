@@ -21,7 +21,7 @@ label v9_room_w_sam:
     scene v9rwsa3 # FPP. Show Lindsey stood outside MC's door, Lindsey mouth closed.
     with dissolve
 
-    u "(Wow, didn't expect it to be her)"
+    u "(Wow, didn't expect it to be her.)"
 
     u "Hey, what's up?"
 
@@ -105,7 +105,7 @@ label v9_room_w_sam:
         scene v9rwsa6d
         with dissolve
 
-        sa "I know, but sometimes Cameron can really be a...well, an ape!"
+        sa "I know, but sometimes Cameron can really be a... well, an Ape!"
 
         scene v9rwsa6e
         with dissolve
@@ -167,7 +167,7 @@ label v9_room_w_sam:
                 scene v9rwsa6e
                 with dissolve
 
-                u "Maybe not everyone has gone through your troubles, but plenty have...and they've come back from it just fine."
+                u "Maybe not everyone has gone through your troubles, but plenty have... and they've come back from it just fine."
 
                 scene v9rwsa6a
                 with dissolve
