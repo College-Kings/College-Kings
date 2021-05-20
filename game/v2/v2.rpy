@@ -483,8 +483,6 @@ label gb:
 
         if adamtut == True:
             jump fkcon
-        elif s28_LarsFight:
-            call screen s28_LarsFightChoice
         else:
             call screen ft1
 
@@ -553,7 +551,7 @@ label gb:
 
     label playf1:
 
-        $ youdmg = 0
+        $ youDamage = 0
         $ tomdmg = 0
         $ tomstance = renpy.random.choice([1, 2, 3])
         $ tomattack = renpy.random.choice([1, 2, 3])
@@ -563,21 +561,21 @@ label gb:
         $ reaction = 3
         $ reactiona = 3.2
         $ tomhealth = 3
-        $ youhealth = 7
+        $ youHealth = 7
         jump fgo1
 
     label moderate:
         $ reaction = 1.3
         $ reactiona = 1.5
         $ tomhealth = 6
-        $ youhealth = 4
+        $ youHealth = 4
         jump fgo2
 
     label hard:
         $ reaction = 0.5
         $ reactiona = 0.7
         $ tomhealth = 8
-        $ youhealth = 3
+        $ youHealth = 3
         jump fgo3
 
 
@@ -589,7 +587,7 @@ label gb:
     label autowin:
         $ simtomfight = True
         $ stance = 1
-        $ youhealth = 100000
+        $ youHealth = 100000
         $ tomhealth = 3
         jump tomsimstart2
 
@@ -607,33 +605,19 @@ label gb:
         scene jab1pic
         with dissolve
 
-        python:
-            w = renpy.input("Which button should be hook / block face?")
-            if w == "": w = "w"
+        $ w = renpy.input("Which button should be hook / block face?", default="w").strip() or "w"
 
         scene hook1pic
         with dissolve
 
-        python:
-            q = renpy.input("Which button should be jab / block head?")
-            if q == "": q = "q"
+        $ q = renpy.input("Which button should be hook / block face?", default="q").strip() or "q"
 
         scene kick1pic
         with dissolve
 
-        python:
-            r = renpy.input("Which button should be kick / block leg?")
-            if r == "": r = "r"
+        $ r = renpy.input("Which button should be hook / block face?", default="r").strip() or "r"
 
-        if s28_LarsFight:
-            call screen af3
-
-        # elif adamtut:
-        #     call screen s28_LarsKeybindOptions
-
-        else:
-            call screen ft3
-
+        return
 
     label tomkick1:
 
@@ -643,7 +627,7 @@ label gb:
             $ renpy.pause(1)
             play sound "sounds/fall.mp3"
             $ stance = 0
-            $ youdmg = 0
+            $ youDamage = 0
             scene youfinish
             with vpunch
             $ renpy.pause()
@@ -665,13 +649,13 @@ label gb:
 
 
     label tomkick2:
-        if youdmg >= youhealth:
+        if youDamage >= youHealth:
 
             scene tomfinishmovie
             $ renpy.pause(1)
             play sound "sounds/fall.mp3"
             $ stance = 0
-            $ youdmg = 0
+            $ youDamage = 0
             scene tomfinish
             with vpunch
 
@@ -694,13 +678,13 @@ label gb:
 
 
     label tomkick3:
-        if youdmg >= youhealth:
+        if youDamage >= youHealth:
 
             scene tomfinishmovie
             $ renpy.pause(1)
             play sound "sounds/fall.mp3"
             $ stance = 0
-            $ youdmg = 0
+            $ youDamage = 0
             scene tomfinish
             with vpunch
 
@@ -729,7 +713,7 @@ label gb:
             $ renpy.pause(1)
             play sound "sounds/fall.mp3"
             $ stance = 0
-            $ youdmg = 0
+            $ youDamage = 0
             scene youfinish
             with vpunch
             $ renpy.pause()
@@ -752,13 +736,13 @@ label gb:
             jump tomattack4
 
     label tomhook2:
-        if youdmg >= youhealth:
+        if youDamage >= youHealth:
 
             scene tomfinishmovie
             $ renpy.pause(1)
             play sound "sounds/fall.mp3"
             $ stance = 0
-            $ youdmg = 0
+            $ youDamage = 0
             scene tomfinish
             with vpunch
 
@@ -779,13 +763,13 @@ label gb:
             jump tomattack5
 
     label tomhook3:
-        if youdmg >= youhealth:
+        if youDamage >= youHealth:
 
             scene tomfinishmovie
             $ renpy.pause(1)
             play sound "sounds/fall.mp3"
             $ stance = 0
-            $ youdmg = 0
+            $ youDamage = 0
             scene tomfinish
             with vpunch
 
@@ -814,7 +798,7 @@ label gb:
             $ renpy.pause(1)
             play sound "sounds/fall.mp3"
             $ stance = 0
-            $ youdmg = 0
+            $ youDamage = 0
             scene youfinish
             with vpunch
             $ renpy.pause()
@@ -839,14 +823,14 @@ label gb:
 
 
     label tomjab2:
-        if youdmg >= youhealth:
+        if youDamage >= youHealth:
 
 
             scene tomfinishmovie
             $ renpy.pause(1)
             play sound "sounds/fall.mp3"
             $ stance = 0
-            $ youdmg = 0
+            $ youDamage = 0
             scene tomfinish
             with vpunch
 
@@ -867,7 +851,7 @@ label gb:
 
     label tomjab3:
 
-        if youdmg >= youhealth:
+        if youDamage >= youHealth:
 
 
             scene tomfinishmovie
@@ -875,7 +859,7 @@ label gb:
 
             play sound "sounds/fall.mp3"
             $ stance = 0
-            $ youdmg = 0
+            $ youDamage = 0
             scene tomfinish
             with vpunch
 
@@ -984,7 +968,7 @@ label gb:
     label timer4:
 
         play sound "sounds/hs.mp3"
-        $ youdmg += 1
+        $ youDamage += 1
         scene tomhookhit
         with hpunch
 
@@ -1062,7 +1046,7 @@ label gb:
         with hpunch
 
         pause 0.5
-        $ youdmg += 1
+        $ youDamage += 1
         $ stance = 1
         $ tomattack = renpy.random.choice([1, 2, 3])
         $ simtom = renpy.random.choice([1, 2, 3, 4])
@@ -1135,7 +1119,7 @@ label gb:
         with hpunch
 
         pause 0.5
-        $ youdmg += 1
+        $ youDamage += 1
         $ stance = 1
         $ tomattack = renpy.random.choice([1, 2, 3])
         $ simtom = renpy.random.choice([1, 2, 3, 4])

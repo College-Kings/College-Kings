@@ -47,12 +47,15 @@ init python:
 
             return message
 
-        def addReply(self, message, func=None):
+        def addReply(self, message, func=None, newMessage=False):
             reply = Reply(message, func)
 
             # Append reply to last sent message
             try:
-                if self.pendingMessages:
+                if newMessage:
+                    self.newMessage("")
+                    message.replies.append(reply)
+                elif self.pendingMessages:
                     self.pendingMessages[-1].replies.append(reply)
                 else:
                     self.sentMessages[-1].replies.append(reply)
@@ -62,18 +65,21 @@ init python:
 
             self.unlock()
 
-        def addImgReply(self, image, func):
+        def addImgReply(self, image, func=None, newMessage=False):
             reply = ImgReply(image, func)
 
             # Append reply to last sent message
             try:
-                if self.pendingMessages:
+                if newMessage:
+                    message = self.newMessage("")
+                    message.replies.append(reply)
+                elif self.pendingMessages:
                     self.pendingMessages[-1].replies.append(reply)
                 else:
                     self.sentMessages[-1].replies.append(reply)
-            except Exception:
-                self.newMessage("", queue=False)
-                self.pendingMessages[-1].replies.append(reply)
+            except IndexError:
+                message = self.newMessage("", queue=False)
+                message.replies.append(reply)
 
             self.unlock()
 
@@ -136,15 +142,14 @@ init python:
             self.reply = None
 
     class Reply:
-        def __init__(self, message, func=None, label=None):
+        def __init__(self, message, func=None):
             self.message = message
             self.func = func
 
     class ImgReply:
-        def __init__(self, image, func=None, label=None):
+        def __init__(self, image, func=None):
             self.image = image
             self.func = func
-            self.label = label
 
 init offset = -1
 default contacts = []
@@ -253,7 +258,10 @@ screen messager(contact=None):
 
 screen reply(contact=None):
 
-    vbox xpos 1200 yalign 0.84 spacing 15:
+    vbox:
+        xpos 1200
+        yalign 0.84
+        spacing 15
 
         for reply in contact.getReplies():
             if isinstance(reply, Reply):

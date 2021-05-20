@@ -28,6 +28,11 @@ label after_load:
             try: app.homeScreen = app.screen
             except AttributeError: pass
 
+        # Kiwii Users
+        for user in kiwiiUsers:
+            kiwiiUsers[user]["profilePicture"] = os.path.splitext(kiwiiUsers[user]["profilePicture"])[0].replace("Profile Pictures", "profilePictures") + ".webp"
+            
+
         # Kiwii Posts
         for kiwiiPost in kiwiiPosts:
             try: kiwiiPost.message = kiwiiPost.caption
@@ -36,12 +41,12 @@ label after_load:
             try: kiwiiPost.img = kiwiiPost.image
             except AttributeError: pass
 
+            kiwiiPost.img = os.path.splitext(kiwiiPost.img)[0] + ".webp"
+
             for i in range(7, 10):
                 if renpy.loadable("images/phone/kiwii/posts/v{}/{}".format(i, kiwiiPost.img.split("/")[-1])):
                     kiwiiPost.img = "images/phone/kiwii/posts/v{}/{}".format(i, kiwiiPost.img.split("/")[-1])
                     break
-
-            kiwiiPost.img = os.path.splitext(kiwiiPost.img)[0] + ".webp"
 
             try: kiwiiPost.sentComments = kiwiiPost.comments
             except AttributeError: pass
@@ -49,9 +54,15 @@ label after_load:
             try: kiwiiPost.message = kiwiiPost.caption
             except AttributeError: pass
 
+            # Kiwii Comments
+            for comment in kiwiiPost.sentComments:
+                try: comment.message = comment.text
+                except AttributeError: pass
+
             # Kiwii Replies
             try:
                 for reply in kiwiiPost.replies:
+                    kiwiiPost.replies.remove(reply)
                     kiwiiPost.addReply(reply.reply, numberLikes=reply.numberLikes, mentions=reply.mentions)
             except AttributeError: pass
 

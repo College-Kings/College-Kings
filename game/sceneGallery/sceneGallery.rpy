@@ -31,7 +31,7 @@ init python:
     SceneGallery("v8_cl_start")
     SceneGallery("v8_ri_start")
     SceneGallery("hoco_amb_night")
-    SceneGallery("s28_LarsFight")
+    SceneGallery("int_deal_w_josh")
     SceneGallery("amber_sex_at_joshs")
     SceneGallery("v9_aubrey_scene_lake")
     SceneGallery("v9_emily_dorm")

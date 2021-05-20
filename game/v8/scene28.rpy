@@ -125,408 +125,365 @@ label int_deal_w_josh:
     scene v8sdd10 # TPP. Show Joe running at Josh with the Pipe looking angry, Lars readying for a fight with MC.
     with dissolve
 
-    label s28_LarsFight:
-        $ s28_LarsFight = True
+    # Lars Fight
+    $ allies = [mc]
+    $ enemies = [lars]
 
-        $ allies = [mc]
-        $ enemies = [lars]
+    call screen fight_tutorialPopup
 
-        call screen fightTutorial
+    scene v8sdd10
 
-    label s28_LarsFightCont:
-        call screen s28_LarsFightChoice
+    call screen fight_typeMenu
 
-    # Select Difficulty
-    label s28_LarsFightDifficulty:
-        $ youdmg = 0
+    if fight_type == "normal":
+        $ simLarsFight = False
+        $ youDamage = 0
         $ larsdmg = 0
         $ larsStance = renpy.random.choice([1, 2, 3, 4])
         $ larsAttack = renpy.random.choice([1, 2, 3, 4])
-        call screen s28_LarsSelectDifficulty
 
-    label s28_LarsEasyDifficulty:
-        $ reaction = 3
-        $ reactiona = 3.2
-        $ larshealth = 5
-        $ youhealth = 5
-        call screen s28_LarsKeybindOptions
+        call screen fight_selectDifficulty
 
-    label s28_LarsModerateDifficulty:
-        $ reaction = 1.3
-        $ reactiona = 1.5
-        $ larshealth = 6
-        $ youhealth = 3
-        call screen s28_LarsKeybindOptions
-
-    label s28_LarsHardDifficulty:
-        $ reaction = 0.5
-        $ reactiona = 0.7
-        $ larshealth = 8
-        $ youhealth = 2
-        call screen s28_LarsKeybindOptions
-        
-
-    label s28_LarsSimulateFight:
+        call screen fight_keybindOptions
+    
+    elif fight_type == "simReal":
         $ simLarsFight = True
         $ stance = 1
         $ larshealth = 6
-        $ youhealth = 3
+        $ youHealth = 3
 
-        $ youdmg = 0
+        $ youDamage = 0
         $ larsdmg = 0
         $ larsStance = renpy.random.choice([1, 2, 3, 4])
         $ larsAttack = renpy.random.choice([1, 2, 3, 4])
         $ larsSimulation = renpy.random.choice([1, 2, 3, 4, 5, 6])
-        jump lars_McAttack
 
-    label s28_LarsAutoWin:
+    elif fight_type == "simWin":
         $ simLarsFight = True
         $ stance = 1
-        $ youhealth = 100000
+        $ youHealth = 100000
         $ larshealth = 3
 
-        $ youdmg = 0
+        $ youDamage = 0
         $ larsdmg = 0
         $ larsStance = renpy.random.choice([1, 2, 3, 4])
         $ larsAttack = renpy.random.choice([1, 2, 3, 4])
         $ larsSimulation = renpy.random.choice([1, 2, 3, 4, 5, 6])
-        jump lars_McAttack
 
-    label s28_LarsStartFight:
-        $ simLarsFight = False
+# Lars attacks MC
+label lars_McAttack:
+    $ stance = 2
 
+    show screen fight_overlay(stance="defend")
+    
+    # Lars hook
+    if larsAttack == 1:
 
-    label lars_McAttack:
-        $ stance = 2
+        scene larshook
+        pause 0.6 # Trial Error
 
-        if larsAttack == 1:
+        scene larshookend
+        $ larsStance = renpy.random.choice([1, 2, 3, 4]) # Lars next defensive stance
+        $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6]) # What attack you're gonna pick next
 
-            scene larshook
-            pause 0.6 # Trial Error
-
-            scene larshookend
-            $ larsStance = renpy.random.choice([1, 2, 3, 4]) # Lars next defensive stance
-            $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6]) # What attack you're gonna pick next
-
-            if simLarsFight:
-                if larsSimulation in [1, 2, 3]: # simlars is lars random attack
-                    jump lars_McKickHit # REMEMBER switch attacks!
-                else:
-                    jump lars_McKickBlock
-
-            else:
-                call screen s28_larsMcAttack
-
-        if larsAttack == 2:
-
-            scene larsjab
-            $ renpy.pause(0.5)
-
-            scene larsjabend
-            $ larsStance = renpy.random.choice([1, 2, 3, 4])
-            $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
-
-            if simLarsFight:
-                if larsSimulation in [1, 2, 3]:
-                    jump lars_McJabHit
-                else:
-                    jump lars_McJabBlock
-
-            else:
-                call screen s28_larsMcAttack
-
-        if larsAttack == 3:
-
-            scene larsbody
-            $ renpy.pause(0.7)
-
-            scene larsbodyend
-            $ larsStance = renpy.random.choice([1, 2, 3, 4])
-            $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
-
-            if simLarsFight:
-                if larsSimulation in [1, 2, 3]:
-                    jump lars_McHookHit
-                else:
-                    jump lars_McHookBlock
-
-            else:
-                call screen s28_larsMcAttack
-
-        if larsAttack == 4:
-
-            scene larskick
-            $ renpy.pause(0.6)
-
-            scene larskickend
-            $ larsStance = renpy.random.choice([1, 2, 3, 4])
-            $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
-
-            if simLarsFight:
-                if larsSimulation in [1, 2, 3]:
-                    jump lars_McBodyhookHit
-                else:
-                    jump lars_McBodyhookBlock
-
-            else:
-                call screen s28_larsMcAttack
-
-    ### Add image defines + Start/End Images
-    image MC_Lars_Kick_hit = Movie(play="images/v8/Scene 28/mckickhit.webm", start_image="images/v8/Scene 28/mckickhitstart.webp", image="images/v8/Scene 28/mckickhitend.webp", loop = False)
-    image MC_Lars_Kick_block = Movie(play="images/v8/Scene 28/mckickblocked.webm", start_image="images/v8/Scene 28/mckickblockedstart.webp", image="images/v8/Scene 28/mckickblockedend.webp", loop = False)
-    image MC_Lars_BodyJab_hit = Movie(play="images/v8/Scene 28/mcbodyhit.webm", start_image="images/v8/Scene 28/mcbodyhookstart.webp", image="images/v8/Scene 28/mcbodyhitend.webp", loop = False)
-    image MC_Lars_BodyJab_block = Movie(play="images/v8/Scene 28/mcbodyblocked.webm", start_image="images/v8/Scene 28/mcbodyblockedstart.webp", image="images/v8/Scene 28/mcbodyblockedend.webp", loop = False)
-    image MC_Lars_Jab_hit = Movie(play="images/v8/Scene 28/mcjabhit.webm", start_image="images/v8/Scene 28/mcjabhitstart.webp", image="images/v8/Scene 28/mcjabhitend.webp", loop = False)
-    image MC_Lars_Jab_block = Movie(play="images/v8/Scene 28/mcjabblocked.webm", start_image="images/v8/Scene 28/mcjabblockedstart.webp", image="images/v8/Scene 28/mcjabblockedend.webp", loop = False)
-    image MC_Lars_Hook_hit = Movie(play="images/v8/Scene 28/mchookhit.webm", start_image="images/v8/Scene 28/mchookhitstart.webp", image="images/v8/Scene 28/mchookhitend.webp", loop = False)
-    image MC_Lars_Hook_block = Movie(play="images/v8/Scene 28/mchookblocked.webm", start_image="images/v8/Scene 28/mchookblockedstart.webp", image="images/v8/Scene 28/mchookblockedend.webp", loop = False)
-    image larsjab = Movie(play="images/v8/Scene 28/larsjab.webm", start_image="images/v8/Scene 28/larsjabstart.webp", image="images/v8/Scene 28/larsjabend.webp", loop = False)
-    image larshook = Movie(play="images/v8/Scene 28/larshook.webm", start_image="images/v8/Scene 28/larshookstart.webp", image="images/v8/Scene 28/larshookend.webp", loop = False)
-    image larskick = Movie(play="images/v8/Scene 28/larskick.webm", start_image="images/v8/Scene 28/larskickstart.webp", image="images/v8/Scene 28/larskickend.webp", loop = False)
-    image larsbody = Movie(play="images/v8/Scene 28/larsbody.webm", start_image="images/v8/Scene 28/larsbodystart.webp", image="images/v8/Scene 28/larsbodyend.webp", loop = False)
-
-    image Lars_BodyJab_block = "images/v8/Scene 28/Lars_BodyJab_block.webp"
-    image Lars_BodyJab_hit = "images/v8/Scene 28/Lars_BodyJab_hit.webp"
-    image Lars_Hook_block = "images/v8/Scene 28/Lars_Hook_block.webp"
-    image Lars_Hook_hit = "images/v8/Scene 28/Lars_Hook_hit.webp"
-    image Lars_Jab_block = "images/v8/Scene 28/Lars_Jab_block.webp"
-    image Lars_Jab_hit = "images/v8/Scene 28/Lars_Jab_hit.webp"
-    image Lars_Kick_block = "images/v8/Scene 28/Lars_Kick_block.webp"
-    image Lars_Kick_hit = "images/v8/Scene 28/Lars_Kick_hit.webp"
-
-    # label Attacker_TargetAction
-    label mc_LarsKickHit: # MC Kicks Lars (Hits/No Block)
-
-        $ larsdmg += 1
-        scene MC_Lars_Kick_hit 
-        pause 0.7 # Trial/Error
-        if larsdmg >= larshealth:
-            jump mc_larsFightEnd
-        jump lars_McAttack
-
-    label mc_LarsKickBlock: # MC Kicks Lars (Blocks)
-
-            scene MC_Lars_Kick_block 
-            pause 0.7 # Trial/Error
-            jump lars_McAttack
-
-
-    label mc_LarsJabsHit: # MC Jabs Lars (Hits/No Block)
-
-
-        $ larsdmg += 1
-        scene MC_Lars_Jab_hit
-        pause 0.7 # Trial/Error
-        if larsdmg >= larshealth:
-            jump mc_larsFightEnd
-        jump lars_McAttack
-
-    label mc_LarsJabsBlock: # MC Jabs Lars (Blocks)
-
-            scene MC_Lars_Jab_block
-            pause 0.7 # Trial/Error
-            jump lars_McAttack
-
-
-    label mc_LarsHooksHit: # MC Hooks Lars (Hits/No Block)
-
-        $ larsdmg += 1
-        scene MC_Lars_Hook_hit
-        pause 0.7 # Trial/Error
-        if larsdmg >= larshealth:
-            jump mc_larsFightEnd
-        jump lars_McAttack
-
-    label mc_LarsHooksBlock: # MC Hooks Lars (Blocks)
-
-            scene MC_Lars_Hook_block 
-            pause 0.7 # Trial/Error
-            jump lars_McAttack
-
-
-    label mc_LarsBodyhookHit: # MC Body Hooks Lars (Hits/No Block)
-
-
-        $ larsdmg += 1
-        scene MC_Lars_BodyJab_hit
-        pause 0.7 # Trial/Error
-        if larsdmg >= larshealth:
-            jump mc_larsFightEnd
-        jump lars_McAttack
-
-    label mc_LarsBodyhookBlock: # MC Body Hooks Lars (Blocks)
-
-            scene MC_Lars_BodyJab_block 
-            pause 0.7 # Trial/Error
-            jump lars_McAttack
-
-
-    label lars_McKickHit: # Lars Kicks MC (Hits/No Block)
-
-        play sound "sounds/ks.mp3"
-        $ youdmg += 1
-        scene Lars_Kick_hit
-        with hpunch
-
-        pause 0.5
-        $ stance = 1
-        $ larsAttack = renpy.random.choice([1, 2, 3, 4])
-        $ larsSimulation = renpy.random.choice([1, 2, 3, 4, 5, 6])
-        jump mc_larsAttack
-
-    label lars_McKickBlock: # Lars Kicks MC (Hits/No Block)
-
-        play sound "sounds/ks.mp3"
-        scene Lars_Kick_block
-        with hpunch
-
-        pause 0.5
-        $ stance = 1
-        $ larsAttack = renpy.random.choice([1, 2, 3, 4])
-        $ larsSimulation = renpy.random.choice([1, 2, 3, 4])
-        jump mc_larsAttack
-
-    label lars_McJabHit: # Lars Kicks MC (Hits/No Block)
-
-        play sound "sounds/js.mp3"
-        $ youdmg += 1
-        scene Lars_Jab_hit
-        with hpunch
-
-        pause 0.5
-        $ stance = 1
-        $ larsAttack = renpy.random.choice([1, 2, 3, 4])
-        $ larsSimulation = renpy.random.choice([1, 2, 3, 4])
-        if youdmg >= youhealth:
-                jump lars_McFightEnd
-        jump mc_larsAttack
-
-    label lars_McJabBlock: # Lars Kicks MC (Hits/No Block)
-
-        play sound "sounds/bs.mp3"
-        scene Lars_Hook_block
-        with hpunch
-
-        pause 0.5
-        $ stance = 1
-        $ larsAttack = renpy.random.choice([1, 2, 3, 4])
-        $ larsSimulation = renpy.random.choice([1, 2, 3, 4])
-        jump mc_larsAttack
-
-    label lars_McHookHit: # Lars Kicks MC (Hits/No Block)
-
-        play sound "sounds/hs.mp3"
-        $ youdmg += 1
-        scene Lars_Hook_hit
-        with hpunch
-
-        pause 0.5
-        $ stance = 1
-        $ larsAttack = renpy.random.choice([1, 2, 3, 4])
-        $ larsSimulation = renpy.random.choice([1, 2, 3, 4])
-        if youdmg >= youhealth:
-                jump lars_McFightEnd
-        jump mc_larsAttack
-
-    label lars_McHookBlock: # Lars Kicks MC (Hits/No Block)
-
-        play sound "sounds/bs.mp3"
-        scene Lars_Hook_block
-        with hpunch
-
-        pause 0.5
-        $ stance = 1
-        $ larsAttack = renpy.random.choice([1, 2, 3, 4])
-        $ larsSimulation = renpy.random.choice([1, 2, 3, 4])
-        jump mc_larsAttack
-
-    label lars_McBodyhookHit: # Lars Kicks MC (Hits/No Block)
-
-        play sound "sounds/hs.mp3"
-        $ youdmg += 1
-        scene Lars_BodyJab_hit
-        with hpunch
-
-        pause 0.5
-        $ stance = 1
-        $ larsAttack = renpy.random.choice([1, 2, 3, 4])
-        $ larsSimulation = renpy.random.choice([1, 2, 3, 4])
-        jump mc_larsAttack
-
-    label lars_McBodyhookBlock: # Lars Kicks MC (Hits/No Block)
-
-        play sound "sounds/bs.mp3"
-        scene Lars_BodyJab_block
-        with hpunch
-
-        pause 0.5
-        $ stance = 1
-        $ larsAttack = renpy.random.choice([1, 2, 3, 4])
-        $ larsSimulation = renpy.random.choice([1, 2, 3, 4])
-        jump mc_larsAttack
-
-
-    label mc_larsAttack:
         if simLarsFight:
-            if larsStance == 1: # Jab Weakness
-                if simyou == 1:
-                    jump mc_LarsBodyhookBlock
-                if simyou == 2:
-                    jump mc_LarsHooksBlock
-                if simyou == 3:
-                    jump mc_LarsKickBlock
-                if simyou == 4 or simyou == 5 or simyou == 6:
-                    jump mc_LarsJabsHit
-            if larsStance == 2: # Hook Weakness
-                if simyou == 1:
-                    jump mc_LarsHooksBlock
-                if simyou == 2:
-                    jump mc_LarsJabsBlock
-                if simyou == 3:
-                    jump mc_LarsKickBlock
-                if simyou == 4 or simyou == 5 or simyou == 6:
-                    jump mc_LarsBodyhookHit
-            if larsStance == 3: # Body Hook Weakness
-                if simyou == 1:
-                    jump mc_LarsJabsBlock
-                if simyou == 2:
-                    jump mc_LarsHooksBlock
-                if simyou == 3:
-                    jump mc_LarsKickBlock
-                if simyou == 4 or simyou == 5 or simyou == 6:
-                    jump mc_LarsBodyhookBlock
-            if larsStance == 4: # Kick Weakness
-                if simyou == 1:
-                    jump mc_LarsBodyhookBlock
-                if simyou == 2:
-                    jump mc_LarsHooksBlock
-                if simyou == 3:
-                    jump mc_LarsJabsBlock
-                if simyou == 4 or simyou == 5 or simyou == 6:
-                    jump mc_LarsKickHit
+            if larsSimulation in [1, 2, 3]: # simlars is lars random attack
+                jump lars_McKickHit # REMEMBER switch attacks!
+            else:
+                jump lars_McKickBlock
+
         else:
-            call screen s28_mcLarsAttack
+            call screen larsFight_MCDefend(attack="Hook")
+
+    # Lars jab
+    if larsAttack == 2:
+
+        scene larsjab
+        $ renpy.pause(0.5)
+
+        scene larsjabend
+        $ larsStance = renpy.random.choice([1, 2, 3, 4])
+        $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
+
+        if simLarsFight:
+            if larsSimulation in [1, 2, 3]:
+                jump lars_McJabHit
+            else:
+                jump lars_McJabBlock
+
+        else:
+            call screen larsFight_MCDefend(attack="Jab")
+
+    # Lars body hook
+    if larsAttack == 3:
+
+        scene larsbody
+        $ renpy.pause(0.7)
+
+        scene larsbodyend
+        $ larsStance = renpy.random.choice([1, 2, 3, 4])
+        $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
+
+        if simLarsFight:
+            if larsSimulation in [1, 2, 3]:
+                jump lars_McHookHit
+            else:
+                jump lars_McHookBlock
+
+        else:
+            call screen larsFight_MCDefend(attack="BodyHook")
+
+    # Lars kick
+    if larsAttack == 4:
+
+        scene larskick
+        $ renpy.pause(0.6)
+
+        scene larskickend
+        $ larsStance = renpy.random.choice([1, 2, 3, 4])
+        $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
+
+        if simLarsFight:
+            if larsSimulation in [1, 2, 3]:
+                jump lars_McBodyhookHit
+            else:
+                jump lars_McBodyhookBlock
+
+        else:
+            call screen larsFight_MCDefend(attack="Kick")
 
 
-    label mc_larsFightEnd: # MC wins fight against Lars
-        hide screen s28_larsMcAttack
-        hide screen s28_mcLarsAttack
-        $ youdmg = 0
-        $ stance = 0
-        $ s28_fightWinner = "MC"
+# label Attacker_TargetAction
+label mc_LarsKickHit: # MC Kicks Lars (Hits/No Block)
 
-        jump beat_lars
+    $ larsdmg += 1
+    scene MC_Lars_Kick_hit 
+    pause 1 # Trial/Error
+    if larsdmg >= larshealth:
+        jump mc_larsFightEnd
+    jump lars_McAttack
 
-    label lars_McFightEnd: # MC loses fight against Lars
-        hide screen s28_larsMcAttack
-        hide screen s28_mcLarsAttack
-        $ youdmg = 0
-        $ stance = 0
-        $ s28_fightWinner = "Lars"
-        
-        jump beat_by_lars
+label mc_LarsKickBlock: # MC Kicks Lars (Blocks)
+
+        scene MC_Lars_Kick_block 
+        pause 0.7 # Trial/Error
+        jump lars_McAttack
 
 
+label mc_LarsJabsHit: # MC Jabs Lars (Hits/No Block)
+
+
+    $ larsdmg += 1
+    scene MC_Lars_Jab_hit
+    pause 0.7 # Trial/Error
+    if larsdmg >= larshealth:
+        jump mc_larsFightEnd
+    jump lars_McAttack
+
+label mc_LarsJabsBlock: # MC Jabs Lars (Blocks)
+
+        scene MC_Lars_Jab_block
+        pause 0.7 # Trial/Error
+        jump lars_McAttack
+
+
+label mc_LarsHooksHit: # MC Hooks Lars (Hits/No Block)
+
+    $ larsdmg += 1
+    scene MC_Lars_Hook_hit
+    pause 0.7 # Trial/Error
+    if larsdmg >= larshealth:
+        jump mc_larsFightEnd
+    jump lars_McAttack
+
+label mc_LarsHooksBlock: # MC Hooks Lars (Blocks)
+
+        scene MC_Lars_Hook_block 
+        pause 0.7 # Trial/Error
+        jump lars_McAttack
+
+
+label mc_LarsBodyhookHit: # MC Body Hooks Lars (Hits/No Block)
+
+
+    $ larsdmg += 1
+    scene MC_Lars_BodyJab_hit
+    pause 0.7 # Trial/Error
+    if larsdmg >= larshealth:
+        jump mc_larsFightEnd
+    jump lars_McAttack
+
+label mc_LarsBodyhookBlock: # MC Body Hooks Lars (Blocks)
+
+        scene MC_Lars_BodyJab_block 
+        pause 0.7 # Trial/Error
+        jump lars_McAttack
+
+
+label lars_McKickHit: # Lars Kicks MC (Hits/No Block)
+
+    play sound "sounds/ks.mp3"
+    $ youDamage += 1
+    scene Lars_Kick_hit
+    with hpunch
+
+    pause 0.5
+    $ stance = 1
+    $ larsAttack = renpy.random.choice([1, 2, 3, 4])
+    $ larsSimulation = renpy.random.choice([1, 2, 3, 4, 5, 6])
+    jump mc_larsAttack
+
+label lars_McKickBlock: # Lars Kicks MC (Blocked)
+
+    play sound "sounds/ks.mp3"
+    scene Lars_Kick_block
+    with hpunch
+
+    pause 0.5
+    $ stance = 1
+    $ larsAttack = renpy.random.choice([1, 2, 3, 4])
+    $ larsSimulation = renpy.random.choice([1, 2, 3, 4])
+    jump mc_larsAttack
+
+label lars_McJabHit: # Lars Kicks MC (Hits/No Block)
+
+    play sound "sounds/js.mp3"
+    $ youDamage += 1
+    scene Lars_Jab_hit
+    with hpunch
+
+    pause 0.5
+    $ stance = 1
+    $ larsAttack = renpy.random.choice([1, 2, 3, 4])
+    $ larsSimulation = renpy.random.choice([1, 2, 3, 4])
+    if youDamage >= youHealth:
+            jump lars_McFightEnd
+    jump mc_larsAttack
+
+label lars_McJabBlock: # Lars Kicks MC (Hits/No Block)
+
+    play sound "sounds/bs.mp3"
+    scene Lars_Hook_block
+    with hpunch
+
+    pause 0.5
+    $ stance = 1
+    $ larsAttack = renpy.random.choice([1, 2, 3, 4])
+    $ larsSimulation = renpy.random.choice([1, 2, 3, 4])
+    jump mc_larsAttack
+
+label lars_McHookHit: # Lars Kicks MC (Hits/No Block)
+
+    play sound "sounds/hs.mp3"
+    $ youDamage += 1
+    scene Lars_Hook_hit
+    with hpunch
+
+    pause 0.5
+    $ stance = 1
+    $ larsAttack = renpy.random.choice([1, 2, 3, 4])
+    $ larsSimulation = renpy.random.choice([1, 2, 3, 4])
+    if youDamage >= youHealth:
+            jump lars_McFightEnd
+    jump mc_larsAttack
+
+label lars_McHookBlock: # Lars Kicks MC (Hits/No Block)
+
+    play sound "sounds/bs.mp3"
+    scene Lars_Hook_block
+    with hpunch
+
+    pause 0.5
+    $ stance = 1
+    $ larsAttack = renpy.random.choice([1, 2, 3, 4])
+    $ larsSimulation = renpy.random.choice([1, 2, 3, 4])
+    jump mc_larsAttack
+
+label lars_McBodyhookHit: # Lars Kicks MC (Hits/No Block)
+
+    play sound "sounds/hs.mp3"
+    $ youDamage += 1
+    scene Lars_BodyJab_hit
+    with hpunch
+
+    pause 0.5
+    $ stance = 1
+    $ larsAttack = renpy.random.choice([1, 2, 3, 4])
+    $ larsSimulation = renpy.random.choice([1, 2, 3, 4])
+    jump mc_larsAttack
+
+label lars_McBodyhookBlock: # Lars Kicks MC (Hits/No Block)
+
+    play sound "sounds/bs.mp3"
+    scene Lars_BodyJab_block
+    with hpunch
+
+    pause 0.5
+    $ stance = 1
+    $ larsAttack = renpy.random.choice([1, 2, 3, 4])
+    $ larsSimulation = renpy.random.choice([1, 2, 3, 4])
+    jump mc_larsAttack
+
+
+label mc_larsAttack:
+    if simLarsFight:
+        if larsStance == 1: # Jab Weakness
+            if simyou == 1:
+                jump mc_LarsBodyhookBlock
+            if simyou == 2:
+                jump mc_LarsHooksBlock
+            if simyou == 3:
+                jump mc_LarsKickBlock
+            if simyou == 4 or simyou == 5 or simyou == 6:
+                jump mc_LarsJabsHit
+        if larsStance == 2: # Hook Weakness
+            if simyou == 1:
+                jump mc_LarsHooksBlock
+            if simyou == 2:
+                jump mc_LarsJabsBlock
+            if simyou == 3:
+                jump mc_LarsKickBlock
+            if simyou == 4 or simyou == 5 or simyou == 6:
+                jump mc_LarsBodyhookHit
+        if larsStance == 3: # Body Hook Weakness
+            if simyou == 1:
+                jump mc_LarsJabsBlock
+            if simyou == 2:
+                jump mc_LarsHooksBlock
+            if simyou == 3:
+                jump mc_LarsKickBlock
+            if simyou == 4 or simyou == 5 or simyou == 6:
+                jump mc_LarsBodyhookBlock
+        if larsStance == 4: # Kick Weakness
+            if simyou == 1:
+                jump mc_LarsBodyhookBlock
+            if simyou == 2:
+                jump mc_LarsHooksBlock
+            if simyou == 3:
+                jump mc_LarsJabsBlock
+            if simyou == 4 or simyou == 5 or simyou == 6:
+                jump mc_LarsKickHit
+    else:
+        call screen larsFight_MCAttack
+
+
+label mc_larsFightEnd: # MC wins fight against Lars
+    hide screen s28_larsMcAttack
+    hide screen s28_mcLarsAttack
+    $ youDamage = 0
+    $ stance = 0
+    $ s28_fightWinner = "MC"
+
+    jump beat_lars
+
+label lars_McFightEnd: # MC loses fight against Lars
+    hide screen s28_larsMcAttack
+    hide screen s28_mcLarsAttack
+    $ youDamage = 0
+    $ stance = 0
+    $ s28_fightWinner = "Lars"
+    
+    jump beat_by_lars
 
 label beat_lars:
     scene v8sdd11 # TPP. Show Josh and Joe fighting, Joe is swinging the pipe he has to hit Josh over the head, Josh looking concerned, Joe looking angry.
