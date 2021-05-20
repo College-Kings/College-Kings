@@ -2750,7 +2750,7 @@ label v10s33_riley2:
 
     au "Alright then, have a seat judges."
 
-    scene v10cfrriua8 # TPP. Show dg1 and perry sat at table, show mc sat on edge of the table.
+    scene v10cfrriau8 # TPP. Show dg1 and perry sat at table, show mc sat on edge of the table.
     with dissolve
 
     pause 0.5
@@ -2885,7 +2885,7 @@ label v10s33_riley2:
 
             pause 0.5
 
-            scene v10cfrriauHat
+            scene v10cfrriauhat
             with dissolve
 
             pause 0.5
@@ -2914,7 +2914,7 @@ label v10s33_riley2:
             with dissolve
 
             dg1 "SHE KNOWS HOW TO WIN! WOOHOO!"
-    scene v10cfrriua8
+    scene v10cfrriau8
     with dissolve
 
     dg1 "Good job to both of you, but it's pretty obvious who won."
@@ -2924,7 +2924,7 @@ label v10s33_riley2:
 
     guyd "Yeah sorry, but it's pretty obvious."
 
-    scene v10cfrriua8
+    scene v10cfrriau8
     with dissolve
 
     dg1 "Riley."
@@ -2952,7 +2952,7 @@ label v10s33_riley2:
 
             guyd "Guess a man knows what he likes."
 
-            scene v10cfrriua8
+            scene v10cfrriau8
             with dissolve
 
             dg1 "I think you both did good."
@@ -3010,7 +3010,7 @@ label v10s33_riley2:
 
             guyd "Guess a man knows what he likes."
 
-            scene v10cfrriua8
+            scene v10cfrriau8
             with dissolve
 
             dg1 "I think you both did good."
