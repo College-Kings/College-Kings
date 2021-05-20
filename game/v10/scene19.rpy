@@ -3,9 +3,6 @@
 # Characters: MC (Outfit 1), Mr Lee (Outfit 1)
 # Time: Sunday Night
 
-default penelopelike = 0
-default mrleelike = 0
-
 label v10_walk_jenny_text:
     scene v10swjt1 # TPP. Show MC walking on the sidewalk where he originally met Penelope.
     with fade
@@ -40,7 +37,7 @@ label v10_walk_jenny_text:
 
     menu:
         "Invite Penelope":
-            $ penelopelike += 1
+            $ penelopeLike += 1
             $ v10_inv_pen_cafe = True
             $ addPoint("bf", 1)
 
@@ -96,7 +93,7 @@ label v10_walk_jenny_text:
 
     menu:
         "Make A Joke":
-            $ mrleelike += 1
+            $ mrleeLike += 1
             $ addPoint("tm", 1)
 
             u "Teachers have friends?"
