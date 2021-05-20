@@ -136,15 +136,14 @@ init python:
             self.reply = None
 
     class Reply:
-        def __init__(self, message, func=None, label=None):
+        def __init__(self, message, func=None):
             self.message = message
             self.func = func
 
     class ImgReply:
-        def __init__(self, image, func=None, label=None):
+        def __init__(self, image, func=None):
             self.image = image
             self.func = func
-            self.label = label
 
 init offset = -1
 default contacts = []
