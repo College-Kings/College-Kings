@@ -31,7 +31,8 @@ label v10_talk_nora:
     scene v10hal1a
     with dissolve
 
-    no "An abroad trip is required for him to graduate. Otherwise he wouldn't be going, so I'm not too sure if I'm really that happy about him coming. I'm really looking forward to this trip and I don't want... \"us\" ruining it."
+    no "An abroad trip is required for him to graduate. Otherwise he wouldn't be going, so I'm not too sure if I'm really that happy about him coming."
+    no "I'm really looking forward to this trip and I don't want... \"us\" ruining it."
 
     scene v10hal1
     with dissolve

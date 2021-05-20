@@ -162,7 +162,8 @@ label v10_ms_rose_fight:
     if v10_ms_r_interfere:
         scene v10msf4b
         with dissolve
-        ro "Yes I'll be fine, I don't think he'd risk coming back after this. Thank you though, it means a lot to me that you came. Who knows what would have happened if you hadn't"
+        ro "Yes I'll be fine, I don't think he'd risk coming back after this."
+        ro "Thank you though, it means a lot to me that you came. Who knows what would have happened if you hadn't."
 
         scene v10msf4a
         with dissolve

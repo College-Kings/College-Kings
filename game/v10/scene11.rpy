@@ -413,7 +413,7 @@ label v10_linds_room:
     li "Thanks for coming [name]."
 
     scene v10slds3d
-    with fade
+    with dissolve
 
     u "Yeah, of course."
 

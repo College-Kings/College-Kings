@@ -74,7 +74,8 @@ label v10_econ_class:
     scene v10eco5
     with dissolve
 
-    ri "*Laughs* [name] was at the skatepark getting lessons and I saw him when I was leaving the library. From what I saw he wouldn't have wanted anyone there. He did more falling than skating."
+    ri "*Laughs* [name] was at the skatepark getting lessons and I saw him when I was leaving the library."
+    ri "From what I saw he wouldn't have wanted anyone there. He did more falling than skating."
 
     scene v10eco6
     with dissolve

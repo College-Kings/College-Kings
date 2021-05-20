@@ -272,7 +272,7 @@ label v10_lauren_room:
         la "Oh [name]! *Moans*"
 
         menu:
-            "Suck her tits":
+            "Suck On Her Tits":
                 # MC starts kissing around her boobs and nipples. Ensure this scene is detailed and long, kissing all over her upper body
                 image v10lautk = Movie(play="images/v10/Scene 24/v10lautk.webm", loop=True, image="images/v10/Scene 24/v10lautkStart.webp", start_image="images/v10/Scene 24/v10lautkStart.webp") # TPP MC tenderly kissing Lauren on upper chest, holding her breast and playing with her nipple
                 image v10lautkf = Movie(play="images/v10/Scene 24/v10lautkf.webm", loop=True, image="images/v10/Scene 24/v10lautkStart.webp", start_image="images/v10/Scene 24/v10lautkStart.webp")

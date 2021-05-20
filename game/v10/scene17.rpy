@@ -19,7 +19,7 @@ label v10_aubrey_house:
         au "Just walking me home, huh? No ulterior motive?"
 
         menu:
-            "Other motive":
+            "Maybe":
                 $ addPoint("tm", 1)
                 
                 scene v10auh1b # FPP Same angle and expression as v10auh1a,, Aubrey mouth closed
@@ -82,7 +82,8 @@ label v10_aubrey_house:
     scene v10auh1e # FPP Same angle and expression as v10auh1d, Aubrey mouth open
     with dissolve
 
-    au "It kinda was. Usually it’s really quiet around this time, but all of the sudden it was packed. I left early to keep from beefing with this one girl."
+    au "It kinda was. Usually it’s really quiet around this time, but all of the sudden it was packed."
+    au "I left early to keep from beefing with this one girl."
 
     scene v10auh1d
     with dissolve
@@ -92,7 +93,8 @@ label v10_aubrey_house:
     scene v10auh1e
     with dissolve
 
-    au "Some chick walked over to me, I have no clue who she was but apparently she knew me. Called me a slut and started telling me her whole life story." 
+    au "Some chick walked over to me, I have no clue who she was but apparently she knew me."
+    au "Called me a slut and started telling me her whole life story." 
     
     au "Something about me sleeping with her boyfriend at the start of the year and me being the reason they're no longer together, bla bla bla."
 
@@ -114,7 +116,8 @@ label v10_aubrey_house:
     scene v10auh1c
     with dissolve
 
-    au "Oh God no, I was actually super shy growing up. In high school, girls used to make fun of me because I was super dorky and none of the guys wanted to talk to me."
+    au "Oh God no, I was actually super shy growing up."
+    au "In high school, girls used to make fun of me because I was super dorky and none of the guys wanted to talk to me."
     
     au "I had a major glow up senior year."
 
@@ -166,9 +169,11 @@ label v10_aubrey_house:
     scene v10auh1e
     with dissolve
 
-    au "Honestly I think it’s mostly due to my older sister. She's a Kiwii model. She went through a lot of the same gossip and drama stuff that I went through."
+    au "Honestly I think it’s mostly due to my older sister."
+    au "She's a Kiwii model. She went through a lot of the same gossip and drama stuff that I went through."
 
-    au "But if you saw her today you would never guess it. She could spend a whole day going through messages from guys trying to talk to her and still wouldn't be done with them."
+    au "But if you saw her today you would never guess it."
+    au "She could spend a whole day going through messages from guys trying to talk to her and still wouldn't be done with them."
 
     scene v10auh1d
     with dissolve
@@ -198,7 +203,8 @@ label v10_aubrey_house:
     scene v10auh1e
     with dissolve
 
-    au "Not really, I really wanted to go to this school, but it's pretty far from home. I talk to my family on the phone, but it really isn't that big of a deal to me." 
+    au "Not really, I really wanted to go to this school, but it's pretty far from home."
+    au "I talk to my family on the phone, but it really isn't that big of a deal to me." 
     
     au "I'm just trying to have fun right now."
 
@@ -475,11 +481,6 @@ label v10_aubrey_house:
                 au "*Laughs* And scene."
 
                 scene v10aubfa1 # FPP. camera looking down at Aubrey kneeling, Face covered in cum, mouth closed
-                with flash
-
-                pause 0.3
-
-                scene v10aubfa1
                 with flash
 
                 pause 
