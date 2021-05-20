@@ -1056,7 +1056,7 @@ label v10s33_chloe1:
     scene v10cfrcl1
     with dissolve
 
-    u "Isn't there a theory or something about that."
+    u "Isn't there a theory or something about that?"
 
     scene v10cfrcl1b # FPP. same1,slight smile, mouth open
     with dissolve
