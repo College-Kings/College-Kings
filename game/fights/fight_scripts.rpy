@@ -65,14 +65,34 @@ init python:
 
     def selectDifficulty(difficulty):
         if difficulty == "easy":
+            # Old
+            setattr(store, "reactiona", 3.2)
+            setattr(store, "larshealth", 5)
+            setattr(store, "youhealth", 5)
+            # New
             setattr(store, "reaction", 3.5)
+            # temp
+            setattr(store, "reaction", 10000)
+            setattr(store, "reactiona", 10000)
             for enemy in enemies:
                 enemy.damageMult = 1
+
         elif difficulty == "normal":
+            # Old
+            setattr(store, "reactiona", 1.5)
+            setattr(store, "larshealth", 6)
+            setattr(store, "youhealth", 3)
+            # New
             setattr(store, "reaction", 1.5)
             for enemy in enemies:
                 enemy.damageMult = 2
+
         else:
+            # Old
+            setattr(store, "reactiona", 0.7)
+            setattr(store, "larshealth", 8)
+            setattr(store, "youhealth", 2)
+            # New
             setattr(store, "reaction", 0.5)
             for enemy in enemies:
                 enemy.damageMult = 4
