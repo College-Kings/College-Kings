@@ -92,7 +92,7 @@ label v10_lauren_room:
 
             u "I really do."
 
-            if kct == "loyal":
+            if laurenrs or kct == "loyal":
                 $ v10s33_laurenBakeSale = False
 
                 scene v10lar3b
