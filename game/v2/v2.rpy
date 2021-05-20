@@ -28,11 +28,7 @@ init python:
 
     def v2_reply6():
         setattr(store, "mixedfeelings", True)
-        if not config.enable_steam:
-            renpy.show("mixedfeelings", at_list=achievementAtList)
-        else:
-            achievement.grant("mixed_feelings")
-            achievement.sync()
+        grantAchievement("mixed_feelings")
 
     # Josh messages
     def v2_reply7():
@@ -312,84 +308,49 @@ label v1_tomShoutBack:
 
 # Tom Fight
 label gb:
-    if not adamtut:
 
-        scene sf1
-        with dissolve
-        " "
-
-    $ stance = 1
+    scene sf1
+    with dissolve
+    " "
 
     scene tomstancekick
     with dissolve
 
-    if not adamtut:
-        call screen skiptut
-    label sta:
-
-
-    tut "In every fight, you'll have positions from which you can attack and positions from which you'll need to defend."
-
-    tut "In attacking positions you'll have a set of offensive actions, as shown on the left."
-
-    tut "Since you're new to fighting, you only have 3 simple attacks:"
-
-    $ hl = 1
-    tut "{b}Q{/b}: a quick, left-handed jab to create distance and attack the opponent's face from the front."
-    $ hl = 2
-    tut "{b}W{/b}: a strong, right-handed hook to attack the opponent's head from the side."
-    $ hl = 4
-    tut "And {b}R{/b}: a right-footed kick to attack the opponent's legs."
-    $ hl = 0
-    tut "As you learn more about fighting, you'll gain new attack moves."
-
-    tut "When attacking, look at the opponent's stance and try to identify possible points of attack."
-    show targets
-    tut "With your three actions, there are three possible points of attack."
-    $ hl = 4
-    tut "Since Tom has his guard up and could probably block both a jab and a hook, try to kick him by pressing {b}R{/b} in the upcoming screen."
-    $ hl = 0
-    hide targets
-    with dissolve
-
-
-    $ stance = 1
-
+    call screen fight_tutorialPopup
 
     $ tomattack = renpy.random.choice([1, 2, 3])
 
     call screen tomtut1
 
     label tomtut1kick:
-
-
         scene kick2movie
-        $ renpy.pause(0.7)
+        pause 0.7
+
         play sound "sounds/ks.mp3"
+        
         scene kick2pic
         with hpunch
 
         tut "Great job! You've hit Tom and hurt him. He's now more likely to get tired, give up or even get knocked out."
         tut "Beware, since you've let your guard down to attack, he's going to try and abuse it with an attack of his own."
-        $ stance = 2
-
 
         scene tomhookmovie
         $ renpy.pause(0.7)
 
         scene tomhook
+        show screen fight_tutorial
 
         tut "Now it's time to block Tom's attack."
 
-        $ hl = 1
+        show screen fight_tutorial(highlight="q")
         tut "{b}Q{/b} lets you block your head from heavy attacks such as hooks, which come from a slight angle."
-        $ hl = 2
+        show screen fight_tutorial(highlight="w")
         tut "In order to protect yourself from attacks flying straight at your face, such as jabs, press {b}W{/b}."
-        $ hl = 4
+        show screen fight_tutorial(highlight="r")
         tut "Lastly, you can protect your legs, from low kicks for example, by pressing {b}R{/b}."
-        $ hl = 1
+        show screen fight_tutorial(highlight="q")
         tut "As of right now, there's a hook flying at your head, press {b}Q{/b} in the upcoming screen in order to block it."
-        $ hl = 0
+        hide screen fight_tutorial
         call screen kickcounter
 
     label tomtut1hook:
@@ -1204,11 +1165,8 @@ label gb:
 label youfinish:
     if reaction == 0.5:
         $ thenotorious = True
-        if not config.enable_steam:
-            show thenotorious at achievementShow
-        else:
-            $ achievement.grant("the_notorious")
-            $ achievement.sync()
+        $ grantAchievement("the_notorious")
+            
     $ wintom = True
 
     menu:
@@ -1365,11 +1323,8 @@ label meet_lauren2:
                 with dissolve
 
                 $ anewbeginning = True
-                if not config.enable_steam:
-                    show anewbeginning at achievementShow
-                else:
-                    $ achievement.grant("a_new_beginning")
-                    $ achievement.sync()
+                $ grantAchievement("a_new_beginning")
+                    
 
                 la "Maybe you're right."
 
@@ -2260,12 +2215,8 @@ label bo_ad:
             with dissolve
 
             $ overit = True
-            if not config.enable_steam:
-                show overit as achievementShow:
-
-            else:
-                $ achievement.grant("over_it")
-                $ achievement.sync()
+            $ grantAchievement("over_it")
+                
 
             u "Sure, knock yourself out, man. We're not an item."
 
