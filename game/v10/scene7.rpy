@@ -390,16 +390,17 @@ label v10_mc_vs_imre_fight:
 
 
             label mc_imreFightEnd: # MC wins fight against Imre
-                $ v10_imre_win = False
+                $ v10_imre_win = True
                 jump imre_fightEnd
                 
             label imre_McFightEnd: # MC loses fight against Imre
-                $ v10_imre_win = True
+                $ v10_imre_win = False
                 jump imre_fightEnd
 
             label imre_fightEnd:
                 hide screen imreFight_MCAttack
                 hide screen imreFight_MCDefend
+                hide screen fight_overlay
                 $ youDamage = 0
                 $ stance = 0
 
