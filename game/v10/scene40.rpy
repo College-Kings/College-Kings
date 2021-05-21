@@ -46,6 +46,7 @@ label v10_riley_sex:
 
     u "(Okay, she should be coming out soon.)"
 
+    label v10_riley_sex_sg:
     scene v10srds3 # FPP. Show Riley walking into her dorm room, wrapped in a towel, her hair down and still wet. She has a little smile, mouth open.
     with fade
 
@@ -177,6 +178,7 @@ label v10_riley_sex:
 
         scene v10srds7a # FPP. Same camera as v10srds7. Show Riley next to MC, naked in bed, face-to-face. Riley is smiling, mouth open.
         with dissolve
+        $ renpy.end_replay()
 
         ri "Hey, can I ask you something?"
 

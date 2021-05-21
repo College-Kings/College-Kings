@@ -49,6 +49,14 @@ init python:
 # v10s30_galleryScene - s30 (chloers)
 # v10s40_galleryScene1 - s40 (rileyrs)
 
+    #SceneGallery("v10_mc_vs_ryan_fight") #awaiting image scene6
+    #SceneGallery("v10_mc_vs_imre_fight") #awaiting image scene7
+    #SceneGallery("v10_aubrey_house_sg") #awaiting gallery18.webp scene17
+    #SceneGallery("v10_lauren_room_sg", scope={"laurenrs": True}) #awaiting gallery19.webp scene24
+    #SceneGallery("v10_amber_skatepark_sg", scope={"amberrs": True}) #awaiting gallery20.webp scene26
+    #SceneGallery("v10_chloe_gym_sg") #awaiting gallery21.webp scene30
+    #SceneGallery("label v10_riley_sex_sg", scope={"rileyrs": True}) #awaiting gallery22.webp scene40
+
 screen spoiler():
     add "images/darker.webp"
 

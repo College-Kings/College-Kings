@@ -168,6 +168,7 @@ label v10_chloe_gym:
         # -Event1 Look closer-
         menu:
             "Look closer":
+                label v10_chloe_gym_sg:
                 scene v10chg6a # FPP Same angle as c10chg6a, Close up shot of Chloe's butt while she's bending over
                 with dissolve
 
@@ -339,6 +340,7 @@ label v10_chloe_gym:
                 with dissolve
 
                 cl "Okay good, see you around."
+                $ renpy.end_replay()
 
             "Don't risk it":
                 scene v10chg6
