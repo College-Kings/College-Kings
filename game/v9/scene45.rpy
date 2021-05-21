@@ -38,19 +38,13 @@ label v9_ending:
 
     pause 2
 
-    jump ending9
-
-label ending9:
-    if persistent.ep == 9:
-        jump end9
-    else:
-        jump v10start
-
 label end9:
-    scene savenow
-    with Fade (1,0,1)
-    " "
-    if persistent.ep == 9:
+    if persistent.ep < 10:
+        scene savenow
+        with Fade (1,0,1)
+        " "
+
+    if persistent.ep < 11:
         jump end_credits
     else:
         jump v10start
