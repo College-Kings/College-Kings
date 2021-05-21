@@ -1354,7 +1354,7 @@ label conl:
 
     scene s249a
     with vpunch
-
+    $ bodyHook = True
     call screen fightPopup("Body Hook")
 
     play music "music/m16punk.mp3"

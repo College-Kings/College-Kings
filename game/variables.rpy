@@ -14,6 +14,7 @@ default fight_tutorial = False
 default fight_type = "normal" # normal / simReal / simWin
 default reaction = 1.0
 default reactiona = 1.0
+default bodyHook = False
 
 # 1.0 - 6.0
 default v1_sda = False
