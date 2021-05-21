@@ -2228,7 +2228,7 @@ label v10s33_deergirl21:
                         scene v10cfrcfrro3a
                         with dissolve
 
-                        lee "Bruce' three to Lorraine's two."
+                        lee "Bruce's three to Lorraine's two."
 
                         scene v10cfrcfrro3b
                         with dissolve
