@@ -92,7 +92,7 @@ screen stats():
             text "3.":
                 font "fonts/Freshman.ttf"
                 size 50
-                color "#000000"
+                color "#000000" # Confident = red; Loyal = Yellow; Popular = Green
 
         $ KCT = { "Popular": popular, "Loyal": loyal, "Confident": confident }
         $ sortedKCT = [k for (k, v) in sorted(KCT.items(), key=lambda k: k[0])]
@@ -116,9 +116,9 @@ screen stats():
                 text_align 0.0
                 font "fonts/Freshman.ttf"
                 size 50
-                if sortedKCT[0] == "Popular":
+                if sortedKCT[1] == "Popular":
                     color "#53d769" 
-                elif sortedKCT[0] == "Loyal":
+                elif sortedKCT[1] == "Loyal":
                     color "#fecb2e"
                 else:
                     color "#fc3d39"
@@ -127,9 +127,9 @@ screen stats():
                 text_align 0.0
                 font "fonts/Freshman.ttf"
                 size 50
-                if sortedKCT[0] == "Popular":
+                if sortedKCT[2] == "Popular":
                     color "#53d769" 
-                elif sortedKCT[0] == "Loyal":
+                elif sortedKCT[2] == "Loyal":
                     color "#fecb2e"
                 else:
                     color "#fc3d39"
