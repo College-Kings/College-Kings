@@ -100,6 +100,8 @@ label v9_hc_demo:
 
     menu:
         "Recognize the King":
+            $ the_king = True
+            $ grantAchievement ("The King")
             jump v9_hc_demo_rec
         "Don't recognize the King":
             $ addPoint("tm")

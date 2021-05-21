@@ -130,6 +130,8 @@ label v9_hall_cont1:
             $ addPoint("bro")
             $ timed = False
             $ hl_punch = True
+            $ down_for_the_count = True
+            $ grantAchievement("Back Down")
             jump v9_hall_punch
 
         "Don't Punch The Guy":

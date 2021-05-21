@@ -207,6 +207,8 @@ label v10_ms_rose_fight:
     menu:
         "Make A Move":
             $ v10_ms_r_kiss = True
+            $ kiss_teacher = True
+            $grantAchievement = ("Forbidden romance")
             $ addPoint("bf", 1)
             scene v10msf5a # TPP. same camera as v10msf5, Show MS rose. Touching MC on the cheek, smiling,MC hand on Ms Rose Waist.
             with dissolve

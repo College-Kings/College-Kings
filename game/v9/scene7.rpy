@@ -948,6 +948,9 @@ menu:
                 scene v9slake17vid # mc and aubrey make out animation
                 with dissolve
                 
+                $ lake_hj = True
+                $ grantAchievement ("Relaxing Day")
+
                 " "
 
                 scene v9slake18 # aubreys hand on mc's dick over wet underpants

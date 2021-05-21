@@ -313,6 +313,8 @@ label v9_hang_w_linds:
                     if chloers:
                         $ addPoint("bf")
                         
+                    $ the_wrong_time = True
+                    $ grantAchievement = ("The wrong time")
                     scene v9hwl7b # TPP. Same camera as v9hwl7, Show MC pulling away from Lindsey who is trying to kiss him.
                     with dissolve
 

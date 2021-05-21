@@ -1157,6 +1157,8 @@ label v10s33_chloe1:
             "Tell Chloe About Nora":
                 $ chloeLike += 1
                 $ v10s33_toldChloe = True
+                $ chloe_over_nora = True
+                $ grantAchievement("Hard decisions")
                 scene v10cfrcl1c # FPP. same1,slight angry look, closed
                 with dissolve
 
@@ -2226,7 +2228,7 @@ label v10s33_deergirl21:
                         scene v10cfrcfrro3a
                         with dissolve
 
-                        lee "Cornelius' three to Lorraine's two."
+                        lee "Bruce' three to Lorraine's two."
 
                         scene v10cfrcfrro3b
                         with dissolve
