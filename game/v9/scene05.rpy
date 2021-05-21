@@ -38,7 +38,7 @@ label v9_dream_wakeup:
 
         scene v9dream23a # Same as v9dream20a but in MC's room in Apes house
         with dissolve
-        u "(God I hate dreams. Most of the time, they're good. But sometimes...they really suck.)"
+        u "(God I hate dreams. Most of the time, they're good. But sometimes... they really suck.)"
 
         $ contact_Riley.newMessage(_("Hey, [name]. You awake?"), queue=False)
         $ contact_Riley.addReply(_("Hey Riley, yeah I'm up, is everything okay?"))
