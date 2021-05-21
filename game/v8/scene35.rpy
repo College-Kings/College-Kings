@@ -130,17 +130,7 @@ label steak_w_chloe:
 label steak_flirt_w_chloe:
 
     $ up_for_more = True
-    if not steam:
-        image up_for_more = "images/v8/achievements/upformore.webp"
-        show up_for_more:
-            xpos 0
-            ypos -200
-            linear 0.5 xpos 0 ypos 0
-            pause 2.0
-            linear 0.5 xpos 0 ypos -200
-    else:
-        $ achievement.grant("up_for_more")
-        $ achievement.sync()
+    $ grantAchievement("up_for_more")
 
     u "Unlesssss..."
 

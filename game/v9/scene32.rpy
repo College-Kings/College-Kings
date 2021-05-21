@@ -82,8 +82,8 @@ label v9_sat_hit_gym:
             with dissolve
             u "Great, I'll text you."
 
-            $ Second_date = True
-            $grantAchievement("Second Date")
+            $ second_date = True
+            $grantAchievement("second_date")
 
             scene v9atg4 # TPP. Show MC walking away from Evelyn, evelyn still on weight bench, MC walking towards punching bag, both smiling mouth closed
             with dissolve

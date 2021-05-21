@@ -470,6 +470,7 @@ label mc_larsAttack:
 label mc_larsFightEnd: # MC wins fight against Lars
     hide screen s28_larsMcAttack
     hide screen s28_mcLarsAttack
+    hide screen fight_overlay
     $ youDamage = 0
     $ stance = 0
     $ s28_fightWinner = "MC"
@@ -479,6 +480,7 @@ label mc_larsFightEnd: # MC wins fight against Lars
 label lars_McFightEnd: # MC loses fight against Lars
     hide screen s28_larsMcAttack
     hide screen s28_mcLarsAttack
+    hide screen fight_overlay
     $ youDamage = 0
     $ stance = 0
     $ s28_fightWinner = "Lars"
@@ -557,25 +559,15 @@ label dodged_pipe:
     scene v8sdd13a # TPP. Same camera as v8sdd13, Joe now hits Lars on the head with the pipe, Lars winces with pain and begins to fall to the ground.
     with vpunch
 
+    $ renpy.end_replay()
+
     pause 0.5
 
     scene v8sdd14 # TPP. Show MC looking up at Joe who is in shock, MC starts to stand up in preparation to plant a huge uppercut on Joe's chin. Lars on the ground. MC focused expression, MC mouth open.
     with dissolve
 
-    $ renpy.end_replay()
-
     $ ip_man = True
-    if not steam:
-        image ip_man = "images/v8/achievements/ipman.webp"
-        show ip_man:
-            xpos 0
-            ypos -200
-            linear 0.5 xpos 0 ypos 0
-            pause 2.0
-            linear 0.5 xpos 0 ypos -200
-    else:
-        $ achievement.grant("ip_man")
-        $ achievement.sync()
+    $ grantAchievement("ip_man")
 
     u "Fuck you!"
 
@@ -650,6 +642,7 @@ label beat_by_lars:
     with dissolve
 
     je "A valiant effort, hero, but not good enough. Let's go Lars."
+    $ renpy.end_replay()
 
     scene v8sdd33 # TPP. Show Joe and Lars leaving the scene, one of them is grabbing the drugs from Josh.
     with dissolve

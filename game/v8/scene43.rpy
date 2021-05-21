@@ -152,7 +152,7 @@ label for_w_gray_cont_2:
         scene v8sfor8b
         with dissolve
 
-        u "Thanks, man"
+        u "Thanks, man."
 
         jump for_w_gray_cont_3
 

@@ -102,11 +102,7 @@ label penelope_dorm_hack:
 label help_pen:
 
     $ thick_and_thin = True
-    if not steam:
-        show thick_and_thin at achievementShow
-    else:
-        $ achievement.grant("thick_and_thin")
-        $ achievement.sync()
+    $ grantAchievement("thick_and_thin")
 
     u "If you want, I can talk to the dean on Monday on your behalf. I'm sure we could work something out if we tried and be smart about it."
 

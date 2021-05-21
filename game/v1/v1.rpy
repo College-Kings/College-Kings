@@ -8,7 +8,7 @@ init python:
 
     def v1_reply2():
         setattr(store, "openwound", True)
-        grantAchievement("openwound")
+        grantAchievement("open_wound")
 
         addPoint("tm")
         contact_Emily.newMessage(_("Ugh :/"))

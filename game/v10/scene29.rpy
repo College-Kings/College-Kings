@@ -130,7 +130,7 @@ label v10_chloe_hallway:
                                     $ addPoint("bf")
                                     $ v10_chloe_rematch = True
                                     $ volleyball_rematch = True
-                                    $ grantAchievement("Volleyball Rematch")
+                                    $ grantAchievement("volleyball_rematch")
 
                                     u "Yeah let's go."
 
@@ -279,7 +279,7 @@ label v10_chloe_hallway:
                 $ v10_chloe_rematch = True
                 $ chloeLike += 1
                 $ volleyball_rematch = True
-                $ grantAchievement("Volleyball Rematch")
+                $ grantAchievement("volleyball_rematch")
 
                 u "Let's do it, but I won't be going easy on you."
 
