@@ -7,6 +7,8 @@ label v10_apes_samantha:
     scene v10ssap1 # TPP. Show MC in the Ape's living room. He's sitting on the couch, appearing exhausted, mouth closed.
     with fade
 
+    play music "music/v10/Scene 14/Track Scene 14.mp3" fadein 3
+
     u "(Shit I'm tired.)"
 
     scene v10ssap1a # TPP. Same camera as v10ssap1. MC's sitting on the couch, appearing exhausted, mouth closed. He reaches forward to grab the remote.
@@ -355,5 +357,6 @@ label v10_apes_samantha:
             with fade
 
             u "(He can really be a dick sometimes. Good ol' Cameron. I should head up to my room.)"
+    stop music fadeout 3
 
-jump v10_call_with_lauren1 # jump to scene 15
+    jump v10_call_with_lauren1 # jump to scene 15

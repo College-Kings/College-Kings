@@ -4,6 +4,7 @@
 # Time: Afternoon
 
 label v10_chloe_gym:
+    play music "music/v10/Scene 30/Track Scene 30_1.mp3" fadein 3
     # MC and Chloe are in the gym which happens to be empty, the lights are on and the door is unlocked
     scene v10chg1 # TPP Show MC and Chloe at door to  gym, light are on, MC is pulling open the door
     with fade
@@ -200,7 +201,8 @@ label v10_chloe_gym:
                 with fade
 
                 pause 0.5
-
+                stop music fadeout 3
+                play music "music/v10/Scene 30/Track Scene 30_2.mp3" fadein 3
                 scene v10chg9a # TPP Same angle as v10chg8, Chloe looking seductive with mouth open
                 with dissolve
 
@@ -438,6 +440,6 @@ label v10_chloe_gym:
         with dissolve
 
         cl "See you around [name]."
-
+    stop music fadeout 3
 # -Transition to Scene 31-
 jump v10_late_alley

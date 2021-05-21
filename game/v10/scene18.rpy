@@ -3,6 +3,8 @@
 # Characters: MC (Outfit 1), Lauren (Outfit 3)
 # Time:
 label v10_call_with_lauren2:
+    play music "music/v10/Scene 15 & 18/Track Scene 15 & 18.mp3" fadein 3
+
     if joinwolves: # MC is a wolf, is that the correct variable name?
         scene v10scwl1 # TPP. Show Lauren as though FPP, she's sitting on the train. Lauren on phone listening to MC, smiling, mouth closed.
         with fade
@@ -353,6 +355,8 @@ label v10_call_with_lauren2:
         with fade
 
         u "(Wow, that was quite a long call, but I feel like I really learned a lot about her… It’s not that late, maybe I can go for a bit of a walk before going to bed.)"
+
+        stop music fadeout 3
 
         jump v10_walk_jenny_text # -Transition to Scene 19-
     
@@ -706,6 +710,8 @@ label v10_call_with_lauren2:
         with fade
 
         u "(Wow, that was quite a long call, but I feel like I really learned a lot about her… It’s not that late, maybe I can go for a bit of a walk before going to bed.)"
+
+        stop music fadeout 3
 
         jump v10_walk_jenny_text     # -Transition to Scene 19-
 

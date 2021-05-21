@@ -7,6 +7,8 @@ label v10_sam_kitchen:
     with fade
     u "Samantha???"
 
+    play music "music/v10/Scene 25a/Track Scene 25a.mp3" fadein 3
+
     pause 0.5
 
     scene v10skt2 # FPP. Show Samantha Stood in the kitchen of the apes House. Big smile on face, mouth closed.
@@ -373,5 +375,7 @@ label v10_sam_kitchen:
 
     scene v10skt8c # FPP. same camera as v10skt8, Show Cameron leaving the kitchen
     with dissolve
+
+    stop music fadeout 3
 
     jump v10_amber_skatepark

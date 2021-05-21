@@ -6,7 +6,7 @@ label v10_late_alley:
 
     scene v10all1 # TPP. Show MC on the sidewalk, just before the entrance to the alley, mouth closed
     with dissolve
-
+    play music "music/v10/Scene 31/Track Scene 31.mp3" fadein 3
     pause 0.75
 
     scene v10all2 # FPP. Show Alley, 2 hookers against the wall near the entrance, Josh down the bottom of the alley with unknown guy in hoody,
@@ -220,5 +220,5 @@ label v10_late_alley:
 
     scene v10all5 # FPP. Show josh walking off down the sidewalk.
     with dissolve
-
+    stop music fadeout 3
     jump v10_tues_room_night

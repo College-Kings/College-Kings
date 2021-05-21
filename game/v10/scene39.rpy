@@ -6,7 +6,7 @@ label v10_riley_walk:
 
     scene v10srwh1 # FPP. Riley approaches MC from distance. She looks dirty, smiling, closed.
     with fade
-
+    play music "music/v10/Scene 39/Track Scene 39.mp3" fadein 3
     pause 0.75
 
     scene v10srwh1a # FPP. Same camera as v10srwh1. Show Riley, smiling, mouth open.
@@ -310,4 +310,6 @@ label v10_riley_walk:
     scene v10srwh4 # TPP. Show MC and Riley standing in her dorm.
     with fade
 
+    stop music fadeout 3
+    
     jump v10_riley_sex

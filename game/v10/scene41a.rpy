@@ -4,6 +4,7 @@
 # Time: Thursday Morning
 
 label v10_waking_up_end:
+    play music "music/v10/Scene 41a/Track Scene 41a_1.mp3" fadein 3
     if joinwolves:
         scene v10end1 # TPP. Show MC waking up drowsy in his new Wolves room.
         with fade
@@ -19,7 +20,8 @@ label v10_waking_up_end:
         with dissolve
 
         u "(Oh shit, Penelope has been blowing me up.)"
-
+        stop music fadeout 3
+        play music "music/v10/Scene 41a/Track Scene 41a_2.mp3" fadein 3
         python:
             contact_Penelope.newMessage("Hey, do you mind coming by before the hearing starts?", queue=False)
             contact_Penelope.newMessage("Hey! Where are you, the hearing is in two hours.", queue=False)
@@ -45,7 +47,7 @@ label v10_waking_up_end:
         with fade
 
         pause 1
-
+        stop music fadeout 3
         jump ending10
 
     else:
@@ -63,7 +65,8 @@ label v10_waking_up_end:
         with dissolve
 
         u "(Oh shit, Penelope has been blowing me up.)"
-
+        stop music fadeout 3
+        play music "music/v10/Scene 41a/Track Scene 41a_2.mp3" fadein 3
         python:
             contact_Penelope.newMessage("Hey, do you mind coming by before the hearing starts?", queue=False)
             contact_Penelope.newMessage("Hey! Where are you, the hearing is in two hours.")
@@ -89,7 +92,7 @@ label v10_waking_up_end:
         with fade
 
         pause 1
-
+        stop music fadeout 3
         jump ending10
 
 label ending10:

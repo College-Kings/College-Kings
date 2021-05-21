@@ -11,6 +11,7 @@ init python:
         contact_Amber.newMessage("Beer, obviously")
 
 label v10_amber_skatepark:
+    play music "music/v10/Scene 26/Track Scene 26_1.mp3" fadein 3
 
     scene v10sasp14 # TPP. Show MC on sidewalk, walking home from rileys house.
     with fade
@@ -391,6 +392,8 @@ label v10_amber_skatepark_sg:
         with dissolve
         menu:
             "Let her":
+                stop music fadeout 3
+                play music "music/v10/Scene 26/Track Scene 26_2.mp3" fadein 3
                 image v10ambbj = Movie(play="images/v10/Scene 26/v10ambbj.webm", loop=True, image="images/v10/Scene 26/v10ambbjStart.webp", start_image="images/v10/Scene 26/v10ambbjStart.webp") # TPP Amber sucking MC's cock on the top of the quater pipe
                 image v10ambbjf = Movie(play="images/v10/Scene 26/v10ambbjf.webm", loop=True, image="images/v10/Scene 26/v10ambbjStart.webp", start_image="images/v10/Scene 26/v10ambbjStart.webp")
 
@@ -743,17 +746,17 @@ label v10_amber_skatepark_sg:
 
                             am "Oh my God, FASTER!"
 
-                            scene v10ambaff
+                            scene v10ambdaf
                             with dissolve
 
                             am "YESSSS!"
 
-                            scene v10ambaff
+                            scene v10ambdaf
                             with dissolve
 
                             u "Damn this feels good!"
 
-                            scene v10ambaff
+                            scene v10ambdaf
                             with dissolve
 
                             am "Oh fuck!"
@@ -978,5 +981,7 @@ label v10_amber_skatepark_sg:
     with fade
 
     u "(I'm fucking beat.)"
+    
+    stop music fadeout 3
 
     jump v10_econ_class # -Transition to Scene 27-

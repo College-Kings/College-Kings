@@ -9,6 +9,8 @@ label v10_riley_sex:
 
     ri "Okay, I really wanna go get cleaned up so do you mind waiting here?"
 
+    play music "music/v10/Scene 40/Track Scene 40_1.mp3" fadein 3
+
     scene v10srds2 # FPP. Show Riley, smiling, mouth closed. She's still dirty.
     with dissolve
 
@@ -93,6 +95,9 @@ label v10_riley_sex:
         scene v10srds5c # FPP. Same camera as v10srds5. Show Riley naked, smiling, mouth closed, stepping forward as though MC is leading her to the bed.
         with dissolve
 
+        stop music fadeout 3
+        play music "music/v10/Scene 40/Track Scene 40_2.mp3" fadein 3
+
         u "Lie down."
         
         image v10rircg = Movie(play="images/v10/Scene 40/v10rircg.webm", loop=True, image="images/v10/Scene 40/v10rircgStart.webp", start_image="images/v10/Scene 40/v10rircgStart.webp") 
@@ -157,6 +162,8 @@ label v10_riley_sex:
 
         pause 0.75
 
+        stop music fadeout 3
+        play music "music/v10/Scene 40/Track Scene 40_3.mp3" fadein 3
         scene v10srds6a # TPP. Same camera as v10srds6. Show MC and Riley laying naked in bed together after sex. Both smiling, Riley mouth open.
         with dissolve
 
@@ -329,6 +336,9 @@ label v10_riley_sex:
                 scene v10srds5c
                 with dissolve
 
+                stop music fadeout 3
+                play music "music/v10/Scene 40/Track Scene 40_2.mp3" fadein 3
+
                 u "Lie down."
 
                 scene v10rircg
@@ -380,6 +390,8 @@ label v10_riley_sex:
 
                 ri "That was nice."
 
+                stop music fadeout 3
+                play music "music/v10/Scene 40/Track Scene 40_3.mp3" fadein 3
                 scene v10srds7
                 with dissolve
 
@@ -929,5 +941,5 @@ label v10_riley_sex:
                 with dissolve
 
                 ri "See ya."
-
+                stop music fadeout 3
                 jump v10_waking_up_end # -Transition to Scene 41-
