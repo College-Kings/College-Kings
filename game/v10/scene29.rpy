@@ -187,7 +187,7 @@ label v10_chloe_hallway:
 
             pause 0.75
 
-    if chloers:
+    else:
         scene v10such3f # FPP. Same as 3, both smile, aubrey mouth open.
         with dissolve
 
