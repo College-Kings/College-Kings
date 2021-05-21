@@ -22,7 +22,10 @@ label v10_leave_fight:
 
         scene v10sraf1c # TPP. Same camera as v10swaf1. Show MC sitting on bed in his room. MC reacts to someone knocking on his door.
         with dissolve
+        play sound "sounds/knock.mp3"
+
         pause 0.5
+
         menu:
             "Act like you're asleep":
                 scene v10sraf1c
@@ -156,7 +159,11 @@ label v10_leave_fight:
         if v10_imre_win: # RCS - MC is an Ape and won the fight
             scene v10sraf4c # TPP. Same camera as v10sraf4. Show MC sitting on bed in his room. MC reacts to someone knocking on his door.
             with dissolve
+
+            play sound "sounds/knock.mp3"
+
             pause 0.5
+
             menu:
                 "Act like you're asleep":
                     scene v10sraf4c
