@@ -233,7 +233,7 @@ image Lars_Kick_hit = "images/v8/Scene 28/Lars_Kick_hit.webp"
 # v10.0
 # Ryan Fight (Scene 6)
 image mc_ryan_BodyJab_hit = Movie(play="images/v10/Scene 6/Animations/MC-BODYHIT/MC-BODYHIT.webm", start_image="images/v10/Scene 6/Animations/MC-BODYHIT/mc-bodyhitstart.webp", image="images/v10/Scene 6/Animations/MC-BODYHIT/mc-bodyhitend.webp", loop = False)
-image mc_ryan_BodyJab_block = Movie(play="images/v10/Scene 6/Animations/MC-BODYBLOCKED/MC-BODYBLOCKED.webm", start_image="images/v10/Scene 6/Animations/MC-BODYBLOCK/mc-bodyblockstart.webp", image="images/v10/Scene 6/Animations/MC-BODYBLOCKED/mc-bodyblockedend.webp", loop = False)
+image mc_ryan_BodyJab_block = Movie(play="images/v10/Scene 6/Animations/MC-BODYBLOCKED/MC-BODYBLOCKED.webm", start_image="images/v10/Scene 6/Animations/MC-BODYBLOCKED/mc-bodyblockedstart.webp", image="images/v10/Scene 6/Animations/MC-BODYBLOCKED/mc-bodyblockedend.webp", loop = False)
 image mc_ryan_Hook_hit = Movie(play="images/v10/Scene 6/Animations/MC-HOOKHIT/MC-HOOKHIT.webm", start_image="images/v10/Scene 6/Animations/MC-HOOKHIT/mc-hookhitstart.webp", image="images/v10/Scene 6/Animations/mc-hookhitend.webp", loop = False)
 image mc_ryan_Hook_block = Movie(play="images/v10/Scene 6/Animations/MC-HOOKBLOCKED/MC-HOOKBLOCKED.webm", start_image="images/v10/Scene 6/Animations/MC-HOOKBLOCKED/mc-hookblockedstart.webp", image="images/v10/Scene 6/Animations/MC-HOOKBLOCKED/mc-hookblockedend.webp", loop = False)
 image mc_ryan_Jab_hit = Movie(play="images/v10/Scene 6/Animations/MC-JABHIT/MC-JABHIT.webm", start_image="images/v10/Scene 6/Animations/MC-JABHIT/mc-jabhitstart.webp", image="images/v10/Scene 6/Animations/MC-JABHIT/mc-jabhitend.webp", loop = False)
@@ -247,7 +247,7 @@ image ryanbody = Movie(play="images/v10/Scene 6/Animations/RYANBODYHOOK/RYANBODY
 image ryankick = Movie(play="images/v10/Scene 6/Animations/RYANKICK/RYANKICK.webm", start_image="images/v10/Scene 6/Animations/RYANKICK/ryankickstart.webp", image="images/v10/Scene 6/Animations/RYANKICK/ryanKickEnd.webp", loop = False)
 
 image Ryan_BodyJab_hit = "images/v10/Scene 6/Animations/END/MCRYAN-BODYHIT-END.webp"
-image Ryan_BodyJob_block = "images/v10/Scene 6/Animations/END/MCRYAN-BODYBLOCKED-END.webp"
+image Ryan_BodyJab_block = "images/v10/Scene 6/Animations/END/MCRYAN-BODYBLOCKED-END.webp"
 image Ryan_Hook_hit = "images/v10/Scene 6/Animations/END/MCRYAN-HOOKHIT-END.webp"
 image Ryan_Hook_block = "images/v10/Scene 6/Animations/END/MCRYAN-HOOKBLOCKED-END.webp"
 image Ryan_Jab_hit = "images/v10/Scene 6/Animations/END/MCRYAN-JABHIT-END.webp"
@@ -271,11 +271,11 @@ image imrebody = Movie(play="images/v10/Scene 7/Animations/IMREBODYHOOK/imreBODY
 image imrekick = Movie(play="images/v10/Scene 7/Animations/IMREKICK/imreKICK.webm", start_image="images/v10/Scene 7/Animations/IMREKICK/imrekickstart.webp", image="images/v10/Scene 7/Animations/IMREKICK/imreKickEnd.webp", loop = False)
 
 image Imre_BodyJab_hit = "images/v10/Scene 7/Animations/END/MCIMRE-BODYHIT-END.webp"
-image Imre_BodyJob_block = "images/v10/Scene 7/Animations/END/MCIMRE-BODYBLOCKED-END.webp"
+image Imre_BodyJab_block = "images/v10/Scene 7/Animations/END/MCIMRE-BODYBLOCKED-END.webp"
 image Imre_Hook_hit = "images/v10/Scene 7/Animations/END/MCIMRE-HOOKHIT-END.webp"
 image Imre_Hook_block = "images/v10/Scene 7/Animations/END/MCIMRE-HOOKBLOCKED-END.webp"
 image Imre_Jab_hit = "images/v10/Scene 7/Animations/END/MCIMRE-JABHIT-END.webp"
-image Imre_Jab_block = "images/v10/Scene 7/Animations/END/MCIMRE-JABBLOCKED.webp"
+image Imre_Jab_block = "images/v10/Scene 7/Animations/END/MCIMRE-JABBLOCKED-END.webp"
 image Imre_Kick_hit = "images/v10/Scene 7/Animations/END/MCIMRE-KICKHIT-END.webp"
 image Imre_Kick_block = "images/v10/Scene 7/Animations/END/MCIMRE-KICKBLOCKED-END.webp"
 
