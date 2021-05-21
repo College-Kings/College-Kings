@@ -2271,7 +2271,7 @@ label v10s33_deergirl21:
                             u "(I'm sure Nora will ask her if she wants her to go.)"
                         
             "Side with Ms. Rose":
-                $ mrroseLike += 1
+                $ msroseLike += 1
                 $ v10s33_side_w_rose = True
             
                 u "I overheard your conversation and I have to be honest, body paint is sort of a kids game nowadays."
