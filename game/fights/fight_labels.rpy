@@ -44,70 +44,22 @@ label fight_changeKeybinds:
     scene jab1pic
     with dissolve
 
-    $ w = renpy.input("Which button should be hook / block face?", default="w").strip() or "w"
+    $ w = renpy.input("Which button should be hook / block face?", default=w).strip() or w
 
     scene hook1pic
     with dissolve
 
-    $ q = renpy.input("Which button should be jab / block head", default="q").strip() or "q"
+    $ q = renpy.input("Which button should be jab / block head", default=q).strip() or q
 
     scene kick1pic
     with dissolve
 
-    $ r = renpy.input("Which button should be kick / block leg?", default="r").strip() or "r"
+    $ r = renpy.input("Which button should be kick / block leg?", default=r).strip() or r
 
     if bodyHook:
         scene hook1pic
         with dissolve
 
-        $ e = renpy.input("Which button should be body hook / low guard?", default="e").strip() or "e"
+        $ e = renpy.input("Which button should be body hook / low guard?", default=e).strip() or e
 
     return
-
-# label fight:
-#     if fight_type == "simWin":
-#         $ mc.health = 1000
-
-#     $ players = allies + enemies
-
-#     $ attacker = getCurrentAttacker()
-#     $ defender = getCurrentDefender()
-
-#     jump healthCheck
-
-# label healthCheck:
-
-#     $ print("Attacker: MC {} : Defender: Lars {}".format(mc.health, lars.health))
-#     if defender.health <= 0:
-#         scene youfinishmovie
-#         pause 1
-
-#         play sound "sounds/fall.mp3"
-
-#         $ attacker.reset()
-
-#         scene youfinish
-#         with vpunch
-#         pause
-
-#         jump youfinish
-#     else:
-#         python:
-#             for player in allies + enemies:
-#                 player.selectDefence()
-
-#         $ attacker = getCurrentAttacker()
-#         $ defender = getCurrentDefender()
-
-#         jump startAttack
-
-# label startAttack:
-#     if attacker in enemies:
-#         pass
-        
-
-#     # if fight_type.startswith("sim"):
-#     #     $ attacker.attack(defender)
-#     #     jump healthCheck
-#     # else:
-#     #     call screen noramlAttack
