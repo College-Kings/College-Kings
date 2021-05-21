@@ -54,12 +54,10 @@ screen fight_tutorial(highlight=None, stance="attack"):
 
     if stance == "attack":
         add "images/hook.webp" align (0.115, 0.4)
-        add "images/body.webp" align (0.172, 0.5)
         add "images/kick.webp" align (0.115, 0.61)
         add "images/jab.webp" align (0.06, 0.5)
     else:
         add "images/jabblock.webp" align (0.115, 0.4)
-        add "images/body.webp" align (0.172, 0.5)
         add "images/kickblock.webp" align (0.115, 0.61)
         add "images/hookblock.webp" align (0.06, 0.5)
 
