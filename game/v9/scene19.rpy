@@ -93,7 +93,7 @@ label v9_lau_dorm:
 
     if laurenrs == True or beachfirstkiss == True:
         menu:
-            "Offer Lauren a Back Rub":
+            "Offer Lauren a back rub":
                 $ addPoint("bf")
 
                 u "Here, let me help."
@@ -118,7 +118,7 @@ label v9_lau_dorm:
 
                 la "Yeah! Let's get to work."
 
-            "Offer Lauren a Hug":
+            "Offer Lauren a hug":
                 $ addPoint("bf")
             
                 u "Aww, come here."
@@ -150,7 +150,7 @@ label v9_lau_dorm:
 
     else:
         menu:
-            "Offer Guidance":
+            "Offer guidance":
                 $ addPoint("bro")
 
                 u "It's simple. Start with your main goal and work your way back to what to do now."
@@ -175,7 +175,7 @@ label v9_lau_dorm:
 
                 u "(Whew!)"
 
-            "Just Listen":
+            "Just listen":
                 $ addPoint("bf")
 
                 u "What part's giving you the most trouble? How can I help?"
@@ -219,7 +219,7 @@ label v9_lau_dorm:
     with dissolve
 
     menu:
-        "Be Impressed":
+        "Be impressed":
             u "Wow! That I gotta see!"
 
             scene v9lau6
@@ -520,7 +520,7 @@ label v9_lau_dorm:
 
                     la "One might."
 
-                "Be Romantic":
+                "Be romantic":
                     $ addPoint("bf")
 
                     u "I just want you to know you can count on me. Always."
@@ -599,7 +599,7 @@ label v9_lau_dorm:
 
                 u "I know so."
 
-            "Take Some Credit":
+            "Take some credit":
                 u "We make a great team."
 
                 scene v9lau16

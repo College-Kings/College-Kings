@@ -386,7 +386,7 @@ label v10s33_deergirl11:
     with dissolve
 
     menu:
-        "Cross lean face":
+        "Cross Lean Face":
 
             scene v10cfrdg13c # TPP. same 13, Show mc leant back arms crossed, mouth closed
             with dissolve
@@ -402,7 +402,7 @@ label v10s33_deergirl11:
             with dissolve
 
             pause 0.75
-        "Lean face cross":
+        "Lean Face Cross":
             
             scene v10cfrdg13d # TPP. same 13, leant forward arms down.
             with dissolve
@@ -433,7 +433,7 @@ label v10s33_deergirl11:
     scene v10cfrdg11b
     with dissolve
 
-    dg1 "If you're interested in learning anymore dances, you know where to find me."
+    dg1 "If you're interested in learning any more dances, you know where to find me."
 
     if joinwolves:
 
@@ -618,7 +618,7 @@ label v10s33_deergirl11:
 
             au "I don't, high school prom date. *Laughs*"
 
-        "No Way":
+        "No way":
 
             $ aubreyLike -= 1
             $ addPoint("bro", 1)
@@ -1056,7 +1056,7 @@ label v10s33_chloe1:
     scene v10cfrcl1
     with dissolve
 
-    u "Isn't there a theory or something about that."
+    u "Isn't there a theory or something about that?"
 
     scene v10cfrcl1b # FPP. same1,slight smile, mouth open
     with dissolve
@@ -1089,7 +1089,7 @@ label v10s33_chloe1:
     cl "You're so mean! *Laughs*"
 
     menu:
-        "Date With Chloe":
+        "Date with Chloe":
             $ v10s33_date_w_chloe = True
             $ chloeLike += 1
             if chloers:
@@ -1113,7 +1113,7 @@ label v10s33_chloe1:
 
                 cl "That's cute."
 
-        "Who Would You Date?":
+        "Who would you date?":
                 scene v10cfrcl1
                 with dissolve
 
@@ -1154,7 +1154,7 @@ label v10s33_chloe1:
 
     if v10_nora_bitch_about_chloe:
         menu:
-            "Tell Chloe About Nora":
+            "Tell Chloe about Nora":
                 $ chloeLike += 1
                 $ v10s33_toldChloe = True
                 $ chloe_over_nora = True
@@ -1216,7 +1216,7 @@ label v10s33_chloe1:
 
                 call screen v10s33_mudwrestling
 
-            "Don't Tell Chloe":
+            "Don't tell Chloe":
 
                 scene v10cfrcl1
                 with dissolve
@@ -1233,7 +1233,7 @@ label v10s33_chloe1:
                 if v10_help_nora_freeroam:
 
                     menu:
-                        "Invite To Europe":
+                        "Invite to Europe":
                             $ v10s33_inv_chloe_eur = True
                             scene v10cfrcl1
                             with dissolve
@@ -1246,7 +1246,7 @@ label v10s33_chloe1:
                             cl "I'm not trying to be on a long trip in another country with Nora, if I'm being honest."
 
                             menu:
-                                "Convince Her":
+                                "Convince her":
                                     $ chloeLike += 1
                                     $ v10s33_convince_chloe = True
                                     scene v10cfrcl1
@@ -1270,14 +1270,14 @@ label v10s33_chloe1:
 
                                         cl "Yeah... I don't know."
 
-                                "Let Her Decide":
+                                "Let her decide":
 
                                     scene v10cfrcl1
                                     with dissolve
 
                                     u "I understand, it's your choice."
 
-                        "Don't Invite":
+                        "Don't invite":
                             
                             scene v10cfrcl1
                             with dissolve
@@ -1506,6 +1506,8 @@ label v10s33_deergirl21:
 
         scene v10cfrla2 #TPP showing Mc kissing Lauren over the table
         with dissolve
+
+        play sound "sounds/kiss.mp3"
 
         pause 0.5
 
@@ -2060,12 +2062,12 @@ label v10s33_deergirl21:
 
                         li "Alright [name]."
 
-                    "Don't Paint Lindsey":
+                    "Don't paint Lindsey":
                         u "*Laughs* You should."
 
                 $ v10s33_lindsey_compliment = True
 
-            "Ask How She's Doing":
+            "Ask how she's doing":
                 u "Hey Lindsey, how are you doing?"
 
                 scene v10cfrfrli1a
@@ -2121,13 +2123,13 @@ label v10s33_deergirl21:
         scene v10cfrcfrro1
         with dissolve
 
-        lee "And painting doesn't. This is why I became a history teacher. Someone has to pass along the great traditions of our species."
+        lee "And painting doesn't? This is why I became a history teacher. Someone has to pass along the great traditions of our species."
 
         scene v10cfrcfrro1b # FPP. Same as 1, both mouths closed.
         with dissolve
 
         menu:
-            "Side With Mr. Lee":
+            "Side with Mr. Lee":
                 $ mrleeLike += 1
 
                 u "I overheard your conversation and I have to be honest, body painting is still pretty major. I know I love it."
@@ -2176,8 +2178,8 @@ label v10s33_deergirl21:
                 with dissolve
 
                 menu:
-                    "Encourage Her":
-                        $ v10s33_encourage_rose_paint = False
+                    "Encourage her":
+                        $ v10s33_encourage_rose_paint = True
 
                         u "You sort of have to now, it's a matter of principle."
 
@@ -2219,7 +2221,7 @@ label v10s33_deergirl21:
                         scene v10cfrcfrro1e # FPP. Same as 1, both looking at camera, both smile, both mouths closed.
                         with dissolve
 
-                    "Let It Go":
+                    "Let it go":
                         scene v10cfrcfrro3c
                         with dissolve
 
@@ -2245,7 +2247,7 @@ label v10s33_deergirl21:
 
                 if v10_help_nora_freeroam:
                     menu:
-                        "Invite Ms. Rose To Europe":
+                        "Invite Ms. Rose to Europe":
                             $ v10s33_inv_rose_europe = True
 
                             u "I wanted to ask you Ms. Rose, are you planning on going on the Europe trip?"
@@ -2265,10 +2267,10 @@ label v10s33_deergirl21:
 
                             u "Great!"
 
-                        "Don't Invite Her":
+                        "Don't invite her":
                             u "(I'm sure Nora will ask her if she wants her to go.)"
                         
-            "Side With Ms. Rose":
+            "Side with Ms. Rose":
                 $ mrroseLike += 1
                 $ v10s33_side_w_rose = True
             
@@ -2507,7 +2509,7 @@ label v10s33_riley1:
     ri "Now this I can work with! What do you think?"
 
     menu:
-        "It Looks Good":
+        "It looks good":
             $ v10_ri_hat_good = True
             scene v10cfrri2e # FPP. same 2, cheeky smile,wearing a hat from here on, mouth closed
             with dissolve
@@ -2528,7 +2530,7 @@ label v10s33_riley1:
 
             ri "Good, then I found something I'll get."
 
-        "No Way":
+        "No way":
 
             scene v10cfrri2e
             with dissolve
@@ -3596,7 +3598,7 @@ label v10s33_riley2:
         with dissolve
 
         menu:
-            "It's Okay":
+            "It's okay":
                 $ addPoint("bro")
                 $ ryanLike += 1
                 $ v10s33_ryan_flirt_emily = True
@@ -3638,7 +3640,7 @@ label v10s33_riley2:
 
                 ry "Yeah yeah, uhm... that's cool. See you around."
 
-            "It's Not Okay": 
+            "It's not okay": 
                 $ addPoint("tm")
             
                 u "You would really ask me that? Why would I be cool with my friend dating my ex?!"

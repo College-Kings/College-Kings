@@ -152,7 +152,7 @@ label v9_train_w_apes:
         ca "And Rocky. I'm sure you don't need my help. You're already famous."
 
         menu:
-            "Be Confident":
+            "Be confident":
                 $ addPoint("bro")
 
                 scene v9twa5a
@@ -170,7 +170,7 @@ label v9_train_w_apes:
 
                 ca "When I get done with you, no punk will even THINK about starting shit again. You hear me?"
 
-            "Be Humble":
+            "Be humble":
                 $ addPoint("bf")
 
                 scene v9twa5a # FPP. Show Cameron, hands behind back, serious look, mouth open
@@ -238,7 +238,7 @@ label v9_train_w_apes:
         ca "Now your turn. Imagine him standing right in front of you and get as many sneak shots in as possible. Balls, kidneys, throat, I don't care. Go for the kill!"
 
         menu:
-            "Be Pumped":
+            "Be pumped":
                 $ addPoint("bro")
 
                 scene v9twa8 # TPP. Show MC Punching bag, back to camera, in boxing stance
@@ -250,7 +250,7 @@ label v9_train_w_apes:
 
                 ca "Now you got it! I'm gonna go check on these punks. Make me proud!"
 
-            "Be Concerned":
+            "Be concerned":
                 scene v9twa7a
                 with dissolve
 
@@ -284,7 +284,7 @@ label v9_train_w_apes:
         ca "What am I to do with you?"
 
         menu:
-            "Ask For Help":
+            "Ask for help":
                 scene v9twa5a
                 with dissolve
 
@@ -305,7 +305,7 @@ label v9_train_w_apes:
 
                 ca "Great! Over here!"
 
-            "Stay Quiet":
+            "Stay quiet":
                 $ addPoint("bf")
 
                 scene v9twa5a

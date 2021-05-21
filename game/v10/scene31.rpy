@@ -125,7 +125,7 @@ label v10_late_alley:
         jo "Haha, he's some big shot. Can't remember his name honestly, but he's a bit intimidating. Kinda reminds me of my dad, but more flexible."
 
     menu:
-        "Support Him":
+        "Support him":
             $ v10_support_josh = True
             scene v10all3a
             with dissolve
@@ -170,7 +170,7 @@ label v10_late_alley:
 
             jo "Not a bad idea. I appreciate the talk man."
 
-        "Don't Support":
+        "Don't support":
             if kct == "confident":
 
                 scene v10all3

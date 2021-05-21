@@ -11,7 +11,7 @@ label v9_walk_w_sam:
     play music "music/v9/Scene 24/Track Scene 24.mp3" fadein 2
 
     menu:
-        "Joke Around":
+        "Joke around":
             $ addPoint("bf")
             jump v9_walk_w_sam_joke
         "Be serious":
@@ -240,10 +240,10 @@ label v9_walk_w_sam_cont2:
 
     menu:
 
-        "Ask To Go Out Again":
+        "Ask to go out again":
             $ addPoint("bf")
             jump v9_walk_w_sam_walk_again
-        "Say Goodbye":
+        "Say goodbye":
             jump v9_walk_w_sam_walk_goodbye
 
     label v9_walk_w_sam_walk_again:

@@ -79,7 +79,7 @@ label v10_wolves_redec:
     with dissolve
 
     menu:
-        "Accept Help":
+        "Accept help":
             $ addPoint("bro", 1)
 
             $ v10_perry_help_room = True
@@ -175,7 +175,7 @@ label v10_wolves_redec:
 
             guyd "Anytime."
 
-        "Decline Help":
+        "Decline help":
             u "I appreciate it man, but I'm all good. This is gonna require all my focus."
 
             scene v10swhr4b

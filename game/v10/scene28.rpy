@@ -95,7 +95,7 @@ label v10_talk_nora:
 
                     no "Yeah, I'm pretty sure she'll take us. She likes Europe as much as I do."
 
-                "Leave it Alone":
+                "Leave it alone":
 
                     scene v10hal1
                     with dissolve
@@ -139,7 +139,7 @@ label v10_talk_nora:
             with dissolve
 
             u "No problem."
-        "Don't Help":
+        "Don't help":
             scene v10hal1
             with dissolve
 

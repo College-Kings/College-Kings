@@ -216,7 +216,7 @@ label v10_econ_class:
             u "You did sound pretty enthusiastic."
 
         menu:
-            "Ask About Nora":
+            "Ask about Nora":
                 scene v10eco8a
                 with dissolve
 
@@ -292,7 +292,7 @@ label v10_econ_class:
 
                 u "You too."
 
-            "Don't Ask":
+            "Don't ask":
                 scene v10eco8a
                 with dissolve
 

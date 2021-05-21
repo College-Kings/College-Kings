@@ -60,7 +60,7 @@ label v10_walk_jenny_text:
 
             u "(I hope this goes smooth, Jenny hearing it from Penelope will probably help them both process the situation.)"
 
-        "Go Alone":
+        "Go alone":
             u "(On the other hand, maybe there’s benefits to meeting Jenny alone…)"
 
     scene v10swjt3 # TPP. Show MC continuing to walk down the street, no longer holding phone.
@@ -92,7 +92,7 @@ label v10_walk_jenny_text:
     with dissolve
 
     menu:
-        "Make A Joke":
+        "Make a joke":
             $ mrleeLike += 1
             $ addPoint("tm", 1)
 
@@ -103,7 +103,7 @@ label v10_walk_jenny_text:
 
             lee "Of course we do, son. We also have bedtimes and mine is coming up soon."
 
-        "Don't Make A Joke":
+        "Don't make a joke":
             u "Sounds nice."
 
             scene v10swjt5

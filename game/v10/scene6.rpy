@@ -1,6 +1,6 @@
 # SCENE 6: MC vs Ryan (Wolves)
 # Locations: Warehouse
-# Characters: 
+# Characters:
 # Time: Saturday Night
 
 label v10_mc_vs_ryan_fight:
@@ -44,9 +44,9 @@ label v10_mc_vs_ryan_fight:
 
     u "You got it man."
 
-    scene v10mvr3 # TPP. Show Josh in the ring, mc walking towards him from behind mc. 
+    scene v10mvr3 # TPP. Show Josh in the ring, mc walking towards him from behind mc.
     with dissolve
-    
+
     pause 0.5
 
     scene v10mvr4 # TPP. Show josh in the centre of the ring and ryan and MC in opposite corners, Josh mouth open, mc and ryan mouth closed
@@ -82,7 +82,7 @@ label v10_mc_vs_ryan_fight:
                 call screen fight_selectDifficulty
 
                 call screen fight_keybindOptions
-            
+
             elif fight_type == "simReal" or fight_type == "simWin":
                 $ simRyanFight = True
                 $ stance = 1
@@ -105,7 +105,7 @@ label v10_mc_vs_ryan_fight:
                 $ stance = 2 # Defence
 
                 show screen fight_overlay(stance="defend")
-                
+
                 # Ryan hook
                 if ryanAttack == 1:
 
@@ -187,7 +187,7 @@ label v10_mc_vs_ryan_fight:
             label mc_ryanKickHit: # MC Kicks Ryan (Hits/No Block)
 
                 $ ryanDamage += 1
-                scene mc_ryan_Kick_hit 
+                scene mc_ryan_Kick_hit
                 pause 1 # Trial/Error
                 if ryanDamage >= ryanHealth:
                     jump mc_ryanFightEnd
@@ -195,7 +195,7 @@ label v10_mc_vs_ryan_fight:
 
             label mc_ryanKickBlock: # MC Kicks Ryan (Blocks)
 
-                    scene mc_ryan_Kick_block 
+                    scene mc_ryan_Kick_block
                     pause 0.7 # Trial/Error
                     jump ryan_McAttack
 
@@ -228,7 +228,7 @@ label v10_mc_vs_ryan_fight:
 
             label mc_ryanHooksBlock: # MC Hooks Ryan (Blocks)
 
-                    scene mc_ryan_Hook_block 
+                    scene mc_ryan_Hook_block
                     pause 0.7 # Trial/Error
                     jump ryan_McAttack
 
@@ -245,7 +245,7 @@ label v10_mc_vs_ryan_fight:
 
             label mc_ryanBodyhookBlock: # MC Body Hooks Ryan (Blocks)
 
-                    scene mc_ryan_BodyJab_block 
+                    scene mc_ryan_BodyJab_block
                     pause 0.7 # Trial/Error
                     jump ryan_McAttack
 
@@ -417,7 +417,7 @@ label v10_mc_vs_ryan_fight:
         "Don't Fight":
             $ friends_first = True
             $ grantAchievement ("Friends first")
-            scene v10mvr6a 
+            scene v10mvr6a
             with dissolve
 
             u "I don't think I can do this. Sorry guys."
@@ -442,4 +442,3 @@ label v10_mc_vs_ryan_fight:
             u "I can't, I just can't."
 
             jump v10_avoid_fight
-

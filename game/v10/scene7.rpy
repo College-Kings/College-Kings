@@ -74,7 +74,7 @@ label v10_mc_vs_imre_fight:
                 call screen fight_selectDifficulty
 
                 call screen fight_keybindOptions
-            
+
             elif fight_type == "simReal" or fight_type == "simWin":
                 $ simImreFight = True
                 $ stance = 1
@@ -97,7 +97,7 @@ label v10_mc_vs_imre_fight:
                 $ stance = 2 # Defence
 
                 show screen fight_overlay(stance="defend")
-                
+
                 # Imre hook
                 if imreAttack == 1:
 
@@ -179,7 +179,7 @@ label v10_mc_vs_imre_fight:
             label mc_imreKickHit: # MC Kicks Imre (Hits/No Block)
 
                 $ imreDamage += 1
-                scene mc_imre_Kick_hit 
+                scene mc_imre_Kick_hit
                 pause 1 # Trial/Error
                 if imreDamage >= imreHealth:
                     jump mc_imreFightEnd
@@ -187,7 +187,7 @@ label v10_mc_vs_imre_fight:
 
             label mc_imreKickBlock: # MC Kicks Imre (Blocks)
 
-                    scene mc_imre_Kick_block 
+                    scene mc_imre_Kick_block
                     pause 0.7 # Trial/Error
                     jump imre_McAttack
 
@@ -220,7 +220,7 @@ label v10_mc_vs_imre_fight:
 
             label mc_imreHooksBlock: # MC Hooks Imre (Blocks)
 
-                    scene mc_imre_Hook_block 
+                    scene mc_imre_Hook_block
                     pause 0.7 # Trial/Error
                     jump imre_McAttack
 
@@ -237,7 +237,7 @@ label v10_mc_vs_imre_fight:
 
             label mc_imreBodyhookBlock: # MC Body Hooks Imre (Blocks)
 
-                    scene mc_imre_BodyJab_block 
+                    scene mc_imre_BodyJab_block
                     pause 0.7 # Trial/Error
                     jump imre_McAttack
 
@@ -392,7 +392,7 @@ label v10_mc_vs_imre_fight:
             label mc_imreFightEnd: # MC wins fight against Imre
                 $ v10_imre_win = True
                 jump imre_fightEnd
-                
+
             label imre_McFightEnd: # MC loses fight against Imre
                 $ v10_imre_win = False
                 jump imre_fightEnd
@@ -409,7 +409,7 @@ label v10_mc_vs_imre_fight:
         "Don't Fight":
             $ friends_first = True
             $ grantAchievement ("Friends first")
-            
+
             scene v10mvi3 # FPP. Show Imre infront of camera in ring, mouth closed, hands raised ready to fight.
             with dissolve
 

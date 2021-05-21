@@ -55,7 +55,7 @@ label v10_chloe_vs_nora:
     aut "Congratulations, Chloe!"
 
     menu:
-        "Talk To Chloe":
+        "Talk to Chloe":
 
             scene v10cvn9a # fpp same 9, mouth open
             with dissolve
@@ -124,7 +124,7 @@ label v10_chloe_vs_nora:
 
                     cl "Right..."
 
-        "Talk To Nora":
+        "Talk to Nora":
 
             scene v10cvn10 # FPP. Show nora, mouth closed
             with dissolve

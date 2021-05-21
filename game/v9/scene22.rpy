@@ -194,7 +194,7 @@ label v9_room_w_sam:
         with dissolve
 
         menu:
-            "Play It Off":
+            "Play it off":
                 $ addPoint("bro")
 
                 u "No need to thank me. Really. it was nothing. I support my fellow Apes."
@@ -219,7 +219,7 @@ label v9_room_w_sam:
 
                 u "In that case, you're both welcome."
 
-            "Accept The Thanks":
+            "Accept the thanks":
                 $ addPoint("bf")
 
                 u "Aww, you're welcome. Apes gotta stick together, you know. And that includes you now."

@@ -157,7 +157,7 @@ label v9_thur_room_w_cam_cont1:
         "Drink":
             $ addPoint("bro")
             jump v9_thur_room_w_cam_drink
-        "Don't Drink":
+        "Don't drink":
             jump v9_thur_room_w_cam_no_drink
         
 label v9_thur_room_w_cam_drink:
@@ -263,9 +263,9 @@ label v9_thur_room_w_cam_no_punch:
             jump v9_s15_phoneExit_no_Punch
 
     menu:
-        "Shrug It Off":
+        "Shrug it off":
             jump v9_thur_room_w_cam_shrugg_off
-        "Get Defensive":
+        "Get defensive":
             $ addPoint("tm")
             jump v9_thur_room_w_cam_defensive
 
@@ -332,7 +332,7 @@ label v9_thur_room_w_cam_cont3:
         "Protest":
             $ addPoint("tm")
             jump v9_thur_room_w_cam_protest
-        "Follow Orders":
+        "Follow orders":
             jump v9_thur_room_w_cam_follow
         
 label v9_thur_room_w_cam_protest:

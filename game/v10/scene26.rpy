@@ -360,6 +360,7 @@ label v10_amber_skatepark:
 
     u "*Laughs*"
 
+label v10_amber_skatepark_sg:
     if amberrs:
         scene v10sasp5b # FPP. Same camera as v10sasp5. Show Amber leaning in to whisper into MC's ear, smiling, mouth open.
         with fade
@@ -973,6 +974,7 @@ label v10_amber_skatepark:
 
                 pause 0.75
 
+    $ renpy.end_replay()
     scene v10sasp5g
     with dissolve
 

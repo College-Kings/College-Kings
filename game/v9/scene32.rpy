@@ -25,9 +25,9 @@ label v9_sat_gym:
     play music "music/v9/Scene 32/Track Scene 32.mp3" fadein 2
 
     menu:
-        "Hit The Gym":
+        "Hit the gym":
             jump v9_sat_hit_gym
-        "Skip The Gym":
+        "Skip the gym":
             jump v9_sat_skip_gym
 
 label v9_sat_hit_gym:
@@ -54,10 +54,10 @@ label v9_sat_hit_gym:
         ev "Is that so? I'm a very busy woman with a lot of responsibilities, I barely have enough time to workout and here you are interrupting that."
 
         menu:
-            "Convince Her":
+            "Convince her":
                 $ addPoint("bf")
                 jump v9_sat_hit_gym_convince
-            "Forget It":
+            "Forget it":
                 jump v9_sat_hit_gym_forget
 
         label v9_sat_hit_gym_convince:

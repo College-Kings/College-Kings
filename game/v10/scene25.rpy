@@ -54,7 +54,7 @@ label v10_ms_rose_fight:
     mrr "Just let me come in so we can-"
 
     menu:
-        "Speak Up":
+        "Speak up":
             $ addPoint("bf", 1)
             $ v10_ms_r_interfere = True
             scene v10msf2 # FPP. Show MR Rose in foreground facing camera, Show MS rose at the door facing camera, Mr Rose Mouth closed, Ms rose mouth closed.
@@ -101,7 +101,7 @@ label v10_ms_rose_fight:
             with dissolve
 
             pause 0.5
-        "Stay Quiet":
+        "Stay quiet":
             
             scene v10msf2c
             with dissolve
@@ -131,7 +131,7 @@ label v10_ms_rose_fight:
     ro "*Sighs* I'm sorry. He has no respect for anyone but himself."
 
     menu:
-        "Insult Him":
+        "Insult him":
             scene v10msf4a # FPP. same camera as v10msf4, Show MS rose, crying mouth closed, FPP now from right infront of door to have conversation with ms rose.
             with dissolve
 
@@ -142,7 +142,7 @@ label v10_ms_rose_fight:
 
             ro "Tell me about it."
 
-        "Comfort Her":
+        "Comfort her":
             $ addPoint("bf", 1)
 
             scene v10msf4a 
@@ -205,7 +205,7 @@ label v10_ms_rose_fight:
     mrr "You're too sweet."
 
     menu:
-        "Make A Move":
+        "Make a move":
             $ v10_ms_r_kiss = True
             $ kiss_teacher = True
             $grantAchievement = ("Forbidden romance")
@@ -235,7 +235,7 @@ label v10_ms_rose_fight:
 
             u "(Did I really just do that?)"
 
-        "Don't Make A Move":
+        "Don't make a move":
             scene v10msf4a
             with dissolve
             u "That's how I was raised."
