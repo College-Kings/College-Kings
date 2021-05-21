@@ -3,6 +3,7 @@
 # Characters:MC (Outfit 7), Grayson (Outfit 3),Chris (Outfit 2)
 # Time: Saturday Night
 label v10_avoid_fight:
+    $ renpy.end_replay()
     if v10_ryan_fight == False and v10_imre_fight == False:   
 
         scene v10frr1 # TPP. Show MC leaving the warehouse.(camera from inside wearhouse positioned behind mc)
