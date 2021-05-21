@@ -162,7 +162,7 @@ label v10_chloe_gym:
 
     u "(Damn...)"
 
-    if ChloeRS: # If in a relationship with Chloe
+    if chloers: # If in a relationship with Chloe
         # -Event1 Look closer-
         menu:
             "Look closer":
