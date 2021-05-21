@@ -24,17 +24,7 @@ label amber_sex_at_joshs:
     with dissolve
 
     $ get_a_room = True
-    if not steam:
-        image get_a_room = "images/v8/achievements/getaroom.webp"
-        show get_a_room:
-            xpos 0
-            ypos -200
-            linear 0.5 xpos 0 ypos 0
-            pause 2.0
-            linear 0.5 xpos 0 ypos -200
-    else:
-        $ achievement.grant("get_a_room")
-        $ achievement.sync()
+    $ grantAchievement("get_a_room")
 
     if ending == "amber":
         am "I've been waiting for this since the last time."

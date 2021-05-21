@@ -949,7 +949,7 @@ menu:
                 with dissolve
                 
                 $ lake_hj = True
-                $ grantAchievement ("Relaxing Day")
+                $ grantAchievement("relaxing_day")
 
                 " "
 

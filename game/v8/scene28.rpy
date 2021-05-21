@@ -567,17 +567,7 @@ label dodged_pipe:
     with dissolve
 
     $ ip_man = True
-    if not steam:
-        image ip_man = "images/v8/achievements/ipman.webp"
-        show ip_man:
-            xpos 0
-            ypos -200
-            linear 0.5 xpos 0 ypos 0
-            pause 2.0
-            linear 0.5 xpos 0 ypos -200
-    else:
-        $ achievement.grant("ip_man")
-        $ achievement.sync()
+    $ grantAchievement("ip_man")
 
     u "Fuck you!"
 

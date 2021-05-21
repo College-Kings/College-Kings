@@ -1158,7 +1158,7 @@ label v10s33_chloe1:
                 $ chloeLike += 1
                 $ v10s33_toldChloe = True
                 $ chloe_over_nora = True
-                $ grantAchievement("Hard decisions")
+                $ grantAchievement("hard_decisions")
                 scene v10cfrcl1c # FPP. same1,slight angry look, closed
                 with dissolve
 

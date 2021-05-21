@@ -116,5 +116,9 @@ label after_load:
         try: kiwiiPost1
         except NameError: kiwii_firstTime = False
 
+    show nohardfeelings at achievementShow
+    $ achievementAtList = renpy.get_at_list("nohardfeelings")
+    hide nohardfeelings
+
     show screen phoneIcon
     return

@@ -1,7 +1,7 @@
 init python:
     persistent.ep = 10
 
-define config.enable_steam = True
+define config.enable_steam = False
 define config.developer = True
 define config.console = True
 
@@ -11,11 +11,6 @@ define config.steam_appid = 1463120
 define _game_menu_screen = "ingmenu"
 
 label splashscreen:
-    # Get Animation/Transform List
-    show nohardfeelings at achievementShow
-    $ achievementAtList = renpy.get_at_list("nohardfeelings")
-    hide nohardfeelings
-
     # Splashscreen
     scene black
     with Pause(1)
@@ -37,6 +32,7 @@ label splashscreen:
     with Pause(1)
 
     return
+
 
 # The game starts here.
 label start:

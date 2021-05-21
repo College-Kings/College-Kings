@@ -34,6 +34,6 @@ init -1 python:
 
 
     def grantAchievement(achieve):
-        renpy.show(achieve.replace("_", ""), at_list=achievementAtList)
-        achievement.grant(achieve)
+        renpy.show(achieve, at_list=achievementAtList)
+        achievement.grant(achieve) 
         achievement.sync()

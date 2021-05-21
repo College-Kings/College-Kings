@@ -16,7 +16,7 @@ init python:
         def checkCondition(self):
             return getattr(store, self.condition)
 
-    ## ACHIEVEMENT ITEMS HERE
+    # ACHIEVEMENT ITEMS HERE
     Achievement("open wound", "Tell off Emily", "openwound")
     Achievement("no hard feelings", "Play nice with Emily", "nohardfeelings")
     Achievement("keep it moving", "Hit on Nora", "keepitmoving")
@@ -46,17 +46,17 @@ init python:
     Achievement("ip man", "Win The Alley Fight", "ip_man")
     Achievement("thick and thin", "Help Penelope", "thick_and_thin")
     Achievement("up for more", "Flirt With Chloe", "up_for_more")
-    Achievement("Back Down", "Punch the guy in the hallway", "down_for_the_count")
-    Achievement("Second Date", "Get a second date with Evelyn", "second_date")
-    Achievement("Relaxing Day", "Hook up with Aubrey at the lake", "lake_hj")
-    Achievement("The King", "Recognise the king", "the_king")
-    Achievement("The wrong time", "Don't kiss Lindsey", "the_wrong_time")
-    Achievement("Friends first", "Refuse to fight a friend", "friends_first")
-    Achievement("Bathroom sex", "Have sex in a bathroom", "bathroom_sex")
-    Achievement("Forbidden romance", "Kiss a teacher", "kiss_teacher")
-    Achievement("Hard decisions", "Tell Chloe what Nora said", "chloe_over_nora")
-    Achievement("Rawr I'm a Lion!", "Tell Lauren you like Lions", "im_a_lion")
-    Achievement("Volleyball Rematch", "Have a rematch with Chloe", "volleyball_rematch")
+    Achievement("back down", "Punch the guy in the hallway", "down_for_the_count")
+    Achievement("second date", "Get a second date with Evelyn", "second_date")
+    Achievement("relaxing day", "Hook up with Aubrey at the lake", "lake_hj")
+    Achievement("the king", "Recognise the king", "the_king")
+    Achievement("the wrong time", "Don't kiss Lindsey", "the_wrong_time")
+    Achievement("friends first", "Refuse to fight a friend", "friends_first")
+    Achievement("bathroom sex", "Have sex in a bathroom", "bathroom_sex")
+    Achievement("forbidden romance", "Kiss a teacher", "kiss_teacher")
+    Achievement("hard decisions", "Tell Chloe what Nora said", "chloe_over_nora")
+    Achievement("rawr im a lion!", "Tell Lauren you like Lions", "im_a_lion")
+    Achievement("volleyball rematch", "Have a rematch with Chloe", "volleyball_rematch")
 
 screen achievements():
     tag phoneTag
