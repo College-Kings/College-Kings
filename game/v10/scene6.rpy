@@ -206,7 +206,7 @@ label v10_mc_vs_ryan_fight:
 
                 $ ryanDamage += 1
                 scene mc_ryan_Jab_hit
-                pause 0.7 # Trial/Error
+                pause 2.0 # Trial/Error
                 if ryanDamage >= ryanHealth:
                     jump mc_ryanFightEnd
                 jump ryan_McAttack
@@ -214,7 +214,7 @@ label v10_mc_vs_ryan_fight:
             label mc_ryanJabsBlock: # MC Jabs Ryan (Blocks)
 
                     scene mc_ryan_Jab_block
-                    pause 0.7 # Trial/Error
+                    pause 2.0 # Trial/Error
                     jump ryan_McAttack
 
 
@@ -222,7 +222,7 @@ label v10_mc_vs_ryan_fight:
 
                 $ ryanDamage += 1
                 scene mc_ryan_Hook_hit
-                pause 0.7 # Trial/Error
+                pause 2.0 # Trial/Error
                 if ryanDamage >= ryanHealth:
                     jump mc_ryanFightEnd
                 jump ryan_McAttack
@@ -230,7 +230,7 @@ label v10_mc_vs_ryan_fight:
             label mc_ryanHooksBlock: # MC Hooks Ryan (Blocks)
 
                     scene mc_ryan_Hook_block
-                    pause 0.7 # Trial/Error
+                    pause 2.0 # Trial/Error
                     jump ryan_McAttack
 
 
