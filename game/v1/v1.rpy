@@ -2,21 +2,13 @@ init python:
     # Emily's messages
     def v1_reply1():
         setattr(store, "nohardfeelings", True)
-        if not steam:
-            renpy.show("nohardfeelings", at_list=achievementAtList)
-        else:
-            achievement.grant("no_hard_feelings")
-            achievement.sync()
+        grantAchievement("no_hard_feelings")
 
         contact_Emily.newMessage(_("Cool :)"))
 
     def v1_reply2():
         setattr(store, "openwound", True)
-        if not steam:
-            renpy.show("openwound", at_list=achievementAtList)
-        else:
-            achievement.grant("open_wound")
-            achievement.sync()
+        grantAchievement("openwound")
 
         addPoint("tm")
         contact_Emily.newMessage(_("Ugh :/"))
@@ -1160,11 +1152,7 @@ label starta: #for compatibility only
                 with dissolve
 
                 $ keepitmoving = True
-                if not steam:
-                    show keepitmoving at achievementShow
-                else:
-                    $ achievement.grant("keep_it_moving")
-                    $ achievement.sync()
+                $ grantAchievement("keep_it_moving")
 
                 u "Actually, I knew that. I just wanted to talk to you 'cause you're really cute."
 
@@ -2773,11 +2761,8 @@ label aw_bd:
                 $ v1_kissLauren = True
 
                 $ romeo = True
-                if not steam:
-                    show romeo at achievementShow
-                else:
-                    $ achievement.grant("romeo")
-                    $ achievement.sync()
+                $ grantAchievement("romeo")
+                    
 
                 play sound "sounds/kiss.mp3"
 
@@ -3486,11 +3471,8 @@ label v1_freeRoam2_mason:
             with dissolve
 
             $ bigmouth = True
-            if not steam:
-                show bigmouth at achievementShow
-            else:
-                $ achievement.grant("big_mouth")
-                $ achievement.sync()
+            $ grantAchievement("big_mouth")
+                
 
             u "Yeah, he better watch out, or I'll kick his ass."
 

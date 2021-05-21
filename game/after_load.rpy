@@ -1,10 +1,10 @@
 init -1 python:
     import os
 
-    if renpy.loadable("bugTesting_Overwrite.rpy.rpy"):
-        os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpy.rpy"))
-    if renpy.loadable("bugTesting_Overwrite.rpy.rpyc"):
-        os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpy.rpyc"))
+    if renpy.loadable("bugTesting_Overwrite.rpy"):
+        os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpy"))
+    if renpy.loadable("bugTesting_Overwrite.rpyc"):
+        os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpyc"))
 
     if renpy.loadable("phonescript.rpy"):
         os.remove(os.path.join(config.basedir, "game", "phone", "phonescript.rpy"))
@@ -109,7 +109,7 @@ label after_load:
                         except AttributeError: reply.func = None
             except AttributeError: pass
 
-        # Variables 
+        # Variables
         try:
             if chlorers: chloers = True
         except NameError: pass

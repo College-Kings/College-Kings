@@ -15,12 +15,12 @@ init -1 python:
 
         # Decide the new order of traits based on the updated values
         kctDict = { "popular": popular, "confident": confident, "loyal": loyal }
+        setattr(store, "sortedKCT", [k for (k, v) in sorted(kctDict.items(), key=lambda k: k[0])])
 
-        newKCT = max(kctDict, key=kctDict.get)
-        setattr(store, "kct", newKCT)
-
-        if newKCT != oldKCT:
+        if sortedKCT[0] != oldKCT:
+            setattr(store, "kct", sortedKCT[0])
             renpy.notify("Your KCT has changed to " + kct)
+
 
     # Mark disabled choices
     if getattr(renpy.display.get_info(), 'oldmenu', None) is None:
@@ -31,3 +31,9 @@ init -1 python:
                   for label, condition, value in items ]
         return renpy.display.get_info().oldmenu(items, set_expr)
     renpy.exports.menu = menu_override
+
+
+    def grantAchievement(achieve):
+        renpy.show(achieve.replace("_", ""), at_list=achievementAtList)
+        achievement.grant(achieve)
+        achievement.sync()
