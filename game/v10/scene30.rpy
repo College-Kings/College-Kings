@@ -369,7 +369,7 @@ label v10_chloe_gym:
 
                 pause 0.5
 
-    elif not chloemad and chloers = False: # If Chloe likes MC but no relationship
+    elif not chloemad and not chloers: # If Chloe likes MC but no relationship
         menu:
             "Look closer":
                 scene v10chg6a

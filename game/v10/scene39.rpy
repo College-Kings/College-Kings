@@ -310,4 +310,4 @@ label v10_riley_walk:
     scene v10srwh4 # TPP. Show MC and Riley standing in her dorm.
     with fade
 
-    jump v10_riley_dorm
+    jump v10_riley_sex

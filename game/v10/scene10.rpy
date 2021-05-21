@@ -123,11 +123,6 @@ label v10_sun_morn:
 
         play sound "sounds/vibrate.mp3"
 
-        scene v10sum5 # TPP. Show MC reaching for his phone.
-        with dissolve
-
-        pause 0.75
-
         scene v10sum5a # TPP. Same as sum2, MC now on his phone in bed.
         with dissolve
         

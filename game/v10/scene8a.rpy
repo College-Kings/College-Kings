@@ -36,7 +36,7 @@ label v10_avoid_fight:
 
             ch "I'm going to try and be understanding, but it's really difficult for me to keep cool after I think about everything that's led up to this moment."
 
-            scene S764 # Ignore this render, old image from 0.4
+            scene s764 # Ignore this render, old image from 0.4
             with dissolve
 
             pause 0.4
