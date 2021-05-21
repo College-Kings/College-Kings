@@ -56,7 +56,7 @@ init python:
     Achievement("forbidden romance", "Kiss a teacher", "kiss_teacher")
     Achievement("hard decisions", "Tell Chloe what Nora said", "chloe_over_nora")
     Achievement("rawr im a lion!", "Tell Lauren you like Lions", "im_a_lion")
-    Achievement("volleyball rematch", "Have a rematch with Chloe", "volleyball_rematch")
+    Achievement("on the court", "Have a rematch with Chloe", "on_the_court")
 
 screen achievements():
     tag phoneTag
