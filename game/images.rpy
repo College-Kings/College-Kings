@@ -45,23 +45,23 @@ image slow_and_steady = "images/slowandsteady.webp"
 image playing_with_fire = "images/playingwithfire.webp"
 image homecoming_queen = "images/homecomingqueen.webp"
 
-image get_a_room = "image/v10/get_a_room" # Need Image
-image ip_man = "image/v10/ip_man" # Need Image
-image up_for_more = "image/v10/up_for_more" # Need Image
+image get_a_room = "image/v10/get_a_room.webp" # Need Image
+image ip_man = "image/v10/ip_man.webp" # Need Image
+image up_for_more = "image/v10/up_for_more.webp" # Need Image
 image thick_and_thin = "images/v8/achievements/thickandthin.webp" # No corresponding achievement
 
-image relaxing_day = "image/v10/relaxing_day" # Need Image
-image the_king = "image/v10/the_king" # Need Image
-image back_down = "image/v10/back_down" # Need Image
-image second_date = "image/v10/second_date" # Need Image
-image the_wrong_time = "image/v10/the_wrong_time" # Need Image
+image relaxing_day = "image/v10/relaxing_day.webp" # Need Image
+image the_king = "image/v10/the_king.webp" # Need Image
+image back_down = "image/v10/back_down.webp" # Need Image
+image second_date = "image/v10/second_date.webp" # Need Image
+image the_wrong_time = "image/v10/the_wrong_time.webp" # Need Image
 
-image friends_first = "image/v10/friends_first" # Need Image
-image rawr_im_a_lion = "image/v10/rawr_im_a_lion" # Need Image
-image bathroom_sex = "image/v10/bathroom_sex" # Need Image
-image forbidden_romance = "image/v10/forbidden_romance" # Need Image
-image volleyball_rematch = "image/v10/volleyball_rematch" # Need Image
-image hard_decisions = "image/v10/hard_decisions" # Need Image
+image friends_first = "image/v10/friends_first.webp" # Need Image
+image rawr_im_a_lion = "image/v10/rawr_im_a_lion.webp" # Need Image
+image bathroom_sex = "image/v10/bathroom_sex.webp" # Need Image
+image forbidden_romance = "image/v10/forbidden_romance.webp" # Need Image
+image volleyball_rematch = "image/v10/volleyball_rematch.webp" # Need Image
+image hard_decisions = "image/v10/hard_decisions.webp" # Need Image
 
 # v1.0 - v2.0
 image s14 = "images/s14.webp"
