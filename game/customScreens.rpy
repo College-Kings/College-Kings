@@ -1,5 +1,8 @@
 init python:
-    import _renpysteam as steam
+    try:
+        import _renpysteam as steam
+    except ImportError:
+        config.enable_steam = False
 
 screen realmode():
     modal True
