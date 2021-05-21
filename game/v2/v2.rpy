@@ -453,14 +453,14 @@ label tomFightStart:
     call screen fight_typeMenu
 
     if fight_type == "normal":
-        $ simadamfight = False
+        $ simtomfight = False
 
         call screen fight_selectDifficulty
 
         call screen fight_keybindOptions
     
     elif fight_type == "simReal" or fight_type == "simWin":
-        $ simadamfight = True
+        $ simtomfight = True
         
     $ stance = 1
     $ tomstance = renpy.random.choice([1, 2, 3, 4])
