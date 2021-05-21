@@ -477,9 +477,6 @@ label tomFightStart:
     $ youDamage = 0
     $ tomdmg = 0
 
-    label letsgo:
-        call screen youattack
-
     label tomkick1:
         if tomdmg >= tomhealth:
 
