@@ -186,69 +186,69 @@ label v10_mc_vs_ryan_fight:
 
             # label Attacker_TargetAction
             label mc_ryanKickHit: # MC Kicks Ryan (Hits/No Block)
-
                 $ ryanDamage += 1
+
                 scene mc_ryan_Kick_hit
                 pause 1 # Trial/Error
+                
                 if ryanDamage >= ryanHealth:
                     jump mc_ryanFightEnd
                 jump ryan_McAttack
 
             label mc_ryanKickBlock: # MC Kicks Ryan (Blocks)
+                scene mc_ryan_Kick_block
+                pause 0.7 # Trial/Error
 
-                    scene mc_ryan_Kick_block
-                    pause 0.7 # Trial/Error
-                    jump ryan_McAttack
+                jump ryan_McAttack
 
 
             label mc_ryanJabsHit: # MC Jabs Ryan (Hits/No Block)
-
-
                 $ ryanDamage += 1
+
                 scene mc_ryan_Jab_hit
-                pause 2.0 # Trial/Error
+                pause 1 # Trial/Error
+
                 if ryanDamage >= ryanHealth:
                     jump mc_ryanFightEnd
                 jump ryan_McAttack
 
             label mc_ryanJabsBlock: # MC Jabs Ryan (Blocks)
+                scene mc_ryan_Jab_block
+                pause 1 # Trial/Error
 
-                    scene mc_ryan_Jab_block
-                    pause 2.0 # Trial/Error
-                    jump ryan_McAttack
-
+                jump ryan_McAttack
 
             label mc_ryanHooksHit: # MC Hooks Ryan (Hits/No Block)
-
                 $ ryanDamage += 1
+
                 scene mc_ryan_Hook_hit
-                pause 2.0 # Trial/Error
+                pause 1 # Trial/Error
+
                 if ryanDamage >= ryanHealth:
                     jump mc_ryanFightEnd
                 jump ryan_McAttack
 
             label mc_ryanHooksBlock: # MC Hooks Ryan (Blocks)
+                scene mc_ryan_Hook_block
+                pause 1 # Trial/Error
 
-                    scene mc_ryan_Hook_block
-                    pause 2.0 # Trial/Error
-                    jump ryan_McAttack
-
+                jump ryan_McAttack
 
             label mc_ryanBodyhookHit: # MC Body Hooks Ryan (Hits/No Block)
-
-
                 $ ryanDamage += 1
+
                 scene mc_ryan_BodyJab_hit
-                pause 0.7 # Trial/Error
+                pause 1 # Trial/Error
+
                 if ryanDamage >= ryanHealth:
                     jump mc_ryanFightEnd
                 jump ryan_McAttack
 
             label mc_ryanBodyhookBlock: # MC Body Hooks Ryan (Blocks)
+                scene mc_ryan_BodyJab_block
+                pause 1 # Trial/Error
 
-                    scene mc_ryan_BodyJab_block
-                    pause 0.7 # Trial/Error
-                    jump ryan_McAttack
+                jump ryan_McAttack
 
 
             label ryan_McKickHit: # Ryan Kicks MC (Hits/No Block)
