@@ -6,12 +6,12 @@ screen fight_tutorialPopup():
 
     textbutton "Yes" style "endfr":
         align (0.43, 0.58)
-        action Call("fight_tutorialLabel")
+        action [SetVariable("fight_tutorial", True), Call("fight_tutorialLabel")]
         text_align 0.5
 
     textbutton "No" style "endfr":
         align (0.57, 0.58)
-        action Return()
+        action [SetVariable("fight_tutorial", False), Return()]
         text_align 0.5
 
 
@@ -236,16 +236,16 @@ screen tomtut1():
 
     use fight_overlay
 
-screen kickcounter():
+screen fight_defendTutorial():
 
-    image "images/tomhook.webp"
+    add "images/tomhook.webp"
 
     key q:
         action Jump ("tuthookblock")
     key w:
-        action Jump ("tuthookhit1")
+        action Jump ("tuthookhit")
     key r:
-        action Jump ("tuthookhit2")
+        action Jump ("tuthookhit")
 
     imagebutton:
         idle "images/hookblock.webp"
@@ -259,85 +259,14 @@ screen kickcounter():
         hover "images/jabblock.webp"
         xalign 0.115
         yalign 0.4
-        action Jump ("tuthookhit1")
+        action Jump ("tuthookhit")
 
     imagebutton:
         idle "images/kickblock.webp"
         hover "images/kickblock.webp"
         xalign 0.115
         yalign 0.6
-        action Jump ("tuthookhit2")
-
-    use fight_overlay
-
-screen hookcounter():
-
-    image "images/hookcounter.webp"
-
-
-    key q:
-        action Jump ("tutjabhit")
-    key w:
-        action Jump ("tutjabblock")
-    key r:
-        action Jump ("tutjabhit2")
-
-    imagebutton:
-        idle "images/hookblock.webp"
-        hover "images/hookblock.webp"
-        xalign 0.06
-        yalign 0.5
-        action Jump ("tutjabhit")
-
-    imagebutton:
-        idle "images/jabblock.webp"
-        hover "images/jabblock.webp"
-        xalign 0.115
-        yalign 0.4
-        action Jump ("tutjabblock")
-
-    imagebutton:
-        idle "images/kickblock.webp"
-        hover "images/kickblock.webp"
-        xalign 0.115
-        yalign 0.6
-        action Jump ("tutjabhit2")
-
-    use fight_overlay
-
-
-screen jabcounter():
-
-    image "images/jabcounter.webp"
-
-
-    key q:
-        action Jump ("tuthookblock2")
-    key w:
-        action Jump ("tuthookhit3")
-    key r:
-        action Jump ("tuthookhit4")
-
-    imagebutton:
-        idle "images/hookblock.webp"
-        hover "images/hookblock.webp"
-        xalign 0.06
-        yalign 0.5
-        action Jump ("tuthookblock2")
-
-    imagebutton:
-        idle "images/jabblock.webp"
-        hover "images/jabblock.webp"
-        xalign 0.115
-        yalign 0.4
-        action Jump ("tuthookhit3")
-
-    imagebutton:
-        idle "images/kickblock.webp"
-        hover "images/kickblock.webp"
-        xalign 0.115
-        yalign 0.6
-        action Jump ("tuthookhit4")
+        action Jump ("tuthookhit")
 
     use fight_overlay
 
