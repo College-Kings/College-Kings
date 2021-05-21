@@ -102,7 +102,7 @@ label v9_call_w_lindsey:
         scene v9cwl2
         with dissolve
 
-        li "I know. I could be even sweeter"
+        li "I know. I could be even sweeter."
 
         scene v9cwl3b
         with dissolve
@@ -229,7 +229,7 @@ label v9_call_w_lindsey:
         scene v9cwl2
         with dissolve
 
-        li "I know. I could be even sweeter"
+        li "I know. I could be even sweeter."
 
         scene v9cwl1b
         with dissolve
