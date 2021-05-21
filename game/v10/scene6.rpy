@@ -416,7 +416,7 @@ label v10_mc_vs_ryan_fight:
 
         "Don't Fight":
             $ friends_first = True
-            $ grantAchievement ("friends_first")
+            $ grantAchievement("friends_first")
             scene v10mvr6a
             with dissolve
 
