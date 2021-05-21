@@ -152,9 +152,9 @@ screen fight_keybindOptions():
         text_align 0.5
 
     if bodyHook:
-        $ keybindText = "\n[q] = Jab / Block Head\n[w] = Hook / Block Face\n[r] = Kick / Block Leg\n[e] = Body Hook / Low Guard"
+        $ keybindText = "\n{} = Jab / Block Head\n{} = Hook / Block Face\n{} = Kick / Block Leg\n{} = Body Hook / Low Guard".format(q.upper(), w.upper(), r.upper(), e.upper())
     else:
-        $ keybindText = "\n[q] = Jab / Block Head\n[w] = Hook / Block Face\n[r] = Kick / Block Leg"
+        $ keybindText = "\n{} = Jab / Block Head\n{} = Hook / Block Face\n{} = Kick / Block Leg".format(q.upper(), w.upper(), r.upper())
 
     text "The current keybindings are:[keybindText]":
         align (0.5, 0.42)
