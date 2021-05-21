@@ -82,7 +82,7 @@ label v10_tues_room_night:
 
             python:
                 contact_Lauren.newImgMessage("images/v10/scene 32/v9lauText.webp", queue=False)
-                contact_Lauren.newMessage("Sweet Dreams ;)")
+                contact_Lauren.newMessage("Sweet Dreams ;)", queue=False)
                 contact_Lauren.addReply("They will be now.")
 
             label v10s32_phoneCheckA:
