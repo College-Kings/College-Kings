@@ -8,7 +8,7 @@ label v10_avoid_fight:
         scene v10frr1 # TPP. Show MC leaving the warehouse.(camera from inside wearhouse positioned behind mc)
         with dissolve
 
-        play music "music/v10/Scene 8/Track 8.mp3" fadein 3
+        play music "music/v10/Scene 8/Track 8a.mp3" fadein 3
 
         pause 0.75
 
