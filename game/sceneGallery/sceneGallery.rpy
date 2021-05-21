@@ -37,9 +37,9 @@ init python:
     SceneGallery("v9_emily_dorm")
     SceneGallery("v9_ri_sex")
     SceneGallery("v9_make_out_w_lin")
-    #SceneGallery("v10_aubrey_house_sg") #awaiting gallery18.webp
-    #SceneGallery("v10_lauren_room_sg", scope={"laurenrs": True}) #awaiting gallery19.webp
-    #SceneGallery("v10_amber_skatepark_sg", scope={"amberrs": True}) #awaiting gallery20.webp
+    SceneGallery("v10_aubrey_house_sg") #awaiting gallery18.webp
+    SceneGallery("v10_lauren_room_sg", scope={"laurenrs": True}) #awaiting gallery19.webp
+    SceneGallery("v10_amber_skatepark_sg", scope={"amberrs": True}) #awaiting gallery20.webp
 
 screen spoiler():
     add "images/darker.webp"
