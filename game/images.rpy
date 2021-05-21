@@ -255,7 +255,7 @@ image Imre_BodyJob_block = "images/v10/Scene 7/Animations/END/MCIMRE-BODYBLOCKED
 image Imre_Hook_hit = "images/v10/Scene 7/Animations/END/MCIMRE-HOOKHIT-END.webp"
 image Imre_Hook_block = "images/v10/Scene 7/Animations/END/MCIMRE-HOOKBLOCKED-END.webp"
 image Imre_Jab_hit = "images/v10/Scene 7/Animations/END/MCIMRE-JABHIT-END.webp"
-image Imre_Jab_block = "images/v10/Scene 7/Animations/END/MCIMRE-JABBLOCKED.webp"
+image Imre_Jab_block = "images/v10/Scene 7/Animations/END/MCIMRE-JABBLOCKED-END.webp"
 image Imre_Kick_hit = "images/v10/Scene 7/Animations/END/MCIMRE-KICKHIT-END.webp"
 image Imre_Kick_block = "images/v10/Scene 7/Animations/END/MCIMRE-KICKBLOCKED-END.webp"
 
