@@ -354,6 +354,11 @@ default v9_sex_with_riley = False
 default hangOutWithLindsey = False
 default playCoolWLins = False
 default lindseyfirstkiss = False
+default down_for_the_count = False
+default second_date = False
+default lake_hj = False
+default the_king = False
+default the_wrong_time = False
 
 # 10.0
 default jennyLike = 0
@@ -397,6 +402,12 @@ default v10_amber_awkward = False
 default v10_imre_win = False
 default v10s33_laurenBakeSale = False
 default skater = False
+default friends_first = False
+default bathroom_sex = False
+default kiss_teacher = False
+default chloe_over_nora = False
+default im_a_lion = False
+default volleyball_rematch = False
     # Freeroam
 default v10s33_riley = False
 default v10s33_riley2 = False
