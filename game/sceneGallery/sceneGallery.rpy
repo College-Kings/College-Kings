@@ -37,6 +37,18 @@ init python:
     SceneGallery("v9_emily_dorm")
     SceneGallery("v9_ri_sex")
     SceneGallery("v9_make_out_w_lin")
+    SceneGallery("v10_aubrey_house_sg") #awaiting gallery18.webp
+    SceneGallery("v10_lauren_room_sg", scope={"laurenrs": True}) #awaiting gallery19.webp
+    SceneGallery("v10_amber_skatepark_sg", scope={"amberrs": True}) #awaiting gallery20.webp
+
+# v10_mc_vs_ryan_fight - s6
+# v10_mc_vs_imre_fight - s7
+# v10s17_galleryScene - s17
+# v10_lauren_room_sg - s24 (laurenrs)
+# v10_amber_skatepark_sg - s26 (amberrs)
+# v10s30_galleryScene - s30 (chloers)
+# v10s40_galleryScene1 - s40 (rileyrs)
+
     #SceneGallery("v10_mc_vs_ryan_fight") #awaiting image scene6
     #SceneGallery("v10_mc_vs_imre_fight") #awaiting image scene7
     #SceneGallery("v10_aubrey_house_sg") #awaiting gallery18.webp scene17

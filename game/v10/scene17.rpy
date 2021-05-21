@@ -250,6 +250,7 @@ label v10_aubrey_house:
 
             au "*Laughs* I think that’s enough about my family."
 
+    label v10s17_galleryScene:
     scene v10auh2 # FPP Show Aubrey, inside hallway of Chicks house, Aubrey holding clothes in her hand while wearing gym clothes, mouth open
     with fade
 

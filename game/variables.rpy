@@ -408,7 +408,7 @@ default bathroom_sex = False
 default kiss_teacher = False
 default chloe_over_nora = False
 default im_a_lion = False
-default volleyball_rematch = False
+default on_the_court = False
     # Freeroam
 default v10s33_riley = False
 default v10s33_riley2 = False
