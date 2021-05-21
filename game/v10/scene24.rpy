@@ -270,8 +270,8 @@ label v10_lauren_room:
         with dissolve
 
         la "Oh [name]! *Moans*"
-    stop music fadeout 3
-    play music "music/v10/Scene 24/Track Scene 24_2.mp3" fadein 3
+        stop music fadeout 3
+        play music "music/v10/Scene 24/Track Scene 24_2.mp3" fadein 3
         menu:
             "Suck on her tits":
                 # MC starts kissing around her boobs and nipples. Ensure this scene is detailed and long, kissing all over her upper body

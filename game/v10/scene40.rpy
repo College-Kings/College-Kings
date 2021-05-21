@@ -46,6 +46,7 @@ label v10_riley_sex:
 
     u "(Okay, she should be coming out soon.)"
 
+    label v10_riley_sex_sg:
     scene v10srds3 # FPP. Show Riley walking into her dorm room, wrapped in a towel, her hair down and still wet. She has a little smile, mouth open.
     with fade
 
@@ -176,6 +177,7 @@ label v10_riley_sex:
 
         scene v10srds7a # FPP. Same camera as v10srds7. Show Riley next to MC, naked in bed, face-to-face. Riley is smiling, mouth open.
         with dissolve
+        $ renpy.end_replay()
 
         ri "Hey, can I ask you something?"
 
@@ -295,7 +297,7 @@ label v10_riley_sex:
 
         ri "See ya."
 
-        jump v10_waking_up_end # -Transition to Scene 41-
+        jump v10_mc_pen_call # -Transition to Scene 41-
 
     elif kct == "confident": # -If not rileyrs with KCT Confident #
 
@@ -543,7 +545,7 @@ label v10_riley_sex:
 
                         ri "See ya."
 
-                        jump v10_waking_up_end # -Transition to Scene 41-
+                        jump v10_mc_pen_call # -Transition to Scene 41-
                     
                     "Peek":
                         scene v10srds1f
@@ -761,7 +763,7 @@ label v10_riley_sex:
 
         ri "See ya."
 
-        jump v10_waking_up_end # -Transition to Scene 41-
+        jump v10_mc_pen_call # -Transition to Scene 41-
 
     else: # -If not rileyrs without KCT Confident
         scene v10srds3a
@@ -808,7 +810,7 @@ label v10_riley_sex:
 
                 pause 0.50
 
-                jump v10_waking_up_end # -Transition to scene 41-
+                jump v10_mc_pen_call # -Transition to scene 41-
             
             "Offer to turn around":
                 scene v10srds3a
@@ -942,4 +944,4 @@ label v10_riley_sex:
 
                 ri "See ya."
                 stop music fadeout 3
-                jump v10_waking_up_end # -Transition to Scene 41-
+                jump v10_mc_pen_call # -Transition to Scene 41-
