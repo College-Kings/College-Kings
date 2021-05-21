@@ -387,7 +387,7 @@ label v10_amber_skatepark_sg:
 
         am "Why not?"
 
-        scene v10sasp5e # FPP. Same camera as v10sasp5. Show Amber looking down and attempting to pull MC's pants down. Smiling, mouth closed.
+        scene v10sasp5d # FPP. Same camera as v10sasp5. Show Amber looking down and attempting to pull MC's pants down. Smiling, mouth closed.
         with dissolve
         menu:
             "Let her":
@@ -540,7 +540,7 @@ label v10_amber_skatepark_sg:
            
             "Shut her down":
                 $ v10_amber_awkward = True
-                scene v10sasp5e
+                scene v10sasp5d
                 with dissolve
 
                 u "Woah, let's not do that."
@@ -689,7 +689,7 @@ label v10_amber_skatepark_sg:
 
                     am "Why not?"
 
-                    scene v10sasp5e
+                    scene v10sasp5d
                     with dissolve
                     menu:
                         "Let her":
@@ -835,7 +835,7 @@ label v10_amber_skatepark_sg:
 
                         "Shut her down":
                             $ v10_amber_awkward = True
-                            scene v10sasp5e
+                            scene v10sasp5d
                             with dissolve
 
                             u "Woah, let's not do that."
