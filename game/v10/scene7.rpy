@@ -3,6 +3,7 @@
 # Characters: MC (Outfit 7),Josh (Outfit 2),Imre (Outfit 2),Imre (Outfit 4),Grayson (Outfit 3)
 # Time: Saturday Night
 label v10_mc_vs_imre_fight:
+    play music "music/v10/Scene 6 & 7/Track Scene 6 & 7.mp3" fadein 3
     scene v10mvi1 # FPP. Show imre and grayson near ring, Imre Mouth open Grayson mouth closed
     with dissolve
     ry "Hey man real quick. I'm not saying I think you would, but I know you and Imre are friends and have been close since you started college..."
@@ -403,6 +404,7 @@ label v10_mc_vs_imre_fight:
                 hide screen fight_overlay
                 $ youDamage = 0
                 $ stance = 0
+                stop music fadeout 3
 
             jump v10_fight_result
 
@@ -433,6 +435,8 @@ label v10_mc_vs_imre_fight:
             with dissolve
 
             u "I can't, I just can't."
+            
+            stop music fadeout 3
 
             jump v10_avoid_fight
 

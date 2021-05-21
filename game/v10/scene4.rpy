@@ -3,7 +3,7 @@
 # Characters: Ryan (Outfit 2), Perry (Outfit ), Josh (Outfit 2), 
 # Time: Saturday Night
 label v9_ryan_v_perry_fight:
-    # -Josh looks around uncomfortably before speaking-
+    play music "music/v10/Scene 4 & 5/Track Scene 4 & 5.mp3" fadein 3
     scene v10rpf1 # FPP. Show josh, in ring, excited look, mouth open
     with fade
     jo "Well, the show must go on."
@@ -82,7 +82,7 @@ label v9_ryan_v_perry_fight:
     with dissolve
 
     jo "You've heard it here first, Ryan came to fight!"
-
+    stop music fadeout 3
     jump v10_mc_vs_ryan_fight
 
     # -Transition to Scene 6-

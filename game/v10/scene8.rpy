@@ -7,6 +7,8 @@ label v10_fight_result:
     with dissolve
     jo "*Laughs* In the words of Smokey, \"you got knocked the fuck out!\""
 
+    play music "music/v10/Scene 8/Track 8.mp3" fadein 3
+
     if joinwolves:
     # -If MC wins the fight against Ryan-
 
@@ -48,7 +50,7 @@ label v10_fight_result:
             u "(Phew, I'm so exhausted now... I just wanna go to bed.)"
 
             
-
+            stop music fadeout 3
             jump v10_leave_fight
 
         else:
@@ -101,6 +103,8 @@ label v10_fight_result:
             u "(Fuck, I let my entire frat down...)"
             u "(God, I just wanna go to bed.)"
 
+            stop music fadeout 3
+
             jump v10_leave_fight
     else:
 
@@ -131,6 +135,7 @@ label v10_fight_result:
             u "(I fucking did it!)"
             
             u "(Phew, I'm so exhausted now... I just wanna go to bed.)"
+            stop music fadeout 3
 
             jump v10_leave_fight
         
@@ -170,7 +175,8 @@ label v10_fight_result:
             u "(Fuck, I let my entire frat down...)"
             
             u "(God, I just wanna go to bed.)"
-
+            stop music fadeout 3
+            
             jump v10_leave_fight
 
 
