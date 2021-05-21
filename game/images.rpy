@@ -4,41 +4,61 @@ image splashtwo = "images/splash2.webp"
 image splashthree = "images/splash 3.webp"
 
 # Achievements
-image nohardfeelings = "images/nohardfeelings.webp"
-image openwound = "images/openwound.webp"
-image keepitmoving = "images/keepitmoving.webp"
+image no_hard_feelings = "images/nohardfeelings.webp"
+image open_wound = "images/openwound.webp"
+image keep_it_moving = "images/keepitmoving.webp"
 image romeo = "images/romeo.webp"
-image bigmouth = "images/bigmouth.webp"
-image mixedfeelings = "images/mixedfeelings.webp"
-image thenotorious = "images/thenotorious.webp"
-image anewbeginning = "images/anewbeginning.webp"
-image overit = "images/overit.webp"
-image notnowmom = "images/notnowmom.webp"
-image truthhurts = "images/truthhurts.webp"
-image lipsdontlie = "images/lipsdontlie.webp"
-image relightthefire = "images/relightthefire.webp"
+image big_mouth = "images/bigmouth.webp"
+
+image mixed_feelings = "images/mixedfeelings.webp"
+image the_notorious = "images/thenotorious.webp"
+image a_new_beginning = "images/anewbeginning.webp"
+image over_it = "images/overit.webp"
+
+image not_now_mom = "images/notnowmom.webp"
+image lips_dont_lie = "images/lipsdontlie.webp"
+image truth_hurts = "images/truthhurts.webp"
+
+image relight_the_fire = "images/relightthefire.webp"
 image rematch = "images/rematch.webp"
-image keeneye = "images/keeneye.webp"
-image onthelow = "images/onthelow.webp"
-image petapublicenemy = "images/petapublicenemy.webp"
+image keen_eye = "images/keeneye.webp"
+
+image on_the_low = "images/onthelow.webp"
+image peta_public_enemy = "images/petapublicenemy.webp"
 image snitch = "images/snitch.webp"
-image brosbeforehoes = "images/brosbeforehoes.webp"
+
+image bros_before_hoes = "images/brosbeforehoes.webp"
 image credulous = "images/credulous.webp"
-image notmybusiness = "images/notmybusiness.webp"
-image flyer = "images/flyer.webp"
+image not_my_business = "images/notmybusiness.webp"
+image flyer = "images/flyer.webp" # No corresponding achievement
 image reignition = "images/reignition.webp"
-image seemsfishy = "images/seemsfishy.webp"
-image monkeybusiness = "images/monkeybusiness.webp"
+image monkey_business = "images/monkeybusiness.webp"
+image seems_fishy = "images/seemsfishy.webp"
 image strike = "images/strike.webp"
-image truetoself = "images/truetoself.webp"
-image silverback = "images/silverback.webp"
-image wolfpack = "images/wolfpack.webp"
-image leeway = "images/lee-way.webp"
+
+image true_to_self = "images/truetoself.webp"
+image silver_back = "images/silverback.webp"
+image wolf_pack = "images/wolfpack.webp"
+image lee_way = "images/lee-way.webp"
 image ecstatic = "images/ecstatic.webp"
-image slowandsteady = "images/slowandsteady.webp"
-image playingwithfire = "images/playingwithfire.webp"
-image homecomingqueen = "images/homecomingqueen.webp"
-image thick_and_thin = "images/v8/achievements/thickandthin.webp"
+image slow_and_steady = "images/slowandsteady.webp"
+image playing_with_fire = "images/playingwithfire.webp"
+image homecoming_queen = "images/homecomingqueen.webp"
+
+image thick_and_thin = "images/v8/achievements/thickandthin.webp" # No corresponding achievement
+
+image relaxing_day = "image/v10/relaxing_day" # Need Image
+image the_king = "image/v10/the_king" # Need Image
+image back_down = "image/v10/back_down" # Need Image
+image second_date = "image/v10/second_date" # Need Image
+image the_wrong_time = "image/v10/the_wrong_time" # Need Image
+
+image friends_first = "image/v10/friends_first" # Need Image
+image rawr_im_a_lion = "image/v10/rawr_im_a_lion" # Need Image
+image bathroom_sex = "image/v10/bathroom_sex" # Need Image
+image forbidden_romance = "image/v10/forbidden_romance" # Need Image
+image volleyball_rematch = "image/v10/volleyball_rematch" # Need Image
+image hard_decisions = "image/v10/hard_decisions" # Need Image
 
 # v1.0 - v2.0
 image s14 = "images/s14.webp"
