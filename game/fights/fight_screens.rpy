@@ -151,7 +151,12 @@ screen fight_keybindOptions():
         xsize 500
         text_align 0.5
 
-    text "The current keybindings are:\n[q] = Jab / Block Head\n[w] = Hook / Block Face\n[r] = Kick / Block Leg":
+    if bodyHook:
+        $ keybindText = "\n[q] = Jab / Block Head\n[w] = Hook / Block Face\n[r] = Kick / Block Leg\n[e] = Body Hook / Low Guard"
+    else:
+        $ keybindText = "\n[q] = Jab / Block Head\n[w] = Hook / Block Face\n[r] = Kick / Block Leg"
+
+    text "The current keybindings are:[keybindText]":
         align (0.5, 0.42)
         font "fonts/OpenSans-Bold.ttf"
         color "#ffffff"
