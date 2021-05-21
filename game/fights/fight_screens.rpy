@@ -6,16 +6,16 @@ screen fight_tutorialPopup():
 
     textbutton "Yes" style "endfr":
         align (0.43, 0.58)
-        action Call("fight_tutorialLabel")
+        action [SetVariable("fight_tutorial", True), Call("fight_tutorialLabel")]
         text_align 0.5
 
     textbutton "No" style "endfr":
         align (0.57, 0.58)
-        action Return()
+        action [SetVariable("fight_tutorial", False), Return()]
         text_align 0.5
 
 
-screen fight_tutorial(highlight=None):
+screen fight_tutorial(highlight=None, stance="attack"):
     tag tag_fightTutorial
 
     add "images/fight_background.webp"
@@ -52,10 +52,15 @@ screen fight_tutorial(highlight=None):
         else:
             color "#FFD166"
 
-    add "images/hook.webp" align (0.115, 0.4)
-    add "images/body.webp" align (0.172, 0.5)
-    add "images/kick.webp" align (0.115, 0.61)
-    add "images/jab.webp" align (0.06, 0.5)
+    if stance == "attack":
+        add "images/hook.webp" align (0.115, 0.4)
+        add "images/kick.webp" align (0.115, 0.61)
+        add "images/jab.webp" align (0.06, 0.5)
+    else:
+        add "images/jabblock.webp" align (0.115, 0.4)
+        add "images/kickblock.webp" align (0.115, 0.61)
+        add "images/hookblock.webp" align (0.06, 0.5)
+
 
 screen fight_typeMenu():
     tag tag_fight
@@ -146,7 +151,12 @@ screen fight_keybindOptions():
         xsize 500
         text_align 0.5
 
-    text "The current keybindings are:\n[q] = Jab / Block Head\n[w] = Hook / Block Face\n[r] = Kick / Block Leg":
+    if bodyHook:
+        $ keybindText = "\n[q] = Jab / Block Head\n[w] = Hook / Block Face\n[r] = Kick / Block Leg\n[e] = Body Hook / Low Guard"
+    else:
+        $ keybindText = "\n[q] = Jab / Block Head\n[w] = Hook / Block Face\n[r] = Kick / Block Leg"
+
+    text "The current keybindings are:[keybindText]":
         align (0.5, 0.42)
         font "fonts/OpenSans-Bold.ttf"
         color "#ffffff"
@@ -195,6 +205,293 @@ screen fight_overlay(stance=None):
         add "images/bodyblock.webp" align (0.172, 0.5)
         add "images/kickblock.webp" align (0.115, 0.61)
         add "images/hookblock.webp" align (0.06, 0.5)
+
+# Tom Fight
+screen tomtut1():
+    tag fightScreen
+
+    add "images/tomstancekick.webp"
+
+    key w:
+        action Jump ("tomtut1hook")
+    key q:
+        action Jump ("tomtut1jab")
+    key r:
+        action Jump ("tomtut1kick")
+
+    imagebutton:
+        idle "images/jab.webp"
+        hover "images/jab.webp"
+        action Jump ("tomtut1jab")
+        align (0.06, 0.5)
+
+    imagebutton:
+        idle "images/hook.webp"
+        hover "images/hook.webp"
+        action Jump ("tomtut1hook")
+        align (0.115, 0.4)
+
+    imagebutton:
+        idle "images/kick.webp"
+        hover "images/kick.webp"
+        action Jump ("tomtut1kick")
+        align (0.115, 0.61)
+
+    use fight_overlay
+
+screen fight_defendTutorial():
+
+    add "images/tomhook.webp"
+
+    key q:
+        action Jump ("tuthookblock")
+    key w:
+        action Jump ("tuthookhit")
+    key r:
+        action Jump ("tuthookhit")
+
+    imagebutton:
+        idle "images/hookblock.webp"
+        hover "images/hookblock.webp"
+        xalign 0.06
+        yalign 0.5
+        action Jump ("tuthookblock")
+
+    imagebutton:
+        idle "images/jabblock.webp"
+        hover "images/jabblock.webp"
+        xalign 0.115
+        yalign 0.4
+        action Jump ("tuthookhit")
+
+    imagebutton:
+        idle "images/kickblock.webp"
+        hover "images/kickblock.webp"
+        xalign 0.115
+        yalign 0.6
+        action Jump ("tuthookhit")
+
+    use fight_overlay
+
+
+screen youattack():
+
+    if tomstance == 1:
+
+
+        image "images/tomstancekick.webp"
+
+        key r:
+            action Jump ("tomkick1")
+        key w:
+            action Jump ("tomkick2")
+        key q:
+            action Jump ("tomkick3")
+
+        imagebutton:
+            idle "images/jab.webp"
+            hover "images/jab.webp"
+            xalign 0.06
+            yalign 0.5
+            action Jump ("tomkick3")
+
+        imagebutton:
+            idle "images/hook.webp"
+            hover "images/hook.webp"
+            xalign 0.115
+            yalign 0.4
+            action Jump ("tomkick2")
+
+
+        imagebutton:
+            idle "images/kick.webp"
+            hover "images/kick.webp"
+            xalign 0.115
+            yalign 0.61
+            action Jump ("tomkick1")
+
+        timer reactiona action Jump("timer1")
+
+
+
+    if tomstance == 2:
+        image "images/tomstancehook.webp"
+
+        key w:
+            action Jump ("tomhook1")
+        key q:
+            action Jump ("tomhook2")
+        key r:
+            action Jump ("tomhook3")
+
+        imagebutton:
+            idle "images/jab.webp"
+            hover "images/jab.webp"
+            xalign 0.06
+            yalign 0.5
+            action Jump ("tomhook2")
+
+        imagebutton:
+            idle "images/hook.webp"
+            hover "images/hook.webp"
+            xalign 0.115
+            yalign 0.4
+            action Jump ("tomhook1")
+
+
+        imagebutton:
+            idle "images/kick.webp"
+            hover "images/kick.webp"
+            xalign 0.115
+            yalign 0.61
+            action Jump ("tomhook3")
+
+        timer reactiona action Jump("timer2")
+
+
+
+    if tomstance == 3:
+        image "images/tomstancejab.webp"
+
+        key q:
+            action Jump ("tomjab1")
+        key w:
+            action Jump ("tomjab2")
+        key r:
+            action Jump ("tomjab3")
+
+        imagebutton:
+            idle "images/jab.webp"
+            hover "images/jab.webp"
+            xalign 0.06
+            yalign 0.5
+            action Jump ("tomjab1")
+
+        imagebutton:
+            idle "images/hook.webp"
+            hover "images/hook.webp"
+            xalign 0.115
+            yalign 0.4
+            action Jump ("tomjab2")
+
+
+        imagebutton:
+            idle "images/kick.webp"
+            hover "images/kick.webp"
+            xalign 0.115
+            yalign 0.61
+            action Jump ("tomjab3")
+
+
+        timer reactiona action Jump("timer3")
+
+    use fight_overlay
+
+
+screen tomattack():
+
+    if tomattack == 1:
+        image "images/tomhook.webp"
+
+        key r:
+            action Jump ("tomhookhit")
+        key q:
+            action Jump ("tomhookblocked")
+        key w:
+            action Jump ("tomhookhit2")
+
+        imagebutton:
+            idle "images/hookblock.webp"
+            hover "images/hookblock.webp"
+            xalign 0.06
+            yalign 0.5
+            action Jump ("tomhookblocked")
+
+        imagebutton:
+            idle "images/jabblock.webp"
+            hover "images/jabblock.webp"
+            xalign 0.115
+            yalign 0.4
+            action Jump ("tomhookhit")
+
+        imagebutton:
+            idle "images/kickblock.webp"
+            hover "images/kickblock.webp"
+            xalign 0.115
+            yalign 0.6
+            action Jump ("tomhookhit2")
+
+        timer reaction action Jump("timer4")
+
+
+    if tomattack == 2:
+        image "images/tomjab.webp"
+
+        key q:
+            action Jump ("tomjabhit")
+        key w:
+            action Jump ("tomjabblocked")
+        key r:
+            action Jump ("tomjabhit2")
+
+        imagebutton:
+            idle "images/hookblock.webp"
+            hover "images/hookblock.webp"
+            xalign 0.06
+            yalign 0.5
+            action Jump ("tomjabhit")
+
+        imagebutton:
+            idle "images/jabblock.webp"
+            hover "images/jabblock.webp"
+            xalign 0.115
+            yalign 0.4
+            action Jump ("tomjabblocked")
+
+        imagebutton:
+            idle "images/kickblock.webp"
+            hover "images/kickblock.webp"
+            xalign 0.115
+            yalign 0.6
+            action Jump ("tomjabhit2")
+
+        timer reaction action Jump("timer5")
+
+    if tomattack == 3:
+        image "images/tomkick.webp"
+
+        key w:
+            action Jump ("tomkickhit")
+        key q:
+            action Jump ("tomkickhit2")
+        key r:
+            action Jump ("tomkickblocked")
+
+
+        imagebutton:
+            idle "images/hookblock.webp"
+            hover "images/hookblock.webp"
+            xalign 0.06
+            yalign 0.5
+            action Jump ("tomkickhit")
+
+        imagebutton:
+            idle "images/jabblock.webp"
+            hover "images/jabblock.webp"
+            xalign 0.115
+            yalign 0.4
+            action Jump ("tomkickhit2")
+
+        imagebutton:
+            idle "images/kickblock.webp"
+            hover "images/kickblock.webp"
+            xalign 0.115
+            yalign 0.6
+            action Jump ("tomkickblocked")
+
+        timer reaction action Jump("timer6")
+
+    use fight_overlay
 
 
 screen larsFight_MCDefend(attack=None):
