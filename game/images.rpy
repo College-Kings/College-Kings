@@ -45,6 +45,9 @@ image slow_and_steady = "images/slowandsteady.webp"
 image playing_with_fire = "images/playingwithfire.webp"
 image homecoming_queen = "images/homecomingqueen.webp"
 
+image get_a_room = "image/v10/get_a_room" # Need Image
+image ip_man = "image/v10/ip_man" # Need Image
+image up_for_more = "image/v10/up_for_more" # Need Image
 image thick_and_thin = "images/v8/achievements/thickandthin.webp" # No corresponding achievement
 
 image relaxing_day = "image/v10/relaxing_day" # Need Image
