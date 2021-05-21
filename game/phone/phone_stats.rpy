@@ -94,8 +94,8 @@ screen stats():
                 size 50
                 color "#000000"
 
-        default KCT = { "Popular": popular, "Loyal": loyal, "Confident": confident }
-        default sortedKCT = [k for (k, v) in sorted(KCT.items(), key=lambda key_value: key_value[1])]
+        $ KCT = { "Popular": popular, "Loyal": loyal, "Confident": confident }
+        $ sortedKCT = [k for (k, v) in sorted(KCT.items(), key=lambda k: k[0])]
 
         vbox:
             align (0.5, 0.5)
@@ -103,21 +103,36 @@ screen stats():
 
             text sortedKCT[0]:
                 text_align 0.0
-                color "#53d769"
                 font "fonts/Freshman.ttf"
                 size 50
+                if sortedKCT[0] == "Popular":
+                    color "#53d769" 
+                elif sortedKCT[0] == "Loyal":
+                    color "#fecb2e"
+                else:
+                    color "#fc3d39"
 
             text sortedKCT[1]:
                 text_align 0.0
-                color "#fecb2e"
                 font "fonts/Freshman.ttf"
                 size 50
+                if sortedKCT[0] == "Popular":
+                    color "#53d769" 
+                elif sortedKCT[0] == "Loyal":
+                    color "#fecb2e"
+                else:
+                    color "#fc3d39"
 
             text sortedKCT[2]:
                 text_align 0.0
-                color "#fc3d39"
                 font "fonts/Freshman.ttf"
                 size 50
+                if sortedKCT[0] == "Popular":
+                    color "#53d769" 
+                elif sortedKCT[0] == "Loyal":
+                    color "#fecb2e"
+                else:
+                    color "#fc3d39"
 
 style statstitle is text:
     font "fonts/Freshman.ttf"
