@@ -44,12 +44,12 @@ init python:
         contact_Lindsey.addReply(_("Goodnight"))
 
     def v9s16_reply5():
-        contact_Emily.newImgMessage(_("images/v9/scene 16/v9emiKiwii.webp"))
+        contact_Emily.newImgMessage("images/v9/scene 16/v9emiKiwii.webp")
         contact_Emily.addReply(_("Be right there!"))
         contact_Emily.newMessage(_("See you soon!"))
 
     def v9s16_reply6():
-        contact_Emily.newImgMessage(_("images/v9/scene 16/v9emiKiwii.webp"))
+        contact_Emily.newImgMessage("images/v9/scene 16/v9emiKiwii.webp")
         contact_Emily.addReply(_("Be right there!"))
 
 label v9_room_thur_night:

@@ -358,7 +358,7 @@ label imreconc: # Keep talking to Amber
     with fade
 
     $ contact_Amber.addReply(_("I'm all by myself now."))
-    $ contact_Amber.newImgMessage(_("images/text2.webp"))
+    $ contact_Amber.newImgMessage("images/text2.webp")
     $ contact_Amber.addReply(_("Woah, what was that for?"), v6_reply1)
     $ contact_Amber.addReply(_("Oh wow, you're so fucking hot"), v6_reply4)
 
@@ -1019,7 +1019,7 @@ label continuebb:
     
     $ contact_Amber.newMessage(_("Hey, you alone? xx"), queue=False)
     $ contact_Amber.addReply(_("Yeah, I'm in my dorm, why?"))
-    $ contact_Amber.newImgMessage(_("images/text2.webp"))
+    $ contact_Amber.newImgMessage("images/text2.webp")
     $ contact_Amber.addReply(_("Woah, what was that for?"), v6_reply1)
     $ contact_Amber.addReply(_("Oh wow, you're so fucking hot"), v6_reply4)
 
@@ -4440,12 +4440,12 @@ label afteraubrey:
         play sound "sounds/vibrate.mp3"
 
         if meetaubrey:
-            $ contact_Aubrey.newImgMessage(_("images/text3.webp"), queue=False)
+            $ contact_Aubrey.newImgMessage("images/text3.webp", queue=False)
             $ contact_Aubrey.newMessage(_("Still shaking from earlier"), queue=False)
             $ contact_Aubrey.addReply(_("Hahaha, we should definitely do this more ;)"))
 
         else:
-            $ contact_Aubrey.newImgMessage(_("images/text3.webp"), queue=False)
+            $ contact_Aubrey.newImgMessage("images/text3.webp", queue=False)
             $ contact_Aubrey.newMessage(_("You missed out today"), queue=False)
             $ contact_Aubrey.addReply(_("Daaaamn, I'll be there next time"))
 
