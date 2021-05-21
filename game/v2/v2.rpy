@@ -318,270 +318,169 @@ label gb:
 
     call screen fight_tutorialPopup
 
-    $ tomattack = renpy.random.choice([1, 2, 3])
+    if fight_tutorial:
+        call screen tomtut1
 
-    call screen tomtut1
+        label tomtut1kick:
+            scene kick2movie
+            pause 0.7
 
-    label tomtut1kick:
-        scene kick2movie
-        pause 0.7
+            play sound "sounds/ks.mp3"
+            
+            scene kick2pic
+            with hpunch
 
-        play sound "sounds/ks.mp3"
+            tut "Great job! You've hit Tom and hurt him. He's now more likely to get tired, give up or even get knocked out."
+            tut "Beware, since you've let your guard down to attack, he's going to try and abuse it with an attack of his own."
+
+            scene tomhookmovie
+            $ renpy.pause(0.7)
+
+            scene tomhook
+            show screen fight_tutorial(stance="defend")
+
+            tut "Now it's time to block Tom's attack."
+
+            show screen fight_tutorial(highlight="q", stance="defend")
+            tut "{b}Q{/b} lets you block your head from heavy attacks such as hooks, which come from a slight angle."
+            show screen fight_tutorial(highlight="w", stance="defend")
+            tut "In order to protect yourself from attacks flying straight at your face, such as jabs, press {b}W{/b}."
+            show screen fight_tutorial(highlight="r", stance="defend")
+            tut "Lastly, you can protect your legs, from low kicks for example, by pressing {b}R{/b}."
+            show screen fight_tutorial(highlight="q", stance="defend")
+            tut "As of right now, there's a hook flying at your head, press {b}Q{/b} in the upcoming screen in order to block it."
+            hide screen fight_tutorial
+
+            call screen fight_defendTutorial
+
+
+        label tomtut1hook:
+            scene hook1movie
+            $ renpy.pause(0.7)
+            play sound "sounds/bs.mp3"
+            scene hook1pic
+            with hpunch
+
+            tut "Yeah, why follow what the tutorial says?? It's not like it's trying to help you or anything."
+
+            tut "Because you decided to attack Tom's guarded areas, he was able to block your attack easily."
+
+            tut "He can now counter attack."
+            $ stance = 2
+
+            scene hookcountermovie
+            $ renpy.pause(0.7)
+
+            scene hookcounter
+
+            show screen fight_tutorial(highlight="q", stance="defend")
+            tut "{b}Q{/b} lets you block your head from heavy attacks such as hooks, which come from a slight angle."
+            show screen fight_tutorial(highlight="w", stance="defend")
+            tut "In order to protect yourself from attacks flying straight at your face, such as jabs, press {b}W{/b}."
+            show screen fight_tutorial(highlight="r", stance="defend")
+            tut "Lastly, you can protect your legs, from low kicks for example, by pressing {b}R{/b}."
+            show screen fight_tutorial(highlight="w", stance="defend")
+            tut "As of right now, there's a jab flying at your face, press {b}W{/b} in the upcoming screen in order to block it."
+            hide screen fight_tutorial
+
+            call screen fight_defendTutorial
+
+
+        label tomtut1jab:
+            scene jab1movie
+            $ renpy.pause(0.7)
+            play sound "sounds/bs.mp3"
+            scene jab1pic
+            with hpunch
+
+            tut "Yeah, why follow what the tutorial says?? It's not like it's trying to help you or anything."
+
+            tut "Because you decided to attack Tom's guarded areas, he was able to block your attack easily."
+
+            tut "He can now counter attack."
+
+            $ stance = 2
+
+            scene jabcountermovie
+            $ renpy.pause(0.7)
+
+            scene jabcounter
+
+            tut "Now it's time to block Tom's attack."
+
+            show screen fight_tutorial(highlight="q", stance="defend")
+            tut "{b}Q{/b} lets you block your head from heavy attacks such as hooks, which come from a slight angle."
+            show screen fight_tutorial(highlight="w", stance="defend")
+            tut "In order to protect yourself from attacks flying straight at your face, such as jabs, press {b}W{/b}."
+            show screen fight_tutorial(highlight="r", stance="defend")
+            tut "Lastly, you can protect your legs, from low kicks for example, by pressing {b}R{/b}."
+            show screen fight_tutorial(highlight="w", stance="defend")
+            tut "As of right now, there's a jab flying at your face, press {b}W{/b} in the upcoming screen in order to block it."
+            hide screen fight_tutorial
+
+            call screen fight_defendTutorial
+
+
+        label tuthookblock:
+            play sound "sounds/bs.mp3"
+            scene tomhookblock
+            with hpunch
+
+            tut "Great job, you blocked Tom's hook."
+
+            scene tomstancehook
+
+            tut "This ends the tutorial. The real fight will test your reaction times."
+            
+            jump tomFightStart
+
+
+        label tuthookhit:
+            play sound "sounds/hs.mp3"
+            scene tomhookhit
+            with hpunch
+
+            tut "You did not block your head by pressing {b}Q{/b} and got hit. Next time, try to block the correct part of your body."
+
+            scene tomstancehook
+
+            tut "This ends the tutorial. The real fight will test your reaction times."
+            
+            jump tomFightStart
+
+########FIGHT SYSTEM
+label tomFightStart:
+    call screen fight_typeMenu
+
+    if fight_type == "normal":
+        $ simadamfight = False
+
+        call screen fight_selectDifficulty
+
+        call screen fight_keybindOptions
+    
+    elif fight_type == "simReal" or fight_type == "simWin":
+        $ simadamfight = True
         
-        scene kick2pic
-        with hpunch
-
-        tut "Great job! You've hit Tom and hurt him. He's now more likely to get tired, give up or even get knocked out."
-        tut "Beware, since you've let your guard down to attack, he's going to try and abuse it with an attack of his own."
-
-        scene tomhookmovie
-        $ renpy.pause(0.7)
-
-        scene tomhook
-        show screen fight_tutorial
-
-        tut "Now it's time to block Tom's attack."
-
-        show screen fight_tutorial(highlight="q")
-        tut "{b}Q{/b} lets you block your head from heavy attacks such as hooks, which come from a slight angle."
-        show screen fight_tutorial(highlight="w")
-        tut "In order to protect yourself from attacks flying straight at your face, such as jabs, press {b}W{/b}."
-        show screen fight_tutorial(highlight="r")
-        tut "Lastly, you can protect your legs, from low kicks for example, by pressing {b}R{/b}."
-        show screen fight_tutorial(highlight="q")
-        tut "As of right now, there's a hook flying at your head, press {b}Q{/b} in the upcoming screen in order to block it."
-        hide screen fight_tutorial
-        call screen kickcounter
-
-    label tomtut1hook:
-
-
-        scene hook1movie
-        $ renpy.pause(0.7)
-        play sound "sounds/bs.mp3"
-        scene hook1pic
-        with hpunch
-
-        tut "Yeah, why follow what the tutorial says?? It's not like it's trying to help you or anything."
-
-        tut "Because you decided to attack Tom's guarded areas, he was able to block your attack easily."
-
-        tut "He can now counter attack."
-        $ stance = 2
-
-
-        scene hookcountermovie
-        $ renpy.pause(0.7)
-
-        scene hookcounter
-
-        $ hl = 1
-
-        tut "{b}Q{/b} lets you block your head from heavy attacks such as hooks, which come from a slight angle."
-        $ hl = 2
-        tut "In order to protect yourself from attacks flying straight at your face, such as jabs, press {b}W{/b}."
-        $ hl = 4
-        tut "Lastly, you can protect your legs, from low kicks for example, by pressing {b}R{/b}."
-        $ hl = 2
-        tut "As of right now, there's a jab flying at your face, press {b}W{/b} in the upcoming screen in order to block it."
-        $ hl = 0
-
-
-        call screen hookcounter
-
-
-    label tomtut1jab:
-
-
-        scene jab1movie
-        $ renpy.pause(0.7)
-        play sound "sounds/bs.mp3"
-        scene jab1pic
-        with hpunch
-
-        tut "Yeah, why follow what the tutorial says?? It's not like it's trying to help you or anything."
-
-        tut "Because you decided to attack Tom's guarded areas, he was able to block your attack easily."
-
-        tut "He can now counter attack."
-
-        $ stance = 2
-
-
-
-        scene jabcountermovie
-        $ renpy.pause(0.7)
-
-        scene jabcounter
-
-        tut "Now it's time to block Tom's attack."
-        $ hl = 1
-
-        tut "{b}Q{/b} lets you block your head from heavy attacks such as hooks, which come from a slight angle."
-        $ hl = 2
-        tut "In order to protect yourself from attacks flying straight at your face, such as jabs, press {b}W{/b}."
-        $ hl = 4
-        tut "Lastly, you can protect your legs, from low kicks for example, by pressing {b}R{/b}."
-        $ hl = 1
-        tut "As of right now, there's a hook flying at your head, press {b}Q{/b} in the upcoming screen in order to block it."
-        $ hl = 0
-
-        call screen jabcounter
-
-    label tuthookblock2:
-    label tuthookblock:
-
-
-        play sound "sounds/bs.mp3"
-        scene tomhookblock
-        with hpunch
-
-        tut "Great job, you blocked Tom's hook."
-
-        scene tomstancehook
-
-        tut "This ends the tutorial. The real fight will test your reaction times."
-
-        if adamtut == True:
-            jump fkcon
-        else:
-            call screen ft1
-
-    label tuthookhit1:
-    label tuthookhit2:
-    label tuthookhit3:
-    label tuthookhit4:
-
-        play sound "sounds/hs.mp3"
-        scene tomhookhit
-        with hpunch
-
-        tut "You did not block your head by pressing {b}Q{/b} and got hit. Next time, try to block the correct part of your body."
-
-        scene tomstancehook
-
-        tut "This ends the tutorial. The real fight will test your reaction times."
-
-        if adamtut == True:
-            jump fkcon
-        else:
-            call screen ft1
-
-    label tutjabblock:
-        play sound "sounds/bs.mp3"
-        scene tomjabblock
-        with hpunch
-
-        tut "Great job, you blocked Tom's jab."
-
-        scene tomstancehook
-
-        tut "This ends the tutorial. The real fight will test your reaction times."
-
-        if adamtut == True:
-            jump fkcon
-        else:
-            call screen ft1
-
-    label tutjabhit:
-    label tutjabhit2:
-
-        play sound "sounds/js.mp3"
-        scene tomjabhit
-        with hpunch
-
-        tut "You did not block your face by pressing {b}W{/b} and got hit. Next time, try to block the correct part of your body."
-
-        scene tomstancehook
-
-        tut "This ends the tutorial. The real fight will test your reaction times."
-
-        if adamtut == True:
-            jump fkcon
-        else:
-            call screen ft1
-
-        ########FIGHT SYSTEM
-
-
-        label stb:
-
-        call screen ft1
-
-
-
-    label playf1:
-
-        $ youDamage = 0
-        $ tomdmg = 0
-        $ tomstance = renpy.random.choice([1, 2, 3])
-        $ tomattack = renpy.random.choice([1, 2, 3])
-        call screen ft2
-
-    label easy:
-        $ reaction = 3
-        $ reactiona = 3.2
-        $ tomhealth = 3
-        $ youHealth = 7
-        jump fgo1
-
-    label moderate:
-        $ reaction = 1.3
-        $ reactiona = 1.5
-        $ tomhealth = 6
-        $ youHealth = 4
-        jump fgo2
-
-    label hard:
-        $ reaction = 0.5
-        $ reactiona = 0.7
-        $ tomhealth = 8
-        $ youHealth = 3
-        jump fgo3
-
-
-    label simtomfight:
-        $ simtomfight = True
-        $ stance = 1
-        jump tomsimstart
-
-    label autowin:
-        $ simtomfight = True
-        $ stance = 1
+    $ stance = 1
+    $ tomstance = renpy.random.choice([1, 2, 3, 4])
+    $ tomattack = renpy.random.choice([1, 2, 3, 4])
+    $ simtom = renpy.random.choice([1, 2, 3, 4, 5, 6])
+    $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
+
+    if fight_type == "simWin":
         $ youHealth = 100000
-        $ tomhealth = 3
-        jump tomsimstart2
+    else:
+        $ youHealth = 3
 
-    label fgo1:
-    label fgo2:
-    label fgo3:
-        call screen ft3
-
+    $ tomhealth = 5
+    $ youDamage = 0
+    $ tomdmg = 0
 
     label letsgo:
-        $ stance = 1
         call screen youattack
 
-    label changekeys:
-        scene jab1pic
-        with dissolve
-
-        $ w = renpy.input("Which button should be hook / block face?", default="w").strip() or "w"
-
-        scene hook1pic
-        with dissolve
-
-        $ q = renpy.input("Which button should be hook / block face?", default="q").strip() or "q"
-
-        scene kick1pic
-        with dissolve
-
-        $ r = renpy.input("Which button should be hook / block face?", default="r").strip() or "r"
-
-        return
-
     label tomkick1:
-
         if tomdmg >= tomhealth:
 
             scene youfinishmovie
