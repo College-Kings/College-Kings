@@ -6,6 +6,7 @@
 # -MC wakes from his sleep-
 
 label v10_cafe_w_jenny:
+    play music "music/v10/Scene 22/Track Scene 22_2.mp3" fadein 3
     if joinwolves:
         scene v10scwj1 # TPP. Show MC waking up in his new Wolves room in underwear.
         with fade
@@ -783,5 +784,7 @@ label v10_cafe_w_jenny:
 
     scene v10scwj23 # TPP. Show MC walking down the sidewalk.
     with Fade(1, 0, 1)
-
+    
+    stop music fadeout 3
+    
     jump v10_aft_walk_home

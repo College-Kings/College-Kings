@@ -7,6 +7,8 @@ label v10_ms_rose_fight:
     scene v10msf1 # FPP. Show MS rose's house, MS rose stood at the door, Mr rose stood infront of house. Ms rose angry look, Ms rose mouth closed, mr rose mouth open
     with dissolve
 
+    play music "music/v10/Scene 25/Track Scene 25_1.mp3" fadein 3
+
     mrr "These things take time, how is that not clear? You can't expect a luxurious lifestyle if you're not willing to put the work in!"
 
     scene v10msf1a # FPP. same camera as v10msf1, Ms rose angry look hands raised, Ms rose mouth open, mr rose mouth closed
@@ -96,6 +98,8 @@ label v10_ms_rose_fight:
             with dissolve
 
             mrr "*Sighs* Fine."
+            stop music fadeout 3
+            play music "music/v10/Scene 25/Track Scene 25_2.mp3" fadein 3
 
             scene v10msf3 # FPP. Show Mr Rose walking away from the house
             with dissolve
@@ -121,7 +125,8 @@ label v10_ms_rose_fight:
             with dissolve
 
             mrr "When everything is said and done, you're gonna regret this."
-
+            stop music fadeout 3
+            play music "music/v10/Scene 25/Track Scene 25_2.mp3" fadein 3
             scene v10msf3
             with dissolve
     
@@ -265,5 +270,5 @@ label v10_ms_rose_fight:
     no "Hey, so I just got to my stepmom's house. I'm gonna have to let you go."
 
     u "(Wait, her stepmom? Is Nora Ms. Rose's stepdaughter? What the fuck?!)"
-
+    stop music fadeout 3
     jump v10_amber_skatepark

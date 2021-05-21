@@ -4,6 +4,8 @@ label v10_riley_vs_amber:
 
     ri "Oh wow, you're kinda strong."
 
+    play music "music/v10/Scene 37/Track Scene 37 & 38.mp3" fadein 3
+
     am "Kinda?"
 
     scene v10rva2 # second is Amber overpowering Riley and pushing her on her back
@@ -135,5 +137,6 @@ label v10_riley_vs_amber:
 
     aut "I want to thank everyone again for coming and for the donations."
 
+    stop music fadeout 3
     jump v10_riley_walk
 

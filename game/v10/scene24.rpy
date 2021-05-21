@@ -6,8 +6,8 @@
 label v10_lauren_room:
     scene v10lar1 # TPP Show MC knocking on Lauren's door.
     with fade
-
-#    play sound "sounds/knock.mp3"
+    play music "music/v10/Scene 24/Track Scene 24_1.mp3" fadein 3
+    play sound "sounds/knock.mp3"
     
     pause 0.5
     
@@ -270,7 +270,8 @@ label v10_lauren_room:
         with dissolve
 
         la "Oh [name]! *Moans*"
-
+    stop music fadeout 3
+    play music "music/v10/Scene 24/Track Scene 24_2.mp3" fadein 3
         menu:
             "Suck on her tits":
                 # MC starts kissing around her boobs and nipples. Ensure this scene is detailed and long, kissing all over her upper body
@@ -337,6 +338,10 @@ label v10_lauren_room:
                     scene v10lar8a # FPP Same angle as v10lar8, Lauren looking uncomfortable, mouth open
                     with dissolve
 
+                    stop music fadeout 3
+
+                    play music "music/v10/Scene 24/Track Scene 24_3.mp3" fadein 3
+                    
                     la "[name], I...I don't think I'm ready. Sorry I just..."
 
                     scene v10lar9a # FPP Same angle as v10lar9, Lauren getting dressed, looking uncomfortable, mouth closed

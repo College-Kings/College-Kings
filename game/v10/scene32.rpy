@@ -4,6 +4,7 @@
 # Time: Tuesday Night/Wednesday Morning
 
 label v10_tues_room_night:
+    play music "music/v10/Scene 32/Track Scene 32.mp3" fadein 3
     if joinwolves:
         scene v10strn1 # TPP. Show MC tired and stressed, plopping down on his Wolves bed.
         with fade
@@ -119,5 +120,5 @@ label v10_tues_room_night:
         with fade
 
         pause 0.75
-
+        stop music fadeout 3
         jump v10_charity_freeroam

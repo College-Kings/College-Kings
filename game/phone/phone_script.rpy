@@ -22,3 +22,7 @@ default contact_Sebastian = Contact("Sebastian", "sebastianprofilepicture.webp")
 default contact_Grayson = Contact("Grayson", "graysonprofilepicture.webp")
 default contact_Lindsey = Contact("Lindsey", "lindseyprofilepic.webp")
 default contact_Jenny = Contact("Jenny", "jennyprofilepicture.webp")
+
+default simplr_Beth = SimplrContact("Beth", "bethProfilePicture.webp", "bethProfilePictureLarge.webp")
+default simplr_Iris = SimplrContact("Iris", "irisProfilePicture.webp", "irisProfilePictureLarge.webp")
+default simplr_Samantha = SimplrContact("Samantha", "samanthaProfilePicture.webp", "samanthaProfilePictureLarge.webp")

@@ -11,6 +11,8 @@ label v10_autumn_announcement:
     scene v10samw1 # FPP. Show Autumn standing near the mud wrestling pool, smiling, mouth open.
     with dissolve
 
+    play music "music/v10/Scene 34/Track Scene 34.mp3" fadein 3
+
     aut "Alright everyone, if you could all gather around."
 
     scene v10samw2 # FPP. Show Ms. Rose, Deer girl 1 and Perry watching Autumn (not visible) make her announcement, all smiling, mouths closed.
@@ -239,5 +241,6 @@ label v10_autumn_announcement:
     with dissolve
 
     no "Oh shut up."
+    stop music fadeout 3
 
     jump v10_chloe_vs_nora
