@@ -19,7 +19,7 @@ label v10_sam_kitchen:
     scene v10skt2a # FPP. same camera as v10skt2, Big smile on face, mouth open.
     with dissolve
 
-    sam "Could you make me a Sex on The Beach?"
+    sa "Could you make me a Sex on The Beach?"
 
     scene v10skt2 
     with dissolve
@@ -29,7 +29,7 @@ label v10_sam_kitchen:
     scene v10skt2a
     with dissolve
 
-    sam "Could you make me a Sex on The Beach?"
+    sa "Could you make me a Sex on The Beach?"
 
     menu:
         "Make her a cocktail":
@@ -56,7 +56,7 @@ label v10_sam_kitchen:
             scene v10skt4 # FPP. Show samantha, mouth open, MC's arm held out in shot with cocktail in hand.
             with dissolve
 
-            sam "Aww, were you worried about me?"
+            sa "Aww, were you worried about me?"
 
             scene v10skt4a # FPP. same camera as v10skt4, Samantha now holding cocktail, mouth closed. (Mc's arm no longer in shot)
             with dissolve
@@ -66,7 +66,7 @@ label v10_sam_kitchen:
             scene v10skt4b # FPP. same camera as v10skt4, Samantha now holding cocktail, mouth open. (Mc's arm no longer in shot)
             with dissolve
 
-            sam "It is \"urgent and serious\"."
+            sa "It is \"urgent and serious\"."
 
             scene v10skt4a 
             with dissolve
@@ -76,7 +76,7 @@ label v10_sam_kitchen:
             scene v10skt4b
             with dissolve
 
-            sam "Well, my brother isn't here and I needed a drink. I also didn't want to drink by myself. That's where you come in."
+            sa "Well, my brother isn't here and I needed a drink. I also didn't want to drink by myself. That's where you come in."
 
             scene v10skt4a 
             with dissolve
@@ -86,7 +86,7 @@ label v10_sam_kitchen:
             scene v10skt4b
             with dissolve
 
-            sam "Scared of a little drink? You're not gonna make me drink all by myself are you?"
+            sa "Scared of a little drink? You're not gonna make me drink all by myself are you?"
 
             menu:
                 "Drink with her":
@@ -100,7 +100,7 @@ label v10_sam_kitchen:
                     scene v10skt4b
                     with dissolve
 
-                    sam "See! That's why I called you."
+                    sa "See! That's why I called you."
 
                 "Pass":
                     $ samLike -= 1
@@ -112,7 +112,7 @@ label v10_sam_kitchen:
                     scene v10skt4b
                     with dissolve
 
-                    sam "Aww, you're no fun."
+                    sa "Aww, you're no fun."
 
                     scene v10skt4a
                     with dissolve
@@ -128,7 +128,7 @@ label v10_sam_kitchen:
             scene v10skt2a
             with dissolve
 
-            sam "Oh my God, it was just a joke. It's not that serious."
+            sa "Oh my God, it was just a joke. It's not that serious."
 
             scene v10skt3b # TPP. Same camera as v10skt3, Show Samantha Stood infront of kitchen counter with a empty cocktail glass.
             with dissolve
@@ -147,7 +147,7 @@ label v10_sam_kitchen:
             scene v10skt4b
             with dissolve
 
-            sam "Yeah from hard drugs. But I'm not gonna stop drinking a little cocktail once in a while. I've never had an alcohol problem."
+            sa "Yeah from hard drugs. But I'm not gonna stop drinking a little cocktail once in a while. I've never had an alcohol problem."
 
             scene v10skt4a
             with dissolve
@@ -157,7 +157,7 @@ label v10_sam_kitchen:
             scene v10skt4b
             with dissolve
 
-            sam "Jeez, yeah. It's not that big of a deal. Just keep it on the low. Cameron isn't home anyways."
+            sa "Jeez, yeah. It's not that big of a deal. Just keep it on the low. Cameron isn't home anyways."
 
             scene v10skt4a
             with dissolve
@@ -168,7 +168,7 @@ label v10_sam_kitchen:
     scene v10skt4b
     with dissolve
 
-    sam "So what were you doing out? Were you with one of your little girlfriends?"
+    sa "So what were you doing out? Were you with one of your little girlfriends?"
 
     menu:
         "Tease her":
@@ -182,7 +182,7 @@ label v10_sam_kitchen:
             scene v10skt4b
             with dissolve
 
-            sam "I mean you're free to do what you want... As long as when I call you come running. *Chuckles*"
+            sa "I mean you're free to do what you want... As long as when I call you come running. *Chuckles*"
         "No":
             $ samLike -= 1
             scene v10skt4a
@@ -192,7 +192,7 @@ label v10_sam_kitchen:
             scene v10skt4b
             with dissolve
 
-            sam "*Laughs* Uh-huh."
+            sa "*Laughs* Uh-huh."
 
     scene v10skt4c # FPP. same camera as v10skt4, Samantha now holding cocktail, mouth closed. (Mc's arm no longer in shot), samantha looking up slightly
     with dissolve
@@ -212,7 +212,7 @@ label v10_sam_kitchen:
     scene v10skt4e # FPP. same camera as v10skt4, Samantha now holding cocktail, mouth open. (Mc's arm no longer in shot), samantha looking down slightly
     with dissolve
 
-    sam "*Tipsy* Hmmm..."
+    sa "*Tipsy* Hmmm..."
 
     scene v10skt4a
     with dissolve
@@ -222,7 +222,7 @@ label v10_sam_kitchen:
     scene v10skt4b
     with dissolve
 
-    sam "*Tipsy* If you were an animal, what do you think you would be?"
+    sa "*Tipsy* If you were an animal, what do you think you would be?"
 
     scene v10skt4a
     with dissolve
@@ -232,7 +232,7 @@ label v10_sam_kitchen:
     scene v10skt4b
     with dissolve
 
-    sam "*Tipsy* I'm not drunk, just answer the question."
+    sa "*Tipsy* I'm not drunk, just answer the question."
 
     menu:
         "Lion":
@@ -250,7 +250,7 @@ label v10_sam_kitchen:
 
     scene v10skt4b
     with dissolve
-    sam "*Tipsy* No no no, you'd be a bunny. *Laughs*"
+    sa "*Tipsy* No no no, you'd be a bunny. *Laughs*"
 
     scene v10skt4a
     with dissolve
@@ -260,12 +260,12 @@ label v10_sam_kitchen:
     scene v10skt4b
     with dissolve
 
-    sam "*Drunk* Cause you like to hangout, like right now, we're hanging out. That means I'm a bunny too."
+    sa "*Drunk* Cause you like to hangout, like right now, we're hanging out. That means I'm a bunny too."
 
     scene v10skt5 # FPP. Show close up of Samantha, slight smile, mouth open
     with dissolve
 
-    sam "*Drunk whisper* Let's make bunny babies."
+    sa "*Drunk whisper* Let's make bunny babies."
 
     scene v10skt5a # FPP. Same Camera as v10skt5, Show close up of Samantha, slight smile, mouth closed
     with dissolve
@@ -277,7 +277,7 @@ label v10_sam_kitchen:
     scene v10skt5
     with dissolve
 
-    sam "*Drunk* No sir, I'm Samantha! *Laughs*"
+    sa "*Drunk* No sir, I'm Samantha! *Laughs*"
 
     scene v10skt6 # FPP. Show Livingroom, sofa in view
     with fade
@@ -295,7 +295,7 @@ label v10_sam_kitchen:
 
     u "I guess me coming was an emergency, I definitely wouldn't want you drinking by yourself."
 
-    sam "*Snoring*"
+    sa "*Snoring*"
 
     u "(*Laughs* Wow, never have I seen more of a lightweight.)"
 

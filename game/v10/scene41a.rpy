@@ -48,7 +48,7 @@ label v10_waking_up_end:
 
         pause 1
         stop music fadeout 3
-        jump ending10
+        jump end10
 
     else:
         scene v10end4 # TPP. Show MC waking up drowsy in his Apes room.
@@ -69,9 +69,9 @@ label v10_waking_up_end:
         play music "music/v10/Scene 41a/Track Scene 41a_2.mp3" fadein 3
         python:
             contact_Penelope.newMessage("Hey, do you mind coming by before the hearing starts?", queue=False)
-            contact_Penelope.newMessage("Hey! Where are you, the hearing is in two hours.")
-            contact_Penelope.newMessage("WHERE ARE YOU THE HEARING IS IN 15 MINUTES!?")
-            contact_Penelope.newMessage("OMG, WE'RE STARTING! WHERE ARE YOU?")
+            contact_Penelope.newMessage("Hey! Where are you, the hearing is in two hours.", queue=False)
+            contact_Penelope.newMessage("WHERE ARE YOU THE HEARING IS IN 15 MINUTES!?", queue=False)
+            contact_Penelope.newMessage("OMG, WE'RE STARTING! WHERE ARE YOU?", queue=False)
 
         call screen phone
 
@@ -98,16 +98,14 @@ label v10_waking_up_end:
 label ending10:
     if persistent.ep == 10:
         jump end10
-    else:
-        jump v11start
 
 label end10:
-    scene savenow
-    with Fade (1,0,1)
-    " "
-    if persistent.ep == 10:
+    if persistent.ep < 11:
+        scene savenow
+        with Fade (1,0,1)
+        " "
+
+    if persistent.ep < 11:
         jump end_credits
     else:
         jump v11start
-
-# <3 ~Lew

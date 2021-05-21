@@ -7,15 +7,13 @@ init -1 python:
         except KeyError: raise NameError("Name '{}' is not defined".format(var))
 
         # Update the trait points whenever one of the above variables are changed
-        popular = bro * troublemaker / boyfriend
-        loyal = bro * boyfriend / troublemaker
-        confident = boyfriend * troublemaker / bro
 
         oldKCT = getattr(store, "kct")
 
         # Decide the new order of traits based on the updated values
-        kctDict = { "popular": popular, "confident": confident, "loyal": loyal }
-        setattr(store, "sortedKCT", [k for (k, v) in sorted(kctDict.items(), key=lambda item: item[0], reverse=True)])
+        kctDict = {"popular": bro * troublemaker / boyfriend, "confident": boyfriend * troublemaker / bro, "loyal": bro * boyfriend / troublemaker}
+        print (kctDict)
+        setattr(store, "sortedKCT", [k for k, v in sorted(kctDict.items(), key=lambda item: item[1], reverse=True)])
 
         if sortedKCT[0] != oldKCT:
             setattr(store, "kct", sortedKCT[0])
