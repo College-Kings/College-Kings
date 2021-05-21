@@ -15,7 +15,7 @@ init -1 python:
 
         # Decide the new order of traits based on the updated values
         kctDict = { "popular": popular, "confident": confident, "loyal": loyal }
-        setattr(store, "sortedKCT", [k for (k, v) in sorted(kctDict.items(), key=lambda k: k[0])])
+        setattr(store, "sortedKCT", [k for (k, v) in sorted(kctDict.items(), key=lambda item: item[0], reverse=True)])
 
         if sortedKCT[0] != oldKCT:
             setattr(store, "kct", sortedKCT[0])
