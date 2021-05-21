@@ -223,7 +223,7 @@ screen messager(contact=None):
                 xsize 374
                 spacing 5
 
-                null
+                null height 5
 
                 for message in contact.sentMessages:
                     if isinstance(message, Message) and message.message.strip():
