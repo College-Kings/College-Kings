@@ -131,7 +131,7 @@ label v9_hall_cont1:
             $ timed = False
             $ hl_punch = True
             $ down_for_the_count = True
-            $ grantAchievement("Back Down")
+            $ grantAchievement("back_down")
             jump v9_hall_punch
 
         "Don't punch the guy":

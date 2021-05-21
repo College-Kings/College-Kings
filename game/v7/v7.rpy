@@ -17235,7 +17235,7 @@ label fr4chloeending:
     with fade
 
     $ homecomingqueen = True
-    $ grantAchievement("homecomingqueen")
+    $ grantAchievement("homecoming_queen")
         
 
     u "So this is your infamous room?"
