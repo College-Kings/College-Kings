@@ -10,15 +10,15 @@ label fight_tutorialLabel:
 
     show screen fight_tutorial(highlight='q')
 
-    tut "{b}Q{/b}: a quick, left-handed jab to create distance and attack the opponent's face from the front."
+    tut "{b}[q]{/b}: a quick, left-handed jab to create distance and attack the opponent's face from the front."
 
     show screen fight_tutorial(highlight='w')
 
-    tut "{b}W{/b}: a strong, right-handed hook to attack the opponent's head from the side."
+    tut "{b}[w]{/b}: a strong, right-handed hook to attack the opponent's head from the side."
 
     show screen fight_tutorial(highlight='r')
 
-    tut "And {b}R{/b}: a right-footed kick to attack the opponent's legs."
+    tut "And {b}[r]{/b}: a right-footed kick to attack the opponent's legs."
 
     show screen fight_tutorial
 
@@ -32,7 +32,7 @@ label fight_tutorialLabel:
 
     show screen fight_tutorial(highlight='r')
 
-    tut "Since Tom has his guard up and could probably block both a jab and a hook, try to kick him by pressing {b}R{/b} in the upcoming screen."
+    tut "Since Tom has his guard up and could probably block both a jab and a hook, try to kick him by pressing {b}[r]{/b} in the upcoming screen."
 
     hide screen fight_tutorial
     hide targets
