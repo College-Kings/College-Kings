@@ -18,8 +18,8 @@ init -1 python:
         setattr(store, "sortedKCT", [k for (k, v) in sorted(kctDict.items(), key=lambda k: k[0])])
 
         if sortedKCT[0] != oldKCT:
-            renpy.notify("Your KCT has changed to " + kct)
             setattr(store, "kct", sortedKCT[0])
+            renpy.notify("Your KCT has changed to " + kct)
 
 
     # Mark disabled choices
