@@ -134,7 +134,7 @@ label v10_chloe_hallway:
 
                                     u "Yeah let's go."
 
-                                    jump v10_mc_chloe_gym
+                                    jump v10_chloe_gym
 
                                 "Decline a Rematch":
                                     $ addPoint("tm")
@@ -293,7 +293,7 @@ label v10_chloe_hallway:
 
                 pause 0.75
 
-                jump v10_mc_chloe_gym
+                jump v10_chloe_gym
 
             "Decline a Rematch":
                 u "I shouldn't, I have a lot to do. Sorry."

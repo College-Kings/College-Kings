@@ -570,9 +570,6 @@ label v10_aubrey_house:
 
                 au "*Laughs* Maybe next time."
 
-                scene v10auh3b # TPP Same angle as v10auh3a, MC leaning against wall by door to Chicks bathroom, slight smile, mouth closed
-                with dissolve
-
                 au "I should really go shopping. I want some more cute gym sets."
 
                 scene v10auh5j # FPP Show Aubrey inside Chicks bathroom, neck up only, big smile, mouth closed
@@ -580,7 +577,7 @@ label v10_aubrey_house:
 
                 u "Are you hinting at good gift ideas?"
 
-                scene v10auh3b
+                scene v10auh6
                 with dissolve
 
                 au "Who me? I would never. *Laughs*"
@@ -590,7 +587,7 @@ label v10_aubrey_house:
 
                 u "Haha, what's your favorite brand?"
 
-                scene v10auh3b
+                scene v10auh6
                 with dissolve
 
                 au "I really love Lew's, they always fit me the best."
@@ -600,7 +597,7 @@ label v10_aubrey_house:
 
                 u "Isn't Lew's the expensive designer brand?"
 
-                scene v10auh3b
+                scene v10auh6
                 with dissolve
 
                 au "Hey you asked what I liked, not what I can afford."

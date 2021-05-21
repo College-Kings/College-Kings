@@ -59,6 +59,8 @@ label amber_sex_at_joshs:
     else:
         am "Oh wow, I could get used to this."
 
+    play music "music/Erotic Track - Amber Getting It.mp3" fadein 3
+
     image v8am2bj1 = Movie(play="images/v8/Scene 30/v8am2bj1.webm", loop=True, image="images/v8/Scene 30/2ambj_000.webp", start_image="images/v8/Scene 30/2ambj_000.webp") # BJ TPP
     image v8am2bj1f = Movie(play="images/v8/Scene 30/v8am2bj1f.webm", loop=True, image="images/v8/Scene 30/2ambj_000.webp", start_image="images/v8/Scene 30/2ambj_000.webp")
 
@@ -206,6 +208,8 @@ label amber_sex_at_joshs:
     u "OHHHHH!"
     am "*Moans*"
 
+    stop music fadeout 3
+    
     scene v8amber13 # TPP. Shot of MC and Amber lying together in the bed in their underwear. MC's hands just folded back and behind his head. Amber's head and one hand on MC's chest, both of them relaxed, smiling and mouth closed
     with Fade(0.75, 0.25, 0.75)
     pause 1
