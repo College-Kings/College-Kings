@@ -38,7 +38,7 @@ label v10_chloe_gym:
     scene v10chg2c # FPP Same angle and expression as v10chg2, Chloe mouth open
     with dissolve
 
-    cl "Someone's in a...confident mood."
+    cl "Someone's in a... confident mood."
 
     scene v10chg2
     with dissolve
@@ -174,7 +174,7 @@ label v10_chloe_gym:
                 scene v10chg6b # FPP Same angle as c10chg6b, Chloe now standing, giving MC a suspicious look with mouth open
                 with dissolve
 
-                cl "Were you just...you were trying to look up my shorts! You really are naughty! At least tell me you liked what you saw."
+                cl "Were you just... you were trying to look up my shorts! You really are naughty! At least tell me you liked what you saw."
 
                 scene v10chg2
                 with dissolve
@@ -285,7 +285,7 @@ label v10_chloe_gym:
                 scene v10chgbj # Chloe giving MC a blowjob
                 with dissolve
 
-                u "This is...oh fuck."
+                u "This is... oh fuck."
 
                 scene v10chgbjf
                 with dissolve
@@ -295,7 +295,7 @@ label v10_chloe_gym:
                 scene v10chg10d # FPP Same angle as v10chg10b, MC holding Chloe's head with both hands while he cums in her mouth
                 with dissolve
 
-                u "Ahh fuck...I'm cumming!"
+                u "Ahh fuck... I'm cumming!"
 
                 scene v10chg10e # FPP Same angle as v10chg10b, Chloe smiling, mouth open, cum in her mouth
                 with dissolve
