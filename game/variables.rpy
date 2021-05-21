@@ -10,9 +10,11 @@ default freeRoam = False
 default kiwii_firstTime = False
 
     ## Fight Vars
+default fight_tutorial = False
 default fight_type = "normal" # normal / simReal / simWin
 default reaction = 1.0
 default reactiona = 1.0
+default bodyHook = False
 default allies = [mc]
 default enemies = []
 
