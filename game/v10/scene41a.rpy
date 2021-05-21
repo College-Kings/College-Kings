@@ -46,7 +46,7 @@ label v10_waking_up_end:
 
         pause 1
 
-        jump ending10
+        jump end10
 
     else:
         scene v10end4 # TPP. Show MC waking up drowsy in his Apes room.
@@ -90,21 +90,15 @@ label v10_waking_up_end:
 
         pause 1
 
-        jump ending10
-
-label ending10:
-    if persistent.ep == 10:
         jump end10
-    else:
-        jump v11start
 
 label end10:
-    scene savenow
-    with Fade (1,0,1)
-    " "
-    if persistent.ep == 10:
+    if persistent.ep < 11:
+        scene savenow
+        with Fade (1,0,1)
+        " "
+
+    if persistent.ep < 11:
         jump end_credits
     else:
         jump v11start
-
-# <3 ~Lew
