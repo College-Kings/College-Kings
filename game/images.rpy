@@ -54,7 +54,7 @@ image relaxing_day = "images/v10/Achievements/relaxingday.webp" # Need Image
 image the_king = "images/v10/Achievements/theking.webp" # Need Image
 image back_down = "images/v10/Achievements/backdown.webp" # Need Image
 image second_date = "images/v10/Achievements/seconddate.webp" # Need Image
-image the_wrong_time = "images/v10/Achievements/the_wrongtime.webp" # Need Image
+image the_wrong_time = "images/v10/Achievements/thewrongtime.webp" # Need Image
 
 image friends_first = "images/v10/Achievements/friendsfirst.webp" # Need Image
 image rawr_im_a_lion = "images/v10/Achievements/rawrimalion.webp" # Need Image

@@ -32,6 +32,8 @@ init -1 python:
 
 
     def grantAchievement(achieve):
-        renpy.show(achieve, at_list=achievementAtList)
+        try:
+            renpy.show(achieve, at_list=achievementAtList)
+        except TypeError: pass
         achievement.grant(achieve) 
         achievement.sync()
