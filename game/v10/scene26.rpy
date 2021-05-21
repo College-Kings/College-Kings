@@ -442,7 +442,7 @@ label v10_amber_skatepark_sg:
                 am "Oh god!"
 
                 image v10ambda = Movie(play="images/v10/Scene 26/v10ambda.webm", loop=True, image="images/v10/Scene 26/v10ambdaStart.webp", start_image="images/v10/Scene 26/v10ambdaStart.webp") # TPP MC fucking amber in the ass doggystyle
-                image v10ambrff = Movie(play="images/v10/Scene 26/v10ambdaf.webm", loop=True, image="images/v10/Scene 26/v10ambdaStart.webp", start_image="images/v10/Scene 26/v10ambdaStart.webp")
+                image v10ambdaf = Movie(play="images/v10/Scene 26/v10ambdaf.webm", loop=True, image="images/v10/Scene 26/v10ambdaStart.webp", start_image="images/v10/Scene 26/v10ambdaStart.webp")
 
 
                 scene v10ambda
