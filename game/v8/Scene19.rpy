@@ -28,6 +28,13 @@ init python:
         contact_Amber.addReply(_("I'd fuck you so good you'd scream my name"))
         contact_Amber.newMessage(_("I'm close. Will you finish with me?"))
         contact_Amber.addReply(_("Oh, God yes!"))
+        contact_Amber.newMessage(_("NOW!"), queue=False)
+        contact_Amber.addReply(_("NOW!"))
+        contact_Amber.addReply(_("Holy shit, Amber! You're amazing!"))
+        contact_Amber.newMessage(_("You weren't too bad yourself. Next time we need to do this in person"))
+        contact_Amber.addReply(_("Give me 5 minutes ;)"))
+        contact_Amber.newMessage(_("You're so cute! But it's time for bed. Dream about me ;)"))
+        contact_Amber.addReply(_("With pleasure! Night!"))
 
     def v8s19_reply2():
         contact_Amber.newMessage(_("Good. Maybe someday we can think about things in the same room and see what happens"))
@@ -79,19 +86,6 @@ label sun_eve_room:
             $ contact_Lauren.addReply(_("Goodnight"))
 
         call screen phone
-
-        # Show MC masturbating and continue conversation
-        if contact_Amber.getMessage("Wanna see what thinking about you has done to me?"):
-            scene v8sser2
-            with dissolve
-
-            $ contact_Amber.newMessage(_("NOW!"), queue=False)
-            $ contact_Amber.addReply(_("NOW!"))
-            $ contact_Amber.addReply(_("Holy shit, Amber! You're amazing!"))
-            $ contact_Amber.newMessage(_("You weren't too bad yourself. Next time we need to do this in person"))
-            $ contact_Amber.addReply(_("Give me 5 minutes ;)"))
-            $ contact_Amber.newMessage(_("You're so cute! But it's time for bed. Dream about me ;)"))
-            $ contact_Amber.addReply(_("With pleasure! Night!"))
 
         if forgiveemily:
             # -MC's phone buzzes-
@@ -155,19 +149,6 @@ label sun_eve_room:
             $ contact_Lauren.addReply(_("Goodnight"))
 
         call screen phone
-
-        # Show MC masturbating and continue conversation
-        if contact_Amber.getMessage("Wanna see what thinking about you has done to me?"):
-            scene v8sser2
-            with dissolve
-
-            $ contact_Amber.newMessage(_("NOW!"), queue=False)
-            $ contact_Amber.addReply(_("NOW!"))
-            $ contact_Amber.addReply(_("Holy shit, Amber! You're amazing!"))
-            $ contact_Amber.newMessage(_("You weren't too bad yourself. Next time we need to do this in person"))
-            $ contact_Amber.addReply(_("Give me 5 minutes ;)"))
-            $ contact_Amber.newMessage(_("You're so cute! But it's time for bed. Dream about me ;)"))
-            $ contact_Amber.addReply(_("With pleasure! Night!"))
             
         if forgiveemily:
             # -MC's phone buzzes-
