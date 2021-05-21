@@ -450,18 +450,12 @@ label v10_amber_skatepark_sg:
 
                 am "Oh my God, FASTER!"
 
-                scene v10ambrff
-                with dissolve
-
                 am "YESSSS!"
 
-                scene v10ambrff
+                scene v10ambdaf
                 with dissolve
 
                 u "Damn this feels good!"
-
-                scene v10ambrff
-                with dissolve
 
                 am "Oh fuck!"
 
@@ -490,7 +484,7 @@ label v10_amber_skatepark_sg:
                 u "Me too."
 
                 scene v10ambcgf
-                with hpunch
+                with flash
 
                 am "Cum in me [name]."
 
