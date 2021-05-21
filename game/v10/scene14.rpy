@@ -126,7 +126,10 @@ label v10_apes_samantha:
             scene v10ssap2c
             with dissolve
 
-            u "Not quite. He announced that he was gonna be one of the chaperones for our senior prom and I knew his daughter just happened to be going to our school and graduating with me. Sooo... long story short, I asked his daughter to prom and - after some very painful back and forth - she said yes. We danced all night and I tried to give him as much eye contact as I possibly could, it was so funny. To be honest, the girl really wasn't keen on it once she found out why I had asked her, but... totally worth it. *Laughs*"
+            u "Not quite. He announced that he was gonna be one of the chaperones for our senior prom and I knew his daughter just happened to be going to our school and graduating with me."
+            u "Sooo... long story short, I asked his daughter to prom and - after some very painful back and forth - she said yes."
+            u "We danced all night and I tried to give him as much eye contact as I possibly could, it was so funny."
+            u "To be honest, the girl really wasn't keen on it once she found out why I had asked her, but... totally worth it. *Laughs*"
 
             scene v10ssap2b
             with dissolve
