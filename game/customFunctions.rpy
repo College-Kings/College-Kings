@@ -22,6 +22,7 @@ init -1 python:
         if newKCT != oldKCT:
             renpy.notify("Your KCT has changed to " + kct)
 
+
     # Mark disabled choices
     if getattr(renpy.display.get_info(), 'oldmenu', None) is None:
         renpy.display.get_info().oldmenu = renpy.exports.menu
@@ -31,3 +32,9 @@ init -1 python:
                   for label, condition, value in items ]
         return renpy.display.get_info().oldmenu(items, set_expr)
     renpy.exports.menu = menu_override
+
+
+    def grantAchievement(achieve):
+        renpy.show(achieve.replace("_", ""), at_list=achievementAtList)
+        achievement.grant(achieve)
+        achievement.sync()
