@@ -8,6 +8,8 @@ label v10_linds_room:
     scene v10slds1 # TPP. Show MC arriving at the door to Lindsey's house and knocking. Normal expression, mouth closed.
     with fade
 
+    play music "music/v10/Scene 11/Track Scene 11.mp3" fadein 3
+
     pause 0.5
     
     scene v10slds1a # TPP. Same camera as v10slds1. Show MC and Lindsey. Lindsey answers the door. Sad expression, mouth closed.
@@ -461,6 +463,7 @@ label v10_linds_room:
 
         scene v10slds5a # TPP. Same camera as v10slds5. Show MC leaving Lindsey's house. The door is closed behind him. (Lindsey is not in sight.)
         with fade
+    stop music fadeout 3
 
 
 if joinwolves: # I don't know this variable name

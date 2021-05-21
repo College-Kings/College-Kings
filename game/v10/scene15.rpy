@@ -3,6 +3,7 @@
 # Characters: MC (Outfit 1), Lauren (Outfit 3), Aubrey (Outfit 3)
 # Time:
 label v10_call_with_lauren1:
+    play music "music/v10/Scene 15 & 18/Track Scene 15 & 18.mp3" fadein 3
     if joinwolves: # MC is a wolf, is that the correct variable name?
         scene v10saow1 # TPP. Show MC in his Wolves bedroom, laying in his bed relaxing. He notices his phone buzzing. Curious/thoughtful expression, mouth closed.
         with fade
@@ -1507,5 +1508,6 @@ label v10_call_with_lauren1:
                     with dissolve
 
                     u "Something like that."
+    stop music fadeout 3
 
-jump v10_call_with_lauren2 # scene 18 for mc who didn't leave with aubrey
+    jump v10_call_with_lauren2 # scene 18 for mc who didn't leave with aubrey

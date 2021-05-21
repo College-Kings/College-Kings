@@ -19,7 +19,7 @@ label v10_charity_freeroam:
     with fade
 
     u "(Now this is an event!)"
-
+    play music "music/v10/Scene 33/Track Scene 33 - Free Roam.mp3" fadein 3
     $ freeRoam = True
 
     jump v10s33_autumn1
@@ -4003,5 +4003,6 @@ label v10s33_deergirl41:
         scene fr6thrift
 
     u "(I'd rather not get talked into buying one of these hats.)"
+    stop music fadeout 3
 
     call screen v10s33_thrift

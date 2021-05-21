@@ -7,6 +7,8 @@ label v10_emily_course:
     scene v10semi1 # TPP. Show MC walking down the college hallways, towards a slightly open door.
     with fade
 
+    play music "music/v10/Scene 30a/Track Scene 30a.mp3" fadein 3
+
     pause 0.75
 
     scene v10semi2 # TPP. Show the inside of the first responders class (camera as if MC peaking in) Emily practicing CPR on a dummy, Ben & Jerry watching. 1 or 2 other random students in the class.
@@ -480,7 +482,8 @@ label v10_emily_course:
                         u "I'll see you around."
 
                         jump v10_late_alley
-
+    stop music fadeout 3
+    
     jump v10_late_alley
 
 

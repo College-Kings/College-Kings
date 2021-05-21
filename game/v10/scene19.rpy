@@ -7,6 +7,8 @@ label v10_walk_jenny_text:
     scene v10swjt1 # TPP. Show MC walking on the sidewalk where he originally met Penelope.
     with fade
 
+    play music "music/v10/Scene 19/Track Scene 19.mp3" fadein 3
+
     pause 0.75
 
     scene v10swjt2 # TPP. Show MC stood exactly where he met Penelope, phone in hand.
@@ -136,5 +138,7 @@ label v10_walk_jenny_text:
     with dissolve
 
     u "(I'm seeing everybody today. It is getting a little dark, I'm gonna hurry up and get back.)"
+
+    stop music fadeout 3
 
     jump v10_room_mon_night

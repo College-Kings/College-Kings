@@ -5,6 +5,8 @@ label v10_emily_vs_aubrey:
 
     au "I know I'm hot, but c'mon, don't just stare at me all day."
 
+    play music "music/v10/Scene 36/Track Scene 36.mp3" fadein 3
+
     scene v10eva1a # FPP. same but emily mouth open
     with dissolve
 
@@ -136,5 +138,6 @@ label v10_emily_vs_aubrey:
 
     am "Haha, you'll find out."
 
+    stop music fadeout 3
     jump v10_riley_vs_amber
     # -Transition to Scene 37-

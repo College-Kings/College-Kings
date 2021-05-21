@@ -7,7 +7,9 @@ label v10start:
    scene v10sta1 # FPP. Show Imre and ryan on the floor fighting, imre on bottom, ryan on top, angry faces, mouths closed
    with dissolve
    u "What are you guys doing!?"
- 
+
+   play music "music/v10/Scene 1/Track Scene 1.mp3" fadein 3
+
    scene v10sta2 # FPP. Show MC trying to pull Ryan and imre apart, imre/ryan angry, mc worried look, mouths closed
    with dissolve
  
@@ -51,7 +53,9 @@ label v10start:
         with dissolve
  
         ca "Why the fuck would you wrestle him?! Go for a fucking punch if you mean it!"
- 
+
+   stop music fadeout 3
+
    if joinwolves:
        scene v10sta4a # FPP. Same Camera as v10sta4, imre now left scene, Show Sebastian near the warehouse doors facing camera, neutral look, mouth open
        with dissolve
@@ -72,5 +76,5 @@ label v10start:
  
        scene v10sta6 # TPP. Show MC back to camera heading towards warehouse
        with dissolve
-      
+
        jump v10_imre_vs_caleb

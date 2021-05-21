@@ -11,6 +11,8 @@ label v10_mc_pen_call:
 
     u "(I love college, there's some down times, but plenty of good ones too.)"
 
+    play music "music/v10/Scene 41/Track Scene 41_1.mp3" fadein 3
+
     scene v10spen2 # TPP. Show MC grabbing his pocket as if he's about to pull his phone out.
     with dissolve
 
@@ -94,6 +96,8 @@ label v10_mc_pen_call:
 
     u "(I really hope tomorrow goes well.)"
 
+    stop music fadeout 3
+    play music "music/v10/Scene 40/Track Scene 40_2.mp3" fadein 3
     if joinwolves:
 
         scene v10spen5 # TPP. Show MC in his new wolves room, lying on his bed tired.
@@ -117,6 +121,7 @@ label v10_mc_pen_call:
         with dissolve
 
         pause 1
+    stop music fadeout 3
 
     jump v10_waking_up_end
 

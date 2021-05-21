@@ -4,6 +4,8 @@
 # Time: Afternoon
 label v10_aft_walk_home:
 
+    play music "music/v10/Scene 23/Track Scene 23.mp3" fadein 3
+
     scene v10smwh1 # TPP. Show MC walking on the sidewalk. Normal expression, mouth closed.
     with fade
 
@@ -292,5 +294,6 @@ label v10_aft_walk_home:
     
     u "(Guess I'm not going home.)"
    
+    stop music fadeout 3
     jump v10_lauren_room
     
