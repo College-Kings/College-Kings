@@ -3435,7 +3435,7 @@ label fy_bd: # not gone to Emily's
         scene s558b # evelyn looks up at you smiling
         with dissolve
 
-        ev "Bon appetit"
+        ev "Bon appetit."
 
         scene s558c
         with dissolve
@@ -5977,7 +5977,7 @@ label wakeupa:
                     scene s627h
                     with dissolve
 
-                    u "fire"
+                    u "fire."
 
                     u "I just hope you don't burn out because..."
 

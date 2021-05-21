@@ -129,7 +129,7 @@ label v8_tues_evening:
             if contact_Riley.getReplies():
                 call screen phone
             if contact_Riley.getReplies():
-                u "I should reply to my phone"
+                u "I should reply to my phone."
                 jump v8s37_phoneContinue4
             
         u "(I guess this is just not my day for studying. Great job, [name]!)"

@@ -19,7 +19,7 @@ label v9_warehouse_josh:
     scene v9jka2a # FPP. Same camera as v9jka2, Josh laugh, mouth open.
     with dissolve
 
-    jo "The ladies weren't digging it. *Laughs"
+    jo "The ladies weren't digging it. *Laughs*"
 
     scene v9jka2b # FPP. Same camera as v9jka2, Amber smile, mouth open, everyone else mouth closed.
     with dissolve
@@ -96,7 +96,7 @@ label v9_warehouse_josh:
     scene v9jka4a # FPP. Same camera as v9jka4, both laughing, Amber mouth open, Kim closed.
     with dissolve
 
-    am "*Laughs"
+    am "*Laughs*"
 
     scene v9jka4b # FPP. Same camera as v9jka4, both smiling, mouths closed.
     with dissolve
