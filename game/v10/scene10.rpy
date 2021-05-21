@@ -11,7 +11,7 @@ init python:
 
 label v10_sun_morn:
     default v10s10_hangWLinds = False
-
+    play music "music/v10/Scene 10/Track Scene 10.mp3" fadein 3
     if joinwolves:
         scene v10sum1 # TPP. Show MC in his Wolves bed looking up at the ceiling, MC looks tired.
         with fade
@@ -108,7 +108,7 @@ label v10_sun_morn:
 
         scene black
         with fade
-
+        stop music fadeout 3
         if v10s10_hangWLinds:
             jump v10_linds_room
 
@@ -211,7 +211,7 @@ label v10_sun_morn:
 
         scene black
         with fade
-
+        stop music fadeout 3
         if v10s10_hangWLinds:
             jump v10_linds_room
 
