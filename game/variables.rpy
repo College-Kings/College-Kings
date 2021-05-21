@@ -6,8 +6,8 @@ define config.default_sfx_volume = 1
 default achievementAtList = None
 default freeRoam = False
 
-default kct = "popular"
-default sortedKCT = ["popular", "confident", "loyal"]
+default kct = "confident"
+default sortedKCT = ["confident", "loyal", "popular"]
 
     ## Kiwii Vars
 default kiwii_firstTime = False
