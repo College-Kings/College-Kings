@@ -113,7 +113,10 @@ label v10_apes_samantha:
             scene v10ssap2a
             with dissolve
 
-            u "Back in high school I had a teacher that was just always out to get me. People were doing all kinds of shit, they were throwing paper planes at him during class, cheating on his tests and just making fun of him even with him in the room. But they never got into any trouble. I did anything remotely questionable, there I go, straight to detention. Well at some point I got really fed up and I wanted to piss him off you know, get him really good."
+            u "Back in high school I had a teacher that was just always out to get me."
+            u "People were doing all kinds of shit, they were throwing paper planes at him during class, cheating on his tests and just making fun of him even with him in the room."
+            u "But they never got into any trouble. I did anything remotely questionable, there I go, straight to detention."
+            u "Well at some point I got really fed up and I wanted to piss him off you know, get him really good."
 
             scene v10ssap2b
             with dissolve
