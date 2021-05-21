@@ -15,12 +15,11 @@ init -1 python:
 
         # Decide the new order of traits based on the updated values
         kctDict = { "popular": popular, "confident": confident, "loyal": loyal }
+        setattr(store, "sortedKCT", [k for (k, v) in sorted(kctDict.items(), key=lambda k: k[0])])
 
-        newKCT = max(kctDict, key=kctDict.get)
-        setattr(store, "kct", newKCT)
-
-        if newKCT != oldKCT:
+        if sortedKCT[0] != oldKCT:
             renpy.notify("Your KCT has changed to " + kct)
+            setattr(store, "kct", sortedKCT[0])
 
 
     # Mark disabled choices

@@ -6,6 +6,9 @@ define config.default_sfx_volume = 1
 default achievementAtList = None
 default freeRoam = False
 
+default kct = "popular"
+default sortedKCT = ["popular", "confident", "loyal"]
+
     ## Kiwii Vars
 default kiwii_firstTime = False
 
@@ -36,9 +39,6 @@ default laurenrs = False
 default bro = 1
 default boyfriend = 2
 default troublemaker = 1
-default loyal = bro * boyfriend / troublemaker
-default popular = bro * troublemaker / boyfriend
-default confident = boyfriend * troublemaker / bro
 default phoneTutorialPage = 1
 default freeRoamTutorialPage = 1
 default v1_freeRoam1_riley = False
@@ -164,7 +164,6 @@ default chooseimre = True
 default meetchloe = False
 default imreforgives = False
 default chloecaught = False
-default kct = "popular"
 default showkct = True
 default laurenmad = False
 default checkonrose = False
