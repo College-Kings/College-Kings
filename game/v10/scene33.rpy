@@ -1456,8 +1456,6 @@ label v10s33_deergirl21:
 
             $ addPoint("bf")
 
-            $ v10s33_date_w_chloe = True
-
             u "Well I'll take one."
 
             scene v10cfrdg31b #same 1, happy, hands out ticket to mc
