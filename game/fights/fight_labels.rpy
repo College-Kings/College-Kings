@@ -49,16 +49,17 @@ label fight_changeKeybinds:
     scene hook1pic
     with dissolve
 
-    $ q = renpy.input("Which button should be hook / block face?", default="q").strip() or "q"
+    $ q = renpy.input("Which button should be jab / block head", default="q").strip() or "q"
 
     scene kick1pic
     with dissolve
 
-    $ r = renpy.input("Which button should be hook / block face?", default="r").strip() or "r"
+    $ r = renpy.input("Which button should be kick / block leg?", default="r").strip() or "r"
 
-    scene hook1pic
-    with dissolve
+    if bodyHook:
+        scene hook1pic
+        with dissolve
 
-    $ e = renpy.input("Which button should be body hook / low guard?", default="e").strip() or "e"
+        $ e = renpy.input("Which button should be body hook / low guard?", default="e").strip() or "e"
 
     return
