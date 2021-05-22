@@ -46,7 +46,9 @@ label v10_riley_sex:
 
     u "(Okay, she should be coming out soon.)"
 
-    label v10_riley_sex_sg:
+    if rileyrs or kct == "confident":
+        label v10s40_galleryScene:
+
     scene v10srds3 # FPP. Show Riley walking into her dorm room, wrapped in a towel, her hair down and still wet. She has a little smile, mouth open.
     with fade
 
@@ -62,7 +64,6 @@ label v10_riley_sex:
 
     ri "*Chuckles* I forgot a change of clothes."
 
-    label v10s40_galleryScene:
     if rileyrs: # mc in a relationship with riley
         scene v10srds1f # TPP. Same camera as v10srds1. Show MC standing up from Riley's bed, smiling, mouth closed.
         with fade
