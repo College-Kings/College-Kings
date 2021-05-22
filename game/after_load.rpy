@@ -1,4 +1,4 @@
-init -1 python:
+init -999 python:
     import os
     import shutil
 
@@ -22,25 +22,28 @@ init -1 python:
     if renpy.loadable("scriptv07.rpyc"):
         os.remove(os.path.join(config.basedir, "game", "scriptv07.rpyc"))
 
-    try:
-        shutil.rmtree(os.path.join(config.basedir, "game", "v08"))
-    except Exception: pass
+    if os.path.exists(os.path.join(config.basedir, "game", "v8")):
+        try: shutil.rmtree(os.path.join(config.basedir, "game", "v08"))
+        except WindowsError: pass
 
-    try:
-        shutil.rmtree(os.path.join(config.basedir, "game", "v09"))
-    except Exception: pass
+    if os.path.exists(os.path.join(config.basedir, "game", "v9")):
+        try: shutil.rmtree(os.path.join(config.basedir, "game", "v09"))
+        except WindowsError: pass
 
 label after_load:
     python:
         # Applications
+        for app in applications:
+            try: app.img = app.image
+            except AttributeError: pass
+
+            try: app.homeScreen = app.screen
+            except AttributeError: pass
+
         msgApp.img = "images/phone/messages/appAssets/messagesIcon.webp"
         statsApp.img = "images/phone/stats/appAssets/statsIcon.webp"
         achApp.img = "images/phone/achievements/appAssets/achievementsIcon.webp"
         kiwiiApp.img = "images/phone/kiwii/appAssets/kiwiiIcon.webp"
-
-        for app in applications:
-            try: app.homeScreen = app.screen
-            except AttributeError: pass
 
         # Kiwii Users
         for user in kiwiiUsers:
@@ -102,6 +105,11 @@ label after_load:
             try:
                 for message in contact.messages:
                     try: message.image = os.path.splitext(message.image)[0] + ".webp"
+                    except AttributeError: pass
+
+                    try: message.image = message.image.replace("v08", "v8")
+                    except AttributeError: pass
+                    try: message.image = message.image.replace("v09", "v9")
                     except AttributeError: pass
 
                     try: message.message = message.msg
