@@ -42,7 +42,7 @@ init python:
     SceneGallery("v10_mc_vs_imre_fight")
     SceneGallery("v10s17_galleryScene")
     SceneGallery("v10_lauren_room_sg")
-    SceneGallery("v10_amber_skatepark_sg", scope={"amberrs": True})
+    SceneGallery("v10_amber_skatepark_sg")
     SceneGallery("v10s30_galleryScene")
     SceneGallery("v10s40_galleryScene", scope={"rileyrs": True})
 
