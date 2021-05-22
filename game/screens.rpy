@@ -2182,13 +2182,16 @@ screen getaccess():
 
     add "images/earlyaccess2.webp"
 
+    # imagebutton:
+    #     ypos 770
+    #     xpos 540
+    #     idle "images/get2.webp"
+    #     hover "images/get.webp"
+    #     action OpenURL ("https://www.patreon.com/collegekings")
 
-    imagebutton:
-        ypos 770
-        xpos 540
-        idle "images/get2.webp"
-        hover "images/get.webp"
-        action OpenURL ("https://www.patreon.com/collegekings")
+    textbutton "Start Act 2 (v10)":
+        align (0.5, 0.8)
+        action Jump("v10start")
 
 screen texta():
 
