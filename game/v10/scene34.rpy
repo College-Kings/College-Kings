@@ -111,7 +111,7 @@ label v10_autumn_announcement:
         "Root for Nora":
             $ chloeLike -= 1
             $ noraLike += 1
-            $ v10_cvn_cheer_nora
+            $ v10_cvn_cheer_nora = True
             scene v10samw6 
             with dissolve
 
@@ -176,7 +176,7 @@ label v10_autumn_announcement:
         "Root for Amber":
             $ amberLike += 1
             $ rileyLike -= 1
-            $ v10_cvn_cheer_amber
+            $ v10_cvn_cheer_amber = True
 
             scene v10samw7 
             with dissolve
