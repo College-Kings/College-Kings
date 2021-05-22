@@ -86,7 +86,7 @@ screen sceneGallery():
                 action Replay(sceneGalleryItem.label, scope=updateScope(sceneGalleryItem.scope))
                 idle Transform(sceneGalleryItem.idleImg, size=(400, 226))
                 hover Transform(sceneGalleryItem.hoverImg, size=(400, 226))
-                insensitive Transform(im.Blur(sceneGalleryItem.hoverImg, 3), size=(400, 226))
+                insensitive Transform(im.Blur(sceneGalleryItem.idleImg, 3), size=(400, 226))
 
     imagebutton:
         idle "images/backtransp.webp"
