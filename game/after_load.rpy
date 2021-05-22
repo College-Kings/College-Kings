@@ -1,4 +1,4 @@
-init -999 python:
+python early:
     import os
     import shutil
 
@@ -23,11 +23,11 @@ init -999 python:
         os.remove(os.path.join(config.basedir, "game", "scriptv07.rpyc"))
 
     if os.path.exists(os.path.join(config.basedir, "game", "v8")):
-        try: shutil.rmtree(os.path.join(config.basedir, "game", "v08"))
+        try: shutil.rmtree(os.path.join(config.basedir, "game", "v0.8"))
         except WindowsError: pass
 
     if os.path.exists(os.path.join(config.basedir, "game", "v9")):
-        try: shutil.rmtree(os.path.join(config.basedir, "game", "v09"))
+        try: shutil.rmtree(os.path.join(config.basedir, "game", "v0.9"))
         except WindowsError: pass
 
 label after_load:
