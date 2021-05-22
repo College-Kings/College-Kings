@@ -1,6 +1,5 @@
 python early:
     import os
-    import shutil
 
     if renpy.loadable("bugTesting_Overwrite.rpy"):
         os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpy"))
@@ -23,12 +22,19 @@ python early:
         os.remove(os.path.join(config.basedir, "game", "scriptv07.rpyc"))
 
     if os.path.exists(os.path.join(config.basedir, "game", "v8")):
-        try: shutil.rmtree(os.path.join(config.basedir, "game", "v0.8"))
-        except WindowsError: pass
+        try:
+            for file in os.listdir(os.path.join(config.basedir, "game", "v0.8")):
+                os.remove(file)
+            os.rmdir(MYPATH)
+        except Exception: pass
 
     if os.path.exists(os.path.join(config.basedir, "game", "v9")):
-        try: shutil.rmtree(os.path.join(config.basedir, "game", "v0.9"))
-        except WindowsError: pass
+        try:
+            for file in os.listdir(os.path.join(config.basedir, "game", "v0.9")):
+                os.remove(file)
+            os.rmdir(MYPATH)
+        except Exception: pass
+
 
 label after_load:
     python:
