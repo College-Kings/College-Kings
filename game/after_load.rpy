@@ -1,5 +1,6 @@
 init -1 python:
     import os
+    import shutil
 
     if renpy.loadable("bugTesting_Overwrite.rpy"):
         os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpy"))
@@ -20,6 +21,14 @@ init -1 python:
         os.remove(os.path.join(config.basedir, "game", "scriptv07.rpy"))
     if renpy.loadable("scriptv07.rpyc"):
         os.remove(os.path.join(config.basedir, "game", "scriptv07.rpyc"))
+
+    try:
+        shutil.rmtree(os.path.join(config.basedir, "game", "v08"))
+    except Exception: pass
+
+    try:
+        shutil.rmtree(os.path.join(config.basedir, "game", "v09"))
+    except Exception: pass
 
 label after_load:
     python:
@@ -121,4 +130,5 @@ label after_load:
     hide nohardfeelings
 
     show screen phoneIcon
+    hide screen getaccess
     return
