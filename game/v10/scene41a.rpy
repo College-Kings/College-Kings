@@ -93,10 +93,6 @@ label v10_waking_up_end:
 
         pause 1
         stop music fadeout 3
-        jump ending10
-
-label ending10:
-    if persistent.ep == 10:
         jump end10
 
 label end10:

@@ -44,7 +44,7 @@ label end9:
         with Fade (1,0,1)
         " "
 
-    if persistent.ep < 11:
+    if persistent.ep < 10:
         jump end_credits
     else:
         jump v10start
