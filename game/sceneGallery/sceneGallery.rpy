@@ -43,11 +43,8 @@ init python:
     SceneGallery("v10s17_galleryScene")
     SceneGallery("v10_lauren_room_sg")
     SceneGallery("v10_amber_skatepark_sg", scope={"amberrs": True})
-    SceneGallery("v10s30_galleryScene", scope={"chloers": True})
+    SceneGallery("v10s30_galleryScene")
     SceneGallery("v10s40_galleryScene", scope={"rileyrs": True})
-
-    #SceneGallery("v10_aubrey_house_sg") #awaiting gallery18.webp scene17
-    #SceneGallery("label v10_riley_sex_sg", scope={"rileyrs": True}) #awaiting gallery22.webp scene40
 
 screen spoiler():
     add "images/darker.webp"

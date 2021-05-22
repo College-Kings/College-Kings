@@ -158,7 +158,6 @@ label v10_chloe_gym:
 
     u "*Laughs*"
 
-    label v10s30_galleryScene:
     scene v10chg6 # FPP Show Chloe bending over to pick up the volleyball off of the floor
     with dissolve
 
@@ -168,7 +167,7 @@ label v10_chloe_gym:
         # -Event1 Look closer-
         menu:
             "Look closer":
-                label v10_chloe_gym_sg:
+                label v10s30_galleryScene:
                 scene v10chg6a # FPP Same angle as c10chg6a, Close up shot of Chloe's butt while she's bending over
                 with dissolve
 
