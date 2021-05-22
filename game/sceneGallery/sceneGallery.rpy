@@ -83,7 +83,7 @@ screen sceneGallery():
 
         for sceneGalleryItem in sceneGalleryItems:
             imagebutton:
-                action Replay(sceneGalleryItem.label, scope=updateScope(sceneGalleryItem.scope))
+                action Replay(sceneGalleryItem.label, scope=updateScope(sceneGalleryItem.scope), locked=False)
                 idle Transform(sceneGalleryItem.idleImg, size=(400, 226))
                 hover Transform(sceneGalleryItem.hoverImg, size=(400, 226))
 
