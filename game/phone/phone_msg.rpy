@@ -190,6 +190,7 @@ screen contactsscreen():
 
 screen messager(contact=None):
     tag phoneTag
+    modal True
     zorder 200
 
     python:
