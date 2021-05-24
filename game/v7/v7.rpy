@@ -17307,7 +17307,7 @@ label fr4amberending:
     jump v7end
 
 label v7end:
-    if persistent.ep < 8:
+    if episode < 8:
         scene savenow
         with Fade (1,0,1)
         " "
@@ -17315,7 +17315,7 @@ label v7end:
         if config.enable_steam:
             call screen steam_end(link="https://store.steampowered.com/app/1624520/College_Kings__Act_II/")
 
-    if persistent.ep < 8:
+    if episode < 8:
         jump end_credits
     else:
         jump v8start
