@@ -793,7 +793,6 @@ label v10s33_deergirl11:
         "Hot":
 
             $ addPoint("bf")
-            u "Hot."
 
             if laurenrs:
 

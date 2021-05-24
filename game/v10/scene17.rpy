@@ -250,7 +250,6 @@ label v10_aubrey_house:
 
             au "*Laughs* I think that’s enough about my family."
 
-    label v10s17_galleryScene:
     scene v10auh2 # FPP Show Aubrey, inside hallway of Chicks house, Aubrey holding clothes in her hand while wearing gym clothes, mouth open
     with fade
 
@@ -263,7 +262,7 @@ label v10_aubrey_house:
         "Ask to watch":
             $ addPoint("tm", 1)
             if aubreyrs: # Aubrey relationship check
-                label v10_aubrey_house_sg:
+                label v10s17_galleryScene:
                 $ aubrey_bathroom_sex = True
                 $ bathroom_sex = True
                 $ grantAchievement("bathroom_sex")
