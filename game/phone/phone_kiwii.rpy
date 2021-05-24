@@ -255,6 +255,7 @@ init -1:
 
 screen kiwiiTemplate():
     modal True
+    zorder 200
 
     use phoneTemplate:
         add Transform("images/phone/Kiwii/AppAssets/Background.webp", size=(376, 744)) at truecenter
@@ -289,6 +290,7 @@ screen kiwiiTemplate():
 screen kiwiiPreferences():
     tag phoneTag
     modal True
+    zorder 200
 
     $ kiwiiUsers["MC"]["profilePicture"] = profilePictures[profilePictures_count]
 
@@ -332,6 +334,7 @@ screen kiwiiPreferences():
 
 screen kiwiiApp():
     tag phoneTag
+    zorder 200
 
     $ kiwiiApp.notification = False
 
@@ -397,6 +400,7 @@ screen kiwiiApp():
 
 screen kiwiiPost(post):
     tag phoneTag
+    zorder 200
 
     use kiwiiTemplate:
 
@@ -458,6 +462,7 @@ screen kiwiiPost(post):
 
 screen liked_kiwii():
     tag phoneTag
+    zorder 200
 
     $ liked_kiwiPosts = filter(lambda post: post.liked, kiwiiPosts)
 
@@ -522,6 +527,7 @@ screen liked_kiwii():
 
 screen kiwii_image(img):
     modal True
+    zorder 300
 
     imagebutton:
         idle Transform(img, zoom=0.85)

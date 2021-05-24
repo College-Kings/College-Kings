@@ -67,6 +67,14 @@ init python:
     def v7_msgReply7():
         setattr(store, "kiwii_firstTime", True)
 
+    def v7_msgReply8():
+        setattr(store, "rileysex", True)
+        contact_Riley.newMessage("Yayyy")
+
+    def v7_msgReply9():
+        setattr(store, "rileysex", False)
+        contact_Riley.newMessage("Oh oki")
+
 label start7: #for compatibility only
 label v7start:
     if caughtpeekingpenelope and not caughtpeekingpenelopecounter:
@@ -5449,7 +5457,6 @@ label after_pledges:
 
                 $ contact_Emily.addReply(_("Hey, sorry I lost track of time. You up?"))
 
-                call screen phone
                 label phonebb:
                     if contact_Emily.getReplies():
                         call screen phone
@@ -8913,8 +8920,8 @@ label rileytext:
         play sound "sounds/vibrate.mp3"
 
         $ contact_Riley.newMessage(_("Wanna come over? ;)"), queue=False)
-        $ contact_Riley.addReply(_("Sure, on my way :)"), "rirep8a")
-        $ contact_Riley.addReply(_("Sorry I'm really exhausted. Another time"), "rirep8b")
+        $ contact_Riley.addReply(_("Sure, on my way :)"), v7_msgReply8)
+        $ contact_Riley.addReply(_("Sorry I'm really exhausted. Another time"), v7_msgReply9)
         
         " "
 
@@ -8925,9 +8932,9 @@ label rileytext:
                 u "(I should check my messages.)"
                 jump rtnow
             
+    if rileysex:
         u "(Guess I'm not going to sleep yet.)"
         jump rileysexscene
-
 
     if joinwolves:
         scene swc91 # TPP. Show MC in bed going to sleep
@@ -9271,6 +9278,8 @@ label signs_with_autumn:
     $ contact_Autumn.newMessage(_("Alright, see you soon."))
 
     play sound "sounds/vibrate.mp3"
+
+    " "
 
     label phoneba:
         if contact_Autumn.getReplies():

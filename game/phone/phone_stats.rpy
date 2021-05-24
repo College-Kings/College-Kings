@@ -15,6 +15,7 @@ init python:
 
 screen stats():
     tag phoneTag
+    zorder 200
 
     use phoneTemplate:
 

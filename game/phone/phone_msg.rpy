@@ -152,6 +152,7 @@ default contacts = []
 
 screen contactsscreen():
     tag phoneTag
+    zorder 200
 
     use phoneTemplate:
 
@@ -189,6 +190,7 @@ screen contactsscreen():
 
 screen messager(contact=None):
     tag phoneTag
+    zorder 200
 
     python:
         yadj.value = yadjValue
@@ -248,13 +250,14 @@ screen messager(contact=None):
 
                     textbutton "Reply":
                         style "replybox"
-                        action Show("reply", contact=contact)
+                        action Show("messenger_reply", contact=contact)
 
     if kiwii_firstTime:
         timer 0.1 action Show("kiwiiPopup")
 
 
-screen reply(contact=None):
+screen messenger_reply(contact=None):
+    zorder 200
 
     vbox:
         xpos 1200
@@ -265,16 +268,19 @@ screen reply(contact=None):
             if isinstance(reply, Reply):
                 textbutton reply.message:
                     style "replies_style"
-                    action [Hide("reply"), Function(contact.selectedReply, reply)]
+                    action [Hide("messenger_reply"), Function(contact.selectedReply, reply)]
 
             elif isinstance(reply, ImgReply):
                 imagebutton:
                     idle Transform(reply.image, zoom=0.15)
                     style "replies_style"
-                    action [Hide("reply"), Function(contact.selectedReply, reply)]
+                    action [Hide("messenger_reply"), Function(contact.selectedReply, reply)]
 
 
 screen phone_image(img=None):
+    modal True
+    zorder 200
+    
     python:
         if os.path.splitext(img)[0][-3:] != "big":
             bigImage = os.path.splitext(img)[0] + "big" + os.path.splitext(img)[1]
