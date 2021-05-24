@@ -29,17 +29,18 @@ default applications = []
 screen phoneIcon():
     zorder 100
 
-    imagebutton:
-        if any([application.notification for application in applications]):
-            idle "images/phone/phoneIconNotification.webp"
-        else:
-            idle "images/phone/phoneIcon.webp"
-        
-        if freeRoam:
-            action Show("phone")
-        else:
-            action Call("enterPhone")
-        align (0.999, 0.05)
+    if not renpy.get_screen("choice"):
+        imagebutton:
+            if any([application.notification for application in applications]):
+                idle "images/phone/phoneIconNotification.webp"
+            else:
+                idle "images/phone/phoneIcon.webp"
+            
+            if freeRoam:
+                action Show("phone")
+            else:
+                action Call("enterPhone")
+            align (0.999, 0.05)
 
 screen phoneTemplate():
     modal True
