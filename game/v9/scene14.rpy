@@ -342,6 +342,7 @@ label v9_thur_w_no_punch:
     scene v9trs4a
     with dissolve
 
+    # kiwiiPost
     # -MC rushes back to pick up his phone from the table then checks out Kiwii to find a picture of the guy knocking him out in the hallway-
 
     u "Fucking bastard."
