@@ -74,6 +74,7 @@ screen fightPopup(fightMove):
 
 screen kctPopup():
     modal True
+    zorder 300
 
     add "images/endfr.webp"
 
