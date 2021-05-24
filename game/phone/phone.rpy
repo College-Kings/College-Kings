@@ -42,6 +42,9 @@ screen phoneIcon():
                 action Call("enterPhone")
             align (0.999, 0.05)
 
+label enterPhone:
+    call screen phone
+
 screen phoneTemplate():
     modal True
     zorder 200

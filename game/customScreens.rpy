@@ -92,6 +92,7 @@ screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings_
     imagebutton:
         idle "images/steam/steam_wishlist.webp"
         hover "images/steam/steam_wishlistHover.webp"
+
         if steam.is_overlay_enabled():
             action Function(steam.activate_overlay_to_web_page, link)
         else:
