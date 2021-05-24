@@ -16,7 +16,7 @@ init python:
         def checkCondition(self):
             return getattr(store, self.condition)
 
-    ## ACHIEVEMENT ITEMS HERE
+    # ACHIEVEMENT ITEMS HERE
     Achievement("open wound", "Tell off Emily", "openwound")
     Achievement("no hard feelings", "Play nice with Emily", "nohardfeelings")
     Achievement("keep it moving", "Hit on Nora", "keepitmoving")

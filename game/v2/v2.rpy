@@ -73,6 +73,7 @@ init python:
         contact_Aubrey.newMessage(_("Good :)"))
 
     def v2_reply14():
+        setattr(store, "costumeaubrey", False)
         addPoint("tm")
         contact_Aubrey.newMessage(_("Oh, okay. Guess we'll have to postpone the costume buying."))
 

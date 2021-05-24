@@ -1,5 +1,8 @@
 init python:
-    import _renpysteam as steam
+    try:
+        import _renpysteam as steam
+    except ImportError:
+        config.enable_steam = False
 
 screen realmode():
     modal True
@@ -110,9 +113,9 @@ screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings_
 
 screen credits():
     if config.enable_steam:
-        add "images/newsteamend.webp"
+        add "images/steamCredits.webp"
     else:
-        add "images/newthx.webp"
+        add "images/patreonCredits.webp"
 
     if config.enable_steam:
         imagebutton:

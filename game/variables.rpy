@@ -6,8 +6,8 @@ define config.default_sfx_volume = 1
 default achievementAtList = None
 default freeRoam = False
 
-default kct = "popular"
-default sortedKCT = ["popular", "confident", "loyal"]
+default kct = "confident"
+default sortedKCT = ["confident", "loyal", "popular"]
 
     ## Kiwii Vars
 default kiwii_firstTime = False
@@ -408,7 +408,7 @@ default bathroom_sex = False
 default kiss_teacher = False
 default chloe_over_nora = False
 default im_a_lion = False
-default volleyball_rematch = False
+default on_the_court = False
     # Freeroam
 default v10s33_riley = False
 default v10s33_riley2 = False

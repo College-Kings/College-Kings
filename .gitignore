@@ -1,4 +1,3 @@
-College Kings 10.0 Patch/
 .vscode/
 lib/
 renpy/
@@ -6,6 +5,7 @@ renpy/
 game/bugTesting/_bugTesting.txt
 game/cache
 game/saves
+game/tl
 
 CollegeKings.py
 CollegeKings.sh

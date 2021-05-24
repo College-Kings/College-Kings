@@ -5,17 +5,11 @@ define config.enable_steam = True
 define config.developer = True
 define config.console = True
 
-
 define config.steam_appid = 1463120
 
 define _game_menu_screen = "ingmenu"
 
 label splashscreen:
-    # Get Animation/Transform List
-    show nohardfeelings at achievementShow
-    $ achievementAtList = renpy.get_at_list("nohardfeelings")
-    hide nohardfeelings
-
     # Splashscreen
     scene black
     with Pause(1)
@@ -35,6 +29,15 @@ label splashscreen:
     scene black
     with dissolve
     with Pause(1)
+
+    return
+
+label before_main_menu:
+    python:
+        msgApp.img = "images/phone/messages/appAssets/messagesIcon.webp"
+        statsApp.img = "images/phone/stats/appAssets/statsIcon.webp"
+        achApp.img = "images/phone/achievements/appAssets/achievementsIcon.webp"
+        kiwiiApp.img = "images/phone/kiwii/appAssets/kiwiiIcon.webp"
 
     return
 

@@ -5312,7 +5312,7 @@ label ep7_cam_picture:
             $ addPoint("bro")
             $ addPoint("bf")
 
-            u "Okay"
+            u "Okay."
 
         "Refuse to do it":
             $ apesTask1 = False
@@ -5936,7 +5936,7 @@ label after_pledges:
         scene s884c # Same as s884b but Lee explanatory with one hand up near his waist level (mouth open)
         with dissolve
         lee "Well, back then you'd be lucky to meet someone who bathed once a month."
-        lee" But I must say [name]..."
+        lee "But I must say [name]..."
 
         scene s884d # Lee poking at the horns on MC's Viking costume and talking. MC is slightly embarrassed
         with dissolve
@@ -10026,7 +10026,7 @@ label amberhocodate:
     scene sfr4am12b # Close up amber holding a plush toy towards you
     with dissolve
 
-    am "Hold this"
+    am "Hold this."
 
     scene sfr4am14 # showing mc touch the plush toy
     with dissolve
@@ -17235,7 +17235,7 @@ label fr4chloeending:
     with fade
 
     $ homecomingqueen = True
-    $ grantAchievement("homecomingqueen")
+    $ grantAchievement("homecoming_queen")
         
 
     u "So this is your infamous room?"
