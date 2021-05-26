@@ -2716,6 +2716,9 @@ label hospitala:
 
     u "*Deep breath*"
 
+    label fj_a: #for compatibility only
+    label fj_b: #for compatibility only
+
     menu:
         "Confront Adam":
             $ addPoint("bro")
