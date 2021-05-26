@@ -1,4 +1,4 @@
-init python:
+init 999 python:
     try:
         import _renpysteam as steamAPI
     except ImportError:
@@ -95,7 +95,7 @@ screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings_
         hover "images/steam/steam_wishlistHover.webp"
 
         if steamAPI.is_overlay_enabled():
-            action Function(steam.activate_overlay_to_web_page, link)
+            action Function(steamAPI.activate_overlay_to_web_page, link)
         else:
             action OpenURL(link)
         align (0.5, 0.55)
