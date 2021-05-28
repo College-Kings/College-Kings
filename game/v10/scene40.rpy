@@ -304,7 +304,6 @@ label v10_riley_sex:
         jump v10_mc_pen_call # -Transition to Scene 41-
 
     elif kct == "confident": # -If not rileyrs with KCT Confident #
-        call screen kctPopup
 
         scene v10srds3a
         with dissolve

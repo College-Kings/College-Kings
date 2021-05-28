@@ -93,7 +93,8 @@ label v10_lauren_room:
             u "I really do."
 
             if laurenrs or kct == "loyal":
-                call screen kctPopup
+                if kct == "loyal":
+                    call screen kctPopup
                 $ v10s33_laurenBakeSale = False
 
                 scene v10lar3b

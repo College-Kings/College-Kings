@@ -361,7 +361,6 @@ label v10_linds_room:
         "I like it":
             
             if kct == "confident": # RCS - if MC chooses 'I like it' with KCT confident
-                call screen kctPopup
                 
                 scene v10slds3e
                 with dissolve
