@@ -292,6 +292,10 @@ screen choice(items, time=3):
         timer time repeat False action [ SetVariable("timed", False), Hide('countdown'), Jump("choicetimer") ]
         bar value AnimatedValue(0, time, time, time) at alpha_dissolve # assuming you're using the alpha_dissolve transform from the wiki
 
+    if config.debug:
+        $ item = renpy.random.choice(items)
+        timer 0.1 action [item.action, SetVariable("ischoice", False)]
+
 style choicetuttext is text:
     font "fonts/OpenSans.ttf"
     size 25

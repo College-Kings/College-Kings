@@ -3,6 +3,7 @@ define episode = 7
 define config.enable_steam = True # Make sure you switch main_menu_background image to steam version.
 define config.developer = False
 define config.console = True
+define config.debug = False
 
 define config.steam_appid = 1463120
 
