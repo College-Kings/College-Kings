@@ -63,7 +63,7 @@ label v10_sun_morn:
 
             $ contact_Josh.newMessage("Friends or not friends, dude wtf?! That was one good show wasted!", queue=False)
             $ contact_Josh.newMessage("Just saying you missed out on impressing a lot of ladies today", queue=False)
-            $ contact_Josh.addReply("I know... But hey, maybe some appreciate the compassion?", "v10s10_ReplyJoshWa3")
+            $ contact_Josh.addReply("I know... But hey, maybe some appreciate the compassion?")
             $ contact_Josh.newMessage("Haha, sure dude")
             $ contact_Josh.addReply("Whatever man.")
 
