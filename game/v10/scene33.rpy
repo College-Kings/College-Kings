@@ -1257,6 +1257,7 @@ label v10s33_chloe1:
                                     with dissolve
 
                                     if kct == "popular" or chloers:
+
                                         scene v10cfrcl1a
                                         with dissolve
 
@@ -1694,6 +1695,7 @@ label v10s33_deergirl21:
                     u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
 
                     if kct == "loyal":
+                        call screen kctPopup
 
                         scene v10cfrla1
                         with dissolve
@@ -1913,6 +1915,7 @@ label v10s33_deergirl21:
                     u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
 
                     if kct == "loyal":
+                        call screen kctPopup
 
                         scene v10cfrla3d
                         with dissolve
@@ -1960,6 +1963,7 @@ label v10s33_deergirl21:
         menu:
             "Compliment":
                 if kct == "confident":
+                    call screen kctPopup
                     $ addPoint("bf")
                     $ lindseyLike += 1
 

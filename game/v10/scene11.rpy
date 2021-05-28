@@ -213,7 +213,8 @@ label v10_linds_room:
        "Make a joke":
             
             if kct == "confident": # RCS - if MC chooses 'Make a joke' with KCT confident
-                
+                call screen kctPopup
+
                 scene v10slds3e # FPP. Same camera as v10slds3. Show Lindsey, with a somewhat amused smile, mouth closed.
                 with dissolve
 
@@ -360,7 +361,8 @@ label v10_linds_room:
         "I like it":
             
             if kct == "confident": # RCS - if MC chooses 'I like it' with KCT confident
-            
+                call screen kctPopup
+                
                 scene v10slds3e
                 with dissolve
                 u "I'd never say no to any attention you wanted to give."

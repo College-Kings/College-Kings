@@ -118,6 +118,7 @@ label v9_thur_w_punch:
     guyc "Fuck yeah! Seems the training did you well. Just like it should!"
 
     if kct == "loyal":
+        call screen kctPopup
 
         scene v9trs5b # FPP. Same camera as v9trs5, both smiling, mouths closed.
         with dissolve

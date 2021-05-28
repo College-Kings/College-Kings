@@ -52,6 +52,8 @@ label v10_chloe_hallway:
                 $ v10_chloe_sexy = True
 
                 if kct == "loyal" or kct == "confident":
+                    call screen kctPopup
+
                     u "No, sexy definitely describes her better."
 
                     scene v10such3a
@@ -156,6 +158,8 @@ label v10_chloe_hallway:
                             cl "Yeah. Alright."   
 
         if kct == "loyal" or kct == "confident":
+            call screen kctPopup
+            
             scene v10such4 # TPP. Show Chloe walking away, Aubrey and MC watching her.
             with dissolve
 

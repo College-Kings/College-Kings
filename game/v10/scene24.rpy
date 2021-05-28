@@ -93,6 +93,7 @@ label v10_lauren_room:
             u "I really do."
 
             if laurenrs or kct == "loyal":
+                call screen kctPopup
                 $ v10s33_laurenBakeSale = False
 
                 scene v10lar3b
@@ -286,7 +287,11 @@ label v10_lauren_room:
                 with dissolve
                 pause
 
-                if laurenrs or ((v1_laurenKiss or laurenkissb) and kct == "loyal"):            
+                if laurenrs or ((v1_laurenKiss or laurenkissb) and kct == "loyal"):
+
+                    if kct == "loyal":
+                        call screen kctPopup
+                        
                     image v10lauts = Movie(play="images/v10/Scene 24/v10lauts.webm", loop=True, image="images/v10/Scene 24/v10lautsStart.webp", start_image="images/v10/Scene 24/v10lautsStart.webp") # TPP MC's arms around Lauren's waist while he sucks on her nipple, Lauren eyes rolled back in pleasure
                     image v10lautsf = Movie(play="images/v10/Scene 24/v10lautsf.webm", loop=True, image="images/v10/Scene 24/v10lautsStart.webp", start_image="images/v10/Scene 24/v10lautsStart.webp")
 

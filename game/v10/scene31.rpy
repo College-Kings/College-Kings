@@ -172,6 +172,7 @@ label v10_late_alley:
 
         "Don't support":
             if kct == "confident":
+                call screen kctPopup
 
                 scene v10all3
                 with dissolve

@@ -49,20 +49,22 @@ label v10_riley_sex:
     if rileyrs or kct == "confident":
         label v10s40_galleryScene:
 
-    scene v10srds3 # FPP. Show Riley walking into her dorm room, wrapped in a towel, her hair down and still wet. She has a little smile, mouth open.
-    with fade
+        call screen kctPopup
 
-    ri "I'm back."
+        scene v10srds3 # FPP. Show Riley walking into her dorm room, wrapped in a towel, her hair down and still wet. She has a little smile, mouth open.
+        with fade
 
-    scene v10srds3a # FPP. Same camera as v10srds3, but focused more on Riley's towel/body. Show Riley wrapped in a towel, her hair down and still wet. She has a little smile, mouth closed.
-    with dissolve
+        ri "I'm back."
 
-    u "You look uhm-"
+        scene v10srds3a # FPP. Same camera as v10srds3, but focused more on Riley's towel/body. Show Riley wrapped in a towel, her hair down and still wet. She has a little smile, mouth closed.
+        with dissolve
 
-    scene v10srds3b # FPP. Same camera as v10srds3. Show Riley wrapped in a towel, her hair down and still wet. She has a little smile, mouth open.
-    with dissolve
+        u "You look uhm-"
 
-    ri "*Chuckles* I forgot a change of clothes."
+        scene v10srds3b # FPP. Same camera as v10srds3. Show Riley wrapped in a towel, her hair down and still wet. She has a little smile, mouth open.
+        with dissolve
+
+        ri "*Chuckles* I forgot a change of clothes."
 
     if rileyrs: # mc in a relationship with riley
         scene v10srds1f # TPP. Same camera as v10srds1. Show MC standing up from Riley's bed, smiling, mouth closed.
@@ -302,6 +304,7 @@ label v10_riley_sex:
         jump v10_mc_pen_call # -Transition to Scene 41-
 
     elif kct == "confident": # -If not rileyrs with KCT Confident #
+        call screen kctPopup
 
         scene v10srds3a
         with dissolve

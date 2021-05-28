@@ -641,6 +641,8 @@ label v10_amber_skatepark:
         menu:
             "Place hand on her leg":
                 if kct == "popular": # kct is popular
+                    call screen kctPopup
+                    
                     scene v10sasp5j # FPP. Same camera as v10sasp5. Show Amber glancing down at her leg, smiling, mouth closed.
                     with dissolve
                     

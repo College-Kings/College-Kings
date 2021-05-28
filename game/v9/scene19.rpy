@@ -561,7 +561,10 @@ label v9_lau_dorm:
         scene v9lau16a
         with dissolve
 
-        if beachfirstkiss == True and laurenrs == False and kct == "loyal":
+        if beachfirstkiss and not laurenrs and kct == "loyal":
+            if kct == "loyal":
+                call screen kctPopup
+
             menu:
                 "Kiss Lauren":
                     $ addPoint("bf")
@@ -571,7 +574,7 @@ label v9_lau_dorm:
                 "Leave":
                     jump v9_lau_dorm_no_kiss
                 
-        elif laurenrs == True:
+        elif laurenrs:
             jump v9_lau_dorm_kiss
 
         else:

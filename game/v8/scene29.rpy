@@ -574,6 +574,9 @@ label after_drugs:
     pause 0.5
 
     if ending == "amber" or kct == "confident":
+        if kct == "confident":
+            call screen kctPopup
+
         $ amberSexOfferAtJoshs = True
 
         scene black
