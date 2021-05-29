@@ -3485,11 +3485,19 @@ label afterbeach:
 
             menu:
                 "Pledge to the Apes":
+
+                    $ silverback = True
+                    $ grantAchievement("silverback")
+
                     u "(Fuck it. I'm gonna be winner, no matter what it costs. Time to pledge to the Apes.)"
 
                     jump pledgeapes
 
                 "Pledge to the Wolves":
+
+                    $ wolfpack = True
+                    $ grantAchievement("wolfpack")
+
                     u "(Grayson might kill me when he finds out, but I can't join the Apes. I gotta pledge to the Wolves.)"
 
     else:
@@ -3520,7 +3528,6 @@ label afterbeach:
             "Pledge to the Wolves":
                 $ wolfpack = True
                 $ grantAchievement("wolfpack")
-                    
 
                 u "(Nah, Grayson's done more than enough questionable shit. The Wolves been nothing but good to me. I'ma pledge to the Wolves.)"
 
