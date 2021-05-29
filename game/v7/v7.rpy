@@ -3279,6 +3279,9 @@ label beachlauren:
                 with dissolve
 
                 if kct == "loyal":
+
+                    show screen kctPopup
+
                     menu:
                         "Kiss her":
                             $ beachfirstkiss = True
