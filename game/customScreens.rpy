@@ -4,6 +4,7 @@ init 999 python:
     except ImportError:
         config.enable_steam = False
 
+
 screen realmode():
     modal True
     
@@ -44,6 +45,39 @@ screen endFreeRoamConfirm(continueLabel):
         action Hide("endFreeRoamConfirm")
         text_align 0.5
         align (0.57, 0.58)
+
+
+screen censoredPopup(continueLabel):
+    modal True
+
+    add "images/censoredPopup/censoredPopup_background.webp"
+
+    vbox:
+        xpos 15
+
+        text "Censorship Mode: {}".format("{color=#0f0}Enabled" if config_censored else "{color=#f00}Disabled")
+        text "You can disable censorship mode in the game settings":
+            size 12
+
+    vbox:
+        xalign 0.5
+        ypos 200
+        spacing 165
+
+        text "The following scenes have NSFW content.\nUse the \"Skip Scene\" button below to skip over this scene.":
+            text_align 0.5
+
+        hbox:
+            spacing 250
+
+            textbutton "Skip Scene":
+                action Jump(continueLabel)
+
+            textbutton "Continue":
+                action Return()
+
+        text "To get the full uncensored version head over to {a=https://www.patreon.com/collegekings}{color=#72bcef}College King's Patreon":
+            size 24
 
 
 screen kiwiiPopup():
@@ -112,6 +146,7 @@ screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings_
         textbutton "Credits":
             text_style "steam_endScreenTextButton"
             action Return()
+
 
 screen credits():
     if config.enable_steam:

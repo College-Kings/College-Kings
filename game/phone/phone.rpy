@@ -29,7 +29,7 @@ default applications = []
 screen phoneIcon():
     zorder 100
 
-    if not renpy.get_screen("choice"):
+    if not renpy.get_screen("choice") and not renpy.get_screen("censoredPopup"):
         imagebutton:
             if any([application.notification for application in applications]):
                 idle "images/phone/phoneIconNotification.webp"
