@@ -27,16 +27,11 @@ label v10_waking_up_end:
 
         u "(Oh shit, Penelope has been blowing me up.)"
         
+        call screen phone
+
         stop music fadeout 3
         play music "music/v10/Scene 41a/Track Scene 41a_2.mp3" fadein 3
-
-        label v10s41a_phoneCheckW:
-            if contact_Penelope.getReplies():
-                call screen phone
-            if contact_Penelope.getReplies():
-                u "(I should check my phone)"
-                jump v10s41a_phoneCheckW
-
+        
         scene v10end3 # TPP. Show MC, now wearing outfit 2, rushing out of his room.
         with dissolve
 
@@ -71,15 +66,10 @@ label v10_waking_up_end:
 
         u "(Oh shit, Penelope has been blowing me up.)"
 
+        call screen phone
+
         stop music fadeout 3
         play music "music/v10/Scene 41a/Track Scene 41a_2.mp3" fadein 3
-
-        label v10s41a_phoneCheckA:
-            if contact_Penelope.getReplies():
-                call screen phone
-            if contact_Penelope.getReplies():
-                u "(I should check my phone)"
-                jump v10s41a_phoneCheckA
 
         scene v10end6 # TPP. Show MC, now wearing outfit 2, rushing out of his room.
         with dissolve
