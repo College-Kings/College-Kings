@@ -104,6 +104,7 @@ label sun_eve_room:
                 if contact_Emily.getReplies():
                     call screen phone
                 if contact_Emily.getReplies():
+                    u "I should reply to Emily"
                     jump v8s19_phoneCheck1
 
             if contact_Emily.getMessage("Great! See you there!"):
@@ -171,6 +172,7 @@ label sun_eve_room:
                 if contact_Emily.getReplies():
                     call screen phone
                 if contact_Emily.getReplies():
+                    u "I should reply to Emily"
                     jump v8s19_phoneCheck2
 
             if contact_Emily.getMessage("Great! See you there!"):
