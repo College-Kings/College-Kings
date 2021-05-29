@@ -435,7 +435,7 @@ label v10_call_with_lauren1:
                         scene v10scwl2c 
                         with dissolve
                         $ im_a_lion = True
-                        $ grantAchievement("rawr_im_a_lion!")
+                        $ grantAchievement("rawr_im_a_lion")
 
                         u "Lion."
 
