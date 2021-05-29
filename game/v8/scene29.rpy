@@ -573,8 +573,8 @@ label after_drugs:
     with Dissolve(1)
     pause 0.5
 
-    if ending == "amber" or kct == "confident":
-        if kct == "confident":
+    if ending == "amber" or kct == "popular":
+        if ending != "amber":
             call screen kctPopup
 
         $ amberSexOfferAtJoshs = True

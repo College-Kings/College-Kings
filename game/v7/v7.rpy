@@ -6879,7 +6879,7 @@ label hc_asking_chloe:
     if volleyball or kct == "popular":
         $ hcGirl = "chloe"
 
-        if kct == "popular":
+        if not volleyball:
             call screen kctPopup
 
         scene s937d # chloe smiling eyebrow raised
@@ -7019,7 +7019,7 @@ label hc_asking_lauren:
     elif kct == "loyal" or beachfirstkiss:
         $ hcGirl = "lauren"
         
-        if kct == "loyal":
+        if not beachfirstkiss:
             call screen kctPopup
 
         $ laurenrs = True
@@ -7179,7 +7179,7 @@ label hc_asking_riley:
         $ hcGirl = "riley"
         $ rileyrs = True
 
-        if kct == "confident":
+        if not rileyrs:
             call screen kctPopup
 
         scene s959b # riley excited

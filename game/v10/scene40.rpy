@@ -49,7 +49,8 @@ label v10_riley_sex:
     if rileyrs or kct == "confident":
         label v10s40_galleryScene:
 
-        call screen kctPopup
+        if not rileyrs:
+            call screen kctPopup
 
         scene v10srds3 # FPP. Show Riley walking into her dorm room, wrapped in a towel, her hair down and still wet. She has a little smile, mouth open.
         with fade
