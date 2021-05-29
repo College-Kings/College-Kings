@@ -315,7 +315,7 @@ label v10_chloe_gym:
 
                 cl "How was that for a reward?"
 
-                scene v10chg10f
+                scene v10chg10g
                 with dissolve
 
                 u "Couldn't have been better."

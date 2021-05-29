@@ -249,7 +249,7 @@ label v9_ri_sex:
     scene v9ris15
     with dissolve
 
-    ri "Let me drive."
+    ri "Let me get on top."
 
     scene v9ris16 # TPP. Show MC rolling over so he is on his back on Riley's bed, Riley mounts him hovering above MC's penis.
     with dissolve
