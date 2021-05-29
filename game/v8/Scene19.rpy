@@ -100,7 +100,11 @@ label sun_eve_room:
             $ contact_Emily.addReply(_("Sure! Sounds like fun. I can be there in a few minutes"), v8s19_reply3)
             $ contact_Emily.addReply(_("I would but it's getting late and I haven't even started Mr. Lee's project"), v8s19_reply4)
 
-            call screen phone
+            label v8s19_phoneCheck1:
+                if contact_Emily.getReplies():
+                    call screen phone
+                if contact_Emily.getReplies():
+                    jump v8s19_phoneCheck1
 
             if contact_Emily.getMessage("Great! See you there!"):
                 jump emily_arcade
@@ -163,7 +167,11 @@ label sun_eve_room:
             $ contact_Emily.addReply(_("Sure! Sounds like fun. I can be there in a few minutes"), v8s19_reply3)
             $ contact_Emily.addReply(_("I would but it's getting late and I haven't even started Mr. Lee's project"), v8s19_reply4)
 
-            call screen phone
+            label v8s19_phoneCheck2:
+                if contact_Emily.getReplies():
+                    call screen phone
+                if contact_Emily.getReplies():
+                    jump v8s19_phoneCheck2
 
             if contact_Emily.getMessage("Great! See you there!"):
                 jump emily_arcade
