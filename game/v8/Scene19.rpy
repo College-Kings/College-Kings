@@ -4,7 +4,7 @@
 # Time: Sunday Evening
 
 init python:
-    def v8s19_reply1(): # s19_reply5
+    def v8s19_reply1():
         contact_Amber.newMessage(_("It's only fair, right? Make us even"))
         if joinwolves:
             contact_Amber.addImgReply("images/v8/Scene 19/w_dick_pic.webp")
@@ -28,8 +28,9 @@ init python:
         contact_Amber.addReply(_("I'd fuck you so good you'd scream my name"))
         contact_Amber.newMessage(_("I'm close. Will you finish with me?"))
         contact_Amber.addReply(_("Oh, God yes!"))
-        contact_Amber.newMessage(_("NOW!"), queue=False)
+        contact_Amber.newMessage(_("NOW!"))
         contact_Amber.addReply(_("NOW!"))
+        contact_Amber.newMessage("")
         contact_Amber.addReply(_("Holy shit, Amber! You're amazing!"))
         contact_Amber.newMessage(_("You weren't too bad yourself. Next time we need to do this in person"))
         contact_Amber.addReply(_("Give me 5 minutes ;)"))
