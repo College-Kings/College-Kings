@@ -3280,7 +3280,7 @@ label beachlauren:
 
                 if kct == "loyal":
 
-                    show screen kctPopup
+                    call screen kctPopup
 
                     menu:
                         "Kiss her":
