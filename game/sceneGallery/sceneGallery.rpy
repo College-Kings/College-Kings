@@ -29,6 +29,7 @@ init python:
     SceneGallery("rileysexscene")
     SceneGallery("brbj")
 
+
 screen spoiler():
     add "images/darker.webp"
 
@@ -46,6 +47,7 @@ screen spoiler():
         text_align 0.5
         align (0.57, 0.58)
         action Hide("spoiler")
+
 
 screen sceneGallery():
     tag menu
