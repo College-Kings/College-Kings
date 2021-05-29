@@ -45,6 +45,9 @@ image slow_and_steady = "images/slowandsteady.webp"
 image playing_with_fire = "images/playingwithfire.webp"
 image homecoming_queen = "images/homecomingqueen.webp"
 
+# Censored Popup
+image censoredPopup_background = Movie(play="images/censoredPopup/censoredPopup_background.webm", start_image="images/censoredPopup/censoredPopup_backgroundStart.webp")
+
 # v1.0 - v2.0
 image s14 = "images/s14.webp"
 image s14a = "images/s14a.webp"
