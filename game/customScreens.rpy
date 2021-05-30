@@ -75,6 +75,7 @@ screen censoredPopup(continueLabel):
 
 screen kiwiiPopup():
     modal True
+    zorder 200
 
     add "images/endfr.webp"
 
