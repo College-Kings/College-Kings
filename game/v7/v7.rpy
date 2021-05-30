@@ -6468,7 +6468,8 @@ label after_history:
             $ timed = False
             stop sound
 
-            call screen censoredPopup("v7_nsfwSkipLabel2")
+            if config_censored:
+                call screen censoredPopup("v7_nsfwSkipLabel2")
 
             scene s905a # Same as s905 but Lee's pants down showing his naked ass and he is startled. (Lee is still facing the board)
             with vpunch
@@ -7688,7 +7689,8 @@ label cameron_thurs_tasks:
 
                     u "Here we go!"
 
-                    call screen censoredPopup("v7_nsfwSkipLabel3")
+                    if config_censored:
+                        call screen censoredPopup("v7_nsfwSkipLabel3")
 
                     scene scc32 # FPP. Show the girls screaming and removing their tops. Cameron laughing whilst filming on his phone in bushes.
                     with dissolve
@@ -7879,7 +7881,8 @@ label cameron_thurs_tasks:
     pause 0.5
     play music "music/mhorror.mp3"
 
-    call screen censoredPopup("v7_nsfwSkipLabel4")
+    if config_censored:
+        call screen censoredPopup("v7_nsfwSkipLabel4")
 
     scene scc63 # FPP. Show Cameron's sister sat in a chair tying a belt around her arm while the girl holds a syringe in her hand.
     with Dissolve(1)
@@ -9007,7 +9010,8 @@ label rileysexscene:
     with dissolve
     ri "Come on!"
 
-    call screen censoredPopup("v7_nsfwSkipLabel1")
+    if config_censored:
+        call screen censoredPopup("v7_nsfwSkipLabel1")
 
     scene ridrm4 # Riley close up in her dorm, talking mouth open, single slightly raise brow (first person)
     with dissolve
@@ -9822,7 +9826,8 @@ label amberhocodate:
 
     pause 0.5
 
-    call screen censoredPopup("v7_nsfwSkipLabel5")
+    if config_censored:
+        call screen censoredPopup("v7_nsfwSkipLabel5")
 
     scene sfr4am6 #First person Close up Amber pulls out 2 pills. a bit flirty and happy
     with dissolve
@@ -15247,7 +15252,8 @@ label fr4aubrey1:
 
                 u "Yeah, alright. Let's go."
 
-                call screen censoredPopup("labelfr4hallwaybathroom")
+                if config_censored:
+                    call screen censoredPopup("labelfr4hallwaybathroom")
 
                 scene sfr4ri41 # tppAubrey and MC walk towards the bathroom.
                 with dissolve
@@ -17322,7 +17328,10 @@ label fr4chloeending:
     # towel drop sound #check - add towel.mp3 sound file
     play sound "sounds/towel.mp3"
 
-    call screen censoredPopup("v7end")
+    if config_censored and not renpy.loadable("v8/scene01.rpy"):
+        call screen censoredPopup("v7end")
+    elif config_censored:
+        call screen censoredPopup("v7end") # Needs to be v8_nsfwLabel...
 
     scene sfr4cl62 #Chloe steps out of the bathroom. We see her feet and a bathrobe drop to the floor.
     with dissolve
@@ -17342,12 +17351,12 @@ label fr4amberending:
     jump v7end
 
 label v7end:
-    if not renpy.loadable("v8/v8.rpy"):
+    if not renpy.loadable("v8/scene01.rpy"):
         scene savenow
         with Fade (1,0,1)
         " "
 
-    if renpy.loadable("v8/v8.rpy"):
+    if renpy.loadable("v8/scene01.rpy"):
         jump v8start
     elif config.enable_steam:
         call screen steam_end(link="https://store.steampowered.com/app/1624520/College_Kings__Act_II/")

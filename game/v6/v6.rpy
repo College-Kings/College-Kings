@@ -2752,7 +2752,8 @@ label emsex_a:
 
     pause 0.5
 
-    call screen censoredPopup("v6_nsfwSkipLabel1")
+    if config_censored:
+        call screen censoredPopup("v6_nsfwSkipLabel1")
 
     scene em6
     with dissolve
@@ -4022,7 +4023,8 @@ label aubreysexb: # aubreysex scene
 
     au "*Quiet moan*"
 
-    call screen censoredPopup("wayhome")
+    if config_censored:
+        call screen censoredPopup("wayhome")
 
     scene naub1a
     with dissolve

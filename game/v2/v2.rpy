@@ -2741,7 +2741,8 @@ label try1new:
 
             menu:
                 "Risk it":
-                    call screen censoredPopup("v2_nsfwSkipLabel1")
+                    if config_censored:
+                        call screen censoredPopup("v2_nsfwSkipLabel1")
 
                     $ caughtpeekingaubrey = renpy.random.choice([True, False])
 
@@ -2880,7 +2881,8 @@ label try2new:
 
             menu:
                 "Risk it":
-                    call screen censoredPopup("v2_nsfwSkipLabel2")
+                    if config_censored:
+                        call screen censoredPopup("v2_nsfwSkipLabel2")
 
                     $ caughtpeekingaubrey = renpy.random.choice([True, False])
 
@@ -3031,7 +3033,8 @@ label try3new:
 
             menu:
                 "Risk it":
-                    call screen censoredPopup("v2_nsfwSkipLabel3")
+                    if config_censored:
+                        call screen censoredPopup("v2_nsfwSkipLabel3")
 
                     $ caughtpeekingaubrey = renpy.random.choice([True, False])
 
@@ -3286,7 +3289,8 @@ label try4new:
 
             menu:
                 "Risk it":
-                    call screen censoredPopup("v2_nsfwSkipLabel4")
+                    if config_censored:
+                        call screen censoredPopup("v2_nsfwSkipLabel4")
 
                     $ caughtpeekingpenelope = renpy.random.choice([True, False])
 
@@ -3431,7 +3435,8 @@ label try5new:
 
             menu:
                 "Risk it":
-                    call screen censoredPopup("v2_nsfwSkipLabel5")
+                    if config_censored:
+                        call screen censoredPopup("v2_nsfwSkipLabel5")
 
                     $ caughtpeekingpenelope = renpy.random.choice([True, False])
 
@@ -3566,7 +3571,8 @@ label try6new:
 
             menu:
                 "Risk it":
-                    call screen censoredPopup("v2_nsfwSkipLabel6")
+                    if config_censored:
+                        call screen censoredPopup("v2_nsfwSkipLabel6")
 
                     $ caughtpeekingpenelope = renpy.random.choice([True, False])
 

@@ -1755,7 +1755,8 @@ label conl:
 
                         u "Touch both your elbows in front of your chest."
 
-                        call screen censoredPopup("v3_nsfwSkipLabel1")
+                        if config_censored:
+                            call screen censoredPopup("v3_nsfwSkipLabel1")
 
                         scene s254p
                         with dissolve
@@ -1816,7 +1817,8 @@ label conl:
 
                 au "Yeah, you can. See?"
 
-                call screen censoredPopup("aubsexad")
+                if config_censored:
+                    call screen censoredPopup("aubsexad")
 
                 scene s254aa ## aubrey and you standing
                 with dissolve
@@ -2055,7 +2057,8 @@ label conl:
 
         au "Yeah, you can. See?"
 
-        call screen censoredPopup("aubsexad")
+        if config_censored:
+            call screen censoredPopup("aubsexad")
 
         scene s254aa ## aubrey and you standing
         with dissolve
