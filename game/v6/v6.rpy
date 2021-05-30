@@ -10702,4 +10702,4 @@ if not renpy.loadable("v7/v7.rpy"):
     jump end_credits
 
 if renpy.loadable("v7/v7.rpy"):
-    jump v6start
+    jump v7start
