@@ -12554,7 +12554,7 @@ label fr4chloedate2:
 
     ro "And your homecoming king is...."
 
-    ro "Chris Jackson!"
+    ro "Chris !"
 
     scene sfr4stage2 # chris walks up on stage
     with dissolve
@@ -12569,7 +12569,7 @@ label fr4chloedate2:
     scene sfr4stage3 # ms rose puts a crown on chris' head
     with dissolve
 
-    ro "Congratulations Chris!"
+    ro "Congratulations Chris !"
 
     scene sfr4stage3a # ms rose turning to the crowd
     with dissolve
@@ -13218,7 +13218,7 @@ label fr4laurendate2:
 
     ro "And your homecoming king is...."
 
-    ro "Chris Jackson!"
+    ro "Chris !"
 
     scene sfr4stage2 # chris walks up on stage
     with dissolve
@@ -13233,7 +13233,7 @@ label fr4laurendate2:
     scene sfr4stage3 # ms rose puts a crown on chris' head
     with dissolve
 
-    ro "Congratulations Chris!"
+    ro "Congratulations Chris !"
 
     scene sfr4stage3a # ms rose turning to the crowd
     with dissolve
@@ -13465,7 +13465,7 @@ label fr4penelopedate2:
 
     ro "And your homecoming king is...."
 
-    ro "Chris Jackson!"
+    ro "Chris !"
 
     scene sfr4stage2 # chris walks up on stage
     with dissolve
@@ -13480,7 +13480,7 @@ label fr4penelopedate2:
     scene sfr4stage3 # ms rose puts a crown on chris' head
     with dissolve
 
-    ro "Congratulations Chris!"
+    ro "Congratulations Chris !"
 
     scene sfr4stage3a # ms rose turning to the crowd
     with dissolve
@@ -13937,7 +13937,7 @@ label fr4rileydate2:
 
     ro "And your homecoming king is...."
 
-    ro "Chris Jackson!"
+    ro "Chris !"
 
     scene sfr4stage2 # chris walks up on stage
     with dissolve
@@ -13952,7 +13952,7 @@ label fr4rileydate2:
     scene sfr4stage3 # ms rose puts a crown on chris' head
     with dissolve
 
-    ro "Congratulations Chris!"
+    ro "Congratulations Chris !"
 
     scene sfr4stage3a # ms rose turning to the crowd
     with dissolve
@@ -14669,7 +14669,7 @@ label fr4riley22:
 
     ro "And your homecoming king is...."
 
-    ro "Chris Jackson!"
+    ro "Chris !"
 
     scene sfr4stage2 # chris walks up on stage
     with dissolve
@@ -14684,7 +14684,7 @@ label fr4riley22:
     scene sfr4stage3 # ms rose puts a crown on chris' head
     with dissolve
 
-    ro "Congratulations Chris!"
+    ro "Congratulations Chris !"
 
     scene sfr4stage3a # ms rose turning to the crowd
     with dissolve
