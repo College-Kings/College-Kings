@@ -1163,7 +1163,7 @@ screen preferences():
     tag menu
     modal True
 
-    add "gui/settingspage.webp"
+    add "images/gui/settingsBackground.webp"
 
     # Display settings
     hbox:
@@ -1194,49 +1194,52 @@ screen preferences():
             action InvertSelected(Preference("transitions", "toggle"))
             text_size 28
 
-    # Real Life settings
+    # Skip NSFW Scenes
     hbox:
         align (0.195, 0.671)
         spacing 300
 
-        if realmode:
-            textbutton _("On"):
-                action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False)]
-                text_color "#FFD166"
-                text_size 45
-            textbutton _("Off"):
-                action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True)]
-                text_size 45
-        else:
-            textbutton _("On"):
-                action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False)]
-                text_size 45
-            textbutton _("Off"):
-                action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True)]
-                text_color "#FFD166"
-                text_size 45
+        textbutton _("on"):
+            action SetVariable("config_censored", True)
+            text_size 45
+            text_selected_color "FFD166"
+
+        textbutton _("off"):
+            action SetVariable("config_censored", False)
+            text_size 45
+            text_selected_color "FFD166"
 
     # KCT settings
     hbox:
-        align (0.195, 0.874)
-        spacing 300
+        pos (180, 885)
+        spacing 85
 
-        if showkct:
-            textbutton _("On"):
-                action SetVariable("showkct", True)
-                text_color "#FFD166"
-                text_size 45
-            textbutton _("Off"):
-                action SetVariable("showkct", False)
-                text_size 45
-        else:
-            textbutton _("On"):
-                action SetVariable("showkct", True)
-                text_size 45
-            textbutton _("Off"):
-                action SetVariable("showkct", False)
-                text_color "#FFD166"
-                text_size 45
+        textbutton _("on"):
+            action SetVariable("showkct", True)
+            text_size 45
+            text_selected_color "FFD166"
+
+        textbutton _("off"):
+            action SetVariable("showkct", False)
+            text_size 45
+            text_selected_color "FFD166"
+
+    # Real Life settings
+    hbox:
+        pos (600, 885)
+        spacing 85
+
+        textbutton _("on"):
+            action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False)]
+            selected realmode
+            text_size 45
+            text_selected_color "FFD166"
+
+        textbutton _("off"):
+            action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True)]
+            selected not realmode
+            text_size 45
+            text_selected_color "FFD166"
 
     # Sliders
     style_prefix "slider"
