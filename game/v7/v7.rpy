@@ -44,6 +44,7 @@ init python:
         contact_Riley.newMessage(_("Yayyy"))
 
     def v7_msgReply6():
+        setattr(store, "rileysex", False)
         contact_Riley.newMessage(_("Oh oki"))
 
     def kiwii_firstTimeMessages():
