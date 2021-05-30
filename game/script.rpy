@@ -47,8 +47,6 @@ label start:
     $ achievementAtList = renpy.get_at_list("nohardfeelings")
     hide nohardfeelings
 
-    call screen censoredPopup("v1start")
-
     call screen realmode
 
 
