@@ -10699,7 +10699,7 @@ if not renpy.loadable("v7/v7.rpy"):
     with Fade (1,0,1)
     " "
 
-    jump end_credits
-
 if renpy.loadable("v7/v7.rpy"):
     jump v7start
+else:
+    jump end_credits

@@ -630,7 +630,7 @@ screen quick_menu():
     if youDamage >= 5:
         image "images/5 hits.webp"
 
-    if renpy.loadable("/bugTesting/bugTesting.rpy") and config.developer:
+    if renpy.loadable("bugTesting/bugTesting.rpy") and config.developer:
         hbox:
             style_prefix "quick"
             align (1.0, 1.0)
