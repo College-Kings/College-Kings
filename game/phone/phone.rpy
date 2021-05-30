@@ -31,10 +31,10 @@ screen phoneIcon():
 
     if not renpy.get_screen("choice") and not renpy.get_screen("censoredPopup"):
         imagebutton:
-            if any([application.notification for application in applications]):
-                idle "images/phone/phoneIconNotification.webp"
-            else:
-                idle "images/phone/phoneIcon.webp"
+            # if any([application.notification for application in applications]):
+            #     idle "images/phone/phoneIconNotification.webp"
+            # else:
+            idle "images/phone/phoneIcon.webp"
             
             if freeRoam:
                 action Show("phone")
