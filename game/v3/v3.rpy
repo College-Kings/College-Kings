@@ -2055,6 +2055,8 @@ label conl:
 
         au "Yeah, you can. See?"
 
+        call screen censoredPopup("aubsexad")
+
         scene s254aa ## aubrey and you standing
         with dissolve
 
