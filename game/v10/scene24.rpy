@@ -290,6 +290,8 @@ label v10_lauren_room:
 
                 if laurenrs or ((v1_laurenKiss or laurenkissb) and kct == "loyal"):
 
+                    $ laurenrs = True
+
                     if not laurenrs:
                         call screen kctPopup
                         

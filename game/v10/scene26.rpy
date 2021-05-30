@@ -700,6 +700,8 @@ label v10_amber_skatepark:
                     menu:
                         "Let her":
 
+                            $ amberrs = True
+
                             scene v10ambbj
                             with dissolve
 

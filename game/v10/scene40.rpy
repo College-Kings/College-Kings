@@ -310,6 +310,9 @@ label v10_riley_sex:
         with dissolve
         menu:
             "Make a move":
+
+                $ rileyrs = True
+
                 scene v10srds1f
                 with dissolve
 
@@ -553,6 +556,9 @@ label v10_riley_sex:
                         jump v10_mc_pen_call # -Transition to Scene 41-
                     
                     "Peek":
+
+                        $ rileyrs = True
+
                         scene v10srds1f
                         with dissolve
 
