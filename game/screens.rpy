@@ -590,7 +590,7 @@ screen quick_menu():
                     textbutton _("Back") action Rollback()
                 textbutton _("History") action ShowMenu('history')
                 textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-                textbutton _("Auto") action Preference("auto-forward", "toggle")
+                textbutton _("Auto") action Preference("auto-forward", "toggle") text_selected_color "#FFD166"
                 textbutton _("Save") action ShowMenu('save')
                 textbutton _("Q.Save") action QuickSave()
                 textbutton _("Q.Load") action QuickLoad()
