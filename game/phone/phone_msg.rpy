@@ -44,8 +44,8 @@ init python:
 
             return message
 
-        def addReply(self, message, func=None, newMessage=False):
-            reply = Reply(message, func)
+        def addReply(self, message, func=None, newMessage=False, disabled=False):
+            reply = Reply(message, func, disabled)
 
             # Append reply to last sent message
             try:
@@ -62,8 +62,8 @@ init python:
 
             self.unlock()
 
-        def addImgReply(self, image, func=None, newMessage=False):
-            reply = ImgReply(image, func)
+        def addImgReply(self, img, func=None, newMessage=False, disabled=False):
+            reply = ImgReply(img, func, disabled)
 
             # Append reply to last sent message
             try:
@@ -138,14 +138,16 @@ init python:
             self.reply = None
 
     class Reply:
-        def __init__(self, message, func=None):
+        def __init__(self, message, func=None, disabled=False):
             self.message = message
             self.func = func
+            self.disabled = disabled
 
     class ImgReply:
-        def __init__(self, image, func=None):
+        def __init__(self, image, func=None, disabled=False):
             self.image = image
             self.func = func
+            self.disabled = disabled
 
 init offset = -1
 default contacts = []
@@ -268,14 +270,21 @@ screen messenger_reply(contact=None):
         for reply in contact.getReplies():
             if isinstance(reply, Reply):
                 textbutton reply.message:
-                    style "replies_style"
-                    action [Hide("messenger_reply"), Function(contact.selectedReply, reply)]
+                    if reply.disabled:
+                        style "reply_disabled"
+                        text_style "replies_style_text"
+                    else:
+                        style "replies_style"
+                        action [Hide("messenger_reply"), Function(contact.selectedReply, reply)]
 
             elif isinstance(reply, ImgReply):
                 imagebutton:
                     idle Transform(reply.image, zoom=0.15)
-                    style "replies_style"
-                    action [Hide("messenger_reply"), Function(contact.selectedReply, reply)]
+                    if reply.disabled:
+                        style "reply_disabled"
+                    else:
+                        style "replies_style"
+                        action [Hide("messenger_reply"), Function(contact.selectedReply, reply)]
 
 
 screen phone_image(img=None):

@@ -2345,17 +2345,6 @@ style replybox_text is text:
     xalign 0.5
     yalign 0.5
 
-style replies_style is button:
-    background "#147efb"
-    xpadding 15
-    ypadding 5
-    xmaximum 350
-
-style replies_style_text is text:
-    color "#ffffff"
-    font "fonts/OpenSans.ttf"
-    size 20
-
 style imgright is button:
     background "#147efb"
     xpadding 15

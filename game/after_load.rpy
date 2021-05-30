@@ -128,6 +128,9 @@ label after_load:
                     for reply in message.replies:
                         try: reply.func
                         except AttributeError: reply.func = None
+
+                        try: reply.disabled
+                        except AttributeError: reply.disabled = False
             except AttributeError: pass
 
         # Variables
