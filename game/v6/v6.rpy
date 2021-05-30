@@ -10685,12 +10685,12 @@ label v6_fr3chris3: ### ENDING
     u "Holy shit."
     stop music fadeout 2.0
 
-if episode < 7:
+if not renpy.loadable("v7/v7.rpy"):
     scene savenow
     with Fade (1,0,1)
     " "
 
-if episode < 7:
     jump end_credits
-else:
-    jump v7start
+
+if renpy.loadable("v7/v7.rpy"):
+    jump v6start

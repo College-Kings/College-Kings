@@ -17317,17 +17317,15 @@ label fr4amberending:
     jump v7end
 
 label v7end:
-    if episode < 8:
-        hide screen phoneIcon
-
+    if not renpy.loadable("v8/v8.rpy"):
         scene savenow
         with Fade (1,0,1)
         " "
 
         if config.enable_steam:
             call screen steam_end(link="https://store.steampowered.com/app/1624520/College_Kings__Act_II/")
+        else:
+            jump end_credits
 
-    if episode < 8:
-        jump end_credits
-    else:
+    if renpy.loadable("v8/v8.rpy"):
         jump v8start
