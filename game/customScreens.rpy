@@ -56,8 +56,8 @@ screen censoredPopup(continueLabel):
                 action ShowMenu("preferences")
         else:
             imagebutton:
-                idle "images/gui/censoredPopup/censoredSettings.webp"
-                hover "images/gui/censoredPopup/censoredSettingsHover.webp"
+                idle "images/gui/censoredPopup/censoredContinue.webp"
+                hover "images/gui/censoredPopup/censoredContinueHover.webp"
                 action Return()
 
         imagebutton:
