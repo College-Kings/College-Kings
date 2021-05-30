@@ -2055,6 +2055,8 @@ label conl:
 
         au "Yeah, you can. See?"
 
+        call screen censoredPopup("aubsexad")
+
         scene s254aa ## aubrey and you standing
         with dissolve
 
@@ -3032,7 +3034,7 @@ label continueq:
     ri "So what's going on between you and Chloe? She's the president of the Chicks, right?"
 
     menu:
-        "I like her":
+        "I like her.":
             $ addPoint("bf")
 
             scene s281a

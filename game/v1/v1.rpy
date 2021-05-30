@@ -1678,7 +1678,7 @@ label efra:
     la "I think I'll drink."
 
     menu:
-        "You're missing out":
+        "You're missing out.":
             scene s73gr
             with dissolve
 
@@ -2233,14 +2233,14 @@ label at_bd:
 
         "Wake up":
             pass
-
+            
+    label v1_nsfwSkipLabel1:
     hide screen fantasyOverlay
 
     stop music fadeout 2.0
     $ renpy.end_replay()
 
     ### Next morning in your dorm, Imre seems to be gone.
-    label v1_nsfwSkipLabel1:
     if v1_sda:
         scene s81
         with Fade (1,0,1)
