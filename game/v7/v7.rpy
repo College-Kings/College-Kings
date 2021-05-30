@@ -1,10 +1,10 @@
 init python:
     def v7_kiwiiReply1():
-        kiwiiPost1.addComment("Cameron", "Lol, pussy", mentions="MC", numberLikes=renpy.random.randint(1, 10))
+        kiwiiPost1.addComment("Cameron", _("Lol, pussy"), mentions="MC", numberLikes=renpy.random.randint(1, 10))
         addPoint("bf")
 
     def v7_kiwiiReply2():
-        kiwiiPost1.addComment("Imre", "Slide into her DMs bro!", mentions="MC", numberLikes=renpy.random.randint(5, 15))
+        kiwiiPost1.addComment("Imre", _("Slide into her DMs bro!"), mentions="MC", numberLikes=renpy.random.randint(5, 15))
         addPoint("bro")
         addPoint("tm")
 
@@ -12,15 +12,15 @@ init python:
         addPoint("bf")
 
     def v7_kiwiiReply4():
-        kiwiiPost2.addComment("Autumn", "Yeah, they really are", mentions="MC", numberLikes=renpy.random.randint(8, 18))
+        kiwiiPost2.addComment("Autumn", _("Yeah, they really are"), mentions="MC", numberLikes=renpy.random.randint(8, 18))
     
     def v7_kiwiiReply5():
         addPoint("bro")
-        kiwiiPost3.addComment("Aubrey", "Bring it on!", mentions="MC", numberLikes=renpy.random.randint(15, 35))
+        kiwiiPost3.addComment("Aubrey", _("Bring it on!"), mentions="MC", numberLikes=renpy.random.randint(15, 35))
 
     def v7_kiwiiReply6():
         addPoint("tm")
-        kiwiiPost4.addComment("Josh", "lol", mentions="MC", numberLikes=renpy.random.randint(3, 7))
+        kiwiiPost4.addComment("Josh", _("lol"), mentions="MC", numberLikes=renpy.random.randint(3, 7))
 
     def v7_msgReply1():
         setattr(store, "tellpenelope", True)
@@ -66,14 +66,6 @@ init python:
 
     def v7_msgReply7():
         setattr(store, "kiwii_firstTime", True)
-
-    def v7_msgReply8():
-        setattr(store, "rileysex", True)
-        contact_Riley.newMessage("Yayyy")
-
-    def v7_msgReply9():
-        setattr(store, "rileysex", False)
-        contact_Riley.newMessage("Oh oki")
 
 label start7: #for compatibility only
 label v7start:
@@ -1360,36 +1352,36 @@ label conyourdorm:
 
     pause 0.5
 
-    $ kiwiiPost1 = KiwiiPost("Chloe", "v7/clpost1.webp", "I'll always follow the sun :)", numberLikes=186)
-    $ kiwiiPost1.addComment("Grayson", "Check your DMs", 14, queue=False)
-    $ kiwiiPost1.addComment("Ryan", "Whore.", 1, queue=False)
-    $ kiwiiPost1.addComment("Aubrey", "What I wouldn't give for your body...", 32, queue=False)
-    $ kiwiiPost1.addComment("Elijah", "If you ever need a tutor, I'm free on Wednesdays and Fridays.", 2, queue=False)
-    $ kiwiiPost1.addComment("Imre", "SO FUCKING HOT WTFFF", 10, queue=False)
-    $ kiwiiPost1.addComment("Emily", "Where did you get that bikini?", 18, mentions="Chloe", queue=False)
-    $ kiwiiPost1.addComment("Chloe", "I can't remember :(", 11, mentions="Emily", queue=False)
-    $ kiwiiPost1.addReply("You're so beautiful!", v7_kiwiiReply1, numberLikes=renpy.random.randint(2, 8))
-    $ kiwiiPost1.addReply("I got some sun in my room...", v7_kiwiiReply2, numberLikes=renpy.random.randint(20, 30))
+    $ kiwiiPost1 = KiwiiPost("Chloe", "v7/clpost1.webp", _("I'll always follow the sun :)"), numberLikes=186)
+    $ kiwiiPost1.addComment("Grayson", _("Check your DMs"), 14, queue=False)
+    $ kiwiiPost1.addComment("Ryan", _("Whore."), 1, queue=False)
+    $ kiwiiPost1.addComment("Aubrey", _("What I wouldn't give for your body..."), 32, queue=False)
+    $ kiwiiPost1.addComment("Elijah", _("If you ever need a tutor, I'm free on Wednesdays and Fridays."), 2, queue=False)
+    $ kiwiiPost1.addComment("Imre", _("SO FUCKING HOT WTFFF"), 10, queue=False)
+    $ kiwiiPost1.addComment("Emily", _("Where did you get that bikini?"), 18, mentions="Chloe", queue=False)
+    $ kiwiiPost1.addComment("Chloe", _("I can't remember :("), 11, mentions="Emily", queue=False)
+    $ kiwiiPost1.addReply(_("You're so beautiful!"), v7_kiwiiReply1, numberLikes=renpy.random.randint(2, 8))
+    $ kiwiiPost1.addReply(_("I got some sun in my room..."), v7_kiwiiReply2, numberLikes=renpy.random.randint(20, 30))
 
-    $ kiwiiPost2 = KiwiiPost("Lauren", "v7/lapost1.webp", "Wishing I could go back...", numberLikes=39)
-    $ kiwiiPost2.addComment("Autumn","That was such a great vacation!", 2, queue=False)
-    $ kiwiiPost2.addComment("Penelope", "Looks beautiful", 3, queue=False)
-    $ kiwiiPost2.addReply("You're a cutie!", v7_kiwiiReply3, numberLikes=renpy.random.randint(3, 10))
-    $ kiwiiPost2.addReply("Winter vacations are the best", v7_kiwiiReply4, numberLikes=renpy.random.randint(10, 17))
+    $ kiwiiPost2 = KiwiiPost("Lauren", "v7/lapost1.webp", _("Wishing I could go back..."), numberLikes=39)
+    $ kiwiiPost2.addComment("Autumn", _("That was such a great vacation!"), 2, queue=False)
+    $ kiwiiPost2.addComment("Penelope", _("Looks beautiful"), 3, queue=False)
+    $ kiwiiPost2.addReply(_("You're a cutie!"), v7_kiwiiReply3, numberLikes=renpy.random.randint(3, 10))
+    $ kiwiiPost2.addReply(_("Winter vacations are the best"), v7_kiwiiReply4, numberLikes=renpy.random.randint(10, 17))
 
-    $ kiwiiPost3 = KiwiiPost("Aubrey", "v7/aupost1.webp", "Finally changed my profile pic!", numberLikes=133)
-    $ kiwiiPost3.addComment("Cameron","You put the hot into thot", 2, queue=False)
-    $ kiwiiPost3.addComment("Josh", "You still single?", 3, queue=False)
-    $ kiwiiPost3.addComment("Riley", "I'm sooo jealous of your hair!", 6, queue=False)
-    $ kiwiiPost3.addComment("Chloe", "Most beautiful girl in the world", 6, queue=False)
-    $ kiwiiPost3.addReply("I'd destroy you in Air hockey!", v7_kiwiiReply5, mentions="Aubrey", numberLikes=renpy.random.randint(15, 25))
+    $ kiwiiPost3 = KiwiiPost("Aubrey", "v7/aupost1.webp", _("Finally changed my profile pic!"), numberLikes=133)
+    $ kiwiiPost3.addComment("Cameron", _("You put the hot into thot"), 2, queue=False)
+    $ kiwiiPost3.addComment("Josh", _("You still single?"), 3, queue=False)
+    $ kiwiiPost3.addComment("Riley", _("I'm sooo jealous of your hair!"), 6, queue=False)
+    $ kiwiiPost3.addComment("Chloe", _("Most beautiful girl in the world"), 6, queue=False)
+    $ kiwiiPost3.addReply(_("I'd destroy you in Air hockey!"), v7_kiwiiReply5, mentions="Aubrey", numberLikes=renpy.random.randint(15, 25))
 
     if emilyrs: # first riley texts, then once you've opened the app you get 2 more messages.
-        $ kiwiiPost4 = KiwiiPost("Emily", "v7/empost1.webp", "Finally fate brings us back together. What doesn't kill us only makes us stronger.", numberLikes=82)
-        $ kiwiiPost4.addComment("Riley","You guys are so cute", 5, queue=False)
-        $ kiwiiPost4.addComment("Aubrey", "GORGEOUS", 8, queue=False)
-        $ kiwiiPost4.addComment("Josh", "Woah, you guys back together??", 3, queue=False)
-        $ kiwiiPost4.addReply("No, we're not.", v7_kiwiiReply6, mentions="Josh", numberLikes=renpy.random.randint(5, 15))
+        $ kiwiiPost4 = KiwiiPost("Emily", "v7/empost1.webp", _("Finally fate brings us back together. What doesn't kill us only makes us stronger."), numberLikes=82)
+        $ kiwiiPost4.addComment("Riley", _("You guys are so cute"), 5, queue=False)
+        $ kiwiiPost4.addComment("Aubrey", _("GORGEOUS"), 8, queue=False)
+        $ kiwiiPost4.addComment("Josh", _("Woah, you guys back together??"), 3, queue=False)
+        $ kiwiiPost4.addReply(_("No, we're not."), v7_kiwiiReply6, mentions="Josh", numberLikes=renpy.random.randint(5, 15))
 
         play sound "sounds/vibrate.mp3"
         $ contact_Riley.newMessage(_("Are you and Emily back together?"), queue=False)
@@ -3287,7 +3279,6 @@ label beachlauren:
                 with dissolve
 
                 if kct == "loyal":
-
                     call screen kctPopup
 
                     menu:
@@ -5497,10 +5488,10 @@ label after_pledges:
     with Fade(1,0,1)
 
     if joinwolves:
-        $ kiwiiPost5 = KiwiiPost("Chris", "v7/chpost1.webp", "One of us!", numberLikes=133, mentions="MC")
-        $ kiwiiPost5.addComment("Cameron", "Losers", 3, queue=False)
-        $ kiwiiPost5.addComment("Imre", "Hell yeah bro!", 14, queue=False)
-        $ kiwiiPost5.addComment("Aubrey", "Wohoo!", 35, queue=False)
+        $ kiwiiPost5 = KiwiiPost("Chris", "v7/chpost1.webp", _("One of us!"), numberLikes=133, mentions="MC")
+        $ kiwiiPost5.addComment("Cameron", _("Losers"), 3, queue=False)
+        $ kiwiiPost5.addComment("Imre", _("Hell yeah bro!"), 14, queue=False)
+        $ kiwiiPost5.addComment("Aubrey", _("Wohoo!"), 35, queue=False)
 
     if emilyText:
         play sound "sounds/vibrate.mp3"
@@ -6476,6 +6467,8 @@ label after_history:
             $ timed = False
             stop sound
 
+            call screen censoredPopup("v7_nsfwSkipLabel2")
+
             scene s905a # Same as s905 but Lee's pants down showing his naked ass and he is startled. (Lee is still facing the board)
             with vpunch
             pause 0.5
@@ -6494,6 +6487,8 @@ label after_history:
                 scene s906b # Same as s906 but Cowboy costume
                 with hpunch
                 pause 0.5
+
+            label v7_nsfwSkipLabel2:
 
             scene s907 # Camera - FPP. MC and Cameron running through the door. Cameron is in front of MC with his phone in his hand. MC is almost out of the door
             with vpunch
@@ -7692,6 +7687,8 @@ label cameron_thurs_tasks:
 
                     u "Here we go!"
 
+                    call screen censoredPopup("v7_nsfwSkipLabel3")
+
                     scene scc32 # FPP. Show the girls screaming and removing their tops. Cameron laughing whilst filming on his phone in bushes.
                     with dissolve
 
@@ -7706,6 +7703,8 @@ label cameron_thurs_tasks:
                     with dissolve
 
                     pause 0.5
+
+                    label v7_nsfwSkipLabel3:
 
                     scene scc34 # FPP. Show Cameron and MC back at campus, Cameron hugs MC, smile on both faces.
                     with fade
@@ -7879,10 +7878,14 @@ label cameron_thurs_tasks:
     pause 0.5
     play music "music/mhorror.mp3"
 
+    call screen censoredPopup("v7_nsfwSkipLabel4")
+
     scene scc63 # FPP. Show Cameron's sister sat in a chair tying a belt around her arm while the girl holds a syringe in her hand.
     with Dissolve(1)
 
     pause 0.5
+
+    label v7_nsfwSkipLabel4:
 
     scene scc64 # FPP. Close up Cameron, now in the house, REALLY ANGRY, MOUTH WIDE OPEN.
     with dissolve
@@ -8941,7 +8944,7 @@ label rileytext:
             if contact_Riley.getReplies():
                 u "(I should check my messages.)"
                 jump rtnow
-            
+
     if rileysex:
         u "(Guess I'm not going to sleep yet.)"
         jump rileysexscene
@@ -9002,6 +9005,8 @@ label rileysexscene:
     scene ridrm3 # Riley reaches and grabs your hand pulls you into her dorm, flirty wink (first person)
     with dissolve
     ri "Come on!"
+
+    call screen censoredPopup("v7_nsfwSkipLabel1")
 
     scene ridrm4 # Riley close up in her dorm, talking mouth open, single slightly raise brow (first person)
     with dissolve
@@ -9176,6 +9181,8 @@ label riclimax:
     scene risex15 # As above but Riley turns to look at MC and laugh and MC is now dressed again
     with dissolve
     ri "I'll see you tomorrow [name]."
+
+    label v7_nsfwSkipLabel1:
 
     scene risex15a # MC leaving Riley's dorm
     with dissolve
@@ -9814,6 +9821,8 @@ label amberhocodate:
 
     pause 0.5
 
+    call screen censoredPopup("v7_nsfwSkipLabel5")
+
     scene sfr4am6 #First person Close up Amber pulls out 2 pills. a bit flirty and happy
     with dissolve
 
@@ -9865,6 +9874,8 @@ label amberhocodate:
     pause 0.5
     scene sfr4am6d # close up amber, not holding pills, drinking out of a water bottle
     with dissolve
+
+    label v7_nsfwSkipLabel5:
 
     $ ecstatic = True
     $ grantAchievement("ecstatic")
@@ -15235,6 +15246,8 @@ label fr4aubrey1:
 
                 u "Yeah, alright. Let's go."
 
+                call screen censoredPopup("labelfr4hallwaybathroom")
+
                 scene sfr4ri41 # tppAubrey and MC walk towards the bathroom.
                 with dissolve
 
@@ -17308,6 +17321,8 @@ label fr4chloeending:
     # towel drop sound #check - add towel.mp3 sound file
     play sound "sounds/towel.mp3"
 
+    call screen censoredPopup("v7end")
+
     scene sfr4cl62 #Chloe steps out of the bathroom. We see her feet and a bathrobe drop to the floor.
     with dissolve
 
@@ -17326,15 +17341,15 @@ label fr4amberending:
     jump v7end
 
 label v7end:
-    if episode < 8:
+    if not renpy.loadable("v8/v8.rpy"):
         scene savenow
         with Fade (1,0,1)
         " "
 
         if config.enable_steam:
             call screen steam_end(link="https://store.steampowered.com/app/1624520/College_Kings__Act_II/")
+        else:
+            jump end_credits
 
-    if episode < 8:
-        jump end_credits
-    else:
+    if renpy.loadable("v8/v8.rpy"):
         jump v8start

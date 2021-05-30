@@ -1,10 +1,8 @@
-define episode = 7
-
 define config.enable_steam = True # Make sure you switch main_menu_background image to steam version.
-define config.developer = False
+define config.developer = True
 define config.console = True
 define config_debug = False
-define config_censored = False
+define config_censored = True
 
 define config.steam_appid = 1463120
 
@@ -48,10 +46,6 @@ label start:
     show nohardfeelings at achievementShow
     $ achievementAtList = renpy.get_at_list("nohardfeelings")
     hide nohardfeelings
-
-    call screen teamCredits
-
-    call screen censoredPopup("v1start")
 
     call screen realmode
 

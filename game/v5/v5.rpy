@@ -4332,7 +4332,12 @@ label findimre:
         else:
             u "(I gotta make a decision. Should I help Imre, or meet Chloe?)"
 
-if episode < 6:
+if not renpy.loadable("v6/v6.rpy"):
+    scene savenow
+    with Fade (1,0,1)
+    " "
+
     jump end_credits
-else:
+
+if renpy.loadable("v6/v6.rpy"):
     jump v6start

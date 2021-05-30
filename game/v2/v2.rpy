@@ -2743,6 +2743,7 @@ label try1new:
                 "Risk it":
                     $ caughtpeekingaubrey = renpy.random.choice([True, False])
 
+                    call screen censoredPopup("v2_nsfwSkipLabel1")
                     if not caughtpeekingaubrey:
                         scene s164a # Aubrey changing good view
                         with dissolve
@@ -2759,6 +2760,8 @@ label try1new:
 
         "Don't peek":
             $ addPoint("bf")
+
+    label v2_nsfwSkipLabel1:
 
     scene s163
     with dissolve
@@ -2878,6 +2881,8 @@ label try2new:
                 "Risk it":
                     $ caughtpeekingaubrey = renpy.random.choice([True, False])
 
+                    call screen censoredPopup("v2_nsfwSkipLabel2")
+
                     if not caughtpeekingaubrey:
                         scene s168a # Aubrey changing good view
                         with dissolve
@@ -2894,6 +2899,8 @@ label try2new:
 
         "Don't peek":
             $ addPoint("bf")
+
+    label v2_nsfwSkipLabel2:
 
     scene s167
     with dissolve
@@ -3025,6 +3032,7 @@ label try3new:
                 "Risk it":
                     $ caughtpeekingaubrey = renpy.random.choice([True, False])
 
+                    call screen censoredPopup("v2_nsfwSkipLabel3")
                     if not caughtpeekingaubrey:
                         scene s172a # Aubrey changing good view
                         with dissolve
@@ -3041,6 +3049,7 @@ label try3new:
         "Don't peek":
             $ addPoint("bf")
 
+    label v2_nsfwSkipLabel3:
     scene s171
     with dissolve
 
@@ -3277,6 +3286,7 @@ label try4new:
                 "Risk it":
                     $ caughtpeekingpenelope = renpy.random.choice([True, False])
 
+                    call screen censoredPopup("v2_nsfwSkipLabel4")
                     if not caughtpeekingpenelope:
                         scene s183a # pen changing good view
                         with dissolve
@@ -3294,6 +3304,7 @@ label try4new:
         "Don't peek":
             $ addPoint("bf")
 
+    label v2_nsfwSkipLabel4:
     scene s163
     with dissolve
 
@@ -3419,6 +3430,8 @@ label try5new:
                 "Risk it":
                     $ caughtpeekingpenelope = renpy.random.choice([True, False])
 
+                    call screen censoredPopup("v2_nsfwSkipLabel5")
+
                     if not caughtpeekingpenelope:
                         scene s183a
                         with dissolve
@@ -3435,6 +3448,7 @@ label try5new:
         "Don't peek":
             $ addPoint("bf")
 
+    label v2_nsfwSkipLabel5:
     scene s167
     with dissolve
 
@@ -3551,6 +3565,8 @@ label try6new:
                 "Risk it":
                     $ caughtpeekingpenelope = renpy.random.choice([True, False])
 
+                    call screen censoredPopup("v2_nsfwSkipLabel6")
+
                     if not caughtpeekingpenelope:
                         scene s180a # pen changing good view
                         with dissolve
@@ -3567,6 +3583,7 @@ label try6new:
         "Don't peek":
             $ addPoint("bf")
 
+    label v2_nsfwSkipLabel6:
     scene s171
     with dissolve
 
