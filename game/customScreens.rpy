@@ -43,35 +43,27 @@ screen endFreeRoamConfirm(continueLabel):
 screen censoredPopup(continueLabel):
     modal True
 
-    add "censoredPopup_background"
+    add "images/gui/censoredPopup/censoredBackground.webp"
 
     vbox:
-        xpos 15
+        pos (365, 566)
+        spacing 148
 
-        text "Censorship Mode: {}".format("{color=#0f0}Enabled" if config_censored else "{color=#f00}Disabled")
-        text "You can disable censorship mode in the game settings":
-            size 12
-
-    vbox:
-        xalign 0.5
-        ypos 200
-        spacing 165
-
-        text "The following scenes have NSFW content.\nUse the \"Skip Scene\" button below to skip over this scene.":
-            text_align 0.5
-
-        hbox:
-            spacing 250
-
-            textbutton "Skip Scene":
-                action Jump(continueLabel)
-
-            textbutton "Continue":
+        if config_censored:
+            imagebutton:
+                idle "images/gui/censoredPopup/censoredSettings.webp"
+                hover "images/gui/censoredPopup/censoredSettingsHover.webp"
+                action ShowMenu("preferences")
+        else:
+            imagebutton:
+                idle "images/gui/censoredPopup/censoredSettings.webp"
+                hover "images/gui/censoredPopup/censoredSettingsHover.webp"
                 action Return()
 
-        text "To get the full uncensored version head over to {a=https://www.patreon.com/collegekings}{color=#72bcef}College King's Patreon":
-            size 24
-
+        imagebutton:
+            idle "images/gui/censoredPopup/censoredSkipScene.webp"
+            hover "images/gui/censoredPopup/censoredSkipSceneHover.webp"
+            action Jump(continueLabel)
 
 screen kiwiiPopup():
     modal True
