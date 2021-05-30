@@ -6467,6 +6467,8 @@ label after_history:
             $ timed = False
             stop sound
 
+            call screen censoredPopup("v7_nsfwSkipLabel2")
+
             scene s905a # Same as s905 but Lee's pants down showing his naked ass and he is startled. (Lee is still facing the board)
             with vpunch
             pause 0.5
@@ -6485,6 +6487,8 @@ label after_history:
                 scene s906b # Same as s906 but Cowboy costume
                 with hpunch
                 pause 0.5
+
+            label v7_nsfwSkipLabel2:
 
             scene s907 # Camera - FPP. MC and Cameron running through the door. Cameron is in front of MC with his phone in his hand. MC is almost out of the door
             with vpunch
@@ -7683,6 +7687,8 @@ label cameron_thurs_tasks:
 
                     u "Here we go!"
 
+                    call screen censoredPopup("v7_nsfwSkipLabel3")
+
                     scene scc32 # FPP. Show the girls screaming and removing their tops. Cameron laughing whilst filming on his phone in bushes.
                     with dissolve
 
@@ -7697,6 +7703,8 @@ label cameron_thurs_tasks:
                     with dissolve
 
                     pause 0.5
+
+                    label v7_nsfwSkipLabel3:
 
                     scene scc34 # FPP. Show Cameron and MC back at campus, Cameron hugs MC, smile on both faces.
                     with fade
@@ -7870,10 +7878,14 @@ label cameron_thurs_tasks:
     pause 0.5
     play music "music/mhorror.mp3"
 
+    call screen censoredPopup("v7_nsfwSkipLabel4")
+
     scene scc63 # FPP. Show Cameron's sister sat in a chair tying a belt around her arm while the girl holds a syringe in her hand.
     with Dissolve(1)
 
     pause 0.5
+
+    label v7_nsfwSkipLabel4:
 
     scene scc64 # FPP. Close up Cameron, now in the house, REALLY ANGRY, MOUTH WIDE OPEN.
     with dissolve
@@ -8994,6 +9006,8 @@ label rileysexscene:
     with dissolve
     ri "Come on!"
 
+    call screen censoredPopup("v7_nsfwSkipLabel1")
+
     scene ridrm4 # Riley close up in her dorm, talking mouth open, single slightly raise brow (first person)
     with dissolve
     ri "I think we have some unfinished business."
@@ -9167,6 +9181,8 @@ label riclimax:
     scene risex15 # As above but Riley turns to look at MC and laugh and MC is now dressed again
     with dissolve
     ri "I'll see you tomorrow [name]."
+
+    label v7_nsfwSkipLabel1:
 
     scene risex15a # MC leaving Riley's dorm
     with dissolve
@@ -9805,6 +9821,8 @@ label amberhocodate:
 
     pause 0.5
 
+    call screen censoredPopup("v7_nsfwSkipLabel5")
+
     scene sfr4am6 #First person Close up Amber pulls out 2 pills. a bit flirty and happy
     with dissolve
 
@@ -9856,6 +9874,8 @@ label amberhocodate:
     pause 0.5
     scene sfr4am6d # close up amber, not holding pills, drinking out of a water bottle
     with dissolve
+
+    label v7_nsfwSkipLabel5:
 
     $ ecstatic = True
     $ grantAchievement("ecstatic")
@@ -15226,6 +15246,8 @@ label fr4aubrey1:
 
                 u "Yeah, alright. Let's go."
 
+                call screen censoredPopup("labelfr4hallwaybathroom")
+
                 scene sfr4ri41 # tppAubrey and MC walk towards the bathroom.
                 with dissolve
 
@@ -17298,6 +17320,8 @@ label fr4chloeending:
 
     # towel drop sound #check - add towel.mp3 sound file
     play sound "sounds/towel.mp3"
+
+    call screen censoredPopup("v7end")
 
     scene sfr4cl62 #Chloe steps out of the bathroom. We see her feet and a bathrobe drop to the floor.
     with dissolve

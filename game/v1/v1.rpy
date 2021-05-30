@@ -1186,6 +1186,7 @@ label starta: #for compatibility only
         call screen v1_freeRoam1_2
 
     label v1_freeRoam1_aubrey:
+        call screen censoredPopup("v1_freeRoam1_aubrey2")
         scene adamaubrey36
         stop music fadeout 2.0
         play music "music/msexy.mp3"
@@ -2024,6 +2025,7 @@ label at_bd:
     u "Probably not for a few hours yet."
 
     play music "music/msexy.mp3"
+    call screen censoredPopup("v1_nsfwSkipLabel1")
     scene sda2
     with dissolve
 
@@ -2238,7 +2240,7 @@ label at_bd:
     $ renpy.end_replay()
 
     ### Next morning in your dorm, Imre seems to be gone.
-
+    label v1_nsfwSkipLabel1:
     if v1_sda:
         scene s81
         with Fade (1,0,1)
