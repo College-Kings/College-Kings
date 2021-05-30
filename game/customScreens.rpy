@@ -122,6 +122,10 @@ screen kctPopup():
 
 
 screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings__Act_I/"):
+    tag credits
+    modal True
+    zorder 100
+
     add "images/steam/steam_endscreen.webp"
 
     imagebutton:
@@ -135,20 +139,29 @@ screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings_
         align (0.5, 0.55)
 
     hbox:
-        spacing 20
+        spacing 50
         xpos 20
         yalign 1.0
 
-        textbutton "Menu":
+        textbutton "Main Menu":
             text_style "steam_endScreenTextButton"
             action MainMenu()
 
         textbutton "Credits":
             text_style "steam_endScreenTextButton"
-            action Return()
+            action Jump("end_credits")
+
+        textbutton "The Team":
+            text_style "steam_endScreenTextButton"
+            action Show("teamCredits")
+           
 
 
 screen credits():
+    tag credits
+    modal True
+    zorder 100
+
     if config.enable_steam:
         add "images/steamCredits.webp"
     else:
@@ -168,18 +181,24 @@ screen credits():
             hover "images/supportdevelopment.webp"
             action OpenURL ("https://www.patreon.com/collegekings")
 
-    textbutton "Main Menu":
-        text_underline True
-        text_size 50
-        text_font "fonts/Freshman.ttf"
-        ypos 952
+    hbox:
         xalign 0.5
-        text_align 0.5
-        action MainMenu()
+        ypos 950
+        spacing 50
+
+        textbutton "Main Menu":
+            text_style "steam_endScreenTextButton"
+            action MainMenu()
+
+        textbutton "The Team":
+            text_style "steam_endScreenTextButton"
+            action Show("teamCredits")
 
 
 screen teamCredits():
+    tag credits
     modal True
+    zorder 100
 
     add "images/stockBackgrounds/eveningSunshine.webp"
 
@@ -250,3 +269,16 @@ screen teamCredits():
     text "Special thanks to all the community members and players who have made this project possible :)":
         align (0.5, 0.9)
         size 24
+
+    hbox:
+        spacing 50
+        xpos 20
+        yalign 1.0
+
+        textbutton "Main Menu":
+            text_style "steam_endScreenTextButton"
+            action MainMenu()
+
+        textbutton "Credits":
+            text_style "steam_endScreenTextButton"
+            action Jump("end_credits")

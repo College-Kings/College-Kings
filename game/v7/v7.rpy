@@ -17317,6 +17317,8 @@ label fr4amberending:
 
 label v7end:
     if episode < 8:
+        hide screen phoneIcon
+
         scene savenow
         with Fade (1,0,1)
         " "
