@@ -1,5 +1,6 @@
 screen phoneTutorial():
     zorder 100
+    tag tutorial
 
     default phoneTutorials = [
         "This is the phone screen. You can access your phone whenever the phone icon in the top right corner appears.",
@@ -43,6 +44,8 @@ screen phoneTutorial():
 
 
 screen kctTutorial():
+    zorder 100
+    tag tutorial
 
     default kctTutorials = [
         "Your decisions strongly influence the way the story progresses and how other characters perceive you.",
@@ -86,6 +89,7 @@ screen kctTutorial():
 
 screen freeRoamTutorial():
     zorder 100
+    tag tutorial
 
     default freeRoamTutorials = [
         "At certain parts of the game, you’ll unlock free roam.",
@@ -126,6 +130,7 @@ screen freeRoamTutorial():
 
 screen influenceTutorial():
     zorder 100
+    tag tutorial
 
     default influenceTutorials = [
         "When people make important decisions on how they feel about you, they consider what kind of a person you are.",
