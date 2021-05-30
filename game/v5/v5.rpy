@@ -21,7 +21,7 @@ init python:
     def v5_reply5():
         addPoint("bro")
         contact_Amber.newMessage(_("Oh wow, I was just checking. :P"))
-        contact_Amber.addReply(_("Don't worry, you'll see me soon"), v5_reply6)
+        contact_Amber.addReply(_("Don't worry, you'll see me soon."), v5_reply6)
         contact_Amber.addReply(_("Haha, I'm fine."), v5_reply7)
 
     def v5_reply6():

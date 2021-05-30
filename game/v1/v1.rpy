@@ -1677,7 +1677,7 @@ label efra:
     la "I think I'll drink."
 
     menu:
-        "You're missing out":
+        "You're missing out.":
             scene s73gr
             with dissolve
 
