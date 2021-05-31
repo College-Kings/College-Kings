@@ -24,7 +24,7 @@ style phonetext is text:
     color "#000000"
 
 
-# phone_msg
+# Messanger
 style msgleft is button:
     background "#CECECE"
     padding (15, 5)
@@ -49,3 +49,51 @@ style msgright_text is text:
     font "fonts/OpenSans.ttf"
     size 20
 
+style replies_style is button:
+    background "#147efb"
+    xpadding 15
+    ypadding 5
+    xmaximum 350
+
+style replies_style_text is text:
+    color "#ffffff"
+    font "fonts/OpenSans.ttf"
+    size 20
+
+style reply_disabled is button:
+    background "#333"
+    xpadding 15
+    ypadding 5
+    xmaximum 350
+
+# Kiwii
+style kiwii_PrefTextButton is button_text:
+    font "fonts/OpenSans-Bold.ttf"
+    size 50
+
+style kiwii_ProfileName is text:
+    font "fonts/OpenSans-Bold.ttf"
+    size 16
+    color "#000"
+    bold True
+
+style kiwii_CommentText is text:
+    font "fonts/OpenSans-Bold.ttf"
+    size 14
+    color "#000"
+
+style kiwii_LikeCounter is text:
+    font "fonts/OpenSans-Bold.ttf"
+    size 14
+    color "#000"
+
+style kiwii_ReplyText is text:
+    font "fonts/OpenSans-Bold.ttf"
+    size 20
+    color "#000"
+
+style kiwii_reply is button:
+    background "#fff"
+    xpadding 15
+    ypadding 5
+    xmaximum 350
