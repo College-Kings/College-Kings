@@ -1764,21 +1764,20 @@ label conl:
                         au "Like this?"
 
                         label v3_nsfwSkipLabel1:
+                            scene s254q
+                            with dissolve
 
-                        scene s254q
-                        with dissolve
+                            au "Oh, I see. Very funny."
 
-                        au "Oh, I see. Very funny."
+                            scene s254r
+                            with dissolve
 
-                        scene s254r
-                        with dissolve
+                            u "Haha, I thought you did great."
 
-                        u "Haha, I thought you did great."
+                            scene s254l
+                            with dissolve
 
-                        scene s254l
-                        with dissolve
-
-                        au "Okay, now it's your turn again."
+                            au "Okay, now it's your turn again."
 
 
                     "Dare":

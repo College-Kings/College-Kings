@@ -2763,8 +2763,7 @@ label try1new:
         "Don't peek":
             $ addPoint("bf")
 
-    label v2_nsfwSkipLabel1:
-
+label v2_nsfwSkipLabel1:
     scene s163
     with dissolve
 
@@ -2903,8 +2902,7 @@ label try2new:
         "Don't peek":
             $ addPoint("bf")
 
-    label v2_nsfwSkipLabel2:
-
+label v2_nsfwSkipLabel2:
     scene s167
     with dissolve
 
@@ -3054,7 +3052,7 @@ label try3new:
         "Don't peek":
             $ addPoint("bf")
 
-    label v2_nsfwSkipLabel3:
+label v2_nsfwSkipLabel3:
     scene s171
     with dissolve
 
@@ -3311,7 +3309,7 @@ label try4new:
         "Don't peek":
             $ addPoint("bf")
 
-    label v2_nsfwSkipLabel4:
+label v2_nsfwSkipLabel4:
     scene s163
     with dissolve
 
@@ -3456,7 +3454,7 @@ label try5new:
         "Don't peek":
             $ addPoint("bf")
 
-    label v2_nsfwSkipLabel5:
+label v2_nsfwSkipLabel5:
     scene s167
     with dissolve
 
@@ -3592,7 +3590,7 @@ label try6new:
         "Don't peek":
             $ addPoint("bf")
 
-    label v2_nsfwSkipLabel6:
+label v2_nsfwSkipLabel6:
     scene s171
     with dissolve
 
