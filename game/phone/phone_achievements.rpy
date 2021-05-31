@@ -65,7 +65,7 @@ init python:
     Achievement("homecoming queen", "End homecoming with Chloe", "homecomingqueen")
     
     # v8.0
-    Achievement("get a room", "Sleep With Amber at Josh's", "get_a_room")
+    Achievement("get a room", "Stay With Amber at Josh's", "get_a_room")
     Achievement("ip man", "Win The Alley Fight", "ip_man")
     Achievement("thick and thin", "Help Penelope", "thick_and_thin")
     Achievement("up for more", "Flirt With Chloe", "up_for_more")
@@ -73,14 +73,14 @@ init python:
     # v9.0
     Achievement("back down", "Punch the guy in the hallway", "down_for_the_count")
     Achievement("second date", "Get a second date with Evelyn", "second_date")
-    Achievement("relaxing day", "Hook up with Aubrey at the lake", "lake_hj")
+    Achievement("relaxing day", "Have fun with Aubrey at the lake", "lake_hj")
     Achievement("the king", "Recognise the king", "the_king")
     Achievement("the wrong time", "Don't kiss Lindsey", "the_wrong_time")
 
     # v10.0
     Achievement("friends first", "Refuse to fight a friend", "friends_first")
-    Achievement("bathroom sex", "Have sex in a bathroom", "bathroom_sex")
-    Achievement("forbidden romance", "Kiss a teacher", "kiss_teacher")
+    Achievement("getting clean", "Have fun in the bathroom", "bathroom_sex")
+    Achievement("forbidden romance", "Kiss Ms. Rose", "kiss_teacher")
     Achievement("hard decisions", "Tell Chloe what Nora said", "chloe_over_nora")
     Achievement("rawr im a lion!", "Tell Lauren you like Lions", "im_a_lion")
     Achievement("on the court", "Have a rematch with Chloe", "on_the_court")
