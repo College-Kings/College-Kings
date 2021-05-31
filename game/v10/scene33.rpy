@@ -1963,7 +1963,6 @@ label v10s33_deergirl21:
         menu:
             "Compliment":
                 if kct == "confident":
-                    #call screen kctPopup
                     $ addPoint("bf")
                     $ lindseyLike += 1
 

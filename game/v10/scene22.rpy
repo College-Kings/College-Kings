@@ -215,7 +215,6 @@ label v10_cafe_w_jenny:
             "Flirt":
                 $ addPoint("bf", 1)
                 if kct == "confident":
-                    #call screen kctPopup
                     $ jennyLike += 1
 
                 else:

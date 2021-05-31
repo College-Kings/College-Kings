@@ -220,6 +220,7 @@ label v10_linds_room:
                 u "Hey, at least you're not gonna end up like that sailor that followed the North Star and ended up freezing to death in a snow storm, right?"
 
                 call screen kctPopup
+                
                 scene v10slds3f # FPP. Same camera as v10slds3. Show Lindsey, with a somewhat amused smile, mouth open.
                 with dissolve
 
