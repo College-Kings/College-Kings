@@ -4,64 +4,63 @@ image splashtwo = "images/splash2.webp"
 image splashthree = "images/splash 3.webp"
 
 # Achievements
-image no_hard_feelings = "images/nohardfeelings.webp"
-image open_wound = "images/openwound.webp"
-image keep_it_moving = "images/keepitmoving.webp"
-image romeo = "images/romeo.webp"
-image big_mouth = "images/bigmouth.webp"
+image no_hard_feelings = "images/achievements/v1/nohardfeelings.webp"
+image open_wound = "images/achievements/v1/openwound.webp"
+image keep_it_moving = "images/achievements/v1/keepitmoving.webp"
+image romeo = "images/achievements/v1/romeo.webp"
+image big_mouth = "images/achievements/v1/bigmouth.webp"
 
-image mixed_feelings = "images/mixedfeelings.webp"
-image the_notorious = "images/thenotorious.webp"
-image a_new_beginning = "images/anewbeginning.webp"
-image over_it = "images/overit.webp"
+image mixed_feelings = "images/achievements/v2/mixedfeelings.webp"
+image the_notorious = "images/achievements/v2/thenotorious.webp"
+image a_new_beginning = "images/achievements/v2/anewbeginning.webp"
+image over_it = "images/achievements/v2/overit.webp"
 
-image not_now_mom = "images/notnowmom.webp"
-image lips_dont_lie = "images/lipsdontlie.webp"
-image truth_hurts = "images/truthhurts.webp"
+image not_now_mom = "images/achievements/v3/notnowmom.webp"
+image lips_dont_lie = "images/achievements/v3/lipsdontlie.webp"
+image truth_hurts = "images/achievements/v3/truthhurts.webp"
 
-image relight_the_fire = "images/relightthefire.webp"
-image rematch = "images/rematch.webp"
-image keen_eye = "images/keeneye.webp"
+image relight_the_fire = "images/achievements/v4/relightthefire.webp"
+image rematch = "images/achievements/v4/rematch.webp"
+image keen_eye = "images/achievements/v4/keeneye.webp"
 
-image on_the_low = "images/onthelow.webp"
-image peta_public_enemy = "images/petapublicenemy.webp"
-image snitch = "images/snitch.webp"
+image on_the_low = "images/achievements/v5/onthelow.webp"
+image peta_public_enemy = "images/achievements/v5/petapublicenemy.webp"
+image snitch = "images/achievements/v5/snitch.webp"
 
-image bros_before_hoes = "images/brosbeforehoes.webp"
-image credulous = "images/credulous.webp"
-image not_my_business = "images/notmybusiness.webp"
-image flyer = "images/flyer.webp" # No corresponding achievement
-image reignition = "images/reignition.webp"
-image monkey_business = "images/monkeybusiness.webp"
-image seems_fishy = "images/seemsfishy.webp"
-image strike = "images/strike.webp"
+image bros_before_hoes = "images/achievements/v6/brosbeforehoes.webp"
+image credulous = "images/achievements/v6/credulous.webp"
+image not_my_business = "images/achievements/v6/notmybusiness.webp"
+image reignition = "images/achievements/v6/reignition.webp"
+image monkey_business = "images/achievements/v6/monkeybusiness.webp"
+image seems_fishy = "images/achievements/v6/seemsfishy.webp"
+image strike = "images/achievements/v6/strike.webp"
 
-image true_to_self = "images/truetoself.webp"
-image silver_back = "images/silverback.webp"
-image wolf_pack = "images/wolfpack.webp"
-image lee_way = "images/lee-way.webp"
-image ecstatic = "images/ecstatic.webp"
-image slow_and_steady = "images/slowandsteady.webp"
-image playing_with_fire = "images/playingwithfire.webp"
-image homecoming_queen = "images/homecomingqueen.webp"
+image true_to_self = "images/achievements/v7/truetoself.webp"
+image silver_back = "images/achievements/v7/silverback.webp"
+image wolf_pack = "images/achievements/v7/wolfpack.webp"
+image lee_way = "images/achievements/v7/lee-way.webp"
+image ecstatic = "images/achievements/v7/ecstatic.webp"
+image slow_and_steady = "images/achievements/v7/slowandsteady.webp"
+image playing_with_fire = "images/achievements/v7/playingwithfire.webp"
+image homecoming_queen = "images/achievements/v7/homecomingqueen.webp"
 
-image get_a_room = "images/v10/Achievements/getaroom.webp" # Need Image
-image ip_man = "images/v10/Achievements/ipman.webp" # Need Image
-image up_for_more = "images/v10/Achievements/upformore.webp" # Need Image
-image thick_and_thin = "images/v8/achievements/thickandthin.webp" # No corresponding achievement
+image get_a_room = "images/achievements/v8/getaroom.webp"
+image ip_man = "images/achievements/v8/ipman.webp"
+image up_for_more = "images/achievements/v8/upformore.webp"
+image thick_and_thin = "images/achievements/v8/thickandthin.webp" # No corresponding achievement
 
-image relaxing_day = "images/v10/Achievements/relaxingday.webp" # Need Image
-image the_king = "images/v10/Achievements/theking.webp" # Need Image
-image back_down = "images/v10/Achievements/backdown.webp" # Need Image
-image second_date = "images/v10/Achievements/seconddate.webp" # Need Image
-image the_wrong_time = "images/v10/Achievements/thewrongtime.webp" # Need Image
+image relaxing_day = "images/achievements/v9/relaxingday.webp"
+image the_king = "images/achievements/v9/theking.webp"
+image back_down = "images/achievements/v9/backdown.webp"
+image second_date = "images/achievements/v9/seconddate.webp"
+image the_wrong_time = "images/achievements/v9/thewrongtime.webp"
 
-image friends_first = "images/v10/Achievements/friendsfirst.webp" # Need Image
-image rawr_im_a_lion = "images/v10/Achievements/rawrimalion.webp" # Need Image
-image bathroom_sex = "images/v10/Achievements/bathroomsex.webp" # Need Image
-image forbidden_romance = "images/v10/Achievements/forbiddenromance.webp" # Need Image
-image on_the_court = "images/v10/Achievements/onthecourt.webp" # Need Image
-image hard_decisions = "images/v10/Achievements/harddecisions.webp" # Need Image
+image friends_first = "images/achievements/v10/friendsfirst.webp"
+image rawr_im_a_lion = "images/achievements/v10/rawrimalion.webp"
+image bathroom_sex = "images/achievements/v10/bathroomsex.webp"
+image forbidden_romance = "images/achievements/v10/forbiddenromance.webp"
+image on_the_court = "images/achievements/v10/onthecourt.webp"
+image hard_decisions = "images/achievements/v10/harddecisions.webp"
 
 # v1.0 - v2.0
 image s14 = "images/s14.webp"
@@ -165,6 +164,8 @@ image youfinishadam = Movie(play="images/youfinishadam.webm", start_image="image
 image adamfinish = Movie(play="images/adamfinish.webm", start_image="images/adamfinishstart.webp", image="images/adamfinishpic.webp", loop=False)
 
 # v6.0
+image flyer = "images/flyer.webp"
+
 image emvid1 = Movie(play="images/emvid1.webm", image="images/em1end.webp", start_image="images/em1start.webp")
 image emvid2 = Movie(play="images/emvid2.webm", image="images/em2end.webp", start_image="images/em2start.webp")
 image emvid3 = Movie(play="images/emvid3.webm", image="images/em3end.webp", start_image="images/em3start.webp")

@@ -9852,7 +9852,6 @@ label amberhocodate:
 
     $ ecstatic = True
     $ grantAchievement("ecstatic")
-        
 
     u "Now what?"
 
