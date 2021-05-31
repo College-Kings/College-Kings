@@ -17327,10 +17327,10 @@ label fr4chloeending:
     # towel drop sound #check - add towel.mp3 sound file
     play sound "sounds/towel.mp3"
 
-    if config_censored and not renpy.loadable("v8/scene01.rpy"):
+    if config_censored and not renpy.loadable("v8/scene1.rpy"):
         call screen censoredPopup("v7end")
     elif config_censored:
-        call screen censoredPopup("v7end") # Needs to be v8_nsfwLabel...
+        call screen censoredPopup("v8s2_nsfwSkipLabel1")
 
     scene sfr4cl62 #Chloe steps out of the bathroom. We see her feet and a bathrobe drop to the floor.
     with dissolve
