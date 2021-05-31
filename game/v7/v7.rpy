@@ -9886,7 +9886,6 @@ label amberhocodate:
     $ ecstatic = True
     $ grantAchievement("ecstatic")
         
-
     u "Now what?"
 
     scene sfr4am6f # amber smiling, with one eyebrow raised a bit at you mouth open
