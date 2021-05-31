@@ -1,16 +1,21 @@
 python early:
     import os
 
-    if renpy.loadable("bugTesting_Overwrite.rpy"):
+    if renpy.loadable("bugTesting/bugTesting_Overwrite.rpy"):
         os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpy"))
-    if renpy.loadable("bugTesting_Overwrite.rpyc"):
+    if renpy.loadable("bugTesting/bugTesting_Overwrite.rpyc"):
         os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpyc"))
 
-    if renpy.loadable("phonescript.rpy"):
+    if renpy.loadable("phone/phonescript.rpy"):
         os.remove(os.path.join(config.basedir, "game", "phone", "phonescript.rpy"))
-    if renpy.loadable("phonescript.rpyc"):
+    if renpy.loadable("phone/phonescript.rpyc"):
         os.remove(os.path.join(config.basedir, "game", "phone", "phonescript.rpyc"))
-    
+
+    if renpy.loadable("phone/phoneStyle.rpy"):
+        os.remove(os.path.join(config.basedir, "game", "phone", "phoneStyle.rpy"))
+    if renpy.loadable("phone/phoneStyle.rpyc"):
+        os.remove(os.path.join(config.basedir, "game", "phone", "phoneStyle.rpyc"))
+
     if renpy.loadable("scriptv06.rpy"):
         os.remove(os.path.join(config.basedir, "game", "scriptv06.rpy"))
     if renpy.loadable("scriptv06.rpyc"):
@@ -130,6 +135,9 @@ label after_load:
                     for reply in message.replies:
                         try: reply.func
                         except AttributeError: reply.func = None
+
+                        try: reply.disabled
+                        except AttributeError: reply.disabled = False
             except AttributeError: pass
 
         # Variables
