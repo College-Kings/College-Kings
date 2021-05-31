@@ -20,124 +20,119 @@ label v10_leave_fight:
 
             u "(Today really didn't go as planned... This is the worst fucking feeling.)"
 
-        scene v10sraf1c # TPP. Same camera as v10swaf1. Show MC sitting on bed in his room. MC reacts to someone knocking on his door.
-        with dissolve
-        play sound "sounds/knock.mp3"
+        if v10_ryan_fight:
+            scene v10sraf1c # TPP. Same camera as v10swaf1. Show MC sitting on bed in his room. MC reacts to someone knocking on his door.
+            with dissolve
+            play sound "sounds/knock.mp3"
 
-        pause 0.5
+            pause 0.5
 
-        menu:
-            "Act like you're asleep":
-                scene v10sraf1c
-                with dissolve
+            menu:
+                "Act like you're asleep":
+                    scene v10sraf1c
+                    with dissolve
 
-                u "(Enough for today, I'm going to sleep.)"
+                    u "(Enough for today, I'm going to sleep.)"
 
-                scene v10sraf2 # TPP. Show MC sitting in bed. He gets in the bed, deciding to go to sleep.
-                with dissolve
-                pause 0.5
+                    scene v10sraf2 # TPP. Show MC sitting in bed. He gets in the bed, deciding to go to sleep.
+                    with dissolve
+                    pause 0.5
            
-            "Answer the door":
-                scene v10sraf3 # FPP. Show the door in MC's Wolves room. MC is sitting on the bed.
-                with dissolve
-
-                u "Yeah?"
-
-                if v10_ryan_win: # RCS - MC is a Wolf and won the fight.
-                    scene v10sraf3a # FPP. Same camera as v10sraf3. Show Chris, Sebastian and Imre entering MC's room. They are all smiling.
+                "Answer the door":
+                    scene v10sraf3 # FPP. Show the door in MC's Wolves room. MC is sitting on the bed.
                     with dissolve
 
-                    pause 0.5
+                    u "Yeah?"
+
+                    if v10_ryan_win: # RCS - MC is a Wolf and won the fight.
+                        scene v10sraf3a # FPP. Same camera as v10sraf3. Show Chris, Sebastian and Imre entering MC's room. They are all smiling.
+                        with dissolve
+
+                        pause 0.5
                     
-                    scene v10sraf3b # FPP. Same camera as v10sraf3. Show Chris, Sebastian and Imre. All smiling, Chris mouth open.
-                    with dissolve
+                        scene v10sraf3b # FPP. Same camera as v10sraf3. Show Chris, Sebastian and Imre. All smiling, Chris mouth open.
+                        with dissolve
 
-                    ch "If I ever have a son I'm naming him [name]! I'm so proud of you right now."
+                        ch "If I ever have a son I'm naming him [name]! I'm so proud of you right now."
 
-                    scene v10sraf3c # FPP. Same camera as v10sraf3. Show Chris, Sebastian and Imre. All smiling, Sebastian mouth open.
-                    with dissolve
+                        scene v10sraf3c # FPP. Same camera as v10sraf3. Show Chris, Sebastian and Imre. All smiling, Sebastian mouth open.
+                        with dissolve
 
-                    se "Looks like guys really belong into the Wolves. Well done."
+                        se "Looks like guys really belong into the Wolves. Well done."
 
-                    scene v10sraf3d # FPP. Same camera as v10sraf3. Show Chris, Sebastian and Imre. All smiling, all mouths closed.
-                    with dissolve
+                        scene v10sraf3d # FPP. Same camera as v10sraf3. Show Chris, Sebastian and Imre. All smiling, all mouths closed.
+                        with dissolve
 
-                    u "Imre either turned into a beast out there or his opponent was just trash."
+                        u "Imre either turned into a beast out there or his opponent was just trash."
 
-                    scene v10sraf3e # FPP. Same camera as v10sraf3. Show Chris, Sebastian and Imre. All smiling, Imre mouth open.
-                    with dissolve
+                        scene v10sraf3e # FPP. Same camera as v10sraf3. Show Chris, Sebastian and Imre. All smiling, Imre mouth open.
+                        with dissolve
 
-                    imre "*Laughs* That guy had no fucking chance, classic Apes. So much shit talk and no backing it up."
+                        imre "*Laughs* That guy had no fucking chance, classic Apes. So much shit talk and no backing it up."
 
-                    scene v10sraf3b
-                    with dissolve
+                        scene v10sraf3b
+                        with dissolve
 
-                    ch "Really well done guys, you're absolutely crushing it."
+                        ch "Really well done guys, you're absolutely crushing it."
 
-                    scene v10sraf3d
-                    with dissolve
+                        scene v10sraf3d
+                        with dissolve
 
-                    u "Thanks."
+                        u "Thanks."
 
-                    scene v10sraf3b
-                    with dissolve
+                        scene v10sraf3b
+                        with dissolve
 
-                    ch "Try to get some sleep, I'm sure it's the only privacy you're gonna have after a fight like that. *Chuckles*"
+                        ch "Try to get some sleep, I'm sure it's the only privacy you're gonna have after a fight like that. *Chuckles*"
 
-                    scene v10sraf3f # FPP. Same camera as v10sraf3. Show Chris, Sebastian and Imre leaving MC's room.
-                    with dissolve
+                        scene v10sraf3f # FPP. Same camera as v10sraf3. Show Chris, Sebastian and Imre leaving MC's room.
+                        with dissolve
 
-                    u "(Damn, I'm really THAT guy now!)"
+                        u "(Damn, I'm really THAT guy now!)"
 
-                    scene v10sraf2
-                    with dissolve
+                        scene v10sraf2
+                        with dissolve
 
-                    pause 0.5
+                        pause 0.5
                 
-                elif v10_ryan_fight: # RCS - MC is a Wolf and lost the fight
-                    scene v10sraf3g
-                    with dissolve
-                    pause 0.5
+                    else: # RCS - MC is a Wolf and lost the fight
+                        scene v10sraf3g
+                        with dissolve
+                        pause 0.5
                     
-                    scene v10sraf3h
-                    with dissolve
+                        scene v10sraf3h
+                        with dissolve
 
-                    ch "I don't know if it's true, but one of the guys mentioned that you might have held back cause you were friends with your opponent. There are no friends in the ring, [name]."
+                        ch "I don't know if it's true, but one of the guys mentioned that you might have held back cause you were friends with your opponent. There are no friends in the ring, [name]."
 
-                    scene v10sraf3i
-                    with dissolve
+                        scene v10sraf3i
+                        with dissolve
 
-                    se "Yeah, that shit's not okay. You can't get your ass kicked by an Ape."
+                        se "Yeah, that shit's not okay. You can't get your ass kicked by an Ape."
 
-                    scene v10sraf3j
-                    with dissolve
+                        scene v10sraf3j
+                        with dissolve
 
-                    u "I'm sorry guys. He was just better on the day."
+                        u "I'm sorry guys. He was just better on the day."
 
-                    scene v10sraf3h
-                    with dissolve
+                        scene v10sraf3h
+                        with dissolve
 
-                    ch "Try to get some sleep now, no use beating yourself up over it."
+                        ch "Try to get some sleep now, no use beating yourself up over it."
 
-                    scene v10sraf3f
-                    with dissolve
-                    pause 0.5
-                    
-                    scene v10sraf3f
-                    with dissolve
+                        scene v10sraf3f
+                        with dissolve
+                        pause 0.5
 
-                    u "(Damn, I really dropped the ball there...)"
+                        scene v10sraf3f
+                        with dissolve
 
-                    scene v10sraf2
-                    with fade
+                        u "(Damn, I really dropped the ball there...)"
 
-                    pause 0.5
+                        scene v10sraf2
+                        with fade
 
-                else:
-                    scene v10sraf2
-                    with fade
-
-                    pause 0.5
+                        pause 0.5
 
     else: # RCS - MC is an Ape
         scene v10sraf4 # TPP. MC sits down on bed in his room. Apes.
