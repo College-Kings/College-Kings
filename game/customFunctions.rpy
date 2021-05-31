@@ -36,3 +36,4 @@ init -1 python:
         except TypeError: pass
         achievement.grant(achieve) 
         achievement.sync()
+        

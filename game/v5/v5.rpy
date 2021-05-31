@@ -21,7 +21,7 @@ init python:
     def v5_reply5():
         addPoint("bro")
         contact_Amber.newMessage(_("Oh wow, I was just checking. :P"))
-        contact_Amber.addReply(_("Don't worry, you'll see me soon"), v5_reply6)
+        contact_Amber.addReply(_("Don't worry, you'll see me soon."), v5_reply6)
         contact_Amber.addReply(_("Haha, I'm fine."), v5_reply7)
 
     def v5_reply6():
@@ -4332,7 +4332,12 @@ label findimre:
         else:
             u "(I gotta make a decision. Should I help Imre, or meet Chloe?)"
 
-if persistent.ep < 6:
-    jump end_credits
-else:
+if not renpy.loadable("v6/v6.rpy"):
+    scene savenow
+    with Fade (1,0,1)
+    " "
+
+if renpy.loadable("v6/v6.rpy"):
     jump v6start
+else:
+    jump end_credits

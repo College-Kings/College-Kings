@@ -1,10 +1,8 @@
-init python:
-    persistent.ep = 10
-
-define config.enable_steam = False
-define config.developer = True
+define config.enable_steam = True # Make sure you switch main_menu_background image to steam version.
+define config.developer = False
 define config.console = True
-define config.debug = True
+define config_debug = False
+define config_censored = False
 
 define config.steam_appid = 1463120
 

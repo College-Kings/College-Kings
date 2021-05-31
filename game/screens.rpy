@@ -223,8 +223,6 @@ screen choice(items, time=3):
     image "gui/curves.webp"
     style_prefix "choice"
 
-    timer 0.001 action SetVariable("ischoice", True)
-
     default menuButtonsConfig = {
         0: {
             "background": "Left",
@@ -260,7 +258,7 @@ screen choice(items, time=3):
                         idle "gui/{}white.webp".format(menuButtonsConfig[count]["background"])
                     else:
                         idle "gui/{}blue.webp".format(menuButtonsConfig[count]["background"])
-                        action [item.action, SetVariable("ischoice", False)]
+                        action item.action
                     hover "gui/{}white.webp".format(menuButtonsConfig[count]["background"])
 
                 text item.caption.replace(" (disabled)", ""):
@@ -292,9 +290,9 @@ screen choice(items, time=3):
         timer time repeat False action [ SetVariable("timed", False), Hide('countdown'), Jump("choicetimer") ]
         bar value AnimatedValue(0, time, time, time) at alpha_dissolve # assuming you're using the alpha_dissolve transform from the wiki
 
-    if config.debug:
+    if config_debug:
         $ item = renpy.random.choice(items)
-        timer 0.1 action [item.action, SetVariable("ischoice", False)]
+        timer 0.1 action item.action
 
 style choicetuttext is text:
     font "fonts/OpenSans.ttf"
@@ -345,13 +343,11 @@ screen ingmenu():
 
     if realmode == True:
 
-        if ischoice == False:
+        if not renpy.get_screen("choice"):
 
             default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
 
             fixed:
-
-
                 ## This ensures the input will get the enter event before any of the
                 ## buttons do.
                 order_reverse True
@@ -361,8 +357,6 @@ screen ingmenu():
                     size 50
                     yalign 0.1
                     xalign 0.5
-
-
 
                 ## The grid of file slots.
                 grid 1 1:
@@ -583,45 +577,23 @@ screen ingmenu():
 ## menus.
 
 screen quick_menu():
-
-    ## Ensure this appears on top of other screens.
     zorder 100
 
-    if quick_menu:
-        if realmode == True:
-            if ischoice == False:
-                hbox:
-                    style_prefix "quick"
+    if quick_menu and not renpy.get_screen("choice"):
+            hbox:
+                style_prefix "quick"
 
-                    xalign 0.5
-                    yalign 1.0
+                align (0.5, 1.0)
 
-                    textbutton _("History") action ShowMenu('history')
-                    textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-                    textbutton _("Auto") action Preference("auto-forward", "toggle")
-                    textbutton _("Save") action ShowMenu('save')
-                    textbutton _("Q.Save") action QuickSave()
-                    textbutton _("Q.Load") action QuickLoad()
-                    textbutton _("Prefs") action ShowMenu('preferences')
-
-
-
-        else:
-
-            if quick_menu:
-                hbox:
-                    style_prefix "quick"
-
-                    xalign 0.5
-                    yalign 1.0
+                if not realmode:
                     textbutton _("Back") action Rollback()
-                    textbutton _("History") action ShowMenu('history')
-                    textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-                    textbutton _("Auto") action Preference("auto-forward", "toggle")
-                    textbutton _("Save") action ShowMenu('save')
-                    textbutton _("Q.Save") action QuickSave()
-                    textbutton _("Q.Load") action QuickLoad()
-                    textbutton _("Prefs") action ShowMenu('preferences')
+                textbutton _("History") action ShowMenu('history')
+                textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+                textbutton _("Auto") action Preference("auto-forward", "toggle") text_selected_color "#FFD166"
+                textbutton _("Save") action ShowMenu('save')
+                textbutton _("Q.Save") action QuickSave()
+                textbutton _("Q.Load") action QuickLoad()
+                textbutton _("Prefs") action ShowMenu('preferences')
 
     if youDamage == 3:
         image "images/3 hits.webp"
@@ -630,7 +602,7 @@ screen quick_menu():
     if youDamage >= 5:
         image "images/5 hits.webp"
 
-    if renpy.loadable("/bugTesting/bugTesting.rpy") and config.developer:
+    if renpy.loadable("bugTesting/bugTesting.rpy") and config.developer:
         hbox:
             style_prefix "quick"
             align (1.0, 1.0)
@@ -1190,7 +1162,7 @@ screen preferences():
     tag menu
     modal True
 
-    add "gui/settingspage.webp"
+    add "images/gui/settingsBackground.webp"
 
     # Display settings
     hbox:
@@ -1221,49 +1193,52 @@ screen preferences():
             action InvertSelected(Preference("transitions", "toggle"))
             text_size 28
 
-    # Real Life settings
+    # Skip NSFW Scenes
     hbox:
-        align (0.195, 0.671)
-        spacing 300
+        pos (280, 680)
+        spacing 310
 
-        if realmode:
-            textbutton _("On"):
-                action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False)]
-                text_color "#FFD166"
-                text_size 45
-            textbutton _("Off"):
-                action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True)]
-                text_size 45
-        else:
-            textbutton _("On"):
-                action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False)]
-                text_size 45
-            textbutton _("Off"):
-                action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True)]
-                text_color "#FFD166"
-                text_size 45
+        textbutton _("on"):
+            action SetVariable("config_censored", True)
+            text_size 45
+            text_selected_color "FFD166"
+
+        textbutton _("off"):
+            action SetVariable("config_censored", False)
+            text_size 45
+            text_selected_color "FFD166"
 
     # KCT settings
     hbox:
-        align (0.195, 0.874)
-        spacing 300
+        pos (180, 885)
+        spacing 85
 
-        if showkct:
-            textbutton _("On"):
-                action SetVariable("showkct", True)
-                text_color "#FFD166"
-                text_size 45
-            textbutton _("Off"):
-                action SetVariable("showkct", False)
-                text_size 45
-        else:
-            textbutton _("On"):
-                action SetVariable("showkct", True)
-                text_size 45
-            textbutton _("Off"):
-                action SetVariable("showkct", False)
-                text_color "#FFD166"
-                text_size 45
+        textbutton _("on"):
+            action SetVariable("showkct", True)
+            text_size 45
+            text_selected_color "FFD166"
+
+        textbutton _("off"):
+            action SetVariable("showkct", False)
+            text_size 45
+            text_selected_color "FFD166"
+
+    # Real Life settings
+    hbox:
+        pos (600, 885)
+        spacing 85
+
+        textbutton _("on"):
+            action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False)]
+            selected realmode
+            text_size 45
+            text_selected_color "FFD166"
+
+        textbutton _("off"):
+            action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True)]
+            selected not realmode
+            text_size 45
+            text_selected_color "FFD166"
 
     # Sliders
     style_prefix "slider"
@@ -1348,7 +1323,7 @@ style check_button_text:
     properties gui.button_text_properties("check_button")
 
 style slider_slider:
-    xsize 525
+    xsize 755
 
 style slider_button:
     properties gui.button_properties("slider_button")
@@ -2344,17 +2319,6 @@ style replybox_text is text:
     size 20
     xalign 0.5
     yalign 0.5
-
-style replies_style is button:
-    background "#147efb"
-    xpadding 15
-    ypadding 5
-    xmaximum 350
-
-style replies_style_text is text:
-    color "#ffffff"
-    font "fonts/OpenSans.ttf"
-    size 20
 
 style imgright is button:
     background "#147efb"

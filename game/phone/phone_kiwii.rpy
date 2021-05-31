@@ -43,8 +43,8 @@ init python:
             kiwiiApp.notification = True
             return comment
 
-        def addReply(self, message, func=None, numberLikes=0, mentions=None):
-            reply = KiwiiReply(message, func, numberLikes, mentions)
+        def addReply(self, message, func=None, numberLikes=0, mentions=None, disabled=False):
+            reply = KiwiiReply(message, func, numberLikes, mentions, disabled)
             
             # Append reply to last sent message
             try:
@@ -123,7 +123,7 @@ init python:
             self.profilePicture = self.getProfilePicture()
 
     class KiwiiReply(KiwiiComment):
-        def __init__(self, message, func=None, numberLikes=0, mentions=None):
+        def __init__(self, message, func=None, numberLikes=0, mentions=None, disabled=False):
             self.message = message
             self.func = func
 
@@ -134,6 +134,8 @@ init python:
             if isinstance(mentions, basestring): self.mentions = [mentions]
             elif isinstance(mentions, list): self.mentions = mentions
             else: self.mentions = []
+
+            self.disabled = disabled
 
     def totalLikes():
         total = 0
@@ -255,6 +257,7 @@ init -1:
 
 screen kiwiiTemplate():
     modal True
+    zorder 200
 
     use phoneTemplate:
         add Transform("images/phone/Kiwii/AppAssets/Background.webp", size=(376, 744)) at truecenter
@@ -289,6 +292,7 @@ screen kiwiiTemplate():
 screen kiwiiPreferences():
     tag phoneTag
     modal True
+    zorder 200
 
     $ kiwiiUsers["MC"]["profilePicture"] = profilePictures[profilePictures_count]
 
@@ -332,6 +336,7 @@ screen kiwiiPreferences():
 
 screen kiwiiApp():
     tag phoneTag
+    zorder 200
 
     $ kiwiiApp.notification = False
 
@@ -397,6 +402,7 @@ screen kiwiiApp():
 
 screen kiwiiPost(post):
     tag phoneTag
+    zorder 200
 
     use kiwiiTemplate:
 
@@ -452,12 +458,16 @@ screen kiwiiPost(post):
 
             for reply in post.getReplies():
                 textbutton reply.message:
-                    style "kiwii_reply"
                     text_style "kiwii_ReplyText"
-                    action [Hide("reply"), Function(post.selectedReply, reply)]
+                    if reply.disabled:
+                        style "reply_disabled"
+                    else:
+                        style "kiwii_reply"
+                        action [Hide("reply"), Function(post.selectedReply, reply)]
 
 screen liked_kiwii():
     tag phoneTag
+    zorder 200
 
     $ liked_kiwiPosts = filter(lambda post: post.liked, kiwiiPosts)
 
@@ -522,39 +532,9 @@ screen liked_kiwii():
 
 screen kiwii_image(img):
     modal True
+    zorder 300
 
     imagebutton:
         idle Transform(img, zoom=0.85)
         action Hide("kiwii_image")
         align (0.5, 0.5)
-
-style kiwii_PrefTextButton is button_text:
-    font "fonts/OpenSans-Bold.ttf"
-    size 50
-
-style kiwii_ProfileName is text:
-    font "fonts/OpenSans-Bold.ttf"
-    size 16
-    color "#000"
-    bold True
-
-style kiwii_CommentText is text:
-    font "fonts/OpenSans-Bold.ttf"
-    size 14
-    color "#000"
-
-style kiwii_LikeCounter is text:
-    font "fonts/OpenSans-Bold.ttf"
-    size 14
-    color "#000"
-
-style kiwii_ReplyText is text:
-    font "fonts/OpenSans-Bold.ttf"
-    size 20
-    color "#000"
-
-style kiwii_reply is button:
-    background "#fff"
-    xpadding 15
-    ypadding 5
-    xmaximum 350

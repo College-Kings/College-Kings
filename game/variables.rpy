@@ -57,7 +57,6 @@ default simtom = 1
 default tomdmg = 0
 default tomattack = 1
 default tomstance = 1
-default ischoice = False
 default emilyandben = False
 default forgiveemily = False
 default costumeaubrey = False

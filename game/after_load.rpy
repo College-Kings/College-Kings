@@ -10,12 +10,12 @@ python early:
         os.remove(os.path.join(config.basedir, "game", "phone", "phonescript.rpy"))
     if renpy.loadable("phone/phonescript.rpyc"):
         os.remove(os.path.join(config.basedir, "game", "phone", "phonescript.rpyc"))
-
+    
     if renpy.loadable("phone/phoneStyle.rpy"):
         os.remove(os.path.join(config.basedir, "game", "phone", "phoneStyle.rpy"))
     if renpy.loadable("phone/phoneStyle.rpyc"):
         os.remove(os.path.join(config.basedir, "game", "phone", "phoneStyle.rpyc"))
-
+    
     if renpy.loadable("scriptv06.rpy"):
         os.remove(os.path.join(config.basedir, "game", "scriptv06.rpy"))
     if renpy.loadable("scriptv06.rpyc"):
@@ -71,7 +71,7 @@ label after_load:
                 if renpy.loadable("images/phone/kiwii/posts/v{}/{}".format(i, kiwiiPost.img.split("/")[-1])):
                     kiwiiPost.img = "images/phone/kiwii/posts/v{}/{}".format(i, kiwiiPost.img.split("/")[-1])
                     break
-
+                    
             try: kiwiiPost.message = kiwiiPost.caption
             except AttributeError: pass
 

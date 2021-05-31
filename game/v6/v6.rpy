@@ -2752,6 +2752,9 @@ label emsex_a:
 
     pause 0.5
 
+    if config_censored:
+        call screen censoredPopup("v6_nsfwSkipLabel1")
+
     scene em6
     with dissolve
 
@@ -2951,6 +2954,8 @@ label emsex_a:
     u "Phew..."
 
     u "I still need to finish some of my assignments, so I kinda gotta go now."
+
+    label v6_nsfwSkipLabel1:
 
     scene em18b
     with dissolve
@@ -4018,6 +4023,9 @@ label aubreysexb: # aubreysex scene
 
     au "*Quiet moan*"
 
+    if config_censored:
+        call screen censoredPopup("wayhome")
+
     scene naub1a
     with dissolve
 
@@ -4439,13 +4447,16 @@ label afteraubrey:
     if aubreyrs:
         play sound "sounds/vibrate.mp3"
 
-        if meetaubrey:
+        if config_censored:
+            $ contact_Aubrey.newImgMessage("images/censoredPopup/censoredImage.webp", queue=False)
+        else:
             $ contact_Aubrey.newImgMessage("images/text3.webp", queue=False)
+
+        if meetaubrey:
             $ contact_Aubrey.newMessage(_("Still shaking from earlier"), queue=False)
             $ contact_Aubrey.addReply(_("Hahaha, we should definitely do this more ;)"))
 
         else:
-            $ contact_Aubrey.newImgMessage("images/text3.webp", queue=False)
             $ contact_Aubrey.newMessage(_("You missed out today"), queue=False)
             $ contact_Aubrey.addReply(_("Daaaamn, I'll be there next time"))
 
@@ -10685,12 +10696,12 @@ label v6_fr3chris3: ### ENDING
     u "Holy shit."
     stop music fadeout 2.0
 
-if persistent.ep < 7:
+if not renpy.loadable("v7/v7.rpy"):
     scene savenow
     with Fade (1,0,1)
     " "
 
-if persistent.ep < 7:
-    jump end_credits
-else:
+if renpy.loadable("v7/v7.rpy"):
     jump v7start
+else:
+    jump end_credits

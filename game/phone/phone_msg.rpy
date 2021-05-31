@@ -44,8 +44,8 @@ init python:
 
             return message
 
-        def addReply(self, message, func=None, newMessage=False):
-            reply = Reply(message, func)
+        def addReply(self, message, func=None, newMessage=False, disabled=False):
+            reply = Reply(message, func, disabled)
 
             # Append reply to last sent message
             try:
@@ -62,8 +62,8 @@ init python:
 
             self.unlock()
 
-        def addImgReply(self, image, func=None, newMessage=False):
-            reply = ImgReply(image, func)
+        def addImgReply(self, img, func=None, newMessage=False, disabled=False):
+            reply = ImgReply(img, func, disabled)
 
             # Append reply to last sent message
             try:
@@ -138,20 +138,23 @@ init python:
             self.reply = None
 
     class Reply:
-        def __init__(self, message, func=None):
+        def __init__(self, message, func=None, disabled=False):
             self.message = message
             self.func = func
+            self.disabled = disabled
 
     class ImgReply:
-        def __init__(self, image, func=None):
+        def __init__(self, image, func=None, disabled=False):
             self.image = image
             self.func = func
+            self.disabled = disabled
 
 init offset = -1
 default contacts = []
 
 screen contactsscreen():
     tag phoneTag
+    zorder 200
 
     use phoneTemplate:
 
@@ -189,6 +192,8 @@ screen contactsscreen():
 
 screen messager(contact=None):
     tag phoneTag
+    modal True
+    zorder 200
 
     python:
         yadj.value = yadjValue
@@ -204,7 +209,7 @@ screen messager(contact=None):
 
             imagebutton:
                 idle "images/msgarrow.webp"
-                action [Show("contactsscreen"), Hide("messager"), Hide("reply")]
+                action [Show("contactsscreen"), Hide("messager"), Hide("messenger_reply")]
                 yalign 0.5
 
             vbox:
@@ -248,13 +253,14 @@ screen messager(contact=None):
 
                     textbutton "Reply":
                         style "replybox"
-                        action Show("reply", contact=contact)
+                        action Show("messenger_reply", contact=contact)
 
     if kiwii_firstTime:
         timer 0.1 action Show("kiwiiPopup")
 
 
-screen reply(contact=None):
+screen messenger_reply(contact=None):
+    zorder 200
 
     vbox:
         xpos 1200
@@ -264,17 +270,27 @@ screen reply(contact=None):
         for reply in contact.getReplies():
             if isinstance(reply, Reply):
                 textbutton reply.message:
-                    style "replies_style"
-                    action [Hide("reply"), Function(contact.selectedReply, reply)]
+                    if reply.disabled:
+                        style "reply_disabled"
+                        text_style "replies_style_text"
+                    else:
+                        style "replies_style"
+                        action [Hide("messenger_reply"), Function(contact.selectedReply, reply)]
 
             elif isinstance(reply, ImgReply):
                 imagebutton:
                     idle Transform(reply.image, zoom=0.15)
-                    style "replies_style"
-                    action [Hide("reply"), Function(contact.selectedReply, reply)]
+                    if reply.disabled:
+                        style "reply_disabled"
+                    else:
+                        style "replies_style"
+                        action [Hide("messenger_reply"), Function(contact.selectedReply, reply)]
 
 
 screen phone_image(img=None):
+    modal True
+    zorder 200
+    
     python:
         if os.path.splitext(img)[0][-3:] != "big":
             bigImage = os.path.splitext(img)[0] + "big" + os.path.splitext(img)[1]

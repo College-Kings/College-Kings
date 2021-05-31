@@ -1186,6 +1186,9 @@ label starta: #for compatibility only
         call screen v1_freeRoam1_2
 
     label v1_freeRoam1_aubrey:
+        if config_censored:
+            call screen censoredPopup("v1_freeRoam1_aubrey2")
+
         scene adamaubrey36
         stop music fadeout 2.0
         play music "music/msexy.mp3"
@@ -1677,7 +1680,7 @@ label efra:
     la "I think I'll drink."
 
     menu:
-        "You're missing out":
+        "You're missing out.":
             scene s73gr
             with dissolve
 
@@ -2024,6 +2027,10 @@ label at_bd:
     u "Probably not for a few hours yet."
 
     play music "music/msexy.mp3"
+
+    if config_censored:
+        call screen censoredPopup("v1_nsfwSkipLabel1")
+        
     scene sda2
     with dissolve
 
@@ -2231,14 +2238,14 @@ label at_bd:
 
         "Wake up":
             pass
-
+            
+    label v1_nsfwSkipLabel1:
     hide screen fantasyOverlay
 
     stop music fadeout 2.0
     $ renpy.end_replay()
 
     ### Next morning in your dorm, Imre seems to be gone.
-
     if v1_sda:
         scene s81
         with Fade (1,0,1)

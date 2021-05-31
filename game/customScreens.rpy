@@ -95,7 +95,7 @@ screen fightPopup(fightMove):
 
 screen kctPopup():
     modal True
-    zorder 200
+    zorder 300
 
     add "images/endfr.webp"
 
@@ -143,7 +143,6 @@ screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings_
             action Show("teamCredits")
 
 
-
 screen credits():
     tag credits
     modal True
@@ -153,7 +152,7 @@ screen credits():
         add "images/steamCredits.webp"
     else:
         add "images/patreonCredits.webp"
-        
+
     if config.enable_steam:
         imagebutton:
             xalign 0.5

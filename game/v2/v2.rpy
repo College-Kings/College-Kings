@@ -2741,6 +2741,9 @@ label try1new:
 
             menu:
                 "Risk it":
+                    if config_censored:
+                        call screen censoredPopup("v2_nsfwSkipLabel1")
+
                     $ caughtpeekingaubrey = renpy.random.choice([True, False])
 
                     if not caughtpeekingaubrey:
@@ -2759,6 +2762,8 @@ label try1new:
 
         "Don't peek":
             $ addPoint("bf")
+
+    label v2_nsfwSkipLabel1:
 
     scene s163
     with dissolve
@@ -2876,6 +2881,9 @@ label try2new:
 
             menu:
                 "Risk it":
+                    if config_censored:
+                        call screen censoredPopup("v2_nsfwSkipLabel2")
+
                     $ caughtpeekingaubrey = renpy.random.choice([True, False])
 
                     if not caughtpeekingaubrey:
@@ -2894,6 +2902,8 @@ label try2new:
 
         "Don't peek":
             $ addPoint("bf")
+
+    label v2_nsfwSkipLabel2:
 
     scene s167
     with dissolve
@@ -3023,6 +3033,9 @@ label try3new:
 
             menu:
                 "Risk it":
+                    if config_censored:
+                        call screen censoredPopup("v2_nsfwSkipLabel3")
+
                     $ caughtpeekingaubrey = renpy.random.choice([True, False])
 
                     if not caughtpeekingaubrey:
@@ -3041,6 +3054,7 @@ label try3new:
         "Don't peek":
             $ addPoint("bf")
 
+    label v2_nsfwSkipLabel3:
     scene s171
     with dissolve
 
@@ -3275,6 +3289,9 @@ label try4new:
 
             menu:
                 "Risk it":
+                    if config_censored:
+                        call screen censoredPopup("v2_nsfwSkipLabel4")
+
                     $ caughtpeekingpenelope = renpy.random.choice([True, False])
 
                     if not caughtpeekingpenelope:
@@ -3294,6 +3311,7 @@ label try4new:
         "Don't peek":
             $ addPoint("bf")
 
+    label v2_nsfwSkipLabel4:
     scene s163
     with dissolve
 
@@ -3417,6 +3435,9 @@ label try5new:
 
             menu:
                 "Risk it":
+                    if config_censored:
+                        call screen censoredPopup("v2_nsfwSkipLabel5")
+
                     $ caughtpeekingpenelope = renpy.random.choice([True, False])
 
                     if not caughtpeekingpenelope:
@@ -3435,6 +3456,7 @@ label try5new:
         "Don't peek":
             $ addPoint("bf")
 
+    label v2_nsfwSkipLabel5:
     scene s167
     with dissolve
 
@@ -3549,6 +3571,9 @@ label try6new:
 
             menu:
                 "Risk it":
+                    if config_censored:
+                        call screen censoredPopup("v2_nsfwSkipLabel6")
+
                     $ caughtpeekingpenelope = renpy.random.choice([True, False])
 
                     if not caughtpeekingpenelope:
@@ -3567,6 +3592,7 @@ label try6new:
         "Don't peek":
             $ addPoint("bf")
 
+    label v2_nsfwSkipLabel6:
     scene s171
     with dissolve
 
