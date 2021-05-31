@@ -253,6 +253,9 @@ label v10_lauren_room:
 
         u "(Oh wow!)"
 
+        if config_censored:
+            call screen censoredPopup("v10s24_nsfwSkipLabel1")
+
         scene v10lar7 # TPP Show Lauren on MC's lap facing him, MC arms around her waist, Lauren eyes closed and mouth open
         with dissolve
 
@@ -406,22 +409,22 @@ label v10_lauren_room:
                 with dissolve
 
                 pause 0.5
+                label v10s24_nsfwSkipLabel1:
+                    # Back sitting on the bed
+                    scene v10lar3b
+                    with fade
 
-                # Back sitting on the bed
-                scene v10lar3b
-                with fade
+                    la "I always enjoy spending time with you. With you I'm just... comfortable."
 
-                la "I always enjoy spending time with you. With you I'm just... comfortable."
+                    scene v10lar3c
+                    with dissolve
 
-                scene v10lar3c
-                with dissolve
+                    u "I feel the same way."
 
-                u "I feel the same way."
+                    scene v10lar3b
+                    with dissolve
 
-                scene v10lar3b
-                with dissolve
-
-                la "It'd be nice if-"
+                    la "It'd be nice if-"
 
     else: # Just friends with Lauren
         scene v10lar3f

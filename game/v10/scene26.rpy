@@ -384,6 +384,9 @@ label v10_amber_skatepark:
 
         u "*Whisper* Here?"
 
+        if config_censored:
+            call screen censoredPopup("v10s26_nsfwSkipLabel1")
+
         scene v10sasp5d # FPP. Same camera as v10sasp5. Show Amber looking down and attempting to pull MC's pants down. Smiling, mouth open.
         with dissolve
 
@@ -966,15 +969,16 @@ label v10_amber_skatepark:
 
                 am "I'll see you around."
 
-                scene v10sasp5f
-                with dissolve
+                label v10s26_nsfwSkipLabel1:
+                    scene v10sasp5f
+                    with dissolve
 
-                u "See ya."
+                    u "See ya."
 
-                scene v10sasp5g
-                with dissolve
+                    scene v10sasp5g
+                    with dissolve
 
-                pause 0.75
+                    pause 0.75
 
     $ renpy.end_replay()
     scene v10sasp5g

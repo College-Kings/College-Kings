@@ -23,7 +23,10 @@ label v10_tues_room_night:
             u "(And it continues.)"
 
             python:
-                contact_Lauren.newImgMessage("images/v10/scene 32/v9lauText.webp", queue=False)
+                if config_censored:
+                    contact_Lauren.newImgMessage("images/gui/censoredPopup/censoredBackground.webp")
+                else:
+                    contact_Lauren.newImgMessage("images/v10/scene 32/v9lauText.webp", queue=False)
                 contact_Lauren.newMessage("Sweet Dreams ;)", queue=False)
                 contact_Lauren.addReply("They will be now.")
 
@@ -82,7 +85,10 @@ label v10_tues_room_night:
             u "(And it continues.)"
 
             python:
-                contact_Lauren.newImgMessage("images/v10/scene 32/v9lauText.webp", queue=False)
+                if config_censored:
+                    contact_Lauren.newImgMessage("images/gui/censoredPopup/censoredBackground.webp")
+                else:
+                    contact_Lauren.newImgMessage("images/v10/scene 32/v9lauText.webp", queue=False)
                 contact_Lauren.newMessage("Sweet Dreams ;)", queue=False)
                 contact_Lauren.addReply("They will be now.")
 

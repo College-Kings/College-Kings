@@ -892,7 +892,6 @@ menu:
         if aubreyrs:
 
             label v9_aubrey_scene_lake:
-
                 scene v9slake6
                 with dissolve
 
@@ -918,6 +917,9 @@ menu:
                 with dissolve
 
                 u "What is this?"
+
+                if config_censored:
+                    call screen censoredPopup("v9s7_nsfwSkipLabel1")
 
                 scene v9slake8 # same as 8a, mouth open
                 with dissolve
@@ -1023,6 +1025,7 @@ menu:
 
                 u "That does sound fair, haha."
 
+            label v9s7_nsfwSkipLabel1:
                 scene black
                 with dissolve
 

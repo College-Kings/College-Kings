@@ -465,6 +465,9 @@ label v9_emily_dorm:
 
     play music "music/v9/Scene 16/Scene Track 16.mp3" fadein 2
 
+    if config_censored:
+        call screen censoredPopup("v9s16_nsfwSkipLabel1")
+
     scene v9emi13b # FPP. Same camera as v9emi13, on her knees on the floor looking up at camera, seductive expression, Emily mouth open.
     with dissolve
 
@@ -729,6 +732,7 @@ label v9_emily_dorm:
 
     em "No, I'm great. I can't believe I came that way. It was so intense."
 
+label v9s16_nsfwSkipLabel1:
     scene v9emi34a
     with dissolve
 

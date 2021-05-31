@@ -80,6 +80,9 @@ label v9_ri_sex:
 
     u "Can't help it. You're so fucking hot."
 
+    if config_censored:
+        call screen censoredPopup("v9s34_nsfwSkipLabel1")
+
     scene v9ris6a # FPP. Same camera as v9ris6, seductive, mouth open.
     with dissolve
 
@@ -388,6 +391,8 @@ label v9_ri_sex:
     with dissolve
 
     ri "Come on, sleepyhead. Naptime's over."
+
+label v9s34_nsfwSkipLabel1:
 
     scene v9ris25a # FPP. Same camera as v9ris25a, smile, mouth closed.
     with dissolve

@@ -2955,8 +2955,7 @@ label emsex_a:
 
     u "I still need to finish some of my assignments, so I kinda gotta go now."
 
-    label v6_nsfwSkipLabel1:
-
+label v6_nsfwSkipLabel1:
     scene em18b
     with dissolve
 
@@ -4448,7 +4447,7 @@ label afteraubrey:
         play sound "sounds/vibrate.mp3"
 
         if config_censored:
-            $ contact_Aubrey.newImgMessage("images/censoredPopup/censoredImage.webp", queue=False)
+            $ contact_Aubrey.newImgMessage("images/gui/censoredPopup/censoredBackground.webp", queue=False)
         else:
             $ contact_Aubrey.newImgMessage("images/text3.webp", queue=False)
 

@@ -2239,7 +2239,7 @@ label at_bd:
         "Wake up":
             pass
             
-    label v1_nsfwSkipLabel1:
+label v1_nsfwSkipLabel1:
     hide screen fantasyOverlay
 
     stop music fadeout 2.0

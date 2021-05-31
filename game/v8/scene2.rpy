@@ -229,8 +229,10 @@ label v8_cl_start:
     with dissolve
     cl "What???"
 
+label v8s2_nsfwSkipLabel1:
     scene v8s22b # Chloe hugging Lindsey in the doorway, comforting her. Lindsey crying on Chloe's shoulder. Chloe's mouth should be open if it's visible in the shot
     with dissolve
+    
     cl "I'm so sorry, Lindsey."
     cl "Let's talk outside, okay?"
     li "Hmmm *sobs*"

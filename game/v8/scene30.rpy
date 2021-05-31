@@ -16,6 +16,9 @@ label amber_sex_at_joshs:
     with dissolve
     pause
 
+    if config_censored:
+        call screen censoredPopup("v8s30_nsfwSkipLabel1")
+
     scene v8amber4 # TPP. Amber and MC standing in front of the bed (with MC towards the bed), making out passionately with Amber holding MC's head
     with dissolve
     pause 1
@@ -214,6 +217,7 @@ label amber_sex_at_joshs:
     with Fade(0.75, 0.25, 0.75)
     pause 1
 
+label v8s30_nsfwSkipLabel1:
     scene v8amber14 # TPP (MC and Amber in same position as v8amber13) but camera moved closer to focus on Amber. Amber satisfied look, smiling, mouth open. MC's face need not be in the frame but if it is, his mouth is closed. Amber should not be looking at the MC, but staring into the distance
     with dissolve
     am "My God, you were amazing."

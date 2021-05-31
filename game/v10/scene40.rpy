@@ -62,6 +62,9 @@ label v10_riley_sex:
 
         u "You look uhm-"
 
+        if config_censored:
+            call screen censoredPopup("v10_mc_pen_call")
+        
         scene v10srds3b # FPP. Same camera as v10srds3. Show Riley wrapped in a towel, her hair down and still wet. She has a little smile, mouth open.
         with dissolve
 

@@ -225,6 +225,9 @@ label v10_chloe_gym:
 
                 pause 0.5
 
+                if config_censored:
+                    call screen censoredPopup("v10s30_nsfwSkipLabel1")
+
                 scene v10chg10 # FPP Close up on Chloe, laying on her back on the bench, small smile and mouth closed, mc reaching to pull off her top.
                 with dissolve
 
@@ -335,11 +338,12 @@ label v10_chloe_gym:
 
                 pause 0.5
 
-                scene v10chg11b # TPP Same angle and expression as v10chg11a, Chloe's mouth open
-                with dissolve
+                label v10s30_nsfwSkipLabel1:
+                    scene v10chg11b # TPP Same angle and expression as v10chg11a, Chloe's mouth open
+                    with dissolve
 
-                cl "Okay good, see you around."
-                $ renpy.end_replay()
+                    cl "Okay good, see you around."
+                    $ renpy.end_replay()
 
             "Don't risk it":
                 scene v10chg6

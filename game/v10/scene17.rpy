@@ -292,6 +292,9 @@ label v10_aubrey_house:
 
                 u "I'd watch all those movies."
 
+                if config_censored:
+                    call screen censoredPopup("v10_aubrey_room")
+
                 scene v10auh5a # FPP Same angle and expression as v10auh5, Aubrey mouth open
                 with dissolve
 

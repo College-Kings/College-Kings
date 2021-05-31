@@ -6,7 +6,10 @@
 init python:
     def v8s19_reply1():
         contact_Amber.newMessage(_("It's only fair, right? Make us even"))
-        if joinwolves:
+        if config_censored:
+            contact_Amber.addImgReply("images/gui/censoredPopup/censoredBackground.webp")
+
+        elif joinwolves:
             contact_Amber.addImgReply("images/v8/Scene 19/w_dick_pic.webp")
 
         else:
@@ -18,7 +21,13 @@ init python:
         contact_Amber.addReply(_("Aw man you're driving me crazy"))
         contact_Amber.newMessage(_("So do something about it"))
         contact_Amber.addReply(_("Now? What about you?"))
-        contact_Amber.newImgMessage("images/v8/Scene 19/amb_pussy_pic.webp")
+        
+        if config_censored:
+            contact_Amber.newImgMessage("images/gui/censoredPopup/censoredBackground.webp")
+
+        else:
+            contact_Amber.newImgMessage("images/v8/Scene 19/amb_pussy_pic.webp")
+
         contact_Amber.addReply(_("Aw fuck"))
         contact_Amber.newMessage(_("You like?"))
         contact_Amber.addReply(_("I love! You're so hot!"))

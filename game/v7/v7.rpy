@@ -6491,18 +6491,17 @@ label after_history:
                 pause 0.5
 
             label v7_nsfwSkipLabel2:
+                scene s907 # Camera - FPP. MC and Cameron running through the door. Cameron is in front of MC with his phone in his hand. MC is almost out of the door
+                with vpunch
 
-            scene s907 # Camera - FPP. MC and Cameron running through the door. Cameron is in front of MC with his phone in his hand. MC is almost out of the door
-            with vpunch
+                $ leeway = True
+                $ grantAchievement("lee_way")
+                    
 
-            $ leeway = True
-            $ grantAchievement("lee_way")
-                
+                lee "Who was that?{w} {b}WHO WAS THAT?{/b}"
+                ca "HAHAHA! FUCKIN' ACES!"
 
-            lee "Who was that?{w} {b}WHO WAS THAT?{/b}"
-            ca "HAHAHA! FUCKIN' ACES!"
-
-            jump after_cam_history
+                jump after_cam_history
 
         "...":
             jump lee_pants_fail
@@ -7708,31 +7707,30 @@ label cameron_thurs_tasks:
                     pause 0.5
 
                     label v7_nsfwSkipLabel3:
+                        scene scc34 # FPP. Show Cameron and MC back at campus, Cameron hugs MC, smile on both faces.
+                        with fade
 
-                    scene scc34 # FPP. Show Cameron and MC back at campus, Cameron hugs MC, smile on both faces.
-                    with fade
+                        pause 0.5
 
-                    pause 0.5
+                        scene scc25a # FPP. Same as scc25a.
+                        with dissolve
 
-                    scene scc25a # FPP. Same as scc25a.
-                    with dissolve
+                        ca "That was sick!"
 
-                    ca "That was sick!"
+                        scene scc25 # FPP. Same as scc25.
+                        with dissolve
 
-                    scene scc25 # FPP. Same as scc25.
-                    with dissolve
+                        u "Haha, yeah. They were pretty hot. Good pick."
 
-                    u "Haha, yeah. They were pretty hot. Good pick."
+                        scene scc15a # FPP. Same as scc15a.
+                        with dissolve
 
-                    scene scc15a # FPP. Same as scc15a.
-                    with dissolve
+                        ca "I know where the good ones are. You ready for the next?"
 
-                    ca "I know where the good ones are. You ready for the next?"
+                        scene scc15 # FPP. Same as scc15.
+                        with dissolve
 
-                    scene scc15 # FPP. Same as scc15.
-                    with dissolve
-
-                    u "Yeah."
+                        u "Yeah."
 
                 "...":
                     label av_crickets_no_drop:
@@ -7889,8 +7887,7 @@ label cameron_thurs_tasks:
 
     pause 0.5
 
-    label v7_nsfwSkipLabel4:
-
+label v7_nsfwSkipLabel4:
     scene scc64 # FPP. Close up Cameron, now in the house, REALLY ANGRY, MOUTH WIDE OPEN.
     with dissolve
 
@@ -9187,8 +9184,7 @@ label riclimax:
     with dissolve
     ri "I'll see you tomorrow [name]."
 
-    label v7_nsfwSkipLabel1:
-
+label v7_nsfwSkipLabel1:
     scene risex15a # MC leaving Riley's dorm
     with dissolve
     u "Yeah, see you tomorrow."
@@ -9881,8 +9877,7 @@ label amberhocodate:
     scene sfr4am6d # close up amber, not holding pills, drinking out of a water bottle
     with dissolve
 
-    label v7_nsfwSkipLabel5:
-
+label v7_nsfwSkipLabel5:
     $ ecstatic = True
     $ grantAchievement("ecstatic")
         
@@ -17327,10 +17322,10 @@ label fr4chloeending:
     # towel drop sound #check - add towel.mp3 sound file
     play sound "sounds/towel.mp3"
 
-    if config_censored and not renpy.loadable("v8/scene01.rpy"):
+    if config_censored and not renpy.loadable("v8/scene2.rpy"):
         call screen censoredPopup("v7end")
     elif config_censored:
-        call screen censoredPopup("v7end") # Needs to be v8_nsfwLabel...
+        call screen censoredPopup("v8s2_nsfwSkipLabel1")
 
     scene sfr4cl62 #Chloe steps out of the bathroom. We see her feet and a bathrobe drop to the floor.
     with dissolve
