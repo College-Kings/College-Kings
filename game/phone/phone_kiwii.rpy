@@ -503,7 +503,7 @@ screen liked_kiwii():
                         imagebutton:
                             idle Transform(post.img, zoom=0.17)
                             action Show("kiwii_image", img=post.img)
-                        text post.caption style "kiwii_CommentText" xalign 0.5
+                        text post.message style "kiwii_CommentText" xalign 0.5
 
                     hbox:
                         xoffset 20
