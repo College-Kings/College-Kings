@@ -2079,9 +2079,9 @@ label conl:
 
         au "Yeah..."
 
-        label continuem: #for compatibility only
-        scene aub1start
-        with dissolve
+label continuem: #for compatibility only
+    scene aub1start
+    with dissolve
 
     menu:
         "Kiss her":
