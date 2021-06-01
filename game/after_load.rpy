@@ -57,8 +57,7 @@ label after_load:
         kiwiiApp.img = "images/phone/kiwii/appAssets/kiwiiIcon.webp"
 
         # Kiwii Users
-        for user in kiwiiUsers:
-            kiwiiUsers[user]["profilePicture"] = os.path.splitext(kiwiiUsers[user]["profilePicture"])[0].replace("Profile Pictures", "profilePictures") + ".webp"
+        kiwiiUsers = kiwii_users()
 
         # Kiwii Posts
         for kiwiiPost in kiwiiPosts:
