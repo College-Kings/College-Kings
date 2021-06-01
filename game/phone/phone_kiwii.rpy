@@ -245,6 +245,10 @@ init python:
         "Kai": {
             "username": "Kai",
             "profilePicture": "images/phone/kiwii/profilePictures/kaipp.webp"
+        },
+        "Lindsey": {
+            "username": "Lindsey",
+            "profilePicture": "images/phone/kiwii/profilePictures/lindseypp.webp"
         }
     }
 
