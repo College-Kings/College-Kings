@@ -293,9 +293,8 @@ label v10_lauren_room:
 
                 if laurenrs or ((v1_laurenKiss or laurenkissb) and kct == "loyal"):
 
-                    $ laurenrs = True
-
                     if not laurenrs:
+                        $ laurenrs = True
                         call screen kctPopup
                         
                     image v10lauts = Movie(play="images/v10/Scene 24/v10lauts.webm", loop=True, image="images/v10/Scene 24/v10lautsStart.webp", start_image="images/v10/Scene 24/v10lautsStart.webp") # TPP MC's arms around Lauren's waist while he sucks on her nipple, Lauren eyes rolled back in pleasure
