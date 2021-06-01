@@ -1366,15 +1366,15 @@ label conyourdorm:
 
     $ v7_kiwiiPost2 = KiwiiPost("Lauren", "v7/lapost1.webp", _("Wishing I could go back..."), numberLikes=39)
     $ v7_kiwiiPost2.newComment("Autumn", _("That was such a great vacation!"), 2, queue=False)
-    $ v7_kiwiiPost2.newComment("Penelope", _("Looks beautiful"), 3, queue=False)
+    $ v7_kiwiiPost2.newComment("Penelope", _("Omg beautiful!"), 3, queue=False)
     $ v7_kiwiiPost2.addReply(_("You're a cutie!"), v7_kiwiiReply3, numberLikes=renpy.random.randint(3, 10))
     $ v7_kiwiiPost2.addReply(_("Winter vacations are the best"), v7_kiwiiReply4, numberLikes=renpy.random.randint(10, 17))
 
     $ v7_kiwiiPost3 = KiwiiPost("Aubrey", "v7/aupost1.webp", _("Finally changed my profile pic!"), numberLikes=133)
     $ v7_kiwiiPost3.newComment("Cameron", _("You put the hot into thot"), 2, queue=False)
     $ v7_kiwiiPost3.newComment("Josh", _("You still single?"), 3, queue=False)
-    $ v7_kiwiiPost3.newComment("Riley", _("I'm sooo jealous of your hair!"), 6, queue=False)
-    $ v7_kiwiiPost3.newComment("Chloe", _("Most beautiful girl in the world"), 6, queue=False)
+    $ v7_kiwiiPost3.newComment("Riley", _("Holy hell... gorgeous Aubs!"), 6, queue=False)
+    $ v7_kiwiiPost3.newComment("Chloe", _("Most beautiful girl in the world <3"), 6, queue=False)
     $ v7_kiwiiPost3.addReply(_("I'd destroy you in Air hockey!"), v7_kiwiiReply5, mentions="Aubrey", numberLikes=renpy.random.randint(15, 25))
 
     if emilyrs: # first riley texts, then once you've opened the app you get 2 more messages.
@@ -5492,7 +5492,7 @@ label after_pledges:
         $ v7_kiwiiPost5 = KiwiiPost("Chris", "v7/chpost1.webp", _("One of us!"), numberLikes=133, mentions="MC")
         $ v7_kiwiiPost5.newComment("Cameron", _("Losers"), 3, queue=False)
         $ v7_kiwiiPost5.newComment("Imre", _("Hell yeah bro!"), 14, queue=False)
-        $ v7_kiwiiPost5.newComment("Aubrey", _("Wohoo!"), 35, queue=False)
+        $ v7_kiwiiPost5.newComment("Aubrey", _("Woohoo!"), 35, queue=False)
 
     if emilyText:
         play sound "sounds/vibrate.mp3"

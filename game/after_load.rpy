@@ -75,8 +75,11 @@ label after_load:
             try: kiwiiPost.message = kiwiiPost.caption
             except AttributeError: pass
 
-            if kiwiiPost.message[0] == "[" and kiwiiPost.message[1] != "[":
-                kiwiiPost.message = "[" + kiwiiPost.message
+            try:
+                if kiwiiPost.message[0] == "[" and kiwiiPost.message[1] != "[":
+                    kiwiiPost.message = "[" + kiwiiPost.message
+            except IndexError:
+                pass
 
             try: kiwiiPost.sentComments = kiwiiPost.comments
             except AttributeError: pass

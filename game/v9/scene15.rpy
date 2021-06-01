@@ -251,7 +251,7 @@ label v9_thur_room_w_cam_no_punch:
     with dissolve
     sa "You better check it."
 
-    $ s15KiwiiPost = KiwiiPost("Sebastian", "v9/v9hlw20.webp", numberLikes=renpy.random.randint(100, 200))
+    $ s15KiwiiPost = KiwiiPost("Sebastian", "v9/v9hlw20.webp", "", numberLikes=renpy.random.randint(100, 200))
     $ s15KiwiiPost.newComment("Chris", "Wow, hope he's OK!", numberLikes=renpy.random.randint(100, 200), queue=False)
     $ s15KiwiiPost.newComment("Cameron", "Ahhhh! Preview of Saturday's Freshman Brawl!", numberLikes=renpy.random.randint(150, 170), queue=False)
 

@@ -249,6 +249,14 @@ init python:
         "Lindsey": {
             "username": "Lindsey",
             "profilePicture": "images/phone/kiwii/profilePictures/lindseypp.webp"
+        },
+        "Aaron": {
+            "username": "Aaron",
+            "profilePicture": "images/phone/kiwii/profilePictures/aaronpp.webp"
+        },
+        "Samantha": {
+            "username": "Samantha",
+            "profilePicture": "images/phone/kiwii/profilePictures/samanthapp.webp"
         }
     }
 

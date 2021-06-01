@@ -130,7 +130,7 @@ label apes_join_ceremony:
 
         scene v8apes8a
         with dissolve
-        ry "Wohoo!!!"
+        ry "Woohoo!!!"
 
         scene v8apes6a
         with dissolve
@@ -149,7 +149,7 @@ label apes_join_ceremony:
 
         scene v8apes8a # TPP. Close up shot of Ryan very excited, smiling wide
         with dissolve
-        ry "Wohoo!!!"
+        ry "Woohoo!!!"
 
         scene v8apes10
         with dissolve
@@ -189,7 +189,7 @@ label apes_join_ceremony:
 
         scene v8apes8a
         with dissolve
-        ry "Wohoo!!!"
+        ry "Woohoo!!!"
 
         scene v8apes10
         with dissolve
@@ -230,7 +230,7 @@ label apes_join_ceremony:
 
         scene v8apes8a
         with dissolve
-        ry "Wohoo!!!"
+        ry "Woohoo!!!"
 
         scene v8apes10
         with dissolve
