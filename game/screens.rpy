@@ -341,7 +341,7 @@ screen ingmenu():
 
     add "gui/savepage.webp"
 
-    if realmode == True:
+    if realmode:
 
         if not renpy.get_screen("choice"):
 
@@ -579,21 +579,21 @@ screen ingmenu():
 screen quick_menu():
     zorder 100
 
-    if quick_menu and not renpy.get_screen("choice"):
-            hbox:
-                style_prefix "quick"
+    if quick_menu and not (realmode and renpy.get_screen("choice")):
+        hbox:
+            style_prefix "quick"
 
-                align (0.5, 1.0)
+            align (0.5, 1.0)
 
-                if not realmode:
-                    textbutton _("Back") action Rollback()
-                textbutton _("History") action ShowMenu('history')
-                textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-                textbutton _("Auto") action Preference("auto-forward", "toggle") text_selected_color "#FFD166"
-                textbutton _("Save") action ShowMenu('save')
-                textbutton _("Q.Save") action QuickSave()
-                textbutton _("Q.Load") action QuickLoad()
-                textbutton _("Prefs") action ShowMenu('preferences')
+            if not realmode:
+                textbutton _("Back") action Rollback()
+            textbutton _("History") action ShowMenu('history')
+            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+            textbutton _("Auto") action Preference("auto-forward", "toggle") text_selected_color "#FFD166"
+            textbutton _("Save") action ShowMenu('save')
+            textbutton _("Q.Save") action QuickSave()
+            textbutton _("Q.Load") action QuickLoad()
+            textbutton _("Prefs") action ShowMenu('preferences')
 
     if youDamage == 3:
         image "images/3 hits.webp"
