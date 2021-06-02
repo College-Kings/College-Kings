@@ -103,7 +103,7 @@ label v9_room_thur_night:
 
             u "(Ugh, now what.)"
 
-            $ contact_Emily.newMessage(_("I'm bored. Come hang out."))
+            $ contact_Emily.newMessage(_("I'm bored. Come hang out."), queue=False)
             $ contact_Emily.addReply(_("Sure! Gimme a sec."))
             $ contact_Emily.addReply(_("It's kinda late"), v9s16_reply6)
             
