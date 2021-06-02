@@ -97,7 +97,7 @@ label v10_mc_vs_ryan_fight:
             else:
                 $ youHealth = 3
 
-            $ ryanHealth = 6
+            $ enemyhealth = 6
             $ youDamage = 0
             $ ryanDamage = 0
 
@@ -191,7 +191,7 @@ label v10_mc_vs_ryan_fight:
                 scene mc_ryan_Kick_hit
                 pause 1 # Trial/Error
                 
-                if ryanDamage >= ryanHealth:
+                if ryanDamage >= enemyhealth:
                     jump mc_ryanFightEnd
                 jump ryan_McAttack
 
@@ -208,7 +208,7 @@ label v10_mc_vs_ryan_fight:
                 scene mc_ryan_Jab_hit
                 pause 1 # Trial/Error
 
-                if ryanDamage >= ryanHealth:
+                if ryanDamage >= enemyhealth:
                     jump mc_ryanFightEnd
                 jump ryan_McAttack
 
@@ -224,7 +224,7 @@ label v10_mc_vs_ryan_fight:
                 scene mc_ryan_Hook_hit
                 pause 1 # Trial/Error
 
-                if ryanDamage >= ryanHealth:
+                if ryanDamage >= enemyhealth:
                     jump mc_ryanFightEnd
                 jump ryan_McAttack
 
@@ -240,7 +240,7 @@ label v10_mc_vs_ryan_fight:
                 scene mc_ryan_BodyJab_hit
                 pause 1 # Trial/Error
 
-                if ryanDamage >= ryanHealth:
+                if ryanDamage >= enemyhealth:
                     jump mc_ryanFightEnd
                 jump ryan_McAttack
 

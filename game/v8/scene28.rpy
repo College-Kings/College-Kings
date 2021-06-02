@@ -153,7 +153,7 @@ label int_deal_w_josh:
     else:
         $ youHealth = 3
 
-    $ larshealth = 6
+    $ enemyhealth = 6
     $ youDamage = 0
     $ larsdmg = 0
 
@@ -246,7 +246,7 @@ label mc_LarsKickHit: # MC Kicks Lars (Hits/No Block)
     $ larsdmg += 1
     scene MC_Lars_Kick_hit 
     pause 1 # Trial/Error
-    if larsdmg >= larshealth:
+    if larsdmg >= enemyhealth:
         jump mc_larsFightEnd
     jump lars_McAttack
 
@@ -263,7 +263,7 @@ label mc_LarsJabsHit: # MC Jabs Lars (Hits/No Block)
     $ larsdmg += 1
     scene MC_Lars_Jab_hit
     pause 0.7 # Trial/Error
-    if larsdmg >= larshealth:
+    if larsdmg >= enemyhealth:
         jump mc_larsFightEnd
     jump lars_McAttack
 
@@ -279,7 +279,7 @@ label mc_LarsHooksHit: # MC Hooks Lars (Hits/No Block)
     $ larsdmg += 1
     scene MC_Lars_Hook_hit
     pause 0.7 # Trial/Error
-    if larsdmg >= larshealth:
+    if larsdmg >= enemyhealth:
         jump mc_larsFightEnd
     jump lars_McAttack
 
@@ -296,7 +296,7 @@ label mc_LarsBodyhookHit: # MC Body Hooks Lars (Hits/No Block)
     $ larsdmg += 1
     scene MC_Lars_BodyJab_hit
     pause 0.7 # Trial/Error
-    if larsdmg >= larshealth:
+    if larsdmg >= enemyhealth:
         jump mc_larsFightEnd
     jump lars_McAttack
 

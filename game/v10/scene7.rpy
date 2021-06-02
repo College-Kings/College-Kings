@@ -89,7 +89,7 @@ label v10_mc_vs_imre_fight:
             else:
                 $ youHealth = 3
 
-            $ imreHealth = 6
+            $ enemyhealth = 6
             $ youDamage = 0
             $ imreDamage = 0
 
@@ -182,7 +182,7 @@ label v10_mc_vs_imre_fight:
                 $ imreDamage += 1
                 scene mc_imre_Kick_hit
                 pause 1 # Trial/Error
-                if imreDamage >= imreHealth:
+                if imreDamage >= enemyhealth:
                     jump mc_imreFightEnd
                 jump imre_McAttack
 
@@ -199,7 +199,7 @@ label v10_mc_vs_imre_fight:
                 $ imreDamage += 1
                 scene mc_imre_Jab_hit
                 pause 0.7 # Trial/Error
-                if imreDamage >= imreHealth:
+                if imreDamage >= enemyhealth:
                     jump mc_imreFightEnd
                 jump imre_McAttack
 
@@ -215,7 +215,7 @@ label v10_mc_vs_imre_fight:
                 $ imreDamage += 1
                 scene mc_imre_Hook_hit
                 pause 0.7 # Trial/Error
-                if imreDamage >= imreHealth:
+                if imreDamage >= enemyhealth:
                     jump mc_imreFightEnd
                 jump imre_McAttack
 
@@ -232,7 +232,7 @@ label v10_mc_vs_imre_fight:
                 $ imreDamage += 1
                 scene mc_imre_BodyJab_hit
                 pause 0.7 # Trial/Error
-                if imreDamage >= imreHealth:
+                if imreDamage >= enemyhealth:
                     jump mc_imreFightEnd
                 jump imre_McAttack
 
