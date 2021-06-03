@@ -6496,7 +6496,6 @@ label after_history:
 
                 $ leeway = True
                 $ grantAchievement("lee_way")
-                    
 
                 lee "Who was that?{w} {b}WHO WAS THAT?{/b}"
                 ca "HAHAHA! FUCKIN' ACES!"
