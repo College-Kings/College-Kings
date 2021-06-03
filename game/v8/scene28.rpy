@@ -126,9 +126,6 @@ label int_deal_w_josh:
     with dissolve
 
     # Lars Fight
-    $ allies = [mc]
-    $ enemies = [lars]
-
     call screen fight_tutorialPopup
 
     scene v8sdd10
@@ -137,38 +134,28 @@ label int_deal_w_josh:
 
     if fight_type == "normal":
         $ simLarsFight = False
-        $ youDamage = 0
-        $ larsdmg = 0
-        $ larsStance = renpy.random.choice([1, 2, 3, 4])
-        $ larsAttack = renpy.random.choice([1, 2, 3, 4])
 
         call screen fight_selectDifficulty
 
         call screen fight_keybindOptions
     
-    elif fight_type == "simReal":
+    elif fight_type == "simReal" or fight_type == "simWin":
         $ simLarsFight = True
-        $ stance = 1
-        $ larshealth = 6
+        
+    $ stance = 1
+    $ larsStance = renpy.random.choice([1, 2, 3, 4])
+    $ larsAttack = renpy.random.choice([1, 2, 3, 4])
+    $ larsSimulation = renpy.random.choice([1, 2, 3, 4, 5, 6])
+    $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
+
+    if fight_type == "simWin":
+        $ youHealth = 100000
+    else:
         $ youHealth = 3
 
-        $ youDamage = 0
-        $ larsdmg = 0
-        $ larsStance = renpy.random.choice([1, 2, 3, 4])
-        $ larsAttack = renpy.random.choice([1, 2, 3, 4])
-        $ larsSimulation = renpy.random.choice([1, 2, 3, 4, 5, 6])
-
-    elif fight_type == "simWin":
-        $ simLarsFight = True
-        $ stance = 1
-        $ youHealth = 100000
-        $ larshealth = 3
-
-        $ youDamage = 0
-        $ larsdmg = 0
-        $ larsStance = renpy.random.choice([1, 2, 3, 4])
-        $ larsAttack = renpy.random.choice([1, 2, 3, 4])
-        $ larsSimulation = renpy.random.choice([1, 2, 3, 4, 5, 6])
+    $ enemyhealth = 6
+    $ youDamage = 0
+    $ larsdmg = 0
 
 # Lars attacks MC
 label lars_McAttack:
@@ -259,7 +246,7 @@ label mc_LarsKickHit: # MC Kicks Lars (Hits/No Block)
     $ larsdmg += 1
     scene MC_Lars_Kick_hit 
     pause 1 # Trial/Error
-    if larsdmg >= larshealth:
+    if larsdmg >= enemyhealth:
         jump mc_larsFightEnd
     jump lars_McAttack
 
@@ -276,7 +263,7 @@ label mc_LarsJabsHit: # MC Jabs Lars (Hits/No Block)
     $ larsdmg += 1
     scene MC_Lars_Jab_hit
     pause 0.7 # Trial/Error
-    if larsdmg >= larshealth:
+    if larsdmg >= enemyhealth:
         jump mc_larsFightEnd
     jump lars_McAttack
 
@@ -292,7 +279,7 @@ label mc_LarsHooksHit: # MC Hooks Lars (Hits/No Block)
     $ larsdmg += 1
     scene MC_Lars_Hook_hit
     pause 0.7 # Trial/Error
-    if larsdmg >= larshealth:
+    if larsdmg >= enemyhealth:
         jump mc_larsFightEnd
     jump lars_McAttack
 
@@ -309,7 +296,7 @@ label mc_LarsBodyhookHit: # MC Body Hooks Lars (Hits/No Block)
     $ larsdmg += 1
     scene MC_Lars_BodyJab_hit
     pause 0.7 # Trial/Error
-    if larsdmg >= larshealth:
+    if larsdmg >= enemyhealth:
         jump mc_larsFightEnd
     jump lars_McAttack
 

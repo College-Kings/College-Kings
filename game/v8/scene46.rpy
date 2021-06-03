@@ -43,18 +43,13 @@ label v8_ending:
         $ contact_Imre.addReply(_("No, what?"))
         $ contact_Imre.newMessage(_("IDK, it's crazy"))
 
-        $ newKiwiiPost = KiwiiPost("Aubrey", "v8/red_square.webp", "[[image: red square]", numberLikes=renpy.random.randint(100, 200))
-        # $ newKiwiiPost.addReply("???", numberLikes=999)
-        # $ newKiwiiPost.addReply("What?", numberLikes=999)
-
-        $ newKiwiiPost = KiwiiPost("Chris", "v8/red_square.webp", "[[image: red square]", numberLikes=renpy.random.randint(100, 200))
-        # $ newKiwiiPost.addReply("Dude?", numberLikes=999)
-        # $ newKiwiiPost.addReply("Wtf is going on? It's everywhere", numberLikes=999)
-
-        $ newKiwiiPost = KiwiiPost("Grayson", "v8/red_square.webp", "[[image: red square]", numberLikes=renpy.random.randint(100, 200))
-        # $ newKiwiiPost.addReply("Bout time!", numberLikes=999)
-        # $ newKiwiiPost.addReply("Seriously?", numberLikes=999)
-
+        $ newKiwiiPost = KiwiiPost("Chris", "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost("Grayson", "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost("Aaron", "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost("Cameron", "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost("Aubrey", "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost("Samantha", "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        
         scene v8send4 # TPP. Show MC, MC looks really confused.
         with dissolve
 
@@ -62,7 +57,7 @@ label v8_ending:
 
         jump v8end
 
-    if not joinwolves:
+    else:
         scene v8send5 # TPP. Show MC lying on his Apes bed, looking tired.
         with dissolve
 
@@ -102,17 +97,12 @@ label v8_ending:
         $ contact_Ryan.addReply(_("I don't know. What is it?"))
         $ contact_Ryan.newMessage(_("Fuckin check it out man. Crazy shit"))
 
-        $ newKiwiiPost = KiwiiPost("Aubrey", "v8/red_square.webp", "[[image: red square]", numberLikes=renpy.random.randint(100, 200))
-        # $ newKiwiiPost.addReply("???", numberLikes=999)
-        # $ newKiwiiPost.addReply("What?", numberLikes=999)
-
-        $ newKiwiiPost = KiwiiPost("Chris", "v8/red_square.webp", "[[image: red square]", numberLikes=renpy.random.randint(100, 200))
-        # $ newKiwiiPost.addReply("Dude?", numberLikes=999)
-        # $ newKiwiiPost.addReply("Wtf is going on? It's everywhere", numberLikes=999)
-
-        $ newKiwiiPost = KiwiiPost("Grayson", "v8/red_square.webp", "[[image: red square]", numberLikes=renpy.random.randint(100, 200))
-        # $ newKiwiiPost.addReply("Bout time!", numberLikes=999)
-        # $ newKiwiiPost.addReply("Seriously?", numberLikes=999)
+        $ newKiwiiPost = KiwiiPost("Chris", "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost("Grayson", "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost("Aaron", "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost("Cameron", "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost("Aubrey", "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
+        $ newKiwiiPost = KiwiiPost("Samantha", "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
 
         label v8s46_phoneCheck:
             if contact_Ryan.getReplies():
@@ -129,12 +119,12 @@ label v8_ending:
         jump v8end
 
 label v8end:
-    if persistent.ep < 9:
+    if not renpy.loadable("v9/scene01.rpy"):
         scene savenow
         with Fade (1,0,1)
         " "
 
-    if persistent.ep < 9:
-        jump end_credits
-    else:
+    if renpy.loadable("v9/scene01.rpy"):
         jump v9start
+    else:
+        jump end_credits

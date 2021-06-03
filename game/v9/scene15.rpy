@@ -57,8 +57,8 @@ label v9_thur_room_w_cam_punch:
     u "What? No. I've just been chilling. What's going on?"
 
     $ s15KiwiiPost = KiwiiPost("Grayson", "v9/v9hlw8b.webp", "That's my boy! Go [name]! Fuck yeah!", numberLikes=renpy.random.randint(100, 200))
-    $ s15KiwiiPost.addComment("Cameron", "Fuckin' A!", numberLikes=renpy.random.randint(100, 200), queue=False)
-    $ s15KiwiiPost.addComment("Riley", "Knew he had it in him!", numberLikes=renpy.random.randint(200, 250), queue=False)
+    $ s15KiwiiPost.newComment("Cameron", "Fuckin' A!", numberLikes=renpy.random.randint(100, 200), queue=False)
+    $ s15KiwiiPost.newComment("Riley", "Knew he had it in him!", numberLikes=renpy.random.randint(200, 250), queue=False)
     
     "(I should check Kiwii.)"
 
@@ -251,9 +251,9 @@ label v9_thur_room_w_cam_no_punch:
     with dissolve
     sa "You better check it."
 
-    $ s15KiwiiPost = KiwiiPost("Sebastian", "v9/v9hlw20.webp", numberLikes=renpy.random.randint(100, 200))
-    $ s15KiwiiPost.addComment("Chris", "Wow, hope he's OK!", numberLikes=renpy.random.randint(100, 200), queue=False)
-    $ s15KiwiiPost.addComment("Cameron", "Ahhhh! Preview of Saturday's Freshman Brawl!", numberLikes=renpy.random.randint(150, 170), queue=False)
+    $ s15KiwiiPost = KiwiiPost("Sebastian", "v9/v9hlw20.webp", "", numberLikes=renpy.random.randint(100, 200))
+    $ s15KiwiiPost.newComment("Chris", "Wow, hope he's OK!", numberLikes=renpy.random.randint(100, 200), queue=False)
+    $ s15KiwiiPost.newComment("Cameron", "Ahhhh! Preview of Saturday's Freshman Brawl!", numberLikes=renpy.random.randint(150, 170), queue=False)
 
     label v9_s15_phoneExit_no_Punch:
         if s15KiwiiPost.getReplies():

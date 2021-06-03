@@ -18,15 +18,13 @@ default fight_type = "normal" # normal / simReal / simWin
 default reaction = 1.0
 default reactiona = 1.0
 default bodyHook = False
-default allies = []
-default enemies = []
+default enemyhealth = 0
 
 # 1.0 - 6.0
 default v1_sda = False
 default evelynmove = False
 default name = "Alex"
 default realmode = False
-default tomhealth = 5
 default statsPage = 0
 default kctTutorialPage = 1
 default influenceTutorialPage = 1
@@ -94,7 +92,7 @@ default r = "r"
 default qwer = True
 default fighttom = False
 default notcool = False
-default difficulty = 1
+default difficulty = None
 default laawk = True
 default meetjulia = False
 default openwound = False
@@ -149,7 +147,6 @@ default simadamfight = True
 default adamdmg = 0
 default adamstance = 1
 default adamattack = 1
-default adamhealth = 5
 default simadam = 1
 default winadam = False
 default imremad = False
@@ -325,7 +322,6 @@ default helpJosh = False
 
     ## Fight Vars
 default larsdmg = 0
-default larshealth = 0
 default simLarsFight = False
 default s28_fightWinner = "MC"
 

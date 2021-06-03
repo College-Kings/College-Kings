@@ -103,7 +103,7 @@ label v9_room_thur_night:
 
             u "(Ugh, now what.)"
 
-            $ contact_Emily.newMessage(_("I'm bored. Come hang out."))
+            $ contact_Emily.newMessage(_("I'm bored. Come hang out."), queue=False)
             $ contact_Emily.addReply(_("Sure! Gimme a sec."))
             $ contact_Emily.addReply(_("It's kinda late"), v9s16_reply6)
             
@@ -315,6 +315,22 @@ label v9_emily_dorm:
         with dissolve
 
         menu:
+            "Make A Move On Emily":
+                u "(This feels like the right time)"
+
+            "Head home":
+                scene v9emi37 # TPP. Show MC walking towards the exit of Emily's room, Emily in view still sat on the bed, cheeky grin, mouth open, MC smile, mouth closed.
+                with dissolve
+
+                u "Anyways, i should probably head home."
+
+                if joinwolves:
+                    jump v9_thur_night_aft_em_w
+
+                else:
+                    jump v9_thur_night_aft_em_a         
+
+        menu:
             "Brag":
                 $ addPoint("tm")
 
@@ -400,6 +416,21 @@ label v9_emily_dorm:
         with dissolve
 
         menu:
+            "Make A Move On Emily":
+                u "(This feels like the right time)"
+            "Head home":
+                scene v9emi37 # TPP. Show MC walking towards the exit of Emily's room, Emily in view still sat on the bed, cheeky grin, mouth open, MC smile, mouth closed.
+                with dissolve
+
+                u "Anyways, i should probably head home."
+
+                if joinwolves:
+                    jump v9_thur_night_aft_em_w
+
+                else:
+                    jump v9_thur_night_aft_em_a         
+
+        menu:
             "Be Macho":
                 $ addPoint("bro")
 
@@ -464,9 +495,6 @@ label v9_emily_dorm:
     u "Oh God. I've missed this."
 
     play music "music/v9/Scene 16/Scene Track 16.mp3" fadein 2
-
-    if config_censored:
-        call screen censoredPopup("v9s16_nsfwSkipLabel1")
 
     scene v9emi13b # FPP. Same camera as v9emi13, on her knees on the floor looking up at camera, seductive expression, Emily mouth open.
     with dissolve
@@ -732,7 +760,6 @@ label v9_emily_dorm:
 
     em "No, I'm great. I can't believe I came that way. It was so intense."
 
-label v9s16_nsfwSkipLabel1:
     scene v9emi34a
     with dissolve
 

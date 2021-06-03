@@ -87,6 +87,7 @@ init python:
 
 screen achievements():
     tag phoneTag
+    zorder 200
     
     use phoneTemplate:
 

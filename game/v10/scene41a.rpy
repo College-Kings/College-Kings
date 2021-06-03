@@ -84,12 +84,12 @@ label v10_waking_up_end:
         jump end10
 
 label end10:
-    if persistent.ep < 11:
+    if not renpy.loadable("v11/scene1.rpy"):
         scene savenow
         with Fade (1,0,1)
         " "
 
-    if persistent.ep < 11:
-        jump end_credits
+    if renpy.loadable("v11/scene1.rpy"):
+        jump v11_start
     else:
-        jump v11start
+        jump end_credits

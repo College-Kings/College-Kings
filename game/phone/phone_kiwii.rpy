@@ -1,6 +1,6 @@
 init python:
     class KiwiiPost:
-        def __init__(self, user, img, message="", mentions=None, numberLikes=0, comments=None):
+        def __init__(self, user, img, message="", mentions=None, numberLikes=renpy.random.randint(250, 500), comments=None):
             self.user = user
             self.img = "images/phone/kiwii/posts/{}".format(img)
             self.message = message
@@ -30,7 +30,7 @@ init python:
             if self.liked: self.numberLikes += 1
             else: self.numberLikes -= 1
             
-        def addComment(self, user, message, numberLikes=0, mentions=None, queue=True):
+        def newComment(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None, queue=True):
             comment = KiwiiComment(user, message, numberLikes, mentions)
             
             # Add message to queue
@@ -43,7 +43,7 @@ init python:
             kiwiiApp.notification = True
             return comment
 
-        def addReply(self, message, func=None, numberLikes=0, mentions=None, disabled=False):
+        def addReply(self, message, func=None, numberLikes=renpy.random.randint(250, 500), mentions=None, disabled=False):
             reply = KiwiiReply(message, func, numberLikes, mentions, disabled)
             
             # Append reply to last sent message
@@ -53,14 +53,14 @@ init python:
                 else:
                     self.sentComments[-1].replies.append(reply)
             except Exception:
-                message = self.addComment("MC", "", queue=False)
+                message = self.newComment("MC", "", queue=False)
                 message.replies.append(reply)
 
             kiwiiApp.notification = True
             return reply
 
         def selectedReply(self, reply):
-            self.addComment("MC", reply.message, numberLikes=reply.numberLikes, mentions=reply.mentions)
+            self.newComment("MC", reply.message, numberLikes=reply.numberLikes, mentions=reply.mentions)
             self.sentComments[-1].reply = reply
             self.sentComments[-1].replies = []
 
@@ -107,7 +107,7 @@ init python:
             except Exception: return False
 
     class KiwiiComment(KiwiiPost):
-        def __init__(self, user, message, numberLikes=0, mentions=None):
+        def __init__(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None):
             self.user = user
             self.message = message
             self.numberLikes = numberLikes
@@ -123,12 +123,12 @@ init python:
             self.profilePicture = self.getProfilePicture()
 
     class KiwiiReply(KiwiiComment):
-        def __init__(self, message, func=None, numberLikes=0, mentions=None, disabled=False):
+        def __init__(self, message, func=None, numberLikes=renpy.random.randint(250, 500), mentions=None, disabled=False):
             self.message = message
             self.func = func
 
-            if kct == "popular": self.numberLikes = round(numberLikes * 1.5)
-            elif kct == "confident": self.numberLikes = round(numberLikes * 1.2)
+            if kct == "popular": self.numberLikes = int(numberLikes * 1.5)
+            elif kct == "confident": self.numberLikes = int(numberLikes * 1.2)
             else: self.numberLikes = numberLikes
 
             if isinstance(mentions, basestring): self.mentions = [mentions]
@@ -149,106 +149,9 @@ init python:
 
         return total
 
-    kiwiiUsers = {
-        "Adam": {
-            "username": "A.D.A.M.",
-            "profilePicture": "images/phone/kiwii/profilePictures/adpp.webp"
-        },
-        "Imre": {
-            "username": "BadBoyImre",
-            "profilePicture": "images/phone/kiwii/profilePictures/impp.webp"
-        },
-        "Mason": {
-            "username": "Mason_Mas",
-            "profilePicture": "images/phone/kiwii/profilePictures/masonpp.webp"
-        },
-        "Ryan": {
-            "username": "Ryanator",
-            "profilePicture": "images/phone/kiwii/profilePictures/rypp.webp"
-        },
-        "Cameron": {
-            "username": "Cameroon",
-            "profilePicture": "images/phone/kiwii/profilePictures/capp.webp"
-        },
-        "Chris": {
-            "username": "Chriscuit",
-            "profilePicture": "images/phone/kiwii/profilePictures/chpp.webp"
-        },
-        "Elijah": {
-            "username": "Elijah_Woods",
-            "profilePicture": "images/phone/kiwii/profilePictures/elpp.webp"
-        },
-        "Grayson": {
-            "username": "G-rayson",
-            "profilePicture": "images/phone/kiwii/profilePictures/grpp.webp"
-        },
-        "Josh": {
-            "username": "Josh80085",
-            "profilePicture": "images/phone/kiwii/profilePictures/jopp.webp"
-        },
-        "Aubrey": {
-            "username": "Aubs123",
-            "profilePicture": "images/phone/kiwii/profilePictures/aupp.webp"
-        },
-        "Amber": {
-            "username": "Amber_xx",
-            "profilePicture": "images/phone/kiwii/profilePictures/ampp.webp"
-        },
-        "Kim": {
-            "username": "KimPlausible",
-            "profilePicture": "images/phone/kiwii/profilePictures/kimpp.webp"
-        },
-        "Nora": {
-            "username": "Nora_12",
-            "profilePicture": "images/phone/kiwii/profilePictures/nopp.webp"
-        },
-        "Penelope": {
-            "username": "Penelopeeps",
-            "profilePicture": "images/phone/kiwii/profilePictures/pepp.webp"
-        },
-        "Lauren": {
-            "username": "LoLoLauren",
-            "profilePicture": "images/phone/kiwii/profilePictures/lapp.webp"
-        },
-        "Autumn": {
-            "username": "Its_Fall",
-            "profilePicture": "images/phone/kiwii/profilePictures/autpp.webp"
-        },
-        "Riley": {
-            "username": "RileyReads",
-            "profilePicture": "images/phone/kiwii/profilePictures/ripp.webp"
-        },
-        "Emily": {
-            "username": "emilyyyy",
-            "profilePicture": "images/phone/kiwii/profilePictures/empp.webp"
-        },
-        "Chloe": {
-            "username": "Chloe101",
-            "profilePicture": "images/phone/kiwii/profilePictures/clpp.webp"
-        },
-        "MC": {
-            "username": "MC",
-            "profilePicture": profilePictures[0]
-        },
-        "Caleb": {
-            "username": "Aleb",
-            "profilePicture": "images/phone/kiwii/profilePictures/calebpp.webp"
-        },
-        "Parker": {
-            "username": "Parker",
-            "profilePicture": "images/phone/kiwii/profilePictures/parkerpp.webp"
-        },
-        "Sebastian": {
-            "username": "Big Seb",
-            "profilePicture": "images/phone/kiwii/profilePictures/sebastianpp.webp"
-        },
-        "Kai": {
-            "username": "Kai",
-            "profilePicture": "images/phone/kiwii/profilePictures/kaipp.webp"
-        }
-    }
+    kiwiiUsers = kiwii_users()
 
-init -1:
+init -100:
     define profilePictures = [ "images/phone/Kiwii/profilePictures/mcpp1.webp", "images/phone/Kiwii/profilePictures/mcpp2.webp", "images/phone/Kiwii/profilePictures/mcpp3.webp", "images/phone/Kiwii/profilePictures/mcpp4.webp" ]
     default profilePictures_count = 0
 
@@ -503,7 +406,7 @@ screen liked_kiwii():
                         imagebutton:
                             idle Transform(post.img, zoom=0.17)
                             action Show("kiwii_image", img=post.img)
-                        text post.caption style "kiwii_CommentText" xalign 0.5
+                        text post.message style "kiwii_CommentText" xalign 0.5
 
                     hbox:
                         xoffset 20

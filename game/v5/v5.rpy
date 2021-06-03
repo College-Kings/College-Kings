@@ -2898,7 +2898,7 @@ label hospitala:
     else:
         $ youHealth = 3
 
-    $ adamhealth = 6
+    $ enemyhealth = 6
     $ youDamage = 0
     $ adamdmg = 0
 
@@ -3414,7 +3414,7 @@ label hospitala:
 
     label adamkick1:
 
-        if adamdmg >= adamhealth:
+        if adamdmg >= enemyhealth:
 
             scene youfinishadam
             $ renpy.pause(1)
@@ -3452,7 +3452,7 @@ label hospitala:
 
     label adamhook1:
 
-        if adamdmg >= adamhealth:
+        if adamdmg >= enemyhealth:
 
             scene youfinishadam
             $ renpy.pause(1)
@@ -3489,7 +3489,7 @@ label hospitala:
 
     label adamjab1:
 
-        if adamdmg >= adamhealth:
+        if adamdmg >= enemyhealth:
 
             scene youfinishadam
             $ renpy.pause(1)
@@ -3526,7 +3526,7 @@ label hospitala:
 
     label adambody1:
 
-        if adamdmg >= adamhealth:
+        if adamdmg >= enemyhealth:
 
             scene youfinishadam
             $ renpy.pause(1)
