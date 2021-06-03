@@ -321,7 +321,7 @@ label v10_riley_sex:
                         with dissolve
 
                         u "It was."
-            "Make a Move":
+            "Make a move":
                 $ rileyrs = True
 
                 scene v10srds4a # TPP. Same camera as v10srds4. Show MC and Riley. Both smiling, mouths closed. MC puts his hand on Riley's towel and drops it to the floor.
