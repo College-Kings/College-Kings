@@ -1,5 +1,6 @@
 init 999 python:
-    try:
-        import _renpysteam as steamAPI
-    except ImportError:
-        config.enable_steam = False
+    if config.enable_steam:
+        try:
+            import _renpysteam as steamAPI
+        except ImportError:
+            config.enable_steam = False

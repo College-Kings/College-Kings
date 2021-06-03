@@ -474,12 +474,12 @@ label tomFightStart:
     else:
         $ youHealth = 3
 
-    $ tomhealth = 5
+    $ enemyhealth = 5
     $ youDamage = 0
     $ tomdmg = 0
 
     label tomkick1:
-        if tomdmg >= tomhealth:
+        if tomdmg >= enemyhealth:
 
             scene youfinishmovie
             $ renpy.pause(1)
@@ -565,7 +565,7 @@ label tomFightStart:
     label tomsimstart2:
     label tomsimstart:
     label tomhook1:
-        if tomdmg >= tomhealth:
+        if tomdmg >= enemyhealth:
 
             scene youfinishmovie
             $ renpy.pause(1)
@@ -650,7 +650,7 @@ label tomFightStart:
 
     label tomjab1:
 
-        if tomdmg >= tomhealth:
+        if tomdmg >= enemyhealth:
 
             scene youfinishmovie
             $ renpy.pause(1)

@@ -65,6 +65,7 @@ screen censoredPopup(continueLabel):
             hover "images/gui/censoredPopup/censoredSkipSceneHover.webp"
             action Jump(continueLabel)
 
+
 screen kiwiiPopup():
     modal True
     zorder 200
@@ -140,7 +141,6 @@ screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings_
         textbutton "The Team":
             text_style "steam_endScreenTextButton"
             action Show("teamCredits")
-           
 
 
 screen credits():

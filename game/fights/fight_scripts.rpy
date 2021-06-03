@@ -3,7 +3,7 @@ init python:
         if difficulty == "easy":
             # Old
             setattr(store, "reactiona", 3.2)
-            setattr(store, "larshealth", 5)
+            setattr(store, "enemyhealth", 5)
             setattr(store, "youHealth", 5)
             # New
             setattr(store, "reaction", 3.5)
@@ -13,7 +13,7 @@ init python:
         elif difficulty == "normal":
             # Old
             setattr(store, "reactiona", 1.5)
-            setattr(store, "larshealth", 6)
+            setattr(store, "enemyhealth", 6)
             setattr(store, "youHealth", 3)
             # New
             setattr(store, "reaction", 1.5)
@@ -23,7 +23,7 @@ init python:
         else:
             # Old
             setattr(store, "reactiona", 0.7)
-            setattr(store, "larshealth", 8)
+            setattr(store, "enemyhealth", 8)
             setattr(store, "youHealth", 2)
             # New
             setattr(store, "reaction", 0.5)

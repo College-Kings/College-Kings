@@ -39,7 +39,7 @@ init python:
     Achievement("relight the fire", "Tell Julia about Emily", "relightthefire")
     Achievement("rematch", "Buy Chloe the volleyball", "rematch")
     Achievement("keen eye", "Pick the muffin", "keeneye")
-
+    
     # v5.0
     Achievement("on the low", "Deny PDA with Lauren", "onthelow")
     Achievement("peta public enemy", "Kill dog as animal lover", "petapublicenemy")
