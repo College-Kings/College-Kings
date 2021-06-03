@@ -513,6 +513,8 @@ label v9_emily_dorm:
     image v9emian = Movie(play="images/v9/Scene 16/v9emian.webm", loop=True, image="images/v9/Scene 16/v9emianStart.webp", start_image="images/v9/Scene 16/v9emianStart.webp") # TPP. MC and Emily, doggy style Anal show as much action as possible.
     image v9emianf = Movie(play="images/v9/Scene 16/v9emianf.webm", loop=True, image="images/v9/Scene 16/v9emianStart.webp", start_image="images/v9/Scene 16/v9emianStart.webp")
 
+    call screen censoredPopup("v9s16_nsfwSkipLabel1")
+
     scene v9emibj
     with dissolve
     pause 
@@ -775,6 +777,7 @@ label v9_emily_dorm:
 
     u "It was so good. You wore me out."
 
+    label v9s16_nsfwSkipLabel1:
     scene v9emi35 # TPP. Show MC and Emily now sat on the edge of Emily's bed, both fully dressed, MC and Emily kissing.
     with fade
 
