@@ -513,7 +513,8 @@ label v9_emily_dorm:
     image v9emian = Movie(play="images/v9/Scene 16/v9emian.webm", loop=True, image="images/v9/Scene 16/v9emianStart.webp", start_image="images/v9/Scene 16/v9emianStart.webp") # TPP. MC and Emily, doggy style Anal show as much action as possible.
     image v9emianf = Movie(play="images/v9/Scene 16/v9emianf.webm", loop=True, image="images/v9/Scene 16/v9emianStart.webp", start_image="images/v9/Scene 16/v9emianStart.webp")
 
-    call screen censoredPopup("v9s16_nsfwSkipLabel1")
+    if config_censored:
+        call screen censoredPopup("v9s16_nsfwSkipLabel1")
 
     scene v9emibj
     with dissolve
