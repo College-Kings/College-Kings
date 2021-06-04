@@ -18,11 +18,11 @@ init python:
 
 # ACHIEVEMENT ITEMS HERE
     # v1.0
-    Achievement("open wound", "Tell off Emily", "openwound")
-    Achievement("no hard feelings", "Play nice with Emily", "nohardfeelings")
-    Achievement("keep it moving", "Hit on Nora", "keepitmoving")
+    Achievement("open_wound", "Tell off Emily", "openwound")
+    Achievement("no_hard_feelings", "Play nice with Emily", "nohardfeelings")
+    Achievement("keep_it_moving", "Hit on Nora", "keepitmoving")
     Achievement("romeo", "Kiss Lauren", "romeo")
-    Achievement("big mouth", "Threaten Cameron", "bigmouth")
+    Achievement("big_mouth", "Threaten Cameron", "bigmouth")
 
     # v2.0
     Achievement("mixed feelings", "Decline Lauren", "mixedfeelings")
@@ -65,36 +65,35 @@ init python:
     Achievement("homecoming queen", "End homecoming with Chloe", "homecomingqueen")
     
     # v8.0
-    Achievement("get a room", "Stay With Amber at Josh's", "get_a_room")
-    Achievement("ip man", "Win The Alley Fight", "ip_man")
-    Achievement("thick and thin", "Help Penelope", "thick_and_thin")
-    Achievement("up for more", "Flirt With Chloe", "up_for_more")
-    Achievement("text with an s", "Return to sender", "text_with_an_s") #m
-    Achievement("lucky 7", "Flashing lights at the arcade", "lucky_7") #m
-    Achievement("helping hand", "Help Nora hand out flyers for the trip", "helping_hand") #m
+    Achievement("thick_and_thin", "Help Penelope", "thick_and_thin")
+    Achievement("text_with_an_s", "Return to sender", "text_with_an_s")
+    Achievement("lucky_7", "Flashing lights at the arcade", "lucky_7")
+    Achievement("ip_man", "Win The Alley Fight", "ip_man")
+    Achievement("get_a_room", "Stay With Amber at Josh's", "get_a_room")
+    Achievement("helping_hand", "Help Nora hand out flyers for the trip", "helping_hand")
+    Achievement("up_for_more", "Flirt With Chloe", "up_for_more")
 
     # v9.0
-    Achievement("back down", "Punch the guy in the hallway", "down_for_the_count")
-    Achievement("second date", "Get a second date with Evelyn", "second_date")
-    Achievement("relaxing day", "Have fun with Aubrey at the lake", "lake_hj")
-    #Achievement("the king", "Recognise the king", "the_king")
-    Achievement("king of the north", "The King is heading North", "king_of_the_north") #m
-    Achievement("cheat day", "Skip the gym and get with Riley", "cheat_day") #m
-    Achievement("the wrong time", "Don't kiss Lindsey", "the_wrong_time")
+    Achievement("relaxing_day", "Have fun with Aubrey at the lake", "lake_hj")
+    Achievement("king_of_the_north", "The King is heading North", "king_of_the_north")
+    Achievement("back_down", "Punch the guy in the hallway", "down_for_the_count")
+    Achievement("second_date", "Get a second date with Evelyn", "second_date")
+    Achievement("cheat_day", "Skip the gym and get with Riley", "cheat_day")
+    Achievement("the_wrong_time", "Don't kiss Lindsey", "the_wrong_time")
 
     # v10.0
-    #Achievement("friends first", "Refuse to fight a friend", "friends_first")
-    Achievement("fright club", "Don't fight Ryan at the Brawl", "fright_club") #m
-    Achievement("bros before blows", "Don't fight Imre at the Brawl", "bros_before_blows") #m
-    Achievement("golden_boy", "Beat Imre on Hard difficulty at the Brawl", "golden_boy") #m
-    Achievement("lights out", "Beat Ryan on Hard difficulty at the Brawl", "lights_out") #m
-    Achievement("rough rider", "Have fun at the skatepark", "rough_rider") #m
-    Achievement("family secrets", "Find out Nora and Ms. Rose are family", "family_secrets") #m
-    Achievement("getting clean", "Have fun in the bathroom", "bathroom_sex")
-    Achievement("forbidden romance", "Kiss Ms. Rose", "kiss_teacher")
-    Achievement("hard decisions", "Tell Chloe what Nora said", "chloe_over_nora")
-    Achievement("rawr im a lion!", "Tell Lauren you like Lions", "im_a_lion")
-    Achievement("on the court", "Have a rematch with Chloe", "on_the_court")
+    Achievement("lights_out", "Beat Ryan on Hard difficulty at the Brawl", "lights_out")
+    Achievement("fright_club", "Don't fight Ryan at the Brawl", "fright_club")
+    Achievement("golden_boy", "Beat Imre on Hard difficulty at the Brawl", "golden_boy")
+    Achievement("bros_before_blows", "Don't fight Imre at the Brawl", "bros_before_blows")
+    Achievement("rawr_im_a_lion!", "Tell Lauren you like Lions", "im_a_lion")
+    Achievement("getting_clean", "Have fun in the bathroom", "bathroom_sex")
+    Achievement("forbidden_romance", "Kiss Ms. Rose", "kiss_teacher")
+    Achievement("rough_rider", "Have fun at the skatepark", "rough_rider")
+    Achievement("family_secrets", "Find out Nora and Ms. Rose are family", "family_secrets")
+    Achievement("on_the_court", "Have a rematch with Chloe", "on_the_court")
+    Achievement("hard_decisions", "Tell Chloe what Nora said", "chloe_over_nora")
+
 
 screen achievements():
     tag phoneTag
