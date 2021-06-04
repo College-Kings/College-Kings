@@ -392,6 +392,11 @@ label v10_mc_vs_imre_fight:
 
             label mc_imreFightEnd: # MC wins fight against Imre
                 $ v10_imre_win = True
+
+                if reaction == 0.5:
+                    $ goldenboy = True
+                    $ grantAchievement("goldenboy")
+
                 jump imre_fightEnd
 
             label imre_McFightEnd: # MC loses fight against Imre
@@ -409,8 +414,8 @@ label v10_mc_vs_imre_fight:
             jump v10_fight_result
 
         "Don't Fight":
-            $ friends_first = True
-            $ grantAchievement("friends_first")
+            $ bros_before_blows = True
+            $ grantAchievement("bros_before_blows")
 
             scene v10mvi3 # FPP. Show Imre infront of camera in ring, mouth closed, hands raised ready to fight.
             with dissolve

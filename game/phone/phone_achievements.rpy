@@ -69,16 +69,27 @@ init python:
     Achievement("ip man", "Win The Alley Fight", "ip_man")
     Achievement("thick and thin", "Help Penelope", "thick_and_thin")
     Achievement("up for more", "Flirt With Chloe", "up_for_more")
+    Achievement("text with an s", "Return to sender", "text_with_an_s") #m
+    Achievement("lucky 7", "Flashing lights at the arcade", "lucky_7") #m
+    Achievement("helping hand", "Help Nora hand out flyers for the trip", "helping_hand") #m
 
     # v9.0
     Achievement("back down", "Punch the guy in the hallway", "down_for_the_count")
     Achievement("second date", "Get a second date with Evelyn", "second_date")
     Achievement("relaxing day", "Have fun with Aubrey at the lake", "lake_hj")
-    Achievement("the king", "Recognise the king", "the_king")
+    #Achievement("the king", "Recognise the king", "the_king")
+    Achievement("king of the north", "The King is heading North", "king_of_the_north") #m
+    Achievement("cheat day", "Skip the gym and get with Riley"), "cheat_day") #m
     Achievement("the wrong time", "Don't kiss Lindsey", "the_wrong_time")
 
     # v10.0
-    Achievement("friends first", "Refuse to fight a friend", "friends_first")
+    #Achievement("friends first", "Refuse to fight a friend", "friends_first")
+    Achievement("fright club", "Don't fight Ryan at the Brawl", "fright_club") #m
+    Achievement("bros before blows", "Don't fight Imre at the Brawl", "bros_before_blows") #m
+    Achievement("goldenboy", "Beat Imre on Hard difficulty at the Brawl", "goldenboy") #m
+    Achievement("lights out", "Beat Ryan on Hard difficulty at the Brawl", "lights_out") #m
+    Achievement("rough rider", "Have fun at the skatepark", "rough_rider") #m
+    Achievement("family secrets", "Find out Nora and Ms. Rose are family", "family_secrets") #m
     Achievement("getting clean", "Have fun in the bathroom", "bathroom_sex")
     Achievement("forbidden romance", "Kiss Ms. Rose", "kiss_teacher")
     Achievement("hard decisions", "Tell Chloe what Nora said", "chloe_over_nora")

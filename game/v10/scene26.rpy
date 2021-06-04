@@ -392,6 +392,9 @@ label v10_amber_skatepark:
 
         am "Why not?"
 
+        $ rough_rider = True
+        $ grantAchievement("rough_rider")
+
         scene v10sasp5d # FPP. Same camera as v10sasp5. Show Amber looking down and attempting to pull MC's pants down. Smiling, mouth closed.
         with dissolve
         menu:
@@ -707,6 +710,9 @@ label v10_amber_skatepark:
 
                             scene v10ambbj
                             with dissolve
+
+                            $ rough_rider = True
+                            $ grantAchievement("rough_rider")
 
                             u "Damn Amber!"
 

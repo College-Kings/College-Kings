@@ -101,7 +101,6 @@ label v9_hc_demo:
     menu:
         "Recognize the King":
             $ the_king = True
-            $ grantAchievement("the_king")
             jump v9_hc_demo_rec
         "Don't recognize the King":
             $ addPoint("tm")
@@ -253,6 +252,11 @@ label v9_hc_demo_west:
     jump v9_hc_demo_cont3
 
 label v9_hc_demo_north:
+
+    if the_king:
+        $ king_of_the_north = True
+        $ grantAchievement("king_of_the_north")
+
     u "North, Your Majesty."
 
     scene v9demo10a

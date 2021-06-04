@@ -1126,6 +1126,10 @@ label em_arcade_4:
 
     scene v8arcade27c # Same as v8arcade27b but she pulled her top up completely
     with dissolve
+
+    $ lucky_7 = True
+    $ grantAchievement("lucky_7")
+
     u "Oh, God, I miss them."
 
 label v8s20_nsfwSkipLabel1:

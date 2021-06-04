@@ -400,6 +400,11 @@ label v10_mc_vs_ryan_fight:
 
             label mc_ryanFightEnd: # MC wins fight against Ryan
                 $ v10_ryan_win = True
+
+                if reaction == 0.5:
+                    $ lights_out = True
+                    $ grantAchievement("lights_out")
+
                 jump ryan_fightEnd
 
             label ryan_McFightEnd: # MC loses fight against Ryan
@@ -416,8 +421,8 @@ label v10_mc_vs_ryan_fight:
             jump v10_fight_result
 
         "Don't Fight":
-            $ friends_first = True
-            $ grantAchievement("friends_first")
+            $ fright_club = True
+            $ grantAchievement("fright_club")
             scene v10mvr6a
             with dissolve
 

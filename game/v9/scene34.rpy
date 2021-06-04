@@ -98,6 +98,9 @@ label v9_ri_sex:
     scene v9ris7a # TPP. Same camera as v9ris7a, MC now wearing no pants, Riley looking at MC seductively.
     with dissolve
 
+    $ cheat_day = True
+    $ grantAchievement("cheat_day")
+
     play music "music/v9/Scene 34/Track Scene 34_2.mp3" fadein 3
 
     pause 1
