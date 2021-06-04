@@ -40,17 +40,17 @@ python early:
             os.rmdir(MYPATH)
         except Exception: pass
 
-    try: v7_msgReply8:
+    try: v7_msgReply8
     except NameError:
         def v7_msgReply8():
             pass
 
-    try: v7_msgReply9:
+    try: v7_msgReply9
     except NameError:
         def v7_msgReply9():
             pass
 
-    try: v7_msgReply10:
+    try: v7_msgReply10
     except NameError:
         def v7_msgReply10():
             pass
