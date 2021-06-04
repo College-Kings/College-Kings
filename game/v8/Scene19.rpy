@@ -5,8 +5,6 @@
 
 init python:
     def v8s19_reply1():
-
-        $ text_with_an_s = True
         $ grantAchievement("text_with_an_s")
 
         contact_Amber.newMessage(_("It's only fair, right? Make us even"))
