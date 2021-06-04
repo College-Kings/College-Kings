@@ -264,8 +264,8 @@ label v10_aubrey_house:
             if aubreyrs: # Aubrey relationship check
                 label v10s17_galleryScene:
                 $ aubrey_bathroom_sex = True
-                $ getting_clean = True
-                $ grantAchievement("getting_clean")
+                $ bathroom_sex = True
+                $ grantAchievement("bathroom_sex")
                 scene v10auh2b # FPP Same angle as v10auh2, show Aubrey at door to bathroom, turning to look at MC, mouth closed
                 with dissolve
 
@@ -291,9 +291,6 @@ label v10_aubrey_house:
                 with dissolve
 
                 u "I'd watch all those movies."
-
-                if config_censored:
-                    call screen censoredPopup("v10_aubrey_room")
 
                 scene v10auh5a # FPP Same angle and expression as v10auh5, Aubrey mouth open
                 with dissolve
@@ -640,7 +637,7 @@ label v10_aubrey_house:
 
                 u "Now you're just teasing me."
 
-                scene v10auh3b
+                scene v10auh2f
                 with dissolve
 
                 au "Tease? I don’t know what you’re talking about."
@@ -671,7 +668,7 @@ label v10_aubrey_house:
 
                 u "Haha, what's your favorite brand?"
 
-                scene v10auh3b
+                scene v10auh2f
                 with dissolve
 
                 au "I really love Lew's, they always fit me the best."
@@ -681,7 +678,7 @@ label v10_aubrey_house:
 
                 u "Isn't Lew's the expensive designer brand?"
 
-                scene v10auh3b
+                scene v10auh2f
                 with dissolve
 
                 au "Hey you asked what I liked, not what I can afford."
