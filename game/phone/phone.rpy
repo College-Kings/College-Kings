@@ -72,13 +72,17 @@ screen phoneTemplate():
 
     transclude
 
-    if not renpy.get_screen("messenger_reply"):
-        button:
-            xysize(407, 61)
+    if not renpy.get_screen("phone"):
+        text "Home":
             xalign 0.5
-            ypos 906
-            style "phonehome"
-            action Show("phone")
+            ypos 910
+
+    button:
+        xysize(407, 61)
+        xalign 0.5
+        ypos 906
+        style "phonehome"
+        action [Hide("messenger_reply"), Show("phone")]
 
 
 screen phone():
