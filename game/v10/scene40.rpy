@@ -220,6 +220,8 @@ label v10_riley_sex:
 
                         ri "See ya."
 
+                        $ renpy.end_replay()
+
                         jump v10_mc_pen_call # -Transition to Scene 41-
 
                     "Peek":
@@ -322,7 +324,7 @@ label v10_riley_sex:
                         with dissolve
 
                         u "It was."
-            "Make a Move":
+            "Make a move":
                 $ rileyrs = True
 
                 scene v10srds4a # TPP. Same camera as v10srds4. Show MC and Riley. Both smiling, mouths closed. MC puts his hand on Riley's towel and drops it to the floor.
@@ -432,7 +434,6 @@ label v10_riley_sex:
 
                 scene v10srds7a # FPP. Same camera as v10srds7. Show Riley next to MC, naked in bed, face-to-face. Riley is smiling, mouth open.
                 with dissolve
-                $ renpy.end_replay()
 
                 ri "Hey, can I ask you something?"
 
@@ -551,6 +552,7 @@ label v10_riley_sex:
         with dissolve
 
         ri "See ya."
+        $ renpy.end_replay()
 
         jump v10_mc_pen_call # -Transition to Scene 41-
 
@@ -803,6 +805,8 @@ label v10_riley_sex:
 
                         ri "See ya."
 
+                        $ renpy.end_replay()
+
                         jump v10_mc_pen_call # -Transition to Scene 41-
                     
                     "Peek":
@@ -1024,6 +1028,8 @@ label v10_riley_sex:
 
         ri "See ya."
 
+        $ renpy.end_replay()
+
         jump v10_mc_pen_call # -Transition to Scene 41-
 
     else: # -If not rileyrs without KCT Confident
@@ -1205,4 +1211,5 @@ label v10_riley_sex:
 
                 ri "See ya."
                 stop music fadeout 3
+
                 jump v10_mc_pen_call # -Transition to Scene 41-

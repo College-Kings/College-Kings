@@ -332,6 +332,9 @@ default helpedNora = False
 default chloeSteakHouse = False
 default climbwseb = False
 default hesitantwgrayson = False
+default text_with_an_s = False #maroach
+default lucky_7 = False #maroach
+default helping_hand = False #maroach
 
 # 9.0
 default mcBrawlStance1 = False
@@ -355,6 +358,8 @@ default second_date = False
 default lake_hj = False
 default the_king = False
 default the_wrong_time = False
+default king_of_the_north = False #maroach
+default cheat_day = False #maroach
 
 # 10.0
 default jennyLike = 0
@@ -400,6 +405,7 @@ default v10s33_laurenBakeSale = False
 default skater = False
 default friends_first = False
 default bathroom_sex = False
+default getting_clean = False #maroach
 default kiss_teacher = False
 default chloe_over_nora = False
 default im_a_lion = False
@@ -449,3 +455,9 @@ default v10s33_ryan_flirt_emily = False
 default v10s33_ev_date_now = False
 default v10s33_ryanb = False
 default v10_ri_hat_good = False
+default fright_club = False #m
+default bros_before_blows = False #m
+default rough_rider = False #m
+default family_secrets = False #m
+default goldenboy = False #m
+default lights_out = False #m
