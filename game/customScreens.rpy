@@ -113,11 +113,11 @@ screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings_
     modal True
     zorder 100
 
-    add "images/steam/steam_endscreen.webp"
+    add "images/steam/endscreen.webp"
 
     imagebutton:
-        idle "images/steam/steam_wishlist.webp"
-        hover "images/steam/steam_wishlistHover.webp"
+        idle "images/steam/playNow.webp"
+        hover "images/steam/playNowHover.webp"
 
         if steamAPI.is_overlay_enabled():
             action Function(steamAPI.activate_overlay_to_web_page, link)
