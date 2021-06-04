@@ -319,6 +319,9 @@ default sideWithCameron = False
 default emilyArcade = 0
 default kissedEmilyArcade = False
 default helpJosh = False
+default text_with_an_s = False
+default lucky_7 = False
+default helping_hand = False
 
     ## Fight Vars
 default larsdmg = 0
@@ -355,6 +358,10 @@ default second_date = False
 default lake_hj = False
 default the_king = False
 default the_wrong_time = False
+default cheat_day = False
+default back_down = False
+default king_of_the_north = False
+default relaxing_day = False
 
 # 10.0
 default jennyLike = 0
@@ -404,6 +411,17 @@ default kiss_teacher = False
 default chloe_over_nora = False
 default im_a_lion = False
 default on_the_court = False
+default rawr_im_a_lion = False
+default hard_decisions = False
+default forbidden_romance = False
+default getting_clean = False
+default lights_out = False
+default golden_boy = False
+default family_secrets = False
+default rough_rider = False
+default bros_before_blows = False
+default fright_club = False
+
     # Freeroam
 default v10s33_riley = False
 default v10s33_riley2 = False
