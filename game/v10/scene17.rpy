@@ -265,7 +265,7 @@ label v10_aubrey_house:
                 label v10s17_galleryScene:
                 $ aubrey_bathroom_sex = True
                 $ bathroom_sex = True
-                $ grantAchievement("bathroom_sex")
+                $ grantAchievement("getting_clean")
                 scene v10auh2b # FPP Same angle as v10auh2, show Aubrey at door to bathroom, turning to look at MC, mouth closed
                 with dissolve
 
