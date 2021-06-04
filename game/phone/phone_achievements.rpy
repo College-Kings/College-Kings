@@ -79,7 +79,7 @@ init python:
     Achievement("relaxing day", "Have fun with Aubrey at the lake", "lake_hj")
     #Achievement("the king", "Recognise the king", "the_king")
     Achievement("king of the north", "The King is heading North", "king_of_the_north") #m
-    Achievement("cheat day", "Skip the gym and get with Riley"), "cheat_day") #m
+    Achievement("cheat day", "Skip the gym and get with Riley", "cheat_day") #m
     Achievement("the wrong time", "Don't kiss Lindsey", "the_wrong_time")
 
     # v10.0
