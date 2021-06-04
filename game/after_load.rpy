@@ -40,6 +40,20 @@ python early:
             os.rmdir(MYPATH)
         except Exception: pass
 
+    try: v7_msgReply8:
+    except NameError:
+        def v7_msgReply8():
+            pass
+
+    try: v7_msgReply9:
+    except NameError:
+        def v7_msgReply9():
+            pass
+
+    try: v7_msgReply10:
+    except NameError:
+        def v7_msgReply10():
+            pass
 
 label after_load:
     python:
@@ -65,8 +79,12 @@ label after_load:
             except AttributeError: pass
 
             kiwiiPost.img = os.path.splitext(kiwiiPost.img)[0] + ".webp"
-            kiwiiPost.img = "images/phone/kiwii/posts/v7/{}".format(kiwiiPost.img.split("/")[-1])
 
+            for i in range(7, 10):
+                if renpy.loadable("images/phone/kiwii/posts/v{}/{}".format(i, kiwiiPost.img.split("/")[-1])):
+                    kiwiiPost.img = "images/phone/kiwii/posts/v{}/{}".format(i, kiwiiPost.img.split("/")[-1])
+                    break
+                    
             try: kiwiiPost.message = kiwiiPost.caption
             except AttributeError: pass
 
