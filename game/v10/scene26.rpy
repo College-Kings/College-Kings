@@ -702,9 +702,11 @@ label v10_amber_skatepark:
                     with dissolve
                     menu:
                         "Let her":
-
                             $ amberrs = True
 
+                            if config_censored:
+                                call screen censoredPopup("v10s26_nsfwSkipLabel1")
+                                
                             scene v10ambbj
                             with dissolve
 
