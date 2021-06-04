@@ -25,44 +25,44 @@ init python:
     Achievement("big_mouth", "Threaten Cameron", "bigmouth")
 
     # v2.0
-    Achievement("mixed feelings", "Decline Lauren", "mixedfeelings")
-    Achievement("the notorious", "Win your first fight", "thenotorious")
-    Achievement("a new beginning", "Lauren likes you", "anewbeginning")
-    Achievement("over it", "Let Benjamin make a move", "overit")
+    Achievement("mixed_feelings", "Decline Lauren", "mixedfeelings")
+    Achievement("the_notorious", "Win your first fight", "thenotorious")
+    Achievement("a_new beginning", "Lauren likes you", "anewbeginning")
+    Achievement("over_it", "Let Benjamin make a move", "overit")
 
     # v3.0
-    Achievement("not now, mom", "Decline Julia's call", "notnowmom")
-    Achievement("lips don't lie", "Kiss Riley in the Park", "lipsdontlie")
-    Achievement("truth hurts", "Tell Lauren about Aubrey", "truthhurts")
+    Achievement("not_now_mom", "Decline Julia's call", "notnowmom")
+    Achievement("lips_dont_lie", "Kiss Riley in the Park", "lipsdontlie")
+    Achievement("truth_hurts", "Tell Lauren about Aubrey", "truthhurts")
 
     # v4.0
-    Achievement("relight the fire", "Tell Julia about Emily", "relightthefire")
+    Achievement("relight_the_fire", "Tell Julia about Emily", "relightthefire")
     Achievement("rematch", "Buy Chloe the volleyball", "rematch")
-    Achievement("keen eye", "Pick the muffin", "keeneye")
+    Achievement("keen_eye", "Pick the muffin", "keeneye")
     
     # v5.0
-    Achievement("on the low", "Deny PDA with Lauren", "onthelow")
-    Achievement("peta public enemy", "Kill dog as animal lover", "petapublicenemy")
+    Achievement("on_the_low", "Deny PDA with Lauren", "onthelow")
+    Achievement("peta_public_enemy", "Kill dog as animal lover", "petapublicenemy")
     Achievement("snitch", "Tell the school", "snitch")
 
     # v6.0
-    Achievement("bros before hoes", "Help Imre", "brosbeforehoes")
-    Achievement("monkey business", "Join the Apes", "monkeybusiness")
-    Achievement("not my business", "Don't disturb Ms. Rose", "notmybusiness")
+    Achievement("bros_before_hoes", "Help Imre", "brosbeforehoes")
+    Achievement("monkey_business", "Join the Apes", "monkeybusiness")
+    Achievement("not_my_business", "Don't disturb Ms. Rose", "notmybusiness")
     Achievement("reignition", "Kiss Emily back", "reignition")
     Achievement("credulous", "Trust Chloe", "credulous")
-    Achievement("seems fishy", "Don't meet Grayson", "seemsfishy")
+    Achievement("seems_fishy", "Don't meet Grayson", "seemsfishy")
     Achievement("strike", "Kiss Penelope", "strike")
 
     # v7.0
-    Achievement("true to self", "Walk home with Riley", "truetoself")
+    Achievement("true_to_self", "Walk home with Riley", "truetoself")
     Achievement("silverback", "Pledge to the Apes", "silverback")
     Achievement("wolfpack", "Pledge to the Wolves", "wolfpack")
-    Achievement("lee way", "Pull down Mr. Lee's pants", "leeway")
+    Achievement("lee_way", "Pull down Mr. Lee's pants", "leeway")
     Achievement("ecstatic", "Bunk homecoming with Amber", "ecstatic")
-    Achievement("slow and steady", "End homecoming with Lauren", "slowandsteady")
-    Achievement("playing with fire", "End homecoming with Riley", "playingwithfire")
-    Achievement("homecoming queen", "End homecoming with Chloe", "homecomingqueen")
+    Achievement("slow_and_steady", "End homecoming with Lauren", "slowandsteady")
+    Achievement("playing_with_fire", "End homecoming with Riley", "playingwithfire")
+    Achievement("homecoming_queen", "End homecoming with Chloe", "homecomingqueen")
     
     # v8.0
     Achievement("thick_and_thin", "Help Penelope", "thick_and_thin")
