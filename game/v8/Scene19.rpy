@@ -4,13 +4,20 @@
 # Time: Sunday Evening
 
 init python:
-    def v8s19_reply1(): # s19_reply5
+    def v8s19_reply1():
+
+        setattr(store, "text_with_an_s", True)
+        grantAchievement("text_with_an_s")
+
         contact_Amber.newMessage(_("It's only fair, right? Make us even"))
-        if joinwolves:
-            contact_Amber.addImgReply(_("images/v8/Scene 19/w_dick_pic.webp"))
+        if config_censored:
+            contact_Amber.addImgReply("images/gui/censoredPopup/censoredBackground.webp")
+
+        elif joinwolves:
+            contact_Amber.addImgReply("images/v8/Scene 19/w_dick_pic.webp")
 
         else:
-            contact_Amber.addImgReply(_("images/v8/Scene 19/a_dick_pic.webp"))
+            contact_Amber.addImgReply("images/v8/Scene 19/a_dick_pic.webp")
 
         contact_Amber.newMessage(_("Wow, better than I thought"))
         contact_Amber.addReply(_("So you thought about it?"))
@@ -18,7 +25,13 @@ init python:
         contact_Amber.addReply(_("Aw man you're driving me crazy"))
         contact_Amber.newMessage(_("So do something about it"))
         contact_Amber.addReply(_("Now? What about you?"))
-        contact_Amber.newImgMessage(_("images/v8/Scene 19/amb_pussy_pic.webp"))
+        
+        if config_censored:
+            contact_Amber.newImgMessage("images/gui/censoredPopup/censoredBackground.webp")
+
+        else:
+            contact_Amber.newImgMessage("images/v8/Scene 19/amb_pussy_pic.webp")
+
         contact_Amber.addReply(_("Aw fuck"))
         contact_Amber.newMessage(_("You like?"))
         contact_Amber.addReply(_("I love! You're so hot!"))
@@ -28,6 +41,14 @@ init python:
         contact_Amber.addReply(_("I'd fuck you so good you'd scream my name"))
         contact_Amber.newMessage(_("I'm close. Will you finish with me?"))
         contact_Amber.addReply(_("Oh, God yes!"))
+        contact_Amber.newMessage(_("NOW!"))
+        contact_Amber.addReply(_("NOW!"))
+        contact_Amber.newMessage("")
+        contact_Amber.addReply(_("Holy shit, Amber! You're amazing!"))
+        contact_Amber.newMessage(_("You weren't too bad yourself. Next time we need to do this in person"))
+        contact_Amber.addReply(_("Give me 5 minutes ;)"))
+        contact_Amber.newMessage(_("You're so cute! But it's time for bed. Dream about me ;)"))
+        contact_Amber.addReply(_("With pleasure! Night!"))
 
     def v8s19_reply2():
         contact_Amber.newMessage(_("Good. Maybe someday we can think about things in the same room and see what happens"))
@@ -80,19 +101,6 @@ label sun_eve_room:
 
         call screen phone
 
-        # Show MC masturbating and continue conversation
-        if contact_Amber.getMessage("Wanna see what thinking about you has done to me?"):
-            scene v8sser2
-            with dissolve
-
-            $ contact_Amber.newMessage(_("NOW!"), queue=False)
-            $ contact_Amber.addReply(_("NOW!"))
-            $ contact_Amber.addReply(_("Holy shit, Amber! You're amazing!"))
-            $ contact_Amber.newMessage(_("You weren't too bad yourself. Next time we need to do this in person"))
-            $ contact_Amber.addReply(_("Give me 5 minutes ;)"))
-            $ contact_Amber.newMessage(_("You're so cute! But it's time for bed. Dream about me ;)"))
-            $ contact_Amber.addReply(_("With pleasure! Night!"))
-
         if forgiveemily:
             # -MC's phone buzzes-
             ### ERROR: (Aww, she couldn't get enough of me) [I figure this line works for either scenario but let me know if I should change it] ###
@@ -105,7 +113,12 @@ label sun_eve_room:
             $ contact_Emily.addReply(_("Sure! Sounds like fun. I can be there in a few minutes"), v8s19_reply3)
             $ contact_Emily.addReply(_("I would but it's getting late and I haven't even started Mr. Lee's project"), v8s19_reply4)
 
-            call screen phone
+            label v8s19_phoneCheck1:
+                if contact_Emily.getReplies():
+                    call screen phone
+                if contact_Emily.getReplies():
+                    u "I should reply to Emily"
+                    jump v8s19_phoneCheck1
 
             if contact_Emily.getMessage("Great! See you there!"):
                 jump emily_arcade
@@ -155,19 +168,6 @@ label sun_eve_room:
             $ contact_Lauren.addReply(_("Goodnight"))
 
         call screen phone
-
-        # Show MC masturbating and continue conversation
-        if contact_Amber.getMessage("Wanna see what thinking about you has done to me?"):
-            scene v8sser2
-            with dissolve
-
-            $ contact_Amber.newMessage(_("NOW!"), queue=False)
-            $ contact_Amber.addReply(_("NOW!"))
-            $ contact_Amber.addReply(_("Holy shit, Amber! You're amazing!"))
-            $ contact_Amber.newMessage(_("You weren't too bad yourself. Next time we need to do this in person"))
-            $ contact_Amber.addReply(_("Give me 5 minutes ;)"))
-            $ contact_Amber.newMessage(_("You're so cute! But it's time for bed. Dream about me ;)"))
-            $ contact_Amber.addReply(_("With pleasure! Night!"))
             
         if forgiveemily:
             # -MC's phone buzzes-
@@ -181,7 +181,12 @@ label sun_eve_room:
             $ contact_Emily.addReply(_("Sure! Sounds like fun. I can be there in a few minutes"), v8s19_reply3)
             $ contact_Emily.addReply(_("I would but it's getting late and I haven't even started Mr. Lee's project"), v8s19_reply4)
 
-            call screen phone
+            label v8s19_phoneCheck2:
+                if contact_Emily.getReplies():
+                    call screen phone
+                if contact_Emily.getReplies():
+                    u "I should reply to Emily"
+                    jump v8s19_phoneCheck2
 
             if contact_Emily.getMessage("Great! See you there!"):
                 jump emily_arcade

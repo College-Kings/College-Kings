@@ -3,6 +3,7 @@
 # Characters: MC (Outfit 3),Nora (outfit 1)
 # Time: Tuesday Morning
 label v10_talk_nora:
+    play music "music/v10/Scene 28/Track Scene 28.mp3" fadein 3
     scene v10hal1 # FPP. Show Nora in hallway, mouth closed
     with fade
 
@@ -31,7 +32,8 @@ label v10_talk_nora:
     scene v10hal1a
     with dissolve
 
-    no "An abroad trip is required for him to graduate. Otherwise he wouldn't be going, so I'm not too sure if I'm really that happy about him coming. I'm really looking forward to this trip and I don't want... \"us\" ruining it."
+    no "An abroad trip is required for him to graduate. Otherwise he wouldn't be going, so I'm not too sure if I'm really that happy about him coming."
+    no "I'm really looking forward to this trip and I don't want... \"us\" ruining it."
 
     scene v10hal1
     with dissolve
@@ -94,7 +96,7 @@ label v10_talk_nora:
 
                     no "Yeah, I'm pretty sure she'll take us. She likes Europe as much as I do."
 
-                "Leave it Alone":
+                "Leave it alone":
 
                     scene v10hal1
                     with dissolve
@@ -138,7 +140,7 @@ label v10_talk_nora:
             with dissolve
 
             u "No problem."
-        "Don't Help":
+        "Don't help":
             scene v10hal1
             with dissolve
 
@@ -159,4 +161,6 @@ label v10_talk_nora:
 
     u "See ya."
 
+    stop music fadeout 3
+    
     jump v10_chloe_hallway

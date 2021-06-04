@@ -381,7 +381,7 @@ else:
             scene v9slake1j
             with dissolve
 
-            u "I...I guess, so."
+            u "I... I guess, so."
 
             scene v9slake1h
             with dissolve
@@ -892,7 +892,6 @@ menu:
         if aubreyrs:
 
             label v9_aubrey_scene_lake:
-
                 scene v9slake6
                 with dissolve
 
@@ -918,6 +917,9 @@ menu:
                 with dissolve
 
                 u "What is this?"
+
+                if config_censored:
+                    call screen censoredPopup("v9s7_nsfwSkipLabel1")
 
                 scene v9slake8 # same as 8a, mouth open
                 with dissolve
@@ -948,6 +950,9 @@ menu:
                 scene v9slake17vid # mc and aubrey make out animation
                 with dissolve
                 
+                $ lake_hj = True
+                $ grantAchievement("relaxing_day")
+
                 " "
 
                 scene v9slake18 # aubreys hand on mc's dick over wet underpants
@@ -1020,6 +1025,7 @@ menu:
 
                 u "That does sound fair, haha."
 
+            label v9s7_nsfwSkipLabel1:
                 scene black
                 with dissolve
 

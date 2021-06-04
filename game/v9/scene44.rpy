@@ -51,7 +51,7 @@ label v9_warehouse_lindsey:
         with dissolve
 
         menu:
-            "Stop Her":
+            "Stop her":
                 $ addPoint("bf")
 
                 u "Um... Lindsey?"
@@ -93,7 +93,7 @@ label v9_warehouse_lindsey:
                 scene v9wwl4b # FPP. Same camera as v9wwl4, Lindsey now gone out of view.
                 with dissolve
 
-            "Let Her Go":
+            "Let her go":
                 scene v9wwl4b # FPP. Same camera as v9wwl4, Lindsey now gone out of view.
                 with dissolve
 
@@ -121,7 +121,7 @@ label v9_warehouse_lindsey:
         with dissolve
         
         menu:
-            "Let Her Go":
+            "Let her go":
                 pause 0.75
 
                 scene v9wwl4b
@@ -129,7 +129,7 @@ label v9_warehouse_lindsey:
 
                 u "(Am I nuts or was that a cold shoulder? Damn. I really want to fix it but I have to get ready.)"
 
-            "Stop Her":
+            "Stop her":
                 $ addPoint("bf")
 
                 u "Um, I'm sorry about earlier. I..."
@@ -241,7 +241,7 @@ label v9_warehouse_lindsey:
         with dissolve
 
         menu:
-            "It Was a Joke":
+            "It was a joke":
                 $ addPoint("bro")
                 
                 u "Aww, don't worry. No cold feet here. You're just very hard to resist."
@@ -289,7 +289,7 @@ label v9_warehouse_lindsey:
                 scene v9wwl8 # TPP. Show Lindsey walking away, MC watching her walk away.
                 with dissolve
     
-            "Be Serious":
+            "Be serious":
                 $ addPoint("bf")
 
                 u "Sorry, I'm just getting in my head. There's a lot riding on this fight."

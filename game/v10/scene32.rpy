@@ -4,6 +4,7 @@
 # Time: Tuesday Night/Wednesday Morning
 
 label v10_tues_room_night:
+    play music "music/v10/Scene 32/Track Scene 32_1.mp3" fadein 3
     if joinwolves:
         scene v10strn1 # TPP. Show MC tired and stressed, plopping down on his Wolves bed.
         with fade
@@ -22,8 +23,11 @@ label v10_tues_room_night:
             u "(And it continues.)"
 
             python:
-                contact_Lauren.newImgMessage("images/v10/scene 32/v9lauText.webp")
-                contact_Lauren.newMessage("Sweet Dreams ;)")
+                if config_censored:
+                    contact_Lauren.newImgMessage("images/gui/censoredPopup/censoredBackground.webp", queue=False)
+                else:
+                    contact_Lauren.newImgMessage("images/v10/scene 32/v9lauText.webp", queue=False)
+                contact_Lauren.newMessage("Sweet Dreams ;)", queue=False)
                 contact_Lauren.addReply("They will be now.")
 
             label v10s32_phoneCheckW:
@@ -81,8 +85,11 @@ label v10_tues_room_night:
             u "(And it continues.)"
 
             python:
-                contact_Lauren.newImgMessage("images/v10/scene 32/v9lauText.webp")
-                contact_Lauren.newMessage("Sweet Dreams ;)")
+                if config_censored:
+                    contact_Lauren.newImgMessage("images/gui/censoredPopup/censoredBackground.webp", queue=False)
+                else:
+                    contact_Lauren.newImgMessage("images/v10/scene 32/v9lauText.webp", queue=False)
+                contact_Lauren.newMessage("Sweet Dreams ;)", queue=False)
                 contact_Lauren.addReply("They will be now.")
 
             label v10s32_phoneCheckA:
@@ -119,5 +126,5 @@ label v10_tues_room_night:
         with fade
 
         pause 0.75
-
+        stop music fadeout 3
         jump v10_charity_freeroam

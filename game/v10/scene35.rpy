@@ -5,7 +5,7 @@ label v10_chloe_vs_nora:
     with dissolve
 
     cl "*Grunts*"
-
+    play music "music/v10/Scene 35/Track Scene 35.mp3" fadein 3
 
     scene v10cvn2 #second with Nora hitting Chloe's arms into the air off her shoulders
     with dissolve
@@ -23,6 +23,9 @@ label v10_chloe_vs_nora:
 
     no "C'mon Madame President."
 
+    if config_censored:
+        call screen censoredPopup("v10s35_nsfwSkipLabel1")
+
     scene v10cvn5 # fifth is of Chloe lifting her waist throwing Nora up a little bit at which point her strap falls down on one side letting her breast slip out of her top and Nora gets extremely shocked,
     with dissolve
 
@@ -37,13 +40,12 @@ label v10_chloe_vs_nora:
 
     no "Ugh!"
 
-
-
     scene v10cvn7 # seventh is of Chloe sitting on Nora pinning one arm behind her back while Nora is making a face of pain while covering her breast with the other arm
     with dissolve
 
     no "OKAY YOU WIN!"
 
+label v10s35_nsfwSkipLabel1:
     scene v10cvn8 # FPP Nora is putting back on her bikini, Chloe is looking down at the mud on her body
     with dissolve
 
@@ -55,7 +57,7 @@ label v10_chloe_vs_nora:
     aut "Congratulations, Chloe!"
 
     menu:
-        "Talk To Chloe":
+        "Talk to Chloe":
 
             scene v10cvn9a # fpp same 9, mouth open
             with dissolve
@@ -124,7 +126,7 @@ label v10_chloe_vs_nora:
 
                     cl "Right..."
 
-        "Talk To Nora":
+        "Talk to Nora":
 
             scene v10cvn10 # FPP. Show nora, mouth closed
             with dissolve
@@ -176,4 +178,5 @@ label v10_chloe_vs_nora:
 
     pause 1
 
+    stop music fadeout 3
     jump v10_emily_vs_aubrey

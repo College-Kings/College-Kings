@@ -5,6 +5,7 @@
     # -MC wakes up and hears his alarm going off-
 
 label v10_econ_class:
+    play music "music/v10/Scene 27/Track Scene 27.mp3" fadein 3
     if joinwolves:
         scene v10eco1 # TPP. Show MC in his room, Slight worried face, mouth closed (wolves)
         with fade
@@ -74,7 +75,8 @@ label v10_econ_class:
     scene v10eco5
     with dissolve
 
-    ri "*Laughs* [name] was at the skatepark getting lessons and I saw him when I was leaving the library. From what I saw he wouldn't have wanted anyone there. He did more falling than skating."
+    ri "*Laughs* [name] was at the skatepark getting lessons and I saw him when I was leaving the library."
+    ri "From what I saw he wouldn't have wanted anyone there. He did more falling than skating."
 
     scene v10eco6
     with dissolve
@@ -179,7 +181,7 @@ label v10_econ_class:
     scene v10eco7
     with dissolve
 
-    u "Yeah"
+    u "Yeah?"
 
     scene v10eco8 # FPP. MC now stood infront of Ms rose at front of class, Show Ms. Rose, mouth open
     with dissolve
@@ -215,7 +217,7 @@ label v10_econ_class:
             u "You did sound pretty enthusiastic."
 
         menu:
-            "Ask About Nora":
+            "Ask about Nora":
                 scene v10eco8a
                 with dissolve
 
@@ -237,6 +239,9 @@ label v10_econ_class:
                 with dissolve
 
                 ro "*Sighs* When she came in right after you left I wondered if you'd seen her."
+
+                $ family_secrets = True
+                $ grantAchievement("family_secrets")
 
                 ro "It's true, she's my stepdaughter. But since we both attend SVC we do our best to keep our relationship unknown."
 
@@ -291,7 +296,7 @@ label v10_econ_class:
 
                 u "You too."
 
-            "Don't Ask":
+            "Don't ask":
                 scene v10eco8a
                 with dissolve
 
@@ -350,7 +355,7 @@ label v10_econ_class:
         with dissolve
 
         u "Will do."
-
+    stop music fadeout 3
     jump v10_talk_nora
 
     # -Transition to Scene 28-

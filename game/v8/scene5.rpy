@@ -4,6 +4,9 @@
 
 label hoco_amb_night:
     stop music fadeout 2
+    if config_censored:
+        call screen censoredPopup("v8s5_nsfwSkipLabel1")
+
     scene v8samb1 # TPP. Show Amber & MC laying on the floor in the living room. Amber begins to remove MC's pants. Amber mouth open, smile.
     with dissolve
 
@@ -189,6 +192,8 @@ label hoco_amb_morning:
     with dissolve
 
     u "Sure."
+
+label v8s5_nsfwSkipLabel1:
 
     scene v8samb16
     with dissolve

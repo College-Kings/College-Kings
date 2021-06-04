@@ -37,8 +37,14 @@ init python:
     SceneGallery("v9_emily_dorm")
     SceneGallery("v9_ri_sex")
     SceneGallery("v9_make_out_w_lin")
-    #SceneGallery("v10_aubrey_house_sg") #awaiting gallery18.webp
-    #SceneGallery("v10_lauren_room_sg", scope={"laurenrs": True}) #awaiting gallery19.webp
+        # v10.0
+    SceneGallery("v10_mc_vs_ryan_fight")
+    SceneGallery("v10_mc_vs_imre_fight")
+    SceneGallery("v10s17_galleryScene")
+    SceneGallery("v10_lauren_room_sg")
+    SceneGallery("v10_amber_skatepark_sg")
+    SceneGallery("v10s30_galleryScene")
+    SceneGallery("v10s40_galleryScene", scope={"rileyrs": True})
 
 screen spoiler():
     add "images/darker.webp"
@@ -57,6 +63,7 @@ screen spoiler():
         text_align 0.5
         align (0.57, 0.58)
         action Hide("spoiler")
+
 
 screen sceneGallery():
     tag menu
@@ -77,6 +84,7 @@ screen sceneGallery():
                 action Replay(sceneGalleryItem.label, scope=updateScope(sceneGalleryItem.scope))
                 idle Transform(sceneGalleryItem.idleImg, size=(400, 226))
                 hover Transform(sceneGalleryItem.hoverImg, size=(400, 226))
+                insensitive Transform(im.Blur(sceneGalleryItem.idleImg, 3), size=(400, 226))
 
     imagebutton:
         idle "images/backtransp.webp"

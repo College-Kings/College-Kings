@@ -60,7 +60,7 @@ label v9_hc_cont1:
         "Heckle":
             $ addPoint("tm")
             jump v9_hc_heckle
-        "Stay Quiet":
+        "Stay quiet":
             jump v9_hc_quiet
 
 label v9_hc_heckle:
@@ -74,7 +74,7 @@ label v9_hc_heckle:
     jump v9_hc_cont2
 
 label v9_hc_quiet:
-    u "(Not likely)"
+    u "(Not likely.)"
 
     jump v9_hc_cont2
 
@@ -97,7 +97,7 @@ label v9_hc_cont2:
     scene v9hc8c # FPP. Same camera as v9hc8, Mr. Lee now stood next to his desk looking at the class, mouth closed.
     with dissolve
 
-    u "(Awww, too bad)"
+    u "(Awww, too bad.)"
 
     scene v9hc8d # FPP. Same camera as v9hc8, Mr. Lee now stood next to his desk looking at the class, gesturing someone to come up, mouth open.
     with dissolve
@@ -123,7 +123,7 @@ label v9_hc_cont2:
     with dissolve
 
     menu:
-        "Grumble With Cameron":
+        "Grumble with Cameron":
             $ addPoint("bro")
             jump v9_hc_grumble
         "Be happy with Penelope":
@@ -229,9 +229,9 @@ label v9_hc_cont3:
     with dissolve
 
     menu:
-        "Be Scared":
+        "Be scared":
             jump v9_hc_scared
-        "Be Ready":
+        "Be ready":
             $ addPoint("bro")
             jump v9_hc_ready
         

@@ -7,6 +7,8 @@ label v10_emily_course:
     scene v10semi1 # TPP. Show MC walking down the college hallways, towards a slightly open door.
     with fade
 
+    play music "music/v10/Scene 30a/Track Scene 30a.mp3" fadein 3
+
     pause 0.75
 
     scene v10semi2 # TPP. Show the inside of the first responders class (camera as if MC peaking in) Emily practicing CPR on a dummy, Ben & Jerry watching. 1 or 2 other random students in the class.
@@ -146,7 +148,7 @@ label v10_emily_course:
 
                                 be "Looks like you two are really getting into it."                                
 
-                            "Don't Save Emily":
+                            "Don't save Emily":
                                 $ addPoint("tm")
                             
                                 u "Oh no, if only someone could save her."
@@ -170,7 +172,7 @@ label v10_emily_course:
                         with dissolve
 
                         menu:
-                            "Agree With Emily":
+                            "Agree with Emily":
                                 $ addPoint("bf")
                                 $ emilyLike += 1
 
@@ -183,7 +185,7 @@ label v10_emily_course:
 
                                 em "Amazing."
 
-                            "Disagree With Emily":
+                            "Disagree with Emily":
                                 u "I don't know. It was fun and all, but I think I'm not made to be a first responder."
 
                                 scene v10semi14
@@ -372,7 +374,7 @@ label v10_emily_course:
 
                                 be "Looks like you two are really getting into it."                                
 
-                            "Don't Save Emily":
+                            "Don't save Emily":
                                 $ addPoint("tm")
                             
                                 u "Oh no, if only someone could save her."
@@ -396,7 +398,7 @@ label v10_emily_course:
                         with dissolve
 
                         menu:
-                            "Agree With Emily":
+                            "Agree with Emily":
                                 $ addPoint("bf")
                                 $ emilyLike += 1
 
@@ -409,7 +411,7 @@ label v10_emily_course:
 
                                 em "Amazing."
 
-                            "Disagree With Emily":
+                            "Disagree with Emily":
                                 u "I don't know. It was fun and all, but I think I'm not made to be a first responder."
 
                                 scene v10semi14
@@ -480,7 +482,8 @@ label v10_emily_course:
                         u "I'll see you around."
 
                         jump v10_late_alley
-
+    stop music fadeout 3
+    
     jump v10_late_alley
 
 

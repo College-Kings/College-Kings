@@ -333,7 +333,7 @@ label after_glasses_choice:
         u "(Don't fuck this up, [name])"
 
         menu:
-            "Riley's Glasses":
+            "Riley's glasses":
                 u "Those... tonight?"
 
                 scene v8sopt24e
@@ -348,7 +348,7 @@ label after_glasses_choice:
 
                 jump opti_end
 
-            "Both Glasses":
+            "Both glasses":
                 u "Both"
 
                 scene v8sopt24f # FPP. Same camera as v8sopt24, Riley and Aubrey look at eachother confused.

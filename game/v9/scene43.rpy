@@ -14,12 +14,12 @@ label v9_warehouse_josh:
     scene v9jka2 # FPP. Show Josh, Kim and Amber, now close to them, all smiles, mouths closed.
     with dissolve
 
-    u "Just when I was starting to get used to seeing you with a black eye (laughs)."
+    u "Just when I was starting to get used to seeing you with a black eye. *Laughs*"
 
     scene v9jka2a # FPP. Same camera as v9jka2, Josh laugh, mouth open.
     with dissolve
 
-    jo "The ladies weren't digging it (laughs)."
+    jo "The ladies weren't digging it. *Laughs*"
 
     scene v9jka2b # FPP. Same camera as v9jka2, Amber smile, mouth open, everyone else mouth closed.
     with dissolve
@@ -96,23 +96,23 @@ label v9_warehouse_josh:
     scene v9jka4a # FPP. Same camera as v9jka4, both laughing, Amber mouth open, Kim closed.
     with dissolve
 
-    am "(laughs)"
+    am "*Laughs*"
 
     scene v9jka4b # FPP. Same camera as v9jka4, both smiling, mouths closed.
     with dissolve
 
-    u "(laughs)"
+    u "*Laughs*"
 
     scene v9jka5 # TPP. Show Josh in the middle of the ring, wearing outfit 2, pacing around as if he's making an announcement, mouth open.
     with dissolve
 
-    jo "(WWE announcer Voice) Lovely, lovely ladies...and dudes, I'm your beloved announcer Josh AKA Mr. Have-A-Good-Time."
+    jo "*WWE announcer Voice* Lovely, lovely ladies...and dudes, I'm your beloved announcer Josh AKA Mr. Have-A-Good-Time."
 
     scene v9jka4a
     with dissolve
 
     # -Amber and Kim look at each other and start laughing-
-    am "He should've asked for help if he was planning on doing that (laughs)."
+    am "He should've asked for help if he was planning on doing that. *Laughs*"
 
     scene v9jka5
     with dissolve

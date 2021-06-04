@@ -57,10 +57,10 @@ label v9_thur_room_w_cam_punch:
     u "What? No. I've just been chilling. What's going on?"
 
     $ s15KiwiiPost = KiwiiPost("Grayson", "v9/v9hlw8b.webp", "That's my boy! Go [name]! Fuck yeah!", numberLikes=renpy.random.randint(100, 200))
-    $ s15KiwiiPost.addComment("Cameron", "Fuckin' A!", numberLikes=renpy.random.randint(100, 200), queue=False)
-    $ s15KiwiiPost.addComment("Riley", "Knew he had it in him!", numberLikes=renpy.random.randint(200, 250), queue=False)
+    $ s15KiwiiPost.newComment("Cameron", "Fuckin' A!", numberLikes=renpy.random.randint(100, 200), queue=False)
+    $ s15KiwiiPost.newComment("Riley", "Knew he had it in him!", numberLikes=renpy.random.randint(200, 250), queue=False)
     
-    "(I should check Kiwii)"
+    "(I should check Kiwii.)"
 
     menu:
         "Brag":
@@ -157,7 +157,7 @@ label v9_thur_room_w_cam_cont1:
         "Drink":
             $ addPoint("bro")
             jump v9_thur_room_w_cam_drink
-        "Don't Drink":
+        "Don't drink":
             jump v9_thur_room_w_cam_no_drink
         
 label v9_thur_room_w_cam_drink:
@@ -189,7 +189,7 @@ label v9_thur_room_w_cam_no_drink:
 
     scene v9trc4i # FPP. Close up on Cameron, neutral look, mouth closed
     with dissolve
-    u "Nah, I need to keep a clear head for...studying."
+    u "Nah, I need to keep a clear head for... studying."
 
     scene v9trc4i
     with dissolve
@@ -251,21 +251,21 @@ label v9_thur_room_w_cam_no_punch:
     with dissolve
     sa "You better check it."
 
-    $ s15KiwiiPost = KiwiiPost("Sebastian", "v9/v9hlw20.webp", numberLikes=renpy.random.randint(100, 200))
-    $ s15KiwiiPost.addComment("Chris", "Wow, hope he's OK!", numberLikes=renpy.random.randint(100, 200), queue=False)
-    $ s15KiwiiPost.addComment("Cameron", "Ahhhh! Preview of Saturday's Freshman Brawl!", numberLikes=renpy.random.randint(150, 170), queue=False)
+    $ s15KiwiiPost = KiwiiPost("Sebastian", "v9/v9hlw20.webp", "", numberLikes=renpy.random.randint(100, 200))
+    $ s15KiwiiPost.newComment("Chris", "Wow, hope he's OK!", numberLikes=renpy.random.randint(100, 200), queue=False)
+    $ s15KiwiiPost.newComment("Cameron", "Ahhhh! Preview of Saturday's Freshman Brawl!", numberLikes=renpy.random.randint(150, 170), queue=False)
 
     label v9_s15_phoneExit_no_Punch:
         if s15KiwiiPost.getReplies():
             call screen phone
         if s15KiwiiPost.getReplies():
-            "(I should check Kiwii)"
+            "(I should check Kiwii.)"
             jump v9_s15_phoneExit_no_Punch
 
     menu:
-        "Shrug It Off":
+        "Shrug it off":
             jump v9_thur_room_w_cam_shrugg_off
-        "Get Defensive":
+        "Get defensive":
             $ addPoint("tm")
             jump v9_thur_room_w_cam_defensive
 
@@ -313,7 +313,7 @@ label v9_thur_room_w_cam_defensive:
     scene v9trc6e # FPP. Same camera as v9trc6a Close up on Samantha, annoyed look, mouth open
     with dissolve
     # -Samantha breaks them apart-
-    sa "*yelling* OK! Stop! Both of you! Jesus. You're both clearly mindless apes. Congratulations."
+    sa "*Yelling* OK! Stop! Both of you! Jesus. You're both clearly mindless apes. Congratulations."
 
     pause 1
 
@@ -332,7 +332,7 @@ label v9_thur_room_w_cam_cont3:
         "Protest":
             $ addPoint("tm")
             jump v9_thur_room_w_cam_protest
-        "Follow Orders":
+        "Follow orders":
             jump v9_thur_room_w_cam_follow
         
 label v9_thur_room_w_cam_protest:
@@ -365,7 +365,7 @@ label v9_thur_room_w_cam_follow:
 
     scene v9trc9a # FPP. Same camera as v9trc9 Show Samantha right infront of mc bent down, Show cameron behind her,Sam flirty smile, Cameron annoyed look, sam mouth closed, cameron mouth closed
     with dissolve
-    u "*laughing* We have one. You just happen to be in it."
+    u "*Laughing* We have one. You just happen to be in it."
 
     jump v9_thur_room_w_cam_cont4
 
@@ -409,7 +409,7 @@ label v9_thur_room_w_cam_cont5:
 
     scene v9trc9e # FPP. Same camera as v9trc9 Show Samanta stood up next to Cameron (from MC's Perspective sat on bed),Cameron grabbing crotch, Samantha happy smile, Cameron neutral look, Mouths closed
     with dissolve
-    u "(Not a bad idea)"
+    u "(Not a bad idea.)"
     u "Goodnight."
 
     scene v9trc9c

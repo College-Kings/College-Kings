@@ -261,12 +261,8 @@ label imrecona: # Find Imre
 
 label imreconb: # Help Imre
     $ brosbeforehoes = True
-    if not steam:
-        show brosbeforehoes at achievementShow
-
-    else:
-        $ achievement.grant("bros_before_hoes")
-        $ achievement.sync()
+    $ grantAchievement("bros_before_hoes")
+        
 
     u "(I need to help Imre, Adam will destroy him in his current condition.)"
 
@@ -362,7 +358,7 @@ label imreconc: # Keep talking to Amber
     with fade
 
     $ contact_Amber.addReply(_("I'm all by myself now."))
-    $ contact_Amber.newImgMessage(_("images/text2.webp"))
+    $ contact_Amber.newImgMessage("images/text2.webp")
     $ contact_Amber.addReply(_("Woah, what was that for?"), v6_reply1)
     $ contact_Amber.addReply(_("Oh wow, you're so fucking hot"), v6_reply4)
 
@@ -869,13 +865,8 @@ label imrecond: # Meet Chloe
         "Trust her":
             $ addPoint("bf")
             $ credulous = True
-
-            if not steam:
-                show credulous at achievementShow:
-
-            else:
-                $ achievement.grant("credulous")
-                $ achievement.sync()
+            $ grantAchievement("credulous")
+                
 
             u "(I shouldn't spy on her. It's not right.)"
 
@@ -1028,7 +1019,7 @@ label continuebb:
     
     $ contact_Amber.newMessage(_("Hey, you alone? xx"), queue=False)
     $ contact_Amber.addReply(_("Yeah, I'm in my dorm, why?"))
-    $ contact_Amber.newImgMessage(_("images/text2.webp"))
+    $ contact_Amber.newImgMessage("images/text2.webp")
     $ contact_Amber.addReply(_("Woah, what was that for?"), v6_reply1)
     $ contact_Amber.addReply(_("Oh wow, you're so fucking hot"), v6_reply4)
 
@@ -1778,12 +1769,8 @@ label continuebd:
             with fade
 
             $ notmybusiness = True
-            if not steam:
-                show notmybusiness at achievementShow
-
-            else:
-                $ achievement.grant("not_my_business")
-                $ achievement.sync()
+            $ grantAchievement("not_my_business")
+                
 
     label nr_bb: #for compatibility only
     u "(Huh, what's this?)"
@@ -2722,11 +2709,8 @@ label emsex_c:
     with dissolve
 
     $ reignition = True
-    if not steam:
-        show reignition at achievementShow
-    else:
-        $ achievement.grant("reignition")
-        $ achievement.sync()
+    $ grantAchievement("reignition")
+        
 
     " "
 
@@ -2758,11 +2742,8 @@ label emsex_a:
         play music "music/msexy.mp3"
 
         $ reignition = True
-        if not steam:
-            show reignition at achievementShow
-        else:
-            $ achievement.grant("reignition")
-            $ achievement.sync()
+        $ grantAchievement("reignition")
+            
 
     " "
 
@@ -2770,6 +2751,9 @@ label emsex_a:
     with dissolve
 
     pause 0.5
+
+    if config_censored:
+        call screen censoredPopup("v6_nsfwSkipLabel1")
 
     scene em6
     with dissolve
@@ -2971,6 +2955,7 @@ label emsex_a:
 
     u "I still need to finish some of my assignments, so I kinda gotta go now."
 
+label v6_nsfwSkipLabel1:
     scene em18b
     with dissolve
 
@@ -3454,7 +3439,7 @@ label fy_bd: # not gone to Emily's
         scene s558b # evelyn looks up at you smiling
         with dissolve
 
-        ev "Bon appetit"
+        ev "Bon appetit."
 
         scene s558c
         with dissolve
@@ -4037,6 +4022,9 @@ label aubreysexb: # aubreysex scene
 
     au "*Quiet moan*"
 
+    if config_censored:
+        call screen censoredPopup("wayhome")
+
     scene naub1a
     with dissolve
 
@@ -4458,13 +4446,16 @@ label afteraubrey:
     if aubreyrs:
         play sound "sounds/vibrate.mp3"
 
+        if config_censored:
+            $ contact_Aubrey.newImgMessage("images/gui/censoredPopup/censoredBackground.webp", queue=False)
+        else:
+            $ contact_Aubrey.newImgMessage("images/text3.webp", queue=False)
+
         if meetaubrey:
-            $ contact_Aubrey.newImgMessage(_("images/text3.webp"), queue=False)
             $ contact_Aubrey.newMessage(_("Still shaking from earlier"), queue=False)
             $ contact_Aubrey.addReply(_("Hahaha, we should definitely do this more ;)"))
 
         else:
-            $ contact_Aubrey.newImgMessage(_("images/text3.webp"), queue=False)
             $ contact_Aubrey.newMessage(_("You missed out today"), queue=False)
             $ contact_Aubrey.addReply(_("Daaaamn, I'll be there next time"))
 
@@ -4873,11 +4864,8 @@ label afteraubrey:
                     # handshake clap sound
 
                     $ monkeybusiness = True
-                    if not steam:
-                        show monkeybusiness at achievementShow
-                    else:
-                        $ achievement.grant("monkey_business")
-                        $ achievement.sync()
+                    $ grantAchievement("monkey_business")
+                        
 
                     gr "That's what I'm talking about!"
 
@@ -5023,12 +5011,8 @@ label afteraubrey:
             $ meetgrayson = False
             $ addPoint("bro")
             $ seemsfishy = True
-
-            if not steam:
-                show seemsfishy at achievementShow
-            else:
-                $ achievement.grant("seems_fishy")
-                $ achievement.sync()
+            $ grantAchievement("seems_fishy")
+                
 
             u "(Fuck Grayson, I'm not meeting him.)"
 
@@ -6003,7 +5987,7 @@ label wakeupa:
                     scene s627h
                     with dissolve
 
-                    u "fire"
+                    u "fire."
 
                     u "I just hope you don't burn out because..."
 
@@ -6628,11 +6612,8 @@ label wakeupa:
                 with dissolve
 
                 $ strike = True
-                if not steam:
-                    show strike at achievementShow
-                else:
-                    $ achievement.grant("strike")
-                    $ achievement.sync()
+                $ grantAchievement("strike")
+                    
 
                 pe "*Giggles*"
 
@@ -10714,12 +10695,12 @@ label v6_fr3chris3: ### ENDING
     u "Holy shit."
     stop music fadeout 2.0
 
-if persistent.ep < 7:
+if not renpy.loadable("v7/v7.rpy"):
     scene savenow
     with Fade (1,0,1)
     " "
 
-if persistent.ep < 7:
-    jump end_credits
-else:
+if renpy.loadable("v7/v7.rpy"):
     jump v7start
+else:
+    jump end_credits

@@ -1354,7 +1354,7 @@ label conl:
 
     scene s249a
     with vpunch
-
+    $ bodyHook = True
     call screen fightPopup("Body Hook")
 
     play music "music/m16punk.mp3"
@@ -1755,25 +1755,29 @@ label conl:
 
                         u "Touch both your elbows in front of your chest."
 
+                        if config_censored:
+                            call screen censoredPopup("v3_nsfwSkipLabel1")
+
                         scene s254p
                         with dissolve
 
                         au "Like this?"
 
-                        scene s254q
-                        with dissolve
+                        label v3_nsfwSkipLabel1:
+                            scene s254q
+                            with dissolve
 
-                        au "Oh, I see. Very funny."
+                            au "Oh, I see. Very funny."
 
-                        scene s254r
-                        with dissolve
+                            scene s254r
+                            with dissolve
 
-                        u "Haha, I thought you did great."
+                            u "Haha, I thought you did great."
 
-                        scene s254l
-                        with dissolve
+                            scene s254l
+                            with dissolve
 
-                        au "Okay, now it's your turn again."
+                            au "Okay, now it's your turn again."
 
 
                     "Dare":
@@ -1811,6 +1815,9 @@ label conl:
                 with dissolve
 
                 au "Yeah, you can. See?"
+
+                if config_censored:
+                    call screen censoredPopup("aubsexad")
 
                 scene s254aa ## aubrey and you standing
                 with dissolve
@@ -2049,6 +2056,9 @@ label conl:
 
         au "Yeah, you can. See?"
 
+        if config_censored:
+            call screen censoredPopup("aubsexad")
+
         scene s254aa ## aubrey and you standing
         with dissolve
 
@@ -2069,9 +2079,9 @@ label conl:
 
         au "Yeah..."
 
-        label continuem: #for compatibility only
-        scene aub1start
-        with dissolve
+label continuem: #for compatibility only
+    scene aub1start
+    with dissolve
 
     menu:
         "Kiss her":
@@ -2694,12 +2704,8 @@ label continueq:
             with dissolve
 
             $ notnowmom = True
-            if not steam:
-                show notnowmom at achievementShow
-
-            else:
-                $ achievement.grant("not_now_mom")
-                $ achievement.sync()
+            $ grantAchievement("not_now_mom")
+                
 
             u "(I don't really feel like talking to her right now.)"
 
@@ -3030,7 +3036,7 @@ label continueq:
     ri "So what's going on between you and Chloe? She's the president of the Chicks, right?"
 
     menu:
-        "I like her":
+        "I like her.":
             $ addPoint("bf")
 
             scene s281a
@@ -3080,12 +3086,8 @@ label continueq:
                     play sound "sounds/kiss.mp3"
 
                     $ lipsdontlie = True
-                    if not steam:
-                        show lipsdontlie at achievementShow
+                    $ grantAchievement("lips_dont_lie")
                         
-                    else:
-                        $ achievement.grant("lips_dont_lie")
-                        $ achievement.sync()
 
                     " "
 
@@ -3256,12 +3258,8 @@ label continueq:
                     with dissolve
 
                     $ truthhurts = True
-                    if not steam:
-                        show truthhurts at achievementShow
+                    $ grantAchievement("truth_hurts")
                         
-                    else:
-                        $ achievement.grant("truth_hurts")
-                        $ achievement.sync()
 
                     u "(Fuck me... I guess that's what honesty gets you.)"
 

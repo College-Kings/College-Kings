@@ -7,6 +7,8 @@ label v10_ms_rose_fight:
     scene v10msf1 # FPP. Show MS rose's house, MS rose stood at the door, Mr rose stood infront of house. Ms rose angry look, Ms rose mouth closed, mr rose mouth open
     with dissolve
 
+    play music "music/v10/Scene 25/Track Scene 25_1.mp3" fadein 3
+
     mrr "These things take time, how is that not clear? You can't expect a luxurious lifestyle if you're not willing to put the work in!"
 
     scene v10msf1a # FPP. same camera as v10msf1, Ms rose angry look hands raised, Ms rose mouth open, mr rose mouth closed
@@ -54,7 +56,7 @@ label v10_ms_rose_fight:
     mrr "Just let me come in so we can-"
 
     menu:
-        "Speak Up":
+        "Speak up":
             $ addPoint("bf", 1)
             $ v10_ms_r_interfere = True
             scene v10msf2 # FPP. Show MR Rose in foreground facing camera, Show MS rose at the door facing camera, Mr Rose Mouth closed, Ms rose mouth closed.
@@ -96,6 +98,8 @@ label v10_ms_rose_fight:
             with dissolve
 
             mrr "*Sighs* Fine."
+            stop music fadeout 3
+            play music "music/v10/Scene 25/Track Scene 25_2.mp3" fadein 3
 
             scene v10msf3 # FPP. Show Mr Rose walking away from the house
             with dissolve
@@ -121,7 +125,8 @@ label v10_ms_rose_fight:
             with dissolve
 
             mrr "When everything is said and done, you're gonna regret this."
-
+            stop music fadeout 3
+            play music "music/v10/Scene 25/Track Scene 25_2.mp3" fadein 3
             scene v10msf3
             with dissolve
     
@@ -131,7 +136,7 @@ label v10_ms_rose_fight:
     ro "*Sighs* I'm sorry. He has no respect for anyone but himself."
 
     menu:
-        "Insult Him":
+        "Insult him":
             scene v10msf4a # FPP. same camera as v10msf4, Show MS rose, crying mouth closed, FPP now from right infront of door to have conversation with ms rose.
             with dissolve
 
@@ -142,7 +147,7 @@ label v10_ms_rose_fight:
 
             ro "Tell me about it."
 
-        "Comfort Her":
+        "Comfort her":
             $ addPoint("bf", 1)
 
             scene v10msf4a 
@@ -162,7 +167,8 @@ label v10_ms_rose_fight:
     if v10_ms_r_interfere:
         scene v10msf4b
         with dissolve
-        ro "Yes I'll be fine, I don't think he'd risk coming back after this. Thank you though, it means a lot to me that you came. Who knows what would have happened if you hadn't"
+        ro "Yes I'll be fine, I don't think he'd risk coming back after this."
+        ro "Thank you though, it means a lot to me that you came. Who knows what would have happened if you hadn't."
 
         scene v10msf4a
         with dissolve
@@ -204,8 +210,10 @@ label v10_ms_rose_fight:
     mrr "You're too sweet."
 
     menu:
-        "Make A Move":
+        "Make a move":
             $ v10_ms_r_kiss = True
+            $ kiss_teacher = True
+            $ grantAchievement("forbidden_romance")
             $ addPoint("bf", 1)
             scene v10msf5a # TPP. same camera as v10msf5, Show MS rose. Touching MC on the cheek, smiling,MC hand on Ms Rose Waist.
             with dissolve
@@ -216,6 +224,8 @@ label v10_ms_rose_fight:
             with dissolve
 
             pause 0.5
+
+            play sound "sounds/kiss.mp3"
 
             scene v10msf6 # FPP. Show Close up of Ms. Rose and MC kissing.
             with dissolve
@@ -232,7 +242,7 @@ label v10_ms_rose_fight:
 
             u "(Did I really just do that?)"
 
-        "Don't Make A Move":
+        "Don't make a move":
             scene v10msf4a
             with dissolve
             u "That's how I was raised."
@@ -260,5 +270,5 @@ label v10_ms_rose_fight:
     no "Hey, so I just got to my stepmom's house. I'm gonna have to let you go."
 
     u "(Wait, her stepmom? Is Nora Ms. Rose's stepdaughter? What the fuck?!)"
-
+    stop music fadeout 3
     jump v10_amber_skatepark

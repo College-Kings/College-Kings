@@ -26,8 +26,6 @@ init python:
             return
         renpy.notify("Note cancelled.")
 
-image typoNotesBackground = "bugTesting/images/typoNotesBackground.webp"
-
 screen input_note(prompt):
     modal True
     style_prefix "input"

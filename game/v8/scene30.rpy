@@ -16,6 +16,9 @@ label amber_sex_at_joshs:
     with dissolve
     pause
 
+    if config_censored:
+        call screen censoredPopup("v8s30_nsfwSkipLabel1")
+
     scene v8amber4 # TPP. Amber and MC standing in front of the bed (with MC towards the bed), making out passionately with Amber holding MC's head
     with dissolve
     pause 1
@@ -24,17 +27,7 @@ label amber_sex_at_joshs:
     with dissolve
 
     $ get_a_room = True
-    if not steam:
-        image get_a_room = "images/v8/achievements/getaroom.webp"
-        show get_a_room:
-            xpos 0
-            ypos -200
-            linear 0.5 xpos 0 ypos 0
-            pause 2.0
-            linear 0.5 xpos 0 ypos -200
-    else:
-        $ achievement.grant("get_a_room")
-        $ achievement.sync()
+    $ grantAchievement("get_a_room")
 
     if ending == "amber":
         am "I've been waiting for this since the last time."
@@ -68,6 +61,8 @@ label amber_sex_at_joshs:
         am "I can't believe how much I missed it."
     else:
         am "Oh wow, I could get used to this."
+
+    play music "music/Erotic Track - Amber Getting It.mp3" fadein 3
 
     image v8am2bj1 = Movie(play="images/v8/Scene 30/v8am2bj1.webm", loop=True, image="images/v8/Scene 30/2ambj_000.webp", start_image="images/v8/Scene 30/2ambj_000.webp") # BJ TPP
     image v8am2bj1f = Movie(play="images/v8/Scene 30/v8am2bj1f.webm", loop=True, image="images/v8/Scene 30/2ambj_000.webp", start_image="images/v8/Scene 30/2ambj_000.webp")
@@ -216,10 +211,13 @@ label amber_sex_at_joshs:
     u "OHHHHH!"
     am "*Moans*"
 
+    stop music fadeout 3
+    
     scene v8amber13 # TPP. Shot of MC and Amber lying together in the bed in their underwear. MC's hands just folded back and behind his head. Amber's head and one hand on MC's chest, both of them relaxed, smiling and mouth closed
     with Fade(0.75, 0.25, 0.75)
     pause 1
 
+label v8s30_nsfwSkipLabel1:
     scene v8amber14 # TPP (MC and Amber in same position as v8amber13) but camera moved closer to focus on Amber. Amber satisfied look, smiling, mouth open. MC's face need not be in the frame but if it is, his mouth is closed. Amber should not be looking at the MC, but staring into the distance
     with dissolve
     am "My God, you were amazing."

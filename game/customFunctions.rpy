@@ -7,20 +7,17 @@ init -1 python:
         except KeyError: raise NameError("Name '{}' is not defined".format(var))
 
         # Update the trait points whenever one of the above variables are changed
-        popular = bro * troublemaker / boyfriend
-        loyal = bro * boyfriend / troublemaker
-        confident = boyfriend * troublemaker / bro
 
         oldKCT = getattr(store, "kct")
 
         # Decide the new order of traits based on the updated values
-        kctDict = { "popular": popular, "confident": confident, "loyal": loyal }
+        kctDict = {"popular": bro * troublemaker / boyfriend, "confident": boyfriend * troublemaker / bro, "loyal": bro * boyfriend / troublemaker}
+        setattr(store, "sortedKCT", [k for k, v in sorted(kctDict.items(), key=lambda item: item[1], reverse=True)])
 
-        newKCT = max(kctDict, key=kctDict.get)
-        setattr(store, "kct", newKCT)
-
-        if newKCT != oldKCT:
+        if sortedKCT[0] != oldKCT:
+            setattr(store, "kct", sortedKCT[0])
             renpy.notify("Your KCT has changed to " + kct)
+
 
     # Mark disabled choices
     if getattr(renpy.display.get_info(), 'oldmenu', None) is None:
@@ -31,3 +28,12 @@ init -1 python:
                   for label, condition, value in items ]
         return renpy.display.get_info().oldmenu(items, set_expr)
     renpy.exports.menu = menu_override
+
+
+    def grantAchievement(achieve):
+        try:
+            renpy.show(achieve, at_list=achievementAtList)
+        except TypeError: pass
+        achievement.grant(achieve) 
+        achievement.sync()
+        

@@ -10,7 +10,7 @@ label v9_thur_room_w_seb:
 
     play sound "sounds/knock.mp3"
 
-    "*knock* *knock* *knock*"
+    "*Knock* *knock* *knock*"
 
     scene v9trs2 # TPP. Show MC getting up from his chair towards the door to open it.
     with dissolve
@@ -118,7 +118,6 @@ label v9_thur_w_punch:
     guyc "Fuck yeah! Seems the training did you well. Just like it should!"
 
     if kct == "loyal":
-
         scene v9trs5b # FPP. Same camera as v9trs5, both smiling, mouths closed.
         with dissolve
 
@@ -342,6 +341,7 @@ label v9_thur_w_no_punch:
     scene v9trs4a
     with dissolve
 
+    # kiwiiPost
     # -MC rushes back to pick up his phone from the table then checks out Kiwii to find a picture of the guy knocking him out in the hallway-
 
     u "Fucking bastard."
@@ -439,7 +439,7 @@ label v9_thur_w_no_punch:
     scene v9trs5d
     with dissolve
 
-    se "Pussy aside, there is time a time and place for everything. And that was your time to get punched."
+    se "Pussy aside, there is a time and place for everything. And that was your time to get punched."
 
     scene v9trs5c
     with dissolve

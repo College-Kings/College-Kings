@@ -4,6 +4,7 @@
 # Time: Saturday Night
 
 label v10_imre_vs_caleb_fight:
+    play music "music/v10/Scene 4 & 5/Track Scene 4 & 5.mp3" fadein 3
     scene v10ivc3 # TPP. Show Josh in the ring strolling around as if he's adressing a crowd, mouth open.
     with fade
 
@@ -83,5 +84,5 @@ label v10_imre_vs_caleb_fight:
     with dissolve
 
     jo "Sounds like you know what you're here for!"
-
+    stop music fadeout 3
     jump v10_mc_vs_imre_fight

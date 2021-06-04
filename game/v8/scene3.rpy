@@ -7,6 +7,9 @@ label v8_ri_start:
     with dissolve
     u "Mhm... Tell me more."
 
+    if config_censored:
+        call screen censoredPopup("v8s3_nsfwSkipLabel1")
+
     scene v8s26 # FPP (MC still sitting on the bed). Riley stands up and is looking into the camera and talking seductively, about to take her dress off. She should be visible at least down until her knees
     with dissolve
     ri "I'd rather show you instead."
@@ -289,6 +292,7 @@ label v8_ri_start:
     with dissolve
     ri "Good night, [name]."
 
+label v8s3_nsfwSkipLabel1:
     scene v8s33_2
     with dissolve
     play sound "sounds/kiss.mp3"

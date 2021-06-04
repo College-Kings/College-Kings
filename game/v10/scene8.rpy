@@ -3,9 +3,12 @@
 # Characters: Ryan (Outfit 2), Josh (Outfit 2),MC (Outfit 7), Grayson (Outfit 3),Imre (Outfit 4), Sebastian (Outfit 1),Cameron (Outfit 3),Chris (Outfit 2)
 # Time: Saturday Night
 label v10_fight_result:
+    $ renpy.end_replay()
     scene v10fr1 # FPP. Show close up of Josh pointing down towards the floor, slight smile, mouth open
     with dissolve
     jo "*Laughs* In the words of Smokey, \"you got knocked the fuck out!\""
+
+    play music "music/v10/Scene 8/Track 8.mp3" fadein 3
 
     if joinwolves:
     # -If MC wins the fight against Ryan-
@@ -48,7 +51,7 @@ label v10_fight_result:
             u "(Phew, I'm so exhausted now... I just wanna go to bed.)"
 
             
-
+            stop music fadeout 3
             jump v10_leave_fight
 
         else:
@@ -101,6 +104,8 @@ label v10_fight_result:
             u "(Fuck, I let my entire frat down...)"
             u "(God, I just wanna go to bed.)"
 
+            stop music fadeout 3
+
             jump v10_leave_fight
     else:
 
@@ -131,6 +136,7 @@ label v10_fight_result:
             u "(I fucking did it!)"
             
             u "(Phew, I'm so exhausted now... I just wanna go to bed.)"
+            stop music fadeout 3
 
             jump v10_leave_fight
         
@@ -170,7 +176,8 @@ label v10_fight_result:
             u "(Fuck, I let my entire frat down...)"
             
             u "(God, I just wanna go to bed.)"
-
+            stop music fadeout 3
+            
             jump v10_leave_fight
 
 

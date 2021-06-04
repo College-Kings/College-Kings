@@ -6,22 +6,25 @@ define config.default_sfx_volume = 1
 default achievementAtList = None
 default freeRoam = False
 
+default kct = "confident"
+default sortedKCT = ["confident", "loyal", "popular"]
+
     ## Kiwii Vars
 default kiwii_firstTime = False
 
     ## Fight Vars
+default fight_tutorial = False
 default fight_type = "normal" # normal / simReal / simWin
 default reaction = 1.0
 default reactiona = 1.0
-default allies = [mc]
-default enemies = []
+default bodyHook = False
+default enemyhealth = 0
 
 # 1.0 - 6.0
 default v1_sda = False
 default evelynmove = False
 default name = "Alex"
 default realmode = False
-default tomhealth = 5
 default statsPage = 0
 default kctTutorialPage = 1
 default influenceTutorialPage = 1
@@ -34,9 +37,6 @@ default laurenrs = False
 default bro = 1
 default boyfriend = 2
 default troublemaker = 1
-default loyal = bro * boyfriend / troublemaker
-default popular = bro * troublemaker / boyfriend
-default confident = boyfriend * troublemaker / bro
 default phoneTutorialPage = 1
 default freeRoamTutorialPage = 1
 default v1_freeRoam1_riley = False
@@ -55,7 +55,6 @@ default simtom = 1
 default tomdmg = 0
 default tomattack = 1
 default tomstance = 1
-default ischoice = False
 default emilyandben = False
 default forgiveemily = False
 default costumeaubrey = False
@@ -93,7 +92,7 @@ default r = "r"
 default qwer = True
 default fighttom = False
 default notcool = False
-default difficulty = 1
+default difficulty = None
 default laawk = True
 default meetjulia = False
 default openwound = False
@@ -148,7 +147,6 @@ default simadamfight = True
 default adamdmg = 0
 default adamstance = 1
 default adamattack = 1
-default adamhealth = 5
 default simadam = 1
 default winadam = False
 default imremad = False
@@ -162,7 +160,6 @@ default chooseimre = True
 default meetchloe = False
 default imreforgives = False
 default chloecaught = False
-default kct = "popular"
 default showkct = True
 default laurenmad = False
 default checkonrose = False
@@ -325,7 +322,6 @@ default helpJosh = False
 
     ## Fight Vars
 default larsdmg = 0
-default larshealth = 0
 default simLarsFight = False
 default s28_fightWinner = "MC"
 
@@ -336,6 +332,9 @@ default helpedNora = False
 default chloeSteakHouse = False
 default climbwseb = False
 default hesitantwgrayson = False
+default text_with_an_s = False #maroach
+default lucky_7 = False #maroach
+default helping_hand = False #maroach
 
 # 9.0
 default mcBrawlStance1 = False
@@ -354,6 +353,13 @@ default v9_sex_with_riley = False
 default hangOutWithLindsey = False
 default playCoolWLins = False
 default lindseyfirstkiss = False
+default down_for_the_count = False
+default second_date = False
+default lake_hj = False
+default the_king = False
+default the_wrong_time = False
+default king_of_the_north = False #maroach
+default cheat_day = False #maroach
 
 # 10.0
 default jennyLike = 0
@@ -362,7 +368,7 @@ default mrleeLike = 0
 default chloeLike = 0
 default aubreyLike = 0
 default samLike = 0
-default mrroseLike = 0
+default msroseLike = 0
 default autumnLike = 0
 default emilyLike = 0
 default ryanLike = 0
@@ -397,6 +403,13 @@ default v10_amber_awkward = False
 default v10_imre_win = False
 default v10s33_laurenBakeSale = False
 default skater = False
+default friends_first = False
+default bathroom_sex = False
+default getting_clean = False #m
+default kiss_teacher = False
+default chloe_over_nora = False
+default im_a_lion = False
+default on_the_court = False
     # Freeroam
 default v10s33_riley = False
 default v10s33_riley2 = False
@@ -442,3 +455,9 @@ default v10s33_ryan_flirt_emily = False
 default v10s33_ev_date_now = False
 default v10s33_ryanb = False
 default v10_ri_hat_good = False
+default fright_club = False #m
+default bros_before_blows = False #m
+default rough_rider = False #m
+default family_secrets = False #m
+default golden_boy = False #m
+default lights_out = False #m

@@ -16,6 +16,7 @@ init python:
         contact_Josh.addReply("Haha, okay.")
 
 label v10_room_mon_night:
+    play music "music/v10/Scene 20/Track Scene 20.mp3" fadein 3
     if joinwolves:
         scene v10smnr1 # TPP. Show mc in his new Wolves room chilling on his bed on his phone.
         with Fade(1, 0, 1)
@@ -52,9 +53,7 @@ label v10_room_mon_night:
             scene v10smnr1
             with dissolve
 
-        # -MC unlocks Simplr-
-        # -MC opens the Simplr app-
-        # -MC uses the Simplr app-
+        $ simplrApp.unlock()
 
         u "(Hmm, I can see why so many people are talking about it.)"
         u "(It would be kinda weird though if I saw someone I knew.)"
@@ -70,6 +69,8 @@ label v10_room_mon_night:
         with Fade(2, 0, 2)
 
         pause 1
+
+        stop music fadeout 3
 
         jump v10_cafe_w_jenny
 
@@ -109,9 +110,7 @@ label v10_room_mon_night:
             scene v10smnr3
             with dissolve
 
-        # -MC unlocks Simplr-
-        # -MC opens the Simplr app-
-        # -MC uses the Simplr app-
+        $ simplrApp.unlock()
 
         u "(Hmm, I can see why so many people are talking about it.)"
         u "(It would be kinda weird though if I saw someone I knew.)"
@@ -127,5 +126,5 @@ label v10_room_mon_night:
         with Fade(2, 0, 2)
 
         pause 1
-
+        stop music fadeout 3
         jump v10_cafe_w_jenny        

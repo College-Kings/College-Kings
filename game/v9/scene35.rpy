@@ -92,7 +92,7 @@ label v9_room_sat_aft:
     
         play sound "sounds/vibrate.mp3"
 
-        u "(I wonder who this is)"
+        u "(I wonder who this is.)"
 
         label s35_PhoneContinueW:
             if contact_Chloe.getReplies():
@@ -104,7 +104,7 @@ label v9_room_sat_aft:
         scene v9rsa3a # TPP. Same camera as v9rsa3, MC puts his phone down and yawns.
         with dissolve
 
-        u "(Just a quick nap)"
+        u "(Just a quick nap.)"
 
         scene v9rsa4 # TPP. Show MC's Wolves room door.
         with dissolve
@@ -131,7 +131,7 @@ label v9_room_sat_aft:
         
         play sound "sounds/vibrate.mp3"
 
-        u "(I wonder who this is)"
+        u "(I wonder who this is.)"
 
         $ contact_Chloe.newMessage(_("Hey [name], what you up to?"), queue=False)
         $ contact_Chloe.addReply(_("Nothing much. Just relaxing. I'm kind of tired."))
@@ -151,7 +151,7 @@ label v9_room_sat_aft:
         scene v9rsa7a # TPP. Same camera as v9rsa3, MC puts his phone down and yawns.
         with dissolve
 
-        u "(Just a quick nap)"
+        u "(Just a quick nap.)"
 
         scene v9rsa8 # TPP. Show MC's Apes room door.
         with dissolve

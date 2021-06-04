@@ -15,6 +15,8 @@ label v10_wolves_redec:
 
     pause 0.75
 
+    play music "music/v10/Scene 13/Track Scene 13.mp3" fadein 3
+
     scene v10swhr2 # FPP. Show Chris stood in the Wolves hallway this angle must make sense for both whr1 & whr8, Chris neutral, mouth closed.
     with dissolve
 
@@ -79,7 +81,7 @@ label v10_wolves_redec:
     with dissolve
 
     menu:
-        "Accept Help":
+        "Accept help":
             $ addPoint("bro", 1)
 
             $ v10_perry_help_room = True
@@ -175,7 +177,7 @@ label v10_wolves_redec:
 
             guyd "Anytime."
 
-        "Decline Help":
+        "Decline help":
             u "I appreciate it man, but I'm all good. This is gonna require all my focus."
 
             scene v10swhr4b
@@ -191,6 +193,7 @@ label v10_wolves_redec:
             scene v10swhr7 # TPP. Show wide shot of MC's new wolves room.
             with Fade(1, 0, 1)             
 
-            u "(Now that's what I'm talking about!)"            
+            u "(Now that's what I'm talking about!)"          
+    stop music fadeout 3  
 
     jump v10_call_with_lauren1

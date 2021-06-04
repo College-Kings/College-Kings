@@ -5,12 +5,13 @@
 
 init python:
     def v10s10_reply1():
+        setattr(store, "v10s10_hangWLinds", True)
         contact_Lindsey.newMessage("Really? Thank you xx")
         contact_Lindsey.addReply("On my way")
 
 label v10_sun_morn:
     default v10s10_hangWLinds = False
-
+    play music "music/v10/Scene 10/Track Scene 10.mp3" fadein 3
     if joinwolves:
         scene v10sum1 # TPP. Show MC in his Wolves bed looking up at the ceiling, MC looks tired.
         with fade
@@ -62,7 +63,7 @@ label v10_sun_morn:
 
             $ contact_Josh.newMessage("Friends or not friends, dude wtf?! That was one good show wasted!", queue=False)
             $ contact_Josh.newMessage("Just saying you missed out on impressing a lot of ladies today", queue=False)
-            $ contact_Josh.addReply("I know... But hey, maybe some appreciate the compassion?", "v10s10_ReplyJoshWa3")
+            $ contact_Josh.addReply("I know... But hey, maybe some appreciate the compassion?")
             $ contact_Josh.newMessage("Haha, sure dude")
             $ contact_Josh.addReply("Whatever man.")
 
@@ -107,7 +108,7 @@ label v10_sun_morn:
 
         scene black
         with fade
-
+        stop music fadeout 3
         if v10s10_hangWLinds:
             jump v10_linds_room
 
@@ -121,11 +122,6 @@ label v10_sun_morn:
         pause 0.75
 
         play sound "sounds/vibrate.mp3"
-
-        scene v10sum5 # TPP. Show MC reaching for his phone.
-        with dissolve
-
-        pause 0.75
 
         scene v10sum5a # TPP. Same as sum2, MC now on his phone in bed.
         with dissolve
@@ -165,7 +161,7 @@ label v10_sun_morn:
 
             $ contact_Josh.newMessage("Friends or not friends, dude wtf?! That was one good show wasted!", queue=False)
             $ contact_Josh.newMessage("Just saying you missed out on impressing a lot of ladies today", queue=False)
-            $ contact_Josh.addReply("I know... But hey, maybe some appreciate the compassion?", "v10s10_ReplyJoshWa3")
+            $ contact_Josh.addReply("I know... But hey, maybe some appreciate the compassion?")
             $ contact_Josh.newMessage("Haha, sure dude")
             $ contact_Josh.addReply("Whatever man.")
 
@@ -210,7 +206,7 @@ label v10_sun_morn:
 
         scene black
         with fade
-
+        stop music fadeout 3
         if v10s10_hangWLinds:
             jump v10_linds_room
 

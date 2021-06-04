@@ -44,12 +44,12 @@ init python:
         contact_Lindsey.addReply(_("Goodnight"))
 
     def v9s16_reply5():
-        contact_Emily.newImgMessage(_("images/v9/scene 16/v9emiKiwii.webp"))
+        contact_Emily.newImgMessage("images/v9/scene 16/v9emiKiwii.webp")
         contact_Emily.addReply(_("Be right there!"))
         contact_Emily.newMessage(_("See you soon!"))
 
     def v9s16_reply6():
-        contact_Emily.newImgMessage(_("images/v9/scene 16/v9emiKiwii.webp"))
+        contact_Emily.newImgMessage("images/v9/scene 16/v9emiKiwii.webp")
         contact_Emily.addReply(_("Be right there!"))
 
 label v9_room_thur_night:
@@ -58,7 +58,7 @@ label v9_room_thur_night:
         scene v9emi1 # TPP. Show MC sat on his bed in his Wolves room, looking tired.
         with fade
 
-        u "(Whew, glad to be alone...finally)"
+        u "(Whew, glad to be alone... finally)"
 
         if emilyrs:
             scene v9emi1a # TPP. Same camera as v9emi1, MC now on his phone on his bed.
@@ -66,7 +66,7 @@ label v9_room_thur_night:
 
             play sound "sounds/vibrate.mp3"
 
-            u "(Ugh, now what)"
+            u "(Ugh, now what.)"
 
             $ contact_Emily.newMessage(_("I'm bored. Come hang out."), queue=False)
             $ contact_Emily.addReply(_("Sure! Gimme a sec."))
@@ -93,7 +93,7 @@ label v9_room_thur_night:
         scene v9emi4 # TPP. Show MC sat on his bed in his Apes room, looking tired.
         with dissolve
 
-        u "(Whew, glad to be alone...finally)"
+        u "(Whew, glad to be alone... finally)"
 
         if emilyrs:
             scene v9emi4a # TPP. Same camera as v9emi4, MC now on his phone on his bed.
@@ -101,9 +101,9 @@ label v9_room_thur_night:
 
             play sound "sounds/vibrate.mp3"
 
-            u "(Ugh, now what)"
+            u "(Ugh, now what.)"
 
-            $ contact_Emily.newMessage(_("I'm bored. Come hang out."))
+            $ contact_Emily.newMessage(_("I'm bored. Come hang out."), queue=False)
             $ contact_Emily.addReply(_("Sure! Gimme a sec."))
             $ contact_Emily.addReply(_("It's kinda late"), v9s16_reply6)
             
@@ -178,7 +178,7 @@ label v9_emily_dorm:
         scene v9emi11c # FPP. Same camera as v9emi11, neutral expression, mouth closed.
         with dissolve
 
-        u "(Aw, great. Pity)"
+        u "(Aw, great. Pity.)"
 
         u "I'm alright. Just more attention than I'd like."
 
@@ -205,7 +205,7 @@ label v9_emily_dorm:
         with dissolve
 
         menu:
-            "Let Emily Gloat":
+            "Let Emily gloat":
                 $ addPoint("bf")
 
                 u "You're just so much better than me."
@@ -245,7 +245,7 @@ label v9_emily_dorm:
 
                 em "You always were a slick one, [name]."
 
-            "Say You Were Winning":
+            "Say you were winning":
                 $ addPoint("tm")
 
                 u "I was one second away from the holy grail."
@@ -315,6 +315,22 @@ label v9_emily_dorm:
         with dissolve
 
         menu:
+            "Make A Move On Emily":
+                u "(This feels like the right time)"
+
+            "Head home":
+                scene v9emi37 # TPP. Show MC walking towards the exit of Emily's room, Emily in view still sat on the bed, cheeky grin, mouth open, MC smile, mouth closed.
+                with dissolve
+
+                u "Anyways, i should probably head home."
+
+                if joinwolves:
+                    jump v9_thur_night_aft_em_w
+
+                else:
+                    jump v9_thur_night_aft_em_a         
+
+        menu:
             "Brag":
                 $ addPoint("tm")
 
@@ -335,7 +351,7 @@ label v9_emily_dorm:
 
                 em "Well, in that case..."
 
-            "Play It Off":
+            "Play it off":
                 $ addPoint("bro")
 
                 u "Aww, you don't have anything to worry about. One punch isn't gonna change me."
@@ -400,6 +416,21 @@ label v9_emily_dorm:
         with dissolve
 
         menu:
+            "Make A Move On Emily":
+                u "(This feels like the right time)"
+            "Head home":
+                scene v9emi37 # TPP. Show MC walking towards the exit of Emily's room, Emily in view still sat on the bed, cheeky grin, mouth open, MC smile, mouth closed.
+                with dissolve
+
+                u "Anyways, i should probably head home."
+
+                if joinwolves:
+                    jump v9_thur_night_aft_em_w
+
+                else:
+                    jump v9_thur_night_aft_em_a         
+
+        menu:
             "Be Macho":
                 $ addPoint("bro")
 
@@ -420,7 +451,7 @@ label v9_emily_dorm:
 
                 em "Fine, then I won't be gentle."
 
-            "Be Dismissive":
+            "Be dismissive":
                 u "Yeah, it was a lucky shot, but I'm good."
 
                 scene v9emi11d
@@ -482,6 +513,9 @@ label v9_emily_dorm:
     image v9emian = Movie(play="images/v9/Scene 16/v9emian.webm", loop=True, image="images/v9/Scene 16/v9emianStart.webp", start_image="images/v9/Scene 16/v9emianStart.webp") # TPP. MC and Emily, doggy style Anal show as much action as possible.
     image v9emianf = Movie(play="images/v9/Scene 16/v9emianf.webm", loop=True, image="images/v9/Scene 16/v9emianStart.webp", start_image="images/v9/Scene 16/v9emianStart.webp")
 
+    if config_censored:
+        call screen censoredPopup("v9s16_nsfwSkipLabel1")
+
     scene v9emibj
     with dissolve
     pause 
@@ -496,7 +530,7 @@ label v9_emily_dorm:
 
     u "Oh wowwww!"
     em "*Suck* *Suck*"
-    u "(I'm gonna blow if I don't do something)"
+    u "(I'm gonna blow if I don't do something.)"
 
     scene v9emi13a
     with dissolve
@@ -744,6 +778,7 @@ label v9_emily_dorm:
 
     u "It was so good. You wore me out."
 
+    label v9s16_nsfwSkipLabel1:
     scene v9emi35 # TPP. Show MC and Emily now sat on the edge of Emily's bed, both fully dressed, MC and Emily kissing.
     with fade
 
@@ -794,13 +829,13 @@ label v9_thur_night_aft_em_w:
         scene v9emi3 # TPP. Show MC on his bed on his phone looking exhausted.
         with fade
 
-        u "(I'm about to pass out)"
+        u "(I'm about to pass out.)"
 
     else:
         scene v9emi3
         with dissolve
 
-        u "(I need to get some sleep)"
+        u "(I need to get some sleep.)"
 
     if hl_punch:
         $ contact_Lindsey.newMessage(_("How are you doing tonight?"), queue=False)
@@ -841,13 +876,13 @@ label v9_thur_night_aft_em_a:
         scene v9emi6 # TPP. Show MC on his bed on his phone looking exhausted.
         with fade
 
-        u "(I'm about to pass out)"
+        u "(I'm about to pass out.)"
 
     else:
         scene v9emi6
         with dissolve
 
-        u "(I need to get some sleep)"
+        u "(I need to get some sleep.)"
 
     if hl_punch:
         $ contact_Lindsey.newMessage(_("How are you doing tonight?"), queue=False)

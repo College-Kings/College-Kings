@@ -1121,10 +1121,18 @@ label em_arcade_4:
     with dissolve
     pause 0.5
 
+    if config_censored:
+        call screen censoredPopup("v8s20_nsfwSkipLabel1")
+
     scene v8arcade27c # Same as v8arcade27b but she pulled her top up completely
     with dissolve
+
+    $ lucky_7 = True
+    $ grantAchievement("lucky_7")
+
     u "Oh, God, I miss them."
 
+label v8s20_nsfwSkipLabel1:
     scene v8arcade27b
     with dissolve
     pause 0.5

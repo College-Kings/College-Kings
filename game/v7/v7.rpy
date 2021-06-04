@@ -1,10 +1,10 @@
 init python:
     def v7_kiwiiReply1():
-        kiwiiPost1.addComment("Cameron", "Lol, pussy", mentions="MC", numberLikes=renpy.random.randint(1, 10))
+        v7_kiwiiPost1.newComment("Cameron", _("Lol, pussy"), mentions="MC", numberLikes=renpy.random.randint(1, 10))
         addPoint("bf")
 
     def v7_kiwiiReply2():
-        kiwiiPost1.addComment("Imre", "Slide into her DMs bro!", mentions="MC", numberLikes=renpy.random.randint(5, 15))
+        v7_kiwiiPost1.newComment("Imre", _("Slide into her DMs bro!"), mentions="MC", numberLikes=renpy.random.randint(5, 15))
         addPoint("bro")
         addPoint("tm")
 
@@ -12,15 +12,15 @@ init python:
         addPoint("bf")
 
     def v7_kiwiiReply4():
-        kiwiiPost2.addComment("Autumn", "Yeah, they really are", mentions="MC", numberLikes=renpy.random.randint(8, 18))
+        v7_kiwiiPost2.newComment("Autumn", _("Yeah, they really are"), mentions="MC", numberLikes=renpy.random.randint(8, 18))
     
     def v7_kiwiiReply5():
         addPoint("bro")
-        kiwiiPost3.addComment("Aubrey", "Bring it on!", mentions="MC", numberLikes=renpy.random.randint(15, 35))
+        v7_kiwiiPost3.newComment("Aubrey", _("Bring it on!"), mentions="MC", numberLikes=renpy.random.randint(15, 35))
 
     def v7_kiwiiReply6():
         addPoint("tm")
-        kiwiiPost4.addComment("Josh", "lol", mentions="MC", numberLikes=renpy.random.randint(3, 7))
+        v7_kiwiiPost4.newComment("Josh", _("lol"), mentions="MC", numberLikes=renpy.random.randint(3, 7))
 
     def v7_msgReply1():
         setattr(store, "tellpenelope", True)
@@ -44,6 +44,7 @@ init python:
         contact_Riley.newMessage(_("Yayyy"))
 
     def v7_msgReply6():
+        setattr(store, "rileysex", False)
         contact_Riley.newMessage(_("Oh oki"))
 
     def kiwii_firstTimeMessages():
@@ -472,11 +473,8 @@ label v7start:
                 with dissolve
 
                 $ truetoself = True
-                if not steam:
-                    show truetoself at achievementShow
-                else:
-                    $ achievement.grant("true_to_self")
-                    $ achievement.sync()
+                $ grantAchievement("true_to_self")
+                    
 
                 u "Uhh, yeah of course."
 
@@ -1355,36 +1353,36 @@ label conyourdorm:
 
     pause 0.5
 
-    $ kiwiiPost1 = KiwiiPost("Chloe", "v7/clpost1.webp", "I'll always follow the sun :)", numberLikes=186)
-    $ kiwiiPost1.addComment("Grayson", "Check your DMs", 14, queue=False)
-    $ kiwiiPost1.addComment("Ryan", "Whore.", 1, queue=False)
-    $ kiwiiPost1.addComment("Aubrey", "What I wouldn't give for your body...", 32, queue=False)
-    $ kiwiiPost1.addComment("Elijah", "If you ever need a tutor, I'm free on Wednesdays and Fridays.", 2, queue=False)
-    $ kiwiiPost1.addComment("Imre", "SO FUCKING HOT WTFFF", 10, queue=False)
-    $ kiwiiPost1.addComment("Emily", "Where did you get that bikini?", 18, mentions="Chloe", queue=False)
-    $ kiwiiPost1.addComment("Chloe", "I can't remember :(", 11, mentions="Emily", queue=False)
-    $ kiwiiPost1.addReply("You're so beautiful!", v7_kiwiiReply1, numberLikes=renpy.random.randint(2, 8))
-    $ kiwiiPost1.addReply("I got some sun in my room...", v7_kiwiiReply2, numberLikes=renpy.random.randint(20, 30))
+    $ v7_kiwiiPost1 = KiwiiPost("Chloe", "v7/clpost1.webp", _("I'll always follow the sun :)"), numberLikes=186)
+    $ v7_kiwiiPost1.newComment("Grayson", _("Check your DMs"), 14, queue=False)
+    $ v7_kiwiiPost1.newComment("Ryan", _("Whore."), 1, queue=False)
+    $ v7_kiwiiPost1.newComment("Aubrey", _("What I wouldn't give for your body..."), 32, queue=False)
+    $ v7_kiwiiPost1.newComment("Elijah", _("If you ever need a tutor, I'm free on Wednesdays and Fridays."), 2, queue=False)
+    $ v7_kiwiiPost1.newComment("Imre", _("SO FUCKING HOT WTFFF"), 10, queue=False)
+    $ v7_kiwiiPost1.newComment("Emily", _("Where did you get that bikini?"), 18, mentions="Chloe", queue=False)
+    $ v7_kiwiiPost1.newComment("Chloe", _("I can't remember :("), 11, mentions="Emily", queue=False)
+    $ v7_kiwiiPost1.addReply(_("You're so beautiful!"), v7_kiwiiReply1, numberLikes=renpy.random.randint(2, 8))
+    $ v7_kiwiiPost1.addReply(_("I got some sun in my room..."), v7_kiwiiReply2, numberLikes=renpy.random.randint(20, 30))
 
-    $ kiwiiPost2 = KiwiiPost("Lauren", "v7/lapost1.webp", "Wishing I could go back...", numberLikes=39)
-    $ kiwiiPost2.addComment("Autumn","That was such a great vacation!", 2, queue=False)
-    $ kiwiiPost2.addComment("Penelope", "Looks beautiful", 3, queue=False)
-    $ kiwiiPost2.addReply("You're a cutie!", v7_kiwiiReply3, numberLikes=renpy.random.randint(3, 10))
-    $ kiwiiPost2.addReply("Winter vacations are the best", v7_kiwiiReply4, numberLikes=renpy.random.randint(10, 17))
+    $ v7_kiwiiPost2 = KiwiiPost("Lauren", "v7/lapost1.webp", _("Wishing I could go back..."), numberLikes=39)
+    $ v7_kiwiiPost2.newComment("Autumn", _("That was such a great vacation!"), 2, queue=False)
+    $ v7_kiwiiPost2.newComment("Penelope", _("Omg beautiful!"), 3, queue=False)
+    $ v7_kiwiiPost2.addReply(_("You're a cutie!"), v7_kiwiiReply3, numberLikes=renpy.random.randint(3, 10))
+    $ v7_kiwiiPost2.addReply(_("Winter vacations are the best"), v7_kiwiiReply4, numberLikes=renpy.random.randint(10, 17))
 
-    $ kiwiiPost3 = KiwiiPost("Aubrey", "v7/aupost1.webp", "Finally changed my profile pic!", numberLikes=133)
-    $ kiwiiPost3.addComment("Cameron","You put the hot into thot", 2, queue=False)
-    $ kiwiiPost3.addComment("Josh", "You still single?", 3, queue=False)
-    $ kiwiiPost3.addComment("Riley", "I'm sooo jealous of your hair!", 6, queue=False)
-    $ kiwiiPost3.addComment("Chloe", "Most beautiful girl in the world", 6, queue=False)
-    $ kiwiiPost3.addReply("I'd destroy you in Air hockey!", v7_kiwiiReply5, mentions="Aubrey", numberLikes=renpy.random.randint(15, 25))
+    $ v7_kiwiiPost3 = KiwiiPost("Aubrey", "v7/aupost1.webp", _("Finally changed my profile pic!"), numberLikes=133)
+    $ v7_kiwiiPost3.newComment("Cameron", _("You put the hot into thot"), 2, queue=False)
+    $ v7_kiwiiPost3.newComment("Josh", _("You still single?"), 3, queue=False)
+    $ v7_kiwiiPost3.newComment("Riley", _("Holy hell... gorgeous Aubs!"), 6, queue=False)
+    $ v7_kiwiiPost3.newComment("Chloe", _("Most beautiful girl in the world <3"), 6, queue=False)
+    $ v7_kiwiiPost3.addReply(_("I'd destroy you in Air hockey!"), v7_kiwiiReply5, mentions="Aubrey", numberLikes=renpy.random.randint(15, 25))
 
     if emilyrs: # first riley texts, then once you've opened the app you get 2 more messages.
-        $ kiwiiPost4 = KiwiiPost("Emily", "v7/empost1.webp", "Finally fate brings us back together. What doesn't kill us only makes us stronger.", numberLikes=82)
-        $ kiwiiPost4.addComment("Riley","You guys are so cute", 5, queue=False)
-        $ kiwiiPost4.addComment("Aubrey", "GORGEOUS", 8, queue=False)
-        $ kiwiiPost4.addComment("Josh", "Woah, you guys back together??", 3, queue=False)
-        $ kiwiiPost4.addReply("No, we're not.", v7_kiwiiReply6, mentions="Josh", numberLikes=renpy.random.randint(5, 15))
+        $ v7_kiwiiPost4 = KiwiiPost("Emily", "v7/empost1.webp", _("Finally fate brings us back together. What doesn't kill us only makes us stronger."), numberLikes=82)
+        $ v7_kiwiiPost4.newComment("Riley", _("You guys are so cute"), 5, queue=False)
+        $ v7_kiwiiPost4.newComment("Aubrey", _("GORGEOUS"), 8, queue=False)
+        $ v7_kiwiiPost4.newComment("Josh", _("Woah, you guys back together??"), 3, queue=False)
+        $ v7_kiwiiPost4.addReply(_("No, we're not."), v7_kiwiiReply6, mentions="Josh", numberLikes=renpy.random.randint(5, 15))
 
         play sound "sounds/vibrate.mp3"
         $ contact_Riley.newMessage(_("Are you and Emily back together?"), queue=False)
@@ -1531,7 +1529,7 @@ label conyourdorm:
                 with dissolve
                 u "*Sighs*"
 
-                $ kiwiiPost4.removePost()
+                $ v7_kiwiiPost4.removePost()
 
                 if laurenrs:
                     u "(Time to make things right with Lauren.)"
@@ -1610,7 +1608,7 @@ label conyourdorm:
 
                 u "(I forgot how fucking crazy she is...)"
 
-                $ kiwiiPost4.removePost()
+                $ v7_kiwiiPost4.removePost()
 
                 if laurenrs:
                     u "(Time to make things right with Lauren.)"
@@ -3282,6 +3280,8 @@ label beachlauren:
                 with dissolve
 
                 if kct == "loyal":
+                    call screen kctPopup
+
                     menu:
                         "Kiss her":
                             $ beachfirstkiss = True
@@ -3480,11 +3480,19 @@ label afterbeach:
 
             menu:
                 "Pledge to the Apes":
+
+                    $ silverback = True
+                    $ grantAchievement("silverback")
+
                     u "(Fuck it. I'm gonna be winner, no matter what it costs. Time to pledge to the Apes.)"
 
                     jump pledgeapes
 
                 "Pledge to the Wolves":
+
+                    $ wolfpack = True
+                    $ grantAchievement("wolfpack")
+
                     u "(Grayson might kill me when he finds out, but I can't join the Apes. I gotta pledge to the Wolves.)"
 
     else:
@@ -3505,11 +3513,8 @@ label afterbeach:
             "Pledge to the Apes":
 
                 $ silverback = True
-                if not steam:
-                    show silverback at achievementShow
-                else:
-                    $ achievement.grant("silverback")
-                    $ achievement.sync()
+                $ grantAchievement("silverback")
+                    
 
                 u "(Fuck it. I'm gonna be winner, no matter what it costs. I'ma go to the Apes' house and tell Grayson I changed my mind.)"
 
@@ -3517,11 +3522,7 @@ label afterbeach:
 
             "Pledge to the Wolves":
                 $ wolfpack = True
-                if not steam:
-                    show wolfpack at achievementShow
-                else:
-                    $ achievement.grant("wolfpack")
-                    $ achievement.sync()
+                $ grantAchievement("wolfpack")
 
                 u "(Nah, Grayson's done more than enough questionable shit. The Wolves been nothing but good to me. I'ma pledge to the Wolves.)"
 
@@ -5321,7 +5322,7 @@ label ep7_cam_picture:
             $ addPoint("bro")
             $ addPoint("bf")
 
-            u "Okay"
+            u "Okay."
 
         "Refuse to do it":
             $ apesTask1 = False
@@ -5458,7 +5459,6 @@ label after_pledges:
 
                 $ contact_Emily.addReply(_("Hey, sorry I lost track of time. You up?"))
 
-                call screen phone
                 label phonebb:
                     if contact_Emily.getReplies():
                         call screen phone
@@ -5489,16 +5489,16 @@ label after_pledges:
     with Fade(1,0,1)
 
     if joinwolves:
-        $ kiwiiPost5 = KiwiiPost("Chris", "v7/chpost1.webp", "One of us!", numberLikes=133, mentions="MC")
-        $ kiwiiPost5.addComment("Cameron", "Losers", 3, queue=False)
-        $ kiwiiPost5.addComment("Imre", "Hell yeah bro!", 14, queue=False)
-        $ kiwiiPost5.addComment("Aubrey", "Wohoo!", 35, queue=False)
+        $ v7_kiwiiPost5 = KiwiiPost("Chris", "v7/chpost1.webp", _("One of us!"), numberLikes=133, mentions="MC")
+        $ v7_kiwiiPost5.newComment("Cameron", _("Losers"), 3, queue=False)
+        $ v7_kiwiiPost5.newComment("Imre", _("Hell yeah bro!"), 14, queue=False)
+        $ v7_kiwiiPost5.newComment("Aubrey", _("Woohoo!"), 35, queue=False)
 
     if emilyText:
         play sound "sounds/vibrate.mp3"
         
         $ contact_Emily.newMessage(_("It's okay. You'll get the surprise another time..."), queue=False)
-        $ contact_Emily.addReply(_("Excting :)"))
+        $ contact_Emily.addReply(_("Exciting :)"))
 
     " "
 
@@ -5945,7 +5945,7 @@ label after_pledges:
         scene s884c # Same as s884b but Lee explanatory with one hand up near his waist level (mouth open)
         with dissolve
         lee "Well, back then you'd be lucky to meet someone who bathed once a month."
-        lee" But I must say [name]..."
+        lee "But I must say [name]..."
 
         scene s884d # Lee poking at the horns on MC's Viking costume and talking. MC is slightly embarrassed
         with dissolve
@@ -6468,6 +6468,9 @@ label after_history:
             $ timed = False
             stop sound
 
+            if config_censored:
+                call screen censoredPopup("v7_nsfwSkipLabel2")
+
             scene s905a # Same as s905 but Lee's pants down showing his naked ass and he is startled. (Lee is still facing the board)
             with vpunch
             pause 0.5
@@ -6487,20 +6490,17 @@ label after_history:
                 with hpunch
                 pause 0.5
 
-            scene s907 # Camera - FPP. MC and Cameron running through the door. Cameron is in front of MC with his phone in his hand. MC is almost out of the door
-            with vpunch
+            label v7_nsfwSkipLabel2:
+                scene s907 # Camera - FPP. MC and Cameron running through the door. Cameron is in front of MC with his phone in his hand. MC is almost out of the door
+                with vpunch
 
-            $ leeway = True
-            if not steam:
-                show leeway at achievementShow
-            else:
-                $ achievement.grant("lee_way")
-                $ achievement.sync()
+                $ leeway = True
+                $ grantAchievement("lee_way")
 
-            lee "Who was that?{w} {b}WHO WAS THAT?{/b}"
-            ca "HAHAHA! FUCKIN' ACES!"
+                lee "Who was that?{w} {b}WHO WAS THAT?{/b}"
+                ca "HAHAHA! FUCKIN' ACES!"
 
-            jump after_cam_history
+                jump after_cam_history
 
         "...":
             jump lee_pants_fail
@@ -6891,7 +6891,7 @@ label hc_asking_chloe:
     if volleyball or kct == "popular":
         $ hcGirl = "chloe"
 
-        if kct == "popular":
+        if not volleyball:
             call screen kctPopup
 
         scene s937d # chloe smiling eyebrow raised
@@ -7031,7 +7031,7 @@ label hc_asking_lauren:
     elif kct == "loyal" or beachfirstkiss:
         $ hcGirl = "lauren"
         
-        if kct == "loyal":
+        if not beachfirstkiss:
             call screen kctPopup
 
         $ laurenrs = True
@@ -7191,7 +7191,7 @@ label hc_asking_riley:
         $ hcGirl = "riley"
         $ rileyrs = True
 
-        if kct == "confident":
+        if not rileyrs:
             call screen kctPopup
 
         scene s959b # riley excited
@@ -7687,6 +7687,9 @@ label cameron_thurs_tasks:
 
                     u "Here we go!"
 
+                    if config_censored:
+                        call screen censoredPopup("v7_nsfwSkipLabel3")
+
                     scene scc32 # FPP. Show the girls screaming and removing their tops. Cameron laughing whilst filming on his phone in bushes.
                     with dissolve
 
@@ -7702,30 +7705,31 @@ label cameron_thurs_tasks:
 
                     pause 0.5
 
-                    scene scc34 # FPP. Show Cameron and MC back at campus, Cameron hugs MC, smile on both faces.
-                    with fade
+                    label v7_nsfwSkipLabel3:
+                        scene scc34 # FPP. Show Cameron and MC back at campus, Cameron hugs MC, smile on both faces.
+                        with fade
 
-                    pause 0.5
+                        pause 0.5
 
-                    scene scc25a # FPP. Same as scc25a.
-                    with dissolve
+                        scene scc25a # FPP. Same as scc25a.
+                        with dissolve
 
-                    ca "That was sick!"
+                        ca "That was sick!"
 
-                    scene scc25 # FPP. Same as scc25.
-                    with dissolve
+                        scene scc25 # FPP. Same as scc25.
+                        with dissolve
 
-                    u "Haha, yeah. They were pretty hot. Good pick."
+                        u "Haha, yeah. They were pretty hot. Good pick."
 
-                    scene scc15a # FPP. Same as scc15a.
-                    with dissolve
+                        scene scc15a # FPP. Same as scc15a.
+                        with dissolve
 
-                    ca "I know where the good ones are. You ready for the next?"
+                        ca "I know where the good ones are. You ready for the next?"
 
-                    scene scc15 # FPP. Same as scc15.
-                    with dissolve
+                        scene scc15 # FPP. Same as scc15.
+                        with dissolve
 
-                    u "Yeah."
+                        u "Yeah."
 
                 "...":
                     label av_crickets_no_drop:
@@ -7874,11 +7878,15 @@ label cameron_thurs_tasks:
     pause 0.5
     play music "music/mhorror.mp3"
 
+    if config_censored:
+        call screen censoredPopup("v7_nsfwSkipLabel4")
+
     scene scc63 # FPP. Show Cameron's sister sat in a chair tying a belt around her arm while the girl holds a syringe in her hand.
     with Dissolve(1)
 
     pause 0.5
 
+label v7_nsfwSkipLabel4:
     scene scc64 # FPP. Close up Cameron, now in the house, REALLY ANGRY, MOUTH WIDE OPEN.
     with dissolve
 
@@ -8925,8 +8933,8 @@ label rileytext:
         play sound "sounds/vibrate.mp3"
 
         $ contact_Riley.newMessage(_("Wanna come over? ;)"), queue=False)
-        $ contact_Riley.addReply(_("Sure, on my way :)"), "rirep8a")
-        $ contact_Riley.addReply(_("Sorry I'm really exhausted. Another time"), "rirep8b")
+        $ contact_Riley.addReply(_("Sure, on my way :)"), v7_msgReply5)
+        $ contact_Riley.addReply(_("Sorry I'm really exhausted. Another time"), v7_msgReply6)
         
         " "
 
@@ -8936,10 +8944,10 @@ label rileytext:
             if contact_Riley.getReplies():
                 u "(I should check my messages.)"
                 jump rtnow
-            
+
+    if rileysex:
         u "(Guess I'm not going to sleep yet.)"
         jump rileysexscene
-
 
     if joinwolves:
         scene swc91 # TPP. Show MC in bed going to sleep
@@ -8997,6 +9005,9 @@ label rileysexscene:
     scene ridrm3 # Riley reaches and grabs your hand pulls you into her dorm, flirty wink (first person)
     with dissolve
     ri "Come on!"
+
+    if config_censored:
+        call screen censoredPopup("v7_nsfwSkipLabel1")
 
     scene ridrm4 # Riley close up in her dorm, talking mouth open, single slightly raise brow (first person)
     with dissolve
@@ -9172,6 +9183,7 @@ label riclimax:
     with dissolve
     ri "I'll see you tomorrow [name]."
 
+label v7_nsfwSkipLabel1:
     scene risex15a # MC leaving Riley's dorm
     with dissolve
     u "Yeah, see you tomorrow."
@@ -9283,6 +9295,8 @@ label signs_with_autumn:
     $ contact_Autumn.newMessage(_("Alright, see you soon."))
 
     play sound "sounds/vibrate.mp3"
+
+    " "
 
     label phoneba:
         if contact_Autumn.getReplies():
@@ -9807,6 +9821,9 @@ label amberhocodate:
 
     pause 0.5
 
+    if config_censored:
+        call screen censoredPopup("v7_nsfwSkipLabel5")
+
     scene sfr4am6 #First person Close up Amber pulls out 2 pills. a bit flirty and happy
     with dissolve
 
@@ -9859,13 +9876,10 @@ label amberhocodate:
     scene sfr4am6d # close up amber, not holding pills, drinking out of a water bottle
     with dissolve
 
+label v7_nsfwSkipLabel5:
     $ ecstatic = True
-    if not steam:
-        show ecstatic at achievementShow
-    else:
-        $ achievement.grant("ecstatic")
-        $ achievement.sync()
-
+    $ grantAchievement("ecstatic")
+        
     u "Now what?"
 
     scene sfr4am6f # amber smiling, with one eyebrow raised a bit at you mouth open
@@ -10041,7 +10055,7 @@ label amberhocodate:
     scene sfr4am12b # Close up amber holding a plush toy towards you
     with dissolve
 
-    am "Hold this"
+    am "Hold this."
 
     scene sfr4am14 # showing mc touch the plush toy
     with dissolve
@@ -15231,6 +15245,9 @@ label fr4aubrey1:
 
                 u "Yeah, alright. Let's go."
 
+                if config_censored:
+                    call screen censoredPopup("labelfr4hallwaybathroom")
+
                 scene sfr4ri41 # tppAubrey and MC walk towards the bathroom.
                 with dissolve
 
@@ -16991,11 +17008,8 @@ label fr4laurenending:
     with dissolve
 
     $ slowandsteady = True
-    if not steam:
-        show slowandsteady at achievementShow
-    else:
-        $ achievement.grant("slow_and_steady")
-        $ achievement.sync()
+    $ grantAchievement("slow_and_steady")
+        
 
     la "I read that... if you cuddle in your underwear it increases the serotonin levels in your brain, which in turns means you live a longer, happier life."
 
@@ -17144,11 +17158,8 @@ label fr4rileyending2:
     with dissolve
 
     $ playingwithfire = True
-    if not steam:
-        show playingwithfire at achievementShow
-    else:
-        $ achievement.grant("playing_with_fire")
-        $ achievement.sync()
+    $ grantAchievement("playing_with_fire")
+        
 
     ri "Sit down with me for a second."
 
@@ -17256,11 +17267,8 @@ label fr4chloeending:
     with fade
 
     $ homecomingqueen = True
-    if not steam:
-        show homecomingqueen at achievementShow
-    else:
-        $ achievement.grant("homecomingqueen")
-        $ achievement.sync()
+    $ grantAchievement("homecoming_queen")
+        
 
     u "So this is your infamous room?"
 
@@ -17313,6 +17321,11 @@ label fr4chloeending:
     # towel drop sound #check - add towel.mp3 sound file
     play sound "sounds/towel.mp3"
 
+    if config_censored and renpy.loadable("v8/scene2.rpy"):
+        call screen censoredPopup("v8s2_nsfwSkipLabel1")
+    elif config_censored:
+        call screen censoredPopup("v7end")
+
     scene sfr4cl62 #Chloe steps out of the bathroom. We see her feet and a bathrobe drop to the floor.
     with dissolve
 
@@ -17331,12 +17344,14 @@ label fr4amberending:
     jump v7end
 
 label v7end:
-    if persistent.ep < 8:
+    if not renpy.loadable("v8/scene1.rpy"):
         scene savenow
         with Fade (1,0,1)
         " "
 
-    if persistent.ep < 8:
-        jump end_credits
-    else:
+    if renpy.loadable("v8/scene1.rpy"):
         jump v8start
+    elif config.enable_steam:
+        call screen steam_end(link="https://store.steampowered.com/app/1624520/College_Kings__Act_II/")
+    else:
+        jump end_credits

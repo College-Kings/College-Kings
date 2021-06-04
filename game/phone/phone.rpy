@@ -29,24 +29,25 @@ default applications = []
 screen phoneIcon():
     zorder 100
 
-    imagebutton:
-        if any([application.notification for application in applications]):
-            idle "images/phone/phoneIconNotification.webp"
-        else:
+    if not renpy.get_screen("choice") and not renpy.get_screen("censoredPopup"):
+        imagebutton:
+            # if any([application.notification for application in applications]):
+            #     idle "images/phone/phoneIconNotification.webp"
+            # else:
             idle "images/phone/phoneIcon.webp"
-        
-        if freeRoam:
-            action Show("phone")
-        else:
-            action Call("enterPhone")
-        align (0.999, 0.05)
+            
+            if freeRoam:
+                action Show("phone")
+            else:
+                action Call("enterPhone")
+            align (0.999, 0.05)
 
 label enterPhone:
     call screen phone
 
-
 screen phoneTemplate():
     modal True
+    zorder 200
 
     add "images/phonescreen.webp"
 
@@ -71,7 +72,7 @@ screen phoneTemplate():
 
     transclude
 
-    if not renpy.get_screen("phone") and not renpy.get_screen("reply"):
+    if not renpy.get_screen("messenger_reply"):
         button:
             xysize(407, 61)
             xalign 0.5
@@ -83,6 +84,7 @@ screen phoneTemplate():
 screen phone():
     tag phoneTag
     modal True
+    zorder 200
 
     use phoneTemplate:
 
@@ -103,3 +105,4 @@ screen phone():
                                 action [Function(renpy.retain_after_load), Show(app.homeScreen)]
                                 
                         text app.name style "applabels"
+        

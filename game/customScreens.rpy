@@ -40,8 +40,35 @@ screen endFreeRoamConfirm(continueLabel):
         align (0.57, 0.58)
 
 
+screen censoredPopup(continueLabel):
+    modal True
+
+    add "images/gui/censoredPopup/censoredBackground.webp"
+
+    vbox:
+        pos (365, 566)
+        spacing 148
+
+        if config_censored:
+            imagebutton:
+                idle "images/gui/censoredPopup/censoredSettings.webp"
+                hover "images/gui/censoredPopup/censoredSettingsHover.webp"
+                action ShowMenu("preferences")
+        else:
+            imagebutton:
+                idle "images/gui/censoredPopup/censoredContinue.webp"
+                hover "images/gui/censoredPopup/censoredContinueHover.webp"
+                action Return()
+
+        imagebutton:
+            idle "images/gui/censoredPopup/censoredSkipScene.webp"
+            hover "images/gui/censoredPopup/censoredSkipSceneHover.webp"
+            action Jump(continueLabel)
+
+
 screen kiwiiPopup():
     modal True
+    zorder 200
 
     add "images/endfr.webp"
 
@@ -68,6 +95,7 @@ screen fightPopup(fightMove):
 
 screen kctPopup():
     modal True
+    zorder 300
 
     add "images/endfr.webp"
 
@@ -78,3 +106,165 @@ screen kctPopup():
         action Return()
         text_align 0.5
         align (0.5, 0.58)
+
+
+screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings__Act_I/"):
+    tag credits
+    modal True
+    zorder 100
+
+    add "images/steam/steam_endscreen.webp"
+
+    imagebutton:
+        idle "images/steam/steam_wishlist.webp"
+        hover "images/steam/steam_wishlistHover.webp"
+
+        if steamAPI.is_overlay_enabled():
+            action Function(steamAPI.activate_overlay_to_web_page, link)
+        else:
+            action OpenURL(link)
+        align (0.5, 0.55)
+
+    hbox:
+        spacing 50
+        xpos 20
+        yalign 1.0
+
+        textbutton "Main Menu":
+            text_style "steam_endScreenTextButton"
+            action MainMenu()
+
+        textbutton "Credits":
+            text_style "steam_endScreenTextButton"
+            action Jump("end_credits")
+
+        textbutton "The Team":
+            text_style "steam_endScreenTextButton"
+            action Show("teamCredits")
+
+
+screen credits():
+    tag credits
+    modal True
+    zorder 100
+
+    if config.enable_steam:
+        add "images/steamCredits.webp"
+    else:
+        add "images/patreonCredits.webp"
+
+    if config.enable_steam:
+        imagebutton:
+            xalign 0.5
+            ypos 675
+            idle "images/discordbutton1.webp"
+            hover "images/discordbutton2.webp"
+            action OpenURL ("http://discord.collegekingsgame.com")
+    else:
+        imagebutton:
+            pos (394, 677)
+            idle "images/supportdevelopmentblank.webp"
+            hover "images/supportdevelopment.webp"
+            action OpenURL ("https://www.patreon.com/collegekings")
+
+    hbox:
+        xalign 0.5
+        ypos 950
+        spacing 50
+
+        textbutton "Main Menu":
+            text_style "steam_endScreenTextButton"
+            action MainMenu()
+
+        textbutton "The Team":
+            text_style "steam_endScreenTextButton"
+            action Show("teamCredits")
+
+
+screen teamCredits():
+    tag credits
+    modal True
+    zorder 100
+
+    add "images/stockBackgrounds/eveningSunshine.webp"
+
+    text "Team Credits":
+        xalign 0.5
+        ypos 15
+        size 72
+
+    hbox:
+        align (0.5, 0.5)
+        spacing 200
+
+        vbox:
+            spacing 10
+
+            text "Undergrad Steve - Game Leader" xalign 0.5
+            text "OscarSix - Lead Coder" xalign 0.5
+            text "Lew - Lead Artist" xalign 0.5
+            text "KingLui - Project Manager" xalign 0.5
+            null height 20
+            text "Hive - Lead Transcriber" xalign 0.5
+            text "Lucious Lordswill - Lead Writer" xalign 0.5
+            text "Oskin - Quality Assurance Manager" xalign 0.5
+            text "Condy - Lead Beta Tester" xalign 0.5
+            text "Jany - Translation Manager" xalign 0.5
+            null height 20
+            text "Maro - Marketing Specialist" xalign 0.5
+            text "OK-HAN - Marketing Specialist" xalign 0.5
+            text "Grimlord - Assistant Writer" xalign 0.5
+
+
+
+        vbox:
+            spacing 10
+
+            text "Cheyenne Alexander - Editor" xalign 0.5
+            text "RCS - Transcriber" xalign 0.5
+            text "Peace - Transcriber & Translator" xalign 0.5
+            text "Jeffly - Transcriber" xalign 0.5
+            text "Dorkby - Animator" xalign 0.5
+            text "Wiebley - Renderer" xalign 0.5
+            text "Ranger - 3d Modeler" xalign 0.5
+            text "François Gibon - Renderer" xalign 0.5
+            text "3D4FUN - Renderer" xalign 0.5
+            text "Bwonerart - Renderer" xalign 0.5
+            text "Sznuk - Renderer" xalign 0.5
+            text "Stefan - Photoshopper" xalign 0.5
+            text "Spacestorm - Assistant" xalign 0.5
+
+
+        vbox:
+            spacing 10
+
+            text "Gillzo - Intern" xalign 0.5
+            text "Krispik - Translator" xalign 0.5
+            text "Schcopeck - Translator" xalign 0.5
+            text "KFar - Translator" xalign 0.5
+            text "Bianca Souza - Translator" xalign 0.5
+            text "Arkell - Translator" xalign 0.5
+            text "Differ - Translator" xalign 0.5
+            text "Marx Weber - Translator" xalign 0.5
+            text "Rst - Translator" xalign 0.5
+            text "Thyg - Translator" xalign 0.5
+            text "Wolf - Beta Tester" xalign 0.5
+            text "Kass - Beta Tester" xalign 0.5
+            text "Dikless - Idea Generator" xalign 0.5
+
+    text "Special thanks to all the community members and players who have made this project possible :)":
+        align (0.5, 0.9)
+        size 24
+
+    hbox:
+        spacing 50
+        xpos 20
+        yalign 1.0
+
+        textbutton "Main Menu":
+            text_style "steam_endScreenTextButton"
+            action MainMenu()
+
+        textbutton "Credits":
+            text_style "steam_endScreenTextButton"
+            action Jump("end_credits")

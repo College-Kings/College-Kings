@@ -2,21 +2,13 @@ init python:
     # Emily's messages
     def v1_reply1():
         setattr(store, "nohardfeelings", True)
-        if not steam:
-            renpy.show("nohardfeelings", at_list=achievementAtList)
-        else:
-            achievement.grant("no_hard_feelings")
-            achievement.sync()
+        grantAchievement("no_hard_feelings")
 
         contact_Emily.newMessage(_("Cool :)"))
 
     def v1_reply2():
         setattr(store, "openwound", True)
-        if not steam:
-            renpy.show("openwound", at_list=achievementAtList)
-        else:
-            achievement.grant("open_wound")
-            achievement.sync()
+        grantAchievement("open_wound")
 
         addPoint("tm")
         contact_Emily.newMessage(_("Ugh :/"))
@@ -1160,11 +1152,7 @@ label starta: #for compatibility only
                 with dissolve
 
                 $ keepitmoving = True
-                if not steam:
-                    show keepitmoving at achievementShow
-                else:
-                    $ achievement.grant("keep_it_moving")
-                    $ achievement.sync()
+                $ grantAchievement("keep_it_moving")
 
                 u "Actually, I knew that. I just wanted to talk to you 'cause you're really cute."
 
@@ -1198,6 +1186,9 @@ label starta: #for compatibility only
         call screen v1_freeRoam1_2
 
     label v1_freeRoam1_aubrey:
+        if config_censored:
+            call screen censoredPopup("v1_freeRoam1_aubrey2")
+
         scene adamaubrey36
         stop music fadeout 2.0
         play music "music/msexy.mp3"
@@ -1689,7 +1680,7 @@ label efra:
     la "I think I'll drink."
 
     menu:
-        "You're missing out":
+        "You're missing out.":
             scene s73gr
             with dissolve
 
@@ -2036,6 +2027,10 @@ label at_bd:
     u "Probably not for a few hours yet."
 
     play music "music/msexy.mp3"
+
+    if config_censored:
+        call screen censoredPopup("v1_nsfwSkipLabel1")
+        
     scene sda2
     with dissolve
 
@@ -2243,14 +2238,14 @@ label at_bd:
 
         "Wake up":
             pass
-
+            
+label v1_nsfwSkipLabel1:
     hide screen fantasyOverlay
 
     stop music fadeout 2.0
     $ renpy.end_replay()
 
     ### Next morning in your dorm, Imre seems to be gone.
-
     if v1_sda:
         scene s81
         with Fade (1,0,1)
@@ -2773,11 +2768,8 @@ label aw_bd:
                 $ v1_kissLauren = True
 
                 $ romeo = True
-                if not steam:
-                    show romeo at achievementShow
-                else:
-                    $ achievement.grant("romeo")
-                    $ achievement.sync()
+                $ grantAchievement("romeo")
+                    
 
                 play sound "sounds/kiss.mp3"
 
@@ -3486,11 +3478,8 @@ label v1_freeRoam2_mason:
             with dissolve
 
             $ bigmouth = True
-            if not steam:
-                show bigmouth at achievementShow
-            else:
-                $ achievement.grant("big_mouth")
-                $ achievement.sync()
+            $ grantAchievement("big_mouth")
+                
 
             u "Yeah, he better watch out, or I'll kick his ass."
 

@@ -38,21 +38,15 @@ label v9_ending:
 
     pause 2
 
-    jump ending9
-
-label ending9:
-    if persistent.ep == 9:
-        jump end9
-    else:
-        jump v10start
-
 label end9:
-    scene savenow
-    with Fade (1,0,1)
-    " "
-    if persistent.ep == 9:
-        jump end_credits
-    else:
+    if not renpy.loadable("v10/scene1.rpy"):
+        scene savenow
+        with Fade (1,0,1)
+        " "
+
+    if renpy.loadable("v10/scene1.rpy"):
         jump v10start
+    else:
+        jump end_credits
 
 # <3 ~Lew

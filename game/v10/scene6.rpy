@@ -1,9 +1,10 @@
 # SCENE 6: MC vs Ryan (Wolves)
 # Locations: Warehouse
-# Characters: 
+# Characters:
 # Time: Saturday Night
 
 label v10_mc_vs_ryan_fight:
+    play music "music/v10/Scene 6 & 7/Track Scene 6 & 7.mp3" fadein 3
     scene v10mvr1 # FPP. Show imre and chris near ring, imre excited look, mouth open chris mouth closed
     with dissolve
 
@@ -44,9 +45,9 @@ label v10_mc_vs_ryan_fight:
 
     u "You got it man."
 
-    scene v10mvr3 # TPP. Show Josh in the ring, mc walking towards him from behind mc. 
+    scene v10mvr3 # TPP. Show Josh in the ring, mc walking towards him from behind mc.
     with dissolve
-    
+
     pause 0.5
 
     scene v10mvr4 # TPP. Show josh in the centre of the ring and ryan and MC in opposite corners, Josh mouth open, mc and ryan mouth closed
@@ -82,7 +83,7 @@ label v10_mc_vs_ryan_fight:
                 call screen fight_selectDifficulty
 
                 call screen fight_keybindOptions
-            
+
             elif fight_type == "simReal" or fight_type == "simWin":
                 $ simRyanFight = True
                 $ stance = 1
@@ -96,7 +97,7 @@ label v10_mc_vs_ryan_fight:
             else:
                 $ youHealth = 3
 
-            $ ryanHealth = 6
+            $ enemyhealth = 6
             $ youDamage = 0
             $ ryanDamage = 0
 
@@ -105,7 +106,7 @@ label v10_mc_vs_ryan_fight:
                 $ stance = 2 # Defence
 
                 show screen fight_overlay(stance="defend")
-                
+
                 # Ryan hook
                 if ryanAttack == 1:
 
@@ -185,69 +186,69 @@ label v10_mc_vs_ryan_fight:
 
             # label Attacker_TargetAction
             label mc_ryanKickHit: # MC Kicks Ryan (Hits/No Block)
-
                 $ ryanDamage += 1
-                scene mc_ryan_Kick_hit 
+
+                scene mc_ryan_Kick_hit
                 pause 1 # Trial/Error
-                if ryanDamage >= ryanHealth:
+                
+                if ryanDamage >= enemyhealth:
                     jump mc_ryanFightEnd
                 jump ryan_McAttack
 
             label mc_ryanKickBlock: # MC Kicks Ryan (Blocks)
+                scene mc_ryan_Kick_block
+                pause 0.7 # Trial/Error
 
-                    scene mc_ryan_Kick_block 
-                    pause 0.7 # Trial/Error
-                    jump ryan_McAttack
+                jump ryan_McAttack
 
 
             label mc_ryanJabsHit: # MC Jabs Ryan (Hits/No Block)
-
-
                 $ ryanDamage += 1
+
                 scene mc_ryan_Jab_hit
-                pause 0.7 # Trial/Error
-                if ryanDamage >= ryanHealth:
+                pause 1 # Trial/Error
+
+                if ryanDamage >= enemyhealth:
                     jump mc_ryanFightEnd
                 jump ryan_McAttack
 
             label mc_ryanJabsBlock: # MC Jabs Ryan (Blocks)
+                scene mc_ryan_Jab_block
+                pause 1 # Trial/Error
 
-                    scene mc_ryan_Jab_block
-                    pause 0.7 # Trial/Error
-                    jump ryan_McAttack
-
+                jump ryan_McAttack
 
             label mc_ryanHooksHit: # MC Hooks Ryan (Hits/No Block)
-
                 $ ryanDamage += 1
+
                 scene mc_ryan_Hook_hit
-                pause 0.7 # Trial/Error
-                if ryanDamage >= ryanHealth:
+                pause 1 # Trial/Error
+
+                if ryanDamage >= enemyhealth:
                     jump mc_ryanFightEnd
                 jump ryan_McAttack
 
             label mc_ryanHooksBlock: # MC Hooks Ryan (Blocks)
+                scene mc_ryan_Hook_block
+                pause 1 # Trial/Error
 
-                    scene mc_ryan_Hook_block 
-                    pause 0.7 # Trial/Error
-                    jump ryan_McAttack
-
+                jump ryan_McAttack
 
             label mc_ryanBodyhookHit: # MC Body Hooks Ryan (Hits/No Block)
-
-
                 $ ryanDamage += 1
+
                 scene mc_ryan_BodyJab_hit
-                pause 0.7 # Trial/Error
-                if ryanDamage >= ryanHealth:
+                pause 1 # Trial/Error
+
+                if ryanDamage >= enemyhealth:
                     jump mc_ryanFightEnd
                 jump ryan_McAttack
 
             label mc_ryanBodyhookBlock: # MC Body Hooks Ryan (Blocks)
+                scene mc_ryan_BodyJab_block
+                pause 1 # Trial/Error
 
-                    scene mc_ryan_BodyJab_block 
-                    pause 0.7 # Trial/Error
-                    jump ryan_McAttack
+                jump ryan_McAttack
 
 
             label ryan_McKickHit: # Ryan Kicks MC (Hits/No Block)
@@ -399,6 +400,11 @@ label v10_mc_vs_ryan_fight:
 
             label mc_ryanFightEnd: # MC wins fight against Ryan
                 $ v10_ryan_win = True
+
+                if reaction == 0.5:
+                    $ lights_out = True
+                    $ grantAchievement("lights_out")
+
                 jump ryan_fightEnd
 
             label ryan_McFightEnd: # MC loses fight against Ryan
@@ -411,11 +417,13 @@ label v10_mc_vs_ryan_fight:
                 hide screen fight_overlay
                 $ youDamage = 0
                 $ stance = 0
-
+                stop music fadeout 3
             jump v10_fight_result
 
         "Don't Fight":
-            scene v10mvr6a 
+            $ fright_club = True
+            $ grantAchievement("fright_club")
+            scene v10mvr6a
             with dissolve
 
             u "I don't think I can do this. Sorry guys."
@@ -438,6 +446,5 @@ label v10_mc_vs_ryan_fight:
             with dissolve
 
             u "I can't, I just can't."
-
+            stop music fadeout 3
             jump v10_avoid_fight
-

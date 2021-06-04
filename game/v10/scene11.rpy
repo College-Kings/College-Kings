@@ -4,10 +4,11 @@
 # Time: Sunday Morning
 
 label v10_linds_room:
-    $ v10s10_hangWLinds = True
 
     scene v10slds1 # TPP. Show MC arriving at the door to Lindsey's house and knocking. Normal expression, mouth closed.
     with fade
+
+    play music "music/v10/Scene 11/Track Scene 11.mp3" fadein 3
 
     pause 0.5
     
@@ -111,7 +112,7 @@ label v10_linds_room:
             scene v10slds3
             with dissolve
 
-            li " If you've heard about it then I'm sure others have as well *sighs* , we all know bad news travels faster than good news."
+            li "If you've heard about it then I'm sure others have as well *sighs* , we all know bad news travels faster than good news."
 
         "No, I had no clue":
             scene v10slds3a
@@ -164,7 +165,7 @@ label v10_linds_room:
 
     li "I don't have the motivation to do anything. School seems pointless, home seems pointless, everything seems pointless."
 
-    li " I know it's okay to be sad, but sometimes I'm not just sad... I get really angry... I just... I can't believe she's really gone. And she's never coming back."
+    li "I know it's okay to be sad, but sometimes I'm not just sad... I get really angry... I just... I can't believe she's really gone. And she's never coming back."
 
     scene v10slds3d
     with dissolve
@@ -212,12 +213,14 @@ label v10_linds_room:
        "Make a joke":
             
             if kct == "confident": # RCS - if MC chooses 'Make a joke' with KCT confident
-                
+
                 scene v10slds3e # FPP. Same camera as v10slds3. Show Lindsey, with a somewhat amused smile, mouth closed.
                 with dissolve
 
                 u "Hey, at least you're not gonna end up like that sailor that followed the North Star and ended up freezing to death in a snow storm, right?"
 
+                call screen kctPopup
+                
                 scene v10slds3f # FPP. Same camera as v10slds3. Show Lindsey, with a somewhat amused smile, mouth open.
                 with dissolve
 
@@ -359,7 +362,7 @@ label v10_linds_room:
         "I like it":
             
             if kct == "confident": # RCS - if MC chooses 'I like it' with KCT confident
-            
+                
                 scene v10slds3e
                 with dissolve
                 u "I'd never say no to any attention you wanted to give."
@@ -414,7 +417,7 @@ label v10_linds_room:
     li "Thanks for coming [name]."
 
     scene v10slds3d
-    with fade
+    with dissolve
 
     u "Yeah, of course."
 
@@ -462,6 +465,7 @@ label v10_linds_room:
 
         scene v10slds5a # TPP. Same camera as v10slds5. Show MC leaving Lindsey's house. The door is closed behind him. (Lindsey is not in sight.)
         with fade
+    stop music fadeout 3
 
 
 if joinwolves: # I don't know this variable name

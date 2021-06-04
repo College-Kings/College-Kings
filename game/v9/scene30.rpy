@@ -17,7 +17,7 @@ label v9_satmorn_gfb_walk:
 
     scene v9gfb3 # FPP. Nora a little further away from , Surprised look, mouth closed
     with dissolve
-    u "(laughs) You're sorry? I'm the one that was staring into the sun. Are you okay?"
+    u "*Laugh* You're sorry? I'm the one that was staring into the sun. Are you okay?"
 
     scene v9gfb3a # FPP. Same camera as v9gfb3, Nora a little further away from , Surprised look, mouth open
     with dissolve

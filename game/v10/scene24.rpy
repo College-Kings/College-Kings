@@ -6,6 +6,8 @@
 label v10_lauren_room:
     scene v10lar1 # TPP Show MC knocking on Lauren's door.
     with fade
+    play music "music/v10/Scene 24/Track Scene 24_1.mp3" fadein 3
+    play sound "sounds/knock.mp3"
     
     pause 0.5
     
@@ -18,6 +20,8 @@ label v10_lauren_room:
 
         scene v10lar1a # TPP Same angle as v10lar1: MC and Lauren kiss at her door
         with dissolve
+
+        play sound "sounds/kiss.mp3"
 
         pause 0.5
 
@@ -88,7 +92,9 @@ label v10_lauren_room:
 
             u "I really do."
 
-            if kct == "loyal":
+            if laurenrs or kct == "loyal":
+                if not laurenrs:
+                    call screen kctPopup
                 $ v10s33_laurenBakeSale = False
 
                 scene v10lar3b
@@ -199,9 +205,9 @@ label v10_lauren_room:
 
     u "You never know until you try."
 
-    label v10_lauren_room_sg:
     if laurenrs or v1_laurenKiss or laurenkissb: # If dating or have made out
 
+        label v10_lauren_room_sg:
         scene v10lar3g # FPP Same angle as v10lar3, Lauren looking seductive, mouth open
         with dissolve
 
@@ -247,6 +253,9 @@ label v10_lauren_room:
 
         u "(Oh wow!)"
 
+        if config_censored:
+            call screen censoredPopup("v10s24_nsfwSkipLabel1")
+
         scene v10lar7 # TPP Show Lauren on MC's lap facing him, MC arms around her waist, Lauren eyes closed and mouth open
         with dissolve
 
@@ -266,9 +275,10 @@ label v10_lauren_room:
         with dissolve
 
         la "Oh [name]! *Moans*"
-
+        stop music fadeout 3
+        play music "music/v10/Scene 24/Track Scene 24_2.mp3" fadein 3
         menu:
-            "Suck her tits":
+            "Suck on her tits":
                 # MC starts kissing around her boobs and nipples. Ensure this scene is detailed and long, kissing all over her upper body
                 image v10lautk = Movie(play="images/v10/Scene 24/v10lautk.webm", loop=True, image="images/v10/Scene 24/v10lautkStart.webp", start_image="images/v10/Scene 24/v10lautkStart.webp") # TPP MC tenderly kissing Lauren on upper chest, holding her breast and playing with her nipple
                 image v10lautkf = Movie(play="images/v10/Scene 24/v10lautkf.webm", loop=True, image="images/v10/Scene 24/v10lautkStart.webp", start_image="images/v10/Scene 24/v10lautkStart.webp")
@@ -281,7 +291,12 @@ label v10_lauren_room:
                 with dissolve
                 pause
 
-                if laurenrs or (v1_laurenKiss or laurenkissb and kct == loyal):            
+                if laurenrs or ((v1_laurenKiss or laurenkissb) and kct == "loyal"):
+
+                    if not laurenrs:
+                        $ laurenrs = True
+                        call screen kctPopup
+                        
                     image v10lauts = Movie(play="images/v10/Scene 24/v10lauts.webm", loop=True, image="images/v10/Scene 24/v10lautsStart.webp", start_image="images/v10/Scene 24/v10lautsStart.webp") # TPP MC's arms around Lauren's waist while he sucks on her nipple, Lauren eyes rolled back in pleasure
                     image v10lautsf = Movie(play="images/v10/Scene 24/v10lautsf.webm", loop=True, image="images/v10/Scene 24/v10lautsStart.webp", start_image="images/v10/Scene 24/v10lautsStart.webp")
 
@@ -333,6 +348,10 @@ label v10_lauren_room:
                     scene v10lar8a # FPP Same angle as v10lar8, Lauren looking uncomfortable, mouth open
                     with dissolve
 
+                    stop music fadeout 3
+
+                    play music "music/v10/Scene 24/Track Scene 24_3.mp3" fadein 3
+                    
                     la "[name], I...I don't think I'm ready. Sorry I just..."
 
                     scene v10lar9a # FPP Same angle as v10lar9, Lauren getting dressed, looking uncomfortable, mouth closed
@@ -389,22 +408,22 @@ label v10_lauren_room:
                 with dissolve
 
                 pause 0.5
+                label v10s24_nsfwSkipLabel1:
+                    # Back sitting on the bed
+                    scene v10lar3b
+                    with fade
 
-                # Back sitting on the bed
-                scene v10lar3b
-                with fade
+                    la "I always enjoy spending time with you. With you I'm just... comfortable."
 
-                la "I always enjoy spending time with you. With you I'm just... comfortable."
+                    scene v10lar3c
+                    with dissolve
 
-                scene v10lar3c
-                with dissolve
+                    u "I feel the same way."
 
-                u "I feel the same way."
+                    scene v10lar3b
+                    with dissolve
 
-                scene v10lar3b
-                with dissolve
-
-                la "It'd be nice if-"
+                    la "It'd be nice if-"
 
     else: # Just friends with Lauren
         scene v10lar3f
@@ -580,6 +599,8 @@ label v10_lauren_room:
         scene v10lar1a
         with fade
 
+        play sound "sounds/kiss.mp3"
+        
         pause 0.5
 
     $ renpy.end_replay()

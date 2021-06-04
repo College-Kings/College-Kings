@@ -24,7 +24,7 @@ label v9_hc_demo:
     scene v9demo4 # TPP. Show Penelope and Cameron, looking at camera (Camera from guard's perspective as if they're both looking at guard). Cameron slightly agitated, Penelope mouth open.
     with dissolve
 
-    pe "*deep voice* Hark, good sir, it is I, your king. This is my bride, yur queen."
+    pe "*Deep voice* Hark, good sir, it is I, your king. This is my bride, yur queen."
 
     scene v9demo4a # TPP. Same camera as v9demo4, Cameron and Penelope look at eachother, Cameron annoyed, mouth open, Penelope mouth closed.
     with dissolve
@@ -100,6 +100,7 @@ label v9_hc_demo:
 
     menu:
         "Recognize the King":
+            $ the_king = True
             jump v9_hc_demo_rec
         "Don't recognize the King":
             $ addPoint("tm")
@@ -126,7 +127,7 @@ label v9_hc_demo_norec:
     scene v9demo8b # FPP. Same camera as v9demo8, Penelope whispering in Cameron's ear, Cameron looks uninterested. Penelope mouth open.
     with dissolve
 
-    pe "*whispers to Cameron* See told ya."
+    pe "*Whispers to Cameron* See told ya."
 
     scene v9demo8a
     with dissolve
@@ -251,6 +252,11 @@ label v9_hc_demo_west:
     jump v9_hc_demo_cont3
 
 label v9_hc_demo_north:
+
+    if the_king:
+        $ king_of_the_north = True
+        $ grantAchievement("king_of_the_north")
+
     u "North, Your Majesty."
 
     scene v9demo10a

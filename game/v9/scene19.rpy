@@ -45,7 +45,7 @@ label v9_lau_dorm:
         scene v9lau3b # FPP. Same camera as v9lau3, Lauren giggle, mouth closed.
         with dissolve
 
-        la "*giggles* Come in."
+        la "*Giggles* Come in."
 
     else:
         scene v9lau3
@@ -93,7 +93,7 @@ label v9_lau_dorm:
 
     if laurenrs == True or beachfirstkiss == True:
         menu:
-            "Offer Lauren a Back Rub":
+            "Offer Lauren a back rub":
                 $ addPoint("bf")
 
                 u "Here, let me help."
@@ -118,7 +118,7 @@ label v9_lau_dorm:
 
                 la "Yeah! Let's get to work."
 
-            "Offer Lauren a Hug":
+            "Offer Lauren a hug":
                 $ addPoint("bf")
             
                 u "Aww, come here."
@@ -150,7 +150,7 @@ label v9_lau_dorm:
 
     else:
         menu:
-            "Offer Guidance":
+            "Offer guidance":
                 $ addPoint("bro")
 
                 u "It's simple. Start with your main goal and work your way back to what to do now."
@@ -175,7 +175,7 @@ label v9_lau_dorm:
 
                 u "(Whew!)"
 
-            "Just Listen":
+            "Just listen":
                 $ addPoint("bf")
 
                 u "What part's giving you the most trouble? How can I help?"
@@ -219,7 +219,7 @@ label v9_lau_dorm:
     with dissolve
 
     menu:
-        "Be Impressed":
+        "Be impressed":
             u "Wow! That I gotta see!"
 
             scene v9lau6
@@ -520,7 +520,7 @@ label v9_lau_dorm:
 
                     la "One might."
 
-                "Be Romantic":
+                "Be romantic":
                     $ addPoint("bf")
 
                     u "I just want you to know you can count on me. Always."
@@ -561,7 +561,10 @@ label v9_lau_dorm:
         scene v9lau16a
         with dissolve
 
-        if beachfirstkiss == True and laurenrs == False and kct == "loyal":
+        if beachfirstkiss and not laurenrs and kct == "loyal":
+            if kct == "loyal":
+                call screen kctPopup
+
             menu:
                 "Kiss Lauren":
                     $ addPoint("bf")
@@ -571,7 +574,7 @@ label v9_lau_dorm:
                 "Leave":
                     jump v9_lau_dorm_no_kiss
                 
-        elif laurenrs == True:
+        elif laurenrs:
             jump v9_lau_dorm_kiss
 
         else:
@@ -599,7 +602,7 @@ label v9_lau_dorm:
 
                 u "I know so."
 
-            "Take Some Credit":
+            "Take some credit":
                 u "We make a great team."
 
                 scene v9lau16

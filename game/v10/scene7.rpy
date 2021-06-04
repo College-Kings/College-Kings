@@ -3,6 +3,7 @@
 # Characters: MC (Outfit 7),Josh (Outfit 2),Imre (Outfit 2),Imre (Outfit 4),Grayson (Outfit 3)
 # Time: Saturday Night
 label v10_mc_vs_imre_fight:
+    play music "music/v10/Scene 6 & 7/Track Scene 6 & 7.mp3" fadein 3
     scene v10mvi1 # FPP. Show imre and grayson near ring, Imre Mouth open Grayson mouth closed
     with dissolve
     ry "Hey man real quick. I'm not saying I think you would, but I know you and Imre are friends and have been close since you started college..."
@@ -74,7 +75,7 @@ label v10_mc_vs_imre_fight:
                 call screen fight_selectDifficulty
 
                 call screen fight_keybindOptions
-            
+
             elif fight_type == "simReal" or fight_type == "simWin":
                 $ simImreFight = True
                 $ stance = 1
@@ -88,7 +89,7 @@ label v10_mc_vs_imre_fight:
             else:
                 $ youHealth = 3
 
-            $ imreHealth = 6
+            $ enemyhealth = 6
             $ youDamage = 0
             $ imreDamage = 0
 
@@ -97,7 +98,7 @@ label v10_mc_vs_imre_fight:
                 $ stance = 2 # Defence
 
                 show screen fight_overlay(stance="defend")
-                
+
                 # Imre hook
                 if imreAttack == 1:
 
@@ -179,15 +180,15 @@ label v10_mc_vs_imre_fight:
             label mc_imreKickHit: # MC Kicks Imre (Hits/No Block)
 
                 $ imreDamage += 1
-                scene mc_imre_Kick_hit 
+                scene mc_imre_Kick_hit
                 pause 1 # Trial/Error
-                if imreDamage >= imreHealth:
+                if imreDamage >= enemyhealth:
                     jump mc_imreFightEnd
                 jump imre_McAttack
 
             label mc_imreKickBlock: # MC Kicks Imre (Blocks)
 
-                    scene mc_imre_Kick_block 
+                    scene mc_imre_Kick_block
                     pause 0.7 # Trial/Error
                     jump imre_McAttack
 
@@ -198,7 +199,7 @@ label v10_mc_vs_imre_fight:
                 $ imreDamage += 1
                 scene mc_imre_Jab_hit
                 pause 0.7 # Trial/Error
-                if imreDamage >= imreHealth:
+                if imreDamage >= enemyhealth:
                     jump mc_imreFightEnd
                 jump imre_McAttack
 
@@ -214,13 +215,13 @@ label v10_mc_vs_imre_fight:
                 $ imreDamage += 1
                 scene mc_imre_Hook_hit
                 pause 0.7 # Trial/Error
-                if imreDamage >= imreHealth:
+                if imreDamage >= enemyhealth:
                     jump mc_imreFightEnd
                 jump imre_McAttack
 
             label mc_imreHooksBlock: # MC Hooks Imre (Blocks)
 
-                    scene mc_imre_Hook_block 
+                    scene mc_imre_Hook_block
                     pause 0.7 # Trial/Error
                     jump imre_McAttack
 
@@ -231,13 +232,13 @@ label v10_mc_vs_imre_fight:
                 $ imreDamage += 1
                 scene mc_imre_BodyJab_hit
                 pause 0.7 # Trial/Error
-                if imreDamage >= imreHealth:
+                if imreDamage >= enemyhealth:
                     jump mc_imreFightEnd
                 jump imre_McAttack
 
             label mc_imreBodyhookBlock: # MC Body Hooks Imre (Blocks)
 
-                    scene mc_imre_BodyJab_block 
+                    scene mc_imre_BodyJab_block
                     pause 0.7 # Trial/Error
                     jump imre_McAttack
 
@@ -391,8 +392,13 @@ label v10_mc_vs_imre_fight:
 
             label mc_imreFightEnd: # MC wins fight against Imre
                 $ v10_imre_win = True
+
+                if reaction == 0.5:
+                    $ golden_boy = True
+                    $ grantAchievement("golden_boy")
+
                 jump imre_fightEnd
-                
+
             label imre_McFightEnd: # MC loses fight against Imre
                 $ v10_imre_win = False
                 jump imre_fightEnd
@@ -403,10 +409,14 @@ label v10_mc_vs_imre_fight:
                 hide screen fight_overlay
                 $ youDamage = 0
                 $ stance = 0
+                stop music fadeout 3
 
             jump v10_fight_result
 
         "Don't Fight":
+            $ bros_before_blows = True
+            $ grantAchievement("bros_before_blows")
+
             scene v10mvi3 # FPP. Show Imre infront of camera in ring, mouth closed, hands raised ready to fight.
             with dissolve
 
@@ -430,6 +440,8 @@ label v10_mc_vs_imre_fight:
             with dissolve
 
             u "I can't, I just can't."
+            
+            stop music fadeout 3
 
             jump v10_avoid_fight
 

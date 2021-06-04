@@ -3,12 +3,11 @@
 # Characters: MC (Outfit 1), Mr Lee (Outfit 1)
 # Time: Sunday Night
 
-default penelopelike = 0
-default mrleelike = 0
-
 label v10_walk_jenny_text:
     scene v10swjt1 # TPP. Show MC walking on the sidewalk where he originally met Penelope.
     with fade
+
+    play music "music/v10/Scene 19/Track Scene 19.mp3" fadein 3
 
     pause 0.75
 
@@ -40,7 +39,8 @@ label v10_walk_jenny_text:
 
     menu:
         "Invite Penelope":
-            $ penelopelike += 1
+            $ penelopeLike += 1
+            $ v10_inv_pen_cafe = True
             $ addPoint("bf", 1)
 
             u "(Yeah, I should invite her. Best if she's the one that breaks the news to her.)"
@@ -62,7 +62,7 @@ label v10_walk_jenny_text:
 
             u "(I hope this goes smooth, Jenny hearing it from Penelope will probably help them both process the situation.)"
 
-        "Go Alone":
+        "Go alone":
             u "(On the other hand, maybe there’s benefits to meeting Jenny alone…)"
 
     scene v10swjt3 # TPP. Show MC continuing to walk down the street, no longer holding phone.
@@ -94,8 +94,8 @@ label v10_walk_jenny_text:
     with dissolve
 
     menu:
-        "Make A Joke":
-            $ mrleelike += 1
+        "Make a joke":
+            $ mrleeLike += 1
             $ addPoint("tm", 1)
 
             u "Teachers have friends?"
@@ -105,7 +105,7 @@ label v10_walk_jenny_text:
 
             lee "Of course we do, son. We also have bedtimes and mine is coming up soon."
 
-        "Don't Make A Joke":
+        "Don't make a joke":
             u "Sounds nice."
 
             scene v10swjt5
@@ -138,5 +138,7 @@ label v10_walk_jenny_text:
     with dissolve
 
     u "(I'm seeing everybody today. It is getting a little dark, I'm gonna hurry up and get back.)"
+
+    stop music fadeout 3
 
     jump v10_room_mon_night

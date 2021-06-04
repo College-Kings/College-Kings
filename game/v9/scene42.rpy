@@ -16,7 +16,7 @@ label v9_at_warehouse:
         with dissolve
 
         menu:
-            "Be Upset":
+            "Be upset":
                 $ addPoint("bf")
 
                 u "Shit, Sebastian, was that really necessary?"
@@ -26,7 +26,7 @@ label v9_at_warehouse:
 
                 se "You tell me."
 
-            "Be Excited":
+            "Be excited":
                 $ addPoint("bro")
 
                 u "Mysterious! I like it."
@@ -117,18 +117,18 @@ label v9_at_warehouse:
         with dissolve
 
         menu:
-            "Talk About Ryan":
+            "Talk about Ryan":
                 $ addPoint("tm")
 
-                u "*whispers* Hey, Im, if I draw Ryan first, want me to warm him up for you?"
+                u "*Whispers* Hey, Im, if I draw Ryan first, want me to warm him up for you?"
 
                 scene v9aaw5a # FPP. Same camera as v9aaw5a, Imre angry, mouth open.
                 with dissolve
 
                 imre "Fuck no! I want you to hand him over."
 
-            "Keep Quiet":
-                u "(Better not rile him up)"
+            "Keep quiet":
+                u "(Better not rile him up.)"
 
                 
         scene v9aaw4
@@ -141,7 +141,7 @@ label v9_at_warehouse:
 
         if hl_punch:
 
-            u "(I have a reputation to uphold)"
+            u "(I have a reputation to uphold.)"
 
         else:
             # -If MC got punched in 12-
@@ -202,7 +202,7 @@ label v9_at_warehouse:
         with dissolve
 
         menu:
-            "Tell Chris About Ryan":
+            "Tell Chris about Ryan":
                 $ addPoint("tm")
                 
                 u "(If I don't say something, this could get out of hand.)"
@@ -220,7 +220,7 @@ label v9_at_warehouse:
                 with dissolve
 
 
-            "Keep Quiet":
+            "Keep quiet":
                 $ addPoint("bro")
 
                 u "(Not my place.)"
@@ -262,7 +262,7 @@ label v9_at_warehouse:
 
                 u "Geez."
 
-            "Deal With It":
+            "Deal with it":
                 $ addPoint("bro")
 
                 u "(A bit over the top with the ambiance, bro.)"
@@ -312,7 +312,7 @@ label v9_at_warehouse:
             scene v9aaw11b # TPP. Same camera as v9aaw11, show Grayson stood right in MC's face, serious expression, mouth open.
             with dissolve
 
-            gr "*whispers* Don't let me down, freshman."
+            gr "*Whispers* Don't let me down, freshman."
 
         scene v9aaw12 # FPP. Show Grayson pacing around, Cameron stood behind Grayson agitated expression, looking at something out of view. Grayson serious expression, Mouths closed.
         with dissolve
@@ -338,7 +338,7 @@ label v9_at_warehouse:
         with dissolve
 
         menu:
-            "Say Something":
+            "Say something":
                 $ addPoint("tm")
                 u "Um... what's up with Cam?"
 
@@ -352,7 +352,7 @@ label v9_at_warehouse:
 
                 u "(Wait? For what? What the hell is happening?)"
 
-            "Keep Quiet":
+            "Keep quiet":
                 u "(He's sure amped up, but what's Sebastian got to do with it?)"
 
 
@@ -395,7 +395,7 @@ label v9_at_warehouse:
         with dissolve
 
         menu:
-            "Get Pumped":
+            "Get pumped":
                 $ addPoint("bro")
 
                 u "They're going down!"
@@ -407,7 +407,7 @@ label v9_at_warehouse:
 
                 ca "Come out swinging and leave nothing to chance. Fuck their shit up!"
 
-            "Ask Cameron What's Up":
+            "Ask Cameron what's up":
                 u "What's going on? Why do you keep looking over there?"
 
                 scene v9aaw14c

@@ -103,7 +103,7 @@ label drug_deal_w_josh:
         "Intervene":
             $ addPoint("bro")
             jump int_deal_w_josh
-        "Don't Intervene":
+        "Don't intervene":
             jump no_int_deal_w_josh
 
 label int_deal_w_josh:
@@ -126,9 +126,6 @@ label int_deal_w_josh:
     with dissolve
 
     # Lars Fight
-    $ allies = [mc]
-    $ enemies = [lars]
-
     call screen fight_tutorialPopup
 
     scene v8sdd10
@@ -137,38 +134,28 @@ label int_deal_w_josh:
 
     if fight_type == "normal":
         $ simLarsFight = False
-        $ youDamage = 0
-        $ larsdmg = 0
-        $ larsStance = renpy.random.choice([1, 2, 3, 4])
-        $ larsAttack = renpy.random.choice([1, 2, 3, 4])
 
         call screen fight_selectDifficulty
 
         call screen fight_keybindOptions
     
-    elif fight_type == "simReal":
+    elif fight_type == "simReal" or fight_type == "simWin":
         $ simLarsFight = True
-        $ stance = 1
-        $ larshealth = 6
+        
+    $ stance = 1
+    $ larsStance = renpy.random.choice([1, 2, 3, 4])
+    $ larsAttack = renpy.random.choice([1, 2, 3, 4])
+    $ larsSimulation = renpy.random.choice([1, 2, 3, 4, 5, 6])
+    $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
+
+    if fight_type == "simWin":
+        $ youHealth = 100000
+    else:
         $ youHealth = 3
 
-        $ youDamage = 0
-        $ larsdmg = 0
-        $ larsStance = renpy.random.choice([1, 2, 3, 4])
-        $ larsAttack = renpy.random.choice([1, 2, 3, 4])
-        $ larsSimulation = renpy.random.choice([1, 2, 3, 4, 5, 6])
-
-    elif fight_type == "simWin":
-        $ simLarsFight = True
-        $ stance = 1
-        $ youHealth = 100000
-        $ larshealth = 3
-
-        $ youDamage = 0
-        $ larsdmg = 0
-        $ larsStance = renpy.random.choice([1, 2, 3, 4])
-        $ larsAttack = renpy.random.choice([1, 2, 3, 4])
-        $ larsSimulation = renpy.random.choice([1, 2, 3, 4, 5, 6])
+    $ enemyhealth = 6
+    $ youDamage = 0
+    $ larsdmg = 0
 
 # Lars attacks MC
 label lars_McAttack:
@@ -259,7 +246,7 @@ label mc_LarsKickHit: # MC Kicks Lars (Hits/No Block)
     $ larsdmg += 1
     scene MC_Lars_Kick_hit 
     pause 1 # Trial/Error
-    if larsdmg >= larshealth:
+    if larsdmg >= enemyhealth:
         jump mc_larsFightEnd
     jump lars_McAttack
 
@@ -276,7 +263,7 @@ label mc_LarsJabsHit: # MC Jabs Lars (Hits/No Block)
     $ larsdmg += 1
     scene MC_Lars_Jab_hit
     pause 0.7 # Trial/Error
-    if larsdmg >= larshealth:
+    if larsdmg >= enemyhealth:
         jump mc_larsFightEnd
     jump lars_McAttack
 
@@ -292,7 +279,7 @@ label mc_LarsHooksHit: # MC Hooks Lars (Hits/No Block)
     $ larsdmg += 1
     scene MC_Lars_Hook_hit
     pause 0.7 # Trial/Error
-    if larsdmg >= larshealth:
+    if larsdmg >= enemyhealth:
         jump mc_larsFightEnd
     jump lars_McAttack
 
@@ -309,7 +296,7 @@ label mc_LarsBodyhookHit: # MC Body Hooks Lars (Hits/No Block)
     $ larsdmg += 1
     scene MC_Lars_BodyJab_hit
     pause 0.7 # Trial/Error
-    if larsdmg >= larshealth:
+    if larsdmg >= enemyhealth:
         jump mc_larsFightEnd
     jump lars_McAttack
 
@@ -470,6 +457,7 @@ label mc_larsAttack:
 label mc_larsFightEnd: # MC wins fight against Lars
     hide screen s28_larsMcAttack
     hide screen s28_mcLarsAttack
+    hide screen fight_overlay
     $ youDamage = 0
     $ stance = 0
     $ s28_fightWinner = "MC"
@@ -479,6 +467,7 @@ label mc_larsFightEnd: # MC wins fight against Lars
 label lars_McFightEnd: # MC loses fight against Lars
     hide screen s28_larsMcAttack
     hide screen s28_mcLarsAttack
+    hide screen fight_overlay
     $ youDamage = 0
     $ stance = 0
     $ s28_fightWinner = "Lars"
@@ -557,25 +546,15 @@ label dodged_pipe:
     scene v8sdd13a # TPP. Same camera as v8sdd13, Joe now hits Lars on the head with the pipe, Lars winces with pain and begins to fall to the ground.
     with vpunch
 
+    $ renpy.end_replay()
+
     pause 0.5
 
     scene v8sdd14 # TPP. Show MC looking up at Joe who is in shock, MC starts to stand up in preparation to plant a huge uppercut on Joe's chin. Lars on the ground. MC focused expression, MC mouth open.
     with dissolve
 
-    $ renpy.end_replay()
-
     $ ip_man = True
-    if not steam:
-        image ip_man = "images/v8/achievements/ipman.webp"
-        show ip_man:
-            xpos 0
-            ypos -200
-            linear 0.5 xpos 0 ypos 0
-            pause 2.0
-            linear 0.5 xpos 0 ypos -200
-    else:
-        $ achievement.grant("ip_man")
-        $ achievement.sync()
+    $ grantAchievement("ip_man")
 
     u "Fuck you!"
 
@@ -650,6 +629,7 @@ label beat_by_lars:
     with dissolve
 
     je "A valiant effort, hero, but not good enough. Let's go Lars."
+    $ renpy.end_replay()
 
     scene v8sdd33 # TPP. Show Joe and Lars leaving the scene, one of them is grabbing the drugs from Josh.
     with dissolve

@@ -11,6 +11,7 @@ init python:
         contact_Amber.newMessage("Beer, obviously")
 
 label v10_amber_skatepark:
+    play music "music/v10/Scene 26/Track Scene 26_1.mp3" fadein 3
 
     scene v10sasp14 # TPP. Show MC on sidewalk, walking home from rileys house.
     with fade
@@ -18,7 +19,7 @@ label v10_amber_skatepark:
     u "(I should get that.)"
 
     $ contact_Amber.newMessage("Skatepark behind SVC, 10pm, bring a six pack.", queue=False)
-    $ contact_Amber.addReply("Condoms or beer?", v10s26_reply1 )
+    $ contact_Amber.addReply("Condoms or beer?", v10s26_reply1)
     $ contact_Amber.addReply("Alright sure")
 
     call screen phone
@@ -361,6 +362,8 @@ label v10_amber_skatepark:
     u "*Laughs*"
 
     if amberrs:
+
+        label v10_amber_skatepark_sg:
         scene v10sasp5b # FPP. Same camera as v10sasp5. Show Amber leaning in to whisper into MC's ear, smiling, mouth open.
         with fade
 
@@ -381,15 +384,23 @@ label v10_amber_skatepark:
 
         u "*Whisper* Here?"
 
+        if config_censored:
+            call screen censoredPopup("v10s26_nsfwSkipLabel1")
+
         scene v10sasp5d # FPP. Same camera as v10sasp5. Show Amber looking down and attempting to pull MC's pants down. Smiling, mouth open.
         with dissolve
 
         am "Why not?"
 
-        scene v10sasp5e # FPP. Same camera as v10sasp5. Show Amber looking down and attempting to pull MC's pants down. Smiling, mouth closed.
+        $ rough_rider = True
+        $ grantAchievement("rough_rider")
+
+        scene v10sasp5d # FPP. Same camera as v10sasp5. Show Amber looking down and attempting to pull MC's pants down. Smiling, mouth closed.
         with dissolve
         menu:
             "Let her":
+                stop music fadeout 3
+                play music "music/v10/Scene 26/Track Scene 26_2.mp3" fadein 3
                 image v10ambbj = Movie(play="images/v10/Scene 26/v10ambbj.webm", loop=True, image="images/v10/Scene 26/v10ambbjStart.webp", start_image="images/v10/Scene 26/v10ambbjStart.webp") # TPP Amber sucking MC's cock on the top of the quater pipe
                 image v10ambbjf = Movie(play="images/v10/Scene 26/v10ambbjf.webm", loop=True, image="images/v10/Scene 26/v10ambbjStart.webp", start_image="images/v10/Scene 26/v10ambbjStart.webp")
 
@@ -441,7 +452,7 @@ label v10_amber_skatepark:
                 am "Oh god!"
 
                 image v10ambda = Movie(play="images/v10/Scene 26/v10ambda.webm", loop=True, image="images/v10/Scene 26/v10ambdaStart.webp", start_image="images/v10/Scene 26/v10ambdaStart.webp") # TPP MC fucking amber in the ass doggystyle
-                image v10ambrff = Movie(play="images/v10/Scene 26/v10ambdaf.webm", loop=True, image="images/v10/Scene 26/v10ambdaStart.webp", start_image="images/v10/Scene 26/v10ambdaStart.webp")
+                image v10ambdaf = Movie(play="images/v10/Scene 26/v10ambdaf.webm", loop=True, image="images/v10/Scene 26/v10ambdaStart.webp", start_image="images/v10/Scene 26/v10ambdaStart.webp")
 
 
                 scene v10ambda
@@ -449,18 +460,12 @@ label v10_amber_skatepark:
 
                 am "Oh my God, FASTER!"
 
-                scene v10ambrff
-                with dissolve
-
                 am "YESSSS!"
 
-                scene v10ambrff
+                scene v10ambdaf
                 with dissolve
 
                 u "Damn this feels good!"
-
-                scene v10ambrff
-                with dissolve
 
                 am "Oh fuck!"
 
@@ -489,7 +494,7 @@ label v10_amber_skatepark:
                 u "Me too."
 
                 scene v10ambcgf
-                with hpunch
+                with flash
 
                 am "Cum in me [name]."
 
@@ -545,7 +550,7 @@ label v10_amber_skatepark:
            
             "Shut her down":
                 $ v10_amber_awkward = True
-                scene v10sasp5e
+                scene v10sasp5d
                 with dissolve
 
                 u "Woah, let's not do that."
@@ -642,6 +647,8 @@ label v10_amber_skatepark:
         menu:
             "Place hand on her leg":
                 if kct == "popular": # kct is popular
+                    call screen kctPopup
+                    
                     scene v10sasp5j # FPP. Same camera as v10sasp5. Show Amber glancing down at her leg, smiling, mouth closed.
                     with dissolve
                     
@@ -694,13 +701,20 @@ label v10_amber_skatepark:
 
                     am "Why not?"
 
-                    scene v10sasp5e
+                    scene v10sasp5d
                     with dissolve
                     menu:
                         "Let her":
+                            $ amberrs = True
 
+                            if config_censored:
+                                call screen censoredPopup("v10s26_nsfwSkipLabel1")
+                                
                             scene v10ambbj
                             with dissolve
+
+                            $ rough_rider = True
+                            $ grantAchievement("rough_rider")
 
                             u "Damn Amber!"
 
@@ -748,17 +762,17 @@ label v10_amber_skatepark:
 
                             am "Oh my God, FASTER!"
 
-                            scene v10ambaff
+                            scene v10ambdaf
                             with dissolve
 
                             am "YESSSS!"
 
-                            scene v10ambaff
+                            scene v10ambdaf
                             with dissolve
 
                             u "Damn this feels good!"
 
-                            scene v10ambaff
+                            scene v10ambdaf
                             with dissolve
 
                             am "Oh fuck!"
@@ -840,7 +854,7 @@ label v10_amber_skatepark:
 
                         "Shut her down":
                             $ v10_amber_awkward = True
-                            scene v10sasp5e
+                            scene v10sasp5d
                             with dissolve
 
                             u "Woah, let's not do that."
@@ -963,16 +977,18 @@ label v10_amber_skatepark:
 
                 am "I'll see you around."
 
-                scene v10sasp5f
-                with dissolve
+                label v10s26_nsfwSkipLabel1:
+                    scene v10sasp5f
+                    with dissolve
 
-                u "See ya."
+                    u "See ya."
 
-                scene v10sasp5g
-                with dissolve
+                    scene v10sasp5g
+                    with dissolve
 
-                pause 0.75
+                    pause 0.75
 
+    $ renpy.end_replay()
     scene v10sasp5g
     with dissolve
 
@@ -982,5 +998,7 @@ label v10_amber_skatepark:
     with fade
 
     u "(I'm fucking beat.)"
+    
+    stop music fadeout 3
 
     jump v10_econ_class # -Transition to Scene 27-

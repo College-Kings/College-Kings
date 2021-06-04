@@ -4,6 +4,8 @@
 # Time: Afternoon
 label v10_aft_walk_home:
 
+    play music "music/v10/Scene 23/Track Scene 23.mp3" fadein 3
+
     scene v10smwh1 # TPP. Show MC walking on the sidewalk. Normal expression, mouth closed.
     with fade
 
@@ -202,7 +204,7 @@ label v10_aft_walk_home:
             scene v10smwh4
             with dissolve
             menu:
-                "I Don't Know":
+                "I don't know":
                     scene v10smwh4
                     with dissolve
 
@@ -218,7 +220,7 @@ label v10_aft_walk_home:
 
                     u "Sounds good."
                
-                "Hot Girls":
+                "Hot girls":
                     scene v10smwh4c # FPP. Same camera as v10smwh4. Show Josh, smiling, mouth closed.
                     with dissolve
 
@@ -292,5 +294,6 @@ label v10_aft_walk_home:
     
     u "(Guess I'm not going home.)"
    
+    stop music fadeout 3
     jump v10_lauren_room
     

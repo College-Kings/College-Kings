@@ -37,7 +37,7 @@ label v9_hallway:
 
     u "Ouch! What the?!"
 
-    u "(Well, fuck)"
+    u "(Well, fuck.)"
 
     $ timed = True
     $ timerexit = "v9_hall_calm"
@@ -48,7 +48,7 @@ label v9_hallway:
             $ timed = False
             jump v9_hall_apol
 
-        "Tell Him To Calm Down":
+        "Tell him to calm down":
             $ addPoint("tm")
             $ timed = False
             jump v9_hall_calm
@@ -126,13 +126,15 @@ label v9_hall_cont1:
     $ timerexit = "v9_hall_no_punch"
 
     menu: 
-        "Punch The Guy": 
+        "Punch the guy": 
             $ addPoint("bro")
             $ timed = False
             $ hl_punch = True
+            $ down_for_the_count = True
+            $ grantAchievement("back_down")
             jump v9_hall_punch
 
-        "Don't Punch The Guy":
+        "Don't punch the guy":
             $ addPoint("tm")
             $ timed = False
             $ hl_punch = False
@@ -142,7 +144,7 @@ label v9_hall_punch:
     scene v9hlw8a # TPP. Same camera as v9hlw8, show MC stepping back and looking the tough guy in the face, both angry.
     with dissolve
 
-    u "(Nah, fuck this)"
+    u "(Nah, fuck this.)"
 
     scene v9hlw8b # TPP. Show MC swinging a punch into the tough guys stomach, the tough guy winces in pain.
     with vpunch
@@ -218,7 +220,7 @@ label v9_hall_punch:
     scene v9hlw16 # FPP. Show the girl Lindsey was with, bored expression, holding out a piece of paper as if she's trying to pass it to MC, mouth open.
     with dissolve
 
-    unknown "I was told to give you this. *Sigh*."
+    unknown "I was told to give you this. *Sigh*"
 
     scene v9hlw16a # FPP. Same camera as v9hlw16, show the girl now walking away from the camera.
     with dissolve

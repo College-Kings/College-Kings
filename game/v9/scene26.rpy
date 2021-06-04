@@ -70,7 +70,7 @@ label v9_fri_training_w_wolves:
 
             ch "Right."
 
-        "Keep Quiet":
+        "Keep quiet":
             $ addPoint("tm")
     
             pause 1
@@ -105,7 +105,7 @@ label v9_fri_training_w_wolves:
     with dissolve
 
     menu: 
-        "Make Joke": 
+        "Make joke": 
             $ addPoint("tm")
 
             u "I think punching an Ape's thick skull is gonna be like hitting a wall."
@@ -138,7 +138,7 @@ label v9_fri_training_w_wolves:
     scene v9tww5g # FPP. Same camera as v9tww5, Chris pacing back to the same position priot to v9tww5c (center to camera), neutral expression, mouth open.
     with dissolve
 
-    ch "I wanna win this thing just as bad as the apes wanna win, maybe more since Grayson's already got the title on his side."
+    ch "I wanna win this thing just as bad as the Apes wanna win, maybe more since Grayson's already got the title on his side."
 
     scene v9tww5a
     with dissolve
@@ -159,9 +159,9 @@ label v9_fri_training_w_wolves:
         scene v9tww9 # TPP. Show Chris with his hand on MC's shoulder, Perry and Imre looking at Chris, MC smile, Chris smile, mouth open.
         with dissolve
 
-        ch "I can't tell you if the apes will be harder to beat than that guy, but they certainly won't be easier. The apes have a proven track record in the ring."
+        ch "I can't tell you if the Apes will be harder to beat than that guy, but they certainly won't be easier. The Apes have a proven track record in the ring."
 
-        ch "But... now we have our champ here. I know for a fact those apes are shitting their pants after that knockout."
+        ch "But... now we have our champ here. I know for a fact those Apes are shitting their pants after that knockout."
 
         scene v9tww9a # TPP. Same camera as v9tww9, all smiling, Imre mouth open.
         with dissolve
@@ -356,7 +356,7 @@ label v9_fri_training_w_wolves:
         with dissolve
 
         menu: 
-            "Hit First": 
+            "Hit first": 
                 $ addPoint("bro")
 
                 u "Hit first."
@@ -439,7 +439,7 @@ label v9_fri_training_w_wolves:
         u "Nah, I'm not in my head."
 
         menu:
-            "Act Cool":
+            "Act cool":
                 $ addPoint ("tm", 1)
 
                 scene v9tww15a
@@ -452,7 +452,7 @@ label v9_fri_training_w_wolves:
 
                 u "How?"
 
-            "Ask For Help":
+            "Ask for help":
                 $ addPoint ("bro", 1)
 
                 u "I need it. I don't know what happened."
@@ -538,7 +538,7 @@ label v9_fri_training_w_wolves:
 
                 ch "So we use that to our advantage."
 
-            "Defend Yourself":
+            "Defend yourself":
                 $ addPoint ("tm", 1)
 
                 u "I mean, it's not my first fight ever. I can still have some tricks up my sleeve."
@@ -619,7 +619,7 @@ label v9_fri_training_w_wolves:
 
     ch "Don't worry. I'm not gonna say 'no women.'"
 
-    ch "Let's consider all forms of...stress relief...as rest, shall we?"
+    ch "Let's consider all forms of... stress relief... as rest, shall we?"
 
     scene v9tww21 # TPP. Show Imre, smile, mouth open.
     with dissolve

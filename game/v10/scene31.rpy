@@ -6,7 +6,7 @@ label v10_late_alley:
 
     scene v10all1 # TPP. Show MC on the sidewalk, just before the entrance to the alley, mouth closed
     with dissolve
-
+    play music "music/v10/Scene 31/Track Scene 31.mp3" fadein 3
     pause 0.75
 
     scene v10all2 # FPP. Show Alley, 2 hookers against the wall near the entrance, Josh down the bottom of the alley with unknown guy in hoody,
@@ -125,7 +125,7 @@ label v10_late_alley:
         jo "Haha, he's some big shot. Can't remember his name honestly, but he's a bit intimidating. Kinda reminds me of my dad, but more flexible."
 
     menu:
-        "Support Him":
+        "Support him":
             $ v10_support_josh = True
             scene v10all3a
             with dissolve
@@ -170,7 +170,7 @@ label v10_late_alley:
 
             jo "Not a bad idea. I appreciate the talk man."
 
-        "Don't Support":
+        "Don't support":
             if kct == "confident":
 
                 scene v10all3
@@ -178,6 +178,7 @@ label v10_late_alley:
 
                 u "I get that this isn't supposed to be a permanent thing for you and you have an out plan, but I still don't support what you're doing. There's other ways to get money. You're gonna end up fucking up your life."
 
+                call screen kctPopup
                 scene v10all3a
                 with dissolve
 
@@ -220,5 +221,5 @@ label v10_late_alley:
 
     scene v10all5 # FPP. Show josh walking off down the sidewalk.
     with dissolve
-
+    stop music fadeout 3
     jump v10_tues_room_night

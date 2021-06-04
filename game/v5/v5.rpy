@@ -21,7 +21,7 @@ init python:
     def v5_reply5():
         addPoint("bro")
         contact_Amber.newMessage(_("Oh wow, I was just checking. :P"))
-        contact_Amber.addReply(_("Don't worry, you'll see me soon"), v5_reply6)
+        contact_Amber.addReply(_("Don't worry, you'll see me soon."), v5_reply6)
         contact_Amber.addReply(_("Haha, I'm fine."), v5_reply7)
 
     def v5_reply6():
@@ -781,13 +781,8 @@ label continuez:
                         $ laurenpublic = False
                         $ addPoint("tm")
                         $ onthelow = True
-
-                        if not steam:
-                            show onthelow at achievementShow
-
-                        else:
-                            $ achievement.grant("on_the_low")
-                            $ achievement.sync()
+                        $ grantAchievement("on_the_low")
+                            
 
                         u "Sorry, but can we just make sure we're alone before we do stuff like that. I just feel uncomfortable even just kissing in public."
 
@@ -1327,12 +1322,8 @@ label trolleybb: # you do press the lever
 
     if trolleyb and la2:
         $ petapublicenemy = True
-        if not steam:
-            show petapublicenemy at achievementShow:
-
-        else:
-            $ achievement.grant("peta_public_enemy")
-            $ achievement.sync()
+        $ grantAchievement("peta_public_enemy")
+            
 
     u "Ahh fuck!"
 
@@ -2167,13 +2158,8 @@ label continueaf:
                     $ laurenpublic = False
                     $ addPoint("tm")
                     $ onthelow = True
-
-                    if not steam:
-                        show onthelow at achievementShow
-
-                    else:
-                        $ achievement.grant("on_the_low")
-                        $ achievement.sync()
+                    $ grantAchievement("on_the_low")
+                        
 
                     u "Sorry, but can we just make sure we're alone before we do stuff like that. I just feel uncomfortable even just kissing in public."
 
@@ -2730,6 +2716,9 @@ label hospitala:
 
     u "*Deep breath*"
 
+    label fj_a: #for compatibility only
+    label fj_b: #for compatibility only
+
     menu:
         "Confront Adam":
             $ addPoint("bro")
@@ -2861,7 +2850,7 @@ label hospitala:
     ad "Oh pissbag, you're about to die."
 
     scene af2
-    $ renpy.pause(1.5)
+    pause 1.5
     scene af2pic
     with hpunch
 
@@ -2874,233 +2863,46 @@ label hospitala:
 
     $ adamtut = True
 
-    if fighttom == False:
-
-        call screen skiptut2
 
     label fkcon:
 
     $ firstfight = False
-    $ _game_menu_screen = "ingmenu"
-
-
 
     scene af4
 
-    call screen af
+    # Adam Fight
+    call screen fight_tutorialPopup
 
+    scene af4
 
-    label playf2:
-        $ youDamage = 0
-        $ adamdmg = 0
-        $ adamstance = renpy.random.choice([1, 2, 3, 4])
-        $ adamattack = renpy.random.choice([1, 2, 3, 4])
-        call screen af2
+    call screen fight_typeMenu
 
-    label easy2:
-        $ reaction = 3
-        $ reactiona = 3.2
-        $ adamhealth = 5
-        $ youHealth = 5
-        call screen af3
+    if fight_type == "normal":
+        $ simadamfight = False
 
-    label moderate2:
-        $ reaction = 1.3
-        $ reactiona = 1.5
-        $ adamhealth = 6
-        $ youHealth = 3
-        call screen af3
+        call screen fight_selectDifficulty
 
-    label hard2:
-        $ reaction = 0.5
-        $ reactiona = 0.7
-        $ adamhealth = 8
-        $ youHealth = 2
-        call screen af3
-
-
-    label simadamfight:
+        call screen fight_keybindOptions
+    
+    elif fight_type == "simReal" or fight_type == "simWin":
         $ simadamfight = True
-        $ stance = 1
-        $ adamhealth = 6
-        $ youHealth = 3
-        jump adamsimstart
-
-    label autowinadam:
-        $ simadamfight = True
-        $ stance = 1
-        $ youHealth = 100000
-        $ adamhealth = 3
-        jump adamsimstart
-
-    label keys1:
-        call screen keys1
-    label keys2:
-        call screen keys2
-    label keys3:
-        call screen keys3
-    label keys4:
-        call screen keys4
-
-
-
-
-
-    #### Define videos for adam fight
+        
     $ stance = 1
+    $ adamstance = renpy.random.choice([1, 2, 3, 4])
+    $ adamattack = renpy.random.choice([1, 2, 3, 4])
+    $ simadam = renpy.random.choice([1, 2, 3, 4, 5, 6])
+    $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
 
-    label adamkick1:
+    if fight_type == "simWin":
+        $ youHealth = 100000
+    else:
+        $ youHealth = 3
 
-        if adamdmg >= adamhealth:
-
-            scene youfinishadam
-            $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
-            $ stance = 0
-            $ youDamage = 0
-            scene youfinishadamclose
-            with vpunch
-            $ renpy.pause()
-
-            jump youfinishadam
-
-        else:
-            $ adamdmg += 1
-            scene af11
-            $ renpy.pause(0.7)
-            play sound "sounds/ks.mp3"
-            scene af11close
-            with hpunch
-
-            pause 0.5
-            jump adamattack
-
-    label adamkick2:
-
-            scene af12
-            $ renpy.pause(0.7)
-            play sound "sounds/ks.mp3"
-            scene af12close
-            with hpunch
-
-            pause 0.5
-            jump adamattack
-
-
-    label adamhook1:
-
-        if adamdmg >= adamhealth:
-
-            scene youfinishadam
-            $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
-            $ stance = 0
-            $ youDamage = 0
-            scene youfinishadamclose
-            with vpunch
-            $ renpy.pause()
-
-            jump youfinishadam
-
-        else:
-            $ adamdmg += 1
-            scene af5
-            $ renpy.pause(0.7)
-            play sound "sounds/hs.mp3"
-            scene af5close
-            with hpunch
-
-            pause 0.5
-            jump adamattack
-
-    label adamhook2:
-
-            scene af6
-            $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
-            scene af6close
-            with hpunch
-
-            pause 0.5
-            jump adamattack
-
-    label adamjab1:
-
-        if adamdmg >= adamhealth:
-
-            scene youfinishadam
-            $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
-            $ stance = 0
-            $ youDamage = 0
-            scene youfinishadamclose
-            with vpunch
-            $ renpy.pause()
-
-            jump youfinishadam
-
-        else:
-            $ adamdmg += 1
-            scene af7
-            $ renpy.pause(0.7)
-            play sound "sounds/js.mp3"
-            scene af7close
-            with hpunch
-
-            pause 0.5
-            jump adamattack
-
-    label adamjab2:
-
-            scene af8
-            $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
-            scene af8close
-            with hpunch
-
-            pause 0.5
-            jump adamattack
-
-    label adambody1:
-
-        if adamdmg >= adamhealth:
-
-            scene youfinishadam
-            $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
-            $ stance = 0
-            $ youDamage = 0
-            scene youfinishadamclose
-            with vpunch
-            $ renpy.pause()
-
-            jump youfinishadam
-
-        else:
-            $ adamdmg += 1
-            scene af9
-            $ renpy.pause(0.7)
-            play sound "sounds/hs.mp3"
-            scene af9close
-            with hpunch
-
-            pause 0.5
-            jump adamattack
-
-    label adambody2:
-
-            scene af10
-            $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
-            scene af10close
-            with hpunch
-
-            pause 0.5
-            jump adamattack
+    $ enemyhealth = 6
+    $ youDamage = 0
+    $ adamdmg = 0
 
     label letsgoadam:
-    $ simadamfight = False
-
     label adamsimstart:
     label adamattack:
     $ stance = 2
@@ -3610,6 +3412,155 @@ label hospitala:
         else:
             call screen youattack2
 
+    label adamkick1:
+
+        if adamdmg >= enemyhealth:
+
+            scene youfinishadam
+            $ renpy.pause(1)
+            play sound "sounds/fall.mp3"
+            $ stance = 0
+            $ youDamage = 0
+            scene youfinishadamclose
+            with vpunch
+            $ renpy.pause()
+
+            jump youfinishadam
+
+        else:
+            $ adamdmg += 1
+            scene af11
+            $ renpy.pause(0.7)
+            play sound "sounds/ks.mp3"
+            scene af11close
+            with hpunch
+
+            pause 0.5
+            jump adamattack
+
+    label adamkick2:
+
+            scene af12
+            $ renpy.pause(0.7)
+            play sound "sounds/ks.mp3"
+            scene af12close
+            with hpunch
+
+            pause 0.5
+            jump adamattack
+
+
+    label adamhook1:
+
+        if adamdmg >= enemyhealth:
+
+            scene youfinishadam
+            $ renpy.pause(1)
+            play sound "sounds/fall.mp3"
+            $ stance = 0
+            $ youDamage = 0
+            scene youfinishadamclose
+            with vpunch
+            $ renpy.pause()
+
+            jump youfinishadam
+
+        else:
+            $ adamdmg += 1
+            scene af5
+            $ renpy.pause(0.7)
+            play sound "sounds/hs.mp3"
+            scene af5close
+            with hpunch
+
+            pause 0.5
+            jump adamattack
+
+    label adamhook2:
+
+            scene af6
+            $ renpy.pause(0.7)
+            play sound "sounds/bs.mp3"
+            scene af6close
+            with hpunch
+
+            pause 0.5
+            jump adamattack
+
+    label adamjab1:
+
+        if adamdmg >= enemyhealth:
+
+            scene youfinishadam
+            $ renpy.pause(1)
+            play sound "sounds/fall.mp3"
+            $ stance = 0
+            $ youDamage = 0
+            scene youfinishadamclose
+            with vpunch
+            $ renpy.pause()
+
+            jump youfinishadam
+
+        else:
+            $ adamdmg += 1
+            scene af7
+            $ renpy.pause(0.7)
+            play sound "sounds/js.mp3"
+            scene af7close
+            with hpunch
+
+            pause 0.5
+            jump adamattack
+
+    label adamjab2:
+
+            scene af8
+            $ renpy.pause(0.7)
+            play sound "sounds/bs.mp3"
+            scene af8close
+            with hpunch
+
+            pause 0.5
+            jump adamattack
+
+    label adambody1:
+
+        if adamdmg >= enemyhealth:
+
+            scene youfinishadam
+            $ renpy.pause(1)
+            play sound "sounds/fall.mp3"
+            $ stance = 0
+            $ youDamage = 0
+            scene youfinishadamclose
+            with vpunch
+            $ renpy.pause()
+
+            jump youfinishadam
+
+        else:
+            $ adamdmg += 1
+            scene af9
+            $ renpy.pause(0.7)
+            play sound "sounds/hs.mp3"
+            scene af9close
+            with hpunch
+
+            pause 0.5
+            jump adamattack
+
+    label adambody2:
+
+            scene af10
+            $ renpy.pause(0.7)
+            play sound "sounds/bs.mp3"
+            scene af10close
+            with hpunch
+
+            pause 0.5
+            jump adamattack
+
 label fl_b: # keep it to yourself
     $ tellschool = False
 
@@ -3627,12 +3578,8 @@ label fl_a:  # tell the school
     stop music fadeout 2.0
 
     $ snitch = True
-    if not steam:
-        show snitch at achievementShow:
-
-    else:
-        $ achievement.grant("snitch")
-        $ achievement.sync()
+    $ grantAchievement("snitch")
+        
 
     u "(I need to tell the school, it's the only way to sort this out.)"
 
@@ -4385,7 +4332,12 @@ label findimre:
         else:
             u "(I gotta make a decision. Should I help Imre, or meet Chloe?)"
 
-if persistent.ep < 6:
-    jump end_credits
-else:
+if not renpy.loadable("v6/v6.rpy"):
+    scene savenow
+    with Fade (1,0,1)
+    " "
+
+if renpy.loadable("v6/v6.rpy"):
     jump v6start
+else:
+    jump end_credits

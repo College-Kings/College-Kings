@@ -6,6 +6,7 @@
 # -MC wakes from his sleep-
 
 label v10_cafe_w_jenny:
+    play music "music/v10/Scene 22/Track Scene 22_2.mp3" fadein 3
     if joinwolves:
         scene v10scwj1 # TPP. Show MC waking up in his new Wolves room in underwear.
         with fade
@@ -164,7 +165,7 @@ label v10_cafe_w_jenny:
         with dissolve
 
         menu:
-            "Reassure Her":
+            "Reassure her":
                 $ v10_reassure_jenny = True
                 $ addPoint("bf", 1)
                 $ jennyLike += 1
@@ -176,7 +177,7 @@ label v10_cafe_w_jenny:
 
                 u "All we can do now is focus on what's next. No matter how rough it gets I'm sure it'll all gonna work out."
 
-            "Stay Positive":
+            "Stay positive":
                 u "Let's try to stay positive. Focusing on the bad stuff isn't going to help. Let's just take it one step at a time."
         
 
@@ -226,7 +227,7 @@ label v10_cafe_w_jenny:
 
                     jen "Maybe I'll take you up on that some time."
 
-            "Stay Friendly":
+            "Stay friendly":
                 u "Yeah, they have really good muffins here as well..."
 
                 scene v10scwj7
@@ -292,7 +293,7 @@ label v10_cafe_w_jenny:
         with dissolve
 
         menu:
-            "Be Helpful":
+            "Be helpful":
                 $ addPoint("bro", 1)
 
                 scene v10scwj11
@@ -309,7 +310,7 @@ label v10_cafe_w_jenny:
 
                 u "And if they don't then I'll just rob a bank for you. "
 
-            "Be Supportive":
+            "Be supportive":
                 $ addPoint("bf", 1)
                 $ penelopeLike += 1
 
@@ -605,7 +606,7 @@ label v10_cafe_w_jenny:
         with dissolve
 
         menu:
-            "Be Helpful":
+            "Be helpful":
                 u "A school hearing? This isn't over then. Much better than actual court."
 
                 u "We have time to prepare and the hearing alone gives us an opportunity to explain the situation."
@@ -624,7 +625,7 @@ label v10_cafe_w_jenny:
 
                 u "Of course I will. Not only will I be there, but I'll defend you. Like your own personal lawyer!"
 
-            "Be Supportive":
+            "Be supportive":
                 u "I'm positive everything's gonna work out just fine."
 
                 scene v10scwj20
@@ -783,5 +784,7 @@ label v10_cafe_w_jenny:
 
     scene v10scwj23 # TPP. Show MC walking down the sidewalk.
     with Fade(1, 0, 1)
-
+    
+    stop music fadeout 3
+    
     jump v10_aft_walk_home

@@ -15,6 +15,7 @@ init python:
 
 screen stats():
     tag phoneTag
+    zorder 200
 
     use phoneTemplate:
 
@@ -94,30 +95,42 @@ screen stats():
                 size 50
                 color "#000000"
 
-        default KCT = { "Popular": popular, "Loyal": loyal, "Confident": confident }
-        default sortedKCT = [k for (k, v) in sorted(KCT.items(), key=lambda key_value: key_value[1])]
-
         vbox:
             align (0.5, 0.5)
             spacing 80
 
-            text sortedKCT[0]:
+            text sortedKCT[0].capitalize():
                 text_align 0.0
-                color "#53d769"
                 font "fonts/Freshman.ttf"
                 size 50
+                if sortedKCT[0] == "popular":
+                    color "#53d769" 
+                elif sortedKCT[0] == "loyal":
+                    color "#fecb2e"
+                else:
+                    color "#fc3d39"
 
-            text sortedKCT[1]:
+            text sortedKCT[1].capitalize():
                 text_align 0.0
-                color "#fecb2e"
                 font "fonts/Freshman.ttf"
                 size 50
+                if sortedKCT[1] == "popular":
+                    color "#53d769" 
+                elif sortedKCT[1] == "loyal":
+                    color "#fecb2e"
+                else:
+                    color "#fc3d39"
 
-            text sortedKCT[2]:
+            text sortedKCT[2].capitalize():
                 text_align 0.0
-                color "#fc3d39"
                 font "fonts/Freshman.ttf"
                 size 50
+                if sortedKCT[2] == "popular":
+                    color "#53d769" 
+                elif sortedKCT[2] == "loyal":
+                    color "#fecb2e"
+                else:
+                    color "#fc3d39"
 
 style statstitle is text:
     font "fonts/Freshman.ttf"

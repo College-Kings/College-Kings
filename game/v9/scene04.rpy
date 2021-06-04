@@ -37,7 +37,7 @@ u "Hello!"
 
 scene v9dream4
 with dissolve
-u "(Awesome)"
+u "(Awesome!)"
 
 scene v9dream5
 with dissolve
@@ -206,7 +206,7 @@ menu:
 
         scene v9dream13a # Same as v9dream13 but this time it's Penelope laughing (as if making fun of you), mouth open
         with dissolve
-        pe "My grandma can hit harder than that! *laughs*"
+        pe "My grandma can hit harder than that! *Laughs*"
 
         play sound "sounds/hs.mp3"
 
@@ -260,7 +260,7 @@ menu:
 
         scene v9dream13a
         with dissolve
-        pe "My grandma can hit harder than that! *laughs*"
+        pe "My grandma can hit harder than that! *Laughs*"
 
         play sound "sounds/hs.mp3"
 
@@ -452,7 +452,7 @@ menu:
 
         scene v9dream13d # Same as v9dream13a but instead of Penelope, it's Riley
         with dissolve
-        ri "My grandma can hit harder than that! *laughs*"
+        ri "My grandma can hit harder than that! *Laughs*"
 
         play sound "sounds/hs.mp3"
 
@@ -506,7 +506,7 @@ menu:
 
         scene v9dream13d
         with dissolve
-        ri "My grandma can hit harder than that! *laughs*"
+        ri "My grandma can hit harder than that! *Laughs*"
 
         play sound "sounds/hs.mp3"
 

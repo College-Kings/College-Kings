@@ -7,6 +7,8 @@ label v10_apes_samantha:
     scene v10ssap1 # TPP. Show MC in the Ape's living room. He's sitting on the couch, appearing exhausted, mouth closed.
     with fade
 
+    play music "music/v10/Scene 14/Track Scene 14.mp3" fadein 3
+
     u "(Shit I'm tired.)"
 
     scene v10ssap1a # TPP. Same camera as v10ssap1. MC's sitting on the couch, appearing exhausted, mouth closed. He reaches forward to grab the remote.
@@ -22,7 +24,7 @@ label v10_apes_samantha:
     scene v10ssap1c # TPP. Same camera as v10ssap1. MC's sitting on the couch, appearing exhausted, mouth closed. He's holding the remote. Samantha sits down on the couch next to him, smiling, mouth open.
     with dissolve
 
-    sam "Hey Hey!"
+    sa "Hey Hey!"
 
     scene v10ssap2 # FPP. Perspective is from MC, who is sitting on the couch in Ape's living room. Show Sam (who is sitting beside him), normal/slightly curious expresison, mouth closed.
     with dissolve
@@ -32,7 +34,7 @@ label v10_apes_samantha:
     scene v10ssap2a # FPP. Same camera as v10ssap2. Show Sam, normal/slightly curious expresison, mouth open.
     with dissolve
 
-    sam "Something wrong?"
+    sa "Something wrong?"
 
     scene v10ssap2
     with dissolve
@@ -42,7 +44,7 @@ label v10_apes_samantha:
     scene v10ssap2a
     with dissolve
 
-    sam "Oh okay. I got a question for you."
+    sa "Oh okay. I got a question for you."
 
     scene v10ssap2
     with dissolve
@@ -52,7 +54,7 @@ label v10_apes_samantha:
     scene v10ssap2a
     with dissolve
 
-    sam "I've been thinking a lot about the frats and the fighting. My brother has been a hothead his entire life-"
+    sa "I've been thinking a lot about the frats and the fighting. My brother has been a hothead his entire life-"
 
     scene v10ssap2
     with dissolve
@@ -62,7 +64,7 @@ label v10_apes_samantha:
     scene v10ssap2b # FPP. Same camera as v10ssap2. Show Sam, smiling, mouth open.
     with dissolve
 
-    sam "*Laughs* Yeah, it’s very subtle. But yeah, he's always been a hothead so it makes sense to me for a guy like him to fight and be in a frat like this, but you're not like him and yet you're in this frat too."
+    sa "*Laughs* Yeah, it’s very subtle. But yeah, he's always been a hothead so it makes sense to me for a guy like him to fight and be in a frat like this, but you're not like him and yet you're in this frat too."
 
     scene v10ssap2c # FPP. Same camera as v10ssap2. Show Sam, smiling, mouth closed.
     with dissolve
@@ -72,7 +74,7 @@ label v10_apes_samantha:
     scene v10ssap2a
     with dissolve
 
-    sam "Well, I guess I really just wanna know why. It's kinda weird, don't you think? You don't really fit in with everyone else here."
+    sa "Well, I guess I really just wanna know why. It's kinda weird, don't you think? You don't really fit in with everyone else here."
 
     scene v10ssap2
     with dissolve
@@ -88,7 +90,7 @@ label v10_apes_samantha:
             scene v10ssap2b
             with dissolve
 
-            sam "So you have a dangerous side... I never knew"
+            sa "So you have a dangerous side... I never knew"
 
             scene v10ssap2c
             with dissolve
@@ -98,7 +100,7 @@ label v10_apes_samantha:
             scene v10ssap2b
             with dissolve
 
-            sam "That we have in common."
+            sa "That we have in common."
 
             scene v10ssap2
             with dissolve
@@ -108,27 +110,33 @@ label v10_apes_samantha:
             scene v10ssap2a
             with dissolve
 
-            sam "What do you mean?"
+            sa "What do you mean?"
 
             scene v10ssap2a
             with dissolve
 
-            u "Back in high school I had a teacher that was just always out to get me. People were doing all kinds of shit, they were throwing paper planes at him during class, cheating on his tests and just making fun of him even with him in the room. But they never got into any trouble. I did anything remotely questionable, there I go, straight to detention. Well at some point I got really fed up and I wanted to piss him off you know, get him really good."
+            u "Back in high school I had a teacher that was just always out to get me."
+            u "People were doing all kinds of shit, they were throwing paper planes at him during class, cheating on his tests and just making fun of him even with him in the room."
+            u "But they never got into any trouble. I did anything remotely questionable, there I go, straight to detention."
+            u "Well at some point I got really fed up and I wanted to piss him off you know, get him really good."
 
             scene v10ssap2b
             with dissolve
 
-            sam "Please tell me this is leading to something really juicy like a senior prank or sugar in a gas tank?"
+            sa "Please tell me this is leading to something really juicy like a senior prank or sugar in a gas tank?"
 
             scene v10ssap2c
             with dissolve
 
-            u "Not quite. He announced that he was gonna be one of the chaperones for our senior prom and I knew his daughter just happened to be going to our school and graduating with me. Sooo... long story short, I asked his daughter to prom and - after some very painful back and forth - she said yes. We danced all night and I tried to give him as much eye contact as I possibly could, it was so funny. To be honest, the girl really wasn't keen on it once she found out why I had asked her, but... totally worth it. *Laughs*"
+            u "Not quite. He announced that he was gonna be one of the chaperones for our senior prom and I knew his daughter just happened to be going to our school and graduating with me."
+            u "Sooo... long story short, I asked his daughter to prom and - after some very painful back and forth - she said yes."
+            u "We danced all night and I tried to give him as much eye contact as I possibly could, it was so funny."
+            u "To be honest, the girl really wasn't keen on it once she found out why I had asked her, but... totally worth it. *Laughs*"
 
             scene v10ssap2b
             with dissolve
 
-            sam "*Laughs* Remind me to never be a part of your revenge plans."
+            sa "*Laughs* Remind me to never be a part of your revenge plans."
 
             scene v10ssap2c
             with dissolve
@@ -146,7 +154,7 @@ label v10_apes_samantha:
             scene v10ssap2b
             with dissolve
 
-            sam "You know.. Just that you're not really the strong macho type."
+            sa "You know.. Just that you're not really the strong macho type."
 
             scene v10ssap2c
             with dissolve
@@ -156,7 +164,7 @@ label v10_apes_samantha:
             scene v10ssap2b
             with dissolve
 
-            sam "*Laughs* Was that your senior quote or something?"
+            sa "*Laughs* Was that your senior quote or something?"
 
             scene v10ssap2c
             with dissolve
@@ -166,7 +174,7 @@ label v10_apes_samantha:
             scene v10ssap2b
             with dissolve
 
-            sam "*Laughs* So you were the \"can I copy off of you\" kinda guy?"
+            sa "*Laughs* So you were the \"can I copy off of you\" kinda guy?"
 
             scene v10ssap2c
             with dissolve
@@ -176,7 +184,7 @@ label v10_apes_samantha:
             scene v10ssap2b
             with dissolve
 
-            sam "What's that saying? \"Don't hate the player, hate the game.\""
+            sa "What's that saying? \"Don't hate the player, hate the game.\""
 
             scene v10ssap2c
             with dissolve
@@ -227,7 +235,7 @@ label v10_apes_samantha:
             scene v10ssap1e # TPP. Same camera as v10ssap1. Show MC and Sam sitting on the couch. Camera is standing nearby, angry expression, mouth closed. Sam is smiling, mouth open. MC is smiling, mouth closed.
             with dissolve
 
-            sam "*Laughs*"
+            sa "*Laughs*"
 
             scene v10ssap1f # TPP. Same camera as v10ssap1. Show MC and Sam sitting on the couch. Camera is standing nearby, angry expression, mouth open. Sam looks pissed, mouth closed. MC has a normal expression, mouth closed.
             with dissolve
@@ -237,7 +245,7 @@ label v10_apes_samantha:
             scene v10ssap1g # TPP. Same camera as v10ssap1. Show MC and Sam sitting on the couch. Camera is standing nearby, angry expression, mouth closed. Sam looks pissed, mouth open. MC has a normal expression, mouth closed.
             with dissolve
 
-            sam "YOU SHOULDN'T BE TELLING ME WHAT I SHOULD OR SHOULDN'T BE DOING! Just leave us alone Cameron."
+            sa "YOU SHOULDN'T BE TELLING ME WHAT I SHOULD OR SHOULDN'T BE DOING! Just leave us alone Cameron."
 
             scene v10ssap1f 
             with dissolve
@@ -257,7 +265,7 @@ label v10_apes_samantha:
             scene v10ssap2b
             with dissolve
 
-            sam "*Chuckles* Oh shut up. And just so we're clear no one is calling dibs on me. I'm not some leftover lasagna."
+            sa "*Chuckles* Oh shut up. And just so we're clear no one is calling dibs on me. I'm not some leftover lasagna."
 
             scene v10ssap2c
             with dissolve
@@ -267,7 +275,7 @@ label v10_apes_samantha:
             scene v10ssap2d
             with dissolve
 
-            sam "So you called dibs huh?"
+            sa "So you called dibs huh?"
 
             scene v10ssap2c
             with dissolve
@@ -277,7 +285,7 @@ label v10_apes_samantha:
             scene v10ssap2b
             with dissolve
 
-            sam "*Laughs*"
+            sa "*Laughs*"
 
             scene v10ssap1i # TPP. Same camera as v10ssap1. Show MC and Sam sitting on the couch. Sam starts to stand up from the couch. Mouths closed, normal expressions.
             with dissolve
@@ -287,7 +295,7 @@ label v10_apes_samantha:
             scene v10ssap3b # FPP. Same camera as v10ssap3. Show Sam standing nearby, normal expression, mouth open.
             with dissolve
 
-            sam "Alright, I have some stuff I need to take care of, I'll see you later."
+            sa "Alright, I have some stuff I need to take care of, I'll see you later."
 
             scene v10ssap3c # FPP. Same camera as v10ssap3. Show Sam standing nearby, normal expression, mouth closed.
             with dissolve
@@ -297,7 +305,7 @@ label v10_apes_samantha:
             scene v10ssap3b
             with dissolve
 
-            sam "Uhm... you know? Stuff."
+            sa "Uhm... you know? Stuff."
 
             scene v10ssap1j # TPP. Same camera as v10ssap1. Show MC sitting on the couch. Sam is walking away. Mouths closed, normal expressions.
             with dissolve
@@ -349,5 +357,6 @@ label v10_apes_samantha:
             with fade
 
             u "(He can really be a dick sometimes. Good ol' Cameron. I should head up to my room.)"
+    stop music fadeout 3
 
-jump v10_call_with_lauren1 # jump to scene 15
+    jump v10_call_with_lauren1 # jump to scene 15

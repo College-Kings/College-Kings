@@ -4,7 +4,7 @@
 # Time: Tuesday Morning
 
 label v10_chloe_hallway:
-
+    play music "music/v10/Scene 29/Track Scene 29.mp3" fadein 3
     scene v10such1 # TPP. Show MC walking down the school hallway after exiting econ class, to the side in the distance near lockers should be Chloe and Aubrey.
     with fade
 
@@ -60,6 +60,8 @@ label v10_chloe_hallway:
                     cl "Ugh, I don't care what you think."
 
                 else:
+                    call screen kctPopup
+
                     u "No, sexy definitely describes her better."
 
                     scene v10such3d # FPP. Same as 3, aubrey smile, chloe awkward smile, Chloe mouth open.
@@ -81,7 +83,7 @@ label v10_chloe_hallway:
                     with dissolve
 
                     menu:
-                        "Ask Chloe How She Is":
+                        "Ask Chloe how she is":
                             $ addPoint("bf")
                             $ chloeLike += 1
 
@@ -126,15 +128,17 @@ label v10_chloe_hallway:
                             with dissolve
 
                             menu:
-                                "Have A Rematch":
+                                "Have a Rematch":
                                     $ addPoint("bf")
                                     $ v10_chloe_rematch = True
+                                    $ on_the_court = True
+                                    $ grantAchievement("on_the_court")
 
                                     u "Yeah let's go."
 
-                                    jump v10_mc_chloe_gym
+                                    jump v10_chloe_gym
 
-                                "Decline A Rematch":
+                                "Decline a Rematch":
                                     $ addPoint("tm")
                                     $ chloeLike -= 1
 
@@ -154,6 +158,7 @@ label v10_chloe_hallway:
                             cl "Yeah. Alright."   
 
         if kct == "loyal" or kct == "confident":
+            
             scene v10such4 # TPP. Show Chloe walking away, Aubrey and MC watching her.
             with dissolve
 
@@ -185,7 +190,7 @@ label v10_chloe_hallway:
 
             pause 0.75
 
-    if chloers:
+    else:
         scene v10such3f # FPP. Same as 3, both smile, aubrey mouth open.
         with dissolve
 
@@ -272,10 +277,12 @@ label v10_chloe_hallway:
         with dissolve
 
         menu:
-            "Have A Rematch":
+            "Have a Rematch":
                 $ addPoint("bf")
                 $ v10_chloe_rematch = True
                 $ chloeLike += 1
+                $ on_the_court = True
+                $ grantAchievement("on_the_court")
 
                 u "Let's do it, but I won't be going easy on you."
 
@@ -289,9 +296,9 @@ label v10_chloe_hallway:
 
                 pause 0.75
 
-                jump v10_mc_chloe_gym
+                jump v10_chloe_gym
 
-            "Decline A Rematch":
+            "Decline a Rematch":
                 u "I shouldn't, I have a lot to do. Sorry."
 
                 scene v10such5
@@ -303,5 +310,6 @@ label v10_chloe_hallway:
         with dissolve
 
         pause 0.75
+        stop music fadeout 3
 
     jump v10_emily_course

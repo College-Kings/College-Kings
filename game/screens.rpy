@@ -223,8 +223,6 @@ screen choice(items, time=3):
     image "gui/curves.webp"
     style_prefix "choice"
 
-    timer 0.001 action SetVariable("ischoice", True)
-
     default menuButtonsConfig = {
         0: {
             "background": "Left",
@@ -260,7 +258,7 @@ screen choice(items, time=3):
                         idle "gui/{}white.webp".format(menuButtonsConfig[count]["background"])
                     else:
                         idle "gui/{}blue.webp".format(menuButtonsConfig[count]["background"])
-                        action [item.action, SetVariable("ischoice", False)]
+                        action item.action
                     hover "gui/{}white.webp".format(menuButtonsConfig[count]["background"])
 
                 text item.caption.replace(" (disabled)", ""):
@@ -291,6 +289,10 @@ screen choice(items, time=3):
 
         timer time repeat False action [ SetVariable("timed", False), Hide('countdown'), Jump("choicetimer") ]
         bar value AnimatedValue(0, time, time, time) at alpha_dissolve # assuming you're using the alpha_dissolve transform from the wiki
+
+    if config_debug:
+        $ item = renpy.random.choice(items)
+        timer 0.1 action item.action
 
 style choicetuttext is text:
     font "fonts/OpenSans.ttf"
@@ -339,15 +341,13 @@ screen ingmenu():
 
     add "gui/savepage.webp"
 
-    if realmode == True:
+    if realmode:
 
-        if ischoice == False:
+        if not renpy.get_screen("choice"):
 
             default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
 
             fixed:
-
-
                 ## This ensures the input will get the enter event before any of the
                 ## buttons do.
                 order_reverse True
@@ -357,8 +357,6 @@ screen ingmenu():
                     size 50
                     yalign 0.1
                     xalign 0.5
-
-
 
                 ## The grid of file slots.
                 grid 1 1:
@@ -579,45 +577,23 @@ screen ingmenu():
 ## menus.
 
 screen quick_menu():
-
-    ## Ensure this appears on top of other screens.
     zorder 100
 
-    if quick_menu:
-        if realmode == True:
-            if ischoice == False:
-                hbox:
-                    style_prefix "quick"
+    if quick_menu and not (realmode and renpy.get_screen("choice")):
+        hbox:
+            style_prefix "quick"
 
-                    xalign 0.5
-                    yalign 1.0
+            align (0.5, 1.0)
 
-                    textbutton _("History") action ShowMenu('history')
-                    textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-                    textbutton _("Auto") action Preference("auto-forward", "toggle")
-                    textbutton _("Save") action ShowMenu('save')
-                    textbutton _("Q.Save") action QuickSave()
-                    textbutton _("Q.Load") action QuickLoad()
-                    textbutton _("Prefs") action ShowMenu('preferences')
-
-
-
-        else:
-
-            if quick_menu:
-                hbox:
-                    style_prefix "quick"
-
-                    xalign 0.5
-                    yalign 1.0
-                    textbutton _("Back") action Rollback()
-                    textbutton _("History") action ShowMenu('history')
-                    textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-                    textbutton _("Auto") action Preference("auto-forward", "toggle")
-                    textbutton _("Save") action ShowMenu('save')
-                    textbutton _("Q.Save") action QuickSave()
-                    textbutton _("Q.Load") action QuickLoad()
-                    textbutton _("Prefs") action ShowMenu('preferences')
+            if not realmode:
+                textbutton _("Back") action Rollback()
+            textbutton _("History") action ShowMenu('history')
+            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+            textbutton _("Auto") action Preference("auto-forward", "toggle") text_selected_color "#FFD166"
+            textbutton _("Save") action ShowMenu('save')
+            textbutton _("Q.Save") action QuickSave()
+            textbutton _("Q.Load") action QuickLoad()
+            textbutton _("Prefs") action ShowMenu('preferences')
 
     if youDamage == 3:
         image "images/3 hits.webp"
@@ -626,7 +602,7 @@ screen quick_menu():
     if youDamage >= 5:
         image "images/5 hits.webp"
 
-    if renpy.loadable("/bugTesting/bugTesting.rpy") and config.developer:
+    if renpy.loadable("bugTesting/bugTesting.rpy") and config.developer:
         hbox:
             style_prefix "quick"
             align (1.0, 1.0)
@@ -709,10 +685,10 @@ screen navigation():
             hover "images/discord2.webp"
             action OpenURL ("http://discord.collegekingsgame.com")
             xpos 1401
-            if not steam:
+            if not config.enable_steam:
                 ypos 417
             else:
-                ypos 147 #steam version
+                ypos 147 # steam version
 
 
         imagebutton:
@@ -741,7 +717,7 @@ screen navigation():
             hover "images/website3.webp"
             action OpenURL("http://collegekingsgame.com")
             xpos 1401
-            if not steam:
+            if not config.enable_steam:
                 ypos 687
             else:
                 ypos 592 #steam version
@@ -1186,7 +1162,7 @@ screen preferences():
     tag menu
     modal True
 
-    add "gui/settingspage.webp"
+    add "images/gui/settingsBackground.webp"
 
     # Display settings
     hbox:
@@ -1217,49 +1193,52 @@ screen preferences():
             action InvertSelected(Preference("transitions", "toggle"))
             text_size 28
 
-    # Real Life settings
+    # Skip NSFW Scenes
     hbox:
-        align (0.195, 0.671)
-        spacing 300
+        pos (280, 680)
+        spacing 310
 
-        if realmode:
-            textbutton _("On"):
-                action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False)]
-                text_color "#FFD166"
-                text_size 45
-            textbutton _("Off"):
-                action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True)]
-                text_size 45
-        else:
-            textbutton _("On"):
-                action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False)]
-                text_size 45
-            textbutton _("Off"):
-                action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True)]
-                text_color "#FFD166"
-                text_size 45
+        textbutton _("on"):
+            action SetVariable("config_censored", True)
+            text_size 45
+            text_selected_color "FFD166"
+
+        textbutton _("off"):
+            action SetVariable("config_censored", False)
+            text_size 45
+            text_selected_color "FFD166"
 
     # KCT settings
     hbox:
-        align (0.195, 0.874)
-        spacing 300
+        pos (180, 885)
+        spacing 85
 
-        if showkct:
-            textbutton _("On"):
-                action SetVariable("showkct", True)
-                text_color "#FFD166"
-                text_size 45
-            textbutton _("Off"):
-                action SetVariable("showkct", False)
-                text_size 45
-        else:
-            textbutton _("On"):
-                action SetVariable("showkct", True)
-                text_size 45
-            textbutton _("Off"):
-                action SetVariable("showkct", False)
-                text_color "#FFD166"
-                text_size 45
+        textbutton _("on"):
+            action SetVariable("showkct", True)
+            text_size 45
+            text_selected_color "FFD166"
+
+        textbutton _("off"):
+            action SetVariable("showkct", False)
+            text_size 45
+            text_selected_color "FFD166"
+
+    # Real Life settings
+    hbox:
+        pos (600, 885)
+        spacing 85
+
+        textbutton _("on"):
+            action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False)]
+            selected realmode
+            text_size 45
+            text_selected_color "FFD166"
+
+        textbutton _("off"):
+            action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True)]
+            selected not realmode
+            text_size 45
+            text_selected_color "FFD166"
 
     # Sliders
     style_prefix "slider"
@@ -1344,7 +1323,7 @@ style check_button_text:
     properties gui.button_text_properties("check_button")
 
 style slider_slider:
-    xsize 525
+    xsize 755
 
 style slider_button:
     properties gui.button_properties("slider_button")
@@ -2017,491 +1996,6 @@ style endfree is text:
         yalign 0.42
         xmaximum 600
 
-screen thx():
-    if not steam:
-        add "images/newthx.webp"
-    else:
-        add "images/newsteamend.webp" # steam
-
-    if not steam:
-        imagebutton:
-            ypos 677
-            xpos 394
-            idle "images/supportdevelopmentblank.webp"
-            hover "images/supportdevelopment.webp"
-            action OpenURL ("https://www.patreon.com/collegekings")
-
-    else:
-        imagebutton:# steam
-            ypos 700
-            xalign 0.5
-            idle "images/discordbutton1.webp"
-            hover "images/discordbutton2.webp"
-            action OpenURL ("http://discord.collegekingsgame.com")
-
-    textbutton "Main Menu":
-        text_underline True
-        text_size 50
-        text_font "fonts/Freshman.ttf"
-        ypos 952
-        xalign 0.5
-        text_align 0.5
-        action MainMenu()
-
-######## General fighting screens.
-
-screen ft1():
-    image "images/fightchoice.webp"
-
-    text "Fighting":
-        xalign 0.5
-        yalign 0.25
-        font "fonts/Freshman.ttf"
-        color "#ffffff"
-        size 90
-        xsize 500
-        text_align 0.5
-    text "Fighting is big part of College Kings, however you can simulate all fights if you'd like to.":
-        xalign 0.5
-        yalign 0.42
-        font "fonts/OpenSans-Bold.ttf"
-        color "#ffffff"
-        xsize 500
-        text_align 0.5
-
-
-    textbutton "Play Fight":
-        text_size 40
-        xalign 0.5
-        yalign 0.6
-        action Jump ("playf1")
-
-    textbutton "Simulate: realistic":
-        text_size 40
-        xalign 0.5
-        yalign 0.7
-        action Jump ("simtomfight")
-
-    textbutton "Simulate: auto-win":
-        text_size 40
-        xalign 0.5
-        yalign 0.8
-        action Jump ("autowin")
-
-screen ft2():
-    image "images/fightchoice.webp"
-
-    text "Difficulty":
-        xalign 0.5
-        yalign 0.25
-        font "fonts/Freshman.ttf"
-        color "#ffffff"
-        size 90
-        xsize 500
-        text_align 0.5
-    text "Higher difficulties require quicker reactions. You can change this at any time in the settings.":
-        xalign 0.5
-        yalign 0.42
-        font "fonts/OpenSans-Bold.ttf"
-        color "#ffffff"
-        xsize 500
-        text_align 0.5
-
-    vbox xalign 0.45 yalign 0.75 spacing 30:
-        textbutton "Easy":
-            text_size 40
-            action Jump ("easy")
-
-        textbutton "Moderate":
-            text_size 40
-            action Jump ("moderate")
-
-        textbutton "Hard":
-            text_size 40
-            action Jump ("hard")
-
-screen ft3():
-    image "images/fightchoice.webp"
-
-    text "Keybinding":
-        xalign 0.5
-        yalign 0.25
-        font "fonts/Freshman.ttf"
-        color "#ffffff"
-        size 90
-        xsize 500
-        text_align 0.5
-    text "The current keybindings are:\n[q] = Jab / Block Head\n[w] = Hook / Block Face\n[r] = Kick / Block Leg":
-        xalign 0.5
-        yalign 0.42
-        font "fonts/OpenSans-Bold.ttf"
-        color "#ffffff"
-        xsize 500
-        text_align 0.5
-
-    vbox xalign 0.45 yalign 0.75 spacing 30:
-        textbutton "Change Keys":
-            text_size 40
-            action Jump ("changekeys")
-
-        textbutton "Start Fight":
-            text_size 40
-            action Jump ("letsgo")
-
-########### FIGHT with Tom
-
-screen tomtut1():
-
-    image "images/tomstancekick.webp"
-
-
-    key w:
-        action Jump ("tomtut1hook")
-    key q:
-        action Jump ("tomtut1jab")
-    key r:
-        action Jump ("tomtut1kick")
-
-    imagebutton:
-        idle "images/jab.webp"
-        hover "images/jab.webp"
-        xalign 0.06
-        yalign 0.5
-        action Jump ("tomtut1jab")
-
-    imagebutton:
-        idle "images/hook.webp"
-        hover "images/hook.webp"
-        xalign 0.115
-        yalign 0.4
-        action Jump ("tomtut1hook")
-
-
-    imagebutton:
-        idle "images/kick.webp"
-        hover "images/kick.webp"
-        xalign 0.115
-        yalign 0.61
-        action Jump ("tomtut1kick")
-
-
-screen kickcounter():
-
-    image "images/tomhook.webp"
-
-    key q:
-        action Jump ("tuthookblock")
-    key w:
-        action Jump ("tuthookhit1")
-    key r:
-        action Jump ("tuthookhit2")
-
-    imagebutton:
-        idle "images/hookblock.webp"
-        hover "images/hookblock.webp"
-        xalign 0.06
-        yalign 0.5
-        action Jump ("tuthookblock")
-
-    imagebutton:
-        idle "images/jabblock.webp"
-        hover "images/jabblock.webp"
-        xalign 0.115
-        yalign 0.4
-        action Jump ("tuthookhit1")
-
-    imagebutton:
-        idle "images/kickblock.webp"
-        hover "images/kickblock.webp"
-        xalign 0.115
-        yalign 0.6
-        action Jump ("tuthookhit2")
-
-
-screen hookcounter():
-
-    image "images/hookcounter.webp"
-
-
-    key q:
-        action Jump ("tutjabhit")
-    key w:
-        action Jump ("tutjabblock")
-    key r:
-        action Jump ("tutjabhit2")
-
-    imagebutton:
-        idle "images/hookblock.webp"
-        hover "images/hookblock.webp"
-        xalign 0.06
-        yalign 0.5
-        action Jump ("tutjabhit")
-
-    imagebutton:
-        idle "images/jabblock.webp"
-        hover "images/jabblock.webp"
-        xalign 0.115
-        yalign 0.4
-        action Jump ("tutjabblock")
-
-    imagebutton:
-        idle "images/kickblock.webp"
-        hover "images/kickblock.webp"
-        xalign 0.115
-        yalign 0.6
-        action Jump ("tutjabhit2")
-
-screen jabcounter():
-
-    image "images/jabcounter.webp"
-
-
-    key q:
-        action Jump ("tuthookblock2")
-    key w:
-        action Jump ("tuthookhit3")
-    key r:
-        action Jump ("tuthookhit4")
-
-    imagebutton:
-        idle "images/hookblock.webp"
-        hover "images/hookblock.webp"
-        xalign 0.06
-        yalign 0.5
-        action Jump ("tuthookblock2")
-
-    imagebutton:
-        idle "images/jabblock.webp"
-        hover "images/jabblock.webp"
-        xalign 0.115
-        yalign 0.4
-        action Jump ("tuthookhit3")
-
-    imagebutton:
-        idle "images/kickblock.webp"
-        hover "images/kickblock.webp"
-        xalign 0.115
-        yalign 0.6
-        action Jump ("tuthookhit4")
-
-
-
-
-screen youattack():
-
-    if tomstance == 1:
-
-
-        image "images/tomstancekick.webp"
-
-        key r:
-            action Jump ("tomkick1")
-        key w:
-            action Jump ("tomkick2")
-        key q:
-            action Jump ("tomkick3")
-
-        imagebutton:
-            idle "images/jab.webp"
-            hover "images/jab.webp"
-            xalign 0.06
-            yalign 0.5
-            action Jump ("tomkick3")
-
-        imagebutton:
-            idle "images/hook.webp"
-            hover "images/hook.webp"
-            xalign 0.115
-            yalign 0.4
-            action Jump ("tomkick2")
-
-
-        imagebutton:
-            idle "images/kick.webp"
-            hover "images/kick.webp"
-            xalign 0.115
-            yalign 0.61
-            action Jump ("tomkick1")
-
-        timer reactiona action Jump("timer1")
-
-
-
-    if tomstance == 2:
-        image "images/tomstancehook.webp"
-
-        key w:
-            action Jump ("tomhook1")
-        key q:
-            action Jump ("tomhook2")
-        key r:
-            action Jump ("tomhook3")
-
-        imagebutton:
-            idle "images/jab.webp"
-            hover "images/jab.webp"
-            xalign 0.06
-            yalign 0.5
-            action Jump ("tomhook2")
-
-        imagebutton:
-            idle "images/hook.webp"
-            hover "images/hook.webp"
-            xalign 0.115
-            yalign 0.4
-            action Jump ("tomhook1")
-
-
-        imagebutton:
-            idle "images/kick.webp"
-            hover "images/kick.webp"
-            xalign 0.115
-            yalign 0.61
-            action Jump ("tomhook3")
-
-        timer reactiona action Jump("timer2")
-
-
-
-    if tomstance == 3:
-        image "images/tomstancejab.webp"
-
-        key q:
-            action Jump ("tomjab1")
-        key w:
-            action Jump ("tomjab2")
-        key r:
-            action Jump ("tomjab3")
-
-        imagebutton:
-            idle "images/jab.webp"
-            hover "images/jab.webp"
-            xalign 0.06
-            yalign 0.5
-            action Jump ("tomjab1")
-
-        imagebutton:
-            idle "images/hook.webp"
-            hover "images/hook.webp"
-            xalign 0.115
-            yalign 0.4
-            action Jump ("tomjab2")
-
-
-        imagebutton:
-            idle "images/kick.webp"
-            hover "images/kick.webp"
-            xalign 0.115
-            yalign 0.61
-            action Jump ("tomjab3")
-
-
-        timer reactiona action Jump("timer3")
-
-
-screen tomattack():
-
-    if tomattack == 1:
-        image "images/tomhook.webp"
-
-        key r:
-            action Jump ("tomhookhit")
-        key q:
-            action Jump ("tomhookblocked")
-        key w:
-            action Jump ("tomhookhit2")
-
-        imagebutton:
-            idle "images/hookblock.webp"
-            hover "images/hookblock.webp"
-            xalign 0.06
-            yalign 0.5
-            action Jump ("tomhookblocked")
-
-        imagebutton:
-            idle "images/jabblock.webp"
-            hover "images/jabblock.webp"
-            xalign 0.115
-            yalign 0.4
-            action Jump ("tomhookhit")
-
-        imagebutton:
-            idle "images/kickblock.webp"
-            hover "images/kickblock.webp"
-            xalign 0.115
-            yalign 0.6
-            action Jump ("tomhookhit2")
-
-        timer reaction action Jump("timer4")
-
-
-    if tomattack == 2:
-        image "images/tomjab.webp"
-
-        key q:
-            action Jump ("tomjabhit")
-        key w:
-            action Jump ("tomjabblocked")
-        key r:
-            action Jump ("tomjabhit2")
-
-        imagebutton:
-            idle "images/hookblock.webp"
-            hover "images/hookblock.webp"
-            xalign 0.06
-            yalign 0.5
-            action Jump ("tomjabhit")
-
-        imagebutton:
-            idle "images/jabblock.webp"
-            hover "images/jabblock.webp"
-            xalign 0.115
-            yalign 0.4
-            action Jump ("tomjabblocked")
-
-        imagebutton:
-            idle "images/kickblock.webp"
-            hover "images/kickblock.webp"
-            xalign 0.115
-            yalign 0.6
-            action Jump ("tomjabhit2")
-
-        timer reaction action Jump("timer5")
-
-    if tomattack == 3:
-        image "images/tomkick.webp"
-
-        key w:
-            action Jump ("tomkickhit")
-        key q:
-            action Jump ("tomkickhit2")
-        key r:
-            action Jump ("tomkickblocked")
-
-
-        imagebutton:
-            idle "images/hookblock.webp"
-            hover "images/hookblock.webp"
-            xalign 0.06
-            yalign 0.5
-            action Jump ("tomkickhit")
-
-        imagebutton:
-            idle "images/jabblock.webp"
-            hover "images/jabblock.webp"
-            xalign 0.115
-            yalign 0.4
-            action Jump ("tomkickhit2")
-
-        imagebutton:
-            idle "images/kickblock.webp"
-            hover "images/kickblock.webp"
-            xalign 0.115
-            yalign 0.6
-            action Jump ("tomkickblocked")
-
-        timer reaction action Jump("timer6")
-
 screen surebuy1():
     add "images/endfr.webp"
     text "Once you decide which outfit to buy, you will no longer be able to play through all of the \"Try\" scenes. Are you sure you want to continue?" style "endfree"
@@ -2663,32 +2157,20 @@ screen aubsex():
         xpos 36
         action Jump ("acream")
 
-screen skiptut():
-    add "images/endfr.webp"
-    text "Would you like to play the fighting tutorial?" style "endfree"
-    textbutton "Yes" style "endfr":
-        action Jump ("sta")
-        text_align 0.5
-        xalign 0.57
-        yalign 0.58
-
-    textbutton "No" style "endfr":
-        action Jump ("stb")
-        text_align 0.5
-        xalign 0.43
-        yalign 0.58
-
 screen getaccess():
 
     add "images/earlyaccess2.webp"
 
+    # imagebutton:
+    #     ypos 770
+    #     xpos 540
+    #     idle "images/get2.webp"
+    #     hover "images/get.webp"
+    #     action OpenURL ("https://www.patreon.com/collegekings")
 
-    imagebutton:
-        ypos 770
-        xpos 540
-        idle "images/get2.webp"
-        hover "images/get.webp"
-        action OpenURL ("https://www.patreon.com/collegekings")
+    textbutton "Start Act 2 (v10)":
+        align (0.5, 0.8)
+        action Jump("v10start")
 
 screen texta():
 
@@ -2737,620 +2219,6 @@ screen trolleyskip():
         text_align 0.5
         xalign 0.43
         yalign 0.62
-
-
-screen skiptut2():
-    add "images/endfr.webp"
-    text "Since this is your first fight, would you like to play the fighting tutorial?" style "endfree"
-    textbutton "Yes" style "endfr":
-        action Jump ("gb")
-        text_align 0.5
-        xalign 0.57
-        yalign 0.58
-
-    textbutton "No" style "endfr":
-        action Jump ("fkcon")
-        text_align 0.5
-        xalign 0.43
-        yalign 0.58
-
-screen af():
-    image "images/fightchoice.webp"
-
-    text "Fighting":
-        xalign 0.5
-        yalign 0.25
-        font "fonts/Freshman.ttf"
-        color "#ffffff"
-        size 90
-        xsize 500
-        text_align 0.5
-    text "Fighting is big part of College Kings, however you can simulate all fights if you'd like to.":
-        xalign 0.5
-        yalign 0.42
-        font "fonts/OpenSans-Bold.ttf"
-        color "#ffffff"
-        xsize 500
-        text_align 0.5
-
-
-    textbutton "Play Fight":
-        text_size 40
-        xalign 0.5
-        yalign 0.6
-        action Jump ("playf2")
-
-    textbutton "Simulate: realistic":
-        text_size 40
-        xalign 0.5
-        yalign 0.7
-        action Jump ("simadamfight")
-
-    textbutton "Simulate: auto-win":
-        text_size 40
-        xalign 0.5
-        yalign 0.8
-        action Jump ("autowinadam")
-
-
-screen af2():
-    image "images/fightchoice.webp"
-
-    text "Difficulty":
-        xalign 0.5
-        yalign 0.25
-        font "fonts/Freshman.ttf"
-        color "#ffffff"
-        size 90
-        xsize 500
-        text_align 0.5
-    text "Higher difficulties require quicker reactions. You can change this at any time in the settings.":
-        xalign 0.5
-        yalign 0.42
-        font "fonts/OpenSans-Bold.ttf"
-        color "#ffffff"
-        xsize 500
-        text_align 0.5
-
-    text "Warning: This fight is particularly difficult as your opponent is significantly more skilled than you.":
-        xalign 0.5
-        yalign 0.53
-        font "fonts/OpenSans-Italic.ttf"
-        color "#ffffff"
-        xsize 500
-        text_align 0.5
-        size 20
-
-    vbox xalign 0.45 yalign 0.75 spacing 30:
-        textbutton "Easy":
-            text_size 40
-            action Jump ("easy2")
-
-        textbutton "Moderate":
-            text_size 40
-            action Jump ("moderate2")
-
-        textbutton "Hard":
-            text_size 40
-            action Jump ("hard2")
-
-screen af3():
-    image "images/fightchoice.webp"
-
-    text "Keybinding":
-        xalign 0.5
-        yalign 0.25
-        font "fonts/Freshman.ttf"
-        color "#ffffff"
-        size 90
-        xsize 500
-        text_align 0.5
-
-    text "If you change keybindings, you will need to delete the previous binding (the letter shown after pressing \"change keys\") first by pressing backspace. Only use lowercase letters / numbers unless you want to hold shift all fight.":
-        xalign 0.5
-        yalign 0.42
-        font "fonts/OpenSans.ttf"
-        color "#ffffff"
-        xsize 500
-        text_align 0.5
-        size 20
-
-
-    vbox xalign 0.45 yalign 0.75 spacing 30:
-        textbutton "Change Keys":
-            text_size 40
-            action Jump ("keys1")
-
-        textbutton "Start Fight":
-            text_size 40
-            action Jump ("letsgoadam")
-
-screen keys1():
-    image "images/fightchoice.webp"
-
-    text "Keybinding":
-        xalign 0.5
-        yalign 0.25
-        font "fonts/Freshman.ttf"
-        color "#ffffff"
-        size 90
-        xsize 500
-        text_align 0.5
-
-    vbox yalign 0.5 xalign 0.49:
-
-        vbox:
-            text "Jab / Block Head = ":
-                size 40
-            input at truecenter:
-                size 100
-                value VariableInputValue("q")
-                length 1
-
-
-    vbox xalign 0.45 yalign 0.75 spacing 30:
-        textbutton "Next":
-            text_size 40
-            action Jump ("keys2")
-
-        textbutton "Start Fight":
-            text_size 40
-            action Jump ("letsgoadam")
-
-screen keys2():
-    image "images/fightchoice.webp"
-
-    text "Keybinding":
-        xalign 0.5
-        yalign 0.25
-        font "fonts/Freshman.ttf"
-        color "#ffffff"
-        size 90
-        xsize 500
-        text_align 0.5
-
-    vbox yalign 0.5 xalign 0.49:
-
-        vbox:
-            text "Hook / Block Face = ":
-                size 40
-            input at truecenter:
-                size 100
-                value VariableInputValue("w")
-                length 1
-
-
-    vbox xalign 0.45 yalign 0.75 spacing 30:
-        textbutton "Next":
-            text_size 40
-            action Jump ("keys3")
-
-        textbutton "Start Fight":
-            text_size 40
-            action Jump ("letsgoadam")
-
-screen keys3():
-    image "images/fightchoice.webp"
-
-    text "Keybinding":
-        xalign 0.5
-        yalign 0.25
-        font "fonts/Freshman.ttf"
-        color "#ffffff"
-        size 90
-        xsize 500
-        text_align 0.5
-
-    vbox yalign 0.5 xalign 0.49:
-
-        vbox:
-            text "Body Hook / Block Body = ":
-                size 40
-            input at truecenter:
-                size 100
-                value VariableInputValue("e")
-                length 1
-
-
-    vbox xalign 0.45 yalign 0.75 spacing 30:
-        textbutton "Next":
-            text_size 40
-            action Jump ("keys4")
-
-        textbutton "Start Fight":
-            text_size 40
-            action Jump ("letsgoadam")
-
-screen keys4():
-    image "images/fightchoice.webp"
-
-    text "Keybinding":
-        xalign 0.5
-        yalign 0.25
-        font "fonts/Freshman.ttf"
-        color "#ffffff"
-        size 90
-        xsize 500
-        text_align 0.5
-
-    vbox yalign 0.5 xalign 0.49:
-
-        vbox:
-            text "Kick / Block Leg = ":
-                size 40
-            input at truecenter:
-                size 100
-                value VariableInputValue("r")
-                length 1
-
-
-    vbox xalign 0.45 yalign 0.75 spacing 30:
-
-        textbutton "Redo Keybindings":
-            text_size 40
-            action Jump ("keys1")
-
-
-        textbutton "Start Fight":
-            text_size 40
-            action Jump ("letsgoadam")
-
-
-
-########### FIGHT with Adam
-
-screen youattack2():
-
-    if adamstance == 1:
-        image "images/afstancejab.webp"
-
-        key q:
-            action Jump ("adamjab1")
-        key w:
-            action Jump ("adamhook2")
-        key e:
-            action Jump ("adambody2")
-        key r:
-            action Jump ("adamkick2")
-
-        imagebutton:
-            idle "images/jab.webp"
-            hover "images/jab.webp"
-            xalign 0.06
-            yalign 0.5
-            action Jump ("adamjab1")
-
-        imagebutton:
-            idle "images/hook.webp"
-            hover "images/hook.webp"
-            xalign 0.115
-            yalign 0.4
-            action Jump ("adamhook2")
-
-        imagebutton:
-            idle "images/body.webp"
-            hover "images/body.webp"
-            xalign 0.172
-            yalign 0.5
-            action Jump ("adambody2")
-
-        imagebutton:
-            idle "images/kick.webp"
-            hover "images/kick.webp"
-            xalign 0.115
-            yalign 0.61
-            action Jump ("adamkick2")
-
-
-        timer reactiona action Jump("adamattack")
-
-
-    if adamstance == 2:
-        image "images/afstancehook.webp"
-
-        key q:
-            action Jump ("adamjab2")
-        key w:
-            action Jump ("adamhook1")
-        key e:
-            action Jump ("adambody2")
-        key r:
-            action Jump ("adamkick2")
-
-        imagebutton:
-            idle "images/jab.webp"
-            hover "images/jab.webp"
-            xalign 0.06
-            yalign 0.5
-            action Jump ("adamjab2")
-
-        imagebutton:
-            idle "images/hook.webp"
-            hover "images/hook.webp"
-            xalign 0.115
-            yalign 0.4
-            action Jump ("adamhook1")
-
-        imagebutton:
-            idle "images/body.webp"
-            hover "images/body.webp"
-            xalign 0.172
-            yalign 0.5
-            action Jump ("adambody2")
-
-        imagebutton:
-            idle "images/kick.webp"
-            hover "images/kick.webp"
-            xalign 0.115
-            yalign 0.61
-            action Jump ("adamkick2")
-
-
-
-        timer reactiona action Jump("adamattack")
-
-
-    if adamstance == 3:
-        image "images/afstancebody.webp"
-
-        key q:
-            action Jump ("adamjab2")
-        key w:
-            action Jump ("adamhook2")
-        key e:
-            action Jump ("adambody1")
-        key r:
-            action Jump ("adamkick2")
-
-        imagebutton:
-            idle "images/jab.webp"
-            hover "images/jab.webp"
-            xalign 0.06
-            yalign 0.5
-            action Jump ("adamjab2")
-
-        imagebutton:
-            idle "images/hook.webp"
-            hover "images/hook.webp"
-            xalign 0.115
-            yalign 0.4
-            action Jump ("adamhook2")
-
-        imagebutton:
-            idle "images/body.webp"
-            hover "images/body.webp"
-            xalign 0.172
-            yalign 0.5
-            action Jump ("adambody1")
-
-        imagebutton:
-            idle "images/kick.webp"
-            hover "images/kick.webp"
-            xalign 0.115
-            yalign 0.61
-            action Jump ("adamkick2")
-
-        timer reactiona action Jump("adamattack")
-
-    if adamstance == 4:
-
-
-        image "images/afstancekick.webp"
-
-        key q:
-            action Jump ("adamjab2")
-        key w:
-            action Jump ("adamhook2")
-        key e:
-            action Jump ("adambody2")
-        key r:
-            action Jump ("adamkick1")
-
-        imagebutton:
-            idle "images/jab.webp"
-            hover "images/jab.webp"
-            xalign 0.06
-            yalign 0.5
-            action Jump ("adamjab2")
-
-        imagebutton:
-            idle "images/hook.webp"
-            hover "images/hook.webp"
-            xalign 0.115
-            yalign 0.4
-            action Jump ("adamhook2")
-
-        imagebutton:
-            idle "images/body.webp"
-            hover "images/body.webp"
-            xalign 0.172
-            yalign 0.5
-            action Jump ("adambody2")
-
-        imagebutton:
-            idle "images/kick.webp"
-            hover "images/kick.webp"
-            xalign 0.115
-            yalign 0.61
-            action Jump ("adamkick1")
-
-        timer reactiona action Jump("adamattack")
-
-
-
-
-
-screen adamattack():
-
-    if adamattack == 1:
-        image "images/af13pic.webp"
-
-        key q:
-            action Jump ("adamhookblocked")
-        key w:
-            action Jump ("adamhookhit")
-        key e:
-            action Jump ("adamhookhit")
-        key r:
-            action Jump ("adamhookhit")
-
-        imagebutton:
-            idle "images/hookblock.webp"
-            hover "images/hookblock.webp"
-            xalign 0.06
-            yalign 0.5
-            action Jump ("adamhookblocked")
-
-        imagebutton:
-            idle "images/jabblock.webp"
-            hover "images/jabblock.webp"
-            xalign 0.115
-            yalign 0.4
-            action Jump ("adamhookhit")
-
-        imagebutton:
-            idle "images/bodyblock.webp"
-            hover "images/bodyblock.webp"
-            xalign 0.172
-            yalign 0.5
-            action Jump ("adamhookhit")
-
-        imagebutton:
-            idle "images/kickblock.webp"
-            hover "images/kickblock.webp"
-            xalign 0.115
-            yalign 0.6
-            action Jump ("adamhookhit")
-
-
-        timer reaction action Jump("adamhookhit")
-
-
-    if adamattack == 2:
-        image "images/af14pic.webp"
-
-        key q:
-            action Jump ("adamjabhit")
-        key w:
-            action Jump ("adamjabblocked")
-        key e:
-            action Jump ("adamjabhit")
-        key r:
-            action Jump ("adamjabhit")
-
-        imagebutton:
-            idle "images/hookblock.webp"
-            hover "images/hookblock.webp"
-            xalign 0.06
-            yalign 0.5
-            action Jump ("adamjabhit")
-
-        imagebutton:
-            idle "images/jabblock.webp"
-            hover "images/jabblock.webp"
-            xalign 0.115
-            yalign 0.4
-            action Jump ("adamjabblocked")
-
-        imagebutton:
-            idle "images/bodyblock.webp"
-            hover "images/bodyblock.webp"
-            xalign 0.172
-            yalign 0.5
-            action Jump ("adamjabhit")
-
-        imagebutton:
-            idle "images/kickblock.webp"
-            hover "images/kickblock.webp"
-            xalign 0.115
-            yalign 0.6
-            action Jump ("adamjabhit")
-
-        timer reaction action Jump("adamjabhit")
-
-    if adamattack == 3:
-        image "images/af15pic.webp"
-
-        key q:
-            action Jump ("adambodyhit")
-        key w:
-            action Jump ("adambodyhit")
-        key e:
-            action Jump ("adambodyblocked")
-        key r:
-            action Jump ("adambodyhit")
-
-        imagebutton:
-            idle "images/hookblock.webp"
-            hover "images/hookblock.webp"
-            xalign 0.06
-            yalign 0.5
-            action Jump ("adambodyhit")
-
-        imagebutton:
-            idle "images/jabblock.webp"
-            hover "images/jabblock.webp"
-            xalign 0.115
-            yalign 0.4
-            action Jump ("adambodyhit")
-
-        imagebutton:
-            idle "images/bodyblock.webp"
-            hover "images/bodyblock.webp"
-            xalign 0.172
-            yalign 0.5
-            action Jump ("adambodyblocked")
-
-        imagebutton:
-            idle "images/kickblock.webp"
-            hover "images/kickblock.webp"
-            xalign 0.115
-            yalign 0.6
-            action Jump ("adambodyhit")
-
-        timer reaction action Jump("adambodyhit")
-
-    if adamattack == 4:
-        image "images/af16pic.webp"
-
-        key q:
-            action Jump ("adamkickhit")
-        key w:
-            action Jump ("adamkickhit")
-        key e:
-            action Jump ("adamkickhit")
-        key r:
-            action Jump ("adamkickblocked")
-
-        timer reaction action Jump("adamkickhit")
-
-        imagebutton:
-            idle "images/hookblock.webp"
-            hover "images/hookblock.webp"
-            xalign 0.06
-            yalign 0.5
-            action Jump ("adamkickhit")
-
-        imagebutton:
-            idle "images/jabblock.webp"
-            hover "images/jabblock.webp"
-            xalign 0.115
-            yalign 0.4
-            action Jump ("adamkickhit")
-
-        imagebutton:
-            idle "images/bodyblock.webp"
-            hover "images/bodyblock.webp"
-            xalign 0.172
-            yalign 0.5
-            action Jump ("adamkickhit")
-
-        imagebutton:
-            idle "images/kickblock.webp"
-            hover "images/kickblock.webp"
-            xalign 0.115
-            yalign 0.6
-            action Jump ("adamkickblocked")
 
 screen trolleya(time=3): # I set a default reaction time of 5 seconds
 
@@ -3451,17 +2319,6 @@ style replybox_text is text:
     size 20
     xalign 0.5
     yalign 0.5
-
-style replies_style is button:
-    background "#147efb"
-    xpadding 15
-    ypadding 5
-    xmaximum 350
-
-style replies_style_text is text:
-    color "#ffffff"
-    font "fonts/OpenSans.ttf"
-    size 20
 
 style imgright is button:
     background "#147efb"

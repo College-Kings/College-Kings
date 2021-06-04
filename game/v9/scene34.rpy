@@ -80,6 +80,9 @@ label v9_ri_sex:
 
     u "Can't help it. You're so fucking hot."
 
+    if config_censored:
+        call screen censoredPopup("v9s34_nsfwSkipLabel1")
+
     scene v9ris6a # FPP. Same camera as v9ris6, seductive, mouth open.
     with dissolve
 
@@ -94,6 +97,9 @@ label v9_ri_sex:
 
     scene v9ris7a # TPP. Same camera as v9ris7a, MC now wearing no pants, Riley looking at MC seductively.
     with dissolve
+
+    $ cheat_day = True
+    $ grantAchievement("cheat_day")
 
     play music "music/v9/Scene 34/Track Scene 34_2.mp3" fadein 3
 
@@ -249,7 +255,7 @@ label v9_ri_sex:
     scene v9ris15
     with dissolve
 
-    ri "Let me drive."
+    ri "Let me get on top."
 
     scene v9ris16 # TPP. Show MC rolling over so he is on his back on Riley's bed, Riley mounts him hovering above MC's penis.
     with dissolve
@@ -388,6 +394,8 @@ label v9_ri_sex:
     with dissolve
 
     ri "Come on, sleepyhead. Naptime's over."
+
+label v9s34_nsfwSkipLabel1:
 
     scene v9ris25a # FPP. Same camera as v9ris25a, smile, mouth closed.
     with dissolve

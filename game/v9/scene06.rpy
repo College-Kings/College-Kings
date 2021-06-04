@@ -226,7 +226,7 @@ label drive_to_lake:
     scene v9dtl1
     with dissolve
 
-    au "You're really something...ahem, was it here all along?"
+    au "You're really something... ahem, was it here all along?"
 
     scene v9dtl1b
     with dissolve
@@ -458,7 +458,7 @@ label dtl_cont1:
     scene v9dtl1c
     with dissolve
 
-    au "Stupid or not, it worked like a time passing charm...because we're almost there."
+    au "Stupid or not, it worked like a time passing charm... because we're almost there."
 
     scene v9dtl5 # FPP. Show sweeping shot of the lake.
     with dissolve
@@ -473,12 +473,12 @@ label dtl_cont1:
     scene v9dtl6a # FPP. Same camera as v9dtl6, both smile, both mouths closed.
     with dissolve
 
-    u "Well I'll be...that's actually not so bad."
+    u "Well I'll be... that's actually not so bad."
 
     scene v9dtl6b # FPP. Same camera as v9dtl6, both smile, Aubrey mouth open.
     with dissolve
 
-    au "When I was here for the first time, I felt so relaxed...and today's just the best day for relaxation."
+    au "When I was here for the first time, I felt so relaxed... and today's just the best day for relaxation."
 
     scene v9dtl6
     with dissolve
@@ -488,7 +488,7 @@ label dtl_cont1:
     scene v9dtl7 # FPP. Close up Ryan, mouth open, neutral expression.
     with dissolve
 
-    ry "Yeah...middle of the week really should be a bit more relaxing."
+    ry "Yeah... middle of the week really should be a bit more relaxing."
 
     scene v9dtl7a # FPP. Same camera as v9dtl7, neutral expression, mouth open.
     with dissolve

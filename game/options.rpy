@@ -4,10 +4,6 @@
 ## them. Lines beginning with a single '#' mark are commented-out code, and you
 ## may want to uncomment them when appropriate.
 
-init:
-    $ config.keymap['accessibility'].pop()
-
-
 ## Basics ######################################################################
 
 ## A human-readable name of the game. This is used to set the default window
@@ -26,7 +22,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "9.9.10"
+define config.version = "10.1.0"
 
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
