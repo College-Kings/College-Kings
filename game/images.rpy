@@ -71,8 +71,6 @@ image hard_decisions = "images/achievements/v10/hard_decisions.webp"
 image rawr_im_a_lion = "images/achievements/v10/rawr_im_a_lion.webp"
 image on_the_court = "images/achievements/v10/onthecourt.webp"
 
-image bathroom_sex = "images/achievements/v10/bathroomsex.webp"
-
 # v1.0 - v2.0
 image s14 = "images/s14.webp"
 image s14a = "images/s14a.webp"
