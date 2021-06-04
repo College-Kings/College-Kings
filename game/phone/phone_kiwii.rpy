@@ -366,7 +366,7 @@ screen kiwiiPost(post):
                         style "reply_disabled"
                     else:
                         style "kiwii_reply"
-                        action [Hide("reply"), Function(post.selectedReply, reply)]
+                        action Function(post.selectedReply, reply)
 
 screen liked_kiwii():
     tag phoneTag

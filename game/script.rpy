@@ -7,6 +7,7 @@ define config_censored = False
 define config.steam_appid = 1463120
 
 define _game_menu_screen = "ingmenu"
+define _quit_slot = "99-1"
 
 label splashscreen:
     # Splashscreen
