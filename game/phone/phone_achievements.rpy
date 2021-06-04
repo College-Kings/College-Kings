@@ -86,7 +86,7 @@ init python:
     #Achievement("friends first", "Refuse to fight a friend", "friends_first")
     Achievement("fright club", "Don't fight Ryan at the Brawl", "fright_club") #m
     Achievement("bros before blows", "Don't fight Imre at the Brawl", "bros_before_blows") #m
-    Achievement("goldenboy", "Beat Imre on Hard difficulty at the Brawl", "goldenboy") #m
+    Achievement("golden_boy", "Beat Imre on Hard difficulty at the Brawl", "golden_boy") #m
     Achievement("lights out", "Beat Ryan on Hard difficulty at the Brawl", "lights_out") #m
     Achievement("rough rider", "Have fun at the skatepark", "rough_rider") #m
     Achievement("family secrets", "Find out Nora and Ms. Rose are family", "family_secrets") #m

@@ -394,8 +394,8 @@ label v10_mc_vs_imre_fight:
                 $ v10_imre_win = True
 
                 if reaction == 0.5:
-                    $ goldenboy = True
-                    $ grantAchievement("goldenboy")
+                    $ golden_boy = True
+                    $ grantAchievement("golden_boy")
 
                 jump imre_fightEnd
 
