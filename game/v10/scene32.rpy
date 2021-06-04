@@ -24,7 +24,7 @@ label v10_tues_room_night:
 
             python:
                 if config_censored:
-                    contact_Lauren.newImgMessage("images/gui/censoredPopup/censoredBackground.webp")
+                    contact_Lauren.newImgMessage("images/gui/censoredPopup/censoredBackground.webp", queue=False)
                 else:
                     contact_Lauren.newImgMessage("images/v10/scene 32/v9lauText.webp", queue=False)
                 contact_Lauren.newMessage("Sweet Dreams ;)", queue=False)
@@ -86,7 +86,7 @@ label v10_tues_room_night:
 
             python:
                 if config_censored:
-                    contact_Lauren.newImgMessage("images/gui/censoredPopup/censoredBackground.webp")
+                    contact_Lauren.newImgMessage("images/gui/censoredPopup/censoredBackground.webp", queue=False)
                 else:
                     contact_Lauren.newImgMessage("images/v10/scene 32/v9lauText.webp", queue=False)
                 contact_Lauren.newMessage("Sweet Dreams ;)", queue=False)

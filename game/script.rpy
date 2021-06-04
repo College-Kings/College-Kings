@@ -1,4 +1,4 @@
-define config.enable_steam = False # Make sure you switch main_menu_background image to steam version.
+define config.enable_steam = True # Make sure you switch main_menu_background image to steam version.
 define config.developer = False
 define config.console = True
 define config_debug = False

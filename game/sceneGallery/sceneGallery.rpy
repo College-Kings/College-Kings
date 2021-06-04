@@ -64,6 +64,7 @@ screen spoiler():
         align (0.57, 0.58)
         action Hide("spoiler")
 
+
 screen sceneGallery():
     tag menu
 
