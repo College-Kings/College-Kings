@@ -40,14 +40,20 @@ python early:
             os.rmdir(MYPATH)
         except Exception: pass
 
-    def v7_msgReply8():
-        pass
+    try: v7_msgReply8:
+    except NameError:
+        def v7_msgReply8():
+            pass
 
-    def v7_msgReply9():
-        pass
+    try: v7_msgReply9:
+    except NameError:
+        def v7_msgReply9():
+            pass
 
-    def v7_msgReply10():
-        pass
+    try: v7_msgReply10:
+    except NameError:
+        def v7_msgReply10():
+            pass
 
 label after_load:
     python:
