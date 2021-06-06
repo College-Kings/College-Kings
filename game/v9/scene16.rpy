@@ -323,6 +323,7 @@ label v9_emily_dorm:
                 with dissolve
 
                 u "Anyways, i should probably head home."
+                $ renpy.end_replay()
 
                 if joinwolves:
                     jump v9_thur_night_aft_em_w
@@ -423,6 +424,7 @@ label v9_emily_dorm:
                 with dissolve
 
                 u "Anyways, i should probably head home."
+                $ renpy.end_replay()
 
                 if joinwolves:
                     jump v9_thur_night_aft_em_w
