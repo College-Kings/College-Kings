@@ -413,7 +413,7 @@ label v10_mc_vs_imre_fight:
 
             jump v10_fight_result
 
-        "Don't Fight":
+        "Don't fight":
             $ bros_before_blows = True
             $ grantAchievement("bros_before_blows")
 
