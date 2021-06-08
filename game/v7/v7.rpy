@@ -15360,9 +15360,9 @@ label fr4aubrey2:
     elif hcGirl == "riley":
 
         if fr4chloe:
-            scene fr4gymleftnoriley
-        else:
             scene fr4gymleftnochloenoriley
+        else:
+            scene fr4gymleftnoriley
 
     else:
         if fr4riley and fr4chloe:
@@ -15524,9 +15524,9 @@ label fr4ryan3:
     elif hcGirl == "riley":
 
         if fr4chloe:
-            scene fr4gymleftnoriley
-        else:
             scene fr4gymleftnochloenoriley
+        else:
+            scene fr4gymleftnoriley
 
     else:
         if fr4riley and fr4chloe:
