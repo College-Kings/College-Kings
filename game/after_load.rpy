@@ -16,6 +16,11 @@ python early:
     if renpy.loadable("phone/phoneStyle.rpyc"):
         os.remove(os.path.join(config.basedir, "game", "phone", "phoneStyle.rpyc"))
     
+    if renpy.loadable("functions.rpy"):
+        os.remove(os.path.join(config.basedir, "game", "functions.rpy"))
+    if renpy.loadable("functions.rpyc"):
+        os.remove(os.path.join(config.basedir, "game", "functions.rpyc"))
+
     if renpy.loadable("scriptv06.rpy"):
         os.remove(os.path.join(config.basedir, "game", "scriptv06.rpy"))
     if renpy.loadable("scriptv06.rpyc"):
