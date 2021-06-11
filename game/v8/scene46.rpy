@@ -53,7 +53,7 @@ label v8_ending:
         scene v8send4 # TPP. Show MC, MC looks really confused.
         with dissolve
 
-        u "(What the...?)"
+        u "(What the...? Is this about the upcoming fight?)"
 
         jump v8end
 
@@ -111,7 +111,7 @@ label v8_ending:
                 u "I need to check my phone."
                 jump v8s46_phoneCheck
 
-        u "(What the...?)"
+        u "(What the...? Is this about the upcoming fight?)"
 
         scene v8send8 # TPP. Show MC, MC looks really confused.
         with dissolve

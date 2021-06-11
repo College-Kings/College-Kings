@@ -315,14 +315,14 @@ label v9_emily_dorm:
         with dissolve
 
         menu:
-            "Make a move on Emily":
+            "Make A Move On Emily":
                 u "(This feels like the right time)"
 
             "Head home":
                 scene v9emi37 # TPP. Show MC walking towards the exit of Emily's room, Emily in view still sat on the bed, cheeky grin, mouth open, MC smile, mouth closed.
                 with dissolve
 
-                u "Anyways, I should probably head home."
+                u "Anyways, i should probably head home."
                 $ renpy.end_replay()
 
                 if joinwolves:
@@ -417,13 +417,13 @@ label v9_emily_dorm:
         with dissolve
 
         menu:
-            "Make a move on Emily":
+            "Make A Move On Emily":
                 u "(This feels like the right time)"
             "Head home":
                 scene v9emi37 # TPP. Show MC walking towards the exit of Emily's room, Emily in view still sat on the bed, cheeky grin, mouth open, MC smile, mouth closed.
                 with dissolve
 
-                u "Anyways, I should probably head home."
+                u "Anyways, i should probably head home."
                 $ renpy.end_replay()
 
                 if joinwolves:
