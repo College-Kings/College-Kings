@@ -1,3 +1,4 @@
+default persistent.name = ""
 default scopeDict = {}
 
 init python:
@@ -47,6 +48,8 @@ init python:
     SceneGallery("v10s40_galleryScene", scope={"rileyrs": True})
 
 screen spoiler():
+    modal True
+
     add "images/darker.webp"
 
     add "images/endfr.webp"
@@ -56,7 +59,7 @@ screen spoiler():
         style "endfr"
         text_align 0.5
         align (0.43, 0.58)
-        action [Show("sceneGallery"), Hide("spoiler")]
+        action [Hide("spoiler"), ui.callsinnewcontext("sceneGalleryNameChange"), Show("sceneGallery")]
 
     textbutton "No":
         style "endfr"
@@ -67,6 +70,7 @@ screen spoiler():
 
 screen sceneGallery():
     tag menu
+    modal True
 
     add "sceneGallery/images/sceneGalleryBackground.webp"
 
@@ -91,3 +95,13 @@ screen sceneGallery():
         hover "images/back.webp"
         pos (79, 933)
         action Show("main_menu")
+
+label sceneGalleryNameChange:
+    
+    scene black
+    if not persistent.name.strip():
+        $ persistent.name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
+
+    $ scopeDict = {"name":persistent.name}
+
+    return
