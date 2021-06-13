@@ -636,7 +636,7 @@ label v10_cafe_w_jenny:
                 scene v10scwj20a
                 with dissolve
 
-                u "After all the kind stuff good you've done, I'm sure some good karma should be headed your way. *Chuckles*"
+                u "After all the kind stuff you've done, I'm sure some good karma should be headed your way. *Chuckles*"
 
                 scene v10scwj20
                 with dissolve
