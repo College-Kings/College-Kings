@@ -461,3 +461,4 @@ default rough_rider = False #m
 default family_secrets = False #m
 default golden_boy = False #m
 default lights_out = False #m
+default josh_europe = False
