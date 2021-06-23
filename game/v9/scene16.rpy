@@ -317,7 +317,7 @@ label v9_emily_dorm:
         with dissolve
 
         menu:
-            "Make A Move On Emily":
+            "Make a move on Emily":
                 u "(This feels like the right time)"
 
             "Head home":
