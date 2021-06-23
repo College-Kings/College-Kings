@@ -158,6 +158,8 @@ label v9_emily_dorm:
     scene v9emi10 # TPP. Show MC and Emily sat on the edge of Emily's bed.
     with dissolve
 
+    pause 0.8
+
     if hl_punch:
         scene v9emi11 # FPP. Show Emily now sat on bed, smile, mouth open.
         with dissolve
