@@ -169,6 +169,8 @@ label v10_aft_walk_home:
             scene v10smwh3
             with dissolve
 
+            $ josh_europe = True
+
             u "Alright, let's get out of this alley."
 
             scene v10smwh3d

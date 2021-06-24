@@ -158,6 +158,8 @@ label v9_emily_dorm:
     scene v9emi10 # TPP. Show MC and Emily sat on the edge of Emily's bed.
     with dissolve
 
+    pause 0.8
+
     if hl_punch:
         scene v9emi11 # FPP. Show Emily now sat on bed, smile, mouth open.
         with dissolve
@@ -198,7 +200,7 @@ label v9_emily_dorm:
     scene v9emi11
     with dissolve
     
-    if emilyArcade:
+    if emilyArcade > 0:
         em "Not since I kicked your ass at the arcade!"
 
         scene v9emi11a
@@ -315,7 +317,7 @@ label v9_emily_dorm:
         with dissolve
 
         menu:
-            "Make A Move On Emily":
+            "Make a move on Emily":
                 u "(This feels like the right time)"
 
             "Head home":

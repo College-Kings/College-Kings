@@ -650,7 +650,6 @@ label after_drugs:
                 jump tues_morning_at_joshs
 
     else:
-        $ amberSexOfferAtJoshs = False
         jump tues_morning_at_joshs
 
 label tues_morning_at_joshs:

@@ -24,7 +24,7 @@ label v9_hc_demo:
     scene v9demo4 # TPP. Show Penelope and Cameron, looking at camera (Camera from guard's perspective as if they're both looking at guard). Cameron slightly agitated, Penelope mouth open.
     with dissolve
 
-    pe "*Deep voice* Hark, good sir, it is I, your king. This is my bride, yur queen."
+    pe "*Deep voice* Hark, good sir, it is I, your King. This is my bride, your Queen."
 
     scene v9demo4a # TPP. Same camera as v9demo4, Cameron and Penelope look at eachother, Cameron annoyed, mouth open, Penelope mouth closed.
     with dissolve
@@ -132,7 +132,7 @@ label v9_hc_demo_norec:
     scene v9demo8a
     with dissolve
 
-    pe "Well met Sir [name], it is I, your king and my new bride."
+    pe "Well met, Sir [name], it is I, your King and my new bride."
 
     scene v9demo8
     with dissolve
@@ -202,7 +202,7 @@ label v9_hc_demo_riches:
     scene v9demo8
     with dissolve
 
-    u "Already making demands of my king's good nature, I see."
+    u "Already making demands of my King's good nature, I see."
 
     jump v9_hc_demo_cont2
 
@@ -286,7 +286,7 @@ label v9_hc_demo_cont3:
     scene v9demo10c # FPP. Same camera as v9demo10, Penelope looking at Cameron, Cameron looking at Penelope. Cameron bored, Penelope mouth open.
     with dissolve
 
-    pe "Lovely, I'm whipped after a long sail. Ready to retire with your king, dear bride?"
+    pe "Lovely, I'm whipped after a long sail. Ready to retire with your King, dear bride?"
 
     scene v9demo10d # FPP. Same camera as v9demo10, both looking at eachother, Cameron bored expression, Cameron mouth open, Penelope mouth closed.
     with dissolve
