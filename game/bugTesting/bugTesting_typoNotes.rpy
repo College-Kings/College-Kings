@@ -40,7 +40,7 @@ screen input_note(prompt):
 
 screen typoNotesOverlay():
     $ fileLine = renpy.get_filename_line()
-    text "[fileLine!q]" xalign 0.99 color "#0f0"
+    text "[fileLine!q]" color "#0f0"
 
     vbox:
         textbutton "Add Note":
