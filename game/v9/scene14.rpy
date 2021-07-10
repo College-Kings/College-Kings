@@ -100,12 +100,16 @@ label v9_thur_w_punch:
 
     guyc "Made us proud, bro."
 
+    $ s15KiwiiPost = KiwiiPost("Chris", "v9/v9hlw8c.webp", "That's my boy! Go [name]! Fuck yeah!", numberLikes=renpy.random.randint(100, 200))
+    $ s15KiwiiPost.newComment("Sebastian", "Fuckin' A!", queue=False)
+    $ s15KiwiiPost.newComment("Aubrey", "Knew he had it in him!", queue=False)
+
     scene v9trs4a # TPP. Same camera as v9trs4, Show MC looking at his phone in hand.
     with dissolve
-
-    # -MC looks at Kiwii and sees a picture of him punching and knocking the guy out in the hallway, earlier-
-
+    
     pause 1
+
+    call screen phone
 
     scene v9trs5
     with dissolve

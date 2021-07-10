@@ -56,7 +56,7 @@ label v9_thur_room_w_cam_punch:
     with dissolve
     u "What? No. I've just been chilling. What's going on?"
 
-    $ s15KiwiiPost = KiwiiPost("Grayson", "v9/v9hlw8b.webp", "That's my boy! Go [name]! Fuck yeah!", numberLikes=renpy.random.randint(100, 200))
+    $ s15KiwiiPost = KiwiiPost("Grayson", "v9/v9hlw8c.webp", "That's my boy! Go [name]! Fuck yeah!", numberLikes=renpy.random.randint(100, 200))
     $ s15KiwiiPost.newComment("Cameron", "Fuckin' A!", numberLikes=renpy.random.randint(100, 200), queue=False)
     $ s15KiwiiPost.newComment("Riley", "Knew he had it in him!", numberLikes=renpy.random.randint(200, 250), queue=False)
     

@@ -158,6 +158,8 @@ label v9_emily_dorm:
     scene v9emi10 # TPP. Show MC and Emily sat on the edge of Emily's bed.
     with dissolve
 
+    pause 0.8
+
     if hl_punch:
         scene v9emi11 # FPP. Show Emily now sat on bed, smile, mouth open.
         with dissolve
@@ -198,7 +200,7 @@ label v9_emily_dorm:
     scene v9emi11
     with dissolve
     
-    if emilyArcade:
+    if emilyArcade > 0:
         em "Not since I kicked your ass at the arcade!"
 
         scene v9emi11a
@@ -288,6 +290,8 @@ label v9_emily_dorm:
     scene v9emi12 # TPP. Show MC and Emily kissing.
     with dissolve
 
+    play sound "sounds/kiss.mp3"
+
     u "Mmmm."
 
     if hl_punch:
@@ -306,6 +310,8 @@ label v9_emily_dorm:
 
         em "Good. More where that came from. Gotta get some while I can. You're very popular... Rocky."
 
+        play sound "sounds/kiss.mp3"
+
         scene v9emi12
         with dissolve
 
@@ -315,14 +321,15 @@ label v9_emily_dorm:
         with dissolve
 
         menu:
-            "Make A Move On Emily":
+            "Make a move on Emily":
                 u "(This feels like the right time)"
 
             "Head home":
                 scene v9emi37 # TPP. Show MC walking towards the exit of Emily's room, Emily in view still sat on the bed, cheeky grin, mouth open, MC smile, mouth closed.
                 with dissolve
 
-                u "Anyways, i should probably head home."
+                u "Anyways, I should probably head home."
+                $ renpy.end_replay()
 
                 if joinwolves:
                     jump v9_thur_night_aft_em_w
@@ -416,13 +423,16 @@ label v9_emily_dorm:
         with dissolve
 
         menu:
-            "Make A Move On Emily":
+            "Make a move on Emily":
                 u "(This feels like the right time)"
+                $ v9_em_dorm_scene = True
+
             "Head home":
                 scene v9emi37 # TPP. Show MC walking towards the exit of Emily's room, Emily in view still sat on the bed, cheeky grin, mouth open, MC smile, mouth closed.
                 with dissolve
 
-                u "Anyways, i should probably head home."
+                u "Anyways, I should probably head home."
+                $ renpy.end_replay()
 
                 if joinwolves:
                     jump v9_thur_night_aft_em_w
@@ -516,6 +526,9 @@ label v9_emily_dorm:
     if config_censored:
         call screen censoredPopup("v9s16_nsfwSkipLabel1")
 
+    show screen v9s16_emilySexOverlay
+
+label v9s16_emilyBlowjob:
     scene v9emibj
     with dissolve
     pause 
@@ -592,6 +605,7 @@ label v9_emily_dorm:
 
     em "YES!"
 
+label v9s16_emilyMissionary:
     scene v9emi24 # TPP. Show MC getting into missionary with Emily, Emily biting her lip slightly. MC penis just outside of Emily's pussy.
     with dissolve
 
@@ -637,6 +651,7 @@ label v9_emily_dorm:
 
     pause 1
 
+label v9s16_emilyCowgirl:
     scene v9emi27a # FPP. Same camera as v9emi27, Emily now fully sat on MC's penis.
     with vpunch
 
@@ -689,6 +704,7 @@ label v9_emily_dorm:
 
     u "Perfect."
 
+label v9s16_emilyDoggy:
     scene v9emi31 # TPP. Show MC grabbing Emily's waist from behind and lifting her up so she is in a doggy style position.
     with dissolve
     
@@ -730,6 +746,8 @@ label v9_emily_dorm:
     with flash
 
     pause 1
+
+    hide screen v9s16_emilySexOverlay
 
     scene v9emi33 # TPP. Show MC and Emily lying next to eachother on Emily's bed. Both looking tired.
     with Fade(0.75, 0.25, 0.75)

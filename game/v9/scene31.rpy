@@ -29,8 +29,7 @@ label v9_sat_cafe_w_nora:
     scene v9cwn3
     with dissolve
 
-    no "Do you really have to ask? We spent a lot of time together when we first started dating, but now it's like I'm second to the Wolves."
-    no "And I know I shouldn't be jealous, but in a way I am. Like, if you have all this passion, love and attention to give, can some come my way?"
+    no "Do you really have to ask? We spent a lot of time together when we first started dating, but now it's like I'm second to the Wolves. And I know I shouldn't be jealous, but in a way I am. Like, if you have all this passion, love and attention to give, can some come my way?"
 
     scene v9cwn3a
     with dissolve
@@ -57,7 +56,7 @@ label v9_sat_cafe_w_nora:
 
     menu:
         "Correct Waiter":
-            $ addPoint("bro")
+            $ addPoint("bro", 1)
 
             u "Actually, we're just friends."
 
@@ -118,8 +117,8 @@ label v9_sat_cafe_w_nora:
             scene v9cwn7 # FPP. Show MC and Nora walking away in opposite directions.
             with dissolve
 
-        "Don't correct Waiter":
-            $ addPoint("bf")
+        "Don't Correct Waiter":
+            $ addPoint("bf", 1)
 
             scene v9cwn3c
             with fade
@@ -130,8 +129,7 @@ label v9_sat_cafe_w_nora:
             with dissolve
 
             if helpedNora:
-                no "It's going great! We almost have everything we need. I'm thinking about seeing if we can get a bit more involvement from the houses."
-                no "I mentioned it to Chris, but he only said \"we'll get to that later\". It means a lot to me that you've taken an interest."
+                no "It's going great! We almost have everything we need. I'm thinking about seeing if we can get a bit more involvement from the houses. I mentioned it to Chris, but he only said \"we'll get to that later\". It means a lot to me that you've taken an interest."
 
             else:
                 no "It's going pretty good. Checking something off the list everyday."

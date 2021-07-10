@@ -15,1528 +15,1358 @@
 
 # FREEROAM SCREENS
 
-screen endfr5():
-    add "images/endfr.webp"
-    text "Are you sure you want to end the free roam?" style "endfree"
-    textbutton "Yes" style "endfr":
-        action Jump("fr5ryan3")
-        text_align 0.5
-        xalign 0.57
-        yalign 0.58
-
-    textbutton "No" style "endfr":
-        action Jump("fr5zoomout")
-        text_align 0.5
-        xalign 0.43
-        yalign 0.58
-
 label v9_before_lake_fr:
+    scene fr5lakefull
+    with dissolve
 
-scene fr5lakefull
-with dissolve
+    play music "music/v9/Scene 7/Track Scene 7.mp3" fadein 3
 
-play music "music/v9/Scene 7/Track Scene 7.mp3" fadein 3
+    scene fr5lakefull
 
-label fr5zoomout:
-
-scene fr5lakefull
-
-call screen fr5lakefull
-
-screen fr5lakefull(): ###### LAKE ZOOM OUT SCREEN
-
-    add "images/v9/scene 7/fr5lakefull.webp"
-
-    imagebutton: #switch to zoomed in view
-        ypos 540
-        xpos 550
-        idle "images/v9/scene 7/fr5zoomin.webp"
-        hover "images/v9/scene 7/fr5zoominhover.webp"
-        action Jump ("fr5zoomin")
-
-    imagebutton: # RYAN
-        ypos 506
-        xpos 935
-        idle "images/v9/scene 7/fr5ryan.webp"
-        hover "images/v9/scene 7/fr5ryanhover.webp"
-        if not fr5ryan:
-            action Jump ("fr5ryan1")
-        else:
-            action Jump ("fr5ryan2")
-
-    imagebutton: # DOGWALKER
-        ypos 576
-        xpos 1590
-        idle "images/v9/scene 7/fr5dogwalker.webp"
-        hover "images/v9/scene 7/fr5dogwalkerhover.webp"
-        if not fr5dogwalker:
-            action Jump ("fr5dogwalker1")
-        else:
-            action Jump ("fr5dogwalker2")
-
-    imagebutton: # TREEGUY
-        ypos 540
-        xpos 75
-        idle "images/v9/scene 7/fr5treeguy.webp"
-        hover "images/v9/scene 7/fr5treeguyhover.webp"
-        if not fr5treeguy:
-            action Jump ("fr5treeguy1")
-        else:
-            action Jump ("fr5treeguy2")
-
-label fr5zoomin:
-
-scene fr5lakezoomin
-
-call screen fr5lakezoomin
-
-screen fr5lakezoomin(): ###### LAKE ZOOM OUT SCREEN
-
-    add "images/v9/scene 7/fr5lakezoomin.webp"
-
-    imagebutton: #switch to zoomed out view
-        ypos 900
-        xpos 350
-        idle "images/v9/scene 7/fr5zoomout.webp"
-        hover "images/v9/scene 7/fr5zoomouthover.webp"
-        action Jump ("fr5zoomout")
-
-    imagebutton: # AUBREY
-        ypos 567
-        xpos 244
-        idle "images/v9/scene 7/fr5aubrey.webp"
-        hover "images/v9/scene 7/fr5aubreyhover.webp"
-        if not fr5aubrey:
-            action Jump ("fr5aubrey1")
-        else:
-            action Jump ("fr5aubrey2")
-
-    imagebutton: # RILEY
-        ypos 329
-        xpos 1523
-        idle "images/v9/scene 7/fr5riley.webp"
-        hover "images/v9/scene 7/fr5rileyhover.webp"
-        if not fr5riley:
-            action Jump ("fr5riley1")
-        else:
-            action Jump ("fr5riley2")
+    call screen v9s7_lakeFull
 
 label fr5ryan1:
+    $ fr5ryan = True
 
-$ fr5ryan = True
+    if joinwolves:
+        scene v9slake1 #FPP closeup ryan sitting on a picnic blanket, mouth closed, Ryan grinning looking at the girls (you can't see the girls)
 
+        u "Enjoying the view?"
 
+        scene v9slake1b #same as 1, Ryan turns his head towards you, mouth open, smiling
+        with dissolve
 
-if joinwolves:
+        ry "That obvious, huh?"
 
-    scene v9slake1 #FPP closeup ryan sitting on a picnic blanket, mouth closed, Ryan grinning looking at the girls (you can't see the girls)
+        scene v9slake1c # same as 1b, mouth closed
+        with dissolve
 
-    u "Enjoying the view?"
+        u "It's that grin that gives it away, hah."
 
-    scene v9slake1b #same as 1, Ryan turns his head towards you, mouth open, smiling
-    with dissolve
+        scene v9slake1b
+        with dissolve
 
-    ry "That obvious, huh?"
+        ry "Can't help it, man. College life, I mean. It's like burning of hotness!"
 
-    scene v9slake1c # same as 1b, mouth closed
-    with dissolve
+        scene v9slake1c
+        with dissolve
 
-    u "It's that grin that gives it away, hah."
+        u "Yes, I've noticed."
 
-    scene v9slake1b
-    with dissolve
+        scene v9slake1b
+        with dissolve
 
-    ry "Can't help it, man. College life, I mean. It's like burning of hotness!"
+        ry "Ever since it started, it's been kinda hard to grasp it all, but how could one not?"
+        ry "Throw all the pussy you can my way, and I'll handle it no problem, haha."
+        ry "Being in a frat surely does not make it any harder!"
 
-    scene v9slake1c
-    with dissolve
+        scene v9slake1c
+        with dissolve
 
-    u "Yes, I've noticed."
+        menu:
+            "Mention the Wolves":
+                u "And to me, getting into Wolves really feels like a pretty good choice."
 
-    scene v9slake1b
-    with dissolve
+                scene v9slake1d # same as 1b, ryan a bit annoyed mouth open
+                with dissolve
 
-    ry "Ever since it started, it's been kinda hard to grasp it all, but how could one not?"
-    ry "Throw all the pussy you can my way, and I'll handle it no problem, haha."
-    ry "Being in a frat surely does not make it any harder!"
+                ry "Oh, here we go, boy. Apes are the way to go, and never look back."
 
-    scene v9slake1c
-    with dissolve
+                scene v9slake1b
+                with dissolve
 
-    menu:
-        "Mention the Wolves":
+                ry "But at least you did get a piece of my philosophy. Frat guys always have better chances with the ladies."
 
-            u "And to me, getting into Wolves really feels like a pretty good choice."
+                scene v9slake1c
+                with dissolve
 
-            scene v9slake1d # same as 1b, ryan a bit annoyed mouth open
-            with dissolve
+                u "I guess you are right. But there's also something else I've learned."
 
-            ry "Oh, here we go, boy. Apes are the way to go, and never look back."
+                scene v9slake1b
+                with dissolve
 
-            scene v9slake1b
-            with dissolve
+                ry "And what is that?"
 
-            ry "But at least you did get a piece of my philosophy. Frat guys always have better chances with the ladies."
+                scene v9slake1c
+                with dissolve
 
-            scene v9slake1c
-            with dissolve
+                u "Frat choice does not matter when it comes to being friends, ape boy."
 
-            u "I guess you are right. But there's also something else I've learned."
+                scene v9slake1b
+                with dissolve
 
-            scene v9slake1b
-            with dissolve
+                ry "Oh is that so, little puppy?"
 
-            ry "And what is that?"
+                ry "Still, a poor choice by you, I can tell you that, ha."
 
-            scene v9slake1c
-            with dissolve
+                scene v9slake1c
+                with dissolve
 
-            u "Frat choice does not matter when it comes to being friends, ape boy."
+                u "I don't really see you dripping in pussy, haha."
 
-            scene v9slake1b
-            with dissolve
+                scene v9slake1b
+                with dissolve
 
-            ry "Oh is that so, little puppy?"
+                ry "Shut up!"
 
-            ry "Still, a poor choice by you, I can tell you that, ha."
+            "Play it cool":
+                u "Frat or not, it all comes down to the looks. And one could not deny your boy's handsome as fuck, haha."
 
-            scene v9slake1c
-            with dissolve
+                scene v9slake1f # same as 1b, ryan eyebrow raised, teasing mc, mouth open
+                with dissolve
 
-            u "I don't really see you dripping in pussy, haha."
+                ry "Now that you mention it, that first day I met you, I almost mistook you for a babe."
 
-            scene v9slake1b
-            with dissolve
+                scene v9slake1g # same as 1f, mouth closed
+                with dissolve
 
-            ry "Shut up!"
+                u "Ha!"
 
-        "Play it cool":
-            u "Frat or not, it all comes down to the looks. And one could not deny your boy's handsome as fuck, haha."
+                scene v9slake1b
+                with dissolve
 
-            scene v9slake1f # same as 1b, ryan eyebrow raised, teasing mc, mouth open
-            with dissolve
+                ry "No to be fair, who could ever mistake you for a girl with an ass pointy as that?! Haha."
 
-            ry "Now that you mention it, that first day I met you, I almost mistook you for a babe."
+                scene v9slake1c
+                with dissolve
 
-            scene v9slake1g # same as 1f, mouth closed
-            with dissolve
+                u "OK now that's too far, asshole!"
 
-            u "Ha!"
+                scene v9slake1b
+                with dissolve
 
-            scene v9slake1b
-            with dissolve
+        ry "Anyway, I don't mind a day such as this sometimes. A cool breeze and a hot view, hehe."
 
-            ry "No to be fair, who could ever mistake you for a girl with an ass pointy as that?! Haha."
+        scene v9slake1c
+        with dissolve
 
-            scene v9slake1c
-            with dissolve
+        u "I guess I should leave you at it, then. Let me check around for a bit."
 
-            u "OK now that's too far, asshole!"
+        scene v9slake1b
+        with dissolve
 
-            scene v9slake1b
-            with dissolve
+        ry "You do that, man."
 
-    ry "Anyway, I don't mind a day such as this sometimes. A cool breeze and a hot view, hehe."
+    else:
+        scene v9slake1
 
-    scene v9slake1c
-    with dissolve
+        u "Yo, how's my bro doing?"
 
-    u "I guess I should leave you at it, then. Let me check around for a bit."
+        scene v9slake1b
+        with dissolve
 
-    scene v9slake1b
-    with dissolve
+        ry "Just into some important scientific business."
 
-    ry "You do that, man."
+        scene v9slake1c
+        with dissolve
 
-else:
+        u "By staring at the girls, right?"
 
-    scene v9slake1
+        scene v9slake1b
+        with dissolve
 
-    u "Yo, how's my bro doing?"
+        ry "You make it sound like I'm monkeying around, but it's pretty important!"
 
-    scene v9slake1b
-    with dissolve
+        scene v9slake1c
+        with dissolve
 
-    ry "Just into some important scientific business."
+        u "Haha, how's that?"
 
-    scene v9slake1c
-    with dissolve
+        scene v9slake1f
+        with dissolve
 
-    u "By staring at the girls, right?"
+        ry "There may be enough pussy to go around, but a man should properly evaluate first, you know?"
 
-    scene v9slake1b
-    with dissolve
+        scene v9slake1g
+        with dissolve
 
-    ry "You make it sound like I'm monkeying around, but it's pretty important!"
+        u "And you are evaluating Riley and Aubrey?"
 
-    scene v9slake1c
-    with dissolve
+        scene v9slake1f
+        with dissolve
 
-    u "Haha, how's that?"
+        ry "It's just a way of sharpening up senses and expectations!"
 
-    scene v9slake1f
-    with dissolve
+        scene v9slake1g
+        with dissolve
 
-    ry "There may be enough pussy to go around, but a man should properly evaluate first, you know?"
+        u "So how's that working for you?"
 
-    scene v9slake1g
-    with dissolve
+        scene v9slake1f
+        with dissolve
 
-    u "And you are evaluating Riley and Aubrey?"
+        ry "Good, good. For instance, I can tell you that Aubrey maybe looks like it, but I can sense she's not very experienced."
 
-    scene v9slake1f
-    with dissolve
+        scene v9slake1g
+        with dissolve
 
-    ry "It's just a way of sharpening up senses and expectations!"
+        u "Oh, haha dude, I think you got it all wrong."
 
-    scene v9slake1g
-    with dissolve
+        scene v9slake1f
+        with dissolve
 
-    u "So how's that working for you?"
+        ry "Or maybe I'm just not into giving away secrets!"
 
-    scene v9slake1f
-    with dissolve
+        scene v9slake1g
+        with dissolve
 
-    ry "Good, good. For instance, I can tell you that Aubrey maybe looks like it, but I can sense she's not very experienced."
+        u "Yeah yeah, or that."
 
-    scene v9slake1g
-    with dissolve
+        scene v9slake1b
+        with dissolve
 
-    u "Oh, haha dude, I think you got it all wrong."
+        ry "So what's up with you? You're looking more cheerful than usual today."
 
-    scene v9slake1f
-    with dissolve
+        scene v9slake1c
+        with dissolve
 
-    ry "Or maybe I'm just not into giving away secrets!"
+        menu:
+            "Talk about your dream":
+                $ addPoint("bf")
 
-    scene v9slake1g
-    with dissolve
+                u "I'm not so sure about that. Last night I had a fucked up dream."
 
-    u "Yeah yeah, or that."
+                scene v9slake1h # same as 1f, ryan curious, mouth open
+                with dissolve
 
-    scene v9slake1b
-    with dissolve
+                ry "A dream, huh. What was it about?"
 
-    ry "So what's up with you? You're looking more cheerful than usual today."
+                scene v9slake1j #same as 1j, mouth closed
+                with dissolve
 
-    scene v9slake1c
-    with dissolve
+                u "There was this dark void all around me and then a boxing ring and then a fight."
 
-    menu:
+                scene v9slake1h
+                with dissolve
 
-        "Talk about your dream":
+                ry "You were fighting someone? In a dark void?"
 
-            $ addPoint("bf")
+                scene v9slake1j
+                with dissolve
 
-            u "I'm not so sure about that. Last night I had a fucked up dream."
+                u "Yeah, I wanted to fight the Wolves. But no matter how hard I tried to hit, I did nothing."
 
-            scene v9slake1h # same as 1f, ryan curious, mouth open
-            with dissolve
+                scene v9slake1f
+                with dissolve
 
-            ry "A dream, huh. What was it about?"
+                ry "Seems like you're worried about the Brawl, [name]."
 
-            scene v9slake1j #same as 1j, mouth closed
-            with dissolve
+                scene v9slake1g
+                with dissolve
 
-            u "There was this dark void all around me and then a boxing ring and then a fight."
+                u "Not about the Brawl but, there was more."
 
-            scene v9slake1h
-            with dissolve
+                scene v9slake1h
+                with dissolve
 
-            ry "You were fighting someone? In a dark void?"
+                ry "Yeah?"
 
-            scene v9slake1j
-            with dissolve
+                scene v9slake1j
+                with dissolve
 
-            u "Yeah, I wanted to fight the Wolves. But no matter how hard I tried to hit, I did nothing."
+                u "No matter how hard I tried, everyone was disappointed in me."
 
-            scene v9slake1f
-            with dissolve
+                u "It felt like fucking up everything."
+                u "Like losing there meant losing everything."
 
-            ry "Seems like you're worried about the Brawl, [name]."
+                scene v9slake1h
+                with dissolve
 
-            scene v9slake1g
-            with dissolve
+                ry "I get it. But it was all just a dream, right?"
 
-            u "Not about the Brawl but, there was more."
+                scene v9slake1j
+                with dissolve
 
-            scene v9slake1h
-            with dissolve
+                u "I... I guess, so."
 
-            ry "Yeah?"
+                scene v9slake1h
+                with dissolve
 
-            scene v9slake1j
-            with dissolve
+                ry "Look, man. You got this, and I'm not just saying it."
 
-            u "No matter how hard I tried, everyone was disappointed in me."
+                scene v9slake1j
+                with dissolve
 
-            u "It felt like fucking up everything."
-            u "Like losing there meant losing everything."
+                u "Doesn't feel like that to me."
 
-            scene v9slake1h
-            with dissolve
+                scene v9slake1h
+                with dissolve
 
-            ry "I get it. But it was all just a dream, right?"
+                ry "I know, but that's how things always are from your own perspective."
 
-            scene v9slake1j
-            with dissolve
+                scene v9slake1j
+                with dissolve
 
-            u "I... I guess, so."
+                u "Sounds pretty wise, for words coming out of Ryan's mouth."
 
-            scene v9slake1h
-            with dissolve
+                scene v9slake1h
+                with dissolve
 
-            ry "Look, man. You got this, and I'm not just saying it."
+                ry "I had moments like that too. You know, doubting yourself and all."
 
-            scene v9slake1j
-            with dissolve
+                scene v9slake1b
+                with dissolve
+                
+                ry "But seeing you, [name]. You are the kind of guy who makes the right choices."
+                ry "And the kind of guy who can do this. Someone to show how great Apes are. And how hard they can punch."
 
-            u "Doesn't feel like that to me."
+                scene v9slake1c
+                with dissolve
 
-            scene v9slake1h
-            with dissolve
+                u "Thanks, Ryan. I didn't even know I needed this. But it seems I sure as fuck have."
 
-            ry "I know, but that's how things always are from your own perspective."
+                scene v9slake1b
+                with dissolve
 
-            scene v9slake1j
-            with dissolve
+                ry "No problem, that's what bros are for, am I right?"
 
-            u "Sounds pretty wise, for words coming out of Ryan's mouth."
+                scene v9slake1c
+                with dissolve
 
-            scene v9slake1h
-            with dissolve
+                u "Right as fuck, my man."
 
-            ry "I had moments like that too. You know, doubting yourself and all."
+            "Talk about the brawl":
+                $ addPoint("bro")
 
-            scene v9slake1b
-            with dissolve
-            
-            ry "But seeing you, [name]. You are the kind of guy who makes the right choices."
-            ry "And the kind of guy who can do this. Someone to show how great Apes are. And how hard they can punch."
+                # -if MC chooses to tell Ryan how excited he is about the Brawl-
 
-            scene v9slake1c
-            with dissolve
+                u "I guess I am just excited."
 
-            u "Thanks, Ryan. I didn't even know I needed this. But it seems I sure as fuck have."
+                scene v9slake1b
+                with dissolve
 
-            scene v9slake1b
-            with dissolve
+                ry "About what?"
 
-            ry "No problem, that's what bros are for, am I right?"
+                scene v9slake1c
+                with dissolve
 
-            scene v9slake1c
-            with dissolve
+                u "The Freshmen Brawl."
 
-            u "Right as fuck, my man."
+                scene v9slake1h
+                with dissolve
 
-        "Talk about the brawl":
+                ry "You got this, right?"
 
-            $ addPoint("bro")
+                scene v9slake1j
+                with dissolve
 
-            # -if MC chooses to tell Ryan how excited he is about the Brawl-
+                u "I was not sure at first. You know, it was all so sudden."
 
-            u "I guess I am just excited."
+                scene v9slake1h
+                with dissolve
 
-            scene v9slake1b
-            with dissolve
+                ry "But that's how best things work, right?"
 
-            ry "About what?"
+                scene v9slake1j
+                with dissolve
 
-            scene v9slake1c
-            with dissolve
+                u "I guess so. I've been training for this, and there's no way in Hell I'm gonna lose."
 
-            u "The Freshmen Brawl."
+                scene v9slake1b
+                with dissolve
 
-            scene v9slake1h
-            with dissolve
+                ry "Fuck yeah!"
 
-            ry "You got this, right?"
+                scene v9slake1c
+                with dissolve
 
-            scene v9slake1j
-            with dissolve
+                u "No Wolf or man can stand in my way!"
 
-            u "I was not sure at first. You know, it was all so sudden."
+                scene v9slake1b
+                with dissolve
 
-            scene v9slake1h
-            with dissolve
+                ry "Fuck yeah!"
 
-            ry "But that's how best things work, right?"
+                scene v9slake1c
+                with dissolve
 
-            scene v9slake1j
-            with dissolve
+                u "And no stupid fucking dreams can stop me!"
 
-            u "I guess so. I've been training for this, and there's no way in Hell I'm gonna lose."
+                scene v9slake1h
+                with dissolve
 
-            scene v9slake1b
-            with dissolve
+                ry "Fuck- Errr, what?"
 
-            ry "Fuck yeah!"
+                scene v9slake1j
+                with dissolve
 
-            scene v9slake1c
-            with dissolve
+                u "I got this, man!"
 
-            u "No Wolf or man can stand in my way!"
+                scene v9slake1h
+                with dissolve
 
-            scene v9slake1b
-            with dissolve
+                ry "What dreams?"
 
-            ry "Fuck yeah!"
+                scene v9slake1j
+                with dissolve
 
-            scene v9slake1c
-            with dissolve
+                u "Oh man, I feel so great!"
 
-            u "And no stupid fucking dreams can stop me!"
+                scene v9slake1d
+                with dissolve
 
-            scene v9slake1h
-            with dissolve
+                ry "Right."
 
-            ry "Fuck- Errr, what?"
+                scene v9slake1b
+                with dissolve
 
-            scene v9slake1j
-            with dissolve
+        ry "Anyway, it's great to see you are doing well. And I surely don't mind a day such as this sometimes. A cool breeze and a hot view, hehe."
 
-            u "I got this, man!"
+        scene v9slake1c
+        with dissolve
 
-            scene v9slake1h
-            with dissolve
+        u "I guess I should leave you at it, then. Let me check around for a bit."
 
-            ry "What dreams?"
+        scene v9slake1b
+        with dissolve
 
-            scene v9slake1j
-            with dissolve
+        ry "You do that, man."
 
-            u "Oh man, I feel so great!"
-
-            scene v9slake1d
-            with dissolve
-
-            ry "Right."
-
-            scene v9slake1b
-            with dissolve
-
-
-
-    ry "Anyway, it's great to see you are doing well. And I surely don't mind a day such as this sometimes. A cool breeze and a hot view, hehe."
-
-    scene v9slake1c
-    with dissolve
-
-    u "I guess I should leave you at it, then. Let me check around for a bit."
-
-    scene v9slake1b
-    with dissolve
-
-    ry "You do that, man."
-
-
-
-call screen fr5lakefull
+    call screen v9s7_lakeFull
 
 label fr5riley1:
+    $ fr5riley = True
 
-$ fr5riley = True
+    scene v9slake2 #FPP Close up as if sitting next to Riley, you look at her from the side, Riley is sitting on the pier, with her legs hanging over the ledge, Riley looking at the lake. -
 
+    if rileyrs:
+        u "What's a pretty lady doing all by herself?"
 
+        scene v9slake2b #same as 2, but Riley now looking at you, flirting, mouth open
+        with dissolve
 
-scene v9slake2 #FPP Close up as if sitting next to Riley, you look at her from the side, Riley is sitting on the pier, with her legs hanging over the ledge, Riley looking at the lake. -
+        ri "Maybe she's waiting for a hot guy to ask her that exact question, hehe."
 
-if rileyrs:
+        scene v9slake2c #same as 2b, but mouth closed
+        with dissolve
 
-    u "What's a pretty lady doing all by herself?"
+        u "Well what do you know. Here he comes, hah."
 
-    scene v9slake2b #same as 2, but Riley now looking at you, flirting, mouth open
-    with dissolve
+        scene v9slake2b
+        with dissolve
 
-    ri "Maybe she's waiting for a hot guy to ask her that exact question, hehe."
+        ri "Where? Can't see. Come closer, mister."
 
-    scene v9slake2c #same as 2b, but mouth closed
-    with dissolve
+        scene v9slake2c
+        with dissolve
 
-    u "Well what do you know. Here he comes, hah."
+        menu:
+            "Kiss her":
+                $ addPoint("tm")
 
-    scene v9slake2b
-    with dissolve
+                play sound "sounds/kiss.mp3"
 
-    ri "Where? Can't see. Come closer, mister."
+                scene v9slake3 #TPP showing mc and riley kissing
+                with dissolve
+                
+                pause 1.0
 
-    scene v9slake2c
-    with dissolve
+                scene v9slake2c
+                with dissolve
 
-    menu:
+                u "Did that fix your eyesight, lady?"
 
-        "Kiss her":
+                scene v9slake2b
+                with dissolve
 
-            $ addPoint("tm")
+                ri "No, but I wouldn't mind trying again, hehe."
 
-            play sound "sounds/kiss.mp3"
+                scene v9slake2c
+                with dissolve
 
-            scene v9slake3 #TPP showing mc and riley kissing
-            with dissolve
-            
-            pause 1.0
+                u "Pretty and clever, what a combination."
 
-            scene v9slake2c
-            with dissolve
+                scene v9slake2b
+                with dissolve
 
-            u "Did that fix your eyesight, lady?"
+                ri "And what a sweet talker, hah."
 
-            scene v9slake2b
-            with dissolve
+                scene v9slake2c
+                with dissolve
 
-            ri "No, but I wouldn't mind trying again, hehe."
+                u "You know it."
 
-            scene v9slake2c
-            with dissolve
+            "Blow air at her":
+                scene v9slake3b #same camera as 3, but mc blowing air in rileys face
+                with dissolve
 
-            u "Pretty and clever, what a combination."
+                u "*Blows air*"
 
-            scene v9slake2b
-            with dissolve
+                scene v9slake2d #same as 2b but Riley laughing
+                with dissolve
 
-            ri "And what a sweet talker, hah."
+                ri "What the fuck was that?! Haha!"
 
-            scene v9slake2c
-            with dissolve
+                scene v9slake2e # same as 2b but riley mouth closed
+                with dissolve
 
-            u "You know it."
+                u "It's a family recipe, don't even try to ask."
 
-        "Blow air at her":
+                scene v9slake2b
+                with dissolve
 
-            scene v9slake3b #same camera as 3, but mc blowing air in rileys face
-            with dissolve
+                ri "Why would I? It sucks, haha."
 
-            u "*Blows air*"
+                scene v9slake2c
+                with dissolve
 
-            scene v9slake2d #same as 2b but Riley laughing
-            with dissolve
+                u "First of all, it does not suck, it blows! And second of all, it's not an instant remedy, you know."
 
-            ri "What the fuck was that?! Haha!"
+        scene v9slake2b
+        with dissolve
 
-            scene v9slake2e # same as 2b but riley mouth closed
-            with dissolve
+        ri "And here was I relaxing. Then HE had to drop by and make me all excited and what not."
 
-            u "It's a family recipe, don't even try to ask."
+        scene v9slake2c
+        with dissolve
 
-            scene v9slake2b
-            with dissolve
+        u "I was just checking on you. Having a nice time?"
 
-            ri "Why would I? It sucks, haha."
+        scene v9slake2f # same as 2b but riley smiling mouth open
+        with dissolve
 
-            scene v9slake2c
-            with dissolve
+        ri "Yeah. I really need this sometimes. Just looking at water is so relaxing. Don't you think so?"
 
-            u "First of all, it does not suck, it blows! And second of all, it's not an instant remedy, you know."
+        scene v9slake2g # same as 2f but riley mouth closed
+        with dissolve
 
-    scene v9slake2b
-    with dissolve
+        u "I guess so. Sorry for interrupting."
 
-    ri "And here was I relaxing. Then HE had to drop by and make me all excited and what not."
+        scene v9slake2f
+        with dissolve
 
-    scene v9slake2c
-    with dissolve
+        ri "Not at all."
 
-    u "I was just checking on you. Having a nice time?"
+        scene v9slake2g
+        with dissolve
 
-    scene v9slake2f # same as 2b but riley smiling mouth open
-    with dissolve
+        u "Hehe, OK I'm gonna go check on others."
 
-    ri "Yeah. I really need this sometimes. Just looking at water is so relaxing. Don't you think so?"
+        scene v9slake2f
+        with dissolve
 
-    scene v9slake2g # same as 2f but riley mouth closed
-    with dissolve
+        ri "Okay."
 
-    u "I guess so. Sorry for interrupting."
+    if not rileyrs:
+        u "And I thought I was gonna find you close to the water. Wanna take a dip?"
 
-    scene v9slake2f
-    with dissolve
+        scene v9slake2f
+        with dissolve
 
-    ri "Not at all."
+        ri "No, not in the mood for that. I just like being close, watching it, that's all."
 
-    scene v9slake2g
-    with dissolve
+        scene v9slake2g
+        with dissolve
 
-    u "Hehe, OK I'm gonna go check on others."
+        u "Sounds like fun, hah."
 
-    scene v9slake2f
-    with dissolve
+        scene v9slake2f
+        with dissolve
 
-    ri "Okay."
+        ri "You'd be surprised, actually. Fun is not always about getting excited."
+        
+        ri "Sometimes it's just about..."
 
-if not rileyrs:
+        scene v9slake2b
+        with dissolve
+        ri "Relaxing yourself."
 
-    u "And I thought I was gonna find you close to the water. Wanna take a dip?"
+        scene v9slake2g
+        with dissolve
 
-    scene v9slake2f
-    with dissolve
+        u "Let me leave you to your relaxation a bit more. Weirdo."
 
-    ri "No, not in the mood for that. I just like being close, watching it, that's all."
+        scene v9slake2d
+        with dissolve
 
-    scene v9slake2g
-    with dissolve
+        ri "Weirdo!"
 
-    u "Sounds like fun, hah."
-
-    scene v9slake2f
-    with dissolve
-
-    ri "You'd be surprised, actually. Fun is not always about getting excited."
-    
-    ri "Sometimes it's just about..."
-
-    scene v9slake2b
-    with dissolve
-    ri "Relaxing yourself."
-
-    scene v9slake2g
-    with dissolve
-
-    u "Let me leave you to your relaxation a bit more. Weirdo."
-
-    scene v9slake2d
-    with dissolve
-
-    ri "Weirdo!"
-
- 
-call screen fr5lakezoomin
+    call screen v9s7_lakeZoomIn
 
 label fr5riley2:
+    scene fr5lakezoomin
 
-scene fr5lakezoomin
+    u "(I've already talked to her.)"
 
- 
-
-u "(I've already talked to her.)"
-
- 
-call screen fr5lakezoomin
-
+    call screen v9s7_lakeZoomIn
 
 # -if you click on Aubrey-
-
 label fr5aubrey1:
+    $ fr5aubrey = True
 
-$ fr5aubrey = True
+    scene v9slake4a # FPP close up aubrey swimming in the lake, very close to you, looking at you still on land. You're standing so she's looking up smiling, mouth closed.
 
+    u "How's the water?"
 
+    scene v9slake4 #same as 4a, mouth open
+    with dissolve
 
-scene v9slake4a # FPP close up aubrey swimming in the lake, very close to you, looking at you still on land. You're standing so she's looking up smiling, mouth closed.
+    au "Nice and cool, just the way I like it."
 
-u "How's the water?"
+    scene v9slake4a
+    with dissolve
 
-scene v9slake4 #same as 4a, mouth open
-with dissolve
+    u "Doesn't sound too nice, hm."
 
-au "Nice and cool, just the way I like it."
+    scene v9slake4b # same as 4b aubrey flirting/teasing mouth open
+    with dissolve
 
-scene v9slake4a
-with dissolve
+    au "Oh what, don't tell me that [name] is afraid of a bit of cold water?"
 
-u "Doesn't sound too nice, hm."
+    scene v9slake4c # same as 4b mouth closed
+    with dissolve
 
-scene v9slake4b # same as 4b aubrey flirting/teasing mouth open
-with dissolve
+    u "What? Of course not!"
 
-au "Oh what, don't tell me that [name] is afraid of a bit of cold water?"
+    scene v9slake4b
+    with dissolve
 
-scene v9slake4c # same as 4b mouth closed
-with dissolve
+    au "Boo-hoo, water is so cold, it would make his nipples sharp as a razor, boo-hoo."
 
-u "What? Of course not!"
+    scene v9slake4c
+    with dissolve
 
-scene v9slake4b
-with dissolve
+    u "Freeze the lake if you want, I'm not afraid of the water no matter how cold it is."
 
-au "Boo-hoo, water is so cold, it would make his nipples sharp as a razor, boo-hoo."
+    scene v9slake4b
+    with dissolve
 
-scene v9slake4c
-with dissolve
+    au "Prove it! Come and join me."
 
-u "Freeze the lake if you want, I'm not afraid of the water no matter how cold it is."
+    scene v9slake4c
+    with dissolve
 
-scene v9slake4b
-with dissolve
+    u "Oh yeah?"
 
-au "Prove it! Come and join me."
+    scene v9slake4b
+    with dissolve
 
-scene v9slake4c
-with dissolve
+    au "Yeah."
 
-u "Oh yeah?"
+    scene v9slake4c
+    with dissolve
 
-scene v9slake4b
-with dissolve
+    menu: 
+        "Don't join her":
+            $ addPoint("tm")
 
-au "Yeah."
+            u "That was a nice try, miss. But you must be mistaking me for a child, if you thought that would work."
 
-scene v9slake4c
-with dissolve
+            scene v9slake4d #same as 4b but aubrey booing mc (hands around her mouth, she's dissapointed)
+            with dissolve
 
-menu: 
+            au "Boo! Boo!"
 
-    "Don't join her":
+            scene v9slake4e #same as 4d but mouth closed
+            with dissolve
 
-        $ addPoint("tm")
+            u "Maybe some other time. I didn't bring my shorts, anyway."
 
-        u "That was a nice try, miss. But you must be mistaking me for a child, if you thought that would work."
+            scene v9slake4b
+            with dissolve
 
-        scene v9slake4d #same as 4b but aubrey booing mc (hands around her mouth, she's dissapointed)
-        with dissolve
+            au "You are such a party-pooper, [name]. I'll forgive you, though. But don't forget, you owe me one now."
 
-        au "Boo! Boo!"
+            scene v9slake4c
+            with dissolve
 
-        scene v9slake4e #same as 4d but mouth closed
-        with dissolve
+            u "Is that so? Owe you what?"
 
-        u "Maybe some other time. I didn't bring my shorts, anyway."
+            scene v9slake4b
+            with dissolve
 
-        scene v9slake4b
-        with dissolve
+            au "We'll see."
 
-        au "You are such a party-pooper, [name]. I'll forgive you, though. But don't forget, you owe me one now."
+            scene v9slake4c
+            with dissolve
 
-        scene v9slake4c
-        with dissolve
+            u "Sounds interesting. I guess we will see."
 
-        u "Is that so? Owe you what?"
+        "Join her":
+            $ addPoint("bf")
+            $ joinAubreyLake = True
 
-        scene v9slake4b
-        with dissolve
+            u "Fine, let me just take my clothes off."
 
-        au "We'll see."
+            scene v9slake4b
+            with dissolve
 
-        scene v9slake4c
-        with dissolve
+            au "That's what I like to hear."
 
-        u "Sounds interesting. I guess we will see."
+            scene v9slake5 #TPP showing mc and Aubrey floating in the water next to each other
+            with fade
 
-    "Join her":
+            pause 0.5
 
-        $ addPoint("bf")
+            scene v9slake6 #FPP close up Aubrey in the water, you're also in the water with her so the it should be quite close and same height, aubrey flirting, mouth open
+            with dissolve
 
-        $ joinAubreyLake = True
+            au "So, how's the water?"
 
-        u "Fine, let me just take my clothes off."
+            scene v9slake6a #same as 6, mouth closed
+            with dissolve
 
-        scene v9slake4b
-        with dissolve
+            u "Just like it was promised. Almost as cool as me."
 
-        au "That's what I like to hear."
+            scene v9slake6
+            with dissolve
 
-        scene v9slake5 #TPP showing mc and Aubrey floating in the water next to each other
-        with fade
+            au "Oh, is that so? Well, I'm glad you like it."
 
-        pause 0.5
+            scene v9slake6a
+            with dissolve
 
-        scene v9slake6 #FPP close up Aubrey in the water, you're also in the water with her so the it should be quite close and same height, aubrey flirting, mouth open
-        with dissolve
+            u "If it's good to you, why would I be any different? So, why did you invite me here?"
 
-        au "So, how's the water?"
+            scene v9slake6b #same as 6, aubrey smiling, mouth open
+            with dissolve
 
-        scene v9slake6a #same as 6, mouth closed
-        with dissolve
+            au "I just thought it could be fun, you know. I was getting a bit lonely."
 
-        u "Just like it was promised. Almost as cool as me."
+            scene v9slake6c #same as 6b, mouth closed
+            with dissolve
 
-        scene v9slake6
-        with dissolve
+            u "Well that can't be a good thing, especially if it's someone like you."
 
-        au "Oh, is that so? Well, I'm glad you like it."
+            scene v9slake6b
+            with dissolve
 
-        scene v9slake6a
-        with dissolve
+            au "What do you mean \"like me\"? What am I like?"
 
-        u "If it's good to you, why would I be any different? So, why did you invite me here?"
+            scene v9slake6c
+            with dissolve
 
-        scene v9slake6b #same as 6, aubrey smiling, mouth open
-        with dissolve
+            u "Ever since I've met you, one thing was the same. Nothing was ever the same, when it comes to you."
 
-        au "I just thought it could be fun, you know. I was getting a bit lonely."
+            scene v9slake6b
+            with dissolve
 
-        scene v9slake6c #same as 6b, mouth closed
-        with dissolve
+            au "Oh, getting philosophical?"
 
-        u "Well that can't be a good thing, especially if it's someone like you."
+            scene v9slake6c
+            with dissolve
 
-        scene v9slake6b
-        with dissolve
+            u "I just don't think a girl like you would want the world to stop. If anything, I'd say you'd want to spin it faster."
 
-        au "What do you mean \"like me\"? What am I like?"
+            scene v9slake6b
+            with dissolve
 
-        scene v9slake6c
-        with dissolve
+            au "Then I guess you know me a bit better than I would expect."
 
-        u "Ever since I've met you, one thing was the same. Nothing was ever the same, when it comes to you."
+            scene v9slake6c
+            with dissolve
 
-        scene v9slake6b
-        with dissolve
+            u "For one living in the moment, I wouldn't say you expect much at all. Well, maybe you don't expect much, but you surely know how to seize the moment."
 
-        au "Oh, getting philosophical?"
+            if aubreyrs:
+                label v9_aubrey_scene_lake:
+                    $ v9_aubrey_lake = True
 
-        scene v9slake6c
-        with dissolve
+                    scene v9slake6
+                    with dissolve
 
-        u "I just don't think a girl like you would want the world to stop. If anything, I'd say you'd want to spin it faster."
 
-        scene v9slake6b
-        with dissolve
+                    au "Wow, you keep on surprising me, [name]. And you are right, I did think of something fun just now."
 
-        au "Then I guess you know me a bit better than I would expect."
+                    scene v9slake6a
+                    with dissolve
 
-        scene v9slake6c
-        with dissolve
+                    u "What could that be?"
 
-        u "For one living in the moment, I wouldn't say you expect much at all. Well, maybe you don't expect much, but you surely know how to seize the moment."
+                    scene v9slake6b
+                    with dissolve
 
-        if aubreyrs:
+                    au "It can't be told. It has to be shown. Come with me."
 
-            label v9_aubrey_scene_lake:
-                scene v9slake6
+                    scene v9slake7 # They swim for a bit into a location between some rocks on the shore, where it's hard for anyone to see them, but they stay in water 
+                    with Dissolve(1)
+
+                    pause 0.5
+
+                    scene v9slake8a # FPP close up, same as 6 from angle and closeness, just in new, more remote location. aubrey flirty mouth closed
+                    with dissolve
+
+                    u "What is this?"
+
+                    if config_censored:
+                        call screen censoredPopup("v9s7_nsfwSkipLabel1")
+
+                    scene v9slake8 # same as 8a, mouth open
+                    with dissolve
+
+                    au "It's my secret place. Do you like it?"
+
+                    scene v9slake9 # Showing closeup only Aubrey's hand grabbing mc's crotch underwater
+                    with vpunch
+
+                    u "Oh I like THAT."
+                
+                    scene v9slake8
+                    with dissolve
+
+                    au "Come. Follow me."
+
+                    scene v9slake16 #TPP mc and aubrey are lying next to each other on a large rock in the middle of the lake, mc's underpants need to be wet
+                    with fade
+                    
+                    au "Now, where were we?"
+
+                    image v9slake17vid = Movie (play="images/v9/scene 7/v9slake17vid.webm", loop = True, image = "images/v9/scene 7/v9slake17vidend.webp", start_image = "images/v9/scene 7/v9slake17vidstart.webp")
+                    image v9slake18vid = Movie (play="images/v9/scene 7/v9slake18vid.webm", loop = True, image = "images/v9/scene 7/v9slake18vidend.webp", start_image = "images/v9/scene 7/v9slake18vidstart.webp")
+                    image v9slake18vidfast = Movie (play="images/v9/scene 7/v9slake18vidf.webm", loop = True, image = "images/v9/scene 7/v9slake18vidend.webp", start_image = "images/v9/scene 7/v9slake18vidstart.webp")
+                    image v9slake19vid = Movie (play="images/v9/scene 7/v9slake19vid.webm", loop = True, image = "images/v9/scene 7/v9slake19vidend.webp", start_image = "images/v9/scene 7/v9slake19vidstart.webp")
+                    image v9slake19vidfast = Movie (play="images/v9/scene 7/v9slake19vidf.webm", loop = True, image = "images/v9/scene 7/v9slake19vidend.webp", start_image = "images/v9/scene 7/v9slake19vidstart.webp")
+
+                    scene v9slake17vid # mc and aubrey make out animation
+                    with dissolve
+                    
+                    $ lake_hj = True
+                    $ grantAchievement("relaxing_day")
+
+                    " "
+
+                    scene v9slake18 # aubreys hand on mc's dick over wet underpants
+                    with dissolve
+
+                    au "Let's see what we got here."
+
+                    scene v9slake18vid # aubrey handjob slow, TPP
+                    with fade
+
+                    u "Damn..."
+
+                    " "
+
+                    scene v9slake19vid # aubrey handjob slow, FPP
+                    with dissolve
+
+                    au "You like this?"
+
+                    " "
+
+                    scene v9slake18vidfast # aubrey handjob fast, TPP (Not rendered again)
+                    with dissolve
+
+                    u "Fuck, yeah. It feels soo good!"
+
+                    " "
+
+                    scene v9slake19vidfast # aubrey handjob fast, FPP
+                    with dissolve
+
+                    au "You like this?"
+
+                    " "
+
+                    scene v9slake20 # close up mc cumshot
+                    with flash
+
+                    pause 0.5
+
+                    scene v9slake20a # same as 20, cum over aubrey's hand
+                    with flash
+
+                    pause 1.0
+
+                    scene v9slake21a # FPP close up Aubrey looking at you, mouth closed flirty curious smile looking at mc
+                    with dissolve
+
+                    u "Wow..."
+
+                    scene v9slake21 # same as 21a, mouth open
+                    with dissolve
+
+                    au "Haha, I knew you'd like it."
+
+                    au "We should probably swim back before the others notice we're missing though."
+
+                    scene v9slake21a
+                    with dissolve
+
+                    u "You sure you don't want me to do you?"
+
+                    scene v9slake21 
+                    with dissolve
+
+                    au "Haha, don't worry. We'll just spend more time on me next time."
+
+                    scene v9slake21a
+                    with dissolve
+
+                    u "That does sound fair, haha."
+
+                label v9s7_nsfwSkipLabel1:
+                    scene black
+                    with dissolve
+
+                    pause 0.3
+                    $ renpy.end_replay()
+
+            else:
+                scene v9slake6b
                 with dissolve
 
+                au "Wow, you keep on surprising me, [name]."
 
-                au "Wow, you keep on surprising me, [name]. And you are right, I did think of something fun just now."
-
-                scene v9slake6a
+                scene v9slake6c
                 with dissolve
 
-                u "What could that be?"
+                u "One could say I'm full of surprises. But I think I just know how to figure out people I care about."
 
                 scene v9slake6b
                 with dissolve
 
-                au "It can't be told. It has to be shown. Come with me."
+                au "Oh, so you care about me?"
 
-                scene v9slake7 # They swim for a bit into a location between some rocks on the shore, where it's hard for anyone to see them, but they stay in water 
-                with Dissolve(1)
-
-                pause 0.5
-
-                scene v9slake8a # FPP close up, same as 6 from angle and closeness, just in new, more remote location. aubrey flirty mouth closed
+                scene v9slake6c
                 with dissolve
 
-                u "What is this?"
+                u "Oh, so I figured you out?"
 
-                if config_censored:
-                    call screen censoredPopup("v9s7_nsfwSkipLabel1")
-
-                scene v9slake8 # same as 8a, mouth open
+                scene v9slake6b
                 with dissolve
 
-                au "It's my secret place. Do you like it?"
+                au "I guess that is a double edged sword, ha."
 
-                scene v9slake9 # Showing closeup only Aubrey's hand grabbing mc's crotch underwater
-                with vpunch
-
-                u "Oh I like THAT."
-            
-                scene v9slake8
+                scene v9slake6c
                 with dissolve
 
-                au "Come. Follow me."
+                u "That's life. Like, do you think Ryan ever thought I would ruin his view by jumping in here?"
 
-                scene v9slake16 #TPP mc and aubrey are lying next to each other on a large rock in the middle of the lake, mc's underpants need to be wet
-                with fade
-                
-                au "Now, where were we?"
-
-                image v9slake17vid = Movie (play="images/v9/scene 7/v9slake17vid.webm", loop = True, image = "images/v9/scene 7/v9slake17vidend.webp", start_image = "images/v9/scene 7/v9slake17vidstart.webp")
-                image v9slake18vid = Movie (play="images/v9/scene 7/v9slake18vid.webm", loop = True, image = "images/v9/scene 7/v9slake18vidend.webp", start_image = "images/v9/scene 7/v9slake18vidstart.webp")
-                image v9slake18vidfast = Movie (play="images/v9/scene 7/v9slake18vidf.webm", loop = True, image = "images/v9/scene 7/v9slake18vidend.webp", start_image = "images/v9/scene 7/v9slake18vidstart.webp")
-                image v9slake19vid = Movie (play="images/v9/scene 7/v9slake19vid.webm", loop = True, image = "images/v9/scene 7/v9slake19vidend.webp", start_image = "images/v9/scene 7/v9slake19vidstart.webp")
-                image v9slake19vidfast = Movie (play="images/v9/scene 7/v9slake19vidf.webm", loop = True, image = "images/v9/scene 7/v9slake19vidend.webp", start_image = "images/v9/scene 7/v9slake19vidstart.webp")
-
-                scene v9slake17vid # mc and aubrey make out animation
-                with dissolve
-                
-                $ lake_hj = True
-                $ grantAchievement("relaxing_day")
-
-                " "
-
-                scene v9slake18 # aubreys hand on mc's dick over wet underpants
+                scene v9slake6d #same as 6b, aubrey curious, mouth open
                 with dissolve
 
-                au "Let's see what we got here."
+                au "What do you mean?"
 
-                scene v9slake18vid # aubrey handjob slow, TPP
-                with fade
-
-                u "Damn..."
-
-                " "
-
-                scene v9slake19vid # aubrey handjob slow, FPP
+                scene v9slake6e #same as 6d, mouth closed
                 with dissolve
 
-                au "You like this?"
+                u "He's been staring at you ever since we came here."
 
-                " "
-
-                scene v9slake18vidfast # aubrey handjob fast, TPP (Not rendered again)
+                scene v9slake6
                 with dissolve
 
-                u "Fuck, yeah. It feels soo good!"
+                au "Well who could blame him?"
 
-                " "
-
-                scene v9slake19vidfast # aubrey handjob fast, FPP
+                scene v9slake6a
                 with dissolve
 
-                au "You like this?"
+                u "True."
 
-                " "
-
-                scene v9slake20 # close up mc cumshot
-                with flash
-
-                pause 0.5
-
-                scene v9slake20a # same as 20, cum over aubrey's hand
-                with flash
-
-                pause 1.0
-
-                scene v9slake21a # FPP close up Aubrey looking at you, mouth closed flirty curious smile looking at mc
+                scene v9slake6b
                 with dissolve
 
-                u "Wow..."
+                au "Ha, are you saying I'm hot?"
 
-                scene v9slake21 # same as 21a, mouth open
+                scene v9slake6c
                 with dissolve
 
-                au "Haha, I knew you'd like it."
+                u "I'm not saying anything. But saying otherwise could be one lie over my weekly quota."
 
-                au "We should probably swim back before the others notice we're missing though."
-
-                scene v9slake21a
+                scene v9slake6
                 with dissolve
 
-                u "You sure you don't want me to do you?"
+                au "Funny. Or should I say clever."
 
-                scene v9slake21 
+                scene v9slake6a
                 with dissolve
 
-                au "Haha, don't worry. We'll just spend more time on me next time."
+                u "Some would say both."
 
-                scene v9slake21a
+                scene v9slake6b
                 with dissolve
 
-                u "That does sound fair, haha."
+                au "Maybe, haha."
 
-            label v9s7_nsfwSkipLabel1:
-                scene black
+                scene v9slake6c
                 with dissolve
 
-                pause 0.3
-                $ renpy.end_replay()
-        else:
+                u "Well, I guess I should probably get out now. Explore the place a bit more, you know?"
 
-            scene v9slake6b
-            with dissolve
+                scene v9slake6b
+                with dissolve
 
-            au "Wow, you keep on surprising me, [name]."
+                au "Alright, see you later."
 
-            scene v9slake6c
-            with dissolve
-
-            u "One could say I'm full of surprises. But I think I just know how to figure out people I care about."
-
-            scene v9slake6b
-            with dissolve
-
-            au "Oh, so you care about me?"
-
-            scene v9slake6c
-            with dissolve
-
-            u "Oh, so I figured you out?"
-
-            scene v9slake6b
-            with dissolve
-
-            au "I guess that is a double edged sword, ha."
-
-            scene v9slake6c
-            with dissolve
-
-            u "That's life. Like, do you think Ryan ever thought I would ruin his view by jumping in here?"
-
-            scene v9slake6d #same as 6b, aubrey curious, mouth open
-            with dissolve
-
-            au "What do you mean?"
-
-            scene v9slake6e #same as 6d, mouth closed
-            with dissolve
-
-            u "He's been staring at you ever since we came here."
-
-            scene v9slake6
-            with dissolve
-
-            au "Well who could blame him?"
-
-            scene v9slake6a
-            with dissolve
-
-            u "True."
-
-            scene v9slake6b
-            with dissolve
-
-            au "Ha, are you saying I'm hot?"
-
-            scene v9slake6c
-            with dissolve
-
-            u "I'm not saying anything. But saying otherwise could be one lie over my weekly quota."
-
-            scene v9slake6
-            with dissolve
-
-            au "Funny. Or should I say clever."
-
-            scene v9slake6a
-            with dissolve
-
-            u "Some would say both."
-
-            scene v9slake6b
-            with dissolve
-
-            au "Maybe, haha."
-
-            scene v9slake6c
-            with dissolve
-
-            u "Well, I guess I should probably get out now. Explore the place a bit more, you know?"
-
-            scene v9slake6b
-            with dissolve
-
-            au "Alright, see you later."
-
-
-
-call screen fr5lakezoomin
+    call screen v9s7_lakeZoomIn
 
 label fr5aubrey2:
+    scene fr5lakezoomin
 
+    # -if you click on Aubrey again, MC thinks to himself-
+    u "(I should look around a bit more.)"
 
+    call screen v9s7_lakeZoomIn
 
-scene fr5lakezoomin
-
-# -if you click on Aubrey again, MC thinks to himself-
-u "(I should look around a bit more.)"
-
-
-
-call screen fr5lakezoomin
-
-# -if you click on the guy sleeping under the tree-
+    # -if you click on the guy sleeping under the tree-
 
 label fr5treeguy1:
+    $ fr5treeguy = True
 
-$ fr5treeguy = True
+    scene v9slake10 # FPP close up of guy under the tree sleeping sitting leaned to the tree
 
+    u "Hmm. Hello?"
 
+    " "
 
-scene v9slake10 # FPP close up of guy under the tree sleeping sitting leaned to the tree
+    u "Should you be sleeping there?"
 
-u "Hmm. Hello?"
+    scene v9slake10b # same as 10, guy looks up at you, mouth open, reluctant, annoyed
+    with dissolve
 
-" "
+    unknown "Worried about my health, son?"
 
-u "Should you be sleeping there?"
+    # -MC looks surprised that he even got an answer-
 
-scene v9slake10b # same as 10, guy looks up at you, mouth open, reluctant, annoyed
-with dissolve
+    scene v9slake10c # same as 10b, mouth closed
+    with dissolve
 
-unknown "Worried about my health, son?"
+    u "Well, yeah. That, and getting robbed, for instance."
 
-# -MC looks surprised that he even got an answer-
+    scene v9slake10b 
+    with dissolve
 
-scene v9slake10c # same as 10b, mouth closed
-with dissolve
+    unknown "Nobody steals from me."
 
-u "Well, yeah. That, and getting robbed, for instance."
+    scene v9slake10c
+    with dissolve
 
-scene v9slake10b 
-with dissolve
+    u "How can you be so sure?"
 
-unknown "Nobody steals from me."
+    scene v9slake10b
+    with dissolve
 
-scene v9slake10c
-with dissolve
+    unknown "This is my neighborhood. If not for me, this place would not be the same."
 
-u "How can you be so sure?"
+    scene v9slake10c
+    with dissolve
 
-scene v9slake10b
-with dissolve
+    u "What do you mean, the same?"
 
-unknown "This is my neighborhood. If not for me, this place would not be the same."
+    scene v9slake10b
+    with dissolve
 
-scene v9slake10c
-with dissolve
+    unknown "A few years back, this place was not so fine and dandy. To be honest, nobody wanted to live here."
 
-u "What do you mean, the same?"
+    scene v9slake10c
+    with dissolve
 
-scene v9slake10b
-with dissolve
+    u "How so?"
 
-unknown "A few years back, this place was not so fine and dandy. To be honest, nobody wanted to live here."
+    scene v9slake10b
+    with dissolve
 
-scene v9slake10c
-with dissolve
+    unknown "People wanna move to city, they don't see the beauty of the countryside no more."
 
-u "How so?"
+    scene v9slake10c
+    with dissolve
 
-scene v9slake10b
-with dissolve
+    u "Kind of make sense."
 
-unknown "People wanna move to city, they don't see the beauty of the countryside no more."
+    scene v9slake10d # same as 10b,  guy holds up his hands to mc, mouth open, determind look (please look at script)
+    with dissolve
 
-scene v9slake10c
-with dissolve
+    unknown "You see these two hands, son? If you want something, you gotta grab it with these."
 
-u "Kind of make sense."
+    scene v9slake10e #same as 10d,  mouth closed
+    with dissolve
 
-scene v9slake10d # same as 10b,  guy holds up his hands to mc, mouth open, determind look (please look at script)
-with dissolve
+    u "You've grabbed people?"
 
-unknown "You see these two hands, son? If you want something, you gotta grab it with these."
+    scene v9slake10f # same as 10d, guy moves his hands down but determined look, slight smile, mouth open
+    with dissolve
 
-scene v9slake10e #same as 10d,  mouth closed
-with dissolve
+    unknown "Hah! No, son. You grab a rake. A shovel. A plow! Make the land beautiful and rich. Then land grabs the people for you."
 
-u "You've grabbed people?"
+    scene v9slake10g # same as 10f, mouth closed
+    with dissolve
 
-scene v9slake10f # same as 10d, guy moves his hands down but determined look, slight smile, mouth open
-with dissolve
+    u "Is that how you did it?"
 
-unknown "Hah! No, son. You grab a rake. A shovel. A plow! Make the land beautiful and rich. Then land grabs the people for you."
+    scene v9slake10f
+    with dissolve
 
-scene v9slake10g # same as 10f, mouth closed
-with dissolve
+    unknown "I live at a farm down the road. Was the only farm left around here, but now it's just one of many."
 
-u "Is that how you did it?"
+    scene v9slake10g
+    with dissolve
 
-scene v9slake10f
-with dissolve
+    u "I gotta say, that does sound pretty cool."
 
-unknown "I live at a farm down the road. Was the only farm left around here, but now it's just one of many."
+    scene v9slake10f
+    with dissolve
 
-scene v9slake10g
-with dissolve
+    unknown "If the way ever takes you down that road, just a few miles from here, feel free to drop by. I will show you how to grab the people. And some ladies, hah."
 
-u "I gotta say, that does sound pretty cool."
+    scene v9slake10g
+    with dissolve
 
-scene v9slake10f
-with dissolve
+    u "Haha, alright."
 
-unknown "If the way ever takes you down that road, just a few miles from here, feel free to drop by. I will show you how to grab the people. And some ladies, hah."
+    scene v9slake10f
+    with dissolve
 
-scene v9slake10g
-with dissolve
+    unknown "Now if you don't mind, son. Wednesday is a rest day for me."
 
-u "Haha, alright."
+    scene v9slake10g
+    with dissolve
 
-scene v9slake10f
-with dissolve
+    u "Sure. See ya around."
 
-unknown "Now if you don't mind, son. Wednesday is a rest day for me."
-
-scene v9slake10g
-with dissolve
-
-u "Sure. See ya around."
-
-
-
-call screen fr5lakefull
+    call screen v9s7_lakeFull
 
 # -if you click on the guy again, MC thinks to himself-
-
 label fr5treeguy2:
+    scene fr5lakefull
 
+    u "(I should leave him alone.)"
 
+    call screen v9s7_lakeFull
 
-scene fr5lakefull
-
-u "(I should leave him alone.)"
-
-
-
-call screen fr5lakefull
-
-# -if you click on the guy petting a dog-
+    # -if you click on the guy petting a dog-
 
 label fr5dogwalker1:
+    $ fr5dogwalker = True
 
-$ fr5dogwalker = True
+    scene v9slake11a #FPP close up of dogwalker petting his dog excited, looking at the dog, mouth closed
 
+    if not autumnmad:
+        u "Wait a second. Is that Oscar?!"
 
+        scene v9slake11b # same as 11, dogwalker looks at you smiling, mouth open
+        with dissolve
 
-scene v9slake11a #FPP close up of dogwalker petting his dog excited, looking at the dog, mouth closed
+        unknown "Oh! You know my boy here?"
 
-if autumnmad == False:
+        scene v9slake11c #same as 11b, mouth closed
+        with dissolve
 
-    u "Wait a second. Is that Oscar?!"
+        u "Who could forget that ugl- I mean, yeah. I've seen him at the shelter the other day."
 
-    scene v9slake11b # same as 11, dogwalker looks at you smiling, mouth open
-    with dissolve
+        scene v9slake11b
+        with dissolve
 
-    unknown "Oh! You know my boy here?"
+        unknown "What a coincidence. Well that's exactly where I've met Oscar as well!"
 
-    scene v9slake11c #same as 11b, mouth closed
-    with dissolve
+        scene v9slake11c
+        with dissolve
 
-    u "Who could forget that ugl- I mean, yeah. I've seen him at the shelter the other day."
+        u "Right. So, you adopted him?"
 
-    scene v9slake11b
-    with dissolve
+        scene v9slake11b
+        with dissolve
 
-    unknown "What a coincidence. Well that's exactly where I've met Oscar as well!"
+        unknown "I just could not resist. You see, people don't usually come running to me."
 
-    scene v9slake11c
-    with dissolve
+        scene v9slake11c
+        with dissolve
 
-    u "Right. So, you adopted him?"
+        u "Uh-huh."
 
-    scene v9slake11b
-    with dissolve
+        scene v9slake11b
+        with dissolve
 
-    unknown "I just could not resist. You see, people don't usually come running to me."
+        unknown "Or animals."
 
-    scene v9slake11c
-    with dissolve
+        scene v9slake11c
+        with dissolve
 
-    u "Uh-huh."
+        u "I see."
 
-    scene v9slake11b
-    with dissolve
+        scene v9slake11b
+        with dissolve
 
-    unknown "Or animals."
+        unknown "Or anyone. They most of the time avoid me."
 
-    scene v9slake11c
-    with dissolve
+        scene v9slake11c
+        with dissolve
 
-    u "I see."
+        u "Right..."
 
-    scene v9slake11b
-    with dissolve
+        scene v9slake11 # same as 11a, mouth open
+        with dissolve
 
-    unknown "Or anyone. They most of the time avoid me."
+        unknown "But not Oscar, oh no! When he saw his daddy, he came running straight to me. Didn't you, Oscar, didn't you?!"
 
-    scene v9slake11c
-    with dissolve
+        scene v9slake11a
+        with dissolve
 
-    u "Right..."
+        u "Who would have though. You do kind of look alike."
 
-    scene v9slake11 # same as 11a, mouth open
-    with dissolve
+        scene v9slake11b
+        with dissolve
 
-    unknown "But not Oscar, oh no! When he saw his daddy, he came running straight to me. Didn't you, Oscar, didn't you?!"
+        unknown "It was just like magic. I knew right away he was gonna be mine."
 
-    scene v9slake11a
-    with dissolve
+        scene v9slake11c
+        with dissolve
 
-    u "Who would have though. You do kind of look alike."
+        u "(I would say it goes the other way around.)"
 
-    scene v9slake11b
-    with dissolve
+        u "That's cute! Nice talking to you!"
 
-    unknown "It was just like magic. I knew right away he was gonna be mine."
+    else:
+        u "What a cute dog!" 
 
-    scene v9slake11c
-    with dissolve
+        scene v9slake11b
+        with dissolve
 
-    u "(I would say it goes the other way around.)"
+        unknown "Thanks! I got him from the shelter just a few days ago!"
 
-    u "That's cute! Nice talking to you!"
+        scene v9slake11c
+        with dissolve
 
-else:
+        u "Oh, so you adopted him?"
 
-    u "What a cute dog!" 
+        scene v9slake11b
+        with dissolve
 
-    scene v9slake11b
-    with dissolve
+        unknown "I just could not resist. You see, people don't usually come running to me."
 
-    unknown "Thanks! I got him from the shelter just a few days ago!"
+        scene v9slake11c
+        with dissolve
 
-    scene v9slake11c
-    with dissolve
+        u "Uh-huh."
 
-    u "Oh, so you adopted him?"
+        scene v9slake11b
+        with dissolve
 
-    scene v9slake11b
-    with dissolve
+        unknown "Or animals."
 
-    unknown "I just could not resist. You see, people don't usually come running to me."
+        scene v9slake11c
+        with dissolve
 
-    scene v9slake11c
-    with dissolve
+        u "I see."
 
-    u "Uh-huh."
+        scene v9slake11b
+        with dissolve
 
-    scene v9slake11b
-    with dissolve
+        unknown "Or anyone. They most of the time avoid me."
 
-    unknown "Or animals."
+        scene v9slake11c
+        with dissolve
 
-    scene v9slake11c
-    with dissolve
+        u "Right..."
 
-    u "I see."
+        scene v9slake11 # same as 11a, mouth open
+        with dissolve
 
-    scene v9slake11b
-    with dissolve
+        unknown "But not Oscar, oh no! When he saw his daddy, he came running straight to me. Didn't you, Oscar, didn't you?!"
 
-    unknown "Or anyone. They most of the time avoid me."
+        scene v9slake11a
+        with dissolve
 
-    scene v9slake11c
-    with dissolve
+        u "Who would have though. You do kind of look alike."
 
-    u "Right..."
+        scene v9slake11b
+        with dissolve
 
-    scene v9slake11 # same as 11a, mouth open
-    with dissolve
+        unknown "It was just like magic. I knew right away he was gonna be mine."
 
-    unknown "But not Oscar, oh no! When he saw his daddy, he came running straight to me. Didn't you, Oscar, didn't you?!"
+        scene v9slake11c
+        with dissolve
 
-    scene v9slake11a
-    with dissolve
+        u "(I would say it goes the other way around.)"
 
-    u "Who would have though. You do kind of look alike."
+        u "That's cute! Nice talking to you!"
 
-    scene v9slake11b
-    with dissolve
+        # what if you don't know oscar
+    call screen v9s7_lakeFull
 
-    unknown "It was just like magic. I knew right away he was gonna be mine."
-
-    scene v9slake11c
-    with dissolve
-
-    u "(I would say it goes the other way around.)"
-
-    u "That's cute! Nice talking to you!"
-
-    # what if you don't know oscar
-
-
-
-call screen fr5lakefull
-
-# -back to free roam-
+    # -back to free roam-
 
 # -if you click on the guy again, MC thinks to himself-
-
 label fr5dogwalker2:
+    scene fr5lakefull
 
-scene fr5lakefull
+    u "(I'm not going near that dog again.)"
 
-
-
-u "(I'm not going near that dog again.)"
-
-
-
-call screen fr5lakefull
+    call screen v9s7_lakeFull
 
 # -doing all the conversations ends the free roam-
 # -animation of time passing by for about 4 hours-
 # -MC is sitting with Ryan on the picnic blanket, and Aubrey and Riley come and join you. It's starting to get darker.-
 
-label fr5ryan2:
-
-call screen endfr5
-
 label fr5ryan3:
 
+    scene v9slake12 #TPP showing aubrey, ryan, mc  and riley sitting on the picnic matt, it's evening now.
+    with fade
 
+    pause 0.5
 
-scene v9slake12 #TPP showing aubrey, ryan, mc  and riley sitting on the picnic matt, it's evening now.
-with fade
-
-pause 0.5
-
-scene v9slake13 #FPP close up Ryan (only ryan) toasting with a beer, mouth open, smiling
-with dissolve
-
-ry "Here's to a great day!"
-
-scene v9slake14 #FPP close up Aubrey,(only aubrey) looking at her soda can dissapointed, mouth open
-with dissolve
-
-au "Why'd you give me soda?"
-
-scene v9slake13b #same as 13, Ryan looking at Aubrey, cheeky, mouth open
-with dissolve
-
-ry "It's the driver's juice."
-
-scene v9slake14b # same as 14, aubrey looking at Ryan funnily annoyed, mouth open
-with dissolve
-
-au "I don't have to drive, any of you could!"
-
-scene v9slake13b
-with dissolve
-
-# -Ryan is already chugging down his beer-
-
-ry "Boo Beeb (too late)."
-
-scene v9slake15 # FPP close up Riley (only riley) with beer in her hand, smiling mouth open talking to the group
-with dissolve
-
-ri "Today was certainly relaxing..."
-
-if aubreyrs and joinAubreyLake:
-    scene v9slake14d #same as 14b, now aubrey looking at you slight smile mouth open
+    scene v9slake13 #FPP close up Ryan (only ryan) toasting with a beer, mouth open, smiling
     with dissolve
 
-    au "And exciting."
+    ry "Here's to a great day!"
 
-    scene v9slake14e # same as 14d, mouth closed
+    scene v9slake14 #FPP close up Aubrey,(only aubrey) looking at her soda can dissapointed, mouth open
     with dissolve
 
-else:
+    au "Why'd you give me soda?"
 
-    scene v9slake15a # same as 15, mouth closed
+    scene v9slake13b #same as 13, Ryan looking at Aubrey, cheeky, mouth open
     with dissolve
 
-u "Most of all, fun. Thanks for inviting me, you guys. I needed this."
+    ry "It's the driver's juice."
 
-scene v9slake15b #same as 15, looks at mc (this is in first person), cheeky smile, mouth open
-with dissolve
+    scene v9slake14b # same as 14, aubrey looking at Ryan funnily annoyed, mouth open
+    with dissolve
 
-ri "Well, now you will know for the next time, always to say yes to all of my awesome proposals."
+    au "I don't have to drive, any of you could!"
 
-scene v9slake15c # same as 15b, mouth closed
-with dissolve
+    scene v9slake13b
+    with dissolve
 
-u "I'll have to think about it."
+    # -Ryan is already chugging down his beer-
 
-scene v9slake14d
-with fade
+    ry "Boo Beeb (too late)."
 
-au "It's starting to get dark and chilly. What do you say we head back?"
+    scene v9slake15 # FPP close up Riley (only riley) with beer in her hand, smiling mouth open talking to the group
+    with dissolve
 
-scene v9slake14e
-with dissolve
+    ri "Today was certainly relaxing..."
 
-u "Sure."
+    if aubreyrs and joinAubreyLake:
+        scene v9slake14d #same as 14b, now aubrey looking at you slight smile mouth open
+        with dissolve
 
-scene v9slake15
-with dissolve
+        au "And exciting."
 
-ri "Let me grab our stuff."
+        scene v9slake14e # same as 14d, mouth closed
+        with dissolve
 
-stop music fadeout 3
+    else:
+        scene v9slake15a # same as 15, mouth closed
+        with dissolve
 
-jump v9_driving_home_lake
+    u "Most of all, fun. Thanks for inviting me, you guys. I needed this."
 
+    scene v9slake15b #same as 15, looks at mc (this is in first person), cheeky smile, mouth open
+    with dissolve
+
+    ri "Well, now you will know for the next time, always to say yes to all of my awesome proposals."
+
+    scene v9slake15c # same as 15b, mouth closed
+    with dissolve
+
+    u "I'll have to think about it."
+
+    scene v9slake14d
+    with fade
+
+    au "It's starting to get dark and chilly. What do you say we head back?"
+
+    scene v9slake14e
+    with dissolve
+
+    u "Sure."
+
+    scene v9slake15
+    with dissolve
+
+    ri "Let me grab our stuff."
+
+    stop music fadeout 3
+
+    jump v9_driving_home_lake
 # -the scene continues in scene 8-

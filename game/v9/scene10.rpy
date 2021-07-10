@@ -30,7 +30,7 @@ label v9_history_class:
         jump v9_hc_cont1
 
     else:
-        scene v9hc5 # TPP. Show MC taking a seat next to Imre, MC looks a bit embarassed.
+        scene v9hc5 # TPP. Show MC taking a seat next to Imre, MC looks a bit embarrassed.
         with dissolve
 
         pause 0.5
@@ -92,7 +92,8 @@ label v9_hc_cont2:
     scene v9hc8b # FPP. Same camera as v9hc8, Mr. Lee placing the sword back on his desk, mouth open.
     with dissolve
 
-    lee "Now, once I separate you into small groups, I want you to think about what life would have been like in a Viking village, and come up with a short scenario to act out. There's a box of props in the corner at your disposal. Sorry, no real swords."
+    lee "Now, once I separate you into small groups, I want you to think about what life would have been like in a Viking village, and come up with a short scenario to act out."
+    lee "There's a box of props in the corner at your disposal. Sorry, no real swords."
 
     scene v9hc8c # FPP. Same camera as v9hc8, Mr. Lee now stood next to his desk looking at the class, mouth closed.
     with dissolve
