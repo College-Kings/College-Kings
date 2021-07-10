@@ -176,7 +176,7 @@ label phn_chloe11_done:
     if contact_Chloe.getMessage("Guess you'll have to wait and see ;)"):
         scene v8apes28 # FPP. MC inside the room now and he notices Chloe and Caleb chitchatting
         with dissolve
-        cl "(Oh, Chloe is here.)"
+        u "(Oh, Chloe is here.)"
 
         scene v8apes29 # FPP. MC approaches them so close up shot of Chloe talking now. Caleb need not be in the shot. Chloe looking into the camera, smiling with teeth visible (not talking)
         with dissolve

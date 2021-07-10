@@ -41,7 +41,9 @@ label phn_riley11_setup:
     $ contact_Riley.newMessage(_("At least you can read! I just found out I need glasses!"))
     $ contact_Riley.addReply(_("I think you'd look cute in glasses."))
     $ contact_Riley.newMessage(_("I don't know. Why don't you come with me and Aubrey to try some on?"))
-    $ contact_Riley.addReply(_("Sure! Meet you there?"))
+    $ contact_Riley.addReply(_("sure I will come but where is the store ?"))
+    $ contact_Riley.newMessage(_("Just down the road from the gym on the right hand side of the road"))
+    $ contact_Riley.addReply(_("Cool will meet you both there"))
     $ contact_Riley.newMessage(_("Great!"))
     play sound "sounds/vibrate.mp3"
 

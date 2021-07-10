@@ -146,7 +146,7 @@ label after_drugs:
 
     scene v8josh22b
     with dissolve
-    u "He's sleeping at the moment, Amber, and I...."
+    u "He's sleeping at the moment, Amber, and I..."
 
     play sound "sounds/rejectcall.mp3"
     pause 0.5
@@ -628,7 +628,6 @@ label after_drugs:
                 jump amber_sex_at_joshs
 
             "Reject her advances":
-                $ amberSexAtJoshs = False
                 $ amberrs = False
                 if laurenrs:
                     $ addPoint("bf")
@@ -650,7 +649,6 @@ label after_drugs:
                 jump tues_morning_at_joshs
 
     else:
-        $ amberSexOfferAtJoshs = False
         jump tues_morning_at_joshs
 
 label tues_morning_at_joshs:

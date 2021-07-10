@@ -81,7 +81,6 @@ label josh_room:
 
         "Say no":
             $ addPoint("bf")
-            $ helpJosh = False
 
             u "Honestly, man, I don't think so. This isn't me and I don't want to get caught, especially with that shit."
 

@@ -117,7 +117,7 @@ label prot_w_au_wing:
     scene v8sprot3
     with dissolve
 
-    aut "That's good. It's nice to know people who are knowledgable in politics and the issues we still face in society everyday."
+    aut "That's good. It's nice to know people who are knowledgeable in politics and the issues we still face in society everyday."
 
     scene v8sprot3a
     with dissolve

@@ -38,7 +38,6 @@ label hallway_w_nora:
         no "Good because..."
 
         $ noramad = False
-        $ noralikes = True
 
         jump cont_nora_hall
 
@@ -89,7 +88,7 @@ label nora_trip_exc:
     jump cont_nora_hall_2
 
 label nora_trip_nerv:
-    u "Wow that sounds awesome{w}...ly expensive."
+    u "Wow that sounds awesome...ly expensive."
 
     scene v8shal3
     with dissolve

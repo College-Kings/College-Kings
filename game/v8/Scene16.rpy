@@ -5,7 +5,7 @@
 
 init python:
     def v8s16_kiwiiReply1():
-        v8s16_kiwiiPost2.newComment("Lauren", _("Took alot of work but Homecoming looks great"))
+        v8s16_kiwiiPost2.newComment("Lauren", _("Took a lot of work but Homecoming looks great"))
 
     def v8s16_kiwiiReply2():
         v8s16_kiwiiPost2.newComment("Lauren", _("Thank you miss Rose also says thank you"))

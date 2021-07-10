@@ -143,7 +143,7 @@ label for_w_gray_cont_2:
 
         jump for_w_gray_cont_3
 
-    if apesVids >= 2: # 2nd
+    elif apesVids >= 2: # 2nd
         scene v8sfor8c
         with dissolve
 
@@ -156,7 +156,7 @@ label for_w_gray_cont_2:
 
         jump for_w_gray_cont_3
 
-    if apesVids == 1: # 3rd
+    else: # 3rd
         scene v8sfor8d # FPP. Same camera as v8sfor8, Grayson concerned expression, mouth open.
         with dissolve
 

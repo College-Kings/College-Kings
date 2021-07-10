@@ -205,7 +205,7 @@ label steak_w_chloe_cont:
     scene v8steak6 # FPP. Show the waiter coming to at the table ready to take their order, Chloe looking at waiter also, Chloe mouth open.
     with dissolve
 
-    cl "I'll have a salmon roll, tuna roll, and volcano roll... oh and some miso soup!"
+    cl "I'll have a large beef ramen with an egg please!"
 
     scene v8steak7 # FPP. Show Chloe looking at camera, smile, mouth closed.
     with dissolve

@@ -47,6 +47,9 @@ label amber_sex_at_joshs:
     with dissolve
     pause 2
 
+    show screen v8s30_amberSexOverlay
+
+label v8s30_amberBlowjob:
     scene v8amber6 # FPP. Show Amber kneeling in front of MC (camera tilted down accordingly), looking into the camera, mouth open
     with dissolve
     am "I want your cock in my mouth. Now."
@@ -115,6 +118,7 @@ label amber_sex_at_joshs:
     u "That is a magnificent ass!"
     am "*Chuckles* I'm glad you like it."
 
+label v8s30_amberCowgirl:
     scene v8amber10 # FPP (As seen from the MC's position in v8amber8). Amber climbing onto the bed while looking into the camera. Check animation references, this should lead up to the position in Animation 2
     with dissolve
     pause
@@ -155,6 +159,7 @@ label amber_sex_at_joshs:
     u "Nope. Ahh! but this feels so good."
     am "Good. I wanna try something."
 
+label v8s30_amberAnal:
     scene v8amber11 # TPP (from the front, add DoF to focus on Amber). Show Amber on all fours and MC on knees behind her. Amber looking through the corner of her eye (with her head titled sideways a little) with a seductive smile, mouth closed. MC's face is out of frame preferably. Check animation references, this should be similar the position in Animation 3
     with dissolve
     u "Doggy?"
@@ -212,12 +217,14 @@ label amber_sex_at_joshs:
     am "*Moans*"
 
     stop music fadeout 3
-    
+    hide screen v8s30_amberSexOverlay
+
     scene v8amber13 # TPP. Shot of MC and Amber lying together in the bed in their underwear. MC's hands just folded back and behind his head. Amber's head and one hand on MC's chest, both of them relaxed, smiling and mouth closed
     with Fade(0.75, 0.25, 0.75)
     pause 1
 
 label v8s30_nsfwSkipLabel1:
+
     scene v8amber14 # TPP (MC and Amber in same position as v8amber13) but camera moved closer to focus on Amber. Amber satisfied look, smiling, mouth open. MC's face need not be in the frame but if it is, his mouth is closed. Amber should not be looking at the MC, but staring into the distance
     with dissolve
     am "My God, you were amazing."

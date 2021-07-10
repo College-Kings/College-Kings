@@ -110,7 +110,7 @@ label seb_in_room:
     scene v8ssir8c # FPP. Same camera as v8ssir8, Sebastian now looking back at camera, laugh, mouth open.
     with dissolve
 
-    se "Fuck man, do I! Haha. I've always just been a \"Do It Yourself\" kind of guy, even  for stupid and small things."
+    se "Fuck man, do I! Haha. I've always just been a \"Do It Yourself\" kind of guy, even for stupid and small things."
 
     scene v8ssir8d # FPP. Same cabera as v8ssir8, Sebastian smile, mouth closed.
     with dissolve
@@ -130,7 +130,8 @@ label seb_in_room:
     scene v8ssir8c
     with dissolve
 
-    se "Haha, I'm not surprised. Me and Marcus climb the hospital, from the ground to roof, -Sebastian points down then up- no equipment, just pure balls and stupidity haha. It's also a great workout bro. Really gets those muscles working and that blood pumping. You in?"
+    se "Haha, I'm not surprised. Me and Marcus climb the hospital, from the ground to roof, no equipment, just pure balls and stupidity haha."
+    se "It's also a great workout bro. Really gets those muscles working and that blood pumping. You in?"
 
     scene v8ssir8d
     with dissolve

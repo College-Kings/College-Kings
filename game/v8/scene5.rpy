@@ -7,6 +7,8 @@ label hoco_amb_night:
     if config_censored:
         call screen censoredPopup("v8s5_nsfwSkipLabel1")
 
+    show screen v8s5_amberSexOverlay
+
     scene v8samb1 # TPP. Show Amber & MC laying on the floor in the living room. Amber begins to remove MC's pants. Amber mouth open, smile.
     with dissolve
 
@@ -19,6 +21,7 @@ label hoco_amb_night:
 
     play music "music/msexy.mp3"
 
+label v8s5_amberBlowjob:
     scene v8samb3 # FPP. Show Amber starting to give MC a blowjob. MC legs spread enough for Amber to fit in-between, Amber looking at MC (Camera). (If needed, place the camera slightly above MC's head to give a clear view, so need not be technically FPP. Just should look first person)
     with dissolve
     pause 1
@@ -54,6 +57,7 @@ label hoco_amb_night:
 
     pause 1
 
+label v8s5_amberMissonary:
     scene v8samb6 # TPP. Show Amber with one leg on MC, MC begins to bang Amber whilst holding her leg with one hand. Amber's eyes roll back in her head. Amber mouth open. Camera from the side.
     with dissolve
 
@@ -99,6 +103,7 @@ label hoco_amb_night:
 
     pause 0.5
 
+label v8s5_amberFacefuck:
     scene v8samb9 # TPP. Show a closeup of Amber putting her mouth on MC's penis. MC places his hands on Amber's head to start banging her mouth.
     with dissolve
 
@@ -131,7 +136,8 @@ label hoco_amb_night:
     with dissolve
 
     u "Damn. That was fucking good."
-
+    
+    hide screen v8s5_amberSexOverlay
     $ renpy.end_replay()
 
     scene v8samb10b # FPP. Same camera as v8samb10, Amber mouth open, slight laugh.
