@@ -25,7 +25,7 @@ label v10_aubrey_house:
                 scene v10auh1b # FPP Same angle and expression as v10auh1a,, Aubrey mouth closed
                 with dissolve
 
-                u "Well… I may have one or two ideas on what could be done once we’re actually at your place."
+                u "Well… I may have one or two ideas on what could be done once we're actually at your place."
 
                 scene v10auh1a
                 with dissolve
@@ -56,7 +56,7 @@ label v10_aubrey_house:
                 scene v10auh1b
                 with dissolve
 
-                u "*Chuckles* We’ll see how the walk goes."
+                u "*Chuckles* We'll see how the walk goes."
 
                 scene v10auh1c
                 with dissolve
@@ -82,7 +82,7 @@ label v10_aubrey_house:
     scene v10auh1e # FPP Same angle and expression as v10auh1d, Aubrey mouth open
     with dissolve
 
-    au "It kinda was. Usually it’s really quiet around this time, but all of the sudden it was packed."
+    au "It kinda was. Usually it's really quiet around this time, but all of the sudden it was packed."
     au "I left early to keep from beefing with this one girl."
 
     scene v10auh1d
@@ -106,7 +106,7 @@ label v10_aubrey_house:
     scene v10auh1c
     with dissolve
 
-    au "That's exactly what I told her. It’s not my fault your boyfriend has to stray cause you can’t please him in bed... *Laughs*"
+    au "That's exactly what I told her. It's not my fault your boyfriend has to stray cause you can't please him in bed... *Laughs*"
 
     scene v10auh1b
     with dissolve
@@ -131,7 +131,7 @@ label v10_aubrey_house:
             scene v10auh1f # FPP Same angle as v10auh1, Aubrey has a big smile, mouth closed
             with dissolve
 
-            u "What? You’re saying you weren’t always this hot?"
+            u "What? You're saying you weren't always this hot?"
 
             scene v10auh1c
             with dissolve
@@ -169,7 +169,7 @@ label v10_aubrey_house:
     scene v10auh1e
     with dissolve
 
-    au "Honestly I think it’s mostly due to my older sister."
+    au "Honestly I think it's mostly due to my older sister."
     au "She's a Kiwii model. She went through a lot of the same gossip and drama stuff that I went through."
 
     au "But if you saw her today you would never guess it."
@@ -218,13 +218,13 @@ label v10_aubrey_house:
             scene v10auh1
             with dissolve
 
-            u "How’s that going for you?"
+            u "How's that going for you?"
 
             if aubreyrs: # If in a relationship with Aubrey
                 scene v10auh1a
                 with dissolve
 
-                au "Pretty good, I’d say we have a lot of fun, wouldn’t you?"
+                au "Pretty good, I'd say we have a lot of fun, wouldn't you?"
 
                 scene v10auh1b
                 with dissolve
@@ -243,12 +243,12 @@ label v10_aubrey_house:
             scene v10auh1h
             with dissolve
 
-            u "So your sister… is she like really into parties or what’s her deal?"
+            u "So your sister… is she like really into parties or what's her deal?"
 
             scene v10auh1c
             with dissolve
 
-            au "*Laughs* I think that’s enough about my family."
+            au "*Laughs* I think that's enough about my family."
 
     scene v10auh2 # FPP Show Aubrey, inside hallway of Chicks house, Aubrey holding clothes in her hand while wearing gym clothes, mouth open
     with fade
@@ -375,6 +375,8 @@ label v10_aubrey_house:
 
                 u "Someone's eager!"
 
+                show screen v10s17_aubreySexOverlay
+
                 image v10aubbj = Movie(play="images/v10/Scene 17/v10aubbj.webm", loop=True, image= "images/v10/Scene 17/v10aubbjStart.webp", start_image="images/v10/Scene 17/v10aubbjStart.webp") # TPP. Aubrey on her knees giving MC a blowjob who is sat on the toilet.
                 image v10aubbjf = Movie(play="images/v10/Scene 17/v10aubbjf.webm", loop=True, image= "images/v10/Scene 17/v10aubbjStart.webp", start_image="images/v10/Scene 17/v10aubbjStart.webp")
 
@@ -392,80 +394,83 @@ label v10_aubrey_house:
 
                 image v10aubfa = Movie(play="images/v10/Scene 17/v10aubfa.webm", loop=True, image= "images/v10/Scene 17/v10aubfaStart.webp", start_image="images/v10/Scene 17/v10aubfaStart.webp") # TPP. Aubrey on her knees giving MC a blowjob who is sat on the toilet.
                 image v10aubfaf = Movie(play="images/v10/Scene 17/v10aubfaf.webm", loop=True, image= "images/v10/Scene 17/v10aubfaStart.webp", start_image="images/v10/Scene 17/v10aubfaStart.webp")
-
-                scene v10aubbj # Aubrey starts giving MC a blowjob while he's sitting on the toilet.
-                with dissolve
-                pause
-
-                u "Holy shit, this is amazing!"
-
-                u "You really know what you’re doing."
-
-                scene v10aubbjf
-                with dissolve
-                pause
-
-                u "(Damn, she’s good!)"
-
-                u "Fuck, Aubrey!"
-
-                scene v10aubbjtpp
-                with dissolve
-                pause
-
-                u "Oh fuck!"
-
-                scene v10aubbjtppf
-                with dissolve
-
-                u "Mhmmmm..."
-                u "That's fucking amazing."
-
-                scene v10aubcg # Aubrey then gets up and rides MC
-                with dissolve
-                pause
-
-                au "We're not finished yet!"
-
-                au "Oh my God it’s BIG!"
-
-                scene v10aubcgf
-                with dissolve
-                pause
-
-                u "Damn this feels good!"
-
-                au "*Moaning*"
-
-                scene v10aubll # Fades to MC bracing Aubrey against him in standing missionary
-                with dissolve
-                pause
-
-                u "My turn!"
-
-                au "OH MY GOD!"
-
-                scene v10aubllf
-                with dissolve
-                pause
-
-                au "Faster, [name]!"
-
-                au "*Moaning*"
-
-                scene v10aubll2
-                with dissolve
-                pause
                 
-                au "*Groans* Mhmmmmm."
+                label v10s17_aubreyBlowjob:
+                    scene v10aubbj # Aubrey starts giving MC a blowjob while he's sitting on the toilet.
+                    with dissolve
+                    pause
 
-                au "Fuuuuuuck!"
+                    u "Holy shit, this is amazing!"
 
-                scene v10aubll2f
-                with dissolve
-                pause 
+                    u "You really know what you're doing."
 
-                au "This feel so good!"
+                    scene v10aubbjf
+                    with dissolve
+                    pause
+
+                    u "(Damn, she's good!)"
+
+                    u "Fuck, Aubrey!"
+
+                    scene v10aubbjtpp
+                    with dissolve
+                    pause
+
+                    u "Oh fuck!"
+
+                    scene v10aubbjtppf
+                    with dissolve
+
+                    u "Mhmmmm..."
+                    u "That's fucking amazing."
+
+                label v10s17_aubreyCowgirl:
+                    scene v10aubcg # Aubrey then gets up and rides MC
+                    with dissolve
+                    pause
+
+                    au "We're not finished yet!"
+
+                    au "Oh my God it's BIG!"
+
+                    scene v10aubcgf
+                    with dissolve
+                    pause
+
+                    u "Damn this feels good!"
+
+                    au "*Moaning*"
+
+                label v10s17_aubreyStanding:
+                    scene v10aubll # Fades to MC bracing Aubrey against him in standing missionary
+                    with dissolve
+                    pause
+
+                    u "My turn!"
+
+                    au "OH MY GOD!"
+
+                    scene v10aubllf
+                    with dissolve
+                    pause
+
+                    au "Faster, [name]!"
+
+                    au "*Moaning*"
+
+                    scene v10aubll2
+                    with dissolve
+                    pause
+                    
+                    au "*Groans* Mhmmmmm."
+
+                    au "Fuuuuuuck!"
+
+                    scene v10aubll2f
+                    with dissolve
+                    pause 
+
+                    au "This feel so good!"
 
                 scene v10aubfa # Aubrey gets on her knees in front MC while he's standing to finish him off
                 with dissolve
@@ -480,6 +485,8 @@ label v10_aubrey_house:
                 au "Yes [name], cum on my face!"
 
                 au "*Laughs* And scene."
+
+                hide screen v10s17_aubreySexOverlay
 
                 scene v10aubfa1 # FPP. camera looking down at Aubrey kneeling, Face covered in cum, mouth closed
                 with flash
@@ -620,12 +627,12 @@ label v10_aubrey_house:
                 scene v10auh2f
                 with dissolve
 
-                au "Surprised you’re fine not watching, even though you know I’m completely naked behind this door. Someone's being a gentleman all of a sudden."
+                au "Surprised you're fine not watching, even though you know I'm completely naked behind this door. Someone's being a gentleman all of a sudden."
 
                 scene v10auh5k
                 with dissolve
 
-                u "You gotta strike the right balance. Can’t be a player 24/7."
+                u "You gotta strike the right balance. Can't be a player 24/7."
 
                 scene v10auh2f
                 with dissolve
@@ -640,12 +647,12 @@ label v10_aubrey_house:
                 scene v10auh2f
                 with dissolve
 
-                au "Tease? I don’t know what you’re talking about."
+                au "Tease? I don't know what you're talking about."
 
                 scene v10auh5j
                 with dissolve
 
-                u "Sure you don’t."
+                u "Sure you don't."
 
             else: # Not in a relationship with Aubrey
                 scene v10auh3b
@@ -746,12 +753,12 @@ label v10_aubrey_room:
     scene v10auh8b # FPP Same angle and expression as v10auh8, Aubrey mouth open
     with dissolve
 
-    au "*Smiles* My mom and my sister were both in the Chicks. So it’s kind of a family tradition."
+    au "*Smiles* My mom and my sister were both in the Chicks. So it's kind of a family tradition."
 
     scene v10auh8
     with dissolve
 
-    u "That's pretty impressive, I didn’t even know you guys were around that long. Since you’re VP, I assume you quite enjoy being one?"
+    u "That's pretty impressive, I didn't even know you guys were around that long. Since you're VP, I assume you quite enjoy being one?"
 
     scene v10auh8a
     with dissolve
@@ -783,7 +790,7 @@ label v10_aubrey_room:
             scene v10auh8b
             with dissolve
 
-            au "Haha, okay okay. I’m just pulling their leg a bit."
+            au "Haha, okay okay. I'm just pulling their leg a bit."
 
         "Don't defend them":
             scene v10auh8
@@ -817,7 +824,7 @@ label v10_aubrey_room:
     scene v10auh8
     with dissolve
 
-    u "Haha true. Anyways I’m probably gonna head off now, I still got stuff to do, you know? *Laughs*"
+    u "Haha true. Anyways I'm probably gonna head off now, I still got stuff to do, you know? *Laughs*"
 
     scene v10auh8a
     with dissolve

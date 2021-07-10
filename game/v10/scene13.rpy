@@ -98,12 +98,12 @@ label v10_wolves_redec:
 
             u "Hey man, hope you don't mind me asking, but what made you back out at the brawl?"
 
-            scene v10swhr6a # FPP. Same as whr6, slight embarassed expression, mouth open.
+            scene v10swhr6a # FPP. Same as whr6, slight embarrassed expression, mouth open.
             with dissolve
 
-            guyd "I was waiting for you to bring that up. It's kind of embarassing, man."
+            guyd "I was waiting for you to bring that up. It's kind of embarrassing, man."
 
-            scene v10swhr6b # FPP. Same as whr6, slight embarassed expression, mouth closed.
+            scene v10swhr6b # FPP. Same as whr6, slight embarrassed expression, mouth closed.
             with dissolve
 
             u "Embarassing? What's up?"

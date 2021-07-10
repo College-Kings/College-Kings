@@ -207,7 +207,7 @@ label v10_ms_rose_fight:
     scene v10msf5 # TPP. Show MS rose. Touching MC on the cheek, smiling, mouth open
     with dissolve
 
-    mrr "You're too sweet."
+    ro "You're too sweet."
 
     menu:
         "Make a move":

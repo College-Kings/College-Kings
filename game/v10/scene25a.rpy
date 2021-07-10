@@ -260,7 +260,7 @@ label v10_sam_kitchen:
     scene v10skt4b
     with dissolve
 
-    sa "*Drunk* Cause you like to hangout, like right now, we're hanging out. That means I'm a bunny too."
+    sa "*Drunk* Cause you like to hang out, like right now, we're hanging out. That means I'm a bunny too."
 
     scene v10skt5 # FPP. Show close up of Samantha, slight smile, mouth open
     with dissolve

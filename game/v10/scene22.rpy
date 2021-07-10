@@ -118,7 +118,7 @@ label v10_cafe_w_jenny:
 
         u "As we both know, Penelope is a really nice and caring person."
         u "But sometimes, she cares a little too much..."
-        u "Her kindness just gets in the way of her judgement."
+        u "Her kindness just gets in the way of her judgment."
 
         scene v10scwj7
         with dissolve
@@ -137,7 +137,7 @@ label v10_cafe_w_jenny:
         scene v10scwj7c
         with dissolve
 
-        u "Well, Penelope told me awhile ago that a friend of hers had some trouble and she wanted to do whatever she could to help her out."
+        u "Well, Penelope told me a while ago that a friend of hers had some trouble and she wanted to do whatever she could to help her out."
 
         u "Come to find out, that \"whatever\" was hacking into the school system and getting her friend accepted into San Vallejo College."
 
@@ -220,12 +220,12 @@ label v10_cafe_w_jenny:
                 else:
                     $ jennyLike -= 1
 
-                    u "*Smirks* You're always welcome to join."
+                u "*Smirks* You're always welcome to join."
 
-                    scene v10scwj7
-                    with dissolve
+                scene v10scwj7
+                with dissolve
 
-                    jen "Maybe I'll take you up on that some time."
+                jen "Maybe I'll take you up on that some time."
 
             "Stay friendly":
                 u "Yeah, they have really good muffins here as well..."
@@ -547,7 +547,7 @@ label v10_cafe_w_jenny:
         scene v10scwj20
         with dissolve
 
-        pe "Yeah well... it worked out because I did something. I sort of uhm hacked into the school and made sure you got accepted."
+        pe "Yeah well... it worked out because I did something. I sort of hacked into the school and made sure you got accepted."
 
         scene v10scwj7d
         with dissolve
@@ -636,7 +636,7 @@ label v10_cafe_w_jenny:
                 scene v10scwj20a
                 with dissolve
 
-                u "After all the kind stuff good you've done, I'm sure some good karma should be headed your way. *Chuckles*"
+                u "After all the kind stuff you've done, I'm sure some good karma should be headed your way. *Chuckles*"
 
                 scene v10scwj20
                 with dissolve

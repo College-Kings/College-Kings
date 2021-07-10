@@ -192,12 +192,12 @@ label v10_econ_class:
             scene v10eco8a # FPP. same 8, mouth closed.
             with dissolve
 
-            u "Uhm, yeah I’m… fine. You?"
+            u "Uhm, yeah I'm… fine. You?"
 
             scene v10eco8
             with dissolve
 
-            ro "Yeah, uhm. I’m actually really happy."
+            ro "Yeah, uhm. I'm actually really happy."
         else:
             ro "I just wanted to see how you were doing after... everything."
 

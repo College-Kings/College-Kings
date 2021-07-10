@@ -92,4 +92,4 @@ label end10:
     if renpy.loadable("v11/scene1.rpy"):
         jump v11_start
     else:
-        jump end_credits
+        jump gameEnd

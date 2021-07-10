@@ -5,7 +5,7 @@
 
 label v10_imre_vs_caleb_fight:
     play music "music/v10/Scene 4 & 5/Track Scene 4 & 5.mp3" fadein 3
-    scene v10ivc3 # TPP. Show Josh in the ring strolling around as if he's adressing a crowd, mouth open.
+    scene v10ivc3b # TPP. Show Josh in the ring strolling around as if he's adressing a crowd, mouth open.
     with fade
 
     jo "Well, the show must go on."
@@ -14,12 +14,12 @@ label v10_imre_vs_caleb_fight:
     
     jo "Imre versus Caleb!"
 
-    scene v10ivc4 # TPP. Show Imre stepping into the ring.
+    scene v10ivc4b # TPP. Show Imre stepping into the ring.
     with dissolve
 
     pause 0.75
 
-    scene v10ivc5 # TPP. Show Caleb stepping into the ring.
+    scene v10ivc5b # TPP. Show Caleb stepping into the ring.
     with dissolve
 
     pause 0.75

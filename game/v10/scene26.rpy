@@ -392,36 +392,39 @@ label v10_amber_skatepark:
 
         am "Why not?"
 
-        $ rough_rider = True
-        $ grantAchievement("rough_rider")
-
         scene v10sasp5d # FPP. Same camera as v10sasp5. Show Amber looking down and attempting to pull MC's pants down. Smiling, mouth closed.
         with dissolve
         menu:
             "Let her":
+                show screen v10s26_amberSexOverlay
+
+                $ rough_rider = True
+                $ grantAchievement("rough_rider")
+
                 stop music fadeout 3
                 play music "music/v10/Scene 26/Track Scene 26_2.mp3" fadein 3
                 image v10ambbj = Movie(play="images/v10/Scene 26/v10ambbj.webm", loop=True, image="images/v10/Scene 26/v10ambbjStart.webp", start_image="images/v10/Scene 26/v10ambbjStart.webp") # TPP Amber sucking MC's cock on the top of the quater pipe
                 image v10ambbjf = Movie(play="images/v10/Scene 26/v10ambbjf.webm", loop=True, image="images/v10/Scene 26/v10ambbjStart.webp", start_image="images/v10/Scene 26/v10ambbjStart.webp")
 
-                scene v10ambbj # ignore
-                with dissolve
+                label v10s26_amberBlowjob:                
+                    scene v10ambbj # ignore
+                    with dissolve
 
-                u "Damn Amber!"
+                    u "Damn Amber!"
 
-                scene v10ambbj
-                with dissolve
+                    scene v10ambbj
+                    with dissolve
 
-                u "Holy fuck!"
+                    u "Holy fuck!"
 
-                scene v10ambbjf
-                with dissolve
+                    scene v10ambbjf
+                    with dissolve
 
-                u "I didn't know you... oh shit!"
+                    u "I didn't know you... oh shit!"
 
-                scene v10ambbjf
-                with dissolve
-                pause
+                    scene v10ambbjf
+                    with dissolve
+                    pause
 
                 scene v10sasp8 # FPP. Same camera as v10sasp8. Show Amber smiling and removing her clothes.
                 with dissolve
@@ -436,67 +439,70 @@ label v10_amber_skatepark:
                 image v10ambrf = Movie(play="images/v10/Scene 26/v10ambrf.webm", loop=True, image="images/v10/Scene 26/v10ambrfStart.webp", start_image="images/v10/Scene 26/v10ambrfStart.webp") # TPP laying behind amber fucking her from behind.
                 image v10ambrff = Movie(play="images/v10/Scene 26/v10ambrff.webm", loop=True, image="images/v10/Scene 26/v10ambrfStart.webp", start_image="images/v10/Scene 26/v10ambrfStart.webp")
 
-                scene v10ambrf
-                with dissolve
+                label v10s26_amberLying:
+                    scene v10ambrf
+                    with dissolve
 
-                am "Oh I needed this!"
+                    am "Oh I needed this!"
 
-                scene v10ambrff
-                with dissolve
+                    scene v10ambrff
+                    with dissolve
 
-                am "Fuck me harder [name]!"
+                    am "Fuck me harder [name]!"
 
-                scene v10ambrff
-                with dissolve
+                    scene v10ambrff
+                    with dissolve
 
-                am "Oh god!"
+                    am "Oh god!"
 
                 image v10ambda = Movie(play="images/v10/Scene 26/v10ambda.webm", loop=True, image="images/v10/Scene 26/v10ambdaStart.webp", start_image="images/v10/Scene 26/v10ambdaStart.webp") # TPP MC fucking amber in the ass doggystyle
                 image v10ambdaf = Movie(play="images/v10/Scene 26/v10ambdaf.webm", loop=True, image="images/v10/Scene 26/v10ambdaStart.webp", start_image="images/v10/Scene 26/v10ambdaStart.webp")
 
+                label v10s26_amberDoggy:
+                    scene v10ambda
+                    with dissolve
 
-                scene v10ambda
-                with dissolve
+                    am "Oh my God, FASTER!"
 
-                am "Oh my God, FASTER!"
+                    am "YESSSS!"
 
-                am "YESSSS!"
+                    scene v10ambdaf
+                    with dissolve
 
-                scene v10ambdaf
-                with dissolve
+                    u "Damn this feels good!"
 
-                u "Damn this feels good!"
-
-                am "Oh fuck!"
+                    am "Oh fuck!"
 
                 image v10ambcg = Movie(play="images/v10/Scene 26/v10ambcg.webm", loop=True, image="images/v10/Scene 26/v10ambcgStart.webp", start_image="images/v10/Scene 26/v10ambcgStart.webp") # TPP MC fucking amber in the ass doggystyle
                 image v10ambcgf = Movie(play="images/v10/Scene 26/v10ambcgf.webm", loop=True, image="images/v10/Scene 26/v10ambcgStart.webp", start_image="images/v10/Scene 26/v10ambcgStart.webp")
 
+                label v10s26_amberCowgirl:
+                    scene v10ambcg
+                    with dissolve
 
-                scene v10ambcg
-                with dissolve
+                    am "I could get used to this!"
 
-                am "I could get used to this!"
+                    scene v10ambcg
+                    with dissolve
 
-                scene v10ambcg
-                with dissolve
+                    u "Damn you know what you're doing!"
 
-                u "Damn you know what you're doing!"
+                    scene v10ambcgf
+                    with dissolve
 
-                scene v10ambcgf
-                with dissolve
+                    am "Oh shit I'm gonna cum!"
 
-                am "Oh shit I'm gonna cum!"
+                    scene v10ambcgf
+                    with dissolve
 
-                scene v10ambcgf
-                with dissolve
+                    u "Me too."
 
-                u "Me too."
+                    scene v10ambcgf
+                    with flash
 
-                scene v10ambcgf
-                with flash
+                    am "Cum in me [name]."
 
-                am "Cum in me [name]."
+                hide screen v10s26_amberSexOverlay
 
                 scene v10sasp12 # FPP. Show Amber nude, smiling, mouth open.
                 with dissolve
@@ -654,7 +660,7 @@ label v10_amber_skatepark:
                     
                     pause 0.75
 
-                    if skater == False:
+                    if not skater:
                         scene v10sasp5j
                         with dissolve
                         

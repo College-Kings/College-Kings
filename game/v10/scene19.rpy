@@ -22,7 +22,7 @@ label v10_walk_jenny_text:
     $ contact_Jenny.newMessage("Btw, I got your number from her phone when she was in the bathroom.", queue=False)
     $ contact_Jenny.addReply("Hey... yeah, Penelope has actually been dealing with some pretty heavy stuff. Also, the number stealing is a tad creepy, haha.")
     $ contact_Jenny.newMessage("I knew it!")
-    $ contact_Jenny.newMessage("I didn’t know any other way to get in contact with her new friends...")
+    $ contact_Jenny.newMessage("I didn't know any other way to get in contact with her new friends...")
     $ contact_Jenny.addReply("I think it's best to tell you about it all in person, if you're cool with that?")
     $ contact_Jenny.newMessage("Sure, when and where?")
     $ contact_Jenny.addReply("Cafe off of Stevenson Street tomorrow morning?")
@@ -35,7 +35,7 @@ label v10_walk_jenny_text:
             "(I should reply to Jenny.)"
             jump v10s19_PhoneContinue
 
-    u "(Hmm, maybe I should invite Penelope too, otherwise it’s just me and Jenny.)"
+    u "(Hmm, maybe I should invite Penelope too, otherwise it's just me and Jenny.)"
 
     menu:
         "Invite Penelope":
@@ -48,9 +48,9 @@ label v10_walk_jenny_text:
             $ contact_Penelope.addReply("Hey, you free for coffee at the cafe in the morning?")
             $ contact_Penelope.newMessage("Special occasion?")
             $ contact_Penelope.addReply("Honestly, if you're okay with talking about it, I just wanted to see how you were doing with all the school stuff.")
-            $ contact_Penelope.newMessage("That’s sweet… thanks..")
+            $ contact_Penelope.newMessage("That's sweet… thanks..")
             $ contact_Penelope.addReply("So are you free to meet?")
-            $ contact_Penelope.newMessage("Yeah, of course. I’ll see you in the morning.")
+            $ contact_Penelope.newMessage("Yeah, of course. I'll see you in the morning.")
             $ contact_Penelope.addReply("See ya!")
 
             label v10s19_PhoneContinue1:
@@ -63,7 +63,7 @@ label v10_walk_jenny_text:
             u "(I hope this goes smooth, Jenny hearing it from Penelope will probably help them both process the situation.)"
 
         "Go alone":
-            u "(On the other hand, maybe there’s benefits to meeting Jenny alone…)"
+            u "(On the other hand, maybe there's benefits to meeting Jenny alone…)"
 
     scene v10swjt3 # TPP. Show MC continuing to walk down the street, no longer holding phone.
     with dissolve
@@ -95,8 +95,6 @@ label v10_walk_jenny_text:
 
     menu:
         "Make a joke":
-            $ mrleeLike += 1
-            $ addPoint("tm", 1)
 
             u "Teachers have friends?"
 
@@ -111,7 +109,7 @@ label v10_walk_jenny_text:
             scene v10swjt5
             with dissolve
 
-            lee "Indeed it was, and now I should be headed home, it’s my bedtime soon."
+            lee "Indeed it was, and now I should be headed home, it's my bedtime soon."
         
 
     scene v10swjt5a
