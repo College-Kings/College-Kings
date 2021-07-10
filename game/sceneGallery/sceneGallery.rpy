@@ -1,3 +1,4 @@
+default persistent.name = ""
 default scopeDict = {}
 
 init python:
@@ -45,28 +46,38 @@ init python:
     SceneGallery("v10_amber_skatepark_sg")
     SceneGallery("v10s30_galleryScene")
     SceneGallery("v10s40_galleryScene", scope={"rileyrs": True})
+        # v11
+    SceneGallery("v11s5_galleryScene") #5
+    SceneGallery("v11_aubrey_plane_sex_sg") #13
+    SceneGallery("v11_ms_rose_sex_sg") #28
+    SceneGallery("v11s28a_galleryScene") #28a
+    SceneGallery("v11_riley_sex_sg") #35
+    SceneGallery("v11_chloe_sex_scene") #41b
 
 screen spoiler():
+    modal True
+
     add "images/darker.webp"
 
-    add "images/endfr.webp"
-    text "Warning: The scene gallery contains spoilers for the story of the game. Are you sure you want to continue?" style "endfree"
+    use endfrTemplate:
+        text "Warning: The scene gallery contains spoilers for the story of the game. Are you sure you want to continue?":
+            style "endfree"
+            xalign 0.5
 
-    textbutton "Yes":
-        style "endfr"
-        text_align 0.5
-        align (0.43, 0.58)
-        action [Show("sceneGallery"), Hide("spoiler")]
+        hbox:
+            align (0.5, 1.0)
+            spacing 200
 
-    textbutton "No":
-        style "endfr"
-        text_align 0.5
-        align (0.57, 0.58)
-        action Hide("spoiler")
+            textbutton "Yes":
+                action [Hide("spoiler"), ui.callsinnewcontext("sceneGalleryNameChange"), Show("sceneGallery")]
+
+            textbutton "No":
+                action Hide("spoiler")
 
 
 screen sceneGallery():
     tag menu
+    modal True
 
     add "sceneGallery/images/sceneGalleryBackground.webp"
 
@@ -91,3 +102,13 @@ screen sceneGallery():
         hover "images/back.webp"
         pos (79, 933)
         action Show("main_menu")
+
+label sceneGalleryNameChange:
+    
+    scene black
+    if not persistent.name.strip():
+        $ persistent.name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
+
+    $ scopeDict = {"name":persistent.name}
+
+    return
