@@ -17,7 +17,7 @@ init python:
             def likedContact(self):
                 self.removeContact()
 
-                if condition:
+                if self.condition:
                     simplr_contacts.append(self)
                 
             def newMessage(self, message, queue=True):
