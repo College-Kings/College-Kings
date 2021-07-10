@@ -91,14 +91,14 @@ label v7start:
     scene s674a
     with dissolve
 
-    u "Haven't you guys won seven times though? I only count six portaits."
+    u "Haven't you guys won seven times though? I only count six portraits."
 
     scene s674b # chris pointing and looking at a portrait of Imre's brother
     with dissolve
 
     ch "Yeah, well that's because of this guy."
 
-    scene s675 # showing Imre's brother portait
+    scene s675 # showing Imre's brother portrait
     with dissolve
 
     ch "This is a Wolves legend right here, Bence Varga."
@@ -151,7 +151,7 @@ label v7start:
 
     ch "And then next to him is Drew. He was known for his kicks."
 
-    scene s675b # showing drews portait
+    scene s675b # showing drews portrait
     with dissolve
 
     ch "I don't remember what that guy used to do, I think it was gymnastics or something. I don't know him personally, but we still teach his kicking technique to this day."
@@ -1197,7 +1197,7 @@ label hd_ad:
                 jump conyourdorm
 
     label conrileydorm: #for compatibility only
-    scene s708b # riley slightly embarassed / cute
+    scene s708b # riley slightly embarrassed / cute
     with dissolve
 
     ri "Hey uhm... do you maybe wanna come in?"
@@ -1405,7 +1405,7 @@ label conyourdorm:
 
             if kiwii_firstTime:
                 "(I should check out what Emily posted on Kiwii.)"
-                jump phoneam              
+                jump phoneam
 
             if bowling and contact_Penelope.getReplies():
                 "(I should answer Penelope.)"
@@ -3656,11 +3656,11 @@ label pledgewolves:
 
     scene s762
     with dissolve
-    ch "To be a Wolf you need to be hardworking{w}, persistent{w}, determined."
+    ch "To be a Wolf you need to be hardworking, persistent, determined."
 
     scene s762a # Chris slams a fist in his hand, serious face, talking
     with dissolve
-    ch "You need to be deliberate with your actions{w}, confident{w}, dedicated{w}, motivated, and-"
+    ch "You need to be deliberate with your actions, confident, dedicated, motivated, and-"
 
     scene s763 # Chris (serious face) gets in the face of one of the pledges who looks scared (neither MC nor Imre)
     with dissolve
@@ -3672,7 +3672,7 @@ label pledgewolves:
     scene s762a
     with dissolve
     ch "Now all of that sounds a bit intense, I know."
-    ch "But on top of those qualities we need guys who we can trust{w}, guys who are honest and always look out for each other."
+    ch "But on top of those qualities we need guys who we can trust, guys who are honest and always look out for each other."
 
     scene s762
     with dissolve
@@ -3681,7 +3681,7 @@ label pledgewolves:
 
     scene s762a
     with dissolve
-    ch "...I need winners.{w} Being a winner doesn't mean you always have to win."
+    ch "...I need winners. Being a winner doesn't mean you always have to win."
     ch "It means going in there believing that you will win. It's a mindset."
 
     scene s764 # Camera - first person. Chris looking into the camera, serious face, talking with his fist still in hand. Other wolves can be seen in the background
@@ -3691,7 +3691,7 @@ label pledgewolves:
     scene s764a # Chris hands relaxed, talking, looking slightly away from the camera
     with dissolve
     ch "Every year we only accept three pledges. Training capacities are limited."
-    ch "Pledging to the Wolves happens today, and only today. It's one night, filled with challenges.{w} Challenges that test you as a person."
+    ch "Pledging to the Wolves happens today, and only today. It's one night, filled with challenges. Challenges that test you as a person."
 
     scene s764
     with dissolve
@@ -3715,8 +3715,8 @@ label pledgewolves:
 
     scene s766 # Camera - first person. All the 5 pledges and Chris in a new room (make sure it's big enough to fit around 8 people). Chris, Imre and Xavier visible in the shot. Chris talking looking at the camera. Imre and Xavier looking at Chris with their mouths closed
     with dissolve
-    ch "Determination.{w} For this challenge you'll have to prove that you will do whatever it takes to become a Wolf. Each of you will be in a separate room."
-    ch "You will be given tasks to test how much you really want to be a Wolf{w}, how far you're willing to go{w}, and what you're willing to give up."
+    ch "Determination. For this challenge you'll have to prove that you will do whatever it takes to become a Wolf. Each of you will be in a separate room."
+    ch "You will be given tasks to test how much you really want to be a Wolf, how far you're willing to go, and what you're willing to give up."
     ch "Other wolves will guide you with the tasks. Let's get started."
 
     scene s767 # Camera - third person. MC alone in a room, waiting. Make sure door is visible in the shot
@@ -3838,7 +3838,7 @@ label pledgewolves:
 
     scene s766a
     with dissolve
-    ch "The task is simple.{w} All of you will get into a tub filled with freezing cold ice water. The last one to leave wins."
+    ch "The task is simple. All of you will get into a tub filled with freezing cold ice water. The last one to leave wins."
 
     scene s770 # Imre and Xavier close up, both looking towards Chris (who is not in the shot). Imre smiling and mouth open. Xavier worried and mouth open
     with dissolve
@@ -4167,7 +4167,7 @@ label aftercall:
 
     scene s787a # Imre talking slightly embarrassed mouth open. Finn mouth closed.
     with dissolve
-    imre "T-true.{w} But those times are behind me. I was a kid then."
+    imre "T-true. But those times are behind me. I was a kid then."
     imre "I know that's shitty of me, but I wouldn't do that to any of you ever again."
 
     scene s786
@@ -4879,7 +4879,7 @@ label pledgeapes:
 
     scene s832a # Grayson energetic expression with mouth open and looking into the camera
     with dissolve
-    gr "I'm just fuckin' with you.{w} To be an Ape means you gotta be fearless..."
+    gr "I'm just fuckin' with you. To be an Ape means you gotta be fearless..."
 
     scene s833 # Sam close up cheering, energetic, mouth open
     with dissolve
@@ -5020,7 +5020,7 @@ label pledgeapes:
 
             scene s843d # Same as s843b but now slamming a fist in his hand, mouth open
             with dissolve
-            ca "Right here{w}, right now.{w} In the hexagon."
+            ca "Right here, right now. In the hexagon."
 
             scene s843e # Same as s843d but mouth closed
             with dissolve
@@ -5028,7 +5028,7 @@ label pledgeapes:
 
             scene s843d
             with dissolve
-            ca "What? You a bitch?{w} Too afraid?"
+            ca "What? You a bitch? Too afraid?"
 
             scene s843e
             with dissolve
@@ -5207,7 +5207,7 @@ label ep7_cam_picture:
 
     scene s853c # Same as s853b but Sam isn't talking. Parker has the same expression but is now talking
     with dissolve
-    par "She had a twin!!{w} Identical!{w} If you were drunk you could've made the mistake too.{w} I blame her sister. She should've said no."
+    par "She had a twin!! Identical! If you were drunk you could've made the mistake too. I blame her sister. She should've said no."
     sam "Hahaha."
 
     scene s855 # Camera - FPP. MC looking at Grayson who is hand gesturing MC to come to the side
@@ -5232,7 +5232,7 @@ label ep7_cam_picture:
 
     scene s856b # Grayson handing out a slip to MC, mouth open
     with dissolve
-    gr "Here.{w} This is Cameron's little sister's number. She goes to uni here."
+    gr "Here. This is Cameron's little sister's number. She goes to uni here."
     gr "Cameron is very protective of her. So if he ever goes too far, this is how you can get him back."
 
     menu:
@@ -5735,7 +5735,7 @@ label after_pledges:
 
         scene s870d # Imre slightly questioing look and mouth closed
         with dissolve
-        u "Oh.. uhm...{w} I totally blanked. Got deep in an essay and by the time I saw the clock, it was two hours too late."
+        u "Oh.. uhm... I totally blanked. Got deep in an essay and by the time I saw the clock, it was two hours too late."
 
         scene s870e # Imre suspicious look and mouth closed
         with dissolve
@@ -6497,7 +6497,7 @@ label after_history:
                 $ leeway = True
                 $ grantAchievement("lee_way")
 
-                lee "Who was that?{w} {b}WHO WAS THAT?{/b}"
+                lee "Who was that? {b}WHO WAS THAT?{/b}"
                 ca "HAHAHA! FUCKIN' ACES!"
 
                 jump after_cam_history
@@ -6518,7 +6518,7 @@ label lee_pants_fail:
 
     scene s908a # Lee mouth closed
     with dissolve
-    u "Uhh... no.{w} I just thought I forgot something here."
+    u "Uhh... no. I just thought I forgot something here."
 
     scene s908
     with dissolve
@@ -6589,7 +6589,7 @@ label hc_asking_amber:
     play sound "sounds/dooropen.mp3"
     scene s919 # Camera - FPP. Amber opens the door and talking with a confused look
     with dissolve
-    am "Uhmmm.... are you about to ask me to go to homecoming with you?"
+    am "Uhmmm... are you about to ask me to go to homecoming with you?"
 
     scene s919a # Same as s919 but Amber mouth closed
     with dissolve
@@ -6613,7 +6613,7 @@ label hc_asking_amber:
 
     scene s919b
     with dissolve
-    am "It means I don't do dances...{w} aaannd I'm not going to homecoming."
+    am "It means I don't do dances... aaannd I'm not going to homecoming."
 
     scene s919c
     with dissolve
@@ -6671,7 +6671,7 @@ label hc_asking_amber:
 
                 scene s919f # Amber surprised in disbelief and talking
                 with dissolve
-                am "Oookay...{w} You enjoy your dance then, haha."
+                am "Oookay... You enjoy your dance then, haha."
 
                 scene s919g
                 with dissolve
@@ -7432,7 +7432,7 @@ label cameron_thurs_tasks:
     scene scc12 # TPP. Adam now on the ground, Cameron crouched over him, Cameron mouth open very angry expression.
     with dissolve
 
-    ca "You gonna stab me fucker?!{w} Then fucking do it!"
+    ca "You gonna stab me fucker?! Then fucking do it!"
     ca "Stab me you pussy!" with hpunch
 
     scene scc13 # TPP. Show Cameron grabbing the wrist of Adam's hand that holds the knife.
@@ -7784,7 +7784,7 @@ label cameron_thurs_tasks:
     with dissolve
 
 
-    ca "Yeah....{w} What do you mean?{w} My little sister? Where?"
+    ca "Yeah... What do you mean? My little sister? Where?"
     ca "Just fuckin' tell me where dude!"
     stop sound fadeout 1
     ca "Fuck. I'm going there right now."
@@ -7930,7 +7930,7 @@ label v7_nsfwSkipLabel4:
     scene scc64 # FPP. Same as scc64 but Cameron is a little less angry.
     with dissolve
 
-    ca "You're fucking 18, Sam! You're hardly an adult!{w} And clearly you can't take care of yourself."
+    ca "You're fucking 18, Sam! You're hardly an adult! And clearly you can't take care of yourself."
     ca "What do you want me to do? Stand around while I watch you kill yourself?!"
     ca "You're my little sister for God's sake!"
 
@@ -7942,12 +7942,12 @@ label v7_nsfwSkipLabel4:
     scene scc66c # FPP. Same as above but Samantha turns her head around towards camera, shouting.
     with dissolve
 
-    sa "Just fuck off Cameron!{w} Go home!"
+    sa "Just fuck off Cameron! Go home!"
 
     scene scc67 # TPP. Show Cameron grabbing Samantha's arm and she is trying to walk away. Cameron angry, mouth closed.
     with vpunch
 
-    ca "Don't you dare talk to me like that! You're leaving.{w} NOW!"
+    ca "Don't you dare talk to me like that! You're leaving. NOW!"
 
     scene scc68 # TPP. Show Cameron pulling Samantha towards the front door of the house trying to get her outside.
     with dissolve
@@ -8220,7 +8220,8 @@ label wolves_ceremony:
         scene swc11 # FPP. Close up on Chris with 2 Wolves to his side in the background. Chris mouth open neutral expression.
         with dissolve
 
-        ch "That's all you. Now [name] out of everyone proved he is most qualified to be a Wolf. He proved his loyalty, his determination, but overall, he proved himself over everyone else. I think we should be expecting a lot from [name] this year."
+        ch "That's all you. Now [name] out of everyone proved he is most qualified to be a Wolf. He proved his loyalty, his determination, but overall, he proved himself over everyone else."
+        ch "I think we should be expecting a lot from [name] this year."
 
         scene swc21 # TPP. Show MC with smile walking back towards line, same camera as swc19, Wolves clapping.
         with dissolve
@@ -8423,7 +8424,7 @@ label wolves_ceremony:
         scene swc11 # FPP. Close up Chris with 2 Wolves to his side in background. Chris mouth open.
         with dissolve
 
-        ch "Second.... Perry who put up a tough fight in the challenges."
+        ch "Second... Perry who put up a tough fight in the challenges."
 
         scene swc25 # FPP. Show Perry running towards Chris who has Wolves jacket in hand, Chris smiling, wolves cheering/clapping.
         with dissolve
@@ -8433,7 +8434,8 @@ label wolves_ceremony:
         scene swc25a  # FPP. As above but Perry now infront of Chris wearing wolves Jacket. Wolves no longer clapping/cheering. Chris mouth open.
         with dissolve
 
-        ch "Perry placed second in the challenges. And we're really glad you made it, but honestly I really knew you had what it took. Perry here has already been training everyday to fight this year! We're looking forward to having him in the ring this year."
+        ch "Perry placed second in the challenges. And we're really glad you made it, but honestly I really knew you had what it took."
+        ch "Perry here has already been training everyday to fight this year! We're looking forward to having him in the ring this year."
 
         scene swc42 # FPP. Show Perry & Wolves, Perry mouth open smile.
         with dissolve
@@ -8981,7 +8983,6 @@ label rileysexscene:
 
 # Pre-cursor to sex with Riley
     $ rileyrs = True
-    $ rileysex = True
     scene ridrm1 # You knocking on Riley's dorm door (third person)
     with dissolve
 
@@ -9030,7 +9031,6 @@ label rileysexscene:
 # Riley sex scene
     label risex: #for compatibility only
     show screen rileysexoverlay
-    show screen rileysexoverlaybutton
 
     scene risex1a # Riley shirt fully off, flirty grin (first person)
     with fade
@@ -9163,10 +9163,8 @@ label riclimax:
 
     u "Fuuuck!"
 
-    $ renpy.end_replay()
-
     hide screen rileysexoverlay
-    hide screen rileysexoverlaybutton
+    $ renpy.end_replay()
 
     scene risex15 # As above but mouth closed
     with fade
@@ -11652,7 +11650,7 @@ label penelopehocodate:
     scene sfr4pe4
     with dissolve
 
-    pe "Uhm.... you wanna have a drink before we leave?"
+    pe "Uhm... you wanna have a drink before we leave?"
 
     scene sfr4pe4a
     with dissolve
@@ -12056,7 +12054,7 @@ label rileyhocodate:
 
     u "Hey guys, you two going together?"
 
-    scene sfr4ri4 # lauren close up no emotion but hesitant / embarassed
+    scene sfr4ri4 # lauren close up no emotion but hesitant / embarrassed
     with dissolve
 
     la "What? Oh, no. We're just both predrinking here."
@@ -12531,11 +12529,8 @@ label labelfr4outsidestreet:
 
     ##### GYM #####
 
-    ### LOCATION 1: DANCEFLOOR
-label fr4chloedate: ### ENDS FREEROAM
-    call screen endfr4("fr4chloedate2", "labelfr4dancefloor", "Chloe")
-
-label fr4chloedate2:
+# LOCATION 1: DANCEFLOOR
+label fr4chloedate:
     scene sfr4cl31 # fpp close up chloe smiling on dancefloor
 
     cl "Hey missed you over here."
@@ -12578,9 +12573,9 @@ label fr4chloedate2:
     scene sfr4stage1
     with dissolve
 
-    ro "And your homecoming king is...."
+    ro "And your homecoming king is..."
 
-    ro "Chris Jackson!"
+    ro "Chris Smith!"
 
     scene sfr4stage2 # chris walks up on stage
     with dissolve
@@ -12600,7 +12595,7 @@ label fr4chloedate2:
     scene sfr4stage3a # ms rose turning to the crowd
     with dissolve
 
-    ro "Next up, your homecoming queen is...."
+    ro "Next up, your homecoming queen is..."
 
     ro "Chloe Moralez!"
 
@@ -12817,7 +12812,7 @@ label walk_to_ryan:
 
     u "Haha, I feel you."
 
-    scene sfr4cl44 # close up chloe embarassed smile, tiara in her hand not on her hand
+    scene sfr4cl44 # close up chloe embarrassed smile, tiara in her hand not on her hand
     with dissolve
 
     cl "Hey, sorry about that."
@@ -12940,10 +12935,8 @@ label chloe_dance:
 
     jump fr4chloeending
 
-label fr4emilydate: ### ENDS FREEROAM
-    call screen endfr4("fr4emilydate2", "labelfr4dancefloor", "Emily")
 
-label fr4emilydate2:
+label fr4emilydate:
     scene sfr4em20 #fpp close up emily dancing very drunkenly
 
     u "Woah woah woah. Slow down there."
@@ -13196,10 +13189,8 @@ label fr4emilydate2:
 
         jump fr4rileyending
 
-label fr4laurendate: ### ENDS FREEROAM
-    call screen endfr4("fr4laurendate2", "labelfr4dancefloor", "Lauren")
 
-label fr4laurendate2:
+label fr4laurendate:
     scene sfr4la19a # close up lauren smiling mouth closed
 
     u "There's my beautiful lady."
@@ -13242,9 +13233,9 @@ label fr4laurendate2:
     scene sfr4stage1
     with dissolve
 
-    ro "And your homecoming king is...."
+    ro "And your homecoming king is..."
 
-    ro "Chris Jackson!"
+    ro "Chris Smith!"
 
     scene sfr4stage2 # chris walks up on stage
     with dissolve
@@ -13264,7 +13255,7 @@ label fr4laurendate2:
     scene sfr4stage3a # ms rose turning to the crowd
     with dissolve
 
-    ro "Next up, your homecoming queen is...."
+    ro "Next up, your homecoming queen is..."
 
     ro "Chloe Moralez!"
 
@@ -13311,7 +13302,7 @@ label fr4laurendate2:
     else:
         pause 0.5
 
-        ro "Chloe?.... Chloe?"
+        ro "Chloe?... Chloe?"
 
         scene sfr4la19b # lauren curious
         with dissolve
@@ -13441,10 +13432,8 @@ label fr4laurendate2:
 
     jump fr4laurenending
 
-label fr4penelopedate: ### ENDS FREEROAM
-    call screen endfr4("fr4penelopedate2", "labelfr4dancefloor", "Penelope")
 
-label fr4penelopedate2:
+label fr4penelopedate:
     scene sfr4pe14 # fpp penelope turned around dancing close up
 
     u "Hey, how's the dancing?"
@@ -13489,9 +13478,9 @@ label fr4penelopedate2:
     scene sfr4stage1
     with dissolve
 
-    ro "And your homecoming king is...."
+    ro "And your homecoming king is..."
 
-    ro "Chris Jackson!"
+    ro "Chris Smith!"
 
     scene sfr4stage2 # chris walks up on stage
     with dissolve
@@ -13511,7 +13500,7 @@ label fr4penelopedate2:
     scene sfr4stage3a # ms rose turning to the crowd
     with dissolve
 
-    ro "Next up, your homecoming queen is...."
+    ro "Next up, your homecoming queen is..."
 
     ro "Chloe Moralez!"
 
@@ -13579,7 +13568,7 @@ label fr4penelopedate2:
     else:
         pause 0.5
 
-        ro "Chloe?.... Chloe?"
+        ro "Chloe?... Chloe?"
 
         scene sfr4pe14d
         with dissolve
@@ -13902,10 +13891,8 @@ label fr4penelopedate2:
 
         jump fr4rileyending2
 
-label fr4rileydate: ### ENDS FREEROAM
-    call screen endfr4("fr4rileydate2", "labelfr4dancefloor", "Riley")
 
-label fr4rileydate2:
+label fr4rileydate:
     #Talking to riley & she's your date:
     #MC approaches Riley on the dance floor.
 
@@ -13961,9 +13948,9 @@ label fr4rileydate2:
     scene sfr4stage1
     with dissolve
 
-    ro "And your homecoming king is...."
+    ro "And your homecoming king is..."
 
-    ro "Chris Jackson!"
+    ro "Chris Smith!"
 
     scene sfr4stage2 # chris walks up on stage
     with dissolve
@@ -13983,7 +13970,7 @@ label fr4rileydate2:
     scene sfr4stage3a # ms rose turning to the crowd
     with dissolve
 
-    ro "Next up, your homecoming queen is...."
+    ro "Next up, your homecoming queen is..."
 
     ro "Chloe Moralez!"
 
@@ -14032,7 +14019,7 @@ label fr4rileydate2:
     else:
         pause 0.5
 
-        ro "Chloe?.... Chloe?"
+        ro "Chloe?... Chloe?"
 
         scene sfr4ri30
         with dissolve
@@ -14368,7 +14355,7 @@ label fr4mason1:
 
     scene sfr4ma1 #showing mason and rg dancing, Mason is aggressively grabbing her ass. she's really enjoying
 
-    rg1 "Mhmmm...."
+    rg1 "Mhmmm..."
 
     u "(Uhhh... I better leave them to it.)"
 
@@ -14652,10 +14639,8 @@ label fr4aaron2:
 
     jump labelfr4gymentrance
 
-label fr4riley2: #ENDS FREE ROAM
-    call screen endfr4("fr4riley22", "labelfr4gymentrance", "Riley")
 
-label fr4riley22:
+label fr4riley2:
     scene sfr4ri50 # showing riley getting a drink
 
     u "Hey."
@@ -14693,9 +14678,9 @@ label fr4riley22:
     scene sfr4stage1
     with dissolve
 
-    ro "And your homecoming king is...."
+    ro "And your homecoming king is..."
 
-    ro "Chris Jackson!"
+    ro "Chris Smith!"
 
     scene sfr4stage2 # chris walks up on stage
     with dissolve
@@ -14715,7 +14700,7 @@ label fr4riley22:
     scene sfr4stage3a # ms rose turning to the crowd
     with dissolve
 
-    ro "Next up, your homecoming queen is...."
+    ro "Next up, your homecoming queen is..."
 
     ro "Chloe Moralez!"
 
@@ -14763,7 +14748,7 @@ label fr4riley22:
     else:
         pause 0.5
 
-        ro "Chloe?.... Chloe?"
+        ro "Chloe?... Chloe?"
 
         scene sfr4ri51
         with dissolve
@@ -15360,9 +15345,9 @@ label fr4aubrey2:
     elif hcGirl == "riley":
 
         if fr4chloe:
-            scene fr4gymleftnoriley
-        else:
             scene fr4gymleftnochloenoriley
+        else:
+            scene fr4gymleftnoriley
 
     else:
         if fr4riley and fr4chloe:
@@ -15524,9 +15509,9 @@ label fr4ryan3:
     elif hcGirl == "riley":
 
         if fr4chloe:
-            scene fr4gymleftnoriley
-        else:
             scene fr4gymleftnochloenoriley
+        else:
+            scene fr4gymleftnoriley
 
     else:
         if fr4riley and fr4chloe:
@@ -15632,170 +15617,179 @@ label fr4cameron2:
     jump labelfr4gymright
 
 label fr4lauren1:
+
     $ fr4lauren = True
-    
-    scene sfr4la25 # fpp lauren & ms rose talking
+    if not laurenmad:
+                
+        scene sfr4la25 # fpp lauren & ms rose talking
 
-    la "Yeah, I guess I was just having trouble with that one."
+        la "Yeah, I guess I was just having trouble with that one."
 
-    scene sfr4la26 # close up ms rose looking at lauren smiling
-    with dissolve
+        scene sfr4la26 # close up ms rose looking at lauren smiling
+        with dissolve
 
-    ro "Well, you know my class is always open if you ever need help with anything."
+        ro "Well, you know my class is always open if you ever need help with anything."
 
-    scene sfr4la27 # close up lauren looking at ms rose smiling
-    with dissolve
+        scene sfr4la27 # close up lauren looking at ms rose smiling
+        with dissolve
 
-    la "Thanks, I appreciate that."
+        la "Thanks, I appreciate that."
 
-    scene sfr4la27b # lauren smiling looking at you
-    with dissolve
+        scene sfr4la27b # lauren smiling looking at you
+        with dissolve
 
-    la "Oh, hey [name]. How are you?"
+        la "Oh, hey [name]. How are you?"
 
-    scene sfr4la27c
-    with dissolve
+        scene sfr4la27c
+        with dissolve
 
-    u "I'm good. How are you two tonight?"
+        u "I'm good. How are you two tonight?"
 
-    scene sfr4la27b
-    with dissolve
+        scene sfr4la27b
+        with dissolve
 
-    la "I'm great!"
+        la "I'm great!"
 
-    scene sfr4la26b # ms rose looking at you smiling eye brow raised
-    with dissolve
+        scene sfr4la26b # ms rose looking at you smiling eye brow raised
+        with dissolve
 
-    ro "Well, about as good as a glorified babysitter could be right now."
+        ro "Well, about as good as a glorified babysitter could be right now."
 
-    scene sfr4la26c
-    with dissolve
+        scene sfr4la26c
+        with dissolve
 
-    u "Aw come on Ms. Rose, you've put up a pretty amazing event here!"
+        u "Aw come on Ms. Rose, you've put up a pretty amazing event here!"
 
-    scene sfr4la27 # close up lauren looking at ms rose smiling
-    with dissolve
+        scene sfr4la27 # close up lauren looking at ms rose smiling
+        with dissolve
 
-    la "Yeah, you've really done a great job!"
+        la "Yeah, you've really done a great job!"
 
-    scene sfr4la26
-    with dissolve
+        scene sfr4la26
+        with dissolve
 
-    ro "Thanks, guys."
+        ro "Thanks, guys."
 
-    scene sfr4la26a
-    with dissolve
+        scene sfr4la26a
+        with dissolve
 
-    menu:
-        "Focus on Lauren":
-            $ focusonlauren = True
+        menu:
+            "Focus on Lauren":
+                $ focusonlauren = True
 
-            scene sfr4la27a
-            with dissolve
+                scene sfr4la27a
+                with dissolve
 
-            u "So uh... Lauren, you look great tonight."
+                u "So uh... Lauren, you look great tonight."
 
-            scene sfr4la27b
-            with dissolve
+                scene sfr4la27b
+                with dissolve
 
-            la "Thanks, you too."
+                la "Thanks, you too."
 
-            scene sfr4la26b
-            with dissolve
+                scene sfr4la26b
+                with dissolve
 
-            ro "Am I interrupting something here?"
+                ro "Am I interrupting something here?"
 
-            scene sfr4la27
-            with dissolve
+                scene sfr4la27
+                with dissolve
 
-            la "Oh no, haha. Not at all."
+                la "Oh no, haha. Not at all."
 
-            scene sfr4la27b
-            with dissolve
+                scene sfr4la27b
+                with dissolve
 
-            la "Ms. Rose and I were just talking about the last essay."
+                la "Ms. Rose and I were just talking about the last essay."
 
-            scene sfr4la27c
-            with dissolve
+                scene sfr4la27c
+                with dissolve
 
-            u "Fun."
+                u "Fun."
 
-            scene sfr4la26b
-            with dissolve
+                scene sfr4la26b
+                with dissolve
 
-            ro "Do you have any thoughts on it?"
+                ro "Do you have any thoughts on it?"
 
-            scene sfr4la27c
-            with dissolve
+                scene sfr4la27c
+                with dissolve
 
-            u "Uhh... I really gotta get back to the dance."
+                u "Uhh... I really gotta get back to the dance."
 
-            scene sfr4la26b
-            with dissolve
+                scene sfr4la26b
+                with dissolve
 
-            ro "*Chuckles* Of course you do."
+                ro "*Chuckles* Of course you do."
 
-            scene sfr4la27b
-            with dissolve
+                scene sfr4la27b
+                with dissolve
 
-            la "Bye, [name]."
+                la "Bye, [name]."
 
-        "Focus on Ms. Rose":
+            "Focus on Ms. Rose":
 
-            u "So Ms. Rose, what was homecoming like when you were in college?"
+                u "So Ms. Rose, what was homecoming like when you were in college?"
 
-            u "So like 5 years ago."
+                u "So like 5 years ago."
 
-            scene sfr4la26b
-            with dissolve
+                scene sfr4la26b
+                with dissolve
 
-            ro "Haha, you're too kind. It was very similar, but our chaperone wasn't as amazing."
+                ro "Haha, you're too kind. It was very similar, but our chaperone wasn't as amazing."
 
-            scene sfr4la26c
-            with dissolve
+                scene sfr4la26c
+                with dissolve
 
-            u "*Laughs* How could anyone be?"
+                u "*Laughs* How could anyone be?"
 
-            scene sfr4la27b
-            with dissolve
+                scene sfr4la27b
+                with dissolve
 
-            la "Ms. Rose and I were just talking about the last essay."
+                la "Ms. Rose and I were just talking about the last essay."
 
-            scene sfr4la27c
-            with dissolve
+                scene sfr4la27c
+                with dissolve
 
-            u "Fun."
+                u "Fun."
 
-            scene sfr4la26b
-            with dissolve
+                scene sfr4la26b
+                with dissolve
 
-            ro "Do you have any thoughts on it?"
+                ro "Do you have any thoughts on it?"
 
-            scene sfr4la26c
-            with dissolve
+                scene sfr4la26c
+                with dissolve
 
-            u "Uhh... I really gotta get back to the dance."
+                u "Uhh... I really gotta get back to the dance."
 
-            scene sfr4la26b
-            with dissolve
+                scene sfr4la26b
+                with dissolve
 
-            ro "*Chuckles* Of course you do."
+                ro "*Chuckles* Of course you do."
 
-            scene sfr4la27b
-            with dissolve
+                scene sfr4la27b
+                with dissolve
 
-            la "Bye, [name]."
+                la "Bye, [name]."
+        jump labelfr4gymright
+    else:
+        scene sfr4la27a
+        with dissolve
 
-    jump labelfr4gymright
+        u "(Lauren is mad at me, I should leave her alone)"
+
+        jump labelfr4gymright
 
 label fr4lauren2:
     if hcGirl == "lauren":
         scene fr4gymrightnolauren
     else:
         scene fr4gymright
-
-    u "(I'd rather not talk about the economics essay I forgot to turn in.)"
-
+    if not laurenmad:
+        u "(I'd rather not talk about the economics essay I forgot to turn in.)"
+    else:
+        u "(Lauren is mad at me, I should leave her alone)"
     jump labelfr4gymright
 
 label fr4msrose1:
@@ -16064,10 +16058,8 @@ label fr4penelope2:
 
     jump labelfr4hallway
 
-label fr4chloe2: ### ENDS FREE ROAM
-    call screen endfr4("fr4chloe22", "labelfr4hallway", "Chloe")
 
-label fr4chloe22:
+label fr4chloe2:
     $ fr4chloe2 = True
 
     if not chloemad or ryandefendchloe:
@@ -16421,11 +16413,9 @@ label fr4lockerroom:
 
     jump labelfr4hallwaycorner
 
-label fr4lockerroomchloe: ### ENDS FREE ROAM
-    call screen endfr4("fr4lockerroomchloe2", "labelfr4hallwaycorner", "Chloe")
 
-label fr4lockerroomchloe2:
-    if lockerroomchloe == False:
+label fr4lockerroomchloe:
+    if not lockerroomchloe:
         $ lockerroomchloe = True
 
         scene sfr4cl50 # mc knocking on lockerroom
@@ -17354,4 +17344,4 @@ label v7end:
     elif config.enable_steam:
         call screen steam_end(link="https://store.steampowered.com/app/1624520/College_Kings__Act_II/")
     else:
-        jump end_credits
+        jump gameEnd
