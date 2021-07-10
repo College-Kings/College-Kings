@@ -1,6 +1,6 @@
 init python:
     class CheatItem:
-        def __init__(self, catagory, name, variable, kind="Slider", minValue=0, maxValue=0, trueValue=True, falseValue=False):
+        def __init__(self, catagory, name, variable="", kind="Slider", minValue=0, maxValue=0, trueValue=True, falseValue=False):
             self.catagory = catagory
             self.name = name
             self.variable = variable
@@ -85,8 +85,9 @@ default var29 = CheatItem("FR4", "Blowjob in bathroom", "bathroomblowjob", kind=
 default var30 = CheatItem("FR4", "Defend Chloe in front of Ryan", "ryandefendchloe", kind="Button")
 default var31 = CheatItem("FR4", "Chloe is sad from Ryan & Grayson", "chloesad", kind="Button")
 
-default unlockContacts = CheatItem("Phone", "", "", kind="Button")
+default unlockContacts = CheatItem("Phone", "Unlock Phone Contacts", kind="Button")
 default kiwiiUnlock = CheatItem("Phone", "Unlock Kiwii", "kiwiiApp.locked", kind="Button", trueValue=False, falseValue=True)
+default simplrUnlock = CheatItem("Phone", "Unlock Simplr", "simplrApp.locked", kind="Button", trueValue=False, falseValue=True)
 
 
 screen bugTesting_cheatMenu():
@@ -125,24 +126,22 @@ screen bugTesting_cheatMenuValues(cheatMenuChar="General"):
     tag cheatmenu
 
     vbox:
-        pos (103, 120)
+        xalign 0.5
+        ypos 120
         spacing 100
 
         vpgrid:
             cols 4
-            spacing 100
+            xspacing 100
+            yspacing 60
             for cheatItem in cheatItems:
                 if cheatItem.catagory == cheatMenuChar and cheatItem.kind == "Button":
                     vbox:
                         style_prefix "check"
                         textbutton "[cheatItem.name]":
-                            action ToggleVariable(cheatItem.variable, true_value=cheatItem.trueValue, false_value=cheatItem.falseValue)
-                            text_style "modTextButtonBody"
-
-            if cheatMenuChar == "Phone":
-                    vbox:
-                        style_prefix "check"
-                        textbutton "Unlock All Phone Contacts":
-                            action Function(unlockPhoneContacts)
-                            selected checkPhoneUnlock()
+                            if cheatItem.variable:
+                                action ToggleVariable(cheatItem.variable, true_value=cheatItem.trueValue, false_value=cheatItem.falseValue)
+                            else:
+                                action Function(unlockPhoneContacts)
+                                selected checkPhoneUnlock()
                             text_style "modTextButtonBody"

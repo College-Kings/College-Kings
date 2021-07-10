@@ -220,7 +220,33 @@ image ri42vidfast = Movie(play="images/ri42vidfast.webm", image="images/ri42vid2
 image ri42vidperspectivefast = Movie(play="images/ri42vidperspectivefast.webm", image="images/ri42vidperspective20.webp", start_image="images/ri42vidperspective00.webp")
 
 # v8.0
-    ## Fight Images
+    # Scene 2
+image v8s19dyn:
+    "v8s19b" with Dissolve(0.35) # Chloe licking side of MC's shaft (top) while looking into the camera teasingly
+    pause 1
+
+    "v8s19c" with Dissolve(0.35) # Same as v8s19b but licking a little lower
+    pause 0.5
+
+    "v8s19d" with Dissolve(0.35) # Same as v8s19b but even lower, should not be fully at bottom of the dick though
+    pause 1
+
+    "v8s19c" with Dissolve(0.35)
+    pause 0.5
+
+    repeat
+
+# Chloe slow blowjob animation. Should be FPP (She's looking into the camera)
+image v8clbj1 = Movie(play="images/v8/Scene 2/v8clbj1.webm", loop=True, image="images/v8/Scene 2/clbj1_000.webp", start_image="images/v8/Scene 2/clbj1_000.webp")
+# Same animation as bj1 but different angle (maybe a close up or something)
+image v8clbj2 = Movie(play="images/v8/Scene 2/v8clbj2.webm", loop=True, image="images/v8/Scene 2/clbj2_000.webp", start_image="images/v8/Scene 2/clbj2_000.webp")
+# Fast version of bj1 (need not be re-rendered)
+image v8clbj1f = Movie(play="images/v8/Scene 2/v8clbj1f.webm", loop=True, image="images/v8/Scene 2/clbj1_000.webp", start_image="images/v8/Scene 2/clbj1_000.webp")
+# Fast version of bj2 (need not be re-rendered)
+image v8clbj2f = Movie(play="images/v8/Scene 2/v8clbj2f.webm", loop=True, image="images/v8/Scene 2/clbj2_000.webp", start_image="images/v8/Scene 2/clbj2_000.webp")
+# Note the extra images - v8clbj1end, v8clbj1start, v8clbj2end, v8clbj2start
+
+    # Fight Images
 image MC_Lars_Kick_hit = Movie(play="images/v8/Scene 28/mckickhit.webm", start_image="images/v8/Scene 28/mckickhitstart.webp", image="images/v8/Scene 28/mckickhitend.webp", loop = False)
 image MC_Lars_Kick_block = Movie(play="images/v8/Scene 28/mckickblocked.webm", start_image="images/v8/Scene 28/mckickblockedstart.webp", image="images/v8/Scene 28/mckickblockedend.webp", loop = False)
 image MC_Lars_BodyJab_hit = Movie(play="images/v8/Scene 28/mcbodyhit.webm", start_image="images/v8/Scene 28/mcbodyhookstart.webp", image="images/v8/Scene 28/mcbodyhitend.webp", loop = False)
@@ -244,7 +270,7 @@ image Lars_Kick_block = "images/v8/Scene 28/Lars_Kick_block.webp"
 image Lars_Kick_hit = "images/v8/Scene 28/Lars_Kick_hit.webp"
 
 # v10.0
-# Ryan Fight (Scene 6)
+    # Ryan Fight (Scene 6)
 image mc_ryan_BodyJab_hit = Movie(play="images/v10/Scene 6/Animations/MC-BODYHIT/MC-BODYHIT.webm", start_image="images/v10/Scene 6/Animations/MC-BODYHIT/mc-bodyhitstart.webp", image="images/v10/Scene 6/Animations/MC/RYAN-BODYHIT-END.webp", loop = False)
 image mc_ryan_BodyJab_block = Movie(play="images/v10/Scene 6/Animations/MC-BODYBLOCKED/MC-BODYBLOCKED.webm", start_image="images/v10/Scene 6/Animations/MC-BODYBLOCKED/mc-bodyblockedstart.webp", image="images/v10/Scene 6/Animations/MC/RYAN-BODYBLOCKED-END.webp", loop = False)
 image mc_ryan_Hook_hit = Movie(play="images/v10/Scene 6/Animations/MC-HOOKHIT/MC-HOOKHIT.webm", start_image="images/v10/Scene 6/Animations/MC-HOOKHIT/mc-hookhitstart.webp", image="images/v10/Scene 6/Animations/MC/RYAN-HOOKHIT-END.webp", loop = False)
@@ -268,7 +294,7 @@ image Ryan_Jab_block = "images/v10/Scene 6/Animations/END/MCRYAN-JABBLOCKED-END.
 image Ryan_Kick_hit = "images/v10/Scene 6/Animations/END/MCRYAN-KICKHIT-END.webp"
 image Ryan_Kick_block = "images/v10/Scene 6/Animations/END/MCRYAN-KICKBLOCKED-END.webp"
 
-# Imre Fight (Scene 7)
+    # Imre Fight (Scene 7)
 image mc_imre_BodyJab_hit = Movie(play="images/v10/Scene 7/Animations/MC-BODYHIT/MC-BODYHIT.webm", start_image="images/v10/scene 7/Animations/MC-BODYHIT/mc-bodyhitstart.webp", image="images/v10/scene 7/Animations/MC-BODYHIT/mc-bodyhitend.webp", loop = False)
 image mc_imre_BodyJab_block = Movie(play="images/v10/Scene 7/Animations/MC-BODYBLOCK/MC-BODYBLOCKED.webm", start_image="images/v10/scene 7/Animations/MC-BODYBLOCK/mc-bodyblockstart.webp", image="images/v10/scene 7/Animations/MC-BODYBLOCK/mc-bodyblockedend.webp", loop = False)
 image mc_imre_Hook_hit = Movie(play="images/v10/Scene 7/Animations/MC-HOOKHIT/MC-HOOKHIT.webm", start_image="images/v10/scene 7/Animations/MC-HOOKHIT/mc-hookhitstart.webp", image="images/v10/scene 7/Animations/MC-HOOKHIT/mc-hookhitend.webp", loop = False)
@@ -291,6 +317,8 @@ image Imre_Jab_hit = "images/v10/Scene 7/Animations/END/MCIMRE-JABHIT-END.webp"
 image Imre_Jab_block = "images/v10/Scene 7/Animations/END/MCIMRE-JABBLOCKED-END.webp"
 image Imre_Kick_hit = "images/v10/Scene 7/Animations/END/MCIMRE-KICKHIT-END.webp"
 image Imre_Kick_block = "images/v10/Scene 7/Animations/END/MCIMRE-KICKBLOCKED-END.webp"
+
+# v11.0
 
 # Misc
 image credits = Movie(play="images/credits.webm", Loop = True)

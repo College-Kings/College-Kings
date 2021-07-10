@@ -1,12 +1,11 @@
-define config.enable_steam = False # Make sure you switch main_menu_background image to steam version.
-define config.developer = False
+define config.enable_steam = False
+define config.developer = True
 define config.console = True
 define config_debug = False
 define config_censored = False
 
 define config.steam_appid = 1463120
 
-define _game_menu_screen = "ingmenu"
 define _quit_slot = "99-1"
 
 label splashscreen:
@@ -43,24 +42,28 @@ label before_main_menu:
 
 # The game starts here.
 label start:
+
     # Get Animation/Transform List
     show nohardfeelings at achievementShow
     $ achievementAtList = renpy.get_at_list("nohardfeelings")
     hide nohardfeelings
 
+    if config.developer:
+        show screen bugTesting_Overlay
+        
+    show screen fightDamage
+
     call screen realmode
 
-
-label end_credits:
+label end_credits: # for compatibility
+label gameEnd:
     stop music fadeout 2.0
     play music "music/vocal.mp3"
 
     if not config.enable_steam:
-        show screen getaccess
-        with dissolve
-        " "
-        hide screen getaccess
+        call screen getaccess
 
+label credits:
     show credits:
         ypos 50
         xalign 0.5

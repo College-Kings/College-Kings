@@ -49,7 +49,7 @@ screen kctTutorial():
 
     default kctTutorials = [
         "Your decisions strongly influence the way the story progresses and how other characters perceive you.",
-        "With each choice you’ll either gain Bro, Boyfriend or Troublemaker points.",
+        "With each choice you'll either gain Bro, Boyfriend or Troublemaker points.",
         "Bros put the squad first, boyfriends show strong affinity towards a few selected individuals and troublemakers seek thrills and take risks.",
         "These points are then used to identify your Key Character Trait (KCT).  Each KCT will unlock different possibilities and choices, but you can only have one active at a time.",
         "You can read more about each individual KCT in the Stats app on your phone.",
@@ -92,7 +92,7 @@ screen freeRoamTutorial():
     tag tutorial
 
     default freeRoamTutorials = [
-        "At certain parts of the game, you’ll unlock free roam.",
+        "At certain parts of the game, you'll unlock free roam.",
         "During free roam, you choose where you go and who you want to talk to next.",
         "You will also be able to use your phone and you might just find some hidden content."
     ]
@@ -169,3 +169,32 @@ screen influenceTutorial():
                     action SetVariable("influenceTutorialPage", influenceTutorialPage + 1)
                 else:
                     action SetVariable("influenceTutorialPage", 1)
+
+style choicetuttext is text:
+    font "fonts/OpenSans.ttf"
+    size 25
+    color "#ffffff"
+    text_align 0
+    xpos 1310
+    ypos 570
+    xmaximum 500
+
+style choicetextnum is text:
+    font "fonts/Freshman.ttf"
+    size 25
+    color "#FFD166"
+    text_align 0.5
+
+style tutorialtext is text:
+    font "fonts/OpenSans.ttf"
+    size 25
+    color "#ffffff"
+    text_align 0
+    xpos 1270
+    ypos 400
+    xmaximum 500
+
+style tutorialtextnum is text:
+    font "fonts/Freshman.ttf"
+    size 25
+    color "#FFD166"
