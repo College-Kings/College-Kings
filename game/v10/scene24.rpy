@@ -17,6 +17,7 @@ label v10_lauren_room:
     la "Heyyyy."
 
     if laurenrs: # If in a relationship with Lauren
+
         scene v10lar1a # TPP Same angle as v10lar1: MC and Lauren kiss at her door
         with dissolve
 
@@ -458,7 +459,7 @@ label v10_lauren_room:
             la "Oh, something funny actually happened the other day."
             la "I was at the banner place letting them know what I needed my bake sale sign to say."
             
-            la "I told them 'Lauren's Choice Muffins'; tell me why I go to pick up the banner and it says 'Lauren's Moist Muffins'?"
+            la "I told them \"Lauren's Choice Muffins.\" Tell me why I go to pick up the banner and it says \"Lauren's Moist Muffins\"?"
 
             scene v10lar3c
             with dissolve
