@@ -1087,7 +1087,6 @@ label v1_tomWalkAway:
     $ renpy.end_replay()
 
     if not meetlauren:
-        $ laawk = True
         scene s133
         with Fade (1,0,1) # in front of san vallejo
         if fighttom and not wintom:
@@ -1165,7 +1164,7 @@ label meet_lauren2:
     scene s130 # lauren accross table # your hands are on the table
     with dissolve
 
-    la "Ugh okay...I hope that's true. Anyway..."
+    la "Ugh okay... I hope that's true. Anyway..."
 
     scene s130b
     with dissolve
@@ -1207,6 +1206,7 @@ label meet_lauren2:
 
             if kct == "loyal" or v1_kissLauren:
                 $ laurenrs = True
+                $ laawk = False
 
                 if kct == "loyal":
                     call screen kctPopup
@@ -1265,7 +1265,6 @@ label meet_lauren2:
 
                 menu:
                     "Give me a chance.":
-                        $ laawk = True
 
                         scene s130g
                         with dissolve
@@ -1292,7 +1291,6 @@ label meet_lauren2:
                             u "(I should probably wash the blood off my face before I go.)"
 
                     "You're right.":
-                        $ laawk = True
 
                         scene s130g
                         with dissolve
@@ -1458,7 +1456,7 @@ label history2:
         if meetlauren:
             scene s136g
             with dissolve
-            u "Thanks.... and I don't know if he was an Ape, but he was also at the party and he started insulting me on my way to meet with Lauren."
+            u "Thanks... and I don't know if he was an Ape, but he was also at the party and he started insulting me on my way to meet with Lauren."
         else:
             scene s136g
             with dissolve
@@ -1539,7 +1537,7 @@ label history2:
         u "Okay... I guess I'll try it."
 
     label nextsceneo: #for compatibility only
-    scene s134g  ### in lecture room, asian teacher Mr.Lee far away
+    scene s134g  ### in lecture room, asian teacher Mr. Lee far away
     with fade
 
     lee "Welcome to History 101, I'm Mr. Lee."
@@ -3153,25 +3151,6 @@ label by_bd:
 
     call screen costumes
 
-######### COWBOY AUBREY
-label surebuy1:
-    call screen surebuy1
-
-label surebuy2:
-    call screen surebuy2
-
-label surebuy3:
-    call screen surebuy3
-
-label surebuy1p:
-    call screen surebuy1p
-
-label surebuy2p:
-    call screen surebuy2p
-
-label surebuy3p:
-    call screen surebuy3p
-
 ######################SHOPPING WITH PENELOPE shop2
 label cspe:
     scene s158v2
@@ -3741,7 +3720,7 @@ label v1_caughtContinue:
 
                 $ caughtpeekingaubreycounter = True
 
-                scene s177d # aub embarassed
+                scene s177d # aub embarrassed
                 with dissolve
 
                 au "Wait really?"
@@ -3864,7 +3843,7 @@ label v1_caughtContinue_pen:
 
                 $ caughtpeekingpenelopecounter = True
 
-                scene s186d # pen embarassed
+                scene s186d # pen embarrassed
                 with dissolve
 
                 pe "Wait really?"
