@@ -2663,7 +2663,6 @@ label continueab:
 
     menu:
         "Amber":
-            $ shotamber = True
 
             scene jomon14 # amber in bra ready for shot of her body
             with fade
