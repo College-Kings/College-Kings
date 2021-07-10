@@ -183,7 +183,7 @@ label v5start:
     scene s375 # You walking home
     with Fade (1,0,1)
 
-    u "(Way to mess things up with Chloe.... great fucking job, [name].)"
+    u "(Way to mess things up with Chloe... great fucking job, [name].)"
 
     stop music fadeout 2.0
 
@@ -280,7 +280,7 @@ label jorepb:
     scene s370a
     with dissolve
 
-    u " He said Grayson told him about a lot of shady shit that you did in the past."
+    u "He said Grayson told him about a lot of shady shit that you did in the past."
 
     scene s370
     with dissolve
@@ -579,7 +579,7 @@ label jorepb:
     scene s375 # You walking home
     with Fade (1,0,1)
 
-    u "(Way to mess things up with Chloe.... great fucking job, [name].)"
+    u "(Way to mess things up with Chloe... great fucking job, [name].)"
 
     stop music fadeout 2.0
 
@@ -751,7 +751,7 @@ label continuez:
                 scene s380b # lauren sadish
                 with dissolve
 
-                la "Oh.... yeah, of course, I'm sorry, I didn't-"
+                la "Oh... yeah, of course, I'm sorry, I didn't-"
 
                 scene s380c
                 with dissolve
@@ -881,7 +881,6 @@ label gokissb:
 
     menu:
         "Agree":
-            $ la1 = True
             $ addPoint("bf")
 
             scene s382a
@@ -907,7 +906,6 @@ label gokissb:
         "Agree":
             $ addPoint("bf")
             $ addPoint("bro")
-            $ la2 = True
 
             scene s382a
             with dissolve
@@ -936,7 +934,6 @@ label gokissb:
     menu:
         "Agree":
             $ addPoint("bf")
-            $ la3 = True
 
             scene s382a
             with dissolve
@@ -1173,7 +1170,7 @@ label continuetrolley:
     la "You can decide to switch the lever, but remember, you're on a timer. If you don't switch the lever within a few seconds, the train will keep its current course."
 
     play sound "sounds/countdown.mp3"
-    call screen trolleya
+    call screen trolleyProblem("trolleyaa", "trolleyab")
 
 label trolleyaa: # you don't press the lever
     stop sound
@@ -1284,7 +1281,7 @@ label continueam:
             la "You can decide to switch the lever, but remember, you're on a timer. If you don't switch the lever within a few seconds, the train will keep its current course."
             
             play sound "sounds/countdown.mp3"
-            call screen trolleyb
+            call screen trolleyProblem("trolleyba", "trolleybb")
 
         "I'd rather not.":
             $ trolleyskip = 2
@@ -1400,7 +1397,7 @@ label continuean:
             la "You can decide to switch the lever, but remember, you're on a timer. If you don't switch the lever within a few seconds, the train will keep its current course."
            
             play sound "sounds/countdown.mp3"
-            call screen trolleyc
+            call screen trolleyProblem("trolleyca", "trolleycb")
 
         "I'd rather not.":
             $ trolleyskip = 1
@@ -1460,7 +1457,6 @@ label continueao:
     menu:
         "At least we're done now.":
             $ addPoint("bf")
-            $ laurenokay = True
 
             scene s382a
             with dissolve
@@ -2128,7 +2124,7 @@ label continueaf:
             scene s380b # lauren sadish
             with dissolve
 
-            la "Oh.... yeah, of course, I'm sorry, I didn't-"
+            la "Oh... yeah, of course, I'm sorry, I didn't-"
 
             scene s380c
             with dissolve
@@ -2247,7 +2243,7 @@ label hospitala:
     scene s400e
     with dissolve
 
-    u " Mhmmm..."
+    u "Mhmmm..."
 
     pause 0.5
     stop music fadeout 2.0
@@ -3579,7 +3575,7 @@ label fl_a:  # tell the school
 
     $ snitch = True
     $ grantAchievement("snitch")
-        
+
 
     u "(I need to tell the school, it's the only way to sort this out.)"
 
@@ -4340,4 +4336,4 @@ if not renpy.loadable("v6/v6.rpy"):
 if renpy.loadable("v6/v6.rpy"):
     jump v6start
 else:
-    jump end_credits
+    jump gameEnd
