@@ -340,3 +340,88 @@ screen v6_fr3roofroom():
             action Jump ("v6_fr3nora1")
         else:
             action Jump ("v6_fr3nora2")
+
+screen emilysexoverlay():
+
+    default overlay = True
+
+    if overlay:
+        textbutton "hide overlay":
+            xpos 250
+            action SetScreenVariable("overlay", False)
+    else:
+        textbutton "show overlay":
+            xpos 10
+            action SetScreenVariable("overlay", True)
+
+    if overlay:
+        vpgrid:
+            cols 1
+            pos (10, 10)
+            mousewheel True
+            draggable True
+
+            imagebutton:
+                idle "images/emhead.webp"
+                action Jump("emhead")
+
+            imagebutton:
+                idle "images/emfacefuck.webp"
+                action Jump("emfacefuck")
+
+            imagebutton:
+                idle "images/embehind.webp"
+                action Jump("embehind")
+
+            imagebutton:
+                idle "images/embutterfly.webp"
+                action Jump("embutterfly")
+
+            imagebutton:
+                idle "images/emclimax.webp"
+                action Jump("emclimax")
+
+screen aubreysexoverlay():
+
+    default overlay = True
+
+    if overlay:
+        textbutton "hide overlay":
+            xpos 250
+            action SetScreenVariable("overlay", False)
+    else:
+        textbutton "show overlay":
+            xpos 10
+            action SetScreenVariable("overlay", True)
+
+    if overlay:
+        vpgrid:
+            cols 1
+            pos (10, 10)
+            
+            mousewheel True
+            draggable True
+
+            imagebutton:
+                idle "images/naubblowjob.webp"
+                action Jump ("naubblowjob")
+
+            imagebutton:
+                idle "images/naub69.webp"
+                action Jump ("naub69")
+
+            imagebutton:
+                idle "images/naubfingering.webp"
+                action Jump ("naubfingering")
+
+            imagebutton:
+                idle "images/naubmissionary.webp"
+                action Jump ("naubmissionary")
+
+            imagebutton:
+                idle "images/naubbehind.webp"
+                action Jump ("naubbehind")
+
+            imagebutton:
+                idle "images/naubclimax.webp"
+                action Jump ("naubclimax")

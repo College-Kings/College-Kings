@@ -48,9 +48,6 @@ init python:
         contact_Amber.addReply(_("I'm alone now, if the surprise is still on ;)"), v6_reply5)
         contact_Amber.addReply(_("I'll make it up to you tho"), v6_reply6)
 
-label choicetimer:
-    $ renpy.jump("".join([timerexit]))
-
 label script06: #for compatibility only
 label v6start:
     if imremad and chloemad:
@@ -2060,7 +2057,7 @@ label continuebd:
                 scene s524d
                 with dissolve
 
-                ev " Hmmm... that does sound enticing. Where would we be going?"
+                ev "Hmmm... that does sound enticing. Where would we be going?"
 
                 scene s524e
                 with dissolve
@@ -2771,14 +2768,13 @@ label emsex_a:
     em "*Quiet moan* Mhhh..."
 
     show screen emilysexoverlay
-    show screen emilysexoverlaybutton
 
     label emhead:
 
     scene emvid3
     with dissolve
 
-    em "*Moans* Ahhh...."
+    em "*Moans* Ahhh..."
 
     em "*Moans louder* Oh baby..."
 
@@ -2922,9 +2918,8 @@ label emsex_a:
 
     em "*Really loud moan* Ahhhhh!"
 
-    $ renpy.end_replay()
     hide screen emilysexoverlay
-    hide screen emilysexoverlaybutton
+    $ renpy.end_replay()
 
     play music "music/m7punk.mp3"
 
@@ -4116,7 +4111,6 @@ label aubreysexb: # aubreysex scene
 
 label naubblowjob:
     show screen aubreysexoverlay
-    show screen aubreysexoverlaybutton
 
     scene naubvid4
     with dissolve
@@ -4155,7 +4149,7 @@ label naub69:
 
     au "*Moans* Mhhh..."
 
-    au "*Moans louder* Ah...."
+    au "*Moans louder* Ah..."
 
     au "*Moans even louder* Fuck..."
 
@@ -4273,13 +4267,13 @@ label naub69:
     scene naub17c
     with vpunch
 
-    au "*Loud moan* Ahhh...."
+    au "*Loud moan* Ahhh..."
 
 label naubfingering:
     scene naubvid8
     with dissolve
 
-    au "Oh my god...."
+    au "Oh my god..."
 
     au "*Moans*"
 
@@ -4362,10 +4356,8 @@ label naubclimax:
 
     au "Holy shit..."
 
-    $ renpy.end_replay()
-
     hide screen aubreysexoverlay
-    hide screen aubreysexoverlaybutton
+    $ renpy.end_replay()
 
     scene naub20
     with fade
@@ -5849,7 +5841,7 @@ label wakeupa:
 
     host "Be it what you've scribbled on your notebook or what you've collected on your phone's notes app."
 
-    host "There is no judgement here. Is anyone brave enough to share?"
+    host "There is no judgment here. Is anyone brave enough to share?"
 
     scene s614b
     with dissolve
@@ -5980,7 +5972,7 @@ label wakeupa:
                     scene s627g
                     with dissolve
 
-                    u "The stars are on uhh...fire."
+                    u "The stars are on uhh... fire."
 
                     u "And you are on..."
 
@@ -6389,7 +6381,7 @@ label wakeupa:
 
         u "You have barely hit any pins the entire game."
 
-        scene s647b # penelope confession, slightly embarassed
+        scene s647b # penelope confession, slightly embarrassed
         with dissolve
 
         pe "When I was in 8th grade, I met this boy, James."
@@ -9551,7 +9543,7 @@ label v6_fr3aubrey3:
 
                     u "Oh okay."
 
-                elif aubreyrs:
+                else:
                     $ upstairs = "aubrey"
 
                     scene sfr3au3b
@@ -10703,4 +10695,4 @@ if not renpy.loadable("v7/v7.rpy"):
 if renpy.loadable("v7/v7.rpy"):
     jump v7start
 else:
-    jump end_credits
+    jump gameEnd
