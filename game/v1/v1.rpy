@@ -164,8 +164,8 @@ label starta: #for compatibility only
     u "(Huh?)"
     
     # Emily's messages
-    $ contact_Emily.newMessage(_("Hey...\nI know we haven’t talked much after we broke up, but I just wanted to let you know that I didn’t get into Stanford, so I’ll be going to San Vallejo as well.\nGuess I’ll see you there. :)"), queue=False)
-    $ contact_Emily.addReply(_("Yeah... I’ll see you there."), v1_reply1)
+    $ contact_Emily.newMessage(_("Hey...\nI know we haven't talked much after we broke up, but I just wanted to let you know that I didn't get into Stanford, so I'll be going to San Vallejo as well.\nGuess I'll see you there. :)"), queue=False)
+    $ contact_Emily.addReply(_("Yeah... I'll see you there."), v1_reply1)
     $ contact_Emily.addReply(_("You cheated on me.\nGo to hell!"), v1_reply2)
 
     show screen phoneTutorial
@@ -191,7 +191,7 @@ label starta: #for compatibility only
     show s14a
     with dissolve
 
-    u "Mhm...."
+    u "Mhm..."
 
     hide s14a
     show s14
@@ -399,7 +399,7 @@ label starta: #for compatibility only
 
     ca "Fine..."
 
-    ca  "Next time, Mommy won't be there to save you, asshole."
+    ca "Next time, Mommy won't be there to save you, asshole."
 
     stop music fadeout 2.0
 
@@ -2664,7 +2664,7 @@ label v1_nsfwSkipLabel1:
 label aw_bd:
     la "Right... almost forgot about that."
 
-    la "I...I haven't actually had sex before."
+    la "I... I haven't actually had sex before."
 
     scene s89g
     with dissolve
