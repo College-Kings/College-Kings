@@ -172,7 +172,7 @@ label v10_riley_walk:
 
     ri "No for real for real. I get along with other girls, but as far as guys go there aren't many that I really feel that close with. But I do feel pretty close with you."
 
-    if rileysex: # if MC and Riley had sex
+    if rileyrs: # if MC and Riley had sex
         scene v10srwh3a
         with dissolve
 

@@ -12,8 +12,12 @@ label v9_lau_dorm:
 
     pause 0.8
 
+    play sound "sounds/knock.mp3"
+
     scene v9lau2 # TPP. Show MC knocking on Lauren's dorm door.
     with dissolve
+
+    pause 0.8
 
     if laurenrs:
         scene v9lau3 # FPP. Show Lauren who has just opened the door, Lauren smile, mouth closed.
@@ -620,11 +624,13 @@ label v9_lau_dorm:
 
                 la "Great to have a backup plan."           
 
-        jump v9_lau_dorm_no_kiss     
+        jump v9_lau_dorm_no_kiss
 
 label v9_lau_dorm_kiss:
     scene v9lau17 # TPP. Show Lauren and MC kissing.
     with dissolve
+
+    play sound "sounds/kiss.mp3"
 
     pause 1
 

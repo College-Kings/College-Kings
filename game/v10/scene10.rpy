@@ -10,7 +10,6 @@ init python:
         contact_Lindsey.addReply("On my way")
 
 label v10_sun_morn:
-    default v10s10_hangWLinds = False
     play music "music/v10/Scene 10/Track Scene 10.mp3" fadein 3
     if joinwolves:
         scene v10sum1 # TPP. Show MC in his Wolves bed looking up at the ceiling, MC looks tired.
@@ -59,8 +58,6 @@ label v10_sun_morn:
             $ contact_Riley.addReply("Bye, Riley. :)")
 
         else:
-            play sound "sounds/vibrate.mp3"
-
             $ contact_Josh.newMessage("Friends or not friends, dude wtf?! That was one good show wasted!", queue=False)
             $ contact_Josh.newMessage("Just saying you missed out on impressing a lot of ladies today", queue=False)
             $ contact_Josh.addReply("I know... But hey, maybe some appreciate the compassion?")
@@ -74,15 +71,13 @@ label v10_sun_morn:
                 u "(I should check my phone.)"
                 jump v10s10_PhoneContinueJoshW1
 
-        if v10_ryan_win:
-            play sound "sounds/vibrate.mp3"
+        play sound "sounds/vibrate.mp3"
 
+        if v10_ryan_win:
             $ contact_Lindsey.newMessage("Hey, [name]... congrats on the win.", queue=False)
             $ contact_Lindsey.newMessage("I know it's quite early, but", queue=False)
 
         else:
-            play sound "sounds/vibrate.mp3"
-
             $ contact_Lindsey.newMessage("Hey, [name]... I know you have a lot on your mind right now with everything that happened yesterday...", queue=False)
             
         $ contact_Lindsey.newMessage("I've just been dealing with some stuff...", queue=False)
@@ -157,8 +152,6 @@ label v10_sun_morn:
             $ contact_Riley.addReply("Bye, Riley. :)")
 
         else:
-            play sound "sounds/vibrate.mp3"
-
             $ contact_Josh.newMessage("Friends or not friends, dude wtf?! That was one good show wasted!", queue=False)
             $ contact_Josh.newMessage("Just saying you missed out on impressing a lot of ladies today", queue=False)
             $ contact_Josh.addReply("I know... But hey, maybe some appreciate the compassion?")
@@ -172,15 +165,13 @@ label v10_sun_morn:
                 u "(I should check my phone.)"
                 jump v10s10_PhoneContinueJoshW2
 
-        if v10_imre_win:
-            play sound "sounds/vibrate.mp3"
+        play sound "sounds/vibrate.mp3"
 
+        if v10_imre_win:
             $ contact_Lindsey.newMessage("Hey, [name]... congrats on the win.", queue=False)
             $ contact_Lindsey.newMessage("I know it's quite early, but", queue=False)
 
         else:
-            play sound "sounds/vibrate.mp3"
-
             $ contact_Lindsey.newMessage("Hey, [name]... I know you have a lot on your mind right now with everything that happened yesterday...", queue=False)
             
         $ contact_Lindsey.newMessage("I've just been dealing with some stuff...", queue=False)

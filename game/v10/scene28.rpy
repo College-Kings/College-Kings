@@ -102,7 +102,7 @@ label v10_talk_nora:
                     with dissolve
 
                     u "(I'll leave it alone as they'd rather keep it private.)"
-    elif joinwolves == False and noralikes == False:
+    elif not joinwolves and not noralikes:
 
         scene v10hal1a
         with dissolve

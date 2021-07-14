@@ -167,7 +167,7 @@ label phn_penelope6_done:
 
             scene v8rose5g
             with dissolve
-            ro "The whole place is...{w} tainted!"
+            ro "The whole place is... tainted!"
 
             scene v8rose5e
             with dissolve
@@ -196,7 +196,6 @@ label phn_penelope6_done:
 
         "Focus on moving the boxes":
             $ addPoint("bro")
-            $ consoledRose = False
 
             u "Don't worry. We'll be out of here in no time."
             u "I'll uh... go and get more boxes."
@@ -237,7 +236,8 @@ label phn_penelope6_done:
 
     scene v8rose14 # FPP. Chris gesturing Imre (with the box in hand) to go away without making it too obvious, mouth closed. Imre looking at him, alerted, mouth closed. Might have to get creative with the camera angle to not show the MC in this shot
     with dissolve
-    pause
+    pause 0.5
+
     u "Maybe talking about it will help. Get it all out."
 
     scene v8rose5a

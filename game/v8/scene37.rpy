@@ -48,7 +48,7 @@ label v8_tues_evening:
             $ contact_Riley.addReply(_("Can't wait. :)"))
 
         else:
-            $ contact_Riley.addReply(_("I have a serious question to ask you."), "v8s37_phoneReply10")
+            $ contact_Riley.addReply(_("I have a serious question to ask you."))
             $ contact_Riley.newMessage(_("What is it?"))
             $ contact_Riley.addReply(_("You get to chose between options A and B."))
             $ contact_Riley.newMessage(_("OK?"))

@@ -24,7 +24,7 @@ label v10_apes_samantha:
     scene v10ssap1c # TPP. Same camera as v10ssap1. MC's sitting on the couch, appearing exhausted, mouth closed. He's holding the remote. Samantha sits down on the couch next to him, smiling, mouth open.
     with dissolve
 
-    sa "Hey Hey!"
+    sa "Hey hey!"
 
     scene v10ssap2 # FPP. Perspective is from MC, who is sitting on the couch in Ape's living room. Show Sam (who is sitting beside him), normal/slightly curious expresison, mouth closed.
     with dissolve
@@ -64,7 +64,7 @@ label v10_apes_samantha:
     scene v10ssap2b # FPP. Same camera as v10ssap2. Show Sam, smiling, mouth open.
     with dissolve
 
-    sa "*Laughs* Yeah, it’s very subtle. But yeah, he's always been a hothead so it makes sense to me for a guy like him to fight and be in a frat like this, but you're not like him and yet you're in this frat too."
+    sa "*Laughs* Yeah, it's very subtle. But yeah, he's always been a hothead so it makes sense to me for a guy like him to fight and be in a frat like this, but you're not like him and yet you're in this frat too."
 
     scene v10ssap2c # FPP. Same camera as v10ssap2. Show Sam, smiling, mouth closed.
     with dissolve

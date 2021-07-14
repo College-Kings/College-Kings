@@ -305,7 +305,7 @@ label dtl_f:
     scene v9dtl3c
     with dissolve
 
-    ri "Yes, it is NOT!"
+    ri "No, it is NOT!"
     
     jump dtl_cont1
 

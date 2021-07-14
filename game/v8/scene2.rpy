@@ -76,21 +76,6 @@ label v8_cl_start:
     with dissolve
     pause
 
-    image v8s19dyn:
-        "v8s19b" with Dissolve(0.35) # Chloe licking side of MC's shaft (top) while looking into the camera teasingly
-        pause 1
-
-        "v8s19c" with Dissolve(0.35) # Same as v8s19b but licking a little lower
-        pause 0.5
-
-        "v8s19d" with Dissolve(0.35) # Same as v8s19b but even lower, should not be fully at bottom of the dick though
-        pause 1
-
-        "v8s19c" with Dissolve(0.35)
-        pause 0.5
-
-        repeat
-
     scene v8s19dyn # Not a standalone render. Just a fake "animation"
     with dissolve
     u "God damn. You're so hot."
@@ -102,16 +87,6 @@ label v8_cl_start:
     scene v8s19f # Same as v8s19e but Chloe mouth closed
     with dissolve
     u "You don't have to ask me twice."
-
-    image v8clbj1 = Movie(play="images/v8/Scene 2/v8clbj1.webm", loop=True, image="images/v8/Scene 2/clbj1_000.webp", start_image="images/v8/Scene 2/clbj1_000.webp")
-    # Chloe slow blowjob animation. Should be FPP (She's looking into the camera)
-    image v8clbj2 = Movie(play="images/v8/Scene 2/v8clbj2.webm", loop=True, image="images/v8/Scene 2/clbj2_000.webp", start_image="images/v8/Scene 2/clbj2_000.webp")
-    # Same animation as bj1 but different angle (maybe a close up or something)
-    image v8clbj1f = Movie(play="images/v8/Scene 2/v8clbj1f.webm", loop=True, image="images/v8/Scene 2/clbj1_000.webp", start_image="images/v8/Scene 2/clbj1_000.webp")
-    # Fast version of bj1 (need not be re-rendered)
-    image v8clbj2f = Movie(play="images/v8/Scene 2/v8clbj2f.webm", loop=True, image="images/v8/Scene 2/clbj2_000.webp", start_image="images/v8/Scene 2/clbj2_000.webp")
-    # Fast version of bj2 (need not be re-rendered)
-    # Note the extra images - v8clbj1end, v8clbj1start, v8clbj2end, v8clbj2start
 
     scene v8clbj1
     with dissolve

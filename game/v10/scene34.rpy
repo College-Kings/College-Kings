@@ -3,9 +3,7 @@
 # Characters: MC (Outfit ?), Autumn (Outfit ?), Ms. Rose (Outfit ?), Deer Girl #1, Deer Girl #3, Perry (Outfit ?), Amber (Outfit ?), Riley (Outfit ?), Chloe (Outfit ?), Nora (Outfit ?)
 # Characters cont.: Emily (Outfit ?), Chris (Outfit ?), Aaron (Outfit ?), Lindsey (Outfit ?), Ryan (Outfit ?), Random Guy
 # Time: Day
-default v10_cvn_cheer_nora = False
-default v10_cvn_cheer_emily = False
-default v10_cvn_cheer_amber = False
+
 label v10_autumn_announcement:
     
     scene v10samw1 # FPP. Show Autumn standing near the mud wrestling pool, smiling, mouth open.

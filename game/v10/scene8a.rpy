@@ -4,7 +4,7 @@
 # Time: Saturday Night
 label v10_avoid_fight:
     $ renpy.end_replay()
-    if v10_ryan_fight == False and v10_imre_fight == False:   
+    if not v10_ryan_fight and not v10_imre_fight:   
 
         scene v10frr1 # TPP. Show MC leaving the warehouse.(camera from inside wearhouse positioned behind mc)
         with dissolve

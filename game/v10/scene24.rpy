@@ -278,6 +278,8 @@ label v10_lauren_room:
         play music "music/v10/Scene 24/Track Scene 24_2.mp3" fadein 3
         menu:
             "Suck on her tits":
+                $ v10_lauren_suck = True
+
                 # MC starts kissing around her boobs and nipples. Ensure this scene is detailed and long, kissing all over her upper body
                 image v10lautk = Movie(play="images/v10/Scene 24/v10lautk.webm", loop=True, image="images/v10/Scene 24/v10lautkStart.webp", start_image="images/v10/Scene 24/v10lautkStart.webp") # TPP MC tenderly kissing Lauren on upper chest, holding her breast and playing with her nipple
                 image v10lautkf = Movie(play="images/v10/Scene 24/v10lautkf.webm", loop=True, image="images/v10/Scene 24/v10lautkStart.webp", start_image="images/v10/Scene 24/v10lautkStart.webp")
@@ -290,7 +292,7 @@ label v10_lauren_room:
                 with dissolve
                 pause
 
-                if laurenrs or ((v1_laurenKiss or laurenkissb) and kct == "loyal"):
+                if laurenrs or ((v1_laurenKiss or beachfirstkiss) and kct == "loyal"):
 
                     if not laurenrs:
                         $ laurenrs = True
@@ -351,7 +353,7 @@ label v10_lauren_room:
 
                     play music "music/v10/Scene 24/Track Scene 24_3.mp3" fadein 3
                     
-                    la "[name], I...I don't think I'm ready. Sorry I just..."
+                    la "[name], I... I don't think I'm ready. Sorry I just..."
 
                     scene v10lar9a # FPP Same angle as v10lar9, Lauren getting dressed, looking uncomfortable, mouth closed
                     with dissolve
@@ -534,7 +536,7 @@ label v10_lauren_room:
         with dissolve
 
         ro "Hey [name], it's Ms. Rose, I'm sorry for calling this late."
-        ro "but I don't really know who else to turn to. My husband is outside parked in his car and just won't leave."
+        ro "But I don't really know who else to turn to. My husband is outside parked in his car and just won't leave."
         
         ro "I'm starting to feel a little unsafe."
 

@@ -1,9 +1,11 @@
 init python:
     class SimplrContact(Contact):
-            def __init__(self, name, profilePicture, profilePictureLarge):
+            def __init__(self, name, profilePicture, profilePictureLarge, condition=True):
                 self.name = name
                 self.profilePicture = "images/phone/simplr/contacts/{}".format(profilePicture)
                 self.profilePictureLarge = "images/phone/simplr/contacts/{}".format(profilePictureLarge)
+                self.condition = condition
+
                 self.sentMessages = []
                 self.pendingMessages = []
 
@@ -13,8 +15,11 @@ init python:
                 simplr_pendingContacts.pop(0)
 
             def likedContact(self):
-                simplr_contacts.append(simplr_pendingContacts.pop(0))
+                self.removeContact()
 
+                if self.condition:
+                    simplr_contacts.append(self)
+                
             def newMessage(self, message, queue=True):
                 message = Message(self, message)
 
@@ -81,9 +86,9 @@ init python:
                 if not any([contact.getReplies() for contact in simplr_contacts]):
                     simplrApp.seenNotification()
 
-init offset = -1
-default simplr_pendingContacts = []
-default simplr_contacts = []
+init -1:
+    default simplr_pendingContacts = []
+    default simplr_contacts = []
 
 screen simplr_app():
     tag phoneTag

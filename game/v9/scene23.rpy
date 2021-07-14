@@ -154,7 +154,7 @@ label v9_dinner_w_rose:
             scene v9damr9
             with dissolve
 
-            u "Hey you wanna catch a workout later?"
+            u "Hey, you wanna catch a workout later?"
 
             scene v9damr9a # FPP. Same camera as v9damr9, MC now sat at table, Show close up of Imre, neutral look, mouth open
             with dissolve
@@ -180,7 +180,7 @@ label v9_dinner_w_rose:
             scene v9damr9
             with dissolve
 
-            u "How hard was that viking thing in History class?"
+            u "How hard was that Viking thing in History class?"
 
             scene v9damr9a
             with dissolve
@@ -260,7 +260,7 @@ label v9_dinner_w_rose:
     scene v9damr12
     with dissolve
 
-    ro "What I need now is for you boys to finish off this lasagne-"
+    ro "What I need now is for you boys to finish off this lasagna-"
 
     scene v9damr14 # FPP. Show finn, sat to left of mc at table, slight smile, mouth open
     with dissolve

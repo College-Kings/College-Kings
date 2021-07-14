@@ -157,7 +157,7 @@ label mon_morning_room:
         scene v8sdea10f # FPP. Same camera as v8sdea10, empathetic expression, mouth open.
         with dissolve
 
-        de "However...it takes a special kind of friend and man to put your neck on the line the way you are doing now. I like that. In fact, that's what makes a person a good one."
+        de "However... it takes a special kind of friend and man to put your neck on the line the way you are doing now. I like that. In fact, that's what makes a person a good one."
 
         de "I will take what you said under advisement and relay my own thoughts on the matter to the Disciplinary Committee. Will that be satisfactory, [name]?"
 

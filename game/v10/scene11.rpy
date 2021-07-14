@@ -367,6 +367,8 @@ label v10_linds_room:
                 with dissolve
                 u "I'd never say no to any attention you wanted to give."
 
+                call screen kctPopup
+
                 scene v10slds3f
                 with dissolve
 
@@ -421,7 +423,7 @@ label v10_linds_room:
 
     u "Yeah, of course."
 
-    if sadlind_reaction == False: # -If no bad reaction (no flirting, no joke without KCT)-
+    if not sadlind_reaction: # -If no bad reaction (no flirting, no joke without KCT)-
 
         scene v10slds4 # TPP. Show Lindsey leaning over and hugging MC while they sit on the bed. MC facing away from camera. Lindsey has a little smile, mouth open.
         with dissolve

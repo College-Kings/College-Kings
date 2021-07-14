@@ -1009,7 +1009,7 @@ label v10s33_chloe1:
         call screen v10s33_centeraisle
 
     scene v10cfrcl1 # FPP. Show Chloe, mouth closed
-    with dissolve
+    #with dissolve
     
     u "Hey Chloe."
 
@@ -1414,7 +1414,7 @@ label v10s33_deergirl21:
     $ v10s33_deergirl3 = True
 
     scene v10cfrdg31a #FPP, showing dg3, sitting if she's seated,looking at you, crazy smile with a hint of sadness, mouth closed
-    with dissolve
+    #with dissolve
 
     u "You know I didn't expect to see one of these at the event. What made you want to do one of these?"
 
@@ -1740,7 +1740,7 @@ label v10s33_deergirl21:
     $ v10s33_lauren = True
 
     scene v10cfrla3 #FPP, lauren as statue, not looking at mc, mouth closed
-    with dissolve
+    #with dissolve
 
     u "What a beautiful statue."
 
@@ -1962,9 +1962,8 @@ label v10s33_deergirl21:
 
         menu:
             "Compliment":
-                if kct == "confident":
-                    $ addPoint("bf")
-                    $ lindseyLike += 1
+                $ addPoint("bf")
+                $ lindseyLike += 1
 
                 u "Look at you! This alone is a reason to give all my money away."
 
@@ -2601,7 +2600,7 @@ label v10s33_riley2:
 
     $ v10s33_aubreyriley = True
     scene v10cfrriau1 # FPP. Show Riley and aubrey, Riley mouth open
-    with dissolve
+    #with dissolve
 
     ri "I actually just got it from the thrift booth. [name] helped me pick it out."
 
@@ -3054,7 +3053,7 @@ label v10s33_riley2:
     $ v10s33_amber = True
 
     scene v10cfram1 #FPP Show Amber, Looking at mc, flirty smile, mouth open
-    with dissolve
+    #with dissolve
 
     am "Hey handsome!"
 
@@ -3208,7 +3207,7 @@ label v10s33_riley2:
     $ v10s33_chris = True
     
     scene v10cfrch1 #FPP showing Aaron and Chris looking at each other, like they were talking
-    with dissolve
+    #with dissolve
 
     u "Hey Aaron, it's great to see you back man, but where the hell did you go? You just vanished on us?"
 
@@ -3351,7 +3350,7 @@ label v10s33_riley2:
     $ v10s33_nora = True
 
     scene v10cfrno1 # fpp, from the side, nora playing bag toss, mouth closed concentrated
-    with dissolve
+    #with dissolve
 
     u "So... you good at this?"
 
@@ -3814,6 +3813,7 @@ label v10s33_emily1:
         menu:
 
             "Invite her to Europe":
+                $ emily_europe = True
 
                 u "Oh, while it's on my mind. Do you want to go on the Europe trip with me and some others?"
 

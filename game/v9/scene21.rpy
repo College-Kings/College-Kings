@@ -97,38 +97,3 @@ label v9_room_w_chris:
     pause 1
 
     jump v9_dinner_w_rose
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

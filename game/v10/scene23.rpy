@@ -280,7 +280,7 @@ label v10_aft_walk_home:
     play sound "sounds/vibrate.mp3"
 
     python:
-        contact_Lauren.newMessage("Hey, wanna hangout? I have some free time in between study sessions.", queue=False)
+        contact_Lauren.newMessage("Hey, wanna hang out? I have some free time in between study sessions.", queue=False)
         contact_Lauren.addReply("Sure, on my way")
         contact_Lauren.newMessage(":)")
 

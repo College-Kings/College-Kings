@@ -58,7 +58,7 @@ label v10_room_mon_night:
         u "(Hmm, I can see why so many people are talking about it.)"
         u "(It would be kinda weird though if I saw someone I knew.)"
         u "(Do you try to match with friends you see on there, or is that weird?)"
-        u "(I guess I’ll figure that out if it ever comes to it. It's about time I go to bed.)"
+        u "(I guess I'll figure that out if it ever comes to it. It's about time I go to bed.)"
 
         scene v10smnr2 # TPP. Show MC putting down his phone and going to sleep.
         with dissolve
@@ -115,7 +115,7 @@ label v10_room_mon_night:
         u "(Hmm, I can see why so many people are talking about it.)"
         u "(It would be kinda weird though if I saw someone I knew.)"
         u "(Do you try to match with friends you see on there, or is that weird?)"
-        u "(I guess I’ll figure that out if it ever comes to it. It's about time I go to bed.)"
+        u "(I guess I'll figure that out if it ever comes to it. It's about time I go to bed.)"
 
         scene v10smnr4 # TPP. Show MC putting down his phone and going to sleep.
         with dissolve

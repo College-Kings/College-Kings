@@ -120,6 +120,9 @@ label v9_ri_sex:
     image v9rilhj = Movie(play="images/v9/Scene 34/v9rilhj.webm", loop=True, image="images/v9/Scene 34/v9rilhjStart.webp", start_image="images/v9/Scene 34/v9rilhjStart.webp") # FPP. Show Riley giving MC a handjob, Riley mouth wide open.
     image v9rilhjf = Movie(play="images/v9/Scene 34/v9rilhjf.webm", loop=True, image="images/v9/Scene 34/v9rilhjStart.webp", start_image="images/v9/Scene 34/v9rilhjStart.webp")
 
+    show screen v9s34_rileySexOverlay
+
+label v9s34_rileyBlowjob:
     scene v9rilbj # Pls ignore as animation
     with dissolve
 
@@ -162,6 +165,7 @@ label v9_ri_sex:
 
     pause 1
 
+label v9s34_rileyLicking:
     scene v9rilli # Pls ignore as animation
     with dissolve
 
@@ -225,6 +229,7 @@ label v9_ri_sex:
 
     pause 0.75
 
+label v9s34_rileyMissionary:
     scene v9rilmi # Pls ignore as animation
     with dissolve
 
@@ -257,6 +262,7 @@ label v9_ri_sex:
 
     ri "Let me get on top."
 
+label v9s34_rileyCowgirl:
     scene v9ris16 # TPP. Show MC rolling over so he is on his back on Riley's bed, Riley mounts him hovering above MC's penis.
     with dissolve
 
@@ -329,6 +335,8 @@ label v9_ri_sex:
     with dissolve
 
     pause 1
+
+    hide screen v9s34_rileySexOverlay
 
     scene v9ris21 # FPP. Show Riley, now stood up, smile, mouth open.
 

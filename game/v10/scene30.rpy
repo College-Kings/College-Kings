@@ -168,6 +168,7 @@ label v10_chloe_gym:
         menu:
             "Look closer":
                 label v10s30_galleryScene:
+                $ v10_chloe_locker = True
                 scene v10chg6a # FPP Same angle as c10chg6a, Close up shot of Chloe's butt while she's bending over
                 with dissolve
 
@@ -182,6 +183,8 @@ label v10_chloe_gym:
                 with dissolve
 
                 u "I'd run that back on repeat."
+
+                play sound "sounds/kiss.mp3"
 
                 scene v10chg7 # TPP In gym, show Chloe kissing MC
                 with dissolve
@@ -252,23 +255,26 @@ label v10_chloe_gym:
 
                 pause 0.5
 
+                show screen v10s30_chloeSexOverlay
+
                 image v10chgeo = Movie(play="images/v10/Scene 30/v10chgeo.webm", loop=True, image="images/v10/Scene 30/v10chgeoStart.webp", start_image="images/v10/Scene 30/v10chgeoStart.webp") # TPP Close up as MC is eating her out
                 image v10chgeof = Movie(play="images/v10/Scene 30/v10chgeof.webm", loop=True, image="images/v10/Scene 30/v10chgeoStart.webp", start_image="images/v10/Scene 30/v10chgeoStart.webp")
 
-                scene v10chgeo # MC eating Chloe out
-                with dissolve
-                
-                cl "I'm gonna cum!"
+                label v10s30_chloeLicking:
+                    scene v10chgeo # MC eating Chloe out
+                    with dissolve
+                    
+                    cl "I'm gonna cum!"
 
-                scene v10chgeof
-                with dissolve
-                
-                cl "Oh my god, I'm cumming!"
+                    scene v10chgeof
+                    with dissolve
+                    
+                    cl "Oh my god, I'm cumming!"
 
-                scene v10chg9c # TPP Same angle as v10chg9, MC's head between Chloe's legs while she grips the sides of the bench, back arched, face looking up, eyes closed
-                with dissolve
+                    scene v10chg9c # TPP Same angle as v10chg9, MC's head between Chloe's legs while she grips the sides of the bench, back arched, face looking up, eyes closed
+                    with dissolve
 
-                pause 0.5
+                    pause 0.5
 
                 scene v10chg9d # TPP Same angle as v10chg9, Chloe sitting up and laying MC back on the bench just like he did with her, Chloe's mouth open
                 with dissolve
@@ -280,38 +286,41 @@ label v10_chloe_gym:
 
                 u "Oh God!"
 
-                scene v10chg10c # FPP Same angle as v10chg10b, Chloe moving to give MC a blowjob
-                with dissolve
+                label v10s30_chloeBlowjob:
+                    scene v10chg10c # FPP Same angle as v10chg10b, Chloe moving to give MC a blowjob
+                    with dissolve
 
-                u "I need to win games more often."
+                    u "I need to win games more often."
 
-                image v10chgbj = Movie(play="images/v10/Scene 30/v10chgbj.webm", loop=True, image="images/v10/Scene 30/v10chgbjStart.webp", start_image="images/v10/Scene 30/v10chgbjStart.webp") # FPP Chloe giving MC a blowjob
-                image v10chgbjf = Movie(play="images/v10/Scene 30/v10chgbjf.webm", loop=True, image="images/v10/Scene 30/v10chgbjStart.webp", start_image="images/v10/Scene 30/v10chgbjStart.webp")
+                    image v10chgbj = Movie(play="images/v10/Scene 30/v10chgbj.webm", loop=True, image="images/v10/Scene 30/v10chgbjStart.webp", start_image="images/v10/Scene 30/v10chgbjStart.webp") # FPP Chloe giving MC a blowjob
+                    image v10chgbjf = Movie(play="images/v10/Scene 30/v10chgbjf.webm", loop=True, image="images/v10/Scene 30/v10chgbjStart.webp", start_image="images/v10/Scene 30/v10chgbjStart.webp")
 
-                scene v10chgbj # Chloe giving MC a blowjob
-                with dissolve
+                    scene v10chgbj # Chloe giving MC a blowjob
+                    with dissolve
 
-                u "This is... oh fuck."
+                    u "This is... oh fuck."
 
-                scene v10chgbjf
-                with dissolve
+                    scene v10chgbjf
+                    with dissolve
 
-                u "I'm gonna cum."
+                    u "I'm gonna cum."
 
-                scene v10chg10d # FPP Same angle as v10chg10b, MC holding Chloe's head with both hands while he cums in her mouth
-                with dissolve
+                    scene v10chg10d # FPP Same angle as v10chg10b, MC holding Chloe's head with both hands while he cums in her mouth
+                    with dissolve
 
-                u "Ahh fuck... I'm cumming!"
+                    u "Ahh fuck... I'm cumming!"
 
-                scene v10chg10e # FPP Same angle as v10chg10b, Chloe smiling, mouth open, cum in her mouth
-                with dissolve
+                    scene v10chg10e # FPP Same angle as v10chg10b, Chloe smiling, mouth open, cum in her mouth
+                    with dissolve
 
-                cl "Mmm..."
+                    cl "Mmm..."
 
-                scene v10chg10f # FPP Same angle as v10chg10b, Chloe smiling, mouth closed
-                with dissolve
+                    scene v10chg10f # FPP Same angle as v10chg10b, Chloe smiling, mouth closed
+                    with dissolve
 
-                cl "*gulp*"
+                    cl "*gulp*"
+
+                hide screen v10s30_chloeSexOverlay
 
                 scene v10chg10g # FPP Same angle as v10chg10b, Chloe smiling, mouth open
                 with dissolve

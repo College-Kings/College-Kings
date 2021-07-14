@@ -36,13 +36,13 @@ label v10start:
         scene v10sta3
         with dissolve
 
-        imre "I’ll bash your fucking head in right now."
+        imre "I'll bash your fucking head in right now."
 
         scene v10sta3a # FPP. Same camera as v10sta3, angry look on imre/ryan, ryan mouth open, imre mouth closed
 
         with dissolve
 
-        ry "You couldn’t bash someone’s head in if they gave you a fucking head bashing machine!"
+        ry "You couldn't bash someone's head in if they gave you a fucking head bashing machine!"
 
         scene v10sta3b # FPP. Same camera as v10sta3, Imre and ryan grappling each other, sebastian pulling away imre, cameron pulling away ryan, angry faces, imre/ryan/cameron closed mouths, Sebastian mouth open.
         with dissolve
@@ -60,7 +60,7 @@ label v10start:
        scene v10sta4a # FPP. Same Camera as v10sta4, imre now left scene, Show Sebastian near the warehouse doors facing camera, neutral look, mouth open
        with dissolve
  
-       se "Why the fuck would you wrestle him?! Go for a fucking punch if you mean it!” "
+       se "Why the fuck would you wrestle him?! Go for a fucking punch if you mean it!"
  
        jump v10_ryan_v_perry
    else:

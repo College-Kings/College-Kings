@@ -227,6 +227,7 @@ label v10_riley_sex:
                     "Peek":
 
                         $ rileyrs = True
+                        $ v10_ri_sex = True
 
                         scene v10srds1f
                         with dissolve
@@ -266,17 +267,18 @@ label v10_riley_sex:
 
                         u "Lie down."
 
-                        scene v10rircg
-                        with dissolve
-                        pause
-                        u "You're so sexy."
+                        label v10s40_rileyReverse:
+                            scene v10rircg
+                            with dissolve
+                            pause
+                            u "You're so sexy."
 
-                        ri "Squeeze my thighs."
+                            ri "Squeeze my thighs."
 
-                        scene v10rircgf
-                        with dissolve
-                        pause
-                        ri "Oh god!"
+                            scene v10rircgf
+                            with dissolve
+                            pause
+                            ri "Oh god!"
 
                         scene v10riam
                         with dissolve
@@ -290,30 +292,33 @@ label v10_riley_sex:
 
                         ri "My turn."
 
-                        scene v10riot
-                        with dissolve
-                        pause
-                        u "Fuck that feels good."
+                        label v10s40_rileyCowgirl:
+                            scene v10riot
+                            with dissolve
+                            pause
+                            u "Fuck that feels good."
 
-                        ri "You like it huh?"
+                            ri "You like it huh?"
 
-                        scene v10riotf
-                        with dissolve
-                        pause
-                        u "Oh fuck, YESSS!"
+                            scene v10riotf
+                            with dissolve
+                            pause
+                            u "Oh fuck, YESSS!"
 
-                        u "I'm gonna cum."
+                            u "I'm gonna cum."
 
-                        ri "Go ahead."
+                            ri "Go ahead."
 
-                        scene v10riotf
-                        with flash
-                        pause
+                            scene v10riotf
+                            with flash
+                            pause
 
                         scene v10srds6
                         with fade
 
                         pause 0.75
+
+                        hide screen v10s40_rileySexOverlay
 
                         scene v10srds6a
                         with dissolve
@@ -326,6 +331,7 @@ label v10_riley_sex:
                         u "It was."
             "Make a move":
                 $ rileyrs = True
+                $ v10_ri_sex = True
 
                 scene v10srds4a # TPP. Same camera as v10srds4. Show MC and Riley. Both smiling, mouths closed. MC puts his hand on Riley's towel and drops it to the floor.
                 with dissolve
@@ -558,12 +564,15 @@ label v10_riley_sex:
 
     elif kct == "confident": # -If not rileyrs with KCT Confident #
 
+        call screen kctPopup
+
         scene v10srds3a
         with dissolve
         menu:
             "Make a move":
 
                 $ rileyrs = True
+                $ v10_ri_sex = True
 
                 scene v10srds1f
                 with dissolve
@@ -812,6 +821,7 @@ label v10_riley_sex:
                     "Peek":
 
                         $ rileyrs = True
+                        $ v10_ri_sex = True
 
                         scene v10srds1f
                         with dissolve

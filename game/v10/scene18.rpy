@@ -44,7 +44,7 @@ label v10_call_with_lauren2:
                 scene v10scwl1
                 with dissolve
 
-                u "I'm sure everything will go just fine, if there’s anything that needs special attention I'm sure your sister is already on top of it."
+                u "I'm sure everything will go just fine, if there's anything that needs special attention I'm sure your sister is already on top of it."
 
                 scene v10scwl2
                 with dissolve
@@ -54,7 +54,7 @@ label v10_call_with_lauren2:
         scene v10scwl2
         with dissolve
 
-        la "It’s also like… what if no one comes to my thing? And I put all this work in and just no one ever comes by."
+        la "It's also like… what if no one comes to my thing? And I put all this work in and just no one ever comes by."
 
         scene v10scwl1
         with dissolve
@@ -64,17 +64,17 @@ label v10_call_with_lauren2:
         scene v10scwl1a
         with dissolve
 
-        la "Well I’m glad my failure amuses you."
+        la "Well I'm glad my failure amuses you."
 
         scene v10scwl1
         with dissolve
 
-        u "Okay, IMAGINARY failure. Obviously that’s not gonna happen."
+        u "Okay, IMAGINARY failure. Obviously that's not gonna happen."
 
         scene v10scwl2
         with dissolve
 
-        la "I don’t know, this could be middle school all over again."
+        la "I don't know, this could be middle school all over again."
 
         scene v10scwl1
         with dissolve
@@ -89,7 +89,7 @@ label v10_call_with_lauren2:
         scene v10scwl1
         with dissolve
 
-        u "Let me guess, you didn’t have a project."
+        u "Let me guess, you didn't have a project."
 
         scene v10scwl2a # TPP. Same camera as v10scwl2. Show MC in his Wolves bedroom. MC is laying on his bed, phone to ear (talking to Lauren), thoughtful expression as he listens, mouth closed.
         with dissolve
@@ -102,12 +102,12 @@ label v10_call_with_lauren2:
         
         la "Well, once the science fair started, I waited 6 hours in that room. By myself. Not even the teacher that unlocked the room for me came by."
         
-        la "Apparently he had forgotten to put up the sign that’d tell people about my installation."
+        la "Apparently he had forgotten to put up the sign that'd tell people about my installation."
 
         scene v10scwl1b # TPP. Same camera as v10scwl1. Show Lauren as though FPP, she's sitting on the train. Lauren on phone listening to MC, neutral/thoughtful expression, mouth closed.
         with dissolve
 
-        u "Holy shit, that’s so sad. I wish I could’ve seen the project. It sounds really cool."
+        u "Holy shit, that's so sad. I wish I could've seen the project. It sounds really cool."
 
         scene v10scwl1c # TPP. Same camera as v10scwl1. Show Lauren as though FPP, she's sitting on the train. Lauren on phone listening to MC, neutral/thoughtful expression, mouth open.
         with dissolve
@@ -117,17 +117,17 @@ label v10_call_with_lauren2:
         scene v10scwl1b
         with dissolve
 
-        u "I assume you haven’t forgiven your teacher to this day, huh?"
+        u "I assume you haven't forgiven your teacher to this day, huh?"
 
         scene v10scwl2b # TPP. Same camera as v10scwl2. Show MC in his Wolves bedroom. MC is laying on his bed, normal/content expression, mouth closed.
         with dissolve
 
-        la "Well… no. But, in all fairness, most of my teachers weren’t the nicest people anyways. I’m just glad that phase of my life is over."
+        la "Well… no. But, in all fairness, most of my teachers weren't the nicest people anyways. I'm just glad that phase of my life is over."
 
         scene v10scwl1b
         with dissolve
 
-        u "Sounds like you really didn’t have a good time in middle school."
+        u "Sounds like you really didn't have a good time in middle school."
 
         scene v10scwl2b
         with dissolve
@@ -147,7 +147,7 @@ label v10_call_with_lauren2:
         scene v10scwl1b
         with dissolve
 
-        u "Oh, I didn’t even know you were super religious."
+        u "Oh, I didn't even know you were super religious."
 
         scene v10scwl2b
         with dissolve
@@ -157,19 +157,19 @@ label v10_call_with_lauren2:
         scene v10scwl1b
         with dissolve
 
-        u "So what’s that like, growing up with very religious parents?"
+        u "So what's that like, growing up with very religious parents?"
 
         scene v10scwl2b
         with dissolve
 
-        la "Uhm I don’t know. I love my parents, but there were times when I really felt like I needed a break from them."
+        la "Uhm I don't know. I love my parents, but there were times when I really felt like I needed a break from them."
         
         la "My sister never really got along with them. Her whole \"fight the system\" mindset. She was always her own person and to be honest, I've always respected that a lot about her."
 
         scene v10scwl1b
         with dissolve
 
-        u "Do you feel like you’re not your own person?"
+        u "Do you feel like you're not your own person?"
 
         scene v10scwl2a
         with dissolve
@@ -199,12 +199,12 @@ label v10_call_with_lauren2:
                 scene v10scwl1b
                 with dissolve
                     
-                u "I guess, but it’s also nice to make other people happy. I don’t know, your selflessness is one of the things I like most about you."
+                u "I guess, but it's also nice to make other people happy. I don't know, your selflessness is one of the things I like most about you."
 
                 scene v10scwl2b
                 with dissolve
 
-                la "Thanks, I guess. Yeah, you’re probably right. I don’t know. I think it’s about finding a balance."
+                la "Thanks, I guess. Yeah, you're probably right. I don't know. I think it's about finding a balance."
 
         scene v10scwl2
         with dissolve
@@ -215,12 +215,12 @@ label v10_call_with_lauren2:
             scene v10scwl1
             with dissolve
 
-            u "Wait, is this like a trick question where I gotta make sure that my answer doesn’t hurt your feelings or something?"
+            u "Wait, is this like a trick question where I gotta make sure that my answer doesn't hurt your feelings or something?"
 
             scene v10scwl1a
             with dissolve
 
-            la "*Laughs* No, I’m just interested in my boyfriend’s thoughts."
+            la "*Laughs* No, I'm just interested in my boyfriend's thoughts."
 
             scene v10scwl1
             with dissolve
@@ -282,7 +282,7 @@ label v10_call_with_lauren2:
                 scene v10scwl1b
                 with dissolve
 
-                u "I don't think so, kinda sounds expensive. I’m just not really a big family man."
+                u "I don't think so, kinda sounds expensive. I'm just not really a big family man."
 
                 scene v10scwl2
                 with dissolve
@@ -292,17 +292,17 @@ label v10_call_with_lauren2:
                 scene v10scwl1b
                 with dissolve
 
-                u "Yeah, I guess. I don’t really know, it seems like a lot of responsibility."
+                u "Yeah, I guess. I don't really know, it seems like a lot of responsibility."
 
                 scene v10scwl1a
                 with dissolve
 
-                la "*Laughs* Having a kid? Yeah that’s kind of the point."
+                la "*Laughs* Having a kid? Yeah that's kind of the point."
 
         scene v10scwl1
         with dissolve
 
-        u "You ever just have random questions pop up in your head, but then you’re like… wait a minute, I don’t even know what I’d do in that scenario?"
+        u "You ever just have random questions pop up in your head, but then you're like… wait a minute, I don't even know what I'd do in that scenario?"
 
         scene v10scwl2
         with dissolve
@@ -322,12 +322,12 @@ label v10_call_with_lauren2:
         scene v10scwl1
         with dissolve
 
-        u "You’re making it too easy! If you’re not granting him the wish then you would be granting him the wish, but that would mean you wouldn’t grant him the wish and that-"
+        u "You're making it too easy! If you're not granting him the wish then you would be granting him the wish, but that would mean you wouldn't grant him the wish and that-"
 
         scene v10scwl2
         with dissolve
 
-        la "Okay, okay. I see what you’re getting at. *Chuckles*"
+        la "Okay, okay. I see what you're getting at. *Chuckles*"
 
         la "Anyways it looks like we're pulling up on the station, I really appreciate that we talked the whole time! Made time pass by a lot faster."
 
@@ -354,7 +354,7 @@ label v10_call_with_lauren2:
         scene v10scwl2b
         with fade
 
-        u "(Wow, that was quite a long call, but I feel like I really learned a lot about her… It’s not that late, maybe I can go for a bit of a walk before going to bed.)"
+        u "(Wow, that was quite a long call, but I feel like I really learned a lot about her… It's not that late, maybe I can go for a bit of a walk before going to bed.)"
 
         stop music fadeout 3
 
@@ -399,7 +399,7 @@ label v10_call_with_lauren2:
                 scene v10scwl1
                 with dissolve
 
-                u "I'm sure everything will go just fine, if there’s anything that needs special attention I'm sure your sister is already on top of it."
+                u "I'm sure everything will go just fine, if there's anything that needs special attention I'm sure your sister is already on top of it."
 
                 scene v10saow3 
                 with dissolve
@@ -409,7 +409,7 @@ label v10_call_with_lauren2:
         scene v10saow3 
         with dissolve
 
-        la "It’s also like… what if no one comes to my thing? And I put all this work in and just no one ever comes by."
+        la "It's also like… what if no one comes to my thing? And I put all this work in and just no one ever comes by."
 
         scene v10scwl1
         with dissolve
@@ -419,17 +419,17 @@ label v10_call_with_lauren2:
         scene v10saow3 
         with dissolve
 
-        la "Well I’m glad my failure amuses you."
+        la "Well I'm glad my failure amuses you."
 
         scene v10scwl1
         with dissolve
 
-        u "Okay, IMAGINARY failure. Obviously that’s not gonna happen."
+        u "Okay, IMAGINARY failure. Obviously that's not gonna happen."
 
         scene v10scwl1a
         with dissolve
 
-        la "I don’t know, this could be middle school all over again."
+        la "I don't know, this could be middle school all over again."
 
         scene v10scwl1
         with dissolve
@@ -444,7 +444,7 @@ label v10_call_with_lauren2:
         scene v10scwl1
         with dissolve
 
-        u "Let me guess, you didn’t have a project."
+        u "Let me guess, you didn't have a project."
 
         scene v10saow3a # IGNORE, RENDER FROM SCENE 15
         with dissolve
@@ -457,12 +457,12 @@ label v10_call_with_lauren2:
         
         la "Well, once the science fair started, I waited 6 hours in that room. By myself. Not even the teacher that unlocked the room for me came by."
         
-        la "Apparently he had forgotten to put up the sign that’d tell people about my installation."
+        la "Apparently he had forgotten to put up the sign that'd tell people about my installation."
 
         scene v10scwl1b # TPP. Same camera as v10scwl1. Show Lauren as though FPP, she's sitting on the train. Lauren on phone listening to MC, neutral/thoughtful expression, mouth closed.
         with dissolve
 
-        u "Holy shit, that’s so sad. I wish I could’ve seen the project. It sounds really cool."
+        u "Holy shit, that's so sad. I wish I could've seen the project. It sounds really cool."
 
         scene v10scwl1c # TPP. Same camera as v10scwl1. Show Lauren as though FPP, she's sitting on the train. Lauren on phone listening to MC, neutral/thoughtful expression, mouth open.
         with dissolve
@@ -472,17 +472,17 @@ label v10_call_with_lauren2:
         scene v10scwl1b
         with dissolve
 
-        u "I assume you haven’t forgiven your teacher to this day, huh?"
+        u "I assume you haven't forgiven your teacher to this day, huh?"
 
         scene v10saow3b # TPP. Same camera as v10saow3. Show MC in his Ape bedroom. MC is laying on his bed, normal/content expression, mouth closed.
         with dissolve
 
-        la "Well… no. But, in all fairness, most of my teachers weren’t the nicest people anyways. I’m just glad that phase of my life is over."
+        la "Well… no. But, in all fairness, most of my teachers weren't the nicest people anyways. I'm just glad that phase of my life is over."
 
         scene v10scwl1b
         with dissolve
 
-        u "Sounds like you really didn’t have a good time in middle school."
+        u "Sounds like you really didn't have a good time in middle school."
 
         scene v10saow3b
         with dissolve
@@ -502,7 +502,7 @@ label v10_call_with_lauren2:
         scene v10saow3b
         with dissolve
 
-        u "Oh, I didn’t even know you were super religious."
+        u "Oh, I didn't even know you were super religious."
 
         scene v10saow3a
         with dissolve
@@ -512,19 +512,19 @@ label v10_call_with_lauren2:
         scene v10scwl1b
         with dissolve
 
-        u "So what’s that like, growing up with very religious parents?"
+        u "So what's that like, growing up with very religious parents?"
 
         scene v10saow3a
         with dissolve
 
-        la "Uhm I don’t know. I love my parents, but there were times when I really felt like I needed a break from them."
+        la "Uhm I don't know. I love my parents, but there were times when I really felt like I needed a break from them."
         
         la "My sister never really got along with them. Her whole \"fight the system\" mindset. She was always her own person and to be honest, I've always respected that a lot about her."
 
         scene v10scwl1b
         with dissolve
 
-        u "Do you feel like you’re not your own person?"
+        u "Do you feel like you're not your own person?"
 
         scene v10scwl1c
         with dissolve
@@ -554,12 +554,12 @@ label v10_call_with_lauren2:
                 scene v10scwl1b
                 with dissolve
                     
-                u "I guess, but it’s also nice to make other people happy. I don’t know, your selflessness is one of the things I like most about you."
+                u "I guess, but it's also nice to make other people happy. I don't know, your selflessness is one of the things I like most about you."
 
                 scene v10saow3
                 with dissolve
 
-                la "Thanks, I guess. Yeah, you’re probably right. I don’t know. I think it’s about finding a balance."
+                la "Thanks, I guess. Yeah, you're probably right. I don't know. I think it's about finding a balance."
 
         scene v10scwl1c
         with dissolve
@@ -570,12 +570,12 @@ label v10_call_with_lauren2:
             scene v10scwl1
             with dissolve
 
-            u "Wait, is this like a trick question where I gotta make sure that my answer doesn’t hurt your feelings or something?"
+            u "Wait, is this like a trick question where I gotta make sure that my answer doesn't hurt your feelings or something?"
 
             scene v10saow3
             with dissolve
 
-            la "*Laughs* No, I’m just interested in my boyfriend’s thoughts."
+            la "*Laughs* No, I'm just interested in my boyfriend's thoughts."
 
             scene v10scwl1
             with dissolve
@@ -637,7 +637,7 @@ label v10_call_with_lauren2:
                 scene v10scwl1b
                 with dissolve
 
-                u "I don't think so, kinda sounds expensive. I’m just not really a big family man."
+                u "I don't think so, kinda sounds expensive. I'm just not really a big family man."
 
                 scene v10saow3
                 with dissolve
@@ -647,17 +647,17 @@ label v10_call_with_lauren2:
                 scene v10scwl1b
                 with dissolve
 
-                u "Yeah, I guess. I don’t really know, it seems like a lot of responsibility."
+                u "Yeah, I guess. I don't really know, it seems like a lot of responsibility."
 
                 scene v10saow3
                 with dissolve
 
-                la "*Laughs* Having a kid? Yeah that’s kind of the point."
+                la "*Laughs* Having a kid? Yeah that's kind of the point."
 
         scene v10scwl1
         with dissolve
 
-        u "You ever just have random questions pop up in your head, but then you’re like… wait a minute, I don’t even know what I’d do in that scenario?"
+        u "You ever just have random questions pop up in your head, but then you're like… wait a minute, I don't even know what I'd do in that scenario?"
 
         scene v10scwl1a
         with dissolve
@@ -677,12 +677,12 @@ label v10_call_with_lauren2:
         scene v10scwl1
         with dissolve
 
-        u "You’re making it too easy! If you’re not granting him the wish then you would be granting him the wish, but that would mean you wouldn’t grant him the wish and that-"
+        u "You're making it too easy! If you're not granting him the wish then you would be granting him the wish, but that would mean you wouldn't grant him the wish and that-"
 
         scene v10saow3
         with dissolve
 
-        la "Okay, okay. I see what you’re getting at. *Chuckles*"
+        la "Okay, okay. I see what you're getting at. *Chuckles*"
 
         la "Anyways it looks like we're pulling up on the station, I really appreciate that we talked the whole time! Made time pass by a lot faster."
 
@@ -709,7 +709,7 @@ label v10_call_with_lauren2:
         scene v10saow3b
         with fade
 
-        u "(Wow, that was quite a long call, but I feel like I really learned a lot about her… It’s not that late, maybe I can go for a bit of a walk before going to bed.)"
+        u "(Wow, that was quite a long call, but I feel like I really learned a lot about her… It's not that late, maybe I can go for a bit of a walk before going to bed.)"
 
         stop music fadeout 3
 

@@ -3,6 +3,8 @@ label v8_ri_start:
     # Note to renderers: Make sure the MC is in his suit and Riley is in her HoCo dress. Any other props are the same as Riley's lewd ending in v7. Context: MC and Riley are both sitting on her bed in her room and she's whispering in his ear
     stop music fadeout 2
 
+    $ v8_riley_lewd_ending = True
+
     scene v8s25 # Same as sfr4ri55 (from v7) but MC talking now
     with dissolve
     u "Mhm... Tell me more."
@@ -100,6 +102,8 @@ label v8_ri_start:
     with fade
     pause
 
+    show screen v8s3_rileySexOverlay
+
     scene v8s29a # Riley climbing on the bed and MC is getting on his back now
     with dissolve
     pause 0.5
@@ -119,6 +123,7 @@ label v8_ri_start:
     image v8ridg3 = Movie(play="images/v8/Scene 3/v8ridg3.webm", loop=True, image="images/v8/Scene 3/risex5_00.webp", start_image="images/v8/Scene 3/risex5_00.webp") # Doggy smooth angle 2
     image v8ridg3f = Movie(play="images/v8/Scene 3/v8ridg3.webm", loop=True, image="images/v8/Scene 3/risex5_00.webp", start_image="images/v8/Scene 3/risex5_00.webp")
 
+label v8s3_rileyCowgirl:
     scene v8ricg1
     with dissolve
     pause 3
@@ -156,6 +161,7 @@ label v8_ri_start:
     ri "*Moans* I want you to fuck me from behind."
     pause
 
+label v8s3_rileyLiftDoggy:
     scene v8s30 # TPP. Check animation 2 at the end for pose reference, maintain a similar camera angle but zoom in a little on the face. Riley turned her head a little with cornered eyes trying to look backside, curious, mouth open. Add DOF if possible.
     with fade
     ri "Well, what are you waiting for?"
@@ -184,6 +190,7 @@ label v8_ri_start:
     ri "Harder! Show me your... *moans*{w} best."
     u "Ahh! Get your hands here."
 
+label v8s3_rileyDoggy:
     scene v8ridg2
     with dissolve
     pause 3
@@ -218,6 +225,8 @@ label v8_ri_start:
     stop music fadeout 3
     
     ri "Mmmmm!"
+
+    hide screen v8s3_rileySexOverlay
 
     scene v8s32 # TPP (not a close up). MC and Riley laying in bed facing each other in their underwear
     with Fade(0.5, 0.5, 0.5)
