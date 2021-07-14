@@ -5,6 +5,7 @@ renpy/
 game/bugTesting/_bugTesting.txt
 game/cache/
 game/saves/
+game/script_version.txt
 
 CollegeKings.py
 CollegeKings.sh
