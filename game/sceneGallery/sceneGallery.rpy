@@ -30,26 +30,25 @@ init python:
     SceneGallery("rileysexscene")
     SceneGallery("brbj")
 
-
 screen spoiler():
     modal True
 
     add "images/darker.webp"
 
-    add "images/endfr.webp"
-    text "Warning: The scene gallery contains spoilers for the story of the game. Are you sure you want to continue?" style "endfree"
+    use endfrTemplate:
+        text "Warning: The scene gallery contains spoilers for the story of the game. Are you sure you want to continue?":
+            style "endfree"
+            xalign 0.5
 
-    textbutton "Yes":
-        style "endfr"
-        text_align 0.5
-        align (0.43, 0.58)
-        action [Hide("spoiler"), ui.callsinnewcontext("sceneGalleryNameChange"), Show("sceneGallery")]
+        hbox:
+            align (0.5, 1.0)
+            spacing 200
 
-    textbutton "No":
-        style "endfr"
-        text_align 0.5
-        align (0.57, 0.58)
-        action Hide("spoiler")
+            textbutton "Yes":
+                action [Hide("spoiler"), ui.callsinnewcontext("sceneGalleryNameChange"), Show("sceneGallery")]
+
+            textbutton "No":
+                action Hide("spoiler")
 
 
 screen sceneGallery():

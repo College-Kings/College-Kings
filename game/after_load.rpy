@@ -6,6 +6,11 @@ python early:
     if renpy.loadable("bugTesting/bugTesting_Overwrite.rpyc"):
         os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpyc"))
 
+    if renpy.loadable("bugTesting/bugTesting_typoNotes.rpy"):
+        os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_typoNotes.rpy"))
+    if renpy.loadable("bugTesting/bugTesting_typoNotes.rpyc"):
+        os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_typoNotes.rpyc"))
+
     if renpy.loadable("phone/phonescript.rpy"):
         os.remove(os.path.join(config.basedir, "game", "phone", "phonescript.rpy"))
     if renpy.loadable("phone/phonescript.rpyc"):
@@ -62,6 +67,9 @@ python early:
 
 label after_load:
     python:
+        # Disable skip transitions
+        preferences.transitions = 2
+
         # Applications
         for app in applications:
             try: app.img = app.image
@@ -79,6 +87,25 @@ label after_load:
         kiwiiUsers = kiwii_users()
 
         # Kiwii Posts
+        try: v11s1_kiwiiPost.img = "images/phone/kiwii/posts/v11/v11_autumn_kiwii.webp"
+        except NameError: pass
+        try: v11s19_kiwiiPost1.img = "images/phone/kiwii/posts/v11/v11_chloemcselfie.webp"
+        except NameError: pass
+        try: v11s19_kiwiiPost2.img = "images/phone/kiwii/posts/v11/v11_chloemcselfie.webp"
+        except NameError: pass
+        try: v11s19_kiwiiPost3.img = "images/phone/kiwii/posts/v11/v11_rileymcselfie.webp"
+        except NameError: pass
+        try: v11s24_kiwiiPost1.img = "images/phone/kiwii/posts/v11/v11_caleb.webp"
+        except NameError: pass
+        try: v11s24_kiwiiPost2.img = "images/phone/kiwii/posts/v11/v11_imrebunny.webp"
+        except NameError: pass
+        try: v11s38_kiwiiPost1.img = "images/phone/kiwii/posts/v11/v11s38_amber_kiwii.webp"
+        except NameError: pass
+        try: v11s9a_kiwiiPost1.img = "images/phone/kiwii/posts/v11/sebnaked.webp"
+        except NameError: pass
+        try: v11s9a_kiwiiPost2.img = "images/phone/kiwii/posts/v11/sebnaked.webp"
+        except NameError: pass
+
         for kiwiiPost in kiwiiPosts:
             try: kiwiiPost.img = kiwiiPost.image
             except AttributeError: pass
@@ -111,12 +138,25 @@ label after_load:
 
                 comment.profilePicture = comment.getProfilePicture()
                 
-            # Kiwii Replies
+            # Old Kiwii Replies
             try:
                 for reply in kiwiiPost.replies:
                     kiwiiPost.replies.remove(reply)
                     kiwiiPost.addReply(reply.reply, numberLikes=reply.numberLikes, mentions=reply.mentions)
             except AttributeError: pass
+
+            # New Kiwii Replies
+            try:
+                for reply in kiwiiPost.sentComments[-1].replies:
+                    reply.disabled = False
+            except Exception: pass
+
+            try:
+                for pendingComment in kiwiiPost.pendingComments:
+                    for reply in pendingComment.replies:
+                        reply.disabled = False
+            except AttributeError: pass
+
 
         # Contacts
         contact_Lindsey.profilePicture = "lindseyprofilepic"
@@ -174,4 +214,7 @@ label after_load:
 
     show screen phoneIcon
     hide screen getaccess
+
+    if config.developer:
+        show screen bugTesting_Overlay
     return

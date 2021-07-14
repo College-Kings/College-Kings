@@ -1,3 +1,15 @@
+screen endfrTemplate():
+
+    window:
+        align (0.5, 0.5)
+        padding (25, 50)
+        xysize (746, 384)
+
+        background "images/endfr.webp"
+
+        # add "#00ff0080"
+        transclude
+
 screen realmode():
     modal True
     
@@ -23,27 +35,27 @@ screen fantasyOverlay():
 screen endFreeRoamConfirm(continueLabel):
     modal True
     
-    add "images/endfr.webp"
+    use endfrTemplate:
 
-    text "Are you sure you want to end free roam?" style "endfree"
+        text "Are you sure you want to end free roam?":
+            style "endfree"
+            xalign 0.5
 
-    textbutton "Yes":
-        style "endfr"
-        action [Hide("endFreeRoamConfirm"), SetVariable("freeRoam", False), Jump(continueLabel)]
-        text_align 0.5
-        align (0.43, 0.58)
+        hbox:
+            align (0.5, 1.0)
+            spacing 200
 
-    textbutton "No":
-        style "endfr"
-        action Hide("endFreeRoamConfirm")
-        text_align 0.5
-        align (0.57, 0.58)
+            textbutton "Yes":
+                action [Hide("endFreeRoamConfirm"), SetVariable("freeRoam", False), Jump(continueLabel)]
+                
+            textbutton "No":
+                action Hide("endFreeRoamConfirm")
 
 
 screen censoredPopup(continueLabel):
     modal True
 
-    add "images/gui/censoredPopup/censoredBackground.webp"
+    add "gui/censoredPopup/censoredBackground.webp"
 
     vbox:
         pos (365, 566)
@@ -51,63 +63,97 @@ screen censoredPopup(continueLabel):
 
         if config_censored:
             imagebutton:
-                idle "images/gui/censoredPopup/censoredSettings.webp"
-                hover "images/gui/censoredPopup/censoredSettingsHover.webp"
+                idle "gui/censoredPopup/censoredSettings.webp"
+                hover "gui/censoredPopup/censoredSettingsHover.webp"
                 action ShowMenu("preferences")
         else:
             imagebutton:
-                idle "images/gui/censoredPopup/censoredContinue.webp"
-                hover "images/gui/censoredPopup/censoredContinueHover.webp"
+                idle "gui/censoredPopup/censoredContinue.webp"
+                hover "gui/censoredPopup/censoredContinueHover.webp"
                 action Return()
 
         imagebutton:
-            idle "images/gui/censoredPopup/censoredSkipScene.webp"
-            hover "images/gui/censoredPopup/censoredSkipSceneHover.webp"
+            idle "gui/censoredPopup/censoredSkipScene.webp"
+            hover "gui/censoredPopup/censoredSkipSceneHover.webp"
             action Jump(continueLabel)
 
 
+screen timerBar(seconds=3):
+    bar value AnimatedValue(0, seconds, seconds, seconds) at alpha_dissolve
+
+# Kiwii Screens
 screen kiwiiPopup():
     modal True
     zorder 200
 
-    add "images/endfr.webp"
+    use endfrTemplate:
 
-    text "You've just unlocked the social media app Kiwii! Open it now from the homescreen." style "endfree"
+        text "You've just unlocked the social media app Kiwii! Open it now from the homescreen.":
+            style "endfree"
+            xalign 0.5
 
-    textbutton "OK":
-        style "endfr"
-        action [SetVariable("kiwii_firstTime", False), Hide("kiwiiPopup")]
-        text_align 0.5
-        align (0.5, 0.58)
+        textbutton "OK":
+            align (0.5, 1.0)
+            action [SetVariable("kiwii_firstTime", False), Hide("kiwiiPopup")]
 
-
+# Fight Screens
 screen fightPopup(fightMove):
     modal True
-    add "images/endfr.webp"
+    
+    use endfrTemplate:
 
-    text "Congratulations! You have learned a new fighting move: {b}[fightMove]{/b}." style "endfree"
+        text "Congratulations! You have learned a new fighting move: {b}[fightMove]{/b}.":
+            style "endfree"
+            xalign 0.5
 
-    textbutton "OK" style "endfr":
-        action Return()
-        text_align 0.5
-        align (0.5, 0.58)
+        textbutton "OK":
+            align (0.5, 1.0)
+            action Return()
+
+
+screen fightDamage():
+    if youDamage == 3:
+        add "images/3 hits.webp"
+    elif youDamage == 4:
+        add "images/4 hits.webp"
+    elif youDamage >= 5:
+        add "images/5 hits.webp"
+
+
+# KCT Screens
+screen kctChoice():
+    fixed:
+        xysize (298, 76)
+        xalign 1.0
+
+        add "gui/kct.webp"
+        text kct:
+            align (0.5, 0.5)
+            font "fonts/Freshman.ttf"
+            size 40
+            if kct == "popular":
+                color "#53d769"
+            if kct == "loyal":
+                color "#fecb2e"
+            if kct == "confident":
+                color "#fc3d39"
 
 
 screen kctPopup():
     modal True
     zorder 300
 
-    add "images/endfr.webp"
+    use endfrTemplate:
 
-    text "Congratulations! Your Key Character Trait {b}[kct]{/b} has just changed the outcome of a decision someone was making." style "endfree"
+        text "Congratulations! Your Key Character Trait {b}[kct]{/b} has just changed the outcome of a decision someone was making.":
+            style "endfree"
+            xalign 0.5
 
-    textbutton "OK":
-        style "endfr"
-        action Return()
-        text_align 0.5
-        align (0.5, 0.58)
+        textbutton "OK":
+            align (0.5, 1.0)
+            action Return()
 
-
+# Steam Screens
 screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings__Act_I/"):
     tag credits
     modal True
@@ -119,10 +165,8 @@ screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings_
         idle "images/steam/playNow.webp"
         hover "images/steam/playNowHover.webp"
 
-        if renpy.loadable("v8/scene1.rpy"):
-            action Jump("v8start")
-        elif achievement.steam.dlc_installed(1624520):
-            action Function(renpy.quit, relaunch=True, save=True)
+        if achievement.steam.dlc_installed(1624520):
+            action [Function(renpy.quit, relaunch=True, save=True)]
         elif achievement.steam.is_overlay_enabled():
             action Function(achievement.steam.activate_overlay_to_web_page, link)
         else:
@@ -140,15 +184,37 @@ screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings_
 
         textbutton "Credits":
             text_style "steam_endScreenTextButton"
-            action Jump("end_credits")
+            action Jump("gameEnd")
 
         textbutton "The Team":
             text_style "steam_endScreenTextButton"
             action Show("teamCredits")
 
+# End Screens
+screen getaccess():
+    tag endScreen
+
+    add "images/endscreen.webp"
+
+    hbox:
+        align (0.5, 0.9)
+        spacing 100
+
+        textbutton "MENU":
+            action MainMenu()
+            yalign 0.5
+            text_size 100
+
+        imagebutton:
+            idle "images/get.webp"
+
+        textbutton "Credits":
+            action Jump("credits")
+            yalign 0.5
+            text_size 100
 
 screen credits():
-    tag credits
+    tag endScreen
     modal True
     zorder 100
 
@@ -186,7 +252,7 @@ screen credits():
 
 
 screen teamCredits():
-    tag credits
+    tag endScreen
     modal True
     zorder 100
 
@@ -199,62 +265,40 @@ screen teamCredits():
 
     hbox:
         align (0.5, 0.5)
-        spacing 200
+        spacing 300
 
         vbox:
             spacing 10
 
-            text "Undergrad Steve - Game Leader" xalign 0.5
-            text "OscarSix - Lead Coder" xalign 0.5
-            text "Lew - Lead Artist" xalign 0.5
-            text "KingLui - Project Manager" xalign 0.5
+            text "UndergradSteve - Game Designer"
+            text "KingLui - Project Manager"
+            text "OscarSix - Lead Programmer"
+            text "Lew - Lead Artist"
             null height 20
-            text "Hive - Lead Transcriber" xalign 0.5
-            text "Lucious Lordswill - Lead Writer" xalign 0.5
-            text "Oskin - Quality Assurance Manager" xalign 0.5
-            text "Condy - Lead Beta Tester" xalign 0.5
-            text "Jany - Translation Manager" xalign 0.5
+            text "Oskin - Lead Enforcer"
+            text "Lucious Lordswill - Lead Writer"
+            text "Hive - Lead Transcriber"
+            text "Condy - Quality Assurance Manager"
+            text "Jany - Translation Manager"
             null height 20
-            text "Maro - Marketing Specialist" xalign 0.5
-            text "OK-HAN - Marketing Specialist" xalign 0.5
-            text "Grimlord - Assistant Writer" xalign 0.5
-
-
+            text "Maro - Marketing Specialist"
+            text "Cheyenne Alexander - Editor"
 
         vbox:
             spacing 10
 
-            text "Cheyenne Alexander - Editor" xalign 0.5
-            text "RCS - Transcriber" xalign 0.5
-            text "Peace - Transcriber & Translator" xalign 0.5
-            text "Jeffly - Transcriber" xalign 0.5
-            text "Dorkby - Animator" xalign 0.5
-            text "Wiebley - Renderer" xalign 0.5
-            text "Ranger - 3d Modeler" xalign 0.5
-            text "François Gibon - Renderer" xalign 0.5
-            text "3D4FUN - Renderer" xalign 0.5
-            text "Bwonerart - Renderer" xalign 0.5
-            text "Sznuk - Renderer" xalign 0.5
-            text "Stefan - Photoshopper" xalign 0.5
-            text "Spacestorm - Assistant" xalign 0.5
-
-
-        vbox:
-            spacing 10
-
-            text "Gillzo - Intern" xalign 0.5
-            text "Krispik - Translator" xalign 0.5
-            text "Schcopeck - Translator" xalign 0.5
-            text "KFar - Translator" xalign 0.5
-            text "Bianca Souza - Translator" xalign 0.5
-            text "Arkell - Translator" xalign 0.5
-            text "Differ - Translator" xalign 0.5
-            text "Marx Weber - Translator" xalign 0.5
-            text "Rst - Translator" xalign 0.5
-            text "Thyg - Translator" xalign 0.5
-            text "Wolf - Beta Tester" xalign 0.5
-            text "Kass - Beta Tester" xalign 0.5
-            text "Dikless - Idea Generator" xalign 0.5
+            text "Peace - Transcriber"
+            text "Wolf - Transcriber"
+            text "Jeffly - Transcriber"
+            text "Dorkby - Animator"
+            text "Wiebley - Renderer"
+            text "Ranger - 3d Modeler"
+            text "François Gibon - Renderer"
+            text "3D4FUN - Renderer"
+            text "Bwonerart - Renderer"
+            text "Sznuk - Renderer"
+            text "Raystorm41 - Render"
+            text "Stefan - Photoshopper"
 
     text "Special thanks to all the community members and players who have made this project possible :)":
         align (0.5, 0.9)
@@ -271,4 +315,4 @@ screen teamCredits():
 
         textbutton "Credits":
             text_style "steam_endScreenTextButton"
-            action Jump("end_credits")
+            action Jump("credits")

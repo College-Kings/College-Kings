@@ -1,4 +1,3 @@
-
 screen youattack2():
 
     if adamstance == 1:
@@ -41,9 +40,7 @@ screen youattack2():
             yalign 0.61
             action Jump ("adamkick2")
 
-
         timer reactiona action Jump("adamattack")
-
 
     if adamstance == 2:
         image "images/afstancehook.webp"
@@ -85,10 +82,7 @@ screen youattack2():
             yalign 0.61
             action Jump ("adamkick2")
 
-
-
         timer reactiona action Jump("adamattack")
-
 
     if adamstance == 3:
         image "images/afstancebody.webp"
@@ -133,8 +127,6 @@ screen youattack2():
         timer reactiona action Jump("adamattack")
 
     if adamstance == 4:
-
-
         image "images/afstancekick.webp"
 
         key q:
@@ -180,7 +172,6 @@ screen youattack2():
 
 
 screen adamattack():
-
     if adamattack == 1:
         image "images/af13pic.webp"
 
@@ -221,9 +212,7 @@ screen adamattack():
             yalign 0.6
             action Jump ("adamhookhit")
 
-
         timer reaction action Jump("adamhookhit")
-
 
     if adamattack == 2:
         image "images/af14pic.webp"
@@ -352,3 +341,38 @@ screen adamattack():
             action Jump ("adamkickblocked")
 
     use fight_overlay
+
+
+screen trolleyskip():
+    
+    use endfrTemplate:
+
+        text "The trolley problem involves hypothetical people and/or animals being run over by a train and can be a lot to handle. The following scene might make you feel uncomfortable or uneasy. If you prefer to skip the trolley problem scene, you can click skip right now.":
+            style "endfree"
+            size 30
+            xalign 0.5
+            yoffset -10
+
+        hbox:
+            align (0.5, 1.0)
+            yoffset 10
+            spacing 150
+
+            textbutton "Continue":
+                action Jump("continuetrolley")
+
+            textbutton "Skip":
+                action Jump("skiptrolley")
+
+
+screen trolleyProblem(option1, option2):
+    add "images/trolleylever.webp"
+
+    imagebutton:
+        idle "images/leverno.webp"
+        hover "images/lever.webp"
+        pos (125, 150)
+        action Jump(option2)
+
+    timer 3 action Jump(option1)
+    use timerBar

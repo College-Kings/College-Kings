@@ -8,11 +8,6 @@ style phonebutton_text is text:
     hover_color "#FFD166"
     color "#ffffff"
 
-style tutorialtextnum is text:
-    font "fonts/Freshman.ttf"
-    size 25
-    color "#FFD166"
-
 style phonehome is button:
     color "#000000"
     xsize 300
@@ -23,6 +18,13 @@ style phonetext is text:
     size 40
     color "#000000"
 
+# Applications
+style applabels is text:
+    font "fonts/OpenSans.ttf"
+    size 15
+    color "#ffffff"
+    text_align 0.5
+    xalign 0.5
 
 # Messanger
 style msgleft is button:
@@ -49,6 +51,11 @@ style msgright_text is text:
     font "fonts/OpenSans.ttf"
     size 20
 
+style nametext is text:
+    font "fonts/OpenSans-Bold.ttf"
+    size 25
+    color "#000000"
+
 style replies_style is button:
     background "#147efb"
     xpadding 15
@@ -65,6 +72,19 @@ style reply_disabled is button:
     xpadding 15
     ypadding 5
     xmaximum 350
+
+style replybox is button:
+    background "#ffffff"
+    xsize 250
+    ysize 40
+
+style replybox_text is text:
+    color "#000000"
+    font "fonts/OpenSans.ttf"
+
+    size 20
+    xalign 0.5
+    yalign 0.5
 
 # Kiwii
 style kiwii_PrefTextButton is button_text:

@@ -13,7 +13,7 @@ label v3start:
 
     play music "music/mlove2.mp3"
 
-    scene s201 # open door and chloe embarassed smile
+    scene s201 # open door and chloe embarrassed smile
     with fade
     # open door sound
 
@@ -2086,6 +2086,7 @@ label continuem: #for compatibility only
     menu:
         "Kiss her":
             $ aubreyrs = True
+            $ v3_aubsex = True
 
             stop music fadeout 2.0
             play music "music/msexy.mp3"
