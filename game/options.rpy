@@ -173,6 +173,9 @@ init python:
     ## **.ogg" matches ogg files in the game directory or any of its
     ## subdirectories, and "**.psd" matches psd files anywhere in the project.
 
+    build.include_i686 = False
+    build.include_old_themes = False
+
     ## Classify files as None to exclude them from the built distributions.
 
     # build.archive("media", "all")
