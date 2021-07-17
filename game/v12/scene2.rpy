@@ -3,7 +3,6 @@
 # Characters: MC (Outfit 3), Nora (Outfit 2)
 # Time: Night
 
-default v12_chase_robber = False
 label v12_nora_checks_mc:
     scene v12ncm1 # TPP. MC goes to answer the door
     with fade

@@ -3,8 +3,6 @@
 # Characters: MC (Outfit: 5), RILEY (Outfit: 2)
 # Time: afternoon
 
-default v12_kiss_riley = False
-
 label v12_riddle_riley:
     scene v12rrl1 # TPP. MC and riley standing outside the catacombs
     with fade
