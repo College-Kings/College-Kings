@@ -538,3 +538,11 @@ default political_strategist = False
 default two_timer = False
 default dont_just_stand_there = False
 default pretty_in_pink = False
+
+# 12.0
+default v12_told_chloe = False
+default v12_kiss_riley = False
+default v12_amber_tell_riley = False
+default v12_murder_count = 0
+default v12_fight_win = False 
+default v12_chase_robber = False

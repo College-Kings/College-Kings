@@ -4,8 +4,6 @@
 # Time: Morning
 # Phone Images: rileycatacombs.webp - Riley selfie at the catacomb entrance with a street sign behind her with "CATACOMBS" written on it, Riley smiling, mouth closed
 
-default v12_told_chloe = False
-
 label v12_chloe_cafe:
     scene v12chc1 # TPP. Show MC and Chloe going into the cafe, both smiling, mouths closed
     with dissolve

@@ -4,8 +4,6 @@
 # Time: Evening (Night when specified)
 # Phone Images: None
 
-default v12_amber_tell_riley = False
-
 label v12_amber_bus:
     scene v12amb1 # TPP. Show MC and Amber boarding the bus, both slight smiles, mouths closed
     with dissolve

@@ -3,8 +3,6 @@
 # Characters: MC (Outfit 3), Riley (Outfit 2), Chloe (Outfit 1)
 # Time: Night
 
-default v12_fight_win = False 
-
 label v12_roomate_talk:
     if not v11_riley_roomate:
         scene v12rcr1 # TPP. Show MC sitting at the front of his bed

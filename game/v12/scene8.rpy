@@ -4,8 +4,6 @@
 # Time: Evening
 # Phone Images: None
 
-default v12_murder_count = 0
-
 label v12_murder_mystery_reveal:
     scene v12mmr1 # FPP. Mr. Lee and Ms. Rose standing in front of the students, addressing them, only Mr. Lee in shot. Mr. Lee smiling, mouth open, looking at MC
     with dissolve
