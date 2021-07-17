@@ -665,11 +665,6 @@ style game_menu_label_text:
     color gui.accent_color
     yalign 1
 
-style return_button:
-    xpos gui.navigation_xpos
-    yalign 0.5
-    yoffset -45
-
 
 ## Load and Save screens #######################################################
 ##
@@ -957,10 +952,15 @@ screen preferences():
     bar value Preference("sound volume"):
         pos (1020, 872)
 
-    textbutton _("Return"):
-        style "return_button"
-        pos (1500, 1050)
-        action Return()
+    hbox:
+        pos (975, 990)
+        spacing 120
+
+        textbutton _("Change Language"):
+            action ShowMenu("changeLanguage")
+
+        textbutton _("Return"):
+            action Return()
 
 style pref_label is gui_label
 style pref_label_text is gui_label_text
