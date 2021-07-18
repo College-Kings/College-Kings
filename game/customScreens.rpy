@@ -10,6 +10,43 @@ screen endfrTemplate():
         # add "#00ff0080"
         transclude
 
+screen changeLanguage():
+    tag menu
+
+    text _("Select Language") align (0.5, 0.01) size 72
+    vpgrid:
+        cols 1
+        draggable True
+        mousewheel True
+        align (0.5, 0.9)
+        ysize 950
+        xfill True
+        style_prefix "radio"
+        spacing 10
+
+        textbutton "English" text_font "DejaVuSans.ttf" action Language(None) xalign 0.5 text_size 32
+        textbutton "Chineses" text_font "DejaVuSans.ttf" action Language("chineses") xalign 0.5 text_size 32
+        textbutton "Chineset" text_font "DejaVuSans.ttf" action Language("chineset") xalign 0.5 text_size 32
+        textbutton "Czech" text_font "DejaVuSans.ttf" action Language("czech") xalign 0.5 text_size 32
+        textbutton "Francais" text_font "DejaVuSans.ttf" action Language("francais") xalign 0.5 text_size 32
+        textbutton "German" text_font "DejaVuSans.ttf" action Language("german") xalign 0.5 text_size 32
+        textbutton "Greek" text_font "DejaVuSans.ttf" action Language("greek") xalign 0.5 text_size 32
+        textbutton "Hindi" text_font "DejaVuSans.ttf" action Language("hindi") xalign 0.5 text_size 32
+        textbutton "Hungarian" text_font "DejaVuSans.ttf" action Language("hungarian") xalign 0.5 text_size 32
+        textbutton "Italian" text_font "DejaVuSans.ttf" action Language("italian") xalign 0.5 text_size 32
+        textbutton "Japanese" text_font "DejaVuSans.ttf" action Language("japanese") xalign 0.5 text_size 32
+        textbutton "Polish" text_font "DejaVuSans.ttf" action Language("polish") xalign 0.5 text_size 32
+        textbutton "Portuguese" text_font "DejaVuSans.ttf" action Language("portuguese") xalign 0.5 text_size 32
+        textbutton "Russian" text_font "DejaVuSans.ttf" action Language("russian") xalign 0.5 text_size 32
+        textbutton "Spanish" text_font "DejaVuSans.ttf" action Language("spanish") xalign 0.5 text_size 32
+        textbutton "Thai" text_font "DejaVuSans.ttf" action Language("thai") xalign 0.5 text_size 32
+        textbutton "Turkish" text_font "DejaVuSans.ttf" action Language("turkish") xalign 0.5 text_size 32
+        textbutton "Vietnamese" text_font "DejaVuSans.ttf" action Language("vietnamese") xalign 0.5 text_size 32
+
+    textbutton _("Return"):
+        align (0.99, 0.99)
+        action ShowMenu("preferences")
+
 screen realmode():
     modal True
     

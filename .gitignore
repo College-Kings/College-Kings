@@ -4,8 +4,8 @@ lib/
 renpy/
 
 game/bugTesting/_bugTesting.txt
-game/cache
-game/saves
+game/cache/
+game/saves/
 
 CollegeKings.py
 CollegeKings.sh

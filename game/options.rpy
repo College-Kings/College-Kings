@@ -22,7 +22,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "11.0.1"
+define config.version = "12.0.0"
 
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
@@ -172,6 +172,9 @@ init python:
     ## For example, "*.txt" matches txt files in the base directory, "game/
     ## **.ogg" matches ogg files in the game directory or any of its
     ## subdirectories, and "**.psd" matches psd files anywhere in the project.
+
+    build.include_i686 = False
+    build.include_old_themes = False
 
     ## Classify files as None to exclude them from the built distributions.
 

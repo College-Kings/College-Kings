@@ -142,12 +142,12 @@ label v11_Amber_Penelope:
         scene v11amp3 # TPP Show MC grabbing his bag and heading toward the boarding gate
         with dissolve
 
-        pause 0.5
+        pause 0.75
 
         scene v11amp4 # TPP Show MC boarding the plane
         with dissolve
 
-        pause 0.5    
+        pause 0.75   
 
     else: # Penelope is there
         scene v11amp5 # FPP Show Penelope, neutral expression, mouth open
@@ -184,12 +184,12 @@ label v11_Amber_Penelope:
         scene v11amp7 # TPP Show MC and Penelope carrying a few bags
         with dissolve
 
-        pause 0.5
+        pause 0.75
 
         scene v11amp8 # TPP Show MC and Penelope setting down bags with other baggage
         with dissolve
 
-        pause 0.5
+        pause 0.75
 
         scene v11amp5d
         with dissolve
@@ -226,7 +226,7 @@ label v11_Amber_Penelope:
 
         play sound "sounds/kiss.mp3"
 
-        pause 0.8
+        pause 0.75
 
         scene v11amp5c # FPP Same angle as v11amp5, Penelope with hand on her ear, looking down
         with dissolve
@@ -243,12 +243,12 @@ label v11_Amber_Penelope:
                 scene v11amp9a # TPP Same angle as v11amp9, MC with his hand on Penelope's cheek, kissing her on the lips
                 with dissolve
 
-                pause 0.8
+                pause 0.75
                 
                 scene v11amp9b # TPP Same angle as v11amp9, MC still has hand on Penelope's cheek, pulling back after kiss, Penelope smiling
                 with dissolve
 
-                pause 0.8
+                pause 0.75
 
             "Don't kiss her":
                 scene v11amp5d # FPP Same angle and expression as v11amp5b, Penelope mouth closed
@@ -270,12 +270,12 @@ label v11_Amber_Penelope:
         scene v11amp3
         with dissolve
 
-        pause 0.5
+        pause 0.75
 
         scene v11amp4
         with dissolve
 
-        pause 0.5
+        pause 0.75
     stop music fadeout 3
 # Transition to Scene 12
 jump v11_sit_ryan_convo
