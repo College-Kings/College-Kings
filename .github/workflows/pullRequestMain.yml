@@ -10,7 +10,6 @@ jobs:
   create_pull_request:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - name: 'Create Automatic Pull Request'
         uses: peter-evans/create-pull-request@v3.10.0
         with:
