@@ -14,7 +14,6 @@ jobs:
         uses: peter-evans/create-pull-request@v3.10.0
         with:
           token: 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
-          path: GITHUB_WORKSPACE
           commit-message: 'Automated Pull Request'
           branch: College-Kings/development
           title: 'Development Changes'
