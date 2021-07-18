@@ -3,7 +3,7 @@ name: 'Development Action'
 on:
   push:
     branches:
-    - development
+      - development
   workflow_dispatch:
 
 jobs:
