@@ -15,8 +15,8 @@ jobs:
         with:
           token: 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
           commit-message: 'Automated Pull Request'
-          base: main
-          branch: development
+          base: development
+          branch: main
           title: 'Development Changes'
           body: 'Please make sure all reviewers verify the changes.'
           reviewers: hivemods, Condy-jpg, KiloOscarSix
