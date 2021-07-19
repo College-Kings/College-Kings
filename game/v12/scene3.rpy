@@ -168,7 +168,7 @@ label v12_penelope_roof:
                     scene v12penr10b # FPP Same angle as v12penr10, Penelope looking back at MC, neutral expression, mouth closed
                     with dissolve
 
-                    u "Oh, nothing.  *Chuckles*"
+                    u "Oh, nothing. *Chuckles*"
 
                     scene v12penr10c # FPP Same angle as v12penr10, Penelope looking back at MC, smiling with mouth open
                     with dissolve
@@ -352,7 +352,7 @@ label v12_penelope_roof:
                         scene v12pern12a # TPP Same angle as v12penr12, Penelope rolling back off of MC to where she was before
                         with dissolve
 
-                        pause 0.75     
+                        pause 0.75
 
             scene v12penr10e
             with dissolve

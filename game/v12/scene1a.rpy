@@ -4,6 +4,7 @@
 # Time: Nighttime
 
 label v12_chase_robber:
+    v12_chase_robber = True
     scene v12car1 # TPP Show MC shoving Charli out of the way to take off after robber
     with dissolve
 
@@ -50,7 +51,7 @@ label v12_chase_robber:
 
             pause 0.75
 
-        "Right":            
+        "Right":
             scene v12car10 # FPP Show robber in right alley, digging through Nora's bag
             with dissolve
 
@@ -255,7 +256,7 @@ label v12_chase_robber:
 
         pause 0.75
 
-    if win_fight:        
+    if win_fight:
         scene v12car13a # FPP Same angle as v12car13, show robber laying on the ground next to Nora's bag, writhing in pain
         with dissolve
 

@@ -426,7 +426,7 @@ label v12_riley_cafe:
     scene v12ric4f
     with dissolve
 
-    ri "Oh my gosh! *Chuckles* I seriously just panicked for a second. I thought you were actually pissed and that  people had just been lying to me all this time. *Laughs* Holy shit..."
+    ri "Oh my gosh! *Chuckles* I seriously just panicked for a second. I thought you were actually pissed and that people had just been lying to me all this time. *Laughs* Holy shit..."
 
     scene v12ric6a
     with dissolve

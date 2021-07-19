@@ -377,7 +377,7 @@ label v12_chloe_cafe:
             scene v12chc5n # FPP. Same as v12chc5m, Chloe slightly worried, mouth closed
             with dissolve
 
-            u "I don't want to start making assumptions about what it could or couldn't be, so  just try to think positive. Maybe she is doing some prank, haha.."
+            u "I don't want to start making assumptions about what it could or couldn't be, so just try to think positive. Maybe she is doing some prank, haha.."
 
             scene v12chc5m
             with dissolve

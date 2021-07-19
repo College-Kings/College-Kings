@@ -53,7 +53,7 @@ label v12_nora_checks_mc:
         scene v12ncm5b # FPP, Same as 5a, mouth closed
         with dissolve
 
-        u "I'm fine, really. I may have taken a few hits, but I'm alright.  I planned on doing whatever it took to get it back to you, haha."
+        u "I'm fine, really. I may have taken a few hits, but I'm alright. I planned on doing whatever it took to get it back to you, haha."
 
         scene v12ncm5a
         with dissolve

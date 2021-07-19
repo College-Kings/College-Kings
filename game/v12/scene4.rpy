@@ -49,7 +49,7 @@ label v12_roomate_talk:
             scene v12rcr5 # FPP. Chloe sitting on her bed, smiling mouth opened
             with dissolve
 
-        cl "*Chuckles*  I just wanted a drink to calm my nerves so I was down at the bar."
+        cl "*Chuckles* I just wanted a drink to calm my nerves so I was down at the bar."
 
         scene v12rcr5a # FPP. Same as v12rcr5, mouth closed
         with dissolve
@@ -366,7 +366,7 @@ label v12_roomate_talk:
         scene v12rcr13d # FPP. Same as v12rcr13c, riley smiling
         with dissolve
 
-        ri "Oh, whatever. *Chuckles* I told Lindsey I was on the fence about joining a sorority because my family was against it, but that I've been really considering it lately."  
+        ri "Oh, whatever. *Chuckles* I told Lindsey I was on the fence about joining a sorority because my family was against it, but that I've been really considering it lately."
         ri "She asked me what I thought about the Chicks and I was honest. I think they have a lot of drama."
 
         scene v12rcr13b

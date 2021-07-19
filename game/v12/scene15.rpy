@@ -22,12 +22,12 @@ label v12_riddle_riley:
     scene v12rrl2
     with dissolve
 
-    u "I really doubt that, but… Then again,  I don't know the riddle."
+    u "I really doubt that, but… Then again, I don't know the riddle."
 
     scene v12rrl2b # FPP. Same as 2, mouth opened
     with dissolve
 
-    ri "Don't doubt my skills, [name]. But if you must know,  listen. \"In the city of love , where sleeping hearts lie, not down in the river but where the ancestors lie.\""
+    ri "Don't doubt my skills, [name]. But if you must know, listen. \"In the city of love, where sleeping hearts lie, not down in the river but where the ancestors lie.\""
 
     scene v12rrl2
     with dissolve
@@ -321,7 +321,7 @@ label v12_riddle_riley:
     scene v12rrl20
     with dissolve
 
-    ri "You pick! Which way should we go?."
+    ri "You pick! Which way should we go?"
 
     menu:
         "Left":
@@ -378,7 +378,7 @@ label v12_riddle_riley:
     scene v12rrl31 # FPP. Riley on the ground, looking hurt, hand on her leg, mouth opened
     with dissolve
 
-    ri "OW OW OW OW OW! Fuck!"  
+    ri "OW OW OW OW OW! Fuck!"
 
     scene v12rrl31a # FPP. Same as 31, mouth closed
     with dissolve

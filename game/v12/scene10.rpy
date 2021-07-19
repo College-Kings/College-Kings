@@ -166,7 +166,7 @@ label v12_amber_bus:
     scene v12amb3
     with dissolve
 
-    am "I’m hoping so, cause I'd still like to be cool with her, but just as friends foolin' around like we have been, none of that  serious stuff."
+    am "I’m hoping so, cause I'd still like to be cool with her, but just as friends foolin' around like we have been, none of that serious stuff."
 
     scene v12amb3a
     with dissolve
