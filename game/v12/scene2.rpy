@@ -58,7 +58,7 @@ label v12_nora_checks_mc:
         scene v12ncm5a
         with dissolve
 
-        no "For someone that just got into an alley fight with a robber from a foreigncountry, you’re in an awfully good mood. *Chuckles* Are you sure you're okay?"
+        no "For someone that just got into an alley fight with a robber from a foreign country, you’re in an awfully good mood. *Chuckles* Are you sure you're okay?"
 
         scene v12ncm5b
         with dissolve
@@ -201,7 +201,7 @@ label v12_nora_checks_mc:
         scene v12ncm5f 
         with dissolve
 
-        u "Hey, um... I hope you don't mind me asking, but I assume whatever you had in that bag was pretty important? I dont think I’ve ever seen you with a bag before."
+        u "Hey, um... I hope you don't mind me asking, but I assume whatever you had in that bag was pretty important? I don't think I’ve ever seen you with a bag before."
 
     scene v12ncm5g
     with dissolve

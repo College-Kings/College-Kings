@@ -3,6 +3,8 @@
 # Characters: MC (Outfit 3), Nora (Outfit 2), Chris (Outfit 1), Amber (Outfit 2), Lindsey (Outfit 1), Ms. Rose (Outfit 1), Imre (Outfit 1), Ryan (Outfit 1), Penelope (Outfit 1), Charli (Outfit 1), 
 # Time: Night
 
+label v12_start:
+
 label v12_nora_robbed:
     scene v12nrb1 # FPP. MC is looking at nora who is in shock as a robber snags her bag
     with fade

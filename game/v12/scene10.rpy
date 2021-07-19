@@ -59,7 +59,7 @@ label v12_amber_bus:
             scene v12amb3b
             with dissolve
 
-            u "Maybe it's worth just getting it off your chest. Unless you'd rather go back and talk to one of your skateboards insteads."
+            u "Maybe it's worth just getting it off your chest. Unless you'd rather go back and talk to one of your skateboards instead."
 
             scene v12amb3c
             with dissolve
@@ -349,7 +349,7 @@ label v12_amber_bus:
     scene v12amb3h
     with dissolve
 
-    u "So what, superheros are \"vigilinties\"? *Laughs*"
+    u "So what, superheroes are \"vigilantes\"? *Laughs*"
 
     scene v12amb3j # FPP. Same as v12amb3, Amber leaning forwards, looking across the aisle to Ms. Rose, Amber neutral expression, mouth open
     with dissolve

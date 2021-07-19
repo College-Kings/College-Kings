@@ -415,12 +415,12 @@ label v12_chase_robber:
         scene v12car23
         with dissolve
 
-        imre "I don't think so, but maybe now. I'll have to speak with the best fighters commision."
+        imre "I don't think so, but maybe now. I'll have to speak with the best fighters commission."
 
         scene v12car23a
         with dissolve
 
-        u "Who's on the commision?"
+        u "Who's on the commission?"
 
         scene v12car23
         with dissolve
@@ -485,7 +485,7 @@ label v12_chase_robber:
     play sound "sounds/vibrate.mp3"
     pause 0.75
 
-    $ contact_Imre.newMessage("Check Kiwii...your welcome. :)", queue=True)
+    $ contact_Imre.newMessage("Check Kiwii...you're welcome. :)", queue=True)
     $ contact_Imre.addReply("Haha okay", func=None)
 
     # MC checks Kiwii and there's a picture of MC running after the robber posted by Imre 

@@ -56,7 +56,7 @@ label v12_chloe_cafe:
     scene v12chc5c # FPP. Same as v12chc5, Chloe mouth closed, smiling
     with dissolve
 
-    u "Haha, I know what you mean.. It is fancy here. A very “french movie” type of place."
+    u "Haha, I know what you mean.. It is fancy here. A very “French movie” type of place."
 
     scene v12chc5
     with dissolve
@@ -81,7 +81,7 @@ label v12_chloe_cafe:
     scene v12chc5d # FPP. Same as v12chc5, different pose
     with dissolve
 
-    cl "I'm sure they can speak english, this is a tourist spot, right?"
+    cl "I'm sure they can speak English, this is a tourist spot, right?"
 
     scene v12chc5e # FPP. Same as v12chc5d, Chloe smiling, mouth closed
     with dissolve
@@ -111,7 +111,7 @@ label v12_chloe_cafe:
     scene v12chc7b # FPP. Same as v12chc7, waitress lookign at Chloe's direction, waitress slight smile, mouth open
     with dissolve
 
-    fwait "Tu parles francais?"
+    fwait "Parles-tu français?"
 
     scene v12chc5f
     with dissolve
@@ -121,7 +121,7 @@ label v12_chloe_cafe:
     scene v12chc7b
     with dissolve
 
-    fwait "Oooo, tres bien."
+    fwait "Oooo, très bien."
 
     scene v12chc5e
     with dissolve
@@ -228,7 +228,7 @@ label v12_chloe_cafe:
         scene v12chc7a
         with dissolve
 
-        u "But, since my friend's french is so bad-"
+        u "But, since my friend's French is so bad-"
 
     else:
         scene v12chc5i # FPP. Same as v12chc5, Show Chloe blushing, slight smile, avoiding eye contact, putting her hair behind her ear, mouth closed
@@ -264,7 +264,7 @@ label v12_chloe_cafe:
         scene v12chc7a
         with dissolve
 
-        u "Alright, now... Since my amazing girlfriend's french is so bad-"
+        u "Alright, now... Since my amazing girlfriend's French is so bad-"
 
     scene v12chc5d
     with dissolve

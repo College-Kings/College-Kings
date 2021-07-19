@@ -148,7 +148,7 @@ label v12_riley_cafe:
     scene v12ric4e # FPP. Same as v12ric4, Riley looking at the waitress' direction, Riley smiling, mouth open
     with dissolve
 
-    ri "*Southern accent* Pardon me, but do you happen to speak english?"
+    ri "*Southern accent* Pardon me, but do you happen to speak English?"
 
     scene v12ric4f # FPP. Same as v12ric4d, Riley smiling, mouth closed
     with dissolve

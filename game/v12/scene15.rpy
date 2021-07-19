@@ -47,7 +47,7 @@ label v12_riddle_riley:
     scene v12rrl2b
     with dissolve
 
-    ri "What? I didn't mean it in a bady way... I'm just saying in regard to the treasure hunt, it's more likely to be here."
+    ri "What? I didn't mean it in a bad way... I'm just saying in regard to the treasure hunt, it's more likely to be here."
 
     scene v12rrl2
     with dissolve
@@ -458,7 +458,7 @@ label v12_riddle_riley:
             pause 0.75
 
             scene v12rrl37 # TPP. MC and Riley going into the lobby, riley still arround MC's shoulder
-            with diissolve
+            with dissolve
 
         "Carry her":
             scene v12rrl38 # TPP. MC Picks up riley
@@ -535,7 +535,7 @@ label v12_riddle_riley:
             ri "Yeah, I'm sure."
 
             scene v12rrl42 # TPP. MC places riley down 
-            with dissolve   
+            with dissolve
 
             pause 0.75
 
@@ -592,4 +592,3 @@ label v12_riddle_riley:
                     with dissolve
 
     jump scene_16
-

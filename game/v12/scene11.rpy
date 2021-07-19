@@ -391,6 +391,4 @@ label v12_paris_hotel:
     scene v12pht12 # TPP. MC at his hotel door
     with dissolve
 
-    jump v12_room_chloe_riley 
-
-
+    jump v12_room_chloe_riley

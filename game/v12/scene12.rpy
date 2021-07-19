@@ -358,4 +358,3 @@ label v12_room_chloe_riley:
         with dissolve
 
     jump v12_cafe
-
