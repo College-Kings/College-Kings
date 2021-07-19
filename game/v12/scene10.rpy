@@ -139,24 +139,24 @@ label v12_amber_bus:
     scene v12amb3f # FPP. Same as v12amb3a, different pose
     with dissolve
 
-    u "Sounds like you’d be into that, no?"
+    u "Sounds like you'd be into that, no?"
 
     scene v12amb3g # FPP. Same as v12amb3f, Amber slightly worried, mouth open
     with dissolve
 
-    am "Normally I would be, but I think she’s looking for a lot more lovey dovey exploration and a lot less fun messing around kind of stuff."
+    am "Normally I would be, but I think she's looking for a lot more lovey dovey exploration and a lot less fun messing around kind of stuff."
 
     scene v12amb3f
     with dissolve
 
-    u "Oh, now I'm getting it. You don’t wanna be her teacher."
+    u "Oh, now I'm getting it. You don't wanna be her teacher."
 
     scene v12amb3g
     with dissolve
 
-    am "It’s not just that, I just feel like this is really serious for her and she wants to experiment with other girls and she’s all fragile and shit."
+    am "It's not just that, I just feel like this is really serious for her and she wants to experiment with other girls and she's all fragile and shit."
     
-    am "I just wanna have fun. I just don’t think we’re a good match, you know? On the ferry we talked about it a little bit, but got interrupted by Mr. Lee so I didn't really get to fully explain and I think she may be upset."
+    am "I just wanna have fun. I just don't think we're a good match, you know? On the ferry we talked about it a little bit, but got interrupted by Mr. Lee so I didn't really get to fully explain and I think she may be upset."
 
     scene v12amb3a
     with dissolve
@@ -166,7 +166,7 @@ label v12_amber_bus:
     scene v12amb3
     with dissolve
 
-    am "I’m hoping so, cause I'd still like to be cool with her, but just as friends foolin' around like we have been, none of that serious stuff."
+    am "I'm hoping so, cause I'd still like to be cool with her, but just as friends foolin' around like we have been, none of that serious stuff."
 
     scene v12amb3a
     with dissolve

@@ -85,7 +85,7 @@ label v12_roomate_talk:
             scene v12rcr5a
             with dissolve
 
-            u "Ha, yes. Where’s my apology?"
+            u "Ha, yes. Where's my apology?"
 
             scene v12rcr5c # FPP. Same as v12rcr5b, has a teasing expression
             with dissolve
@@ -199,7 +199,7 @@ label v12_roomate_talk:
         scene v12rcr5d
         with dissolve
 
-        cl "Let's get to bed. If I don't go to sleep now, I won’t get up in time to leave."
+        cl "Let's get to bed. If I don't go to sleep now, I won't get up in time to leave."
 
         scene v12rcr5a
         with dissolve
@@ -223,7 +223,7 @@ label v12_roomate_talk:
             scene v12rcr8a # FPP. Chloe smiling, mouth opened
             with dissolve
 
-            cl "Our bed now, silly... Turn the light off so we can go to sleep. And hurry! I’m cold. *Chuckles*"
+            cl "Our bed now, silly... Turn the light off so we can go to sleep. And hurry! I'm cold. *Chuckles*"
 
             scene v12rcr8
             with dissolve
@@ -346,12 +346,12 @@ label v12_roomate_talk:
             scene v12rcr13c 
             with dissolve
 
-            ri "Nora got robbed so if anyone is stressed out, it’s her."
+            ri "Nora got robbed so if anyone is stressed out, it's her."
 
         scene v12rcr13b
         with dissolve
 
-        u "You aren’t wrong."
+        u "You aren't wrong."
 
         scene v12rcr13c
         with dissolve
@@ -399,7 +399,7 @@ label v12_roomate_talk:
                 scene v12rcr13d
                 with dissolve
 
-                ri "Well I’m glad you told me, because I didn't know that. *Chuckles*"
+                ri "Well I'm glad you told me, because I didn't know that. *Chuckles*"
 
             "Really?":
                 scene v12rcr13b
@@ -415,7 +415,7 @@ label v12_roomate_talk:
                 scene v12rcr13b
                 with dissolve
 
-                u "Wow, that's some major news. I’m kinda nervous to see how all that plays out."
+                u "Wow, that's some major news. I'm kinda nervous to see how all that plays out."
 
                 scene v12rcr13c
                 with dissolve
@@ -455,7 +455,7 @@ label v12_roomate_talk:
         scene v12rcr13b
         with dissolve
 
-        u "If anyone can make it happen, it’s you guys. *Chuckles*"
+        u "If anyone can make it happen, it's you guys. *Chuckles*"
 
         scene v12rcr13c
         with dissolve
@@ -470,7 +470,7 @@ label v12_roomate_talk:
         scene v12rcr13c
         with dissolve
 
-        ri "Sleep. Shut the light off and let me catch some Z’s."
+        ri "Sleep. Shut the light off and let me catch some Z's."
 
         scene v12rcr13b
         with dissolve

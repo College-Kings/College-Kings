@@ -39,7 +39,7 @@ label v12_nora_robbed:
             scene v12nrb3b # FPP. Same as v12nrb3b, Nora looks mad, mouth opened, Chris mouth closed, worried
             with dissolve
 
-            no "I’m fine, Chris. Did Sebastian give you permission to check on me or something?"
+            no "I'm fine, Chris. Did Sebastian give you permission to check on me or something?"
 
             scene v12nrb72
             with dissolve
@@ -74,7 +74,7 @@ label v12_nora_robbed:
             scene v12nrb3d
             with dissolve
 
-            u "(Did she almost say ‘Mom’?)"
+            u "(Did she almost say 'Mom'?)"
 
             scene v12nrb75 # FPP. Same positioning as v12nrb74, Imre arrives and has a annoyed face, mouth opened, looking at Nora
             with dissolve
@@ -104,19 +104,19 @@ label v12_nora_robbed:
             scene v12nrb75a
             with dissolve
 
-            imre "There’s no “chance” when it comes to me, Ms. Rose. I’d never lose a fight to some scummy, French, son of-"
+            imre "There's no “chance” when it comes to me, Ms. Rose. I'd never lose a fight to some scummy, French, son of-"
 
             if not v11_pen_goes_europe:
                 scene v12nrb3g # FPP. Same as v12nrb3f, Ms. Rose angry, mouth open, Nora worried, mouth closed
                 with dissolve
 
-                ro "IMRE! That is enough! You will be finishing the group’s laundry tonight before bed, so that I can get some rest after having to deal with your naive behavior. Understood?"
+                ro "IMRE! That is enough! You will be finishing the group's laundry tonight before bed, so that I can get some rest after having to deal with your naive behavior. Understood?"
 
             else:
                 scene v12nrb3g 
                 with dissolve
 
-                ro "IMRE! That is enough! You will be helping Penelope with the group’s laundry tonight before bed, so that I can get some rest after having to deal with your naive behavior. Understood?"
+                ro "IMRE! That is enough! You will be helping Penelope with the group's laundry tonight before bed, so that I can get some rest after having to deal with your naive behavior. Understood?"
 
                 scene v12nrb77 # FPP. Penelope has her hand up and has a worried look, mouth opened, looking at Ms. Rose's direction (same positioning as v12nrb3g)
                 with dissolve
@@ -146,7 +146,7 @@ label v12_nora_robbed:
             scene v12nrb5 # FPP. MC is now looking at Chris and Nora talking to each other (at a distance, check v12nrb4), Chris mouth open, annoyed, Nora angry, mouth closed
             with dissolve
 
-            ch "What’s wrong with trying to see if you were alright, Nora? How could you possibly be upset with me for doing that?"
+            ch "What's wrong with trying to see if you were alright, Nora? How could you possibly be upset with me for doing that?"
 
             scene v12nrb5a # FPP. Same as v12nrb5, Chris mouth closed, annoyed, Nora mouth open, angry
             with dissolve
@@ -156,7 +156,7 @@ label v12_nora_robbed:
             scene v12nrb5
             with dissolve
 
-            ch "I’m trying to be sympathetic in the current situation, but I won't stand here and be disrespected in the process." 
+            ch "I'm trying to be sympathetic in the current situation, but I won't stand here and be disrespected in the process." 
             ch "You not understanding that people need a balance between all aspects of life, isn't something I can control. You take being someone's “everything” way too literally. Sadly Nora. if you had interests in life outside of just me, then maybe you wouldn't be so stuck up on this." 
             ch "I'll be in the room, you can talk to me when you're ready."
 
@@ -223,12 +223,12 @@ label v12_nora_robbed:
             scene v12nrb9b # FPP. Same as v12nrb9a, Amber in conversation distance, mouth open, annoyed
             with dissolve
 
-            am "Obviously, I went and got Nora’s bag."
+            am "Obviously, I went and got Nora's bag."
 
             scene v12nrb9c # FPP. Same as v12nrb9b, Amber mouth closed, annoyed
             with dissolve
 
-            u "But… How?"
+            u "But... How?"
 
             scene v12nrb7c # FPP. Same as v12nrb7, Imre looking at Amber's direction (Check v12nrb9b), Imre annoyed, mouth open
             with dissolve
@@ -238,12 +238,12 @@ label v12_nora_robbed:
             scene v12nrb9d # FPP. Same as v12nrb9b, Amber looking at Imre's direction, Amber mouth open, smiling
             with dissolve
 
-            am "Okay, calm down little guy… *Chuckles* I didn't want to mess up my nails so I just took the easy route and made sure he wouldn’t be able to… Well, reproduce in the near future. *Chuckles*"
+            am "Okay, calm down little guy... *Chuckles* I didn't want to mess up my nails so I just took the easy route and made sure he wouldn't be able to... Well, reproduce in the near future. *Chuckles*"
 
             scene v12nrb7d # FPP. Same as v12nrb7c, Imre holding his crotch, mouth open, smiling
             with dissolve
 
-            imre "Oh my god, stop. I can feel the pain every time you say it. Luckily for Charli he doesn't have that problem, considering his balls still haven’t dropped."
+            imre "Oh my god, stop. I can feel the pain every time you say it. Luckily for Charli he doesn't have that problem, considering his balls still haven't dropped."
 
             scene v12nrb9d
             with dissolve

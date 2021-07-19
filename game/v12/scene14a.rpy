@@ -68,7 +68,7 @@ label v12_riley_cafe:
     scene v12ric4c
     with dissolve
 
-    u "Yeah, that’s my power. Mr. Comeback King."
+    u "Yeah, that's my power. Mr. Comeback King."
 
     scene v12ric4
     with dissolve
@@ -153,7 +153,7 @@ label v12_riley_cafe:
     scene v12ric4f # FPP. Same as v12ric4d, Riley smiling, mouth closed
     with dissolve
 
-    u "(Here we fucking go…)"
+    u "(Here we fucking go...)"
 
     scene v12ric6b # FPP. Same as v12ric6, waitress looking at Riley's direction, waitress smiling, mouth open
     with dissolve
@@ -163,7 +163,7 @@ label v12_riley_cafe:
     scene v12ric4f
     with dissolve
 
-    ri "*Southern accent* That’d be right."
+    ri "*Southern accent* That'd be right."
 
     scene v12ric6b
     with dissolve
@@ -254,11 +254,11 @@ label v12_riley_cafe:
     with dissolve
 
     menu:
-        "I’d be able to tell":
+        "I'd be able to tell":
             scene v12ric4a
             with dissolve
 
-            u "I think I’d be able to tell."
+            u "I think I'd be able to tell."
 
             scene v12ric4
             with dissolve
@@ -268,18 +268,18 @@ label v12_riley_cafe:
             scene v12ric4a
             with dissolve
 
-            u "*Laughs* You’re a fucking creep."
+            u "*Laughs* You're a fucking creep."
 
             scene v12ric4
             with dissolve
 
             ri "Hehe..."
 
-        "I don’t think I’d be able to tell":
+        "I don't think I'd be able to tell":
             scene v12ric4a
             with dissolve
 
-            u "I don’t think I’d be able to tell, actually."
+            u "I don't think I'd be able to tell, actually."
 
             scene v12ric4g # FPP. Same as v12ric4b, different pose
             with dissolve
@@ -294,7 +294,7 @@ label v12_riley_cafe:
     scene v12ric4c
     with dissolve
 
-    u "So… What do you have planned for today?"
+    u "So... What do you have planned for today?"
 
     scene v12ric4b
     with dissolve
@@ -326,7 +326,7 @@ label v12_riley_cafe:
     scene v12ric4a
     with dissolve
 
-    u "Ha… Ah, man. So, where's this one anyway?"
+    u "Ha... Ah, man. So, where's this one anyway?"
 
     scene v12ric4g
     with dissolve
@@ -336,7 +336,7 @@ label v12_riley_cafe:
     scene v12ric4h
     with dissolve
 
-    u "Riley… At least tell me what the clue was."
+    u "Riley... At least tell me what the clue was."
 
     scene v12ric4g
     with dissolve
@@ -346,12 +346,12 @@ label v12_riley_cafe:
     scene v12ric4h
     with dissolve
 
-    u "*Sighs* Alright, well… As easy as the first one was, I'm expecting this one to be close by?"
+    u "*Sighs* Alright, well... As easy as the first one was, I'm expecting this one to be close by?"
 
     scene v12ric4g
     with dissolve
 
-    ri "Guess we'll find out when we get there… *Chuckles*"
+    ri "Guess we'll find out when we get there... *Chuckles*"
 
     scene v12ric5b # TPP. Same as v12ric5, waitress with food in her hand
     with dissolve
@@ -406,12 +406,12 @@ label v12_riley_cafe:
     scene v12ric6d
     with dissolve
 
-    fwait "Oh, well… I'd like to keep you from embarrassing yourself even more while you’re here in Paris. It wasn't good at all. Also, if I may say… It was pretty rude as well."
+    fwait "Oh, well... I'd like to keep you from embarrassing yourself even more while you're here in Paris. It wasn't good at all. Also, if I may say... It was pretty rude as well."
 
     scene v12ric4i
     with dissolve
 
-    ri "I... I’m so s-"
+    ri "I... I'm so s-"
 
     scene v12ric6b
     with dissolve
@@ -446,7 +446,7 @@ label v12_riley_cafe:
     scene v12ric4h
     with dissolve
 
-    u "Damn… She got you good. *Chuckles*"
+    u "Damn... She got you good. *Chuckles*"
 
     scene v12ric4g
     with dissolve

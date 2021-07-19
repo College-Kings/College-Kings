@@ -307,7 +307,7 @@ label v12_room_chloe_riley:
         scene v12crm12c
         with dissolve
 
-        ri "Okay… Maybe a little but not that much, really. You’re overreacting"
+        ri "Okay... Maybe a little but not that much, really. You're overreacting"
 
         scene v12crm12a
         with dissolve

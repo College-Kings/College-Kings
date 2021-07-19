@@ -192,7 +192,7 @@ label v10_econ_class:
             scene v10eco8a # FPP. same 8, mouth closed.
             with dissolve
 
-            u "Uhm, yeah I'm… fine. You?"
+            u "Uhm, yeah I'm... fine. You?"
 
             scene v10eco8
             with dissolve

@@ -58,7 +58,7 @@ label v12_nora_checks_mc:
         scene v12ncm5a
         with dissolve
 
-        no "For someone that just got into an alley fight with a robber from a foreign country, you’re in an awfully good mood. *Chuckles* Are you sure you're okay?"
+        no "For someone that just got into an alley fight with a robber from a foreign country, you're in an awfully good mood. *Chuckles* Are you sure you're okay?"
 
         scene v12ncm5b
         with dissolve
@@ -145,7 +145,7 @@ label v12_nora_checks_mc:
         scene v12ncm5g 
         with dissolve
 
-        u "Well, you’re more than welcome. I just had a feeling that what you had in your bag tonight was important, so I didn't even second guess going after him."
+        u "Well, you're more than welcome. I just had a feeling that what you had in your bag tonight was important, so I didn't even second guess going after him."
 
     else:
         scene v12ncm5f
@@ -156,12 +156,12 @@ label v12_nora_checks_mc:
         scene v12ncm5g 
         with dissolve
 
-        u "Oh, yeah I could see that. I’m really sorry I ran over there like that. I guess I was just really concerned about you."
+        u "Oh, yeah I could see that. I'm really sorry I ran over there like that. I guess I was just really concerned about you."
 
         scene v12ncm5h 
         with dissolve
 
-        no "You know... That's the odd thing. When I looked up and you were there, it didn't bother me. I was actually happy you ran over to me. It kinda seems like whenever I really need someone, even if it's just to talk, you’re always around."
+        no "You know... That's the odd thing. When I looked up and you were there, it didn't bother me. I was actually happy you ran over to me. It kinda seems like whenever I really need someone, even if it's just to talk, you're always around."
 
         scene v12ncm5f
         with dissolve
@@ -201,7 +201,7 @@ label v12_nora_checks_mc:
         scene v12ncm5f 
         with dissolve
 
-        u "Hey, um... I hope you don't mind me asking, but I assume whatever you had in that bag was pretty important? I don't think I’ve ever seen you with a bag before."
+        u "Hey, um... I hope you don't mind me asking, but I assume whatever you had in that bag was pretty important? I don't think I've ever seen you with a bag before."
 
     scene v12ncm5g
     with dissolve
@@ -231,7 +231,7 @@ label v12_nora_checks_mc:
     scene v12ncm5f
     with dissolve
 
-    u "I was a little surprised with how much interest he’s taken in this whole thing. I think his beef with Ryan and the fact that Chris has been so busy, is making him seek a new bromance. *Chuckles*"
+    u "I was a little surprised with how much interest he's taken in this whole thing. I think his beef with Ryan and the fact that Chris has been so busy, is making him seek a new bromance. *Chuckles*"
 
     scene v12ncm5f
     with dissolve
@@ -246,7 +246,7 @@ label v12_nora_checks_mc:
     scene v12ncm5i
     with dissolve
 
-    no "*Sighs* It's fine. At least you didn't mean to. Chris is all Charli wants to talk about. He thinks talking about it will make me feel better. I get that he’s trying to be nice, so I can't be mad... But jeez... Plus, I just met the guy you know?"
+    no "*Sighs* It's fine. At least you didn't mean to. Chris is all Charli wants to talk about. He thinks talking about it will make me feel better. I get that he's trying to be nice, so I can't be mad... But jeez... Plus, I just met the guy you know?"
 
     scene v12ncm5f
     with dissolve
@@ -271,7 +271,7 @@ label v12_nora_checks_mc:
     scene v12ncm5f
     with dissolve
 
-    u "I’m always here."
+    u "I'm always here."
 
     scene v12ncm5k
     with dissolve
