@@ -1,11 +1,11 @@
-name: Create production promotion pull request
+name: Create main pull request
 on:
   push:
     branches:
       - development
       
 jobs:
-  productionPromotion:
+  mainPullRequest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -18,4 +18,8 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
+          commit-message: 'Automated Pull Request'
           branch: main
+          title: 'Development Changes'
+          body: 'Please make sure all reviewers verify the changes.'
+          reviewers: hivemods, Condy-jpg, KiloOscarSix
