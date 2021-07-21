@@ -163,7 +163,7 @@ label v12_docks:
     scene v12dock6b
     with dissolve
 
-    u "Haha,. Yeah, you’re right. I do."
+    u "Haha,. Yeah, you're right. I do."
 
     scene v12dock6g # FPP. Same as v12dock6, show Riley walking away
     with dissolve

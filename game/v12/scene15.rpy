@@ -22,12 +22,12 @@ label v12_riddle_riley:
     scene v12rrl2
     with dissolve
 
-    u "I really doubt that, but… Then again,  I don't know the riddle."
+    u "I really doubt that, but... Then again, I don't know the riddle."
 
     scene v12rrl2b # FPP. Same as 2, mouth opened
     with dissolve
 
-    ri "Don't doubt my skills, [name]. But if you must know,  listen. \"In the city of love , where sleeping hearts lie, not down in the river but where the ancestors lie.\""
+    ri "Don't doubt my skills, [name]. But if you must know, listen. \"In the city of love, where sleeping hearts lie, not down in the river but where the ancestors lie.\""
 
     scene v12rrl2
     with dissolve
@@ -42,17 +42,17 @@ label v12_riddle_riley:
     scene v12rrl2
     with dissolve
 
-    u "Riley! Don’t say things like that, especially about a burial ground. *Chuckles*"
+    u "Riley! Don't say things like that, especially about a burial ground. *Chuckles*"
 
     scene v12rrl2b
     with dissolve
 
-    ri "What? I didn't mean it in a bady way... I'm just saying in regard to the treasure hunt, it's more likely to be here."
+    ri "What? I didn't mean it in a bad way... I'm just saying in regard to the treasure hunt, it's more likely to be here."
 
     scene v12rrl2
     with dissolve
 
-    u "Hating on the dead is never a good thing. When the zombies, ghosts or whatever comes, I won't be there to help you. But at least you’ll have your super power and you can tell them if they're hungry. *Laughs*"
+    u "Hating on the dead is never a good thing. When the zombies, ghosts or whatever comes, I won't be there to help you. But at least you'll have your super power and you can tell them if they're hungry. *Laughs*"
 
     scene v12rrl2a
     with dissolve
@@ -122,7 +122,7 @@ label v12_riddle_riley:
             scene v12rrl10 
             with dissolve
 
-            u "Nope, still looking. I’m telling you Riley, there’s nothing down h-"
+            u "Nope, still looking. I'm telling you Riley, there's nothing down h-"
 
         "Give up":
             scene v12rrl11 # TPP. MC sits down
@@ -143,7 +143,7 @@ label v12_riddle_riley:
             scene v12rrl12
             with dissolve
 
-            u "I give up, I can't find it. I’m telling you there’s nothing down here."
+            u "I give up, I can't find it. I'm telling you there's nothing down here."
 
             scene v12rrl12b # FPP. Riley with her hands in her hand as if she is asking for help
             with dissolve
@@ -176,7 +176,7 @@ label v12_riddle_riley:
     scene v12rrl15 # FPP. MC looking at riley, mouth closed
     with dissolve
 
-    u "I stand corrected… *Chuckles* What is it?"
+    u "I stand corrected... *Chuckles* What is it?"
 
     scene v12rrl16 # TPP. MC and riley looking at a piece of paper in the wall
     with dissolve
@@ -221,7 +221,7 @@ label v12_riddle_riley:
     scene v12rrl15
     with dissolve
 
-    u "*Sighs* Fine. I’ll do it."
+    u "*Sighs* Fine. I'll do it."
 
     scene v12rrl17 # TPP. MC pulls the piece of paper out of the wall
     with dissolve
@@ -301,7 +301,7 @@ label v12_riddle_riley:
     scene v12rrl15g
     with dissolve
 
-    u "I have no fucking clue…"
+    u "I have no fucking clue..."
 
     scene v12rrl18 # TPP. Lights flickering on  as time passes
     with dissolve
@@ -321,7 +321,7 @@ label v12_riddle_riley:
     scene v12rrl20
     with dissolve
 
-    ri "You pick! Which way should we go?."
+    ri "You pick! Which way should we go?"
 
     menu:
         "Left":
@@ -337,7 +337,7 @@ label v12_riddle_riley:
             scene v12rrl21
             with dissolve
             
-            u "Let’s try this way."
+            u "Let's try this way."
 
             scene v12rrl23 # TPP. MC and riley going right
             with dissolve
@@ -378,7 +378,7 @@ label v12_riddle_riley:
     scene v12rrl31 # FPP. Riley on the ground, looking hurt, hand on her leg, mouth opened
     with dissolve
 
-    ri "OW OW OW OW OW! Fuck!"  
+    ri "OW OW OW OW OW! Fuck!"
 
     scene v12rrl31a # FPP. Same as 31, mouth closed
     with dissolve
@@ -398,7 +398,7 @@ label v12_riddle_riley:
     scene v12rrl31 
     with dissolve
 
-    ri "Not comfortably… I’m sorry."
+    ri "Not comfortably... I'm sorry."
 
     menu:
         "Help her walk":
@@ -415,7 +415,7 @@ label v12_riddle_riley:
             scene v12rrl34 # FPP. Riley arround MC's shoulder, looking at riley, mouth closed
             with dissolve
 
-            u "It’s fine, c'mon."
+            u "It's fine, c'mon."
 
             scene v12rrl34a # FPP. Same as 34, mouth opened
             with dissolve
@@ -425,7 +425,7 @@ label v12_riddle_riley:
             scene v12rrl34
             with dissolve
 
-            u "Don't worry, I got you. But, everything that’s happened so far has just given me more of a reason to not like this stupid hunt."
+            u "Don't worry, I got you. But, everything that's happened so far has just given me more of a reason to not like this stupid hunt."
 
             scene v12rrl34a
             with dissolve
@@ -458,7 +458,7 @@ label v12_riddle_riley:
             pause 0.75
 
             scene v12rrl37 # TPP. MC and Riley going into the lobby, riley still arround MC's shoulder
-            with diissolve
+            with dissolve
 
         "Carry her":
             scene v12rrl38 # TPP. MC Picks up riley
@@ -517,7 +517,7 @@ label v12_riddle_riley:
             scene v12rrl39
             with dissolve
 
-            u "Thanks… You give me many reasons to be. Now, let's get you back."
+            u "Thanks... You give me many reasons to be. Now, let's get you back."
 
             scene v12rrl39a
             with dissolve
@@ -535,7 +535,7 @@ label v12_riddle_riley:
             ri "Yeah, I'm sure."
 
             scene v12rrl42 # TPP. MC places riley down 
-            with dissolve   
+            with dissolve
 
             pause 0.75
 
@@ -547,7 +547,7 @@ label v12_riddle_riley:
             scene v12rrl44 # FPP. Now walking with riley, mouth opened
             with dissolve
 
-            ri "Also, I’m pretty sure Mr. Lee has something planned for us once we get back."
+            ri "Also, I'm pretty sure Mr. Lee has something planned for us once we get back."
 
             scene v12rrl44a # FPP. Same as 44, mouth closed
             with dissolve
@@ -592,4 +592,3 @@ label v12_riddle_riley:
                     with dissolve
 
     jump scene_16
-

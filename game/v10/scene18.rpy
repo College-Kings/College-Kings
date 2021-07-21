@@ -54,7 +54,7 @@ label v10_call_with_lauren2:
         scene v10scwl2
         with dissolve
 
-        la "It's also like… what if no one comes to my thing? And I put all this work in and just no one ever comes by."
+        la "It's also like... what if no one comes to my thing? And I put all this work in and just no one ever comes by."
 
         scene v10scwl1
         with dissolve
@@ -122,7 +122,7 @@ label v10_call_with_lauren2:
         scene v10scwl2b # TPP. Same camera as v10scwl2. Show MC in his Wolves bedroom. MC is laying on his bed, normal/content expression, mouth closed.
         with dissolve
 
-        la "Well… no. But, in all fairness, most of my teachers weren't the nicest people anyways. I'm just glad that phase of my life is over."
+        la "Well... no. But, in all fairness, most of my teachers weren't the nicest people anyways. I'm just glad that phase of my life is over."
 
         scene v10scwl1b
         with dissolve
@@ -132,7 +132,7 @@ label v10_call_with_lauren2:
         scene v10scwl2b
         with dissolve
 
-        la "It was a private school, so… no."
+        la "It was a private school, so... no."
 
         scene v10scwl1b
         with dissolve
@@ -142,7 +142,7 @@ label v10_call_with_lauren2:
         scene v10scwl2b
         with dissolve
 
-        la "Not just any private school… a very strict, religious one."
+        la "Not just any private school... a very strict, religious one."
 
         scene v10scwl1b
         with dissolve
@@ -209,7 +209,7 @@ label v10_call_with_lauren2:
         scene v10scwl2
         with dissolve
 
-        la "So uhm… rapid change of topics, do you want kids someday?"
+        la "So uhm... rapid change of topics, do you want kids someday?"
 
         if laurenrs: # RCS - if MC is in a relationship with Lauren
             scene v10scwl1
@@ -302,7 +302,7 @@ label v10_call_with_lauren2:
         scene v10scwl1
         with dissolve
 
-        u "You ever just have random questions pop up in your head, but then you're like… wait a minute, I don't even know what I'd do in that scenario?"
+        u "You ever just have random questions pop up in your head, but then you're like... wait a minute, I don't even know what I'd do in that scenario?"
 
         scene v10scwl2
         with dissolve
@@ -354,7 +354,7 @@ label v10_call_with_lauren2:
         scene v10scwl2b
         with fade
 
-        u "(Wow, that was quite a long call, but I feel like I really learned a lot about her… It's not that late, maybe I can go for a bit of a walk before going to bed.)"
+        u "(Wow, that was quite a long call, but I feel like I really learned a lot about her... It's not that late, maybe I can go for a bit of a walk before going to bed.)"
 
         stop music fadeout 3
 
@@ -409,7 +409,7 @@ label v10_call_with_lauren2:
         scene v10saow3 
         with dissolve
 
-        la "It's also like… what if no one comes to my thing? And I put all this work in and just no one ever comes by."
+        la "It's also like... what if no one comes to my thing? And I put all this work in and just no one ever comes by."
 
         scene v10scwl1
         with dissolve
@@ -477,7 +477,7 @@ label v10_call_with_lauren2:
         scene v10saow3b # TPP. Same camera as v10saow3. Show MC in his Ape bedroom. MC is laying on his bed, normal/content expression, mouth closed.
         with dissolve
 
-        la "Well… no. But, in all fairness, most of my teachers weren't the nicest people anyways. I'm just glad that phase of my life is over."
+        la "Well... no. But, in all fairness, most of my teachers weren't the nicest people anyways. I'm just glad that phase of my life is over."
 
         scene v10scwl1b
         with dissolve
@@ -487,7 +487,7 @@ label v10_call_with_lauren2:
         scene v10saow3b
         with dissolve
 
-        la "It was a private school, so… no."
+        la "It was a private school, so... no."
 
         scene v10scwl1b
         with dissolve
@@ -497,7 +497,7 @@ label v10_call_with_lauren2:
         scene v10scwl1c
         with dissolve
 
-        la "Not just any private school… a very strict, religious one."
+        la "Not just any private school... a very strict, religious one."
 
         scene v10saow3b
         with dissolve
@@ -564,7 +564,7 @@ label v10_call_with_lauren2:
         scene v10scwl1c
         with dissolve
 
-        la "So uhm… rapid change of topics, do you want kids someday?"
+        la "So uhm... rapid change of topics, do you want kids someday?"
 
         if laurenrs: # RCS - if MC is in a relationship with Lauren
             scene v10scwl1
@@ -657,7 +657,7 @@ label v10_call_with_lauren2:
         scene v10scwl1
         with dissolve
 
-        u "You ever just have random questions pop up in your head, but then you're like… wait a minute, I don't even know what I'd do in that scenario?"
+        u "You ever just have random questions pop up in your head, but then you're like... wait a minute, I don't even know what I'd do in that scenario?"
 
         scene v10scwl1a
         with dissolve
@@ -709,7 +709,7 @@ label v10_call_with_lauren2:
         scene v10saow3b
         with fade
 
-        u "(Wow, that was quite a long call, but I feel like I really learned a lot about her… It's not that late, maybe I can go for a bit of a walk before going to bed.)"
+        u "(Wow, that was quite a long call, but I feel like I really learned a lot about her... It's not that late, maybe I can go for a bit of a walk before going to bed.)"
 
         stop music fadeout 3
 

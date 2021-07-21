@@ -257,7 +257,7 @@ label v12_room_chloe_riley:
         scene v12crm12b
         with dissolve
 
-        ri "I don't know,  maybe some of the stuff Charli says is right."
+        ri "I don't know, maybe some of the stuff Charli says is right."
 
         scene v12crm12a 
         with dissolve
@@ -307,7 +307,7 @@ label v12_room_chloe_riley:
         scene v12crm12c
         with dissolve
 
-        ri "Okay… Maybe a little but not that much, really. You’re overreacting"
+        ri "Okay... Maybe a little but not that much, really. You're overreacting"
 
         scene v12crm12a
         with dissolve
@@ -358,4 +358,3 @@ label v12_room_chloe_riley:
         with dissolve
 
     jump v12_cafe
-

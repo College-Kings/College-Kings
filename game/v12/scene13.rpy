@@ -28,7 +28,7 @@ label v12_cafe:
         scene v12caf2a 
         with dissolve
 
-        u "I wish I could sleep, but…"
+        u "I wish I could sleep, but..."
 
         scene v12caf3 # TPP. MC puts his hand on his stomach
         with dissolve
@@ -48,7 +48,7 @@ label v12_cafe:
         scene v12caf2a
         with dissolve
 
-        u "Mmm… Nope."
+        u "Mmm... Nope."
 
         scene v12caf2b
         with dissolve
@@ -63,7 +63,7 @@ label v12_cafe:
         scene v12caf2c
         with dissolve
 
-        cl "Well, there you go. You're \"sooooo\" hungry because you’ve gone an entire day without eating. *Chuckles*"
+        cl "Well, there you go. You're \"sooooo\" hungry because you've gone an entire day without eating. *Chuckles*"
 
         scene v12caf2a
         with dissolve
@@ -214,5 +214,4 @@ label v12_cafe:
         scene v12caf16 # TPP. MC and riley in front of the cafe
         with dissolve
 
-        jump v12_riley_cafe 
-
+        jump v12_riley_cafe

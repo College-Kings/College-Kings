@@ -25,7 +25,7 @@ label v10_aubrey_house:
                 scene v10auh1b # FPP Same angle and expression as v10auh1a,, Aubrey mouth closed
                 with dissolve
 
-                u "Well… I may have one or two ideas on what could be done once we're actually at your place."
+                u "Well... I may have one or two ideas on what could be done once we're actually at your place."
 
                 scene v10auh1a
                 with dissolve
@@ -40,7 +40,7 @@ label v10_aubrey_house:
                 scene v10auh1c # FPP Same angle as v10auh1, Aubrey smiling, mouth open
                 with dissolve
 
-                au "*Chuckles* Alright, you got me excited there…"
+                au "*Chuckles* Alright, you got me excited there..."
 
             "Just a walk":
                 scene v10auh1
@@ -111,7 +111,7 @@ label v10_aubrey_house:
     scene v10auh1b
     with dissolve
 
-    u "Have you always been so uhm… exciting, adventurous... whatever you wanna call it?"
+    u "Have you always been so uhm... exciting, adventurous... whatever you wanna call it?"
 
     scene v10auh1c
     with dissolve
@@ -243,7 +243,7 @@ label v10_aubrey_house:
             scene v10auh1h
             with dissolve
 
-            u "So your sister… is she like really into parties or what's her deal?"
+            u "So your sister... is she like really into parties or what's her deal?"
 
             scene v10auh1c
             with dissolve
@@ -548,7 +548,7 @@ label v10_aubrey_house:
                         scene v10auh6d # FPP Same angle as v10auh6, Nora rolling her eyes and looking annoyed, mouth open
                         with dissolve
                   
-                        no "You're not funny. Just… ugh."
+                        no "You're not funny. Just... ugh."
 
                         scene v10auh6c
                         with dissolve
@@ -738,7 +738,7 @@ label v10_aubrey_room:
     scene v10auh8 # FPP Show Aubrey sitting on her bed, slight smile, mouth closed
     with dissolve
 
-    u "It's kinda unfair… you guys have a way nicer house than we do."
+    u "It's kinda unfair... you guys have a way nicer house than we do."
 
     scene v10auh8a # FPP Same angle as v10auh8, Aubrey with a big smile, mouth open
     with dissolve

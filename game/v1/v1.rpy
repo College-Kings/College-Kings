@@ -1210,6 +1210,7 @@ label starta: #for compatibility only
         call screen v1_freeRoam1_3
 
 label efra:
+    $ freeRoam = False
     scene s59
     stop music fadeout 2.0
     play sound "sounds/knock.mp3"
@@ -3751,6 +3752,8 @@ label v1_freeRoam2_grayson2:
 
 label v1_freeRoam2_end:
 label fr2end: #for compatibility only
+    $ freeRoam = False
+
     stop music fadeout 2.0
     
     scene chloelook:

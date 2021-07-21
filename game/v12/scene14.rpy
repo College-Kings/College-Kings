@@ -35,7 +35,7 @@ label v12_chloe_cafe:
     scene v12chc5 # FPP. MC and Chloe sitting down in the cafe, both of them looking at each other, Chloe smiling, mouth open
     with dissolve
 
-    cl "This is such a nice place! I feel like I’m underdressed… *Laughs*"
+    cl "This is such a nice place! I feel like I'm underdressed... *Laughs*"
 
     if chloegf or chloers:
         scene v12chc5a # FPP. Same as v12chc5, Chloe blushing, smiling, mouth closed, avoiding eye contact
@@ -46,17 +46,17 @@ label v12_chloe_cafe:
         scene v12chc5b # FPP. Same as v12chc5a, Chloe smiling, mouth open, blushing, avoiding eye contact
         with dissolve
 
-        cl "Thank you, Mr. Charming… *Chuckles*"
+        cl "Thank you, Mr. Charming... *Chuckles*"
 
         scene v12chc5
         with dissolve
 
-        cl "But really… I mean look at this place."
+        cl "But really... I mean look at this place."
 
     scene v12chc5c # FPP. Same as v12chc5, Chloe mouth closed, smiling
     with dissolve
 
-    u "Haha, I know what you mean.. It is fancy here. A very “french movie” type of place."
+    u "Haha, I know what you mean.. It is fancy here. A very “French movie” type of place."
 
     scene v12chc5
     with dissolve
@@ -71,7 +71,7 @@ label v12_chloe_cafe:
     scene v12chc5
     with dissolve
 
-    cl "Haha… Hmm, Do you know what you want to eat?"
+    cl "Haha... Hmm, Do you know what you want to eat?"
 
     scene v12chc5c
     with dissolve
@@ -81,7 +81,7 @@ label v12_chloe_cafe:
     scene v12chc5d # FPP. Same as v12chc5, different pose
     with dissolve
 
-    cl "I'm sure they can speak english, this is a tourist spot, right?"
+    cl "I'm sure they can speak English, this is a tourist spot, right?"
 
     scene v12chc5e # FPP. Same as v12chc5d, Chloe smiling, mouth closed
     with dissolve
@@ -111,7 +111,7 @@ label v12_chloe_cafe:
     scene v12chc7b # FPP. Same as v12chc7, waitress lookign at Chloe's direction, waitress slight smile, mouth open
     with dissolve
 
-    fwait "Tu parles francais?"
+    fwait "Parles-tu français?"
 
     scene v12chc5f
     with dissolve
@@ -121,7 +121,7 @@ label v12_chloe_cafe:
     scene v12chc7b
     with dissolve
 
-    fwait "Oooo, tres bien."
+    fwait "Oooo, très bien."
 
     scene v12chc5e
     with dissolve
@@ -207,7 +207,7 @@ label v12_chloe_cafe:
                 scene v12chc5c
                 with dissolve
 
-                u "Mmm, yeah… It'd be nice. *Chuckles*"
+                u "Mmm, yeah... It'd be nice. *Chuckles*"
 
             "Not really":
                 scene v12chc5c
@@ -228,7 +228,7 @@ label v12_chloe_cafe:
         scene v12chc7a
         with dissolve
 
-        u "But, since my friend's french is so bad-"
+        u "But, since my friend's French is so bad-"
 
     else:
         scene v12chc5i # FPP. Same as v12chc5, Show Chloe blushing, slight smile, avoiding eye contact, putting her hair behind her ear, mouth closed
@@ -249,7 +249,7 @@ label v12_chloe_cafe:
         scene v12chc7b
         with dissolve
 
-        fwait "Oh wow! Congrats... That’s exciting stuff."
+        fwait "Oh wow! Congrats... That's exciting stuff."
 
         scene v12chc5c
         with dissolve
@@ -264,7 +264,7 @@ label v12_chloe_cafe:
         scene v12chc7a
         with dissolve
 
-        u "Alright, now... Since my amazing girlfriend's french is so bad-"
+        u "Alright, now... Since my amazing girlfriend's French is so bad-"
 
     scene v12chc5d
     with dissolve
@@ -314,7 +314,7 @@ label v12_chloe_cafe:
     scene v12chc5k
     with dissolve
 
-    cl "Well, after the stuff that went down on the carriage rides there’s been something on my mind."
+    cl "Well, after the stuff that went down on the carriage rides there's been something on my mind."
 
     scene v12chc5l
     with dissolve
@@ -339,12 +339,12 @@ label v12_chloe_cafe:
     scene v12chc5l
     with dissolve
 
-    u "Hmm… Did she give you any clues at all?"
+    u "Hmm... Did she give you any clues at all?"
 
     scene v12chc5m
     with dissolve
 
-    cl "None, but it bothers me because Lindsey hasn’t said anything to me about whatever it is that she's planning."
+    cl "None, but it bothers me because Lindsey hasn't said anything to me about whatever it is that she's planning."
 
     scene v12chc5k
     with dissolve
@@ -372,12 +372,12 @@ label v12_chloe_cafe:
     menu:
         "Don't tell her about Lindsey":
             
-            u "(No way I’m telling her. She’s not hearing that news from me.)"
+            u "(No way I'm telling her. She's not hearing that news from me.)"
 
             scene v12chc5n # FPP. Same as v12chc5m, Chloe slightly worried, mouth closed
             with dissolve
 
-            u "I don't want to start making assumptions about what it could or couldn't be, so  just try to think positive. Maybe she is doing some prank, haha.."
+            u "I don't want to start making assumptions about what it could or couldn't be, so just try to think positive. Maybe she is doing some prank, haha.."
 
             scene v12chc5m
             with dissolve
@@ -387,7 +387,7 @@ label v12_chloe_cafe:
         "Tell her about Lindsey":
                 $ v12_told_chloe = True
 
-                u "(I can’t keep this from her.) *Sighs* There’s something I need to tell you."
+                u "(I can't keep this from her.) *Sighs* There's something I need to tell you."
 
                 scene v12chc5m
                 with dissolve
@@ -412,12 +412,12 @@ label v12_chloe_cafe:
                 scene v12chc5
                 with dissolve
 
-                cl "For fucks sake… *Sighs* Fine, I won't freak out. Happy?"
+                cl "For fucks sake... *Sighs* Fine, I won't freak out. Happy?"
 
                 scene v12chc5o # FPP. Same as v12chc5, Chloe angry, mouth closed
                 with dissolve
 
-                u "Good. Now, again, don't quote me. I'm not sure of all the details and I'm not even positive if this is truly her plan, but I heard that Lindsey‘s been considering running for President of the Chicks, against you."
+                u "Good. Now, again, don't quote me. I'm not sure of all the details and I'm not even positive if this is truly her plan, but I heard that Lindsey's been considering running for President of the Chicks, against you."
 
                 scene v12chc5p # FPP. Same as v12chc5o, Chloe angry, mouth open
                 with dissolve
@@ -427,7 +427,7 @@ label v12_chloe_cafe:
                 scene v12chc5o
                 with dissolve
 
-                u "Calm down, please… You said you wouldn't freak out."
+                u "Calm down, please... You said you wouldn't freak out."
 
                 scene v12chc5p
                 with dissolve
@@ -459,7 +459,7 @@ label v12_chloe_cafe:
     scene v12chc5o
     with dissolve
 
-    cl "It’s kinda hard to relax with something like this lingering over my head."
+    cl "It's kinda hard to relax with something like this lingering over my head."
 
     scene v12chc5c
     with dissolve
@@ -534,7 +534,7 @@ label v12_chloe_cafe:
     scene v12chc5
     with dissolve
 
-    cl "*Laughs* Alright… Ready to go?"
+    cl "*Laughs* Alright... Ready to go?"
 
     scene v12chc5c
     with dissolve
@@ -559,7 +559,7 @@ label v12_chloe_cafe:
     scene v12chc5e
     with dissolve
 
-    u "That’s a good idea."
+    u "That's a good idea."
 
     scene v12chc5c 
     with dissolve
@@ -598,7 +598,7 @@ label v12_chloe_cafe:
     scene v12chc5e
     with dissolve
 
-    u "Some little treasure hunt he has us doing for him while we’re in Europe"
+    u "Some little treasure hunt he has us doing for him while we're in Europe"
 
     scene v12chc5d
     with dissolve
