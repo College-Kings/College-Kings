@@ -20,6 +20,7 @@ jobs:
         with:
           commit-message: 'Automated Pull Request'
           branch: main
+          base: development
           title: 'Development Changes'
           body: 'Please make sure all reviewers verify the changes.'
           reviewers: hivemods, Condy-jpg, KiloOscarSix
