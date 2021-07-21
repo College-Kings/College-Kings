@@ -12386,6 +12386,7 @@ label rileyhocodate:
 ############# SCENE 45 HOMECOMING FREE ROAM
 ######
 label fr4:
+    $ freeRoam = True
     play music "music/mhoco1.mp3"
 
     queue music [ "music/mhoco2.mp3", "music/mhoco3.mp3", "music/mhoco4.mp3"]
@@ -17334,6 +17335,7 @@ label fr4amberending:
     jump v7end
 
 label v7end:
+    $ freeRoam = False
     if not renpy.loadable("v8/scene1.rpy"):
         scene savenow
         with Fade (1,0,1)
