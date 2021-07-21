@@ -86,6 +86,16 @@ init python:
                 if not any([contact.getReplies() for contact in simplr_contacts]):
                     simplrApp.seenNotification()
 
+        def getMessage(self, message):
+            for msg in self.sentMessages:
+                try:
+                    if message == msg.message:
+                        return msg
+                except AttributeError:
+                    if message == msg.image:
+                        return msg
+            return False
+
 init -1:
     default simplr_pendingContacts = []
     default simplr_contacts = []
@@ -187,9 +197,6 @@ screen simplr_contacts():
 screen simplr_messenger(contact=None):
     tag phoneTag
 
-    python:
-        yadj.value = yadjValue
-
     use phoneTemplate:
 
         add "images/msg.webp" at truecenter # Messenger Screen Background
@@ -211,7 +218,7 @@ screen simplr_messenger(contact=None):
                 text contact.name style "nametext"
 
         viewport:
-            yadjustment yadj
+            yinitial 1.0
             mousewheel True
             xysize(374, 556)
             pos(773, 282)
