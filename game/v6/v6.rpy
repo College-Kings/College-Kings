@@ -7001,6 +7001,7 @@ label wolvesfr:
 
 ### WOLVES RUSH PARTY FREE ROAM freeroam3 freeroam 3 free roam 3
 label wolvesfr2:
+    $ freeRoam = True
     play music "music/mparty2.mp3"
 
     queue music [ "music/mparty3.mp3", "music/mparty4.mp3"]
@@ -10648,6 +10649,7 @@ label upstairsriley:
 
 
 label v6_fr3chris3: ### ENDING
+    $ freeRoam = False
     scene sfr3ch2
 
     ch "You ready?"
