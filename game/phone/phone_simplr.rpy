@@ -86,15 +86,15 @@ init python:
                 if not any([contact.getReplies() for contact in simplr_contacts]):
                     simplrApp.seenNotification()
 
-        def getMessage(self, message):
-            for msg in self.sentMessages:
-                try:
-                    if message == msg.message:
-                        return msg
-                except AttributeError:
-                    if message == msg.image:
-                        return msg
-            return False
+            def getMessage(self, message):
+                for msg in self.sentMessages:
+                    try:
+                        if message == msg.message:
+                            return msg
+                    except AttributeError:
+                        if message == msg.image:
+                            return msg
+                return False
 
 init -1:
     default simplr_pendingContacts = []
