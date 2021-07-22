@@ -6,39 +6,39 @@ label before_main_menu:
         kiwiiApp.img = "images/phone/kiwii/appAssets/kiwiiIcon.webp"
 
         # Set up murder mystery stats
-        Chloe.stats["Competitive"] = True
-        Chloe.stats["Vindictive"] = Nora
+        cl.stats["Competitive"] = True
+        cl.stats["Vindictive"] = no
 
-        Amber.stats["Competitive"] = Amber.stats["Talkative"] = True
-        Amber.stats["Vindictive"] = Riley
+        am.stats["Competitive"] = am.stats["Talkative"] = True
+        am.stats["Vindictive"] = ri
 
-        Riley.stats["Competitive"] = Riley.stats["Talkative"] = True
+        ri.stats["Competitive"] = ri.stats["Talkative"] = True
 
-        Lindsey.stats["Competitive"] = Lindsey.stats["Talkative"] = True
-        Lindsey.stats["Vindictive"] = Chloe
+        li.stats["Competitive"] = li.stats["Talkative"] = True
+        li.stats["Vindictive"] = cl
 
-        Samantha.stats["Vindictive"] = Cameron
+        sa.stats["Vindictive"] = ca
 
-        Emily.stats["Talkative"] = False
+        em.stats["Talkative"] = False
 
-        Nora.stats["Talkative"] = True
-        Nora.stats["Vindictive"] = [ Chris, Chloe ]
+        no.stats["Talkative"] = True
+        no.stats["Vindictive"] = [ ch, cl ]
 
-        Aubrey.stats["Competitive"] = True
+        au.stats["Competitive"] = True
 
-        Ryan.stats["Vindictive"] = Imre
+        ry.stats["Vindictive"] = imre
 
-        Imre.stats["Competitive"] = False
-        Imre.stats["Vindictive"] = Ryan
+        imre.stats["Competitive"] = False
+        imre.stats["Vindictive"] = ry
 
-        Chris.stats["Competitive"] = Chris.stats["Talkative"] = False
+        ch.stats["Competitive"] = ch.stats["Talkative"] = False
 
-        Charli.stats["Competitive"] = True
-        Charli.stats["Talkative"] = False
+        charli.stats["Competitive"] = True
+        charli.stats["Talkative"] = False
 
-        Cameron.stats["Vindictive"] = Samantha
+        ca.stats["Vindictive"] = sa
 
-        Josh.stats["Competitive"] = True
+        jo.stats["Competitive"] = True
 
     return
 
