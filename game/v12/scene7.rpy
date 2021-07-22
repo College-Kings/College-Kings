@@ -3954,7 +3954,7 @@ label v12s7_sam_cameron:
     scene v12fersaca1
     with dissolve
 
-    sam "He doesn't have a role, because he's not part of the trip. He's just following me around, remember?"
+    sa "He doesn't have a role, because he's not part of the trip. He's just following me around, remember?"
 
     scene v12fersaca1a
     with dissolve
@@ -3979,7 +3979,7 @@ label v12s7_sam_cameron:
     scene v12fersaca1
     with dissolve
 
-    sam "Oh god."
+    sa "Oh god."
 
     scene v12fersaca1a
     with dissolve
@@ -3989,7 +3989,7 @@ label v12s7_sam_cameron:
     scene v12fersaca1
     with dissolve
 
-    sam "Don't have him do that, he's been doing it all ride long."
+    sa "Don't have him do that, he's been doing it all ride long."
 
     scene v12fersaca2
     with dissolve
@@ -4016,7 +4016,7 @@ label v12s7_sam_cameron:
             scene v12fersaca1
             with dissolve
 
-            sam "His jokes aren't funny."
+            sa "His jokes aren't funny."
 
         "Don't laugh":
             scene v12fersaca2a
@@ -4027,12 +4027,12 @@ label v12s7_sam_cameron:
             scene v12fersaca1
             with dissolve
 
-            sam "Exactly."
+            sa "Exactly."
 
     scene v12fersaca1
     with dissolve
 
-    sam "All of his jokes are about orphans, it's like he has something against orphans or something."
+    sa "All of his jokes are about orphans, it's like he has something against orphans or something."
 
     scene v12fersaca2
     with dissolve
@@ -4042,7 +4042,7 @@ label v12s7_sam_cameron:
     scene v12fersaca1
     with dissolve
 
-    sam "I understand it perfectly fine, I just think it's in poor taste."
+    sa "I understand it perfectly fine, I just think it's in poor taste."
 
     scene v12fersaca2
     with dissolve
@@ -4054,7 +4054,7 @@ label v12s7_sam_cameron:
 
     # -Cameron farts on Samantha-
 
-    sam "I KNOW YOU DIDN'T JUST FUCKING FART ON ME! YOU'RE FUCKING GROSS!"
+    sa "I KNOW YOU DIDN'T JUST FUCKING FART ON ME! YOU'RE FUCKING GROSS!"
 
     scene v12fersaca3 # FPP. Show samantha storming off
     with dissolve
@@ -4121,7 +4121,7 @@ label v12s7_sam2:
     scene v12fersam1a # FPP. same 1, mouth open
     with dissolve
 
-    sam "You mean no stalker."
+    sa "You mean no stalker."
 
     scene v12fersam1
     with dissolve
@@ -4131,7 +4131,7 @@ label v12s7_sam2:
     scene v12fersam1a
     with dissolve
 
-    sam "Not at all. Even if some of them were a little funny, I don't think it's cool that all of his jokes are about orphans. The whole idea of orphans just isn't funny to me at all."
+    sa "Not at all. Even if some of them were a little funny, I don't think it's cool that all of his jokes are about orphans. The whole idea of orphans just isn't funny to me at all."
 
     scene v12fersam1
     with dissolve
@@ -4141,7 +4141,7 @@ label v12s7_sam2:
     scene v12fersam1a
     with dissolve
 
-    sam "*Whisper* He should know better."
+    sa "*Whisper* He should know better."
 
     scene v12fersam1
     with dissolve
@@ -4151,7 +4151,7 @@ label v12s7_sam2:
     scene v12fersam1a
     with dissolve
 
-    sam "Besides distracting my mind with something else? *Chuckles*"
+    sa "Besides distracting my mind with something else? *Chuckles*"
 
     menu:
         "Focus on the game":
@@ -4169,7 +4169,7 @@ label v12s7_sam2:
             scene v12fersam1c # FPP. same 1, new pose, mouth open
             with dissolve
 
-            sam "What-"
+            sa "What-"
 
             scene v12fersam2 # TPP. Show mc and samantha kissing, mc's hand on samantha's cheek
             with dissolve
@@ -4179,7 +4179,7 @@ label v12s7_sam2:
             scene v12fersam1c
             with dissolve
 
-            sam "Oh' Yeah. *Chuckles* That definitely helps."
+            sa "Oh' Yeah. *Chuckles* That definitely helps."
 
             scene v12fersam1b
             with dissolve
@@ -4191,7 +4191,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "Quick, talk murder to me. *Laughs*"
+    sa "Quick, talk murder to me. *Laughs*"
 
     scene v12fersam1b
     with dissolve
@@ -4202,7 +4202,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "Well if I was writing this, I'd probably choose Lauren to be the murderer."
+    sa "Well if I was writing this, I'd probably choose Lauren to be the murderer."
 
     scene v12fersam1b
     with dissolve
@@ -4212,7 +4212,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "See, that's exactly why I'd choose her. No one would suspect her. She wouldn't even suspect herself. *Chuckles*"
+    sa "See, that's exactly why I'd choose her. No one would suspect her. She wouldn't even suspect herself. *Chuckles*"
 
     scene v12fersam1b
     with dissolve
@@ -4223,7 +4223,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "You sound surprised. *Chuckles* Did you think I was stupid?"
+    sa "You sound surprised. *Chuckles* Did you think I was stupid?"
 
     scene v12fersam1b
     with dissolve
@@ -4233,7 +4233,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "My brother took all the stupid."
+    sa "My brother took all the stupid."
 
     scene v12fersam1b
     with dissolve
@@ -4243,7 +4243,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "Honestly, my life sucks. I'm an adult in college, but instead of having friends and living the life I want to live I'm smothered by my brother for literally no reason except he has nothing better to do. I just want to be my own person."
+    sa "Honestly, my life sucks. I'm an adult in college, but instead of having friends and living the life I want to live I'm smothered by my brother for literally no reason except he has nothing better to do. I just want to be my own person."
 
     scene v12fersam1b
     with dissolve
@@ -4253,7 +4253,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "I've thought about it, but I don't want to take it that far. I just want him to take my wishes into consideration for once."
+    sa "I've thought about it, but I don't want to take it that far. I just want him to take my wishes into consideration for once."
 
     scene v12fersam1b
     with dissolve
@@ -4263,7 +4263,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "He sure gets carried away a lot."
+    sa "He sure gets carried away a lot."
 
     scene v12fersam1b
     with dissolve
@@ -4273,7 +4273,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "I haven't, but I don't think we'd get along, she's too soft."
+    sa "I haven't, but I don't think we'd get along, she's too soft."
 
     scene v12fersam1b
     with dissolve
@@ -4283,7 +4283,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "I've never seen or heard of her doing anything exciting."
+    sa "I've never seen or heard of her doing anything exciting."
 
     scene v12fersam1b
     with dissolve
@@ -4293,7 +4293,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "There's no way Lauren played that with you guys."
+    sa "There's no way Lauren played that with you guys."
 
     scene v12fersam1b
     with dissolve
@@ -4303,7 +4303,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "Hmm, maybe I should try talking to her. Someone I definitely wanna talk to though is Amber. After seeing how fiesty she's been with the whole security thing I definitely wanna get to know her. She seems like my type of person, plus I know her and Riley are cool."
+    sa "Hmm, maybe I should try talking to her. Someone I definitely wanna talk to though is Amber. After seeing how fiesty she's been with the whole security thing I definitely wanna get to know her. She seems like my type of person, plus I know her and Riley are cool."
 
     scene v12fersam1b
     with dissolve
@@ -4313,7 +4313,7 @@ label v12s7_sam2:
     scene v12fersam1a
     with dissolve
 
-    sam "Yeah, I guess you're right."
+    sa "Yeah, I guess you're right."
 
     scene v12fersam1
     with dissolve
@@ -4323,7 +4323,7 @@ label v12s7_sam2:
     scene v12fersam1a
     with dissolve
 
-    sam "Don't ruin the moment."
+    sa "Don't ruin the moment."
 
     scene v12fersam1
     with dissolve
@@ -4333,7 +4333,7 @@ label v12s7_sam2:
     scene v12fersam1a
     with dissolve
 
-    sam "Well, I need to finish my book. If I don't, no one will. See you around [name] and thanks for the talk."
+    sa "Well, I need to finish my book. If I don't, no one will. See you around [name] and thanks for the talk."
 
     scene v12fersam1
     with dissolve
@@ -4355,7 +4355,7 @@ label v12s7_sam2_kill:
     scene v12fersam1c
     with dissolve
 
-    sam "There's no way he chose you as the killer."
+    sa "There's no way he chose you as the killer."
 
     scene v12fersam1b
     with dissolve
@@ -4365,7 +4365,7 @@ label v12s7_sam2_kill:
     scene v12fersam1c
     with dissolve
 
-    sam "I'm having a hard time believing that."
+    sa "I'm having a hard time believing that."
 
     scene v12fersam1b
     with dissolve
@@ -4375,7 +4375,7 @@ label v12s7_sam2_kill:
     scene v12fersam1c
     with dissolve
 
-    sam "You don't fit any killer theories."
+    sa "You don't fit any killer theories."
 
     scene v12fersam1
     with dissolve
@@ -4385,7 +4385,7 @@ label v12s7_sam2_kill:
     scene v12fersam1a
     with dissolve
 
-    sam "I guess. Why didn't you kill me earlier?"
+    sa "I guess. Why didn't you kill me earlier?"
 
     scene v12fersam1
     with dissolve
@@ -4395,7 +4395,7 @@ label v12s7_sam2_kill:
     scene v12fersam1a
     with dissolve
 
-    sam "He's not a part of the game idiot?"
+    sa "He's not a part of the game idiot?"
 
     scene v12fersam1
     with dissolve
@@ -4405,7 +4405,7 @@ label v12s7_sam2_kill:
     scene v12fersam1a
     with dissolve
 
-    sam "Enjoy your little killing spree, good luck."
+    sa "Enjoy your little killing spree, good luck."
 
     scene v12fersam1
     with dissolve
