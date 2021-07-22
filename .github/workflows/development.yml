@@ -10,7 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: development
+          ref: main
+      - name: Reset development branch
+        run: |
+          git fetch origin development:development
+          git reset --hard development
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
