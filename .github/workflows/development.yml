@@ -15,7 +15,8 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           commit-message: "Automated Pull Request"
-          branch: main
+          branch: patch
+          delete-branch: true
           base: development
           title: "Development Changes"
           body: "Please make sure all reviewers verify the changes."
