@@ -9,6 +9,32 @@ init python:
                 "Talkative": None
             }
 
+            self.points = 0
+            self.opinion = None
+
+        def kill(self):
+            # Check Competitive stat
+            if self.stats["Competitive"] == True and len(v12s7_killList) < 3:
+                self.point -= 1
+            elif self.stats["Competitive"] == False and len(v12s7_killList) < 3:
+                self.points += 1
+
+            # Check Vindictive stat
+            if self.stats["Vindictuve"] in v12s7_killList:
+                self.points += 1
+            else:
+                self.points -= 1
+
+            # Check Talkative stat
+            if self.stats["Talkative"] == True:
+                self.points += 1
+            elif self.stats["Talkative"] == False:
+                self.points -= 1
+
+            # Add character to kill list
+            v12s7_killList.append(self)
+            
+
 # Declare characters used by this game. The color argument colorizes the name of the character.
 default narrator = Character (None, what_outlines=[ (2, "#000") ])
 default u = Character("[name]", who_color="#53d769", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
