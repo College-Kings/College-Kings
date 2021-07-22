@@ -23,7 +23,7 @@ label v12s7fr:
         scene v12fer4 # FPP. Show samantha, looking fed up, mouth open
         with dissolve
 
-        sam "Then go home."
+        sa "Then go home."
 
     scene v12fer1
     with dissolve
@@ -3914,7 +3914,7 @@ label v12s7_sam_cameron:
     scene v12fersaca1 # FPP. Show sam, slight smile, mouth open
     with dissolve
 
-    sam "Hey hey boxer!"
+    sa "Hey hey boxer!"
 
     scene v12fersaca1a # FPP. same 1, mouth closed
     with dissolve
@@ -3934,7 +3934,7 @@ label v12s7_sam_cameron:
     scene v12fersaca1
     with dissolve
 
-    sam "It's nice that you got to be a fighter, it was the perfect choice."
+    sa "It's nice that you got to be a fighter, it was the perfect choice."
 
     scene v12fersaca1a
     with dissolve
@@ -3944,7 +3944,7 @@ label v12s7_sam_cameron:
     scene v12fersaca1
     with dissolve
 
-    sam "I'm a once famous novelist that fell off, but my upcoming novel is finally gonna turn my career around."
+    sa "I'm a once famous novelist that fell off, but my upcoming novel is finally gonna turn my career around."
 
     scene v12fersaca1a
     with dissolve
