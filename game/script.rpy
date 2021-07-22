@@ -31,15 +31,6 @@ label splashscreen:
 
     return
 
-label before_main_menu:
-    python:
-        msgApp.img = "images/phone/messages/appAssets/messagesIcon.webp"
-        statsApp.img = "images/phone/stats/appAssets/statsIcon.webp"
-        achApp.img = "images/phone/achievements/appAssets/achievementsIcon.webp"
-        kiwiiApp.img = "images/phone/kiwii/appAssets/kiwiiIcon.webp"
-
-    return
-
 # The game starts here.
 label start:
 
