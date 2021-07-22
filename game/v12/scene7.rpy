@@ -30,7 +30,7 @@ label v12s7fr:
     with dissolve
 
     lee "As you all know, I take great pride in seizing every opportunity I can to teach my students and this ferry ride will be no different."
-    lee "Decades ago, a famous murder was commited on this ferry. A murder that we will, in a way, be reinacting."
+    lee "Decades ago, a famous murder was committed on this ferry. A murder that we will, in a way, be re-enacting."
 
     scene v12fer5 # FPP. Show riley, excited, mouth open
     with dissolve
@@ -50,7 +50,7 @@ label v12s7fr:
     scene v12fer1
     with dissolve
 
-    lee "Each student will be given a role to play because we will be reinacting this murder by playing a murder mystery."
+    lee "Each student will be given a role to play because we will be re-enacting this murder by playing a murder mystery."
 
     scene v12fer7 # FPP. Show Mr Lee handing riley a role card
     with dissolve
@@ -1700,7 +1700,7 @@ label v12s7_Lauren_kill:
     scene v12ferla1d
     with dissolve
 
-    la "Wow, you just gonna take me out like that. My living as a suspected criminalwasn't bad enough?"
+    la "Wow, you just gonna take me out like that. My living as a suspected criminal wasn't bad enough?"
 
     scene v12ferla1c
     with dissolve
@@ -1742,7 +1742,7 @@ label v12s7_ryan_imre1:
     scene v12ferryi3 # FPP. Show Mr Lee from a distance at imre while Mr Lee is holding a boyancy ring, mouth open
     with dissolve
 
-    lee "Did you say something Mrs?"
+    lee "Did you say something Mrs.?"
 
     scene v12ferryi2a # FPP. Same 2, now looking at mr lee off screen, mouth open
     with dissolve
@@ -1852,7 +1852,7 @@ label v12s7_ryan_imre1:
             scene v12ferryi9a
             with dissolve
             
-            u "Well allow me to congratulate the lovely couple! As a gift, feel free to come to my next fight as VIP's. I'll be sure to put you on the list as Mr. and Mrs Stork."
+            u "Well allow me to congratulate the lovely couple! As a gift, feel free to come to my next fight as VIP's. I'll be sure to put you on the list as Mr. and Mrs. Stork."
 
             scene v12ferryi9
             with dissolve
@@ -1913,7 +1913,7 @@ label v12s7_ryan_imre1:
     scene v12ferryi8
     with dissolve
 
-    imre "We can't go because this man here is a lazy dumbass that quit his job.o Now he's broke and living with me until he gets his life together. That's literally what our cards said."
+    imre "We can't go because this man here is a lazy dumbass that quit his job. Now he's broke and living with me until he gets his life together. That's literally what our cards said."
 
     scene v12ferryi8a
     with dissolve
@@ -2071,7 +2071,7 @@ label v12s7_ryan1:
     scene v12ferry1b # FPP. Same 1, new pose, mouth open
     with dissolve
 
-    ry "He'ssensitive to anything gay, it makes it so easy to bother him. I told him I can't wait till tonight, that I was gonna show him a good time. If Mr. Lee wasn't nearby I don't know what he would've done, but his face got super red. *Laughs*"
+    ry "He's sensitive to anything gay, it makes it so easy to bother him. I told him I can't wait till tonight, that I was gonna show him a good time. If Mr. Lee wasn't nearby I don't know what he would've done, but his face got super red. *Laughs*"
 
     scene v12ferry1c # FPP. same 1, new pose, mouth closed
     with dissolve
@@ -2230,7 +2230,7 @@ label v12s7_imre2:
     scene v12ferim1a
     with dissolve
 
-    imre "Man fuck this game, Mr. Lee litteraly did all of this just to fuck with me."
+    imre "Man fuck this game, Mr. Lee literally did all of this just to fuck with me."
 
     scene v12ferim1
     with dissolve
@@ -2664,7 +2664,7 @@ label v12s7_lindsey2:
     scene v12ferli3a
     with dissolve
 
-    li "I considered it, but it's too risky. With it being so easy to murder without being caught and me being the main one intersted in catching the murderer, I can't risk getting killed."
+    li "I considered it, but it's too risky. With it being so easy to murder without being caught and me being the main one interested in catching the murderer, I can't risk getting killed."
 
     scene v12ferli3
     with dissolve
@@ -2729,7 +2729,7 @@ label v12s7_lindsey2:
     scene v12ferli3b # FPP. same 3, new pose, mouth open
     with dissolve
 
-    li "Oh no, I'm definitely running. I'm saying I'm not stressed about it anymore. Most of the girls are cool with me running, I have a gameplan to persuade the others, so right now I'm happy justenjoying Europe."
+    li "Oh no, I'm definitely running. I'm saying I'm not stressed about it anymore. Most of the girls are cool with me running, I have a gameplan to persuade the others, so right now I'm happy just enjoying Europe."
 
     scene v12ferli3c # FPP. Same 3, new pose to match 3b, mouth closed
     with dissolve
@@ -4309,7 +4309,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sa "Hmm, maybe I should try talking to her. Someone I definitely wanna talk to though is Amber. After seeing how fiesty she's been with the whole security thing I definitely wanna get to know her. She seems like my type of person, plus I know her and Riley are cool."
+    sa "Hmm, maybe I should try talking to her. Someone I definitely wanna talk to though is Amber. After seeing how feisty she's been with the whole security thing I definitely wanna get to know her. She seems like my type of person, plus I know her and Riley are cool."
 
     scene v12fersam1b
     with dissolve
