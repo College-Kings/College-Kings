@@ -7,36 +7,36 @@ label before_main_menu:
 
         # Set up murder mystery stats
         cl.stats["Competitive"] = True
-        cl.stats["Vindictive"] = no
+        cl.stats["Vindictive"] = [no]
 
         am.stats["Competitive"] = am.stats["Talkative"] = True
-        am.stats["Vindictive"] = ri
+        am.stats["Vindictive"] = [ri]
 
         ri.stats["Competitive"] = ri.stats["Talkative"] = True
 
         li.stats["Competitive"] = li.stats["Talkative"] = True
-        li.stats["Vindictive"] = cl
+        li.stats["Vindictive"] = [cl]
 
-        sa.stats["Vindictive"] = ca
+        sa.stats["Vindictive"] = [ca]
 
         em.stats["Talkative"] = False
 
         no.stats["Talkative"] = True
-        no.stats["Vindictive"] = [ ch, cl ]
+        no.stats["Vindictive"] = [ch, cl]
 
         au.stats["Competitive"] = True
 
-        ry.stats["Vindictive"] = imre
+        ry.stats["Vindictive"] = [imre]
 
         imre.stats["Competitive"] = False
-        imre.stats["Vindictive"] = ry
+        imre.stats["Vindictive"] = [ry]
 
         ch.stats["Competitive"] = ch.stats["Talkative"] = False
 
         charli.stats["Competitive"] = True
         charli.stats["Talkative"] = False
 
-        ca.stats["Vindictive"] = sa
+        ca.stats["Vindictive"] = [sa]
 
         jo.stats["Competitive"] = True
 
