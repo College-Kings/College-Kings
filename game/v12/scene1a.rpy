@@ -4,7 +4,7 @@
 # Time: Nighttime
 
 label v12_chase_robber:
-    v12_chase_robber = True
+    $ v12_chase_robber = True
     scene v12car1 # TPP Show MC shoving Charli out of the way to take off after robber
     with dissolve
 
