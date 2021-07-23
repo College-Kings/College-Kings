@@ -336,7 +336,7 @@ label v12_roomate_talk:
 
         ri "Why? It's not like I got robbed, that would've had me spooked for sure."
 
-        if v12_fight_win = True: 
+        if v12_fight_win: 
             scene v12rcr13c
             with dissolve
 

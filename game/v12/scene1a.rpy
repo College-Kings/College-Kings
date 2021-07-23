@@ -86,7 +86,7 @@ label v12_chase_robber:
 
     # MANUAL FIGHT
 
-    if lose_fight:
+    if not v12_fight_win:
         scene v12car13 # TPP Show MC laying on the ground, writhing in pain
         with dissolve
 
@@ -256,7 +256,7 @@ label v12_chase_robber:
 
         pause 0.75
 
-    if win_fight:
+    else:
         scene v12car13a # FPP Same angle as v12car13, show robber laying on the ground next to Nora's bag, writhing in pain
         with dissolve
 
