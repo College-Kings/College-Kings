@@ -43,7 +43,7 @@ label v12_riley_lobby:
     scene v12ril1e # FPP. Same as v12ril1d, Riley different pose
     with dissolve
 
-    u "You should probably consider how you're talking to me right now ‘cause whenever you find out what actually happened, you're gonna feel horrible for the way you're treating me."
+    u "You should probably consider how you're talking to me right now 'cause whenever you find out what actually happened, you're gonna feel horrible for the way you're treating me."
 
     scene v12ril1f # FPP. Same as v12ril1e, Riley very angry and crying, mouth open
     with dissolve

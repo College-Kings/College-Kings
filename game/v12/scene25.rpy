@@ -35,7 +35,7 @@ label v12_julia_call:
     scene v12juc3a # TPP. Same as v12juc3, Julia slightly worried, mouth closed
     with dissolve
 
-    u "Uhh, I mean… Yeah."
+    u "Uhh, I mean... Yeah."
 
     scene v12juc3
     with dissolve
@@ -110,7 +110,7 @@ label v12_jc_riley:
     scene v12juc3f # TPP. Same as v12juc3d, different pose
     with dissolve
 
-    u "It’s definitely been… something. *Chuckles*"
+    u "It’s definitely been... something. *Chuckles*"
 
     jump v12_jc_continue
 
@@ -120,17 +120,17 @@ label v12_jc_amber:
     scene v12juc3d
     with dissolve
 
-    u "I guess Amber, we drove go karts in London. And had an interesting encounter at the Bank tour…"
+    u "I guess Amber, we drove go karts in London. And had an interesting encounter at the Bank tour..."
 
     scene v12juc3
     with dissolve
 
-    ju "Sounds like she could be a bit of trouble… Please make sure you’re making smart choices."
+    ju "Sounds like she could be a bit of trouble... Please make sure you’re making smart choices."
 
     scene v12juc3f
     with dissolve
 
-    u "Haha, don’t worry. Amber is harmless… (I think.)"
+    u "Haha, don’t worry. Amber is harmless... (I think.)"
 
     jump v12_jc_continue
 
@@ -222,7 +222,7 @@ label v12_jc_penelope:
         scene v12juc3b
         with dissolve
 
-        u "I guess Penelope, but… She didn’t get to come on the trip. We’ve only spoken a bit since I’ve left."
+        u "I guess Penelope, but... She didn’t get to come on the trip. We’ve only spoken a bit since I’ve left."
 
         scene v12juc3c
         with dissolve

@@ -4179,7 +4179,7 @@ label v12s7_sam2:
             scene v12fersam1b # FPP. same 1, new pose, mouth closed
             with dissolve
 
-            u "Wanna focus on the game? That’s the point of all of this, I think… To make us focus on something else for a while."
+            u "Wanna focus on the game? That’s the point of all of this, I think... To make us focus on something else for a while."
 
         "Go for a kiss":
             scene v12fersam1b
