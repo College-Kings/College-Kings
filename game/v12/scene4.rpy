@@ -430,7 +430,7 @@ label v12_roomate_talk:
         scene v12rcr13c
         with dissolve
 
-        ri "It sucks that we can't all hangout at night and do what we want you know? Like without Mr. Lee and Ms. Rose."
+        ri "It sucks that we can't all hang out at night and do what we want you know? Like without Mr. Lee and Ms. Rose."
 
         scene v12rcr13b
         with dissolve
