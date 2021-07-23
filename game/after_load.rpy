@@ -6,6 +6,11 @@ python early:
     if renpy.loadable("bugTesting/bugTesting_Overwrite.rpyc"):
         os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpyc"))
 
+    if renpy.loadable("bugTesting/bugTesting_typoNotes.rpy"):
+        os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_typoNotes.rpy"))
+    if renpy.loadable("bugTesting/bugTesting_typoNotes.rpyc"):
+        os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_typoNotes.rpyc"))
+
     if renpy.loadable("phone/phonescript.rpy"):
         os.remove(os.path.join(config.basedir, "game", "phone", "phonescript.rpy"))
     if renpy.loadable("phone/phonescript.rpyc"):
@@ -90,7 +95,7 @@ label after_load:
         except NameError: pass
         try: v11s19_kiwiiPost3.img = "images/phone/kiwii/posts/v11/v11_rileymcselfie.webp"
         except NameError: pass
-        try: v11s24_kiwiiPost1.img = "images/phone/kiwii/posts/v11/v11_caleb.webp.webp"
+        try: v11s24_kiwiiPost1.img = "images/phone/kiwii/posts/v11/v11_caleb.webp"
         except NameError: pass
         try: v11s24_kiwiiPost2.img = "images/phone/kiwii/posts/v11/v11_imrebunny.webp"
         except NameError: pass
