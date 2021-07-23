@@ -73,7 +73,8 @@ label v12_riley_lobby:
     scene v12ril3 # TPP. Show MC walking over to the couch in the hotel lobby, angry, mouth closed
     with dissolve
 
-    u "(I get why she'd blame me, but I didn't do that shit. Who the fuck could've known about it? The door was open, so really... Anyone could've been listening, but the only person I know that was around was…)"
+    u "(I get why she'd blame me, but I didn't do that shit. Who the fuck could've known about it?)"
+    u "(The door was open, so really... Anyone could've been listening, but the only person I know that was around was...)"
 
     scene v12ril4 # TPP. Show MC sitting on the couch, he's angry, mouth closed
     with dissolve
