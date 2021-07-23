@@ -5,7 +5,7 @@ init python:
 
             self.stats = {
                 "Competitive": None,
-                "Vindictive": None,
+                "Vindictive": [],
                 "Talkative": None
             }
 
@@ -20,10 +20,11 @@ init python:
                 self.points += 1
 
             # Check Vindictive stat
-            if self.stats["Vindictuve"] in v12s7_killList:
-                self.points += 1
-            else:
-                self.points -= 1
+            for character in self.stats["Vindictive"]:
+                if character in v12s7_killList:
+                    self.points += 1
+                else:
+                    self.points -= 1
 
             # Check Talkative stat
             if self.stats["Talkative"] == True:
