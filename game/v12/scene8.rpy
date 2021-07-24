@@ -302,4 +302,4 @@ label v12_murder_mystery_reveal:
 
     pause 0.75
 
-    jump v12_dock_arrival
+    jump v12_dock_arrival #scene 9 

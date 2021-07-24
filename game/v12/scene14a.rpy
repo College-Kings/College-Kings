@@ -508,4 +508,4 @@ label v12_riley_cafe:
 
     pause 0.75
 
-    jump scene15
+    jump v12_riddle_riley #scene 15

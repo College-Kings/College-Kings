@@ -645,4 +645,4 @@ label v12_chloe_cafe:
 
     pause 0.75
 
-    jump v12_riddle_riley
+    jump v12_riddle_riley #scene 15
