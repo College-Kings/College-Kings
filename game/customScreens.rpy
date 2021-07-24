@@ -92,7 +92,7 @@ screen endFreeRoamConfirm(continueLabel):
 screen censoredPopup(continueLabel):
     modal True
 
-    add "images/gui/censoredPopup/censoredBackground.webp"
+    add "gui/censoredPopup/censoredBackground.webp"
 
     vbox:
         pos (365, 566)
@@ -100,18 +100,18 @@ screen censoredPopup(continueLabel):
 
         if config_censored:
             imagebutton:
-                idle "images/gui/censoredPopup/censoredSettings.webp"
-                hover "images/gui/censoredPopup/censoredSettingsHover.webp"
+                idle "gui/censoredPopup/censoredSettings.webp"
+                hover "gui/censoredPopup/censoredSettingsHover.webp"
                 action ShowMenu("preferences")
         else:
             imagebutton:
-                idle "images/gui/censoredPopup/censoredContinue.webp"
-                hover "images/gui/censoredPopup/censoredContinueHover.webp"
+                idle "gui/censoredPopup/censoredContinue.webp"
+                hover "gui/censoredPopup/censoredContinueHover.webp"
                 action Return()
 
         imagebutton:
-            idle "images/gui/censoredPopup/censoredSkipScene.webp"
-            hover "images/gui/censoredPopup/censoredSkipSceneHover.webp"
+            idle "gui/censoredPopup/censoredSkipScene.webp"
+            hover "gui/censoredPopup/censoredSkipSceneHover.webp"
             action Jump(continueLabel)
 
 

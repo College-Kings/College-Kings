@@ -860,7 +860,7 @@ style slot_button_text:
 screen preferences():
     tag menu
 
-    add "images/gui/settingsBackground.webp"
+    add "gui/settingsBackground.webp"
 
     # Display settings
     hbox:
