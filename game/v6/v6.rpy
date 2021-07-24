@@ -2769,8 +2769,7 @@ label emsex_a:
 
     show screen emilysexoverlay
 
-    label emhead:
-
+label emhead:
     scene emvid3
     with dissolve
 
