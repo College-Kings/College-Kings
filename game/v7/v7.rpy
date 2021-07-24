@@ -1282,7 +1282,7 @@ label hd_ad:
             scene s712d
             with dissolve
 
-            ri "*Whispers*It's too risky, I don't think I could control myself."
+            ri "*Whispers* It's too risky, I don't think I could control myself."
 
             scene s712e
             with dissolve
