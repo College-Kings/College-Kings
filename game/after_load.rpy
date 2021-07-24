@@ -201,6 +201,12 @@ label after_load:
                         except AttributeError: reply.disabled = False
             except AttributeError: pass
 
+        # Simplr Contacts
+        for contact in simplr_pendingContacts + simplr_contacts:
+            try: contact.condition
+            except AttributeError: contact.condition = True
+
+
         # Variables
         try:
             if chlorers: chloers = True
