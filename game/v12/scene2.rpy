@@ -292,7 +292,7 @@ label v12_nora_checks_mc:
         with dissolve
 
     if v11_pen_goes_europe:
-        jump v12_penelope_roof 
+        jump v12_penelope_roof #scene 3
     
     else:
-        jump v12_penelope_call
+        jump v12_penelope_call #scene 3a

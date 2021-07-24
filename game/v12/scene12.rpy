@@ -357,5 +357,4 @@ label v12_room_chloe_riley:
         scene v12crm7 
         with dissolve
 
-    jump v12_cafe
-
+    jump v12_cafe #scene 13

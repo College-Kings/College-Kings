@@ -510,4 +510,4 @@ label v12_chase_robber:
     play sound "sounds/knock.mp3"
     pause 0.75
 
-    jump v12_nora_checks_mc
+    jump v12_nora_checks_mc # jump scene 2
