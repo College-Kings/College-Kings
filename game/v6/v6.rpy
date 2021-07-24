@@ -2769,8 +2769,7 @@ label emsex_a:
 
     show screen emilysexoverlay
 
-    label emhead:
-
+label emhead:
     scene emvid3
     with dissolve
 
@@ -4439,7 +4438,7 @@ label afteraubrey:
         play sound "sounds/vibrate.mp3"
 
         if config_censored:
-            $ contact_Aubrey.newImgMessage("images/gui/censoredPopup/censoredBackground.webp", queue=False)
+            $ contact_Aubrey.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
         else:
             $ contact_Aubrey.newImgMessage("images/text3.webp", queue=False)
 
@@ -5742,35 +5741,35 @@ label wakeupa:
     scene s623a # performance pose 1
     with dissolve
 
-    poet3 "When I was a little girl,"
+    sa "When I was a little girl,"
 
-    poet3 "All I wanted to be was a super star."
+    sa "All I wanted to be was a super star."
 
-    poet3 "In my room I'd twirl,"
+    sa "In my room I'd twirl,"
 
-    poet3 "Dreaming of the day I could go far."
+    sa "Dreaming of the day I could go far."
 
     scene s623b # performance pose 1
     with dissolve
 
-    poet3 "Now that I am older,"
+    sa "Now that I am older,"
 
-    poet3 "I know that I'm a star."
+    sa "I know that I'm a star."
 
-    poet3 "I am the beholder,"
+    sa "I am the beholder,"
 
-    poet3 "You'll never be at par."
+    sa "You'll never be at par."
 
     scene s623c # performance pose 1
     with dissolve
 
-    poet3 "I know you all want to be me,"
+    sa "I know you all want to be me,"
 
-    poet3 "But no one will ever compare."
+    sa "But no one will ever compare."
 
-    poet3 "So why not take a knee,"
+    sa "So why not take a knee,"
 
-    poet3 "And maybe I'll let you breathe my air."
+    sa "And maybe I'll let you breathe my air."
 
     scene s624 # poet 3 leaves the stage
     with dissolve
@@ -7001,6 +7000,7 @@ label wolvesfr:
 
 ### WOLVES RUSH PARTY FREE ROAM freeroam3 freeroam 3 free roam 3
 label wolvesfr2:
+    $ freeRoam = True
     play music "music/mparty2.mp3"
 
     queue music [ "music/mparty3.mp3", "music/mparty4.mp3"]
@@ -10648,6 +10648,7 @@ label upstairsriley:
 
 
 label v6_fr3chris3: ### ENDING
+    $ freeRoam = False
     scene sfr3ch2
 
     ch "You ready?"

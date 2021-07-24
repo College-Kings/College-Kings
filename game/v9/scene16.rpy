@@ -403,7 +403,7 @@ label v9_emily_dorm:
 
                 u "Great job."
 
-    if not hl_punch:
+    else:
         scene v9emi11b
         with dissolve
 

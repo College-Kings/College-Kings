@@ -47,7 +47,6 @@ label enterPhone:
 
 screen phoneTemplate():
     modal True
-    zorder 200
 
     add "images/phonescreen.webp"
 
@@ -88,7 +87,7 @@ screen phoneTemplate():
 screen phone():
     tag phoneTag
     modal True
-    zorder 200
+    zorder 100
 
     use phoneTemplate:
 
