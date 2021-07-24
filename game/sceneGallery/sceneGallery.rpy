@@ -29,6 +29,30 @@ init python:
     SceneGallery("emsex_a")
     SceneGallery("rileysexscene")
     SceneGallery("brbj")
+    SceneGallery("v8_cl_start")
+    SceneGallery("v8_ri_start")
+    SceneGallery("hoco_amb_night")
+    SceneGallery("int_deal_w_josh")
+    SceneGallery("amber_sex_at_joshs")
+    SceneGallery("v9_aubrey_scene_lake")
+    SceneGallery("v9_emily_dorm")
+    SceneGallery("v9_ri_sex")
+    SceneGallery("v9_make_out_w_lin")
+        # v10.0
+    SceneGallery("v10_mc_vs_ryan_fight")
+    SceneGallery("v10_mc_vs_imre_fight")
+    SceneGallery("v10s17_galleryScene")
+    SceneGallery("v10_lauren_room_sg", scope={"laurenrs": True})
+    SceneGallery("v10_amber_skatepark_sg")
+    SceneGallery("v10s30_galleryScene")
+    SceneGallery("v10s40_galleryScene", scope={"rileyrs": True})
+        # v11
+    SceneGallery("v11s5_galleryScene") #5
+    SceneGallery("v11_aubrey_plane_sex_sg") #13
+    SceneGallery("v11_ms_rose_sex_sg") #28
+    SceneGallery("v11s28a_galleryScene") #28a
+    SceneGallery("v11_riley_sex_sg") #35
+    SceneGallery("v11_chloe_sex_scene") #41b
 
 screen spoiler():
     modal True

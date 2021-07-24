@@ -97,10 +97,8 @@ init python:
 
             # Send next queued message(s)
             try:
-                while True:
+                while not self.getReplies():
                     self.sentMessages.append(self.pendingMessages.pop(0))
-                    if self.getReplies():
-                        break
             except IndexError: pass
 
         def unlock(self):

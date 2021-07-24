@@ -2,6 +2,8 @@ default msgApp = Application("Messages", "messages/appAssets/messagesIcon.webp",
 default statsApp = Application("Stats", "stats/appAssets/statsIcon.webp", "stats", locked=True)
 default achApp = Application("Achievements", "achievements/appAssets/achievementsIcon.webp", "achievements")
 default kiwiiApp = Application("Kiwii", "kiwii/appAssets/kiwiiIcon.webp", "kiwiiApp", locked=True)
+default fightApp = Application("Fights", "fights/appAssets/messagesIcon.webp", "fightApp", locked=True)
+default simplrApp = Application("Simplr", "simplr/appAssets/simplrIcon.webp", "simplr_app", locked=True)
 
 default contact_Emily = Contact("Emily", "emilyprofilepic.webp")
 default contact_Lauren = Contact("Lauren", "laurenprofilepic.webp")
@@ -20,3 +22,7 @@ default contact_Sebastian = Contact("Sebastian", "sebastianprofilepicture.webp")
 default contact_Grayson = Contact("Grayson", "graysonprofilepicture.webp")
 default contact_Lindsey = Contact("Lindsey", "lindseyprofilepic.webp")
 default contact_Jenny = Contact("Jenny", "jennyprofilepicture.webp")
+
+default simplr_Beth = SimplrContact("Beth", "bethProfilePicture.webp", "bethProfilePictureLarge.webp")
+default simplr_Iris = SimplrContact("Iris", "irisProfilePicture.webp", "irisProfilePictureLarge.webp")
+default simplr_Samantha = SimplrContact("Samantha", "samanthaProfilePicture.webp", "samanthaProfilePictureLarge.webp")
