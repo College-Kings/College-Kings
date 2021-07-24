@@ -4,6 +4,7 @@
 # Time: Nighttime
 
 label v12_chase_robber:
+    $ v12_chase_robber = True
     scene v12car1 # TPP Show MC shoving Charli out of the way to take off after robber
     with dissolve
 
@@ -43,14 +44,14 @@ label v12_chase_robber:
             scene v12car8 # FPP MC looking up at robber from a position laying on the ground
             with dissolve
 
-            u "Ahh, shit! You’ve really fucked up now."
+            u "Ahh, shit! You've really fucked up now."
 
             scene v12car9 # TPP Show MC hopping up from the ground and moving to fight
             with dissolve
 
             pause 0.75
 
-        "Right":            
+        "Right":
             scene v12car10 # FPP Show robber in right alley, digging through Nora's bag
             with dissolve
 
@@ -85,7 +86,7 @@ label v12_chase_robber:
 
     # MANUAL FIGHT
 
-    if lose_fight:
+    if not v12_fight_win:
         scene v12car13 # TPP Show MC laying on the ground, writhing in pain
         with dissolve
 
@@ -94,7 +95,7 @@ label v12_chase_robber:
         scene v12car14 # FPP View of MC laying on the ground, show robber running out of the alley and into the night
         with dissolve
 
-        u "Motherfucker… Ahh, shit."
+        u "Motherfucker... Ahh, shit."
 
         scene v12car14a # FPP Same angle as v12car14, show exit of the alley, nobody visible
         with dissolve
@@ -198,7 +199,7 @@ label v12_chase_robber:
         scene v12car23 # FPP Show Imre, standing in hotel lobby, smiling with mouth open
         with dissolve
 
-        imre "Don't worry... I'll catch him off guard one of these days and we’ll see how tough he really is."
+        imre "Don't worry... I'll catch him off guard one of these days and we'll see how tough he really is."
 
         scene v12car23a # FPP Same angle as v12car23, Imre smiling with mouth closed
         with dissolve
@@ -208,7 +209,7 @@ label v12_chase_robber:
         scene v12car23
         with dissolve
 
-        imre "Haha, I’ll consider it. Are you good to get up to your room by yourself?"
+        imre "Haha, I'll consider it. Are you good to get up to your room by yourself?"
 
         scene v12car23a
         with dissolve
@@ -223,17 +224,17 @@ label v12_chase_robber:
         scene v12car23a
         with dissolve
 
-        u "Because you're slow. Don’t worry, I get it dude. It’s the thought that counts. *Chuckles*"
+        u "Because you're slow. Don't worry, I get it dude. It's the thought that counts. *Chuckles*"
 
         scene v12car23
         with dissolve
 
-        imre "Maybe. *Chuckles* But it wasn’t hard to find you. That big ass forehead is impossible to miss."
+        imre "Maybe. *Chuckles* But it wasn't hard to find you. That big ass forehead is impossible to miss."
 
         scene v12car23a
         with dissolve
 
-        u "*Laughs* Hey, man… At least I have a full head of hair to cover it up a bit. What’s your excuse?"
+        u "*Laughs* Hey, man... At least I have a full head of hair to cover it up a bit. What's your excuse?"
 
         scene v12car23
         with dissolve
@@ -255,7 +256,7 @@ label v12_chase_robber:
 
         pause 0.75
 
-    if win_fight:        
+    else:
         scene v12car13a # FPP Same angle as v12car13, show robber laying on the ground next to Nora's bag, writhing in pain
         with dissolve
 
@@ -365,12 +366,12 @@ label v12_chase_robber:
         scene v12car28c # FPP Same angle as v12car28, Nora standing close to MC, smiling with mouth closed
         with dissolve
 
-        u "No need to thank me, but you’re very welcome. I don't normally see you with a bag so I assumed since you had one you must've been carrying something important with you."
+        u "No need to thank me, but you're very welcome. I don't normally see you with a bag so I assumed since you had one you must've been carrying something important with you."
 
         scene v12car28b
         with dissolve
 
-        no "Well... Your assumption isn’t wrong."
+        no "Well... Your assumption isn't wrong."
 
         scene v12car27
         with dissolve
@@ -390,7 +391,7 @@ label v12_chase_robber:
         scene v12car29a # FPP Same angle as v12car29, Charli looks annoyed with mouth closed
         with dissolve
 
-        u "(Damn… roasted!)"
+        u "(Damn... roasted!)"
 
         scene v12car21a # TPP Same angle as v12car21, show MC and Nora walking back toward the hotel, Imre and Charli behind them, Imre grinning and Charli looking annoyed
         with dissolve
@@ -415,12 +416,12 @@ label v12_chase_robber:
         scene v12car23
         with dissolve
 
-        imre "I don't think so, but maybe now. I'll have to speak with the best fighters commision."
+        imre "I don't think so, but maybe now. I'll have to speak with the best fighters commission."
 
         scene v12car23a
         with dissolve
 
-        u "Who's on the commision?"
+        u "Who's on the commission?"
 
         scene v12car23
         with dissolve
@@ -461,7 +462,7 @@ label v12_chase_robber:
     scene v12car33 # FPP Show MC's view up at the hotel room ceiling from laying on his bed
     with dissolve
 
-    u "(Why would some random dude try and steal a bag from someone who’s obviously in a group? That just stupid... Then there's Charli... I swear he can't just be a normal person... Definitely a weird ass dude.)"
+    u "(Why would some random dude try and steal a bag from someone who's obviously in a group? That just stupid... Then there's Charli... I swear he can't just be a normal person... Definitely a weird ass dude.)"
 
     scene v12car34 # TPP Show MC looking at himself in the hotel room mirror
     with dissolve
@@ -485,11 +486,11 @@ label v12_chase_robber:
     play sound "sounds/vibrate.mp3"
     pause 0.75
 
-    $ contact_Imre.newMessage("Check Kiwii...your welcome. :)", queue=True)
+    $ contact_Imre.newMessage("Check Kiwii...you're welcome. :)", queue=True)
     $ contact_Imre.addReply("Haha okay", func=None)
 
     # MC checks Kiwii and there's a picture of MC running after the robber posted by Imre 
-    # caption "Would your man chase a robber down in the middle of the night? If not, you don't have a real man…”
+    # caption "Would your man chase a robber down in the middle of the night? If not, you don't have a real man...”
     # There's a comment from Charli that says "If you want a man Imre I can take you to a few bars, all you had to do was ask."
     
     # MC replies back to Imre-

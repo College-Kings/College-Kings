@@ -79,7 +79,7 @@ label v12_penelope_roof:
             scene v12penr3e # FPP Same angle as v12penr3, Penelope with neutral expression, mouth closed
             with dissolve
 
-            u "We're allowed to explore, right? Since it’s so late and nothing is open, our only option is the hotel. So let's explore walking up to the roof. *Chuckles*"
+            u "We're allowed to explore, right? Since it's so late and nothing is open, our only option is the hotel. So let's explore walking up to the roof. *Chuckles*"
 
             scene v12penr3b
             with dissolve
@@ -144,7 +144,7 @@ label v12_penelope_roof:
             scene v12penr9 # TPP Show MC and Penelope laying on hotel roof, view is from above, both looking up, Penelope's mouth open
             with dissolve
 
-            pe "This is… beautiful."
+            pe "This is... beautiful."
 
             scene v12penr10 # FPP View of MC, who is laying on his back, looking over at Penelope. She is laying down and looking up, her mouth closed
             with dissolve
@@ -168,7 +168,7 @@ label v12_penelope_roof:
                     scene v12penr10b # FPP Same angle as v12penr10, Penelope looking back at MC, neutral expression, mouth closed
                     with dissolve
 
-                    u "Oh, nothing.  *Chuckles*"
+                    u "Oh, nothing. *Chuckles*"
 
                     scene v12penr10c # FPP Same angle as v12penr10, Penelope looking back at MC, smiling with mouth open
                     with dissolve
@@ -198,7 +198,7 @@ label v12_penelope_roof:
             scene v12penr10d
             with dissolve
 
-            pe "Maybe, you’re right. Either way though, I can't stand it. It's like people don't take their victims into consideration."
+            pe "Maybe, you're right. Either way though, I can't stand it. It's like people don't take their victims into consideration."
 
             scene v12penr10a
             with dissolve
@@ -280,7 +280,7 @@ label v12_penelope_roof:
                 scene v12penr10c
                 with dissolve
 
-                pe "With you, it’s like watching someone try to pick up everyone’s fallen pieces and helping them solve their own puzzles. Selfless, caring, and loyal… To me, you're a good guy."
+                pe "With you, it's like watching someone try to pick up everyone's fallen pieces and helping them solve their own puzzles. Selfless, caring, and loyal... To me, you're a good guy."
 
             scene v12penr10e
             with dissolve
@@ -317,7 +317,7 @@ label v12_penelope_roof:
                         scene v12penr10f
                         with dissolve
 
-                        pe "*Laughs* Yeah, you’ve got a few other things to figure out before you start thinking about tying the knot."
+                        pe "*Laughs* Yeah, you've got a few other things to figure out before you start thinking about tying the knot."
 
                     "Bold":
                         $ addPoint("bf")
@@ -342,7 +342,7 @@ label v12_penelope_roof:
                         scene v12penr14a # Same angle as v12penr14, Penelope smiling with mouth closed
                         with dissolve
 
-                        u "Yes ma’am. To a T."
+                        u "Yes ma'am. To a T."
 
                         scene v12penr14
                         with dissolve
@@ -352,7 +352,7 @@ label v12_penelope_roof:
                         scene v12pern12a # TPP Same angle as v12penr12, Penelope rolling back off of MC to where she was before
                         with dissolve
 
-                        pause 0.75     
+                        pause 0.75
 
             scene v12penr10e
             with dissolve
@@ -362,7 +362,7 @@ label v12_penelope_roof:
             scene v12penr10c
             with dissolve
 
-            pe "It is pretty chilly up here, it’s not just you. *Chuckles*"
+            pe "It is pretty chilly up here, it's not just you. *Chuckles*"
 
             scene v12penr10e
             with dissolve
@@ -457,5 +457,6 @@ label v12_penelope_roof:
             with dissolve
 
             pause 0.75
-            
+
     jump v12_roomate_talk # Scene 4  
+

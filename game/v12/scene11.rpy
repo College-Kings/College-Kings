@@ -150,7 +150,7 @@ label v12_paris_hotel:
     scene v12pht7a
     with dissolve
 
-    no "Hmm… I will admit, it did seem odd to me that you would be talking to Charli."
+    no "Hmm... I will admit, it did seem odd to me that you would be talking to Charli."
 
     scene v12pht7
     with dissolve
@@ -210,7 +210,7 @@ label v12_paris_hotel:
     scene v12pht9
     with dissolve
 
-    no "Chris and I have been dating for years now, right? It feels like we've always just been together, to the point that neither of us lived our own lives. And I'm not saying I want to break up with Chris or anything like that…"
+    no "Chris and I have been dating for years now, right? It feels like we've always just been together, to the point that neither of us lived our own lives. And I'm not saying I want to break up with Chris or anything like that..."
 
     scene v12pht9
     with dissolve
@@ -235,7 +235,7 @@ label v12_paris_hotel:
     scene v12pht9
     with dissolve
 
-    no "See, I wouldn't say they’re bad, but just not good for me. People can call me what they want, but I like spending a lot of time with my partner, and Chris and I used to spend time together all the time. So it's not like I'm expecting anything new."
+    no "See, I wouldn't say they're bad, but just not good for me. People can call me what they want, but I like spending a lot of time with my partner, and Chris and I used to spend time together all the time. So it's not like I'm expecting anything new."
 
     scene v12pht9a
     with dissolve
@@ -255,7 +255,7 @@ label v12_paris_hotel:
     scene v12pht9a
     with dissolve
 
-    u "That’s very loyal of you. I can only imagine how much you’ve been through together."
+    u "That's very loyal of you. I can only imagine how much you've been through together."
 
     scene v12pht9b # FPP. Nora slight smile, mouth opened
     with dissolve
@@ -308,7 +308,7 @@ label v12_paris_hotel:
             scene v12pht9d
             with dissolve
 
-            u "You know, I'm sure deep down Chris is still the exact same person you fell in love with. He's just in situations now that divide his time up in a way that they didn’t before. I bet if all the other distractions weren't a factor, you'd be the only thing on his mind."
+            u "You know, I'm sure deep down Chris is still the exact same person you fell in love with. He's just in situations now that divide his time up in a way that they didn't before. I bet if all the other distractions weren't a factor, you'd be the only thing on his mind."
 
             scene v12pht9f # FPP. Same as 9e, still crying, slight smile, mouth opened
             with dissolve
@@ -356,7 +356,7 @@ label v12_paris_hotel:
             scene v12pht9h 
             with dissolve
 
-            u "Haha, no. Let's just leave it alone. He technically isn’t hurting anyone but himself."
+            u "Haha, no. Let's just leave it alone. He technically isn't hurting anyone but himself."
 
             scene v12pht9b 
             with dissolve
@@ -392,3 +392,4 @@ label v12_paris_hotel:
     with dissolve
 
     jump v12_room_chloe_riley #scene 12
+

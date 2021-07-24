@@ -12,17 +12,17 @@ label v11_airport_charli:
     scene v11air2 # FPP. Show lindsey slight smile mouth closed
     with dissolve
 
-    li "…"
+    li "..."
 
     scene v11air3 # FPP. show chloe slight smile mouth closed
     with dissolve
 
-    cl "…"
+    cl "..."
 
     scene v11air4 # FPP. Show aubrey slight smile mouth closed
     with dissolve
 
-    au "…"
+    au "..."
 
     u "(So what, now he's keeping them all quiet?)"
 

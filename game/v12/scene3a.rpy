@@ -61,7 +61,7 @@ label v12_penelope_call:
             scene v12pec3a
             with dissolve
 
-            u "A ‘good guy’ is helping out… Interesting."
+            u "A \"good guy\" is helping out... Interesting."
 
             scene v12pec3b
             with dissolve
@@ -71,7 +71,7 @@ label v12_penelope_call:
             scene v12pec3c # TPP. Same as v12pec3a, different pose
             with dissolve
 
-            u "*Chuckles* Wow, that's really great to hear. I'm really happy that it’s all finally over, for both of us."
+            u "*Chuckles* Wow, that's really great to hear. I'm really happy that it's all finally over, for both of us."
 
             scene v12pec3d # TPP. Same as v12pec3c, Penelope slight smile, mouth open
             with dissolve
@@ -128,7 +128,7 @@ label v12_penelope_call:
                 scene v12pec3e
                 with dissolve
 
-                u "It’s Amber... Do you really have to ask? *Chuckles* We're all fine, even Nora. It feels good knowing you care so much though."
+                u "It's Amber... Do you really have to ask? *Chuckles* We're all fine, even Nora. It feels good knowing you care so much though."
 
             scene v12pec3g # TPP. Same as v12pec3, Penelope slightly sad, mouth open, different pose
             with dissolve

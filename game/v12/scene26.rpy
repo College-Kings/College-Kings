@@ -43,7 +43,7 @@ label v12_nora_chris_fight:
     scene v12ncf3a # TPP. Same as v12ncf3, different pose
     with dissolve
 
-    no "I asked you to hangout tonight, and you told me you were busy. Now you realize you’re free, and instead of making plans with me YOU CALL THE FUCKING GUYS!?"
+    no "I asked you to hang out tonight, and you told me you were busy. Now you realize you’re free, and instead of making plans with me YOU CALL THE FUCKING GUYS!?"
 
     scene v12ncf3
     with dissolve
@@ -58,7 +58,7 @@ label v12_nora_chris_fight:
     scene v12ncf3
     with dissolve
 
-    no "Are you fuckiNG SERIOUS RIGHT NOW!?"
+    no "ARE YOU FUCKING SERIOUS RIGHT NOW!?"
 
     scene v12ncf4a # TPP. Same as v12ncf4, Nora pushing Chris' chest, Nora very angry, mouth open, Chris startled, mouth closed
     with dissolve

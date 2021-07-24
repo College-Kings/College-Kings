@@ -48,7 +48,7 @@ label v10_walk_jenny_text:
             $ contact_Penelope.addReply("Hey, you free for coffee at the cafe in the morning?")
             $ contact_Penelope.newMessage("Special occasion?")
             $ contact_Penelope.addReply("Honestly, if you're okay with talking about it, I just wanted to see how you were doing with all the school stuff.")
-            $ contact_Penelope.newMessage("That's sweet… thanks..")
+            $ contact_Penelope.newMessage("That's sweet... thanks..")
             $ contact_Penelope.addReply("So are you free to meet?")
             $ contact_Penelope.newMessage("Yeah, of course. I'll see you in the morning.")
             $ contact_Penelope.addReply("See ya!")
@@ -63,7 +63,7 @@ label v10_walk_jenny_text:
             u "(I hope this goes smooth, Jenny hearing it from Penelope will probably help them both process the situation.)"
 
         "Go alone":
-            u "(On the other hand, maybe there's benefits to meeting Jenny alone…)"
+            u "(On the other hand, maybe there's benefits to meeting Jenny alone...)"
 
     scene v10swjt3 # TPP. Show MC continuing to walk down the street, no longer holding phone.
     with dissolve

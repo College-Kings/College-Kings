@@ -548,3 +548,4 @@ default v12_fight_win = False
 default v12_chase_robber = False
 default v12s7_seenList = []
 default v12s7_killList = []
+default v12_msrose_sex = False

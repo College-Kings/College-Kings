@@ -878,7 +878,7 @@ label v11s1_mrrose:
             with dissolve
 
             mrr "Listen, [name]."
-            mrr "I know we started off on a wrong foot, but I think your friend would be quite glad to know I’m here."
+            mrr "I know we started off on a wrong foot, but I think your friend would be quite glad to know I'm here."
 
             scene v11cocmrr1a
             with dissolve
@@ -888,22 +888,22 @@ label v11s1_mrrose:
             scene v11cocmrr1
             with dissolve
 
-            mrr "Because I have connections champ. It’s always better to have someone like me on your side."
+            mrr "Because I have connections champ. It's always better to have someone like me on your side."
 
             scene v11cocmrr1a
             with dissolve
 
-            u "If you were really on our side you’d be in there helping her."
+            u "If you were really on our side you'd be in there helping her."
 
             scene v11cocmrr1
             with dissolve
 
-            mrr "If you really believe you can help her from in there, you’re a fool. The real game is played out here."
+            mrr "If you really believe you can help her from in there, you're a fool. The real game is played out here."
 
             scene v11cocmrr1a
             with dissolve
 
-            u "Whatever man, at least I’m actually doing something. Now, if you'll excuse me I have a friend to fight for."
+            u "Whatever man, at least I'm actually doing something. Now, if you'll excuse me I have a friend to fight for."
 
             call screen v11s1_hallway2
 

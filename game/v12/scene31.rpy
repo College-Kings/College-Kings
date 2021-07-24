@@ -13,7 +13,7 @@ label v12_aubrey_wake_up:
     scene v12auw1 # FPP. MC lying in his bed, Aubrey standing next to him, MC and Aubrey looking at each other, Aubrey slight smile, mouth closed
     with dissolve
 
-    u "Huh? Wait… What? How'd you get in here?"
+    u "Huh? Wait... What? How'd you get in here?"
 
     scene v12auw1a # FPP. Same as v12auw1, Aubrey slight smile, mouth open
     with dissolve
@@ -60,7 +60,7 @@ label v12_aubrey_wake_up:
 
     if chloegf:
 
-        cl "You know I'm just messing around, I wouldn’t make fun of my boyfriend. Even if he is slow… *Chuckles*"
+        cl "You know I'm just messing around, I wouldn’t make fun of my boyfriend. Even if he is slow... *Chuckles*"
 
         scene v12auw4a
         with dissolve

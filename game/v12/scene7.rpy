@@ -12,7 +12,8 @@ label v12s7fr:
     scene v12fer1
     with dissolve
 
-    lee "First of all, it's been brought to my attention that many of you were unaware that we'd be taking the ferry rather than flying. This was a last minute adjustment, so I do apologize. Although, I think this voyage will be well worth it."
+    lee "First of all, it's been brought to my attention that many of you were unaware that we'd be taking the ferry rather than flying."
+    lee "This was a last minute adjustment, so I do apologize. Although, I think this voyage will be well worth it."
 
     if v11_invite_sam_europe:
         scene v12fer3 # FPP. Show cameron, annoyed look, mouth open
@@ -23,19 +24,20 @@ label v12s7fr:
         scene v12fer4 # FPP. Show samantha, looking fed up, mouth open
         with dissolve
 
-        sam "Then go home."
+        sa "Then go home."
 
     scene v12fer1
     with dissolve
 
-    lee "As you all know, I take great pride in seizing every opportunity I can to teach my students and this ferry ride will be no different. Decades ago, a famous murder was commited on this ferry; A murder that we will, in a way, be reinacting."
+    lee "As you all know, I take great pride in seizing every opportunity I can to teach my students and this ferry ride will be no different."
+    lee "Decades ago, a famous murder was committed on this ferry. A murder that we will, in a way, be re-enacting."
 
     scene v12fer5 # FPP. Show riley, excited, mouth open
     with dissolve
 
     ri "Wait, will we be playing characters?!"
 
-    scene v12fer6 # FPP. Show Aubrey,  smiling mouth open
+    scene v12fer6 # FPP. Show Aubrey, smiling mouth open
     with dissolve
 
     au "I hope so. Murder and roleplay? I'm getting a little too excited... *Chuckles*"
@@ -48,7 +50,7 @@ label v12s7fr:
     scene v12fer1
     with dissolve
 
-    lee "Each student will be given a role to play because we will be reinacting this murder by playing a murder mystery."
+    lee "Each student will be given a role to play because we will be re-enacting this murder by playing a murder mystery."
 
     scene v12fer7 # FPP. Show Mr Lee handing riley a role card
     with dissolve
@@ -78,7 +80,8 @@ label v12s7fr:
     scene v12fer1
     with dissolve
 
-    lee "You can not. I purposefully chose the roles you are each being given. As I said, one of you is the murderer and it's the murderer's job to kill as many students as they can without being caught. Once the murderer is discovered, the game is over."
+    lee "You can not. I purposefully chose the roles you are each being given. As I said, one of you is the murderer and it's the murderer's job to kill as many students as they can without being caught."
+    lee "Once the murderer is discovered, the game is over."
 
     scene v12fer10
     with dissolve
@@ -103,7 +106,7 @@ label v12s7fr:
     scene v12fer10
     with dissolve
 
-    imre "Because, I'll just find out who the murderer is and force them to  fess up and then boom, game over and I can sleep the rest of the boat ride. *Laughs*"
+    imre "Because, I'll just find out who the murderer is and force them to fess up and then boom, game over and I can sleep the rest of the boat ride. *Laughs*"
 
     scene v12fer1
     with dissolve
@@ -334,7 +337,8 @@ label v12s7_aubrey1:
     scene v12ferau1a # FPP. Same 1, mouth closed
     with dissolve
 
-    u "Well, my travelling nurse may get a little jealous. As a world famous boxer I'm always getting bumps and bruises so I have to travel with a nurse, but I wanted a little break from everyone so she's not here. I actually do have a little pain from my last fight, but that's to be expected after all the adrenaline's worn off."
+    u "Well, my travelling nurse may get a little jealous. As a world famous boxer I'm always getting bumps and bruises so I have to travel with a nurse, but I wanted a little break from everyone so she's not here."
+    u "I actually do have a little pain from my last fight, but that's to be expected after all the adrenaline's worn off."
 
     scene v12ferau1
     with dissolve
@@ -391,7 +395,9 @@ label v12s7_aubrey1:
     scene v12ferau1c
     with dissolve
 
-    u "So like I said, I'm dodging every swing and thinking that he's got nothing on me. I end up getting a little cocky and drop my arms to taunt him a bit, when suddenly out of nowhere he slugs me real good right across the jaw. He didn't knock me out, but the hit was just hard enough for  me to start taking the fight a little bit more seriously."
+    u "So like I said, I'm dodging every swing and thinking that he's got nothing on me."
+    u "I end up getting a little cocky and drop my arms to taunt him a bit, when suddenly out of nowhere he slugs me real good right across the jaw."
+    u "He didn't knock me out, but the hit was just hard enough for me to start taking the fight a little bit more seriously."
 
     scene v12ferau1
     with dissolve
@@ -424,7 +430,7 @@ label v12s7_aubrey1:
     u "*Chuckles* I hit him as hard as I could square in the gut. Then again and again until he couldn't even manage to block himself."
     u "He clung on to me in an attempt to not fall down. Finally, I landed my last gut punch as hard as I could and he fell to the ground, knocked out cold."
 
-    scene v12ferau1d # FPP. same as 1, slight worried look, mouth open,  hands linked like this https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shutterstock.com%2Fnb%2Fvideo%2Fclip-34665853-close-up-wringing-nervous-woman-hands&psig=AOvVaw2gzL8mvR-BApik2Uv-BwlR&ust=1626649215565000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLjcw9ua6_ECFQAAAAAdAAAAABAO
+    scene v12ferau1d # FPP. same as 1, slight worried look, mouth open, hands linked like this https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shutterstock.com%2Fnb%2Fvideo%2Fclip-34665853-close-up-wringing-nervous-woman-hands&psig=AOvVaw2gzL8mvR-BApik2Uv-BwlR&ust=1626649215565000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLjcw9ua6_ECFQAAAAAdAAAAABAO
     with dissolve
 
     au "Oh my goodness... I can't even imagine. He must have needed some serious medical attention after the fight."
@@ -444,7 +450,7 @@ label v12s7_aubrey1:
             scene v12ferau1
             with dissolve
 
-            au "Oh, sweetie.  If I didn't take a look at this I wouldn't be able to call myself a nurse. Please come by my office so I can get you fixed up."
+            au "Oh, sweetie. If I didn't take a look at this I wouldn't be able to call myself a nurse. Please come by my office so I can get you fixed up."
 
             if aubreyrs:
 
@@ -564,7 +570,7 @@ label v12s7_aubrey2:
 
             unknown "Could've sworn I heard people talking in here... Guess not."
 
-            play sound "sounds/close.mp3"
+            play sound "sounds/doorclose.mp3"
 
             scene v12ferauh4
             with dissolve
@@ -579,7 +585,7 @@ label v12s7_aubrey2:
             scene v12ferauh1
             with dissolve
 
-            au "Haha, we better get out of here if we  want to avoid getting into trouble. You go ahead and leave first, I'll be out in a few."
+            au "Haha, we better get out of here if we want to avoid getting into trouble. You go ahead and leave first, I'll be out in a few."
 
             scene v12ferauh1a
             with dissolve
@@ -636,7 +642,8 @@ label v12s7_riley1:
     scene v12ferri1 # FPP. location is the upper rear outside seating area on the right side of the ship as seen on miro. Show chloe(from a distance as mc is overhearing the convo), looking at riley out of shot, slight annoyed look, mouth open
     with dissolve
 
-    cl "Rich people are the actual problem. You guys get to sit around on stacks of money and the little guys like me have to pick up the slack for this entire country. People like you never wanna pay your taxes but I barely have two pennies to rub together and I still have to pay mine."
+    cl "Rich people are the actual problem. You guys get to sit around on stacks of money and the little guys like me have to pick up the slack for this entire country."
+    cl "People like you never wanna pay your taxes but I barely have two pennies to rub together and I still have to pay mine."
 
     scene v12ferri2 # FPP. Show riley(from a distance as mc is overhearing the convo), smug look, looking at chloe out of shot, mouth open.
     with dissolve
@@ -652,7 +659,7 @@ label v12s7_riley1:
     with dissolve
 
     ri "*Southern accent* Look, I know what it's like to be poor. I used to wear your shoes, but you have no idea what it means to be rich."
-    ri "So do not judge a life you've never lived. The aid I provide for charity couldn't possibly be matched by the number on your taxes or even what you consider to be a fair share."
+    ri "*Southern accent* So do not judge a life you've never lived. The aid I provide for charity couldn't possibly be matched by the number on your taxes or even what you consider to be a fair share."
 
     scene v12ferri1
     with dissolve
@@ -662,12 +669,12 @@ label v12s7_riley1:
     scene v12ferri2
     with dissolve
 
-    ri "And I can't stand the fact that I paid good money for this ride and yet I'm accompanied by the likes of your sort of people."
+    ri "*Southern accent* And I can't stand the fact that I paid good money for this ride and yet I'm accompanied by the likes of your sort of people."
 
     scene v12ferri1
     with dissolve
 
-    cl "You lack a heart, lady.  And what happened to your accent? *Chuckles*"
+    cl "You lack a heart, lady. And what happened to your accent? *Chuckles*"
 
     scene v12ferri2
     with dissolve
@@ -692,7 +699,8 @@ label v12s7_riley1:
     scene v12ferri4
     with dissolve
 
-    ri "*Southern accent* And now my confusion is all too much. It makes sense why the wealthy and a man such as yourself would be here, but I can't understand why Miss Blue Collar here would be allowed to join us."
+    ri "*Southern accent* And now my confusion is all too much."
+    ri "*Southern accent* It makes sense why the wealthy and a man such as yourself would be here, but I can't understand why Miss Blue Collar here would be allowed to join us."
 
 
 
@@ -739,7 +747,7 @@ label v12s7_riley1:
     scene v12ferri4
     with dissolve
 
-    ri "*Southern accent* That's to be expected. Those of the lower classes aren't familiar with as many social topics as the wealthy. Isn't that right, Mr.  Boxer?"
+    ri "*Southern accent* That's to be expected. Those of the lower classes aren't familiar with as many social topics as the wealthy. Isn't that right, Mr. Boxer?"
 
     menu:
         "I'm poor":
@@ -766,7 +774,8 @@ label v12s7_riley1:
         "I'm rich":
             scene v12ferri4a
             with dissolve
-            u "The ways of the rich are quite different from the ways of the poor. You've got guys practicing how to throw balls around with a dream of becoming some sports star as we converse our way to changing the world."
+            u "The ways of the rich are quite different from the ways of the poor."
+            u "You've got guys practicing how to throw balls around with a dream of becoming some sports star as we converse our way to changing the world."
 
             scene v12ferri5
             with dissolve
@@ -821,7 +830,7 @@ label v12s7_riley1:
     scene v12ferri5a
     with dissolve
 
-    u "Long story short,  when we were in London and they had that argument at the hotel, Mr. Lee tried to get them to work it out."
+    u "Long story short, when we were in London and they had that argument at the hotel, Mr. Lee tried to get them to work it out."
 
     u "You can probably guess that they didn't listen to him, and He. Was. Pissed. The walk back to the hotel from being in the middle of nowhere was probably well deserved."
 
@@ -857,7 +866,7 @@ label v12s7_riley1:
             u "Alright, ladies. You two enjoy your little rich versus poor debate I've gotta go hit a punching bag or something. *Chuckles*"
 
             #call screen fr
-        "Have Riley Leave":
+        "Have Riley leave":
             scene v12ferri4a
             with dissolve
 
@@ -957,7 +966,8 @@ label v12s7_chloe1:
     scene v12ferch1a
     with dissolve
 
-    cl "Hmm... A little bit of both I guess? I'm excited to see Paris because that's something I've always wanted to do, but I have to admit I do feel out of place sometimes considering we're in a completely different country."
+    cl "Hmm... A little bit of both I guess? I'm excited to see Paris because that's something I've always wanted to do."
+    cl "But I have to admit I do feel out of place sometimes considering we're in a completely different country."
 
     scene v12ferch1
     with dissolve
@@ -1038,7 +1048,8 @@ label v12s7_chloe1:
     scene v12ferch1b
     with dissolve
 
-    cl "*Whisper* He was really harsh on me when I had him as a teacher. It was sort of my fault, but still. That man is relentless when you don't do what he asks. I don't know if he's bipolar or if he just really doesn't like being disobeyed."
+    cl "*Whisper* He was really harsh on me when I had him as a teacher. It was sort of my fault, but still."
+    cl "That man is relentless when you don't do what he asks. I don't know if he's bipolar or if he just really doesn't like being disobeyed."
 
     scene v12ferch1c
     with dissolve
@@ -1078,7 +1089,7 @@ label v12s7_chloe1:
     scene v12ferch1d
     with dissolve
 
-    cl "Mhmm, sure...  Good defense. *Laughs*"
+    cl "Mhmm, sure... Good defense. *Laughs*"
 
     scene v12ferch1e
     with dissolve
@@ -1100,7 +1111,7 @@ label v12s7_chloe1:
 
     cl "That's actually a good point... Okay, now I'm not so sure about you being the killer. *Chuckles*"
 
-    if chloers or Chloegf:
+    if chloers or chloegf:
         scene v12ferch3 # TPP. Show chloe, hand on mc's chest, chloe mouth open
         with dissolve
 
@@ -1219,7 +1230,8 @@ label v12s7_riley3:
     scene v12ferric2 # FPP. Show riley, slight smile, mouth open
     with dissolve
 
-    ri "*Chuckles* *Southern accent* Sure do keep checking in on us, partner! I've seen the way you knock men out in the ring... I always wondered if your opponents were able to walk out of there alive and now I'm starting to wonder if we will. Are you a killer, Mr. Boxer?"
+    ri "*Chuckles* *Southern accent* Sure do keep checking in on us, partner! I've seen the way you knock men out in the ring..."
+    ri "*Southern accent* I always wondered if your opponents were able to walk out of there alive and now I'm starting to wonder if we will. Are you a killer, Mr. Boxer?"
 
     scene v12ferric3 # FPP. Show Chloe, mouth open
     with dissolve
@@ -1239,7 +1251,8 @@ label v12s7_riley3:
     scene v12ferric3a
     with dissolve
 
-    u "Okay, I can see how that could be suspicious. But as always, innocent until proven guilty. And both of you are throwing a lot of heat on me, so how do I know this isn't one of your guys' plans to just throw the attention off of yourselves?"
+    u "Okay, I can see how that could be suspicious. But as always, innocent until proven guilty."
+    u "And both of you are throwing a lot of heat on me, so how do I know this isn't one of your guys' plans to just throw the attention off of yourselves?"
 
     scene v12ferric1a # FPP. Show riley looking closer at chloe, mouth open
     with dissolve
@@ -1264,7 +1277,7 @@ label v12s7_riley3:
     scene v12ferric3c # FPP. Same 3, mouth closed, looking at camera
     with dissolve
 
-    u "There are  other people playing this game and there's a lot going on outside of what us three are doing. Why are you guys being so narrow minded?"
+    u "There are other people playing this game and there's a lot going on outside of what us three are doing. Why are you guys being so narrow minded?"
 
     scene v12ferric2a
     with dissolve
@@ -1342,7 +1355,8 @@ label v12s7_riley3a:
     scene v12ferril1a # FPP. Same 1, mouth open
     with dissolve
 
-    ri "*Southern accent* I am, but I'm not sure if our poor girl is. I know she planned on staying in the same spot, but now she's gone. I was enjoying our conversations so much... I was starting to grow a little attached to her."
+    ri "*Southern accent* I am, but I'm not sure if our poor girl is. I know she planned on staying in the same spot, but now she's gone."
+    ri "*Southern accent* I was enjoying our conversations so much... I was starting to grow a little attached to her."
 
     scene v12ferril1
     with dissolve
@@ -1368,7 +1382,6 @@ label v12s7_riley3a:
     with dissolve
 
     u "(How is he gonna do that? *Laugh*)"
-
 
     u "That does indeed sound suspicious, maybe I should check in on them and see what I can find out."
 
@@ -1398,7 +1411,8 @@ label v12s7_riley3a:
             scene v12ferril1a
             with dissolve
 
-            ri "*Whisper* Hey, I am not playing hardcore. I just don't wanna get in trouble and I'll have you know I actually enjoy stuff like this. You gotta admit, Mr. Lee creates very interactive situations for us students. I appreciate that."
+            ri "*Whisper* Hey, I am not playing hardcore. I just don't wanna get in trouble and I'll have you know I actually enjoy stuff like this."
+            ri "You gotta admit, Mr. Lee creates very interactive situations for us students. I appreciate that."
 
             scene v12ferril1a
             with dissolve
@@ -1546,7 +1560,7 @@ label v12s7_lauren1:
     scene v12ferla1b # FPP. same 1, Show lauren annoyed, mouth open
     with dissolve
 
-    la "See! You and everyone else, I don't know why Mr. Lee would do that. No one will come near me 'cause they don't wanna be killed. Except for Imre, he actually begged me to kill him haha. e."
+    la "See! You and everyone else, I don't know why Mr. Lee would do that. No one will come near me 'cause they don't wanna be killed. Except for Imre, he actually begged me to kill him haha."
 
     scene v12ferla1
     with dissolve
@@ -1626,7 +1640,8 @@ label v12s7_lauren1:
     scene v12ferla1d
     with dissolve
 
-    la "Yeah, Amber got security or whatever and she's taking advantage of it. She took my gum earlier after she searched me saying it was contraband. *Laughs* She could've just asked for some gum, but Mr. Lee was nearby and I guess that's how she chose to stay in character."
+    la "Yeah, Amber got security or whatever and she's taking advantage of it. She took my gum earlier after she searched me saying it was contraband. *Laughs*"
+    la "She could've just asked for some gum, but Mr. Lee was nearby and I guess that's how she chose to stay in character."
 
     scene v12ferla1c
     with dissolve
@@ -1694,7 +1709,7 @@ label v12s7_Lauren_kill:
     scene v12ferla1d
     with dissolve
 
-    la "Wow, you just gonna take me out like that. My living as a suspected criminalwasn't bad enough?"
+    la "Wow, you just gonna take me out like that. My living as a suspected criminal wasn't bad enough?"
 
     scene v12ferla1c
     with dissolve
@@ -1736,7 +1751,7 @@ label v12s7_ryan_imre1:
     scene v12ferryi3 # FPP. Show Mr Lee from a distance at imre while Mr Lee is holding a boyancy ring, mouth open
     with dissolve
 
-    lee "Did you say something Mrs?"
+    lee "Did you say something Mrs.?"
 
     scene v12ferryi2a # FPP. Same 2, now looking at mr lee off screen, mouth open
     with dissolve
@@ -1846,7 +1861,7 @@ label v12s7_ryan_imre1:
             scene v12ferryi9a
             with dissolve
             
-            u "Well allow me to congratulate the lovely couple! As a gift, feel free to come to my next fight as VIP's. I'll be sure to put you on the list as Mr. and Mrs Stork."
+            u "Well allow me to congratulate the lovely couple! As a gift, feel free to come to my next fight as VIP's. I'll be sure to put you on the list as Mr. and Mrs. Stork."
 
             scene v12ferryi9
             with dissolve
@@ -1863,7 +1878,7 @@ label v12s7_ryan_imre1:
 
             u "Oh, that's unfortunate."
 
-        "Tell Ryan to Cool it":
+        "Tell Ryan to cool it":
             scene v12ferryi9a
             with dissolve
             
@@ -1887,7 +1902,7 @@ label v12s7_ryan_imre1:
             scene v12ferryi8a
             with dissolve
 
-            u "*Laughs* My bad, you guys should come out to my next fight as VIPs. It's  on me."
+            u "*Laughs* My bad, you guys should come out to my next fight as VIPs. It's on me."
 
             scene v12ferryi8
             with dissolve
@@ -1907,7 +1922,7 @@ label v12s7_ryan_imre1:
     scene v12ferryi8
     with dissolve
 
-    imre "We can't go because this man here is a lazy dumbass that quit his job.o Now he's broke and living with me until he gets his life together. That's literally what our cards said."
+    imre "We can't go because this man here is a lazy dumbass that quit his job. Now he's broke and living with me until he gets his life together. That's literally what our cards said."
 
     scene v12ferryi8a
     with dissolve
@@ -2065,7 +2080,8 @@ label v12s7_ryan1:
     scene v12ferry1b # FPP. Same 1, new pose, mouth open
     with dissolve
 
-    ry "He'ssensitive to anything gay, it makes it so easy to bother him. I told him I can't wait till tonight, that I was gonna show him a good time. If Mr. Lee wasn't nearby I don't know what he would've done, but his face got super red. *Laughs*"
+    ry "He's sensitive to anything gay, it makes it so easy to bother him. I told him I can't wait till tonight, that I was gonna show him a good time."
+    ry "If Mr. Lee wasn't nearby I don't know what he would've done, but his face got super red. *Laughs*"
 
     scene v12ferry1c # FPP. same 1, new pose, mouth closed
     with dissolve
@@ -2085,7 +2101,7 @@ label v12s7_ryan1:
     scene v12ferry1b
     with dissolve
 
-    ry "What do you mean \"what\"?There's a lot of adults that don't know how to swim, and I'm not saying I don't know how to, I'm saying I barely know how to."
+    ry "What do you mean \"what\"? There's a lot of adults that don't know how to swim, and I'm not saying I don't know how to, I'm saying I barely know how to."
 
     scene v12ferry1c
     with dissolve
@@ -2224,7 +2240,7 @@ label v12s7_imre2:
     scene v12ferim1a
     with dissolve
 
-    imre "Man fuck this game, Mr. Lee litteraly did all of this just to fuck with me."
+    imre "Man fuck this game, Mr. Lee literally did all of this just to fuck with me."
 
     scene v12ferim1
     with dissolve
@@ -2234,7 +2250,8 @@ label v12s7_imre2:
     scene v12ferim1a
     with dissolve
 
-    imre "Ugh duh. He gave me the worst character, he's following me around, and threating to throw me in the fucking water. Yeah, he's just doing this to be a dick. If I wasn't here you guys would be kicking back enjoying the breeze. If the fucking murderer would do his job or hurry up and get caught this would finally be over with."
+    imre "Ugh duh. He gave me the worst character, he's following me around, and threating to throw me in the fucking water. Yeah, he's just doing this to be a dick."
+    imre "If I wasn't here you guys would be kicking back enjoying the breeze. If the fucking murderer would do his job or hurry up and get caught this would finally be over with."
 
     scene v12ferim1
     with dissolve
@@ -2254,7 +2271,8 @@ label v12s7_imre2:
     scene v12ferim1a
     with dissolve
 
-    imre "I haven't been able to do anything, because Mr. Lee won't let me breathe. He got distracted and it gave me a chance to get over here. He hasn't found me yet. If the killer would just kill me so I can be done with this that'd be great. Then Ryan can be a dumbass widow with no job on a cruise by himself walking around like an idiot."
+    imre "I haven't been able to do anything, because Mr. Lee won't let me breathe. He got distracted and it gave me a chance to get over here. He hasn't found me yet."
+    imre "If the killer would just kill me so I can be done with this that'd be great. Then Ryan can be a dumbass widow with no job on a cruise by himself walking around like an idiot."
 
     scene v12ferim1
     with dissolve
@@ -2274,7 +2292,7 @@ label v12s7_imre2:
     scene v12ferim1a
     with dissolve
 
-    imre "This is the first time I've said \"kill me now\" and actually meant it. *Laughs*"
+    imre "*Laughs* This is the first time I've said \"kill me now\" and actually meant it."
 
     scene v12ferim1
     with dissolve
@@ -2293,7 +2311,7 @@ label v12s7_imre_kill:
 
     u "Boom."
 
-    scene v12ferim1b # FPP. same 1,new pose,  mouth open
+    scene v12ferim1b # FPP. same 1,new pose, mouth open
     with dissolve
 
     imre "Please tell me you're not joking with me right now?"
@@ -2396,7 +2414,8 @@ label v12_lindsey_charlie1:
     scene v12ferlich1b
     with dissolve
 
-    charli "Imre wants the game to be over, if he was the murderer he would've killed Ryan in front of someone in order to get caught. Ryan would have killed Imre out of frustration and Amber has had too many opportunities to kill people yet she hasn't. So we know none of them are the killer."
+    charli "Imre wants the game to be over, if he was the murderer he would've killed Ryan in front of someone in order to get caught."
+    charli "Ryan would have killed Imre out of frustration and Amber has had too many opportunities to kill people yet she hasn't. So we know none of them are the killer."
 
     scene v12ferlich1
     with dissolve
@@ -2507,7 +2526,7 @@ label v12_lindsey_charlie1:
     li "Yeah, sorry. *Chuckles*"
 
     menu:
-        "smarter to stay here":
+        "Smarter to stay here":
             ### ERROR: -This choice mades Lindsey and Charli Unkillable ###
             scene v12ferlich2a
             with dissolve
@@ -2544,7 +2563,7 @@ label v12_lindsey_charlie1:
 
             li "Sounds good!"
 
-        "more investigators":
+        "More investigators":
             scene v12ferlich2a
             with dissolve
 
@@ -2658,7 +2677,7 @@ label v12s7_lindsey2:
     scene v12ferli3a
     with dissolve
 
-    li "I considered it, but it's too risky. With it being so easy to murder without being caught and me being the main one intersted in catching the murderer, I can't risk getting killed."
+    li "I considered it, but it's too risky. With it being so easy to murder without being caught and me being the main one interested in catching the murderer, I can't risk getting killed."
 
     scene v12ferli3
     with dissolve
@@ -2723,12 +2742,13 @@ label v12s7_lindsey2:
     scene v12ferli3b # FPP. same 3, new pose, mouth open
     with dissolve
 
-    li "Oh no, I'm definitely running. I'm saying I'm not stressed about it anymore. Most of the girls are cool with me running, I have a gameplan to persuade the others, so right now I'm happy justenjoying Europe."
+    li "Oh no, I'm definitely running. I'm saying I'm not stressed about it anymore."
+    li "Most of the girls are cool with me running, I have a gameplan to persuade the others, so right now I'm happy just enjoying Europe."
 
     scene v12ferli3c # FPP. Same 3, new pose to match 3b, mouth closed
     with dissolve
 
-    u "You never fail to amaze me Lindsey."
+    u "You never fail to amaze me, Lindsey."
 
     scene v12ferli3b
     with dissolve
@@ -2743,7 +2763,7 @@ label v12s7_lindsey2:
     scene v12ferli3b
     with dissolve
 
-    li "I'm not sure, but I have been wondering.  it."
+    li "I'm not sure, but I have been wondering. it."
 
     scene v12ferli3c
     with dissolve
@@ -3112,7 +3132,7 @@ label v12s7_msrose_kill:
     scene v12fermsr1b
     with dissolve
 
-    ro "That sly Cornelius.."
+    ro "That sly Bruce.."
 
     scene v12fermsr1c
     with dissolve
@@ -3701,7 +3721,8 @@ label v12s7_riley2:
     scene v12ferrile1a
     with dissolve
 
-    ri "I know it's not for everybody, but there's more to it than that. As I've gotten to know and been around Chris it just seems as though he only does what he wants to do. Most times what he wants to do is the right thing, but it's still a little selfish in my opinion."
+    ri "I know it's not for everybody, but there's more to it than that. As I've gotten to know and been around Chris it just seems as though he only does what he wants to do."
+    ri "Most times what he wants to do is the right thing, but it's still a little selfish in my opinion."
 
     scene v12ferrile1
     with dissolve
@@ -3751,7 +3772,7 @@ label v12s7_riley2:
     scene v12ferrile1a
     with dissolve
 
-    ri "Like I said, selfish. He's just holding his phone trying to get a signal like it's gonna magically connect even though it's not working for  anyone."
+    ri "Like I said, selfish. He's just holding his phone trying to get a signal like it's gonna magically connect even though it's not working for anyone."
 
     scene v12ferrile1
     with dissolve
@@ -3914,7 +3935,7 @@ label v12s7_sam_cameron:
     scene v12fersaca1 # FPP. Show sam, slight smile, mouth open
     with dissolve
 
-    sam "Hey hey boxer!"
+    sa "Hey hey boxer!"
 
     scene v12fersaca1a # FPP. same 1, mouth closed
     with dissolve
@@ -3934,7 +3955,7 @@ label v12s7_sam_cameron:
     scene v12fersaca1
     with dissolve
 
-    sam "It's nice that you got to be a fighter, it was the perfect choice."
+    sa "It's nice that you got to be a fighter, it was the perfect choice."
 
     scene v12fersaca1a
     with dissolve
@@ -3944,7 +3965,7 @@ label v12s7_sam_cameron:
     scene v12fersaca1
     with dissolve
 
-    sam "I'm a once famous novelist that fell off, but my upcoming novel is finally gonna turn my career around."
+    sa "I'm a once famous novelist that fell off, but my upcoming novel is finally gonna turn my career around."
 
     scene v12fersaca1a
     with dissolve
@@ -3954,7 +3975,7 @@ label v12s7_sam_cameron:
     scene v12fersaca1
     with dissolve
 
-    sam "He doesn't have a role, because he's not part of the trip. He's just following me around, remember?"
+    sa "He doesn't have a role, because he's not part of the trip. He's just following me around, remember?"
 
     scene v12fersaca1a
     with dissolve
@@ -3979,7 +4000,7 @@ label v12s7_sam_cameron:
     scene v12fersaca1
     with dissolve
 
-    sam "Oh god."
+    sa "Oh god."
 
     scene v12fersaca1a
     with dissolve
@@ -3989,7 +4010,7 @@ label v12s7_sam_cameron:
     scene v12fersaca1
     with dissolve
 
-    sam "Don't have him do that, he's been doing it all ride long."
+    sa "Don't have him do that, he's been doing it all ride long."
 
     scene v12fersaca2
     with dissolve
@@ -4016,7 +4037,7 @@ label v12s7_sam_cameron:
             scene v12fersaca1
             with dissolve
 
-            sam "His jokes aren't funny."
+            sa "His jokes aren't funny."
 
         "Don't laugh":
             scene v12fersaca2a
@@ -4027,12 +4048,12 @@ label v12s7_sam_cameron:
             scene v12fersaca1
             with dissolve
 
-            sam "Exactly."
+            sa "Exactly."
 
     scene v12fersaca1
     with dissolve
 
-    sam "All of his jokes are about orphans, it's like he has something against orphans or something."
+    sa "All of his jokes are about orphans, it's like he has something against orphans or something."
 
     scene v12fersaca2
     with dissolve
@@ -4042,7 +4063,7 @@ label v12s7_sam_cameron:
     scene v12fersaca1
     with dissolve
 
-    sam "I understand it perfectly fine, I just think it's in poor taste."
+    sa "I understand it perfectly fine, I just think it's in poor taste."
 
     scene v12fersaca2
     with dissolve
@@ -4054,7 +4075,7 @@ label v12s7_sam_cameron:
 
     # -Cameron farts on Samantha-
 
-    sam "I KNOW YOU DIDN'T JUST FUCKING FART ON ME! YOU'RE FUCKING GROSS!"
+    sa "I KNOW YOU DIDN'T JUST FUCKING FART ON ME! YOU'RE FUCKING GROSS!"
 
     scene v12fersaca3 # FPP. Show samantha storming off
     with dissolve
@@ -4121,7 +4142,7 @@ label v12s7_sam2:
     scene v12fersam1a # FPP. same 1, mouth open
     with dissolve
 
-    sam "You mean no stalker."
+    sa "You mean no stalker."
 
     scene v12fersam1
     with dissolve
@@ -4131,7 +4152,7 @@ label v12s7_sam2:
     scene v12fersam1a
     with dissolve
 
-    sam "Not at all. Even if some of them were a little funny, I don't think it's cool that all of his jokes are about orphans. The whole idea of orphans just isn't funny to me at all."
+    sa "Not at all. Even if some of them were a little funny, I don't think it's cool that all of his jokes are about orphans. The whole idea of orphans just isn't funny to me at all."
 
     scene v12fersam1
     with dissolve
@@ -4141,7 +4162,7 @@ label v12s7_sam2:
     scene v12fersam1a
     with dissolve
 
-    sam "*Whisper* He should know better."
+    sa "*Whisper* He should know better."
 
     scene v12fersam1
     with dissolve
@@ -4151,16 +4172,16 @@ label v12s7_sam2:
     scene v12fersam1a
     with dissolve
 
-    sam "Besides distracting my mind with something else? *Chuckles*"
+    sa "Besides distracting my mind with something else? *Chuckles*"
 
     menu:
         "Focus on the game":
             scene v12fersam1b # FPP. same 1, new pose, mouth closed
             with dissolve
 
-            u "Wanna focus on the game? That’s the point of all of this, I think… To make us focus on something else for a while."
+            u "Wanna focus on the game? That’s the point of all of this, I think... To make us focus on something else for a while."
 
-        "Go for kiss":
+        "Go for a kiss":
             scene v12fersam1b
             with dissolve
             
@@ -4169,7 +4190,7 @@ label v12s7_sam2:
             scene v12fersam1c # FPP. same 1, new pose, mouth open
             with dissolve
 
-            sam "What-"
+            sa "What-"
 
             scene v12fersam2 # TPP. Show mc and samantha kissing, mc's hand on samantha's cheek
             with dissolve
@@ -4179,7 +4200,7 @@ label v12s7_sam2:
             scene v12fersam1c
             with dissolve
 
-            sam "Oh' Yeah. *Chuckles* That definitely helps."
+            sa "Oh' Yeah. *Chuckles* That definitely helps."
 
             scene v12fersam1b
             with dissolve
@@ -4191,7 +4212,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "Quick, talk murder to me. *Laughs*"
+    sa "Quick, talk murder to me. *Laughs*"
 
     scene v12fersam1b
     with dissolve
@@ -4202,7 +4223,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "Well if I was writing this, I'd probably choose Lauren to be the murderer."
+    sa "Well if I was writing this, I'd probably choose Lauren to be the murderer."
 
     scene v12fersam1b
     with dissolve
@@ -4212,7 +4233,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "See, that's exactly why I'd choose her. No one would suspect her. She wouldn't even suspect herself. *Chuckles*"
+    sa "See, that's exactly why I'd choose her. No one would suspect her. She wouldn't even suspect herself. *Chuckles*"
 
     scene v12fersam1b
     with dissolve
@@ -4223,7 +4244,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "You sound surprised. *Chuckles* Did you think I was stupid?"
+    sa "You sound surprised. *Chuckles* Did you think I was stupid?"
 
     scene v12fersam1b
     with dissolve
@@ -4233,7 +4254,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "My brother took all the stupid."
+    sa "My brother took all the stupid."
 
     scene v12fersam1b
     with dissolve
@@ -4243,7 +4264,8 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "Honestly, my life sucks. I'm an adult in college, but instead of having friends and living the life I want to live I'm smothered by my brother for literally no reason except he has nothing better to do. I just want to be my own person."
+    sa "Honestly, my life sucks. I'm an adult in college, but instead of having friends and living the life I want to live, I'm smothered by my brother for literally no reason except he has nothing better to do."
+    sa "I just want to be my own person."
 
     scene v12fersam1b
     with dissolve
@@ -4253,7 +4275,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "I've thought about it, but I don't want to take it that far. I just want him to take my wishes into consideration for once."
+    sa "I've thought about it, but I don't want to take it that far. I just want him to take my wishes into consideration for once."
 
     scene v12fersam1b
     with dissolve
@@ -4263,7 +4285,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "He sure gets carried away a lot."
+    sa "He sure gets carried away a lot."
 
     scene v12fersam1b
     with dissolve
@@ -4273,7 +4295,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "I haven't, but I don't think we'd get along, she's too soft."
+    sa "I haven't, but I don't think we'd get along, she's too soft."
 
     scene v12fersam1b
     with dissolve
@@ -4283,7 +4305,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "I've never seen or heard of her doing anything exciting."
+    sa "I've never seen or heard of her doing anything exciting."
 
     scene v12fersam1b
     with dissolve
@@ -4293,7 +4315,7 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "There's no way Lauren played that with you guys."
+    sa "There's no way Lauren played that with you guys."
 
     scene v12fersam1b
     with dissolve
@@ -4303,7 +4325,8 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sam "Hmm, maybe I should try talking to her. Someone I definitely wanna talk to though is Amber. After seeing how fiesty she's been with the whole security thing I definitely wanna get to know her. She seems like my type of person, plus I know her and Riley are cool."
+    sa "Hmm, maybe I should try talking to her. Someone I definitely wanna talk to though is Amber. After seeing how feisty she's been with the whole security thing I definitely wanna get to know her."
+    sa "She seems like my type of person, plus I know her and Riley are cool."
 
     scene v12fersam1b
     with dissolve
@@ -4313,7 +4336,7 @@ label v12s7_sam2:
     scene v12fersam1a
     with dissolve
 
-    sam "Yeah, I guess you're right."
+    sa "Yeah, I guess you're right."
 
     scene v12fersam1
     with dissolve
@@ -4323,7 +4346,7 @@ label v12s7_sam2:
     scene v12fersam1a
     with dissolve
 
-    sam "Don't ruin the moment."
+    sa "Don't ruin the moment."
 
     scene v12fersam1
     with dissolve
@@ -4333,7 +4356,7 @@ label v12s7_sam2:
     scene v12fersam1a
     with dissolve
 
-    sam "Well, I need to finish my book. If I don't, no one will. See you around [name] and thanks for the talk."
+    sa "Well, I need to finish my book. If I don't, no one will. See you around [name] and thanks for the talk."
 
     scene v12fersam1
     with dissolve
@@ -4355,7 +4378,7 @@ label v12s7_sam2_kill:
     scene v12fersam1c
     with dissolve
 
-    sam "There's no way he chose you as the killer."
+    sa "There's no way he chose you as the killer."
 
     scene v12fersam1b
     with dissolve
@@ -4365,7 +4388,7 @@ label v12s7_sam2_kill:
     scene v12fersam1c
     with dissolve
 
-    sam "I'm having a hard time believing that."
+    sa "I'm having a hard time believing that."
 
     scene v12fersam1b
     with dissolve
@@ -4375,7 +4398,7 @@ label v12s7_sam2_kill:
     scene v12fersam1c
     with dissolve
 
-    sam "You don't fit any killer theories."
+    sa "You don't fit any killer theories."
 
     scene v12fersam1
     with dissolve
@@ -4385,7 +4408,7 @@ label v12s7_sam2_kill:
     scene v12fersam1a
     with dissolve
 
-    sam "I guess. Why didn't you kill me earlier?"
+    sa "I guess. Why didn't you kill me earlier?"
 
     scene v12fersam1
     with dissolve
@@ -4395,7 +4418,7 @@ label v12s7_sam2_kill:
     scene v12fersam1a
     with dissolve
 
-    sam "He's not a part of the game idiot?"
+    sa "He's not a part of the game idiot?"
 
     scene v12fersam1
     with dissolve
@@ -4405,7 +4428,7 @@ label v12s7_sam2_kill:
     scene v12fersam1a
     with dissolve
 
-    sam "Enjoy your little killing spree, good luck."
+    sa "Enjoy your little killing spree, good luck."
 
     scene v12fersam1
     with dissolve
@@ -4598,7 +4621,7 @@ label v12s7_nora1:
     no "Alright, sorry. I'm not trying to be a bitch. I'm just not in the mood for this."
 
     menu:
-        "see you later":
+        "See you later":
             scene v12fernor1
             with dissolve
             
@@ -4615,7 +4638,7 @@ label v12s7_nora1:
             
             u "Do you want some company?"
 
-            scene v12fernor1c # FPP. Same 1, new pose,annoyed look,  mouth open
+            scene v12fernor1c # FPP. Same 1, new pose,annoyed look, mouth open
             with dissolve
 
             no "Are you sure you don't want to pay attention to the game? I'm not taking the blame if Mr. Lee sees us talking out of character."
@@ -4708,7 +4731,7 @@ label v12s7_nora1:
                 u "Nora'"
 
             menu:
-                "sounds like you're dumping him":
+                "Sounds like you're dumping him":
                     scene v12fernor1b
                     with dissolve
 
@@ -4751,7 +4774,7 @@ label v12s7_nora1:
 
                     u "There's no choice."
 
-                    if join wolves:
+                    if joinwolves:
                         scene v12fernor1
                         with dissolve
 
@@ -5014,7 +5037,7 @@ label v12s7_chris1_kill:
 
     #call screen fr
 
-    scene v12ferlee1  # FPP. Show mr lee, neutral face, mouth closed
+    scene v12ferlee1 # FPP. Show mr lee, neutral face, mouth closed
     with dissolve
 
     u "Hello there, you fan of boxing? If so, did you catch my last fight?"
