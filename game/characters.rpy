@@ -155,3 +155,4 @@ default bank = Character("Bank Teller", who_color="#fc3158", who_outlines=[ (2, 
 # 12.0
 default robber = Character("Robber", who_color="#0055ff", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 default fwait = Character("French Waitress", who_color="#0055ff", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+default clady = Character("Crazy Lady", who_color="#ffffff", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
