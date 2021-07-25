@@ -7,19 +7,28 @@ label v12_penelope_roof:
     scene v12penr1 # TPP Show MC sitting on his bed looking down at his phone, in his hand
     with fade
 
-    pause
+    pause 1
 
     play sound "sounds/vibrate.mp3"
 
     $ contact_Penelope.newMessage("Hey, are you up still?", queue=False)
-    $ contact_Penelope.newMessage("If you are, can you meet me in the hallway?", queue=True)
+    $ contact_Penelope.newMessage("If you are, can you meet me in the hallway?", queue=False)
+
+    call screen phone
 
     menu:
         "Reply":
             if penelopers:
                 $ addPoint("bf")
 
-            $ contact_Penelope.addReply("Yeah, one sec ", func=None)
+            $ contact_Penelope.addReply("Yeah, one sec", func=None)
+
+            label v12_penelope_roof_text:
+                if contact_Penelope.getReplies():
+                    call screen phone
+                if contact_Penelope.getReplies():
+                    u "(I should probably reply.)"
+                    jump v12_penelope_roof_text
 
             scene v12penr2 # TPP Show MC leaving his hotel room
             with dissolve
@@ -445,7 +454,7 @@ label v12_penelope_roof:
 
             pause 0.75
 
-        "Don't Reply":
+        "Don't reply":
             $ addPoint("tm")
 
             scene v12penr19 # FPP MC's view sitting on his bed, looking down at his phone, which he just turned off
