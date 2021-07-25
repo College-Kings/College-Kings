@@ -226,7 +226,7 @@ label v12_room_chloe_riley:
         scene v12crm12b # FPP. Riley looking surpised, mouth opened
         with dissolve
 
-        ri "Okay, but like...HOW? There were times where I was like \"okay maybe it's him\", but then I felt like I was just being biased."
+        ri "Okay, but like... HOW? There were times where I was like \"okay maybe it's him\", but then I felt like I was just being biased."
 
         scene v12crm12a
         with dissolve

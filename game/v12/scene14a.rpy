@@ -309,7 +309,7 @@ label v12_riley_cafe:
     scene v12ric4g
     with dissolve
 
-    ri "We're going to complete “treasure hunt: part two” today. As a matter of fact, we can get it out of the way right after we finish eating."
+    ri "We're going to complete \"treasure hunt: part two\" today. As a matter of fact, we can get it out of the way right after we finish eating."
 
     scene v12ric4h
     with dissolve

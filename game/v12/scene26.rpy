@@ -38,12 +38,12 @@ label v12_nora_chris_fight:
     scene v12ncf3
     with dissolve
 
-    no "You don’t- ARE YOU A FUCKING IDIOT?!"
+    no "You don't- ARE YOU A FUCKING IDIOT?!"
 
     scene v12ncf3a # TPP. Same as v12ncf3, different pose
     with dissolve
 
-    no "I asked you to hang out tonight, and you told me you were busy. Now you realize you’re free, and instead of making plans with me YOU CALL THE FUCKING GUYS!?"
+    no "I asked you to hang out tonight, and you told me you were busy. Now you realize you're free, and instead of making plans with me YOU CALL THE FUCKING GUYS!?"
 
     scene v12ncf3
     with dissolve
@@ -98,7 +98,7 @@ label v12_nora_chris_fight:
     scene v12ncf4d # TPP. Same as v12ncf4c, Nora grabbing Chris' jacket, Chris very angry, mouth closed, Nora very angry, mouth open
     with dissolve
 
-    no "Maybe if you weren't so focused on chasing after the man your daddy was, you’d be your own-"
+    no "Maybe if you weren't so focused on chasing after the man your daddy was, you'd be your own-"
 
     scene v12ncf4e # TPP. Same as v12ncf4, Chris pushing Nora, Chris very angry, mouth closed, Nora losing her balance, mouth closed, scared
     with dissolve
@@ -128,7 +128,7 @@ label v12_nora_chris_fight:
     scene v12ncf10 # TPP. Same positioning as v12ncf9, Chris angry, mouth open, looking at Chloe (Only Chris in shot)
     with dissolve
 
-    ch "You didn't say shit when she was hitting me! I swear nobody gives a fuck when a man’s getting hit, but the minute a man defends himself against a woman it's game fucking over."
+    ch "You didn't say shit when she was hitting me! I swear nobody gives a fuck when a man's getting hit, but the minute a man defends himself against a woman it's game fucking over."
 
     scene v12ncf9
     with dissolve

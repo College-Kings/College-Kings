@@ -23,7 +23,7 @@ label v12_amber_bus:
     scene v12amb3 # FPP. MC and Amber sitting down, looking at each other, Amber slightly worried, mouth open
     with dissolve
 
-    am "So, earlier I ugh...nah nevermind."
+    am "So, earlier I ugh... nah, nevermind."
 
     scene v12amb3a # FPP. Same as v12amb3, Amber mouth closed, slightly worried
     with dissolve

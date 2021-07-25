@@ -13,9 +13,9 @@ label v12_riley_room:
     scene v12rir2 # FPP Show Riley, in hotel hallway, smiling with mouth open
     with dissolve
 
-    ri "Hey, mind helping me clean up? The slumber party gang just left me to do everything… *Chuckles*"
+    ri "Hey, mind helping me clean up? The slumber party gang just left me to do everything... *Chuckles*"
 
-    ri "I was coming to get Aubrey’s help, but I overheard her say that her ankle was hurt. The walls are really thin in this hotel..."
+    ri "I was coming to get Aubrey's help, but I overheard her say that her ankle was hurt. The walls are really thin in this hotel..."
 
     scene v12rir2a # FPP Same angle as v12rir2, Riley smiling with mouth closed
     with dissolve
@@ -35,7 +35,7 @@ label v12_riley_room:
     scene v12rir4 # FPP Show Riley's room, which is full of empty bottles
     with dissolve
 
-    u "It looks like it’s pretty much just a bunch of drinks. Who drank all of these?"
+    u "It looks like it's pretty much just a bunch of drinks. Who drank all of these?"
 
     scene v12rir5 # FPP Show Riley, in her room, smiling with mouth open
     with dissolve
@@ -99,12 +99,12 @@ label v12_riley_room:
     scene v12rir11 # FPP Show Riley, sitting on bed in her room, looking at MC, smiling with mouth closed
     with dissolve
 
-    u "So overall… Did you have fun last night?"
+    u "So overall... Did you have fun last night?"
 
     scene v12rir11a # FPP Same angle as v12rir11, Riley looking at MC, smiling with mouth open
     with dissolve
 
-    ri "I really did! I don't know if you could tell but, I’ve been on a bit of a roller coaster lately with Amber and really needed to just have some fun."
+    ri "I really did! I don't know if you could tell but, I've been on a bit of a roller coaster lately with Amber and really needed to just have some fun."
 
     scene v12rir11b # FPP Same angle as v12rir11, Riley looking away, smiling with mouth open
     with dissolve
@@ -114,7 +114,7 @@ label v12_riley_room:
     scene v12rir11c # FPP Same angle as v12rir11, Riley looking away, smiling with mouth closed
     with dissolve
 
-    u "That's good to hear. Whenever I see you two together you’re always smiling."
+    u "That's good to hear. Whenever I see you two together you're always smiling."
 
     scene v12rir11
     with dissolve
@@ -154,7 +154,7 @@ label v12_riley_room:
     scene v12rir11a
     with dissolve
 
-    ri "If it's something nobody knows then, don't you think there’s a reason why I haven’t told anyone?"
+    ri "If it's something nobody knows then, don't you think there's a reason why I haven't told anyone?"
 
     scene v12rir11
     with dissolve
@@ -164,7 +164,7 @@ label v12_riley_room:
     scene v12rir11a
     with dissolve
 
-    ri "Okay smart guy, you’re lucky I like you…"
+    ri "Okay smart guy, you're lucky I like you..."
 
     scene v12rir11b
     with dissolve
@@ -174,7 +174,7 @@ label v12_riley_room:
     scene v12rir12 # FPP View of MC, inside Riley's room looking at the door,  which is slightly open
     with dissolve
     
-    u "The door’s open, someone could hear whatever you tell me. Walls are thin, remember?"
+    u "The door's open, someone could hear whatever you tell me. Walls are thin, remember?"
 
     scene v12rir11b
     with dissolve
@@ -198,7 +198,7 @@ label v12_riley_room:
     scene v12rir11
     with dissolve
 
-    u "Wait… That's you?"
+    u "Wait... That's you?"
 
     scene v12rir11a
     with dissolve
@@ -218,17 +218,17 @@ label v12_riley_room:
     scene v12rir11
     with dissolve
 
-    u "That's actually pretty awesome to see. Thanks for sharing that with me, really. I promise I’ll be the only one to ever know, haha."
+    u "That's actually pretty awesome to see. Thanks for sharing that with me, really. I promise I'll be the only one to ever know, haha."
 
     scene v12rir11a
     with dissolve
 
-    ri "Haha, no problem… I trust you, [name]."
+    ri "Haha, no problem... I trust you, [name]."
 
     scene v12rir11b
     with dissolve
 
-    ri "But anyway… Yeah. I've always wondered what would happen if someone found that picture of me."
+    ri "But anyway... Yeah. I've always wondered what would happen if someone found that picture of me."
 
     scene v12rir11c
     with dissolve
@@ -243,7 +243,7 @@ label v12_riley_room:
     scene v12rir11e # FPP Same angle as v12rir11, Riley looking at MC, Riley looks worried, mouth closed
     with dissolve
 
-    u "Well, you don't have to worry about me messing with it. So if no one else knows that there’s something in there, I think you're in the clear."
+    u "Well, you don't have to worry about me messing with it. So if no one else knows that there's something in there, I think you're in the clear."
 
     scene v12rir11a
     with dissolve
@@ -268,7 +268,7 @@ label v12_riley_room:
     scene v12rir11a
     with dissolve
 
-    ri "Anyway, thanks for helping me clean up. You didn’t have to do that, so I appreciate it."
+    ri "Anyway, thanks for helping me clean up. You didn't have to do that, so I appreciate it."
 
     scene v12rir11
     with dissolve

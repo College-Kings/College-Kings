@@ -9,7 +9,7 @@
 init python:
     def v12s19_kiwiiReply1():
         v12s19_kiwiiPost1.newComment("Amber", _("Hahahaha"), numberLikes=renpy.random.randint(250,350), queue=False)
-        v12s19_kiwiiPost1.newComment("Imre", _("Karma’s a bitch..."), numberLikes=renpy.random.randint(250,350), queue=False)
+        v12s19_kiwiiPost1.newComment("Imre", _("Karma's a bitch..."), numberLikes=renpy.random.randint(250,350), queue=False)
 
 label v12_party_wake_up:
     scene v12pwu1 # TPP. Show MC sleeping, it's morning now, alone in the bed
@@ -127,7 +127,7 @@ label v12_party_wake_up:
     scene v12pwu7c # FPP. Same as v12pwu7b, Nora slight smile, mouth open
     with dissolve
 
-    no "Haha, that was a compliment. You’re welcome. What time is it?"
+    no "Haha, that was a compliment. You're welcome. What time is it?"
 
     scene v12pwu9a
     with dissolve
@@ -137,12 +137,12 @@ label v12_party_wake_up:
     scene v12pwu7a
     with dissolve
 
-    no "Well, I wanted to go to the french baguette factory today."
+    no "Well, I wanted to go to the French baguette factory today."
 
     scene v12pwu9b # FPP. Same as v12pwu9a, Aubrey slightly annoyed, mouth open
     with dissolve
 
-    au "Ugh… Why? That sounds so boring."
+    au "Ugh... Why? That sounds so boring."
 
     scene v12pwu7a
     with dissolve
@@ -172,7 +172,7 @@ label v12_party_wake_up:
     scene v12pwu6b
     with dissolve
 
-    imre "Hmm… I guess I can get revenge on Amber later."
+    imre "Hmm... I guess I can get revenge on Amber later."
 
     scene v12pwu7c
     with dissolve
@@ -197,11 +197,11 @@ label v12_party_wake_up:
         pause 0.75
     
     $ v12s19_kiwiiPost1 = KiwiiPost("Amber", "v12/imre_raccoon.webp", _("Happy Birthday, Lindsey!"), numberLikes=419) # Picture of Imre with the raccoon drawing from scene 18 on his face
-    $ v12s19_kiwiiPost1.newComment("Chris", _("Oh no… What did you guys do to him?"), mentions="Amber", numberLikes=renpy.random.randint(250,350), queue=False)
-    $ v12s19_kiwiiPost1.newComment("Amber", _("\"We\" taught him why we shouldn’t get too drunk at slumber parties… Hehe"), mentions="Chris", numberLikes=renpy.random.randint(150,300), queue=False)
+    $ v12s19_kiwiiPost1.newComment("Chris", _("Oh no... What did you guys do to him?"), mentions="Amber", numberLikes=renpy.random.randint(250,350), queue=False)
+    $ v12s19_kiwiiPost1.newComment("Amber", _("\"We\" taught him why we shouldn't get too drunk at slumber parties... Hehe"), mentions="Chris", numberLikes=renpy.random.randint(150,300), queue=False)
     $ v12s19_kiwiiPost1.newComment("Imre", _("\"We\"??? Who is we?!?!"), mentions="Amber", numberLikes=renpy.random.randint(250,400), queue=False)
-    $ v12s19_kiwiiPost1.addReply(_("Not cool, Amber… Not cool… ;)"), v12s19_kiwiiReply1, mentions="Amber", numberLikes=renpy.random.randint(250, 330))
-    $ v12s19_kiwiiPost1.addReply(_("It’s just a prank bro!"), v12s19_kiwiiReply1, mentions="Imre", numberLikes=renpy.random.randint(250, 330))
+    $ v12s19_kiwiiPost1.addReply(_("Not cool, Amber... Not cool... ;)"), v12s19_kiwiiReply1, mentions="Amber", numberLikes=renpy.random.randint(250, 330))
+    $ v12s19_kiwiiPost1.addReply(_("It's just a prank bro!"), v12s19_kiwiiReply1, mentions="Imre", numberLikes=renpy.random.randint(250, 330))
     
     scene v12pwu13 # TPP. Show MC removing his pajama shirt, pajama pants still on, neutral expression, mouth closed
     with dissolve
@@ -238,7 +238,7 @@ label v12_party_wake_up:
         scene v12pwu16 # TPP. Lindsey and Chloe in the hallway, looking at each other. Show only Lindsey, Lindsey looking at Chloe, Lindsey angry, mouth open, they are having a heated argument
         with dissolve
 
-        li "How Chloe?! What would you have done differently? I've given you ideas and talked to you about all of this in the past, all you’ve done is blow me off. And you don't listen to any of the other girls either."
+        li "How Chloe?! What would you have done differently? I've given you ideas and talked to you about all of this in the past, all you've done is blow me off. And you don't listen to any of the other girls either."
 
         scene v12pwu17 # TPP. Same as v12pwu16, show only Chloe, Chloe looking at Lindsey, Chloe angry, mouth open
         with dissolve
@@ -248,7 +248,7 @@ label v12_party_wake_up:
         scene v12pwu16
         with dissolve
 
-        li "That's your problem, Chloe. You know exactly what to do, and how to do it, we've told you. Numerous times. Yet you don’t do a damn thing..."
+        li "That's your problem, Chloe. You know exactly what to do, and how to do it, we've told you. Numerous times. Yet you don't do a damn thing..."
 
         scene v12pwu17
         with dissolve
@@ -283,7 +283,7 @@ label v12_party_wake_up:
         scene v12pwu17a
         with dissolve
 
-        cl "Yet you’re talking and planning things behind my back..."
+        cl "Yet you're talking and planning things behind my back..."
 
         scene v12pwu16
         with dissolve
@@ -298,7 +298,7 @@ label v12_party_wake_up:
         scene v12pwu16a
         with dissolve
 
-        li "Please don't make any excuses... I know you weren't planning on taking any of my advice. Anytime I’ve ever had a suggestion you’ve come up with some reason to object to it."
+        li "Please don't make any excuses... I know you weren't planning on taking any of my advice. Anytime I've ever had a suggestion you've come up with some reason to object to it."
 
         scene v12pwu17
         with dissolve

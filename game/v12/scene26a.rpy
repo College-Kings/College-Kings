@@ -30,7 +30,7 @@ label v12_follow_chris:
     scene v12chf2b # FPP. Same as v12chf2, Chris pacing to the right, mouth open, angry, not looking at MC
     with dissolve
 
-    ch "And I fucked up my wrist! MY FUCKING LIFE! It’s so fucking stupid!"
+    ch "And I fucked up my wrist! MY FUCKING LIFE! It's so fucking stupid!"
 
     scene v12chf2a
     with dissolve
@@ -80,7 +80,7 @@ label v12_follow_chris:
     scene v12chf4b
     with dissolve
 
-    ch "It’s… *Sighs*"
+    ch "It's... *Sighs*"
 
     scene v12chf4
     with dissolve
@@ -110,12 +110,12 @@ label v12_follow_chris:
     scene v12chf4
     with dissolve
 
-    ch "And she was willing to put that out in the air knowing how It’d make me feel. She obviously doesn't give a fuck about how I feel, or at least she didn't five minutes ago."
+    ch "And she was willing to put that out in the air knowing how It'd make me feel. She obviously doesn't give a fuck about how I feel, or at least she didn't five minutes ago."
 
     scene v12chf4a
     with dissolve
 
-    u "Sounds to me like she was treating you, how she felt you were treating her. As a matter of fact, I'm pretty sure that's exactly what’s happening."
+    u "Sounds to me like she was treating you, how she felt you were treating her. As a matter of fact, I'm pretty sure that's exactly what's happening."
 
     scene v12chf4b
     with dissolve
@@ -132,7 +132,7 @@ label v12_follow_chris:
             scene v12chf4a
             with dissolve
 
-            u "I don’t think that was an overreaction, man..."
+            u "I don't think that was an overreaction, man..."
 
             scene v12chf4b
             with dissolve
@@ -147,7 +147,7 @@ label v12_follow_chris:
             scene v12chf4f # FPP. Same as v12chf4e, different pose
             with dissolve
 
-            u "Sounds like you finally had some free time and chose the guys over her. Seems pretty fucked up considering that you’ve been so busy lately, which has caused you to miss out on alot."
+            u "Sounds like you finally had some free time and chose the guys over her. Seems pretty fucked up considering that you've been so busy lately, which has caused you to miss out on a lot."
 
             scene v12chf4e
             with dissolve
@@ -157,7 +157,7 @@ label v12_follow_chris:
             scene v12chf4f
             with dissolve
 
-            u "It may not have been real, but still… I think everyone felt a little awkward about what you did."
+            u "It may not have been real, but still... I think everyone felt a little awkward about what you did."
 
             scene v12chf4g # FPP. Same as v12chf4f, Chris slightly annoyed, mouth open
             with dissolve
@@ -213,22 +213,22 @@ label v12_follow_chris:
             scene v12chf4l # FPP. Same as v12chf4a, different pose
             with dissolve
 
-            u "You're right, Chris. She took it too far but… I don't know what you can do to get her or anyone else to understand."
+            u "You're right, Chris. She took it too far but... I don't know what you can do to get her or anyone else to understand."
 
             scene v12chf4a
             with dissolve
 
-            u "I wouldn't just give up on the situation yet, though. If I were you, I mean…"
+            u "I wouldn't just give up on the situation yet, though. If I were you, I mean..."
 
             scene v12chf4l
             with dissolve
 
-            u "Sure, you just gave yourself a pretty serious setback. That doesn’t mean it’s completely over. There’s always more you can do."
+            u "Sure, you just gave yourself a pretty serious setback. That doesn't mean it's completely over. There's always more you can do."
 
             scene v12chf4b
             with dissolve
 
-            ch "I'm glad I have you man, I feel like I've been alone with this whole situation. That's why I wanted to go out with the guys... I wass hoping I could get some advice with the whole Nora situation, but obviously it doesn't even matter anymore."
+            ch "I'm glad I have you man, I feel like I've been alone with this whole situation. That's why I wanted to go out with the guys... I was hoping I could get some advice with the whole Nora situation, but obviously it doesn't even matter anymore."
 
             scene v12chf4a
             with dissolve
@@ -248,12 +248,12 @@ label v12_follow_chris:
             scene v12chf4b
             with dissolve
 
-            ch "Did he just…?"
+            ch "Did he just...?"
 
             scene v12chf4a
             with dissolve
 
-            u "Not gonna lie, you should've known she'd get mad at you for hanging with someone other than her. Especially when she's been asking to hangout since the beginning."
+            u "Not gonna lie, you should've known she'd get mad at you for hanging with someone other than her. Especially when she's been asking to hang out since the beginning."
 
             scene v12chf4
             with dissolve
@@ -313,7 +313,7 @@ label v12_follow_chris:
             scene v12chf10b # FPP. Same as v12chf10, Chris slight smile, mouth open
             with dissolve
 
-            ch "Hurts pretty fucking bad... I'm sure it’s just a sprain, been in enough fights to know what a sprained wrist feels like. *Chuckles*"
+            ch "Hurts pretty fucking bad... I'm sure it's just a sprain, been in enough fights to know what a sprained wrist feels like. *Chuckles*"
 
             scene v12chf10c # FPP. Same as v12chf10b, Chris slight smile, mouth closed
             with dissolve

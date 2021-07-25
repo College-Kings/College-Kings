@@ -28,7 +28,7 @@ label v12_room_sneak:
             scene v12rs2
             with dissolve
 
-            u "(Must've been really tired if she didn’t wait up.)"
+            u "(Must've been really tired if she didn't wait up.)"
 
     else:
         scene v12rs2a # FPP. Same as v12rs2, but show Riley sleeping instead

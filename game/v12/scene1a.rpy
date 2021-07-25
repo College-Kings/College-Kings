@@ -321,7 +321,7 @@ label v12_chase_robber:
         scene v12car25a
         with dissolve
 
-        u "(Rhymes with “bitch boy?” Oh...) *Laughs* Charli?"
+        u "(Rhymes with \"bitch boy?\" Oh...) *Laughs* Charli?"
 
         scene v12car25c # FPP Same angle as v12car25, Imre laughing with mouth open
         with dissolve
@@ -486,11 +486,11 @@ label v12_chase_robber:
     play sound "sounds/vibrate.mp3"
     pause 0.75
 
-    $ contact_Imre.newMessage("Check Kiwii...you're welcome. :)", queue=True)
+    $ contact_Imre.newMessage("Check Kiwii... you're welcome. :)", queue=True)
     $ contact_Imre.addReply("Haha okay", func=None)
 
     # MC checks Kiwii and there's a picture of MC running after the robber posted by Imre 
-    # caption "Would your man chase a robber down in the middle of the night? If not, you don't have a real man...”
+    # caption "Would your man chase a robber down in the middle of the night? If not, you don't have a real man..."
     # There's a comment from Charli that says "If you want a man Imre I can take you to a few bars, all you had to do was ask."
     
     # MC replies back to Imre-

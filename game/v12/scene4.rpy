@@ -59,7 +59,7 @@ label v12_roomate_talk:
         scene v12rcr5
         with dissolve
 
-        cl "Don't take this as me being mean or anything, but he was lucky he snagged Nora's bag. If he had taken a bag from Amber or Cameron...he wouldn't have made it far. *Chuckles*"
+        cl "Don't take this as me being mean or anything, but he was lucky he snagged Nora's bag. If he had taken a bag from Amber or Cameron... he wouldn't have made it far. *Chuckles*"
 
         scene v12rcr5a
         with dissolve

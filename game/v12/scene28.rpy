@@ -18,7 +18,7 @@ label v12_riley_lobby:
     scene v12ril1b # FPP. Same as v12ril1a, Riley very angry, mouth closed
     with dissolve
 
-    u "What are you talking about, Riley? What’s going on?!"
+    u "What are you talking about, Riley? What's going on?!"
 
     scene v12ril1c # FPP. Same as v12ril1a, Riley crying and angry, mouth open
     with dissolve
@@ -53,7 +53,7 @@ label v12_riley_lobby:
     scene v12ril1c
     with dissolve
 
-    ri "It's common sense that you took it considering you’re the only person who knows about it besides myself. I don't know why you would do this to me after I told you how I felt."
+    ri "It's common sense that you took it considering you're the only person who knows about it besides myself. I don't know why you would do this to me after I told you how I felt."
 
     scene v12ril1f
     with dissolve
@@ -84,7 +84,7 @@ label v12_riley_lobby:
     scene v12ril4a # TPP. Same as v12ril4, MC different pose
     with dissolve
 
-    u "(Charli. That motherfucker. I wouldn't be surprised if it was him, but at the same time I’d be absolutely amazed.)"
+    u "(Charli. That motherfucker. I wouldn't be surprised if it was him, but at the same time I'd be absolutely amazed.)"
 
     if laurenrs or v1_kissLauren:
         jump scene29

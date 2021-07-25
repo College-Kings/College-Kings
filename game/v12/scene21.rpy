@@ -33,7 +33,7 @@ label v12_nora_exploring:
     scene v12noe2d # FPP. Same as v12noe2, Nora holding the drink, slight smile, mouth open
     with dissolve
 
-    no "Ahh… The sun feels so nice on my face..."
+    no "Ahh... The sun feels so nice on my face..."
 
     scene v12noe2e # FPP. Same as v12noe2, Nora's drink on the ground next to her as she is removing her top, she has a bra on, slight smile, mouth closed
     with dissolve
@@ -79,12 +79,12 @@ label v12_nora_exploring:
     scene v12noe2f
     with dissolve
 
-    no "Yes and no…"
+    no "Yes and no..."
 
     scene v12noe2k # FPP. Same as v12noe2f, different pose
     with dissolve
 
-    no "I think I might just do a poor job of realizing that we aren’t in a fairytale land."
+    no "I think I might just do a poor job of realizing that we aren't in a fairytale land."
 
     scene v12noe2l # FPP. Same as v12noe2k, Nora slightly worried, mouth closed
     with dissolve
@@ -109,12 +109,12 @@ label v12_nora_exploring:
     scene v12noe2h
     with dissolve
 
-    u "It’s not immature, just impossible. This wasn’t just you on vacation by yourself. Chris and Chloe came so, your problems with him and your problems with the Chicks followed you."
+    u "It's not immature, just impossible. This wasn't just you on vacation by yourself. Chris and Chloe came so, your problems with him and your problems with the Chicks followed you."
 
     scene v12noe2f
     with dissolve
 
-    no "Yeah, you’re right. And seriously sucks that this factory is all messed up. The Mahoo article said nothing about it being closed… *Sighs*"
+    no "Yeah, you're right. And seriously sucks that this factory is all messed up. The Mahoo article said nothing about it being closed... *Sighs*"
 
     scene v12noe2i
     with dissolve
@@ -124,7 +124,7 @@ label v12_nora_exploring:
     scene v12noe2j
     with dissolve
 
-    no "Yeah, it must be. 'Cause this place is a whole fuckin’ mess. *Chuckles*"
+    no "Yeah, it must be. 'Cause this place is a whole fuckin' mess. *Chuckles*"
 
     scene v12noe2i
     with dissolve
@@ -219,7 +219,7 @@ label v12_nora_exploring:
     scene v12noe6b
     with dissolve
 
-    no "We don't speak french!"
+    no "We don't speak French!"
 
     scene v12noe5b
     with dissolve
@@ -295,7 +295,7 @@ label v12_nora_exploring:
             scene v12noe5e # FPP. Same as v12noe5b, lady worried, mouth open
             with dissolve
 
-            clady "Yes… So sorry my lady, I'll punish myself appropriately..."
+            clady "Yes... So sorry my lady, I'll punish myself appropriately..."
 
             scene v12noe6f # FPP. Same as v12noe6b, Nora slightly smiling, mouth open
             with dissolve
@@ -305,7 +305,7 @@ label v12_nora_exploring:
             scene v12noe5f # FPP. Same as v12noe5e, lady slightly smiling, mouth open
             with dissolve
 
-            clady "You’re… so kind! Thank you! Thank you..."
+            clady "You're... so kind! Thank you! Thank you..."
 
         "Tell her off":
             scene v12noe6g # FPP. Same as v12noe6e, Nora slightly annoyed, mouth closed
@@ -348,7 +348,7 @@ label v12_nora_exploring:
     scene v12noe6d
     with dissolve
 
-    no "Okay… Let's go, [name]. Quickly… *Chuckles*"
+    no "Okay... Let's go, [name]. Quickly... *Chuckles*"
 
     scene v12noe7 # TPP. Show Nora putting her shirt back on, slight smile, mouth closed
     with dissolve
@@ -370,7 +370,7 @@ label v12_nora_exploring:
         scene v12noe10 # FPP. Nora and MC stop walking, they're on the sidewalk, looking at each other, Nora slight smile, avoiding eye contact, blushing, mouth closed
         with dissolve
 
-        u "So… You're my wife now? *Chuckles*"
+        u "So... You're my wife now? *Chuckles*"
 
         scene v12noe10a # FPP. Same as v12noe10, Nora looking at MC, Nora slight smile, mouth open
         with dissolve
@@ -386,7 +386,7 @@ label v12_nora_exploring:
         scene v12noe10b
         with dissolve
 
-        u "You were so brave, I don't know what I would've done if you weren't there… My hero!"
+        u "You were so brave, I don't know what I would've done if you weren't there... My hero!"
 
         scene v12noe10a
         with dissolve
@@ -476,7 +476,7 @@ label v12_nora_exploring:
     scene v12noe16a
     with dissolve
 
-    au "*Chuckles* Oh no… What happened?"
+    au "*Chuckles* Oh no... What happened?"
 
     scene v12noe16
     with dissolve

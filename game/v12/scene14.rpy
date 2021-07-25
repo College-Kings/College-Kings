@@ -56,7 +56,7 @@ label v12_chloe_cafe:
     scene v12chc5c # FPP. Same as v12chc5, Chloe mouth closed, smiling
     with dissolve
 
-    u "Haha, I know what you mean.. It is fancy here. A very “French movie” type of place."
+    u "Haha, I know what you mean... It is fancy here. A very \"French movie\" type of place."
 
     scene v12chc5
     with dissolve
@@ -131,7 +131,7 @@ label v12_chloe_cafe:
     scene v12chc5d
     with dissolve
 
-    cl "I don't speak French.. I just remember a few things from my language class."
+    cl "I don't speak French... I just remember a few things from my language class."
 
     scene v12chc7b
     with dissolve
@@ -377,7 +377,7 @@ label v12_chloe_cafe:
             scene v12chc5n # FPP. Same as v12chc5m, Chloe slightly worried, mouth closed
             with dissolve
 
-            u "I don't want to start making assumptions about what it could or couldn't be, so just try to think positive. Maybe she is doing some prank, haha.."
+            u "I don't want to start making assumptions about what it could or couldn't be, so just try to think positive. Maybe she is doing some prank, haha..."
 
             scene v12chc5m
             with dissolve

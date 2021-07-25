@@ -25,7 +25,7 @@ label v12_nursing_aubrey:
     scene v12aun4 # FPP. Same positioning as v12aun4, MC looking at Aubrey, Aubrey looking at MC, Aubrey in pain, mouth open
     with dissolve
 
-    au "Ahhh… Fuck. It's super sensitive right now."
+    au "Ahhh... Fuck. It's super sensitive right now."
 
     scene v12aun4a # FPP. Same as v12aun4, Aubrey in pain, mouth closed
     with dissolve
@@ -40,7 +40,7 @@ label v12_nursing_aubrey:
     scene v12aun5a # FPP. Same as v12aun5, foot rotated slightly
     with dissolve
 
-    u "This is how you know you're getting too old for child games… *Chuckles*"
+    u "This is how you know you're getting too old for child games... *Chuckles*"
 
     scene v12aun4
     with dissolve
@@ -80,7 +80,7 @@ label v12_nursing_aubrey:
     scene v12aun4a
     with dissolve
 
-    u "*Laughs* Instant karma… For real though, does it hurt pretty bad?"
+    u "*Laughs* Instant karma... For real though, does it hurt pretty bad?"
 
     scene v12aun4
     with dissolve
@@ -130,12 +130,12 @@ label v12_nursing_aubrey:
     scene v12aun4h # FPP. Same as v12aun4f, Aubrey head not tilted, slight smile, mouth open
     with dissolve
 
-    au "How come you decided to walk all the way back with me instead of having drinks with Nora? We both know she's a full fucking snack… *Laughs*"
+    au "How come you decided to walk all the way back with me instead of having drinks with Nora? We both know she's a full fucking snack... *Laughs*"
 
     scene v12aun4i # FPP. Same as v12aun4h, Aubrey slight smile, mouth closed
     with dissolve
 
-    u "Ha… What does that have to do with it?"
+    u "Ha... What does that have to do with it?"
 
     scene v12aun4h
     with dissolve
@@ -214,7 +214,7 @@ label v12_nursing_aubrey:
 
             u "*Chuckles*"
 
-        "That’s what friends are for":
+        "That's what friends are for":
             scene v12aun4f
             with dissolve
 
@@ -223,7 +223,7 @@ label v12_nursing_aubrey:
             scene v12aun4g
             with dissolve
 
-            au "Hmm.. I don’t think all friends would be willing to massage someone's feet."
+            au "Hmm... I don't think all friends would be willing to massage someone's feet."
 
             scene v12aun4i
             with dissolve
@@ -273,7 +273,7 @@ label v12_nursing_aubrey:
     scene v12aun8a # FPP. Same as v12aun8, Imre looking at MC, Imre slight smile, mouth closed
     with dissolve
 
-    u "Yikes, Imre… What'd you do this time? *Chuckles*"
+    u "Yikes, Imre... What'd you do this time? *Chuckles*"
 
     scene v12aun7
     with dissolve

@@ -40,7 +40,7 @@ label v12_julia_call:
     scene v12juc3
     with dissolve
 
-    ju "I’m so sorry honey, I forgot about the time difference... While I have you though, how is your trip going?"
+    ju "I'm so sorry honey, I forgot about the time difference... While I have you though, how is your trip going?"
 
     scene v12juc3b # TPP. Same as v12juc3, Julia smiling, mouth closed, different pose
     with dissolve
@@ -100,7 +100,7 @@ label v12_jc_riley:
     scene v12juc3d
     with dissolve
 
-    u "I guess Riley, we’ve been spending a lot more time together during a scavenger hunt."
+    u "I guess Riley, we've been spending a lot more time together during a scavenger hunt."
 
     scene v12juc3e
     with dissolve
@@ -110,7 +110,7 @@ label v12_jc_riley:
     scene v12juc3f # TPP. Same as v12juc3d, different pose
     with dissolve
 
-    u "It’s definitely been... something. *Chuckles*"
+    u "It's definitely been... something. *Chuckles*"
 
     jump v12_jc_continue
 
@@ -125,12 +125,12 @@ label v12_jc_amber:
     scene v12juc3
     with dissolve
 
-    ju "Sounds like she could be a bit of trouble... Please make sure you’re making smart choices."
+    ju "Sounds like she could be a bit of trouble... Please make sure you're making smart choices."
 
     scene v12juc3f
     with dissolve
 
-    u "Haha, don’t worry. Amber is harmless... (I think.)"
+    u "Haha, don't worry. Amber is harmless... (I think.)"
 
     jump v12_jc_continue
 
@@ -222,17 +222,17 @@ label v12_jc_penelope:
         scene v12juc3b
         with dissolve
 
-        u "I guess Penelope, but... She didn’t get to come on the trip. We’ve only spoken a bit since I’ve left."
+        u "I guess Penelope, but... She didn't get to come on the trip. We've only spoken a bit since I've left."
 
         scene v12juc3c
         with dissolve
 
-        ju "Well, it sounds like she’s important if she’s all you can think about."
+        ju "Well, it sounds like she's important if she's all you can think about."
 
     scene v12juc3b
     with dissolve
 
-    u "She’s great, yeah."
+    u "She's great, yeah."
 
     jump v12_jc_continue
 
@@ -242,7 +242,7 @@ label v12_jc_samantha:
     scene v12juc3d
     with dissolve
 
-    u "I guess Samantha... She's a wild one for sure, but we've had some good talks when I’ve been able to get her away from her brother."
+    u "I guess Samantha... She's a wild one for sure, but we've had some good talks when I've been able to get her away from her brother."
 
     scene v12juc3
     with dissolve
@@ -272,7 +272,7 @@ label v12_jc_lindsey:
     scene v12juc3f
     with dissolve
 
-    u "Yeah, she’s really sweet."
+    u "Yeah, she's really sweet."
 
     jump v12_jc_continue
 
@@ -287,7 +287,7 @@ label v12_jc_aubrey:
     scene v12juc3g
     with dissolve
 
-    ju "There’s some people you can go years without seeing, but when you do, it's as if things never changed."
+    ju "There's some people you can go years without seeing, but when you do, it's as if things never changed."
 
     jump v12_jc_continue
 

@@ -285,7 +285,7 @@ label v12_murder_mystery_reveal:
     scene v12mmr15a # TPP. Same as v12mmr15, Show MC waking up startled while sitting down, mouth closed
     with vpunch
 
-    u "(Woah...we must be here.)"
+    u "(Woah... we must be here.)"
 
     scene v12mmr14
     with dissolve

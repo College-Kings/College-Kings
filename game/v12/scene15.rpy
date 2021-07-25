@@ -435,7 +435,7 @@ label v12_riddle_riley:
             scene v12rrl34
             with dissolve
 
-            u "*Laughs* Let's get you back.."
+            u "*Laughs* Let's get you back..."
 
             scene v12rrl34a
             with dissolve
