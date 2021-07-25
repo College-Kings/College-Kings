@@ -150,12 +150,12 @@ label v12_nora_checks_mc:
         u "Well, you're more than welcome. I just had a feeling that what you had in your bag tonight was important, so I didn't even second guess going after him."
 
     else:
-        scene v12ncm5f
+        scene v12ncm5g
         with dissolve
 
         no "I... I really didn't like being surrounded like that after everything that happened."
 
-        scene v12ncm5g 
+        scene v12ncm5f
         with dissolve
 
         u "Oh, yeah I could see that. I'm really sorry I ran over there like that. I guess I was just really concerned about you."
