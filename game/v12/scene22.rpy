@@ -325,4 +325,3 @@ label v12_riley_room:
         u "(Bastard was probably listening that whole fucking time...)"
 
     jump SCENE_23 # REPLACE WITH PROPER SCENE LABEL
-

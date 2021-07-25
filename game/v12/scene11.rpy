@@ -399,4 +399,3 @@ label v12_paris_hotel:
     with dissolve
 
     jump v12_room_chloe_riley #scene 12
-

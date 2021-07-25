@@ -217,4 +217,4 @@ label v12_penelope_call:
 
             pause 0.75
 
-            jump v12_roomate_talk #scene 4 
+            jump v12_roomate_talk #scene 4

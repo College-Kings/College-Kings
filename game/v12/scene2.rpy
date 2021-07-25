@@ -302,4 +302,3 @@ label v12_nora_checks_mc:
     
     else:
         jump v12_penelope_call #scene 3a
-
