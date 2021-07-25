@@ -288,11 +288,11 @@ label v12_nora_checks_mc:
 
         pause 0.75
 
-        scene v12cnm9 # TPP. Nora leaves
+        scene v12ncm9 # TPP. Nora leaves
         with dissolve
 
     else:
-        scene v12cnm9
+        scene v12ncm9
         with dissolve
 
     pause 1
