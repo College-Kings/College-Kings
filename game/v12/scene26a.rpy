@@ -228,7 +228,8 @@ label v12_follow_chris:
             scene v12chf4b
             with dissolve
 
-            ch "I'm glad I have you man, I feel like I've been alone with this whole situation. That's why I wanted to go out with the guys... I was hoping I could get some advice with the whole Nora situation, but obviously it doesn't even matter anymore."
+            ch "I'm glad I have you man, I feel like I've been alone with this whole situation. That's why I wanted to go out with the guys..."
+            ch "I was hoping I could get some advice with the whole Nora situation, but obviously it doesn't even matter anymore."
 
             scene v12chf4a
             with dissolve

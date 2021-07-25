@@ -233,7 +233,8 @@ label v12_riley_cafe:
     scene v12ric4b
     with dissolve
 
-    ri "*Laughs* Believe it or not, it's from a movie. One of my favorite actors who, now that I think about it, is actually from France, he traveled to America in the movie for an undercover mission and had never been to America before that."
+    ri "*Laughs* Believe it or not, it's from a movie. One of my favorite actors who, now that I think about it, is actually from France."
+    ri "He traveled to America in the movie for an undercover mission and had never been to America before that."
 
     scene v12ric4
     with dissolve

@@ -161,7 +161,8 @@ label v12_nora_checks_mc:
         scene v12ncm5h 
         with dissolve
 
-        no "You know... That's the odd thing. When I looked up and you were there, it didn't bother me. I was actually happy you ran over to me. It kinda seems like whenever I really need someone, even if it's just to talk, you're always around."
+        no "You know... That's the odd thing. When I looked up and you were there, it didn't bother me. I was actually happy you ran over to me."
+        no "It kinda seems like whenever I really need someone, even if it's just to talk, you're always around."
 
         scene v12ncm5f
         with dissolve
@@ -246,7 +247,8 @@ label v12_nora_checks_mc:
     scene v12ncm5i
     with dissolve
 
-    no "*Sighs* It's fine. At least you didn't mean to. Chris is all Charli wants to talk about. He thinks talking about it will make me feel better. I get that he's trying to be nice, so I can't be mad... But jeez... Plus, I just met the guy you know?"
+    no "*Sighs* It's fine. At least you didn't mean to. Chris is all Charli wants to talk about. He thinks talking about it will make me feel better."
+    no "I get that he's trying to be nice, so I can't be mad... But jeez... Plus, I just met the guy you know?"
 
     scene v12ncm5f
     with dissolve

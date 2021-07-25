@@ -156,7 +156,8 @@ label v12_amber_bus:
 
     am "It's not just that, I just feel like this is really serious for her and she wants to experiment with other girls and she's all fragile and shit."
     
-    am "I just wanna have fun. I just don't think we're a good match, you know? On the ferry we talked about it a little bit, but got interrupted by Mr. Lee so I didn't really get to fully explain and I think she may be upset."
+    am "I just wanna have fun. I just don't think we're a good match, you know? On the ferry we talked about it a little bit, but got interrupted by Mr. Lee."
+    am "So I didn't really get to fully explain and I think she may be upset."
 
     scene v12amb3a
     with dissolve

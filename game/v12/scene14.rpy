@@ -447,7 +447,8 @@ label v12_chloe_cafe:
                 scene v12chc5o
                 with dissolve
 
-                cl "You know what, I'm not gonna jump to any conclusions. If she really did plan on doing something like that she'd have to be a lunatic. Rather than seeing how she can help she'd rather just take over? No way. This can't be real."
+                cl "You know what, I'm not gonna jump to any conclusions. If she really did plan on doing something like that she'd have to be a lunatic."
+                cl "Rather than seeing how she can help she'd rather just take over? No way. This can't be real."
 
     scene v12chc5p
     with dissolve

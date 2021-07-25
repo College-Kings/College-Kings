@@ -194,7 +194,8 @@ label v12_nora_robbed:
             scene v12nrb79 # FPP. MC looking at Charli, Charli mouth open, smirking, looking at Imre
             with dissolve
 
-            charli "Mocking other people's relationships behind their back and then trying to act like you actually care when looking them eye to eye... I don't even have to try to make you look like a piece of shit, I just need to speak the truth."
+            charli "Mocking other people's relationships behind their back and then trying to act like you actually care when looking them eye to eye..."
+            charli "I don't even have to try to make you look like a piece of shit, I just need to speak the truth."
             
             scene v12nrb7b # FPP. Imre annoyed, mouth open, looking at Charli's direction
             with dissolve

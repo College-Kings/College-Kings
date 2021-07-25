@@ -288,7 +288,8 @@ label v12_party_wake_up:
         scene v12pwu16
         with dissolve
 
-        li "I've come to you so many times over the past few weeks, Chloe. Opening up to you and all of your decisions in hopes that you'd be even a tiny bit open to what us girls want. And you just refuse to hear any advice."
+        li "I've come to you so many times over the past few weeks, Chloe. Opening up to you and all of your decisions in hopes that you'd be even a tiny bit open to what us girls want."
+        li "And you just refuse to hear any advice."
 
         scene v12pwu17
         with dissolve

@@ -104,7 +104,8 @@ label v12_nora_exploring:
     scene v12noe2k
     with dissolve
 
-    no "I mean, Europe's been great, I'm not gonna lie. There's been a lot I wanted to see that I got to see and I got a little of a vacation. I just didn't get to escape every problem like I expected to, but maybe it was immature to think I could."
+    no "I mean, Europe's been great, I'm not gonna lie. There's been a lot I wanted to see that I got to see and I got a little of a vacation."
+    no "I just didn't get to escape every problem like I expected to, but maybe it was immature to think I could."
 
     scene v12noe2h
     with dissolve
