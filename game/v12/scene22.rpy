@@ -159,7 +159,7 @@ label v12_riley_room:
     scene v12rir11
     with dissolve
 
-    u "But I'm not just \"anyone,\" I'm [name]. *Chuckles*"
+    u "But I'm not just \"anyone\", I'm [name]. *Chuckles*"
 
     scene v12rir11a
     with dissolve

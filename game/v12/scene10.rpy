@@ -89,7 +89,7 @@ label v12_amber_bus:
             scene v12amb3d
             with dissolve
 
-            u "*Laughs*" 
+            u "*Laughs*"
 
     scene v12amb3e
     with dissolve
@@ -350,7 +350,7 @@ label v12_amber_bus:
     scene v12amb3h
     with dissolve
 
-    u "So what, superheroes are \"vigilantes\"? *Laughs*"
+    u "So what, superheroes are \"vigilinties\"? *Laughs*"
 
     scene v12amb3j # FPP. Same as v12amb3, Amber leaning forwards, looking across the aisle to Ms. Rose, Amber neutral expression, mouth open
     with dissolve

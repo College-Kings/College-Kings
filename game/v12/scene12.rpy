@@ -236,7 +236,7 @@ label v12_room_chloe_riley:
         scene v12crm12b
         with dissolve
 
-        ri "Yeah, of course. You were doing a bunch of suspicious shit but, everyone was being a little sus. Some people were even acting like the killer just to throw people off the trail..." 
+        ri "Yeah, of course. You were doing a bunch of suspicious shit but, everyone was being a little sus. Some people were even acting like the killer just to throw people off the trail..."
         ri "Damn imposters. Should've just trusted my gut and kept a better eye on you."
 
         scene v12crm12a

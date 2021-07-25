@@ -179,7 +179,7 @@ label v12_roomate_talk:
         scene v12rcr5
         with dissolve
 
-        cl "Not enough, haha. I don't know why, but I've had the hiccups so much lately." 
+        cl "Not enough, haha. I don't know why, but I've had the hiccups so much lately."
             
         scene v12rcr5e
         with dissolve
