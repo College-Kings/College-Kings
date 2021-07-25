@@ -139,12 +139,12 @@ label v12_nora_checks_mc:
 
             u "Sometimes it's about just doing the right thing."
 
-        scene v12ncm5f 
+        scene v12ncm5g
         with dissolve
 
         no "The right thing for me tonight was to make sure I came over here and thanked you."
 
-        scene v12ncm5g 
+        scene v12ncm5f
         with dissolve
 
         u "Well, you're more than welcome. I just had a feeling that what you had in your bag tonight was important, so I didn't even second guess going after him."
@@ -286,7 +286,7 @@ label v12_nora_checks_mc:
         scene v12ncm8 # TPP. Nora gives MC a hug
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
         scene v12ncm9 # TPP. Nora leaves
         with dissolve
