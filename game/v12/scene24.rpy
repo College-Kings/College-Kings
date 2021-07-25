@@ -66,4 +66,4 @@ label v12_simplr_convo:
 
     pause 0.75
 
-    jump v12_julia_call
+    jump v12_julia_call #scene 25

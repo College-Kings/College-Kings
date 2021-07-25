@@ -199,4 +199,4 @@ label v12_nora_chris_fight:
 
             jump scene26b
         "Go to Chris":
-            jump scene26a
+            jump v12_follow_chris #scene 26a

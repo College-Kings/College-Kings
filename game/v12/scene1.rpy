@@ -307,7 +307,7 @@ label v12_nora_robbed:
 
             play sound "sounds/knock.mp3"
 
-            jump v12_nora_checks_mc
+            jump v12_nora_checks_mc #scene 2
 
         "Chase after robber":
-            jump v12_chase_robber
+            jump v12_chase_robber #scene 1a

@@ -457,5 +457,6 @@ label v12_penelope_roof:
             with dissolve
 
             pause 0.75
-            
-    jump v12_roomate_talk # REPLACE WITH PROPER SCENE LABEL
+
+    jump v12_roomate_talk # Scene 4  
+

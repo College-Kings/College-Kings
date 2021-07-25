@@ -15,7 +15,7 @@ init python:
         def kill(self):
             # Check Competitive stat
             if self.stats["Competitive"] == True and len(v12s7_killList) < 3:
-                self.point -= 1
+                self.points -= 1
             elif self.stats["Competitive"] == False and len(v12s7_killList) < 3:
                 self.points += 1
 
@@ -34,6 +34,9 @@ init python:
 
             # Add character to kill list
             v12s7_killList.append(self)
+
+        def resetPoints(self):
+            self.points = 0
             
 
 # Declare characters used by this game. The color argument colorizes the name of the character.

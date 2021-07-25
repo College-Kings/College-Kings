@@ -365,4 +365,4 @@ label v12_jc_continue:
     scene v12juc8 # TPP. Show MC walking in the hotel room corridor, slight smile, mouth closed
     with dissolve
 
-    jump v12_nora_chris_fight
+    jump v12_nora_chris_fight #scene 26

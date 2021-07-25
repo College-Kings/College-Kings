@@ -11,7 +11,7 @@ init python:
 
         contact_Amber.newMessage(_("It's only fair, right? Make us even"))
         if config_censored:
-            contact_Amber.addImgReply("images/gui/censoredPopup/censoredBackground.webp")
+            contact_Amber.addImgReply("gui/censoredPopup/censoredBackground.webp")
 
         elif joinwolves:
             contact_Amber.addImgReply("images/v8/Scene 19/w_dick_pic.webp")
@@ -27,7 +27,7 @@ init python:
         contact_Amber.addReply(_("Now? What about you?"))
         
         if config_censored:
-            contact_Amber.newImgMessage("images/gui/censoredPopup/censoredBackground.webp")
+            contact_Amber.newImgMessage("gui/censoredPopup/censoredBackground.webp")
 
         else:
             contact_Amber.newImgMessage("images/v8/Scene 19/amb_pussy_pic.webp")

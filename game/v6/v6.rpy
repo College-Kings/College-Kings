@@ -2769,8 +2769,7 @@ label emsex_a:
 
     show screen emilysexoverlay
 
-    label emhead:
-
+label emhead:
     scene emvid3
     with dissolve
 
@@ -4439,7 +4438,7 @@ label afteraubrey:
         play sound "sounds/vibrate.mp3"
 
         if config_censored:
-            $ contact_Aubrey.newImgMessage("images/gui/censoredPopup/censoredBackground.webp", queue=False)
+            $ contact_Aubrey.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
         else:
             $ contact_Aubrey.newImgMessage("images/text3.webp", queue=False)
 

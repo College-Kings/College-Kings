@@ -65,4 +65,5 @@ label v12_dock_arrival:
 
     pause 0.75
 
-    jump v12_amber_bus
+    jump v12_amber_bus #scene 10
+

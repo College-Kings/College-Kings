@@ -52,6 +52,6 @@ label v12_room_sneak:
     pause 0.75
 
     if v11_riley_roomate:
-        jump scene31a
+        jump v12_aubrey_wake_up_ri #scene 31a
     else:
-        jump v12_aubrey_wake_up
+        jump v12_aubrey_wake_up #scene 31

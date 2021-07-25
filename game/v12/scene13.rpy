@@ -123,7 +123,7 @@ label v12_cafe:
         scene v12caf8 # TPP. MC and chloe in front of the cafe
         with dissolve
 
-        jump v12_chloe_cafe
+        jump v12_chloe_cafe #scene 14
 
     else:
         scene v12caf1
@@ -214,4 +214,5 @@ label v12_cafe:
         scene v12caf16 # TPP. MC and riley in front of the cafe
         with dissolve
 
-        jump v12_riley_cafe
+        jump v12_riley_cafe #scene 14a 
+

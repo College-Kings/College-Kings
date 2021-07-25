@@ -1,5 +1,5 @@
 screen phoneTutorial():
-    zorder 100
+    zorder 200
     tag tutorial
 
     default phoneTutorials = [
@@ -44,7 +44,7 @@ screen phoneTutorial():
 
 
 screen kctTutorial():
-    zorder 100
+    zorder 200
     tag tutorial
 
     default kctTutorials = [
@@ -88,7 +88,7 @@ screen kctTutorial():
 
 
 screen freeRoamTutorial():
-    zorder 100
+    zorder 200
     tag tutorial
 
     default freeRoamTutorials = [
@@ -129,7 +129,7 @@ screen freeRoamTutorial():
                     action SetVariable("freeRoamTutorialPage", 1)
 
 screen influenceTutorial():
-    zorder 100
+    zorder 200
     tag tutorial
 
     default influenceTutorials = [
