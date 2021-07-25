@@ -4,8 +4,6 @@
 # Time: Evening
 # Phone Images: None 
 
-default v12_aubrey_gf = False
-
 label v12_nursing_aubrey:
     scene v12aun1 # TPP. Show MC and Aubrey going into the hotel room, MC helping Aubrey walk, Aubrey hurt her ankle, MC worried, mouth closed, Aubrey in pain, mouth closed
     with dissolve

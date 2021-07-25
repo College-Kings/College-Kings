@@ -4,8 +4,6 @@
 # Time: Morning
 # Phone Images: None
 
-default chrismad = False
-
 label v12_follow_chris:
     scene v12chf1 # TPP. Show Chris leaving the hotel, MC going after him, MC worried, mouth closed, Chris angry, mouth open, holding the wrist of the hand he used to punch
     with dissolve
