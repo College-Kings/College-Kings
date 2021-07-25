@@ -240,7 +240,7 @@ label v12_nora_robbed:
             scene v12nrb9d # FPP. Same as v12nrb9b, Amber looking at Imre's direction, Amber mouth open, smiling
             with dissolve
 
-            am "Okay, calm down little guy... *Chuckles* I didn't want to mess up my nails so I just took the easy route and made sure he wouldn't be able to... Well, reproduce in the near future. *Chuckles*"
+            am "Okay, calm down little guy... *Chuckles* I didn't want to mess up my nails so I just took the easy route and made sure he wouldn't be able to... well, reproduce in the near future. *Chuckles*"
 
             scene v12nrb7d # FPP. Same as v12nrb7c, Imre holding his crotch, mouth open, smiling
             with dissolve
@@ -305,7 +305,7 @@ label v12_nora_robbed:
             scene v12nrb15 # TPP. MC in his room
             with dissolve
 
-            u "(Amber's tough as nails. Definitely don't wanna be on her bad side. Maybe if I would've went after the robber I could've been the hero.)"
+            u "(Amber's tough as nails. Definitely don't wanna be on her bad side. Maybe if I would've gone after the robber I could've been the hero.)"
 
             play sound "sounds/knock.mp3"
 
