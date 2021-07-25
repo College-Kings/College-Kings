@@ -169,7 +169,7 @@ label v12_nora_robbed:
             scene v12nrb6 # TPP. MC continues walking next to Imre, Imre and MC surprised, mouths closed
             with fade
 
-            pause 0.75
+            pause 1.25
 
             scene v12nrb7 # FPP. Imre leans over to mc while their walking, mouth opened and surprised look (background change)
             with dissolve

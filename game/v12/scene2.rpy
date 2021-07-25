@@ -32,6 +32,8 @@ label v12_nora_checks_mc:
     scene v12ncm4 # TPP. MC and nora sit at the foot of mc's bed
     with dissolve
 
+    pause 1
+
     if v12_chase_robber: 
         scene v12ncm5 # FPP. Nora looks at mc with a worried face, mouth opened
         with dissolve
@@ -292,6 +294,8 @@ label v12_nora_checks_mc:
     else:
         scene v12cnm9
         with dissolve
+
+    pause 1
 
     if v11_pen_goes_europe:
         jump v12_penelope_roof #scene 3
