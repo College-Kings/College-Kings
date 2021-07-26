@@ -151,12 +151,12 @@ label v12_morning_london:
         scene v12mol6 # TPP. Show MC grabbing his pillow, slight smile, mouth open
         with dissolve
 
-        pause 0.75
+        pause 1
 
         scene v12mol7 # TPP. Show MC sneaking up next to Riley, MC holding the pillow, ready to hit her, MC slight grin, mouth closed
         with dissolve
 
-        pause 0.75
+        pause 0.6
 
         scene v12mol7a # TPP. Same as v12mol7, Riley scaring MC, MC falling down to the floor, MC startled, mouth closed, Riley mouth open
         with dissolve
@@ -169,6 +169,7 @@ label v12_morning_london:
         pause 0.75
 
         scene v12mol8 # FPP. Same positioning as v12mol7b, MC standing now, MC and Riley looking at each other, Riley smile, mouth closed
+        with dissolve
 
         u "Oh shit!"
 
@@ -197,7 +198,7 @@ label v12_morning_london:
 
     play sound "sounds/knock.mp3"
 
-    pause 0.75
+    pause 1.25
     
     scene v12mol10 # TPP. Show MC walking towards the door to the hallway, slight smile, mouth closed (Only MC in shot)
     with dissolve
@@ -207,7 +208,7 @@ label v12_morning_london:
     scene v12mol11 # TPP. Show MC opening the door to the hallway, slight smile, mouth closed, Amber on the other side, mouth closed, slight smile
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12mol12 # FPP. MC and Amber looking at each other (MC in room, Amber in hallway), Amber slight smile, mouth open
     with dissolve
@@ -297,10 +298,12 @@ label v12_morning_london:
         scene v12mol10a
         with dissolve
 
+        pause 0.75
+
         scene v12mol12a
         with dissolve
 
-        u "Let's go slowpoke. *Chuckles*"
+        u "Let's go, slowpoke. *Chuckles*"
 
     scene v12mol16 # TPP. Show MC and Amber walking in the hotel room corridor, both slightly smiling, mouths closed
     with dissolve
@@ -320,6 +323,6 @@ label v12_morning_london:
     scene v12mol19 # TPP. Show the shuttle on the road
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     jump v12_docks #scene 6
