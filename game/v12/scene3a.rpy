@@ -8,11 +8,11 @@ label v12_penelope_call:
     with dissolve
 
     pause 0.75
+    
+    play sound "sounds/call.mp3"
 
     scene v12pec1a # TPP. Same as v11pec1, MC slightly startled, mouth closed
     with dissolve
-
-    play sound "sounds/call.mp3"
 
     pause 0.75
 
@@ -176,11 +176,11 @@ label v12_penelope_call:
             pe "Yeah?"
 
             menu:
-                "Nevermind":
+                "Never mind":
                     scene v12pec3c
                     with dissolve
 
-                    u "Oh uhm, nevermind... Sorry. Talk to you later."
+                    u "Oh uhm, never mind... Sorry. Talk to you later."
 
                     scene v12pec3d
                     with dissolve
