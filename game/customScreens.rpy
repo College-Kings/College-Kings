@@ -202,10 +202,10 @@ screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings_
         idle "images/steam/playNow.webp"
         hover "images/steam/playNowHover.webp"
 
-        if achievement.steam.dlc_installed(1624520):
+        if achievement.dlc_installed(1624520):
             action [Function(renpy.quit, relaunch=True, save=True)]
-        elif achievement.steam.is_overlay_enabled():
-            action Function(achievement.steam.activate_overlay_to_web_page, link)
+        elif achievement.is_overlay_enabled():
+            action Function(achievement.activate_overlay_to_web_page, link)
         else:
             action OpenURL(link)
         align (0.5, 0.55)
