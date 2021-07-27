@@ -318,5 +318,7 @@ image Imre_Jab_block = "images/v10/Scene 7/Animations/END/MCIMRE-JABBLOCKED-END.
 image Imre_Kick_hit = "images/v10/Scene 7/Animations/END/MCIMRE-KICKHIT-END.webp"
 image Imre_Kick_block = "images/v10/Scene 7/Animations/END/MCIMRE-KICKBLOCKED-END.webp"
 
+# v11.0
+
 # Misc
 image credits = Movie(play="images/credits.webm", Loop = True)

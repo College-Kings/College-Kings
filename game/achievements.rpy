@@ -1,4 +1,4 @@
-init python:
+init python: # test 69
     achievements = []
 
     class Achievement:
@@ -93,3 +93,19 @@ init python:
     Achievement("family_secrets", "Find out Nora and Ms. Rose are family", "family_secrets")
     Achievement("on_the_court", "Have a rematch with Chloe", "on_the_court")
     Achievement("hard_decisions", "Tell Chloe what Nora said", "chloe_over_nora")
+
+    #v11.0
+    Achievement("perry_mason", "Successfully defend Penelope", "perry_mason")
+    Achievement("candy_crusher", "Candy's sex scene", "candy_crusher")
+    Achievement("hold_your_horses", "Balance the horse at the end of the manhunt", "hold_your_horses")
+    Achievement("off_your_high_horse", "Don't balance the horse at the end of the manhunt", "off_your_high_horse")
+    Achievement("cross_your_heart", "Kiss Penelope at the airport", "cross_your_heart")
+    Achievement("on_target", "Hit a bullseye at Duncan's", "on_target")
+    Achievement("just_a_theory", "Tell Riley dinosaurs aren't real", "just_a_theory")
+    Achievement("fruity", "Have a cocktail at the bar", "fruity")
+    Achievement("earn_your_owl", "Get all the HP answers right", "earn_your_owl")
+    Achievement("political_strategist", "Tell Autumn you're into politics and encourage Lindsey to run", "political_strategist")
+    Achievement("two_timer", "Date both Lauren and Chloe", "two_timer")
+    Achievement("dont_just_stand_there", "Break Imre and Ryan apart", "dont_just_stand_there")
+    Achievement("pretty_in_pink", "Nora buys the pink bra", "pretty_in_pink")
+
