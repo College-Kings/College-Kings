@@ -72,10 +72,8 @@ init python:
 
             # Send next queued message(s)
             try:
-                while True:
+                while not self.getReplies():
                     self.sentComments.append(self.pendingComments.pop(0))
-                    if self.getReplies():
-                        break
             except IndexError: pass
 
         def getUsername(self):
