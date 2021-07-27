@@ -207,7 +207,7 @@ style input:
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
 
-screen choice(items, time=3):
+screen choice(items, seconds=0, failLabel=""):
     # Show KCT
     if showkct:
         use kctChoice
@@ -261,12 +261,12 @@ screen choice(items, time=3):
                     if count > 1:
                         xalign 0.5
 
-    if timed:
-        timer time:
-            action [SetVariable("timed", False), Jump(timerexit)]
+    if seconds:
+        timer seconds:
+            action Jump(failLabel)
 
         bar:
-            value AnimatedValue(0, time, time, time)
+            value AnimatedValue(0, seconds, seconds, seconds)
             at alpha_dissolve
 
     if config_debug:
