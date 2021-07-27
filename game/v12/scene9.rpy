@@ -8,12 +8,12 @@ label v12_dock_arrival:
     scene v12doa1 # TPP. Show MC walking on the dock, neutral expression, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12doa2 # TPP. Show Imre running past MC, MC slightly surprised, mouth closed, Imre happy, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12doa3 # FPP. Imre ahead of MC, Imre smiling, looking at the sky, mouth open as he is screaming, Imre's arms are raised, pointing to the sky
     with dissolve
