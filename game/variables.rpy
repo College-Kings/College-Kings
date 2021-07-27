@@ -549,6 +549,3 @@ default v12_chase_robber = False
 default v12s7_seenList = []
 default v12s7_killList = []
 default v12_msrose_sex = False
-default v12_aubrey_gf = False
-default v12_girl = "riley"
-default chrismad = False
