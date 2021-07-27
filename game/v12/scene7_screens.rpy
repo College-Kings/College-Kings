@@ -1,4 +1,9 @@
 screen murderButtonOverlay(character):
+    if v12s7_seenList:
+        add "openEyeImage"
+    else:
+        add "closedEyeImage"
+
     textbutton "Murder!":
         align (0.9, 0.9)
         if v12s7_seenList:
