@@ -499,7 +499,7 @@ label v12_chase_robber:
     $ contact_Imre.addReply("You see Charli's comment?", func=None)
     $ contact_Imre.newMessage("No, one sec", queue=True)
     $ contact_Imre.newMessage("I'm gonna beat his ass", queue=True)
-    $ contact_Imre.addReply("Haha ", func=None)
+    $ contact_Imre.addReply("Haha", func=None)
 
     scene v12car30b # TPP Same angle as v12car30, MC sitting on bed, putting his phone away in his pocket
     with dissolve
