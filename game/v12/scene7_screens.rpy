@@ -1,8 +1,13 @@
 screen murderButtonOverlay(character):
-    if v12s7_seenList:
-        add "images/v12/Scene 7/gui/eye_open.webp"
-    else:
-        add "images/v12/Scene 7/gui/eye_closed.webp"
+    tag freeRoam
+
+    hbox:
+        if v12s7_seenList:
+            add "images/v12/Scene 7/gui/eye_open.webp"
+        else:
+            add "images/v12/Scene 7/gui/eye_closed.webp"
+
+        text "This person can currently be seen by someone else"
 
     imagebutton:
         align (0.9, 0.9)
