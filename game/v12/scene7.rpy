@@ -33,37 +33,6 @@ Args:
     josh (CustomCharacter)
 """
 
-default v12s7_lauren = False
-default v12s7_emily = False
-default v12s7_emily2 = False
-default v12s7_samantha = False
-default v12s7_samantha2 = False
-default v12s7_msrose = False
-default v12s7_penelope = False
-default v12s7_chris = False
-default v12s7_imre = False
-default v12s7_imre2 = False
-default v12s7_lindsey = False
-default v12s7_lindsey2 = False
-default v12s7_josh = False
-default v12s7_josh2 = False
-default v12s7_chloe = False
-default v12s7_riley = False
-default v12s7_riley2 = False
-default v12s7_riley3 = False
-default v12s7_mrlee = False
-default v12s7_cameron = False
-default v12s7_ryan = False
-default v12s7_amber = False
-default v12s7_aubrey = False
-default v12s7_aubrey2 = False
-default v12s7_nora = False
-default v12s7_charli = False
-
-default v12s7_lindsey_moved = False
-default v12s7_aubrey_moved = False
-
-
 label v12s7fr:
     scene v12fer1 # FPP. Show Mr Lee, smiling mouth open
     with dissolve
