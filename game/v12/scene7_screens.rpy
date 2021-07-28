@@ -16,7 +16,7 @@ screen murderButtonOverlay(character):
         idle Transform("images/v12/Scene 7/gui/gun.png", size=(100, 100))
         hover Transform("images/v12/Scene 7/gui/gun_hover.png", size=(100, 100))
         if v12s7_seenList:
-            action Jump("MurderFail") # Check Label after transcribing review
+            action Jump("v12s7_mc_caught") # Check Label after transcribing review
         else:
             action [ Function(character.kill), Jump("MurderSuccess") ] # Check Label after transcribing review
 
