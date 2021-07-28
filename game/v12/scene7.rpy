@@ -374,7 +374,7 @@ label v12s7fr:
 
 label v12s7_aubrey1:
     $ v12s7_aubrey = True
-    $ v12s7_killList = [nora]
+    $ v12s7_seenList = [nora]
 
     scene v12ferau1 # FPP. Note for renderer, all scene images starting v12ferau will be the first conversation with Aubrey on the upper front balcony of the boat. Her and Nora are both up there but the conversations are completely seperate. Show Aubrey, flirty look, mouth open
     with dissolve
@@ -1816,7 +1816,7 @@ label v12s7_ryan_imre1:
     $ v12s7_imre = True
     
     $ v12s7_seenList = [ryan, imre, amber]
-    if v12s7_riley1 and not v12s7_riley2:
+    if v12s7_riley and not v12s7_riley2:
         $ v12s7_seenList.remove(amber)
 
     scene v12ferryi1 # FPP. Show ryan from a distance looking at imre off screen, mouth open
@@ -2085,7 +2085,7 @@ label v12s7_ryan1:
     $ v12s7_ryan = True
 
     $ v12s7_seenList = [ryan, amber]
-    if (v12s7_riley1 and not v12s7_riley2) or amber in v12s7_killList:
+    if (v12s7_riley and not v12s7_riley2) or amber in v12s7_killList:
         $ v12s7_seenList.remove(amber)
 
     scene v12ferry1 # FPP. Show ryan, slight smile, mouth closed
@@ -3281,7 +3281,7 @@ label v12s7_msrose_kill:
 
 label v12s7_penelope1:
     $ v12s7_penelope = True
-    $ v12s7_killList = []
+    $ v12s7_seenList = []
 
     scene v12ferpen1 # FPP. Show penelope, neutral look, mouth closed
     with dissolve
@@ -3562,9 +3562,9 @@ label v12s7_penelope_kill:
 label v12s7_amber1:
     $ v12s7_amber = True
     
-    $ v12s7_killList = [imre, ryan]
+    $ v12s7_seenList = [imre, ryan]
     if v12s7_imre:
-        $ v12s7_killList = []
+        $ v12s7_seenList = []
 
     ### ERROR: -If talk to Amber ###
     scene v12feram1 # FPP. Show amber from a distance, slight smile, mouth open
@@ -3791,7 +3791,7 @@ label v12s7_amber_kill:
 
 label v12s7_riley2:
     $ v12s7_riley2 = True
-    $ v12s7_killList = []
+    $ v12s7_seenList = []
 
     scene v12ferrile1 # FPP. Show riley, slight smile, mouth closed
     with dissolve
@@ -3998,9 +3998,9 @@ label v12s7_riley2_kill:
 label v12s7_riley2_amber:
     $ v12s7_riley2 = True
 
-    $ v12s7_killList = [amber, ryan, imre]
+    $ v12s7_seenList = [amber, ryan, imre]
     if v12s7_ryan:
-        $ v12s7_killList = [amber]
+        $ v12s7_seenList = [amber]
 
     ### ERROR: -If talk to Riley 2 and Amber ###
     scene v12feramb1 # FPP. Show amber, from a distance, looking at riley out of shot, mouth open
@@ -4052,7 +4052,7 @@ label v12s7_riley2_amber:
 
 label v12s7_sam_cameron:
     $ v12s7_samantha = True
-    $ v12s7_killList = [ms_rose]
+    $ v12s7_seenList = [ms_rose]
 
     scene v12fersaca1 # FPP. Show sam, slight smile, mouth open
     with dissolve
@@ -4257,7 +4257,7 @@ label v12s7_sam_cameron:
 
 label v12s7_sam2:
     $ v12s7_samantha2 = True
-    $ v12s7_killList = []
+    $ v12s7_seenList = []
 
     scene v12fersam1 # FPP. Show samantha neutral look, mouth closed
     with dissolve
@@ -4569,7 +4569,7 @@ label v12s7_sam2_kill:
 
 label v12s7_cameron2:
     $ v12s7_cameron = True
-    $ v12s7_killList = []
+    $ v12s7_seenList = []
 
     scene v12fercam1 # FPP. Show cameron from a distance, mouth open
     with dissolve
@@ -4687,9 +4687,9 @@ label v12s7_cameron2_kill:
 label v12s7_nora1:
     $ v12s7_nora = True
 
-    $ v12s7_killList = [riley]
+    $ v12s7_seenList = [riley]
     if v12s7_aubrey_moved:
-        $ v12s7_killList = []
+        $ v12s7_seenList = []
 
     scene v12fernor1 # FPP. Show nora, mouth closed
     with dissolve
@@ -5013,7 +5013,7 @@ label v12s7_nora1_kill:
 
 label v12s7_chris1:
     $ v12s7_chris = True
-    $ v12s7_killList = []
+    $ v12s7_seenList = []
 
     scene v12ferchr1 # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
     with dissolve
@@ -5206,11 +5206,11 @@ label v12s7_mrlee:
 label v12s7_josh1:
     $ v12s7_josh = True
 
-    $ v12s7_killList = []
-    if v12s7_riley1 and not v12s7_riley2 and riley not in v12s7_killList:
-        $ v12s7_killList.append(riley)
-    if chloe in v12s7_killList:
-        $ v12s7_killList.append(riley)
+    $ v12s7_seenList = []
+    if (not v12s7_riley or v12s7_riley2) and riley not in v12s7_killList:
+        $ v12s7_seenList.append(riley)
+    if chloe not in v12s7_killList:
+        $ v12s7_seenList.append(chloe)
 
     scene v12ferjo1 # FPP. Show josh, slight smile, mouth closed
     with dissolve
@@ -5313,7 +5313,7 @@ label v12s7_josh1:
 
 label v12s7_josh2:
     $ v12s7_josh2 = True
-    $ v12s7_killList = []
+    $ v12s7_seenList = []
 
     scene v12ferjos1 # FPP. Show josh, from a distance, mouth open
     with dissolve
@@ -5442,7 +5442,7 @@ label v12s7_josh2_kill:
 
 label v12s7_emily1:
     $ v12s7_emily = True
-    $ v12s7_killList = [lauren]
+    $ v12s7_seenList = [lauren]
 
     scene v12ferem1 # FPP. Show emilty from a distance mouth open
     with dissolve
@@ -5488,7 +5488,7 @@ label v12s7_emily1:
 
 label v12s7_emily2:
     $ v12s7_emily2 = True
-    $ v12s7_killList = []
+    $ v12s7_seenList = []
 
     scene v12feremi1 # FPP. Show emily annoyed look, mouth closed
     with dissolve
