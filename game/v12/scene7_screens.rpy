@@ -2,17 +2,19 @@ screen murderButtonOverlay(character):
     tag freeRoam
 
     hbox:
-        if v12s7_seenList:
-            add "images/v12/Scene 7/gui/eye_open.webp"
-        else:
-            add "images/v12/Scene 7/gui/eye_closed.webp"
+        pos (10, 10)
+        spacing 15
 
-        text "This person can currently be seen by someone else"
+        if v12s7_seenList:
+            add Transform("images/v12/Scene 7/gui/eye_open.png", size=(75, 75))
+            text "This person can currently be seen by someone else" yalign 0.5
+        else:
+            add Transform("images/v12/Scene 7/gui/eye_closed.png", size=(75, 75))
 
     imagebutton:
-        align (0.9, 0.9)
-        idle "images/v12/Scene 7/gui/gun.webp"
-        hover "images/v12/Scene 7/gui/gun_hover.webp"
+        align (0.97, 0.928)
+        idle Transform("images/v12/Scene 7/gui/gun.png", size=(100, 100))
+        hover Transform("images/v12/Scene 7/gui/gun_hover.png", size=(100, 100))
         if v12s7_seenList:
             action Jump("MurderFail") # Check Label after transcribing review
         else:
@@ -537,7 +539,7 @@ screen v12s7_front_gallery():
             insensitive "images/v12/Scene 7/Navigation 19c.webp"
             hover "images/v12/Scene 7/Navigation 19c_hover.webp"
 
-            hotspot (x, y, width, height)
+            hotspot (x, y, width, height):
                 if v12s7_riley2:
                     action Call("v12s7_free_roam_spoken", backgroundImg="", returnScreen="v12s7_front_gallery", seenList=[])
                 else:
