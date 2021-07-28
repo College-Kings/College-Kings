@@ -383,7 +383,10 @@ label v12s7_aubrey1:
     scene v12ferau1a # FPP. Same 1, mouth closed
     with dissolve
 
-    u "Well, my travelling nurse may get a little jealous. As a world famous boxer I'm always getting bumps and bruises so I have to travel with a nurse, but I wanted a little break from everyone so she's not here. I actually do have a little pain from my last fight, but that's to be expected after all the adrenaline's worn off."
+    u "Well, my travelling nurse may get a little jealous."
+    
+    u "As a world famous boxer I'm always getting bumps and bruises so I have to travel with a nurse, but I wanted a little break from everyone so she's not here."
+    u "I actually do have a little pain from my last fight, but that's to be expected after all the adrenaline's worn off."
 
     scene v12ferau1
     with dissolve
@@ -4331,162 +4334,162 @@ label v12s7_sam2:
 
             u "(Shit!) That might be Mr. Lee, shh!"
 
-        scene v12fersam1c
-        with dissolve
+    scene v12fersam1c
+    with dissolve
 
-        sam "Quick, talk murder to me. *Laughs*"
+    sam "Quick, talk murder to me. *Laughs*"
 
-        scene v12fersam1b
-        with dissolve
-
-
-        u "Well, let's see, novelist, can you pinpoint our murderer?"
-
-        scene v12fersam1c
-        with dissolve
-
-        sam "Well if I was writing this, I'd probably choose Lauren to be the murderer."
-
-        scene v12fersam1b
-        with dissolve
-
-        u "What? There's no way it'd be her."
-
-        scene v12fersam1c
-        with dissolve
-
-        sam "See, that's exactly why I'd choose her. No one would suspect her. She wouldn't even suspect herself. *Chuckles*"
-
-        scene v12fersam1b
-        with dissolve
+    scene v12fersam1b
+    with dissolve
 
 
-        u "Hmm, that's pretty smart."
+    u "Well, let's see, novelist, can you pinpoint our murderer?"
 
-        scene v12fersam1c
-        with dissolve
+    scene v12fersam1c
+    with dissolve
 
-        sam "You sound surprised. *Chuckles* Did you think I was stupid?"
+    sam "Well if I was writing this, I'd probably choose Lauren to be the murderer."
 
-        scene v12fersam1b
-        with dissolve
+    scene v12fersam1b
+    with dissolve
 
-        u "I may have wondered if it ran in the family."
+    u "What? There's no way it'd be her."
 
-        scene v12fersam1c
-        with dissolve
+    scene v12fersam1c
+    with dissolve
 
-        sam "My brother took all the stupid."
+    sam "See, that's exactly why I'd choose her. No one would suspect her. She wouldn't even suspect herself. *Chuckles*"
 
-        scene v12fersam1b
-        with dissolve
+    scene v12fersam1b
+    with dissolve
 
-        u "That's believable."
 
-        scene v12fersam1c
-        with dissolve
+    u "Hmm, that's pretty smart."
 
-        sam "Honestly, my life sucks. I'm an adult in college, but instead of having friends and living the life I want to live I'm smothered by my brother for literally no reason except he has nothing better to do. I just want to be my own person."
+    scene v12fersam1c
+    with dissolve
 
-        scene v12fersam1b
-        with dissolve
+    sam "You sound surprised. *Chuckles* Did you think I was stupid?"
 
-        u "Get a restraining order."
+    scene v12fersam1b
+    with dissolve
 
-        scene v12fersam1c
-        with dissolve
+    u "I may have wondered if it ran in the family."
 
-        sam "I've thought about it, but I don't want to take it that far. I just want him to take my wishes into consideration for once."
+    scene v12fersam1c
+    with dissolve
 
-        scene v12fersam1b
-        with dissolve
+    sam "My brother took all the stupid."
 
-        u "Maybe he does it because he cares, but gets carried away."
+    scene v12fersam1b
+    with dissolve
 
-        scene v12fersam1c
-        with dissolve
+    u "That's believable."
 
-        sam "He sure gets carried away a lot."
+    scene v12fersam1c
+    with dissolve
 
-        scene v12fersam1b
-        with dissolve
+    sam "Honestly, my life sucks. I'm an adult in college, but instead of having friends and living the life I want to live I'm smothered by my brother for literally no reason except he has nothing better to do. I just want to be my own person."
 
-        u "Haha, yeah. You mentioned Lauren, do you talk to her?"
+    scene v12fersam1b
+    with dissolve
 
-        scene v12fersam1c
-        with dissolve
+    u "Get a restraining order."
 
-        sam "I haven't, but I don't think we'd get along, she's too soft."
+    scene v12fersam1c
+    with dissolve
 
-        scene v12fersam1b
-        with dissolve
+    sam "I've thought about it, but I don't want to take it that far. I just want him to take my wishes into consideration for once."
 
-        u "I wouldn't jump to conclusions, just because someone is kind doesn't mean they're soft."
+    scene v12fersam1b
+    with dissolve
 
-        scene v12fersam1c
-        with dissolve
+    u "Maybe he does it because he cares, but gets carried away."
 
-        sam "I've never seen or heard of her doing anything exciting."
+    scene v12fersam1c
+    with dissolve
 
-        scene v12fersam1b
-        with dissolve
+    sam "He sure gets carried away a lot."
 
-        u "Well, you're not in her circle. Would you believe it if I told you on the very first day of school Riley, Imre, Lauren and I played Drink or Strip?"
+    scene v12fersam1b
+    with dissolve
 
-        scene v12fersam1c
-        with dissolve
+    u "Haha, yeah. You mentioned Lauren, do you talk to her?"
 
-        sam "There's no way Lauren played that with you guys."
+    scene v12fersam1c
+    with dissolve
 
-        scene v12fersam1b
-        with dissolve
+    sam "I haven't, but I don't think we'd get along, she's too soft."
 
-        u "She did. C'mon now, don't judge a book until you've read it all the way through."
+    scene v12fersam1b
+    with dissolve
 
-        scene v12fersam1c
-        with dissolve
+    u "I wouldn't jump to conclusions, just because someone is kind doesn't mean they're soft."
 
-        sam "Hmm, maybe I should try talking to her. Someone I definitely wanna talk to though is Amber. After seeing how fiesty she's been with the whole security thing I definitely wanna get to know her. She seems like my type of person, plus I know her and Riley are cool."
+    scene v12fersam1c
+    with dissolve
 
-        scene v12fersam1b
-        with dissolve
+    sam "I've never seen or heard of her doing anything exciting."
 
-        u "See, look at that, so many opportunities."
+    scene v12fersam1b
+    with dissolve
 
-        scene v12fersam1a
-        with dissolve
+    u "Well, you're not in her circle. Would you believe it if I told you on the very first day of school Riley, Imre, Lauren and I played Drink or Strip?"
 
-        sam "Yeah, I guess you're right."
+    scene v12fersam1c
+    with dissolve
 
-        scene v12fersam1
-        with dissolve
+    sam "There's no way Lauren played that with you guys."
 
-        u "When am I not?"
+    scene v12fersam1b
+    with dissolve
 
-        scene v12fersam1a
-        with dissolve
+    u "She did. C'mon now, don't judge a book until you've read it all the way through."
 
-        sam "Don't ruin the moment."
+    scene v12fersam1c
+    with dissolve
 
-        scene v12fersam1
-        with dissolve
+    sam "Hmm, maybe I should try talking to her. Someone I definitely wanna talk to though is Amber. After seeing how fiesty she's been with the whole security thing I definitely wanna get to know her. She seems like my type of person, plus I know her and Riley are cool."
 
-        u "Haha, my bad."
+    scene v12fersam1b
+    with dissolve
 
-        scene v12fersam1a
-        with dissolve
+    u "See, look at that, so many opportunities."
 
-        sam "Well, I need to finish my book. If I don't, no one will. See you around [name] and thanks for the talk."
+    scene v12fersam1a
+    with dissolve
 
-        scene v12fersam1
-        with dissolve
+    sam "Yeah, I guess you're right."
 
-        u "Anytime."
+    scene v12fersam1
+    with dissolve
 
-        scene v12fersam3 # FPP. Show sam walking away
-        with dissolve
-        
-        call screen v12s7_seating_front
+    u "When am I not?"
+
+    scene v12fersam1a
+    with dissolve
+
+    sam "Don't ruin the moment."
+
+    scene v12fersam1
+    with dissolve
+
+    u "Haha, my bad."
+
+    scene v12fersam1a
+    with dissolve
+
+    sam "Well, I need to finish my book. If I don't, no one will. See you around [name] and thanks for the talk."
+
+    scene v12fersam1
+    with dissolve
+
+    u "Anytime."
+
+    scene v12fersam3 # FPP. Show sam walking away
+    with dissolve
+    
+    call screen v12s7_seating_front
 
 
 label v12s7_sam2_kill:
