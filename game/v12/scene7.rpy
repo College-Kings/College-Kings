@@ -35,7 +35,6 @@ Args:
 
 label v12s7fr:
     scene v12fer1 # FPP. Show Mr Lee, smiling mouth open
-    with dissolve
 
     lee "Students, please gather around. I have something very exciting to announce."
 
@@ -377,7 +376,7 @@ label v12s7_aubrey1:
     $ v12s7_seenList = [nora]
 
     scene v12ferau1 # FPP. Note for renderer, all scene images starting v12ferau will be the first conversation with Aubrey on the upper front balcony of the boat. Her and Nora are both up there but the conversations are completely seperate. Show Aubrey, flirty look, mouth open
-    with dissolve
+
     au "Hey there, handsome. Please make sure you're being careful, okay? I'd hate for you to get hurt, but if you do find yourself needing some love and care, don't forget to come see your favorite nurse. *Chuckles*"
 
     scene v12ferau1a # FPP. Same 1, mouth closed
@@ -558,7 +557,7 @@ label v12s7_aubrey2:
     $ v12s7_seenList = []
     
     scene v12ferauh1 # FPP. Location is in the bathroom on the ship, Show aubrey, seductive look, mouth open
-    with dissolve
+
     au "Finally! Took you long enough..."
 
     scene v12ferauh1a # FPP. same 1, mouth closed
@@ -701,7 +700,7 @@ label v12s7_riley1:
     ### ERROR: -If talk to Chloe and Riley 1 ###
     ### ERROR: -If MC uses the button at all during this conversation he is caught ###
     scene v12ferri1 # FPP. location is the upper rear outside seating area on the right side of the ship as seen on miro. Show chloe(from a distance as mc is overhearing the convo), looking at riley out of shot, slight annoyed look, mouth open
-    with dissolve
+
 
     cl "Rich people are the actual problem. You guys get to sit around on stacks of money and the little guys like me have to pick up the slack for this entire country. People like you never wanna pay your taxes but I barely have two pennies to rub together and I still have to pay mine."
 
@@ -973,7 +972,7 @@ label v12s7_chloe1:
         $ v12s7_seenList.append(josh)
 
     scene v12ferch1 # FPP Show chloe slight smile, mouth closed
-    with dissolve
+
     u "Well, well. If it isn't the richest woman alive."
 
     scene v12ferch1a # FPP. same 1, mouth open
@@ -1226,7 +1225,7 @@ label v12s7_chloe1:
 
 label v12s7_chloe_kill:
     scene v12ferch7 # TPP. show mc, pointing finger guns at chloe, mouth open
-    with dissolve
+
 
     u "Boom."
 
@@ -1290,7 +1289,6 @@ label v12s7_riley3:
         $ v12s7_seenList.append(josh)
 
     scene v12ferric1 # FPP. Show riley and chloe stood together, mouths closed
-    with dissolve
 
     u "Seeing you guys together again in the same exact location is a little suspicious."
 
@@ -1421,7 +1419,6 @@ label v12s7_riley3a:
 
     ### ERROR: -If talk to Riley 3 No Chloe ###
     scene v12ferril1 # FPP. Show riley, slight smile mouth closed.
-    with dissolve
 
     u "Still alive out here, huh?"
 
@@ -1509,7 +1506,7 @@ label v12s7_riley3a:
 label v12s7_riley_kill:
 
     scene v12ferril3 # TPP. Show mc pointing finger gun at riley, mouth open
-    with dissolve
+
     u "Boom."
 
     scene v12ferril4 # FPP. Show riley, slight smile, mouth open
@@ -1556,7 +1553,7 @@ label v12s7_lauren1:
         $ v12s7_seenList.append(emily)
 
     scene v12ferla1 # FPP. Show lauren, mouth closed
-    with dissolve
+
     u "There you are."
 
     if laurenmad:
@@ -1777,7 +1774,6 @@ label v12s7_lauren1:
 label v12s7_Lauren_kill:
 
     scene v12ferla8 # TPP. Show mc pointing finger gun at lauren, mouth open
-    with dissolve
 
     u "Boom."
 
@@ -1820,7 +1816,7 @@ label v12s7_ryan_imre1:
         $ v12s7_seenList.remove(amber)
 
     scene v12ferryi1 # FPP. Show ryan from a distance looking at imre off screen, mouth open
-    with dissolve
+
     ry "Wow, look at this beautiful day, if only my wife was just as beautiful."
 
     scene v12ferryi2 # FPP. Show imre from a distance looking at ryan off screen mouth open
@@ -2089,7 +2085,6 @@ label v12s7_ryan1:
         $ v12s7_seenList.remove(amber)
 
     scene v12ferry1 # FPP. Show ryan, slight smile, mouth closed
-    with dissolve
 
     u "Your wife still hasn't come back?"
 
@@ -2245,7 +2240,6 @@ label v12s7_ryan1:
 label v12s7_ryan_kill:
 
     scene v12ferry3 # TPP. Show MC pointing finger gun at ryan, mouth open
-    with dissolve
 
     u "Boom."
 
@@ -2279,7 +2273,6 @@ label v12s7_imre2:
     $ v12s7_seenList = []
 
     scene v12ferim1 # FPP. Show imre, mouth closed
-    with dissolve
 
     u "Hello Mrs."
 
@@ -2391,7 +2384,6 @@ label v12s7_imre2:
 label v12s7_imre_kill:
 
     scene v12ferim2 # TPP. Show MC pointing finger gun at imre, mouth open
-    with dissolve
 
     u "Boom."
 
@@ -2438,7 +2430,6 @@ label v12s7_lindsey_charlie1:
     $ v12s7_seenList = [lindsey, charli]
 
     scene v12ferlich1 # FPP. Show charli, mouth closed
-    with dissolve
 
     u "Surprised we haven't crashed yet."
 
@@ -2720,7 +2711,6 @@ label v12s7_lindsey2:
     $ v12s7_seenList = []
 
     scene v12ferli1 # FPP. Show lindsey from a distance, mouth open 
-    with dissolve
 
     li "Come over here citizen."
 
@@ -2927,7 +2917,6 @@ label v12s7_lindsey2:
 label v12s7_lindsey_kill:
 
     scene v12ferli7 # TPP. Show mc, mouth open, pointing finger guns at lindsey
-    with dissolve
 
     u "Boom."
 
@@ -2967,7 +2956,6 @@ label v12s7_charli2:
     $ v12s7_seenList = []
 
     scene v12fercha1 # FPP. Show charli alone, mouth closed
-    with dissolve
 
     u "Still alone huh?"
 
@@ -3005,7 +2993,6 @@ label v12s7_charli2:
 label v12s7_charli_kill:
     
     scene v12fercha2 # TPP. Show MC pointing a finger gun at charli, mouth open
-    with dissolve
 
     u "Boom."
 
@@ -3037,7 +3024,6 @@ label v12s7_msrose1:
         $ v12s7_seenList.append(samantha)
 
     scene v12fermsr1 # FPP. Show ms rose, seductive look, mouth open
-    with dissolve
 
     ro "Hello there world famous boxing champion."
 
@@ -3224,7 +3210,6 @@ label v12s7_msrose_kill:
     ### ERROR: -If MC presses the murder button during this convo ###
 
     scene v12fermsr4 # TPP. MC points a finger gun at Ms. Rose, mc mouth open
-    with dissolve
 
     u "Boom."
 
@@ -3284,7 +3269,6 @@ label v12s7_penelope1:
     $ v12s7_seenList = []
 
     scene v12ferpen1 # FPP. Show penelope, neutral look, mouth closed
-    with dissolve
 
     u "Hey hey hey!"
 
@@ -3529,7 +3513,6 @@ label v12s7_penelope1:
 label v12s7_penelope_kill:
 
     scene v12ferpen7 # TPP. Show mc pointing finger gun at penelope, mc mouth open
-    with dissolve
 
     u "Boom."
 
@@ -3568,7 +3551,6 @@ label v12s7_amber1:
 
     ### ERROR: -If talk to Amber ###
     scene v12feram1 # FPP. Show amber from a distance, slight smile, mouth open
-    with dissolve
 
     am "Hey you!"
 
@@ -3771,7 +3753,6 @@ label v12s7_amber1:
 label v12s7_amber_kill:
 
     scene v12feram11 # TPP. Show MC pointing finger gun at amber, mc mouth open
-    with dissolve
 
     u "Boom."
 
@@ -3794,7 +3775,6 @@ label v12s7_riley2:
     $ v12s7_seenList = []
 
     scene v12ferrile1 # FPP. Show riley, slight smile, mouth closed
-    with dissolve
 
     u "What's going on?"
 
@@ -3953,7 +3933,6 @@ label v12s7_riley2:
 label v12s7_riley2_kill:
 
     scene v12ferrile3 # TPP. Show mc pointing finger gun at riley, mc mouth open
-    with dissolve
 
     u "Boom."
 
@@ -4004,7 +3983,6 @@ label v12s7_riley2_amber:
 
     ### ERROR: -If talk to Riley 2 and Amber ###
     scene v12feramb1 # FPP. Show amber, from a distance, looking at riley out of shot, mouth open
-    with dissolve
 
     am "I'm just not ready for all that, I think you're really amazing, but I'm just not the relationship person."
 
@@ -4055,7 +4033,6 @@ label v12s7_sam_cameron:
     $ v12s7_seenList = [ms_rose]
 
     scene v12fersaca1 # FPP. Show sam, slight smile, mouth open
-    with dissolve
 
     sam "Hey hey boxer!"
 
@@ -4260,7 +4237,6 @@ label v12s7_sam2:
     $ v12s7_seenList = []
 
     scene v12fersam1 # FPP. Show samantha neutral look, mouth closed
-    with dissolve
 
     u "No bodyguard?"
 
@@ -4495,7 +4471,6 @@ label v12s7_sam2:
 label v12s7_sam2_kill:
 
     scene v12fersam4 # TPP. Show mc, mouth open, pointing finger fun at sam.
-    with dissolve
 
     u "Boom."
 
@@ -4572,7 +4547,6 @@ label v12s7_cameron2:
     $ v12s7_seenList = []
 
     scene v12fercam1 # FPP. Show cameron from a distance, mouth open
-    with dissolve
 
     ca "Hey [name], get over here."
 
@@ -4666,7 +4640,6 @@ label v12s7_cameron2:
 label v12s7_cameron2_kill:
 
     scene v12fercam5 # TPP. Show mc, mouth open, pointing finger fun at cameron
-    with dissolve
 
     u "Boom."
 
@@ -4692,7 +4665,6 @@ label v12s7_nora1:
         $ v12s7_seenList = []
 
     scene v12fernor1 # FPP. Show nora, mouth closed
-    with dissolve
 
     u "Hey, nice to meet you. I'm sure you recognize me."
 
@@ -4957,7 +4929,6 @@ label v12s7_nora1:
 label v12s7_nora1_kill:
 
     scene v12fernor4 # TPP. Show mc, pointing finger gun at nora, mouth open
-    with dissolve
 
     u "Boom."
 
@@ -5016,7 +4987,6 @@ label v12s7_chris1:
     $ v12s7_seenList = []
 
     scene v12ferchr1 # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
-    with dissolve
 
     u "What are you doing?"
 
@@ -5112,7 +5082,6 @@ label v12s7_chris1:
 
 label v12s7_chris1_kill:
     scene v12ferchr4 # TPP. Show mc pointing finger gun at chris, mc mouth open.
-    with dissolve
 
     u "Boom."
 
@@ -5172,7 +5141,6 @@ label v12s7_mrlee:
     $ v12s7_mrlee = True
 
     scene v12ferlee1  # FPP. Show mr lee, neutral face, mouth closed
-    with dissolve
 
     u "Hello there, you fan of boxing? If so, did you catch my last fight?"
 
@@ -5213,7 +5181,6 @@ label v12s7_josh1:
         $ v12s7_seenList.append(chloe)
 
     scene v12ferjo1 # FPP. Show josh, slight smile, mouth closed
-    with dissolve
 
     u "What are you supposed to be?"
 
@@ -5316,7 +5283,6 @@ label v12s7_josh2:
     $ v12s7_seenList = []
 
     scene v12ferjos1 # FPP. Show josh, from a distance, mouth open
-    with dissolve
 
     jo "Hey you there mister?"
 
@@ -5404,7 +5370,6 @@ label v12s7_josh2:
 label v12s7_josh2_kill:
 
     scene v12ferjos5 # TPP. Show mc pointing finger gun at josh, mc mouth open
-    with dissolve
 
     pause 0.75
 
@@ -5445,7 +5410,6 @@ label v12s7_emily1:
     $ v12s7_seenList = [lauren]
 
     scene v12ferem1 # FPP. Show emilty from a distance mouth open
-    with dissolve
 
     em "Hmmm, I can see it, when alone and solely alone the passengers will be swept away from the life they've always know."
 
@@ -5491,7 +5455,6 @@ label v12s7_emily2:
     $ v12s7_seenList = []
 
     scene v12feremi1 # FPP. Show emily annoyed look, mouth closed
-    with dissolve
 
     u "Hey."
 
@@ -5510,7 +5473,6 @@ label v12s7_emily2:
 label v12s7_emily2_kill:
 
     scene v12feremi3 # TPP. Show mc pointing finger gun at Emily, mc mouth open
-    with dissolve
 
     u "Boom."
 
@@ -5527,9 +5489,7 @@ label v12s7_emily2_kill:
     call screen v12s7_bow
 
 label v12s7_mc_caught:
-
     scene black
-    with dissolve
 
     unknown "I found the murderer!"
 
