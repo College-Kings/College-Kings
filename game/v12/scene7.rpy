@@ -4,35 +4,6 @@ label v12s7_free_roam_spoken(backgroundImg, returnScreen, seenList):
     u "(I've already spoken to them, but I could still murder them)"
     $ renpy.call_screen(returnScreen)
 
-# Variables
-"""
-Args:
-    v11_pen_goes_europe (bool): if penelope is in europe
-    v11_invite_sam_europe (bool): if sam is in europe
-    josh_europe (bool): if josh is in europe
-    emily_europe (bool): if emily is in europe
-    
-    v12s7_killList (list): list of people MC has murdered
-
-    chloe (CustomCharacter)
-    amber (CustomCharacter)
-    penelope (CustomCharacter)
-    riley (CustomCharacter)
-    lindsey (CustomCharacter)
-    lauren (CustomCharacter)
-    samantha (CustomCharacter)
-    emily (CustomCharacter)
-    ms_rose (CustomCharacter)
-    nora (CustomCharacter)
-    aubrey (CustomCharacter)
-    ryan (CustomCharacter)
-    imre (CustomCharacter)
-    chris (CustomCharacter)
-    charli (CustomCharacter)
-    cameron (CustomCharacter)
-    josh (CustomCharacter)
-"""
-
 label v12s7fr:
     scene v12fer1 # FPP. Show Mr Lee, smiling mouth open
 
