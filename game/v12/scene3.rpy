@@ -7,19 +7,28 @@ label v12_penelope_roof:
     scene v12penr1 # TPP Show MC sitting on his bed looking down at his phone, in his hand
     with fade
 
-    pause
+    pause 1
 
     play sound "sounds/vibrate.mp3"
 
     $ contact_Penelope.newMessage("Hey, are you up still?", queue=False)
-    $ contact_Penelope.newMessage("If you are, can you meet me in the hallway?", queue=True)
+    $ contact_Penelope.newMessage("If you are, can you meet me in the hallway?", queue=False)
+
+    call screen phone
 
     menu:
         "Reply":
             if penelopers:
                 $ addPoint("bf")
 
-            $ contact_Penelope.addReply("Yeah, one sec ", func=None)
+            $ contact_Penelope.addReply("Yeah, one sec", func=None)
+
+            label v12_penelope_roof_text:
+                if contact_Penelope.getReplies():
+                    call screen phone
+                if contact_Penelope.getReplies():
+                    u "(I should probably reply.)"
+                    jump v12_penelope_roof_text
 
             scene v12penr2 # TPP Show MC leaving his hotel room
             with dissolve
@@ -134,12 +143,12 @@ label v12_penelope_roof:
             scene v12penr7 # TPP Show MC and Penelope exiting door onto the hotel roof
             with dissolve
 
-            pause 0.75
+            pause 1
 
             scene v12penr8 # TPP Show MC and Penelope out on hotel roof in the process of sitting down
             with dissolve
 
-            pause 0.75
+            pause 1
 
             scene v12penr9 # TPP Show MC and Penelope laying on hotel roof, view is from above, both looking up, Penelope's mouth open
             with dissolve
@@ -300,7 +309,7 @@ label v12_penelope_roof:
                 with dissolve
 
                 menu:
-                    "Shocked":
+                    "Be shocked":
 
                         u "*Gulp*"
 
@@ -319,7 +328,7 @@ label v12_penelope_roof:
 
                         pe "*Laughs* Yeah, you've got a few other things to figure out before you start thinking about tying the knot."
 
-                    "Bold":
+                    "Be bold":
                         $ addPoint("bf")
 
                         u "I'm a guy like me."
@@ -327,12 +336,14 @@ label v12_penelope_roof:
                         scene v12penr12 # TPP Show Penelope rolling over on top of MC
                         with dissolve
 
-                        pause 0.75
+                        pause 1.5
 
                         scene v12penr13 # TPP Show close-up of Penelope giving MC a kiss
                         with dissolve
 
-                        pause 0.75
+                        play sound "sounds/kiss.mp3"
+
+                        pause 1.5
 
                         scene v12penr14 # FPP Show Penelope, who is laying on top of MC with her face close to his, smiling with mouth open
                         with dissolve
@@ -349,10 +360,10 @@ label v12_penelope_roof:
 
                         pe "*Chuckles* I'll try and remember that."
 
-                        scene v12pern12a # TPP Same angle as v12penr12, Penelope rolling back off of MC to where she was before
+                        scene v12penr12a # TPP Same angle as v12penr12, Penelope rolling back off of MC to where she was before
                         with dissolve
 
-                        pause 0.75
+                        pause 1.25
 
             scene v12penr10e
             with dissolve
@@ -377,12 +388,12 @@ label v12_penelope_roof:
             scene v12penr8a # TPP Same angle as v12penr8, MC getting to his feet and helping Penelope up from the roof
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             scene v12penr7a # TPP Same angle as v12penr7, MC and Penelope going back inside from the roof
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             if penelopers:
                 scene v12penr4a # TPP Same angle as v12penr4, MC and Penelope walking down hotel hallway holding hands
@@ -415,7 +426,9 @@ label v12_penelope_roof:
                 scene v12penr16 # TPP Outside of Penelope's hotel room, show Penelope kissing MC
                 with dissolve
 
-                pause 0.75
+                play sound "sounds/kiss.mp3"
+
+                pause 1.5
 
                 scene v12penr15
                 with dissolve
@@ -445,7 +458,7 @@ label v12_penelope_roof:
 
             pause 0.75
 
-        "Don't Reply":
+        "Don't reply":
             $ addPoint("tm")
 
             scene v12penr19 # FPP MC's view sitting on his bed, looking down at his phone, which he just turned off
@@ -458,5 +471,4 @@ label v12_penelope_roof:
 
             pause 0.75
 
-    jump v12_roomate_talk # Scene 4  
-
+    jump v12_roomate_talk # Scene 4

@@ -214,5 +214,4 @@ label v12_cafe:
         scene v12caf16 # TPP. MC and riley in front of the cafe
         with dissolve
 
-        jump v12_riley_cafe #scene 14a 
-
+        jump v12_riley_cafe #scene 14a

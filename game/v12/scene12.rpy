@@ -226,7 +226,7 @@ label v12_room_chloe_riley:
         scene v12crm12b # FPP. Riley looking surpised, mouth opened
         with dissolve
 
-        ri "Okay, but like...HOW? There were times where I was like \"okay maybe it's him\", but then I felt like I was just being biased."
+        ri "Okay, but like... HOW? There were times where I was like \"okay maybe it's him\", but then I felt like I was just being biased."
 
         scene v12crm12a
         with dissolve
@@ -236,7 +236,7 @@ label v12_room_chloe_riley:
         scene v12crm12b
         with dissolve
 
-        ri "Yeah, of course. You were doing a bunch of suspicious shit but, everyone was being a little sus. Some people were even acting like the killer just to throw people off the trail..." 
+        ri "Yeah, of course. You were doing a bunch of suspicious shit but, everyone was being a little sus. Some people were even acting like the killer just to throw people off the trail..."
         ri "Damn imposters. Should've just trusted my gut and kept a better eye on you."
 
         scene v12crm12a
@@ -358,4 +358,3 @@ label v12_room_chloe_riley:
         with dissolve
 
     jump v12_cafe #scene 13
-

@@ -47,7 +47,8 @@ label v12_paris_hotel:
     scene v12pht2a
     with dissolve
 
-    ro "Alright, well. It's very late and regardless of whether or not you slept on the way here, I imagine you're all very tired. So let me get through this as smoothly as possible. Your sleeping arrangements will be the same as last time."
+    ro "Alright, well. It's very late and regardless of whether or not you slept on the way here, I imagine you're all very tired."
+    ro "So let me get through this as smoothly as possible. Your sleeping arrangements will be the same as last time."
 
     scene v12pht2d # FPP. Amber looking worried, mouth opened
     with dissolve
@@ -210,12 +211,14 @@ label v12_paris_hotel:
     scene v12pht9
     with dissolve
 
-    no "Chris and I have been dating for years now, right? It feels like we've always just been together, to the point that neither of us lived our own lives. And I'm not saying I want to break up with Chris or anything like that..."
+    no "Chris and I have been dating for years now, right? It feels like we've always just been together, to the point that neither of us lived our own lives."
+    no "And I'm not saying I want to break up with Chris or anything like that..."
 
     scene v12pht9
     with dissolve
 
-    no "I'm just sort of losing confidence in our relationship as it is. I feel we could've done better by getting to know ourselves before we got together. That way we actually knew the person we were getting with instead of figuring that out along the way."
+    no "I'm just sort of losing confidence in our relationship as it is. I feel we could've done better by getting to know ourselves before we got together."
+    no "That way we actually knew the person we were getting with instead of figuring that out along the way."
 
     scene v12pht9a # FPP. Same as 9, mouth closed
     with dissolve
@@ -235,12 +238,14 @@ label v12_paris_hotel:
     scene v12pht9
     with dissolve
 
-    no "See, I wouldn't say they're bad, but just not good for me. People can call me what they want, but I like spending a lot of time with my partner, and Chris and I used to spend time together all the time. So it's not like I'm expecting anything new."
+    no "See, I wouldn't say they're bad, but just not good for me. People can call me what they want, but I like spending a lot of time with my partner, and Chris and I used to spend time together all the time."
+    no "So it's not like I'm expecting anything new."
 
     scene v12pht9a
     with dissolve
 
-    no "He basically just stopped giving me the amount of attention that he used to give me. If he acted the way he does now, back then, I'm not saying we wouldn't have dated... But I wouldn't be expecting as much as I am from him. I just wish he wouldn't have changed."
+    no "He basically just stopped giving me the amount of attention that he used to give me. If he acted the way he does now, back then, I'm not saying we wouldn't have dated..."
+    no "But I wouldn't be expecting as much as I am from him. I just wish he wouldn't have changed."
 
     scene v12pht9a
     with dissolve
@@ -292,7 +297,8 @@ label v12_paris_hotel:
             scene v12pht9d
             with dissolve
 
-            u "I'm not going to pick sides or try to sway you one way or the other, I don't feel like that's my place. I'm friends with both of you so, as your friend, I'm going to support any decision you make. No matter what it is."
+            u "I'm not going to pick sides or try to sway you one way or the other, I don't feel like that's my place."
+            u "I'm friends with both of you so, as your friend, I'm going to support any decision you make. No matter what it is."
 
             scene v12pht9e
             with dissolve
@@ -308,7 +314,8 @@ label v12_paris_hotel:
             scene v12pht9d
             with dissolve
 
-            u "You know, I'm sure deep down Chris is still the exact same person you fell in love with. He's just in situations now that divide his time up in a way that they didn't before. I bet if all the other distractions weren't a factor, you'd be the only thing on his mind."
+            u "You know, I'm sure deep down Chris is still the exact same person you fell in love with. He's just in situations now that divide his time up in a way that they didn't before."
+            u "I bet if all the other distractions weren't a factor, you'd be the only thing on his mind."
 
             scene v12pht9f # FPP. Same as 9e, still crying, slight smile, mouth opened
             with dissolve
@@ -392,4 +399,3 @@ label v12_paris_hotel:
     with dissolve
 
     jump v12_room_chloe_riley #scene 12
-

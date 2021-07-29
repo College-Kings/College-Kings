@@ -104,7 +104,7 @@ label v12_nora_robbed:
             scene v12nrb75a
             with dissolve
 
-            imre "There's no “chance” when it comes to me, Ms. Rose. I'd never lose a fight to some scummy, French, son of-"
+            imre "There's no \"chance\" when it comes to me, Ms. Rose. I'd never lose a fight to some scummy, French, son of-"
 
             if not v11_pen_goes_europe:
                 scene v12nrb3g # FPP. Same as v12nrb3f, Ms. Rose angry, mouth open, Nora worried, mouth closed
@@ -156,19 +156,20 @@ label v12_nora_robbed:
             scene v12nrb5
             with dissolve
 
-            ch "I’m trying to be sympathetic in the current situation, but I won't stand here and be disrespected in the process." 
-            ch "You do not understand that the balance between all aspects of life that people need is not something that I can control. You take being someone's “everything” way too literally. Sadly Nora. if you had interests in life outside of just me, then maybe you wouldn't be so stuck up on this." 
+            ch "I'm trying to be sympathetic in the current situation, but I won't stand here and be disrespected in the process."
+            ch "You not understanding that people need a balance between all aspects of life, isn't something I can control. You take being someone's \"everything\" way too literally."
+            ch "Sadly Nora, if you had interests in life outside of just me, then maybe you wouldn't be so stuck up on this."
             ch "I'll be in the room, you can talk to me when you're ready."
 
             scene v12nrb5c # FPP. Chris walks away ahead of Nora, Chris annoyed, mouth closed, Nora angry, mouth closed
             with dissolve
 
-            pause 0.75
+            pause 1.5
 
             scene v12nrb6 # TPP. MC continues walking next to Imre, Imre and MC surprised, mouths closed
             with fade
 
-            pause 0.75
+            pause 1.25
 
             scene v12nrb7 # FPP. Imre leans over to mc while their walking, mouth opened and surprised look (background change)
             with dissolve
@@ -193,7 +194,8 @@ label v12_nora_robbed:
             scene v12nrb79 # FPP. MC looking at Charli, Charli mouth open, smirking, looking at Imre
             with dissolve
 
-            charli "Mocking other people's relationships behind their back and then trying to act like you actually care when looking them eye to eye... I don't even have to try to make you look like a piece of shit, I just need to speak the truth."
+            charli "Mocking other people's relationships behind their back and then trying to act like you actually care when looking them eye to eye..."
+            charli "I don't even have to try to make you look like a piece of shit, I just need to speak the truth."
             
             scene v12nrb7b # FPP. Imre annoyed, mouth open, looking at Charli's direction
             with dissolve
@@ -238,7 +240,7 @@ label v12_nora_robbed:
             scene v12nrb9d # FPP. Same as v12nrb9b, Amber looking at Imre's direction, Amber mouth open, smiling
             with dissolve
 
-            am "Okay, calm down little guy... *Chuckles* I didn't want to mess up my nails so I just took the easy route and made sure he wouldn't be able to... Well, reproduce in the near future. *Chuckles*"
+            am "Okay, calm down little guy... *Chuckles* I didn't want to mess up my nails so I just took the easy route and made sure he wouldn't be able to... well, reproduce in the near future. *Chuckles*"
 
             scene v12nrb7d # FPP. Same as v12nrb7c, Imre holding his crotch, mouth open, smiling
             with dissolve
@@ -303,7 +305,7 @@ label v12_nora_robbed:
             scene v12nrb15 # TPP. MC in his room
             with dissolve
 
-            u "(Amber's tough as nails. Definitely don't wanna be on her bad side. Maybe if I would've went after the robber I could've been the hero.)"
+            u "(Amber's tough as nails. Definitely don't wanna be on her bad side. Maybe if I would've gone after the robber I could've been the hero.)"
 
             play sound "sounds/knock.mp3"
 

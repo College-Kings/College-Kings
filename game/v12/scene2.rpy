@@ -32,6 +32,8 @@ label v12_nora_checks_mc:
     scene v12ncm4 # TPP. MC and nora sit at the foot of mc's bed
     with dissolve
 
+    pause 1
+
     if v12_chase_robber: 
         scene v12ncm5 # FPP. Nora looks at mc with a worried face, mouth opened
         with dissolve
@@ -137,23 +139,23 @@ label v12_nora_checks_mc:
 
             u "Sometimes it's about just doing the right thing."
 
-        scene v12ncm5f 
+        scene v12ncm5g
         with dissolve
 
         no "The right thing for me tonight was to make sure I came over here and thanked you."
 
-        scene v12ncm5g 
+        scene v12ncm5f
         with dissolve
 
         u "Well, you're more than welcome. I just had a feeling that what you had in your bag tonight was important, so I didn't even second guess going after him."
 
     else:
-        scene v12ncm5f
+        scene v12ncm5g
         with dissolve
 
         no "I... I really didn't like being surrounded like that after everything that happened."
 
-        scene v12ncm5g 
+        scene v12ncm5f
         with dissolve
 
         u "Oh, yeah I could see that. I'm really sorry I ran over there like that. I guess I was just really concerned about you."
@@ -161,7 +163,8 @@ label v12_nora_checks_mc:
         scene v12ncm5h 
         with dissolve
 
-        no "You know... That's the odd thing. When I looked up and you were there, it didn't bother me. I was actually happy you ran over to me. It kinda seems like whenever I really need someone, even if it's just to talk, you're always around."
+        no "You know... That's the odd thing. When I looked up and you were there, it didn't bother me. I was actually happy you ran over to me."
+        no "It kinda seems like whenever I really need someone, even if it's just to talk, you're always around."
 
         scene v12ncm5f
         with dissolve
@@ -246,7 +249,8 @@ label v12_nora_checks_mc:
     scene v12ncm5i
     with dissolve
 
-    no "*Sighs* It's fine. At least you didn't mean to. Chris is all Charli wants to talk about. He thinks talking about it will make me feel better. I get that he's trying to be nice, so I can't be mad... But jeez... Plus, I just met the guy you know?"
+    no "*Sighs* It's fine. At least you didn't mean to. Chris is all Charli wants to talk about. He thinks talking about it will make me feel better."
+    no "I get that he's trying to be nice, so I can't be mad... But jeez... Plus, I just met the guy you know?"
 
     scene v12ncm5f
     with dissolve
@@ -282,18 +286,19 @@ label v12_nora_checks_mc:
         scene v12ncm8 # TPP. Nora gives MC a hug
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
-        scene v12cnm9 # TPP. Nora leaves
+        scene v12ncm9 # TPP. Nora leaves
         with dissolve
 
     else:
-        scene v12cnm9
+        scene v12ncm9
         with dissolve
+
+    pause 1
 
     if v11_pen_goes_europe:
         jump v12_penelope_roof #scene 3
     
     else:
         jump v12_penelope_call #scene 3a
-
