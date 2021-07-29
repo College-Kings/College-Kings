@@ -461,10 +461,7 @@ label v11_lauren_store:
     scene v11las18g # FPP. Same as v11las18, Lauren holding and looking at the board, pen on hand, slightly smiling, mouth closed
     with dissolve
 
-    $ timed = True
-    $ timerexit = "v11_answer_slytherin"
-
-    menu:
+    menu (fail_label="v11_answer_slytherin"):
         "Gryffindor":
             $ laurenLike += 1
             $ v11_hp_points += 1
@@ -479,13 +476,9 @@ label v11_lauren_store:
 
             la "*Whisper* Sure is."
 
-            $ timed = False
-
             jump v11_quiz_q2
 
         "Slytherin":
-            $ timed = False
-
             jump v11_answer_slytherin
 
 label v11_answer_slytherin:
@@ -553,10 +546,7 @@ label v11_quiz_q2:
     scene v11las19f # FPP. Same as v11las19d, Judge mouth closed, slight smile
     with dissolve
 
-    $ timed = True
-    $ timerexit = "v11_answer_13"
-
-    menu:
+    menu (fail_label="v11_answer_13"):
         "29":
             $ laurenLike += 1
             $ v11_hp_points += 1
@@ -579,8 +569,6 @@ label v11_quiz_q2:
             jump v11_quiz_q3
 
         "13":
-            $ timed = False
-
             jump v11_answer_13
         
 label v11_answer_13:
@@ -757,10 +745,7 @@ label v11_quiz_q3:
     scene v11las26 # FPP. MC is looking at the empty board he is going to write on
     with dissolve
 
-    $ timed = True
-    $ timerexit = "v11_answer_ministry"
-
-    menu:
+    menu (fail_label="v11_answer_ministry"):
         "12 Grimmauld Place":
             $ laurenLike += 1
             $ v11_solo_question = True
@@ -771,13 +756,9 @@ label v11_quiz_q3:
 
             u "(This better be right.)"
 
-            $ timed = False
-
             jump v11_quiz_bonus
 
         "Ministry of Magic":
-            $ timed = False
-
             jump v11_answer_ministry
 
 label v11_answer_ministry:

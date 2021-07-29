@@ -6457,15 +6457,11 @@ label after_history:
 
     play sound "sounds/countdown.mp3" #check - is this fine?
 
-    $ timed = True
-    $ timerexit = "lee_pants_fail"
-
-    menu: # 3 second timer default
+    menu (fail_label="lee_pants_fail"): # 3 second timer default
         "Pull it":
             $ apesTask2Success = True
             $ addPoint("tm")
             $ apesVids += 1
-            $ timed = False
             stop sound
 
             if config_censored:
@@ -6506,7 +6502,6 @@ label after_history:
             jump lee_pants_fail
 
 label lee_pants_fail:
-    $ timed = False
     $ apesTask2Success = False
     stop sound
     # No point changes here
@@ -7673,14 +7668,10 @@ label cameron_thurs_tasks:
             with dissolve
 
             # CRICKET DROP TIMER
-            $ timed = True
-            $ timerexit = "av_crickets_no_drop"
-
-            menu:
+            menu (fail_label="av_crickets_no_drop"):
                 "Drop the crickets":
                     $ addPoint("tm")
                     $ apesVids += 1
-                    $ timed = False
 
                     scene scc31a # FPP. As above but, show MC arms turning the container of crickets upside down with them falling out.
                     with dissolve
@@ -7733,7 +7724,6 @@ label cameron_thurs_tasks:
 
                 "...":
                     label av_crickets_no_drop:
-                        $ timed = False
                         scene scc35 # FPP. Show the girls looking around confused.
                         with dissolve
 
