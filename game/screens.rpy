@@ -207,9 +207,7 @@ style input:
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
 
-screen choice(items, seconds=0, fail_label=""):
-    text "Seconds: [seconds], FailLabel: [fail_label]"
-    
+screen choice(items, seconds=3, fail_label=""):
     # Show KCT
     if showkct:
         use kctChoice
@@ -263,7 +261,7 @@ screen choice(items, seconds=0, fail_label=""):
                     if count > 1:
                         xalign 0.5
 
-    if seconds:
+    if fail_label:
         timer seconds:
             action Jump(fail_label)
 
