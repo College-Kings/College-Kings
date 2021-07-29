@@ -200,7 +200,7 @@ label starta: #for compatibility only
     ju "You're not planning on joining one of those, are you?"
 
     show screen kctTutorial
-    menu:
+    menu (seconds=10, fail_label="aa_db"):
         "Could be fun":
             hide s14
             show s14a
