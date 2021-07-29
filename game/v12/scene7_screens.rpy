@@ -68,11 +68,11 @@ screen v12s7_seating_front():
     tag freeRoam
 
     # No one
-    if (v12s7_sam1 and ms_rose in v12s7_killList) or (ms_rose in v12s7_killList and not v11_invite_sam_europe):
+    if (v12s7_samantha and ms_rose in v12s7_killList) or (ms_rose in v12s7_killList and not v11_invite_sam_europe):
         add "images/v12/Scene 7/Navigation 2c.webp"
     
     # Ms Rose
-    elif (v12s7_sam1 and ms_rose not in v12s7_killList) or (not v11_invite_sam_europe and ms_rose not in v12s7_killList):
+    elif (v12s7_samantha and ms_rose not in v12s7_killList) or (not v11_invite_sam_europe and ms_rose not in v12s7_killList):
         imagemap:
             ground "images/v12/Scene 7/Navigation 2b.webp"
             insensitive "images/v12/Scene 7/Navigation 2b.webp"
@@ -86,7 +86,7 @@ screen v12s7_seating_front():
 
 
     # Samantha and Ms Rose
-    elif (v11_invite_sam_europe and not v12s7_sam1 and ms_rose not in v12s7_killList):
+    elif (v11_invite_sam_europe and not v12s7_samantha and ms_rose not in v12s7_killList):
         imagemap:
             ground "images/v12/Scene 7/Navigation 2a.webp"
             insensitive "images/v12/Scene 7/Navigation 2a.webp"
