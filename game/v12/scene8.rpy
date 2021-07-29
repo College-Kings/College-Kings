@@ -63,7 +63,7 @@ label v12_murder_mystery_reveal:
     scene v12mmr1
     with dissolve
 
-    if v12_murder_count >= 5:
+    if len(v12s7_killList) >= 5:
 
         lee "A total of [v12_murder_count] people were killed, so let's give our murderer a round of applause."
 

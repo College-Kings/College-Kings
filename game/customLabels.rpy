@@ -6,39 +6,39 @@ label before_main_menu:
         kiwiiApp.img = "images/phone/kiwii/appAssets/kiwiiIcon.webp"
 
         # Set up murder mystery stats
-        cl.stats["Competitive"] = True
-        cl.stats["Vindictive"] = [no]
+        chloe.stats["Competitive"] = True
+        chloe.stats["Vindictive"] = [nora]
 
-        am.stats["Competitive"] = am.stats["Talkative"] = True
-        am.stats["Vindictive"] = [ri]
+        amber.stats["Competitive"] = amber.stats["Talkative"] = True
+        amber.stats["Vindictive"] = [riley]
 
-        ri.stats["Competitive"] = ri.stats["Talkative"] = True
+        riley.stats["Competitive"] = riley.stats["Talkative"] = True
 
-        li.stats["Competitive"] = li.stats["Talkative"] = True
-        li.stats["Vindictive"] = [cl]
+        lindsey.stats["Competitive"] = lindsey.stats["Talkative"] = True
+        lindsey.stats["Vindictive"] = [chloe]
 
-        sa.stats["Vindictive"] = [ca]
+        samantha.stats["Vindictive"] = [cameron]
 
-        em.stats["Talkative"] = False
+        emily.stats["Talkative"] = False
 
-        no.stats["Talkative"] = True
-        no.stats["Vindictive"] = [ch, cl]
+        nora.stats["Talkative"] = True
+        nora.stats["Vindictive"] = [chris, chloe]
 
-        au.stats["Competitive"] = True
+        aubrey.stats["Competitive"] = True
 
-        ry.stats["Vindictive"] = [imre]
+        ryan.stats["Vindictive"] = [imre]
 
         imre.stats["Competitive"] = False
-        imre.stats["Vindictive"] = [ry]
+        imre.stats["Vindictive"] = [ryan]
 
-        ch.stats["Competitive"] = ch.stats["Talkative"] = False
+        chris.stats["Competitive"] = chris.stats["Talkative"] = False
 
         charli.stats["Competitive"] = True
         charli.stats["Talkative"] = False
 
-        ca.stats["Vindictive"] = [sa]
+        cameron.stats["Vindictive"] = [samantha]
 
-        jo.stats["Competitive"] = True
+        josh.stats["Competitive"] = True
 
     return
 

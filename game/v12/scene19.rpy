@@ -346,4 +346,4 @@ label v12_party_wake_up:
 
         pause 0.75
 
-    jump scene20
+    jump v12_urban_exploring #scene 20

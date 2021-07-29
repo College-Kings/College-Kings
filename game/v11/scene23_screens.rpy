@@ -48,11 +48,11 @@ screen v11s23_mid():
         if not v11s23_chris1:
             hotspot (1118, 72, 135, 208) action Jump("v11s23_chris1")# speak to chris
         else:
-            hotspot (1118, 72, 135, 208) action Call("freeRoamSpokenToo", backgroundImg="v11s23_mid", returnScreen="v11s23_mid")
+            hotspot (1118, 72, 135, 208) action Call("freeRoamSpokenToo", backgroundImg="v11s23mid", returnScreen="v11s23_mid")
         if not v11s23_mrlee1:
             hotspot (117, 355, 213, 431) action Jump("v11s23_mrlee1")# speak to Mr. Lee
         else:
-           hotspot (117, 355, 213, 431) action Call("freeRoamSpokenToo", backgroundImg="v11s23_mid", returnScreen="v11s23_mid")
+           hotspot (117, 355, 213, 431) action Call("freeRoamSpokenToo", backgroundImg="v11s23mid", returnScreen="v11s23_mid")
 
         hotspot (316, 879, 1243, 200) action Show("v11s23_entrance")
 

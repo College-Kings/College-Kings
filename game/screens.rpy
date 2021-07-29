@@ -207,7 +207,7 @@ style input:
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
 
-screen choice(items, time=3):
+screen choice(items, seconds=3, fail_label=""):
     # Show KCT
     if showkct:
         use kctChoice
@@ -261,13 +261,11 @@ screen choice(items, time=3):
                     if count > 1:
                         xalign 0.5
 
-    if timed:
-        timer time:
-            action [SetVariable("timed", False), Jump(timerexit)]
+    if fail_label:
+        timer seconds:
+            action Jump(fail_label)
 
-        bar:
-            value AnimatedValue(0, time, time, time)
-            at alpha_dissolve
+        use timerBar(seconds)
 
     if config_debug:
         $ item = renpy.random.choice(items)
@@ -1334,7 +1332,6 @@ style nvl_window:
 
 style main_menu_frame:
     variant "small"
-
 
 style game_menu_navigation_frame:
     variant "small"
