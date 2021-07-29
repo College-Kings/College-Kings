@@ -7,7 +7,6 @@
 # Post 2: amber_bet.webp - Amber nude pic, check v12slpbet8 for pose, pic taken from MC perspective
 # Post 3: mc_bet.webp - MC nude bet pic, check v12slpbet5b for pose, pic taken from Amber perspective
 
-default v12_lindsey_sex = False # Check with Hive what variable he'll be using in scene 17
 default v12s18_bottlespin_played = False
 default v12s18_fmk_played = False
 
