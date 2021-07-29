@@ -2883,7 +2883,7 @@ label v12s7_lindsey2:
     scene v12ferli6 # FPP. Show lindsey walking away
     with dissolve
 
-    call v12s7_rear
+    call screen v12s7_rear
 
 label v12s7_lindsey_kill:
 
