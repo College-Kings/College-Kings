@@ -901,8 +901,8 @@ label v12_lindsey_kiss_or_not:
             scene v12esr30 # TPP. Show MC and Lindsey kissing
             with dissolve
 
-            if lindseyfirstkiss or kct = "popular" or v12_murder_count >= 5:
-                if kct = "popular" and not lindseyfirstkiss and not v12_murder_count >= 5:
+            if lindseyfirstkiss or kct = "popular" or len(v12s7_killList) >= 5:
+                if kct = "popular" and not lindseyfirstkiss and not len(v12s7_killList) >= 5:
                     call screen kctPopup                
                 jump v12_lindsey_sex
             
@@ -937,7 +937,7 @@ label v12_lindsey_sex:
 
     li "Hmm, maybe…"
 
-    if v12_murder_count >= 5:
+    if len(v12s7_killList) >= 5:
         scene v12esr29g
         with dissolve
 
