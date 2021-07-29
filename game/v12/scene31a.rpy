@@ -28,7 +28,7 @@ label v12_aubrey_wake_up_ri:
     scene v12auwr1
     with dissolve
 
-    u "Wait… What shoot?"
+    u "Wait... What shoot?"
 
     scene v12auwr1a
     with dissolve
@@ -58,12 +58,12 @@ label v12_aubrey_wake_up_ri:
     scene v12auwr5a # FPP. Same as v12auwr5, Aubrey looking at MC, Aubrey slightly confused, mouth closed
     with dissolve
 
-    u "Ignore her. She's convinced that I’m the one who stole and hung her picture up in the lobby."
+    u "Ignore her. She's convinced that I'm the one who stole and hung her picture up in the lobby."
 
     scene v12auwr4a # FPP. Same as v12auwr4, Riley looking at MC, Riley angry, mouth closed
     with dissolve
 
-    u "When she realizes it wasn't me, she'll be all sorry and shit… So, I'm just ignoring the attitude for now."
+    u "When she realizes it wasn't me, she'll be all sorry and shit... So, I'm just ignoring the attitude for now."
 
     scene v12auwr4
     with dissolve

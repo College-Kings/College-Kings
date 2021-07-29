@@ -7,7 +7,7 @@ label v12_docks:
     scene v12dock1 # TPP. Show the shuttle parking at the dock
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12dock2 # TPP. Show MC walking out of the shuttle, slight smile, mouth closed
     with dissolve
@@ -17,7 +17,7 @@ label v12_docks:
     scene v12dock3 # TPP. Show MC walking in the docks with Riley, slight smiles, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12dock4 # FPP. Show Mr Lee waving at MC and Riley, slight smile, mouth open (Mr Lee pretty far away)
     with dissolve
@@ -171,3 +171,4 @@ label v12_docks:
     u "(Hmmm, this must be what Amber was saying she wanted to talk about. I knew them two were getting close, but not like this.)"
 
     jump v12s7fr #scene 7
+

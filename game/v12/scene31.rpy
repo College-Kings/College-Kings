@@ -60,7 +60,7 @@ label v12_aubrey_wake_up:
 
     if chloegf:
 
-        cl "You know I'm just messing around, I wouldn’t make fun of my boyfriend. Even if he is slow... *Chuckles*"
+        cl "You know I'm just messing around, I wouldn't make fun of my boyfriend. Even if he is slow... *Chuckles*"
 
         scene v12auw4a
         with dissolve
@@ -104,7 +104,7 @@ label v12_aubrey_wake_up:
         scene v12auw5c # FPP. Same as v12auw5b, Aubrey slight smile, mouth open
         with dissolve
 
-        au "Sorry, it’s the truth."
+        au "Sorry, it's the truth."
 
         scene v12auw5d # FPP. Same as v12auw5c, Aubrey slight smile, mouth closed
         with dissolve

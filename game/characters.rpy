@@ -114,3 +114,5 @@ define character.bank = Character("Bank Teller", who_color="#fc3158", who_outlin
 # 12.0
 define character.robber = Character("Robber", who_color="#0055ff", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.fwait = Character("French Waitress", who_color="#0055ff", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.clady = Character("Crazy Lady", who_color="#ffffff", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+

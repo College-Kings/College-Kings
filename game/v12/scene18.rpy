@@ -34,7 +34,7 @@ label v12_slumber_party:
     scene v12slp4 # FPP. Same positioning as v12slp3, MC looking at Lindsey, Lindsey looking at Aubrey's direction, Lindsey confused, mouth open (Only Lindsey in shot)
     with dissolve
 
-    li "Umm...What are you guys planning?"
+    li "Umm... What are you guys planning?"
 
     scene v12slp2b # FPP. Same as v12slp2, Aubrey slight smile, mouth open, looking at Lindsey's direction
     with dissolve
@@ -80,7 +80,7 @@ label v12_slumber_party:
         scene v12slp7
         with dissolve
 
-        u "How kind..?"
+        u "How kind...?"
 
         scene v12slp7a
         with dissolve
@@ -201,7 +201,7 @@ label v12_slumber_party:
     scene v12slp12
     with dissolve
 
-    imre "Okay then… Like a clean baby's bottom."
+    imre "Okay then... Like a clean baby's bottom."
 
     scene v12slp11a # FPP. Same as v12slp11, Riley slight smile, mouth open
     with dissolve
@@ -261,7 +261,7 @@ label v12_slumber_party:
     scene v12slp16a # FPP. Same as v12slp16, Aubrey looking at MC, smiling, mouth open
     with dissolve
 
-    au "*Chuckles* Alright, so for those of you that still don't know, today is Lindsey’s birthday."
+    au "*Chuckles* Alright, so for those of you that still don't know, today is Lindsey's birthday."
 
     scene v12slp12c # FPP. Same as v12slp12, Imre sitting on the bed, Imre's arms raised to the sky (He's hyped), mouth open (He's screaming), smiling
     with dissolve
@@ -271,17 +271,17 @@ label v12_slumber_party:
     scene v12slp17a # FPP. Same as v12slp17, Nora looking at Imre's direction, Nora slightly annoyed, mouth open
     with dissolve
 
-    no "IMRE! *Whispers* This better be the last time tonight that I have to tell you to shut the fuck up and quiet down… Got it?"
+    no "IMRE! *Whispers* This better be the last time tonight that I have to tell you to shut the fuck up and quiet down... Got it?"
 
     scene v12slp12d # FPP. Same as v12slp12c, Imre slightly worried, mouth open, looking at Nora's direction (No longer hyped)
     with dissolve
 
-    imre "Fuck ye- I mean... Yes Mom, Ma’am! I meant, um... Ma’am. Yes, ma’am."
+    imre "Fuck ye- I mean... Yes Mom, Ma'am! I meant, um... Ma'am. Yes, ma'am."
 
     scene v12slp17b # FPP. Same as v12slp17a, Nora confused, mouth closed, looking at MC
     with dissolve
 
-    u "(Did he just say… mom?) *Chuckles*"
+    u "(Did he just say... mom?) *Chuckles*"
 
     scene v12slp17c # FPP. Same as v12slp17b, Nora looking at MC, Nora confused, mouth open
     with dissolve
@@ -328,8 +328,8 @@ label v12_slumber_party:
 
     au "*Laughs* Let's have fun guys."
 
-    $ v12s18_kiwiiPost1 = KiwiiPost("Lindsey", "v12/lindsey_aubrey_pjs.webp", _("Couldn’t have asked for a better night… <3"), numberLikes=571) # Lindsey Selfie with Aubrey in pajamas
-    $ v12s18_kiwiiPost1.newComment("Aubrey", _("You’re so welcome boo… Girls night again ASAP!"), mentions="Lindsey", numberLikes=renpy.random.randint(250,350), queue=False)
+    $ v12s18_kiwiiPost1 = KiwiiPost("Lindsey", "v12/lindsey_aubrey_pjs.webp", _("Couldn't have asked for a better night... <3"), numberLikes=571) # Lindsey Selfie with Aubrey in pajamas
+    $ v12s18_kiwiiPost1.newComment("Aubrey", _("You're so welcome boo... Girls night again ASAP!"), mentions="Lindsey", numberLikes=renpy.random.randint(250,350), queue=False)
     $ v12s18_kiwiiPost1.newComment("Imre", _("Even more beautiful in person, ladies..."), mentions="Lindsey", numberLikes=renpy.random.randint(150,300), queue=False)
     $ v12s18_kiwiiPost1.newComment("Chloe", _("Yesss! We have to do this again."), mentions="Aubrey", numberLikes=renpy.random.randint(250,400), queue=False)
     $ v12s18_kiwiiPost1.addReply(_("Just say when and where! Had a lot of fun :)"), mentions="Aubrey", numberLikes=renpy.random.randint(250, 330))
@@ -351,12 +351,12 @@ label v12s18_bottlespin:
     scene v12slpbs1a # FPP. Same as v12slpbs1, Aubrey slight smile, mouth closed
     with dissolve
 
-    u "Depends… What are we playing?"
+    u "Depends... What are we playing?"
 
     scene v12slpbs1
     with dissolve
 
-    au "Spin the bottle... You know you wannaaaaaaa… *Chuckles*"
+    au "Spin the bottle... You know you wannaaaaaaa... *Chuckles*"
 
     scene v12slpbs1a
     with dissolve
@@ -376,7 +376,7 @@ label v12s18_bottlespin:
     scene v12slpbs3 # FPP. Everyone now sitting down on the floor (Check with wiebley for .duf of positioning), MC looking at Imre, Imre looking at Aubrey's direction, Imre smiling, mouth open
     with dissolve
 
-    imre "Aww yeah, we’re playing spin the bottle?!"
+    imre "Aww yeah, we're playing spin the bottle?!"
 
     scene v12slpbs4 # FPP. Same positioning as v12slpbs3, MC looking at Aubrey, Aubrey looking at Imre's direction, Aubrey smiling, mouth open
     with dissolve
@@ -396,7 +396,7 @@ label v12s18_bottlespin:
     scene v12slpbs4a # FPP. Same as v12slpbs4, Aubrey looking at MC, Aubrey smiling, mouth closed
     with dissolve
 
-    u "Alright… Any rules?"
+    u "Alright... Any rules?"
 
     scene v12slpbs4b # FPP. Same as v12slpbs4a, Aubrey smiling, mouth open
     with dissolve
@@ -421,7 +421,7 @@ label v12s18_bottlespin:
     scene v12slpbs3a
     with dissolve
 
-    imre "Well… That's hot, and kissing a dude is not. Do I look like Charli to you?"
+    imre "Well... That's hot, and kissing a dude is not. Do I look like Charli to you?"
 
     scene v12slpbs6 # FPP. MC still sitting down, Charli is on his phone, sitting on the table, slight smile, mouth open, looking at Imre's direction
     with dissolve
@@ -523,7 +523,7 @@ label v12s18_bottlespin:
     scene v12slpbs4c
     with dissolve
 
-    au "Don’t worry, Ryan. It’s your turn."
+    au "Don't worry, Ryan. It's your turn."
 
     scene v12slpbs8d # TPP. Same as v12slpbs8, Ryan's hand on the bottle
     with dissolve
@@ -538,7 +538,7 @@ label v12s18_bottlespin:
     scene v12slpbs8e # TPP. Same as v12slpbs8b, bottle pointing at MC
     with dissolve
 
-    ry "DAMMMNN! Sorry bro…"
+    ry "DAMMMNN! Sorry bro..."
 
     scene v12slpbs7b # FPP. Same as v12slpbs7, Ryan looking at MC, Ryan slightly worried, mouth closed
     with dissolve
@@ -580,7 +580,7 @@ label v12s18_bottlespin:
             scene v12slpbs7d # FPP. Same as v12slpbs7c, Ryan angry, mouth open
             with dissolve
 
-            ry "What the fuck! Why’d you hit me so hard?"
+            ry "What the fuck! Why'd you hit me so hard?"
 
             scene v12slpbs7e # FPP. Same as v12slpbs7d, Ryan angry, mouth closed
             with dissolve
@@ -645,7 +645,7 @@ label v12s18_bottlespin:
     scene v12slpbs8f # TPP. Same as v12slpbs8, Chris' hand on the bottle
     with dissolve
 
-    ch "Alright, I’ll have a go."
+    ch "Alright, I'll have a go."
 
     scene v12slpbs8a
     with dissolve
@@ -704,7 +704,7 @@ label v12s18_bottlespin:
     scene v12slpbs3g # FPP. Same as v12slpbs3, Imre looking at Nora, Imre slightly annoyed, mouth open
     with dissolve
 
-    imre "Hey, uh… Glad you guys are getting along and everything, but no kisses unless it has to do with the game."
+    imre "Hey, uh... Glad you guys are getting along and everything, but no kisses unless it has to do with the game."
 
     scene v12slpbs5
     with dissolve
@@ -756,7 +756,7 @@ label v12s18_bottlespin:
     scene v12slpbs10b
     with dissolve
 
-    no "You don't have to, you're choosing to. You promised me you’d leave it alone for tonight, just one night. You promised me that."
+    no "You don't have to, you're choosing to. You promised me you'd leave it alone for tonight, just one night. You promised me that."
 
     scene v12slpbs12b
     with dissolve
@@ -818,7 +818,7 @@ label v12s18_bottlespin:
     scene v12slpbs10b
     with dissolve
 
-    no "I don't care. You said you would shut it off and you didn't, so that's the situation. Shouldn't have made me a promise that you couldn’t keep."
+    no "I don't care. You said you would shut it off and you didn't, so that's the situation. Shouldn't have made me a promise that you couldn't keep."
 
     scene v12slpbs12b
     with dissolve
@@ -872,7 +872,7 @@ label v12s18_bottlespin:
     scene v12slpbs10d
     with dissolve
 
-    no "Why are you hesitating? *Chuckles* We don’t have all night."
+    no "Why are you hesitating? *Chuckles* We don't have all night."
 
     scene v12slpbs3i # FPP. Same as v12slpbs3h, Imre slight smile, mouth open, looking at Nora
     with dissolve
@@ -902,7 +902,7 @@ label v12s18_bottlespin:
     scene v12slpbs6
     with dissolve
 
-    charli "Who’s kissing?"
+    charli "Who's kissing?"
 
     scene v12slpbs3a
     with dissolve
@@ -951,7 +951,7 @@ label v12s18_bottlespin:
     scene v12slpbs4b
     with dissolve
 
-    au "I’m going next, I’m ready for some action… *Chuckles*"
+    au "I'm going next, I'm ready for some action... *Chuckles*"
 
     scene v12slpbs8k # TPP. Same as v12slpb8, Aubrey's had on the bottle
     with dissolve
@@ -1025,7 +1025,7 @@ label v12s18_bottlespin:
     scene v12slpbs10b
     with dissolve
 
-    no "Done. Alright, now that we’ve both kissed her, I'm gonna go hang in the phone-free section."
+    no "Done. Alright, now that we've both kissed her, I'm gonna go hang in the phone-free section."
 
     scene v12slpbs10f # FPP. Same as v12slpbs10, Nora getting up, annoyed, mouth closed
     with dissolve
@@ -1056,12 +1056,12 @@ label v12s18_bottlespin:
         scene v12slpbs5e # FPP. Same as v12slpbs5c, Lindsey flirty smile, mouth open, closer to MC
         with dissolve
 
-        li "Luck really is on our side today… *Chuckles*"
+        li "Luck really is on our side today... *Chuckles*"
 
     scene v12slpbs4b
     with dissolve
 
-    au "Alright, let’s do something else I guess. *Laughs*"
+    au "Alright, let's do something else I guess. *Laughs*"
 
     call screen v12s18_room1
 
@@ -1146,7 +1146,7 @@ label v12s18_fmk:
     scene v12slpfmk6 # FPP. Same positioning as v12slpfmk2, MC looking at Imre, Imre looking at Amber, Imre mouth open, slight smile
     with dissolve
 
-    imre "Sounds good to me. Let's see…"
+    imre "Sounds good to me. Let's see..."
 
     scene v12slpfmk6a # FPP. Same as v12slpfmk6, Imre looking at MC, Imre slight smile, mouth open
     with dissolve
@@ -1166,7 +1166,7 @@ label v12s18_fmk:
     scene v12slpfmk6
     with dissolve
 
-    imre "I think I’ll marry Amber and fuck Nora. Can't marry Chris' girl, you know?"
+    imre "I think I'll marry Amber and fuck Nora. Can't marry Chris' girl, you know?"
 
     scene v12slpfmk4b
     with dissolve
@@ -1196,7 +1196,7 @@ label v12s18_fmk:
     scene v12slpfmk6
     with dissolve
 
-    imre "This oughta be good… *Laughs*"
+    imre "This oughta be good... *Laughs*"
 
     scene v12slpfmk4b
     with dissolve
@@ -1231,7 +1231,7 @@ label v12s18_fmk:
     scene v12slpfmk6
     with dissolve
 
-    imre "You must either think or know that [name] is good in bed… Which one is it? *Chuckles*"
+    imre "You must either think or know that [name] is good in bed... Which one is it? *Chuckles*"
 
     scene v12slpfmk4a
     with dissolve
@@ -1283,7 +1283,7 @@ label v12s18_fmk:
             scene v12slpfmk6e # FPP. Same as v12slpfmk6a, Imre slightly annoyed, mouth open
             with dissolve
 
-            imre "C’mon dude, she's already taken."
+            imre "C'mon dude, she's already taken."
 
             scene v12slpfmk6b
             with dissolve
@@ -1355,7 +1355,7 @@ label v12s18_fmk:
         scene v12slpfmk5e
         with dissolve
 
-        no "Haha… I know, I know, He's pretty cool too, though."
+        no "Haha... I know, I know, He's pretty cool too, though."
 
         scene v12slpfmk5f
         with dissolve
@@ -1396,7 +1396,7 @@ label v12s18_fmk:
     scene v12slpfmk4a
     with dissolve
 
-    am "Well shit… *Chuckles*"
+    am "Well shit... *Chuckles*"
 
     scene v12slpfmk4d
     with dissolve
@@ -1406,7 +1406,7 @@ label v12s18_fmk:
     scene v12slpfmk4a
     with dissolve
 
-    am "I guess that's game over… I was hoping to play with a few others, I really wanna know their answers. *Laughs*"
+    am "I guess that's game over... I was hoping to play with a few others, I really wanna know their answers. *Laughs*"
 
     scene v12slpfmk4d
     with dissolve
@@ -1431,7 +1431,7 @@ label v12s18_fmk:
     scene v12slpfmk4d
     with dissolve
 
-    u "(Oh boy…)"
+    u "(Oh boy...)"
 
     call screen v12s18_room2
 
@@ -1472,12 +1472,12 @@ label v12s18_bet: # END OF FREE ROAM
         scene v12slpbet3
         with dissolve
 
-        am "You know what this is... It’s time for your picture. *Chuckles*"
+        am "You know what this is... It's time for your picture. *Chuckles*"
 
         scene v12slpbet3a
         with dissolve
 
-        u "Wait… NOW!?"
+        u "Wait... NOW!?"
 
         scene v12slpbet3b # FPP. Same as v12slpbet3, different pose
         with dissolve
@@ -1492,7 +1492,7 @@ label v12s18_bet: # END OF FREE ROAM
         scene v12slpbet3b
         with dissolve
 
-        am "[name]...You have to."
+        am "[name]... You have to."
 
         scene v12slpbet3c
         with dissolve
@@ -1542,7 +1542,7 @@ label v12s18_bet: # END OF FREE ROAM
         scene v12slpbet3
         with dissolve
 
-        am "Ha! Damn… These are all good."
+        am "Ha! Damn... These are all good."
 
         scene v12slpbet3b
         with dissolve
@@ -1585,7 +1585,7 @@ label v12s18_bet: # END OF FREE ROAM
         scene v12slpbet3e # FPP. Same as v12slpbet3, Amber nude, smiling, mouth closed
         with dissolve
 
-        u "Oh… okay, umm. What are you doing?"
+        u "Oh... okay, umm. What are you doing?"
 
         scene v12slpbet3f # FPP. Same as v12slpbet3e, Amber smiling, mouth open
         with dissolve
@@ -1600,7 +1600,7 @@ label v12s18_bet: # END OF FREE ROAM
         scene v12slpbet3f
         with dissolve
 
-        am "You don't even remember? I lost our little go kart bet… So, I wanna go ahead and take my picture."
+        am "You don't even remember? I lost our little go kart bet... So, I wanna go ahead and take my picture."
 
         scene v12slpbet3e
         with dissolve
@@ -1672,7 +1672,7 @@ label v12s18_bet: # END OF FREE ROAM
     scene v12slpbet7
     with dissolve
 
-    imre "*Drunk* Bored on my phone... Everyone out here is going to sleep... Also, I’m pretty fucking drunk right now… *Chuckles*"
+    imre "*Drunk* Bored on my phone... Everyone out here is going to sleep... Also, I'm pretty fucking drunk right now... *Chuckles*"
 
     scene v12slpbet7a
     with dissolve
@@ -1793,7 +1793,7 @@ label v12s18_bet: # END OF FREE ROAM
     scene v12slpbet15b # TPP. Same as v12slpbet15a, Amber drawing the dot on his nose, Amber smiling, mouth closed, Imre eyes closed, mouth closed, sleeping
     with dissolve
 
-    u "He’s asleep?!"
+    u "He's asleep?!"
 
     scene v12slpbet14a # FPP. Same as v12slpbet14, Amber looking at MC, smiling, mouth open
     with dissolve
@@ -1808,7 +1808,7 @@ label v12s18_bet: # END OF FREE ROAM
     scene v12slpbet14a
     with dissolve
 
-    am "Yeah. It’s pretty late."
+    am "Yeah. It's pretty late."
 
     scene v12slpbet9
     with dissolve
@@ -1818,7 +1818,7 @@ label v12s18_bet: # END OF FREE ROAM
     scene v12slpbet12a # FPP. Same as v12slpbet12, Amber looking at MC, Amber smiling, mouth closed
     with dissolve
 
-    u "We’re just gonna leave him there?"
+    u "We're just gonna leave him there?"
 
     scene v12slpbet12b # FPP. Same as v12slpbet12a, Amber smiling, mouth open
     with dissolve
@@ -1899,7 +1899,7 @@ label v12s18_bet: # END OF FREE ROAM
                 scene v12slpbet17a
                 with dissolve
 
-                u "Yes, ma’am..."
+                u "Yes, ma'am..."
 
                 scene v12slpbet16a
                 with dissolve
