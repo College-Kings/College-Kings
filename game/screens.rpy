@@ -208,6 +208,8 @@ style input:
 
 
 screen choice(items, seconds=0, failLabel=""):
+    text "Seconds: [seconds], FailLabel: [failLabel]"
+    
     # Show KCT
     if showkct:
         use kctChoice
