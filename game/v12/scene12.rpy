@@ -297,7 +297,7 @@ label v12_room_chloe_riley:
         scene v12crm12c
         with dissolve
 
-        ri "I DON'T! [Name], seriously!"
+        ri "I DON'T! [name], seriously!"
 
         scene v12crm12a
         with dissolve

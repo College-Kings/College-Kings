@@ -65,7 +65,7 @@ label v12_murder_mystery_reveal:
 
     if v12_murder_count >= 5:
 
-        lee "A total of [number of victims] people were killed, so let's give our murderer a round of applause."
+        lee "A total of [v12_murder_count] people were killed, so let's give our murderer a round of applause."
 
         scene v12mmr99 # TPP. Same positioning as v12mmr1, Show Riley, Lindsey and Imre applauding MC, all smiling, mouths closed
         with dissolve
