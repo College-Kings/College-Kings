@@ -156,8 +156,13 @@ label v12_nora_robbed:
             scene v12nrb5
             with dissolve
 
+<<<<<<< Updated upstream
             ch "I'm trying to be sympathetic in the current situation, but I won't stand here and be disrespected in the process." 
             ch "You not understanding that people need a balance between all aspects of life, isn't something I can control. You take being someone's “everything” way too literally. Sadly Nora, if you had interests in life outside of just me, then maybe you wouldn't be so stuck up on this." 
+=======
+            ch "I’m trying to be sympathetic in the current situation, but I won't stand here and be disrespected in the process." 
+            ch "You do not understand that the balance between all aspects of life that people need is not something that I can control. You take being someone's “everything” way too literally. Sadly Nora. if you had interests in life outside of just me, then maybe you wouldn't be so stuck up on this." 
+>>>>>>> Stashed changes
             ch "I'll be in the room, you can talk to me when you're ready."
 
             scene v12nrb5c # FPP. Chris walks away ahead of Nora, Chris annoyed, mouth closed, Nora angry, mouth closed
