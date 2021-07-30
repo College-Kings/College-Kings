@@ -493,15 +493,10 @@ label beat_lars:
     scene v8sdd12 # FPP. Show Joe charging at MC about to swing the pipe over MC's head, Joe looking angry.
     with dissolve
 
-    $ timed = True
-    $ timerexit = "hit_with_pipe"
-
-    menu:
+    menu (fail_label="hit_with_pipe"):
         "Duck":
-            $ timed = False
             jump dodged_pipe
         "...":
-            $ timed = False
             jump hit_with_pipe
 
 label no_int_deal_w_josh:

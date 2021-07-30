@@ -18,18 +18,6 @@ init -1 python:
             setattr(store, "kct", sortedKCT[0])
             renpy.notify("Your KCT has changed to " + kct)
 
-
-    # Mark disabled choices
-    if getattr(renpy.display.get_info(), 'oldmenu', None) is None:
-        renpy.display.get_info().oldmenu = renpy.exports.menu
-
-    def menu_override(items, set_expr, args, kwargs, item_arguments):
-        items = [ (renpy.exports.substitute(label) + (" (disabled)" if not renpy.python.py_eval(condition) else ""), "True", value)
-                  for label, condition, value in items ]
-        return renpy.display.get_info().oldmenu(items, set_expr)
-    renpy.exports.menu = menu_override
-
-
     def grantAchievement(achieve):
         try:
             renpy.show(achieve, at_list=achievementAtList)

@@ -978,10 +978,7 @@ label v11_apes_manhunt:
     scene v11amh46 # FPP. MC still on the horse, the horse is now a bit further away
     with dissolve
 
-    $ timed = True
-    $ timerexit = "v11_horse_fall"
-
-    menu:
+    menu (fail_label="v11_horse_fall"):
         "Balance":
             $ hold_your_horses = True
             $ grantAchievement("hold_your_horses")
@@ -998,8 +995,6 @@ label v11_apes_manhunt:
 
             scene v11amh49 # FPP. MC still on horse, horse stopped (Cameron, Grayson, Caleb and Ryan are all close by, out of shot)
             with dissolve
-
-            $ timed = False
 
             menu:
                 "Good horse":
@@ -1111,8 +1106,6 @@ label v11_apes_manhunt:
                     jump v11_mc_horse_room
                 
         "Fall":
-            $ timed = False
-
             jump v11_horse_fall
 
 label v11_horse_fall:

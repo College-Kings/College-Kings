@@ -39,18 +39,13 @@ label v9_hallway:
 
     u "(Well, fuck.)"
 
-    $ timed = True
-    $ timerexit = "v9_hall_calm"
-
-    menu: 
+    menu (fail_label="v9_hall_calm"): 
         "Apologize": 
             $ addPoint("bro")
-            $ timed = False
             jump v9_hall_apol
 
         "Tell him to calm down":
             $ addPoint("tm")
-            $ timed = False
             jump v9_hall_calm
 
 label v9_hall_apol:
@@ -122,13 +117,9 @@ label v9_hall_cont1:
     scene v9hlw8 # TPP. Show tough guy in MC's face, almost nose to nose.
     with dissolve
 
-    $ timed = True
-    $ timerexit = "v9_hall_no_punch"
-
-    menu: 
+    menu (fail_label="v9_hall_no_punch"): 
         "Punch the guy": 
             $ addPoint("bro")
-            $ timed = False
             $ hl_punch = True
             $ down_for_the_count = True
             $ grantAchievement("back_down")
@@ -136,7 +127,6 @@ label v9_hall_cont1:
 
         "Don't punch the guy":
             $ addPoint("tm")
-            $ timed = False
             $ hl_punch = False
             jump v9_hall_no_punch
 

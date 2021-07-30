@@ -37,14 +37,11 @@ label v11_hotel_room:
     u "I guess it's time for you two to die."
     u "3..."
     u "2..."
-    $ timed = True
-    $ timerexit = "v11timera"
 
-    menu:
+    menu (fail_label="v11timera"):
         "Save Lauren":
             $ addPoint("bf")
             $ v11save = 1
-            $ timed = False
 
             scene v11bane5 # Mc tackles Lauren out of the guns aim (replace bane like character for MC )
             with dissolve
@@ -71,7 +68,6 @@ label v11_hotel_room:
         "Save Riley":
             $ addPoint("bro")
             $ v11save = 2
-            $ timed = False
 
             scene v11bane6 # Mc tackles Riley out of the guns aim (replace bane character with MC, Mc should still be tackling Riley out the way)
             with dissolve
@@ -113,7 +109,6 @@ label v11timera:
 
 label v11wakeupa:
     stop sound
-    $ timed = False
     hide screen fantasyOverlay
     play sound "sounds/swoosh.mp3"
 

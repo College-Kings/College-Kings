@@ -5055,14 +5055,11 @@ label afteraubrey:
     unknown "I guess it's time for you two to die."
     unknown "3..."
     unknown "2..."
-    $ timed = True
-    $ timerexit = "timera"
 
-    menu:
+    menu (fail_label="timera"):
         "Save Lauren":
             $ addPoint("bf")
             $ save = 1
-            $ timed = False
 
             scene s592 # Mc tackles Lauren out of the guns aim
             with dissolve
@@ -5086,7 +5083,6 @@ label afteraubrey:
         "Save Riley":
             $ addPoint("bro")
             $ save = 2
-            $ timed = False
 
             scene s594 # Mc tackles Riley out of the guns aim
             with dissolve
@@ -5123,7 +5119,6 @@ label timera:
 
 label wakeupa:
     stop sound
-    $ timed = False
     hide screen fantasyOverlay
     play sound "sounds/swoosh.mp3"
     scene s586b # you wake up in disstress

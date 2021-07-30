@@ -561,10 +561,7 @@ label v11_mc_amber_gokart:
 
     am "Huh? Wait! Why am I slowing down?"
 
-    $ timed = True
-    $ timerexit = "v11_no_overtake1"
-
-    menu:
+    menu (fail_label="v11_no_overtake1"):
         "Overtake Amber":
             $ v11_overtake_points += 1
 
@@ -598,13 +595,9 @@ label v11_mc_amber_gokart:
 
             am "I don't like giving people false hope. *Chuckles*"
 
-            $ timed = False
-
             jump v11_race_continue1
 
         "See what's wrong":
-            $ timed = False
-
             jump v11_no_overtake1
 
 label v11_no_overtake1:
@@ -684,10 +677,7 @@ label v11_race_continue1:
     scene v11cam27
     with dissolve
 
-    $ timed = True
-    $ timerexit = "v11_no_overtake2"
-
-    menu:
+    menu (fail_label="v11_no_overtake2"):
         "Riley's here":
             $ v11_overtake_points += 1
 
@@ -756,13 +746,9 @@ label v11_race_continue1:
 
             am "Cause I got the juice! *Laughs*"
 
-            $ timed = False
-
             jump v11_race_continue2
 
-        "There's something in your hair":
-            $ timed = False
-            
+        "There's something in your hair":       
             jump v11_no_overtake2
 
 label v11_no_overtake2:
@@ -839,10 +825,7 @@ label v11_race_continue2:
 
     u "That's what you think!"
 
-    $ timed = True
-    $ timerexit = "v11_no_overtake3"
-
-    menu:
+    menu (fail_label="v11_no_overtake3"):
         "Sharp turn":
             $ v11_overtake_points += 1
 
@@ -871,13 +854,9 @@ label v11_race_continue2:
 
             pause 0.75
 
-            $ timed = False
-
             jump v11_race_continue3
 
         "Steady":
-            $ timed = False
-
             jump v11_no_overtake3
 
 label v11_no_overtake3:
