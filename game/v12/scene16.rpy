@@ -823,6 +823,8 @@ label v12_valentine:
                 scene v12val35 # TPP. Show MC kissing Nora's cheek, Nora slight smile, blushing, mouth closed
                 with dissolve
 
+                play sound "sounds/kiss.mp3"
+
                 pause 0.75
 
                 scene v12val27

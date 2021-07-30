@@ -899,6 +899,8 @@ label v12_lindsey_kiss_or_not:
             scene v12esr30 # TPP. Show MC and Lindsey kissing
             with dissolve
 
+            play sound "sounds/kiss.mp3"
+
             if lindseyfirstkiss or kct == "popular" or len(v12s7_killList) >= 5:
                 if not lindseyfirstkiss and not len(v12s7_killList) >= 5:
                     call screen kctPopup

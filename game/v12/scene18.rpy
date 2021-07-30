@@ -490,10 +490,10 @@ label v12s18_bottlespin:
 
     pause 0.75
 
-    play sound "sounds/kiss.mp3"
-
     scene v12slpbs9 # TPP. Show Imre and Lindsey having a peck on the lips
     with dissolve
+
+    play sound "sounds/kiss.mp3"
 
     pause 0.75
 
