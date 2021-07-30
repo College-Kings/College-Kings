@@ -1,7 +1,7 @@
-# SCENE X: 
-# Locations: 
-# Characters: MC (Outfit: x), LAUREN (Outfit: x), GREETER (Outfit: 1)
-# Time: 
+# SCENE X:Big Night with Lauren
+# Locations:hotel lobby, hotel room, hotel roof, street, restaurant, park
+# Characters: MC (Outfit: 6), LAUREN (Outfit: Candy dress with black textura), GREETER (Outfit: 1)
+# Time:Night
 # Phone Images: None
 
 $ v12_lauren_sex = False
