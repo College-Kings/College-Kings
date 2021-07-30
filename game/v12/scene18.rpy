@@ -1451,7 +1451,7 @@ label v12s18_bet: # END OF FREE ROAM
     scene v12slpbet1
     with dissolve
 
-    am "You'll find out when we get there. *Chuckles*  C'mon!"
+    am "You'll find out when we get there. *Chuckles* C'mon!"
 
     scene v12slpbet2 # TPP. Show MC and Amber getting inside the bathroom, MC slightly worried, mouth closed, Amber smiling, mouth closed
     with dissolve
@@ -1462,7 +1462,7 @@ label v12s18_bet: # END OF FREE ROAM
         scene v12slpbet3 # FPP. MC and Amber now in the bathroom, looking at each other, Amber smiling, mouth open
         with dissolve
 
-        am "Alright mister, strip  down."
+        am "Alright mister, strip down."
 
         scene v12slpbet3a # FPP. Same as v12slpbet3, Amber smiling, mouth closed
         with dissolve

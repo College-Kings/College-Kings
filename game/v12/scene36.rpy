@@ -50,12 +50,12 @@ label v12_lindsey_lobby:
     scene v12lil4b
     with dissolve
 
-    u "Okay… You forget how to eat? *Chuckles*"
+    u "Okay... You forget how to eat? *Chuckles*"
 
     scene v12lil4c
     with dissolve
 
-    li "No, haha… I just don't wanna go by myself."
+    li "No, haha... I just don't wanna go by myself."
 
     scene v12lil4b
     with dissolve
@@ -105,7 +105,7 @@ label v12_lindsey_lobby:
     scene v12lil7b
     with dissolve
 
-    li "Well… We went for coffee a long time ago and she paid. So I know it was the same kind of wallet, but I don't wanna assume he stole it."
+    li "Well... We went for coffee a long time ago and she paid. So I know it was the same kind of wallet, but I don't wanna assume he stole it."
 
     scene v12lil7d # FPP. Same as v12lil7b, different pose
     with dissolve
@@ -120,7 +120,7 @@ label v12_lindsey_lobby:
     scene v12lil7d
     with dissolve
 
-    li "Oh, well… Maybe Charli took it? That'd be so horrible if he did... I don't think I could look at him the same."
+    li "Oh, well... Maybe Charli took it? That'd be so horrible if he did... I don't think I could look at him the same."
 
     scene v12lil7e
     with dissolve
@@ -135,7 +135,7 @@ label v12_lindsey_lobby:
     scene v12lil7a
     with dissolve
 
-    u "I’m so honest."
+    u "I'm so honest."
 
     scene v12lil8 # TPP. Show Lindsey and MC approaching the bartender, all of them slightly smiling, mouths closed (bartender behind the bar)
     with dissolve
@@ -214,7 +214,7 @@ label v12_lindsey_lobby:
     scene v12lil12c # FPP. Same as v12lil12b, Lindsey slight smile, mouth open
     with dissolve
 
-    li "You and Amber both say a lot of the same stuff… *Chuckles*"
+    li "You and Amber both say a lot of the same stuff... *Chuckles*"
 
     scene v12lil12b
     with dissolve

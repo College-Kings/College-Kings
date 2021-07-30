@@ -48,7 +48,7 @@ label v12_riley_ending:
     scene v12rie2a
     with dissolve
 
-    ri "I’m really sorry, again… I've been pretty nasty to you..."
+    ri "I'm really sorry, again... I've been pretty nasty to you..."
 
     scene v12rie2b
     with dissolve
@@ -63,7 +63,7 @@ label v12_riley_ending:
     scene v12rie2c # FPP. Same as v12rie2a, Riley slightly angry, mouth open
     with dissolve
 
-    ri "I'm sure you'll like it... Now, as for the motherfucker that actually stole my picture and humiliated me, they tried framing you…"
+    ri "I'm sure you'll like it... Now, as for the motherfucker that actually stole my picture and humiliated me, they tried framing you..."
 
     scene v12rie2d # FPP. Same as v12rie2c, different pose
     with dissolve
@@ -111,4 +111,4 @@ label end12:
     if renpy.loadable("v13/scene1.rpy"):
         jump v13_start
     else:
-        jump end_credits  
+        jump end_credits
