@@ -120,7 +120,7 @@ label v12_room_chloe_riley:
 
         pause 0.75
 
-        if not chloers or not chloegf:
+        if not chloers and not chloegf:
             scene v12crm6 # FPP. MC now laying on his bed, lights off, looking at chloe on her bed, mouth opened
             with dissolve
 

@@ -646,7 +646,7 @@ label v12_valentine:
     scene v12val30e # FPP. Same as v12val30c, Nora slight smile, mouth open
     with dissolve
 
-    no "*Sighs* Okay. [Name], when I think about the type of person I want to marry, I think of someone who is patient. Someone who is selfless. Someone who is always there for me, even when I'm least expecting it."
+    no "*Sighs* Okay. [name], when I think about the type of person I want to marry, I think of someone who is patient. Someone who is selfless. Someone who is always there for me, even when I'm least expecting it."
 
     scene v12val30f # FPP. Same as v12val30e, different pose
     with dissolve
