@@ -148,12 +148,12 @@ label v12_room_chloe_riley:
             scene v12crm8 # TPP. Chloe gets up out of her bed, lights off
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             scene v12crm9 # TPP. Chloe lays on MCs chest, lights off
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             scene v12crm10 # FPP. Chloe now laying on MCs chest, mouth closed, lights off
             with dissolve
@@ -193,7 +193,7 @@ label v12_room_chloe_riley:
             scene v12crm11 # TPP. Chloe and MC sleeping
             with dissolve
 
-            pause 0.75
+            pause 1.75
 
     else: 
 
@@ -350,5 +350,7 @@ label v12_room_chloe_riley:
 
         scene v12crm7 
         with dissolve
+
+        pause 1.25
 
     jump v12_cafe #scene 13
