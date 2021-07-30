@@ -53,6 +53,11 @@ init python:
     SceneGallery("v11s28a_galleryScene") #28a
     SceneGallery("v11_riley_sex_sg") #35
     SceneGallery("v11_chloe_sex_scene") #41b
+        #v12
+    SceneGallery("") #17, Lindsey
+    SceneGallery("") #23, Rose
+    SceneGallery("") #29, Lauren
+    SceneGallery("") #35a, Nora
 
 screen spoiler():
     modal True
