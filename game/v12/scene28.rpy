@@ -79,7 +79,7 @@ label v12_riley_lobby:
     scene v12ril4 # TPP. Show MC sitting on the couch, he's angry, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12ril4a # TPP. Same as v12ril4, MC different pose
     with dissolve
