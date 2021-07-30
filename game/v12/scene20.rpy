@@ -13,7 +13,7 @@ label v12_urban_exploring:
     scene v12uex2 # FPP Show outside of abandoned commercial bakery
     with dissolve
 
-    au "What...is this?"
+    au "What... is this?"
 
     no "Uhh, it's the factory...? I think..."
 
