@@ -1027,7 +1027,7 @@ label v12_lindsey_sex:
     with dissolve
     pause
 
-    u "Y-yes...."
+    u "Y-yes..."
 
     scene v12linhj2f # Ignore as animation
     with dissolve
@@ -1148,7 +1148,7 @@ label v12_lindsey_sex:
     scene v12esr41b # TPP. Same as v12esr41a, Lindsey holding the back of MC's head, she is moaning, mouth open
     with dissolve
 
-    li "Yes... yess.... That's it, yes!"
+    li "Yes... yess... That's it, yes!"
 
     scene v12esr64a # TPP. Same as v12esr64, Lindsey holding on to the back of MC's head, she is moaning, about to cum, mouth open
     with dissolve
