@@ -193,6 +193,8 @@ label v12_room_chloe_riley:
             scene v12crm11 # TPP. Chloe and MC sleeping
             with dissolve
 
+            pause 0.75
+
     else: 
 
         scene v12crm12 # FPP. Now in the room, riley on her bed, slight smile, mouth opened
