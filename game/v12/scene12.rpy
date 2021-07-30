@@ -5,10 +5,6 @@
 
 label v12_room_chloe_riley:
     if not v11_riley_roomate:
-        scene v12crm1 # TPP. MC walking into his room
-        with fade
-        
-        pause 0.75
 
         scene v12crm2 # FPP. MC looking at chloe laying down on her bed, mouth closed
         with dissolve
@@ -198,10 +194,6 @@ label v12_room_chloe_riley:
             with dissolve
 
     else: 
-        scene v12crm1
-        with dissolve
-
-        pause 0.76
 
         scene v12crm12 # FPP. Now in the room, riley on her bed, slight smile, mouth opened
         with dissolve
