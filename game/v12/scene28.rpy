@@ -87,7 +87,7 @@ label v12_riley_lobby:
     u "(Charli. That motherfucker. I wouldn't be surprised if it was him, but at the same time I'd be absolutely amazed.)"
 
     if laurenrs or v1_kissLauren:
-        jump scene29
+        jump v12_lauren_sex #scene 29
 
     else:
         jump scene29a
