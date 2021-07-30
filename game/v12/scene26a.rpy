@@ -53,7 +53,7 @@ label v12_follow_chris:
     scene v12chf3 # TPP. Show MC and Chris getting into the back of the car, both worried, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12chf4 # FPP. MC and Chris sitting in the back of the car, MC looking at Chris, Chris looking out the window, very worried, mouth open
     with dissolve
@@ -68,7 +68,7 @@ label v12_follow_chris:
     scene v12chf4b # FPP. Same as v12chf4a, Chris very worried, mouth open
     with dissolve
 
-    ch "She just...*Sighs*"
+    ch "She just... *Sighs*"
 
     scene v12chf4a
     with dissolve

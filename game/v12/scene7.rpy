@@ -2062,7 +2062,7 @@ label v12s7_ryan1:
     scene v12ferry1a # FPP. Same 1, mouth open
     with dissolve
 
-    ry "Nope, and I haven't seen Mr. Lee either so I'm just waiting here.*Chuckles*"
+    ry "Nope, and I haven't seen Mr. Lee either so I'm just waiting here. *Chuckles*"
 
     scene v12ferry1
     with dissolve
@@ -3314,7 +3314,7 @@ label v12s7_penelope1:
                 scene v12ferpen3 # TPP. Show MC gets behind Penelope and wraps his arms around her grabbing her hand and applying pressure to the spot on the wall.
                 with dissolve
 
-                pe "Oh...*Chuckles*"
+                pe "Oh... *Chuckles*"
 
                 u "And look at that, spot's gone."
 
@@ -5437,7 +5437,7 @@ label v12s7_emily2:
     scene v12feremi1
     with dissolve
 
-    u "I'm just trying to...*Sighs* Nevermind."
+    u "I'm just trying to... *Sighs* Nevermind."
 
     call screen v12s7_bow
 

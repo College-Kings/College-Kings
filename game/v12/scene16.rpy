@@ -318,7 +318,7 @@ label v12_valentine:
     scene v12val21
     with dissolve
 
-    ch "Oh...*Chuckles*"
+    ch "Oh... *Chuckles*"
 
     scene v12val18b
     with dissolve
