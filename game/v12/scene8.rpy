@@ -177,7 +177,7 @@ label v12_murder_mystery_reveal:
             scene v12mmr7b # FPP. Same cam as v12mmr7, Chris and Nora looking at each other, Nora feeling sick, mouth closed, Chris worried, mouth open
             with dissolve
 
-            ch "You need some water or something."
+            ch "You need some water or something?"
 
             scene v12mmr7c # FPP. Same as v12mmr7b, Chris mouth closed, worried, Nora feeling sick, mouth open
             with dissolve
@@ -240,7 +240,7 @@ label v12_murder_mystery_reveal:
     scene v12mmr1
     with dissolve
 
-    lee "Casual sea sickness, the pleasures of the ferry. Enjoy the trip students."
+    lee "Casual sea sickness, the pleasures of the ferry. Enjoy the trip, students."
 
     scene v12mmr9b # FPP. Show MC running over to the edge of the ship where Nora is in v12mmr11, MC worried, mouth closed
     with dissolve
@@ -275,7 +275,7 @@ label v12_murder_mystery_reveal:
     scene v12mmr14 # TPP. Show MC halfway through sitting down on a seat, mouth closed, bored
     with fade
 
-    pause 0.75
+    pause 1.25
 
     scene v12mmr15 # TPP. Show MC sitting down, sleeping, mouth closed
     with dissolve
