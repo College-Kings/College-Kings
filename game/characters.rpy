@@ -116,4 +116,5 @@ define character.robber = Character("Robber", who_color="#0055ff", who_outlines=
 define character.fwait = Character("French Waitress", who_color="#0055ff", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 
 define character.clady = Character("Crazy Lady", who_color="#ffffff", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
-define character.escman = Character("Crazy Lady", who_color="#ffffff", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.escman = Character("Manager", who_color="#ffffff", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.bishop = Character("Bishop", who_color="#ffffff", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
