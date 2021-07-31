@@ -1868,7 +1868,7 @@ label v12s18_bet: # END OF FREE ROAM
 
             u "Something like that."
 
-            if amberrs or kct == "confident":
+            if amberrs or kct == "popular":
                 if not amberrs:
                     call screen kctPopup
                 
