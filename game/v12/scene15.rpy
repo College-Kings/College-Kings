@@ -163,6 +163,8 @@ label v12_riddle_riley:
             scene v12rrl13 # TPP. MC stands up
             with dissolve
 
+            pause 0.75
+
     scene v12rrl69420 # FPP. MC standing a little away from riley, mouth opened
     with dissolve
 
@@ -181,7 +183,7 @@ label v12_riddle_riley:
     scene v12rrl16 # TPP. MC and riley looking at a piece of paper in the wall
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12rrl15a # FPP. Same as 15, mouth opened
     with dissolve
