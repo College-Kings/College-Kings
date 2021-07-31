@@ -137,7 +137,7 @@ label v11_rose_underground:
         with dissolve
 
         ro "I never wanted to be that professor that was really harsh about things like titles, but I won't fall back to being called a teacher. *Chuckles*"
-        ro "That's like calling the president \"mister\" and then their last name. It's just not their title you know?"
+        ro "That's like calling the President \"mister\" and then their last name. It's just not their title you know?"
 
         scene v11sub2c
         with dissolve
