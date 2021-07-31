@@ -75,7 +75,7 @@ label v11_nora_airport_convo:
     scene v11nca5b # FPP. Same as 5a, different pose to make things less stale
     with dissolve
 
-    charli "Are you sure? I know she's your friend, I'm not trying to be 'that guy'."
+    charli "Are you sure? I know she's your friend, I'm not trying to be \"that guy\"."
 
     scene v11nca5c # FPP. Same as 5, different pose to make things less stale
     with dissolve

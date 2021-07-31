@@ -184,7 +184,7 @@ label v11_cafe_with_riley:
     scene v11s3bris9a
     with dissolve
 
-    ri "Alright, I guess I shouldn't worry about it. I am gonna talk to Amber though because I know she tried to scare me with her 'make sure you tuck your feet under the seat so you don't fall out'. *Chuckles*"
+    ri "Alright, I guess I shouldn't worry about it. I am gonna talk to Amber though because I know she tried to scare me with her \"make sure you tuck your feet under the seat so you don't fall out\". *Chuckles*"
 
     scene v11s3bris9
     with dissolve
@@ -292,7 +292,7 @@ label v11_cafe_with_riley:
     scene v11s3bris9g
     with dissolve
 
-    ri "Haha, yes. Here I am.*Chuckles*."
+    ri "Haha, yes. Here I am. *Chuckles*"
 
     scene v11s3bris9e
     with dissolve
@@ -307,7 +307,7 @@ label v11_cafe_with_riley:
     scene v11s3bris9e
     with dissolve
 
-    u "Wowww...*Chuckles* ."
+    u "Wowww... *Chuckles*"
 
     scene v11s3bris10a
     with dissolve

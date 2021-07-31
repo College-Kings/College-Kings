@@ -172,7 +172,7 @@ label v11_dinner_with_aubrey:
         scene v11dwa1e
         with dissolve
 
-        au "He basically just said that you 're a man whore."
+        au "He basically just said that you're a man whore."
 
         scene v11dwa1
         with dissolve
@@ -219,7 +219,7 @@ label v11_dinner_with_aubrey:
                 scene v11dwa1b
                 with dissolve
 
-                u "*Laughs*."
+                u "*Laughs*"
 
             "No":
                 scene v11dwa1b
