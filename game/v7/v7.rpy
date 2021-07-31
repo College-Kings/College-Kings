@@ -7205,7 +7205,7 @@ label hc_asking_riley:
 
         ri "How did you know that I love Cinderella?"
 
-        scene s959b # riley excited
+        scene s959c # riley excited
         with dissolve
 
         u "A magician never reveals his secrets."
