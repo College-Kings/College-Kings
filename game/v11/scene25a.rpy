@@ -64,7 +64,7 @@ label v11_hotel_charlie_bar:
     scene v11cmb2a
     with dissolve
 
-    charli "You can make excuses for your actions all you want, but if others are harmed by what you do, especially if these 'others' are people I've grown close to..."
+    charli "You can make excuses for your actions all you want, but if others are harmed by what you do, especially if these \"others\" are people I've grown close to..."
     charli "...then you can be assured I'm going to have an issue with you regardless of how you may feel."
 
     scene v11cmb2

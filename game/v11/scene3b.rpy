@@ -194,7 +194,7 @@ label v11_cafe_with_riley:
     scene v11s3bris9a
     with dissolve
 
-    ri "We should call her Maleficent' *Chuckles*"
+    ri "We should call her Maleficent... *Chuckles*"
 
     scene v11s3bris9
     with dissolve
@@ -264,7 +264,7 @@ label v11_cafe_with_riley:
     scene v11s3bris10b # FPP. same10a, looking at riley mouth open, slight smile
     with dissolve
 
-    charli "Yea- well' I don't know, actually. *Chuckles* Would you say we're friends [name]?"
+    charli "Yea- well... I don't know, actually. *Chuckles* Would you say we're friends [name]?"
 
     menu:
         "Not yet":
@@ -337,7 +337,7 @@ label v11_cafe_with_riley:
     scene v11s3bris9g 
     with dissolve
 
-    ri "Ahh' that would explain a lot... Well, I'm really glad you're going on the trip with us. That'll give us the perfect chance to get to know each other."
+    ri "Ahh... that would explain a lot... Well, I'm really glad you're going on the trip with us. That'll give us the perfect chance to get to know each other."
 
     scene v11s3bris10b
     with dissolve
@@ -389,7 +389,7 @@ label v11_cafe_with_riley:
     scene v11s3bris9e
     with dissolve
 
-    u "' Did you?"
+    u "Did you?"
 
     scene v11s3bris9f
     with dissolve
@@ -409,7 +409,7 @@ label v11_cafe_with_riley:
     scene v11s3bris11 # FPP. Show Riley leaving the cafe
     with dissolve
 
-    u "(I'm not  jealous, I just' I don't know. )"
+    u "(I'm not  jealous, I just... I don't know. )"
     stop music fadeout 3
 
     jump v11_emily_park

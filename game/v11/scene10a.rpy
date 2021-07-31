@@ -116,12 +116,12 @@ label v11_airport_charli:
     scene v11air7a
     with dissolve
 
-    au "One of the girls made a joke and he said 'who, [name]?' It really wasn't that big of a deal."
+    au "One of the girls made a joke and he said \"who, [name]?\" It really wasn't that big of a deal."
 
     scene v11air7b
     with dissolve
 
-    u "Oh' I don't know, something about Charli just rubs me the wrong way."
+    u "Oh, I don't know, something about Charli just rubs me the wrong way."
 
     scene v11air7a
     with dissolve

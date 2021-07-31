@@ -79,7 +79,7 @@ label v11_lobby_mrlee:
     with dissolve
 
     lee "*Laughs* Throughout it all, food will always have a special way of bringing everyone together."
-    lee "Tonight, we celebrate the experiences we've had so far and the fact that you're all legally allowed to drink here' *Chuckles* Please drink responsibly."
+    lee "Tonight, we celebrate the experiences we've had so far and the fact that you're all legally allowed to drink here. *Chuckles* Please drink responsibly."
     lee "Now, the shuttles are prepared and ready to go so let's get moving."
 
     scene v11lob1a # FPP. same 1, mouth closed

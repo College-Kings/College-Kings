@@ -33,7 +33,7 @@ label v11_dinner_with_lauren:
     scene v11dwl1a
     with dissolve
 
-    la "I think 'getting close' is an understatement. *Chuckles*"
+    la "I think \"getting close\" is an understatement. *Chuckles*"
 
     scene v11dwl1
     with dissolve
@@ -88,7 +88,7 @@ label v11_dinner_with_lauren:
     scene v11dwl1c
     with dissolve
 
-    u "Okay, yeah' *Chuckles* Maybe 'cornball' was the wrong word but either way, I really respect him after seeing what he's been doing for us on this trip."
+    u "Okay, yeah... *Chuckles* Maybe \"cornball\" was the wrong word but either way, I really respect him after seeing what he's been doing for us on this trip."
     u "Also, how fair he was during Penelope's trial, it's crazy. He's such a good guy."
 
     scene v11dwl1b
@@ -99,7 +99,7 @@ label v11_dinner_with_lauren:
     scene v11dwl1
     with dissolve
 
-    u "Well, thank you' What makes you say that?"
+    u "Well, thank you... What makes you say that?"
 
     scene v11dwl1a
     with dissolve
@@ -115,14 +115,14 @@ label v11_dinner_with_lauren:
     with dissolve
 
     la "Well, I have to give it to him actually. He started off with a super charming approach, like wanting to know where I got my shoes, and complimenting my laugh... but I saw right through his weird facade."
-    la "I let him talk for a second though, you know? I wanted to figure out what he actually wanted. But, by the end of his little speech he had gone from 'trying to look out for us girls' to just straight up bashing you."
+    la "I let him talk for a second though, you know? I wanted to figure out what he actually wanted. But, by the end of his little speech he had gone from \"trying to look out for us girls\" to just straight up bashing you."
     la "At that point I'd had enough. I said a few regrettable things, but I think I got my point across. It's not what I said that I regret, it's just how I said it."
     la "Maybe you were right when you said Amber has rubbed off on me. *Chuckles*"
 
     scene v11dwl1
     with dissolve
 
-    u "Wow, Lauren. I mean, thank you' *Chuckles* I'm just kind of surprised that of all people it was you who told him off."
+    u "Wow, Lauren. I mean, thank you... *Chuckles* I'm just kind of surprised that of all people it was you who told him off."
 
     scene v11dwl1b
     with dissolve
@@ -233,7 +233,7 @@ label v11_dinner_with_lauren:
         scene v11dwl1f # FPP. Show close up of lauren, eyebrow raised, mouth open, seductive look
         with dissolve
 
-        la "You know' Like, closer, closer."
+        la "You know... Like, closer, closer."
 
         scene v11dwl1d
         with dissolve

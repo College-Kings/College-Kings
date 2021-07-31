@@ -56,7 +56,7 @@ label v11_nora_airport_convo:
     with dissolve
 
     u "I think with the situation being so stressful and the fact that I've already had a talk with her about this, it'd be good if I spoke with her."
-    u "Between the frat situations, this whole Europe trip, her and Chris' I'm pretty involved already."
+    u "Between the frat situations, this whole Europe trip, her and Chris... I'm pretty involved already."
     u "No offense, but I doubt you have weeks of drama under control without a clear understanding of everyone's perspective."
 
     scene v11nca5a

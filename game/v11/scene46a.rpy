@@ -84,7 +84,7 @@ label v11_dinner_with_aubrey:
     scene v11dwa1c
     with dissolve
 
-    au "Oh, it will be. Hopefully we make it in time because I really think you'll like my sister' *Chuckles*"
+    au "Oh, it will be. Hopefully we make it in time because I really think you'll like my sister. *Chuckles*"
 
     scene v11dwa1b
     with dissolve
@@ -99,7 +99,7 @@ label v11_dinner_with_aubrey:
     scene v11dwa1b
     with dissolve
 
-    u "Wait' More blunt than you? That can't be possible. *Laughs*"
+    u "Wait... More blunt than you? That can't be possible. *Laughs*"
 
     scene v11dwa1a
     with dissolve
@@ -109,7 +109,7 @@ label v11_dinner_with_aubrey:
     scene v11dwa1
     with dissolve
 
-    u "Hmm' Must be nice."
+    u "Hmm... Must be nice."
 
     scene v11dwa1a
     with dissolve
@@ -192,7 +192,7 @@ label v11_dinner_with_aubrey:
         scene v11dwa1c
         with dissolve
 
-        au "That 'one' could easily be you."
+        au "That \"one\" could easily be you."
 
         scene v11dwa1b
         with dissolve
@@ -341,7 +341,7 @@ label v11_dinner_with_aubrey:
                 scene v11dwa1e
                 with dissolve
 
-                au "*Chuckles* Yeah, you do. But the minute you start acting like you're my 'boyfriend' or something, I'll have to cut you loose."
+                au "*Chuckles* Yeah, you do. But the minute you start acting like you're my \"boyfriend\" or something, I'll have to cut you loose."
 
                 scene v11dwa1d
                 with dissolve
@@ -356,7 +356,7 @@ label v11_dinner_with_aubrey:
                 scene v11dwa1
                 with dissolve
 
-                u "Okay' I think you can stop with Pimp Daddy stuff now. *Chuckles*"
+                u "Okay, I think you can stop with Pimp Daddy stuff now. *Chuckles*"
 
                 scene v11dwa1a
                 with dissolve
@@ -406,7 +406,7 @@ label v11_dinner_with_aubrey:
         scene v11dwa6 # FPP. Show aubrey, laid back slightly hands on stomach mouth open
         with dissolve
 
-        au "Wow, I'm so full' That was amazing, I'm gonna go thank Mr. Lee."
+        au "Wow, I'm so full... That was amazing, I'm gonna go thank Mr. Lee."
 
         scene v11dwa7 # FPP. Show aubrey walking off towards Mr. Lee
         with dissolve
