@@ -141,8 +141,10 @@ label v11_lobby_mrlee:
 
         scene v11lob17 # TPP. Show MC now sat opposite aubrey
         with dissolve
-    elif laurenrs:
 
+        pause 1
+
+    elif laurenrs:
         scene v11lob18 # FPP. Show Lauren sat alone, slight sad look
         with dissolve
 
@@ -159,7 +161,6 @@ label v11_lobby_mrlee:
         la "Actually, I was just starting to wonder what was taking you so long. *Chuckles*"
 
     else:
-
         menu:
             "Lauren":
                 scene v11lob18 
@@ -195,6 +196,9 @@ label v11_lobby_mrlee:
 
                 scene v11lob17
                 with dissolve
+
+                pause 1
+
     stop music fadeout 3
 
     if v11_sit_with_lauren:
