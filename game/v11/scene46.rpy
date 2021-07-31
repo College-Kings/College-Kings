@@ -114,9 +114,24 @@ label v11_dinner_with_lauren:
     scene v11dwl1a
     with dissolve
 
-    la "Well, I have to give it to him actually. He started off with a super charming approach, like wanting to know where I got my shoes, and complimenting my laugh... but I saw right through his weird facade."
-    la "I let him talk for a second though, you know? I wanted to figure out what he actually wanted. But, by the end of his little speech he had gone from \"trying to look out for us girls\" to just straight up bashing you."
+    la "Well, I have to give it to him actually. He started off with a super charming approach, like wanting to know where I got my shoes, and complimenting my laugh... but I saw right through his weird façade."
+    la "I let him talk for a second though, you know? I wanted to figure out what he actually wanted."
+
+    scene v11dwl1
+    with dissolve
+    
+    scene v11dwl1a
+    with dissolve
+
+    la "But, by the end of his little speech he had gone from \"trying to look out for us girls\" to just straight up bashing you."
     la "At that point I'd had enough. I said a few regrettable things, but I think I got my point across. It's not what I said that I regret, it's just how I said it."
+    
+    scene v11dwl1
+    with dissolve
+    
+    scene v11dwl1a
+    with dissolve
+    
     la "Maybe you were right when you said Amber has rubbed off on me. *Chuckles*"
 
     scene v11dwl1
@@ -263,7 +278,7 @@ label v11_dinner_with_lauren:
         scene v11dwl1a
         with dissolve
 
-        la "Nothing, [name], Seriously, don't worry about it."
+        la "Nothing, [name]. Seriously, don't worry about it."
 
         scene v11dwl1
         with dissolve
@@ -397,7 +412,7 @@ label v11_dinner_with_lauren:
     scene v11dwl11 # FPP. Show lauren, amber and riley, Amber looking at MC, lauren and riley looking at each other as if talking
     with dissolve
 
-    pause 1
+    pause 1.25
 
     scene v11dwl10b # FPP. Show imre walking away
     with dissolve
@@ -413,7 +428,7 @@ label v11_dinner_with_lauren:
     scene v11dwl14a  # FPP. same 11, mouth closed
     with dissolve
 
-    u "(A nice dinner and a relaxing walk, not a bad night Mr. Lee.)"
+    u "(A nice dinner and a relaxing walk... Not a bad night, Mr. Lee.)"
 
     scene v11dwl12 # TPP. Show some of the students walking out the restraunt
     with dissolve
@@ -422,6 +437,8 @@ label v11_dinner_with_lauren:
 
     scene v11dwl13 # TPP. Show Nora,chris, Mc, Chloe walking alond the sidewalk (camera from slightly above so you can't tell everyone else isn't with them)
     with dissolve
+
+    pause 1
 
     stop music fadeout 3
 
