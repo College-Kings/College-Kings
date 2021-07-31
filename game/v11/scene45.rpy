@@ -85,7 +85,7 @@ label v11_lobby_mrlee:
     scene v11lob1a # FPP. same 1, mouth closed
     with dissolve
 
-    u "(People can say what they want, even I have said some things about him in the past, but Mr. Lee really is such a cool guy..)"
+    u "(People can say what they want, even I have said some things about him in the past, but Mr. Lee really is such a cool guy...)"
 
     scene v11lob11 # TPP. Show mr. Lee, and a couple of the students walking through the front door (can be any from within the scene except Penelope, Samantha, Cameron, Emily and Josh)
     with dissolve

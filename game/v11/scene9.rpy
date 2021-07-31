@@ -1061,7 +1061,7 @@ label v11_apes_manhunt:
                     scene v11amh7d # FPP. Same as v11amh7, Grayson slightly angry, mouth open
                     with dissolve
 
-                    gr "Next year we're going back to proper punishments. This horse was supposed to give you hell.."
+                    gr "Next year we're going back to proper punishments. This horse was supposed to give you hell..."
 
                     jump v11_mc_horse_room
 

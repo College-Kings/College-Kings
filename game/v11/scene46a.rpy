@@ -11,7 +11,7 @@ label v11_dinner_with_aubrey:
     scene v11dwa1a # FPP. # FPP. Show Aubrey slight smile mouth open
     with dissolve
 
-    au "When I'm not the one paying, of course I do. *Laughs* What's not to like? It beats fast food any day and I definitely can't cook myself.."
+    au "When I'm not the one paying, of course I do. *Laughs* What's not to like? It beats fast food any day and I definitely can't cook myself..."
 
     scene v11dwa1
     with dissolve

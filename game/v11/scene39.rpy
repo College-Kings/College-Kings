@@ -106,7 +106,7 @@ label v11_mc_amber_gokart:
     scene v11cam4b # FPP. Same as 4, smile on her face, mouth opened
     with dissolve
 
-    am "Mhmm, right.... *Chuckles*"
+    am "Mhmm, right... *Chuckles*"
 
     scene v11cam5 # TPP. MC and amber meet the track clerk on the track
     with dissolve

@@ -200,7 +200,7 @@ label v11_dinner_with_lauren:
                 scene v11dwl1d
                 with dissolve
 
-                u "*Chuckles* Well, your gut was right.."
+                u "*Chuckles* Well, your gut was right..."
 
             "No":
                 scene v11dwl1d
@@ -392,7 +392,7 @@ label v11_dinner_with_lauren:
     scene v11dwl8a # FPP. same 8, mouth closed
     with dissolve
 
-    u "Alright, sounds good.."
+    u "Alright, sounds good..."
 
     scene v11dwl9 # FPP. Show lauren walking over to riley and amber
     with dissolve

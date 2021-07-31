@@ -271,7 +271,7 @@ label v11_cafe_with_riley:
             scene v11s3bris10c # FPP. same 10a, mouth closed
             with dissolve
             
-            u "Haha, maybe not yet,  I mean we just met this morning.."
+            u "Haha, maybe not yet, I mean we just met this morning..."
 
         "Of course":
             scene v11s3bris10c
@@ -312,7 +312,7 @@ label v11_cafe_with_riley:
     scene v11s3bris10a
     with dissolve
 
-    charli "[name] you must be one hell of a guy considering you're surrounded by all these amazing people.."
+    charli "[name] you must be one hell of a guy considering you're surrounded by all these amazing people..."
 
     scene v11s3bris9f
     with dissolve

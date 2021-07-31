@@ -144,7 +144,7 @@ label v11_airport_arrival:
     scene v11aira7d # FPP. Same as v11aira7b, Mr Lee mouth closed, slight smile
     with dissolve
 
-    u "Now I'm definitely in.."
+    u "Now I'm definitely in..."
 
     scene v11aira8a
     with dissolve

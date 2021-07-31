@@ -53,7 +53,7 @@ label v11_hotel_charlie_bar:
     scene v11cmb2a
     with dissolve
 
-    charli "Taking time to think about who you're really upset with might be a good idea.."
+    charli "Taking time to think about who you're really upset with might be a good idea..."
 
     scene v11cmb2
     with dissolve

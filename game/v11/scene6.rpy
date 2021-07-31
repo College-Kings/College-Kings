@@ -36,7 +36,7 @@ label v11_thurs_night_room:
         #-MC gets out his phone and text Riley-
 
         $ contact_Riley.addReply("You wanna catch the indoor skydiving thing tomorrow before the trip?")
-        $ contact_Riley.newMessage("I knew I was forgetting something,.. I actually made plans with Charli already. Sorry :(")
+        $ contact_Riley.newMessage("I knew I was forgetting something... I actually made plans with Charli already. Sorry :(")
         $ contact_Riley.addReply("It's fine, gn.")
         $ contact_Riley.newMessage("Goodnight")
 
@@ -78,7 +78,7 @@ label v11_thurs_night_room:
             u "(I'm tired as hell... I'll pack tomorrow.)"
 
         $ contact_Riley.addReply("You wanna catch the indoor skydiving thing tomorrow before the trip?")
-        $ contact_Riley.newMessage("I knew I was forgetting something,.. I actually made plans with Charli already. Sorry :(")
+        $ contact_Riley.newMessage("I knew I was forgetting something... I actually made plans with Charli already. Sorry :(")
         $ contact_Riley.addReply("It's fine, gn.")
         $ contact_Riley.newMessage("Goodnight")
 

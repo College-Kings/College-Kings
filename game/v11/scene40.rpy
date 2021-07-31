@@ -7,7 +7,7 @@ label v11_carriage_ride:
     scene v11car1 # FPP. MC standing in the lobby next to the other students (Charli leaning on the wall, Imre, Lindsey, out of shot), looking at Mr Lee in front of the counter, Mr Lee slight smile, mouth open
     with dissolve
     play music "music/v11/Scene 40/Track Scene 40.mp3" fadein 2
-    lee "Settle down, everyone... If you haven't yet heard from your fellow students or myself, we have a planned event tonight. An event that I certainly will enjoy, and I believe you all will as well.."
+    lee "Settle down, everyone... If you haven't yet heard from your fellow students or myself, we have a planned event tonight. An event that I certainly will enjoy, and I believe you all will as well..."
 
     scene v11car2 # FPP. Same positioning as v11car1, MC looking at Imre, Imre looking at Mr Lee's direction, Imre slight grin, mouth open
     with dissolve
@@ -461,7 +461,7 @@ label v11_carriage_ride:
     scene v11car11f # FPP. Same as v11car11e, Chloe looking at Nora, Chloe slightly skeptical, mouth open
     with dissolve
 
-    cl "I mean.... I don't know, have the Chicks ever done this sort of thing before?"
+    cl "I mean... I don't know, have the Chicks ever done this sort of thing before?"
 
     scene v11car15c
     with dissolve
