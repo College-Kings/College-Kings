@@ -178,16 +178,16 @@ label v11_chloe_bathroom:
 
             u "You're right, that was your fault... *Chuckles*"
 
-            scene v11chb13
+            scene v11chb13b
             with dissolve
 
             cl "You really have been there for me whenever I needed you, [name]. Thank you."
 
             if chloegf or chloers:
 
-                play sound "sounds/kiss.mp3"
                 scene v11chb12b # TPP. Same as v11chb12a, MC and Chloe kissing (just a peck on the lips)
                 with dissolve
+                play sound "sounds/kiss.mp3"
 
                 pause 0.75
             
