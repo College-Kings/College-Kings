@@ -126,4 +126,4 @@ label v12_aubrey_wake_up:
 
     pause 0.75
 
-    jump scene32
+    jump v12s32 #scene 32

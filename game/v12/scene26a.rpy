@@ -370,6 +370,6 @@ label v12_follow_chris:
     pause 0.75
 
     if joinwolves:
-        jump scene27
+        jump v12s27 #scene 27
     else:
-        jump scene27a
+        jump v12s27a #scene 27a

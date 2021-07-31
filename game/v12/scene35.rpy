@@ -156,4 +156,4 @@ label v12_chris_nora_room:
 
             u "(It's not my place to get involved.)"
 
-            jump scene35b
+            jump v12_game_roommate #scene 35b
