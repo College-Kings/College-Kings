@@ -9,7 +9,7 @@ label v12_nora_robbed:
     scene v12nrb1 # FPP. MC is looking at nora who is in shock as a robber snags her bag
     with fade
 
-    pause 0.75
+    pause 1
 
     scene v12nrb1a # FPP. The robber is now running away, nora is on the floor
     with dissolve
