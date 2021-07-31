@@ -78,6 +78,7 @@ label v12_riley_room:
     pause 1
 
     scene v12rir7 # FPP View of MC as he bends down to pick up a bottle
+    with dissolve
 
     u "He's built differently, that's for damn sure."
 
@@ -187,6 +188,7 @@ label v12_riley_room:
     pause 1
 
     scene v12rir11c
+    with dissolve
 
     u "Who's that?"
 

@@ -7,6 +7,7 @@ label v11_cafe_with_riley:
     play music "music/v11/Scene 3/Track Scene 3.mp3" fadein 2
     if joinwolves:
         scene v11s3bris1 # TPP. Show MC talking on his phone in his wolves bedroom, sat on the bed, mouth open
+        with dissolve
         u "Hello?"
 
         scene v11s3bris2 # TPP. Show Riley sat in the café, phone to side of head, mouth open
@@ -31,6 +32,7 @@ label v11_cafe_with_riley:
 
     else:
         scene v11s3bris3 # TPP.Show MC talking on his phone in his apes bedroom, sat on the bed, mouth open
+        with dissolve
         u "Hello?"
 
         scene v11s3bris2
@@ -184,7 +186,7 @@ label v11_cafe_with_riley:
     scene v11s3bris9a
     with dissolve
 
-    ri "Alright, I guess I shouldn't worry about it. I am gonna talk to Amber though because I know she tried to scare me with her 'make sure you tuck your feet under the seat so you don't fall out'. *Chuckles*"
+    ri "Alright, I guess I shouldn't worry about it. I am gonna talk to Amber though because I know she tried to scare me with her \"make sure you tuck your feet under the seat so you don't fall out\". *Chuckles*"
 
     scene v11s3bris9
     with dissolve
@@ -194,7 +196,7 @@ label v11_cafe_with_riley:
     scene v11s3bris9a
     with dissolve
 
-    ri "We should call her Maleficent' *Chuckles*"
+    ri "We should call her Maleficent... *Chuckles*"
 
     scene v11s3bris9
     with dissolve
@@ -264,14 +266,14 @@ label v11_cafe_with_riley:
     scene v11s3bris10b # FPP. same10a, looking at riley mouth open, slight smile
     with dissolve
 
-    charli "Yea- well' I don't know, actually. *Chuckles* Would you say we're friends [name]?"
+    charli "Yea- well... I don't know, actually. *Chuckles* Would you say we're friends [name]?"
 
     menu:
         "Not yet":
             scene v11s3bris10c # FPP. same 10a, mouth closed
             with dissolve
             
-            u "Haha, maybe not yet,  I mean we just met this morning.."
+            u "Haha, maybe not yet, I mean we just met this morning..."
 
         "Of course":
             scene v11s3bris10c
@@ -292,7 +294,7 @@ label v11_cafe_with_riley:
     scene v11s3bris9g
     with dissolve
 
-    ri "Haha, yes. Here I am.*Chuckles*."
+    ri "Haha, yes. Here I am. *Chuckles*"
 
     scene v11s3bris9e
     with dissolve
@@ -307,12 +309,12 @@ label v11_cafe_with_riley:
     scene v11s3bris9e
     with dissolve
 
-    u "Wowww...*Chuckles* ."
+    u "Wowww... *Chuckles*"
 
     scene v11s3bris10a
     with dissolve
 
-    charli "[name] you must be one hell of a guy considering you're surrounded by all these amazing people.."
+    charli "[name] you must be one hell of a guy considering you're surrounded by all these amazing people..."
 
     scene v11s3bris9f
     with dissolve
@@ -337,7 +339,7 @@ label v11_cafe_with_riley:
     scene v11s3bris9g 
     with dissolve
 
-    ri "Ahh' that would explain a lot... Well, I'm really glad you're going on the trip with us. That'll give us the perfect chance to get to know each other."
+    ri "Ahh... that would explain a lot... Well, I'm really glad you're going on the trip with us. That'll give us the perfect chance to get to know each other."
 
     scene v11s3bris10b
     with dissolve
@@ -389,7 +391,7 @@ label v11_cafe_with_riley:
     scene v11s3bris9e
     with dissolve
 
-    u "' Did you?"
+    u "Did you?"
 
     scene v11s3bris9f
     with dissolve
@@ -409,7 +411,7 @@ label v11_cafe_with_riley:
     scene v11s3bris11 # FPP. Show Riley leaving the cafe
     with dissolve
 
-    u "(I'm not  jealous, I just' I don't know. )"
+    u "(I'm not  jealous, I just... I don't know. )"
     stop music fadeout 3
 
     jump v11_emily_park

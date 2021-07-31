@@ -152,7 +152,7 @@ label v11_hotel_lobby_rose:
     scene v11rol11 # TPP. Show Ms Rose mouth open, slight smile, standing next to Mr Lee, mouth closed, slight smile, show Imre, Riley and Nora standing next to each other (make sure Imre is on the edge, with some space in between him and the girl in the middle, MC will be standing in between the girl and Imre in v11rol12) (Ryan, Amber and some other people are out of shot and won't be used, but they're there, play with angles and hide the place where they're supposed to be)
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v11rol12 # FPP. Same positioning as v11rol11, MC in between the girl and Imre, MC standing close to and looking at Ms Rose, Ms Rose looking at MC, Ms Rose slight smile, mouth open
     with dissolve
@@ -162,7 +162,7 @@ label v11_hotel_lobby_rose:
     scene v11rol12a # FPP. Same as v11rol12, Ms Rose now looking towards Imre who is standing next to MC (Imre out of shot), Ms Rose mouth open, slight smile
     with dissolve
     
-    ro "I know this is not common field trip in the states and it isn't here either, but in the spirit of education... Here we are. Any questions?"
+    ro "I know this is not common field trip in the States and it isn't here either, but in the spirit of education... Here we are. Any questions?"
 
     scene v11rol13 # FPP. Same positioning as v11rol12, MC looking at Imre, Imre looking at Ms Rose, Imre mouth open, slight smirk
     with dissolve

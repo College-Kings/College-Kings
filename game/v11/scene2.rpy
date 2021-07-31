@@ -273,7 +273,7 @@ label v11_nora_chloe_hallway:
             scene v11nohall11d
             with dissolve
 
-            charli "With that attitude there's no way this will be a boring trip! *Laughs*."
+            charli "With that attitude there's no way this will be a boring trip! *Laughs*"
 
         "Sleeping":
             scene v11nohall11c

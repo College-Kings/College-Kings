@@ -33,7 +33,7 @@ label v12_dock_arrival:
     scene v12doa4a # FPP. Same as v12doa4, Mr. Lee looking at MC, Mr. Lee neutral expression, mouth open
     with dissolve
     
-    lee "Students grab your luggage and get on the bus so we can get to the hotel."
+    lee "Students, grab your luggage and get on the bus so we can get to the hotel."
 
     scene v12doa5 # TPP. Show Ryan walking up to Imre (Same positioning as v12doa3, Imre not in shot), Ryan slight smirk, mouth closed
     with dissolve

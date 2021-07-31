@@ -47,7 +47,7 @@ label v11_riley_amber_smoking:
     scene v11ras3 # TPP. Show MC getting in bed between Riley and Amber, everyone smiling, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11ras4 # FPP. Same positioning as v11ras3, MC looking at Riley, Riley smiling, mouth closed, holding the vape
     with dissolve
@@ -168,7 +168,7 @@ label v11_riley_amber_smoking:
             scene v11ras10 # TPP. Same positioning as v11ras3, MC taking a big hit
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             scene v11ras5
             with dissolve

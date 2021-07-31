@@ -414,7 +414,7 @@ label v11_lauren_store:
     scene v11las19a
     with dissolve
 
-    jud "Exactly. We've only ever had one tie before." 
+    jud "Exactly. We've only ever had one tie before."
 
     scene v11las18f
     with dissolve
@@ -665,6 +665,7 @@ label v11_quiz_q3:
         jud "I will make up rules as necessary."
 
         scene v11las17a
+        with dissolve
 
         u "Be careful man, you're walking on thin ice."
 
@@ -729,6 +730,7 @@ label v11_quiz_q3:
     jud "Please tell me, where is the Order of the Phoenix headquarters located?"
 
     scene v11las18f
+    with dissolve
 
     la "*Whisper* I'm sorry [name], but I really have to use the ladies room. This one is all you."
 
@@ -1047,6 +1049,7 @@ label v11_quiz_bonus:
     pause 0.75
 
     scene v11las18f
+    with dissolve
 
     la "I'm glad we won, but it feels even better knowing we beat that jerk."
 

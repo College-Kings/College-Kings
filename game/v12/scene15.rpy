@@ -7,7 +7,7 @@ label v12_riddle_riley:
     scene v12rrl1 # TPP. MC and riley standing outside the catacombs
     with fade
 
-    pause 0.75
+    pause 1.25
 
     scene v12rrl2 # FPP. MC looking at riley, mouth closed
     with dissolve
@@ -163,6 +163,8 @@ label v12_riddle_riley:
             scene v12rrl13 # TPP. MC stands up
             with dissolve
 
+            pause 0.75
+
     scene v12rrl69420 # FPP. MC standing a little away from riley, mouth opened
     with dissolve
 
@@ -181,7 +183,7 @@ label v12_riddle_riley:
     scene v12rrl16 # TPP. MC and riley looking at a piece of paper in the wall
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12rrl15a # FPP. Same as 15, mouth opened
     with dissolve
@@ -198,7 +200,7 @@ label v12_riddle_riley:
 
     ri "..."
 
-    scene v12rrl15a
+    scene v12rrl15
     with dissolve
 
     u "What?"
@@ -333,6 +335,8 @@ label v12_riddle_riley:
             scene v12rrl22 # TPP. MC and riley going left
             with dissolve
 
+            pause 0.75
+
         "Right":
             scene v12rrl21
             with dissolve
@@ -341,21 +345,23 @@ label v12_riddle_riley:
 
             scene v12rrl23 # TPP. MC and riley going right
             with dissolve
+
+            pause 0.75
     
     scene v12rrl24 # TPP. Time passing montage #1
     with dissolve
 
-    pause 0.6
+    pause 1
 
     scene v12rrl25 # TPP. Time passing montage #2
     with dissolve
 
-    pause 0.6
+    pause 1
 
     scene v12rrl26 # TPP. Time passing montage #3
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12rrl27 # FPP. pointing at the exit
     with dissolve
@@ -374,6 +380,8 @@ label v12_riddle_riley:
 
     scene v12rrl30 # TPP. Riley trips
     with dissolve
+
+    pause 0.6
 
     scene v12rrl31 # FPP. Riley on the ground, looking hurt, hand on her leg, mouth opened
     with dissolve
@@ -450,21 +458,23 @@ label v12_riddle_riley:
             scene v12rrl35 # TPP. MC and Riley heading on the sidewalk in front of the catacombs, riley still arround MC's shoulder
             with dissolve
 
-            pause 0.75
+            pause 1
 
             scene v12rrl36 # TPP. MC and riley in front of the hotel, riley still arround MC's shoulder
             with dissolve
 
-            pause 0.75
+            pause 1
 
             scene v12rrl37 # TPP. MC and Riley going into the lobby, riley still arround MC's shoulder
             with dissolve
+
+            pause 1
 
         "Carry her":
             scene v12rrl38 # TPP. MC Picks up riley
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             scene v12rrl39 # FPP. Riley on MC's arm, smiling, mouth closed
             with dissolve
@@ -498,7 +508,9 @@ label v12_riddle_riley:
                     scene v12rrl41 # TPP MC kisses Riley
                     with dissolve
 
-                    pause 0.6
+                    play sound "sounds/kiss.mp3"
+
+                    pause 1
 
                     scene v12rrl39b
                     with dissolve
@@ -581,14 +593,16 @@ label v12_riddle_riley:
                     scene v12rrl48 # TPP. MC scratches his face
                     with dissolve
 
-                    pause 0.75
+                    pause 1
 
                     scene v12rrl49 # TPP. MC and riley walking back, in front of the hotel
                     with dissolve
 
-                    pause 0.75
+                    pause 1
 
                     scene v12rrl50 # TPP. MC and riley in the hotel lobby
                     with dissolve
+
+                    pause 1
 
     jump v12_valentine #scene 16

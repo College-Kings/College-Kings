@@ -182,7 +182,7 @@ label v12_penelope_roof:
                     scene v12penr10c # FPP Same angle as v12penr10, Penelope looking back at MC, smiling with mouth open
                     with dissolve
 
-                    pe "Haha, I heard you goofball. I just wanted to see if you'd repeat yourself, handsome."
+                    pe "Haha, I heard you, goofball. I just wanted to see if you'd repeat yourself, handsome."
 
             scene v12penr10d # FPP Same angle as v12penr10, Penelope looking up at stars, neutral expression, mouth open
             with dissolve

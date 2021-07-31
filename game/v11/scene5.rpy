@@ -1005,9 +1005,12 @@ label v11s5_galleryScene:
             scene v11swc27 # TPP Dennis throwing a punch at MC, MC dodging
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v11swc27a # TPP MC rushing out of the door to Candy's bedroom
+            with dissolve
+            
+            pause 0.75
 
             scene v11swc28 # FPP Show Dennis looking very angry, mouth closed
             with dissolve
@@ -1048,7 +1051,7 @@ label v11s5_galleryScene:
     scene v11swc18
     with dissolve
     
-    u "Pheww"
+    u "Pheww."
 
     stop music fadeout 3
 

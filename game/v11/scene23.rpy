@@ -337,6 +337,7 @@ label v11s23_riley1:
     pause 0.5
 
     scene v11frmri2a # FPP Same angle as v11frmri2, Riley very close to triceratops skull, examining closely, mouth open
+    with dissolve
 
     ri "Look how big this thing is! I wonder if it was a boy or a girl..."
     ri "If these things were alive right now you know we could hang out with them and pet them and they wouldn't attack us? They're grazing herbivores."

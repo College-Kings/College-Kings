@@ -4,13 +4,11 @@
 # Time: Evening
 # Phone Images: None
 
-default v12_lindsey_sex = False
-
 label v12_escape_room:
     scene v12esr1 # FPP. MC, Charli, Imre, Lindsey and Aubrey in front of escape room building, MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open
     with dissolve
 
-    au "It’s about time you guys got here."
+    au "It's about time you guys got here."
 
     scene v12esr2 # FPP. Same positioning as v12esr1, MC looking at Imre, Imre looking at Aubrey, Imre slight smile, mouth open
     with dissolve
@@ -30,17 +28,17 @@ label v12_escape_room:
     scene v12esr1
     with dissolve
 
-    au "Church? Okay, nice… Now I’m definitely happy that I didn’t go. *Laughs*"
+    au "Church? Okay, nice... Now I'm definitely happy that I didn't go. *Laughs*"
 
     scene v12esr1c # FPP. Same as v12esr1, Aubrey looking at Lindsey, Aubrey slight smile, mouth open
     with dissolve
 
-    au "But anyway… What are we doing here?"
+    au "But anyway... What are we doing here?"
 
     scene v12esr3 # FPP. Same positioning as v12esr1, MC looking at Lindsey, Lindsey looking at Aubrey, Lindsey slight smile, mouth open
     with dissolve
 
-    li "Well guys, I guess it’s time for me to be honest... And please don't make fun of me, but…"
+    li "Well guys, I guess it's time for me to be honest... And please don't make fun of me, but..."
 
     scene v12esr3a # FPP. Same as v12esr3, Lindsey looking at MC, Lindsey slight smile, mouth open
     with dissolve
@@ -215,7 +213,7 @@ label v12_escape_room:
     scene v12esr6
     with dissolve
 
-    escman "*Dry Tone* Okay so, it’s time to explain how this all works…"
+    escman "*Dry Tone* Okay so, it's time to explain how this all works..."
 
     scene v12esr6a
     with dissolve
@@ -245,7 +243,7 @@ label v12_escape_room:
     scene v12esr6c # FPP. Same as v12esr6, Escape Manager, mouth closed, bored expression
     with dissolve
 
-    u "(Dude’s a tad bit creepy.)"
+    u "(Dude's a tad bit creepy.)"
 
     scene v12esr6
     with dissolve
@@ -310,7 +308,7 @@ label v12_escape_room:
     scene v12esr15 # FPP. Same positioning as v12esr11a, MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open
     with dissolve
 
-    au "What? I thought he was kinda cute! In a weird way… *Laughs*"
+    au "What? I thought he was kinda cute! In a weird way... *Laughs*"
 
     scene v12esr12a # FPP. Same as v12esr12 (No more Escape Manager from now on), Charli looking at Aubrey, Charli slight smile, mouth open
     with dissolve
@@ -323,6 +321,7 @@ label v12_escape_room:
     imre "Her standards aren't that low... At least she doesn't talk to guys that look as bad as you do."
 
     scene v12esr16a # FPP. Same as v12esr16, Imre looking at Aubrey, Imre slight smile, mouth open
+    with dissolve
     
     imre "*Laughs* Right, Aubrey?"
 
@@ -334,7 +333,7 @@ label v12_escape_room:
     scene v12esr14b # FPP. Same as v12esr14, Lindsey looking at Imre, Lindsey slight smile, mouth open
     with dissolve
 
-    li "Guys! Stop bullying Charli and listen up…"
+    li "Guys! Stop bullying Charli and listen up..."
 
     scene v12esr14c # FPP. Same as v12esr14, Lindsey looking down at her phone, mouth open, slight smile
     with dissolve
@@ -344,7 +343,7 @@ label v12_escape_room:
     scene v12esr14a
     with dissolve
 
-    u "Well… That's not weird."
+    u "Well... That's not weird."
 
     scene v12esr16b # FPP. Same as v12esr16, Imre looking at MC, Imre laughing
     with dissolve
@@ -391,7 +390,7 @@ label v12_escape_room:
     scene v12esr16d # FPP. Same as v12esr16b, Imre slight smile, mouth closed
     with dissolve
 
-    u "I think that might have been the smartest thing you’ve ever said. *Chuckles*"
+    u "I think that might have been the smartest thing you've ever said. *Chuckles*"
 
     scene v12esr16e # FPP. Same as v12esr16d, Imre slight smile, mouth open
     with dissolve
@@ -411,7 +410,7 @@ label v12_escape_room:
     scene v12esr14d
     with dissolve
 
-    li "Let’s see, I just got another message."
+    li "Let's see, I just got another message."
 
     scene v12esr14c
     with dissolve
@@ -431,7 +430,7 @@ label v12_escape_room:
     scene v12esr14c
     with dissolve
 
-    li "New message, \"One at a time… and stop making silly guesses.\""
+    li "New message, \"One at a time... and stop making silly guesses.\""
 
     scene v12esr12b
     with dissolve
@@ -496,7 +495,7 @@ label v12_escape_room:
     scene v12esr14c
     with dissolve
 
-    li "Just got another message. It says, \"tell your friends “bye” because you won't see them for a while. Go into the room across the hall to find out how to help them.\""
+    li "Just got another message. It says, \"tell your friends 'bye' because you won't see them for a while. Go into the room across the hall to find out how to help them.\""
 
     scene v12esr19 # FPP. Same positioning as v12esr17, MC looking at Aubrey, Aubrey looking at Lindsey, Aubrey slight smile, mouth open
     with dissolve
@@ -651,7 +650,7 @@ label v12_escape_room:
     scene v12esr24a # FPP. Same as v12esr24, Lindsey worried, mouth open, cold
     with dissolve
 
-    li "Umm, yeah. It’s just starting to get really cold."
+    li "Umm, yeah. It's just starting to get really cold."
 
     scene v12esr24
     with dissolve
@@ -666,7 +665,7 @@ label v12_escape_room:
     scene v12esr24
     with dissolve
 
-    u "*Shivers* (Fuck… It is cold.) Definitely. We definitely have to..."
+    u "*Shivers* (Fuck... It is cold.) Definitely. We definitely have to..."
 
     scene v12esr24b # FPP. Same as v12esr24a, Lindsey laughing, cold
     with dissolve
@@ -686,22 +685,22 @@ label v12_escape_room:
     scene v12esr27 # FPP. Same positioning as v12esr26, MC looking at Lindsey, Lindsey looking at MC, Lindsey slight smile, mouth open
     with dissolve
 
-    li "Ahh… That’s a lot better. You’re so warm. *Chuckles*"
+    li "Ahh... That's a lot better. You're so warm. *Chuckles*"
 
     scene v12esr27a # FPP. Same as v12esr27, Lindsey slight smile, mouth closed
     with dissolve
 
-    u "Well, I’m glad one of us is. Your hands are so fucking cold! *Laughs*"
+    u "Well, I'm glad one of us is. Your hands are so fucking cold! *Laughs*"
 
     scene v12esr27
     with dissolve
 
-    li "Haha, yeah… There’s only a few spots on a girl's body that are nice and warm, and our hands are not one of them. *Chuckles*"
+    li "Haha, yeah... There's only a few spots on a girl's body that are nice and warm, and our hands are not one of them. *Chuckles*"
 
     scene v12esr27a
     with dissolve
 
-    u "Secret warm spots?  *Chuckles*"
+    u "Secret warm spots? *Chuckles*"
 
     scene v12esr26a # TPP. Same as v12esr26, MC tickling Lindsey, Lindsey laughing, MC smiling, mouth open
     with dissolve
@@ -721,7 +720,7 @@ label v12_escape_room:
     scene v12esr26b
     with dissolve
 
-    li "Haha… You have to stop… I’m literally… Going to pee my fucking pants… *Laughs*"
+    li "Haha... You have to stop... I'm literally... Going to pee my fucking pants... *Laughs*"
 
     scene v12esr28 # TPP. Show MC and Lindsey sitting close to each other, no longer cuddling, both smiling, mouths closed
     with dissolve
@@ -731,12 +730,12 @@ label v12_escape_room:
     scene v12esr28a # TPP. Same as v12esr28, MC and Lindsey looking at ceiling, both worried, mouths closed
     with dissolve
 
-    unknown "Attention! There’s an emergency with another group. They’re stuck. I’ll return shortly."
+    unknown "Attention! There's an emergency with another group. They're stuck. I'll return shortly."
 
     scene v12esr23b # TPP. Same as v12esr23, Imre looking at ceiling, angry, mouth open, Charli cold, worried, mouth closed
     with dissolve
 
-    imre "Are you fucking crazy?! You’re not going anywhere you stupid s-"
+    imre "Are you fucking crazy?! You're not going anywhere you stupid s-"
 
     scene v12esr23c # TPP. Same as v12esr23b, Charli mouth open, worried, Imre looking at Charli, Imre angry, mouth closed
     with dissolve
@@ -751,19 +750,19 @@ label v12_escape_room:
     scene v12esr23e # TPP. Same as v12esr23d, Aubrey now standing in shot, Aubrey looking at Imre, Aubrey angry, mouth open, Imre looking at Aubrey, Imre angry, mouth closed (Charli no longer in shot)
     with dissolve
 
-    au "Imre, he’s freezing! We have to huddle up in order to stay warm."
+    au "Imre, he's freezing! We have to huddle up in order to stay warm."
 
     scene v12esr23f # TPP. Same as v12esr23e, Imre angry, mouth open, Aubrey angry, mouth closed
     with dissolve
 
-    imre "I don’t care if his fucking non-existent balls freeze off, I’m not touchin- *inaudible*."
+    imre "I don't care if his fucking non-existent balls freeze off, I'm not touchin- *inaudible*."
 
     play music "sounds/driving1.mp3"
 
     scene v12esr29 # FPP. Same positioning as v12esr28, MC and Lindsey looking at each other, Lindsey slightly worried, mouth open
     with dissolve
 
-    li "I seriously hope that wasn’t the sound of these fans being turned up..."
+    li "I seriously hope that wasn't the sound of these fans being turned up..."
 
     scene v12esr29a # FPP. Same as v12esr29, Lindsey slight smile, mouth closed
     with dissolve
@@ -773,17 +772,17 @@ label v12_escape_room:
     scene v12esr29b # FPP. Same as v12esr29a, Lindsey slight smile, mouth open
     with dissolve
 
-    li "This is lucky for you? We’re stuck in here, it’s freezing, and our fate is in the hands of the three buffoons on the other side of the wall. *Chuckles*"
+    li "This is lucky for you? We're stuck in here, it's freezing, and our fate is in the hands of the three buffoons on the other side of the wall. *Chuckles*"
 
     scene v12esr29a
     with dissolve
 
-    u "Yes… All true. But at least we’re on this side of the wall, yeah?"
+    u "Yes... All true. But at least we're on this side of the wall, yeah?"
 
     scene v12esr29b
     with dissolve
 
-    li "I guess that’s true… We actually have a few moments of privacy."
+    li "I guess that's true... We actually have a few moments of privacy."
 
     scene v12esr29c # FPP. Same as v12esr29a, Lindsey eyes closed, moving in closer to MC, she's going for a kiss, mouth closed
     with dissolve
@@ -794,7 +793,7 @@ label v12_escape_room:
         scene v12esr29
         with dissolve
 
-        li "I- Wait…"
+        li "I- Wait..."
 
         scene v12esr29d # FPP. Same as v12esr29, Lindsey looking down, slightly worried, mouth open
         with dissolve
@@ -809,22 +808,22 @@ label v12_escape_room:
         scene v12esr29
         with dissolve
 
-        li "I’m sorry, now I feel bad. but... This is obviously the right thing to do."
+        li "I'm sorry, now I feel bad. but... This is obviously the right thing to do."
 
         scene v12esr29e
         with dissolve
 
         menu:
-            "You’re right, we shouldn’t do this":
+            "You're right, we shouldn't do this":
                 scene v12esr29f # FPP. Same as v12esr29d, Lindsey slightly worried, mouth closed
                 with dissolve
 
-                u "I think so too. I’m sorry, I-"
+                u "I think so too. I'm sorry, I-"
 
                 scene v12esr29e
                 with dissolve
 
-                u "We definitely shouldn’t do this."
+                u "We definitely shouldn't do this."
 
                 scene v12esr29e
                 with dissolve
@@ -847,7 +846,7 @@ label v12_escape_room:
                 scene v12esr29f
                 with dissolve
 
-                u "Is it? I’m sorry, I know this sounds horrible but… I want this Lindsey."
+                u "Is it? I'm sorry, I know this sounds horrible but... I want this Lindsey."
 
                 scene v12esr29e
                 with dissolve
@@ -878,7 +877,7 @@ label v12_lindsey_kiss_or_not:
             scene v12esr29e
             with dissolve
 
-            u "*Coughs* So… Have you talked to Chloe recently?"
+            u "*Coughs* So... Have you talked to Chloe recently?"
 
             scene v12esr29b
             with dissolve
@@ -901,9 +900,11 @@ label v12_lindsey_kiss_or_not:
             scene v12esr30 # TPP. Show MC and Lindsey kissing
             with dissolve
 
-            if lindseyfirstkiss or kct = "popular" or len(v12s7_killList) >= 5:
-                if kct = "popular" and not lindseyfirstkiss and not len(v12s7_killList) >= 5:
-                    call screen kctPopup                
+            play sound "sounds/kiss.mp3"
+
+            if lindseyfirstkiss or kct == "popular" or len(v12s7_killList) >= 5:
+                if not lindseyfirstkiss and not len(v12s7_killList) >= 5:
+                    call screen kctPopup
                 jump v12_lindsey_sex
             
             else:
@@ -915,17 +916,17 @@ label v12_lindsey_sex:
     scene v12esr29g # FPP. Same as v12esr29c, Lindsey eyes open, slight smile, mouth open, face close to MC
     with dissolve
 
-    li "That was… Perfect."
+    li "That was... Perfect."
 
     scene v12esr29h # FPP. Same as v12esr29g, Lindsey slight smile, mouth closed
     with dissolve
 
-    u "Haha, yeah… It was."
+    u "Haha, yeah... It was."
 
     scene v12esr29g
     with dissolve
 
-    li "You know, I’m starting to think that just cuddling isn’t enough… I’m still so cold. So, so cold… *Chuckles*"
+    li "You know, I'm starting to think that just cuddling isn't enough... I'm still so cold. So, so cold... *Chuckles*"
 
     scene v12esr29h
     with dissolve
@@ -935,7 +936,7 @@ label v12_lindsey_sex:
     scene v12esr29g
     with dissolve
 
-    li "Hmm, maybe…"
+    li "Hmm, maybe..."
 
     if len(v12s7_killList) >= 5:
         scene v12esr29g
@@ -956,7 +957,7 @@ label v12_lindsey_sex:
     scene v12esr31a # TPP. Same as v12esr31, Lindsey seductive smile, mouth closed, MC smiling, mouth closed
     with dissolve
 
-    u "(What is she doing to me…)"
+    u "(What is she doing to me...)"
 
     scene v12esr32 # FPP. MC pinning Lindsey to the wall by her throat, Lindsey looking seductively at MC, her mouth closed
     with dissolve
@@ -1017,7 +1018,7 @@ label v12_lindsey_sex:
     with dissolve
     pause
 
-    u "Oh, fuck Lindsey. You’re so soft..."
+    u "Oh, fuck Lindsey. You're so soft..."
 
     scene v12linhjf # Ignore as anim
     with dissolve
@@ -1029,7 +1030,7 @@ label v12_lindsey_sex:
     with dissolve
     pause
 
-    u "Y-yes...."
+    u "Y-yes..."
 
     scene v12linhj2f # Ignore as animation
     with dissolve
@@ -1040,7 +1041,7 @@ label v12_lindsey_sex:
     scene v12esr37d # FPP. Same as v12esr37c, Lindsey looking at MC, Lindsey's hand on MC's dick, Lindsey slight smile, mouth open
     with dissolve
 
-    li "*Chuckles* I’m not sure how much time we have left but… I’ll give you all that I can, okay?"
+    li "*Chuckles* I'm not sure how much time we have left but... I'll give you all that I can, okay?"
 
     image v12linbj = Movie(play="images/v12/Scene 17/v12linbj.webm", loop=True, image="images/v12/Scene 17/v12linbjStart.webp", start_image="images/v12/Scene 17/v12linbjStart.webp") # Lindsey blowjob
     image v12linhbj = Movie(play="images/v12/Scene 17/v12linbjf.webm", loop=True, image="images/v12/Scene 17/v12linbjStart.webp", start_image="images/v12/Scene 17/v12linbjStart.webp") # Lindsey blowjob spedup
@@ -1063,7 +1064,7 @@ label v12_lindsey_sex:
     with dissolve
     pause
 
-    u "Linds… Lindsey."
+    u "Linds... Lindsey."
 
     scene v12linbj2f # Ignore as animation
     with dissolve
@@ -1079,7 +1080,7 @@ label v12_lindsey_sex:
     scene v12esr37f # FPP. Same as v12esr37e, Lindsey smiling, mouth closed
     with dissolve
 
-    u "It’s amazing… But this is your birthday, let me please you."
+    u "It's amazing... But this is your birthday, let me please you."
 
     scene v12esr37g # FPP. Same as v12esr37f, Lindsey smiling, mouth open
     with dissolve
@@ -1105,7 +1106,7 @@ label v12_lindsey_sex:
     with dissolve
     pause
 
-    li "Now…"
+    li "Now..."
 
     scene v12linsnf # Ignore as animation
     with dissolve
@@ -1117,7 +1118,7 @@ label v12_lindsey_sex:
     with dissolve
     pause
 
-    u "Mmm… Tell me it feels good..."
+    u "Mmm... Tell me it feels good..."
 
     li "*Moans* *Gags*"
 
@@ -1125,7 +1126,7 @@ label v12_lindsey_sex:
     with dissolve
     pause
 
-    u "Tell me Linds… I’m cumming! Tell me how good it fucking feels."
+    u "Tell me Linds... I'm cumming! Tell me how good it fucking feels."
 
     scene v12esr40 # TPP. Show MC cumming in lindsey's mouth in 69 position
     with vpunch
@@ -1150,12 +1151,12 @@ label v12_lindsey_sex:
     scene v12esr41b # TPP. Same as v12esr41a, Lindsey holding the back of MC's head, she is moaning, mouth open
     with dissolve
 
-    li "Yes... yess.... That’s it, yes!"
+    li "Yes... yess... That's it, yes!"
 
     scene v12esr64a # TPP. Same as v12esr64, Lindsey holding on to the back of MC's head, she is moaning, about to cum, mouth open
     with dissolve
 
-    li "I-I’m.. Cu- *Gasps*"
+    li "I-I'm.. Cu- *Gasps*"
 
     scene v12esr41c # TPP. Same as v12esr41b, Show Lindsey cumming while MC eats her out
     with vpunch
@@ -1165,7 +1166,7 @@ label v12_lindsey_sex:
     scene v12esr42 # FPP. MC kneeling in front of Lindsey (check v12esr41), looking up at her, Lindsey smiling, looking down at him, mouth open
     with dissolve
 
-    li "*Heavy breathing* Shit [name]... That was the best… Birthday sex… Ever! *Laughs*"
+    li "*Heavy breathing* Shit [name]... That was the best... Birthday sex... Ever! *Laughs*"
 
     scene v12esr43 # TPP. MC now standing in front of Lindsey, they are kissing
     with dissolve
@@ -1180,7 +1181,7 @@ label v12_lindsey_sex:
     scene v12esr44a # FPP. Same as v12esr44, Lindsey smiling, mouth open
     with dissolve
 
-    li "Haha, okay. Let’s focus and get these clothes back on before Mr. Creepo gets back..."
+    li "Haha, okay. Let's focus and get these clothes back on before Mr. Creepo gets back..."
 
     scene v12esr45 # TPP. Show MC and Lindsey putting their clothes back on, both smiling, mouths closed
     with dissolve
@@ -1190,12 +1191,12 @@ label v12_lindsey_sex:
     scene v12esr27
     with dissolve
 
-    li "Really, though… I don’t know what else to say except thank you."
+    li "Really, though... I don't know what else to say except thank you."
 
     scene v12esr27a
     with dissolve
 
-    u "Are you kidding? I should be thanking you… And, Happy Birthday. *Chuckles*"
+    u "Are you kidding? I should be thanking you... And, Happy Birthday. *Chuckles*"
 
     scene v12esr27
     with dissolve
@@ -1218,7 +1219,7 @@ label v12_after_sex:
     scene v12esr28b # TPP. Same as v12esr28, MC and Lindsey smiling, mouths closed
     with dissolve
 
-    unknown "We’re having some sort of technical difficulties with the electric… So, you’ll be- Or, I mean, your teacher will be refunded. Sorry. Thanks."
+    unknown "We're having some sort of technical difficulties with the electric... So, you'll be- Or, I mean, your teacher will be refunded. Sorry. Thanks."
 
     scene v12esr17i # FPP. Same as v12esr17, lights dim
     with dissolve
@@ -1228,7 +1229,7 @@ label v12_after_sex:
     scene v12esr29b
     with dissolve
 
-    li "I’d say we’ve gotten a lot “closer” today, would you? *Chuckles*"
+    li "I'd say we've gotten a lot \"closer\" today, would you? *Chuckles*"
 
     if v12_lindsey_sex:
         scene v12esr29a
@@ -1287,7 +1288,7 @@ label v12_after_sex:
     scene v12esr48
     with dissolve
 
-    u "Let's watch… *Chuckles*"
+    u "Let's watch... *Chuckles*"
 
     scene v12esr50a # FPP. Same as v12esr50, Charli no longer chasing Imre, both of them slightly annoyed, looking at the ceiling, mouths closed
     with dissolve
@@ -1322,7 +1323,7 @@ label v12_after_sex:
     scene v12esr51
     with dissolve
 
-    charli "You have to, that's what it means when it says “get closer”."
+    charli "You have to, that's what it means when it says \"get closer\"."
 
     scene v12esr49a
     with dissolve
@@ -1372,7 +1373,7 @@ label v12_after_sex:
     scene v12esr51a
     with dissolve
 
-    charli "Uhh, okay. Fine… I go to impromptu sessions in my free time."
+    charli "Uhh, okay. Fine... I go to impromptu sessions in my free time."
 
     scene v12esr52a # FPP. Same as v12esr52, Imre smiling, mouth open
     with dissolve

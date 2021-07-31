@@ -339,6 +339,7 @@ label v9s34_rileyCowgirl:
     hide screen v9s34_rileySexOverlay
 
     scene v9ris21 # FPP. Show Riley, now stood up, smile, mouth open.
+    with dissolve
 
     ri "Damn right I am."
 

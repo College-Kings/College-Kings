@@ -114,6 +114,7 @@ label v11_wolves_seb_prank:
             $ addPoint("bf")
 
             scene v11wsp8a
+            with dissolve
 
             u "Nah guys, that's not for me. I'm going to get some extra sleep so I'm ready for the trip."
 
@@ -249,6 +250,7 @@ label v11_wolves_seb_prank:
             pause 0.75
 
             scene v11wsp13 # FPP. MC is still sitting on the couch, Imre is standing in front of him, Imre mouth open, neutral expression
+            with dissolve
 
             imre "*Whisper* It's time man!"
 

@@ -443,21 +443,24 @@ label v12_chloe_cafe:
                 with dissolve
 
                 cl "Wow... I really can't believe she'd actually do that."
+                cl "You know what, I'm not gonna jump to any conclusions. If she really did plan on doing something like that she'd have to be a lunatic."
 
                 scene v12chc5o
                 with dissolve
 
-                cl "You know what, I'm not gonna jump to any conclusions. If she really did plan on doing something like that she'd have to be a lunatic."
+                scene v12chc5p
+                with dissolve
+
                 cl "Rather than seeing how she can help she'd rather just take over? No way. This can't be real."
 
-    scene v12chc5p
+    scene v12chc5o
     with dissolve
 
     u "(Okay, this is not going well.)"
 
     u "Why not just enjoy Europe like we discussed before?"
 
-    scene v12chc5o
+    scene v12chc5p
     with dissolve
 
     cl "It's kinda hard to relax with something like this lingering over my head."
@@ -500,22 +503,22 @@ label v12_chloe_cafe:
     scene v12chc5r # FPP. MC watches as Chloe is eating
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12chc8 # TPP. Show MC and Chloe both eating their dishes
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12chc6
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12chc9 # TPP. Show the waitress grabbing MC and Chloes' empty dishes, all smiling, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12chc5e
     with dissolve
@@ -586,6 +589,11 @@ label v12_chloe_cafe:
             u "(I should check my phone.)"
             jump v12s14_PhoneContinueRiley
 
+    scene v12chc10
+    with dissolve
+
+    u "(This isn't that far.)"
+
     scene v12chc5c
     with dissolve
 
@@ -594,12 +602,12 @@ label v12_chloe_cafe:
     scene v12chc5
     with dissolve
 
-    cl "A Mr. Lee... Hunt? What is that?"
+    cl "A Mr. Lee... hunt? What is that?"
 
     scene v12chc5e
     with dissolve
 
-    u "Some little treasure hunt he has us doing for him while we're in Europe"
+    u "Some little treasure hunt he has us doing for him while we're in Europe."
 
     scene v12chc5d
     with dissolve
@@ -625,11 +633,6 @@ label v12_chloe_cafe:
     with dissolve
 
     pause 0.75
-
-    scene v12chc10
-    with dissolve
-
-    u "(This isn't that far.)"
 
     scene v12chc12 # TPP. Show MC getting up from his chairm, slight smile, mouth closed
     with dissolve

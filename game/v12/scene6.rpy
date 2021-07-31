@@ -171,4 +171,3 @@ label v12_docks:
     u "(Hmmm, this must be what Amber was saying she wanted to talk about. I knew them two were getting close, but not like this.)"
 
     jump v12s7fr #scene 7
-

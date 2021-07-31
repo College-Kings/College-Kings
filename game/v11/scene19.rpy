@@ -93,6 +93,7 @@ label v11_roommate:
 
         elif not chloers:
             scene v11rm4f # FPP. Same as v11rm4, but Chloe is smiling, mouth closed
+            with dissolve
 
             u "Hey."
 
@@ -273,6 +274,7 @@ label v11_roommate:
             pause 0.75
 
             scene v11rm4h
+            with dissolve
 
             cl "Here's your key."
 

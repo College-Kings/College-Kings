@@ -105,6 +105,7 @@ label v11_samantha_packing:
             $ samLike += 1
             $ v11_invite_sam_europe = True
             scene v11samp2e
+            with dissolve
 
             u "You can still come if you want, but like I said before, we leave Saturday."
 

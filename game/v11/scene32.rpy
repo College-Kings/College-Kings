@@ -4,22 +4,22 @@
 # Time: Day
 
 label v11_emily_sidewalk:
-    scene v11ems1 # FPP. Show MC and Emily in talking distance (check positioning in v11lip9), Emily slightly annoyed, looking at MC
+    scene v11ems1a # FPP. Show MC and Emily in talking distance (check positioning in v11lip9), Emily slightly annoyed, looking at MC
     with dissolve
     play music "music/v11/Scene 32/Track Scene 32.mp3" fadein 2
     u "Hey Emily, haven't seen you the whole time we've been here."
 
-    scene v11ems1a # FPP. Same as v11ems1, Emily slightly annoyed, mouth closed
+    scene v11ems1 # FPP. Same as v11ems1, Emily slightly annoyed, mouth closed
     with dissolve
 
     em "That's the point. Do you not remember our talk?"
 
-    scene v11ems1
+    scene v11ems1a
     with dissolve
 
     u "Yeah I remember, but-"
 
-    scene v11ems1a
+    scene v11ems1
     with dissolve
 
     em "Then you know why we haven't seen each other."

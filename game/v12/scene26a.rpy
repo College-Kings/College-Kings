@@ -53,7 +53,7 @@ label v12_follow_chris:
     scene v12chf3 # TPP. Show MC and Chris getting into the back of the car, both worried, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12chf4 # FPP. MC and Chris sitting in the back of the car, MC looking at Chris, Chris looking out the window, very worried, mouth open
     with dissolve
@@ -68,7 +68,7 @@ label v12_follow_chris:
     scene v12chf4b # FPP. Same as v12chf4a, Chris very worried, mouth open
     with dissolve
 
-    ch "She just...*Sighs*"
+    ch "She just... *Sighs*"
 
     scene v12chf4a
     with dissolve
@@ -150,7 +150,7 @@ label v12_follow_chris:
             scene v12chf4e
             with dissolve
 
-            u "I mean, genuinely, Chris? You literally left her at the alter the other day. *Chuckles*"
+            u "I mean, genuinely, Chris? You literally left her at the altar the other day. *Chuckles*"
 
             scene v12chf4f
             with dissolve
@@ -287,17 +287,17 @@ label v12_follow_chris:
             scene v12chf7 # TPP. Show Chris and MC leaving the car in front of the hotel, both worried, mouths closed
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             scene v12chf8 # TPP. Show Chris and MC walking into the hotel, both worried, mouths closed
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             scene v12chf9 # TPP. Show Chris filling in a form, MC sitting down, both worried, mouths closed
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             scene v12chf10 # FPP. Chris and MC now sitting in the waiting room, Chris worried, mouth open, looking at MC, MC looking at Chris
             with dissolve

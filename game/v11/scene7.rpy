@@ -222,7 +222,7 @@ label v11_room_aubrey_shopping:
     scene v11auw8a
     with dissolve
 
-    au "Yeah..." 
+    au "Yeah..."
 
     scene v11auw8
     with dissolve

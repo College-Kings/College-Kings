@@ -37,6 +37,8 @@ label v12_roomate_talk:
             scene v12rcr3 # TPP. Chloe gives MC a kiss
             with dissolve
 
+            play sound "sounds/kiss.mp3"
+
             pause 0.75
 
             scene v12rcr4 # TPP. Chloe sits on her bed 
