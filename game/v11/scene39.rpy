@@ -415,7 +415,7 @@ label v11_mc_amber_gokart:
     scene v11cam14 # FPP. looking at amber, smile on her face, mouth opened
     with dissolve
 
-    am "Haha, we look like we're getting ready to rob a bank. I'm pretty sure we could if we really wanted to, especially here in another country, as students on a trip. No one would suspect us, you know that... right?" 
+    am "Haha, we look like we're getting ready to rob a bank. I'm pretty sure we could if we really wanted to, especially here in another country, as students on a trip. No one would suspect us, you know that... right?"
     am "I wonder who else we could get in on it... maybe Riley. *Chuckles* If anything went south we could use her as the fall guy. She's hot and all, but definitely the perfect fall guy."
 
     menu:

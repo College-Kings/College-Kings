@@ -414,7 +414,7 @@ label v11_lauren_store:
     scene v11las19a
     with dissolve
 
-    jud "Exactly. We've only ever had one tie before." 
+    jud "Exactly. We've only ever had one tie before."
 
     scene v11las18f
     with dissolve

@@ -150,7 +150,7 @@ label v11_wolves_packing_chris:
 
             ch "It's a whole mess really. I love Nora, more than anything. She's been there for me in ways I can't even explain."
             
-            ch "I've known her forever. I mean, we've been dating since high school. But ever since I became Wolves president it's like I'm being torn two ways." 
+            ch "I've known her forever. I mean, we've been dating since high school. But ever since I became Wolves president it's like I'm being torn two ways."
             
             ch "It seems impossible for me to do everything I need to do for the frat and still give Nora the attention she deserves."
             
