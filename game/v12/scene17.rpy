@@ -321,6 +321,7 @@ label v12_escape_room:
     imre "Her standards aren't that low... At least she doesn't talk to guys that look as bad as you do."
 
     scene v12esr16a # FPP. Same as v12esr16, Imre looking at Aubrey, Imre slight smile, mouth open
+    with dissolve
     
     imre "*Laughs* Right, Aubrey?"
 

@@ -178,6 +178,7 @@ label v12_lindsey_lobby:
     pause 0.75
 
     scene v12lil12 # FPP. MC and Lindsey sitting down, looking at each other, Lindsey slightly worried, mouth open
+    with dissolve
 
     li "*Sighs* One more stop and then we're headed back home."
 
