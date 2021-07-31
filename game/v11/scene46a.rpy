@@ -423,7 +423,7 @@ label v11_dinner_with_aubrey:
     scene v11dwa8a # FPP. Show Mr Lee infront of the students, mouth closed
     with dissolve
 
-    u "(A nice dinner and a relaxing walk, not a bad night Mr. Lee.)"
+    u "(A nice dinner and a relaxing walk... Not a bad night, Mr. Lee.)"
 
     scene v11dwa9 # TPP. Show some of the students walking out the restraunt
     with dissolve
@@ -432,5 +432,8 @@ label v11_dinner_with_aubrey:
 
     scene v11dwa10 # TPP. Show Nora,chris, Mc, Chloe walking alond the sidewalk (camera from slightly above so you can't tell everyone else isn't with them)
     with dissolve
+
+    pause 1
+
     stop music fadeout 3
     jump v11_walking_back
