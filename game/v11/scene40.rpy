@@ -54,7 +54,7 @@ label v11_carriage_ride:
     scene v11car4b # FPP. Same as v11car4, Show Lindsey walking towards MC, Charli mocking look, mouth closed, Lindsey smiling, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11car4c # FPP. Same as v11car4, Lindsey standing in front of MC, blocking the view of Charli, she's looking back at Charli, she's slightly worried, mouth closed
     with dissolve
@@ -446,7 +446,7 @@ label v11_carriage_ride:
     scene v11car15f # FPP. Same as v11car15c, different pose
     with dissolve
 
-    li "What do you think Chloe?"
+    li "What do you think, Chloe?"
 
     scene v11car11e # FPP. Same as v11car11d, Chloe slightly skeptical, mouth open, different pose
     with dissolve
@@ -550,7 +550,8 @@ label v11_carriage_ride:
     scene v11car14e
     with dissolve
 
-    no "Do I really need to read from the list? One thing I can say about Chris is that even though he's so fucking busy and never has time for me, the dedication he has for the Wolves is clearly seen in every single thing he does..."
+    no "Do I really need to read from the list?"
+    no "One thing I can say about Chris is that even though he's so fucking busy and never has time for me, the dedication he has for the Wolves is clearly seen in every single thing he does..."
 
     scene v11car14f
     with dissolve
@@ -684,7 +685,7 @@ label v11_carriage_ride:
     scene v11car14e
     with dissolve
     
-    no "What about the time you told a chick to leave campus cause she was wearing the same dress as you?!"
+    no "What about the time you told a Chick to leave campus cause she was wearing the same dress as you?!"
 
     scene v11car11j
     with dissolve
@@ -754,12 +755,11 @@ label v11_carriage_ride:
     scene v11car17 # TPP. Show Nora and Chloe falling out towards the ground
     with dissolve
 
+    pause 0.75
     play sound "sounds/fall.mp3"
 
-    pause 0.75
-
     scene v11car18 # TPP. Show Nora and Chloe on the ground, both angry, mouths closed
-    with dissolve
+    with vpunch
 
     # -Both Nora and Chloe fall out of the carriage onto the ground-
 
@@ -776,6 +776,7 @@ label v11_carriage_ride:
     pause 0.75
 
     scene v11car19a # FPP. Same as v11car19, Mr Lee now in talking distance, Mr Lee concerned and worried, mouth open, looking down at Nora and Chloe (they're out of shot) 
+    with dissolve
 
     lee "What's going on? Are you two alright?"
 
