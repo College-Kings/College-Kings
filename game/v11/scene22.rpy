@@ -108,7 +108,7 @@ label v11_museum_tour:
     scene v11tm9a # FPP. Same as v11tm9, Chris lowers his phone, slightly worried, mouth open, looking at Mr Lee
     with dissolve
 
-    ch "Sorry Mr. Lee." 
+    ch "Sorry, Mr. Lee."
     
     scene v11tm9
     with dissolve

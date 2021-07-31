@@ -14,6 +14,7 @@ label v10_avoid_fight:
         pause 0.75
 
         scene v10frr2 # TPP. Show MC having just left the warehouse (camera from outside, mc facing camera)        
+        with dissolve
 
         if joinwolves:
             scene v10frr2a # TPP. same camera as v10frr2, Show MC having just left the warehouse (camera from outside, mc facing camera), Show chris just exiting the warehouse. MC mouth closed, Chris mouth open

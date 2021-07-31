@@ -18,6 +18,7 @@ label v9_ryan_v_perry_fight:
     pause 0.75
 
     scene v10rpf3 # FPP. Show close up of josh, excited look, mouth open
+    with dissolve
     jo "Don't kill each other, stay in the ring, yada, yada, yada. Have fun!"
 
     scene v10rpf4 # FPP. Show close up of josh exiting the ring, mouth closed

@@ -13,7 +13,7 @@ label v12_urban_exploring:
     scene v12uex2 # FPP Show outside of abandoned commercial bakery
     with dissolve
 
-    au "What...is this?"
+    au "What... is this?"
 
     no "Uhh, it's the factory...? I think..."
 
@@ -55,7 +55,7 @@ label v12_urban_exploring:
     scene v12uex3a
     with dissolve
 
-    au "*Laughs* Nice comeback, Imre. You’re improving a lot. I’m proud."
+    au "*Laughs* Nice comeback, Imre. You're improving a lot. I'm proud."
 
     scene v12uex4
     with dissolve
@@ -269,7 +269,7 @@ label v12_urban_exploring:
     scene v12uex6b # FPP Same angle as v12uex6, Aubrey smiling with mouth open, Nora smiling with mouth closed
     with dissolve
 
-    au "You can try all you want, but you’re not backing out now. *Chuckles*"
+    au "You can try all you want, but you're not backing out now. *Chuckles*"
 
     scene v12uex6
     with dissolve
@@ -453,7 +453,7 @@ label v12_urban_exploring:
     scene v12uex18b
     with dissolve
 
-    au "You don't have to leave because of me, Nora. I haven't seen you smile like this in a long time, so you’re staying. One of the guys can stay with you and one can take me back...?"
+    au "You don't have to leave because of me, Nora. I haven't seen you smile like this in a long time, so you're staying. One of the guys can stay with you and one can take me back...?"
 
     scene v12uex18
     with dissolve

@@ -148,7 +148,7 @@ label v12_chris_nora_room:
 
                 pause 0.75
 
-                jump scene35a
+                jump v12_scene35a
 
         "Leave her alone":
             scene v12cnr5
@@ -156,4 +156,4 @@ label v12_chris_nora_room:
 
             u "(It's not my place to get involved.)"
 
-            jump scene35b
+            jump v12_game_roommate #scene 35b

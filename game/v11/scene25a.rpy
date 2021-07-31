@@ -30,30 +30,31 @@ label v11_hotel_charlie_bar:
 
     charli "It's almost fascinating just how narcissistic you are and how heavy you deflect."
     charli "First you thought I was being kind to the girls with a hidden agenda, but now that you know I'm gay, you've lost the ability to connect those dots."
+
+    scene v11cmb2
+    with dissolve
+
+    scene v11cmb2a
+    with dissolve
+
     charli "You can't comprehend being nice without an agenda, because you yourself aren't nice without an agenda."
 
     if chloers and laurenrs and aubreyrs:
-
         charli "How many girls have you messed with on this trip alone? Chloe, Aubrey, Lauren?"
 
-
-    if laurenrs and aubreyrs:
-
+    elif laurenrs and aubreyrs:
         charli "How many girls have you messed with on this trip alone? Aubrey, Lauren, who else?"
 
-
-
-    if aubreyrs and chloers:
-
+    elif aubreyrs and chloers:
         charli "How many girls have you messed with on this trip alone? Aubrey, Chloe, who else?"
 
-    if laurenrs and chloers:
+    elif laurenrs and chloers:
         charli "How many girls have you messed with on this trip alone? Chloe, Lauren, who else?"
         
     scene v11cmb2a
     with dissolve
 
-    charli "Taking time to think about who you're really upset with might be a good idea.."
+    charli "Taking time to think about who you're really upset with might be a good idea..."
 
     scene v11cmb2
     with dissolve
@@ -64,7 +65,7 @@ label v11_hotel_charlie_bar:
     scene v11cmb2a
     with dissolve
 
-    charli "You can make excuses for your actions all you want, but if others are harmed by what you do, especially if these 'others' are people I've grown close to..."
+    charli "You can make excuses for your actions all you want, but if others are harmed by what you do, especially if these \"others\" are people I've grown close to..."
     charli "...then you can be assured I'm going to have an issue with you regardless of how you may feel."
 
     scene v11cmb2

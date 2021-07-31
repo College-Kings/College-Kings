@@ -272,7 +272,7 @@ label v11_apes_manhunt:
             scene v11amh18 # FPP. MC is sitting down, hiding, MC looking at backrground
             with dissolve
 
-            cal "Ahh shit! My back!" 
+            cal "Ahh shit! My back!"
 
             scene v11amh19 # FPP. Caleb is now sitting next to MC in the hiding spot, they're looking at each other, Caleb mouth closed, neutral expression
             with dissolve           
@@ -735,6 +735,7 @@ label v11_apes_manhunt:
                             pause 0.75
 
                             scene v11amh40 # FPP. MC and Grayson looking at each other, Grayson smiling, mouth open
+                            with dissolve
 
                             gr "I saw you earlier, but I thought you were the rancher."
 
@@ -759,6 +760,7 @@ label v11_apes_manhunt:
                             pause 0.5
 
                             scene v11amh24a
+                            with dissolve
 
                             u "Ahh, fuck! What was that for? I had already won. You just got Caleb and I heard you get Ryan."
 
@@ -866,6 +868,7 @@ label v11_apes_manhunt:
                     pause 0.75
 
                     scene v11amh40 
+                    with dissolve
 
                     gr "I saw you earlier, but I thought you were the rancher."
 
@@ -890,6 +893,7 @@ label v11_apes_manhunt:
                     pause 0.5
 
                     scene v11amh24a
+                    with dissolve
 
                     u "Ahh, fuck! What was that for? I had already won. You just got Caleb and I heard you get Ryan."
 
@@ -1061,7 +1065,7 @@ label v11_apes_manhunt:
                     scene v11amh7d # FPP. Same as v11amh7, Grayson slightly angry, mouth open
                     with dissolve
 
-                    gr "Next year we're going back to proper punishments. This horse was supposed to give you hell.."
+                    gr "Next year we're going back to proper punishments. This horse was supposed to give you hell..."
 
                     jump v11_mc_horse_room
 
@@ -1085,6 +1089,7 @@ label v11_apes_manhunt:
                     pause 0.75
 
                     scene v11amh24a
+                    with dissolve
 
                     ca "*Laughs*"
 

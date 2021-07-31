@@ -126,6 +126,7 @@ label v10_cafe_w_jenny:
         jen "Who'd she go saving now?"
 
         scene v10scwj7a
+        with dissolve
 
         u "Well... you."
 
@@ -414,6 +415,7 @@ label v10_cafe_w_jenny:
         jen "Oh, is everything okay?"
 
         scene v10scwj7c
+        with dissolve
 
         u "The school is moving forward and Penelope has a disciplinary hearing on Thursday."
 
@@ -717,6 +719,7 @@ label v10_cafe_w_jenny:
         jen "It was really nice meeting you, I'm glad I reached out."
 
         scene v10scwj15a
+        with dissolve
 
         u "I am too."
 

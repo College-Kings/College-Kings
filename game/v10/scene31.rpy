@@ -10,6 +10,7 @@ label v10_late_alley:
     pause 0.75
 
     scene v10all2 # FPP. Show Alley, 2 hookers against the wall near the entrance, Josh down the bottom of the alley with unknown guy in hoody,
+    with dissolve
 
     u "Josh!"
 

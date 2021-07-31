@@ -506,8 +506,8 @@ label v11_cardealership:
                         with dissolve
                         stop music fadeout 3
                         play music "music/v11/Scene 34/Track Scene 34_3.mp3" fadein 2
-                        u "Chloe, I've been captured by you since the moment I first saw you. Every day I think about you and hope that we can be together at all times." 
-                        u "I don't know what I'd do if one day you were just... gone. The truth is... I love you Chloe, and I don't want to go another day without you being mine." 
+                        u "Chloe, I've been captured by you since the moment I first saw you. Every day I think about you and hope that we can be together at all times."
+                        u "I don't know what I'd do if one day you were just... gone. The truth is... I love you, Chloe, and I don't want to go another day without you being mine."
                         u "So with all that said, can we make it official? Will you be my girl?"
 
                         if meetchloe and hcGirl == "chloe" and ending == "chloe":
@@ -542,8 +542,8 @@ label v11_cardealership:
                             scene v11cd37 # FPP. Chloe looks at mc, with a surprised face, mouth opened
                             with dissolve
 
-                            cl "[name], I care about you a lot too, and I've enjoyed the time we've spent together, but we have so much more to explore about each other." 
-                            cl "You may like what you see now, but there's still so much we don't know about each other." 
+                            cl "[name], I care about you a lot too, and I've enjoyed the time we've spent together, but we have so much more to explore about each other."
+                            cl "You may like what you see now, but there's still so much we don't know about each other."
                             cl "I like where we're at, and I'm only focused on you, but we don't need to rush anything. I'm not going anywhere."
 
                             scene v11cd37a # FPP. Same as 37, mouth closed

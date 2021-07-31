@@ -195,7 +195,7 @@ label v11_chloe_hotel_room_amber_call:
         scene v11hrc11b # FPP. Same as 11, smile on her face, mouth closed
         with dissolve
 
-        u "Of course, anything for my wife. *Chuckles"
+        u "Of course, anything for my wife. *Chuckles*"
 
         scene v11hrc11c # FPP. same as 11b, mouth opened
         with dissolve

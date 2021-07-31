@@ -2735,7 +2735,7 @@ label try1new:
             scene s164 # Aubrey changing bad view
             with dissolve
 
-            u "(Holy shit, if I could just stick my head through a bit further, I could get a way better view."
+            u "(Holy shit, if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
                 "Risk it":
@@ -2874,7 +2874,7 @@ label try2new:
             scene s168 # Aubrey changing bad view
             with dissolve
 
-            u "(Wow... if I could just stick my head through a bit further, I could get a way better view."
+            u "(Wow... if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
                 "Risk it":
@@ -3025,7 +3025,7 @@ label try3new:
             scene s172 # Aubrey changing bad view
             with dissolve
 
-            u "(Fuck... if I could just stick my head through a bit further, I could get a way better view."
+            u "(Fuck... if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
                 "Risk it":
@@ -3408,7 +3408,7 @@ label try5new:
             scene s183 # pen changing bad view
             with dissolve
 
-            u "(Wow... if I could just stick my head through a bit further, I could get a way better view."
+            u "(Wow... if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
                 "Risk it":
@@ -3544,7 +3544,7 @@ label try6new:
             scene s180 # pen changing bad view
             with dissolve
 
-            u "(Fuck... if I could just stick my head through a bit further, I could get a way better view."
+            u "(Fuck... if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
                 "Risk it":

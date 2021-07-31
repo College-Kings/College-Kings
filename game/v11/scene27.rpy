@@ -50,6 +50,7 @@ label v11_bartender_hotel_chat:
     bartender "You're not so bad looking either. What's your name?"
 
     scene v11hbc1c
+    with dissolve
 
     u "My name is [name]."
 
@@ -212,6 +213,7 @@ label v11_bartender_hotel_chat:
             pause 0.75
 
             scene v11hbc1h
+            with dissolve
 
             u "(What is going on with her?)"
 

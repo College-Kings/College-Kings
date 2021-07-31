@@ -1273,6 +1273,7 @@ label v11_case_verdict:
         pause 0.75
 
         scene v11coc23b
+        with dissolve
 
         jen "I better run after her."
 

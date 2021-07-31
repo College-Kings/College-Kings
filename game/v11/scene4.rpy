@@ -111,7 +111,7 @@ label v11_emily_park:
         scene v11seap4a
         with dissolve
 
-        u "Uhm.."
+        u "Uhm..."
 
     scene v11seap4c # FPP. Same camera as v10seap4. Show a closer shot of Emily standing in front of MC, slightly annoyed expression, mouth open.
     with dissolve

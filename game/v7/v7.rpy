@@ -7184,10 +7184,11 @@ label hc_asking_riley:
 
     if rileyrs or kct == "confident":
         $ hcGirl = "riley"
-        $ rileyrs = True
 
         if not rileyrs:
             call screen kctPopup
+
+        $ rileyrs = True
 
         scene s959b # riley excited
         with dissolve
@@ -7204,7 +7205,7 @@ label hc_asking_riley:
 
         ri "How did you know that I love Cinderella?"
 
-        scene s959b # riley excited
+        scene s959c # riley excited
         with dissolve
 
         u "A magician never reveals his secrets."

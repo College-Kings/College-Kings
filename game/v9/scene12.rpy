@@ -89,6 +89,7 @@ label v9_hall_cont1:
     pause 0.5
 
     scene v9hlw7 # FPP. Show tough guy, looking SUPER angry, mouth closed.
+    with dissolve
 
     u "Now look, we don't need to do this, okay?"
 

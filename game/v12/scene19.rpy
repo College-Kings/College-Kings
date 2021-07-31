@@ -82,7 +82,7 @@ label v12_party_wake_up:
     scene v12pwu7 # FPP. Same positioning as v12pwu6, Nora standing next to Imre, MC looking at Nora, slight smile, mouth open, Nora looking at Imre's direction
     with dissolve
 
-    no "Aww! Imre you like a weird raccoon... Come here, little guy..."
+    no "Aww! Imre, you look like a weird raccoon... Come here, little guy..."
 
     scene v12pwu8 # TPP. Same positioning as v12pwu7, Nora looking at Imre, Imre looking at Nora, Nora licking her thumb, Imre angry, mouth closed
     with dissolve
@@ -92,7 +92,7 @@ label v12_party_wake_up:
     scene v12pwu8a # TPP. Same as v12pwu8, Show Nora wiping off the drawing on Imre's face, Imre less annoyed, mouth closed, Nora mouth closed, slight smile
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12pwu9 # FPP. Same positioning as v12pwu8, Aubrey lying on the bed with Riley, Aubrey yawning, she's waking up, Riley still sleeping
     with dissolve
@@ -107,7 +107,7 @@ label v12_party_wake_up:
     scene v12pwu7a # FPP. Same as v12pwu7, Nora looking at Aubrey's direction, Nora slight smile, mouth open
     with dissolve
 
-    no "Last night has me in a good mood. It was nice being with just the girls after the guys left."
+    no "Last night put me in a good mood. It was nice being with just the girls after the guys left."
 
     scene v12pwu6b # FPP. Same as v12pwu6, Imre looking at Nora's direction, Imre slight smile, mouth open
     with dissolve
@@ -157,12 +157,12 @@ label v12_party_wake_up:
     scene v12pwu7a
     with dissolve
 
-    no "Then you can come with."
+    no "Then you can come along."
 
     scene v12pwu7
     with dissolve
     
-    no "Imre, you and [name] can come to. If you want?"
+    no "Imre, you and [name] can come too. If you want?"
 
     scene v12pwu7b
     with dissolve
@@ -206,12 +206,12 @@ label v12_party_wake_up:
     scene v12pwu13 # TPP. Show MC removing his pajama shirt, pajama pants still on, neutral expression, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12pwu13a # TPP. Same as v12pwu13, Show MC putting on his regular shirt, regular pants already on, mouth closed, neutral expression
     with fade
 
-    pause 0.75
+    pause 1
 
     if not v12_told_chloe and not v11_told_aubrey:
         scene v12pwu10a # TPP. Same as v12pwu10, MC wearing regular clothes, neutral expression, mouth closed
@@ -233,7 +233,7 @@ label v12_party_wake_up:
         scene v12pwu15 # FPP. MC in the room, looking at the door to the hallway
         with vpunch
 
-        cl "HOW IS THAT GOOD?! YOU COULD'VE CAME TO ME!"
+        cl "HOW IS THAT GOOD?! YOU COULD'VE COME TO ME!"
 
         scene v12pwu16 # TPP. Lindsey and Chloe in the hallway, looking at each other. Show only Lindsey, Lindsey looking at Chloe, Lindsey angry, mouth open, they are having a heated argument
         with dissolve
@@ -299,7 +299,7 @@ label v12_party_wake_up:
         scene v12pwu16a
         with dissolve
 
-        li "Please don't make any excuses... I know you weren't planning on taking any of my advice. Anytime I've ever had a suggestion you've come up with some reason to object to it."
+        li "Please don't make any excuses... I know you weren't planning on taking any of my advice. Any time I've ever had a suggestion you've come up with some reason to object to it."
 
         scene v12pwu17
         with dissolve
@@ -329,7 +329,7 @@ label v12_party_wake_up:
         scene v12pwu14 # TPP. Show MC walking in the hotel lobby, show Nora, Imre and Aubrey waiting for him, all slight smiles, mouths closed, Nora has a bag with her
         with dissolve
 
-        pause 0.75
+        pause 1
 
         scene v12pwu19 # FPP. MC looking at Nora in the lobby, Nora looking at MC, Nora slight smile, mouth open
         with dissolve
@@ -344,6 +344,6 @@ label v12_party_wake_up:
         scene v12pwu20 # TPP. Show MC and Nora leaving the hotel lobby, both slightly smiling, mouths closed
         with dissolve
 
-        pause 0.75
+        pause 1
 
     jump v12_urban_exploring #scene 20

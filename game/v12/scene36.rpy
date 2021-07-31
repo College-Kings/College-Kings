@@ -50,12 +50,12 @@ label v12_lindsey_lobby:
     scene v12lil4b
     with dissolve
 
-    u "Okay… You forget how to eat? *Chuckles*"
+    u "Okay... You forget how to eat? *Chuckles*"
 
     scene v12lil4c
     with dissolve
 
-    li "No, haha… I just don't wanna go by myself."
+    li "No, haha... I just don't wanna go by myself."
 
     scene v12lil4b
     with dissolve
@@ -105,7 +105,7 @@ label v12_lindsey_lobby:
     scene v12lil7b
     with dissolve
 
-    li "Well… We went for coffee a long time ago and she paid. So I know it was the same kind of wallet, but I don't wanna assume he stole it."
+    li "Well... We went for coffee a long time ago and she paid. So I know it was the same kind of wallet, but I don't wanna assume he stole it."
 
     scene v12lil7d # FPP. Same as v12lil7b, different pose
     with dissolve
@@ -120,7 +120,7 @@ label v12_lindsey_lobby:
     scene v12lil7d
     with dissolve
 
-    li "Oh, well… Maybe Charli took it? That'd be so horrible if he did... I don't think I could look at him the same."
+    li "Oh, well... Maybe Charli took it? That'd be so horrible if he did... I don't think I could look at him the same."
 
     scene v12lil7e
     with dissolve
@@ -135,7 +135,7 @@ label v12_lindsey_lobby:
     scene v12lil7a
     with dissolve
 
-    u "I’m so honest."
+    u "I'm so honest."
 
     scene v12lil8 # TPP. Show Lindsey and MC approaching the bartender, all of them slightly smiling, mouths closed (bartender behind the bar)
     with dissolve
@@ -150,7 +150,7 @@ label v12_lindsey_lobby:
     scene v12lil10 # FPP. Same positioning as v12lil9, MC looking at bartender, bartender looking at Lindsey, bartender slight smile, mouth open (Only Bartender in shot)
     with dissolve
 
-    bart "I'm sorry, Madam but breakfast is closed."
+    bartender "I'm sorry, Madam but breakfast is closed."
 
     scene v12lil9a # FPP. Same as v12lil9, Lindsey slightly sad, mouth open
     with dissolve
@@ -160,12 +160,12 @@ label v12_lindsey_lobby:
     scene v12lil10
     with dissolve
 
-    bart "Haha, I just like to start the day with a bit of laughter..."
+    bartender "Haha, I just like to start the day with a bit of laughter..."
 
     scene v12lil10a # FPP. Same as v12lil10, bartender pointing at the table, bartender slight smile, mouth open
     with dissolve
 
-    bart "Breakfast will be served right over there, just take a seat and I'll bring you two some plates."
+    bartender "Breakfast will be served right over there, just take a seat and I'll bring you two some plates."
 
     scene v12lil9
     with dissolve
@@ -178,6 +178,7 @@ label v12_lindsey_lobby:
     pause 0.75
 
     scene v12lil12 # FPP. MC and Lindsey sitting down, looking at each other, Lindsey slightly worried, mouth open
+    with dissolve
 
     li "*Sighs* One more stop and then we're headed back home."
 
@@ -214,7 +215,7 @@ label v12_lindsey_lobby:
     scene v12lil12c # FPP. Same as v12lil12b, Lindsey slight smile, mouth open
     with dissolve
 
-    li "You and Amber both say a lot of the same stuff… *Chuckles*"
+    li "You and Amber both say a lot of the same stuff... *Chuckles*"
 
     scene v12lil12b
     with dissolve
@@ -239,7 +240,7 @@ label v12_lindsey_lobby:
     scene v12lil13 # FPP. Same positioning as v12lil12, bartender standing next to table, holding plate with food, MC looking at bartender, bartender looking at MC, bartender slight smile (Only bartender in shot)
     with dissolve
 
-    bart "Please, enjoy."
+    bartender "Please, enjoy."
 
     scene v12lil12d # FPP. Same as v12lil12, Lindsey looking at bartender, Lindsey slight smile, mouth open
     with dissolve
@@ -254,7 +255,7 @@ label v12_lindsey_lobby:
     scene v12lil13
     with dissolve
 
-    bart "My pleasure."
+    bartender "My pleasure."
 
     scene v12lil12e # FPP. Same as v12lil12c, Lindsey slight smile, mouth open, food on table
     with dissolve
@@ -306,4 +307,4 @@ label v12_lindsey_lobby:
 
     pause 0.75
 
-    jump v12_riley_ending
+    jump v12_riley_ending #scene 37
