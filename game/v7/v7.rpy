@@ -7184,10 +7184,11 @@ label hc_asking_riley:
 
     if rileyrs or kct == "confident":
         $ hcGirl = "riley"
-        $ rileyrs = True
 
         if not rileyrs:
             call screen kctPopup
+
+        $ rileyrs = True
 
         scene s959b # riley excited
         with dissolve
