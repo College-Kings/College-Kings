@@ -363,74 +363,74 @@ label v11_dinner_with_aubrey:
 
                 au "Haha. As long as you keep me satisfied, [name]."
 
-        scene v11dwa1c
-        with dissolve
+    scene v11dwa1c
+    with dissolve
 
-        au "Oh, look! The food's coming out."
+    au "Oh, look! The food's coming out."
 
-        scene v11dwa1b
-        with dissolve
+    scene v11dwa1b
+    with dissolve
 
-        u "We didn't even order anything..."
+    u "We didn't even order anything..."
 
-        scene v11dwa1c
-        with dissolve
+    scene v11dwa1c
+    with dissolve
 
-        au "Oh yeah, Pimp Daddy-I mean... Mr. Lee, ordered for everybody. *Chuckles*"
+    au "Oh yeah, Pimp Daddy-I mean... Mr. Lee, ordered for everybody. *Chuckles*"
 
-        scene v11dwa1b
-        with dissolve
+    scene v11dwa1b
+    with dissolve
 
-        u "Wow, you really can't stop thinking about Mr. Lee as your pimp, can you? *Laughs*"
+    u "Wow, you really can't stop thinking about Mr. Lee as your pimp, can you? *Laughs*"
 
-        scene v11dwa1c
-        with dissolve
+    scene v11dwa1c
+    with dissolve
 
-        au "Haha, stop it."
+    au "Haha, stop it."
 
-        scene v11dwa3 # TPP. Show MC and aubrey talking and eating
-        with dissolve
+    scene v11dwa3 # TPP. Show MC and aubrey talking and eating
+    with dissolve
 
-        pause 2
+    pause 2
 
-        scene v11dwa4 # TPP. Show Riley and Amber talking and eating
-        with fade
+    scene v11dwa4 # TPP. Show Riley and Amber talking and eating
+    with fade
 
-        pause 2
+    pause 2
 
-        scene v11dwa5 # TPP. Show Lindsey and charli talking and eating
-        with fade
+    scene v11dwa5 # TPP. Show Lindsey and charli talking and eating
+    with fade
 
-        pause 2
+    pause 2
 
-        scene v11dwa6 # FPP. Show aubrey, laid back slightly hands on stomach mouth open
-        with dissolve
+    scene v11dwa6 # FPP. Show aubrey, laid back slightly hands on stomach mouth open
+    with dissolve
 
-        au "Wow, I'm so full... That was amazing, I'm gonna go thank Mr. Lee."
+    au "Wow, I'm so full... That was amazing, I'm gonna go thank Mr. Lee."
 
-        scene v11dwa7 # FPP. Show aubrey walking off towards Mr. Lee
-        with dissolve
+    scene v11dwa7 # FPP. Show aubrey walking off towards Mr. Lee
+    with dissolve
 
-        u "Haha, alright. You go do that."
+    u "Haha, alright. You go do that."
 
-        u "(*Laughs* She's definitely got a little thing for Mr. Lee.)"
+    u "(*Laughs* She's definitely got a little thing for Mr. Lee.)"
 
-        scene v11dwa8 # FPP. Show Mr Lee infront of the students, mouth open
-        with dissolve
+    scene v11dwa8 # FPP. Show Mr Lee infront of the students, mouth open
+    with dissolve
 
-        lee "Alright students, we're going to enjoy one final walk back to the hotel."
+    lee "Alright students, we're going to enjoy one final walk back to the hotel."
 
-        scene v11dwa8a # FPP. Show Mr Lee infront of the students, mouth closed
-        with dissolve
+    scene v11dwa8a # FPP. Show Mr Lee infront of the students, mouth closed
+    with dissolve
 
-        u "(A nice dinner and a relaxing walk, not a bad night Mr. Lee.)"
+    u "(A nice dinner and a relaxing walk, not a bad night Mr. Lee.)"
 
-        scene v11dwa9 # TPP. Show some of the students walking out the restraunt
-        with dissolve
+    scene v11dwa9 # TPP. Show some of the students walking out the restraunt
+    with dissolve
 
-        pause 1
+    pause 1
 
-        scene v11dwa10 # TPP. Show Nora,chris, Mc, Chloe walking alond the sidewalk (camera from slightly above so you can't tell everyone else isn't with them)
-        with dissolve
+    scene v11dwa10 # TPP. Show Nora,chris, Mc, Chloe walking alond the sidewalk (camera from slightly above so you can't tell everyone else isn't with them)
+    with dissolve
     stop music fadeout 3
     jump v11_walking_back
