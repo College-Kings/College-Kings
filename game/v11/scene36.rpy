@@ -79,7 +79,7 @@ label v11_imre_ryan_grapple:
     pause 0.75
 
     scene v11irg7 # FPP. MC looking at Imre on the ground, holding his jaw, mouth closed, in pain and angry
-    with dissolve
+    with vpunch
 
     play sound "sounds/fall.mp3"
 
@@ -91,13 +91,14 @@ label v11_imre_ryan_grapple:
     lee "DID YOU NOT HEAR ME?!"
 
     scene v11irg8 # FPP. Show Ryan on the ground, in pain, mouth closed
-    with dissolve
+    with vpunch
 
     play sound "sounds/fall.mp3"
 
     pause 0.75
 
     scene v11irg4b # FPP. Same cam as v11irg4, Imre and Ryan on the ground, out of shot, Mr Lee looking down at Imre, Mr Lee mouth open, very angry
+    with dissolve
 
     lee "Clearly you are both deaf or incompetent. I can't even enjoy my breakfast and a morning coffee? Imre, what did you say to him?"
 

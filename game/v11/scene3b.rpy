@@ -7,6 +7,7 @@ label v11_cafe_with_riley:
     play music "music/v11/Scene 3/Track Scene 3.mp3" fadein 2
     if joinwolves:
         scene v11s3bris1 # TPP. Show MC talking on his phone in his wolves bedroom, sat on the bed, mouth open
+        with dissolve
         u "Hello?"
 
         scene v11s3bris2 # TPP. Show Riley sat in the café, phone to side of head, mouth open
@@ -31,6 +32,7 @@ label v11_cafe_with_riley:
 
     else:
         scene v11s3bris3 # TPP.Show MC talking on his phone in his apes bedroom, sat on the bed, mouth open
+        with dissolve
         u "Hello?"
 
         scene v11s3bris2

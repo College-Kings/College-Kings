@@ -370,6 +370,7 @@ label v11_wolves_packing_chris:
             pause 0.75
 
             scene v10swpc2e # FPP. Same camera as v10swpc2. Show a closer shot of Chris, wiping/covering his eyes, mouth open.
+            with dissolve
 
             ch "Thanks for the talk [name]. I appreciate it."
 

@@ -735,6 +735,7 @@ label v11_apes_manhunt:
                             pause 0.75
 
                             scene v11amh40 # FPP. MC and Grayson looking at each other, Grayson smiling, mouth open
+                            with dissolve
 
                             gr "I saw you earlier, but I thought you were the rancher."
 
@@ -759,6 +760,7 @@ label v11_apes_manhunt:
                             pause 0.5
 
                             scene v11amh24a
+                            with dissolve
 
                             u "Ahh, fuck! What was that for? I had already won. You just got Caleb and I heard you get Ryan."
 
@@ -866,6 +868,7 @@ label v11_apes_manhunt:
                     pause 0.75
 
                     scene v11amh40 
+                    with dissolve
 
                     gr "I saw you earlier, but I thought you were the rancher."
 
@@ -890,6 +893,7 @@ label v11_apes_manhunt:
                     pause 0.5
 
                     scene v11amh24a
+                    with dissolve
 
                     u "Ahh, fuck! What was that for? I had already won. You just got Caleb and I heard you get Ryan."
 
@@ -1085,6 +1089,7 @@ label v11_apes_manhunt:
                     pause 0.75
 
                     scene v11amh24a
+                    with dissolve
 
                     ca "*Laughs*"
 

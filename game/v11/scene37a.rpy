@@ -250,6 +250,7 @@ label v11_ride_with_mrlee:
     lee "Let me tell you something [name], in our lives we make mistakes, and we also make choices that in our opinion aren't mistakes, but others are hurt by them."
 
     scene v11wir4b
+    with dissolve
 
     lee "Listen closely to what I'm about to say."
 
