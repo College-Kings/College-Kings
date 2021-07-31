@@ -503,7 +503,7 @@ label v11_imre_and_ryan:
     scene v11wir7c
     with dissolve
 
-    ry "Just like you were ready when Adam beat your ass? Hmph, please"
+    ry "Just like you were ready when Adam beat your ass? Hmph, please."
 
     scene v11wir8 # FPP Show Imre squarring up to Ryan like he is going to fight him, both are angry, Imre's mouth open
     with dissolve

@@ -384,7 +384,7 @@ label v11_carriage_ride:
     scene v11car15c
     with dissolve
 
-    li "Yeah, for the Chicks"
+    li "Yeah, for the Chicks."
 
     scene v11car11d # FPP. Same as v11car11c, different pose, Chloe slightly surprised, mouth open
     with dissolve

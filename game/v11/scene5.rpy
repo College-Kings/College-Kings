@@ -1048,7 +1048,7 @@ label v11s5_galleryScene:
     scene v11swc18
     with dissolve
     
-    u "Pheww"
+    u "Pheww."
 
     stop music fadeout 3
 
