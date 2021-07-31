@@ -128,7 +128,7 @@ label v11_nora_lingerie:
     scene v11nol4 # TPP. Show Nora stopping in front of the store, looking at it, MC walking past her, looking back at her, Nora slight smile, mouth closed, MC confused, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11nol5 # FPP. MC looking as Nora walks in the store
     with dissolve
@@ -138,7 +138,7 @@ label v11_nora_lingerie:
     scene v11nol6 # TPP. Show Nora walking in the store, MC walking through the door, slightly behind her, Nora smiling, mouth closed, MC confused, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11nol7 # FPP. MC and Nora in the store (near the entrance), MC and Nora looking at each other, Nora slightly embarassed, mouth closed
     with dissolve
@@ -176,6 +176,7 @@ label v11_nora_lingerie:
     pause 0.75
 
     scene v11nol7c # FPP. Same as v11nol7, Nora embarassed, mouth closed, looking at MC
+    with dissolve
 
     u "Wait, this is Oli's!"
 
@@ -202,12 +203,12 @@ label v11_nora_lingerie:
     scene v11nol10 # TPP. Show Nora walking around in the store with MC following her, both slight smiles, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11nol11 # TPP. Show Nora looking in the clothe rack, bent over, looking at the camera (camera inside the clothe rack), focus on her cleavage, she has a slight smile, mouth closed
     with dissolve
 
-    pause 1
+    pause 1.5
 
     scene v11nol12 # FPP. Same positioning as v11nol11, MC looking at Nora, Nora looking at the clothes, Nora mouth closed, neutral expression
     with dissolve
@@ -312,7 +313,7 @@ label v11_nora_lingerie:
     scene v11nol13 # TPP. Show Nora walking to the counter and MC looking at some clothes, both smiling, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11nol14 # FPP. MC and Nora standing in front of each other, Nora smiling, mouth open
     with dissolve
