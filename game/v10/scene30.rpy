@@ -192,6 +192,7 @@ label v10_chloe_gym:
                 pause 0.5
 
                 scene v10chg2c
+                with dissolve
 
                 cl "Good answer. You know, I just may have an idea for your little reward."
 

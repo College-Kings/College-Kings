@@ -230,6 +230,7 @@ label v10s33_deergirl11:
     $ v10s33_deergirl1 = True
     
     scene v10cfrdg11 # FPP. Show dg1, looking towards perry out of shot, mouth open
+    #with dissolve
     dg1 "Haha, I don't think I've met anyone less coordinated. It's the dab, it's pretty simple."
 
     scene v10cfrdg11a # FPP. Same 11, dabbing, mouth closed. (should be simple to pose, refer to Migos "Look At My Dab (Bitch Dab)" (WSHH Exclusive - Official Music Video))
