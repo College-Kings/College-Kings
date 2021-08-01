@@ -248,7 +248,6 @@ label v12s32:
     u "Oh umm..."
 
     menu:
-
         "Turn your back to Aubrey":
             $ addPoint("bf")
             scene v12s32_15a #same 15,  MC crosses his arms and puts his back to Aubrey, aubrey a bit dissapointed, mouth upen
@@ -459,7 +458,6 @@ label v12s32:
     u "(I think she's jealous of her sister or something, maybe I should boost her up.)"
 
     menu:
-
         "Boost Aubrey":
             $ addPoint ("tm")
 
@@ -801,7 +799,6 @@ label v12s32:
     with dissolve
 
     menu: 
-
         "Get Aubrey flowers":
             $ s12v32_get_aubrey_flowers = True
 
@@ -817,7 +814,7 @@ label v12s32:
             scene v12s32_34 # TPP, Mc grabs some flowers
             with dissolve
 
-            pause 0.7
+            pause 0.75
 
             scene v12s32_35 # FPP, mc extends Aubrey flowers (she doesn't take them yet) (show her face like a normal close up , looking at mc) (just show the flowers handed in first person), AUbrey surprised smiled
             with dissolve
