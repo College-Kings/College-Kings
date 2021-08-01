@@ -254,7 +254,7 @@ label v12s27:
 
     imre "I always see this crazy teacher we have, named Mr. Lee, pulling him aside."
     
-    imre "Not only that, we played a \"murder mystery\" game or whatever, and he chose [Name] here to be the murderer, but made me play some other dude's wife."
+    imre "Not only that, we played a \"murder mystery\" game or whatever, and he chose [name] here to be the murderer, but made me play some other dude's wife."
 
     scene v12s27_7e # same as 7d, mouth closed
     with dissolve
@@ -470,7 +470,7 @@ label v12s27:
             scene v12s27_16d
             with dissolve
 
-            imre "Let's not look towards the past, [Name]."
+            imre "Let's not look towards the past, [name]."
 
             scene v12s27_16e
             with dissolve

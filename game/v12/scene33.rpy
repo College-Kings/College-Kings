@@ -603,7 +603,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     scene v12s33_14
     with dissolve
 
-    lee "Please, [Name], just go."
+    lee "Please, [name], just go."
 
     scene v12s33_26 # TPP shows mc walking off away from the massage tables (towards the saunas)
     with dissolve
@@ -944,7 +944,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     scene v12s33_35
     with dissolve
 
-    li "[Name], you may wanna step out before you get caught. *Chuckles*"
+    li "[name], you may wanna step out before you get caught. *Chuckles*"
 
     scene v12s33_35a
     with dissolve
@@ -971,7 +971,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
         scene v12s33_33
         with dissolve
 
-        pe "Bye, [Name]!"
+        pe "Bye, [name]!"
 
     call screen v12s33_three_doors
 

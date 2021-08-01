@@ -203,12 +203,12 @@ label v12s27a:
     scene v12s27a_2l
     with dissolve
 
-    ry "[Name] and I wanna know if you've ever slept with a girl."
+    ry "[name] and I wanna know if you've ever slept with a girl."
 
     scene v12s27a_2m
     with dissolve
 
-    am "That's a stupid question. [Name] already knows the answer."
+    am "That's a stupid question. [name] already knows the answer."
     
     scene v12s27a_2o # same as 2m, Ryan upset face, mouth closed
     with dissolve
@@ -414,7 +414,7 @@ label v12s27a:
             scene v12s27a_8
             with dissolve
 
-            ry "*Sighs* Wow, thanks for the moral support, [Name]. I feel great about it now…"
+            ry "*Sighs* Wow, thanks for the moral support, [name]. I feel great about it now…"
 
     scene v12s27a_9 #fpp, showing close up barber talking to Ryan (ryan is off-screen still in the barber chair), polite smile, mouth open
     with dissolve
@@ -448,7 +448,7 @@ label v12s27a:
     scene v12s27a_8f # same as 8d, Ryan looking at mc, neutral expression, mouth open
     with dissolve
 
-    ry "Let's get back, [Name]."
+    ry "Let's get back, [name]."
 
     scene v12s27a_10 #TPP, show mc and ryan leaving the barber shop, mc smiling ,ryan neutral
     with dissolve

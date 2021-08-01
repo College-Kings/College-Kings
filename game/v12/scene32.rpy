@@ -345,7 +345,7 @@ label v12s32:
     scene v12s32_14d # same 14, aubrey looking at mc super excited, mouth open
     with dissolve
 
-    au "Oh my god, [Name]... This is so fucking sick!"
+    au "Oh my god, [name]... This is so fucking sick!"
 
     scene v12s32_12
     with dissolve
@@ -476,7 +476,7 @@ label v12s32:
 
             scene v12s32_20b
             with dissolve
-            au "*Whisper* [Name]!"
+            au "*Whisper* [name]!"
 
             scene v12s32_21d # same 21c, naomi looking at Aubrey (off-screen), mouth open, excited, with one eyebrow raised
             with dissolve
@@ -660,7 +660,7 @@ label v12s32:
     scene v12s32_29
     with dissolve
 
-    au "If [Name] thinks I'd be good, then I'll give it a try."
+    au "If [name] thinks I'd be good, then I'll give it a try."
 
     scene v12s32_28
     with dissolve
