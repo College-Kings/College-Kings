@@ -1,5 +1,8 @@
 label v12s7_free_roam_spoken(backgroundImg, returnScreen, seenList):
     $ v12s7_seenList = seenList
+
+    show screen murder_button_overlay(nora)
+
     scene expression backgroundImg
     u "(I've already spoken to them, but I could still murder them)"
     $ renpy.call_screen(returnScreen)
@@ -346,6 +349,8 @@ label v12s7_aubrey1:
     $ v12s7_aubrey = True
     $ v12s7_seenList = [nora]
 
+    show screen murder_button_overlay(aubrey)
+
     scene v12ferau1 # FPP. Note for renderer, all scene images starting v12ferau will be the first conversation with Aubrey on the upper front balcony of the boat. Her and Nora are both up there but the conversations are completely seperate. Show Aubrey, flirty look, mouth open
 
     au "Hey there, handsome. Please make sure you're being careful, okay? I'd hate for you to get hurt, but if you do find yourself needing some love and care, don't forget to come see your favorite nurse. *Chuckles*"
@@ -526,6 +531,8 @@ label v12s7_aubrey1:
 label v12s7_aubrey2:
     $ v12s7_aubrey2 = True
     $ v12s7_seenList = []
+
+    show screen murder_button_overlay(aubrey)
     
     scene v12ferauh1 # FPP. Location is in the bathroom on the ship, Show aubrey, seductive look, mouth open
 
@@ -667,6 +674,8 @@ label v12s7_riley1:
         $ v12s7_seenList = [chloe]
     else:
         $ v12s7_seenList = [chloe, josh]
+
+    show screen murder_button_overlay(riley)
 
     ### ERROR: -If talk to Chloe and Riley 1 ###
     ### ERROR: -If MC uses the button at all during this conversation he is caught ###
@@ -941,6 +950,8 @@ label v12s7_chloe1:
     $ v12s7_seenList = [riley]
     if josh_europe and not v12s7_josh:
         $ v12s7_seenList.append(josh)
+
+    show screen murder_button_overlay(chloe)
 
     scene v12ferch1 # FPP Show chloe slight smile, mouth closed
 
@@ -1259,6 +1270,8 @@ label v12s7_riley3:
     if josh_europe and not v12s7_josh:
         $ v12s7_seenList.append(josh)
 
+    show screen murder_button_overlay(riley)
+
     scene v12ferric1 # FPP. Show riley and chloe stood together, mouths closed
 
     u "Seeing you guys together again in the same exact location is a little suspicious."
@@ -1387,6 +1400,8 @@ label v12s7_riley3a:
     $ v12s7_seenList = []
     if josh_europe and not v12s7_josh:
         $ v12s7_seenList.append(josh)
+
+    show screen murder_button_overlay(riley)
 
     ### ERROR: -If talk to Riley 3 No Chloe ###
     scene v12ferril1 # FPP. Show riley, slight smile mouth closed.
@@ -1522,6 +1537,8 @@ label v12s7_lauren1:
     $ v12s7_seenList = []
     if emily_europe and not v12s7_emily:
         $ v12s7_seenList.append(emily)
+
+    show screen murder_button_overlay(lauren)
 
     scene v12ferla1 # FPP. Show lauren, mouth closed
 
@@ -1785,6 +1802,8 @@ label v12s7_ryan_imre1:
     $ v12s7_seenList = [ryan, imre, amber]
     if v12s7_riley and not v12s7_riley2:
         $ v12s7_seenList.remove(amber)
+
+    show screen murder_button_overlay(imre)
 
     scene v12ferryi1 # FPP. Show ryan from a distance looking at imre off screen, mouth open
 
@@ -2055,6 +2074,8 @@ label v12s7_ryan1:
     if (v12s7_riley and not v12s7_riley2) or amber in v12s7_killList:
         $ v12s7_seenList.remove(amber)
 
+    show screen murder_button_overlay(ryan)
+
     scene v12ferry1 # FPP. Show ryan, slight smile, mouth closed
 
     u "Your wife still hasn't come back?"
@@ -2243,6 +2264,8 @@ label v12s7_imre2:
     $ v12s7_imre2 = True
     $ v12s7_seenList = []
 
+    show screen murder_button_overlay(imre)
+
     scene v12ferim1 # FPP. Show imre, mouth closed
 
     u "Hello Mrs."
@@ -2399,6 +2422,8 @@ label v12s7_imre_kill:
 label v12s7_lindsey_charlie1:
     $ v12s7_lindsey = True
     $ v12s7_seenList = [lindsey, charli]
+
+    show screen murder_button_overlay(lindsey)
 
     scene v12ferlich1 # FPP. Show charli, mouth closed
 
@@ -2681,6 +2706,8 @@ label v12s7_lindsey2:
     $ v12s7_lindsey2 = True
     $ v12s7_seenList = []
 
+    show screen murder_button_overlay(lindsey)
+
     scene v12ferli1 # FPP. Show lindsey from a distance, mouth open 
 
     li "Come over here citizen."
@@ -2926,6 +2953,8 @@ label v12s7_charli2:
     $ v12s7_charli = True
     $ v12s7_seenList = []
 
+    show screen murder_button_overlay(charli)
+
     scene v12fercha1 # FPP. Show charli alone, mouth closed
 
     u "Still alone huh?"
@@ -2993,6 +3022,8 @@ label v12s7_msrose1:
     $ v12s7_seenList = []
     if v11_invite_sam_europe and not v12s7_samantha:
         $ v12s7_seenList.append(samantha)
+
+    show screen murder_button_overlay(ms_rose)
 
     scene v12fermsr1 # FPP. Show ms rose, seductive look, mouth open
 
@@ -3238,6 +3269,8 @@ label v12s7_msrose_kill:
 label v12s7_penelope1:
     $ v12s7_penelope = True
     $ v12s7_seenList = []
+
+    show screen murder_button_overlay(penelope)
 
     scene v12ferpen1 # FPP. Show penelope, neutral look, mouth closed
 
@@ -3520,6 +3553,8 @@ label v12s7_amber1:
     if v12s7_imre:
         $ v12s7_seenList = []
 
+    show screen murder_button_overlay(amber)
+
     ### ERROR: -If talk to Amber ###
     scene v12feram1 # FPP. Show amber from a distance, slight smile, mouth open
 
@@ -3745,6 +3780,8 @@ label v12s7_riley2:
     $ v12s7_riley2 = True
     $ v12s7_seenList = []
 
+    show screen murder_button_overlay(riley)
+
     scene v12ferrile1 # FPP. Show riley, slight smile, mouth closed
 
     u "What's going on?"
@@ -3952,6 +3989,8 @@ label v12s7_riley2_amber:
     if v12s7_ryan:
         $ v12s7_seenList = [amber]
 
+    show screen murder_button_overlay(riley)
+
     ### ERROR: -If talk to Riley 2 and Amber ###
     scene v12feramb1 # FPP. Show amber, from a distance, looking at riley out of shot, mouth open
 
@@ -4002,6 +4041,8 @@ label v12s7_riley2_amber:
 label v12s7_sam_cameron:
     $ v12s7_samantha = True
     $ v12s7_seenList = [ms_rose]
+
+    show screen murder_button_overlay(samantha)
 
     scene v12fersaca1 # FPP. Show sam, slight smile, mouth open
 
@@ -4206,6 +4247,8 @@ label v12s7_sam_cameron:
 label v12s7_sam2:
     $ v12s7_samantha2 = True
     $ v12s7_seenList = []
+
+    show screen murder_button_overlay(samantha)
 
     scene v12fersam1 # FPP. Show samantha neutral look, mouth closed
 
@@ -4517,6 +4560,8 @@ label v12s7_cameron2:
     $ v12s7_cameron = True
     $ v12s7_seenList = []
 
+    show screen murder_button_overlay(cameron)
+
     scene v12fercam1 # FPP. Show cameron from a distance, mouth open
 
     ca "Hey [name], get over here."
@@ -4634,6 +4679,8 @@ label v12s7_nora1:
     $ v12s7_seenList = [riley]
     if v12s7_aubrey_moved:
         $ v12s7_seenList = []
+
+    show screen murder_button_overlay(nora)
 
     scene v12fernor1 # FPP. Show nora, mouth closed
 
@@ -4957,6 +5004,8 @@ label v12s7_chris1:
     $ v12s7_chris = True
     $ v12s7_seenList = []
 
+    show screen murder_button_overlay(chris)
+
     scene v12ferchr1 # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
 
     u "What are you doing?"
@@ -5151,6 +5200,8 @@ label v12s7_josh1:
     if chloe not in v12s7_killList:
         $ v12s7_seenList.append(chloe)
 
+    show screen murder_button_overlay(josh)
+
     scene v12ferjo1 # FPP. Show josh, slight smile, mouth closed
 
     u "What are you supposed to be?"
@@ -5252,6 +5303,8 @@ label v12s7_josh1:
 label v12s7_josh2:
     $ v12s7_josh2 = True
     $ v12s7_seenList = []
+
+    show screen murder_button_overlay(josh)
 
     scene v12ferjos1 # FPP. Show josh, from a distance, mouth open
 
@@ -5380,6 +5433,8 @@ label v12s7_emily1:
     $ v12s7_emily = True
     $ v12s7_seenList = [lauren]
 
+    show screen murder_button_overlay(emily)
+
     scene v12ferem1 # FPP. Show emilty from a distance mouth open
 
     em "Hmmm, I can see it, when alone and solely alone the passengers will be swept away from the life they've always know."
@@ -5424,6 +5479,8 @@ label v12s7_emily1:
 label v12s7_emily2:
     $ v12s7_emily2 = True
     $ v12s7_seenList = []
+
+    show screen murder_button_overlay(emily)
 
     scene v12feremi1 # FPP. Show emily annoyed look, mouth closed
 
