@@ -247,7 +247,7 @@ label v12s27a:
     scene v12s27a_2f
     with dissolve
 
-    ry "Please, [Name[... I really don't think it's gonna look good."
+    ry "Please, [name]... I really don't think it's gonna look good."
 
     scene v12s27a_2g
     with dissolve
