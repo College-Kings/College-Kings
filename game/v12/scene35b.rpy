@@ -191,7 +191,7 @@ label v12_game_roommate:
             scene v12grm2e
             with dissolve
 
-            cl "Wow… Good answer. Let's use this as a practice run though, I need the milestone. *Chuckles*"
+            cl "Wow... Good answer. Let's use this as a practice run though, I need the milestone. *Chuckles*"
         
         else:
             scene v12grm2h # FPP. Same as v12grm2e, Chloe different pose
@@ -332,7 +332,7 @@ label v12_game_roommate:
                 scene v12grm2e
                 with dissolve
 
-                cl "This game allows that? Holy shit… *Chuckles*"
+                cl "This game allows that? Holy shit... *Chuckles*"
 
                 scene v12grm2f
                 with dissolve
@@ -378,12 +378,12 @@ label v12_game_roommate:
         scene v12grm2f
         with dissolve
 
-        u "Now… Let's get to this wedding."
+        u "Now... Let's get to this wedding."
 
         scene v12grm2d
         with dissolve
 
-        u "Alright, let's see… And... boom! Now, we're married."
+        u "Alright, let's see... And... boom! Now, we're married."
 
         scene v12grm2e
         with dissolve
@@ -408,7 +408,7 @@ label v12_game_roommate:
         scene v12grm2a
         with dissolve
 
-        u "Awww! Just a little longer? I was starting to enjoy it… *Chuckles*"
+        u "Awww! Just a little longer? I was starting to enjoy it... *Chuckles*"
 
         scene v12grm2
         with dissolve
@@ -418,7 +418,7 @@ label v12_game_roommate:
         scene v12grm2a
         with dissolve
 
-        u "Well, ain't that something… You risk everything to give a girl the wedding of her dreams and in the end she gives you the cold shoulder."
+        u "Well, ain't that something... You risk everything to give a girl the wedding of her dreams and in the end she gives you the cold shoulder."
 
         scene v12grm2
         with dissolve
@@ -428,7 +428,7 @@ label v12_game_roommate:
         scene v12grm2a
         with dissolve
 
-        u "Just want me when you need me... That's crazy…"
+        u "Just want me when you need me... That's crazy..."
 
         scene v12grm2
         with dissolve
@@ -443,7 +443,7 @@ label v12_game_roommate:
         scene v12grm5 # TPP. Show MC tickling Chloe, Chloe laughing mouth open, MC smiling, mouth closed
         with dissolve
 
-        cl "OH MY GOD! *chuckles* STOP IT! [name]! PLEASE… PLEASE STOP! *Laughs*"
+        cl "OH MY GOD! *chuckles* STOP IT! [name]! PLEASE... PLEASE STOP! *Laughs*"
 
         if chloegf or chloers:
             scene v12grm2a
@@ -464,7 +464,7 @@ label v12_game_roommate:
             scene v12grm7 # FPP. MC and Chloe sitting next to each other on her bed, Chloe looking at MC, slight smile, mouth open
             with dissolve
 
-            cl "Don't tease me, I'm tired! But, I guess you can stay and hold me… If you have to."
+            cl "Don't tease me, I'm tired! But, I guess you can stay and hold me... If you have to."
 
             scene v12grm7a # FPP. Same as v12grm7, Chloe slight smile, mouth closed
             with dissolve
@@ -585,7 +585,7 @@ label v12_game_roommate:
         scene v12grm16b # FPP. Same as v12grm16a, different pose
         with dissolve
 
-        ri "Honestly… What's bothering me even more is that you keep lying."
+        ri "Honestly... What's bothering me even more is that you keep lying."
 
         scene v12grm16
         with dissolve

@@ -29,7 +29,7 @@ label v12_lauren_sex:
     scene v12las1a
     with dissolve
 
-    u "You'd be right. *Chuckles* Feel like I haven't seen you in a while… Been busy?"
+    u "You'd be right. *Chuckles* Feel like I haven't seen you in a while... Been busy?"
 
     scene v12las1b
     with dissolve
@@ -64,7 +64,7 @@ label v12_lauren_sex:
     scene v12las1d
     with dissolve
 
-    la "Actually… Yeah, if you could wear something nice I'd appreciate that."
+    la "Actually... Yeah, if you could wear something nice I'd appreciate that."
 
     scene v12las1c
     with dissolve
@@ -89,7 +89,7 @@ label v12_lauren_sex:
     scene v12las1c
     with dissolve
 
-    u "Alright, then. See you soon…"
+    u "Alright, then. See you soon..."
 
     scene v12las3 # TPP. Show MC kissing Lauren on the cheek, he is now standing up
     with dissolve
@@ -124,7 +124,7 @@ label v12_lauren_sex:
     scene v12las9 # TPP. Show MC wearing his suit, looking at the mirror, smiling, posing seductively, mouth closed
     with dissolve
 
-    u "(Hell yeah… Looking nice.)"
+    u "(Hell yeah... Looking nice.)"
 
     scene v12las10 # TPP. Show MC walking out of the room, smiling, in his suit, mouth closed
     with dissolve
@@ -159,7 +159,7 @@ label v12_lauren_sex:
     scene v12las14 # FPP. MC and Lauren in lobby, MC and Lauren looking at each other, Lauren embarassed, mouth closed, looking at the ground, blushing
     with dissolve
 
-    u "Holy… Lauren, oh my god!"
+    u "Holy... Lauren, oh my god!"
 
     scene v12las14a # FPP. Same as v12las14, Lauren embarassed, mouth open
     with dissolve
@@ -169,7 +169,7 @@ label v12_lauren_sex:
     scene v12las14
     with dissolve
 
-    u "No, nothing is wrong… You just look amazing!"
+    u "No, nothing is wrong... You just look amazing!"
 
     scene v12las14b # FPP. Same as v12las14, Lauren looking at MC, Lauren slight smile, mouth open
     with dissolve
@@ -184,7 +184,7 @@ label v12_lauren_sex:
     scene v12las14b
     with dissolve
 
-    la "*Chuckles* Okay… Are you ready to go?"
+    la "*Chuckles* Okay... Are you ready to go?"
 
     scene v12las14c
     with dissolve
@@ -204,9 +204,9 @@ label v12_lauren_sex:
     scene v12las14b
     with dissolve
 
-    la "A verrrrrry special night. As long as everything goes perfect, you're in for a treat…"
+    la "A verrrrrry special night. As long as everything goes perfect, you're in for a treat..."
 
-    u "(I like treats…)"
+    u "(I like treats...)"
 
     scene v12las15 # TPP. Show MC and Lauren leaving the hotel lobby, both smiling, mouths closed
     with dissolve
@@ -231,7 +231,7 @@ label v12_lauren_sex:
     scene v12las19 # FPP. MC and Lauren standing in front of the restaurant, looking at each other, Lauren slight smile, mouth open
     with dissolve
 
-    la "Finally… We're here."
+    la "Finally... We're here."
 
     scene v12las19a # FPP. Same as v12las19, Lauren slight smile, mouth closed
     with dissolve
@@ -246,7 +246,7 @@ label v12_lauren_sex:
     scene v12las19a
     with dissolve
 
-    u "Hmm... So I'm going to need some energy for the next bit…"
+    u "Hmm... So I'm going to need some energy for the next bit..."
 
     scene v12las19
     with dissolve
@@ -286,12 +286,12 @@ label v12_lauren_sex:
     scene v12las22
     with dissolve
 
-    greeter "Ah! English, okay... Let me see… Hmm…"
+    greeter "Ah! English, okay... Let me see... Hmm..."
 
     scene v12las22a # FPP. Same as v12las22, greeter looking down at the reservation list, slight smile, mouth open
     with dissolve
 
-    greeter "Lauren, Lauren, Lauren... Umm…"
+    greeter "Lauren, Lauren, Lauren... Umm..."
 
     scene v12las22b # FPP. Same as v12las22, greeter slightly worried, mouth open
     with dissolve
@@ -404,7 +404,7 @@ label v12_lauren_sex:
     scene v12las19a
     with dissolve
 
-    u "*Chuckles* C'mon… There's a whole night ahead of us, what's next?"
+    u "*Chuckles* C'mon... There's a whole night ahead of us, what's next?"
 
     scene v12las19
     with dissolve
@@ -472,7 +472,7 @@ label v12_lauren_sex:
             scene v12las31
             with dissolve
 
-            la "That means a lot… Thank you, [name]."
+            la "That means a lot... Thank you, [name]."
 
         "Hold her":
             $ v12_lauren_points += 1
@@ -505,7 +505,7 @@ label v12_lauren_sex:
     scene v12las31
     with dissolve
 
-    la "I was hoping we could go stargazing on the roof of the hotel…?"
+    la "I was hoping we could go stargazing on the roof of the hotel...?"
 
     scene v12las31d # FPP. Same as v12las31a, Lauren slight smile, mouth closed
     with dissolve
@@ -545,7 +545,7 @@ label v12_lauren_sex:
     scene v12las28c # FPP. Same as v12las28b, Lauren slight smile, mouth open
     with dissolve
 
-    la "Yeah… Alright."
+    la "Yeah... Alright."
 
     scene v12las34 # TPP. Show MC and Lauren holding hands, Lauren resting her head on MC's shoulder, they are walking on the sidewalk, both smiling, mouths closed
     with dissolve
@@ -683,7 +683,7 @@ label v12_lauren_sex:
             scene v12las46b # FPP. Same as v12las46, lauren looking at MC, slightly embarassed, mouth open
             with dissolve
 
-            la "I was hoping tonight would be the night. The night we'd finally, you know…"
+            la "I was hoping tonight would be the night. The night we'd finally, you know..."
 
             scene v12las46c # FPP. Same as v12las36b, lauren slightly sad, mouth open
             with dissolve
@@ -895,13 +895,13 @@ label v12_lauren_sex:
                 with dissolve
                 pause
 
-                la "Ahh, oh god… Please... be gentle."
+                la "Ahh, oh god... Please... be gentle."
 
                 scene v12laufif # Ignore as animation
                 with dissolve
                 pause
 
-                u "Yes, baby… Of course."
+                u "Yes, baby... Of course."
 
                 scene v12laufi2 # Ignore as animation
                 with dissolve
@@ -934,7 +934,7 @@ label v12_lauren_sex:
                 with dissolve
                 pause
 
-                u "L-Lauren… Fuck!"
+                u "L-Lauren... Fuck!"
 
                 scene v12laubjf # Ignore as animation
                 with dissolve
@@ -999,7 +999,7 @@ label v12_lauren_sex:
                 with dissolve
                 pause
 
-                la "*Heavy breathing* Ow… Haa... Fuck!"
+                la "*Heavy breathing* Ow... Haa... Fuck!"
 
                 scene v12laumi2 # Ignore as animation
                 with dissolve
@@ -1007,7 +1007,7 @@ label v12_lauren_sex:
 
                 u "Are you okay? Do you like it?"
 
-                la "Mhmm! Yes… Please, keep going!"
+                la "Mhmm! Yes... Please, keep going!"
 
                 scene v12laumi2f # Ignore as animation
                 with dissolve
@@ -1034,9 +1034,9 @@ label v12_lauren_sex:
                 with dissolve
                 pause
 
-                u "This day…"
+                u "This day..."
 
-                u "Could not have been…"
+                u "Could not have been..."
 
                 scene v12laucgf # Ignore as animation
                 with dissolve
@@ -1044,15 +1044,15 @@ label v12_lauren_sex:
 
                 u "Any fucking better..."
 
-                la "*Moans* Mhmm! I'll never forget it... Mmm, fuck…"
+                la "*Moans* Mhmm! I'll never forget it... Mmm, fuck..."
 
                 scene v12laucg2 # Ignore as animation
                 with dissolve
                 pause
 
-                la "Yes… Yes, [name]! I'm… I'm cu- *Gasps*"
+                la "Yes... Yes, [name]! I'm... I'm cu- *Gasps*"
                 
-                u "Damn it Lauren, you're so fucking tight…"
+                u "Damn it Lauren, you're so fucking tight..."
 
                 scene v12laucg2f # Ignore as animation
                 with dissolve
@@ -1060,7 +1060,7 @@ label v12_lauren_sex:
 
                 u "And so fucking...Wet! I'm gonna cum..."
 
-                la "Mmm, yes! Don't pull out… Please… It's safe."
+                la "Mmm, yes! Don't pull out... Please... It's safe."
 
                 scene v12las63 # TPP. Show MC cumming in Lauren as she rides him
                 with vpunch
@@ -1080,7 +1080,7 @@ label v12_lauren_sex:
                 scene v12las66 # FPP. MC and Lauren lieing down next to each other, looking at each other, Lauren smiling, mouth open, make her body a bit sweaty if possible
                 with dissolve
 
-                la "Phew! Haha… That was absolutely perfect."
+                la "Phew! Haha... That was absolutely perfect."
 
                 scene v12las66a # FPP. Same as v12las66, lauren smiling, mouth closed
                 with dissolve
@@ -1095,12 +1095,12 @@ label v12_lauren_sex:
                 scene v12las66a
                 with dissolve
 
-                u "I am too. *Chuckles* (You have no idea…)"
+                u "I am too. *Chuckles* (You have no idea...)"
 
                 scene v12las66
                 with dissolve
 
-                la "I don't think I'm gonna be able to sleep tonight, haha! I hate that we can't sleep together… Ugh!"
+                la "I don't think I'm gonna be able to sleep tonight, haha! I hate that we can't sleep together... Ugh!"
 
                 scene v12las66a
                 with dissolve
@@ -1150,7 +1150,7 @@ label v12_lauren_sex:
                 scene v12las71
                 with dissolve
 
-                la "I had so much fun tonight, but now I'm going to bed... If I don't leave now I'm gonna end up trying to stay with you all night. Roommate or not… *Chuckles*"
+                la "I had so much fun tonight, but now I'm going to bed... If I don't leave now I'm gonna end up trying to stay with you all night. Roommate or not... *Chuckles*"
 
                 la "Goodnight baby, I love you."
 

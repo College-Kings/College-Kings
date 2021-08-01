@@ -99,7 +99,7 @@ label v12s33:
     scene v12s33_5
     with dissolve
 
-    lee "Yes, thank you… Anyways... Once inside, you'll change into what makes you feel comfortable and wrap yourself in a towel."
+    lee "Yes, thank you... Anyways... Once inside, you'll change into what makes you feel comfortable and wrap yourself in a towel."
     lee "Some insisted on being nude underneath their towel and though I heavily advised against it, Ms. Rose has approved, so take that as you will."
 
     scene v12s33_3d # same as 3, aubrey looking at Mr lee (off screen) smiling, mouth open
@@ -115,7 +115,7 @@ label v12s33:
     scene v12s33_3d
     with dissolve
 
-    au "Definitely going nude… *Laughs*"
+    au "Definitely going nude... *Laughs*"
 
     scene v12s33_5b
     with dissolve
@@ -323,7 +323,7 @@ label v12s33:
 
     scene v12s33_19 # shows Male masseuse, massaging Imre's lower back
     with dissolve
-    imre "Damn girl, you got some strong ass hands... Ohhhh yeahhhh…"
+    imre "Damn girl, you got some strong ass hands... Ohhhh yeahhhh..."
 
 
     scene v12s33_14a # same as 14, but mr Lee's head looking at Imre (off screen), laughing mouth open
@@ -348,12 +348,12 @@ label v12s33:
     scene v12s33_16
     with dissolve
 
-    u "Uhh, like… Over a hundred degrees, I know that much."
+    u "Uhh, like... Over a hundred degrees, I know that much."
 
     scene v12s33_13
     with dissolve
 
-    imre "Shit, that sounds kinda nice... I bet the girls are all sweaty in there. I may have to stop by… *Chuckles*"
+    imre "Shit, that sounds kinda nice... I bet the girls are all sweaty in there. I may have to stop by... *Chuckles*"
 
     scene v12s33_14
     with dissolve
@@ -458,7 +458,7 @@ label v12s33:
 
     "*Crack*"
 
-    lee "AGH! Oh… Oh no, I can't move my neck."
+    lee "AGH! Oh... Oh no, I can't move my neck."
 
     mmass "Allow me to finish, sir."
 
@@ -476,7 +476,7 @@ label v12s33:
     scene v12s33_13
     with dissolve
 
-    imre "You don't look it… *Laughs*"
+    imre "You don't look it... *Laughs*"
 
     scene v12s33_14
     with dissolve
@@ -516,7 +516,7 @@ label v12s33:
     scene v12s33_22
     with dissolve
 
-    lmass "Haha, right… I'd love to, but I need to finish off with your friend."
+    lmass "Haha, right... I'd love to, but I need to finish off with your friend."
 
     scene v12s33_13
     with dissolve
@@ -536,7 +536,7 @@ label v12s33:
     scene v12s33_16
     with dissolve
 
-    u "*Laughs* Oh shit… Haha!"
+    u "*Laughs* Oh shit... Haha!"
 
     scene v12s33_15
     with dissolve
@@ -686,7 +686,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     scene v12s33_30c # same as 30b, mouth closed
     with dissolve
 
-    u "Sheesh… You guys are sweating pretty bad!"
+    u "Sheesh... You guys are sweating pretty bad!"
 
     scene v12s33_29b
     with dissolve
@@ -753,12 +753,12 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
 
         "Not at all":
             $ addPoint ("bro")
-            u "Not at all, you can talk about me all you want. I like knowing I'm on your mind… *Chuckles*"
+            u "Not at all, you can talk about me all you want. I like knowing I'm on your mind... *Chuckles*"
 
             scene v12s33_30f # same as 30b , chloe flirty, mouth open
             with dissolve
 
-            cl "Ha… Is that so?"
+            cl "Ha... Is that so?"
 
             scene v12s33_30g # same as 30f, mouth closed
             with dissolve
@@ -778,12 +778,12 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
             scene v12s33_30f
             with dissolve
 
-            cl "I'm being as careful as I wanna be… *Chuckles*"
+            cl "I'm being as careful as I wanna be... *Chuckles*"
 
             scene v12s33_30g
             with dissolve
 
-            u "Haha, alright… Noted."
+            u "Haha, alright... Noted."
 
 
         "Yes, haha":
@@ -876,7 +876,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     scene v12s33_34a
     with dissolve
 
-    u "Ooooh… Yeah, I know all about that."
+    u "Ooooh... Yeah, I know all about that."
 
     scene v12s33_34
     with dissolve
@@ -886,12 +886,12 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     scene v12s33_35a #FPP close up , lindsey, looking at mc , genuine smile, mouth closed
     with dissolve
 
-    u "Wow, Lindsey… Really?"
+    u "Wow, Lindsey... Really?"
 
     scene v12s33_35 # same as 35a, mouth open
     with dissolve
 
-    li "Ha… Yeah, one of the girls has been doing some polling for me."
+    li "Ha... Yeah, one of the girls has been doing some polling for me."
 
     li "Some girls are still on the fence, but it's looking really good for me so far."
 
@@ -934,7 +934,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     scene v12s33_34d
     with dissolve
 
-    am "Haha… Guilty."
+    am "Haha... Guilty."
 
     scene v12s33_34e # same as 34d, mouth closed
     with dissolve
@@ -980,7 +980,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     scene v12s33_20
     with dissolve
 
-    ry "Fuck's sake… Took you long enough."
+    ry "Fuck's sake... Took you long enough."
 
     u "It's not my fault you don't take man shits like I do. *Laughs*"
 
@@ -996,7 +996,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     scene v12s33_13
     with dissolve
 
-    imre "Next time [name], but thank you. I got a nice massage from the hotshot while you were gone, and let me just say… Those hands are silky smooth."
+    imre "Next time [name], but thank you. I got a nice massage from the hotshot while you were gone, and let me just say... Those hands are silky smooth."
 
     lmass "*Sighs*"
 
@@ -1171,7 +1171,7 @@ label v12s33_sneak_off2:
     scene v12s33_42 # tpp mc walking out of the sauna, (camera from the inside of the sauna) mouth open, smiling
     with dissolve
 
-    u "Ha, alright then… I'll be back."
+    u "Ha, alright then... I'll be back."
 
     scene v12s33_43 # TPP show mc crouching looking at the massage tables, where 5 girls are laying on. In this order (closest to mc first): Amber, Nora, Lindsey, Ms Rose, Chloe. They should be somewhat naked as you would be on a massage table, don't show the whole room as a lot of girls are missing.
     with fade

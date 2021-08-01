@@ -38,7 +38,7 @@ label v12s32:
     scene v12s32_2
     with dissolve
 
-    au "Yeah, everything's great. It's just…"
+    au "Yeah, everything's great. It's just..."
 
     au "I haven't seen my sister in a really long time and... Well, you'll see how she acts."
 
@@ -202,7 +202,7 @@ label v12s32:
     scene v12s32_13 # FPP close up photographer, camera in hands not looking into his camera tho,  looking at aubrey, serious face, mouth open, explaining
     with dissolve
 
-    pg "Alright, alright! Listen up…"
+    pg "Alright, alright! Listen up..."
 
     pg "We're gonna take a few pics here based on my instructions. Then we're gonna move over to the car and pose with that. Questions?"
 
@@ -249,7 +249,7 @@ label v12s32:
     scene v12s32_15 # TPP show Aubrey and mc, Aubrey looking at the camera, mc confused looking at aubrey, mouth open
     with dissolve
 
-    u "Oh umm…"
+    u "Oh umm..."
 
     menu:
 
@@ -425,7 +425,7 @@ label v12s32:
     scene v12s32_18b # same 18a, close up photographer now taking pictures of  naomi (off screen), mouth open, excited
     with dissolve
 
-    pg "YES, MA'AM!! Give it to us…"
+    pg "YES, MA'AM!! Give it to us..."
 
     scene v12s32_21c # same 21, naomi poses seductively, in a different pose in front of the car in just her bra
     with dissolve
@@ -512,7 +512,7 @@ label v12s32:
         scene v12s32_20
         with dissolve
 
-        au "*Sighs* Fine…"
+        au "*Sighs* Fine..."
 
     
 
@@ -526,7 +526,7 @@ label v12s32:
         scene v12s32_20e # same as 20d, mouth closed
         with dissolve
 
-        u "You don't need luck… Look at you."
+        u "You don't need luck... Look at you."
 
         scene v12s32_20d
         with dissolve
@@ -564,7 +564,7 @@ label v12s32:
     scene v12s32_25 # FPP Closeup Naomi looking at Aubrey (Off-screen), cheeky smile, mouth open
     with dissolve
 
-    na "Maybe I showed her a little too much of my talent… *Chuckles*"
+    na "Maybe I showed her a little too much of my talent... *Chuckles*"
 
     scene v12s32_18b
     with dissolve
@@ -625,7 +625,7 @@ label v12s32:
     scene v12s32_29
     with dissolve
 
-    au "I… I really want to, but-"
+    au "I... I really want to, but-"
 
     scene v12s32_30 # FPP close up naomi, looking at photographer (off-camera), mouth open, cheeky smile
     with dissolve
@@ -645,7 +645,7 @@ label v12s32:
     scene v12s32_29d # same 29b,  looking at mc (into the camera), cute smile ,mouth open
     with dissolve
 
-    au "Do you… You actually mean that?"
+    au "Do you... You actually mean that?"
 
     scene v12s32_29e # same 29d, mouth closed
     with dissolve
@@ -690,7 +690,7 @@ label v12s32:
     scene v12s32_28b
     with dissolve
 
-    pg "I've been trying to get with Naomi for years…"
+    pg "I've been trying to get with Naomi for years..."
 
     pg "You walk in and not only does she like you but, it's clear you've also got a shot with her sister. Honestly, her sister is badder than she is. *Chuckles*"
 
@@ -774,24 +774,24 @@ label v12s32:
     ### ERROR: kiwiiPost.newComment("Naomi", "That's my baby sis! <3")
     ### ERROR: kiwiiPost.newComment("Aubrey", "Thank you so much for having us! Can't wait for the future...")
     ### ERROR: kiwiiPost.addReply("Thanks for the invite! It was really nice to meet you...", mentions=”Naomi”)
-    ### ERROR: kiwiiPost.newComment("Naomi", "Hehe, you too! Hope to see you soon…;)")
-    ### ERROR: kiwiiPost.addReply("Had an amazing time today… Thank you, gorgeous!", mentions="Aubrey")
-    ### ERROR: kiwiiPost.newComment("Aubrey", "You're so welcome… Today was amazing. <3")
+    ### ERROR: kiwiiPost.newComment("Naomi", "Hehe, you too! Hope to see you soon...;)")
+    ### ERROR: kiwiiPost.addReply("Had an amazing time today... Thank you, gorgeous!", mentions="Aubrey")
+    ### ERROR: kiwiiPost.newComment("Aubrey", "You're so welcome... Today was amazing. <3")
     ### ERROR: kiwiiPost.newComment("Chloe", "OMG!?!?!?!")
-    ### ERROR: kiwiiPost.newComment("Imre", "Bro… Is that you?!”, mentions=”MC”)
+    ### ERROR: kiwiiPost.newComment("Imre", "Bro... Is that you?!”, mentions=”MC”)
 
     ### ERROR: KiwiiPost("Naomi", "selfie in bra of Aubrey and Naomi", "When little sis visits you at work and leaves with your JOB! #ProudBigSis", numberLikes=2107)
-    ### ERROR: kiwiiPost.newComment("Aubrey", "Haha! I love you boo… Thank you for today :)", mentions=”Naomi”)
+    ### ERROR: kiwiiPost.newComment("Aubrey", "Haha! I love you boo... Thank you for today :)", mentions=”Naomi”)
     ### ERROR: kiwiiPost.newComment("Naomi", "You're sooo welcome sissy. #ItRunsInTheFamily")
     ### ERROR: kiwiiPost.addReply("Even more beautiful in person...")
     ### ERROR: kiwiiPost.addReply("Aww, love this pic of you guys!")
-    ### ERROR: kiwiiPost.newComment("Nora", "Hotties!! Hope you had an amazing time… Can't wait to see all the pics!”)
+    ### ERROR: kiwiiPost.newComment("Nora", "Hotties!! Hope you had an amazing time... Can't wait to see all the pics!”)
     ### ERROR: kiwiiPost.newComment("Chloe", "JOB?!?!?!”)
-    ### ERROR: kiwiiPost.newComment("Naomi”, "Thank you… <3”)
-    ### ERROR: kiwiiPost.newComment("Aubrey", "Thanks guys… I'll tell you all about it Chlo! Lol”)
+    ### ERROR: kiwiiPost.newComment("Naomi”, "Thank you... <3”)
+    ### ERROR: kiwiiPost.newComment("Aubrey", "Thanks guys... I'll tell you all about it Chlo! Lol”)
 
     ### ERROR: KiwiiPost("Aubrey", "sexy pose on car", "You're looking at the newest Lew's model! #BestDayEver ", numberLikes=934)
-    ### ERROR: kiwiiPost.newComment("Naomi”, “Watch out world, there's two of us… ;)")
+    ### ERROR: kiwiiPost.newComment("Naomi”, “Watch out world, there's two of us... ;)")
     ### ERROR: kiwiiPost.newComment("Chloe”, “Holy shit, Aubs! Fucking HOTTTT!!!")
     ### ERROR: kiwiiPost.newComment("Aubrey", "Haha, thank you babes <3”)
     ### ERROR: kiwiiPost.addReply("Absolutely deserved.")
@@ -864,7 +864,7 @@ label v12s32:
 
             $ addPoint ("bro")
 
-            u "(That'd be doing too much… We're just friends.)"
+            u "(That'd be doing too much... We're just friends.)"
 
     u "Right, let's go."
 

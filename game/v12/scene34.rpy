@@ -45,7 +45,7 @@ label v12_amber_after_spa:
         scene v12ams4 # FPP. MC and Amber inside sauna looking at each other, Amber slight smile, mouth closed
         with dissolve
 
-        u "*Chuckles* Come on… Just having a little fun, Amber."
+        u "*Chuckles* Come on... Just having a little fun, Amber."
 
         scene v12ams4a # FPP. Same as v12ams4, Amber slight smile, mouth open
         with dissolve
@@ -205,7 +205,7 @@ label v12_amber_after_spa:
         scene v12ams12a
         with dissolve
 
-        u "Fuck… I'm gonna head up to my room."
+        u "Fuck... I'm gonna head up to my room."
 
         scene v12ams13
         with dissolve
