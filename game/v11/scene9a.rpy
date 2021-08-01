@@ -284,7 +284,7 @@ label v11_wolves_seb_prank:
 
             pause 0.75
 
-            scene v11wsp17  # FPP. MC is looking at Imre, Imre mouth open, neutral expression (Imre is standing next to the wagon)
+            scene v11wsp17 # FPP. MC is looking at Imre, Imre mouth open, neutral expression (Imre is standing next to the wagon)
             with dissolve
 
             imre "*Whisper* Alright, let's go."

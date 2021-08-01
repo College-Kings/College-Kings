@@ -18,7 +18,7 @@ label v12_ms_rose_sex:
     scene v12msr2a # FPP. Same as v12msr2, Ms. Rose slight smile, mouth closed
     with dissolve
 
-    u "I’ve been around..."
+    u "I've been around..."
 
     if not msrosers:
         scene v12msr2
@@ -39,12 +39,12 @@ label v12_ms_rose_sex:
         scene v12msr2a
         with dissolve
 
-        u "There’s just not much going on today I guess. I came out here to see what was up."
+        u "There's just not much going on today I guess. I came out here to see what was up."
 
         scene v12msr2b # FPP. Same as v12msr2, different pose
         with dissolve
 
-        ro "Well, sorry to disappoint you. But, it's already late and I’ve just finished walking my rounds around the hotel. Everyone is either asleep or at least in their rooms."
+        ro "Well, sorry to disappoint you. But, it's already late and I've just finished walking my rounds around the hotel. Everyone is either asleep or at least in their rooms."
 
         scene v12msr2c # FPP. Same as v12msr2b, Ms. Rose slight smile, mouth closed
         with dissolve
@@ -122,7 +122,7 @@ label v12_ms_rose_sex:
                 scene v12msr2c
                 with dissolve
 
-                u "Sorry, but… Not tonight.I’m just gonna stay in and get some extra sleep. I'll try to have a more fun-filled day tomorrow, haha."
+                u "Sorry, but… Not tonight. I'm just gonna stay in and get some extra sleep. I'll try to have a more fun-filled day tomorrow, haha."
 
                 scene v12msr2b
                 with dissolve
@@ -156,7 +156,7 @@ label v12_ms_rose_sex:
                 scene v12msr2c
                 with dissolve
 
-                u "Let’s go."
+                u "Let's go."
 
                 scene v12msr2
                 with dissolve
@@ -196,7 +196,7 @@ label v12_ms_rose_sex:
                 scene v12msr10a # FPP. Same as v12msr10, Ms. Rose slight smile, mouth open
                 with dissolve
 
-                ro "I rented it, just for us.I wanted to have a nice little escape of my own while we're here in Paris. Tonight though, there's something else I want all to myself."
+                ro "I rented it, just for us. I wanted to have a nice little escape of my own while we're here in Paris. Tonight though, there's something else I want all to myself."
 
                 scene v12msr11 # TPP. Show Ms. Rose walking towards the black mantle that has a bottle of wine and 2 glasses, Ms. Rose smiling, mouth closed
                 with dissolve
@@ -221,7 +221,7 @@ label v12_ms_rose_sex:
                 scene v12msr10c # FPP. Same as v12msr10b, Ms. Rose drinking her wine
                 with dissolve
 
-                u "Mmm...This is the richest wine I’ve ever tasted. *Chuckles*"
+                u "Mmm...This is the richest wine I've ever tasted. *Chuckles*"
 
                 scene v12msr10d # FPP. Same as v12msr10c, Ms. Rose holding her glass, Ms. Rose slight smile, mouth open
                 with dissolve
@@ -376,7 +376,7 @@ label v12_ms_rose_sex:
                 with dissolve
                 pause
 
-                u "Ah ah ah… We’re not anywhere near being finished."
+                u "Ah ah ah… We're not anywhere near being finished."
 
                 scene v12rossd2f # Ignore as animation
                 with dissolve
@@ -400,13 +400,13 @@ label v12_ms_rose_sex:
 
                 u "Fuck yes…"
 
-                ro "I’m loving this... New side of you… [name]... Yes… Please! F-fuck..."
+                ro "I'm loving this... New side of you… [name]... Yes… Please! F-fuck..."
 
                 scene v12roshhf # Ignore as animation 
                 with dissolve
                 pause
 
-                u "You’re… such… a fucking… slut!"
+                u "You're… such… a fucking… slut!"
 
                 ro "I... I-I am…"
 
@@ -414,7 +414,7 @@ label v12_ms_rose_sex:
                 with dissolve
                 pause
 
-                ro "Fuck me, [name]... Fast... I’m going to c-"
+                ro "Fuck me, [name]... Fast... I'm going to c-"
 
                 ro "*Moans* Mmmnnhh… FUCK! *Gasps*"
 
@@ -422,7 +422,7 @@ label v12_ms_rose_sex:
                 with dissolve
                 pause
 
-                u "I’m… almost there! You’re so… fuckiNG... HOT!"
+                u "I'm… almost there! You're so… fuckiNG... HOT!"
 
                 ro "Do it inside, [name]! Fill me up… Please… I..."
 
@@ -492,7 +492,7 @@ label v12_ms_rose_sex:
                 scene v12msr27a
                 with dissolve
 
-                ro "Just relax, baby... I’ve got you."
+                ro "Just relax, baby... I've got you."
 
                 scene v12msr27b # FPP. Same as v12msr27, screen blurry
                 with dissolve
@@ -555,7 +555,7 @@ label v12_ms_rose_sex:
                     scene v12msr29c # TPP. Same as v12msr29b, Chloe slight smile, mouth open
                     with dissolve
 
-                    ri "Wow, okay... I got him. Thank you so much, I’m sorry."
+                    ri "Wow, okay... I got him. Thank you so much, I'm sorry."
 
                     scene v12msr30
                     with dissolve

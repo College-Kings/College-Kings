@@ -60,7 +60,7 @@ label v12_game_roommate:
         scene v12grm2e # FPP. Same as v12grm2d, Chloe looking at MC, Chloe slight smile, mouth open
         with dissolve
 
-        cl "Oh my god... You’re not funny. *Chuckles*"
+        cl "Oh my god... You're not funny. *Chuckles*"
 
         scene v12grm2f # FPP. Same as v12grm2e, Chloe slight smile, mouth closed
         with dissolve
@@ -110,7 +110,7 @@ label v12_game_roommate:
         scene v12grm3a
         with dissolve
 
-        cl "I did, just now. *Laughs* Don't worry, I’ll help you out."
+        cl "I did, just now. *Laughs* Don't worry, I'll help you out."
 
         scene v12grm2d
         with dissolve
@@ -257,7 +257,7 @@ label v12_game_roommate:
         scene v12grm2e
         with dissolve
 
-        cl "Alright, they’re ready to get married! Let's see..."
+        cl "Alright, they're ready to get married! Let's see..."
 
         scene v12grm2g
         with dissolve
@@ -317,7 +317,7 @@ label v12_game_roommate:
                 scene v12grm2k # FPP. Same as v12grm2f, Chloe slightly worried, mouth closed
                 with dissolve
 
-                u "I prefer the phrase, “got twelve million dollars”. Killed your parents sounds so harsh. *Chuckles*"
+                u "I prefer the phrase, \"got twelve million dollars\". Killed your parents sounds so harsh. *Chuckles*"
 
                 scene v12grm2l # FPP. Same as v12grm2k, Chloe slightly worried, mouth open
                 with dissolve
@@ -552,7 +552,7 @@ label v12_game_roommate:
             scene v12grm14a # FPP. Same as v12grm14, Chloe slight smile, mouth closed
             with dissolve
 
-            u "Goodnight, Chlo."
+            u "Goodnight, Chloe."
 
             scene v12grm15 # TPP. Show MC sleeping alone in his bed
             with dissolve

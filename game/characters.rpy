@@ -114,8 +114,8 @@ define character.bank = Character("Bank Teller", who_color="#fc3158", who_outlin
 # 12.0
 define character.robber = Character("Robber", who_color="#0055ff", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.fwait = Character("French Waitress", who_color="#0055ff", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
-define character.na = Character("Naomi")
-define character.pg = Character("Photographer")
+define character.na = Character("Naomi", who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.pg = Character("Photographer", who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.lmass = Character("Lady Masseuse", who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.mmass = Character("Male Masseuse", who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.bart = Character("Bart", who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])

@@ -71,7 +71,7 @@ label v12s33:
     scene v12s33_4b # same as 4, lindsey looking at mc (into the camera), slight smile, mouth open
     with dissolve
 
-    li "I said not to 'cause I thought what you guys were doing was important.Plus, I know Aubrey doesn't see her sister often. I didn't wanna disturb that, but you guys came just in time."
+    li "I said not to 'cause I thought what you guys were doing was important. Plus, I know Aubrey doesn't see her sister often. I didn't wanna disturb that, but you guys came just in time."
     li "I don't know how long I could've held them off. *Chuckles*"
 
     scene v12s33_3b # same as 3, smiling, mouth open
@@ -147,7 +147,7 @@ label v12s33:
     scene v12s33_4b
     with dissolve
 
-    li "He's starting to get a little irritated, but I think it's because he’s getting homesick. He's starting to miss his wife; I heard him say it to Ms. Rose."
+    li "He's starting to get a little irritated, but I think it's because he's getting homesick. He's starting to miss his wife; I heard him say it to Ms. Rose."
     li "I think the church thing kinda hit home for him."
 
     scene v12s33_4c # same as 4b, mouth closed
@@ -270,7 +270,7 @@ label v12s33:
     scene v12s33_14
     with dissolve
 
-    lee "The only woman's hands I care for are my wife’s."
+    lee "The only woman's hands I care for are my wife's."
 
     scene v12s33_15 # TPP same view as for Imre and Mr Lee, but for Chris 
     with dissolve
@@ -333,7 +333,7 @@ label v12s33:
     scene v12s33_13
     with dissolve
 
-    imre "I wonder what’s going on in the sauna right now."
+    imre "I wonder what's going on in the sauna right now."
 
     scene v12s33_16
     with dissolve
@@ -429,7 +429,7 @@ label v12s33:
 
     lee "I most certainly-"
 
-    scene v12s33_21a  # same as 21, the man masseuse cracks Mr. Lee's back hard with his elbow just as he did Imre-
+    scene v12s33_21a # same as 21, the man masseuse cracks Mr. Lee's back hard with his elbow just as he did Imre-
     with dissolve
 
     "*Crack*"
@@ -584,7 +584,7 @@ label v12s33:
 
     jump v12s33_sauna
 
-label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massage
+label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massage
     scene v12s33_16
     with dissolve
 
@@ -616,7 +616,7 @@ label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massa
 
     $ v12s33_door1 = True
 
-    scene v12s33_27   # -FPP Ms. Rose, Lauren, Nora, and Riley sitting in the Sauna, all in towels, none of them looking at him, ideally show them sweating if possible-
+    scene v12s33_27 # -FPP Ms. Rose, Lauren, Nora, and Riley sitting in the Sauna, all in towels, none of them looking at him, ideally show them sweating if possible-
     with dissolve 
 
     u "*Whistles*"
@@ -814,12 +814,12 @@ label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massa
     scene v12s33_30b
     with dissolve
 
-    cl "Unless you wanna end up getting caught, you may wanna get out of here. I don’t think there's much time left."
+    cl "Unless you wanna end up getting caught, you may wanna get out of here. I don't think there's much time left."
 
     scene v12s33_30c
     with dissolve
 
-    u "You’re right, see you around ladies!"
+    u "You're right, see you around ladies!"
 
     scene v12s33_29b
     with dissolve
@@ -949,7 +949,7 @@ label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massa
     scene v12s33_35a
     with dissolve
 
-    u "*Shocked* You’re kicking me out? Am I that boring you? Wow..."
+    u "*Shocked* You're kicking me out? Am I that boring you? Wow..."
 
     scene v12s33_35
     with dissolve
@@ -980,7 +980,7 @@ label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massa
     scene v12s33_20
     with dissolve
 
-    ry "Fuck’s sake… Took you long enough."
+    ry "Fuck's sake… Took you long enough."
 
     u "It's not my fault you don't take man shits like I do. *Laughs*"
 
@@ -1052,7 +1052,7 @@ label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massa
     scene v12s33_38
     with dissolve
 
-    lee "You know... Blunty? As much as you little rats annoy me, you're still like the sons I never had. It makes me happy to see that you’re having a good time."
+    lee "You know... Blunty? As much as you little rats annoy me, you're still like the sons I never had. It makes me happy to see that you're having a good time."
 
     scene v12s33_40
     with dissolve
@@ -1077,7 +1077,7 @@ label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massa
     scene v12s33_38
     with dissolve
 
-    lee "That'll count as one. *Chuckles* Let’s go back to silently relaxing, boys."
+    lee "That'll count as one. *Chuckles* Let's go back to silently relaxing, boys."
 
     scene v12s33_41 # close up show clock inside sauna at 16:15
     with dissolve
@@ -1146,7 +1146,7 @@ label v12s33_sneak_off2:
     scene v12s33_36b
     with dissolve
 
-    imre "You’re just going to see the girls, aren't you?"
+    imre "You're just going to see the girls, aren't you?"
 
     scene v12s33_40b
     with dissolve

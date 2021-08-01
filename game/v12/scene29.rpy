@@ -181,7 +181,7 @@ label v12_lauren_sex:
     scene v12las14c # FPP. Same as v12las14b, Lauren slight smile, mouth closed
     with dissolve
 
-    u "Don't worry about that, you’re always worth the wait."
+    u "Don't worry about that, you're always worth the wait."
 
     scene v12las14b
     with dissolve
@@ -206,7 +206,7 @@ label v12_lauren_sex:
     scene v12las14b
     with dissolve
 
-    la "A verrrrrry special night. As long as everything goes perfect, you’re in for a treat…"
+    la "A verrrrrry special night. As long as everything goes perfect, you're in for a treat…"
 
     u "(I like treats…)"
 
@@ -248,7 +248,7 @@ label v12_lauren_sex:
     scene v12las19a
     with dissolve
 
-    u "Hmm... So I’m going to need some energy for the next bit…"
+    u "Hmm... So I'm going to need some energy for the next bit…"
 
     scene v12las19
     with dissolve
@@ -323,7 +323,7 @@ label v12_lauren_sex:
     scene v12las23b
     with dissolve
 
-    la "But, how? I know I scheduled it for tonight! *Sighs* This plan's already being ruined and we haven’t even sat down for dinner yet."
+    la "But, how? I know I scheduled it for tonight! *Sighs* This plan's already being ruined and we haven't even sat down for dinner yet."
 
     scene v12las23c # FPP. Same as v12las23a, Lauren worried, mouth closed
     with dissolve
@@ -333,7 +333,7 @@ label v12_lauren_sex:
             scene v12las23b
             with dissolve
 
-            la "*Sighs* These stupid timezones! I scheduled this on the website from London. I guess somehow I messed the time up."
+            la "*Sighs* These stupid time zones! I scheduled this on the website from London. I guess somehow I messed the time up."
 
             scene v12las22b
             with dissolve
@@ -386,7 +386,7 @@ label v12_lauren_sex:
             scene v12las23a
             with dissolve
 
-            u "Haha, no worries. We’ll have fun tonight regardless, have a good evening Sir."
+            u "Haha, no worries. We'll have fun tonight regardless, have a good evening Sir."
 
             scene v12las22c
             with dissolve
@@ -406,7 +406,7 @@ label v12_lauren_sex:
     scene v12las19a
     with dissolve
 
-    u "*Chuckles* C’mon… There's a whole night ahead of us, what's next?"
+    u "*Chuckles* C'mon… There's a whole night ahead of us, what's next?"
 
     scene v12las19
     with dissolve
@@ -451,7 +451,7 @@ label v12_lauren_sex:
     scene v12las31 # FPP. MC and Lauren sitting next to each other, looking at each other, Lauren sad, mouth open
     with dissolve
 
-    la "I'm sure you’re thinking this is the worst \"special day\" ever."
+    la "I'm sure you're thinking this is the worst \"special day\" ever."
 
     scene v12las31a # FPP. Same as v12las31, Lauren sad, mouth closed
     with dissolve
@@ -459,7 +459,7 @@ label v12_lauren_sex:
     menu:
         "Talk to her":
 
-            u "I’m not. What actually matters to me is the amount of effort you've put into the night, not the way it's going. What's the saying?  \"It's the thought that counts\"? *Chuckles*"
+            u "I'm not. What actually matters to me is the amount of effort you've put into the night, not the way it's going. What's the saying? \"It's the thought that counts\"? *Chuckles*"
 
             scene v12las31
             with dissolve
@@ -482,7 +482,7 @@ label v12_lauren_sex:
             scene v12las31b # FPP. Same as v12las31a, one of MC's around lauren, other hand holding lauren's hand, lauren sad, mouth closed
             with dissolve
 
-            u "I’m not. What matters to me the most is the amount of effort you've put into the night, not the way it's going. What's the saying? \"It's the thought that counts\"?"
+            u "I'm not. What matters to me the most is the amount of effort you've put into the night, not the way it's going. What's the saying? \"It's the thought that counts\"?"
 
             scene v12las31c # FPP. Same as v12las31b, Lauren sad, mouth open
             with dissolve
@@ -502,7 +502,7 @@ label v12_lauren_sex:
     scene v12las31a
     with dissolve
 
-    u "So, what’s our last stop?"
+    u "So, what's our last stop?"
 
     scene v12las31
     with dissolve
@@ -577,7 +577,7 @@ label v12_lauren_sex:
     scene v12las39 # FPP. MC and Lauren standing in front of door to roof, looking at each other, Lauren sad, mouth open
     with dissolve
 
-    la "Okay, I officially give up. It’s obvious that this isn't the night I was hoping for."
+    la "Okay, I officially give up. It's obvious that this isn't the night I was hoping for."
 
     scene v12las39a # FPP. Same as v12las29, Lauren sad, mouth closed
     with dissolve
@@ -590,7 +590,7 @@ label v12_lauren_sex:
             scene v12las39
             with dissolve
 
-            la "Thank you, I love you so much... I know tonight didn’t go as planned, but maybe we can try again soon?"
+            la "Thank you, I love you so much... I know tonight didn't go as planned, but maybe we can try again soon?"
 
             scene v12las39a
             with dissolve
@@ -726,7 +726,7 @@ label v12_lauren_sex:
                 scene v12las46e
                 with dissolve
 
-                la "Let's not rush this, okay? When all is said and done, I want our first time to be all that I’ve dreamed of."
+                la "Let's not rush this, okay? When all is said and done, I want our first time to be all that I've dreamed of."
 
                 scene v12las46d
                 with dissolve
@@ -959,7 +959,7 @@ label v12_lauren_sex:
                 scene v12las57 # FPP. MC looking at Lauren, she is worried, mouth open (she just finished sucking him off, check v12laubj for positioning)
                 with dissolve
 
-                la "What’s wrong? Did I do okay?"
+                la "What's wrong? Did I do okay?"
 
                 scene v12las57a # FPP. Same as v12las57, lauren slight smile, mouth closed
                 with dissolve
@@ -1052,7 +1052,7 @@ label v12_lauren_sex:
                 with dissolve
                 pause
 
-                la "Yes… Yes, [name]! I’m… I’m cu- *Gasps*"
+                la "Yes… Yes, [name]! I'm… I'm cu- *Gasps*"
                 
                 u "Damn it Lauren, you're so fucking tight…"
 
@@ -1062,7 +1062,7 @@ label v12_lauren_sex:
 
                 u "And so fucking...Wet! I'm gonna cum..."
 
-                la "Mmm, yes! Don’t pull out… Please… It’s safe."
+                la "Mmm, yes! Don't pull out… Please… It's safe."
 
                 scene v12las63 # TPP. Show MC cumming in Lauren as she rides him
                 with vpunch

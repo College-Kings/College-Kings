@@ -22,7 +22,7 @@ label v12s27a:
     scene v12s27a_2a
     with dissolve
 
-    u "I don’t think anyone did."
+    u "I don't think anyone did."
 
     scene v12s27a_2
     with dissolve
@@ -137,7 +137,7 @@ label v12s27a:
 
     ry "Amber! Amber's the bet."
 
-    ry "We'll bet on whether or not she’s had sex with a girl."
+    ry "We'll bet on whether or not she's had sex with a girl."
 
     scene v12s27a_2c
     with dissolve
@@ -215,7 +215,7 @@ label v12s27a:
 
     u "I tried to tell him that but he got cocky, so I let him make his little bet. *Chuckles*"
 
-    am "*Laughs* I don't even need to guess what [name]'s answer was... Yes, I've been with a girl. So, enjoy your black hair dumbass!  Take pictures [name]!"
+    am "*Laughs* I don't even need to guess what [name]'s answer was... Yes, I've been with a girl. So, enjoy your black hair dumbass! Take pictures, [name]!"
 
     am "*Hangs up*"
 
@@ -292,7 +292,7 @@ label v12s27a:
     scene v12s27a_5
     with dissolve
 
-    barber "Ah, English...  What can I do for you?"
+    barber "Ah, English... What can I do for you?"
 
     scene v12s27a_6 #FPP shows Ryan, looking at barber (barber is off-screen), nervous, mouth open
     with dissolve
@@ -317,7 +317,7 @@ label v12s27a:
     scene v12s27a_5b
     with dissolve
 
-    barber "I've seen this many times before, you know? The tourist buddies are interested in making their time in Paris a memory they’ll never forget."
+    barber "I've seen this many times before, you know? The tourist buddies are interested in making their time in Paris a memory they'll never forget."
     
     barber "So, they do something drastic. Let me guess, you made a bet?"
 
@@ -374,7 +374,7 @@ label v12s27a:
 
     
 
-### ERROR: KiwiiPost("MC", "Ryan sitting in chair at salon not facing the mirror with black hair", "#RoastedApe", numberLikes=469)### ERROR: kiwiiPost.newComment("Imre", "Holy shit... You make it way to easy, Ryan!", mentions=”Ryan”)### ERROR: kiwiiPost.newComment("Amber", "Haha, yes! That’s what you get, moron…”, mentions="Ryan")### ERROR: kiwiiPost.addReply("Haha, an Ape doesn’t back down!")### ERROR: kiwiiPost.addReply("Aw, come on guys! It doesn’t look… that bad… Lmao")
+### ERROR: KiwiiPost("MC", "Ryan sitting in chair at salon not facing the mirror with black hair", "#RoastedApe", numberLikes=469)### ERROR: kiwiiPost.newComment("Imre", "Holy shit... You make it way to easy, Ryan!", mentions=”Ryan”)### ERROR: kiwiiPost.newComment("Amber", "Haha, yes! That's what you get, moron…”, mentions="Ryan")### ERROR: kiwiiPost.addReply("Haha, an Ape doesn't back down!")### ERROR: kiwiiPost.addReply("Aw, come on guys! It doesn't look… that bad… Lmao")
   
     scene v12s27a_8b # same as 8a, ryan mouth open, outraged, hiding his face behind his hands
     with dissolve
@@ -403,7 +403,7 @@ label v12s27a:
             scene v12s27a_8
             with dissolve
 
-            ry "*Sighs* I hope you’re not just saying that…"
+            ry "*Sighs* I hope you're not just saying that…"
 
 
         "It's not your best look.":
@@ -464,7 +464,7 @@ label v12s27a:
 
     scene v12s27a_11a # TPP show mc and ryan in the hotel lobby, ryan looking at his phone annoyed
     with fade
-    ry "Oh man, everyone on Kiwii keeps commenting “#RoastedApe”."
+    ry "Oh man, everyone on Kiwii keeps commenting \"#RoastedApe\"."
 
     scene v12s27a_12a # FPP show Ryan looking at mc, annoyed, mouth closed
     with dissolve

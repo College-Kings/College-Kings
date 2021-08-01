@@ -546,7 +546,7 @@ label v11s23_riley1:
             scene v11frmri5a # FPP Same as v11frmri5, but Mr. Lee's mouth closed and Riley's mouth open
             with dissolve
 
-            ri "No, uhm...I was just-"
+            ri "No, uhm... I was just-"
 
             scene v11frmri5
             with dissolve

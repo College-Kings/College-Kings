@@ -18,17 +18,17 @@ label v12s32:
     scene v12s32_2 # FPP, close up AUbrey looking at mc, but walking forwards. Aubrey slightly nervous  not smiling, mouth open
     with dissolve
 
-    au "It’s at an actual photography studio."
+    au "It's at an actual photography studio."
 
     scene v12s32_2a # same as 2, mouth closed
     with dissolve
 
-    u "*Laughs* Tell me why I thought it was just at a random Lew’s store..."
+    u "*Laughs* Tell me why I thought it was just at a random Lew's store..."
 
     scene v12s32_2
     with dissolve
 
-    au "Ha, that’s what I thought at first too..."
+    au "Ha, that's what I thought at first too..."
 
     scene v12s32_2a
     with dissolve
@@ -38,9 +38,9 @@ label v12s32:
     scene v12s32_2
     with dissolve
 
-    au "Yeah, everything’s great. It’s just…"
+    au "Yeah, everything's great. It's just…"
 
-    au "I haven’t seen my sister in a really long time and... Well, you’ll see how she acts."
+    au "I haven't seen my sister in a really long time and... Well, you'll see how she acts."
 
     scene v12s32_2a
     with dissolve
@@ -50,12 +50,12 @@ label v12s32:
     scene v12s32_2b # same as 2, aubrey slight smile, mouth open
     with dissolve
 
-    au "You have nothing to worry about, I’m the one that has to get ready. *Chuckles*"
+    au "You have nothing to worry about, I'm the one that has to get ready. *Chuckles*"
 
     scene v12s32_2c # same as 2b, mouth closed
     with dissolve
 
-    u "You’re starting to actually scare me... *Chuckles*"
+    u "You're starting to actually scare me... *Chuckles*"
 
     scene v12s32_3 # tpp Aubrey and mc enter the photoshoot place
     with fade
@@ -85,19 +85,19 @@ label v12s32:
     scene v12s32_7 #FPP show naomi close up standing, looking at mc (camera), mouth open, cheeky smile
     with dissolve
 
-    na "Who’s your boyfriend?"
+    na "Who's your boyfriend?"
 
     scene v12s32_5b # same as 5, aubrey a little annoyed, mouth open
     with dissolve
 
-    au "He’s just my friend, Naomi."
+    au "He's just my friend, Naomi."
 
     scene v12s32_7
     with dissolve
 
     na "*Chuckles* Good to know!"
 
-    na "So what’s your name “just a friend”?"
+    na "So what's your name \"just a friend\"?"
 
     scene v12s32_7a # same as 7, mouth closed
     with dissolve
@@ -107,7 +107,7 @@ label v12s32:
     scene v12s32_7
     with dissolve
 
-    na "Well, it’s very nice to meet you too!"
+    na "Well, it's very nice to meet you too!"
 
     scene v12s32_7b # same as 7, naomi looking at aubrey, confident expression, mouth open
     with dissolve
@@ -117,22 +117,22 @@ label v12s32:
     scene v12s32_5b
     with dissolve
 
-    au "No we aren’t, we still have two minutes ‘til start..."
+    au "No we aren't, we still have two minutes ‘til start..."
 
     scene v12s32_7b
     with dissolve
 
-    na "Early is on time, sister! I already shot most of my needed pics. You guys  get to have a good time now."
+    na "Early is on time, sister! I already shot most of my needed pics. You guys get to have a good time now."
 
     scene v12s32_7c # same as 7b, mouth closed
     with dissolve
 
-    u "Wait, we’re taking pictures?"
+    u "Wait, we're taking pictures?"
 
     scene v12s32_7
     with dissolve
 
-    na "Of course you are, cutie... As much as I’d love for you to sit and watch me, today’s shoot is for everybody."
+    na "Of course you are, cutie... As much as I'd love for you to sit and watch me, today's shoot is for everybody."
 
     scene v12s32_5c # same as 5b, mouth closed
     with dissolve
@@ -142,12 +142,12 @@ label v12s32:
     scene v12s32_5d # same as 5b, aubrey embarassed smile, mouth open, looking at mc
     with dissolve
 
-    au "I felt like you’d try skipping out if I told you we were taking pictures too."
+    au "I felt like you'd try skipping out if I told you we were taking pictures too."
 
     scene v12s32_5e # same as 5d, mouth closed
     with dissolve
 
-    u "Maybe I would’ve... Nevertheless, I’m here now, aren’t I?"
+    u "Maybe I would've... Nevertheless, I'm here now, aren't I?"
 
     scene v12s32_7
     with dissolve
@@ -172,17 +172,17 @@ label v12s32:
     scene v12s32_7d # same as 7b, naomi looking at photographer (off-screen) confident smile, mouth open
     with dissolve
 
-    na "Even if she hadn’t, she’s my sister. It’s in her blood."
+    na "Even if she hadn't, she's my sister. It's in her blood."
 
     scene v12s32_8a # same as 8, mouth closed
     with dissolve
 
-    u "I haven’t done anything this serious before."
+    u "I haven't done anything this serious before."
 
     scene v12s32_7
     with dissolve
 
-    na "Well, today’s the day!"
+    na "Well, today's the day!"
 
     scene v12s32_10 # TPP naomi dragging mc towards the white backdrop setup
     with dissolve
@@ -204,7 +204,7 @@ label v12s32:
 
     pg "Alright, alright! Listen up…"
 
-    pg "We’re gonna take a few pics here based on my instructions. Then we’re gonna move over to the car and pose with that. Questions?"
+    pg "We're gonna take a few pics here based on my instructions. Then we're gonna move over to the car and pose with that. Questions?"
 
     scene v12s32_13a # same as 13, mouth closed
     with dissolve
@@ -214,32 +214,32 @@ label v12s32:
     scene v12s32_14 # FPP close up Aubrey, (who's standing next to mc) looking at mc , slightly concerned for mc, whispering, mouth open
     with dissolve
 
-    au "*Whisper* You’re cool with all this right? I’m sorry if you feel kind of thrown into this, I just really wanted to do this shoot and I was too shy to come by myself."
+    au "*Whisper* You're cool with all this right? I'm sorry if you feel kind of thrown into this, I just really wanted to do this shoot and I was too shy to come by myself."
 
-    scene v12s32_14a  # same as 14, mouth closed
+    scene v12s32_14a # same as 14, mouth closed
     with dissolve
 
-    u "*Whisper* But your sister’s here?"
+    u "*Whisper* But your sister's here?"
 
     scene v12s32_14
     with dissolve
 
-    au "*Whisper* That’s the person I didn’t want to be by myself with."
+    au "*Whisper* That's the person I didn't want to be by myself with."
 
     scene v12s32_14a
     with dissolve
 
-    u "*Whisper* Why don’t you-"
+    u "*Whisper* Why don't you-"
 
     scene v12s32_13
     with dissolve
 
-    pg "You said no questions yet you’re yapping away! Let’s get posing people!"
+    pg "You said no questions yet you're yapping away! Let's get posing people!"
 
     scene v12s32_14
     with dissolve
 
-    au "We’ll talk later."
+    au "We'll talk later."
 
     scene v12s32_13b # same as 13, photographer now looking into his camera, ready to take pictures, mouth open, neutral expression
     with dissolve
@@ -273,14 +273,14 @@ label v12s32:
             scene v12s32_13b
             with dissolve
 
-            pg "I wouldn’t call that sexy but, alright..."
+            pg "I wouldn't call that sexy but, alright..."
 
         "Put your arms around Aubrey":
 
             scene v12s32_15c #same 15, Aubrey has her back to MC and he wraps his arms around her, squeezing her in tight, Aubrey smiles at him, mouth closed
             with dissolve
 
-            na "Oooh! I’m liking what I see!"
+            na "Oooh! I'm liking what I see!"
 
             scene v12s32_15c 
             with flash
@@ -330,12 +330,12 @@ label v12s32:
     scene v12s32_13
     with dissolve
 
-    pg "Alright, these are very good shots and I guarantee they’ll help the brand a lot. I can’t wait to get these on our store Kiwii. You two have Kiwii’s, right?"
+    pg "Alright, these are very good shots and I guarantee they'll help the brand a lot. I can't wait to get these on our store Kiwii. You two have Kiwii's, right?"
 
     scene v12s32_14b # same 14, aubrey looking at photographer (off-screen), excited, mouth open
     with dissolve
 
-    au "We do! I didn’t know we were gonna get to be on the store page!"
+    au "We do! I didn't know we were gonna get to be on the store page!"
 
     scene v12s32_13
     with dissolve
@@ -350,17 +350,17 @@ label v12s32:
     scene v12s32_12
     with dissolve
 
-    na "Following in your sister’s footsteps... This is how it starts Aubby!"
+    na "Following in your sister's footsteps... This is how it starts Aubby!"
 
     scene v12s32_14c # same 14b, mouth closed
     with dissolve
 
-    u "*Chuckles* “Aubby”?"
+    u "*Chuckles* \"Aubby\"?"
 
     scene v12s32_14
     with dissolve
 
-    au "It’s just something she does, please don’t read into it..."
+    au "It's just something she does, please don't read into it..."
 
     scene v12s32_13
     with dissolve
@@ -380,12 +380,12 @@ label v12s32:
     scene v12s32_18 # FPP photographer looking at mc (who's not standing on the set, but before it), mouth open, holding camera but not looking into it
     with dissolve
 
-    pg "We want to get a few spicy photos for this setup. Don’t worry, we’re photoshopping your clothes."
+    pg "We want to get a few spicy photos for this setup. Don't worry, we're photoshopping your clothes."
 
     scene v12s32_19 # FPP naomi walks onto the set, confident smile, mouth open
     with dissolve
 
-    na "I’ll show you how this is done. *Chuckles*"
+    na "I'll show you how this is done. *Chuckles*"
 
     scene v12s32_18a #same 18 FPP photographer looking at naomi (off-screen, she's at the car now), mouth open, smiling
     with dissolve
@@ -395,7 +395,7 @@ label v12s32:
     scene v12s32_20a # FPP close up Aubrey, who's standing next to you ,looking at naomi (off-screne), mouth close, slightly concerned expression
     with dissolve
 
-    u "She’s confident!"
+    u "She's confident!"
 
     scene v12s32_20b # same as 20a, aubrey now looking at mc, mouth open, slightly concerned expression
     with dissolve
@@ -425,7 +425,7 @@ label v12s32:
     scene v12s32_18b # same 18a, close up photographer now taking pictures of  naomi (off screen), mouth open, excited
     with dissolve
 
-    pg "YES, MA’AM!! Give it to us…"
+    pg "YES, MA'AM!! Give it to us…"
 
     scene v12s32_21c # same 21, naomi poses seductively, in a different pose in front of the car in just her bra
     with dissolve
@@ -445,7 +445,7 @@ label v12s32:
     scene v12s32_20 # same 2a, mouth open
     with dissolve
 
-    au "*Whisper to self* I’ll never be that fucking good..."
+    au "*Whisper to self* I'll never be that fucking good..."
 
     scene v12s32_20a
     with dissolve
@@ -455,12 +455,12 @@ label v12s32:
     scene v12s32_20b
     with dissolve
 
-    au "What? Oh, nothing. She’s really good."
+    au "What? Oh, nothing. She's really good."
 
     scene v12s32_20c # same 20b, mouth closed
     with dissolve
 
-    u "(I think she’s jealous of her sister or something, maybe I should boost her up.)"
+    u "(I think she's jealous of her sister or something, maybe I should boost her up.)"
 
     menu:
 
@@ -481,7 +481,7 @@ label v12s32:
             scene v12s32_21d # same 21c, naomi looking at Aubrey (off-screen), mouth open, excited, with one eyebrow raised
             with dissolve
 
-            na "Ooohh! Someone sure has a lot of faith in you to think you can out do me. *Chuckles*  Get up here little sis, let’s see it!"
+            na "Ooohh! Someone sure has a lot of faith in you to think you can out do me. *Chuckles* Get up here little sis, let's see it!"
 
             scene v12s32_20a
             with dissolve
@@ -495,12 +495,12 @@ label v12s32:
             with dissolve
 
 
-            u "(She’s already pressured by her sister, I shouldn’t add to it.)"
+            u "(She's already pressured by her sister, I shouldn't add to it.)"
 
             scene v12s32_21d
             with dissolve
 
-            na "Hey Aubby, hope you were paying close attention ‘cause it’s your turn."
+            na "Hey Aubby, hope you were paying close attention ‘cause it's your turn."
 
             scene v12s32_20a
             with dissolve
@@ -526,7 +526,7 @@ label v12s32:
         scene v12s32_20e # same as 20d, mouth closed
         with dissolve
 
-        u "You don’t need luck… Look at you."
+        u "You don't need luck… Look at you."
 
         scene v12s32_20d
         with dissolve
@@ -557,7 +557,7 @@ label v12s32:
     scene v12s32_18b
     with dissolve
 
-    pg "You’re a natural! Naomi, you may have some competition..."
+    pg "You're a natural! Naomi, you may have some competition..."
 
     pg "I bet out of all the photos we take today, these are gonna be the ones they want."
 
@@ -569,7 +569,7 @@ label v12s32:
     scene v12s32_18b
     with dissolve
 
-    pg "I don’t know! This all seems all nat-u-ral!"
+    pg "I don't know! This all seems all nat-u-ral!"
 
     scene v12s32_24a # same 24, aubrey looking at the camera (off-screen), mouth open , smiling
     with dissolve
@@ -579,7 +579,7 @@ label v12s32:
     scene v12s32_18a
     with dissolve
 
-    pg "Of course! I’m going to send all of them to you."
+    pg "Of course! I'm going to send all of them to you."
 
     scene v12s32_24a
     with dissolve
@@ -603,24 +603,24 @@ label v12s32:
         scene v12s32_27a # same 27, aubrey mouth closed, mc mouth open smiling
         with dissolve
 
-        u "Of course. I’ll always be there for you."
+        u "Of course. I'll always be there for you."
 
     scene v12s32_28 # FPP close up photographer looking at Aubrey (off-camera, standing near mc), mouth open ,thinking smile
     with dissolve
 
-    pg "Have you thought about going into modeling? I think you’d make an amazing Kiwii model... And if you’re worried about looking like you're riding your sister’s road to fame, don’t."
+    pg "Have you thought about going into modeling? I think you'd make an amazing Kiwii model... And if you're worried about looking like you're riding your sister's road to fame, don't."
 
-    pg "With pictures like this... You’ll make it all on your own."
+    pg "With pictures like this... You'll make it all on your own."
 
     scene v12s32_29 # FPP close up Aubrey, mouth open, smile , looking at photographer (off-camera)
     with dissolve
 
-    au "I’ve always thought about it, even before my sister started modeling I wanted to, but when she started and blew up I never thought I could match her speed. I mean, look at her."
+    au "I've always thought about it, even before my sister started modeling I wanted to, but when she started and blew up I never thought I could match her speed. I mean, look at her."
 
     scene v12s32_28
     with dissolve
 
-    pg "Your sister is great in her own ways, but you yourself have a serious natural talent. Your sister and I have worked together for a long while and I know you’re from the states, but if you’d be willing to work with me I’d be able to make you famous."
+    pg "Your sister is great in her own ways, but you yourself have a serious natural talent. Your sister and I have worked together for a long while and I know you're from the states, but if you'd be willing to work with me I'd be able to make you famous."
 
     scene v12s32_29
     with dissolve
@@ -630,7 +630,7 @@ label v12s32:
     scene v12s32_30 # FPP close up naomi, looking at photographer (off-camera), mouth open, cheeky smile
     with dissolve
 
-    na "She’ll do it."
+    na "She'll do it."
 
     scene v12s32_29b #same 29, aubrey surprised, mouth open, looking at naomi (off-camera)
     with dissolve
@@ -650,7 +650,7 @@ label v12s32:
     scene v12s32_29e # same 29d, mouth closed
     with dissolve
 
-    u "I do. It’s the happiest you’ve looked in a long time."
+    u "I do. It's the happiest you've looked in a long time."
 
     scene v12s32_29d
     with dissolve
@@ -660,7 +660,7 @@ label v12s32:
     scene v12s32_29
     with dissolve
 
-    au "If [Name] thinks I’d be good, then I’ll give it a try."
+    au "If [Name] thinks I'd be good, then I'll give it a try."
 
     scene v12s32_28
     with dissolve
@@ -670,7 +670,7 @@ label v12s32:
     scene v12s32_30
     with dissolve
 
-    na "*Sighs* Yeah, guess we’re on that “out with the old and in with the new” type of vibe... C’mon Aubrey."
+    na "*Sighs* Yeah, guess we're on that \"out with the old and in with the new\" type of vibe... C'mon Aubrey."
 
     scene v12s32_31 #FPP  Aubrey and Naomi walk off with each other
     with dissolve
@@ -680,7 +680,7 @@ label v12s32:
     scene v12s32_28b #FPP same as 28, photographer looking at mc (at the camera), jealous smile, mouth open
     with dissolve
 
-    pg "You’re a lucky guy, my friend."
+    pg "You're a lucky guy, my friend."
 
     scene v12s32_28c # same 28b, mouth closed
     with dissolve
@@ -690,30 +690,30 @@ label v12s32:
     scene v12s32_28b
     with dissolve
 
-    pg "I’ve been trying to get with Naomi for years…"
+    pg "I've been trying to get with Naomi for years…"
 
-    pg "You walk in and not only does she like you but, it's clear you’ve also got a shot with her sister. Honestly, her sister is badder than she is. *Chuckles*"
-
-    scene v12s32_28c
-    with dissolve
-
-    u "Aubrey isn’t the relationship type."
-
-    scene v12s32_28b
-    with dissolve
-
-    pg "*Laughs* Don’t ever believe that BS... Everyone is the relationship type. You just have to tame the beast."
+    pg "You walk in and not only does she like you but, it's clear you've also got a shot with her sister. Honestly, her sister is badder than she is. *Chuckles*"
 
     scene v12s32_28c
     with dissolve
 
-    u "I’ll keep that in mind..."
+    u "Aubrey isn't the relationship type."
 
     scene v12s32_28b
     with dissolve
 
-    pg "Don’t just keep it in mind, act on it. Get her something. Make her see you. There’s some flowers right there, feel free to grab a bouquet."
-    pg " Hell, iff I can’t get her, I’d rather you than no one. Make me proud!"
+    pg "*Laughs* Don't ever believe that BS... Everyone is the relationship type. You just have to tame the beast."
+
+    scene v12s32_28c
+    with dissolve
+
+    u "I'll keep that in mind..."
+
+    scene v12s32_28b
+    with dissolve
+
+    pg "Don't just keep it in mind, act on it. Get her something. Make her see you. There's some flowers right there, feel free to grab a bouquet."
+    pg " Hell, if I can't get her, I'd rather you than no one. Make me proud!"
 
     scene v12s32_28d # same 28b, photographer walks off
     with dissolve
@@ -728,7 +728,7 @@ label v12s32:
     scene v12s32_33 # FPP, close up Aubrey standing in fron mc, looking at mc, slight smile, mouth open
     with dissolve
 
-    au "They got me all set up! I think my sister is a little salty because she’s just packed up and left... She said she had somewhere to be and that we’ll talk later. *Sighs*"
+    au "They got me all set up! I think my sister is a little salty because she's just packed up and left... She said she had somewhere to be and that we'll talk later. *Sighs*"
 
     scene v12s32_33a # same 33, mouth closed
     with dissolve
@@ -743,55 +743,55 @@ label v12s32:
     scene v12s32_33a
     with dissolve
 
-    u "I’ve never seen you flustered or even bothered, yet with this you’ve been acting unlike yourself. As if you’re worried about impressing your sister or something."
+    u "I've never seen you flustered or even bothered, yet with this you've been acting unlike yourself. As if you're worried about impressing your sister or something."
 
     scene v12s32_33
     with dissolve
 
     au "Or something, yeah."
 
-    au "I really like modeling and I think becoming a Kiwii model would be great, but I don’t want to look like I’m doing it just because of her."
-    au "I also don’t want any success if it feels like I only got it because of her."
+    au "I really like modeling and I think becoming a Kiwii model would be great, but I don't want to look like I'm doing it just because of her."
+    au "I also don't want any success if it feels like I only got it because of her."
 
-    au "I get she’s older and everything, but this was my dream first... She wanted to be a vet. *Chuckles*"
+    au "I get she's older and everything, but this was my dream first... She wanted to be a vet. *Chuckles*"
 
     scene v12s32_33a
     with dissolve
 
-    u "Then don’t worry about her and live out your dream."
+    u "Then don't worry about her and live out your dream."
 
     scene v12s32_33
     with dissolve
 
-    au "Thanks, I’m feeling a lot better about doing just that... The staff gave me the pictures and they really do look amazing."
+    au "Thanks, I'm feeling a lot better about doing just that... The staff gave me the pictures and they really do look amazing."
 
-    au "I wanna get back as soon as possible and show these to everyone. I posted a few on Kiwii and my sister did too. Let’s hurry back."
+    au "I wanna get back as soon as possible and show these to everyone. I posted a few on Kiwii and my sister did too. Let's hurry back."
 
 
-    # -Aubrey, her sister and Lew’s posted their pics on Kiwii-
+    # -Aubrey, her sister and Lew's posted their pics on Kiwii-
 
     ### ERROR: KiwiiPost("LewsOfficial", "sexy pose of MC and Aubrey", "New faces in our new pieces! Check out the new Lavish Line on our website ;)", numberLikes=3889)
-    ### ERROR: kiwiiPost.newComment("Naomi", "That’s my baby sis! <3")
-    ### ERROR: kiwiiPost.newComment("Aubrey", "Thank you so much for having us! Can’t wait for the future...")
+    ### ERROR: kiwiiPost.newComment("Naomi", "That's my baby sis! <3")
+    ### ERROR: kiwiiPost.newComment("Aubrey", "Thank you so much for having us! Can't wait for the future...")
     ### ERROR: kiwiiPost.addReply("Thanks for the invite! It was really nice to meet you...", mentions=”Naomi”)
     ### ERROR: kiwiiPost.newComment("Naomi", "Hehe, you too! Hope to see you soon…;)")
     ### ERROR: kiwiiPost.addReply("Had an amazing time today… Thank you, gorgeous!", mentions="Aubrey")
-    ### ERROR: kiwiiPost.newComment("Aubrey", "You’re so welcome… Today was amazing. <3")
+    ### ERROR: kiwiiPost.newComment("Aubrey", "You're so welcome… Today was amazing. <3")
     ### ERROR: kiwiiPost.newComment("Chloe", "OMG!?!?!?!")
     ### ERROR: kiwiiPost.newComment("Imre", "Bro… Is that you?!”, mentions=”MC”)
 
     ### ERROR: KiwiiPost("Naomi", "selfie in bra of Aubrey and Naomi", "When little sis visits you at work and leaves with your JOB! #ProudBigSis", numberLikes=2107)
     ### ERROR: kiwiiPost.newComment("Aubrey", "Haha! I love you boo… Thank you for today :)", mentions=”Naomi”)
-    ### ERROR: kiwiiPost.newComment("Naomi", "You’re sooo welcome sissy. #ItRunsInTheFamily")
+    ### ERROR: kiwiiPost.newComment("Naomi", "You're sooo welcome sissy. #ItRunsInTheFamily")
     ### ERROR: kiwiiPost.addReply("Even more beautiful in person...")
     ### ERROR: kiwiiPost.addReply("Aww, love this pic of you guys!")
-    ### ERROR: kiwiiPost.newComment("Nora", "Hotties!! Hope you had an amazing time… Can’t wait to see all the pics!”)
+    ### ERROR: kiwiiPost.newComment("Nora", "Hotties!! Hope you had an amazing time… Can't wait to see all the pics!”)
     ### ERROR: kiwiiPost.newComment("Chloe", "JOB?!?!?!”)
     ### ERROR: kiwiiPost.newComment("Naomi”, "Thank you… <3”)
-    ### ERROR: kiwiiPost.newComment("Aubrey", "Thanks guys… I’ll tell you all about it Chlo! Lol”)
+    ### ERROR: kiwiiPost.newComment("Aubrey", "Thanks guys… I'll tell you all about it Chlo! Lol”)
 
-    ### ERROR: KiwiiPost("Aubrey", "sexy pose on car", "You’re looking at the newest Lew’s model! #BestDayEver ", numberLikes=934)
-    ### ERROR: kiwiiPost.newComment("Naomi”, “Watch out world, there’s two of us… ;)")
+    ### ERROR: KiwiiPost("Aubrey", "sexy pose on car", "You're looking at the newest Lew's model! #BestDayEver ", numberLikes=934)
+    ### ERROR: kiwiiPost.newComment("Naomi”, “Watch out world, there's two of us… ;)")
     ### ERROR: kiwiiPost.newComment("Chloe”, “Holy shit, Aubs! Fucking HOTTTT!!!")
     ### ERROR: kiwiiPost.newComment("Aubrey", "Haha, thank you babes <3”)
     ### ERROR: kiwiiPost.addReply("Absolutely deserved.")
@@ -800,7 +800,7 @@ label v12s32:
     ### ERROR: kiwiiPost.newComment("Imre”, "Pick up your jaw idiot! LOL”, mentions=”Ryan”)
 
 
-    scene v12s32_33b  # same 33, -Aubrey starts walking away-
+    scene v12s32_33b # same 33, -Aubrey starts walking away-
     with dissolve
 
     menu: 
@@ -830,17 +830,17 @@ label v12s32:
             scene v12s32_35b # same as 35 looks at mc (into the camera), mouth open, surprised smile
             with dissolve
 
-            au "Haha, what!? You didn’t have to get me these..."
+            au "Haha, what!? You didn't have to get me these..."
 
             scene v12s32_35c # same as 35b, mouth closed
             with dissolve
 
-            u "There’s only one girl like you in this world and before all the Kiwii simps start lining up, I wanna be here at the beginning. *Chuckles*"
+            u "There's only one girl like you in this world and before all the Kiwii simps start lining up, I wanna be here at the beginning. *Chuckles*"
 
             scene v12s32_35b
             with dissolve
 
-            au "For once [name], I’ll try not to be an asshole. *Chuckles*"
+            au "For once [name], I'll try not to be an asshole. *Chuckles*"
 
             scene v12s32_35d # same as 35, aubrey takes the flowers , mouth open, genuine smle
             with dissolve
@@ -850,22 +850,22 @@ label v12s32:
             scene v12s32_35e # same 35d , mouth closed
             with dissolve
 
-            u "You’re very welcome."
+            u "You're very welcome."
 
             scene v12s32_35d
             with dissolve
 
-            au "Now c’mon, let’s hurry back so I can get these into some water."
+            au "Now c'mon, let's hurry back so I can get these into some water."
 
             scene v12s32_35e
             with dissolve
 
-        "Don’t get her flowers":
+        "Don't get her flowers":
 
             $ addPoint ("bro")
 
-            u "(That’d be doing too much… We’re just friends.)"
+            u "(That'd be doing too much… We're just friends.)"
 
-    u "Right, let’s go."
+    u "Right, let's go."
 
     jump v12s33 #scene 33
