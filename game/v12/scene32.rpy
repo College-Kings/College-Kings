@@ -3,10 +3,6 @@
 # Characters: MC (Outfit: 3), AUBREY (Outfit: 2), NAOMI (Outfit: 1), PHOTOGRAPHER (Outfit: 1)
 # Time: Morning
 
-default v12s32_Aubrey_Boost = False
-default s12v32_get_aubrey_flowers = False
-
-
 label v12s32:
 # -MC and Aubrey are walking along the sidewalk-
 

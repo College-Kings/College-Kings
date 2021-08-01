@@ -130,7 +130,7 @@ label v12_chris_nora_room:
 
                 u "(Guess I should've just left her alone.)"
 
-                jump scene35b
+                jump v12_game_roommate
 
             else:
                 scene v12cnr12a # TPP. Same as v12cnr12, Door open, Nora inside the room, looking at MC who is outside, Nora crying, mouth closed, MC worried, mouth closed

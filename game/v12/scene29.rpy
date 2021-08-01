@@ -1058,7 +1058,7 @@ label v12_lauren_sex:
                 with dissolve
                 pause
 
-                u "And so fucking...Wet! I'm gonna cum..."
+                u "And so fucking... Wet! I'm gonna cum..."
 
                 la "Mmm, yes! Don't pull out... Please... It's safe."
 
