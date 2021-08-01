@@ -31,14 +31,14 @@ screen v12s7_seating_back():
 
     # No one
     if (emily in v12s7_killList and lauren in v12s7_killList) or (v12s7_emily and lauren in v12s7_killList) or (lauren in v12s7_killList):
-        add "images/v12/Scene 7/Navigation 1c.webp"
+        add "images/v12/Scene 7/Screens/Navigation 1c.webp"
 
     # Lauren only
     elif (emily in v12s7_killList) or (emily in v12s7_killList and lauren not in v12s7_killList) or (not emily_europe):
         imagemap:
-            ground "images/v12/Scene 7/Navigation 1a.webp"
-            insensitive "images/v12/Scene 7/Navigation 1a.webp"
-            hover "images/v12/Scene 7/Navigation 1a_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 1a.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 1a.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 1a_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_lauren:
@@ -49,9 +49,9 @@ screen v12s7_seating_back():
     # Lauren and Emily
     elif (emily_europe and not v12s7_emily and not emily in v12s7_killList and lauren not in v12s7_killList):
         imagemap:
-            ground "images/v12/Scene 7/Navigation 1b.webp"
-            insensitive "images/v12/Scene 7/Navigation 1b.webp"
-            hover "images/v12/Scene 7/Navigation 1b_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 1b.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 1b.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 1b_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_lauren:
@@ -69,14 +69,14 @@ screen v12s7_seating_front():
 
     # No one
     if (v12s7_samantha and ms_rose in v12s7_killList) or (ms_rose in v12s7_killList and not v11_invite_sam_europe):
-        add "images/v12/Scene 7/Navigation 2c.webp"
+        add "images/v12/Scene 7/Screens/Navigation 2c.webp"
     
     # Ms Rose
     elif (v12s7_samantha and ms_rose not in v12s7_killList) or (not v11_invite_sam_europe and ms_rose not in v12s7_killList):
         imagemap:
-            ground "images/v12/Scene 7/Navigation 2b.webp"
-            insensitive "images/v12/Scene 7/Navigation 2b.webp"
-            hover "images/v12/Scene 7/Navigation 2b_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 2b.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 2b.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 2b_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_msrose:
@@ -88,9 +88,9 @@ screen v12s7_seating_front():
     # Samantha and Ms Rose
     elif (v11_invite_sam_europe and not v12s7_samantha and ms_rose not in v12s7_killList):
         imagemap:
-            ground "images/v12/Scene 7/Navigation 2a.webp"
-            insensitive "images/v12/Scene 7/Navigation 2a.webp"
-            hover "images/v12/Scene 7/Navigation 2a_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 2a.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 2a.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 2a_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_msrose:
@@ -107,7 +107,7 @@ screen v12s7_seating_front():
 screen v12s7_walkway():
     tag freeRoam
 
-    add "images/v12/Scene 7/Navigation 3.webp"
+    add "images/v12/Scene 7/Screens/Navigation 3.webp"
 
     use v12s7_minimap(location="ld_walkway")
 
@@ -115,7 +115,7 @@ screen v12s7_walkway():
 screen v12s7_right_walkway_middle():
     tag freeRoam
 
-    add "images/v12/Scene 7/Navigation 4.webp"
+    add "images/v12/Scene 7/Screens/Navigation 4.webp"
 
     use v12s7_minimap(location="ld_right_walkway")
 
@@ -123,7 +123,7 @@ screen v12s7_right_walkway_middle():
 screen v12s7_left_walkway_middle():
     tag freeRoam
 
-    add "images/v12/Scene 7/Navigation 5.webp"
+    add "images/v12/Scene 7/Screens/Navigation 5.webp"
 
     use v12s7_minimap(location="ld_left_walkway")
     
@@ -133,11 +133,11 @@ screen v12s7_left_walkway_back():
 
     # No one
     if ms_rose in v12s7_killList: # ms rose dead
-        add "images/v12/Scene 7/Navigation 6c.webp"
+        add "images/v12/Scene 7/Screens/Navigation 6c.webp"
     
     # Ms Rose
     else:
-        add "images/v12/Scene 7/Navigation 6b.webp"
+        add "images/v12/Scene 7/Screens/Navigation 6b.webp"
 
     use v12s7_minimap(location="ld_left_walkway")
 
@@ -148,9 +148,9 @@ screen v12s7_rear():
     # Lindsey
     if v12s7_lindsey_moved and lindsey not in v12s7_killList:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 7a.webp"
-            insensitive "images/v12/Scene 7/Navigation 7a.webp"
-            hover "images/v12/Scene 7/Navigation 7a_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 7a.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 7a.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 7a_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_lindsey2:
@@ -160,7 +160,7 @@ screen v12s7_rear():
 
     # No one
     else:
-        add "images/v12/Scene 7/Navigation 7b.webp"
+        add "images/v12/Scene 7/Screens/Navigation 7b.webp"
 
     use v12s7_minimap(location="ld_rear")
 
@@ -171,9 +171,9 @@ screen v12s7_right_walkway_back():
     # Samantha
     if (v12s7_samantha and samantha not in v12s7_killList):
         imagemap:
-            ground "images/v12/Scene 7/Navigation 8a.webp"
-            insensitive "images/v12/Scene 7/Navigation 8a.webp"
-            hover "images/v12/Scene 7/Navigation 8a_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 8a.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 8a.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 8a_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_samantha2:
@@ -182,7 +182,7 @@ screen v12s7_right_walkway_back():
                     action Jump("v12s7_sam2") #samantha
 
     else:
-        add "images/v12/Scene 7/Navigation 8b.webp"
+        add "images/v12/Scene 7/Screens/Navigation 8b.webp"
 
     use v12s7_minimap(location="ld_right_walkway")
     
@@ -190,7 +190,7 @@ screen v12s7_right_walkway_back():
 screen v12s7_right_walkway_front():
     tag freeRoam
 
-    add "images/v12/Scene 7/Navigation 9.webp"
+    add "images/v12/Scene 7/Screens/Navigation 9.webp"
 
     use v12s7_minimap(location="ld_right_walkway")
 
@@ -201,9 +201,9 @@ screen v12s7_kitchen():
     # Chris and Emily
     if v12s7_emily and not emily in v12s7_killList and chris not in v12s7_killList:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 10a.webp"
-            insensitive "images/v12/Scene 7/Navigation 10a.webp"
-            hover "images/v12/Scene 7/Navigation 10a_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 10a.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 10a.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 10a_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_chris:
@@ -214,14 +214,14 @@ screen v12s7_kitchen():
             
     # Emily
     elif v12s7_emily and emily not in v12s7_killList:
-        add "images/v12/Scene 7/Navigation 10d.webp"
+        add "images/v12/Scene 7/Screens/Navigation 10d.webp"
 
     # Chris
     elif chris not in v12s7_killList:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 10b.webp"
-            insensitive "images/v12/Scene 7/Navigation 10b.webp"
-            hover "images/v12/Scene 7/Navigation 10b_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 10b.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 10b.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 10b_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_chris:
@@ -231,7 +231,7 @@ screen v12s7_kitchen():
 
     # No one
     else:
-        add "images/v12/Scene 7/Navigation 10d.webp"
+        add "images/v12/Scene 7/Screens/Navigation 10d.webp"
 
     use v12s7_minimap(location="ld_kitchen")
 
@@ -242,9 +242,9 @@ screen v12s7_bow():
     # Emily
     if v12s7_emily and emily not in v12s7_killList:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 11a.webp"
-            insensitive "images/v12/Scene 7/Navigation 11a.webp"
-            hover "images/v12/Scene 7/Navigation 11a_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 11a.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 11a.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 11a_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_emily2:
@@ -253,7 +253,7 @@ screen v12s7_bow():
                     action Jump("v12s7_emily2") # emily
             
     else:
-        add "images/v12/Scene 7/Navigation 11b.webp"
+        add "images/v12/Scene 7/Screens/Navigation 11b.webp"
 
     use v12s7_minimap(location="ld_bow")
 
@@ -264,9 +264,9 @@ screen v12s7_left_walkway_front():
     # Penelope
     if v11_pen_goes_europe and penelope not in v12s7_killList:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 12a.webp"
-            insensitive "images/v12/Scene 7/Navigation 12a.webp"
-            hover "images/v12/Scene 7/Navigation 12a_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 12a.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 12a.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 12a_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_penelope:
@@ -275,7 +275,7 @@ screen v12s7_left_walkway_front():
                     action Jump("v12s7_penelope1") #penelope
             
     else:
-        add "images/v12/Scene 7/Navigation 12b.webp"
+        add "images/v12/Scene 7/Screens/Navigation 12b.webp"
 
     use v12s7_minimap(location="ld_left_walkway")
 
@@ -286,9 +286,9 @@ screen v12s7_foyer():
     # Imre
     if v12s7_imre and imre not in v12s7_killList:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 13a.webp"
-            insensitive "images/v12/Scene 7/Navigation 13a.webp"
-            hover "images/v12/Scene 7/Navigation 13a_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 13a.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 13a.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 13a_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_imre:
@@ -296,7 +296,7 @@ screen v12s7_foyer():
                 else:
                     action Jump("v12s7_imre2") #imre
     else:
-        add "images/v12/Scene 7/Navigation 13b.webp"
+        add "images/v12/Scene 7/Screens/Navigation 13b.webp"
 
     use v12s7_minimap(location="ld_foyer")
 
@@ -308,9 +308,9 @@ screen v12s7_left_viewpoint():
     # Chloe and Riley
     if not v12s7_riley and riley not in v12s7_killList and chloe not in v12s7_killList:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 14a.webp"
-            insensitive "images/v12/Scene 7/Navigation 14a.webp"
-            hover "images/v12/Scene 7/Navigation 14a_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 14a.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 14a.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 14a_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_riley3:
@@ -324,9 +324,9 @@ screen v12s7_left_viewpoint():
     # Riley
     elif v12s7_riley2 and chloe in v12s7_killList and riley not in v12s7_killList:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 14b.webp"
-            insensitive "images/v12/Scene 7/Navigation 14b.webp"
-            hover "images/v12/Scene 7/Navigation 14b_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 14b.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 14b.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 14b_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_riley3:
@@ -337,9 +337,9 @@ screen v12s7_left_viewpoint():
     # Chloe
     elif v12s7_riley and chloe not in v12s7_killList:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 14c.webp"
-            insensitive "images/v12/Scene 7/Navigation 14c.webp"
-            hover "images/v12/Scene 7/Navigation 14c_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 14c.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 14c.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 14c_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_chloe:
@@ -349,7 +349,7 @@ screen v12s7_left_viewpoint():
 
     # No one
     else:
-        add "images/v12/Scene 7/Navigation 14d.webp"
+        add "images/v12/Scene 7/Screens/Navigation 14d.webp"
 
     use v12s7_minimap(location="md_left_viewport")
 
@@ -360,9 +360,9 @@ screen v12s7_right_viewpoint():
     # Josh
     if not v12s7_josh_moved and josh not in v12s7_killList:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 15a.webp"
-            insensitive "images/v12/Scene 7/Navigation 15a.webp"
-            hover "images/v12/Scene 7/Navigation 15a_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 15a.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 15a.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 15a_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_josh:
@@ -379,7 +379,7 @@ screen v12s7_right_viewpoint():
 
     # No one
     else:
-        add "images/v12/Scene 7/Navigation 15b.webp"
+        add "images/v12/Scene 7/Screens/Navigation 15b.webp"
 
     use v12s7_minimap(location="md_right_viewport")
 
@@ -390,9 +390,9 @@ screen v12s7_rear_gallery():
     # Mr Lee and Cameron
     if v11_invite_sam_europe and v12s7_samantha:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 27a.webp"
-            insensitive "images/v12/Scene 7/Navigation 27a.webp"
-            hover "images/v12/Scene 7/Navigation 27a_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 27a.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 27a.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 27a_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_cameron:
@@ -406,9 +406,9 @@ screen v12s7_rear_gallery():
     # Mr Lee
     else:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 27b.webp"
-            insensitive "images/v12/Scene 7/Navigation 27b.webp"
-            hover "images/v12/Scene 7/Navigation 27b_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 27b.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 27b.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 27b_hover.webp"
 
             hotspot (x, y, width, height):
                     action Jump("v12s7_mrlee") # mr lee
@@ -422,23 +422,23 @@ screen v12s7_right_gallery_back():
     # Ryan and Imre
     if not v12s7_imre:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 16a.webp"
-            insensitive "images/v12/Scene 7/Navigation 16a.webp"
-            hover "images/v12/Scene 7/Navigation 16a_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 16a.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 16a.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 16a_hover.webp"
 
             hotspot (x, y, width, height):
                     action Jump("v12s7_ryan_imre1") # Imre & Ryan
 
     # No one
     elif ryan in v12s7_killList:
-        add "images/v12/Scene 7/Navigation 16c.webp"
+        add "images/v12/Scene 7/Screens/Navigation 16c.webp"
 
     # Ryan
     else:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 16b.webp"
-            insensitive "images/v12/Scene 7/Navigation 16b.webp"
-            hover "images/v12/Scene 7/Navigation 16b_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 16b.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 16b.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 16b_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_ryan:
@@ -454,19 +454,19 @@ screen v12s7_right_gallery_front():
 
     # Riley and Amber
     if v12s7_riley and not v12s7_riley2 and amber not in v12s7_killList and riley not in v12s7_killList:
-        add "images/v12/Scene 7/Navigation 17a.webp"
+        add "images/v12/Scene 7/Screens/Navigation 17a.webp"
 
     # Riley
     elif v12s7_riley and not v12s7_riley2 and riley not in v12s7_killList:
-        add "images/v12/Scene 7/Navigation 17b.webp"
+        add "images/v12/Scene 7/Screens/Navigation 17b.webp"
 
     # Amber
     elif (not v12s7_riley and amber not in v12s7_killList) or (v12s7_riley and riley in v12s7_killList):
-        add "images/v12/Scene 7/Navigation 17c.webp"
+        add "images/v12/Scene 7/Screens/Navigation 17c.webp"
 
     # No one
     else:
-        add "images/v12/Scene 7/Navigation 17d.webp"
+        add "images/v12/Scene 7/Screens/Navigation 17d.webp"
 
     use v12s7_minimap(location="md_right_gallery")
 
@@ -477,9 +477,9 @@ screen v12s7_utility():
     # Josh
     if v12s7_josh_moved and josh not in v12s7_killList:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 18a.webp"
-            insensitive "images/v12/Scene 7/Navigation 18a.webp"
-            hover "images/v12/Scene 7/Navigation 18a_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 18a.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 18a.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 18a_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_josh:
@@ -489,7 +489,7 @@ screen v12s7_utility():
 
     # No one
     else:
-        add "images/v12/Scene 7/Navigation 18b.webp"
+        add "images/v12/Scene 7/Screens/Navigation 18b.webp"
 
     use v12s7_minimap(location="md_utility")
 
@@ -500,9 +500,9 @@ screen v12s7_front_gallery():
     # Amber and Riley
     if v12s7_riley and not v12s7_riley2 and amber not in v12s7_killList and riley not in v12s7_killList:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 19a.webp"
-            insensitive "images/v12/Scene 7/Navigation 19a.webp"
-            hover "images/v12/Scene 7/Navigation 19a_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 19a.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 19a.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 19a_hover.webp"
 
             hotspot (x, y, width, height):
                     action Jump("v12s7_riley2_amber") # Riley & Amber
@@ -510,9 +510,9 @@ screen v12s7_front_gallery():
     # Amber
     elif v12s7_riley and not v12s7_riley2 and riley not in v12s7_killList:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 19b.webp"
-            insensitive "images/v12/Scene 7/Navigation 19b.webp"
-            hover "images/v12/Scene 7/Navigation 19b_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 19b.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 19b.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 19b_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_amber:
@@ -523,9 +523,9 @@ screen v12s7_front_gallery():
     # Riley
     elif (not v12s7_riley and amber not in v12s7_killList) or (v12s7_riley and riley in v12s7_killList):
         imagemap:
-            ground "images/v12/Scene 7/Navigation 19c.webp"
-            insensitive "images/v12/Scene 7/Navigation 19c.webp"
-            hover "images/v12/Scene 7/Navigation 19c_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 19c.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 19c.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 19c_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_riley2:
@@ -535,7 +535,7 @@ screen v12s7_front_gallery():
 
     # No one
     else:
-        add "images/v12/Scene 7/Navigation 19d.webp"
+        add "images/v12/Scene 7/Screens/Navigation 19d.webp"
 
     use v12s7_minimap(location="md_front_gallery")
 
@@ -543,7 +543,7 @@ screen v12s7_front_gallery():
 screen v12s7_balcony_middle():
     tag freeRoam
 
-    add "images/v12/Scene 7/Navigation 20a.webp"
+    add "images/v12/Scene 7/Screens/Navigation 20a.webp"
 
     use v12s7_minimap(location="md_balcony")
 
@@ -553,14 +553,14 @@ screen v12s7_balcony_left():
 
     # No one
     if nora in v12s7_killList:
-        add "images/v12/Scene 7/Navigation 21b.webp"
+        add "images/v12/Scene 7/Screens/Navigation 21b.webp"
 
     # Nora
     else:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 21a.webp"
-            insensitive "images/v12/Scene 7/Navigation 21a.webp"
-            hover "images/v12/Scene 7/Navigation 21a_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 21a.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 21a.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 21a_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_nora:
@@ -576,14 +576,14 @@ screen v12s7_balcony_right():
 
     # No one
     if aubrey in v12s7_killList or v12s7_aubrey_moved:
-        add "images/v12/Scene 7/Navigation 22b.webp"
+        add "images/v12/Scene 7/Screens/Navigation 22b.webp"
 
     # Aubrey
     else:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 22a.webp"
-            insensitive "images/v12/Scene 7/Navigation 22a.webp"
-            hover "images/v12/Scene 7/Navigation 22a_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 22a.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 22a.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 22a_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_aubrey:
@@ -599,11 +599,11 @@ screen v12s7_left_gallery_back():
 
     # No one
     if aubrey in v12s7_killList or not v12s7_aubrey_moved:
-        add "images/v12/Scene 7/Navigation 23b.webp"
+        add "images/v12/Scene 7/Screens/Navigation 23b.webp"
 
     # Aubrey
     else:
-        add "images/v12/Scene 7/Navigation 23a.webp"
+        add "images/v12/Scene 7/Screens/Navigation 23a.webp"
 
     use v12s7_minimap(location="md_left_gallery")
 
@@ -613,12 +613,12 @@ screen v12s7_left_gallery_front():
 
     # No one
     if aubrey in v12s7_killList or not v12s7_aubrey_moved:
-        add "images/v12/Scene 7/Navigation 24b.webp"
+        add "images/v12/Scene 7/Screens/Navigation 24b.webp"
 
     # Aubrey
     else:
         imagemap:
-            add "images/v12/Scene 7/Navigation 24a.webp"
+            add "images/v12/Scene 7/Screens/Navigation 24a.webp"
 
     use v12s7_minimap(location="md_left_gallery")
 
@@ -628,14 +628,14 @@ screen v12s7_bathroom():
 
     # No one
     if aubrey in v12s7_killList or not v12s7_aubrey_moved:
-        add "images/v12/Scene 7/Navigation 25b.webp"
+        add "images/v12/Scene 7/Screens/Navigation 25b.webp"
 
     # Aubrey
     else:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 25a.webp"
-            insensitive "images/v12/Scene 7/Navigation 25a.webp"
-            hover "images/v12/Scene 7/Navigation 25a_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 25a.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 25a.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 25a_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_aubrey2:
@@ -652,9 +652,9 @@ screen v12s7_captains_room():
     # Lindsey and Charli
     if not v12s7_lindsey_moved:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 26a.webp"
-            insensitive "images/v12/Scene 7/Navigation 26a.webp"
-            hover "images/v12/Scene 7/Navigation 26a_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 26a.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 26a.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 26a_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_lindsey:
@@ -665,9 +665,9 @@ screen v12s7_captains_room():
     # Charli
     elif charli in v12s7_killList:
         imagemap:
-            ground "images/v12/Scene 7/Navigation 26c.webp"
-            insensitive "images/v12/Scene 7/Navigation 26c.webp"
-            hover "images/v12/Scene 7/Navigation 26c_hover.webp"
+            ground "images/v12/Scene 7/Screens/Navigation 26c.webp"
+            insensitive "images/v12/Scene 7/Screens/Navigation 26c.webp"
+            hover "images/v12/Scene 7/Screens/Navigation 26c_hover.webp"
 
             hotspot (x, y, width, height):
                 if v12s7_charli:
@@ -677,6 +677,6 @@ screen v12s7_captains_room():
             
     # No one
     else:
-        add "images/v12/Scene 7/Navigation 26b.webp"
+        add "images/v12/Scene 7/Screens/Navigation 26b.webp"
 
     use v12s7_minimap(location="ud_captains_room")
