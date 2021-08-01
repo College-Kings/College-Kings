@@ -173,7 +173,8 @@ label v12_valentine:
     scene v12val15 # FPP. Same positioning as v12val14, bishop standing at the altar, MC looking at the bishop, bishop looking at MC, bishop slight smile, mouth open (Only bishop in shot)
     with dissolve
 
-    bishop "First, I'll introduce myself. My name is Bishop Jenkins. I've been a member of this church for about thirty years now and I've had the pleasure of telling the story of Valentine for decades. Are any of you familiar with the story?"
+    bishop "First, I'll introduce myself. My name is Bishop Jenkins. I've been a member of this church for about thirty years now and I've had the pleasure of telling the story of Valentine for decades."
+    bishop "Are any of you familiar with the story?"
 
     scene v12val16 # FPP. Same positioning as v12val14, MC looking at Nora, Nora looking at bishop, Nora slight smile, mouth open (Only Nora in shot)
     with dissolve
@@ -188,7 +189,8 @@ label v12_valentine:
     scene v12val15
     with dissolve
 
-    bishop "*Chuckles* That's usually the case for most students. Due to most holidays stemming from religious roots, it's rare for schools to actually teach students the meaning behind Valentine's, but today I'll be doing just that. Have any of you heard of St. Valentine?"
+    bishop "*Chuckles* That's usually the case for most students. Due to most holidays stemming from religious roots, it's rare for schools to actually teach students the meaning behind Valentine's."
+    bishop "But today I'll be doing just that. Have any of you heard of St. Valentine?"
 
     scene v12val18 # FPP. Same positioning as v12val14, MC looking at Imre, Imre looking at bishop, Imre slight smile, mouth open (Only Imre in shot)
     with dissolve
@@ -338,7 +340,8 @@ label v12_valentine:
     scene v12val15e # FPP. Same as v12val15, bishop looking at Nora, bishop slight smile, mouth open
     with dissolve
 
-    bishop "Exactly. And like Valentine, I too believe that if a man and a woman love each other, they should both get married. Valentine went against the Emperor's law and allowed soldiers to get married at his church in secret."
+    bishop "Exactly. And like Valentine, I too believe that if a man and a woman love each other, they should both get married."
+    bishop "Valentine went against the Emperor's law and allowed soldiers to get married at his church in secret."
 
     scene v12val19a
     with dissolve
@@ -368,7 +371,8 @@ label v12_valentine:
     scene v12val15
     with dissolve
 
-    bishop "Anyway... Eventually word got out and the Emperor not only demanded Valentine to stop his secret weddings, but also wanted him to convert to the Roman faith. When Valentine refused, he was sentenced to death."
+    bishop "Anyway... Eventually word got out and the Emperor not only demanded Valentine to stop his secret weddings, but also wanted him to convert to the Roman faith."
+    bishop "When Valentine refused, he was sentenced to death."
 
     scene v12val18
     with dissolve
@@ -378,7 +382,9 @@ label v12_valentine:
     scene v12val15b
     with dissolve
 
-    bishop "Bare with me, my son. While in prison, prior to his execution, the jailer's blind daughter would bring him his meals and from that stemmed many conversations. From those many conversations, they fell in love. One day, Saint Valentine slid his hand through the bars of his cell, touched the lids of the girl's eyes and miraculously she could see."
+    bishop "Bare with me, my son."
+    bishop "While in prison, prior to his execution, the jailer's blind daughter would bring him his meals and from that stemmed many conversations. From those many conversations, they fell in love."
+    bishop "One day, Saint Valentine slid his hand through the bars of his cell, touched the lids of the girl's eyes and miraculously she could see."
 
     scene v12val20a # FPP. Same as v12val20, Charli looking down, sligtly annoyed, mouth slightly open
     with dissolve
@@ -403,7 +409,8 @@ label v12_valentine:
     scene v12val15e
     with dissolve
 
-    bishop "Valentine's beloved received the letter and before the execution she pleaded with her father, the jailer, to help Valentine escape. Her father did just that, and Valentine came to what is now modern day Paris."
+    bishop "Valentine's beloved received the letter and before the execution she pleaded with her father, the jailer, to help Valentine escape."
+    bishop "Her father did just that, and Valentine came to what is now modern day Paris."
 
     scene v12val19a
     with dissolve
@@ -423,7 +430,8 @@ label v12_valentine:
     scene v12val15f # FPP. Same as v12val15a, bishop slightly annoyed, mouth open
     with dissolve
 
-    bishop "Mr. Lee, we are all professionals at what we've dedicated our lives toward. Your knowledge of history in a general sense is something I'd never attempt to challenge. I'd appreciate the same respect for my specialization."
+    bishop "Mr. Lee, we are all professionals at what we've dedicated our lives toward."
+    bishop "Your knowledge of history in a general sense is something I'd never attempt to challenge. I'd appreciate the same respect for my specialization."
 
     scene v12val19a
     with dissolve
@@ -438,7 +446,7 @@ label v12_valentine:
     scene v12val18c # FPP. Same as v12val18a, Imre slight smile, mouth open
     with dissolve
 
-    imre "Mr. Lee, \"if you want to behave like a child I'll treat you like one...remember, this is a church.\""
+    imre "Mr. Lee, \"if you want to behave like a child I'll treat you like one... remember, this is a church.\""
 
     scene v12val19b # FPP. Same as v12val19, Mr. Lee looking at MC, Mr. Lee slightly embarassed, mouth closed
     with dissolve
@@ -463,7 +471,7 @@ label v12_valentine:
     scene v12val15
     with dissolve
 
-    bishop "To carry on students, Valentine dedicated his life to ensuring that others could live a life with love and in the end, it was love that saved him."
+    bishop "To carry on, students, Valentine dedicated his life to ensuring that others could live a life with love and in the end, it was love that saved him."
 
     scene v12val16
     with dissolve
@@ -703,7 +711,8 @@ label v12_valentine:
             scene v12val30h # FPP. Same as v12val30c, different pose
             with dissolve
 
-            u "Nora, I remember living alone on the streets with nothing but the clothes on my back. The day you came up to me, I thought I'd get a couple dollars for a chicken sandwich, but I ended up with the best digits I could have ever hoped for - the number to an opportunity."
+            u "Nora, I remember living alone on the streets with nothing but the clothes on my back."
+            u "The day you came up to me, I thought I'd get a couple dollars for a chicken sandwich, but I ended up with the best digits I could have ever hoped for - the number to an opportunity."
 
             scene v12val30c
             with dissolve

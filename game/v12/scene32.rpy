@@ -616,7 +616,8 @@ label v12s32:
     scene v12s32_28
     with dissolve
 
-    pg "Your sister is great in her own ways, but you yourself have a serious natural talent. Your sister and I have worked together for a long while and I know you're from the states, but if you'd be willing to work with me I'd be able to make you famous."
+    pg "Your sister is great in her own ways, but you yourself have a serious natural talent."
+    pg "Your sister and I have worked together for a long while and I know you're from the States, but if you'd be willing to work with me I'd be able to make you famous."
 
     scene v12s32_29
     with dissolve
