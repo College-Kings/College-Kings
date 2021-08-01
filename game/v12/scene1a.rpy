@@ -80,7 +80,9 @@ label v12_chase_robber:
                     
                 "Huh":
                     scene v12car12a # TPP Same angle as v12car12, show MC getting punched in the mouth by the robber
-                    with dissolve
+                    with hpunch
+
+                    play sound "sounds/facepunch1.mp3"
 
                     pause 0.75
 
@@ -88,7 +90,7 @@ label v12_chase_robber:
 
     if not v12_fight_win:
         scene v12car13 # TPP Show MC laying on the ground, writhing in pain
-        with dissolve
+        with vpunch
 
         robber "Ha, you sure are one sorry ass fighter. Now your girl lost her bag and you got your ass kicked. Bet you won't be getting any tonight. *Laughs*"
 
