@@ -594,7 +594,7 @@ label v12s7_aubrey2:
 
             unknown "Could've sworn I heard people talking in here... Guess not."
 
-            play sound "sounds/close.mp3"
+            play sound "sounds/doorclose.mp3"
 
             scene v12ferauh4
             with dissolve
