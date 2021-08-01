@@ -579,3 +579,5 @@ default v12s7_aubrey_moved = False
 default v12_lindsey_sex = False
 default v12s18_bottlespin_played = False
 default v12s18_fmk_played = False
+default v12_lauren_sex = False
+default v12_lauren_points = 0

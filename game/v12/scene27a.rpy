@@ -406,7 +406,7 @@ label v12s27a:
             ry "*Sighs* I hope you're not just saying that…"
 
 
-        "It's not your best look.":
+        "It's not your best look":
             $ addPoint("tm")
 
             u "Well, honestly… It's not your best look, in my opinion."

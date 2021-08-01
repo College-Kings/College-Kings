@@ -124,3 +124,4 @@ define character.escman = Character("Manager", who_color="#5fc9f8", who_outlines
 define character.bishop = Character("Bishop", who_color="#800080", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.nurse = Character("Nurse", who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.barber = Character("Barber", who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.greeter = Character("Greeter", who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])

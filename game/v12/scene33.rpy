@@ -786,7 +786,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
             u "Haha, alright… Noted."
 
 
-        "Yes, haha.":
+        "Yes, haha":
             $ addPoint ("bf")
 
             u "Yes, haha. Who knows what kind of crazy theories you girls may be coming up with?"

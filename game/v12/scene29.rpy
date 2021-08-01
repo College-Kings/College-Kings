@@ -4,8 +4,6 @@
 # Time:Night
 # Phone Images: None
 
-$ v12_lauren_sex = False
-
 label v12_lauren_sex:
     scene v12las1 # FPP. MC sitting on the couch in the hotel lobby, watching as Lauren walks towards him, Lauren slight smile, mouth closed
     with dissolve
@@ -712,7 +710,7 @@ label v12_lauren_sex:
 
             u "Yes. *Chuckles* Yes, Lauren."
 
-            if not v12_lauren_points >= 3 and not kct = "loyal":
+            if not (v12_lauren_points >= 3) and not (kct == "loyal"):
                 scene v12las46e
                 with dissolve
 
@@ -773,7 +771,7 @@ label v12_lauren_sex:
             else:
                 $ v12_lauren_sex = True
 
-                if kct = "loyal" and not v12_lauren_points >= 3:
+                if (kct == "loyal") and not (v12_lauren_points >= 3):
                     call screen kctPopup
 
                 scene v12las46e
