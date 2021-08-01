@@ -1294,4 +1294,4 @@ label v12s33_sneak_off2:
 
 label v12s33_after_sauna:
 
-    jump mexico34 #scene 34
+    jump v12_amber_after_spa #scene 34
