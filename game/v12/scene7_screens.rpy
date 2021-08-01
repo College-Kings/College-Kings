@@ -22,7 +22,7 @@ screen murderButtonOverlay(character):
 
 
 screen v12s7_minimap(location):
-    add Transform("images/v12/Scene 7/minimap/[location].webp", size=(300, 300)) pos (10, 10)
+    add Transform("images/v12/Scene 7/minimap/[location].png", size=(300, 300)) pos (10, 10)
 
 
 ### Lower Floor
