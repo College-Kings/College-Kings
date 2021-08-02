@@ -121,7 +121,7 @@ label v11wakeupa:
         scene v11bane3 # FPP. Show Chloe, worried look mouth open, hand reaching forward as if on mc's arm
         with dissolve
 
-        cl "Woah, you okay [name]"
+        cl "Woah! You okay, [name]?"
 
         scene v11bane3a # FPP. Same 3, mouth closed
         with dissolve
@@ -226,10 +226,10 @@ label v11wakeupa:
 
                 u "I was talking about you, not the bear."
 
-                play sound "sounds/kiss.mp3"
-
                 scene v11hr6 # TPP. Show MC kissing Chloe while holding her chin, same position as v11hr3
                 with dissolve
+
+                play sound "sounds/kiss.mp3"
 
                 pause 1
 
