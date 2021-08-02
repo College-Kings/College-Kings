@@ -8,6 +8,8 @@ label v11_cafe_with_riley:
     if joinwolves:
         scene v11s3bris1 # TPP. Show MC talking on his phone in his wolves bedroom, sat on the bed, mouth open
         with dissolve
+
+        stop sound
         u "Hello?"
 
         scene v11s3bris2 # TPP. Show Riley sat in the café, phone to side of head, mouth open
