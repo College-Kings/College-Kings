@@ -19,6 +19,8 @@ label v12_penelope_call:
     scene v12pec2 # FPP. Same position as v12pec1, MC looking down at his phone (Penelope caller ID)
     with dissolve
 
+    u "(It's Penelope.)"
+
     menu:
         "Answer":
             scene v12pec2b # FPP. Same as v11pec2, show MC clicking to accept the call
