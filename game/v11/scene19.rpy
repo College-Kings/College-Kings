@@ -330,7 +330,7 @@ label v11_roommate:
         stop music fadeout 3
         play music "music/v11/Scene 19/Track Scene 19_2.mp3" fadein 2
         scene v11rm8 # TPP. Show MC and Chloe sleeping (lights turned off now)
-        with dissolve
+        with fade
 
         pause 0.75
 
@@ -364,6 +364,8 @@ label v11_roommate:
         with dissolve
 
         pause 0.75
+
+        play sound "sounds/dooropen.mp3"
 
         scene v11rm11a # FPP. Same cam as v11rm11, Door now open, MC looking at Riley, Riley slight smile, mouth closed (Day)
         with dissolve
@@ -844,6 +846,9 @@ label v11_roommate:
 
                     ri "You're probably right."
 
+                    scene v11rm21c
+                    with dissolve
+
                 "Ease into it":
                     $ addPoint("bro")
 
@@ -903,7 +908,7 @@ label v11_roommate:
         pause 0.75
 
         scene v11rm26 # TPP. Show Riley and MC sleeping (lights turned off)
-        with dissolve
+        with fade
 
         pause 0.75
 
@@ -918,7 +923,7 @@ label v11_roommate:
         pause 0.75
 
         scene v11rm27 # FPP. MC is lying down in his bed, looking at Riley, who is standing next to his bed, looking at MC, Riley mouth open, slightly smiling (day)
-        with dissolve
+        with fade
 
         ri "C'mon, get up, we're going to check out the treasure hunt thing!"
 
