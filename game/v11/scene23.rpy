@@ -451,7 +451,7 @@ label v11s23_riley1:
             scene v11frmri3
             with dissolve
 
-            ri "I only scream for one reason and it's not because I got hit with a little rubber bullet..."
+            ri "I only scream for one reason..."
 
             scene v11frmri3a
             with dissolve
@@ -463,7 +463,7 @@ label v11s23_riley1:
                 scene v11frmri3b
                 with dissolve
 
-                ri "Wouldn't you like to know."
+                ri "Wouldn't you like to know?"
 
                 scene v11frmri3a
                 with dissolve
