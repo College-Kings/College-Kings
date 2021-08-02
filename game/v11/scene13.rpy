@@ -29,34 +29,6 @@ label v11_aubrey_plane_sex:
         u "(I'm bored, meet me in the bathroom. XOXO)"
 
         menu:
-            "Don't go after her":
-                scene v11aub4
-                with dissolve
-
-                u "(What? *Chuckles* She's crazy. Not on a fucking plane.)"
-
-                scene v11aub5 # FPP. MC is sitting next to Ryan, Ryan and MC looking at each other, Ryan mouth slightly open, neutral look
-                with dissolve
-
-                ry "Hmph..."
-
-                scene v11aub5a # FPP. Same as v11aub5, Ryan mouth closed, neutral look
-                with dissolve
-
-                u "What?"
-
-                scene v11aub5b # FPP. Same as v11aub5, mouth normal open, neutral look
-                with dissolve
-
-                ry "Nothing."
-
-                scene v11aub5c # FPP. Same as v11aub15, Ryan now looking at his windows
-                with dissolve
-
-                pause 0.75
-
-                jump v11_nora_chris_plane
-
             "Go after her":
                 label v11_aubrey_plane_sex_sg:
                 $ v11_aubrey_sex = True
@@ -469,4 +441,32 @@ label v11_aubrey_plane_sex:
 
                 pause 0.75
                 stop music fadeout 3
+                jump v11_nora_chris_plane
+
+            "Don't go after her":
+                scene v11aub4
+                with dissolve
+
+                u "(What? *Chuckles* She's crazy. Not on a fucking plane.)"
+
+                scene v11aub5 # FPP. MC is sitting next to Ryan, Ryan and MC looking at each other, Ryan mouth slightly open, neutral look
+                with dissolve
+
+                ry "Hmph..."
+
+                scene v11aub5a # FPP. Same as v11aub5, Ryan mouth closed, neutral look
+                with dissolve
+
+                u "What?"
+
+                scene v11aub5b # FPP. Same as v11aub5, mouth normal open, neutral look
+                with dissolve
+
+                ry "Nothing."
+
+                scene v11aub5c # FPP. Same as v11aub15, Ryan now looking at his windows
+                with dissolve
+
+                pause 0.75
+
                 jump v11_nora_chris_plane

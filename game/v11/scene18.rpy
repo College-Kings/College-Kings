@@ -15,27 +15,6 @@ label v11_msrose_convo:
     with dissolve
 
     menu:
-        "Don't kiss her":
-            scene v11roc1b # FPP. Same as v11roc1, but Ms Rose slightly smiling, mouth closed
-            with dissolve
-
-            u "You don't have to apologize Ms. Rose, I stepped out of line as well. You're a wonderful person, but I agree. We should keep things professional."
-
-            scene v11roc1c # FPP. Same as v11roc1b, but Ms Rose mouth open
-            with dissolve
-
-            ro "You'll make a young lady very happy one day."
-
-            scene v11roc1b
-            with dissolve
-
-            u "And you'll get the life you've always deserved."
-
-            scene v11roc1c
-            with dissolve
-
-            ro "C'mon, I'm sure the keys are ready. Let's get everyone to bed."
-
         "Kiss her":
             $ v11_msrose_kiss = True
             $ msrosers = True
@@ -93,6 +72,27 @@ label v11_msrose_convo:
             with dissolve
 
             ro "Let's go get everyone their keys."
+
+        "Don't kiss her":
+            scene v11roc1b # FPP. Same as v11roc1, but Ms Rose slightly smiling, mouth closed
+            with dissolve
+
+            u "You don't have to apologize Ms. Rose, I stepped out of line as well. You're a wonderful person, but I agree. We should keep things professional."
+
+            scene v11roc1c # FPP. Same as v11roc1b, but Ms Rose mouth open
+            with dissolve
+
+            ro "You'll make a young lady very happy one day."
+
+            scene v11roc1b
+            with dissolve
+
+            u "And you'll get the life you've always deserved."
+
+            scene v11roc1c
+            with dissolve
+
+            ro "C'mon, I'm sure the keys are ready. Let's get everyone to bed."
 
     scene v11roc8 # TPP. Show MC walking back to the lobby with everyone else, he is smiling, mouth closed
     with dissolve

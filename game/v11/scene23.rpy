@@ -64,33 +64,6 @@ label v11s23_chris1:
     ch "What's up?"
 
     menu:
-        "Don't mention Nora":
-
-            scene v11frmch1d # FPP Same angle as v11frmch1, Chris holding phone away from his head and looking at MC, mouth closed
-            with dissolve
-
-            u "Actually, nevermind."
-
-            scene v11frmch1a
-            with dissolve
-
-            ch "You sure?"
-
-            scene v11frmch1d
-            with dissolve
-
-            u "Yeah man, sorry."
-
-            scene v11frmch1a
-            with dissolve
-
-            ch "No worries, talk to you later."
-
-            scene v11frmch1c
-            with dissolve
-
-            ch "Bash, I'm back."
-
         "Mention Nora":
 
             scene v11frmch1d
@@ -132,6 +105,32 @@ label v11s23_chris1:
             with dissolve
 
             u "Alright."
+
+        "Don't mention Nora":
+            scene v11frmch1d # FPP Same angle as v11frmch1, Chris holding phone away from his head and looking at MC, mouth closed
+            with dissolve
+
+            u "Actually, nevermind."
+
+            scene v11frmch1a
+            with dissolve
+
+            ch "You sure?"
+
+            scene v11frmch1d
+            with dissolve
+
+            u "Yeah man, sorry."
+
+            scene v11frmch1a
+            with dissolve
+
+            ch "No worries, talk to you later."
+
+            scene v11frmch1c
+            with dissolve
+
+            ch "Bash, I'm back."
 
     # Back to free roam
     call screen v11s23_mid
