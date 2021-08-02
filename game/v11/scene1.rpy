@@ -1076,7 +1076,6 @@ label v11_case_verdict:
     if v11s1_courtpoints >= 4:
         play music "music/v11/Scene 1/Track Scene 1_5.mp3" fadein 2
         $ perry_mason = True
-        $ grantAchievement("perry_mason")
         $ v11_pen_goes_europe = True
         scene v11coc14b # TPP. Same as 14, Mr Lee looking at Penelope
         with dissolve
@@ -1107,6 +1106,7 @@ label v11_case_verdict:
         scene v11coc14b
         with dissolve
 
+        $ grantAchievement("perry_mason")
         lee "Don't thank us, thank your friend. He did a very good job representing you. We may just have a future lawyer in our midst."
 
         scene v11coc14c

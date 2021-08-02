@@ -984,9 +984,6 @@ label v11_apes_manhunt:
 
     menu (fail_label="v11_horse_fall"):
         "Balance":
-            $ hold_your_horses = True
-            $ grantAchievement("hold_your_horses")
-
             scene v11amh47 # FPP. MC still on the horse, horse a bit further away compared to v11amh46
             with dissolve
 
@@ -1020,6 +1017,8 @@ label v11_apes_manhunt:
                     scene v11amh51 # TPP. Show MC on the horse, the horse is rearing, MC is in control, smiling, mouth open
                     with dissolve
 
+                    $ hold_your_horses = True
+                    $ grantAchievement("hold_your_horses")
                     u "Woah! *Laughs* Guess he is having a good time."
 
                     scene v11amh44b # FPP. Same as v11amh44, Cameron is slightly annoyed, mouth open
@@ -1070,8 +1069,12 @@ label v11_apes_manhunt:
                     jump v11_mc_horse_room
 
                 "Pet horse":
+                    $ off_your_high_horse = True
+                    $ grantAchievement("off_your_high_horse")
                     scene v11amh49a # FPP. Same as v11amh49, MC is petting the horse (show his hand on the horse's neck)
                     with dissolve
+
+                    pause 0.75
 
                     scene v11amh51a # TPP. Same as v11amh51, but MC is not in control, he is unbalanced on the horse, mouth closed, startled face
                     with dissolve

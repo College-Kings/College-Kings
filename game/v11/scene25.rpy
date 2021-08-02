@@ -33,12 +33,12 @@ label v11_hotel_bar:
 
         "Something fruity":
             $ fruity = True
-            $ grantAchievement("fruity")
             $ v11s25_beer = False
 
             scene v11hob2a
             with dissolve
 
+            $ grantAchievement("fruity")
             u "Something fruity."
 
             scene v11hob2

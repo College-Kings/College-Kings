@@ -991,11 +991,11 @@ label v11_quiz_bonus:
 
     if v11_hp_points == 3:
         $ earn_your_owl = True
-        $ grantAchievement("earn_your_owl")
 
     scene v11las19e
     with dissolve
 
+    $ grantAchievement("earn_your_owl")
     jud "For the first time in a very stressful two months, Jerry you have lost. Congratulations Team Hufflepuff!"
 
     scene v11las17h
