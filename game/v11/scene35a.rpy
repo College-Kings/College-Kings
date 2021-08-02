@@ -16,6 +16,7 @@ label v11_chloe_hotel_room_amber_call:
         scene v11hrc2 # TPP. MC moves to his bed, mouth opened
         with dissolve
 
+        stop sound
         u "Hello?"
 
         scene v11hrc3 # TPP. Amber is laying on her bed in her hotel room, mouth opened
@@ -135,6 +136,7 @@ label v11_chloe_hotel_room_amber_call:
             scene v11hrc5 
             with dissolve
 
+            pause 0.75
 
     scene v11hrc6 # TPP. MC is now laid in bed trying to sleep, eyes closed
     with dissolve
@@ -147,7 +149,7 @@ label v11_chloe_hotel_room_amber_call:
     pause 0.75
 
     scene v11hrc8 # TPP. Chloe is shaking mc, waking him up
-    with dissolve
+    with fade
 
     pause 0.75
 
@@ -161,33 +163,33 @@ label v11_chloe_hotel_room_amber_call:
 
     u "*Yawn*"
 
-    scene v11hrc11 # FPP. Mc still siting on the bed looking at chloe, mouth opened
+    scene v11hrc11a # FPP. Mc still siting on the bed looking at chloe, mouth opened
     with dissolve
 
     cl "Mr. Lee has something planned tonight so if there's anything you want to do, do it during the day."
 
-    scene v11hrc11a # FPP. Same as 11, mouth closed
+    scene v11hrc11 # FPP. Same as 11, mouth closed
     with dissolve
 
     u "Thanks."
 
-    scene v11hrc11
+    scene v11hrc11a
     with dissolve
 
     cl "Yep."
 
     if not chloers and not chloegf and not chloemad:
-        scene v11hrc11
+        scene v11hrc11a
         with dissolve
 
         cl "\"Such a beautiful couple\", that guy was so sweet to us. He thought hhe had a sale though, now I feel bad..."
 
-        scene v11hrc11a 
+        scene v11hrc11
         with dissolve
 
         u "Well honey, once the stock market reaches expectations I'll buy you that car."
 
-        scene v11hrc11 
+        scene v11hrc11a
         with dissolve
 
         cl "Oh husband... will you really?"
@@ -208,6 +210,8 @@ label v11_chloe_hotel_room_amber_call:
         u "I am too. *Chuckles*"
 
         play sound "sounds/knock.mp3"
+
+        pause 0.5
 
         scene v11hrc12 # FPP. chloe walks to answer the door
         with dissolve
@@ -235,10 +239,10 @@ label v11_chloe_hotel_room_amber_call:
 
         pause 0.75
 
-        play sound "sounds/kiss.mp3"
-
         scene v11hrc11e # FPP. MC kisses chloe
         with dissolve
+
+        play sound "sounds/kiss.mp3"
 
         pause 0.75
 
@@ -263,6 +267,8 @@ label v11_chloe_hotel_room_amber_call:
         u "I was thinking maybe we could-"
 
         play sound "sounds/knock.mp3"
+
+        pause 0.5
 
         scene v11hrc12 
         with dissolve
@@ -322,10 +328,12 @@ label v11_chloe_hotel_room_amber_call:
     scene v11hrc7
     with dissolve
 
+    pause 0.75
+
     if chloegf or chloers:
 
         scene v11hrc18 # TPP. MC wakes up with chloe sitting on top of him
-        with dissolve
+        with fade
 
         pause 0.75
 
@@ -334,9 +342,14 @@ label v11_chloe_hotel_room_amber_call:
 
         cl "Wake up sleepy head! I'm the one that had a late night. *Chuckles*"
 
-        play sound "sounds/kiss.mp3"
-        
         scene v11hrc19a # FPP MC kisses chloe's forehead, mouth closed
+        with dissolve
+
+        play sound "sounds/kiss.mp3"
+
+        pause 0.75
+
+        scene v11hrc19
         with dissolve
 
         u "Good morning, beautiful."
@@ -349,16 +362,16 @@ label v11_chloe_hotel_room_amber_call:
     elif not chloemad:
         
         scene v11hrc9b # FPP. same as 9, chloe is smiling
-        with dissolve
+        with fade
 
         cl "Wake up, [name]! How do you not feel the light shining right on your face? *Chuckles*"
 
-        scene v11hrc19a 
+        scene v11hrc9 
         with dissolve
 
         u "I'm a deep sleeper I guess."
 
-        scene v11hrc9
+        scene v11hrc9b
         with dissolve
 
         cl "Well get up deep sleeper, Mr. Lee has plans for us tonight, so the daytime is the only freedom we have."
@@ -374,10 +387,11 @@ label v11_chloe_hotel_room_amber_call:
         u "*Yawn* Alright... I'm getting up."
 
     if not v11_riley_roomate:
-        play sound "sounds/facepunch1.mp3"
-        
+       
         scene v11hrc20 # TPP. MC gets up from bed
         with dissolve
+
+        play sound "sounds/facepunch1.mp3"
 
         pause 0.75
 
@@ -388,5 +402,8 @@ label v11_chloe_hotel_room_amber_call:
 
         scene v11hrc22 # TPP. MC runs to the hallway outside his room
         with dissolve
+
+        pause 0.75
+
     stop music fadeout 3
     jump v11_imre_ryan_grapple
