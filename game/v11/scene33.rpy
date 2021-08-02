@@ -127,7 +127,6 @@ label v11_bar_chloe_and_aubrey:
 
     u "Maybe he's just really passionate."
 
-
     if chloemad:
         scene v11caa9b
         with dissolve
@@ -180,6 +179,8 @@ label v11_bar_chloe_and_aubrey:
     scene v11caa11a # FPP. looking at aubrey leaving, back turned to mc
     with dissolve
 
+    stop sound
+
     u "Haha, later Aubrey."
 
     if chloemad:
@@ -219,7 +220,6 @@ label v11_bar_chloe_and_aubrey:
                 with dissolve
 
                 u "Definitely going with the round ones."
-
 
             "Square":
                 scene v11caa12
@@ -292,15 +292,22 @@ label v11_bar_chloe_and_aubrey:
 
         u "No problem, grumpy."
 
-        scene v11caa14b
+        scene v11caa14a
         with dissolve
 
         cl "*Chuckles*"
 
         scene v11caa15 # TPP. MC leaving the bar
         with dissolve
+        
+        pause 0.75
+        
         stop music fadeout 3
-        jump v11_riley_sex
+
+        if v11_riley_roomate:
+            jump v11_riley_sex
+        else:
+            jump v11_chloe_hotel_room_amber_call
 
     else:
         scene v11caa16 # FPP. looking at chloe, still sitted, mouth opened
@@ -353,7 +360,7 @@ label v11_bar_chloe_and_aubrey:
         scene v11caa19b # FPP. same as 19a, mouth opened
         with dissolve
 
-        bartender "Sure she is, A little advice? If you want a girl like her to stay, you might want to put a ring on it. That or give her a baby."
+        bartender "Sure she is... A little advice? If you want a girl like her to stay, you might want to put a ring on it. That or give her a baby."
 
         scene v11caa19a
         with dissolve
