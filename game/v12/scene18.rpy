@@ -775,6 +775,8 @@ label v12s18_bottlespin:
     scene v12slpbs12e # FPP. Same as v12slpbs12b, Chris talking on his phone, worried, mouth open
     with dissolve
 
+    stop sound
+
     ch "Hello?"
 
     scene v12slpbs12f # FPP. Same as v12slpbs12e, Chris worried, mouth closed

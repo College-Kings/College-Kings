@@ -24,6 +24,7 @@ label v12_penelope_call:
             scene v12pec2a # FPP. Same as v12pec2, show MC clicking to reject the call
             with dissolve
 
+            stop sound
             play sound "sounds/rejectcall.mp3"
 
             u "(If it's serious she'll call again or leave a message.)"
@@ -34,6 +35,7 @@ label v12_penelope_call:
             scene v12pec2b # FPP. Same as v11pec2, show MC clicking to accept the call
             with dissolve
 
+            stop sound
             play sound "sounds/answercall.mp3"
 
             pause 0.75
