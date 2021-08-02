@@ -20,17 +20,6 @@ label v12_penelope_call:
     with dissolve
 
     menu:
-        "Don't answer":
-            scene v12pec2a # FPP. Same as v12pec2, show MC clicking to reject the call
-            with dissolve
-
-            stop sound
-            play sound "sounds/rejectcall.mp3"
-
-            u "(If it's serious she'll call again or leave a message.)"
-
-            jump v12_roomate_talk
-
         "Answer":
             scene v12pec2b # FPP. Same as v11pec2, show MC clicking to accept the call
             with dissolve
@@ -220,3 +209,14 @@ label v12_penelope_call:
             pause 0.75
 
             jump v12_roomate_talk #scene 4
+            
+        "Don't answer":
+            scene v12pec2a # FPP. Same as v12pec2, show MC clicking to reject the call
+            with dissolve
+
+            stop sound
+            play sound "sounds/rejectcall.mp3"
+
+            u "(If it's serious she'll call again or leave a message.)"
+
+            jump v12_roomate_talk

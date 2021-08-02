@@ -873,6 +873,20 @@ label v12_lindsey_kiss_or_not:
     with dissolve
 
     menu:
+        "Kiss her":
+            scene v12esr30 # TPP. Show MC and Lindsey kissing
+            with dissolve
+
+            play sound "sounds/kiss.mp3"
+
+            if lindseyfirstkiss or kct == "popular" or len(v12s7_killList) >= 5:
+                if not lindseyfirstkiss and not len(v12s7_killList) >= 5:
+                    call screen kctPopup
+                jump v12_lindsey_sex
+            
+            else:
+                jump v12_after_sex
+                
         "Don't kiss her":
             scene v12esr29e
             with dissolve
@@ -896,20 +910,6 @@ label v12_lindsey_kiss_or_not:
 
             jump v12_after_sex
 
-        "Kiss her":
-            scene v12esr30 # TPP. Show MC and Lindsey kissing
-            with dissolve
-
-            play sound "sounds/kiss.mp3"
-
-            if lindseyfirstkiss or kct == "popular" or len(v12s7_killList) >= 5:
-                if not lindseyfirstkiss and not len(v12s7_killList) >= 5:
-                    call screen kctPopup
-                jump v12_lindsey_sex
-            
-            else:
-                jump v12_after_sex
-                
 label v12_lindsey_sex:
     $ v12_lindsey_sex = True
 
