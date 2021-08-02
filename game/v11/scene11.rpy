@@ -21,6 +21,11 @@ label v11_Amber_Penelope:
 
             am "This is exactly what I wanted to talk about..."
 
+            scene v11amp1
+            with dissolve
+            
+            pause 0.5
+
         "Don't tease her":
 
             scene v11amp1
@@ -163,7 +168,7 @@ label v11_Amber_Penelope:
         scene v11amp6 # FPP Show Amber walking away, towards boarding the plane
         with dissolve
 
-        pause 0.5
+        pause 0.75
 
         scene v11amp5a # FPP Same angle and expression as v11amp5, Penelope mouth closed
         with dissolve
@@ -243,7 +248,7 @@ label v11_Amber_Penelope:
                 scene v11amp9a # TPP Same angle as v11amp9, MC with his hand on Penelope's cheek, kissing her on the lips
                 with dissolve
 
-                pause 0.75
+                pause 1.75
                 
                 scene v11amp9b # TPP Same angle as v11amp9, MC still has hand on Penelope's cheek, pulling back after kiss, Penelope smiling
                 with dissolve
