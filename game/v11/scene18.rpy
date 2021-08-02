@@ -70,6 +70,8 @@ label v11_msrose_convo:
             scene v11roc5 # TPP. MC and Ms Rose are making out again, MC has his hands on her waist, pulling her close
             with dissolve
 
+            play sound "sounds/kiss.mp3"
+
             pause 0.75
 
             scene v11roc6 # TPP. MC and Ms Rose continue making out, change head positioning a bit compared to v11roc4, Ms Rose now has her arms wrapped around MC
@@ -91,7 +93,6 @@ label v11_msrose_convo:
             with dissolve
 
             ro "Let's go get everyone their keys."
-
 
     scene v11roc8 # TPP. Show MC walking back to the lobby with everyone else, he is smiling, mouth closed
     with dissolve
