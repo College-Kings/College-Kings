@@ -53,7 +53,6 @@ label v12_room_chloe_riley:
 
                 cl "Mhmm, sure. I'll be keeping my eyes on you."
 
-
             "Lie":
                 scene v12crm2 
                 with dissolve
