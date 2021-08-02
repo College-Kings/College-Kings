@@ -399,7 +399,6 @@ label v10_amber_skatepark:
                 show screen v10s26_amberSexOverlay
 
                 $ rough_rider = True
-                $ grantAchievement("rough_rider")
 
                 stop music fadeout 3
                 play music "music/v10/Scene 26/Track Scene 26_2.mp3" fadein 3
@@ -410,6 +409,7 @@ label v10_amber_skatepark:
                     scene v10ambbj # ignore
                     with dissolve
 
+                    $ grantAchievement("rough_rider")
                     u "Damn Amber!"
 
                     scene v10ambbj
