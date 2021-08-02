@@ -782,7 +782,6 @@ label continuez:
                         $ addPoint("tm")
                         $ onthelow = True
                         $ grantAchievement("on_the_low")
-                            
 
                         u "Sorry, but can we just make sure we're alone before we do stuff like that. I just feel uncomfortable even just kissing in public."
 
@@ -2155,7 +2154,6 @@ label continueaf:
                     $ addPoint("tm")
                     $ onthelow = True
                     $ grantAchievement("on_the_low")
-                        
 
                     u "Sorry, but can we just make sure we're alone before we do stuff like that. I just feel uncomfortable even just kissing in public."
 
@@ -3575,7 +3573,6 @@ label fl_a:  # tell the school
 
     $ snitch = True
     $ grantAchievement("snitch")
-
 
     u "(I need to tell the school, it's the only way to sort this out.)"
 

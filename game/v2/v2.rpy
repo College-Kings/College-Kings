@@ -1222,7 +1222,6 @@ label meet_lauren2:
                 $ anewbeginning = True
                 $ grantAchievement("a_new_beginning")
                     
-
                 la "Maybe you're right."
 
                 scene s130e
@@ -2112,7 +2111,6 @@ label bo_ad:
             $ overit = True
             $ grantAchievement("over_it")
                 
-
             u "Sure, knock yourself out, man. We're not an item."
 
             scene s148d

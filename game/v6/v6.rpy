@@ -259,7 +259,6 @@ label imrecona: # Find Imre
 label imreconb: # Help Imre
     $ brosbeforehoes = True
     $ grantAchievement("bros_before_hoes")
-        
 
     u "(I need to help Imre, Adam will destroy him in his current condition.)"
 
@@ -863,7 +862,6 @@ label imrecond: # Meet Chloe
             $ addPoint("bf")
             $ credulous = True
             $ grantAchievement("credulous")
-                
 
             u "(I shouldn't spy on her. It's not right.)"
 
@@ -1767,7 +1765,6 @@ label continuebd:
 
             $ notmybusiness = True
             $ grantAchievement("not_my_business")
-                
 
     label nr_bb: #for compatibility only
     u "(Huh, what's this?)"
@@ -2707,7 +2704,6 @@ label emsex_c:
 
     $ reignition = True
     $ grantAchievement("reignition")
-        
 
     " "
 
@@ -4856,7 +4852,6 @@ label afteraubrey:
 
                     $ monkeybusiness = True
                     $ grantAchievement("monkey_business")
-                        
 
                     gr "That's what I'm talking about!"
 
@@ -5003,7 +4998,6 @@ label afteraubrey:
             $ addPoint("bro")
             $ seemsfishy = True
             $ grantAchievement("seems_fishy")
-                
 
             u "(Fuck Grayson, I'm not meeting him.)"
 
@@ -6600,7 +6594,6 @@ label wakeupa:
                 $ strike = True
                 $ grantAchievement("strike")
                     
-
                 pe "*Giggles*"
 
                 u "That was nice..."
