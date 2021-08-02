@@ -22,6 +22,7 @@ label josh_calls_you:
 
         pause 0.5
 
+        stop sound
         play sound "sounds/answercall.mp3"
 
         scene v8sjc4 # TPP. Show MC stood up in his room on the phone to Josh, MC slightly confused expression, mouth open.
@@ -95,6 +96,7 @@ label josh_calls_you:
 
         pause 0.5
 
+        stop sound
         play sound "sounds/answercall.mp3"
 
         scene v8sjc10 # TPP. Show MC stood up in his room on the phone to Josh, MC slightly confused expression, mouth open.
