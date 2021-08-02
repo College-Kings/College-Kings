@@ -388,19 +388,36 @@ label v11_chloe_hotel_room_amber_call:
 
     if not v11_riley_roomate:
        
-        scene v11hrc20 # TPP. MC gets up from bed
+        scene v11ris7 # TPP. Show MC sitting up on his bed now, in his boxers, he is yawning and stretching (day)
         with dissolve
-
-        play sound "sounds/facepunch1.mp3"
 
         pause 0.75
 
-        scene v11hrc21 # TPP. MC looks toward the door
-        with dissolve
+        scene v11ris7a # TPP. Same cam as v11ris7, MC is startled, mouth closed, still sitting down, looking at the door to the hallway direction (day)
+        with vpunch
+
+        play sound "sounds/fall.mp3"
+
+        pause 0.75
 
         imre "GET THE FUCK OFF ME!"
 
-        scene v11hrc22 # TPP. MC runs to the hallway outside his room
+        scene v11ris8 # TPP. Show MC getting up from his bed, he is startled, mouth closed (day)
+        with dissolve
+
+        pause 0.75
+
+        scene v11ris9 # TPP. Show MC putting his shirt on (he already has pants on) (day)
+        with dissolve
+
+        pause 0.75
+
+        scene v11ris10 # TPP. Show MC opening the door to the hallway, he is startled, mouth closed (day)
+        with dissolve
+
+        pause 0.75
+
+        scene v11ris11 # TPP. Show MC looking down the hallway, very startled, mouth closed (day)
         with dissolve
 
         pause 0.75
