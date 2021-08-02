@@ -334,7 +334,7 @@ label v11s23_riley1:
     scene v11frmri2 # FPP Show Riley climbing under ropes to get to the triceratops
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11frmri2a # FPP Same angle as v11frmri2, Riley very close to triceratops skull, examining closely, mouth open
     with dissolve
@@ -507,10 +507,10 @@ label v11s23_riley1:
 
     u "You lost against Amber."
 
-    scene v11frmri3e # FPP Same angle as v11frmri3, Riley looking offended, mouth open
+    scene v11frmri3 # FPP Same angle as v11frmri3, Riley looking offended, mouth open
     with dissolve
 
-    ri "That was just one fight! And she played dirty... don't worry I'll get her back."
+    ri "That was just one fight! And she played dirty... don't worry, I'll get her back."
 
     scene v11frmri3a
     with dissolve
@@ -536,7 +536,7 @@ label v11s23_riley1:
             scene v11frmri3f # FPP Same angle as v11frmri3, Riley looking shocked with her mouth hanging open
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v11frmri5 # FPP Show Mr. Lee and Riley standing near triceratops, Mr. Lee with mouth open, Riley with an ashamed expression and mouth closed
             with dissolve
@@ -556,7 +556,7 @@ label v11s23_riley1:
             scene v11frmri4a # FPP Same angle as v11frmri4, Mr. Lee walking away
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v11frmri3e
             with dissolve
@@ -605,7 +605,7 @@ label v11s23_penelope1:
     scene v11frmpe1 # FPP Show Penelope starting to walk away from helmet exhibit right as MC goes to talk to her
     #with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11frmpe2 # TPP Show MC's hand grabbing Penelope's exactly like the first time they met
     with dissolve
@@ -615,7 +615,7 @@ label v11s23_penelope1:
     scene v11frmpe3 # FPP Show Penelope looking back and down at her and MC's hand, she's smiling with mouth closed
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11frmpe3a # FPP Same angle as v11frmpe3, Penelope looking at MC and smiling, mouth open
     with dissolve
@@ -700,7 +700,7 @@ label v11s23_penelope1:
     scene v11frmpe4 # TPP Show MC and Penelope looking around museum back hallways
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11frmpe6 # FPP View looking into a big supply closet from the doorway
     with dissolve
@@ -725,7 +725,7 @@ label v11s23_penelope1:
     scene v11frmpe9 # TPP Show MC sitting down on the closet floor next to Penelope
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11frmpe10 # FPP View of MC looking at Penelope, both sitting on closet floor. Penelope with neutral expression, mouth closed
     with dissolve
@@ -773,7 +773,7 @@ label v11s23_penelope1:
                 scene v11frmpe11 # TPP Show Penelope leaning over and kissing MC on the lips
                 with dissolve
 
-                pause 0.5
+                pause 0.75
 
                 scene v11frmpe10b
                 with dissolve
@@ -1042,12 +1042,12 @@ label v11s23_penelope1:
     scene v11frmpe12 # TPP Show MC and Penelope picking up as many bottles of water as they can carry
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11frmpe13 # TPP Show MC and Penelope carrying bottles of water into museum entrance hall
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11frmpe3a
     with dissolve
@@ -1146,7 +1146,7 @@ label v11s23_freeroamend:
             scene v11frm4 # TPP Show all characters in scene getting on to shuttle bus
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             # Transition to Scene 25
             jump v11_hotel_bar
@@ -1173,12 +1173,12 @@ label v11s23_freeroamend:
             scene v11frm5 # FPP Show Nora standing up and smiling at MC, mouth closed
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v11frm5a # FPP Same angle as v11frm5, Nora looking around the museum entrance hall
             with dissolve
         
-            pause 0.5
+            pause 0.75
 
             scene v11frm5b # FPP Same angle as v11frm5, Nora leaning close to MC, she's smiling with mouth open
             with dissolve
@@ -1203,7 +1203,7 @@ label v11s23_freeroamend:
             scene v11frm6 # TPP Show MC grabbing Nora's hand and pulling her toward the museum entrance
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v11frm7 # FPP Outside of museum on sidewalk, sun has just set, looking at Nora who is smiling with mouth closed
             with dissolve
@@ -1213,7 +1213,7 @@ label v11s23_freeroamend:
             scene v11frm8 # TPP Outside of museum on sidewalk, Nora giving MC a big hug, her body pressed against his
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v11frm7
             with dissolve
