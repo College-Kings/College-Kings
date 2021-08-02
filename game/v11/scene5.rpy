@@ -838,14 +838,14 @@ label v11s5_galleryScene:
     scene v11swc21a # TPP Same angle as v11swc21, Candy removing her clothing
     with dissolve
 
-    pause 0.5
+    pause 1.25
 
     scene v11swc21b # TPP Same angle as v11swc21, Candy, now naked, undressing MC
     with fade
 
     stop music fadeout 3
     play music "music/v11/Scene 5/Track Scene 5_6.mp3" fadein 2
-    pause 0.5
+    pause 1.25
 
     image v11cbj = Movie(play="images/v11/Scene 5/v11canbj.webm", loop=True, image="images/v11/Scene 5/v11canbjStart.webp", start_image="images/v11/Scene 5/v11canbjStart.webp") # FPP Candy giving MC a blowjob
     image v11cbjf = Movie(play="images/v11/Scene 5/v11canbjf.webm", loop=True, image="images/v11/Scene 5/v11canbjStart.webp", start_image="images/v11/Scene 5/v11canbjStart.webp")
@@ -991,6 +991,8 @@ label v11s5_galleryScene:
     with dissolve
 
     u "Oh fuck!"
+
+    play sound "sounds/slam.mp3"
 
     scene v11swc26a # FPP Same angle as v11swc26, Dennis kicking in bedroom door, looking angry with mouth open
     with dissolve
