@@ -132,7 +132,7 @@ label v12_paris_hotel:
 
     u "I don't even fuck with Charli enough to say hi to him. What makes you think I'd bother to have a full on conversation with him about one of my friends?"
 
-    if not v11_kiss_nora:
+    if v11_kiss_nora:
         scene v12pht7b
         with dissolve
 
