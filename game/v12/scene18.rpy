@@ -1323,7 +1323,7 @@ label v12s18_fmk:
             scene v12slpfmk4a
             with dissolve
 
-            am "Because his horse can't be tamed, baby."
+            am "Because this horse can't be tamed, baby."
 
     scene v12slpfmk5f
     with dissolve
