@@ -808,7 +808,7 @@ label v12_escape_room:
         scene v12esr29
         with dissolve
 
-        li "I'm sorry, now I feel bad. but... This is obviously the right thing to do."
+        li "I'm sorry, now I feel bad... This is obviously not the right thing to do."
 
         scene v12esr29e
         with dissolve
