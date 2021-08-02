@@ -5,7 +5,6 @@
 # Phone Images: 
 
 label v12s27:
-
     scene v12s27_1 #FPP, Imre walking towards mc, slightly outraged, mouth open
     with dissolve
 
@@ -19,7 +18,7 @@ label v12s27:
     scene v12s27_2b # same as 2, imre neutral expression, mouth open
     with dissolve
 
-    imre "Alright… Fair enough. What are you doing right now?"
+    imre "Alright... Fair enough. What are you doing right now?"
 
     scene v12s27_2c # same as 2b, mouth closed
     with dissolve
@@ -104,7 +103,7 @@ label v12s27:
     scene v12s27_4
     with dissolve
 
-    imre "I have no idea… You?"
+    imre "I have no idea... You?"
 
     scene v12s27_4a
     with dissolve
@@ -301,8 +300,6 @@ label v12s27:
 
     tattoo "Sounds good, go ahead and lie down."
 
-    
-
     scene v12s27_8 # FPP Imre on the tattoo chair , stiff face, in pain, tattoo artist starting tattoo on his chest. - tattoo is gonna be a cupcake with the words "ladies man" under it-
     with fade
 
@@ -421,7 +418,6 @@ label v12s27:
     with dissolve
 
     menu:
-
         "It's not that bad":
             $ addPoint ("bro")
             
@@ -477,7 +473,6 @@ label v12s27:
 
             u "*Chuckles* Okay."
 
-
         "Sorry man":
             $ addPoint ("bf")
             u "I'm sorry man, I know you don't like it but, at least you have a story to tell."
@@ -506,7 +501,6 @@ label v12s27:
             with dissolve
 
             imre "*Sighs* Whatever, dude Fuck off. *Laughs*"
-
 
 # -Regardless of choice scene continued
 

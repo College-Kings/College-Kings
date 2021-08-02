@@ -95,7 +95,7 @@ label v12_ms_rose_sex:
         scene v12msr2d # FPP. Same as v12msr2, Ms. Rose, slight smile, mouth open, caressing MC's cheek
         with dissolve
 
-        ro "Well you haven't been around me…"
+        ro "Well you haven't been around me..."
 
         scene v12msr2
         with dissolve
@@ -122,12 +122,12 @@ label v12_ms_rose_sex:
                 scene v12msr2c
                 with dissolve
 
-                u "Sorry, but… Not tonight. I'm just gonna stay in and get some extra sleep. I'll try to have a more fun-filled day tomorrow, haha."
+                u "Sorry, but... Not tonight. I'm just gonna stay in and get some extra sleep. I'll try to have a more fun-filled day tomorrow, haha."
 
                 scene v12msr2b
                 with dissolve
 
-                ro "Oh… That's too bad, but no worries. See you around."
+                ro "Oh... That's too bad, but no worries. See you around."
 
                 scene v12msr3
                 with dissolve
@@ -251,7 +251,7 @@ label v12_ms_rose_sex:
                 scene v12msr15 # FPP. MC standing in front of Ms. Rose, she's in front of the mirror, MC watching as Ms. Rose removes her top, Ms. Rose seductive look, mouth closed
                 with dissolve
 
-                u "Good… Fucking... God."
+                u "Good... Fucking... God."
 
                 scene v12msr15a # FPP. Same as v12msr15, Ms. Rose topless, seductive look, mouth open
                 with dissolve
@@ -293,7 +293,7 @@ label v12_ms_rose_sex:
                 with dissolve
                 pause
 
-                ro "Ahhh… Haha, definitely getting an A for this. Mmm..."
+                ro "Ahhh... Haha, definitely getting an A for this. Mmm..."
 
                 scene v12rosso2 # Ignore as animation
                 with dissolve
@@ -336,7 +336,7 @@ label v12_ms_rose_sex:
                 with dissolve
                 pause
 
-                ro "Fuck, [name]. I needed you so badly… You have no idea- Ah!"
+                ro "Fuck, [name]. I needed you so badly... You have no idea- Ah!"
 
                 scene v12rossm2f # Ignore as animation
                 with dissolve
@@ -370,13 +370,13 @@ label v12_ms_rose_sex:
                 with dissolve
                 pause
 
-                ro "F-f-fuckkkkk…"
+                ro "F-f-fuckkkkk..."
 
                 scene v12rossd2 # Ignore as animation
                 with dissolve
                 pause
 
-                u "Ah ah ah… We're not anywhere near being finished."
+                u "Ah ah ah... We're not anywhere near being finished."
 
                 scene v12rossd2f # Ignore as animation
                 with dissolve
@@ -398,17 +398,17 @@ label v12_ms_rose_sex:
                 with dissolve
                 pause
 
-                u "Fuck yes…"
+                u "Fuck yes..."
 
-                ro "I'm loving this... New side of you… [name]... Yes… Please! F-fuck..."
+                ro "I'm loving this... New side of you... [name]... Yes... Please! F-fuck..."
 
                 scene v12roshhf # Ignore as animation 
                 with dissolve
                 pause
 
-                u "You're… such… a fucking… slut!"
+                u "You're... such... a fucking... slut!"
 
-                ro "I... I-I am…"
+                ro "I... I-I am..."
 
                 scene v12roshh2 # Ignore as animation
                 with dissolve
@@ -416,15 +416,15 @@ label v12_ms_rose_sex:
 
                 ro "Fuck me, [name]... Fast... I'm going to c-"
 
-                ro "*Moans* Mmmnnhh… FUCK! *Gasps*"
+                ro "*Moans* Mmmnnhh... FUCK! *Gasps*"
 
                 scene v12roshh2f # Ignore as animation
                 with dissolve
                 pause
 
-                u "I'm… almost there! You're so… fuckiNG... HOT!"
+                u "I'm... almost there! You're so... fuckiNG... HOT!"
 
-                ro "Do it inside, [name]! Fill me up… Please… I..."
+                ro "Do it inside, [name]! Fill me up... Please... I..."
 
                 scene v12msr23 # TPP. Show MC cumming in Ms. Rose
                 with vpunch
@@ -450,7 +450,7 @@ label v12_ms_rose_sex:
                 scene v12msr27 # FPP. MC sitting down on the couch, Ms. Rose standing in front of him, still naked, Ms. Rose smiling, mouth closed
                 with dissolve
 
-                u "(Ho… ly... shit)"
+                u "(Ho... ly... shit)"
 
                 u "I don't know where all that energy came from..."
 
@@ -487,7 +487,7 @@ label v12_ms_rose_sex:
                 scene v12msr27
                 with dissolve
 
-                u "*Drowsy* I am starting to feel a little… Slower...."
+                u "*Drowsy* I am starting to feel a little... Slower...."
 
                 scene v12msr27a
                 with dissolve
@@ -497,7 +497,7 @@ label v12_ms_rose_sex:
                 scene v12msr27b # FPP. Same as v12msr27, screen blurry
                 with dissolve
 
-                u "I'm feeling… Really..."
+                u "I'm feeling... Really..."
 
                 scene black
                 with dissolve
@@ -524,12 +524,12 @@ label v12_ms_rose_sex:
                     scene v12msr30 # TPP. Same positioning as v12msr29, show Ms. Rose supporting MC, Ms. Rose slight smile, mouth open, looking at Chloe
                     with dissolve
 
-                    ro "Yes, honey… He was just drunk downstairs. *Chuckles*"
+                    ro "Yes, honey... He was just drunk downstairs. *Chuckles*"
 
                     scene v12msr29a # TPP. Same as v12msr29, Chloe slight smile, mouth open
                     with dissolve
 
-                    cl "Oh… Not surprised. I got him. *Chuckles* Thank you, Ms. Rose."
+                    cl "Oh... Not surprised. I got him. *Chuckles* Thank you, Ms. Rose."
 
                     scene v12msr30
                     with dissolve
@@ -560,7 +560,7 @@ label v12_ms_rose_sex:
                     scene v12msr30
                     with dissolve
 
-                    ro "No problem, really. You are on vacation after all… *Chuckles*"
+                    ro "No problem, really. You are on vacation after all... *Chuckles*"
 
                     scene v12msr31a # TPP. Same as v12msr31, Riley instead of Chloe
                     with dissolve

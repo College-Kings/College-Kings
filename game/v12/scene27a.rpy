@@ -69,7 +69,7 @@ label v12s27a:
     scene v12s27a_2c
     with dissolve
 
-    u "Oh no… What's that face for?"
+    u "Oh no... What's that face for?"
 
     scene v12s27a_2b
     with dissolve
@@ -99,7 +99,7 @@ label v12s27a:
     scene v12s27a_2c
     with dissolve
 
-    u "Okay… And? What is it?"
+    u "Okay... And? What is it?"
 
     scene v12s27a_2
     with dissolve
@@ -312,7 +312,7 @@ label v12s27a:
     scene v12s27a_6
     with dissolve
 
-    ry "I kinda backed myself into a corner and… Well, here I am."
+    ry "I kinda backed myself into a corner and... Well, here I am."
 
     scene v12s27a_5b
     with dissolve
@@ -339,7 +339,7 @@ label v12s27a:
     scene v12s27a_5b
     with dissolve
 
-    barber "I… I don't know why you're bringing up Apes, but... Please, sit down while I work wonders."
+    barber "I... I don't know why you're bringing up Apes, but... Please, sit down while I work wonders."
 
     scene v12s27a_7 #shows clock on barber wall: 4 pm
     with fade
@@ -368,13 +368,13 @@ label v12s27a:
 
     pause 0.7
 
-    u "Wowww!!! It's… Different. *Chuckles*"
+    u "Wowww!!! It's... Different. *Chuckles*"
 
     u "Let me just take some pictures for Kiwii..."
 
     
 
-### ERROR: KiwiiPost("MC", "Ryan sitting in chair at salon not facing the mirror with black hair", "#RoastedApe", numberLikes=469)### ERROR: kiwiiPost.newComment("Imre", "Holy shit... You make it way to easy, Ryan!", mentions=”Ryan”)### ERROR: kiwiiPost.newComment("Amber", "Haha, yes! That's what you get, moron…”, mentions="Ryan")### ERROR: kiwiiPost.addReply("Haha, an Ape doesn't back down!")### ERROR: kiwiiPost.addReply("Aw, come on guys! It doesn't look… that bad… Lmao")
+### ERROR: KiwiiPost("MC", "Ryan sitting in chair at salon not facing the mirror with black hair", "#RoastedApe", numberLikes=469)### ERROR: kiwiiPost.newComment("Imre", "Holy shit... You make it way to easy, Ryan!", mentions=”Ryan”)### ERROR: kiwiiPost.newComment("Amber", "Haha, yes! That's what you get, moron...”, mentions="Ryan")### ERROR: kiwiiPost.addReply("Haha, an Ape doesn't back down!")### ERROR: kiwiiPost.addReply("Aw, come on guys! It doesn't look... that bad... Lmao")
   
     scene v12s27a_8b # same as 8a, ryan mouth open, outraged, hiding his face behind his hands
     with dissolve
@@ -403,18 +403,18 @@ label v12s27a:
             scene v12s27a_8
             with dissolve
 
-            ry "*Sighs* I hope you're not just saying that…"
+            ry "*Sighs* I hope you're not just saying that..."
 
 
         "It's not your best look":
             $ addPoint("tm")
 
-            u "Well, honestly… It's not your best look, in my opinion."
+            u "Well, honestly... It's not your best look, in my opinion."
 
             scene v12s27a_8
             with dissolve
 
-            ry "*Sighs* Wow, thanks for the moral support, [name]. I feel great about it now…"
+            ry "*Sighs* Wow, thanks for the moral support, [name]. I feel great about it now..."
 
     scene v12s27a_9 #fpp, showing close up barber talking to Ryan (ryan is off-screen still in the barber chair), polite smile, mouth open
     with dissolve

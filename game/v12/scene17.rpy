@@ -1052,7 +1052,7 @@ label v12_lindsey_sex:
     with dissolve
     pause
 
-    u "Holy fucking christ! Lindsey,.."
+    u "Holy fucking christ! Lindsey..."
 
     scene v12linbjf # Ignore as animation
     with dissolve
