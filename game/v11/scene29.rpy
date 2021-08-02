@@ -449,7 +449,7 @@ label v11wakeupa:
 
     pause 0.75
     stop music fadeout 3
-    if laurenmad:
+    if v11_aubrey_sex and laurenrs:
         jump v11_lauren_apology
     else:
         jump v11_lauren_store
