@@ -174,7 +174,7 @@ label v12_lauren_sex:
     scene v12las14b # FPP. Same as v12las14, Lauren looking at MC, Lauren slight smile, mouth open
     with dissolve
 
-    la "Oh, haha...Thank you, you look very handsome as well. Sorry I took so long..."
+    la "Oh, haha... Thank you, you look very handsome as well. Sorry I took so long..."
 
     scene v12las14c # FPP. Same as v12las14b, Lauren slight smile, mouth closed
     with dissolve

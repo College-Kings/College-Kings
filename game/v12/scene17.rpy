@@ -610,7 +610,7 @@ label v12_escape_room:
     scene v12esr14g # FPP. Same as v12esr14e, Lindsey slight smile, mouth closed
     with dissolve
 
-    unknown "Being separated is a scary thing, but we can always find comfort in those we're left with. Huddle close to those next to you...It's about to get chilly."
+    unknown "Being separated is a scary thing, but we can always find comfort in those we're left with. Huddle close to those next to you... It's about to get chilly."
 
     scene v12esr14h # FPP. Same as v12esr14a, room light turned off, Lindsey slightly worried, mouth closed
     with dissolve

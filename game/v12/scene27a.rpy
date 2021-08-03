@@ -49,7 +49,7 @@ label v12s27a:
 
     ry "You're right, sorry."
 
-    ry "So...what have you got planned tonight?"
+    ry "So... what have you got planned tonight?"
 
     scene v12s27a_2f #same as 2c, Ryan neutral face, mouth closed
     with dissolve
@@ -109,8 +109,7 @@ label v12s27a:
     scene v12s27a_2a
     with dissolve
 
-
-    u "What made you come up with this? Like...Why black hair? *Chuckles*"
+    u "What made you come up with this? Like... Why black hair? *Chuckles*"
 
     scene v12s27a_2b
     with dissolve

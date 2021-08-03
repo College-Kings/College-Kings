@@ -221,7 +221,7 @@ label v12_ms_rose_sex:
                 scene v12msr10c # FPP. Same as v12msr10b, Ms. Rose drinking her wine
                 with dissolve
 
-                u "Mmm...This is the richest wine I've ever tasted. *Chuckles*"
+                u "Mmm... This is the richest wine I've ever tasted. *Chuckles*"
 
                 scene v12msr10d # FPP. Same as v12msr10c, Ms. Rose holding her glass, Ms. Rose slight smile, mouth open
                 with dissolve
