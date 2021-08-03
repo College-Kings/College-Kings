@@ -1,16 +1,25 @@
-init python: # test 69
+init python:
     achievements = []
 
     class Achievement:
-        def __init__(self, achieve, text, condition):
-            self.achieve = achieve
+        def __init__(self, _achievement, text):
+            """
+            Achievement data class for storing and managing the creation, syncing and managing of in-game achievements
+
+            Args:
+                _achievement (str): Programic name for the achievement
+                text (str): Short description of achievement
+            """
+            
+            self.achievement = _achievement
             self.text = text
-            self.condition = condition
+
+            self.display_name = _achievement.replace("_", " ")
 
             achievements.append(self)
 
             # Add achievements to renpy/steam
-            achievement.register(achieve.replace(" ", "_"))
+            achievement.register(_achievement)
             achievement.sync()
 
         def checkCondition(self):
@@ -18,14 +27,14 @@ init python: # test 69
 
 # ACHIEVEMENT ITEMS HERE
     # v1.0
-    Achievement("open_wound", "Tell off Emily", "openwound")
-    Achievement("no_hard_feelings", "Play nice with Emily", "nohardfeelings")
-    Achievement("keep_it_moving", "Hit on Nora", "keepitmoving")
-    Achievement("romeo", "Kiss Lauren", "romeo")
-    Achievement("big_mouth", "Threaten Cameron", "bigmouth")
+    Achievement("open_wound", "Tell off Emily")
+    Achievement("no_hard_feelings", "Play nice with Emily")
+    Achievement("keep_it_moving", "Hit on Nora")
+    Achievement("romeo", "Kiss Lauren")
+    Achievement("big_mouth", "Threaten Cameron")
 
     # v2.0
-    Achievement("mixed_feelings", "Decline Lauren", "mixedfeelings")
+    Achievement("mixed_feelings", "Decline Lauren")
     Achievement("the_notorious", "Win your first fight", "thenotorious")
     Achievement("a_new beginning", "Lauren likes you", "anewbeginning")
     Achievement("over_it", "Let Benjamin make a move", "overit")
@@ -65,11 +74,11 @@ init python: # test 69
     Achievement("homecoming_queen", "End homecoming with Chloe", "homecomingqueen")
     
     # v8.0
-    Achievement("thick_and_thin", "Help Penelope", "thick_and_thin")
-    Achievement("text_with_an_s", "Return to sender", "text_with_an_s")
-    Achievement("lucky_7", "Flashing lights at the arcade", "lucky_7")
+    Achievement("thick_and_thin", "Help Penelope")
+    Achievement("text_with_an_s", "Return to sender")
+    Achievement("lucky_7", "Flashing lights at the arcade")
     Achievement("ip_man", "Win The Alley Fight", "ip_man")
-    Achievement("get_a_room", "Stay With Amber at Josh's", "get_a_room")
+    Achievement("get_a_room", "Stay With Amber at Josh's")
     Achievement("helping_hand", "Help Nora hand out flyers for the trip", "helping_hand")
     Achievement("up_for_more", "Flirt With Chloe", "up_for_more")
 
@@ -82,7 +91,7 @@ init python: # test 69
     Achievement("the_wrong_time", "Don't kiss Lindsey", "the_wrong_time")
 
     # v10.0
-    Achievement("lights_out", "Beat Ryan on Hard difficulty at the Brawl", "lights_out")
+    Achievement("lights_out", "Beat Ryan on Hard difficulty at the Brawl")
     Achievement("fright_club", "Don't fight Ryan at the Brawl", "fright_club")
     Achievement("golden_boy", "Beat Imre on Hard difficulty at the Brawl", "golden_boy")
     Achievement("bros_before_blows", "Don't fight Imre at the Brawl", "bros_before_blows")
