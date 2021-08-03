@@ -2770,7 +2770,6 @@ label aw_bd:
 
                 $ romeo = True
                 $ grantAchievement("romeo")
-                    
 
                 play sound "sounds/kiss.mp3"
 
@@ -3481,7 +3480,6 @@ label v1_freeRoam2_mason:
             $ bigmouth = True
             $ grantAchievement("big_mouth")
                 
-
             u "Yeah, he better watch out, or I'll kick his ass."
 
             u "(Yeah [name], that seems like a brilliant thing to say about a hyper-aggressive idiot that prides himself in his fighting skills.)"

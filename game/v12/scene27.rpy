@@ -5,7 +5,6 @@
 # Phone Images: 
 
 label v12s27:
-
     scene v12s27_1 #FPP, Imre walking towards mc, slightly outraged, mouth open
     with dissolve
 
@@ -19,7 +18,7 @@ label v12s27:
     scene v12s27_2b # same as 2, imre neutral expression, mouth open
     with dissolve
 
-    imre "Alright… Fair enough. What are you doing right now?"
+    imre "Alright... Fair enough. What are you doing right now?"
 
     scene v12s27_2c # same as 2b, mouth closed
     with dissolve
@@ -59,7 +58,7 @@ label v12s27:
     scene v12s27_2e
     with dissolve
 
-    u "Are you sure you're not drunk? *Chuckles* I think they make sure you aren’t drunk before they start buzzin’."
+    u "Are you sure you're not drunk? *Chuckles* I think they make sure you aren't drunk before they start buzzin'."
 
     scene v12s27_2d
     with dissolve
@@ -99,12 +98,12 @@ label v12s27:
     scene v12s27_4a # same as 4, mouth closed
     with dissolve
 
-    u "You know what you’re gonna get?"
+    u "You know what you're gonna get?"
 
     scene v12s27_4
     with dissolve
 
-    imre "I have no idea… You?"
+    imre "I have no idea... You?"
 
     scene v12s27_4a
     with dissolve
@@ -144,7 +143,7 @@ label v12s27:
     scene v12s27_6
     with dissolve
 
-    tattoo "Not many, you’d be surprised."
+    tattoo "Not many, you'd be surprised."
 
     scene v12s27_6a # same as 6, mouth closed
     with dissolve
@@ -235,7 +234,7 @@ label v12s27:
     scene v12s27_7
     with dissolve
 
-    imre "C’mon bro! Tell her something good, like how I'm a ladies man."
+    imre "C'mon bro! Tell her something good, like how I'm a ladies man."
 
     scene v12s27_6b
     with dissolve
@@ -254,12 +253,12 @@ label v12s27:
 
     imre "I always see this crazy teacher we have, named Mr. Lee, pulling him aside."
     
-    imre "Not only that, we played a “murder mystery” game or whatever, and he chose [Name] here to be the murderer, but made me play some other dude’s wife."
+    imre "Not only that, we played a \"murder mystery\" game or whatever, and he chose [name] here to be the murderer, but made me play some other dude's wife."
 
     scene v12s27_7e # same as 7d, mouth closed
     with dissolve
 
-    u "*Laughs* Don't be mad at me just because I'm Mr. Lee’s favorite and you're not."
+    u "*Laughs* Don't be mad at me just because I'm Mr. Lee's favorite and you're not."
 
     scene v12s27_6
     with dissolve
@@ -300,8 +299,6 @@ label v12s27:
     with dissolve
 
     tattoo "Sounds good, go ahead and lie down."
-
-    
 
     scene v12s27_8 # FPP Imre on the tattoo chair , stiff face, in pain, tattoo artist starting tattoo on his chest. - tattoo is gonna be a cupcake with the words "ladies man" under it-
     with fade
@@ -350,7 +347,7 @@ label v12s27:
     scene v12s27_11 #FPP show's tattoo artist looking at imre (who's off-screen), laughing smile, mouth open
     with dissolve
 
-    tattoo "It's your “ladies man” tattoo."
+    tattoo "It's your \"ladies man\" tattoo."
 
     scene v12s27_10b
     with dissolve
@@ -421,7 +418,6 @@ label v12s27:
     with dissolve
 
     menu:
-
         "It's not that bad":
             $ addPoint ("bro")
             
@@ -470,13 +466,12 @@ label v12s27:
             scene v12s27_16d
             with dissolve
 
-            imre "Let's not look towards the past, [Name]."
+            imre "Let's not look towards the past, [name]."
 
             scene v12s27_16e
             with dissolve
 
             u "*Chuckles* Okay."
-
 
         "Sorry man":
             $ addPoint ("bf")
@@ -506,7 +501,6 @@ label v12s27:
             with dissolve
 
             imre "*Sighs* Whatever, dude Fuck off. *Laughs*"
-
 
 # -Regardless of choice scene continued
 

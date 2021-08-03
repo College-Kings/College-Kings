@@ -753,13 +753,18 @@ label v11_riley_sex:
                 scene v11ris30 # TPP. Show MC and Riley sleeping together
                 with dissolve
 
-                pause 0.75
+                pause 1.25
 
                 scene v11ris31 # MC and Riley sleeping together, different pose to v11ris28
                 with dissolve
 
-                pause 0.75
+                pause 1.25
 
+                scene black
+                with fade
+                
+                pause 2
+                
                 scene black
                 with vpunch
 

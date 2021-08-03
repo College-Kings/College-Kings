@@ -752,7 +752,6 @@ label v4start:
             $ relightthefire = True
             $ grantAchievement("relight_the_fire")
                 
-
             ju "Emily? I thought you guys broke up?"
 
             hide s316c
@@ -953,7 +952,6 @@ label v4start:
                     $ volleyball = True
                     $ rematch = True
                     $ grantAchievement("rematch")
-                        
 
                     u "Yeah, you're right. Maybe I could give it to her when we talk about what Ryan said."
 
@@ -1700,7 +1698,6 @@ label readmontagea:
 
                 $ keeneye = True
                 $ grantAchievement("keen_eye")
-                    
 
                 u "Can I get a muffin and a coffee please?"
 

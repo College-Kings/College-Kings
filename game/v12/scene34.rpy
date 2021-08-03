@@ -45,7 +45,7 @@ label v12_amber_after_spa:
         scene v12ams4 # FPP. MC and Amber inside sauna looking at each other, Amber slight smile, mouth closed
         with dissolve
 
-        u "*Chuckles* Come on… Just having a little fun, Amber."
+        u "*Chuckles* Come on... Just having a little fun, Amber."
 
         scene v12ams4a # FPP. Same as v12ams4, Amber slight smile, mouth open
         with dissolve
@@ -190,7 +190,7 @@ label v12_amber_after_spa:
         scene v12ams13 # FPP. Same positioning as v12ams12, MC looking at Aubrey, Aubrey looking at MC, Aubrey smiling, mouth open
         with dissolve
 
-        au "Good thing I didn't keep teasing her. *Chuckles* It’s better that you get fucked up than me."
+        au "Good thing I didn't keep teasing her. *Chuckles* It's better that you get fucked up than me."
 
         scene v12ams13a # FPP. Same as v12ams13, Aubrey smiling, mouth closed
         with dissolve
@@ -205,7 +205,7 @@ label v12_amber_after_spa:
         scene v12ams12a
         with dissolve
 
-        u "Fuck… I’m gonna head up to my room."
+        u "Fuck... I'm gonna head up to my room."
 
         scene v12ams13
         with dissolve

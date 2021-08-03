@@ -93,57 +93,6 @@ label v11_riley_amber_smoking:
     with dissolve
 
     menu:
-        "Don't join":
-            scene v11ras5b # FPP. Same as v11ras5, Amber slightly disappointed, mouth closed, different pose
-            with dissolve
-
-            u "Yeah, I don't know... Sorry guys. I'm just not in the smoking mood."
-
-            scene v11ras5c # FPP. Same as v11ras5b, Amber slightly disappointed, mouth open
-            with dissolve
-
-            am "*Sighs* Just when I was starting to think you weren't lame."
-
-            scene v11ras4b # FPP. Same as v11ras4, Riley slight smile, mouth open, different pose
-            with dissolve
-
-            ri "Haha, don't peer pressure him by being mean. It's fine, [name]. Amber tried forcing me too, except I actually caved. *Chuckles*"
-
-            scene v11ras4c # FPP. Same as v11ras4b, Riley mouth open, slight smile
-            with dissolve
-
-            u "Haha."
-
-            scene v11ras6 # TPP. Show MC getting out of the girls' bed, MC tired, mouth closed, the girls smiling, mouth closed
-            with dissolve
-
-            pause 0.75
-
-            scene v11ras7 # TPP. Show MC getting in his own bed, tired, mouth closed
-            with dissolve
-
-            pause 0.75
-
-            scene v11ras8 # FPP. MC lying in his own bed, looking at Amber and Riley, the girls looking at him, both their mouths closed, smiling
-            with dissolve
-
-            u "Just shut the light off when you're done, yeah?"
-
-            scene v11ras9 # TPP. Show MC sleeping in his bed (light on)
-            with dissolve
-
-            pause 0.75
-
-            scene v11ras9a # TPP. Same as v11ras9, different pose (light on)
-            with dissolve
-
-            pause 0.75
-
-            scene v11ras9b # TPP Same as v11ras9a, different pose (light off)
-            with dissolve
-
-            pause 0.75
-
         "Join them":
             scene v11ras5a
             with dissolve
@@ -418,6 +367,57 @@ label v11_riley_amber_smoking:
             pause 0.75
 
             scene v11ras9b 
+            with dissolve
+
+            pause 0.75
+
+        "Don't join":
+            scene v11ras5b # FPP. Same as v11ras5, Amber slightly disappointed, mouth closed, different pose
+            with dissolve
+
+            u "Yeah, I don't know... Sorry guys. I'm just not in the smoking mood."
+
+            scene v11ras5c # FPP. Same as v11ras5b, Amber slightly disappointed, mouth open
+            with dissolve
+
+            am "*Sighs* Just when I was starting to think you weren't lame."
+
+            scene v11ras4b # FPP. Same as v11ras4, Riley slight smile, mouth open, different pose
+            with dissolve
+
+            ri "Haha, don't peer pressure him by being mean. It's fine, [name]. Amber tried forcing me too, except I actually caved. *Chuckles*"
+
+            scene v11ras4c # FPP. Same as v11ras4b, Riley mouth open, slight smile
+            with dissolve
+
+            u "Haha."
+
+            scene v11ras6 # TPP. Show MC getting out of the girls' bed, MC tired, mouth closed, the girls smiling, mouth closed
+            with dissolve
+
+            pause 0.75
+
+            scene v11ras7 # TPP. Show MC getting in his own bed, tired, mouth closed
+            with dissolve
+
+            pause 0.75
+
+            scene v11ras8 # FPP. MC lying in his own bed, looking at Amber and Riley, the girls looking at him, both their mouths closed, smiling
+            with dissolve
+
+            u "Just shut the light off when you're done, yeah?"
+
+            scene v11ras9 # TPP. Show MC sleeping in his bed (light on)
+            with dissolve
+
+            pause 0.75
+
+            scene v11ras9a # TPP. Same as v11ras9, different pose (light on)
+            with dissolve
+
+            pause 0.75
+
+            scene v11ras9b # TPP Same as v11ras9a, different pose (light off)
             with dissolve
 
             pause 0.75

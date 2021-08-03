@@ -71,7 +71,7 @@ label v12s33:
     scene v12s33_4b # same as 4, lindsey looking at mc (into the camera), slight smile, mouth open
     with dissolve
 
-    li "I said not to 'cause I thought what you guys were doing was important.Plus, I know Aubrey doesn't see her sister often. I didn't wanna disturb that, but you guys came just in time."
+    li "I said not to 'cause I thought what you guys were doing was important. Plus, I know Aubrey doesn't see her sister often. I didn't wanna disturb that, but you guys came just in time."
     li "I don't know how long I could've held them off. *Chuckles*"
 
     scene v12s33_3b # same as 3, smiling, mouth open
@@ -99,7 +99,7 @@ label v12s33:
     scene v12s33_5
     with dissolve
 
-    lee "Yes, thank you… Anyways... Once inside, you'll change into what makes you feel comfortable and wrap yourself in a towel."
+    lee "Yes, thank you... Anyways... Once inside, you'll change into what makes you feel comfortable and wrap yourself in a towel."
     lee "Some insisted on being nude underneath their towel and though I heavily advised against it, Ms. Rose has approved, so take that as you will."
 
     scene v12s33_3d # same as 3, aubrey looking at Mr lee (off screen) smiling, mouth open
@@ -115,7 +115,7 @@ label v12s33:
     scene v12s33_3d
     with dissolve
 
-    au "Definitely going nude… *Laughs*"
+    au "Definitely going nude... *Laughs*"
 
     scene v12s33_5b
     with dissolve
@@ -147,7 +147,7 @@ label v12s33:
     scene v12s33_4b
     with dissolve
 
-    li "He's starting to get a little irritated, but I think it's because he’s getting homesick. He's starting to miss his wife; I heard him say it to Ms. Rose."
+    li "He's starting to get a little irritated, but I think it's because he's getting homesick. He's starting to miss his wife; I heard him say it to Ms. Rose."
     li "I think the church thing kinda hit home for him."
 
     scene v12s33_4c # same as 4b, mouth closed
@@ -270,7 +270,7 @@ label v12s33:
     scene v12s33_14
     with dissolve
 
-    lee "The only woman's hands I care for are my wife’s."
+    lee "The only woman's hands I care for are my wife's."
 
     scene v12s33_15 # TPP same view as for Imre and Mr Lee, but for Chris 
     with dissolve
@@ -323,7 +323,7 @@ label v12s33:
 
     scene v12s33_19 # shows Male masseuse, massaging Imre's lower back
     with dissolve
-    imre "Damn girl, you got some strong ass hands... Ohhhh yeahhhh…"
+    imre "Damn girl, you got some strong ass hands... Ohhhh yeahhhh..."
 
 
     scene v12s33_14a # same as 14, but mr Lee's head looking at Imre (off screen), laughing mouth open
@@ -333,7 +333,7 @@ label v12s33:
     scene v12s33_13
     with dissolve
 
-    imre "I wonder what’s going on in the sauna right now."
+    imre "I wonder what's going on in the sauna right now."
 
     scene v12s33_16
     with dissolve
@@ -348,12 +348,12 @@ label v12s33:
     scene v12s33_16
     with dissolve
 
-    u "Uhh, like… Over a hundred degrees, I know that much."
+    u "Uhh, like... Over a hundred degrees, I know that much."
 
     scene v12s33_13
     with dissolve
 
-    imre "Shit, that sounds kinda nice... I bet the girls are all sweaty in there. I may have to stop by… *Chuckles*"
+    imre "Shit, that sounds kinda nice... I bet the girls are all sweaty in there. I may have to stop by... *Chuckles*"
 
     scene v12s33_14
     with dissolve
@@ -429,7 +429,7 @@ label v12s33:
 
     lee "I most certainly-"
 
-    scene v12s33_21a  # same as 21, the man masseuse cracks Mr. Lee's back hard with his elbow just as he did Imre-
+    scene v12s33_21a # same as 21, the man masseuse cracks Mr. Lee's back hard with his elbow just as he did Imre-
     with dissolve
 
     "*Crack*"
@@ -458,7 +458,7 @@ label v12s33:
 
     "*Crack*"
 
-    lee "AGH! Oh… Oh no, I can't move my neck."
+    lee "AGH! Oh... Oh no, I can't move my neck."
 
     mmass "Allow me to finish, sir."
 
@@ -476,7 +476,7 @@ label v12s33:
     scene v12s33_13
     with dissolve
 
-    imre "You don't look it… *Laughs*"
+    imre "You don't look it... *Laughs*"
 
     scene v12s33_14
     with dissolve
@@ -516,7 +516,7 @@ label v12s33:
     scene v12s33_22
     with dissolve
 
-    lmass "Haha, right… I'd love to, but I need to finish off with your friend."
+    lmass "Haha, right... I'd love to, but I need to finish off with your friend."
 
     scene v12s33_13
     with dissolve
@@ -536,7 +536,7 @@ label v12s33:
     scene v12s33_16
     with dissolve
 
-    u "*Laughs* Oh shit… Haha!"
+    u "*Laughs* Oh shit... Haha!"
 
     scene v12s33_15
     with dissolve
@@ -584,7 +584,7 @@ label v12s33:
 
     jump v12s33_sauna
 
-label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massage
+label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massage
     scene v12s33_16
     with dissolve
 
@@ -603,7 +603,7 @@ label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massa
     scene v12s33_14
     with dissolve
 
-    lee "Please, [Name], just go."
+    lee "Please, [name], just go."
 
     scene v12s33_26 # TPP shows mc walking off away from the massage tables (towards the saunas)
     with dissolve
@@ -616,7 +616,7 @@ label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massa
 
     $ v12s33_door1 = True
 
-    scene v12s33_27   # -FPP Ms. Rose, Lauren, Nora, and Riley sitting in the Sauna, all in towels, none of them looking at him, ideally show them sweating if possible-
+    scene v12s33_27 # -FPP Ms. Rose, Lauren, Nora, and Riley sitting in the Sauna, all in towels, none of them looking at him, ideally show them sweating if possible-
     with dissolve 
 
     u "*Whistles*"
@@ -686,7 +686,7 @@ label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massa
     scene v12s33_30c # same as 30b, mouth closed
     with dissolve
 
-    u "Sheesh… You guys are sweating pretty bad!"
+    u "Sheesh... You guys are sweating pretty bad!"
 
     scene v12s33_29b
     with dissolve
@@ -753,12 +753,12 @@ label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massa
 
         "Not at all":
             $ addPoint ("bro")
-            u "Not at all, you can talk about me all you want. I like knowing I'm on your mind… *Chuckles*"
+            u "Not at all, you can talk about me all you want. I like knowing I'm on your mind... *Chuckles*"
 
             scene v12s33_30f # same as 30b , chloe flirty, mouth open
             with dissolve
 
-            cl "Ha… Is that so?"
+            cl "Ha... Is that so?"
 
             scene v12s33_30g # same as 30f, mouth closed
             with dissolve
@@ -778,15 +778,15 @@ label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massa
             scene v12s33_30f
             with dissolve
 
-            cl "I'm being as careful as I wanna be… *Chuckles*"
+            cl "I'm being as careful as I wanna be... *Chuckles*"
 
             scene v12s33_30g
             with dissolve
 
-            u "Haha, alright… Noted."
+            u "Haha, alright... Noted."
 
 
-        "Yes, haha.":
+        "Yes, haha":
             $ addPoint ("bf")
 
             u "Yes, haha. Who knows what kind of crazy theories you girls may be coming up with?"
@@ -814,12 +814,12 @@ label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massa
     scene v12s33_30b
     with dissolve
 
-    cl "Unless you wanna end up getting caught, you may wanna get out of here. I don’t think there's much time left."
+    cl "Unless you wanna end up getting caught, you may wanna get out of here. I don't think there's much time left."
 
     scene v12s33_30c
     with dissolve
 
-    u "You’re right, see you around ladies!"
+    u "You're right, see you around ladies!"
 
     scene v12s33_29b
     with dissolve
@@ -876,7 +876,7 @@ label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massa
     scene v12s33_34a
     with dissolve
 
-    u "Ooooh… Yeah, I know all about that."
+    u "Ooooh... Yeah, I know all about that."
 
     scene v12s33_34
     with dissolve
@@ -886,12 +886,12 @@ label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massa
     scene v12s33_35a #FPP close up , lindsey, looking at mc , genuine smile, mouth closed
     with dissolve
 
-    u "Wow, Lindsey… Really?"
+    u "Wow, Lindsey... Really?"
 
     scene v12s33_35 # same as 35a, mouth open
     with dissolve
 
-    li "Ha… Yeah, one of the girls has been doing some polling for me."
+    li "Ha... Yeah, one of the girls has been doing some polling for me."
 
     li "Some girls are still on the fence, but it's looking really good for me so far."
 
@@ -934,7 +934,7 @@ label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massa
     scene v12s33_34d
     with dissolve
 
-    am "Haha… Guilty."
+    am "Haha... Guilty."
 
     scene v12s33_34e # same as 34d, mouth closed
     with dissolve
@@ -944,12 +944,12 @@ label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massa
     scene v12s33_35
     with dissolve
 
-    li "[Name], you may wanna step out before you get caught. *Chuckles*"
+    li "[name], you may wanna step out before you get caught. *Chuckles*"
 
     scene v12s33_35a
     with dissolve
 
-    u "*Shocked* You’re kicking me out? Am I that boring you? Wow..."
+    u "*Shocked* You're kicking me out? Am I that boring you? Wow..."
 
     scene v12s33_35
     with dissolve
@@ -971,7 +971,7 @@ label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massa
         scene v12s33_33
         with dissolve
 
-        pe "Bye, [Name]!"
+        pe "Bye, [name]!"
 
     call screen v12s33_three_doors
 
@@ -980,7 +980,7 @@ label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massa
     scene v12s33_20
     with dissolve
 
-    ry "Fuck’s sake… Took you long enough."
+    ry "Fuck's sake... Took you long enough."
 
     u "It's not my fault you don't take man shits like I do. *Laughs*"
 
@@ -996,7 +996,7 @@ label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massa
     scene v12s33_13
     with dissolve
 
-    imre "Next time [name], but thank you. I got a nice massage from the hotshot while you were gone, and let me just say… Those hands are silky smooth."
+    imre "Next time [name], but thank you. I got a nice massage from the hotshot while you were gone, and let me just say... Those hands are silky smooth."
 
     lmass "*Sighs*"
 
@@ -1052,7 +1052,7 @@ label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massa
     scene v12s33_38
     with dissolve
 
-    lee "You know... Blunty? As much as you little rats annoy me, you're still like the sons I never had. It makes me happy to see that you’re having a good time."
+    lee "You know... Blunty? As much as you little rats annoy me, you're still like the sons I never had. It makes me happy to see that you're having a good time."
 
     scene v12s33_40
     with dissolve
@@ -1077,7 +1077,7 @@ label v12s33_sneak_off1:  # -If Mc presses the Sneak Off button during the massa
     scene v12s33_38
     with dissolve
 
-    lee "That'll count as one. *Chuckles* Let’s go back to silently relaxing, boys."
+    lee "That'll count as one. *Chuckles* Let's go back to silently relaxing, boys."
 
     scene v12s33_41 # close up show clock inside sauna at 16:15
     with dissolve
@@ -1146,7 +1146,7 @@ label v12s33_sneak_off2:
     scene v12s33_36b
     with dissolve
 
-    imre "You’re just going to see the girls, aren't you?"
+    imre "You're just going to see the girls, aren't you?"
 
     scene v12s33_40b
     with dissolve
@@ -1171,7 +1171,7 @@ label v12s33_sneak_off2:
     scene v12s33_42 # tpp mc walking out of the sauna, (camera from the inside of the sauna) mouth open, smiling
     with dissolve
 
-    u "Ha, alright then… I'll be back."
+    u "Ha, alright then... I'll be back."
 
     scene v12s33_43 # TPP show mc crouching looking at the massage tables, where 5 girls are laying on. In this order (closest to mc first): Amber, Nora, Lindsey, Ms Rose, Chloe. They should be somewhat naked as you would be on a massage table, don't show the whole room as a lot of girls are missing.
     with fade
@@ -1294,4 +1294,4 @@ label v12s33_sneak_off2:
 
 label v12s33_after_sauna:
 
-    jump mexico34 #scene 34
+    jump v12_amber_after_spa #scene 34

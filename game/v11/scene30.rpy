@@ -188,12 +188,12 @@ label v11_lauren_store:
     scene v11las9 # TPP. Show MC and Lauren walking in the building door, Lauren smiling, mouth closed, MC surprised, mouth open (but not talking, mouth open from the surprise)
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11las10 # TPP. Show MC and Lauren from behind, standing next to each other, 4 tables in shot, one has the judges sitting down, one is empty, the one to the right of MC's seat on the empty table has Jerry sitting down, add other people in the other tables (max 2 per table)
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11las11 # FPP. MC and Lauren standing next to each other, same positioning as v11las10, looking at each other, Lauren slight smile, mouth closed
     with dissolve
@@ -991,11 +991,11 @@ label v11_quiz_bonus:
 
     if v11_hp_points == 3:
         $ earn_your_owl = True
-        $ grantAchievement("earn_your_owl")
 
     scene v11las19e
     with dissolve
 
+    $ grantAchievement("earn_your_owl")
     jud "For the first time in a very stressful two months, Jerry you have lost. Congratulations Team Hufflepuff!"
 
     scene v11las17h

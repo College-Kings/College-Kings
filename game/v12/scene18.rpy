@@ -775,6 +775,8 @@ label v12s18_bottlespin:
     scene v12slpbs12e # FPP. Same as v12slpbs12b, Chris talking on his phone, worried, mouth open
     with dissolve
 
+    stop sound
+
     ch "Hello?"
 
     scene v12slpbs12f # FPP. Same as v12slpbs12e, Chris worried, mouth closed
@@ -1321,7 +1323,7 @@ label v12s18_fmk:
             scene v12slpfmk4a
             with dissolve
 
-            am "Because his horse can't be tamed, baby."
+            am "Because this horse can't be tamed, baby."
 
     scene v12slpfmk5f
     with dissolve

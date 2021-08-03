@@ -8,6 +8,8 @@ label v11_cafe_with_riley:
     if joinwolves:
         scene v11s3bris1 # TPP. Show MC talking on his phone in his wolves bedroom, sat on the bed, mouth open
         with dissolve
+
+        stop sound
         u "Hello?"
 
         scene v11s3bris2 # TPP. Show Riley sat in the café, phone to side of head, mouth open
@@ -396,7 +398,7 @@ label v11_cafe_with_riley:
     scene v11s3bris9f
     with dissolve
 
-    ri "*Laughs* I'm gonna get on out of here.And now that I think about it, flying is the last thing on my mind, so thank you."
+    ri "*Laughs* I'm gonna get on out of here. And now that I think about it, flying is the last thing on my mind, so thank you."
 
     scene v11s3bris9e
     with dissolve

@@ -82,6 +82,10 @@ label v11_thurs_night_room:
         $ contact_Riley.addReply("It's fine, gn.")
         $ contact_Riley.newMessage("Goodnight")
 
+        u "(Actually, I should text Riley real quick and see if she wants to go to that thing tomorrow.)"
+
+        #-MC gets out his phone and text Riley-
+
         label v11s6_PhoneContinue1:
             if contact_Riley.getReplies():
                 call screen phone

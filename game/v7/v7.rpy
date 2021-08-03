@@ -474,8 +474,7 @@ label v7start:
 
                 $ truetoself = True
                 $ grantAchievement("true_to_self")
-                    
-
+                
                 u "Uhh, yeah of course."
 
                 scene s683b # Riley smiling
@@ -3514,7 +3513,6 @@ label afterbeach:
 
                 $ silverback = True
                 $ grantAchievement("silverback")
-                    
 
                 u "(Fuck it. I'm gonna be winner, no matter what it costs. I'ma go to the Apes' house and tell Grayson I changed my mind.)"
 
@@ -16991,7 +16989,6 @@ label fr4laurenending:
 
     $ slowandsteady = True
     $ grantAchievement("slow_and_steady")
-        
 
     la "I read that... if you cuddle in your underwear it increases the serotonin levels in your brain, which in turns means you live a longer, happier life."
 
@@ -17142,7 +17139,6 @@ label fr4rileyending2:
     $ playingwithfire = True
     $ grantAchievement("playing_with_fire")
         
-
     ri "Sit down with me for a second."
 
     scene sfr4ri57b #mc walks towards her
@@ -17250,7 +17246,6 @@ label fr4chloeending:
 
     $ homecomingqueen = True
     $ grantAchievement("homecoming_queen")
-        
 
     u "So this is your infamous room?"
 

@@ -1158,7 +1158,6 @@ label v10s33_chloe1:
                 $ chloeLike += 1
                 $ v10s33_toldChloe = True
                 $ chloe_over_nora = True
-                $ grantAchievement("hard_decisions")
                 scene v10cfrcl1c # FPP. same1,slight angry look, closed
                 with dissolve
 
@@ -1172,6 +1171,7 @@ label v10s33_chloe1:
                 scene v10cfrcl1c
                 with dissolve
 
+                $ grantAchievement("hard_decisions")
                 u "She said a lot, but to sum up everything, she called you fake. Said you do a bunch of pretending for sympathy points from people."
 
                 scene v10cfrcl1d # FPP. same1,slight angry look,  mouth open

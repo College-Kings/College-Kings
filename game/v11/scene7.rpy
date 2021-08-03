@@ -18,6 +18,8 @@ label v11_room_aubrey_shopping:
 
         u "(What is that?)"
 
+        stop sound
+
         scene v11auw1a # TPP. Same cam as v11auw1, Show MC standing up next to his bed, looking at the window, he is walking, has a startled expression (New Wolves room)
         with dissolve
 
@@ -35,6 +37,8 @@ label v11_room_aubrey_shopping:
         with dissolve
 
         u "(What is that?)"
+
+        stop sound
 
         scene v11auw3a # TPP. Same cam as v11auw3, Show MC standing up next to his bed, looking at the window, he is walking, has a startled expression (Apes room)
         with dissolve
