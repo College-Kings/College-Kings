@@ -508,7 +508,7 @@ label no_int_deal_w_josh:
     scene v8sdd25 # FPP. Show Joe and Lars staring at Josh, Joe chuckling sardonically, Joe looking angry. Joe mouth open.
     with dissolve
 
-    je "No, no, no...fuck YOU."
+    je "No, no, no... fuck YOU."
 
     scene v8sdd26 # FPP. Show Joe stepping forward and jabbing Josh in the stomach with the pipe he's holding. Josh winces in pain.
     with dissolve

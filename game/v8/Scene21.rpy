@@ -40,7 +40,7 @@ label mon_morning_room:
         scene v8sdea5 # TPP. Show MC walking through the College on his way to the dean's office. MC looking slightly nervous.
         with Fade(0.75, 0.25, 0.75)
 
-        u "(Excuse me, Dean, can I...no, that won't work.)"
+        u "(Excuse me, Dean, can I... no, that won't work.)"
 
         u "(Good morning, Dean. Might I have a minute of your time?)"
         u "(Yeah, that's better.)"
