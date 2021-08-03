@@ -2727,10 +2727,9 @@ label emsex_a:
     scene emvid2
     with dissolve
 
-    if not reignition:
+    if not achievement.has("reignition"):
         play music "music/msexy.mp3"
 
-        $ reignition = True
         $ grant_achievement("reignition")
             
 
