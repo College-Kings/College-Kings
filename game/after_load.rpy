@@ -129,14 +129,14 @@ label after_load:
             try: kiwiiPost.sentComments = kiwiiPost.comments
             except AttributeError: pass
 
-            kiwiiPost.profilePicture = kiwiiPost.getProfilePicture()
+            kiwiiPost.profilePicture = kiwiiPost.profile_picture
 
             # Kiwii Comments
             for comment in kiwiiPost.sentComments:
                 try: comment.message = comment.text
                 except AttributeError: pass
 
-                comment.profilePicture = comment.getProfilePicture()
+                comment.profilePicture = comment.profile_picture
                 
             # Old Kiwii Replies
             try:

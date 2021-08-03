@@ -114,13 +114,13 @@ label sun_eve_room:
             $ contact_Emily.addReply(_("I would but it's getting late and I haven't even started Mr. Lee's project"), v8s19_reply4)
 
             label v8s19_phoneCheck1:
-                if contact_Emily.getReplies():
+                if contact_Emily.replies:
                     call screen phone
-                if contact_Emily.getReplies():
+                if contact_Emily.replies:
                     u "I should reply to Emily"
                     jump v8s19_phoneCheck1
 
-            if contact_Emily.getMessage("Great! See you there!"):
+            if contact_Emily.get_message("Great! See you there!"):
                 jump emily_arcade
 
             scene v8sser1a # TPP. Same camera as v8sser1, show MC lying on his side as if to go to sleep.
@@ -182,13 +182,13 @@ label sun_eve_room:
             $ contact_Emily.addReply(_("I would but it's getting late and I haven't even started Mr. Lee's project"), v8s19_reply4)
 
             label v8s19_phoneCheck2:
-                if contact_Emily.getReplies():
+                if contact_Emily.replies:
                     call screen phone
-                if contact_Emily.getReplies():
+                if contact_Emily.replies:
                     u "I should reply to Emily"
                     jump v8s19_phoneCheck2
 
-            if contact_Emily.getMessage("Great! See you there!"):
+            if contact_Emily.get_message("Great! See you there!"):
                 jump emily_arcade
 
             scene v8sser4a # TPP. Same camera as v8sser4, show MC lying on his side as if to go to sleep.

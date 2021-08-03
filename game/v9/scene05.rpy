@@ -59,9 +59,9 @@ label v9_dream_wakeup:
         with dissolve
 
     label v9_phn_riley1:
-        if contact_Riley.getReplies():
+        if contact_Riley.replies:
             call screen phone
-        if contact_Riley.getReplies():
+        if contact_Riley.replies:
             u "(I should talk to Riley.)"
             jump v9_phn_riley1
 

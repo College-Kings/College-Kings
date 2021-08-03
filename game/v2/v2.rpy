@@ -202,7 +202,7 @@ label v2start:
     $ contact_Lauren.addReply(_("Yeah, I'm fine."))
     $ contact_Lauren.newMessage(_("Okay..."))
 
-    if contact_Lauren.getReplies():
+    if contact_Lauren.replies:
         $ contact_Lauren.newMessage(_("Hello?? Can we please talk today?"), queue=False)
         $ contact_Lauren.addReply(_("Yeah, SV cafe in 20 mins?"), v2_reply5)
         $ contact_Lauren.addReply(_("Sorry, I can't"), v2_reply6)
@@ -217,9 +217,9 @@ label v2start:
     with dissolve
 
     label repeatb:
-        if contact_Lauren.getReplies():
+        if contact_Lauren.replies:
             call screen phone
-        if contact_Lauren.getReplies():
+        if contact_Lauren.replies:
             u "(Damn, my phone's blowing up. I should probably check my messages.)"
             jump repeatb
 
@@ -1222,7 +1222,6 @@ label meet_lauren2:
                 $ anewbeginning = True
                 $ grantAchievement("a_new_beginning")
                     
-
                 la "Maybe you're right."
 
                 scene s130e
@@ -2112,7 +2111,6 @@ label bo_ad:
             $ overit = True
             $ grantAchievement("over_it")
                 
-
             u "Sure, knock yourself out, man. We're not an item."
 
             scene s148d
@@ -2345,9 +2343,9 @@ label bo_bd:
     u "(Oh, I just got a message.)"
 
     label repeatc:
-        if contact_Aubrey.getReplies():
+        if contact_Aubrey.replies:
             call screen phone
-        if contact_Aubrey.getReplies():
+        if contact_Aubrey.replies:
             u "(I should check my messages.)"
             jump repeatc
     
@@ -2514,9 +2512,9 @@ label bo_bd:
     u "(Fuck, I totally forgot about Aubrey. I guess it's time to make a decision.)"
 
     label repeatg:
-        if contact_Aubrey.getReplies():
+        if contact_Aubrey.replies:
             call screen phone
-        if contact_Aubrey.getReplies():
+        if contact_Aubrey.replies:
             u "(Aubrey's waiting for me, I need to let her know whether I'm coming or not.)"
             jump repeatg
 

@@ -23,6 +23,21 @@ label v11_imre_ryan_grapple:
     with dissolve
 
     menu:
+        "Intervene":
+            $ dont_just_stand_there = True
+            $ mrleeLike += 1
+
+            scene v11irg2 # TPP. Show MC grabbing Imre, Mr Lee grabbing Ryan, everyone angry, mouths closed
+            with dissolve
+
+            $ grantAchievement("dont_just_stand_there")
+            pause 1.75
+
+            scene v11irg3 # TPP. Show MC holding Imre back, Mr Lee in the middle of Imre and Ryan, Ryan and Imre standing and looking at each other, everyone angry, mouths closed
+            with dissolve
+
+            pause 1.25
+
         "Don't intervene":
             $ mrleeLike -= 1
 
@@ -37,21 +52,6 @@ label v11_imre_ryan_grapple:
             u "Sorry, I-"
 
             scene v11irg1f # FPP. Same as v11irg1, Ryan and Imre now standing and looking at each other, Mr Lee has pulled them apart from each other, standing in the middle, everyone angry, mouths closed
-            with dissolve
-
-            pause 0.75
-
-        "Intervene":
-            $ dont_just_stand_there = True
-            $ grantAchievement("dont_just_stand_there")
-            $ mrleeLike += 1
-
-            scene v11irg2 # TPP. Show MC grabbing Imre, Mr Lee grabbing Ryan, everyone angry, mouths closed
-            with dissolve
-
-            pause 0.75
-
-            scene v11irg3 # TPP. Show MC holding Imre back, Mr Lee in the middle of Imre and Ryan, Ryan and Imre standing and looking at each other, everyone angry, mouths closed
             with dissolve
 
             pause 0.75

@@ -74,7 +74,7 @@ label v11_airport_charli:
     scene v11air5a
     with dissolve
 
-    u "I'm fine, just uh...got some things on my mind."
+    u "I'm fine, just uh... got some things on my mind."
 
     scene v11air5
     with dissolve

@@ -1076,7 +1076,6 @@ label v11_case_verdict:
     if v11s1_courtpoints >= 4:
         play music "music/v11/Scene 1/Track Scene 1_5.mp3" fadein 2
         $ perry_mason = True
-        $ grantAchievement("perry_mason")
         $ v11_pen_goes_europe = True
         scene v11coc14b # TPP. Same as 14, Mr Lee looking at Penelope
         with dissolve
@@ -1085,9 +1084,15 @@ label v11_case_verdict:
 
         lee "We must make it clear that this is a civil case at this point, charges will not be pressed unless you choose not to comply with the school's agreed upon discipline."
 
+        scene v11coc14
+        with dissolve
+
         lee "We acknowledge your great academic standing and the benefit you've been to this school, we feel to disregard that is in poor taste. However, we can't simply let you go for being a good student."
 
         lee "As always preferred, the board has decided to go with a more creative and case based discipline tailored to the events that have occurred."
+
+        scene v11coc14b
+        with dissolve
 
         lee "As punishment for the actions taken, you will be subject to attend this year's abroad trip to Europe. While attending, you will serve as an Assistant Chaperone and help with all the chaperones may need."
 
@@ -1101,6 +1106,7 @@ label v11_case_verdict:
         scene v11coc14b
         with dissolve
 
+        $ grantAchievement("perry_mason")
         lee "Don't thank us, thank your friend. He did a very good job representing you. We may just have a future lawyer in our midst."
 
         scene v11coc14c

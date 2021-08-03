@@ -1434,9 +1434,9 @@ label efra:
     $ contact_Lauren.addReply(_("Cool"))
 
     label v1_phoneCheck1:
-        if contact_Lauren.getReplies():
+        if contact_Lauren.replies:
             call screen phone
-        if contact_Lauren.getReplies():
+        if contact_Lauren.replies:
             "(I should reply to Lauren.)"
 
             scene s61
@@ -2770,7 +2770,6 @@ label aw_bd:
 
                 $ romeo = True
                 $ grantAchievement("romeo")
-                    
 
                 play sound "sounds/kiss.mp3"
 
@@ -2928,9 +2927,9 @@ label aw_bd:
     $ contact_Ryan.addReply(_("Okay, will do."))
 
     label repeata:
-        if contact_Ryan.getReplies():
+        if contact_Ryan.replies:
              call screen phone
-        if contact_Ryan.getReplies():
+        if contact_Ryan.replies:
             u "(I should really check who texted me.)"
             jump repeata
 
@@ -3448,7 +3447,7 @@ label v1_freeRoam2_camp:
     else:
         play sound "sounds/vibrate.mp3"
 
-        if not contact_Lauren.getMessage("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"):
+        if not contact_Lauren.get_message("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"):
             $ contact_Lauren.newMessage(_("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"), queue=False)
             $ contact_Lauren.addReply(_("Yeah, sure."), v1_reply6)
             $ contact_Lauren.addReply(_("What is there to talk about?"), v1_reply7)
@@ -3481,7 +3480,6 @@ label v1_freeRoam2_mason:
             $ bigmouth = True
             $ grantAchievement("big_mouth")
                 
-
             u "Yeah, he better watch out, or I'll kick his ass."
 
             u "(Yeah [name], that seems like a brilliant thing to say about a hyper-aggressive idiot that prides himself in his fighting skills.)"

@@ -610,7 +610,7 @@ label v12_escape_room:
     scene v12esr14g # FPP. Same as v12esr14e, Lindsey slight smile, mouth closed
     with dissolve
 
-    unknown "Being separated is a scary thing, but we can always find comfort in those we're left with. Huddle close to those next to you...It's about to get chilly."
+    unknown "Being separated is a scary thing, but we can always find comfort in those we're left with. Huddle close to those next to you... It's about to get chilly."
 
     scene v12esr14h # FPP. Same as v12esr14a, room light turned off, Lindsey slightly worried, mouth closed
     with dissolve
@@ -808,7 +808,7 @@ label v12_escape_room:
         scene v12esr29
         with dissolve
 
-        li "I'm sorry, now I feel bad. but... This is obviously the right thing to do."
+        li "I'm sorry, now I feel bad... This is obviously not the right thing to do."
 
         scene v12esr29e
         with dissolve
@@ -873,6 +873,20 @@ label v12_lindsey_kiss_or_not:
     with dissolve
 
     menu:
+        "Kiss her":
+            scene v12esr30 # TPP. Show MC and Lindsey kissing
+            with dissolve
+
+            play sound "sounds/kiss.mp3"
+
+            if lindseyfirstkiss or kct == "popular" or len(v12s7_killList) >= 5:
+                if not lindseyfirstkiss and not len(v12s7_killList) >= 5:
+                    call screen kctPopup
+                jump v12_lindsey_sex
+            
+            else:
+                jump v12_after_sex
+                
         "Don't kiss her":
             scene v12esr29e
             with dissolve
@@ -896,20 +910,6 @@ label v12_lindsey_kiss_or_not:
 
             jump v12_after_sex
 
-        "Kiss her":
-            scene v12esr30 # TPP. Show MC and Lindsey kissing
-            with dissolve
-
-            play sound "sounds/kiss.mp3"
-
-            if lindseyfirstkiss or kct == "popular" or len(v12s7_killList) >= 5:
-                if not lindseyfirstkiss and not len(v12s7_killList) >= 5:
-                    call screen kctPopup
-                jump v12_lindsey_sex
-            
-            else:
-                jump v12_after_sex
-                
 label v12_lindsey_sex:
     $ v12_lindsey_sex = True
 
@@ -1052,7 +1052,7 @@ label v12_lindsey_sex:
     with dissolve
     pause
 
-    u "Holy fucking christ! Lindsey,.."
+    u "Holy fucking christ! Lindsey..."
 
     scene v12linbjf # Ignore as animation
     with dissolve

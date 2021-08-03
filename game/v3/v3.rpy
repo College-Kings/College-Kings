@@ -1394,9 +1394,9 @@ label conl:
                 $ contact_Aubrey.addReply(_("Uhm... sure."))
 
                 label repeatk:
-                    if contact_Aubrey.getReplies():
+                    if contact_Aubrey.replies:
                         call screen phone
-                    if contact_Aubrey.getReplies():
+                    if contact_Aubrey.replies:
                         u "(I should probably check my phone.)"
                         jump repeatk
 
@@ -1591,9 +1591,9 @@ label conl:
 
                 call screen phone
                 label repeatl:
-                    if contact_Aubrey.getReplies():
+                    if contact_Aubrey.replies:
                         call screen phone
-                    if contact_Aubrey.getReplies():
+                    if contact_Aubrey.replies:
                         u "(I should probably check my phone.)"
                         jump repeatl
 
@@ -1848,9 +1848,9 @@ label conl:
         $ contact_Aubrey.addReply(_("Uhm... sure."))
 
         label repeatm:
-            if contact_Aubrey.getReplies():
+            if contact_Aubrey.replies:
                 call screen phone
-            if contact_Aubrey.getReplies():
+            if contact_Aubrey.replies:
                 u "(I should probably check my phone.)"
                 jump repeatm
 
@@ -2707,7 +2707,6 @@ label continueq:
             $ notnowmom = True
             $ grantAchievement("not_now_mom")
                 
-
             u "(I don't really feel like talking to her right now.)"
 
     label de_bd: #for compatibility only
@@ -3089,7 +3088,6 @@ label continueq:
                     $ lipsdontlie = True
                     $ grantAchievement("lips_dont_lie")
                         
-
                     " "
 
                     scene s281f # riley stunned but happy
@@ -3261,7 +3259,6 @@ label continueq:
                     $ truthhurts = True
                     $ grantAchievement("truth_hurts")
                         
-
                     u "(Fuck me... I guess that's what honesty gets you.)"
 
                     jump dk_ad

@@ -282,11 +282,12 @@ label em_arcade_2:
 
     scene v8arcade13d # Emily pointing between her boobs, smiling, one brow raised, mouth closed
     with dissolve
-    pause
+    pause 1
     u "My pleasure!"
 
     scene v8arcade14 # TPP. Close up of MC shoving his face between Emily's boobs while holding them.
     with dissolve
+    play sound "sounds/kiss.mp3"
     pause 1
 
     scene v8arcade12a
@@ -347,10 +348,9 @@ label em_arcade_2:
     with dissolve
     em "Oh.."
 
-    play sound "sounds/kiss.mp3"
-
     scene v8arcade18 # TPP. Emily kissing MC's neck. MC smiling like an idiot, mouth closed
     with dissolve
+    play sound "sounds/kiss.mp3"
     pause 1
 
     scene v8arcade18a # Same as v8arcade18 but MC mouth open
@@ -515,10 +515,9 @@ label em_arcade_2:
     with dissolve
     u "Night."
 
-    play sound "sounds/doorclose.mp3"
-
     scene v8arcade23c # Emily went inside, so just the door closed
     with dissolve
+    play sound "sounds/doorclose.mp3"
     pause 0.5
 
     scene v8arcade28 # TPP. continuation of v8arcade23. MC starts walking away, smiling, mouth closed

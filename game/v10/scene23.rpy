@@ -285,9 +285,9 @@ label v10_aft_walk_home:
         contact_Lauren.newMessage(":)")
 
     label v10s23_phoneCheckLau:
-        if contact_Lauren.getReplies():
+        if contact_Lauren.replies:
             call screen phone
-        if contact_Lauren.getReplies():
+        if contact_Lauren.replies:
             u "(I should reply to Lauren)"
             jump v10s23_phoneCheckLau
 

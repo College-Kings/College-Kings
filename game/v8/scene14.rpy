@@ -51,9 +51,9 @@ label mc_apes_sun_morn:
     jump v8_s14_pen_text
 
 label v8_s14_pen_text:
-    if contact_Penelope.getReplies():
+    if contact_Penelope.replies:
         call screen phone
-    if contact_Penelope.getReplies():
+    if contact_Penelope.replies:
         u "(I should reply to her.)"
         jump v8_s14_pen_text
         

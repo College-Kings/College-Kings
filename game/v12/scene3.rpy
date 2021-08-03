@@ -9,6 +9,8 @@ label v12_penelope_roof:
 
     pause 1
 
+    play music "music/v12/Scene 3/Track Scene 3_1.mp3" fadein 2
+
     play sound "sounds/vibrate.mp3"
 
     $ contact_Penelope.newMessage("Hey, are you up still?", queue=False)
@@ -24,9 +26,9 @@ label v12_penelope_roof:
             $ contact_Penelope.addReply("Yeah, one sec", func=None)
 
             label v12_penelope_roof_text:
-                if contact_Penelope.getReplies():
+                if contact_Penelope.replies:
                     call screen phone
-                if contact_Penelope.getReplies():
+                if contact_Penelope.replies:
                     u "(I should probably reply.)"
                     jump v12_penelope_roof_text
 
@@ -34,6 +36,9 @@ label v12_penelope_roof:
             with dissolve
 
             pause 0.75
+
+            stop music fadeout 3
+            play music "music/v12/Scene 3/Track Scene 3_2.mp3" fadein 2
 
             scene v12penr3 # FPP Show Penelope in hotel room hallway, embarrassed expression, mouth closed
             with dissolve
@@ -144,6 +149,9 @@ label v12_penelope_roof:
             with dissolve
 
             pause 1
+
+            stop music fadeout 3
+            play music "music/v12/Scene 3/Track Scene 3_3.mp3" fadein 2
 
             scene v12penr8 # TPP Show MC and Penelope out on hotel roof in the process of sitting down
             with dissolve
@@ -395,6 +403,9 @@ label v12_penelope_roof:
 
             pause 1.25
 
+            stop music fadeout 3
+            play music "music/v12/Scene 3/Track Scene 3_4.mp3" fadein 2
+
             if penelopers:
                 scene v12penr4a # TPP Same angle as v12penr4, MC and Penelope walking down hotel hallway holding hands
                 with dissolve
@@ -470,5 +481,7 @@ label v12_penelope_roof:
             with dissolve
 
             pause 0.75
+    
+    stop music fadeout 3
 
     jump v12_roomate_talk # Scene 4

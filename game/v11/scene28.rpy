@@ -20,6 +20,7 @@ label v11_ms_rose_sex:
 
             scene v11ros2a # FPP. Same as v11ros2, MC is grabbing the door handle
             with dissolve
+            play sound "sounds/dooropen.mp3"
 
             pause 0.75
 
@@ -99,17 +100,17 @@ label v11_ms_rose_sex_sg:
     scene v11ros3b # FPP. Same cam as v11ros3, Show Ms Rose getting very close to MC, she has a seductive look, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11ros4 # TPP. Show Ms Rose removing MC's shirt, she is slightly smiling, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11ros5 # TPP. Show Ms Rose removing MC's pants, show her ass appearing from under the bathrobe while she's bending over to remove his pants
     with dissolve
 
-    pause 1
+    pause 1.25
 
     scene v11ros3a
     with dissolve
@@ -299,6 +300,8 @@ label v11_ms_rose_sex_sg:
     scene v11ros20 # TPP. Show MC slosing the door behind him
     with dissolve
 
+    play sound "sounds/doorclose.mp3"
+
     $ renpy.end_replay()
 
     pause 0.75
@@ -321,23 +324,23 @@ label v11_ms_rose_sex_sg:
     scene v11ros24 # TPP. Show MC walking through the hotel room door 
     with dissolve
 
-    pause 0.75
+    pause 1
 
     if v11_riley_roomate:
         scene v11ros25 # FPP. MC is standing in the room, he can see Riley sleeping on her bed
         with dissolve
 
-        pause 0.75
+        pause 1
 
     else:
         scene v11ros25a # FPP. Same cam as v11ros25, but MC can see Chloe sleeping on her bed instead of Riley
         with dissolve
 
-        pause 0.75 
+        pause 1 
 
     scene v11ros26 # TPP. Show MC lying in his bed, under the covers, he is sleeping, room is dark
     with dissolve
 
-    pause 0.75
+    pause 1
     stop music fadeout 3
     jump v11_hotel_room

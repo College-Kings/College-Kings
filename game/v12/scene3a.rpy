@@ -8,6 +8,8 @@ label v12_penelope_call:
     with dissolve
 
     pause 0.75
+
+    play music "music/v12/Scene 3a/Track Scene 3a.mp3" fadein 2
     
     play sound "sounds/call.mp3"
 
@@ -19,21 +21,14 @@ label v12_penelope_call:
     scene v12pec2 # FPP. Same position as v12pec1, MC looking down at his phone (Penelope caller ID)
     with dissolve
 
+    u "(It's Penelope.)"
+
     menu:
-        "Don't answer":
-            scene v12pec2a # FPP. Same as v12pec2, show MC clicking to reject the call
-            with dissolve
-
-            play sound "sounds/rejectcall.mp3"
-
-            u "(If it's serious she'll call again or leave a message.)"
-
-            jump v12_roomate_talk
-
         "Answer":
             scene v12pec2b # FPP. Same as v11pec2, show MC clicking to accept the call
             with dissolve
 
+            stop sound
             play sound "sounds/answercall.mp3"
 
             pause 0.75
@@ -214,7 +209,18 @@ label v12_penelope_call:
             with dissolve
 
             play sound "sounds/rejectcall.mp3"
-
             pause 0.75
+            stop music fadeout 3
 
             jump v12_roomate_talk #scene 4
+            
+        "Don't answer":
+            scene v12pec2a # FPP. Same as v12pec2, show MC clicking to reject the call
+            with dissolve
+
+            stop sound
+            play sound "sounds/rejectcall.mp3"
+
+            u "(If it's serious she'll call again or leave a message.)"
+
+            jump v12_roomate_talk

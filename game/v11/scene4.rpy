@@ -45,9 +45,9 @@ label v11_emily_park:
     $ contact_Emily.addReply("What's up?", v11s4_reply2)
 
     label v11s4_PhoneContinueEmily1:
-        if contact_Emily.getReplies():
+        if contact_Emily.replies:
             call screen phone
-        if contact_Emily.getReplies():
+        if contact_Emily.replies:
             u "(I should check my phone.)"
             jump v11s4_PhoneContinueEmily1
 

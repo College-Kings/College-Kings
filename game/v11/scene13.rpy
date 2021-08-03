@@ -29,34 +29,6 @@ label v11_aubrey_plane_sex:
         u "(I'm bored, meet me in the bathroom. XOXO)"
 
         menu:
-            "Don't go after her":
-                scene v11aub4
-                with dissolve
-
-                u "(What? *Chuckles* She's crazy. Not on a fucking plane.)"
-
-                scene v11aub5 # FPP. MC is sitting next to Ryan, Ryan and MC looking at each other, Ryan mouth slightly open, neutral look
-                with dissolve
-
-                ry "Hmph..."
-
-                scene v11aub5a # FPP. Same as v11aub5, Ryan mouth closed, neutral look
-                with dissolve
-
-                u "What?"
-
-                scene v11aub5b # FPP. Same as v11aub5, mouth normal open, neutral look
-                with dissolve
-
-                ry "Nothing."
-
-                scene v11aub5c # FPP. Same as v11aub15, Ryan now looking at his windows
-                with dissolve
-
-                pause 0.75
-
-                jump v11_nora_chris_plane
-
             "Go after her":
                 label v11_aubrey_plane_sex_sg:
                 $ v11_aubrey_sex = True
@@ -90,17 +62,17 @@ label v11_aubrey_plane_sex:
                 scene v11aub9 # TPP. Show Aubrey removing MC's pants, both mouths closed
                 with dissolve
 
-                pause 0.75
+                pause 1.25
 
                 scene v11aub10 # TPP. Show MC sitting on the toilet, Aubrey standing in front of him
                 with dissolve
                 
-                pause 0.75
+                pause 1.25
 
                 scene v11aub11 # FPP. MC is now sitting on the toilet, pants off, Aubrey is kneeled between his legs, looking at his dick
                 with dissolve
 
-                pause 0.75
+                pause 1.25
 
                 image v11aubbj = Movie(play="images/v11/Scene 13/v11aubbj.webm", loop=True, image="images/v11/Scene 13/v11aubbjStart.webp", start_image="images/v11/Scene 13/v11aubbjStart.webp") # Aubrey giving mc head
                 image v11aubbjf = Movie(play="images/v11/Scene 13/v11aubbjFPPf.webm", loop=True, image="images/v11/Scene 13/v11aubbjStart.webp", start_image="images/v11/Scene 13/v11aubbjStart.webp") # Aubrey giving mc head sped up
@@ -147,27 +119,27 @@ label v11_aubrey_plane_sex:
                 scene v11aub12 # FPP. Aubrey stops giving MC head, she is looking up at him, smiling, mouth closed
                 with dissolve
 
-                pause 1
+                pause 1.25
 
                 scene v11aub13 # TPP. Show MC removing his shirt, Aubrey is standing, helping him remove his shirt
                 with dissolve
 
-                pause 1
+                pause 1.25
 
                 scene v11aub13a # TPP. Same cam as v11aub13, MC turns Aubrey around, both smiling, mouth closed
                 with dissolve
 
-                pause 1
+                pause 1.25
 
                 scene v11aub13b # TPP. Same cam as v11aub13, MC is bending Aubrey over the toilet
                 with dissolve
 
-                pause 1
+                pause 1.25
 
                 scene v11aub14 # TPP. MC is now looking at Aubrey bent over with her hands on the toilet, camera to the side
                 with dissolve
 
-                pause 1
+                pause 1.25
 
                 scene v11aubo # Ignore as animation
                 with dissolve
@@ -199,13 +171,12 @@ label v11_aubrey_plane_sex:
                 scene v11aub15 # TPP. Show Aubrey standing up, with her back to MC (aubrey facing camera), both smiling, mouths closed
                 with dissolve
 
-                pause 1
+                pause 1.25
 
                 scene v11aub15a # TPP. Same cam as v11aub15, MC grabbing Aubrey's thigh and raising her leg, MC is also grabbing her waist, both smiling, mouths closed
                 with dissolve
 
-                pause 1
-
+                pause 1.25
                 
                 scene v11aubll # Ignore as animation
                 with dissolve
@@ -267,11 +238,9 @@ label v11_aubrey_plane_sex:
                 au "Damn [name]!"
                 
                 if laurenrs:
-
                     u "Oh fuck it's Lauren!"
 
                 else:
-
                     u "Is that Lauren?"
 
                 au "Oh God I'm cumming!"
@@ -284,15 +253,23 @@ label v11_aubrey_plane_sex:
                 scene v11aub17 # FPP. MC is looking at the door, door slightly open, can not see Lauren yet (Make sure this render is using the plane bathroom instead of the other one)
                 with dissolve
 
+                play sound "sounds/cardooropen.mp3"
+
                 pause 0.75
                 stop music fadeout 3
+
+                scene v11aub17c # FPP. Same as v11aub17a, but Lauren is surprised, mouth open
+                with dissolve
+
                 if laurenrs:
                     $ laurenmad = True
+                   
+                    pause 0.75
                     
                     scene v11aub17a # FPP. Same cam as v11aub17, door fully open, Lauren is very angry, mouth open
                     with dissolve
 
-                    la "[name] what are you doing!?"
+                    la "[name], what are you doing!?"
 
                     scene v11aub17b # FPP. Same as v11aub17a, Lauren is very angry, mouth closed
                     with dissolve
@@ -307,6 +284,8 @@ label v11_aubrey_plane_sex:
                     scene v11aub17
                     with dissolve
 
+                    play sound "sounds/doorclose.mp3"
+
                     pause 0.75
                     
                     scene v11aub18 # FPP. Aubrey is now standing in front of MC, in the same place as v11aub4, Aubrey mouth open, slight smile (This one is back to the bathroom location used prior)
@@ -315,13 +294,12 @@ label v11_aubrey_plane_sex:
                     au "Okay, I know she's pissed, but that was kind of exciting."
 
                 else: # Lauren not dating MC
-                    scene v11aub17c # FPP. Same as v11aub17a, but Lauren is surprised, mouth open
-                    with dissolve
-
                     la "Oh... oh shit. Sorry."
                     play music "music/v11/Scene 13/Track Scene 13_1.mp3" fadein 2
                     scene v11aub17
                     with dissolve
+
+                    play sound "sounds/doorclose.mp3"
 
                     pause 0.75
 
@@ -351,17 +329,17 @@ label v11_aubrey_plane_sex:
                 scene v11aub19 # TPP. Shot of MC putting his shirt on, Aubrey is pulling her shorts up, still no top
                 with dissolve
 
-                pause 1
+                pause 1.25
 
                 scene v11aub19a # TPP. Same cam as v11aub8, Aubrey is putting her top on (still showing her tits) and MC is zipping his pants
                 with dissolve
 
-                pause 1
+                pause 1.25
 
                 scene v11aub20 # FPP. Aubrey is poking her head through the bathroom door, MC is still inside (This render should use the plane bathroom)
                 with dissolve
 
-                pause 0.75
+                pause 1.25
 
                 scene v11aub20a # FPP. Same as v11aub20, Aubrey is now looking at MC, she is still at the door, Aubrey mouth open, seductive smile
                 with dissolve
@@ -371,7 +349,7 @@ label v11_aubrey_plane_sex:
                 scene v11aub17d # FPP. Same camera as v11aub6, Aubrey is leaving the door
                 with dissolve
 
-                pause 0.75
+                pause 1
 
                 scene v11aub17
                 with dissolve
@@ -407,7 +385,6 @@ label v11_aubrey_plane_sex:
                 with dissolve
 
                 if laurenrs:
-
                     ry "Lauren's pissed."
 
                     scene v11aub5a
@@ -421,7 +398,6 @@ label v11_aubrey_plane_sex:
                     ry "Why?"
 
                 else:
-
                     ry "What just happened?"
 
                 scene v11aub5a
@@ -469,4 +445,32 @@ label v11_aubrey_plane_sex:
 
                 pause 0.75
                 stop music fadeout 3
+                jump v11_nora_chris_plane
+
+            "Don't go after her":
+                scene v11aub4
+                with dissolve
+
+                u "(What? *Chuckles* She's crazy. Not on a fucking plane.)"
+
+                scene v11aub5 # FPP. MC is sitting next to Ryan, Ryan and MC looking at each other, Ryan mouth slightly open, neutral look
+                with dissolve
+
+                ry "Hmph..."
+
+                scene v11aub5a # FPP. Same as v11aub5, Ryan mouth closed, neutral look
+                with dissolve
+
+                u "What?"
+
+                scene v11aub5b # FPP. Same as v11aub5, mouth normal open, neutral look
+                with dissolve
+
+                ry "Nothing."
+
+                scene v11aub5c # FPP. Same as v11aub15, Ryan now looking at his windows
+                with dissolve
+
+                pause 0.75
+
                 jump v11_nora_chris_plane

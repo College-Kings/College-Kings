@@ -7,12 +7,12 @@ label v11_sam_spa:
     scene v11sas1 # TPP. Show MC and Samantha walking in a corridor, both smiling, mouths closed
     with dissolve
     play music "music/v11/Scene 28/Track Scene 28_1.mp3" fadein 2
-    pause 0.75
+    pause 1
 
     scene v11sas2 # TPP. Show MC and Sam walking into the spa, both smiling, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v11sas3 # FPP. MC and Samantha are in the Spa, Sam looking at MC, she is smiling, mouth open
     with dissolve
@@ -82,7 +82,6 @@ label v11_sam_spa:
             sa "*Chuckles* Just get in the tub."
 
         "Look away":
-
             scene v11sas4 # FPP. MC is looking down at the ground
             with dissolve
 
@@ -438,12 +437,12 @@ label v11_sam_spa:
     scene v11sas9 # TPP. Show MC getting out of the tub
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11sas10 # FPP. MC standing in front of Samantha, Samantha switched stretching position, she's slightly smiling, mouth closed, looking at MC
     with dissolve
 
-    u "Yeah me too."
+    u "Yeah, me too."
 
     scene v11sas11 # FPP. MC is looking at Sam walking towards the massage table
     with dissolve
@@ -458,7 +457,7 @@ label v11_sam_spa:
     scene v11sas12 # FPP. MC is walkign towards Samantha (she is next to the massage table), Samantha seductive look, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v11sas13 # FPP. MC now standing in front of Samantha, she is next to the massage table, Samantha seductive look, mouth closed
     with dissolve
@@ -484,12 +483,12 @@ label v11s28a_galleryScene:
     scene v11sas14 # FPP. MC looking at Samantha removing some items from the massage table
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11sas13c # FPP. Same as v11sas13, Samantha looking at MC, removing her bra, seductive look, mouth closed
     with dissolve
 
-    pause 1
+    pause 1.25
 
     scene v11sas13d # FPP. Same as v11sas13c, Samantha with no bra, seductive look, mouth closed
     with dissolve
@@ -802,10 +801,10 @@ label v11s28a_galleryScene:
 
     pause 1
 
-    play sound "sounds/kiss.mp3"
-
     scene v11sas21 # TPP. Show Sam kissing MC on the cheek
     with dissolve
+
+    play sound "sounds/kiss.mp3"
 
     pause 1
 
@@ -834,7 +833,7 @@ label v11s28a_galleryScene:
     scene v11sas28d # FPP. Same as v11sas21c, Samantha slight smile, mouth closed
     with dissolve
 
-    u "...really?"
+    u "...Really?"
 
     scene v11sas28c
     with dissolve

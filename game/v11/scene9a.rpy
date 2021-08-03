@@ -204,9 +204,9 @@ label v11_wolves_seb_prank:
             $ v11s9a_kiwiiPost1.addReply(_("Someone's got \"balls\""), numberLikes=334)
 
             label v11s9a_kiwiiPost1_continue:
-                if v11s9a_kiwiiPost1.getReplies():
+                if v11s9a_kiwiiPost1.replies:
                     call screen phone
-                if v11s9a_kiwiiPost1.getReplies():
+                if v11s9a_kiwiiPost1.replies:
                     u "(I should check Kiwii)"
                     jump v11s9a_kiwiiPost1_continue
 
@@ -284,7 +284,7 @@ label v11_wolves_seb_prank:
 
             pause 0.75
 
-            scene v11wsp17  # FPP. MC is looking at Imre, Imre mouth open, neutral expression (Imre is standing next to the wagon)
+            scene v11wsp17 # FPP. MC is looking at Imre, Imre mouth open, neutral expression (Imre is standing next to the wagon)
             with dissolve
 
             imre "*Whisper* Alright, let's go."
@@ -503,9 +503,9 @@ label v11_wolves_seb_prank:
             $ v11s9a_kiwiiPost2.addReply(_("Someone's got \"balls\""), numberLikes=218)
 
             label v11s9a_kiwiiPost2_continue:
-                if v11s9a_kiwiiPost2.getReplies():
+                if v11s9a_kiwiiPost2.replies:
                     call screen phone
-                if v11s9a_kiwiiPost2.getReplies():
+                if v11s9a_kiwiiPost2.replies:
                     u "(I should check Kiwii)"
                     jump v11s9a_kiwiiPost2_continue
 

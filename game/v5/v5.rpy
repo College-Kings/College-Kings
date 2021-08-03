@@ -665,9 +665,9 @@ label newchloec:
         u "(Oh shit, I'm getting a bunch of messages.)"
 
         label phonex:
-            if contact_Lauren.getReplies():
+            if contact_Lauren.replies:
                 call screen phone
-            if contact_Lauren.getReplies():
+            if contact_Lauren.replies:
                 u "(I should probably reply to some of them.)"
                 jump phonex
             
@@ -675,9 +675,9 @@ label newchloec:
 
     else:
         label phoney:
-            if contact_Amber.getReplies():
+            if contact_Amber.replies:
                 call screen phone
-            if contact_Amber.getReplies():
+            if contact_Amber.replies:
                 "(Maybe it's Lauren and she wants to talk about what happened? I should definitely check.)"
                 jump phoney
 
@@ -782,7 +782,6 @@ label continuez:
                         $ addPoint("tm")
                         $ onthelow = True
                         $ grantAchievement("on_the_low")
-                            
 
                         u "Sorry, but can we just make sure we're alone before we do stuff like that. I just feel uncomfortable even just kissing in public."
 
@@ -2155,7 +2154,6 @@ label continueaf:
                     $ addPoint("tm")
                     $ onthelow = True
                     $ grantAchievement("on_the_low")
-                        
 
                     u "Sorry, but can we just make sure we're alone before we do stuff like that. I just feel uncomfortable even just kissing in public."
 
@@ -3575,7 +3573,6 @@ label fl_a:  # tell the school
 
     $ snitch = True
     $ grantAchievement("snitch")
-
 
     u "(I need to tell the school, it's the only way to sort this out.)"
 

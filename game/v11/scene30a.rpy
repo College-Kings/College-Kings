@@ -19,10 +19,10 @@ label v11_lauren_apology:
 
     pause 0.75
 
+    play sound "sounds/knock.mp3"
+
     scene v11laa3 # FPP. MC is looking at the door, he is knocking on the door
     with dissolve
-
-    play sound "sounds/knock.mp3"
 
     u "Lauren... can we please talk?"
 
@@ -43,17 +43,17 @@ label v11_lauren_apology:
     scene v11laa3b # FPP. Same cam as v11laa3, MC is looking at Lauren opening the door (make sure not fully open yet), Lauren tears in her eye, mouth closed, very sad
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11laa3c # FPP. Same cam as v11laa3, The door is fully open, she has her back turned to MC, she is heading towards the bed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11laa5 # FPP. MC is now in the room, Lauren is sitting on the bed, looking down, tears in her eyes, mouth closed, very sad
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11laa6 # FPP. MC is now sitting on the bed, he is next to Lauren, Lauren looking down, tears in eyes, mouth closed, very sad
     with dissolve

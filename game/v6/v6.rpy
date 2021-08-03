@@ -259,7 +259,6 @@ label imrecona: # Find Imre
 label imreconb: # Help Imre
     $ brosbeforehoes = True
     $ grantAchievement("bros_before_hoes")
-        
 
     u "(I need to help Imre, Adam will destroy him in his current condition.)"
 
@@ -360,9 +359,9 @@ label imreconc: # Keep talking to Amber
     $ contact_Amber.addReply(_("Oh wow, you're so fucking hot"), v6_reply4)
 
     label phonead:
-        if contact_Amber.getReplies():
+        if contact_Amber.replies:
             call screen phone
-        if contact_Amber.getReplies():
+        if contact_Amber.replies:
             u "(Time to text Amber.)"
             jump phonead
 
@@ -383,9 +382,9 @@ label imrecond: # Meet Chloe
     $ contact_Chloe.addReply(_("Cool, see you there"))
 
     label phoneac:
-        if contact_Chloe.getReplies():
+        if contact_Chloe.replies:
             call screen phone
-        if contact_Chloe.getReplies():
+        if contact_Chloe.replies:
             u "(I should reply to Chloe.)"
             jump phoneac
 
@@ -863,7 +862,6 @@ label imrecond: # Meet Chloe
             $ addPoint("bf")
             $ credulous = True
             $ grantAchievement("credulous")
-                
 
             u "(I shouldn't spy on her. It's not right.)"
 
@@ -995,9 +993,9 @@ label continuebb:
         " "
 
         label phoneae:
-            if contact_Amber.getReplies():
+            if contact_Amber.replies:
                 call screen phone
-            if contact_Amber.getReplies():
+            if contact_Amber.replies:
                 u "(I should probably reply to my messages.)"
                 jump phoneae
 
@@ -1023,9 +1021,9 @@ label continuebb:
     " "
 
     label phoneaf:
-        if contact_Amber.getReplies():
+        if contact_Amber.replies:
             call screen phone
-        if contact_Amber.getReplies():
+        if contact_Amber.replies:
             u "(I should probably reply to my messages.)"
             jump phoneaf
 
@@ -1767,7 +1765,6 @@ label continuebd:
 
             $ notmybusiness = True
             $ grantAchievement("not_my_business")
-                
 
     label nr_bb: #for compatibility only
     u "(Huh, what's this?)"
@@ -2707,7 +2704,6 @@ label emsex_c:
 
     $ reignition = True
     $ grantAchievement("reignition")
-        
 
     " "
 
@@ -3689,9 +3685,9 @@ label fy_bd: # not gone to Emily's
 
         label phoneag:
             stop music fadeout 2.0
-            if contact_Aubrey.getReplies():
+            if contact_Aubrey.replies:
                 call screen phone
-            if contact_Aubrey.getReplies():
+            if contact_Aubrey.replies:
                 u "(I should check my messages.)"
                 jump phoneag
 
@@ -3718,9 +3714,9 @@ label fy_bd: # not gone to Emily's
             scene s565 # mc sitting at his desk
             with dissolve
 
-            if contact_Aubrey.getReplies():
+            if contact_Aubrey.replies:
                 call screen phone
-            if contact_Aubrey.getReplies():
+            if contact_Aubrey.replies:
                 u "(I should probably reply to Aubrey.)"
                 jump v6_phoneah
 
@@ -4856,7 +4852,6 @@ label afteraubrey:
 
                     $ monkeybusiness = True
                     $ grantAchievement("monkey_business")
-                        
 
                     gr "That's what I'm talking about!"
 
@@ -5003,7 +4998,6 @@ label afteraubrey:
             $ addPoint("bro")
             $ seemsfishy = True
             $ grantAchievement("seems_fishy")
-                
 
             u "(Fuck Grayson, I'm not meeting him.)"
 
@@ -5448,9 +5442,9 @@ label wakeupa:
 
         call screen phone
         label phoneak:
-            if contact_Penelope.getReplies():
+            if contact_Penelope.replies:
                 call screen phone
-            if contact_Penelope.getReplies():
+            if contact_Penelope.replies:
                 u "(I should really text Penelope.)"
                 jump phoneak
 
@@ -6600,7 +6594,6 @@ label wakeupa:
                 $ strike = True
                 $ grantAchievement("strike")
                     
-
                 pe "*Giggles*"
 
                 u "That was nice..."

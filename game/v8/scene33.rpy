@@ -198,13 +198,13 @@ label cont_nora_hall_3:
             $ addPoint("bf")
             $ helpedNora = True
             $ helping_hand = True
-            $ grantAchievement("helping_hand")
             jump hallway_help_nora
         "Don't help Nora":
             $ helpedNora = False
             jump hallway_no_help_nora
 
 label hallway_help_nora:
+    $ grantAchievement("helping_hand")
     u "(I kinda like this nicer Nora.)"
 
     scene v8shal3c

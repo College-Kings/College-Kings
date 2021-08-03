@@ -370,20 +370,6 @@ label v12_chloe_cafe:
     with dissolve
 
     menu:
-        "Don't tell her about Lindsey":
-            
-            u "(No way I'm telling her. She's not hearing that news from me.)"
-
-            scene v12chc5n # FPP. Same as v12chc5m, Chloe slightly worried, mouth closed
-            with dissolve
-
-            u "I don't want to start making assumptions about what it could or couldn't be, so just try to think positive. Maybe she is doing some prank, haha..."
-
-            scene v12chc5m
-            with dissolve
-
-            cl "Well, if I don't figure it out soon I'm gonna end up going crazy. I'll talk to Aubrey first and see if she's heard anything, and I guess if she hasn't then I'll just go to Lindsey myself."
-
         "Tell her about Lindsey":
                 $ v12_told_chloe = True
 
@@ -452,6 +438,20 @@ label v12_chloe_cafe:
                 with dissolve
 
                 cl "Rather than seeing how she can help she'd rather just take over? No way. This can't be real."
+
+        "Don't tell her about Lindsey":
+            
+            u "(No way I'm telling her. She's not hearing that news from me.)"
+
+            scene v12chc5n # FPP. Same as v12chc5m, Chloe slightly worried, mouth closed
+            with dissolve
+
+            u "I don't want to start making assumptions about what it could or couldn't be, so just try to think positive. Maybe she is doing some prank, haha..."
+
+            scene v12chc5m
+            with dissolve
+
+            cl "Well, if I don't figure it out soon I'm gonna end up going crazy. I'll talk to Aubrey first and see if she's heard anything, and I guess if she hasn't then I'll just go to Lindsey myself."
 
     scene v12chc5o
     with dissolve
@@ -583,9 +583,9 @@ label v12_chloe_cafe:
     $ contact_Riley.addReply("Okay, I'll be there soon.")
 
     label v12s14_PhoneContinueRiley:
-        if contact_Riley.getReplies():
+        if contact_Riley.replies:
             call screen phone
-        if contact_Riley.getReplies():
+        if contact_Riley.replies:
             u "(I should check my phone.)"
             jump v12s14_PhoneContinueRiley
 

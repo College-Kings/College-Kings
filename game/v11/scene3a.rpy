@@ -74,39 +74,6 @@ label v11_wolves_packing_chris:
     scene v10swpc4
     with dissolve
     menu:
-        "Don't let him":
-            scene v10swpc4
-            with dissolve
-
-            u "Honestly, I'd rather not know what goes on in your relationship. I feel like that's between you and Nora."
-
-            scene v10swpc4a
-            with dissolve
-
-            ch "I get that."
-
-            scene v10swpc4b # FPP. Same camera as v10swpc4. Show Chris starting to stand up from the bed. A little smile, mouth closed.
-            with dissolve
-
-            pause 0.75
-
-            scene v10swpc2c
-            with dissolve
-
-            ch "I'm gonna go find Sebastian, gonna need him to take over while I'm gone."
-
-            scene v10swpc2b
-            with dissolve
-
-            u "See ya."
-
-            scene v10swpc2d # FPP. Same camera as v10swpc2. Show Chris walking out of MC's room.
-            with dissolve
-
-            play sound "sounds/doorclose.mp3"
-
-            pause 0.75
-        
         "Let him":
             scene v10swpc4
             with dissolve
@@ -382,6 +349,56 @@ label v11_wolves_packing_chris:
             scene v10swpc2d
             with dissolve
 
+            pause 0.75
+
+            play sound "sounds/doorclose.mp3"
+
+            scene v10swpc2
+            with dissolve
+
             u "(THAT. WAS. ROUGH.)"
+
+            play sound "sounds/call.mp3"
+            pause 2.25
+
+        "Don't let him":
+            scene v10swpc4
+            with dissolve
+
+            u "Honestly, I'd rather not know what goes on in your relationship. I feel like that's between you and Nora."
+
+            scene v10swpc4a
+            with dissolve
+
+            ch "I get that."
+
+            scene v10swpc4b # FPP. Same camera as v10swpc4. Show Chris starting to stand up from the bed. A little smile, mouth closed.
+            with dissolve
+
+            pause 0.75
+
+            scene v10swpc2c
+            with dissolve
+
+            ch "I'm gonna go find Sebastian, gonna need him to take over while I'm gone."
+
+            scene v10swpc2b
+            with dissolve
+
+            u "See ya."
+
+            scene v10swpc2d # FPP. Same camera as v10swpc2. Show Chris walking out of MC's room.
+            with dissolve
+
+            pause 0.75
+
+            play sound "sounds/doorclose.mp3"
+
+            scene v10swpc2
+            with dissolve
+
+            play sound "sounds/call.mp3"
+            pause 2.25
+        
     stop music fadeout 3
 jump v11_cafe_with_riley

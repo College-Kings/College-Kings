@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v12_morning_london:
+    play music "music/v12/Scene 5/Track Scene 5.mp3" fadein 2
+
     if not v11_riley_roomate:
         if chloers or chloegf:
             scene v12mol1 # TPP. Show MC waking up, Chloe sleeping next to him in MC's bed
@@ -324,5 +326,7 @@ label v12_morning_london:
     with dissolve
 
     pause 1.25
+
+    stop music fadeout 3
 
     jump v12_docks #scene 6

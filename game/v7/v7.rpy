@@ -474,8 +474,7 @@ label v7start:
 
                 $ truetoself = True
                 $ grantAchievement("true_to_self")
-                    
-
+                
                 u "Uhh, yeah of course."
 
                 scene s683b # Riley smiling
@@ -1397,9 +1396,9 @@ label conyourdorm:
         u "(What the hell?)"
 
         label phoneam:
-            if contact_Riley.getReplies():
+            if contact_Riley.replies:
                 call screen messager(contact_Riley)
-            if contact_Riley.getReplies():
+            if contact_Riley.replies:
                 "(I need to respond to some of these messages.)"
                 jump phoneam
 
@@ -1407,11 +1406,11 @@ label conyourdorm:
                 "(I should check out what Emily posted on Kiwii.)"
                 jump phoneam
 
-            if bowling and contact_Penelope.getReplies():
+            if bowling and contact_Penelope.replies:
                 "(I should answer Penelope.)"
                 jump phoneam
 
-            if laurenrs and contact_Lauren.getReplies():
+            if laurenrs and contact_Lauren.replies:
                 "(I should respond to Lauren.)"
                 jump phoneam
 
@@ -1633,9 +1632,9 @@ label conyourdorm:
         u "(Huh? What did Riley text me?)"
 
         label phonean:
-            if contact_Riley.getReplies():
+            if contact_Riley.replies:
                 call screen messager(contact_Riley)
-            if contact_Riley.getReplies():
+            if contact_Riley.replies:
                 u "(I should respond to Riley.)"
                 jump phonean
             
@@ -2582,9 +2581,9 @@ label thisbewalk:
         " "
 
         label phoneao:
-            if contact_Lauren.getReplies():
+            if contact_Lauren.replies:
                 call screen phone
-            if contact_Lauren.getReplies():
+            if contact_Lauren.replies:
                 u "(I should probably reply.)"
                 jump phoneao
 
@@ -3514,7 +3513,6 @@ label afterbeach:
 
                 $ silverback = True
                 $ grantAchievement("silverback")
-                    
 
                 u "(Fuck it. I'm gonna be winner, no matter what it costs. I'ma go to the Apes' house and tell Grayson I changed my mind.)"
 
@@ -5460,9 +5458,9 @@ label after_pledges:
                 $ contact_Emily.addReply(_("Hey, sorry I lost track of time. You up?"))
 
                 label phonebb:
-                    if contact_Emily.getReplies():
+                    if contact_Emily.replies:
                         call screen phone
-                    if contact_Emily.getReplies():
+                    if contact_Emily.replies:
                         u "(I should text Emily that I lost track of time.)"
                         jump phonebb
 
@@ -8932,9 +8930,9 @@ label rileytext:
         " "
 
         label rtnow:
-            if contact_Riley.getReplies():
+            if contact_Riley.replies:
                 call screen phone
-            if contact_Riley.getReplies():
+            if contact_Riley.replies:
                 u "(I should check my messages.)"
                 jump rtnow
 
@@ -9288,9 +9286,9 @@ label signs_with_autumn:
     " "
 
     label phoneba:
-        if contact_Autumn.getReplies():
+        if contact_Autumn.replies:
             call screen phone
-        if contact_Autumn.getReplies():
+        if contact_Autumn.replies:
             u "(I should probably check my messages.)"
             jump phoneba
 
@@ -16991,7 +16989,6 @@ label fr4laurenending:
 
     $ slowandsteady = True
     $ grantAchievement("slow_and_steady")
-        
 
     la "I read that... if you cuddle in your underwear it increases the serotonin levels in your brain, which in turns means you live a longer, happier life."
 
@@ -17142,7 +17139,6 @@ label fr4rileyending2:
     $ playingwithfire = True
     $ grantAchievement("playing_with_fire")
         
-
     ri "Sit down with me for a second."
 
     scene sfr4ri57b #mc walks towards her
@@ -17250,7 +17246,6 @@ label fr4chloeending:
 
     $ homecomingqueen = True
     $ grantAchievement("homecoming_queen")
-        
 
     u "So this is your infamous room?"
 
