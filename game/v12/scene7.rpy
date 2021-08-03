@@ -1,13 +1,19 @@
 label v12s7_free_roam_spoken(backgroundImg, returnScreen, seenList):
     $ v12s7_seenList = seenList
+
+    show screen murder_button_overlay(nora)
+
     scene expression backgroundImg
     u "(I've already spoken to them, but I could still murder them)"
     $ renpy.call_screen(returnScreen)
 
 label v12s7fr:
     scene v12fer1 # FPP. Show Mr Lee, smiling mouth open
+    with fade
 
     lee "Students, please gather around. I have something very exciting to announce."
+
+    play music "music/v12/Scene 7/Track Scene 7_1.mp3" fadein 2
 
     scene v12fer2 # TPP. Show Aubrey,riley, mc, imre all mouths closed
     with dissolve
@@ -340,15 +346,26 @@ label v12s7fr:
     pause
     hide murder_tutorial3
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
+    $ freeRoam = True
+
     call screen v12s7_seating_front
 
 label v12s7_aubrey1:
     $ v12s7_aubrey = True
     $ v12s7_seenList = [nora]
 
+    show screen murder_button_overlay(aubrey)
+
     scene v12ferau1 # FPP. Note for renderer, all scene images starting v12ferau will be the first conversation with Aubrey on the upper front balcony of the boat. Her and Nora are both up there but the conversations are completely seperate. Show Aubrey, flirty look, mouth open
+    with dissolve
 
     au "Hey there, handsome. Please make sure you're being careful, okay? I'd hate for you to get hurt, but if you do find yourself needing some love and care, don't forget to come see your favorite nurse. *Chuckles*"
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
     scene v12ferau1a # FPP. Same 1, mouth closed
     with dissolve
@@ -521,15 +538,24 @@ label v12s7_aubrey1:
             with dissolve
 
             au "Looking forward to it, Mr. Boxer."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_balcony_right
 
 label v12s7_aubrey2:
     $ v12s7_aubrey2 = True
     $ v12s7_seenList = []
+
+    show screen murder_button_overlay(aubrey)
     
     scene v12ferauh1 # FPP. Location is in the bathroom on the ship, Show aubrey, seductive look, mouth open
 
     au "Finally! Took you long enough..."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_3.mp3" fadein 2
 
     scene v12ferauh1a # FPP. same 1, mouth closed
     with dissolve
@@ -626,6 +652,9 @@ label v12s7_aubrey2:
 
             u "Boom."
 
+            stop music fadeout 3
+            play music "music/v12/Scene 7/Track Scene 7_4.mp3" fadein 2
+
             scene v12ferauh6a # TPP. Show MC pointing finger gun at aubrey, mc mouth closed, aubrey mouth open
             with dissolve
 
@@ -660,6 +689,9 @@ label v12s7_aubrey2:
             with dissolve
             call screen v12s7_left_gallery_front
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
 label v12s7_riley1:
     $ v12s7_riley = True
 
@@ -668,12 +700,17 @@ label v12s7_riley1:
     else:
         $ v12s7_seenList = [chloe, josh]
 
+    show screen murder_button_overlay(riley)
+
     ### ERROR: -If talk to Chloe and Riley 1 ###
     ### ERROR: -If MC uses the button at all during this conversation he is caught ###
     scene v12ferri1 # FPP. location is the upper rear outside seating area on the right side of the ship as seen on miro. Show chloe(from a distance as mc is overhearing the convo), looking at riley out of shot, slight annoyed look, mouth open
-
+    with dissolve
 
     cl "Rich people are the actual problem. You guys get to sit around on stacks of money and the little guys like me have to pick up the slack for this entire country. People like you never wanna pay your taxes but I barely have two pennies to rub together and I still have to pay mine."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
 
     scene v12ferri2 # FPP. Show riley(from a distance as mc is overhearing the convo), smug look, looking at chloe out of shot, mouth open.
     with dissolve
@@ -930,6 +967,9 @@ label v12s7_riley1:
                 with dissolve
                 
                 pause 0.75
+    
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_left_viewpoint
 
@@ -942,9 +982,15 @@ label v12s7_chloe1:
     if josh_europe and not v12s7_josh:
         $ v12s7_seenList.append(josh)
 
+    show screen murder_button_overlay(chloe)
+
     scene v12ferch1 # FPP Show chloe slight smile, mouth closed
+    with dissolve
 
     u "Well, well. If it isn't the richest woman alive."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_6.mp3" fadein 2
 
     scene v12ferch1a # FPP. same 1, mouth open
     with dissolve
@@ -1195,10 +1241,14 @@ label v12s7_chloe1:
         call screen v12s7_left_viewpoint
 
 label v12s7_chloe_kill:
-    scene v12ferch7 # TPP. show mc, pointing finger guns at chloe, mouth open
 
+    scene v12ferch7 # TPP. show mc, pointing finger guns at chloe, mouth open
+    with dissolve
 
     u "Boom."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
     scene v12ferch1d
     with dissolve
@@ -1250,6 +1300,9 @@ label v12s7_chloe_kill:
 
     u "*Chuckles*"
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_left_viewpoint
 
 label v12s7_riley3:
@@ -1259,9 +1312,14 @@ label v12s7_riley3:
     if josh_europe and not v12s7_josh:
         $ v12s7_seenList.append(josh)
 
+    show screen murder_button_overlay(riley)
+
     scene v12ferric1 # FPP. Show riley and chloe stood together, mouths closed
 
     u "Seeing you guys together again in the same exact location is a little suspicious."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
 
     scene v12ferric2 # FPP. Show riley, slight smile, mouth open
     with dissolve
@@ -1376,6 +1434,9 @@ label v12s7_riley3:
     scene v12ferric4 # TPP. Show mc walking away
     with dissolve
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_left_viewpoint
     ### ERROR: -If MC presses the murder button during this scene he gets caught ###
     ### ERROR: -Back to free roam ###
@@ -1388,10 +1449,16 @@ label v12s7_riley3a:
     if josh_europe and not v12s7_josh:
         $ v12s7_seenList.append(josh)
 
+    show screen murder_button_overlay(riley)
+
     ### ERROR: -If talk to Riley 3 No Chloe ###
     scene v12ferril1 # FPP. Show riley, slight smile mouth closed.
+    with dissolve
 
     u "Still alive out here, huh?"
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
 
     scene v12ferril1a # FPP. Same 1, mouth open
     with dissolve
@@ -1474,11 +1541,19 @@ label v12s7_riley3a:
 
     call screen v12s7_left_viewpoint
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
+
 label v12s7_riley_kill:
 
     scene v12ferril3 # TPP. Show mc pointing finger gun at riley, mouth open
+    with dissolve
 
     u "Boom."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
     scene v12ferril4 # FPP. Show riley, slight smile, mouth open
     with dissolve
@@ -1513,6 +1588,9 @@ label v12s7_riley_kill:
     scene v12ferril2 # FPP. Show MC walking away.
     with dissolve
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_left_viewpoint
 
 
@@ -1523,9 +1601,14 @@ label v12s7_lauren1:
     if emily_europe and not v12s7_emily:
         $ v12s7_seenList.append(emily)
 
+    show screen murder_button_overlay(lauren)
+
     scene v12ferla1 # FPP. Show lauren, mouth closed
 
     u "There you are."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_8.mp3" fadein 2
 
     if laurenmad:
         scene v12ferla1a # FPP. same 1, mouth open
@@ -1548,6 +1631,9 @@ label v12s7_lauren1:
 
                 u "Yeah uhm, I know you're mad right now but I gotta play the game so..."
 
+                stop music fadeout 3
+                play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
+
                 scene v12ferla2 # TPP. Show mc pointing finger gun at lauren, mouth open
                 with dissolve
 
@@ -1562,6 +1648,9 @@ label v12s7_lauren1:
                 with dissolve
 
                 u "(Damn, she's still really pissed.)"
+        
+        stop music fadeout 3
+        play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
         call screen v12s7_seating_back
 
@@ -1740,6 +1829,9 @@ label v12s7_lauren1:
     scene v12ferla7 # TPP. Show MC walking away
     with dissolve
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_seating_back
 
 label v12s7_Lauren_kill:
@@ -1747,6 +1839,9 @@ label v12s7_Lauren_kill:
     scene v12ferla8 # TPP. Show mc pointing finger gun at lauren, mouth open
 
     u "Boom."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
     scene v12ferla1d
     with dissolve
@@ -1786,9 +1881,14 @@ label v12s7_ryan_imre1:
     if v12s7_riley and not v12s7_riley2:
         $ v12s7_seenList.remove(amber)
 
+    show screen murder_button_overlay(imre)
+
     scene v12ferryi1 # FPP. Show ryan from a distance looking at imre off screen, mouth open
 
     ry "Wow, look at this beautiful day, if only my wife was just as beautiful."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
 
     scene v12ferryi2 # FPP. Show imre from a distance looking at ryan off screen mouth open
     with dissolve
@@ -2045,6 +2145,9 @@ label v12s7_ryan_imre1:
     
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_right_gallery_back
 
 
@@ -2055,9 +2158,14 @@ label v12s7_ryan1:
     if (v12s7_riley and not v12s7_riley2) or amber in v12s7_killList:
         $ v12s7_seenList.remove(amber)
 
+    show screen murder_button_overlay(ryan)
+
     scene v12ferry1 # FPP. Show ryan, slight smile, mouth closed
 
     u "Your wife still hasn't come back?"
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
 
     scene v12ferry1a # FPP. Same 1, mouth open
     with dissolve
@@ -2206,6 +2314,9 @@ label v12s7_ryan1:
     scene v12ferry2 # TPP. Show mc walking away
     with dissolve
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_right_gallery_back
 
 label v12s7_ryan_kill:
@@ -2213,6 +2324,9 @@ label v12s7_ryan_kill:
     scene v12ferry3 # TPP. Show MC pointing finger gun at ryan, mouth open
 
     u "Boom."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
     scene v12ferry1a
     with dissolve
@@ -2237,15 +2351,23 @@ label v12s7_ryan_kill:
     scene v12ferry2 # TPP. Show mc walking away
     with dissolve
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_right_gallery_back
 
 label v12s7_imre2:
     $ v12s7_imre2 = True
     $ v12s7_seenList = []
 
+    show screen murder_button_overlay(imre)
+
     scene v12ferim1 # FPP. Show imre, mouth closed
 
     u "Hello Mrs."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_9.mp3" fadein 2
 
     scene v12ferim1a # FPP. Same 1, mouth open
     with dissolve
@@ -2350,6 +2472,9 @@ label v12s7_imre2:
     scene v12ferim1a
     with dissolve
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_foyer
 
 label v12s7_imre_kill:
@@ -2357,6 +2482,9 @@ label v12s7_imre_kill:
     scene v12ferim2 # TPP. Show MC pointing finger gun at imre, mouth open
 
     u "Boom."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
     scene v12ferim1b # FPP. same 1,new pose, mouth open
     with dissolve
@@ -2393,6 +2521,9 @@ label v12s7_imre_kill:
 
     u "(He's crazy. *Chuckles*)"
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_foyer
 
 
@@ -2400,9 +2531,14 @@ label v12s7_lindsey_charlie1:
     $ v12s7_lindsey = True
     $ v12s7_seenList = [lindsey, charli]
 
+    show screen murder_button_overlay(lindsey)
+
     scene v12ferlich1 # FPP. Show charli, mouth closed
 
     u "Surprised we haven't crashed yet."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_10.mp3" fadein 2
 
     scene v12ferlich1a # FPP. Same 1, rolling eyes
     with dissolve
@@ -2669,10 +2805,13 @@ label v12s7_lindsey_charlie1:
 
             u "(Asshole.)"
 
-            scene v12ferlich4 # FPP. Show mc walking away
-            with dissolve
+    scene v12ferlich4 # FPP. Show mc walking away
+    with dissolve
 
-            call screen v12s7_captains_room
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
+    call screen v12s7_captains_room
 
     ### ERROR: -If Mc presses the button during this convo he is caught ###
     ### ERROR: -Back to free roam ###
@@ -2681,9 +2820,14 @@ label v12s7_lindsey2:
     $ v12s7_lindsey2 = True
     $ v12s7_seenList = []
 
+    show screen murder_button_overlay(lindsey)
+
     scene v12ferli1 # FPP. Show lindsey from a distance, mouth open 
 
     li "Come over here citizen."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
 
     scene v12ferli2 # TPP. Show mc walking closer to lindsey
     with dissolve
@@ -2883,6 +3027,9 @@ label v12s7_lindsey2:
     scene v12ferli6 # FPP. Show lindsey walking away
     with dissolve
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_rear
 
 label v12s7_lindsey_kill:
@@ -2890,6 +3037,9 @@ label v12s7_lindsey_kill:
     scene v12ferli7 # TPP. Show mc, mouth open, pointing finger guns at lindsey
 
     u "Boom."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
     scene v12ferli8 # FPP. Show lindsey, slight smile, mouth open
     with dissolve
@@ -2919,6 +3069,9 @@ label v12s7_lindsey_kill:
     scene v12ferli9 # FPP. Show lindsey walking away
     with dissolve
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_rear
 
 
@@ -2926,9 +3079,14 @@ label v12s7_charli2:
     $ v12s7_charli = True
     $ v12s7_seenList = []
 
+    show screen murder_button_overlay(charli)
+
     scene v12fercha1 # FPP. Show charli alone, mouth closed
 
     u "Still alone huh?"
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_10.mp3" fadein 2
 
     scene v12fercha1a # FPP. Same 1, mouth open
     with dissolve
@@ -2955,6 +3113,9 @@ label v12s7_charli2:
 
     charli "And you have the most annoying personality."
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_captains_room
 
     # -MC leaves-
@@ -2966,6 +3127,9 @@ label v12s7_charli_kill:
     scene v12fercha2 # TPP. Show MC pointing a finger gun at charli, mouth open
 
     u "Boom."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_4.mp3" fadein 2
 
     scene v12fercha1a
     with dissolve
@@ -2985,6 +3149,9 @@ label v12s7_charli_kill:
     scene v12fercha3 # FPP. Show charli leaving
     with dissolve
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_captains_room
 
 label v12s7_msrose1:
@@ -2994,9 +3161,14 @@ label v12s7_msrose1:
     if v11_invite_sam_europe and not v12s7_samantha:
         $ v12s7_seenList.append(samantha)
 
+    show screen murder_button_overlay(ms_rose)
+
     scene v12fermsr1 # FPP. Show ms rose, seductive look, mouth open
 
     ro "Hello there world famous boxing champion."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_10.mp3" fadein 2
 
     scene v12fermsr1a # FPP. same 1, mouth closed
     with dissolve
@@ -3174,6 +3346,9 @@ label v12s7_msrose1:
 
     pause 0.5
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_seating_front
 
 label v12s7_msrose_kill:
@@ -3183,6 +3358,9 @@ label v12s7_msrose_kill:
     scene v12fermsr4 # TPP. MC points a finger gun at Ms. Rose, mc mouth open
 
     u "Boom."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_4.mp3" fadein 2
 
     scene v12fermsr1b
     with dissolve
@@ -3232,6 +3410,9 @@ label v12s7_msrose_kill:
     scene v12fermsr5 # FPP. Show Ms rose leaving.
     with dissolve
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_seating_front
 
 
@@ -3239,9 +3420,14 @@ label v12s7_penelope1:
     $ v12s7_penelope = True
     $ v12s7_seenList = []
 
+    show screen murder_button_overlay(penelope)
+
     scene v12ferpen1 # FPP. Show penelope, neutral look, mouth closed
 
     u "Hey hey hey!"
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_11.mp3" fadein 2
 
     scene v12ferpen1a # FPP. same 1, mouth open
     with dissolve
@@ -3472,12 +3658,18 @@ label v12s7_penelope1:
                 
                 pause 0.75
 
+                stop music fadeout 3
+                play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
                 call screen v12s7_left_walkway_front
             else:
                 scene v12ferpen2
                 with dissolve
                 
                 pause 0.75
+
+                stop music fadeout 3
+                play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
                 
                 call screen v12s7_left_walkway_front
 
@@ -3486,6 +3678,9 @@ label v12s7_penelope_kill:
     scene v12ferpen7 # TPP. Show mc pointing finger gun at penelope, mc mouth open
 
     u "Boom."
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
+
 
     scene v12ferpen8 # TPP. Show Penelope hugging mc
     with dissolve
@@ -3510,6 +3705,9 @@ label v12s7_penelope_kill:
     scene v12ferpen9 # FPP. Show Penelope walking away
     with dissolve
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_left_walkway_front
 
 
@@ -3520,10 +3718,15 @@ label v12s7_amber1:
     if v12s7_imre:
         $ v12s7_seenList = []
 
+    show screen murder_button_overlay(amber)
+
     ### ERROR: -If talk to Amber ###
     scene v12feram1 # FPP. Show amber from a distance, slight smile, mouth open
 
     am "Hey you!"
+    
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_12.mp3" fadein 2
 
     scene v12feram1a # FPP. same 1, mouth closed
     with dissolve
@@ -3719,6 +3922,9 @@ label v12s7_amber1:
     scene v12feram10 # TPP. Show mc walking away
     with dissolve
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_right_gallery_front
 
 label v12s7_amber_kill:
@@ -3726,6 +3932,9 @@ label v12s7_amber_kill:
     scene v12feram11 # TPP. Show MC pointing finger gun at amber, mc mouth open
 
     u "Boom."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
     scene v12feram3a
     with dissolve
@@ -3739,15 +3948,23 @@ label v12s7_amber_kill:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_right_gallery_front
 
 label v12s7_riley2:
     $ v12s7_riley2 = True
     $ v12s7_seenList = []
 
+    show screen murder_button_overlay(riley)
+
     scene v12ferrile1 # FPP. Show riley, slight smile, mouth closed
 
     u "What's going on?"
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
 
     u "*Southern accent* I mean, what's going on?"
 
@@ -3899,6 +4116,9 @@ label v12s7_riley2:
     scene v12ferrile2 # TPP. Show mc walking away
     with dissolve
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_right_gallery_front
 
 label v12s7_riley2_kill:
@@ -3906,6 +4126,9 @@ label v12s7_riley2_kill:
     scene v12ferrile3 # TPP. Show mc pointing finger gun at riley, mc mouth open
 
     u "Boom."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
     scene v12ferrile1a
     with dissolve
@@ -3942,6 +4165,9 @@ label v12s7_riley2_kill:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_right_gallery_front
 
 
@@ -3952,10 +4178,16 @@ label v12s7_riley2_amber:
     if v12s7_ryan:
         $ v12s7_seenList = [amber]
 
+    show screen murder_button_overlay(riley)
+
     ### ERROR: -If talk to Riley 2 and Amber ###
     scene v12feramb1 # FPP. Show amber, from a distance, looking at riley out of shot, mouth open
 
     am "I'm just not ready for all that, I think you're really amazing, but I'm just not the relationship person."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
+
 
     scene v12feramb2 # Show riley, from a distance, looking at amber out of shot, mouth closed
     with dissolve
@@ -3993,6 +4225,9 @@ label v12s7_riley2_amber:
     scene v12feramb6 # TPP. Show mc leaving
     with dissolve
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_right_gallery_front
 
     ### ERROR: -If MC presses the murder button during this scene he gets caught ###
@@ -4003,9 +4238,14 @@ label v12s7_sam_cameron:
     $ v12s7_samantha = True
     $ v12s7_seenList = [ms_rose]
 
+    show screen murder_button_overlay(samantha)
+
     scene v12fersaca1 # FPP. Show sam, slight smile, mouth open
 
     sa "Hey hey boxer!"
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_6.mp3" fadein 2
 
     scene v12fersaca1a # FPP. same 1, mouth closed
     with dissolve
@@ -4200,6 +4440,9 @@ label v12s7_sam_cameron:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_seating_front
 
 
@@ -4207,9 +4450,14 @@ label v12s7_sam2:
     $ v12s7_samantha2 = True
     $ v12s7_seenList = []
 
+    show screen murder_button_overlay(samantha)
+
     scene v12fersam1 # FPP. Show samantha neutral look, mouth closed
 
     u "No bodyguard?"
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
 
     scene v12fersam1a # FPP. same 1, mouth open
     with dissolve
@@ -4435,6 +4683,9 @@ label v12s7_sam2:
 
     scene v12fersam3 # FPP. Show sam walking away
     with dissolve
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
     
     call screen v12s7_seating_front
 
@@ -4444,6 +4695,9 @@ label v12s7_sam2_kill:
     scene v12fersam4 # TPP. Show mc, mouth open, pointing finger fun at sam.
 
     u "Boom."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
     scene v12fersam1c
     with dissolve
@@ -4510,6 +4764,9 @@ label v12s7_sam2_kill:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_right_walkway_back
 
 
@@ -4517,9 +4774,14 @@ label v12s7_cameron2:
     $ v12s7_cameron = True
     $ v12s7_seenList = []
 
+    show screen murder_button_overlay(cameron)
+
     scene v12fercam1 # FPP. Show cameron from a distance, mouth open
 
     ca "Hey [name], get over here."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_12.mp3" fadein 2
 
     scene v12fercam2 # TPP. Show mc walking over to cameron
     with dissolve
@@ -4606,6 +4868,9 @@ label v12s7_cameron2:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_rear_gallery
 
 label v12s7_cameron2_kill:
@@ -4613,6 +4878,9 @@ label v12s7_cameron2_kill:
     scene v12fercam5 # TPP. Show mc, mouth open, pointing finger fun at cameron
 
     u "Boom."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
     scene v12fercam3a
     with dissolve
@@ -4623,6 +4891,9 @@ label v12s7_cameron2_kill:
     with dissolve
 
     u "Then why am I wasting my time with you?"
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_rear_gallery
 
@@ -4635,9 +4906,14 @@ label v12s7_nora1:
     if v12s7_aubrey_moved:
         $ v12s7_seenList = []
 
+    show screen murder_button_overlay(nora)
+
     scene v12fernor1 # FPP. Show nora, mouth closed
 
     u "Hey, nice to meet you. I'm sure you recognize me."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
 
     scene v12fernor1a # FPP. same 1, mouth open
     with dissolve
@@ -4705,6 +4981,9 @@ label v12s7_nora1:
 
             scene v12fernor2 # TPP. Show mc walking away
             with dissolve
+
+            stop music fadeout 3
+            play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
             call screen v12s7_balcony_left
 
@@ -4778,6 +5057,9 @@ label v12s7_nora1:
 
                     scene v12fernor3 # TPP. Show mc walking away
                     with dissolve
+
+                    stop music fadeout 3
+                    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
                     call screen v12s7_balcony_left
                 "Of course I care":
@@ -4893,6 +5175,9 @@ label v12s7_nora1:
 
                     pause 0.75
 
+                    stop music fadeout 3
+                    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
                     call screen v12s7_balcony_left
 
 
@@ -4902,6 +5187,9 @@ label v12s7_nora1_kill:
     scene v12fernor4 # TPP. Show mc, pointing finger gun at nora, mouth open
 
     u "Boom."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
     scene v12fernor5 # FPP. Show nora mouth closed, smiling
     with dissolve
@@ -4934,6 +5222,9 @@ label v12s7_nora1_kill:
 
         pause 0.75
 
+        stop music fadeout 3
+        play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
         call screen v12s7_balcony_left
     else:
         scene v12fernor5a
@@ -4951,15 +5242,23 @@ label v12s7_nora1_kill:
 
         pause 0.75
 
+        stop music fadeout 3
+        play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
         call screen v12s7_balcony_left
 
 label v12s7_chris1:
     $ v12s7_chris = True
     $ v12s7_seenList = []
 
+    show screen murder_button_overlay(chris)
+
     scene v12ferchr1 # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
 
     u "What are you doing?"
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_9.mp3" fadein 2
 
     scene v12ferchr1a # FPP. Same 1, phone still in air, looking at mc, mouth open
     with dissolve
@@ -5049,12 +5348,18 @@ label v12s7_chris1:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_kitchen
 
 label v12s7_chris1_kill:
     scene v12ferchr4 # TPP. Show mc pointing finger gun at chris, mc mouth open.
 
     u "Boom."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
     scene v12ferchr1c
     with dissolve
@@ -5106,6 +5411,9 @@ label v12s7_chris1_kill:
 
     u "(He's having a hard time.)"
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_kitchen
 
 label v12s7_mrlee:
@@ -5114,6 +5422,9 @@ label v12s7_mrlee:
     scene v12ferlee1 # FPP. Show mr lee, neutral face, mouth closed
 
     u "Hello there, you fan of boxing? If so, did you catch my last fight?"
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_13.mp3" fadein 2
 
     scene v12ferlee1a # FPP. same 1, mouth open
     with dissolve
@@ -5140,6 +5451,9 @@ label v12s7_mrlee:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_rear_gallery
 
 label v12s7_josh1:
@@ -5151,9 +5465,14 @@ label v12s7_josh1:
     if chloe not in v12s7_killList:
         $ v12s7_seenList.append(chloe)
 
+    show screen murder_button_overlay(josh)
+
     scene v12ferjo1 # FPP. Show josh, slight smile, mouth closed
 
     u "What are you supposed to be?"
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
 
     scene v12ferjo1a # FPP. same 1, mouth open
     with dissolve
@@ -5246,16 +5565,24 @@ label v12s7_josh1:
 
             scene v12ferjo2 # FPP. Show mc walkign away.
             with dissolve
+    
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
-            call screen v12s7_right_viewpoint
+    call screen v12s7_right_viewpoint
 
 label v12s7_josh2:
     $ v12s7_josh2 = True
     $ v12s7_seenList = []
 
+    show screen murder_button_overlay(josh)
+
     scene v12ferjos1 # FPP. Show josh, from a distance, mouth open
 
     jo "Hey you there mister?"
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
 
     scene v12ferjos2 # TPP. Show MC walking over to josh
     with dissolve
@@ -5336,6 +5663,9 @@ label v12s7_josh2:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_utility
 
 label v12s7_josh2_kill:
@@ -5343,6 +5673,9 @@ label v12s7_josh2_kill:
     scene v12ferjos5 # TPP. Show mc pointing finger gun at josh, mc mouth open
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
     scene v12ferjos3a
 
@@ -5373,6 +5706,9 @@ label v12s7_josh2_kill:
 
     u "(Freaking goofball.)"
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_utility
 
 
@@ -5380,9 +5716,14 @@ label v12s7_emily1:
     $ v12s7_emily = True
     $ v12s7_seenList = [lauren]
 
+    show screen murder_button_overlay(emily)
+
     scene v12ferem1 # FPP. Show emilty from a distance mouth open
 
     em "Hmmm, I can see it, when alone and solely alone the passengers will be swept away from the life they've always know."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_10.mp3" fadein 2
 
     scene v12ferem2 # TPP. Show mc walking closer to emily
     with dissolve
@@ -5419,15 +5760,23 @@ label v12s7_emily1:
 
     em "Good."
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_seating_back
 
 label v12s7_emily2:
     $ v12s7_emily2 = True
     $ v12s7_seenList = []
 
+    show screen murder_button_overlay(emily)
+
     scene v12feremi1 # FPP. Show emily annoyed look, mouth closed
 
     u "Hey."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
 
     scene v12feremi1a # FPP. same 1, mouth open
     with dissolve
@@ -5439,6 +5788,9 @@ label v12s7_emily2:
 
     u "I'm just trying to... *Sighs* Nevermind."
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_bow
 
 label v12s7_emily2_kill:
@@ -5446,6 +5798,9 @@ label v12s7_emily2_kill:
     scene v12feremi3 # TPP. Show mc pointing finger gun at Emily, mc mouth open
 
     u "Boom."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
     scene v12feremi4 # FPP. Show emily, annoyed look, mouth open
     with dissolve
@@ -5457,13 +5812,20 @@ label v12s7_emily2_kill:
 
     pause 0.5
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
     call screen v12s7_bow
 
 label v12s7_mc_caught:
     scene black
 
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
+
     unknown "I found the murderer!"
 
+    stop music fadeout 3
 
 
     ### ERROR: -If MC doesn't kill someone but they're still in the right spot for him to kill them then they say "Yes?" as he walks up. At point he has the opportunity to kill which triggers the presses murder button actions and dialog ###

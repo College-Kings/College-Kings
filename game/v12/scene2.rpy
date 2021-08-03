@@ -9,6 +9,8 @@ label v12_nora_checks_mc:
 
     pause 0.75
 
+    play music "music/v12/Scene 2/Track Scene 2.mp3" fadein 2
+
     scene v12ncm2 # FPP. MC opens the door and nora is standing there, mouth closed
     with dissolve
 
@@ -296,6 +298,8 @@ label v12_nora_checks_mc:
         with dissolve
 
     pause 1
+
+    stop music fadeout 3
 
     if v11_pen_goes_europe:
         jump v12_penelope_roof #scene 3

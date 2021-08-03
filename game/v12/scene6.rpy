@@ -9,6 +9,8 @@ label v12_docks:
 
     pause 1
 
+    play music "music/v12/Scene 6/Track Scene 6.mp3" fadein 2
+
     scene v12dock2 # TPP. Show MC walking out of the shuttle, slight smile, mouth closed
     with dissolve
 
@@ -169,5 +171,7 @@ label v12_docks:
     with dissolve
 
     u "(Hmmm, this must be what Amber was saying she wanted to talk about. I knew them two were getting close, but not like this.)"
+
+    stop music fadeout 3
 
     jump v12s7fr #scene 7

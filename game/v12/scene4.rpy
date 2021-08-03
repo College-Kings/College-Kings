@@ -10,6 +10,8 @@ label v12_roomate_talk:
 
         pause 0.75
 
+        play music "music/v12/Scene 4/Track Scene 4.mp3" fadein 2
+
         scene v12rcr2 # FPP. Show chloe walking into the room, looking at MC, mouth closed
         with dissolve
 
@@ -486,5 +488,9 @@ label v12_roomate_talk:
 
         scene v12rcr11
         with dissolve
+
+        pause 0.75
+
+        stop music fadeout 3
 
     jump v12_morning_london #scene 5
