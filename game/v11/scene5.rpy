@@ -831,7 +831,7 @@ label v11s5_galleryScene:
     scene v11swc22 # FPP Show Candy standing above MC, Candy smiling with mouth closed
     with dissolve
 
-    $ grantAchievement("candy_crusher")
+    $ grant_achievement("candy_crusher")
     u "Candy it is."
 
     $ candy_crusher = True

@@ -26,8 +26,7 @@ label v10_fight_result:
             with dissolve
 
             if reaction == 0.5:
-                $ lights_out = True
-                $ grantAchievement("lights_out")
+                $ grant_achievement("lights_out")
 
             u "This wasn't just a fight for me, it was a fight for me and my brothers."
 
@@ -123,7 +122,7 @@ label v10_fight_result:
 
             if reaction == 0.5:
                 $ golden_boy = True
-                $ grantAchievement("golden_boy")
+                $ grant_achievement("golden_boy")
 
             u "This wasn't just a fight for me, it was a fight for me and my brothers."
 

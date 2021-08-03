@@ -821,7 +821,7 @@ label fr5aubrey1:
                     with dissolve
                     
                     $ lake_hj = True
-                    $ grantAchievement("relaxing_day")
+                    $ grant_achievement("relaxing_day")
 
                     " "
 

@@ -28,7 +28,7 @@ init python:
 
     def v2_reply6():
         setattr(store, "mixedfeelings", True)
-        grantAchievement("mixed_feelings")
+        grant_achievement("mixed_feelings")
 
     # Josh messages
     def v2_reply7():
@@ -1062,7 +1062,7 @@ label tomFightStart:
 label youfinish:
     if reaction == 0.5:
         $ thenotorious = True
-        $ grantAchievement("the_notorious")
+        $ grant_achievement("the_notorious")
             
     $ wintom = True
 
@@ -1220,7 +1220,7 @@ label meet_lauren2:
                 with dissolve
 
                 $ anewbeginning = True
-                $ grantAchievement("a_new_beginning")
+                $ grant_achievement("a_new_beginning")
                     
                 la "Maybe you're right."
 
@@ -2109,7 +2109,7 @@ label bo_ad:
             with dissolve
 
             $ overit = True
-            $ grantAchievement("over_it")
+            $ grant_achievement("over_it")
                 
             u "Sure, knock yourself out, man. We're not an item."
 

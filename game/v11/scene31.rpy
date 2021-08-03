@@ -175,7 +175,7 @@ label v11_lindsey_park:
             scene v11lip3h # FPP. Same as v11lip3d, different pose
             with dissolve
 
-            $ grantAchievement("political_strategist")
+            $ grant_achievement("political_strategist")
             u "I'm down to support you as long as all of this means a new beginning for the Chicks. I'm not in the business of switching out one problem for another, get what I'm saying?"
 
             scene v11lip3i # FPP. Same as v11lip3e, different pose

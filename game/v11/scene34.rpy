@@ -534,7 +534,7 @@ label v11_cardealership:
 
                             if laurenrs:
                                 $ two_timer = True
-                                $ grantAchievement("two_timer")
+                                $ grant_achievement("two_timer")
                                                                 
                             else:
                                 pass

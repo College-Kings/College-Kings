@@ -258,7 +258,7 @@ label imrecona: # Find Imre
 
 label imreconb: # Help Imre
     $ brosbeforehoes = True
-    $ grantAchievement("bros_before_hoes")
+    $ grant_achievement("bros_before_hoes")
 
     u "(I need to help Imre, Adam will destroy him in his current condition.)"
 
@@ -861,7 +861,7 @@ label imrecond: # Meet Chloe
         "Trust her":
             $ addPoint("bf")
             $ credulous = True
-            $ grantAchievement("credulous")
+            $ grant_achievement("credulous")
 
             u "(I shouldn't spy on her. It's not right.)"
 
@@ -1764,7 +1764,7 @@ label continuebd:
             with fade
 
             $ notmybusiness = True
-            $ grantAchievement("not_my_business")
+            $ grant_achievement("not_my_business")
 
     label nr_bb: #for compatibility only
     u "(Huh, what's this?)"
@@ -2703,7 +2703,7 @@ label emsex_c:
     with dissolve
 
     $ reignition = True
-    $ grantAchievement("reignition")
+    $ grant_achievement("reignition")
 
     " "
 
@@ -2735,7 +2735,7 @@ label emsex_a:
         play music "music/msexy.mp3"
 
         $ reignition = True
-        $ grantAchievement("reignition")
+        $ grant_achievement("reignition")
             
 
     " "
@@ -4851,7 +4851,7 @@ label afteraubrey:
                     # handshake clap sound
 
                     $ monkeybusiness = True
-                    $ grantAchievement("monkey_business")
+                    $ grant_achievement("monkey_business")
 
                     gr "That's what I'm talking about!"
 
@@ -4997,7 +4997,7 @@ label afteraubrey:
             $ meetgrayson = False
             $ addPoint("bro")
             $ seemsfishy = True
-            $ grantAchievement("seems_fishy")
+            $ grant_achievement("seems_fishy")
 
             u "(Fuck Grayson, I'm not meeting him.)"
 
@@ -6592,7 +6592,7 @@ label wakeupa:
                 with dissolve
 
                 $ strike = True
-                $ grantAchievement("strike")
+                $ grant_achievement("strike")
                     
                 pe "*Giggles*"
 

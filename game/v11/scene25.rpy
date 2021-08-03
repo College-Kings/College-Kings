@@ -38,7 +38,7 @@ label v11_hotel_bar:
             scene v11hob2a
             with dissolve
 
-            $ grantAchievement("fruity")
+            $ grant_achievement("fruity")
             u "Something fruity."
 
             scene v11hob2

@@ -1127,7 +1127,7 @@ label em_arcade_4:
     with dissolve
 
     $ lucky_7 = True
-    $ grantAchievement("lucky_7")
+    $ grant_achievement("lucky_7")
 
     u "Oh, God, I miss them."
 

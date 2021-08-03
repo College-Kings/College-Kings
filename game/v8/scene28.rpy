@@ -549,7 +549,7 @@ label dodged_pipe:
     with dissolve
 
     $ ip_man = True
-    $ grantAchievement("ip_man")
+    $ grant_achievement("ip_man")
 
     u "Fuck you!"
 

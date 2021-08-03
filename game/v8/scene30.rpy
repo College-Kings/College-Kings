@@ -27,7 +27,7 @@ label amber_sex_at_joshs:
     with dissolve
 
     $ get_a_room = True
-    $ grantAchievement("get_a_room")
+    $ grant_achievement("get_a_room")
 
     if ending == "amber":
         am "I've been waiting for this since the last time."

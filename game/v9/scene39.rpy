@@ -322,7 +322,7 @@ label v9_hang_w_linds:
                     with dissolve
 
                     $ the_wrong_time = True
-                    $ grantAchievement("the_wrong_time")
+                    $ grant_achievement("the_wrong_time")
                     li "What's wrong?"
 
                     scene v9hwl5i # FPP. Same camera as v9hwl5, quite sad, mouth closed.

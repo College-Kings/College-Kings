@@ -455,7 +455,7 @@ label v11_treasure_hunt:
             with dissolve
 
             $ on_target = True
-            $ grantAchievement("on_target")
+            $ grant_achievement("on_target")
 
             pause 2
 

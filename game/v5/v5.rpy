@@ -781,7 +781,7 @@ label continuez:
                         $ laurenpublic = False
                         $ addPoint("tm")
                         $ onthelow = True
-                        $ grantAchievement("on_the_low")
+                        $ grant_achievement("on_the_low")
 
                         u "Sorry, but can we just make sure we're alone before we do stuff like that. I just feel uncomfortable even just kissing in public."
 
@@ -1318,7 +1318,7 @@ label trolleybb: # you do press the lever
 
     if trolleyb and la2:
         $ petapublicenemy = True
-        $ grantAchievement("peta_public_enemy")
+        $ grant_achievement("peta_public_enemy")
             
 
     u "Ahh fuck!"
@@ -2153,7 +2153,7 @@ label continueaf:
                     $ laurenpublic = False
                     $ addPoint("tm")
                     $ onthelow = True
-                    $ grantAchievement("on_the_low")
+                    $ grant_achievement("on_the_low")
 
                     u "Sorry, but can we just make sure we're alone before we do stuff like that. I just feel uncomfortable even just kissing in public."
 
@@ -3572,7 +3572,7 @@ label fl_a:  # tell the school
     stop music fadeout 2.0
 
     $ snitch = True
-    $ grantAchievement("snitch")
+    $ grant_achievement("snitch")
 
     u "(I need to tell the school, it's the only way to sort this out.)"
 

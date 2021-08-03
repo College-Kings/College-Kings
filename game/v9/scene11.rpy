@@ -255,7 +255,7 @@ label v9_hc_demo_north:
 
     if the_king:
         $ king_of_the_north = True
-        $ grantAchievement("king_of_the_north")
+        $ grant_achievement("king_of_the_north")
 
     u "North, Your Majesty."
 
