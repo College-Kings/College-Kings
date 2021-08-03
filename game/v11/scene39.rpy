@@ -539,7 +539,7 @@ label v11_mc_amber_gokart:
     scene v11cam17c # FPP. MC looking at clerk, clerk looking at Amber, Clerk mouth open, slight smile
     with dissolve
 
-    clerk "Alright... May the cute one win! Three...two...one...GO!"
+    clerk "Alright... May the cute one win! Three... two... one... GO!"
     
     scene v11cam18 # FPP. Amber kart in front of mc's kart (Location 1 - Close to the starting line)
     with dissolve

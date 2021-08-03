@@ -398,7 +398,7 @@ label v11_cafe_with_riley:
     scene v11s3bris9f
     with dissolve
 
-    ri "*Laughs* I'm gonna get on out of here.And now that I think about it, flying is the last thing on my mind, so thank you."
+    ri "*Laughs* I'm gonna get on out of here. And now that I think about it, flying is the last thing on my mind, so thank you."
 
     scene v11s3bris9e
     with dissolve
