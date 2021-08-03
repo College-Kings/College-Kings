@@ -21,9 +21,10 @@ label v11_nightclub_with_josh:
     scene v11swc1 # FPP. Show the Park, Show Emily just leaving
     with fade
 
-    u "(Let's see who this is.)"
     play music "music/v11/Scene 5/Track Scene 5_1.mp3" fadein 2
     play sound "sounds/vibrate.mp3"
+
+    u "(Let's see who this is.)"
 
     $ contact_Josh.newMessage("WE GETTIN FUCKED UP TONIGHT!", queue = False)
     $ contact_Josh.addReply("Who?")
@@ -199,7 +200,7 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc4a # TPP Same angle as v11swc4, Security Guard mouth closed, Josh and MC holding up IDs
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11swc4b # TPP Same angle as v11swc4, Security Guard hand down, neutral expression, mouth open
     with dissolve
@@ -214,7 +215,7 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc5 # TPP Show Josh and MC at bar
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11swc6 # FPP At bar, show Josh smiling, mouth closed
     with dissolve
@@ -253,7 +254,7 @@ label v11s4_PhoneContinueJosh1:
             scene v11swc6d # FPP Show three shots of amber liquor on the bar
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
         "Vodka":
             scene v11swc6c
@@ -264,7 +265,7 @@ label v11s4_PhoneContinueJosh1:
             scene v11swc6e # FPP Show three shots of clear liquor on the bar
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
     scene v11swc6a
     with dissolve
@@ -289,12 +290,12 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc7 # FPP Show cute girl talking to her friend
     with dissolve
 
-    pause 0.5
+    pause 1.25
 
     scene v11swc8 # FPP Show another cute girl taking a drink
     with dissolve
 
-    pause 0.5
+    pause 1.25
 
     scene v11swc9 # FPP Show Ericka, Candy, and Jane at their table, talking to each other
     with dissolve
@@ -349,7 +350,7 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc11 # TPP Josh walking to Ericka, Candy, and Jane's table, MC following
     with dissolve
 
-    pause 0.5
+    pause 0.75
     
     scene v11swc9b # FPP Same angle and characters v11swc9, Ericka smiling mouth open, Jane smiling mouth closed, Candy still looking bored
     with dissolve
@@ -404,7 +405,7 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc12 # FPP Show Candy walking up to bar
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11swc13 # FPP Show Josh, grinning, mouth open
     with dissolve
@@ -414,7 +415,7 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc14 # FPP Show Josh walking away with Ericka and Jane, Josh has an arm around each girl
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11swc5c # TPP Same angle as v11swc5, MC and Candy at bar, Candy with mouth open and her hand up, getting Bartender's attention
     with dissolve
@@ -588,12 +589,12 @@ label v11s4_PhoneContinueJosh1:
         scene v11swc15 # FPP Show Candy walking away
         with dissolve
 
-        pause 0.5
+        pause 0.75
 
         scene v11swc5e # TPP Same angle as v11swc5, show MC at bar, alone, looking around
         with dissolve
 
-        pause 0.5
+        pause 0.75
 
         scene v11swc15a # TPP Same angle as v11swc15, show crowd in the bar, Josh is nowhere to be seen
         with dissolve
@@ -647,12 +648,12 @@ label v11s4_PhoneContinueJosh1:
             scene v11swc15
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v11swc5e
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v11swc15a
             with dissolve
@@ -685,7 +686,7 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc11a # TPP Same angle as v11swc11, Candy holding MC's hand, leading him away from bar
     with dissolve
 
-    pause 0.5
+    pause 0.75
     stop music fadeout 3
     play music "music/v11/Scene 5/Track Scene 5_4.mp3" fadein 2
     scene v11swc16 # TPP Outside of bar, Dannis walking up to MC and Candy, Dennis looks angry with mouth open
@@ -718,7 +719,7 @@ label v11s4_PhoneContinueJosh1:
             scene v11swc16a # TPP Same angle as v11swc16, Show Dennis punching MC
             with dissolve
 
-            pause 0.5
+            pause 0.75
             
             scene v11swc16b # TPP Same angle as v11swc16, Dennis pulling Candy away by her hand, MC not in the frame
             with dissolve
@@ -757,7 +758,7 @@ label v11s4_PhoneContinueJosh1:
             scene v11swc16e # TPP Same angle and characters as v11swc16, MC puts one hand on his waist, stands in a faminine way, and holds his other hand up, wrist limp
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
     scene v11swc3i # FPP Show Dennis looking confused, mouth closed
     with dissolve
@@ -787,7 +788,7 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc16f # TPP Same angle and characters as v11swc16, Dennis walking away from MC and Candy
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11swc3j
     with dissolve
@@ -797,7 +798,7 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc19 # TPP Show MC and Candy walking through a neighborhood to her house
     with fade
 
-    pause 0.5
+    pause 0.75
 
 label v11s5_galleryScene:
 
@@ -957,12 +958,12 @@ label v11s5_galleryScene:
     scene v11swc21c # TPP Same angle as v11swc21, MC and Candy finishing in doggy style
     with flash
 
-    pause 0.5
+    pause 0.75
 
     scene v11swc36 # FPP. Show Candy with cum dripping out her pussy, same position as v10cdg animation
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11swc24 # TPP MC and Candy laying beside each other in bed, both with small smiles, Candy's mouth open
     with dissolve
@@ -982,7 +983,7 @@ label v11s5_galleryScene:
     scene v11swc21d # TPP Same angle as v11swc21, MC frantically putting his clothes on
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     stop music fadeout 3
     play music "music/v11/Scene 5/Track Scene 5_7.mp3" fadein 2
@@ -1023,12 +1024,12 @@ label v11s5_galleryScene:
             scene v11swc27b # TPP MC tripping as he tries to run away from Dennis
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v11swc27c # TPP Dennis stomping on MC's back
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v11swc29 # FPP MC's view while on the bedroom floor
             with dissolve
@@ -1038,7 +1039,7 @@ label v11s5_galleryScene:
             scene v11swc27d # TPP MC getting up and running out the door
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v11swc28
             with dissolve
@@ -1048,7 +1049,7 @@ label v11s5_galleryScene:
     scene v11swc30 # TPP MC outside, walking home
     with fade
 
-    pause 0.5
+    pause 0.75
 
     scene v11swc18
     with dissolve
