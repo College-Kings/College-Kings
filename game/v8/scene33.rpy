@@ -197,7 +197,6 @@ label cont_nora_hall_3:
         "Help Nora":
             $ addPoint("bf")
             $ helpedNora = True
-            $ helping_hand = True
             jump hallway_help_nora
         "Don't help Nora":
             $ helpedNora = False

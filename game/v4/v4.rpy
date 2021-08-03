@@ -749,7 +749,6 @@ label v4start:
             show s316c
             with dissolve
 
-            $ relightthefire = True
             $ grant_achievement("relight_the_fire")
                 
             ju "Emily? I thought you guys broke up?"
@@ -950,7 +949,6 @@ label v4start:
             menu:
                 "Buy it":
                     $ volleyball = True
-                    $ rematch = True
                     $ grant_achievement("rematch")
 
                     u "Yeah, you're right. Maybe I could give it to her when we talk about what Ryan said."
@@ -1696,7 +1694,6 @@ label readmontagea:
                 scene s344a
                 with dissolve
 
-                $ keeneye = True
                 $ grant_achievement("keen_eye")
 
                 u "Can I get a muffin and a coffee please?"

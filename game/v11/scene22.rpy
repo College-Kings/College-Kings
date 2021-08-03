@@ -66,7 +66,6 @@ label v11_museum_tour:
             no "Keep dreaming, [name]."
 
         "Not real":
-            $ just_a_theory = True
             $ noraLike += 1
             $ rileyLike -= 1
 

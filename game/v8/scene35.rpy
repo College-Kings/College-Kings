@@ -129,7 +129,6 @@ label steak_w_chloe:
 
 label steak_flirt_w_chloe:
 
-    $ up_for_more = True
     $ grant_achievement("up_for_more")
 
     u "Unlesssss..."

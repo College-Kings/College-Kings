@@ -820,7 +820,6 @@ label fr5aubrey1:
                     scene v9slake17vid # mc and aubrey make out animation
                     with dissolve
                     
-                    $ lake_hj = True
                     $ grant_achievement("relaxing_day")
 
                     " "

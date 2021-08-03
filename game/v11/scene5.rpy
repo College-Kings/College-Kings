@@ -834,8 +834,6 @@ label v11s5_galleryScene:
     $ grant_achievement("candy_crusher")
     u "Candy it is."
 
-    $ candy_crusher = True
-    
     scene v11swc21a # TPP Same angle as v11swc21, Candy removing her clothing
     with dissolve
 

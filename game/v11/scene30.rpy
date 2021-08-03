@@ -990,7 +990,7 @@ label v11_quiz_bonus:
     pause 0.75
 
     if v11_hp_points == 3:
-        $ earn_your_owl = True
+        pass
 
     scene v11las19e
     with dissolve

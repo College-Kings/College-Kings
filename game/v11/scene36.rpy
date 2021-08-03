@@ -24,7 +24,6 @@ label v11_imre_ryan_grapple:
 
     menu:
         "Intervene":
-            $ dont_just_stand_there = True
             $ mrleeLike += 1
 
             scene v11irg2 # TPP. Show MC grabbing Imre, Mr Lee grabbing Ryan, everyone angry, mouths closed

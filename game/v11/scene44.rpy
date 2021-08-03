@@ -284,8 +284,6 @@ label v11_nora_lingerie:
 
     menu:
         "Pink":
-            $ pretty_in_pink = True
-
             scene v11nol12g # FPP. Same as v11nol12e, Nora mouth closed, sexy pose, smiling
             with dissolve
 

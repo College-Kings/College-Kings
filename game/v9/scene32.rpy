@@ -81,7 +81,6 @@ label v9_sat_hit_gym:
             scene v9atg3b
             with dissolve
 
-            $ second_date = True
             $ grant_achievement("second_date")
             u "Great, I'll text you."
 

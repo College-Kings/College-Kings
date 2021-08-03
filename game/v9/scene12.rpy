@@ -122,7 +122,6 @@ label v9_hall_cont1:
         "Punch the guy": 
             $ addPoint("bro")
             $ hl_punch = True
-            $ down_for_the_count = True
             jump v9_hall_punch
 
         "Don't punch the guy":

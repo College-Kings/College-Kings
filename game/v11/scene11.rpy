@@ -238,7 +238,6 @@ label v11_Amber_Penelope:
 
         menu:
             "Kiss her":
-                $ cross_your_heart = True
                 $ penelopers = True
                 $ addPoint("bf")
 

@@ -169,13 +169,14 @@ label v11_lindsey_park:
             li "Always down for being held accountable."
 
         "Support Lindsey":
-            $ political_strategist = True
+            $ political_strategist = True #keep
             $ lindseyLike += 1
 
             scene v11lip3h # FPP. Same as v11lip3d, different pose
             with dissolve
 
-            $ grant_achievement("political_strategist")
+            if politics:
+                $ grant_achievement("political_strategist")
             u "I'm down to support you as long as all of this means a new beginning for the Chicks. I'm not in the business of switching out one problem for another, get what I'm saying?"
 
             scene v11lip3i # FPP. Same as v11lip3e, different pose

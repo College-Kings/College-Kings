@@ -1075,7 +1075,6 @@ label v11_case_verdict:
 
     if v11s1_courtpoints >= 4:
         play music "music/v11/Scene 1/Track Scene 1_5.mp3" fadein 2
-        $ perry_mason = True
         $ v11_pen_goes_europe = True
         scene v11coc14b # TPP. Same as 14, Mr Lee looking at Penelope
         with dissolve

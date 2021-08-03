@@ -1157,7 +1157,6 @@ label v10s33_chloe1:
             "Tell Chloe about Nora":
                 $ chloeLike += 1
                 $ v10s33_toldChloe = True
-                $ chloe_over_nora = True
                 scene v10cfrcl1c # FPP. same1,slight angry look, closed
                 with dissolve
 

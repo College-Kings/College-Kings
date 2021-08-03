@@ -454,7 +454,6 @@ label v11_treasure_hunt:
             scene v11th18a
             with dissolve
 
-            $ on_target = True
             $ grant_achievement("on_target")
 
             pause 2

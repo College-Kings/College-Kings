@@ -86,7 +86,6 @@ label v9_ri_sex:
     scene v9ris6a # FPP. Same camera as v9ris6, seductive, mouth open.
     with dissolve
 
-    $ cheat_day = True
     $ grant_achievement("cheat_day")
     ri "That's the most romantic thing anyone's ever said to me."
 

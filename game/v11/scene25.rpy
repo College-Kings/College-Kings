@@ -32,7 +32,6 @@ label v11_hotel_bar:
             pause 0.75
 
         "Something fruity":
-            $ fruity = True
             $ v11s25_beer = False
 
             scene v11hob2a
