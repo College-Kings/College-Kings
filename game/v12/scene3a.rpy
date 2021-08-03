@@ -8,6 +8,8 @@ label v12_penelope_call:
     with dissolve
 
     pause 0.75
+
+    play music "music/v12/Scene 3a/Track Scene 3a.mp3" fadein 2
     
     play sound "sounds/call.mp3"
 
@@ -216,5 +218,7 @@ label v12_penelope_call:
             play sound "sounds/rejectcall.mp3"
 
             pause 0.75
+
+            stop music fadeout 3
 
             jump v12_roomate_talk #scene 4

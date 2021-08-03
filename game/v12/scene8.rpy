@@ -10,6 +10,8 @@ label v12_murder_mystery_reveal:
 
     lee "Wow, that turned out a lot better than expected. I hope you all enjoyed yourselves. Was anyone surprised to learn [name] was my chosen murderer?"
 
+    play music "music/v12/Scene 8/Track Scene 8.mp3" fadein 2
+
     scene v12mmr2 # FPP. Same positioning as v12mmr1, MC looking at Lindsey, Lindsey looking at Mr. Lee's direction, Lindsey smiling, mouth open
     with dissolve
 
@@ -301,5 +303,7 @@ label v12_murder_mystery_reveal:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v12_dock_arrival #scene 9
