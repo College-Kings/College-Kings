@@ -61,7 +61,7 @@ label drive_to_lake:
     scene v9dtl2a
     with dissolve
 
-    ry "Oh yeah? Wouldn't want to worry you, ladies, but I was sort of an 'I Spy' champion back in the day."
+    ry "Oh yeah? Wouldn't want to worry you, ladies, but I was sort of an \"I Spy\" champion back in the day."
 
     scene v9dtl1a # TPP. Same camera as v9dtl1, Aubrey laugh mouth open.
     with dissolve
@@ -116,7 +116,7 @@ label drive_to_lake:
     scene v9dtl3
     with dissolve
 
-    ri "Is it the 'big fat liar' Ryan?"
+    ri "Is it the \"big fat liar\" Ryan?"
 
     scene v9dtl2a
     with dissolve

@@ -590,7 +590,7 @@ label hit_with_pipe:
 
     $ renpy.end_replay()
 
-    je "Hahaha, see ya, 'hero'."
+    je "Hahaha, see ya, \"hero\"."
 
     scene v8sdd33 # TPP. Show Joe and Lars leaving the scene, one of them is grabbing the drugs from Josh.
     with dissolve

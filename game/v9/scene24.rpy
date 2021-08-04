@@ -224,7 +224,7 @@ label v9_walk_w_sam_cont2:
 
     scene v9wws11a
     with dissolve
-    sa "Must be nice. Only saying I remember from my dad is, 'Jesus, Sam, not again!' "
+    sa "Must be nice. Only saying I remember from my dad is, \"Jesus, Sam, not again!\""
 
     scene v9wws11
     with dissolve

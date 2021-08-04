@@ -498,7 +498,7 @@ label v10_lauren_room:
         scene v10lar3b
         with dissolve
 
-        la "I know someone's doing a thrift sale, there's 'win a date' and someone's even doing body painting."
+        la "I know someone's doing a thrift sale, there's \"win a date\" and someone's even doing body painting."
 
         scene v10lar3c
         with dissolve

@@ -35,7 +35,7 @@ label v10_wolves_redec:
     scene v10swhr2a
     with dissolve
 
-    ch "Yeah man! Make it scream 'Wolves', you know?"
+    ch "Yeah man! Make it scream \"Wolves\", you know?"
 
     scene v10swhr2
     with dissolve

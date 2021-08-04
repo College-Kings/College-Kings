@@ -263,7 +263,7 @@ label v11_cafe_with_riley:
     scene v11s3bris9g # FPP. same 9,  Show riley, smiling, mouth open, looking towards Charli
     with dissolve
 
-    ri "Oh, thank you so much! I'm Riley. And yeah, haha. it's natural'You're a friend of [name]?"
+    ri "Oh, thank you so much! I'm Riley. And yeah, haha. it's natural... You're a friend of [name]?"
 
     scene v11s3bris10b # FPP. same10a, looking at riley mouth open, slight smile
     with dissolve
@@ -321,12 +321,12 @@ label v11_cafe_with_riley:
     scene v11s3bris9f
     with dissolve
 
-    ri "'Amazing'? Definitely not. *Chuckles*"
+    ri "\"Amazing\"? Definitely not. *Chuckles*"
 
     scene v11s3bris9e
     with dissolve
 
-    u "('Amazing'...)"
+    u "(\"Amazing\"...)"
 
     scene v11s3bris9g 
     with dissolve

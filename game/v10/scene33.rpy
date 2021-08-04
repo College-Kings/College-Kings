@@ -857,7 +857,7 @@ label v10s33_deergirl11:
             scene v10cfrau4f
             with dissolve
 
-            au "I don't think you know what the word 'hot' means."
+            au "I don't think you know what the word \"hot\" means."
 
     scene v10cfrau4b
     with dissolve
