@@ -28,8 +28,8 @@ label v12_amber_after_spa:
 
             u "Wow Amber, that's a really nice towel."
 
-    if v11_tease_amber <= 2 or kct == "confident":
-        if v11_tease_amber >= 3:
+    if v11_tease_amber <= 2 or kct == "popular":
+        if not (v11_tease_amber <= 2):
             call screen kctPopup
 
         scene v12ams2b

@@ -508,8 +508,6 @@ label v12s32:
 
         au "*Sighs* Fine..."
 
-    
-
     if AubreyBoat2:
 
         scene v12s32_20d # same as 20b, aubrey cute smile at mc, mouth open
@@ -539,7 +537,6 @@ label v12s32:
 
     scene v12s32_24 # FPP closeup Aubrey makes a pose towards the camera in front of the car in her bra
     with dissolve
-
 
     u "(Damn, she really is good!)"
 
@@ -586,7 +583,6 @@ label v12s32:
     pause 0.7
 
     if v12s32_Aubrey_Boost:
-
         scene v12s32_27 # TPP show aubrey hugging mc, aubrey mouth open, cute smile
         with dissolve
 
@@ -793,7 +789,6 @@ label v12s32:
     ### ERROR: kiwiiPost.newComment("Aubrey", ":) Thanks to you...”)
     ### ERROR: kiwiiPost.newComment("Ryan”, "Holy...”)
     ### ERROR: kiwiiPost.newComment("Imre”, "Pick up your jaw idiot! LOL”, mentions=”Ryan”)
-
 
     scene v12s32_33b # same 33, -Aubrey starts walking away-
     with dissolve
