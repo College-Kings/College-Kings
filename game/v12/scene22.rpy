@@ -298,7 +298,7 @@ label v12_riley_room:
 
         u "(Bastard was probably listening that whole fucking time...)"
 
-    elif joinapes:
+    else:
         scene v12rir11b
         with dissolve
 

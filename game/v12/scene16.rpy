@@ -812,7 +812,6 @@ label v12_valentine:
     bishop "As I was saying, this is normally the moment of the kiss."
 
     if not chloegf:
-
         scene v12val30c
         with dissolve
 
