@@ -169,8 +169,6 @@ label v10_aft_walk_home:
             scene v10smwh3
             with dissolve
 
-            $ josh_europe = True
-
             u "Alright, let's get out of this alley."
 
             scene v10smwh3d
@@ -186,6 +184,7 @@ label v10_aft_walk_home:
             scene v10smwh4 # FPP. POV is MC and Josh close on the sidewalk, talking. Show Josh, normal expression, mouth closed.
             with dissolve
 
+            $ josh_europe = True
             u "I don't know why I haven't thought to ask you this before, but have you heard about the big Europe trip?"
 
             scene v10smwh4a # FPP. Same camera as v10smwh4. Show Josh, normal expression, mouth open.

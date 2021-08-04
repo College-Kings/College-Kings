@@ -51,7 +51,7 @@ label v11_hotel_bar:
 
             pause 0.75
 
-    if joshmad: # Josh mad, so didn't come to Europe
+    if not josh_europe: # Josh mad, so didn't come to Europe
         if v11s25_beer:
             scene v11hob4 # TPP Show MC taking a drink of beer
             with dissolve

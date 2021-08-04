@@ -155,6 +155,7 @@ label v11s4_PhoneContinueJosh1:
         menu:
             "Invite to Europe":
                 $ addPoint("bro")
+                $ josh_europe = True
 
                 scene v11swc3
                 with dissolve
