@@ -173,7 +173,7 @@ label v12_riddle_riley:
     scene v12rrl14 # TPP. MC walks over to riley
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12rrl15 # FPP. MC looking at riley, mouth closed
     with dissolve
