@@ -320,7 +320,7 @@ screen quick_menu():
             textbutton _("Q.Load") action QuickLoad()
             textbutton _("Prefs") action ShowMenu('preferences')
 
-    if renpy.loadable("bugTesting/bugTesting.rpy") and config.developer:
+    if config.developer:
         hbox:
             style_prefix "quick"
             align (1.0, 1.0)
