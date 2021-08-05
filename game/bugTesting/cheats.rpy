@@ -127,7 +127,7 @@ screen bugTesting_cheatMenu():
     modal True
     zorder 300
 
-    default shownCheatMenu = "General"
+    default cheat_catagory = "General"
     default cheat_catagories = get_cheat_catagories()
 
     add "#23272a"
@@ -142,18 +142,17 @@ screen bugTesting_cheatMenu():
             spacing 100
             for cheatCatagory in cheat_catagories:
                 textbutton cheatCatagory:
-                    action [Function(renpy.retain_after_load), SetScreenVariable("shownCheatMenu", cheatCatagory)]
+                    action [Function(renpy.retain_after_load), SetScreenVariable("cheat_catagory", cheatCatagory)]
                     text_style "modTextButtonHeader"
 
-    for cheatCatagory in cheat_catagories:
-        if shownCheatMenu == cheatCatagory:
-            use bugTesting_cheatMenuValues(cheat_catagory=cheatCatagory)
+    use bugTesting_cheatMenuValues(cheat_catagory=cheat_catagory)
 
     imagebutton:
         action Hide("bugTesting_cheatMenu"), Hide("bugTesting_cheatMenuValues"), SetVariable("quick_menu", True)
         idle "/bugTesting/images/cheatMenuBackButton.webp"
         hover im.MatrixColor("/bugTesting/images/cheatMenuBackButton.webp", im.matrix.brightness(0.2))
         pos (1666, 50)
+
 
 screen bugTesting_cheatMenuValues(cheat_catagory="General"):
     tag cheat_menu
