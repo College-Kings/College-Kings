@@ -326,10 +326,10 @@ screen quick_menu():
             align (1.0, 1.0)
 
             textbutton "Scene Select":
-                action ShowMenu("bugTesting_SceneSelect")
+                action Show("bugTesting_SceneSelect")
 
             textbutton "Cheats":
-                action ShowMenu("bugTesting_cheatMenu")
+                action Show("bugTesting_cheatMenu")
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.
