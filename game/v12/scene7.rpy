@@ -931,7 +931,7 @@ label v12s7_riley1:
             u "Alright, ladies. You two enjoy your little rich versus poor debate I've gotta go hit a punching bag or something. *Chuckles*"
 
             call screen v12s7_left_viewpoint
-        "Have Riley Leave":
+        "Have Riley leave":
             scene v12ferri4a
             with dissolve
 
@@ -2025,7 +2025,7 @@ label v12s7_ryan_imre1:
 
             u "Oh, that's unfortunate."
 
-        "Tell Ryan to Cool it":
+        "Tell Ryan to cool it":
             scene v12ferryi9a
             with dissolve
             
@@ -2709,7 +2709,7 @@ label v12s7_lindsey_charlie1:
     li "Yeah, sorry. *Chuckles*"
 
     menu:
-        "smarter to stay here":
+        "Smarter to stay here":
             ### ERROR: -This choice mades Lindsey and Charli Unkillable ###
             scene v12ferlich2a
             with dissolve
@@ -4501,7 +4501,7 @@ label v12s7_sam2:
 
             u "Wanna focus on the game? That's the point of all of this, I think... To make us focus on something else for a while."
 
-        "Go for kiss":
+        "Go for the kiss":
             scene v12fersam1b
             with dissolve
             
