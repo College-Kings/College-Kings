@@ -123,8 +123,9 @@ init python:
 
 
 screen bugTesting_cheatMenu():
+    tag cheat_menu
     modal True
-    zorder 200
+    zorder 300
 
     default shownCheatMenu = "General"
     default cheat_catagories = get_cheat_catagories()
@@ -155,7 +156,9 @@ screen bugTesting_cheatMenu():
         pos (1666, 50)
 
 screen bugTesting_cheatMenuValues(cheat_catagory="General"):
-    tag cheatmenu
+    tag cheat_menu
+    modal True
+    zorder 300
 
     vpgrid:
         cols 4
