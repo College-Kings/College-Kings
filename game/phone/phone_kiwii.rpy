@@ -1,6 +1,17 @@
 init python:
     class KiwiiPost:
-        def __init__(self, user, img, message="", mentions=None, numberLikes=renpy.random.randint(250, 500), comments=None):
+        """
+        Creates a post for the in game phone app, Kiwii
+
+        Attributes:
+            user (str): 
+            img (str): 
+            message (str, optional):
+            mentions (list, optional): 
+            numberLikes (int, optional):
+        """
+
+        def __init__(self, user, img, message="", mentions=None, numberLikes=renpy.random.randint(250, 500)):
             self.user = user
             self.img = "images/phone/kiwii/posts/{}".format(img)
             self.message = message
@@ -12,9 +23,7 @@ init python:
             self.numberLikes = numberLikes
             self.liked = False
 
-            if comments == None: self.sentComments = []
-            else: self.sentComments = comments
-
+            self.sentComments = []
             self.pendingComments = []
 
             kiwiiPosts.append(self)
