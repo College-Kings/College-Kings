@@ -447,7 +447,7 @@ label v11_lindsey_park:
 
     pause 0.75
 
-    if laurenmad: # Requirements for apology scene
+    if v11_aubrey_sex and laurenrs: # Requirements for apology scene
 
         scene v11lip6 # TPP. Show MC sitting down he has a slightly relieved expression, mouth closed
         with dissolve

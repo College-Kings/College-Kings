@@ -34,7 +34,7 @@ label v11_chloe_hotel_room_amber_call:
 
         am "I just wanna know what's up with Lauren."
 
-        if laurenmad: 
+        if v11_aubrey_sex and laurenrs: 
 
             scene v11hrc3 
             with dissolve
