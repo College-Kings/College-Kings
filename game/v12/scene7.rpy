@@ -23,7 +23,8 @@ label v12s7fr:
     scene v12fer1
     with dissolve
 
-    lee "First of all, it's been brought to my attention that many of you were unaware that we'd be taking the ferry rather than flying. This was a last minute adjustment, so I do apologize. Although, I think this voyage will be well worth it."
+    lee "First of all, it's been brought to my attention that many of you were unaware that we'd be taking the ferry rather than flying."
+    lee "This was a last-minute adjustment, so I do apologize. Although, I think this voyage will be well worth it."
 
     if v11_invite_sam_europe:
         scene v12fer3 # FPP. Show cameron, annoyed look, mouth open
@@ -39,7 +40,8 @@ label v12s7fr:
     scene v12fer1
     with dissolve
 
-    lee "As you all know, I take great pride in seizing every opportunity I can to teach my students and this ferry ride will be no different. Decades ago, a famous murder was committed on this ferry; A murder that we will, in a way, be re-enacting."
+    lee "As you all know, I take great pride in seizing every opportunity I can to teach my students and this ferry ride will be no different."
+    lee "Decades ago, a famous murder was committed on this ferry; A murder that we will, in a way, be re-enacting."
 
     scene v12fer5 # FPP. Show riley, excited, mouth open
     with dissolve
@@ -89,7 +91,8 @@ label v12s7fr:
     scene v12fer1
     with dissolve
 
-    lee "You can not. I purposefully chose the roles you are each being given. As I said, one of you is the murderer and it's the murderer's job to kill as many students as they can without being caught. Once the murderer is discovered, the game is over."
+    lee "You can not. I purposefully chose the roles you are each being given."
+    lee "As I said, one of you is the murderer and it's the murderer's job to kill as many students as they can without being caught. Once the murderer is discovered, the game is over."
 
     scene v12fer10
     with dissolve
@@ -372,7 +375,7 @@ label v12s7_aubrey1:
 
     u "Well, my travelling nurse may get a little jealous."
     
-    u "As a world famous boxer I'm always getting bumps and bruises so I have to travel with a nurse, but I wanted a little break from everyone so she's not here."
+    u "As a world-famous boxer I'm always getting bumps and bruises so I have to travel with a nurse, but I wanted a little break from everyone so she's not here."
     u "I actually do have a little pain from my last fight, but that's to be expected after all the adrenaline's worn off."
 
     scene v12ferau1
@@ -430,7 +433,9 @@ label v12s7_aubrey1:
     scene v12ferau1c
     with dissolve
 
-    u "So like I said, I'm dodging every swing and thinking that he's got nothing on me. I end up getting a little cocky and drop my arms to taunt him a bit, when suddenly out of nowhere he slugs me real good right across the jaw. He didn't knock me out, but the hit was just hard enough for me to start taking the fight a little bit more seriously."
+    u "So like I said, I'm dodging every swing and thinking that he's got nothing on me."
+    u "I end up getting a little cocky and drop my arms to taunt him a bit, when suddenly out of nowhere he slugs me real good right across the jaw."
+    u "He didn't knock me out, but the hit was just hard enough for me to start taking the fight a little bit more seriously."
 
     scene v12ferau1
     with dissolve
@@ -707,7 +712,8 @@ label v12s7_riley1:
     scene v12ferri1 # FPP. location is the upper rear outside seating area on the right side of the ship as seen on miro. Show chloe(from a distance as mc is overhearing the convo), looking at riley out of shot, slight annoyed look, mouth open
     with dissolve
 
-    cl "Rich people are the actual problem. You guys get to sit around on stacks of money and the little guys like me have to pick up the slack for this entire country. People like you never wanna pay your taxes but I barely have two pennies to rub together and I still have to pay mine."
+    cl "Rich people are the actual problem. You guys get to sit around on stacks of money and the little guys like me have to pick up the slack for this entire country."
+    cl "People like you never wanna pay your taxes but I barely have two pennies to rub together and I still have to pay mine."
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
@@ -1045,7 +1051,8 @@ label v12s7_chloe1:
     scene v12ferch1a
     with dissolve
 
-    cl "Hmm... A little bit of both I guess? I'm excited to see Paris because that's something I've always wanted to do, but I have to admit I do feel out of place sometimes considering we're in a completely different country."
+    cl "Hmm... A little bit of both I guess?"
+    cl "I'm excited to see Paris because that's something I've always wanted to do, but I have to admit I do feel out of place sometimes considering we're in a completely different country."
 
     scene v12ferch1
     with dissolve
@@ -1126,7 +1133,8 @@ label v12s7_chloe1:
     scene v12ferch1b
     with dissolve
 
-    cl "*Whisper* He was really harsh on me when I had him as a teacher. It was sort of my fault, but still. That man is relentless when you don't do what he asks. I don't know if he's bipolar or if he just really doesn't like being disobeyed."
+    cl "*Whisper* He was really harsh on me when I had him as a teacher. It was sort of my fault, but still."
+    cl "That man is relentless when you don't do what he asks. I don't know if he's bipolar or if he just really doesn't like being disobeyed."
 
     scene v12ferch1c
     with dissolve
@@ -1324,7 +1332,8 @@ label v12s7_riley3:
     scene v12ferric2 # FPP. Show riley, slight smile, mouth open
     with dissolve
 
-    ri "*Chuckles* *Southern accent* Sure do keep checking in on us, partner! I've seen the way you knock men out in the ring... I always wondered if your opponents were able to walk out of there alive and now I'm starting to wonder if we will. Are you a killer, Mr. Boxer?"
+    ri "*Chuckles* *Southern accent* Sure do keep checking in on us, partner! I've seen the way you knock men out in the ring..."
+    ri "I always wondered if your opponents were able to walk out of there alive and now I'm starting to wonder if we will. Are you a killer, Mr. Boxer?"
 
     scene v12ferric3 # FPP. Show Chloe, mouth open
     with dissolve
@@ -1344,7 +1353,8 @@ label v12s7_riley3:
     scene v12ferric3a
     with dissolve
 
-    u "Okay, I can see how that could be suspicious. But as always, innocent until proven guilty. And both of you are throwing a lot of heat on me, so how do I know this isn't one of your guys' plans to just throw the attention off of yourselves?"
+    u "Okay, I can see how that could be suspicious. But as always, innocent until proven guilty."
+    u "And both of you are throwing a lot of heat on me, so how do I know this isn't one of your guys' plans to just throw the attention off of yourselves?"
 
     scene v12ferric1a # FPP. Show riley looking closer at chloe, mouth open
     with dissolve
@@ -1374,7 +1384,8 @@ label v12s7_riley3:
     scene v12ferric2a
     with dissolve
 
-    ri "*Southern accent* Hmm, I guess you're right. Who else though? Imre and Ryan are chasing each other around. So it'd be really strange if one of them was the killer and plus, I don't think Mr. Lee would've chosen them."
+    ri "*Southern accent* Hmm, I guess you're right. Who else though?"
+    ri "Imre and Ryan are chasing each other around. So it'd be really strange if one of them was the killer and plus, I don't think Mr. Lee would've chosen them."
 
     scene v12ferric2b # FPP. same 2, looking at camera, mouth closed
     with dissolve
@@ -1463,7 +1474,8 @@ label v12s7_riley3a:
     scene v12ferril1a # FPP. Same 1, mouth open
     with dissolve
 
-    ri "*Southern accent* I am, but I'm not sure if our poor girl is. I know she planned on staying in the same spot, but now she's gone. I was enjoying our conversations so much... I was starting to grow a little attached to her."
+    ri "*Southern accent* I am, but I'm not sure if our poor girl is. I know she planned on staying in the same spot, but now she's gone."
+    ri "I was enjoying our conversations so much... I was starting to grow a little attached to her."
 
     scene v12ferril1
     with dissolve
@@ -1519,7 +1531,8 @@ label v12s7_riley3a:
             scene v12ferril1a
             with dissolve
 
-            ri "*Whisper* Hey, I am not playing hardcore. I just don't wanna get in trouble and I'll have you know I actually enjoy stuff like this. You gotta admit, Mr. Lee creates very interactive situations for us students. I appreciate that."
+            ri "*Whisper* Hey, I am not playing hardcore. I just don't wanna get in trouble and I'll have you know I actually enjoy stuff like this."
+            ri "You gotta admit, Mr. Lee creates very interactive situations for us students. I appreciate that."
 
             scene v12ferril1a
             with dissolve
@@ -1773,7 +1786,8 @@ label v12s7_lauren1:
     scene v12ferla1d
     with dissolve
 
-    la "Yeah, Amber got security or whatever and she's taking advantage of it. She took my gum earlier after she searched me saying it was contraband. *Laughs* She could've just asked for some gum, but Mr. Lee was nearby and I guess that's how she chose to stay in character."
+    la "Yeah, Amber got security or whatever and she's taking advantage of it. She took my gum earlier after she searched me saying it was contraband. *Laughs*"
+    la "She could've just asked for some gum, but Mr. Lee was nearby and I guess that's how she chose to stay in character."
 
     scene v12ferla1c
     with dissolve
@@ -2239,7 +2253,8 @@ label v12s7_ryan1:
     scene v12ferry1b # FPP. Same 1, new pose, mouth open
     with dissolve
 
-    ry "He's sensitive to anything gay, it makes it so easy to bother him. I told him I can't wait till tonight, that I was gonna show him a good time. If Mr. Lee wasn't nearby I don't know what he would've done, but his face got super red. *Laughs*"
+    ry "He's sensitive to anything gay, it makes it so easy to bother him. I told him I can't wait till tonight, that I was gonna show him a good time."
+    ry "If Mr. Lee wasn't nearby I don't know what he would've done, but his face got super red. *Laughs*"
 
     scene v12ferry1c # FPP. same 1, new pose, mouth closed
     with dissolve
@@ -2422,7 +2437,8 @@ label v12s7_imre2:
     scene v12ferim1a
     with dissolve
 
-    imre "Ugh duh. He gave me the worst character, he's following me around, and threating to throw me in the fucking water. Yeah, he's just doing this to be a dick. If I wasn't here you guys would be kicking back enjoying the breeze. If the fucking murderer would do his job or hurry up and get caught this would finally be over with."
+    imre "Ugh duh. He gave me the worst character, he's following me around, and threating to throw me in the fucking water. Yeah, he's just doing this to be a dick."
+    imre "If I wasn't here you guys would be kicking back enjoying the breeze. If the fucking murderer would do his job or hurry up and get caught this would finally be over with."
 
     scene v12ferim1
     with dissolve
@@ -2442,7 +2458,8 @@ label v12s7_imre2:
     scene v12ferim1a
     with dissolve
 
-    imre "I haven't been able to do anything, because Mr. Lee won't let me breathe. He got distracted and it gave me a chance to get over here. He hasn't found me yet. If the killer would just kill me so I can be done with this that'd be great. Then Ryan can be a dumbass widow with no job on a cruise by himself walking around like an idiot."
+    imre "I haven't been able to do anything, because Mr. Lee won't let me breathe. He got distracted and it gave me a chance to get over here. He hasn't found me yet."
+    imre "If the killer would just kill me so I can be done with this that'd be great. Then Ryan can be a dumbass widow with no job on a cruise by himself walking around like an idiot."
 
     scene v12ferim1
     with dissolve
@@ -2598,7 +2615,8 @@ label v12s7_lindsey_charlie1:
     scene v12ferlich1b
     with dissolve
 
-    charli "Imre wants the game to be over, if he was the murderer he would've killed Ryan in front of someone in order to get caught. Ryan would have killed Imre out of frustration and Amber has had too many opportunities to kill people yet she hasn't. So we know none of them are the killer."
+    charli "Imre wants the game to be over, if he was the murderer he would've killed Ryan in front of someone in order to get caught."
+    charli "Ryan would have killed Imre out of frustration and Amber has had too many opportunities to kill people yet she hasn't. So we know none of them are the killer."
 
     scene v12ferlich1
     with dissolve
@@ -3165,7 +3183,7 @@ label v12s7_msrose1:
 
     scene v12fermsr1 # FPP. Show ms rose, seductive look, mouth open
 
-    ro "Hello there world famous boxing champion."
+    ro "Hello there world-famous boxing champion."
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_10.mp3" fadein 2
@@ -4001,7 +4019,8 @@ label v12s7_riley2:
     scene v12ferrile1a
     with dissolve
 
-    ri "I know it's not for everybody, but there's more to it than that. As I've gotten to know and been around Chris it just seems as though he only does what he wants to do. Most times what he wants to do is the right thing, but it's still a little selfish in my opinion."
+    ri "I know it's not for everybody, but there's more to it than that. As I've gotten to know and been around Chris it just seems as though he only does what he wants to do."
+    ri "Most times what he wants to do is the right thing, but it's still a little selfish in my opinion."
 
     scene v12ferrile1
     with dissolve
@@ -4584,7 +4603,8 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sa "Honestly, my life sucks. I'm an adult in college, but instead of having friends and living the life I want to live I'm smothered by my brother for literally no reason except he has nothing better to do. I just want to be my own person."
+    sa "Honestly, my life sucks. I'm an adult in college, but instead of having friends and living the life I want to live..."
+    sa "I'm smothered by my brother for literally no reason except he has nothing better to do. I just want to be my own person."
 
     scene v12fersam1b
     with dissolve
@@ -4644,7 +4664,8 @@ label v12s7_sam2:
     scene v12fersam1c
     with dissolve
 
-    sa "Hmm, maybe I should try talking to her. Someone I definitely wanna talk to though is Amber. After seeing how feisty she's been with the whole security thing I definitely wanna get to know her. She seems like my type of person, plus I know her and Riley are cool."
+    sa "Hmm, maybe I should try talking to her. Someone I definitely wanna talk to though is Amber."
+    sa "After seeing how feisty she's been with the whole security thing I definitely wanna get to know her. She seems like my type of person, plus I know her and Riley are cool."
 
     scene v12fersam1b
     with dissolve
