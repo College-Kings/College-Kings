@@ -771,7 +771,7 @@ label v11_nora_chloe_hallway:
                             scene v11clb1a
                             with dissolve
 
-                            u "See you later beautiful."
+                            u "See you later, beautiful."
                         else:
                             scene v11clb1a
                             with dissolve

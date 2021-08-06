@@ -35,6 +35,7 @@ label v11_cafe_with_riley:
     else:
         scene v11s3bris3 # TPP.Show MC talking on his phone in his apes bedroom, sat on the bed, mouth open
         with dissolve
+        stop sound
         u "Hello?"
 
         scene v11s3bris2
