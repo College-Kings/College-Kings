@@ -40,6 +40,7 @@ label v12_amber_bus:
 
     menu:
         "Tease her":
+            $ addPoint("tm")
             scene v12amb3b # FPP. Same as v12amb3, Amber slight smile, mouth closed, different pose
             with dissolve
 
@@ -56,6 +57,7 @@ label v12_amber_bus:
             u "I may be willing to take that risk."
 
         "Convince her":
+            $ addPoint("bf")
             scene v12amb3b
             with dissolve
 
@@ -184,6 +186,7 @@ label v12_amber_bus:
 
     menu:
         "Stay out of it":
+            $ addPoint("bf")
 
             u "It's all your decision, I don't wanna sway you either way. It's gotta be your choice."
 
@@ -208,6 +211,7 @@ label v12_amber_bus:
             u "Exactly."
 
         "Say something":
+            $ addPoint("bro")
             $ v12_amber_tell_riley = True
 
             u "You should just get it over with and tell her what's up."

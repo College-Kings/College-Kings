@@ -328,6 +328,7 @@ label v12_lauren_sex:
 
     menu:
         "Let her vent":
+            $ addPoint("bro")
             scene v12las23b
             with dissolve
 
@@ -344,6 +345,7 @@ label v12_lauren_sex:
             u "It's not a problem sir. Thank you."
 
         "Comfort her":
+            $ addPoint("bf")
             $ v12_lauren_points += 1
 
             u "Lauren, relax. *Chuckles* I appreciate that you planned on doing this, and no matter how it happened, it's not a big deal. Don't stress."
@@ -456,6 +458,7 @@ label v12_lauren_sex:
 
     menu:
         "Talk to her":
+            $ addPoint("bro")
 
             u "I'm not. What actually matters to me is the amount of effort you've put into the night, not the way it's going. What's the saying? \"It's the thought that counts\"? *Chuckles*"
 
@@ -475,6 +478,7 @@ label v12_lauren_sex:
             la "That means a lot... Thank you, [name]."
 
         "Hold her":
+            $ addPoint("bf")
             $ v12_lauren_points += 1
 
             scene v12las31b # FPP. Same as v12las31a, one of MC's around lauren, other hand holding lauren's hand, lauren sad, mouth closed
@@ -582,6 +586,7 @@ label v12_lauren_sex:
 
     menu:
         "We'll do this another day":
+            $ addPoint("bro")
 
             u "Lauren, you tried your best to make tonight special and I respect and love you for that. Just the fact that you did all of this proves how much you care about me and our relationship."
 
@@ -623,6 +628,7 @@ label v12_lauren_sex:
             jump v12_room_sneak
 
         "A little extra effort...":
+            $ addPoint("bf")
             $ v12_lauren_points += 1
 
             scene v12las42 # TPP. Show MC trying to budge the door open, struggling, mouth open

@@ -18,6 +18,8 @@ label v12_nora_robbed:
     
     menu:
         "Go to Nora":
+            $ addPoint("bf")
+            
             scene v12nrb2 # TPP. MC runs to nora, Nora shocked, MC worries, mouths closed
             with dissolve
             
@@ -324,6 +326,7 @@ label v12_nora_robbed:
             jump v12_nora_checks_mc #scene 2
 
         "Chase after robber":
+            $ addPoint("tm")
             stop music fadeout 3
 
             jump v12_chase_robber #scene 1a

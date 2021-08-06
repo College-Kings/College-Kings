@@ -294,6 +294,7 @@ label v12_game_roommate:
 
         menu:
             "Kill parents for insurance":
+                $ addPoint("tm")
                 scene v12grm2f
                 with dissolve
 
@@ -340,6 +341,7 @@ label v12_game_roommate:
                 u "I guess so. *Laughs*"
 
             "Sell your house":
+                $ addPoint("bf")
                 scene v12grm2d
                 with dissolve
 

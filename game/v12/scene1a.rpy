@@ -293,6 +293,7 @@ label v12_chase_robber:
                 u "Bitch!"
 
             "Walk off":
+                $ addPoint("bf")
 
                 u "(He's had enough.)"
 

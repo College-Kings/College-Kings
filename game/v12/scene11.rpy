@@ -300,6 +300,7 @@ label v12_paris_hotel:
 
     menu:
         "Support her choice":
+            $ addPoint("bf")
             scene v12pht9d
             with dissolve
 
@@ -317,6 +318,7 @@ label v12_paris_hotel:
             u "That's what FRIENDS are for. *Chuckles*"
 
         "Help Chris":
+            $ addPoint("bro")
             scene v12pht9d
             with dissolve
 
@@ -355,6 +357,7 @@ label v12_paris_hotel:
 
     menu:
         "Yes":
+            $ addPoint("tm")
             scene v12pht9h
             with dissolve
 
@@ -366,6 +369,7 @@ label v12_paris_hotel:
             no "Haha, I'll think about it."
 
         "No":
+            $ addPoint("bf")
             scene v12pht9h 
             with dissolve
 

@@ -256,6 +256,7 @@ label v12_riley_cafe:
 
     menu:
         "I'd be able to tell":
+            $ addPoint("tm")
             scene v12ric4a
             with dissolve
 
@@ -277,6 +278,7 @@ label v12_riley_cafe:
             ri "Hehe..."
 
         "I don't think I'd be able to tell":
+            $ addPoint("bf")
             scene v12ric4a
             with dissolve
 
@@ -317,10 +319,12 @@ label v12_riley_cafe:
 
     menu:
         "Oh yeah, good idea":
+            $ addPoint("bf")
 
             u "Almost forgot about that... Yeah, that's definitely the move."
 
         "Ugh, Do we have to?":
+            $ addPoint("bro")
             
             u "Oh yayyy, another boring treasure hunt."
 

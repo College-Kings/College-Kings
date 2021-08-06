@@ -125,6 +125,7 @@ label v12_follow_chris:
 
     menu:
         "She wasn't overreacting":
+            $ addPoint("bf")
             $ chrismad = True
 
             scene v12chf4a
@@ -208,6 +209,7 @@ label v12_follow_chris:
             driver "Don't worry, I can take you back."
 
         "You're right":
+            $ addPoint("bro")
             scene v12chf4l # FPP. Same as v12chf4a, different pose
             with dissolve
 

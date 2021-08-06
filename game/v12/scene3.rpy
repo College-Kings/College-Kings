@@ -168,12 +168,14 @@ label v12_penelope_roof:
 
             menu:
                 "Sure is":
+                    $ addPoint("bro")
                     scene v12penr11 # FPP View of MC, who is laying on his back looking up at the stars
                     with dissolve
 
                     u "It really is."
 
                 "You sure are":
+                    $ addPoint("bf")
 
                     u "Yes, you are."
 
@@ -318,6 +320,7 @@ label v12_penelope_roof:
 
                 menu:
                     "Be shocked":
+                        $ addPoint("bro")
 
                         u "*Gulp*"
 
@@ -470,7 +473,7 @@ label v12_penelope_roof:
             pause 0.75
 
         "Don't reply":
-            $ addPoint("tm")
+            $ addPoint("bro")
 
             scene v12penr19 # FPP MC's view sitting on his bed, looking down at his phone, which he just turned off
             with dissolve

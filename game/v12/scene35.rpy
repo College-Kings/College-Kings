@@ -72,6 +72,7 @@ label v12_chris_nora_room:
 
     menu:
         "Go to Nora":
+            $ addPoint("bf")
             scene v12cnr10 # TPP. Show MC walking towards his hotel room door to the hallway, neutral expression, mouth closed
             with dissolve
 
@@ -151,6 +152,7 @@ label v12_chris_nora_room:
                 jump v12_scene35a
 
         "Leave her alone":
+            $ addPoint("bro")
             scene v12cnr5
             with dissolve
 

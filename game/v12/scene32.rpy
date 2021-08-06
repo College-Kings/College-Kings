@@ -271,6 +271,7 @@ label v12s32:
             pg "I wouldn't call that sexy but, alright..."
 
         "Put your arms around Aubrey":
+            $ addPoint("bro")
 
             scene v12s32_15c #same 15, Aubrey has her back to MC and he wraps his arms around her, squeezing her in tight, Aubrey smiles at him, mouth closed
             with dissolve

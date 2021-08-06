@@ -217,6 +217,7 @@ label v12_urban_exploring:
             u "*Laughs*"
         
         "Just watch":
+            $ addPoint("bf")
 
             u "I'm just here to watch, actually... I was more of a monkey bars and seesaw kind of kid. *Laughs*"
 
@@ -342,6 +343,7 @@ label v12_urban_exploring:
     # TIMED CHOICE - ADD CODE
     menu:
         "Catch her":
+            $ addPoint("bf")
             scene v12uex12a # TPP Same angle as v12uex12, show MC catching Nora from behind
             with dissolve
 
@@ -460,6 +462,7 @@ label v12_urban_exploring:
 
     menu:
         "Walk Aubrey back to hotel":
+            $ addPoint("bf")
 
             u "Of course, c'mon Aubrey. I'll walk you back."
 
