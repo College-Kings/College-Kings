@@ -108,7 +108,6 @@ label v10s33_autumn1:
     with dissolve
 
     menu:
-
         "Ask why":
             $ v10s33_autwhypledge = True
             $ addPoint("bf", 1)
@@ -127,7 +126,6 @@ label v10s33_autumn1:
 
         "Leave it be":
             $ addPoint("bro", 1)
-
             u "(Not really my business.)"
 
     scene v10cfraut1
@@ -149,7 +147,6 @@ label v10s33_autumn1:
     with dissolve
 
     menu:
-        
         "That's the main reason":
             $ v10s33_authereformud = True
             $ addPoint("bro", 1)
@@ -159,7 +156,6 @@ label v10s33_autumn1:
             $ addPoint("bf", 1)
             $ autumnLike += 1
             u "I didn't even know about the mud wrestling until recently, I'd be here with or without it."
-
 
     scene v10cfraut1d
     with dissolve
@@ -180,7 +176,6 @@ label v10s33_autumn1:
     u "That's really cool!"
 
     if v10_help_nora_freeroam:
-
         u "You know, might be good for you to find a way to relax after this."
 
         scene v10cfraut1
@@ -209,7 +204,6 @@ label v10s33_autumn1:
         aut "I guess that's true. Maybe I'll talk to Nora about signing up."
 
     else:
-
         scene v10cfraut1
         with dissolve
 
@@ -257,13 +251,11 @@ label v10s33_deergirl11:
     guyd "Only took me a thousand tries."
     
     if joinwolves:
-
         scene v10cfrdg12b # FPP. same 12, show perry looking at camera, mouth open
         with dissolve
-        
+
         guyd "Hey [name], please come help me."
     else:
-
         scene v10cfrdg11b # FPP. same 11 looking at camera, mouth open
         with dissolve
         
@@ -313,9 +305,7 @@ label v10s33_deergirl11:
     with dissolve
 
     menu:
-
         "Arm Arm Pose":
-
             scene v10cfrdg14 # TPP. Show MC looking at camera, right hand held out to right, mouth closed.
             with dissolve
 
@@ -346,7 +336,6 @@ label v10s33_deergirl11:
             u "*Laughs* No, but it's not that hard."
 
         "Pose Pose Arm":
-
             scene v10cfrd13 
             with dissolve
 
@@ -366,7 +355,6 @@ label v10s33_deergirl11:
             with dissolve
 
             guyd "Haha, thought they were easy?"
-
 
     scene v10cfrdg11b
     with dissolve
@@ -388,7 +376,6 @@ label v10s33_deergirl11:
 
     menu:
         "Cross Lean Face":
-
             scene v10cfrdg13c # TPP. same 13, Show mc leant back arms crossed, mouth closed
             with dissolve
 
@@ -403,8 +390,8 @@ label v10s33_deergirl11:
             with dissolve
 
             pause 0.75
+
         "Lean Face Cross":
-            
             scene v10cfrdg13d # TPP. same 13, leant forward arms down.
             with dissolve
             
@@ -425,7 +412,6 @@ label v10s33_deergirl11:
 
             dg1 "Guess dancing isn't for everyone. *Laughs*"
 
-
     scene v10cfrdg11g
     with dissolve
 
@@ -437,11 +423,9 @@ label v10s33_deergirl11:
     dg1 "If you're interested in learning any more dances, you know where to find me."
 
     if joinwolves:
-
         menu:
             "Make fun of Perry":
                 $ v10s33_make_fun_perry = True
-                
                 scene v10cfrdg12c
                 with dissolve
 
@@ -528,11 +512,8 @@ label v10s33_deergirl11:
     scene v10cfrau2a
     with dissolve
 
-
     menu:
-
         "Sure":
-
             u "Sure."
             $ addPoint("bf", 1)
             $ v10s33_audance = True
@@ -561,9 +542,7 @@ label v10s33_deergirl11:
             with dissolve
 
             menu:
-
                 "Twirl her":
-
                     $ v10s33_autwirl = True
 
                     scene v10cfrau5c #same 5b, mc twirls aubrey start
@@ -576,12 +555,8 @@ label v10s33_deergirl11:
 
                     au "Someone's old school."
 
-
-
                 "Dip her":
-
                     $ aubreyLike += 1
-
                     scene v10cfrau5e #same 5b, mc dips aubrey start
                     with dissolve
 
@@ -591,8 +566,6 @@ label v10s33_deergirl11:
                     with dissolve
 
                     au "So you know a little bit about dancing too."
-
-                    
 
             scene v10cfrau5
             with dissolve
@@ -620,10 +593,8 @@ label v10s33_deergirl11:
             au "I don't, high school prom date. *Laughs*"
 
         "No way":
-
             $ aubreyLike -= 1
             $ addPoint("bro", 1)
-
             u "Oh no way, I don't wanna be an embarrassment. *Laughs*"
 
             scene v10cfrau2b
@@ -635,8 +606,6 @@ label v10s33_deergirl11:
             with dissolve
 
             pause 0.5
-
-        
 
     scene v10cfrau4a
     with dissolve
@@ -693,7 +662,6 @@ label v10s33_deergirl11:
     with dissolve
 
     menu:
-
         "Hot":
             $ addPoint("bro")
             u "Hot."
@@ -702,7 +670,6 @@ label v10s33_deergirl11:
             with dissolve
 
             au "Of course she is!"
-           
        
         "Not":
             $ addPoint("tm")
@@ -723,7 +690,6 @@ label v10s33_deergirl11:
     with dissolve
 
     menu:
-
         "Hot":
             $ addPoint("tm")
             u "Hot."
@@ -734,9 +700,7 @@ label v10s33_deergirl11:
             au "Not gonna lie, if I ever went for a girl from the Chicks... Whew!"
 
         "Not":
-
             $ addPoint("bro")
-
             u "Not."
 
             scene v10cfrau4f
@@ -754,7 +718,6 @@ label v10s33_deergirl11:
 
     menu:
         "Hot":
-
             $ addPoint("bro")
             u "Hot."
 
@@ -792,11 +755,8 @@ label v10s33_deergirl11:
 
     menu:
         "Hot":
-
             $ addPoint("bf")
-
             if laurenrs:
-
                 u "Hot, obviously."
 
                 scene v10cfrau4
@@ -805,7 +765,6 @@ label v10s33_deergirl11:
                 au "Oh yeah, duh. *Laughs*"
 
             else:
-
                 u "Hot."
 
                 scene v10cfrau4b
@@ -814,9 +773,7 @@ label v10s33_deergirl11:
                 au "Her little innocent attitude is pretty hot."
 
         "Not":
-
             $ addPoint("bro")
-
             u "Not."
 
             scene v10cfrau4b
@@ -850,7 +807,6 @@ label v10s33_deergirl11:
             au "It seems we both have good taste."
 
         "Not":
-
             $ addPoint("tm")
             u "Not."
 
@@ -867,7 +823,6 @@ label v10s33_deergirl11:
     with dissolve
 
     if joinwolves:
-
         u "*Blushes* Uhhh'"
 
         scene v10cfrau4b
@@ -886,13 +841,9 @@ label v10s33_deergirl11:
         au "You don't have to explain to me."
 
     else:
-        
         menu:
-
             "Hot":
-
                 $ addPoint("bro")
-
                 u "Hot."
 
                 scene v10cfrau4
@@ -901,7 +852,6 @@ label v10s33_deergirl11:
                 au "Definitely too cute to be a Professor."
 
             "Not":
-
                 $ addPoint("bf")
 
                 u "Not."
@@ -925,9 +875,7 @@ label v10s33_deergirl11:
     with dissolve
 
     if v10_help_nora_freeroam:
-
         menu:
-
             "Invite her to Europe":
                 $ aubreyLike += 1
 
@@ -983,7 +931,6 @@ label v10s33_deergirl11:
 
                 u "(If she goes she goes, if she doesn't she doesn't.)"
 
-
     u "I'm gonna go check out some more stuff."
 
     scene v10cfrau4
@@ -996,7 +943,6 @@ label v10s33_deergirl11:
 label v10s33_chloe1:
     $ v10s33_chloe = True
     if chloemad:
-
         scene v10cfrcl1 # FPP. Show Chloe, mouth closed
         
         u "I think Chloe's still mad at me, I'd rather not talk to her."
@@ -1151,7 +1097,6 @@ label v10s33_chloe1:
 
     cl "None that I know of."
 
-
     if v10_nora_bitch_about_chloe:
         menu:
             "Tell Chloe about Nora":
@@ -1217,12 +1162,10 @@ label v10s33_chloe1:
                 call screen v10s33_mudwrestling
 
             "Don't tell Chloe":
-
                 scene v10cfrcl1
                 with dissolve
                 
                 u "(Let's not start anything.)"
-
                 u "That's good, it's best if you guys are getting along."
 
                 scene v10cfrcl1a
@@ -1258,28 +1201,24 @@ label v10s33_chloe1:
                                     with dissolve
 
                                     if kct == "popular" or chloers:
-
                                         scene v10cfrcl1a
                                         with dissolve
 
                                         cl "Okay, I'll think about it."
 
                                     else:
-
                                         scene v10cfrcl1a
                                         with dissolve
 
                                         cl "Yeah... I don't know."
 
                                 "Let her decide":
-
                                     scene v10cfrcl1
                                     with dissolve
 
                                     u "I understand, it's your choice."
 
                         "Don't invite":
-                            
                             scene v10cfrcl1
                             with dissolve
 
@@ -1339,9 +1278,7 @@ label v10s33_deergirl21:
     with dissolve
 
     menu:
-
         "Make a joke":
-
             $ addPoint("bro")
             $ v10s33_dg2joke = True
 
@@ -1409,7 +1346,6 @@ label v10s33_deergirl21:
 
     call screen v10s33_bagtoss
 
-
     label v10s33_deergirl31:
 
     $ v10s33_deergirl3 = True
@@ -1452,11 +1388,8 @@ label v10s33_deergirl21:
     with dissolve
 
     menu:
-
         "Get a lottery ticket":
-
             $ addPoint("bf")
-
             u "Well I'll take one."
 
             scene v10cfrdg31b #same 1, happy, hands out ticket to mc
@@ -1469,11 +1402,8 @@ label v10s33_deergirl21:
 
             u "Thanks."
 
-
         "Don't get a ticket":
-
             $ addPoint("tm")
-
             u "Well, good luck."
 
             scene v10cfrdg31d #same 1, dissappointed, mouth open
@@ -1494,13 +1424,10 @@ label v10s33_deergirl21:
     call screen v10s33_centeraisle
     
     label v10s33_laurenbake1:
-
     $ v10s33_lauren = True
 
     if laurenrs:
-
         scene v10cfrla1 #FPP Show Lauren, Looking at mc, happy smile, mouth open
-
         la "Hey babe!"
 
         scene v10cfrla2 #TPP showing Mc kissing Lauren over the table
@@ -1512,9 +1439,9 @@ label v10s33_deergirl21:
 
         scene v10cfrla1a #same 1, mouth closed
         with dissolve
+
     else:
         scene v10cfrla1a
-
     u "How are the sales going? Good I'm assuming..."
 
     scene v10cfrla1b #same 1,lauren sarcastic, slight concern, mouth open
@@ -1531,7 +1458,6 @@ label v10s33_deergirl21:
     with dissolve
 
     la "Haha, to answer your question, bad. Sales are going bad. I only sold one and that was to my mother when she stopped by earlier."
-
 
     if laurenrs:
         scene v10cfrla1
@@ -1656,9 +1582,7 @@ label v10s33_deergirl21:
     u "I'm sure you people are gonna get hungry at some point."
 
     if laurenrs:
-
         $ v10s33_inv_lauren_europe = True
-
         u "I know, I'd love some of... Lauren's Moist Muffins."
 
         scene v10cfrla1d
@@ -1684,11 +1608,8 @@ label v10s33_deergirl21:
         u "Great."
 
     else:
-
         if v10_help_nora_freeroam:
-
             menu:
-
                 "Invite her to Europe":
                     $ v10s33_inv_lauren_europe = True
                     $ addPoint ("bf")
@@ -1709,7 +1630,6 @@ label v10s33_deergirl21:
                         u "Great."
 
                     else:
-
                         scene v10cfrla1
                         with dissolve
 
@@ -1722,10 +1642,7 @@ label v10s33_deergirl21:
 
                 "Don't invite her":
                     $ addPoint ("bro")
-
                     u "(I don't really feel like inviting Lauren.)"
-
-
 
     u "I'm gonna check out some more stuff, I'll check back in later."
 
@@ -1737,7 +1654,6 @@ label v10s33_deergirl21:
     call screen v10s33_cakestatue
 
     label v10s33_laurenstatue1:
-
     $ v10s33_lauren = True
 
     scene v10cfrla3 #FPP, lauren as statue, not looking at mc, mouth closed
@@ -1746,7 +1662,6 @@ label v10s33_deergirl21:
     u "What a beautiful statue."
 
     if laurenrs:
-
         scene v10cfrla4 #TPP shows mc leaning in for the kiss, but lauren holds him back, lauren mouth open, neutral face
         with dissolve
 
@@ -1761,11 +1676,8 @@ label v10s33_deergirl21:
     with dissolve
 
     menu:
-
         "Say you're sorry":
-
             $ addPoint("bf")
-
             u "It is, I'm sorry. Maybe it's not a good idea to follow my ideas from now on."
 
             scene v10cfrla3b
@@ -1798,11 +1710,8 @@ label v10s33_deergirl21:
 
             u "*Laughs*"
 
-
         "Joke around":
-
             $ addPoint("tm")
-
             u "Oh my gosh, did that statue just talk to me? Everyone, that statue just talked!"
 
             scene v10cfrla3b
@@ -1834,7 +1743,6 @@ label v10s33_deergirl21:
             with dissolve
 
             u "*Laughs*"
-
 
     scene v10cfrla3f # same 3b, lauren worried, mouth open
     with dissolve
@@ -1886,11 +1794,8 @@ label v10s33_deergirl21:
 
     u "So committed, we love to see it."
 
-
     if laurenrs:
-
         $ v10s33_inv_lauren_europe = True
-
         u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
 
         scene v10cfrla3d
@@ -1904,11 +1809,8 @@ label v10s33_deergirl21:
         u "Great."
 
     else:
-
         if v10_help_nora_freeroam:
-
             menu:
-
                 "Invite her to Europe":
                     $ v10s33_inv_lauren_europe = True
                     $ addPoint ("bf")
@@ -1929,7 +1831,6 @@ label v10s33_deergirl21:
                         u "Great."
 
                     else:
-
                         scene v10cfrla3d
                         with dissolve
 
@@ -1942,10 +1843,7 @@ label v10s33_deergirl21:
 
                 "Don't invite her":
                     $ addPoint ("bro")
-
                     u "(I don't really feel like inviting Lauren.)"
-
-
 
     u "I'm gonna check out some more stuff, I'll check back in later."
 
@@ -1965,7 +1863,6 @@ label v10s33_deergirl21:
             "Compliment":
                 $ addPoint("bf")
                 $ lindseyLike += 1
-
                 u "Look at you! This alone is a reason to give all my money away."
 
                 scene v10cfrfrli1a # FPP. Same as 1, smile, mouth open.
@@ -2003,7 +1900,7 @@ label v10s33_deergirl21:
                         scene v10cfrfrli2 # TPP. Show MC getting some brushes from a pot, Lindsey with her back turned.
                         with dissolve
 
-                        pause 0.75
+                        pause 1.75
                         
                         scene v10cfrfrli3 # FPP. Show Lindsey's back, MC places the brush on Lindsey's back.
                         with dissolve
@@ -2040,12 +1937,12 @@ label v10s33_deergirl21:
                         scene v10cfrfrli3a # FPP. Same as 3, MC begins to paint a devil tail coming out of the top of Lindsey's panties.
                         with dissolve
 
-                        pause 0.75
+                        pause 1.75
 
                         scene v10cfrfrli5a # TPP. Same as 5, Lindsey now has a painted devil tail coming from the top of her panties and wings on her back, MC looks impressed.
                         with fade
 
-                        pause
+                        pause 1.75
 
                         scene v10cfrfrli4b # FPP. Same as 4, nervous, mouth open.
                         with dissolve
@@ -2060,7 +1957,7 @@ label v10s33_deergirl21:
                         scene v10cfrli4f
                         with dissolve
 
-                        li "Alright [name]."
+                        li "Alright, [name]."
 
                     "Don't paint Lindsey":
                         u "*Laughs* You should."
@@ -2131,7 +2028,6 @@ label v10s33_deergirl21:
         menu:
             "Side with Mr. Lee":
                 $ mrleeLike += 1
-
                 u "I overheard your conversation and I have to be honest, body painting is still pretty major. I know I love it."
 
                 scene v10cfrcfrro1c # FPP. Same as 1, both looking at camera (MC), both smile, lee mouth open.
@@ -2180,7 +2076,6 @@ label v10s33_deergirl21:
                 menu:
                     "Encourage her":
                         $ v10s33_encourage_rose_paint = True
-
                         u "You sort of have to now, it's a matter of principle."
 
                         scene v10cfrcfrro3c # FPP. Same as 3, rose sigh, rose mouth open.
@@ -2359,7 +2254,6 @@ label v10s33_riley1:
             u "Maybe. *Chuckles*"
 
         "Confess":
-
             scene v10cfrri1d
             with dissolve
             
@@ -2421,13 +2315,10 @@ label v10s33_riley1:
     with dissolve
 
     ri "Something about her getting in trouble with the school, because she hacked their system to help someone get in."
-
     ri "I didn't see her as the type of person to do something like that."
 
     menu:
-
         "It sucks":
-
             scene v10cfrri2a
             with dissolve
 
@@ -2451,7 +2342,6 @@ label v10s33_riley1:
             ri "Yeah, true."
 
         "Don't believe rumors":
-
             scene v10cfrri2a
             with dissolve
 
@@ -2463,7 +2353,6 @@ label v10s33_riley1:
             ri "Yeah, true."
 
     ri "I haven't spoken to her really, but I hate the thought of her going through whatever this is."
-
     ri "If you happen to see her soon, let her know if she needs anything she can come talk to me. I'd support her as much as I could."
 
     scene v10cfrri2a
@@ -2531,7 +2420,6 @@ label v10s33_riley1:
             ri "Good, then I found something I'll get."
 
         "No way":
-
             scene v10cfrri2e
             with dissolve
 
@@ -2597,8 +2485,8 @@ label v10s33_riley1:
 
     call screen v10s33_thrift
     ### ERROR: -If MC speaks to Riley again ###
-label v10s33_riley2:
 
+label v10s33_riley2:
     $ v10s33_aubreyriley = True
     scene v10cfrriau1 # FPP. Show Riley and aubrey, Riley mouth open
     #with dissolve
@@ -2691,10 +2579,8 @@ label v10s33_riley2:
 
     ri "Never, let's do it. But we need more judges."
 
-
     if v10s33_deergirl1:
     ### ERROR: -If spoke to DG1 and PERRY ###
-
         scene v10cfrriau3b # FPP. same 3a, mouth closed
         with dissolve
 
@@ -2704,6 +2590,7 @@ label v10s33_riley2:
         with dissolve
 
         u "Hey! You two come here real quick."
+
     else:
         scene v10cfrriau3a
         with dissolve
@@ -2845,7 +2732,6 @@ label v10s33_riley2:
 
         "Aubrey":
             ### ERROR: -If choose Aubrey ###
-
             scene v10cfrriau11 # FPP. FPP. Show Aubrey, on stage, mouth closed, stood normally.
             with dissolve
 
@@ -2915,6 +2801,7 @@ label v10s33_riley2:
             with dissolve
 
             dg1 "SHE KNOWS HOW TO WIN! WOOHOO!"
+
     scene v10cfrriau8
     with dissolve
 
@@ -2942,7 +2829,6 @@ label v10s33_riley2:
 
     menu:
         "Riley":
-
             scene v10cfrriau3b
             with dissolve
 
@@ -3038,21 +2924,17 @@ label v10s33_riley2:
 
             call screen v10s33_stage
 
-
     label v10s33_amber1:
-
     # -if things are awkward with Amber after the skatepark-   
     
     if v10_amber_awkward:
+        scene fr6mudwrestling
 
-        scene # mud wrestling image
-
-        u "(Things are a bit awkward between us, I'd rather avoid her today)"
+        u "(Things are a bit awkward between us, I'd rather avoid her today.)"
 
         call screen v10s33_mudwrestling
 
     $ v10s33_amber = True
-
     scene v10cfram1 #FPP Show Amber, Looking at mc, flirty smile, mouth open
     #with dissolve
 
@@ -3102,11 +2984,8 @@ label v10s33_riley2:
     with dissolve
 
     menu:
-
         "Witty retort":
-
             $ addPoint ("tm")
-
             u "Ha, you just wanna see me shirtless wrestling other guys."
 
             scene v10cfram1
@@ -3130,9 +3009,7 @@ label v10s33_riley2:
             u "*Chuckles* You know that's not what I meant."
 
         "Flirt":
-
             $ addPoint("bf")
-
             u "And here I was thinking you wanted to put on a little show for me."
 
             scene v10cfram1
@@ -3145,15 +3022,10 @@ label v10s33_riley2:
 
             u "*Laughs*"
 
-
     if v10_help_nora_freeroam:
-
         menu:
-
             "Invite her to Europe":
-
                 $ v10s33_inv_amber_europe = True
-
                 u "Are you going on the Europe trip?"
 
                 scene v10cfram1d # same 1, amber curious, mouth open
@@ -3176,9 +3048,7 @@ label v10s33_riley2:
 
                 u "Cool."
 
-
             "Don't invite her":
-
                 u "(She'll find out about it and go if she wants to.)"
 
     scene v10cfram1b
@@ -3246,10 +3116,8 @@ label v10s33_riley2:
     with dissolve
 
     menu:
-
         "Play":
             $ v10s33_playwithaaron = True
-
             scene v10cfrch2
             with dissolve
 
@@ -3323,9 +3191,7 @@ label v10s33_riley2:
 
             aa "See ya, good catching up."
 
-
         "Don't play":
-
             u "I don't want to hurt anyone's feelings over a game, I'm too good at this, it wouldn't be fair."
             u "Also, the presidency is all yours Chris. *Laughs*"
 
@@ -3347,7 +3213,6 @@ label v10s33_riley2:
     call screen v10s33_bagtoss
 
     label v10s33_nora1:
-
     $ v10s33_nora = True
 
     scene v10cfrno1 # fpp, from the side, nora playing bag toss, mouth closed concentrated
@@ -3366,9 +3231,7 @@ label v10s33_riley2:
     with dissolve
 
     menu:
-
         "Show me what you got":
-
             $ addPoint("bro")
 
             u "You should show me what you got... since you're such a pro."
@@ -3448,11 +3311,8 @@ label v10s33_riley2:
 
             u "Ahh, not my business."
 
-
         "Ask about sorority life":
-
             $ addPoint("bf")
-
             $ v10_nora_bitch_about_chloe = True
             u "How's sorority life?"
 
@@ -3485,10 +3345,8 @@ label v10s33_riley2:
             with dissolve
 
             menu:
-
                 "What do you mean?":
                     $ addPoint("bro")
-
                     u "What do you mean by that?"
 
                     scene v10cfrno3d
@@ -3504,7 +3362,6 @@ label v10s33_riley2:
 
                 "Defend Chloe":
                     $ addPoint("bf")
-
                     u "Well, she might be acting that way because of all the pressure she's under. Conversations behind her back probably aren't helping with that."
 
                     scene v10cfrno3d
@@ -3642,7 +3499,6 @@ label v10s33_riley2:
 
             "It's not okay": 
                 $ addPoint("tm")
-            
                 u "You would really ask me that? Why would I be cool with my friend dating my ex?!"
 
                 scene v10cfrry1c
@@ -3653,15 +3509,13 @@ label v10s33_riley2:
         scene v10cfrry4 # FPP. Show Ryan walking to wherever he is in his appearance at the toilets.
         with dissolve
 
-        pause
+        pause 0.75
 
         call screen v10s33_centeraisle
 
     label v10s33_toiletryan1:
         $ v10s33_ryanb = True
-        
         scene v10cfrry5 # FPP. Show Ryan at the toilets, Ryan slight upset, mouth closed.
-
         u "(He looks upset.)"
 
         if not v10s33_ryan_flirt_emily:
@@ -3810,12 +3664,9 @@ label v10s33_emily1:
     with dissolve
 
     if v10_help_nora_freeroam:
-
         menu:
-
             "Invite her to Europe":
                 $ emily_europe = True
-
                 u "Oh, while it's on my mind. Do you want to go on the Europe trip with me and some others?"
 
                 scene v10cfrem1d #same 1, happy, slightly surprised, mouth open
@@ -3849,7 +3700,6 @@ label v10s33_emily1:
                 u "Great!"
 
             "Don't invite her":
-
                 u "(I honestly don't know if I want her there.)"
 
     u "I'm pretty sure the event starts soon, I wanna make sure I get around before it does."
@@ -3867,20 +3717,20 @@ label v10s33_emily1:
     call screen v10s33_bench
     
     label v10s33_evelyn1:
-
     if not evelynrs and evelyndate:
         $ v10s33_evelyn = True
-
-        scene # toilet screen
+        
+        if not v10s33_ryan:
+            scene fr6toilet # toilet screen
+        else:
+            scene fr6toiletwithryan
 
         u "(What's she doing here? I'd rather avoid her after how our date went.)"
 
         call screen v10s33_toilet
 
     elif not evelynrs and not evelyndate:
-
         $ v10s33_evelyn = True
-
         scene v10cfrev1a #fpp, shows evelyn looking at mc, neutral expression mouth closed
 
         u "Out of everyone here, I'm most surprised to see you."
@@ -3921,7 +3771,6 @@ label v10s33_emily1:
 
     else:
         $ v10s33_evelyn = True
-
         scene v10cfrev1a
 
         u "Out of everyone here, I'm most surprised to see you."
@@ -3961,17 +3810,12 @@ label v10s33_emily1:
 
         ev "There definitely is. We could make that happen by going on a second date. I think it's about time we do."
 
-
         scene v10cfrev1c
         with dissolve
         menu:
-
             "Let's do it right now":
-
                 $ addPoint("bf")
-
                 $ v10s33_ev_date_now = True
-
                 u "Wanna go now?"
 
                 scene v10cfrev1b
@@ -3980,9 +3824,7 @@ label v10s33_emily1:
                 ev "Someone's eager. *Chuckles* Soon, but let's enjoy the event for today."
 
             "I'll think about it":
-
                 $ addPoint("tm")
-
                 u "I'll think about it. *Chuckles*"
 
                 scene v10cfrev1b
@@ -3998,7 +3840,6 @@ label v10s33_emily1:
         call screen v10s33_toilet
 
 label v10s33_deergirl41:
-
     if v10s33_riley:
         scene fr6thriftnoriley
 
