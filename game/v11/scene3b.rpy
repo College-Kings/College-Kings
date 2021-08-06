@@ -349,7 +349,7 @@ label v11_cafe_with_riley:
 
     charli "I'm looking forward to it! I actually wasn't going to go, but [name] convinced me."
 
-    scene v11s3bris9g 
+    scene v11s3bris9f
     with dissolve
 
     ri "Well in that case, thank you [name]! *Chuckles*"
@@ -363,6 +363,9 @@ label v11_cafe_with_riley:
     with dissolve
 
     u "Later man."
+
+    scene v11s3bris9e
+    with dissolve
 
     u "Someone found a new best friend."
 
@@ -414,7 +417,7 @@ label v11_cafe_with_riley:
     scene v11s3bris11 # FPP. Show Riley leaving the cafe
     with dissolve
 
-    u "(I'm not  jealous, I just... I don't know. )"
+    u "(I'm not jealous, I just... I don't know. )"
     stop music fadeout 3
 
     jump v11_emily_park
