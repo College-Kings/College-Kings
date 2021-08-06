@@ -296,7 +296,7 @@ label v12s7fr:
     scene v12fer10d
     with dissolve
 
-    imre "Okay, fine. I won't mess up you're stupid game."
+    imre "Okay, fine. I won't mess up your stupid game."
 
     scene v12fer1
     with dissolve
