@@ -234,7 +234,7 @@ label v12s27:
     scene v12s27_7
     with dissolve
 
-    imre "C'mon bro! Tell her something good, like how I'm a ladies man."
+    imre "C'mon bro! Tell him something good, like how I'm a ladies man."
 
     scene v12s27_6b
     with dissolve
