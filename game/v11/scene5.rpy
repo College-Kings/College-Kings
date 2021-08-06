@@ -8,18 +8,21 @@ init python:
         contact_Josh.newMessage("Really bro, that's lame.")
         contact_Josh.addReply("No for real, I have to pack for the trip.")
 
-        if not joshmad:
+        if josh_europe:
             contact_Josh.newMessage("Fuck, me too.")
         else:
             contact_Josh.newMessage("Whatever man!")
 
     def v11s5_reply2():
         setattr(store, "v11_josh_nightclub", True)
-        contact_Josh.newMessage("Let's Party!")
+        contact_Josh.newMessage("Let's party!")
 
 label v11_nightclub_with_josh:
-    scene v11swc1 # FPP. Show the Park, Show Emily just leaving
-    with fade
+    #scene v11seap4e # FPP. Show the Park, Show Emily just leaving
+    #with fade
+
+    scene v11swc31
+    with dissolve
 
     play music "music/v11/Scene 5/Track Scene 5_1.mp3" fadein 2
     play sound "sounds/vibrate.mp3"
@@ -31,7 +34,7 @@ label v11_nightclub_with_josh:
     $ contact_Josh.newMessage("You and me, meet me at the bar on Stevenson.")
     $ contact_Josh.addReply("There's a lot of bars on Stevenson.")
     $ contact_Josh.newMessage("The Hive duh!")
-    $ contact_Josh.addReply("Josh We can't even get in.")
+    $ contact_Josh.addReply("Josh, we can't even get in.")
     $ contact_Josh.newMessage("With these fake IDs we can...")
     $ contact_Josh.addReply("I can't be staying up anyway, I still have a ton of stuff to do tonight.", v11s5_reply1)
     $ contact_Josh.addReply("LET'S FUCKING GOOOOO! OMW NOW!", v11s5_reply2)
@@ -47,15 +50,20 @@ label v11s4_PhoneContinueJosh1:
 
         u "(I'm going home and straight to bed.)"
 
+        scene v11swc32 # TPP. Show MC walking down the side walk (further down the street)
+        with dissolve
+
+        pause 0.75
+
+        scene v11swc33 # TPP. Show MC walking down the side walk (even further down the street)
+        with dissolve
+
+        pause 0.75
+
         jump v11_thurs_night_room
     else:
 
         u "(This is gonna be a fun ass night.)"
-
-    scene v11swc31 # TPP. Show MC walking down the side walk
-    with dissolve
-
-    pause 1 
 
     scene v11swc32 # TPP. Show MC walking down the side walk (further down the street)
     with dissolve

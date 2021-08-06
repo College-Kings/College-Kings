@@ -23,7 +23,7 @@ label v11_room_aubrey_shopping:
         scene v11auw1a # TPP. Same cam as v11auw1, Show MC standing up next to his bed, looking at the window, he is walking, has a startled expression (New Wolves room)
         with dissolve
 
-        pause 0.75
+        pause 1
 
     else:
         scene v11auw3 # TPP. Show MC sitting on his bed, as if he had just woken up, he's tired and yawning (Apes room)
@@ -43,7 +43,7 @@ label v11_room_aubrey_shopping:
         scene v11auw3a # TPP. Same cam as v11auw3, Show MC standing up next to his bed, looking at the window, he is walking, has a startled expression (Apes room)
         with dissolve
 
-        pause 0.75
+        pause 1
 
     scene v11auw4 # FPP. MC is looking out of his window to Aubrey, who is looking back at him, she is smiling, mouth closed
     with dissolve
@@ -144,7 +144,7 @@ label v11_room_aubrey_shopping:
     scene v11auw7 # TPP. Show MC and Aubrey walking through the door of Lew's shop. They're both smiling, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11auw8 # FPP. MC is standing next to Aubrey who is looking through a clothe rack, mouth closed, smiling
     with dissolve

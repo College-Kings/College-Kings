@@ -22,6 +22,7 @@ label v11_emily_park:
         scene v11seap1 # TPP. Show MC sitting down on his bed in WOLVES room and noticing that he got a text. Normal expression, mouth closed.
         with fade
 
+        play sound "sounds/vibrate.mp3"
         u "(I should see who that is.)"
 
         scene v11seap1a # TPP. Same camera as v11seap1. Show MC sitting down on his bed in WOLVES room and looking at his phone, normal expression, mouth closed.
@@ -33,6 +34,7 @@ label v11_emily_park:
         scene v11seap2 # TPP. Show MC sitting down on his bed in APES room and noticing that he got a text. Normal expression, mouth closed.
         with fade
 
+        play sound "sounds/vibrate.mp3"
         u "(I should see who that is.)"
 
         scene v11seap2b # TPP. Same camera as v10seap2. Show MC sitting down on his bed in APES room and looking at his phone, normal expression, mouth closed.
@@ -117,7 +119,13 @@ label v11_emily_park:
     with dissolve
 
     em "I'm tired of seeing you with other girls. Call me jealous or whatever, but I can't be around anymore with you doing all that."
+
+    scene v11seap4a
+    with dissolve
     
+    scene v11seap4c
+    with dissolve
+
     em "I see the flirting, I see the way you look at them, I see, way too much. And I can't handle it."
     em "A friend of mine has been giving me a lot of good advice recently... and I think I need to start listening to him."
 
@@ -188,7 +196,7 @@ label v11_emily_park:
     scene v11seap4b
     with dissolve
 
-    em "That's all I wanted to say. Goodbye [name]."
+    em "That's all I wanted to say. Goodbye, [name]."
 
     scene v11seap4a
     with dissolve
