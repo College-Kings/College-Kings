@@ -6,12 +6,12 @@
 label v12s32:
 # -MC and Aubrey are walking along the sidewalk-
 
-    scene v12s32_1 # TPP  show mc and aubrey walking along the side walk, make sure Aubrey is on the side of the wall , not the street for easier backgrounds in FPP. Mc looking at aubrey, mc mouth open, curious
+    scene v12s32_1 # TPP show mc and aubrey walking along the side walk, make sure Aubrey is on the side of the wall , not the street for easier backgrounds in FPP. Mc looking at aubrey, mc mouth open, curious
     with fade
 
     u "So, where exactly are they doing the shoot?"
 
-    scene v12s32_2 # FPP, close up AUbrey looking at mc, but walking forwards. Aubrey slightly nervous  not smiling, mouth open
+    scene v12s32_2 # FPP, close up AUbrey looking at mc, but walking forwards. Aubrey slightly nervous not smiling, mouth open
     with dissolve
 
     au "It's at an actual photography studio."
@@ -417,7 +417,7 @@ label v12s32:
 
     pause 0.7
 
-    scene v12s32_18b # same 18a, close up photographer now taking pictures of  naomi (off screen), mouth open, excited
+    scene v12s32_18b # same 18a, close up photographer now taking pictures of naomi (off screen), mouth open, excited
     with dissolve
 
     pg "YES, MA'AM!! Give it to us..."
@@ -525,7 +525,7 @@ label v12s32:
 
         au "*Chuckles*"
 
-        scene v12s32_22 #TPP  aubrey kisses mc on the cheek
+        scene v12s32_22 #TPP aubrey kisses mc on the cheek
         with dissolve
 
         pause 0.7
@@ -663,7 +663,7 @@ label v12s32:
 
     na "*Sighs* Yeah, guess we're on that \"out with the old and in with the new\" type of vibe... C'mon Aubrey."
 
-    scene v12s32_31 #FPP  Aubrey and Naomi walk off with each other
+    scene v12s32_31 #FPP Aubrey and Naomi walk off with each other
     with dissolve
 
     pause 0.7

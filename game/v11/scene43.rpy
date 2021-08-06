@@ -602,7 +602,7 @@ label v11_at_the_bank:
 
     am "If I planned on robbing a bank it wouldn't be one in London. The money ain't worth it compared to ours. *Laughs*"
 
-    scene v11bank18c # FPP Same angle as v11bank18, bank teller with a small, relieved smile,  mouth open
+    scene v11bank18c # FPP Same angle as v11bank18, bank teller with a small, relieved smile, mouth open
     with dissolve
 
     bank "Haha, wow... Well, at least you all learned something during the tour."

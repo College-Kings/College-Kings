@@ -84,7 +84,7 @@ label v12s33:
 
     li "Of course."
 
-    scene v12s33_5 # FPP, shows Mr Lee, mouth open, neutral expression talking to mc  (again don't show the full lobby being empty)
+    scene v12s33_5 # FPP, shows Mr Lee, mouth open, neutral expression talking to mc (again don't show the full lobby being empty)
     with dissolve
 
     lee "Alright, it looks like Lindsey caught the two of you up. Everyone else has already been given instructions, so allow me to fill you in."
@@ -1227,7 +1227,7 @@ label v12s33_sneak_off2:
 
         "Crawl to the next table":
             $ addPoint ("tm")
-            scene v12s33_46 #TPP  MC crawls to the next table and sees Nora,  mc mouth open smiling, whispering 
+            scene v12s33_46 #TPP MC crawls to the next table and sees Nora,  mc mouth open smiling, whispering 
             with dissolve
 
             u "*Whisper* Nora Nora, can I \"bora bora\" you?"

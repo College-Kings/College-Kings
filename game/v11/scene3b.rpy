@@ -261,7 +261,7 @@ label v11_cafe_with_riley:
 
     charli "Hey [name]! Is this one of the close friends you were telling me about? I love your hair! Is that color natural?"
 
-    scene v11s3bris9g # FPP. same 9,  Show riley, smiling, mouth open, looking towards Charli
+    scene v11s3bris9g # FPP. same 9, Show riley, smiling, mouth open, looking towards Charli
     with dissolve
 
     ri "Oh, thank you so much! I'm Riley. And yeah, haha. it's natural... You're a friend of [name]?"

@@ -305,7 +305,7 @@ label v12_riddle_riley:
 
     u "I have no fucking clue..."
 
-    scene v12rrl18 # TPP. Lights flickering on  as time passes
+    scene v12rrl18 # TPP. Lights flickering on as time passes
     with dissolve
 
     pause 0.75
