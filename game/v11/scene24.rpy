@@ -372,7 +372,7 @@ label v11_big_ben:
             u "You're what's beautiful Nora."
 
             scene v11bb9d # TPP Same angle as v11bb9, MC trying to kiss Nora, Nora pushing him back, looking very angry with mouth open
-            with dissolve            
+            with dissolve
 
             no "WHAT THE FUCK ARE YOU DOING!?"
 

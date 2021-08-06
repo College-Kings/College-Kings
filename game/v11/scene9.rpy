@@ -275,7 +275,7 @@ label v11_apes_manhunt:
             cal "Ahh shit! My back!"
 
             scene v11amh19 # FPP. Caleb is now sitting next to MC in the hiding spot, they're looking at each other, Caleb mouth closed, neutral expression
-            with dissolve           
+            with dissolve
 
             u "Fuck, you scared me! Did they catch you?"
 

@@ -164,7 +164,7 @@ label v11_cafe_with_riley:
             scene v11s3bris9c
             with dissolve
 
-            u "Well, the elevation messes with your ears a bit. Kinda feels like you're underwater. You get rid of it by yawning, but  your ears sort of pop. For myself and most people that's the worst part."
+            u "Well, the elevation messes with your ears a bit. Kinda feels like you're underwater. You get rid of it by yawning, but your ears sort of pop. For myself and most people that's the worst part."
 
             scene v11s3bris9d
             with dissolve
@@ -234,7 +234,7 @@ label v11_cafe_with_riley:
     scene v11s3bris9e
     with dissolve
 
-    u "You know, the thing with the  giant air tube that lets you float?"
+    u "You know, the thing with the giant air tube that lets you float?"
 
     scene v11s3bris9f
     with dissolve

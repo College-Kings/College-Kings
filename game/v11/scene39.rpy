@@ -251,7 +251,7 @@ label v11_mc_amber_gokart:
     scene v11cam7
     with dissolve
 
-    u "Wow. This bet just got way more serious than I thought it'd  be."
+    u "Wow. This bet just got way more serious than I thought it'd be."
 
     scene v11cam7a
     with dissolve

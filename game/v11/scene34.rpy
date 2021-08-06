@@ -607,7 +607,7 @@ label v11_cardealership:
 
                     "Let's get the car back":
                         scene v11cd39
-                        with dissolve             
+                        with dissolve
 
                         u "C'mon, let's get this car back."
 

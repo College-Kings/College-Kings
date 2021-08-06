@@ -116,7 +116,7 @@ label v11_hotel_bar_wolves:
         pause 0.5
 
         scene v11hrs8 # TPP Close up of Ms. Rose whispering in MC's ear, Ms. Rose smiling with mouth open
-        with dissolve        
+        with dissolve
 
         ro "*Whisper* Speaking of what happens in London stays in London... Room 105, 10 minutes. Don't be late."
 
