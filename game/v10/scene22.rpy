@@ -149,7 +149,7 @@ label v10_cafe_w_jenny:
 
         if penHelpDean:
             scene v10scwj7e # FPP. Same as 7, slight worry, mouth closed.
-            with dissolve    
+            with dissolve
 
             u "When she told me I was pretty worried so I went to the dean to see what I could do. After our conversation things seemed better, but it's still pretty serious."
 
@@ -298,7 +298,7 @@ label v10_cafe_w_jenny:
                 $ addPoint("bro", 1)
 
                 scene v10scwj11
-                with dissolve                
+                with dissolve
 
                 u "A school hearing? This isn't over then. Much better than actual court."
 
@@ -316,7 +316,7 @@ label v10_cafe_w_jenny:
                 $ penelopeLike += 1
 
                 scene v10scwj11
-                with dissolve                
+                with dissolve
 
                 u "I'm positive everything's gonna work out just fine."
 
@@ -478,7 +478,7 @@ label v10_cafe_w_jenny:
         jen "I'll probably talk to Penelope later tonight."
 
         scene v10scwj7c
-        with dissolve        
+        with dissolve
 
         u "Sounds good."
 
@@ -520,7 +520,7 @@ label v10_cafe_w_jenny:
         jen "Oh, heyyy. I didn't know you were also coming."
 
         scene v10scwj19 # FPP. Show Jenny and Penelope (who is now sat down), both confused, mouths closed.
-        with dissolve  
+        with dissolve
 
         u "Yeah I should probably explain, I thought it'd be best if we all uhm... talked about the situation and laid everything out in the open."
 

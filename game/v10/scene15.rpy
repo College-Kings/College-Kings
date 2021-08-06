@@ -22,7 +22,7 @@ label v10_call_with_lauren1:
 
         if laurenrs: # RCS - MC is a relationship with Lauren
             scene v10scwl1a # IGNORE, RENDER FROM SCENE 18
-            with dissolve    
+            with dissolve
             
             la "Heyyy, cutie, are you free right now?"
 
@@ -783,7 +783,7 @@ label v10_call_with_lauren1:
 
         if laurenrs: # RCS - MC is a relationship with Lauren
             scene v10scwl1a # IGNORE, RENDER FROM SCENE 18
-            with dissolve    
+            with dissolve
             
             la "Heyyy, cutie, are you free right now?"
 

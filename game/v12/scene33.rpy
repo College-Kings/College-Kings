@@ -695,7 +695,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
 
     if v11_invite_sam_europe:
 
-        scene v12s33_31 # FPP close up Sam looking at mc,  apologenic expression, mouth open
+        scene v12s33_31 # FPP close up Sam looking at mc, apologenic expression, mouth open
         with dissolve
 
         sa "Umm, [name]?"
@@ -1227,7 +1227,7 @@ label v12s33_sneak_off2:
 
         "Crawl to the next table":
             $ addPoint ("tm")
-            scene v12s33_46 #TPP MC crawls to the next table and sees Nora,  mc mouth open smiling, whispering 
+            scene v12s33_46 #TPP MC crawls to the next table and sees Nora, mc mouth open smiling, whispering 
             with dissolve
 
             u "*Whisper* Nora Nora, can I \"bora bora\" you?"

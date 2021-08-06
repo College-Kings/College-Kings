@@ -270,7 +270,7 @@ label v10_lauren_room:
 
         la "Someone's excited."
 
-        scene v10lar7c  # TPP Same angle as v10lar7, Lauren now topless, eyes closed and mouth open, MC gently cupping her breast
+        scene v10lar7c # TPP Same angle as v10lar7, Lauren now topless, eyes closed and mouth open, MC gently cupping her breast
         with dissolve
 
         la "Oh [name]! *Moans*"

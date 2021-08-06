@@ -416,7 +416,7 @@ label v10s33_deergirl11:
             pause 0.75
 
             scene v10cfrdg13f # TPP same 13c, show mc Bumping into perry. perry mouth open
-            with dissolve            
+            with dissolve
 
             guyd "Well, I'm not the only one struggling."
 
@@ -483,7 +483,7 @@ label v10s33_deergirl11:
 
     pause 0.5
     
-    scene v10cfrau1a  
+    scene v10cfrau1a
     with dissolve
 
     u "Someone's having fun!"
@@ -1174,7 +1174,7 @@ label v10s33_chloe1:
                 $ grantAchievement("hard_decisions")
                 u "She said a lot, but to sum up everything, she called you fake. Said you do a bunch of pretending for sympathy points from people."
 
-                scene v10cfrcl1d # FPP. same1,slight angry look,  mouth open
+                scene v10cfrcl1d # FPP. same1,slight angry look, mouth open
                 with dissolve
 
                 cl "Are you serious? You know what..."
@@ -2263,7 +2263,7 @@ label v10s33_deergirl21:
                             ro "Haha, Mr. Lee and I both may be going as chaperones. Nora and I have spoken about the trip quite a bit. She really wants to go."
 
                             scene v10cfrcfrro1e
-                            with dissolve                        
+                            with dissolve
 
                             u "Great!"
 
@@ -3378,7 +3378,7 @@ label v10s33_riley2:
 
             no "I can manage that."
 
-            scene v10cfrno1d #same 1b,  Nora throws version 1
+            scene v10cfrno1d #same 1b, Nora throws version 1
             with dissolve
 
             pause 0.8
@@ -3388,7 +3388,7 @@ label v10s33_riley2:
 
             pause 0.8
 
-            scene v10cfrno1e #same 1b,  Nora throws version 2
+            scene v10cfrno1e #same 1b, Nora throws version 2
             with dissolve
 
             pause 0.8
@@ -3398,7 +3398,7 @@ label v10s33_riley2:
             
             pause 0.8
 
-            scene v10cfrno1f #same 1b,  Nora throws version 3
+            scene v10cfrno1f #same 1b, Nora throws version 3
             with dissolve
 
             pause 0.8

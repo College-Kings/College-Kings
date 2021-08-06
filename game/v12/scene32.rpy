@@ -195,7 +195,7 @@ label v12s32:
 
     na "Posing of course! I wanna see the skills. *Chuckles*"
 
-    scene v12s32_13 # FPP close up photographer, camera in hands not looking into his camera tho,  looking at aubrey, serious face, mouth open, explaining
+    scene v12s32_13 # FPP close up photographer, camera in hands not looking into his camera tho, looking at aubrey, serious face, mouth open, explaining
     with dissolve
 
     pg "Alright, alright! Listen up..."
@@ -250,7 +250,7 @@ label v12s32:
     menu:
         "Turn your back to Aubrey":
             $ addPoint("bf")
-            scene v12s32_15a #same 15,  MC crosses his arms and puts his back to Aubrey, aubrey a bit dissapointed, mouth upen
+            scene v12s32_15a #same 15, MC crosses his arms and puts his back to Aubrey, aubrey a bit dissapointed, mouth upen
             with dissolve
 
             au "Oh, okay."
@@ -633,7 +633,7 @@ label v12s32:
 
     u "Aubrey, you looked good doing that. Really fucking good!"
 
-    scene v12s32_29d # same 29b,  looking at mc (into the camera), cute smile ,mouth open
+    scene v12s32_29d # same 29b, looking at mc (into the camera), cute smile ,mouth open
     with dissolve
 
     au "Do you... You actually mean that?"
