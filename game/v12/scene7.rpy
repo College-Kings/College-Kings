@@ -5460,7 +5460,7 @@ label v12s7_mrlee:
     scene v12ferlee1a
     with dissolve
 
-    lee "What?, Me obviously."
+    lee "What? Me, obviously."
 
     scene v12ferlee1
     with dissolve

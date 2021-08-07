@@ -727,6 +727,7 @@ label v11s4_PhoneContinueJosh1:
 
             scene v11swc16a # TPP Same angle as v11swc16, Show Dennis punching MC
             with dissolve
+            play sound "sounds/facepunch1.mp3"
 
             pause 0.75
             
@@ -766,13 +767,11 @@ label v11s4_PhoneContinueJosh1:
             $ v11_fucked_candy = True
             scene v11swc16e # TPP Same angle and characters as v11swc16, MC puts one hand on his waist, stands in a faminine way, and holds his other hand up, wrist limp
             with dissolve
-
-            pause 0.75
+            u "She's my cousin, dude."
 
     scene v11swc3i # FPP Show Dennis looking confused, mouth closed
     with dissolve
-
-    u "She's my cousin, dude."
+    pause 0.75
 
     scene v11swc3j # FPP Show Candy, laughing, mouth open
     with dissolve
@@ -797,7 +796,7 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc16f # TPP Same angle and characters as v11swc16, Dennis walking away from MC and Candy
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v11swc3j
     with dissolve
@@ -807,7 +806,7 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc19 # TPP Show MC and Candy walking through a neighborhood to her house
     with fade
 
-    pause 0.75
+    pause 1
 
 label v11s5_galleryScene:
 
@@ -987,7 +986,7 @@ label v11s5_galleryScene:
     scene v11swc25a # FPP Same angle as v11swc25, Candy looking scared
     with dissolve
 
-    dennis "ANGELINA!, WHO THE FUCK IS THAT IN THERE WITH YOU? I HEAR YOU IN THERE FUCKING!"
+    dennis "ANGELINA! WHO THE FUCK IS THAT IN THERE WITH YOU? I HEAR YOU IN THERE FUCKING!"
 
     scene v11swc21d # TPP Same angle as v11swc21, MC frantically putting his clothes on
     with dissolve
