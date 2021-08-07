@@ -84,7 +84,7 @@ label v12_lauren_sex:
     scene v12las1d
     with dissolve
 
-    la "Yes!, I'm gonna get changed also. I'll try not to take too long. *Chuckles*"
+    la "Yes! I'm gonna get changed also. I'll try not to take too long. *Chuckles*"
 
     scene v12las1c
     with dissolve
