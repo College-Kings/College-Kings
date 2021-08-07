@@ -313,7 +313,7 @@ screen teamCredits():
             null height 20
             text "Oskin - Lead Enforcer"
             text "Lucious Lordswill - Lead Writer"
-            text "Cheyenne Alexander - Head Editor"
+            text "Cheexmarie - Head Editor"
             text "Peace - Head Transcriber"
             text "Condy - Quality Assurance Manager"
             text "Jany - Translation Manager"
