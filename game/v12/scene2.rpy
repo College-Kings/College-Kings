@@ -299,6 +299,8 @@ label v12_nora_checks_mc:
 
     pause 1
 
+    play sound "sounds/doorclose.mp3"
+
     stop music fadeout 3
 
     if v11_pen_goes_europe:
