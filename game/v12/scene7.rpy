@@ -2054,7 +2054,7 @@ label v12s7_ryan_imre1:
 
             u "Oh, that's unfortunate."
 
-        "Tell Ryan to Cool it":
+        "Tell Ryan to cool it":
             $ addPoint("bro")
             
             scene v12ferryi9a
@@ -4550,7 +4550,7 @@ label v12s7_sam2:
 
             u "Wanna focus on the game? That's the point of all of this, I think... To make us focus on something else for a while."
 
-        "Go for kiss":
+        "Go for the kiss":
             $ addPoint("bf")
 
             scene v12fersam1b
