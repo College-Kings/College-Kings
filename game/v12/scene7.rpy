@@ -164,6 +164,47 @@ label v12s7fr:
 
     imre "Oh, you're not joking."
 
+    scene v12fer13
+    with dissolve
+    
+    am "What if the killer never gets caught? *Laughs*"
+
+    scene v12fer1
+    with dissolve
+
+    lee "That would be very, very impressive and also requires the murderer to be a great listener, someone who is very perceptive, and also a person who can smooth through conversations easily." 
+
+    scene v12fer1a
+    with dissolve
+
+    lee "Those three are key."
+
+    scene v12fer6
+    with dissolve
+
+    au "Okay, so... Do we get anything for doing this? Besides it being fun and something to keep us busy... *Chuckles*"
+
+    scene v12fer1
+    with dissolve
+
+    lee "Based on how well the murderer does, and how many kills they achieve... I might be able to think of some type of reward. But, it must wait until Amsterdam to take place as our Paris schedule is already very full."
+
+    scene v12fer12a
+    with dissolve
+
+    ry "*Scoffs* So if we aren't the murderer, our only goal is to not get killed? And we don't get rewarded for it?"
+
+    scene v12fer1
+    with dissolve
+
+    lee "I know this sounds... Unfair. All in all, the mass murder we will be reenacting today was not fair to the victims. Your goal is to make sure the murderer does not get a reward, by catching them as soon as possible." 
+    lee "Now, If the murderer does get a reward... I suppose the "prize" could be something catered for two. So the murderer will have to share it with one of his or her victims... Fair?"
+
+    scene v12fer12a
+    with dissolve
+
+    ry "I mean... I guess?"
+
     scene v12fer1a # FPP. same 1, pointing towards students, (not directly at the camera but close to it)
     with dissolve
 
