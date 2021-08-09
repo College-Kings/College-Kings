@@ -61,7 +61,7 @@ label v12_nora_exploring:
             scene v12noe2i # FPP. Same as v12noe2f, Nora slight smile, mouth closed
             with dissolve
 
-            u "I mean no, not really.  But you did surprise me a little bit..."
+            u "I mean no, not really. But you did surprise me a little bit..."
 
             scene v12noe2j # FPP. Same as v12noe2j, Nora slight smile, mouth open
             with dissolve

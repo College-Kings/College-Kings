@@ -27,7 +27,7 @@ label v11_chicks_house:
     scene v11chh2 # FPP. MC walking to kitchen, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11chh3 # FPP. Show Chicks kitchen, show broken chair in kitchen
     with dissolve
@@ -92,7 +92,7 @@ label v11_chicks_house:
     scene v11chh5a # FPP. same 5, mouth closed
     with dissolve
 
-    u "Alright sounds good."
+    u "Alright, sounds good."
 
     scene v11chh5b # FPP. aubrey leaving the room, back to camera
     with dissolve
@@ -134,7 +134,7 @@ label v11_chicks_house:
 
     li "No, but others have."
 
-    scene v11chh6
+    scene v11chh6a
     with dissolve
 
     u "And?"
@@ -184,15 +184,13 @@ label v11_chicks_house:
     with dissolve
 
     li "Is it bad if I'm thinking about running for president?"
-    li "Like, I'm friends with Chloe and I wouldn't want me running to get between us."
-    li "There's just so many people that are unhappy with her."
+    li "Like, I'm friends with Chloe and I wouldn't want me running to get between us. There's just so many people that are unhappy with her."
 
     scene v11chh6c
     with dissolve
 
     menu:
         "You should run":
-
             scene v11chh6a
             with dissolve
 
@@ -268,15 +266,17 @@ label v11_chicks_house:
     scene v11chh7 # TPP. MC leaving kitchen
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v11chh8 # TPP. MC leaving chicks house front door
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v11chh9 # TPP. MC on the sidewalk heading home
     with dissolve
+    
+    pause 1
     
     stop music fadeout 3
     

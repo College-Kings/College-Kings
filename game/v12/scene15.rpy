@@ -175,7 +175,7 @@ label v12_riddle_riley:
     scene v12rrl14 # TPP. MC walks over to riley
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12rrl15 # FPP. MC looking at riley, mouth closed
     with dissolve
@@ -307,7 +307,7 @@ label v12_riddle_riley:
 
     u "I have no fucking clue..."
 
-    scene v12rrl18 # TPP. Lights flickering on  as time passes
+    scene v12rrl18 # TPP. Lights flickering on as time passes
     with dissolve
 
     pause 0.75

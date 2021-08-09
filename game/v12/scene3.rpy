@@ -16,6 +16,8 @@ label v12_penelope_roof:
     $ contact_Penelope.newMessage("Hey, are you up still?", queue=False)
     $ contact_Penelope.newMessage("If you are, can you meet me in the hallway?", queue=False)
 
+    u "(It's Penelope.)"
+
     call screen phone
 
     menu:
@@ -35,7 +37,7 @@ label v12_penelope_roof:
             scene v12penr2 # TPP Show MC leaving his hotel room
             with dissolve
 
-            pause 0.75
+            pause 1
 
             stop music fadeout 3
             play music "music/v12/Scene 3/Track Scene 3_2.mp3" fadein 2

@@ -107,7 +107,7 @@ screen v12s7_seating_front():
         imagemap:
             ground "images/v12/Scene 7/Screens/Navigation 2a.webp"
             insensitive "images/v12/Scene 7/Screens/Navigation 2a.webp"
-            hover "images/v12/Scene 7/Buttons/nav 1.webp"
+            hover "images/v12/Scene 7/Buttons/nav 2.webp"
 
             hotspot (1585, 7, 335, 631):
                 if v12s7_msrose:

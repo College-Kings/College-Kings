@@ -5,7 +5,7 @@
 
 label v12_penelope_call:
     scene v12pec1 # TPP. Show MC sitting on the foot of his bed, slight smile, mouth closed
-    with dissolve
+    with fade
 
     pause 0.75
 

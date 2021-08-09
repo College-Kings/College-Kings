@@ -183,7 +183,7 @@ label v11s23_mrlee1:
     with dissolve
 
     lee "I had long black hair. People assumed I was a good fighter, because I was... well you know. Bruce was really famous around that time and everyone wanted to do some sort of martial arts."
-    lee "Studios were popping up everywhere. I had family in the states so I visited during the summer. Have you ever been outside of the US?"
+    lee "Studios were popping up everywhere. I had family in the States so I visited during the summer. Have you ever been outside of the US?"
 
     scene v11frmlee1a
     with dissolve

@@ -23,7 +23,7 @@ label v11_room_aubrey_shopping:
         scene v11auw1a # TPP. Same cam as v11auw1, Show MC standing up next to his bed, looking at the window, he is walking, has a startled expression (New Wolves room)
         with dissolve
 
-        pause 0.75
+        pause 1
 
     else:
         scene v11auw3 # TPP. Show MC sitting on his bed, as if he had just woken up, he's tired and yawning (Apes room)
@@ -43,7 +43,7 @@ label v11_room_aubrey_shopping:
         scene v11auw3a # TPP. Same cam as v11auw3, Show MC standing up next to his bed, looking at the window, he is walking, has a startled expression (Apes room)
         with dissolve
 
-        pause 0.75
+        pause 1
 
     scene v11auw4 # FPP. MC is looking out of his window to Aubrey, who is looking back at him, she is smiling, mouth closed
     with dissolve
@@ -144,7 +144,7 @@ label v11_room_aubrey_shopping:
     scene v11auw7 # TPP. Show MC and Aubrey walking through the door of Lew's shop. They're both smiling, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11auw8 # FPP. MC is standing next to Aubrey who is looking through a clothe rack, mouth closed, smiling
     with dissolve
@@ -243,10 +243,11 @@ label v11_room_aubrey_shopping:
 
     menu:
         "The white one":
-            pass
+            u "The white one."
 
         "The blue one":
             $ v11_aubrey_blue_outfit = True
+            u "The blue one."
         
     scene v11auw8e # FPP. Same cam as v11auw8, Aubrey is now holding the outfits by her side, she is smiling, mouth open
     with dissolve
@@ -271,7 +272,7 @@ label v11_room_aubrey_shopping:
             scene v11auw8f
             with dissolve
 
-            u "Yeah I'll get a new shirt. Let me see how much money I-"
+            u "Yeah, I'll get a new shirt. Let me see how much money I-"
 
             scene v11auw8e
             with dissolve
@@ -486,7 +487,10 @@ label v11_room_aubrey_shopping:
     scene v11auw13a # FPP. Same cas v11auw3, Aubrey mouth closed, smiling
     with dissolve
 
-    u "Yep."
+    if v10s33_inv_amber_europe:
+        u "Yep."
+    else:
+        u "Hmmm, I think so."
 
     scene v11auw13
     with dissolve

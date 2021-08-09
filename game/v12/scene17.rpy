@@ -848,7 +848,7 @@ label v12_escape_room:
                 scene v12esr29f
                 with dissolve
 
-                u "Is it? I'm sorry, I know this sounds horrible but... I want this Lindsey."
+                u "Is it? I'm sorry, I know this sounds horrible but... I want this, Lindsey."
 
                 scene v12esr29e
                 with dissolve

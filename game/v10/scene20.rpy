@@ -75,7 +75,7 @@ label v10_room_mon_night:
         jump v10_cafe_w_jenny
 
     else:
-        scene v10smnr3 # TPP. Show mc in his Apes room chilling on his bed  on his phone.
+        scene v10smnr3 # TPP. Show mc in his Apes room chilling on his bed on his phone.
         with Fade(1, 0, 1)
 
         pause 0.75
@@ -127,4 +127,4 @@ label v10_room_mon_night:
 
         pause 1
         stop music fadeout 3
-        jump v10_cafe_w_jenny        
+        jump v10_cafe_w_jenny

@@ -21,12 +21,12 @@ init python:
 label v12s32:
 # -MC and Aubrey are walking along the sidewalk-
 
-    scene v12s32_1 # TPP  show mc and aubrey walking along the side walk, make sure Aubrey is on the side of the wall , not the street for easier backgrounds in FPP. Mc looking at aubrey, mc mouth open, curious
+    scene v12s32_1 # TPP show mc and aubrey walking along the side walk, make sure Aubrey is on the side of the wall , not the street for easier backgrounds in FPP. Mc looking at aubrey, mc mouth open, curious
     with fade
 
     u "So, where exactly are they doing the shoot?"
 
-    scene v12s32_2 # FPP, close up AUbrey looking at mc, but walking forwards. Aubrey slightly nervous  not smiling, mouth open
+    scene v12s32_2 # FPP, close up AUbrey looking at mc, but walking forwards. Aubrey slightly nervous not smiling, mouth open
     with dissolve
 
     au "It's at an actual photography studio."
@@ -210,7 +210,7 @@ label v12s32:
 
     na "Posing of course! I wanna see the skills. *Chuckles*"
 
-    scene v12s32_13 # FPP close up photographer, camera in hands not looking into his camera tho,  looking at aubrey, serious face, mouth open, explaining
+    scene v12s32_13 # FPP close up photographer, camera in hands not looking into his camera tho, looking at aubrey, serious face, mouth open, explaining
     with dissolve
 
     pg "Alright, alright! Listen up..."
@@ -265,7 +265,7 @@ label v12s32:
     menu:
         "Turn your back to Aubrey":
             $ addPoint("bf")
-            scene v12s32_15a #same 15,  MC crosses his arms and puts his back to Aubrey, aubrey a bit dissapointed, mouth upen
+            scene v12s32_15a #same 15, MC crosses his arms and puts his back to Aubrey, aubrey a bit dissapointed, mouth upen
             with dissolve
 
             au "Oh, okay."
@@ -433,7 +433,7 @@ label v12s32:
 
     pause 0.7
 
-    scene v12s32_18b # same 18a, close up photographer now taking pictures of  naomi (off screen), mouth open, excited
+    scene v12s32_18b # same 18a, close up photographer now taking pictures of naomi (off screen), mouth open, excited
     with dissolve
 
     pg "YES, MA'AM!! Give it to us..."
@@ -524,8 +524,6 @@ label v12s32:
 
         au "*Sighs* Fine..."
 
-    
-
     if AubreyBoat2:
 
         scene v12s32_20d # same as 20b, aubrey cute smile at mc, mouth open
@@ -543,7 +541,7 @@ label v12s32:
 
         au "*Chuckles*"
 
-        scene v12s32_22 #TPP  aubrey kisses mc on the cheek
+        scene v12s32_22 #TPP aubrey kisses mc on the cheek
         with dissolve
 
         pause 0.7
@@ -555,7 +553,6 @@ label v12s32:
 
     scene v12s32_24 # FPP closeup Aubrey makes a pose towards the camera in front of the car in her bra
     with dissolve
-
 
     u "(Damn, she really is good!)"
 
@@ -602,7 +599,6 @@ label v12s32:
     pause 0.7
 
     if v12s32_Aubrey_Boost:
-
         scene v12s32_27 # TPP show aubrey hugging mc, aubrey mouth open, cute smile
         with dissolve
 
@@ -653,7 +649,7 @@ label v12s32:
 
     u "Aubrey, you looked good doing that. Really fucking good!"
 
-    scene v12s32_29d # same 29b,  looking at mc (into the camera), cute smile ,mouth open
+    scene v12s32_29d # same 29b, looking at mc (into the camera), cute smile ,mouth open
     with dissolve
 
     au "Do you... You actually mean that?"
@@ -683,7 +679,7 @@ label v12s32:
 
     na "*Sighs* Yeah, guess we're on that \"out with the old and in with the new\" type of vibe... C'mon Aubrey."
 
-    scene v12s32_31 #FPP  Aubrey and Naomi walk off with each other
+    scene v12s32_31 #FPP Aubrey and Naomi walk off with each other
     with dissolve
 
     pause 0.7
@@ -803,7 +799,6 @@ label v12s32:
         v12s32kiwiiPost3.newComment("Aubrey", _(":) Thanks to you..."), numberLikes=renpy.random.randint(167, 241))
         v12s32kiwiiPost3.newComment("Ryan", _("Holy..."), numberLikes=renpy.random.randint(78, 153))
         v12s32kiwiiPost3.newComment("Imre", _("Pick up your jaw idiot! LOL"), mentions="Ryan", numberLikes=renpy.random.randint(69, 178))
-
 
     scene v12s32_33b # same 33, -Aubrey starts walking away-
     with dissolve

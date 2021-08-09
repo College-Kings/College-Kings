@@ -65,6 +65,7 @@ label v12_murder_mystery_reveal:
     scene v12mmr1
     with dissolve
 
+    $ v12_murder_count = len(v12s7_killList)
     if len(v12s7_killList) >= 5:
 
         lee "A total of [v12_murder_count] people were killed, so let's give our murderer a round of applause."
@@ -221,8 +222,8 @@ label v12_murder_mystery_reveal:
 
             u "Well don't worry I gotchu."
 
-            scene v12mmr9a # FPP. Same as v12mmr9, MC rushing back to where he was standing in v12mmr1
-            with dissolve
+            #scene v12mmr9a # FPP. Same as v12mmr9, MC rushing back to where he was standing in v12mmr1
+            #with dissolve
 
             pause 0.75
 

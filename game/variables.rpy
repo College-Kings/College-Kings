@@ -512,3 +512,4 @@ default v12_lauren_sex = False
 default v12_lauren_points = 0
 default v12s32_Aubrey_Boost = False
 default s12v32_get_aubrey_flowers = False
+default v12_murder_count = 0

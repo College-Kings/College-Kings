@@ -76,7 +76,7 @@ label v11_mc_amber_gokart:
     scene v11cam2
     with dissolve
 
-    u "*Sighs* You're brave, Amber.  I'll give you that, but I'm telling you right now... You're going to regret this."
+    u "*Sighs* You're brave, Amber. I'll give you that, but I'm telling you right now... You're going to regret this."
 
     scene v11cam2b
     with dissolve
@@ -146,7 +146,7 @@ label v11_mc_amber_gokart:
     scene v11cam6b
     with dissolve
 
-    clerk "Like, um.  Are you guys a couple?"
+    clerk "Like, um... Are you guys a couple?"
 
     scene v11cam6c 
     with dissolve
@@ -251,7 +251,7 @@ label v11_mc_amber_gokart:
     scene v11cam7
     with dissolve
 
-    u "Wow. This bet just got way more serious than I thought it'd  be."
+    u "Wow. This bet just got way more serious than I thought it'd be."
 
     scene v11cam7a
     with dissolve

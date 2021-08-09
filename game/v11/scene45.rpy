@@ -121,7 +121,7 @@ label v11_lobby_mrlee:
 
     u "(Hmm, who to sit with?)"
 
-    if laurenmad:
+    if v11_aubrey_sex and laurenrs:
         $ v11_sit_with_lauren = False
         # -MC sees Aubrey sitting by herself-
 

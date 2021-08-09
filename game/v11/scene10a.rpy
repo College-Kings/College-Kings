@@ -126,7 +126,7 @@ label v11_airport_charli:
     scene v11air7a
     with dissolve
 
-    au "Keep getting worked  up over nothing and your head may just explode. *Chuckles* Just shrug  it off. Like Amber did when I teased her."
+    au "Keep getting worked up over nothing and your head may just explode. *Chuckles* Just shrug it off. Like Amber did when I teased her."
 
     scene v11air7b
     with dissolve

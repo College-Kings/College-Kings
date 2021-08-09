@@ -3718,7 +3718,7 @@ label v1_freeRoam2_grayson:
     scene fr2gr2b
     with dissolve
 
-    gr "We're building the Apes' legacy here. 10 Years from now, I'll be the most successful Ape president in history."
+    gr "We're building the Apes' legacy here. 10 years from now, I'll be the most successful Ape president in history."
 
     gr "And you could be the most successful vice president."
 

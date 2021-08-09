@@ -425,7 +425,7 @@ label v11_dinner_with_lauren:
 
     lee "Alright students, we're going to enjoy one final walk back to the hotel."
 
-    scene v11dwl14a  # FPP. same 11, mouth closed
+    scene v11dwl14a # FPP. same 11, mouth closed
     with dissolve
 
     u "(A nice dinner and a relaxing walk... Not a bad night, Mr. Lee.)"

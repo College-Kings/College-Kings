@@ -177,6 +177,7 @@ label v11_lindsey_park:
 
             if politics:
                 $ grant_achievement("political_strategist")
+
             u "I'm down to support you as long as all of this means a new beginning for the Chicks. I'm not in the business of switching out one problem for another, get what I'm saying?"
 
             scene v11lip3i # FPP. Same as v11lip3e, different pose
@@ -447,7 +448,7 @@ label v11_lindsey_park:
 
     pause 0.75
 
-    if laurenmad: # Requirements for apology scene
+    if v11_aubrey_sex and laurenrs: # Requirements for apology scene
 
         scene v11lip6 # TPP. Show MC sitting down he has a slightly relieved expression, mouth closed
         with dissolve

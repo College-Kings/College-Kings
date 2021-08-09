@@ -285,7 +285,7 @@ label v12_lindsey_lobby:
     scene v12lil12j # FPP. Same as v12lil12i, Lindsey slight smile, mouth closed
     with dissolve
 
-    u "It was pretttty good."
+    u "It was preee-tttty good."
 
     scene v12lil12i
     with dissolve

@@ -120,7 +120,7 @@ label v11_ride_with_mrlee:
     pause 0.5
 
     scene v11wir4 # FPP Show Mr. Lee driving car, looking forward, neutral expression, mouth open
-    with dissolve    
+    with dissolve
 
     lee "[name], do you know what it means to be a man and act as an adult?"
 
@@ -309,7 +309,7 @@ label v11_ride_with_mrlee:
     pause 0.75
 
     scene v11wir6 # FPP Show Mr. Lee walking away from MC down the hall, away from the lobby
-    with dissolve    
+    with dissolve
 
     u "(I really respect that guy.)"
 

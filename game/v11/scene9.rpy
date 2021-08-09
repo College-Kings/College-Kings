@@ -7,7 +7,7 @@ label v11_apes_manhunt:
     scene v11amh1 # TPP. Show MC walking in through the Apes house door, he has a neutral expression, mouth closed
     with fade
     play music "music/v11/Scene 9/Track Scene 9_1.mp3" fadein 2
-    pause 0.75
+    pause 1
 
     scene v11amh2 # FPP. MC is in the living room, Cameron and Grayson are sitting on the couch, looking at MC, both of them smiling, mouths closed (Ryan and Caleb are standing nearby, out of shot)
     with dissolve
@@ -37,7 +37,7 @@ label v11_apes_manhunt:
     scene v11amh5 # FPP. Same character positioning as v11amh2, show Grayson, looking at MC, mouth open, smiling (only Grayson in shot)
     with dissolve
 
-    gr "Let's go to the woods boys."
+    gr "Let's go to the woods, boys."
 
     scene v11amh6 # FPP. Same character positioning as v11amh2, MC is looking at Caleb, Caleb looking at Grayson, Caleb mouth open, confused expression (only Caleb is in shot)
     with dissolve
@@ -91,10 +91,10 @@ label v11_apes_manhunt:
 
     pause 0.5
 
+    play sound "sounds/fall.mp3"
+
     scene v11amh9c # FPP. Same as v11amh9a, now Cameron is throwing Caleb to the ground (Caleb is on the ground at this point), Cameron is angry, Caleb is startled, both mouths closed
     with dissolve
-
-    play sound "sounds/fall.mp3"
 
     pause 0.5
 
@@ -103,8 +103,8 @@ label v11_apes_manhunt:
 
     ca "That's manhunt, now stop asking so many damn questions and let him finish explaining."
 
-    scene v11amh9a
-    with dissolve
+    #scene v11amh9a
+    #with dissolve
 
     u "(Oh shit!)"
 
@@ -133,10 +133,10 @@ label v11_apes_manhunt:
 
     pause 0.5
 
+    play sound "sounds/fall.mp3"
+
     scene v11amh9c 
     with dissolve
-
-    play sound "sounds/fall.mp3"
 
     pause 0.5
 
@@ -185,8 +185,9 @@ label v11_apes_manhunt:
 
             pause 0.5
 
+            play sound "sounds/fall.mp3"
             scene v11amh11 # FPP. MC is lying on the ground looking up at Cameron, Cameron looking down at MC, Cameron is angry, mouth open
-            with dissolve
+            with vpunch
 
             ca "Are you guys deaf? I said no questions!"
 
@@ -203,8 +204,12 @@ label v11_apes_manhunt:
     scene v11amh12a # TPP. Same as v11amh12, but they are closer to the camera, Caleb is slipping (mid fall), he has a very startled expression, MC and Ryan continue running
     with dissolve
 
+    pause 0.5
+
     scene v11amh12b # TPP. Same as v11amh12, MC and Ryan out of shot now, Caleb is now standing up and running, he has a scared expression, mouth closed
     with dissolve
+
+    pause 0.5
 
     scene v11amh13 # FPP. MC is looking at a bifurcation (left and right) in the forest, no one is in shot
     with dissolve
@@ -275,7 +280,7 @@ label v11_apes_manhunt:
             cal "Ahh shit! My back!"
 
             scene v11amh19 # FPP. Caleb is now sitting next to MC in the hiding spot, they're looking at each other, Caleb mouth closed, neutral expression
-            with dissolve           
+            with dissolve
 
             u "Fuck, you scared me! Did they catch you?"
 
@@ -346,15 +351,16 @@ label v11_apes_manhunt:
 
             pause 0.75
 
+            play sound "sounds/fall.mp3"
             scene v11amh23a # TPP. Same cam as v11amh23, Show Grayson slamming MC to the ground, MC is startled, Grayson is laughing
-            with dissolve
+            with vpunch
 
             pause 0.75
 
             scene v11amh24 # FPP. MC is lying down on floor, looking at Grayson, Grayson smiling, mouth open
             with dissolve
 
-            gr "I'm sure he'll be talking to you real nice now Cameron. *Chuckles*"
+            gr "I'm sure he'll be talking to you real nice now, Cameron. *Chuckles*"
 
             scene v11amh24a # FPP. Same cam as v11amh24, Grayson smiling, mouth closed
             with dissolve
@@ -450,7 +456,7 @@ label v11_apes_manhunt:
                     scene v11amh31 # FPP. Ryan is now sitting next to and looking at MC, Ryan mouth closed, slightly annoyed (The bush should be behind Ryan)
                     with dissolve
 
-                    u "Bro find your own spot."
+                    u "Bro, find your own spot."
 
                     scene v11amh31a # FPP. Same as v11amh31, Ryan mouth open, slightly annoyed
                     with dissolve
@@ -465,12 +471,12 @@ label v11_apes_manhunt:
                             scene v11amh31
                             with dissolve
 
-                            u "What? They'll just catch both of us. Don't be a dick bro find your own spot."
+                            u "What? They'll just catch both of us. Don't be a dick bro, find your own spot."
 
                             scene v11amh31a
                             with dissolve
 
-                            ry "Nah I'm good right here."
+                            ry "Nah, I'm good right here."
 
                             if not v10s33_ryan_flirt_emily:
 
@@ -542,6 +548,7 @@ label v11_apes_manhunt:
 
                                     pause 0.75
 
+                                    play sound "sounds/fall.mp3"
                                     scene v11amh32a # FPP. Same cam as v11amh32, but Ryan is now on the ground, Cameron is looking down on him, Cameron is laughing
                                     with dissolve
 
@@ -550,17 +557,18 @@ label v11_apes_manhunt:
                                     scene v11amh33 # FPP. MC is looking straight at Grayson (who was behind MC in v11amh32), Grayson is smiling, mouth open
                                     with dissolve
 
-                                    pause 0.75
+                                    pause 1
 
                                     scene v11amh23
                                     with dissolve
 
                                     pause 0.5
 
+                                    play sound "sounds/fall.mp3"
                                     scene v11amh23a
-                                    with dissolve
+                                    with vpunch
 
-                                    pause 0.5
+                                    pause 1
 
                                     scene v11amh24
                                     with dissolve
@@ -591,6 +599,7 @@ label v11_apes_manhunt:
 
                                     pause 0.75
 
+                                    play sound "sounds/fall.mp3"
                                     scene v11amh32a
                                     with dissolve
 
@@ -621,15 +630,16 @@ label v11_apes_manhunt:
 
                                     pause 0.5
 
+                                    play sound "sounds/fall.mp3"
                                     scene v11amh23a
-                                    with dissolve
+                                    with vpunch
 
                                     pause 0.5
 
                                     scene v11amh35 # FPP. MC is standing up, looking at Ryan, Ryan has his hand on his ribs, he is in pain, mouth open
                                     with dissolve
 
-                                    ry "That shit hurt, I should've believed you [name]."
+                                    ry "That shit hurt, I should've believed you, [name]."
 
                                     scene v11amh35a # FPP. Same as v11amh35a, Ryan has hand on ribs, he is in pain, mouth closed
                                     with dissolve
@@ -647,7 +657,7 @@ label v11_apes_manhunt:
                             scene v11amh31
                             with dissolve
 
-                            u "Fuck you bro."
+                            u "Fuck you, bro."
 
                             scene v11amh36 # FPP. MC sees the rancher holding the horse in the distance 
                             with dissolve
@@ -709,6 +719,7 @@ label v11_apes_manhunt:
 
                             pause 0.5
 
+                            play sound "sounds/fall.mp3"
                             scene v11amh39b # FPP. Same cam as v11amh39, Caleb is on the ground, Grayson and Cameron are chest bumping, Grayson smiling, mouth open, Cameron smiling, mouth closed
                             with dissolve
 
@@ -754,10 +765,11 @@ label v11_apes_manhunt:
 
                             pause 0.5
 
+                            play sound "sounds/fall.mp3"
                             scene v11amh23a
-                            with dissolve
+                            with vpunch
 
-                            pause 0.5
+                            pause 1
 
                             scene v11amh24a
                             with dissolve
@@ -842,6 +854,7 @@ label v11_apes_manhunt:
 
                     pause 0.5
 
+                    play sound "sounds/fall.mp3"
                     scene v11amh39b 
                     with dissolve
 
@@ -887,10 +900,11 @@ label v11_apes_manhunt:
 
                     pause 0.5
 
+                    play sound "sounds/fall.mp3"
                     scene v11amh23a
-                    with dissolve
+                    with vpunch
 
-                    pause 0.5
+                    pause 1
 
                     scene v11amh24a
                     with dissolve
@@ -932,7 +946,7 @@ label v11_apes_manhunt:
         scene v11amh27a # FPP. Same as v11amh27, but Ryan is smiling, mouth open
         with dissolve
 
-        ry "Easy, go ahead [name]."
+        ry "Easy, go ahead, [name]."
 
         scene v11amh27b # FPP. Same as v11amh, Ryan smiling, mouth closed
         with dissolve
@@ -944,8 +958,8 @@ label v11_apes_manhunt:
 
     ca "Was that a question I just heard?"
 
-    scene v11amh10b # FPP. Same as v11amh10, Cameron is smiling, mouth closed
-    with dissolve
+    #scene v11amh10b # FPP. Same as v11amh10, Cameron is smiling, mouth closed
+    #with dissolve
 
     u "..."
 
@@ -1028,6 +1042,7 @@ label v11_apes_manhunt:
                     scene v11amh44c # FPP. Same as v11amh44, the horse is kicking Cameron right in the chest, Cameron mouth closed, startled expression
                     with dissolve
 
+                    play sound "sounds/facepunch.mp3"
                     pause 0.75
 
                     scene v11amh44d # FPP. Same as v11amh44, Cameron is on the ground, mouth closed, he is in pain
@@ -1085,9 +1100,10 @@ label v11_apes_manhunt:
                     u "Oh shit!"
 
                     scene v11amh51c # TPP. Same as v11amh51, but now MC is on the ground, the horse is running away, MC is in pain, mouth closed
-                    with dissolve
+                    with vpunch
+                    play sound "sounds/fall.mp3"
 
-                    pause 0.75
+                    pause 1
 
                     scene v11amh24a
                     with dissolve
@@ -1127,8 +1143,9 @@ label v11_horse_fall:
 
     pause 0.75
 
+    play sound "sounds/fall.mp3"
     scene v11amh51c
-    with dissolve
+    with vpunch
 
     pause 0.75
 
@@ -1140,7 +1157,7 @@ label v11_horse_fall:
     scene v11amh52a # FPP. Same as v11amh52, Ryan mouth open, worried expression
     with dissolve
 
-    ry "Oh shit, are you okay."
+    ry "Oh shit, are you okay?"
 
     scene v11amh52
     with dissolve
@@ -1165,8 +1182,14 @@ label v11_horse_fall:
     jump v11_mc_horse_room
 
 label v11_mc_horse_room:
+
+    scene black
+    with fade
+    pause 0.75
+
     scene v11amh53 # TPP. MC is standing next to his bed (he is looking at his bed, camera should be behind MC)
     with fade
+  
     stop music fadeout 3
     play music "music/v11/Scene 9/Track Scene 9_2.mp3" fadein 2
     u "(I swear they want to kill us. I definitely need a good night's sleep.)"
@@ -1176,22 +1199,22 @@ label v11_mc_horse_room:
 
     play sound "sounds/impactbed.mp3"
 
-    pause 0.75
+    pause 1
 
     scene v11amh53b # TPP. Same cam as v11amh53, MC is now sleeping, show him sleeping with his belly upwards
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v11amh53c # TPP. Same cam as v11amh53, MC is still sleeping, he is sleeping with his belly faced downwards now
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v11amh54 # FPP. Ryan is standing next to MC's bed, MC looking at him, Ryan mouth open, slightly worried expression, MC still lying down in bed
     with fade
 
-    ry "Wake up man."
+    ry "Wake up, man."
     stop music fadeout 3
     play music "music/v11/Scene 9/Track Scene 9_4.mp3" fadein 2
     scene v11amh55 # FPP. MC is now sitting on his bed, still looking at Ryan, Ryan mouth open, slightly worried expression
@@ -1219,10 +1242,9 @@ label v11_mc_horse_room:
 
     pause 0.75
     
-    scene v11amh57 # TPP. Show Ryan and MC leaving the Apes house with their luggage, both worried, mouth closed
-    with dissolve
-
-    pause 0.75
+    #scene v11amh57 # TPP. Show Ryan and MC leaving the Apes house with their luggage, both worried, mouth closed
+    #with dissolve
+    #pause 0.75
 
     scene v11amh58 # TPP. Show a car on the road
     with dissolve

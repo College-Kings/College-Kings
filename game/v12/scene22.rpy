@@ -172,7 +172,7 @@ label v12_riley_room:
 
     ri "Let's see... Can't tell you something too personal. *Chuckles*"
 
-    scene v12rir12 # FPP View of MC, inside Riley's room looking at the door,  which is slightly open
+    scene v12rir12 # FPP View of MC, inside Riley's room looking at the door, which is slightly open
     with dissolve
     
     u "The door's open, someone could hear whatever you tell me. Walls are thin, remember?"
@@ -298,7 +298,7 @@ label v12_riley_room:
 
         u "(Bastard was probably listening that whole fucking time...)"
 
-    elif joinapes:
+    else:
         scene v12rir11b
         with dissolve
 

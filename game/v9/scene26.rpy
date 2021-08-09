@@ -617,7 +617,7 @@ label v9_fri_training_w_wolves:
     scene v9tww20b # FPP. Same camera as v9tww20, smile, mouth open.
     with dissolve
 
-    ch "Don't worry. I'm not gonna say 'no women.'"
+    ch "Don't worry. I'm not gonna say \"no women\"."
 
     ch "Let's consider all forms of... stress relief... as rest, shall we?"
 

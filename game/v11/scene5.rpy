@@ -8,18 +8,21 @@ init python:
         contact_Josh.newMessage("Really bro, that's lame.")
         contact_Josh.addReply("No for real, I have to pack for the trip.")
 
-        if not joshmad:
+        if josh_europe:
             contact_Josh.newMessage("Fuck, me too.")
         else:
             contact_Josh.newMessage("Whatever man!")
 
     def v11s5_reply2():
         setattr(store, "v11_josh_nightclub", True)
-        contact_Josh.newMessage("Let's Party!")
+        contact_Josh.newMessage("Let's party!")
 
 label v11_nightclub_with_josh:
-    scene v11swc1 # FPP. Show the Park, Show Emily just leaving
-    with fade
+    #scene v11seap4e # FPP. Show the Park, Show Emily just leaving
+    #with fade
+
+    scene v11swc31
+    with dissolve
 
     play music "music/v11/Scene 5/Track Scene 5_1.mp3" fadein 2
     play sound "sounds/vibrate.mp3"
@@ -31,7 +34,7 @@ label v11_nightclub_with_josh:
     $ contact_Josh.newMessage("You and me, meet me at the bar on Stevenson.")
     $ contact_Josh.addReply("There's a lot of bars on Stevenson.")
     $ contact_Josh.newMessage("The Hive duh!")
-    $ contact_Josh.addReply("Josh We can't even get in.")
+    $ contact_Josh.addReply("Josh, we can't even get in.")
     $ contact_Josh.newMessage("With these fake IDs we can...")
     $ contact_Josh.addReply("I can't be staying up anyway, I still have a ton of stuff to do tonight.", v11s5_reply1)
     $ contact_Josh.addReply("LET'S FUCKING GOOOOO! OMW NOW!", v11s5_reply2)
@@ -47,15 +50,20 @@ label v11s4_PhoneContinueJosh1:
 
         u "(I'm going home and straight to bed.)"
 
+        scene v11swc32 # TPP. Show MC walking down the side walk (further down the street)
+        with dissolve
+
+        pause 0.75
+
+        scene v11swc33 # TPP. Show MC walking down the side walk (even further down the street)
+        with dissolve
+
+        pause 0.75
+
         jump v11_thurs_night_room
     else:
 
         u "(This is gonna be a fun ass night.)"
-
-    scene v11swc31 # TPP. Show MC walking down the side walk
-    with dissolve
-
-    pause 1 
 
     scene v11swc32 # TPP. Show MC walking down the side walk (further down the street)
     with dissolve
@@ -155,6 +163,7 @@ label v11s4_PhoneContinueJosh1:
         menu:
             "Invite to Europe":
                 $ addPoint("bro")
+                $ josh_europe = True
 
                 scene v11swc3
                 with dissolve
@@ -718,6 +727,7 @@ label v11s4_PhoneContinueJosh1:
 
             scene v11swc16a # TPP Same angle as v11swc16, Show Dennis punching MC
             with dissolve
+            play sound "sounds/facepunch1.mp3"
 
             pause 0.75
             
@@ -757,13 +767,11 @@ label v11s4_PhoneContinueJosh1:
             $ v11_fucked_candy = True
             scene v11swc16e # TPP Same angle and characters as v11swc16, MC puts one hand on his waist, stands in a faminine way, and holds his other hand up, wrist limp
             with dissolve
-
-            pause 0.75
+            u "She's my cousin, dude."
 
     scene v11swc3i # FPP Show Dennis looking confused, mouth closed
     with dissolve
-
-    u "She's my cousin, dude."
+    pause 0.75
 
     scene v11swc3j # FPP Show Candy, laughing, mouth open
     with dissolve
@@ -788,7 +796,7 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc16f # TPP Same angle and characters as v11swc16, Dennis walking away from MC and Candy
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v11swc3j
     with dissolve
@@ -798,7 +806,7 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc19 # TPP Show MC and Candy walking through a neighborhood to her house
     with fade
 
-    pause 0.75
+    pause 1
 
 label v11s5_galleryScene:
 
@@ -976,7 +984,7 @@ label v11s5_galleryScene:
     scene v11swc25a # FPP Same angle as v11swc25, Candy looking scared
     with dissolve
 
-    dennis "ANGELINA!, WHO THE FUCK IS THAT IN THERE WITH YOU? I HEAR YOU IN THERE FUCKING!"
+    dennis "ANGELINA! WHO THE FUCK IS THAT IN THERE WITH YOU? I HEAR YOU IN THERE FUCKING!"
 
     scene v11swc21d # TPP Same angle as v11swc21, MC frantically putting his clothes on
     with dissolve
