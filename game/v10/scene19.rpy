@@ -29,9 +29,9 @@ label v10_walk_jenny_text:
     $ contact_Jenny.newMessage("Sounds good to me, thanks [name]!")
 
     label v10s19_PhoneContinue:
-        if contact_Jenny.getReplies():
+        if contact_Jenny.replies:
             call screen phone
-        if contact_Jenny.getReplies():
+        if contact_Jenny.replies:
             "(I should reply to Jenny.)"
             jump v10s19_PhoneContinue
 
@@ -54,9 +54,9 @@ label v10_walk_jenny_text:
             $ contact_Penelope.addReply("See ya!")
 
             label v10s19_PhoneContinue1:
-                if contact_Penelope.getReplies():
+                if contact_Penelope.replies:
                     call screen phone
-                if contact_Penelope.getReplies():
+                if contact_Penelope.replies:
                     "(I should text to Penelope.)"
                     jump v10s19_PhoneContinue1
 

@@ -65,9 +65,9 @@ label v10_sun_morn:
             $ contact_Josh.addReply("Whatever man.")
 
         label v10s10_PhoneContinueJoshW1:
-            if contact_Josh.getReplies() or contact_Riley.getReplies():
+            if contact_Josh.replies or contact_Riley.replies:
                 call screen phone
-            if contact_Josh.getReplies() or contact_Riley.getReplies():
+            if contact_Josh.replies or contact_Riley.replies:
                 u "(I should check my phone.)"
                 jump v10s10_PhoneContinueJoshW1
 
@@ -90,9 +90,9 @@ label v10_sun_morn:
         $ contact_Lindsey.addReply("Uhm okay. No worries, let me know if you need anything")
 
         label v10s10_PhoneContinueLinW:
-            if contact_Lindsey.getReplies():
+            if contact_Lindsey.replies:
                 call screen phone
-            if contact_Lindsey.getReplies():
+            if contact_Lindsey.replies:
                 u "(I should reply to Lindsey.)"
                 jump v10s10_PhoneContinueLinW
 
@@ -159,9 +159,9 @@ label v10_sun_morn:
             $ contact_Josh.addReply("Whatever man.")
 
         label v10s10_PhoneContinueJoshW2:
-            if contact_Josh.getReplies() or contact_Riley.getReplies():
+            if contact_Josh.replies or contact_Riley.replies:
                 call screen phone
-            if contact_Josh.getReplies() or contact_Riley.getReplies():
+            if contact_Josh.replies or contact_Riley.replies:
                 u "(I should check my phone.)"
                 jump v10s10_PhoneContinueJoshW2
 
@@ -184,9 +184,9 @@ label v10_sun_morn:
         $ contact_Lindsey.addReply("Uhm okay. No worries, let me know if you need anything")
 
         label v10s10_PhoneContinueLinA:
-            if contact_Lindsey.getReplies():
+            if contact_Lindsey.replies:
                 call screen phone
-            if contact_Lindsey.getReplies():
+            if contact_Lindsey.replies:
                 u "(I should reply to Lindsey.)"
                 jump v10s10_PhoneContinueLinA
 

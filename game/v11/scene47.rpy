@@ -35,9 +35,9 @@ label v11_walking_back:
     with dissolve
 
     label v11s47_PhoneContinueJenny:
-        if contact_Jenny.getReplies():
+        if contact_Jenny.replies:
             call screen phone
-        if contact_Jenny.getReplies():
+        if contact_Jenny.replies:
             u "(I should check my phone.)"
             jump v11s47_PhoneContinueJenny
 

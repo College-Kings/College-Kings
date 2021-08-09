@@ -815,6 +815,7 @@ label v12_escape_room:
 
         menu:
             "You're right, we shouldn't do this":
+                $ addPoint("bf")
                 scene v12esr29f # FPP. Same as v12esr29d, Lindsey slightly worried, mouth closed
                 with dissolve
 
@@ -843,6 +844,7 @@ label v12_escape_room:
                 jump v12_after_sex
 
             "Is it? I want this..":
+                $ addPoint("tm")
                 scene v12esr29f
                 with dissolve
 
@@ -874,6 +876,7 @@ label v12_lindsey_kiss_or_not:
 
     menu:
         "Kiss her":
+            $ addPoint("bf")
             scene v12esr30 # TPP. Show MC and Lindsey kissing
             with dissolve
 
@@ -888,6 +891,7 @@ label v12_lindsey_kiss_or_not:
                 jump v12_after_sex
                 
         "Don't kiss her":
+            $ addPoint("bro")
             scene v12esr29e
             with dissolve
 

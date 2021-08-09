@@ -195,8 +195,10 @@ label v12_nora_chris_fight:
 
     menu:
         "Go to Nora":
+            $ addPoint("bf")
             $ v12_followed_nora = True
 
             jump scene26b
         "Go to Chris":
+            $ addPoint("bro")
             jump v12_follow_chris #scene 26a

@@ -1031,8 +1031,7 @@ label v11_apes_manhunt:
                     scene v11amh51 # TPP. Show MC on the horse, the horse is rearing, MC is in control, smiling, mouth open
                     with dissolve
 
-                    $ hold_your_horses = True
-                    $ grantAchievement("hold_your_horses")
+                    $ grant_achievement("hold_your_horses")
                     u "Woah! *Laughs* Guess he is having a good time."
 
                     scene v11amh44b # FPP. Same as v11amh44, Cameron is slightly annoyed, mouth open
@@ -1084,8 +1083,7 @@ label v11_apes_manhunt:
                     jump v11_mc_horse_room
 
                 "Pet horse":
-                    $ off_your_high_horse = True
-                    $ grantAchievement("off_your_high_horse")
+                    $ grant_achievement("off_your_high_horse")
                     scene v11amh49a # FPP. Same as v11amh49, MC is petting the horse (show his hand on the horse's neck)
                     with dissolve
 
@@ -1133,8 +1131,7 @@ label v11_apes_manhunt:
             jump v11_horse_fall
 
 label v11_horse_fall:
-    $ off_your_high_horse = True
-    $ grantAchievement("off_your_high_horse")
+    $ grant_achievement("off_your_high_horse")
 
     scene v11amh51a
     with dissolve

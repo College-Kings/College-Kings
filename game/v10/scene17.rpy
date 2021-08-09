@@ -264,7 +264,6 @@ label v10_aubrey_house:
             if aubreyrs: # Aubrey relationship check
                 label v10s17_galleryScene:
                 $ aubrey_bathroom_sex = True
-                $ bathroom_sex = True
                 scene v10auh2b # FPP Same angle as v10auh2, show Aubrey at door to bathroom, turning to look at MC, mouth closed
                 with dissolve
 
@@ -367,7 +366,7 @@ label v10_aubrey_house:
                 scene v10auh5e
                 with dissolve
 
-                $ grantAchievement("getting_clean")
+                $ grant_achievement("getting_clean")
                 au "Your turn."
 
                 scene v10auh5i

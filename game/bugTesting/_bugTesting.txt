@@ -1,6 +1,0 @@
-Note created at (u'game/script.rpy', 537):
-Test
-
-Typo at (u'game/script.rpy', 537):
-I know what I did was bad...
-

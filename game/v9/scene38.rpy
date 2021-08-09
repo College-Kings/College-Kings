@@ -40,9 +40,9 @@ label v9_walk_li_txt:
     $ contact_Lindsey.addReply(_("Aww, I wish I could, but I gotta get ready for the brawl"), v9s38_reply2)
     
     label s38_PhoneContinue:
-        if contact_Lindsey.getReplies():
+        if contact_Lindsey.replies:
             call screen phone
-        if contact_Lindsey.getReplies():
+        if contact_Lindsey.replies:
             "(I should reply to Lindsey.)"
             jump s38_PhoneContinue 
     

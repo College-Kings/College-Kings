@@ -398,8 +398,6 @@ label v10_amber_skatepark:
             "Let her":
                 show screen v10s26_amberSexOverlay
 
-                $ rough_rider = True
-
                 stop music fadeout 3
                 play music "music/v10/Scene 26/Track Scene 26_2.mp3" fadein 3
                 image v10ambbj = Movie(play="images/v10/Scene 26/v10ambbj.webm", loop=True, image="images/v10/Scene 26/v10ambbjStart.webp", start_image="images/v10/Scene 26/v10ambbjStart.webp") # TPP Amber sucking MC's cock on the top of the quater pipe
@@ -409,7 +407,7 @@ label v10_amber_skatepark:
                     scene v10ambbj # ignore
                     with dissolve
 
-                    $ grantAchievement("rough_rider")
+                    $ grant_achievement("rough_rider")
                     u "Damn Amber!"
 
                     scene v10ambbj
@@ -719,8 +717,7 @@ label v10_amber_skatepark:
                             scene v10ambbj
                             with dissolve
 
-                            $ rough_rider = True
-                            $ grantAchievement("rough_rider")
+                            $ grant_achievement("rough_rider")
 
                             u "Damn Amber!"
 

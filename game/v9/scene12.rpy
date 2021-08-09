@@ -122,7 +122,6 @@ label v9_hall_cont1:
         "Punch the guy": 
             $ addPoint("bro")
             $ hl_punch = True
-            $ down_for_the_count = True
             jump v9_hall_punch
 
         "Don't punch the guy":
@@ -134,7 +133,7 @@ label v9_hall_punch:
     scene v9hlw8a # TPP. Same camera as v9hlw8, show MC stepping back and looking the tough guy in the face, both angry.
     with dissolve
 
-    $ grantAchievement("back_down")
+    $ grant_achievement("back_down")
     u "(Nah, fuck this.)"
 
     scene v9hlw8b # TPP. Show MC swinging a punch into the tough guys stomach, the tough guy winces in pain.

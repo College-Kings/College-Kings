@@ -533,8 +533,7 @@ label v11_cardealership:
                             play sound "sounds/kiss.mp3"
 
                             if laurenrs:
-                                $ two_timer = True
-                                $ grantAchievement("two_timer")
+                                $ grant_achievement("two_timer")
                                                                 
                             else:
                                 pass

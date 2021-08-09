@@ -257,8 +257,7 @@ label imrecona: # Find Imre
     jump continuebb
 
 label imreconb: # Help Imre
-    $ brosbeforehoes = True
-    $ grantAchievement("bros_before_hoes")
+    $ grant_achievement("bros_before_hoes")
 
     u "(I need to help Imre, Adam will destroy him in his current condition.)"
 
@@ -359,9 +358,9 @@ label imreconc: # Keep talking to Amber
     $ contact_Amber.addReply(_("Oh wow, you're so fucking hot"), v6_reply4)
 
     label phonead:
-        if contact_Amber.getReplies():
+        if contact_Amber.replies:
             call screen phone
-        if contact_Amber.getReplies():
+        if contact_Amber.replies:
             u "(Time to text Amber.)"
             jump phonead
 
@@ -382,9 +381,9 @@ label imrecond: # Meet Chloe
     $ contact_Chloe.addReply(_("Cool, see you there"))
 
     label phoneac:
-        if contact_Chloe.getReplies():
+        if contact_Chloe.replies:
             call screen phone
-        if contact_Chloe.getReplies():
+        if contact_Chloe.replies:
             u "(I should reply to Chloe.)"
             jump phoneac
 
@@ -860,8 +859,7 @@ label imrecond: # Meet Chloe
 
         "Trust her":
             $ addPoint("bf")
-            $ credulous = True
-            $ grantAchievement("credulous")
+            $ grant_achievement("credulous")
 
             u "(I shouldn't spy on her. It's not right.)"
 
@@ -993,9 +991,9 @@ label continuebb:
         " "
 
         label phoneae:
-            if contact_Amber.getReplies():
+            if contact_Amber.replies:
                 call screen phone
-            if contact_Amber.getReplies():
+            if contact_Amber.replies:
                 u "(I should probably reply to my messages.)"
                 jump phoneae
 
@@ -1021,9 +1019,9 @@ label continuebb:
     " "
 
     label phoneaf:
-        if contact_Amber.getReplies():
+        if contact_Amber.replies:
             call screen phone
-        if contact_Amber.getReplies():
+        if contact_Amber.replies:
             u "(I should probably reply to my messages.)"
             jump phoneaf
 
@@ -1763,8 +1761,7 @@ label continuebd:
             scene s510 # Mc arrives at his dorm, down at his door there's a flyer (Matt's design)
             with fade
 
-            $ notmybusiness = True
-            $ grantAchievement("not_my_business")
+            $ grant_achievement("not_my_business")
 
     label nr_bb: #for compatibility only
     u "(Huh, what's this?)"
@@ -2702,8 +2699,7 @@ label emsex_c:
     scene emvid1
     with dissolve
 
-    $ reignition = True
-    $ grantAchievement("reignition")
+    $ grant_achievement("reignition")
 
     " "
 
@@ -2731,11 +2727,10 @@ label emsex_a:
     scene emvid2
     with dissolve
 
-    if not reignition:
+    if not achievement.has("reignition"):
         play music "music/msexy.mp3"
 
-        $ reignition = True
-        $ grantAchievement("reignition")
+        $ grant_achievement("reignition")
             
 
     " "
@@ -3685,9 +3680,9 @@ label fy_bd: # not gone to Emily's
 
         label phoneag:
             stop music fadeout 2.0
-            if contact_Aubrey.getReplies():
+            if contact_Aubrey.replies:
                 call screen phone
-            if contact_Aubrey.getReplies():
+            if contact_Aubrey.replies:
                 u "(I should check my messages.)"
                 jump phoneag
 
@@ -3714,9 +3709,9 @@ label fy_bd: # not gone to Emily's
             scene s565 # mc sitting at his desk
             with dissolve
 
-            if contact_Aubrey.getReplies():
+            if contact_Aubrey.replies:
                 call screen phone
-            if contact_Aubrey.getReplies():
+            if contact_Aubrey.replies:
                 u "(I should probably reply to Aubrey.)"
                 jump v6_phoneah
 
@@ -4850,8 +4845,7 @@ label afteraubrey:
                     with dissolve
                     # handshake clap sound
 
-                    $ monkeybusiness = True
-                    $ grantAchievement("monkey_business")
+                    $ grant_achievement("monkey_business")
 
                     gr "That's what I'm talking about!"
 
@@ -4996,8 +4990,7 @@ label afteraubrey:
         "Stay home":
             $ meetgrayson = False
             $ addPoint("bro")
-            $ seemsfishy = True
-            $ grantAchievement("seems_fishy")
+            $ grant_achievement("seems_fishy")
 
             u "(Fuck Grayson, I'm not meeting him.)"
 
@@ -5442,9 +5435,9 @@ label wakeupa:
 
         call screen phone
         label phoneak:
-            if contact_Penelope.getReplies():
+            if contact_Penelope.replies:
                 call screen phone
-            if contact_Penelope.getReplies():
+            if contact_Penelope.replies:
                 u "(I should really text Penelope.)"
                 jump phoneak
 
@@ -6591,8 +6584,7 @@ label wakeupa:
                 scene s658a # penelope blushing and smiling mouth closed
                 with dissolve
 
-                $ strike = True
-                $ grantAchievement("strike")
+                $ grant_achievement("strike")
                     
                 pe "*Giggles*"
 

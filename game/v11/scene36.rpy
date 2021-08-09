@@ -24,13 +24,12 @@ label v11_imre_ryan_grapple:
 
     menu:
         "Intervene":
-            $ dont_just_stand_there = True
             $ mrleeLike += 1
 
             scene v11irg2 # TPP. Show MC grabbing Imre, Mr Lee grabbing Ryan, everyone angry, mouths closed
             with dissolve
 
-            $ grantAchievement("dont_just_stand_there")
+            $ grant_achievement("dont_just_stand_there")
             pause 1.75
 
             scene v11irg3 # TPP. Show MC holding Imre back, Mr Lee in the middle of Imre and Ryan, Ryan and Imre standing and looking at each other, everyone angry, mouths closed

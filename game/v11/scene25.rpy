@@ -32,13 +32,12 @@ label v11_hotel_bar:
             pause 0.75
 
         "Something fruity":
-            $ fruity = True
             $ v11s25_beer = False
 
             scene v11hob2a
             with dissolve
 
-            $ grantAchievement("fruity")
+            $ grant_achievement("fruity")
             u "Something fruity."
 
             scene v11hob2

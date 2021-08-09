@@ -1,14 +1,12 @@
 init python:
     # Emily's messages
     def v1_reply1():
-        setattr(store, "nohardfeelings", True)
-        grantAchievement("no_hard_feelings")
+        grant_achievement("no_hard_feelings")
 
         contact_Emily.newMessage(_("Cool :)"))
 
     def v1_reply2():
-        setattr(store, "openwound", True)
-        grantAchievement("open_wound")
+        grant_achievement("open_wound")
 
         addPoint("tm")
         contact_Emily.newMessage(_("Ugh :/"))
@@ -1151,8 +1149,7 @@ label starta: #for compatibility only
                 scene s56no1a
                 with dissolve
 
-                $ keepitmoving = True
-                $ grantAchievement("keep_it_moving")
+                $ grant_achievement("keep_it_moving")
 
                 u "Actually, I knew that. I just wanted to talk to you 'cause you're really cute."
 
@@ -1434,9 +1431,9 @@ label efra:
     $ contact_Lauren.addReply(_("Cool"))
 
     label v1_phoneCheck1:
-        if contact_Lauren.getReplies():
+        if contact_Lauren.replies:
             call screen phone
-        if contact_Lauren.getReplies():
+        if contact_Lauren.replies:
             "(I should reply to Lauren.)"
 
             scene s61
@@ -2767,9 +2764,7 @@ label aw_bd:
                 scene s90
                 with dissolve # kiss
                 $ v1_kissLauren = True
-
-                $ romeo = True
-                $ grantAchievement("romeo")
+                $ grant_achievement("romeo")
 
                 play sound "sounds/kiss.mp3"
 
@@ -2927,9 +2922,9 @@ label aw_bd:
     $ contact_Ryan.addReply(_("Okay, will do."))
 
     label repeata:
-        if contact_Ryan.getReplies():
+        if contact_Ryan.replies:
              call screen phone
-        if contact_Ryan.getReplies():
+        if contact_Ryan.replies:
             u "(I should really check who texted me.)"
             jump repeata
 
@@ -3447,7 +3442,7 @@ label v1_freeRoam2_camp:
     else:
         play sound "sounds/vibrate.mp3"
 
-        if not contact_Lauren.getMessage("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"):
+        if not contact_Lauren.get_message("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"):
             $ contact_Lauren.newMessage(_("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"), queue=False)
             $ contact_Lauren.addReply(_("Yeah, sure."), v1_reply6)
             $ contact_Lauren.addReply(_("What is there to talk about?"), v1_reply7)
@@ -3477,8 +3472,7 @@ label v1_freeRoam2_mason:
             scene fr2ma1a
             with dissolve
 
-            $ bigmouth = True
-            $ grantAchievement("big_mouth")
+            $ grant_achievement("big_mouth")
                 
             u "Yeah, he better watch out, or I'll kick his ass."
 

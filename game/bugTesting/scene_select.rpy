@@ -1,3 +1,7 @@
+screen bugTesting_Overlay():
+    $ fileLine = renpy.get_filename_line()
+    text "[fileLine!q]" xpos 10 color "#0f0"
+
 define bugTesting_Scenes = [
     ["start", "Start of Game"],
     ["v1start", "Start of v1"],
@@ -15,13 +19,9 @@ define bugTesting_Scenes = [
     ["drug_deal_w_josh", "Scene 28 (Fight)"]
 ]
 
-screen bugTesting_Overlay():
-    $ fileLine = renpy.get_filename_line()
-    text "[fileLine!q]" xpos 10 color "#0f0"
-
 screen bugTesting_SceneSelect():
     modal True
-    zorder 200
+    zorder 300
     
     add "#23272a"
 

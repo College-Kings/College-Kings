@@ -1,5 +1,12 @@
 init python:
     class CustomCharacter:
+        """
+        Custom character class primarily used for the murder mystery game in v12s7
+
+        Attributes:
+            name (str): The display name for the character
+        """
+
         def __init__(self, name):
             self.stats = {
                 "Competitive": None,

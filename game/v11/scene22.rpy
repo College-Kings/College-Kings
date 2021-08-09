@@ -66,14 +66,13 @@ label v11_museum_tour:
             no "Keep dreaming, [name]."
 
         "Not real":
-            $ just_a_theory = True
             $ noraLike += 1
             $ rileyLike -= 1
 
             scene v11tm5a # FPP. Same as v11tm5, but Riley looking at MC, mouth closed, slightly annoyed
             with dissolve
 
-            $ grantAchievement("just_a_theory")
+            $ grant_achievement("just_a_theory")
             u "Sorry Riley, they definitely aren't real."
 
             scene v11tm5b # FPP. Same as v11tm5a, Riley mouth open, slightly annoyed

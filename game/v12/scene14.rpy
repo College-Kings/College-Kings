@@ -204,12 +204,14 @@ label v12_chloe_cafe:
 
         menu:
             "It'd be nice":
+                $ addPoint("bf")
                 scene v12chc5c
                 with dissolve
 
                 u "Mmm, yeah... It'd be nice. *Chuckles*"
 
             "Not really":
+                $ addPoint("bro")
                 scene v12chc5c
                 with dissolve
 
@@ -371,75 +373,77 @@ label v12_chloe_cafe:
 
     menu:
         "Tell her about Lindsey":
-                $ v12_told_chloe = True
+            $ addPoint("bf")
+            $ v12_told_chloe = True
 
-                u "(I can't keep this from her.) *Sighs* There's something I need to tell you."
+            u "(I can't keep this from her.) *Sighs* There's something I need to tell you."
 
-                scene v12chc5m
-                with dissolve
+            scene v12chc5m
+            with dissolve
 
-                cl "What?"
+            cl "What?"
 
-                scene v12chc5n
-                with dissolve
+            scene v12chc5n
+            with dissolve
 
-                u "Don't quote me, please. And I don't want you doing anything rash. Can you promise me you won't freak out?"
+            u "Don't quote me, please. And I don't want you doing anything rash. Can you promise me you won't freak out?"
 
-                scene v12chc5k
-                with dissolve
+            scene v12chc5k
+            with dissolve
 
-                cl "You're making me nervous, [name]."
+            cl "You're making me nervous, [name]."
 
-                scene v12chc5l
-                with dissolve
+            scene v12chc5l
+            with dissolve
 
-                u "Just promise me you won't freak out."
+            u "Just promise me you won't freak out."
 
-                scene v12chc5
-                with dissolve
+            scene v12chc5
+            with dissolve
 
-                cl "For fucks sake... *Sighs* Fine, I won't freak out. Happy?"
+            cl "For fucks sake... *Sighs* Fine, I won't freak out. Happy?"
 
-                scene v12chc5o # FPP. Same as v12chc5, Chloe angry, mouth closed
-                with dissolve
+            scene v12chc5o # FPP. Same as v12chc5, Chloe angry, mouth closed
+            with dissolve
 
-                u "Good. Now, again, don't quote me. I'm not sure of all the details and I'm not even positive if this is truly her plan, but I heard that Lindsey's been considering running for President of the Chicks, against you."
+            u "Good. Now, again, don't quote me. I'm not sure of all the details and I'm not even positive if this is truly her plan, but I heard that Lindsey's been considering running for President of the Chicks, against you."
 
-                scene v12chc5p # FPP. Same as v12chc5o, Chloe angry, mouth open
-                with dissolve
+            scene v12chc5p # FPP. Same as v12chc5o, Chloe angry, mouth open
+            with dissolve
 
-                cl "WHY THE FUCK WOULD SHE DO THAT!?"
+            cl "WHY THE FUCK WOULD SHE DO THAT!?"
 
-                scene v12chc5o
-                with dissolve
+            scene v12chc5o
+            with dissolve
 
-                u "Calm down, please... You said you wouldn't freak out."
+            u "Calm down, please... You said you wouldn't freak out."
 
-                scene v12chc5p
-                with dissolve
+            scene v12chc5p
+            with dissolve
 
-                cl "*Deep breath* Why, the fuck, would she do that?"
+            cl "*Deep breath* Why, the fuck, would she do that?"
 
-                scene v12chc5o
-                with dissolve
+            scene v12chc5o
+            with dissolve
 
-                u "Something about the Chicks needing major changes in order to save the sorority from it's downhill spiral... And again, don't quote me."
+            u "Something about the Chicks needing major changes in order to save the sorority from it's downhill spiral... And again, don't quote me."
 
-                scene v12chc5p
-                with dissolve
+            scene v12chc5p
+            with dissolve
 
-                cl "Wow... I really can't believe she'd actually do that."
-                cl "You know what, I'm not gonna jump to any conclusions. If she really did plan on doing something like that she'd have to be a lunatic."
+            cl "Wow... I really can't believe she'd actually do that."
+            cl "You know what, I'm not gonna jump to any conclusions. If she really did plan on doing something like that she'd have to be a lunatic."
 
-                scene v12chc5o
-                with dissolve
+            scene v12chc5o
+            with dissolve
 
-                scene v12chc5p
-                with dissolve
+            scene v12chc5p
+            with dissolve
 
-                cl "Rather than seeing how she can help she'd rather just take over? No way. This can't be real."
+            cl "Rather than seeing how she can help she'd rather just take over? No way. This can't be real."
 
         "Don't tell her about Lindsey":
+            $ addPoint("tm")
             
             u "(No way I'm telling her. She's not hearing that news from me.)"
 
@@ -583,9 +587,9 @@ label v12_chloe_cafe:
     $ contact_Riley.addReply("Okay, I'll be there soon.")
 
     label v12s14_PhoneContinueRiley:
-        if contact_Riley.getReplies():
+        if contact_Riley.replies:
             call screen phone
-        if contact_Riley.getReplies():
+        if contact_Riley.replies:
             u "(I should check my phone.)"
             jump v12s14_PhoneContinueRiley
 

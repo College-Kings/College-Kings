@@ -36,9 +36,9 @@ label v11_thurs_night_room:
         $ contact_Riley.newMessage("Goodnight")
 
         label v11s6_PhoneContinue:
-            if contact_Riley.getReplies():
+            if contact_Riley.replies:
                 call screen phone
-            if contact_Riley.getReplies():
+            if contact_Riley.replies:
                 "(I should reply to Riley.)"
                 jump v11s6_PhoneContinue
 
@@ -85,9 +85,9 @@ label v11_thurs_night_room:
         #-MC gets out his phone and text Riley-
 
         label v11s6_PhoneContinue1:
-            if contact_Riley.getReplies():
+            if contact_Riley.replies:
                 call screen phone
-            if contact_Riley.getReplies():
+            if contact_Riley.replies:
                 "(I should reply to Riley.)"
                 jump v11s6_PhoneContinue1
                 

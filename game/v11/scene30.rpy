@@ -993,8 +993,7 @@ label v11_quiz_bonus:
     with dissolve
 
     if v11_hp_points == 3:
-        $ earn_your_owl = True
-        $ grantAchievement("earn_your_owl")
+        $ grant_achievement("earn_your_owl")
 
     jud "For the first time in a very stressful two months, Jerry you have lost. Congratulations Team Hufflepuff!"
 
@@ -1424,9 +1423,9 @@ label v11_quiz_bonus:
         $ contact_Lauren.newMessage("Sure are.")
 
         label v11s30_PhoneContinuelauren1:
-            if contact_Lauren.getReplies():
+            if contact_Lauren.replies:
                 call screen phone
-            if contact_Lauren.getReplies():
+            if contact_Lauren.replies:
                 u "(I should check my phone.)"
                 jump v11s30_PhoneContinuelauren1
 
@@ -1446,9 +1445,9 @@ label v11_quiz_bonus:
         $ contact_Lauren.newMessage("Sure are.")
 
         label v11s30_PhoneContinuelauren2:
-            if contact_Lauren.getReplies():
+            if contact_Lauren.replies:
                 call screen phone
-            if contact_Lauren.getReplies():
+            if contact_Lauren.replies:
                 u "(I should check my phone.)"
                 jump v11s30_PhoneContinuelauren2
 

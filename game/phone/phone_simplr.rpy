@@ -83,7 +83,7 @@ init python:
                     self.pendingMessages[-1].replies.append(reply)
 
             def seenMessage(self):
-                if not any([contact.getReplies() for contact in simplr_contacts]):
+                if not any([contact.replies for contact in simplr_contacts]):
                     simplrApp.seenNotification()
 
             def getMessage(self, message):
@@ -186,7 +186,7 @@ screen simplr_contacts():
                     add contact.profilePicture yalign 0.5 xpos 20
                     text contact.name style "nametext" yalign 0.5 xpos 100
 
-                    if contact.getReplies():
+                    if contact.replies:
                         add "images/contactmsgnot.webp" yalign 0.5 xpos 275
 
                     imagebutton:
@@ -242,7 +242,7 @@ screen simplr_messenger(contact=None):
                             style "msgright"
                             action Show("simplr_image", img=message.image)
 
-        if contact.getReplies():
+        if contact.replies:
                 hbox:
                     xalign 0.5
                     ypos 855
@@ -259,7 +259,7 @@ screen simplr_reply(contact=None):
         yalign 0.84
         spacing 15
 
-        for reply in contact.getReplies():
+        for reply in contact.replies:
             if isinstance(reply, Reply):
                 textbutton reply.message:
                     style "replies_style"

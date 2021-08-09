@@ -2,6 +2,21 @@
 # Locations: Sidewalk, Photoshoot with 2 sets and flower bouquet stand
 # Characters: MC (Outfit: 3), AUBREY (Outfit: 2), NAOMI (Outfit: 1), PHOTOGRAPHER (Outfit: 1)
 # Time: Morning
+# Phone Images: YES
+# v12aumcsexy (MC and Aubrey sexy pose)
+# v12aunaselfie (Aubrey and Naomi selfie wearing bras, both smiling, mouths closed)
+# v12aucar (Aubrey sexy pic on car)
+
+init python:
+    def v12s32kiwiiPost1_Reply1():
+        v12s32kiwiiPost1.newComment("Naomi", _("Hehe, you too! Hope to see you soon...;)"), numberLikes=renpy.random.randint(583, 912), queue=False)
+        kiwiiPost.newComment("Chloe", _("OMG!?!?!?!"), numberLikes=renpy.random.randint(124,354), queue=False)
+        kiwiiPost.newComment("Imre", _("Bro... Is that you?!"), mentions="MC", numberLikes=renpy.random.randint(53,93), queue=False)
+    
+    def v12s32kiwiiPost1_Reply2():
+        v12s32kiwiiPost1.newComment("Aubrey", _("You're so welcome... Today was amazing. <3"), numberLikes=renpy.random.randint(253, 462), queue=False)
+        kiwiiPost.newComment("Chloe", _("OMG!?!?!?!"), numberLikes=renpy.random.randint(124,354), queue=False)
+        kiwiiPost.newComment("Imre", _("Bro... Is that you?!"), mentions="MC", numberLikes=renpy.random.randint(53,93), queue=False)
 
 label v12s32:
 # -MC and Aubrey are walking along the sidewalk-
@@ -271,6 +286,7 @@ label v12s32:
             pg "I wouldn't call that sexy but, alright..."
 
         "Put your arms around Aubrey":
+            $ addPoint("bro")
 
             scene v12s32_15c #same 15, Aubrey has her back to MC and he wraps his arms around her, squeezing her in tight, Aubrey smiles at him, mouth closed
             with dissolve
@@ -758,37 +774,31 @@ label v12s32:
 
     au "I wanna get back as soon as possible and show these to everyone. I posted a few on Kiwii and my sister did too. Let's hurry back."
 
+    python:
+        v12s32kiwiiPost1 = KiwiiPost("LewsOfficial", "v12/v12aumcsexy.webp", _("New faces in our new pieces! Check out the new Lavish Line on our website ;)"), numberLikes=3889)
+        v12s32kiwiiPost1.newComment("Naomi", _("That's my baby sis! <3"), numberLikes=renpy.random.randint(952, 1512), queue=False)
+        v12s32kiwiiPost1.newComment("Aubrey", _("Thank you so much for having us! Can't wait for the future..."), numberLikes=renpy.random.randint(367, 526), queue=False)
+        v12s32kiwiiPost1.addReply(_("Thanks for the invite! It was really nice to meet you..."), v12s32kiwiiPost1_Reply1, mentions="Naomi", numberLikes=renpy.random.randint(278,421))
+        v12s32kiwiiPost1.addReply(_("Had an amazing time today... Thank you, gorgeous!"), v12s32kiwiiPost1_Reply2, mentions="Aubrey")
 
-    # -Aubrey, her sister and Lew's posted their pics on Kiwii-
+        v12s32kiwiiPost2 = KiwiiPost("Naomi", "v12/v12aunaselfie.webp", _("When little sis visits you at work and leaves with your JOB! #ProudBigSis"), numberLikes=2107)
+        v12s32kiwiiPost2.newComment("Aubrey", _("Haha! I love you boo... Thank you for today :)"), mentions="Naomi", numberLikes=renpy.random.randint(278, 363), queue=False)
+        v12s32kiwiiPost2.newComment("Naomi", _("You're sooo welcome sissy. #ItRunsInTheFamily"), mentions="Aubrey", numberLikes=renpy.random.randint(747, 973), queue=False) 
+        v12s32kiwiiPost2.addReply(_("Even more beautiful in person..."), numberLikes=renpy.random.randint(562, 789))
+        v12s32kiwiiPost2.addReply(_("Aww, love this pic of you guys!"), numberLikes=renpy.random.randint(578, 865))
+        v12s32kiwiiPost2.newComment("Nora", _("Hotties!! Hope you had an amazing time... Can't wait to see all the pics!"), numberLikes=renpy.random.randint(253, 462))
+        v12s32kiwiiPost2.newComment("Chloe", _("JOB?!?!?!"), numberLikes=renpy.random.randint(245, 587))
+        v12s32kiwiiPost2.newComment("Naomi", _("Thank you... <3"), numberLikes=renpy.random.randint(346, 579))
+        v12s32kiwiiPost2.newComment("Aubrey", _("Thanks guys... I'll tell you all about it Chlo! Lol"), numberLikes=renpy.random.randint(253, 462))
 
-    ### ERROR: KiwiiPost("LewsOfficial", "sexy pose of MC and Aubrey", "New faces in our new pieces! Check out the new Lavish Line on our website ;)", numberLikes=3889)
-    ### ERROR: kiwiiPost.newComment("Naomi", "That's my baby sis! <3")
-    ### ERROR: kiwiiPost.newComment("Aubrey", "Thank you so much for having us! Can't wait for the future...")
-    ### ERROR: kiwiiPost.addReply("Thanks for the invite! It was really nice to meet you...", mentions=”Naomi”)
-    ### ERROR: kiwiiPost.newComment("Naomi", "Hehe, you too! Hope to see you soon...;)")
-    ### ERROR: kiwiiPost.addReply("Had an amazing time today... Thank you, gorgeous!", mentions="Aubrey")
-    ### ERROR: kiwiiPost.newComment("Aubrey", "You're so welcome... Today was amazing. <3")
-    ### ERROR: kiwiiPost.newComment("Chloe", "OMG!?!?!?!")
-    ### ERROR: kiwiiPost.newComment("Imre", "Bro... Is that you?!”, mentions=”MC”)
-
-    ### ERROR: KiwiiPost("Naomi", "selfie in bra of Aubrey and Naomi", "When little sis visits you at work and leaves with your JOB! #ProudBigSis", numberLikes=2107)
-    ### ERROR: kiwiiPost.newComment("Aubrey", "Haha! I love you boo... Thank you for today :)", mentions=”Naomi”)
-    ### ERROR: kiwiiPost.newComment("Naomi", "You're sooo welcome sissy. #ItRunsInTheFamily")
-    ### ERROR: kiwiiPost.addReply("Even more beautiful in person...")
-    ### ERROR: kiwiiPost.addReply("Aww, love this pic of you guys!")
-    ### ERROR: kiwiiPost.newComment("Nora", "Hotties!! Hope you had an amazing time... Can't wait to see all the pics!”)
-    ### ERROR: kiwiiPost.newComment("Chloe", "JOB?!?!?!”)
-    ### ERROR: kiwiiPost.newComment("Naomi”, "Thank you... <3”)
-    ### ERROR: kiwiiPost.newComment("Aubrey", "Thanks guys... I'll tell you all about it Chlo! Lol”)
-
-    ### ERROR: KiwiiPost("Aubrey", "sexy pose on car", "You're looking at the newest Lew's model! #BestDayEver ", numberLikes=934)
-    ### ERROR: kiwiiPost.newComment("Naomi”, “Watch out world, there's two of us... ;)")
-    ### ERROR: kiwiiPost.newComment("Chloe”, “Holy shit, Aubs! Fucking HOTTTT!!!")
-    ### ERROR: kiwiiPost.newComment("Aubrey", "Haha, thank you babes <3”)
-    ### ERROR: kiwiiPost.addReply("Absolutely deserved.")
-    ### ERROR: kiwiiPost.newComment("Aubrey", ":) Thanks to you...”)
-    ### ERROR: kiwiiPost.newComment("Ryan”, "Holy...”)
-    ### ERROR: kiwiiPost.newComment("Imre”, "Pick up your jaw idiot! LOL”, mentions=”Ryan”)
+        v12s32kiwiiPost3 = KiwiiPost("Aubrey", "v12/v12aucar.webp", _("You're looking at the newest Lew's model! #BestDayEver"), numberLikes=934)
+        v12s32kiwiiPost3.newComment("Naomi", _("Watch out world, there's two of us... ;)"), numberLikes=renpy.random.randint(532, 737))
+        v12s32kiwiiPost3.newComment("Chloe", _("Holy shit, Aubs! Fucking HOTTTT!!!"), numberLikes=renpy.random.randint(320, 479))
+        v12s32kiwiiPost3.newComment("Aubrey", _("Haha, thank you babes <3"), numberLikes=renpy.random.randint(253, 462))
+        v12s32kiwiiPost3.addReply(_("Absolutely deserved."), numberLikes=renpy.random.randint(126, 367))
+        v12s32kiwiiPost3.newComment("Aubrey", _(":) Thanks to you..."), numberLikes=renpy.random.randint(167, 241))
+        v12s32kiwiiPost3.newComment("Ryan", _("Holy..."), numberLikes=renpy.random.randint(78, 153))
+        v12s32kiwiiPost3.newComment("Imre", _("Pick up your jaw idiot! LOL"), mentions="Ryan", numberLikes=renpy.random.randint(69, 178))
 
     scene v12s32_33b # same 33, -Aubrey starts walking away-
     with dissolve

@@ -40,9 +40,9 @@ label v11_nightclub_with_josh:
     $ contact_Josh.addReply("LET'S FUCKING GOOOOO! OMW NOW!", v11s5_reply2)
 
 label v11s4_PhoneContinueJosh1:
-    if contact_Josh.getReplies():
+    if contact_Josh.replies:
         call screen phone
-    if contact_Josh.getReplies():
+    if contact_Josh.replies:
         u "(I should check my phone.)"
         jump v11s4_PhoneContinueJosh1
 
@@ -839,11 +839,9 @@ label v11s5_galleryScene:
     scene v11swc22 # FPP Show Candy standing above MC, Candy smiling with mouth closed
     with dissolve
 
-    $ grantAchievement("candy_crusher")
+    $ grant_achievement("candy_crusher")
     u "Candy it is."
 
-    $ candy_crusher = True
-    
     scene v11swc21a # TPP Same angle as v11swc21, Candy removing her clothing
     with dissolve
 

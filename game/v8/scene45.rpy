@@ -36,9 +36,9 @@ label tue_night_in_room:
         $ contact_Sebastian.addReply(_("Looking forward to it. :)"))
 
         label v8s45_phoneContinue1:
-            if contact_Sebastian.getReplies():
+            if contact_Sebastian.replies:
                 call screen phone
-            if contact_Sebastian.getReplies():
+            if contact_Sebastian.replies:
                 u "I should really check my phone."
                 jump v8s45_phoneContinue1
 
@@ -61,9 +61,9 @@ label tue_night_in_room:
             $ contact_Chloe.addReply(_("Sure, later."))
 
         label v8s45_phoneContinue2:
-            if contact_Chloe.getReplies():
+            if contact_Chloe.replies:
                 call screen phone
-            if contact_Chloe.getReplies():
+            if contact_Chloe.replies:
                 u "I should really check my phone."
                 jump v8s45_phoneContinue2
 
@@ -108,9 +108,9 @@ label tue_night_in_room:
         $ contact_Grayson.addReply(_(":P"))
 
         label v8s45_phoneCheck:
-            if contact_Grayson.getReplies():
+            if contact_Grayson.replies:
                 call screen phone
-            if contact_Grayson.getReplies():
+            if contact_Grayson.replies:
                 u "I need to check my phone."
                 jump v8s45_phoneCheck
 
@@ -133,9 +133,9 @@ label tue_night_in_room:
             $ contact_Chloe.addReply(_("Sure, later."))
 
         label v8s45_phoneCheck2:
-            if contact_Chloe.getReplies():
+            if contact_Chloe.replies:
                 call screen phone
-            if contact_Chloe.getReplies():
+            if contact_Chloe.replies:
                 u "I need to check my phone."
                 jump v8s45_phoneCheck2
         
