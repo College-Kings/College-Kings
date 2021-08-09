@@ -363,7 +363,6 @@ label v12s7_aubrey1:
     show screen murder_button_overlay(aubrey)
 
     scene v12ferau1 # FPP. Note for renderer, all scene images starting v12ferau will be the first conversation with Aubrey on the upper front balcony of the boat. Her and Nora are both up there but the conversations are completely seperate. Show Aubrey, flirty look, mouth open
-    with dissolve
 
     au "Hey there, handsome. Please make sure you're being careful, okay? I'd hate for you to get hurt, but if you do find yourself needing some love and care, don't forget to come see your favorite nurse. *Chuckles*"
 
@@ -523,6 +522,9 @@ label v12s7_aubrey1:
                 with dissolve
 
                 au "Good, and try not to take too long. Those injuries look very, very bad. *Chuckles*"
+            
+            stop music fadeout 3
+            play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
             call screen v12s7_balcony_right
             
@@ -655,6 +657,11 @@ label v12s7_aubrey2:
             scene v12ferauh5 # TPP. Show MC walking out the bathroom door
             with dissolve
 
+            pause 0.75
+
+            stop music fadeout 3
+            play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
             call screen v12s7_balcony_right
         "Kill her":
             $ addPoint("tm")
@@ -698,6 +705,12 @@ label v12s7_aubrey2:
 
             scene v12ferauh5
             with dissolve
+
+            pause 0.75
+
+            stop music fadeout 3
+            play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
             call screen v12s7_left_gallery_front
 
     stop music fadeout 3
@@ -716,7 +729,6 @@ label v12s7_riley1:
     ### ERROR: -If talk to Chloe and Riley 1 ###
     ### ERROR: -If MC uses the button at all during this conversation he is caught ###
     scene v12ferri1 # FPP. location is the upper rear outside seating area on the right side of the ship as seen on miro. Show chloe(from a distance as mc is overhearing the convo), looking at riley out of shot, slight annoyed look, mouth open
-    with dissolve
 
     cl "Rich people are the actual problem. You guys get to sit around on stacks of money and the little guys like me have to pick up the slack for this entire country."
     cl "People like you never wanna pay your taxes but I barely have two pennies to rub together and I still have to pay mine."
@@ -999,7 +1011,6 @@ label v12s7_chloe1:
     show screen murder_button_overlay(chloe)
 
     scene v12ferch1 # FPP Show chloe slight smile, mouth closed
-    with dissolve
 
     u "Well, well. If it isn't the richest woman alive."
 
@@ -1245,6 +1256,11 @@ label v12s7_chloe1:
         scene v12ferch6 # TPP. Show Mc walking away.
         with dissolve
 
+        pause 0.75
+
+        stop music fadeout 3
+        play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
         call screen v12s7_left_viewpoint
 
     else:
@@ -1255,6 +1271,11 @@ label v12s7_chloe1:
 
         scene v12ferch6 # TPP. Show Mc walking away.
         with dissolve
+
+        pause 0.75
+
+        stop music fadeout 3
+        play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
         call screen v12s7_left_viewpoint
 
@@ -1474,7 +1495,6 @@ label v12s7_riley3a:
 
     ### ERROR: -If talk to Riley 3 No Chloe ###
     scene v12ferril1 # FPP. Show riley, slight smile mouth closed.
-    with dissolve
 
     u "Still alive out here, huh?"
 
@@ -1564,11 +1584,12 @@ label v12s7_riley3a:
     scene v12ferril2 # FPP. Show MC walking away.
     with dissolve
 
-    call screen v12s7_left_viewpoint
+    pause 0.75
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
+    call screen v12s7_left_viewpoint
 
 label v12s7_riley_kill:
 
@@ -1865,6 +1886,7 @@ label v12s7_lauren1:
 label v12s7_Lauren_kill:
 
     scene v12ferla8 # TPP. Show mc pointing finger gun at lauren, mouth open
+    with dissolve
 
     u "Boom."
 
@@ -1898,6 +1920,11 @@ label v12s7_Lauren_kill:
 
     scene v12ferla7
     with dissolve
+
+    pause 0.75
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_seating_back
 
@@ -2354,6 +2381,7 @@ label v12s7_ryan1:
 label v12s7_ryan_kill:
 
     scene v12ferry3 # TPP. Show MC pointing finger gun at ryan, mouth open
+    with dissolve
 
     u "Boom."
 
@@ -2514,6 +2542,7 @@ label v12s7_imre2:
 label v12s7_imre_kill:
 
     scene v12ferim2 # TPP. Show MC pointing finger gun at imre, mouth open
+    with dissolve
 
     u "Boom."
 
@@ -3074,6 +3103,7 @@ label v12s7_lindsey2:
 label v12s7_lindsey_kill:
 
     scene v12ferli7 # TPP. Show mc, mouth open, pointing finger guns at lindsey
+    with dissolve
 
     u "Boom."
 
@@ -3164,6 +3194,7 @@ label v12s7_charli2:
 label v12s7_charli_kill:
     
     scene v12fercha2 # TPP. Show MC pointing a finger gun at charli, mouth open
+    with dissolve
 
     u "Boom."
 
@@ -3397,6 +3428,7 @@ label v12s7_msrose_kill:
     ### ERROR: -If MC presses the murder button during this convo ###
 
     scene v12fermsr4 # TPP. MC points a finger gun at Ms. Rose, mc mouth open
+    with dissolve
 
     u "Boom."
 
@@ -3719,6 +3751,7 @@ label v12s7_penelope1:
 label v12s7_penelope_kill:
 
     scene v12ferpen7 # TPP. Show mc pointing finger gun at penelope, mc mouth open
+    with dissolve
 
     u "Boom."
     stop music fadeout 3
@@ -3975,6 +4008,7 @@ label v12s7_amber1:
 label v12s7_amber_kill:
 
     scene v12feram11 # TPP. Show MC pointing finger gun at amber, mc mouth open
+    with dissolve
 
     u "Boom."
 
@@ -4170,6 +4204,7 @@ label v12s7_riley2:
 label v12s7_riley2_kill:
 
     scene v12ferrile3 # TPP. Show mc pointing finger gun at riley, mc mouth open
+    with dissolve
 
     u "Boom."
 
@@ -4746,6 +4781,7 @@ label v12s7_sam2:
 label v12s7_sam2_kill:
 
     scene v12fersam4 # TPP. Show mc, mouth open, pointing finger fun at sam.
+    with dissolve
 
     u "Boom."
 
@@ -4929,6 +4965,7 @@ label v12s7_cameron2:
 label v12s7_cameron2_kill:
 
     scene v12fercam5 # TPP. Show mc, mouth open, pointing finger fun at cameron
+    with dissolve
 
     u "Boom."
 
@@ -5244,6 +5281,7 @@ label v12s7_nora1:
 label v12s7_nora1_kill:
 
     scene v12fernor4 # TPP. Show mc, pointing finger gun at nora, mouth open
+    with dissolve
 
     u "Boom."
 
@@ -5414,6 +5452,7 @@ label v12s7_chris1:
 
 label v12s7_chris1_kill:
     scene v12ferchr4 # TPP. Show mc pointing finger gun at chris, mc mouth open.
+    with dissolve
 
     u "Boom."
 
@@ -5732,6 +5771,7 @@ label v12s7_josh2:
 label v12s7_josh2_kill:
 
     scene v12ferjos5 # TPP. Show mc pointing finger gun at josh, mc mouth open
+    with dissolve
 
     pause 0.75
 
@@ -5857,6 +5897,7 @@ label v12s7_emily2:
 label v12s7_emily2_kill:
 
     scene v12feremi3 # TPP. Show mc pointing finger gun at Emily, mc mouth open
+    with dissolve
 
     u "Boom."
 

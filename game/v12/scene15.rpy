@@ -9,6 +9,8 @@ label v12_riddle_riley:
 
     pause 1.25
 
+    play music "music/v12/Scene 15/Track Scene 15_1.mp3" fadein 2
+
     scene v12rrl2 # FPP. MC looking at riley, mouth closed
     with dissolve
 
@@ -63,6 +65,9 @@ label v12_riddle_riley:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v12/Scene 15/Track Scene 15_2.mp3" fadein 2
 
     scene v12rrl4 # FPP. MC looking at riley, mouth closed
     with dissolve
@@ -385,6 +390,9 @@ label v12_riddle_riley:
 
     pause 0.6
 
+    stop music fadeout 3
+    play music "music/v12/Scene 15/Track Scene 15_3.mp3" fadein 2
+
     scene v12rrl31 # FPP. Riley on the ground, looking hurt, hand on her leg, mouth opened
     with dissolve
 
@@ -612,5 +620,7 @@ label v12_riddle_riley:
                     with dissolve
 
                     pause 1
+    
+    stop music fadeout 3
 
     jump v12_valentine #scene 16

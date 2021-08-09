@@ -10,6 +10,8 @@ label v12_dock_arrival:
 
     pause 1
 
+    play music "music/v12/Scene 9/Track Scene 9.mp3" fadein 2
+
     scene v12doa2 # TPP. Show Imre running past MC, MC slightly surprised, mouth closed, Imre happy, mouth closed
     with dissolve
 
@@ -64,5 +66,7 @@ label v12_dock_arrival:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v12_amber_bus #scene 10

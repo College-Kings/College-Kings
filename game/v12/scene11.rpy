@@ -9,6 +9,8 @@ label v12_paris_hotel:
     
     pause 0.75
 
+    play music "music/v12/Scene 11/Track Scene 11.mp3" fadein 2
+
     scene v12pht2 # FPP. Looking at imre, mouth opened
     with dissolve
 
@@ -409,5 +411,7 @@ label v12_paris_hotel:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v12_room_chloe_riley #scene 12

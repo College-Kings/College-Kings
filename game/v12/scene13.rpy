@@ -10,6 +10,8 @@ label v12_cafe:
 
         pause 0.75
 
+        play music "music/v12/Scene 13/Track Scene 13.mp3" fadein 2
+
         scene v12caf2 # FPP. MC sees chloe sitting on her bed going through her phone, mouth opened
         with dissolve
 
@@ -125,6 +127,8 @@ label v12_cafe:
         
         pause 1
 
+        stop music fadeout 3
+
         jump v12_chloe_cafe #scene 14
 
     else:
@@ -132,6 +136,8 @@ label v12_cafe:
         with dissolve
 
         pause 0.75
+
+        play music "music/v12/Scene 13/Track Scene 13.mp3" fadein 2
 
         scene v12caf9 # FPP. Riley humming on her bed
         with dissolve
@@ -217,5 +223,7 @@ label v12_cafe:
         with dissolve
 
         pause 1
+
+        stop music fadeout 3
 
         jump v12_riley_cafe #scene 14a
