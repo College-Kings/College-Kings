@@ -20,6 +20,9 @@ default reactiona = 1.0
 default bodyHook = False
 default enemyhealth = 0
 
+    ## Free Roam
+default previous_location = ""
+
 # 1.0 - 6.0
 default v1_sda = False
 default evelynmove = False
