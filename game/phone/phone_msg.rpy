@@ -256,7 +256,7 @@ screen messager(contact=None):
                         action Show("messenger_reply", contact=contact)
 
     if kiwii_firstTime:
-        timer 0.1 action Show("kiwiiPopup")
+        on "show" action Show("kiwiiPopup")
 
 
 screen messenger_reply(contact=None):

@@ -269,7 +269,7 @@ screen choice(items, seconds=3, fail_label=""):
 
     if config_debug:
         $ item = renpy.random.choice(items)
-        timer 0.1 action item.action
+        on "show" action item.action
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
 ## menu captions will be displayed as empty buttons.
