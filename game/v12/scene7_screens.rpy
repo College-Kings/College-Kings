@@ -524,31 +524,28 @@ screen v12s7_right_gallery_front():
     imagemap:
         if v12s7_riley and not v12s7_riley2 and amber not in v12s7_killList and riley not in v12s7_killList:
             idle "images/v12/Scene 7/Screens/Navigation 17a.webp" # Riley and Amber
-            hover "images/v12/Scene 7/Buttons/nav 17a.webp"
+            hover "images/v12/Scene 7/Buttons/nav 17amock.webp"
 
-            hotspot (757, 270, 316, 649) action NullAction()
+            hotspot (757, 270, 316, 649) action Show("v12s7_front_gallery")
 
-        elif v12s7_riley and not v12s7_riley2 and riley not in v12s7_killList:
+        elif v12s7_riley and not v12s7_riley2 and amber in v12s7_killList and riley not in v12s7_killList: # Riley
             idle "images/v12/Scene 7/Screens/Navigation 17b.webp" # Riley
-            hover "images/v12/Scene 7/Buttons/nav 17b.webp"
+            hover "images/v12/Scene 7/Buttons/nav 17bmock.webp"
 
-            hotspot (758, 279, 223, 640) action NullAction()
+            hotspot (758, 279, 223, 640) action Show("v12s7_front_gallery")
 
-        elif (not v12s7_riley and amber not in v12s7_killList) or (v12s7_riley and riley in v12s7_killList):
+        elif amber not in v12s7_killList: # Amber
             idle "images/v12/Scene 7/Screens/Navigation 17c.webp" # Amber
-            hover "images/v12/Scene 7/Buttons/nav 17c.webp"
+            hover "images/v12/Scene 7/Buttons/nav 17cmock.webp"
 
-            hotspot (893, 297, 178, 525): 
-                if v12s7_amber:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferry1", returnScreen="v12s7_right_gallery_front", seenList=[ryan] if not ryan in v12s7_killList else []) #backgroundImg??? seenList????
-                else:
-                    action Jump("v12s7_amber1")
+            hotspot (893, 297, 178, 525) action Show("v12s7_front_gallery")
 
         else:
             idle "images/v12/Scene 7/Screens/Navigation 17d.webp" # No one
-            hover "images/v12/Scene 7/Buttons/nav 17d.webp"
+            hover "images/v12/Scene 7/Buttons/nav 17dmock.webp"
 
         hotspot (376, 991, 1115, 87) action Show("v12s7_right_gallery_back")
+        hotspot (1423, 66, 497, 796) action Show("v12s7_utility")
 
     use v12s7_minimap(location="md_right_gallery")
 
@@ -572,7 +569,7 @@ screen v12s7_utility():
                 else:
                     action Jump("v12s7_josh2") # Josh
 
-        hotspot (1847, 113, 72, 865) action Show(previous_location)
+        hotspot (1847, 113, 72, 865) action Show("v12s7_right_gallery_front")
 
     use v12s7_minimap(location="md_utility")
 
@@ -615,7 +612,10 @@ screen v12s7_front_gallery():
             hover "images/v12/Scene 7/Buttons/nav 19c.webp"
 
         hotspot (383, 0, 1198, 97) action Show("v12s7_balcony_middle")
-        hotspot (339, 983, 1198, 97) action Show(previous_location)
+        hotspot (339, 983, 1198, 97) action Show("v12s7_right_gallery_front")
+    
+        hotspot (293, 0, 1385, 130) action Show("v12s7_balcony_middle")
+
     
     use v12s7_minimap(location="md_front_gallery")
 
