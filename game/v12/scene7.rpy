@@ -5660,7 +5660,7 @@ label v12s7_josh1:
             scene v12ferjo1b # FPP. Show josh, angry, mouth open
             with dissolve
 
-            jo "Cats? CATS!!? Don't disrespect them like that! They are the pentacle of all felines. The leopard is a dignified creature handcrafted by God. Also... *Whispers* Don't fucking laugh at me."
+            jo "Cats? CATS!!? Don't disrespect them like that! They are the pinnacle of all felines. The leopard is a dignified creature handcrafted by God. Also... *Whispers* Don't fucking laugh at me."
 
             scene v12ferjo1c # FPP. Show josh, angry, mouth closed
             with dissolve
