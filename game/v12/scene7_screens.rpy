@@ -129,7 +129,7 @@ screen v12s7_walkway():
 
         hotspot (0, 30, 126, 1020) action Show("v12s7_left_walkway_middle")
         hotspot (1793, 30, 126, 1020) action Show("v12s7_right_walkway_middle")
-        hotspot (242, 950, 1385, 130) action Show(previous_location)
+        hotspot (242, 950, 1385, 130) action Show("v12s7_seating_front")
 
     use v12s7_minimap(location="ld_walkway")
 
