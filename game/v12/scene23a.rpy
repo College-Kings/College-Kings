@@ -29,8 +29,7 @@ label v12_mc_chilling:
         scene v12mor5 # TPP. MC Laying on his bed
         with dissolve
 
-    else: 
-
+    else:
         scene v12mor4
         with dissolve
 
@@ -850,7 +849,7 @@ label v12_mc_chilling:
             with dissolve
 
         "Don't call Cameron":
-            
+          
             scene v12mor22
             with dissolve
 
