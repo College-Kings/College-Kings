@@ -135,17 +135,17 @@ label v12_late_night_workout:
     scene v12lnw7b # FPP Same angle as v12lnw7, Lindsey looking at MC, smiling with mouth open
     with dissolve
 
-    li "I haven't actually been to a real gym before."
+    li "I haven't actually worked out at a real gym before."
 
     scene v12lnw7c # FPP Same angle as v12lnw7, Lindsey looking at MC, smiling with mouth closed
     with dissolve
 
-    u "Don't you work out?"
+    u "You don't work out at all?"
 
     scene v12lnw7b
     with dissolve
 
-    li "Yeah, but I usually just at-home stuff. I don't have any of my stuff with me here and I thought it'd be fun to actually go to a gym for once."
+    li "Yeah, but I usually just do at-home stuff. I don't have any of my stuff with me here and I thought it'd be fun to actually go to a gym for once."
 
     scene v12lnw7c
     with dissolve
