@@ -42,7 +42,7 @@ init python:
         @property
         def replies(self):
             try: return self.sentComments[-1].replies
-            except Exception: return False
+            except AttributeError: return []
 
         def toggleLike(self):
             self.liked = not self.liked
@@ -92,7 +92,7 @@ init python:
 
             # Send next queued message(s)
             try:
-                while not self.replies():
+                while not self.replies:
                     self.sentComments.append(self.pendingComments.pop(0))
             except IndexError: pass
 
@@ -353,13 +353,13 @@ screen kiwiiPost(post):
                                     action Function(comment.toggleLike)
                                 text "[comment.numberLikes]" style "kiwii_LikeCounter" yalign 0.5
 
-    if post.replies():
+    if post.replies:
         vbox:
             xpos 1200
             yalign 0.84
             spacing 15
 
-            for reply in post.replies():
+            for reply in post.replies:
                 textbutton reply.message:
                     text_style "kiwii_ReplyText"
                     if reply.disabled:
