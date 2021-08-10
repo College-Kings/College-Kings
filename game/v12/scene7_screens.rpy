@@ -18,7 +18,7 @@ screen murder_button_overlay(character):
         if v12s7_seenList:
             action Jump("v12s7_mc_caught")
         else:
-            action [ Function(character.kill), Jump("v12s7_{}_kill".format(character.name.lower()) ]
+            action [ Function(character.kill), Jump("v12s7_{}_kill".format(character.name.lower())) ]
 
 
 screen v12s7_minimap(location):
