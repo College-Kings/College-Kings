@@ -22,6 +22,7 @@ default enemyhealth = 0
 
     ## Free Roam
 default previous_location = ""
+default previous_location_rearg = ""
 
 # 1.0 - 6.0
 default v1_sda = False
@@ -519,4 +520,4 @@ default v12_murder_count = 0
 default joshmadfr = False
 
 
-default joshmoved = False #?????
+default josh_moved = False #?????
