@@ -626,7 +626,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
         scene v12s33_28 #FPP show Chloe and Aubrey in Sauna (sweaty if possible), both looking at you, smiling (Chloe in towel, Aubrey naked)
         with dissolve
 
-    mc "Heyah, hope you don't mind me coming in."
+    u "Heyah, hope you don't mind me coming in."
 
     scene v12s33_29 #FPP close up Aubrey, Looking at Chloe (off-screen), laughing smile, mouth upen
     with dissolve
