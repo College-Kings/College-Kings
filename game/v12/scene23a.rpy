@@ -479,7 +479,7 @@ label v12_mc_chilling:
                 scene v12mor23 # TPP. MC holding his phone, mouth closed
                 with dissolve
 
-                u "(*Sighs* He should atleast know she's drunk.)"
+                u "(*Sighs* He should at least know she's drunk.)"
 
                 scene v12mor24 # TPP. MC with the phone to his ear, mouth closed
                 with dissolve

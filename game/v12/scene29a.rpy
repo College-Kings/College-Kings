@@ -50,7 +50,7 @@ label v12_late_night_workout:
     scene v12lnw2
     with dissolve
 
-    u "So you want big and strong [name] to occompany you so you don't have to go by yourself?"
+    u "So you want big and strong [name] to accompany you so you don't have to go by yourself?"
 
     scene v12lnw2b # FPP Same angle as v12lnw2, Linsdsey smiling with mouth open
     with dissolve
@@ -155,7 +155,7 @@ label v12_late_night_workout:
     scene v12lnw7b
     with dissolve
 
-    li "Nope, I'm more of a yoga ball and dumbell kind of girl."
+    li "Nope, I'm more of a yoga ball and dumbbell kind of girl."
 
     scene v12lnw7c
     with dissolve
@@ -678,12 +678,12 @@ label v12_late_night_workout:
     scene v12lnw9
     with dissolve
 
-    u "The bar is fourty five pounds."
+    u "The bar is forty-five pounds."
 
     scene v12lnw9c
     with dissolve
 
-    li "Okay yeah, I can only do the bar. When I use dumbells my max is twenty pounds in each hand."
+    li "Okay yeah, I can only do the bar. When I use dumbbells my max is twenty pounds in each hand."
 
     scene v12lnw9b
     with dissolve
@@ -733,7 +733,7 @@ label v12_late_night_workout:
     scene v12lnw22f # FPP Same angle as v12lnw22, Lindsey has released the bar and let her arms flop to her sides, she is smiling with her mouth open
     with dissolve
 
-    li "That is not fourty five pounds!"
+    li "That is not forty-five pounds!"
 
     scene v12lnw22g # FPP Same angle as v12lnw22, Lindsey with her arms flopped to her sides, exhausted, smiling with mouth closed
     with dissolve

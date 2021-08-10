@@ -424,7 +424,7 @@ label v12_ms_rose_sex:
                 with dissolve
                 pause
 
-                u "I'm... almost there! You're so... fuckiNG... HOT!"
+                u "I'm... almost there! You're so... FUCKING... HOT!"
 
                 ro "Do it inside, [name]! Fill me up... Please... I..."
 

@@ -523,3 +523,4 @@ default v12s23a_poolsex = False
 default v12s23a_beatcameron = False
 default v12_nora_sex = False
 default v12_nora_points = 0
+default supported_nora = False

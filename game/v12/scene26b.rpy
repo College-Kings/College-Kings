@@ -4,8 +4,6 @@
 # Time: morning
 # Phone Images: 
 
-default supported_nora = False
-
 label v12_chase_nora:
     scene v12cn1 # TPP Show MC chasing running down hotel hallway after Nora
     with dissolve
