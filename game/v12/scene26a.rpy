@@ -209,6 +209,7 @@ label v12_follow_chris:
             driver "Don't worry, I can take you back."
 
         "You're right":
+            $ v12_help_chris += 1
             $ addPoint("bro")
             scene v12chf4l # FPP. Same as v12chf4a, different pose
             with dissolve

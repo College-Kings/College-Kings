@@ -229,7 +229,7 @@ label v12_nora_room:
     no "For not being like Chris."
 
     if v12_nora_points == 2 or kct == "loyal":
-        if v12_nora_points <= 2:
+        if v12_nora_points <= 1:
             call screen kctPopup
         
         scene v12nos6 # TPP. Same as v12nos3, different angle, Nora mouth closed, slight smile
@@ -613,6 +613,14 @@ label v12_nora_sex:
         with dissolve
 
         pause
+
+        if joinwolves:
+            $ grant_achievement("inside_job")
+        else:
+            $ grant_achievement("all_is_fair_in_love_and_war")
+
+        if v12_lindsey_sex and v12_nora_sex and v12_lauren_sex and v12_msrose_sex:
+            $ grant_achievement("city_of_love")
 
         scene v12nos35 # FPP. Same positioning as v12nos35, MC and Nora looking at each other, Nora smiling, mouth closed
         with dissolve

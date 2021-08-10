@@ -118,3 +118,16 @@ init python:
     Achievement("dont_just_stand_there", "Break Imre and Ryan apart")
     Achievement("pretty_in_pink", "Nora buys the pink bra")
 
+    #v12.0
+    Achievement("good_vs_evil", "Penelope understands you")
+    Achievement("a_person_like_me", "You see yourself as Penelope’s husband material")
+    Achievement("throw_her_to_the_lions", "Encourage Lindsey to run but then tell Aubrey and Chloe about it")
+    Achievement("You May Kiss the Bride", "Penelope understands you")
+    Achievement("you_may_kiss_the_bride", "Kiss Nora at the altar")
+    Achievement("a_bet_is_a_bet", "Embarrassing Kiwii picture for losing the race")
+    Achievement("worth_the_wait", "Consummate an exclusive relationship with Lauren")
+    Achievement("inside_job", "Have sex with Nora as a Wolf")
+    Achievement("all_is_fair_in_love_and_war", "Have sex with Nora as an Ape")
+    Achievement("city_of_love", "Have sex with Lauren, Nora, Ms. Rose and Lindsey")
+
+

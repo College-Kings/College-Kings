@@ -175,7 +175,14 @@ label v12_chase_nora:
             u "I think you were right to be upset, what you've been asking for is more than reasonable."
 
         "Support Chris":
+            $ v12_help_chris += 1
             $ addPoint("bro")
+
+            if v12_help_chris == 4:
+                if joinwolves:
+                    $ grant_achievement("brotherhood_of_men")
+                else:
+                    $ grant_achievement("best_frenemies")
 
             u "I try to play the safe zone, so I'm not gonna point fingers at anyone. I will say this though, nothing you're asking of him is unreasonable and nothing he's doing is unreasonable."
 
