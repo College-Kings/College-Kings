@@ -264,7 +264,7 @@ screen kiwiiApp():
                         xoffset 20
                         yoffset 20
 
-                        add Transform(post.profile_picture, zoom=0.05)
+                        add Transform(post.profile_picture, size=(55, 55))
                         text post.username style "kiwii_ProfileName" yalign 0.5
 
                     vbox:
@@ -333,7 +333,7 @@ screen kiwiiPost(post):
                             hbox:
                                 spacing 10
 
-                                add Transform(comment.profile_picture, zoom=0.05)
+                                add Transform(comment.profile_picture, size=(55, 55))
                                 text comment.username style "kiwii_ProfileName" yalign 0.5
 
                             hbox:
@@ -395,7 +395,7 @@ screen liked_kiwii():
                         xoffset 20
                         yoffset 20
 
-                        add Transform(post.profile_picture, zoom=0.05)
+                        add Transform(post.profile_picture, size=(55, 55))
                         text post.username style "kiwii_ProfileName" yalign 0.5
 
                     vbox:
