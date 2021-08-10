@@ -4,7 +4,7 @@
 # Time: Night
 
 label v12_mc_chilling:
-    if not v11_riley_roomate
+    if not v11_riley_roomate:
 
         scene v12mor1 # TPP. MC leaving riley's room
         with fade 
@@ -143,37 +143,37 @@ label v12_mc_chilling:
         sa "*Drunk* Do you think I'm pretty?"
 
         menu:
-            "What?":       
-            scene v12mor9
-            with dissolve
+            "What?":
+                scene v12mor9
+                with dissolve
 
-            u "What? That's a really random question."
+                u "What? That's a really random question."
 
-            scene v12mor9d # FPP. Same as 9, sam looking sad, mouth opened
-            with dissolve
+                scene v12mor9d # FPP. Same as 9, sam looking sad, mouth opened
+                with dissolve
 
-            sa "*Drunk* Which shouldn’t take this long to answer… I get it..."
+                sa "*Drunk* Which shouldn’t take this long to answer… I get it..."
 
-            scene v12mor9 
-            with dissolve
+                scene v12mor9 
+                with dissolve
 
-            u "No, Sam. I mean, yeah. Of course you’re pretty. I just wasn’t expecting that question I guess."
+                u "No, Sam. I mean, yeah. Of course you’re pretty. I just wasn’t expecting that question I guess."
 
             "Yes":
-            scene v12mor9
-            with dissolve
+                scene v12mor9
+                with dissolve
 
-            u "Of course I do."
+                u "Of course I do."
 
-            scene v12mor9a
-            with dissolve
+                scene v12mor9a
+                with dissolve
 
-            sa "*Drunk* Do you really think so? Like, do you think I'm really pretty?"
+                sa "*Drunk* Do you really think so? Like, do you think I'm really pretty?"
 
-            scene v12mor9
-            with dissolve
+                scene v12mor9
+                with dissolve
 
-            u "Yes, Sam. I think you're very pretty. *Chuckles*"
+                u "Yes, Sam. I think you're very pretty. *Chuckles*"
    
         scene v12mor9c
         with dissolve
@@ -849,20 +849,20 @@ label v12_mc_chilling:
             scene v12mor24e
             with dissolve
 
-        "Don't call Cameron"
+        "Don't call Cameron":
             
             scene v12mor22
             with dissolve
 
             u "(Not even gonna attempt to open up that door.)"
 
-       scene v12mor22
-       with dissolve
+    scene v12mor22
+    with dissolve
 
-        u "(Don't know where the roomie went, but I'm going to sleep.)"
+    u "(Don't know where the roomie went, but I'm going to sleep.)"
 
-        scene v12mor27
-        with dissolve
+    scene v12mor27
+    with dissolve
 
     pause 0.75
     
