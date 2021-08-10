@@ -5104,7 +5104,7 @@ label v12s7_nora1:
     no "Alright, sorry. I'm not trying to be a bitch. I'm just not in the mood for this."
 
     menu:
-        "see you later":
+        "See you later":
             $ addPoint("bro")
             scene v12fernor1
             with dissolve
