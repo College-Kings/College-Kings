@@ -832,9 +832,8 @@ label v12s7_riley1:
     scene v12ferri4
     with dissolve
 
-    ri "*Southern accent* And now my confusion is all too much. It makes sense why the wealthy and a man such as yourself would be here, but I can't understand why Miss Blue Collar here would be allowed to join us."
-
-
+    ri "*Southern accent* And now my confusion is all too much. It makes sense why the wealthy and a man such as yourself would be here..."
+    ri "But I can't understand why Miss Blue Collar here would be allowed to join us."
 
     if chloegf:
         # -Chloe kisses MC-
