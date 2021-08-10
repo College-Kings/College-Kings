@@ -124,4 +124,4 @@ define character.bishop = Character("Bishop", who_color="#800080", who_outlines=
 define character.nurse = Character("Nurse", who_color="#dbfffe", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.barber = Character("Barber", who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.greeter = Character("Greeter", who_color="#0055ff", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
-define character.tattoo = Character("Tattoo Artist", who_color="#147efb", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.tattoo = Character("Tattoo Artist", who_color="#ff1694", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
