@@ -471,6 +471,10 @@ screen v12s7_rear_gallery():
         hotspot (0, 30, 126, 1020) action Show("v12s7_left_viewpoint")
         hotspot (1793, 30, 126, 1020) action Show("v12s7_right_viewpoint")
 
+        hotspot (432, 345, 251, 492) action Show("v12s7_left_gallery_back")
+        hotspot (1224, 345, 251, 492) action Show("v12s7_right_gallery_back")
+
+
     use v12s7_minimap(location="md_rear_gallery")
 
     on "replaced" action SetVariable("previous_location", "v12s7_rear_gallery")
@@ -503,8 +507,9 @@ screen v12s7_right_gallery_back():
             hotspot (679, 213, 461, 799):
                 action Jump("v12s7_ryan_imre1") # Imre & Ryan
 
-
         hotspot (339, 1013, 1198, 67) action Show("v12s7_rear_gallery")
+        hotspot (293, 0, 1385, 130) action Show("v12s7_right_gallery_front")
+        
     use v12s7_minimap(location="md_right_gallery")
 
     on "replaced" action SetVariable("previous_location_rearg", "v12s7_right_gallery_back")
@@ -530,13 +535,17 @@ screen v12s7_right_gallery_front():
             idle "images/v12/Scene 7/Screens/Navigation 17c.webp" # Amber
             hover "images/v12/Scene 7/Buttons/nav 17c.webp"
 
-            hotspot (893, 297, 178, 525) action NullAction()
+            hotspot (893, 297, 178, 525): 
+                if v12s7_amber:
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferry1", returnScreen="v12s7_right_gallery_front", seenList=[ryan] if not ryan in v12s7_killList else []) #backgroundImg??? seenList????
+                else:
+                    action Jump("v12s7_amber1")
 
         else:
             idle "images/v12/Scene 7/Screens/Navigation 17d.webp" # No one
             hover "images/v12/Scene 7/Buttons/nav 17d.webp"
 
-        hotspot (376, 991, 1115, 87) action Show(previous_location)
+        hotspot (376, 991, 1115, 87) action Show("v12s7_right_gallery_back")
 
     use v12s7_minimap(location="md_right_gallery")
 
@@ -726,7 +735,7 @@ screen v12s7_bathroom():
                 else:
                     action Jump("v12s7_aubrey2") # Aubrey
                 
-        hotspot (1836, 79, 82, 959) action Show(previous_location)
+        hotspot (1836, 79, 82, 959) action Show(v12s7_left_gallery_front)
 
     use v12s7_minimap(location="md_bathroom")
 
