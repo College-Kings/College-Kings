@@ -998,6 +998,7 @@ label v12s7_riley1:
             u "Alright, ladies. You two enjoy your little rich versus poor debate I've gotta go hit a punching bag or something. *Chuckles*"
 
             call screen v12s7_left_viewpoint
+
         "Have Riley leave":
             scene v12ferri4a
             with dissolve
