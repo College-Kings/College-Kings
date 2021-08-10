@@ -205,6 +205,7 @@ screen v12s7_rear():
                     action Jump("v12s7_lindsey2") # lindsey
   
         hotspot (338, 984, 1200, 96) action Show("v12s7_left_walkway_back")
+        hotspot (293, 0, 1385, 130) action Show("v12s7_right_walkway_back")
 
     use v12s7_minimap(location="ld_rear")
 
