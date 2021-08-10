@@ -417,13 +417,13 @@ screen v12s7_right_viewpoint():
     tag freeRoam
 
     imagemap:
-        if not v12s7_josh_moved and josh not in v12s7_killList:
+        if not v12s7_josh2 and josh not in v12s7_killList:
             idle "images/v12/Scene 7/Screens/Navigation 15a.webp" # Josh
         else:
             idle "images/v12/Scene 7/Screens/Navigation 15b.webp" # No one
         hover "images/v12/Scene 7/Buttons/nav 15.webp"
 
-        if not v12s7_josh_moved and josh not in v12s7_killList:
+        if not v12s7_josh2 and josh not in v12s7_killList:
             hotspot (729, 375, 451, 545):
                 if v12s7_josh:
                     if ((not v12s7_riley or v12s7_riley2) and riley not in v12s7_killList) and (chloe not in v12s7_killList):
