@@ -467,7 +467,7 @@ screen v12s7_rear_gallery():
         hotspot (0, 30, 126, 1020) action Show("v12s7_left_viewpoint")
         hotspot (1793, 30, 126, 1020) action Show("v12s7_right_viewpoint")
 
-        hotspot (432, 345, 251, 492) action Show("v12s7_left_gallery_back")
+        hotspot (391, 345, 251, 492) action Show("v12s7_left_gallery_back")
         hotspot (1224, 345, 251, 492) action Show("v12s7_right_gallery_back")
 
 
@@ -594,7 +594,7 @@ screen v12s7_front_gallery():
             idle "images/v12/Scene 7/Screens/Navigation 19c.webp"
             hover "images/v12/Scene 7/Buttons/nav 19c.webp"
 
-            hotspot (407, 60, 481, 1018):
+            hotspot (782, 177, 280, 834):
                 if v12s7_amber:
                     action Call("v12s7_free_roam_spoken", backgroundImg="v12feram1a", returnScreen="v12s7_front_gallery", seenList=[] if v12s7_imre else [imre, ryan])
                 else:
