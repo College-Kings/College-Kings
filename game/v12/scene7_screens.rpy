@@ -712,7 +712,7 @@ screen v12s7_left_gallery_front():
             idle "images/v12/Scene 7/Screens/Navigation 24a.webp" # Aubrey
         hover "images/v12/Scene 7/Buttons/nav 24.webp"
 
-        hotspot (0, 0, 105, 1080) action Show(previous_location)
+        hotspot (0, 0, 105, 1080) action Show("v12s7_left_gallery_back")
         hotspot (479, 0, 821, 1080) action Show("v12s7_bathroom")
         hotspot (1545, 0, 375, 1080) action Show("v12s7_captains_room")
 
