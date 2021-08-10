@@ -328,8 +328,6 @@ label v12_mc_chilling:
 
         sa "*Drunk* No, Chris... *Chuckles* What other brother is there?"
 
-        $ v12s23a_beatcameron = True
-
         menu:
             "I can beat Cameron":
                 $ v12s23a_beatcameron = True
