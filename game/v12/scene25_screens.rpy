@@ -1,4 +1,4 @@
-screen v12_girls:
+screen v12_girls():
     add "images/v7/homecomingchoice.webp"
 
     grid 4 2:
