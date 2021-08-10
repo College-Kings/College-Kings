@@ -37,18 +37,18 @@ label v12_simplr_convo:
 
     u "(Haven't checked out Simplr in a while.)"
 
-    if emmy in simplr_contacts:
+    if simplr_Emmy in simplr_contacts:
 
-        $ emmy.newMessage("Hey handsome, I was hoping I'd match with you. Where are you from?", queue=True)
-        $ emmy.addReply("I'm actually in Paris right now, but I'm from California. Wbu?")
-        $ emmy.newMessage("Wow, my distance settings are way off. I'm from Amsterdam.")
-        $ emmy.addReply("Haha, call it a coincidence, but I'm actually headed to Amsterdam here soon.")
-        $ emmy.newMessage("Wowww, guess I got a headstart on all the other Amsterdam chicks huh?")
-        $ emmy.addReply("Ha, I'm thinking I'm the lucky one.")
-        $ emmy.newMessage("There's actually a Simplr event they do regularly here, you should stop by when you come and maybe we'll run into each other.")
-        $ emmy.addReply("I'll definitely look into that.")
-        $ emmy.newMessage("Good, I know it's late in Paris so goodnight handsome ;)")
-        $ emmy.addReply("Goodnight ;)")
+        $ simplr_Emmy.newMessage("Hey handsome, I was hoping I'd match with you. Where are you from?", queue=True)
+        $ simplr_Emmy.addReply("I'm actually in Paris right now, but I'm from California. Wbu?")
+        $ simplr_Emmy.newMessage("Wow, my distance settings are way off. I'm from Amsterdam.")
+        $ simplr_Emmy.addReply("Haha, call it a coincidence, but I'm actually headed to Amsterdam here soon.")
+        $ simplr_Emmy.newMessage("Wowww, guess I got a headstart on all the other Amsterdam chicks huh?")
+        $ simplr_Emmy.addReply("Ha, I'm thinking I'm the lucky one.")
+        $ simplr_Emmy.newMessage("There's actually a Simplr event they do regularly here, you should stop by when you come and maybe we'll run into each other.")
+        $ simplr_Emmy.addReply("I'll definitely look into that.")
+        $ simplr_Emmy.newMessage("Good, I know it's late in Paris so goodnight handsome ;)")
+        $ simplr_Emmy.addReply("Goodnight ;)")
 
         scene v12sic1a
         with dissolve
