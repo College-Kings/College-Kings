@@ -95,23 +95,23 @@ init -90 python:
                 "profilePicture": "images/phone/kiwii/profilePictures/sebastianpp.webp"
             },
             "Kai": {
-                "username": "Kai",
+                "username": "KaiCriesWith2Ply",
                 "profilePicture": "images/phone/kiwii/profilePictures/kaipp.webp"
             },
             "Lindsey": {
-                "username": "Lindsey",
+                "username": "LindsLou",
                 "profilePicture": "images/phone/kiwii/profilePictures/lindseypp.webp"
             },
             "Aaron": {
-                "username": "Aaron",
+                "username": "DoubleARon",
                 "profilePicture": "images/phone/kiwii/profilePictures/aaronpp.webp"
             },
             "Samantha": {
-                "username": "Samantha",
+                "username": "SamFromSpaceJam",
                 "profilePicture": "images/phone/kiwii/profilePictures/samanthapp.webp"
             }
             "Charli": {
-                "username": "Charli",
+                "username": "CharliAndTheCockFactory",
                 "profilePicture": "images/phone/kiwii/profilePictures/samanthapp.webp"
             }
         }
