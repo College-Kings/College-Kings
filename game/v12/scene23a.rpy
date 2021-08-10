@@ -49,7 +49,7 @@ label v12_mc_chilling:
         scene v12mor7 # FPP. Samantha bursts into MC's room holding a bottle of alcohol, looking drunk, mouth opened
         with dissolve
 
-        sa "*Drunk* No one wants to hangout with me! Why is everyone ignoring me?!"
+        sa "*Drunk* No one wants to hang out with me! Why is everyone ignoring me?!"
 
         scene v12mor8 # FPP. Samantha comes in mc's direction, smiling and drunk, mouth closed
         with dissolve
