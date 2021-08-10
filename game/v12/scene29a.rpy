@@ -312,20 +312,20 @@ label v12_late_night_workout:
 
     # -MC needs to make the choices in the correct order, breath, stretch, hold...if he messes up the order then Lindsey tells him "start over". This continues until he does it right, each choice is timed
     label v12_gym_stretch:
-        # TIMED DECISION
-        menu:
+        menu (fail_label="v12s29a_faillabel1"):
             "Stretch":
-                scene v12lnw10d # TPP Same angle as v12lnw10, MC against wall, stretching down to touch his toes, not reaching, leaning forward, Lindsey standing by
-                with dissolve
+                label v12s29a_faillabel1:
+                    scene v12lnw10d # TPP Same angle as v12lnw10, MC against wall, stretching down to touch his toes, not reaching, leaning forward, Lindsey standing by
+                    with dissolve
 
-                pause 0.5
+                    pause 0.5
 
-                scene v12lnw15
-                with dissolve
+                    scene v12lnw15
+                    with dissolve
 
-                li "Start over."
+                    li "Start over."
 
-                jump v12_gym_stretch
+                    jump v12_gym_stretch
 
             "Breathe":
                 scene v12lnw15a
@@ -338,8 +338,7 @@ label v12_late_night_workout:
 
                 li "Good."
 
-        # TIMED DECISION
-        menu:
+        menu (fail_label=v12s29a_faillabel2):
             "Stretch":
                 scene v12lnw10e # TPP Same angle as v12lnw10, MC against wall, stretching down to touch his toes, not reaching yet, Lindsey's hand on his back
                 with dissolve
@@ -352,15 +351,15 @@ label v12_late_night_workout:
                 li "Perfect."
 
             "Lean":
-                scene v12lnw10d
-                with dissolve
+                label v12s29a_faillabel2:
+                    scene v12lnw10d
+                    with dissolve
 
-                li "Start over"
+                    li "Start over"
 
-                jump v12_gym_stretch
+                    jump v12_gym_stretch
 
-        # TIMED DECISION
-        menu:
+        menu (fail_label=v12s29a_faillabel3):
             "Hold":
                 scene v12lnw10f
                 with dissolve
@@ -373,12 +372,13 @@ label v12_late_night_workout:
                 u "Finally. *Chuckles*"
 
             "Breathe":
-                scene v12lnw15
-                with dissolve
+                label v12s29a_faillabel3:
+                    scene v12lnw15
+                    with dissolve
 
-                li "Start over."
+                    li "Start over."
 
-                jump v12_gym_stretch
+                    jump v12_gym_stretch
 
     scene v12lnw15b
     with dissolve
