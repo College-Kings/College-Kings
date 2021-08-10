@@ -259,13 +259,16 @@ screen v12s7_kitchen():
     imagemap:
         if v12s7_emily and not emily in v12s7_killList and chris not in v12s7_killList:
             idle "images/v12/Scene 7/Screens/Navigation 10a.webp" # Chris and Emily
+            hover "images/v12/Scene 7/Buttons/nav 10.webp"
         elif v12s7_emily and emily not in v12s7_killList:
             idle "images/v12/Scene 7/Screens/Navigation 10d.webp" # Emily
+            hover "images/v12/Scene 7/Buttons/nav 10.webp"
         elif chris not in v12s7_killList:
             idle "images/v12/Scene 7/Screens/Navigation 10b.webp" # Chris
+            hover "images/v12/Scene 7/Buttons/nav 10mock.webp"
         else:
             idle "images/v12/Scene 7/Screens/Navigation 10d.webp"
-        hover "images/v12/Scene 7/Buttons/nav 10.webp"
+            hover "images/v12/Scene 7/Buttons/nav 10mock.webp"
 
         if chris not in v12s7_killList:
             hotspot (1116, 33, 751, 1047):
