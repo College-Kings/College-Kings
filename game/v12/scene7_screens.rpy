@@ -408,7 +408,7 @@ screen v12s7_left_viewpoint():
 
         hotspot (338, 976, 1200, 104) action Show("md_rear_gallery")
 
-    use v12s7_minimap(location="md_left_viewport")
+    use v12s7_minimap(location="md_left_viewpoint")
 
     on "replaced" action SetVariable("previous_location", "v12s7_left_viewpoint")
 
@@ -439,7 +439,7 @@ screen v12s7_right_viewpoint():
 
         hotspot (382, 972, 1106, 98) action Show(previous_location)
 
-    use v12s7_minimap(location="md_right_viewport")
+    use v12s7_minimap(location="md_right_viewpoint")
 
     on "replaced" action SetVariable("previous_location", "v12s7_right_viewpoint")
 
