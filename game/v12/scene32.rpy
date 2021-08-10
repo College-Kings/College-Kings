@@ -720,7 +720,7 @@ label v12s32:
     with dissolve
 
     pg "Don't just keep it in mind, act on it. Get her something. Make her see you. There's some flowers right there, feel free to grab a bouquet."
-    pg " Hell, if I can't get her, I'd rather you than no one. Make me proud!"
+    pg "Hell, if I can't get her, I'd rather you than no one. Make me proud!"
 
     scene v12s32_28d # same 28b, photographer walks off
     with dissolve
