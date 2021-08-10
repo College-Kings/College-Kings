@@ -2984,7 +2984,7 @@ label v12s7_lindsey2:
     scene v12ferli3
     with dissolve
 
-    u "Well...sacrifice someone."
+    u "Well... sacrifice someone."
 
     scene v12ferli3a
     with dissolve
@@ -2997,7 +2997,7 @@ label v12s7_lindsey2:
             scene v12ferli3a
             with dissolve
             
-            u "I can be your distraction. I'll just try and separate them...then see if I get murked or not."
+            u "I can be your distraction. I'll just try and separate them... then see if I get murked or not."
 
         "Charli":
             $ addPoint("tm")
@@ -3576,7 +3576,7 @@ label v12s7_penelope1:
     scene v12ferpen1a
     with dissolve
 
-    pe "I could've enjoyed a nice ride without being bothered if I had just kept my mouth shut. I said that I couldn't wait to get on the ferry and relax and he heard me...now here we are."
+    pe "I could've enjoyed a nice ride without being bothered if I had just kept my mouth shut. I said that I couldn't wait to get on the ferry and relax and he heard me... now here we are."
 
     menu:
         "Let her work":
@@ -3648,7 +3648,7 @@ label v12s7_penelope1:
                 scene v12ferpen1a
                 with dissolve
 
-                u "Haha, I have no idea. My card just said famous boxer...I've been making up my story."
+                u "Haha, I have no idea. My card just said famous boxer... I've been making up my story."
 
                 scene v12ferpen1
                 with dissolve
@@ -3660,7 +3660,7 @@ label v12s7_penelope1:
                         scene v12ferpen1a
                         with dissolve
                         
-                        u "Uhm...yeah, it's John Paris."
+                        u "Uhm... yeah, it's John Paris."
 
                         scene v12ferpen1
                         with dissolve
@@ -3914,7 +3914,7 @@ label v12s7_amber1:
     scene v12feram5a # TPP. same 5, mc mouth open
     with dissolve
 
-    u "What...I mean, I don't know what's considered contraband."
+    u "What... I mean, I don't know what's considered contraband."
 
     scene v12feram5
     with dissolve
@@ -3949,7 +3949,7 @@ label v12s7_amber1:
     scene v12feram8
     with dissolve
 
-    am "Oh shit, that's your...why are you hard right now? Are you turned on by this?"
+    am "Oh shit, that's your... why are you hard right now? Are you turned on by this?"
 
     menu:
         "A little":
@@ -5016,7 +5016,7 @@ label v12s7_cameron2_kill:
     scene v12fercam3a
     with dissolve
 
-    ca "That's stupid. Why are you tryna kill me...you already know I'm not really part of the game."
+    ca "That's stupid. Why are you tryna kill me... you already know I'm not really part of the game."
 
     scene v12fercam3
     with dissolve
@@ -5787,12 +5787,12 @@ label v12s7_josh2:
     scene v12ferjos3a
     with dissolve
 
-    jo "You didn't know it was...who even are you? You are not the man I thought you to be. There's no way I'd dare let you care for the king of the land."
+    jo "You didn't know it was... who even are you? You are not the man I thought you to be. There's no way I'd dare let you care for the king of the land."
 
     scene v12ferjos3
     with dissolve
 
-    u "Oh wow, that sucks...I really wanted to."
+    u "Oh wow, that sucks... I really wanted to."
 
     scene v12ferjos3a
     with dissolve
