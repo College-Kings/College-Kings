@@ -197,7 +197,8 @@ label v12s7fr:
     scene v12fer1
     with dissolve
 
-    lee "I know this sounds... Unfair. All in all, the mass murder we will be reenacting today was not fair to the victims. Your goal is to make sure the murderer does not get a reward, by catching them as soon as possible." 
+    lee "I know this sounds... Unfair. All in all, the mass murder we will be reenacting today was not fair to the victims."
+    lee "Your goal is to make sure the murderer does not get a reward, by catching them as soon as possible." 
     lee "Now, If the murderer does get a reward... I suppose the \"prize\" could be something catered for two. So the murderer will have to share it with one of his or her victims... Fair?"
 
     scene v12fer12a
