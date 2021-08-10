@@ -458,7 +458,7 @@ screen v12s7_rear_gallery():
         hotspot (172, 320, 239, 653):
             action Jump("v12s7_mrlee")
         
-        hotspot (894, 267, 257, 744) action Show(previous_location)
+        hotspot (327, 993, 1216, 87) action Show(previous_location)
 
     use v12s7_minimap(location="md_rear_gallery")
 
