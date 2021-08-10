@@ -4,9 +4,6 @@
 # Time: Night
 # Phone Images: None
 
-default v12_nora_sex = False
-default v12_nora_points = 0
-
 label v12_nora_room:
     scene v12nos1 # FPP. MC and Nora sitting next to each other on bed, Nora looking at MC, she is crying, mouth closed
     with dissolve
@@ -232,7 +229,7 @@ label v12_nora_room:
     no "For not being like Chris."
 
     if v12_nora_points == 2 or kct == "loyal":
-        if not v12_nora_points == 2:
+        if v12_nora_points <= 2:
             call screen kctPopup
         
         scene v12nos6 # TPP. Same as v12nos3, different angle, Nora mouth closed, slight smile
@@ -705,4 +702,5 @@ label v12_nora_sex:
         scene v12nos14
         with dissolve
 
+        $ renpy.end_replay()
         jump v12_lindsey_lobby #scene 36

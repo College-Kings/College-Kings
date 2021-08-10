@@ -780,6 +780,8 @@ label v12_lauren_sex:
                 if (kct == "loyal") and not (v12_lauren_points >= 3):
                     call screen kctPopup
 
+                label v12_lauren_sex_sg:
+                
                 scene v12las46e
                 with dissolve
 
@@ -1174,5 +1176,6 @@ label v12_lauren_sex:
                 with dissolve
 
                 pause 0.75
+                $ renpy.end_replay()
 
                 jump v12_room_sneak

@@ -1207,6 +1207,7 @@ label v12_lindsey_sex:
 
     li "Ha, right. Thank you, [name]."
 
+    $ renpy.end_replay()
     jump v12_after_sex
 
 label v12_after_sex:
