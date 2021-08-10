@@ -148,7 +148,7 @@ label v12_chris_nora_room:
 
                 pause 0.75
 
-                jump scene35a
+                jump v12_lindsey_lobby #scene 35a
 
         "Leave her alone":
             scene v12cnr5

@@ -197,6 +197,6 @@ label v12_nora_chris_fight:
         "Go to Nora":
             $ v12_followed_nora = True
 
-            jump scene26b
+            jump v12_chase_nora #scene 26b
         "Go to Chris":
             jump v12_follow_chris #scene 26a
