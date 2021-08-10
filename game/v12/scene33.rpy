@@ -4,31 +4,6 @@
 # Time: Afternoon
 # Phone Images: images/v12/Scene 33/three_doors.png
 
-screen v12s33_sneak_off_overlay(sneak_label):
-    imagebutton:
-        idle "sneak_off_button"
-        hover "sneak_off_hover"
-        action Jump(sneak_label)
-
-screen v12s33_three_doors():
-    tag freeRoam
-    add "images/v12/Scene 33/three_doors.png" # needs to be rendered
-    imagebutton: # door 1
-        align (0, 0)
-        idle "images/v12/Scene 33/door1.png"
-        hover "images/v12/Scene 33/door1hover.png"
-        action Jump(v12s33_door1)
-    imagebutton: # door 2
-        align (0, 0)
-        idle "images/v12/Scene 33/door2.png"
-        hover "images/v12/Scene 33/door2hover.png"
-        action Jump(v12s33_door2)
-    imagebutton: # door 3
-        align (0, 0)
-        idle "images/v12/Scene 33/door3.png"
-        hover "images/v12/Scene 33/door3hover.png"
-        action Jump(v12s33_door3)
-
 label v12s33:
 # -MC and Aubrey arrive in the hotel lobby-
 # -Lindsey is already in a towel-
