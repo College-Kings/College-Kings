@@ -740,7 +740,7 @@ screen v12s7_bathroom():
                 else:
                     action Jump("v12s7_aubrey2") # Aubrey
                 
-        hotspot (1836, 79, 82, 959) action Show(v12s7_left_gallery_front)
+        hotspot (1836, 79, 82, 959) action Show("v12s7_left_gallery_front")
 
     use v12s7_minimap(location="md_bathroom")
 

@@ -5317,8 +5317,6 @@ label v12s7_nora1:
 
                     call screen v12s7_balcony_left
 
-
-
 label v12s7_nora1_kill:
 
     scene v12fernor4 # TPP. Show mc, pointing finger gun at nora, mouth open
