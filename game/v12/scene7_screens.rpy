@@ -429,7 +429,7 @@ screen v12s7_right_viewpoint():
                 else:
                     action Jump("v12s7_josh1") # josh
 
-        hotspot (382, 972, 1106, 98) action Show("")
+        hotspot (382, 972, 1106, 98) action Show(previous_location)
 
     use v12s7_minimap(location="md_right_viewport")
 
@@ -456,7 +456,7 @@ screen v12s7_rear_gallery():
         hotspot (172, 320, 239, 653):
             action Jump("v12s7_mrlee")
         
-        hotspot (894, 267, 257, 744) action Show("")
+        hotspot (894, 267, 257, 744) action Show(previous_location)
 
     use v12s7_minimap(location="md_rear_gallery")
 
@@ -486,13 +486,13 @@ screen v12s7_right_gallery_back():
                 else:
                     action Jump("v12s7_ryan1") # Ryan
 
-            hotspot (932, 265, 240, 716) action Show("")
+            hotspot (932, 265, 240, 716) action Show(previous_location)
 
         else:
             hotspot (679, 213, 461, 829):
                 action Jump("v12s7_ryan_imre1") # Imre & Ryan
 
-            hotspot (457, 1042, 961, 36) action Show("")
+            hotspot (457, 1042, 961, 36) action Show(previous_location)
 
     use v12s7_minimap(location="md_right_gallery")
 
@@ -525,7 +525,7 @@ screen v12s7_right_gallery_front():
             idle "images/v12/Scene 7/Screens/Navigation 17d.webp" # No one
             hover "images/v12/Scene 7/Buttons/nav 17d.webp"
 
-        hotspot (376, 991, 1115, 87) action Show("")
+        hotspot (376, 991, 1115, 87) action Show(previous_location)
 
     use v12s7_minimap(location="md_right_gallery")
 
@@ -605,7 +605,7 @@ screen v12s7_balcony_middle():
         idle "images/v12/Scene 7/Screens/Navigation 20a.webp"
         hover "images/v12/Scene 7/Buttons/nav 20.webp"
 
-        hotspot () action Show("")
+        hotspot () action Show(previous_location)
         
     use v12s7_minimap(location="md_balcony")
 
@@ -629,7 +629,7 @@ screen v12s7_balcony_left():
                 else:
                     action Jump("v12s7_nora1") # Nora
 
-        hotspot () action Show("")
+        hotspot () action Show(previous_location)
     
     use v12s7_minimap(location="md_balcony")
 
@@ -671,7 +671,7 @@ screen v12s7_left_gallery_back():
         hover "images/v12/Scene 7/Buttons/nav 23.webp"
 
         hotspot () action Show("")
-        hotspot () action Show("")
+        hotspot () action Show(previous_location)
 
     use v12s7_minimap(location="md_left_gallery")
 
@@ -749,7 +749,7 @@ screen v12s7_captains_room():
             idle "images/v12/Scene 7/Screens/Navigation 26b.webp" # No one
             hover "images/v12/Scene 7/Buttons/nav 26c.webp"
 
-        hotspot () action Show("")
+        hotspot () action Show(previous_location)
 
     use v12s7_minimap(location="ud_captains_room")
 
