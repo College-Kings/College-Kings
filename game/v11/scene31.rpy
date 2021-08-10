@@ -169,6 +169,7 @@ label v11_lindsey_park:
             li "Always down for being held accountable."
 
         "Support Lindsey":
+            $ v11_lindsey_run = True
             $ political_strategist = True #keep
             $ lindseyLike += 1
 
