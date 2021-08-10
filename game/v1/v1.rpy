@@ -3981,16 +3981,22 @@ label fr2end: #for compatibility only
 
     cl "One time a guy stole my underwear and somehow the dean found out about it."
 
+    scene s116a
+    with dissolve
+    
+    scene s116
+    with dissolve
+
     cl "Both of us then had to come to his office, so that the guy could apologize and give me my panties back right in front of the dean."
 
     cl "It was sooo embarrassing."
 
+    scene s116a
+    with dissolve
+
     menu:
         "Empathize":
             $ addPoint("bf")
-
-            scene s116a
-            with dissolve
 
             u "Wow, that sounds awful."
 
@@ -4001,9 +4007,6 @@ label fr2end: #for compatibility only
 
         "Poke fun":
             $ addPoint("tm")
-
-            scene s116a
-            with dissolve
 
             u "Hahaha, sounds like the dean was into you."
 

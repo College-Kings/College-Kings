@@ -9,6 +9,8 @@ label v10_wolves_redec:
         scene v10swhr1 # TPP. Show MC walking through the front door of the Wolves house.
         with Fade(1, 0, 1)
 
+        play sound "sounds/dooropen.mp3"
+
     else:
         scene v10swhr8 # TPP. Show MC walking down the stairs of the Wolves house.
         with Fade(1, 0, 1)
@@ -40,7 +42,7 @@ label v10_wolves_redec:
     scene v10swhr2
     with dissolve
 
-    u "Yeah that sounds great!"
+    u "Yeah, that sounds great!"
 
     scene v10swhr2a
     with dissolve
@@ -65,7 +67,7 @@ label v10_wolves_redec:
     scene v10swhr4
     with dissolve
 
-    guyd "Yeah a little bit. What are you doing in the closet?"
+    guyd "Yeah, a little bit. What are you doing in the closet?"
 
     scene v10swhr4a
     with dissolve
@@ -75,7 +77,7 @@ label v10_wolves_redec:
     scene v10swhr4b # FPP. Same as whr4, Perry smile, mouth open.
     with dissolve
 
-    guyd "Oh wow, you wants some help?"
+    guyd "Oh wow, you want some help?"
 
     scene v10swhr4c # FPP. Same as whr4, Perry smile, mouth closed.
     with dissolve

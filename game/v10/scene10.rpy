@@ -14,10 +14,9 @@ label v10_sun_morn:
     if joinwolves:
         scene v10sum1 # TPP. Show MC in his Wolves bed looking up at the ceiling, MC looks tired.
         with fade
-
-        pause 0.75
-
         play sound "sounds/vibrate.mp3"
+
+        pause 1.25
 
         scene v10sum2 # TPP. Show MC reaching for his phone.
         with dissolve
@@ -26,7 +25,8 @@ label v10_sun_morn:
 
         scene v10sum2a # TPP. Same as sum2, MC now on his phone in bed.
         with dissolve
-        
+        pause 0.75
+    
         if v10_ryan_fight and not v10_ryan_win:
             $ contact_Riley.newMessage("Hey [name], what you up to?", queue=False)
             $ contact_Riley.addReply("Nothing much.")
@@ -113,13 +113,14 @@ label v10_sun_morn:
     else:
         scene v10sum4 # TPP. Show MC in his Apes bed looking up at the ceiling, MC looks tired.
         with fade
-
-        pause 0.75
-
         play sound "sounds/vibrate.mp3"
+
+        pause 1.25
 
         scene v10sum5a # TPP. Same as sum2, MC now on his phone in bed.
         with dissolve
+
+        pause 0.75
         
         if v10_imre_fight and not v10_imre_win:
             $ contact_Riley.newMessage("Hey [name], what you up to?", queue=False)
