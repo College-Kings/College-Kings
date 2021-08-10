@@ -33,13 +33,11 @@ init python:
 
         @property
         def username(self):
-            try: return kiwiiUsers[self.user]["username"]
-            except KeyError: return None
+            return kiwiiUsers[self.user]["username"]
 
         @property
         def profile_picture(self):
-            try: return kiwiiUsers[self.user]["profilePicture"]
-            except KeyError: return None
+            return kiwiiUsers[self.user]["profilePicture"]
 
         @property
         def replies(self):
