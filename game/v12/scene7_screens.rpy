@@ -377,11 +377,11 @@ screen v12s7_left_viewpoint():
             idle "images/v12/Scene 7/Screens/Navigation 14d.webp" # No one
 
         if not v12s7_riley and riley not in v12s7_killList and chloe not in v12s7_killList:
-            hover "images/v12/Scene 7/Buttons/nav 14a.webp" # Chloe and Riley
+            hover "images/v12/Scene 7/Buttons/nav 14amock.webp" # Chloe and Riley
         elif v12s7_riley2 and chloe in v12s7_killList and riley not in v12s7_killList:
-            hover "images/v12/Scene 7/Buttons/nav 14b.webp" # Riley
+            hover "images/v12/Scene 7/Buttons/nav 14bmock.webp" # Riley
         else:
-            hover "images/v12/Scene 7/Buttons/nav 14c.webp" # Chloe
+            hover "images/v12/Scene 7/Buttons/nav 14cmock.webp" # Chloe
 
         if not v12s7_riley and riley not in v12s7_killList and chloe not in v12s7_killList:
             hotspot (685, 117, 540, 786):
@@ -406,6 +406,7 @@ screen v12s7_left_viewpoint():
                 else:
                     action Jump("v12s7_chloe1") # chloe
 
+        hotspot (293, 0, 1385, 130) action Show("v12s7_right_viewpoint")
         hotspot (338, 976, 1200, 104) action Show("v12s7_rear_gallery")
 
     use v12s7_minimap(location="md_left_viewpoint")
@@ -421,7 +422,7 @@ screen v12s7_right_viewpoint():
             idle "images/v12/Scene 7/Screens/Navigation 15a.webp" # Josh
         else:
             idle "images/v12/Scene 7/Screens/Navigation 15b.webp" # No one
-        hover "images/v12/Scene 7/Buttons/nav 15.webp"
+        hover "images/v12/Scene 7/Buttons/nav 15mock.webp"
 
         if not josh_moved and josh not in v12s7_killList:
             hotspot (729, 375, 451, 545):
@@ -438,6 +439,7 @@ screen v12s7_right_viewpoint():
                     action Jump("v12s7_josh1") # josh
 
         hotspot (382, 972, 1106, 108) action Show("v12s7_rear_gallery")
+        hotspot (293, 0, 1385, 130) action Show("v12s7_left_viewpoint")
 
     use v12s7_minimap(location="md_right_viewpoint")
 
@@ -464,7 +466,7 @@ screen v12s7_rear_gallery():
         hotspot (172, 320, 239, 653):
             action Jump("v12s7_mrlee")
         
-        hotspot (327, 993, 1216, 87) action Show(previous_location)
+        hotspot (327, 1000, 1216, 80) action Show(previous_location)
 
         hotspot (0, 30, 126, 1020) action Show("v12s7_left_viewpoint")
         hotspot (1793, 30, 126, 1020) action Show("v12s7_right_viewpoint")
