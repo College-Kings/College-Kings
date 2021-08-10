@@ -110,5 +110,9 @@ init -90 python:
                 "username": "Samantha",
                 "profilePicture": "images/phone/kiwii/profilePictures/samanthapp.webp"
             }
+            "Charli": {
+                "username": "Charli",
+                "profilePicture": "images/phone/kiwii/profilePictures/samanthapp.webp"
+            }
         }
         return users
