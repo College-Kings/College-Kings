@@ -332,6 +332,7 @@ label v12_mc_chilling:
 
         menu:
             "I can beat Cameron":
+                $ v12s23a_beatcameron = True
                 
                 scene v12mor13a
                 with dissolve                

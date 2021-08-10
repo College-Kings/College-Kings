@@ -520,3 +520,5 @@ default joshmadfr = False
 default v12s7_victims = 12 #Amber, Aubrey, Charli, Chloe, Cbris, Imre, Lauren, Lindsey, Nora, Riley, Rose, Ryan + Cameron, Emily, Josh, Penelope, Samantha
 default v12s23a_poolsex = False
 default v12s23a_beatcameron = False
+default v12_nora_sex = False
+default v12_nora_points = 0
