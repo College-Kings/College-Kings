@@ -42,7 +42,7 @@ init python:
         @property
         def replies(self):
             try: return self.sentComments[-1].replies
-            except AttributeError: return []
+            except (AttributeError, IndexError): return []
 
         def toggleLike(self):
             self.liked = not self.liked
