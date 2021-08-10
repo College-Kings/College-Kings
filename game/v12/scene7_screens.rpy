@@ -495,11 +495,11 @@ screen v12s7_right_gallery_back():
                     action Jump("v12s7_ryan1") # Ryan
 
         else:
-            hotspot (679, 213, 461, 829):
+            hotspot (679, 213, 461, 799):
                 action Jump("v12s7_ryan_imre1") # Imre & Ryan
 
-            hotspot (457, 1042, 961, 36) action Show(previous_location)
 
+        hotspot (339, 1013, 1198, 67) action Show("v12s7_rear_gallery")
     use v12s7_minimap(location="md_right_gallery")
 
     on "replaced" action SetVariable("previous_location", "v12s7_right_gallery_back")
