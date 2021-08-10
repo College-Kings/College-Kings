@@ -280,7 +280,7 @@ label v12_urban_exploring:
     scene v12uex6b
     with dissolve
 
-    au "Haha, okay then; warning received, let's see it."
+    au "Haha, okay then. Warning received, let's see it."
 
     scene v12uex6a
     with dissolve

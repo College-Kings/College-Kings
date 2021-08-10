@@ -122,7 +122,7 @@ label v12s33:
     scene v12s33_4b
     with dissolve
 
-    li "He's starting to get a little irritated, but I think it's because he's getting homesick. He's starting to miss his wife; I heard him say it to Ms. Rose."
+    li "He's starting to get a little irritated, but I think it's because he's getting homesick. He's starting to miss his wife, I heard him say it to Ms. Rose."
     li "I think the church thing kinda hit home for him."
 
     scene v12s33_4c # same as 4b, mouth closed
@@ -227,7 +227,7 @@ label v12s33:
 
     show screen v12s33_sneak_off_overlay("v12s33_sneak_off1")
 
-    scene v12s33_13 #TPP close up angled top view of Imre laying on a massage table with face down (you shouldn't be able to see his face or other massage tables next to him), it needs to be so close that it onl;y shows Imre's heads and shoulders, but not his lower back, so that the picture works with or with masseuse there
+    scene v12s33_13 #TPP close up angled top view of Imre laying on a massage table with face down (you shouldn't be able to see his face or other massage tables next to him), it needs to be so close that it only shows Imre's heads and shoulders, but not his lower back, so that the picture works with or with masseuse there
     with dissolve
 
     imre "Where's the masseuse? I hope I get a lady! *Laughs*"

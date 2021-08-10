@@ -50,7 +50,7 @@ label v12s7fr:
     with dissolve
 
     lee "As you all know, I take great pride in seizing every opportunity I can to teach my students and this ferry ride will be no different."
-    lee "Decades ago, a famous murder was committed on this ferry; A murder that we will, in a way, be re-enacting."
+    lee "Decades ago, a famous murder was committed on this ferry. A murder that we will, in a way, be re-enacting."
 
     scene v12fer5 # FPP. Show riley, excited, mouth open
     with dissolve
