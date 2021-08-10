@@ -301,6 +301,7 @@ screen v12s7_bow():
                     action Jump("v12s7_emily2") # emily
 
         hotspot (339, 983, 1198, 97) action Show("v12s7_kitchen")
+        hotspot (0, 30, 126, 1020) action Show("v12s7_foyer")
 
     use v12s7_minimap(location="ld_bow")
 
