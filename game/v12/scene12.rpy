@@ -5,11 +5,12 @@
 
 label v12_room_chloe_riley:
     if not v11_riley_roomate:
-
         scene v12crm2 # FPP. MC looking at chloe laying down on her bed, mouth closed
         with dissolve
 
         u "Hey, hey. Thanks for checking us in."
+
+        play music "music/v12/Scene 12/Track Scene 12_1.mp3" fadein 2
 
         scene v12crm2a # FPP. same as 2, smiling and mouth opened
         with dissolve
@@ -203,6 +204,8 @@ label v12_room_chloe_riley:
 
         ri "About time! What were you doing, plotting your next murder?"
 
+        play music "music/v12/Scene 12/Track Scene 12_2.mp3" fadein 2
+
         scene v12crm12a # FPP. looking at riley, mouth closed
         with dissolve
 
@@ -353,5 +356,7 @@ label v12_room_chloe_riley:
         with dissolve
 
         pause 1.25
+
+    stop music fadeout 3
 
     jump v12_cafe #scene 13

@@ -1042,7 +1042,7 @@ label v11_apes_manhunt:
                     scene v11amh44c # FPP. Same as v11amh44, the horse is kicking Cameron right in the chest, Cameron mouth closed, startled expression
                     with dissolve
 
-                    play sound "sounds/facepunch.mp3"
+                    play sound "sounds/facepunch1.mp3"
                     pause 0.75
 
                     scene v11amh44d # FPP. Same as v11amh44, Cameron is on the ground, mouth closed, he is in pain

@@ -8,6 +8,15 @@ label v12s7_free_roam_spoken(backgroundImg, returnScreen, seenList):
     $ renpy.call_screen(returnScreen)
 
 label v12s7fr:
+    if v11_invite_sam_europe:
+        $ v12s7_victims = +2
+    if emily_europe:
+        $ v12s7_victims = +1
+    if josh_europe:
+        $ v12s7_victims = +1
+    if v11_pen_goes_europe:
+        $ v12s7_victims = +1
+
     scene v12fer1 # FPP. Show Mr Lee, smiling mouth open
     with fade
 
@@ -163,6 +172,48 @@ label v12s7fr:
     with dissolve
 
     imre "Oh, you're not joking."
+
+    scene v12fer13
+    with dissolve
+    
+    am "What if the killer never gets caught? *Laughs*"
+
+    scene v12fer1
+    with dissolve
+
+    lee "That would be very, very impressive and also requires the murderer to be a great listener, someone who is very perceptive, and also a person who can smooth through conversations easily." 
+
+    scene v12fer1a
+    with dissolve
+
+    lee "Those three are key."
+
+    scene v12fer6
+    with dissolve
+
+    au "Okay, so... Do we get anything for doing this? Besides it being fun and something to keep us busy... *Chuckles*"
+
+    scene v12fer1
+    with dissolve
+
+    lee "Based on how well the murderer does, and how many kills they achieve... I might be able to think of some type of reward. But, it must wait until Amsterdam to take place as our Paris schedule is already very full."
+
+    scene v12fer12a
+    with dissolve
+
+    ry "*Scoffs* So if we aren't the murderer, our only goal is to not get killed? And we don't get rewarded for it?"
+
+    scene v12fer1
+    with dissolve
+
+    lee "I know this sounds... Unfair. All in all, the mass murder we will be reenacting today was not fair to the victims."
+    lee "Your goal is to make sure the murderer does not get a reward, by catching them as soon as possible." 
+    lee "Now, If the murderer does get a reward... I suppose the \"prize\" could be something catered for two. So the murderer will have to share it with one of his or her victims... Fair?"
+
+    scene v12fer12a
+    with dissolve
+
+    ry "I mean... I guess?"
 
     scene v12fer1a # FPP. same 1, pointing towards students, (not directly at the camera but close to it)
     with dissolve
@@ -363,7 +414,6 @@ label v12s7_aubrey1:
     show screen murder_button_overlay(aubrey)
 
     scene v12ferau1 # FPP. Note for renderer, all scene images starting v12ferau will be the first conversation with Aubrey on the upper front balcony of the boat. Her and Nora are both up there but the conversations are completely seperate. Show Aubrey, flirty look, mouth open
-    with dissolve
 
     au "Hey there, handsome. Please make sure you're being careful, okay? I'd hate for you to get hurt, but if you do find yourself needing some love and care, don't forget to come see your favorite nurse. *Chuckles*"
 
@@ -523,6 +573,9 @@ label v12s7_aubrey1:
                 with dissolve
 
                 au "Good, and try not to take too long. Those injuries look very, very bad. *Chuckles*"
+            
+            stop music fadeout 3
+            play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
             call screen v12s7_balcony_right
             
@@ -655,6 +708,11 @@ label v12s7_aubrey2:
             scene v12ferauh5 # TPP. Show MC walking out the bathroom door
             with dissolve
 
+            pause 0.75
+
+            stop music fadeout 3
+            play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
             call screen v12s7_balcony_right
         "Kill her":
             $ addPoint("tm")
@@ -698,6 +756,12 @@ label v12s7_aubrey2:
 
             scene v12ferauh5
             with dissolve
+
+            pause 0.75
+
+            stop music fadeout 3
+            play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
             call screen v12s7_left_gallery_front
 
     stop music fadeout 3
@@ -716,7 +780,6 @@ label v12s7_riley1:
     ### ERROR: -If talk to Chloe and Riley 1 ###
     ### ERROR: -If MC uses the button at all during this conversation he is caught ###
     scene v12ferri1 # FPP. location is the upper rear outside seating area on the right side of the ship as seen on miro. Show chloe(from a distance as mc is overhearing the convo), looking at riley out of shot, slight annoyed look, mouth open
-    with dissolve
 
     cl "Rich people are the actual problem. You guys get to sit around on stacks of money and the little guys like me have to pick up the slack for this entire country."
     cl "People like you never wanna pay your taxes but I barely have two pennies to rub together and I still have to pay mine."
@@ -778,9 +841,8 @@ label v12s7_riley1:
     scene v12ferri4
     with dissolve
 
-    ri "*Southern accent* And now my confusion is all too much. It makes sense why the wealthy and a man such as yourself would be here, but I can't understand why Miss Blue Collar here would be allowed to join us."
-
-
+    ri "*Southern accent* And now my confusion is all too much. It makes sense why the wealthy and a man such as yourself would be here..."
+    ri "But I can't understand why Miss Blue Collar here would be allowed to join us."
 
     if chloegf:
         # -Chloe kisses MC-
@@ -945,6 +1007,7 @@ label v12s7_riley1:
             u "Alright, ladies. You two enjoy your little rich versus poor debate I've gotta go hit a punching bag or something. *Chuckles*"
 
             call screen v12s7_left_viewpoint
+
         "Have Riley leave":
             scene v12ferri4a
             with dissolve
@@ -999,7 +1062,6 @@ label v12s7_chloe1:
     show screen murder_button_overlay(chloe)
 
     scene v12ferch1 # FPP Show chloe slight smile, mouth closed
-    with dissolve
 
     u "Well, well. If it isn't the richest woman alive."
 
@@ -1009,7 +1071,7 @@ label v12s7_chloe1:
     scene v12ferch1a # FPP. same 1, mouth open
     with dissolve
 
-    cl "*Chuckles*I'm the poor one, remember?"
+    cl "*Chuckles* I'm the poor one, remember?"
 
     scene v12ferch1
     with dissolve
@@ -1133,12 +1195,12 @@ label v12s7_chloe1:
     scene v12ferch1b
     with dissolve
 
-    cl "Just in case you're listening Mr. Lee, my 'poor girl' character has been having problems with her sorority back at home and just needed to vent.."
+    cl "Just in case you're listening Mr. Lee, my \"poor girl\" character has been having problems with her sorority back at home and just needed to vent.."
 
     scene v12ferch1c
     with dissolve
 
-    u "Wow' *Chuckles* You're actually scared of Mr. Lee."
+    u "Wow... *Chuckles* You're actually scared of Mr. Lee."
 
     scene v12ferch1b
     with dissolve
@@ -1245,6 +1307,11 @@ label v12s7_chloe1:
         scene v12ferch6 # TPP. Show Mc walking away.
         with dissolve
 
+        pause 0.75
+
+        stop music fadeout 3
+        play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
         call screen v12s7_left_viewpoint
 
     else:
@@ -1255,6 +1322,11 @@ label v12s7_chloe1:
 
         scene v12ferch6 # TPP. Show Mc walking away.
         with dissolve
+
+        pause 0.75
+
+        stop music fadeout 3
+        play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
         call screen v12s7_left_viewpoint
 
@@ -1296,7 +1368,7 @@ label v12s7_chloe_kill:
     scene v12ferch1e
     with dissolve
 
-    u "Well, thank you' I think. Is being labeled well-balanced a good thing?"
+    u "Well, thank you, I think... Is being labeled well-balanced a good thing?"
 
     scene v12ferch1d
     with dissolve
@@ -1415,7 +1487,7 @@ label v12s7_riley3:
     scene v12ferric3
     with dissolve
 
-    cl "Okay, but' That doesn't mean we've cleared you as not-guilty. This just means we're exploring other options. Don't put all your eggs in one basket and all that, right?"
+    cl "Okay, but... That doesn't mean we've cleared you as not-guilty. This just means we're exploring other options. Don't put all your eggs in one basket and all that, right?"
 
     scene v12ferric2
     with dissolve
@@ -1425,7 +1497,7 @@ label v12s7_riley3:
     scene v12ferric2a
     with dissolve
 
-    u "Is there a sign on me that says 'killer' or something? *Chuckles* I haven't done anything."
+    u "Is there a sign on me that says \"killer\" or something? *Chuckles* I haven't done anything."
 
     scene v12ferric3
     with dissolve
@@ -1435,7 +1507,7 @@ label v12s7_riley3:
     scene v12ferric3a
     with dissolve
 
-    u "Hmm' Then I guess I'll just have to change up my tactics."
+    u "Hmm... Then I guess I'll just have to change up my tactics."
 
     scene v12ferric2
     with dissolve
@@ -1474,7 +1546,6 @@ label v12s7_riley3a:
 
     ### ERROR: -If talk to Riley 3 No Chloe ###
     scene v12ferril1 # FPP. Show riley, slight smile mouth closed.
-    with dissolve
 
     u "Still alive out here, huh?"
 
@@ -1564,11 +1635,12 @@ label v12s7_riley3a:
     scene v12ferril2 # FPP. Show MC walking away.
     with dissolve
 
-    call screen v12s7_left_viewpoint
+    pause 0.75
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
+    call screen v12s7_left_viewpoint
 
 label v12s7_riley_kill:
 
@@ -1865,6 +1937,7 @@ label v12s7_lauren1:
 label v12s7_Lauren_kill:
 
     scene v12ferla8 # TPP. Show mc pointing finger gun at lauren, mouth open
+    with dissolve
 
     u "Boom."
 
@@ -1898,6 +1971,11 @@ label v12s7_Lauren_kill:
 
     scene v12ferla7
     with dissolve
+
+    pause 0.75
+
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_seating_back
 
@@ -2075,7 +2153,7 @@ label v12s7_ryan_imre1:
             scene v12ferryi8
             with dissolve
 
-            imre "Watch what you say! At least follow it with 'no home' or something!"
+            imre "Watch what you say! At least follow it with \"no homo\" or something!"
 
             scene v12ferryi8a
             with dissolve
@@ -2354,6 +2432,7 @@ label v12s7_ryan1:
 label v12s7_ryan_kill:
 
     scene v12ferry3 # TPP. Show MC pointing finger gun at ryan, mouth open
+    with dissolve
 
     u "Boom."
 
@@ -2514,6 +2593,7 @@ label v12s7_imre2:
 label v12s7_imre_kill:
 
     scene v12ferim2 # TPP. Show MC pointing finger gun at imre, mouth open
+    with dissolve
 
     u "Boom."
 
@@ -2914,7 +2994,7 @@ label v12s7_lindsey2:
     scene v12ferli3
     with dissolve
 
-    u "Well...sacrifice someone."
+    u "Well... sacrifice someone."
 
     scene v12ferli3a
     with dissolve
@@ -2927,7 +3007,7 @@ label v12s7_lindsey2:
             scene v12ferli3a
             with dissolve
             
-            u "I can be your distraction. I'll just try and separate them...then see if I get murked or not."
+            u "I can be your distraction. I'll just try and separate them... then see if I get murked or not."
 
         "Charli":
             $ addPoint("tm")
@@ -3074,6 +3154,7 @@ label v12s7_lindsey2:
 label v12s7_lindsey_kill:
 
     scene v12ferli7 # TPP. Show mc, mouth open, pointing finger guns at lindsey
+    with dissolve
 
     u "Boom."
 
@@ -3164,6 +3245,7 @@ label v12s7_charli2:
 label v12s7_charli_kill:
     
     scene v12fercha2 # TPP. Show MC pointing a finger gun at charli, mouth open
+    with dissolve
 
     u "Boom."
 
@@ -3397,6 +3479,7 @@ label v12s7_msrose_kill:
     ### ERROR: -If MC presses the murder button during this convo ###
 
     scene v12fermsr4 # TPP. MC points a finger gun at Ms. Rose, mc mouth open
+    with dissolve
 
     u "Boom."
 
@@ -3503,7 +3586,7 @@ label v12s7_penelope1:
     scene v12ferpen1a
     with dissolve
 
-    pe "I could've enjoyed a nice ride without being bothered if I had just kept my mouth shut. I said that I couldn't wait to get on the ferry and relax and he heard me...now here we are."
+    pe "I could've enjoyed a nice ride without being bothered if I had just kept my mouth shut. I said that I couldn't wait to get on the ferry and relax and he heard me... now here we are."
 
     menu:
         "Let her work":
@@ -3575,7 +3658,7 @@ label v12s7_penelope1:
                 scene v12ferpen1a
                 with dissolve
 
-                u "Haha, I have no idea. My card just said famous boxer...I've been making up my story."
+                u "Haha, I have no idea. My card just said famous boxer... I've been making up my story."
 
                 scene v12ferpen1
                 with dissolve
@@ -3587,7 +3670,7 @@ label v12s7_penelope1:
                         scene v12ferpen1a
                         with dissolve
                         
-                        u "Uhm...yeah, it's John Paris."
+                        u "Uhm... yeah, it's John Paris."
 
                         scene v12ferpen1
                         with dissolve
@@ -3719,6 +3802,7 @@ label v12s7_penelope1:
 label v12s7_penelope_kill:
 
     scene v12ferpen7 # TPP. Show mc pointing finger gun at penelope, mc mouth open
+    with dissolve
 
     u "Boom."
     stop music fadeout 3
@@ -3840,7 +3924,7 @@ label v12s7_amber1:
     scene v12feram5a # TPP. same 5, mc mouth open
     with dissolve
 
-    u "What...I mean, I don't know what's considered contraband."
+    u "What... I mean, I don't know what's considered contraband."
 
     scene v12feram5
     with dissolve
@@ -3875,7 +3959,7 @@ label v12s7_amber1:
     scene v12feram8
     with dissolve
 
-    am "Oh shit, that's your...why are you hard right now? Are you turned on by this?"
+    am "Oh shit, that's your... why are you hard right now? Are you turned on by this?"
 
     menu:
         "A little":
@@ -3975,6 +4059,7 @@ label v12s7_amber1:
 label v12s7_amber_kill:
 
     scene v12feram11 # TPP. Show MC pointing finger gun at amber, mc mouth open
+    with dissolve
 
     u "Boom."
 
@@ -4170,6 +4255,7 @@ label v12s7_riley2:
 label v12s7_riley2_kill:
 
     scene v12ferrile3 # TPP. Show mc pointing finger gun at riley, mc mouth open
+    with dissolve
 
     u "Boom."
 
@@ -4556,7 +4642,7 @@ label v12s7_sam2:
             scene v12fersam1b
             with dissolve
             
-            u "I think this might help you think about something else'"
+            u "I think this might help you think about something else..."
 
             scene v12fersam1c # FPP. same 1, new pose, mouth open
             with dissolve
@@ -4571,7 +4657,7 @@ label v12s7_sam2:
             scene v12fersam1c
             with dissolve
 
-            sa "Oh' Yeah. *Chuckles* That definitely helps."
+            sa "Oh... Yeah. *Chuckles* That definitely helps."
 
             scene v12fersam1b
             with dissolve
@@ -4740,12 +4826,13 @@ label v12s7_sam2:
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
     
-    call screen v12s7_seating_front
+    call screen v12s7_right_walkway_back
 
 
 label v12s7_sam2_kill:
 
     scene v12fersam4 # TPP. Show mc, mouth open, pointing finger fun at sam.
+    with dissolve
 
     u "Boom."
 
@@ -4929,6 +5016,7 @@ label v12s7_cameron2:
 label v12s7_cameron2_kill:
 
     scene v12fercam5 # TPP. Show mc, mouth open, pointing finger fun at cameron
+    with dissolve
 
     u "Boom."
 
@@ -4938,7 +5026,7 @@ label v12s7_cameron2_kill:
     scene v12fercam3a
     with dissolve
 
-    ca "That's stupid. Why are you tryna kill me...you already know I'm not really part of the game."
+    ca "That's stupid. Why are you tryna kill me... you already know I'm not really part of the game."
 
     scene v12fercam3
     with dissolve
@@ -5026,7 +5114,7 @@ label v12s7_nora1:
     no "Alright, sorry. I'm not trying to be a bitch. I'm just not in the mood for this."
 
     menu:
-        "see you later":
+        "See you later":
             $ addPoint("bro")
             scene v12fernor1
             with dissolve
@@ -5186,7 +5274,7 @@ label v12s7_nora1:
 
                     u "There's no choice."
 
-                    if join wolves:
+                    if joinwolves:
                         scene v12fernor1
                         with dissolve
 
@@ -5239,11 +5327,10 @@ label v12s7_nora1:
 
                     call screen v12s7_balcony_left
 
-
-
 label v12s7_nora1_kill:
 
     scene v12fernor4 # TPP. Show mc, pointing finger gun at nora, mouth open
+    with dissolve
 
     u "Boom."
 
@@ -5414,6 +5501,7 @@ label v12s7_chris1:
 
 label v12s7_chris1_kill:
     scene v12ferchr4 # TPP. Show mc pointing finger gun at chris, mc mouth open.
+    with dissolve
 
     u "Boom."
 
@@ -5478,42 +5566,46 @@ label v12s7_chris1_kill:
 label v12s7_mrlee:
     $ v12s7_mrlee = True
 
-    scene v12ferlee1 # FPP. Show mr lee, neutral face, mouth closed
+    if len(v12s7_killList) >= v12s7_victims:
+        call screen endFreeRoamConfirm("v12_murder_mystery_reveal")
 
-    u "Hello there, you fan of boxing? If so, did you catch my last fight?"
+    else:
+        scene v12ferlee1 # FPP. Show mr lee, neutral face, mouth closed
 
-    stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_13.mp3" fadein 2
+        u "Hello there, you fan of boxing? If so, did you catch my last fight?"
 
-    scene v12ferlee1a # FPP. same 1, mouth open
-    with dissolve
+        stop music fadeout 3
+        play music "music/v12/Scene 7/Track Scene 7_13.mp3" fadein 2
 
-    lee "You can't talk to the Gamemaster."
+        scene v12ferlee1a # FPP. same 1, mouth open
+        with dissolve
 
-    scene v12ferlee1
-    with dissolve
+        lee "You can't talk to the Gamemaster."
 
-    u "Who's that?"
+        scene v12ferlee1
+        with dissolve
 
-    scene v12ferlee1a
-    with dissolve
+        u "Who's that?"
 
-    lee "What? Me, obviously."
+        scene v12ferlee1a
+        with dissolve
 
-    scene v12ferlee1
-    with dissolve
+        lee "What? Me, obviously."
 
-    u "Haha, I know, just teasing."
+        scene v12ferlee1
+        with dissolve
 
-    scene v12ferlee2 # TPP. Show mc walking off
-    with dissolve
+        u "Haha, I know, just teasing."
 
-    pause 0.75
+        scene v12ferlee2 # TPP. Show mc walking off
+        with dissolve
 
-    stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+        pause 0.75
 
-    call screen v12s7_rear_gallery
+        stop music fadeout 3
+        play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
+        call screen v12s7_rear_gallery
 
 label v12s7_josh1:
     $ v12s7_josh = True
@@ -5580,7 +5672,7 @@ label v12s7_josh1:
             scene v12ferjo1b # FPP. Show josh, angry, mouth open
             with dissolve
 
-            jo "Cats? CATS!!? Don't disrespect them like that! They are the pentacle of all felines. The leopard is a dignified creature handcrafted by God. Also' *Whispers* Don't fucking laugh at me."
+            jo "Cats? CATS!!? Don't disrespect them like that! They are the pinnacle of all felines. The leopard is a dignified creature handcrafted by God. Also... *Whispers* Don't fucking laugh at me."
 
             scene v12ferjo1c # FPP. Show josh, angry, mouth closed
             with dissolve
@@ -5612,7 +5704,7 @@ label v12s7_josh1:
             scene v12ferjo1
             with dissolve
 
-            u "Umm yeah' I'll keep that in mind."
+            u "Umm yeah... I'll keep that in mind."
 
             scene v12ferjo1a
             with dissolve
@@ -5707,12 +5799,12 @@ label v12s7_josh2:
     scene v12ferjos3a
     with dissolve
 
-    jo "You didn't know it was...who even are you? You are not the man I thought you to be. There's no way I'd dare let you care for the king of the land."
+    jo "You didn't know it was... who even are you? You are not the man I thought you to be. There's no way I'd dare let you care for the king of the land."
 
     scene v12ferjos3
     with dissolve
 
-    u "Oh wow, that sucks...I really wanted to."
+    u "Oh wow, that sucks... I really wanted to."
 
     scene v12ferjos3a
     with dissolve
@@ -5732,6 +5824,7 @@ label v12s7_josh2:
 label v12s7_josh2_kill:
 
     scene v12ferjos5 # TPP. Show mc pointing finger gun at josh, mc mouth open
+    with dissolve
 
     pause 0.75
 
@@ -5857,6 +5950,7 @@ label v12s7_emily2:
 label v12s7_emily2_kill:
 
     scene v12feremi3 # TPP. Show mc pointing finger gun at Emily, mc mouth open
+    with dissolve
 
     u "Boom."
 
@@ -5888,7 +5982,8 @@ label v12s7_mc_caught:
 
     stop music fadeout 3
 
-
+    jump v12_murder_mystery_reveal
+    
     ### ERROR: -If MC doesn't kill someone but they're still in the right spot for him to kill them then they say "Yes?" as he walks up. At point he has the opportunity to kill which triggers the presses murder button actions and dialog ###
 
     ### ERROR: -If MC kills everyone then the free roam ends by clicking on Mr. Lee ###

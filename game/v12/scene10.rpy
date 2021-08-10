@@ -10,6 +10,8 @@ label v12_amber_bus:
 
     pause 0.75
 
+    play music "music/v12/Scene 10/Track Scene 10.mp3" fadein 2
+
     scene v12amb2 # TPP. Show Amber taking a seat (she's on the window seat), MC still standing next to his seat (he will sit next to her), both slight smiles, mouths closed (Ms. Rose sitting on the other aisle with Imre, they're not in shot)
     with dissolve
 
@@ -485,5 +487,7 @@ label v12_amber_bus:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v12_paris_hotel #scene 11

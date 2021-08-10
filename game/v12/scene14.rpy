@@ -10,6 +10,8 @@ label v12_chloe_cafe:
 
     pause 0.75
 
+    play music "music/v12/Scene 14/Track Scene 14 & 14a.mp3" fadein 2
+
     scene v12chc2 # TPP. Show MC and Chloe approaching their table, both smiling, mouths closed
     with dissolve
 
@@ -652,5 +654,7 @@ label v12_chloe_cafe:
     with fade
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v12_riddle_riley #scene 15

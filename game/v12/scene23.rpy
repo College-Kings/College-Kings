@@ -153,6 +153,8 @@ label v12_ms_rose_sex:
                 $ addPoint("tm")
                 $ v12_msrose_sex = True
 
+                label v12_ms_rose_sex_sg:
+
                 scene v12msr2c
                 with dissolve
 
@@ -458,6 +460,8 @@ label v12_ms_rose_sex:
                 with dissolve
 
                 ro "*Chuckles* I told you tonight would be special."
+
+                $ renpy.end_replay()
 
                 scene v12msr28 # FPP. MC looks at the bottle of wine on the black mantle
                 with dissolve

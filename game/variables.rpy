@@ -20,6 +20,9 @@ default reactiona = 1.0
 default bodyHook = False
 default enemyhealth = 0
 
+    ## Free Roam
+default previous_location = ""
+
 # 1.0 - 6.0
 default v1_sda = False
 default evelynmove = False
@@ -514,3 +517,9 @@ default v12_lauren_points = 0
 default v12s32_Aubrey_Boost = False
 default s12v32_get_aubrey_flowers = False
 default v12_murder_count = 0
+default joshmadfr = False
+default v12s7_victims = 12 #Amber, Aubrey, Charli, Chloe, Cbris, Imre, Lauren, Lindsey, Nora, Riley, Rose, Ryan + Cameron, Emily, Josh, Penelope, Samantha
+default v12s23a_poolsex = False
+default v12s23a_beatcameron = False
+default v12_nora_sex = False
+default v12_nora_points = 0
