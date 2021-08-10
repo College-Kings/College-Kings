@@ -96,7 +96,7 @@ label v12_nora_room:
             scene v12nos1i # FPP. Same as v12nos1h, Nora slightly sad, mouth closed
             with dissolve
 
-            u "Communication is key. Times won't always be the way we'd both want, but as long as we can communicate to each other and understand each other, all will work. Being in a relationship means providing for your partner in every aspect, not just financially."]
+            u "Communication is key. Times won't always be the way we'd both want, but as long as we can communicate to each other and understand each other, all will work. Being in a relationship means providing for your partner in every aspect, not just financially."
 
         "Time is key":
             $ v12_nora_points += 1
