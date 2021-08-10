@@ -695,7 +695,7 @@ screen v12s7_left_gallery_back():
         hover "images/v12/Scene 7/Buttons/nav 23.webp"
 
         hotspot (899, 210, 321, 517) action Show("v12s7_left_gallery_front")
-        hotspot (223, 967, 1422, 114) action Show(previous_location)
+        hotspot (223, 967, 1422, 114) action Show("v12s7_rear_gallery")
 
     use v12s7_minimap(location="md_left_gallery")
 
