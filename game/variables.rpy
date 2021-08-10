@@ -22,7 +22,6 @@ default enemyhealth = 0
 
     ## Free Roam
 default previous_location = ""
-default previous_location_rearg = ""
 
 # 1.0 - 6.0
 default v1_sda = False
