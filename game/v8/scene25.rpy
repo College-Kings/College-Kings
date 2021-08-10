@@ -48,9 +48,9 @@ label phn_riley11_setup:
     play sound "sounds/vibrate.mp3"
 
 label phn_riley11:
-    if contact_Riley.getReplies():
+    if contact_Riley.replies:
         call screen phone
-    if contact_Riley.getReplies():
+    if contact_Riley.replies:
         u "(I should talk to Riley.)"
         jump phn_riley11
 

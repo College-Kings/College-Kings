@@ -20,6 +20,9 @@ default reactiona = 1.0
 default bodyHook = False
 default enemyhealth = 0
 
+    ## Free Roam
+default previous_location = ""
+
 # 1.0 - 6.0
 default v1_sda = False
 default evelynmove = False
@@ -95,23 +98,11 @@ default notcool = False
 default difficulty = None
 default laawk = True
 default meetjulia = False
-default openwound = False
-default nohardfeelings = False
-default keepitmoving = False
-default romeo = False
-default bigmouth = False
-default mixedfeelings = False
-default thenotorious = False
-default anewbeginning = False
-default overit = False
 default rileykiss = False
 default toldlauren = False
 default laurenkissb = False
 default laurentoofar = False
 default dontanswerjulia = False
-default notnowmom = False
-default lipsdontlie = False
-default truthhurts = False
 default revengeadam = False
 default liejulia = False
 default girl = ""
@@ -133,9 +124,6 @@ default trolleyb = False
 default trolleyc = False
 default laurenokay = True
 default trolleyskip = 0
-default relightthefire = False
-default rematch = False
-default keeneye = False
 default chloemad = True
 default apologize = False
 default confrontadam = False
@@ -153,9 +141,6 @@ default imremad = False
 default firstfight = True
 default hl = 0
 default noexit = False
-default onthelow = False
-default petapublicenemy = False
-default snitch = False
 default chooseimre = True
 default meetchloe = False
 default imreforgives = False
@@ -215,13 +200,6 @@ default upstairs = "nobody"
 default kimpuke = False
 default fr3matt = False
 default save = 0
-default brosbeforehoes = False
-default credulous = False
-default monkeybusiness = False
-default notmybusiness = False
-default reignition = False
-default seemsfishy = False
-default strike = False
 default v3_aubsex = False
 
 # 7.0
@@ -293,21 +271,9 @@ default hcAsked = [] # hcAsked.append("girl_name") to add
 default consoledSam = False
 default emilyText = False
 default laurenpt = 0
-default ecstatic = False
-default homecomingqueen = False
-default leeway = False
-default playingwithfire = False
-default silverback = False
-default slowandsteady = False
-default truetoself = False
-default wolfpack = False
 default nobeach = False
 
 # 8.0
-default get_a_room = False
-default ip_man = False
-default thick_and_thin = False
-default up_for_more = False
 default v8AutProtest = False
 default openedUpToSeb = False
 default chloeMsg11Reply = 0
@@ -331,9 +297,6 @@ default helpedNora = False
 default chloeSteakHouse = False
 default climbwseb = False
 default hesitantwgrayson = False
-default text_with_an_s = False
-default lucky_7 = False
-default helping_hand = False
 default v8_riley_lewd_ending = False
 
 # 9.0
@@ -353,13 +316,7 @@ default v9_sex_with_riley = False
 default hangOutWithLindsey = False
 default playCoolWLins = False
 default lindseyfirstkiss = False
-default down_for_the_count = False
-default second_date = False
-default lake_hj = False
 default the_king = False
-default the_wrong_time = False
-default king_of_the_north = False
-default cheat_day = False
 default v9_aubrey_lake = False
 default v9_em_dorm_scene = False
 
@@ -407,12 +364,7 @@ default v10_imre_win = False
 default v10s33_laurenBakeSale = False
 default skater = False
 default friends_first = False
-default bathroom_sex = False
 default getting_clean = False
-default kiss_teacher = False
-default chloe_over_nora = False
-default im_a_lion = False
-default on_the_court = False
 default v10s10_hangWLinds = False
 default v10_cvn_cheer_nora = False
 default v10_cvn_cheer_emily = False
@@ -467,12 +419,6 @@ default v10s33_ryan_flirt_emily = False
 default v10s33_ev_date_now = False
 default v10s33_ryanb = False
 default v10_ri_hat_good = False
-default fright_club = False
-default bros_before_blows = False
-default rough_rider = False
-default family_secrets = False
-default golden_boy = False
-default lights_out = False
 default emily_europe = False
 default josh_europe = False
 
@@ -522,20 +468,6 @@ default v11_msrose_scene = False
 default v11_rileysex = False
 default v11_overtake_points = 0
 default v11_hp_points = 0
-    # Achievements
-default perry_mason = False
-default candy_crusher = False
-default hold_your_horses = False
-default off_your_high_horse = False
-default cross_your_heart = False
-default on_target = False
-default just_a_theory = False
-default fruity = False
-default earn_your_owl = False
-default political_strategist = False
-default two_timer = False
-default dont_just_stand_there = False
-default pretty_in_pink = False
 
 # 12.0
 default v12_told_chloe = False
@@ -576,4 +508,12 @@ default v12s7_charli = False
 
 default v12s7_lindsey_moved = False
 default v12s7_aubrey_moved = False
-
+default v12_lindsey_sex = False
+default v12s18_bottlespin_played = False
+default v12s18_fmk_played = False
+default v12_lauren_sex = False
+default v12_lauren_points = 0
+default v12s32_Aubrey_Boost = False
+default s12v32_get_aubrey_flowers = False
+default v12_murder_count = 0
+default joshmadfr = False

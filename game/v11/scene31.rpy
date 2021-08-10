@@ -146,7 +146,7 @@ label v11_lindsey_park:
 
             li "Like I said, I already tried that and she can't see past her ego. Don't get me wrong, I love Chloe... She's one of my best friends, I know her very well."
             
-            li "And so I know this is the only way...unfortunate as it is."
+            li "And so I know this is the only way... unfortunate as it is."
 
             scene v11lip3
             with dissolve
@@ -169,12 +169,14 @@ label v11_lindsey_park:
             li "Always down for being held accountable."
 
         "Support Lindsey":
-            $ political_strategist = True
-            $ grantAchievement("political_strategist")
+            $ political_strategist = True #keep
             $ lindseyLike += 1
 
             scene v11lip3h # FPP. Same as v11lip3d, different pose
             with dissolve
+
+            if politics:
+                $ grant_achievement("political_strategist")
 
             u "I'm down to support you as long as all of this means a new beginning for the Chicks. I'm not in the business of switching out one problem for another, get what I'm saying?"
 
@@ -401,12 +403,12 @@ label v11_lindsey_park:
 
     u "Are you going to tell Chloe?"
 
-    scene v11lip3j
+    scene v11lip3k
     with dissolve
 
     li "During the trip I want to give her time to change my mind about running. So I'm not gonna tell her just yet."
 
-    scene v11lip3k
+    scene v11lip3j
     with dissolve
 
     u "Sounds good."
@@ -446,7 +448,7 @@ label v11_lindsey_park:
 
     pause 0.75
 
-    if laurenmad: # Requirements for apology scene
+    if v11_aubrey_sex and laurenrs: # Requirements for apology scene
 
         scene v11lip6 # TPP. Show MC sitting down he has a slightly relieved expression, mouth closed
         with dissolve

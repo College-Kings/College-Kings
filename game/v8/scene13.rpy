@@ -55,9 +55,9 @@ label after_apes_ceremony:
     with dissolve
 
     label phn_chloe11:
-        if contact_Chloe.getReplies():
+        if contact_Chloe.replies:
             call screen phone
-        if contact_Chloe.getReplies():
+        if contact_Chloe.replies:
             u "(I should probably reply.)"
             jump phn_chloe11
 
@@ -173,7 +173,7 @@ label phn_chloe11_done:
     with dissolve
     ry "Woohoooo!"
 
-    if contact_Chloe.getMessage("Guess you'll have to wait and see ;)"):
+    if contact_Chloe.get_message("Guess you'll have to wait and see ;)"):
         scene v8apes28 # FPP. MC inside the room now and he notices Chloe and Caleb chitchatting
         with dissolve
         u "(Oh, Chloe is here.)"

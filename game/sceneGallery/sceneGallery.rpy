@@ -21,38 +21,51 @@ init python:
         return rv
 
     ## SCENE GALLERY ITEMS HERE
-    SceneGallery("sexdream1")
-    SceneGallery("v1_tomShoutBack")
-    SceneGallery("continuem")
-    SceneGallery("fkcon")
-    SceneGallery("aubreysexb")
-    SceneGallery("emsex_a")
-    SceneGallery("rileysexscene")
-    SceneGallery("brbj")
-    SceneGallery("v8_cl_start")
-    SceneGallery("v8_ri_start")
-    SceneGallery("hoco_amb_night")
-    SceneGallery("int_deal_w_josh")
-    SceneGallery("amber_sex_at_joshs")
-    SceneGallery("v9_aubrey_scene_lake")
-    SceneGallery("v9_emily_dorm")
-    SceneGallery("v9_ri_sex")
-    SceneGallery("v9_make_out_w_lin")
-        # v10.0
-    SceneGallery("v10_mc_vs_ryan_fight")
-    SceneGallery("v10_mc_vs_imre_fight")
-    SceneGallery("v10s17_galleryScene")
-    SceneGallery("v10_lauren_room_sg", scope={"laurenrs": True})
-    SceneGallery("v10_amber_skatepark_sg")
-    SceneGallery("v10s30_galleryScene")
-    SceneGallery("v10s40_galleryScene", scope={"rileyrs": True})
+        # v1
+    SceneGallery("sexdream1") #Riley
+        # v2
+    SceneGallery("v1_tomShoutBack") #Tom
+        # v3
+    SceneGallery("continuem") #Aubrey
+        # v5
+    SceneGallery("fkcon") #Adam
+        # v6
+    SceneGallery("aubreysexb") #Aubrey
+    SceneGallery("emsex_a") #Emily
+        # v7
+    SceneGallery("rileysexscene") #Riley
+    SceneGallery("brbj") #Aubrey
+        # v8
+    SceneGallery("v8_cl_start") #2, Chloe
+    SceneGallery("v8_ri_start") #3, Riley
+    SceneGallery("hoco_amb_night") #5, Amber
+    SceneGallery("int_deal_w_josh") #28, Lars Joe
+    SceneGallery("amber_sex_at_joshs") #30, Amber
+        # v9
+    SceneGallery("v9_aubrey_scene_lake") #7, Aubrey
+    SceneGallery("v9_emily_dorm") #16, Emily
+    SceneGallery("v9_ri_sex") #34, Riley
+    SceneGallery("v9_make_out_w_lin") #39, Lindsey
+        # v10
+    SceneGallery("v10_mc_vs_ryan_fight") #6, Ryan
+    SceneGallery("v10_mc_vs_imre_fight") #7, Imre
+    SceneGallery("v10s17_galleryScene") #17, Aubrey
+    SceneGallery("v10_lauren_room_sg", scope={"laurenrs": True}) #24, Lauren
+    SceneGallery("v10_amber_skatepark_sg") #26, Amber
+    SceneGallery("v10s30_galleryScene") #30, Chloe
+    SceneGallery("v10s40_galleryScene", scope={"rileyrs": True}) #40, Riley
         # v11
-    SceneGallery("v11s5_galleryScene") #5
-    SceneGallery("v11_aubrey_plane_sex_sg") #13
-    SceneGallery("v11_ms_rose_sex_sg") #28
-    SceneGallery("v11s28a_galleryScene") #28a
-    SceneGallery("v11_riley_sex_sg") #35
-    SceneGallery("v11_chloe_sex_scene") #41b
+    SceneGallery("v11s5_galleryScene") #5, Candy
+    SceneGallery("v11_aubrey_plane_sex_sg") #13, Aubrey
+    SceneGallery("v11_ms_rose_sex_sg") #28, Rose
+    SceneGallery("v11s28a_galleryScene") #28a, Samantha
+    SceneGallery("v11_riley_sex_sg") #35, Riley
+    SceneGallery("v11_chloe_sex_scene") #41b, Chloe
+        #v12
+    SceneGallery("") #17, Lindsey
+    SceneGallery("") #23, Rose
+    SceneGallery("") #29, Lauren
+    SceneGallery("") #35a, Nora
 
 screen spoiler():
     modal True

@@ -9,6 +9,8 @@ label v12_paris_hotel:
     
     pause 0.75
 
+    play music "music/v12/Scene 11/Track Scene 11.mp3" fadein 2
+
     scene v12pht2 # FPP. Looking at imre, mouth opened
     with dissolve
 
@@ -95,7 +97,7 @@ label v12_paris_hotel:
     scene v12pht6 # TPP. MC turns arround and looks at nora
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12pht7 # FPP. Looking at nora, mouth closed
     with dissolve
@@ -132,7 +134,7 @@ label v12_paris_hotel:
 
     u "I don't even fuck with Charli enough to say hi to him. What makes you think I'd bother to have a full on conversation with him about one of my friends?"
 
-    if not v11_kiss_nora:
+    if v11_kiss_nora:
         scene v12pht7b
         with dissolve
 
@@ -214,6 +216,9 @@ label v12_paris_hotel:
     no "Chris and I have been dating for years now, right? It feels like we've always just been together, to the point that neither of us lived our own lives."
     no "And I'm not saying I want to break up with Chris or anything like that..."
 
+    scene v12pht9a
+    with dissolve
+
     scene v12pht9
     with dissolve
 
@@ -242,6 +247,9 @@ label v12_paris_hotel:
     no "So it's not like I'm expecting anything new."
 
     scene v12pht9a
+    with dissolve
+
+    scene v12pht9
     with dissolve
 
     no "He basically just stopped giving me the amount of attention that he used to give me. If he acted the way he does now, back then, I'm not saying we wouldn't have dated..."
@@ -280,7 +288,7 @@ label v12_paris_hotel:
     scene v12pht9c # FPP. Nora puts her head down and wipes her eyes as if tearing up
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12pht9d # FPP. nora looking at mc, tear in her eyes, mouth closed
     with dissolve
@@ -294,6 +302,7 @@ label v12_paris_hotel:
 
     menu:
         "Support her choice":
+            $ addPoint("bf")
             scene v12pht9d
             with dissolve
 
@@ -311,6 +320,7 @@ label v12_paris_hotel:
             u "That's what FRIENDS are for. *Chuckles*"
 
         "Help Chris":
+            $ addPoint("bro")
             scene v12pht9d
             with dissolve
 
@@ -349,6 +359,7 @@ label v12_paris_hotel:
 
     menu:
         "Yes":
+            $ addPoint("tm")
             scene v12pht9h
             with dissolve
 
@@ -360,6 +371,7 @@ label v12_paris_hotel:
             no "Haha, I'll think about it."
 
         "No":
+            $ addPoint("bf")
             scene v12pht9h 
             with dissolve
 
@@ -390,12 +402,16 @@ label v12_paris_hotel:
 
     pause 0.75
 
-    scene v12pht11 # TPP. MC in the hotel corridor heading to his room
+    scene v12crm1 # TPP. MC in the hotel corridor heading to his room
     with dissolve
 
     pause 0.75
 
     scene v12pht12 # TPP. MC at his hotel door
     with dissolve
+
+    pause 0.75
+
+    stop music fadeout 3
 
     jump v12_room_chloe_riley #scene 12

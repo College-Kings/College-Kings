@@ -72,6 +72,7 @@ label v12_chris_nora_room:
 
     menu:
         "Go to Nora":
+            $ addPoint("bf")
             scene v12cnr10 # TPP. Show MC walking towards his hotel room door to the hallway, neutral expression, mouth closed
             with dissolve
 
@@ -99,7 +100,7 @@ label v12_chris_nora_room:
 
             u "Nora..."
 
-            if not noralikes or (noralikes and v11_kiss_nora):
+            if not noralikes or (noralikes and v11_kiss_nora): # if Noralikes she lets him in after a bit. If not Noralikes he has to convince her and can fail. If mc made a move on Nora before, she is not letting him in.
                 scene v12cnr13
                 with dissolve
 
@@ -130,7 +131,7 @@ label v12_chris_nora_room:
 
                 u "(Guess I should've just left her alone.)"
 
-                jump scene35b
+                jump v12_game_roommate
 
             else:
                 scene v12cnr12a # TPP. Same as v12cnr12, Door open, Nora inside the room, looking at MC who is outside, Nora crying, mouth closed, MC worried, mouth closed
@@ -151,6 +152,7 @@ label v12_chris_nora_room:
                 jump v12_lindsey_lobby #scene 35a
 
         "Leave her alone":
+            $ addPoint("bro")
             scene v12cnr5
             with dissolve
 

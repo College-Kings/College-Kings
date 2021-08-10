@@ -10,6 +10,8 @@ label v12_roomate_talk:
 
         pause 0.75
 
+        play music "music/v12/Scene 4/Track Scene 4.mp3" fadein 2
+
         scene v12rcr2 # FPP. Show chloe walking into the room, looking at MC, mouth closed
         with dissolve
 
@@ -22,12 +24,16 @@ label v12_roomate_talk:
 
         menu:
             "Yes":
+                $ addPoint("bf")
+
                 scene v12rcr2
                 with dissolve
 
                 u "Yeah, kinda... It's not like we weren't just in the middle of a robbery or anything."
 
             "No":
+                $ addPoint("bro")
+
                 scene v12rcr2
                 with dissolve
                        
@@ -36,6 +42,8 @@ label v12_roomate_talk:
         if chloers or chloegf:
             scene v12rcr3 # TPP. Chloe gives MC a kiss
             with dissolve
+
+            play sound "sounds/kiss.mp3"
 
             pause 0.75
 
@@ -135,6 +143,8 @@ label v12_roomate_talk:
 
         menu:
             "He is":
+                $ addPoint("bro")
+
                 scene v12rcr5a
                 with dissolve
 
@@ -151,6 +161,8 @@ label v12_roomate_talk:
                 u "Not Grayson-level crazy. *Laughs*"
 
             "Nope":
+                $ addPoint("tm")
+
                 scene v12rcr5a
                 with dissolve
 
@@ -295,6 +307,7 @@ label v12_roomate_talk:
 
         menu:
             "A little":
+                $ addPoint("bf")
                 scene v12rcr12
                 with dissolve
 
@@ -306,6 +319,7 @@ label v12_roomate_talk:
                 ri "Aww. I guess I can't be upset at you for missing me. *Chuckles*"
 
             "Not really":
+                $ addPoint("bro")
                 scene v12rcr12 
                 with dissolve
 
@@ -381,6 +395,7 @@ label v12_roomate_talk:
 
         menu:
             "I know":
+                $ addPoint("tm")
                 scene v12rcr13b
                 with dissolve
 
@@ -402,6 +417,7 @@ label v12_roomate_talk:
                 ri "Well I'm glad you told me, because I didn't know that. *Chuckles*"
 
             "Really?":
+                $ addPoint("bf")
                 scene v12rcr13b
                 with dissolve
 
@@ -484,5 +500,9 @@ label v12_roomate_talk:
 
         scene v12rcr11
         with dissolve
+
+        pause 0.75
+
+        stop music fadeout 3
 
     jump v12_morning_london #scene 5

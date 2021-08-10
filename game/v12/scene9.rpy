@@ -10,6 +10,8 @@ label v12_dock_arrival:
 
     pause 1
 
+    play music "music/v12/Scene 9/Track Scene 9.mp3" fadein 2
+
     scene v12doa2 # TPP. Show Imre running past MC, MC slightly surprised, mouth closed, Imre happy, mouth closed
     with dissolve
 
@@ -33,7 +35,7 @@ label v12_dock_arrival:
     scene v12doa4a # FPP. Same as v12doa4, Mr. Lee looking at MC, Mr. Lee neutral expression, mouth open
     with dissolve
     
-    lee "Students grab your luggage and get on the bus so we can get to the hotel."
+    lee "Students, grab your luggage and get on the bus so we can get to the hotel."
 
     scene v12doa5 # TPP. Show Ryan walking up to Imre (Same positioning as v12doa3, Imre not in shot), Ryan slight smirk, mouth closed
     with dissolve
@@ -64,5 +66,7 @@ label v12_dock_arrival:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v12_amber_bus #scene 10

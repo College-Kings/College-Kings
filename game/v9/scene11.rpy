@@ -59,7 +59,7 @@ label v9_hc_demo:
     scene v9demo4d # TPP. Same camera as v9demo4, both still looking at eachother, Penelope smile, Cameron annoyed, Cameron mouth open, Penelope mouth closed.
     with dissolve
 
-    ca "I know they wouldn't say 'hark!'"
+    ca "I know they wouldn't say \"hark!\""
 
     scene v9demo4c
     with dissolve
@@ -254,8 +254,7 @@ label v9_hc_demo_west:
 label v9_hc_demo_north:
 
     if the_king:
-        $ king_of_the_north = True
-        $ grantAchievement("king_of_the_north")
+        $ grant_achievement("king_of_the_north")
 
     u "North, Your Majesty."
 

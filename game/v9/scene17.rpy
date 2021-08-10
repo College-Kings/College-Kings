@@ -49,9 +49,9 @@ label v9_room_fri_morn:
         $ contact_Lauren.newMessage(_("Ok :) See you soon!"))
         
         label s17_PhoneContinueW:
-            if contact_Lauren.getReplies():
+            if contact_Lauren.replies:
                 call screen phone
-            if contact_Lauren.getReplies():
+            if contact_Lauren.replies:
                 "(I should text Lauren.)"
                 jump s17_PhoneContinueW
 
@@ -90,9 +90,9 @@ label v9_room_fri_morn:
         $ contact_Lauren.newMessage(_("Ok :) See you soon!"))
         
         label s17_PhoneContinueA:
-            if contact_Lauren.getReplies():
+            if contact_Lauren.replies:
                 call screen phone
-            if contact_Lauren.getReplies():
+            if contact_Lauren.replies:
                 "(I should text Lauren.)"
                 jump s17_PhoneContinueA
 

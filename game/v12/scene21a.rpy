@@ -185,6 +185,7 @@ label v12_nursing_aubrey:
 
     menu:
         "If I was your boyfriend...":
+            $ addPoint("bf")
             $ v12_aubrey_gf = True
 
             scene v12aun4f
@@ -213,6 +214,7 @@ label v12_nursing_aubrey:
             u "*Chuckles*"
 
         "That's what friends are for":
+            $ addPoint("bro")
             scene v12aun4f
             with dissolve
 

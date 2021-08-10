@@ -269,7 +269,7 @@ screen choice(items, seconds=3, fail_label=""):
 
     if config_debug:
         $ item = renpy.random.choice(items)
-        timer 0.1 action item.action
+        on "show" action item.action
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
 ## menu captions will be displayed as empty buttons.
@@ -320,16 +320,16 @@ screen quick_menu():
             textbutton _("Q.Load") action QuickLoad()
             textbutton _("Prefs") action ShowMenu('preferences')
 
-    if renpy.loadable("bugTesting/bugTesting.rpy") and config.developer:
+    if config.developer:
         hbox:
             style_prefix "quick"
             align (1.0, 1.0)
 
             textbutton "Scene Select":
-                action ShowMenu("bugTesting_SceneSelect")
+                action Show("bugTesting_SceneSelect")
 
             textbutton "Cheats":
-                action ShowMenu("bugTesting_cheatMenu")
+                action Show("bugTesting_cheatMenu")
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.

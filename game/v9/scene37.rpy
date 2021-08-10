@@ -157,6 +157,7 @@ label v9_run_w_ryan:
     pause 1
 
     scene v9rwr12a
+    with dissolve
 
     ry "Ahh, sorry bro. Gotta dip, duty calls!"
 

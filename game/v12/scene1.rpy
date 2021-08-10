@@ -9,13 +9,17 @@ label v12_nora_robbed:
     scene v12nrb1 # FPP. MC is looking at nora who is in shock as a robber snags her bag
     with fade
 
-    pause 0.75
+    pause 1
+
+    play music "music/v12/Scene 1/Track Scene 1_1.mp3" fadein 2
 
     scene v12nrb1a # FPP. The robber is now running away, nora is on the floor
     with dissolve
     
     menu:
         "Go to Nora":
+            $ addPoint("bf")
+            
             scene v12nrb2 # TPP. MC runs to nora, Nora shocked, MC worries, mouths closed
             with dissolve
             
@@ -132,6 +136,9 @@ label v12_nora_robbed:
             with dissolve
 
             ro "Now, let's get back to the hotel."
+
+            stop music fadeout 3
+            play music "music/v12/Scene 1/Track Scene 1_2.mp3" fadein 2
 
             scene v12nrb4 # TPP. MC is walking back, Chris and Nora stay behind, MC worried, looking straight ahead, Chris and Nora looking at each other, angry, mouths closed
             with dissolve
@@ -277,6 +284,9 @@ label v12_nora_robbed:
 
             pause 0.75
 
+            stop music fadeout 3
+            play music "music/v12/Scene 1/Track Scene 1_3.mp3" fadein 2
+
             scene v12nrb11 # FPP. Looking at amber, mouth opened, smiling, in hotel lobby
             with dissolve
 
@@ -302,15 +312,21 @@ label v12_nora_robbed:
 
             pause 0.75
 
+            stop music fadeout 3
+            play music "music/v12/Scene 1/Track Scene 1_4.mp3" fadein 2
+
             scene v12nrb15 # TPP. MC in his room
             with dissolve
 
             u "(Amber's tough as nails. Definitely don't wanna be on her bad side. Maybe if I would've gone after the robber I could've been the hero.)"
 
             play sound "sounds/knock.mp3"
+            stop music fadeout 3
 
             jump v12_nora_checks_mc #scene 2
 
         "Chase after robber":
+            $ addPoint("tm")
+            stop music fadeout 3
+
             jump v12_chase_robber #scene 1a
-            

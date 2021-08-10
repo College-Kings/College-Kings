@@ -10,6 +10,8 @@ label v12_chloe_cafe:
 
     pause 0.75
 
+    play music "music/v12/Scene 14/Track Scene 14 & 14a.mp3" fadein 2
+
     scene v12chc2 # TPP. Show MC and Chloe approaching their table, both smiling, mouths closed
     with dissolve
 
@@ -204,12 +206,14 @@ label v12_chloe_cafe:
 
         menu:
             "It'd be nice":
+                $ addPoint("bf")
                 scene v12chc5c
                 with dissolve
 
                 u "Mmm, yeah... It'd be nice. *Chuckles*"
 
             "Not really":
+                $ addPoint("bro")
                 scene v12chc5c
                 with dissolve
 
@@ -370,7 +374,78 @@ label v12_chloe_cafe:
     with dissolve
 
     menu:
+        "Tell her about Lindsey":
+            $ addPoint("bf")
+            $ v12_told_chloe = True
+
+            u "(I can't keep this from her.) *Sighs* There's something I need to tell you."
+
+            scene v12chc5m
+            with dissolve
+
+            cl "What?"
+
+            scene v12chc5n
+            with dissolve
+
+            u "Don't quote me, please. And I don't want you doing anything rash. Can you promise me you won't freak out?"
+
+            scene v12chc5k
+            with dissolve
+
+            cl "You're making me nervous, [name]."
+
+            scene v12chc5l
+            with dissolve
+
+            u "Just promise me you won't freak out."
+
+            scene v12chc5
+            with dissolve
+
+            cl "For fucks sake... *Sighs* Fine, I won't freak out. Happy?"
+
+            scene v12chc5o # FPP. Same as v12chc5, Chloe angry, mouth closed
+            with dissolve
+
+            u "Good. Now, again, don't quote me. I'm not sure of all the details and I'm not even positive if this is truly her plan, but I heard that Lindsey's been considering running for President of the Chicks, against you."
+
+            scene v12chc5p # FPP. Same as v12chc5o, Chloe angry, mouth open
+            with dissolve
+
+            cl "WHY THE FUCK WOULD SHE DO THAT!?"
+
+            scene v12chc5o
+            with dissolve
+
+            u "Calm down, please... You said you wouldn't freak out."
+
+            scene v12chc5p
+            with dissolve
+
+            cl "*Deep breath* Why, the fuck, would she do that?"
+
+            scene v12chc5o
+            with dissolve
+
+            u "Something about the Chicks needing major changes in order to save the sorority from it's downhill spiral... And again, don't quote me."
+
+            scene v12chc5p
+            with dissolve
+
+            cl "Wow... I really can't believe she'd actually do that."
+            cl "You know what, I'm not gonna jump to any conclusions. If she really did plan on doing something like that she'd have to be a lunatic."
+
+            scene v12chc5o
+            with dissolve
+
+            scene v12chc5p
+            with dissolve
+
+            cl "Rather than seeing how she can help she'd rather just take over? No way. This can't be real."
+
         "Don't tell her about Lindsey":
+            $ addPoint("tm")
             
             u "(No way I'm telling her. She's not hearing that news from me.)"
 
@@ -384,80 +459,14 @@ label v12_chloe_cafe:
 
             cl "Well, if I don't figure it out soon I'm gonna end up going crazy. I'll talk to Aubrey first and see if she's heard anything, and I guess if she hasn't then I'll just go to Lindsey myself."
 
-        "Tell her about Lindsey":
-                $ v12_told_chloe = True
-
-                u "(I can't keep this from her.) *Sighs* There's something I need to tell you."
-
-                scene v12chc5m
-                with dissolve
-
-                cl "What?"
-
-                scene v12chc5n
-                with dissolve
-
-                u "Don't quote me, please. And I don't want you doing anything rash. Can you promise me you won't freak out?"
-
-                scene v12chc5k
-                with dissolve
-
-                cl "You're making me nervous, [name]."
-
-                scene v12chc5l
-                with dissolve
-
-                u "Just promise me you won't freak out."
-
-                scene v12chc5
-                with dissolve
-
-                cl "For fucks sake... *Sighs* Fine, I won't freak out. Happy?"
-
-                scene v12chc5o # FPP. Same as v12chc5, Chloe angry, mouth closed
-                with dissolve
-
-                u "Good. Now, again, don't quote me. I'm not sure of all the details and I'm not even positive if this is truly her plan, but I heard that Lindsey's been considering running for President of the Chicks, against you."
-
-                scene v12chc5p # FPP. Same as v12chc5o, Chloe angry, mouth open
-                with dissolve
-
-                cl "WHY THE FUCK WOULD SHE DO THAT!?"
-
-                scene v12chc5o
-                with dissolve
-
-                u "Calm down, please... You said you wouldn't freak out."
-
-                scene v12chc5p
-                with dissolve
-
-                cl "*Deep breath* Why, the fuck, would she do that?"
-
-                scene v12chc5o
-                with dissolve
-
-                u "Something about the Chicks needing major changes in order to save the sorority from it's downhill spiral... And again, don't quote me."
-
-                scene v12chc5p
-                with dissolve
-
-                cl "Wow... I really can't believe she'd actually do that."
-
-                scene v12chc5o
-                with dissolve
-
-                cl "You know what, I'm not gonna jump to any conclusions. If she really did plan on doing something like that she'd have to be a lunatic."
-                cl "Rather than seeing how she can help she'd rather just take over? No way. This can't be real."
-
-    scene v12chc5p
+    scene v12chc5o
     with dissolve
 
     u "(Okay, this is not going well.)"
 
     u "Why not just enjoy Europe like we discussed before?"
 
-    scene v12chc5o
+    scene v12chc5p
     with dissolve
 
     cl "It's kinda hard to relax with something like this lingering over my head."
@@ -500,22 +509,22 @@ label v12_chloe_cafe:
     scene v12chc5r # FPP. MC watches as Chloe is eating
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12chc8 # TPP. Show MC and Chloe both eating their dishes
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12chc6
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12chc9 # TPP. Show the waitress grabbing MC and Chloes' empty dishes, all smiling, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12chc5e
     with dissolve
@@ -580,11 +589,16 @@ label v12_chloe_cafe:
     $ contact_Riley.addReply("Okay, I'll be there soon.")
 
     label v12s14_PhoneContinueRiley:
-        if contact_Riley.getReplies():
+        if contact_Riley.replies:
             call screen phone
-        if contact_Riley.getReplies():
+        if contact_Riley.replies:
             u "(I should check my phone.)"
             jump v12s14_PhoneContinueRiley
+
+    scene v12chc10
+    with dissolve
+
+    u "(This isn't that far.)"
 
     scene v12chc5c
     with dissolve
@@ -594,12 +608,12 @@ label v12_chloe_cafe:
     scene v12chc5
     with dissolve
 
-    cl "A Mr. Lee... Hunt? What is that?"
+    cl "A Mr. Lee... hunt? What is that?"
 
     scene v12chc5e
     with dissolve
 
-    u "Some little treasure hunt he has us doing for him while we're in Europe"
+    u "Some little treasure hunt he has us doing for him while we're in Europe."
 
     scene v12chc5d
     with dissolve
@@ -626,11 +640,6 @@ label v12_chloe_cafe:
 
     pause 0.75
 
-    scene v12chc10
-    with dissolve
-
-    u "(This isn't that far.)"
-
     scene v12chc12 # TPP. Show MC getting up from his chairm, slight smile, mouth closed
     with dissolve
 
@@ -645,5 +654,7 @@ label v12_chloe_cafe:
     with fade
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v12_riddle_riley #scene 15

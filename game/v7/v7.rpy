@@ -472,10 +472,8 @@ label v7start:
                 scene s683a
                 with dissolve
 
-                $ truetoself = True
-                $ grantAchievement("true_to_self")
-                    
-
+                $ grant_achievement("true_to_self")
+                
                 u "Uhh, yeah of course."
 
                 scene s683b # Riley smiling
@@ -1397,9 +1395,9 @@ label conyourdorm:
         u "(What the hell?)"
 
         label phoneam:
-            if contact_Riley.getReplies():
+            if contact_Riley.replies:
                 call screen messager(contact_Riley)
-            if contact_Riley.getReplies():
+            if contact_Riley.replies:
                 "(I need to respond to some of these messages.)"
                 jump phoneam
 
@@ -1407,11 +1405,11 @@ label conyourdorm:
                 "(I should check out what Emily posted on Kiwii.)"
                 jump phoneam
 
-            if bowling and contact_Penelope.getReplies():
+            if bowling and contact_Penelope.replies:
                 "(I should answer Penelope.)"
                 jump phoneam
 
-            if laurenrs and contact_Lauren.getReplies():
+            if laurenrs and contact_Lauren.replies:
                 "(I should respond to Lauren.)"
                 jump phoneam
 
@@ -1633,9 +1631,9 @@ label conyourdorm:
         u "(Huh? What did Riley text me?)"
 
         label phonean:
-            if contact_Riley.getReplies():
+            if contact_Riley.replies:
                 call screen messager(contact_Riley)
-            if contact_Riley.getReplies():
+            if contact_Riley.replies:
                 u "(I should respond to Riley.)"
                 jump phonean
             
@@ -2582,9 +2580,9 @@ label thisbewalk:
         " "
 
         label phoneao:
-            if contact_Lauren.getReplies():
+            if contact_Lauren.replies:
                 call screen phone
-            if contact_Lauren.getReplies():
+            if contact_Lauren.replies:
                 u "(I should probably reply.)"
                 jump phoneao
 
@@ -3481,8 +3479,7 @@ label afterbeach:
             menu:
                 "Pledge to the Apes":
 
-                    $ silverback = True
-                    $ grantAchievement("silverback")
+                    $ grant_achievement("silverback")
 
                     u "(Fuck it. I'm gonna be winner, no matter what it costs. Time to pledge to the Apes.)"
 
@@ -3490,8 +3487,7 @@ label afterbeach:
 
                 "Pledge to the Wolves":
 
-                    $ wolfpack = True
-                    $ grantAchievement("wolfpack")
+                    $ grant_achievement("wolfpack")
 
                     u "(Grayson might kill me when he finds out, but I can't join the Apes. I gotta pledge to the Wolves.)"
 
@@ -3512,17 +3508,14 @@ label afterbeach:
         menu:
             "Pledge to the Apes":
 
-                $ silverback = True
-                $ grantAchievement("silverback")
-                    
+                $ grant_achievement("silverback")
 
                 u "(Fuck it. I'm gonna be winner, no matter what it costs. I'ma go to the Apes' house and tell Grayson I changed my mind.)"
 
                 jump pledgeapes
 
             "Pledge to the Wolves":
-                $ wolfpack = True
-                $ grantAchievement("wolfpack")
+                $ grant_achievement("wolfpack")
 
                 u "(Nah, Grayson's done more than enough questionable shit. The Wolves been nothing but good to me. I'ma pledge to the Wolves.)"
 
@@ -5460,9 +5453,9 @@ label after_pledges:
                 $ contact_Emily.addReply(_("Hey, sorry I lost track of time. You up?"))
 
                 label phonebb:
-                    if contact_Emily.getReplies():
+                    if contact_Emily.replies:
                         call screen phone
-                    if contact_Emily.getReplies():
+                    if contact_Emily.replies:
                         u "(I should text Emily that I lost track of time.)"
                         jump phonebb
 
@@ -6490,8 +6483,7 @@ label after_history:
                 scene s907 # Camera - FPP. MC and Cameron running through the door. Cameron is in front of MC with his phone in his hand. MC is almost out of the door
                 with vpunch
 
-                $ leeway = True
-                $ grantAchievement("lee_way")
+                $ grant_achievement("lee_way")
 
                 lee "Who was that? {b}WHO WAS THAT?{/b}"
                 ca "HAHAHA! FUCKIN' ACES!"
@@ -7184,10 +7176,11 @@ label hc_asking_riley:
 
     if rileyrs or kct == "confident":
         $ hcGirl = "riley"
-        $ rileyrs = True
 
         if not rileyrs:
             call screen kctPopup
+
+        $ rileyrs = True
 
         scene s959b # riley excited
         with dissolve
@@ -7204,7 +7197,7 @@ label hc_asking_riley:
 
         ri "How did you know that I love Cinderella?"
 
-        scene s959b # riley excited
+        scene s959c # riley excited
         with dissolve
 
         u "A magician never reveals his secrets."
@@ -8931,9 +8924,9 @@ label rileytext:
         " "
 
         label rtnow:
-            if contact_Riley.getReplies():
+            if contact_Riley.replies:
                 call screen phone
-            if contact_Riley.getReplies():
+            if contact_Riley.replies:
                 u "(I should check my messages.)"
                 jump rtnow
 
@@ -9287,9 +9280,9 @@ label signs_with_autumn:
     " "
 
     label phoneba:
-        if contact_Autumn.getReplies():
+        if contact_Autumn.replies:
             call screen phone
-        if contact_Autumn.getReplies():
+        if contact_Autumn.replies:
             u "(I should probably check my messages.)"
             jump phoneba
 
@@ -9865,8 +9858,7 @@ label amberhocodate:
     with dissolve
 
 label v7_nsfwSkipLabel5:
-    $ ecstatic = True
-    $ grantAchievement("ecstatic")
+    $ grant_achievement("ecstatic")
         
     u "Now what?"
 
@@ -16988,9 +16980,7 @@ label fr4laurenending:
     scene sfr4la29
     with dissolve
 
-    $ slowandsteady = True
-    $ grantAchievement("slow_and_steady")
-        
+    $ grant_achievement("slow_and_steady")
 
     la "I read that... if you cuddle in your underwear it increases the serotonin levels in your brain, which in turns means you live a longer, happier life."
 
@@ -17138,10 +17128,8 @@ label fr4rileyending2:
     scene sfr4ri57a #riley pats the bed,looking at you smiling
     with dissolve
 
-    $ playingwithfire = True
-    $ grantAchievement("playing_with_fire")
+    $ grant_achievement("playing_with_fire")
         
-
     ri "Sit down with me for a second."
 
     scene sfr4ri57b #mc walks towards her
@@ -17247,9 +17235,7 @@ label fr4chloeending:
     scene sfr4cl58 # tpp from behind: chloe opens the door to her room mc following
     with fade
 
-    $ homecomingqueen = True
-    $ grantAchievement("homecoming_queen")
-        
+    $ grant_achievement("homecoming_queen")
 
     u "So this is your infamous room?"
 

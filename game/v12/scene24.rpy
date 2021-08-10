@@ -53,7 +53,7 @@ label v12_simplr_convo:
         scene v12sic1a
         with dissolve
 
-        u "(Very interesting...*Chuckles* Now, I need to sleep.)"
+        u "(Very interesting... *Chuckles* Now, I need to sleep.)"
     
     else:
         scene v12sic1c

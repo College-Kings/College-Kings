@@ -9,10 +9,14 @@ label v12_penelope_roof:
 
     pause 1
 
+    play music "music/v12/Scene 3/Track Scene 3_1.mp3" fadein 2
+
     play sound "sounds/vibrate.mp3"
 
     $ contact_Penelope.newMessage("Hey, are you up still?", queue=False)
     $ contact_Penelope.newMessage("If you are, can you meet me in the hallway?", queue=False)
+
+    u "(It's Penelope.)"
 
     call screen phone
 
@@ -24,16 +28,19 @@ label v12_penelope_roof:
             $ contact_Penelope.addReply("Yeah, one sec", func=None)
 
             label v12_penelope_roof_text:
-                if contact_Penelope.getReplies():
+                if contact_Penelope.replies:
                     call screen phone
-                if contact_Penelope.getReplies():
+                if contact_Penelope.replies:
                     u "(I should probably reply.)"
                     jump v12_penelope_roof_text
 
             scene v12penr2 # TPP Show MC leaving his hotel room
             with dissolve
 
-            pause 0.75
+            pause 1
+
+            stop music fadeout 3
+            play music "music/v12/Scene 3/Track Scene 3_2.mp3" fadein 2
 
             scene v12penr3 # FPP Show Penelope in hotel room hallway, embarrassed expression, mouth closed
             with dissolve
@@ -145,6 +152,9 @@ label v12_penelope_roof:
 
             pause 1
 
+            stop music fadeout 3
+            play music "music/v12/Scene 3/Track Scene 3_3.mp3" fadein 2
+
             scene v12penr8 # TPP Show MC and Penelope out on hotel roof in the process of sitting down
             with dissolve
 
@@ -160,12 +170,14 @@ label v12_penelope_roof:
 
             menu:
                 "Sure is":
+                    $ addPoint("bro")
                     scene v12penr11 # FPP View of MC, who is laying on his back looking up at the stars
                     with dissolve
 
                     u "It really is."
 
                 "You sure are":
+                    $ addPoint("bf")
 
                     u "Yes, you are."
 
@@ -182,7 +194,7 @@ label v12_penelope_roof:
                     scene v12penr10c # FPP Same angle as v12penr10, Penelope looking back at MC, smiling with mouth open
                     with dissolve
 
-                    pe "Haha, I heard you goofball. I just wanted to see if you'd repeat yourself, handsome."
+                    pe "Haha, I heard you, goofball. I just wanted to see if you'd repeat yourself, handsome."
 
             scene v12penr10d # FPP Same angle as v12penr10, Penelope looking up at stars, neutral expression, mouth open
             with dissolve
@@ -310,6 +322,7 @@ label v12_penelope_roof:
 
                 menu:
                     "Be shocked":
+                        $ addPoint("bro")
 
                         u "*Gulp*"
 
@@ -395,6 +408,9 @@ label v12_penelope_roof:
 
             pause 1.25
 
+            stop music fadeout 3
+            play music "music/v12/Scene 3/Track Scene 3_4.mp3" fadein 2
+
             if penelopers:
                 scene v12penr4a # TPP Same angle as v12penr4, MC and Penelope walking down hotel hallway holding hands
                 with dissolve
@@ -459,7 +475,7 @@ label v12_penelope_roof:
             pause 0.75
 
         "Don't reply":
-            $ addPoint("tm")
+            $ addPoint("bro")
 
             scene v12penr19 # FPP MC's view sitting on his bed, looking down at his phone, which he just turned off
             with dissolve
@@ -470,5 +486,7 @@ label v12_penelope_roof:
             with dissolve
 
             pause 0.75
+    
+    stop music fadeout 3
 
     jump v12_roomate_talk # Scene 4

@@ -79,13 +79,13 @@ label v11_lobby_mrlee:
     with dissolve
 
     lee "*Laughs* Throughout it all, food will always have a special way of bringing everyone together."
-    lee "Tonight, we celebrate the experiences we've had so far and the fact that you're all legally allowed to drink here' *Chuckles* Please drink responsibly."
+    lee "Tonight, we celebrate the experiences we've had so far and the fact that you're all legally allowed to drink here. *Chuckles* Please drink responsibly."
     lee "Now, the shuttles are prepared and ready to go so let's get moving."
 
     scene v11lob1a # FPP. same 1, mouth closed
     with dissolve
 
-    u "(People can say what they want, even I have said some things about him in the past, but Mr. Lee really is such a cool guy..)"
+    u "(People can say what they want, even I have said some things about him in the past, but Mr. Lee really is such a cool guy...)"
 
     scene v11lob11 # TPP. Show mr. Lee, and a couple of the students walking through the front door (can be any from within the scene except Penelope, Samantha, Cameron, Emily and Josh)
     with dissolve
@@ -121,7 +121,7 @@ label v11_lobby_mrlee:
 
     u "(Hmm, who to sit with?)"
 
-    if laurenmad:
+    if v11_aubrey_sex and laurenrs:
         $ v11_sit_with_lauren = False
         # -MC sees Aubrey sitting by herself-
 
@@ -141,8 +141,10 @@ label v11_lobby_mrlee:
 
         scene v11lob17 # TPP. Show MC now sat opposite aubrey
         with dissolve
-    elif laurenrs:
 
+        pause 1
+
+    elif laurenrs:
         scene v11lob18 # FPP. Show Lauren sat alone, slight sad look
         with dissolve
 
@@ -159,7 +161,6 @@ label v11_lobby_mrlee:
         la "Actually, I was just starting to wonder what was taking you so long. *Chuckles*"
 
     else:
-
         menu:
             "Lauren":
                 scene v11lob18 
@@ -195,6 +196,9 @@ label v11_lobby_mrlee:
 
                 scene v11lob17
                 with dissolve
+
+                pause 1
+
     stop music fadeout 3
 
     if v11_sit_with_lauren:

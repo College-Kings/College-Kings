@@ -26,8 +26,7 @@ label amber_sex_at_joshs:
     scene v8amber4a # Amber pulls back her head and is speaking now while looking into the MC's eyes seductively
     with dissolve
 
-    $ get_a_room = True
-    $ grantAchievement("get_a_room")
+    $ grant_achievement("get_a_room")
 
     if ending == "amber":
         am "I've been waiting for this since the last time."

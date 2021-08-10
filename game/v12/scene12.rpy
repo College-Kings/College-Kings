@@ -5,15 +5,12 @@
 
 label v12_room_chloe_riley:
     if not v11_riley_roomate:
-        scene v12crm1 # TPP. MC walking into his room
-        with fade
-        
-        pause 0.75
-
         scene v12crm2 # FPP. MC looking at chloe laying down on her bed, mouth closed
         with dissolve
 
         u "Hey, hey. Thanks for checking us in."
+
+        play music "music/v12/Scene 12/Track Scene 12_1.mp3" fadein 2
 
         scene v12crm2a # FPP. same as 2, smiling and mouth opened
         with dissolve
@@ -47,6 +44,7 @@ label v12_room_chloe_riley:
 
         menu:
             "Truth":
+                $ addPoint("bf")
                 scene v12crm2
                 with dissolve
 
@@ -57,8 +55,8 @@ label v12_room_chloe_riley:
 
                 cl "Mhmm, sure. I'll be keeping my eyes on you."
 
-
             "Lie":
+                $ addPoint("tm")
                 scene v12crm2 
                 with dissolve
 
@@ -124,7 +122,7 @@ label v12_room_chloe_riley:
 
         pause 0.75
 
-        if not chloers or not chloegf:
+        if not chloers and not chloegf:
             scene v12crm6 # FPP. MC now laying on his bed, lights off, looking at chloe on her bed, mouth opened
             with dissolve
 
@@ -152,12 +150,12 @@ label v12_room_chloe_riley:
             scene v12crm8 # TPP. Chloe gets up out of her bed, lights off
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             scene v12crm9 # TPP. Chloe lays on MCs chest, lights off
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             scene v12crm10 # FPP. Chloe now laying on MCs chest, mouth closed, lights off
             with dissolve
@@ -197,16 +195,16 @@ label v12_room_chloe_riley:
             scene v12crm11 # TPP. Chloe and MC sleeping
             with dissolve
 
-    else: 
-        scene v12crm1
-        with dissolve
+            pause 1.75
 
-        pause 0.76
+    else: 
 
         scene v12crm12 # FPP. Now in the room, riley on her bed, slight smile, mouth opened
         with dissolve
 
         ri "About time! What were you doing, plotting your next murder?"
+
+        play music "music/v12/Scene 12/Track Scene 12_2.mp3" fadein 2
 
         scene v12crm12a # FPP. looking at riley, mouth closed
         with dissolve
@@ -297,7 +295,7 @@ label v12_room_chloe_riley:
         scene v12crm12c
         with dissolve
 
-        ri "I DON'T! [Name], seriously!"
+        ri "I DON'T! [name], seriously!"
 
         scene v12crm12a
         with dissolve
@@ -356,5 +354,9 @@ label v12_room_chloe_riley:
 
         scene v12crm7 
         with dissolve
+
+        pause 1.25
+
+    stop music fadeout 3
 
     jump v12_cafe #scene 13

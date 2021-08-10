@@ -10,6 +10,8 @@ label v12_cafe:
 
         pause 0.75
 
+        play music "music/v12/Scene 13/Track Scene 13.mp3" fadein 2
+
         scene v12caf2 # FPP. MC sees chloe sitting on her bed going through her phone, mouth opened
         with dissolve
 
@@ -108,20 +110,24 @@ label v12_cafe:
         scene v12caf5 # TPP. MC and chloe leaving the room
         with dissolve
 
-        pause 0.75
+        pause 1
 
         scene v12caf6 # TPP. MC and chloe in the hotel lobby
         with dissolve
 
-        pause 0.75
+        pause 1
 
         scene v12caf7 # TPP. MC and chloe in the sidewalk
         with dissolve
 
-        pause 0.75
+        pause 1
 
         scene v12caf8 # TPP. MC and chloe in front of the cafe
         with dissolve
+        
+        pause 1
+
+        stop music fadeout 3
 
         jump v12_chloe_cafe #scene 14
 
@@ -130,6 +136,8 @@ label v12_cafe:
         with dissolve
 
         pause 0.75
+
+        play music "music/v12/Scene 13/Track Scene 13.mp3" fadein 2
 
         scene v12caf9 # FPP. Riley humming on her bed
         with dissolve
@@ -154,7 +162,7 @@ label v12_cafe:
         scene v12caf11 # TPP. MC throws clothes on riley, 
         with dissolve
 
-        pause 0.75
+        pause 1
 
         scene v12caf9a
         with dissolve
@@ -199,19 +207,23 @@ label v12_cafe:
         scene v12caf13 # TPP. MC and riley leaving the room
         with dissolve
 
-        pause 0.75
+        pause 1
 
         scene v12caf14 # TPP. MC and riley in the hotel lobby
         with dissolve
 
-        pause 0.75
+        pause 1
 
         scene v12caf15 # TPP. MC and riley in the sidewalk
         with dissolve
 
-        pause 0.75
+        pause 1
 
         scene v12caf16 # TPP. MC and riley in front of the cafe
         with dissolve
+
+        pause 1
+
+        stop music fadeout 3
 
         jump v12_riley_cafe #scene 14a

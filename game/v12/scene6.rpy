@@ -9,6 +9,8 @@ label v12_docks:
 
     pause 1
 
+    play music "music/v12/Scene 6/Track Scene 6.mp3" fadein 2
+
     scene v12dock2 # TPP. Show MC walking out of the shuttle, slight smile, mouth closed
     with dissolve
 
@@ -89,12 +91,14 @@ label v12_docks:
 
     menu:
         "Not much":
+            $ addPoint("tm")
             scene v12dock6e # FPP. Same as v12dock6d, Riley looking at MC, slightly worried, mouth closed, different pose
             with dissolve
 
             u "Not much, we didn't really talk. What's going on?"
 
         "No":
+            $ addPoint("bf")
             scene v12dock6e
             with dissolve
 
@@ -170,5 +174,6 @@ label v12_docks:
 
     u "(Hmmm, this must be what Amber was saying she wanted to talk about. I knew them two were getting close, but not like this.)"
 
-    jump v12s7fr #scene 7
+    stop music fadeout 3
 
+    jump v12s7fr #scene 7

@@ -270,7 +270,7 @@ label v10_lauren_room:
 
         la "Someone's excited."
 
-        scene v10lar7c  # TPP Same angle as v10lar7, Lauren now topless, eyes closed and mouth open, MC gently cupping her breast
+        scene v10lar7c # TPP Same angle as v10lar7, Lauren now topless, eyes closed and mouth open, MC gently cupping her breast
         with dissolve
 
         la "Oh [name]! *Moans*"
@@ -498,7 +498,7 @@ label v10_lauren_room:
         scene v10lar3b
         with dissolve
 
-        la "I know someone's doing a thrift sale, there's 'win a date' and someone's even doing body painting."
+        la "I know someone's doing a thrift sale, there's \"win a date\" and someone's even doing body painting."
 
         scene v10lar3c
         with dissolve

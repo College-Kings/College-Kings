@@ -95,9 +95,9 @@ label v9_room_sat_aft:
         u "(I wonder who this is.)"
 
         label s35_PhoneContinueW:
-            if contact_Chloe.getReplies():
+            if contact_Chloe.replies:
                 call screen phone
-            if contact_Chloe.getReplies():
+            if contact_Chloe.replies:
                 "(I should reply to Chloe.)"
                 jump s35_PhoneContinueW
 
@@ -142,9 +142,9 @@ label v9_room_sat_aft:
             $ contact_Chloe.addReply(_("Yeah haha, I feel wiped."), v9s35_reply8)
 
         label s35_PhoneContinueA:
-            if contact_Chloe.getReplies():
+            if contact_Chloe.replies:
                 call screen phone
-            if contact_Chloe.getReplies():
+            if contact_Chloe.replies:
                 "(I should reply to Chloe.)"
                 jump s35_PhoneContinueA
 

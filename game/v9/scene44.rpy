@@ -62,6 +62,7 @@ label v9_warehouse_lindsey:
                 pause 0.75
 
                 scene v9wwl3
+                with dissolve
 
                 u "I just wanted to say I'm sorry for not coming over. I've been so distracted with this fight. It's really gotten in my head."
 

@@ -10,6 +10,8 @@ label v12_valentine:
 
     u "Home sweet home... *Laughs* Feeling alright?"
 
+    play music "music/v12/Scene 16/Track Scene 16_1.mp3" fadein 2
+
     scene v12val1a # FPP. Same as v12val1, Riley slight smile, mouth open
     with dissolve
 
@@ -93,7 +95,7 @@ label v12_valentine:
     scene v12val4
     with dissolve
 
-    li "This is kind of exciting… *Chuckles*"
+    li "This is kind of exciting... *Chuckles*"
 
     scene v12val3b
     with dissolve
@@ -103,7 +105,7 @@ label v12_valentine:
     scene v12val3a
     with dissolve
 
-    lee "So, if everyone’s ready. You guys know the drill, shuttles are outside."
+    lee "So, if everyone's ready. You guys know the drill, shuttles are outside."
 
     scene v12val5 # TPP. Show MC, Lindsey, Chris leaving the hotel lobby, all slightly smiling, mouths closed, Chris on his phone
     with dissolve
@@ -143,17 +145,20 @@ label v12_valentine:
     scene v12val10a # FPP. Same as v12val10, Imre worried, mouth open
     with dissolve
 
-    imre "I’m just kidding… Sheesh."
+    imre "I'm just kidding... Sheesh."
 
     scene v12val11 # TPP. Show MC and Mr. Lee walking into the church, both slightly smiling, mouths closed, the bishop walking towards them (Bishop is around 50 years old), smiling, mouth closed
     with dissolve
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 16/Track Scene 16_2.mp3" fadein 2
+
     scene v12val12 # FPP. MC, Mr. Lee and Nora standing next to each other, in front of them is the bishop, MC looking at bishop, bishop looking at Mr. lee, bishop smiling, mouth open (Only Bishop in shot)
     with dissolve
 
-    bishop "Mr. Lee! These must be your students, it’s wonderful to meet you all. Has your teacher informed you of what you'll be learning today?"
+    bishop "Mr. Lee! These must be your students, it's wonderful to meet you all. Has your teacher informed you of what you'll be learning today?"
 
     scene v12val13 # FPP. Same positioning as v12val12, MC looking at Nora, Nora looking at the bishop, Nora slight smile, mouth open (Only Nora in shot)
     with dissolve
@@ -173,7 +178,8 @@ label v12_valentine:
     scene v12val15 # FPP. Same positioning as v12val14, bishop standing at the altar, MC looking at the bishop, bishop looking at MC, bishop slight smile, mouth open (Only bishop in shot)
     with dissolve
 
-    bishop "First, I'll introduce myself. My name is Bishop Jenkins. I've been a member of this church for about thirty years now and I've had the pleasure of telling the story of Valentine for decades. Are any of you familiar with the story?"
+    bishop "First, I'll introduce myself. My name is Bishop Jenkins. I've been a member of this church for about thirty years now and I've had the pleasure of telling the story of Valentine for decades."
+    bishop "Are any of you familiar with the story?"
 
     scene v12val16 # FPP. Same positioning as v12val14, MC looking at Nora, Nora looking at bishop, Nora slight smile, mouth open (Only Nora in shot)
     with dissolve
@@ -188,7 +194,8 @@ label v12_valentine:
     scene v12val15
     with dissolve
 
-    bishop "*Chuckles* That’s usually the case for most students. Due to most holidays stemming from religious roots, it's rare for schools to actually teach students the meaning behind Valentine’s, but today I'll be doing just that. Have any of you heard of St. Valentine?"
+    bishop "*Chuckles* That's usually the case for most students. Due to most holidays stemming from religious roots, it's rare for schools to actually teach students the meaning behind Valentine's."
+    bishop "But today I'll be doing just that. Have any of you heard of St. Valentine?"
 
     scene v12val18 # FPP. Same positioning as v12val14, MC looking at Imre, Imre looking at bishop, Imre slight smile, mouth open (Only Imre in shot)
     with dissolve
@@ -233,7 +240,7 @@ label v12_valentine:
     scene v12val15a
     with dissolve
 
-    bishop "Another common mistake. Cupid is the Roman God of love and within greek mythology, he is the son of Aphrodite who is the God of Love in Greek mythology."
+    bishop "Another common mistake. Cupid is the Roman God of love and within Greek mythology, he is the son of Aphrodite who is the God of Love in Greek mythology."
 
     scene v12val17a # FPP. Same as v12val17, Lindsey looking at MC, Lindsey slight smile, mouth closed
     with dissolve
@@ -318,7 +325,7 @@ label v12_valentine:
     scene v12val21
     with dissolve
 
-    ch "Oh...*Chuckles*"
+    ch "Oh... *Chuckles*"
 
     scene v12val18b
     with dissolve
@@ -338,7 +345,8 @@ label v12_valentine:
     scene v12val15e # FPP. Same as v12val15, bishop looking at Nora, bishop slight smile, mouth open
     with dissolve
 
-    bishop "Exactly. And like Valentine, I too believe that if a man and a woman love each other, they should both get married. Valentine went against the Emperor’s law and allowed soldiers to get married at his church in secret."
+    bishop "Exactly. And like Valentine, I too believe that if a man and a woman love each other, they should both get married."
+    bishop "Valentine went against the Emperor's law and allowed soldiers to get married at his church in secret."
 
     scene v12val19a
     with dissolve
@@ -368,7 +376,8 @@ label v12_valentine:
     scene v12val15
     with dissolve
 
-    bishop "Anyway… Eventually word got out and the Emperor not only demanded Valentine to stop his secret weddings, but also wanted him to convert to the Roman faith. When Valentine refused, he was sentenced to death."
+    bishop "Anyway... Eventually word got out and the Emperor not only demanded Valentine to stop his secret weddings, but also wanted him to convert to the Roman faith."
+    bishop "When Valentine refused, he was sentenced to death."
 
     scene v12val18
     with dissolve
@@ -378,7 +387,9 @@ label v12_valentine:
     scene v12val15b
     with dissolve
 
-    bishop "Bare with me, my son. While in prison, prior to his execution, the jailer's blind daughter would bring him his meals and from that stemmed many conversations. From those many conversations, they fell in love. One day, Saint Valentine slid his hand through the bars of his cell, touched the lids of the girl's eyes and miraculously she could see."
+    bishop "Bare with me, my son."
+    bishop "While in prison, prior to his execution, the jailer's blind daughter would bring him his meals and from that stemmed many conversations. From those many conversations, they fell in love."
+    bishop "One day, Saint Valentine slid his hand through the bars of his cell, touched the lids of the girl's eyes and miraculously she could see."
 
     scene v12val20a # FPP. Same as v12val20, Charli looking down, sligtly annoyed, mouth slightly open
     with dissolve
@@ -403,7 +414,8 @@ label v12_valentine:
     scene v12val15e
     with dissolve
 
-    bishop "Valentine's beloved received the letter and before the execution she pleaded with her father, the jailer, to help Valentine escape. Her father did just that, and Valentine came to what is now modern day Paris."
+    bishop "Valentine's beloved received the letter and before the execution she pleaded with her father, the jailer, to help Valentine escape."
+    bishop "Her father did just that, and Valentine came to what is now modern day Paris."
 
     scene v12val19a
     with dissolve
@@ -423,7 +435,8 @@ label v12_valentine:
     scene v12val15f # FPP. Same as v12val15a, bishop slightly annoyed, mouth open
     with dissolve
 
-    bishop "Mr. Lee, we are all professionals at what we've dedicated our lives toward. Your knowledge of history in a general sense is something I'd never attempt to challenge. I’d appreciate the same respect for my specialization."
+    bishop "Mr. Lee, we are all professionals at what we've dedicated our lives toward."
+    bishop "Your knowledge of history in a general sense is something I'd never attempt to challenge. I'd appreciate the same respect for my specialization."
 
     scene v12val19a
     with dissolve
@@ -438,7 +451,7 @@ label v12_valentine:
     scene v12val18c # FPP. Same as v12val18a, Imre slight smile, mouth open
     with dissolve
 
-    imre "Mr. Lee, \"if you want to behave like a child I'll treat you like one...remember, this is a church.\""
+    imre "Mr. Lee, \"if you want to behave like a child I'll treat you like one... remember, this is a church.\""
 
     scene v12val19b # FPP. Same as v12val19, Mr. Lee looking at MC, Mr. Lee slightly embarassed, mouth closed
     with dissolve
@@ -463,7 +476,7 @@ label v12_valentine:
     scene v12val15
     with dissolve
 
-    bishop "To carry on students, Valentine dedicated his life to ensuring that others could live a life with love and in the end, it was love that saved him."
+    bishop "To carry on, students, Valentine dedicated his life to ensuring that others could live a life with love and in the end, it was love that saved him."
 
     scene v12val16
     with dissolve
@@ -577,7 +590,7 @@ label v12_valentine:
     scene v12val27a # FPP. Same as v12val27, Bishop looking at Mr. Lee, Bishop slight smile, mouth open
     with dissolve
 
-    bishop "So be it. We've already rushed the procedures of the ceremony quite a bit, but I'm betting most of you have seen a wedding so I’ll assume you get the gist."
+    bishop "So be it. We've already rushed the procedures of the ceremony quite a bit, but I'm betting most of you have seen a wedding so I'll assume you get the gist."
 
     scene v12val29 # FPP. Same positioning as v12val27, MC looking at Lindsey, Lindsey looking at bishop, Lindsey slight smile, mouth open (Only Lindsey in shot)
     with dissolve
@@ -594,6 +607,7 @@ label v12_valentine:
 
     menu:
         "Leave her be":
+            $ addPoint("bro")
 
             u "(Not the time, not in front of everyone.)"
 
@@ -608,10 +622,14 @@ label v12_valentine:
             pause 0.75
 
         "Comfort her":
+            $ addPoint("bf")
             scene v12val31 # TPP. Show MC leaning in a whispering in Nora's ear, holding her hand, Nora slight smile, mouth closed, MC slight smile, mouth open
             with dissolve
 
-            u "*Whisper* I know that bothered you, but try and roll it off your shoulder, yeah? Worry about what’s in front of you, not what's down the hall."
+            u "*Whisper* I know that bothered you, but try and roll it off your shoulder, yeah? Worry about what's in front of you, not what's down the hall."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 16/Track Scene 16_3.mp3" fadein 2
 
     scene v12val30c # FPP. Same as v12val30, Nora looking at MC, Nora slight smile, mouth closed
     with dissolve
@@ -646,12 +664,12 @@ label v12_valentine:
     scene v12val30e # FPP. Same as v12val30c, Nora slight smile, mouth open
     with dissolve
 
-    no "*Sighs* Okay. [Name], when I think about the type of person I want to marry, I think of someone who is patient. Someone who is selfless. Someone who is always there for me, even when I’m least expecting it."
+    no "*Sighs* Okay. [name], when I think about the type of person I want to marry, I think of someone who is patient. Someone who is selfless. Someone who is always there for me, even when I'm least expecting it."
 
     scene v12val30f # FPP. Same as v12val30e, different pose
     with dissolve
 
-    no "You’ve been all of those things, and more. And still, to this day, I don’t know why you do the things you do for me, but I’m so appreciative. You’re like a dream..."
+    no "You've been all of those things, and more. And still, to this day, I don't know why you do the things you do for me, but I'm so appreciative. You're like a dream..."
 
     if noralikes:
         scene v12val30g # FPP. Same as v12val30c, Nora eyes tearing up (not crying, just tearing up), slight smile, mouth closed
@@ -662,7 +680,7 @@ label v12_valentine:
     scene v12val30e
     with dissolve
 
-    no "And standing here now, I feel like I’m exactly where I’m supposed to be... I uh, I love you. *Chuckles*"
+    no "And standing here now, I feel like I'm exactly where I'm supposed to be... I uh, I love you. *Chuckles*"
 
     if chloegf:
         scene v12val32 # FPP. Same positioning as v12val27, MC looking at Chloe, Chloe looking at Lindsey, Chloe slight smile, mouth open (Only Chloe in shot)
@@ -678,7 +696,7 @@ label v12_valentine:
         scene v12val32
         with dissolve
 
-        cl "*Whispers* Oh! Yeah, haha.He asked me out while we were in London… It was so cute,"
+        cl "*Whispers* Oh! Yeah, haha. He asked me out while we were in London... It was so cute,"
 
         scene v12val29b
         with dissolve
@@ -700,10 +718,12 @@ label v12_valentine:
 
     menu:
         "Joke":
+            $ addPoint("bro")
             scene v12val30h # FPP. Same as v12val30c, different pose
             with dissolve
 
-            u "Nora, I remember living alone on the streets with nothing but the clothes on my back. The day you came up to me, I thought I'd get a couple dollars for a chicken sandwich, but I ended up with the best digits I could have ever hoped for - the number to an opportunity."
+            u "Nora, I remember living alone on the streets with nothing but the clothes on my back."
+            u "The day you came up to me, I thought I'd get a couple dollars for a chicken sandwich, but I ended up with the best digits I could have ever hoped for - the number to an opportunity."
 
             scene v12val30c
             with dissolve
@@ -731,15 +751,16 @@ label v12_valentine:
             bishop "Haven't heard any vows like that before, but... Vows are vows I suppose."
 
         "Be serious":
+            $ addPoint("bf")
             scene v12val30h
             with dissolve
 
-            u "Nora, I haven’t always made the best choices in life, or had the best goals in life... But, when I met you, I started to see things a little differently."
+            u "Nora, I haven't always made the best choices in life, or had the best goals in life... But, when I met you, I started to see things a little differently."
 
             scene v12val30c
             with dissolve
             
-            u "I never saw myself settling down or living the straight and narrow life, but at this point I can’t imagine what my life would be like without you... You've become the brightest light in my world. And, I love you."
+            u "I never saw myself settling down or living the straight and narrow life, but at this point I can't imagine what my life would be like without you... You've become the brightest light in my world. And, I love you."
 
             if chloegf:
                 scene v12val32a # FPP. Same as v12val32, Chloe looking at MC, Chloe slight smile, mouth open
@@ -803,12 +824,12 @@ label v12_valentine:
     bishop "As I was saying, this is normally the moment of the kiss."
 
     if not chloegf:
-
         scene v12val30c
         with dissolve
 
         menu:
             "Fist bump":
+                $ addPoint("bro")
                 scene v12val30i # FPP. Same as v12val30c, MC has his fist extended, Nora slight smile, mouth closed, fist bumping MC
                 with dissolve
 
@@ -820,8 +841,11 @@ label v12_valentine:
                 bishop "Very sweet, you two."
 
             "Kiss her cheek":
+                $ addPoint("bf")
                 scene v12val35 # TPP. Show MC kissing Nora's cheek, Nora slight smile, blushing, mouth closed
                 with dissolve
+
+                play sound "sounds/kiss.mp3"
 
                 pause 0.75
 
@@ -941,6 +965,9 @@ label v12_valentine:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 16/Track Scene 16_4.mp3" fadein 2
+
     scene v12val42 # TPP. Show Charli walking next to MC, Imre and Lindsey walking in front of them, on sidewalk, all slightly smiling, mouths closed
     with dissolve
 
@@ -1000,5 +1027,7 @@ label v12_valentine:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v12_escape_room #scene 17

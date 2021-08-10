@@ -10,6 +10,8 @@ label v12_murder_mystery_reveal:
 
     lee "Wow, that turned out a lot better than expected. I hope you all enjoyed yourselves. Was anyone surprised to learn [name] was my chosen murderer?"
 
+    play music "music/v12/Scene 8/Track Scene 8.mp3" fadein 2
+
     scene v12mmr2 # FPP. Same positioning as v12mmr1, MC looking at Lindsey, Lindsey looking at Mr. Lee's direction, Lindsey smiling, mouth open
     with dissolve
 
@@ -63,9 +65,10 @@ label v12_murder_mystery_reveal:
     scene v12mmr1
     with dissolve
 
+    $ v12_murder_count = len(v12s7_killList)
     if len(v12s7_killList) >= 5:
 
-        lee "A total of [number of victims] people were killed, so let's give our murderer a round of applause."
+        lee "A total of [v12_murder_count] people were killed, so let's give our murderer a round of applause."
 
         scene v12mmr99 # TPP. Same positioning as v12mmr1, Show Riley, Lindsey and Imre applauding MC, all smiling, mouths closed
         with dissolve
@@ -171,13 +174,14 @@ label v12_murder_mystery_reveal:
 
     menu:
         "Let Chris help her":
+            $ addPoint("bro")
 
             u "(It's his girl, he's got her.)"
 
             scene v12mmr7b # FPP. Same cam as v12mmr7, Chris and Nora looking at each other, Nora feeling sick, mouth closed, Chris worried, mouth open
             with dissolve
 
-            ch "You need some water or something."
+            ch "You need some water or something?"
 
             scene v12mmr7c # FPP. Same as v12mmr7b, Chris mouth closed, worried, Nora feeling sick, mouth open
             with dissolve
@@ -195,6 +199,7 @@ label v12_murder_mystery_reveal:
             pause 0.75
 
         "Hurry to help her":
+            $ addPoint("bf")
             $ noralikes = True
             
             scene v12mmr9 # TPP. Show MC rushing to Nora, MC worried, mouth closed, Nora feeling sick, mouth closed
@@ -217,8 +222,8 @@ label v12_murder_mystery_reveal:
 
             u "Well don't worry I gotchu."
 
-            scene v12mmr9a # FPP. Same as v12mmr9, MC rushing back to where he was standing in v12mmr1
-            with dissolve
+            #scene v12mmr9a # FPP. Same as v12mmr9, MC rushing back to where he was standing in v12mmr1
+            #with dissolve
 
             pause 0.75
 
@@ -240,7 +245,7 @@ label v12_murder_mystery_reveal:
     scene v12mmr1
     with dissolve
 
-    lee "Casual sea sickness, the pleasures of the ferry. Enjoy the trip students."
+    lee "Casual sea sickness, the pleasures of the ferry. Enjoy the trip, students."
 
     scene v12mmr9b # FPP. Show MC running over to the edge of the ship where Nora is in v12mmr11, MC worried, mouth closed
     with dissolve
@@ -275,7 +280,7 @@ label v12_murder_mystery_reveal:
     scene v12mmr14 # TPP. Show MC halfway through sitting down on a seat, mouth closed, bored
     with fade
 
-    pause 0.75
+    pause 1.25
 
     scene v12mmr15 # TPP. Show MC sitting down, sleeping, mouth closed
     with dissolve
@@ -301,5 +306,7 @@ label v12_murder_mystery_reveal:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v12_dock_arrival #scene 9

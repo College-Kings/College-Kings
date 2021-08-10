@@ -14,18 +14,19 @@ label v10_fight_result:
     # -If MC wins the fight against Ryan-
 
         if v10_ryan_win:
+
             scene v10fr1
             with dissolve
 
             jo "I think as we all expected, [name] has dominated! So ladies if you're itching for a winner tonight, I found one."
 
+            jo "Anything from the man himself?"
+
             scene v10fr2 # TPP. Show close up of MC hands in the air above head, excited face, mouth closed
             with dissolve
 
-            jo "Anything from the man himself?"
-
-            scene v10fr1
-            with dissolve
+            if reaction == 0.5:
+                $ grant_achievement("lights_out")
 
             u "This wasn't just a fight for me, it was a fight for me and my brothers."
 
@@ -118,6 +119,9 @@ label v10_fight_result:
 
             scene v10fr2
             with dissolve
+
+            if reaction == 0.5:
+                $ grant_achievement("golden_boy")
 
             u "This wasn't just a fight for me, it was a fight for me and my brothers."
 

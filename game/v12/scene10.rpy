@@ -10,6 +10,8 @@ label v12_amber_bus:
 
     pause 0.75
 
+    play music "music/v12/Scene 10/Track Scene 10.mp3" fadein 2
+
     scene v12amb2 # TPP. Show Amber taking a seat (she's on the window seat), MC still standing next to his seat (he will sit next to her), both slight smiles, mouths closed (Ms. Rose sitting on the other aisle with Imre, they're not in shot)
     with dissolve
 
@@ -40,6 +42,7 @@ label v12_amber_bus:
 
     menu:
         "Tease her":
+            $ addPoint("tm")
             scene v12amb3b # FPP. Same as v12amb3, Amber slight smile, mouth closed, different pose
             with dissolve
 
@@ -56,6 +59,7 @@ label v12_amber_bus:
             u "I may be willing to take that risk."
 
         "Convince her":
+            $ addPoint("bf")
             scene v12amb3b
             with dissolve
 
@@ -184,6 +188,7 @@ label v12_amber_bus:
 
     menu:
         "Stay out of it":
+            $ addPoint("bf")
 
             u "It's all your decision, I don't wanna sway you either way. It's gotta be your choice."
 
@@ -208,6 +213,7 @@ label v12_amber_bus:
             u "Exactly."
 
         "Say something":
+            $ addPoint("bro")
             $ v12_amber_tell_riley = True
 
             u "You should just get it over with and tell her what's up."
@@ -481,5 +487,7 @@ label v12_amber_bus:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v12_paris_hotel #scene 11

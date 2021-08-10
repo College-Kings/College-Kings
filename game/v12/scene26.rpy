@@ -88,7 +88,7 @@ label v12_nora_chris_fight:
     scene v12ncf6 # TPP. Show Chloe and Aubrey watching the fight from a distance, both worried, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12ncf5a # TPP. Same as v12ncf5, Chris very angry, mouth open, pointing his finger at Nora
     with dissolve
@@ -101,24 +101,24 @@ label v12_nora_chris_fight:
     no "Maybe if you weren't so focused on chasing after the man your daddy was, you'd be your own-"
 
     scene v12ncf4e # TPP. Same as v12ncf4, Chris pushing Nora, Chris very angry, mouth closed, Nora losing her balance, mouth closed, scared
-    with dissolve
+    with hpunch
 
-    pause 0.75
+    pause 1.25
 
     scene v12ncf7 # TPP. Nora on the ground, mouth open, curled up on the ground, crying, Chris looking down at her, Chris very angry, mouth closed
-    with dissolve
+    with vpunch
 
     no "*Crying* Ahh!"
 
     scene v12ncf8 # TPP. Show MC very worried walking towards Nora, Ryan holding him back, Ryan worried, both mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12ncf6a # TPP. Show Aubrey and Chloe running over to Nora, both of them very worried, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12ncf9 # TPP. Show Chloe in front of Chris, Chloe very angry, mouth open (Only Chris in shot)
     with dissolve
@@ -195,8 +195,10 @@ label v12_nora_chris_fight:
 
     menu:
         "Go to Nora":
+            $ addPoint("bf")
             $ v12_followed_nora = True
 
             jump v12_chase_nora #scene 26b
         "Go to Chris":
+            $ addPoint("bro")
             jump v12_follow_chris #scene 26a

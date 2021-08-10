@@ -7,9 +7,6 @@
 # Post 2: amber_bet.webp - Amber nude pic, check v12slpbet8 for pose, pic taken from MC perspective
 # Post 3: mc_bet.webp - MC nude bet pic, check v12slpbet5b for pose, pic taken from Amber perspective
 
-default v12s18_bottlespin_played = False
-default v12s18_fmk_played = False
-
 label v12_slumber_party:
     scene v12slp1 # TPP. Show MC, Imre and Aubrey walking into the hotel lobby, all slight smiles, mouths closed
     with fade
@@ -493,10 +490,10 @@ label v12s18_bottlespin:
 
     pause 0.75
 
-    play sound "sounds/kiss.mp3"
-
     scene v12slpbs9 # TPP. Show Imre and Lindsey having a peck on the lips
     with dissolve
+
+    play sound "sounds/kiss.mp3"
 
     pause 0.75
 
@@ -547,6 +544,7 @@ label v12s18_bottlespin:
 
     menu:
         "Kiss him":
+            $ addPoint("tm")
 
             u "Fuck. Well, I'm not in the mood to get slapped, so let's get this over with."
 
@@ -605,6 +603,7 @@ label v12s18_bottlespin:
                 ch "Wish you were a Wolf, hitting like that."
 
         "Get slapped":
+            $ addPoint("bro")
             scene v12slpbs7f # FPP. Same as v12slpbs7b, Ryan slight smile, mouth closed
             with dissolve
 
@@ -777,6 +776,8 @@ label v12s18_bottlespin:
 
     scene v12slpbs12e # FPP. Same as v12slpbs12b, Chris talking on his phone, worried, mouth open
     with dissolve
+
+    stop sound
 
     ch "Hello?"
 
@@ -1270,6 +1271,7 @@ label v12s18_fmk:
 
     menu:
         "Marry Nora":
+            $ addPoint("bf")
             scene v12slpfmk5f # FPP. Same as v12slpfmk5c, Nora slight smile, mouth closed
             with dissolve
 
@@ -1306,6 +1308,7 @@ label v12s18_fmk:
             am "*Laughs*"
 
         "Marry Amber":
+            $ addPoint("bro")
             scene v12slpfmk4d
             with dissolve
 
@@ -1324,7 +1327,7 @@ label v12s18_fmk:
             scene v12slpfmk4a
             with dissolve
 
-            am "Because his horse can't be tamed, baby."
+            am "Because this horse can't be tamed, baby."
 
     scene v12slpfmk5f
     with dissolve
@@ -1451,7 +1454,7 @@ label v12s18_bet: # END OF FREE ROAM
     scene v12slpbet1
     with dissolve
 
-    am "You'll find out when we get there. *Chuckles*  C'mon!"
+    am "You'll find out when we get there. *Chuckles* C'mon!"
 
     scene v12slpbet2 # TPP. Show MC and Amber getting inside the bathroom, MC slightly worried, mouth closed, Amber smiling, mouth closed
     with dissolve
@@ -1462,7 +1465,7 @@ label v12s18_bet: # END OF FREE ROAM
         scene v12slpbet3 # FPP. MC and Amber now in the bathroom, looking at each other, Amber smiling, mouth open
         with dissolve
 
-        am "Alright mister, strip  down."
+        am "Alright mister, strip down."
 
         scene v12slpbet3a # FPP. Same as v12slpbet3, Amber smiling, mouth closed
         with dissolve
@@ -1856,6 +1859,7 @@ label v12s18_bet: # END OF FREE ROAM
 
     menu:
         "Cuddle":
+            $ addPoint("bf")
             scene v12slpbet16b # TPP. Show MC cuddling with Amber, both smiling, mouths closed
             with dissolve
 
@@ -1871,7 +1875,7 @@ label v12s18_bet: # END OF FREE ROAM
 
             u "Something like that."
 
-            if amberrs or kct == "confident":
+            if amberrs or kct == "popular":
                 if not amberrs:
                     call screen kctPopup
                 
@@ -1912,6 +1916,7 @@ label v12s18_bet: # END OF FREE ROAM
                 pause 0.75
 
         "Stay away":
+            $ addPoint("bro")
             scene v12slpbet18 # FPP. MC and Amber lying in bed, not cuddled up (check v12slpbet16a), MC looking at Amber, Amber's back turned to MC
             with dissolve
 

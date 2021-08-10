@@ -17,9 +17,10 @@ label v11_museum_tour:
     scene v11tm3 # FPP. Same positioning as v11tm2, MC is looking at Mr Lee, Mr Lee has a dinosaur drawing behind him, Mr Lee smiling, mouth open, looking at MC
     with dissolve
 
-    lee "Ahh, the museum. Students, look around, are you not just... enthralled? The past is right here, before you in all its glory. Gaze upon these dinosaurs students."
+    lee "Ahh, the museum. Students, look around, are you not just... enthralled? The past is right here, before you in all its glory. Gaze upon these dinosaurs, students."
 
-    lee "Those of us that study history have debated whether the world is actually billions of years old and these are real or if it's only thousands of years old and these are just put together parts of a scientist's imagination."
+    lee "Those of us that study history have debated whether the world is actually billions of years old and these are real..."
+    lee "or if it's only thousands of years old and these are just put together parts of a scientist's imagination."
 
     scene v11tm4 # FPP. Same positioning as v11tm2, MC looking at Nora, she is rolling her eyes, mouth closed, slightly annoyed, looking at Mr Lee (Lee out of shot)
     with dissolve
@@ -65,14 +66,13 @@ label v11_museum_tour:
             no "Keep dreaming, [name]."
 
         "Not real":
-            $ just_a_theory = True
-            $ grantAchievement("just_a_theory")
             $ noraLike += 1
             $ rileyLike -= 1
 
             scene v11tm5a # FPP. Same as v11tm5, but Riley looking at MC, mouth closed, slightly annoyed
             with dissolve
 
+            $ grant_achievement("just_a_theory")
             u "Sorry Riley, they definitely aren't real."
 
             scene v11tm5b # FPP. Same as v11tm5a, Riley mouth open, slightly annoyed
@@ -108,7 +108,7 @@ label v11_museum_tour:
     scene v11tm9a # FPP. Same as v11tm9, Chris lowers his phone, slightly worried, mouth open, looking at Mr Lee
     with dissolve
 
-    ch "Sorry Mr. Lee." 
+    ch "Sorry, Mr. Lee."
     
     scene v11tm9
     with dissolve

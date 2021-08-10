@@ -18,10 +18,10 @@ init -1 python:
             setattr(store, "kct", sortedKCT[0])
             renpy.notify("Your KCT has changed to " + kct)
 
-    def grantAchievement(achieve):
+    def grant_achievement(_achievement):
         try:
-            renpy.show(achieve, at_list=achievementAtList)
+            renpy.show(_achievement, at_list=achievementAtList)
         except TypeError: pass
-        achievement.grant(achieve) 
+        achievement.grant(_achievement) 
         achievement.sync()
         
