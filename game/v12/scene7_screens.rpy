@@ -16,9 +16,9 @@ screen murder_button_overlay(character):
         idle Transform("images/v12/Scene 7/gui/gun.webp", size=(100, 100))
         hover Transform("images/v12/Scene 7/gui/gun_hover.webp", size=(100, 100))
         if v12s7_seenList:
-            action Jump("v12s7_mc_caught") # Check Label after transcribing review
+            action Jump("v12s7_mc_caught")
         else:
-            action [ Function(character.kill), Jump("MurderSuccess") ] # Check Label after transcribing review
+            action [ Function(character.kill), Jump("v12s7_[character.name]_kill".lower()) ]
 
 
 screen v12s7_minimap(location):
@@ -411,13 +411,13 @@ screen v12s7_right_viewpoint():
     tag freeRoam
 
     imagemap:
-        if josh_europe and not josh_moved and josh not in v12s7_killList:
+        if josh_europe and not v12s7_josh and josh not in v12s7_killList:
             idle "images/v12/Scene 7/Screens/Navigation 15a.webp" # Josh
         else:
             idle "images/v12/Scene 7/Screens/Navigation 15b.webp" # No one
         hover "images/v12/Scene 7/Buttons/nav 15mock.webp"
 
-        if josh_europe and not josh_moved and josh not in v12s7_killList:
+        if josh_europe and not v12s7_josh and josh not in v12s7_killList:
             hotspot (729, 375, 451, 545):
                 if v12s7_josh:
                     if ((not v12s7_riley or v12s7_riley2) and riley not in v12s7_killList) and (chloe not in v12s7_killList):
