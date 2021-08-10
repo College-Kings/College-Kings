@@ -108,7 +108,7 @@ label v12_nora_room:
             scene v12nos1j # FPP. Same as v12nos1h, Nora looking at MC, Nora slight smile, mouth closed
             with dissolve
 
-            u "You'd be my sunrise and sunset, haha...  Being in a relationship means providing for your partner in every aspect, not just financially. You'd be everything to me."
+            u "You'd be my sunrise and sunset, haha... Being in a relationship means providing for your partner in every aspect, not just financially. You'd be everything to me."
 
     scene v12nos1h
     with dissolve
@@ -509,7 +509,7 @@ label v12_nora_sex:
 
         u "From now on..."
 
-        no "Mmm, yes [Name]!"
+        no "Mmm, yes [name]!"
 
         scene v12norst2 # Ignore as animation
         with dissolve

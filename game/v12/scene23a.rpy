@@ -333,7 +333,7 @@ label v12_mc_chilling:
                 $ v12s23a_beatcameron = True
                 
                 scene v12mor13a
-                with dissolve                
+                with dissolve
             
                 u "Yeah. Of course I can take him. He may be a lunatic, but I can handle that."
 
@@ -489,7 +489,7 @@ label v12_mc_chilling:
                 scene v12mor25 # TPP. Cameron picks up laying in his bed, mouth opened
                 with dissolve
 
-                ca "Huh? [Name]? What do you want?"
+                ca "Huh? [name]? What do you want?"
 
                 scene v12mor24a # TPP. Same as 24, mouth opened
                 with dissolve
@@ -771,7 +771,7 @@ label v12_mc_chilling:
             scene v12mor25
             with dissolve
 
-            ca "Huh? [Name]? What do you want?"
+            ca "Huh? [name]? What do you want?"
 
             scene v12mor24a
             with dissolve
