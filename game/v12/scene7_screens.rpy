@@ -761,8 +761,8 @@ screen v12s7_captains_room():
                 else:
                     action Jump("v12s7_lindsey_charlie1") # Lindsey & Charli
 
-        elif charli in v12s7_killList:
-            idle "images/v12/Scene 7/Screens/Navigation 26c.webp" # Charli
+        elif charli not in v12s7_killList:
+            idle "images/v12/Scene 7/Screens/Navigation 26b.webp" # Charli
             hover "images/v12/Scene 7/Buttons/nav 26b.webp"
 
             hotspot (1157, 163, 254, 720):
@@ -772,7 +772,7 @@ screen v12s7_captains_room():
                     action Jump("v12s7_charli2") # Charli
 
         else:
-            idle "images/v12/Scene 7/Screens/Navigation 26b.webp" # No one
+            idle "images/v12/Scene 7/Screens/Navigation 26c.webp" # No one
             hover "images/v12/Scene 7/Buttons/nav 26c.webp"
 
         hotspot (1824, 79, 95, 957) action Show("v12s7_left_gallery_front")
