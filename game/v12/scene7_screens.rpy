@@ -773,7 +773,7 @@ screen v12s7_captains_room():
             idle "images/v12/Scene 7/Screens/Navigation 26b.webp" # No one
             hover "images/v12/Scene 7/Buttons/nav 26c.webp"
 
-        hotspot (1824, 79, 95, 957) action Show(previous_location)
+        hotspot (1824, 79, 95, 957) action Show("v12s7_left_gallery_front")
 
     use v12s7_minimap(location="ud_captains_room")
 
