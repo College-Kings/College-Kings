@@ -856,8 +856,8 @@ label v12_mc_chilling:
 
             u "(Not even gonna attempt to open up that door.)"
 
-       scene v12mor22
-       with dissolve
+        scene v12mor22
+        with dissolve
 
         u "(Don't know where the roomie went, but I'm going to sleep.)"
 
