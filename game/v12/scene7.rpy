@@ -197,8 +197,7 @@ label v12s7fr:
     scene v12fer1
     with dissolve
 
-    lee "I know this sounds... Unfair. All in all, the mass murder we will be reenacting today was not fair to the victims."
-    lee "Your goal is to make sure the murderer does not get a reward, by catching them as soon as possible." 
+    lee "I know this sounds... Unfair. All in all, the mass murder we will be reenacting today was not fair to the victims. Your goal is to make sure the murderer does not get a reward, by catching them as soon as possible." 
     lee "Now, If the murderer does get a reward... I suppose the \"prize\" could be something catered for two. So the murderer will have to share it with one of his or her victims... Fair?"
 
     scene v12fer12a
@@ -832,8 +831,9 @@ label v12s7_riley1:
     scene v12ferri4
     with dissolve
 
-    ri "*Southern accent* And now my confusion is all too much. It makes sense why the wealthy and a man such as yourself would be here..."
-    ri "But I can't understand why Miss Blue Collar here would be allowed to join us."
+    ri "*Southern accent* And now my confusion is all too much. It makes sense why the wealthy and a man such as yourself would be here, but I can't understand why Miss Blue Collar here would be allowed to join us."
+
+
 
     if chloegf:
         # -Chloe kisses MC-
@@ -1061,7 +1061,7 @@ label v12s7_chloe1:
     scene v12ferch1a # FPP. same 1, mouth open
     with dissolve
 
-    cl "*Chuckles* I'm the poor one, remember?"
+    cl "*Chuckles*I'm the poor one, remember?"
 
     scene v12ferch1
     with dissolve
@@ -1185,12 +1185,12 @@ label v12s7_chloe1:
     scene v12ferch1b
     with dissolve
 
-    cl "Just in case you're listening Mr. Lee, my \"poor girl\" character has been having problems with her sorority back at home and just needed to vent.."
+    cl "Just in case you're listening Mr. Lee, my 'poor girl' character has been having problems with her sorority back at home and just needed to vent.."
 
     scene v12ferch1c
     with dissolve
 
-    u "Wow... *Chuckles* You're actually scared of Mr. Lee."
+    u "Wow' *Chuckles* You're actually scared of Mr. Lee."
 
     scene v12ferch1b
     with dissolve
@@ -1358,7 +1358,7 @@ label v12s7_chloe_kill:
     scene v12ferch1e
     with dissolve
 
-    u "Well, thank you, I think... Is being labeled well-balanced a good thing?"
+    u "Well, thank you' I think. Is being labeled well-balanced a good thing?"
 
     scene v12ferch1d
     with dissolve
@@ -1477,7 +1477,7 @@ label v12s7_riley3:
     scene v12ferric3
     with dissolve
 
-    cl "Okay, but... That doesn't mean we've cleared you as not-guilty. This just means we're exploring other options. Don't put all your eggs in one basket and all that, right?"
+    cl "Okay, but' That doesn't mean we've cleared you as not-guilty. This just means we're exploring other options. Don't put all your eggs in one basket and all that, right?"
 
     scene v12ferric2
     with dissolve
@@ -1487,7 +1487,7 @@ label v12s7_riley3:
     scene v12ferric2a
     with dissolve
 
-    u "Is there a sign on me that says \"killer\" or something? *Chuckles* I haven't done anything."
+    u "Is there a sign on me that says 'killer' or something? *Chuckles* I haven't done anything."
 
     scene v12ferric3
     with dissolve
@@ -1497,7 +1497,7 @@ label v12s7_riley3:
     scene v12ferric3a
     with dissolve
 
-    u "Hmm... Then I guess I'll just have to change up my tactics."
+    u "Hmm' Then I guess I'll just have to change up my tactics."
 
     scene v12ferric2
     with dissolve
@@ -1782,7 +1782,7 @@ label v12s7_lauren1:
     scene v12ferla1b # FPP. same 1, Show lauren annoyed, mouth open
     with dissolve
 
-    la "See! You and everyone else, I don't know why Mr. Lee would do that. No one will come near me 'cause they don't wanna be killed. Except for Imre, he actually begged me to kill him haha."
+    la "See! You and everyone else, I don't know why Mr. Lee would do that. No one will come near me 'cause they don't wanna be killed. Except for Imre, he actually begged me to kill him haha. e."
 
     scene v12ferla1
     with dissolve
@@ -2122,7 +2122,7 @@ label v12s7_ryan_imre1:
 
             u "Oh, that's unfortunate."
 
-        "Tell Ryan to cool it":
+        "Tell Ryan to Cool it":
             $ addPoint("bro")
             
             scene v12ferryi9a
@@ -2143,7 +2143,7 @@ label v12s7_ryan_imre1:
             scene v12ferryi8
             with dissolve
 
-            imre "Watch what you say! At least follow it with \"no homo\" or something!"
+            imre "Watch what you say! At least follow it with 'no home' or something!"
 
             scene v12ferryi8a
             with dissolve
@@ -2984,7 +2984,7 @@ label v12s7_lindsey2:
     scene v12ferli3
     with dissolve
 
-    u "Well... sacrifice someone."
+    u "Well...sacrifice someone."
 
     scene v12ferli3a
     with dissolve
@@ -2997,7 +2997,7 @@ label v12s7_lindsey2:
             scene v12ferli3a
             with dissolve
             
-            u "I can be your distraction. I'll just try and separate them... then see if I get murked or not."
+            u "I can be your distraction. I'll just try and separate them...then see if I get murked or not."
 
         "Charli":
             $ addPoint("tm")
@@ -3452,7 +3452,7 @@ label v12s7_msrose1:
     scene v12fermsr1b
     with dissolve
 
-    ro "And I on you, little boxer boy."
+    ro "And I you, little boxer boy."
 
     scene v12fermsr2 # TPP. Show mc leaving.
     with dissolve
@@ -3576,7 +3576,7 @@ label v12s7_penelope1:
     scene v12ferpen1a
     with dissolve
 
-    pe "I could've enjoyed a nice ride without being bothered if I had just kept my mouth shut. I said that I couldn't wait to get on the ferry and relax and he heard me... now here we are."
+    pe "I could've enjoyed a nice ride without being bothered if I had just kept my mouth shut. I said that I couldn't wait to get on the ferry and relax and he heard me...now here we are."
 
     menu:
         "Let her work":
@@ -3648,7 +3648,7 @@ label v12s7_penelope1:
                 scene v12ferpen1a
                 with dissolve
 
-                u "Haha, I have no idea. My card just said famous boxer... I've been making up my story."
+                u "Haha, I have no idea. My card just said famous boxer...I've been making up my story."
 
                 scene v12ferpen1
                 with dissolve
@@ -3660,7 +3660,7 @@ label v12s7_penelope1:
                         scene v12ferpen1a
                         with dissolve
                         
-                        u "Uhm... yeah, it's John Paris."
+                        u "Uhm...yeah, it's John Paris."
 
                         scene v12ferpen1
                         with dissolve
@@ -3914,7 +3914,7 @@ label v12s7_amber1:
     scene v12feram5a # TPP. same 5, mc mouth open
     with dissolve
 
-    u "What... I mean, I don't know what's considered contraband."
+    u "What...I mean, I don't know what's considered contraband."
 
     scene v12feram5
     with dissolve
@@ -3949,7 +3949,7 @@ label v12s7_amber1:
     scene v12feram8
     with dissolve
 
-    am "Oh shit, that's your... why are you hard right now? Are you turned on by this?"
+    am "Oh shit, that's your...why are you hard right now? Are you turned on by this?"
 
     menu:
         "A little":
@@ -4626,13 +4626,13 @@ label v12s7_sam2:
 
             u "Wanna focus on the game? That's the point of all of this, I think... To make us focus on something else for a while."
 
-        "Go for the kiss":
+        "Go for kiss":
             $ addPoint("bf")
 
             scene v12fersam1b
             with dissolve
             
-            u "I think this might help you think about something else..."
+            u "I think this might help you think about something else'"
 
             scene v12fersam1c # FPP. same 1, new pose, mouth open
             with dissolve
@@ -4647,7 +4647,7 @@ label v12s7_sam2:
             scene v12fersam1c
             with dissolve
 
-            sa "Oh... Yeah. *Chuckles* That definitely helps."
+            sa "Oh' Yeah. *Chuckles* That definitely helps."
 
             scene v12fersam1b
             with dissolve
@@ -5016,7 +5016,7 @@ label v12s7_cameron2_kill:
     scene v12fercam3a
     with dissolve
 
-    ca "That's stupid. Why are you tryna kill me... you already know I'm not really part of the game."
+    ca "That's stupid. Why are you tryna kill me...you already know I'm not really part of the game."
 
     scene v12fercam3
     with dissolve
@@ -5104,7 +5104,7 @@ label v12s7_nora1:
     no "Alright, sorry. I'm not trying to be a bitch. I'm just not in the mood for this."
 
     menu:
-        "See you later":
+        "see you later":
             $ addPoint("bro")
             scene v12fernor1
             with dissolve
@@ -5264,7 +5264,7 @@ label v12s7_nora1:
 
                     u "There's no choice."
 
-                    if joinwolves:
+                    if join wolves:
                         scene v12fernor1
                         with dissolve
 
@@ -5316,6 +5316,8 @@ label v12s7_nora1:
                     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
                     call screen v12s7_balcony_left
+
+
 
 label v12s7_nora1_kill:
 
@@ -5658,7 +5660,7 @@ label v12s7_josh1:
             scene v12ferjo1b # FPP. Show josh, angry, mouth open
             with dissolve
 
-            jo "Cats? CATS!!? Don't disrespect them like that! They are the pinnacle of all felines. The leopard is a dignified creature handcrafted by God. Also... *Whispers* Don't fucking laugh at me."
+            jo "Cats? CATS!!? Don't disrespect them like that! They are the pentacle of all felines. The leopard is a dignified creature handcrafted by God. Also' *Whispers* Don't fucking laugh at me."
 
             scene v12ferjo1c # FPP. Show josh, angry, mouth closed
             with dissolve
@@ -5690,7 +5692,7 @@ label v12s7_josh1:
             scene v12ferjo1
             with dissolve
 
-            u "Umm yeah... I'll keep that in mind."
+            u "Umm yeah' I'll keep that in mind."
 
             scene v12ferjo1a
             with dissolve
@@ -5785,12 +5787,12 @@ label v12s7_josh2:
     scene v12ferjos3a
     with dissolve
 
-    jo "You didn't know it was... who even are you? You are not the man I thought you to be. There's no way I'd dare let you care for the king of the land."
+    jo "You didn't know it was...who even are you? You are not the man I thought you to be. There's no way I'd dare let you care for the king of the land."
 
     scene v12ferjos3
     with dissolve
 
-    u "Oh wow, that sucks... I really wanted to."
+    u "Oh wow, that sucks...I really wanted to."
 
     scene v12ferjos3a
     with dissolve
