@@ -5969,7 +5969,8 @@ label v12s7_mc_caught:
 
     stop music fadeout 3
 
-
+    jump v12_murder_mystery_reveal
+    
     ### ERROR: -If MC doesn't kill someone but they're still in the right spot for him to kill them then they say "Yes?" as he walks up. At point he has the opportunity to kill which triggers the presses murder button actions and dialog ###
 
     ### ERROR: -If MC kills everyone then the free roam ends by clicking on Mr. Lee ###
