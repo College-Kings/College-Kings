@@ -30,34 +30,33 @@ label v12_amber_after_spa:
 
             u "Wow Amber, that's a really nice towel."
 
-            scene v12ams2b
+            scene v12ams2
             with dissolve
 
             am "Haha thanks."
  
-            if v11_tease_amber == 0:
-                scene v12ams6 # TPP. Show MC leaving the sauna, slight smile, mouth closed
-                with dissolve
+            scene v12ams6 # TPP. Show MC leaving the sauna, slight smile, mouth closed
+            with dissolve
 
-                pause 1
+            pause 1
 
-                scene v12ams7 # TPP. Show MC getting dressed, slight smile, mouth closed
-                with dissolve
+            scene v12ams7 # TPP. Show MC getting dressed, slight smile, mouth closed
+            with dissolve
 
-                pause 1
+            pause 1
 
-                scene v12ams8 # TPP. Show MC walking out of spa, slight smile, mouth closed, fully dressed
-                with dissolve
+            scene v12ams8 # TPP. Show MC walking out of spa, slight smile, mouth closed, fully dressed
+            with dissolve
 
-                pause 1
+            pause 1
 
-                scene v12ams9 # TPP. Show MC walking in hotel lobby, fully dressed, mouth closed, slight smile
-                with dissolve
+            scene v12ams9 # TPP. Show MC walking in hotel lobby, fully dressed, mouth closed, slight smile
+            with dissolve
 
-                pause 1
+            pause 1
 
-                jump v12_chris_nora_room
-
+            jump v12_chris_nora_room
+                
     if v11_tease_amber <= 2 or kct == "popular":
         if not (v11_tease_amber <= 2):
             call screen kctPopup
