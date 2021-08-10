@@ -5264,7 +5264,7 @@ label v12s7_nora1:
 
                     u "There's no choice."
 
-                    if join wolves:
+                    if joinwolves:
                         scene v12fernor1
                         with dissolve
 
