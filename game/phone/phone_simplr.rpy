@@ -183,7 +183,7 @@ screen simplr_contacts():
                 fixed:
                     xysize(375, 74)
 
-                    add contact.profilePicture yalign 0.5 xpos 20
+                    add Transform(contact.profilePicture, size=(55, 55)) yalign 0.5 xpos 20
                     text contact.name style "nametext" yalign 0.5 xpos 100
 
                     if contact.replies:
@@ -214,7 +214,7 @@ screen simplr_messenger(contact=None):
             vbox:
                 align (0.5, 0.5)
 
-                add contact.profilePicture xalign 0.5
+                add Transform(contact.profilePicture, size=(55, 55)) xalign 0.5
                 text contact.name style "nametext"
 
         viewport:
