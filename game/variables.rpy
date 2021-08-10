@@ -517,3 +517,4 @@ default v12s32_Aubrey_Boost = False
 default s12v32_get_aubrey_flowers = False
 default v12_murder_count = 0
 default joshmadfr = False
+default v12s7_victims = 12 #Amber, Aubrey, Charli, Chloe, Cbris, Imre, Lauren, Lindsey, Nora, Riley, Rose, Ryan + Cameron, Emily, Josh, Penelope, Samantha

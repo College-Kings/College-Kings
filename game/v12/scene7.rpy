@@ -8,6 +8,15 @@ label v12s7_free_roam_spoken(backgroundImg, returnScreen, seenList):
     $ renpy.call_screen(returnScreen)
 
 label v12s7fr:
+    if v11_invite_sam_europe:
+        $ v12s7_victims = +2
+    if emily_europe:
+        $ v12s7_victims = +1
+    if josh_europe:
+        $ v12s7_victims = +1
+    if v11_pen_goes_europe:
+        $ v12s7_victims = +1
+
     scene v12fer1 # FPP. Show Mr Lee, smiling mouth open
     with fade
 
@@ -5557,42 +5566,46 @@ label v12s7_chris1_kill:
 label v12s7_mrlee:
     $ v12s7_mrlee = True
 
-    scene v12ferlee1 # FPP. Show mr lee, neutral face, mouth closed
+    if len(v12s7_killList) >= v12s7_victims:
+        call screen endFreeRoamConfirm("v12_murder_mystery_reveal")
 
-    u "Hello there, you fan of boxing? If so, did you catch my last fight?"
+    else:
+        scene v12ferlee1 # FPP. Show mr lee, neutral face, mouth closed
 
-    stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_13.mp3" fadein 2
+        u "Hello there, you fan of boxing? If so, did you catch my last fight?"
 
-    scene v12ferlee1a # FPP. same 1, mouth open
-    with dissolve
+        stop music fadeout 3
+        play music "music/v12/Scene 7/Track Scene 7_13.mp3" fadein 2
 
-    lee "You can't talk to the Gamemaster."
+        scene v12ferlee1a # FPP. same 1, mouth open
+        with dissolve
 
-    scene v12ferlee1
-    with dissolve
+        lee "You can't talk to the Gamemaster."
 
-    u "Who's that?"
+        scene v12ferlee1
+        with dissolve
 
-    scene v12ferlee1a
-    with dissolve
+        u "Who's that?"
 
-    lee "What? Me, obviously."
+        scene v12ferlee1a
+        with dissolve
 
-    scene v12ferlee1
-    with dissolve
+        lee "What? Me, obviously."
 
-    u "Haha, I know, just teasing."
+        scene v12ferlee1
+        with dissolve
 
-    scene v12ferlee2 # TPP. Show mc walking off
-    with dissolve
+        u "Haha, I know, just teasing."
 
-    pause 0.75
+        scene v12ferlee2 # TPP. Show mc walking off
+        with dissolve
 
-    stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+        pause 0.75
 
-    call screen v12s7_rear_gallery
+        stop music fadeout 3
+        play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
+        call screen v12s7_rear_gallery
 
 label v12s7_josh1:
     $ v12s7_josh = True
