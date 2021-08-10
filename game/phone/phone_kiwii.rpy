@@ -42,7 +42,7 @@ init python:
         @property
         def replies(self):
             try: return self.sentComments[-1].replies
-            except Exception: return False
+            except AttributeError: return []
 
         def toggleLike(self):
             self.liked = not self.liked
@@ -92,7 +92,7 @@ init python:
 
             # Send next queued message(s)
             try:
-                while not self.replies():
+                while not self.replies:
                     self.sentComments.append(self.pendingComments.pop(0))
             except IndexError: pass
 
@@ -264,7 +264,7 @@ screen kiwiiApp():
                         xoffset 20
                         yoffset 20
 
-                        add Transform(post.profile_picture, zoom=0.05)
+                        add Transform(post.profile_picture, size=(55, 55))
                         text post.username style "kiwii_ProfileName" yalign 0.5
 
                     vbox:
@@ -333,7 +333,7 @@ screen kiwiiPost(post):
                             hbox:
                                 spacing 10
 
-                                add Transform(comment.profile_picture, zoom=0.05)
+                                add Transform(comment.profile_picture, size=(55, 55))
                                 text comment.username style "kiwii_ProfileName" yalign 0.5
 
                             hbox:
@@ -353,13 +353,13 @@ screen kiwiiPost(post):
                                     action Function(comment.toggleLike)
                                 text "[comment.numberLikes]" style "kiwii_LikeCounter" yalign 0.5
 
-    if post.replies():
+    if post.replies:
         vbox:
             xpos 1200
             yalign 0.84
             spacing 15
 
-            for reply in post.replies():
+            for reply in post.replies:
                 textbutton reply.message:
                     text_style "kiwii_ReplyText"
                     if reply.disabled:
@@ -395,7 +395,7 @@ screen liked_kiwii():
                         xoffset 20
                         yoffset 20
 
-                        add Transform(post.profile_picture, zoom=0.05)
+                        add Transform(post.profile_picture, size=(55, 55))
                         text post.username style "kiwii_ProfileName" yalign 0.5
 
                     vbox:
