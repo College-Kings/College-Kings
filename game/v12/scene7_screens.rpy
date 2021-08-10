@@ -417,15 +417,15 @@ screen v12s7_right_viewpoint():
     tag freeRoam
 
     imagemap:
-        if not v12s7_josh2 and josh not in v12s7_killList:
+        if not v12s7_josh and josh not in v12s7_killList:
             idle "images/v12/Scene 7/Screens/Navigation 15a.webp" # Josh
         else:
             idle "images/v12/Scene 7/Screens/Navigation 15b.webp" # No one
         hover "images/v12/Scene 7/Buttons/nav 15.webp"
 
-        if not v12s7_josh2 and josh not in v12s7_killList:
+        if josh not in v12s7_killList:
             hotspot (729, 375, 451, 545):
-                if v12s7_josh:
+                if v12s7_josh2:
                     if ((not v12s7_riley or v12s7_riley2) and riley not in v12s7_killList) and (chloe not in v12s7_killList):
                         action Call("v12s7_free_roam_spoken", backgroundImg="v12ferjo1", returnScreen="v12s7_right_viewpoint", seenList=[riley, chloe])
                     elif (not v12s7_riley or v12s7_riley2) and riley not in v12s7_killList:
@@ -544,13 +544,13 @@ screen v12s7_utility():
     tag freeRoam
 
     imagemap:
-        if v12s7_josh_moved and josh not in v12s7_killList:
+        if v12s7_josh and josh not in v12s7_killList:
             idle "images/v12/Scene 7/Screens/Navigation 18a.webp" # Josh
         else:
             idle "images/v12/Scene 7/Screens/Navigation 18b.webp" # No one
         hover "images/v12/Scene 7/Buttons/nav 18.webp"
 
-        if v12s7_josh_moved and josh not in v12s7_killList:
+        if v12s7_josh and josh not in v12s7_killList:
             hotspot(413, 183, 452, 895):
                 if v12s7_josh:
                     action Call("v12s7_free_roam_spoken", backgroundImg="v12ferjos3", returnScreen="v12s7_utility", seenList=[])
