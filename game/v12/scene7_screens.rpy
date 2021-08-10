@@ -334,7 +334,7 @@ screen v12s7_left_walkway_front():
 
     use v12s7_minimap(location="ld_left_walkway")
 
-    on "replaced" action SetVariable("previous_location_rearg", "v12s7_left_walkway_front")
+    on "replaced" action SetVariable("previous_location", "v12s7_left_walkway_front")
 
 
 screen v12s7_foyer():
@@ -466,7 +466,10 @@ screen v12s7_rear_gallery():
         hotspot (172, 320, 239, 653):
             action Jump("v12s7_mrlee")
         
-        hotspot (327, 1000, 1216, 80) action Show(previous_location_rearg)
+        if previous_location == "v12s7_left_walkway_front" or previous_location == "v12s7_right_walkway_front":
+            hotspot (327, 1000, 1216, 80) action Show(previous_location)
+        else:
+            hotspot (327, 1000, 1216, 80) action Show("v12s7_right_walkway_front")
 
         hotspot (0, 30, 126, 1020) action Show("v12s7_left_viewpoint")
         hotspot (1793, 30, 126, 1020) action Show("v12s7_right_viewpoint")
@@ -512,7 +515,7 @@ screen v12s7_right_gallery_back():
         
     use v12s7_minimap(location="md_right_gallery")
 
-    on "replaced" action SetVariable("previous_location_rearg", "v12s7_right_gallery_back")
+    on "replaced" action SetVariable("previous_location", "v12s7_right_gallery_back")
 
 
 screen v12s7_right_gallery_front():
