@@ -65,6 +65,9 @@ python early:
         def v7_msgReply10():
             pass
 
+    class CheatItem:
+        pass
+
 label after_load:
     python:
         # Disable skip transitions
