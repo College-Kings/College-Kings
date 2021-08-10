@@ -159,8 +159,8 @@ screen v12s7_left_walkway_middle():
         idle "images/v12/Scene 7/Screens/Navigation 5.webp"
         hover "images/v12/Scene 7/Buttons/nav 5.webp"
 
-        hotspot (286, 0, 189, 892) action Show("v12s7_left_walkway_front")
-        hotspot (1610, 0, 182, 959) action Show("v12s7_left_walkway_back")
+        hotspot (286, 0, 189, 892) action Show("v12s7_left_walkway_back")
+        hotspot (1610, 0, 182, 959) action Show("v12s7_left_walkway_front")
         hotspot (306, 928, 1231, 152) action Show("v12s7_walkway")
 
 
