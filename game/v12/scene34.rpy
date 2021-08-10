@@ -154,10 +154,10 @@ label v12_amber_after_spa:
                 scene v12ams4b # FPP. Same as v12ams4, Amber walking away from MC
                 with dissolve
 
-                pause 0.75
+                pause 1.25
 
                 scene v12ams6
-                with dissolve
+                with fade
 
                 pause 0.75
 
