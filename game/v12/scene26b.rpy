@@ -108,7 +108,7 @@ label v12_chase_nora:
             with dissolve
 
             u "A man should be putting his woman above all else and she should be able to feel it."
-            u "So if she's asking for more attention, then that's what you need to give her, ‘cause somehow you’re not giving her enough."
+            u "So if she's asking for more attention, then that's what you need to give her, 'cause somehow you're not giving her enough."
 
             scene v12cn5c
             with dissolve
@@ -139,7 +139,7 @@ label v12_chase_nora:
             scene v12cn5g # FPP Same angle as v12cn5, Nora out of frame (at least mostly) with her head in MC's lap, Lindsey looking down at her, mouth open
             with dissolve
 
-            li "With most people it does, but Chris is being stubborn. He doesn’t even try to see your perspective of things."
+            li "With most people it does, but Chris is being stubborn. He doesn't even try to see your perspective of things."
 
             scene v12cn6b # FPP Same angle as v12cn6, Nora's head in MC's lap, looking away. Nora crying with her mouth open
             with dissolve
@@ -217,17 +217,17 @@ label v12_chase_nora:
             scene v12cn5m # FPP Same angle as v12cn5, Nora has her face in her hands, Lindsey is looking at Nora, angry with her mouth open
             with dissolve
 
-            li "What!? This is ridiculous! You’re seriously blaming yourself when the guy literally just pushed you to the floor?"
+            li "What!? This is ridiculous! You're seriously blaming yourself when the guy literally just pushed you to the floor?"
 
             scene v12cn5l
             with dissolve
 
-            no "I hit him first, Lindsey. It’s true. I also said some things that I knew would aggravate him. I went too far..."
+            no "I hit him first, Lindsey. It's true. I also said some things that I knew would aggravate him. I went too far..."
 
             scene v12cn5m
             with dissolve
 
-            li "Classic victim blaming, I’ll never understand it."
+            li "Classic victim blaming, I'll never understand it."
 
             scene v12cn5d
             with dissolve
@@ -257,7 +257,7 @@ label v12_chase_nora:
     scene v12cn8a # FPP Same angle as v12cn8, Nora looking at Lindsey, Lindsey with mouth open
     with dissolve
 
-    li "For now I will, but I’ll be checking up on you later."
+    li "For now I will, but I'll be checking up on you later."
 
     scene v12cn8b # FPP Same angle as v12cn8, Lindsey with mouth closed, Nora with slight smile, mouth open
     with dissolve

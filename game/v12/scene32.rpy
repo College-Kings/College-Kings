@@ -91,7 +91,7 @@ label v12s32:
     scene v12s32_6 # FPP show naomi walking towards AUbrey and mc, big smile, mouth open, looking at Aubrey
     with dissolve
 
-    na "Sister sister, with a mister mister! Oooooh...."
+    na "Sister sister, with a mister mister! Oooooh..."
 
     scene v12s32_7 #FPP show naomi close up standing, looking at mc (camera), mouth open, cheeky smile
     with dissolve
@@ -128,7 +128,7 @@ label v12s32:
     scene v12s32_5b
     with dissolve
 
-    au "No we aren't, we still have two minutes ‘til start..."
+    au "No we aren't, we still have two minutes 'til start..."
 
     scene v12s32_7b
     with dissolve
@@ -510,7 +510,7 @@ label v12s32:
             scene v12s32_21d
             with dissolve
 
-            na "Hey Aubby, hope you were paying close attention ‘cause it's your turn."
+            na "Hey Aubby, hope you were paying close attention 'cause it's your turn."
 
             scene v12s32_20a
             with dissolve

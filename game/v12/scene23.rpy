@@ -491,7 +491,7 @@ label v12_ms_rose_sex:
                 scene v12msr27
                 with dissolve
 
-                u "*Drowsy* I am starting to feel a little... Slower...."
+                u "*Drowsy* I am starting to feel a little... Slower..."
 
                 scene v12msr27a
                 with dissolve

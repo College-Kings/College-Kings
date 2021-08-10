@@ -531,7 +531,7 @@ label v12s33:
     scene v12s33_16
     with dissolve
 
-    u "Uhm.. not sure. Neck I guess?"
+    u "Uhm... not sure. Neck I guess?"
 
     lmass "Alright I'll make sure to get to it in a bit."
 

@@ -533,7 +533,7 @@ label v12s7_aubrey1:
     scene v12ferau1
     with dissolve
 
-    au "I think I'd like to see exactly how tough you actually are. I.. I think I see some bruising. Oh my gosh, and your eye is cut! I'm gonna need to patch that up immediately."
+    au "I think I'd like to see exactly how tough you actually are. I... I think I see some bruising. Oh my gosh, and your eye is cut! I'm gonna need to patch that up immediately."
 
     menu:
         "It does hurt pretty bad":
@@ -1195,7 +1195,7 @@ label v12s7_chloe1:
     scene v12ferch1b
     with dissolve
 
-    cl "Just in case you're listening Mr. Lee, my \"poor girl\" character has been having problems with her sorority back at home and just needed to vent.."
+    cl "Just in case you're listening Mr. Lee, my \"poor girl\" character has been having problems with her sorority back at home and just needed to vent..."
 
     scene v12ferch1c
     with dissolve
@@ -1302,7 +1302,7 @@ label v12s7_chloe1:
         scene v12ferch5 # TPP. Show MC wispering in chloe's ear
         with dissolve
 
-        u "You just have to catch them in the act. .."
+        u "You just have to catch them in the act..."
 
         scene v12ferch6 # TPP. Show Mc walking away.
         with dissolve
@@ -3136,7 +3136,7 @@ label v12s7_lindsey2:
     scene v12ferli3b
     with dissolve
 
-    li "Well, I definitely don't dislike you.. But that has nothing to do with the game and I'm not getting thrown overboard so I'm getting back to my investigation."
+    li "Well, I definitely don't dislike you... But that has nothing to do with the game and I'm not getting thrown overboard so I'm getting back to my investigation."
 
     scene v12ferli3c
     with dissolve
@@ -3489,7 +3489,7 @@ label v12s7_msrose_kill:
     scene v12fermsr1b
     with dissolve
 
-    ro "That sly Cornelius.."
+    ro "That sly Bruce..."
 
     scene v12fermsr1c
     with dissolve
@@ -5001,7 +5001,7 @@ label v12s7_cameron2:
     scene v12fercam3
     with dissolve
 
-    u "Oh god.."
+    u "Oh god..."
 
     scene v12fercam4 # TPP. Show mc walking away
     with dissolve
@@ -5310,7 +5310,7 @@ label v12s7_nora1:
                     scene v12fernor1e
                     with dissolve
 
-                    no "Yeah. And.. thank you, really."
+                    no "Yeah. And... thank you, really."
 
                     scene v12fernor1d
                     with dissolve

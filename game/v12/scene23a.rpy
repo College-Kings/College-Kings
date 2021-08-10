@@ -41,7 +41,7 @@ label v12_mc_chilling:
     scene v12mor6 # TPP. MC laying in bed, hands behind his back, mouth closed
     with dissolve
 
-    u "(I feel like I haven’t had any time to just lay back and chill. There's always so-)"
+    u "(I feel like I haven't had any time to just lay back and chill. There's always so-)"
 
 
     if v11_invite_sam_europe:
@@ -59,7 +59,7 @@ label v12_mc_chilling:
         scene v12mor9 # FPP. Samantha plops on mc's bed still looking drunk, mouth closed
         with dissolve
 
-        u "Sam… Are you drunk right now? I thought you weren't drinking?"
+        u "Sam... Are you drunk right now? I thought you weren't drinking?"
 
         scene v12mor9a # FPP. Same as 9 smiling, mouth opened
         with dissolve
@@ -74,7 +74,7 @@ label v12_mc_chilling:
         scene v12mor9a
         with dissolve
 
-        sa "*Drunk* I'm good… Promise!"
+        sa "*Drunk* I'm good... Promise!"
 
         scene v12mor9
         with dissolve
@@ -109,7 +109,7 @@ label v12_mc_chilling:
         scene v12mor9a
         with dissolve
 
-        sa "*Drunk* Ohhhhh, that must be why that guy was yelling at me to leave him alone. I thought it was Ryan… *Chuckles*"
+        sa "*Drunk* Ohhhhh, that must be why that guy was yelling at me to leave him alone. I thought it was Ryan... *Chuckles*"
 
         scene v12mor9
         with dissolve
@@ -124,7 +124,7 @@ label v12_mc_chilling:
         scene v12mor9
         with dissolve
 
-        u "I can, I just worry he’ll run in here and try to fight me 'cause you're drunk."
+        u "I can, I just worry he'll run in here and try to fight me 'cause you're drunk."
 
         scene v12mor9c
         with dissolve
@@ -151,12 +151,12 @@ label v12_mc_chilling:
                 scene v12mor9d # FPP. Same as 9, sam looking sad, mouth opened
                 with dissolve
 
-                sa "*Drunk* Which shouldn’t take this long to answer… I get it..."
+                sa "*Drunk* Which shouldn't take this long to answer... I get it..."
 
                 scene v12mor9 
                 with dissolve
 
-                u "No, Sam. I mean, yeah. Of course you’re pretty. I just wasn’t expecting that question I guess."
+                u "No, Sam. I mean, yeah. Of course you're pretty. I just wasn't expecting that question I guess."
 
             "Yes":
                 scene v12mor9
@@ -182,12 +182,12 @@ label v12_mc_chilling:
         scene v12mor9
         with dissolve
 
-        u "Why'd you even ask me if you aren’t gonna believe my answer?"
+        u "Why'd you even ask me if you aren't gonna believe my answer?"
 
         scene v12mor9d
         with dissolve
 
-        sa "*Drunk* Just wanted to see what you'd say... But, I know you don't think I'm ‘that’ pretty."
+        sa "*Drunk* Just wanted to see what you'd say... But, I know you don't think I'm \"that\" pretty."
 
         scene v12mor9
         with dissolve
@@ -232,7 +232,7 @@ label v12_mc_chilling:
         scene v12mor13
         with dissolve
 
-        sa "*Drunk* Then he's not the right guy…"
+        sa "*Drunk* Then he's not the right guy..."
 
         scene v12mor13b # FPP. same as 13, sam smiling and still drunk, mouth opened
         with dissolve
@@ -252,12 +252,12 @@ label v12_mc_chilling:
         scene v12mor13b
         with dissolve
 
-        sa "That's what I wanna do while I’m in college... Get a strong boyfriend that fucks me in the pool every, single, night."
+        sa "That's what I wanna do while I'm in college... Get a strong boyfriend that fucks me in the pool every, single, night."
 
         scene v12mor13a
         with dissolve
 
-        u "Sam… Where is all this coming from?"
+        u "Sam... Where is all this coming from?"
 
         scene v12mor13c # FPP.same as 13, Sam thinking looking away from MC at the ceiling, mouth opened
         with dissolve
@@ -277,7 +277,7 @@ label v12_mc_chilling:
         scene v12mor13a
         with dissolve
 
-        u "*Chuckles* No. I didn’t."
+        u "*Chuckles* No. I didn't."
 
         scene v12mor13b
         with dissolve
@@ -301,7 +301,7 @@ label v12_mc_chilling:
                 scene v12mor13a
                 with dissolve
 
-                u "No, I don’t think so."
+                u "No, I don't think so."
 
                 scene v12mor13e # FPP. Same as 13, sam booing, mouth opened
                 with dissolve
@@ -326,7 +326,7 @@ label v12_mc_chilling:
         scene v12mor13b
         with dissolve
 
-        sa "*Drunk* No, Chris… *Chuckles* What other brother is there?"
+        sa "*Drunk* No, Chris... *Chuckles* What other brother is there?"
 
         menu:
             "I can beat Cameron":
@@ -363,7 +363,7 @@ label v12_mc_chilling:
             scene v12mor13b
             with dissolve
 
-            sa "*Drunk* Yeah! You can kick Cameron’s ass when he’s bothering me and also fuck me in the pool everyday."
+            sa "*Drunk* Yeah! You can kick Cameron's ass when he's bothering me and also fuck me in the pool everyday."
 
             scene v12mor13b
             with dissolve
@@ -404,7 +404,7 @@ label v12_mc_chilling:
             scene v12mor13f
             with dissolve
 
-            sa "*Drunk* Well, whatever… No matter what, you can't be my boyfriend 'cause you don't meet my standards."
+            sa "*Drunk* Well, whatever... No matter what, you can't be my boyfriend 'cause you don't meet my standards."
 
             scene v12mor13a
             with dissolve
@@ -499,12 +499,12 @@ label v12_mc_chilling:
                 scene v12mor25a # TPP. Same as 25, cameron looking mad, mouth opened
                 with dissolve
 
-                ca "YOU’RE WITH MY SISTER?!"
+                ca "YOU'RE WITH MY SISTER?!"
 
                 scene v12mor24b # TPP. same as 24, MC looking worried, mouth opened
                 with dissolve
 
-                u "(Fuck…) No, no, she's with the girls. They're taking care of her, but I just wanted to let you know that I guess she's drinking again."
+                u "(Fuck...) No, no, she's with the girls. They're taking care of her, but I just wanted to let you know that I guess she's drinking again."
 
                 scene v12mor25
                 with dissolve
@@ -614,7 +614,7 @@ label v12_mc_chilling:
         scene v12mor24b
         with dissolve
 
-        u "Fine, I won’t push you. Remember you’re lightweight though, yeah?."
+        u "Fine, I won't push you. Remember you're lightweight though, yeah?"
 
         scene v12mor28a
         with dissolve
@@ -644,7 +644,7 @@ label v12_mc_chilling:
                 sa "*Drunk* Awww, I wish I was there too."
 
 
-            "No, I don’t miss you (Joke)":
+            "No, I don't miss you (Joke)":
                 scene v12mor24a
                 with dissolve
 
@@ -663,7 +663,7 @@ label v12_mc_chilling:
                 scene v12mor28a
                 with dissolve
 
-                sa "*Drunk* Don't play around like that with me! You scared me… Jerk. *Chuckles*"
+                sa "*Drunk* Don't play around like that with me! You scared me... Jerk. *Chuckles*"
 
                 scene v12mor24c
                 with dissolve
@@ -723,7 +723,7 @@ label v12_mc_chilling:
         scene v12mor24b
         with dissolve
 
-        u "Sam, I’m trying to be serious with you!"
+        u "Sam, I'm trying to be serious with you!"
 
         scene v12mor28e # TPP. Sam looking disapointed, mouth opened
         with dissolve
@@ -750,7 +750,7 @@ label v12_mc_chilling:
         scene v12mor24d # TPP. MC looking at his phone, worried face, mouth closed
         with dissolve
 
-        u "(She hung up on me. Guess I’ll call her back.)"
+        u "(She hung up on me. Guess I'll call her back.)"
 
         scene v12mor24
         with dissolve
@@ -786,7 +786,7 @@ label v12_mc_chilling:
             scene v12mor24a
             with dissolve
 
-            u "She just called saying a bunch of crazy shit. She couldn’t even tell me where she is right now."
+            u "She just called saying a bunch of crazy shit. She couldn't even tell me where she is right now."
 
             scene v12mor25
             with dissolve

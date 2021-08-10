@@ -325,7 +325,7 @@ label v12_riley_cafe:
 
             u "Almost forgot about that... Yeah, that's definitely the move."
 
-        "Ugh, Do we have to?":
+        "Ugh, do we have to?":
             $ addPoint("bro")
             
             u "Oh yayyy, another boring treasure hunt."

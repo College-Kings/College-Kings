@@ -843,7 +843,7 @@ label v12_escape_room:
 
                 jump v12_after_sex
 
-            "Is it? I want this..":
+            "Is it? I want this...":
                 $ addPoint("tm")
                 scene v12esr29f
                 with dissolve
@@ -966,7 +966,7 @@ label v12_lindsey_sex:
     scene v12esr32 # FPP. MC pinning Lindsey to the wall by her throat, Lindsey looking seductively at MC, her mouth closed
     with dissolve
 
-    u "We could try this.."
+    u "We could try this..."
 
     scene v12esr32a # FPP. Same as v12esr32, Lindsey looking seductively, mouth open
     with dissolve
@@ -1160,7 +1160,7 @@ label v12_lindsey_sex:
     scene v12esr64a # TPP. Same as v12esr64, Lindsey holding on to the back of MC's head, she is moaning, about to cum, mouth open
     with dissolve
 
-    li "I-I'm.. Cu- *Gasps*"
+    li "I-I'm... Cu- *Gasps*"
 
     scene v12esr41c # TPP. Same as v12esr41b, Show Lindsey cumming while MC eats her out
     with vpunch
@@ -1253,7 +1253,7 @@ label v12_after_sex:
 
 # -Regardless of choice scene continued
 
-    li "Ha, alrighty.. Let's get out of here."
+    li "Ha, alrighty... Let's get out of here."
 
     scene v12esr29a
     with dissolve
