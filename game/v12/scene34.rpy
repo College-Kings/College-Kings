@@ -185,14 +185,13 @@ label v12_amber_after_spa:
         scene v12ams2c # FPP. Same as v12ams2, Amber very angry, mouth open
         with dissolve
 
-        am "You just can't mind your own fucking business!"
-
-        play sound "sounds/slap.mp3"
+        am "You just can't mind your own fucking business?"
 
         scene v12ams10 # TPP. Same positioning as v12ams2, Show Amber smacking MC on the side of the head, Amber very angry, MC startled, both mouths closed
         with vpunch
+        play sound "sounds/slap.mp3"
 
-        pause 0.75
+        pause 1.25
 
         scene v12ams11 # TPP. Same positioning as v12ams2, Show Imre and Aubrey looking shocked at MC's direction, only Imre and Aubrey in shot, mouths closed
         with dissolve

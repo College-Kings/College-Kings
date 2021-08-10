@@ -1093,7 +1093,6 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
 
     jump v12s33_after_sauna
 
-
     # -If MC presses the Sneak Off button during the sauna-
 
 label v12s33_sneak_off2:
