@@ -39,8 +39,8 @@ label v12_mc_chilling:
         scene v12mor5
         with dissolve
 
-   scene v12mor6 # TPP. MC laying in bed, hands behind his back, mouth closed
-   with dissolve
+    scene v12mor6 # TPP. MC laying in bed, hands behind his back, mouth closed
+    with dissolve
 
     u "(I feel like I haven’t had any time to just lay back and chill. There's always so-)"
 
