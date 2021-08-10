@@ -228,7 +228,8 @@ screen v12s7_right_walkway_back():
                 else:
                     action Jump("v12s7_sam2") #samantha
 
-        hotspot (338, 970, 1200, 110) action Show("v12s7_right_walkway_middle")
+        hotspot (286, 889, 1348, 191) action Show("v12s7_right_walkway_middle")
+        hotspot (286, 0, 1348, 191) action Show("v12s7_rear")
 
     use v12s7_minimap(location="ld_right_walkway")
     
