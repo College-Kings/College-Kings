@@ -494,8 +494,6 @@ screen v12s7_right_gallery_back():
                 else:
                     action Jump("v12s7_ryan1") # Ryan
 
-            hotspot (932, 265, 240, 716) action Show(previous_location)
-
         else:
             hotspot (679, 213, 461, 829):
                 action Jump("v12s7_ryan_imre1") # Imre & Ryan
