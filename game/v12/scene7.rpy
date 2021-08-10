@@ -1061,7 +1061,7 @@ label v12s7_chloe1:
     scene v12ferch1a # FPP. same 1, mouth open
     with dissolve
 
-    cl "*Chuckles*I'm the poor one, remember?"
+    cl "*Chuckles* I'm the poor one, remember?"
 
     scene v12ferch1
     with dissolve
@@ -1190,7 +1190,7 @@ label v12s7_chloe1:
     scene v12ferch1c
     with dissolve
 
-    u "Wow' *Chuckles* You're actually scared of Mr. Lee."
+    u "Wow... *Chuckles* You're actually scared of Mr. Lee."
 
     scene v12ferch1b
     with dissolve
