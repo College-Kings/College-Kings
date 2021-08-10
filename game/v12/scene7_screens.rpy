@@ -629,8 +629,10 @@ screen v12s7_balcony_middle():
         idle "images/v12/Scene 7/Screens/Navigation 20a.webp"
         hover "images/v12/Scene 7/Buttons/nav 20.webp"
 
-        hotspot (242, 950, 1385, 130) action Show(previous_location)
-        
+        hotspot (0, 30, 126, 1020) action Show("v12s7_balcony_left")
+        hotspot (1793, 30, 126, 1020) action Show("v12s7_balcony_right")
+        hotspot (242, 950, 1385, 130) action Show("v12s7_front_gallery")
+       
     use v12s7_minimap(location="md_balcony")
 
     on "replaced" action SetVariable("previous_location", "v12s7_balcony_middle")
@@ -653,7 +655,7 @@ screen v12s7_balcony_left():
                 else:
                     action Jump("v12s7_nora1") # Nora
 
-        hotspot (493, 137, 307, 943) action Show(previous_location)
+        hotspot (850, 1000, 1070, 80) action Show("v12s7_balcony_middle")
     
     use v12s7_minimap(location="md_balcony")
 
@@ -671,13 +673,13 @@ screen v12s7_balcony_right():
         hover "images/v12/Scene 7/Buttons/nav 22.webp"
 
         if not (aubrey in v12s7_killList or v12s7_aubrey_moved):
-            hotspot (493, 137, 311, 943):
+            hotspot (210, 300, 763, 780):
                 if v12s7_aubrey:
                     action Call("v12s7_free_roam_spoken", backgroundImg="v12ferau1a", returnScreen="v12s7_balcony_right", seenList=[nora])
                 else:
                     action Jump("v12s7_aubrey1") # Aubrey
 
-        hotspot (806, 967, 1114, 114) action Show(previous_location)
+        hotspot (1793, 30, 126, 1020) action Show("v12s7_balcony_middle")
 
     use v12s7_minimap(location="md_balcony")
 
