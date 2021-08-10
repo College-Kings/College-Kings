@@ -149,7 +149,7 @@ label v12_chris_nora_room:
 
                 pause 0.75
 
-                jump v12_scene35a
+                jump v12_lindsey_lobby #scene 35a
 
         "Leave her alone":
             $ addPoint("bro")

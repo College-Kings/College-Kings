@@ -90,4 +90,4 @@ label v12_riley_lobby:
         jump v12_lauren_sex #scene 29
 
     else:
-        jump scene29a
+        jump v12_late_night_workout #scene 29a
