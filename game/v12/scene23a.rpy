@@ -286,6 +286,7 @@ label v12_mc_chilling:
 
         menu:
             "Yes":
+                $ v12s23a_poolsex = True
                 scene v12mor13a 
                 with dissolve
                 
@@ -295,7 +296,6 @@ label v12_mc_chilling:
                 with dissolve
 
                 sa "*Drunk* Good... Right answer."
-
 
             "No":
                 scene v12mor13a
@@ -329,6 +329,7 @@ label v12_mc_chilling:
         sa "*Drunk* No, Chris… *Chuckles* What other brother is there?"
 
         menu:
+            $ v12s23a_beatcameron = True
             "I can beat Cameron":
                 
                 scene v12mor13a
@@ -348,9 +349,7 @@ label v12_mc_chilling:
 
                 sa "*Drunk* Ughhh, such a pussy. *Chuckles*"
 
-
-
-        if said yes to pool sex and beating up Cam:
+        if v12s23a_poolsex and v12s23a_beatcameron:
             scene v12mor13d
             with dissolve
             
@@ -400,7 +399,6 @@ label v12_mc_chilling:
             with dissolve
 
             u "And... So maybe we should relax, and like I said, my roommate could come in anytime."
-
 
         else:
             scene v12mor13f
