@@ -1782,7 +1782,7 @@ label v12s7_lauren1:
     scene v12ferla1b # FPP. same 1, Show lauren annoyed, mouth open
     with dissolve
 
-    la "See! You and everyone else, I don't know why Mr. Lee would do that. No one will come near me 'cause they don't wanna be killed. Except for Imre, he actually begged me to kill him haha. e."
+    la "See! You and everyone else, I don't know why Mr. Lee would do that. No one will come near me 'cause they don't wanna be killed. Except for Imre, he actually begged me to kill him haha."
 
     scene v12ferla1
     with dissolve
@@ -3452,7 +3452,7 @@ label v12s7_msrose1:
     scene v12fermsr1b
     with dissolve
 
-    ro "And I you, little boxer boy."
+    ro "And I on you, little boxer boy."
 
     scene v12fermsr2 # TPP. Show mc leaving.
     with dissolve
