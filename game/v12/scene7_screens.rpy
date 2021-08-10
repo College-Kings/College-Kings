@@ -288,9 +288,10 @@ screen v12s7_bow():
     imagemap:
         if v12s7_emily and emily not in v12s7_killList:
             idle "images/v12/Scene 7/Screens/Navigation 11a.webp" # Emily
+            hover "images/v12/Scene 7/Buttons/nav 11.webp"
         else:
             idle "images/v12/Scene 7/Screens/Navigation 11b.webp"
-        hover "images/v12/Scene 7/Buttons/nav 11.webp"
+            hover "images/v12/Scene 7/Buttons/nav 11b.webp"
 
         if v12s7_emily and emily not in v12s7_killList:
             hotspot (920, 216, 368, 864):
