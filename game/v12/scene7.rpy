@@ -1185,7 +1185,7 @@ label v12s7_chloe1:
     scene v12ferch1b
     with dissolve
 
-    cl "Just in case you're listening Mr. Lee, my 'poor girl' character has been having problems with her sorority back at home and just needed to vent.."
+    cl "Just in case you're listening Mr. Lee, my \"poor girl\" character has been having problems with her sorority back at home and just needed to vent.."
 
     scene v12ferch1c
     with dissolve
@@ -1358,7 +1358,7 @@ label v12s7_chloe_kill:
     scene v12ferch1e
     with dissolve
 
-    u "Well, thank you' I think. Is being labeled well-balanced a good thing?"
+    u "Well, thank you, I think... Is being labeled well-balanced a good thing?"
 
     scene v12ferch1d
     with dissolve
@@ -1477,7 +1477,7 @@ label v12s7_riley3:
     scene v12ferric3
     with dissolve
 
-    cl "Okay, but' That doesn't mean we've cleared you as not-guilty. This just means we're exploring other options. Don't put all your eggs in one basket and all that, right?"
+    cl "Okay, but... That doesn't mean we've cleared you as not-guilty. This just means we're exploring other options. Don't put all your eggs in one basket and all that, right?"
 
     scene v12ferric2
     with dissolve
@@ -1487,7 +1487,7 @@ label v12s7_riley3:
     scene v12ferric2a
     with dissolve
 
-    u "Is there a sign on me that says 'killer' or something? *Chuckles* I haven't done anything."
+    u "Is there a sign on me that says \"killer\" or something? *Chuckles* I haven't done anything."
 
     scene v12ferric3
     with dissolve
@@ -1497,7 +1497,7 @@ label v12s7_riley3:
     scene v12ferric3a
     with dissolve
 
-    u "Hmm' Then I guess I'll just have to change up my tactics."
+    u "Hmm... Then I guess I'll just have to change up my tactics."
 
     scene v12ferric2
     with dissolve
@@ -2143,7 +2143,7 @@ label v12s7_ryan_imre1:
             scene v12ferryi8
             with dissolve
 
-            imre "Watch what you say! At least follow it with 'no home' or something!"
+            imre "Watch what you say! At least follow it with \"no homo\" or something!"
 
             scene v12ferryi8a
             with dissolve
@@ -4632,7 +4632,7 @@ label v12s7_sam2:
             scene v12fersam1b
             with dissolve
             
-            u "I think this might help you think about something else'"
+            u "I think this might help you think about something else..."
 
             scene v12fersam1c # FPP. same 1, new pose, mouth open
             with dissolve
@@ -4647,7 +4647,7 @@ label v12s7_sam2:
             scene v12fersam1c
             with dissolve
 
-            sa "Oh' Yeah. *Chuckles* That definitely helps."
+            sa "Oh... Yeah. *Chuckles* That definitely helps."
 
             scene v12fersam1b
             with dissolve
@@ -5660,7 +5660,7 @@ label v12s7_josh1:
             scene v12ferjo1b # FPP. Show josh, angry, mouth open
             with dissolve
 
-            jo "Cats? CATS!!? Don't disrespect them like that! They are the pentacle of all felines. The leopard is a dignified creature handcrafted by God. Also' *Whispers* Don't fucking laugh at me."
+            jo "Cats? CATS!!? Don't disrespect them like that! They are the pentacle of all felines. The leopard is a dignified creature handcrafted by God. Also... *Whispers* Don't fucking laugh at me."
 
             scene v12ferjo1c # FPP. Show josh, angry, mouth closed
             with dissolve
@@ -5692,7 +5692,7 @@ label v12s7_josh1:
             scene v12ferjo1
             with dissolve
 
-            u "Umm yeah' I'll keep that in mind."
+            u "Umm yeah... I'll keep that in mind."
 
             scene v12ferjo1a
             with dissolve
