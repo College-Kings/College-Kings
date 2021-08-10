@@ -143,7 +143,7 @@ label v12s33:
     scene v12s33_7 # FPP Aubrey standing at the spa entra (inside the spa) in front of a towel stand and starts taking her clothes off
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12s33_7a # same as 7, AUbrey now without top (no bra), starting to take her pants off
     with dissolve
@@ -240,7 +240,7 @@ label v12s33:
     scene v12s33_13
     with dissolve
 
-    imre "I don't know about you, but I'd rather a woman's hands on me than a man."
+    imre "I don't know about you, but I'd rather have a woman's hands on me than a man's."
 
     scene v12s33_14
     with dissolve
@@ -250,12 +250,12 @@ label v12s33:
     scene v12s33_15 # TPP same view as for Imre and Mr Lee, but for Chris 
     with dissolve
 
-    ch "Commendable Mr. Lee."
+    ch "Commendable, Mr. Lee."
 
     scene v12s33_14
     with dissolve
 
-    lee "Your flattery won't win you any points with me Chris... We will still be discussing the other day's incident."
+    lee "Your flattery won't win you any points with me, Chris... We will still be discussing the other day's incident."
 
     scene v12s33_13
     with dissolve
@@ -344,6 +344,7 @@ label v12s33:
 
     scene v12s33_19a # same as 19, the man masseuse cracks Imre's back hard with his elbow-
     with dissolve
+    play sound "sounds/hs.mp3"
 
     "*Crack*"
 
@@ -406,10 +407,11 @@ label v12s33:
 
     scene v12s33_21a # same as 21, the man masseuse cracks Mr. Lee's back hard with his elbow just as he did Imre-
     with dissolve
+    play sound "sounds/hs.mp3"
 
     "*Crack*"
 
-    lee "OH, BUDDHA AND ALL THAT\"S GOOD! Please... don't push so hard."
+    lee "OH, BUDDHA AND ALL THAT'S GOOD! Please... don't push so hard."
 
     mmass "Sir, you have a serious knot."
 
@@ -421,7 +423,7 @@ label v12s33:
     scene v12s33_20
     with dissolve
 
-    ry "Kinda sounding like a wuss over there Mr. Lee."
+    ry "Kinda sounding like a wuss over there, Mr. Lee."
 
     scene v12s33_14
     with dissolve
@@ -430,6 +432,7 @@ label v12s33:
 
     scene v12s33_21b #same as 21 # -the man masseuse cracks Mr. Lee's neck in one direction-
     with dissolve
+    play sound "sounds/js.mp3"
 
     "*Crack*"
 
@@ -439,7 +442,8 @@ label v12s33:
 
     scene v12s33_21c #  same as 21b, He snaps Mr. Lee's neck again in the opposite direction-
     with dissolve
-
+    
+    play sound "sounds/hs.mp3"
     "*Crack*"
 
     lee "HOOO! Oh wow, that feels... amazing!"
@@ -533,7 +537,7 @@ label v12s33:
 
     u "Uhm... not sure. Neck I guess?"
 
-    lmass "Alright I'll make sure to get to it in a bit."
+    lmass "Alright, I'll make sure to get to it in a bit."
 
     scene v12s33_24 # shows close up of clock at 15:45
     with dissolve
