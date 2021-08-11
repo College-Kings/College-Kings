@@ -497,20 +497,22 @@ label v12_chase_robber:
     scene v12car30
     with dissolve
 
-    pause 0.75
+    play sound "sounds/vibrate.mp3"
+    pause 1.25
 
     scene v12car30a # TPP Same angle as v12car30, MC sitting on the hotel room bed and checking his phone
     with dissolve
 
-    play sound "sounds/vibrate.mp3"
     pause 0.75
 
     $ v12s1a_kiwiiPost1 = KiwiiPost("Imre", "v12/impost1.webp", _("Would your man chase a robber down in the middle of the night? If not, you don't have a real man..."), numberLikes=216)
     $ v12s1a_kiwiiPost1.newComment("Charli", _("If you want a man Imre I can take you to a few bars... All you had to do was ask."), numberLikes=14, queue=False)
     $ v12s1a_kiwiiPost1.newComment("Ryan", _("LMAO"), numberLikes=1, mentions="Imre", queue=False)
 
-    $ contact_Imre.newMessage("Check Kiwii... you're welcome. :)", queue=True)
+    $ contact_Imre.newMessage("Check Kiwii... you're welcome. :)", queue=False)
     $ contact_Imre.addReply("Haha okay", func=None)
+
+    call screen phone
 
     # MC checks Kiwii and there's a picture of MC running after the robber posted by Imre 
     # caption "Would your man chase a robber down in the middle of the night? If not, you don't have a real man..."
@@ -524,6 +526,10 @@ label v12_chase_robber:
     $ contact_Imre.newMessage("I'm gonna beat his ass", queue=True)
     $ contact_Imre.addReply("Haha", func=None)
 
+    scene v12car30a
+    pause 0.75
+    call screen phone
+    
     scene v12car30b # TPP Same angle as v12car30, MC sitting on bed, putting his phone away in his pocket
     with dissolve
 
