@@ -266,7 +266,7 @@ label v12_amber_bus:
     scene v12amb3b
     with dissolve
 
-    u "This is kinda weird I gotta be honest."
+    u "This is kinda weird, I gotta be honest."
 
     scene v12amb3c
     with dissolve
@@ -306,7 +306,7 @@ label v12_amber_bus:
     scene v12amb3h
     with dissolve
 
-    u "Spell it smartass."
+    u "Spell it, smartass."
 
     scene v12amb3c
     with dissolve
@@ -393,6 +393,7 @@ label v12_amber_bus:
 
     u "Don't pass the blame, cause \"you have a fifth grade education\"."
 
+    play sound "sounds/facepunch1.mp3"
     scene v12amb3m # FPP. Same as v12amb3i, Amber slightly annoyed, mouth closed, punching MC in the arm
     with vpunch
 
@@ -421,7 +422,7 @@ label v12_amber_bus:
     scene v12amb3d
     with dissolve
 
-    u "Yeah whatever."
+    u "Yeah, whatever."
 
     scene v12amb2b # TPP. Same as v12amb2a, Show MC and Amber sitting in their seats, Amber looking out the window, MC looking forward, both neutral expressions, mouths closed
     with dissolve
@@ -429,14 +430,14 @@ label v12_amber_bus:
     pause 0.75
 
     scene v12amb2c # TPP. Same as v12amb2b, Show Amber looking at her phone, MC looking out the window, both neutral expressions, mouths closed
-    with dissolve
+    with fade
 
     pause 0.75
 
     scene v12amb3i
     with fade
 
-    am "Thanks for being a good friend [name]."
+    am "Thanks for being a good friend, [name]."
 
     scene v12amb3h
     with dissolve
@@ -476,17 +477,17 @@ label v12_amber_bus:
     scene v12amb2d # TPP. Same as v12amb2c, Amber laying her head on MC's shoulder sleeping, MC sleeping too, both mouths closed (Night time here)
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12amb2e # TPP. Same as v12amb2d, Show MC and Amber yawning as they wake up (Night time here)
     with fade
 
-    pause 0.75
+    pause 1
 
     scene v12amb2f # TPP. Show MC and Amber getting off the bus (Camera inside bus, MC and Amber have their backs to the camera, night time here)
-    with dissolve
+    with fade
 
-    pause 0.75
+    pause 1
 
     stop music fadeout 3
 

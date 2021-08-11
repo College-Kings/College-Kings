@@ -19,7 +19,7 @@ label v12_paris_hotel:
     scene v12pht2a # FPP. Looking at ms rose, mouth opened
     with dissolve
 
-    ro "It's a chain hotel, Peace Hotels isn't just one hotel, there's hundreds of them all over the world."
+    ro "It's a chain hotel. Peace Hotels isn't just one hotel, there's hundreds of them all over the world."
 
     scene v12pht2
     with dissolve
@@ -43,6 +43,8 @@ label v12_paris_hotel:
 
     scene v12pht3 # FPP. Chris and Imre high five
     with dissolve
+
+    play sound "sounds/ks.mp3"
 
     pause 0.75
 
@@ -312,7 +314,7 @@ label v12_paris_hotel:
             scene v12pht9e
             with dissolve
 
-            no "I really appreciate that. Like for real. Thanks, [name]"
+            no "I really appreciate that. Like for real. Thanks, [name]!"
 
             scene v12pht9d
             with dissolve
@@ -410,9 +412,9 @@ label v12_paris_hotel:
 
     scene v12pht12 # TPP. MC at his hotel door
     with dissolve
+    play sound "sounds/dooropen.mp3"
 
     pause 0.75
-
     stop music fadeout 3
 
     jump v12_room_chloe_riley #scene 12

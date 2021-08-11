@@ -140,7 +140,7 @@ label v12_valentine:
     scene v12val9a # FPP. Same as v12val9, Mr. Lee looking at Imre, Mr. Lee angry, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12val10a # FPP. Same as v12val10, Imre worried, mouth open
     with dissolve
@@ -150,7 +150,7 @@ label v12_valentine:
     scene v12val11 # TPP. Show MC and Mr. Lee walking into the church, both slightly smiling, mouths closed, the bishop walking towards them (Bishop is around 50 years old), smiling, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     stop music fadeout 3
     play music "music/v12/Scene 16/Track Scene 16_2.mp3" fadein 2
@@ -173,7 +173,7 @@ label v12_valentine:
     scene v12val14 # TPP. Show MC midway through sitting down at the front, Lindsey sitting down next to him, Chloe next to Lindsey, Imre next to MC, Charli next to Imre, Mr. Lee, Chris and Nora on the other bench. (Show only MC and Lindsey), both slightly smiling, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12val15 # FPP. Same positioning as v12val14, bishop standing at the altar, MC looking at the bishop, bishop looking at MC, bishop slight smile, mouth open (Only bishop in shot)
     with dissolve
@@ -315,7 +315,7 @@ label v12_valentine:
     scene v12val21
     with dissolve
 
-    ch "It's the Capital of Italy..."
+    ch "It's the capital of Italy..."
 
     scene v12val18b
     with dissolve
@@ -516,7 +516,7 @@ label v12_valentine:
     scene v12val23 # TPP. Show Chris and Nora walking up to the altar, hands held, both smiling, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12val24 # FPP. Nora and Chris at the altar, standing in front of each other, bishop in front of them (mock wedding), bishop looking at Chris, bishop slight smile, mouth open, Chris and Nora smiling, mouths closed
     with dissolve
@@ -570,12 +570,12 @@ label v12_valentine:
     scene v12val26 # TPP. Show MC standing up in front of where he was seated, looking at Charli, MC smirking, mouth closed, Charli annoyed, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12val23a # TPP. Same as v12val23, but MC is walking towards the altar (No Nora or Chris), MC slight smile, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12val27 # FPP. MC and Nora standing in front of each other at the altar, Bishop in front of both of them (mock wedding), other characters same positioning as v12val14, MC looking at bishop, bishop looking at MC, bishop slight smile, mouth open (only bishop in shot)
     with dissolve
@@ -622,6 +622,8 @@ label v12_valentine:
             pause 0.75
 
         "Comfort her":
+            pause 0.5
+        
             $ addPoint("bf")
             scene v12val31 # TPP. Show MC leaning in a whispering in Nora's ear, holding her hand, Nora slight smile, mouth closed, MC slight smile, mouth open
             with dissolve
@@ -634,7 +636,7 @@ label v12_valentine:
     scene v12val30c # FPP. Same as v12val30, Nora looking at MC, Nora slight smile, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1.5
 
     scene v12val27b # FPP. Same as v12val27, bishop looking at Nora, bishop slight smile, mouth open
     with dissolve
@@ -675,7 +677,7 @@ label v12_valentine:
         scene v12val30g # FPP. Same as v12val30c, Nora eyes tearing up (not crying, just tearing up), slight smile, mouth closed
         with dissolve
 
-        pause 0.75
+        pause 1.5
     
     scene v12val30e
     with dissolve
@@ -696,7 +698,7 @@ label v12_valentine:
         scene v12val32
         with dissolve
 
-        cl "*Whispers* Oh! Yeah, haha. He asked me out while we were in London... It was so cute,"
+        cl "*Whispers* Oh! Yeah, haha. He asked me out while we were in London... It was so cute."
 
         scene v12val29b
         with dissolve
@@ -725,7 +727,7 @@ label v12_valentine:
             u "Nora, I remember living alone on the streets with nothing but the clothes on my back."
             u "The day you came up to me, I thought I'd get a couple dollars for a chicken sandwich, but I ended up with the best digits I could have ever hoped for - the number to an opportunity."
 
-            scene v12val30c
+            scene v12val30g
             with dissolve
 
             u "I've been working for a few days now, and I don't get my first check until I've worked for two weeks but... I wanted to pay you back for helping me, so here I am. Swearing myself to you for eternity."
@@ -833,7 +835,7 @@ label v12_valentine:
                 scene v12val30i # FPP. Same as v12val30c, MC has his fist extended, Nora slight smile, mouth closed, fist bumping MC
                 with dissolve
 
-                pause 0.75
+                pause 1.25
 
                 scene v12val27
                 with dissolve
@@ -849,7 +851,7 @@ label v12_valentine:
 
                 play sound "sounds/kiss.mp3"
 
-                pause 0.75
+                pause 1.25
 
                 scene v12val27
                 with dissolve
@@ -861,7 +863,7 @@ label v12_valentine:
         scene v12val30i
         with dissolve
 
-        pause 0.75
+        pause 1.5
 
         scene v12val27 
         with dissolve
@@ -973,6 +975,8 @@ label v12_valentine:
 
     scene v12val42 # TPP. Show Charli walking next to MC, Imre and Lindsey walking in front of them, on sidewalk, all slightly smiling, mouths closed
     with dissolve
+
+    pause 0.75
 
     if chloegf and not laurenrs:
         scene v12val43 # FPP. Charli next to MC on the sidewalk, not walking, Charli and MC looking at each other, Charli slightly annoyed, mouth open

@@ -486,7 +486,10 @@ label v12_penelope_roof:
             scene v12penr19 # FPP MC's view sitting on his bed, looking down at his phone, which he just turned off
             with dissolve
 
-            u "(Don't wanna take the chance that she may be needing help with one of her little Mr. Lee chores.)"
+            if not v12_chase_robber:
+                u "(Don't wanna take the chance that she may be needing help with the laundry or something... Haha.)"            
+            else:
+                u "(Don't wanna take the chance that she may be needing help with one of her little Mr. Lee chores.)"
 
             scene v12penr1b # TPP Same angle as v12penr1, MC putting his phone away
             with dissolve
