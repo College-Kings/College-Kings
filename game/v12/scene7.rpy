@@ -1,7 +1,7 @@
-label v12s7_free_roam_spoken(backgroundImg, returnScreen, seenList):
+label v12s7_free_roam_spoken(backgroundImg, returnScreen, seenList, victim):
     $ v12s7_seenList = seenList
 
-    show screen murder_button_overlay(nora)
+    show screen murder_button_overlay(victim)
 
     scene expression backgroundImg
     u "(I've already spoken to them, but I could still murder them)"
