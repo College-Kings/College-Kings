@@ -1191,7 +1191,7 @@ label v12_lauren_sex:
                 pause
 
                 stop music fadeout 3
-                play music "music/v12/Scene 29/Track Scene 29_6.mp3" fadein 2s
+                play music "music/v12/Scene 29/Track Scene 29_6.mp3" fadein 2
 
                 scene v12las71
                 with dissolve
