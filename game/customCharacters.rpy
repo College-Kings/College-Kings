@@ -8,7 +8,8 @@ init python:
         """
 
         def __init__(self, name):
-            self.name = name.replace(" ", "_")
+            self.name = name
+
             self.stats = {
                 "Competitive": None,
                 "Vindictive": [],

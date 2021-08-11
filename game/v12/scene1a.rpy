@@ -72,8 +72,7 @@ label v12_chase_robber:
             scene v12car11a # FPP Same angle as v12car11, robber looking angry and taking a swing at MC
             with dissolve
 
-            # TIMED CHOICE
-            menu:
+            menu (fail_label="v12s1a_failed_timer"):
                 "Dodge":
                     scene v12car12 # TPP Show MC dodging robber's punch
                     with dissolve
@@ -81,12 +80,13 @@ label v12_chase_robber:
                     pause 0.75
                     
                 "Huh":
-                    scene v12car12a # TPP Same angle as v12car12, show MC getting punched in the mouth by the robber
-                    with hpunch
+                    label v12s1a_failed_timer:
+                        scene v12car12a # TPP Same angle as v12car12, show MC getting punched in the mouth by the robber
+                        with hpunch
 
-                    play sound "sounds/facepunch1.mp3"
+                        play sound "sounds/facepunch1.mp3"
 
-                    pause 0.75
+                        pause 0.75
 
     # MANUAL FIGHT
 

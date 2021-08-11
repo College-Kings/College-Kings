@@ -249,7 +249,7 @@ screen simplr_messenger(contact=None):
 
                     textbutton "Reply":
                         style "replybox"
-                        action Show("reply", contact=contact)
+                        action Show("simplr_reply", contact=contact)
 
 
 screen simplr_reply(contact=None):

@@ -340,8 +340,7 @@ label v12_urban_exploring:
     scene v12uex13 # FPP Show Nora coming toward MC, about to crash into him
     with dissolve
 
-    # TIMED CHOICE - ADD CODE
-    menu:
+    menu (fail_label="v12s20_faillabel"):
         "Catch her":
             $ addPoint("bf")
             scene v12uex12a # TPP Same angle as v12uex12, show MC catching Nora from behind
@@ -365,22 +364,23 @@ label v12_urban_exploring:
             u "Ha, don't worry about it."
 
         "Move":
-            $ addPoint("tm")
+            label v12s20_faillabel:
+                $ addPoint("tm")
 
-            scene v12uex12b # TPP Same angle as v12uex12, show MC dodging out of the way of Nora
-            with dissolve
+                scene v12uex12b # TPP Same angle as v12uex12, show MC dodging out of the way of Nora
+                with dissolve
 
-            pause 0.75
+                pause 0.75
 
-            scene v12uex14 # FPP Show Nora sitting on the pavement with her hands on the ground behind her, as if she just landed hard, hurt expression, mouth open
-            with dissolve
+                scene v12uex14 # FPP Show Nora sitting on the pavement with her hands on the ground behind her, as if she just landed hard, hurt expression, mouth open
+                with dissolve
 
-            no "Ow! Fuck... I went way too fast. Sorry [name], almost took you with me. *Chuckles*"
+                no "Ow! Fuck... I went way too fast. Sorry [name], almost took you with me. *Chuckles*"
 
-            scene v12uex14a # FPP Same angle as v12uex14, Nora with embarrassed expression, mouth closed
-            with dissolve
+                scene v12uex14a # FPP Same angle as v12uex14, Nora with embarrassed expression, mouth closed
+                with dissolve
 
-            u "Haha, I made it out in time. You did come in pretty hot... *Laughs*"
+                u "Haha, I made it out in time. You did come in pretty hot... *Laughs*"
 
     scene v12uex3a
     with dissolve

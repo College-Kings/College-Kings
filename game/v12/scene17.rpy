@@ -10,6 +10,8 @@ label v12_escape_room:
 
     au "It's about time you guys got here."
 
+    play music "music/v12/Scene 17/Track Scene 17_1.mp3" fadein 2
+
     scene v12esr2 # FPP. Same positioning as v12esr1, MC looking at Imre, Imre looking at Aubrey, Imre slight smile, mouth open
     with dissolve
 
@@ -119,6 +121,9 @@ label v12_escape_room:
     with dissolve
 
     escman "*Dry Tone* Welcome to Escape, do you have a reservation?"
+
+    stop music fadeout 3
+    play music "music/v12/Scene 17/Track Scene 17_2.mp3" fadein 2
 
     scene v12esr7 # FPP. Same positioning as v12esr6, MC looking at Lindsey, Lindsey looking at Escape Manager, Lindsey slight smile, mouth open
     with dissolve
@@ -279,6 +284,9 @@ label v12_escape_room:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v12/Scene 17/Track Scene 17_3.mp3" fadein 2
 
     scene v12esr12 # FPP. Same positioning as v12esr11, MC looking at Charli, Charli looking at Escape Manager, Charli uncomfortable, mouth open
     with dissolve
@@ -789,6 +797,9 @@ label v12_escape_room:
 
     u "That we do..."
 
+    stop music fadeout 3
+    play music "music/v12/Scene 17/Track Scene 17_4.mp3" fadein 2
+
     if chloegf:
         scene v12esr29
         with dissolve
@@ -1226,6 +1237,9 @@ label v12_after_sex:
 
     unknown "We're having some sort of technical difficulties with the electric... So, you'll be- Or, I mean, your teacher will be refunded. Sorry. Thanks."
 
+    stop music fadeout 3
+    play music "music/v12/Scene 17/Track Scene 17_5.mp3" fadein 2
+
     scene v12esr17i # FPP. Same as v12esr17, lights dim
     with dissolve
 
@@ -1269,6 +1283,9 @@ label v12_after_sex:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v12/Scene 17/Track Scene 17_6.mp3" fadein 2
 
     scene v12esr48 # FPP. MC and Lindsey in the viewing room, MC looking at Lindsey, Lindsey looking at MC, Lindsey slight smile, mouth closed
     with dissolve
@@ -1405,6 +1422,9 @@ label v12_after_sex:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 17/Track Scene 17_2.mp3" fadein 2
+
     scene v12esr54 # FPP. Same positioning as v12esr53, MC looking at Lindsey, Lindsey looking at Aubrey, Lindsey worried, mouth open
     with dissolve
 
@@ -1479,6 +1499,9 @@ label v12_after_sex:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v12/Scene 17/Track Scene 17_7.mp3" fadein 2
 
     scene v12esr61 # FPP. MC looking at Aubrey, outside the escape room building, Aubrey looking at MC, Aubrey slight smile, mouth open
     with dissolve
