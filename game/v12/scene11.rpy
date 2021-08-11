@@ -320,6 +320,7 @@ label v12_paris_hotel:
             u "That's what FRIENDS are for. *Chuckles*"
 
         "Help Chris":
+            $ v12_help_chris += 1
             $ addPoint("bro")
             scene v12pht9d
             with dissolve

@@ -478,6 +478,8 @@ default v12_chase_robber = False
 default v12s7_seenList = []
 default v12s7_killList = []
 default v12_msrose_sex = False
+default v11_lindsey_run = False
+default v12_help_chris = 0
     # scene7
 default v12s7_lauren = False
 default v12s7_emily = False
