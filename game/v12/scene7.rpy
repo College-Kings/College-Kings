@@ -673,6 +673,8 @@ label v12s7_aubrey2:
             with dissolve
             au "Let's make this a little more enjoyable, shall we [name]?"
 
+            $ grant_achievement("doctors_orders")
+
             scene v12ferauh4a #FPP. Same 4, mouth closed
             with dissolve
 
@@ -893,6 +895,8 @@ label v12s7_riley1:
 
     menu:
         "I'm poor":
+            $ grant_achievement("zero_to_hero")
+
             $ addPoint("bf")
             scene v12ferri4a
             with dissolve
@@ -2619,6 +2623,8 @@ label v12s7_imre_kill:
 
     imre "FREEDOM!!!"
 
+    $ grant_achievement("mercy_killing")
+
     scene v12ferim1c
     with dissolve
 
@@ -3252,6 +3258,9 @@ label v12s7_charli_kill:
     with dissolve
 
     u "Boom."
+
+    if len(v12s7_killList) == v12s7_victims:
+        $ grant_achievement("best_for_last")
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_4.mp3" fadein 2
@@ -4840,6 +4849,8 @@ label v12s7_samantha_kill:
 
     u "Boom."
 
+    $ grant_achievement("talk_murder_to_me")
+
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
@@ -5982,6 +5993,13 @@ label v12s7_mc_caught:
     play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
     unknown "I found the murderer!"
+
+    if len(v12s7_killList) == 0:
+        $ grant_achievement("weapons_down")
+    elif len(v12s7_killList) >= 5:
+        $ grant_achievement("killing_spree")
+        if len(v12s7_killList) == v12s7_victims:
+            $ grant_achievement("mass_casualties")
 
     stop music fadeout 3
 

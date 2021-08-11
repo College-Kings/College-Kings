@@ -130,3 +130,12 @@ init python:
     Achievement("city_of_love", "Have sex with Lauren, Nora, Ms. Rose and Lindsey")
     Achievement("brotherhood_of_men", "Defend Chris every time as a Wolf")
     Achievement("best_frenemies", "Defend Chris every time as an Ape")
+        # Murder Mystery Achievements
+    Achievement("zero_to_hero", "Tell Riley you are poor")
+    Achievement("doctors_orders", "Accept Aubrey's advances")
+    Achievement("mercy_killing", "Kill Imre")
+    Achievement("talk_murder_to_me", "Kill Samantha")
+    Achievement("best_for_last", "Charli is your final kill")
+    Achievement("weapons_down", "Don't kill anyone")
+    Achievement("killing_spree", "Kill enough people to win the game")
+    Achievement("mass_casualties", "Kill everyone")
