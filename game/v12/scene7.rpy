@@ -537,6 +537,7 @@ label v12s7_aubrey1:
 
     menu:
         "It does hurt pretty bad":
+            $ v12s7_aubrey_moved = True
             $ addPoint("bf")
             scene v12ferau1
             with dissolve
@@ -544,8 +545,6 @@ label v12s7_aubrey1:
             au "Oh, sweetie. If I didn't take a look at this I wouldn't be able to call myself a nurse. Please come by my office so I can get you fixed up."
 
             if aubreyrs:
-
-                $ v12s7_aubrey_moved = True
 
                 scene v12ferau1a
                 with dissolve
