@@ -37,7 +37,7 @@ label v12_simplr_convo:
 
     u "(Haven't checked out Simplr in a while.)"
 
-    if simplr_Emmy in simplr_contacts:
+    if simplr_Emmy in simplr_contacts and False:
 
         $ simplr_Emmy.newMessage("Hey handsome, I was hoping I'd match with you. Where are you from?", queue=False)
         $ simplr_Emmy.addReply("I'm actually in Paris right now, but I'm from California. Wbu?")
