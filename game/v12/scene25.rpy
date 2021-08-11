@@ -6,9 +6,13 @@
 # NOTE: MC in his boxers in all renders except v12juc6, v12juc7 and v12juc8 (He uses outfit 3 in those 3 shots)
 
 label v12_julia_call:
+    scene black
+    with fade
+    play sound "sounds/call.mp3"
+    pause 1
+    
     scene v12juc1 # TPP. Show MC sleeping in his bed
     with dissolve
-    play sound "sounds/call.mp3"
 
     pause 1.5
 

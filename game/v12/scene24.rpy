@@ -63,9 +63,9 @@ label v12_simplr_convo:
 
         u "(Well, no matches, I'm just gonna take my sorry ass to sleep.)"
 
-    scene v12sic1f # TPP. Show MC sleeping again
-    with dissolve
+    #scene v12sic1f # TPP. Show MC sleeping again
+    #with dissolve
 
-    pause 0.75
+    #pause 0.75
 
     jump v12_julia_call #scene 25
