@@ -598,9 +598,9 @@ screen v12s7_front_gallery():
 
         elif v12s7_riley_moved and not v12s7_riley2 and amber in v12s7_killList and riley not in v12s7_killList: # Riley
             idle "images/v12/Scene 7/Screens/Navigation 19b.webp"
-            hover "images/v12/Scene 7/Buttons/nav 19b.webp"
+            hover "images/v12/Scene 7/Buttons/nav 19bmock.webp"
 
-            hotspot (749, 159, 309, 918):
+            hotspot (432, 84, 350, 990):
                 if v12s7_riley2:
                     action Call("v12s7_free_roam_spoken", backgroundImg="v12ferrile1", returnScreen="v12s7_front_gallery", seenList=[], victim=riley)
                 else:
