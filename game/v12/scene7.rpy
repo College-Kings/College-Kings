@@ -411,9 +411,6 @@ label v12s7_aubrey1:
     $ v12s7_aubrey = True
     $ v12s7_seenList = [nora]
 
-    if nora in v12s7_killList:
-        $ v12s7_seenList = []
-
     show screen murder_button_overlay(aubrey)
 
     scene v12ferau1 # FPP. Note for renderer, all scene images starting v12ferau will be the first conversation with Aubrey on the upper front balcony of the boat. Her and Nora are both up there but the conversations are completely seperate. Show Aubrey, flirty look, mouth open
@@ -5047,8 +5044,11 @@ label v12s7_nora1:
     $ v12s7_nora = True
     $ v12s7_seenList = []
 
+    if not v12s7_aubrey_moved:
+        $ v12s7_seenList.append(aubrey)
+
     if v12s7_riley and not v12s7_riley2:
-        $ v12s7_seenList = [riley]
+        $ v12s7_seenList.append(riley)
 
     show screen murder_button_overlay(nora)
 
