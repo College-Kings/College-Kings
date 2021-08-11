@@ -67,6 +67,9 @@ label v12_murder_mystery_reveal:
 
     $ v12_murder_count = len(v12s7_killList)
     if len(v12s7_killList) >= 5:
+    
+        if len(v12s7_killList) == v12s7_victims:
+            $ grant_achievement("mass_casualties")
 
         lee "A total of [v12_murder_count] people were killed, so let's give our murderer a round of applause."
 
