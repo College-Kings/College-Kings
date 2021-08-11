@@ -267,17 +267,20 @@ screen v12s7_kitchen():
     tag freeRoam
 
     imagemap:
-        if v12s7_emily and not emily in v12s7_killList and chris not in v12s7_killList:
-            idle "images/v12/Scene 7/Screens/Navigation 10a.webp" # Chris and Emily
+        if v12s7_emily and not emily in v12s7_killList and not chris in v12s7_killList: # Chris and Emily
+            idle "images/v12/Scene 7/Screens/Navigation 10a.webp" 
             hover "images/v12/Scene 7/Buttons/nav 10.webp"
-        elif v12s7_emily and emily not in v12s7_killList:
+            
+        elif v12s7_emily and not emily in v12s7_killList and chris in v12s7_kilLList:
             idle "images/v12/Scene 7/Screens/Navigation 10d.webp" # Emily
             hover "images/v12/Scene 7/Buttons/nav 10.webp"
+
         elif chris not in v12s7_killList:
             idle "images/v12/Scene 7/Screens/Navigation 10b.webp" # Chris
             hover "images/v12/Scene 7/Buttons/nav 10mock.webp"
+
         else:
-            idle "images/v12/Scene 7/Screens/Navigation 10d.webp"
+            idle "images/v12/Scene 7/Screens/Navigation 10c.webp"
             hover "images/v12/Scene 7/Buttons/nav 10mock.webp"
 
         if chris not in v12s7_killList:

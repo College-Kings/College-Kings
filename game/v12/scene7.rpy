@@ -4832,7 +4832,7 @@ label v12s7_sam2:
     call screen v12s7_right_walkway_back
 
 
-label v12s7_sam2_kill:
+label v12s7_samantha_kill:
 
     scene v12fersam4 # TPP. Show mc, mouth open, pointing finger fun at sam.
     with dissolve
@@ -5502,7 +5502,7 @@ label v12s7_chris1:
 
     call screen v12s7_kitchen
 
-label v12s7_chris1_kill:
+label v12s7_chris_kill:
     scene v12ferchr4 # TPP. Show mc pointing finger gun at chris, mc mouth open.
     with dissolve
 
