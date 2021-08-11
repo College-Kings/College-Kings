@@ -10,6 +10,8 @@ label v12_simplr_convo:
 
     pause 0.75
 
+    play music "music/v12/Scene 24/Track Scene 24.mp3" fadein 2
+
     if v12_msrose_sex:
         scene v12sic1a # TPP. Same as v12sic1, MC awake, looking at the ceiling, slight smile, mouth closed
         with dissolve
@@ -63,9 +65,11 @@ label v12_simplr_convo:
 
         u "(Well, no matches, I'm just gonna take my sorry ass to sleep.)"
 
-    #scene v12sic1f # TPP. Show MC sleeping again
-    #with dissolve
+    scene v12sic1f # TPP. Show MC sleeping again
+    with dissolve
 
-    #pause 0.75
+    pause 0.75
+
+    stop music fadeout 3
 
     jump v12_julia_call #scene 25

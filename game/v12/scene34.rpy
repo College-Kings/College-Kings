@@ -10,6 +10,8 @@ label v12_amber_after_spa:
 
     pause 1.25
 
+    play music "music/v12/Scene 34/Track Scene 34_1.mp3" fadein 2
+
     scene v12ams2 # FPP. MC, Amber, Aubrey and Imre talking to each other, MC looking at Amber, Amber looking at MC, smiling, mouth closed (make sure Lew's logo on towel is visible)
     with dissolve
 
@@ -29,6 +31,9 @@ label v12_amber_after_spa:
             with dissolve
 
             u "Wow Amber, that's a really nice towel."
+
+            stop music fadeout 3
+            play music "music/v12/Scene 34/Track Scene 34_2.mp3" fadein 2
 
             scene v12ams2
             with dissolve
@@ -55,6 +60,8 @@ label v12_amber_after_spa:
 
             pause 1
 
+            stop music fadeout 3
+
             jump v12_chris_nora_room
                 
     if v11_tease_amber <= 2 or kct == "popular":
@@ -65,6 +72,9 @@ label v12_amber_after_spa:
         with dissolve
 
         am "You know what?"
+
+        stop music fadeout 3
+        play music "music/v12/Scene 34/Track Scene 34_2.mp3" fadein 2
 
         scene v12ams3 # FPP. MC looking as Amber pullsd him into the sauna, Amber mouth open, neutral expression
         with dissolve
@@ -127,6 +137,8 @@ label v12_amber_after_spa:
 
                 pause 0.75
 
+                stop music fadeout 3
+
                 jump v12_chris_nora_room
 
             "Don't pull away":
@@ -176,6 +188,8 @@ label v12_amber_after_spa:
 
                 pause 0.75
 
+                stop music fadeout 3
+
                 jump v12_chris_nora_room
 
     else:
@@ -183,6 +197,9 @@ label v12_amber_after_spa:
 
         scene v12ams2c # FPP. Same as v12ams2, Amber very angry, mouth open
         with dissolve
+
+        stop music fadeout 3
+        play music "music/v12/Scene 34/Track Scene 34_2.mp3" fadein 2
 
         am "You just can't mind your own fucking business?"
 
@@ -266,5 +283,7 @@ label v12_amber_after_spa:
         with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
 
         jump v12_chris_nora_room

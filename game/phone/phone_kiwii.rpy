@@ -119,8 +119,12 @@ init python:
             else: self.mentions = []
 
             self.liked = False
-            self.replies = []
+            self._replies = []
             self.reply = None
+
+        @property
+        def replies(self):
+            return self._replies
 
     class KiwiiReply(KiwiiComment):
         def __init__(self, message, func=None, numberLikes=renpy.random.randint(250, 500), mentions=None, disabled=False):

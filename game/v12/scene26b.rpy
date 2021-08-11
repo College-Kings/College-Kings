@@ -9,6 +9,8 @@ label v12_chase_nora:
     with dissolve
     
     pause 0.5
+
+    play music "music/v12/Scene 26b/Track Scene 26b.mp3" fadein 2
     
     scene v12cn2 # TPP Show MC, at Nora's door, opening it
     with dissolve
@@ -280,5 +282,7 @@ label v12_chase_nora:
     with dissolve
 
     pause 0.5
+
+    stop music fadeout 3
 
     jump v12s27 # scene 27

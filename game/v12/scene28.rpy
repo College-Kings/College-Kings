@@ -9,6 +9,7 @@ label v12_riley_lobby:
     with dissolve
 
     pause 0.75
+    play music "music/v12/Scene 28/Track Scene 28.mp3" fadein 2
 
     scene v12ril1a # FPP. Same as v12ril1, Riley now in talking distance to MC, Riley very angry, mouth open
     with dissolve
@@ -86,6 +87,8 @@ label v12_riley_lobby:
 
     u "(Charli. That motherfucker. I wouldn't be surprised if it was him, but at the same time I'd be absolutely amazed.)"
 
+    stop music fadeout 3
+    
     if laurenrs or v1_kissLauren:
         jump v12_lauren_sex #scene 29
 

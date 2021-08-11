@@ -10,6 +10,8 @@ label v12_urban_exploring:
 
     pause 0.75
 
+    play music "music/v12/Scene 20/Track Scene 20.mp3" fadein 2
+
     scene v12uex2 # FPP Show outside of abandoned commercial bakery
     with dissolve
 
@@ -500,6 +502,8 @@ label v12_urban_exploring:
             with dissolve
 
             pause 0.75
+
+            stop music fadeout 3
             
             jump v12_nursing_aubrey #scene 21a
 
@@ -527,5 +531,7 @@ label v12_urban_exploring:
             with dissolve
 
             pause 0.75
+        
+            stop music fadeout 3
 
             jump v12_nora_exploring #scene 21

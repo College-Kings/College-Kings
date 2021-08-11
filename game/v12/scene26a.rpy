@@ -10,6 +10,8 @@ label v12_follow_chris:
 
     ch "Shit! Fuck!"
 
+    play music "music/v12/Scene 26a/Track Scene 26a_1.mp3" fadein 2
+
     scene v12chf2 # FPP. MC and Chris now outside the hotel, Chris looking at MC, Chris angry, holding his wrist, mouth open
     with dissolve
 
@@ -302,6 +304,9 @@ label v12_follow_chris:
 
             pause 1.25
 
+            stop music fadeout 3
+            play music "music/v12/Scene 26a/Track Scene 26a_2.mp3" fadein 2
+
             scene v12chf10 # FPP. Chris and MC now sitting in the waiting room, Chris worried, mouth open, looking at MC, MC looking at Chris
             with dissolve
 
@@ -371,6 +376,8 @@ label v12_follow_chris:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     if joinwolves:
         jump v12s27 #scene 27

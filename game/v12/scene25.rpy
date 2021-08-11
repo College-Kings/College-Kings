@@ -10,6 +10,8 @@ label v12_julia_call:
     with fade
     play sound "sounds/call.mp3"
     pause 1
+
+    play music "music/v12/Scene 25/Track Scene 25.mp3" fadein 2
     
     scene v12juc1 # TPP. Show MC sleeping in his bed
     with dissolve
@@ -365,5 +367,9 @@ label v12_jc_continue:
 
     scene v12juc8 # TPP. Show MC walking in the hotel room corridor, slight smile, mouth closed
     with dissolve
+
+    pause 0.75
+
+    stop music fadeout 3
 
     jump v12_nora_chris_fight #scene 26
