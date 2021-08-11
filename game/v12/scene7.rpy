@@ -5016,7 +5016,7 @@ label v12s7_cameron2:
 
     call screen v12s7_rear_gallery
 
-label v12s7_cameron2_kill:
+label v12s7_cameron_kill:
 
     scene v12fercam5 # TPP. Show mc, mouth open, pointing finger fun at cameron
     with dissolve
