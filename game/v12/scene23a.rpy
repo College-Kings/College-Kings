@@ -859,6 +859,8 @@ label v12_mc_chilling:
                 scene v12mor24e
                 with dissolve
 
+                pause 0.75
+
             "Don't call Cameron":
               
                 scene v12mor22
