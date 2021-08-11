@@ -228,7 +228,7 @@ label v12_murder_mystery_reveal:
             scene v12mmr10
             with dissolve
 
-            u "Well don't worry I gotchu."
+            u "Well don't worry I got you."
 
             #scene v12mmr9a # FPP. Same as v12mmr9, MC rushing back to where he was standing in v12mmr1
             #with dissolve

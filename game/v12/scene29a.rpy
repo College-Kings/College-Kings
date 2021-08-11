@@ -215,7 +215,7 @@ label v12_late_night_workout:
     scene v12lnw11a # FPP Same angle as v12lnw11, Lindsey's mouth closed
     with dissolve
 
-    u "Yeah, I gotchu."
+    u "Yeah, I got you."
 
     scene v12lnw12 # FPP View of MC as he holds down Lindsey's leg while she holds her other knee to her chest, Lindsey's mouth open
     with dissolve
@@ -705,7 +705,7 @@ label v12_late_night_workout:
     scene v12lnw22
     with dissolve
 
-    u "Alright, let's do it. I gotchu."
+    u "Alright, let's do it. I got you."
 
     scene v12lnw22b # FPP Same angle as v12lnw22, Lindsey has lowered the bar to her chest
     with dissolve
