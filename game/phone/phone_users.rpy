@@ -112,7 +112,7 @@ init -90 python:
             }
             "Charli": {
                 "username": "CharliAndTheCockFactory",
-                "profilePicture": "images/phone/kiwii/profilePictures/samanthapp.webp"
+                "profilePicture": "images/phone/kiwii/profilePictures/charlipp.webp"
             }
         }
         return users
