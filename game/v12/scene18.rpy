@@ -1530,17 +1530,18 @@ label v12s18_bet: # END OF FREE ROAM
         scene v12slpbet5a # TPP. Same as v12slpbet5, MC posing for a pic, he's completely nude, smiling, mouth closed
         with flash
 
-        pause 0.75
+        pause 1.25
 
         scene v12slpbet5b # TPP. Same as v12slpbet5a, different pose
         with flash
 
-        pause 0.75
+        $ grant_achievement("a_bet_is_a_bet")
+        pause 1.25
 
         scene v12slpbet5 
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
         scene v12slpbet3
         with dissolve

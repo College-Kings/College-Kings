@@ -169,7 +169,8 @@ label v11_lindsey_park:
             li "Always down for being held accountable."
 
         "Support Lindsey":
-            $ political_strategist = True #keep
+            #$ political_strategist = True
+            $ v11_lindsey_run = True
             $ lindseyLike += 1
 
             scene v11lip3h # FPP. Same as v11lip3d, different pose

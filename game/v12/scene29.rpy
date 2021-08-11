@@ -1088,6 +1088,9 @@ label v12_lauren_sex:
                 scene v12las66 # FPP. MC and Lauren lieing down next to each other, looking at each other, Lauren smiling, mouth open, make her body a bit sweaty if possible
                 with dissolve
 
+                if laurenrs and not chloegf and not chloers and not aubreyrs and not evelynrs and not emilyrs and not rileyrs and not amberrs and not penelopers and not aubreysex2 and not v3_aubsex:
+                    $ grant_achievement("worth_the_wait")
+
                 la "Phew! Haha... That was absolutely perfect."
 
                 scene v12las66a # FPP. Same as v12las66, lauren smiling, mouth closed

@@ -200,5 +200,6 @@ label v12_nora_chris_fight:
 
             jump v12_chase_nora #scene 26b
         "Go to Chris":
+            $ v12_help_chris += 1
             $ addPoint("bro")
             jump v12_follow_chris #scene 26a
