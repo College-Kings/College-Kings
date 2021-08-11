@@ -1525,8 +1525,6 @@ label v12s18_bet: # END OF FREE ROAM
 
         pause 0.75
 
-        $ grant_achievement("a_bet_is_a_bet")
-
         scene v12slpbet3b
         with dissolve
 
