@@ -517,14 +517,14 @@ label v12s32:
 
             au "*Whisper to self* Let's get this over with."
 
-    if AubreyBoat0:
+    if aubrey.points == 0:
 
         scene v12s32_20
         with dissolve
 
         au "*Sighs* Fine..."
 
-    if AubreyBoat2:
+    if aubrey.points > 0:
 
         scene v12s32_20d # same as 20b, aubrey cute smile at mc, mouth open
         with dissolve
