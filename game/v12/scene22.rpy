@@ -205,7 +205,7 @@ label v12_riley_room:
     scene v12rir11a
     with dissolve
 
-    ri "Yep, I just looked like a little blueberry. My glasses and the braces didn't help either. *Chuckles*"
+    ri "Yep, I just looked like a little blueberry. The braces didn't help either. *Chuckles*"
 
     scene v12rir11c
     with dissolve
