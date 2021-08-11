@@ -8,6 +8,9 @@ label v12_murder_mystery_reveal:
     scene v12mmr1 # FPP. Mr. Lee and Ms. Rose standing in front of the students, addressing them, only Mr. Lee in shot. Mr. Lee smiling, mouth open, looking at MC
     with dissolve
 
+    if len(v12s7_killList) == v12s7_victims:
+        $ grant_achievement("mass_casualties")
+
     lee "Wow, that turned out a lot better than expected. I hope you all enjoyed yourselves. Was anyone surprised to learn [name] was my chosen murderer?"
 
     play music "music/v12/Scene 8/Track Scene 8.mp3" fadein 2
@@ -68,8 +71,7 @@ label v12_murder_mystery_reveal:
     $ v12_murder_count = len(v12s7_killList)
     if len(v12s7_killList) >= 5:
     
-        if len(v12s7_killList) == v12s7_victims:
-            $ grant_achievement("mass_casualties")
+        $ grant_achievement("killing_spree")
 
         lee "A total of [v12_murder_count] people were killed, so let's give our murderer a round of applause."
 

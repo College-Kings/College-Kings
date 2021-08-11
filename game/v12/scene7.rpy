@@ -5992,9 +5992,6 @@ label v12s7_mc_caught:
     if len(v12s7_killList) == 0:
         $ grant_achievement("weapons_down")
 
-    if len(v12s7_killList) >= 5:
-        $ grant_achievement("killing_spree")
-
     unknown "I found the murderer!"
 
     stop music fadeout 3
