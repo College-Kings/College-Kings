@@ -411,6 +411,7 @@ screen v12s7_left_viewpoint():
 
         else:
             idle "images/v12/Scene 7/Screens/Navigation 14d.webp" # No one
+            hover "images/v12/Scene 7/Buttons/nav 14dmock.webp" # No one
 
         hotspot (293, 0, 1385, 130) action Show("v12s7_right_viewpoint")
         hotspot (338, 976, 1200, 104) action Show("v12s7_rear_gallery")
@@ -470,7 +471,10 @@ screen v12s7_rear_gallery():
                     action Jump("v12s7_cameron2")
 
         hotspot (172, 320, 239, 653):
-            action Jump("v12s7_mrlee")
+            if len(v12s7_killList) >= v12s7_victims:
+                action Show("endFreeRoamConfirm", continueLabel="v12_murder_mystery_reveal")
+            else:
+                action Jump("v12s7_mrlee")
         
         if previous_location == "v12s7_left_walkway_front" or previous_location == "v12s7_right_walkway_front":
             hotspot (327, 1000, 1216, 80) action Show(previous_location)

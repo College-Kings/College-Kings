@@ -1057,7 +1057,8 @@ label v12s7_riley1:
 label v12s7_chloe1:
     $ v12s7_chloe = True
 
-    $ v12s7_seenList = [riley]
+    $ v12s7_seenList = []
+
     if josh_europe and not v12s7_josh:
         $ v12s7_seenList.append(josh)
 
@@ -5571,46 +5572,42 @@ label v12s7_chris_kill:
 label v12s7_mrlee:
     $ v12s7_mrlee = True
 
-    if len(v12s7_killList) >= v12s7_victims:
-        call screen endFreeRoamConfirm("v12_murder_mystery_reveal")
+    scene v12ferlee1 # FPP. Show mr lee, neutral face, mouth closed
 
-    else:
-        scene v12ferlee1 # FPP. Show mr lee, neutral face, mouth closed
+    u "Hello there, you fan of boxing? If so, did you catch my last fight?"
 
-        u "Hello there, you fan of boxing? If so, did you catch my last fight?"
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_13.mp3" fadein 2
 
-        stop music fadeout 3
-        play music "music/v12/Scene 7/Track Scene 7_13.mp3" fadein 2
+    scene v12ferlee1a # FPP. same 1, mouth open
+    with dissolve
 
-        scene v12ferlee1a # FPP. same 1, mouth open
-        with dissolve
+    lee "You can't talk to the Gamemaster."
 
-        lee "You can't talk to the Gamemaster."
+    scene v12ferlee1
+    with dissolve
 
-        scene v12ferlee1
-        with dissolve
+    u "Who's that?"
 
-        u "Who's that?"
+    scene v12ferlee1a
+    with dissolve
 
-        scene v12ferlee1a
-        with dissolve
+    lee "What? Me, obviously."
 
-        lee "What? Me, obviously."
+    scene v12ferlee1
+    with dissolve
 
-        scene v12ferlee1
-        with dissolve
+    u "Haha, I know, just teasing."
 
-        u "Haha, I know, just teasing."
+    scene v12ferlee2 # TPP. Show mc walking off
+    with dissolve
 
-        scene v12ferlee2 # TPP. Show mc walking off
-        with dissolve
+    pause 0.75
 
-        pause 0.75
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
-        stop music fadeout 3
-        play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
-
-        call screen v12s7_rear_gallery
+    call screen v12s7_rear_gallery
 
 label v12s7_josh1:
     $ v12s7_josh = True
