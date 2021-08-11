@@ -67,8 +67,8 @@ label v12_chris_nora_room:
 
     u "(It really seems like those two are coming to a crossroads. I'm sure she's pretty heated right now, I wonder if I should go talk to her.)"
 
-    scene v12cnr5b # TPP. Same as v12cnr5, MC confused, mouth closed
-    with dissolve
+    #scene v12cnr5b # TPP. Same as v12cnr5, MC confused, mouth closed
+    #with dissolve
 
     menu:
         "Go to Nora":
@@ -83,10 +83,9 @@ label v12_chris_nora_room:
 
             pause 0.75
 
-            play sound "sounds/knock.mp3"
-
             scene v12cnr12 # TPP. Show MC knocking on Nora's door, MC slightly worried, mouth open
             with dissolve
+            play sound "sounds/knock.mp3"
 
             u "Nora, I... Are you alright?"
 
@@ -121,6 +120,7 @@ label v12_chris_nora_room:
 
                 pause 0.75
 
+                play sound "sounds/doorclose.mp3"
                 scene v12cnr4
                 with dissolve
 
@@ -134,15 +134,16 @@ label v12_chris_nora_room:
                 jump v12_game_roommate
 
             else:
+                play sound "sounds/dooropen.mp3"
                 scene v12cnr12a # TPP. Same as v12cnr12, Door open, Nora inside the room, looking at MC who is outside, Nora crying, mouth closed, MC worried, mouth closed
                 with dissolve
 
-                pause 0.75
+                pause 1.25
 
                 scene v12cnr14 # TPP. Show Nora walking towards her bed, MC slightly behind her, Nora crying, mouth closed, MC worried, mouth closed
                 with dissolve
 
-                pause 0.75
+                pause 1
 
                 scene v12cnr15 # TPP. Show Nora and MC sitting next to each other on the bed, Nora crying, mouth closed, MC worried, mouth open, Nora looking down, MC looking at Nora
                 with dissolve

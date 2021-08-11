@@ -8,7 +8,7 @@ label v12_late_night_workout:
     scene v12lnw1 # TPP Show MC in hotel lobby, sitting by himself, Lindsey walking up to him and waving, Lindsey with mouth open
     with dissolve
 
-    li "What are you doing down here all by yourself."
+    li "What are you doing down here all by yourself?"
 
     if joinwolves:
         scene v12lnw2 # FPP Show Lindsey, looking at MC, neutral expression with mouth closed
@@ -16,7 +16,7 @@ label v12_late_night_workout:
 
         u "I just got back from hanging out with Imre."
 
-    elif joinapes:
+    else:
         scene v12lnw2
         with dissolve
 
@@ -50,7 +50,7 @@ label v12_late_night_workout:
     scene v12lnw2
     with dissolve
 
-    u "So you want big and strong [name] to occompany you so you don't have to go by yourself?"
+    u "So you want big and strong [name] to accompany you so you don't have to go by yourself?"
 
     scene v12lnw2b # FPP Same angle as v12lnw2, Linsdsey smiling with mouth open
     with dissolve
@@ -135,17 +135,17 @@ label v12_late_night_workout:
     scene v12lnw7b # FPP Same angle as v12lnw7, Lindsey looking at MC, smiling with mouth open
     with dissolve
 
-    li "I haven't actually been to real gym before."
+    li "I haven't actually worked out at a real gym before."
 
     scene v12lnw7c # FPP Same angle as v12lnw7, Lindsey looking at MC, smiling with mouth closed
     with dissolve
 
-    u "Don't you workout?"
+    u "You don't work out at all?"
 
     scene v12lnw7b
     with dissolve
 
-    li "Yeah, but I usually just at-home stuff. I don't have any of my stuff with me here and I thought it'd be fun to actually go to a gym for once."
+    li "Yeah, but I usually just do at-home stuff. I don't have any of my stuff with me here and I thought it'd be fun to actually go to a gym for once."
 
     scene v12lnw7c
     with dissolve
@@ -155,7 +155,7 @@ label v12_late_night_workout:
     scene v12lnw7b
     with dissolve
 
-    li "Nope, I'm more of a yoga ball and dumbell kind of girl."
+    li "Nope, I'm more of a yoga ball and dumbbell kind of girl."
 
     scene v12lnw7c
     with dissolve
@@ -200,12 +200,12 @@ label v12_late_night_workout:
     scene v12lnw10 # TPP MC and Lindsey moving to a space in front of large, floor-to-ceiling mirrors
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12lnw10a # TPP Same angle as v12lnw10, MC attempting to touch his toes but can't reach, Lindsey, getting into position on the floor
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12lnw11 # FPP Lindsey laying on her back on the ground, pulling one knee to her chest, her other leg lifting slightly off the ground
     with dissolve
@@ -230,12 +230,12 @@ label v12_late_night_workout:
     scene v12lnw12b # FPP Same angle as v12lnw12, Lindsey's switched which leg she is stretching, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12lnw13 # TPP MC getting to his feet and holding a hand down to help Lindsey up
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12lnw14 # FPP Show Lindsey, standing near mirror, looking at MC, smiling with mouth open
     with dissolve
@@ -285,7 +285,7 @@ label v12_late_night_workout:
     scene v12lnw10c # TPP Same angle as v12lnw10, MC with his back and heels up against the wall
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12lnw15a # FPP Same angle as v12lnw15, Lindsey with neutral expression, mouth closed
     with dissolve
@@ -300,7 +300,7 @@ label v12_late_night_workout:
     scene v12lnw15a
     with dissolve
 
-    u "You making this sounds frightening. *Chuckles*"
+    u "You making this sound frightening. *Chuckles*"
 
     scene v12lnw15b # FPP Same angle as v12lnw15, Lindsey smiling with mouth open
     with dissolve
@@ -318,7 +318,7 @@ label v12_late_night_workout:
                     scene v12lnw10d # TPP Same angle as v12lnw10, MC against wall, stretching down to touch his toes, not reaching, leaning forward, Lindsey standing by
                     with dissolve
 
-                    pause 0.5
+                pause 1
 
                     scene v12lnw15
                     with dissolve
@@ -343,7 +343,7 @@ label v12_late_night_workout:
                 scene v12lnw10e # TPP Same angle as v12lnw10, MC against wall, stretching down to touch his toes, not reaching yet, Lindsey's hand on his back
                 with dissolve
 
-                pause 0.5
+                pause 1
 
                 scene v12lnw10f # TPP Same angle as v12lnw10, MC against wall, reaching down and just touching his toes, Lindsey's hand on his back
                 with dissolve
@@ -451,6 +451,8 @@ label v12_late_night_workout:
             scene v12lnw16a
             with dissolve
 
+            pause 0.75
+
             scene v12lnw17 # FPP MC laying on bench press, looking up at Lindsey, who is smiling with mouth closed
             with dissolve
 
@@ -539,7 +541,7 @@ label v12_late_night_workout:
             scene v12lnw19c # TPP Same angle as v12lnw19, MC sitting on bench, entering text into his phone
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             scene v12lnw21b # FPP Same angle as v12lnw21, MC holding his phone out to show Lindsey, Lindsey's mouth closed
             with dissolve
@@ -678,12 +680,12 @@ label v12_late_night_workout:
     scene v12lnw9
     with dissolve
 
-    u "The bar is fourty five pounds."
+    u "The bar is forty-five pounds."
 
     scene v12lnw9c
     with dissolve
 
-    li "Okay yeah, I can only do the bar. When I use dumbells my max is twenty pounds in each hand."
+    li "Okay yeah, I can only do the bar. When I use dumbbells my max is twenty pounds in each hand."
 
     scene v12lnw9b
     with dissolve
@@ -733,7 +735,7 @@ label v12_late_night_workout:
     scene v12lnw22f # FPP Same angle as v12lnw22, Lindsey has released the bar and let her arms flop to her sides, she is smiling with her mouth open
     with dissolve
 
-    li "That is not fourty five pounds!"
+    li "That is not forty-five pounds!"
 
     scene v12lnw22g # FPP Same angle as v12lnw22, Lindsey with her arms flopped to her sides, exhausted, smiling with mouth closed
     with dissolve
@@ -795,10 +797,11 @@ label v12_late_night_workout:
 
     pause 0.5
 
+    play sound "sounds/facepunch1.mp3"
     scene v12lnw25a # FPP Same angle as v12lnw25, Lindsey kicking backward at the punching bag while looking away
     with dissolve
 
-    pause 0.5
+    pause 1.25
 
     scene v12lnw24a # FPP Same angle as v12lnw24, Lindsey looking at MC, mouth closed
     with dissolve
@@ -832,10 +835,11 @@ label v12_late_night_workout:
         "Hard":
             $ addPoint("tm")
 
+            play sound "sounds/ks.mp3"
             scene v12lnw25c # TPP Same angle as v12lnw25, MC kicking back at the punching bag, missing, and losing his balance
             with dissolve
 
-            pause 0.5
+            pause 1.25
 
             scene v12lnw24b # FPP Same angle as v12lnw24, Lindsey smiling with mouth closed
             with dissolve
@@ -848,10 +852,12 @@ label v12_late_night_workout:
             li "Just a little. *Chuckles*"
             
         "Steady":
+
+            play sound "sounds/facepunch1.mp3"
             scene v12lnw25d # TPP Same angle as v12lnw25, MC kicking back at the punching bag, the kick landing squarly and knocking the bag back
             with dissolve
 
-            pause 0.5
+            pause 1.25
 
             scene v12lnw24b
             with dissolve

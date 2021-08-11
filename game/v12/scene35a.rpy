@@ -28,7 +28,7 @@ label v12_nora_room:
             scene v12nos1c # FPP. Same as v12nos1b, Nora crying, mouth open
             with dissolve
 
-            no "How can you understand that and know how to put it into words? I don't know why it’s so hard for other men to get this."
+            no "How can you understand that and know how to put it into words? I don't know why it's so hard for other men to get this."
 
             scene v12nos1a
             with dissolve
@@ -38,7 +38,8 @@ label v12_nora_room:
             scene v12nos1
             with dissolve
 
-            u "Exactly. I guess some men just don't know how to provide. I see being a provider differently than others. It isn't just about putting food on the table or a roof over your head. You have to be present while you achieve all of those things."
+            u "Exactly. I guess some men just don't know how to provide. I see being a provider differently than others."
+            u "It isn't just about putting food on the table or a roof over your head. You have to be present while you achieve all of those things."
 
         "You are...":
             $ v12_nora_points += 1
@@ -51,7 +52,7 @@ label v12_nora_room:
             scene v12nos1c
             with dissolve
 
-            no "*Sighs* I can’t even remember what it's like to be the center of someone's world..."
+            no "*Sighs* I can't even remember what it's like to be the center of someone's world..."
 
             scene v12nos1
             with dissolve
@@ -71,7 +72,7 @@ label v12_nora_room:
             scene v12nos1e # FPP. Same as v12nos1d, different pose
             with dissolve
 
-            no "Why is it so easy for you to understand that a woman needs to be your sole focus from time to time, but other men can’t?"
+            no "Why is it so easy for you to understand that a woman needs to be your sole focus from time to time, but other men can't?"
 
             scene v12nos1f # FPP. Same as v12nos1e, Nora slight smile, still tearing up, mouth closed
             with dissolve
@@ -86,14 +87,15 @@ label v12_nora_room:
     scene v12nos1h # FPP. Same as v12nos1g, Nora slight smile, mouth closed
     with dissolve
 
-    u "Well… Over the course of these months that I've gotten to know you and with the insight I have into your relationship, specifically for you and I..."
+    u "Well... Over the course of these months that I've gotten to know you and with the insight I have into your relationship, specifically for you and I..."
 
     menu:
         "Communication is key":
             scene v12nos1i # FPP. Same as v12nos1h, Nora slightly sad, mouth closed
             with dissolve
 
-            u "Communication is key. Times won't always be the way we'd both want, but as long as we can communicate to each other and understand each other, all will work. Being in a relationship means providing for your partner in every aspect, not just financially."
+            u "Communication is key. Times won't always be the way we'd both want, but as long as we can communicate to each other and understand each other, all will work."
+            u "Being in a relationship means providing for your partner in every aspect, not just financially."
 
         "Time is key":
             $ v12_nora_points += 1
@@ -106,12 +108,12 @@ label v12_nora_room:
             scene v12nos1j # FPP. Same as v12nos1h, Nora looking at MC, Nora slight smile, mouth closed
             with dissolve
 
-            u "You'd be my sunrise and sunset, haha...  Being in a relationship means providing for your partner in every aspect, not just financially. You’d be everything to me."
+            u "You'd be my sunrise and sunset, haha... Being in a relationship means providing for your partner in every aspect, not just financially. You'd be everything to me."
 
     scene v12nos1h
     with dissolve
 
-    no "*Whispers* Ha…"
+    no "*Whispers* Ha..."
 
     scene v12nos1i
     with dissolve
@@ -136,27 +138,27 @@ label v12_nora_room:
     scene v12nos1h
     with dissolve
 
-    no "Do… Do you find me attractive?"
+    no "Do... Do you find me attractive?"
 
     scene v12nos1l # FPP. Same as v12nos1j, Nora slight smile, mouth open
     with dissolve
 
-    no "I mean… Not just looks but, as a person?"
+    no "I mean... Not just looks but, as a person?"
 
     scene v12nos1j
     with dissolve
 
-    u "Of course I do, Nora. I think you're one of the most interesting people I’ve ever met."
+    u "Of course I do, Nora. I think you're one of the most interesting people I've ever met."
 
     scene v12nos1h
     with dissolve
 
-    u "Since the moment I laid eyes on you, it was obvious to me that you’re the entire fucking package. Anyone would be lucky to have you in their life."
+    u "Since the moment I laid eyes on you, it was obvious to me that you're the entire fucking package. Anyone would be lucky to have you in their life."
 
     scene v12nos1j
     with dissolve
 
-    u "The closer the better… *Chuckles*"
+    u "The closer the better... *Chuckles*"
 
     scene v12nos1l
     with dissolve
@@ -211,7 +213,7 @@ label v12_nora_room:
     scene v12nos1j
     with dissolve
 
-    u "That's how it’s supposed to be. *Chuckles*"
+    u "That's how it's supposed to be. *Chuckles*"
 
     scene v12nos3 # TPP. Show Nora hugging MC, Nora mouth open, slight smile, MC mouth closed, slight smile
     with dissolve
@@ -229,7 +231,7 @@ label v12_nora_room:
     no "For not being like Chris."
 
     if v12_nora_points == 2 or kct == "loyal":
-        if v12_nora_points <= 1:
+        if v12_nora_points < 2:
             call screen kctPopup
         
         scene v12nos6 # TPP. Same as v12nos3, different angle, Nora mouth closed, slight smile
@@ -267,7 +269,7 @@ label v12_nora_no_sex:
         scene v12nos1e
         with dissolve
 
-        no "You really are the perfect guy…"
+        no "You really are the perfect guy..."
 
         scene v12nos1d
         with dissolve
@@ -282,7 +284,7 @@ label v12_nora_no_sex:
         scene v12nos1l
         with dissolve
 
-        no "I… I wanna take a shower and try to clear my head."
+        no "I... I wanna take a shower and try to clear my head."
 
         scene v12nos1h
         with dissolve
@@ -387,7 +389,7 @@ label v12_nora_sex:
         scene v12nos21 # TPP. Show Nora laying down on her stomach, MC on top of her, massaging her back, Nora mouth open, MC mouth closed, both slightly smiling
         with dissolve
 
-        no "Mmm… This feels so relaxing... Do you want me to-"
+        no "Mmm... This feels so relaxing... Do you want me to-"
 
         scene v12nos21a # TPP. Same as v12nos21, MC massaging Nora in a different place, Nora mouth closed, MC mouth open, both slightly smiling
         with dissolve
@@ -448,7 +450,7 @@ label v12_nora_sex:
         with dissolve
         pause
 
-        no "Haaa… Mmm... I need you, [name]."
+        no "Haaa... Mmm... I need you, [name]."
 
         u "This... is the attention you deserve."
 
@@ -460,13 +462,13 @@ label v12_nora_sex:
         
         no "*Moans* Oh, fuck..."
 
-        u "And cared for…"
+        u "And cared for..."
 
         scene v12norsb2 # Ignore as animation
         with dissolve
         pause
 
-        no "Sh-shit… *Moans*"
+        no "Sh-shit... *Moans*"
 
         u "Feels like."
 
@@ -476,7 +478,7 @@ label v12_nora_sex:
         with dissolve
         pause
 
-        no "I love... how much you.... want me."
+        no "I love... how much you... want me."
 
         u "I always fucking have."
 
@@ -499,15 +501,15 @@ label v12_nora_sex:
         with dissolve
         pause
 
-        no "*Moans* It's been such a long time since I’ve felt this… Good… *Moans* Fuck!."
+        no "*Moans* It's been such a long time since I've felt this... Good... *Moans* Fuck!"
 
         scene v12norstf # Ignore as animation
         with dissolve
         pause
 
-        u "From now on…"
+        u "From now on..."
 
-        no "Mmm, yes [Name]!"
+        no "Mmm, yes [name]!"
 
         scene v12norst2 # Ignore as animation
         with dissolve
@@ -519,9 +521,9 @@ label v12_nora_sex:
         with dissolve
         pause
 
-        no "*Gasps* [name]! I’m- I’m going t-"
+        no "*Gasps* [name]! I'm- I'm going t-"
 
-        u "Ohhhh no… Not yet, baby. I’m not ready for this to end..."
+        u "Ohhhh no... Not yet, baby. I'm not ready for this to end..."
 
         scene v12nos30 # TPP. Show MC still holding Nora's wrist, moving her towards the wall in between the beds, her back turned to him
         with dissolve
@@ -544,13 +546,13 @@ label v12_nora_sex:
 
         no "Oh my fucking... God... *Moans*"
 
-        no "This feels so… wrong... *Moans*"
+        no "This feels so... wrong... *Moans*"
 
         scene v12norcwf # Ignore as animation
         with dissolve
         pause
 
-        no "But you feel so… fucking... GOOD!"
+        no "But you feel so... fucking... GOOD!"
 
         u "You don't need to worry about anything except for this. Here, right now."
 
@@ -558,7 +560,7 @@ label v12_nora_sex:
         with dissolve
         pause
 
-        no "*Moans* Okay, yeah… You’re s- so fucking right… *Moans*"
+        no "*Moans* Okay, yeah... You're s- so fucking right... *Moans*"
 
         scene v12norcw2f # Ignore as animation
         with dissolve
@@ -566,7 +568,7 @@ label v12_nora_sex:
 
         no "Yes, [name]! FUCK!"
 
-        no "*Moans* Don’t… stop... I’m- *Gasps*"
+        no "*Moans* Don't... stop... I'm- *Gasps*"
 
         scene v12nos32 # TPP. Show MC and Nora switching places, MC's back towards the wall, MC and Nora kissing, Nora giving MC a handjob
         with dissolve
@@ -582,7 +584,7 @@ label v12_nora_sex:
         with dissolve
         pause
 
-        u "Oh my fucking god, Nora…"
+        u "Oh my fucking god, Nora..."
 
         u "I'd never... do you wrong. *Moans* You're too... fucking... amazing."
 
@@ -590,7 +592,7 @@ label v12_nora_sex:
         with dissolve
         pause
 
-        no "*Chuckles* I’m glad you know it, babe."
+        no "*Chuckles* I'm glad you know it, babe."
 
         scene v12norkhj2 # Ignore as animation
         with dissolve
@@ -612,6 +614,11 @@ label v12_nora_sex:
         scene v12nos34 # TPP. Show Nora putting both ehr hands on MC's shoulders, kissing him
         with dissolve
 
+        if joinwolves:
+            $ grant_achievement("inside_job")
+        else:
+            $ grant_achievement("all_is_fair_in_love_and_war")
+
         pause
 
         if joinwolves:
@@ -625,12 +632,12 @@ label v12_nora_sex:
         scene v12nos35 # FPP. Same positioning as v12nos35, MC and Nora looking at each other, Nora smiling, mouth closed
         with dissolve
 
-        u "Nora… That was… Thank you."
+        u "Nora... That was... Thank you."
 
         scene v12nos35a # FPP. Same as v12nos36, Nora smiling, mouth open
         with dissolve
 
-        no "Thank you for making me feel special. Even if it’s just for a moment."
+        no "Thank you for making me feel special. Even if it's just for a moment."
 
         scene v12nos35
         with dissolve
@@ -660,7 +667,7 @@ label v12_nora_sex:
         scene v12nos35a
         with dissolve
 
-        no "Yes, of course… You will."
+        no "Yes, of course... You will."
 
         scene v12nos35
         with dissolve
@@ -675,10 +682,13 @@ label v12_nora_sex:
         scene v12nos37 # FPP. MC looking an Nora, Nora in front of bathroom door, looking at MC, Nora smiling, mouth open
         with dissolve
 
-        no "Have a goodnight."
+        no "Have a good night."
 
         scene v12nos37a # FPP. Same as v12nos38, Nora smiling, mouth closed
         with dissolve
+
+        if v12_lindsey_sex and v12_nora_sex and v12_lauren_sex and v12_msrose_sex:
+            $ grant_achievement("city_of_love")
 
         u "You too..."
 

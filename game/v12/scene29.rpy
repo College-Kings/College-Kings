@@ -837,7 +837,7 @@ label v12_lauren_sex:
                 scene v12las51 # TPP. Show MC lying down in her bed, Lauren on top of him
                 with dissolve
 
-                pause 0.75
+                pause 1.25
 
                 scene v12las52 # FPP. MC looking at Lauren as she is on top of him, Lauren smiling, mouth open
                 with dissolve
@@ -891,6 +891,7 @@ label v12_lauren_sex:
 
                 scene v12las54c # TPP. Same as v12las54b, MC kissing Lauren's lips, hand over her pussy
                 with dissolve
+                play sound "sounds/kiss.mp3"
 
                 pause
 
@@ -974,6 +975,7 @@ label v12_lauren_sex:
 
                 scene v12las58 # TPP. Show MC kissing Lauren
                 with dissolve
+                play sound "sounds/kiss.mp3"
 
                 pause
 
@@ -1091,6 +1093,9 @@ label v12_lauren_sex:
                 scene v12las66 # FPP. MC and Lauren lieing down next to each other, looking at each other, Lauren smiling, mouth open, make her body a bit sweaty if possible
                 with dissolve
 
+                if laurenrs and not chloegf and not chloers and not aubreyrs and not evelynrs and not emilyrs and not rileyrs and not amberrs and not penelopers and not aubreysex2 and not v3_aubsex:
+                    $ grant_achievement("worth_the_wait")
+
                 la "Phew! Haha... That was absolutely perfect."
 
                 scene v12las66a # FPP. Same as v12las66, lauren smiling, mouth closed
@@ -1126,17 +1131,17 @@ label v12_lauren_sex:
                 scene v12las67 # TPP. Show Lauren and MC getting out of the bed, both smiling, mouths closed
                 with dissolve
 
-                pause 0.75
+                pause
 
                 scene v12las68 # TPP. Show MC and Lauren getting dressed, both smiling, mouths closed
                 with dissolve
 
-                pause 0.75
+                pause
 
                 scene v12las69 # TPP. Show Lauren and MC walking towards the door of the hotel room, both smiling, mouths closed
                 with dissolve
 
-                pause 0.75
+                pause 1
 
                 scene v12las70 # TPP. Show MC getting out of the room, Lauren still inside, in front of the door, door open, both smiling, mouths closed
                 with dissolve
@@ -1155,6 +1160,7 @@ label v12_lauren_sex:
 
                 scene v12las72 # TPP. Show Lauren kissing MC
                 with dissolve
+                play sound "sounds/kiss.mp3"
 
                 pause
 

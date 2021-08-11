@@ -37,9 +37,9 @@ label v12_simplr_convo:
 
     u "(Haven't checked out Simplr in a while.)"
 
-    if simplr_Emmy in simplr_contacts:
+    if simplr_Emmy in simplr_contacts and False:
 
-        $ simplr_Emmy.newMessage("Hey handsome, I was hoping I'd match with you. Where are you from?", queue=True)
+        $ simplr_Emmy.newMessage("Hey handsome, I was hoping I'd match with you. Where are you from?", queue=False)
         $ simplr_Emmy.addReply("I'm actually in Paris right now, but I'm from California. Wbu?")
         $ simplr_Emmy.newMessage("Wow, my distance settings are way off. I'm from Amsterdam.")
         $ simplr_Emmy.addReply("Haha, call it a coincidence, but I'm actually headed to Amsterdam here soon.")
@@ -49,6 +49,8 @@ label v12_simplr_convo:
         $ simplr_Emmy.addReply("I'll definitely look into that.")
         $ simplr_Emmy.newMessage("Good, I know it's late in Paris so goodnight handsome ;)")
         $ simplr_Emmy.addReply("Goodnight ;)")
+
+        call screen phone
 
         scene v12sic1a
         with dissolve
@@ -61,9 +63,9 @@ label v12_simplr_convo:
 
         u "(Well, no matches, I'm just gonna take my sorry ass to sleep.)"
 
-    scene v12sic1f # TPP. Show MC sleeping again
-    with dissolve
+    #scene v12sic1f # TPP. Show MC sleeping again
+    #with dissolve
 
-    pause 0.75
+    #pause 0.75
 
     jump v12_julia_call #scene 25

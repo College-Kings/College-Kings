@@ -407,7 +407,13 @@ label v12_chloe_cafe:
 
             scene v12chc5o # FPP. Same as v12chc5, Chloe angry, mouth closed
             with dissolve
-
+            
+            if political_strategist: #for v11-12 compatibility purposes
+                $ v11_lindsey_run = True
+            
+            if v11_lindsey_run and v11_told_aubrey:
+                $ grant_achievement("throw_her_to_the_lions")
+            
             u "Good. Now, again, don't quote me. I'm not sure of all the details and I'm not even positive if this is truly her plan, but I heard that Lindsey's been considering running for President of the Chicks, against you."
 
             if v11_lindsey_run and v11_told_aubrey:

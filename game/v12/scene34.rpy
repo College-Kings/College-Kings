@@ -8,13 +8,13 @@ label v12_amber_after_spa:
     scene v12ams1 # TPP. Show MC, Amber, Aubrey and Imre hanging out outside the sauna in their towels, all smiling mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12ams2 # FPP. MC, Amber, Aubrey and Imre talking to each other, MC looking at Amber, Amber looking at MC, smiling, mouth closed (make sure Lew's logo on towel is visible)
     with dissolve
 
     menu:
-        "Tease":
+        "Tease Amber":
             $ addPoint("tm")
             $ v11_tease_amber += 1
 
@@ -30,6 +30,33 @@ label v12_amber_after_spa:
 
             u "Wow Amber, that's a really nice towel."
 
+            scene v12ams2
+            with dissolve
+
+            am "Haha thanks."
+ 
+            scene v12ams6 # TPP. Show MC leaving the sauna, slight smile, mouth closed
+            with dissolve
+
+            pause 1
+
+            scene v12ams7 # TPP. Show MC getting dressed, slight smile, mouth closed
+            with dissolve
+
+            pause 1
+
+            scene v12ams8 # TPP. Show MC walking out of spa, slight smile, mouth closed, fully dressed
+            with dissolve
+
+            pause 1
+
+            scene v12ams9 # TPP. Show MC walking in hotel lobby, fully dressed, mouth closed, slight smile
+            with dissolve
+
+            pause 1
+
+            jump v12_chris_nora_room
+                
     if v11_tease_amber <= 2 or kct == "popular":
         if not (v11_tease_amber <= 2):
             call screen kctPopup
@@ -127,10 +154,10 @@ label v12_amber_after_spa:
                 scene v12ams4b # FPP. Same as v12ams4, Amber walking away from MC
                 with dissolve
 
-                pause 0.75
+                pause 1.25
 
                 scene v12ams6
-                with dissolve
+                with fade
 
                 pause 0.75
 
@@ -157,14 +184,13 @@ label v12_amber_after_spa:
         scene v12ams2c # FPP. Same as v12ams2, Amber very angry, mouth open
         with dissolve
 
-        am "You just can't mind your own fucking business!"
-
-        play sound "sounds/slap.mp3"
+        am "You just can't mind your own fucking business?"
 
         scene v12ams10 # TPP. Same positioning as v12ams2, Show Amber smacking MC on the side of the head, Amber very angry, MC startled, both mouths closed
         with vpunch
+        play sound "sounds/slap.mp3"
 
-        pause 0.75
+        pause 1.25
 
         scene v12ams11 # TPP. Same positioning as v12ams2, Show Imre and Aubrey looking shocked at MC's direction, only Imre and Aubrey in shot, mouths closed
         with dissolve

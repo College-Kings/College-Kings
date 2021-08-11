@@ -6,23 +6,26 @@
 # NOTE: MC in his boxers in all renders except v12juc6, v12juc7 and v12juc8 (He uses outfit 3 in those 3 shots)
 
 label v12_julia_call:
+    scene black
+    with fade
+    play sound "sounds/call.mp3"
+    pause 1
+    
     scene v12juc1 # TPP. Show MC sleeping in his bed
     with dissolve
 
-    pause 0.75
-
-    play sound "sounds/call.mp3"
+    pause 1.5
 
     scene v12juc1a # TPP. Show MC startled, waking up, mouth closed
     with dissolve
 
-    pause 0.75
-
-    stop sound
+    pause 1.25
 
     scene v12juc2 # TPP. Show MC sitting on the edge of his bed, holding his phone to his ear, mouth open, slightly annoyed (he's talking on the phone)
     with dissolve
 
+    stop sound
+    play sound "sounds/answercall.mp3"
     u "Hello?"
 
     scene v12juc3 # TPP. Show Julia in her house. Julia slightly worried, mouth open, talking on the phone
