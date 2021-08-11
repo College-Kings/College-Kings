@@ -146,6 +146,13 @@ label v12_room_chloe_riley:
             scene v12crm7 # TPP. Image of MC sleeping
             with dissolve
 
+            pause 1
+
+            scene black
+            with dissolve
+            
+            pause 2
+
         else:
             scene v12crm8 # TPP. Chloe gets up out of her bed, lights off
             with dissolve
@@ -196,6 +203,11 @@ label v12_room_chloe_riley:
             with dissolve
 
             pause 1.75
+
+            scene black
+            with dissolve
+            
+            pause 2
 
     else: 
 
@@ -356,6 +368,11 @@ label v12_room_chloe_riley:
         with dissolve
 
         pause 1.25
+
+        scene black
+        with dissolve
+            
+        pause 2
 
     stop music fadeout 3
 
