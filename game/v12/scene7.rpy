@@ -9,7 +9,7 @@ label v12s7_free_roam_spoken(backgroundImg, returnScreen, seenList, victim):
 
 label v12s7fr:
     if v11_invite_sam_europe:
-        $ v12s7_victims = +2
+        $ v12s7_victims = +2 #Cameron?
     if emily_europe:
         $ v12s7_victims = +1
     if josh_europe:
@@ -714,6 +714,8 @@ label v12s7_aubrey2:
 
             call screen v12s7_balcony_right
         "Kill her":
+            label v12s7_aubrey_kill:
+
             $ addPoint("tm")
             scene v12ferauh6 # TPP. Show MC pointing finger gun at aubrey, mc mouth open, aubrey mouth closed
             with dissolve
@@ -1007,7 +1009,8 @@ label v12s7_riley1:
 
             call screen v12s7_left_viewpoint
 
-        "Have Riley leave":
+        "Make Riley leave":
+            $ v12s7_riley_moved = True
             scene v12ferri4a
             with dissolve
 
@@ -1983,7 +1986,7 @@ label v12s7_ryan_imre1:
     $ v12s7_imre = True
     
     $ v12s7_seenList = [ryan, imre, amber]
-    if v12s7_riley and not v12s7_riley2:
+    if v12s7_riley_moved and not v12s7_riley2:
         $ v12s7_seenList.remove(amber)
 
     show screen murder_button_overlay(imre)
@@ -2263,7 +2266,7 @@ label v12s7_ryan1:
     $ v12s7_ryan = True
 
     $ v12s7_seenList = [amber]
-    if (v12s7_riley and not v12s7_riley2) or amber in v12s7_killList:
+    if (v12s7_riley_moved and not v12s7_riley2) or amber in v12s7_killList:
         $ v12s7_seenList = []
 
     show screen murder_button_overlay(ryan)
@@ -5046,7 +5049,7 @@ label v12s7_nora1:
     if not v12s7_aubrey_moved:
         $ v12s7_seenList.append(aubrey)
 
-    if v12s7_riley and not v12s7_riley2:
+    if v12s7_riley_moved and not v12s7_riley2:
         $ v12s7_seenList.append(riley)
 
     show screen murder_button_overlay(nora)
@@ -5613,7 +5616,7 @@ label v12s7_josh1:
     $ v12s7_josh = True
 
     $ v12s7_seenList = []
-    if (not v12s7_riley or v12s7_riley2) and riley not in v12s7_killList:
+    if (not v12s7_riley_moved or v12s7_riley2) and riley not in v12s7_killList:
         $ v12s7_seenList.append(riley)
     if chloe not in v12s7_killList:
         $ v12s7_seenList.append(chloe)
