@@ -362,7 +362,7 @@ screen v12s7_foyer():
 
         if v12s7_imre and imre not in v12s7_killList:
             hotspot (821, 493, 492, 490):
-                if v12s7_imre:
+                if v12s7_imre2:
                     action Call("v12s7_free_roam_spoken", backgroundImg="v12ferim1", returnScreen="v12s7_foyer", seenList=[], victim=imre)
                 else:
                     action Jump("v12s7_imre2") #imre
