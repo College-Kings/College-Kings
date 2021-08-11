@@ -91,7 +91,7 @@ label v12s32:
     scene v12s32_6 # FPP show naomi walking towards AUbrey and mc, big smile, mouth open, looking at Aubrey
     with dissolve
 
-    na "Sister sister, with a mister mister! Oooooh...."
+    na "Sister sister, with a mister mister! Oooooh..."
 
     scene v12s32_7 #FPP show naomi close up standing, looking at mc (camera), mouth open, cheeky smile
     with dissolve
@@ -128,7 +128,7 @@ label v12s32:
     scene v12s32_5b
     with dissolve
 
-    au "No we aren't, we still have two minutes ‘til start..."
+    au "No we aren't, we still have two minutes 'til start..."
 
     scene v12s32_7b
     with dissolve
@@ -510,21 +510,21 @@ label v12s32:
             scene v12s32_21d
             with dissolve
 
-            na "Hey Aubby, hope you were paying close attention ‘cause it's your turn."
+            na "Hey Aubby, hope you were paying close attention 'cause it's your turn."
 
             scene v12s32_20a
             with dissolve
 
             au "*Whisper to self* Let's get this over with."
 
-    if AubreyBoat0:
+    if aubrey.points == 0:
 
         scene v12s32_20
         with dissolve
 
         au "*Sighs* Fine..."
 
-    if AubreyBoat2:
+    if aubrey.points > 0:
 
         scene v12s32_20d # same as 20b, aubrey cute smile at mc, mouth open
         with dissolve
@@ -720,7 +720,7 @@ label v12s32:
     with dissolve
 
     pg "Don't just keep it in mind, act on it. Get her something. Make her see you. There's some flowers right there, feel free to grab a bouquet."
-    pg " Hell, if I can't get her, I'd rather you than no one. Make me proud!"
+    pg "Hell, if I can't get her, I'd rather you than no one. Make me proud!"
 
     scene v12s32_28d # same 28b, photographer walks off
     with dissolve

@@ -323,7 +323,7 @@ label v12s27:
     scene v12s27_8d # same as 8c, Imre mouth closed
     with dissolve
 
-    u "Let me see man!"
+    u "Let me see, man!"
 
     scene v12s27_9 # shows close up of tattoo
     with dissolve
@@ -473,7 +473,7 @@ label v12s27:
 
             u "*Chuckles* Okay."
 
-        "Sorry man":
+        "Sorry, man":
             $ addPoint ("bf")
             u "I'm sorry man, I know you don't like it but, at least you have a story to tell."
 
@@ -500,7 +500,7 @@ label v12s27:
             scene v12s27_16d
             with dissolve
 
-            imre "*Sighs* Whatever, dude Fuck off. *Laughs*"
+            imre "*Sighs* Whatever, dude. Fuck off. *Laughs*"
 
 # -Regardless of choice scene continued
 

@@ -51,6 +51,11 @@ label v12_room_sneak:
 
     pause 0.75
 
+    scene black
+    with dissolve
+    
+    pause 2.5
+
     if v11_riley_roomate:
         jump v12_aubrey_wake_up_ri #scene 31a
     else:

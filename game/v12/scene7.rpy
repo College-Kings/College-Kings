@@ -1,7 +1,7 @@
-label v12s7_free_roam_spoken(backgroundImg, returnScreen, seenList):
+label v12s7_free_roam_spoken(backgroundImg, returnScreen, seenList, victim):
     $ v12s7_seenList = seenList
 
-    show screen murder_button_overlay(nora)
+    show screen murder_button_overlay(victim)
 
     scene expression backgroundImg
     u "(I've already spoken to them, but I could still murder them)"
@@ -9,7 +9,7 @@ label v12s7_free_roam_spoken(backgroundImg, returnScreen, seenList):
 
 label v12s7fr:
     if v11_invite_sam_europe:
-        $ v12s7_victims = +2
+        $ v12s7_victims = +2 #Cameron?
     if emily_europe:
         $ v12s7_victims = +1
     if josh_europe:
@@ -50,7 +50,7 @@ label v12s7fr:
     with dissolve
 
     lee "As you all know, I take great pride in seizing every opportunity I can to teach my students and this ferry ride will be no different."
-    lee "Decades ago, a famous murder was committed on this ferry; A murder that we will, in a way, be re-enacting."
+    lee "Decades ago, a famous murder was committed on this ferry. A murder that we will, in a way, be re-enacting."
 
     scene v12fer5 # FPP. Show riley, excited, mouth open
     with dissolve
@@ -533,10 +533,11 @@ label v12s7_aubrey1:
     scene v12ferau1
     with dissolve
 
-    au "I think I'd like to see exactly how tough you actually are. I.. I think I see some bruising. Oh my gosh, and your eye is cut! I'm gonna need to patch that up immediately."
+    au "I think I'd like to see exactly how tough you actually are. I... I think I see some bruising. Oh my gosh, and your eye is cut! I'm gonna need to patch that up immediately."
 
     menu:
         "It does hurt pretty bad":
+            $ v12s7_aubrey_moved = True
             $ addPoint("bf")
             scene v12ferau1
             with dissolve
@@ -544,8 +545,6 @@ label v12s7_aubrey1:
             au "Oh, sweetie. If I didn't take a look at this I wouldn't be able to call myself a nurse. Please come by my office so I can get you fixed up."
 
             if aubreyrs:
-
-                $ v12s7_aubrey_moved = True
 
                 scene v12ferau1a
                 with dissolve
@@ -715,6 +714,9 @@ label v12s7_aubrey2:
 
             call screen v12s7_balcony_right
         "Kill her":
+            label v12s7_aubrey_kill:
+
+            $ v12s7_killList.append(aubrey)
             $ addPoint("tm")
             scene v12ferauh6 # TPP. Show MC pointing finger gun at aubrey, mc mouth open, aubrey mouth closed
             with dissolve
@@ -1008,7 +1010,8 @@ label v12s7_riley1:
 
             call screen v12s7_left_viewpoint
 
-        "Have Riley leave":
+        "Make Riley leave":
+            $ v12s7_riley_moved = True
             scene v12ferri4a
             with dissolve
 
@@ -1055,7 +1058,8 @@ label v12s7_riley1:
 label v12s7_chloe1:
     $ v12s7_chloe = True
 
-    $ v12s7_seenList = [riley]
+    $ v12s7_seenList = []
+
     if josh_europe and not v12s7_josh:
         $ v12s7_seenList.append(josh)
 
@@ -1195,7 +1199,7 @@ label v12s7_chloe1:
     scene v12ferch1b
     with dissolve
 
-    cl "Just in case you're listening Mr. Lee, my \"poor girl\" character has been having problems with her sorority back at home and just needed to vent.."
+    cl "Just in case you're listening Mr. Lee, my \"poor girl\" character has been having problems with her sorority back at home and just needed to vent..."
 
     scene v12ferch1c
     with dissolve
@@ -1302,7 +1306,7 @@ label v12s7_chloe1:
         scene v12ferch5 # TPP. Show MC wispering in chloe's ear
         with dissolve
 
-        u "You just have to catch them in the act. .."
+        u "You just have to catch them in the act..."
 
         scene v12ferch6 # TPP. Show Mc walking away.
         with dissolve
@@ -1934,7 +1938,7 @@ label v12s7_lauren1:
 
     call screen v12s7_seating_back
 
-label v12s7_Lauren_kill:
+label v12s7_lauren_kill:
 
     scene v12ferla8 # TPP. Show mc pointing finger gun at lauren, mouth open
     with dissolve
@@ -1984,7 +1988,7 @@ label v12s7_ryan_imre1:
     $ v12s7_imre = True
     
     $ v12s7_seenList = [ryan, imre, amber]
-    if v12s7_riley and not v12s7_riley2:
+    if v12s7_riley_moved and not v12s7_riley2:
         $ v12s7_seenList.remove(amber)
 
     show screen murder_button_overlay(imre)
@@ -2263,9 +2267,9 @@ label v12s7_ryan_imre1:
 label v12s7_ryan1:
     $ v12s7_ryan = True
 
-    $ v12s7_seenList = [ryan, amber]
-    if (v12s7_riley and not v12s7_riley2) or amber in v12s7_killList:
-        $ v12s7_seenList.remove(amber)
+    $ v12s7_seenList = [amber]
+    if (v12s7_riley_moved and not v12s7_riley2) or amber in v12s7_killList:
+        $ v12s7_seenList = []
 
     show screen murder_button_overlay(ryan)
 
@@ -3136,7 +3140,7 @@ label v12s7_lindsey2:
     scene v12ferli3b
     with dissolve
 
-    li "Well, I definitely don't dislike you.. But that has nothing to do with the game and I'm not getting thrown overboard so I'm getting back to my investigation."
+    li "Well, I definitely don't dislike you... But that has nothing to do with the game and I'm not getting thrown overboard so I'm getting back to my investigation."
 
     scene v12ferli3c
     with dissolve
@@ -3474,7 +3478,7 @@ label v12s7_msrose1:
 
     call screen v12s7_seating_front
 
-label v12s7_msrose_kill:
+label v12s7_ms_rose_kill:
 
     ### ERROR: -If MC presses the murder button during this convo ###
 
@@ -3489,7 +3493,7 @@ label v12s7_msrose_kill:
     scene v12fermsr1b
     with dissolve
 
-    ro "That sly Cornelius.."
+    ro "That sly Bruce..."
 
     scene v12fermsr1c
     with dissolve
@@ -3822,7 +3826,7 @@ label v12s7_penelope_kill:
     scene v12ferpen1a
     with dissolve
 
-    pe "Well, now I can relax. Mr. Lee said go to the dining hall if killed so that's where I'm going."
+    pe "Well, now I can relax. Mr. Lee said go to the dining hall if you're killed so that's where I'm going."
 
     scene v12ferpen1
     with dissolve
@@ -4252,7 +4256,7 @@ label v12s7_riley2:
 
     call screen v12s7_right_gallery_front
 
-label v12s7_riley2_kill:
+label v12s7_riley_kill2:
 
     scene v12ferrile3 # TPP. Show mc pointing finger gun at riley, mc mouth open
     with dissolve
@@ -4829,7 +4833,7 @@ label v12s7_sam2:
     call screen v12s7_right_walkway_back
 
 
-label v12s7_sam2_kill:
+label v12s7_samantha_kill:
 
     scene v12fersam4 # TPP. Show mc, mouth open, pointing finger fun at sam.
     with dissolve
@@ -5001,7 +5005,7 @@ label v12s7_cameron2:
     scene v12fercam3
     with dissolve
 
-    u "Oh god.."
+    u "Oh god..."
 
     scene v12fercam4 # TPP. Show mc walking away
     with dissolve
@@ -5013,7 +5017,7 @@ label v12s7_cameron2:
 
     call screen v12s7_rear_gallery
 
-label v12s7_cameron2_kill:
+label v12s7_cameron_kill:
 
     scene v12fercam5 # TPP. Show mc, mouth open, pointing finger fun at cameron
     with dissolve
@@ -5042,10 +5046,13 @@ label v12s7_cameron2_kill:
 
 label v12s7_nora1:
     $ v12s7_nora = True
+    $ v12s7_seenList = []
 
-    $ v12s7_seenList = [riley]
-    if v12s7_aubrey_moved:
-        $ v12s7_seenList = []
+    if not v12s7_aubrey_moved:
+        $ v12s7_seenList.append(aubrey)
+
+    if v12s7_riley_moved and not v12s7_riley2:
+        $ v12s7_seenList.append(riley)
 
     show screen murder_button_overlay(nora)
 
@@ -5310,7 +5317,7 @@ label v12s7_nora1:
                     scene v12fernor1e
                     with dissolve
 
-                    no "Yeah. And.. thank you, really."
+                    no "Yeah. And... thank you, really."
 
                     scene v12fernor1d
                     with dissolve
@@ -5327,7 +5334,7 @@ label v12s7_nora1:
 
                     call screen v12s7_balcony_left
 
-label v12s7_nora1_kill:
+label v12s7_nora_kill:
 
     scene v12fernor4 # TPP. Show mc, pointing finger gun at nora, mouth open
     with dissolve
@@ -5499,7 +5506,7 @@ label v12s7_chris1:
 
     call screen v12s7_kitchen
 
-label v12s7_chris1_kill:
+label v12s7_chris_kill:
     scene v12ferchr4 # TPP. Show mc pointing finger gun at chris, mc mouth open.
     with dissolve
 
@@ -5566,52 +5573,48 @@ label v12s7_chris1_kill:
 label v12s7_mrlee:
     $ v12s7_mrlee = True
 
-    if len(v12s7_killList) >= v12s7_victims:
-        call screen endFreeRoamConfirm("v12_murder_mystery_reveal")
+    scene v12ferlee1 # FPP. Show mr lee, neutral face, mouth closed
 
-    else:
-        scene v12ferlee1 # FPP. Show mr lee, neutral face, mouth closed
+    u "Hello there, you fan of boxing? If so, did you catch my last fight?"
 
-        u "Hello there, you fan of boxing? If so, did you catch my last fight?"
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_13.mp3" fadein 2
 
-        stop music fadeout 3
-        play music "music/v12/Scene 7/Track Scene 7_13.mp3" fadein 2
+    scene v12ferlee1a # FPP. same 1, mouth open
+    with dissolve
 
-        scene v12ferlee1a # FPP. same 1, mouth open
-        with dissolve
+    lee "You can't talk to the Gamemaster."
 
-        lee "You can't talk to the Gamemaster."
+    scene v12ferlee1
+    with dissolve
 
-        scene v12ferlee1
-        with dissolve
+    u "Who's that?"
 
-        u "Who's that?"
+    scene v12ferlee1a
+    with dissolve
 
-        scene v12ferlee1a
-        with dissolve
+    lee "What? Me, obviously."
 
-        lee "What? Me, obviously."
+    scene v12ferlee1
+    with dissolve
 
-        scene v12ferlee1
-        with dissolve
+    u "Haha, I know, just teasing."
 
-        u "Haha, I know, just teasing."
+    scene v12ferlee2 # TPP. Show mc walking off
+    with dissolve
 
-        scene v12ferlee2 # TPP. Show mc walking off
-        with dissolve
+    pause 0.75
 
-        pause 0.75
+    stop music fadeout 3
+    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
-        stop music fadeout 3
-        play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
-
-        call screen v12s7_rear_gallery
+    call screen v12s7_rear_gallery
 
 label v12s7_josh1:
     $ v12s7_josh = True
 
     $ v12s7_seenList = []
-    if (not v12s7_riley or v12s7_riley2) and riley not in v12s7_killList:
+    if (not v12s7_riley_moved or v12s7_riley2) and riley not in v12s7_killList:
         $ v12s7_seenList.append(riley)
     if chloe not in v12s7_killList:
         $ v12s7_seenList.append(chloe)
@@ -5821,7 +5824,7 @@ label v12s7_josh2:
 
     call screen v12s7_utility
 
-label v12s7_josh2_kill:
+label v12s7_josh_kill:
 
     scene v12ferjos5 # TPP. Show mc pointing finger gun at josh, mc mouth open
     with dissolve
@@ -5947,7 +5950,7 @@ label v12s7_emily2:
 
     call screen v12s7_bow
 
-label v12s7_emily2_kill:
+label v12s7_emily_kill:
 
     scene v12feremi3 # TPP. Show mc pointing finger gun at Emily, mc mouth open
     with dissolve

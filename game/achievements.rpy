@@ -130,5 +130,3 @@ init python:
     Achievement("city_of_love", "Have sex with Lauren, Nora, Ms. Rose and Lindsey")
     Achievement("brotherhood_of_men", "Defend Chris every time as a Wolf")
     Achievement("best_frenemies", "Defend Chris every time as an Ape")
-
-

@@ -182,12 +182,12 @@ label v12s27a:
     scene v12s27a_2l
     with dissolve
 
-    ry "Oh, umm.. I have a question for you. We need your help resolving a bet between me and [name]."
+    ry "Oh, umm... I have a question for you. We need your help resolving a bet between me and [name]."
 
     scene v12s27a_2m
     with dissolve
 
-    am "Uh, okay.... What's the bet?"
+    am "Uh, okay... What's the bet?"
 
     scene v12s27a_2l
     with dissolve

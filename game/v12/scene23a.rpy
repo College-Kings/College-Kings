@@ -8,6 +8,7 @@ label v12_mc_chilling:
 
         scene v12mor1 # TPP. MC leaving riley's room
         with fade 
+        play sound "sounds/doorclose.mp3"
 
         pause 0.75
 
@@ -18,13 +19,14 @@ label v12_mc_chilling:
 
         scene v12mor3 # TPP. MC arriving on his room
         with dissolve
+        play sound "sounds/dooropen.mp3"
 
-        pause 0.75
+        pause 1
 
         scene v12mor4 # TPP. MC going to his bed
         with dissolve
 
-        pause 0.75
+        pause 1
 
         scene v12mor5 # TPP. MC Laying on his bed
         with dissolve
@@ -38,28 +40,28 @@ label v12_mc_chilling:
         scene v12mor5
         with dissolve
 
+    pause 0.75
     scene v12mor6 # TPP. MC laying in bed, hands behind his back, mouth closed
     with dissolve
 
-    u "(I feel like I haven’t had any time to just lay back and chill. There's always so-)"
-
+    u "(I feel like I haven't had any time to just lay back and chill. There's always so-)"
 
     if v11_invite_sam_europe:
         
         scene v12mor7 # FPP. Samantha bursts into MC's room holding a bottle of alcohol, looking drunk, mouth opened
         with dissolve
 
-        sa "*Drunk* No one wants to hangout with me! Why is everyone ignoring me?!"
+        sa "*Drunk* No one wants to hang out with me! Why is everyone ignoring me?!"
 
         scene v12mor8 # FPP. Samantha comes in mc's direction, smiling and drunk, mouth closed
         with dissolve
         
-        pause 0.75
+        pause 1
 
         scene v12mor9 # FPP. Samantha plops on mc's bed still looking drunk, mouth closed
         with dissolve
 
-        u "Sam… Are you drunk right now? I thought you weren't drinking?"
+        u "Sam... Are you drunk right now? I thought you weren't drinking?"
 
         scene v12mor9a # FPP. Same as 9 smiling, mouth opened
         with dissolve
@@ -74,7 +76,7 @@ label v12_mc_chilling:
         scene v12mor9a
         with dissolve
 
-        sa "*Drunk* I'm good… Promise!"
+        sa "*Drunk* I'm good... Promise!"
 
         scene v12mor9
         with dissolve
@@ -109,7 +111,7 @@ label v12_mc_chilling:
         scene v12mor9a
         with dissolve
 
-        sa "*Drunk* Ohhhhh, that must be why that guy was yelling at me to leave him alone. I thought it was Ryan… *Chuckles*"
+        sa "*Drunk* Ohhhhh, that must be why that guy was yelling at me to leave him alone. I thought it was Ryan... *Chuckles*"
 
         scene v12mor9
         with dissolve
@@ -124,12 +126,12 @@ label v12_mc_chilling:
         scene v12mor9
         with dissolve
 
-        u "I can, I just worry he’ll run in here and try to fight me 'cause you're drunk."
+        u "I can, I just worry he'll run in here and try to fight me 'cause you're drunk."
 
         scene v12mor9c
         with dissolve
 
-        sa "*Drunk* He's sleeping okay? Happy now?"
+        sa "*Drunk* He's sleeping, okay? Happy now?"
 
         scene v12mor9
         with dissolve
@@ -151,12 +153,12 @@ label v12_mc_chilling:
                 scene v12mor9d # FPP. Same as 9, sam looking sad, mouth opened
                 with dissolve
 
-                sa "*Drunk* Which shouldn’t take this long to answer… I get it..."
+                sa "*Drunk* Which shouldn't take this long to answer... I get it..."
 
                 scene v12mor9 
                 with dissolve
 
-                u "No, Sam. I mean, yeah. Of course you’re pretty. I just wasn’t expecting that question I guess."
+                u "No, Sam. I mean, yeah. Of course you're pretty. I just wasn't expecting that question I guess."
 
             "Yes":
                 scene v12mor9
@@ -182,12 +184,12 @@ label v12_mc_chilling:
         scene v12mor9
         with dissolve
 
-        u "Why'd you even ask me if you aren’t gonna believe my answer?"
+        u "Why'd you even ask me if you aren't gonna believe my answer?"
 
         scene v12mor9d
         with dissolve
 
-        sa "*Drunk* Just wanted to see what you'd say... But, I know you don't think I'm ‘that’ pretty."
+        sa "*Drunk* Just wanted to see what you'd say... But, I know you don't think I'm \"that\" pretty."
 
         scene v12mor9
         with dissolve
@@ -232,7 +234,7 @@ label v12_mc_chilling:
         scene v12mor13
         with dissolve
 
-        sa "*Drunk* Then he's not the right guy…"
+        sa "*Drunk* Then he's not the right guy..."
 
         scene v12mor13b # FPP. same as 13, sam smiling and still drunk, mouth opened
         with dissolve
@@ -252,12 +254,12 @@ label v12_mc_chilling:
         scene v12mor13b
         with dissolve
 
-        sa "That's what I wanna do while I’m in college... Get a strong boyfriend that fucks me in the pool every, single, night."
+        sa "That's what I wanna do while I'm in college... Get a strong boyfriend that fucks me in the pool every, single, night."
 
         scene v12mor13a
         with dissolve
 
-        u "Sam… Where is all this coming from?"
+        u "Sam... Where is all this coming from?"
 
         scene v12mor13c # FPP.same as 13, Sam thinking looking away from MC at the ceiling, mouth opened
         with dissolve
@@ -277,7 +279,7 @@ label v12_mc_chilling:
         scene v12mor13a
         with dissolve
 
-        u "*Chuckles* No. I didn’t."
+        u "*Chuckles* No. I didn't."
 
         scene v12mor13b
         with dissolve
@@ -301,7 +303,7 @@ label v12_mc_chilling:
                 scene v12mor13a
                 with dissolve
 
-                u "No, I don’t think so."
+                u "No, I don't think so."
 
                 scene v12mor13e # FPP. Same as 13, sam booing, mouth opened
                 with dissolve
@@ -326,16 +328,14 @@ label v12_mc_chilling:
         scene v12mor13b
         with dissolve
 
-        sa "*Drunk* No, Chris… *Chuckles* What other brother is there?"
-
-        $ v12s23a_beatcameron = True
+        sa "*Drunk* No, Chris... *Chuckles* What other brother is there?"
 
         menu:
             "I can beat Cameron":
                 $ v12s23a_beatcameron = True
                 
                 scene v12mor13a
-                with dissolve                
+                with dissolve
             
                 u "Yeah. Of course I can take him. He may be a lunatic, but I can handle that."
 
@@ -365,7 +365,7 @@ label v12_mc_chilling:
             scene v12mor13b
             with dissolve
 
-            sa "*Drunk* Yeah! You can kick Cameron’s ass when he’s bothering me and also fuck me in the pool everyday."
+            sa "*Drunk* Yeah! You can kick Cameron's ass when he's bothering me and also fuck me in the pool every day."
 
             scene v12mor13b
             with dissolve
@@ -406,7 +406,7 @@ label v12_mc_chilling:
             scene v12mor13f
             with dissolve
 
-            sa "*Drunk* Well, whatever… No matter what, you can't be my boyfriend 'cause you don't meet my standards."
+            sa "*Drunk* Well, whatever... No matter what, you can't be my boyfriend 'cause you don't meet my standards."
 
             scene v12mor13a
             with dissolve
@@ -461,7 +461,7 @@ label v12_mc_chilling:
         scene v12mor19 # TPP. MC getting out of his bed
         with dissolve
 
-        pause 0.75
+        pause 1
 
         scene v12mor20 # FPP. MC Checking on sam sleeping
         with dissolve
@@ -478,20 +478,21 @@ label v12_mc_chilling:
 
         menu:
             "Call Cameron":
+                $ v12_call_cameron = True
                 scene v12mor23 # TPP. MC holding his phone, mouth closed
                 with dissolve
-
-                u "(*Sighs* He should atleast know she's drunk.)"
+                u "(*Sighs* He should at least know she's drunk.)"
 
                 scene v12mor24 # TPP. MC with the phone to his ear, mouth closed
                 with dissolve
+                play sound "sounds/answercall.mp3"
 
                 pause 0.75
 
                 scene v12mor25 # TPP. Cameron picks up laying in his bed, mouth opened
                 with dissolve
 
-                ca "Huh? [Name]? What do you want?"
+                ca "Huh? [name]? What do you want?"
 
                 scene v12mor24a # TPP. Same as 24, mouth opened
                 with dissolve
@@ -501,12 +502,12 @@ label v12_mc_chilling:
                 scene v12mor25a # TPP. Same as 25, cameron looking mad, mouth opened
                 with dissolve
 
-                ca "YOU’RE WITH MY SISTER?!"
+                ca "YOU'RE WITH MY SISTER?!"
 
                 scene v12mor24b # TPP. same as 24, MC looking worried, mouth opened
                 with dissolve
 
-                u "(Fuck…) No, no, she's with the girls. They're taking care of her, but I just wanted to let you know that I guess she's drinking again."
+                u "(Fuck...) No, no, she's with the girls. They're taking care of her, but I just wanted to let you know that I guess she's drinking again."
 
                 scene v12mor25
                 with dissolve
@@ -565,6 +566,9 @@ label v12_mc_chilling:
 
                 scene v12mor24e # TPP. MC puts his phone away, slight smile
                 with dissolve
+                play sound "sounds/rejectcall.mp3"
+
+                pause 0.75
 
             "Don't call Cameron":
                 scene v12mor22
@@ -575,26 +579,30 @@ label v12_mc_chilling:
         scene v12mor22
         with dissolve
 
-        u "(Don't know where the roomie went, but she's gonna have to deal with Sam from here on out. I'm going to sleep.)"
+        if v11_riley_roomate:
+            u "(Don't know where Riley went, but she's gonna have to deal with Sam from here on out. I'm going to sleep.)"
+        else:
+            u "(Don't know where Chloe went, but she's gonna have to deal with Sam from here on out. I'm going to sleep.)"
 
         scene v12mor27 # TPP. MC shuts down the lights
         with dissolve
 
         pause 0.75
 
-        scene v12mor22
-        with dissolve
-
     else: 
         play sound "sounds/call.mp3"
+
+        pause 1.25
 
         scene v12mor23
         with dissolve
 
-        pause 0.75
+        pause 1
 
         scene v12mor24a
         with dissolve
+        stop sound
+        play sound "sounds/answercall.mp3"
 
         u "Hello?"
 
@@ -616,7 +624,7 @@ label v12_mc_chilling:
         scene v12mor24b
         with dissolve
 
-        u "Fine, I won’t push you. Remember you’re lightweight though, yeah?."
+        u "Fine, I won't push you. Remember you're lightweight though, yeah?"
 
         scene v12mor28a
         with dissolve
@@ -646,7 +654,7 @@ label v12_mc_chilling:
                 sa "*Drunk* Awww, I wish I was there too."
 
 
-            "No, I don’t miss you (Joke)":
+            "No, I don't miss you (Joke)":
                 scene v12mor24a
                 with dissolve
 
@@ -665,7 +673,7 @@ label v12_mc_chilling:
                 scene v12mor28a
                 with dissolve
 
-                sa "*Drunk* Don't play around like that with me! You scared me… Jerk. *Chuckles*"
+                sa "*Drunk* Don't play around like that with me! You scared me... Jerk. *Chuckles*"
 
                 scene v12mor24c
                 with dissolve
@@ -725,7 +733,7 @@ label v12_mc_chilling:
         scene v12mor24b
         with dissolve
 
-        u "Sam, I’m trying to be serious with you!"
+        u "Sam, I'm trying to be serious with you!"
 
         scene v12mor28e # TPP. Sam looking disapointed, mouth opened
         with dissolve
@@ -752,7 +760,7 @@ label v12_mc_chilling:
         scene v12mor24d # TPP. MC looking at his phone, worried face, mouth closed
         with dissolve
 
-        u "(She hung up on me. Guess I’ll call her back.)"
+        u "(She hung up on me. Guess I'll call her back.)"
 
         scene v12mor24
         with dissolve
@@ -762,111 +770,125 @@ label v12_mc_chilling:
         scene v12mor24e
         with dissolve
 
-    menu:
-        "Call Cameron":
+        menu:
+            "Call Cameron":
+                $ v12_call_cameron = True
+                scene v12mor24d
+                with dissolve
 
-            scene v12mor24d
-            with dissolve
+                u "(*Sighs* He should know that she's drunk.)"
 
-            u "(*Sighs* He should know that she's drunk.)"
+                play sound "sounds/answercall.mp3"
 
-            scene v12mor25
-            with dissolve
+                pause 0.75
+                scene v12mor25
+                with dissolve
 
-            ca "Huh? [Name]? What do you want?"
+                ca "Huh? [name]? What do you want?"
 
-            scene v12mor24a
-            with dissolve
+                scene v12mor24a
+                with dissolve
 
-            u "Hey man, I was just calling you to let you know that your sister's drunk."
+                u "Hey man, I was just calling you to let you know that your sister's drunk."
 
-            scene v12mor25
-            with dissolve
+                scene v12mor25
+                with dissolve
 
-            ca "What? How would you know?"
+                ca "What? How would you know?"
 
-            scene v12mor24a
-            with dissolve
+                scene v12mor24a
+                with dissolve
 
-            u "She just called saying a bunch of crazy shit. She couldn’t even tell me where she is right now."
+                u "She just called saying a bunch of crazy shit. She couldn't even tell me where she is right now."
 
-            scene v12mor25
-            with dissolve
+                scene v12mor25
+                with dissolve
 
-            ca "What all did she say?"
+                ca "What did she say?"
 
-            scene v12mor24a
-            with dissolve
+                scene v12mor24a
+                with dissolve
 
-            u "None of it made any sense. When I tried figuring out where she was, she hung up and then wouldn't answer when I called back."
+                u "None of it made any sense. When I tried figuring out where she was, she hung up and then wouldn't answer when I called back."
 
-            scene v12mor25
-            with dissolve
+                scene v12mor25
+                with dissolve
 
-            ca "*Sighs* Okay, man."
+                ca "*Sighs* Okay, man."
 
-            scene v12mor24a
-            with dissolve
+                scene v12mor24a
+                with dissolve
 
-            u "Try and figure it out, good luck. Later."
+                u "Try and figure it out, good luck. Later."
 
-            scene v12mor25
-            with dissolve
+                scene v12mor25
+                with dissolve
 
-            ca "Hey [name]! Wait..."
+                ca "Hey [name]! Wait..."
 
-            scene v12mor24a
-            with dissolve
+                scene v12mor24a
+                with dissolve
 
-            u "Yeah?"
+                u "Yeah?"
 
-            scene v12mor25b
-            with dissolve
+                scene v12mor25b
+                with dissolve
 
-            ca "It was cool of you to call me. You didn't have to do that, but you did anyway. You're a real Ape, I won't forget this."
+                ca "It was cool of you to call me. You didn't have to do that, but you did anyway. You're a real Ape, I won't forget this."
 
-            scene v12mor24a
-            with dissolve
+                scene v12mor24a
+                with dissolve
 
-            u "I'd want someone to call me too. It's no big deal."
+                u "I'd want someone to call me too. It's no big deal."
 
-            scene v12mor25b
-            with dissolve
+                scene v12mor25b
+                with dissolve
 
-            ca "No man, it is. Thanks."
+                ca "No man, it is. Thanks."
 
-            scene v12mor24a
-            with dissolve
+                scene v12mor24a
+                with dissolve
 
-            u "You're welcome, goodnight bro."
+                u "You're welcome, goodnight bro."
 
-            scene v12mor25b
-            with dissolve
+                scene v12mor25b
+                with dissolve
 
-            ca "Night."
+                ca "Night."
 
-            scene v12mor24e
-            with dissolve
+                scene v12mor24e
+                with dissolve
 
-        "Don't call Cameron":
-          
-            scene v12mor22
-            with dissolve
+                pause 0.75
 
-            u "(Not even gonna attempt to open up that door.)"
+            "Don't call Cameron":
+              
+                scene v12mor22
+                with dissolve
 
-    scene v12mor22
-    with dissolve
+                u "(Not even gonna attempt to open up that door.)"
 
-    u "(Don't know where the roomie went, but I'm going to sleep.)"
+        scene v12mor22
+        with dissolve
 
-    scene v12mor27
-    with dissolve
+        if v11_riley_roomate:
+            u "(Don't know where Riley went, but she's gonna have to deal with Sam from here on out. I'm going to sleep.)"
+        else:
+            u "(Don't know where Chloe went, but she's gonna have to deal with Sam from here on out. I'm going to sleep.)"
 
-    pause 0.75
-    
+        scene v12mor27
+        with dissolve
+
+        pause 0.75
+        
     scene v12mor29 # TPP. Same as 22, different position
     with dissolve
 
-    jump v12_simplr_convo #scene 24
+    pause 0.75
 
+    scene black
+    with fade
+    
+    pause 2.25
+
+    jump v12_simplr_convo #scene 24

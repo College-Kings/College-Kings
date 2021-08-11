@@ -298,6 +298,8 @@ label v12_riley_room:
 
         u "(Bastard was probably listening that whole fucking time...)"
 
+        jump v12_ms_rose_sex #scene 23
+
     else:
         scene v12rir11b
         with dissolve
@@ -325,5 +327,5 @@ label v12_riley_room:
         ri "Oh! Hey, Charli..."
 
         u "(Bastard was probably listening that whole fucking time...)"
-
-    jump v12_ms_rose_sex #scene 23
+        
+        jump v12_mc_chilling

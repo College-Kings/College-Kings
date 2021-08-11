@@ -18,7 +18,10 @@ screen murder_button_overlay(character):
         if v12s7_seenList:
             action Jump("v12s7_mc_caught")
         else:
-            action [ Function(character.kill), Jump("v12s7_{}_kill".format(character.name.lower())) ]
+            if character.name == "riley" and v12s7_riley2:
+                action [ Function(character.kill), Jump("v12s7_{}_kill2".format(character.name.lower())) ]
+            else:
+                action [ Function(character.kill), Jump("v12s7_{}_kill".format(character.name.lower())) ]
 
 
 screen v12s7_minimap(location):
@@ -29,43 +32,53 @@ screen v12s7_minimap(location):
 screen v12s7_seating_back():
     tag freeRoam
 
-    # No one
-    if (emily in v12s7_killList and lauren in v12s7_killList) or (v12s7_emily and lauren in v12s7_killList) or (lauren in v12s7_killList):
-        imagemap:
-            idle "images/v12/Scene 7/Screens/Navigation 1c.webp"
-            hover "images/v12/Scene 7/Buttons/nav 1.webp"
-
-            hotspot (331, 898, 1227, 181) action Show("v12s7_seating_front")
-
-    # Lauren only
-    elif (emily in v12s7_killList) or (emily in v12s7_killList and lauren not in v12s7_killList) or (not emily_europe):
-        imagemap:
-            idle "images/v12/Scene 7/Screens/Navigation 1a.webp"
-            hover "images/v12/Scene 7/Buttons/nav 1.webp"
-
-            hotspot (1318, 182, 421, 605):
-                if v12s7_lauren:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferla1", returnScreen="v12s7_seating_back", seenList=[])
-                else:
-                    action Jump("v12s7_lauren1") # Lauren
-
-            hotspot (331, 898, 1227, 181) action Show("v12s7_seating_front")
-
-    # Lauren and Emily
-    elif (emily_europe and not v12s7_emily and not emily in v12s7_killList and lauren not in v12s7_killList):
+    if (emily_europe and not v12s7_emily and not emily in v12s7_killList and lauren not in v12s7_killList): #Emily and Lauren
         imagemap:
             idle "images/v12/Scene 7/Screens/Navigation 1b.webp"
             hover "images/v12/Scene 7/Buttons/nav 1.webp"
 
             hotspot (1318, 182, 421, 605):
                 if v12s7_lauren:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferla1", returnScreen="v12s7_seating_back", seenList=[emily])
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferla1", returnScreen="v12s7_seating_back", seenList=[emily], victim=lauren)
                 else:
                     action Jump("v12s7_lauren1") # Lauren
 
             hotspot (180, 182, 380, 605) action Jump("v12s7_emily1") # Emily
 
             hotspot (331, 898, 1227, 181) action Show("v12s7_seating_front")
+
+
+    elif (emily_europe and not v12s7_emily and not emily in v12s7_killList and lauren in v12s7_killList): #Emily only
+        imagemap:
+            idle "images/v12/Scene 7/Screens/Navigation 1d.webp"
+            hover "images/v12/Scene 7/Buttons/nav 1.webp"
+
+            hotspot (180, 182, 380, 605) action Jump("v12s7_emily1") # Emily
+
+            hotspot (331, 898, 1227, 181) action Show("v12s7_seating_front")
+
+    elif lauren not in v12s7_killList: #Lauren only
+        imagemap:
+            idle "images/v12/Scene 7/Screens/Navigation 1a.webp"
+            hover "images/v12/Scene 7/Buttons/nav 1.webp"
+
+            hotspot (1318, 182, 421, 605):
+                if v12s7_lauren:
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferla1", returnScreen="v12s7_seating_back", seenList=[], victim=lauren)
+                else:
+                    action Jump("v12s7_lauren1") # Lauren
+
+            hotspot (331, 898, 1227, 181) action Show("v12s7_seating_front")
+
+    else:
+        imagemap:
+            idle "images/v12/Scene 7/Screens/Navigation 1c.webp"
+            hover "images/v12/Scene 7/Buttons/nav 1.webp"
+
+            hotspot (331, 898, 1227, 181) action Show("v12s7_seating_front")
+
+
+
 
     use v12s7_minimap(location="ld_seating")
 
@@ -91,7 +104,7 @@ screen v12s7_seating_front():
 
             hotspot (1585, 7, 335, 631):
                 if v12s7_msrose:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12fermsr1a", returnScreen="v12s7_seating_front", seenList=[])
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12fermsr1a", returnScreen="v12s7_seating_front", seenList=[], victim=ms_rose)
                 else:
                     action Jump("v12s7_msrose1") # ms rose
 
@@ -106,7 +119,7 @@ screen v12s7_seating_front():
 
             hotspot (1585, 7, 335, 631):
                 if v12s7_msrose:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12fermsr1a", returnScreen="v12s7_seating_front", seenList=[samantha])
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12fermsr1a", returnScreen="v12s7_seating_front", seenList=[samantha], victim=ms_rose)
                 else:
                     action Jump("v12s7_msrose1") # ms rose
 
@@ -200,7 +213,7 @@ screen v12s7_rear():
         if v12s7_lindsey_moved and lindsey not in v12s7_killList:
             hotspot (563, 303, 565, 664):
                 if v12s7_lindsey2:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferli3", returnScreen="v12s7_rear", seenList=[])
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferli3", returnScreen="v12s7_rear", seenList=[], victim=lindsey)
                 else:
                     action Jump("v12s7_lindsey2") # lindsey
   
@@ -225,7 +238,7 @@ screen v12s7_right_walkway_back():
         if (v12s7_samantha and samantha not in v12s7_killList):
             hotspot (813, 237, 211, 508):
                 if v12s7_samantha2:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12fersam1", returnScreen="v12s7_right_walkway_back", seenList=[])
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12fersam1", returnScreen="v12s7_right_walkway_back", seenList=[], victim=samantha)
                 else:
                     action Jump("v12s7_sam2") #samantha
 
@@ -257,23 +270,26 @@ screen v12s7_kitchen():
     tag freeRoam
 
     imagemap:
-        if v12s7_emily and not emily in v12s7_killList and chris not in v12s7_killList:
-            idle "images/v12/Scene 7/Screens/Navigation 10a.webp" # Chris and Emily
+        if v12s7_emily and not emily in v12s7_killList and not chris in v12s7_killList: # Chris and Emily
+            idle "images/v12/Scene 7/Screens/Navigation 10a.webp" 
             hover "images/v12/Scene 7/Buttons/nav 10.webp"
-        elif v12s7_emily and emily not in v12s7_killList:
+            
+        elif v12s7_emily and not emily in v12s7_killList and chris in v12s7_kilLList:
             idle "images/v12/Scene 7/Screens/Navigation 10d.webp" # Emily
             hover "images/v12/Scene 7/Buttons/nav 10.webp"
+
         elif chris not in v12s7_killList:
             idle "images/v12/Scene 7/Screens/Navigation 10b.webp" # Chris
             hover "images/v12/Scene 7/Buttons/nav 10mock.webp"
+
         else:
-            idle "images/v12/Scene 7/Screens/Navigation 10d.webp"
+            idle "images/v12/Scene 7/Screens/Navigation 10c.webp"
             hover "images/v12/Scene 7/Buttons/nav 10mock.webp"
 
         if chris not in v12s7_killList:
             hotspot (1116, 33, 751, 1047):
                 if v12s7_chris:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferchr1", returnScreen="v12s7_kitchen", seenList=[])
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferchr1", returnScreen="v12s7_kitchen", seenList=[], victim=chris)
                 else:
                     action Jump("v12s7_chris1") # chris
 
@@ -299,7 +315,7 @@ screen v12s7_bow():
         if v12s7_emily and emily not in v12s7_killList:
             hotspot (920, 216, 368, 864):
                 if v12s7_emily2:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12feremi1", returnScreen="v12s7_bow", seenList=[])
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12feremi1", returnScreen="v12s7_bow", seenList=[], victim=emily)
                 else:
                     action Jump("v12s7_emily2") # emily
 
@@ -324,7 +340,7 @@ screen v12s7_left_walkway_front():
         if v11_pen_goes_europe and penelope not in v12s7_killList:
             hotspot (223, 326, 752, 656):
                 if v12s7_penelope:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferpen1", returnScreen="v12s7_left_walkway_front", seenList=[])
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferpen1", returnScreen="v12s7_left_walkway_front", seenList=[], victim=penelope)
                 else:
                     action Jump("v12s7_penelope1") #penelope
         
@@ -349,8 +365,8 @@ screen v12s7_foyer():
 
         if v12s7_imre and imre not in v12s7_killList:
             hotspot (821, 493, 492, 490):
-                if v12s7_imre:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferim1", returnScreen="v12s7_foyer", seenList=[])
+                if v12s7_imre2:
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferim1", returnScreen="v12s7_foyer", seenList=[], victim=imre)
                 else:
                     action Jump("v12s7_imre2") #imre
 
@@ -367,23 +383,23 @@ screen v12s7_left_viewpoint():
     tag freeRoam
 
     imagemap:
-        if riley not in v12s7_killList and chloe not in v12s7_killList and (v12s7_riley2 or not v12s7_riley):
+        if riley not in v12s7_killList and chloe not in v12s7_killList and (v12s7_riley2 or not v12s7_riley_moved):
             idle "images/v12/Scene 7/Screens/Navigation 14a.webp" # Chloe and Riley
             hover "images/v12/Scene 7/Buttons/nav 14amock.webp" # Chloe and Riley
             hotspot (685, 117, 540, 786):
                 if v12s7_riley3:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferric1", returnScreen="v12s7_left_viewpoint", seenList=[chloe, josh] if josh_europe and not v12s7_josh else [chloe])
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferric1", returnScreen="v12s7_left_viewpoint", seenList=[chloe, josh] if josh_europe and not v12s7_josh else [chloe], victim=riley)
                 elif v12s7_riley2:
                     action Jump("v12s7_riley3") #Riley & Chloe
                 else:
                     action Jump("v12s7_riley1") #Riley & Chloe
     
-        elif chloe in v12s7_killList and riley not in v12s7_killList and (v12s7_riley2 or not v12s7_riley):
+        elif chloe in v12s7_killList and riley not in v12s7_killList and (v12s7_riley2 or not v12s7_riley_moved):
             idle "images/v12/Scene 7/Screens/Navigation 14b.webp" # Riley
             hover "images/v12/Scene 7/Buttons/nav 14bmock.webp" # Riley
             hotspot (835, 191, 361, 772):
                 if v12s7_riley3:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferril1", returnScreen="v12s7_left_viewpoint", seenList=[josh] if josh_europe and not v12s7_josh else [])
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferril1", returnScreen="v12s7_left_viewpoint", seenList=[josh] if josh_europe and not v12s7_josh else [], victim=riley)
                 else:
                     action Jump("v12s7_riley3a") # riley
 
@@ -392,12 +408,13 @@ screen v12s7_left_viewpoint():
             hover "images/v12/Scene 7/Buttons/nav 14cmock.webp" # Chloe
             hotspot (689, 203, 271, 673):
                 if v12s7_chloe:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferch1", returnScreen="v12s7_left_viewpoint", seenList=[riley, josh] if josh_europe and not v12s7_josh else [riley])
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferch1", returnScreen="v12s7_left_viewpoint", seenList=[riley, josh] if josh_europe and not v12s7_josh else [riley], victim=chloe)
                 else:
                     action Jump("v12s7_chloe1") # chloe
 
         else:
             idle "images/v12/Scene 7/Screens/Navigation 14d.webp" # No one
+            hover "images/v12/Scene 7/Buttons/nav 14dmock.webp" # No one
 
         hotspot (293, 0, 1385, 130) action Show("v12s7_right_viewpoint")
         hotspot (338, 976, 1200, 104) action Show("v12s7_rear_gallery")
@@ -420,14 +437,14 @@ screen v12s7_right_viewpoint():
         if josh_europe and not v12s7_josh and josh not in v12s7_killList:
             hotspot (729, 375, 451, 545):
                 if v12s7_josh:
-                    if ((not v12s7_riley or v12s7_riley2) and riley not in v12s7_killList) and (chloe not in v12s7_killList):
-                        action Call("v12s7_free_roam_spoken", backgroundImg="v12ferjo1", returnScreen="v12s7_right_viewpoint", seenList=[riley, chloe])
-                    elif (not v12s7_riley or v12s7_riley2) and riley not in v12s7_killList:
-                        action Call("v12s7_free_roam_spoken", backgroundImg="v12ferjo1", returnScreen="v12s7_right_viewpoint", seenList=[riley])
+                    if ((not v12s7_riley_moved or v12s7_riley2) and riley not in v12s7_killList) and (chloe not in v12s7_killList):
+                        action Call("v12s7_free_roam_spoken", backgroundImg="v12ferjo1", returnScreen="v12s7_right_viewpoint", seenList=[riley, chloe], victim=josh)
+                    elif (not v12s7_riley_moved or v12s7_riley2) and riley not in v12s7_killList:
+                        action Call("v12s7_free_roam_spoken", backgroundImg="v12ferjo1", returnScreen="v12s7_right_viewpoint", seenList=[riley], victim=josh)
                     elif chloe not in v12s7_killList:
-                        action Call("v12s7_free_roam_spoken", backgroundImg="v12ferjo1", returnScreen="v12s7_right_viewpoint", seenList=[chloe])
+                        action Call("v12s7_free_roam_spoken", backgroundImg="v12ferjo1", returnScreen="v12s7_right_viewpoint", seenList=[chloe], victim=josh)
                     else:
-                        action Call("v12s7_free_roam_spoken", backgroundImg="v12ferjo1", returnScreen="v12s7_right_viewpoint", seenList=[])
+                        action Call("v12s7_free_roam_spoken", backgroundImg="v12ferjo1", returnScreen="v12s7_right_viewpoint", seenList=[], victim=josh)
                 else:
                     action Jump("v12s7_josh1") # josh
 
@@ -452,12 +469,15 @@ screen v12s7_rear_gallery():
         if v11_invite_sam_europe and v12s7_samantha:
             hotspot (894, 267, 257, 744):
                 if v12s7_cameron:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12fercam3", returnScreen="v12s7_rear_gallery", seenList=[])
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12fercam3", returnScreen="v12s7_rear_gallery", seenList=[], victim=cameron)
                 else:
                     action Jump("v12s7_cameron2")
 
         hotspot (172, 320, 239, 653):
-            action Jump("v12s7_mrlee")
+            if len(v12s7_killList) >= v12s7_victims:
+                action Show("endFreeRoamConfirm", continueLabel="v12_murder_mystery_reveal")
+            else:
+                action Jump("v12s7_mrlee")
         
         if previous_location == "v12s7_left_walkway_front" or previous_location == "v12s7_right_walkway_front":
             hotspot (327, 1000, 1216, 80) action Show(previous_location)
@@ -482,26 +502,24 @@ screen v12s7_right_gallery_back():
     imagemap:
         if not v12s7_imre:
             idle "images/v12/Scene 7/Screens/Navigation 16a.webp" # Ryan and Imre
-        elif ryan in v12s7_killList:
-            idle "images/v12/Scene 7/Screens/Navigation 16c.webp" # No one
-        else:
-            idle "images/v12/Scene 7/Screens/Navigation 16b.webp" # Ryan
-
-        if v12s7_imre:
-            hover "images/v12/Scene 7/Buttons/nav 16b.webp"
-        else:
             hover "images/v12/Scene 7/Buttons/nav 16.webp"
 
-        if v12s7_imre:
-            hotspot (932, 265, 240, 716):
-                if v12s7_ryan:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferry1", returnScreen="v12s7_right_gallery_back", seenList=[ryan] if (v12s7_riley and not v12s7_riley2) or amber in v12s7_killList else [ryan, amber])
-                else:
-                    action Jump("v12s7_ryan1") # Ryan
-
-        else:
             hotspot (679, 213, 461, 799):
                 action Jump("v12s7_ryan_imre1") # Imre & Ryan
+
+        elif ryan in v12s7_killList:
+            idle "images/v12/Scene 7/Screens/Navigation 16c.webp" # No one
+            hover "images/v12/Scene 7/Buttons/nav 16b.webp"
+            
+        else:
+            idle "images/v12/Scene 7/Screens/Navigation 16b.webp" # Ryan
+            hover "images/v12/Scene 7/Buttons/nav 16b.webp"
+            
+            hotspot (932, 265, 240, 716):
+                if v12s7_ryan:
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferry1", returnScreen="v12s7_right_gallery_back", seenList=[] if (v12s7_riley_moved and not v12s7_riley2) or amber in v12s7_killList else [amber], victim=ryan)
+                else:
+                    action Jump("v12s7_ryan1") # Ryan
 
         hotspot (339, 1013, 1198, 67) action Show("v12s7_rear_gallery")
         hotspot (293, 0, 1385, 130) action Show("v12s7_right_gallery_front")
@@ -515,13 +533,13 @@ screen v12s7_right_gallery_front():
     tag freeRoam
 
     imagemap:
-        if v12s7_riley and not v12s7_riley2 and amber not in v12s7_killList and riley not in v12s7_killList:
+        if v12s7_riley_moved and not v12s7_riley2 and amber not in v12s7_killList and riley not in v12s7_killList:
             idle "images/v12/Scene 7/Screens/Navigation 17a.webp" # Riley and Amber
             hover "images/v12/Scene 7/Buttons/nav 17amock.webp"
 
             hotspot (757, 270, 316, 649) action Show("v12s7_front_gallery")
 
-        elif v12s7_riley and not v12s7_riley2 and amber in v12s7_killList and riley not in v12s7_killList: # Riley
+        elif v12s7_riley_moved and not v12s7_riley2 and amber in v12s7_killList and riley not in v12s7_killList: # Riley
             idle "images/v12/Scene 7/Screens/Navigation 17b.webp" # Riley
             hover "images/v12/Scene 7/Buttons/nav 17bmock.webp"
 
@@ -536,6 +554,7 @@ screen v12s7_right_gallery_front():
         else:
             idle "images/v12/Scene 7/Screens/Navigation 17d.webp" # No one
             hover "images/v12/Scene 7/Buttons/nav 17dmock.webp"
+            hotspot (293, 0, 1385, 130) action Show("v12s7_front_gallery")
 
         hotspot (376, 991, 1115, 87) action Show("v12s7_right_gallery_back")
         hotspot (1423, 66, 497, 796) action Show("v12s7_utility")
@@ -558,7 +577,7 @@ screen v12s7_utility():
         if v12s7_josh and josh not in v12s7_killList:
             hotspot(413, 183, 452, 895):
                 if v12s7_josh:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferjos3", returnScreen="v12s7_utility", seenList=[])
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferjos3", returnScreen="v12s7_utility", seenList=[], victim=josh)
                 else:
                     action Jump("v12s7_josh2") # Josh
 
@@ -573,20 +592,20 @@ screen v12s7_front_gallery():
     tag freeRoam
 
     imagemap:
-        if v12s7_riley and not v12s7_riley2 and amber not in v12s7_killList and riley not in v12s7_killList:
+        if v12s7_riley_moved and not v12s7_riley2 and amber not in v12s7_killList and riley not in v12s7_killList:
             idle "images/v12/Scene 7/Screens/Navigation 19a.webp" # Amber and Riley
             hover "images/v12/Scene 7/Buttons/nav 19a.webp"
 
             hotspot (411, 59, 640, 1018):
                 action Jump("v12s7_riley2_amber") # Riley & Amber
 
-        elif v12s7_riley and not v12s7_riley2 and amber in v12s7_killList and riley not in v12s7_killList: # Riley
+        elif v12s7_riley_moved and not v12s7_riley2 and amber in v12s7_killList and riley not in v12s7_killList: # Riley
             idle "images/v12/Scene 7/Screens/Navigation 19b.webp"
-            hover "images/v12/Scene 7/Buttons/nav 19b.webp"
+            hover "images/v12/Scene 7/Buttons/nav 19bmock.webp"
 
-            hotspot (749, 159, 309, 918):
+            hotspot (432, 84, 350, 990):
                 if v12s7_riley2:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferrile1", returnScreen="v12s7_front_gallery", seenList=[])
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferrile1", returnScreen="v12s7_front_gallery", seenList=[], victim=riley)
                 else:
                     action Jump("v12s7_riley2") # Riley
 
@@ -596,13 +615,13 @@ screen v12s7_front_gallery():
 
             hotspot (782, 177, 280, 834):
                 if v12s7_amber:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12feram1a", returnScreen="v12s7_front_gallery", seenList=[] if v12s7_imre else [imre, ryan])
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12feram1a", returnScreen="v12s7_front_gallery", seenList=[] if v12s7_imre else [imre, ryan], victim=amber)
                 else:
                     action Jump("v12s7_amber1") # Riley
 
         else: 
             idle "images/v12/Scene 7/Screens/Navigation 19d.webp" # No one
-            hover "images/v12/Scene 7/Buttons/nav 19c.webp"
+            hover "images/v12/Scene 7/Buttons/nav 19d.webp"
 
         hotspot (383, 0, 1198, 97) action Show("v12s7_balcony_middle")
         hotspot (339, 983, 1198, 97) action Show("v12s7_right_gallery_front")
@@ -644,7 +663,7 @@ screen v12s7_balcony_left():
         if nora not in v12s7_killList:
             hotspot (507, 152, 282, 926):
                 if v12s7_nora:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12fernor1", returnScreen="v12s7_balcony_left", seenList=[] if v12s7_aubrey_moved else [riley])
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12fernor1", returnScreen="v12s7_balcony_left", seenList=[] if v12s7_aubrey_moved else [riley], victim=nora)
                 else:
                     action Jump("v12s7_nora1") # Nora
 
@@ -668,7 +687,7 @@ screen v12s7_balcony_right():
         if not (aubrey in v12s7_killList or v12s7_aubrey_moved):
             hotspot (210, 300, 763, 780):
                 if v12s7_aubrey:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferau1a", returnScreen="v12s7_balcony_right", seenList=[nora])
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferau1a", returnScreen="v12s7_balcony_right", seenList=[nora], victim=aubrey)
                 else:
                     action Jump("v12s7_aubrey1") # Aubrey
 
@@ -729,7 +748,7 @@ screen v12s7_bathroom():
         if not (aubrey in v12s7_killList or not v12s7_aubrey_moved):
             hotspot (657, 196, 483, 878):
                 if v12s7_aubrey2:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferauh1a", returnScreen="v12s7_bathroom", seenList=[])
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferauh1a", returnScreen="v12s7_bathroom", seenList=[], victim=aubrey)
                 else:
                     action Jump("v12s7_aubrey2") # Aubrey
                 
@@ -750,7 +769,7 @@ screen v12s7_captains_room():
 
             hotspot (506, 117, 1013, 959):
                 if v12s7_lindsey:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferlich1", returnScreen="v12s7_captains_room", seenList=[lindsey, charli])
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferlich1", returnScreen="v12s7_captains_room", seenList=[lindsey, charli], victim=lindsey)
                 else:
                     action Jump("v12s7_lindsey_charlie1") # Lindsey & Charli
 
@@ -758,9 +777,9 @@ screen v12s7_captains_room():
             idle "images/v12/Scene 7/Screens/Navigation 26b.webp" # Charli
             hover "images/v12/Scene 7/Buttons/nav 26b.webp"
 
-            hotspot (1157, 163, 254, 720):
+            hotspot (1200, 163, 254, 720):
                 if v12s7_charli:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12fercha1", returnScreen="v12s7_captains_room", seenList=[])
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12fercha1", returnScreen="v12s7_captains_room", seenList=[], victim=charli)
                 else:
                     action Jump("v12s7_charli2") # Charli
 
