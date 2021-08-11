@@ -374,7 +374,7 @@ label v12s27a:
     
 
 ### ERROR: KiwiiPost("MC", "Ryan sitting in chair at salon not facing the mirror with black hair", "#RoastedApe", numberLikes=469)
-### ERROR: kiwiiPost.newComment("Imre", "Holy shit... You make it way to easy, Ryan!", mentions=”Ryan”)
+### ERROR: kiwiiPost.newComment("Imre", "Holy shit... You make it way to easy, Ryan!", mentions="Ryan")
 ### ERROR: kiwiiPost.newComment("Amber", "Haha, yes! That's what you get, moron...”, mentions="Ryan")
 ### ERROR: kiwiiPost.addReply("Haha, an Ape doesn't back down!")### ERROR: kiwiiPost.addReply("Aw, come on guys! It doesn't look... that bad... Lmao")
   
