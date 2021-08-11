@@ -4256,7 +4256,7 @@ label v12s7_riley2:
 
     call screen v12s7_right_gallery_front
 
-label v12s7_riley2_kill:
+label v12s7_riley_kill2:
 
     scene v12ferrile3 # TPP. Show mc pointing finger gun at riley, mc mouth open
     with dissolve
