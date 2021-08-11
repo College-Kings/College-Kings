@@ -10,6 +10,8 @@ label v12_room_sneak:
 
     pause 0.75
 
+    play music "music/v12/Scene 30/Track Scene 30.mp3" fadein 2
+
     if not v11_riley_roomate:
         if chloers or chloegf:
             scene v12rs2 # FPP. MC standing in front of Chloe's bed, looking at her as she sleeps
@@ -55,6 +57,8 @@ label v12_room_sneak:
     with dissolve
     
     pause 2.5
+
+    stop music fadeout 3
 
     if v11_riley_roomate:
         jump v12_aubrey_wake_up_ri #scene 31a

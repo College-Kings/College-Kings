@@ -17,6 +17,8 @@ label v12_party_wake_up:
 
     pause 0.75
 
+    play music "music/v12/Scene 19/Track Scene 19.mp3" fadein 2
+
     scene v12pwu2 # FPP. MC lying in the bed, looking at the bedroom door
     with vpunch
 
@@ -345,5 +347,7 @@ label v12_party_wake_up:
         with dissolve
 
         pause 1
+
+    stop music fadeout 3
 
     jump v12_urban_exploring #scene 20

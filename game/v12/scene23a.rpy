@@ -5,12 +5,13 @@
 
 label v12_mc_chilling:
     if not v11_riley_roomate:
-
         scene v12mor1 # TPP. MC leaving riley's room
         with fade 
         play sound "sounds/doorclose.mp3"
 
         pause 0.75
+
+        play music "music/v12/Scene 23a/Track Scene 23a.mp3" fadein 2
 
         scene v12mor2 # TPP. MC on the hotel hallway
         with dissolve
@@ -36,6 +37,8 @@ label v12_mc_chilling:
         with dissolve
 
         pause 0.75
+
+        play music "music/v12/Scene 23a/Track Scene 23a.mp3" fadein 2
 
         scene v12mor5
         with dissolve
@@ -890,5 +893,7 @@ label v12_mc_chilling:
     with fade
     
     pause 2.25
+
+    stop music fadeout 3
 
     jump v12_simplr_convo #scene 24

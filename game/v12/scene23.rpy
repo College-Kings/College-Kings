@@ -10,6 +10,8 @@ label v12_ms_rose_sex:
 
     pause 0.75
 
+    play music "music/v12/Scene 23/Track Scene 23_1.mp3" fadein 2
+
     scene v12msr2 # FPP. MC and Ms. Rose in the hallway, MC and Ms. Rose looking at each other, Ms. Rose slight smile, mouth open
     with dissolve
 
@@ -189,6 +191,9 @@ label v12_ms_rose_sex:
                 with dissolve
 
                 pause 0.75
+
+                stop music fadeout 3
+                play music "music/v12/Scene 23/Track Scene 23_2.mp3" fadein 2
 
                 scene v12msr10 # FPP. MC and Ms. Rose in living room, looking at each other, Ms. Rose slight smile, mouth closed
                 with dissolve
@@ -503,6 +508,9 @@ label v12_ms_rose_sex:
 
                 u "I'm feeling... Really..."
 
+                stop music fadeout 3
+                play music "music/v12/Scene 23/Track Scene 23_3.mp3" fadein 2
+
                 scene black
                 with dissolve
 
@@ -575,5 +583,7 @@ label v12_ms_rose_sex:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v12_simplr_convo #scene 24

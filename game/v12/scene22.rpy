@@ -10,6 +10,8 @@ label v12_riley_room:
 
     pause 1
 
+    play music "music/v12/Scene 22/Track Scene 22.mp3" fadein 2
+
     scene v12rir2 # FPP Show Riley, in hotel hallway, smiling with mouth open
     with dissolve
 
@@ -327,5 +329,7 @@ label v12_riley_room:
         ri "Oh! Hey, Charli..."
 
         u "(Bastard was probably listening that whole fucking time...)"
+
+        stop music fadeout 3
         
         jump v12_mc_chilling

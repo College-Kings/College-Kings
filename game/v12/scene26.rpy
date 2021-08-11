@@ -10,6 +10,8 @@ label v12_nora_chris_fight:
 
     pause 0.75
 
+    play music "music/v12/Scene 26/Track Scene 26.mp3" fadein 2
+
     scene v12ncf2 # FPP. MC and Ryan standing in front of each other in the lobby, Ryan slight smile, mouth open
     with dissolve
 
@@ -193,13 +195,20 @@ label v12_nora_chris_fight:
     scene v12ncf14 # TPP. Show Chris going to walk out of the hotel, mouth closed, angry, holding his wrist, Nora walking towards the hotel rooms, Nora crying, mouth closed
     with dissolve
 
+    pause 0.75
+
     menu:
         "Go to Nora":
             $ addPoint("bf")
             $ v12_followed_nora = True
 
+            stop music fadeout 3
+
             jump v12_chase_nora #scene 26b
         "Go to Chris":
             $ v12_help_chris += 1
             $ addPoint("bro")
+
+            stop music fadeout 3
+            
             jump v12_follow_chris #scene 26a

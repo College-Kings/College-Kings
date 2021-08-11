@@ -1526,4 +1526,8 @@ label v12_after_sex:
     scene v12esr63 # TPP. Show MC, Aubrey, Imre and Lindsey running on the sidewalk, all smiling, mouths closed
     with dissolve
 
+    pause 0.75
+
+    stop music fadeout 3
+
     jump v12_slumber_party #scene 18
