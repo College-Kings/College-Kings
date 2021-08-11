@@ -1934,7 +1934,7 @@ label v12s7_lauren1:
 
     call screen v12s7_seating_back
 
-label v12s7_Lauren_kill:
+label v12s7_lauren_kill:
 
     scene v12ferla8 # TPP. Show mc pointing finger gun at lauren, mouth open
     with dissolve
@@ -2263,9 +2263,9 @@ label v12s7_ryan_imre1:
 label v12s7_ryan1:
     $ v12s7_ryan = True
 
-    $ v12s7_seenList = [ryan, amber]
+    $ v12s7_seenList = [amber]
     if (v12s7_riley and not v12s7_riley2) or amber in v12s7_killList:
-        $ v12s7_seenList.remove(amber)
+        $ v12s7_seenList = []
 
     show screen murder_button_overlay(ryan)
 
@@ -3474,7 +3474,7 @@ label v12s7_msrose1:
 
     call screen v12s7_seating_front
 
-label v12s7_msrose_kill:
+label v12s7_ms_rose_kill:
 
     ### ERROR: -If MC presses the murder button during this convo ###
 
@@ -3822,7 +3822,7 @@ label v12s7_penelope_kill:
     scene v12ferpen1a
     with dissolve
 
-    pe "Well, now I can relax. Mr. Lee said go to the dining hall if killed so that's where I'm going."
+    pe "Well, now I can relax. Mr. Lee said go to the dining hall if you're killed so that's where I'm going."
 
     scene v12ferpen1
     with dissolve
@@ -5947,7 +5947,7 @@ label v12s7_emily2:
 
     call screen v12s7_bow
 
-label v12s7_emily2_kill:
+label v12s7_emily_kill:
 
     scene v12feremi3 # TPP. Show mc pointing finger gun at Emily, mc mouth open
     with dissolve
