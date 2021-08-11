@@ -5824,7 +5824,7 @@ label v12s7_josh2:
 
     call screen v12s7_utility
 
-label v12s7_josh2_kill:
+label v12s7_josh_kill:
 
     scene v12ferjos5 # TPP. Show mc pointing finger gun at josh, mc mouth open
     with dissolve
