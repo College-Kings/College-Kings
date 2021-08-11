@@ -465,7 +465,7 @@ screen v12s7_rear_gallery():
         if v11_invite_sam_europe and v12s7_samantha:
             hotspot (894, 267, 257, 744):
                 if v12s7_cameron:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12fercam3", returnScreen="v12s7_rear_gallery", seenList=[], victim=samantha)
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12fercam3", returnScreen="v12s7_rear_gallery", seenList=[], victim=cameron)
                 else:
                     action Jump("v12s7_cameron2")
 
