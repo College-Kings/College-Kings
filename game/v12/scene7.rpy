@@ -65,7 +65,7 @@ label v12s7fr:
     scene v12fer5
     with dissolve
 
-    ri "*Laughs* I hope you don't have to play a virgin nun,"
+    ri "*Laughs* I hope you don't have to play a virgin nun."
 
     scene v12fer1
     with dissolve
