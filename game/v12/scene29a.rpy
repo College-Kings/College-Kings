@@ -318,7 +318,7 @@ label v12_late_night_workout:
                     scene v12lnw10d # TPP Same angle as v12lnw10, MC against wall, stretching down to touch his toes, not reaching, leaning forward, Lindsey standing by
                     with dissolve
 
-                pause 1
+                    pause 1
 
                     scene v12lnw15
                     with dissolve
@@ -338,7 +338,7 @@ label v12_late_night_workout:
 
                 li "Good."
 
-        menu (fail_label=v12s29a_faillabel2):
+        menu (fail_label="v12s29a_faillabel2"):
             "Stretch":
                 scene v12lnw10e # TPP Same angle as v12lnw10, MC against wall, stretching down to touch his toes, not reaching yet, Lindsey's hand on his back
                 with dissolve
@@ -359,7 +359,7 @@ label v12_late_night_workout:
 
                     jump v12_gym_stretch
 
-        menu (fail_label=v12s29a_faillabel3):
+        menu (fail_label="v12s29a_faillabel3"):
             "Hold":
                 scene v12lnw10f
                 with dissolve

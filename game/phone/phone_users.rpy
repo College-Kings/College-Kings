@@ -109,7 +109,7 @@ init -90 python:
             "Samantha": {
                 "username": "SamFromSpaceJam",
                 "profilePicture": "images/phone/kiwii/profilePictures/samanthapp.webp"
-            }
+            },
             "Charli": {
                 "username": "CharliAndTheCockFactory",
                 "profilePicture": "images/phone/kiwii/profilePictures/charlipp.webp"

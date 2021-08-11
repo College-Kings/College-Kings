@@ -528,5 +528,3 @@ default v12_nora_sex = False
 default v12_nora_points = 0
 default supported_nora = False
 default v12_call_cameron = False
-default v11_lindsey_run = False
-default v12_help_chris = 0
