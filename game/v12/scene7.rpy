@@ -713,10 +713,10 @@ label v12s7_aubrey2:
 
             call screen v12s7_balcony_right
         "Kill her":
+            $ v12s7_killList.add(aubrey)
             label v12s7_aubrey_kill:
             hide screen murder_button_overlay
 
-            $ v12s7_killList.add(aubrey)
             $ addPoint("tm")
             scene v12ferauh6 # TPP. Show MC pointing finger gun at aubrey, mc mouth open, aubrey mouth closed
             with dissolve
