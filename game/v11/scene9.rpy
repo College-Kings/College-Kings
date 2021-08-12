@@ -1083,7 +1083,6 @@ label v11_apes_manhunt:
                     jump v11_mc_horse_room
 
                 "Pet horse":
-                    $ grant_achievement("off_your_high_horse")
                     scene v11amh49a # FPP. Same as v11amh49, MC is petting the horse (show his hand on the horse's neck)
                     with dissolve
 
@@ -1092,6 +1091,7 @@ label v11_apes_manhunt:
                     scene v11amh51a # TPP. Same as v11amh51, but MC is not in control, he is unbalanced on the horse, mouth closed, startled face
                     with dissolve
 
+                    $ grant_achievement("off_your_high_horse")
                     hor "NEIGHHHHHH!!!"
 
                     scene v11amh51b # TPP. Same as v11amh51, but MC is midair, startled expression, mouth open
@@ -1131,11 +1131,11 @@ label v11_apes_manhunt:
             jump v11_horse_fall
 
 label v11_horse_fall:
-    $ grant_achievement("off_your_high_horse")
 
     scene v11amh51a
     with dissolve
 
+    $ grant_achievement("off_your_high_horse")
     u "(I can't balance.)"
 
     scene v11amh51b
