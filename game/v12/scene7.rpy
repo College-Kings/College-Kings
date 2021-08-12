@@ -9,6 +9,7 @@ label v12s7_free_roam_spoken(backgroundImg, returnScreen, seenList, victim):
     $ renpy.call_screen(returnScreen)
 
 label v12s7fr:
+    $ v12s7_victims = 12
     $ v12s7_victims += sum([ v11_invite_sam_europe, emily_europe, josh_europe, v11_pen_goes_europe ])
 
     scene v12fer1 # FPP. Show Mr Lee, smiling mouth open
