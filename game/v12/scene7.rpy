@@ -388,6 +388,8 @@ label v12s7fr:
     scene v12fer16 # TPP. Show MC grabbing boxing gloves from the chest
     with dissolve
 
+    pause 1.5
+
     # Murder Mystery Tutorial
     show murder_tutorial1 at truecenter
     pause
@@ -3481,7 +3483,7 @@ label v12s7_msrose1:
     scene v12fermsr2 # TPP. Show mc leaving.
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
@@ -3547,6 +3549,8 @@ label v12s7_ms_rose_kill:
 
     scene v12fermsr5 # FPP. Show Ms rose leaving.
     with dissolve
+
+    pause 0.75
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
@@ -3618,6 +3622,8 @@ label v12s7_penelope1:
             scene v12ferpen2 # TPP. Show Mc walking away
             with dissolve
 
+            pause 0.75
+
             call screen v12s7_left_walkway_front
         "Help her out":
             $ addPoint("bf")
@@ -3631,12 +3637,12 @@ label v12s7_penelope1:
 
             pe "I am."
 
-            scene v12ferpen1a
-            with dissolve
-
-            u "*Sighs* Like this."
-
             if penelopers:
+                scene v12ferpen1
+                with dissolve
+
+                u "*Sighs* Like this."
+
                 scene v12ferpen3 # TPP. Show MC gets behind Penelope and wraps his arms around her grabbing her hand and applying pressure to the spot on the wall.
                 with dissolve
 
@@ -3654,7 +3660,7 @@ label v12s7_penelope1:
 
                 u "Just a little."
 
-                scene v12ferpen1
+                scene v12ferpen1a
                 with dissolve
 
                 pe "What are you supposed to be again?"
@@ -3664,59 +3670,59 @@ label v12s7_penelope1:
 
                 u "I'm a famous boxer."
 
-                scene v12ferpen1
+                scene v12ferpen1a
                 with dissolve
 
                 pe "And your name is?"
 
-                scene v12ferpen1a
+                scene v12ferpen1
                 with dissolve
 
                 u "Haha, I have no idea. My card just said famous boxer... I've been making up my story."
 
-                scene v12ferpen1
+                scene v12ferpen1a
                 with dissolve
 
                 pe "So have you made up a name?"
 
                 menu:
                     "John Paris":
-                        scene v12ferpen1a
+                        scene v12ferpen1
                         with dissolve
                         
                         u "Uhm... yeah, it's John Paris."
 
-                        scene v12ferpen1
+                        scene v12ferpen1a
                         with dissolve
 
                         pe "*Laughs* \"John Paris\"? Not very creative huh?"
 
-                        scene v12ferpen1a
+                        scene v12ferpen1
                         with dissolve
 
                         u "I just said what came to me."
 
-                        scene v12ferpen1
+                        scene v12ferpen1a
                         with dissolve
 
                         pe "That's obvious."
                     "Chase Lysol":
-                        scene v12ferpen1a
+                        scene v12ferpen1
                         with dissolve
                         
                         u "Sure have, it's Chase Lysol."
 
-                        scene v12ferpen1
+                        scene v12ferpen1a
                         with dissolve
 
                         pe "Oooo, I see what you did there. Very creative."
 
-                        scene v12ferpen1a
+                        scene v12ferpen1
                         with dissolve
 
                         u "What can I say, I'm talented like that."
 
-                        scene v12ferpen1
+                        scene v12ferpen1a
                         with dissolve
 
                         pe "I see."
@@ -3765,13 +3771,14 @@ label v12s7_penelope1:
 
                 scene v12ferpen6 # TPP. Show Penelope kissing mc.
                 with dissolve
+                play sound "sounds/kiss.mp3"
 
-                pause
+                pause 1.5
 
                 scene v12ferpen1b
                 with dissolve
 
-                u "Oh, what was that for."
+                u "Oh, what was that for?"
 
                 scene v12ferpen1c
                 with dissolve
@@ -3826,7 +3833,7 @@ label v12s7_penelope_kill:
     scene v12ferpen8 # TPP. Show Penelope hugging mc
     with dissolve
 
-    pause
+    pause 1.25
 
     scene v12ferpen1
     with dissolve
@@ -3845,6 +3852,8 @@ label v12s7_penelope_kill:
 
     scene v12ferpen9 # FPP. Show Penelope walking away
     with dissolve
+
+    pause 0.75
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
@@ -4538,6 +4547,8 @@ label v12s7_sam_cameron:
     scene v12fersaca3 # FPP. Show samantha storming off
     with dissolve
 
+    pause 0.75
+
     scene v12fersaca2a
     with dissolve
 
@@ -4571,7 +4582,7 @@ label v12s7_sam_cameron:
     scene v12fersaca2a
     with dissolve
 
-    u "You really think you can take Chris?"
+    u "You really think you can take on Chris?"
 
     scene v12fersaca2
     with dissolve
@@ -4665,8 +4676,9 @@ label v12s7_sam2:
 
             scene v12fersam2 # TPP. Show mc and samantha kissing, mc's hand on samantha's cheek
             with dissolve
+            play sound "sounds/kiss.mp3"
 
-            pause
+            pause 1.5
 
             scene v12fersam1c
             with dissolve
@@ -4836,6 +4848,8 @@ label v12s7_sam2:
 
     scene v12fersam3 # FPP. Show sam walking away
     with dissolve
+
+    pause 0.75
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
@@ -5979,7 +5993,7 @@ label v12s7_emily_kill:
     scene v12feremi5 # FPP. Show emily walking away.
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
