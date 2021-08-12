@@ -69,9 +69,6 @@ label v12_chris_nora_room:
 
     u "(It really seems like those two are coming to a crossroads. I'm sure she's pretty heated right now, I wonder if I should go talk to her.)"
 
-    scene v12cnr5b # TPP. Same as v12cnr5, MC confused, mouth closed
-    with dissolve
-
     menu:
         "Go to Nora":
             $ addPoint("bf")
