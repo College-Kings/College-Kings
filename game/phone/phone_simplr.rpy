@@ -204,7 +204,7 @@ screen simplr_messenger(contact=None):
         fixed:
             xysize(375, 112)
             xalign 0.5
-            ypos 460
+            ypos 168
 
             imagebutton:
                 idle "images/msgarrow.webp"
