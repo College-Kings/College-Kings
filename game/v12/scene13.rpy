@@ -135,7 +135,7 @@ label v12_cafe:
         scene v12caf1
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
         play music "music/v12/Scene 13/Track Scene 13.mp3" fadein 2
 

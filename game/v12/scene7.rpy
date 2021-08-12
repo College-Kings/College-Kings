@@ -9,7 +9,7 @@ label v12s7_free_roam_spoken(backgroundImg, returnScreen, seenList, victim):
 
 label v12s7fr:
     if v11_invite_sam_europe:
-        $ v12s7_victims = +2 #Cameron?
+        $ v12s7_victims = +1 #Cameron isn't playing
     if emily_europe:
         $ v12s7_victims = +1
     if josh_europe:
@@ -65,7 +65,7 @@ label v12s7fr:
     scene v12fer5
     with dissolve
 
-    ri "*Laughs* I hope you don't have to play a virgin nun,"
+    ri "*Laughs* I hope you don't have to play a virgin nun."
 
     scene v12fer1
     with dissolve
@@ -662,6 +662,7 @@ label v12s7_aubrey2:
 
             scene v12ferauh2a # TPP. same 2, mc mouth open
             with dissolve
+            $ grant_achievement("doctors_orders")
             u "Oh... Yeah, this is definitely more interesting than a murder."
 
             scene v12ferauh3 # TPP. Show aubrey kissing mc, placing his hand on her ass.
@@ -677,6 +678,7 @@ label v12s7_aubrey2:
 
             scene v12ferauh4a #FPP. Same 4, mouth closed
             with dissolve
+
 
             u "Absolu-"
 
@@ -901,6 +903,7 @@ label v12s7_riley1:
             scene v12ferri4a
             with dissolve
 
+            $ grant_achievement("zero_to_hero")
             u "I'm actually quite poor myself. My manager takes nearly all of my winnings and after expenses, I'm usually left with hardly anything."
 
             scene v12ferri4
@@ -2621,6 +2624,7 @@ label v12s7_imre_kill:
     scene v12ferim1b
     with dissolve
 
+    $ grant_achievement("mercy_killing")
     imre "FREEDOM!!!"
 
     $ grant_achievement("mercy_killing")
@@ -3256,6 +3260,9 @@ label v12s7_charli_kill:
     
     scene v12fercha2 # TPP. Show MC pointing a finger gun at charli, mouth open
     with dissolve
+
+    if len(v12s7_killList) == v12s7_victims:
+        $ grant_achievement("best_for_last")
 
     u "Boom."
 
@@ -4847,6 +4854,7 @@ label v12s7_samantha_kill:
     scene v12fersam4 # TPP. Show mc, mouth open, pointing finger fun at sam.
     with dissolve
 
+    $ grant_achievement("talk_murder_to_me")
     u "Boom."
 
     $ grant_achievement("talk_murder_to_me")
@@ -5991,6 +5999,9 @@ label v12s7_mc_caught:
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
+
+    if len(v12s7_killList) == 0:
+        $ grant_achievement("weapons_down")
 
     unknown "I found the murderer!"
 

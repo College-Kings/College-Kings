@@ -5,8 +5,14 @@
 # Phone Images: None
 
 label v12_murder_mystery_reveal:
+    $ freeRoam = False
+    hide screen murder_button_overlay
+
     scene v12mmr1 # FPP. Mr. Lee and Ms. Rose standing in front of the students, addressing them, only Mr. Lee in shot. Mr. Lee smiling, mouth open, looking at MC
     with dissolve
+
+    if len(v12s7_killList) == v12s7_victims:
+        $ grant_achievement("mass_casualties")
 
     lee "Wow, that turned out a lot better than expected. I hope you all enjoyed yourselves. Was anyone surprised to learn [name] was my chosen murderer?"
 
@@ -67,6 +73,8 @@ label v12_murder_mystery_reveal:
 
     $ v12_murder_count = len(v12s7_killList)
     if len(v12s7_killList) >= 5:
+    
+        $ grant_achievement("killing_spree")
 
         lee "A total of [v12_murder_count] people were killed, so let's give our murderer a round of applause."
 
@@ -220,7 +228,7 @@ label v12_murder_mystery_reveal:
             scene v12mmr10
             with dissolve
 
-            u "Well don't worry I gotchu."
+            u "Well don't worry I got you."
 
             #scene v12mmr9a # FPP. Same as v12mmr9, MC rushing back to where he was standing in v12mmr1
             #with dissolve

@@ -183,7 +183,7 @@ label v12_slumber_party:
     scene v12slp10 # TPP. Show Imre plopping down on the bed, smiling, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12slp11 # FPP. MC standing near the beds, Riley standing next to MC, MC looking at Riley, Riley looking at Imre on the bed, Riley slightly annoyed, mouth open (Only Riley in shot)
     with dissolve
@@ -213,7 +213,7 @@ label v12_slumber_party:
     scene v12slp9c # FPP. Same as v12slp9, Aubrey, Lindsey, Amber, Chloe and Nora walking through the door, all smiling, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1.5
 
     scene v12slp12a # FPP. Same as v12slp12, Imre looking towards the door, smiling, mouth open
     with dissolve
@@ -238,7 +238,7 @@ label v12_slumber_party:
     scene v12slp9d # FPP. Same as v12slp9c, but Chris, Ryan and Charli are walking in, all smiling, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12slp15 # FPP. Chris, Ryan and Charli standing next to each other near the door, MC looking at Chris, Chris waving, looking at MC, smiling, mouth open (Only Chris in shot, the other characters same positioning as v12slp13)
     with dissolve
@@ -308,12 +308,12 @@ label v12_slumber_party:
     scene v12slp18 # TPP. Show Lindsey and Aubrey hugging, both smiling, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12slp14b # FPP. Same as v12slp14a, Lindsey looking at MC, Lindsey smiling, mouth open
     with dissolve
 
-    li "Thank you so much guys. This is really sweet and honestly such a perfect surprise"
+    li "Thank you so much guys. This is really sweet and honestly such a perfect surprise."
 
     scene v12slp12e # FPP. Same as v12slp12d, Imre looking at Lindsey's direction, Imre smirking, mouth open
     with dissolve
@@ -328,7 +328,7 @@ label v12_slumber_party:
     scene v12slp16a
     with dissolve
 
-    au "*Laughs* Let's have fun guys."
+    au "*Laughs* Let's have fun, guys."
 
     $ v12s18_kiwiiPost1 = KiwiiPost("Lindsey", "v12/lindsey_aubrey_pjs.webp", _("Couldn't have asked for a better night... <3"), numberLikes=571) # Lindsey Selfie with Aubrey in pajamas
     $ v12s18_kiwiiPost1.newComment("Aubrey", _("You're so welcome boo... Girls night again ASAP!"), mentions="Lindsey", numberLikes=renpy.random.randint(250,350), queue=False)

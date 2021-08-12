@@ -505,6 +505,10 @@ label v12_chase_robber:
     play sound "sounds/vibrate.mp3"
     pause 0.75
 
+    $ v12s1a_kiwiiPost1 = KiwiiPost("Imre", "v12/impost1.webp", _("Would your man chase a robber down in the middle of the night? If not, you don't have a real man..."), numberLikes=216)
+    $ v12s1a_kiwiiPost1.newComment("Charli", _("If you want a man Imre I can take you to a few bars... All you had to do was ask."), numberLikes=14, queue=False)
+    $ v12s1a_kiwiiPost1.newComment("Ryan", _("LMAO"), numberLikes=1, mentions="Imre", queue=False)
+
     $ contact_Imre.newMessage("Check Kiwii... you're welcome. :)", queue=True)
     $ contact_Imre.addReply("Haha okay", func=None)
 

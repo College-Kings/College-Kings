@@ -135,7 +135,7 @@ label v12_chase_nora:
             scene v12cn6a # FPP Same angle as v12cn6, Nora's head is still in MC's lap, but she has turned it to sort of look at him as he talks
             with dissolve
 
-            u "You have to resolve things at some point. I'm not telling what to do, I'd never do that,"
+            u "You have to resolve things at some point. I'm not telling what to do, I'd never do that."
             u "but it doesn't seem like Chris is understanding anything you tell him, so I don't see how trying to talk through this is going to help."
 
             scene v12cn5g # FPP Same angle as v12cn5, Nora out of frame (at least mostly) with her head in MC's lap, Lindsey looking down at her, mouth open
