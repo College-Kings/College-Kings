@@ -835,7 +835,7 @@ label v12s7_riley1:
     scene v12ferri4 # FPP. Show riley, shocked look, mouth open
     with dissolve
 
-    ri "*Southern accent* *Tell me eyes deceive me! You're the fighter that took down George Knight The Giant."
+    ri "*Southern accent* Tell me eyes deceive me! You're the fighter that took down George Knight The Giant."
 
     scene v12ferri4a # FPP. Same 4, mouth closed
     with dissolve
