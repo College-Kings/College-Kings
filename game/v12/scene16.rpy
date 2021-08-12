@@ -843,8 +843,6 @@ label v12_valentine:
                 bishop "Very sweet, you two."
 
             "Kiss her cheek":
-                $ grant_achievement("you_may_kiss_the_bride")
-                
                 $ addPoint("bf")
                 scene v12val35 # TPP. Show MC kissing Nora's cheek, Nora slight smile, blushing, mouth closed
                 with dissolve

@@ -2,7 +2,7 @@
 # Locations: Cafe
 # Characters: CHLOE (Outfit: 5), MC (Outfit: 5), FRENCH WAITRESS (Outfit: 1), RILEY (Outfit: 2)
 # Time: Morning
-# Phone Images: rileycatacombs.webp - Riley selfie at the catacomb entrance with a street sign behind her with "CATACOMBS" written on it, Riley smiling, mouth closed
+# Phone Images: rileycatacomb.webp - Riley selfie at the catacomb entrance with a street sign behind her with "CATACOMBS" written on it, Riley smiling, mouth closed
 
 label v12_chloe_cafe:
     scene v12chc1 # TPP. Show MC and Chloe going into the cafe, both smiling, mouths closed
@@ -415,10 +415,7 @@ label v12_chloe_cafe:
                 $ grant_achievement("throw_her_to_the_lions")
             
             u "Good. Now, again, don't quote me. I'm not sure of all the details and I'm not even positive if this is truly her plan, but I heard that Lindsey's been considering running for President of the Chicks, against you."
-
-            if v11_lindsey_run and v11_told_aubrey:
-                $ grant_achievement("throw_her_to_the_lions")
-            
+           
             scene v12chc5p # FPP. Same as v12chc5o, Chloe angry, mouth open
             with dissolve
 

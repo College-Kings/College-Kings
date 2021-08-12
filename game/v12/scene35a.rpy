@@ -624,23 +624,15 @@ label v12_nora_sex:
         scene v12nos34 # TPP. Show Nora putting both ehr hands on MC's shoulders, kissing him
         with dissolve
 
-        if joinwolves:
-            $ grant_achievement("inside_job")
-        else:
-            $ grant_achievement("all_is_fair_in_love_and_war")
-
         pause
-
-        if joinwolves:
-            $ grant_achievement("inside_job")
-        else:
-            $ grant_achievement("all_is_fair_in_love_and_war")
-
-        if v12_lindsey_sex and v12_nora_sex and v12_lauren_sex and v12_msrose_sex:
-            $ grant_achievement("city_of_love")
 
         scene v12nos35 # FPP. Same positioning as v12nos35, MC and Nora looking at each other, Nora smiling, mouth closed
         with dissolve
+
+        if joinwolves:
+            $ grant_achievement("inside_job")
+        else:
+            $ grant_achievement("all_is_fair_in_love_and_war")
 
         u "Nora... That was... Thank you."
 

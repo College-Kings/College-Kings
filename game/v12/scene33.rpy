@@ -24,7 +24,7 @@ label v12s33:
 
     au "We got carried away, is something going on?"
 
-    scene v12s33_4 # FPP Lindsey close up, neutral expression, mouth open
+    scene v12s33_4 # FPP Lindsey close up, neutral expression, mouth open
     with dissolve
 
     li "I would've texted you, but I was expecting you to already be back."
@@ -40,7 +40,7 @@ label v12s33:
 
     li "That's what I said when Nora told me, haha! We all have to go at the same time though, so they've been waiting on you guys."
 
-    scene v12s33_4a # same as 4, mouth closed
+    scene v12s33_4a # same as 4, mouth closed
     with dissolve
 
     u "No one thought to text or call us? *Chuckles*"
@@ -127,7 +127,7 @@ label v12s33:
     li "He's starting to get a little irritated, but I think it's because he's getting homesick. He's starting to miss his wife, I heard him say it to Ms. Rose."
     li "I think the church thing kinda hit home for him."
 
-    scene v12s33_4c # same as 4b, mouth closed
+    scene v12s33_4c # same as 4b, mouth closed
     with dissolve
 
     u "I always forget he's married, but yeah... I could see why he'd be on edge."
@@ -180,7 +180,7 @@ label v12s33:
 
     au "You're gonna get naked too, right? You can't use the sauna with clothes on, that's weird."
 
-    scene v12s33_9b # same as 9, Lindsey looking at mc, mouth open flirty smile
+    scene v12s33_9b # same as 9, Lindsey looking at mc, mouth open flirty smile
     with dissolve
 
     li "*Chuckles* That, I agree with."
@@ -235,7 +235,7 @@ label v12s33:
 
     show screen v12s33_sneak_off_overlay("v12s33_sneak_off1")
 
-    scene v12s33_13 #TPP close up angled top view of Imre laying on a massage table with face down (you shouldn't be able to see his face or other massage tables next to him), it needs to be so close that it only shows Imre's heads and shoulders, but not his lower back, so that the picture works with or with masseuse there
+    scene v12s33_13 #TPP close up angled top view of Imre laying on a massage table with face down (you shouldn't be able to see his face or other massage tables next to him), it needs to be so close that it only shows Imre's heads and shoulders, but not his lower back, so that the picture works with or with masseuse there
     with dissolve
 
     imre "Where's the masseuse? I hope I get a lady! *Laughs*"
@@ -255,7 +255,7 @@ label v12s33:
 
     lee "The only woman's hands I care for are my wife's."
 
-    scene v12s33_15 # TPP same view as for Imre and Mr Lee, but for Chris 
+    scene v12s33_15 # TPP same view as for Imre and Mr Lee, but for Chris 
     with dissolve
 
     ch "Commendable, Mr. Lee."
@@ -275,7 +275,7 @@ label v12s33:
 
     lee "I agree."
 
-    scene v12s33_17 # TPP show two masseuses walk in, one a beautiful woman and the other a man, female masseuse mouth open, smiling
+    scene v12s33_17 # TPP show two masseuses walk in, one a beautiful woman and the other a man, female masseuse mouth open, smiling
     with dissolve
 
     lmass "Afternoon gentleman, hope you're all relaxing well and ready for your massages?"
@@ -290,7 +290,7 @@ label v12s33:
 
     lee "*Sighs* So embarrassing."
 
-    scene v12s33_18 # TPP close up of female masseuse, mouth open, neutral expression
+    scene v12s33_18 # TPP close up of female masseuse, mouth open, neutral expression
     with dissolve
 
     lmass "Haha. Massages last one hour hour. We ask that you relax and attempt to behave as if we aren't even here."
@@ -371,7 +371,7 @@ label v12s33:
 
     u "*Laughs*"
 
-    scene v12s33_20 # same angle as 13,14,15,16, for Ryan 
+    scene v12s33_20 # same angle as 13,14,15,16, for Ryan 
     with dissolve
 
     ry "*Laughs*"
@@ -490,7 +490,7 @@ label v12s33:
 
     u "Your face is corny."
 
-    scene v12s33_22 # TPP close up of female masseuse looking down massaging someone (don't show their body), laughing smile, mouth open
+    scene v12s33_22 # TPP close up of female masseuse looking down massaging someone (don't show their body), laughing smile, mouth open
     with dissolve
 
     lmass "*Chuckles* You guys are the most exciting bunch we've had."
@@ -667,7 +667,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
 
     u "What?"
 
-    scene v12s33_29b # same as 29, aubrey looking at mc, smiling mouth open
+    scene v12s33_29b # same as 29, aubrey looking at mc, smiling mouth open
     with dissolve
 
     au "Haha, we bet which boy would sneak off and try to come sit with us girls. I said you and Chloe said Imre."
@@ -677,7 +677,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
 
     u "Haha! Well, trust me. He wanted to, but Mr. Lee has him on lock and key."
 
-    scene v12s33_30b # same as 30, chloe smiling, mouth open
+    scene v12s33_30b # same as 30, chloe smiling, mouth open
     with dissolve
 
     cl "Didn't even consider Mr. Lee."
@@ -1030,7 +1030,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
 
     imre "Aww, hell no! How is this supposed to be relaxing? It's hot as hell in here, dude."
 
-    scene v12s33_37 # TPP close up Chris, sitting in Sauna, neutral expression, eyes closed facing forward, mouth open
+    scene v12s33_37 # TPP close up Chris, sitting in Sauna, neutral expression, eyes closed facing forward, mouth open
     with dissolve
 
     ch "Just try to enjoy it, man."
@@ -1196,7 +1196,7 @@ label v12s33_sneak_off2:
      
     pause 0.75
 
-    scene v12s33_45 # FPP show closeup of amber looking down at you from her massage table, laughing smile, mouth open, whispering
+    scene v12s33_45 # FPP show closeup of amber looking down at you from her massage table, laughing smile, mouth open, whispering
     with dissolve
 
     am "*Whisper* What on earth are you doing?! *Chuckles*"
@@ -1275,7 +1275,7 @@ label v12s33_sneak_off2:
 
             ro "[name]! I don't believe you're supposed to be here."
 
-            scene v12s33_48a # same as 48, mouth closed
+            scene v12s33_48a # same as 48, mouth closed
             with dissolve
 
             u "My bad, I uhm... got lost."
@@ -1293,7 +1293,7 @@ label v12s33_sneak_off2:
 
     u "What's going on?"
 
-    scene v12s33_50 # same as 50a, mouth open
+    scene v12s33_50 # same as 50a, mouth open
     with dissolve
 
     imre "We're leaving bro, it's hot as hell in here."
