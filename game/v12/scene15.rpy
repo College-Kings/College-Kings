@@ -375,7 +375,7 @@ label v12_riddle_riley:
 
     u "Look, that's the exit! C'mon."
 
-    scene v12rrl28a # FPP. Looking at riley, slight smile, mouth opened
+    scene v12rrl28 # FPP. Looking at riley, slight smile, mouth opened
     with dissolve
 
     ri "Finally..."
