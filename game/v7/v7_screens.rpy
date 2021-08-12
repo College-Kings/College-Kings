@@ -14,7 +14,7 @@ screen hc_select():
         ypos 285
 
         imagebutton:
-            if "amber" not in hcAsked:
+            if "amber" not in hcAsked and not laurenrs:
                 idle "images/v7/HCAmber.webp"
                 hover "images/v7/HCAmber2.webp"
                 tooltip "I'm not that close with Amber but she does seem quite flirty around me."
@@ -29,7 +29,7 @@ screen hc_select():
                 action NullAction()
 
         imagebutton:
-            if "aubrey" not in hcAsked:
+            if "aubrey" not in hcAsked and not laurenrs:
                 idle "images/v7/HCAubrey.webp"
                 hover "images/v7/HCAubrey2.webp"
             else:
@@ -47,7 +47,7 @@ screen hc_select():
                 action NullAction()
 
         imagebutton:
-            if "autumn" not in hcAsked and not autumnmad:
+            if "autumn" not in hcAsked and not autumnmad and not laurenrs:
                 idle "images/v7/HCAutumn.webp"
                 hover "images/v7/HCAutumn2.webp"
             else:
@@ -65,7 +65,7 @@ screen hc_select():
                 action NullAction()
 
         imagebutton:
-            if "chloe" not in hcAsked and not chloemad:
+            if "chloe" not in hcAsked and not chloemad and not laurenrs:
                 idle "images/v7/HCChloe.webp"
                 hover "images/v7/HCChloe2.webp"
             else:
@@ -83,7 +83,7 @@ screen hc_select():
                 action NullAction()
 
         imagebutton:
-            if "emily" not in hcAsked and forgiveemily:
+            if "emily" not in hcAsked and forgiveemily and not laurenrs:
                 idle "images/v7/HCEmily.webp"
                 hover "images/v7/HCEmily2.webp"
             else:
@@ -101,7 +101,7 @@ screen hc_select():
                 action NullAction()
 
         imagebutton:
-            if "lauren" not in hcAsked:
+            if "lauren" not in hcAsked and not laurenmad:
                 idle "images/v7/HCLauren.webp"
                 hover "images/v7/HCLauren2.webp"
             else:
@@ -119,7 +119,7 @@ screen hc_select():
                 action NullAction()
 
         imagebutton:
-            if "penelope" not in hcAsked and not (bowling and emilyrs):
+            if "penelope" not in hcAsked and not (bowling and emilyrs) and not laurenrs:
                 idle "images/v7/HCPenelope.webp"
                 hover "images/v7/HCPenelope2.webp"
             else:
@@ -139,7 +139,7 @@ screen hc_select():
                 action NullAction()
 
         imagebutton:
-            if "riley" not in hcAsked:
+            if "riley" not in hcAsked and not laurenrs:
                 idle "images/v7/HCRiley.webp"
                 hover "images/v7/HCRiley2.webp"
             else:
