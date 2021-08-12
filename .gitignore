@@ -6,14 +6,14 @@ game/bugTesting/_bugTesting.txt
 game/cache/
 game/saves/
 
-CollegeKings.py
-CollegeKings.sh
-errors.txt
-gradle.properties.txt
-log.txt
-Stored Script.txt
-traceback.txt
-project.json
+/CollegeKings.py
+/CollegeKings.sh
+/errors.txt
+/gradle.properties.txt
+/log.txt
+/Stored Script.txt
+/traceback.txt
+/project.json
 
 screenshot*
 

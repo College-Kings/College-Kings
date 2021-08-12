@@ -11,6 +11,8 @@ label v12_game_roommate:
 
         pause 0.75
 
+        play music "music/v12/Scene 35b/Track Scene 35b_1.mp3" fadein 2
+
         scene v12grm2 # FPP. MC lying on his bed, looking at Chloe, Chloe sitting on her bed, looking at MC, slight smile, mouth open
         with dissolve
 
@@ -498,6 +500,8 @@ label v12_game_roommate:
 
             pause 0.75
 
+            stop music fadeout 3
+
             jump v12_lindsey_lobby
 
         else:
@@ -566,6 +570,8 @@ label v12_game_roommate:
 
             pause 0.75
 
+            stop music fadeout 3
+
             jump v12_lindsey_lobby
 
     else:
@@ -573,6 +579,8 @@ label v12_game_roommate:
         with dissolve
 
         ri "Steal anything else of mine while I was in the shower?"
+
+        play music "music/v12/Scene 35b/Track Scene 35b_2.mp3" fadein 2
 
         scene v12grm16 # FPP. Riley standing in front of MC's bed, Riley angry, mouth closed
         with dissolve
@@ -623,5 +631,7 @@ label v12_game_roommate:
         with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
 
         jump v12_lindsey_lobby #scene 36 
