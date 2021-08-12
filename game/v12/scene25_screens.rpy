@@ -1,10 +1,10 @@
 screen v12_girls():
-    add "images/v7/homecomingchoice.webp"
+    add "images/v12/Scene 25/juliabackground.webp"
 
     grid 3 3:
-        spacing 40
+        spacing 50
         xalign 0.5
-        ypos 285
+        ypos 250
 
         imagebutton:
             if True:
@@ -45,21 +45,21 @@ screen v12_girls():
 
         imagebutton:
             if True:
-                idle "images/v7/Lindsey.webp"
-                hover "images/v7/Lindsey.webp"
+                idle "images/head shots/Lindsey_idle.webp"
+                hover "images/head shots/Lindsey_hover.webp"
                 action Jump("v12_jc_lindsey")
             else:
-                idle "images/v7/Lindsey.webp"
-                hover "images/v7/Lindsey.webp"
+                idle "images/head shots/Lindsey_idle.webp"
+                hover "images/head shots/Lindsey_idle.webp"
 
         imagebutton:
             if True:
-                idle "images/v7/nora.webp"
-                hover "images/v7/nora.webp"
+                idle "images/head shots/Nora_idle.webp"
+                hover "images/head shots/Nora_hover.webp"
                 action Jump("v12_jc_nora")
             else:
-                idle "images/v7/nora.webp"
-                hover "images/v7/nora.webp"
+                idle "images/head shots/Nora_idle.webp"
+                hover "images/head shots/Nora_idle.webp"
 
         imagebutton:
             if v11_pen_goes_europe:
@@ -81,9 +81,9 @@ screen v12_girls():
 
         imagebutton:
             if v11_invite_sam_europe:
-                idle "images/v7/Samantha.webp"
-                hover "images/v7/Samantha.webp"
+                idle "images/head shots/Samantha_idle.webp"
+                hover "images/head shots/Samantha_hover.webp"
                 action Jump("v12_jc_samantha")
             else:
-                idle "images/v7/Samantha.webp"
-                hover "images/v7/Samantha.webp"
+                idle "images/head shots/Samantha_insensitive.webp"
+                hover "images/head shots/Samantha_insensitive.webp"
