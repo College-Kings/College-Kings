@@ -45,21 +45,21 @@ screen v12_girls():
 
         imagebutton:
             if True:
-                idle "images/head shots/Lindsey_idle.webp"
-                hover "images/head shots/Lindsey_hover.webp"
+                idle "images/head shots/Lindsey1.webp"
+                hover "images/head shots/Lindsey2.webp"
                 action Jump("v12_jc_lindsey")
             else:
-                idle "images/head shots/Lindsey_idle.webp"
-                hover "images/head shots/Lindsey_idle.webp"
+                idle "images/head shots/Lindsey1.webp"
+                hover "images/head shots/Lindsey2.webp"
 
         imagebutton:
             if True:
-                idle "images/head shots/Nora_idle.webp"
-                hover "images/head shots/Nora_hover.webp"
+                idle "images/head shots/Nora1.webp"
+                hover "images/head shots/Nora2.webp"
                 action Jump("v12_jc_nora")
             else:
-                idle "images/head shots/Nora_idle.webp"
-                hover "images/head shots/Nora_idle.webp"
+                idle "images/head shots/Nora1.webp"
+                hover "images/head shots/Nora2.webp"
 
         imagebutton:
             if v11_pen_goes_europe:
@@ -81,9 +81,9 @@ screen v12_girls():
 
         imagebutton:
             if v11_invite_sam_europe:
-                idle "images/head shots/Samantha_idle.webp"
-                hover "images/head shots/Samantha_hover.webp"
+                idle "images/head shots/Samantha1.webp"
+                hover "images/head shots/Samantha2.webp"
                 action Jump("v12_jc_samantha")
             else:
-                idle "images/head shots/Samantha_insensitive.webp"
-                hover "images/head shots/Samantha_insensitive.webp"
+                idle "images/head shots/Samantha3.webp"
+                hover "images/head shots/Samantha3.webp"
