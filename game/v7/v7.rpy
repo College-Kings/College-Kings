@@ -64,7 +64,6 @@ init python:
             contact_Lauren.newMessage(_("What is there to talk about? How could you betray me like that?!"))
             contact_Lauren.addReply(_("Please, it's just a big misunderstanding"))
             contact_Lauren.newMessage(_("Fine. I'm in my dorm, we can talk now."))
-        setattr(store, "kiwii_firstTime", False)
 
     def v7_msgReply7():
         setattr(store, "kiwii_firstTime", True)
