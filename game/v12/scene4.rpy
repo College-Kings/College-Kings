@@ -50,9 +50,13 @@ label v12_roomate_talk:
             scene v12rcr4 # TPP. Chloe sits on her bed 
             with dissolve
 
+            pause 0.75
+            
         else:
             scene v12rcr4
             with dissolve
+
+            pause 0.75
 
             scene v12rcr5 # FPP. Chloe sitting on her bed, smiling mouth opened
             with dissolve
@@ -227,6 +231,8 @@ label v12_roomate_talk:
             scene v12rcr7 # TPP. Chloe lays on MC's bed
             with dissolve
 
+            pause 0.75
+
             scene v12rcr8 # FPP. Chloe now laying in MC's bed, mouth closed
             with dissolve
 
@@ -250,6 +256,8 @@ label v12_roomate_talk:
             scene v12rcr10 # TPP. MC cuddles with chloe and goes to sleep
             with dissolve
 
+            pause 1.25
+
         else: 
             scene v12rcr5 
             with dissolve
@@ -268,6 +276,8 @@ label v12_roomate_talk:
 
             scene v12rcr11 # TPP. MC lays in his bed and goes to sleep
             with dissolve
+
+            pause 0.75
 
     else: 
         scene v12rcr1 
@@ -493,15 +503,19 @@ label v12_roomate_talk:
 
         u "Haha, goodnight loser."
 
-        scene v12rcr9
-        with dissolve
+        #scene v12rcr9
+        #with dissolve
 
-        pause 0.75
+        #pause 0.75
 
         scene v12rcr11
-        with dissolve
+        with fade
 
         pause 0.75
+
+        scene black
+        with fade
+        pause 2.5
 
         stop music fadeout 3
 
