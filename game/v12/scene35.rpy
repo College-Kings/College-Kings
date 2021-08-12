@@ -10,6 +10,8 @@ label v12_chris_nora_room:
 
     pause 0.75
 
+    play music "music/v12/Scene 35/Track Scene 35.mp3" fadein 2
+
     scene v12cnr2 # TPP. Show MC walking into his room, mouth closed, neutral expression
     with dissolve
 
@@ -67,8 +69,8 @@ label v12_chris_nora_room:
 
     u "(It really seems like those two are coming to a crossroads. I'm sure she's pretty heated right now, I wonder if I should go talk to her.)"
 
-    #scene v12cnr5b # TPP. Same as v12cnr5, MC confused, mouth closed
-    #with dissolve
+    scene v12cnr5b # TPP. Same as v12cnr5, MC confused, mouth closed
+    with dissolve
 
     menu:
         "Go to Nora":
@@ -150,6 +152,8 @@ label v12_chris_nora_room:
 
                 pause 0.75
 
+                stop music fadeout 3
+
                 jump v12_lindsey_lobby #scene 35a
 
         "Leave her alone":
@@ -158,5 +162,7 @@ label v12_chris_nora_room:
             with dissolve
 
             u "(It's not my place to get involved.)"
+
+            stop music fadeout 3
 
             jump v12_game_roommate #scene 35b
