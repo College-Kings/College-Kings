@@ -531,3 +531,4 @@ default v12_call_cameron = False
 default v12s33_door1 = False
 default v12s33_door2 = False
 default v12s33_door3 = False
+default v12s24_emmymatch = False
