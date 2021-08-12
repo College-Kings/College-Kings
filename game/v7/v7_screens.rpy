@@ -77,7 +77,7 @@ screen hc_select():
             else:
                 tooltip "Chloe and I have been getting closer recently. Who knows, I might have a shot."
             
-            if "chloe" in hcAsked and not (laurenrs or chloemad):
+            if "chloe" not in hcAsked and not (laurenrs or chloemad):
                 action Jump("hc_asking_chloe")
             else:
                 action NullAction()
@@ -159,6 +159,7 @@ screen hc_select():
     textbutton "Go Alone":
         pos (1500, 100)
         action Jump("hc_no_girl")
+
 
     $ tooltip = GetTooltip()
 
