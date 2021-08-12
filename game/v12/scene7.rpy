@@ -1051,6 +1051,7 @@ label v12s7_riley1:
             if chloers or chloegf:
                 scene v12ferri6 # TPP. Show MC kissing chloe
                 with dissolve
+                play sound "sounds/kiss.mp3"
                 
                 pause 0.75
     
@@ -1296,8 +1297,9 @@ label v12s7_chloe1:
 
         scene v12ferch4 # TPP. Show chloe kissing MC
         with dissolve
+        play sound "sounds/kiss.mp3"
 
-        pause
+        pause 1.5
 
         scene v12ferch1
         with dissolve
@@ -1771,8 +1773,9 @@ label v12s7_lauren1:
     if laurenrs:
         scene v12ferla5 # TPP. Show lauren kissing mc.
         with dissolve
+        play sound "sounds/kiss.mp3"
 
-        pause
+        pause 1.5
 
     scene v12ferla1
     with dissolve
@@ -1923,8 +1926,8 @@ label v12s7_lauren1:
 
         scene v12ferla6 # TPP. Show Lauren and mc kissing
         with dissolve
-
-        pause
+        play sound "sounds/kiss.mp3"
+        pause 1.5
 
     scene v12ferla1
     with dissolve
@@ -5746,6 +5749,8 @@ label v12s7_josh1:
 
             scene v12ferjo2 # FPP. Show mc walkign away.
             with dissolve
+    
+            pause 0.75
     
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
