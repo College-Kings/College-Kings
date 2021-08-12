@@ -280,7 +280,7 @@ label v12s27a:
 
     pause 0.7
 
-    scene v12s27a_5 # FPP shows barber, friendly smile, mouth open, looking at mc
+    scene v12s27a_5 # FPP shows barber, friendly smile, mouth open, looking at mc
     with dissolve
 
     barber "Bonjour!"
@@ -288,7 +288,7 @@ label v12s27a:
     stop music fadeout 3
     play music "music/v12/Scene 27a/Track Scene 27a_2.mp3" fadein 2
 
-    scene v12s27a_5a # same as 5, mouth closed
+    scene v12s27a_5a # same as 5, mouth closed
     with dissolve
 
     u "Hello, hello!"
@@ -303,12 +303,12 @@ label v12s27a:
 
     ry "I uhh... I want to dye my hair black."
 
-    scene v12s27a_5b # same as 5, barber looking at Ryan (Ryan off-screen), curious, mouth open
+    scene v12s27a_5b # same as 5, barber looking at Ryan (Ryan off-screen), curious, mouth open
     with dissolve
 
     barber "Oh boy... I sense your hesitation, my friend. Who is forcing you to do this?"
 
-    scene v12s27a_5c # same 5b, mouth closed
+    scene v12s27a_5c # same 5b, mouth closed
     with dissolve
 
     u "He chose this path on his own. *Chuckles*"
@@ -442,7 +442,7 @@ label v12s27a:
 
     barber "A man should never pay for a cut he didn't desire, this one is on the house."
 
-    scene v12s27a_9a # same as 9, mouth closed
+    scene v12s27a_9a # same as 9, mouth closed
     with dissolve
 
     u "Look at that! Good karma for being a good sport..."

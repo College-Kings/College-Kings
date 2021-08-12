@@ -1,4 +1,4 @@
-# SCENE 19: MC wakes up to Chloe / Lindsey argument or Imre's scream
+# SCENE 19: MC wakes up to Chloe / Lindsey argument or Imre's scream
 # Locations: Hotel Room, Hotel Room Bathroom, Hotel Room Corridor, Hotel Lobby
 # Characters: IMRE (Outfit: 5/2), MC (Outfit: 11/9), NORA (Outfit: 3/1), AUBREY (Outfit: 5/1), CHLOE (Outfit: 2), LINDSEY (Outfit: 1), RILEY (Outfit: 5)
 # Time: Morning

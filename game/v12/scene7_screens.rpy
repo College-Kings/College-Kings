@@ -380,7 +380,7 @@ screen v12s7_foyer():
     on "replaced" action SetVariable("previous_location", "v12s7_foyer")
 
 
-# MIDDLE FLOOR
+# MIDDLE FLOOR
 screen v12s7_left_viewpoint():
     tag freeRoam
 

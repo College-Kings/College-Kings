@@ -70,7 +70,7 @@ label v12s32:
 
     u "You're starting to actually scare me... *Chuckles*"
 
-    scene v12s32_3 # tpp Aubrey and mc enter the photoshoot place
+    scene v12s32_3 # tpp Aubrey and mc enter the photoshoot place
     with fade
 
     pause 0.7
@@ -180,12 +180,12 @@ label v12s32:
 
     pg "Have you ever done modeling before?"
 
-    scene v12s32_5f # same as 5d, aubrey looking at photographer (off-screen), excited smile, mouth open
+    scene v12s32_5f # same as 5d, aubrey looking at photographer (off-screen), excited smile, mouth open
     with dissolve
 
     au "I have!"
 
-    scene v12s32_7d # same as 7b, naomi looking at photographer (off-screen) confident smile, mouth open
+    scene v12s32_7d # same as 7b, naomi looking at photographer (off-screen) confident smile, mouth open
     with dissolve
 
     na "Even if she hadn't, she's my sister. It's in her blood."
@@ -200,7 +200,7 @@ label v12s32:
 
     na "Well, today's the day!"
 
-    scene v12s32_10 # TPP naomi dragging mc towards the white backdrop setup
+    scene v12s32_10 # TPP naomi dragging mc towards the white backdrop setup
     with dissolve
 
     pause 0.7
@@ -316,7 +316,7 @@ label v12s32:
 
             au "I think they like us. *Chuckles*"
 
-            scene v12s32_15e # same 15d, aubrey mouth closed, mc mouth open smiling
+            scene v12s32_15e # same 15d, aubrey mouth closed, mc mouth open smiling
             with dissolve
 
             u "And so do I."
@@ -351,7 +351,7 @@ label v12s32:
 
     pg "Alright, these are very good shots and I guarantee they'll help the brand a lot. I can't wait to get these on our store Kiwii. You two have Kiwii's, right?"
 
-    scene v12s32_14b # same 14, aubrey looking at photographer (off-screen), excited, mouth open
+    scene v12s32_14b # same 14, aubrey looking at photographer (off-screen), excited, mouth open
     with dissolve
 
     au "We do! I didn't know we were gonna get to be on the store page!"
@@ -386,7 +386,7 @@ label v12s32:
 
     pg "Off to the next set people!"
 
-    scene v12s32_16 # TPP show mc and aubrey walking towards the next set, the car chloe and mc rode in in front of a backdrop, both smiling
+    scene v12s32_16 # TPP show mc and aubrey walking towards the next set, the car chloe and mc rode in in front of a backdrop, both smiling
     with dissolve
 
     pause 0.7
@@ -421,17 +421,17 @@ label v12s32:
 
     au "Sometimes too confident..."
 
-    scene v12s32_21 #FPP closeup  naomi, in front of the car, starts taking off her top (has bra beneath)
+    scene v12s32_21 #FPP closeup  naomi, in front of the car, starts taking off her top (has bra beneath)
     with dissolve
 
     pause 0.7
 
-    scene v12s32_21a #same as 21 naomi, now just in bra, smiling at mc
+    scene v12s32_21a #same as 21 naomi, now just in bra, smiling at mc
     with dissolve
 
     u "(Damn!)"
 
-    scene v12s32_21b # same 21, naomi poses seductively in front of the car in just her bra
+    scene v12s32_21b # same 21, naomi poses seductively in front of the car in just her bra
     with dissolve
 
     pause 0.7
@@ -446,7 +446,7 @@ label v12s32:
 
     pg "YES, MA'AM!! Give it to us..."
 
-    scene v12s32_21c # same 21, naomi poses seductively, in a different pose in front of the car in just her bra
+    scene v12s32_21c # same 21, naomi poses seductively, in a different pose in front of the car in just her bra
     with dissolve
 
     pause 0.7
@@ -559,7 +559,7 @@ label v12s32:
 
     pause 0.7
 
-    scene v12s32_24 # FPP closeup Aubrey makes a pose towards the camera in front of the car in her bra
+    scene v12s32_24 # FPP closeup Aubrey makes a pose towards the camera in front of the car in her bra
     with dissolve
 
     u "(Damn, she really is good!)"
@@ -586,7 +586,7 @@ label v12s32:
 
     pg "I don't know! This all seems all nat-u-ral!"
 
-    scene v12s32_24a # same 24, aubrey looking at the camera (off-screen), mouth open , smiling
+    scene v12s32_24a # same 24, aubrey looking at the camera (off-screen), mouth open , smiling
     with dissolve
 
     au "*Chuckles* Can I see the pictures?"
@@ -617,12 +617,12 @@ label v12s32:
 
         au "Thanks for the support, that was definitely the boost of confidence I needed."
 
-        scene v12s32_27a # same 27, aubrey mouth closed, mc mouth open smiling
+        scene v12s32_27a # same 27, aubrey mouth closed, mc mouth open smiling
         with dissolve
 
         u "Of course. I'll always be there for you."
 
-    scene v12s32_28 # FPP close up photographer looking at Aubrey (off-camera, standing near mc), mouth open ,thinking smile
+    scene v12s32_28 # FPP close up photographer looking at Aubrey (off-camera, standing near mc), mouth open ,thinking smile
     with dissolve
 
     pg "Have you thought about going into modeling? I think you'd make an amazing Kiwii model... And if you're worried about looking like you're riding your sister's road to fame, don't."
@@ -655,12 +655,12 @@ label v12s32:
 
     au "NAOMI!?"
 
-    scene v12s32_29c # same 29b, mouth closed
+    scene v12s32_29c # same 29b, mouth closed
     with dissolve
 
     u "Aubrey, you looked good doing that. Really fucking good!"
 
-    scene v12s32_29d # same 29b, looking at mc (into the camera), cute smile ,mouth open
+    scene v12s32_29d # same 29b, looking at mc (into the camera), cute smile ,mouth open
     with dissolve
 
     au "Do you... You actually mean that?"
@@ -748,7 +748,7 @@ label v12s32:
 
     au "They got me all set up! I think my sister is a little salty because she's just packed up and left... She said she had somewhere to be and that we'll talk later. *Sighs*"
 
-    scene v12s32_33a # same 33, mouth closed
+    scene v12s32_33a # same 33, mouth closed
     with dissolve
 
     u "Guess it bothered her how great you were."
@@ -811,7 +811,7 @@ label v12s32:
         v12s32kiwiiPost3.newComment("Ryan", _("Holy..."), numberLikes=renpy.random.randint(78, 153))
         v12s32kiwiiPost3.newComment("Imre", _("Pick up your jaw idiot! LOL"), mentions="Ryan", numberLikes=renpy.random.randint(69, 178))
 
-    scene v12s32_33b # same 33, -Aubrey starts walking away-
+    scene v12s32_33b # same 33, -Aubrey starts walking away-
     with dissolve
 
     menu: 
@@ -857,7 +857,7 @@ label v12s32:
 
             au "Thank you."
 
-            scene v12s32_35e # same 35d , mouth closed
+            scene v12s32_35e # same 35d , mouth closed
             with dissolve
 
             u "You're very welcome."
