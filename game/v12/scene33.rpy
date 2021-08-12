@@ -572,6 +572,8 @@ label v12s33:
     jump v12s33_sauna
 
 label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massage
+    hide screen v12s33_sneak_off_overlay
+
     scene v12s33_16
     with dissolve
 
@@ -1132,6 +1134,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     # -If MC presses the Sneak Off button during the sauna-
 
 label v12s33_sneak_off2:
+    hide screen v12s33_sneak_off_overlay
 
     scene v12s33_40
     with dissolve
