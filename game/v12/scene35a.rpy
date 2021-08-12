@@ -10,6 +10,8 @@ label v12_nora_room:
 
     u "I heard what happened."
 
+    play music "music/v12/Scene 35/Track Scene 35.mp3" fadein 2
+
     scene v12nos1a # FPP. Same as v12nos1, Nora crying, mouth open
     with dissolve
 
@@ -261,6 +263,9 @@ label v12_nora_room:
             "Kiss her":
                 $ v12_nora_sex = True
 
+                stop music fadeout 3
+                play music "music/v12/Scene 35a/Track Scene 35a_1.mp3" fadein 2
+
                 jump v12_nora_sex
     else:
         jump v12_nora_no_sex
@@ -321,6 +326,9 @@ label v12_nora_no_sex:
 
         pause 0.75
 
+        stop music fadeout 3
+        play music "music/v12/Scene 35a/Track Scene 35a_2.mp3" fadein 2
+
         scene v12nos12 # TPP. Show MC removing his shirt, slightly worried, mouth closed
         with dissolve
 
@@ -337,6 +345,8 @@ label v12_nora_no_sex:
         with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
 
         jump v12_lindsey_lobby
 
@@ -707,6 +717,9 @@ label v12_nora_sex:
 
         pause 0.75
 
+        stop music fadeout 3
+        play music "music/v12/Scene 35a/Track Scene 35a_2.mp3" fadein 2
+
         scene v12nos12a # TPP. Same as v12nos12, MC smiling, mouth closed
         with dissolve
 
@@ -721,4 +734,6 @@ label v12_nora_sex:
         with dissolve
 
         $ renpy.end_replay()
+
+        stop music fadeout 3
         jump v12_lindsey_lobby #scene 36

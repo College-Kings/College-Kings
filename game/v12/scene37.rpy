@@ -10,6 +10,8 @@ label v12_riley_ending:
 
     pause 0.75
 
+    play music "music/v12/Scene 37/Track Scene 37.mp3" fadein 2
+
     scene v12rie2 # FPP. Riley sitting down in the chair in front of MC, MC and Riley looking at each other, Riley slightly sad, mouth closed
     with dissolve
 
@@ -100,6 +102,8 @@ label v12_riley_ending:
     with dissolve
 
     ri "Haha, so here's my plan..."
+
+    stop music fadeout 3
 
     jump end12
 
