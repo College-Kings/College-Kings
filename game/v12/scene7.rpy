@@ -5,6 +5,7 @@ label v12s7_free_roam_spoken(backgroundImg, returnScreen, seenList, victim):
 
     scene expression backgroundImg
     u "(I've already spoken to them, but I could still murder them)"
+    scene black
     $ renpy.call_screen(returnScreen)
 
 label v12s7fr:
@@ -1776,22 +1777,22 @@ label v12s7_lauren1:
 
     u "You haven't been killed yet, guess that's good."
 
-    scene v12fer1a
+    scene v12ferla1a
     with dissolve
 
     la "It actually isn't, everyone thinks I'm the killer."
 
-    scene v12fer1
+    scene v12ferla1
     with dissolve
 
     u "Why?"
 
-    scene v12fer1a
+    scene v12ferla1a
     with dissolve
 
     la "Because that's my character, he's a killer on the run."
 
-    scene v12fer1
+    scene v12ferla1
     with dissolve
 
     u "*Laughs* Wait, you're character is a killer on the run but you're saying you're not the killer? I don't know if I can believe that."
@@ -1935,6 +1936,8 @@ label v12s7_lauren1:
 
     scene v12ferla7 # TPP. Show MC walking away
     with dissolve
+
+    pause 0.75
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
