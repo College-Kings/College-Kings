@@ -720,6 +720,7 @@ label v12s7_aubrey2:
             call screen v12s7_balcony_right
         "Kill her":
             label v12s7_aubrey_kill:
+            hide screen murder_button_overlay
 
             $ v12s7_killList.append(aubrey)
             $ addPoint("tm")
@@ -1343,6 +1344,7 @@ label v12s7_chloe1:
         call screen v12s7_left_viewpoint
 
 label v12s7_chloe_kill:
+    hide screen murder_button_overlay
 
     scene v12ferch7 # TPP. show mc, pointing finger guns at chloe, mouth open
     with dissolve
@@ -1655,6 +1657,7 @@ label v12s7_riley3a:
     call screen v12s7_left_viewpoint
 
 label v12s7_riley_kill:
+    hide screen murder_button_overlay
 
     scene v12ferril3 # TPP. Show mc pointing finger gun at riley, mouth open
     with dissolve
@@ -1950,6 +1953,7 @@ label v12s7_lauren1:
     call screen v12s7_seating_back
 
 label v12s7_lauren_kill:
+    hide screen murder_button_overlay
 
     scene v12ferla8 # TPP. Show mc pointing finger gun at lauren, mouth open
     with dissolve
@@ -2445,6 +2449,7 @@ label v12s7_ryan1:
     call screen v12s7_right_gallery_back
 
 label v12s7_ryan_kill:
+    hide screen murder_button_overlay
 
     scene v12ferry3 # TPP. Show MC pointing finger gun at ryan, mouth open
     with dissolve
@@ -2606,6 +2611,7 @@ label v12s7_imre2:
     call screen v12s7_foyer
 
 label v12s7_imre_kill:
+    hide screen murder_button_overlay
 
     scene v12ferim2 # TPP. Show MC pointing finger gun at imre, mouth open
     with dissolve
@@ -2941,6 +2947,8 @@ label v12s7_lindsey_charlie1:
     scene v12ferlich4 # FPP. Show mc walking away
     with dissolve
 
+    pause 0.75
+
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
@@ -3168,6 +3176,7 @@ label v12s7_lindsey2:
     call screen v12s7_rear
 
 label v12s7_lindsey_kill:
+    hide screen murder_button_overlay
 
     scene v12ferli7 # TPP. Show mc, mouth open, pointing finger guns at lindsey
     with dissolve
@@ -3259,6 +3268,7 @@ label v12s7_charli2:
     ### ERROR: -If MC presses the murder button during this convo ###
 
 label v12s7_charli_kill:
+    hide screen murder_button_overlay
     
     scene v12fercha2 # TPP. Show MC pointing a finger gun at charli, mouth open
     with dissolve
@@ -3494,6 +3504,7 @@ label v12s7_msrose1:
     call screen v12s7_seating_front
 
 label v12s7_ms_rose_kill:
+    hide screen murder_button_overlay
 
     ### ERROR: -If MC presses the murder button during this convo ###
 
@@ -3824,6 +3835,7 @@ label v12s7_penelope1:
                 call screen v12s7_left_walkway_front
 
 label v12s7_penelope_kill:
+    hide screen murder_button_overlay
 
     scene v12ferpen7 # TPP. Show mc pointing finger gun at penelope, mc mouth open
     with dissolve
@@ -4083,6 +4095,7 @@ label v12s7_amber1:
     call screen v12s7_right_gallery_front
 
 label v12s7_amber_kill:
+    hide screen murder_button_overlay
 
     scene v12feram11 # TPP. Show MC pointing finger gun at amber, mc mouth open
     with dissolve
@@ -4279,6 +4292,7 @@ label v12s7_riley2:
     call screen v12s7_right_gallery_front
 
 label v12s7_riley_kill2:
+    hide screen murder_button_overlay
 
     scene v12ferrile3 # TPP. Show mc pointing finger gun at riley, mc mouth open
     with dissolve
@@ -4861,6 +4875,7 @@ label v12s7_sam2:
 
 
 label v12s7_samantha_kill:
+    hide screen murder_button_overlay
 
     scene v12fersam4 # TPP. Show mc, mouth open, pointing finger fun at sam.
     with dissolve
@@ -5046,6 +5061,7 @@ label v12s7_cameron2:
     call screen v12s7_rear_gallery
 
 label v12s7_cameron_kill:
+    hide screen murder_button_overlay
 
     scene v12fercam5 # TPP. Show mc, mouth open, pointing finger fun at cameron
     with dissolve
@@ -5363,6 +5379,7 @@ label v12s7_nora1:
                     call screen v12s7_balcony_left
 
 label v12s7_nora_kill:
+    hide screen murder_button_overlay
 
     scene v12fernor4 # TPP. Show mc, pointing finger gun at nora, mouth open
     with dissolve
@@ -5535,6 +5552,8 @@ label v12s7_chris1:
     call screen v12s7_kitchen
 
 label v12s7_chris_kill:
+    hide screen murder_button_overlay
+
     scene v12ferchr4 # TPP. Show mc pointing finger gun at chris, mc mouth open.
     with dissolve
 
@@ -5855,6 +5874,7 @@ label v12s7_josh2:
     call screen v12s7_utility
 
 label v12s7_josh_kill:
+    hide screen murder_button_overlay
 
     scene v12ferjos5 # TPP. Show mc pointing finger gun at josh, mc mouth open
     with dissolve
@@ -5981,6 +6001,7 @@ label v12s7_emily2:
     call screen v12s7_bow
 
 label v12s7_emily_kill:
+    hide screen murder_button_overlay
 
     scene v12feremi3 # TPP. Show mc pointing finger gun at Emily, mc mouth open
     with dissolve
