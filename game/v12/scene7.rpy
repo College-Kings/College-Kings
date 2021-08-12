@@ -2053,6 +2053,8 @@ label v12s7_ryan_imre1:
     scene v12ferryi5 # FPP. Show Mr lee walking off.
     with dissolve
 
+    pause 0.75
+
     scene v12ferryi1
     with dissolve
 
@@ -3911,7 +3913,7 @@ label v12s7_amber1:
     scene v12feram3 # TPP. Show amber(now closed), slight smile, mouth closed
     with dissolve
 
-    u "How can I help you officer?"
+    u "How can I help you, officer?"
 
     scene v12feram3a # TPP. same 3, mouth open
     with dissolve
@@ -4088,6 +4090,8 @@ label v12s7_amber1:
 
     scene v12feram10 # TPP. Show mc walking away
     with dissolve
+
+    pause 0.75
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
@@ -4397,10 +4401,27 @@ label v12s7_riley2_amber:
     scene v12feramb6 # TPP. Show mc leaving
     with dissolve
 
+    pause 0.75
+    
+    scene v12feramb2
+    with dissolve
+    
+    "*Inaudible*"
+    
+    scene v12feramb1
+    with dissolve
+    
+    "*Inaudible*"
+
+    scene v12ferrile4
+    with dissolve
+    
+    pause 1
+
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
-    call screen v12s7_right_gallery_front
+    call screen v12s7_front_gallery
 
     ### ERROR: -If MC presses the murder button during this scene he gets caught ###
     ### ERROR: -Back to free roam ###
