@@ -218,13 +218,16 @@ screen simplr_messenger(contact=None):
                 text contact.name style "nametext"
 
         viewport:
-            yinitial 1.0
+            yadjustment inf_adj
             mousewheel True
-            xysize(374, 556)
             pos(773, 282)
+            xysize(374, 556)
 
             vbox:
+                xsize 374
                 spacing 5
+
+                null height 5
                 
                 for message in contact.sentMessages:
                     if isinstance(message, Message) and message.message.strip():

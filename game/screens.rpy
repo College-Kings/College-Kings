@@ -4,6 +4,9 @@
 init python:
     yadjValue = float("inf")
     yadj = ui.adjustment()
+    
+    inf_adj = ui.adjustment()
+    inf_adj.value = float("inf")
 
 init offset = -1
 
