@@ -1164,8 +1164,8 @@ label v12_lindsey_sex:
 
     u "Tell me Linds... I'm cumming! Tell me how good it fucking feels."
 
-    scene v12esr40 # TPP. Show MC cumming in lindsey's mouth in 69 position
-    with vpunch
+    #scene v12esr40 # TPP. Show MC cumming in lindsey's mouth in 69 position
+    #with vpunch
 
     pause
 
