@@ -285,10 +285,10 @@ label v12_ms_rose_sex:
 
                 pause
 
-                image v12rosso = Movie(play="images/v12/Scene 23/v12rosso.webm", loop=True, image="images/v12/Scene 23/v12rossoStart.webp", start_image="images/v12/Scene 23/v12rossoStart.webp") # Rose standing oral
-                image v12rossof = Movie(play="images/v12/Scene 23/v12rossof.webm", loop=True, image="images/v12/Scene 23/v12rossoStart.webp", start_image="images/v12/Scene 23/v12rossoStart.webp") # Rose standing oral spedup
-                image v12rosso2 = Movie(play="images/v12/Scene 23/v12rosso2.webm", loop=True, image="images/v12/Scene 23/v12rosso2Start.webp", start_image="images/v12/Scene 23/v12rosso2Start.webp") # Rose standing oral TPP 2
-                image v12rosso2f = Movie(play="images/v12/Scene 23/v12rosso2f.webm", loop=True, image="images/v12/Scene 23/v12rosso2Start.webp", start_image="images/v12/Scene 23/v12rosso2Start.webp") # Rose standing oral TPP 2 spedup
+                image v12rosso = Movie(play="images/v12/Scene 23/Animations/v12rossmTPP1/v12rossmTPP1 FAST.webm", loop=True, image="images/v12/Scene 23/Animations/v12rossmTPP1/v12rossmTPP1_99.webp", start_image="images/v12/Scene 23/Animations/v12rossmTPP1/v12rossmTPP1_00.webp") # Rose standing oral
+                image v12rossof = Movie(play="images/v12/Scene 23/Animations/v12rossmTPP1/v12rossmTPP1 SLOW.webm", loop=True, image="images/v12/Scene 23/Animations/v12rossmTPP1/v12rossmTPP1_99.webp", start_image="images/v12/Scene 23/Animations/v12rossmTPP1/v12rossmTPP1_00.webp") # Rose standing oral spedup
+                image v12rosso2 = Movie(play="images/v12/Scene 23/Animations/v12rossmTPP2/v12rossmTPP2 SLOW.webm", loop=True, image="images/v12/Scene 23/Animations/v12rossmTPP2/v12rossmTPP2_99.webp", start_image="images/v12/Scene 23/Animations/v12rossmTPP2/v12rossmTPP2_00.webp") # Rose standing oral TPP 2
+                image v12rosso2f = Movie(play="images/v12/Scene 23/Animations/v12rossmTPP2/v12rossmTPP2 FAST.webm", loop=True, image="images/v12/Scene 23/Animations/v12rossmTPP2/v12rossmTPP2_99.webp", start_image="images/v12/Scene 23/Animations/v12rossmTPP2/v12rossmTPP2_00.webp") # Rose standing oral TPP 2 spedup
 
                 scene v12rosso # Ignore as animation
                 with dissolve
