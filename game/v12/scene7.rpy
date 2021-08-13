@@ -411,6 +411,7 @@ label v12s7_aubrey1:
     show screen murder_button_overlay(aubrey)
 
     scene v12ferau1 # FPP. Note for renderer, all scene images starting v12ferau will be the first conversation with Aubrey on the upper front balcony of the boat. Her and Nora are both up there but the conversations are completely seperate. Show Aubrey, flirty look, mouth open
+    #with dissolve
 
     au "Hey there, handsome. Please make sure you're being careful, okay? I'd hate for you to get hurt, but if you do find yourself needing some love and care, don't forget to come see your favorite nurse. *Chuckles*"
 
@@ -609,6 +610,7 @@ label v12s7_aubrey2:
     show screen murder_button_overlay(aubrey)
     
     scene v12ferauh1 # FPP. Location is in the bathroom on the ship, Show aubrey, seductive look, mouth open
+    #with dissolve
 
     au "Finally! Took you long enough..."
 
@@ -782,6 +784,7 @@ label v12s7_riley1:
     ### ERROR: -If talk to Chloe and Riley 1 ###
     ### ERROR: -If MC uses the button at all during this conversation he is caught ###
     scene v12ferri1 # FPP. location is the upper rear outside seating area on the right side of the ship as seen on miro. Show chloe(from a distance as mc is overhearing the convo), looking at riley out of shot, slight annoyed look, mouth open
+    #with dissolve
 
     cl "Rich people are the actual problem. You guys get to sit around on stacks of money and the little guys like me have to pick up the slack for this entire country."
     cl "People like you never wanna pay your taxes but I barely have two pennies to rub together and I still have to pay mine."
@@ -1068,6 +1071,7 @@ label v12s7_chloe1:
     show screen murder_button_overlay(chloe)
 
     scene v12ferch1 # FPP Show chloe slight smile, mouth closed
+    #with dissolve
 
     u "Well, well. If it isn't the richest woman alive."
 
@@ -1413,6 +1417,7 @@ label v12s7_riley3:
     show screen murder_button_overlay(riley)
 
     scene v12ferric1 # FPP. Show riley and chloe stood together, mouths closed
+    #with dissolve
 
     u "Seeing you guys together again in the same exact location is a little suspicious."
 
@@ -1554,6 +1559,7 @@ label v12s7_riley3a:
 
     ### ERROR: -If talk to Riley 3 No Chloe ###
     scene v12ferril1 # FPP. Show riley, slight smile mouth closed.
+    #with dissolve
 
     u "Still alive out here, huh?"
 
@@ -1710,6 +1716,7 @@ label v12s7_lauren1:
     show screen murder_button_overlay(lauren)
 
     scene v12ferla1 # FPP. Show lauren, mouth closed
+    #with dissolve
 
     u "There you are."
 
@@ -2003,6 +2010,7 @@ label v12s7_ryan_imre1:
     show screen murder_button_overlay(imre)
 
     scene v12ferryi1 # FPP. Show ryan from a distance looking at imre off screen, mouth open
+    #with dissolve
 
     ry "Wow, look at this beautiful day, if only my wife was just as beautiful."
 
@@ -2275,6 +2283,7 @@ label v12s7_ryan1:
     show screen murder_button_overlay(ryan)
 
     scene v12ferry1 # FPP. Show ryan, slight smile, mouth closed
+    #with dissolve
 
     u "Your wife still hasn't come back?"
 
@@ -2480,6 +2489,7 @@ label v12s7_imre2:
     show screen murder_button_overlay(imre)
 
     scene v12ferim1 # FPP. Show imre, mouth closed
+    #with dissolve
 
     u "Hello Mrs."
 
@@ -2656,6 +2666,7 @@ label v12s7_lindsey_charlie1:
     show screen murder_button_overlay(lindsey)
 
     scene v12ferlich1 # FPP. Show charli, mouth closed
+    #with dissolve
 
     u "Surprised we haven't crashed yet."
 
@@ -2950,6 +2961,7 @@ label v12s7_lindsey2:
     show screen murder_button_overlay(lindsey)
 
     scene v12ferli1 # FPP. Show lindsey from a distance, mouth open 
+    #with dissolve
 
     li "Come over here citizen."
 
@@ -3213,6 +3225,7 @@ label v12s7_charli2:
     show screen murder_button_overlay(charli)
 
     scene v12fercha1 # FPP. Show charli alone, mouth closed
+    #with dissolve
 
     u "Still alone huh?"
 
@@ -3300,6 +3313,7 @@ label v12s7_msrose1:
     show screen murder_button_overlay(ms_rose)
 
     scene v12fermsr1 # FPP. Show ms rose, seductive look, mouth open
+    #with dissolve
 
     ro "Hello there world-famous boxing champion."
 
@@ -3565,6 +3579,7 @@ label v12s7_penelope1:
     show screen murder_button_overlay(penelope)
 
     scene v12ferpen1 # FPP. Show penelope, neutral look, mouth closed
+    #with dissolve
 
     u "Hey hey hey!"
 
@@ -3873,6 +3888,7 @@ label v12s7_amber1:
 
     ### ERROR: -If talk to Amber ###
     scene v12feram1 # FPP. Show amber from a distance, slight smile, mouth open
+    #with dissolve
 
     am "Hey you!"
     
@@ -4117,6 +4133,7 @@ label v12s7_riley2:
     show screen murder_button_overlay(riley)
 
     scene v12ferrile1 # FPP. Show riley, slight smile, mouth closed
+    #with dissolve
 
     u "What's going on?"
 
@@ -4342,6 +4359,7 @@ label v12s7_riley2_amber:
 
     ### ERROR: -If talk to Riley 2 and Amber ###
     scene v12feramb1 # FPP. Show amber, from a distance, looking at riley out of shot, mouth open
+    #with dissolve
 
     am "I'm just not ready for all that, I think you're really amazing, but I'm just not the relationship person."
 
@@ -4418,6 +4436,7 @@ label v12s7_sam_cameron:
     show screen murder_button_overlay(samantha)
 
     scene v12fersaca1 # FPP. Show sam, slight smile, mouth open
+    #with dissolve
 
     sa "Hey hey boxer!"
 
@@ -4634,6 +4653,7 @@ label v12s7_sam2:
     show screen murder_button_overlay(samantha)
 
     scene v12fersam1 # FPP. Show samantha neutral look, mouth closed
+    #with dissolve
 
     u "No bodyguard?"
 
@@ -4969,6 +4989,7 @@ label v12s7_cameron2:
     show screen murder_button_overlay(cameron)
 
     scene v12fercam1 # FPP. Show cameron from a distance, mouth open
+    #with dissolve
 
     ca "Hey [name], get over here."
 
@@ -5106,6 +5127,7 @@ label v12s7_nora1:
     show screen murder_button_overlay(nora)
 
     scene v12fernor1 # FPP. Show nora, mouth closed
+    #with dissolve
 
     u "Hey, nice to meet you. I'm sure you recognize me."
 
@@ -5458,8 +5480,10 @@ label v12s7_chris1:
 
     if v12s7_emily and emily not in v12s7_killList:
         scene v12ferchr1 # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
+        #with dissolve
     else:
         scene v12ferchrnoem1
+        #with dissolve
 
     u "What are you doing?"
 
@@ -5468,65 +5492,73 @@ label v12s7_chris1:
 
     if v12s7_emily and emily not in v12s7_killList:
         scene v12ferchr1a # FPP. Same 1, phone still in air, looking at mc, mouth open
+        with dissolve
     else:
         scene v12ferchrnoem1a
-    with dissolve
+        with dissolve
 
     ch "I'm trying to get a signal. I heard if you put foil around your phone in direct sunlight you'll get at least a bar of service. Do you know where I can find some foil?"
 
     if v12s7_emily and emily not in v12s7_killList:
         scene v12ferchr1b # FPP. same 1, now facing mc phone by his side, mouth closed
+        with dissolve
     else:
         scene v12ferchrnoem1b
-    with dissolve
+        with dissolve
 
     u "You need your phone that bad?"
 
     if v12s7_emily and emily not in v12s7_killList:
         scene v12ferchr1c # FPP. Same 1b, mouth open
+        with dissolve
     else:
         scene v12ferchrnoem1c
-    with dissolve
+        with dissolve
 
     ch "Yeah I do."
 
     if v12s7_emily and emily not in v12s7_killList:
         scene v12ferchr1b
+        with dissolve
     else:
         scene v12ferchrnoem1b
-    with dissolve
+        with dissolve
 
     u "You and Sebastian must be planning something big."
 
     if v12s7_emily and emily not in v12s7_killList:
         scene v12ferchr1c
+        with dissolve
     else:
         scene v12ferchrnoem1c
-    with dissolve
+        with dissolve
 
     ch "It's more than just us, what's going on is a serious tradition for both frats and something that needs one hundred percent focus and respect."
 
     if v12s7_emily and emily not in v12s7_killList:
         scene v12ferchr1b
+        with dissolve
     else:
         scene v12ferchrnoem1b
-    with dissolve
+        with dissolve
 
     u "Well man, your phone isn't going to work out here. It just won't."
 
     if v12s7_emily and emily not in v12s7_killList:
         scene v12ferchr1c
+        with dissolve
     else:
         scene v12ferchrnoem1c
-    with dissolve
+        with dissolve
 
     ch "*Sighs*"
 
     if v12s7_emily and emily not in v12s7_killList:
         scene v12ferchr1b
+        with dissolve
     else:
         scene v12ferchrnoem1b
-    with dissolve
+        with dissolve
 
     scene v12ferchr2 # Fpp. Show chris now sat down, head back against the wall looking up at mc, mouth open
     with dissolve
@@ -5575,9 +5607,10 @@ label v12s7_chris1:
 
     if v12s7_emily and emily not in v12s7_killList:
         scene v12ferchr3 # TPP. Show mc walking away
+        with dissolve
     else:
         scene v12ferchrnoem3
-    with dissolve
+        with dissolve
 
     pause 0.75
 
@@ -5656,6 +5689,7 @@ label v12s7_mrlee:
     $ v12s7_mrlee = True
 
     scene v12ferlee1 # FPP. Show mr lee, neutral face, mouth closed
+    #with dissolve
 
     u "Hello there, you fan of boxing? If so, did you catch my last fight?"
 
@@ -5704,6 +5738,7 @@ label v12s7_josh1:
     show screen murder_button_overlay(josh)
 
     scene v12ferjo1 # FPP. Show josh, slight smile, mouth closed
+    #with dissolve
 
     u "What are you supposed to be?"
 
@@ -5818,6 +5853,7 @@ label v12s7_josh2:
     show screen murder_button_overlay(josh)
 
     scene v12ferjos1 # FPP. Show josh, from a distance, mouth open
+    #with dissolve
 
     jo "Hey you there mister?"
 
@@ -5830,7 +5866,8 @@ label v12s7_josh2:
     pause 0.75
 
     scene v12ferjos3 # FPP. Show josh(now infront of camera), mouth closed
-
+    with dissolve
+    
     u "Yes?"
 
     scene v12ferjos3a # FPP. Same 3, mouth open
@@ -5920,7 +5957,7 @@ label v12s7_josh_kill:
     play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
     scene v12ferjos3a
-
+    with dissolve
     jo "What? No, please don't kill me yet. I was having a lot of fun."
 
     scene v12ferjos3
@@ -5961,6 +5998,7 @@ label v12s7_emily1:
     show screen murder_button_overlay(emily)
 
     scene v12ferem1 # FPP. Show emilty from a distance mouth open
+    #with dissolve
 
     em "Hmmm, I can see it, when alone and solely alone the passengers will be swept away from the life they've always know."
 
@@ -6014,6 +6052,7 @@ label v12s7_emily2:
     show screen murder_button_overlay(emily)
 
     scene v12feremi1 # FPP. Show emily annoyed look, mouth closed
+    #with dissolve
 
     u "Hey."
 

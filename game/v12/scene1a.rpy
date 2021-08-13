@@ -527,6 +527,7 @@ label v12_chase_robber:
     $ contact_Imre.addReply("Haha", func=None)
 
     scene v12car30a
+    with dissolve
     pause 0.75
     call screen phone
     
