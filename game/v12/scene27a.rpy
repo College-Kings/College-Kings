@@ -379,8 +379,11 @@ label v12s27a:
 
     u "Let me just take some pictures for Kiwii..."
 
+    $ v12s27a_kiwiiPost1 = KiwiiPost("MC", "v12/v12s27a_8b.webp", _("#RoastedApe"), numberLikes=469)
+    $ v12s27a_kiwiiPost1.newComment("Imre", "Holy shit... You make it way to easy, Ryan!", mentions="Ryan", numberLikes=renpy.random.randint(250,350), queue=False)
+    $ v12s27a_kiwiiPost1.newComment("Amber", _("\"We\" taught him why we shouldn't get too drunk at slumber parties... Hehe"), mentions="Chris", numberLikes=renpy.random.randint(150,300), queue=False)
+    $ v12s27a_kiwiiPost1.newComment("Amber", "Haha, yes! That's what you get, moron...", mentions="Ryan", numberLikes=renpy.random.randint(250,400), queue=False)
     
-
 ### ERROR: KiwiiPost("MC", "Ryan sitting in chair at salon not facing the mirror with black hair", "#RoastedApe", numberLikes=469)
 ### ERROR: kiwiiPost.newComment("Imre", "Holy shit... You make it way to easy, Ryan!", mentions="Ryan")
 ### ERROR: kiwiiPost.newComment("Amber", "Haha, yes! That's what you get, moron...”, mentions="Ryan")
