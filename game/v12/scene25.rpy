@@ -348,7 +348,7 @@ label v12_jc_continue:
     scene v12juc4 # FPP. MC is sitting on the edge of his bed, he is looking at his roommate's bed, which has no one on it
     with dissolve
 
-    u "(Looks like I'm the only one that isn't asleep. *Chuckles*)"
+    u "(Looks like I'm not the only one that isn't asleep. *Chuckles*)"
 
     scene v12juc5 # TPP. Show MC getting up from his bed, slight smile, mouth closed
     with dissolve

@@ -203,7 +203,7 @@ label v12_escape_room:
     scene v12esr6b
     with dissolve
 
-    escman "*Dry Tone* He said if you got it wrong I was to call him and say you failed, then he would've given you permission."
+    escman "*Dry Tone* He said if you got it wrong I was to call him and say you failed, then he would have given you permission."
 
     scene v12esr8 # FPP. Same positioning as v12esr6, MC looking at Imre, Imre looking at MC, Imre slight smile, mouth open
     with dissolve
@@ -338,6 +338,7 @@ label v12_escape_room:
 
     au "*Chuckles*"
 
+    play sound "sounds/vibrate.mp3"
     scene v12esr14b # FPP. Same as v12esr14, Lindsey looking at Imre, Lindsey slight smile, mouth open
     with dissolve
 
@@ -415,6 +416,7 @@ label v12_escape_room:
 
     charli "I wonder if she responds directly to us or if she has a prepared response. Like if I said, \"just so you know, my name is Charli\", would she know my name is Charli?"
 
+    play sound "sounds/vibrate.mp3"
     scene v12esr14d
     with dissolve
 
@@ -435,6 +437,7 @@ label v12_escape_room:
 
     charli "Well, that proves that they respond directly to us rather than automated responses. I assume it's the guy at the front."
 
+    play sound "sounds/vibrate.mp3"
     scene v12esr14c
     with dissolve
 
@@ -453,7 +456,7 @@ label v12_escape_room:
     scene v12esr17a # FPP. Same as v12esr17, MC watching as Aubrey walks out (back turned to MC)
     with dissolve
 
-    unknown "ONE."
+    unknown "One."
 
     scene v12esr16d
     with dissolve
@@ -480,6 +483,7 @@ label v12_escape_room:
 
     unknown "Three."
 
+    play sound "sounds/lever.mp3"
     scene v12esr17d # FPP. Same as v12esr17c, Imre, Aubrey and Charli outside, door closed, all slightly surprised, mouths closed
     with vpunch
 
@@ -500,8 +504,7 @@ label v12_escape_room:
 
     charli "*Sighs*"
 
-    scene v12esr14c
-    with dissolve
+    play sound "sounds/vibrate.mp3"
 
     li "Just got another message. It says, \"tell your friends 'bye' because you won't see them for a while. Go into the room across the hall to find out how to help them.\""
 
@@ -555,6 +558,7 @@ label v12_escape_room:
 
     pause 0.75
 
+    play sound "sounds/vibrate.mp3"
     scene v12esr18b # FPP. Same as v12esr18, Charli looking down at Lindsey's phone, slightly annoyed, mouth open
     with dissolve
 
@@ -585,7 +589,9 @@ label v12_escape_room:
 
     charli "Just forward the messages to us."
 
-    scene v12esr14c
+    play sound "sounds/vibrate.mp3"
+
+    scene v12esr18
     with dissolve
 
     li "Message just came in that says \"not allowed\"."
@@ -601,11 +607,6 @@ label v12_escape_room:
     charli "We'll just find out. C'mon."
 
     scene v12esr22 # TPP. Show Aubrey, Charli and Imre going inside the interrogation room, all slightly smiling, mouths closed
-    with dissolve
-
-    pause 0.75
-
-    scene v12esr14
     with dissolve
 
     li "Guess we're stuck in here."

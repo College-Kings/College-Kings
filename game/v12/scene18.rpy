@@ -895,7 +895,7 @@ label v12s18_bottlespin:
 
     pause 0.75
 
-    scene v12slpbs8b
+    scene v12slpbs8ry
     with dissolve
 
     pause 0.75
