@@ -396,10 +396,10 @@ label v12_ms_rose_sex:
 
                 pause
 
-                image v12roshh = Movie(play="images/v12/Scene 35/v12roshh.webm", loop=True, image="images/v12/Scene 35/v12roshhStart.webp", start_image="images/v12/Scene 35/v12roshhStart.webp") # Rose hand doggy
-                image v12roshhf = Movie(play="images/v12/Scene 35/v12roshhf.webm", loop=True, image="images/v12/Scene 35/v12roshhStart.webp", start_image="images/v12/Scene 35/v12roshhStart.webp") # Rose hand doggy spedup
-                image v12roshh2 = Movie(play="images/v12/Scene 35/v12roshh2.webm", loop=True, image="images/v12/Scene 35/v12roshh2Start.webp", start_image="images/v12/Scene 35/v12roshh2Start.webp") # Rose hand doggy FPP
-                image v12roshh2f = Movie(play="images/v12/Scene 35/v12roshh2f.webm", loop=True, image="images/v12/Scene 35/v12roshh2Start.webp", start_image="images/v12/Scene 35/v12roshh2Start.webp") # Rose hand doggy FPP spedup
+                image v12roshh = Movie(play="images/v12/Scene 23/v12roshh.webm", loop=True, image="images/v12/Scene 23/v12roshhStart.webp", start_image="images/v12/Scene 23/v12roshhStart.webp") # Rose hand doggy
+                image v12roshhf = Movie(play="images/v12/Scene 23/v12roshhf.webm", loop=True, image="images/v12/Scene 23/v12roshhStart.webp", start_image="images/v12/Scene 23/v12roshhStart.webp") # Rose hand doggy spedup
+                image v12roshh2 = Movie(play="images/v12/Scene 23/v12roshh2.webm", loop=True, image="images/v12/Scene 23/v12roshh2Start.webp", start_image="images/v12/Scene 23/v12roshh2Start.webp") # Rose hand doggy FPP
+                image v12roshh2f = Movie(play="images/v12/Scene 23/v12roshh2f.webm", loop=True, image="images/v12/Scene 23/v12roshh2Start.webp", start_image="images/v12/Scene 23/v12roshh2Start.webp") # Rose hand doggy FPP spedup
 
                 scene v12roshh # Ignore as animation
                 with dissolve
