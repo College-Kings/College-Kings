@@ -29,6 +29,7 @@ label v12_lindsey_lobby:
 
     pause 0.75
 
+    play sound "sounds/dooropen.mp3"
     scene v12lil4 # FPP. MC looking at the door, hand on handle, going to open the door
     with dissolve
 
