@@ -696,6 +696,7 @@ label v12_escape_room:
     li "Ahh... That's a lot better. You're so warm. *Chuckles*"
 
     scene v12esr27a # FPP. Same as v12esr27, Lindsey slight smile, mouth closed
+    scene v12esr29a
     with dissolve
 
     u "Well, I'm glad one of us is. Your hands are so fucking cold! *Laughs*"
@@ -705,7 +706,8 @@ label v12_escape_room:
 
     li "Haha, yeah... There's only a few spots on a girl's body that are nice and warm, and our hands are not one of them. *Chuckles*"
 
-    scene v12esr27a
+    #scene v12esr27a
+    scene v12esr29a
     with dissolve
 
     u "Secret warm spots? *Chuckles*"
@@ -1208,7 +1210,8 @@ label v12_lindsey_sex:
 
     li "Really, though... I don't know what else to say except thank you."
 
-    scene v12esr27a
+    #scene v12esr27a
+    scene v12esr29a
     with dissolve
 
     u "Are you kidding? I should be thanking you... And, Happy Birthday. *Chuckles*"
