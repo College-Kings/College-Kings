@@ -6,7 +6,7 @@
 
 label v12_riley_ending:
     scene v12rie1 # TPP. MC sitting in same chair as v12lil12, slightly annoyed, mouth closed, Riley walking over to the empty chair, Riley slightly sad, mouth closed
-    with dissolve
+    with fade
 
     pause 0.75
 
