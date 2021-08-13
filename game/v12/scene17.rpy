@@ -52,7 +52,8 @@ label v12_escape_room:
 
     u "Wait, what? I didn't know that."
 
-    scene v12esr4 # FPP. Same positioning as v12esr1, MC looking at Charli, Charli looking at MC, Charli slightly annoyed, mouth open
+    #scene v12esr4 # FPP. Same positioning as v12esr1, MC looking at Charli, Charli looking at MC, Charli slightly annoyed, mouth open
+    scene v12esr3b
     with dissolve
 
     charli "*Scoffs* I did."
@@ -210,7 +211,8 @@ label v12_escape_room:
 
     imre "Alright, back to not liking him again."
 
-    scene v12esr8a # FPP. Same as v12esr8, Imre slight smile, mouth closed
+    #scene v12esr8a # FPP. Same as v12esr8, Imre slight smile, mouth closed
+    scene v12esr8
     with dissolve
 
     u "*Laughs*"
@@ -260,7 +262,8 @@ label v12_escape_room:
 
     charli "Not a problem... For some of us."
 
-    scene v12esr8a
+    #scene v12esr8a
+    scene v12esr8
     with dissolve
 
     u "But it is a problem for some, isn't that right Imre?"
@@ -339,7 +342,8 @@ label v12_escape_room:
     au "*Chuckles*"
 
     play sound "sounds/vibrate.mp3"
-    scene v12esr14b # FPP. Same as v12esr14, Lindsey looking at Imre, Lindsey slight smile, mouth open
+    #scene v12esr14b # FPP. Same as v12esr14, Lindsey looking at Imre, Lindsey slight smile, mouth open
+    scene v12esr14
     with dissolve
 
     li "Guys! Stop bullying Charli and listen up..."
@@ -596,9 +600,6 @@ label v12_escape_room:
 
     li "Message just came in that says \"not allowed\"."
 
-    scene v12esr14a
-    with dissolve
-
     u "We can't do anything. *Laughs*"
 
     scene v12esr18
@@ -611,27 +612,30 @@ label v12_escape_room:
 
     li "Guess we're stuck in here."
 
-    scene v12esr14a
+    scene v12esr25
     with dissolve
 
     u "I guess so."
 
-    scene v12esr14g # FPP. Same as v12esr14e, Lindsey slight smile, mouth closed
+    #scene v12esr14g # FPP. Same as v12esr14e, Lindsey slight smile, mouth closed
+    scene v12esr25
     with dissolve
 
     unknown "Being separated is a scary thing, but we can always find comfort in those we're left with. Huddle close to those next to you... It's about to get chilly."
 
-    scene v12esr14h # FPP. Same as v12esr14a, room light turned off, Lindsey slightly worried, mouth closed
-    with dissolve
+    #scene v12esr14h # FPP. Same as v12esr14a, room light turned off, Lindsey slightly worried, mouth closed
+    #with dissolve
 
-    u "Oh shit, the lights are fucking up."
+    #u "Oh shit, the lights are fucking up."
 
-    scene v12esr14i # FPP. Same as v12esr14h, room lights dimmed, Lindsey slightly worried, mouth open
+    #scene v12esr14i # FPP. Same as v12esr14h, room lights dimmed, Lindsey slightly worried, mouth open
+    scene v12esr25
     with dissolve
 
     li "Oh my god, [name]... It really is getting cold, no?"
 
-    scene v12esr14j # FPP. Same as v12esr14g, lights dimmed
+    #scene v12esr14j # FPP. Same as v12esr14g, lights dimmed
+    scene v12esr25
     with dissolve
 
     unknown "Without huddling, you will freeze."
@@ -646,7 +650,8 @@ label v12_escape_room:
 
     charli "Just stand still."
 
-    scene v12esr17h # FPP. Same as v12esr17g, no one outside, dimmed lights
+    #scene v12esr17h # FPP. Same as v12esr17g, no one outside, dimmed lights
+    scene v12esr23a
     with dissolve
 
     u "*Laughs* Sounds like they're having fun."
@@ -738,7 +743,8 @@ label v12_escape_room:
 
     pause 0.75
 
-    scene v12esr28a # TPP. Same as v12esr28, MC and Lindsey looking at ceiling, both worried, mouths closed
+    #scene v12esr28a # TPP. Same as v12esr28, MC and Lindsey looking at ceiling, both worried, mouths closed
+    scene v12esr28
     with dissolve
 
     unknown "Attention! There's an emergency with another group. They're stuck. I'll return shortly."
@@ -795,7 +801,8 @@ label v12_escape_room:
 
     li "I guess that's true... We actually have a few moments of privacy."
 
-    scene v12esr29c # FPP. Same as v12esr29a, Lindsey eyes closed, moving in closer to MC, she's going for a kiss, mouth closed
+    #scene v12esr29c # FPP. Same as v12esr29a, Lindsey eyes closed, moving in closer to MC, she's going for a kiss, mouth closed
+    scene v12esr29a
     with dissolve
 
     u "That we do..."
@@ -830,7 +837,8 @@ label v12_escape_room:
         menu:
             "You're right, we shouldn't do this":
                 $ addPoint("bf")
-                scene v12esr29f # FPP. Same as v12esr29d, Lindsey slightly worried, mouth closed
+                #scene v12esr29f # FPP. Same as v12esr29d, Lindsey slightly worried, mouth closed
+                scene v12esr29d
                 with dissolve
 
                 u "I think so too. I'm sorry, I-"
@@ -845,10 +853,10 @@ label v12_escape_room:
 
                 pause 0.75
 
-                scene v12esr29f
-                with dissolve
+                #scene v12esr29f
+                #with dissolve
 
-                pause 0.75
+                #pause 0.75
 
                 scene v12esr29
                 with dissolve
@@ -859,7 +867,8 @@ label v12_escape_room:
 
             "Is it? I want this...":
                 $ addPoint("tm")
-                scene v12esr29f
+                #scene v12esr29f
+                scene v12esr27h
                 with dissolve
 
                 u "Is it? I'm sorry, I know this sounds horrible but... I want this, Lindsey."
@@ -869,10 +878,10 @@ label v12_escape_room:
 
                 pause 0.75
 
-                scene v12esr29f
-                with dissolve
+                #scene v12esr29f
+                #with dissolve
 
-                pause 0.75
+                #pause 0.75
 
                 scene v12esr29
                 with dissolve
@@ -885,7 +894,8 @@ label v12_escape_room:
         jump v12_lindsey_kiss_or_not
 
 label v12_lindsey_kiss_or_not:
-    scene v12esr29c
+    #scene v12esr29c
+    scene v12esr29a
     with dissolve
 
     menu:
@@ -938,7 +948,8 @@ label v12_lindsey_sex:
 
     li "That was... Perfect."
 
-    scene v12esr29h # FPP. Same as v12esr29g, Lindsey slight smile, mouth closed
+    #scene v12esr29h # FPP. Same as v12esr29g, Lindsey slight smile, mouth closed
+    scene v12esr27h
     with dissolve
 
     u "Haha, yeah... It was."
@@ -948,7 +959,8 @@ label v12_lindsey_sex:
 
     li "You know, I'm starting to think that just cuddling isn't enough... I'm still so cold. So, so cold... *Chuckles*"
 
-    scene v12esr29h
+    #scene v12esr29h
+    scene v12esr27h
     with dissolve
 
     u "Maybe we should try something else to warm up?"
@@ -959,12 +971,16 @@ label v12_lindsey_sex:
     li "Hmm, maybe..."
 
     if len(v12s7_killList) >= 5:
+        scene v12esr27h
+        with dissolve
+        
         scene v12esr29g
         with dissolve
 
         li "Now that I think about it, I never told you how impressed I was with your little murder spree on the ferry."
 
-        scene v12esr29h
+        #scene v12esr29h
+        scene v12esr27h
         with dissolve
 
         u "How about you show me."
@@ -1238,7 +1254,8 @@ label v12_after_sex:
 
     li "I wonder how much longer we have to-"
 
-    scene v12esr28b # TPP. Same as v12esr28, MC and Lindsey smiling, mouths closed
+    #scene v12esr28b # TPP. Same as v12esr28, MC and Lindsey smiling, mouths closed
+    scene v12esr29a
     with dissolve
 
     unknown "We're having some sort of technical difficulties with the electric... So, you'll be- Or, I mean, your teacher will be refunded. Sorry. Thanks."
@@ -1246,7 +1263,8 @@ label v12_after_sex:
     stop music fadeout 3
     play music "music/v12/Scene 17/Track Scene 17_5.mp3" fadein 2
 
-    scene v12esr17i # FPP. Same as v12esr17, lights dim
+    #scene v12esr17i # FPP. Same as v12esr17, lights dim
+    scene v12esr17
     with dissolve
 
     pause 0.75

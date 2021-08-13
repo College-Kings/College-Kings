@@ -73,7 +73,8 @@ label v12_nora_room:
 
             no "Why, though?"
 
-            scene v12nos1e # FPP. Same as v12nos1d, different pose
+            #scene v12nos1e # FPP. Same as v12nos1d, different pose
+            scene v12nos1d
             with dissolve
 
             no "Why is it so easy for you to understand that a woman needs to be your sole focus from time to time, but other men can't?"
@@ -273,7 +274,8 @@ label v12_nora_room:
         jump v12_nora_no_sex
 
 label v12_nora_no_sex:
-        scene v12nos1e
+        #scene v12nos1e
+        scene v12nos1d
         with dissolve
 
         no "You really are the perfect guy..."
