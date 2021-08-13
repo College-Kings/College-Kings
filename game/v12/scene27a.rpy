@@ -346,7 +346,7 @@ label v12s27a:
     scene v12s27a_5b
     with dissolve
 
-    barber "I... I don't know why you're bringing up Apes, but... Please, sit down while I work wonders."
+    barber "I... I don't know why you're bringing up apes, but... Please, sit down while I work wonders."
 
     scene v12s27a_7 #shows clock on barber wall: 4 pm
     with fade
