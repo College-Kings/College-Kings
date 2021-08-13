@@ -287,8 +287,8 @@ label v12_ms_rose_sex:
 
                 image v12rosso = Movie(play="images/v12/Scene 23/Animations/v12rossoTPP1/v12rossoTPP1 FAST.webm", loop=True, image="images/v12/Scene 23/Animations/v12rossoTPP1/v12rossoTPP1_99.webp", start_image="images/v12/Scene 23/Animations/v12rossoTPP1/v12rossoTPP1_00.webp") # Rose standing oral
                 image v12rossof = Movie(play="images/v12/Scene 23/Animations/v12rossoTPP1/v12rossoTPP1 SLOW.webm", loop=True, image="images/v12/Scene 23/Animations/v12rossoTPP1/v12rossoTPP1_99.webp", start_image="images/v12/Scene 23/Animations/v12rossoTPP1/v12rossoTPP1_00.webp") # Rose standing oral spedup
-                image v12rosso2 = Movie(play="images/v12/Scene 23/Animations/v12rossoTPP1/v12rossoTPP2 SLOW.webm", loop=True, image="images/v12/Scene 23/Animations/v12rossoTPP2/v12rossoTPP2_99.webp", start_image="images/v12/Scene 23/Animations/v12rossoTPP2/v12rossoTPP2_00.webp") # Rose standing oral TPP 2
-                image v12rosso2f = Movie(play="images/v12/Scene 23/Animations/v12rossoTPP1/v12rossoTPP2 FAST.webm", loop=True, image="images/v12/Scene 23/Animations/v12rossoTPP2/v12rossoTPP2_99.webp", start_image="images/v12/Scene 23/Animations/v12rossoTPP2/v12rossoTPP2_00.webp") # Rose standing oral TPP 2 spedup
+                image v12rosso2 = Movie(play="images/v12/Scene 23/Animations/v12rossoTPP2/v12rossoTPP2 SLOW.webm", loop=True, image="images/v12/Scene 23/Animations/v12rossoTPP2/v12rossoTPP2_99.webp", start_image="images/v12/Scene 23/Animations/v12rossoTPP2/v12rossoTPP2_00.webp") # Rose standing oral TPP 2
+                image v12rosso2f = Movie(play="images/v12/Scene 23/Animations/v12rossoTPP2/v12rossoTPP2 FAST.webm", loop=True, image="images/v12/Scene 23/Animations/v12rossoTPP2/v12rossoTPP2_99.webp", start_image="images/v12/Scene 23/Animations/v12rossoTPP2/v12rossoTPP2_00.webp") # Rose standing oral TPP 2 spedup
 
                 scene v12rosso # Ignore as animation
                 with dissolve
