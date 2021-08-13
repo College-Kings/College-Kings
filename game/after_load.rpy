@@ -175,7 +175,7 @@ label after_load:
 
             try: contact.sentMessages
             except AttributeError: contact.sentMessages = []
-            
+
             # Messages
             try:
                 for message in contact.messages:
