@@ -6063,7 +6063,8 @@ label v12s7_emily_kill:
 
 label v12s7_mc_caught:
     scene black
-
+    hide screen murder_button_overlay
+    
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
