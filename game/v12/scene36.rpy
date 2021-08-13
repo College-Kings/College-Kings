@@ -311,6 +311,17 @@ label v12_lindsey_lobby:
     with dissolve
 
     pause 0.75
+    play sound "sounds/vibrate.mp3"
+
+    $ contact_Riley.newMessage("Hey, I saw you were having breakfast with Lindsey, can you come to the cafe down the road when you're done? I have something to talk to you about in private.", queue=False)
+    $ contact_Riley.addReply("Sure, on my way", func=None)
+
+    label v12s36_riley_text:
+        if contact_Riley.replies:
+            call screen phone
+        if contact_Riley.replies:
+            u "(I should probably reply.)"
+            jump v12s36_riley_text
 
     stop music fadeout 3
 

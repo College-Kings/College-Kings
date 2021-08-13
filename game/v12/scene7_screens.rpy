@@ -410,7 +410,7 @@ screen v12s7_left_viewpoint():
             hover "images/v12/Scene 7/Buttons/nav 14cmock.webp" # Chloe
             hotspot (689, 203, 271, 673):
                 if v12s7_chloe:
-                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferch1", returnScreen="v12s7_left_viewpoint", seenList=[riley, josh] if josh_europe and not v12s7_josh else [riley], victim=chloe)
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferch1", returnScreen="v12s7_left_viewpoint", seenList=[josh] if josh_europe and not v12s7_josh else [], victim=chloe)
                 else:
                     action Jump("v12s7_chloe1") # chloe
 

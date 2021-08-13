@@ -695,7 +695,8 @@ label v12_escape_room:
 
     li "Ahh... That's a lot better. You're so warm. *Chuckles*"
 
-    scene v12esr27a # FPP. Same as v12esr27, Lindsey slight smile, mouth closed
+    #scene v12esr27a # FPP. Same as v12esr27, Lindsey slight smile, mouth closed
+    scene v12esr29a
     with dissolve
 
     u "Well, I'm glad one of us is. Your hands are so fucking cold! *Laughs*"
@@ -705,7 +706,8 @@ label v12_escape_room:
 
     li "Haha, yeah... There's only a few spots on a girl's body that are nice and warm, and our hands are not one of them. *Chuckles*"
 
-    scene v12esr27a
+    #scene v12esr27a
+    scene v12esr29a
     with dissolve
 
     u "Secret warm spots? *Chuckles*"
@@ -893,6 +895,8 @@ label v12_lindsey_kiss_or_not:
 
             play sound "sounds/kiss.mp3"
 
+            pause 1.5
+
             if lindseyfirstkiss or kct == "popular" or len(v12s7_killList) >= 5:
                 if not lindseyfirstkiss and not len(v12s7_killList) >= 5:
                     call screen kctPopup
@@ -1059,7 +1063,7 @@ label v12_lindsey_sex:
     li "*Chuckles* I'm not sure how much time we have left but... I'll give you all that I can, okay?"
 
     image v12linbj = Movie(play="images/v12/Scene 17/v12linbj.webm", loop=True, image="images/v12/Scene 17/v12linbjStart.webp", start_image="images/v12/Scene 17/v12linbjStart.webp") # Lindsey blowjob
-    image v12linhbj = Movie(play="images/v12/Scene 17/v12linbjf.webm", loop=True, image="images/v12/Scene 17/v12linbjStart.webp", start_image="images/v12/Scene 17/v12linbjStart.webp") # Lindsey blowjob spedup
+    image v12linbjf = Movie(play="images/v12/Scene 17/v12linbjf.webm", loop=True, image="images/v12/Scene 17/v12linbjStart.webp", start_image="images/v12/Scene 17/v12linbjStart.webp") # Lindsey blowjob spedup
     image v12linbj2 = Movie(play="images/v12/Scene 17/v12linbj2.webm", loop=True, image="images/v12/Scene 17/v12linbj2Start.webp", start_image="images/v12/Scene 17/v12linbj2Start.webp") # Lindsey blowjob FPP
     image v12linbj2f = Movie(play="images/v12/Scene 17/v12linbj2f.webm", loop=True, image="images/v12/Scene 17/v12linbj2Start.webp", start_image="images/v12/Scene 17/v12linbj2Start.webp") # Lindsey blowjob FPP spedup
 
@@ -1208,7 +1212,8 @@ label v12_lindsey_sex:
 
     li "Really, though... I don't know what else to say except thank you."
 
-    scene v12esr27a
+    #scene v12esr27a
+    scene v12esr29a
     with dissolve
 
     u "Are you kidding? I should be thanking you... And, Happy Birthday. *Chuckles*"

@@ -14,20 +14,22 @@ screen hc_select():
         ypos 285
 
         imagebutton:
-            if "amber" not in hcAsked:
+            if "amber" not in hcAsked and not laurenrs:
                 idle "images/v7/HCAmber.webp"
                 hover "images/v7/HCAmber2.webp"
+                tooltip "I'm not that close with Amber but she does seem quite flirty around me."
+
             else:
                 idle "images/v7/HCAmber3.webp"
                 hover "images/v7/HCAmber23.webp"
-
-                tooltip "I'm not that close with Amber but she does seem quite flirty around me."
             
             if "amber" not in hcAsked and not laurenrs:
                 action Jump("hc_asking_amber")
+            else:
+                action NullAction()
 
         imagebutton:
-            if "aubrey" not in hcAsked:
+            if "aubrey" not in hcAsked and not laurenrs:
                 idle "images/v7/HCAubrey.webp"
                 hover "images/v7/HCAubrey2.webp"
             else:
@@ -41,9 +43,11 @@ screen hc_select():
             
             if "aubrey" not in hcAsked and not laurenrs:
                 action Jump("hc_asking_aubrey")
+            else:
+                action NullAction()
 
         imagebutton:
-            if "autumn" not in hcAsked and not autumnmad:
+            if "autumn" not in hcAsked and not autumnmad and not laurenrs:
                 idle "images/v7/HCAutumn.webp"
                 hover "images/v7/HCAutumn2.webp"
             else:
@@ -57,9 +61,11 @@ screen hc_select():
             
             if "autumn" not in hcAsked and not (laurenrs or autumnmad):
                 action Jump("hc_asking_autumn")
+            else:
+                action NullAction()
 
         imagebutton:
-            if "chloe" not in hcAsked and not chloemad:
+            if "chloe" not in hcAsked and not chloemad and not laurenrs:
                 idle "images/v7/HCChloe.webp"
                 hover "images/v7/HCChloe2.webp"
             else:
@@ -71,11 +77,13 @@ screen hc_select():
             else:
                 tooltip "Chloe and I have been getting closer recently. Who knows, I might have a shot."
             
-            if "chloe" in hcAsked and not (laurenrs or chloemad):
+            if "chloe" not in hcAsked and not (laurenrs or chloemad):
                 action Jump("hc_asking_chloe")
+            else:
+                action NullAction()
 
         imagebutton:
-            if "emily" not in hcAsked and forgiveemily:
+            if "emily" not in hcAsked and forgiveemily and not laurenrs:
                 idle "images/v7/HCEmily.webp"
                 hover "images/v7/HCEmily2.webp"
             else:
@@ -89,9 +97,11 @@ screen hc_select():
             
             if "emily" not in hcAsked and not laurenrs and forgiveemily :
                 action Jump("hc_asking_emily")
+            else:
+                action NullAction()
 
         imagebutton:
-            if "lauren" not in hcAsked:
+            if "lauren" not in hcAsked and not laurenmad:
                 idle "images/v7/HCLauren.webp"
                 hover "images/v7/HCLauren2.webp"
             else:
@@ -103,16 +113,18 @@ screen hc_select():
             else:
                 tooltip "I'm not sure Lauren sees me as more than a friend, but we have been getting closer."
 
-            if "lauren" not in hcAsked and laurenrs:
+            if "lauren" not in hcAsked:
                 action Jump("hc_asking_lauren")
+            else:
+                action NullAction()
 
         imagebutton:
-            if "penelope" not in hcAsked:
-                idle "images/v7/HCPenelope3.webp"
-                hover "images/v7/HCPenelope23.webp"
-            else:
+            if "penelope" not in hcAsked and not (bowling and emilyrs) and not laurenrs:
                 idle "images/v7/HCPenelope.webp"
                 hover "images/v7/HCPenelope2.webp"
+            else:
+                idle "images/v7/HCPenelope3.webp"
+                hover "images/v7/HCPenelope23.webp"
 
             if bowling and emilyrs:
                 tooltip "Penelope didn't seem too eager to talk to me today, I better ask someone else."
@@ -121,16 +133,18 @@ screen hc_select():
             else:
                 tooltip "I haven't done that much with Penelope so far, but maybe she'll yes."
 
-            if "penelope" not in hcAsked and not laurenrs:
+            if "penelope" not in hcAsked and not laurenrs and not (bowling and emilyrs):
                 action Jump("hc_asking_penelope")
+            else:
+                action NullAction()
 
         imagebutton:
-            if "riley" not in hcAsked:
-                idle "images/v7/HCRiley3.webp"
-                hover "images/v7/HCRiley23.webp"
-            else:
+            if "riley" not in hcAsked and not laurenrs:
                 idle "images/v7/HCRiley.webp"
                 hover "images/v7/HCRiley2.webp"
+            else:
+                idle "images/v7/HCRiley3.webp"
+                hover "images/v7/HCRiley23.webp"
 
             if rileyrs:
                 tooltip "Riley seems to really like me so I think she'll say yes."
@@ -139,10 +153,13 @@ screen hc_select():
 
             if "riley" not in hcAsked and not laurenrs:
                 action Jump("hc_asking_riley")
+            else:
+                action NullAction()
 
     textbutton "Go Alone":
         pos (1500, 100)
         action Jump("hc_no_girl")
+
 
     $ tooltip = GetTooltip()
 

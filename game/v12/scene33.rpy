@@ -572,6 +572,8 @@ label v12s33:
     jump v12s33_sauna
 
 label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massage
+    hide screen v12s33_sneak_off_overlay
+
     scene v12s33_16
     with dissolve
 
@@ -602,12 +604,12 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
 
     call screen v12s33_three_doors
 
-    label v12s33_door1:
+label v12s33_door1:
 
     $ v12s33_door1 = True
 
     scene v12s33_27 # -FPP Ms. Rose, Lauren, Nora, and Riley sitting in the Sauna, all in towels, none of them looking at him, ideally show them sweating if possible-
-    with dissolve 
+    #with dissolve 
 
     u "*Whistles*"
 
@@ -627,7 +629,20 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     stop music fadeout 3
     play music "music/v12/Scene 33/Track Scene 33_4.mp3" fadein 2
 
-    call screen v12s33_three_doors
+    if v12s33_door1 and v12s33_door2 and v12s33_door3:
+        scene v12s33_24a # same as 24, clock now at 16:00
+        with fade
+
+        pause 0.75
+
+        scene v12s33_18
+        with dissolve
+
+        lmass "Alright gentlemen, it is time for you to swap with the ladies."
+
+        jump v12s33_sauna
+    else:
+        call screen v12s33_three_doors
 
 # -MC leaves and is back at the free roam room-
 
@@ -642,10 +657,10 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
 
     if v11_invite_sam_europe:
         scene v12s33_28a #FPP, same as 28 show Chloe and Aubrey and Samantha in Sauna (sweaty if possible), all looking at you, smiling (sit samantha at a spot where it looks natural whether she's there or not) (Chloe in towel, Aubrey naked, Samantha in towel)
-        with dissolve
+        #with dissolve
     else:
         scene v12s33_28 #FPP show Chloe and Aubrey in Sauna (sweaty if possible), both looking at you, smiling (Chloe in towel, Aubrey naked)
-        with dissolve
+        #with dissolve
     
     stop music fadeout 3
     play music "music/v12/Scene 33/Track Scene 33_5.mp3" fadein 2
@@ -833,8 +848,21 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     stop music fadeout 3
     play music "music/v12/Scene 33/Track Scene 33_4.mp3" fadein 2
 
-    call screen v12s33_three_doors
+    if v12s33_door1 and v12s33_door2 and v12s33_door3:
+        scene v12s33_24a # same as 24, clock now at 16:00
+        with fade
 
+        pause 0.75
+
+        scene v12s33_18
+        with dissolve
+
+        lmass "Alright gentlemen, it is time for you to swap with the ladies."
+
+        jump v12s33_sauna
+    else:
+        call screen v12s33_three_doors
+        
 # -MC leaves and is back in the free roam area-
 
 # -if door 3
@@ -842,14 +870,14 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
 
     label v12s33_door3:
     
-    $ v12s33_door2 = True
+    $ v12s33_door3 = True
 
     if v11_pen_goes_europe:
         scene v12s33_32 #FPP, show Amber, Lindsey and Penelope in Sauna (sweaty if possible), all looking at you, smiling, position Penelope so it doesn't look weird if she's there or not, Lindsey naked, Amber naked, Penelope in towel
-        with dissolve
+        #with dissolve
     else:
         scene v12s33_32a #FPP same as 32 without Penelope
-        with dissolve
+        #with dissolve
 
     u "Hey, ladies!"
 
@@ -981,9 +1009,22 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     stop music fadeout 3
     play music "music/v12/Scene 33/Track Scene 33_4.mp3" fadein 2
 
-    call screen v12s33_three_doors
+    if v12s33_door1 and v12s33_door2 and v12s33_door3:
+        scene v12s33_24a # same as 24, clock now at 16:00
+        with fade
 
-    label v12s33_three_doors_back:
+        pause 0.75
+
+        scene v12s33_18
+        with dissolve
+
+        lmass "Alright gentlemen, it is time for you to swap with the ladies."
+
+        jump v12s33_sauna
+    else:
+        call screen v12s33_three_doors
+
+label v12s33_three_doors_back:
 
     scene v12s33_20
     with dissolve
@@ -1132,6 +1173,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     # -If MC presses the Sneak Off button during the sauna-
 
 label v12s33_sneak_off2:
+    hide screen v12s33_sneak_off_overlay
 
     scene v12s33_40
     with dissolve

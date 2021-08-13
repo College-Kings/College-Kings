@@ -235,37 +235,40 @@ label v12s27a:
 
     u "Doesn't matter man, let's go get that hair done. I'm ready to see what you look like as a Roasted Ape. *Laughs*"
 
-    scene v12s27a_2f
+    scene v12s27a_2e
     with dissolve
 
     ry "Haha, man... You know I was just joking, right? We don't have to do this bet."
 
-    scene v12s27a_2g
+    #scene v12s27a_2g
+    scene v12s27a_2f
     with dissolve
 
     u "What do you mean we don't have to do it? We already did and you lost. *Laughs* So let's go."
 
-    scene v12s27a_2f
+    scene v12s27a_2e
     with dissolve
 
     ry "Please, [name]... I really don't think it's gonna look good."
 
-    scene v12s27a_2g
+    #scene v12s27a_2g
+    scene v12s27a_2f
     with dissolve
 
     u "Should've thought about that before you made the bet, bud. Live on the edge, die falling off. *Chuckles*"
 
-    scene v12s27a_2f
+    scene v12s27a_2e
     with dissolve
 
     ry "*Sighs*"
 
-    scene v12s27a_2g
+    #scene v12s27a_2g
+    scene v12s27a_2f
     with dissolve
 
     u "Lead the way!"
 
-    scene v12s27a_2f
+    scene v12s27a_2e
     with dissolve
 
     ry "*Sighs* Okay..."
@@ -343,7 +346,7 @@ label v12s27a:
     scene v12s27a_5b
     with dissolve
 
-    barber "I... I don't know why you're bringing up Apes, but... Please, sit down while I work wonders."
+    barber "I... I don't know why you're bringing up apes, but... Please, sit down while I work wonders."
 
     scene v12s27a_7 #shows clock on barber wall: 4 pm
     with fade
@@ -376,8 +379,11 @@ label v12s27a:
 
     u "Let me just take some pictures for Kiwii..."
 
+    $ v12s27a_kiwiiPost1 = KiwiiPost("MC", "v12/roastedape.webp", _("#RoastedApe"), numberLikes=469)
+    $ v12s27a_kiwiiPost1.newComment("Imre", "Holy shit... You make it way to easy, Ryan!", mentions="Ryan", numberLikes=renpy.random.randint(250,350), queue=False)
+    $ v12s27a_kiwiiPost1.newComment("Amber", _("\"We\" taught him why we shouldn't get too drunk at slumber parties... Hehe"), mentions="Chris", numberLikes=renpy.random.randint(150,300), queue=False)
+    $ v12s27a_kiwiiPost1.newComment("Amber", "Haha, yes! That's what you get, moron...", mentions="Ryan", numberLikes=renpy.random.randint(250,400), queue=False)
     
-
 ### ERROR: KiwiiPost("MC", "Ryan sitting in chair at salon not facing the mirror with black hair", "#RoastedApe", numberLikes=469)
 ### ERROR: kiwiiPost.newComment("Imre", "Holy shit... You make it way to easy, Ryan!", mentions="Ryan")
 ### ERROR: kiwiiPost.newComment("Amber", "Haha, yes! That's what you get, moron...”, mentions="Ryan")

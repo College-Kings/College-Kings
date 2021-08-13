@@ -146,7 +146,7 @@ label v12_amber_after_spa:
                 scene v12ams5a # TPP. Same as v12ams5, MC placing his hand on Amber's butt
                 with dissolve
 
-                pause
+                pause 1
 
                 scene v12ams5b # TPP. Same as v12ams5, Amber pulling away from the kiss, MC slightly surprised, Amber slight smile, both mouths closed
                 with dissolve

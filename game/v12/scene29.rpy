@@ -809,6 +809,7 @@ label v12_lauren_sex:
 
                 scene v12las47
                 with dissolve
+                play sound "sounds/kiss.mp3"
 
                 pause
 
@@ -1207,13 +1208,13 @@ label v12_lauren_sex:
 
                 u "(Wow, Lauren and I actually fucking did it.)"
 
+                $ renpy.end_replay()
+
                 scene v12las73 # TPP. Show MC walking in hallway, smiling, mouth closed
                 with dissolve
 
                 pause 0.75
 
                 stop music fadeout 3
-
-                $ renpy.end_replay()
 
                 jump v12_room_sneak

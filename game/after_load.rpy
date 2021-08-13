@@ -217,6 +217,24 @@ label after_load:
         try: kiwiiPost1
         except NameError: kiwii_firstTime = False
 
+        chloe.name = "Chloe"
+        amber.name = "Amber"
+        penelope.name = "Penelope"
+        riley.name = "Riley"
+        lindsey.name = "Lindsey"
+        lauren.name = "Lauren"
+        samantha.name = "Samantha"
+        emily.name = "Emily"
+        ms_rose.name = "Ms Rose"
+        nora.name = "Nora"
+        aubrey.name = "Aubrey"
+        ryan.name = "Ryan"
+        imre.name = "Imre"
+        chris.name = "Chris"
+        charli.name = "Charli"
+        cameron.name = "Cameron"
+        josh.name = "Josh"
+
     show no_hard_feelings at achievementShow
     $ achievementAtList = renpy.get_at_list("no_hard_feelings")
     hide no_hard_feelings

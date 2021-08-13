@@ -113,6 +113,14 @@ init -90 python:
             "Charli": {
                 "username": "CharliAndTheCockFactory",
                 "profilePicture": "images/phone/kiwii/profilePictures/charlipp.webp"
+            },
+            "Naomi": {
+                "username": "NaomiOfficial",
+                "profilePicture": "images/phone/kiwii/profilePictures/naomipp.webp"
+            },
+            "LewsOfficial": {
+                "username": "LewsOfficial",
+                "profilePicture": "images/phone/kiwii/profilePictures/lewsofficial.webp"
             }
         }
         return users

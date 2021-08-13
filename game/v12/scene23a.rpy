@@ -711,7 +711,7 @@ label v12_mc_chilling:
         scene v12mor28c
         with dissolve
 
-        sa "*Drunk* *You're so silly... *Laughs*"
+        sa "*Drunk* You're so silly... *Laughs*"
 
         scene v12mor24b
         with dissolve
