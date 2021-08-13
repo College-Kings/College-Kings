@@ -87,8 +87,7 @@ label v12_aubrey_wake_up_ri:
 
     u "On that note, let's go. We're in a rush right?"
 
-    #scene v12auwr5b # FPP. Same as v12auwr5a, Aubrey slightly confused, mouth open
-    scene v12auwr5d
+    scene v12auwr5b # FPP. Same as v12auwr5a, Aubrey slightly confused, mouth open
     with dissolve
 
     au "Umm, yeah."
