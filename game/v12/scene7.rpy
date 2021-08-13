@@ -711,7 +711,7 @@ label v12s7_aubrey2:
         "Kill her":
             label v12s7_aubrey_kill:
 
-            $ v12s7_killList.append(aubrey)
+            $ v12s7_killList.add(aubrey)
             $ addPoint("tm")
             scene v12ferauh6 # TPP. Show MC pointing finger gun at aubrey, mc mouth open, aubrey mouth closed
             with dissolve

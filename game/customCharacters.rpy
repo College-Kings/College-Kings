@@ -40,8 +40,8 @@ init python:
                 self.points -= 1
 
             # Add character to kill list
-            if not self == cameron: #except Cameron, because he's not playing :D
-                v12s7_killList.append(self)
+            if self != cameron: #except Cameron, because he's not playing :D
+                v12s7_killList.add(self)
 
         def resetPoints(self):
             self.points = 0
