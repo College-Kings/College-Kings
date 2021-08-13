@@ -5630,48 +5630,84 @@ label v12s7_chris_kill:
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
-    scene v12ferchr1c
-    with dissolve
+    if v12s7_emily and emily not in v12s7_killList:
+        scene v12ferchr1c # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
+        with dissolve
+    else:
+        scene v12ferchrnoem1c
+        with dissolve
 
     ch "What are you doing?"
 
-    scene v12ferchr1b
-    with dissolve
+    if v12s7_emily and emily not in v12s7_killList:
+        scene v12ferchr1b # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
+        with dissolve
+    else:
+        scene v12ferchrnoem1b
+        with dissolve
 
     u "I just killed you."
 
-    scene v12ferchr1c
-    with dissolve
+    if v12s7_emily and emily not in v12s7_killList:
+        scene v12ferchr1c # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
+        with dissolve
+    else:
+        scene v12ferchrnoem1c
+        with dissolve
 
     ch "What are you talking about?"
 
-    scene v12ferchr1b
-    with dissolve
+    if v12s7_emily and emily not in v12s7_killList:
+        scene v12ferchr1b # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
+        with dissolve
+    else:
+        scene v12ferchrnoem1b
+        with dissolve
 
     u "The game that we're all doing, I'm the killer, I just killed you."
 
-    scene v12ferchr1c
-    with dissolve
+    if v12s7_emily and emily not in v12s7_killList:
+        scene v12ferchr1c # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
+        with dissolve
+    else:
+        scene v12ferchrnoem1c
+        with dissolve
 
     ch "Okay cool, I'm dead."
 
-    scene v12ferchr1b
-    with dissolve
+    if v12s7_emily and emily not in v12s7_killList:
+        scene v12ferchr1b # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
+        with dissolve
+    else:
+        scene v12ferchrnoem1b
+        with dissolve
 
     u "*Chuckles* Bro, you gotta go sit in the dining hall."
 
-    scene v12ferchr1c
-    with dissolve
+    if v12s7_emily and emily not in v12s7_killList:
+        scene v12ferchr1c # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
+        with dissolve
+    else:
+        scene v12ferchrnoem1c
+        with dissolve
 
     ch "I'm really not tryna move."
 
-    scene v12ferchr1b
-    with dissolve
+    if v12s7_emily and emily not in v12s7_killList:
+        scene v12ferchr1b # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
+        with dissolve
+    else:
+        scene v12ferchrnoem1b
+        with dissolve
 
     u "Those are the rules."
 
-    scene v12ferchr1c
-    with dissolve
+    if v12s7_emily and emily not in v12s7_killList:
+        scene v12ferchr1c # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
+        with dissolve
+    else:
+        scene v12ferchrnoem1c
+        with dissolve
 
     ch "*Sighs*"
 
