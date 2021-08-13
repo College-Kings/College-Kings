@@ -346,6 +346,7 @@ label v12s18_bottlespin:
     $ v12s18_bottlespin_played = True
     
     scene v12slpbs1 # FPP. Aubrey, Nora, Chloe and Lindsey sitting down in a circle on the floor, MC standing up, MC and Aubrey looking at each other, Aubrey slight smile, mouth open (Only Aubrey in shot)
+    #with dissolve
 
     au "Hey [name], come over here and play with us?"
 
@@ -1082,6 +1083,7 @@ label v12s18_fmk:
     $ v12s18_fmk_played = True
 
     scene v12slpfmk1 # FPP. Amber lying on the bed, MC standing in front of the bed, Amber looking at MC, Amber smiling, mouth open
+    #with dissolve
 
     am "There you are! Come play Fuck, Marry, Kill."
 
@@ -1453,6 +1455,7 @@ label v12s18_bet: # END OF FREE ROAM
     $ freeRoam = False
 
     scene v12slpbet1 # FPP. Amber lying on the bed, looking at MC, Amber slight smile, mouth open, MC standing in front of the bed
+    #with dissolve
 
     am "Come with me to the bathroom?"
 

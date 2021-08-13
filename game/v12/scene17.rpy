@@ -695,7 +695,7 @@ label v12_escape_room:
 
     li "Ahh... That's a lot better. You're so warm. *Chuckles*"
 
-    scene v12esr27a # FPP. Same as v12esr27, Lindsey slight smile, mouth closed
+    #scene v12esr27a # FPP. Same as v12esr27, Lindsey slight smile, mouth closed
     scene v12esr29a
     with dissolve
 
