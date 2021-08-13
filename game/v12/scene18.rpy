@@ -1909,7 +1909,7 @@ label v12s18_bet: # END OF FREE ROAM
                 scene v12slpbet16c # TPP. Same as v12slpbet16b, MC and Amber sleeping cuddled up
                 with dissolve
 
-                pause 0.75
+                pause 1.75
 
             else:
                 scene v12slpbet17
