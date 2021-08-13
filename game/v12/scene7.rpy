@@ -5466,49 +5466,76 @@ label v12s7_chris1:
 
     show screen murder_button_overlay(chris)
 
-    scene v12ferchr1 # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
+    if v12s7_emily and emily not in v12s7_killList:
+        scene v12ferchr1 # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
+    else:
+        scene v12ferchrnoem1
 
     u "What are you doing?"
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_9.mp3" fadein 2
 
-    scene v12ferchr1a # FPP. Same 1, phone still in air, looking at mc, mouth open
+    if v12s7_emily and emily not in v12s7_killList:
+        scene v12ferchr1a # FPP. Same 1, phone still in air, looking at mc, mouth open
+    else:
+        scene v12ferchrnoem1a
     with dissolve
 
     ch "I'm trying to get a signal. I heard if you put foil around your phone in direct sunlight you'll get at least a bar of service. Do you know where I can find some foil?"
 
-    scene v12ferchr1b # FPP. same 1, now facing mc phone by his side, mouth closed
+    if v12s7_emily and emily not in v12s7_killList:
+        scene v12ferchr1b # FPP. same 1, now facing mc phone by his side, mouth closed
+    else:
+        scene v12ferchrnoem1b
     with dissolve
 
     u "You need your phone that bad?"
 
-    scene v12ferchr1c # FPP. Same 1b, mouth open
+    if v12s7_emily and emily not in v12s7_killList:
+        scene v12ferchr1c # FPP. Same 1b, mouth open
+    else:
+        scene v12ferchrnoem1c
     with dissolve
 
     ch "Yeah I do."
 
-    scene v12ferchr1b
+    if v12s7_emily and emily not in v12s7_killList:
+        scene v12ferchr1b
+    else:
+        scene v12ferchrnoem1b
     with dissolve
 
     u "You and Sebastian must be planning something big."
 
-    scene v12ferchr1c
+    if v12s7_emily and emily not in v12s7_killList:
+        scene v12ferchr1c
+    else:
+        scene v12ferchrnoem1c
     with dissolve
 
     ch "It's more than just us, what's going on is a serious tradition for both frats and something that needs one hundred percent focus and respect."
 
-    scene v12ferchr1b
+    if v12s7_emily and emily not in v12s7_killList:
+        scene v12ferchr1b
+    else:
+        scene v12ferchrnoem1b
     with dissolve
 
     u "Well man, your phone isn't going to work out here. It just won't."
 
-    scene v12ferchr1c
+    if v12s7_emily and emily not in v12s7_killList:
+        scene v12ferchr1c
+    else:
+        scene v12ferchrnoem1c
     with dissolve
 
     ch "*Sighs*"
 
-    scene v12ferchr1b
+    if v12s7_emily and emily not in v12s7_killList:
+        scene v12ferchr1b
+    else:
+        scene v12ferchrnoem1b
     with dissolve
 
     scene v12ferchr2 # Fpp. Show chris now sat down, head back against the wall looking up at mc, mouth open
@@ -5556,7 +5583,10 @@ label v12s7_chris1:
 
     ch "Thanks."
 
-    scene v12ferchr3 # TPP. Show mc walking away
+    if v12s7_emily and emily not in v12s7_killList:
+        scene v12ferchr3 # TPP. Show mc walking away
+    else:
+        scene v12ferchrnoem3
     with dissolve
 
     pause 0.75
