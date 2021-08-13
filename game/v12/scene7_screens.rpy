@@ -290,8 +290,10 @@ screen v12s7_kitchen():
 
         if chris not in v12s7_killList:
             hotspot (1116, 33, 751, 1047):
-                if v12s7_chris:
+                if v12s7_chris and v12s7_emily and emily not in v12s7_killList:
                     action Call("v12s7_free_roam_spoken", backgroundImg="v12ferchr1", returnScreen="v12s7_kitchen", seenList=[], victim=chris)
+                elif v12s7_chris:
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferchrnoem1", returnScreen="v12s7_kitchen", seenList=[], victim=chris)
                 else:
                     action Jump("v12s7_chris1") # chris
 
