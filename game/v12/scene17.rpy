@@ -895,6 +895,8 @@ label v12_lindsey_kiss_or_not:
 
             play sound "sounds/kiss.mp3"
 
+            pause 1.5
+
             if lindseyfirstkiss or kct == "popular" or len(v12s7_killList) >= 5:
                 if not lindseyfirstkiss and not len(v12s7_killList) >= 5:
                     call screen kctPopup
@@ -1061,7 +1063,7 @@ label v12_lindsey_sex:
     li "*Chuckles* I'm not sure how much time we have left but... I'll give you all that I can, okay?"
 
     image v12linbj = Movie(play="images/v12/Scene 17/v12linbj.webm", loop=True, image="images/v12/Scene 17/v12linbjStart.webp", start_image="images/v12/Scene 17/v12linbjStart.webp") # Lindsey blowjob
-    image v12linhbj = Movie(play="images/v12/Scene 17/v12linbjf.webm", loop=True, image="images/v12/Scene 17/v12linbjStart.webp", start_image="images/v12/Scene 17/v12linbjStart.webp") # Lindsey blowjob spedup
+    image v12linbjf = Movie(play="images/v12/Scene 17/v12linbjf.webm", loop=True, image="images/v12/Scene 17/v12linbjStart.webp", start_image="images/v12/Scene 17/v12linbjStart.webp") # Lindsey blowjob spedup
     image v12linbj2 = Movie(play="images/v12/Scene 17/v12linbj2.webm", loop=True, image="images/v12/Scene 17/v12linbj2Start.webp", start_image="images/v12/Scene 17/v12linbj2Start.webp") # Lindsey blowjob FPP
     image v12linbj2f = Movie(play="images/v12/Scene 17/v12linbj2f.webm", loop=True, image="images/v12/Scene 17/v12linbj2Start.webp", start_image="images/v12/Scene 17/v12linbj2Start.webp") # Lindsey blowjob FPP spedup
 
