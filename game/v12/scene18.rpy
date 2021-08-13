@@ -499,7 +499,7 @@ label v12s18_bottlespin:
 
     play sound "sounds/kiss.mp3"
 
-    pause 0.75
+    pause 1.5
 
     scene v12slpbs5
     with dissolve
@@ -663,19 +663,18 @@ label v12s18_bottlespin:
     scene v12slpbs12a # FPP. Same as v12slpbs12, Chris worried, mouth closed, looking at Nora
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12slpbs10b # FPP. Same as v12slpbs10, Nora looking at Chris, Nora slightly annoyed, mouth open
     with dissolve
 
     no "Don't make it weird, just play the game."
 
-    play sound "sounds/kiss.mp3"
-
     scene v12slpbs14 # TPP. Show Chris and Chloe kissing (try and make it look a bit passionate)
     with dissolve
+    play sound "sounds/kiss.mp3"
 
-    pause 0.75
+    pause 1.5
 
     scene v12slpbs10b
     with dissolve
@@ -697,12 +696,11 @@ label v12s18_bottlespin:
 
     ch "Ha, I am too."
 
-    play sound "sounds/kiss.mp3"
-
     scene v12slpbs15 # TPP. Show Chris and Nora kissing
     with dissolve
+    play sound "sounds/kiss.mp3"
 
-    pause 0.75
+    pause 1.5
 
     scene v12slpbs3g # FPP. Same as v12slpbs3, Imre looking at Nora, Imre slightly annoyed, mouth open
     with dissolve
@@ -712,7 +710,7 @@ label v12s18_bottlespin:
     scene v12slpbs5
     with dissolve
 
-    li "Aww, you wishing you got more kisses Imre?"
+    li "Aww, you wishing you got more kisses, Imre?"
 
     scene v12slpbs3c
     with dissolve
@@ -769,7 +767,8 @@ label v12s18_bottlespin:
     scene v12slpbs10b
     with dissolve
 
-    no "Fuck it, Chris... Go. Go answer your phone."
+    no "Fuck it, Chris..."
+    no "Go. Go answer your phone."
 
     scene v12slpbs12b
     with dissolve
@@ -778,6 +777,7 @@ label v12s18_bottlespin:
 
     stop sound
 
+    play sound "sounds/answercall.mp3"
     scene v12slpbs12e # FPP. Same as v12slpbs12b, Chris talking on his phone, worried, mouth open
     with dissolve
 
@@ -850,19 +850,19 @@ label v12s18_bottlespin:
 
     u "Oh, uhh-"
 
-    play sound "sounds/kiss.mp3"
-
     if noralikes:
         scene v12slpbs16 # TPP. Show Nora grabbing MC's face and kissing him (try and make this a bit passionate)
         with dissolve
+        play sound "sounds/kiss.mp3"
 
-        pause
+        pause 2.25
     
     else:
         scene v12slpbs16a # TPP. Same as v12slpbs16, less passionate of a kiss 
         with dissolve
+        play sound "sounds/kiss.mp3"
 
-        pause
+        pause 1
 
     scene v12slpbs10d # FPP. Same as v12slpbs10, Nora looking at Imre, Nora smiling, mouth open
     with dissolve
@@ -882,7 +882,7 @@ label v12s18_bottlespin:
     scene v12slpbs3i # FPP. Same as v12slpbs3h, Imre slight smile, mouth open, looking at Nora
     with dissolve
 
-    imre "Okay, you right, you right... C'mon on bottle gods!"
+    imre "Okay, you're right, you're right... C'mon on bottle gods!"
 
     scene v12slpbs8j # FPP. Same as v12slpbs8, Imre's hand on the bottle
     with dissolve
@@ -978,10 +978,13 @@ label v12s18_bottlespin:
 
     au "Come here, sexy."
 
-    play sound "sounds/kiss.mp3"
 
     scene v12slpbs20 # TPP. Show Aubrey and Chloe kissing (Try and make it look hot)
     with dissolve
+
+    play sound "sounds/kiss.mp3"
+
+    pause 1.75
 
     imre "Hell yesss... This is exactly what I came for. *Chuckles*"
 
@@ -1004,6 +1007,11 @@ label v12s18_bottlespin:
     with dissolve
 
     pause 0.75
+    
+    scene v12slpbs8l
+    with dissolve
+
+    pause 0.75
 
     scene v12slpbs8n # TPP. Same as v12slpbs8l, bottle pointing at Nora
     with dissolve
@@ -1020,12 +1028,12 @@ label v12s18_bottlespin:
 
     no "*Sighs*"
 
-    play sound "sounds/kiss.mp3"
-
     scene v12slpbs22 # TPP. Show Nora and Chloe sharing a quick peck on the lips
     with dissolve
 
-    pause
+    play sound "sounds/kiss.mp3"
+
+    pause 1.25
     
     scene v12slpbs10b
     with dissolve
@@ -1080,7 +1088,7 @@ label v12s18_fmk:
     scene v12slpfmk1a # FPP. Same as v12slpfmk1, Amber smiling, mouth closed
     with dissolve
 
-    u "Who's all playing?"
+    u "Who's playing?"
 
     scene v12slpfmk1b # FPP. Same as v12slpfmk1, Amber looking towards Imre's direction (check v12slpbs1b for Imre positioning), Amber smiling, mouth open
     with dissolve
