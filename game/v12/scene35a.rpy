@@ -629,11 +629,6 @@ label v12_nora_sex:
         scene v12nos35 # FPP. Same positioning as v12nos35, MC and Nora looking at each other, Nora smiling, mouth closed
         with dissolve
 
-        if joinwolves:
-            $ grant_achievement("inside_job")
-        else:
-            $ grant_achievement("all_is_fair_in_love_and_war")
-
         u "Nora... That was... Thank you."
 
         scene v12nos35a # FPP. Same as v12nos36, Nora smiling, mouth open
@@ -719,6 +714,11 @@ label v12_nora_sex:
 
         scene v12nos13a # TPP. Same as v12nos13, MC smiling, mouth closed
         with dissolve
+
+        if joinwolves:
+            $ grant_achievement("inside_job")
+        else:
+            $ grant_achievement("all_is_fair_in_love_and_war")
 
         u "(I just had sex with Nora. NORA!!! I fucked Chris' girl! Wow... Gonna have to sleep on this one.)"
 
