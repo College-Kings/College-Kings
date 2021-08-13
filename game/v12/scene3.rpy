@@ -7,11 +7,10 @@ label v12_penelope_roof:
     scene v12penr1 # TPP Show MC sitting on his bed looking down at his phone, in his hand
     with fade
 
+    play sound "sounds/vibrate.mp3"
     pause 1
 
     play music "music/v12/Scene 3/Track Scene 3_1.mp3" fadein 2
-
-    play sound "sounds/vibrate.mp3"
 
     $ contact_Penelope.newMessage("Hey, are you up still?", queue=False)
     $ contact_Penelope.newMessage("If you are, can you meet me in the hallway?", queue=False)
