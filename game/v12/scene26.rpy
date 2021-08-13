@@ -137,7 +137,7 @@ label v12_nora_chris_fight:
     scene v12ncf9
     with dissolve
 
-    cl "Because she wasn't hurting you and you pushed her hard! Are fucking stupid?!"
+    cl "Because she wasn't hurting you and you pushed her hard! Are you fucking stupid?!"
 
     scene v12ncf10
     with dissolve
