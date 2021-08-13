@@ -235,37 +235,40 @@ label v12s27a:
 
     u "Doesn't matter man, let's go get that hair done. I'm ready to see what you look like as a Roasted Ape. *Laughs*"
 
-    scene v12s27a_2f
+    scene v12s27a_2e
     with dissolve
 
     ry "Haha, man... You know I was just joking, right? We don't have to do this bet."
 
-    scene v12s27a_2g
+    #scene v12s27a_2g
+    scene v12s27a_2f
     with dissolve
 
     u "What do you mean we don't have to do it? We already did and you lost. *Laughs* So let's go."
 
-    scene v12s27a_2f
+    scene v12s27a_2e
     with dissolve
 
     ry "Please, [name]... I really don't think it's gonna look good."
 
-    scene v12s27a_2g
+    #scene v12s27a_2g
+    scene v12s27a_2f
     with dissolve
 
     u "Should've thought about that before you made the bet, bud. Live on the edge, die falling off. *Chuckles*"
 
-    scene v12s27a_2f
+    scene v12s27a_2e
     with dissolve
 
     ry "*Sighs*"
 
-    scene v12s27a_2g
+    #scene v12s27a_2g
+    scene v12s27a_2f
     with dissolve
 
     u "Lead the way!"
 
-    scene v12s27a_2f
+    scene v12s27a_2e
     with dissolve
 
     ry "*Sighs* Okay..."
