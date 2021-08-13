@@ -2212,16 +2212,6 @@ label v12s7_ryan_imre1:
 
     pause 0.75
 
-    scene v12ferryi12 # FPP. Show Mr Lee leaning over the edge of the boat (back to camera)
-    with dissolve
-
-    lee "Check one check two!"
-
-    scene v12ferryi12a # FPP. Show Mr Lee looking towards imre who walked off, mouth open
-    with dissolve
-
-    lee "Good good, just making sure you'll be able to hear me from the water."
-
     scene v12ferryi11a # FPP. Show Imre now sprinting away.
     with dissolve
 
