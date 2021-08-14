@@ -736,15 +736,27 @@ screen file_slots(title):
                     yalign 0.13
                     xalign 0.5
 
+                python:
+                    game_version = FileJson(1, key="_version")
+                    renpy_version = FileJson(1, key="_renpy_version") or ""
+                    renpy_version = '.'.join(str(i) for i in renpy_version)
+                    file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
+
                 button:
                     style_prefix "slot"
                     align (0.5, 0.5)
 
-                    action FileAction(1)
+                    if file_compatable or config.developer:
+                        action FileAction(1)
 
                     has vbox
 
-                    add FileScreenshot(1) xalign 0.5
+                    if file_compatable:
+                        add FileScreenshot(1) xalign 0.5
+                        text game_version outlines [ (0, "#000", 3, 3) ] xpos 5
+                    else:
+                        add "#000"
+                        text "INCOMPATABLE" color "#f00" xalign 0.5
 
                     text FileTime(1, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
                         style "slot_time_text"
@@ -781,7 +793,6 @@ screen file_slots(title):
                             game_version = FileJson(slot, key="_version")
                             renpy_version = FileJson(slot, key="_renpy_version") or ""
                             renpy_version = '.'.join(str(i) for i in renpy_version)
-                            screenshot = FileScreenshot(slot)
                             file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
 
                         button:
@@ -794,7 +805,7 @@ screen file_slots(title):
                                 xysize (384, 220)
 
                                 if file_compatable:
-                                    add screenshot xalign 0.5
+                                    add FileScreenshot(slot) xalign 0.5
                                     text game_version outlines [ (0, "#000", 3, 3) ] xpos 5
                                 else:
                                     add "#000"
