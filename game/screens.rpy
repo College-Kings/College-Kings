@@ -715,8 +715,9 @@ screen load():
 
 
 screen file_slots(title):
-
     default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
+    $ incompatible_game_versions = ["12.0.0"]
+    $ incompatible_renpy_versions = ["7.4.8.1895"]
 
     use game_menu(title):
         
@@ -775,16 +776,30 @@ screen file_slots(title):
 
                     spacing gui.slot_spacing
 
-                    for i in range(gui.file_slot_cols * gui.file_slot_rows):
-                        
-                        $ slot = i + 1
+                    for slot in range(1, gui.file_slot_cols * gui.file_slot_rows + 1):
+                        python:
+                            game_version = FileJson(slot, key="_version")
+                            renpy_version = FileJson(slot, key="_renpy_version") or ""
+                            renpy_version = '.'.join(str(i) for i in renpy_version)
+                            screenshot = FileScreenshot(slot)
+                            file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
 
                         button:
-                            action FileAction(slot)
+                            if file_compatable or config.developer:
+                                action FileAction(slot)
 
                             has vbox
 
-                            add FileScreenshot(slot) xalign 0.5
+                            fixed:
+                                xysize (384, 220)
+
+                                if file_compatable:
+                                    add screenshot xalign 0.5
+                                    text game_version outlines [ (0, "#000", 3, 3) ] xpos 5
+                                else:
+                                    add "#000"
+                                    text "INCOMPATABLE" color "#f00" xalign 0.5
+                                
 
                             text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
                                 style "slot_time_text"
