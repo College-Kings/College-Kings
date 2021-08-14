@@ -10,6 +10,7 @@ default kct = "confident"
 default sortedKCT = ["confident", "loyal", "popular"]
 
     ## Kiwii Vars
+default kiwiiUsers = kiwii_users()
 default kiwii_firstTime = False
 
     ## Fight Vars

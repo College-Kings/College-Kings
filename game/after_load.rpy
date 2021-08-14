@@ -175,7 +175,7 @@ label after_load:
 
             try: contact.sentMessages
             except AttributeError: contact.sentMessages = []
-            
+
             # Messages
             try:
                 for message in contact.messages:
@@ -225,7 +225,7 @@ label after_load:
         lauren.name = "Lauren"
         samantha.name = "Samantha"
         emily.name = "Emily"
-        ms_rose.name = "Ms Rose"
+        ms_rose.name = "Ms_Rose"
         nora.name = "Nora"
         aubrey.name = "Aubrey"
         ryan.name = "Ryan"
