@@ -716,7 +716,7 @@ screen load():
 
 screen file_slots(title):
     default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
-    $ incompatible_game_versions = ["12.0.0"]
+    $ incompatible_game_versions = ["12.0.0", "0.6.4"]
     $ incompatible_renpy_versions = ["7.4.8.1895", "7.4.7.1862"]
 
     use game_menu(title):
