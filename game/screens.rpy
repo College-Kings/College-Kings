@@ -756,7 +756,7 @@ screen file_slots(title):
                         text game_version outlines [ (0, "#000", 3, 3) ] xpos 5
                     else:
                         add "#000"
-                        text "INCOMPATABLE" color "#f00" xalign 0.5
+                        text "INCOMPATIBLE" color "#f00" xalign 0.5
 
                     text FileTime(1, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
                         style "slot_time_text"
@@ -809,7 +809,7 @@ screen file_slots(title):
                                     text game_version outlines [ (0, "#000", 3, 3) ] xpos 5
                                 else:
                                     add "#000"
-                                    text "INCOMPATABLE" color "#f00" xalign 0.5
+                                    text "INCOMPATIBLE" color "#f00" xalign 0.5
                                 
 
                             text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
