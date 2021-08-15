@@ -1723,7 +1723,7 @@ label v12s7_lauren1:
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_8.mp3" fadein 2
 
-    if laurenmad:
+    if laurenrs and v11_aubrey_sex:
         scene v12ferla1a # FPP. same 1, mouth open
         with dissolve
 
