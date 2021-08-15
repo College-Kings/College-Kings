@@ -1477,7 +1477,7 @@ label v12s18_bet: # END OF FREE ROAM
     stop music fadeout 3
     play music "music/v12/Scene 18/Track Scene 18_3.mp3" fadein 2
 
-    if v11_overtake_points <= 2: # MC lost the race
+    if v11_overtake_points < 2: # MC lost the race
         scene v12slpbet3 # FPP. MC and Amber now in the bathroom, looking at each other, Amber smiling, mouth open
         with dissolve
 
