@@ -6,7 +6,7 @@
 label v11_lindsey_park:
     scene v11lip1 # TPP. Show MC walking up to Lindsey, she is sitting down on the bench, slightly sad, mouth closed, looking at the trees, MC shown from behind
     with dissolve
-    play music "music/v11/Scene 9/Track Scene 9_2.mp3" fadein 2
+    play music "music/v11/Scene 31/Track Scene 31.mp3" fadein 2
     pause 0.75
 
     scene v11lip2 # TPP. Show MC midway through sitting down, MC and Lindsey now looking at each other, both slight smiles, mouths closed
