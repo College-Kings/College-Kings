@@ -392,6 +392,105 @@ label after_load:
         try: v12s24_emmymatch
         except NameError: v12s24_emmymatch = False
 
+
+        #v11 variables
+        try: laurenLike
+        except NameError: laurenLike = 0
+        try: v11_pen_goes_europe
+        except NameError: v11_pen_goes_europe = False
+        try: v11s1_riley1
+        except NameError: v11s1_riley1 = False
+        try: v11s1_mrrose1
+        except NameError: v11s1_mrrose1 = False
+        try: v11s1_jenny1
+        except NameError: v11s1_jenny1 = False
+        try: v11s1_delib1
+        except NameError: v11s1_delib1 = False
+        try: v11s1_courtpoints
+        except NameError: v11s1_courtpoints = 0
+        try: sammad
+        except NameError: sammad = False
+        try: v11_invite_sam_europe
+        except NameError: v11_invite_sam_europe = False
+        try: v11_talk_with_emily
+        except NameError: v11_talk_with_emily = False
+        try: v11_josh_nightclub
+        except NameError: v11_josh_nightclub = False
+        try: candyLike
+        except NameError: candyLike = 0
+        try: v11_fucked_candy
+        except NameError: v11_fucked_candy = False
+        try: v11_aubrey_blue_outfit
+        except NameError: v11_aubrey_blue_outfit = False
+        try: v11_tease_amber
+        except NameError: v11_tease_amber = 0
+        try: v11_manhunt_winner
+        except NameError: v11_manhunt_winner = "Ryan"
+        try: v11_pranked_seb
+        except NameError: v11_pranked_seb = False
+        try: v11_aubrey_sex
+        except NameError: v11_aubrey_sex = False
+        try: v11_want_date_aubrey
+        except NameError: v11_want_date_aubrey = False
+        try: v11_riley_roomate
+        except NameError: v11_riley_roomate = False
+        try: v11_msrose_kiss
+        except NameError: v11_msrose_kiss = False
+        try: v11s23_chris1
+        except NameError: v11s23_chris1 = False
+        try: v11s23_riley1
+        except NameError: v11s23_riley1 = False
+        try: v11s23_mrlee1
+        except NameError: v11s23_mrlee1 = False
+        try: v11s23_penelope1
+        except NameError: v11s23_penelope1 = False
+        try: v11s25_beer
+        except NameError: v11s25_beer = True
+        try: v11_bartender_have_gf
+        except NameError: v11_bartender_have_gf = False
+        try: msrosers
+        except NameError: msrosers = False
+        try: v11_madison_ex
+        except NameError: v11_madison_ex = False
+        try: v11_ex_drugs
+        except NameError: v11_ex_drugs = False
+        try: v11_ex_father
+        except NameError: v11_ex_father = False 
+        try: v11_solo_question
+        except NameError: v11_solo_question = False
+        try: v11_apology_kiss
+        except NameError: v11_apology_kiss = False
+        try: v11_kiss_nora
+        except NameError: v11_kiss_nora = False
+        try: v11_nora_bra_white
+        except NameError: v11_nora_bra_white = False
+        try: v11_told_aubrey
+        except NameError: v11_told_aubrey = False
+        try: v11_chloe_sex
+        except NameError: v11_chloe_sex = False
+        try: chloegf
+        except NameError: chloegf = False
+        try: v11_lindsey_slogan
+        except NameError: v11_lindsey_slogan = 0 
+        try: v11_linds_inv_imre
+        except NameError: v11_linds_inv_imre = False 
+        try: v11_sit_with_lauren
+        except NameError: v11_sit_with_lauren = True
+        try: v11_msrose_scene
+        except NameError: v11_msrose_scene = False
+        try: v11_rileysex
+        except NameError: v11_rileysex = False
+        try: v11_overtake_points
+        except NameError: v11_overtake_points = 0
+        try: v11_hp_points
+        except NameError: v11_hp_points = 0
+        try: political_strategist
+        except NameError: political_strategist = False
+
+
+
+
+
     show no_hard_feelings at achievementShow
     $ achievementAtList = renpy.get_at_list("no_hard_feelings")
     hide no_hard_feelings
