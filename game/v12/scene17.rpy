@@ -475,11 +475,10 @@ label v12_escape_room:
 
     #scene v12esr12b
     #with dissolve
+    charli "My turn!"
 
     scene v12esr17c # FPP. Same as v12esr17b, Imre and Aubrey already outside, Charli walking out, all smiling, mouths closed
     with dissolve
-    charli "My turn!"
-
 
     unknown "Three."
 
