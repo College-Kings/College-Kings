@@ -217,6 +217,42 @@ label after_load:
         try: kiwiiPost1
         except NameError: kiwii_firstTime = False
 
+        # v12 Renpy Fixes:
+        try: chloe
+        except NameError: chloe = CustomCharacter("Chloe")
+        try: amber
+        except NameError: amber = CustomCharacter("Amber")
+        try: penelope
+        except NameError: penelope = CustomCharacter("Penelope")
+        try: riley
+        except NameError: riley = CustomCharacter("Riley")
+        try: lindsey
+        except NameError: lindsey = CustomCharacter("Lindsey")
+        try: lauren
+        except NameError: lauren = CustomCharacter("Lauren")
+        try: samantha
+        except NameError: samantha = CustomCharacter("Samantha")
+        try: emily
+        except NameError: emily = CustomCharacter("Emily")
+        try: ms_rose
+        except NameError: ms_rose = CustomCharacter("Ms Rose")
+        try: nora
+        except NameError: nora = CustomCharacter("Nora")
+        try: aubrey
+        except NameError: aubrey = CustomCharacter("Aubrey")
+        try: ryan
+        except NameError: ryan = CustomCharacter("Ryan")
+        try: imre
+        except NameError: imre = CustomCharacter("Imre")
+        try: chris
+        except NameError: chris = CustomCharacter("Chris")
+        try: charli
+        except NameError: charli = CustomCharacter("Charli")
+        try: cameron
+        except NameError: cameron = CustomCharacter("Cameron")
+        try: josh
+        except NameError: josh = CustomCharacter("Josh")
+
         chloe.name = "Chloe"
         amber.name = "Amber"
         penelope.name = "Penelope"
@@ -235,6 +271,127 @@ label after_load:
         cameron.name = "Cameron"
         josh.name = "Josh"
 
+        try: v12_told_chloe
+        except NameError: v12_told_chloe = False
+        try: v12_kiss_riley
+        except NameError: v12_kiss_riley = False
+        try: v12_amber_tell_riley
+        except NameError: v12_amber_tell_riley = False
+        try: v12_fight_win
+        except NameError: v12_fight_win = False
+        try: v12_chase_robber
+        except NameError: v12_chase_robber = False
+        try: v12s7_seenList
+        except NameError: v12s7_seenList = []
+        try: v12s7_killList
+        except NameError: v12s7_killList = set()
+        try: v12_msrose_sex
+        except NameError: v12_msrose_sex = False
+        try: v11_lindsey_run
+        except NameError: v11_lindsey_run = False
+        try: v12_help_chris
+        except NameError: v12_help_chris = 0
+
+        try: v12s7_lauren
+        except NameError: v12s7_lauren = False
+        try: v12s7_emily
+        except NameError: v12s7_emily = False
+        try: v12s7_emily2
+        except NameError: v12s7_emily2 = False
+        try: v12s7_samantha
+        except NameError: v12s7_samantha = False
+        try: v12s7_samantha2
+        except NameError: v12s7_samantha2 = False
+        try: v12s7_msrose
+        except NameError: v12s7_msrose = False
+        try: v12s7_penelope
+        except NameError: v12s7_penelope = False
+        try: v12s7_chris
+        except NameError: v12s7_chris = False
+        try: v12s7_imre
+        except NameError: v12s7_imre = False
+        try: v12s7_imre2
+        except NameError: v12s7_imre2 = False
+        try: v12s7_lindsey
+        except NameError: v12s7_lindsey = False
+        try: v12s7_lindsey2
+        except NameError: v12s7_lindsey2 = False
+        try: v12s7_josh
+        except NameError: v12s7_josh = False
+        try: v12s7_josh2
+        except NameError: v12s7_josh2 = False
+        try: v12s7_chloe
+        except NameError: v12s7_chloe = False
+        try: v12s7_riley
+        except NameError: v12s7_riley = False
+        try: v12s7_riley_moved
+        except NameError: v12s7_riley_moved = False
+        try: v12s7_riley2
+        except NameError: v12s7_riley2 = False
+        try: v12s7_riley3
+        except NameError: v12s7_riley3 = False
+        try: v12s7_mrlee
+        except NameError: v12s7_mrlee = False
+        try: v12s7_cameron
+        except NameError: v12s7_cameron = False
+        try: v12s7_ryan
+        except NameError: v12s7_ryan = False
+        try: v12s7_amber
+        except NameError: v12s7_amber = False
+        try: v12s7_aubrey
+        except NameError: v12s7_aubrey = False
+        try: v12s7_aubrey2
+        except NameError: v12s7_aubrey2 = False
+        try: v12s7_nora
+        except NameError: v12s7_nora = False
+        try: v12s7_charli
+        except NameError: v12s7_charli = False
+
+        try: v12s7_lindsey_moved
+        except NameError: v12s7_lindsey_moved = False
+        try: v12s7_aubrey_moved
+        except NameError: v12s7_aubrey_moved = False
+        try: v12_lindsey_sex
+        except NameError: v12_lindsey_sex = False
+        try: v12s18_bottlespin_played
+        except NameError: v12s18_bottlespin_played = False
+        try: v12s18_fmk_played
+        except NameError: v12s18_fmk_played = False
+        try: v12_lauren_sex
+        except NameError: v12_lauren_sex = False
+        try: v12_lauren_points
+        except NameError: v12_lauren_points = 0
+        try: v12s32_Aubrey_Boost
+        except NameError: v12s32_Aubrey_Boost = False
+        try: v12_murder_count
+        except NameError: v12_murder_count = 0
+        try: joshmadfr
+        except NameError: joshmadfr = False
+        try: v12s7_victims
+        except NameError: v12s7_victims = 12
+        try: v12s23a_poolsex
+        except NameError: v12s23a_poolsex = False
+        try: v12s23a_beatcameron
+        except NameError: v12s23a_beatcameron = False
+        try: v12_nora_sex
+        except NameError: v12_nora_sex = False
+        try: v12_nora_points
+        except NameError: v12_nora_points = 0
+        try: supported_nora
+        except NameError: supported_nora = False
+        try: v12_call_cameron
+        except NameError: v12_call_cameron = False
+        try: v12s33_door1
+        except NameError: v12s33_door1 = False
+        try: v12_call_cameron
+        except NameError: v12_call_cameron = False
+        try: v12s33_door2
+        except NameError: v12s33_door2 = False
+        try: v12s33_door3
+        except NameError: v12s33_door3 = False
+        try: v12s24_emmymatch
+        except NameError: v12s24_emmymatch = False
+
     show no_hard_feelings at achievementShow
     $ achievementAtList = renpy.get_at_list("no_hard_feelings")
     hide no_hard_feelings
@@ -244,4 +401,5 @@ label after_load:
 
     if config.developer:
         show screen bugTesting_Overlay
+
     return
