@@ -353,7 +353,7 @@ label v12_lauren_sex:
             scene v12las22c # FPP. Same as v12las22, greeter looking at MC, greeter slight smile, mouth closed
             with dissolve
 
-            u "It's not a problem sir. Thank you."
+            u "It's not a problem madam. Thank you."
 
         "Comfort her":
             $ addPoint("bf")
@@ -367,7 +367,7 @@ label v12_lauren_sex:
             scene v12las22c
             with dissolve
 
-            u "Sir, thank you for everything."
+            u "Thank you for everything, Madam."
 
             scene v12las23b
             with dissolve
@@ -397,7 +397,7 @@ label v12_lauren_sex:
             scene v12las23a
             with dissolve
 
-            u "Haha, no worries. We'll have fun tonight regardless, have a good evening Sir."
+            u "Haha, no worries. We'll have fun tonight regardless, have a good evening Madam."
 
             scene v12las22c
             with dissolve

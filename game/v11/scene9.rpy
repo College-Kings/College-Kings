@@ -1191,7 +1191,7 @@ label v11_mc_horse_room:
     with fade
   
     stop music fadeout 3
-    play music "music/v11/Scene 9/Track Scene 9_2.mp3" fadein 2
+    play music "music/v11/Scene 9/Track Scene 9_3.mp3" fadein 2
     u "(I swear they want to kill us. I definitely need a good night's sleep.)"
 
     scene v11amh53a # TPP. Same cam as v11amh53, MC drops into his bed (similar to s95 in v1)

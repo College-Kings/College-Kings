@@ -3659,7 +3659,7 @@ label pledgewolves:
     with dissolve
     ch "And fearless!"
 
-    play music"music/mindie1.mp3" fadein 3
+    play music "music/mindie1.mp3" fadein 3
     queue music [ "music/m6punk.mp3", "music/m15punk.mp3", "music/m16punk.mp3" ]
 
     scene s762a
