@@ -5,7 +5,7 @@
 label v11_chloe_sex_scene:
     scene v11css1 # TPP. Mc and chloe removing their clothes
     with dissolve
-    play music "music/v11/Scene 41b/Track Scene 41b_1.mp3" fadein 2
+    play music "music/V10/Scene 17/Track Scene 17_2.mp3" fadein 2
     pause
 
     scene v11css1a # TPP. Chloe turning chloe against the wall kissing her neck

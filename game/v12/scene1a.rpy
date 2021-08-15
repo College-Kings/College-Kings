@@ -478,7 +478,7 @@ label v12_chase_robber:
         pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 1a/Track Scene 1a_4.mp3" fadein 2
+    play music "music/v11/Scene 6/Track Scene 6.mp3" fadein 2
 
     scene v12car30 # TPP Show MC sitting on his bed in the hotel room
     with dissolve
