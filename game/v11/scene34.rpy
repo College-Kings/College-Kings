@@ -180,7 +180,7 @@ label v11_cardealership:
 
     u "Thank you."
     stop music fadeout 3
-    play music "music/v11/Scene 34/Track Scene 34_1.mp3" fadein 2
+    play music "music/v11/Scene 34/Track Scene 34_2.mp3" fadein 2
     scene v11cd15 # TPP. MC and chloe getting into the car
     with dissolve
 
