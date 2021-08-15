@@ -16573,16 +16573,6 @@ label fr4lockerroomchloe:
 
                         u "You sure?"
 
-                        scene sfr4cl52b
-                        with dissolve
-
-                        cl "That's cute [name], but I think I have to go up there."
-
-                        scene sfr4cl52c
-                        with dissolve
-
-                        u "You sure?"
-
                         scene sfr4cl52e # chloe gone
                         with fade
 
