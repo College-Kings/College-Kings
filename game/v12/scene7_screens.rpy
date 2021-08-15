@@ -276,7 +276,7 @@ screen v12s7_kitchen():
             idle "images/v12/Scene 7/Screens/Navigation 10a.webp" 
             hover "images/v12/Scene 7/Buttons/nav 10.webp"
             
-        elif v12s7_emily and not emily in v12s7_killList and chris in v12s7_kilLList:
+        elif v12s7_emily and not emily in v12s7_killList and chris in v12s7_killList:
             idle "images/v12/Scene 7/Screens/Navigation 10d.webp" # Emily
             hover "images/v12/Scene 7/Buttons/nav 10.webp"
 
