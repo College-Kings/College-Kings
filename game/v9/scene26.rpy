@@ -49,7 +49,7 @@ label v9_fri_training_w_wolves:
 
     pause 1
 
-    play music "music/v9/Scene 26 & 27/Track Scene 26 & 27.mp3" fadein 2
+    play music "music/v9/Scene 1 & 2/Track Scene 1 & 2.mp3" fadein 2
 
     scene v9tww5 # FPP. Show Chris, neutral expression, mouth open.
     with dissolve
@@ -617,7 +617,7 @@ label v9_fri_training_w_wolves:
     scene v9tww20b # FPP. Same camera as v9tww20, smile, mouth open.
     with dissolve
 
-    ch "Don't worry. I'm not gonna say 'no women.'"
+    ch "Don't worry. I'm not gonna say \"no women\"."
 
     ch "Let's consider all forms of... stress relief... as rest, shall we?"
 

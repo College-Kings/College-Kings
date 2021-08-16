@@ -27,8 +27,7 @@ init python:
         contact_Lauren.newMessage(_("Great, I'll see you then :)"))
 
     def v2_reply6():
-        setattr(store, "mixedfeelings", True)
-        grantAchievement("mixed_feelings")
+        grant_achievement("mixed_feelings")
 
     # Josh messages
     def v2_reply7():
@@ -202,7 +201,7 @@ label v2start:
     $ contact_Lauren.addReply(_("Yeah, I'm fine."))
     $ contact_Lauren.newMessage(_("Okay..."))
 
-    if contact_Lauren.getReplies():
+    if contact_Lauren.replies:
         $ contact_Lauren.newMessage(_("Hello?? Can we please talk today?"), queue=False)
         $ contact_Lauren.addReply(_("Yeah, SV cafe in 20 mins?"), v2_reply5)
         $ contact_Lauren.addReply(_("Sorry, I can't"), v2_reply6)
@@ -217,9 +216,9 @@ label v2start:
     with dissolve
 
     label repeatb:
-        if contact_Lauren.getReplies():
+        if contact_Lauren.replies:
             call screen phone
-        if contact_Lauren.getReplies():
+        if contact_Lauren.replies:
             u "(Damn, my phone's blowing up. I should probably check my messages.)"
             jump repeatb
 
@@ -1061,8 +1060,7 @@ label tomFightStart:
 
 label youfinish:
     if reaction == 0.5:
-        $ thenotorious = True
-        $ grantAchievement("the_notorious")
+        $ grant_achievement("the_notorious")
             
     $ wintom = True
 
@@ -1219,10 +1217,8 @@ label meet_lauren2:
                 scene s130d # Lauren romancing at you holding your hand
                 with dissolve
 
-                $ anewbeginning = True
-                $ grantAchievement("a_new_beginning")
+                $ grant_achievement("a_new_beginning")
                     
-
                 la "Maybe you're right."
 
                 scene s130e
@@ -2109,10 +2105,8 @@ label bo_ad:
             scene s148b
             with dissolve
 
-            $ overit = True
-            $ grantAchievement("over_it")
+            $ grant_achievement("over_it")
                 
-
             u "Sure, knock yourself out, man. We're not an item."
 
             scene s148d
@@ -2345,9 +2339,9 @@ label bo_bd:
     u "(Oh, I just got a message.)"
 
     label repeatc:
-        if contact_Aubrey.getReplies():
+        if contact_Aubrey.replies:
             call screen phone
-        if contact_Aubrey.getReplies():
+        if contact_Aubrey.replies:
             u "(I should check my messages.)"
             jump repeatc
     
@@ -2514,9 +2508,9 @@ label bo_bd:
     u "(Fuck, I totally forgot about Aubrey. I guess it's time to make a decision.)"
 
     label repeatg:
-        if contact_Aubrey.getReplies():
+        if contact_Aubrey.replies:
             call screen phone
-        if contact_Aubrey.getReplies():
+        if contact_Aubrey.replies:
             u "(Aubrey's waiting for me, I need to let her know whether I'm coming or not.)"
             jump repeatg
 
@@ -2735,7 +2729,7 @@ label try1new:
             scene s164 # Aubrey changing bad view
             with dissolve
 
-            u "(Holy shit, if I could just stick my head through a bit further, I could get a way better view."
+            u "(Holy shit, if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
                 "Risk it":
@@ -2874,7 +2868,7 @@ label try2new:
             scene s168 # Aubrey changing bad view
             with dissolve
 
-            u "(Wow... if I could just stick my head through a bit further, I could get a way better view."
+            u "(Wow... if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
                 "Risk it":
@@ -3025,7 +3019,7 @@ label try3new:
             scene s172 # Aubrey changing bad view
             with dissolve
 
-            u "(Fuck... if I could just stick my head through a bit further, I could get a way better view."
+            u "(Fuck... if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
                 "Risk it":
@@ -3408,7 +3402,7 @@ label try5new:
             scene s183 # pen changing bad view
             with dissolve
 
-            u "(Wow... if I could just stick my head through a bit further, I could get a way better view."
+            u "(Wow... if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
                 "Risk it":
@@ -3544,7 +3538,7 @@ label try6new:
             scene s180 # pen changing bad view
             with dissolve
 
-            u "(Fuck... if I could just stick my head through a bit further, I could get a way better view."
+            u "(Fuck... if I could just stick my head through a bit further, I could get a way better view.)"
 
             menu:
                 "Risk it":

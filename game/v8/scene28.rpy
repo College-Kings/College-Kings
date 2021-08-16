@@ -493,15 +493,10 @@ label beat_lars:
     scene v8sdd12 # FPP. Show Joe charging at MC about to swing the pipe over MC's head, Joe looking angry.
     with dissolve
 
-    $ timed = True
-    $ timerexit = "hit_with_pipe"
-
-    menu:
+    menu (fail_label="hit_with_pipe"):
         "Duck":
-            $ timed = False
             jump dodged_pipe
         "...":
-            $ timed = False
             jump hit_with_pipe
 
 label no_int_deal_w_josh:
@@ -513,7 +508,7 @@ label no_int_deal_w_josh:
     scene v8sdd25 # FPP. Show Joe and Lars staring at Josh, Joe chuckling sardonically, Joe looking angry. Joe mouth open.
     with dissolve
 
-    je "No, no, no...fuck YOU."
+    je "No, no, no... fuck YOU."
 
     scene v8sdd26 # FPP. Show Joe stepping forward and jabbing Josh in the stomach with the pipe he's holding. Josh winces in pain.
     with dissolve
@@ -553,8 +548,7 @@ label dodged_pipe:
     scene v8sdd14 # TPP. Show MC looking up at Joe who is in shock, MC starts to stand up in preparation to plant a huge uppercut on Joe's chin. Lars on the ground. MC focused expression, MC mouth open.
     with dissolve
 
-    $ ip_man = True
-    $ grantAchievement("ip_man")
+    $ grant_achievement("ip_man")
 
     u "Fuck you!"
 
@@ -595,7 +589,7 @@ label hit_with_pipe:
 
     $ renpy.end_replay()
 
-    je "Hahaha, see ya, 'hero'."
+    je "Hahaha, see ya, \"hero\"."
 
     scene v8sdd33 # TPP. Show Joe and Lars leaving the scene, one of them is grabbing the drugs from Josh.
     with dissolve

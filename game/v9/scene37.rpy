@@ -7,7 +7,7 @@ label v9_run_w_ryan:
     scene v9rwr1 # TPP. Show Ryan walking through MC's door into his room.
     with dissolve
 
-    play music "music/v9/Scene 37/Track Scene 37.mp3" fadein 2
+    play music "music/v9/Scene 36/Track Scene 36.mp3" fadein 2
 
     pause 1
 
@@ -157,6 +157,7 @@ label v9_run_w_ryan:
     pause 1
 
     scene v9rwr12a
+    with dissolve
 
     ry "Ahh, sorry bro. Gotta dip, duty calls!"
 

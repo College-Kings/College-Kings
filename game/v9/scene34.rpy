@@ -86,6 +86,7 @@ label v9_ri_sex:
     scene v9ris6a # FPP. Same camera as v9ris6, seductive, mouth open.
     with dissolve
 
+    $ grant_achievement("cheat_day")
     ri "That's the most romantic thing anyone's ever said to me."
 
     scene v9ris7 # TPP. Show MC lying down on Riley's bed, Riley infront of him with her hands on his pants as if she's about to take them off.
@@ -97,9 +98,6 @@ label v9_ri_sex:
 
     scene v9ris7a # TPP. Same camera as v9ris7a, MC now wearing no pants, Riley looking at MC seductively.
     with dissolve
-
-    $ cheat_day = True
-    $ grantAchievement("cheat_day")
 
     play music "music/v9/Scene 34/Track Scene 34_2.mp3" fadein 3
 
@@ -339,6 +337,7 @@ label v9s34_rileyCowgirl:
     hide screen v9s34_rileySexOverlay
 
     scene v9ris21 # FPP. Show Riley, now stood up, smile, mouth open.
+    with dissolve
 
     ri "Damn right I am."
 

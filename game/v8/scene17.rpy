@@ -19,9 +19,9 @@ label msrose_moving:
     u "(Should I check how Penelope's doing?)"
 
     label phn_penelope6:
-        if contact_Penelope.getReplies():
+        if contact_Penelope.replies:
             call screen phone
-        if contact_Penelope.getReplies():
+        if contact_Penelope.replies:
             u "(I should talk to Penelope.)"
             jump phn_penelope6
 

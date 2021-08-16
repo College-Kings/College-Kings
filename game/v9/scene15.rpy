@@ -256,9 +256,9 @@ label v9_thur_room_w_cam_no_punch:
     $ s15KiwiiPost.newComment("Cameron", "Ahhhh! Preview of Saturday's Freshman Brawl!", numberLikes=renpy.random.randint(150, 170), queue=False)
 
     label v9_s15_phoneExit_no_Punch:
-        if s15KiwiiPost.getReplies():
+        if s15KiwiiPost.replies:
             call screen phone
-        if s15KiwiiPost.getReplies():
+        if s15KiwiiPost.replies:
             "(I should check Kiwii.)"
             jump v9_s15_phoneExit_no_Punch
 
