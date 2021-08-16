@@ -310,21 +310,18 @@ screen teamCredits():
             text "UndergradSteve - Game Designer"
             text "KingLui - Project Manager"
             text "OscarSix - Lead Programmer"
-            text "Lew - Lead Artist"
             null height 20
             text "Oskin - Lead Enforcer"
             text "Lucious Lordswill - Lead Writer"
-            text "Hive - Lead Transcriber"
+            text "Cheexmarie - Head Editor"
+            text "Peace - Head Transcriber"
             text "Condy - Quality Assurance Manager"
             text "Jany - Translation Manager"
             null height 20
             text "Maro - Marketing Specialist"
-            text "Cheyenne Alexander - Editor"
 
         vbox:
             spacing 10
-
-            text "Peace - Transcriber"
             text "Wolf - Transcriber"
             text "Jeffly - Transcriber"
             text "Dorkby - Animator"

@@ -1,5 +1,5 @@
 define config.enable_steam = False
-define config.developer = True
+define config.developer = False
 define config.console = True
 define config_debug = False
 define config_censored = False
@@ -35,9 +35,9 @@ label splashscreen:
 label start:
 
     # Get Animation/Transform List
-    show nohardfeelings at achievementShow
-    $ achievementAtList = renpy.get_at_list("nohardfeelings")
-    hide nohardfeelings
+    show no_hard_feelings at achievementShow
+    $ achievementAtList = renpy.get_at_list("no_hard_feelings")
+    hide no_hard_feelings
 
     if config.developer:
         show screen bugTesting_Overlay
