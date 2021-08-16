@@ -188,12 +188,12 @@ label v11_lauren_store:
     scene v11las9 # TPP. Show MC and Lauren walking in the building door, Lauren smiling, mouth closed, MC surprised, mouth open (but not talking, mouth open from the surprise)
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11las10 # TPP. Show MC and Lauren from behind, standing next to each other, 4 tables in shot, one has the judges sitting down, one is empty, the one to the right of MC's seat on the empty table has Jerry sitting down, add other people in the other tables (max 2 per table)
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11las11 # FPP. MC and Lauren standing next to each other, same positioning as v11las10, looking at each other, Lauren slight smile, mouth closed
     with dissolve
@@ -414,7 +414,7 @@ label v11_lauren_store:
     scene v11las19a
     with dissolve
 
-    jud "Exactly. We've only ever had one tie before." 
+    jud "Exactly. We've only ever had one tie before."
 
     scene v11las18f
     with dissolve
@@ -461,10 +461,7 @@ label v11_lauren_store:
     scene v11las18g # FPP. Same as v11las18, Lauren holding and looking at the board, pen on hand, slightly smiling, mouth closed
     with dissolve
 
-    $ timed = True
-    $ timerexit = "v11_answer_slytherin"
-
-    menu:
+    menu (fail_label="v11_answer_slytherin"):
         "Gryffindor":
             $ laurenLike += 1
             $ v11_hp_points += 1
@@ -479,13 +476,9 @@ label v11_lauren_store:
 
             la "*Whisper* Sure is."
 
-            $ timed = False
-
             jump v11_quiz_q2
 
         "Slytherin":
-            $ timed = False
-
             jump v11_answer_slytherin
 
 label v11_answer_slytherin:
@@ -553,10 +546,7 @@ label v11_quiz_q2:
     scene v11las19f # FPP. Same as v11las19d, Judge mouth closed, slight smile
     with dissolve
 
-    $ timed = True
-    $ timerexit = "v11_answer_13"
-
-    menu:
+    menu (fail_label="v11_answer_13"):
         "29":
             $ laurenLike += 1
             $ v11_hp_points += 1
@@ -579,8 +569,6 @@ label v11_quiz_q2:
             jump v11_quiz_q3
 
         "13":
-            $ timed = False
-
             jump v11_answer_13
         
 label v11_answer_13:
@@ -677,6 +665,7 @@ label v11_quiz_q3:
         jud "I will make up rules as necessary."
 
         scene v11las17a
+        with dissolve
 
         u "Be careful man, you're walking on thin ice."
 
@@ -741,6 +730,7 @@ label v11_quiz_q3:
     jud "Please tell me, where is the Order of the Phoenix headquarters located?"
 
     scene v11las18f
+    with dissolve
 
     la "*Whisper* I'm sorry [name], but I really have to use the ladies room. This one is all you."
 
@@ -757,10 +747,7 @@ label v11_quiz_q3:
     scene v11las26 # FPP. MC is looking at the empty board he is going to write on
     with dissolve
 
-    $ timed = True
-    $ timerexit = "v11_answer_ministry"
-
-    menu:
+    menu (fail_label="v11_answer_ministry"):
         "12 Grimmauld Place":
             $ laurenLike += 1
             $ v11_solo_question = True
@@ -771,13 +758,9 @@ label v11_quiz_q3:
 
             u "(This better be right.)"
 
-            $ timed = False
-
             jump v11_quiz_bonus
 
         "Ministry of Magic":
-            $ timed = False
-
             jump v11_answer_ministry
 
 label v11_answer_ministry:
@@ -1006,12 +989,11 @@ label v11_quiz_bonus:
 
     pause 0.75
 
-    if v11_hp_points == 3:
-        $ earn_your_owl = True
-        $ grantAchievement("earn_your_owl")
-
     scene v11las19e
     with dissolve
+
+    if v11_hp_points == 3:
+        $ grant_achievement("earn_your_owl")
 
     jud "For the first time in a very stressful two months, Jerry you have lost. Congratulations Team Hufflepuff!"
 
@@ -1066,6 +1048,7 @@ label v11_quiz_bonus:
     pause 0.75
 
     scene v11las18f
+    with dissolve
 
     la "I'm glad we won, but it feels even better knowing we beat that jerk."
 
@@ -1440,9 +1423,9 @@ label v11_quiz_bonus:
         $ contact_Lauren.newMessage("Sure are.")
 
         label v11s30_PhoneContinuelauren1:
-            if contact_Lauren.getReplies():
+            if contact_Lauren.replies:
                 call screen phone
-            if contact_Lauren.getReplies():
+            if contact_Lauren.replies:
                 u "(I should check my phone.)"
                 jump v11s30_PhoneContinuelauren1
 
@@ -1462,9 +1445,9 @@ label v11_quiz_bonus:
         $ contact_Lauren.newMessage("Sure are.")
 
         label v11s30_PhoneContinuelauren2:
-            if contact_Lauren.getReplies():
+            if contact_Lauren.replies:
                 call screen phone
-            if contact_Lauren.getReplies():
+            if contact_Lauren.replies:
                 u "(I should check my phone.)"
                 jump v11s30_PhoneContinuelauren2
 

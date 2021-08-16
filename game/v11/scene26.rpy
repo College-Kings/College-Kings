@@ -109,9 +109,14 @@ label v11_hotel_bar_wolves:
 
     ro "No thank you, not for me. I was just heading up to my room."
 
+    scene v11hrs6
+    with dissolve
+
     if msrosers:
+        pause 0.5
+
         scene v11hrs8 # TPP Close up of Ms. Rose whispering in MC's ear, Ms. Rose smiling with mouth open
-        with dissolve        
+        with dissolve
 
         ro "*Whisper* Speaking of what happens in London stays in London... Room 105, 10 minutes. Don't be late."
 
@@ -219,7 +224,7 @@ label v11_hotel_bar_wolves:
                 scene v11hrs5a # TPP Same angle as v11hrs5, MC alone at bar, getting off of bar stool to leave
                 with dissolve
 
-                pause 0.5
+                pause 0.75
 
                 scene v11hrs10 # FPP View of bartender from entrance to bar, bartender still behind the bar, smiling with mouth open
                 with dissolve

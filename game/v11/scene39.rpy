@@ -8,42 +8,42 @@ label v11_mc_amber_gokart:
     play music "music/v11/Scene 39/Track Scene 39_1.mp3" fadein 2
     pause 0.75
 
-    scene v11cam2 # FPP. MC looks at amber, mouth opened (walking)
+    scene v11cam2a # FPP. MC looks at amber, mouth opened (walking)
     with dissolve
 
     am "Before we get in here, let's make a bet."
 
-    scene v11cam2a # FPP. Same as 2, mouth closed
+    scene v11cam2 # FPP. Same as 2, mouth closed
     with dissolve
 
     u "A bet?"
 
-    scene v11cam2
+    scene v11cam2a
     with dissolve
 
     am "Yeah, a bet. I want something if I win."
 
-    scene v11cam2a
+    scene v11cam2
     with dissolve
 
     u "But what if you lose?"
 
-    scene v11cam2
+    scene v11cam2a
     with dissolve
 
     am "Then I guess that means you get something."
 
-    scene v11cam2a
+    scene v11cam2
     with dissolve
 
     u "Okay... What are you thinking?"
 
-    scene v11cam2
+    scene v11cam2a
     with dissolve
 
     am "Let's do this - whoever loses has to post a picture of themselves near the Eiffel Tower on Kiwii."
 
-    scene v11cam2a
+    scene v11cam2
     with dissolve
 
     u "Okay? That seems easy enough. *Chuckles*"
@@ -53,7 +53,7 @@ label v11_mc_amber_gokart:
 
     am "Completely nude."
 
-    scene v11cam2a
+    scene v11cam2
     with dissolve
 
     u "What? That's crazy!"
@@ -73,10 +73,10 @@ label v11_mc_amber_gokart:
 
     am "Haha, yeah. I won't be losing, but... yeah. *Chuckles*"
 
-    scene v11cam2a
+    scene v11cam2
     with dissolve
 
-    u "*Sighs* You're brave, Amber.  I'll give you that, but I'm telling you right now... You're going to regret this."
+    u "*Sighs* You're brave, Amber. I'll give you that, but I'm telling you right now... You're going to regret this."
 
     scene v11cam2b
     with dissolve
@@ -101,12 +101,12 @@ label v11_mc_amber_gokart:
     scene v11cam4
     with dissolve
 
-    u "I can't remember...Maybe once when I was younger."
+    u "I can't remember... Maybe once when I was younger."
 
     scene v11cam4b # FPP. Same as 4, smile on her face, mouth opened
     with dissolve
 
-    am "Mhmm, right.... *Chuckles*"
+    am "Mhmm, right... *Chuckles*"
 
     scene v11cam5 # TPP. MC and amber meet the track clerk on the track
     with dissolve
@@ -146,7 +146,7 @@ label v11_mc_amber_gokart:
     scene v11cam6b
     with dissolve
 
-    clerk "Like, um.  Are you guys a couple?"
+    clerk "Like, um... Are you guys a couple?"
 
     scene v11cam6c 
     with dissolve
@@ -251,9 +251,9 @@ label v11_mc_amber_gokart:
     scene v11cam7
     with dissolve
 
-    u "Wow. This bet just got way more serious than I thought it'd  be."
+    u "Wow. This bet just got way more serious than I thought it'd be."
 
-    scene v11cam7
+    scene v11cam7a
     with dissolve
 
     am "If it wasn't a serious bet there'd be no point in having it. But don't worry, if I lose you get to take my picture too. Same rules for both of us."
@@ -415,7 +415,7 @@ label v11_mc_amber_gokart:
     scene v11cam14 # FPP. looking at amber, smile on her face, mouth opened
     with dissolve
 
-    am "Haha, we look like we're getting ready to rob a bank. I'm pretty sure we could if we really wanted to, especially here in another country, as students on a trip. No one would suspect us, you know that... right?" 
+    am "Haha, we look like we're getting ready to rob a bank. I'm pretty sure we could if we really wanted to, especially here in another country, as students on a trip. No one would suspect us, you know that... right?"
     am "I wonder who else we could get in on it... maybe Riley. *Chuckles* If anything went south we could use her as the fall guy. She's hot and all, but definitely the perfect fall guy."
 
     menu:
@@ -539,7 +539,7 @@ label v11_mc_amber_gokart:
     scene v11cam17c # FPP. MC looking at clerk, clerk looking at Amber, Clerk mouth open, slight smile
     with dissolve
 
-    clerk "Alright... May the cute one win! Three...two...one...GO!"
+    clerk "Alright... May the cute one win! Three... two... one... GO!"
     
     scene v11cam18 # FPP. Amber kart in front of mc's kart (Location 1 - Close to the starting line)
     with dissolve
@@ -561,10 +561,7 @@ label v11_mc_amber_gokart:
 
     am "Huh? Wait! Why am I slowing down?"
 
-    $ timed = True
-    $ timerexit = "v11_no_overtake1"
-
-    menu:
+    menu (fail_label="v11_no_overtake1"):
         "Overtake Amber":
             $ v11_overtake_points += 1
 
@@ -598,13 +595,9 @@ label v11_mc_amber_gokart:
 
             am "I don't like giving people false hope. *Chuckles*"
 
-            $ timed = False
-
             jump v11_race_continue1
 
         "See what's wrong":
-            $ timed = False
-
             jump v11_no_overtake1
 
 label v11_no_overtake1:
@@ -684,10 +677,7 @@ label v11_race_continue1:
     scene v11cam27
     with dissolve
 
-    $ timed = True
-    $ timerexit = "v11_no_overtake2"
-
-    menu:
+    menu (fail_label="v11_no_overtake2"):
         "Riley's here":
             $ v11_overtake_points += 1
 
@@ -739,7 +729,7 @@ label v11_race_continue1:
             scene v11cam31b
             with dissolve
 
-            u "Oh. And the secrets out. *Laughs*"
+            u "Oh. And the secret's out. *Laughs*"
 
             scene v11cam31d # FPP. Same as v11cam31b, Amber's kart even closer
             with dissolve
@@ -756,13 +746,9 @@ label v11_race_continue1:
 
             am "Cause I got the juice! *Laughs*"
 
-            $ timed = False
-
             jump v11_race_continue2
 
-        "There's something in your hair":
-            $ timed = False
-            
+        "There's something in your hair":       
             jump v11_no_overtake2
 
 label v11_no_overtake2:
@@ -839,10 +825,7 @@ label v11_race_continue2:
 
     u "That's what you think!"
 
-    $ timed = True
-    $ timerexit = "v11_no_overtake3"
-
-    menu:
+    menu (fail_label="v11_no_overtake3"):
         "Sharp turn":
             $ v11_overtake_points += 1
 
@@ -871,13 +854,9 @@ label v11_race_continue2:
 
             pause 0.75
 
-            $ timed = False
-
             jump v11_race_continue3
 
         "Steady":
-            $ timed = False
-
             jump v11_no_overtake3
 
 label v11_no_overtake3:
@@ -1059,7 +1038,7 @@ label v11_race_continue3:
             scene v11cam42d
             with dissolve
 
-            u "Don't \"just say\" anything. Let's go Amber."
+            u "Don't \"just say\" anything. Let's go, Amber."
 
             scene v11cam43 # TPP. Show MC walking towards the entrance, pulling Amber by the hand, Amber not moving, looking surprised, mouth closed, MC angry, mouth closed
             with dissolve
@@ -1074,7 +1053,9 @@ label v11_race_continue3:
             scene v11cam45 # TPP. Show Amber kissing MC, he is surprised
             with dissolve
 
-            pause
+            play sound "sounds/kiss.mp3"
+
+            pause 1.25
 
             scene v11cam42e
             with dissolve
@@ -1095,6 +1076,11 @@ label v11_race_continue3:
             with dissolve
 
             pause 0.75
+
+            scene v11cam2f # FPP. Same as v11cam2d, different pose
+            with fade
+
+            u "At least we both had a good time, right?"
 
         "Let her handle it":
             scene v11cam14f
@@ -1119,7 +1105,7 @@ label v11_race_continue3:
             pause 0.75
 
             scene v11cam2d # FPP. Same as v11cam2, Amber slight smile, mouth closed, different pose
-            with dissolve
+            with fade
 
             u "I can't lie, that was pretty fucking hot."
 
@@ -1133,10 +1119,10 @@ label v11_race_continue3:
 
             u "He doesn't know what the fuck he's talking about, Amber. You know that."
 
-    scene v11cam2f # FPP. Same as v11cam2d, different pose
-    with dissolve
+            scene v11cam2f # FPP. Same as v11cam2d, different pose
+            with dissolve
 
-    u "At least we both had a good time, right?"
+            u "At least we both had a good time, right?"
 
     scene v11cam2g # FPP. Same as v11cam2f, mouth open
     with dissolve

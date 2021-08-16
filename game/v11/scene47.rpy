@@ -24,20 +24,20 @@ label v11_walking_back:
 
     play sound "sounds/vibrate.mp3"
 
+    $ contact_Jenny.newImgMessage("images/v11/Scene 47/jennynude.webp", queue=False) # Jenny nude pic (selfie or pic in a mirror)
+    $ contact_Jenny.newMessage("OMG, I'M SO SORRY!", queue=False)
+    $ contact_Jenny.newMessage("I DID NOT MEAN TO SEND THAT!", queue=False)
+    $ contact_Jenny.addReply("Haha, don't worry about it.")
+
     u "(Wow... It's been so long since I've gotten a text, I forgot I even had this thing. *Chuckles*)"
 
     scene v11wb3 # TPP. Same position as v11wb2, show MC looking down at his phone, slightly surprised, mouth closed
     with dissolve
 
-    $ contact_Jenny.newImgMessage("images/v11/Scene 47/jennynude.webp", queue=False) # Jenny nude pic (selfie or pic in a mirror)
-    $ contact_Jenny.newMessage("OMG, I'M SO SORRY!")
-    $ contact_Jenny.newMessage("I DID NOT MEAN TO SEND THAT!")
-    $ contact_Jenny.addReply("Haha, don't worry about it.")
-
     label v11s47_PhoneContinueJenny:
-        if contact_Jenny.getReplies():
+        if contact_Jenny.replies:
             call screen phone
-        if contact_Jenny.getReplies():
+        if contact_Jenny.replies:
             u "(I should check my phone.)"
             jump v11s47_PhoneContinueJenny
 

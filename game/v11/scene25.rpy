@@ -7,7 +7,7 @@ label v11_hotel_bar:
     scene v11hob1 # TPP Show MC getting on to a stool at the hotel bar
     with dissolve
     play music "music/v11/Scene 25/Track Scene 25.mp3" fadein 2
-    pause 0.5
+    pause 0.75
 
     scene v11hob2 # FPP Show bartender, mouth open
     with dissolve
@@ -29,16 +29,15 @@ label v11_hotel_bar:
             scene v11hob3 # FPP Show beer on the bar
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
         "Something fruity":
-            $ fruity = True
-            $ grantAchievement("fruity")
             $ v11s25_beer = False
 
             scene v11hob2a
             with dissolve
 
+            $ grant_achievement("fruity")
             u "Something fruity."
 
             scene v11hob2
@@ -49,9 +48,9 @@ label v11_hotel_bar:
             scene v11hob3a # FPP Show fruity cocktail on the bar
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
-    if joshmad: # Josh mad, so didn't come to Europe
+    if not josh_europe: # Josh mad, so didn't come to Europe
         if v11s25_beer:
             scene v11hob4 # TPP Show MC taking a drink of beer
             with dissolve

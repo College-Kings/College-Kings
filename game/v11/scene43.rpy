@@ -7,7 +7,7 @@ label v11_at_the_bank:
     scene v11bank1 # TPP Show Amber, Riley, MC, Ryan, Ms. Rose, and Nora arriving at the bank, bank teller is waiting and waiving to them
     with fade
     play music "music/v11/Scene 43/Track Scene 43.mp3" fadein 2
-    pause 0.5
+    pause 1
     
     scene v11bank1a # TPP Same angle as v11bank1, bank teller's mouth open
     with dissolve
@@ -90,7 +90,7 @@ label v11_at_the_bank:
 
     bank "Ah yes, the others must be in Jerry's group."
 
-    if not laurenmad:
+    if not (v11_aubrey_sex and laurenrs):
         scene v11bank3b # FPP Same angle as v11bank3, bank teller smiling with mouth closed
         with dissolve
 
@@ -152,7 +152,7 @@ label v11_at_the_bank:
     scene v11bank5 # TPP Show bank teller leading the group into the bank vault
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11bank6 # FPP Show bank teller, in vault, smiling with mouth open
     with dissolve
@@ -470,7 +470,7 @@ label v11_at_the_bank:
     scene v11bank15 # TPP Show MC and Riley leaving vault, both look confused
     with dissolve
 
-    pause 0.5
+    pause 1
 
     scene v11bank16 # FPP Show Amber sitting in secluded area, bank teller standing in front of her, bank teller looks angry with mouth open
     with dissolve
@@ -561,7 +561,7 @@ label v11_at_the_bank:
             with dissolve
 
             am "*Laughs* I'm sorry... I can't hold it in any longer. I can't believe you actually thought we were going to rob a bank in plain daylight."
-            am "*Laughs* We were just bored of your little vault tour and started joking around. You took it way too seriously, dude."
+            am "*Laughs* We were just bored of your little vault tour and started joking around. You took it way too seriously, ma'am."
 
             scene v11bank18
             with dissolve
@@ -602,7 +602,7 @@ label v11_at_the_bank:
 
     am "If I planned on robbing a bank it wouldn't be one in London. The money ain't worth it compared to ours. *Laughs*"
 
-    scene v11bank18d # FPP Same angle as v11bank18, bank teller with a small, relieved smile,  mouth open
+    scene v11bank18c # FPP Same angle as v11bank18, bank teller with a small, relieved smile, mouth open
     with dissolve
 
     bank "Haha, wow... Well, at least you all learned something during the tour."
@@ -612,7 +612,7 @@ label v11_at_the_bank:
 
     ri "See? All fun and games."
 
-    scene v11bank18d
+    scene v11bank18c
     with dissolve
 
     bank "*Sighs* I wish I had the fun and youthful spirit you all have. Although, no more jokes about robbing banks, okay?"
@@ -622,7 +622,7 @@ label v11_at_the_bank:
 
     ro "Is everything alright?"
 
-    scene v11bank18d
+    scene v11bank18
     with dissolve
 
     bank "You have very imaginative students, but they are free to go. I apologize for cutting the end of the tour short."
@@ -633,7 +633,7 @@ label v11_at_the_bank:
     ro "Will someone please explain to me exactly what has happened?"
 
     if msrosers:
-        scene v11bank18d
+        scene v11bank18
         with dissolve
 
         bank "I'd really like to get the rest of the group situated, I shouldn't have left my post. I can get in a lot of trouble for leaving a tour group in the vault, cameras or not. *Chuckles*"
@@ -655,10 +655,10 @@ label v11_at_the_bank:
 
         scene v11bank23 # TPP Show Ms. Rose pushing MC up against a wall and making out with him
         with dissolve
-        
-        pause 0.5
 
         play sound "sounds/kiss.mp3"
+        
+        pause 1
 
         scene v11bank23a # TPP Same angle as v11bank23a, Ms. Rose leaning back from kissing MC, she is smiling with mouth open
         with dissolve
@@ -673,10 +673,10 @@ label v11_at_the_bank:
         scene v11bank24 # FPP Show view of MC entering the bank lobby, where everyone else is waiting for him
         with dissolve
 
-        pause 0.5
+        pause 1
     
     else:
-        scene v11bank18d
+        scene v11bank18
         with dissolve
 
         bank "I'd like to get the rest of the group situated, I shouldn't have left my post. I can get in a lot of trouble for leaving a tour in the vault, cameras or not. *Chuckles*"
@@ -689,12 +689,12 @@ label v11_at_the_bank:
         scene v11bank25 # TPP Amber, Riley, Ms. Rose, and bank teller leaving the area, MC following
         with dissolve
 
-        pause 0.5
+        pause 1
         
         scene v11bank24
         with dissolve
 
-        pause 0.5
+        pause 1
 
     scene v11bank26 # FPP Show Mr. Lee standing by Ms. Rose, they are looking at each other, both smiling Mr. Lee's mouth open
     with dissolve
@@ -734,8 +734,8 @@ label v11_at_the_bank:
     scene v11bank27 # FPP Show Mr. Lee standing in the middle of the lobby addressing the students
     with dissolve
 
-    lee "Alright students, you have two choices. Students that go back with me will be enjoying a bit sightseeing while we take a nice walk back,"
-    lee "and the students that choose to go with Ms. Rose will be riding the underground back to the hotel."
+    lee "Alright students, you have two choices. Students that go back with me will be enjoying a bit sightseeing while we take a nice walk back."
+    lee "And the students that choose to go with Ms. Rose will be riding the underground back to the hotel."
 
     scene v11bank27a # FPP Same as v11bank27, Mr. Lee's mouth closed
     with dissolve
@@ -748,12 +748,12 @@ label v11_at_the_bank:
             scene v11bank28 # TPP Show MC following Mr. Lee out of the bank
             with dissolve
 
-            pause 0.5
+            pause 1
 
             scene v11bank29 # TPP Show Mr. Lee, Nora, Imre, Riley, Amber, and MC walking along the sidewalk
             with fade
 
-            pause 0.5
+            pause 0.75
             stop music fadeout 3
             jump v11_nora_lingerie
 
@@ -764,16 +764,16 @@ label v11_at_the_bank:
             scene v11bank28a # TPP Show Ms. Rose, Nora, Amber, Riley, and MC leaving the bank
             with dissolve
 
-            pause 0.5 
+            pause 1 
             
             scene v11bank30 # TPP Show Ms. Rose, Nora, Amber, Riley, and MC heading down into the underground
             with fade
 
-            pause 0.5
+            pause 0.75
             
             scene v11bank31 # TPP Show Ms. Rose, Nora, Amber, Riley, and MC getting on to a train in the underground
             with fade
 
-            pause 0.5
+            pause 0.75
             stop music fadeout 3
             jump v11_rose_underground

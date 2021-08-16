@@ -5,7 +5,7 @@
 label v11_chloe_sex_scene:
     scene v11css1 # TPP. Mc and chloe removing their clothes
     with dissolve
-    play music "music/v11/Scene 41b/Track Scene 41b_1.mp3" fadein 2
+    play music "music/V10/Scene 17/Track Scene 17_2.mp3" fadein 2
     pause
 
     scene v11css1a # TPP. Chloe turning chloe against the wall kissing her neck
@@ -16,7 +16,7 @@ label v11_chloe_sex_scene:
     image v11chsd2 = Movie(play="images/v11/Scene 41b/v11chsd2.webm", loop=True, image="images/v11/Scene 41b/v11chsd2Start.webp", start_image="images/v11/Scene 41b/v11chsd2Start.webp") # Chloe standing doggy
     image v11chsd2f = Movie(play="images/v11/Scene 41b/v11chsd2f.webm", loop=True, image="images/v11/Scene 41b/v11chsd2Start.webp", start_image="images/v11/Scene 41b/v11chsd2Start.webp") # Chloe standing doggy spedup
 
-    pause 0.8
+    pause 1.25
 
     scene v11chsd # ignore as animation
     with dissolve
@@ -87,7 +87,7 @@ label v11_chloe_sex_scene:
     scene v11css1e # TPP. MC laying chloe on her back on the bed with her legs off the bed
     with dissolve
 
-    pause 0.8
+    pause 1.25
 
     image v11chlf = Movie(play="images/v11/Scene 41b/v11chlf.webm", loop=True, image="images/v11/Scene 41b/v11chlfStart.webp", start_image="images/v11/Scene 41b/v11chlfStart.webp") # MC holds Chloe's waist while her legs are off the bed wrapped around him
     image v11chlff = Movie(play="images/v11/Scene 41b/v11chlff.webm", loop=True, image="images/v11/Scene 41b/v11chlfStart.webp", start_image="images/v11/Scene 41b/v11chlfStart.webp") # MC holds Chloe's waist while her legs are off the bed wrapped around him spedup
@@ -160,7 +160,7 @@ label v11_chloe_sex_scene:
     scene v11css4 # FPP. MC cums on chloe's chest
     with flash
 
-    pause 0.75
+    pause 1.5
 
     scene v11css5 # FPP. Chloe stands up to mc, cum still on her chest, mouth opened
     with dissolve
@@ -211,12 +211,12 @@ label v11_chloe_sex_scene:
     scene v11css8 # TPP. Chloe shutting of the light, mc in bed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11css9 # TPP. Chloe and MC in bed, MC big spooning chloe
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11css10 # TPP. MC still big spooning chloe, chloe looking back, mouth opened
     with dissolve
