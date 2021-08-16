@@ -51,6 +51,7 @@ screen phoneTemplate():
     add "images/phonescreen.webp"
 
     if renpy.get_screen("phone"):
+        # Click background to close phone
         button:
             if freeRoam:
                 action [Hide("tutorial"), Hide("phone")]
@@ -64,6 +65,7 @@ screen phoneTemplate():
             else:
                 action [Hide("tutorial"), Return()]
 
+    # Button to prevent phone closing on phone ui
     button:
         align (0.5, 0.5)
         xysize (400, 800)

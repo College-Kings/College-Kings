@@ -1,6 +1,17 @@
 init python:
     class KiwiiPost:
-        def __init__(self, user, img, message="", mentions=None, numberLikes=renpy.random.randint(250, 500), comments=None):
+        """
+        Creates a post for the in game phone app, Kiwii
+
+        Attributes:
+            user (str): 
+            img (str): 
+            message (str, optional):
+            mentions (list, optional): 
+            numberLikes (int, optional):
+        """
+
+        def __init__(self, user, img, message="", mentions=None, numberLikes=renpy.random.randint(250, 500)):
             self.user = user
             self.img = "images/phone/kiwii/posts/{}".format(img)
             self.message = message
@@ -12,17 +23,26 @@ init python:
             self.numberLikes = numberLikes
             self.liked = False
 
-            if comments == None: self.sentComments = []
-            else: self.sentComments = comments
-
+            self.sentComments = []
             self.pendingComments = []
-            self.username = self.getUsername()
-            self.profilePicture = self.getProfilePicture()
 
             kiwiiPosts.append(self)
 
             kiwiiApp.unlock()
             kiwiiApp.notification = True
+
+        @property
+        def username(self):
+            return kiwiiUsers[self.user]["username"]
+
+        @property
+        def profile_picture(self):
+            return kiwiiUsers[self.user]["profilePicture"]
+
+        @property
+        def replies(self):
+            try: return self.sentComments[-1].replies
+            except (AttributeError, IndexError): return []
 
         def toggleLike(self):
             self.liked = not self.liked
@@ -72,23 +92,11 @@ init python:
 
             # Send next queued message(s)
             try:
-                while not self.getReplies():
+                while not self.replies:
                     self.sentComments.append(self.pendingComments.pop(0))
             except IndexError: pass
 
-        def getUsername(self):
-            try:
-                return kiwiiUsers[self.user]["username"]
-            except KeyError: 
-                return None
-
-        def getProfilePicture(self):
-            try:
-                return kiwiiUsers[self.user]["profilePicture"]
-            except KeyError:
-                return None
-
-        def getMessage(self):
+        def get_message(self):
             usernames = [kiwiiUsers[mention]["username"] for mention in self.mentions]
 
             message = ", @".join(usernames)
@@ -99,10 +107,6 @@ init python:
 
         def removePost(self):
             kiwiiPosts.remove(self)
-
-        def getReplies(self):
-            try: return self.sentComments[-1].replies
-            except Exception: return False
 
     class KiwiiComment(KiwiiPost):
         def __init__(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None):
@@ -115,10 +119,16 @@ init python:
             else: self.mentions = []
 
             self.liked = False
-            self.replies = []
+            self._replies = []
             self.reply = None
-            self.username = self.getUsername()
-            self.profilePicture = self.getProfilePicture()
+
+        @property
+        def replies(self):
+            return self._replies
+
+        @replies.setter
+        def replies(self, x):
+            self._replies = x
 
     class KiwiiReply(KiwiiComment):
         def __init__(self, message, func=None, numberLikes=renpy.random.randint(250, 500), mentions=None, disabled=False):
@@ -146,8 +156,6 @@ init python:
                 total += comment.numberLikes
 
         return total
-
-    kiwiiUsers = kiwii_users()
 
 init -100:
     define profilePictures = [ "images/phone/Kiwii/profilePictures/mcpp1.webp", "images/phone/Kiwii/profilePictures/mcpp2.webp", "images/phone/Kiwii/profilePictures/mcpp3.webp", "images/phone/Kiwii/profilePictures/mcpp4.webp" ]
@@ -262,8 +270,8 @@ screen kiwiiApp():
                         xoffset 20
                         yoffset 20
 
-                        add Transform(post.getProfilePicture(), zoom=0.05)
-                        text post.getUsername() style "kiwii_ProfileName" yalign 0.5
+                        add Transform(post.profile_picture, size=(55, 55))
+                        text post.username style "kiwii_ProfileName" yalign 0.5
 
                     vbox:
                         align(0.5, 0.5)
@@ -273,7 +281,7 @@ screen kiwiiApp():
                         imagebutton:
                             idle Transform(post.img, zoom=0.17)
                             action Show("kiwii_image", img=post.img)
-                        text post.getMessage() style "kiwii_CommentText" xalign 0.5
+                        text post.get_message() style "kiwii_CommentText" xalign 0.5
 
                     hbox:
                         xoffset 20
@@ -331,14 +339,14 @@ screen kiwiiPost(post):
                             hbox:
                                 spacing 10
 
-                                add Transform(comment.getProfilePicture(), zoom=0.05)
-                                text comment.getUsername() style "kiwii_ProfileName" yalign 0.5
+                                add Transform(comment.profile_picture, size=(55, 55))
+                                text comment.username style "kiwii_ProfileName" yalign 0.5
 
                             hbox:
                                 xsize 275
                                 spacing 5
 
-                                text comment.getMessage() style "kiwii_CommentText"
+                                text comment.get_message() style "kiwii_CommentText"
 
                             hbox:
                                 spacing 5
@@ -351,13 +359,13 @@ screen kiwiiPost(post):
                                     action Function(comment.toggleLike)
                                 text "[comment.numberLikes]" style "kiwii_LikeCounter" yalign 0.5
 
-    if post.getReplies():
+    if post.replies:
         vbox:
             xpos 1200
             yalign 0.84
             spacing 15
 
-            for reply in post.getReplies():
+            for reply in post.replies:
                 textbutton reply.message:
                     text_style "kiwii_ReplyText"
                     if reply.disabled:
@@ -393,8 +401,8 @@ screen liked_kiwii():
                         xoffset 20
                         yoffset 20
 
-                        add Transform(post.getProfilePicture(), zoom=0.05)
-                        text post.getUsername() style "kiwii_ProfileName" yalign 0.5
+                        add Transform(post.profile_picture, size=(55, 55))
+                        text post.username style "kiwii_ProfileName" yalign 0.5
 
                     vbox:
                         align(0.5, 0.5)
