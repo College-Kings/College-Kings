@@ -228,7 +228,7 @@ label v10_emily_course:
 
                         u "Of course."
 
-                        jump v10_late_alley            
+                        jump v10_late_alley
 
                     "Leave":
                         $ addPoint("tm")
@@ -454,7 +454,7 @@ label v10_emily_course:
 
                         u "Of course."
 
-                        jump v10_late_alley            
+                        jump v10_late_alley
 
                     "Leave":
                         $ addPoint("tm")

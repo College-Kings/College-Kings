@@ -212,29 +212,28 @@ label v10_ms_rose_fight:
     menu:
         "Make a move":
             $ v10_ms_r_kiss = True
-            $ kiss_teacher = True
-            $ grantAchievement("forbidden_romance")
             $ addPoint("bf", 1)
             scene v10msf5a # TPP. same camera as v10msf5, Show MS rose. Touching MC on the cheek, smiling,MC hand on Ms Rose Waist.
             with dissolve
 
-            pause 0.5
+            pause 1
 
             scene v10msf5b # TPP. same camera as v10msf5, Show MS rose. hand on MC's shoulder, Now body to body with MC, MC hand on Ms. Rose's back.
             with dissolve
 
-            pause 0.5
+            pause 1
 
             play sound "sounds/kiss.mp3"
 
             scene v10msf6 # FPP. Show Close up of Ms. Rose and MC kissing.
             with dissolve
 
-            pause
+            pause 1.25
 
             scene v10msf5c # TPP. same camera as v10msf5, Show MS rose. Now having stepped back, embarrased smile, mouth open
             with dissolve
 
+            $ grant_achievement("forbidden_romance")
             ro "Wow uhm... thank you [name]. For everything. I need to get back to work. Really, thank you."
 
             scene v10msf4c # FPP. same camera as v10msf4, Now Show Ms Rose closing the door.

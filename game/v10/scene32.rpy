@@ -31,9 +31,9 @@ label v10_tues_room_night:
                 contact_Lauren.addReply("They will be now.")
 
             label v10s32_phoneCheckW:
-                if contact_Lauren.getReplies():
+                if contact_Lauren.replies:
                     call screen phone
-                if contact_Lauren.getReplies():
+                if contact_Lauren.replies:
                     u "(I should reply to Lauren)"
                     jump v10s32_phoneCheckW
 
@@ -93,9 +93,9 @@ label v10_tues_room_night:
                 contact_Lauren.addReply("They will be now.")
 
             label v10s32_phoneCheckA:
-                if contact_Lauren.getReplies():
+                if contact_Lauren.replies:
                     call screen phone
-                if contact_Lauren.getReplies():
+                if contact_Lauren.replies:
                     u "(I should reply to Lauren)"
                     jump v10s32_phoneCheckA
 
