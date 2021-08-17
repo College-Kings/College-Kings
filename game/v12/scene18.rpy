@@ -1725,6 +1725,8 @@ label v12s18_bet: # END OF FREE ROAM
 
     u "Oh my god... *Chuckles*"
 
+    #call screen phone
+
     scene v12slpbet3b
     with dissolve
 
