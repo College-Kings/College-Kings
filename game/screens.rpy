@@ -746,8 +746,7 @@ screen file_slots(title):
                     style_prefix "slot"
                     align (0.5, 0.5)
 
-                    if file_compatable or config.developer:
-                        action FileAction(1)
+                    action FileAction(1)
 
                     has vbox
 
@@ -796,8 +795,7 @@ screen file_slots(title):
                             file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
 
                         button:
-                            if file_compatable or config.developer:
-                                action FileAction(slot)
+                            action FileAction(slot)
 
                             has vbox
 
