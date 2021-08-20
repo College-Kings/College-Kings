@@ -482,6 +482,8 @@ default v12s7_killList = set()
 default v12_msrose_sex = False
 default v11_lindsey_run = False
 default v12_help_chris = 0
+default norars = False
+default lindseyrs = False
     # scene7
 default v12s7_lauren = False
 default v12s7_emily = False
