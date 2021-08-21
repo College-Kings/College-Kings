@@ -129,7 +129,7 @@ init python:
     Achievement("best_for_last", "Charli is your final kill")
     Achievement("weapons_down", "Don't kill anyone")
     Achievement("killing_spree", "Kill enough people to win the game")
-    Achievement("mass_casualties", "Kill everyone")
+    Achievement("mass_casualties", "Kill everyone (including optional characters)")
         #Back to v12
     Achievement("throw_her_to_the_lions", "Encourage Lindsey to run but then tell Aubrey and Chloe about it")
     Achievement("you_may_kiss_the_bride", "Kiss Nora at the altar")
