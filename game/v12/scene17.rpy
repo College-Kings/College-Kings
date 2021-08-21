@@ -665,7 +665,7 @@ label v12_escape_room:
     scene v12esr24a
     with dissolve
 
-    li "I think we might have too..."
+    li "I think we might have to..."
 
     scene v12esr24
     with dissolve
@@ -1252,6 +1252,8 @@ label v12_after_sex:
     stop music fadeout 3
     play music "music/v12/Scene 17/Track Scene 17_5.mp3" fadein 2
 
+    play sound "sounds/lever.mp3"
+
     scene v12esr17i # FPP. Same as v12esr17, lights dim
     with dissolve
 
@@ -1412,7 +1414,7 @@ label v12_after_sex:
     scene v12esr52a # FPP. Same as v12esr52, Imre smiling, mouth open
     with dissolve
 
-    imre "*Laughs* Weeb"
+    imre "*Laughs* Weeb!"
 
     scene v12esr49
     with dissolve
@@ -1497,16 +1499,16 @@ label v12_after_sex:
 
     escman "*Dry tone* No, thank you."
 
+    #scene v12esr7c # FPP. Same as v12esr7, Lindsey looking at MC, Lindsey slight smile, mouth closed
+    #with dissolve
+
+    #u "Let's get back to the hotel."
+
     scene v12esr59 # FPP. MC looking as Aubrey and Imre walk out the escape room building, Aubrey looking back, mouth open, disgusted expression, mouth open
     with dissolve
 
-    au "Weirdo..."
-
-    scene v12esr7c # FPP. Same as v12esr7, Lindsey looking at MC, Lindsey slight smile, mouth closed
-    with dissolve
-
-    u "Let's get back to the hotel"
-
+    au "Weirdo..."   
+    
     scene v12esr60 # TPP. Show MC and Lindsey walking out of the escape room building, Aubrey and Imre waiting for them, all slightly smiling, mouths closed
     with dissolve
 
