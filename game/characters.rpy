@@ -125,3 +125,6 @@ define character.nurse = Character("Nurse", who_color="#dbfffe", who_outlines=[ 
 define character.barber = Character("Barber", who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.greeter = Character("Greeter", who_color="#0055ff", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.tattoo = Character("Tattoo Artist", who_color="#ff1694", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+
+# 13.0
+define character.luuk = Character("Luuk", who_color="#ff1694", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
