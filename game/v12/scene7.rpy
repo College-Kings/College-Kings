@@ -3046,7 +3046,7 @@ label v12s7_lindsey2:
             scene v12ferli3a
             with dissolve
 
-            u "Just start talking to people about how vulnerable Charlie is and see who takes the bait."
+            u "Just start talking to people about how vulnerable Charli is and see who takes the bait."
 
     li "Hmmm, not a bad idea."
 
