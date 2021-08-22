@@ -486,7 +486,8 @@ label after_load:
         except NameError: v11_hp_points = 0
         try: political_strategist
         except NameError: political_strategist = False
-
+        try: emily_europe
+        except NameError: emily_europe = False
 
 
 
