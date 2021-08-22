@@ -393,9 +393,15 @@ label v12s7fr:
     pause
     hide murder_tutorial2
 
-    show murder_tutorial3 at truecenter
-    pause
-    hide murder_tutorial3
+    if (v12s7_victims == 16) or (v12s7_victims == 15 and joinwolves):
+        show murder_tutorial3 at truecenter
+        pause
+        hide murder_tutorial3
+    else:
+        show murder_tutorial3b at truecenter
+        pause
+        hide murder_tutorial3b
+
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
