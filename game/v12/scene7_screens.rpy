@@ -745,9 +745,10 @@ screen v12s7_bathroom():
     imagemap:
         if aubrey in v12s7_killList or not v12s7_aubrey_moved:
             idle "images/v12/Scene 7/Screens/Navigation 25b.webp" # No one
+            hover "images/v12/Scene 7/Buttons/nav 25b.webp"
         else:
             idle "images/v12/Scene 7/Screens/Navigation 25a.webp" # Aubrey
-        hover "images/v12/Scene 7/Buttons/nav 25.webp"
+            hover "images/v12/Scene 7/Buttons/nav 25.webp"
     
         if not (aubrey in v12s7_killList or not v12s7_aubrey_moved):
             hotspot (657, 196, 483, 878):
@@ -756,7 +757,11 @@ screen v12s7_bathroom():
                 else:
                     action Jump("v12s7_aubrey2") # Aubrey
                 
-        hotspot (1836, 79, 82, 959) action Show("v12s7_left_gallery_front")
+            hotspot (1836, 79, 82, 959) action Show("v12s7_left_gallery_front")
+
+        else:
+            hotspot (339, 983, 1198, 97) action Show("v12s7_left_gallery_front")
+
 
     use v12s7_minimap(location="md_bathroom")
 
