@@ -348,7 +348,7 @@ screen v12s7_left_walkway_front():
                 else:
                     action Jump("v12s7_penelope1") #penelope
         
-        hotspot (293, 0, 1385, 130) action Show("v12s7_foyer")
+        hotspot (1003, 288, 251, 492) action Show("v12s7_foyer")
         hotspot (1693, 73, 140, 787) action Show("v12s7_rear_gallery")
         hotspot (353, 984, 1158, 96) action Show("v12s7_left_walkway_middle")
 
