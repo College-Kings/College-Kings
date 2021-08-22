@@ -752,7 +752,10 @@ label v12s7_aubrey2:
             scene v12ferauh1a
             with dissolve
 
-            u "We'll catch up later. I've got things to see and people to kill."
+            if len(v12s7_killList) == v12s7_victims:
+                u "We'll catch up later. I've got things to see still."
+            else:
+                u "We'll catch up later. I've got things to see and people to kill."
 
             scene v12ferauh1
             with dissolve
