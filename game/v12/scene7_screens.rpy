@@ -781,6 +781,7 @@ screen v12s7_captains_room():
                     action Call("v12s7_free_roam_spoken", backgroundImg="v12ferlich1", returnScreen="v12s7_captains_room", seenList=[lindsey, charli], victim=lindsey)
                 else:
                     action Jump("v12s7_lindsey_charlie1") # Lindsey & Charli
+            hotspot (1824, 79, 95, 957) action Show("v12s7_left_gallery_front")
 
         elif charli not in v12s7_killList:
             idle "images/v12/Scene 7/Screens/Navigation 26b.webp" # Charli
@@ -791,12 +792,15 @@ screen v12s7_captains_room():
                     action Call("v12s7_free_roam_spoken", backgroundImg="v12fercha1", returnScreen="v12s7_captains_room", seenList=[], victim=charli)
                 else:
                     action Jump("v12s7_charli2") # Charli
+            hotspot (1824, 79, 95, 957) action Show("v12s7_left_gallery_front")
 
         else:
             idle "images/v12/Scene 7/Screens/Navigation 26c.webp" # No one
             hover "images/v12/Scene 7/Buttons/nav 26c.webp"
 
-        hotspot (1824, 79, 95, 957) action Show("v12s7_left_gallery_front")
+            hotspot (339, 983, 1198, 97) action Show("v12s7_left_gallery_front")
+
+        
 
     use v12s7_minimap(location="ud_captains_room")
 
