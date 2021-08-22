@@ -775,7 +775,7 @@ label v12s7_aubrey2:
             stop music fadeout 3
             play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
-            call screen v12s7_left_gallery_front
+            call screen v12s7_bathroom
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
