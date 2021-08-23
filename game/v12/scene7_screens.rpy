@@ -574,9 +574,10 @@ screen v12s7_utility():
     imagemap:
         if v12s7_josh and josh not in v12s7_killList:
             idle "images/v12/Scene 7/Screens/Navigation 18a.webp" # Josh
+            hover "images/v12/Scene 7/Buttons/nav 18.webp"
         else:
             idle "images/v12/Scene 7/Screens/Navigation 18b.webp" # No one
-        hover "images/v12/Scene 7/Buttons/nav 18.webp"
+            hover "images/v12/Scene 7/Buttons/nav 18b.webp"
 
         if v12s7_josh and josh not in v12s7_killList:
             hotspot(413, 183, 452, 895):
@@ -584,8 +585,9 @@ screen v12s7_utility():
                     action Call("v12s7_free_roam_spoken", backgroundImg="v12ferjos3", returnScreen="v12s7_utility", seenList=[], victim=josh)
                 else:
                     action Jump("v12s7_josh2") # Josh
-
-        hotspot (1847, 113, 72, 865) action Show("v12s7_right_gallery_front")
+            hotspot (860, 1000, 1060, 80) action Show("v12s7_right_gallery_front")
+        else:
+            hotspot (339, 983, 1198, 97) action Show("v12s7_right_gallery_front")
 
     use v12s7_minimap(location="md_utility")
 
