@@ -4389,6 +4389,8 @@ label v12s7_riley2_amber:
     scene v12feramb3 # TPP. Show mc walking closer
     with dissolve
 
+    pause 1
+
     scene v12feramb4 # FPP. Show riley, neutral face, mouth closed
     with dissolve
 
