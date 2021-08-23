@@ -389,7 +389,7 @@ screen v12s7_left_viewpoint():
     imagemap:
         if riley not in v12s7_killList and chloe not in v12s7_killList and (v12s7_riley2 or not v12s7_riley_moved):
             idle "images/v12/Scene 7/Screens/Navigation 14a.webp" # Chloe and Riley
-            hover "images/v12/Scene 7/Buttons/nav 14amock.webp" # Chloe and Riley
+            hover "images/v12/Scene 7/Buttons/nav 14a.webp" # Chloe and Riley
             hotspot (685, 117, 540, 786):
                 if v12s7_riley3:
                     action Call("v12s7_free_roam_spoken", backgroundImg="v12ferric1", returnScreen="v12s7_left_viewpoint", seenList=[chloe, josh] if josh_europe and not v12s7_josh else [chloe], victim=riley)
@@ -400,7 +400,7 @@ screen v12s7_left_viewpoint():
     
         elif chloe in v12s7_killList and riley not in v12s7_killList and (v12s7_riley2 or not v12s7_riley_moved):
             idle "images/v12/Scene 7/Screens/Navigation 14b.webp" # Riley
-            hover "images/v12/Scene 7/Buttons/nav 14bmock.webp" # Riley
+            hover "images/v12/Scene 7/Buttons/nav 14b.webp" # Riley
             hotspot (835, 191, 361, 772):
                 if v12s7_riley3:
                     action Call("v12s7_free_roam_spoken", backgroundImg="v12ferril1", returnScreen="v12s7_left_viewpoint", seenList=[josh] if josh_europe and not v12s7_josh else [], victim=riley)
@@ -409,7 +409,7 @@ screen v12s7_left_viewpoint():
 
         elif chloe not in v12s7_killList:
             idle "images/v12/Scene 7/Screens/Navigation 14c.webp" # Chloe
-            hover "images/v12/Scene 7/Buttons/nav 14cmock.webp" # Chloe
+            hover "images/v12/Scene 7/Buttons/nav 14c.webp" # Chloe
             hotspot (689, 203, 271, 673):
                 if v12s7_chloe:
                     action Call("v12s7_free_roam_spoken", backgroundImg="v12ferch1", returnScreen="v12s7_left_viewpoint", seenList=[josh] if josh_europe and not v12s7_josh else [], victim=chloe)
@@ -418,9 +418,9 @@ screen v12s7_left_viewpoint():
 
         else:
             idle "images/v12/Scene 7/Screens/Navigation 14d.webp" # No one
-            hover "images/v12/Scene 7/Buttons/nav 14dmock.webp" # No one
+            hover "images/v12/Scene 7/Buttons/nav 14d.webp" # No one
 
-        hotspot (293, 0, 1385, 130) action Show("v12s7_right_viewpoint")
+        hotspot (608, 288, 86, 302) action Show("v12s7_right_viewpoint")
         hotspot (338, 976, 1200, 104) action Show("v12s7_rear_gallery")
 
     use v12s7_minimap(location="md_left_viewpoint")
@@ -436,7 +436,7 @@ screen v12s7_right_viewpoint():
             idle "images/v12/Scene 7/Screens/Navigation 15a.webp" # Josh
         else:
             idle "images/v12/Scene 7/Screens/Navigation 15b.webp" # No one
-        hover "images/v12/Scene 7/Buttons/nav 15mock.webp"
+        hover "images/v12/Scene 7/Buttons/nav 15.webp"
 
         if josh_europe and not v12s7_josh and josh not in v12s7_killList:
             hotspot (729, 375, 451, 545):
@@ -453,7 +453,7 @@ screen v12s7_right_viewpoint():
                     action Jump("v12s7_josh1") # josh
 
         hotspot (382, 972, 1106, 108) action Show("v12s7_rear_gallery")
-        hotspot (293, 0, 1385, 130) action Show("v12s7_left_viewpoint")
+        hotspot (1431, 300, 111, 313) action Show("v12s7_left_viewpoint")
 
     use v12s7_minimap(location="md_right_viewpoint")
 
