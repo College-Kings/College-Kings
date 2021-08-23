@@ -4399,7 +4399,7 @@ label v12s7_riley2_amber:
     scene v12feramb4a # FPP. Same 4, mouth open
     with dissolve
 
-    ri "Uhm...hey."
+    ri "Uhm... hey."
 
     scene v12feramb5 # FPP. Show Amber, mouth open
     with dissolve
