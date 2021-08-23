@@ -660,9 +660,10 @@ screen v12s7_balcony_left():
     imagemap:
         if nora in v12s7_killList:
             idle "images/v12/Scene 7/Screens/Navigation 21b.webp" # No one
+            hover "images/v12/Scene 7/Buttons/nav 21b.webp"
         else:
             idle "images/v12/Scene 7/Screens/Navigation 21a.webp" # Nora
-        hover "images/v12/Scene 7/Buttons/nav 21.webp"
+            hover "images/v12/Scene 7/Buttons/nav 21.webp"
 
         if nora not in v12s7_killList:
             hotspot (507, 152, 282, 926):
@@ -670,8 +671,9 @@ screen v12s7_balcony_left():
                     action Call("v12s7_free_roam_spoken", backgroundImg="v12fernor1", returnScreen="v12s7_balcony_left", seenList=[] if v12s7_aubrey_moved else [riley], victim=nora)
                 else:
                     action Jump("v12s7_nora1") # Nora
-
-        hotspot (850, 1000, 1070, 80) action Show("v12s7_balcony_middle")
+            hotspot (850, 1000, 1070, 80) action Show("v12s7_balcony_middle")
+        else:
+            hotspot (339, 983, 1198, 97) action Show("v12s7_balcony_middle")
     
     use v12s7_minimap(location="md_balcony")
 
@@ -684,9 +686,10 @@ screen v12s7_balcony_right():
     imagemap:
         if aubrey in v12s7_killList or v12s7_aubrey_moved:
             idle "images/v12/Scene 7/Screens/Navigation 22b.webp" # No one
+            hover "images/v12/Scene 7/Buttons/nav 22b.webp"
         else:
             idle "images/v12/Scene 7/Screens/Navigation 22a.webp" # Aubrey
-        hover "images/v12/Scene 7/Buttons/nav 22.webp"
+            hover "images/v12/Scene 7/Buttons/nav 22.webp"
 
         if not (aubrey in v12s7_killList or v12s7_aubrey_moved):
             hotspot (210, 300, 763, 780):
@@ -694,8 +697,9 @@ screen v12s7_balcony_right():
                     action Call("v12s7_free_roam_spoken", backgroundImg="v12ferau1a", returnScreen="v12s7_balcony_right", seenList=[nora], victim=aubrey)
                 else:
                     action Jump("v12s7_aubrey1") # Aubrey
-
-        hotspot (1793, 30, 126, 1020) action Show("v12s7_balcony_middle")
+            hotspot (1793, 30, 126, 1020) action Show("v12s7_balcony_middle")
+        else:
+            hotspot (339, 983, 1198, 97) action Show("v12s7_balcony_middle")
 
     use v12s7_minimap(location="md_balcony")
 
