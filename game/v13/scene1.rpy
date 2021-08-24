@@ -203,7 +203,7 @@ label v13_start:
     scene v13s1_4 # TPP. Show Riley hugging MC
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v13s1_3
     with dissolve
