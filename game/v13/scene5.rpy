@@ -4,10 +4,11 @@
 # Time: Night
 
 label v13s5:
-    scene v13s5_1 # TPP. Show MC and Chloe walking in the hotel corridor, carrying their luggage, Chloe frowning, tired, mouth closed, MC slight smile, mouth closed
-    with dissolve
 
-    pause 1
+    if not chloegf:
+        scene v13s5_1 # TPP. Show MC and Chloe walking in the hotel corridor, carrying their luggage, Chloe frowning, tired, mouth closed, MC slight smile, mouth closed
+        with dissolve
+        pause 1
 
     scene v13s5_2 # TPP. Show MC and Chloe walking into the hotel room, carrying their luggage, Chloe frowning, tired, mouth closed, MC slight smile, mouth closed
     with dissolve
