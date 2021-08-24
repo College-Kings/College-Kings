@@ -45,7 +45,7 @@ label v13s4:
         scene v13s4_5 # TPP. Show MC and Riley walking in hotel lobby stowards the corridor, carrying their luggage, slight smiles, mouths closed
         with dissolve
 
-        u "(I may have been sleeping that entire ride, but it wasn’t very relaxing.)"
+        u "(I may have been sleeping that entire ride, but it wasn't very relaxing.)"
 
         jump v13s5a
 
