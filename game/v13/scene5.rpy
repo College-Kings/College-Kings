@@ -7,17 +7,17 @@ label v13s5:
     scene v13s5_1 # TPP. Show MC and Chloe walking in the hotel corridor, carrying their luggage, Chloe frowning, tired, mouth closed, MC slight smile, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s5_2 # TPP. Show MC and Chloe walking into the hotel room, carrying their luggage, Chloe frowning, tired, mouth closed, MC slight smile, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s5_3 # TPP. Show MC placing down his luggage, slight smile, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s5_4 # FPP. MC looking at Chloe, she is sleeping on her bed
     with dissolve
