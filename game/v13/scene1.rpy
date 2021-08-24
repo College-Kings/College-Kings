@@ -68,7 +68,7 @@ label v13_start:
 
     u "If that's what you wanna call it... *Laughs*"
 
-    u "So...What's the dirty work you have in mind?"
+    u "So... What's the dirty work you have in mind?"
 
     scene v13s1_1a
     with dissolve
