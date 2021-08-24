@@ -130,7 +130,7 @@ label v13_start:
     scene v13s1_1b
     with dissolve
 
-    u "Perfect, I'll keep that in mind. Do you know when we're leaving forAmsterdam? I thought we'd be going early this morning."
+    u "Perfect, I'll keep that in mind. Do you know when we're leaving for Amsterdam? I thought we'd be going early this morning."
 
     scene v13s1_1d
     with dissolve
