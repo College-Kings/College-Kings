@@ -48,11 +48,14 @@ label v13_start:
     scene v13s1_1d # FPP. Same as v13s1_1a, Riley different pose
     with dissolve
 
-    ri "While using that to my advantage, I’m going to distract him for as long as possible. While I'm playing decoy, you get to do the dirty work. *Chuckles*"
-
+    ri "While using that to my advantage, I’m going to distract him for as long as possible."
+    
     scene v13s1_1e # FPP. Same as v13s1_1, Riley rubbing her hands, making an evil face, mouth closed
     with dissolve
+    ri "While I'm playing decoy, you get to do the dirty work. *Chuckles*"
 
+    scene v13s1_1b
+    with dissolve
     u "*Laughs* Okay, I'm also enjoying this, but please don't make that face. I can't take you seriously when you do that… *Chuckles*"
 
     scene v13s1_1d
