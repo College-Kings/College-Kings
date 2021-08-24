@@ -108,7 +108,7 @@ label v13_start:
     scene v13s1_1d
     with dissolve
 
-    ri "I know Charli's been a pain in your ass since the moment you met him, so I didn't think you'd second guess helping. Especially when you consider the fact that he tried framing you."
+    ri "I know Charli's been a pain in your ass since the moment you met him, so I didn't think you'd second-guess helping. Especially when you consider the fact that he tried framing you."
 
     scene v13s1_1b
     with dissolve
