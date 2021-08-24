@@ -48,7 +48,7 @@ label v13_start:
     scene v13s1_1d # FPP. Same as v13s1_1a, Riley different pose
     with dissolve
 
-    ri "While using that to my advantage, I’m going to distract him for as long as possible."
+    ri "While using that to my advantage, I'm going to distract him for as long as possible."
     
     scene v13s1_1e # FPP. Same as v13s1_1, Riley rubbing her hands, making an evil face, mouth closed
     with dissolve
@@ -83,7 +83,7 @@ label v13_start:
     scene v13s1_1d
     with dissolve
 
-    ri "Charli told me back in London that his grandmother gave it to him when he came out to her, so it's extremely special to him. That’s what makes it the perfect target."
+    ri "Charli told me back in London that his grandmother gave it to him when he came out to her, so it's extremely special to him. That's what makes it the perfect target."
 
     scene v13s1_1b
     with dissolve
@@ -193,7 +193,7 @@ label v13_start:
             $ addPoint("bf")
             $ riley.points += 1
 
-            u "It's fine Riley, really. Of course I was pissed at first, it’s a little upsetting to have one of your best friends calling you a liar but… I can’t stay mad at you forever. Apology accepted."
+            u "It's fine Riley, really. Of course I was pissed at first, it's a little upsetting to have one of your best friends calling you a liar but… I can't stay mad at you forever. Apology accepted."
 
             scene v13s1_3c
             with dissolve
@@ -208,7 +208,7 @@ label v13_start:
     scene v13s1_3
     with dissolve
 
-    ri "I promise I’ll make it up to you."
+    ri "I promise I'll make it up to you."
 
     scene v13s1_3a
     with dissolve
@@ -228,7 +228,7 @@ label v13_start:
     scene v13s1_3e # FPP. MC watching Riley walking towards the door, slight smile, mouth closed (if she has her back to MC then ignore the facial expression)
     with dissolve
 
-    u "(Unlimited access to Charli’s room… This is gonna be interesting. *Laughs*)"
+    u "(Unlimited access to Charli's room… This is gonna be interesting. *Laughs*)"
 
     scene v13s1_5 # TPP. Show MC walking out of the cafe, slight smile, mouth closed
     with dissolve
