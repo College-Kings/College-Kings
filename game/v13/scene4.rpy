@@ -75,7 +75,7 @@ label v13s4:
         scene v13s4_6b
         with dissolve
 
-        cl "I'm so tired, [Name]. I woke up way too early this morning and that bus ride was making me sick so I couldn't sleep."
+        cl "I'm so tired, [name]. I woke up way too early this morning and that bus ride was making me sick so I couldn't sleep."
 
         scene v13s4_6d # FPP. Same as v13s4_6c, Chloe frowning, mouth closed
         with dissolve
