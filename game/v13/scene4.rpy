@@ -70,7 +70,7 @@ label v13s4:
         scene v13s4_6c # FPP. Same as v13s4_6b, Chloe slightly annoyed, mouth closed
         with dissolve
 
-        u "Were you just standing there sleep? *Chuckles*"
+        u "Were you just standing there asleep? *Chuckles*"
 
         scene v13s4_6b
         with dissolve
