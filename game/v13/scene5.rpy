@@ -36,14 +36,14 @@ label v13s5:
         scene v13s5_6 # TPP. Show MC tucking Chloe in to sleep
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
         play sound "sounds/kiss.mp3"
 
         scene v13s5_7 # TPP. Show MC kissing Chloe on the forehead
         with dissolve
 
-        pause 0.75
+        pause 1.75
 
     scene v13s5_8 # TPP. Show MC turning the lights off, slight smile, mouth closed
     with dissolve
@@ -53,17 +53,17 @@ label v13s5:
     scene v13s5_9 # TPP. Show MC removing his shirt, room dark, slight smile, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s5_10 # TPP. Show MC getting in his bed, he's in his boxers, slight smile, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s5_11 # TPP. Show MC sleeping
-    with dissolve
+    with fade
 
-    pause 0.75
+    pause 1
 
     scene v13s5_11a # TPP. Same as v13s5_11, different pose
     with dissolve
