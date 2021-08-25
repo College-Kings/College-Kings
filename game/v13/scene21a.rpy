@@ -129,7 +129,7 @@ label v13s21a:
     scene v13s21a_12 # TPP. Camera angle on Mr. Lee's right shoulder, showing back of Mr. Lee's head, showing Charli's face, Charli's hand still on Mr. Lee's left shoulder, Charli smirking mouth open, MC and Riley out of focus in distance behind Charli
     with dissolve
 
-    charli "Look here, Bruce... You have a reputation of being harsh on your students, and  prepare them for success in the tests you provide."
+    charli "Look here, Bruce... You have a reputation of being harsh on your students, and prepare them for success in the tests you provide."
 
     charli "Your students goof off without concern for you or anyone else. They aren’t learning from you any more than they’re learning from me. *Chuckles*"
 
@@ -248,7 +248,7 @@ label v13s21a:
     scene v13s21a_23 # FPP. MC looking at Mr. Lee lifting Charli back onto his feet
     with dissolve
 
-    pause 0.75  
+    pause 0.75
 
     scene v13s21a_23a # FPP. Same as v13s21a_23, Different positioning, Mr. Lee and Charli are further away now, walking away from MC toward Charli's room, Mr. Lee is gripping Charli's arm
     with dissolve

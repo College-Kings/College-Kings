@@ -47,7 +47,7 @@ label v13s15:
     scene v13s15_6 # FPP. MC same positioning as v13s15_4, looking at Chloe, she's in her bed, under her covers, looking at MC, Chloe slightly worried, mouth closed
     with dissolve
 
-    u "I'm sorry, Chlo."
+    u "I'm sorry, Chloe."
 
     scene v13s15_6a # FPP. Same as v13s15_6, Chloe slightly worried, mouth open
     with dissolve

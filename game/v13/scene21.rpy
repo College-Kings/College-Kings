@@ -39,7 +39,7 @@ label v13s21:
 
     luuk "Ha! Smart man. Don't worry about paying me, just say you owe me a favor."
 
-    scene v13s21_2  
+    scene v13s21_2
     with dissolve
 
     u "Fine, I owe you a favor. Where's Charli?"
@@ -129,7 +129,7 @@ label v13s21:
     scene v13s21_9b
     with dissolve
 
-    u "Oh, I see. You think I'm too stupid?" 
+    u "Oh, I see. You think I'm too stupid?"
     u "So, I wouldn't be smart enough to get paid for taking tests and writing finals for other students? That actually makes a lot of sense… You’re smart I guess, I’m not."
 
     scene v13s21_9c # FPP. Same as v13s21_9a but Charli looks at MC, guilty, mouth open. 
@@ -140,7 +140,7 @@ label v13s21:
     scene v13s21_9d # FPP.  Same as v13s21_9c but Charli's mouth is closed. 
     with dissolve
 
-    u "I'm talking about your amazing entrepreneurship.  An entire business that helps people cheat their way to the top… It’s kind of fascinating."
+    u "I'm talking about your amazing entrepreneurship. An entire business that helps people cheat their way to the top… It’s kind of fascinating."
 
     scene v13s21_9e # FPP. Charli sits back in his chair, arms folded across his chest, his open, brow slightly raised in denial (pen/pencil lies on the paper on which he was writing).  
     with dissolve
@@ -228,7 +228,7 @@ label v13s21:
 
     u "Well, it seems to me that after our little discovery..."
 
-    scene v13s21_9h  
+    scene v13s21_9h
     with dissolve
 
     u "What’s fair is me, Riley, and every other person who you’ve acted like a little snake to, never having to see your dumb fucking face again."
@@ -242,7 +242,7 @@ label v13s21:
     scene v13s21_9f
     with dissolve
 
-    u "And the money... And also, I dont give a shit! Leave me and everyone else the fuck alone."
+    u "And the money... And also, I don't give a shit! Leave me and everyone else the fuck alone."
 
     scene v13s21_9l # FPP. Same as v13s21_9 except Charli, sad, mouth sightly opened, head slightly looking down. 
     with dissolve
@@ -354,5 +354,5 @@ label v13s21:
 
     pause 0.75
     
-    jump v13s22  # Scene 22 
+    jump v13s22 # Scene 22 
 

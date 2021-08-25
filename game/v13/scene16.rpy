@@ -143,7 +143,7 @@ label v13s16:
 
             pause
 
-        "Onde day at a time":
+        "One day at a time":
             scene v13s16_7b
             with dissolve
 

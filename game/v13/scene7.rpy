@@ -98,7 +98,7 @@ label v13_ticket_transfer:
         pause 0.75
 
         scene v13s7_4 # FPP MC looking down at tickets in his hand
-        with dissolve    
+        with dissolve
 
         u "What's this?"
 

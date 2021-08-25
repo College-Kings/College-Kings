@@ -73,7 +73,7 @@ label v13s17a:
     scene v13s17a_2
     with dissolve
 
-    u "*Chuckles*  Sounds like a plan."
+    u "*Chuckles* Sounds like a plan."
 
     scene v13s17a_3 # TPP. Show MC getting out of bed, slight smile, mouth closed
     with dissolve

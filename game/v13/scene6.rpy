@@ -183,7 +183,7 @@ label v13s06:
     scene v13s06_6
     with dissolve
 
-    u "I... heard...you."
+    u "I... heard... you."
 
     scene v13s06_6a
     with dissolve

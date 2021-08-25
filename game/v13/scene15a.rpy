@@ -67,7 +67,7 @@ label v13s15a:
     scene v13s15a_6d # FPP. Same as v13s15a_6c, Riley slightly sad, mouth closed
     with dissolve
 
-    u "I told you, I'm not upset. I honestly forget about it all the time  until you bring it up."
+    u "I told you, I'm not upset. I honestly forget about it all the time until you bring it up."
 
     scene v13s15a_6c
     with dissolve
