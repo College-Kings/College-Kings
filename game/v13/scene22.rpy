@@ -1,4 +1,4 @@
-# SCENE 22: Charli talk outside
+# SCENE 22: Charli talk outside - test
 # Locations: Outside hotel
 # Characters: AUBREY (Outfit: 3), MC (Outfit: 9), RILEY (Outfit: 2), IMRE (Outfit: 1), RYAN (Outfit: 1)
 # Time: Afternoon
