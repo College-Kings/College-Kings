@@ -29,8 +29,7 @@ label v13s30:
 
     am "Time to see if the water dances."
 
-    if samanthainvite: #placeholder - need to check previous scene to see what will be used
-
+    if v13_invite_samantha: 
         scene v13s30_3 # FPP. MC looking at Samantha, Samantha looking at Amber, Samantha worried smile, mouth open
         with dissolve
     

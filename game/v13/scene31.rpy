@@ -42,7 +42,7 @@ label v13s31:
     nurse "Based on her current state she'll need to stay the night."
 
 # -If didn't invite Sam
-    if  Didnt_invite_Samantha: #placeholder - need to check previous scene
+    if not v13_invite_samantha:
         scene v13s31_5a # FPP. Same position as v13s31_5, Nurse looking at MC, annoyed looking, mouth open
         with dissolve
 
