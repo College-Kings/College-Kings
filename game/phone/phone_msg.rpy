@@ -113,7 +113,7 @@ init python:
                 contacts.append(self)
             self.locked = False
 
-        def getMessage(self, message):
+        def get_message(self, message):
             for msg in self.sentMessages:
                 try:
                     if message == msg.message:

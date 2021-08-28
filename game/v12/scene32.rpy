@@ -31,12 +31,12 @@ label v12s32:
     scene v12s32_2 # FPP, close up AUbrey looking at mc, but walking forwards. Aubrey slightly nervous not smiling, mouth open
     with dissolve
 
-    au "It's at an actual photography studio."
+    au "It's at a Lew's store."
 
     scene v12s32_2a # same as 2, mouth closed
     with dissolve
 
-    u "*Laughs* Tell me why I thought it was just at a random Lew's store..."
+    u "*Laughs* Tell me why I thought it was just at a random photography studio..."
 
     scene v12s32_2
     with dissolve

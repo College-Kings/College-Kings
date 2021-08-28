@@ -262,8 +262,6 @@ label v11_aubrey_plane_sex:
                 with dissolve
 
                 if laurenrs:
-                    $ laurenmad = True
-                   
                     pause 0.75
                     
                     scene v11aub17a # FPP. Same cam as v11aub17, door fully open, Lauren is very angry, mouth open

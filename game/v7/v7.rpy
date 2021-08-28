@@ -3659,7 +3659,7 @@ label pledgewolves:
     with dissolve
     ch "And fearless!"
 
-    play music"music/mindie1.mp3" fadein 3
+    play music "music/mindie1.mp3" fadein 3
     queue music [ "music/m6punk.mp3", "music/m15punk.mp3", "music/m16punk.mp3" ]
 
     scene s762a
@@ -16563,16 +16563,6 @@ label fr4lockerroomchloe:
                         jump fr4chloeending
 
                     else:
-                        scene sfr4cl52b
-                        with dissolve
-
-                        cl "That's cute [name], but I think I have to go up there."
-
-                        scene sfr4cl52c
-                        with dissolve
-
-                        u "You sure?"
-
                         scene sfr4cl52b
                         with dissolve
 
