@@ -470,6 +470,7 @@ default v11_rileysex = False
 default v11_overtake_points = 0
 default v11_hp_points = 0
 default political_strategist = False
+default v11_smoke_amber_amsterdam = False
 
 # 12.0
 default v12_told_chloe = False

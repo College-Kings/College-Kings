@@ -111,6 +111,8 @@ label v11_Amber_Penelope:
 
     menu:
         "Of course":
+            $ v11_smoke_amber_amsterdam = True
+            
             scene v11amp1
             with dissolve
 
