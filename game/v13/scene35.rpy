@@ -89,34 +89,7 @@ label v13s35:
         with dissolve
 
         $ mc.money = 100
-        
-        menu v13s35_purchase_menu:
-            set menu_set
-
-            "Honey ($15)" if mc.money >= (15 + 10):
-                $ mc.inventory.add_item(honey)
-                "Bought Honey for $15"
-                
-            "Butt Plug ($30)" if mc.money >= (30 + 10):
-                $ mc.inventory.add_item(butt_plug)
-                "Bought Butt Plug for $30"
-
-            "Spankers ($50)" if mc.money >= (50 + 10):
-                $ mc.inventory.add_item(spankers)
-                "Bought Spankers for $50"
-
-            "Cuffs ($10)":
-                $ mc.inventory.add_item(cuffs)
-                "Bought Cuffs for $10"
-
-            "Feather ($15)" if mc.money >= (15 + 10):
-                $ mc.inventory.add_item(feather)
-                "Bought Feather for $15"
-
-
-        if cuffs not in mc.inventory.items:
-            "Chloe would love the cuffs"
-            jump v13s35_purchase_menu
+        call screen v13s35_adult_shop
 
 
         u "(She'll be happy with these, I think. We're gonna have some fun… *Chuckles*)"
