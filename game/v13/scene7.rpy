@@ -225,7 +225,7 @@ label v13_ticket_transfer:
                     scene v13s7_8a
                     with dissolve
 
-                    pe "Oh, wow! A concert in Amsterdam… That’s so cool, [name], congrats."
+                    pe "Oh, wow! A concert in Amsterdam... That's so cool, [name], congrats."
 
                     scene v13s7_8
                     with dissolve
@@ -247,12 +247,12 @@ label v13_ticket_transfer:
 
                     pe "Things must be looking up for me because Ms. Rose just said the same thing..."
 
-                    pe "Her and Mr. Lee agreed to give me a night out whenever I wanted while we’re in Amsterdam. So yes, I'll definitely go! Thank you so much for asking me, [Name]."
+                    pe "Her and Mr. Lee agreed to give me a night out whenever I wanted while we're in Amsterdam. So yes, I'll definitely go! Thank you so much for asking me, [Name]."
 
                     scene v13s7_8
                     with dissolve
 
-                    u "Of course. I can’t wait for this."
+                    u "Of course. I can't wait for this."
 
                     if penelopers:
                         scene v13s7_9 # TPP Show Penelope kissing MC
@@ -355,12 +355,12 @@ label v13_ticket_transfer:
         scene v13s7_12b # FPP Same angle as v13s7_12, Aubrey looking at MC with a big, excited smile, mouth open
         with dissolve
 
-        au "Of course I wanna go! Thank you so so so much for even thinking of me…"
+        au "Of course I wanna go! Thank you so so so much for even thinking of me..."
 
         scene v13s7_12
         with dissolve
 
-        au "I can’t believe this... How'd even you know I'd be into this?"
+        au "I can't believe this... How'd even you know I'd be into this?"
 
         scene v13s7_12a
         with dissolve
@@ -420,12 +420,12 @@ label v13_ticket_transfer:
 
         pe "Concert tickets."
 
-        pe "Mr. Lee and Ms. Rose gave these to me as a little reward for doing a lot for them while we’ve been on the trip, and said I could take whoever I wanted."
+        pe "Mr. Lee and Ms. Rose gave these to me as a little reward for doing a lot for them while we've been on the trip, and said I could take whoever I wanted."
 
         scene v13s7_8d # FPP Same angle as v13s7_8, Penelope laughing
         with dissolve
 
-        pe "I think they were the \"reward\" that you were supposed to get for doing really well during the murder mystery, but since you didn't do really well… *Chuckles* They gave them to me."
+        pe "I think they were the \"reward\" that you were supposed to get for doing really well during the murder mystery, but since you didn't do really well... *Chuckles* They gave them to me."
 
         scene v13s7_8
         with dissolve
@@ -456,7 +456,7 @@ label v13_ticket_transfer:
             scene v13s7_8a
             with dissolve
 
-            pe "Of course! You’re the only person I’d want to spend the entire night with. *Chuckles*"
+            pe "Of course! You're the only person I'd want to spend the entire night with. *Chuckles*"
 
             scene v13s7_8e # FPP Same angle as v13s7_8, MC tucking a piece of Penelope's hair behind her ear, Penelope is smiling and blushing with mouth closed
             with dissolve

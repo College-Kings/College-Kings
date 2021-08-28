@@ -12,7 +12,7 @@ label v13s19:
     scene v13s19_1a # FPP. Same as v13s19_1, Riley now standing close to MC, mouth open, slight smile
     with dissolve
 
-    ri "Hey… Are you ready to make this magic happen?"
+    ri "Hey... Are you ready to make this magic happen?"
 
     scene v13s19_1b # FPP. Same as v13s19_1a, Riley slight smile, mouth closed
     with dissolve
@@ -75,7 +75,7 @@ label v13s19:
         scene v13s19_7a
         with dissolve
 
-        ri "Gotta give props to our favorite little hacker… *Chuckles*"
+        ri "Gotta give props to our favorite little hacker... *Chuckles*"
 
         scene v13s19_7
         with dissolve
@@ -86,7 +86,7 @@ label v13s19:
         scene v13s19_7a
         with dissolve
 
-        ri "Just a little gift from someone who wants this as much as we do…"
+        ri "Just a little gift from someone who wants this as much as we do..."
 
         scene v13s19_7
         with dissolve
@@ -101,7 +101,7 @@ label v13s19:
     scene v13s19_7b # FPP. Same as v13s19_7a, but door open
     with dissolve
 
-    ri "Bingo! We’re in, baby!"
+    ri "Bingo! We're in, baby!"
 
     ri "You just do your thing, okay? I texted Charli already to meet me somewhere else, so he must be headed there already."
 
@@ -113,7 +113,7 @@ label v13s19:
     scene v13s19_7b
     with dissolve
 
-    ri "He deserves a damn good show for what he’s done to all of us."
+    ri "He deserves a damn good show for what he's done to all of us."
 
     scene v13s19_7c
     with dissolve
@@ -123,7 +123,7 @@ label v13s19:
     scene v13s19_7b
     with dissolve
 
-    ri "*Chuckles* Thank you…"
+    ri "*Chuckles* Thank you..."
 
     play sound "sounds/kiss.mp3"
 

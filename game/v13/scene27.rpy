@@ -14,7 +14,7 @@ label v13s27:
     scene v13s27_1a # TPP. Same as v13s27_1, MC slightly surprised, going to grab his phone, mouth closed
     with dissolve
 
-    u "Wow… Perfect timing, who is it this time?"
+    u "Wow... Perfect timing, who is it this time?"
 
     $ contact_Amber.newMessage(_("Meet me at the bus stop near the hotel. ", queue=False))
     $ contact_Amber.addReply(_("For?"))
@@ -33,7 +33,7 @@ label v13s27:
     scene v13s27_1c # TPP. Same as v13s27_1, MC suspicious, mouth closed
     with dissolve
 
-    u "(She wants me to drag my ass over there without knowing a damn thing about what we’re doing?)"
+    u "(She wants me to drag my ass over there without knowing a damn thing about what we're doing?)"
 
     scene v13s27_1
     with dissolve

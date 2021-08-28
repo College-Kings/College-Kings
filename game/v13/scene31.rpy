@@ -9,7 +9,7 @@ label v13s31:
     scene v13s31_1 # TPP. Show MC carrying Lauren, worried expression, mouth closed, Lauren, eyes closed, mouth closed, Amber ahead of them towards counter in hospital, worried expression mouth open
     with dissolve
    
-    am "Hello, our friend here is having a negative reaction to marijauna... It was her first time and I-"
+    am "Hello, our friend here is having a negative reaction to marijuana... It was her first time and I-"
 
     scene v13s31_2 # TPP. Show Amber looking at nurse, serious expression, mouth closed, MC looing at nurse, serious expression, mouth closed, nurse looking at amber, neutral look, mouth open
     with dissolve
@@ -99,7 +99,7 @@ label v13s31:
     u "(Damn, this is crazy.)"
 
     if Didnt_invite_Samantha: #placeholder
-        $ BrotherCameron = True
+        $ cameronBro = True
 
         scene v13s21_100 # TPP. Show Cameron running towwards MC, angry, mouth closed
         with fade
@@ -134,7 +134,7 @@ label v13s31:
         scene v13s31_10c
         with dissolve
 
-        u "When she asked to go with Amber and I, I simply said I didn't think it was a good idea due to her history. She took offense and ran off, but I still stand by my decision of not letting her come. I’m sorry."
+        u "When she asked to go with Amber and I, I simply said I didn't think it was a good idea due to her history. She took offense and ran off, but I still stand by my decision of not letting her come. I'm sorry."
 
         scene v13s31_10d # FPP. Same positioning as v13s31_10, Cameron slight smile, mouth open
         with fade
@@ -154,12 +154,12 @@ label v13s31:
         scene v13s31_10f # FPP. Same position as v13s31_10, different pose, Cameron serious expression
         with dissolve 
 
-        ca "I have a hard time trusting that people actually have pure intentions, man. It's obvious you do though…"
+        ca "I have a hard time trusting that people actually have pure intentions, man. It's obvious you do though..."
 
         scene v13s31_10d
         with dissolve
 
-        ca "I'll stop tripping, like, whenever you try talking to her and everything. I don't know how you feel, but I'm pretty sure she likes you. And, I think you’re a good person to be around her."
+        ca "I'll stop tripping, like, whenever you try talking to her and everything. I don't know how you feel, but I'm pretty sure she likes you. And, I think you're a good person to be around her."
 
         scene v13s31_11 # TPP. MC and Cameron moved down the hallway to isolated area, both neutral expression, both mouth closed
         with fade
@@ -184,10 +184,10 @@ label v13s31:
         scene v13s31_13b # FPP. Same postition as v13s31_13, cameron slight smile, mouth closed
         with dissolve
 
-        u "I'll head back to the hotel, man. Give you some space. Just know, I’m always around for you, bro. Both of you."
+        u "I'll head back to the hotel, man. Give you some space. Just know, I'm always around for you, bro. Both of you."
 
         scene v12s31_14 # TPP. Show MC and cameron hugging, MC slight smile, mouth closed, Cameron slight smile, mouth closed  
-        with fade 
+        with fade
 
         pause 0.75
 

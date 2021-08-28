@@ -62,7 +62,7 @@ label v13s32:
         scene v13s32_2b # FPP. Same as v13s32_2a, Amber slight smile, mouth closed
         with dissolve
 
-        u "She’s set on her ways. *Chuckles*"
+        u "She's set on her ways. *Chuckles*"
 
         scene v13s32_2a
         with dissolve

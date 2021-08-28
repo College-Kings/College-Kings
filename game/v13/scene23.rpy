@@ -38,12 +38,12 @@ label v13s23:
         scene v13s23_4a # FPP. Same as v13s23_4, Imre slight smile, mouth open
         with dissolve
 
-        imre "*Laughs* When I got there, Mr. Lee had Charli pinned to the ground…"
+        imre "*Laughs* When I got there, Mr. Lee had Charli pinned to the ground..."
 
         scene v13s23_3
         with dissolve
 
-        u "Long story short, he won’t be around anymore."
+        u "Long story short, he won't be around anymore."
 
         scene v13s23_3a
         with dissolve
@@ -53,12 +53,12 @@ label v13s23:
         scene v13s23_3
         with dissolve
 
-        u "In fact, I’m pretty sure he’s banned from San Vallejo. *Chuckles*"
+        u "In fact, I'm pretty sure he's banned from San Vallejo. *Chuckles*"
 
         scene v13s23_4b # FPP. Same as v13s23_4, Imre looking at MC, Imre slight smile, mouth open
         with dissolve
 
-        imre "Shit, dude… You really got rid of that rat?"
+        imre "Shit, dude... You really got rid of that rat?"
 
         scene v13s23_4c # FPP. Same as v13s23_4b, Imre slight smile, mouth closed
         with dissolve
@@ -68,7 +68,7 @@ label v13s23:
         scene v13s23_3b
         with dissolve
 
-        ry "Well, good. Now Imre can stop talking about how he’s gonna kick his ass every day. *Chuckles*"
+        ry "Well, good. Now Imre can stop talking about how he's gonna kick his ass every day. *Chuckles*"
 
     scene v13s23_3
     with dissolve
