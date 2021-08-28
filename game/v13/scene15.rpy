@@ -8,13 +8,13 @@ default chloeSus = 0
 
 init python:
     def v13s15_Reply1():
-        $ v13_cuddle_lauren = True
-        $ contact_Lauren.newMessage(_("Yayy :) "))
+        v13_cuddle_lauren = True
+        contact_Lauren.newMessage(_("Yayy :) "))
 
     def v13s15_Reply2():
-        $ contact_Lauren.newMessage(_("Aww okay, it's cool "))
-        $ contact_Lauren.addReply(_("Sorry babe, I'm just so tired. "))
-        $ contact_Lauren.newMessage(_("It's okay, night. "))
+        contact_Lauren.newMessage(_("Aww okay, it's cool "))
+        contact_Lauren.addReply(_("Sorry babe, I'm just so tired. "))
+        ccontact_Lauren.newMessage(_("It's okay, night. "))
 
 label v13s15:
     scene v13s15_1 # TPP. Show MC walking into the room, it's dark inside, MC neutral expression, mouth closed

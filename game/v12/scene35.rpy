@@ -151,7 +151,7 @@ label v12_chris_nora_room:
 
                 stop music fadeout 3
 
-                jump v12_lindsey_lobby #scene 35a
+                jump v12_nora_room #scene 35a
 
         "Leave her alone":
             $ addPoint("bro")

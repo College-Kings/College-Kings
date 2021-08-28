@@ -115,7 +115,7 @@ init -90 python:
                 "profilePicture": "images/phone/kiwii/profilePictures/charlipp.webp"
             },
             "Naomi": {
-                "username": "NaomiOfficial",
+                "username": "NaomiXMarie",
                 "profilePicture": "images/phone/kiwii/profilePictures/naomipp.webp"
             },
             "LewsOfficial": {

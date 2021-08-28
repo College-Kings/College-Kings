@@ -157,8 +157,6 @@ init python:
 
         return total
 
-    kiwiiUsers = kiwii_users()
-
 init -100:
     define profilePictures = [ "images/phone/Kiwii/profilePictures/mcpp1.webp", "images/phone/Kiwii/profilePictures/mcpp2.webp", "images/phone/Kiwii/profilePictures/mcpp3.webp", "images/phone/Kiwii/profilePictures/mcpp4.webp" ]
     default profilePictures_count = 0

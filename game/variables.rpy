@@ -10,6 +10,7 @@ default kct = "confident"
 default sortedKCT = ["confident", "loyal", "popular"]
 
     ## Kiwii Vars
+default kiwiiUsers = kiwii_users()
 default kiwii_firstTime = False
 
     ## Fight Vars
@@ -482,6 +483,8 @@ default v12s7_killList = set()
 default v12_msrose_sex = False
 default v11_lindsey_run = False
 default v12_help_chris = 0
+default norars = False
+default lindseyrs = False
     # scene7
 default v12s7_lauren = False
 default v12s7_emily = False
@@ -522,7 +525,7 @@ default v12s32_Aubrey_Boost = False
 default s12v32_get_aubrey_flowers = False
 default v12_murder_count = 0
 default joshmadfr = False
-default v12s7_victims = 12 #Amber, Aubrey, Charli, Chloe, Cbris, Imre, Lauren, Lindsey, Nora, Riley, Rose, Ryan +  Emily, Josh, Penelope, Samantha. Cameron and Lee don't count.
+default v12s7_victims = 12 #Amber, Aubrey, Charli, Chloe, Cbris, Imre, Lauren, Lindsey, Nora, Riley, Rose, Ryan + Emily, Josh, Penelope, Samantha. Cameron and Lee don't count.
 default v12s23a_poolsex = False
 default v12s23a_beatcameron = False
 default v12_nora_sex = False

@@ -48,11 +48,14 @@ label v13_start:
     scene v13s1_1d # FPP. Same as v13s1_1a, Riley different pose
     with dissolve
 
-    ri "While using that to my advantage, I’m going to distract him for as long as possible. While I'm playing decoy, you get to do the dirty work. *Chuckles*"
-
+    ri "While using that to my advantage, I'm going to distract him for as long as possible."
+    
     scene v13s1_1e # FPP. Same as v13s1_1, Riley rubbing her hands, making an evil face, mouth closed
     with dissolve
+    ri "While I'm playing decoy, you get to do the dirty work. *Chuckles*"
 
+    scene v13s1_1b
+    with dissolve
     u "*Laughs* Okay, I'm also enjoying this, but please don't make that face. I can't take you seriously when you do that… *Chuckles*"
 
     scene v13s1_1d
@@ -65,7 +68,7 @@ label v13_start:
 
     u "If that's what you wanna call it... *Laughs*"
 
-    u "So...What's the dirty work you have in mind?"
+    u "So... What's the dirty work you have in mind?"
 
     scene v13s1_1a
     with dissolve
@@ -80,7 +83,7 @@ label v13_start:
     scene v13s1_1d
     with dissolve
 
-    ri "Charli told me back in London that his grandmother gave it to him when he came out to her, so it's extremely special to him. That’s what makes it the perfect target."
+    ri "Charli told me back in London that his grandmother gave it to him when he came out to her, so it's extremely special to him. That's what makes it the perfect target."
 
     scene v13s1_1b
     with dissolve
@@ -105,7 +108,7 @@ label v13_start:
     scene v13s1_1d
     with dissolve
 
-    ri "I know Charli's been a pain in your ass since the moment you met him, so I didn't think you'd second guess helping. Especially when you consider the fact that he tried framing you."
+    ri "I know Charli's been a pain in your ass since the moment you met him, so I didn't think you'd second-guess helping. Especially when you consider the fact that he tried framing you."
 
     scene v13s1_1b
     with dissolve
@@ -130,7 +133,7 @@ label v13_start:
     scene v13s1_1b
     with dissolve
 
-    u "Perfect, I'll keep that in mind. Do you know when we're leaving forAmsterdam? I thought we'd be going early this morning."
+    u "Perfect, I'll keep that in mind. Do you know when we're leaving for Amsterdam? I thought we'd be going early this morning."
 
     scene v13s1_1d
     with dissolve
@@ -190,7 +193,7 @@ label v13_start:
             $ addPoint("bf")
             $ riley.points += 1
 
-            u "It's fine Riley, really. Of course I was pissed at first, it’s a little upsetting to have one of your best friends calling you a liar but… I can’t stay mad at you forever. Apology accepted."
+            u "It's fine Riley, really. Of course I was pissed at first, it's a little upsetting to have one of your best friends calling you a liar but… I can't stay mad at you forever. Apology accepted."
 
             scene v13s1_3c
             with dissolve
@@ -200,12 +203,12 @@ label v13_start:
     scene v13s1_4 # TPP. Show Riley hugging MC
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v13s1_3
     with dissolve
 
-    ri "I promise I’ll make it up to you."
+    ri "I promise I'll make it up to you."
 
     scene v13s1_3a
     with dissolve
@@ -225,7 +228,7 @@ label v13_start:
     scene v13s1_3e # FPP. MC watching Riley walking towards the door, slight smile, mouth closed (if she has her back to MC then ignore the facial expression)
     with dissolve
 
-    u "(Unlimited access to Charli’s room… This is gonna be interesting. *Laughs*)"
+    u "(Unlimited access to Charli's room… This is gonna be interesting. *Laughs*)"
 
     scene v13s1_5 # TPP. Show MC walking out of the cafe, slight smile, mouth closed
     with dissolve

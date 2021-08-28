@@ -71,7 +71,7 @@ label v11_ms_rose_sex:
 
 label v11_ms_rose_sex_sg:
     stop music fadeout 3
-    play music "music/v11/Scene 28/Track Scene 28_2.mp3" fadein 2
+    play music "music/V10/Scene 17/Track Scene 17_2.mp3" fadein 2
     scene v11ros3a # FPP. Same as v11ros3, Rose mouth open, seductive look
     with dissolve
 

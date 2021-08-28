@@ -285,4 +285,7 @@ label v12_chase_nora:
 
     stop music fadeout 3
 
-    jump v12s27 # scene 27
+    if joinwolves:
+        jump v12s27 # scene 27
+    else:
+        jump v12s27a

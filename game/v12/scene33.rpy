@@ -840,10 +840,10 @@ label v12s33_door1:
 
     au "See ya, [name]."
 
-    scene v12s33_31
-    with dissolve
-
-    sa "Bye, [name]."
+    if v11_invite_sam_europe:
+        scene v12s33_31
+        with dissolve
+        sa "Bye, [name]."
 
     stop music fadeout 3
     play music "music/v12/Scene 33/Track Scene 33_4.mp3" fadein 2
