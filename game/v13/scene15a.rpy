@@ -8,7 +8,7 @@ default v13_cuddle_lauren = False
 
 init python:
     def v13s15a_Reply1():
-        v13_cuddle_lauren_text = True
+        setattr(store, "v13_cuddle_lauren_text", True)
         contact_Lauren.newMessage(_("Yayy :) "))
 
     def v13s15a_Reply2():

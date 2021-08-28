@@ -8,7 +8,7 @@ default chloeSus = 0
 
 init python:
     def v13s15_Reply1():
-        v13_cuddle_lauren = True
+        setattr(store, "v13_cuddle_lauren", True)
         contact_Lauren.newMessage(_("Yayy :) "))
 
     def v13s15_Reply2():
