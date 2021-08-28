@@ -3,8 +3,6 @@
 # Characters: AMBER (Outfit: 1), NURSE (Outfit: 1), MC (Outfit: 3), CAMERON (Outfit: 2), LAUREN (Outfit: 3)
 # Time: Night
 
-default cameronBro = False
-
 label v13s31:
     scene v13s31_1 # TPP. Show MC carrying Lauren, worried expression, mouth closed, Lauren, eyes closed, mouth closed, Amber ahead of them towards counter in hospital, worried expression mouth open
     with dissolve

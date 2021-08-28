@@ -3,9 +3,6 @@
 # Characters: MR. LEE (Outfit: 1), MC (Outfit: 2), PENELOPE (Outfit: 1), AUBREY (Outfit: 2)
 # Time: Morning 
 
-default v13_penelope_concert = False
-default v13_aubrey_concert = False
-
 label v13_ticket_transfer:
     if v12_murder_count >= 5: # -If 5+ kills
         scene v13s7_1 # TPP Show MC in lobby, looking around and wondering what to do next

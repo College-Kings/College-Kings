@@ -3,8 +3,6 @@
 # Characters: LAUREN (Outfit: 4), MC (Outfit: 2)
 # Time: Night
 
-default v13s16_lauren_points = 0
-
 label v13s16:
     scene v13s16_1 # TPP. Show MC walking in corridor, slight smile, mouth closed
     with dissolve

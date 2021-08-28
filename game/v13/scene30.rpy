@@ -3,9 +3,6 @@
 # Characters: MC (Outfit: 9), AMBER (Outfit: 1), SAMANTHA (Outfit: 1), LAUREN (Outfit: 3)
 # Time: Night
 
-default v13_smoke_weed = False
-default v13_lauren_smoke = False
-
 label v13s30:
     scene v13s30_1 # TPP. Show MC and Amber down in the canals, Both slight smile, MC Mouth open.
     with dissolve

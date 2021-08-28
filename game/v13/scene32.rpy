@@ -3,8 +3,6 @@
 # Characters: AMBER (Outfit: 1), LAUREN (Outfit: 3, MC (Outfit: 9)
 # Time: Night
 
-default v13_lauren_hospital = False
-
 label v13s32:
     if not v13_lauren_hospital:
         scene v13s32_1 # TPP. Show MC, Lauren and Amber walking into the room, all slightly smiling, mouths closed
