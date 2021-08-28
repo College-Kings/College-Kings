@@ -2,7 +2,6 @@
 # Locations: Sex Shop
 # Characters: MC (Outfit: 5), AUBREY (Outfit: 2), LINDSEY (Outfit: 1)
 # Time: Afternoon 
-default menu_set = set()
 
 label v13s35:
     scene v13s35_1 # TPP. Show MC and Aubrey outside the Sex shop, MC slight smile, mouth open, Aubrey slight smile, mouth closed.
@@ -93,7 +92,6 @@ label v13s35:
         
         menu v13s35_purchase_menu:
             set menu_set
-            "Purchase Item\nMoney: [mc.money]"
 
             "Honey ($15)" if mc.money >= (15 + 10):
                 $ mc.inventory.add_item(honey)
@@ -116,7 +114,7 @@ label v13s35:
                 "Bought Feather for $15"
 
 
-        if cuffs not in mc.inventory:
+        if cuffs not in mc.inventory.items:
             "Chloe would love the cuffs"
             jump v13s35_purchase_menu
 

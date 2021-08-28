@@ -3,9 +3,6 @@
 # Characters: MC (Outfit: 2), CHLOE (Outfit: 6)
 # Time: Night
 
-default v13_cuddle_lauren = False
-default chloeSus = 0
-
 init python:
     def v13s15_Reply1():
         v13_cuddle_lauren = True

@@ -3,9 +3,6 @@
 # Characters: MC (Outfit: 2), RILEY (Outfit: NAKED)
 # Time: Night
 
-default v13_cuddle_lauren_text = False
-default v13_cuddle_lauren = False
-
 init python:
     def v13s15a_Reply1():
         v13_cuddle_lauren_text = True

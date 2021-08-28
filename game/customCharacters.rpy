@@ -1,4 +1,12 @@
 init python:
+    class MainCharacter:
+        """Main Character class is used to create the MC character model"""
+
+        def __init__(self):
+            self.money = 0
+            self.inventory = Inventory()
+
+
     class CustomCharacter:
         """
         Custom character class primarily used for the murder mystery game in v12s7
@@ -45,7 +53,9 @@ init python:
 
         def resetPoints(self):
             self.points = 0
-        
+
+
+default mc = MainCharacter()
 default chloe = CustomCharacter("Chloe")
 default amber = CustomCharacter("Amber")
 default penelope = CustomCharacter("Penelope")
