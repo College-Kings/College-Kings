@@ -549,3 +549,5 @@ default v13_smoke_weed = False
 default v13_lauren_smoke = False
 default cameronBro = False
 default v13_lauren_hospital = False
+default v13_charli_exposed = False
+default v13_invite_samantha = False

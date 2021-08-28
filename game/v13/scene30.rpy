@@ -246,7 +246,7 @@ label v13s30:
 
     am "*Chuckles* Come roll up with us."
 
-    if laurenmad: 
+    if (laurenrs and v11_aubrey_sex): 
         scene v13s30_2a
         with dissolve
 

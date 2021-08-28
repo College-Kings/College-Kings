@@ -157,13 +157,13 @@ label v13_ticket_transfer:
         u "*Laughs* (Did he just lowkey flex on me and then walk off? Haha, he gave me two concert tickets as well...)"
 
         # NEED NUMBER FOR ALL KILLS - REPLACE IN NEXT TWO CHECKS
-        if (v12_murder_count >= 10 and v12_murder_count < ALL): # -if 10+ kills but not all
+        if (v12_murder_count >= 10 and v12_murder_count < v12s7_victims): # -if 10+ kills but not all
             scene v13s7_4
             with dissolve
 
             u "(And these have backstage passes! Holy shit, he really went all out.)"
 
-        elif v12_murder_count = ALL: # -if all kills
+        elif v12_murder_count == v12s7_victims: # -if all kills
             scene v13s7_4
             with dissolve
 
@@ -179,7 +179,7 @@ label v13_ticket_transfer:
 
         pause 0.75
 
-        if v11_pen_goes_europe = True: # -If Penelope is in Europe
+        if v11_pen_goes_europe: # -If Penelope is in Europe
 
             scene v13s7_6 # FPP Show Penelope walking into the lobby
             with dissolve
@@ -374,7 +374,7 @@ label v13_ticket_transfer:
 
         u "*Chuckles*"
 
-    elif (v12_murder_count <5 and v11_pen_goes_europe = True): # -If less than 5 kills and Penelope is there
+    elif (v12_murder_count < 5 and v11_pen_goes_europe): # -If less than 5 kills and Penelope is there
         $ v13_penelope_concert = True
 
         scene v13s7_6a # FPP Same angle as v13s7_6, Penelope smiling at MC from across the lobby, mouth open

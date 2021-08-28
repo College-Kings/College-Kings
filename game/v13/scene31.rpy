@@ -96,7 +96,7 @@ label v13s31:
 
     u "(Damn, this is crazy.)"
 
-    if Didnt_invite_Samantha: #placeholder
+    if not v13_invite_samantha: #placeholder
         $ cameronBro = True
 
         scene v13s21_100 # TPP. Show Cameron running towwards MC, angry, mouth closed
