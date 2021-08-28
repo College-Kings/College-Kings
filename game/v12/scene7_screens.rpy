@@ -581,8 +581,10 @@ screen v12s7_utility():
 
         if v12s7_josh and josh not in v12s7_killList:
             hotspot(413, 183, 452, 895):
-                if v12s7_josh:
+                if v12s7_josh2 and not v12s7_aubrey_moved:
                     action Call("v12s7_free_roam_spoken", backgroundImg="v12ferjos3", returnScreen="v12s7_utility", seenList=[], victim=josh)
+                elif v12s7_josh2:
+                    action Call("v12s7_free_roam_spoken", backgroundImg="v12ferjos3noau", returnScreen="v12s7_utility", seenList=[], victim=josh)
                 else:
                     action Jump("v12s7_josh2") # Josh
             hotspot (860, 1000, 1060, 80) action Show("v12s7_right_gallery_front")
