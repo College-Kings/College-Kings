@@ -3,8 +3,6 @@
 # Characters: LAUREN (Outfit: 4), MC (Outfit: 2)
 # Time: Night
 
-default v13s16_lauren_points = 0
-
 label v13s16:
     scene v13s16_1 # TPP. Show MC walking in corridor, slight smile, mouth closed
     with dissolve
@@ -19,7 +17,7 @@ label v13s16:
     scene v13s16_3 # FPP. Lauren laying on her bed, looking at MC, MC standing next to the door, Lauren smiling, mouth open
     with dissolve
 
-    la "Yay! You’re finally here. *Chuckles*"
+    la "Yay! You're finally here. *Chuckles*"
 
     scene v13s16_3a # FPP. Same as v13s16_3, Lauren smiling, mouth closed
     with dissolve
@@ -94,7 +92,7 @@ label v13s16:
     scene v13s16_7a
     with dissolve
 
-    la "I'm glad we're so good right now…"
+    la "I'm glad we're so good right now..."
 
     scene v13s16_7c
     with dissolve
@@ -136,7 +134,7 @@ label v13s16:
             scene v13s16_7b
             with dissolve
 
-            u "Of course I am, Lauren… I wouldn’t be here if I wasn’t, and you give me many reasons to be."
+            u "Of course I am, Lauren... I wouldn't be here if I wasn't, and you give me many reasons to be."
 
             scene v13s16_8 # TPP. Show MC and Lauren kissing
             with dissolve
@@ -177,7 +175,7 @@ label v13s16:
             scene v13s16_7f
             with dissolve
 
-            u "I don't see why not. Even if it’s just out of respect for you, I'd do what I had to do in order to get along."
+            u "I don't see why not. Even if it's just out of respect for you, I'd do what I had to do in order to get along."
 
         "Might be an issue":
             $ v13s16_lauren_points += 1

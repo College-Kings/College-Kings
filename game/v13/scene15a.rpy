@@ -5,7 +5,7 @@
 
 init python:
     def v13s15a_Reply1():
-        v13_cuddle_lauren_text = True
+        setattr(store, "v13_cuddle_lauren_text", True)
         contact_Lauren.newMessage(_("Yayy :) "))
 
     def v13s15a_Reply2():
@@ -69,7 +69,7 @@ label v13s15a:
     scene v13s15a_6c
     with dissolve
 
-    ri "It's because I still don’t sit right with it..."
+    ri "It's because I still don't sit right with it..."
 
     scene v13s15a_6d
     with dissolve
@@ -139,7 +139,7 @@ label v13s15a:
         scene v13s15a_6h
         with dissolve
 
-        ri "I was hoping you'd come over here…"
+        ri "I was hoping you'd come over here..."
 
         scene v13s15a_6j # FPP. Same as v13s15a_6h, Riley in the motion of removing the blanket completely, sexy look, mouth open
         with dissolve
@@ -187,7 +187,7 @@ label v13s15a:
                 scene v13s15a_6m # FPP. Same as v13s15a_6k, Riley slightly surprised, mouth closed
                 with dissolve
 
-                u "Very flattering, Riley. I mean... Very... Very flattering…"
+                u "Very flattering, Riley. I mean... Very... Very flattering..."
 
                 scene v13s15a_6n # FPP. Same as v13s15a_6m, Riley slight smile, mouth closed
                 with dissolve

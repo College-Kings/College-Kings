@@ -538,7 +538,18 @@ default v12s33_door2 = False
 default v12s33_door3 = False
 default v12s24_emmymatch = False
 
-# v13.0
-default v13_cuddle_lauren_text = False
+#13.0
+default v13_penelope_concert = False
+default v13_aubrey_concert = False
 default v13_cuddle_lauren = False
 default chloeSus = 0
+default v13_cuddle_lauren_text = False
+default v13_cuddle_lauren = False
+default v13s16_lauren_points = 0
+default v13_smoke_weed = False
+default v13_lauren_smoke = False
+default cameronBro = False
+default v13_lauren_hospital = False
+default v13_charli_exposed = False
+default v13_invite_samantha = False
+

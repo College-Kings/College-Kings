@@ -49,7 +49,7 @@ label v13s8:
     scene v13s8_6a # FPP. Same as v13s8_6, Nora slight smile, mouth open, door fully open now
     with dissolve
 
-    no "Hey… What's up?"
+    no "Hey... What's up?"
 
     scene v13s8_6b # FPP. Same as v13s8_6a, Nora slight smile, mouth closed
     with dissolve
@@ -105,12 +105,12 @@ label v13s8:
         scene v13s8_9
         with dissolve
 
-        no "Okay… You're right."
+        no "Okay... You're right."
 
         scene v13s8_9b # FPP. Same as v13s8_9, Nora avoiding eye contact, slightly worried, mouth open
         with dissolve
 
-        no "Well... I honestly just feel pretty shitty about the whole thing. Regardless of Chris being a dumbass or not, I shouldn't have done what I did…"
+        no "Well... I honestly just feel pretty shitty about the whole thing. Regardless of Chris being a dumbass or not, I shouldn't have done what I did..."
 
         scene v13s8_9
         with dissolve
@@ -132,7 +132,7 @@ label v13s8:
                 scene v13s8_9c
                 with dissolve
 
-                u "I understand not believing in cheating, so leave him then. You say that you know he's doing wrong by you, yet you’re still wanting to do right by him and it’s completely contradicting."
+                u "I understand not believing in cheating, so leave him then. You say that you know he's doing wrong by you, yet you're still wanting to do right by him and it's completely contradicting."
 
                 scene v13s8_9b
                 with dissolve
@@ -163,12 +163,12 @@ label v13s8:
 
         no "I can't be a cheater... Regardless of the situation..."
 
-        no "I hope you can understand, [name], I... I don't know what's gonna end up happening between me and Chris, but right now I'd…"
+        no "I hope you can understand, [name], I... I don't know what's gonna end up happening between me and Chris, but right now I'd..."
 
         scene v13s8_9
         with dissolve
 
-        no "I’d rather not make any more mistakes while I’m still in a relationship."
+        no "I'd rather not make any more mistakes while I'm still in a relationship."
 
         scene v13s8_9a
         with dissolve
@@ -188,7 +188,7 @@ label v13s8:
         scene v13s8_9
         with dissolve
 
-        no "Trust me, I know what it's like wanting someone to communicate. I’ll be sure to talk to you about everything as soon as I’m ready."
+        no "Trust me, I know what it's like wanting someone to communicate. I'll be sure to talk to you about everything as soon as I'm ready."
 
         scene v13s8_9a
         with dissolve
@@ -209,7 +209,7 @@ label v13s8:
         scene v13s8_9e # FPP. Same as v13s8_9d, Nora slight smile, mouth open
         with dissolve
 
-        no "Ha, right... I forgot. You’re the one who actually cares from time to time."
+        no "Ha, right... I forgot. You're the one who actually cares from time to time."
 
         scene v13s8_9d
         with dissolve
@@ -335,7 +335,7 @@ label v13s8:
     scene v13s8_9g
     with dissolve
 
-    no "You probably already know, but the fact that Chloe has to be the President of Chick’s in order to keep her Greek scholarship?"
+    no "You probably already know, but the fact that Chloe has to be the President of Chick's in order to keep her Greek scholarship?"
 
     scene v13s8_9d
     with dissolve
@@ -395,7 +395,7 @@ label v13s8:
     scene v13s8_9f
     with dissolve
 
-    u "Yeah, except this time it’s not just you with those disagreements. Let's hope everything works out."
+    u "Yeah, except this time it's not just you with those disagreements. Let's hope everything works out."
 
     scene v13s8_9g
     with dissolve
