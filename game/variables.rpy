@@ -2,6 +2,7 @@
 define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
 define config.default_sfx_volume = 1
+default menu_set = set()
 
 default achievementAtList = None
 default freeRoam = False
@@ -551,3 +552,4 @@ default cameronBro = False
 default v13_lauren_hospital = False
 default v13_charli_exposed = False
 default v13_invite_samantha = False
+
