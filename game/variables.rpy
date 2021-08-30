@@ -544,7 +544,6 @@ default v13_aubrey_concert = False
 default v13_cuddle_lauren = False
 default chloeSus = 0
 default v13_cuddle_lauren_text = False
-default v13_cuddle_lauren = False
 default v13s16_lauren_points = 0
 default v13_smoke_weed = False
 default v13_lauren_smoke = False
