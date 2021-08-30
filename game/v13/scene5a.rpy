@@ -64,4 +64,4 @@ label v13s5a:
 
     pause 0.75
 
-    jump v13s6
+    jump v13s06
