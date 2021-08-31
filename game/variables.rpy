@@ -541,7 +541,6 @@ default v12s24_emmymatch = False
 #13.0
 default v13_penelope_concert = False
 default v13_aubrey_concert = False
-default v13_cuddle_lauren = False
 default chloeSus = 0
 default v13_cuddle_lauren_text = False
 default v13_cuddle_lauren = False
