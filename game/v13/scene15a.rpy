@@ -90,7 +90,7 @@ label v13s15a:
         u "(Kinda late for a text.)"
 
         $ contact_Lauren.newMessage("You up? ", queue=False)
-        $ contact_Lauren.addReply("Yeah, wassup? "))
+        $ contact_Lauren.addReply("Yeah, wassup? ")
         $ contact_Lauren.newMessage("Come cuddle with me? ;) ")
         $ contact_Lauren.addReply("You don't have to ask me twice, omw ", v13s15a_Reply1)
         $ contact_Lauren.addReply("I'm already asleep... ", v13s15a_Reply2)
