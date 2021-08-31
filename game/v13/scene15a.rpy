@@ -6,12 +6,12 @@
 init python:
     def v13s15a_Reply1():
         setattr(store, "v13_cuddle_lauren_text", True)
-        contact_Lauren.newMessage("Yayy :) ")
+        contact_Lauren.newMessage("Yayy :)")
 
     def v13s15a_Reply2():
-        contact_Lauren.newMessage("Aww okay, it's cool ")
-        contact_Lauren.addReply("Sorry babe, I'm just so tired. ")
-        contact_Lauren.newMessage("It's okay. ")
+        contact_Lauren.newMessage("Aww okay, it's cool")
+        contact_Lauren.addReply("Sorry babe, I'm just so tired.")
+        contact_Lauren.newMessage("It's okay.")
 
 label v13s15a:
     scene v13s15a_1 # TPP. Show MC walking into the room, it's dark inside, MC neutral expression, mouth closed
@@ -89,11 +89,11 @@ label v13s15a:
 
         u "(Kinda late for a text.)"
 
-        $ contact_Lauren.newMessage("You up? ", queue=False)
-        $ contact_Lauren.addReply("Yeah, wassup? ")
-        $ contact_Lauren.newMessage("Come cuddle with me? ;) ")
-        $ contact_Lauren.addReply("You don't have to ask me twice, omw ", v13s15a_Reply1)
-        $ contact_Lauren.addReply("I'm already asleep... ", v13s15a_Reply2)
+        $ contact_Lauren.newMessage("You up?", queue=False)
+        $ contact_Lauren.addReply("Yeah, wassup?")
+        $ contact_Lauren.newMessage("Come cuddle with me? ;)")
+        $ contact_Lauren.addReply("You don't have to ask me twice, omw", v13s15a_Reply1)
+        $ contact_Lauren.addReply("I'm already asleep...", v13s15a_Reply2)
 
         scene v13s15a_8 # FPP. MC looking down at his phone, he is standing in same place as v13s15a_6
         with dissolve

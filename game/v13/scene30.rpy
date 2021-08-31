@@ -208,7 +208,7 @@ label v13s30:
 
             u "*Laughs*"
 
-        "Why not!..":
+        "Why not!?":
             $ v13_smoke_weed = True
 
             scene v13s30_2a

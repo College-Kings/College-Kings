@@ -9,9 +9,9 @@ init python:
         contact_Lauren.newMessage("Yayy :)")
 
     def v13s15_Reply2():
-        contact_Lauren.newMessage("Aww okay, it's cool ")
-        contact_Lauren.addReply("Sorry babe, I'm just so tired. ")
-        contact_Lauren.newMessage("It's okay, night. ")
+        contact_Lauren.newMessage("Aww okay, it's cool")
+        contact_Lauren.addReply("Sorry babe, I'm just so tired.")
+        contact_Lauren.newMessage("It's okay, night.")
 
 label v13s15:
     scene v13s15_1 # TPP. Show MC walking into the room, it's dark inside, MC neutral expression, mouth closed
