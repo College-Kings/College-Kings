@@ -16,9 +16,9 @@ label v13s27:
 
     u "Wow... Perfect timing, who is it this time?"
 
-    $ contact_Amber.newMessage(_("Meet me at the bus stop near the hotel. ", queue=False))
-    $ contact_Amber.addReply(_("For?"))
-    $ contact_Amber.newMessage(_("... "))
+    $ contact_Amber.newMessage("Meet me at the bus stop near the hotel. ", queue=False)
+    $ contact_Amber.addReply("For?")
+    $ contact_Amber.newMessage("... ")
 
     scene v13s27_1b # TPP. Same as v13s27_1, MC slight smile, looking at his phone, mouth closed
     with dissolve
