@@ -142,7 +142,7 @@ label v13s8:
                 scene v13s8_9a
                 with dissolve
 
-                u "I mean it when I say this Nora. I'm not gonna walk around feeling bad for what we did. I didn't do it because I hate Chris, I did it because I really, really like you."
+                u "I mean it when I say this, Nora. I'm not gonna walk around feeling bad for what we did. I didn't do it because I hate Chris, I did it because I really, really like you."
 
             "Agree":
 
@@ -335,7 +335,7 @@ label v13s8:
     scene v13s8_9g
     with dissolve
 
-    no "You probably already know, but the fact that Chloe has to be the President of Chick's in order to keep her Greek scholarship?"
+    no "You probably already know, but the fact that Chloe has to be the President of Chicks in order to keep her Greek scholarship?"
 
     scene v13s8_9d
     with dissolve
@@ -425,7 +425,7 @@ label v13s8:
     scene v13s8_11 # TPP. Show MC and Nora hugging
     with dissolve
 
-    pause
+    pause 1.75
 
     scene v13s8_12 # TPP. Show MC walking out of the room, slight smile, mouth closed
     with dissolve
