@@ -118,7 +118,7 @@ label v13s06:
     scene v13s06_6a
     with dissolve
 
-    luuk "Haha, let's just say I make more money scheming with the guests more than I do checking people in."
+    luuk "Haha, let's just say I make more money scheming with the guests than I do checking them in."
 
     scene v13s06_6
     with dissolve
