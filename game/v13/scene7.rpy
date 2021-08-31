@@ -122,14 +122,14 @@ label v13_ticket_transfer:
         scene v13s7_2d
         with dissolve
 
-        lee "I had gotten you an old medallion that was significant to the real world event, but it appears it's been misplaced or worse... Stolen."
+        lee "I had gotten you an old medallion that was significant to the real world event, but it appears it's been misplaced or worse... stolen."
 
         scene v13s7_2b
         with dissolve
 
         u "(Yep, an old history thing.)"
 
-        u "*Chuckles* This was really nice of you Mr. Lee, you didn't have to do this. I'm pretty sure these were expensive..."
+        u "*Chuckles* This was really nice of you, Mr. Lee. You didn't have to do this. I'm pretty sure these were expensive..."
 
         scene v13s7_2e # FPP Same angle as v13s7_2, Mr. Lee closer now, laughing
         with dissolve
