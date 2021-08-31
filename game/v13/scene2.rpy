@@ -51,7 +51,7 @@ label v13s2:
 
         u "(She must be having a hard time sleeping for some reason.)"
         
-    scene v12s2_7 # TPP. Show MC leaving the hotel, Ms. Rose in front of him, both slightly smiling, mouths closed
+    scene v13s2_7 # TPP. Show MC leaving the hotel, Ms. Rose in front of him, both slightly smiling, mouths closed
     with dissolve
 
     pause 0.75

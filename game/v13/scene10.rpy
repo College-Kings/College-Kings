@@ -166,7 +166,7 @@ label v13_pre_date:
 
         ry "Hell yeah!"
 
-        scene v12sX_ # -MC and Ryan walk out of the hotel-
+        scene v13sX_ # -MC and Ryan walk out of the hotel-
         with dissolve
 
         pause 0.75

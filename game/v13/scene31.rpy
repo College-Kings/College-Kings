@@ -184,7 +184,7 @@ label v13s31:
 
         u "I'll head back to the hotel, man. Give you some space. Just know, I'm always around for you, bro. Both of you."
 
-        scene v12s31_14 # TPP. Show MC and cameron hugging, MC slight smile, mouth closed, Cameron slight smile, mouth closed  
+        scene v13s31_14 # TPP. Show MC and cameron hugging, MC slight smile, mouth closed, Cameron slight smile, mouth closed  
         with fade
 
         pause 0.75
