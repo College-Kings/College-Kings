@@ -28,7 +28,7 @@ label v13s27:
                 call screen phone
         if contact_Amber.replies:
                 u "(I should check my phone.)"
-                jump v13s27_PhoneContinueAmbers
+                jump v13s27_PhoneContinueAmber
 
     scene v13s27_1c # TPP. Same as v13s27_1, MC suspicious, mouth closed
     with dissolve
