@@ -108,7 +108,7 @@ label v13s06:
     scene v13s06_6b
     with dissolve
 
-    luuk "It's good to possess many conflicting skills. No one expects a confident man to be a good cook and no one expects the cook to be a confidence man."
+    luuk "It's good to possess many conflicting skills. No one expects a confidence man to be a good cook and no one expects the cook to be a confidence man."
 
     scene v13s06_6
     with dissolve
