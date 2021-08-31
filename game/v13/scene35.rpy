@@ -37,7 +37,7 @@ label v13s35:
     scene v13s35_2a
     with dissolve
 
-    u "Are you scared or something? What’s wrong?"
+    u "Are you scared or something? What's wrong?"
 
     scene v13s35_2b # FPP. Same as v13s35_2, Aubrey different pose, slight smile, mouth open.
     with dissolve
@@ -57,7 +57,7 @@ label v13s35:
     scene v13s35_2a
     with dissolve
 
-    u "Haha, c'mon then. I’ve got you covered."
+    u "Haha, c'mon then. I've got you covered."
 
     scene v13s35_3 # TPP. Show Aubrey and MC starting to walk into sex shop, both slight smile, mouths closed.
     with dissolve
@@ -92,7 +92,7 @@ label v13s35:
         call screen v13s35_adult_shop
 
 
-        u "(She'll be happy with these, I think. We're gonna have some fun… *Chuckles*)"
+        u "(She'll be happy with these, I think. We're gonna have some fun... *Chuckles*)"
 
 
     else:
@@ -132,7 +132,7 @@ label v13s35:
     scene v13s35_9
     with dissolve
 
-    u "I don't know why I was expecting so much more. It’s so clean and… Innocent here."
+    u "I don't know why I was expecting so much more. It's so clean and... Innocent here."
 
     scene v13s35_9a
     with dissolve
@@ -172,12 +172,12 @@ label v13s35:
     scene v13s35_12
     with dissolve
 
-    au "I can't, actually. I’m on my way to chill with Chloe for a bit, but you can take [name] off my hands."
+    au "I can't, actually. I'm on my way to chill with Chloe for a bit, but you can take [name] off my hands."
 
     scene v13s35_11c # FPP. Same as v13s35_11b, Lindsey looking at MC, slight smile, mouth open.
     with dissolve
 
-    li "I’d love to… *Chuckles* You cool with that?"
+    li "I'd love to... *Chuckles* You cool with that?"
 
     scene v13s35_11a
     with dissolve
