@@ -3,18 +3,15 @@
 # Characters: MC (Outfit: 2), RILEY (Outfit: NAKED)
 # Time: Night
 
-default v13_cuddle_lauren_text = False
-default v13_cuddle_lauren = False
-
 init python:
     def v13s15a_Reply1():
-        $ v13_cuddle_lauren_text = True
-        $ contact_Lauren.newMessage(_("Yayy :) "))
+        setattr(store, "v13_cuddle_lauren_text", True)
+        contact_Lauren.newMessage(_("Yayy :) "))
 
     def v13s15a_Reply2():
-        $ contact_Lauren.newMessage(_("Aww okay, it's cool "))
-        $ contact_Lauren.addReply(_("Sorry babe, I'm just so tired. "))
-        $ contact_Lauren.newMessage(_("It's okay. "))
+        contact_Lauren.newMessage(_("Aww okay, it's cool "))
+        contact_Lauren.addReply(_("Sorry babe, I'm just so tired. "))
+        contact_Lauren.newMessage(_("It's okay. "))
 
 label v13s15a:
     scene v13s15a_1 # TPP. Show MC walking into the room, it's dark inside, MC neutral expression, mouth closed
@@ -67,12 +64,12 @@ label v13s15a:
     scene v13s15a_6d # FPP. Same as v13s15a_6c, Riley slightly sad, mouth closed
     with dissolve
 
-    u "I told you, I'm not upset. I honestly forget about it all the time  until you bring it up."
+    u "I told you, I'm not upset. I honestly forget about it all the time until you bring it up."
 
     scene v13s15a_6c
     with dissolve
 
-    ri "It's because I still don’t sit right with it..."
+    ri "It's because I still don't sit right with it..."
 
     scene v13s15a_6d
     with dissolve
@@ -142,7 +139,7 @@ label v13s15a:
         scene v13s15a_6h
         with dissolve
 
-        ri "I was hoping you'd come over here…"
+        ri "I was hoping you'd come over here..."
 
         scene v13s15a_6j # FPP. Same as v13s15a_6h, Riley in the motion of removing the blanket completely, sexy look, mouth open
         with dissolve
@@ -190,7 +187,7 @@ label v13s15a:
                 scene v13s15a_6m # FPP. Same as v13s15a_6k, Riley slightly surprised, mouth closed
                 with dissolve
 
-                u "Very flattering, Riley. I mean... Very... Very flattering…"
+                u "Very flattering, Riley. I mean... Very... Very flattering..."
 
                 scene v13s15a_6n # FPP. Same as v13s15a_6m, Riley slight smile, mouth closed
                 with dissolve

@@ -58,7 +58,7 @@ label v13s17a:
     scene v13s17a_2b
     with dissolve
 
-    u "I’m gonna see if Luuk has breakfast ready today. Wanna join me?"
+    u "I'm gonna see if Luuk has breakfast ready today. Wanna join me?"
 
     scene v13s17a_2c
     with dissolve
@@ -73,7 +73,7 @@ label v13s17a:
     scene v13s17a_2
     with dissolve
 
-    u "*Chuckles*  Sounds like a plan."
+    u "*Chuckles* Sounds like a plan."
 
     scene v13s17a_3 # TPP. Show MC getting out of bed, slight smile, mouth closed
     with dissolve

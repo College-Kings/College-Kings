@@ -3,18 +3,15 @@
 # Characters: MC (Outfit: 2), CHLOE (Outfit: 6)
 # Time: Night
 
-default v13_cuddle_lauren = False
-default chloeSus = 0
-
 init python:
     def v13s15_Reply1():
-        $ v13_cuddle_lauren = True
-        $ contact_Lauren.newMessage(_("Yayy :) "))
+        setattr(store, "v13_cuddle_lauren", True)
+        contact_Lauren.newMessage(_("Yayy :) "))
 
     def v13s15_Reply2():
-        $ contact_Lauren.newMessage(_("Aww okay, it's cool "))
-        $ contact_Lauren.addReply(_("Sorry babe, I'm just so tired. "))
-        $ contact_Lauren.newMessage(_("It's okay, night. "))
+        contact_Lauren.newMessage(_("Aww okay, it's cool "))
+        contact_Lauren.addReply(_("Sorry babe, I'm just so tired. "))
+        contact_Lauren.newMessage(_("It's okay, night. "))
 
 label v13s15:
     scene v13s15_1 # TPP. Show MC walking into the room, it's dark inside, MC neutral expression, mouth closed
@@ -47,7 +44,7 @@ label v13s15:
     scene v13s15_6 # FPP. MC same positioning as v13s15_4, looking at Chloe, she's in her bed, under her covers, looking at MC, Chloe slightly worried, mouth closed
     with dissolve
 
-    u "I'm sorry, Chlo."
+    u "I'm sorry, Chloe."
 
     scene v13s15_6a # FPP. Same as v13s15_6, Chloe slightly worried, mouth open
     with dissolve
@@ -57,7 +54,7 @@ label v13s15:
     scene v13s15_6b # FPP. Same as v13s15_6, Chloe slight smile, mouth closed
     with dissolve
 
-    u "No, I just… I hit my foot on the bed."
+    u "No, I just... I hit my foot on the bed."
 
     scene v13s15_6c # FPP. Same as v13s15_6b, Chloe slight smile, mouth open
     with dissolve
@@ -172,12 +169,12 @@ label v13s15:
                     "Grabbing a snack":
                         $ chloeSus += 1
 
-                        u "Oh, um… My stomach is feeling really empty, so I’m gonna go try to find something to snack on…"
+                        u "Oh, um... My stomach is feeling really empty, so I'm gonna go try to find something to snack on..."
 
                         scene v13s15_15
                         with dissolve
 
-                        cl "But… It’s the middle of the night… I don’t know if-"
+                        cl "But... It's the middle of the night... I don't know if-"
 
                         scene v13s15_15a
                         with dissolve
@@ -187,7 +184,7 @@ label v13s15:
                         scene v13s15_15
                         with dissolve
 
-                        cl "Oh, I- Okay…"
+                        cl "Oh, I- Okay..."
 
                     "Imre needs me":
                         scene v13s15_15b # FPP. Same as v13s15_15a, Chloe slightly sad, mouth closed

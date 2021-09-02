@@ -178,12 +178,12 @@ label v13s06:
     scene v13s06_6a
     with dissolve
 
-    luuk "Well… I’ll see you soon for another breakfast, *Laughs* Also, remember what I said. I hear it all or don't hear anything."
+    luuk "Well... I'll see you soon for another breakfast, *Laughs* Also, remember what I said. I hear it all or don't hear anything."
 
     scene v13s06_6
     with dissolve
 
-    u "I... heard...you."
+    u "I... heard... you."
 
     scene v13s06_6a
     with dissolve

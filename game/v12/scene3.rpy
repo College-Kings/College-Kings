@@ -290,7 +290,7 @@ label v12_penelope_roof:
 
             u "Do you think I'm a good guy?"
 
-            if laurenmad:
+            if laurenrs and v11_aubrey_sex:
                 scene v12penr10a
                 with dissolve
 

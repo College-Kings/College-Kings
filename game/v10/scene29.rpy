@@ -299,7 +299,7 @@ label v10_chloe_hallway:
             "Decline a Rematch":
                 u "I shouldn't, I have a lot to do. Sorry."
 
-                scene v10such5
+                scene v10such5a
                 with dissolve
 
                 cl "Oh, yeah okay... no worries. Guess I'll see you around then."

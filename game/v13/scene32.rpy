@@ -3,8 +3,6 @@
 # Characters: AMBER (Outfit: 1), LAUREN (Outfit: 3, MC (Outfit: 9)
 # Time: Night
 
-default v13_lauren_hospital = False
-
 label v13s32:
     if not v13_lauren_hospital:
         scene v13s32_1 # TPP. Show MC, Lauren and Amber walking into the room, all slightly smiling, mouths closed
@@ -62,7 +60,7 @@ label v13s32:
         scene v13s32_2b # FPP. Same as v13s32_2a, Amber slight smile, mouth closed
         with dissolve
 
-        u "She’s set on her ways. *Chuckles*"
+        u "She's set on her ways. *Chuckles*"
 
         scene v13s32_2a
         with dissolve

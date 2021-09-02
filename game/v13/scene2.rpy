@@ -56,4 +56,4 @@ label v13s2:
 
     pause 0.75
 
-    jump v12s3
+    jump v13s3

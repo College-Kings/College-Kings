@@ -22,7 +22,8 @@ label v12_nora_room:
 
     menu:
         "Chris is...": 
-            scene v12nos1b # FPP. Same as v12nos1, Nora looking down, crying, mouth closed
+            #scene v12nos1b # FPP. Same as v12nos1, Nora looking down, crying, mouth closed
+            scene v12nos1
             with dissolve
 
             u "Chris isn't focused on what he should be focused on, no matter what he may think. He says he's trying to get things setup for the two of you, but he can't have a future with you if he doesn't have a present."
@@ -46,7 +47,8 @@ label v12_nora_room:
         "You are...":
             $ v12_nora_points += 1
 
-            scene v12nos1b
+            #scene v12nos1b
+            scene v12nos1
             with dissolve
 
             u "You are the only person I'm concerned about right now. We don't even need to bring him up."
@@ -71,7 +73,8 @@ label v12_nora_room:
 
             no "Why, though?"
 
-            scene v12nos1e # FPP. Same as v12nos1d, different pose
+            #scene v12nos1e # FPP. Same as v12nos1d, different pose
+            scene v12nos1d
             with dissolve
 
             no "Why is it so easy for you to understand that a woman needs to be your sole focus from time to time, but other men can't?"
@@ -262,6 +265,7 @@ label v12_nora_room:
 
             "Kiss her":
                 $ v12_nora_sex = True
+                $ norars = True
 
                 stop music fadeout 3
                 play music "music/v12/Scene 35a/Track Scene 35a_1.mp3" fadein 2
@@ -271,7 +275,8 @@ label v12_nora_room:
         jump v12_nora_no_sex
 
 label v12_nora_no_sex:
-        scene v12nos1e
+        #scene v12nos1e
+        scene v12nos1d
         with dissolve
 
         no "You really are the perfect guy..."
@@ -629,11 +634,6 @@ label v12_nora_sex:
         scene v12nos35 # FPP. Same positioning as v12nos35, MC and Nora looking at each other, Nora smiling, mouth closed
         with dissolve
 
-        if joinwolves:
-            $ grant_achievement("inside_job")
-        else:
-            $ grant_achievement("all_is_fair_in_love_and_war")
-
         u "Nora... That was... Thank you."
 
         scene v12nos35a # FPP. Same as v12nos36, Nora smiling, mouth open
@@ -719,6 +719,11 @@ label v12_nora_sex:
 
         scene v12nos13a # TPP. Same as v12nos13, MC smiling, mouth closed
         with dissolve
+
+        if joinwolves:
+            $ grant_achievement("inside_job")
+        else:
+            $ grant_achievement("all_is_fair_in_love_and_war")
 
         u "(I just had sex with Nora. NORA!!! I fucked Chris' girl! Wow... Gonna have to sleep on this one.)"
 

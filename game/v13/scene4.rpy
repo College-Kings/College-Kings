@@ -45,7 +45,7 @@ label v13s4:
         scene v13s4_5 # TPP. Show MC and Riley walking in hotel lobby stowards the corridor, carrying their luggage, slight smiles, mouths closed
         with dissolve
 
-        u "(I may have been sleeping that entire ride, but it wasn’t very relaxing.)"
+        u "(I may have been sleeping that entire ride, but it wasn't very relaxing.)"
 
         jump v13s5a
 
@@ -70,12 +70,12 @@ label v13s4:
         scene v13s4_6c # FPP. Same as v13s4_6b, Chloe slightly annoyed, mouth closed
         with dissolve
 
-        u "Were you just standing there sleep? *Chuckles*"
+        u "Were you just standing there asleep? *Chuckles*"
 
         scene v13s4_6b
         with dissolve
 
-        cl "I'm so tired, [Name]. I woke up way too early this morning and that bus ride was making me sick so I couldn't sleep."
+        cl "I'm so tired, [name]. I woke up way too early this morning and that bus ride was making me sick so I couldn't sleep."
 
         scene v13s4_6d # FPP. Same as v13s4_6c, Chloe frowning, mouth closed
         with dissolve
@@ -96,12 +96,12 @@ label v13s4:
             scene v13s4_5a # TPP. Same as v13s4_5, but instead of Riley, it's Chloe, Chloe frowning, mouth closed, carrying her luggage
             with dissolve
 
-            pause 0.75
+            pause 1
 
         else:
             scene v13s4_5b # TPP. Same as v13s4_5a, but MC carrying Chloe's luggage as well
             with dissolve
 
-            pause 0.75
-        
+            pause 1
+                
         jump v13s5

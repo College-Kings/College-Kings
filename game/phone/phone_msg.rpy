@@ -1,8 +1,8 @@
 init python:
     class Contact:
-        def __init__(self, name, profilePicture, locked=True):
+        def __init__(self, name, profile_picture, locked=True):
             self.name = name
-            self.profilePicture = "images/phone/messages/profilePictures/{}".format(profilePicture)
+            self.profile_picture = "images/phone/profilePictures/{}".format(profile_picture)
             self.locked = locked
             self.sentMessages = []
             self.pendingMessages = []
@@ -113,7 +113,7 @@ init python:
                 contacts.append(self)
             self.locked = False
 
-        def getMessage(self, message):
+        def get_message(self, message):
             for msg in self.sentMessages:
                 try:
                     if message == msg.message:

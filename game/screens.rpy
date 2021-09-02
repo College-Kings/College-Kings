@@ -715,8 +715,9 @@ screen load():
 
 
 screen file_slots(title):
-
     default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
+    $ incompatible_game_versions = ["12.0.0", "0.6.4"]
+    $ incompatible_renpy_versions = ["7.4.8.1895", "7.4.7.1862"]
 
     use game_menu(title):
         
@@ -735,6 +736,12 @@ screen file_slots(title):
                     yalign 0.13
                     xalign 0.5
 
+                python:
+                    game_version = FileJson(1, key="_version") or ""
+                    renpy_version = FileJson(1, key="_renpy_version") or ""
+                    renpy_version = '.'.join(str(i) for i in renpy_version)
+                    file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
+
                 button:
                     style_prefix "slot"
                     align (0.5, 0.5)
@@ -743,7 +750,12 @@ screen file_slots(title):
 
                     has vbox
 
-                    add FileScreenshot(1) xalign 0.5
+                    if file_compatable:
+                        add FileScreenshot(1) xalign 0.5
+                        text game_version outlines [ (0, "#000", 3, 3) ] xpos 5
+                    else:
+                        add "#000"
+                        text "INCOMPATIBLE" color "#f00" xalign 0.5
 
                     text FileTime(1, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
                         style "slot_time_text"
@@ -775,16 +787,28 @@ screen file_slots(title):
 
                     spacing gui.slot_spacing
 
-                    for i in range(gui.file_slot_cols * gui.file_slot_rows):
-                        
-                        $ slot = i + 1
+                    for slot in range(1, gui.file_slot_cols * gui.file_slot_rows + 1):
+                        python:
+                            game_version = FileJson(slot, key="_version") or ""
+                            renpy_version = FileJson(slot, key="_renpy_version") or ""
+                            renpy_version = '.'.join(str(i) for i in renpy_version)
+                            file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
 
                         button:
                             action FileAction(slot)
 
                             has vbox
 
-                            add FileScreenshot(slot) xalign 0.5
+                            fixed:
+                                xysize (384, 220)
+
+                                if file_compatable:
+                                    add FileScreenshot(slot) xalign 0.5
+                                    text game_version outlines [ (0, "#000", 3, 3) ] xpos 5
+                                else:
+                                    add "#000"
+                                    text "INCOMPATIBLE" color "#f00" xalign 0.5
+                                
 
                             text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
                                 style "slot_time_text"
