@@ -14,11 +14,11 @@ label v13s27:
     scene v13s27_1a # TPP. Same as v13s27_1, MC slightly surprised, going to grab his phone, mouth closed
     with dissolve
 
-    u "Wow… Perfect timing, who is it this time?"
+    u "Wow... Perfect timing, who is it this time?"
 
-    $ contact_Amber.newMessage(_("Meet me at the bus stop near the hotel. ", queue=False))
-    $ contact_Amber.addReply(_("For?"))
-    $ contact_Amber.newMessage(_("... "))
+    $ contact_Amber.newMessage("Meet me at the bus stop near the hotel. ", queue=False)
+    $ contact_Amber.addReply("For?")
+    $ contact_Amber.newMessage("... ")
 
     scene v13s27_1b # TPP. Same as v13s27_1, MC slight smile, looking at his phone, mouth closed
     with dissolve
@@ -28,12 +28,12 @@ label v13s27:
                 call screen phone
         if contact_Amber.replies:
                 u "(I should check my phone.)"
-                jump v13s27_PhoneContinueAmbers
+                jump v13s27_PhoneContinueAmber
 
     scene v13s27_1c # TPP. Same as v13s27_1, MC suspicious, mouth closed
     with dissolve
 
-    u "(She wants me to drag my ass over there without knowing a damn thing about what we’re doing?)"
+    u "(She wants me to drag my ass over there without knowing a damn thing about what we're doing?)"
 
     scene v13s27_1
     with dissolve

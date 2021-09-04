@@ -8,7 +8,7 @@ label v13_start:
     scene v13s1_1 # FPP. MC and Riley sitting in front of each other at the cafe table, Riley slightly angry, mouth open
     with dissolve
 
-    ri "Since he decided to take something special from me and ruin it… Let's ruin something special of his. He thinks it's entertaining to not only frame someone, but also embarrass a so-called friend in the process."
+    ri "Since he decided to take something special from me and ruin it... Let's ruin something special of his. He thinks it's entertaining to not only frame someone, but also embarrass a so-called friend in the process."
 
     scene v13s1_1a # FPP. Same as v13s1_1, Riley slight grin, mouth open
     with dissolve
@@ -56,7 +56,7 @@ label v13_start:
 
     scene v13s1_1b
     with dissolve
-    u "*Laughs* Okay, I'm also enjoying this, but please don't make that face. I can't take you seriously when you do that… *Chuckles*"
+    u "*Laughs* Okay, I'm also enjoying this, but please don't make that face. I can't take you seriously when you do that... *Chuckles*"
 
     scene v13s1_1d
     with dissolve
@@ -78,7 +78,7 @@ label v13_start:
     scene v13s1_1b
     with dissolve
 
-    u "Okay, but… Why his suitcase?"
+    u "Okay, but... Why his suitcase?"
 
     scene v13s1_1d
     with dissolve
@@ -198,7 +198,7 @@ label v13_start:
             scene v13s1_3c
             with dissolve
 
-            ri "Well… It's not fine, and I shouldn't have jumped to conclusions like that so fast. Your forgiveness means everything to me, though."
+            ri "Well... It's not fine, and I shouldn't have jumped to conclusions like that so fast. Your forgiveness means everything to me, though."
 
     scene v13s1_4 # TPP. Show Riley hugging MC
     with dissolve

@@ -128,3 +128,4 @@ define character.tattoo = Character("Tattoo Artist", who_color="#ff1694", who_ou
 
 # 13.0
 define character.luuk = Character("Luuk", who_color="#ff1694", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.kourt = Character("Kourtney", who_color="#ff8afb", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])

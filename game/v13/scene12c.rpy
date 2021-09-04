@@ -57,7 +57,7 @@ label v13s12c:
     scene v13s12c_2c
     with dissolve
 
-    u "Oh, yeah. Maybe… I mean It would depend-"
+    u "Oh, yeah. Maybe... I mean It would depend-"
 
     scene v13s12c_2b
     with dissolve
@@ -97,7 +97,7 @@ label v13s12c:
     scene v13s12c_7 # FPP. Same positioning as v13s12c_6, MC and Aubrey looking at each other, Aubrey slight smile, mouth open
     with dissolve
 
-    au "Not gonna lie… *Chuckles* I didn't realize how high it was up here."
+    au "Not gonna lie... *Chuckles* I didn't realize how high it was up here."
 
     scene v13s12c_7a # FPP. Same as v13s12c_7, Aubrey slightly worried, mouth open
     with dissolve
@@ -112,7 +112,7 @@ label v13s12c:
     scene v13s12c_7
     with dissolve
 
-    au "Not surprised, actually. That girl and I have a lot in common… *Laughs*"
+    au "Not surprised, actually. That girl and I have a lot in common... *Laughs*"
 
     scene v13s12c_7b
     with dissolve
@@ -142,7 +142,7 @@ label v13s12c:
     scene v13s12c_11 # FPP. Same positioning as v13s12c_10, MC looking at Aubrey, Aubrey looking at MC, slightly sad, mouth open
     with dissolve
 
-    au "I wanted to start and finish Amsterdam off with a bang…"
+    au "I wanted to start and finish Amsterdam off with a bang..."
 
     scene v13s12c_11a # FPP. Same as v13s12c_11, Aubrey looking at the sky, slightly sad, mouth open
     with dissolve
@@ -282,7 +282,7 @@ label v13s12c:
     scene v13s12c_11c
     with dissolve
 
-    au "But no matter what, if she's frustrated, she's gonna bring that energy into the house. And that’s the exact kind of shit that I don't want to deal with."
+    au "But no matter what, if she's frustrated, she's gonna bring that energy into the house. And that's the exact kind of shit that I don't want to deal with."
 
     scene v13s12c_11b
     with dissolve
@@ -307,7 +307,7 @@ label v13s12c:
     scene v13s12c_11
     with dissolve
 
-    au "I think I’m ready to head back down, but I have a question for you first."
+    au "I think I'm ready to head back down, but I have a question for you first."
 
     scene v13s12c_11b
     with dissolve
@@ -352,7 +352,7 @@ label v13s12c:
             scene v13s12c_11e
             with dissolve
 
-            u "Lindsey clearly is passionate about making good improvements to the sorority and has a lot of support already…"
+            u "Lindsey clearly is passionate about making good improvements to the sorority and has a lot of support already..."
 
             scene v13s12c_11b
             with dissolve
@@ -362,7 +362,7 @@ label v13s12c:
     scene v13s12c_11c
     with dissolve
 
-    au "I now realize that even after hearing what you'd do, it doesn’t make my decision any easier."
+    au "I now realize that even after hearing what you'd do, it doesn't make my decision any easier."
 
     scene v13s12c_11b
     with dissolve

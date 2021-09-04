@@ -131,7 +131,7 @@ label v13s21a:
 
     charli "Look here, Bruce... You have a reputation of being harsh on your students, and prepare them for success in the tests you provide."
 
-    charli "Your students goof off without concern for you or anyone else. They aren’t learning from you any more than they’re learning from me. *Chuckles*"
+    charli "Your students goof off without concern for you or anyone else. They aren't learning from you any more than they're learning from me. *Chuckles*"
 
     scene v13s21a_13 # TPP. Camera angle on Charli's shoulder, showing back of Charli's head, showing Mr. Lee's face, Mr. Lee angry, mouth open
     with dissolve

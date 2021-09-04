@@ -3,9 +3,6 @@
 # Characters: MR. LEE (Outfit: 1), MC (Outfit: 2), PENELOPE (Outfit: 1), AUBREY (Outfit: 2)
 # Time: Morning 
 
-default v13_penelope_concert = False
-default v13_aubrey_concert = False
-
 label v13_ticket_transfer:
     if v12_murder_count >= 5: # -If 5+ kills
         scene v13s7_1 # TPP Show MC in lobby, looking around and wondering what to do next
@@ -125,14 +122,14 @@ label v13_ticket_transfer:
         scene v13s7_2d
         with dissolve
 
-        lee "I had gotten you an old medallion that was significant to the real world event, but it appears it's been misplaced or worse... Stolen."
+        lee "I had gotten you an old medallion that was significant to the real world event, but it appears it's been misplaced or worse... stolen."
 
         scene v13s7_2b
         with dissolve
 
         u "(Yep, an old history thing.)"
 
-        u "*Chuckles* This was really nice of you Mr. Lee, you didn't have to do this. I'm pretty sure these were expensive..."
+        u "*Chuckles* This was really nice of you, Mr. Lee. You didn't have to do this. I'm pretty sure these were expensive..."
 
         scene v13s7_2e # FPP Same angle as v13s7_2, Mr. Lee closer now, laughing
         with dissolve
@@ -160,13 +157,13 @@ label v13_ticket_transfer:
         u "*Laughs* (Did he just lowkey flex on me and then walk off? Haha, he gave me two concert tickets as well...)"
 
         # NEED NUMBER FOR ALL KILLS - REPLACE IN NEXT TWO CHECKS
-        if (v12_murder_count >= 10 and v12_murder_count < ALL): # -if 10+ kills but not all
+        if (v12_murder_count >= 10 and v12_murder_count < v12s7_victims): # -if 10+ kills but not all
             scene v13s7_4
             with dissolve
 
             u "(And these have backstage passes! Holy shit, he really went all out.)"
 
-        elif v12_murder_count = ALL: # -if all kills
+        elif v12_murder_count == v12s7_victims: # -if all kills
             scene v13s7_4
             with dissolve
 
@@ -182,7 +179,7 @@ label v13_ticket_transfer:
 
         pause 0.75
 
-        if v11_pen_goes_europe = True: # -If Penelope is in Europe
+        if v11_pen_goes_europe: # -If Penelope is in Europe
 
             scene v13s7_6 # FPP Show Penelope walking into the lobby
             with dissolve
@@ -225,7 +222,7 @@ label v13_ticket_transfer:
                     scene v13s7_8a
                     with dissolve
 
-                    pe "Oh, wow! A concert in Amsterdam… That’s so cool, [name], congrats."
+                    pe "Oh, wow! A concert in Amsterdam... That's so cool, [name], congrats."
 
                     scene v13s7_8
                     with dissolve
@@ -247,20 +244,22 @@ label v13_ticket_transfer:
 
                     pe "Things must be looking up for me because Ms. Rose just said the same thing..."
 
-                    pe "Her and Mr. Lee agreed to give me a night out whenever I wanted while we’re in Amsterdam. So yes, I'll definitely go! Thank you so much for asking me, [Name]."
+                    pe "Her and Mr. Lee agreed to give me a night out whenever I wanted while we're in Amsterdam. So yes, I'll definitely go! Thank you so much for asking me, [name]."
 
                     scene v13s7_8
                     with dissolve
 
-                    u "Of course. I can’t wait for this."
+                    u "Of course. I can't wait for this."
 
                     if penelopers:
                         scene v13s7_9 # TPP Show Penelope kissing MC
                         with dissolve
 
-                        pause 0.75
+                        play sound "sounds/kiss.mp3"
+                        pause 1.5
 
                         scene v13s7_9a # TPP Same angle as v13s7_9, Penelope leaning back after kissing MC, Penelope smiling with mouth open
+                        with dissolve
 
                         pe "My serial killer hero."
 
@@ -355,19 +354,19 @@ label v13_ticket_transfer:
         scene v13s7_12b # FPP Same angle as v13s7_12, Aubrey looking at MC with a big, excited smile, mouth open
         with dissolve
 
-        au "Of course I wanna go! Thank you so so so much for even thinking of me…"
+        au "Of course I wanna go! Thank you so so so much for even thinking of me..."
 
         scene v13s7_12
         with dissolve
 
-        au "I can’t believe this... How'd even you know I'd be into this?"
+        au "I can't believe this... How'd even you know I'd be into this?"
 
         scene v13s7_12a
         with dissolve
 
         u "I try my best to pay attention to your interests, you know."
 
-        scene v13s7_2b
+        scene v13s7_12b
         with dissolve
 
         au "That's pretty nice of you. *Chuckles* I'm gonna go and practice her songs, I can never remember the lyrics."
@@ -377,7 +376,7 @@ label v13_ticket_transfer:
 
         u "*Chuckles*"
 
-    elif (v12_murder_count <5 and v11_pen_goes_europe = True): # -If less than 5 kills and Penelope is there
+    elif (v12_murder_count < 5 and v11_pen_goes_europe): # -If less than 5 kills and Penelope is there
         $ v13_penelope_concert = True
 
         scene v13s7_6a # FPP Same angle as v13s7_6, Penelope smiling at MC from across the lobby, mouth open
@@ -420,12 +419,12 @@ label v13_ticket_transfer:
 
         pe "Concert tickets."
 
-        pe "Mr. Lee and Ms. Rose gave these to me as a little reward for doing a lot for them while we’ve been on the trip, and said I could take whoever I wanted."
+        pe "Mr. Lee and Ms. Rose gave these to me as a little reward for doing a lot for them while we've been on the trip, and said I could take whoever I wanted."
 
         scene v13s7_8d # FPP Same angle as v13s7_8, Penelope laughing
         with dissolve
 
-        pe "I think they were the \"reward\" that you were supposed to get for doing really well during the murder mystery, but since you didn't do really well… *Chuckles* They gave them to me."
+        pe "I think they were the \"reward\" that you were supposed to get for doing really well during the murder mystery, but since you didn't do really well... *Chuckles* They gave them to me."
 
         scene v13s7_8
         with dissolve
@@ -456,7 +455,7 @@ label v13_ticket_transfer:
             scene v13s7_8a
             with dissolve
 
-            pe "Of course! You’re the only person I’d want to spend the entire night with. *Chuckles*"
+            pe "Of course! You're the only person I'd want to spend the entire night with. *Chuckles*"
 
             scene v13s7_8e # FPP Same angle as v13s7_8, MC tucking a piece of Penelope's hair behind her ear, Penelope is smiling and blushing with mouth closed
             with dissolve
