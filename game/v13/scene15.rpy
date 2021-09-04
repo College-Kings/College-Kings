@@ -3,18 +3,15 @@
 # Characters: MC (Outfit: 2), CHLOE (Outfit: 6)
 # Time: Night
 
-default v13_cuddle_lauren = False
-default chloeSus = 0
-
 init python:
     def v13s15_Reply1():
-        v13_cuddle_lauren = True
-        contact_Lauren.newMessage(_("Yayy :) "))
+        setattr(store, "v13_cuddle_lauren", True)
+        contact_Lauren.newMessage("Yayy :)")
 
     def v13s15_Reply2():
-        contact_Lauren.newMessage(_("Aww okay, it's cool "))
-        contact_Lauren.addReply(_("Sorry babe, I'm just so tired. "))
-        ccontact_Lauren.newMessage(_("It's okay, night. "))
+        contact_Lauren.newMessage("Aww okay, it's cool")
+        contact_Lauren.addReply("Sorry babe, I'm just so tired.")
+        contact_Lauren.newMessage("It's okay, night.")
 
 label v13s15:
     scene v13s15_1 # TPP. Show MC walking into the room, it's dark inside, MC neutral expression, mouth closed
@@ -57,7 +54,7 @@ label v13s15:
     scene v13s15_6b # FPP. Same as v13s15_6, Chloe slight smile, mouth closed
     with dissolve
 
-    u "No, I just… I hit my foot on the bed."
+    u "No, I just... I hit my foot on the bed."
 
     scene v13s15_6c # FPP. Same as v13s15_6b, Chloe slight smile, mouth open
     with dissolve
@@ -124,14 +121,16 @@ label v13s15:
 
         u "(Kinda late for a text.)"
 
-        $ contact_Lauren.newMessage(_("You up? ", queue=False))
-        $ contact_Lauren.addReply(_("Yeah, wassup? "))
-        $ contact_Lauren.newMessage(_("Come cuddle with me? ;) "))
-        $ contact_Lauren.addReply(_("You don't have to ask me twice, omw "), v13s15_Reply2)
-        $ contact_Lauren.addReply(_("I'm already halfway asleep... "), v13s15_Reply1)
+        $ contact_Lauren.newMessage("You up?", queue=False)
+        $ contact_Lauren.addReply("Yeah, wassup?")
+        $ contact_Lauren.newMessage("Come cuddle with me? ;)")
+        $ contact_Lauren.addReply("You don't have to ask me twice, omw", v13s15_Reply2)
+        $ contact_Lauren.addReply("I'm already halfway asleep...", v13s15_Reply1)
 
         scene v13s15_11 # FPP. MC looking down at his phone, he is standing in same place as v13s15_6
         with dissolve
+
+        pause 1
 
         label v13s15_PhoneContinueLauren:
             if contact_Lauren.replies:
@@ -172,12 +171,12 @@ label v13s15:
                     "Grabbing a snack":
                         $ chloeSus += 1
 
-                        u "Oh, um… My stomach is feeling really empty, so I’m gonna go try to find something to snack on…"
+                        u "Oh, um... My stomach is feeling really empty, so I'm gonna go try to find something to snack on..."
 
                         scene v13s15_15
                         with dissolve
 
-                        cl "But… It’s the middle of the night… I don’t know if-"
+                        cl "But... It's the middle of the night... I don't know if-"
 
                         scene v13s15_15a
                         with dissolve
@@ -187,7 +186,7 @@ label v13s15:
                         scene v13s15_15
                         with dissolve
 
-                        cl "Oh, I- Okay…"
+                        cl "Oh, I- Okay..."
 
                     "Imre needs me":
                         scene v13s15_15b # FPP. Same as v13s15_15a, Chloe slightly sad, mouth closed

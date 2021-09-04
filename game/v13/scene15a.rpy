@@ -3,18 +3,15 @@
 # Characters: MC (Outfit: 2), RILEY (Outfit: NAKED)
 # Time: Night
 
-default v13_cuddle_lauren_text = False
-default v13_cuddle_lauren = False
-
 init python:
     def v13s15a_Reply1():
-        v13_cuddle_lauren_text = True
-        contact_Lauren.newMessage(_("Yayy :) "))
+        setattr(store, "v13_cuddle_lauren_text", True)
+        contact_Lauren.newMessage("Yayy :)")
 
     def v13s15a_Reply2():
-        contact_Lauren.newMessage(_("Aww okay, it's cool "))
-        contact_Lauren.addReply(_("Sorry babe, I'm just so tired. "))
-        contact_Lauren.newMessage(_("It's okay. "))
+        contact_Lauren.newMessage("Aww okay, it's cool")
+        contact_Lauren.addReply("Sorry babe, I'm just so tired.")
+        contact_Lauren.newMessage("It's okay.")
 
 label v13s15a:
     scene v13s15a_1 # TPP. Show MC walking into the room, it's dark inside, MC neutral expression, mouth closed
@@ -72,7 +69,7 @@ label v13s15a:
     scene v13s15a_6c
     with dissolve
 
-    ri "It's because I still don’t sit right with it..."
+    ri "It's because I still don't sit right with it..."
 
     scene v13s15a_6d
     with dissolve
@@ -92,11 +89,11 @@ label v13s15a:
 
         u "(Kinda late for a text.)"
 
-        $ contact_Lauren.newMessage(_("You up? ", queue=False))
-        $ contact_Lauren.addReply(_("Yeah, wassup? "))
-        $ contact_Lauren.newMessage(_("Come cuddle with me? ;) "))
-        $ contact_Lauren.addReply(_("You don't have to ask me twice, omw "), v13s15a_Reply1)
-        $ contact_Lauren.addReply(_("I'm already asleep... "), v13s15a_Reply2)
+        $ contact_Lauren.newMessage("You up?", queue=False)
+        $ contact_Lauren.addReply("Yeah, wassup?")
+        $ contact_Lauren.newMessage("Come cuddle with me? ;)")
+        $ contact_Lauren.addReply("You don't have to ask me twice, omw", v13s15a_Reply1)
+        $ contact_Lauren.addReply("I'm already asleep...", v13s15a_Reply2)
 
         scene v13s15a_8 # FPP. MC looking down at his phone, he is standing in same place as v13s15a_6
         with dissolve
@@ -142,7 +139,7 @@ label v13s15a:
         scene v13s15a_6h
         with dissolve
 
-        ri "I was hoping you'd come over here…"
+        ri "I was hoping you'd come over here..."
 
         scene v13s15a_6j # FPP. Same as v13s15a_6h, Riley in the motion of removing the blanket completely, sexy look, mouth open
         with dissolve
@@ -190,7 +187,7 @@ label v13s15a:
                 scene v13s15a_6m # FPP. Same as v13s15a_6k, Riley slightly surprised, mouth closed
                 with dissolve
 
-                u "Very flattering, Riley. I mean... Very... Very flattering…"
+                u "Very flattering, Riley. I mean... Very... Very flattering..."
 
                 scene v13s15a_6n # FPP. Same as v13s15a_6m, Riley slight smile, mouth closed
                 with dissolve

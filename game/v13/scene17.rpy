@@ -37,12 +37,12 @@ label v13s17:
     scene v13s17_5a # FPP. Same as v13s17_5, Chloe slight smile, mouth closed
     with dissolve
 
-    u "Still pretty early… Just grabbing some breakfast."
+    u "Still pretty early... Just grabbing some breakfast."
 
     scene v13s17_5
     with dissolve
 
-    cl "Mmm… Time for more sleep then."
+    cl "Mmm... Time for more sleep then."
 
     scene v13s17_5a
     with dissolve

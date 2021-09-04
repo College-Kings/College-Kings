@@ -37,7 +37,7 @@ label v13s22:
     scene v13s22_2a
     with dissolve
 
-    au "And you found…?"
+    au "And you found...?"
 
     scene v13s22_2b
     with dissolve
@@ -112,12 +112,12 @@ label v13s22:
         scene v13s22_3e # FPP. Same as v13s22_3d. Riley smiling, mouth open.
         with dissolve
 
-        ri "Yeah, that actually would've been a good idea… *Chuckles*"
+        ri "Yeah, that actually would've been a good idea... *Chuckles*"
 
         scene v13s22_3f # FPP. Same as v13s22_3e. Riley smiling, mouth closed.
         with dissolve
 
-        u "I just let him go, I'd rather not see him again. Dealing with his bullshit isn’t worth some dollars."
+        u "I just let him go, I'd rather not see him again. Dealing with his bullshit isn't worth some dollars."
 
         scene v13s22_2e
         with dissolve
@@ -132,7 +132,7 @@ label v13s22:
     scene v13s22_2e
     with dissolve
 
-    au "Haha, well… It was nice knowing him."
+    au "Haha, well... It was nice knowing him."
 
     scene v13s22_2f
     with dissolve
@@ -142,7 +142,7 @@ label v13s22:
     scene v13s22_3e
     with dissolve
 
-    ri "Outside of hating you for no reason and doing mean shit, he was kind of cool… *Chuckles*"
+    ri "Outside of hating you for no reason and doing mean shit, he was kind of cool... *Chuckles*"
 
     scene v13s22_3f
     with dissolve
@@ -209,7 +209,7 @@ label v13s22:
     scene v13s22_7a # FPP. Same as v13s22_7. Imre looking back at the MC, slight smile, mouth open.
     with dissolve
 
-    imre "Haha, alright, don’t chew me out just yet... We're kidnapping [name]."
+    imre "Haha, alright, don't chew me out just yet... We're kidnapping [name]."
 
     scene v13s22_7b # FPP. Same as v13s22_7a. Imre slight smile, mouth closed.
     with dissolve

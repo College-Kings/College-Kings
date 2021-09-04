@@ -108,7 +108,7 @@ label v13s06:
     scene v13s06_6b
     with dissolve
 
-    luuk "It's good to possess many conflicting skills. No one expects a confident man to be a good cook and no one expects the cook to be a confidence man."
+    luuk "It's good to possess many conflicting skills. No one expects a confidence man to be a good cook and no one expects the cook to be a confidence man."
 
     scene v13s06_6
     with dissolve
@@ -118,7 +118,7 @@ label v13s06:
     scene v13s06_6a
     with dissolve
 
-    luuk "Haha, let's just say I make more money scheming with the guests more than I do checking people in."
+    luuk "Haha, let's just say I make more money scheming with the guests than I do checking them in."
 
     scene v13s06_6
     with dissolve
@@ -178,7 +178,7 @@ label v13s06:
     scene v13s06_6a
     with dissolve
 
-    luuk "Well… I’ll see you soon for another breakfast, *Laughs* Also, remember what I said. I hear it all or don't hear anything."
+    luuk "Well... I'll see you soon for another breakfast. *Laughs* Also, remember what I said. I hear it all or don't hear anything."
 
     scene v13s06_6
     with dissolve
