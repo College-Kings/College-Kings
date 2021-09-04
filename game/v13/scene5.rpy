@@ -1,7 +1,7 @@
 # SCENE X: 
 # Locations: 
 # Characters: MC (Outfit: x)
-# Time: 
+# Time: asidonsaidn
 
 
 label v12:
