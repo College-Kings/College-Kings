@@ -60,7 +60,7 @@ label v13s30:
         scene v13s30_3a
         with dissolve
 
-        sam "See ya, have fun! And thanks for letting me come."
+        sa "See ya, have fun! And thanks for letting me come."
 
         scene v13s30_4 # TPP. Samantha hugging MC, Samantha slight smile, mouth closed
         with dissolve
