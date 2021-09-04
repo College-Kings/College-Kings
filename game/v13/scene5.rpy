@@ -1,4 +1,4 @@
-# SCENE 5: MC goes to bed (rooming with Chloe)
+# SCENE 5: MC goes to bed (rooming with Chloe) some random change
 # Locations: Hotel corridor, Hotel Room
 # Characters: MC (Outfit: 1), CHLOE (Outfit: 3)
 # Time: Night
