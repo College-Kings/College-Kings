@@ -130,11 +130,7 @@ label v13s21:
     with dissolve
 
     u "Oh, I see. You think I'm too stupid?"
-<<<<<<< Updated upstream
     u "So, I wouldn't be smart enough to get paid for taking tests and writing finals for other students? That actually makes a lot of sense... You're smart I guess, I'm not."
-=======
-    u "So, I wouldn't be smart enough to get paid for taking tests and writing finals for other students? That actually makes a lot of sense… You’re smart I guess, I’m not."
->>>>>>> Stashed changes
 
     scene v13s21_9c # FPP. Same as v13s21_9a but Charli looks at MC, guilty, mouth open. 
     with dissolve
@@ -144,11 +140,7 @@ label v13s21:
     scene v13s21_9d # FPP.  Same as v13s21_9c but Charli's mouth is closed. 
     with dissolve
 
-<<<<<<< Updated upstream
     u "I'm talking about your amazing entrepreneurship. An entire business that helps people cheat their way to the top... It's kind of fascinating."
-=======
-    u "I'm talking about your amazing entrepreneurship. An entire business that helps people cheat their way to the top… It’s kind of fascinating."
->>>>>>> Stashed changes
 
     scene v13s21_9e # FPP. Charli sits back in his chair, arms folded across his chest, his open, brow slightly raised in denial (pen/pencil lies on the paper on which he was writing).  
     with dissolve
@@ -178,11 +170,7 @@ label v13s21:
     scene v13s21_9f
     with dissolve
 
-<<<<<<< Updated upstream
     u "I'm just gonna stop you right there, Charles..."
-=======
-    u "I'm just gonna stop you right there, Charles…"
->>>>>>> Stashed changes
     u "You see? I saw all your emails, all your completed tests, your future exams..."
 
     scene v13s21_9g 
@@ -193,20 +181,12 @@ label v13s21:
     scene v13s21_9h 
     with dissolve
 
-<<<<<<< Updated upstream
     charli "Well... That was pretty dumb of you. *Chuckles*"
-=======
-    charli "Well… That was pretty dumb of you. *Chuckles*"
->>>>>>> Stashed changes
 
     scene v13s21_9i # FPP. Same as v13s21_9h, except Charli is facing MC, confident, smiling, with his mouth open. 
     with dissolve
 
-<<<<<<< Updated upstream
     charli "Now you have no leverage, it's your word against mine. Isn't a very strong argument. *Laughs*"
-=======
-    charli "Now you have no leverage, it’s your word against mine. Isn't a very strong argument. *Laughs*"
->>>>>>> Stashed changes
 
     scene v13s21_9j # FPP.  Same as v13s21_9i, but with Charli looking at the table, worried, with his mouth closed. 
     with dissolve
@@ -251,11 +231,7 @@ label v13s21:
     scene v13s21_9h
     with dissolve
 
-<<<<<<< Updated upstream
     u "What's fair is me, Riley, and every other person who you've acted like a little snake to, never having to see your dumb fucking face again."
-=======
-    u "What’s fair is me, Riley, and every other person who you’ve acted like a little snake to, never having to see your dumb fucking face again."
->>>>>>> Stashed changes
     u "You can keep doing whatever the hell you're doing, but if we ever have to have this conversation again, it's game over."
 
     scene v13s21_10b # TPP. Same as a v13s21_10a, but MC's mouth closed and Charli's mouth open, arms extended, trying to convice/beg/plead with MC. 
@@ -334,11 +310,7 @@ label v13s21:
     u "Yeah, sure."
 
     scene v13s21_15 # FPP. Riley, mouth closed, looking down at phone texting with both hands. 
-<<<<<<< Updated upstream
     with fade # Some time for Aubrey to get to the Lobby 
-=======
-    with fade  # Some time for Aubrey to get to the Lobby 
->>>>>>> Stashed changes
     
     pause 0.75
 

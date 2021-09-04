@@ -3,10 +3,6 @@
 # Characters: MC (Outfit: 5), AUBREY (Outfit: 2), LINDSEY (Outfit: 1)
 # Time: Afternoon 
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 label v13s35:
     scene v13s35_1 # TPP. Show MC and Aubrey outside the Sex shop, MC slight smile, mouth open, Aubrey slight smile, mouth closed.
     with dissolve
@@ -76,12 +72,6 @@ label v13s35:
     scene v13s35_4a # TPP. Same as v13s35_4, Show Aubrey walking away from mc.
     with dissolve
 
-<<<<<<< Updated upstream
-=======
-    if not chloers or chloegirlfriend:
-        u "(Guess I'll just post up here...)"
-
->>>>>>> Stashed changes
     if chloers or chloegirlfriend:
         u "(Guess I could look around a bit...)"
 
@@ -98,26 +88,17 @@ label v13s35:
         scene v13s35_7 # FPP. Close up of the butt plug.
         with dissolve
 
-<<<<<<< Updated upstream
         $ mc.money = 100
         call screen v13s35_adult_shop
 
-=======
-   
-    # -A menu pops up with items MC can choose to buy (honey $15, butt plug$30 , spankers $50, cuffs $10 and a feather $15)- # Don't know how to do this was told to let Oscar do this.
-    # -MC purchases the items he wants, he has a total of $100, for plot reasons MC MUST purchase the handcuffs
->>>>>>> Stashed changes
 
         u "(She'll be happy with these, I think. We're gonna have some fun… *Chuckles*)"
 
 
-<<<<<<< Updated upstream
     else:
         u "(Guess I'll just post up here...)"
 
 
-=======
->>>>>>> Stashed changes
     scene v13s35_8 # TPP. Show MC waiting by the door, slight smile, mouth closed.
     with dissolve
 
@@ -221,14 +202,8 @@ label v13s35:
     scene v13s35_13 # TPP. Show Aubrey walking away from Lindsey and MC, slight smile, mouth closed.
     with dissolve
 
-<<<<<<< Updated upstream
     # -Aubrey walks off-
     pause 0.75
 
     jump v13s36
     # -Transition to Scene 36-
-=======
-# -Aubrey walks off-
-
-# -Transition to Scene 36-
->>>>>>> Stashed changes

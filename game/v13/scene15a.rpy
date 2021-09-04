@@ -5,11 +5,7 @@
 
 init python:
     def v13s15a_Reply1():
-<<<<<<< Updated upstream
         setattr(store, "v13_cuddle_lauren_text", True)
-=======
-        v13_cuddle_lauren_text = True
->>>>>>> Stashed changes
         contact_Lauren.newMessage(_("Yayy :) "))
 
     def v13s15a_Reply2():
