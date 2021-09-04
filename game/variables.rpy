@@ -551,4 +551,8 @@ default cameronBro = False
 default v13_lauren_hospital = False
 default v13_charli_exposed = False
 default v13_invite_samantha = False
-
+default v13_after_party = False
+default v13s48_get_aubrey_chocolate = False
+default v13s48_ryan_double_date = False
+default v13s48_canoeing_as_date = False
+default v13_double_date = False

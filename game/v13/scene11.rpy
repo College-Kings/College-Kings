@@ -672,10 +672,10 @@ label v13_imre_continue:
 
     u "(Hmm, I wonder what'll go down at that event. Definitely gonna be interesting.)"
 
-    elif v13_aubrey_concert:
+    if v13_aubrey_concert:
         jump scene_12a
 
-    if v13_penelope_concert:
+    elif v13_penelope_concert:
         jump scene12_b
 
     else:

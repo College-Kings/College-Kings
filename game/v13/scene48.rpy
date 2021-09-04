@@ -3,10 +3,6 @@
 # Characters: MC (Outfit: 1), AUBREY (Outfit: 4), RYAN (Outfit: 1)
 # Time: Evening
 
-default v13s48_get_aubrey_chocolate = False
-default v13s48_ryan_double_date = False
-default v13s48_canoeing_as_date = False
-
 label v13s48:
     scene v13s48_1 # TPP. Show MC walking up to Aubrey on the beach, Both slight smile, mouth closed.
     with dissolve
@@ -645,7 +641,7 @@ label v13s48:
     if aubreyrs:
         au "I know we're fucking, but..."
         
-     else:
+    else:
             menu:
                 "I meant as friends...":
                     $ addPoint ("bro")

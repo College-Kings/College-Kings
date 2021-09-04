@@ -3,8 +3,6 @@
 # Characters: MC (Outfit: 5), RILEY (Outfit: 5)
 # Time: Night
 
-default v13_double_date = False
-
 label v13s53:
     scene v13s53_1 # TPP. Show MC walking through the hallway, neutral expression, mouth closed
     with dissolve
