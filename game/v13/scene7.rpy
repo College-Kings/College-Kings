@@ -366,7 +366,7 @@ label v13_ticket_transfer:
 
         u "I try my best to pay attention to your interests, you know."
 
-        scene v13s7_2b
+        scene v13s7_12b
         with dissolve
 
         au "That's pretty nice of you. *Chuckles* I'm gonna go and practice her songs, I can never remember the lyrics."
