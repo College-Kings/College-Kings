@@ -30,7 +30,7 @@ label v13s14a:
     scene v13s14a_4 # FPP Show Aubrey looking at MC, smiling with mouth open
     with dissolve
 
-    au "Haha, you look super shocked. This is the life you live when you’re an icon..."
+    au "Haha, you look super shocked. This is the life you live when you're an icon..."
 
     scene v13s14a_3a # FPP Same as 3, Polly looking at Aubrey
     with dissolve
@@ -307,7 +307,7 @@ label v13s14a:
             scene v13s14a_17a # FPP Same as 17, Aubrey's mouth closed
             with dissolve
 
-            u "How could you, Miss. “soon-to-be Superstar”?"
+            u "How could you, Miss. \"soon-to-be Superstar\"?"
 
             scene v13s14a_17b # FPP Same angle as 17, Aubrey rolling her eyes and laughing slightly, mouth open
             with dissolve
@@ -351,7 +351,7 @@ label v13s14a:
             scene v13s14a_21a # FPP Same angle as 21, Aubrey smiling with mouth open
             with dissolve
 
-            au "Ha, um… Nothing, nevermind."
+            au "Ha, um... Nothing, nevermind."
 
             scene v13s14a_22 # TPP Show MC and Aubrey dancing romantically, both smiling
             with dissolve
@@ -374,7 +374,7 @@ label v13s14a:
             scene v13s14a_21b # FPP Same angle as 21, Aubrey smiling, mouth closed
             with dissolve
 
-            u "I’d be happy too."
+            u "I'd be happy too."
 
             scene v13s14a_21a
             with dissolve
@@ -404,7 +404,7 @@ label v13s14a:
             scene v13s14a_17a
             with dissolve
 
-            u "How could you, Miss. “soon-to-be Superstar”?"
+            u "How could you, Miss. \"soon-to-be Superstar\"?"
 
             scene v13s14a_17b
             with dissolve
@@ -424,7 +424,7 @@ label v13s14a:
             scene v13s14a_24a # FPP Same angle as 24, Aubrey a few steps toward hallway, turning and looking at MC, neutral expression, mouth open
             with dissolve
 
-            au "Oh. umm... [Name]?"
+            au "Oh. umm... [name]?"
 
             scene v13s14a_24b # FPP Same as 24a, Aubrey's mouth closed
             with dissolve
@@ -434,7 +434,7 @@ label v13s14a:
             scene v13s14a_24a
             with dissolve
 
-            au "I just wanted to say that…"
+            au "I just wanted to say that..."
 
             scene v13s14a_24c # FPP Same as 24a, Aubrey's smiling with mouth open
             with dissolve
@@ -449,7 +449,7 @@ label v13s14a:
             scene v13s14a_24c
             with dissolve
 
-            au "Okay… Ha, good."
+            au "Okay... Ha, good."
 
             scene v13s14a_24d
             with dissolve

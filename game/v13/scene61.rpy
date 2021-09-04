@@ -18,7 +18,7 @@ label v13s61:
     scene v13s61_3 # FPP. MC looking at Aubrey on the side of his bed with his blurry vision, Aubrey worried expression, mouth open.
     with dissolve
 
-    au "Hey there… How are you feeling?"
+    au "Hey there... How are you feeling?"
 
     scene v13s61_3a # FPP. Same as v13s61_3, Aubrey worried expression, mouth closed.
     with dissolve
@@ -33,7 +33,7 @@ label v13s61:
     scene v13s61_3b # FPP. Same as v13s61_3, Aubrey slight frown, mouth open.
     with dissolve
 
-    au "I’m so sorry..."
+    au "I'm so sorry..."
 
     scene v13s61_3c # FPP. Same as v13s61_3b, Aubrey slight frown, mouth closed.
     with dissolve
@@ -58,7 +58,7 @@ label v13s61:
     scene v13s61_3c
     with dissolve
 
-    u "Don't worry about it, Aubrey. It’s not your fault I can't climb. *Chuckles*"
+    u "Don't worry about it, Aubrey. It's not your fault I can't climb. *Chuckles*"
 
     scene v13s61_3b
     with fade

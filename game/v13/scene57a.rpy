@@ -164,7 +164,7 @@ label v13s57a:
     scene v13s57a_4c
     with dissolve
 
-    u "Guess you really can't have enough. That’s good. *Chuckles*"
+    u "Guess you really can't have enough. That's good. *Chuckles*"
 
     scene v13s57a_2a
     with dissolve
@@ -174,7 +174,7 @@ label v13s57a:
     scene v13s57a_4d
     with dissolve
 
-    lee "I can tell that’s an inside joke, but it's true. I can't get enough of these."
+    lee "I can tell that's an inside joke, but it's true. I can't get enough of these."
 
     scene v13s57a_2e
     with dissolve
@@ -199,12 +199,12 @@ label v13s57a:
     scene v13s57a_2a
     with dissolve
 
-    no "That went well I think… *Laughs*"
+    no "That went well I think... *Laughs*"
 
     scene v13s57a_2
     with dissolve
 
-    u "It did, for sure. A few more gifts and we'll get A’s all semester. *Chuckles*"
+    u "It did, for sure. A few more gifts and we'll get A's all semester. *Chuckles*"
 
     scene v13s57a_2a
     with dissolve
@@ -229,7 +229,7 @@ label v13s57a:
     scene v13s57a_2a
     with dissolve
 
-    no "Oh, okay. Well… Have fun."
+    no "Oh, okay. Well... Have fun."
 
     scene v13s57a_2
     with dissolve

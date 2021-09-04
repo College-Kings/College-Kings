@@ -1,10 +1,10 @@
-# SCENE 21: MC talking to Charli  
+# SCENE 21: MC talking to Charli
 # Locations: Hotel Lobby, Cafe, Hotel Exterior
 # Characters: MC (Outfit: 9), LUUK (Outfit: 1), RILEY (Outfit: 2), CHARLI (Outfit: 1), AUBREY (Outfit: 3)
 # Time: Morning
 
 label v13s21:
-    scene v13s21_1 # TPP. MC and Riley walking from the middle of the hotel lobby toward the counter with Luuk behind the counter.    
+    scene v13s21_1 # TPP. MC and Riley walking from the middle of the hotel lobby toward the counter with Luuk behind the counter.  
     with dissolve
 
     pause 0.75
@@ -79,7 +79,7 @@ label v13s21:
 
     pause 0.75
 
-    scene v13s21_6a # TPP. Same as v13s21_6 but with MC halfway towards Charli's table.  
+    scene v13s21_6a # TPP. Same as v13s21_6 but with MC halfway towards Charli's table.
     with dissolve
 
     pause 0.75

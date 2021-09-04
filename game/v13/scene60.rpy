@@ -93,12 +93,12 @@ label v13s60:
     scene v13s60_8a # FPP. Same as v13s60_8, Show Aubrey standing over MC looking at him as he lays on the ground, worried expression, mouth open.
     with dissolve
 
-    au "I'm so sorry, are you okay? What hurts?!."
+    au "I'm so sorry, are you okay? What hurts?!"
 
     scene v13s60_8b # FPP. Same as v13s60_8a, Aubrey worried expression, mouth closed.
     with dissolve
 
-    u "My head IT’S BAD!"
+    u "My head IT'S BAD!"
 
     scene v13s60_8c # FPP. Same as v13s60_8b, MC with blurry vision, Aubrey worried expression, mouth closed.
     with dissolve

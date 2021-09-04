@@ -63,14 +63,14 @@ label v13s50a:
     scene v13s50av3 # MC fucking Emily from behind over the sink
     with dissolve
 
-    em "*Gasps* Oh my... Fuckk, [Name]."
+    em "*Gasps* Oh my... Fuckk, [name]."
 
     u "You wanted this you little slut and now you fucking got it!"
 
     scene v13s50av3f # Same but faster
     with dissolve
 
-    em "Give me… Give me m-more! *Moans*"
+    em "Give me... Give me m-more! *Moans*"
 
     scene v13s50a_5 # TPP Show MC pulling Emily toward him, wrapping his arm around her neck
     with dissolve
@@ -84,7 +84,7 @@ label v13s50a:
     scene v13s50av4 # MC fucking Emily from behind with his arm around her neck
     with dissolve
 
-    em "*Moans* Ahh! You feel... Better than ever… Mmm, yes!"
+    em "*Moans* Ahh! You feel... Better than ever... Mmm, yes!"
 
     em "Cum inside of me [name]."
 
@@ -95,7 +95,7 @@ label v13s50a:
     scene v13s50a_6 # FPP Show MC, just pulled out of Emily who is bent over the sink with MC's hand on her upper back, his cum spraying on her lower back
     with dissolve
 
-    u "*Moans* Ah, shhhiiiitt... Ha… Dammit Emily.!"
+    u "*Moans* Ah, shhhiiiitt... Ha... Dammit Emily.!"
 
     scene v13s50a_6a # FPP Same angle as 6, Emily turning her head to look back at MC, Emily smiling with her mouth open
     with dissolve
@@ -120,7 +120,7 @@ label v13s50a:
     scene v13s50a_8a # FPP Same angle as 8, Emily is no longer smiling, she looks hurt by what MC is saying
     with dissolve
 
-    u "Especially now that you’ve gotten other people involved."
+    u "Especially now that you've gotten other people involved."
 
     scene v13s50a_9 # TPP Show MC walking through the bathroom door, Emily is visible behind him, still naked, looking shocked and hurt
     with dissolve
@@ -135,7 +135,7 @@ label v13s50a:
         scene v13s50a_11 # FPP MC's view of Ryan, sitting at the table alone, looking up at MC, smiling with mouth closed
         with dissolve
 
-        u "Wait… *Chuckles*Where are the girls?"
+        u "Wait... *Chuckles*Where are the girls?"
 
         scene v13s50a_11a # FPP Same as 11, Ryan's mouth open
         with dissolve

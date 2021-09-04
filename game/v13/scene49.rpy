@@ -24,7 +24,7 @@ label v13s49:
 
 ### ERROR: KiwiiPost("Aubrey, "Picture of Aubrey on the beach in Amsterdam", "Swimming up the ladder! #ScheveningenBeach", numberLikes=4218)
 ### ERROR: kiwiiPost.newComment("Imre", "Hot as fuck Aubrey!!")
-### ERROR: kiwiiPost.newComment("Chloe", "This is the hottest pic I’ve ever seen of you! ="Aubrey")
+### ERROR: kiwiiPost.newComment("Chloe", "This is the hottest pic I've ever seen of you! ="Aubrey")
 ### ERROR: kiwi Post.add Reply("Wow, they turned out great!")
 ### ERROR: kiwiiPost.addReply("Ah, beautiful. But even better in person ;)", mentions="Aubrey)
 ### ERROR: kiwiiPost.newComment("Aubrey", "Thank you! <3")

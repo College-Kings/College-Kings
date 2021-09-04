@@ -162,7 +162,7 @@ label v13s15a:
         menu:
             "Stay with Riley":
                 
-                u "Is that even a question?."
+                u "Is that even a question?"
 
                 scene v13s15a_9 # TPP. Show MC removing his pants, shirt already off, smiling, mouth closed
                 with dissolve
@@ -257,7 +257,7 @@ label v13s15a:
 
         menu:
             "Let Riley do it":
-                u "Is that even a question?."
+                u "Is that even a question?"
 
                 scene v13s15a_9 
                 with dissolve

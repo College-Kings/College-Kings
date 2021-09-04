@@ -55,7 +55,7 @@ label v13s13a:
     scene v13s13a_2b
     with dissolve
 
-    polly "'Cause that means I don't have to try and impress a ton of people I don’t care about... *Laughs* You guys are cool."
+    polly "'Cause that means I don't have to try and impress a ton of people I don't care about... *Laughs* You guys are cool."
 
     scene v13s13a_2c
     with dissolve
@@ -65,12 +65,12 @@ label v13s13a:
     scene v13s13a_2d # FPP Same as 2, Polly looking at Aubrey, Polly looks shocked or surprised, mouth open
     with dissolve
 
-    polly "Wait… A... Flipping... Minute! Aubrey!?"
+    polly "Wait... A... Flipping... Minute! Aubrey!?"
 
     scene v13s13a_3a # FPP Same as 3, Aubrey looking confused, mouth open
     with dissolve
 
-    au "Y-Yes… That's my name, how do you know me?"
+    au "Y-Yes... That's my name, how do you know me?"
 
     scene v13s13a_2e # FPP Same as 2, Polly looking at Aubrey, Polly leaning forward and smiling in excitement, mouth open
     with dissolve
@@ -96,7 +96,7 @@ label v13s13a:
     scene v13s13a_2f # FPP Same as 2, Polly looking like she just tasted something bad, mouth open
     with dissolve
 
-    polly "Ewww, ugh... I'm sorry, but…"
+    polly "Ewww, ugh... I'm sorry, but..."
     polly "I can't stand your sister. She thinks she's way better than she actually is."
 
     scene v13s13a_2g # FPP Same angle and expression as 2f, mouth closed
@@ -105,7 +105,7 @@ label v13s13a:
     menu:
         "Defend her sister":
 
-            u "Oh, come on… She's not that bad."
+            u "Oh, come on... She's not that bad."
 
             scene v13s13a_2b
             with dissolve
@@ -175,12 +175,12 @@ label v13s13a:
     scene v13s13a_3f # FPP Same as 3, Aubrey looking at Polly with annoyed expression, mouth open
     with dissolve
 
-    au "Not at all. It’s just, I know him, and he's talking about a little more than just liking you as an artist."
+    au "Not at all. It's just, I know him, and he's talking about a little more than just liking you as an artist."
 
     scene v13s13a_2b
     with dissolve
 
-    polly "Haha, well sadly… I don't swing that way, but if I did..."
+    polly "Haha, well sadly... I don't swing that way, but if I did..."
 
     scene v13s13a_2h # FPP Same angle as 2, Polly winking at Aubrey
     with dissolve
@@ -252,7 +252,7 @@ label v13s13a:
     scene v13s13a_2e
     with dissolve
 
-    polly "Don't forget me when you're famous… *Chuckles*"
+    polly "Don't forget me when you're famous... *Chuckles*"
 
     scene v13s13a_3g # FPP Same as 3, Aubrey looking at Polly and laughing
     with dissolve
@@ -262,7 +262,7 @@ label v13s13a:
     scene v13s13a_3h # FPP Same as 3, Aubrey looking at Polly and smiling, mouth closed
     with dissolve
 
-    u "Shit, don't forget me either… The fuck?"
+    u "Shit, don't forget me either... The fuck?"
 
     scene v13s13a_3b
     with dissolve
@@ -272,7 +272,7 @@ label v13s13a:
     scene v13s13a_2b
     with dissolve
 
-    polly "Haha, so… Are you guys into clubs?"
+    polly "Haha, so... Are you guys into clubs?"
 
     scene v13s13a_2c
     with dissolve
@@ -280,7 +280,7 @@ label v13s13a:
     menu:
         "Not really":
 
-            u "I'm not really... Although, I’ve probably never been to a real, pop star-worthy nightclub. *Laughs*"
+            u "I'm not really... Although, I've probably never been to a real, pop star-worthy nightclub. *Laughs*"
 
             scene v13s13a_2b
             with dissolve
@@ -291,12 +291,12 @@ label v13s13a:
             $ addPoint("tm")
             $ v13_after_party = True
 
-            u "Oh, hell yeah.  Who doesn't love a good club?"
+            u "Oh, hell yeah. Who doesn't love a good club?"
 
             scene v13s13a_2b
             with dissolve
 
-            polly "Yes!. I'm going to an after party right now and… You guys should come."
+            polly "Yes! I'm going to an after party right now and... You guys should come."
 
             scene v13s13a_3
             with dissolve
@@ -371,7 +371,7 @@ label v13s13a:
         scene v13s13a_9a
         with dissolve
 
-        polly "You beat me to it. I’ll be in touch with you on Kiwii, girl."
+        polly "You beat me to it. I'll be in touch with you on Kiwii, girl."
 
         scene v13s13a_14 # FPP Show Polly giving Aubrey a friendly hug
         with dissolve
@@ -411,7 +411,7 @@ label v13s13a:
         scene v13s13a_19 # FPP Show Aubrey, in hotel lobby, smiling with mouth closed
         with dissolve
 
-        u "*Chuckles* Are you kidding? I had a blast. You’re more than welcome."
+        u "*Chuckles* Are you kidding? I had a blast. You're more than welcome."
 
         scene v13s13a_19a # FPP Same as 19, Aubrey's mouth open
         with dissolve

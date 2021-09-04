@@ -47,6 +47,6 @@ label v13s52:
 
     cl "*Snores*"
 
-    u "Haha… Goodnight babe."
+    u "Haha... Goodnight babe."
 
     jump v13s52a

@@ -73,7 +73,7 @@ label v13s11:
     $ timerexit = v13_push_ryan
 
     menu:
-        "Pretend to tie Ryan’s shoe":
+        "Pretend to tie Ryan's shoe":
             scene v13s11_7 # TPP. MC bends down and pretends to tie ryan's shoe
             with dissolve
 
@@ -92,7 +92,7 @@ label v13s11:
             scene v13s11_8
             with dissolve
 
-            ry "I don’t underst-"
+            ry "I don't underst-"
 
             scene v13s11_9 # FPP. Imre pops arround the corner 
             with dissolve
@@ -102,12 +102,12 @@ label v13s11:
             scene v13s11_9a # FPP. MC still on the ground Imre looks at ryan confused, mouth opened
             with dissolve
 
-            imre "Ryan? What are you- Wait, [Name]? What the fuck is going on?!"
+            imre "Ryan? What are you- Wait, [name]? What the fuck is going on?!"
 
             scene v13s11_9b # FPP. Imre looks down at mc, still confused, mouth opened
             with dissolve
 
-            imre "Are you… Tying his shoes? What the hell..."
+            imre "Are you... Tying his shoes? What the hell..."
 
             scene v13s11_9c # FPP. Looking at ryan, slight smile and hand behind his head, mouth opened
             with dissolve
@@ -151,7 +151,7 @@ label v13_push_ryan:
     scene v13s11_12 # FPP. Imre picking the corner looking at ryan, MC behind another wall, imre's mouth opened
     with dissolve
 
-    imre "Ryan? What are you doing? And why did you just…"
+    imre "Ryan? What are you doing? And why did you just..."
 
     scene v13s11_12a # FPP. Imre now looking at mc, looking disapointed, mouth closed  
     with dissolve
@@ -161,7 +161,7 @@ label v13_push_ryan:
     scene v13s11_12b # FPP. same as 12a, mouth opened
     with dissolve
 
-    imre "I’m going on a date… Why are you hiding behind the wall?"
+    imre "I'm going on a date... Why are you hiding behind the wall?"
 
     scene v13s11_13 # TPP. MC walking to ryan and imre, hand behind head, slight smile
     with dissolve
@@ -171,17 +171,17 @@ label v13_push_ryan:
     scene v13s11_14 # FPP. MC besides ryan, ryan looking at imre, mad face, mouth opened
     with dissolve
 
-    ry "Because we were following you and he’s an asshole. And a pussy."
+    ry "Because we were following you and he's an asshole. And a pussy."
 
     scene v13s11_14a # FPP. Ryan looking back at mc, mouth closed
     with dissolve
 
-    u "You little shit…"
+    u "You little shit..."
 
     scene v13s11_14b # FPP. Now looking at imre, imre looking confused, mouth opened
     with dissolve
 
-    imre "He what? You’re following me?! What the hell is going on?"
+    imre "He what? You're following me?! What the hell is going on?"
 
     jump v13_imre_continue
 
@@ -189,12 +189,12 @@ label v13_imre_continue:
     scene v13s11_14c # FPP. Same as 14b, mouth closed
     with dissolve
 
-    u "Okay, look… Try not to take this in a weird way, but yeah, we were following you."
+    u "Okay, look... Try not to take this in a weird way, but yeah, we were following you."
 
     scene v13s11_14b
     with dissolve
 
-    imre "What? Why? I don't understand how I could take this in a “not weird” way."
+    imre "What? Why? I don't understand how I could take this in a \"not weird\" way."
 
     scene v13s11_14c
     with dissolve
@@ -209,7 +209,7 @@ label v13_imre_continue:
     scene v13s11_14e # FPP. Same as 14d, mouth closed
     with dissolve
 
-    u "Haha, I couldn't care less about that. We care about you, dude. You deserve a good date. But, we don't think this date is gonna be anything like what you’re expecting it'll be."
+    u "Haha, I couldn't care less about that. We care about you, dude. You deserve a good date. But, we don't think this date is gonna be anything like what you're expecting it'll be."
 
     scene v13s11_14f # FPP. looking at imre, disapointed, mouth opened
     with dissolve
@@ -219,7 +219,7 @@ label v13_imre_continue:
     scene v13s11_14g # FPP. Same as 14f, mouth closed
     with dissolve
 
-    u "I'm not saying I do or don't believe it's a catfish, but what's the harm in us checking it out? Or atleast sticking around in case it ends badly?"
+    u "I'm not saying I do or don't believe it's a catfish, but what's the harm in us checking it out? Or at least sticking around in case it ends badly?"
 
     scene v13s11_14f
     with dissolve
@@ -294,7 +294,7 @@ label v13_imre_continue:
     scene v13s11_21
     with dissolve
 
-    u "That’s true. Let's hope this is legit."
+    u "That's true. Let's hope this is legit."
 
     scene v13s11_21b # FPP. Imre in the back looking back at mc and ryan, imre's mouth opened
     with dissolve
@@ -319,7 +319,7 @@ label v13_imre_continue:
     scene v13s11_21c # FPP. same as 21 fat and ugly guy sits next to imre
     with dissolve
 
-    u "Oh, shit… Let's get closer."
+    u "Oh, shit... Let's get closer."
 
     scene v13s11_22 # TPP. MC and ryan moving to a closer table
     with dissolve
@@ -359,7 +359,7 @@ label v13_imre_continue:
     scene v13s11_23f # FPP. Imre with a mad face, mouth opened
     with dissolve
 
-    imre "I have no idea who you are or what the hell you’re talking about."
+    imre "I have no idea who you are or what the hell you're talking about."
 
     scene v13s11_23e
     with dissolve
@@ -399,7 +399,7 @@ label v13_imre_continue:
     scene v13s11_23h
     with dissolve
 
-    ash "You liked me over the phone, right? Or at least that’s what I could tell from the pictures..."
+    ash "You liked me over the phone, right? Or at least that's what I could tell from the pictures..."
     
     scene v13s11_23g
     with dissolve
@@ -504,7 +504,7 @@ label v13_imre_continue:
     scene v13s11_27d
     with dissolve 
     
-    barh "Plus… After what you just did, I don't think there'll be anymore."
+    barh "Plus... After what you just did, I don't think there'll be anymore."
     
     scene v13s11_27c
     with dissolve
@@ -586,7 +586,7 @@ label v13_imre_continue:
     scene v13s11_28a # FPP. same as 28, imre's mouth opened 
     with dissolve
 
-    imre "Yeah, I’m done here Let's go."
+    imre "Yeah, I'm done here Let's go."
 
     scene v13s11_29 # TPP. Imre mc and ryan walking off the bar
     with dissolve
@@ -626,7 +626,7 @@ label v13_imre_continue:
     scene v13s11_33a
     with dissolve
 
-    u "Look, man... I'm really sorry about what went down. You didn’t deserve any of it."
+    u "Look, man... I'm really sorry about what went down. You didn't deserve any of it."
 
     scene v13s11_33b
     with dissolve
@@ -659,7 +659,7 @@ label v13_imre_continue:
     scene v13s11_33b
     with dissolve
 
-    imre "Well… Later man."
+    imre "Well... Later man."
 
     scene v13s11_33a
     with dissolve

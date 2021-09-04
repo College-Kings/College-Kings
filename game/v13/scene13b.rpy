@@ -51,7 +51,7 @@ label v13s13b:
     with dissolve
 
     pe "This is just a little bit... out of my element."
-    pe "Like, please don't get me wrong, I love you. I'm just really nervous… *Chuckles*"
+    pe "Like, please don't get me wrong, I love you. I'm just really nervous... *Chuckles*"
 
     scene v13s13b_2b
     with dissolve
@@ -61,7 +61,7 @@ label v13s13b:
     scene v13s13b_2c # FPP Same as 2, Polly looking at MC and Penelope, smiling with mouth closed
     with dissolve
 
-    u "Seems so. We've been back here for a minute and I haven’t seen a soul."
+    u "Seems so. We've been back here for a minute and I haven't seen a soul."
 
     scene v13s13b_2b
     with dissolve
@@ -339,7 +339,7 @@ label v13s13b:
     scene v13s13b_2b
     with dissolve
 
-    polly "So… Are you guys into nightclubs?"
+    polly "So... Are you guys into nightclubs?"
 
     scene v13s13b_2c
     with dissolve
@@ -347,7 +347,7 @@ label v13s13b:
     menu:
         "Not exactly":
     
-            u "Not exactly… Usually spend time at bars, haha"
+            u "Not exactly... Usually spend time at bars, haha"
 
             scene v13s13b_2b
             with dissolve
@@ -474,7 +474,7 @@ label v13s13b:
         scene v13s13b_17 # FPP Show Penelope, in hotel lobby, smiling with mouth open
         with dissolve
 
-        pe "Jeez... I didn't know Polly and I had so much in common… *Chuckles*"
+        pe "Jeez... I didn't know Polly and I had so much in common... *Chuckles*"
 
         scene v13s13b_17a # FPP Same as 19, Penelope's mouth closed
         with dissolve

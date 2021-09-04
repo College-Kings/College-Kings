@@ -25,13 +25,13 @@ label v13_emmy_sex:
 
     u "That's s-so different... I love it. *Moans*"
 
-    emmy "*Chuckles* Mmmmm…."
+    emmy "*Chuckles* Mmmmm..."
 
     scene v13emmha2 # Ignore as animation
     with dissolve
     pause
 
-    u "Fuck yessssss... (She’s vibrating my fucking cock…) Don’t stop, you’re so fucking good at t-"
+    u "Fuck yessssss... (She's vibrating my fucking cock...) Don't stop, you're so fucking good at t-"
 
     emmy "MmmmhMMMMM! *Gags*"
 
@@ -39,9 +39,9 @@ label v13_emmy_sex:
     with dissolve
     pause
 
-    u "Oh m- (Is she using her… Teeth? I…) Shit..."
+    u "Oh m- (Is she using her... Teeth? I...) Shit..."
 
-    u "Good god, Emmy… *Moans* How are you doing this?"
+    u "Good god, Emmy... *Moans* How are you doing this?"
 
     scene v13s26_1 # FPP. emmy standing, mc removing her shirt, emmy smilling
     with dissolve
@@ -84,7 +84,7 @@ label v13_emmy_sex:
     with dissolve
     pause
 
-    u "Yes ma’am…"
+    u "Yes ma'am..."
 
     emmy "*Moans* Make... me... your... bitch... [name]!"
 
@@ -92,7 +92,7 @@ label v13_emmy_sex:
     with dissolve
     pause
     
-    u "You are my fucking bitch… *Moans*"
+    u "You are my fucking bitch... *Moans*"
 
     scene v13emmhb2 # Ignore as animation
     with dissolve
@@ -120,19 +120,19 @@ label v13_emmy_sex:
     with dissolve
     pause
 
-    emmy "Stretch me out, papi… *Chuckles*"
+    emmy "Stretch me out, papi... *Chuckles*"
 
     scene v13emmhwf # Ignore as animation
     with dissolve
     pause
 
-    emmy "*Moans* Mmmm, oh… You like a flexible woman, don't you?"
+    emmy "*Moans* Mmmm, oh... You like a flexible woman, don't you?"
 
     scene v13emmhw2 # Ignore as animation
     with dissolve
     pause
 
-    u "Ha… (Fucking christ…) *Moans* Yes..."
+    u "Ha... (Fucking christ...) *Moans* Yes..."
 
     scene v13emmhw2f # Ignore as animation
     with dissolve
@@ -159,15 +159,15 @@ label v13_emmy_sex:
     with dissolve
     pause
 
-    emmy "*Gasps* Oh, fuck… You're so fucking strong!"
+    emmy "*Gasps* Oh, fuck... You're so fucking strong!"
 
-    u "Why thank you… *Chuckles*"
+    u "Why thank you... *Chuckles*"
 
     scene v13emmhlf # Ignore as animation
     with dissolve
     pause
 
-    u "You’re so fucking beautiful, Emmy. *Moans*"
+    u "You're so fucking beautiful, Emmy. *Moans*"
 
     emmy "Keep... fucking me... baby... *Moans*"
 
@@ -175,7 +175,7 @@ label v13_emmy_sex:
     with dissolve
     pause
 
-    u "I don’t think I could stop… Even if I… *Moans* Wanted to..."
+    u "I don't think I could stop... Even if I... *Moans* Wanted to..."
 
     emmy "Mmm, fuck! I'm gonna cum!"
 
@@ -183,11 +183,11 @@ label v13_emmy_sex:
     with dissolve
     pause
 
-    u "Yes, baby… *Moans* Cum for me."
+    u "Yes, baby... *Moans* Cum for me."
 
-    emmy "Ahh! Oh, fuck! I’m...  I'm cumming! Fuucck.."
+    emmy "Ahh! Oh, fuck! I'm... I'm cumming! Fuucck..."
 
-    u "I… I am t-too… *Gasps*"
+    u "I... I am t-too... *Gasps*"
 
     scene v13s26_8 # FPP. Looking at emmy who is looking up as if she was about to cum
     with dissolve
@@ -197,11 +197,11 @@ label v13_emmy_sex:
     scene v13s26_8a # FPP. MC puts emmy down, cum in her pussy, emmy smiling, mouth closed
     with dissolve
 
-    u "(Fuck, did I….?)"
+    u "(Fuck, did I...?)"
 
-    u "Shit, Emmy I..., I didn't mean to, but I think I just came inside of you. *Chuckles*"
+    u "Shit, Emmy I... I didn't mean to, but I think I just came inside of you. *Chuckles*"
 
-    u "I’m so sorry… That was just... So fucking nice."
+    u "I'm so sorry... That was just... So fucking nice."
 
     scene v13s26_8b # FPP. Same as 8a, mouth opened
     with dissolve
@@ -211,7 +211,7 @@ label v13_emmy_sex:
     scene v13s26_1c # FPP. Same as one, emmy putting her clothes back on, mouth opened
     with dissolve
 
-    emmy "Thanks for a good fuck, cutie! Later… *Laughs*"
+    emmy "Thanks for a good fuck, cutie! Later... *Laughs*"
 
     scene v13s26_9 # FPP. Emmy leaving, back to the camera
     with dissolve

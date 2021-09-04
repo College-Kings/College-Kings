@@ -140,7 +140,7 @@ label v13s48:
 
             u "(I'll let her work.)"
 
-        "DAMNNN!...":
+        "DAMNNN...!":
             $ addPoint("bf")
 
             scene v13s48_6
@@ -186,17 +186,17 @@ label v13s48:
     scene v13s48_4
     with dissolve
 
-    au "So… How do they look?"
+    au "So... How do they look?"
 
     scene v13s48_4a
     with dissolve
 
-    u "They look amazing so far. You’re stunning!"
+    u "They look amazing so far. You're stunning!"
 
     scene v13s48_4
     with dissolve
 
-    au "Aww… Can I see?"
+    au "Aww... Can I see?"
 
     scene v13s48_4a
     with dissolve
@@ -231,7 +231,7 @@ label v13s48:
     scene v13s48_4
     with dissolve
 
-    au "Well, that was the “need you to do something” part, but now it's time for the “hangout with you” part. *Laughs*"
+    au "Well, that was the \"need you to do something\" part, but now it's time for the \"hang out with you\" part. *Laughs*"
 
     scene v13s48_4a
     with dissolve
@@ -281,7 +281,7 @@ label v13s48:
     scene v13s48_8a
     with dissolve
 
-    au "Ha.. Well, to be honest…"
+    au "Ha... Well, to be honest..."
 
     scene v13s48_8
     with dissolve
@@ -325,7 +325,7 @@ label v13s48:
     scene v13s48_8
     with dissolve
 
-    au "*Chuckles* Well…"
+    au "*Chuckles* Well..."
 
     scene v13s48_8a
     with dissolve
@@ -340,12 +340,12 @@ label v13s48:
     scene v13s48_8a
     with dissolve
 
-    u "That’s a reasonable insecurity, but look at you now. You literally got offered a job while she was in the middle of a photoshoot."
+    u "That's a reasonable insecurity, but look at you now. You literally got offered a job while she was in the middle of a photoshoot."
 
     scene v13s48_8
     with dissolve
 
-    au "Yeah… You’re right. *Chuckles*"
+    au "Yeah... You're right. *Chuckles*"
 
     scene v13s48_8a
     with dissolve
@@ -455,7 +455,7 @@ label v13s48:
     scene v13s48_8
     with dissolve
 
-    au "Pfft… I knew that."
+    au "Pfft... I knew that."
 
     scene v13s48_8a
     with dissolve
@@ -501,7 +501,7 @@ label v13s48:
 
     au "All of the girls support her. Even the ones that have promised to vote for Chloe, still deep down want Lindsey to win."
 
-    au "Chloe is getting a shit ton of votes based on pity and  loyalty, but not faith in her leadership. People actually believe in Lindsey."
+    au "Chloe is getting a shit ton of votes based on pity and loyalty, but not faith in her leadership. People actually believe in Lindsey."
 
     scene v13s48_8a
     with dissolve
@@ -511,7 +511,7 @@ label v13s48:
     scene v13s48_8
     with dissolve
 
-    au "Well with her being a legacy, it helps alot and with her mother passing away, she's getting a few pity votes as well."
+    au "Well with her being a legacy, it helps a lot and with her mother passing away, she's getting a few pity votes as well."
 
     scene v13s48_8a
     with dissolve
@@ -594,7 +594,7 @@ label v13s48:
             scene v13s48_8
             with dissolve
 
-            au "*Laughs* That was actually funny… Nice job."
+            au "*Laughs* That was actually funny... Nice job."
 
             scene v13s48_8a
             with dissolve
@@ -670,12 +670,12 @@ label v13s48:
 
                     if s12v32_get_aubrey_flowers and v13s48_get_aubrey_chocolate:
 
-                        au "You’ve been working overtime trying to “woo” me, huh?"
+                        au "You've been working overtime trying to \"woo\" me, huh?"
 
                         scene v13s48_8a
                         with dissolve
 
-                        u "How am I doing? Feeling “woo’d” yet?"
+                        u "How am I doing? Feeling \"woo'd\" yet?"
 
                         scene v13s48_8
                         with dissolve
@@ -701,7 +701,7 @@ label v13s48:
     scene v13s48_8
     with dissolve
 
-    u "Oooh, now I’m excited. *Chuckles*."
+    u "Oooh, now I'm excited. *Chuckles*."
 
     if emily_europe:
         play sound "sounds/vibrate.mp3"
@@ -721,7 +721,7 @@ label v13s48:
 
         ry "Hey man, just wanna make sure you're still sure about your decision regarding our date?"
 
-        ry "I thought I’d ask again 'cause I really do want you there, but I wanna be sure you’re comfortable first."
+        ry "I thought I'd ask again 'cause I really do want you there, but I wanna be sure you're comfortable first."
 
         menu :
             "Go on the date...":
@@ -749,7 +749,7 @@ label v13s48:
                 scene v13s48_12
                 with dissolve
                 
-                u "Yeah man, I’m not feeling too comfortable about it."
+                u "Yeah man, I'm not feeling too comfortable about it."
 
                 scene v13s48_12a
                 with dissolve

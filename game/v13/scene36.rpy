@@ -6,7 +6,7 @@
 label v13_walk_garden:
     
     scene v13s36_1 # TPP. MC and lindsey walking along the sidewalk
-    with fade    
+    with fade
 
     pause 0.75
 
@@ -29,7 +29,7 @@ label v13_walk_garden:
         scene v13s36_2 
         with dissolve
 
-        u "*Laughs* Right…"
+        u "*Laughs* Right..."
 
     scene v13s36_2 
     with dissolve
@@ -39,7 +39,7 @@ label v13_walk_garden:
     scene v13s36_3 # FPP. same as 2a (location 2)
     with dissolve
 
-    li "It’s really just gonna be a relaxing evening in the park; not much but it's something."
+    li "It's really just gonna be a relaxing evening in the park; not much but it's something."
 
     li "Imre, myself, Nora, Chris and you are the only people that will be there. Nora is acting a little odd, but we'll see if it all goes well."
 
@@ -83,7 +83,7 @@ label v13_walk_garden:
         scene v13s36_5c # FPP. Chris has a mad face on, looking at lindsey, mouth opened (location 3)
         with dissolve
         
-        ch "Well, he's already here isn’t he? Let's go."
+        ch "Well, he's already here isn't he? Let's go."
 
         scene v13s36_5d # FPP. Lindsey looking back at chris with a uncomfortable look, mouth opened (location 3)
         with dissolve

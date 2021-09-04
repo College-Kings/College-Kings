@@ -30,7 +30,7 @@ label v13s14b:
     scene v13s14b_4 # FPP Show Penelope looking around club, smiling with mouth open
     with dissolve
 
-    pe "Holy… I love this! I've only seen clubs like this on TV. *Chuckles*"
+    pe "Holy... I love this! I've only seen clubs like this on TV. *Chuckles*"
 
     scene v13s14b_3a # FPP Same as 3, Polly looking at Penelope
     with dissolve
@@ -253,7 +253,7 @@ label v13s14b:
         "Be a gentleman":
             $ addPoint("bf")
 
-            u "Penelope, you're pretty drunk. *Chuckles* I should get you back so you can get a good night’s worth of sleep."
+            u "Penelope, you're pretty drunk. *Chuckles* I should get you back so you can get a good night's worth of sleep."
 
             scene v13s14b_16a # FPP Same angle as 16, Penelope dissapointed but still smiling, mouth open
             with dissolve
@@ -273,7 +273,7 @@ label v13s14b:
             scene v13s14b_18 # FPP Polly on the dance floor, looking at MC, smiling with mouth closed
             with dissolve
 
-            u "Hey Polly, I’m gonna get her home."
+            u "Hey Polly, I'm gonna get her home."
 
             scene v13s14b_18a # FPP Same angle as 17, Polly looking at Penelope, mouth open
             with dissolve
@@ -288,7 +288,7 @@ label v13s14b:
         "Have fun":
             $ addPoint("tm")
 
-            u "I  may just let you..."
+            u "I may just let you..."
 
             scene v13s14b_15a # TPP Same angle as 15, Penelope kissing and nibbling MC's neck
             with dissolve
@@ -298,8 +298,8 @@ label v13s14b:
             scene v13s14b_16c # FPP Same angle as 16, only part of Penelope's head visible, as she is kissing MC's neck
             with dissolve
 
-            u "Mmm.."
-            u "Wait… Are you trying to give me a hickey?"
+            u "Mmm..."
+            u "Wait... Are you trying to give me a hickey?"
 
             scene v13s14b_16b
             with dissolve

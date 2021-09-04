@@ -49,7 +49,7 @@ label v13s31:
         scene v13s31_5b # FPP. Same as v13s31_5, slight smile, mouth closed 
         with dissolve
 
-        u "Oh god, Sam's here too. We should've kept an eye on her. What was I thinking...."
+        u "Oh god, Sam's here too. We should've kept an eye on her. What was I thinking..."
 
     scene v13s31_6 # FPP. MC looking at Amber, Amber neutral expression, mouth closed
     with dissolve

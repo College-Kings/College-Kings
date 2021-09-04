@@ -152,7 +152,7 @@ label v13s12c:
     scene v13s12c_11
     with dissolve
 
-    au "And don't even get me started on the whole “Lindsey for president” stuff."
+    au "And don't even get me started on the whole \"Lindsey for president\" stuff."
 
     scene v13s12c_11b # FPP. Same as v13s12c_11, Aubrey slight smile, mouth closed
     with dissolve

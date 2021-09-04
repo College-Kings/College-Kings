@@ -43,9 +43,9 @@ label v13s44:
         scene v13s44_3a
         with dissolve
 
-        la "Well, I hope you never feel \"good\" about what you did…"
+        la "Well, I hope you never feel \"good\" about what you did..."
 
-        la "Look, I'm not going to hold your hand and start calling you babe again, but we can be friends. I'm not in a “holding a grudge” type of mood anyway."
+        la "Look, I'm not going to hold your hand and start calling you babe again, but we can be friends. I'm not in a \"holding a grudge\" type of mood anyway."
 
         scene v13s44_3
         with dissolve
@@ -55,7 +55,7 @@ label v13s44:
         scene v13s44_3a
         with dissolve
 
-        la "*Sighs* Yes, I’m sure. Now, look..."
+        la "*Sighs* Yes, I'm sure. Now, look..."
 
     else:
         scene v13s44_4 # FPP. MC looking at Lauren, Lauren looking at MC, Lauren slight smile, mouth open.
@@ -101,7 +101,7 @@ label v13s44:
     scene v13s44_4b
     with dissolve
 
-    la "*Laughs* Let’s go then."
+    la "*Laughs* Let's go then."
 
     if v13_lauren_smoke:
         scene v13s44_4a
@@ -117,12 +117,12 @@ label v13s44:
         scene v13s44_4a
         with dissolve
 
-        u "Yeah, I’m- I’m really sorry about that, Lauren."
+        u "Yeah, I'm- I'm really sorry about that, Lauren."
 
         scene v13s44_4c
         with dissolve
 
-        la "*Chuckles* Don't mention it, I’m responsible for my own decisions at the end of the day."
+        la "*Chuckles* Don't mention it, I'm responsible for my own decisions at the end of the day."
 
     scene v13s44_5 # TPP. Lauren and MC walking down the hallway, both slight smile, mouth closed.
     with dissolve
@@ -130,7 +130,7 @@ label v13s44:
     pause 0.75
 
     scene v13s44_6 # TPP. Lauren and MC in the hotel lobby walking towards the door.
-    with fade 
+    with fade
 
     pause 0.75
 

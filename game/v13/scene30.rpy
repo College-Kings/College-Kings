@@ -9,7 +9,7 @@ label v13s30:
 
     u "Wait a minute, are these not the canals you were talking about?"
 
-    scene v13s30_2 # FPP. MC looking at Amber, Amber looking at MC, Amber slight smile, mouth open.   
+    scene v13s30_2 # FPP. MC looking at Amber, Amber looking at MC, Amber slight smile, mouth open. 
     with dissolve
 
     am "Oh shit, they are."
@@ -624,7 +624,7 @@ label v13s30:
 
         u "She's shaking, Amber..."
 
-        scene v13s30_15b # TPP.  Same as v13s30_15a, Show MC looking down towards where Amber is sitting, MC worried expression, mouth closed, amber worried expression, Mouth open.
+        scene v13s30_15b # TPP. Same as v13s30_15a, Show MC looking down towards where Amber is sitting, MC worried expression, mouth closed, amber worried expression, Mouth open.
         with dissolve
 
         am "Ahh fuck!"

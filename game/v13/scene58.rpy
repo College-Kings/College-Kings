@@ -87,7 +87,7 @@ label v13s58:
         pause 0.75
 
         scene v13s58_5 # TPP. Show Aubrey and MC at the canoeing location holding hands, both slight smile, mouths closed.
-        with fade   
+        with fade
     else: 
         pause 0.75
 
@@ -102,6 +102,6 @@ label v13s58:
         pause 0.75
 
         scene v13s58_5b # TPP. Show Aubrey and MC at the canoeing location not holding hand, both slight smile, mouths closed.
-        with fade  
+        with fade
 
     jump v13s59

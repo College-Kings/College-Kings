@@ -196,7 +196,7 @@ label v13s21a:
     scene v13s21a_21a # TPP. Same as v13s21a_21 Mr. Lee's face is slightly more angry, eyes open looking at Charli
     with dissolve
 
-    lee "Second, you've placed your hands on me for the last time. Due to your usual manner and academic performance an “investigation” was a gift."
+    lee "Second, you've placed your hands on me for the last time. Due to your usual manner and academic performance an \"investigation\" was a gift."
 
     lee "The email alone is plenty of enough evidence to have you completely banned from San Vallejo."
 

@@ -6,7 +6,7 @@
 
 label v13s52a:
     scene v13s52a_1 # FPP. Chloe is shaking mc who is still laying in bed, smiling, mouth opened
-    with dissolve    
+    with dissolve
 
     cl "Hey, wake up. *Chuckles*"
 

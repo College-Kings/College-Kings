@@ -17,12 +17,12 @@ label v13s16a:
     scene v13s16a_1
     with dissolve
 
-    ri "Whatever you want… As long as you do it hard. *Chuckles*"
+    ri "Whatever you want... As long as you do it hard. *Chuckles*"
 
     scene v13s16a_1a
     with dissolve
 
-    u "Ha… Say no more."
+    u "Ha... Say no more."
 
     # -Position 1, MC holds Riley's wrists together with one hand and holds her head with the other as he fucks her face-
     image v13s16av1 = Movie(play="images/v13/Scene 16a/v13s16av1.webm", loop=True, image="images/v13/Scene 16a/v13s16av1Start.webp", start_image="images/v13/Scene 16a/v13s16av1Start.webp")
@@ -33,11 +33,11 @@ label v13s16a:
     
     ri "*Moans*"
 
-    u "Ohhh, fuck…"
+    u "Ohhh, fuck..."
 
     ri "*Gags*"
 
-    u "Is this… *Moans* Hard enough for you?"
+    u "Is this... *Moans* Hard enough for you?"
 
     scene v13s16av1f # Same as v1, but faster
     with dissolve
@@ -51,7 +51,7 @@ label v13s16a:
     scene v13s16a_2 # FPP Show MC view as he pulls out of Riley's mouth
     with dissolve
 
-    u "This is one hell of an apology Riley, but…"
+    u "This is one hell of an apology Riley, but..."
 
     scene v13s16a_3 # TPP Show MC picking up Riley by the waist and throwing her on the bed, Riley's mouth open
     with dissolve
@@ -61,17 +61,17 @@ label v13s16a:
     scene v13s16a_4 # FPP MC getting on the bed in between Riley's legs
     with dissolve
 
-    u "You should know…"
+    u "You should know..."
 
     scene v13s16a_5 # FPP Close up of MC's hand, with three fingers ready to finger Riley
     with dissolve
     
-    u "I don’t like to enjoy the pleasure alone."
+    u "I don't like to enjoy the pleasure alone."
 
     scene v13s16a_5a # FPP Same as 5, MC's fingers inside of Riley
     with dissolve
 
-    ri "*Gasps* Oh, my f- [Name]..."
+    ri "*Gasps* Oh, my f- [name]..."
 
     scene v13s16a_5b # FPP Same as 5a, MC's fingers deeper inside of Riley
     with dissolve
@@ -86,7 +86,7 @@ label v13s16a:
     scene v13s16a_5b
     with dissolve
 
-    ri "Yes…"
+    ri "Yes..."
 
     scene v13s16a_5a
     with dissolve
@@ -102,16 +102,16 @@ label v13s16a:
     
     ri "*Moans* Y-yes! Just like that..."
 
-    u "Mmm, fuck… (She’s so fucking wet…)"
+    u "Mmm, fuck... (She's so fucking wet...)"
 
     u "*Moans* You really missed me, huh?"
 
     scene v13s16a_v2f # Same as v2, but faster
     with dissolve
 
-    ri "Y-yes.. I.... *Moans* I’ve been waiting for this… For you..."
+    ri "Y-yes... I... *Moans* I've been waiting for this... For you..."
 
-    u "*Chuckles* I think you’re enjoying this a little too much..."
+    u "*Chuckles* I think you're enjoying this a little too much..."
 
     # -Position 3, MC grabs both of Riley's ankles and holds them toward her head as he fucks her-
     image v13s16av3 = Movie(play="images/v13/Scene 16a/v13s16av3.webm", loop=True, image="images/v13/Scene 16a/v13s16av3Start.webp", start_image="images/v13/Scene 16a/v13s16av3Start.webp")
@@ -120,18 +120,18 @@ label v13s16a:
     scene v13s16av3 # MC holding Riley's ankles up near her head as he fucks her
     with dissolve
 
-    ri "Haaaaa… Oh my- *Gasps*"
+    ri "Haaaaa... Oh my- *Gasps*"
 
-    u "Damnit Riley… You’re so fucking tight for me right now."
+    u "Damnit Riley... You're so fucking tight for me right now."
 
     ri "*Moans* You like that, huh? [name]?"
 
-    u "*Moans* (Holy… Shit…)"
+    u "*Moans* (Holy... Shit...)"
 
     scene v13s16av3f # Same as v3, but faster
     with dissolve
 
-    ri "Please… S-say that… *Moans* Tell me how much you like it, [Name]."
+    ri "Please... S-say that... *Moans* Tell me how much you like it, [name]."
 
     u "Mmm... I'm absolutely loving it!"
 
@@ -148,23 +148,23 @@ label v13s16a:
 
     u "This is what you wanted?"
 
-    ri "Ooohh, [name]... I... You… *Moans*"
+    ri "Ooohh, [name]... I... You... *Moans*"
 
-    u "Haaa, yes… You’re shaking…  *Moans*"
+    u "Haaa, yes... You're shaking... *Moans*"
 
     scene v13s16av4f # Same as v4, but faster
     with dissolve
 
-    ri "*Whispers* Fuck, I… I’m gonna- *Gasps*"
+    ri "*Whispers* Fuck, I... I'm gonna- *Gasps*"
 
-    u "I'm almost there… Cum for me, Riley."
+    u "I'm almost there... Cum for me, Riley."
 
-    ri "Mmm… Oh, FUCK!  *Moans* [NAME]!"
+    ri "Mmm... Oh, FUCK! *Moans* [name]!" #NAME
 
     scene v13s16a_6 # FPP MC giving final, deep thrust as he cums inside of Riley
     with dissolve
 
-    u "*Moans* Oh… Yes, Riley… FUCK!"
+    u "*Moans* Oh... Yes, Riley... FUCK!"
 
     scene v13s16a_6a # FPP Same angle as 6, MC just pulled out of Riley, a bit of his cum dripping out of her
     with dissolve
@@ -179,32 +179,32 @@ label v13s16a:
     scene v13s16a_8 # FPP MC's view, close to Riley's face, Riley smiling with mouth closed
     with dissolve
 
-    u "I did… Wasn’t that obvious? Haha..."
+    u "I did... Wasn't that obvious? Haha..."
 
     scene v13s16a_8a # FPP Same as 8, Riley's mouth open
     with dissolve
 
-    ri "I’m glad I could make it up to you...,"
+    ri "I'm glad I could make it up to you...,"
 
     scene v13s16a_8b # FPP Same angle as 8, Riley with one eyebrow raised, mouth open
     with dissolve
 
-    ri "But, you were right… I enjoyed it too much. *Laughs*"
+    ri "But, you were right... I enjoyed it too much. *Laughs*"
 
     scene v13s16a_8
     with dissolve
 
-    u "*Chuckles* Guess I’ll have to try harder next time…  ."
+    u "*Chuckles* Guess I'll have to try harder next time..."
 
     scene v13s16a_8a
     with dissolve
 
-    ri "*Chuckles* I guess so… You wanna sleep in my bed tonight?"
+    ri "*Chuckles* I guess so... You wanna sleep in my bed tonight?"
 
     scene v13s16a_8
     with dissolve
 
-    u "I’d be more than happy to."
+    u "I'd be more than happy to."
 
     scene v13s16a_9 # TPP MC moving off of Riley to lay, facing her, at her side. Riley turning to face away from MC. Riley's mouth open
     with dissolve

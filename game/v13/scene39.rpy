@@ -33,7 +33,7 @@ label v13_hotel_imre:
     scene v13s39_1d # FPP. Same as 1c, mouth closed
     with dissolve
 
-    u "He’s just got a lot on his mind, probably best to give him his space right now."
+    u "He's just got a lot on his mind, probably best to give him his space right now."
 
     scene v13s39_1e # FPP. Ryan slight smiling, mouth opened
     with dissolve

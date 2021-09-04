@@ -33,12 +33,12 @@ label v13s53:
 
     else:
 
-        ri "Just getting some reading in… *Chuckles*"
+        ri "Just getting some reading in... *Chuckles*"
 
         scene v13s53_3
         with dissolve
 
-        u "On vacation? Haven’t we been over this already? *Laughs*."
+        u "On vacation? Haven't we been over this already? *Laughs*."
     
     scene v13s53_3a
     with dissolve
@@ -71,7 +71,7 @@ label v13s53:
     pause 0.75
 
     scene v13s53_8 # TPP. MC and Riley snuggling, show Riley's face, Riley slight smile, mouth open
-    with dissolves
+    with dissolve
 
     ri "Mmmm... You're always so warm. *Chuckles*"
 
@@ -83,7 +83,7 @@ label v13s53:
     scene v13s53_8
     with dissolve
 
-    ri "No, no… You're making me comfortable, I always sleep best when you're next to me."
+    ri "No, no... You're making me comfortable, I always sleep best when you're next to me."
 
     scene v13s53_8a
     with dissolve
