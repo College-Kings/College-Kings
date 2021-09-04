@@ -3,7 +3,6 @@
 # Characters: IMRE (Outfit: 2), MC (Outfit: 2), RYAN (Outfit: 1)
 # Time: Evening 
 
-
 label v13s11:
     scene v13s11_1 # TPP. MC and Ryan behind imre on the sidewalk (location 1)
     with fade

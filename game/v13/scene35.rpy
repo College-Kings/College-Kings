@@ -205,5 +205,5 @@ label v13s35:
     # -Aubrey walks off-
     pause 0.75
 
-    jump v13s36
+    jump v13_walk_garden
     # -Transition to Scene 36-
