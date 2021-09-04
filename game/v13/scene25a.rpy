@@ -7,7 +7,11 @@ label v13s25a:
     scene v13s25a_1 # TPP. Show MC and Kourtney are sitting down facing each other, Kourtney slight smiles, mouth open
     with dissolve 
 
+<<<<<<< Updated upstream
     kourt "This is so nice. It's almost like something out of a movie."
+=======
+    kourt "This is so nice. It’s almost like something out of a movie."
+>>>>>>> Stashed changes
 
     scene v13s25a_2 # FPP. Mc and are sitting down facing each other, Kourtney slight smiles, mouth closed
     with dissolve 
@@ -74,7 +78,11 @@ label v13s25a:
             scene v13s25a_2b 
             with dissolve
 
+<<<<<<< Updated upstream
             kourt "*Grunts* You seriously need some help."
+=======
+            kourt "*Grunts*  You seriously need some help."
+>>>>>>> Stashed changes
 
             scene v13s25a_2c 
             with dissolve
@@ -189,7 +197,11 @@ label v13s25a:
             scene v13s25a_2m # FPP. Same as v13s25a_2j, Kourtney mouth open
             with dissolve
 
+<<<<<<< Updated upstream
             kourt "A romantic family man that has a sense of humor. So far, I'm liking what I'm hearing."
+=======
+            kourt "A romantic family man that has a sense of humor. So far, I'm liking what I’m hearing."
+>>>>>>> Stashed changes
 
             scene v13s25a_2l 
             with dissolve

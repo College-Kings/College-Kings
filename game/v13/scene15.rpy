@@ -5,13 +5,21 @@
 
 init python:
     def v13s15_Reply1():
+<<<<<<< Updated upstream
         setattr(store, "v13_cuddle_lauren", True)
+=======
+        v13_cuddle_lauren = True
+>>>>>>> Stashed changes
         contact_Lauren.newMessage(_("Yayy :) "))
 
     def v13s15_Reply2():
         contact_Lauren.newMessage(_("Aww okay, it's cool "))
         contact_Lauren.addReply(_("Sorry babe, I'm just so tired. "))
+<<<<<<< Updated upstream
         contact_Lauren.newMessage(_("It's okay, night. "))
+=======
+        ccontact_Lauren.newMessage(_("It's okay, night. "))
+>>>>>>> Stashed changes
 
 label v13s15:
     scene v13s15_1 # TPP. Show MC walking into the room, it's dark inside, MC neutral expression, mouth closed

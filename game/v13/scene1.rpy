@@ -193,7 +193,7 @@ label v13_start:
             $ addPoint("bf")
             $ riley.points += 1
 
-            u "It's fine Riley, really. Of course I was pissed at first, it's a little upsetting to have one of your best friends calling you a liar but... I can't stay mad at you forever. Apology accepted."
+            u "It's fine Riley, really. Of course I was pissed at first, it's a little upsetting to have one of your best friends calling you a liar but… I can't stay mad at you forever. Apology accepted."
 
             scene v13s1_3c
             with dissolve
@@ -228,7 +228,7 @@ label v13_start:
     scene v13s1_3e # FPP. MC watching Riley walking towards the door, slight smile, mouth closed (if she has her back to MC then ignore the facial expression)
     with dissolve
 
-    u "(Unlimited access to Charli's room... This is gonna be interesting. *Laughs*)"
+    u "(Unlimited access to Charli's room… This is gonna be interesting. *Laughs*)"
 
     scene v13s1_5 # TPP. Show MC walking out of the cafe, slight smile, mouth closed
     with dissolve
