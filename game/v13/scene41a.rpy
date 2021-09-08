@@ -3,7 +3,6 @@
 # Characters: LINDSEY (Outfit: 1), MC (Outfit: 5)
 # Time: night
 
-
 label v13s41a:
     scene v13s41a_1 # TPP.MC and lindsey on the sidewalk
     with fade

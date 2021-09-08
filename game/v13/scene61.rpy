@@ -27,7 +27,7 @@ label v13s61:
     scene black
     with dissolve
     
-    pause 0.75
+    pause 0.5
 
     scene v13s61_3
     with dissolve
@@ -47,7 +47,7 @@ label v13s61:
     scene black
     with dissolve
     
-    pause 0.75
+    pause 0.5
     
     scene v13s61_3b
     with dissolve
@@ -72,7 +72,7 @@ label v13s61:
     scene black
     with dissolve
     
-    pause 0.75
+    pause 0.5
 
     scene v13s61_3b
     with dissolve
@@ -92,7 +92,7 @@ label v13s61:
     scene v13s61_5a # TPP. Same as v13s61_5, MC sleeping on his side.
     with fade
 
-    pause 
+    pause 1
 
     scene v13s61_4a # FPP. Same as v13s61_4, MC looking at door to his room
     with fade

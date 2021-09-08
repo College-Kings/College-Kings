@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 5)
 # Time: night
 
-
 label v13s42:
     scene v13s42_1 # TPP. MC leaves the hotel lobby, smiling
     with dissolve

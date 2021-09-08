@@ -3,7 +3,6 @@
 # Characters: IMRE (Outfit: 1), MC (Outfit: 5)
 # Time: evening 
 
-
 label v13_walk_imre:
     scene v13s38_1 # TPP. MC and imre walking in the sidewalk (location 1)
     with fade

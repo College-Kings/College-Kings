@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 3), AUBREY (Outfit: 2)
 # Time: Afternoon
 
-
 label v13s58:
     scene v13s58_1 # TPP. Show MC sitting in one of the chairs in the hotel lobby, Arms crossed, slight smile, mouth closed.
     with dissolve

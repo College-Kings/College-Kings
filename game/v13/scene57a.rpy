@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 3), NORA (Outfit: 1), MR. LEE (Outfit: 1)
 # Time: Afternoon
 
-
 label v13s57a:
     scene v13s57a_1 # TPP. Show Nora and MC standing in the hotel lobby, Bonsai tree sitting on the ground by their feet, both slight smile, mouths closed.
     with dissolve

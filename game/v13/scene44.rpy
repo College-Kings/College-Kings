@@ -3,7 +3,6 @@
 # Characters: LAUREN (Outfit: 3), MC (Outfit: 1)
 # Time: Morning
 
-
 label v13s44:
 
     scene v13s44_1 # TPP. Show MC walking down the hallway, Lauren slightly behind him, both Slight smile, both mouth open.

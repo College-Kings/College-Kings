@@ -3,7 +3,6 @@
 # Characters: AUBREY (Outfit: 2), MC (Outfit: 3)
 # Time: Afternoon
 
-
 label v13s60:
     scene v13s60_1 # TPP. Show Mc and Aubrey walking in the forest, both slight smile, mouth closed.
     with dissolve

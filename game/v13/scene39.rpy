@@ -3,7 +3,6 @@
 # Characters: IMRE (Outfit: 1), RYAN (Outfit: 1), MC (Outfit: 5)
 # Time: evening 
 
-
 label v13_hotel_imre:
     scene v13s39_1 # FPP. Looking at imre, imre slightly annoyed, mouth opened
     with dissolve

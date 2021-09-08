@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 9), CHLOE (Outfit: 2)
 # Time: night
 
-
 label v13s52:
     scene v13s52_1 # TPP. MC goes to the hallway, smiling
     with fade
