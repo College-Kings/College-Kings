@@ -347,7 +347,7 @@ label v13s13b:
     menu:
         "Not exactly":
     
-            u "Not exactly... Usually spend time at bars, haha"
+            u "Not exactly... Usually spend time at bars, haha."
 
             scene v13s13b_2b
             with dissolve

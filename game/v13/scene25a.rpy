@@ -179,7 +179,7 @@ label v13s25a:
             scene v13s25a_2k # FPP. Same as v13s25a_2j, Kourtney reaches other hand out and places one hand palm up on table towards MC
             with dissolve
 
-            kourt "*Laughs* I was just kidding"
+            kourt "*Laughs* I was just kidding."
 
             scene v13s25a_2l # FPP. Same as v13s25a_2j, MC places his hand in Kourtneys, Kourtney increases to full smile, mouth closed
             with dissolve

@@ -778,7 +778,7 @@ label v13s48:
     scene v13s48_8
     with dissolve
 
-    u "Well, let's get you back before you freeze. *Chuckles* I wish I had some sort of jacket"
+    u "Well, let's get you back before you freeze. *Chuckles* I wish I had some sort of jacket."
 
     scene v13s48_7
     with dissolve
