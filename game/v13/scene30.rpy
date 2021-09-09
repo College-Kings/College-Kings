@@ -3,12 +3,6 @@
 # Characters: MC (Outfit: 9), AMBER (Outfit: 1), SAMANTHA (Outfit: 1), LAUREN (Outfit: 3)
 # Time: Night
 
-<<<<<<< Updated upstream
-=======
-default v13_smoke_weed = False
-default v13_lauren_smoke = False
-
->>>>>>> Stashed changes
 label v13s30:
     scene v13s30_1 # TPP. Show MC and Amber down in the canals, Both slight smile, MC Mouth open.
     with dissolve
@@ -36,11 +30,7 @@ label v13s30:
         scene v13s30_3 # FPP. MC looking at Samantha, Samantha looking at Amber, Samantha worried smile, mouth open
         with dissolve
     
-<<<<<<< Updated upstream
         sa "Oh umm, I'm cool with hanging out a bit but, I think if you're gonna smoke I should go."
-=======
-        sa "Oh umm, I’m cool with hanging out a bit but, I think if you're gonna smoke I should go."
->>>>>>> Stashed changes
 
         scene v13s30_2j # FPP. MC Looking at Amber, Amber looking at Samantha, slight smile, mouth open.
         with dissolve
@@ -85,11 +75,7 @@ label v13s30:
         scene v13s30_2
         with dissolve
 
-<<<<<<< Updated upstream
         am "Somebody's got a thing for you."
-=======
-        am "Somebody’s got a thing for you."
->>>>>>> Stashed changes
 
         scene v13s30_2a
         with dissolve
@@ -109,21 +95,13 @@ label v13s30:
     scene v13s30_2a
     with dissolve
 
-<<<<<<< Updated upstream
     u "If the water's gonna dance, does that mean we're going to be dizzy?"
-=======
-    u "If the water's gonna dance, does that mean we’re going to be dizzy?"
->>>>>>> Stashed changes
 
     if not v11_smoke_amber_amsterdam: #placeholder
         scene v13s30_2
         with dissolve
 
-<<<<<<< Updated upstream
         am "You said you didn't wanna come with me back when we were in London, but you are here now..."
-=======
-        am "You said you didn't wanna come with me back when we were in London, but you are here now…"
->>>>>>> Stashed changes
 
         am "So, if you get fucked up I'll try to feel bad. *Chuckles*"
 
@@ -236,20 +214,12 @@ label v13s30:
             scene v13s30_2a
             with dissolve
             
-<<<<<<< Updated upstream
             u "I've never passed up on an opportunity to have a good time."
-=======
-            u "I’ve never passed up on an opportunity to have a good time."
->>>>>>> Stashed changes
 
             scene v13s30_2
             with dissolve
 
-<<<<<<< Updated upstream
             am "That was a wack way to put it, but let's roll up. *Laughs*"
-=======
-            am "That was a wack way to put it, but let’s roll up. *Laughs*"
->>>>>>> Stashed changes
 
     scene v13s30_2f # FPP. Same as v13s30_2, MC Looking at Amber, Amber looking away from MC, Amber slight smile, mouth open.
     with dissolve 
@@ -276,11 +246,7 @@ label v13s30:
 
     am "*Chuckles* Come roll up with us."
 
-<<<<<<< Updated upstream
     if (laurenrs and v11_aubrey_sex): 
-=======
-    if laurenmad: 
->>>>>>> Stashed changes
         scene v13s30_2a
         with dissolve
 
@@ -481,11 +447,7 @@ label v13s30:
         scene v13s30_8a
         with dissolve
 
-<<<<<<< Updated upstream
         la "You know what? Fuck it. We're in Amsterdam! I'll do it."
-=======
-        la "You know what? Fuck it. We’re in Amsterdam! I'll do it."
->>>>>>> Stashed changes
 
         scene v13s30_10
         with dissolve
@@ -495,20 +457,12 @@ label v13s30:
         scene v13s30_8a
         with dissolve
 
-<<<<<<< Updated upstream
         la "I'm just trying to have fun. We don't have many days left before we're back on campus."
-=======
-        la "I'm just trying to have fun. We don’t have many days left before we're back on campus."
->>>>>>> Stashed changes
 
         scene v13s30_10
         with dissolve
 
-<<<<<<< Updated upstream
         am "Hell yeah. That's the spirit."
-=======
-        am "Hell yeah. That’s the spirit."
->>>>>>> Stashed changes
 
         am "Oh yeah, that's a damn good strain right there."
 
@@ -618,11 +572,7 @@ label v13s30:
         scene v13s30_8f
         with dissolve
 
-<<<<<<< Updated upstream
         la "Guys, I'm not playing. It...It looks like the water is... Dancing?"
-=======
-        la "Guys, I'm not playing. It…It looks like the water is... Dancing?"
->>>>>>> Stashed changes
 
         scene v13s30_10
         with dissolve

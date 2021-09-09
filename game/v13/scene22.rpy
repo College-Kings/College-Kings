@@ -37,11 +37,7 @@ label v13s22:
     scene v13s22_2a
     with dissolve
 
-<<<<<<< Updated upstream
     au "And you found...?"
-=======
-    au "And you found…?"
->>>>>>> Stashed changes
 
     scene v13s22_2b
     with dissolve
@@ -116,20 +112,12 @@ label v13s22:
         scene v13s22_3e # FPP. Same as v13s22_3d. Riley smiling, mouth open.
         with dissolve
 
-<<<<<<< Updated upstream
         ri "Yeah, that actually would've been a good idea... *Chuckles*"
-=======
-        ri "Yeah, that actually would've been a good idea… *Chuckles*"
->>>>>>> Stashed changes
 
         scene v13s22_3f # FPP. Same as v13s22_3e. Riley smiling, mouth closed.
         with dissolve
 
-<<<<<<< Updated upstream
         u "I just let him go, I'd rather not see him again. Dealing with his bullshit isn't worth some dollars."
-=======
-        u "I just let him go, I'd rather not see him again. Dealing with his bullshit isn’t worth some dollars."
->>>>>>> Stashed changes
 
         scene v13s22_2e
         with dissolve
@@ -144,11 +132,7 @@ label v13s22:
     scene v13s22_2e
     with dissolve
 
-<<<<<<< Updated upstream
     au "Haha, well... It was nice knowing him."
-=======
-    au "Haha, well… It was nice knowing him."
->>>>>>> Stashed changes
 
     scene v13s22_2f
     with dissolve
@@ -158,11 +142,7 @@ label v13s22:
     scene v13s22_3e
     with dissolve
 
-<<<<<<< Updated upstream
     ri "Outside of hating you for no reason and doing mean shit, he was kind of cool... *Chuckles*"
-=======
-    ri "Outside of hating you for no reason and doing mean shit, he was kind of cool… *Chuckles*"
->>>>>>> Stashed changes
 
     scene v13s22_3f
     with dissolve
@@ -229,11 +209,7 @@ label v13s22:
     scene v13s22_7a # FPP. Same as v13s22_7. Imre looking back at the MC, slight smile, mouth open.
     with dissolve
 
-<<<<<<< Updated upstream
     imre "Haha, alright, don't chew me out just yet... We're kidnapping [name]."
-=======
-    imre "Haha, alright, don’t chew me out just yet... We're kidnapping [name]."
->>>>>>> Stashed changes
 
     scene v13s22_7b # FPP. Same as v13s22_7a. Imre slight smile, mouth closed.
     with dissolve
