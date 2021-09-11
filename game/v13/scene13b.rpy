@@ -427,7 +427,7 @@ label v13s13b:
 
         jump v13s14b
 
-    else # -If don't have after party access or not invited
+    else: # -If don't have after party access or not invited
         scene v13s13b_8
         with dissolve
 
