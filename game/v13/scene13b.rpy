@@ -3,8 +3,6 @@
 # Characters: MC (Outfit: 2), PENELOPE (Outfit: 3)
 # Time: Wednesday night
 
-default v13_after_party = False
-
 label v13s13b:
     if (joinwolves and len(v12s7_killList) == 15) or len(v12s7_killList) == 16: # DON'T KNOW NUMBER FOR ALL KILLS; CHANGE TO CORRECT NUMBER
         $ v13_after_party = True
