@@ -101,7 +101,7 @@ label v13s24:
 
         "Fuck Yeah, let's mingle":
             $ addPoint("bro")
-            if chloegf or laurenrs
+            if chloegf or laurenrs:
                 $ addPoint("tm")
 
             scene v13s24_3a
@@ -756,7 +756,6 @@ label v13s24:
     barh "Right then… Ladies, go ahead and decide on your man. If you would be willing to go on a date with [name], please raise your hand."
 
     if not emmyrs and not kourtneyrs and not aryssars:
-
         scene v13s24_20a # FPP. same as v13s24_20 emmy kourtney and aryssa looking in different directions, no expressions, hands MUST be at sides or in laps NOT raised, mouths closed
         with dissolve
 
@@ -768,7 +767,6 @@ label v13s24:
         pause 0.50
 
     elif emmyrs and kourtneyrs and aryssars:
-
         scene v13s24_20b # FPP. same as v13s24_20 emmy kourtney and aryssa looking at MC, all with one hand raised, all fully smiling, all mouths closed
         with dissolve
 
@@ -785,42 +783,36 @@ label v13s24:
         pause 0.50           
 
     elif emmyrs and kourtneyrs:
-
         scene v13s24_20c # FPP. same as v13s24_20b aryssa no expression and doesn't raise her hand
         with dissolve
 
         pause 0.50
 
     elif emmyrs and aryssars:
-
         scene v13s24_20d # FPP. same as v13s24_20b kourtney no expression and doesn't raise her hand
         with dissolve
 
         pause 0.50
 
     elif kourtneyrs and aryssars:
-
         scene v13s24_20e # FPP. same as v13s24_20b emmy no expression and doesn't raise her hand
         with dissolve
 
         pause 0.50
 
     elif emmyrs:
-
         scene v13s24_20f # FPP. same as v13s24_20b show just emmy raising her hand, full smile, mouth closed, 
         with dissolve
 
         pause 0.50
 
     elif kourtneyrs:
-
         scene v13s24_20g # FPP. same as v13s24_20b show just kourtney raising her hand, full smile, mouth closed, 
         with dissolve
 
         pause 0.50
 
-    else aryssars:
-
+    elif aryssars:
         scene v13s24_20h # FPP. same as v13s24_20b show just aryssa raising her hand, full smile, mouth closed, 
         with dissolve
 
@@ -909,7 +901,7 @@ label v13s24:
         scene v13s24_24a # TPP. same as v13s24_24 MC looks up at his phone, slight smile, mouth closed
         with dissolve
 
-        jump to v13s27
+        jump v13s27
 
     else:
 
@@ -1019,4 +1011,4 @@ label v13s24_no_simplr_date:
 
     pause 0.75
 
-    jump to v13_27
+    jump v13s27

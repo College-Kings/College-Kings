@@ -103,7 +103,7 @@ label v13s51_emily_fight:
 
     u "(She’s a fucking psycho, I swear!)"
 
-    play "sounds/knock.mp3"
+    play sound "sounds/knock.mp3"
 
     scene v13s51_6 # TPP. Emily in front of the bathroom door, mad, mouth open (talking through the door).
     with dissolve
@@ -115,7 +115,7 @@ label v13s51_emily_fight:
 
     u " (muffled) Emily, go chill somewhere and leave me alone."
 
-    play "sounds/dooropen.mp3"
+    play sound "sounds/dooropen.mp3"
     
     scene v13s51_6b # TPP. Emily with both arms extended out, both hands shoving open the bathroom door, mad, mouth closed.
     with dissolve
@@ -264,7 +264,7 @@ label v13s51_emily_fight:
             elif rileyrs:  
                 jump v13s53
                             
-            else
+            else:
                 jump v13s54 
             
         "Fuck Emily":

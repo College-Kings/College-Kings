@@ -6,7 +6,7 @@
 default v13_after_party = False
 
 label v13s13b:
-    if v12_murder_count = ALL # DON'T KNOW NUMBER FOR ALL KILLS; CHANGE TO CORRECT NUMBER
+    if (joinwolves and len(v12s7_killList) == 15) or len(v12s7_killList) == 16: # DON'T KNOW NUMBER FOR ALL KILLS; CHANGE TO CORRECT NUMBER
         $ v13_after_party = True
 
     scene v13s13b_1 # TPP Show MC and Penelope sitting backstage, Polly walking into the room, not looking at MC or Penelope

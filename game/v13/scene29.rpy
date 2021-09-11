@@ -346,11 +346,11 @@ label v13s29:
     with dissolve
 
     menu:
-        "Yes."
+        "Yes.":
 
             u "Of course."
 
-        "No."
+        "No.":
 
             u "Yeah, I'm not on board with that...Sorry."
 
@@ -437,7 +437,7 @@ label v13s29:
 
     else: 
         scene v13s29_26a # TPP. Same angle as v13s29_26, Samantha absent.
-        with 
+        with dissolve
 
         pause 0.75
 
