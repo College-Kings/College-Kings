@@ -4,7 +4,7 @@
 # Time: night
 
 
-label v13_chloe_cuddling:   
+label v13s40a:   
     scene v13s40a_1 # FPP. MC in front of his bed with chloe laying down making a seductive face, mouth opened (chloe naked?)
     with dissolve    
     
