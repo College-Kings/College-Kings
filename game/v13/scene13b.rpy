@@ -387,7 +387,7 @@ label v13s13b:
     scene v13s13b_6 # FPP Show Polly standing up, looking at Penelope and MC, smiling with mouth open
     with dissolve
 
-    polly "Well, I gotta get headed over to the party right now.
+    polly "Well, I gotta get headed over to the party right now."
 
     scene v13s13b_7 # FPP Show MC and Penelope standing up, looking at Polly
     with dissolve
