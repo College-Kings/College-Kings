@@ -70,9 +70,8 @@ label v13s11:
     ry "*Whisper* You do something!"
 
     $ timed = True
-    $ timerexit = v13_push_ryan
 
-    menu:
+    menu (fail_label="v13_push_ryan"):
         "Pretend to tie Ryan's shoe":
             scene v13s11_7 # TPP. MC bends down and pretends to tie ryan's shoe
             with dissolve
