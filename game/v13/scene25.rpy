@@ -153,7 +153,7 @@ label v13s25:
                 emmy "Right here, right now."
 
                 menu:
-                    "Let Her":
+                    "Let her":
                         $ addPoint("tm")
                         scene v13s25_9
                         with dissolve
@@ -167,7 +167,7 @@ label v13s25:
 
                         jump v13s26
 
-                    "Stop Her":
+                    "Stop her":
                         $ addPoint("bf")
 
                         scene v13s25_9

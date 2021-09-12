@@ -423,7 +423,6 @@ label v13s24:
             emmy "Haha! Interesting..."
             
         "Rural":
-
             scene v13s24_16b
             with dissolve
 
@@ -578,7 +577,7 @@ label v13s24:
     scene v13s24_12a
     with dissolve
 
-    barh "Thank You Kourtney. Please send in Aryssa."
+    barh "Thank you Kourtney. Please send in Aryssa."
 
     scene v13s24_14a
     with dissolve

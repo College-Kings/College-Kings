@@ -156,7 +156,7 @@ label v13s18:
         u "(You know what? I think I'm gonna text her.)"
 
     menu:
-        "Don't Text Nora":
+        "Don't text Nora":
             scene v13s18_3
             with dissolve
 
