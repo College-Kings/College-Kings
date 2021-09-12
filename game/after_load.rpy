@@ -132,14 +132,16 @@ label after_load:
             try: kiwiiPost.sentComments = kiwiiPost.comments
             except AttributeError: pass
 
-            kiwiiPost.profilePicture = kiwiiPost.profile_picture
+            try: kiwiiPost.profile_picture = kiwiiPost.profilePicture
+            except AttributeError: pass
 
             # Kiwii Comments
             for comment in kiwiiPost.sentComments:
                 try: comment.message = comment.text
                 except AttributeError: pass
 
-                comment.profilePicture = comment.profile_picture
+                try: comment.profile_picture = comment.profilePicture
+                except AttributeError: pass
                 
             # Old Kiwii Replies
             try:
@@ -162,7 +164,7 @@ label after_load:
 
 
         # Contacts
-        contact_Lindsey.profilePicture = "lindseyprofilepic"
+        contact_Lindsey.profile_picture = "lindseyprofilepic"
 
         if contact_Grayson not in contacts:
             contacts.append(contact_Grayson)

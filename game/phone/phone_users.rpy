@@ -4,123 +4,123 @@ init -90 python:
         users = {
             "Adam": {
                 "username": "A.D.A.M.",
-                "profilePicture": "images/phone/kiwii/profilePictures/adpp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/adpp.webp"
             },
             "Imre": {
                 "username": "BadBoyImre",
-                "profilePicture": "images/phone/kiwii/profilePictures/impp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/impp.webp"
             },
             "Mason": {
                 "username": "Mason_Mas",
-                "profilePicture": "images/phone/kiwii/profilePictures/masonpp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/masonpp.webp"
             },
             "Ryan": {
                 "username": "Ryanator",
-                "profilePicture": "images/phone/kiwii/profilePictures/rypp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/rypp.webp"
             },
             "Cameron": {
                 "username": "Cameroon",
-                "profilePicture": "images/phone/kiwii/profilePictures/capp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/capp.webp"
             },
             "Chris": {
                 "username": "Chriscuit",
-                "profilePicture": "images/phone/kiwii/profilePictures/chpp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/chpp.webp"
             },
             "Elijah": {
                 "username": "Elijah_Woods",
-                "profilePicture": "images/phone/kiwii/profilePictures/elpp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/elpp.webp"
             },
             "Grayson": {
                 "username": "G-rayson",
-                "profilePicture": "images/phone/kiwii/profilePictures/grpp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/grpp.webp"
             },
             "Josh": {
                 "username": "Josh80085",
-                "profilePicture": "images/phone/kiwii/profilePictures/jopp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/jopp.webp"
             },
             "Aubrey": {
                 "username": "Aubs123",
-                "profilePicture": "images/phone/kiwii/profilePictures/aupp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/aupp.webp"
             },
             "Amber": {
                 "username": "Amber_xx",
-                "profilePicture": "images/phone/kiwii/profilePictures/ampp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/ampp.webp"
             },
             "Kim": {
                 "username": "KimPlausible",
-                "profilePicture": "images/phone/kiwii/profilePictures/kimpp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/kimpp.webp"
             },
             "Nora": {
                 "username": "Nora_12",
-                "profilePicture": "images/phone/kiwii/profilePictures/nopp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/nopp.webp"
             },
             "Penelope": {
                 "username": "Penelopeeps",
-                "profilePicture": "images/phone/kiwii/profilePictures/pepp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/pepp.webp"
             },
             "Lauren": {
                 "username": "LoLoLauren",
-                "profilePicture": "images/phone/kiwii/profilePictures/lapp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/lapp.webp"
             },
             "Autumn": {
                 "username": "Its_Fall",
-                "profilePicture": "images/phone/kiwii/profilePictures/autpp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/autpp.webp"
             },
             "Riley": {
                 "username": "RileyReads",
-                "profilePicture": "images/phone/kiwii/profilePictures/ripp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/ripp.webp"
             },
             "Emily": {
                 "username": "emilyyyy",
-                "profilePicture": "images/phone/kiwii/profilePictures/empp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/empp.webp"
             },
             "Chloe": {
                 "username": "Chloe101",
-                "profilePicture": "images/phone/kiwii/profilePictures/clpp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/clpp.webp"
             },
             "MC": {
                 "username": "MC",
-                "profilePicture": profilePictures[0]
+                "profile_picture": profile_pictures[0]
             },
             "Caleb": {
                 "username": "Aleb",
-                "profilePicture": "images/phone/kiwii/profilePictures/calebpp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/calebpp.webp"
             },
             "Parker": {
                 "username": "Parker",
-                "profilePicture": "images/phone/kiwii/profilePictures/parkerpp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/parkerpp.webp"
             },
             "Sebastian": {
                 "username": "Big Seb",
-                "profilePicture": "images/phone/kiwii/profilePictures/sebastianpp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/sebastianpp.webp"
             },
             "Kai": {
                 "username": "KaiCriesWith2Ply",
-                "profilePicture": "images/phone/kiwii/profilePictures/kaipp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/kaipp.webp"
             },
             "Lindsey": {
                 "username": "LindsLou",
-                "profilePicture": "images/phone/kiwii/profilePictures/lindseypp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/lindseypp.webp"
             },
             "Aaron": {
                 "username": "DoubleARon",
-                "profilePicture": "images/phone/kiwii/profilePictures/aaronpp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/aaronpp.webp"
             },
             "Samantha": {
                 "username": "SamFromSpaceJam",
-                "profilePicture": "images/phone/kiwii/profilePictures/samanthapp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/samanthapp.webp"
             },
             "Charli": {
                 "username": "CharliAndTheCockFactory",
-                "profilePicture": "images/phone/kiwii/profilePictures/charlipp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/charlipp.webp"
             },
             "Naomi": {
                 "username": "NaomiXMarie",
-                "profilePicture": "images/phone/kiwii/profilePictures/naomipp.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/naomipp.webp"
             },
             "LewsOfficial": {
                 "username": "LewsOfficial",
-                "profilePicture": "images/phone/kiwii/profilePictures/lewsofficial.webp"
+                "profile_picture": "images/phone/kiwii/profile_pictures/lewsofficial.webp"
             }
         }
         return users

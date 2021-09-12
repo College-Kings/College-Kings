@@ -24,7 +24,7 @@ init python:
 
         def __init__(self, name, profile_picture):
             self.name = name
-            self.profile_picture = "images/phone/profilePictures/{}".format(profile_picture)
+            self.profile_picture = "images/phone/messages/profile_pictures/{}".format(profile_picture)
 
             self.name = name.replace(" ", "_")
             
