@@ -121,6 +121,14 @@ label v13s8:
         with dissolve
 
         menu:
+            "Agree":
+                u "*Sighs* I'm not going to sit here and say I didn't enjoy what we shared the other night."
+
+                scene v13s8_9a
+                with dissolve
+
+                u "I'm also not gonna act like I don't like you or have no feelings for you, but I do agree. We shouldn't have done what we did while you're in a relationship."
+
             "Disagree":
                 $ nora.points += 1
 
@@ -143,15 +151,6 @@ label v13s8:
                 with dissolve
 
                 u "I mean it when I say this, Nora. I'm not gonna walk around feeling bad for what we did. I didn't do it because I hate Chris, I did it because I really, really like you."
-
-            "Agree":
-
-                u "*Sighs* I'm not going to sit here and say I didn't enjoy what we shared the other night."
-
-                scene v13s8_9a
-                with dissolve
-
-                u "I'm also not gonna act like I don't like you or have no feelings for you, but I do agree. We shouldn't have done what we did while you're in a relationship."
 
         scene v13s8_9
         with dissolve

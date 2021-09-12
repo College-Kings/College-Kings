@@ -156,12 +156,6 @@ label v13s18:
         u "(You know what? I think I'm gonna text her.)"
 
     menu:
-        "Don't text Nora":
-            scene v13s18_3
-            with dissolve
-
-            u "*Sighs* (Nah, nevermind. I'll just let this play out on it's own...)"
-    
         "Text Nora":
 
             $ contact_Nora.addReply(_("What was that about, you guys all good now or something? "))
@@ -182,6 +176,12 @@ label v13s18:
             with dissolve
 
             pause 0.75
+
+        "Don't text Nora":
+            scene v13s18_3
+            with dissolve
+
+            u "*Sighs* (Nah, nevermind. I'll just let this play out on it's own...)"
 
     scene v13s18_10 # FPP. MC looking at Luuk standing next to the table with the food, Luuk slight smile, mouth open.
     with dissolve
