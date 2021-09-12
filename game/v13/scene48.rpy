@@ -645,7 +645,7 @@ label v13s48:
     if aubreyrs:
         au "I know we're fucking, but..."
         
-     else:
+    else:
             menu:
                 "I meant as friends...":
                     $ addPoint ("bro")
@@ -771,6 +771,7 @@ label v13s48:
                 ry "No worries."
 
     scene v13s48_8
+    with dissolve
 
     u "Are you ready to go?"
 

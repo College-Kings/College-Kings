@@ -185,7 +185,7 @@ label v13s50a:
 
     else: # -If coming from Scene 51
 
-        v13s50a_13 # TPP Show MC walking into hotel lobby
+        scene v13s50a_13 # TPP Show MC walking into hotel lobby
         with dissolve
 
         pause 0.75

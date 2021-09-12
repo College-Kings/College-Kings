@@ -3,10 +3,8 @@
 # Characters: MC (Outfit: 2), PENELOPE (Outfit: 3)
 # Time: Wednesday night
 
-default v13_after_party = False
-
 label v13s13b:
-    if v12_murder_count = ALL # DON'T KNOW NUMBER FOR ALL KILLS; CHANGE TO CORRECT NUMBER
+    if (joinwolves and len(v12s7_killList) == 15) or len(v12s7_killList) == 16: # DON'T KNOW NUMBER FOR ALL KILLS; CHANGE TO CORRECT NUMBER
         $ v13_after_party = True
 
     scene v13s13b_1 # TPP Show MC and Penelope sitting backstage, Polly walking into the room, not looking at MC or Penelope
@@ -387,7 +385,7 @@ label v13s13b:
     scene v13s13b_6 # FPP Show Polly standing up, looking at Penelope and MC, smiling with mouth open
     with dissolve
 
-    polly "Well, I gotta get headed over to the party right now.
+    polly "Well, I gotta get headed over to the party right now."
 
     scene v13s13b_7 # FPP Show MC and Penelope standing up, looking at Polly
     with dissolve
@@ -427,7 +425,7 @@ label v13s13b:
 
         jump v13s14b
 
-    else # -If don't have after party access or not invited
+    else: # -If don't have after party access or not invited
         scene v13s13b_8
         with dissolve
 
