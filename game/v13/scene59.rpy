@@ -295,7 +295,7 @@ label v13s59:
 
             pause 0.75
 
-            if date_with_aubrey:
+            if v13s48_canoeing_as_date:
 
                 scene v13s59_6e # FPP. same as v13s59_6d aubrey puts her hands around MC, mouth open, a cow is in the background
                 with dissolve
