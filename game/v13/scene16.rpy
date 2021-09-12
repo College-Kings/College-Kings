@@ -243,7 +243,7 @@ label v13s16:
             scene v13s16_9 # TPP. Show MC kissing Lauren's head, Lauren smiling, mouth closed
             with dissolve
 
-            pause
+            pause 1.5
 
     scene v13s16_10 # TPP. Show MC moving to turn off the light next to the bed, smiling, mouth closed
     with dissolve

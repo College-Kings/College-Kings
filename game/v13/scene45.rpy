@@ -27,4 +27,6 @@ label v13s45:
     scene v13s45_4 # TPP. Show MC and Lauren somewhere down the way on the bike, both slight smile, mouth closed.
     with fade
 
+    pause 0.75
+
     jump v13s46

@@ -396,13 +396,10 @@ label v13s50:
     pause 0.75
 
     if chloegf:
-
         jump v13s52
     
     elif rileyrs: 
-    
         jump v13s53
     
     else: 
-       
         jump v13s54

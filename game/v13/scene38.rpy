@@ -153,4 +153,6 @@ label v13_walk_imre:
     scene v13s38_6 # TPP. Imre and MC entering the hotel lobby
     with dissolve
 
+    pause 0.75
+
     jump v13_hotel_imre

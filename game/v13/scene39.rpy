@@ -62,4 +62,6 @@ label v13_hotel_imre:
     scene v13s39_2 # TPP. Ryan and mc walking toward the hotel arcade
     with dissolve
 
+    pause 0.75
+
     jump v13_scene_39a

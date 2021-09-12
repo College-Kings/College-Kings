@@ -355,4 +355,3 @@ label v13s21:
     pause 0.75
     
     jump v13s22 # Scene 22 
-

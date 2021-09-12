@@ -35,4 +35,3 @@ screen v13s35_adult_shop():
                     vbox:
                         text i.name color "#000"
                         text str(i.cost) color "#000"
-

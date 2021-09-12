@@ -225,4 +225,6 @@ label v13_emmy_sex:
     scene v13s26_11 # TPP. MC sitting back where he was, still smiling
     with dissolve
 
+    pause 0.75
+
     jump v13s27

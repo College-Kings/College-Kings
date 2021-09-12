@@ -48,4 +48,9 @@ label v13s52:
 
     u "Haha... Goodnight babe."
 
+    scene black
+    with fade
+    
+    pause 2
+
     jump v13s52a

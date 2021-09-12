@@ -268,5 +268,4 @@ label v13s51_emily_fight:
                 jump v13s54 
             
         "Fuck Emily":
-            
             jump v13s50a
