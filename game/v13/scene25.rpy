@@ -339,4 +339,4 @@ label v13s25_no_sex:
 
     pause 0.75
 
-    jump v13_Scene_27
+    jump v13s27

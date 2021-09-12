@@ -108,4 +108,4 @@ label v13_walk_garden:
     scene v13s36_7 # TPP. Everyone arriving at the garden
     with dissolve
 
-    jump v13_scene37 #fix with real jump
+    jump v13s37 #fix with real jump

@@ -33,4 +33,3 @@ label v13s42:
     jump v13s43
 
 # -Transition to Scene 43-
-

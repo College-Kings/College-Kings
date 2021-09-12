@@ -41,5 +41,3 @@ label v13s41a:
 
 # -Lindsey goes off-
 # -Transition to Scene 42-
-
-

@@ -346,11 +346,11 @@ label v13s29:
     with dissolve
 
     menu:
-        "Yes.":
+        "Yes":
 
             u "Of course."
 
-        "No.":
+        "No":
 
             u "Yeah, I'm not on board with that... Sorry."
 

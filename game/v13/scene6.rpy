@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 2), LUUK (Outfit: 1)
 # Time: morning 
 
-
 label v13s06:
     scene v13s06_1 # TPP. MC wakes up in the morning from his own bed, mouth closed
     with fade

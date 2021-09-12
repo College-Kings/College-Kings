@@ -961,4 +961,4 @@ label v13s37_end:
 
     pause 0.75
 
-    jump v13s38
+    jump v13_walk_imre
