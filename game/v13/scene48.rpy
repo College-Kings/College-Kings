@@ -725,7 +725,7 @@ label v13s48:
         ry "I thought I'd ask again 'cause I really do want you there, but I wanna be sure you're comfortable first."
 
         menu :
-            "Go on the date...":
+            "Go on the date":
                 $ addPoint ("bro")
                 $ v13s48_ryan_double_date = True
 
@@ -744,7 +744,7 @@ label v13s48:
 
                 u "Alright, sounds good."
 
-            "Don't go on the date...":
+            "Don't go on the date":
                 $ addPoint ("bf")
 
                 scene v13s48_12

@@ -65,7 +65,7 @@ label v13s50a:
 
     em "*Gasps* Oh my... Fuckk, [name]."
 
-    u "You wanted this you little slut and now you fucking got it!"
+    u "You wanted this, you little slut, and now you fucking got it!"
 
     scene v13s50av3f # Same but faster
     with dissolve
@@ -96,7 +96,7 @@ label v13s50a:
     scene v13s50a_6 # FPP Show MC, just pulled out of Emily who is bent over the sink with MC's hand on her upper back, his cum spraying on her lower back
     with dissolve
 
-    u "*Moans* Ah, shhhiiiitt... Ha... Dammit Emily.!"
+    u "*Moans* Ah, shhhiiiitt... Ha... Dammit Emily!"
 
     scene v13s50a_6a # FPP Same angle as 6, Emily turning her head to look back at MC, Emily smiling with her mouth open
     with dissolve
@@ -136,7 +136,7 @@ label v13s50a:
         scene v13s50a_11 # FPP MC's view of Ryan, sitting at the table alone, looking up at MC, smiling with mouth closed
         with dissolve
 
-        u "Wait... *Chuckles*Where are the girls?"
+        u "Wait... *Chuckles* Where are the girls?"
 
         scene v13s50a_11a # FPP Same as 11, Ryan's mouth open
         with dissolve

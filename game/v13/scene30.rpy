@@ -192,7 +192,7 @@ label v13s30:
     am "Guess you'll find out, haha. Are you gonna smoke?"
 
     menu:
-        "I'm good...":
+        "I'm good":
             scene v13s30_2a
             with dissolve
 
