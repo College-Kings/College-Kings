@@ -3,7 +3,7 @@
 # Characters: RYAN (Outfit: 1), MC (Outfit: 2)
 # Time: evening 
 
-label v13_pre_date:
+label v13s10:
     scene v13s10_1 # TPP Show MC and Chloe walking into the lobby
     with dissolve
 
@@ -166,10 +166,10 @@ label v13_pre_date:
 
         ry "Hell yeah!"
 
-        scene v13sX_ # -MC and Ryan walk out of the hotel-
+        scene v12sX_ # -MC and Ryan walk out of the hotel-
         with dissolve
 
         pause 0.75
 
     # -Regardless of everything scene continued
-    jump v13s11
+    jump v13s11 # NEED PROPER VARIABLE NAME

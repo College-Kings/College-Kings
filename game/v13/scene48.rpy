@@ -767,6 +767,7 @@ label v13s48:
                 ry "No worries."
 
     scene v13s48_8
+    with dissolve
 
     u "Are you ready to go?"
 
