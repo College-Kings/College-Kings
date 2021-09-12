@@ -153,12 +153,13 @@ label v13s47:
         scene v13s47_3c # FPP. same as v13s47_3b lauren mouth closed
         with dissolve
 
-        pause 0.75
+        pause 0.4
 
         scene v13s47_6 # TPP. show mc holding lauren behind her head kissing her
         with dissolve
+        play sound "sounds/kiss.mp3"
 
-        pause 0.75
+        pause 1.5
 
         scene v13s47_3b
         with dissolve
