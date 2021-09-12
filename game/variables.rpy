@@ -568,3 +568,4 @@ default v13s40_chloe_turned_on = 0
 default v13_perfume = False
 default v13_hugged_aubrey = False
 default chrismad = False
+default v13s9_go_to_concert = True

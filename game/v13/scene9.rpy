@@ -599,6 +599,7 @@ label v13s9:
         menu:
             
             "Go to concert":
+                $ v13s9_go_to_concert = True
                 jump v13s9_go_to_concert
             
             "Don't go to concert":
