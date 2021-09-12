@@ -556,7 +556,7 @@ label v13s41:
                 li "Yes you are."
 
         "Of course":
-            $ addpoint("bro")
+            $ addPoint("bro")
 
             scene v13s41_14g
             with dissolve

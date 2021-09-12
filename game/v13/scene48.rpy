@@ -745,7 +745,7 @@ label v13s48:
                 u "Alright, sounds good."
 
             "Don't go on the date...":
-                $ addpoint ("bf")
+                $ addPoint ("bf")
 
                 scene v13s48_12
                 with dissolve

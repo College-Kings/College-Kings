@@ -368,7 +368,7 @@ label v13s24:
 
     menu:
         "No kids for me":
-            $ addpoint("bro")
+            $ addPoint("bro")
             $ v13_told_emmy_no_kids_for_me = True
 
             u "Yeah, I'm on the no kids vibe at the moment too. Guess it's just not something I think about."
