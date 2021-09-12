@@ -795,7 +795,7 @@ label v13s37_chris:
             scene v13s37ch_2f
             with dissolve
 
-            ch "‘Cause honestly, the only guys she can even tolerate are you and Charli, so it must've been some random dude that she met."
+            ch "'Cause honestly, the only guys she can even tolerate are you and Charli, so it must've been some random dude that she met."
 
             scene v13s37ch_2d
             with dissolve
