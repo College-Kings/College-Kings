@@ -73,6 +73,8 @@ label v13s49:
         scene v13s49_5a # FPP. Same as v13s49_5, Emily standing in front of MC.
         with dissolve
 
+        pause 0.75
+
         jump v13s51
 
     else:
