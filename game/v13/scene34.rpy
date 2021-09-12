@@ -523,7 +523,7 @@ label v13s34:
 
             u "*Sighs*"
 
-        "let them scare her":
+        "Let them scare her":
             $ addPoint("tm")
             scene v13s34_24
             with dissolve

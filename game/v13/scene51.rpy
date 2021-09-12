@@ -183,7 +183,7 @@ label v13s51_emily_fight:
     em "Fuck me then! Show me you know how to fuck me, exactly how I like it!"
 
     menu:
-        "Tell Emily to Fuck Off!":
+        "Tell Emily to fuck off!":
             scene v13s51_11 # TPP. MC, arms extended, hands on Emily (topless) shoulders, both mad, both mouthes closed.
             with dissolve
 

@@ -36,7 +36,7 @@ label v13s46:
             la "I'm the same exact way. *Chuckles*"
 
         "I'm a city man":
-            
+
             scene v13s46_2
             with dissolve
 

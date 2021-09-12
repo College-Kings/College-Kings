@@ -129,7 +129,7 @@ define character.tattoo = Character("Tattoo Artist", who_color="#ff1694", who_ou
 # 13.0
 define character.ary = Character("ary")
 define character.ash = Character("ash")
-define character.barh = Character("barh")
+define character.barh = Character("Host")
 define character.clipps = Character("clipps")
 define character.emmy = Character("emmy")
 define character.gary = Character("gary")
