@@ -22,7 +22,7 @@ label v13s25:
     scene v13s25_3a # FPP. Emmy head straight, slight smile, mouth open
     with dissolve
 
-    emmy "That you're on the “no kids kind of vibe”. *Chuckles*"
+    emmy "That you're on the \"no kids kind of vibe\". *Chuckles*"
 
     scene v13s25_3
     with dissolve
@@ -42,7 +42,7 @@ label v13s25:
     scene v13s25_3
     with dissolve
 
-    u "I can hear them asking me now, \"Why did you travel all the way across the world?\" And my answer will be, “To go on a date with a woman... A woman named Emmy.”"
+    u "I can hear them asking me now, \"Why did you travel all the way across the world?\" And my answer will be, \"To go on a date with a woman... A woman named Emmy.\""
 
     scene v13s25_3b # FPP. Same as v13s25_3a Emmy full smile, one eyebrow raised
     with dissolve

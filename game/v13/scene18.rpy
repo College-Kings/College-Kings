@@ -17,7 +17,7 @@ label v13s18:
     scene v13s18_98 # TPP. Show MC walking towards dining table, slight smile, mouth open.
     with dissolve
 
-    u "My man... *Laughss*"
+    u "My man... *Laughs*"
 
     scene v13s18_99 # TPP. Show MC pulling out the chair, slight smile, mouth closed
     with dissolve
@@ -196,7 +196,7 @@ label v13s18:
     scene v13s18_10
     with dissolve
 
-    luuk "Of course! So, you and Riley are getting ready to do your little “Charli stunt”, huh?"
+    luuk "Of course! So, you and Riley are getting ready to do your little \"Charli stunt\", huh?"
 
     scene v13s18_10a
     with dissolve

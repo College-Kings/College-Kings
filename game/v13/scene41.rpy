@@ -157,7 +157,7 @@ label v13s41:
     scene v13s41_11
     with dissolve
 
-    ash "Let me guess. You thought since you're a young and hot couple, it'd be nice to makeout at the top of the ferris wheel?"
+    ash "Let me guess. You thought since you're a young and hot couple, it'd be nice to make out at the top of the ferris wheel?"
 
     scene v13s41_11a
     with dissolve
@@ -245,7 +245,7 @@ label v13s41:
     ash "*Yells* It's ready!"
 
     scene v13s41_13 # TPP. MC and Lindsey sit on the ferris wheel, slight smiles, mouth closed, looking at each other
-    with dissolve    
+    with dissolve
 
     pause 0.75
 
@@ -438,7 +438,7 @@ label v13s41:
     scene v13s41_14a
     with dissolve
 
-    li "Not having Chloe around lately  is really getting to me... I knew this would eventually happen though, when I decided to run."
+    li "Not having Chloe around lately is really getting to me... I knew this would eventually happen though, when I decided to run."
 
     scene v13s41_14b
     with dissolve
@@ -481,7 +481,7 @@ label v13s41:
 
             li "Awww"
 
-            scene v13s41_14g       
+            scene v13s41_14g
             with dissolve
 
             u "And I may not be a girl, but I hope I'll do."
@@ -531,9 +531,9 @@ label v13s41:
                 scene v13s41_14f
                 with dissolve
 
-                li "You're so sweet to me [name]."    
+                li "You're so sweet to me, [name]."
 
-            else:  
+            else:
 
                 scene v13s41_14m # FPP. same as v13s41_14f Lindsey looks into MC's eyes, full smile
                 with dissolve

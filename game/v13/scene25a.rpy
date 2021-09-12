@@ -5,12 +5,12 @@
 
 label v13s25a:
     scene v13s25a_1 # TPP. Show MC and Kourtney are sitting down facing each other, Kourtney slight smiles, mouth open
-    with dissolve 
+    with dissolve
 
     kourt "This is so nice. It's almost like something out of a movie."
 
     scene v13s25a_2 # FPP. Mc and are sitting down facing each other, Kourtney slight smiles, mouth closed
-    with dissolve 
+    with dissolve
 
     u "What kind of movie?"
 
@@ -27,7 +27,7 @@ label v13s25a:
             $ addPoint("tm")
 
             scene v13s25a_2
-            with dissolve 
+            with dissolve
 
             u "Maybe I was, I'd be down to make a little movie with you."
 
@@ -197,7 +197,7 @@ label v13s25a:
             u "Too bad I don't live here..."
 
             scene v13s25a_2n # FPP. Kourtney leans back and pulls her hand away from mc and places it across her heart, frowns, mouth open
-            with dissolve 
+            with dissolve
 
             kourt "What do you mean by here? Where do you stay?"
 

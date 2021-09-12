@@ -567,3 +567,4 @@ default v13_imre_disloyal = False
 default v13s40_chloe_turned_on = 0
 default v13_perfume = False
 default v13_hugged_aubrey = False
+default chrismad = False

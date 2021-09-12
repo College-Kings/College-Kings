@@ -52,7 +52,7 @@ label v13s37:
     scene v13s37_2b # FPP. Same a sv13s37_2, Lindsey looking at Imre
     with dissolve
 
-    li "Oooh, okay! I may have to hangout at your house... *Laughs*"
+    li "Oooh, okay! I may have to hang out at your house... *Laughs*"
 
     scene v13s37_5
     with dissolve
@@ -153,7 +153,7 @@ label v13s37_nora:
     scene v13s37no_2c
     with dissolve
 
-    no "Right after he was a dick to me for weeks and shoved me to the fucking ground... Like, am I supposed to be happy?  Pissed off? Sad? Or grateful..."
+    no "Right after he was a dick to me for weeks and shoved me to the fucking ground... Like, am I supposed to be happy? Pissed off? Sad? Or grateful..."
 
     scene v13s37no_2b
     with dissolve
@@ -433,7 +433,7 @@ label v13s37_nora:
                 scene v13s37no_12a
                 with dissolve
 
-                imre "Don't “bro” me right now!"
+                imre "Don't \"bro\" me right now!"
 
                 scene v13s37no_12c # FPP. Same as v13s37no_12a, Imre pointing at MC
                 with dissolve
@@ -789,7 +789,7 @@ label v13s37_chris:
             scene v13s37ch_2d
             with dissolve
 
-            ch "It was very recent, I can tell.  I have no idea who with, but there's not many guys on this trip. Let alone, many she'd be willing to mess with."
+            ch "It was very recent, I can tell. I have no idea who with, but there's not many guys on this trip. Let alone, many she'd be willing to mess with."
 
             scene v13s37ch_2f
             with dissolve

@@ -37,7 +37,7 @@ label v13s28:
     scene v13s28_2
     with dissolve
 
-    am "A marijauna, bus tour thing."
+    am "A marijuana bus tour thing."
 
     scene v13s28_2a
     with dissolve

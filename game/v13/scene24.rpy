@@ -12,7 +12,7 @@ label v13s24:
     scene v13s24_2 # TPP. show imre and ryan standing next to each other on MC's left and barhost on MC's right, imre slight anger mouth open, ryan slight smile mouth closed, barhost slight smile mouth open
     with dissolve
 
-    pause 0.75    
+    pause 0.75
 
     scene v13s24_3 # FPP. show just barhost, slight smile, mouth open
     with dissolve
@@ -106,7 +106,7 @@ label v13s24:
             scene v13s24_2a # TPP. same as v13s24_2 imre slight smile mouth closed, barhost mouth closed
             with dissolve
 
-            u "One for all and all for...  Well, when you guys are finished it can be all for one. *Chuckles*"
+            u "One for all and all for... Well, when you guys are finished it can be all for one. *Chuckles*"
 
             scene v13s24_3
             with dissolve
@@ -169,7 +169,7 @@ label v13s24:
     pause 0.75
 
     scene v13s24_10 # FPP. MC looks to his left, show just imre, imre looking at MC, slight smile, mouth open
-    with dissolve 
+    with dissolve
 
     imre "Just so you know, you guys are gonna miss out on all the ladies..."
 
@@ -201,7 +201,7 @@ label v13s24:
     scene v13s24_11
     with dissolve
 
-    ry "*Chuckless* You guys think the questions will be really deep or just like, surface level?"
+    ry "*Chuckles* You guys think the questions will be really deep or just like, surface level?"
 
     scene v13s24_11a # FPP. same as v13s24_11 ryan mouth closed
     with dissolve
@@ -251,7 +251,7 @@ label v13s24:
     scene v13s24_12 # FPP. barhost standing at the podium, one hand palm up and open outstretched, half smile, mouth open
     with dissolve
 
-    barh "The first woman is coming in, stand tall gentlemen! For emmy has arrived!"
+    barh "The first woman is coming in, stand tall gentlemen! For Emmy has arrived!"
 
     scene v13s24_13 # FPP. emmy walks in, slight smile, mouth closed
     with dissolve
@@ -452,7 +452,7 @@ label v13s24:
     scene v13s24_12a
     with dissolve
 
-    barh "Alright then, emmy. Will you send in kourtney for us, please?"
+    barh "Alright then, Emmy. Will you send in Kourtney for us, please?"
 
     scene v13s24_16
     with dissolve
@@ -578,7 +578,7 @@ label v13s24:
     scene v13s24_12a
     with dissolve
 
-    barh "Thank You kourtney. Please send in aryssa."
+    barh "Thank You Kourtney. Please send in Aryssa."
 
     scene v13s24_14a
     with dissolve
@@ -717,7 +717,7 @@ label v13s24:
     scene v13s24_12a
     with dissolve
 
-    barh "It's now time to get to the results! emmy? kourtney? You can come on out."
+    barh "It's now time to get to the results! Emmy? Kourtney? You can come on out."
 
     scene v13s24_13e # TPP. same as v13s24_13 emmy and kourtney walking in, both slight smiles, both mouths closed
     with dissolve
@@ -774,7 +774,7 @@ label v13s24:
         scene v13s24_11d # FPP. same as v13s24_11a ryan rolls his eyes
         with dissolve
 
-        pause 0.50           
+        pause 0.5
 
     elif emmyrs and kourtneyrs:
         scene v13s24_20c # FPP. same as v13s24_20b aryssa no expression and doesn't raise her hand
@@ -911,7 +911,7 @@ label v13s24_emmy_date:
     scene v13s24_26 # FPP show mc reaching out with his hand to emmy, emmy still sitting on the bench placing her hand into mc's hand, looking up at mc, slight smile, mouth closed
     with dissolve
 
-    u "Let's go, emmy."
+    u "Let's go, Emmy."
 
     scene v13s24_27 # TPP show mc looking imre and ryan sitting at the table, imre mouth open, slight anger, mouth open, ryan slight smile, mouth open.
     with dissolve
@@ -935,7 +935,7 @@ label v13s24_kourtney_date:
     scene v13s24_26a # FPP same as v13s24_26 kourtney instead of emmy
     with dissolve
 
-    u "Let's go, kourtney."
+    u "Let's go, Kourtney."
 
     scene v13s24_28a # TPP. same as v13s24_28 kourtney instead of emmy
     with fade
@@ -949,7 +949,7 @@ label v13s24_aryssa_date:
     scene v13s24_26b # FPP same as v13s24_26 aryssa instead of emmy
     with dissolve
 
-    u "Let's go, aryssa."
+    u "Let's go, Aryssa."
     
     scene v13s24_28b # TPP. same as v13s24_28 aryssa instead of emmy
     with fade

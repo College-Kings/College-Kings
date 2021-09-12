@@ -322,7 +322,7 @@ label v13s29:
             scene v13s29_17d
             with dissolve
 
-            u "*Whisper* What the fuck."     
+            u "*Whisper* What the fuck."
 
     scene v13s29_20 # FPP. MC looking at Gary, Gary facing and looking at Amber, Gary serious, Gary mouth open
     with dissolve

@@ -150,7 +150,7 @@ label v13s31:
         ca "*Whispers* Fuck."
 
         scene v13s31_10f # FPP. Same position as v13s31_10, different pose, Cameron serious expression
-        with dissolve 
+        with dissolve
 
         ca "I have a hard time trusting that people actually have pure intentions, man. It's obvious you do though..."
 

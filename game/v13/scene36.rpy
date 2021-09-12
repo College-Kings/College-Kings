@@ -68,7 +68,7 @@ label v13_walk_garden:
 
     imre "You know I don't."
 
-    if not ChrisMad:
+    if not chrismad:
         scene v13s36_5b # FPP. Chris looking at lindsey, neutral expression, mouth opened (location 3)
         with dissolve
         

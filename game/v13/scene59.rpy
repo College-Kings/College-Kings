@@ -16,7 +16,7 @@ label v13s59:
     pause 0.75
 
     scene v13s59_2 # FPP. show just aubrey standing in front of canoe rental stand, looking at mc, slight smile, mouth open
-    with dissolve    
+    with dissolve
 
     au "Why am I getting nervous? I've got butterflies over here. *Laughs*"
 
@@ -111,12 +111,12 @@ label v13s59:
     pause 0.75
 
     scene v13s59_3a # TPP. same as scene v13s59_3 Mc and aubrey get into separate canoes, slight smiles looking at each other, mouths closed
-    with dissolve  
+    with dissolve
 
     pause 0.75
 
     scene v13s59_3b # TPP. same as v13s59_3a mc and aubrey start rowing away from the dock, shop clerk waving goodbye
-    with dissolve    
+    with dissolve
 
     pause 0.75
 
@@ -323,7 +323,7 @@ label v13s59:
                 pause 0.75
 
                 scene v13s59_6g # FPP. same as v13s59_6c aubrey full smile
-                with dissolve 
+                with dissolve
 
                 u "What the fuck?!"
 
@@ -390,7 +390,7 @@ label v13s59:
     pause 0.75
 
     scene v13s59_8a # TPP. same as v13s59_8 different background, looking straight ahead, mouths closed
-    with dissolve    
+    with dissolve
 
     pause 0.75
 

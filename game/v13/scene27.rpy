@@ -5,7 +5,7 @@
 
 label v13s27:
     scene v13s27_1 # TPP. Show MC sitting down in the same place as the end of scene 26, MC slightly smiling, looking at the dance floor, mouth closed
-    with dissolve 
+    with dissolve
 
     pause 0.75
 

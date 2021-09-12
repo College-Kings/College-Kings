@@ -165,7 +165,7 @@ label v13s25b:
             scene v13s25b_2e
             with dissolve
 
-            u "Well, work  isn't a necessity for me right now. I'm enjoying school and being a part of my frat right now."
+            u "Well, work isn't a necessity for me right now. I'm enjoying school and being a part of my frat right now."
 
             scene v13s25b_2d
             with dissolve
@@ -187,7 +187,7 @@ label v13s25b:
 
             u "I didn't mean it in a rude way."
 
-            scene v13s25b_2a   
+            scene v13s25b_2a
             with dissolve
 
             ary "It's fine, this just shows that we're not very compatible. *Chuckles*"

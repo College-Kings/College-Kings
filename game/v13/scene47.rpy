@@ -15,7 +15,7 @@ label v13s47:
     pause 0.75
 
     scene v13s47_3 # FPP. show lauren looking at MC, slight smile, mouth closed
-    with dissolve    
+    with dissolve
 
     u "Did you have fun?"
 

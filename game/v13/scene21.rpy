@@ -107,7 +107,7 @@ label v13s21:
     pause 0.75
 
     scene v13s21_9 # FPP. Charli, looking down, continung to focus on writing on the paper in front of him.
-    with dissolve 
+    with dissolve
 
     u "Oh... Work? What kind of work is it?"
 
@@ -290,7 +290,7 @@ label v13s21:
     pause 0.75
 
     scene v13s21_14 # FPP. Riley looking at MC, shocked at what just happened, mouth open.
-    with dissolve 
+    with dissolve
 
     ri "That was... heavy..."
 

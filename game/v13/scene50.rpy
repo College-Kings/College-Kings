@@ -119,7 +119,7 @@ label v13s50:
 
     ri "Oooh okay, and look at you guys now. Having dates in other countries... *Chuckles*"
 
-    scene  v13s50_8
+    scene v13s50_8
     with dissolve
 
     ry "Believe it or not, this is actually our first date."
@@ -159,7 +159,7 @@ label v13s50:
 
     em "Isn't that right, [name]?"
 
-    menu:    
+    menu:
         "He knows more...":
             scene v13s50_9a
             with dissolve

@@ -213,7 +213,7 @@ label v13s9:
     scene v13s9_12a # FPP. Chloe, looking off screen/camera, with her butt/lowerback leaning against the guard rail one leg bent with her foot flat against the fencing, elbows resting on the guard rail, slightly sad, mouth closed
     with dissolve
 
-    pause 0.75  
+    pause 0.75
     
     scene v13s9_12b # FPP. Same as v13s9_v12 but Chloe's head turned facing MC, but slightly downward avoiding eye contact, sad, mouth open.
     with dissolve
@@ -253,7 +253,7 @@ label v13s9:
     u "(That's exactly what she said.)"
     
     scene v13s9_12e
-    with dissolve 
+    with dissolve
 
     u "So... You have to be the President in order to keep this scholarship?"
 
@@ -270,14 +270,14 @@ label v13s9:
     scene v13s9_12f
     with dissolve
 
-    cl "I'm not too worried about losing it though, I have a pretty set in stone plan. Not only that, but I'll have your help as well. Or atleast, I'd hope so."
+    cl "I'm not too worried about losing it though, I have a pretty set in stone plan. Not only that, but I'll have your help as well. Or at least, I'd hope so."
     
     scene v13s9_12g # FPP. Same as v13s9_12b but Chloe has slighty sad expression (pouting), mouth closed, looking directly at MC (sad eyes, making it difficult for MC not to want help her).		
     with dissolve
 
     pause 0.75
 
-    menu:        
+    menu:
         "Help Chloe":
             $ v13_help_chloe = True
             $ chloe.points += 1
@@ -292,10 +292,10 @@ label v13s9:
 
             cl "I knew I could count on you."
 
-            if chloegf:   # -If Chloegirlfriend (extra dialog)
+            if chloegf: # -If Chloegirlfriend (extra dialog)
                 $ addPoint("bf")
 
-                play sound "sounds/kiss.mp3"   
+                play sound "sounds/kiss.mp3"
                 
                 scene v13s9_13 # TPP: Chloe, facing MC (no longer leaning against rail) arms around MC, giving him a kiss.
                 with dissolve
@@ -312,8 +312,8 @@ label v13s9:
 
             u "Haha, I'll do all I can."
 
-        "Help Lindsey":  # -If Help Lindsey  
-            $ v13_help_lindsey = True      
+        "Help Lindsey": # -If Help Lindsey  
+            $ v13_help_lindsey = True
             $ lindsey.points += 1
 
             scene v13s9_12e
@@ -341,7 +341,7 @@ label v13s9:
 
             u "Chloe, it's not like that. I'm her friend and she came to me in confidence for my help. I'd be wrong to turn her away."
 
-            if chloegf:  # -If Chloegirlfriend (extra dialog)
+            if chloegf: # -If Chloegirlfriend (extra dialog)
                 $ chloe.points -= 1 
                 
                 $ addPoint("tm")
@@ -361,7 +361,7 @@ label v13s9:
 
                 cl "Whatever, [name]."
         
-        "Help No One":  # -If No One
+        "Help No One": # -If No One
             scene v13s9_12e
             with dissolve
 
@@ -606,7 +606,7 @@ label v13s9:
                 
                 jump v13s9_no_concert
             
-    else:  # -If no concert, MC is forced to go and given no choice
+    else: # -If no concert, MC is forced to go and given no choice
         jump v13s9_no_concert
 
 label v13s9_no_concert: # -If Go

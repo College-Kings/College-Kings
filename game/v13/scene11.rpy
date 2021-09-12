@@ -55,7 +55,7 @@ label v13s11:
     pause 0.75
 
     scene v13s11_5
-    with dissolve 
+    with dissolve
 
     ry "*Whisper* Fuck, he's coming this way!"
 
@@ -195,7 +195,7 @@ label v13_imre_continue:
         scene v13s11_14b
         with dissolve
 
-        imre "What? Why? I don't understand how I could take this in a “not weird” way."
+        imre "What? Why? I don't understand how I could take this in a \"not weird\" way."
 
         scene v13s11_14c
         with dissolve
@@ -220,7 +220,7 @@ label v13_imre_continue:
         scene v13s11_14g # FPP. Same as 14f, mouth closed
         with dissolve
 
-        u "I'm not saying I do or don't believe it's a catfish, but what's the harm in us checking it out? Or atleast sticking around in case it ends badly?"
+        u "I'm not saying I do or don't believe it's a catfish, but what's the harm in us checking it out? Or at least sticking around in case it ends badly?"
 
         scene v13s11_14f
         with dissolve
@@ -503,7 +503,7 @@ label v13_imre_continue:
         barh "So he can invite you somewhere else? At least here I can protect the victims if they can't protect themselves."
 
         scene v13s11_27d
-        with dissolve 
+        with dissolve
         
         barh "Plus... After what you just did, I don't think there'll be anymore."
         
@@ -543,7 +543,7 @@ label v13_imre_continue:
         barh "I barely know all the details myself, but it's on their website. Come by and maybe you'll get something good out of this whole situation."
         
         scene v13s11_27j # FPP. Imre looking at MC, mouth opened
-        with dissolve  
+        with dissolve
 
         imre "You guys wanna go?"
 

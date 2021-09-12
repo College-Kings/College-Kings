@@ -42,7 +42,7 @@ label v13s43:
     scene v13s43_4b # TPP. Same as v13s43_4, slight laughing expression  
     with dissolve
 
-    jen "*Chuckles* I'm such an idiot... I forgot about the timezones."
+    jen "*Chuckles* I'm such an idiot... I forgot about the time zones."
 
     scene v13s43_4a
     with dissolve

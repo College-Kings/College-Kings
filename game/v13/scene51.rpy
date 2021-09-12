@@ -157,7 +157,7 @@ label v13s51_emily_fight:
 
     pause 0.75
 
-    scene v13s51_8c  # FPP. Same as v13s51_8b, but Emily's breast exposed, hands reaching toward MC. 
+    scene v13s51_8c # FPP. Same as v13s51_8b, but Emily's breast exposed, hands reaching toward MC. 
     with dissolve
 
     pause 0.75
@@ -182,7 +182,7 @@ label v13s51_emily_fight:
     
     em "Fuck me then! Show me you know how to fuck me, exactly how I like it!"
 
-    menu:        
+    menu:
         "Tell Emily to Fuck Off!":
             scene v13s51_11 # TPP. MC, arms extended, hands on Emily (topless) shoulders, both mad, both mouthes closed.
             with dissolve
@@ -261,7 +261,7 @@ label v13s51_emily_fight:
             if chloegf:
                 jump v13s52
 
-            elif rileyrs:  
+            elif rileyrs:
                 jump v13s53
                             
             else:

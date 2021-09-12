@@ -222,7 +222,7 @@ label v13s30:
             am "That was a wack way to put it, but let's roll up. *Laughs*"
 
     scene v13s30_2f # FPP. Same as v13s30_2, MC Looking at Amber, Amber looking away from MC, Amber slight smile, mouth open.
-    with dissolve 
+    with dissolve
 
     am "Speaking of wack, look who it is!"
 

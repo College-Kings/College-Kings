@@ -26,7 +26,7 @@ label v13s46:
         "I love the outdoor":
     
             scene v13s46_2
-            with dissolve    
+            with dissolve
 
             u "I absolutely love the outdoors. Just the smell of nature, like the rain and sunshine, always puts me in a good mood."
 
@@ -233,7 +233,7 @@ label v13s46:
     la "He's looking for food from you."
 
     scene v13s46_9 # TPP. the deer sniffs the MC's crotch, MC shocked mouth open, Lauren full smile mouth open with a hand attempting to cover her mouth
-    with dissolve   
+    with dissolve
 
     pause 0.75
 
@@ -297,7 +297,7 @@ label v13s46:
 
     pause 0.75
 
-    if laurens:
+    if laurenrs:
 
         scene v13s46_4a
         with dissolve
@@ -338,7 +338,7 @@ label v13s46:
             "We'll get tired":
 
                 scene v13s46_2
-                with dissolve         
+                with dissolve
 
                 u "Like everyone Lauren, we'll get tired eventually and grow old one day. That's just how things work, you know?"
 
@@ -443,7 +443,7 @@ label v13s46:
         "Haha, okay.":
                 
             scene v13s46_13b
-            with dissolve                
+            with dissolve
                             
             u "Okay, lead the way. *Chuckles*"
 
@@ -467,7 +467,7 @@ label v13s46:
 
             pause 0.75
 
-            scene v13s46_15b  
+            scene v13s46_15b
             with dissolve
 
             pause 0.75

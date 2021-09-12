@@ -201,7 +201,7 @@ label v13s12a:
     scene v13s12a_6h # TPP. Same as v13s12a_6g, Aubrey mouth open
     with dissolve
 
-    au "TRUST ME, NO ONE WANTS TO BE NEAR YOUR NASTY ASS  FACE!"
+    au "TRUST ME, NO ONE WANTS TO BE NEAR YOUR NASTY ASS FACE!"
 
     scene v13s12a_6e
     with dissolve

@@ -103,7 +103,7 @@ label v13s56:
         "*Accidently* bump against her":
             
             scene v13s56_98 # TPP. MC grinds up against Nora's ass, Nora looks back slightly shocked, mouth open
-            with dissolve           
+            with dissolve
 
             u "Oh, my bad."
 
@@ -199,9 +199,9 @@ label v13s56:
     pause 0.75
 
     scene v13s56_6 # FPP nora holds up a bonsai tree, slight smile, mouth open, looking at mc
-    with dissolve    
+    with dissolve
 
-    no "Mr. Lee has one of these plants  as his wallpaper on his phone."
+    no "Mr. Lee has one of these plants as his wallpaper on his phone."
 
     scene v13s56_6a # FPP. same as v13s56_6 nora mouth closed
     with dissolve
@@ -294,7 +294,7 @@ label v13s56:
             with dissolve
         
     scene v13s56_7 # FPP. show nora slight smile mouth open looking at mc
-    with dissolve       
+    with dissolve
 
     no "Alrighty, sounds good. Go ahead and put the other one back and I'll meet you out front."
 
@@ -428,7 +428,7 @@ label v13s56:
     pause 0.75
 
     scene v13s56_11 # TPP. MC and nora walk into the lobby, slight smiles, mouths closed, lobby perspective facing hotel front door
-    with dissolve    
+    with dissolve
 
     if v13_perfume:
         jump v13s57

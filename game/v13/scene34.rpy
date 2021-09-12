@@ -59,7 +59,7 @@ label v13s34:
     scene v13s34_3a # FPP. Same as v13s34_3, nervous expression, mouth open
     with dissolve
 
-    ri "Well I'm sure as hell frightened now.  What's with all the scary stuff lately?"
+    ri "Well I'm sure as hell frightened now. What's with all the scary stuff lately?"
 
     scene v13s34_4
     with dissolve
@@ -234,7 +234,7 @@ label v13s34:
     scene v13s34_13b
     with dissolve
 
-    u "Right, so... Why is it so dark?  Are there no extra lights?"
+    u "Right, so... Why is it so dark? Are there no extra lights?"
 
     scene v13s34_13a
     with dissolve
@@ -252,7 +252,7 @@ label v13s34:
     pause 0.75
 
     scene v13s34_16 # FPP. Clipps turns around and looks at MC, nervous expression, mouth closed 
-    with dissolve 
+    with dissolve
 
     u "Maybe... If you're trapped in here, you'll be motivated!"
 
@@ -438,7 +438,7 @@ label v13s34:
     scene v13s34_24 # FPP. MC looks over at Riley, Riley, bag over her head, bag moving in mouth area mouth area
     with dissolve
 
-    u "Umm, Riley... Don't worry. I promise you,  everything is gonna be fine."
+    u "Umm, Riley... Don't worry. I promise you, everything is gonna be fine."
 
     scene v13s34_25 # FPP. MC looking at Duncan, Duncan looking at Riley, slight smile, mouth open
     with dissolve
@@ -588,7 +588,7 @@ label v13s34:
             scene v13s34_25a # FPP. Same as v13s34_25, serious expression
             with dissolve
 
-            dun "Don't you think it's absurd to call yourself the “brightest of your class” when without cheating, you wouldn't be where you are today?"
+            dun "Don't you think it's absurd to call yourself the \"brightest of your class\" when without cheating, you wouldn't be where you are today?"
 
             scene v13s34_24a 
             with dissolve
@@ -623,7 +623,7 @@ label v13s34:
             scene v13s34_30
             with dissolve
 
-            clipps "Let's see what Mr. Lee  thinks about all of this... I know you babysit his kids, and run errands for him from time to time, right?"
+            clipps "Let's see what Mr. Lee thinks about all of this... I know you babysit his kids, and run errands for him from time to time, right?"
 
             scene v13s34_24
             with dissolve
