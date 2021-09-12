@@ -132,7 +132,7 @@ label v13s48:
     pause 0.75
     
     menu:
-        "Stay quiet...":
+        "Stay quiet":
             $ addPoint("bro")
 
             scene v13s48_6
@@ -302,12 +302,12 @@ label v13s48:
     with dissolve
 
     menu:
-        "Because we're friends...":
+        "Because we're friends":
             $ addPoint("bro")
 
             u "Because we're friends and it'd be nice to know you a bit better. *Chuckles*"
 
-        "Because I like you...":
+        "Because I like you":
             $ addPoint("bf")
 
             u "Because I like you, and it'd be nice to add more reasons why I like you to my list. *Chuckles*"
@@ -647,7 +647,7 @@ label v13s48:
         
     else:
             menu:
-                "I meant as friends...":
+                "I meant as friends":
                     $ addPoint ("bro")
 
                     scene v13s48_8
@@ -660,7 +660,7 @@ label v13s48:
 
                     au "Mhmm, okay. *Chuckles* When are you thinking about going?"
 
-                "I meant as a date...":
+                "I meant as a date":
                     $ addPoint ("bf")
                     $ v13s48_canoeing_as_date = True
 

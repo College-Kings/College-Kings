@@ -120,7 +120,7 @@ label v13s25b:
     ary "So, I know you aren't working now, but do you plan to soon?"
 
     menu:
-        "Might look into it...":
+        "Might look into it":
             scene v13s25b_4 # TPP. Show Mc flexing his bicep, slight smile, mouth open, Aryssa, slight smile, mouth closed
             with dissolve
             
@@ -141,7 +141,7 @@ label v13s25b:
 
             ary "Do think we could-"
     
-        "Not really...":
+        "Not really":
             scene v13s25b_2e # FPP. Same as v13s25b_2, neutral expression
             with dissolve
         

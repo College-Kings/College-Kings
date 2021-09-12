@@ -274,7 +274,7 @@ label v12_mc_chilling:
 
         u "There is, actually. I got invited to go swimming there once."
 
-        scene v12mor13d # FPP. same as 13, Sam looking really excited , mouth opened
+        scene v12mor13d # FPP. same as 13, Sam looking really excited, mouth opened
         with dissolve
 
         sa "*Drunk* Did you have sex in the pool?!"

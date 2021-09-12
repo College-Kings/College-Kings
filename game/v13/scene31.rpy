@@ -114,7 +114,7 @@ label v13s31:
 
         ca "What the fuck is this shit I hear about you, and Samantha at a fucking weed tour?!"
 
-        scene v13s31_10a # FPP. Same positioning as v13s31_10 , Cameron Angry expression, mouth closed
+        scene v13s31_10a # FPP. Same positioning as v13s31_10, Cameron Angry expression, mouth closed
         with dissolve
 
         u "The weed tour I didn't let her go on?"

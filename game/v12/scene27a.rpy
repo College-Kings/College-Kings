@@ -165,7 +165,7 @@ label v12s27a:
 
     u "Ryan, are you sure you wanna do this?"
 
-    scene v12s27a_2j # same as 2, Ryan looking at his phone, smiling , mouth open
+    scene v12s27a_2j # same as 2, Ryan looking at his phone, smiling, mouth open
     with dissolve
 
     ry "I'll take that as a yes... Haha!"
@@ -462,7 +462,7 @@ label v12s27a:
 
     ry "Let's get back, [name]."
 
-    scene v12s27a_10 #TPP, show mc and ryan leaving the barber shop, mc smiling ,ryan neutral
+    scene v12s27a_10 #TPP, show mc and ryan leaving the barber shop, mc smiling,ryan neutral
     with dissolve
 
     pause 0.7

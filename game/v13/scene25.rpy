@@ -329,7 +329,7 @@ label v13s25_no_sex:
 
     pause 0.75
 
-    scene v13s25_99 # TPP. Show MC walking through the streets, neutral expression , mouth closed
+    scene v13s25_99 # TPP. Show MC walking through the streets, neutral expression, mouth closed
     with dissolve
 
     pause 0.75

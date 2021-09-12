@@ -4,7 +4,7 @@
 # Time: Afternoon
 
 label v13s22:
-    scene v13s22_1 # TPP. MC, Riley, and Aubrey in that order. Sitting next to MC on curb outside hotel door, MC looking at Riley and Aubrey , Aubrey and Riley looking at MC, Aubrey confused expression, Mouth open, Riley neutral expression. Mouth Closed.
+    scene v13s22_1 # TPP. MC, Riley, and Aubrey in that order. Sitting next to MC on curb outside hotel door, MC looking at Riley and Aubrey, Aubrey and Riley looking at MC, Aubrey confused expression, Mouth open, Riley neutral expression. Mouth Closed.
     with dissolve
 
     au "Please fill me in... 'Cause that shit was odd."

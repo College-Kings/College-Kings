@@ -410,13 +410,13 @@ label v13s30:
     la "Not everything. I'm not so sure about smoking."
 
     menu:
-        "It's relaxing...":
+        "It's relaxing":
             scene v13s30_8e # FPP. Same as v13s30_8, Lauren slight smile, mouth closed
             with dissolve
 
             u "It is relaxing, always helps me blow off a bit of steam."
 
-        "It's up to you...":
+        "It's up to you":
             $ v13_lauren_smoke = True
             
             scene v13s30_8e
