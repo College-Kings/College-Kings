@@ -537,6 +537,7 @@ default v12s33_door1 = False
 default v12s33_door2 = False
 default v12s33_door3 = False
 default v12s24_emmymatch = False
+default chrismad = False
 
 #13.0
 default v13_penelope_concert = False
@@ -567,6 +568,5 @@ default v13_imre_disloyal = False
 default v13s40_chloe_turned_on = 0
 default v13_perfume = False
 default v13_hugged_aubrey = False
-default chrismad = False
 default v13s9_go_to_concert = True
 default v13s41_lindsey_points = 0

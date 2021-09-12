@@ -504,7 +504,7 @@ label v13_imre_continue:
         scene v13s11_27d
         with dissolve
         
-        barh "Plus... After what you just did, I don't think there'll be anymore."
+        barh "Plus... After what you just did, I don't think there'll be any more."
         
         scene v13s11_27c
         with dissolve

@@ -65,7 +65,6 @@ label v13s37:
     li "*Chuckles* Not like that, fuckboy."
 
     if v12_lindsey_sex or lindseyrs:
-
         li "And don't call me Linds... Only the girls and [name] get to call me that. *Laughs*"
 
     scene v13s37_5
