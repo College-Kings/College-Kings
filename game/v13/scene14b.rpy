@@ -163,14 +163,13 @@ label v13s14b:
     scene v13s14b_4e
     with dissolve
 
-    pe "Woah, I can definitely feel it working it's magic. *Chuckles*"
+    pe "Woah, I can definitely feel it working its magic. *Chuckles*"
 
     scene v13s14b_4f
     with dissolve
 
     menu:
         "Impressive":
-
             u "This is low-key impressive. *Laughs*"
 
             scene v13s14b_10 # FPP Show Penelope cheering with her hand in the air, big smile, mouth open
@@ -184,7 +183,6 @@ label v13s14b:
             polly "Which one? *Laughs*"
 
         "You should stop":
-
             u "You should slow down a bit."
 
             scene v13s14b_3a
@@ -201,7 +199,6 @@ label v13s14b:
 
     scene v13s14b_4g
     with dissolve
-
     
     pe "*Tipsy* C'mon, [name]! I wanna dance."
 
