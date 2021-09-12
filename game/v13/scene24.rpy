@@ -309,62 +309,60 @@ label v13s24:
 
         emmy "Oh! Haha, I'm sorry."
 
-    else:
+    scene v13s24_11c # FPP. same as v13s24_11 ryan looking at emmy
+    with dissolve
 
-        scene v13s24_11c # FPP. same as v13s24_11 ryan looking at emmy
-        with dissolve
+    ry "It's nice to meet you too. I'm looking forward to answering your questions."
 
-        ry "It's nice to meet you too. I'm looking forward to answering your questions."
+    scene v13s24_16a # FPP. same as v13s24_16 emmy looking at ryan
+    with dissolve
 
-        scene v13s24_16a # FPP. same as v13s24_16 emmy looking at ryan
-        with dissolve
+    emmy "How sweet of you! *Chuckles* Guess I should just hop right into it, huh?"
 
-        emmy "How sweet of you! *Chuckles* Guess I should just hop right into it, huh?"
+    scene v13s24_16b # FPP. same as v13s24_16 emmy mouth closed
+    with dissolve
 
-        scene v13s24_16b # FPP. same as v13s24_16 emmy mouth closed
-        with dissolve
+    u "I'm ready when you are. *Chuckles*"
 
-        u "I'm ready when you are. *Chuckles*"
+    scene v13s24_12a # FPP. same as v13s24_12 Both hands on podium.
+    with dissolve
 
-        scene v13s24_12a # FPP. same as v13s24_12 Both hands on podium.
-        with dissolve
+    barh "Just bypass the host, huh guys?"
 
-        barh "Just bypass the host, huh guys?"
+    scene v13s24_12b # FPP. same as v13s24_12a barhost mouth closed
+    with dissolve
 
-        scene v13s24_12b # FPP. same as v13s24_12a barhost mouth closed
-        with dissolve
+    u "Oh, right... *Laughs* Sorry."
 
-        u "Oh, right... *Laughs* Sorry."
+    scene v13s24_12a
+    with dissolve
 
-        scene v13s24_12a
-        with dissolve
+    barh "No, no, no. I'm only teasing... Go right ahead."
 
-        barh "No, no, no. I'm only teasing... Go right ahead."
+    scene v13s24_16c # FPP. same as v13s24_16 emmy looking at barhost
+    with dissolve
 
-        scene v13s24_16c # FPP. same as v13s24_16 emmy looking at barhost
-        with dissolve
+    emmy "Ha, alright..."
 
-        emmy "Ha, alright..."
+    scene v13s24_16
+    with dissolve
 
-        scene v13s24_16
-        with dissolve
+    emmy "First question... How do you feel about kids?"
 
-        emmy "First question... How do you feel about kids?"
+    scene v13s24_10e # FPP. same v13s24_10 imre looking at emmy
+    with dissolve
 
-        scene v13s24_10e # FPP. same v13s24_10 imre looking at emmy
-        with dissolve
+    imre "Man, fuck them kids! *Laughs* I'm not trying to get you pregnant."
 
-        imre "Man, fuck them kids! *Laughs* I'm not trying to get you pregnant."
+    scene v13s24_10e
+    with dissolve
 
-        scene v13s24_10e
-        with dissolve
+    imre "We can have fun and all but, no kids... Not right now at least."
 
-        imre "We can have fun and all but, no kids... Not right now at least."
+    scene v13s24_11c
+    with dissolve
 
-        scene v13s24_11c
-        with dissolve
-
-        ry "Well, I'll be honest. I'm not interested in having kids at this very moment, but I do want children in the future... And many of them. *Chuckles*"
+    ry "Well, I'll be honest. I'm not interested in having kids at this very moment, but I do want children in the future... And many of them. *Chuckles*"
 
     menu:
         "No kids for me":
