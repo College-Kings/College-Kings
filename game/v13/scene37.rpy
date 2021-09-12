@@ -210,7 +210,7 @@ label v13s37_nora:
     scene v13s37no_2c
     with dissolve
 
-    no "Not yet... You may someday, but I'm talking about my family. Specifically my Step-mom."
+    no "Not yet... You may someday, but I'm talking about my family. Specifically my stepmom."
 
     if joinwolves:
         scene v13s37no_2d
@@ -228,7 +228,7 @@ label v13s37_nora:
 
     no "*Sighs* Please try not to overreact when I tell you this... And I beg you, don't go around telling everybody, but..."
 
-    no "Ms. Rose is actually my Step-mom."
+    no "Ms. Rose is actually my stepmom."
 
     scene v13s37no_2d
     with dissolve
