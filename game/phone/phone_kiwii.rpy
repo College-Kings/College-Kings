@@ -80,7 +80,7 @@ init python:
             return reply
 
         def selectedReply(self, reply):
-            self.newComment("MC", reply.message, numberLikes=reply.numberLikes, mentions=reply.mentions)
+            self.newComment("MC", reply.message, reply.numberLikes, reply.mentions, queue=False)
             self.sentComments[-1].reply = reply
             self.sentComments[-1].replies = []
 
