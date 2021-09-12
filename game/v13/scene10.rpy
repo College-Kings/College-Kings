@@ -3,7 +3,7 @@
 # Characters: RYAN (Outfit: 1), MC (Outfit: 2)
 # Time: evening 
 
-label v13_pre_date:
+label v13s10:
     scene v13s10_1 # TPP Show MC and Chloe walking into the lobby
     with dissolve
 
