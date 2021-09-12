@@ -367,7 +367,8 @@ label v13s29:
     scene v13s29_20c # FPP. Same angle as v13s29_20b, Gary face neutral, Gary looking at Amber, Gary mouth open
     with dissolve
 
-    gary "Again, I love the shit, but we don't know it's affects on every demographic. Young and old, healthy and sick, direct or secondhand high, etc. Without a full study I wouldn't feel comfortable with this being as obtainable as a cigarette. It'd be in every school around."
+    gary "Again, I love the shit, but we don't know it's affects on every demographic. Young and old, healthy and sick, direct or secondhand high, etc."
+    gary "Without a full study I wouldn't feel comfortable with this being as obtainable as a cigarette. It'd be in every school around."
 
     scene v13s29_20d # FPP. Same angle as v13s29_20c, Gary looking at MC, Gary mouth closed
     with dissolve

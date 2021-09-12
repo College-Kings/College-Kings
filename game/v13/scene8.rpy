@@ -244,7 +244,8 @@ label v13s8:
         scene v13s8_9
         with dissolve
 
-        no "It does and it doesn't. I want to talk about what happened and where we stand, but I'm also enjoying us just being okay. He's not busy as much anymore and he's actually been trying to spend time with me, so it's all conflicting."
+        no "It does and it doesn't. I want to talk about what happened and where we stand, but I'm also enjoying us just being okay."
+        no "He's not busy as much anymore and he's actually been trying to spend time with me, so it's all conflicting."
 
         scene v13s8_9d
         with dissolve

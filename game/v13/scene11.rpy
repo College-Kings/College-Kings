@@ -586,7 +586,7 @@ label v13_imre_continue:
         scene v13s11_28a # FPP. same as 28, imre's mouth opened 
         with dissolve
 
-        imre "Yeah, I'm done here Let's go."
+        imre "Yeah, I'm done here. Let's go."
 
         scene v13s11_29 # TPP. Imre mc and ryan walking off the bar
         with dissolve

@@ -714,7 +714,8 @@ label v13s37_chris:
             scene v13s37ch_2c
             with dissolve
 
-            ch "I have no clue, but I'm not too optimistic. I'm just trying to ride this out with a smile on my face. And what's crazy is that outside of pushing her I still don't feel like I did a damn thing wrong. But don't let her hear me say that."
+            ch "I have no clue, but I'm not too optimistic. I'm just trying to ride this out with a smile on my face."
+            ch "And what's crazy is that outside of pushing her I still don't feel like I did a damn thing wrong. But don't let her hear me say that."
 
             scene v13s37ch_2e # FPP. Same as v13s27ch_2b, different pose
             with dissolve
