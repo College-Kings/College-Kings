@@ -230,7 +230,7 @@ label v13s20_end:
             scene v13s20end_2
             with dissolve
 
-            u "Alright... Forward email... MrLee@CK.com...and sent! Just in case, I'll send it to myself too.)"
+            u "Alright... Forward email... MrLee@CK.com... and sent! Just in case, I'll send it to myself too.)"
 
         "Confront him":
             scene v13s20end_5

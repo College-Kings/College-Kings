@@ -293,7 +293,7 @@ label v13s40_spanker:
     scene v13s40sp_5b
     with vpunch
 
-    cl "Oh! My.. My god!"
+    cl "Oh! My... My god!"
 
     scene v13s40sp_5
     with dissolve

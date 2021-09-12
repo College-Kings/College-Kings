@@ -572,7 +572,7 @@ label v13s37_chris:
         scene v13s37ch_2a # FPP. Same as v13s37ch_2, Chris mouth open
         with dissolve
 
-        ch "Hmph.. Here to tell me how shitty of a boyfriend I am, and what I need to be doing in my relationship?"
+        ch "Hmph... Here to tell me how shitty of a boyfriend I am, and what I need to be doing in my relationship?"
 
         scene v13s37ch_2
         with dissolve

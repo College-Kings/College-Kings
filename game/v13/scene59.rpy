@@ -128,7 +128,7 @@ label v13s59:
     scene v13s59_4a # FPP. same as v13s59_4 right side of paddle dipped in the water and left side of the paddle in the air, aubrey mouth closed
     with dissolve
 
-    u "That's what she said...*Laughs*"
+    u "That's what she said... *Laughs*"
 
     scene v13s59_4
     with dissolve

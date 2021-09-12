@@ -428,7 +428,7 @@ label v13s46:
             scene v13s46_13c
             with dissolve
 
-            u "What?! No way...You're being extra freaky right now. *Chuckles*"
+            u "What?! No way... You're being extra freaky right now. *Chuckles*"
 
             scene v13s46_13b
             with dissolve

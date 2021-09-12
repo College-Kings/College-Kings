@@ -131,7 +131,7 @@ label v13s13b:
     scene v13s13b_3a
     with dissolve
 
-    pe "*Whisper* Okay, uhm...*Singing* Love comes unexpected-"
+    pe "*Whisper* Okay, uhm... *Singing* Love comes unexpected-"
 
     scene v13s13b_2d
     with dissolve

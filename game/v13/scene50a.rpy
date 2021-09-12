@@ -129,7 +129,7 @@ label v13s50a:
 
     # -MC leaves the bathroom with Emily standing there naked-
 
-    u "(It's kinda fucked up to just bang her, say that and walk out, but...*Sighs*)"
+    u "(It's kinda fucked up to just bang her, say that and walk out, but... *Sighs*)"
 
     if v13s48_ryan_double_date: # -If coming from Scene 50-
         scene v13s50a_11 # FPP MC's view of Ryan, sitting at the table alone, looking up at MC, smiling with mouth closed

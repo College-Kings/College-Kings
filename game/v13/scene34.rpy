@@ -234,7 +234,7 @@ label v13s34:
     scene v13s34_13b
     with dissolve
 
-    u "Right, so...Why is it so dark?  Are there no extra lights?"
+    u "Right, so... Why is it so dark?  Are there no extra lights?"
 
     scene v13s34_13a
     with dissolve

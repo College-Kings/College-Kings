@@ -139,7 +139,7 @@ label v13s56:
                 scene v13s56_5d
                 with dissolve
 
-                no "Yeah...I heard you."
+                no "Yeah... I heard you."
 
         "Be respectful":
 

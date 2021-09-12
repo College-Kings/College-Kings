@@ -438,7 +438,7 @@ label v13s41:
     scene v13s41_14a
     with dissolve
 
-    li "Not having Chloe around lately  is really getting to me..I knew this would eventually happen though, when I decided to run."
+    li "Not having Chloe around lately  is really getting to me... I knew this would eventually happen though, when I decided to run."
 
     scene v13s41_14b
     with dissolve

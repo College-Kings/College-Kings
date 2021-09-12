@@ -109,7 +109,7 @@ label v13s29:
     scene v13s29_4b # FPP. Same angle as v13s29_4, same positioning, arms still stretched out, Gary looking at MC annoyed, Gary mouth closed
     with dissolve
 
-    u "So, what did we spend our money on..?"
+    u "So, what did we spend our money on...?"
 
     scene v13s29_4c # FPP. Same angle as v13s29_4b, Gary mouth open
     with dissolve
@@ -317,7 +317,7 @@ label v13s29:
             scene v13s29_17c
             with dissolve
 
-            gary "Who know, just think about your grandmother...It works for me."
+            gary "Who know, just think about your grandmother... It works for me."
 
             scene v13s29_17d
             with dissolve
@@ -352,7 +352,7 @@ label v13s29:
 
         "No.":
 
-            u "Yeah, I'm not on board with that...Sorry."
+            u "Yeah, I'm not on board with that... Sorry."
 
     scene v13s29_20b # FPP. Same as v13s29_20, Gary very happy, Gary mouth open
     with dissolve
@@ -382,7 +382,7 @@ label v13s29:
     scene v13s29_20d
     with dissolve
 
-    u "For a pothead you seem really concerned about...opposing pot."
+    u "For a pothead you seem really concerned about... opposing pot."
 
     scene v13s29_20e
     with dissolve

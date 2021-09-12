@@ -572,7 +572,7 @@ label v13s30:
         scene v13s30_8f
         with dissolve
 
-        la "Guys, I'm not playing. It...It looks like the water is... Dancing?"
+        la "Guys, I'm not playing. It... It looks like the water is... Dancing?"
 
         scene v13s30_10
         with dissolve

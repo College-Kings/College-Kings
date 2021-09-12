@@ -406,7 +406,7 @@ label v13s13a:
         scene v13s13a_18 # TPP Show Aubrey giving MC a hug in hotel lobby. Aubrey is smiling with her mouth open
         with dissolve
         
-        au "That was...a once in a lifetime opportunity. Thank you so much."
+        au "That was... a once in a lifetime opportunity. Thank you so much."
 
         scene v13s13a_19 # FPP Show Aubrey, in hotel lobby, smiling with mouth closed
         with dissolve
