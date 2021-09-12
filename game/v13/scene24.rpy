@@ -752,23 +752,23 @@ label v13s24:
         scene v13s24_20a # FPP. same as v13s24_20 emmy kourtney and aryssa looking in different directions, no expressions, hands MUST be at sides or in laps NOT raised, mouths closed
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
         scene v13s24_21 # TPP. FPP from the ladies perspective, MC slightly shocked, palms of hands up raised to chest level, imre and ryan pointing and laughing at MC, all mouths open
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
     elif emmyrs and kourtneyrs and aryssars:
         scene v13s24_20b # FPP. same as v13s24_20 emmy kourtney and aryssa looking at MC, all with one hand raised, all fully smiling, all mouths closed
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
         scene v13s24_10i # FPP. same as v13s24_10a imre rolls his eyes
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
         scene v13s24_11d # FPP. same as v13s24_11a ryan rolls his eyes
         with dissolve
@@ -779,37 +779,37 @@ label v13s24:
         scene v13s24_20c # FPP. same as v13s24_20b aryssa no expression and doesn't raise her hand
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
     elif emmyrs and aryssars:
         scene v13s24_20d # FPP. same as v13s24_20b kourtney no expression and doesn't raise her hand
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
     elif kourtneyrs and aryssars:
         scene v13s24_20e # FPP. same as v13s24_20b emmy no expression and doesn't raise her hand
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
     elif emmyrs:
         scene v13s24_20f # FPP. same as v13s24_20b show just emmy raising her hand, full smile, mouth closed, 
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
     elif kourtneyrs:
         scene v13s24_20g # FPP. same as v13s24_20b show just kourtney raising her hand, full smile, mouth closed, 
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
     elif aryssars:
         scene v13s24_20h # FPP. same as v13s24_20b show just aryssa raising her hand, full smile, mouth closed, 
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
     scene v13s24_12a
     with dissolve
@@ -819,7 +819,7 @@ label v13s24:
     scene v13s24_20e
     with dissolve
 
-    pause 0.50
+    pause 0.5
 
     scene v13s24_12a
     with dissolve
@@ -829,7 +829,7 @@ label v13s24:
     scene v13s24_20f
     with dissolve
 
-    pause 0.50
+    pause 0.5
 
     scene v13s24_10e
     with dissolve

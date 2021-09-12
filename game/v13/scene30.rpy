@@ -632,7 +632,7 @@ label v13s30:
         scene v13s30_16 # TPP. Show Amber getting up off the ground, Amber worried expression, mouth closed.
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
         scene v13s30_16a # TPP. Show Amber standing, Amber worried expression, mouth open.
         with dissolve

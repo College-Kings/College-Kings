@@ -106,7 +106,7 @@ label v13s25:
             scene v13s25_4 # TPP. Emmy blushes and looks away as she touches her ear
             with dissolve
 
-            pause 0.50
+            pause 0.5
 
             scene v13s25_3c
             with dissolve
@@ -116,12 +116,12 @@ label v13s25:
             scene v13s25_5 # TPP. Emmy looks one direction, slight smile, mouth closed
             with dissolve
 
-            pause 0.50
+            pause 0.5
 
             scene v13s25_6 # TPP. Emmy looks the other direction, slight smile, mouth closed
             with dissolve
 
-            pause 0.50
+            pause 0.5
 
             if v12s24_emmymatch or kct == "confident": 
                 if not v12s24_emmymatch:
@@ -135,12 +135,12 @@ label v13s25:
                 scene v13s25_7 # TPP. Emmy grabs MC's hand and pulls him away to a secluded area, Both have slight smiles, mouths closed
                 with dissolve
 
-                pause 0.50
+                pause 0.5
 
                 scene v13s25_8 # TPP. Emmy slight smile, mouth open, leans her body into MC, one hand pressed against his chest, the other hand unzipping his pants, Mc slight shocked, mouth open, one hand at the side of Emmy's face
                 with dissolve
 
-                pause 0.50
+                pause 0.5
 
                 scene v13s25_9 # FPP. Emmy head tilted slighty down, looking up at Mc, biting her lip
                 with dissolve
