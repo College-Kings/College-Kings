@@ -102,7 +102,7 @@ label v13s11:
             scene v13s11_9a # FPP. MC still on the ground Imre looks at ryan confused, mouth opened
             with dissolve
 
-            imre "Ryan? What are you- Wait, [Name]? What the fuck is going on?!"
+            imre "Ryan? What are you- Wait, [name]? What the fuck is going on?!"
 
             scene v13s11_9b # FPP. Imre looks down at mc, still confused, mouth opened
             with dissolve
