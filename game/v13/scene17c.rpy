@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 9)
 # Time: Morning
 
-
 label v13s17c:
     scene v13s17c_1 # TPP. Show MC sleeping in his bed, alone, it's morning, in his boxers
     with Fade(1,1,1)

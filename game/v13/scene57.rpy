@@ -72,7 +72,7 @@ label v13s57:
     scene v13s57_5 # TPP. Nora out of frame, Noras hands in frame, Noras hands presenting perfume, Show Rose reacting behind Noras hands, Rose shocked mouth open
     with dissolve
 
-    ro "Oh, wow... You guys didn't have to do this! But thank you…"
+    ro "Oh, wow... You guys didn't have to do this! But thank you..."
 
     scene v13s57_3a # FPP. Same as v13s57_3, Rose very happy, Rose mouth open
     with dissolve
@@ -115,7 +115,7 @@ label v13s57:
     scene v13s57_3c
     with dissolve
 
-    ro "I'm gonna go try this one right now… *Chuckles* Thank you both again."
+    ro "I'm gonna go try this one right now... *Chuckles* Thank you both again."
 
     scene v13s57_4
     with dissolve
@@ -130,7 +130,7 @@ label v13s57:
     scene v13s57_7a # FPP. Same as v13s57_7, Nora smile, Nora mouth closed.
     with dissolve
 
-    u "It did. A few more gifts and we'll get A’s all semester. *Laughs*"
+    u "It did. A few more gifts and we'll get A's all semester. *Laughs*"
 
     scene v13s57_7
     with dissolve

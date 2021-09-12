@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 2), AUBREY (Outfit: 1)
 # Time: Night
 
-
 label v13s14a:
     # -Upbeat club music is playing-
 

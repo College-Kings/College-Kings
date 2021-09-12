@@ -27,7 +27,7 @@ label v13s12b:
     scene v13s12b_2a
     with dissolve
 
-    u "*Chuckles* Don’t worry, if you ever get to the point where you wanna leave, just say the word and we'll go."
+    u "*Chuckles* Don't worry, if you ever get to the point where you wanna leave, just say the word and we'll go."
 
     scene v13s12b_2
     with dissolve
@@ -178,7 +178,7 @@ label v13s12b:
     scene v13s12b_6h # TPP. Same as v13s12b_6g, Penelope mouth open
     with dissolve
 
-    pe "I’m so sorry… I’ll-"
+    pe "I'm so sorry... I'll-"
 
     scene v13s12b_6i # TPP. Same as v13s12b_6g, MC mouth open
     with dissolve
@@ -188,7 +188,7 @@ label v13s12b:
     scene v13s12b_6g
     with dissolve
     
-    unknown "S-sorry dude… I don’t want any problems..."
+    unknown "S-sorry dude... I don't want any problems..."
 
     scene v13s12b_6i
     with dissolve
@@ -198,7 +198,7 @@ label v13s12b:
     scene v13s12b_6b
     with dissolve
 
-    pe "You're always so quick to speak up… *Chuckles*"
+    pe "You're always so quick to speak up... *Chuckles*"
 
     scene v13s12b_6c
     with dissolve
@@ -227,7 +227,7 @@ label v13s12b:
     scene v13s12b_6b
     with dissolve
 
-    pe "I wish I had a ladder or something… *Laughs*"
+    pe "I wish I had a ladder or something... *Laughs*"
 
     scene v13s12b_6c
     with dissolve
@@ -363,7 +363,7 @@ label v13s12b_failed_timer:
     scene v13s12b_13 # FPP. MC looking at Penelope, she's on the floor, very embarassed, in pain, mouth closed
     with dissolve
 
-    u "Oh shit! I'm so sorry, Penelope… I-"
+    u "Oh shit! I'm so sorry, Penelope... I-"
 
     scene v13s12b_13a # FPP. Same as v13s12b_13, Penelope mouth open
     with dissolve
@@ -403,7 +403,7 @@ label v13s12b_failed_timer:
     scene v13s12b_6q
     with dissolve
 
-    pe "I just don't feel as pumped, and I’m kinda embarrassed and my head hurts a bit..."
+    pe "I just don't feel as pumped, and I'm kinda embarrassed and my head hurts a bit..."
 
     scene v13s12b_6p
     with dissolve
@@ -442,7 +442,7 @@ label v13s12b_failed_timer:
         scene v13s12b_18 # FPP. MC and Penelope in hotel lobby, looking at each other, Penelope sad, mouth open
         with dissolve
 
-        pe "[name]... I’m really sorry for wanting to leave, again. I probably ruined your night, I’m sure you wish you brought someone else."
+        pe "[name]... I'm really sorry for wanting to leave, again. I probably ruined your night, I'm sure you wish you brought someone else."
 
         scene v13s12b_18a # FPP. Same as v13s12b_18, Penelope mouth closed
         with dissolve
@@ -513,7 +513,7 @@ label v13s12b_failed_timer:
         scene v13s12b_6p
         with dissolve
 
-        u "Haha, c'mon... I'm not letting you ruin your one night out, and I’ll be with you every second of the way."
+        u "Haha, c'mon... I'm not letting you ruin your one night out, and I'll be with you every second of the way."
 
         scene v13s12b_11
         with dissolve

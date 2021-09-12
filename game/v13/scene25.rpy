@@ -22,7 +22,7 @@ label v13s25:
     scene v13s25_3a # FPP. Emmy head straight, slight smile, mouth open
     with dissolve
 
-    emmy "That you’re on the “no kids kind of vibe”. *Chuckles*"
+    emmy "That you're on the “no kids kind of vibe”. *Chuckles*"
 
     scene v13s25_3
     with dissolve
@@ -86,12 +86,12 @@ label v13s25:
             scene v13s25_3d
             with dissolve
 
-            u "You have to be, because at the end of the fight someone’s going home hurt and sad, while the other goes home proud and happy."
+            u "You have to be, because at the end of the fight someone's going home hurt and sad, while the other goes home proud and happy."
 
             scene v13s25_3a
             with dissolve
 
-            emmy "So, you’d fight for me?"
+            emmy "So, you'd fight for me?"
 
             scene v13s25_3
             with dissolve
@@ -101,7 +101,7 @@ label v13s25:
             scene v13s25_3
             with dissolve
 
-            u "The only one who’s going to be fucking you is me. *Chuckles* Was that too much?"
+            u "The only one who's going to be fucking you is me. *Chuckles* Was that too much?"
 
             scene v13s25_4 # TPP. Emmy blushes and looks away as she touches her ear
             with dissolve
@@ -286,7 +286,7 @@ label v13s25:
             scene v13s25_3f
             with dissolve
 
-            emmy "No, it's fine. Ha… You didn't seem like the kind of guy who’s wild enough for me anyway."
+            emmy "No, it's fine. Ha... You didn't seem like the kind of guy who's wild enough for me anyway."
 
             scene v13s25_3b
             with dissolve

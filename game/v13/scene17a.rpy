@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 9), RILEY (Outfit: NAKED)
 # Time: Morning
 
-
 label v13s17a:
     scene v13s17a_1 # TPP. Show MC and Riley in Riley's bed, MC sleeping, it's morning, Riley playing with his hair, looking at him, slight smile, mouth closed, MC in his boxers
     with Fade(1,1,1)

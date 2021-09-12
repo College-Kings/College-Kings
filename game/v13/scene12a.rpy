@@ -3,8 +3,6 @@
 # Characters: AUBREY (Outfit: 2), MC (Outfit: 2), POLLY (Outfit: 1)
 # Time: Night
 
-$ v13_hugged_aubrey = False
-
 label v13s12a:
     scene v13s12a_1 # TPP. Show Aubrey walking up to MC in the lobby, both slight smiles, mouths closed
     with fade
@@ -64,7 +62,7 @@ label v13s12a:
     scene v13s12a_6 # TPP. MC and Aubrey in front of the stage (play with angles so that no other people have to be shown). MC and Aubrey looking at each other, both smiling, Aubrey mouth open, MC mouth closed (Camera is behind them as to show their shoulders and head) (Polly NOT on stage)
     with dissolve
 
-    au "Wow, haha… There's plenty of people here. I knew it'd be packed."
+    au "Wow, haha... There's plenty of people here. I knew it'd be packed."
 
     scene v13s12a_6a # TPP. Same as v13s12a_6, MC mouth open, Aubrey mouth closed
     with dissolve
@@ -188,7 +186,7 @@ label v13s12a:
     scene v13s12a_6d
     with dissolve
 
-    au "I WANT TO GET SOME PICTURES, BUT… IT’S TOO DARK."
+    au "I WANT TO GET SOME PICTURES, BUT... IT'S TOO DARK."
 
     scene v13s12a_6e
     with dissolve
@@ -297,7 +295,7 @@ label v13s12a:
             scene v13s12a_7c # TPP. Same as v13s12a_7b, Polly slight smile
             with dissolve
 
-            polly "Oh, shit… Okay! I like a little bit of sass… How about you two join me backstage, later. *Chuckles*"
+            polly "Oh, shit... Okay! I like a little bit of sass... How about you two join me backstage, later. *Chuckles*"
 
             scene v13s12a_6g
             with dissolve
@@ -342,7 +340,7 @@ label v13s12a:
             scene v13s12a_6d
             with dissolve
 
-            au "Haha. I can’t believe we’re going backstage..."
+            au "Haha. I can't believe we're going backstage..."
 
             if v12_murder_count >= 10:
                 scene v13s12a_6f
@@ -439,7 +437,7 @@ label v13s12a:
                 scene v13s12a_6d
                 with dissolve
 
-                au "*Sighs* If you say so... Even if she is a bitch… I’d still like to meet her. *Laughs*"
+                au "*Sighs* If you say so... Even if she is a bitch... I'd still like to meet her. *Laughs*"
 
                 scene v13s12a_8
                 with fade
@@ -457,7 +455,7 @@ label v13s12a:
                 scene v13s12a_6s # TPP. Same as v13s12a_6e, both slightly sad
                 with dissolve
 
-                u "*Sighs* Not the night I expected either... OKAY, LET’S GO."
+                u "*Sighs* Not the night I expected either... OKAY, LET'S GO."
 
                 scene v13s12a_10 # TPP. Show MC and Aubrey leaving the concert venue, both slightly sad, mouths closed
                 with dissolve
@@ -477,7 +475,7 @@ label v13s12a:
                 scene v13s12a_13 # FPP. MC and Aubrey standing in hotel lobby, Aubrey slightly sad, mouth open
                 with dissolve
 
-                au "Well… Tonight definitely isn't a night that I'll be forgetting anytime soon."
+                au "Well... Tonight definitely isn't a night that I'll be forgetting anytime soon."
 
                 scene v13s12a_13a # FPP. Same as v13s12a_13, mouth closed
                 with dissolve
@@ -487,7 +485,7 @@ label v13s12a:
                 scene v13s12a_13b # FPP. Same as v13s12a_13, Aubrey slight smile
                 with dissolve
 
-                au "Haha, oh my god. It’s not your fault at all. Fame is ugly, the stars are beautiful... Goodnight, [name]."
+                au "Haha, oh my god. It's not your fault at all. Fame is ugly, the stars are beautiful... Goodnight, [name]."
 
                 scene v13s12a_14 # TPP. Aubrey kissing MC on the cheek
                 with dissolve

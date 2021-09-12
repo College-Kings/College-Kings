@@ -154,6 +154,3 @@ label v13_walk_imre:
     with dissolve
 
     jump v13_hotel_imre
-
-
-

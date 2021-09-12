@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 3), NORA (Outfit: 1)
 # Time: Morning
 
-
 label v13s55:
 # -MC sees Nora sitting in the lobby and goes over to sit by her-
 

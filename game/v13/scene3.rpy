@@ -39,4 +39,4 @@ label v13s3:
 
     pause 0.75
 
-    jump v13s4 
+    jump v13s4

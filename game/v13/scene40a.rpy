@@ -3,12 +3,11 @@
 # Characters: CHLOE (Outfit: 5), MC (Outfit: 5)
 # Time: night
 
-
 label v13s40a:   
     scene v13s40a_1 # FPP. MC in front of his bed with chloe laying down making a seductive face, mouth opened (chloe naked?)
     with dissolve    
     
-    cl "You fuckin’ and dippin’ or going to cuddle me like a gentleman?"
+    cl "You fuckin' and dippin' or going to cuddle me like a gentleman?"
 
     scene v13s40a_1a # FPP. Same as 1, mouth closed
     with dissolve

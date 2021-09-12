@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 9), EMMY (Outfit: 1)
 # Time: late after noon/ early evening 
 
-
 label v13_emmy_sex:
 
     image v13emmha = Movie(play="images/v13/Scene 26/v13emmaha.webm", loop=True, image="images/v13/Scene 26/v13emmahaStart.webm", start_image="images/v13/Scene 26/v13emmahaStart.webm") # emmy giving mc head using her hands as well 

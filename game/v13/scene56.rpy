@@ -3,8 +3,6 @@
 # Characters: MC (Outfit: 3), NORA (Outfit: 1)
 # Time: Morning
 
-default v13_perfume = False
-
 label v13s56:
     scene v13s56_1 # TPP. show MC and nora walking down the sidewalk to the gift shop, slight smiles, mouths closed
     with dissolve
@@ -61,7 +59,7 @@ label v13s56:
         scene v13s56_2b # FPP. same as v13s56_2a nora slightly embarrassed
         with dissolve
 
-        no "Oh my god... Don't bring that up… In public."
+        no "Oh my god... Don't bring that up... In public."
 
         scene v13s56_2
         with dissolve
@@ -134,14 +132,14 @@ label v13s56:
                 scene v13s56_5f # FPP. same as v13s56_5d nora slight smile
                 with dissolve
 
-                no "Yeah… I heard you."
+                no "Yeah... I heard you."
 
             else:
 
                 scene v13s56_5d
                 with dissolve
 
-                no "Yeah…I heard you."
+                no "Yeah...I heard you."
 
         "Be respectful":
 
@@ -228,7 +226,7 @@ label v13s56:
     scene v13s56_6a
     with dissolve
 
-    u "Haha… Good point."
+    u "Haha... Good point."
 
     scene v13s56_6c # FPP. same as v13s56_6a nora is holding both the perfume and the bonsai tree, full smile
     with dissolve
@@ -263,7 +261,7 @@ label v13s56:
     scene v13s56_6h
     with dissolve
 
-    no "Just choose one and I'll figure out something else for the person we don’t buy a gift for."
+    no "Just choose one and I'll figure out something else for the person we don't buy a gift for."
 
     scene v13s56_6i # FPP. same as v13s56_6h nora mouth closed
     with dissolve
@@ -313,7 +311,7 @@ label v13s56:
     scene v13s56_7a
     with dissolve
 
-    u "You’d be lost without me today. *Chuckles*"
+    u "You'd be lost without me today. *Chuckles*"
 
     scene v13s56_7
     with dissolve

@@ -101,7 +101,7 @@ label v13s51_emily_fight:
     scene v13s51_5 # FPP. MC looking in the mirror at himself, mad, mouth closed.
     with dissolve
 
-    u "(She’s a fucking psycho, I swear!)"
+    u "(She's a fucking psycho, I swear!)"
 
     play sound "sounds/knock.mp3"
 

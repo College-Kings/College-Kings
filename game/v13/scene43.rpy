@@ -27,7 +27,7 @@ label v13s43:
     scene v13s43_4a # TPP. Same as v13s43_4, mouth closed 
     with dissolve
 
-    u "*Yawn* Jenny? Hey… What's up?"
+    u "*Yawn* Jenny? Hey... What's up?"
 
     scene v13s43_4
     with dissolve
@@ -37,12 +37,12 @@ label v13s43:
     scene v13s43_4a 
     with dissolve
 
-    u "Yeah, kinda. *Chuckles* But you're good, I shouldn’t sleep in all day on vacation."
+    u "Yeah, kinda. *Chuckles* But you're good, I shouldn't sleep in all day on vacation."
 
     scene v13s43_4b # TPP. Same as v13s43_4, slight laughing expression  
     with dissolve
 
-    jen "*Chuckles* I’m such an idiot… I forgot about the timezones."
+    jen "*Chuckles* I'm such an idiot... I forgot about the timezones."
 
     scene v13s43_4a
     with dissolve
@@ -88,12 +88,12 @@ label v13s43:
         scene v13s43_4d
         with dissolve
 
-        u "Fuck, okay… Has anything odd been going on lately?"
+        u "Fuck, okay... Has anything odd been going on lately?"
 
         scene v13s43_4c
         with dissolve
 
-        jen "Not that I can think of, I’ve been considering everything. Things seemed perfectly normal two days ago."
+        jen "Not that I can think of, I've been considering everything. Things seemed perfectly normal two days ago."
 
         scene v13s43_4d
         with dissolve
@@ -108,7 +108,7 @@ label v13s43:
         scene v13s43_4b
         with dissolve
 
-        jen "Oh… *Chuckles* Uhh..."
+        jen "Oh... *Chuckles* Uhh..."
 
         scene v13s43_4a
         with dissolve
@@ -138,12 +138,12 @@ label v13s43:
         scene v13s43_4b
         with dissolve
 
-        jen "*Chuckles* I can’t believe I had us both panicking for no reason. I’m so sorry, haha."
+        jen "*Chuckles* I can't believe I had us both panicking for no reason. I'm so sorry, haha."
 
         scene v13s43_4a
         with dissolve
 
-        u "It’s fine, Jenny. *Chuckles* It was good to hear from you-"
+        u "It's fine, Jenny. *Chuckles* It was good to hear from you-"
 
         scene v13s43_4f # TPP. Same as v13s43_4, surprised expression 
         with dissolve
@@ -262,12 +262,12 @@ label v13s43:
         scene v13s43_4b
         with dissolve
 
-        jen "I’m just teasing… *Chuckles* You have a good rest of your day [name], and again, I'm so sorry I woke you."
+        jen "I'm just teasing... *Chuckles* You have a good rest of your day [name], and again, I'm so sorry I woke you."
 
         scene v13s43_4a
         with dissolve
 
-        u "Really, haha… No worries Jenny, later."
+        u "Really, haha... No worries Jenny, later."
 
         scene v13s43_4
         with dissolve

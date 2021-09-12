@@ -47,7 +47,7 @@ label v13s62:
     scene v13s62_2f # FPP. Same as v13s62_2e, Riley mouth open, Aubrey mouth closed
     with dissolve
 
-    ri "Yeah, I'm pretty sure I heard that too… *Chuckles*"
+    ri "Yeah, I'm pretty sure I heard that too... *Chuckles*"
 
     scene v13s62_2e
     with dissolve

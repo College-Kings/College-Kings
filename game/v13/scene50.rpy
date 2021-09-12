@@ -117,7 +117,7 @@ label v13s50:
     scene v13s50_7b
     with dissolve
 
-    ri "Oooh okay, and look at you guys now. Having dates in other countries… *Chuckles*"
+    ri "Oooh okay, and look at you guys now. Having dates in other countries... *Chuckles*"
 
     scene  v13s50_8
     with dissolve
@@ -137,7 +137,7 @@ label v13s50:
     scene v13s50_7d # FPP. Same as v13s50_7b, different posture
     with dissolve
 
-    ri "I've always liked the beginning, you know? The part where you’re just getting to know each other and everything."
+    ri "I've always liked the beginning, you know? The part where you're just getting to know each other and everything."
 
     scene v13s50_8b # FPP. Same as v13s50_8, Ryan looking at Emily
     with dissolve

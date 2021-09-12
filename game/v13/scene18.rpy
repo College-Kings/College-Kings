@@ -17,7 +17,7 @@ label v13s18:
     scene v13s18_98 # TPP. Show MC walking towards dining table, slight smile, mouth open.
     with dissolve
 
-    u "My man… *Laughss*"
+    u "My man... *Laughss*"
 
     scene v13s18_99 # TPP. Show MC pulling out the chair, slight smile, mouth closed
     with dissolve
@@ -112,7 +112,7 @@ label v13s18:
     scene v13s18_8a # TPP. Close up, Chris looking at Nora, Chris worried expression, mouth open, Nora looking down at the ground, worried smile, mouth closed
     with dissolve
 
-    ch "Hey… You okay?"
+    ch "Hey... You okay?"
 
     scene v13s18_6
     with dissolve
@@ -132,7 +132,7 @@ label v13s18:
     scene v13s18_9 # TPP. Chris gently pulling Nora by the arm outside the hotel, Nora following Chris outside.
     with dissolve
 
-    ch "C'mon, there’s the cab."
+    ch "C'mon, there's the cab."
 
     scene v13s18_9a # TPP. Same as v13s18_9, Chris and Nora leaving through the hotel door.
     with dissolve
@@ -144,7 +144,7 @@ label v13s18:
 
     if not v12_nora_sex:
 
-        u "(Well… She looked… Happy?. *Chuckles*)"
+        u "(Well... She looked... Happy? *Chuckles*)"
 
     else:
 
@@ -160,12 +160,12 @@ label v13s18:
             scene v13s18_3
             with dissolve
 
-            u "*Sighs* (Nah, nevermind. I'll just let this play out on it’s own...)"
+            u "*Sighs* (Nah, nevermind. I'll just let this play out on it's own...)"
     
         "Text Nora":
 
             $ contact_Nora.addReply(_("What was that about, you guys all good now or something? "))
-            $ contact_Nora.newMessage(_("I know it's odd, but I'm trying to figure things out. Pls just… Let me handle it?"))
+            $ contact_Nora.newMessage(_("I know it's odd, but I'm trying to figure things out. Pls just... Let me handle it?"))
             $ contact_Nora.addReply(_("Okay... "))
             
             scene v13s15_11 # FPP. MC looking down at his phone, he is standing in same place as v13s15_6

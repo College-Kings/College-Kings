@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 2), PENELOPE (Outfit: 3)
 # Time: Wednesday night
 
-
 label v13s14b:
     # -Upbeat club music is playing-
 

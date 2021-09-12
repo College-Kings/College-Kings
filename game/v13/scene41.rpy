@@ -137,7 +137,7 @@ label v13s41:
     scene v13s41_10 # FPP show lindsey standing in front of the ferris wheel slight smile, mouth closed, show ashton in distance behind lindsey looking at MC
     with dissolve
 
-    u "Wow… Nobody's here."
+    u "Wow... Nobody's here."
 
     scene v13s41_10a # FPP. lindsey mouth open, ashton has walked closer to lindsey
     with dissolve
@@ -152,7 +152,7 @@ label v13s41:
     scene v13s41_11a # FPP. same as v13s41_11 ashton mouth closed, lindsey mouth open
     with dissolve
 
-    li "Oh, um… We were hoping to ride the ferris wheel together."
+    li "Oh, um... We were hoping to ride the ferris wheel together."
 
     scene v13s41_11
     with dissolve
@@ -172,7 +172,7 @@ label v13s41:
     scene v13s41_11b # FPP. same as v13s41_11a lindsey slight anger
     with dissolve
 
-    li "Oh, I’m sorry! I was just asking."
+    li "Oh, I'm sorry! I was just asking."
 
     scene v13s41_11c # FPP. same as v13s41_11b ashton and lindsey looking at MC, no expression, mouth closed
     with dissolve
@@ -257,7 +257,7 @@ label v13s41:
     scene v13s41_14 # FPP. show just lindsey on the ferris wheel, looking at MC, slight frown, mouth open, background is ground level
     with dissolve
 
-    li "*Sighs* Finally… A moment to relax."
+    li "*Sighs* Finally... A moment to relax."
 
     scene v13s41_14a # FPP. same as v13s41_14 lindsey mouth closed
     with dissolve
@@ -282,7 +282,7 @@ label v13s41:
     scene v13s41_14e # FPP. same as v13s41_14d lindsey mouth closed
     with dissolve
 
-    u "Everything else as in the loss of your mom? You’ve been keeping yourself busy ever since you lost her..."
+    u "Everything else as in the loss of your mom? You've been keeping yourself busy ever since you lost her..."
 
     scene v13s41_14b
     with dissolve
@@ -368,7 +368,7 @@ label v13s41:
     scene v13s41_14
     with dissolve
 
-    li "And as of right now, they’re nothing but memories of their own past."
+    li "And as of right now, they're nothing but memories of their own past."
 
     scene v13s41_14c
     with dissolve
@@ -378,7 +378,7 @@ label v13s41:
     scene v13s41_14j # FPP. same as v13s41_14b
     with dissolve
 
-    li "Exactly! Don’t you not think they should break up?"
+    li "Exactly! Don't you not think they should break up?"
 
     scene v13s41_14b
     with dissolve
@@ -433,7 +433,7 @@ label v13s41:
     scene v13s41_14a
     with dissolve
 
-    li "It'd be nice to have a really close girlfriend to talk to while I’m stressed about all this."
+    li "It'd be nice to have a really close girlfriend to talk to while I'm stressed about all this."
 
     scene v13s41_14a
     with dissolve
@@ -504,7 +504,7 @@ label v13s41:
     scene v13s41_14k # FPP. same as v13s41_14f lindsey looks up at the sky
     with dissolve
 
-    li "Oh my…"
+    li "Oh my..."
 
     scene v13s41_15a # TPP. same as v13s41_15 show just the night sky with stars and the moon
     with dissolve
@@ -566,7 +566,7 @@ label v13s41:
             scene v13s41_14g
             with dissolve
 
-            u "We're in Amsterdam, in the middle of the night, on a ferris wheel. If this isn’t beautiful, then I don’t know what beautiful is. *Chuckles*"
+            u "We're in Amsterdam, in the middle of the night, on a ferris wheel. If this isn't beautiful, then I don't know what beautiful is. *Chuckles*"
 
             scene v13s41_14f
             with dissolve

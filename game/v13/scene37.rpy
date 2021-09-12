@@ -3,8 +3,6 @@
 # Characters: LINDSEY (Outfit: 1), CHRIS (Outfit: 1), MC (Outfit: 5), NORA (Outfit: 1), IMRE (Outfit: 2)
 # Time: Evening
 
-default v13_imre_disloyal = False
-
 label v13s37:
     scene v13s37_1 # TPP. Show MC, Chris, Nora, Lindsey and Imre standing in the garden, all slight smiles, mouths closed, standing in a circle as if they were chatting
     with dissolve
@@ -34,7 +32,7 @@ label v13s37:
     scene v13s37_2a # FPP. Same as v13s37_2, Lindsey mouth closed
     with dissolve
 
-    u "(You can say that a million times again…)"
+    u "(You can say that a million times again...)"
 
     scene v13s37_3a # FPP. Same as v13s37_3, Chris looking at Nora, Chris slight smile, mouth open
     with dissolve
@@ -54,7 +52,7 @@ label v13s37:
     scene v13s37_2b # FPP. Same a sv13s37_2, Lindsey looking at Imre
     with dissolve
 
-    li "Oooh, okay! I may have to hangout at your house… *Laughs*"
+    li "Oooh, okay! I may have to hangout at your house... *Laughs*"
 
     scene v13s37_5
     with dissolve
@@ -68,7 +66,7 @@ label v13s37:
 
     if v12_lindsey_sex or lindseyrs:
 
-        li "And don’t call me Linds… Only the girls and [name] get to call me that. *Laughs*"
+        li "And don't call me Linds... Only the girls and [name] get to call me that. *Laughs*"
 
     scene v13s37_5
     with dissolve
@@ -83,7 +81,7 @@ label v13s37:
     scene v13s37_5b # FPP. Same as v13s37_5b, Imre mouth closed
     with dissolve
 
-    u "Ha… Like a little fight club?"
+    u "Ha... Like a little fight club?"
 
     scene v13s37_5a
     with dissolve
@@ -160,7 +158,7 @@ label v13s37_nora:
     scene v13s37no_2b
     with dissolve
 
-    u "I saw you avoiding him and it looks as though every smile you give is forced so hard that you’re going to throw up. *Chuckles*."
+    u "I saw you avoiding him and it looks as though every smile you give is forced so hard that you're going to throw up. *Chuckles*."
 
     scene v13s37no_2c
     with dissolve
@@ -228,7 +226,7 @@ label v13s37_nora:
     scene v13s37no_2c
     with dissolve
 
-    no "*Sighs* Please try not to overreact when I tell you this... And I beg you, don't go around telling everybody, but…"
+    no "*Sighs* Please try not to overreact when I tell you this... And I beg you, don't go around telling everybody, but..."
 
     no "Ms. Rose is actually my Step-mom."
 
@@ -240,7 +238,7 @@ label v13s37_nora:
     scene v13s37no_2c
     with dissolve
 
-    no "I'm really not. I’ll go into more detail another time, but that's why Chris and the rest of the Wolves are so close with her."
+    no "I'm really not. I'll go into more detail another time, but that's why Chris and the rest of the Wolves are so close with her."
 
     scene v13s37no_2f # FPP. Same as v13s37no_2c, different pose
     with dissolve
@@ -327,7 +325,7 @@ label v13s37_nora:
         scene v13s37no_4a
         with dissolve
 
-        u "So during this period of time where you’re thinking your life out, remember me, okay?"
+        u "So during this period of time where you're thinking your life out, remember me, okay?"
 
         scene v13s37no_4b
         with dissolve
@@ -445,7 +443,7 @@ label v13s37_nora:
                 scene v13s37no_4f # FPP. Same as v13s37no_4e, Nora slightly annoyed, mouth open
                 with dissolve
 
-                no "Imre... Do not act like my relationship with Chris has been perfect, and for fuck’s sake, don't act like the problems we've had are my fault."
+                no "Imre... Do not act like my relationship with Chris has been perfect, and for fuck's sake, don't act like the problems we've had are my fault."
 
                 scene v13s37no_4g # FPP. Same as v13s37no_4f, Nora pointing at Imre
                 with dissolve
@@ -480,12 +478,12 @@ label v13s37_nora:
                 scene v13s37no_12b
                 with dissolve
 
-                imre "I’m doing it for Chris. And I already was, but I'll be even more determined to convince him to leave your cheating ass."
+                imre "I'm doing it for Chris. And I already was, but I'll be even more determined to convince him to leave your cheating ass."
 
                 scene v13s37no_12c
                 with dissolve
 
-                imre "And normally [name], I’d be giving you props, but you messed with the homie’s girl, and you know that crosses a line."
+                imre "And normally [name], I'd be giving you props, but you messed with the homie's girl, and you know that crosses a line."
 
                 scene v13s37no_12a
                 with dissolve
@@ -505,7 +503,7 @@ label v13s37_nora:
                 scene v13s37no_4b
                 with dissolve
 
-                no "Don't worry about him… He won't say anything and he'll only be mad at you for a few days."
+                no "Don't worry about him... He won't say anything and he'll only be mad at you for a few days."
 
                 scene v13s37no_4c
                 with dissolve
@@ -666,7 +664,7 @@ label v13s37_chris:
             scene v13s37ch_2b
             with dissolve
 
-            u "Well yeah, you’re right. *Chuckles*"
+            u "Well yeah, you're right. *Chuckles*"
 
             scene v13s37ch_2c
             with dissolve
@@ -746,7 +744,7 @@ label v13s37_chris:
             scene v13s37ch_2f
             with dissolve
 
-            ch "I will say this…"
+            ch "I will say this..."
 
             scene v13s37ch_2d
             with dissolve
@@ -756,7 +754,7 @@ label v13s37_chris:
             scene v13s37ch_2c
             with dissolve
 
-            ch "I don’t know, I just… With the way she's been acting, it seems like she's feeling guilty about something."
+            ch "I don't know, I just... With the way she's been acting, it seems like she's feeling guilty about something."
 
             scene v13s37ch_2b
             with dissolve
@@ -771,7 +769,7 @@ label v13s37_chris:
             scene v13s37ch_2b
             with dissolve
 
-            u "Wait… What? What makes you think that?"
+            u "Wait... What? What makes you think that?"
 
             scene v13s37ch_2c
             with dissolve

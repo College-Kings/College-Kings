@@ -42,7 +42,7 @@ label v13s25b:
     scene v13s25b_2 
     with dissolve
 
-    u "No way! That’s really interesting. Is it hard?"
+    u "No way! That's really interesting. Is it hard?"
 
     scene v13s25b_2a
     with dissolve
@@ -77,7 +77,7 @@ label v13s25b:
     scene v13s25b_2
     with dissolve
 
-    u "Wow, that’s… I mean, I'm just a student right now... I don't even have a job. *Chuckles*"
+    u "Wow, that's... I mean, I'm just a student right now... I don't even have a job. *Chuckles*"
 
     scene v13s25b_2c
     with dissolve
@@ -97,7 +97,7 @@ label v13s25b:
     scene v13s25b_2
     with dissolve
 
-    u "You're very impressive. I’m kinda surprised by the fact that you’re still single."
+    u "You're very impressive. I'm kinda surprised by the fact that you're still single."
 
     scene v13s25b_2c
     with dissolve
@@ -112,7 +112,7 @@ label v13s25b:
     scene v13s25b_2a
     with dissolve
 
-    ary "Thank you…"
+    ary "Thank you..."
 
     scene v13s25b_2d # FPP. Same as v13s25b_2a, serious expression, different posture 
     with dissolve
@@ -190,7 +190,7 @@ label v13s25b:
             scene v13s25b_2a   
             with dissolve
 
-            ary "It's fine, this just shows that we’re not very compatible. *Chuckles*"
+            ary "It's fine, this just shows that we're not very compatible. *Chuckles*"
 
             scene v13s25b_2b
             with dissolve

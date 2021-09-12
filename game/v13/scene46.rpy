@@ -12,7 +12,7 @@ label v13s46:
     scene v13s46_2 # FPP. Show lauren riding her bike on MC's right side, slight smile, mouth closed, forest background
     with dissolve
 
-    u "It feels great out here…"
+    u "It feels great out here..."
 
     scene v13s46_2a # FPP. same as v13s46_2 different forest background, mouth open
     with dissolve
@@ -40,7 +40,7 @@ label v13s46:
             scene v13s46_2
             with dissolve
 
-            u "I don't hate being outside, but... *Chuckles* I’m definitely a city person."
+            u "I don't hate being outside, but... *Chuckles* I'm definitely a city person."
 
             scene v13s46_2a
             with dissolve
@@ -75,7 +75,7 @@ label v13s46:
     scene v13s46_2
     with dissolve
 
-    u "Oh, I see... You’re really into the outdoors, huh?"
+    u "Oh, I see... You're really into the outdoors, huh?"
 
     scene v13s46_2a
     with dissolve
@@ -340,7 +340,7 @@ label v13s46:
                 scene v13s46_2
                 with dissolve         
 
-                u "Like everyone Lauren, we'll get tired eventually and grow old one day. That’s just how things work, you know?"
+                u "Like everyone Lauren, we'll get tired eventually and grow old one day. That's just how things work, you know?"
 
                 scene v13s46_2a
                 with dissolve
@@ -412,7 +412,7 @@ label v13s46:
     scene v13s46_13c # FPP. same as v13s46_13b laurens mouth is closed
     with dissolve
 
-    u "Holy…"
+    u "Holy..."
 
     scene v13s46_13b
     with dissolve
@@ -428,7 +428,7 @@ label v13s46:
             scene v13s46_13c
             with dissolve
 
-            u "What?! No way...You’re being extra freaky right now. *Chuckles*"
+            u "What?! No way...You're being extra freaky right now. *Chuckles*"
 
             scene v13s46_13b
             with dissolve
@@ -438,7 +438,7 @@ label v13s46:
             scene v13s46_13c
             with dissolve
 
-            u "Let's go ahead and head back before they see us creepin’, you weirdo."
+            u "Let's go ahead and head back before they see us creepin', you weirdo."
 
         "Haha, okay.":
                 

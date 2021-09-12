@@ -3,8 +3,6 @@
 # Characters: AMBER (Outfit: 1), MC (Outfit: 9), SAMANTHA (Outfit: 1)
 # Time: Evening
 
-default v13_invite_samantha = False
-
 label v13s28:
     scene v13s28_1 # TPP. Show MC walking towards Amber at the bus station, slight smile, mouth closed
     with dissolve
@@ -19,7 +17,7 @@ label v13s28:
     scene v13s28_2 # FPP. MC looking at Amber. Amber looking at MC, Amber slight smile, mouth open.
     with dissolve
 
-    am "Jeez… Took you long enough. Did you have to do your nails real quick? *Laughs*"
+    am "Jeez... Took you long enough. Did you have to do your nails real quick? *Laughs*"
 
     scene v13s28_2a # FPP. Same as v13s28_2. Amber slight smile, mouth closed.
     with dissolve
@@ -34,7 +32,7 @@ label v13s28:
     scene v13s28_2a
     with dissolve
 
-    u "A bus tour? Amber…"
+    u "A bus tour? Amber..."
 
     scene v13s28_2
     with dissolve
@@ -99,7 +97,7 @@ label v13s28:
     scene v13s28_3b # TPP. Same as v13s28_3a, MC pain expression, mouth open.
     with dissolve
 
-    u "Ow, fuck! Okay… Fine, I'll go."
+    u "Ow, fuck! Okay... Fine, I'll go."
 
     scene v13s28_3c # TPP. Same as v13s28_3a. Amber letting go of MC's arm.
     with dissolve
@@ -165,12 +163,12 @@ label v13s28:
         scene v13s28_7a # Same as v13s28_7. Samantha different pose.
         with dissolve
 
-        sa "Can’t you guys spot me? Just this one time, Amber?"
+        sa "Can't you guys spot me? Just this one time, Amber?"
 
         scene v13s28_6a # Same as v13s28_6. Amber different pose.
         with dissolve
 
-        am "Not gonna happen, I’m officially broke. He may though."
+        am "Not gonna happen, I'm officially broke. He may though."
 
         menu:
             "Not a good idea, Sam...":
@@ -192,7 +190,7 @@ label v13s28:
                 scene v13s28_7c
                 with dissolve
 
-                sa "Nah, you’re trying to control what I do. Just like my obsessive brother. Fuck this and fuck you."
+                sa "Nah, you're trying to control what I do. Just like my obsessive brother. Fuck this and fuck you."
 
                 scene v13s28_8 # TPP. Show Samantha storming away, angry, mouth closed
                 with dissolve
@@ -215,7 +213,7 @@ label v13s28:
                 scene v13s28_7b
                 with dissolve
 
-                u "I mean it might be a little triggering but… Whatever, yeah. I'll pay for it."
+                u "I mean it might be a little triggering but... Whatever, yeah. I'll pay for it."
 
                 scene v13s28_7e # FPP. Same as v13s28_7b, Samantha slight smile, mouth open.
                 with dissolve

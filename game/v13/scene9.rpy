@@ -3,9 +3,6 @@
 # Characters: CHLOE (Outfit: 2), MC (Outfit: 2), RYAN (Outfit: 1)
 # Time: Afternoon
 
-default v13_help_chloe = False
-default v13_help_lindsey = False
-
 label v13s9:
     scene v13s9_1 # TPP. Hotel hallway. MC walking down the hallway, back to camera, angled to where hotel room doors are visible on MC's right.
     with dissolve
@@ -49,7 +46,7 @@ label v13s9:
     scene v13s9_2c # FPP. Same as v13s9_2b but Chloe with mouth open. 
     with dissolve
 
-    cl "If you're willing to join me, yeah. I’ve looked for hours on my phone trying to find some nice Amsterdam stuff to do…"
+    cl "If you're willing to join me, yeah. I've looked for hours on my phone trying to find some nice Amsterdam stuff to do..."
 
     scene v13s9_2d # FPP. Same as v13s9_2c but Chloe has a slight frown. 
     with dissolve
@@ -69,7 +66,7 @@ label v13s9:
     scene v13s9_2a
     with dissolve
 
-    cl "Yeah, it's called Scheveningen Beach… But instead of swimming, we can go to the pier. Do you wanna come with me?"
+    cl "Yeah, it's called Scheveningen Beach... But instead of swimming, we can go to the pier. Do you wanna come with me?"
 
     scene v13s9_2b
     with dissolve
@@ -169,7 +166,7 @@ label v13s9:
     scene v13s9_11
     with dissolve
 
-    cl "You're fine… Sorry. Talking about it with you doesn't really bother me actually. I need to discuss it with someone; I need to discuss a lot of things on my mind."
+    cl "You're fine... Sorry. Talking about it with you doesn't really bother me actually. I need to discuss it with someone; I need to discuss a lot of things on my mind."
 
     scene v13s9_11b
     with dissolve
@@ -258,7 +255,7 @@ label v13s9:
     scene v13s9_12e
     with dissolve 
 
-    u "So… You have to be the President in order to keep this scholarship?"
+    u "So... You have to be the President in order to keep this scholarship?"
 
     scene v13s9_12b
     with dissolve
@@ -288,7 +285,7 @@ label v13s9:
             scene v13s9_12f
             with dissolve
 
-            u "Of course I’ll help. You obviously care about the girls, you’ve been running the sorority perfectly fine, and I'd hate for you to lose your scholarship."
+            u "Of course I'll help. You obviously care about the girls, you've been running the sorority perfectly fine, and I'd hate for you to lose your scholarship."
 
             scene v13s9_12h # FPP. Chole facing MC (no longer leaning against rail) looking at MC, happy, mouth open.
             with dissolve
@@ -322,7 +319,7 @@ label v13s9:
             scene v13s9_12e
             with dissolve
             
-            u "Well, Lindsey has been asking me for help already, and I told her I'd help... I’m sorry, I don't want to be a bad friend."
+            u "Well, Lindsey has been asking me for help already, and I told her I'd help... I'm sorry, I don't want to be a bad friend."
 
             scene v13s9_12j # FPP. Chloe facing MC (no longer leaning against rail) looking at MC, mad, mouth open.
             with dissolve
@@ -388,7 +385,7 @@ label v13s9:
     scene v13s9_12b
     with dissolve
 
-    cl "I haven’t really been given a choice. We're days away from being right back in the heat of everything."
+    cl "I haven't really been given a choice. We're days away from being right back in the heat of everything."
 
     scene v13s9_12c
     with dissolve
@@ -410,7 +407,7 @@ label v13s9:
     scene v13s9_12f
     with dissolve
 
-    cl "Ironically, yes. *Chuckles* I was walking with Aubrey earlier and we passed by this really nice sex shop…"
+    cl "Ironically, yes. *Chuckles* I was walking with Aubrey earlier and we passed by this really nice sex shop..."
 
     scene v13s9_12p # FPP. Same as v13s9_12f but Chloe slightly blushing, mouth open.
     with dissolve
@@ -470,7 +467,7 @@ label v13s9:
     scene v13s9_12i
     with dissolve
 
-    u "Oh... Well… That’s spicy. *Laughs*"
+    u "Oh... Well... That's spicy. *Laughs*"
 
     if chloegf or chloers: # -If Chloers or Chloegirlfriend
         scene v13s9_12q # FPP. Chloe facing MC (not leaning), flirting/seductive, smiling, mouth open.

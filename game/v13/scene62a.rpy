@@ -52,9 +52,9 @@ label v13s62a:
     scene v13s62a_9 # FPP. MC looking at Lindsey sitting on the sink, legs closed, sexy expression, mouth open
     with fade
 
-    li "I know you have all the other girls, but I want you for myself and want you… Right… Fucking... Now."
+    li "I know you have all the other girls, but I want you for myself and want you... Right... Fucking... Now."
 
-    li "*Chuckles* Now, please… You can do anything you want..."
+    li "*Chuckles* Now, please... You can do anything you want..."
 
     scene v13s62a_9a # FPP. Same as v13s62a_9, Lindsey's legs spread open
     with vpunch

@@ -3,8 +3,6 @@
 # Characters: CHLOE (Outfit: 1/Naked), MC (Outfit: 5/Naked)
 # Time: Night
 
-default v13s40_chloe_turned_on = 0
-
 label v13s40:
     scene v13s40_1 # TPP. Show MC standing in the lobby, Chloe walking towards him, both slight smiles, mouths closed
     with Fade(1,1,1)
@@ -34,7 +32,7 @@ label v13s40:
     scene v13s40_2
     with dissolve
 
-    cl "Bored and looking for something to do… *Chuckles*"
+    cl "Bored and looking for something to do... *Chuckles*"
 
     scene v13s40_2a
     with dissolve
@@ -99,7 +97,7 @@ label v13s40:
     scene v13s40_10 # FPP. MC looking at Chloe laying on her bed, mouth open, slight smile
     with fade
 
-    cl "I'm a little nervous, but plenty excited… *Chuckles*"
+    cl "I'm a little nervous, but plenty excited... *Chuckles*"
 
     scene v13s40_10a # FPP. Same as v13s40_10, Chloe mouth closed
     with dissolve
@@ -222,7 +220,7 @@ label v13s40_feather:
     scene v13s40fe_3 # TPP. Close up of MC ticklig her feet with the feather
     with dissolve
 
-    cl "Ooh, ha! Okay... Way too ticklish… *Chuckles*"
+    cl "Ooh, ha! Okay... Way too ticklish... *Chuckles*"
 
     scene v13s40fe_3a # TPP. Same as v13s40fe_3, MC no longer tickling her feet
     with dissolve
@@ -483,7 +481,7 @@ label v13s40_end_free_roam:
         scene v13s40end_5a # FPP. Same as v13s40end_5, Chloe removing MC's pants, Chloe smiling, mouth closed, MC mouth closed, smiling
         with dissolve
 
-        u "(She’s being wild right now!)"
+        u "(She's being wild right now!)"
 
         scene v13s40end_6 # TPP. Show Chloe removing MC's shirt, both smiling, mouths closed
         with dissolve
@@ -504,19 +502,19 @@ label v13s40_end_free_roam:
         with dissolve
         pause
 
-        cl "*Moans* F-fuck baby… No one's ever been able to bring this side out of me!"
+        cl "*Moans* F-fuck baby... No one's ever been able to bring this side out of me!"
 
         scene v13chlsdf # Ignore as anim
         with dissolve
         pause
 
-        u "You’re getting ready to bring a new side out of me too..."
+        u "You're getting ready to bring a new side out of me too..."
 
         scene v13chlsd2 # Ignore as anim
         with dissolve
         pause
 
-        cl "Show me then… Mmm, show me that side!"
+        cl "Show me then... Mmm, show me that side!"
 
         scene v13chlsd2f # Ignore as anim
         with dissolve
@@ -543,7 +541,7 @@ label v13s40_end_free_roam:
         with dissolve
         pause
 
-        cl "I... *Moans* Like it... Rough... *Whispers* F-Fuck… Like this... [name]!"
+        cl "I... *Moans* Like it... Rough... *Whispers* F-Fuck... Like this... [name]!"
 
         scene v13chlff # Ignore as anim
         with dissolve
@@ -602,7 +600,7 @@ label v13s40_end_free_roam:
         with dissolve
         pause
 
-        u "Way too fucking good… *Moans*"
+        u "Way too fucking good... *Moans*"
 
         scene v13s40end_12 # TPP. Show MC pushing Chloe further back on the bed while choking her
         with dissolve
@@ -628,19 +626,19 @@ label v13s40_end_free_roam:
         scene v13chlttf # Ignore as anim
         with dissolve
 
-        cl "[Name]! *Gasps* F-f-uck… *Moans*"
+        cl "[Name]! *Gasps* F-f-uck... *Moans*"
 
         scene v13chltt2 # ignore as anim
         with dissolve
         pause
 
-        u "Ah, shit Chlo... *Moans* You- I’m-"
+        u "Ah, shit Chlo... *Moans* You- I'm-"
 
         scene v13chltt2f # ignore as anim
         with dissolve
         pause
 
-        u "*Moans* I'm gonna... Ohhh, my fucking… god!"
+        u "*Moans* I'm gonna... Ohhh, my fucking... god!"
 
         scene v13s40end_14 # TPP. MC cumming in Chloe
         with vpunch

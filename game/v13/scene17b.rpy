@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 9), LAUREN (Outfit: 4)
 # Time: Morning
 
-
 label v13s17b:
     scene v13s17b_1 # TPP. Show MC and Lauren sleeping in her bed, it's morning, MC in his boxers, Lauren has her head on his chest
     with Fade(1,1,1)
