@@ -93,7 +93,7 @@ label v13s24:
 
             barh "Awkward..."
 
-        "Fuck Yeah, let's mingle":
+        "Fuck yeah, let's mingle":
             $ addPoint("bro")
             if chloegf or laurenrs:
                 $ addPoint("tm")

@@ -81,7 +81,7 @@ label v13s15a:
 
     u "I hear you."
 
-    if laurenrs:
+    if laurenrs and not v11_aubrey_sex:
         play sound "sounds/vibrate.mp3"
 
         scene v13s15a_7 # TPP. MC looking down at his phone, he is standing in same place as v13s15a_6, slightly surprised, mouth closed
@@ -97,6 +97,8 @@ label v13s15a:
 
         scene v13s15a_8 # FPP. MC looking down at his phone, he is standing in same place as v13s15a_6
         with dissolve
+
+        pause 0.75
 
         label v13s15a_PhoneContinueLauren:
             if contact_Lauren.replies:
@@ -202,7 +204,7 @@ label v13s15a:
                 scene v13s15a_6b
                 with dissolve
 
-                u "Good, have a goodnight Riley."
+                u "Good, have a good night, Riley."
 
                 scene v13s15a_6a
                 with dissolve
