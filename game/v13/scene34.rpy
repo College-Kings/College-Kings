@@ -660,7 +660,7 @@ label v13s34:
             
             ri "Mr. Lee..."
 
-            scene v13s34_34 # FPP. Riley stands up and wipes her face off, neutral expression, mouth closed
+            scene v13s34_34 # FPP. Riley wipes her face off, neutral expression, mouth closed
             with dissolve
 
             pause 0.75 
@@ -881,11 +881,6 @@ label v13s34:
     pause 0.75
 
     scene v13s34_44 # TPP. Show MC walking on the street, neutral expression, mouth closed
-    with fade
-
-    pause 0.75
-
-    scene v13s34_45 # TPP. Show MC walking into sex shop, slight smile, mouth closed
     with fade
 
     pause 0.75
