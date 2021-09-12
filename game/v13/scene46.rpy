@@ -24,7 +24,6 @@ label v13s46:
 
     menu:
         "I love the outdoor":
-    
             scene v13s46_2
             with dissolve
 
@@ -36,7 +35,6 @@ label v13s46:
             la "I'm the same exact way. *Chuckles*"
 
         "I'm a city man":
-
             scene v13s46_2
             with dissolve
 
@@ -298,7 +296,6 @@ label v13s46:
     pause 0.75
 
     if laurenrs:
-
         scene v13s46_4a
         with dissolve
 
@@ -324,7 +321,6 @@ label v13s46:
 
         menu:
             "Keep the spark":
-
                 scene v13s46_2
                 with dissolve
 
@@ -336,7 +332,6 @@ label v13s46:
                 la "*Chuckles* We think alike."
 
             "We'll get tired":
-
                 scene v13s46_2
                 with dissolve
 
@@ -358,7 +353,6 @@ label v13s46:
                 la "*Laughs* Oh my gosh, stop."
 
     else: 
-
         scene v13s46_2a
         with dissolve
 
@@ -424,7 +418,6 @@ label v13s46:
 
     menu:
         "What?! No way":
-
             scene v13s46_13c
             with dissolve
 
@@ -441,7 +434,6 @@ label v13s46:
             u "Let's go ahead and head back before they see us creepin', you weirdo."
 
         "Haha, okay.":
-                
             scene v13s46_13b
             with dissolve
                             
@@ -472,6 +464,7 @@ label v13s46:
 
             pause 0.75
 
+            play sound "sounds/twig.mp3"
             scene v13s46_16 # FPP. show just laurens foot stepping on a branch
             with dissolve
 
@@ -522,4 +515,4 @@ label v13s46:
 
     pause 0.75
 
-    jump v13s74
+    jump v13s47
