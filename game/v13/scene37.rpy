@@ -962,4 +962,5 @@ label v13s37_end:
 
     pause 0.75
 
+    $ freeRoam = False
     jump v13_walk_imre

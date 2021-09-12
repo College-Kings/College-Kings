@@ -157,14 +157,10 @@ label v13s18:
 
     menu:
         "Text Nora":
-
             $ contact_Nora.addReply(_("What was that about, you guys all good now or something? "))
             $ contact_Nora.newMessage(_("I know it's odd, but I'm trying to figure things out. Pls just... Let me handle it?"))
             $ contact_Nora.addReply(_("Okay... "))
             
-            scene v13s15_11 # FPP. MC looking down at his phone, he is standing in same place as v13s15_6
-            with dissolve
-
             label v13s18_PhoneContinueNora:
                 if contact_Nora.replies:
                     call screen phone

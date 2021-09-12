@@ -452,6 +452,8 @@ label v13s40_shoulder:
     call screen v13s40_chloe_back
         
 label v13s40_end_free_roam:
+    $ freeRoam = False
+
     if v13s40_chloe_turned_on == 4:
         scene v13s40end_1 # FPP. MC standing next to Chloe, Chloe looking up at MC, Chloe smiling, mouth open
         with dissolve
