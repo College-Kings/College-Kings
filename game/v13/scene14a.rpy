@@ -424,7 +424,7 @@ label v13s14a:
             scene v13s14a_24a # FPP Same angle as 24, Aubrey a few steps toward hallway, turning and looking at MC, neutral expression, mouth open
             with dissolve
 
-            au "Oh. umm... [Name]?"
+            au "Oh. umm... [name]?"
 
             scene v13s14a_24b # FPP Same as 24a, Aubrey's mouth closed
             with dissolve
