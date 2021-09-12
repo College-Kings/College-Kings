@@ -7,7 +7,7 @@ init python:
             self.inventory = Inventory()
 
         def add_item(self, item):
-            if item.cost > money:
+            if item.cost > self.money:
                 raise UnhandledTranscribingError("{} price is higher then user money".format(item.name))
 
             self.inventory.items.append(item)
