@@ -688,6 +688,7 @@ label v13s37_chris:
             pause 0.75
 
             scene v13s37ch_2b
+            with dissolve
 
             u "Chilling by yourself, huh?"
 

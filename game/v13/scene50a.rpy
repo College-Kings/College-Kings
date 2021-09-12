@@ -89,6 +89,7 @@ label v13s50a:
     em "Cum inside of me [name]."
 
     scene v13s50av4f # Same but faster
+    with dissolve
 
     u "(I'm not that stupid.)"
 

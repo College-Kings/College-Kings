@@ -60,7 +60,7 @@ label v13s52a:
     cl "Good, let's get up."
 
     scene v13s52a_3 # TPP. MC leaves his room
-    jump v13s55
+    with dissolve
 
     pause 0.75
 
@@ -73,5 +73,3 @@ label v13s52a:
     with dissolve
 
     jump v13s55
-
-

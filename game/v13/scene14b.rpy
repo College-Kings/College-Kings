@@ -37,6 +37,7 @@ label v13s14b:
     polly "So you do have a fun side? *Chuckles* I was hoping you'd like this type of scene. Do you drink?"
 
     scene v13s14b_4a # FPP Same as 4, Penelope looking at Polly, neutral expression, mouth open
+    with dissolve
 
     pe "Oh, no. I'm not a really big drinker."
 
@@ -46,6 +47,7 @@ label v13s14b:
     polly "Oh, c'mon... You can have one drink."
 
     scene v13s14b_4b # FPP Same as 4, Penelope looking at MC, worried expression, mouth closed
+    with dissolve
 
     u "One shouldn't hurt."
 
@@ -385,6 +387,7 @@ label v13s14b:
     polly "Go ahead and meet them out in the front."
 
     scene v13s14b_18
+    with dissolve
 
     u "Cool, later Polly."
 

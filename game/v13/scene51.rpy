@@ -200,6 +200,7 @@ label v13s51_emily_fight:
             pause 0.75
                         
             scene v13s51_12 # FPP. Emily, breasts exposed, her back against the wall, surprised (eyebrows raised) with a neutral (normal) expression, mouth closed.
+            with dissolve
             
             u "We're not doing this. Like deadass, get the fuck out!"
 
