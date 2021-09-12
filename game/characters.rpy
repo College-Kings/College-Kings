@@ -128,13 +128,13 @@ define character.tattoo = Character("Tattoo Artist", who_color="#ff1694", who_ou
 
 # 13.0
 define character.ary = Character("Aryssa")
-define character.ash = Character("Ashton")
-define character.barh = Character("Host")
+define character.ash = Character("Ashton", who_color="#fd9426", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.barh = Character("Host", who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.clipps = Character("Clipps")
 define character.emmy = Character("Emmy")
 define character.gary = Character("Gary")
 define character.gitw = Character("Unknown")
 define character.kourt = Character("Kourtney", who_color="#ff8afb", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.luuk = Character("Luuk", who_color="#ff1694", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
-define character.polly = Character("Polly")
-define character.random_guy = Character("Random Guy")
+define character.polly = Character("Polly", who_color="#8b0000", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.random_guy = Character("Bartender", who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
