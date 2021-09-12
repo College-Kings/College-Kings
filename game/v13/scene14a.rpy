@@ -65,7 +65,7 @@ label v13s14a:
 
             polly "I think I got my answer. *Laughs*"
 
-        "If I'm a one woman man":
+        "I'm a one woman man":
             $ addPoint("bf")
 
             u "I'm a one woman-man."

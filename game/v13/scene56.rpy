@@ -39,7 +39,7 @@ label v13s56:
 
     u "I definitely feel that. *Chuckles*"
 
-    if norasex = True:
+    if norasex:
 
         scene v13s56_2
         with dissolve

@@ -14,7 +14,7 @@ label v13s10:
 
     pause 0.75
 
-    if v13_GO_SCENE_9: # NEED PROPER VARIABLE NAME
+    if v13s9_go_to_concert: # NEED PROPER VARIABLE NAME
         scene v13s10_3 # FPP Show Ryan talking to MC, smiling with mouth open
         with dissolve
 
@@ -77,7 +77,7 @@ label v13s10:
 
     u "Yep."
 
-    if v13_GO_SCENE_9: # NEED PROPER VARIABLE NAME
+    if v13s9_go_to_concert: # NEED PROPER VARIABLE NAME
         scene v13s10_7 # FPP View of MC, sitting next to Ryan. Ryan smiling with mouth closed
         with dissolve
 

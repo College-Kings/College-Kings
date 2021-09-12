@@ -7,7 +7,7 @@ label v13_walk_imre:
     scene v13s38_1 # TPP. MC and imre walking in the sidewalk (location 1)
     with fade
 
-    if ImreDisloyal:
+    if v13_imre_disloyal:
         scene v13s38_2 # FPP. MC looking at imre who looks dissapointed, mouth opened (location 1)
         with dissolve
 
