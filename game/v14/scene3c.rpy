@@ -280,6 +280,7 @@ label v14s03c:
 
     menu:
         "Go with her...":
+            $ addPoint ("tm")
 
             scene v14s03c_4f
             with dissolve
@@ -310,6 +311,7 @@ label v14s03c:
             
            
         "Help Ryan...":
+            $ addPoint ("bro")
 
             scene v14s03c_5a # FPP. Same as v14s03c_5, Emerald on Ryan's lap, both slight smile, mouth closed.
             with dissolve
