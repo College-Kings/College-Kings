@@ -261,6 +261,7 @@ label v13s13b:
 
             u "Haha, thanks."
 
+            play sound "sounds/kiss.mp3"
             scene v13s13b_5a # TPP Same angle as 5, Penelope kissing MC on the cheek
             with dissolve
 

@@ -154,6 +154,7 @@ label v13s40_honey:
 
     cl "*Chuckles*"
 
+    play sound "sounds/kiss.mp3"
     scene v13s40ho_4 # TPP. Show MC kissing Chloe's boobs with honey, mouths closed, slight smiles
     with dissolve
 

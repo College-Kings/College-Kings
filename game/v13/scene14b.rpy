@@ -288,6 +288,7 @@ label v13s14b:
 
             u "I may just let you..."
 
+            play sound "sounds/kiss.mp3"
             scene v13s14b_15a # TPP Same angle as 15, Penelope kissing and nibbling MC's neck
             with dissolve
 

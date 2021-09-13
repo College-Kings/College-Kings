@@ -460,6 +460,7 @@ label v13s14a:
 
             pause 0.5
 
+            play sound "sounds/kiss.mp3"
             scene v13s14a_25a # TPP Same angle as 25, MC kissing Aubrey
             with dissolve
 

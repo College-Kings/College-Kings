@@ -307,6 +307,7 @@ label v13s59:
 
                 u "Always."
 
+                play sound "sounds/kiss.mp3"
                 scene v13s59_7 # TPP. Aubrey and MC romantically kiss
                 with dissolve
 
