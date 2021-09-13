@@ -165,7 +165,7 @@ label v13s25:
 
                         emmy "Don't be gentle"
 
-                        jump v13s26
+                        jump v13_emmy_sex
 
                     "Stop her":
                         $ addPoint("bf")
