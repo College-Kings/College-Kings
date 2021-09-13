@@ -77,7 +77,7 @@ label v13s49:
 
         pause 0.75
 
-        jump v13s51
+        jump v13s51_emily_fight
 
     else:
         if chloegf:
