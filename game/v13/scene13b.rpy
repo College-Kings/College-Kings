@@ -204,6 +204,7 @@ label v13s13b:
     polly "That's what I'm always going for. *Laughs*"
 
     scene v13s13b_2h # FPP Same angle as 2, Polly mouth open, making a smiling shrug expression like: https://images.app.goo.gl/RRHGHozyq7H7JhgX7
+    with dissolve
 
     polly "I take a random picture of something that inspires me and boom, that becomes my cover."
 
@@ -228,6 +229,7 @@ label v13s13b:
     pe "Oh umm..."
 
     scene v13s13b_3f # FPP Same angle as 3, Penelope looking at MC, curious and embarrassed, mouth closed
+    with dissolve
 
     u "I don't see why not."
 
@@ -259,6 +261,7 @@ label v13s13b:
 
             u "Haha, thanks."
 
+            play sound "sounds/kiss.mp3"
             scene v13s13b_5a # TPP Same angle as 5, Penelope kissing MC on the cheek
             with dissolve
 

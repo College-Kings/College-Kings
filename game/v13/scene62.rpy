@@ -75,6 +75,7 @@ label v13s62:
     pause
 
     scene v13s62_2h # FPP. Same as v13s62_2f, Aubrey and Riley's hand on MC's pants (where his dick is)
+    with dissolve
 
     ri "I like that idea."
 

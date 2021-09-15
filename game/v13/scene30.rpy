@@ -192,7 +192,7 @@ label v13s30:
     am "Guess you'll find out, haha. Are you gonna smoke?"
 
     menu:
-        "I'm good...":
+        "I'm good":
             scene v13s30_2a
             with dissolve
 
@@ -333,6 +333,7 @@ label v13s30:
 
         pause 0.75
 
+        play sound "sounds/kiss.mp3"
         scene v13s30_9a # TPP. Same as v13s30_9. Lauren kissing MC while grabbing his chin.
         with dissolve
 
@@ -410,13 +411,13 @@ label v13s30:
     la "Not everything. I'm not so sure about smoking."
 
     menu:
-        "It's relaxing...":
+        "It's relaxing":
             scene v13s30_8e # FPP. Same as v13s30_8, Lauren slight smile, mouth closed
             with dissolve
 
             u "It is relaxing, always helps me blow off a bit of steam."
 
-        "It's up to you...":
+        "It's up to you":
             $ v13_lauren_smoke = True
             
             scene v13s30_8e
@@ -632,7 +633,7 @@ label v13s30:
         scene v13s30_16 # TPP. Show Amber getting up off the ground, Amber worried expression, mouth closed.
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
         scene v13s30_16a # TPP. Show Amber standing, Amber worried expression, mouth open.
         with dissolve

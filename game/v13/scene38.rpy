@@ -101,7 +101,7 @@ label v13_walk_imre:
 
     imre "Well, my brother had the hots for Nora and because she was with Chris, she turned him away."
 
-    imre "I respected it a lot , and when I joined the Wolves I expected to see a strong bond between the two of them."
+    imre "I respected it a lot, and when I joined the Wolves I expected to see a strong bond between the two of them."
 
     scene v13s38_3a
     with dissolve
@@ -152,5 +152,7 @@ label v13_walk_imre:
 
     scene v13s38_6 # TPP. Imre and MC entering the hotel lobby
     with dissolve
+
+    pause 0.75
 
     jump v13_hotel_imre

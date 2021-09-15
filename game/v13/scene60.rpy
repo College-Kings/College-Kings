@@ -35,6 +35,7 @@ label v13s60:
     pause 0.75
 
     scene v13s60_3
+    with dissolve
 
     au "Think you can get up there?"
 

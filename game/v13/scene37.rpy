@@ -65,7 +65,6 @@ label v13s37:
     li "*Chuckles* Not like that, fuckboy."
 
     if v12_lindsey_sex or lindseyrs:
-
         li "And don't call me Linds... Only the girls and [name] get to call me that. *Laughs*"
 
     scene v13s37_5
@@ -210,7 +209,7 @@ label v13s37_nora:
     scene v13s37no_2c
     with dissolve
 
-    no "Not yet... You may someday, but I'm talking about my family. Specifically my Step-mom."
+    no "Not yet... You may someday, but I'm talking about my family. Specifically my stepmom."
 
     if joinwolves:
         scene v13s37no_2d
@@ -228,7 +227,7 @@ label v13s37_nora:
 
     no "*Sighs* Please try not to overreact when I tell you this... And I beg you, don't go around telling everybody, but..."
 
-    no "Ms. Rose is actually my Step-mom."
+    no "Ms. Rose is actually my stepmom."
 
     scene v13s37no_2d
     with dissolve
@@ -352,6 +351,7 @@ label v13s37_nora:
 
         menu:
             "Kiss her forehead":
+                play sound "sounds/kiss.mp3"
                 scene v13s37no_7 # TPP. Show MC kissing Nora's forehead, Nora slight smile, mouth closed
                 with dissolve
 
@@ -370,6 +370,7 @@ label v13s37_nora:
             "Kiss her lips":
                 $ v13_imre_disloyal = True
 
+                play sound "sounds/kiss.mp3"
                 scene v13s37no_8 # TPP. MC and Nora kissing
                 with dissolve
 
@@ -688,6 +689,7 @@ label v13s37_chris:
             pause 0.75
 
             scene v13s37ch_2b
+            with dissolve
 
             u "Chilling by yourself, huh?"
 
@@ -714,7 +716,8 @@ label v13s37_chris:
             scene v13s37ch_2c
             with dissolve
 
-            ch "I have no clue, but I'm not too optimistic. I'm just trying to ride this out with a smile on my face. And what's crazy is that outside of pushing her I still don't feel like I did a damn thing wrong. But don't let her hear me say that."
+            ch "I have no clue, but I'm not too optimistic. I'm just trying to ride this out with a smile on my face."
+            ch "And what's crazy is that outside of pushing her I still don't feel like I did a damn thing wrong. But don't let her hear me say that."
 
             scene v13s37ch_2e # FPP. Same as v13s27ch_2b, different pose
             with dissolve
@@ -794,7 +797,7 @@ label v13s37_chris:
             scene v13s37ch_2f
             with dissolve
 
-            ch "‘Cause honestly, the only guys she can even tolerate are you and Charli, so it must've been some random dude that she met."
+            ch "'Cause honestly, the only guys she can even tolerate are you and Charli, so it must've been some random dude that she met."
 
             scene v13s37ch_2d
             with dissolve
@@ -961,4 +964,5 @@ label v13s37_end:
 
     pause 0.75
 
-    jump v13s38
+    $ freeRoam = False
+    jump v13_walk_imre

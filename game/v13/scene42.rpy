@@ -26,11 +26,14 @@ label v13s42:
 
     scene v13s42_5 # TPP. Images of MC sleeping
     with dissolve
+    
+    pause 0.75
 
     scene v13s42_6 # TPP. Images of MC sleeping
     with dissolve
 
+    pause 0.75
+
     jump v13s43
 
 # -Transition to Scene 43-
-

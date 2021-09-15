@@ -171,7 +171,7 @@ label v13s28:
         am "Not gonna happen, I'm officially broke. He may though."
 
         menu:
-            "Not a good idea, Sam...":
+            "Not a good idea, Sam":
                 scene v13s28_7b # FPP. Same as v13s28_7, Samantha looking at MC, Samantha slight smile, mouth closed.
                 with dissolve
 
@@ -207,7 +207,7 @@ label v13s28:
 
                 u "*Sighs*"
 
-            "Fine, I'll pay for you...":
+            "Fine, I'll pay for you":
                 $ v13_invite_samantha = True
 
                 scene v13s28_7b

@@ -70,9 +70,8 @@ label v13s11:
     ry "*Whisper* You do something!"
 
     $ timed = True
-    $ timerexit = v13_push_ryan
 
-    menu:
+    menu (fail_label="v13_push_ryan"):
         "Pretend to tie Ryan's shoe":
             scene v13s11_7 # TPP. MC bends down and pretends to tie ryan's shoe
             with dissolve
@@ -505,7 +504,7 @@ label v13_imre_continue:
         scene v13s11_27d
         with dissolve
         
-        barh "Plus... After what you just did, I don't think there'll be anymore."
+        barh "Plus... After what you just did, I don't think there'll be any more."
         
         scene v13s11_27c
         with dissolve
@@ -587,7 +586,7 @@ label v13_imre_continue:
         scene v13s11_28a # FPP. same as 28, imre's mouth opened 
         with dissolve
 
-        imre "Yeah, I'm done here Let's go."
+        imre "Yeah, I'm done here. Let's go."
 
         scene v13s11_29 # TPP. Imre mc and ryan walking off the bar
         with dissolve

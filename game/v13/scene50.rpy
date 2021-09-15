@@ -160,13 +160,13 @@ label v13s50:
     em "Isn't that right, [name]?"
 
     menu:
-        "He knows more...":
+        "He knows more":
             scene v13s50_9a
             with dissolve
 
             u "You and I don't talk as often anymore, so he knows the new Emily way better than I do. I know the old Emily and well... Nevermind."
 
-        "I know more...":
+        "I know more":
             scene v13s50_8c # FPP. Same as v13s50_8a, mouth closed 
             with dissolve
 
@@ -330,7 +330,7 @@ label v13s50:
     pause 0.75
 
     menu:
-        "Kick her out...":
+        "Kick her out":
             scene v13s50_19 # FPP. MC puts one hand on Emily's shoulder, pushing her back lightly, Emily, slightly surprised expression, mouth closed
             with dissolve
 
@@ -371,7 +371,7 @@ label v13s50:
 
             u "(I'm taking my ass to bed.)"
 
-        "Fuck her...":
+        "Fuck her":
             
             scene v13s50_18a # TPP. Same as v13s50_18, MC, slight smile, mouth open
             with dissolve
@@ -396,13 +396,10 @@ label v13s50:
     pause 0.75
 
     if chloegf:
-
         jump v13s52
     
     elif rileyrs: 
-    
         jump v13s53
     
     else: 
-       
         jump v13s54

@@ -69,6 +69,7 @@ label v13s10:
     pause 0.75
 
     scene v13s10_5a # TPP Same angle as v13s10_3, Ryan looking at his phone, MC with his head hanging back in boredom
+    with dissolve
     
     scene v13s10_6 # FPP Show Imre walking through lobby toward hotel doors
     with dissolve

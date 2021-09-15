@@ -39,6 +39,7 @@ label v13s52a:
 
     cl "*Chuckles* You're so cute."
 
+    play sound "sounds/kiss.mp3"
     scene v13s52a_2 # TPP. Chloe kisses MC who is still laying in bed
     with dissolve
 
@@ -60,7 +61,7 @@ label v13s52a:
     cl "Good, let's get up."
 
     scene v13s52a_3 # TPP. MC leaves his room
-    jump v13s55
+    with dissolve
 
     pause 0.75
 
@@ -73,5 +74,3 @@ label v13s52a:
     with dissolve
 
     jump v13s55
-
-

@@ -104,7 +104,6 @@ label v13s13a:
 
     menu:
         "Defend her sister":
-
             u "Oh, come on... She's not that bad."
 
             scene v13s13a_2b
@@ -114,7 +113,6 @@ label v13s13a:
 
         "Laugh":
             $ aubrey.points += 1
-
             u "*Laughs*"
 
             scene v13s13a_2e
@@ -134,6 +132,7 @@ label v13s13a:
     polly "That's an understatement. But who cares, forget about your sister."
 
     scene v13s13a_2e
+    with dissolve
 
     polly "Based on what I saw, you're gonna be the Next. Big. Thing. Your first gig is international work in Paris... C'mon now. *Laughs*"
 

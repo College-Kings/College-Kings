@@ -115,7 +115,7 @@ label v13s12b:
     with dissolve
 
     menu:
-        "Say Hell Yeah":
+        "Say hell yeah":
             scene v13s12b_6e # TPP. Same as v13s12b_6d, MC excited, arms up, Penelope same pose
             with dissolve
 
@@ -136,7 +136,7 @@ label v13s12b:
 
             pe "I just don't want people staring at me. *Laughs*"
 
-        "Say Nothing":
+        "Say nothing":
             
             u "(I don't want any attention.)"
 

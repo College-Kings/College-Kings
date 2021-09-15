@@ -444,7 +444,7 @@ label v13_ticket_transfer:
         scene v13s7_8a
         with dissolve
 
-        pe "GREAT! I was so worried you wouldn't want to, haha! You keep the tickets, ‘cause I will most definitely lose them."
+        pe "GREAT! I was so worried you wouldn't want to, haha! You keep the tickets, 'cause I will most definitely lose them."
 
         scene v13s7_8
         with dissolve

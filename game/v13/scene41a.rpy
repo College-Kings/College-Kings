@@ -37,9 +37,9 @@ label v13s41a:
     scene v13s41a_3b # FPP. Lindsey leaves the hotel lobby, back to the camera
     with dissolve
 
+    pause 0.75
+
     jump v13s42 
 
 # -Lindsey goes off-
 # -Transition to Scene 42-
-
-

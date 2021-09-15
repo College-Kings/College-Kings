@@ -69,6 +69,4 @@ label v13s40a:
 
     u "Goodnight, Chloe."
 
-    jump v13_scene43
-
-
+    jump v13s43

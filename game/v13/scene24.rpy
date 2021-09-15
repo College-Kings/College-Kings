@@ -93,7 +93,7 @@ label v13s24:
 
             barh "Awkward..."
 
-        "Fuck Yeah, let's mingle":
+        "Fuck yeah, let's mingle":
             $ addPoint("bro")
             if chloegf or laurenrs:
                 $ addPoint("tm")
@@ -273,6 +273,9 @@ label v13s24:
 
     emmy "Hello boys! *Chuckles* It's nice to meet you all."
 
+    if simplr_Emmy in simplr_contacts: #for v12-v13 compatibility
+        $ v12s24_emmymatch = True
+
     if v12s24_emmymatch:
         scene v13s24_17 # FPP. emmy recognizes MC, eyebrow raised, slight smile, mouth closed
         with dissolve
@@ -309,66 +312,64 @@ label v13s24:
 
         emmy "Oh! Haha, I'm sorry."
 
-    else:
+    scene v13s24_11c # FPP. same as v13s24_11 ryan looking at emmy
+    with dissolve
 
-        scene v13s24_11c # FPP. same as v13s24_11 ryan looking at emmy
-        with dissolve
+    ry "It's nice to meet you too. I'm looking forward to answering your questions."
 
-        ry "It's nice to meet you too. I'm looking forward to answering your questions."
+    scene v13s24_16a # FPP. same as v13s24_16 emmy looking at ryan
+    with dissolve
 
-        scene v13s24_16a # FPP. same as v13s24_16 emmy looking at ryan
-        with dissolve
+    emmy "How sweet of you! *Chuckles* Guess I should just hop right into it, huh?"
 
-        emmy "How sweet of you! *Chuckles* Guess I should just hop right into it, huh?"
+    scene v13s24_16b # FPP. same as v13s24_16 emmy mouth closed
+    with dissolve
 
-        scene v13s24_16b # FPP. same as v13s24_16 emmy mouth closed
-        with dissolve
+    u "I'm ready when you are. *Chuckles*"
 
-        u "I'm ready when you are. *Chuckles*"
+    scene v13s24_12a # FPP. same as v13s24_12 Both hands on podium.
+    with dissolve
 
-        scene v13s24_12a # FPP. same as v13s24_12 Both hands on podium.
-        with dissolve
+    barh "Just bypass the host, huh guys?"
 
-        barh "Just bypass the host, huh guys?"
+    scene v13s24_12b # FPP. same as v13s24_12a barhost mouth closed
+    with dissolve
 
-        scene v13s24_12b # FPP. same as v13s24_12a barhost mouth closed
-        with dissolve
+    u "Oh, right... *Laughs* Sorry."
 
-        u "Oh, right... *Laughs* Sorry."
+    scene v13s24_12a
+    with dissolve
 
-        scene v13s24_12a
-        with dissolve
+    barh "No, no, no. I'm only teasing... Go right ahead."
 
-        barh "No, no, no. I'm only teasing... Go right ahead."
+    scene v13s24_16c # FPP. same as v13s24_16 emmy looking at barhost
+    with dissolve
 
-        scene v13s24_16c # FPP. same as v13s24_16 emmy looking at barhost
-        with dissolve
+    emmy "Ha, alright..."
 
-        emmy "Ha, alright..."
+    scene v13s24_16
+    with dissolve
 
-        scene v13s24_16
-        with dissolve
+    emmy "First question... How do you feel about kids?"
 
-        emmy "First question... How do you feel about kids?"
+    scene v13s24_10e # FPP. same v13s24_10 imre looking at emmy
+    with dissolve
 
-        scene v13s24_10e # FPP. same v13s24_10 imre looking at emmy
-        with dissolve
+    imre "Man, fuck them kids! *Laughs* I'm not trying to get you pregnant."
 
-        imre "Man, fuck them kids! *Laughs* I'm not trying to get you pregnant."
+    scene v13s24_10e
+    with dissolve
 
-        scene v13s24_10e
-        with dissolve
+    imre "We can have fun and all but, no kids... Not right now at least."
 
-        imre "We can have fun and all but, no kids... Not right now at least."
+    scene v13s24_11c
+    with dissolve
 
-        scene v13s24_11c
-        with dissolve
-
-        ry "Well, I'll be honest. I'm not interested in having kids at this very moment, but I do want children in the future... And many of them. *Chuckles*"
+    ry "Well, I'll be honest. I'm not interested in having kids at this very moment, but I do want children in the future... And many of them. *Chuckles*"
 
     menu:
         "No kids for me":
-            $ addpoint("bro")
+            $ addPoint("bro")
             $ v13_told_emmy_no_kids_for_me = True
 
             u "Yeah, I'm on the no kids vibe at the moment too. Guess it's just not something I think about."
@@ -752,23 +753,23 @@ label v13s24:
         scene v13s24_20a # FPP. same as v13s24_20 emmy kourtney and aryssa looking in different directions, no expressions, hands MUST be at sides or in laps NOT raised, mouths closed
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
         scene v13s24_21 # TPP. FPP from the ladies perspective, MC slightly shocked, palms of hands up raised to chest level, imre and ryan pointing and laughing at MC, all mouths open
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
     elif emmyrs and kourtneyrs and aryssars:
         scene v13s24_20b # FPP. same as v13s24_20 emmy kourtney and aryssa looking at MC, all with one hand raised, all fully smiling, all mouths closed
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
         scene v13s24_10i # FPP. same as v13s24_10a imre rolls his eyes
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
         scene v13s24_11d # FPP. same as v13s24_11a ryan rolls his eyes
         with dissolve
@@ -779,37 +780,37 @@ label v13s24:
         scene v13s24_20c # FPP. same as v13s24_20b aryssa no expression and doesn't raise her hand
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
     elif emmyrs and aryssars:
         scene v13s24_20d # FPP. same as v13s24_20b kourtney no expression and doesn't raise her hand
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
     elif kourtneyrs and aryssars:
         scene v13s24_20e # FPP. same as v13s24_20b emmy no expression and doesn't raise her hand
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
     elif emmyrs:
         scene v13s24_20f # FPP. same as v13s24_20b show just emmy raising her hand, full smile, mouth closed, 
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
     elif kourtneyrs:
         scene v13s24_20g # FPP. same as v13s24_20b show just kourtney raising her hand, full smile, mouth closed, 
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
     elif aryssars:
         scene v13s24_20h # FPP. same as v13s24_20b show just aryssa raising her hand, full smile, mouth closed, 
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
     scene v13s24_12a
     with dissolve
@@ -819,7 +820,7 @@ label v13s24:
     scene v13s24_20e
     with dissolve
 
-    pause 0.50
+    pause 0.5
 
     scene v13s24_12a
     with dissolve
@@ -829,7 +830,7 @@ label v13s24:
     scene v13s24_20f
     with dissolve
 
-    pause 0.50
+    pause 0.5
 
     scene v13s24_10e
     with dissolve

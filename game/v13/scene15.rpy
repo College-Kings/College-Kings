@@ -113,7 +113,7 @@ label v13s15:
         pause 0.75
 
         jump v13s17c
-    else:
+    elif not v11_aubrey_sex:
         play sound "sounds/vibrate.mp3"
 
         scene v13s15_10 # TPP. MC looking down at his phone, he is standing in same place as v13s15_6, slightly surprised, mouth closed

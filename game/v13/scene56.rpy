@@ -39,7 +39,7 @@ label v13s56:
 
     u "I definitely feel that. *Chuckles*"
 
-    if norasex:
+    if v12_nora_sex:
 
         scene v13s56_2
         with dissolve
@@ -127,7 +127,7 @@ label v13s56:
 
             u "I said my bad. *Chuckles*"
 
-            if norasex:
+            if v12_nora_sex:
 
                 scene v13s56_5f # FPP. same as v13s56_5d nora slight smile
                 with dissolve
@@ -284,7 +284,6 @@ label v13s56:
             with dissolve
 
         "Bonsai":
-
             scene v13s56_6h
             with dissolve
 
@@ -292,6 +291,8 @@ label v13s56:
 
             scene v13s56_6k # FPP. same as v13s56_6h mc hands nora the Bonsai
             with dissolve
+
+    pause 0.75
         
     scene v13s56_7 # FPP. show nora slight smile mouth open looking at mc
     with dissolve
@@ -412,23 +413,41 @@ label v13s56:
 
     u "Well, good thing that's all over. Let's go gift giving."
 
-    scene v13s56_1b # TPP. same as v13s56_1a nora and MC's backs are turned
-    with dissolve
+    if v13_perfume:
+        scene v13s56_1b_b # TPP. same as v13s56_1a nora and MC's backs are turned
+        with dissolve
+    else:
+        scene v13s56_1b_a # TPP. same as v13s56_1a nora and MC's backs are turned
+        with dissolve   
 
     pause 0.75
 
-    scene v13s56_1c # TPP. same as v13s56_1 nora and MC's backs are turned
-    with dissolve
+    if v13_perfume:
+        scene v13s56_1c_a # TPP. same as v13s56_1 nora and MC's backs are turned
+        with dissolve
+    else:
+        scene v13s56_1c_b # TPP. same as v13s56_1 nora and MC's backs are turned
+        with dissolve
 
     pause 0.75
 
-    scene v13s56_10 # TPP. MC and nora arrive at the hotel front door and walk in, both slight smiles, mouths closed, street perspective
-    with dissolve
-
+    if v13_perfume:
+        scene v13s56_10a # TPP. MC and nora arrive at the hotel front door and walk in, both slight smiles, mouths closed, street perspective
+        with dissolve
+    else:
+        scene v13s56_10 # TPP. MC and nora arrive at the hotel front door and walk in, both slight smiles, mouths closed, street perspective
+        with dissolve
+    
     pause 0.75
 
-    scene v13s56_11 # TPP. MC and nora walk into the lobby, slight smiles, mouths closed, lobby perspective facing hotel front door
-    with dissolve
+    if v13_perfume:
+        scene v13s56_11b # TPP. MC and nora walk into the lobby, slight smiles, mouths closed, lobby perspective facing hotel front door
+        with dissolve
+    else:
+        scene v13s56_11a # TPP. MC and nora walk into the lobby, slight smiles, mouths closed, lobby perspective facing hotel front door
+        with dissolve
+
+    pause 0.75
 
     if v13_perfume:
         jump v13s57

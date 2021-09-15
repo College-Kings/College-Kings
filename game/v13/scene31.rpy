@@ -96,7 +96,7 @@ label v13s31:
 
     u "(Damn, this is crazy.)"
 
-    if not v13_invite_samantha: #placeholder
+    if v11_invite_sam_europe and not v13_invite_samantha: #placeholder
         $ cameronBro = True
 
         scene v13s21_100 # TPP. Show Cameron running towwards MC, angry, mouth closed
@@ -114,7 +114,7 @@ label v13s31:
 
         ca "What the fuck is this shit I hear about you, and Samantha at a fucking weed tour?!"
 
-        scene v13s31_10a # FPP. Same positioning as v13s31_10 , Cameron Angry expression, mouth closed
+        scene v13s31_10a # FPP. Same positioning as v13s31_10, Cameron Angry expression, mouth closed
         with dissolve
 
         u "The weed tour I didn't let her go on?"

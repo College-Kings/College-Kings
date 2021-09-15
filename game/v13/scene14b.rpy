@@ -37,6 +37,7 @@ label v13s14b:
     polly "So you do have a fun side? *Chuckles* I was hoping you'd like this type of scene. Do you drink?"
 
     scene v13s14b_4a # FPP Same as 4, Penelope looking at Polly, neutral expression, mouth open
+    with dissolve
 
     pe "Oh, no. I'm not a really big drinker."
 
@@ -46,6 +47,7 @@ label v13s14b:
     polly "Oh, c'mon... You can have one drink."
 
     scene v13s14b_4b # FPP Same as 4, Penelope looking at MC, worried expression, mouth closed
+    with dissolve
 
     u "One shouldn't hurt."
 
@@ -163,14 +165,13 @@ label v13s14b:
     scene v13s14b_4e
     with dissolve
 
-    pe "Woah, I can definitely feel it working it's magic. *Chuckles*"
+    pe "Woah, I can definitely feel it working its magic. *Chuckles*"
 
     scene v13s14b_4f
     with dissolve
 
     menu:
         "Impressive":
-
             u "This is low-key impressive. *Laughs*"
 
             scene v13s14b_10 # FPP Show Penelope cheering with her hand in the air, big smile, mouth open
@@ -184,7 +185,6 @@ label v13s14b:
             polly "Which one? *Laughs*"
 
         "You should stop":
-
             u "You should slow down a bit."
 
             scene v13s14b_3a
@@ -201,7 +201,6 @@ label v13s14b:
 
     scene v13s14b_4g
     with dissolve
-
     
     pe "*Tipsy* C'mon, [name]! I wanna dance."
 
@@ -289,6 +288,7 @@ label v13s14b:
 
             u "I may just let you..."
 
+            play sound "sounds/kiss.mp3"
             scene v13s14b_15a # TPP Same angle as 15, Penelope kissing and nibbling MC's neck
             with dissolve
 
@@ -388,6 +388,7 @@ label v13s14b:
     polly "Go ahead and meet them out in the front."
 
     scene v13s14b_18
+    with dissolve
 
     u "Cool, later Polly."
 

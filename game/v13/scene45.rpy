@@ -11,6 +11,7 @@ label v13s45:
     pause 0.75
 
     scene v13s45_2 # FPP. MC looking at Lauren, Lauren looking at MC, Slight smile, mouth open.
+    with dissolve
 
     la "Luuk said these are free to use."
 
@@ -26,5 +27,7 @@ label v13s45:
 
     scene v13s45_4 # TPP. Show MC and Lauren somewhere down the way on the bike, both slight smile, mouth closed.
     with fade
+
+    pause 0.75
 
     jump v13s46

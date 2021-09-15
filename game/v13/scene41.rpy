@@ -545,6 +545,7 @@ label v13s41:
 
                 u "I'm a guy like me."
 
+                play sound "sounds/kiss.mp3"
                 scene v13s41_16 # TPP. Lindsey smiles and then romantically kisses MC-
                 with dissolve
 
@@ -556,7 +557,7 @@ label v13s41:
                 li "Yes you are."
 
         "Of course":
-            $ addpoint("bro")
+            $ addPoint("bro")
 
             scene v13s41_14g
             with dissolve

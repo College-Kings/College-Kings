@@ -141,14 +141,14 @@ label v13s59:
     menu:
         "Agree":
             $ aubrey.points += 1
-            $ addpoint("bf")
+            $ addPoint("bf")
             scene v13s59_4a
             with dissolve
 
             u "It is a little hard... I'm not gonna lie."
 
         "Disagree":
-            $ addpoint("tm")
+            $ addPoint("tm")
             scene v13s59_4a
             with dissolve
 
@@ -264,7 +264,7 @@ label v13s59:
 
     menu:
         "Teach her":
-            $ addpoint("bf")
+            $ addPoint("bf")
             scene v13s59_6a
             with dissolve
 
@@ -295,7 +295,7 @@ label v13s59:
 
             pause 0.75
 
-            if date_with_aubrey:
+            if v13s48_canoeing_as_date:
 
                 scene v13s59_6e # FPP. same as v13s59_6d aubrey puts her hands around MC, mouth open, a cow is in the background
                 with dissolve
@@ -307,6 +307,7 @@ label v13s59:
 
                 u "Always."
 
+                play sound "sounds/kiss.mp3"
                 scene v13s59_7 # TPP. Aubrey and MC romantically kiss
                 with dissolve
 
@@ -353,7 +354,7 @@ label v13s59:
                 au "Hmm... Many reasons."
 
         "Let her figure it out":
-            $ addpoint("bro")
+            $ addPoint("bro")
             scene v13s59_6a
             with dissolve
 

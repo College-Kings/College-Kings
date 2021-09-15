@@ -62,6 +62,8 @@ label v13s49:
         scene v13s49_4a # FPP. Same as v13s49_4, Ryan standing in front of MC.
         with dissolve
 
+        pause 0.75
+
         jump v13s50
   
     elif not v13s48_ryan_double_date and emily_europe:
@@ -73,7 +75,9 @@ label v13s49:
         scene v13s49_5a # FPP. Same as v13s49_5, Emily standing in front of MC.
         with dissolve
 
-        jump v13s51
+        pause 0.75
+
+        jump v13s51_emily_fight
 
     else:
         if chloegf:
