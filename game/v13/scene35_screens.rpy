@@ -1,8 +1,6 @@
 screen v13s35_adult_shop():
     modal True
 
-    default shop_items = [cuffs, feather]
-
     add "#00f"
 
     vbox:
