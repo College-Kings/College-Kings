@@ -4,7 +4,7 @@
 # Time: Night
 
 label v13s32:
-    if not v13_lauren_hospital:
+    if not v13_lauren_smoke:
         scene v13s32_1 # TPP. Show MC, Lauren and Amber walking into the room, all slightly smiling, mouths closed
         with dissolve
 
