@@ -114,7 +114,7 @@ label v13s29:
     scene v13s29_4c # FPP. Same angle as v13s29_4b, Gary mouth open
     with dissolve
 
-    gary "Well young friend, you paid for for a ticket, but you're getting an experience."
+    gary "Well young friend, you paid for a ticket, but you're getting an experience."
 
     scene v13s29_7 # FPP. MC looking at Amber, Amber looking at Gary, Amber annoyed, Amber mouth open
     with dissolve
