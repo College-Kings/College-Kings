@@ -155,7 +155,7 @@ label v13s57:
     scene v13s57_7b
     with dissolve
 
-    no "Oh, okay Well... Have fun."
+    no "Oh, okay. Well... Have fun."
 
     scene v13s57_7c
     with dissolve
