@@ -344,12 +344,9 @@ label v13s39a:
         u "Wow..."
 
         if chloegf:
-
-            jump to v13s40
-
+            jump v13s40
         else: 
-
-            jump to v13s41
+            jump v13s41
 
     else:
         scene v13s39a_4c
@@ -599,9 +596,7 @@ label v13s39a:
         u "Wow..."
 
         if chloegf:
-
-            jump to v13s40
+            jump v13s40
 
         else: 
-
-            jump to v13s41
+            jump v13s41
