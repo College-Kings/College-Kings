@@ -3,6 +3,20 @@
 # Characters: MC (Outfit: 5), AUBREY (Outfit: 2), LINDSEY (Outfit: 1)
 # Time: Afternoon 
 
+label v13s35_buy_item_dialog(item):
+    scene v13s35_sex_shop
+
+    if mc.money < item.cost + 10:
+        u "Looks like we have a few different options… Oh, and we can’t forget the cuffs"
+    else:
+        $ mc.add_item(item)
+        $ mc.money -= item.cost
+
+    if (10 < x <= 20) and (cuffs not in mc.inventory.items):
+        u "Only have a bit of money left, better get the cuffs."
+
+    call screen v13s35_adult_shop
+
 label v13s35:
     scene v13s35_1 # TPP. Show MC and Aubrey outside the Sex shop, MC slight smile, mouth open, Aubrey slight smile, mouth closed.
     with dissolve
@@ -89,15 +103,13 @@ label v13s35:
         with dissolve
 
         $ mc.money = 100
+        $ freeRoam = True
         call screen v13s35_adult_shop
-
 
         u "(She'll be happy with these, I think. We're gonna have some fun... *Chuckles*)"
 
-
     else:
         u "(Guess I'll just post up here...)"
-
 
     scene v13s35_8 # TPP. Show MC waiting by the door, slight smile, mouth closed.
     with dissolve

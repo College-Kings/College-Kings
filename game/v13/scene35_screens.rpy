@@ -1,7 +1,11 @@
 screen v13s35_adult_shop():
     modal True
 
-    add "#00f"
+    $ tooltip = GetTooltip()
+
+    add "images/v13/Scene35/sex_shop/background.webp"
+
+    text "Money: €{}".format(mc.money) xpos 20 size 50
 
     vbox:
         align (0.5, 0.5)
@@ -10,26 +14,50 @@ screen v13s35_adult_shop():
         hbox:
             spacing 50
 
-            for i in (honey, butt_plug, spankers):
-                button:
-                    xysize (300, 300)
-                    action Function(mc.add_item, i)
-                    background "#fff"
+            imagebutton:
+                idle honey.idle_image
+                hover honey.hover_image
+                action Call("v13s35_buy_item_dialog", honey)
 
-                    vbox:
-                        text i.name color "#000"
-                        text str(i.cost) color "#000"
+            imagebutton:
+                idle butt_plug.idle_image
+                hover butt_plug.hover_image
+                action Call("v13s35_buy_item_dialog", butt_plug)
+
+            imagebutton:
+                idle spankers.idle_image
+                hover spankers.hover_image
+                action Call("v13s35_buy_item_dialog", spankers)
 
         hbox:
             xalign 0.5
             spacing 50
 
-            for i in (cuffs, feather):
-                button:
-                    xysize (300, 300)
-                    action Function(mc.add_item, i)
-                    background "#fff"
+            imagebutton:
+                idle cuffs.idle_image
+                hover cuffs.hover_image
+                action Show("v13s35_end_shopping_confirm")
 
-                    vbox:
-                        text i.name color "#000"
-                        text str(i.cost) color "#000"
+            imagebutton:
+                idle feather.idle_image
+                hover feather.hover_image
+                action Call("v13s35_buy_item_dialog", feather)
+
+
+screen v13s35_end_shopping_confirm():
+    modal True
+
+    use endfrTemplate:
+        text "Are you sure you want to finish shopping?":
+            style "endfree"
+            xalign 0.5
+
+        hbox:
+            align (0.5, 1.0)
+            spacing 200
+
+            textbutton "Yes":
+                action [Hide("v13s35_end_shopping_confirm"), SetVariable("freeRoam", False), Return()]
+                
+            textbutton "No":
+                action Hide("v13s35_end_shopping_confirm")
