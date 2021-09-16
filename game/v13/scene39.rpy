@@ -64,4 +64,4 @@ label v13_hotel_imre:
 
     pause 0.75
 
-    jump v13_scene_39a
+    jump v13s39a
