@@ -128,3 +128,6 @@ define character.tattoo = Character("Tattoo Artist", who_color="#ff1694", who_ou
 
 # 13.0
 define character.luuk = Character("Luuk", who_color="#ff1694", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+
+# 14.0
+define character.ngam = Character("Night Gambler")
