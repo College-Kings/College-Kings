@@ -324,8 +324,12 @@ screen teamCredits():
         vbox:
             spacing 10
 
-            text "Wolf - Transcriber"
+            text "HugeBoiV2 - Transcriber"
             text "Jeffly - Transcriber"
+            text "MegaManX - Transcriber"
+            text "mstep17 - Transcriber"
+            text "SystemFailed - Transcriber"
+            text "Wolf - Transcriber"
             text "Dorkby - Animator"
             text "Wiebley - Renderer"
             text "Ranger - 3d Modeler"
