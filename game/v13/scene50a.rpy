@@ -199,8 +199,8 @@ label v13s50a:
 
     else: # -If coming from Scene 51
 
-    stop music fadeout 3
-    play music "music/v13/Track Scene 49.mp3" fadein 2
+        stop music fadeout 3
+        play music "music/v13/Track Scene 49.mp3" fadein 2
 
         scene v13s50a_13 # TPP Show MC walking into hotel lobby
         with dissolve
