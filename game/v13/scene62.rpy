@@ -7,7 +7,7 @@ label v13s62:
     scene v13s62_1 # FPP. MC looking at the door, lying on his bed, Aubrey and Riley walking in, both worried, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1.5
 
     play music "music/v13/Track Scene 62.mp3" fadein 2
 

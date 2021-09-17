@@ -101,6 +101,8 @@ label v13s61:
 
     play sound "sounds/knock.mp3"
 
+    pause 1.5
+
     stop music fadeout 3
 
     if aubreyrs and rileyrs: 
