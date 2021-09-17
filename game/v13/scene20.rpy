@@ -9,6 +9,8 @@ label v13s20:
 
     play music "music/v13/Track Scene 20.mp3" fadein 2
 
+    play sound "sounds/doorclose.mp3"
+
     u "(Ohhhh shit... I'm gonna fuck some shit up.) *Laughs*"
 
     call screen v13s20_room
@@ -51,7 +53,7 @@ label v13s20_closet:
             scene v13s20clo_5 # TPP. Show MC smirking, looking at the wet clothes, smirking, mouth open
             with dissolve
 
-            u "*Laughs* Shit, man... l. He pisses so many people off, it's only fair he smells like it too. Haha!"
+            u "*Laughs* Shit, man... He pisses so many people off, it's only fair he smells like it too. Haha!"
 
         "That's too far":
 

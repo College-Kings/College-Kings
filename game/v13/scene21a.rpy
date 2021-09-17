@@ -149,7 +149,7 @@ label v13s21a:
     scene v13s21a_13a # TPP. Same as v13s21a_13 Mr. Lee is angrier, yelling, mouth wide open
     with dissolve
 
-    lee "I SAID, REMOVE. YOUR HAND!"
+    lee "I SAID, REMOVE. YOUR. HAND!"
 
     scene v13s21a_12b # TPP. Same as v13s21a_12 Charli's face is shocked, mouth slightly open
     with dissolve

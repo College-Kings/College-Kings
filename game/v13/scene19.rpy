@@ -98,6 +98,7 @@ label v13s19:
 
         u "(Luuk?)"
 
+    play sound "sounds/dooropen.mp3"
     scene v13s19_6b # TPP. Same as v13s19_6, Riley opening the door, both slight smiles, mouths closed
     with dissolve
 
@@ -130,12 +131,11 @@ label v13s19:
 
     ri "*Chuckles* Thank you..."
 
-    play sound "sounds/kiss.mp3"
-
     scene v13s19_8 # TPP. Show Riley kissing MC on the cheek
     with dissolve
-
-    pause
+    play sound "sounds/kiss.mp3"
+    
+    pause 2
 
     scene v13s19_7b
     with dissolve
