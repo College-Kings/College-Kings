@@ -5,6 +5,8 @@
 
 label v13_emmy_sex:
 
+    $ v13_emmysex = True
+
     play music "music/v13/Track Scene 26.mp3" fadein 2
 
     image v13emmha = Movie(play="images/v13/Scene 26/v13emmaha.webm", loop=True, image="images/v13/Scene 26/v13emmahaStart.webm", start_image="images/v13/Scene 26/v13emmahaStart.webm") # emmy giving mc head using her hands as well 
@@ -228,6 +230,8 @@ label v13_emmy_sex:
     with dissolve
 
     pause 0.75
+
+    $ renpy.end_replay()
 
     stop music fadeout 3
 

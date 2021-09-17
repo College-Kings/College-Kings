@@ -4,6 +4,8 @@
 # Time: Late night
 
 label v13s16a:
+    $ v13_rileysex = True
+
     scene v13s16a_1 # FPP Show Riley in bed, MC on top of her and very close to her face. Riley with a sexy smile, mouth open
     with dissolve
 
@@ -252,6 +254,7 @@ label v13s16a:
     with dissolve
 
     u "Yes ma'am. *Chuckles*"
+    $ renpy.end_replay()
 
     scene v13S16A_11 # FPP Show MC turning off the bedside lamp
     with dissolve

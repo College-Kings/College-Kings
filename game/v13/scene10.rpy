@@ -169,10 +169,10 @@ label v13s10:
 
         ry "Hell yeah!"
 
-        scene v12sX_ # -MC and Ryan walk out of the hotel-
-        with dissolve
+        #scene v12sX_ # -MC and Ryan walk out of the hotel-
+        #with dissolve
 
-        pause 0.75
+        #pause 0.75
 
     stop music fadeout 3
     

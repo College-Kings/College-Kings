@@ -569,3 +569,7 @@ default v13_perfume = False
 default v13_hugged_aubrey = False
 default v13s9_go_to_concert = True
 default v13s41_lindsey_points = 0
+default v13_rileysex = False
+default v13_emmysex = False
+default v13_chloesex = False
+default v13_emilysex = False

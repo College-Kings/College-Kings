@@ -461,6 +461,8 @@ label v13s40_end_free_roam:
     $ freeRoam = False
 
     if v13s40_chloe_turned_on == 4:
+        $ v13_chloesex = True
+    
         scene v13s40end_1 # FPP. MC standing next to Chloe, Chloe looking up at MC, Chloe smiling, mouth open
         with dissolve
 
@@ -762,6 +764,8 @@ label v13s40_end_free_roam:
 
         scene v13s40end_20
         with dissolve
+
+        $ renpy.end_replay()
 
         pause 0.75
 
