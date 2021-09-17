@@ -127,7 +127,7 @@ label v13s51_emily_fight:
     scene v13s51_5a # FPP. MC looking in the mirror and Emily standing behind him, mad, shocked, mouth open.
     with dissolve
 
-    u "EMILY!"
+    em "[name]!"
 
     scene v13s51_7 # TPP. MC walks away from the counter/mirror (to leave) past Emily, both mad, both mouths closed.
     with dissolve
