@@ -152,7 +152,7 @@ label v13s20_toothbrush:
     u "Ha... The classic \"toothbrush in the toilet\" trick, shall we?"
 
     menu:
-        "Flush, flush, Motherfucker!":
+        "Flush, flush, motherfucker!":
             scene v13s20brush_4 # TPP. Show MC bending over the toilet, sticking the toothbrush in the toilet, smirking, mouth closed
             with dissolve
 
