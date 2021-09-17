@@ -41,7 +41,7 @@ label v13s29:
         scene v13s29_4a # FPP. Same angle as v13s29_4, Gary hands on hips, unhappy face, mouth open
         with dissolve
 
-        gary "First, I gotta deal with the boring stuff. Who bought their tickets."
+        gary "First, I gotta deal with the boring stuff. Who bought their tickets?"
 
         scene v13s29_3a # TPP. Same angle as v13s29_3, Amber and MC raising their hands, looking at eachother smiling, mouths closed
         with dissolve
@@ -87,7 +87,7 @@ label v13s29:
         scene v13s29_4a
         with dissolve
 
-        gary "First, I gotta deal with the boring stuff. Who bought their tickets."
+        gary "First, I gotta deal with the boring stuff. Who bought their tickets?"
 
         scene v13s29_3b # TPP. Same angle as v13s29_3a, Amber raising her hand looking at Gary, MC raising his hand looking at Gary, Samantha looking at MC, all mouths closed
         with dissolve

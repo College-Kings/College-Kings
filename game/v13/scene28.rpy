@@ -44,7 +44,7 @@ label v13s28:
     scene v13s28_2a
     with dissolve
 
-    u "You're peaking my interest..."
+    u "You're piquing my interest..."
 
     scene v13s28_2b # FPP. Same as v13s28_2a, Amber different pose, slight smile, mouth open.
     with dissolve
