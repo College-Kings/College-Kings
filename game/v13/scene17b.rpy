@@ -19,7 +19,7 @@ label v13s17b:
     scene v13s17b_1b # TPP. Same as v13s17b_1a, MC looking down at his stomach, slightly worried, mouth closed
     with dissolve
 
-    "*Stomach growls*"
+    u "*Stomach growls*"
 
     u "(Fuck, I'm starving. Luuk better have some food today...)"
 

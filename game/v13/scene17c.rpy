@@ -14,7 +14,7 @@ label v13s17c:
     scene v13s17c_1a # TPP. Same as v13s17c_1, show MC slightly startled, looking down at his stomach, mouth closed
     with vpunch
 
-    "*Stomach growls*"
+    u "*Stomach growls*"
 
     u "(Oh, I'm hungry as fuck... Luuk better have some food this morning.)"
 
