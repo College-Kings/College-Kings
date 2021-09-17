@@ -23,7 +23,7 @@ label v13s44:
 
         pause 0.75
 
-    elif laurens:
+    elif laurenrs:
         la "[name]?"
 
         scene v13s44_3 # FPP. MC looking at Lauren, Lauren looking at MC, neutral expression, mouth closed
