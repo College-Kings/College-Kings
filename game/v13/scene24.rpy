@@ -485,7 +485,7 @@ label v13s24:
     scene v13s24_11b
     with dissolve
 
-    ry "You are far from being her type, imre. *Laughs* No woman brings up the idea of having kids if she doesn't want any."
+    ry "You are far from being her type, Imre. *Laughs* No woman brings up the idea of having kids if she doesn't want any."
 
     scene v13s24_10d
     with dissolve
@@ -830,7 +830,7 @@ label v13s24:
     scene v13s24_12a
     with dissolve
 
-    barh "Very well... Lastly, catfish-I mean, imre. *Chuckles* If you'd be willing to go out with imre, please raise your hand."
+    barh "Very well... Lastly, catfish-I mean, Imre. *Chuckles* If you'd be willing to go out with Imre, please raise your hand."
 
     scene v13s24_20f
     with dissolve
