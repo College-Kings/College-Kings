@@ -552,10 +552,10 @@ label v13s40_end_free_roam:
 
         pause
 
-        image v13chlf = Movie(play="images/v13/Scene40/v13chlf.webm", loop=True, image="images/v13/Scene40/v13chlfStart.webp", start_image="images/v13/Scene40/v13chlfStart.webp") # Chloe flatiron
-        image v13chlff = Movie(play="images/v13/Scene40/v13chlff.webm", loop=True, image="images/v13/Scene40/v13chlfStart.webp", start_image="images/v13/Scene40/v13chlfStart.webp") # Chloe flatiron spedup
-        image v13chlf2 = Movie(play="images/v13/Scene40/v13chlf2.webm", loop=True, image="images/v13/Scene40/v13chlf2Start.webp", start_image="images/v13/Scene40/v13chlf2Start.webp") # Chloe flatiron FPP
-        image v13chlf2f = Movie(play="images/v13/Scene40/v13chlf2f.webm", loop=True, image="images/v13/Scene40/v13chlf2Start.webp", start_image="images/v13/Scene40/v13chlf2Start.webp") # Chloe flatiron FPP spedup
+        image v13chlf0 = Movie(play="images/v13/Scene40/v13chlf0.webm", loop=True, image="images/v13/Scene40/v13chlfStart.webp", start_image="images/v13/Scene40/v13chlfStart.webp") # Chloe flatiron
+        image v13chlf0f = Movie(play="images/v13/Scene40/v13chlf0f.webm", loop=True, image="images/v13/Scene40/v13chlfStart.webp", start_image="images/v13/Scene40/v13chlfStart.webp") # Chloe flatiron spedup
+        image v13chlf02 = Movie(play="images/v13/Scene40/v13chlf02.webm", loop=True, image="images/v13/Scene40/v13chlf2Start.webp", start_image="images/v13/Scene40/v13chlf2Start.webp") # Chloe flatiron FPP
+        image v13chlf02f = Movie(play="images/v13/Scene40/v13chlf02f.webm", loop=True, image="images/v13/Scene40/v13chlf2Start.webp", start_image="images/v13/Scene40/v13chlf2Start.webp") # Chloe flatiron FPP spedup
 
         scene v13chlf # Ignore as anim
         with dissolve
