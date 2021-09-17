@@ -577,3 +577,5 @@ default v13s20_bleach_suitcase = False
 default v13s20_frbleach = False
 default v13s20_frcloset = False
 default v13s20_frbrush = False
+default v13s37_frnora = False
+default v13s37_frchris = False
