@@ -14,10 +14,10 @@ label v13s50a:
     play music "music/v13/Track Scene 50a.mp3" fadein 2
     
     # FPP, Emily down on her knees with MC fucking her face
-    image v13emiff = Movie(play="images/v13/Scene 50a/v13emiff.webm", loop=True, image="images/v13/Scene 50a/v13emiffStart.webp", start_image="images/v13/Scene 50a/v13emiffStart.webp")
-    image v13emifff = Movie(play="images/v13/Scene 50a/v13emifff.webm", loop=True, image="images/v13/Scene 50a/v13emiffStart.webp", start_image="images/v13/Scene 50a/v13emiffStart.webp")
-    image v13emiff2 = Movie(play="images/v13/Scene 50a/v13emiff2.webm", loop=True, image="images/v13/Scene 50a/v13emiff2Start.webp", start_image="images/v13/Scene 50a/v13emiff2Start.webp")
-    image v13emiff2f = Movie(play="images/v13/Scene 50a/v13emiff2f.webm", loop=True, image="images/v13/Scene 50a/v13emiff2Start.webp", start_image="images/v13/Scene 50a/v13emiff2Start.webp")
+    image v13emiff = Movie(play="images/v13/Scene50a/v13emiff.webm", loop=True, image="images/v13/Scene50a/v13emiffStart.webp", start_image="images/v13/Scene50a/v13emiffStart.webp")
+    image v13emifff = Movie(play="images/v13/Scene50a/v13emifff.webm", loop=True, image="images/v13/Scene50a/v13emiffStart.webp", start_image="images/v13/Scene50a/v13emiffStart.webp")
+    image v13emiff2 = Movie(play="images/v13/Scene50a/v13emiff2.webm", loop=True, image="images/v13/Scene50a/v13emiff2Start.webp", start_image="images/v13/Scene50a/v13emiff2Start.webp")
+    image v13emiff2f = Movie(play="images/v13/Scene50a/v13emiff2f.webm", loop=True, image="images/v13/Scene50a/v13emiff2Start.webp", start_image="images/v13/Scene50a/v13emiff2Start.webp")
     
     scene v13emiff # MC fucking Emily's face
     with dissolve
@@ -50,8 +50,8 @@ label v13s50a:
     pause 0.5
 
     # FPP, MC grabbing Emily's neck and bending her against the sink as he fucks her
-    image v13s50av2 = Movie(play="images/v13/Scene 50a/v13s50av2.webm", loop=True, image="images/v13/Scene 50a/v13s50av2Start.webp", start_image="images/v13/Scene 50a/v13s50av2Start.webp")
-    image v13s50av2f = Movie(play="images/v13/Scene 50a/v13s50av2f.webm", loop=True, image="images/v13/Scene 50a/v13s50av2Start.webp", start_image="images/v13/Scene 50a/v13s50av2Start.webp")
+    image v13s50av2 = Movie(play="images/v13/Scene50a/v13s50av2.webm", loop=True, image="images/v13/Scene50a/v13s50av2Start.webp", start_image="images/v13/Scene50a/v13s50av2Start.webp")
+    image v13s50av2f = Movie(play="images/v13/Scene50a/v13s50av2f.webm", loop=True, image="images/v13/Scene50a/v13s50av2Start.webp", start_image="images/v13/Scene50a/v13s50av2Start.webp")
 
     scene v13s50av2 # MC fucking Emily against a sink
     with dissolve
@@ -71,8 +71,8 @@ label v13s50a:
     pause 0.5
 
     # FPP, MC bends Emily's head down toward the sink and fucks her from behind
-    image v13s50av3 = Movie(play="images/v13/Scene 50a/v13s50av3.webm", loop=True, image="images/v13/Scene 50a/v13s50av3Start.webp", start_image="images/v13/Scene 50a/v13s50av3Start.webp")
-    image v13s50av3f = Movie(play="images/v13/Scene 50a/v13s50av3f.webm", loop=True, image="images/v13/Scene 50a/v13s50av3Start.webp", start_image="images/v13/Scene 50a/v13s50av3Start.webp")
+    image v13s50av3 = Movie(play="images/v13/Scene50a/v13s50av3.webm", loop=True, image="images/v13/Scene50a/v13s50av3Start.webp", start_image="images/v13/Scene50a/v13s50av3Start.webp")
+    image v13s50av3f = Movie(play="images/v13/Scene50a/v13s50av3f.webm", loop=True, image="images/v13/Scene50a/v13s50av3Start.webp", start_image="images/v13/Scene50a/v13s50av3Start.webp")
 
     scene v13s50av3 # MC fucking Emily from behind over the sink
     with dissolve
@@ -92,8 +92,8 @@ label v13s50a:
     pause 0.5
 
     # FPP, MC wraps his elbow around Emily's neck and pulls her back into an arch as he continues to fuck her from behind
-    image v13s50av4 = Movie(play="images/v13/Scene 50a/v13s50av4.webm", loop=True, image="images/v13/Scene 50a/v13s50av4Start.webp", start_image="images/v13/Scene 50a/v13s50av4Start.webp")
-    image v13s50av4f = Movie(play="images/v13/Scene 50a/v13s50av4f.webm", loop=True, image="images/v13/Scene 50a/v13s50av4Start.webp", start_image="images/v13/Scene 50a/v13s50av4Start.webp")
+    image v13s50av4 = Movie(play="images/v13/Scene50a/v13s50av4.webm", loop=True, image="images/v13/Scene50a/v13s50av4Start.webp", start_image="images/v13/Scene50a/v13s50av4Start.webp")
+    image v13s50av4f = Movie(play="images/v13/Scene50a/v13s50av4f.webm", loop=True, image="images/v13/Scene50a/v13s50av4Start.webp", start_image="images/v13/Scene50a/v13s50av4Start.webp")
 
     scene v13s50av4 # MC fucking Emily from behind with his arm around her neck
     with dissolve
@@ -113,7 +113,7 @@ label v13s50a:
     u "*Moans* Ah, shhhiiiitt... Ha... Dammit Emily!"
 
     stop music fadeout 3
-    play music "music/v13/Track Scene 50_3.mp3" fadein 2
+    play music "music/v13/Track Scene50_3.mp3" fadein 2
 
     scene v13s50a_6a # FPP Same angle as 6, Emily turning her head to look back at MC, Emily smiling with her mouth open
     with dissolve
@@ -155,19 +155,7 @@ label v13s50a:
     stop music fadeout 3
     play music "music/v13/Track Scene 50_2.mp3" fadein 2
 
-    if v13s48_ryan_double_date: # -If coming from Scene 50-
-        label v13s50a_return_after_emily:
-        
-        scene v13s50_22 # TPP. Show MC leaving washroom, neutral expression, mouth closed
-        with dissolve
-
-        pause 0.75
-
-        scene v13s50_23
-        with dissolve
-        
-        pause 0.75
-        
+    if v13s48_ryan_double_date: # -If coming from Scene50-
         scene v13s50a_11 # FPP MC's view of Ryan, sitting at the table alone, looking up at MC, smiling with mouth closed
         with dissolve
 
@@ -224,7 +212,8 @@ label v13s50a:
         else: 
             jump v13s54
 
-    else: # -If coming from Scene 51
+    else: # -If coming from Scene51
+
         stop music fadeout 3
         play music "music/v13/Track Scene 49.mp3" fadein 2
 
