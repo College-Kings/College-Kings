@@ -906,9 +906,6 @@ label v13s24:
 
         barh "We'll give you the choice based on the ladies interested in you, and you'll have a chance to talk one-on-one."
 
-        scene v13s24_25 # FPP. A homecoming like pop up menu appears and MC chooses a date, girls not interested are greyed out and a fourth option of no date is available
-        with dissolve
-
         call screen v13s24_girl
 
 label v13s24_emmy_date:
