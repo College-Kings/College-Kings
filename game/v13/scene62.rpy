@@ -88,8 +88,6 @@ label v13s62:
 
     stop music fadeout 3
 
-    jump end13
-
 label end13:
     if not renpy.loadable("v14/scene1.rpy"):
         scene savenow
