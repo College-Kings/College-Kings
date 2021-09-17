@@ -84,6 +84,8 @@ label v13s40:
     stop music fadeout 3
     play music "music/v13/Track Scene 40_2.mp3" fadein 2
 
+    label v13s40_sg:
+
     scene v13s40_8 # FPP. Chloe wrapping her arms around MC, looking at him, Chloe sexy look, mouth open
     with dissolve
 
