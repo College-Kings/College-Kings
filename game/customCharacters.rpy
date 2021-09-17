@@ -28,7 +28,7 @@ init python:
 
             self.name = name.replace(" ", "_")
             
-            self.messenger = Contact(name, profile_picture)
+            # self.messenger = Contact(name, profile_picture)
 
             self.stats = {
                 "Competitive": None,
