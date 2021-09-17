@@ -176,7 +176,7 @@ label v13s12b:
     scene v13s12b_6b
     with dissolve
 
-    pe "TOLD YOU I WAS A FA, FAN!"
+    pe "TOLD YOU I WAS A FAN!"
 
     scene v13s12b_6c
     with dissolve
@@ -228,19 +228,19 @@ label v13s12b:
 
     pe "You're sweet."
 
-    play sound "sounds/kiss.mp3"
-
     if penelopers:
+
         scene v13s12b_6j # TPP. Same as v13s12b_6b, Penelope kissing MC on the lips
         with dissolve
+        play sound "sounds/kiss.mp3"
 
-        pause
+        pause 1.5
     
     else:
         scene v13s12b_6k # TPP. Same as v13s12b_6j, Penelope kissing MC on the cheek
         with dissolve
-
-        pause
+        play sound "sounds/kiss.mp3"
+        pause 1
 
     scene v13s12b_6b
     with dissolve
@@ -280,7 +280,7 @@ label v13s12b:
     scene v13s12b_9 # TPP. Penelope on MC's shoulder's, random guy bumping into him, show Penelope slightly unbalancing on MC's shoulder
     with dissolve
     
-    unknown "Oh shit, sorry man"
+    unknown "Oh shit, sorry man."
 
     menu (fail_label="v13s12b_failed_timer"):
         "Steady":
@@ -295,17 +295,19 @@ label v13s12b:
                     stop music fadeout 3
                     play music "music/v13/Track Scene 12b_2.mp3" fadein 2
 
-                    polly "THIS GIRL HERE KNOWS ALL OF THE DAMN LYRICS! *Laughs* WHAT'S YOUR name, SWEETNESS?"
+                    #polly "THIS GIRL HERE KNOWS ALL OF THE DAMN LYRICS! *Laughs* WHAT'S YOUR NAME, SWEETNESS?"
+                    polly "THIS GIRL HERE KNOWS ALL OF THE DAMN LYRICS! *Laughs*"
 
-                    scene v13s12b_10 # TPP. Close up of Penelope's face, Polly is putting the mic up to Penelope's mouth (show only the mic and hand of Polly). Penelope smiling, mouth open
-                    with dissolve
+                    #scene v13s12b_10 # TPP. Close up of Penelope's face, Polly is putting the mic up to Penelope's mouth (show only the mic and hand of Polly). Penelope smiling, mouth open
+                    #with dissolve
 
-                    pe "I-I... I'm Penelope."
+                    #pe "I-I... I'm Penelope."
 
                     scene v13s12b_7b
                     with dissolve
                     
-                    polly "That's hot, babe! You and your barstool there, be sure to come hang backstage."
+                    #polly "That's hot, babe! You and your barstool there, be sure to come hang backstage."
+                    polly "You and your barstool there, be sure to come hang backstage."
 
                     scene v13s12b_10
                     with dissolve
@@ -387,10 +389,11 @@ label v13s12b_failed_timer:
     scene v13s12b_8c # TPP. Same as v13s12b_8b, Penelope falling off MC's shoulders
     with dissolve
 
-    pause
+    pause 1.25
 
     scene v13s12b_13 # FPP. MC looking at Penelope, she's on the floor, very embarassed, in pain, mouth closed
-    with dissolve
+    with vpunch
+    play sound "sounds/fall.mp3"
 
     u "Oh shit! I'm so sorry, Penelope... I-"
 
