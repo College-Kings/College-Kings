@@ -905,6 +905,7 @@ label v13s24:
     else:
 
         barh "We'll give you the choice based on the ladies interested in you, and you'll have a chance to talk one-on-one."
+        scene black
 
         call screen v13s24_girl
 

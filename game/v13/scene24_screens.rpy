@@ -1,5 +1,21 @@
 screen v13s24_girl():
-    add im.Blur("images/v13/scene24/v13s24_12a.webp", 5)
+
+    if not emmyrs and not kourtneyrs and not aryssars:
+        add im.Blur("images/v13/scene24/v13s24_20a.webp", 5)
+    elif emmyrs and kourtneyrs and aryssars:
+        add im.Blur("images/v13/scene24/v13s24_20b.webp", 5)
+    elif emmyrs and kourtneyrs:
+        add im.Blur("images/v13/scene24/v13s24_20c.webp", 5)
+    elif emmyrs and aryssars:
+        add im.Blur("images/v13/scene24/v13s24_20d.webp", 5)
+    elif kourtneyrs and aryssars:
+        add im.Blur("images/v13/scene24/v13s24_20e.webp", 5)
+    elif emmyrs:
+        add im.Blur("images/v13/scene24/v13s24_20f.webp", 5)
+    elif kourtneyrs:
+        add im.Blur("images/v13/scene24/v13s24_20g.webp", 5)
+    elif aryssars:
+        add im.Blur("images/v13/scene24/v13s24_20h.webp", 5)
 
     hbox:
         align (0.5, 0.5)
