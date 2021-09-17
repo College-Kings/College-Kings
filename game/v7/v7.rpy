@@ -16543,6 +16543,13 @@ label fr4lockerroomchloe:
 
                         jump fr4penelopedatechloe
 
+                    elif hcGirl == "emily":
+                        u "(I should probably get back to Emily.)"
+
+                        scene sfr4em20
+                        with fade
+                        jump fr4emilydate
+
                 "Let's get out of here.":
                     $ addPoint("tm")
 
