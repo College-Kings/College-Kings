@@ -377,6 +377,9 @@ label v13s50:
             
             u "(Damn, psycho. I thought no meant no!)"
 
+            if v13s48_ryan_double_date:
+                jump v13s50a_return_after_emily
+
             scene v13s50_21
             with dissolve
 

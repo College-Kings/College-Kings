@@ -157,12 +157,12 @@ label v13s51_emily_fight:
     scene v13s51_8b # FPP. Emily, begins taking off/lower her top to show her breasts, mad, mouth closed.    
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v13s51_8c # FPP. Same as v13s51_8b, but Emily's breast exposed, hands reaching toward MC. 
     with dissolve
 
-    pause 0.75
+    pause 1.5
 
     scene v13s51_9 # TPP. Emily, breasts exposed, arms slightly extended,one hand on each side of MC's chest, with the wall behind MC. Emily mad, MC confused, both mouths closed
     with dissolve
@@ -273,7 +273,5 @@ label v13s51_emily_fight:
                 jump v13s54 
             
         "Fuck Emily":
-
             stop music fadeout 3
-            
             jump v13s50a

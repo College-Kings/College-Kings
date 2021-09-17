@@ -156,6 +156,18 @@ label v13s50a:
     play music "music/v13/Track Scene 50_2.mp3" fadein 2
 
     if v13s48_ryan_double_date: # -If coming from Scene 50-
+        label v13s50a_return_after_emily:
+        
+        scene v13s50_22 # TPP. Show MC leaving washroom, neutral expression, mouth closed
+        with dissolve
+
+        pause 0.75
+
+        scene v13s50_23
+        with dissolve
+        
+        pause 0.75
+        
         scene v13s50a_11 # FPP MC's view of Ryan, sitting at the table alone, looking up at MC, smiling with mouth closed
         with dissolve
 
@@ -213,7 +225,6 @@ label v13s50a:
             jump v13s54
 
     else: # -If coming from Scene 51
-
         stop music fadeout 3
         play music "music/v13/Track Scene 49.mp3" fadein 2
 

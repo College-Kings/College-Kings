@@ -42,7 +42,6 @@ label v13s48:
     au "Great! Thank you..."
 
     if s12v32_get_aubrey_flowers:
-
         scene v13s48_3 # FPP. Show Aubrey turning her back to the MC and walking towards the water, slight smile, mouth closed.
         with dissolve
 
