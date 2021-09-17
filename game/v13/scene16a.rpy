@@ -223,7 +223,7 @@ label v13s16a:
     scene v13s16a_8a # FPP Same as 8, Riley's mouth open
     with dissolve
 
-    ri "I'm glad I could make it up to you...,"
+    ri "I'm glad I could make it up to you..."
 
     scene v13s16a_8b # FPP Same angle as 8, Riley with one eyebrow raised, mouth open
     with dissolve
