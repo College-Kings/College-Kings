@@ -51,7 +51,7 @@ label v13s55:
     scene v13s55_3
     with dissolve
 
-    u "Oh, I was thinking it was Teacher Appreciation week or something. *Chuckles*"
+    u "Oh, I was thinking it was Teacher Appreciation Week or something. *Chuckles*"
 
     scene v13s55_3a
     with dissolve
