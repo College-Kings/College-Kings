@@ -9,6 +9,8 @@ label v13s49:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 49.mp3" fadein 2
+
     scene v13s49_2 # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open.
     with dissolve
 
@@ -61,6 +63,8 @@ label v13s49:
 
         pause 0.75
 
+        stop music fadeout 3
+
         jump v13s50
   
     elif not v13s48_ryan_double_date and emily_europe:
@@ -74,9 +78,13 @@ label v13s49:
 
         pause 0.75
 
+        stop music fadeout 3
+
         jump v13s51_emily_fight
 
     else:
+        stop music fadeout 3
+        
         if chloegf:
             jump v13s52
         elif rileyrs:

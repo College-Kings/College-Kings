@@ -9,6 +9,8 @@ label v13s25b:
     
     ary "Doing this in person is so much better than chatting online. I feel as if there's so much more of a connection."
 
+    play music "music/v13/Track Scene 25.mp3" fadein 2
+
     scene v13s25b_2 # FPP. MC looking at Aryssa, Aryssa slight smile, mouth closed 
     with dissolve
 
@@ -261,5 +263,7 @@ label v13s25b:
     with fade
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s27

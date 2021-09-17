@@ -9,6 +9,8 @@ label v13s60:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 60_1.mp3" fadein 2
+
     scene v13s60_2 # TPP. Show MC and Aubrey standing still in a different part of the woods, both slight smile, mouth closed.
     with fade
 
@@ -74,6 +76,9 @@ label v13s60:
 
     pause
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 60_2.mp3" fadein 2
+
     scene v13s60_7 # TPP. Show MC holding his head and rolling slightly to the left, in pain expression, mouth closed.
     with dissolve
 
@@ -117,5 +122,9 @@ label v13s60:
 
     scene v13s60_9a # TPP. Same as v13s60_9a, Aubrey holding up MC.
     with dissolve
+
+    pause 0.75
+
+    stop music fadeout 3
 
     jump v13s61

@@ -4,6 +4,9 @@
 # Time: Night
 
 label v13s32:
+
+    play music "music/v13/Track Scene 32.mp3" fadein 2
+
     if not v13_lauren_smoke:
         scene v13s32_1 # TPP. Show MC, Lauren and Amber walking into the room, all slightly smiling, mouths closed
         with dissolve
@@ -114,5 +117,7 @@ label v13s32:
     with fade
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s33

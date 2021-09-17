@@ -9,6 +9,8 @@ label v13s62a:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 62a.mp3" fadein 2
+
     scene v13s62a_2 # FPP. Lindsey standing next to MC, grabbing his hand, sexy expression, mouth open
     with dissolve
 
@@ -80,5 +82,7 @@ label v13s62a:
     with dissolve
 
     pause
+
+    stop music fadeout 3
 
     jump end13

@@ -9,6 +9,8 @@ label v13s24:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 24_1.mp3" fadein 2
+
     scene v13s24_2 # TPP. show imre and ryan standing next to each other on MC's left and barhost on MC's right, imre slight anger mouth open, ryan slight smile mouth closed, barhost slight smile mouth open
     with dissolve
 
@@ -252,6 +254,9 @@ label v13s24:
     with dissolve
 
     barh "The first woman is coming in, stand tall gentlemen! For Emmy has arrived!"
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 24_2.mp3" fadein 2
 
     scene v13s24_13 # FPP. emmy walks in, slight smile, mouth closed
     with dissolve

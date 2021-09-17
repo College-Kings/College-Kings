@@ -11,6 +11,8 @@ label v13s14a:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 14a_1.mp3" fadein 2
+
     scene v13s14a_2 # FPP MC's view as he looks around the club
     with dissolve
 
@@ -246,6 +248,9 @@ label v13s14a:
 
     au "Haha!"
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 14a_2.mp3" fadein 2
+
     # -The song changes to something slow and romantic-
     scene v13s14a_14 # TPP Show MC and Aubrey both looking up as if focussing on the song that just came on
     with dissolve
@@ -288,6 +293,9 @@ label v13s14a:
 
             u "Yeah, it's not too far."
 
+            stop music fadeout 3
+            play music "music/v13/Track Scene 12a_2.mp3" fadein 2
+
             scene v13s14a_15 # TPP Show MC and Aubrey walking along the streets of Amsterdam late at night
             with dissolve
 
@@ -297,6 +305,9 @@ label v13s14a:
             with dissolve
 
             pause 0.75
+
+            stop music fadeout 3
+            play music "music/v13/Track Scene 12a_1.mp3" fadein 2
 
             scene v13s14a_17 # FPP Show Aubrey, in hotel lobby, now speaking with MC, Aubrey smiling with mouth open
             with dissolve
@@ -322,6 +333,8 @@ label v13s14a:
             with dissolve
 
             pause 0.75
+
+            stop music fadeout 3
 
             if v11_riley_roomate:
                 jump v13s15a
@@ -385,6 +398,9 @@ label v13s14a:
 
             u "Sure, c'mon..."
 
+            stop music fadeout 3
+            play music "music/v13/Track Scene 12a_2.mp3" fadein 2
+
             scene v13s14a_15
             with dissolve
 
@@ -394,6 +410,9 @@ label v13s14a:
             with dissolve
 
             pause 0.75
+
+            stop music fadeout 3
+            play music "music/v13/Track Scene 12a_1.mp3" fadein 2
 
             scene v13s14a_17
             with dissolve
@@ -480,6 +499,8 @@ label v13s14a:
             with dissolve
 
             pause 0.75
+
+            stop music fadeout 3
             
             if v11_riley_roomate:
                 jump v13s15a

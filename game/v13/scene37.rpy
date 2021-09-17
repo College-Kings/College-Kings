@@ -9,6 +9,8 @@ label v13s37:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 37_1.mp3" fadein 2
+
     scene v13s37_2 # FPP. Same positioning as v13s37_1, MC looking at Lindsey, Lindsey looking at Chris' direction (Only Lindsey in shot), Lindsey slight smile, mouth open
     with dissolve
 
@@ -106,6 +108,9 @@ label v13s37:
     with dissolve
 
     ch "Let's go enjoy ourselves, people."
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 37_2.mp3" fadein 2
 
     $ freeRoam = True
 
@@ -963,6 +968,8 @@ label v13s37_end:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     $ freeRoam = False
     jump v13_walk_imre

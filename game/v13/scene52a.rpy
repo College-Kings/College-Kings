@@ -9,6 +9,8 @@ label v13s52a:
 
     cl "Hey, wake up. *Chuckles*"
 
+    play music "music/v13/Track Scene 52a.mp3" fadein 2
+
     scene v13s52a_1a # FPP. Same as 1, mouth closed
     with dissolve
 
@@ -72,5 +74,9 @@ label v13s52a:
 
     scene v13s52a_5 # TPP. MC arriving in the hote lobby
     with dissolve
+
+    pause 0.75
+
+    stop music fadeout 3
 
     jump v13s55

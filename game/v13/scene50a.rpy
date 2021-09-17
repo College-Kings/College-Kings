@@ -8,6 +8,8 @@ label v13s50a:
     with dissolve
 
     pause 0.5
+
+    play music "music/v13/Track Scene 50a_1.mp3" fadein 2
     
     # FPP, Emily down on her knees with MC fucking her face
     image v13s50av1 = Movie(play="images/v13/Scene 50a/v13s50av1.webm", loop=True, image="images/v13/Scene 50a/v13s50av1Start.webp", start_image="images/v13/Scene 50a/v13s50av1Start.webp")
@@ -98,6 +100,9 @@ label v13s50a:
 
     u "*Moans* Ah, shhhiiiitt... Ha... Dammit Emily!"
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 50_3.mp3" fadein 2
+
     scene v13s50a_6a # FPP Same angle as 6, Emily turning her head to look back at MC, Emily smiling with her mouth open
     with dissolve
 
@@ -131,6 +136,9 @@ label v13s50a:
     # -MC leaves the bathroom with Emily standing there naked-
 
     u "(It's kinda fucked up to just bang her, say that and walk out, but... *Sighs*)"
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 50_2.mp3" fadein 2
 
     if v13s48_ryan_double_date: # -If coming from Scene 50-
         scene v13s50a_11 # FPP MC's view of Ryan, sitting at the table alone, looking up at MC, smiling with mouth closed
@@ -170,10 +178,15 @@ label v13s50a:
 
         u "(Yikes...) Sounds good man."
 
+        stop music fadeout 3
+        play music "music/v13/Track Scene 49.mp3" fadein 2
+
         scene v13s50a_12 # FPP MC walking into the hotel lobby
         with dissolve
 
         u "*Sighs* Poor guy."
+
+        stop music fadeout 3
 
         if chloegf:
             jump v13s52
@@ -186,10 +199,15 @@ label v13s50a:
 
     else: # -If coming from Scene 51
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 49.mp3" fadein 2
+
         scene v13s50a_13 # TPP Show MC walking into hotel lobby
         with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
 
         if chloegf:
             jump v13s52

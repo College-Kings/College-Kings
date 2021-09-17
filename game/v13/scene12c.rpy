@@ -9,6 +9,8 @@ label v13s12c:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 12a_1.mp3" fadein 2
+
     scene v13s12c_2 # FPP. Aubrey in front of MC, looking at MC, Aubrey slight smile, mouth open
     with dissolve
 
@@ -83,6 +85,9 @@ label v13s12c:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 12c_1.mp3" fadein 2
 
     scene v13s12c_5 # TPP. Show Aubrey pulling MC by the arm, they are going onto the roof, running, both smiling, mouths closed
     with dissolve
@@ -413,6 +418,8 @@ label v13s12c:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     if v11_riley_roomate:
         jump v13s15a

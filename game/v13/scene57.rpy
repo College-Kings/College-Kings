@@ -9,6 +9,8 @@ label v13s57:
 
     u "You wanna call her down here?"
 
+    play music "music/v13/Track Scene 57.mp3" fadein 2
+
     scene v13s57_1a # FPP. Same angle v13s57_1, Nora looking down at phone, Nora mouth open
     with dissolve
 
@@ -171,5 +173,7 @@ label v13s57:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s58

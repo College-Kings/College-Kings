@@ -9,6 +9,8 @@ label v13s40:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 40_1.mp3" fadein 2
+
     scene v13s40_2 # FPP. MC and Chloe looking at each other, in lobby, Chloe slight smile, mouth open
     with dissolve
 
@@ -78,6 +80,9 @@ label v13s40:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 40_2.mp3" fadein 2
 
     scene v13s40_8 # FPP. Chloe wrapping her arms around MC, looking at him, Chloe sexy look, mouth open
     with dissolve
@@ -648,6 +653,9 @@ label v13s40_end_free_roam:
 
         pause
 
+        stop music fadeout 3
+        play music "music/v13/Track Scene 40_3.mp3" fadein 2
+
         scene v13s40end_15 # FPP. MC laying on top of Chloe, looking into her eyes, Chloe smiling, mouth open
         with dissolve
 
@@ -718,6 +726,8 @@ label v13s40_end_free_roam:
 
         pause 0.75
 
+        stop music fadeout 3
+
         jump v13s40a
 
     else:
@@ -725,6 +735,9 @@ label v13s40_end_free_roam:
         with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
+        play music "music/v13/Track Scene 40_3.mp3" fadein 2
 
         scene v13s40end_3
         with dissolve
@@ -750,5 +763,7 @@ label v13s40_end_free_roam:
         with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
 
         jump v13s40a

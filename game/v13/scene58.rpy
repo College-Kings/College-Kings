@@ -9,6 +9,8 @@ label v13s58:
 
     u "(There goes all my money.)"
 
+    play music "music/v13/Track Scene 58.mp3" fadein 2
+
     scene v13s58_1a # TPP. Same as v13s58_1, slight smile, mouth open.
     with dissolve
 
@@ -87,6 +89,8 @@ label v13s58:
 
         scene v13s58_5 # TPP. Show Aubrey and MC at the canoeing location holding hands, both slight smile, mouths closed.
         with fade
+
+        pause 0.75
     else: 
         pause 0.75
 
@@ -103,4 +107,8 @@ label v13s58:
         scene v13s58_5b # TPP. Show Aubrey and MC at the canoeing location not holding hand, both slight smile, mouths closed.
         with fade
 
+        pause 0.75
+
+    stop music fadeout 3
+    
     jump v13s59

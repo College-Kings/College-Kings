@@ -8,6 +8,8 @@ label v13s51_emily_fight:
     with dissolve
 
     pause 0.75
+
+    play music "music/v13/Track Scene 51.mp3" fadein 2
     
     scene v13s51_2 # FPP. Same positioning as v13s51_1, Emily mouth open, mad
     with dissolve
@@ -259,6 +261,8 @@ label v13s51_emily_fight:
 
             pause 0.75
 
+            stop music fadeout 3
+
             if chloegf:
                 jump v13s52
 
@@ -269,4 +273,7 @@ label v13s51_emily_fight:
                 jump v13s54 
             
         "Fuck Emily":
+
+            stop music fadeout 3
+            
             jump v13s50a

@@ -9,6 +9,8 @@ label v13s16a:
 
     ri "I want you to do whatever you want to me..."
 
+    play music "music/v13/Track Scene 16a_1.mp3" fadein 2
+
     scene v13s16a_1a # FPP Same as 1, Riley's mouth closed
     with dissolve
 
@@ -171,6 +173,9 @@ label v13s16a:
 
     pause
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 16a_2.mp3" fadein 2
+
     scene v13s16a_7 # TPP Riley laying on her back, smiling with mouth open, looking at MC, MC on top of Riley, smiling at her. Both shiny with sweat
     with dissolve
 
@@ -232,4 +237,6 @@ label v13s16a:
 
         u "(Hopefully Lauren thinks something important came up.)"
 
+    stop music fadeout 3
+    
     jump v13s17a

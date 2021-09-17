@@ -12,6 +12,8 @@ label v13s13a:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 13a_1.mp3" fadein 2
+
     scene v13s13a_2 # FPP Show Polly sitting down near MC and Aubrey but not looking their way, Polly looking tired with mouth open
     with dissolve
 
@@ -354,6 +356,8 @@ label v13s13a:
 
         pause 0.5
 
+        stop music fadeout 3
+
         jump v13s14a
 
     else: # -If don't have after party access or not invited
@@ -392,6 +396,9 @@ label v13s13a:
 
         pause 0.5
 
+        stop music fadeout 3
+        play music "music/v13/Track Scene 12a_2.mp3" fadein 2
+
         scene v13s13a_16 # TPP Show MC and Aubrey getting into a cab
         with dissolve
 
@@ -404,6 +411,9 @@ label v13s13a:
 
         scene v13s13a_18 # TPP Show Aubrey giving MC a hug in hotel lobby. Aubrey is smiling with her mouth open
         with dissolve
+
+        stop music fadeout 3
+        play music "music/v13/Track Scene 12a_1.mp3" fadein 2
         
         au "That was... a once in a lifetime opportunity. Thank you so much."
 
@@ -426,6 +436,8 @@ label v13s13a:
         with fade
 
         pause 0.75
+
+        stop music fadeout 3
 
         if v11_riley_roomate:
             jump v13s15a

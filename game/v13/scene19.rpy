@@ -9,6 +9,8 @@ label v13s19:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 19_1.mp3" fadein 2
+
     scene v13s19_1a # FPP. Same as v13s19_1, Riley now standing close to MC, mouth open, slight smile
     with dissolve
 
@@ -43,6 +45,9 @@ label v13s19:
     with fade
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 19_2.mp3" fadein 2
 
     scene v13s19_6 # TPP. Show Riley trying to open the door to Charli's room (it's locked) MC standing next to her, both slight smiles, mouths closed
     with dissolve
@@ -141,5 +146,7 @@ label v13s19:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s20

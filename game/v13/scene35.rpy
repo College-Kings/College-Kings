@@ -20,6 +20,8 @@ label v13s35:
 
     u "Aubrey wanting to go to a sex shop? Not surprised. *Chuckles*"
 
+    play music "music/v13/Track Scene 35_1.mp3" fadein 2
+
     scene v13s35_2 # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open.
     with dissolve
 
@@ -79,6 +81,9 @@ label v13s35:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 35_2.mp3" fadein 2
 
     scene v13s35_4a # TPP. Same as v13s35_4, Show Aubrey walking away from mc.
     with dissolve
@@ -158,6 +163,9 @@ label v13s35:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 35_3.mp3" fadein 2
+
     scene v13s35_11 # FPP. Show Lindsey walking towards MC and Aubrey on the side walk, all slight smile, mouths closed
     with dissolve
 
@@ -213,6 +221,8 @@ label v13s35:
 
     # -Aubrey walks off-
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13_walk_garden
     # -Transition to Scene 36-

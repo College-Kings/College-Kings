@@ -5,6 +5,8 @@
 
 label v13_emmy_sex:
 
+    play music "music/v13/Track Scene 26.mp3" fadein 2
+
     image v13emmha = Movie(play="images/v13/Scene 26/v13emmaha.webm", loop=True, image="images/v13/Scene 26/v13emmahaStart.webm", start_image="images/v13/Scene 26/v13emmahaStart.webm") # emmy giving mc head using her hands as well 
     image v13emmhaf = Movie(play="images/v13/Scene 26/v13emmahaf.webm", loop=True, image="images/v13/Scene 26/v13emmahafStart.webp", start_image="images/v13/Scene 26/v13emmahafStart.webp") # emmy giving mc head using her hands as well spedup
     image v13emmha2 = Movie(play="images/v13/Scene 26/v13emmaha2.webm", loop=True, image="images/v13/Scene 26/v13emmaha2Start.webp", start_image="images/v13/Scene 26/v13emmaha2Start.webp") # emmy giving mc head using her hands as well TPP 2
@@ -226,5 +228,7 @@ label v13_emmy_sex:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s27

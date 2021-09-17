@@ -9,6 +9,8 @@ label v13s10:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 10.mp3" fadein 2
+
     scene v13s10_2 # FPP Chloe walking away while Ryan walks toward MC
     with dissolve
 
@@ -172,5 +174,6 @@ label v13s10:
 
         pause 0.75
 
-    # -Regardless of everything scene continued
+    stop music fadeout 3
+    
     jump v13s11 # NEED PROPER VARIABLE NAME

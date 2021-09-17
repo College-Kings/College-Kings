@@ -9,6 +9,8 @@ label v13s9:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 9_1.mp3" fadein 2
+
     scene v13s9_1a # TPP. Same as v13s9_1 but MC is halfway down the hall and he last room door at the end of the hall is halfway open. 
     with dissolve
 
@@ -127,6 +129,9 @@ label v13s9:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 9_2.mp3" fadein 2
 
     scene v13s9_11 # FPP. MC watching Chloe lean against the guard rail, slightly looking downward at the water, neutral expression, mouth open.
     with dissolve
@@ -712,6 +717,8 @@ label v13s9_continue: # -Regardless of all scene continued
     scene v13s9_19 # TPP. Same as v13s9_9 but the opposite direction - MC and Chloe walking away from the pier.    
     with dissolve
 
-    pause 0.75 
+    pause 0.75
+
+    stop music fadeout 3
 
     jump v13s10

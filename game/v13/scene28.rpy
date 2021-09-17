@@ -9,6 +9,8 @@ label v13s28:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 28.mp3" fadein 2
+
     scene v13s28_1a # TPP. Show MC standing at the bus station with Amber, both slight smile, mouth closed.
     with dissolve
 
@@ -255,6 +257,8 @@ label v13s28:
 
         pause 0.75
 
+        stop music fadeout 3
+
         jump v13s29
     
     else: 
@@ -267,5 +271,7 @@ label v13s28:
         with fade
 
         pause 0.75
+
+        stop music fadeout 3
 
         jump v13s29

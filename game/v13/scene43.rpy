@@ -7,7 +7,9 @@ label v13s43:
     scene v13s43_1 # TPP. Show MC in bed, phone buzzing on nightstand, eyes closed, neutral expression, mouth closed
     with dissolve
 
-    pause 0.75 
+    pause 0.75
+
+    play music "music/v13/Track Scene 43.mp3" fadein 2 
 
     scene v13s43_2 # TPP. Show MCs phone ringing, MC in the process of picking it up from nightstand, neutral expression, mouth closed 
     with dissolve
@@ -185,6 +187,8 @@ label v13s43:
 
         pause 0.75 
 
+        stop music fadeout 3
+
         jump v13s44
 
     else:
@@ -297,6 +301,8 @@ label v13s43:
         scene v13s43_10 
         with dissolve
 
-        pause 0.75 
+        pause 0.75
+
+        stop music fadeout 3
 
         jump v13s44

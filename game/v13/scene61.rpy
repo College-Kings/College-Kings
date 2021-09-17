@@ -9,6 +9,8 @@ label v13s61:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 61.mp3" fadein 2
+
     scene v13s61_2 # TPP. Show Aubrey helping MC into bed, MC pain expression, mouth closed, Aubrey worried expresion, mouth closed.
     with dissolve
 
@@ -98,6 +100,8 @@ label v13s61:
     with fade
 
     play sound "sounds/knock.mp3"
+
+    stop music fadeout 3
 
     if aubreyrs and rileyrs: 
         jump v13s62 

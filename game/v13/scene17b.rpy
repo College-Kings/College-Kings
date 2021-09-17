@@ -9,6 +9,8 @@ label v13s17b:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 17.mp3" fadein 2
+
     scene v13s17b_1a # TPP. Same as v13s17b_1, MC wakes up, Lauren still sleeping, MC looking at Lauren, MC slight smile, mouth closed
     with dissolve
 
@@ -60,5 +62,7 @@ label v13s17b:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s18

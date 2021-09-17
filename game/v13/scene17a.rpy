@@ -9,6 +9,8 @@ label v13s17a:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 17.mp3" fadein 2
+
     scene v13s17a_1a # TPP. Same as v13ss17a_1, MC awake, looking at Riley, both slightly smiling, mouths closed
     with dissolve
 
@@ -108,5 +110,7 @@ label v13s17a:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s18

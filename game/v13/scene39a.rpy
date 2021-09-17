@@ -9,6 +9,8 @@ label v13s39a:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 39a.mp3" fadein 2
+
     scene v13s39a_2 # TPP. show mc racking the balls on the pool table
     with dissolve
 
@@ -343,6 +345,8 @@ label v13s39a:
 
         u "Wow..."
 
+        stop music fadeout 3
+
         if chloegf:
             jump v13s40
         else: 
@@ -594,6 +598,8 @@ label v13s39a:
         with dissolve
 
         u "Wow..."
+
+        stop music fadeout 3
 
         if chloegf:
             jump v13s40

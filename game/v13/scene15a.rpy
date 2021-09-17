@@ -19,6 +19,8 @@ label v13s15a:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 15.mp3" fadein 2
+
     scene v13s15a_2 # TPP. Show MC standing in front of the door, in the room, MC neutral expression, mouth closed, room is dark
     with dissolve
 
@@ -181,6 +183,8 @@ label v13s15a:
 
                 pause 0.75
 
+                stop music fadeout 3
+
                 jump v13s16a
 
             "Cuddle with Lauren":
@@ -215,6 +219,8 @@ label v13s15a:
                 with dissolve
 
                 pause 0.75
+
+                stop music fadeout 3
 
                 jump v13s16
 
@@ -276,6 +282,8 @@ label v13s15a:
 
                 pause 0.75
 
+                stop music fadeout 3
+
                 jump v13s16a
 
             "Go to sleep":
@@ -313,5 +321,7 @@ label v13s15a:
                 with dissolve
 
                 pause 0.75
+
+                stop music fadeout 3
 
                 jump v13s17c

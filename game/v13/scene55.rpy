@@ -11,6 +11,8 @@ label v13s55:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 55.mp3" fadein 2
+
     scene v13s55_2 # TPP. MC sitting next to Nora, Nora looking at MC, slight smile, mouth closed.
     with dissolve
 
@@ -202,5 +204,9 @@ label v13s55:
 
     scene v13s55_7a # TPP. Same as v13s55_6, Hotel entrance open MC and Nora walking out, both slight smile, mouth closed.
     with dissolve
+
+    pause 0.75
+
+    stop music fadeout 3
 
     jump v13s56

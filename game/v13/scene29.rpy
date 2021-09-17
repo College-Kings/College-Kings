@@ -4,6 +4,9 @@
 # Time: Evening
 
 label v13s29:
+
+    play music "music/v13/Track Scene 29_1.mp3" fadein 2
+
     if not v13_invite_samantha:
         scene v13s29_1: # TPP. Show Amber and MC on sidewalk in front of The AmsterDamn, all smiling, all mouths closed (Weed Bus)
         with dissolve
@@ -425,6 +428,9 @@ label v13s29:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 29_2.mp3" fadein 2
+
     scene v13s29_25 # TPP. Show Amber grabbing bags of weed from the bus, preparing to escape, Amber mouth open
     with dissolve
 
@@ -502,6 +508,9 @@ label v13s29:
     scene v13s29_32 # FPP. MC looking at Amber, Amber sweaty, Amber tired, Amber looking and facing away from MC, Amber mouth open heavily breathing
     with dissolve
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 29_3.mp3" fadein 2
+
     u "*Heavy breathing* Fuck!"
 
     scene v13s29_32a # FPP. Same as v13s29_32, Amber facing and looking at MC, Amber mouth open speaking
@@ -576,5 +585,7 @@ label v13s29:
         with fade
 
         pause 0.75
+
+    stop music fadeout 3
 
     jump v13s30

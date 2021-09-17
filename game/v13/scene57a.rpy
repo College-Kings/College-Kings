@@ -9,6 +9,8 @@ label v13s57a:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 57.mp3" fadein 2
+
     scene v13s57a_2 # FPP. Nora looking at MC, MC looking at Nora, Nora slight smile, mouth closed.
     with dissolve
 
@@ -242,5 +244,9 @@ label v13s57a:
 
     scene v13s57a_7 # FPP. Show Nora walking away from MC, slight smile, mouth closed.
     with dissolve
+
+    pause 0.75
+
+    stop music fadeout 3
 
     jump v13s58

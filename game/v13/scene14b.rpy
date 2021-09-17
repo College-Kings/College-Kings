@@ -11,6 +11,8 @@ label v13s14b:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 14a_1.mp3" fadein 2
+
     scene v13s14b_2 # FPP MC's view as he looks around the club
     with dissolve
     
@@ -417,10 +419,16 @@ label v13s14b:
 
     u "Haha... Yes Penelope, you're flying."
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 12a_2.mp3" fadein 2
+
     scene v13s14b_25 # TPP Show MC helping Penelope into the car. Penelope's eyes still closed
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 14b.mp3" fadein 2
 
     scene v13s14b_26 # TPP Show MC carrying Penelope through the hotel lobby
     with dissolve
@@ -436,6 +444,8 @@ label v13s14b:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     if v11_riley_roomate:
         jump v13s15a

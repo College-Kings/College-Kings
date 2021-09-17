@@ -9,6 +9,8 @@ label v13s25a:
 
     kourt "This is so nice. It's almost like something out of a movie."
 
+    play music "music/v13/Track Scene 25.mp3" fadein 2
+
     scene v13s25a_2 # FPP. Mc and are sitting down facing each other, Kourtney slight smiles, mouth closed
     with dissolve
 
@@ -115,6 +117,8 @@ label v13s25a:
             with dissolve
 
             pause 0.75
+
+            stop music fadeout 3
 
             jump v13s27
 
@@ -276,5 +280,7 @@ label v13s25a:
             with dissolve
 
             pause 0.75
+
+            stop music fadeout 3
 
             jump v13s27

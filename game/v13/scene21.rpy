@@ -9,6 +9,8 @@ label v13s21:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 21.mp3" fadein 2
+
     scene v13s21_1a # TPP. Same as v13s21_1 but with MC and Riley closer to the counter.
     with dissolve
 
@@ -353,5 +355,7 @@ label v13s21:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
     
     jump v13s22 # Scene 22 
