@@ -3,6 +3,8 @@
 # Characters: MC (Outfit: 9), RILEY (Outfit: 2)
 # Time: Morning
 
+default v13s20_bleach_suitcase = False
+
 label v13s20:
     scene v13s20_1 # TPP. Show MC walking into Charli's room, smirking, mouth closed
     with dissolve
@@ -79,6 +81,8 @@ label v13s20_bleach:
 
     menu:
         "Bleach his suitcase":
+
+            $ v13s20_bleach_suitcase = True
 
             u "(Riley said this suitcase is special to him, and that bleach would be a good addition to it... Let's find out.) *Laughs*"
 
