@@ -436,12 +436,12 @@ label v13s39a:
 
                 u "*Chuckles*"
 
-        scene v13s39a_4i
+        scene v13s39a_4e
         with dissolve
 
         ry "Man... It looks like Nora and Chris are gonna be back on the market here soon."
 
-        scene v13s39a_4h
+        scene v13s39a_4f
         with dissolve
 
         u "Maybe, maybe not. Why do you bring it up? Trying to take Chris to dinner? *Chuckles*"
