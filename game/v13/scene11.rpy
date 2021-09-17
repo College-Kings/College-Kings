@@ -419,7 +419,7 @@ label v13_imre_continue:
         scene v13s11_23i # FPP. Ash grabs one of imre's hand, imre looks freaked out, ash mouth opened
         with dissolve
 
-        ash "Imre, please"
+        ash "Imre, please."
 
         scene v13s11_23j # FPP. Imre uppercuts ashton
         with dissolve

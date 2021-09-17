@@ -404,7 +404,7 @@ label v13s41:
             scene v13s41_14g
             with dissolve
 
-            u "In the long run, they're just hurting themselves"
+            u "In the long run, they're just hurting themselves."
 
             scene v13s41_14j
             with dissolve
@@ -487,7 +487,7 @@ label v13s41:
             scene v13s41_14f
             with dissolve
 
-            li "Awww"
+            li "Awww..."
 
             scene v13s41_14g
             with dissolve
