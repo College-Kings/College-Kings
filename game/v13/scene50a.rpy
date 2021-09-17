@@ -12,20 +12,30 @@ label v13s50a:
     play music "music/v13/Track Scene 50a.mp3" fadein 2
     
     # FPP, Emily down on her knees with MC fucking her face
-    image v13s50av1 = Movie(play="images/v13/Scene 50a/v13s50av1.webm", loop=True, image="images/v13/Scene 50a/v13s50av1Start.webp", start_image="images/v13/Scene 50a/v13s50av1Start.webp")
-    image v13s50av1f = Movie(play="images/v13/Scene 50a/v13s50av1f.webm", loop=True, image="images/v13/Scene 50a/v13s50av1Start.webp", start_image="images/v13/Scene 50a/v13s50av1Start.webp")
-
-    scene v13s50av1 # MC fucking Emily's face
+    image v13emiff = Movie(play="images/v13/Scene 50a/v13emiff.webm", loop=True, image="images/v13/Scene 50a/v13emiffStart.webp", start_image="images/v13/Scene 50a/v13emiffStart.webp")
+    image v13emifff = Movie(play="images/v13/Scene 50a/v13emifff.webm", loop=True, image="images/v13/Scene 50a/v13emiffStart.webp", start_image="images/v13/Scene 50a/v13emiffStart.webp")
+    image v13emiff2 = Movie(play="images/v13/Scene 50a/v13emiff2.webm", loop=True, image="images/v13/Scene 50a/v13emiff2Start.webp", start_image="images/v13/Scene 50a/v13emiff2Start.webp")
+    image v13emiff2f = Movie(play="images/v13/Scene 50a/v13emiff2f.webm", loop=True, image="images/v13/Scene 50a/v13emiff2Start.webp", start_image="images/v13/Scene 50a/v13emiff2Start.webp")
+    
+    scene v13emiff # MC fucking Emily's face
     with dissolve
 
     u "There you go!"
 
+    scene v13emifff 
+    with dissolve
+
     u "This is what you wanted, right?"
 
-    scene v13s50av1f # Same but faster
+    scene v13emiff2 # Same but faster
     with dissolve
 
     em "Mmmghhh! *Gag*"
+
+    scene v13emiff2f
+    with dissolve
+
+    em "*Gags*"
 
     scene v13s50a_2 # TPP Show MC roughly pulling Emily's shirt off while she gets up to her feet
     with dissolve
