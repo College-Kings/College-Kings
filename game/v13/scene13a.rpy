@@ -229,16 +229,16 @@ label v13s13a:
     au "CHEESE!"
     polly "CHEESE!"
 
-    scene v13s13a_5a
-    with dissolve
-
-    pause
     play sound "sounds/capture.mp3"
+    scene v13s13a_5b
+    with flash
+
+    pause 2.5
 
     scene v13s13a_6 # TPP Show MC giving Polly her phone back while Aubrey moves back to sit by MC
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v13s13a_2i # FPP Same angle as 2, Polly looking down at her phone, smiling with mouth open
     with dissolve
