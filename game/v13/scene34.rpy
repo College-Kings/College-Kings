@@ -396,6 +396,7 @@ label v13s34:
     menu:
         "I'm a liar":
         
+            $ grant_achievement("an_honest_liar")
             u "Yeah, I'm a liar. But who isn't?"
 
             clipps "Good people."
