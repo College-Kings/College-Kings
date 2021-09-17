@@ -117,8 +117,10 @@ label v13s37:
     call screen v13s37_garden1
 
 label v13s37_nora:
+    $ v13s37_frnora = True
+
     scene v13s37no_1 # TPP. Show MC approaching Nora, she's sitting and hiding behind a big rock, hiding, both mouths closed, MC slight smile, Nora slightly sad
-    with dissolve
+    #with dissolve
 
     pause 0.75
 
@@ -564,9 +566,11 @@ label v13s37_nora:
     call screen v13s37_garden1
 
 label v13s37_chris:
+    $ v13s37_frchris = True
+
     if chrismad:
         scene v13s37ch_1 # TPP. Show MC walking over to Chris, Chris slightly angry, mouth closed, MC slight smile, mouth closed
-        with dissolve
+        #with dissolve
 
         pause 0.75
 
@@ -608,7 +612,7 @@ label v13s37_chris:
     else:
         if not v12_nora_sex:
             scene v13s37ch_1a # TPP. Same as v13s37ch_1, Chris slightly sad, MC slight smile
-            with dissolve
+            #with dissolve
 
             pause 0.75
 
@@ -689,7 +693,7 @@ label v13s37_chris:
 
         else:
             scene v13s37ch_1a 
-            with dissolve
+            #with dissolve
 
             pause 0.75
 
@@ -854,12 +858,13 @@ label v13s37_chris:
 
             pause 0.75
 
-
     call screen v13s37_garden1
 
 label v13s37_end:
+    $ freeRoam = False
+
     scene v13s37end_1 # TPP. Show MC walking over to Lindsey, both slight smiles, mouths closed
-    with dissolve
+    #with dissolve
 
     pause 0.75
 
@@ -971,5 +976,4 @@ label v13s37_end:
 
     stop music fadeout 3
 
-    $ freeRoam = False
     jump v13_walk_imre
