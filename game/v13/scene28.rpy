@@ -242,20 +242,20 @@ label v13s28:
 
                 u "Alright. (I hope so.)"
 
-        scene v13s28_10 # TPP. Show Samantha starting to sit next to MC and Amber, all slight smile, all mouths closed
-        with dissolve
+                scene v13s28_10 # TPP. Show Samantha starting to sit next to MC and Amber, all slight smile, all mouths closed
+                with dissolve
 
-        pause 0.75
+                pause 0.75
 
-        scene v13s28_10a # TPP. Same as v13s28_10. Samantha sitting with MC and Amber.
-        with dissolve
+                scene v13s28_10a # TPP. Same as v13s28_10. Samantha sitting with MC and Amber.
+                with dissolve
 
-        pause 1.00
+                pause 1.00
 
-        scene v13s28_10b # TPP. Same as v13s28_10a, all different pose.
-        with fade
+                scene v13s28_10b # TPP. Same as v13s28_10a, all different pose.
+                with fade
 
-        pause 0.75
+                pause 0.75
 
         stop music fadeout 3
 
