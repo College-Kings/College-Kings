@@ -3,8 +3,6 @@
 # Characters: AMBER (Outfit: 1), MC (Outfit: 9), SAMANTHA (Outfit: 1)
 # Time: Evening
 
-default v13_invite_samantha = False
-
 label v13s28:
     scene v13s28_1 # TPP. Show MC walking towards Amber at the bus station, slight smile, mouth closed
     with dissolve
