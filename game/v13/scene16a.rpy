@@ -256,7 +256,7 @@ label v13s16a:
     u "Yes ma'am. *Chuckles*"
     $ renpy.end_replay()
 
-    scene v13S16A_11 # FPP Show MC turning off the bedside lamp
+    scene v13s16a_11 # FPP Show MC turning off the bedside lamp
     with dissolve
 
     pause 0.75
