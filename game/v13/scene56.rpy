@@ -86,12 +86,12 @@ label v13s56:
     scene v13s56_3 # TPP. Nora and MC walk into the gift shop from the sidewalk their backs are turned to the camera
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s56_4 # TPP. Inside the gift shop, MC and Nora start looking around the store and they are looking at different things
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s56_5 # FPP when Nora sees something and bends over with her ass toward MC
     with dissolve
