@@ -21,7 +21,7 @@ init python:
 label v12s32:
 # -MC and Aubrey are walking along the sidewalk-
 
-    scene v12s32_1 # TPP show mc and aubrey walking along the side walk, make sure Aubrey is on the side of the wall , not the street for easier backgrounds in FPP. Mc looking at aubrey, mc mouth open, curious
+    scene v12s32_1 # TPP show mc and aubrey walking along the side walk, make sure Aubrey is on the side of the wall, not the street for easier backgrounds in FPP. Mc looking at aubrey, mc mouth open, curious
     with fade
 
     u "So, where exactly are they doing the shoot?"
@@ -31,12 +31,12 @@ label v12s32:
     scene v12s32_2 # FPP, close up AUbrey looking at mc, but walking forwards. Aubrey slightly nervous not smiling, mouth open
     with dissolve
 
-    au "It's at an actual photography studio."
+    au "It's at a Lew's store."
 
     scene v12s32_2a # same as 2, mouth closed
     with dissolve
 
-    u "*Laughs* Tell me why I thought it was just at a random Lew's store..."
+    u "*Laughs* Tell me why I thought it was just at a random photography studio..."
 
     scene v12s32_2
     with dissolve
@@ -227,7 +227,7 @@ label v12s32:
 
     u "Nope."
 
-    scene v12s32_14 # FPP close up Aubrey, (who's standing next to mc) looking at mc , slightly concerned for mc, whispering, mouth open
+    scene v12s32_14 # FPP close up Aubrey, (who's standing next to mc) looking at mc, slightly concerned for mc, whispering, mouth open
     with dissolve
 
     au "*Whisper* You're cool with all this right? I'm sorry if you feel kind of thrown into this, I just really wanted to do this shoot and I was too shy to come by myself."
@@ -411,7 +411,7 @@ label v12s32:
 
     pg "Ahh, my goddess..."
 
-    scene v12s32_20a # FPP close up Aubrey, who's standing next to you ,looking at naomi (off-screne), mouth close, slightly concerned expression
+    scene v12s32_20a # FPP close up Aubrey, who's standing next to you,looking at naomi (off-screne), mouth close, slightly concerned expression
     with dissolve
 
     u "She's confident!"
@@ -586,7 +586,7 @@ label v12s32:
 
     pg "I don't know! This all seems all nat-u-ral!"
 
-    scene v12s32_24a # same 24, aubrey looking at the camera (off-screen), mouth open , smiling
+    scene v12s32_24a # same 24, aubrey looking at the camera (off-screen), mouth open, smiling
     with dissolve
 
     au "*Chuckles* Can I see the pictures?"
@@ -622,14 +622,14 @@ label v12s32:
 
         u "Of course. I'll always be there for you."
 
-    scene v12s32_28 # FPP close up photographer looking at Aubrey (off-camera, standing near mc), mouth open ,thinking smile
+    scene v12s32_28 # FPP close up photographer looking at Aubrey (off-camera, standing near mc), mouth open,thinking smile
     with dissolve
 
     pg "Have you thought about going into modeling? I think you'd make an amazing Kiwii model... And if you're worried about looking like you're riding your sister's road to fame, don't."
 
     pg "With pictures like this... You'll make it all on your own."
 
-    scene v12s32_29 # FPP close up Aubrey, mouth open, smile , looking at photographer (off-camera)
+    scene v12s32_29 # FPP close up Aubrey, mouth open, smile, looking at photographer (off-camera)
     with dissolve
 
     au "I've always thought about it, even before my sister started modeling I wanted to, but when she started and blew up I never thought I could match her speed. I mean, look at her."
@@ -660,7 +660,7 @@ label v12s32:
 
     u "Aubrey, you looked good doing that. Really fucking good!"
 
-    scene v12s32_29d # same 29b, looking at mc (into the camera), cute smile ,mouth open
+    scene v12s32_29d # same 29b, looking at mc (into the camera), cute smile,mouth open
     with dissolve
 
     au "Do you... You actually mean that?"
@@ -856,7 +856,7 @@ label v12s32:
 
             pause 0.75
 
-            scene v12s32_35 # FPP, mc extends Aubrey flowers (she doesn't take them yet) (show her face like a normal close up , looking at mc) (just show the flowers handed in first person), AUbrey surprised smiled
+            scene v12s32_35 # FPP, mc extends Aubrey flowers (she doesn't take them yet) (show her face like a normal close up, looking at mc) (just show the flowers handed in first person), AUbrey surprised smiled
             with dissolve
 
             u "Your first gift as a future Kiwii modeling star!"
@@ -876,12 +876,12 @@ label v12s32:
 
             au "For once [name], I'll try not to be an asshole. *Chuckles*"
 
-            scene v12s32_35d # same as 35, aubrey takes the flowers , mouth open, genuine smle
+            scene v12s32_35d # same as 35, aubrey takes the flowers, mouth open, genuine smle
             with dissolve
 
             au "Thank you."
 
-            scene v12s32_35e # same 35d , mouth closed
+            scene v12s32_35e # same 35d, mouth closed
             with dissolve
 
             u "You're very welcome."

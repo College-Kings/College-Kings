@@ -1552,7 +1552,7 @@ label v12s18_bet: # END OF FREE ROAM
         with flash
 
         $ grant_achievement("a_bet_is_a_bet")
-        pause 1.25
+        pause
 
         scene v12slpbet5 
         with dissolve
@@ -1645,17 +1645,17 @@ label v12s18_bet: # END OF FREE ROAM
         scene v12slpbet8 # TPP. Show Amber posing for her naked pic, she's smiling, mouth closed
         with flash
 
-        pause 0.75
+        pause 1.25
 
         scene v12slpbet8a # TPP. Same as v12slpbet8, different pose
         with flash
 
-        pause 0.75
+        pause
 
         scene v12slpbet3d
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
         scene v12slpbet3b
         with dissolve
@@ -1724,6 +1724,8 @@ label v12s18_bet: # END OF FREE ROAM
     with dissolve
 
     u "Oh my god... *Chuckles*"
+
+    call screen phone
 
     scene v12slpbet3b
     with dissolve
