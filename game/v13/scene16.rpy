@@ -9,6 +9,8 @@ label v13s16:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 16.mp3" fadein 2
+
     scene v13s16_2 # TPP. Show MC entering Lauren's room, slight smile, mouth closed
     with dissolve
 
@@ -261,5 +263,7 @@ label v13s16:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s17b

@@ -140,3 +140,18 @@ init python:
     Achievement("inside_job", "Have sex with Nora as a Wolf")
     Achievement("all_is_fair_in_love_and_war", "Have sex with Nora as an Ape")
     Achievement("city_of_love", "Have sex with Lauren, Nora, Ms. Rose and Lindsey")
+    
+    #v13.0
+    Achievement("indecisive", "Help neither Chloe nor Lindsey")
+    Achievement("funny_night", "Yes Penelope, you're flying")
+    Achievement("gentlemen_prefer_gingers", "Bail on Lauren's cuddles")
+    Achievement("flush_flush", "Flush Charli's toothbrush")
+    Achievement("he_is_done", "Expose Charli")
+    Achievement("urbanizer_womanizer", "Tell Emmy and Lauren you're a city man")
+    Achievement("romantic_heart", "Score a date with Kourtney")
+    Achievement("bro_moment", "Cameron recognizes your pure intentions")
+    Achievement("an_honest_liar", "Own up to Clipps")
+    Achievement("we_like_them_wild", "Reveal a new side of Chloe")
+    Achievement("voyeur", "What are they doing over there?")
+    Achievement("dammit_emily", "Angry bathroom sex")
+    Achievement("calm_down_big_fella", "Respect Nora")

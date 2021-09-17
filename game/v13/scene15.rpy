@@ -19,6 +19,8 @@ label v13s15:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 15.mp3" fadein 2
+
     scene v13s15_2 # TPP. Show MC standing in front of the door, in the room, MC neutral expression, mouth closed, room is dark
     with dissolve
 
@@ -102,17 +104,36 @@ label v13s15:
 
         pause 0.75
 
-        scene v13s15_8 # TPP. Show MC getting into his bed, slight smile, mouth closed
-        with dissolve
+        if not chloegf:
+            scene v13s15_8 # TPP. Show MC getting into his bed, slight smile, mouth closed
+            with dissolve
 
-        pause 0.75
+            pause 0.75
 
-        scene v13s15_9 # TPP. Show MC sleeping, room is dark
-        with fade
+            scene v13s15_9 # TPP. Show MC sleeping, room is dark
+            with fade
 
-        pause 0.75
+            pause 0.75
 
-        jump v13s17c
+            stop music fadeout 3
+
+            jump v13s17c
+        
+        else:
+            scene v13s15_98
+            with dissolve
+
+            pause 0.75
+
+            scene v13s15_99
+            with fade
+
+            pause 0.75
+
+            stop music fadeout 3
+
+            jump v13s17
+
     elif not v11_aubrey_sex:
         play sound "sounds/vibrate.mp3"
 
@@ -150,6 +171,8 @@ label v13s15:
                 with dissolve
 
                 pause 0.75
+
+                stop music fadeout 3
 
                 jump v13s16
 
@@ -219,6 +242,8 @@ label v13s15:
 
                 pause 0.75
 
+                stop music fadeout 3
+
                 jump v13s16
 
         else:
@@ -227,14 +252,32 @@ label v13s15:
 
             pause 0.75
 
-            scene v13s15_8 
-            with dissolve
+            if not chloegf:
+                scene v13s15_8
+                with dissolve
 
-            pause 0.75
+                pause 0.75
 
-            scene v13s15_9
-            with fade
+                scene v13s15_9
+                with fade
 
-            pause 0.75
+                pause 0.75
 
-            jump v13s17c
+                stop music fadeout 3
+
+                jump v13s17c
+            
+            else:
+                scene v13s15_98
+                with dissolve
+
+                pause 0.75
+
+                scene v13s15_99
+                with fade
+
+                pause 0.75
+
+                stop music fadeout 3
+
+                jump v13s17

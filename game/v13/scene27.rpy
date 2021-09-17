@@ -9,6 +9,8 @@ label v13s27:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 27_1.mp3" fadein 2
+
     play sound "sounds/vibrate.mp3"
 
     scene v13s27_1a # TPP. Same as v13s27_1, MC slightly surprised, going to grab his phone, mouth closed
@@ -59,6 +61,9 @@ label v13s27:
     with fade
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 27_2.mp3" fadein 2
 
     scene v13s27_4 # TPP. Show MC walking in the street, slight smile, mouth closed
     with fade

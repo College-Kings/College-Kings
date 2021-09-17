@@ -9,6 +9,8 @@ label v13s46:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 46_1.mp3" fadein 2
+
     scene v13s46_2 # FPP. Show lauren riding her bike on MC's right side, slight smile, mouth closed, forest background
     with dissolve
 
@@ -37,6 +39,9 @@ label v13s46:
         "I'm a city man":
             scene v13s46_2
             with dissolve
+
+            if v13_told_emmy_city:
+                $ grant_achievement("urbanizer_womanizer")
 
             u "I don't hate being outside, but... *Chuckles* I'm definitely a city person."
 
@@ -144,6 +149,9 @@ label v13s46:
     with dissolve
 
     la "*Whispers* Shhh! Slow down! Stop here..."
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 46_2.mp3" fadein 2
 
     scene v13s46_4b # FPP. same as v13s46_4 Lauren looks off into the background and then her face shows shock
     with dissolve
@@ -373,6 +381,9 @@ label v13s46:
 
     la "*Whispers* [name], stop! For real, stop..."
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 46_3.mp3" fadein 2
+
     scene v13s46_2c # FPP. same as v13s46_2b MC stops his bike, and gets off his bike
     with dissolve
 
@@ -436,7 +447,8 @@ label v13s46:
         "Haha, okay":
             scene v13s46_13b
             with dissolve
-                            
+
+            $ grant_achievement("voyeur")
             u "Okay, lead the way. *Chuckles*"
 
             scene v13s46_15 # FPP. MC and Lauren sneak closer to the couple, just laurens head is visible full smile mouth open looking at the couple and find them fully nude in the arch sex position, male body should resemble an arch, google search sex position 173 arch, first google image for reference
@@ -514,5 +526,7 @@ label v13s46:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s47

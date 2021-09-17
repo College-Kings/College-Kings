@@ -9,6 +9,8 @@ label v13s23:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 23.mp3" fadein 2
+
     scene v13s23_2 # TPP. Show MC, Ryan and Imre standing in front of the simplr bar, all slightly smiling, mouths closed
     with dissolve
 
@@ -99,5 +101,7 @@ label v13s23:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s24

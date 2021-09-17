@@ -9,6 +9,8 @@ label v13s28:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 28.mp3" fadein 2
+
     scene v13s28_1a # TPP. Show MC standing at the bus station with Amber, both slight smile, mouth closed.
     with dissolve
 
@@ -42,7 +44,7 @@ label v13s28:
     scene v13s28_2a
     with dissolve
 
-    u "You're peaking my interest..."
+    u "You're piquing my interest..."
 
     scene v13s28_2b # FPP. Same as v13s28_2a, Amber different pose, slight smile, mouth open.
     with dissolve
@@ -240,20 +242,22 @@ label v13s28:
 
                 u "Alright. (I hope so.)"
 
-        scene v13s28_10 # TPP. Show Samantha starting to sit next to MC and Amber, all slight smile, all mouths closed
-        with dissolve
+                scene v13s28_10 # TPP. Show Samantha starting to sit next to MC and Amber, all slight smile, all mouths closed
+                with dissolve
 
-        pause 0.75
+                pause 0.75
 
-        scene v13s28_10a # TPP. Same as v13s28_10. Samantha sitting with MC and Amber.
-        with dissolve
+                scene v13s28_10a # TPP. Same as v13s28_10. Samantha sitting with MC and Amber.
+                with dissolve
 
-        pause 1.00
+                pause 1.00
 
-        scene v13s28_10b # TPP. Same as v13s28_10a, all different pose.
-        with fade
+                scene v13s28_10b # TPP. Same as v13s28_10a, all different pose.
+                with fade
 
-        pause 0.75
+                pause 0.75
+
+        stop music fadeout 3
 
         jump v13s29
     
@@ -267,5 +271,7 @@ label v13s28:
         with fade
 
         pause 0.75
+
+        stop music fadeout 3
 
         jump v13s29

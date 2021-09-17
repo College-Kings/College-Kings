@@ -11,6 +11,8 @@ label v13s55:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 55.mp3" fadein 2
+
     scene v13s55_2 # TPP. MC sitting next to Nora, Nora looking at MC, slight smile, mouth closed.
     with dissolve
 
@@ -49,7 +51,7 @@ label v13s55:
     scene v13s55_3
     with dissolve
 
-    u "Oh, I was thinking it was Teacher Appreciation week or something. *Chuckles*"
+    u "Oh, I was thinking it was Teacher Appreciation Week or something. *Chuckles*"
 
     scene v13s55_3a
     with dissolve
@@ -167,21 +169,21 @@ label v13s55:
 
         u "One sec, let me check this."
 
+        $ contact_Ryan.newMessage(_("Hey man, had a chat with Emily. The date went great!"), queue=False)
+        $ contact_Ryan.addReply(_("Yeah man, it was nice. Thanks again for setting it up."), func=None)
+        $ contact_Ryan.addReply(_("For sure dude, I had a really fun night."), func=None) 
+        $ contact_Ryan.newMessage(_("We'll have to do it again soon."))
+        $ contact_Ryan.addReply(_("Sure man."), func=None)
+
         scene v13s55_5 # TPP. Show MC holding his phone sitting down, slight smile, mouth closed.
         with dissolve
 
-        call screen phone 
-
-        # Note for Peace: Don't know how to do phone replies so below is most likely not correct <3
-        $ contact_Ryan.newMessage("Hey man, had a chat with Emily. The date went great! ", queue=True)
-        # -If TEXT1
-        $ contact_Ryan.addReply("Yeah man, it was nice. Thanks again for setting it up. ", func=None)
-
-        # -If TEXT2
-        $ contact_Ryan.addReply("For sure dude, I had a really fun night. ", func=None) 
-
-        $ contact_Ryan.newMessage("We'll have to do it again soon. ", queue=True)
-        $ contact_Ryan.addReply("Sure man. ", func=None)
+        label v13s49_PhoneContinueRyan:
+            if contact_Ryan.replies:
+                call screen phone
+            if contact_Ryan.replies:
+                u "(I should check my phone.)"
+                jump v13s49_PhoneContinueRyan 
        
         u "(Poor guy...)"
 
@@ -202,5 +204,9 @@ label v13s55:
 
     scene v13s55_7a # TPP. Same as v13s55_6, Hotel entrance open MC and Nora walking out, both slight smile, mouth closed.
     with dissolve
+
+    pause 0.75
+
+    stop music fadeout 3
 
     jump v13s56

@@ -4,10 +4,14 @@
 # Time: Late night
 
 label v13s16a:
+    $ v13_rileysex = True
+
     scene v13s16a_1 # FPP Show Riley in bed, MC on top of her and very close to her face. Riley with a sexy smile, mouth open
     with dissolve
 
     ri "I want you to do whatever you want to me..."
+
+    play music "music/v13/Track Scene 16a_1.mp3" fadein 2
 
     scene v13s16a_1a # FPP Same as 1, Riley's mouth closed
     with dissolve
@@ -25,26 +29,34 @@ label v13s16a:
     u "Ha... Say no more."
 
     # -Position 1, MC holds Riley's wrists together with one hand and holds her head with the other as he fucks her face-
-    image v13s16av1 = Movie(play="images/v13/Scene 16a/v13s16av1.webm", loop=True, image="images/v13/Scene 16a/v13s16av1Start.webp", start_image="images/v13/Scene 16a/v13s16av1Start.webp")
-    image v13s16av1f = Movie(play="images/v13/Scene 16a/v13s16av1f.webm", loop=True, image="images/v13/Scene 16a/v13s16av1Startf.webp", start_image="images/v13/Scene 16a/v13s16av1Startf.webp")
-
-    scene v13s16av1 # Riley giving MC a rough blowjob
+    image v13rilff = Movie(play="images/v13/Scene16a/v13rilff.webm", loop=True, image="images/v13/Scene16a/v13rilffStart.webp", start_image="images/v13/Scene16a/v13rilffStart.webp")
+    image v13rilfff = Movie(play="images/v13/Scene16a/v13rilfff.webm", loop=True, image="images/v13/Scene16a/v13rilffStart.webp", start_image="images/v13/Scene16a/v13rilffStart.webp")
+    image v13rilff2 = Movie(play="images/v13/Scene16a/v13rilff2.webm", loop=True, image="images/v13/Scene16a/v13rilff2Start.webp", start_image="images/v13/Scene16a/v13rilff2Start.webp")
+    image v13rilff2f = Movie(play="images/v13/Scene16a/v13rilff2f.webm", loop=True, image="images/v13/Scene16a/v13rilff2Start.webp", start_image="images/v13/Scene16a/v13rilff2Start.webp")
+    
+    scene v13rilff # Riley giving MC a rough blowjob
     with dissolve
     
     ri "*Moans*"
 
     u "Ohhh, fuck..."
 
+    scene v13rilfff
+    with dissolve
+
     ri "*Gags*"
 
     u "Is this... *Moans* Hard enough for you?"
 
-    scene v13s16av1f # Same as v1, but faster
+    scene v13rilff2 # Same as v1, but faster
     with dissolve
 
     ri "*Gags* Mmnnnnghh!!"
 
     u "(Damn! She can be as bitchy as she wants if this is the end result...)"
+
+    scene v13rilff2f
+    with dissolve
 
     u "Fuck, yes..."
 
@@ -94,70 +106,94 @@ label v13s16a:
     u "*Chuckles* Good girl..."
 
     # -Position 2, while she's laying on her back, MC puts one of Riley's legs in the air and fucks her-
-    image v13s16av2 = Movie(play="images/v13/Scene 16a/v13s16av2.webm", loop=True, image="images/v13/Scene 16a/v13s16av2Start.webp", start_image="images/v13/Scene 16a/v13s16av2Start.webp")
-    image v13s16av2f = Movie(play="images/v13/Scene 16a/v13s16av2f.webm", loop=True, image="images/v13/Scene 16a/v13s16av2Start.webp", start_image="images/v13/Scene 16a/v13s16av2Start.webp")
+    image v13rilts = Movie(play="images/v13/Scene16a/v13rilts.webm", loop=True, image="images/v13/Scene16a/v13riltsStart.webp", start_image="images/v13/Scene16a/v13riltsStart.webp")
+    image v13riltsf = Movie(play="images/v13/Scene16a/v13riltsf.webm", loop=True, image="images/v13/Scene16a/v13riltsStart.webp", start_image="images/v13/Scene16a/v13riltsStart.webp")
+    image v13rilts2 = Movie(play="images/v13/Scene16a/v13rilts2.webm", loop=True, image="images/v13/Scene16a/v13rilts2Start.webp", start_image="images/v13/Scene16a/v13rilts2Start.webp")
+    image v13rilts2f = Movie(play="images/v13/Scene16a/v13rilts2f.webm", loop=True, image="images/v13/Scene16a/v13rilts2Start.webp", start_image="images/v13/Scene16a/v13rilts2Start.webp")
 
-    scene v13s16av2 # MC holding one of Riley's legs in the air and fucking her
+    scene v13rilts # MC holding one of Riley's legs in the air and fucking her
     with dissolve
     
     ri "*Moans* Y-yes! Just like that..."
 
     u "Mmm, fuck... (She's so fucking wet...)"
 
+    scene v13riltsf 
+    with dissolve
+
     u "*Moans* You really missed me, huh?"
 
-    scene v13s16a_v2f # Same as v2, but faster
+    scene v13rilts2 # Same as v2, but faster
     with dissolve
 
     ri "Y-yes... I... *Moans* I've been waiting for this... For you..."
 
+    scene v13rilts2f
+    with dissolve
+
     u "*Chuckles* I think you're enjoying this a little too much..."
 
     # -Position 3, MC grabs both of Riley's ankles and holds them toward her head as he fucks her-
-    image v13s16av3 = Movie(play="images/v13/Scene 16a/v13s16av3.webm", loop=True, image="images/v13/Scene 16a/v13s16av3Start.webp", start_image="images/v13/Scene 16a/v13s16av3Start.webp")
-    image v13s16av3f = Movie(play="images/v13/Scene 16a/v13s16av3f.webm", loop=True, image="images/v13/Scene 16a/v13s16av3Start.webp", start_image="images/v13/Scene 16a/v13s16av3Start.webp")
+    image v13riltp = Movie(play="images/v13/Scene16a/v13riltp.webm", loop=True, image="images/v13/Scene16a/v13riltpStart.webp", start_image="images/v13/Scene16a/v13riltpStart.webp")
+    image v13riltpf = Movie(play="images/v13/Scene16a/v13riltpf.webm", loop=True, image="images/v13/Scene16a/v13riltpStart.webp", start_image="images/v13/Scene16a/v13riltpStart.webp")
+    image v13riltp2 = Movie(play="images/v13/Scene16a/v13riltp2.webm", loop=True, image="images/v13/Scene16a/v13riltp2Start.webp", start_image="images/v13/Scene16a/v13riltp2Start.webp")
+    image v13riltp2f = Movie(play="images/v13/Scene16a/v13riltp2f.webm", loop=True, image="images/v13/Scene16a/v13riltp2Start.webp", start_image="images/v13/Scene16a/v13riltp2Start.webp")
 
-    scene v13s16av3 # MC holding Riley's ankles up near her head as he fucks her
+    scene v13riltp # MC holding Riley's ankles up near her head as he fucks her
     with dissolve
 
     ri "Haaaaa... Oh my- *Gasps*"
 
     u "Damnit Riley... You're so fucking tight for me right now."
 
+    scene v13riltpf
+    with dissolve
+
     ri "*Moans* You like that, huh? [name]?"
 
     u "*Moans* (Holy... Shit...)"
 
-    scene v13s16av3f # Same as v3, but faster
+    scene v13riltp2
     with dissolve
 
     ri "Please... S-say that... *Moans* Tell me how much you like it, [name]."
+
+    scene v13riltp2f
+    with dissolve
 
     u "Mmm... I'm absolutely loving it!"
 
     ri "*Moans* Give me... M-more... *Chuckles*"
 
     # -Position 4, MC puts her legs down on each side of him and raises her up from her waist causing her back to arch as he fucks her-
-    image v13s16av4 = Movie(play="images/v13/Scene 16a/v13s16av4.webm", loop=True, image="images/v13/Scene 16a/v13s16av4Start.webp", start_image="images/v13/Scene 16a/v13s16av4Start.webp")
-    image v13s16av4f = Movie(play="images/v13/Scene 16a/v13s16av4f.webm", loop=True, image="images/v13/Scene 16a/v13s16av4Start.webp", start_image="images/v13/Scene 16a/v13s16av4Start.webp")
+    image v13riltb = Movie(play="images/v13/Scene16a/v13riltb.webm", loop=True, image="images/v13/Scene16a/v13riltbStart.webp", start_image="images/v13/Scene16a/v13riltbStart.webp")
+    image v13riltbf = Movie(play="images/v13/Scene16a/v13riltbf.webm", loop=True, image="images/v13/Scene16a/v13riltbStart.webp", start_image="images/v13/Scene16a/v13riltbStart.webp")
+    image v13riltb2 = Movie(play="images/v13/Scene16a/v13riltb2.webm", loop=True, image="images/v13/Scene16a/v13riltb2Start.webp", start_image="images/v13/Scene16a/v13riltb2Start.webp")
+    image v13riltb2f = Movie(play="images/v13/Scene16a/v13riltb2f.webm", loop=True, image="images/v13/Scene16a/v13riltb2Start.webp", start_image="images/v13/Scene16a/v13riltb2Start.webp")
 
-    scene v13s16av4 # MC with his arm under Riley's waist, causing her back to arch as he fucks her
+    scene v13riltb # MC with his arm under Riley's waist, causing her back to arch as he fucks her
     with dissolve
 
     ri "*Moans* FUCK!"
 
     u "This is what you wanted?"
 
+    scene v13riltbf 
+    with dissolve
+
     ri "Ooohh, [name]... I... You... *Moans*"
 
     u "Haaa, yes... You're shaking... *Moans*"
 
-    scene v13s16av4f # Same as v4, but faster
+    scene v13riltb2 # Same as v4, but faster
     with dissolve
 
     ri "*Whispers* Fuck, I... I'm gonna- *Gasps*"
 
     u "I'm almost there... Cum for me, Riley."
+
+    scene v13riltb2f
+    with dissolve
 
     ri "Mmm... Oh, FUCK! *Moans* [name]!" #NAME
 
@@ -170,6 +206,9 @@ label v13s16a:
     with dissolve
 
     pause
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 16a_2.mp3" fadein 2
 
     scene v13s16a_7 # TPP Riley laying on her back, smiling with mouth open, looking at MC, MC on top of Riley, smiling at her. Both shiny with sweat
     with dissolve
@@ -215,8 +254,9 @@ label v13s16a:
     with dissolve
 
     u "Yes ma'am. *Chuckles*"
+    $ renpy.end_replay()
 
-    scene v13S16A_11 # FPP Show MC turning off the bedside lamp
+    scene v13s16a_11 # FPP Show MC turning off the bedside lamp
     with dissolve
 
     pause 0.75
@@ -232,4 +272,6 @@ label v13s16a:
 
         u "(Hopefully Lauren thinks something important came up.)"
 
+    stop music fadeout 3
+    
     jump v13s17a

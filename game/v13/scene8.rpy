@@ -9,6 +9,8 @@ label v13s8:
 
     u "(Hmm, maybe now would be a good time to try and talk to Nora.)"
 
+    play music "music/v13/Track Scene 8.mp3" fadein 2
+
     scene v13s8_2 # TPP. Show MC walking in the hotel lobby towards the corridor, MC slight smile, mouth closed
     with dissolve
 
@@ -430,6 +432,8 @@ label v13s8:
     scene v13s8_12 # TPP. Show MC walking out of the room, slight smile, mouth closed
     with dissolve
 
-    pause 0.75 
+    pause 0.75
+
+    stop music fadeout 3
 
     jump v13s9

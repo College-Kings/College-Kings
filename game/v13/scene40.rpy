@@ -9,6 +9,8 @@ label v13s40:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 40_1.mp3" fadein 2
+
     scene v13s40_2 # FPP. MC and Chloe looking at each other, in lobby, Chloe slight smile, mouth open
     with dissolve
 
@@ -78,6 +80,9 @@ label v13s40:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 40_2.mp3" fadein 2
 
     scene v13s40_8 # FPP. Chloe wrapping her arms around MC, looking at him, Chloe sexy look, mouth open
     with dissolve
@@ -456,6 +461,8 @@ label v13s40_end_free_roam:
     $ freeRoam = False
 
     if v13s40_chloe_turned_on == 4:
+        $ v13_chloesex = True
+    
         scene v13s40end_1 # FPP. MC standing next to Chloe, Chloe looking up at MC, Chloe smiling, mouth open
         with dissolve
 
@@ -496,10 +503,10 @@ label v13s40_end_free_roam:
 
         pause
 
-        image v13chlsd = Movie(play="images/v13/Scene 40/v13chlsd.webm", loop=True, image="images/v13/Scene 40/v13chlsdStart.webp", start_image="images/v13/Scene 40/v13chlsdStart.webp") # Chloe squatting
-        image v13chlsdf = Movie(play="images/v13/Scene 40/v13chlsdf.webm", loop=True, image="images/v13/Scene 40/v13chlsdStart.webp", start_image="images/v13/Scene 40/v13chlsdStart.webp") # Chloe squatting spedup
-        image v13chlsd2 = Movie(play="images/v13/Scene 40/v13chlsd2.webm", loop=True, image="images/v13/Scene 40/v13chlsd2Start.webp", start_image="images/v13/Scene 40/v13chlsd2Start.webp") # Chloe squatting FPP
-        image v13chlsd2f = Movie(play="images/v13/Scene 40/v13chlsd2f.webm", loop=True, image="images/v13/Scene 40/v13chlsd2Start.webp", start_image="images/v13/Scene 40/v13chlsd2Start.webp") # Chloe squatting FPP spedup
+        image v13chlsd = Movie(play="images/v13/Scene40/v13chlsd.webm", loop=True, image="images/v13/Scene40/v13chlsdStart.webp", start_image="images/v13/Scene40/v13chlsdStart.webp") # Chloe squatting
+        image v13chlsdf = Movie(play="images/v13/Scene40/v13chlsdf.webm", loop=True, image="images/v13/Scene40/v13chlsdStart.webp", start_image="images/v13/Scene40/v13chlsdStart.webp") # Chloe squatting spedup
+        image v13chlsd2 = Movie(play="images/v13/Scene40/v13chlsd2.webm", loop=True, image="images/v13/Scene40/v13chlsd2Start.webp", start_image="images/v13/Scene40/v13chlsd2Start.webp") # Chloe squatting FPP
+        image v13chlsd2f = Movie(play="images/v13/Scene40/v13chlsd2f.webm", loop=True, image="images/v13/Scene40/v13chlsd2Start.webp", start_image="images/v13/Scene40/v13chlsd2Start.webp") # Chloe squatting FPP spedup
 
         scene v13chlsd # Ignore as anim
         with dissolve
@@ -535,10 +542,10 @@ label v13s40_end_free_roam:
 
         pause
 
-        image v13chlf = Movie(play="images/v13/Scene 40/v13chlf.webm", loop=True, image="images/v13/Scene 40/v13chlfStart.webp", start_image="images/v13/Scene 40/v13chlfStart.webp") # Chloe flatiron
-        image v13chlff = Movie(play="images/v13/Scene 40/v13chlff.webm", loop=True, image="images/v13/Scene 40/v13chlfStart.webp", start_image="images/v13/Scene 40/v13chlfStart.webp") # Chloe flatiron spedup
-        image v13chlf2 = Movie(play="images/v13/Scene 40/v13chlf2.webm", loop=True, image="images/v13/Scene 40/v13chlf2Start.webp", start_image="images/v13/Scene 40/v13chlf2Start.webp") # Chloe flatiron FPP
-        image v13chlf2f = Movie(play="images/v13/Scene 40/v13chlf2f.webm", loop=True, image="images/v13/Scene 40/v13chlf2Start.webp", start_image="images/v13/Scene 40/v13chlf2Start.webp") # Chloe flatiron FPP spedup
+        image v13chlf = Movie(play="images/v13/Scene40/v13chlf.webm", loop=True, image="images/v13/Scene40/v13chlfStart.webp", start_image="images/v13/Scene40/v13chlfStart.webp") # Chloe flatiron
+        image v13chlff = Movie(play="images/v13/Scene40/v13chlff.webm", loop=True, image="images/v13/Scene40/v13chlfStart.webp", start_image="images/v13/Scene40/v13chlfStart.webp") # Chloe flatiron spedup
+        image v13chlf2 = Movie(play="images/v13/Scene40/v13chlf2.webm", loop=True, image="images/v13/Scene40/v13chlf2Start.webp", start_image="images/v13/Scene40/v13chlf2Start.webp") # Chloe flatiron FPP
+        image v13chlf2f = Movie(play="images/v13/Scene40/v13chlf2f.webm", loop=True, image="images/v13/Scene40/v13chlf2Start.webp", start_image="images/v13/Scene40/v13chlf2Start.webp") # Chloe flatiron FPP spedup
 
         scene v13chlf # Ignore as anim
         with dissolve
@@ -574,10 +581,10 @@ label v13s40_end_free_roam:
 
         pause
 
-        image v13chlff = Movie(play="images/v13/Scene 40/v13chlff.webm", loop=True, image="images/v13/Scene 40/v13chlffStart.webp", start_image="images/v13/Scene 40/v13chlffStart.webp") # Chloe face fuck
-        image v13chlfff = Movie(play="images/v13/Scene 40/v13chlfff.webm", loop=True, image="images/v13/Scene 40/v13chlffStart.webp", start_image="images/v13/Scene 40/v13chlffStart.webp") # Chloe face fuck spedup
-        image v13chlff2 = Movie(play="images/v13/Scene 40/v13chlff2.webm", loop=True, image="images/v13/Scene 40/v13chlff2Start.webp", start_image="images/v13/Scene 40/v13chlff2Start.webp") # Chloe face fuck FPP
-        image v13chlff2f = Movie(play="images/v13/Scene 40/v13chlff2f.webm", loop=True, image="images/v13/Scene 40/v13chlff2Start.webp", start_image="images/v13/Scene 40/v13chlff2Start.webp") # Chloe face fuck FPP spedup
+        image v13chlff = Movie(play="images/v13/Scene40/v13chlff.webm", loop=True, image="images/v13/Scene40/v13chlffStart.webp", start_image="images/v13/Scene40/v13chlffStart.webp") # Chloe face fuck
+        image v13chlfff = Movie(play="images/v13/Scene40/v13chlfff.webm", loop=True, image="images/v13/Scene40/v13chlffStart.webp", start_image="images/v13/Scene40/v13chlffStart.webp") # Chloe face fuck spedup
+        image v13chlff2 = Movie(play="images/v13/Scene40/v13chlff2.webm", loop=True, image="images/v13/Scene40/v13chlff2Start.webp", start_image="images/v13/Scene40/v13chlff2Start.webp") # Chloe face fuck FPP
+        image v13chlff2f = Movie(play="images/v13/Scene40/v13chlff2f.webm", loop=True, image="images/v13/Scene40/v13chlff2Start.webp", start_image="images/v13/Scene40/v13chlff2Start.webp") # Chloe face fuck FPP spedup
 
         scene v13chlff
         with dissolve
@@ -615,10 +622,10 @@ label v13s40_end_free_roam:
 
         pause
 
-        image v13chltt = Movie(play="images/v13/Scene 40/v13chltt.webm", loop=True, image="images/v13/Scene 40/v13chlttStart.webp", start_image="images/v13/Scene 40/v13chlttStart.webp") # Chloe Table top
-        image v13chlttf = Movie(play="images/v13/Scene 40/v13chlttf.webm", loop=True, image="images/v13/Scene 40/v13chlttStart.webp", start_image="images/v13/Scene 40/v13chlttStart.webp") # Chloe Table top spedup
-        image v13chltt2 = Movie(play="images/v13/Scene 40/v13chltt2.webm", loop=True, image="images/v13/Scene 40/v13chltt2Start.webp", start_image="images/v13/Scene 40/v13chltt2Start.webp") # Chloe Table top FPP
-        image v13chltt2f = Movie(play="images/v13/Scene 40/v13chltt2f.webm", loop=True, image="images/v13/Scene 40/v13chltt2Start.webp", start_image="images/v13/Scene 40/v13chltt2Start.webp") # Chloe Table top FPP spedup
+        image v13chltt = Movie(play="images/v13/Scene40/v13chltt.webm", loop=True, image="images/v13/Scene40/v13chlttStart.webp", start_image="images/v13/Scene40/v13chlttStart.webp") # Chloe Table top
+        image v13chlttf = Movie(play="images/v13/Scene40/v13chlttf.webm", loop=True, image="images/v13/Scene40/v13chlttStart.webp", start_image="images/v13/Scene40/v13chlttStart.webp") # Chloe Table top spedup
+        image v13chltt2 = Movie(play="images/v13/Scene40/v13chltt2.webm", loop=True, image="images/v13/Scene40/v13chltt2Start.webp", start_image="images/v13/Scene40/v13chltt2Start.webp") # Chloe Table top FPP
+        image v13chltt2f = Movie(play="images/v13/Scene40/v13chltt2f.webm", loop=True, image="images/v13/Scene40/v13chltt2Start.webp", start_image="images/v13/Scene40/v13chltt2Start.webp") # Chloe Table top FPP spedup
 
         scene v13chltt # Ignore as anim
         with dissolve
@@ -647,6 +654,9 @@ label v13s40_end_free_roam:
         with vpunch
 
         pause
+
+        stop music fadeout 3
+        play music "music/v13/Track Scene 40_3.mp3" fadein 2
 
         scene v13s40end_15 # FPP. MC laying on top of Chloe, looking into her eyes, Chloe smiling, mouth open
         with dissolve
@@ -701,6 +711,7 @@ label v13s40_end_free_roam:
         scene v13s40end_18 # TPP. Show MC laying in bed, naked, smiling, mouth closed
         with dissolve
 
+        $ grant_achievement("we_like_them_wild")
         u "(This girl is gonna drive me crazy...) *Laughs*"
 
         scene v13s40end_17a # FPP. Same as v13s40end_17, Chloe coming out of bathroom, smiling, mouth closed, naked
@@ -718,6 +729,8 @@ label v13s40_end_free_roam:
 
         pause 0.75
 
+        stop music fadeout 3
+
         jump v13s40a
 
     else:
@@ -725,6 +738,9 @@ label v13s40_end_free_roam:
         with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
+        play music "music/v13/Track Scene 40_3.mp3" fadein 2
 
         scene v13s40end_3
         with dissolve
@@ -749,6 +765,10 @@ label v13s40_end_free_roam:
         scene v13s40end_20
         with dissolve
 
+        $ renpy.end_replay()
+
         pause 0.75
+
+        stop music fadeout 3
 
         jump v13s40a

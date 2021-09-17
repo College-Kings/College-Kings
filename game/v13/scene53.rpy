@@ -9,6 +9,8 @@ label v13s53:
 
     u "(I wonder if Riley is up.)"
 
+    play music "music/v13/Track Scene 52.mp3" fadein 2
+
     scene v13s53_2 # TPP. Show MC walking into the room, neutral expression, mouth closed
     with dissolve
 
@@ -22,7 +24,7 @@ label v13s53:
     scene v13s53_3a # FPP. Same as v13s53_3, Riley mouth open
     with dissolve
 
-    if v13_double_date:
+    if v13s48_ryan_double_date:
 
         ri "Trying to recover from that failure of a date."
 
@@ -99,5 +101,7 @@ label v13s53:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s53a

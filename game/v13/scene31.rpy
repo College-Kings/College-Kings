@@ -9,6 +9,8 @@ label v13s31:
    
     am "Hello, our friend here is having a negative reaction to marijuana... It was her first time and I-"
 
+    play music "music/v13/Track Scene 31.mp3" fadein 2
+
     scene v13s31_2 # TPP. Show Amber looking at nurse, serious expression, mouth closed, MC looing at nurse, serious expression, mouth closed, nurse looking at amber, neutral look, mouth open
     with dissolve
 
@@ -86,8 +88,8 @@ label v13s31:
 
     am "Let's keep this quiet. I don't want her feeling embarrassed."
 
-    scene v13s31_6 
-    with dissolve
+    #scene v13s31_6 
+    #with dissolve
 
     u "I agree."
 
@@ -152,6 +154,7 @@ label v13s31:
         scene v13s31_10f # FPP. Same position as v13s31_10, different pose, Cameron serious expression
         with dissolve
 
+        $ grant_achievement("bro_moment")
         ca "I have a hard time trusting that people actually have pure intentions, man. It's obvious you do though..."
 
         scene v13s31_10d
@@ -238,5 +241,7 @@ label v13s31:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s32

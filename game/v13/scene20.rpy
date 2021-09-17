@@ -7,6 +7,10 @@ label v13s20:
     scene v13s20_1 # TPP. Show MC walking into Charli's room, smirking, mouth closed
     with dissolve
 
+    play music "music/v13/Track Scene 20.mp3" fadein 2
+
+    play sound "sounds/doorclose.mp3"
+
     u "(Ohhhh shit... I'm gonna fuck some shit up.) *Laughs*"
 
     call screen v13s20_room
@@ -49,7 +53,7 @@ label v13s20_closet:
             scene v13s20clo_5 # TPP. Show MC smirking, looking at the wet clothes, smirking, mouth open
             with dissolve
 
-            u "*Laughs* Shit, man... l. He pisses so many people off, it's only fair he smells like it too. Haha!"
+            u "*Laughs* Shit, man... He pisses so many people off, it's only fair he smells like it too. Haha!"
 
         "That's too far":
 
@@ -155,6 +159,7 @@ label v13s20_toothbrush:
             scene v13s20brush_5 # FPP. Same positioning as v13s20brush_4, MC sticking the toothbrush in the toilet
             with dissolve
 
+            $ grant_achievement("flush_flush")
             u "TASTE SHIT BITCH! *Chuckles*"
 
             scene v13s20brush_5a # FPP. Same as v13s20brush_5, MC moved the toothbrush a bit
@@ -267,6 +272,8 @@ label v13s20_end:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     if v13_charli_exposed:
         jump v13s21a 

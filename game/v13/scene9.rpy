@@ -9,6 +9,8 @@ label v13s9:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 9_1.mp3" fadein 2
+
     scene v13s9_1a # TPP. Same as v13s9_1 but MC is halfway down the hall and he last room door at the end of the hall is halfway open. 
     with dissolve
 
@@ -127,6 +129,9 @@ label v13s9:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 9_2.mp3" fadein 2
 
     scene v13s9_11 # FPP. MC watching Chloe lean against the guard rail, slightly looking downward at the water, neutral expression, mouth open.
     with dissolve
@@ -361,10 +366,11 @@ label v13s9:
 
                 cl "Whatever, [name]."
         
-        "Help no one": # -If No One
+        "Help no one": # -If No One        
             scene v13s9_12e
             with dissolve
 
+            $ grant_achievement("indecisive")
             u "Honestly, I'm going into the grey-zone on this one. I don't want anyone, you or her, to feel betrayed."
 
             scene v13s9_12f
@@ -409,12 +415,14 @@ label v13s9:
 
     cl "Ironically, yes. *Chuckles* I was walking with Aubrey earlier and we passed by this really nice sex shop..."
 
-    scene v13s9_12p # FPP. Same as v13s9_12f but Chloe slightly blushing, mouth open.
+    #scene v13s9_12p # FPP. Same as v13s9_12f but Chloe slightly blushing, mouth open.
+    scene v13s9_12f
     with dissolve
 
     cl "I wanted to go in, but I was a little nervous to tell Aubrey. *Chuckles*"
 
-    scene v13s9_12o # FPP. Same as v13s9_12e but Chloe slightly blushing, mouth closed.
+    #scene v13s9_12o # FPP. Same as v13s9_12e but Chloe slightly blushing, mouth closed.
+    scene v13s9_12e
     with dissolve
 
     u "Oooh, didn't know that was your kind of scene... *Chuckles*"
@@ -429,12 +437,14 @@ label v13s9:
 
     u "What are you wanting to look at, specifically?"
 
-    scene v13s9_12p
+    #scene v13s9_12p
+    scene v13s9_12f
     with dissolve
 
     cl "Don't embarrass me. *Chuckles*"
 
-    scene v13s9_12o
+    #scene v13s9_12o
+    scene v13s9_12e
     with dissolve
 
     u "Haha. I'm not trying to. I'm just curious."
@@ -517,6 +527,8 @@ label v13s9:
 
     cl "Go ahead and take it."
 
+    stop sound
+
     scene v13s9_15 # TPP. MC talking on his phone, mouth open, standing next to Chloe, with the gaurd raile and the water behind them.
     with dissolve
 
@@ -597,15 +609,13 @@ label v13s9:
         with dissolve
         
         menu:
-            
-            "Go to concert":
-                $ v13s9_go_to_concert = True
-                jump v13s9_go_to_concert
-            
-            "Don't go to concert":
-                $ addPoint("bro") # only give points for the decision; not the else (default) flow.
-                
+            "Go with Ryan":
+                $ addPoint("bro") # only give points for the decision; not the else (default) flow.   
                 jump v13s9_no_concert
+
+            "Don't go with Ryan":
+                $ v13s9_go_to_concert = True
+                jump v13s9_go_to_concert         
             
     else: # -If no concert, MC is forced to go and given no choice
         jump v13s9_no_concert
@@ -712,6 +722,8 @@ label v13s9_continue: # -Regardless of all scene continued
     scene v13s9_19 # TPP. Same as v13s9_9 but the opposite direction - MC and Chloe walking away from the pier.    
     with dissolve
 
-    pause 0.75 
+    pause 0.75
+
+    stop music fadeout 3
 
     jump v13s10

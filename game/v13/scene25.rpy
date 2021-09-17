@@ -8,6 +8,8 @@ label v13s25:
     with dissolve
 
     pause 0.75
+
+    play music "music/v13/Track Scene 25.mp3" fadein 2
    
     scene v13s25_2 # TPP. Mc grabbing chair looking at Emmy, Mc's back turned to camera, Emmy looking at Mc, slight smile, mouth closed
     with dissolve
@@ -165,11 +167,14 @@ label v13s25:
 
                         emmy "Don't be gentle"
 
+                        stop music fadeout 3
+
                         jump v13_emmy_sex
 
                     "Stop her":
                         $ addPoint("bf")
 
+                        label v13s25_emmysg:
                         scene v13s25_9
                         with dissolve
 
@@ -338,5 +343,7 @@ label v13s25_no_sex:
     with fade
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s27

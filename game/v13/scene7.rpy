@@ -4,6 +4,9 @@
 # Time: Morning 
 
 label v13_ticket_transfer:
+
+    play music "music/v13/Track Scene 7.mp3" fadein 2
+
     if v12_murder_count >= 5: # -If 5+ kills
         scene v13s7_1 # TPP Show MC in lobby, looking around and wondering what to do next
         with dissolve
@@ -504,5 +507,7 @@ label v13_ticket_transfer:
         u "(Bold guy...)"
 
     label end_scene:
-        # If less than 5 kills and Penelope not in Europe, scene will be skipped
+
+        stop music fadeout 3
+        
         jump v13s8 # REPLACE WITH PROPER SCENE LABEL

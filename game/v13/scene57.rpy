@@ -9,6 +9,8 @@ label v13s57:
 
     u "You wanna call her down here?"
 
+    play music "music/v13/Track Scene 57.mp3" fadein 2
+
     scene v13s57_1a # FPP. Same angle v13s57_1, Nora looking down at phone, Nora mouth open
     with dissolve
 
@@ -39,13 +41,11 @@ label v13s57:
 
     no "Sounds good, see you soon."
 
-    scene v13s57_1d # FPP. Same as v13s57_1a, Nora mouth closed
+    #scene v13s57_1d # FPP. Same as v13s57_1a, Nora mouth closed
+    scene v13s57a_2b
     with dissolve
 
-    "Beep."
-
-    scene v13s57_1d
-    with dissolve
+    play sound "sounds/rejectcall.mp3"
 
     u "Is she on the way?"
 
@@ -155,7 +155,7 @@ label v13s57:
     scene v13s57_7b
     with dissolve
 
-    no "Oh, okay Well... Have fun."
+    no "Oh, okay. Well... Have fun."
 
     scene v13s57_7c
     with dissolve
@@ -171,5 +171,7 @@ label v13s57:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s58

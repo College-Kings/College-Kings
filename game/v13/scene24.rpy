@@ -9,6 +9,8 @@ label v13s24:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 24_1.mp3" fadein 2
+
     scene v13s24_2 # TPP. show imre and ryan standing next to each other on MC's left and barhost on MC's right, imre slight anger mouth open, ryan slight smile mouth closed, barhost slight smile mouth open
     with dissolve
 
@@ -252,6 +254,9 @@ label v13s24:
     with dissolve
 
     barh "The first woman is coming in, stand tall gentlemen! For Emmy has arrived!"
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 24_2.mp3" fadein 2
 
     scene v13s24_13 # FPP. emmy walks in, slight smile, mouth closed
     with dissolve
@@ -935,6 +940,7 @@ label v13s24_kourtney_date:
     scene v13s24_26a # FPP same as v13s24_26 kourtney instead of emmy
     with dissolve
 
+    $ grant_achievement("romantic_heart")
     u "Let's go, Kourtney."
 
     scene v13s24_28a # TPP. same as v13s24_28 kourtney instead of emmy

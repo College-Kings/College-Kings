@@ -9,6 +9,8 @@ label v13s18:
 
     u "Hey Luuk, please tell me you got something for me today... *Chuckles*"
 
+    play music "music/v13/Track Scene 18.mp3" fadein 2
+
     scene v13s18_2 # FPP. MC looking at Luuk, Luuk looking back at MC, slight smile, mouth open.
     with dissolve
 
@@ -165,7 +167,7 @@ label v13s18:
                 if contact_Nora.replies:
                     call screen phone
                 if contact_Nora.replies:
-                    u "(I should check my phone.)"
+                    u "(I should text Nora.)"
                     jump v13s18_PhoneContinueNora
                     
             scene v13s18_4b # TPP. Show MC putting his phone away.
@@ -233,5 +235,7 @@ label v13s18:
     with fade
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s19

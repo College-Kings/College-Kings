@@ -67,8 +67,8 @@ init python:
     SceneGallery("v12_lauren_sex_sg") #29, Lauren
     SceneGallery("v12_nora_sex") #35a, Nora
         #v13
-    SceneGallery("placeholder") #16a, Riley
-    SceneGallery("placeholder") #26, Emmy
+    SceneGallery("v13s16a") #16a, Riley
+    SceneGallery("v13s25_emmysg") #26, Emmy
     SceneGallery("placeholder") #40, Chloe
     SceneGallery("placeholder") #50a, Emily
 

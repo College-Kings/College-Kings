@@ -7,7 +7,9 @@ label v13s62:
     scene v13s62_1 # FPP. MC looking at the door, lying on his bed, Aubrey and Riley walking in, both worried, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1.5
+
+    play music "music/v13/Track Scene 62.mp3" fadein 2
 
     scene v13s62_2 # FPP. Show Aubrey and Rilet sitting on the bed next to MC, both slightly worried, looking at MC, Aubrey mouth open, RIley mouth closed
     with dissolve
@@ -83,6 +85,8 @@ label v13s62:
     with dissolve
 
     u "(Is this happening?!)"
+
+    stop music fadeout 3
 
     jump end13
 

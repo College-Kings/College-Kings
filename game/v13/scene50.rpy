@@ -9,6 +9,8 @@ label v13s50:
     
     ry "I'm really nervous, haha."
 
+    play music "music/v13/Track Scene 50_1.mp3" fadein 2
+
     scene v13s50_2 # FPP. Ryan looking at MC, slight smile, mouth closed
     with dissolve
 
@@ -68,6 +70,9 @@ label v13s50:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 50_2.mp3" fadein 2
 
     scene v13s50_7 # FPP. Riley looking at MC, slight smile, mouth open
     with dissolve
@@ -277,6 +282,9 @@ label v13s50:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 50_3.mp3" fadein 2
+
     scene v13s50_14 # TPP. Show MC entering the washroom thinking to himself, slight smile, mouth closed 
     with dissolve
 
@@ -336,6 +344,9 @@ label v13s50:
 
             pause 0.75
 
+            stop music fadeout 3
+            play music "music/v13/Track Scene 50_4.mp3" fadein 2
+
             scene v13s50_19a # FPP. Same as v13s50_19, MC hands down to his side
             with dissolve
 
@@ -366,6 +377,9 @@ label v13s50:
             
             u "(Damn, psycho. I thought no meant no!)"
 
+            if v13s48_ryan_double_date:
+                jump v13s50a_return_after_emily
+
             scene v13s50_21
             with dissolve
 
@@ -377,6 +391,8 @@ label v13s50:
             with dissolve
 
             u "You know what?"
+
+            stop music fadeout 3
 
             jump v13s50a
 
@@ -394,6 +410,8 @@ label v13s50:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     if chloegf:
         jump v13s52

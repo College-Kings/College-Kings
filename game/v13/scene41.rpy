@@ -9,6 +9,8 @@ label v13s41:
     
     u "(It's kinda late, but I can see if Lindsey wants to go over to that ferris wheel she was talking about.)"
 
+    play music "music/v13/Track Scene 41_1.mp3" fadein 2
+
     scene v13s41_1
     with dissolve
 
@@ -113,6 +115,9 @@ label v13s41:
     with dissolve
 
     luuk "Later man!"
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 41_2.mp3" fadein 2
 
     scene v13s41_7 # TPP. show MC and Lindsey looking at each other slight smiles, mouths closed leaving the hotel
     with dissolve
@@ -248,6 +253,9 @@ label v13s41:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 41_3.mp3" fadein 2
 
     scene v13s41_13a # TPP. same as v13s41_13 ferris wheel starts moving
     with dissolve
@@ -634,4 +642,6 @@ label v13s41:
 
     u "Good, maybe that worry will keep him from doing the nasty shit he usually does."
 
+    stop music fadeout 3
+    
     jump v13s41a

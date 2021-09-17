@@ -12,6 +12,8 @@ label v13s13b:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 13a_1.mp3" fadein 2
+
     scene v13s13b_2 # FPP Show Polly sitting down near MC and Penelope but not looking their way, Polly looking tired with mouth open
     with dissolve
 
@@ -261,9 +263,9 @@ label v13s13b:
 
             u "Haha, thanks."
 
-            play sound "sounds/kiss.mp3"
             scene v13s13b_5a # TPP Same angle as 5, Penelope kissing MC on the cheek
             with dissolve
+            play sound "sounds/kiss.mp3"
 
             polly "Too cute!"
 
@@ -273,10 +275,10 @@ label v13s13b:
 
     polly "Smile big!"
 
-    scene v13s13b_5
-    with dissolve
-
     play sound "sounds/capture.mp3"
+    scene v13s13b_5
+    with flash
+
     pause
 
     scene v13s13b_2l # FPP Same angle as 2, Polly looking at her phone, smiling with mouth open
@@ -426,6 +428,8 @@ label v13s13b:
 
         pause 0.5
 
+        stop music fadeout 3
+
         jump v13s14b
 
     else: # -If don't have after party access or not invited
@@ -464,6 +468,9 @@ label v13s13b:
 
         pause 0.5
 
+        stop music fadeout 3
+        play music "music/v13/Track Scene 12a_2.mp3" fadein 2
+
         scene v13s13b_15 # TPP Show MC and Penelope getting into a cab
         with dissolve
 
@@ -476,6 +483,9 @@ label v13s13b:
 
         scene v13s13b_17 # FPP Show Penelope, in hotel lobby, smiling with mouth open
         with dissolve
+
+        stop music fadeout 3
+        play music "music/v13/Track Scene 12a_1.mp3" fadein 2
 
         pe "Jeez... I didn't know Polly and I had so much in common... *Chuckles*"
 
@@ -508,6 +518,8 @@ label v13s13b:
         with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
 
         if v11_riley_roomate:
             jump v13s15a

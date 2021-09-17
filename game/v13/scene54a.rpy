@@ -9,6 +9,8 @@ label v13s54a:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 52a.mp3" fadein 2
+
     scene v13s54_2 # TPP. MC looking up at the ceiling, slight smile, mouth closed
     with dissolve
 
@@ -43,5 +45,7 @@ label v13s54a:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s55

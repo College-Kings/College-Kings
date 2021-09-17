@@ -9,6 +9,8 @@ label v13s48:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 48.mp3" fadein 2
+
     scene v13s48_2 # FPP. MC looking at Aubrey, Aubrey looking at MC, Slight smile, mouth closed.
     with dissolve
 
@@ -40,7 +42,6 @@ label v13s48:
     au "Great! Thank you..."
 
     if s12v32_get_aubrey_flowers:
-
         scene v13s48_3 # FPP. Show Aubrey turning her back to the MC and walking towards the water, slight smile, mouth closed.
         with dissolve
 
@@ -786,5 +787,7 @@ label v13s48:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s49

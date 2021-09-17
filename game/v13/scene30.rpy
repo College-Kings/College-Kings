@@ -9,6 +9,8 @@ label v13s30:
 
     u "Wait a minute, are these not the canals you were talking about?"
 
+    play music "music/v13/Track Scene 30_1.mp3" fadein 2
+
     scene v13s30_2 # FPP. MC looking at Amber, Amber looking at MC, Amber slight smile, mouth open. 
     with dissolve
 
@@ -50,7 +52,7 @@ label v13s30:
         scene v13s30_3a # FPP. Same as v13s30_3, Samantha looking at MC, Samantha slight smile, mouth open
         with dissolve
 
-        sa "Yeah. Thanks anyway Later guys."
+        sa "Yeah. Thanks anyway. Later guys."
 
         scene v13s30_3b # FPP. Same as v13s30_3a, Samantha slight smile, mouth closed
         with dissolve
@@ -126,6 +128,7 @@ label v13s30:
 
     pause 0.75
 
+    play sound "sounds/rejectcall.mp3"
     scene v13s30_2c # FPP. Same as v13s30_2b, Amber with phone to her ear, slight smile, mouth open.
     with dissolve
 
@@ -625,6 +628,9 @@ label v13s30:
 
         u "She's shaking, Amber..."
 
+        stop music fadeout 3
+        play music "music/v13/Track Scene 30_2.mp3" fadein 2
+
         scene v13s30_15b # TPP. Same as v13s30_15a, Show MC looking down towards where Amber is sitting, MC worried expression, mouth closed, amber worried expression, Mouth open.
         with dissolve
 
@@ -667,6 +673,8 @@ label v13s30:
 
         scene v13s30_20 # TPP. MC carrying Lauren while outside of the hospital with Amber next to him.
         with Fade(1,1,1)
+
+        stop music fadeout 3
 
         jump v13s31 
 
@@ -735,5 +743,7 @@ label v13s30:
         with Fade(1,1,1)
 
         pause 0.75
+
+        stop music fadeout 3
 
         jump v13s32

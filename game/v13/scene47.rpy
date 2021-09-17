@@ -9,6 +9,8 @@ label v13s47:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 47.mp3" fadein 2
+
     scene v13s47_2 # TPP. show MC and lauren get off their bikes and turn them into the bike clerk
     with dissolve
 
@@ -171,6 +173,8 @@ label v13s47:
 
         u "Haha, bye."
 
+        stop music fadeout 3
+
         jump v13s48
 
     else:
@@ -184,5 +188,7 @@ label v13s47:
         with dissolve
 
         u "Bye, you too."
+
+        stop music fadeout 3
 
         jump v13s48

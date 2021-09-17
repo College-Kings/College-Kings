@@ -4,6 +4,9 @@
 # Time: Evening
 
 label v13s29:
+
+    play music "music/v13/Track Scene 29_1.mp3" fadein 2
+
     if not v13_invite_samantha:
         scene v13s29_1: # TPP. Show Amber and MC on sidewalk in front of The AmsterDamn, all smiling, all mouths closed (Weed Bus)
         with dissolve
@@ -38,17 +41,17 @@ label v13s29:
         scene v13s29_4a # FPP. Same angle as v13s29_4, Gary hands on hips, unhappy face, mouth open
         with dissolve
 
-        gary "First, I gotta deal with the boring stuff. Who bought their tickets."
+        gary "First, I gotta deal with the boring stuff. Who bought their tickets?"
 
         scene v13s29_3a # TPP. Same angle as v13s29_3, Amber and MC raising their hands, looking at eachother smiling, mouths closed
         with dissolve
 
         pause 0.75
         
-        scene v13s29_6 # FPP. MC looking at Gary, Gary has moved closer to MC, MC extending arm toward Gary with currency in hand, Gary smiling, mouth closed
-        with dissolve
+        #scene v13s29_6 # FPP. MC looking at Gary, Gary has moved closer to MC, MC extending arm toward Gary with currency in hand, Gary smiling, mouth closed
+        #with dissolve
 
-        pause 0.75
+        #pause 0.75
 
     else:
         scene v13s29_1a: # TPP. Show Samantha, Amber and MC on sidewalk in front of The AmsterDamn, all smiling, all mouths closed (AmsterDamn = Weed Bus)
@@ -84,7 +87,7 @@ label v13s29:
         scene v13s29_4a
         with dissolve
 
-        gary "First, I gotta deal with the boring stuff. Who bought their tickets."
+        gary "First, I gotta deal with the boring stuff. Who bought their tickets?"
 
         scene v13s29_3b # TPP. Same angle as v13s29_3a, Amber raising her hand looking at Gary, MC raising his hand looking at Gary, Samantha looking at MC, all mouths closed
         with dissolve
@@ -96,10 +99,10 @@ label v13s29:
 
         u "She doesn't have hers, but here."
 
-    scene v13s29_6b # FPP. Same angle as v13s29_6, Gary mouth open
-    with dissolve
+        scene v13s29_6b # FPP. Same angle as v13s29_6, Gary mouth open
+        with dissolve
 
-    gary "Very good!"
+        gary "Very good!"
 
     scene v13s29_4
     with dissolve
@@ -114,7 +117,7 @@ label v13s29:
     scene v13s29_4c # FPP. Same angle as v13s29_4b, Gary mouth open
     with dissolve
 
-    gary "Well young friend, you paid for for a ticket, but you're getting an experience."
+    gary "Well young friend, you paid for a ticket, but you're getting an experience."
 
     scene v13s29_7 # FPP. MC looking at Amber, Amber looking at Gary, Amber annoyed, Amber mouth open
     with dissolve
@@ -347,17 +350,15 @@ label v13s29:
 
     menu:
         "Yes":
-
             u "Of course."
 
         "No":
-
             u "Yeah, I'm not on board with that... Sorry."
 
     scene v13s29_20b # FPP. Same as v13s29_20, Gary very happy, Gary mouth open
     with dissolve
 
-    gary "Those who don't support legalization aren't crazy and have a very fair point. Even though I LOVE WEED, I don't even support it's legalization."
+    gary "Those who don't support legalization aren't crazy and have a very fair point. Even though I LOVE WEED, I don't even support its legalization."
 
     scene v13s29_11c
     with dissolve
@@ -367,7 +368,7 @@ label v13s29:
     scene v13s29_20c # FPP. Same angle as v13s29_20b, Gary face neutral, Gary looking at Amber, Gary mouth open
     with dissolve
 
-    gary "Again, I love the shit, but we don't know it's affects on every demographic. Young and old, healthy and sick, direct or secondhand high, etc."
+    gary "Again, I love the shit, but we don't know its affects on every demographic. Young and old, healthy and sick, direct or secondhand high, etc."
     gary "Without a full study I wouldn't feel comfortable with this being as obtainable as a cigarette. It'd be in every school around."
 
     scene v13s29_20d # FPP. Same angle as v13s29_20c, Gary looking at MC, Gary mouth closed
@@ -420,10 +421,14 @@ label v13s29:
 
     gary "You know I do."
 
+    play sound "sounds/js.mp3"
     scene v13s29_24 # TPP. Show Amber angry, kneeing Gary in the nuts, Gary in pain, both mouths open
-    with dissolve
+    with vpunch
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 29_2.mp3" fadein 2
 
     scene v13s29_25 # TPP. Show Amber grabbing bags of weed from the bus, preparing to escape, Amber mouth open
     with dissolve
@@ -502,6 +507,9 @@ label v13s29:
     scene v13s29_32 # FPP. MC looking at Amber, Amber sweaty, Amber tired, Amber looking and facing away from MC, Amber mouth open heavily breathing
     with dissolve
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 29_3.mp3" fadein 2
+
     u "*Heavy breathing* Fuck!"
 
     scene v13s29_32a # FPP. Same as v13s29_32, Amber facing and looking at MC, Amber mouth open speaking
@@ -543,7 +551,7 @@ label v13s29:
         scene v13s29_32c
         with dissolve
 
-        am "You said it not me."
+        am "You said it, not me."
 
         scene v13s29_33b # FPP. Same as v13s29_33a, Sam sad, Sam mouth open
         with dissolve
@@ -576,5 +584,7 @@ label v13s29:
         with fade
 
         pause 0.75
+
+    stop music fadeout 3
 
     jump v13s30

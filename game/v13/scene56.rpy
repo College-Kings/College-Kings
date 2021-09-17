@@ -9,6 +9,8 @@ label v13s56:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 56.mp3" fadein 2
+
     scene v13s56_1a # TPP. Same as v13s56_1, different place on sidewalk
     with dissolve
 
@@ -84,12 +86,12 @@ label v13s56:
     scene v13s56_3 # TPP. Nora and MC walk into the gift shop from the sidewalk their backs are turned to the camera
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s56_4 # TPP. Inside the gift shop, MC and Nora start looking around the store and they are looking at different things
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s56_5 # FPP when Nora sees something and bends over with her ass toward MC
     with dissolve
@@ -146,6 +148,7 @@ label v13s56:
                 scene v13s56_99 # FPP. same as v13s56_5 MC looks down at his crotch
                 with dissolve
 
+                $ grant_achievement("calm_down_big_fella")
                 u "(Calm down big fella.)"
 
     scene v13s56_5f
@@ -448,6 +451,8 @@ label v13s56:
         with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     if v13_perfume:
         jump v13s57

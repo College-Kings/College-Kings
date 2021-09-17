@@ -9,6 +9,8 @@ label v13s34:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 34_1.mp3" fadein 2
+
     scene v13s34_2 # FPP. Show clipps looking at MC, slight smile, mouth open
     with dissolve
 
@@ -151,6 +153,9 @@ label v13s34:
 
     pause 0.75 
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 34_2.mp3" fadein 2
+
     scene v13s34_9 # TPP. Show the gate door slamming closed, Riley, angry expression, mouth closed
     with dissolve
 
@@ -229,7 +234,7 @@ label v13s34:
     scene v13s34_13a
     with dissolve
 
-    clipps "Of course. I'm here all day, everyday."
+    clipps "Of course. I'm here all day, every day."
 
     scene v13s34_13b
     with dissolve
@@ -304,10 +309,10 @@ label v13s34:
 
     ri "AHHHH!"
 
-    scene v13s34_20 # FPP. MC looks over to Riley's cell and knowtices she is gone
+    scene v13s34_20 # FPP. MC looks over to Riley's cell and notices she is gone
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v13s34_19
     with dissolve
@@ -391,6 +396,7 @@ label v13s34:
     menu:
         "I'm a liar":
         
+            $ grant_achievement("an_honest_liar")
             u "Yeah, I'm a liar. But who isn't?"
 
             clipps "Good people."
@@ -419,6 +425,9 @@ label v13s34:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 34_3.mp3" fadein 2
     
     scene v13s34_23 # FPP. Duncan, Clipps, Mr. Lee all standing infront of MC looking at him, all slight smile, mouth closed
     with dissolve
@@ -470,6 +479,11 @@ label v13s34:
 
             scene v13s34_28 # FPP. MC takes the bag off Rileys head
             with dissolve
+
+            pause 0.75
+
+            stop music fadeout 3
+            play music "music/v13/Track Scene 34_4.mp3" fadein 2
 
             scene v13s34_29 # FPP. Riley looking at MC, mascara dripping down her face, crying expression, mouth open
             with dissolve
@@ -654,6 +668,9 @@ label v13s34:
             with dissolve
 
             pause 0.75
+
+            stop music fadeout 3
+            play music "music/v13/Track Scene 34_4.mp3" fadein 2
 
             scene v13s34_33 # FPP. Riley looking at Mr. Lee, surprised expression, mouth open
             with dissolve
@@ -884,5 +901,7 @@ label v13s34:
     with fade
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s35
