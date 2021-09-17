@@ -551,7 +551,7 @@ label v13s29:
         scene v13s29_32c
         with dissolve
 
-        am "You said it not me."
+        am "You said it, not me."
 
         scene v13s29_33b # FPP. Same as v13s29_33a, Sam sad, Sam mouth open
         with dissolve

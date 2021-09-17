@@ -52,7 +52,7 @@ label v13s30:
         scene v13s30_3a # FPP. Same as v13s30_3, Samantha looking at MC, Samantha slight smile, mouth open
         with dissolve
 
-        sa "Yeah. Thanks anyway Later guys."
+        sa "Yeah. Thanks anyway. Later guys."
 
         scene v13s30_3b # FPP. Same as v13s30_3a, Samantha slight smile, mouth closed
         with dissolve
