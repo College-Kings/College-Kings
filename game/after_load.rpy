@@ -178,6 +178,9 @@ label after_load:
             try: contact.sentMessages
             except AttributeError: contact.sentMessages = []
 
+            try: contact.profile_picture
+            except AttributeError: contact.profile_picture = contact.profilePicture
+
             # Messages
             try:
                 for message in contact.messages:
