@@ -21,7 +21,7 @@ label v13s49:
 
     pause 0.75
     
-    $ v13s49_kiwiiPost1 = KiwiiPost(_("Aubrey", "v13/Scene 48/v13s48_6d.webp"), "Swimming up the ladder! #ScheveningenBeach", numberLikes=4218)
+    $ v13s49_kiwiiPost1 = KiwiiPost("Aubrey", "v13/Scene 48/v13s48_6d.webp", _("Swimming up the ladder! #ScheveningenBeach"), numberLikes=4218)
     $ v13s49_kiwiiPost1.newComment("Imre", _("Hot as fuck Aubrey!!"))
     $ v13s49_kiwiiPost1.newComment("Chloe", _("This is the hottest pic I've ever seen of you!"), mentions="Aubrey")
     $ v13s49_kiwiiPost1.addReply(_("Wow, they turned out great!"))
