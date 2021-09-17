@@ -179,7 +179,7 @@ label v13s51_emily_fight:
 
     pause 0.75
 
-    scene v13_s51_10 # FPP. Emily, breasts exposed, holding MC against the wall with both hands, mad, mouth open.
+    scene v13s51_10 # FPP. Emily, breasts exposed, holding MC against the wall with both hands, mad, mouth open.
     with dissolve
     
     em "Fuck me then! Show me you know how to fuck me, exactly how I like it!"
