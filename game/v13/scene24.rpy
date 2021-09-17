@@ -999,14 +999,14 @@ label v13s24_no_simplr_date:
 
     pause 0.75
     
-    scene v13s24_24
-    with dissolve
+    #scene v13s24_24
+    #with dissolve
 
-    pause 0.75
+    #pause 0.75
 
-    scene v13s24_24a
-    with fade
+    #scene v13s24_24a
+    #with fade
 
-    pause 0.75
+    #pause 0.75
 
     jump v13s27
