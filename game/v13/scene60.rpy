@@ -56,7 +56,7 @@ label v13s60:
 
     u "*Sighs* Alrighty."
 
-    scene v13s60_10 # TPP. Show MC climbing up the boulder, slight smile, mouth closed.
+    scene v13s60_99 # TPP. Show MC climbing up the boulder, slight smile, mouth closed.
     with dissolve
 
     pause
