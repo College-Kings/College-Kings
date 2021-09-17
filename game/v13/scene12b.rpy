@@ -4,7 +4,7 @@
 # Time: Night 
 
 label v13s12b:
-    scene v12s12b_1 # TPP. Show Penelope walking up to MC in the lobby, both slight smiles, mouths closed
+    scene v13s12b_1 # TPP. Show Penelope walking up to MC in the lobby, both slight smiles, mouths closed
     with dissolve
 
     pause 0.75
