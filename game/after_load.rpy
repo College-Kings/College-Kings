@@ -178,6 +178,9 @@ label after_load:
             try: contact.sentMessages
             except AttributeError: contact.sentMessages = []
 
+            try: contact.profile_picture
+            except AttributeError: contact.profile_picture = contact.profilePicture
+
             # Messages
             try:
                 for message in contact.messages:
@@ -210,6 +213,9 @@ label after_load:
         for contact in simplr_pendingContacts + simplr_contacts:
             try: contact.condition
             except AttributeError: contact.condition = True
+
+            try: contact.profile_picture
+            except AttributeError: contact.profile_picture = contact.profilePicture
 
 
         # Variables
