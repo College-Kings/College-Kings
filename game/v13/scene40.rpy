@@ -84,6 +84,8 @@ label v13s40:
     stop music fadeout 3
     play music "music/v13/Track Scene 40_2.mp3" fadein 2
 
+    label v13s40_sg:
+
     scene v13s40_8 # FPP. Chloe wrapping her arms around MC, looking at him, Chloe sexy look, mouth open
     with dissolve
 
@@ -140,7 +142,7 @@ label v13s40:
 
 label v13s40_honey:
     scene v13s40ho_1 # TPP. Show MC pouring the honey on Chloe's breasts, Chloe slight smile, mouth closed
-    with dissolve
+    #with dissolve
 
     pause
 
@@ -189,7 +191,7 @@ label v13s40_honey:
 
 label v13s40_feather:
     scene v13s40fe_1 # TPP. Show MC taking the feather and placing it on her chest, Chloe smiling, mouth closed
-    with dissolve
+    #with dissolve
 
     pause
 
@@ -237,7 +239,7 @@ label v13s40_feather:
 
 label v13s40_spanker:
     scene v13s40sp_1 # TPP. Show MC untying Chloe, both smiling, mouths closed
-    with dissolve
+    #with dissolve
 
     pause
     
@@ -325,11 +327,13 @@ label v13s40_spanker:
 
 label v13s40_neck:
     scene v13s40neck_1 # TPP. Close up of Chloe's neck
-    with dissolve
+    #with dissolve
 
     menu:
         "Choke":
-            $ v13s40_chloe_turned_on += 1
+            if not v13s40_neckpoint:
+                $ v13s40_chloe_turned_on += 1
+                $ v13s40_neckpoint = True
 
             scene v13s40neck_2 # TPP. Close up of MC's hand choking Chloe's neck, Chloe smiling, mouth closed
             with dissolve
@@ -346,7 +350,7 @@ label v13s40_neck:
 
 label v13s40_chest:
     scene v13s40chest_1 # TPP. Close up of Chloe's boobs
-    with dissolve
+    #with dissolve
 
     menu:
         "Kiss":
@@ -366,7 +370,9 @@ label v13s40_chest:
             pause
 
         "Massage":
-            $ v13s40_chloe_turned_on += 1
+            if not v13s40_chestpoint:
+                $ v13s40_chloe_turned_on += 1
+                $ v13s40_chestpoint = True
 
             scene v13s40chest_3 # TPP. Show MC massaging Chloe's boobs, Chloe smiling, mouth closed
             with dissolve
@@ -387,11 +393,13 @@ label v13s40_chest:
 
 label v13s40_back:
     scene v13s40back_1 # TPP. Close up of Chloe's back
-    with dissolve
+    #with dissolve
 
     menu:
         "Massage":
-            $ v13s40_chloe_turned_on += 1
+            if not v13s40_backpoint:
+                $ v13s40_chloe_turned_on += 1
+                $ v13s40_backpoint = True
 
             scene v13s40back_2 # TPP. MC massaging Chloe's back, Chloe smiling, mouth closed
             with dissolve
@@ -428,11 +436,13 @@ label v13s40_back:
 
 label v13s40_shoulder:
     scene v13s40shoulder_1 # TPP. Close up of Chloe's shoulder
-    with dissolve
+    #with dissolve
 
     menu:
         "Massage":
-            $ v13s40_chloe_turned_on += 1
+            if not v13s40_shoulderpoint:
+                $ v13s40_chloe_turned_on += 1
+                $ v13s40_shoulderpoint = True
 
             scene v13s40shoulder_2 # TPP. Show MC massaging Chloe's shoulder, Chloe smiling, mouth closed
             with dissolve
@@ -464,7 +474,7 @@ label v13s40_end_free_roam:
         $ v13_chloesex = True
     
         scene v13s40end_1 # FPP. MC standing next to Chloe, Chloe looking up at MC, Chloe smiling, mouth open
-        with dissolve
+        #with dissolve
 
         cl "Hurry and untie me..."
 
@@ -738,7 +748,7 @@ label v13s40_end_free_roam:
 
     else:
         scene v13s40end_2
-        with dissolve
+        #with dissolve
 
         pause 0.75
 

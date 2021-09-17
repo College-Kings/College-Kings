@@ -69,7 +69,7 @@ init python:
         #v13
     SceneGallery("v13s16a") #16a, Riley
     SceneGallery("v13s25_emmysg") #26, Emmy
-    SceneGallery("v13s40") #40, Chloe
+    SceneGallery("v13s40_sg") #40, Chloe
     SceneGallery("v13s50a") #50a, Emily
 
 screen spoiler():

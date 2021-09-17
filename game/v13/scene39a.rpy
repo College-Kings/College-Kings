@@ -194,6 +194,11 @@ label v13s39a:
 
                 u "Right pocket!"
 
+                scene v13s39a_8c
+                with dissolve
+                
+                pause 1
+
                 scene v13s39a_4d # FPP. same as v13s39a_4a ryan slight angry
                 with dissolve
 
@@ -222,7 +227,7 @@ label v13s39a:
                 scene v13s39a_4
                 with dissolve
 
-                ry "Sureee...*Chuckles*"
+                ry "Sureee... *Chuckles*"
 
                 scene v13s39a_4
                 with dissolve
@@ -431,12 +436,12 @@ label v13s39a:
 
                 u "*Chuckles*"
 
-        scene v13s39a_4i
+        scene v13s39a_4e
         with dissolve
 
         ry "Man... It looks like Nora and Chris are gonna be back on the market here soon."
 
-        scene v13s39a_4h
+        scene v13s39a_4f
         with dissolve
 
         u "Maybe, maybe not. Why do you bring it up? Trying to take Chris to dinner? *Chuckles*"
@@ -582,7 +587,7 @@ label v13s39a:
                 scene v13s39a_4
                 with dissolve
 
-                ry "Sureee...*Chuckles*"
+                ry "Sureee... *Chuckles*"
 
         scene v13s39a_4m # FPP. same as v13s39a_4c ryan pulls out his phone and looks at it with a smile
         with dissolve
