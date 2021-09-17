@@ -609,13 +609,13 @@ label v13s9:
         with dissolve
         
         menu:
-            "Go to concert":
-                $ v13s9_go_to_concert = True
-                jump v13s9_go_to_concert
-            
-            "Don't go to concert":
+            "Go with Ryan":
                 $ addPoint("bro") # only give points for the decision; not the else (default) flow.   
                 jump v13s9_no_concert
+
+            "Don't go with Ryan":
+                $ v13s9_go_to_concert = True
+                jump v13s9_go_to_concert         
             
     else: # -If no concert, MC is forced to go and given no choice
         jump v13s9_no_concert
