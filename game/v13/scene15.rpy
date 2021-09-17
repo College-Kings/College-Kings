@@ -104,19 +104,36 @@ label v13s15:
 
         pause 0.75
 
-        scene v13s15_8 # TPP. Show MC getting into his bed, slight smile, mouth closed
-        with dissolve
+        if not chloegf:
+            scene v13s15_8 # TPP. Show MC getting into his bed, slight smile, mouth closed
+            with dissolve
 
-        pause 0.75
+            pause 0.75
 
-        scene v13s15_9 # TPP. Show MC sleeping, room is dark
-        with fade
+            scene v13s15_9 # TPP. Show MC sleeping, room is dark
+            with fade
 
-        pause 0.75
+            pause 0.75
 
-        stop music fadeout 3
+            stop music fadeout 3
 
-        jump v13s17c
+            jump v13s17c
+        
+        else:
+            scene v13s15_98
+            with dissolve
+
+            pause 0.75
+
+            scene v13s15_99
+            with fade
+
+            pause 0.75
+
+            stop music fadeout 3
+
+            jump v13s17
+
     elif not v11_aubrey_sex:
         play sound "sounds/vibrate.mp3"
 
@@ -235,16 +252,32 @@ label v13s15:
 
             pause 0.75
 
-            scene v13s15_8 
-            with dissolve
+            if not chloegf:
+                scene v13s15_8
+                with dissolve
 
-            pause 0.75
+                pause 0.75
 
-            scene v13s15_9
-            with fade
+                scene v13s15_9
+                with fade
 
-            pause 0.75
+                pause 0.75
 
-            stop music fadeout 3
+                stop music fadeout 3
 
-            jump v13s17c
+                jump v13s17c
+            
+            else:
+                scene v13s15_98
+                with dissolve
+
+                pause 0.75
+
+                scene v13s15_99
+                with fade
+
+                pause 0.75
+
+                stop music fadeout 3
+
+                jump v13s17
