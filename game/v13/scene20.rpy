@@ -3,8 +3,6 @@
 # Characters: MC (Outfit: 9), RILEY (Outfit: 2)
 # Time: Morning
 
-default v13s20_bleach_suitcase = False
-
 label v13s20:
     scene v13s20_1 # TPP. Show MC walking into Charli's room, smirking, mouth closed
     with dissolve
