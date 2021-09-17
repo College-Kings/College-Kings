@@ -346,11 +346,11 @@ label v13s12a:
 
             u "OF COURSE. *Laughs*"
 
-            play sound "sounds/kiss.mp3"
             scene v13s12a_6o # TPP. Same as v13s12a_6j, Aubrey kissed MC in the lips
             with dissolve
+            play sound "sounds/kiss.mp3"
 
-            pause
+            pause 1.25
 
             scene v13s12a_6d
             with dissolve
@@ -532,11 +532,11 @@ label v13s12a:
 
                 au "Haha, oh my god. It's not your fault at all. Fame is ugly, the stars are beautiful... Goodnight, [name]."
 
-                play sound "sounds/kiss.mp3"
                 scene v13s12a_14 # TPP. Aubrey kissing MC on the cheek
                 with dissolve
+                play sound "sounds/kiss.mp3"
 
-                pause
+                pause 1.25
 
                 scene v13s12a_13c # FPP. Same as v13s12a_13a, Aubrey slight smile
                 with dissolve
