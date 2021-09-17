@@ -157,6 +157,8 @@ label v13s25:
                 menu:
                     "Let her":
                         $ addPoint("tm")
+                        label v13s25_emmysg:
+
                         scene v13s25_9
                         with dissolve
 
@@ -165,7 +167,7 @@ label v13s25:
                         scene v13s25_10 
                         with dissolve
 
-                        emmy "Don't be gentle"
+                        emmy "Don't be gentle."
 
                         stop music fadeout 3
 
@@ -174,7 +176,6 @@ label v13s25:
                     "Stop her":
                         $ addPoint("bf")
 
-                        label v13s25_emmysg:
                         scene v13s25_9
                         with dissolve
 
