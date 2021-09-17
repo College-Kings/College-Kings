@@ -69,8 +69,8 @@ init python:
         #v13
     SceneGallery("v13s16a") #16a, Riley
     SceneGallery("v13s25_emmysg") #26, Emmy
-    SceneGallery("placeholder") #40, Chloe
-    SceneGallery("placeholder") #50a, Emily
+    SceneGallery("v13s40") #40, Chloe
+    SceneGallery("v13s50a") #50a, Emily
 
 screen spoiler():
     modal True
