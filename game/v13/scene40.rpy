@@ -331,7 +331,9 @@ label v13s40_neck:
 
     menu:
         "Choke":
-            $ v13s40_chloe_turned_on += 1
+            if not v13s40_neckpoint:
+                $ v13s40_chloe_turned_on += 1
+                $ v13s40_neckpoint = True
 
             scene v13s40neck_2 # TPP. Close up of MC's hand choking Chloe's neck, Chloe smiling, mouth closed
             with dissolve
@@ -368,7 +370,9 @@ label v13s40_chest:
             pause
 
         "Massage":
-            $ v13s40_chloe_turned_on += 1
+            if not v13s40_chestpoint:
+                $ v13s40_chloe_turned_on += 1
+                $ v13s40_chestpoint = True
 
             scene v13s40chest_3 # TPP. Show MC massaging Chloe's boobs, Chloe smiling, mouth closed
             with dissolve
@@ -393,7 +397,9 @@ label v13s40_back:
 
     menu:
         "Massage":
-            $ v13s40_chloe_turned_on += 1
+            if not v13s40_backpoint:
+                $ v13s40_chloe_turned_on += 1
+                $ v13s40_backpoint = True
 
             scene v13s40back_2 # TPP. MC massaging Chloe's back, Chloe smiling, mouth closed
             with dissolve
@@ -434,7 +440,9 @@ label v13s40_shoulder:
 
     menu:
         "Massage":
-            $ v13s40_chloe_turned_on += 1
+            if not v13s40_shoulderpoint:
+                $ v13s40_chloe_turned_on += 1
+                $ v13s40_shoulderpoint = True
 
             scene v13s40shoulder_2 # TPP. Show MC massaging Chloe's shoulder, Chloe smiling, mouth closed
             with dissolve

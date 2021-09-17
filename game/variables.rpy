@@ -579,3 +579,7 @@ default v13s20_frcloset = False
 default v13s20_frbrush = False
 default v13s37_frnora = False
 default v13s37_frchris = False
+default v13s40_neckpoint = False
+default v13s40_chestpoint = False
+default v13s40_backpoint = False
+default v13s40_shoulderpoint = False
