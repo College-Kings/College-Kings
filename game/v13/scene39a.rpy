@@ -77,7 +77,7 @@ label v13s39a:
 
         u "That would be the most awkward date, Ryan."
 
-        if laurenrs:
+        if laurenrs and not v11_aubrey_sex:
 
             scene v13s39a_5 # FPP. a dreamlike image of lauren is shown on the screen
             with dissolve
