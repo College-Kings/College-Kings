@@ -532,7 +532,7 @@ label v13s39a:
 
                 u "Damn!"
 
-                scene v13s39a_11
+                scene v13s39a_10
                 with dissolve
 
                 ry "Too bad! Right pocket. *Chuckles*"
