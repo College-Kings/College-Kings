@@ -70,7 +70,7 @@ label v13s59:
     scene v13s59_2
     with dissolve
 
-    au "I was never interested, but right now I'm wishing I had. *Laughs*"
+    au "I was never interested, but right now I'm wishing I had been. *Laughs*"
 
     scene v13s59_2a
     with dissolve
@@ -110,7 +110,7 @@ label v13s59:
     scene v13s59_3 # TPP. mc and aubrey, and the shop clerk arrive at a dock, with a canoe on both sides of the dock, canoe rack to the side of the dock, mc aubrey and shop clerk slight smiles mouths closed looking at the canoes
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s59_3a # TPP. same as scene v13s59_3 Mc and aubrey get into separate canoes, slight smiles looking at each other, mouths closed
     with dissolve
@@ -120,7 +120,7 @@ label v13s59:
     scene v13s59_3b # TPP. same as v13s59_3a mc and aubrey start rowing away from the dock, shop clerk waving goodbye
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s59_4 # FPP. show just aubrey sitting in her canoe, holding a paddle with the left side of the paddle dipped into the water and right side of paddle in the air, slight smile, mouth open, looking at mc
     with dissolve
@@ -229,12 +229,12 @@ label v13s59:
     scene v13s59_3c # TPP. same as v13s59_3b mc and aubrey are rowing towards the dock instead of leaving
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v13s59_3d # TPP. same as v13s59_3a mc and aubrey getting out of canoes instead of getting in
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v13s59_6 # FPP. show aubrey looking at mc, slight concern, mouth open
     with dissolve
@@ -309,16 +309,17 @@ label v13s59:
 
                 u "Always."
 
-                play sound "sounds/kiss.mp3"
                 scene v13s59_7 # TPP. Aubrey and MC romantically kiss
                 with dissolve
+                play sound "sounds/kiss.mp3"
 
-                pause 0.75
+                pause 1.25
 
+                play sound "sounds/lick.mp3"
                 scene v13s59_7a # TPP. the cow licks aubrey and the mc's faces, aubrey and mc slight shock, they are both looking at the cow
                 with dissolve
 
-                pause 0.75
+                pause 1.25
 
                 stop music fadeout 3
                 play music "music/v13/Track Scene 59_2.mp3" fadein 2
@@ -326,7 +327,7 @@ label v13s59:
                 scene v13s59_7b # TPP. the cow has walked away, aubrey and mc look at each other
                 with dissolve
 
-                pause 0.75
+                pause 1.25
 
                 scene v13s59_6g # FPP. same as v13s59_6c aubrey full smile
                 with dissolve

@@ -115,7 +115,7 @@ label v13s51_emily_fight:
     scene v13s51_6a # TPP. Same as v13s51_6, but Emily mouth closed.
     with dissolve
 
-    u " (muffled) Emily, go chill somewhere and leave me alone."
+    u "(muffled) Emily, go chill somewhere and leave me alone."
 
     play sound "sounds/dooropen.mp3"
     
