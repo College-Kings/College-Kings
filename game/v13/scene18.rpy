@@ -167,7 +167,7 @@ label v13s18:
                 if contact_Nora.replies:
                     call screen phone
                 if contact_Nora.replies:
-                    u "(I should check my phone.)"
+                    u "(I should text Nora.)"
                     jump v13s18_PhoneContinueNora
                     
             scene v13s18_4b # TPP. Show MC putting his phone away.
