@@ -214,6 +214,9 @@ label after_load:
             try: contact.condition
             except AttributeError: contact.condition = True
 
+            try: contact.profile_picture
+            except AttributeError: contact.profile_picture = contact.profilePicture
+
 
         # Variables
         try:
