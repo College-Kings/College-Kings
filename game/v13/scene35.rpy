@@ -223,6 +223,6 @@ label v13s35:
     pause 0.75
 
     stop music fadeout 3
-
+    $ freeRoam = False
     jump v13_walk_garden
     # -Transition to Scene 36-
