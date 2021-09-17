@@ -415,12 +415,14 @@ label v13s9:
 
     cl "Ironically, yes. *Chuckles* I was walking with Aubrey earlier and we passed by this really nice sex shop..."
 
-    scene v13s9_12p # FPP. Same as v13s9_12f but Chloe slightly blushing, mouth open.
+    #scene v13s9_12p # FPP. Same as v13s9_12f but Chloe slightly blushing, mouth open.
+    scene v13s9_12f
     with dissolve
 
     cl "I wanted to go in, but I was a little nervous to tell Aubrey. *Chuckles*"
 
-    scene v13s9_12o # FPP. Same as v13s9_12e but Chloe slightly blushing, mouth closed.
+    #scene v13s9_12o # FPP. Same as v13s9_12e but Chloe slightly blushing, mouth closed.
+    scene v13s9_12e
     with dissolve
 
     u "Oooh, didn't know that was your kind of scene... *Chuckles*"
@@ -435,12 +437,14 @@ label v13s9:
 
     u "What are you wanting to look at, specifically?"
 
-    scene v13s9_12p
+    #scene v13s9_12p
+    scene v13s9_12f
     with dissolve
 
     cl "Don't embarrass me. *Chuckles*"
 
-    scene v13s9_12o
+    #scene v13s9_12o
+    scene v13s9_12e
     with dissolve
 
     u "Haha. I'm not trying to. I'm just curious."
@@ -523,6 +527,8 @@ label v13s9:
 
     cl "Go ahead and take it."
 
+    stop sound
+
     scene v13s9_15 # TPP. MC talking on his phone, mouth open, standing next to Chloe, with the gaurd raile and the water behind them.
     with dissolve
 
@@ -603,14 +609,12 @@ label v13s9:
         with dissolve
         
         menu:
-            
             "Go to concert":
                 $ v13s9_go_to_concert = True
                 jump v13s9_go_to_concert
             
             "Don't go to concert":
-                $ addPoint("bro") # only give points for the decision; not the else (default) flow.
-                
+                $ addPoint("bro") # only give points for the decision; not the else (default) flow.   
                 jump v13s9_no_concert
             
     else: # -If no concert, MC is forced to go and given no choice
