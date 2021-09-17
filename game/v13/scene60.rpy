@@ -34,7 +34,7 @@ label v13s60:
     scene v13s60_4 # TPP. Show Aubrey pointing at a tall boulder, slight smile, mouth closed.
     with dissolve
 
-    pause 0.75
+    pause
 
     scene v13s60_3
     with dissolve
@@ -59,20 +59,24 @@ label v13s60:
     scene v13s60_99 # TPP. Show MC climbing up the boulder, slight smile, mouth closed.
     with dissolve
 
-    pause
+    pause 1.25
 
     scene v13s60_5 # TPP. Close up of his hand slipping off the builder.
     with dissolve
 
-    pause
+    pause 0.75
+
+    scene v13s60_5
+    with hpunch
 
     scene v13s60_4a # TPP. Same as v13s60_4, MC falling off the boulder from a decent height, worried expression, mouth closed.
     with dissolve
 
-    pause 
+    pause 0.75
 
     scene v13s60_6 # TPP. Close up of MC hitting his head on the ground, worried expression, mouth closed.
-    with dissolve
+    with vpunch
+    play sound "sounds/fall.mp3"
 
     pause
 
@@ -86,7 +90,6 @@ label v13s60:
 
     scene v13s60_8 # FPP. MC looking at the sky above him as he holds his head.
     with dissolve
-
 
     u "Oh, fuck! Fuck, fuck, fuck!"
 
@@ -103,27 +106,37 @@ label v13s60:
     scene v13s60_8b # FPP. Same as v13s60_8a, Aubrey worried expression, mouth closed.
     with dissolve
 
-    u "My head IT'S BAD!"
+    u "My head... IT'S BAD!"
 
     scene v13s60_8c # FPP. Same as v13s60_8b, MC with blurry vision, Aubrey worried expression, mouth closed.
     with dissolve
 
     u "My... My vision is going blurry..."
 
+    scene black
+    with dissolve
+    
+    pause 0.4
+
     scene v13s60_8d # FPP. Same as v13s60_8c, Aubrey worried expression, mouth open.
     with dissolve
 
-    au "I'm gonna get you back to the hotel, just bare with me, okay?"
+    au "I'm gonna get you back to the hotel, just bear with me, okay?"
 
     scene v13s60_9 # TPP. Show Aubrey starting to help up MC, MC pain expression, mouth closed, Aubrey worried expression, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 1
 
     scene v13s60_9a # TPP. Same as v13s60_9a, Aubrey holding up MC.
     with dissolve
 
-    pause 0.75
+    pause 1
+
+    scene black
+    with dissolve
+    
+    pause 1
 
     stop music fadeout 3
 
