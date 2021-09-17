@@ -41,13 +41,11 @@ label v13s57:
 
     no "Sounds good, see you soon."
 
-    scene v13s57_1d # FPP. Same as v13s57_1a, Nora mouth closed
+    #scene v13s57_1d # FPP. Same as v13s57_1a, Nora mouth closed
+    scene v13s57a_2b
     with dissolve
 
-    "Beep."
-
-    scene v13s57_1d
-    with dissolve
+    play sound "sounds/rejectcall.mp3"
 
     u "Is she on the way?"
 
