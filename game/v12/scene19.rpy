@@ -203,8 +203,8 @@ label v12_party_wake_up:
     $ v12s19_kiwiiPost1.newComment("Chris", _("Oh no... What did you guys do to him?"), mentions="Amber", numberLikes=renpy.random.randint(250,350), queue=False)
     $ v12s19_kiwiiPost1.newComment("Amber", _("\"We\" taught him why we shouldn't get too drunk at slumber parties... Hehe"), mentions="Chris", numberLikes=renpy.random.randint(150,300), queue=False)
     $ v12s19_kiwiiPost1.newComment("Imre", _("\"We\"??? Who is we?!?!"), mentions="Amber", numberLikes=renpy.random.randint(250,400), queue=False)
-    $ v12s19_kiwiiPost1.addReply(_("Not cool, Amber... Not cool... ;)"), v12s19_kiwiiReply1, mentions="Amber", numberLikes=renpy.random.randint(250, 330))
-    $ v12s19_kiwiiPost1.addReply(_("It's just a prank bro!"), v12s19_kiwiiReply1, mentions="Imre", numberLikes=renpy.random.randint(250, 330))
+    #$ v12s19_kiwiiPost1.addReply(_("Not cool, Amber... Not cool... ;)"), v12s19_kiwiiReply1, mentions="Amber", numberLikes=renpy.random.randint(250, 330))
+    #$ v12s19_kiwiiPost1.addReply(_("It's just a prank bro!"), v12s19_kiwiiReply1, mentions="Imre", numberLikes=renpy.random.randint(250, 330))
     
     scene v12pwu13 # TPP. Show MC removing his pajama shirt, pajama pants still on, neutral expression, mouth closed
     with dissolve

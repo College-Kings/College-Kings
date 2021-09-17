@@ -717,7 +717,7 @@ screen load():
 screen file_slots(title):
     default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
     $ incompatible_game_versions = ["12.0.0", "0.6.4"]
-    $ incompatible_renpy_versions = ["7.4.7.1862"]
+    $ incompatible_renpy_versions = ["7.4.8.1895", "7.4.7.1862"]
 
     use game_menu(title):
         
@@ -737,7 +737,7 @@ screen file_slots(title):
                     xalign 0.5
 
                 python:
-                    game_version = FileJson(1, key="_version") or ""
+                    game_version = FileJson(1, key="_version")
                     renpy_version = FileJson(1, key="_renpy_version") or ""
                     renpy_version = '.'.join(str(i) for i in renpy_version)
                     file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
@@ -746,7 +746,8 @@ screen file_slots(title):
                     style_prefix "slot"
                     align (0.5, 0.5)
 
-                    action FileAction(1)
+                    if file_compatable or config.developer:
+                        action FileAction(1)
 
                     has vbox
 
@@ -789,13 +790,14 @@ screen file_slots(title):
 
                     for slot in range(1, gui.file_slot_cols * gui.file_slot_rows + 1):
                         python:
-                            game_version = FileJson(slot, key="_version") or ""
+                            game_version = FileJson(slot, key="_version")
                             renpy_version = FileJson(slot, key="_renpy_version") or ""
                             renpy_version = '.'.join(str(i) for i in renpy_version)
                             file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
 
                         button:
-                            action FileAction(slot)
+                            if file_compatable or config.developer:
+                                action FileAction(slot)
 
                             has vbox
 

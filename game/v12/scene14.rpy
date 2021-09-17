@@ -10,7 +10,7 @@ label v12_chloe_cafe:
 
     pause 0.75
 
-    play music "music/v12/Scene 14/Track Scene 14 _ 14a.mp3" fadein 2
+    play music "music/v12/Scene 14/Track Scene 14 & 14a.mp3" fadein 2
 
     scene v12chc2 # TPP. Show MC and Chloe approaching their table, both smiling, mouths closed
     with dissolve

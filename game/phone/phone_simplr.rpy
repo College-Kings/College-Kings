@@ -1,9 +1,9 @@
 init python:
     class SimplrContact(Contact):
-            def __init__(self, name, profile_picture, profile_picture_large, condition=True):
+            def __init__(self, name, profilePicture, profilePictureLarge, condition=True):
                 self.name = name
-                self.profile_picture = "images/phone/simplr/contacts/{}".format(profile_picture)
-                self.profile_picture_large = "images/phone/simplr/contacts/{}".format(profile_picture_large)
+                self.profilePicture = "images/phone/simplr/contacts/{}".format(profilePicture)
+                self.profilePictureLarge = "images/phone/simplr/contacts/{}".format(profilePictureLarge)
                 self.condition = condition
 
                 self.sentMessages = []
@@ -135,7 +135,7 @@ screen simplr_app():
 
             # Profile Picture
             if simplr_contact:
-                add Transform(simplr_contact.profile_picture_large, size=(362, 585)) align (0.5, 0.5)
+                add Transform(simplr_contact.profilePictureLarge, size=(362, 585)) align (0.5, 0.5)
 
             # Bottom UI
             hbox:
@@ -183,7 +183,7 @@ screen simplr_contacts():
                 fixed:
                     xysize(375, 74)
 
-                    add Transform(contact.profile_picture, size=(55, 55)) yalign 0.5 xpos 20
+                    add Transform(contact.profilePicture, size=(55, 55)) yalign 0.5 xpos 20
                     text contact.name style "nametext" yalign 0.5 xpos 100
 
                     if contact.replies:
@@ -214,7 +214,7 @@ screen simplr_messenger(contact=None):
             vbox:
                 align (0.5, 0.5)
 
-                add Transform(contact.profile_picture, size=(55, 55)) xalign 0.5
+                add Transform(contact.profilePicture, size=(55, 55)) xalign 0.5
                 text contact.name style "nametext"
 
         viewport:

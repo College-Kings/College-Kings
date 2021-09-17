@@ -16,6 +16,8 @@ scene v9dream1 # TPP (camera from the front so the void is not fully visible yet
 with dissolve
 pause
 
+# play music "music/horror2.mp3"
+
 scene v9dream2 # TPP. Show a shot of the dreamy empty void. There is nothing but blackness and maybe some random abstract artifacts type of stuff to make it more visually appealing. (The door should not be present in the following renders)
 with dissolve
 pause

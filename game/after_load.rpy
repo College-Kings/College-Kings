@@ -132,16 +132,14 @@ label after_load:
             try: kiwiiPost.sentComments = kiwiiPost.comments
             except AttributeError: pass
 
-            try: kiwiiPost.profile_picture = kiwiiPost.profilePicture
-            except AttributeError: pass
+            kiwiiPost.profilePicture = kiwiiPost.profile_picture
 
             # Kiwii Comments
             for comment in kiwiiPost.sentComments:
                 try: comment.message = comment.text
                 except AttributeError: pass
 
-                try: comment.profile_picture = comment.profilePicture
-                except AttributeError: pass
+                comment.profilePicture = comment.profile_picture
                 
             # Old Kiwii Replies
             try:
@@ -164,25 +162,7 @@ label after_load:
 
 
         # Contacts
-        contact_Lindsey.profile_picture = "images/phone/messages/profile_pictures/lindseyprofilepic.webp"
-        contact_Emily.profile_picture = "images/phone/messages/profile_pictures/emilyprofilepic.webp"
-        contact_Lauren.profile_picture = "images/phone/messages/profile_pictures/laurenprofilepic.webp"
-        contact_Julia.profile_picture = "images/phone/messages/profile_pictures/juliaprofilepic.webp"
-        contact_Ryan.profile_picture = "images/phone/messages/profile_pictures/ryanprofilepic.webp"
-        contact_Josh.profile_picture = "images/phone/messages/profile_pictures/joshprofilepic.webp"
-        contact_Aubrey.profile_picture = "images/phone/messages/profile_pictures/aubreyprofilepic.webp"
-        contact_Chloe.profile_picture = "images/phone/messages/profile_pictures/chloeprofilepic.webp"
-        contact_Evelyn.profile_picture = "images/phone/messages/profile_pictures/evelynprofilepic.webp"
-        contact_Amber.profile_picture = "images/phone/messages/profile_pictures/amberprofilepic.webp"
-        contact_Penelope.profile_picture = "images/phone/messages/profile_pictures/penelopeprofilepic.webp"
-        contact_Riley.profile_picture = "images/phone/messages/profile_pictures/rileyprofilepic.webp"
-        contact_Autumn.profile_picture = "images/phone/messages/profile_pictures/autumnprofilepic.webp"
-        contact_Imre.profile_picture = "images/phone/messages/profile_pictures/imreprofilepic.webp"
-        contact_Sebastian.profile_picture = "images/phone/messages/profile_pictures/sebastianprofilepicture.webp"
-        contact_Grayson.profile_picture = "images/phone/messages/profile_pictures/graysonprofilepicture.webp"
-        contact_Lindsey.profile_picture = "images/phone/messages/profile_pictures/lindseyprofilepic.webp"
-        contact_Jenny.profile_picture = "images/phone/messages/profile_pictures/jennyprofilepicture.webp"
-        contact_Nora.profile_picture = "images/phone/messages/profile_pictures/noraprofilepicture.webp"
+        contact_Lindsey.profilePicture = "lindseyprofilepic"
 
         if contact_Grayson not in contacts:
             contacts.append(contact_Grayson)
@@ -228,9 +208,6 @@ label after_load:
         for contact in simplr_pendingContacts + simplr_contacts:
             try: contact.condition
             except AttributeError: contact.condition = True
-
-            try: contact.profile_picture
-            except AttributeError: contact.profile_picture = contact.profilePicture
 
 
         # Variables
@@ -509,8 +486,7 @@ label after_load:
         except NameError: v11_hp_points = 0
         try: political_strategist
         except NameError: political_strategist = False
-        try: emily_europe
-        except NameError: emily_europe = False
+
 
 
 

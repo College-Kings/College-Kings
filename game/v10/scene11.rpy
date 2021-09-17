@@ -114,7 +114,7 @@ label v10_linds_room:
             scene v10slds3
             with dissolve
 
-            li "If you've heard about it then I'm sure others have as well *sighs*, we all know bad news travels faster than good news."
+            li "If you've heard about it then I'm sure others have as well *sighs* , we all know bad news travels faster than good news."
 
         "No, I had no clue":
             scene v10slds3a

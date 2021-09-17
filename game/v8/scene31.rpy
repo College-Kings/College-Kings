@@ -5,7 +5,7 @@
 
 label v8_tues_eco_class:
     scene v8stec1 # FPP. Sweeping shot of the economics class, show Riley, Lauren and Ryan all sat on the back row.
-    with Fade(0.75, 2, 0.75)
+    with Fade(0.75, 0.25, 0.75)
 
     pause 0.5
 

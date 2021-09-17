@@ -1,37 +1,14 @@
 init python:
-    class MainCharacter:
-        """Main Character class is used to create the MC character model"""
-
-        def __init__(self):
-            self.money = 0
-            self.inventory = Inventory()
-
-        def add_item(self, item):
-            if item.cost > self.money:
-                raise UnhandledTranscribingError("{} price is higher then user money".format(item.name))
-
-            self.inventory.items.append(item)
-
-        def has_item(self, item):
-            return (item in self.inventory.items)
-
-
     class CustomCharacter:
         """
         Custom character class primarily used for the murder mystery game in v12s7
 
         Attributes:
             name (str): The display name for the character
-            profile_picture (str): The relative path for this character's profile picture
         """
 
-        def __init__(self, name, profile_picture):
-            self.name = name
-            self.profile_picture = "images/phone/messages/profile_pictures/{}".format(profile_picture)
-
+        def __init__(self, name):
             self.name = name.replace(" ", "_")
-            
-            # self.messenger = Contact(name, profile_picture)
 
             self.stats = {
                 "Competitive": None,
@@ -68,27 +45,24 @@ init python:
 
         def resetPoints(self):
             self.points = 0
-
-init offset = 1
-
-default mc = MainCharacter()
-default chloe = CustomCharacter("Chloe", "chloeprofilepic.webp")
-default amber = CustomCharacter("Amber", "chloeprofilepic.webp")
-default penelope = CustomCharacter("Penelope", "chloeprofilepic.webp")
-default riley = CustomCharacter("Riley", "chloeprofilepic.webp")
-default lindsey = CustomCharacter("Lindsey", "chloeprofilepic.webp")
-default lauren = CustomCharacter("Lauren", "chloeprofilepic.webp")
-default samantha = CustomCharacter("Samantha", "chloeprofilepic.webp")
-default emily = CustomCharacter("Emily", "chloeprofilepic.webp")
-default ms_rose = CustomCharacter("Ms Rose", "chloeprofilepic.webp")
-default nora = CustomCharacter("Nora", "chloeprofilepic.webp")
-default aubrey = CustomCharacter("Aubrey", "chloeprofilepic.webp")
-default ryan = CustomCharacter("Ryan", "chloeprofilepic.webp")
-default imre = CustomCharacter("Imre", "chloeprofilepic.webp")
-default chris = CustomCharacter("Chris", "chloeprofilepic.webp")
-default charli = CustomCharacter("Charli", "chloeprofilepic.webp")
-default cameron = CustomCharacter("Cameron", "chloeprofilepic.webp")
-default josh = CustomCharacter("Josh", "chloeprofilepic.webp")
+        
+default chloe = CustomCharacter("Chloe")
+default amber = CustomCharacter("Amber")
+default penelope = CustomCharacter("Penelope")
+default riley = CustomCharacter("Riley")
+default lindsey = CustomCharacter("Lindsey")
+default lauren = CustomCharacter("Lauren")
+default samantha = CustomCharacter("Samantha")
+default emily = CustomCharacter("Emily")
+default ms_rose = CustomCharacter("Ms Rose")
+default nora = CustomCharacter("Nora")
+default aubrey = CustomCharacter("Aubrey")
+default ryan = CustomCharacter("Ryan")
+default imre = CustomCharacter("Imre")
+default chris = CustomCharacter("Chris")
+default charli = CustomCharacter("Charli")
+default cameron = CustomCharacter("Cameron")
+default josh = CustomCharacter("Josh")
 
 
 default contact_Emily = Contact("Emily", "emilyprofilepic.webp")
@@ -108,7 +82,6 @@ default contact_Sebastian = Contact("Sebastian", "sebastianprofilepicture.webp")
 default contact_Grayson = Contact("Grayson", "graysonprofilepicture.webp")
 default contact_Lindsey = Contact("Lindsey", "lindseyprofilepic.webp")
 default contact_Jenny = Contact("Jenny", "jennyprofilepicture.webp")
-default contact_Nora = Contact("Nora", "noraprofilepicture.webp")
 
 default simplr_Beth = SimplrContact("Beth", "bethProfilePicture.webp", "bethProfilePictureLarge.webp")
 default simplr_Iris = SimplrContact("Iris", "irisProfilePicture.webp", "irisProfilePictureLarge.webp")

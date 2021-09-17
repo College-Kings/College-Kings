@@ -37,7 +37,7 @@ init python:
 
         @property
         def profile_picture(self):
-            return kiwiiUsers[self.user]["profile_picture"]
+            return kiwiiUsers[self.user]["profilePicture"]
 
         @property
         def replies(self):
@@ -80,7 +80,7 @@ init python:
             return reply
 
         def selectedReply(self, reply):
-            self.newComment("MC", reply.message, reply.numberLikes, reply.mentions, queue=False)
+            self.newComment("MC", reply.message, numberLikes=reply.numberLikes, mentions=reply.mentions)
             self.sentComments[-1].reply = reply
             self.sentComments[-1].replies = []
 
@@ -158,13 +158,8 @@ init python:
         return total
 
 init -100:
-    define profile_pictures = [
-        "images/phone/kiwii/profile_pictures/mcpp1.webp",
-        "images/phone/kiwii/profile_pictures/mcpp2.webp",
-        "images/phone/kiwii/profile_pictures/mcpp3.webp",
-        "images/phone/kiwii/profile_pictures/mcpp4.webp"
-        ]
-    default profile_pictures_count = 0
+    define profilePictures = [ "images/phone/Kiwii/profilePictures/mcpp1.webp", "images/phone/Kiwii/profilePictures/mcpp2.webp", "images/phone/Kiwii/profilePictures/mcpp3.webp", "images/phone/Kiwii/profilePictures/mcpp4.webp" ]
+    default profilePictures_count = 0
 
     default kiwiiPosts = []
     default liked_kiwiPosts = []
@@ -174,7 +169,7 @@ screen kiwiiTemplate():
     zorder 200
 
     use phoneTemplate:
-        add Transform("images/phone/kiwii/AppAssets/Background.webp", size=(376, 744)) at truecenter
+        add Transform("images/phone/Kiwii/AppAssets/Background.webp", size=(376, 744)) at truecenter
 
         transclude
 
@@ -208,24 +203,24 @@ screen kiwiiPreferences():
     modal True
     zorder 200
 
-    $ kiwiiUsers["MC"]["profile_picture"] = profile_pictures[profile_pictures_count]
+    $ kiwiiUsers["MC"]["profilePicture"] = profilePictures[profilePictures_count]
 
     use kiwiiTemplate:
 
-        add Transform(kiwiiUsers["MC"]["profile_picture"], zoom=0.2) align(0.5, 0.3)
+        add Transform(kiwiiUsers["MC"]["profilePicture"], zoom=0.2) align(0.5, 0.3)
 
         hbox:
             spacing 50
             align(0.5, 0.48)
 
             textbutton "<":
-                if profile_pictures_count > 0:
-                    action SetVariable("profile_pictures_count", profile_pictures_count - 1)
+                if profilePictures_count > 0:
+                    action SetVariable("profilePictures_count", profilePictures_count - 1)
                 text_style "kiwii_PrefTextButton"
 
             textbutton ">":
-                if profile_pictures_count + 1 < len(profile_pictures):
-                    action SetVariable("profile_pictures_count", profile_pictures_count + 1)
+                if profilePictures_count + 1 < len(profilePictures):
+                    action SetVariable("profilePictures_count", profilePictures_count + 1)
                 text_style "kiwii_PrefTextButton"
 
         vbox:

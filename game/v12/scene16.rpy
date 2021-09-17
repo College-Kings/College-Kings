@@ -785,6 +785,21 @@ label v12_valentine:
 
                 cl "*Whisper* Just making sure he knows that I'm the only girl he should be talking to like that. *Chuckles*"
 
+#                scene v12val29b
+#                with dissolve
+#
+#                li "*Whisper* Are you guys dating or something?"
+#
+#                scene v12val32
+#                with dissolve
+#
+#                cl "*Whisper* Yes! He officially asked me out in London. It was so romantic..."
+#
+#                scene v12val29b
+#                with dissolve
+#
+#                li "*Whisper* Aww, that's so cute! Tell me everything..."
+
             scene v12val27
             with dissolve
 

@@ -53,7 +53,7 @@ label v12_lindsey_lobby:
     scene v12lil4b
     with dissolve
 
-    u "Okay... You forgot how to eat? *Chuckles*"
+    u "Okay... You forget how to eat? *Chuckles*"
 
     scene v12lil4c
     with dissolve
@@ -153,7 +153,7 @@ label v12_lindsey_lobby:
     scene v12lil10 # FPP. Same positioning as v12lil9, MC looking at bartender, bartender looking at Lindsey, bartender slight smile, mouth open (Only Bartender in shot)
     with dissolve
 
-    bartender "I'm sorry Madam, but breakfast is closed."
+    bartender "I'm sorry, Madam but breakfast is closed."
 
     scene v12lil9a # FPP. Same as v12lil9, Lindsey slightly sad, mouth open
     with dissolve
@@ -206,7 +206,7 @@ label v12_lindsey_lobby:
     scene v12lil12
     with dissolve
 
-    li "They have the same complaints I have. Most of us girls seem to be on the same page that Chloe is the problem."
+    li "They have the same complaints I have. Most of us girls seem to be on the same page that Chloe's the problem."
 
     scene v12lil12a
     with dissolve
@@ -313,8 +313,6 @@ label v12_lindsey_lobby:
 
     pause 0.75
     play sound "sounds/vibrate.mp3"
-
-    pause 2
 
     $ contact_Riley.newMessage("Hey, I saw you were having breakfast with Lindsey, can you come to the cafe down the road when you're done? I have something to talk to you about in private.", queue=False)
     $ contact_Riley.addReply("Sure, on my way", func=None)

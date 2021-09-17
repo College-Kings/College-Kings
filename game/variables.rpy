@@ -2,7 +2,6 @@
 define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
 define config.default_sfx_volume = 1
-default menu_set = set()
 
 default achievementAtList = None
 default freeRoam = False
@@ -471,7 +470,6 @@ default v11_rileysex = False
 default v11_overtake_points = 0
 default v11_hp_points = 0
 default political_strategist = False
-default v11_smoke_amber_amsterdam = False
 
 # 12.0
 default v12_told_chloe = False
@@ -484,8 +482,6 @@ default v12s7_killList = set()
 default v12_msrose_sex = False
 default v11_lindsey_run = False
 default v12_help_chris = 0
-default norars = False
-default lindseyrs = False
     # scene7
 default v12s7_lauren = False
 default v12s7_emily = False
@@ -537,49 +533,3 @@ default v12s33_door1 = False
 default v12s33_door2 = False
 default v12s33_door3 = False
 default v12s24_emmymatch = False
-default chrismad = False
-
-#13.0
-default v13_penelope_concert = False
-default v13_aubrey_concert = False
-default chloeSus = 0
-default v13_cuddle_lauren = False
-default v13_cuddle_lauren_text = False
-default v13s16_lauren_points = 0
-default v13_smoke_weed = False
-default v13_lauren_smoke = False
-default cameronBro = False
-default v13_lauren_hospital = False
-default v13_charli_exposed = False
-default v13_invite_samantha = False
-default v13_after_party = False
-default v13s48_get_aubrey_chocolate = False
-default v13s48_ryan_double_date = False
-default v13s48_canoeing_as_date = False
-default v13_help_chloe = False
-default v13_help_lindsey = False
-default emmyrs = False
-default kourtneyrs = False
-default aryssars = False
-default v13_told_emmy_no_kids_for_me = False
-default v13_told_emmy_city = False
-default v13_imre_disloyal = False
-default v13s40_chloe_turned_on = 0
-default v13_perfume = False
-default v13_hugged_aubrey = False
-default v13s9_go_to_concert = False
-default v13s41_lindsey_points = 0
-default v13_rileysex = False
-default v13_emmysex = False
-default v13_chloesex = False
-default v13_emilysex = False
-default v13s20_bleach_suitcase = False
-default v13s20_frbleach = False
-default v13s20_frcloset = False
-default v13s20_frbrush = False
-default v13s37_frnora = False
-default v13s37_frchris = False
-default v13s40_neckpoint = False
-default v13s40_chestpoint = False
-default v13s40_backpoint = False
-default v13s40_shoulderpoint = False

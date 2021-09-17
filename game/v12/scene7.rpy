@@ -393,15 +393,9 @@ label v12s7fr:
     pause
     hide murder_tutorial2
 
-    if (v12s7_victims == 16) or (v12s7_victims == 15 and joinwolves):
-        show murder_tutorial3 at truecenter
-        pause
-        hide murder_tutorial3
-    else:
-        show murder_tutorial3b at truecenter
-        pause
-        hide murder_tutorial3b
-
+    show murder_tutorial3 at truecenter
+    pause
+    hide murder_tutorial3
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
@@ -752,10 +746,7 @@ label v12s7_aubrey2:
             scene v12ferauh1a
             with dissolve
 
-            if len(v12s7_killList) == v12s7_victims:
-                u "We'll catch up later. I've got things to see still."
-            else:
-                u "We'll catch up later. I've got things to see and people to kill."
+            u "We'll catch up later. I've got things to see and people to kill."
 
             scene v12ferauh1
             with dissolve
@@ -775,7 +766,7 @@ label v12s7_aubrey2:
             stop music fadeout 3
             play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
-            call screen v12s7_bathroom
+            call screen v12s7_left_gallery_front
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
@@ -3055,7 +3046,7 @@ label v12s7_lindsey2:
             scene v12ferli3a
             with dissolve
 
-            u "Just start talking to people about how vulnerable Charli is and see who takes the bait."
+            u "Just start talking to people about how vulnerable Charlie is and see who takes the bait."
 
     li "Hmmm, not a bad idea."
 
@@ -4389,8 +4380,6 @@ label v12s7_riley2_amber:
     scene v12feramb3 # TPP. Show mc walking closer
     with dissolve
 
-    pause 1
-
     scene v12feramb4 # FPP. Show riley, neutral face, mouth closed
     with dissolve
 
@@ -4399,7 +4388,7 @@ label v12s7_riley2_amber:
     scene v12feramb4a # FPP. Same 4, mouth open
     with dissolve
 
-    ri "Uhm... hey."
+    ri "Uhm...hey."
 
     scene v12feramb5 # FPP. Show Amber, mouth open
     with dissolve
@@ -5912,129 +5901,73 @@ label v12s7_josh2:
 
     pause 0.75
 
-    if not v12s7_aubrey_moved:
-        scene v12ferjos3 # FPP. Show josh(now infront of camera), mouth closed
-        with dissolve
-    else:
-        scene v12ferjos3noau
-        with dissolve
+    scene v12ferjos3 # FPP. Show josh(now infront of camera), mouth closed
+    with dissolve
     
     u "Yes?"
 
-    if not v12s7_aubrey_moved:
-        scene v12ferjos3a # FPP. Same 3, mouth open
-        with dissolve
-    else:
-        scene v12ferjos3anoau
-        with dissolve
+    scene v12ferjos3a # FPP. Same 3, mouth open
+    with dissolve
 
     jo "I have a little proposition."
 
-    if not v12s7_aubrey_moved:
-        scene v12ferjos3 # FPP. Show josh(now infront of camera), mouth closed
-        with dissolve
-    else:
-        scene v12ferjos3noau
-        with dissolve
+    scene v12ferjos3
+    with dissolve
 
     u "What is that?"
 
-    if not v12s7_aubrey_moved:
-        scene v12ferjos3a # FPP. Same 3, mouth open
-        with dissolve
-    else:
-        scene v12ferjos3anoau
-        with dissolve
+    scene v12ferjos3a
+    with dissolve
 
     jo "How'd you like to own your very own leopard?"
 
-    if not v12s7_aubrey_moved:
-        scene v12ferjos3 # FPP. Show josh(now infront of camera), mouth closed
-        with dissolve
-    else:
-        scene v12ferjos3noau
-        with dissolve
+    scene v12ferjos3
+    with dissolve
 
     u "It's not something I've thought about."
 
-    if not v12s7_aubrey_moved:
-        scene v12ferjos3a # FPP. Same 3, mouth open
-        with dissolve
-    else:
-        scene v12ferjos3anoau
-        with dissolve
+    scene v12ferjos3a
+    with dissolve
 
     jo "Well now's the time to start thinking. I have a magnificent baby boy leopard that needs the care of an individual home."
 
-    if not v12s7_aubrey_moved:
-        scene v12ferjos3 # FPP. Show josh(now infront of camera), mouth closed
-        with dissolve
-    else:
-        scene v12ferjos3noau
-        with dissolve
+    scene v12ferjos3
+    with dissolve
 
     u "Why can't he be with the rest?"
 
-    if not v12s7_aubrey_moved:
-        scene v12ferjos3a # FPP. Same 3, mouth open
-        with dissolve
-    else:
-        scene v12ferjos3anoau
-        with dissolve
+    scene v12ferjos3a
+    with dissolve
 
     jo "Well you see, he was bullied by the nearby monkeys and they ripped off his tail."
 
-    if not v12s7_aubrey_moved:
-        scene v12ferjos3 # FPP. Show josh(now infront of camera), mouth closed
-        with dissolve
-    else:
-        scene v12ferjos3noau
-        with dissolve
+    scene v12ferjos3
+    with dissolve
 
     u "*Laughs* They ripped off your baby leopard's tail?"
 
-    if not v12s7_aubrey_moved:
-        scene v12ferjos3a # FPP. Same 3, mouth open
-        with dissolve
-    else:
-        scene v12ferjos3anoau
-        with dissolve
+    scene v12ferjos3a
+    with dissolve
 
     jo "This ain't no laughing matter boy, the future king of leopard land is without a tail and this is how you behave. Shame on you, shame!"
 
-    if not v12s7_aubrey_moved:
-        scene v12ferjos3 # FPP. Show josh(now infront of camera), mouth closed
-        with dissolve
-    else:
-        scene v12ferjos3noau
-        with dissolve
+    scene v12ferjos3
+    with dissolve
 
     u "I didn't know it was that serious, sorry dude."
 
-    if not v12s7_aubrey_moved:
-        scene v12ferjos3a # FPP. Same 3, mouth open
-        with dissolve
-    else:
-        scene v12ferjos3anoau
-        with dissolve
+    scene v12ferjos3a
+    with dissolve
 
     jo "You didn't know it was... who even are you? You are not the man I thought you to be. There's no way I'd dare let you care for the king of the land."
 
-    if not v12s7_aubrey_moved:
-        scene v12ferjos3 # FPP. Show josh(now infront of camera), mouth closed
-        with dissolve
-    else:
-        scene v12ferjos3noau
-        with dissolve
+    scene v12ferjos3
+    with dissolve
 
     u "Oh wow, that sucks... I really wanted to."
 
-    if not v12s7_aubrey_moved:
-        scene v12ferjos3a # FPP. Same 3, mouth open
-        with dissolve
-    else:
-        scene v12ferjos3anoau
-        with dissolve
+    scene v12ferjos3a
+    with dissolve
 
     jo "Should've thought about that before you landed your insults. Good day sir."
 
@@ -6059,47 +5992,27 @@ label v12s7_josh_kill:
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
-    if not v12s7_aubrey_moved:
-        scene v12ferjos3a # FPP. Same 3, mouth open
-        with dissolve
-    else:
-        scene v12ferjos3anoau
-        with dissolve
+    scene v12ferjos3a
+    with dissolve
     jo "What? No, please don't kill me yet. I was having a lot of fun."
 
-    if not v12s7_aubrey_moved:
-        scene v12ferjos3 # FPP. Show josh(now infront of camera), mouth closed
-        with dissolve
-    else:
-        scene v12ferjos3noau
-        with dissolve
+    scene v12ferjos3
+    with dissolve
 
     u "Too much fun."
 
-    if not v12s7_aubrey_moved:
-        scene v12ferjos3a # FPP. Same 3, mouth open
-        with dissolve
-    else:
-        scene v12ferjos3anoau
-        with dissolve
+    scene v12ferjos3a
+    with dissolve
 
     jo "I don't want to stop acting like Leopard Lord."
 
-    if not v12s7_aubrey_moved:
-        scene v12ferjos3b # FPp. same 3, new pose, mouth closed
-        with dissolve
-    else:
-        scene v12ferjos3bnoau
-        with dissolve
+    scene v12ferjos3b # FPp. same 3, new pose, mouth closed
+    with dissolve
 
     u "Don't then, but act like him as a corpse in the dining hall."
 
-    if not v12s7_aubrey_moved:
-        scene v12ferjos3c # FPP. Same 3b, mouth open
-        with dissolve
-    else:
-        scene v12ferjos3cnoau
-        with dissolve
+    scene v12ferjos3c # FPP. Same 3b, mouth open
+    with dissolve
 
     jo "*Sighs* Sounds like a plan."
 

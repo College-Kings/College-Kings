@@ -91,5 +91,6 @@ label v12_riley_lobby:
     
     if (laurenrs or v1_kissLauren) and not v11_aubrey_sex:
         jump v12_lauren_sex #scene 29
+
     else:
         jump v12_late_night_workout #scene 29a

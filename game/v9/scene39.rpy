@@ -265,7 +265,6 @@ label v9_hang_w_linds:
                     scene v9hwl10 # FPP. Show Lindsey (camera as if MC has gotten off the bed but Lindsey still on it). Lindsey a little sad, mouth closed.
                     with dissolve
 
-                    stop sound
                     u "Dammit! I have to get ready for the Brawl."
 
                     u "I'm so sorry. I really don't want to go... REALLY!"

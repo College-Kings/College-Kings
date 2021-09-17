@@ -11,7 +11,7 @@ label v12_murder_mystery_reveal:
     scene v12mmr1 # FPP. Mr. Lee and Ms. Rose standing in front of the students, addressing them, only Mr. Lee in shot. Mr. Lee smiling, mouth open, looking at MC
     with dissolve
 
-    if (joinwolves and len(v12s7_killList) == 15) or len(v12s7_killList) == 16:
+    if len(v12s7_killList) == v12s7_victims:
         $ grant_achievement("mass_casualties")
 
     lee "Wow, that turned out a lot better than expected. I hope you all enjoyed yourselves. Was anyone surprised to learn [name] was my chosen murderer?"
@@ -229,6 +229,9 @@ label v12_murder_mystery_reveal:
             with dissolve
 
             u "Well don't worry I got you."
+
+            #scene v12mmr9a # FPP. Same as v12mmr9, MC rushing back to where he was standing in v12mmr1
+            #with dissolve
 
             pause 0.75
 

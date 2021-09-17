@@ -665,7 +665,7 @@ label v12_escape_room:
     scene v12esr24a
     with dissolve
 
-    li "I think we might have to..."
+    li "I think we might have too..."
 
     scene v12esr24
     with dissolve
@@ -928,7 +928,6 @@ label v12_lindsey_kiss_or_not:
 
 label v12_lindsey_sex:
     $ v12_lindsey_sex = True
-    $ lindseyrs = True
 
     scene v12esr29g # FPP. Same as v12esr29c, Lindsey eyes open, slight smile, mouth open, face close to MC
     with dissolve
@@ -1024,170 +1023,164 @@ label v12_lindsey_sex:
 
     pause
 
-    show screen v12s17_lindsey_sex_overlay
+    scene v12esr37c # FPP. Same as v12esr37b, MC's pants removed, Lindsey looking at MC's dick, Lindsey slight smile, mouth open
+    with dissolve
 
-    label v12s17_lindsey_handjob:
-        scene v12esr37c # FPP. Same as v12esr37b, MC's pants removed, Lindsey looking at MC's dick, Lindsey slight smile, mouth open
-        with dissolve
+    pause
 
-        pause
+    image v12linhj = Movie(play="images/v12/Scene 17/v12linhj.webm", loop=True, image="images/v12/Scene 17/v12linhjStart.webp", start_image="images/v12/Scene 17/v12linhjStart.webp") # Lindsey handjob
+    image v12linhjf = Movie(play="images/v12/Scene 17/v12linhjf.webm", loop=True, image="images/v12/Scene 17/v12linhjStart.webp", start_image="images/v12/Scene 17/v12linhjStart.webp") # Lindsey handjob spedup
+    image v12linhj2 = Movie(play="images/v12/Scene 17/v12linhj2.webm", loop=True, image="images/v12/Scene 17/v12linhj2Start.webp", start_image="images/v12/Scene 17/v12linhj2Start.webp") # Lindsey handjob FPP
+    image v12linhj2f = Movie(play="images/v12/Scene 17/v12linhj2f.webm", loop=True, image="images/v12/Scene 17/v12linhj2Start.webp", start_image="images/v12/Scene 17/v12linhj2Start.webp") # Lindsey handjob FPP spedup
 
-        image v12linhj = Movie(play="images/v12/Scene 17/v12linhj.webm", loop=True, image="images/v12/Scene 17/v12linhjStart.webp", start_image="images/v12/Scene 17/v12linhjStart.webp") # Lindsey handjob
-        image v12linhjf = Movie(play="images/v12/Scene 17/v12linhjf.webm", loop=True, image="images/v12/Scene 17/v12linhjStart.webp", start_image="images/v12/Scene 17/v12linhjStart.webp") # Lindsey handjob spedup
-        image v12linhj2 = Movie(play="images/v12/Scene 17/v12linhj2.webm", loop=True, image="images/v12/Scene 17/v12linhj2Start.webp", start_image="images/v12/Scene 17/v12linhj2Start.webp") # Lindsey handjob FPP
-        image v12linhj2f = Movie(play="images/v12/Scene 17/v12linhj2f.webm", loop=True, image="images/v12/Scene 17/v12linhj2Start.webp", start_image="images/v12/Scene 17/v12linhj2Start.webp") # Lindsey handjob FPP spedup
+    scene v12linhj # Ignore as animation
+    with dissolve
+    pause
 
-        scene v12linhj # Ignore as animation
-        with dissolve
-        pause
+    u "Oh, fuck Lindsey. You're so soft..."
 
-        u "Oh, fuck Lindsey. You're so soft..."
+    scene v12linhjf # Ignore as anim
+    with dissolve
+    pause
 
-        scene v12linhjf # Ignore as anim
-        with dissolve
-        pause
+    li "Yeah?"
 
-        li "Yeah?"
+    scene v12linhj2 # Ignore as animation
+    with dissolve
+    pause
 
-        scene v12linhj2 # Ignore as animation
-        with dissolve
-        pause
+    u "Y-yes..."
 
-        u "Y-yes..."
+    scene v12linhj2f # Ignore as animation
+    with dissolve
+    pause
 
-        scene v12linhj2f # Ignore as animation
-        with dissolve
-        pause
+    u "I want more of you."
 
-        u "I want more of you."
+    scene v12esr37d # FPP. Same as v12esr37c, Lindsey looking at MC, Lindsey's hand on MC's dick, Lindsey slight smile, mouth open
+    with dissolve
 
-        scene v12esr37d # FPP. Same as v12esr37c, Lindsey looking at MC, Lindsey's hand on MC's dick, Lindsey slight smile, mouth open
-        with dissolve
+    li "*Chuckles* I'm not sure how much time we have left but... I'll give you all that I can, okay?"
 
-        li "*Chuckles* I'm not sure how much time we have left but... I'll give you all that I can, okay?"
+    image v12linbj = Movie(play="images/v12/Scene 17/v12linbj.webm", loop=True, image="images/v12/Scene 17/v12linbjStart.webp", start_image="images/v12/Scene 17/v12linbjStart.webp") # Lindsey blowjob
+    image v12linbjf = Movie(play="images/v12/Scene 17/v12linbjf.webm", loop=True, image="images/v12/Scene 17/v12linbjStart.webp", start_image="images/v12/Scene 17/v12linbjStart.webp") # Lindsey blowjob spedup
+    image v12linbj2 = Movie(play="images/v12/Scene 17/v12linbj2.webm", loop=True, image="images/v12/Scene 17/v12linbj2Start.webp", start_image="images/v12/Scene 17/v12linbj2Start.webp") # Lindsey blowjob FPP
+    image v12linbj2f = Movie(play="images/v12/Scene 17/v12linbj2f.webm", loop=True, image="images/v12/Scene 17/v12linbj2Start.webp", start_image="images/v12/Scene 17/v12linbj2Start.webp") # Lindsey blowjob FPP spedup
 
-    label v12s17_lindsey_blowjob:
-        image v12linbj = Movie(play="images/v12/Scene 17/v12linbj.webm", loop=True, image="images/v12/Scene 17/v12linbjStart.webp", start_image="images/v12/Scene 17/v12linbjStart.webp") # Lindsey blowjob
-        image v12linbjf = Movie(play="images/v12/Scene 17/v12linbjf.webm", loop=True, image="images/v12/Scene 17/v12linbjStart.webp", start_image="images/v12/Scene 17/v12linbjStart.webp") # Lindsey blowjob spedup
-        image v12linbj2 = Movie(play="images/v12/Scene 17/v12linbj2.webm", loop=True, image="images/v12/Scene 17/v12linbj2Start.webp", start_image="images/v12/Scene 17/v12linbj2Start.webp") # Lindsey blowjob FPP
-        image v12linbj2f = Movie(play="images/v12/Scene 17/v12linbj2f.webm", loop=True, image="images/v12/Scene 17/v12linbj2Start.webp", start_image="images/v12/Scene 17/v12linbj2Start.webp") # Lindsey blowjob FPP spedup
+    scene v12linbj # Ignore as animation
+    with dissolve
+    pause
 
-        scene v12linbj # Ignore as animation
-        with dissolve
-        pause
+    u "Holy fucking christ! Lindsey..."
 
-        u "Holy fucking christ! Lindsey..."
+    scene v12linbjf # Ignore as animation
+    with dissolve
+    pause
 
-        scene v12linbjf # Ignore as animation
-        with dissolve
-        pause
+    u "(How is she doing that with her tongue?!)"
 
-        u "(How is she doing that with her tongue?!)"
+    scene v12linbj2 # Ignore as animation
+    with dissolve
+    pause
 
-        scene v12linbj2 # Ignore as animation
-        with dissolve
-        pause
+    u "Linds... Lindsey."
 
-        u "Linds... Lindsey."
+    scene v12linbj2f # Ignore as animation
+    with dissolve
+    pause
 
-        scene v12linbj2f # Ignore as animation
-        with dissolve
-        pause
+    u "Linds... stop..."
 
-        u "Linds... stop..."
+    scene v12esr37e # FPP. Same as v12esr37d, Lindsey's hand not on MC's dick, Lindsey worried, mouth open
+    with dissolve
 
-        scene v12esr37e # FPP. Same as v12esr37d, Lindsey's hand not on MC's dick, Lindsey worried, mouth open
-        with dissolve
+    li "What? Is something wrong? I can try-"
 
-        li "What? Is something wrong? I can try-"
+    scene v12esr37f # FPP. Same as v12esr37e, Lindsey smiling, mouth closed
+    with dissolve
 
-        scene v12esr37f # FPP. Same as v12esr37e, Lindsey smiling, mouth closed
-        with dissolve
+    u "It's amazing... But this is your birthday, let me please you."
 
-        u "It's amazing... But this is your birthday, let me please you."
+    scene v12esr37g # FPP. Same as v12esr37f, Lindsey smiling, mouth open
+    with dissolve
 
-        scene v12esr37g # FPP. Same as v12esr37f, Lindsey smiling, mouth open
-        with dissolve
+    li "[name]..."
 
-        li "[name]..."
+    scene v12esr38 # TPP. Show Lindsey and MC removing their clothes, both smiling, mouths closed
+    with dissolve
 
-        scene v12esr38 # TPP. Show Lindsey and MC removing their clothes, both smiling, mouths closed
-        with dissolve
+    pause
 
-        pause
+    scene v12esr39 # TPP. Show MC pulling Lindsey on top of him for 69
+    with dissolve
 
-        scene v12esr39 # TPP. Show MC pulling Lindsey on top of him for 69
-        with dissolve
+    pause
+    
+    image v12linsn = Movie(play="images/v12/Scene 17/v12linsn.webm", loop=True, image="images/v12/Scene 17/v12linsnStart.webp", start_image="images/v12/Scene 17/v12linsnStart.webp") # Lindsey handjob
+    image v12linsnf = Movie(play="images/v12/Scene 17/v12linsnf.webm", loop=True, image="images/v12/Scene 17/v12linsnStart.webp", start_image="images/v12/Scene 17/v12linsnStart.webp") # Lindsey handjob spedup
+    image v12linsn2 = Movie(play="images/v12/Scene 17/v12linsn2.webm", loop=True, image="images/v12/Scene 17/v12linsn2Start.webp", start_image="images/v12/Scene 17/v12linsn2Start.webp") # Lindsey handjob TPP 2
+    image v12linsn2f = Movie(play="images/v12/Scene 17/v12linsn2f.webm", loop=True, image="images/v12/Scene 17/v12linsn2Start.webp", start_image="images/v12/Scene 17/v12linsn2Start.webp") # Lindsey handjob TPP 2 spedup
 
-        pause
-    label v12s17_lindsey_sixty_nine:
-        image v12linsn = Movie(play="images/v12/Scene 17/v12linsn.webm", loop=True, image="images/v12/Scene 17/v12linsnStart.webp", start_image="images/v12/Scene 17/v12linsnStart.webp") # Lindsey handjob
-        image v12linsnf = Movie(play="images/v12/Scene 17/v12linsnf.webm", loop=True, image="images/v12/Scene 17/v12linsnStart.webp", start_image="images/v12/Scene 17/v12linsnStart.webp") # Lindsey handjob spedup
-        image v12linsn2 = Movie(play="images/v12/Scene 17/v12linsn2.webm", loop=True, image="images/v12/Scene 17/v12linsn2Start.webp", start_image="images/v12/Scene 17/v12linsn2Start.webp") # Lindsey handjob TPP 2
-        image v12linsn2f = Movie(play="images/v12/Scene 17/v12linsn2f.webm", loop=True, image="images/v12/Scene 17/v12linsn2Start.webp", start_image="images/v12/Scene 17/v12linsn2Start.webp") # Lindsey handjob TPP 2 spedup
+    scene v12linsn # Ignore as animation
+    with dissolve
+    pause
 
-        scene v12linsn # Ignore as animation
-        with dissolve
-        pause
+    li "Now..."
 
-        li "Now..."
+    scene v12linsnf # Ignore as animation
+    with dissolve
+    pause
 
-        scene v12linsnf # Ignore as animation
-        with dissolve
-        pause
+    li "*Moans*"
 
-        li "*Moans*"
+    scene v12linsn2 # Ignore as animation
+    with dissolve
+    pause
 
-        scene v12linsn2 # Ignore as animation
-        with dissolve
-        pause
+    u "Mmm... Tell me it feels good..."
 
-        u "Mmm... Tell me it feels good..."
+    li "*Moans* *Gags*"
 
-        li "*Moans* *Gags*"
+    scene v12linsn2f # Ignore as animation
+    with dissolve
+    pause
 
-        scene v12linsn2f # Ignore as animation
-        with dissolve
-        pause
+    u "Tell me Linds... I'm cumming! Tell me how good it fucking feels."
 
-        u "Tell me Linds... I'm cumming! Tell me how good it fucking feels."
+    scene v12esr40 # TPP. Show MC cumming in lindsey's mouth in 69 position
+    with vpunch
 
-        scene v12esr40 # TPP. Show MC cumming in lindsey's mouth in 69 position
-        with vpunch
+    pause
 
-        pause
+    scene v12esr41 # TPP. Show MC moving to his knees to eat her out, Lindsey in front of him, both smiling, mouths closed
+    with dissolve
 
-        scene v12esr41 # TPP. Show MC moving to his knees to eat her out, Lindsey in front of him, both smiling, mouths closed
-        with dissolve
+    pause
 
-        pause
+    scene v12esr41a # TPP. Show MC eating Lindsey out, Lindsey moaning, mouth open
+    with dissolve
 
-        scene v12esr41a # TPP. Show MC eating Lindsey out, Lindsey moaning, mouth open
-        with dissolve
+    li "*Loud moaning* Mmm!"
 
-        li "*Loud moaning* Mmm!"
+    scene v12esr64 # TPP. Show MC eating Lindsey out from different angle, Lindsey moaning, mouth open
+    with dissolve
 
-        scene v12esr64 # TPP. Show MC eating Lindsey out from different angle, Lindsey moaning, mouth open
-        with dissolve
+    li "Oh, [name], FUCK!"
 
-        li "Oh, [name], FUCK!"
+    scene v12esr41b # TPP. Same as v12esr41a, Lindsey holding the back of MC's head, she is moaning, mouth open
+    with dissolve
 
-        scene v12esr41b # TPP. Same as v12esr41a, Lindsey holding the back of MC's head, she is moaning, mouth open
-        with dissolve
+    li "Yes... yess... That's it, yes!"
 
-        li "Yes... yess... That's it, yes!"
+    scene v12esr64a # TPP. Same as v12esr64, Lindsey holding on to the back of MC's head, she is moaning, about to cum, mouth open
+    with dissolve
 
-        scene v12esr64a # TPP. Same as v12esr64, Lindsey holding on to the back of MC's head, she is moaning, about to cum, mouth open
-        with dissolve
+    li "I-I'm... Cu- *Gasps*"
 
-        li "I-I'm... Cu- *Gasps*"
+    scene v12esr41c # TPP. Same as v12esr41b, Show Lindsey cumming while MC eats her out
+    with vpunch
 
-        scene v12esr41c # TPP. Same as v12esr41b, Show Lindsey cumming while MC eats her out
-        with vpunch
-
-        pause
-
-    hide screen v12s17_lindsey_sex_overlay
+    pause
 
     scene v12esr42 # FPP. MC kneeling in front of Lindsey (check v12esr41), looking up at her, Lindsey smiling, looking down at him, mouth open
     with dissolve
@@ -1251,8 +1244,6 @@ label v12_after_sex:
 
     stop music fadeout 3
     play music "music/v12/Scene 17/Track Scene 17_5.mp3" fadein 2
-
-    play sound "sounds/lever.mp3"
 
     scene v12esr17i # FPP. Same as v12esr17, lights dim
     with dissolve
@@ -1414,7 +1405,7 @@ label v12_after_sex:
     scene v12esr52a # FPP. Same as v12esr52, Imre smiling, mouth open
     with dissolve
 
-    imre "*Laughs* Weeb!"
+    imre "*Laughs* Weeb"
 
     scene v12esr49
     with dissolve
@@ -1499,16 +1490,16 @@ label v12_after_sex:
 
     escman "*Dry tone* No, thank you."
 
-    #scene v12esr7c # FPP. Same as v12esr7, Lindsey looking at MC, Lindsey slight smile, mouth closed
-    #with dissolve
-
-    #u "Let's get back to the hotel."
-
     scene v12esr59 # FPP. MC looking as Aubrey and Imre walk out the escape room building, Aubrey looking back, mouth open, disgusted expression, mouth open
     with dissolve
 
-    au "Weirdo..."   
-    
+    au "Weirdo..."
+
+    scene v12esr7c # FPP. Same as v12esr7, Lindsey looking at MC, Lindsey slight smile, mouth closed
+    with dissolve
+
+    u "Let's get back to the hotel"
+
     scene v12esr60 # TPP. Show MC and Lindsey walking out of the escape room building, Aubrey and Imre waiting for them, all slightly smiling, mouths closed
     with dissolve
 

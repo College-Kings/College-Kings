@@ -56,7 +56,7 @@ label v12s33:
 
     au "Thanks Lindsey."
 
-    scene v12s33_4d # same as 4, lindsey looking at aubrey, smiling,mouth open
+    scene v12s33_4d # same as 4, lindsey looking at aubrey, smiling ,mouth open
     with dissolve
 
     li "Of course."
@@ -84,7 +84,7 @@ label v12s33:
 
     au "There's a sauna, right?"
 
-    scene v12s33_5b # same as 5, mr lee looking at aubrey, neutral expression,mouth open
+    scene v12s33_5b # same as 5, mr lee looking at aubrey, neutral expression ,mouth open
     with dissolve
 
     lee "Yes, a sauna and a one hour massage."
@@ -224,11 +224,11 @@ label v12s33:
     u "Haha, alright."
 
 # -MC hops on a table-
-# -Chris (with a bandaged hand), Imre, Ryan and Mr. Lee are laying on a table with their faces down-
+# -Chris (with a bandaged hand) , Imre, Ryan and Mr. Lee are laying on a table with their faces down-
 # -Josh and Cameron if present are sitting alone on a sofa-
 # -There's a sneak off button throughout the entire scene-
 
-    scene v12s33_16 # shows mc on a massage table, with his face down, same angle as 13
+    scene v12s33_16 # shows mc on a massage table, with his face down , same angle as 13
     with fade
 
     u "(I could always sneak off and see what the girls are doing if this gets too boring...)"
@@ -687,7 +687,7 @@ label v12s33_door1:
 
     au "Haha, we bet which boy would sneak off and try to come sit with us girls. I said you and Chloe said Imre."
 
-    scene v12s33_29c # same as 29b, mouth closed
+    scene v12s33_29c # same as 29b , mouth closed
     with dissolve
 
     u "Haha! Well, trust me. He wanted to, but Mr. Lee has him on lock and key."
@@ -769,7 +769,7 @@ label v12s33_door1:
             $ addPoint ("bro")
             u "Not at all, you can talk about me all you want. I like knowing I'm on your mind... *Chuckles*"
 
-            scene v12s33_30f # same as 30b, chloe flirty, mouth open
+            scene v12s33_30f # same as 30b , chloe flirty, mouth open
             with dissolve
 
             cl "Ha... Is that so?"
@@ -886,7 +886,7 @@ label v12s33_door1:
 
     if v11_pen_goes_europe:
 
-        scene v12s33_33 # FPP,close up Penelope, smiling, mouth open, looking at mc
+        scene v12s33_33 # FPP ,close up Penelope, smiling, mouth open, looking at mc
         with dissolve
   
         pe "Hey, [name]."
@@ -916,7 +916,7 @@ label v12s33_door1:
 
     am "Did you know most of the Chicks back at campus have already promised to vote for her?"
 
-    scene v12s33_35a #FPP close up, lindsey, looking at mc, genuine smile, mouth closed
+    scene v12s33_35a #FPP close up , lindsey, looking at mc , genuine smile, mouth closed
     with dissolve
 
     u "Wow, Lindsey... Really?"
@@ -1330,7 +1330,7 @@ label v12s33_sneak_off2:
 
     pause 0.75
 
-    scene v12s33_50a # FPP Imre comes out of the Sauna, looking at mc, very sweaty, neutral face,mouth closed
+    scene v12s33_50a # FPP Imre comes out of the Sauna, looking at mc, very sweaty, neutral face ,mouth closed
     with dissolve
 
     u "What's going on?"

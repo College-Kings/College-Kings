@@ -115,14 +115,10 @@ label v9_hc_cont2:
 
     ca "Whatever. I just wanna go back to bed."
 
-    if not joinwolves:
-        scene v9hc11 # TPP. Show MC getting up from his seat.
-        with dissolve
-    else:
-        scene v9hc11a
-        with dissolve
+    scene v9hc11 # TPP. Show MC getting up from his seat.
+    with dissolve
 
-    pause 0.75
+    pause 0.5
 
     scene v9hc12 # FPP. Show Cameron and Penelope at the front of the class looking inside a box of props with Mr. Lee. Camera as if MC is walking down the ailse towards the front of the class.
     with dissolve
@@ -298,12 +294,8 @@ label v9_hc_return:
 
     pause 1
 
-    if not joinwolves:
-        scene v9hc26 # TPP. Show MC sitting back at his desk.
-        with dissolve
-    else:
-        scene v9hc26a
-        with dissolve
+    scene v9hc26 # TPP. Show MC sitting back at his desk.
+    with dissolve
 
     stop music fadeout 2
     
