@@ -27,9 +27,11 @@ label v13s57a:
     pause 0.75
 
     play sound "sounds/ring.mp3"
-
     scene v13s57a_2c # FPP. Same as v13s57a_2b, Nora holding her phone to her ear, slight smile, mouth open.
     with dissolve
+
+    pause 1.25
+    stop sound
 
     no "Hello sir, would you mind coming to the lobby for a minute?"
 
@@ -51,7 +53,7 @@ label v13s57a:
     scene v13s57a_2c
     with dissolve
 
-    no "It won't be long I promise."
+    no "It won't be long, I promise."
 
     scene v13s57a_2d
     with dissolve
@@ -67,6 +69,8 @@ label v13s57a:
     with dissolve
 
     play sound "sounds/rejectcall.mp3"
+
+    pause 0.75
 
     scene v13s57a_2
     with dissolve
@@ -101,7 +105,7 @@ label v13s57a:
     scene v13s57a_3 # TPP. Show MC and Nora in the hotel lobby, Different poses, both slight smile, mouth closed.
     with fade
 
-    pause 
+    pause 1
 
     scene v13s57a_4 # FPP. Show Mr.Lee walking up to MC and Nora, slight smile, mouth closed
     with dissolve
@@ -128,12 +132,12 @@ label v13s57a:
     scene v13s57a_5a # FPP. Same as v13s57a_5, Nora standing straight holding the Bonsai tree, slight smile, mouth closed.
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s57a_6 # FPP. Show Nora handing Mr.Lee the bonsai tree.
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s57a_4b # FPP. Same as v13s57a_4a, Mr. Lee looking at Nora(Off camera), Mr. Lee now holding the bonsai tree, slight smile, mouth open.
     with dissolve
@@ -190,12 +194,12 @@ label v13s57a:
     scene v13s57a_2e
     with dissolve
 
-    no "You too Mr. Lee."
+    no "You too, Mr. Lee."
 
     scene v13s57a_4e # FPP. Same as v13s57a_4, Show Mr.Lee walking off with the Bonsai plant.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v13s57a_2a
     with dissolve
