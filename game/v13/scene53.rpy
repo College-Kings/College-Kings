@@ -24,7 +24,7 @@ label v13s53:
     scene v13s53_3a # FPP. Same as v13s53_3, Riley mouth open
     with dissolve
 
-    if v13_double_date:
+    if v13s48_ryan_double_date:
 
         ri "Trying to recover from that failure of a date."
 

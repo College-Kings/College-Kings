@@ -556,7 +556,6 @@ default v13_after_party = False
 default v13s48_get_aubrey_chocolate = False
 default v13s48_ryan_double_date = False
 default v13s48_canoeing_as_date = False
-default v13_double_date = False
 default v13_help_chloe = False
 default v13_help_lindsey = False
 default emmyrs = False
