@@ -136,7 +136,7 @@ label v13s40:
 
     $ freeRoam = True
 
-    call screen v13s40_chloe_items
+    call screen v13s40_chloe
 
 label v13s40_honey:
     scene v13s40ho_1 # TPP. Show MC pouring the honey on Chloe's breasts, Chloe slight smile, mouth closed
@@ -185,7 +185,7 @@ label v13s40_honey:
 
     u "I've got plenty more where that came from."
 
-    call screen v13s40_chloe_items
+    call screen v13s40_chloe
 
 label v13s40_feather:
     scene v13s40fe_1 # TPP. Show MC taking the feather and placing it on her chest, Chloe smiling, mouth closed
@@ -233,7 +233,7 @@ label v13s40_feather:
 
     u "We can try something else..."
 
-    call screen v13s40_chloe_items
+    call screen v13s40_chloe
 
 label v13s40_spanker:
     scene v13s40sp_1 # TPP. Show MC untying Chloe, both smiling, mouths closed
@@ -321,7 +321,7 @@ label v13s40_spanker:
 
     pause
 
-    call screen v13s40_chloe_items
+    call screen v13s40_chloe
 
 label v13s40_neck:
     scene v13s40neck_1 # TPP. Close up of Chloe's neck
@@ -342,7 +342,7 @@ label v13s40_neck:
 
             pause
         
-    call screen v13s40_chloe_front
+    call screen v13s40_chloe
 
 label v13s40_chest:
     scene v13s40chest_1 # TPP. Close up of Chloe's boobs
@@ -383,7 +383,7 @@ label v13s40_chest:
 
             pause
     
-    call screen v13s40_chloe_front
+    call screen v13s40_chloe
 
 label v13s40_back:
     scene v13s40back_1 # TPP. Close up of Chloe's back
@@ -424,7 +424,7 @@ label v13s40_back:
 
             pause
     
-    call screen v13s40_chloe_back
+    call screen v13s40_chloe
 
 label v13s40_shoulder:
     scene v13s40shoulder_1 # TPP. Close up of Chloe's shoulder
@@ -455,7 +455,7 @@ label v13s40_shoulder:
 
             pause
     
-    call screen v13s40_chloe_back
+    call screen v13s40_chloe
         
 label v13s40_end_free_roam:
     $ freeRoam = False

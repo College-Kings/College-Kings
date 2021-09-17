@@ -12,6 +12,9 @@ init python:
 
             self.inventory.items.append(item)
 
+        def has_item(self, item):
+            return (item in self.inventory.items)
+
 
     class CustomCharacter:
         """

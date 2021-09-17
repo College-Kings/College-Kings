@@ -1,16 +1,82 @@
-screen v13s40_chloe_items():
-    imagemap:
-        idle "images/v13/Scene40/Screens/v13s20_bathroom.webp"
-        hover ""
+screen v13s40_chloe():
+    add im.Blur("images/v13/Scene40/v13s40_12.webp", 2)
 
+    vbox:
+        align (0.5, 1.0)
+        yoffset -50
 
-screen v13s40_chloe_front():
-    imagemap:
-        idle "images/v13/Scene40/Screens/v13s20_bathroom.webp"
-        hover ""
+        hbox:
+            align (0.5, 0.5)
+            spacing 25
 
+            if mc.has_item(honey) or True:
+                button:
+                    action Jump("v13s40_honey")
 
-screen v13s40_chloe_back():
-    imagemap:
-        idle "images/v13/Scene40/Screens/v13s20_bathroom.webp"
-        hover ""
+                    fixed:
+                        xysize (269, 74)
+                        add "images/button_gray.webp"
+                        text honey.name align (0.5, 0.5)
+
+            if mc.has_item(spankers) or True:
+                button:
+                    action Jump("v13s40_spanker")
+
+                    fixed:
+                        xysize (269, 74)
+                        add "images/button_gray.webp"
+                        text spankers.name align (0.5, 0.5)
+
+            if mc.has_item(feather) or True:
+                button:
+                    action Jump("v13s40_feather")
+
+                    fixed:
+                        xysize (269, 74)
+                        add "images/button_gray.webp"
+                        text feather.name align (0.5, 0.5)
+
+        hbox:
+            align (0.5, 0.5)
+            spacing 25
+
+            button:
+                action Jump("v13s40_neck")
+
+                fixed:
+                    xysize (269, 74)
+                    add "images/button_gray.webp"
+                    text "Neck" align (0.5, 0.5)
+
+            button:
+                action Jump("v13s40_chest")
+
+                fixed:
+                    xysize (269, 74)
+                    add "images/button_gray.webp"
+                    text "Chest" align (0.5, 0.5)
+
+            button:
+                action Jump("v13s40_back")
+
+                fixed:
+                    xysize (269, 74)
+                    add "images/button_gray.webp"
+                    text "Back" align (0.5, 0.5)
+
+            button:
+                action Jump("v13s40_shoulder")
+
+                fixed:
+                    xysize (269, 74)
+                    add "images/button_gray.webp"
+                    text "Shoulders" align (0.5, 0.5)
+
+        button:
+            action Show("endFreeRoamConfirm", continueLabel="v13s40_end_free_roam")
+            align (0.5, 0.5)
+
+            fixed:
+                xysize (269, 74)
+                add "images/button_gray.webp"
+                text "Continue" align (0.5, 0.5)
