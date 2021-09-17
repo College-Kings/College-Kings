@@ -17,7 +17,7 @@ label v13s20:
 
 label v13s20_closet:
     scene v13s20clo_1 # TPP. Show MC walking towards the closet, mouth closed, smirking
-    with dissolve
+    #with dissolve
 
     pause 0.75
 
@@ -68,7 +68,7 @@ label v13s20_closet:
 
 label v13s20_bleach:
     scene v13s20bleach_1 # TPP. Show MC bending over, opening the cabinet underneath the sink, slight smile, mouth open, bottle of bleach inside
-    with dissolve
+    #with dissolve
 
     u "Hmm, what do we have here? Ah! A nice bottle of bleach..."
 
@@ -137,7 +137,7 @@ label v13s20_bleach:
 
 label v13s20_toothbrush:
     scene v13s20brush_1 # TPP. MC grabbing the toothbrush, smirking, mouth closed
-    with dissolve
+    #with dissolve
 
     pause 0.75
 
@@ -182,7 +182,7 @@ label v13s20_toothbrush:
 
 label v13s20_end:
     scene v13s20end_1 # TPP. Show MC walking over to the laptop, smirking, mouth closed
-    with dissolve
+    #with dissolve
 
     pause 0.75
 
