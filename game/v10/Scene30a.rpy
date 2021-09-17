@@ -485,5 +485,3 @@ label v10_emily_course:
     stop music fadeout 3
     
     jump v10_late_alley
-
-

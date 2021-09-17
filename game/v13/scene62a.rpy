@@ -4,10 +4,14 @@
 # Time: Night
 
 label v13s62a:
+    play sound "sounds/dooropen.mp3"
+
     scene v13s62a_1 # FPP. Lindsey walking into the hotel room, sexy expression, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
+
+    play music "music/v13/Track Scene 62a.mp3" fadein 2
 
     scene v13s62a_2 # FPP. Lindsey standing next to MC, grabbing his hand, sexy expression, mouth open
     with dissolve
@@ -52,9 +56,9 @@ label v13s62a:
     scene v13s62a_9 # FPP. MC looking at Lindsey sitting on the sink, legs closed, sexy expression, mouth open
     with fade
 
-    li "I know you have all the other girls, but I want you for myself and want you… Right… Fucking... Now."
+    li "I know you have all the other girls, but I want you for myself and want you... Right... Fucking... Now."
 
-    li "*Chuckles* Now, please… You can do anything you want..."
+    li "*Chuckles* Now, please... You can do anything you want..."
 
     scene v13s62a_9a # FPP. Same as v13s62a_9, Lindsey's legs spread open
     with vpunch
@@ -76,9 +80,11 @@ label v13s62a:
 
     pause
 
-    scene v13s62a_10a # TPP. Same v13s62a_10, MC even closer, still not touching her, MC surprised, mouth closed, Lindsey sexy, mouth closed
-    with dissolve
+    #scene v13s62a_10a # TPP. Same v13s62a_10, MC even closer, still not touching her, MC surprised, mouth closed, Lindsey sexy, mouth closed
+    #with dissolve
 
-    pause
+    #pause
+
+    stop music fadeout 3
 
     jump end13

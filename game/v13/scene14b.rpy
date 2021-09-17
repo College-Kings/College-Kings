@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 2), PENELOPE (Outfit: 3)
 # Time: Wednesday night
 
-
 label v13s14b:
     # -Upbeat club music is playing-
 
@@ -11,6 +10,8 @@ label v13s14b:
     with dissolve
 
     pause 0.75
+
+    play music "music/v13/Track Scene 14a_1.mp3" fadein 2
 
     scene v13s14b_2 # FPP MC's view as he looks around the club
     with dissolve
@@ -30,7 +31,7 @@ label v13s14b:
     scene v13s14b_4 # FPP Show Penelope looking around club, smiling with mouth open
     with dissolve
 
-    pe "Holy… I love this! I've only seen clubs like this on TV. *Chuckles*"
+    pe "Holy... I love this! I've only seen clubs like this on TV. *Chuckles*"
 
     scene v13s14b_3a # FPP Same as 3, Polly looking at Penelope
     with dissolve
@@ -38,6 +39,7 @@ label v13s14b:
     polly "So you do have a fun side? *Chuckles* I was hoping you'd like this type of scene. Do you drink?"
 
     scene v13s14b_4a # FPP Same as 4, Penelope looking at Polly, neutral expression, mouth open
+    with dissolve
 
     pe "Oh, no. I'm not a really big drinker."
 
@@ -47,6 +49,7 @@ label v13s14b:
     polly "Oh, c'mon... You can have one drink."
 
     scene v13s14b_4b # FPP Same as 4, Penelope looking at MC, worried expression, mouth closed
+    with dissolve
 
     u "One shouldn't hurt."
 
@@ -164,14 +167,13 @@ label v13s14b:
     scene v13s14b_4e
     with dissolve
 
-    pe "Woah, I can definitely feel it working it's magic. *Chuckles*"
+    pe "Woah, I can definitely feel it working its magic. *Chuckles*"
 
     scene v13s14b_4f
     with dissolve
 
     menu:
         "Impressive":
-
             u "This is low-key impressive. *Laughs*"
 
             scene v13s14b_10 # FPP Show Penelope cheering with her hand in the air, big smile, mouth open
@@ -185,7 +187,6 @@ label v13s14b:
             polly "Which one? *Laughs*"
 
         "You should stop":
-
             u "You should slow down a bit."
 
             scene v13s14b_3a
@@ -202,7 +203,6 @@ label v13s14b:
 
     scene v13s14b_4g
     with dissolve
-
     
     pe "*Tipsy* C'mon, [name]! I wanna dance."
 
@@ -253,7 +253,7 @@ label v13s14b:
         "Be a gentleman":
             $ addPoint("bf")
 
-            u "Penelope, you're pretty drunk. *Chuckles* I should get you back so you can get a good night’s worth of sleep."
+            u "Penelope, you're pretty drunk. *Chuckles* I should get you back so you can get a good night's worth of sleep."
 
             scene v13s14b_16a # FPP Same angle as 16, Penelope dissapointed but still smiling, mouth open
             with dissolve
@@ -273,7 +273,7 @@ label v13s14b:
             scene v13s14b_18 # FPP Polly on the dance floor, looking at MC, smiling with mouth closed
             with dissolve
 
-            u "Hey Polly, I’m gonna get her home."
+            u "Hey Polly, I'm gonna get her home."
 
             scene v13s14b_18a # FPP Same angle as 17, Polly looking at Penelope, mouth open
             with dissolve
@@ -288,8 +288,9 @@ label v13s14b:
         "Have fun":
             $ addPoint("tm")
 
-            u "I  may just let you..."
+            u "I may just let you..."
 
+            play sound "sounds/kiss.mp3"
             scene v13s14b_15a # TPP Same angle as 15, Penelope kissing and nibbling MC's neck
             with dissolve
 
@@ -298,8 +299,8 @@ label v13s14b:
             scene v13s14b_16c # FPP Same angle as 16, only part of Penelope's head visible, as she is kissing MC's neck
             with dissolve
 
-            u "Mmm.."
-            u "Wait… Are you trying to give me a hickey?"
+            u "Mmm..."
+            u "Wait... Are you trying to give me a hickey?"
 
             scene v13s14b_16b
             with dissolve
@@ -389,6 +390,7 @@ label v13s14b:
     polly "Go ahead and meet them out in the front."
 
     scene v13s14b_18
+    with dissolve
 
     u "Cool, later Polly."
 
@@ -415,12 +417,19 @@ label v13s14b:
     scene v13s14b_24 # FPP MC's view as he carries Penelope toward the door to the club
     with dissolve
 
+    $ grant_achievement("funny_night")
     u "Haha... Yes Penelope, you're flying."
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 12a_2.mp3" fadein 2
 
     scene v13s14b_25 # TPP Show MC helping Penelope into the car. Penelope's eyes still closed
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 14b.mp3" fadein 2
 
     scene v13s14b_26 # TPP Show MC carrying Penelope through the hotel lobby
     with dissolve
@@ -436,6 +445,8 @@ label v13s14b:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     if v11_riley_roomate:
         jump v13s15a

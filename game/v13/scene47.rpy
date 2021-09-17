@@ -9,13 +9,15 @@ label v13s47:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 47.mp3" fadein 2
+
     scene v13s47_2 # TPP. show MC and lauren get off their bikes and turn them into the bike clerk
     with dissolve
 
     pause 0.75
 
     scene v13s47_3 # FPP. show lauren looking at MC, slight smile, mouth closed
-    with dissolve    
+    with dissolve
 
     u "Did you have fun?"
 
@@ -153,12 +155,13 @@ label v13s47:
         scene v13s47_3c # FPP. same as v13s47_3b lauren mouth closed
         with dissolve
 
-        pause 0.75
+        pause 0.4
 
+        play sound "sounds/kiss.mp3"
         scene v13s47_6 # TPP. show mc holding lauren behind her head kissing her
         with dissolve
 
-        pause 0.75
+        pause 1.5
 
         scene v13s47_3b
         with dissolve
@@ -169,6 +172,8 @@ label v13s47:
         with dissolve
 
         u "Haha, bye."
+
+        stop music fadeout 3
 
         jump v13s48
 
@@ -183,5 +188,7 @@ label v13s47:
         with dissolve
 
         u "Bye, you too."
+
+        stop music fadeout 3
 
         jump v13s48

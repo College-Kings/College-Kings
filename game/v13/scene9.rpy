@@ -3,14 +3,13 @@
 # Characters: CHLOE (Outfit: 2), MC (Outfit: 2), RYAN (Outfit: 1)
 # Time: Afternoon
 
-default v13_help_chloe = False
-default v13_help_lindsey = False
-
 label v13s9:
     scene v13s9_1 # TPP. Hotel hallway. MC walking down the hallway, back to camera, angled to where hotel room doors are visible on MC's right.
     with dissolve
 
     pause 0.75
+
+    play music "music/v13/Track Scene 9_1.mp3" fadein 2
 
     scene v13s9_1a # TPP. Same as v13s9_1 but MC is halfway down the hall and he last room door at the end of the hall is halfway open. 
     with dissolve
@@ -49,7 +48,7 @@ label v13s9:
     scene v13s9_2c # FPP. Same as v13s9_2b but Chloe with mouth open. 
     with dissolve
 
-    cl "If you're willing to join me, yeah. I’ve looked for hours on my phone trying to find some nice Amsterdam stuff to do…"
+    cl "If you're willing to join me, yeah. I've looked for hours on my phone trying to find some nice Amsterdam stuff to do..."
 
     scene v13s9_2d # FPP. Same as v13s9_2c but Chloe has a slight frown. 
     with dissolve
@@ -69,7 +68,7 @@ label v13s9:
     scene v13s9_2a
     with dissolve
 
-    cl "Yeah, it's called Scheveningen Beach… But instead of swimming, we can go to the pier. Do you wanna come with me?"
+    cl "Yeah, it's called Scheveningen Beach... But instead of swimming, we can go to the pier. Do you wanna come with me?"
 
     scene v13s9_2b
     with dissolve
@@ -131,6 +130,9 @@ label v13s9:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 9_2.mp3" fadein 2
+
     scene v13s9_11 # FPP. MC watching Chloe lean against the guard rail, slightly looking downward at the water, neutral expression, mouth open.
     with dissolve
     
@@ -169,7 +171,7 @@ label v13s9:
     scene v13s9_11
     with dissolve
 
-    cl "You're fine… Sorry. Talking about it with you doesn't really bother me actually. I need to discuss it with someone; I need to discuss a lot of things on my mind."
+    cl "You're fine... Sorry. Talking about it with you doesn't really bother me actually. I need to discuss it with someone; I need to discuss a lot of things on my mind."
 
     scene v13s9_11b
     with dissolve
@@ -216,7 +218,7 @@ label v13s9:
     scene v13s9_12a # FPP. Chloe, looking off screen/camera, with her butt/lowerback leaning against the guard rail one leg bent with her foot flat against the fencing, elbows resting on the guard rail, slightly sad, mouth closed
     with dissolve
 
-    pause 0.75  
+    pause 0.75
     
     scene v13s9_12b # FPP. Same as v13s9_v12 but Chloe's head turned facing MC, but slightly downward avoiding eye contact, sad, mouth open.
     with dissolve
@@ -256,9 +258,9 @@ label v13s9:
     u "(That's exactly what she said.)"
     
     scene v13s9_12e
-    with dissolve 
+    with dissolve
 
-    u "So… You have to be the President in order to keep this scholarship?"
+    u "So... You have to be the President in order to keep this scholarship?"
 
     scene v13s9_12b
     with dissolve
@@ -273,14 +275,14 @@ label v13s9:
     scene v13s9_12f
     with dissolve
 
-    cl "I'm not too worried about losing it though, I have a pretty set in stone plan. Not only that, but I'll have your help as well. Or atleast, I'd hope so."
+    cl "I'm not too worried about losing it though, I have a pretty set in stone plan. Not only that, but I'll have your help as well. Or at least, I'd hope so."
     
     scene v13s9_12g # FPP. Same as v13s9_12b but Chloe has slighty sad expression (pouting), mouth closed, looking directly at MC (sad eyes, making it difficult for MC not to want help her).		
     with dissolve
 
     pause 0.75
 
-    menu:        
+    menu:
         "Help Chloe":
             $ v13_help_chloe = True
             $ chloe.points += 1
@@ -288,17 +290,17 @@ label v13s9:
             scene v13s9_12f
             with dissolve
 
-            u "Of course I’ll help. You obviously care about the girls, you’ve been running the sorority perfectly fine, and I'd hate for you to lose your scholarship."
+            u "Of course I'll help. You obviously care about the girls, you've been running the sorority perfectly fine, and I'd hate for you to lose your scholarship."
 
             scene v13s9_12h # FPP. Chole facing MC (no longer leaning against rail) looking at MC, happy, mouth open.
             with dissolve
 
             cl "I knew I could count on you."
 
-            if chloegf:   # -If Chloegirlfriend (extra dialog)
+            if chloegf: # -If Chloegirlfriend (extra dialog)
                 $ addPoint("bf")
 
-                play sound "sounds/kiss.mp3"   
+                play sound "sounds/kiss.mp3"
                 
                 scene v13s9_13 # TPP: Chloe, facing MC (no longer leaning against rail) arms around MC, giving him a kiss.
                 with dissolve
@@ -315,14 +317,14 @@ label v13s9:
 
             u "Haha, I'll do all I can."
 
-        "Help Lindsey":  # -If Help Lindsey  
-            $ v13_help_lindsey = True      
+        "Help Lindsey": # -If Help Lindsey  
+            $ v13_help_lindsey = True
             $ lindsey.points += 1
 
             scene v13s9_12e
             with dissolve
             
-            u "Well, Lindsey has been asking me for help already, and I told her I'd help... I’m sorry, I don't want to be a bad friend."
+            u "Well, Lindsey has been asking me for help already, and I told her I'd help... I'm sorry, I don't want to be a bad friend."
 
             scene v13s9_12j # FPP. Chloe facing MC (no longer leaning against rail) looking at MC, mad, mouth open.
             with dissolve
@@ -344,7 +346,7 @@ label v13s9:
 
             u "Chloe, it's not like that. I'm her friend and she came to me in confidence for my help. I'd be wrong to turn her away."
 
-            if chloegf:  # -If Chloegirlfriend (extra dialog)
+            if chloegf: # -If Chloegirlfriend (extra dialog)
                 $ chloe.points -= 1 
                 
                 $ addPoint("tm")
@@ -364,10 +366,11 @@ label v13s9:
 
                 cl "Whatever, [name]."
         
-        "Help No One":  # -If No One
+        "Help no one": # -If No One        
             scene v13s9_12e
             with dissolve
 
+            $ grant_achievement("indecisive")
             u "Honestly, I'm going into the grey-zone on this one. I don't want anyone, you or her, to feel betrayed."
 
             scene v13s9_12f
@@ -388,7 +391,7 @@ label v13s9:
     scene v13s9_12b
     with dissolve
 
-    cl "I haven’t really been given a choice. We're days away from being right back in the heat of everything."
+    cl "I haven't really been given a choice. We're days away from being right back in the heat of everything."
 
     scene v13s9_12c
     with dissolve
@@ -410,14 +413,16 @@ label v13s9:
     scene v13s9_12f
     with dissolve
 
-    cl "Ironically, yes. *Chuckles* I was walking with Aubrey earlier and we passed by this really nice sex shop…"
+    cl "Ironically, yes. *Chuckles* I was walking with Aubrey earlier and we passed by this really nice sex shop..."
 
-    scene v13s9_12p # FPP. Same as v13s9_12f but Chloe slightly blushing, mouth open.
+    #scene v13s9_12p # FPP. Same as v13s9_12f but Chloe slightly blushing, mouth open.
+    scene v13s9_12f
     with dissolve
 
     cl "I wanted to go in, but I was a little nervous to tell Aubrey. *Chuckles*"
 
-    scene v13s9_12o # FPP. Same as v13s9_12e but Chloe slightly blushing, mouth closed.
+    #scene v13s9_12o # FPP. Same as v13s9_12e but Chloe slightly blushing, mouth closed.
+    scene v13s9_12e
     with dissolve
 
     u "Oooh, didn't know that was your kind of scene... *Chuckles*"
@@ -432,12 +437,14 @@ label v13s9:
 
     u "What are you wanting to look at, specifically?"
 
-    scene v13s9_12p
+    #scene v13s9_12p
+    scene v13s9_12f
     with dissolve
 
     cl "Don't embarrass me. *Chuckles*"
 
-    scene v13s9_12o
+    #scene v13s9_12o
+    scene v13s9_12e
     with dissolve
 
     u "Haha. I'm not trying to. I'm just curious."
@@ -470,7 +477,7 @@ label v13s9:
     scene v13s9_12i
     with dissolve
 
-    u "Oh... Well… That’s spicy. *Laughs*"
+    u "Oh... Well... That's spicy. *Laughs*"
 
     if chloegf or chloers: # -If Chloers or Chloegirlfriend
         scene v13s9_12q # FPP. Chloe facing MC (not leaning), flirting/seductive, smiling, mouth open.
@@ -519,6 +526,8 @@ label v13s9:
     with dissolve
 
     cl "Go ahead and take it."
+
+    stop sound
 
     scene v13s9_15 # TPP. MC talking on his phone, mouth open, standing next to Chloe, with the gaurd raile and the water behind them.
     with dissolve
@@ -600,16 +609,15 @@ label v13s9:
         with dissolve
         
         menu:
-            
-            "Go to concert":
-                jump v13s9_go_to_concert
-            
-            "Don't go to concert":
-                $ addPoint("bro") # only give points for the decision; not the else (default) flow.
-                
+            "Go with Ryan":
+                $ addPoint("bro") # only give points for the decision; not the else (default) flow.   
                 jump v13s9_no_concert
+
+            "Don't go with Ryan":
+                $ v13s9_go_to_concert = True
+                jump v13s9_go_to_concert         
             
-    else:  # -If no concert, MC is forced to go and given no choice
+    else: # -If no concert, MC is forced to go and given no choice
         jump v13s9_no_concert
 
 label v13s9_no_concert: # -If Go
@@ -714,6 +722,8 @@ label v13s9_continue: # -Regardless of all scene continued
     scene v13s9_19 # TPP. Same as v13s9_9 but the opposite direction - MC and Chloe walking away from the pier.    
     with dissolve
 
-    pause 0.75 
+    pause 0.75
+
+    stop music fadeout 3
 
     jump v13s10

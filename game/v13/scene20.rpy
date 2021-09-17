@@ -7,13 +7,19 @@ label v13s20:
     scene v13s20_1 # TPP. Show MC walking into Charli's room, smirking, mouth closed
     with dissolve
 
-    u "(Ohhhh shit.... I'm gonna fuck some shit up.) *Laughs*"
+    play music "music/v13/Track Scene 20.mp3" fadein 2
+
+    play sound "sounds/doorclose.mp3"
+
+    u "(Ohhhh shit... I'm gonna fuck some shit up.) *Laughs*"
 
     call screen v13s20_room
 
 label v13s20_closet:
+    $ v13s20_frcloset = True
+
     scene v13s20clo_1 # TPP. Show MC walking towards the closet, mouth closed, smirking
-    with dissolve
+    #with dissolve
 
     pause 0.75
 
@@ -25,7 +31,7 @@ label v13s20_closet:
     scene v13s20clo_3 # FPP. MC looking into the closet, some clothes inside
     with dissolve
 
-    u "(Damn, he’s got some ugly ass clothes…)"
+    u "(Damn, he's got some ugly ass clothes...)"
 
     u "(They low-key smell good, though. It'd be a shame if someone pissed on his shit...)"
 
@@ -49,11 +55,11 @@ label v13s20_closet:
             scene v13s20clo_5 # TPP. Show MC smirking, looking at the wet clothes, smirking, mouth open
             with dissolve
 
-            u "*Laughs* Shit, man... l. He pisses so many people off, it's only fair he smells like it too. Haha!"
+            u "*Laughs* Shit, man... He pisses so many people off, it's only fair he smells like it too. Haha!"
 
         "That's too far":
 
-            u "*Chuckles* I can’t do that nasty shit."
+            u "*Chuckles* I can't do that nasty shit."
         
     scene v13s20clo_6 # TPP. Show MC walking away from the closet, smirking, mouth closed
     with dissolve
@@ -63,10 +69,12 @@ label v13s20_closet:
     call screen v13s20_room
 
 label v13s20_bleach:
-    scene v13s20bleach_1 # TPP. Show MC bending over, opening the cabinet underneath the sink, slight smile, mouth open, bottle of bleach inside
-    with dissolve
+    $ v13s20_frbleach = True
 
-    u "Hmm, what do we have here? Ah! A nice bottle of bleach…"
+    scene v13s20bleach_1 # TPP. Show MC bending over, opening the cabinet underneath the sink, slight smile, mouth open, bottle of bleach inside
+    #with dissolve
+
+    u "Hmm, what do we have here? Ah! A nice bottle of bleach..."
 
     scene v13s20bleach_2 # FPP. MC looking into the cabinet underneath the sink, focus on the bottle of bleach
     with dissolve
@@ -75,6 +83,8 @@ label v13s20_bleach:
 
     menu:
         "Bleach his suitcase":
+
+            $ v13s20_bleach_suitcase = True
 
             u "(Riley said this suitcase is special to him, and that bleach would be a good addition to it... Let's find out.) *Laughs*"
 
@@ -118,9 +128,9 @@ label v13s20_bleach:
 
             pause 0.75
 
-        "That’s too far":
+        "That's too far":
 
-            u "Damn, that's potent! *Chuckles* This is so fucked up... But, well deserved, right?"
+            u "Damn, that's potent! *Chuckles* This is so fucked up..."
 
             scene v13s20bleach_1a
             with dissolve
@@ -130,8 +140,10 @@ label v13s20_bleach:
     call screen v13s20_bathroom
 
 label v13s20_toothbrush:
+    $ v13s20_frbrush = True
+
     scene v13s20brush_1 # TPP. MC grabbing the toothbrush, smirking, mouth closed
-    with dissolve
+    #with dissolve
 
     pause 0.75
 
@@ -143,10 +155,10 @@ label v13s20_toothbrush:
     scene v13s20brush_3 # FPP. MC looking down at the toilet, holding the toothbrush
     with dissolve
 
-    u "Ha… The classic “toothbrush in the toilet” trick, shall we?"
+    u "Ha... The classic \"toothbrush in the toilet\" trick, shall we?"
 
     menu:
-        "Flush, flush, Motherfucker!":
+        "Flush, flush, motherfucker!":
             scene v13s20brush_4 # TPP. Show MC bending over the toilet, sticking the toothbrush in the toilet, smirking, mouth closed
             with dissolve
 
@@ -155,12 +167,13 @@ label v13s20_toothbrush:
             scene v13s20brush_5 # FPP. Same positioning as v13s20brush_4, MC sticking the toothbrush in the toilet
             with dissolve
 
+            $ grant_achievement("flush_flush")
             u "TASTE SHIT BITCH! *Chuckles*"
 
             scene v13s20brush_5a # FPP. Same as v13s20brush_5, MC moved the toothbrush a bit
             with dissolve
 
-            u "This is why you shouldn’t be a trashy human being, pal..."
+            u "This is why you shouldn't be a trashy human being, pal..."
 
         "Too much":
             
@@ -175,7 +188,7 @@ label v13s20_toothbrush:
 
 label v13s20_end:
     scene v13s20end_1 # TPP. Show MC walking over to the laptop, smirking, mouth closed
-    with dissolve
+    #with dissolve
 
     pause 0.75
 
@@ -192,22 +205,22 @@ label v13s20_end:
     scene v13s20end_2a # TPP. Same as v13s20end_2, MC slightly shocked
     with dissolve
 
-    u "Hmm… Oh, shit. This is Mr. Lee's test..."
+    u "Hmm... Oh, shit. This is Mr. Lee's test..."
 
     scene v13s20end_3a # TPP. Same as v13s20end_3, MC very shocked
     with dissolve
 
-    u "He's doing tests for people in Mr. Lee's class!? This is…"
+    u "He's doing tests for people in Mr. Lee's class!? This is..."
 
     scene v13s20end_2a
     with dissolve
 
-    u "“The final turned out great, I can’t thank you enough, Charli. Academic honors scholarship, here I come!”"
+    u "\"The final turned out great, I can't thank you enough, Charli. Academic honors scholarship, here I come!\""
 
     scene v13s20end_2
     with dissolve
 
-    u "Haha! This is too fucking good… He’s helping students cheat their way to the top..."
+    u "Haha! This is too fucking good... He's helping students cheat their way to the top..."
 
     scene v13s20end_4 # TPP. Same as v13s20_3, different angle, MC different pose, mouth closed
     with dissolve
@@ -230,18 +243,18 @@ label v13s20_end:
             scene v13s20end_2
             with dissolve
 
-            u "Alright… Forward email… MrLee@CK.com...and sent! Just in case, I'll send it to myself too.)"
+            u "Alright... Forward email... MrLee@CK.com... and sent! Just in case, I'll send it to myself too.)"
 
         "Confront him":
             scene v13s20end_5
             with dissolve
 
-            u "(I'll just wait to see what Charli has to say about all of this…)"
+            u "(I'll just wait to see what Charli has to say about all of this...)"
 
             scene v13s20end_2
             with dissolve
 
-            u "Either way though, this man won’t be fucking with me anymore. That, I’m sure of."
+            u "Either way though, this man won't be fucking with me anymore. That, I'm sure of."
 
     scene v13s20_6 # TPP. Show MC closing the laptop, smirking, mouth closed
     with dissolve
@@ -267,6 +280,8 @@ label v13s20_end:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     if v13_charli_exposed:
         jump v13s21a 

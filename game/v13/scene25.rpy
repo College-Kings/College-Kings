@@ -8,6 +8,8 @@ label v13s25:
     with dissolve
 
     pause 0.75
+
+    play music "music/v13/Track Scene 25.mp3" fadein 2
    
     scene v13s25_2 # TPP. Mc grabbing chair looking at Emmy, Mc's back turned to camera, Emmy looking at Mc, slight smile, mouth closed
     with dissolve
@@ -22,7 +24,7 @@ label v13s25:
     scene v13s25_3a # FPP. Emmy head straight, slight smile, mouth open
     with dissolve
 
-    emmy "That you’re on the “no kids kind of vibe”. *Chuckles*"
+    emmy "That you're on the \"no kids kind of vibe\". *Chuckles*"
 
     scene v13s25_3
     with dissolve
@@ -42,7 +44,7 @@ label v13s25:
     scene v13s25_3
     with dissolve
 
-    u "I can hear them asking me now, \"Why did you travel all the way across the world?\" And my answer will be, “To go on a date with a woman... A woman named Emmy.”"
+    u "I can hear them asking me now, \"Why did you travel all the way across the world?\" And my answer will be, \"To go on a date with a woman... A woman named Emmy.\""
 
     scene v13s25_3b # FPP. Same as v13s25_3a Emmy full smile, one eyebrow raised
     with dissolve
@@ -86,12 +88,12 @@ label v13s25:
             scene v13s25_3d
             with dissolve
 
-            u "You have to be, because at the end of the fight someone’s going home hurt and sad, while the other goes home proud and happy."
+            u "You have to be, because at the end of the fight someone's going home hurt and sad, while the other goes home proud and happy."
 
             scene v13s25_3a
             with dissolve
 
-            emmy "So, you’d fight for me?"
+            emmy "So, you'd fight for me?"
 
             scene v13s25_3
             with dissolve
@@ -101,12 +103,12 @@ label v13s25:
             scene v13s25_3
             with dissolve
 
-            u "The only one who’s going to be fucking you is me. *Chuckles* Was that too much?"
+            u "The only one who's going to be fucking you is me. *Chuckles* Was that too much?"
 
             scene v13s25_4 # TPP. Emmy blushes and looks away as she touches her ear
             with dissolve
 
-            pause 0.50
+            pause 0.5
 
             scene v13s25_3c
             with dissolve
@@ -116,12 +118,12 @@ label v13s25:
             scene v13s25_5 # TPP. Emmy looks one direction, slight smile, mouth closed
             with dissolve
 
-            pause 0.50
+            pause 0.5
 
             scene v13s25_6 # TPP. Emmy looks the other direction, slight smile, mouth closed
             with dissolve
 
-            pause 0.50
+            pause 0.5
 
             if v12s24_emmymatch or kct == "confident": 
                 if not v12s24_emmymatch:
@@ -135,12 +137,12 @@ label v13s25:
                 scene v13s25_7 # TPP. Emmy grabs MC's hand and pulls him away to a secluded area, Both have slight smiles, mouths closed
                 with dissolve
 
-                pause 0.50
+                pause 0.5
 
                 scene v13s25_8 # TPP. Emmy slight smile, mouth open, leans her body into MC, one hand pressed against his chest, the other hand unzipping his pants, Mc slight shocked, mouth open, one hand at the side of Emmy's face
                 with dissolve
 
-                pause 0.50
+                pause 0.5
 
                 scene v13s25_9 # FPP. Emmy head tilted slighty down, looking up at Mc, biting her lip
                 with dissolve
@@ -153,8 +155,10 @@ label v13s25:
                 emmy "Right here, right now."
 
                 menu:
-                    "Let Her":
+                    "Let her":
                         $ addPoint("tm")
+                        label v13s25_emmysg:
+
                         scene v13s25_9
                         with dissolve
 
@@ -163,11 +167,13 @@ label v13s25:
                         scene v13s25_10 
                         with dissolve
 
-                        emmy "Don't be gentle"
+                        emmy "Don't be gentle."
 
-                        jump v13s26
+                        stop music fadeout 3
 
-                    "Stop Her":
+                        jump v13_emmy_sex
+
+                    "Stop her":
                         $ addPoint("bf")
 
                         scene v13s25_9
@@ -286,7 +292,7 @@ label v13s25:
             scene v13s25_3f
             with dissolve
 
-            emmy "No, it's fine. Ha… You didn't seem like the kind of guy who’s wild enough for me anyway."
+            emmy "No, it's fine. Ha... You didn't seem like the kind of guy who's wild enough for me anyway."
 
             scene v13s25_3b
             with dissolve
@@ -329,7 +335,7 @@ label v13s25_no_sex:
 
     pause 0.75
 
-    scene v13s25_99 # TPP. Show MC walking through the streets, neutral expression , mouth closed
+    scene v13s25_99 # TPP. Show MC walking through the streets, neutral expression, mouth closed
     with dissolve
 
     pause 0.75
@@ -339,4 +345,6 @@ label v13s25_no_sex:
 
     pause 0.75
 
-    jump v13_Scene_27
+    stop music fadeout 3
+
+    jump v13s27

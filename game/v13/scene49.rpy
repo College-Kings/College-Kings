@@ -9,6 +9,8 @@ label v13s49:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 49.mp3" fadein 2
+
     scene v13s49_2 # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open.
     with dissolve
 
@@ -18,17 +20,14 @@ label v13s49:
     with dissolve
 
     pause 0.75
-
-# Haven't been taught how to do the Kiwii process.
-# -Aubrey post one her pictures on Kiwii with the caption "Swimming Up The Ladder"
-
-### ERROR: KiwiiPost("Aubrey, "Picture of Aubrey on the beach in Amsterdam", "Swimming up the ladder! #ScheveningenBeach", numberLikes=4218)
-### ERROR: kiwiiPost.newComment("Imre", "Hot as fuck Aubrey!!")
-### ERROR: kiwiiPost.newComment("Chloe", "This is the hottest pic I’ve ever seen of you! ="Aubrey")
-### ERROR: kiwi Post.add Reply("Wow, they turned out great!")
-### ERROR: kiwiiPost.addReply("Ah, beautiful. But even better in person ;)", mentions="Aubrey)
-### ERROR: kiwiiPost.newComment("Aubrey", "Thank you! <3")
-### ERROR: kiwiiPost.newComment("Naomi", "OMG! You look just like me! <3")
+    
+    $ v13s49_kiwiiPost1 = KiwiiPost("Aubrey", "v13/Scene 48/v13s48_6d.webp", _("Swimming up the ladder! #ScheveningenBeach"), numberLikes=4218)
+    $ v13s49_kiwiiPost1.newComment("Imre", _("Hot as fuck Aubrey!!"))
+    $ v13s49_kiwiiPost1.newComment("Chloe", _("This is the hottest pic I've ever seen of you!"), mentions="Aubrey")
+    $ v13s49_kiwiiPost1.addReply(_("Wow, they turned out great!"))
+    $ v13s49_kiwiiPost1.addReply(_("Ah, beautiful. But even better in person ;)"), mentions="Aubrey")
+    $ v13s49_kiwiiPost1.newComment("Aubrey", _("Thank you! <3"))
+    $ v13s49_kiwiiPost1.newComment("Naomi", _("OMG! You look just like me! <3"))
 
     scene v13s49_2b # FPP. Same as v13s49_2, (Aubrey's phone off camera), Aubrey slight smile, mouth closed.
     with dissolve
@@ -62,6 +61,10 @@ label v13s49:
         scene v13s49_4a # FPP. Same as v13s49_4, Ryan standing in front of MC.
         with dissolve
 
+        pause 0.75
+
+        stop music fadeout 3
+
         jump v13s50
   
     elif not v13s48_ryan_double_date and emily_europe:
@@ -73,9 +76,15 @@ label v13s49:
         scene v13s49_5a # FPP. Same as v13s49_5, Emily standing in front of MC.
         with dissolve
 
-        jump v13s51
+        pause 0.75
+
+        stop music fadeout 3
+
+        jump v13s51_emily_fight
 
     else:
+        stop music fadeout 3
+        
         if chloegf:
             jump v13s52
         elif rileyrs:

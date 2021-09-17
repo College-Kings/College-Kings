@@ -3,7 +3,6 @@
 # Characters: AUBREY (Outfit: 2), MC (Outfit: 3)
 # Time: Afternoon
 
-
 label v13s59:
 
     scene v13s59_1 # TPP. show mc and aubrey walking to the canoe rental shop, slight smiles, mouths closed, rental shop in background
@@ -11,15 +10,17 @@ label v13s59:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 59_1.mp3" fadein 2
+
     scene v13s59_1a # TPP. same as v13s59_1 show mc and aubrey standing in front of the rental stanb waiting for the shop clerk, shop clerk not visible, looking at each other, mc rings a service bell
     with dissolve
 
     pause 0.75
 
     scene v13s59_2 # FPP. show just aubrey standing in front of canoe rental stand, looking at mc, slight smile, mouth open
-    with dissolve    
+    with dissolve
 
-    au "Why am I getting nervous? I’ve got butterflies over here. *Laughs*"
+    au "Why am I getting nervous? I've got butterflies over here. *Laughs*"
 
     scene v13s59_2a # FPP. same as v13s59_2 aubrey mouth closed
     with dissolve
@@ -39,7 +40,7 @@ label v13s59:
     scene v13s59_2b # FPP. same as v13s59_2 Aubrey looks away and down nervously
     with dissolve
 
-    au "Actually.... I can't do that."
+    au "Actually... I can't do that."
 
     scene v13s59_2c # FPP. same as v13s59_2b aubrey mouth closed
     with dissolve
@@ -59,7 +60,7 @@ label v13s59:
     scene v13s59_2
     with dissolve
 
-    au "Yeah, I know… It’s kinda funny at first but I was terrified of the water when I was little."
+    au "Yeah, I know... It's kinda funny at first but I was terrified of the water when I was little."
 
     scene v13s59_2a
     with dissolve
@@ -69,7 +70,7 @@ label v13s59:
     scene v13s59_2
     with dissolve
 
-    au "I was never interested, but right now I'm wishing I had. *Laughs*"
+    au "I was never interested, but right now I'm wishing I had been. *Laughs*"
 
     scene v13s59_2a
     with dissolve
@@ -109,17 +110,17 @@ label v13s59:
     scene v13s59_3 # TPP. mc and aubrey, and the shop clerk arrive at a dock, with a canoe on both sides of the dock, canoe rack to the side of the dock, mc aubrey and shop clerk slight smiles mouths closed looking at the canoes
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s59_3a # TPP. same as scene v13s59_3 Mc and aubrey get into separate canoes, slight smiles looking at each other, mouths closed
-    with dissolve  
+    with dissolve
 
     pause 0.75
 
     scene v13s59_3b # TPP. same as v13s59_3a mc and aubrey start rowing away from the dock, shop clerk waving goodbye
-    with dissolve    
+    with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s59_4 # FPP. show just aubrey sitting in her canoe, holding a paddle with the left side of the paddle dipped into the water and right side of paddle in the air, slight smile, mouth open, looking at mc
     with dissolve
@@ -129,12 +130,12 @@ label v13s59:
     scene v13s59_4a # FPP. same as v13s59_4 right side of paddle dipped in the water and left side of the paddle in the air, aubrey mouth closed
     with dissolve
 
-    u "That’s what she said...*Laughs*"
+    u "That's what she said... *Laughs*"
 
     scene v13s59_4
     with dissolve
 
-    au "*Chuckles* I’m serious!"
+    au "*Chuckles* I'm serious!"
 
     scene v13s59_4a
     with dissolve
@@ -142,18 +143,18 @@ label v13s59:
     menu:
         "Agree":
             $ aubrey.points += 1
-            $ addpoint("bf")
+            $ addPoint("bf")
             scene v13s59_4a
             with dissolve
 
             u "It is a little hard... I'm not gonna lie."
 
         "Disagree":
-            $ addpoint("tm")
+            $ addPoint("tm")
             scene v13s59_4a
             with dissolve
 
-            u "Nah, you’re just weak. *Chuckles*"
+            u "Nah, you're just weak. *Chuckles*"
 
             scene v13s59_4
             with dissolve
@@ -178,7 +179,7 @@ label v13s59:
     scene v13s59_4a
     with dissolve
 
-    u "It's not my fault you’re lookin' all goofy."
+    u "It's not my fault you're lookin' all goofy."
 
     scene v13s59_4d # FPP. same as v13s59_4 aubrey slightly sad
     with dissolve
@@ -228,17 +229,17 @@ label v13s59:
     scene v13s59_3c # TPP. same as v13s59_3b mc and aubrey are rowing towards the dock instead of leaving
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v13s59_3d # TPP. same as v13s59_3a mc and aubrey getting out of canoes instead of getting in
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v13s59_6 # FPP. show aubrey looking at mc, slight concern, mouth open
     with dissolve
 
-    au "I think I’m just not a huge fan of the water. And honestly, I'm not mad about it."
+    au "I think I'm just not a huge fan of the water. And honestly, I'm not mad about it."
 
     scene v13s59_6a # FPP. same as v13s59_6 aubrey mouth closed
     with dissolve
@@ -248,7 +249,7 @@ label v13s59:
     scene v13s59_6
     with dissolve
 
-    au "I don’t know… Maybe."
+    au "I don't know... Maybe."
 
     scene v13s59_6a
     with dissolve
@@ -265,7 +266,7 @@ label v13s59:
 
     menu:
         "Teach her":
-            $ addpoint("bf")
+            $ addPoint("bf")
             scene v13s59_6a
             with dissolve
 
@@ -284,7 +285,7 @@ label v13s59:
             scene v13s59_6b
             with dissolve
 
-            au "*Chuckles* Well…"
+            au "*Chuckles* Well..."
 
             scene v13s59_6b
             with dissolve
@@ -296,7 +297,7 @@ label v13s59:
 
             pause 0.75
 
-            if date_with_aubrey:
+            if v13s48_canoeing_as_date:
 
                 scene v13s59_6e # FPP. same as v13s59_6d aubrey puts her hands around MC, mouth open, a cow is in the background
                 with dissolve
@@ -310,21 +311,26 @@ label v13s59:
 
                 scene v13s59_7 # TPP. Aubrey and MC romantically kiss
                 with dissolve
+                play sound "sounds/kiss.mp3"
 
-                pause 0.75
+                pause 1.25
 
+                play sound "sounds/lick.mp3"
                 scene v13s59_7a # TPP. the cow licks aubrey and the mc's faces, aubrey and mc slight shock, they are both looking at the cow
                 with dissolve
 
-                pause 0.75
+                pause 1.25
+
+                stop music fadeout 3
+                play music "music/v13/Track Scene 59_2.mp3" fadein 2
 
                 scene v13s59_7b # TPP. the cow has walked away, aubrey and mc look at each other
                 with dissolve
 
-                pause 0.75
+                pause 1.25
 
                 scene v13s59_6g # FPP. same as v13s59_6c aubrey full smile
-                with dissolve 
+                with dissolve
 
                 u "What the fuck?!"
 
@@ -346,15 +352,15 @@ label v13s59:
                 scene v13s59_6g
                 with dissolve
 
-                u "So… What was that little kiss for?"
+                u "So... What was that little kiss for?"
 
                 scene v13s59_6i # FPP. same as v13s59_6h aubrey flirty look
                 with dissolve
 
-                au "Hmm… Many reasons."
+                au "Hmm... Many reasons."
 
         "Let her figure it out":
-            $ addpoint("bro")
+            $ addPoint("bro")
             scene v13s59_6a
             with dissolve
 
@@ -363,12 +369,12 @@ label v13s59:
             scene v13s59_6a
             with dissolve
 
-            u "Maybe one day you’ll be in the right place at the right time and you’ll learn comfortably."
+            u "Maybe one day you'll be in the right place at the right time and you'll learn comfortably."
 
             scene v13s59_6j # FPP. same as v13s59_6 aubrey slight frown
             with dissolve
 
-            au "Haha, yeah… I hope so."
+            au "Haha, yeah... I hope so."
 
     scene v13s59_6b
     with dissolve
@@ -391,11 +397,15 @@ label v13s59:
     pause 0.75
 
     scene v13s59_8a # TPP. same as v13s59_8 different background, looking straight ahead, mouths closed
-    with dissolve    
+    with dissolve
 
     pause 0.75
 
     scene v13s59_8b # TPP. same as v13s59_8a different background
     with dissolve
+
+    pause 0.75
+
+    stop music fadeout 3
 
     jump v13s60

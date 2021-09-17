@@ -3,11 +3,24 @@
 # Characters: MC (Outfit: 5), AUBREY (Outfit: 2), LINDSEY (Outfit: 1)
 # Time: Afternoon 
 
+label v13s35_buy_item_dialog(item):
+    scene v13s35_sex_shop
+
+    if (10 < mc.money <= 20) and (cuffs not in mc.inventory.items):
+        u "Only have a bit of money left, better get the cuffs."
+    else:
+        $ mc.add_item(item)
+        $ mc.money -= item.cost
+
+    call screen v13s35_adult_shop
+
 label v13s35:
     scene v13s35_1 # TPP. Show MC and Aubrey outside the Sex shop, MC slight smile, mouth open, Aubrey slight smile, mouth closed.
     with dissolve
 
     u "Aubrey wanting to go to a sex shop? Not surprised. *Chuckles*"
+
+    play music "music/v13/Track Scene 35_1.mp3" fadein 2
 
     scene v13s35_2 # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open.
     with dissolve
@@ -37,7 +50,7 @@ label v13s35:
     scene v13s35_2a
     with dissolve
 
-    u "Are you scared or something? What’s wrong?"
+    u "Are you scared or something? What's wrong?"
 
     scene v13s35_2b # FPP. Same as v13s35_2, Aubrey different pose, slight smile, mouth open.
     with dissolve
@@ -57,7 +70,7 @@ label v13s35:
     scene v13s35_2a
     with dissolve
 
-    u "Haha, c'mon then. I’ve got you covered."
+    u "Haha, c'mon then. I've got you covered."
 
     scene v13s35_3 # TPP. Show Aubrey and MC starting to walk into sex shop, both slight smile, mouths closed.
     with dissolve
@@ -69,10 +82,13 @@ label v13s35:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 35_2.mp3" fadein 2
+
     scene v13s35_4a # TPP. Same as v13s35_4, Show Aubrey walking away from mc.
     with dissolve
 
-    if chloers or chloegirlfriend:
+    if chloers or chloegf:
         u "(Guess I could look around a bit...)"
 
         scene v13s35_5 # FPP. MC looking at the general view of the shop.
@@ -89,15 +105,13 @@ label v13s35:
         with dissolve
 
         $ mc.money = 100
+        $ freeRoam = True
         call screen v13s35_adult_shop
 
-
-        u "(She'll be happy with these, I think. We're gonna have some fun… *Chuckles*)"
-
+        u "(She'll be happy with these, I think. We're gonna have some fun... *Chuckles*)"
 
     else:
         u "(Guess I'll just post up here...)"
-
 
     scene v13s35_8 # TPP. Show MC waiting by the door, slight smile, mouth closed.
     with dissolve
@@ -132,7 +146,7 @@ label v13s35:
     scene v13s35_9
     with dissolve
 
-    u "I don't know why I was expecting so much more. It’s so clean and… Innocent here."
+    u "I don't know why I was expecting so much more. It's so clean and... Innocent here."
 
     scene v13s35_9a
     with dissolve
@@ -148,6 +162,9 @@ label v13s35:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 35_3.mp3" fadein 2
 
     scene v13s35_11 # FPP. Show Lindsey walking towards MC and Aubrey on the side walk, all slight smile, mouths closed
     with dissolve
@@ -172,12 +189,12 @@ label v13s35:
     scene v13s35_12
     with dissolve
 
-    au "I can't, actually. I’m on my way to chill with Chloe for a bit, but you can take [name] off my hands."
+    au "I can't, actually. I'm on my way to chill with Chloe for a bit, but you can take [name] off my hands."
 
     scene v13s35_11c # FPP. Same as v13s35_11b, Lindsey looking at MC, slight smile, mouth open.
     with dissolve
 
-    li "I’d love to… *Chuckles* You cool with that?"
+    li "I'd love to... *Chuckles* You cool with that?"
 
     scene v13s35_11a
     with dissolve
@@ -205,5 +222,7 @@ label v13s35:
     # -Aubrey walks off-
     pause 0.75
 
-    jump v13s36
+    stop music fadeout 3
+    $ freeRoam = False
+    jump v13_walk_garden
     # -Transition to Scene 36-

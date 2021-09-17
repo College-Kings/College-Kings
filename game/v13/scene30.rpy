@@ -9,7 +9,9 @@ label v13s30:
 
     u "Wait a minute, are these not the canals you were talking about?"
 
-    scene v13s30_2 # FPP. MC looking at Amber, Amber looking at MC, Amber slight smile, mouth open.   
+    play music "music/v13/Track Scene 30_1.mp3" fadein 2
+
+    scene v13s30_2 # FPP. MC looking at Amber, Amber looking at MC, Amber slight smile, mouth open. 
     with dissolve
 
     am "Oh shit, they are."
@@ -50,7 +52,7 @@ label v13s30:
         scene v13s30_3a # FPP. Same as v13s30_3, Samantha looking at MC, Samantha slight smile, mouth open
         with dissolve
 
-        sa "Yeah. Thanks anyway Later guys."
+        sa "Yeah. Thanks anyway. Later guys."
 
         scene v13s30_3b # FPP. Same as v13s30_3a, Samantha slight smile, mouth closed
         with dissolve
@@ -60,7 +62,7 @@ label v13s30:
         scene v13s30_3a
         with dissolve
 
-        sam "See ya, have fun! And thanks for letting me come."
+        sa "See ya, have fun! And thanks for letting me come."
 
         scene v13s30_4 # TPP. Samantha hugging MC, Samantha slight smile, mouth closed
         with dissolve
@@ -126,6 +128,7 @@ label v13s30:
 
     pause 0.75
 
+    play sound "sounds/rejectcall.mp3"
     scene v13s30_2c # FPP. Same as v13s30_2b, Amber with phone to her ear, slight smile, mouth open.
     with dissolve
 
@@ -192,7 +195,7 @@ label v13s30:
     am "Guess you'll find out, haha. Are you gonna smoke?"
 
     menu:
-        "I'm good...":
+        "I'm good":
             scene v13s30_2a
             with dissolve
 
@@ -208,7 +211,7 @@ label v13s30:
 
             u "*Laughs*"
 
-        "Why not!..":
+        "Why not!?":
             $ v13_smoke_weed = True
 
             scene v13s30_2a
@@ -222,7 +225,7 @@ label v13s30:
             am "That was a wack way to put it, but let's roll up. *Laughs*"
 
     scene v13s30_2f # FPP. Same as v13s30_2, MC Looking at Amber, Amber looking away from MC, Amber slight smile, mouth open.
-    with dissolve 
+    with dissolve
 
     am "Speaking of wack, look who it is!"
 
@@ -333,6 +336,7 @@ label v13s30:
 
         pause 0.75
 
+        play sound "sounds/kiss.mp3"
         scene v13s30_9a # TPP. Same as v13s30_9. Lauren kissing MC while grabbing his chin.
         with dissolve
 
@@ -410,13 +414,13 @@ label v13s30:
     la "Not everything. I'm not so sure about smoking."
 
     menu:
-        "It's relaxing...":
+        "It's relaxing":
             scene v13s30_8e # FPP. Same as v13s30_8, Lauren slight smile, mouth closed
             with dissolve
 
             u "It is relaxing, always helps me blow off a bit of steam."
 
-        "It's up to you...":
+        "It's up to you":
             $ v13_lauren_smoke = True
             
             scene v13s30_8e
@@ -572,7 +576,7 @@ label v13s30:
         scene v13s30_8f
         with dissolve
 
-        la "Guys, I'm not playing. It...It looks like the water is... Dancing?"
+        la "Guys, I'm not playing. It... It looks like the water is... Dancing?"
 
         scene v13s30_10
         with dissolve
@@ -624,7 +628,10 @@ label v13s30:
 
         u "She's shaking, Amber..."
 
-        scene v13s30_15b # TPP.  Same as v13s30_15a, Show MC looking down towards where Amber is sitting, MC worried expression, mouth closed, amber worried expression, Mouth open.
+        stop music fadeout 3
+        play music "music/v13/Track Scene 30_2.mp3" fadein 2
+
+        scene v13s30_15b # TPP. Same as v13s30_15a, Show MC looking down towards where Amber is sitting, MC worried expression, mouth closed, amber worried expression, Mouth open.
         with dissolve
 
         am "Ahh fuck!"
@@ -632,7 +639,7 @@ label v13s30:
         scene v13s30_16 # TPP. Show Amber getting up off the ground, Amber worried expression, mouth closed.
         with dissolve
 
-        pause 0.50
+        pause 0.5
 
         scene v13s30_16a # TPP. Show Amber standing, Amber worried expression, mouth open.
         with dissolve
@@ -666,6 +673,8 @@ label v13s30:
 
         scene v13s30_20 # TPP. MC carrying Lauren while outside of the hospital with Amber next to him.
         with Fade(1,1,1)
+
+        stop music fadeout 3
 
         jump v13s31 
 
@@ -734,5 +743,7 @@ label v13s30:
         with Fade(1,1,1)
 
         pause 0.75
+
+        stop music fadeout 3
 
         jump v13s32

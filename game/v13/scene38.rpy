@@ -3,12 +3,13 @@
 # Characters: IMRE (Outfit: 1), MC (Outfit: 5)
 # Time: evening 
 
-
 label v13_walk_imre:
     scene v13s38_1 # TPP. MC and imre walking in the sidewalk (location 1)
     with fade
 
-    if ImreDisloyal:
+    play music "music/v13/Track Scene 38.mp3" fadein 2
+
+    if v13_imre_disloyal:
         scene v13s38_2 # FPP. MC looking at imre who looks dissapointed, mouth opened (location 1)
         with dissolve
 
@@ -22,7 +23,7 @@ label v13_walk_imre:
         scene v13s38_2b # FPP. Same as 2, imre looking confused, mouth opened
         with dissolve
 
-        imre "How can you say that?  Especially when I just saw you swapping spit with the homie’s girl?"
+        imre "How can you say that? Especially when I just saw you swapping spit with the homie's girl?"
 
         scene v13s38_2c # FPP. Same as 2b, mouth closed
         with dissolve
@@ -70,7 +71,7 @@ label v13_walk_imre:
         scene v13s38_2c
         with dissolve
 
-        imre "Chris is out here actually trying and she’s not doing a damn thing to help the situation."
+        imre "Chris is out here actually trying and she's not doing a damn thing to help the situation."
 
     scene v13s38_3a # FPP. same as 3, Imre with a neutral expression, mouth closed
     with dissolve
@@ -85,7 +86,7 @@ label v13_walk_imre:
     scene v13s38_3a
     with dissolve
 
-    u "And that reason is…?"
+    u "And that reason is...?"
 
     scene v13s38_3c # FPP. Same as 4, imre sighing, mouth opened
     with dissolve
@@ -102,7 +103,7 @@ label v13_walk_imre:
 
     imre "Well, my brother had the hots for Nora and because she was with Chris, she turned him away."
 
-    imre "I respected it a lot , and when I joined the Wolves I expected to see a strong bond between the two of them."
+    imre "I respected it a lot, and when I joined the Wolves I expected to see a strong bond between the two of them."
 
     scene v13s38_3a
     with dissolve
@@ -134,7 +135,7 @@ label v13_walk_imre:
     scene v13s38_4c # FPP. same as 4b, mouth closed
     with dissolve
 
-    u "You're kind of dick riding Chris a little bit,  don't you think so?"
+    u "You're kind of dick riding Chris a little bit, don't you think so?"
 
     scene v13s38_4b
     with dissolve
@@ -154,7 +155,8 @@ label v13_walk_imre:
     scene v13s38_6 # TPP. Imre and MC entering the hotel lobby
     with dissolve
 
+    pause 0.75
+
+    stop music fadeout 3
+
     jump v13_hotel_imre
-
-
-

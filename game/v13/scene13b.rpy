@@ -4,13 +4,15 @@
 # Time: Wednesday night
 
 label v13s13b:
-    if (joinwolves and len(v12s7_killList) == 15) or len(v12s7_killList) == 16: # DON'T KNOW NUMBER FOR ALL KILLS; CHANGE TO CORRECT NUMBER
+    if v12_murder_count == v12s7_victims: # DON'T KNOW NUMBER FOR ALL KILLS; CHANGE TO CORRECT NUMBER
         $ v13_after_party = True
 
     scene v13s13b_1 # TPP Show MC and Penelope sitting backstage, Polly walking into the room, not looking at MC or Penelope
     with fade
 
     pause 0.75
+
+    play music "music/v13/Track Scene 13a_1.mp3" fadein 2
 
     scene v13s13b_2 # FPP Show Polly sitting down near MC and Penelope but not looking their way, Polly looking tired with mouth open
     with dissolve
@@ -51,7 +53,7 @@ label v13s13b:
     with dissolve
 
     pe "This is just a little bit... out of my element."
-    pe "Like, please don't get me wrong, I love you. I'm just really nervous… *Chuckles*"
+    pe "Like, please don't get me wrong, I love you. I'm just really nervous... *Chuckles*"
 
     scene v13s13b_2b
     with dissolve
@@ -61,7 +63,7 @@ label v13s13b:
     scene v13s13b_2c # FPP Same as 2, Polly looking at MC and Penelope, smiling with mouth closed
     with dissolve
 
-    u "Seems so. We've been back here for a minute and I haven’t seen a soul."
+    u "Seems so. We've been back here for a minute and I haven't seen a soul."
 
     scene v13s13b_2b
     with dissolve
@@ -131,7 +133,7 @@ label v13s13b:
     scene v13s13b_3a
     with dissolve
 
-    pe "*Whisper* Okay, uhm...*Singing* Love comes unexpected-"
+    pe "*Whisper* Okay, uhm... *Singing* Love comes unexpected-"
 
     scene v13s13b_2d
     with dissolve
@@ -204,6 +206,7 @@ label v13s13b:
     polly "That's what I'm always going for. *Laughs*"
 
     scene v13s13b_2h # FPP Same angle as 2, Polly mouth open, making a smiling shrug expression like: https://images.app.goo.gl/RRHGHozyq7H7JhgX7
+    with dissolve
 
     polly "I take a random picture of something that inspires me and boom, that becomes my cover."
 
@@ -228,6 +231,7 @@ label v13s13b:
     pe "Oh umm..."
 
     scene v13s13b_3f # FPP Same angle as 3, Penelope looking at MC, curious and embarrassed, mouth closed
+    with dissolve
 
     u "I don't see why not."
 
@@ -261,6 +265,7 @@ label v13s13b:
 
             scene v13s13b_5a # TPP Same angle as 5, Penelope kissing MC on the cheek
             with dissolve
+            play sound "sounds/kiss.mp3"
 
             polly "Too cute!"
 
@@ -270,10 +275,10 @@ label v13s13b:
 
     polly "Smile big!"
 
-    scene v13s13b_5
-    with dissolve
-
     play sound "sounds/capture.mp3"
+    scene v13s13b_5
+    with flash
+
     pause
 
     scene v13s13b_2l # FPP Same angle as 2, Polly looking at her phone, smiling with mouth open
@@ -339,7 +344,7 @@ label v13s13b:
     scene v13s13b_2b
     with dissolve
 
-    polly "So… Are you guys into nightclubs?"
+    polly "So... Are you guys into nightclubs?"
 
     scene v13s13b_2c
     with dissolve
@@ -347,7 +352,7 @@ label v13s13b:
     menu:
         "Not exactly":
     
-            u "Not exactly… Usually spend time at bars, haha"
+            u "Not exactly... Usually spend time at bars, haha."
 
             scene v13s13b_2b
             with dissolve
@@ -423,6 +428,8 @@ label v13s13b:
 
         pause 0.5
 
+        stop music fadeout 3
+
         jump v13s14b
 
     else: # -If don't have after party access or not invited
@@ -461,6 +468,9 @@ label v13s13b:
 
         pause 0.5
 
+        stop music fadeout 3
+        play music "music/v13/Track Scene 12a_2.mp3" fadein 2
+
         scene v13s13b_15 # TPP Show MC and Penelope getting into a cab
         with dissolve
 
@@ -474,7 +484,10 @@ label v13s13b:
         scene v13s13b_17 # FPP Show Penelope, in hotel lobby, smiling with mouth open
         with dissolve
 
-        pe "Jeez... I didn't know Polly and I had so much in common… *Chuckles*"
+        stop music fadeout 3
+        play music "music/v13/Track Scene 12a_1.mp3" fadein 2
+
+        pe "Jeez... I didn't know Polly and I had so much in common... *Chuckles*"
 
         scene v13s13b_17a # FPP Same as 19, Penelope's mouth closed
         with dissolve
@@ -505,6 +518,8 @@ label v13s13b:
         with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
 
         if v11_riley_roomate:
             jump v13s15a

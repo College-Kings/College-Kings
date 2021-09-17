@@ -4,6 +4,9 @@
 # Time: Morning
 
 label v13s33:
+
+    play music "music/v13/Track Scene 33.mp3" fadein 2
+
     if not v11_riley_roomate:
         scene black
         with vpunch
@@ -111,5 +114,7 @@ label v13s33:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s34

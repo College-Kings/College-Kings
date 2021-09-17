@@ -7,10 +7,13 @@ init python:
             self.inventory = Inventory()
 
         def add_item(self, item):
-            if item.cost > money:
+            if item.cost > self.money:
                 raise UnhandledTranscribingError("{} price is higher then user money".format(item.name))
 
             self.inventory.items.append(item)
+
+        def has_item(self, item):
+            return (item in self.inventory.items)
 
 
     class CustomCharacter:
@@ -24,11 +27,11 @@ init python:
 
         def __init__(self, name, profile_picture):
             self.name = name
-            self.profile_picture = "images/phone/profilePictures/{}".format(profile_picture)
+            self.profile_picture = "images/phone/messages/profile_pictures/{}".format(profile_picture)
 
             self.name = name.replace(" ", "_")
             
-            self.messenger = Contact(name, profile_picture)
+            # self.messenger = Contact(name, profile_picture)
 
             self.stats = {
                 "Competitive": None,
@@ -105,6 +108,7 @@ default contact_Sebastian = Contact("Sebastian", "sebastianprofilepicture.webp")
 default contact_Grayson = Contact("Grayson", "graysonprofilepicture.webp")
 default contact_Lindsey = Contact("Lindsey", "lindseyprofilepic.webp")
 default contact_Jenny = Contact("Jenny", "jennyprofilepicture.webp")
+default contact_Nora = Contact("Nora", "noraprofilepicture.webp")
 
 default simplr_Beth = SimplrContact("Beth", "bethProfilePicture.webp", "bethProfilePictureLarge.webp")
 default simplr_Iris = SimplrContact("Iris", "irisProfilePicture.webp", "irisProfilePictureLarge.webp")

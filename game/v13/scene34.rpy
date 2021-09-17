@@ -9,6 +9,8 @@ label v13s34:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 34_1.mp3" fadein 2
+
     scene v13s34_2 # FPP. Show clipps looking at MC, slight smile, mouth open
     with dissolve
 
@@ -59,7 +61,7 @@ label v13s34:
     scene v13s34_3a # FPP. Same as v13s34_3, nervous expression, mouth open
     with dissolve
 
-    ri "Well I’m sure as hell frightened now.  What's with all the scary stuff lately?"
+    ri "Well I'm sure as hell frightened now. What's with all the scary stuff lately?"
 
     scene v13s34_4
     with dissolve
@@ -151,6 +153,9 @@ label v13s34:
 
     pause 0.75 
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 34_2.mp3" fadein 2
+
     scene v13s34_9 # TPP. Show the gate door slamming closed, Riley, angry expression, mouth closed
     with dissolve
 
@@ -229,12 +234,12 @@ label v13s34:
     scene v13s34_13a
     with dissolve
 
-    clipps "Of course. I'm here all day, everyday."
+    clipps "Of course. I'm here all day, every day."
 
     scene v13s34_13b
     with dissolve
 
-    u "Right, so...Why is it so dark?  Are there no extra lights?"
+    u "Right, so... Why is it so dark? Are there no extra lights?"
 
     scene v13s34_13a
     with dissolve
@@ -252,7 +257,7 @@ label v13s34:
     pause 0.75
 
     scene v13s34_16 # FPP. Clipps turns around and looks at MC, nervous expression, mouth closed 
-    with dissolve 
+    with dissolve
 
     u "Maybe... If you're trapped in here, you'll be motivated!"
 
@@ -304,10 +309,10 @@ label v13s34:
 
     ri "AHHHH!"
 
-    scene v13s34_20 # FPP. MC looks over to Riley's cell and knowtices she is gone
+    scene v13s34_20 # FPP. MC looks over to Riley's cell and notices she is gone
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v13s34_19
     with dissolve
@@ -362,13 +367,13 @@ label v13s34:
 
     unknown "STOP TALKING. YOU DON'T SPEAK UNLESS SPOKEN TO!"
 
-    u "You just wait till our teacher finds us, he isn't named Bruce Lee for nothing. I can’t wait to watch while he fucks you guys up."
+    u "You just wait till our teacher finds us, he isn't named Bruce Lee for nothing. I can't wait to watch while he fucks you guys up."
 
     clipps "Ahh, your teacher! The one you spoke of before, yes?"
 
     clipps "You can thank him for leading you right to us, actually. We got a hold of the little treasure you were searching for and now, we have you cornered."
 
-    u "The treasure, it’s… It's not as secretive as one may think. *Chuckles*"
+    u "The treasure, it's... It's not as secretive as one may think. *Chuckles*"
 
     unknown "Today will be a day of confessions."
 
@@ -391,6 +396,7 @@ label v13s34:
     menu:
         "I'm a liar":
         
+            $ grant_achievement("an_honest_liar")
             u "Yeah, I'm a liar. But who isn't?"
 
             clipps "Good people."
@@ -413,12 +419,15 @@ label v13s34:
 
     ri "*Crying* I j-just blame myself for... getting you wrapped up in a-all of this..."
 
-    ri "I always force you into this stupid stuff, [Name]. *Sobs* And look where it got us!"
+    ri "I always force you into this stupid stuff, [name]. *Sobs* And look where it got us!"
 
     scene v13s34_31 # FPP. Show bag being removed from MCs face, MC can see the lower extremites of Clipps, and Mr. Lee in the background
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 34_3.mp3" fadein 2
     
     scene v13s34_23 # FPP. Duncan, Clipps, Mr. Lee all standing infront of MC looking at him, all slight smile, mouth closed
     with dissolve
@@ -438,7 +447,7 @@ label v13s34:
     scene v13s34_24 # FPP. MC looks over at Riley, Riley, bag over her head, bag moving in mouth area mouth area
     with dissolve
 
-    u "Umm, Riley... Don't worry. I promise you,  everything is gonna be fine."
+    u "Umm, Riley... Don't worry. I promise you, everything is gonna be fine."
 
     scene v13s34_25 # FPP. MC looking at Duncan, Duncan looking at Riley, slight smile, mouth open
     with dissolve
@@ -471,6 +480,11 @@ label v13s34:
             scene v13s34_28 # FPP. MC takes the bag off Rileys head
             with dissolve
 
+            pause 0.75
+
+            stop music fadeout 3
+            play music "music/v13/Track Scene 34_4.mp3" fadein 2
+
             scene v13s34_29 # FPP. Riley looking at MC, mascara dripping down her face, crying expression, mouth open
             with dissolve
 
@@ -479,7 +493,7 @@ label v13s34:
             scene v13s34_29a # FPP. Same as v13s34_29, Mouth closed
             with dissolve
 
-            u "I'm not sure…"
+            u "I'm not sure..."
             
             u "They just took the bag off my head and... Here we are."
 
@@ -501,7 +515,7 @@ label v13s34:
             scene v13s34_29e # FPP. Same as v13s34_29c, tears have been wiped off face
             with dissolve
 
-            ri "Since they want us to be honest…"
+            ri "Since they want us to be honest..."
 
             scene v13s34_29e
             with dissolve
@@ -523,7 +537,7 @@ label v13s34:
 
             u "*Sighs*"
 
-        "let them scare her":
+        "Let them scare her":
             $ addPoint("tm")
             scene v13s34_24
             with dissolve
@@ -563,7 +577,7 @@ label v13s34:
             scene v13s34_24
             with dissolve
 
-            ri "I cheat sometimes, okay?! But nothing big! Maybe just looking up something that I’ve forgotten."
+            ri "I cheat sometimes, okay?! But nothing big! Maybe just looking up something that I've forgotten."
 
             scene v13s34_30
             with dissolve
@@ -583,12 +597,12 @@ label v13s34:
             scene v13s34_24
             with dissolve
 
-            ri "During two tests, but... They were really hard! You don’t unders-"
+            ri "During two tests, but... They were really hard! You don't unders-"
 
             scene v13s34_25a # FPP. Same as v13s34_25, serious expression
             with dissolve
 
-            dun "Don't you think it’s absurd to call yourself the “brightest of your class” when without cheating, you wouldn't be where you are today?"
+            dun "Don't you think it's absurd to call yourself the \"brightest of your class\" when without cheating, you wouldn't be where you are today?"
 
             scene v13s34_24a 
             with dissolve
@@ -613,7 +627,7 @@ label v13s34:
             scene v13s34_24
             with dissolve
 
-            ri "Wait, are you... You’re in my class?"
+            ri "Wait, are you... You're in my class?"
 
             scene v13s34_30a
             with dissolve
@@ -623,12 +637,12 @@ label v13s34:
             scene v13s34_30
             with dissolve
 
-            clipps "Let's see what Mr. Lee  thinks about all of this... I know you babysit his kids, and run errands for him from time to time, right?"
+            clipps "Let's see what Mr. Lee thinks about all of this... I know you babysit his kids, and run errands for him from time to time, right?"
 
             scene v13s34_24
             with dissolve
 
-            ri "How… How do you know all of this?"
+            ri "How... How do you know all of this?"
 
             scene v13s34_23b # FPP. Same as v13s34_23, all laughing expressions
             with dissolve
@@ -655,6 +669,9 @@ label v13s34:
 
             pause 0.75
 
+            stop music fadeout 3
+            play music "music/v13/Track Scene 34_4.mp3" fadein 2
+
             scene v13s34_33 # FPP. Riley looking at Mr. Lee, surprised expression, mouth open
             with dissolve
             
@@ -678,7 +695,7 @@ label v13s34:
     scene v13s34_35a # FPP. Same as v13s34_35, Riley looks down, slighty sad expression, mouth open
     with dissolve
 
-    ri "I’m so sorry… I- How did you know?"
+    ri "I'm so sorry... I- How did you know?"
 
     scene v13s34_36a # FPP. Same as v13s34_36, slight laughing expression
     with dissolve
@@ -778,7 +795,7 @@ label v13s34:
     scene v13s34_35c # FPP. Same as v13s34_35b, serious expression
     with dissolve
 
-    ri "Wow, okay…. I'm so ready to go. I need to process all this, I… I just thought I was going to die five minutes ago."
+    ri "Wow, okay... I'm so ready to go. I need to process all this, I... I just thought I was going to die five minutes ago."
 
     scene v13s34_35d # FPP. Same as v13s34_35c, different posture
     with dissolve
@@ -828,7 +845,7 @@ label v13s34:
     scene v13s34_41a # TPP. Same as v13s34_41, mouth closed
     with dissolve
 
-    u "Yeah… Nope."
+    u "Yeah... Nope."
 
     scene v13s34_41b # TPP. Same as v13s34_41, slight annoyed expression
     with dissolve
@@ -884,5 +901,7 @@ label v13s34:
     with fade
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s35

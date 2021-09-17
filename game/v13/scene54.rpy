@@ -9,6 +9,8 @@ label v13s54:
 
     u "(What will be in store for me tomorrow?)"
 
+    play music "music/v13/Track Scene 52.mp3" fadein 2
+
     scene v13s54_2 # TPP. MC walking into his room, neutral expression, mouth closed
     with dissolve
 
@@ -38,5 +40,7 @@ label v13s54:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s54a

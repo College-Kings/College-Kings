@@ -8,6 +8,8 @@ label v13_start:
     scene v13s1_1 # FPP. MC and Riley sitting in front of each other at the cafe table, Riley slightly angry, mouth open
     with dissolve
 
+    play music "music/v13/Track Scene 1_1.mp3" fadein 2
+
     ri "Since he decided to take something special from me and ruin it... Let's ruin something special of his. He thinks it's entertaining to not only frame someone, but also embarrass a so-called friend in the process."
 
     scene v13s1_1a # FPP. Same as v13s1_1, Riley slight grin, mouth open
@@ -145,6 +147,9 @@ label v13_start:
 
     ro "ALRIGHT STUDENTS! LET'S GET OUR THINGS AND GET ON THE BUS!"
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 1_2.mp3" fadein 2
+
     scene v13s1_1b
     with dissolve
 
@@ -193,7 +198,7 @@ label v13_start:
             $ addPoint("bf")
             $ riley.points += 1
 
-            u "It's fine Riley, really. Of course I was pissed at first, it's a little upsetting to have one of your best friends calling you a liar but… I can't stay mad at you forever. Apology accepted."
+            u "It's fine Riley, really. Of course I was pissed at first, it's a little upsetting to have one of your best friends calling you a liar but... I can't stay mad at you forever. Apology accepted."
 
             scene v13s1_3c
             with dissolve
@@ -228,7 +233,7 @@ label v13_start:
     scene v13s1_3e # FPP. MC watching Riley walking towards the door, slight smile, mouth closed (if she has her back to MC then ignore the facial expression)
     with dissolve
 
-    u "(Unlimited access to Charli's room… This is gonna be interesting. *Laughs*)"
+    u "(Unlimited access to Charli's room... This is gonna be interesting. *Laughs*)"
 
     scene v13s1_5 # TPP. Show MC walking out of the cafe, slight smile, mouth closed
     with dissolve
@@ -239,5 +244,7 @@ label v13_start:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s2

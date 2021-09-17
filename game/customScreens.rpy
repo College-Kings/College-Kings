@@ -307,23 +307,29 @@ screen teamCredits():
         vbox:
             spacing 10
 
-            text "UndergradSteve - Game Designer"
+            text "UndergradSteve - Game Creator"
             text "KingLui - Project Manager"
-            text "OscarSix - Lead Programmer"
+            text "OscarSix - Chief Technical Officer"
             null height 20
             text "Oskin - Lead Enforcer"
             text "Lucious Lordswill - Lead Writer"
-            text "Cheexmarie - Head Editor"
+            text "Cheexmarie - Lead Editor"
             text "Peace - Head Transcriber"
             text "Condy - Quality Assurance Manager"
             text "Jany - Translation Manager"
+            text "Mozzart - Lead Artist & Coordinator"
             null height 20
             text "Maro - Marketing Specialist"
 
         vbox:
             spacing 10
-            text "Wolf - Transcriber"
+
+            text "HugeBoiV2 - Transcriber"
             text "Jeffly - Transcriber"
+            text "MegaManX - Transcriber"
+            text "mstep17 - Transcriber"
+            text "SystemFailed - Transcriber"
+            text "Wolf - Transcriber"
             text "Dorkby - Animator"
             text "Wiebley - Renderer"
             text "Ranger - 3d Modeler"
@@ -333,6 +339,7 @@ screen teamCredits():
             text "Sznuk - Renderer"
             text "Raystorm41 - Render"
             text "Stefan - Photoshopper"
+            text "Space-Storm - Tech Assistant"
 
     text "Special thanks to all the community members and players who have made this project possible :)":
         align (0.5, 0.9)

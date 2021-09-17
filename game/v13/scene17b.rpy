@@ -3,12 +3,13 @@
 # Characters: MC (Outfit: 9), LAUREN (Outfit: 4)
 # Time: Morning
 
-
 label v13s17b:
     scene v13s17b_1 # TPP. Show MC and Lauren sleeping in her bed, it's morning, MC in his boxers, Lauren has her head on his chest
     with Fade(1,1,1)
 
     pause 0.75
+
+    play music "music/v13/Track Scene 17.mp3" fadein 2
 
     scene v13s17b_1a # TPP. Same as v13s17b_1, MC wakes up, Lauren still sleeping, MC looking at Lauren, MC slight smile, mouth closed
     with dissolve
@@ -18,7 +19,7 @@ label v13s17b:
     scene v13s17b_1b # TPP. Same as v13s17b_1a, MC looking down at his stomach, slightly worried, mouth closed
     with dissolve
 
-    "*Stomach growls*"
+    u "*Stomach growls*"
 
     u "(Fuck, I'm starving. Luuk better have some food today...)"
 
@@ -61,5 +62,7 @@ label v13s17b:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s18

@@ -87,7 +87,7 @@ label v12s27:
 
     imre "Oh fuck yeah! Let's go!"
 
-    scene v12s27_3 #TPP Imre and Mc walk to the tattoo parlor, mc talking to imre, both smiling , mc mouth open
+    scene v12s27_3 #TPP Imre and Mc walk to the tattoo parlor, mc talking to imre, both smiling, mc mouth open
     with fade
 
     u "You know where the place is?"
@@ -308,7 +308,7 @@ label v12s27:
 
     tattoo "Sounds good, go ahead and lie down."
 
-    scene v12s27_8 # FPP Imre on the tattoo chair , stiff face, in pain, tattoo artist starting tattoo on his chest. - tattoo is gonna be a cupcake with the words "ladies man" under it-
+    scene v12s27_8 # FPP Imre on the tattoo chair, stiff face, in pain, tattoo artist starting tattoo on his chest. - tattoo is gonna be a cupcake with the words "ladies man" under it-
     with fade
 
     pause 0.7
@@ -454,7 +454,7 @@ label v12s27:
 
             u "Yeah. Plus, it comes with an awesome story. *Chuckles*"
 
-            scene v12s27_16d # same as 16b , imre slight smile mouth open
+            scene v12s27_16d # same as 16b, imre slight smile mouth open
             with dissolve
 
             imre "Well, fuck!"

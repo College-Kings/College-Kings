@@ -9,6 +9,8 @@ label v13s39a:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 39a.mp3" fadein 2
+
     scene v13s39a_2 # TPP. show mc racking the balls on the pool table
     with dissolve
 
@@ -75,19 +77,19 @@ label v13s39a:
 
         u "That would be the most awkward date, Ryan."
 
-        if laurenrs:
-
-            scene v13s39a_5 # FPP. a dreamlike image of lauren is shown on the screen
-            with dissolve
-
-            u "I definitely wouldn't want to bring my girl."
-
-        elif chloegf:  
+        if chloegf:  
 
             scene v13s39a_5a # FPP. same as v13s39a_5 a dreamlike image of chloe is shown on the screen
             with dissolve
 
             u "I definitely wouldn't want to bring my girl."   
+
+        elif laurenrs and not v11_aubrey_sex:
+
+            scene v13s39a_5 # FPP. a dreamlike image of lauren is shown on the screen
+            with dissolve
+
+            u "I definitely wouldn't want to bring my girl."
             
         scene v13s39a_4
         with dissolve
@@ -192,6 +194,11 @@ label v13s39a:
 
                 u "Right pocket!"
 
+                scene v13s39a_8c
+                with dissolve
+                
+                pause 1
+
                 scene v13s39a_4d # FPP. same as v13s39a_4a ryan slight angry
                 with dissolve
 
@@ -220,7 +227,7 @@ label v13s39a:
                 scene v13s39a_4
                 with dissolve
 
-                ry "Sureee...*Chuckles*"
+                ry "Sureee... *Chuckles*"
 
                 scene v13s39a_4
                 with dissolve
@@ -343,13 +350,12 @@ label v13s39a:
 
         u "Wow..."
 
+        stop music fadeout 3
+
         if chloegf:
-
-            jump to v13s40
-
+            jump v13s40
         else: 
-
-            jump to v13s41
+            jump v13s41
 
     else:
         scene v13s39a_4c
@@ -430,12 +436,12 @@ label v13s39a:
 
                 u "*Chuckles*"
 
-        scene v13s39a_4i
+        scene v13s39a_4e
         with dissolve
 
         ry "Man... It looks like Nora and Chris are gonna be back on the market here soon."
 
-        scene v13s39a_4h
+        scene v13s39a_4f
         with dissolve
 
         u "Maybe, maybe not. Why do you bring it up? Trying to take Chris to dinner? *Chuckles*"
@@ -531,7 +537,7 @@ label v13s39a:
 
                 u "Damn!"
 
-                scene v13s39a_11
+                scene v13s39a_10
                 with dissolve
 
                 ry "Too bad! Right pocket. *Chuckles*"
@@ -581,7 +587,7 @@ label v13s39a:
                 scene v13s39a_4
                 with dissolve
 
-                ry "Sureee...*Chuckles*"
+                ry "Sureee... *Chuckles*"
 
         scene v13s39a_4m # FPP. same as v13s39a_4c ryan pulls out his phone and looks at it with a smile
         with dissolve
@@ -598,10 +604,10 @@ label v13s39a:
 
         u "Wow..."
 
-        if chloegf:
+        stop music fadeout 3
 
-            jump to v13s40
+        if chloegf:
+            jump v13s40
 
         else: 
-
-            jump to v13s41
+            jump v13s41

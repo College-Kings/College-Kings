@@ -3,13 +3,13 @@
 # Characters: LINDSEY (Outfit: 1), CHRIS (Outfit: 1), MC (Outfit: 5), NORA (Outfit: 1), IMRE (Outfit: 2)
 # Time: Evening
 
-default v13_imre_disloyal = False
-
 label v13s37:
     scene v13s37_1 # TPP. Show MC, Chris, Nora, Lindsey and Imre standing in the garden, all slight smiles, mouths closed, standing in a circle as if they were chatting
     with dissolve
 
     pause 0.75
+
+    play music "music/v13/Track Scene 37_1.mp3" fadein 2
 
     scene v13s37_2 # FPP. Same positioning as v13s37_1, MC looking at Lindsey, Lindsey looking at Chris' direction (Only Lindsey in shot), Lindsey slight smile, mouth open
     with dissolve
@@ -34,7 +34,7 @@ label v13s37:
     scene v13s37_2a # FPP. Same as v13s37_2, Lindsey mouth closed
     with dissolve
 
-    u "(You can say that a million times again…)"
+    u "(You can say that a million times again...)"
 
     scene v13s37_3a # FPP. Same as v13s37_3, Chris looking at Nora, Chris slight smile, mouth open
     with dissolve
@@ -54,7 +54,7 @@ label v13s37:
     scene v13s37_2b # FPP. Same a sv13s37_2, Lindsey looking at Imre
     with dissolve
 
-    li "Oooh, okay! I may have to hangout at your house… *Laughs*"
+    li "Oooh, okay! I may have to hang out at your house... *Laughs*"
 
     scene v13s37_5
     with dissolve
@@ -67,8 +67,7 @@ label v13s37:
     li "*Chuckles* Not like that, fuckboy."
 
     if v12_lindsey_sex or lindseyrs:
-
-        li "And don’t call me Linds… Only the girls and [name] get to call me that. *Laughs*"
+        li "And don't call me Linds... Only the girls and [name] get to call me that. *Laughs*"
 
     scene v13s37_5
     with dissolve
@@ -83,7 +82,7 @@ label v13s37:
     scene v13s37_5b # FPP. Same as v13s37_5b, Imre mouth closed
     with dissolve
 
-    u "Ha… Like a little fight club?"
+    u "Ha... Like a little fight club?"
 
     scene v13s37_5a
     with dissolve
@@ -110,13 +109,18 @@ label v13s37:
 
     ch "Let's go enjoy ourselves, people."
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 37_2.mp3" fadein 2
+
     $ freeRoam = True
 
     call screen v13s37_garden1
 
 label v13s37_nora:
+    $ v13s37_frnora = True
+
     scene v13s37no_1 # TPP. Show MC approaching Nora, she's sitting and hiding behind a big rock, hiding, both mouths closed, MC slight smile, Nora slightly sad
-    with dissolve
+    #with dissolve
 
     pause 0.75
 
@@ -155,12 +159,12 @@ label v13s37_nora:
     scene v13s37no_2c
     with dissolve
 
-    no "Right after he was a dick to me for weeks and shoved me to the fucking ground... Like, am I supposed to be happy?  Pissed off? Sad? Or grateful..."
+    no "Right after he was a dick to me for weeks and shoved me to the fucking ground... Like, am I supposed to be happy? Pissed off? Sad? Or grateful..."
 
     scene v13s37no_2b
     with dissolve
 
-    u "I saw you avoiding him and it looks as though every smile you give is forced so hard that you’re going to throw up. *Chuckles*."
+    u "I saw you avoiding him and it looks as though every smile you give is forced so hard that you're going to throw up. *Chuckles*."
 
     scene v13s37no_2c
     with dissolve
@@ -212,7 +216,7 @@ label v13s37_nora:
     scene v13s37no_2c
     with dissolve
 
-    no "Not yet... You may someday, but I'm talking about my family. Specifically my Step-mom."
+    no "Not yet... You may someday, but I'm talking about my family. Specifically my stepmom."
 
     if joinwolves:
         scene v13s37no_2d
@@ -228,9 +232,9 @@ label v13s37_nora:
     scene v13s37no_2c
     with dissolve
 
-    no "*Sighs* Please try not to overreact when I tell you this... And I beg you, don't go around telling everybody, but…"
+    no "*Sighs* Please try not to overreact when I tell you this... And I beg you, don't go around telling everybody, but..."
 
-    no "Ms. Rose is actually my Step-mom."
+    no "Ms. Rose is actually my stepmom."
 
     scene v13s37no_2d
     with dissolve
@@ -240,7 +244,7 @@ label v13s37_nora:
     scene v13s37no_2c
     with dissolve
 
-    no "I'm really not. I’ll go into more detail another time, but that's why Chris and the rest of the Wolves are so close with her."
+    no "I'm really not. I'll go into more detail another time, but that's why Chris and the rest of the Wolves are so close with her."
 
     scene v13s37no_2f # FPP. Same as v13s37no_2c, different pose
     with dissolve
@@ -327,7 +331,7 @@ label v13s37_nora:
         scene v13s37no_4a
         with dissolve
 
-        u "So during this period of time where you’re thinking your life out, remember me, okay?"
+        u "So during this period of time where you're thinking your life out, remember me, okay?"
 
         scene v13s37no_4b
         with dissolve
@@ -354,6 +358,7 @@ label v13s37_nora:
 
         menu:
             "Kiss her forehead":
+                play sound "sounds/kiss.mp3"
                 scene v13s37no_7 # TPP. Show MC kissing Nora's forehead, Nora slight smile, mouth closed
                 with dissolve
 
@@ -372,6 +377,7 @@ label v13s37_nora:
             "Kiss her lips":
                 $ v13_imre_disloyal = True
 
+                play sound "sounds/kiss.mp3"
                 scene v13s37no_8 # TPP. MC and Nora kissing
                 with dissolve
 
@@ -435,7 +441,7 @@ label v13s37_nora:
                 scene v13s37no_12a
                 with dissolve
 
-                imre "Don't “bro” me right now!"
+                imre "Don't \"bro\" me right now!"
 
                 scene v13s37no_12c # FPP. Same as v13s37no_12a, Imre pointing at MC
                 with dissolve
@@ -445,7 +451,7 @@ label v13s37_nora:
                 scene v13s37no_4f # FPP. Same as v13s37no_4e, Nora slightly annoyed, mouth open
                 with dissolve
 
-                no "Imre... Do not act like my relationship with Chris has been perfect, and for fuck’s sake, don't act like the problems we've had are my fault."
+                no "Imre... Do not act like my relationship with Chris has been perfect, and for fuck's sake, don't act like the problems we've had are my fault."
 
                 scene v13s37no_4g # FPP. Same as v13s37no_4f, Nora pointing at Imre
                 with dissolve
@@ -480,12 +486,12 @@ label v13s37_nora:
                 scene v13s37no_12b
                 with dissolve
 
-                imre "I’m doing it for Chris. And I already was, but I'll be even more determined to convince him to leave your cheating ass."
+                imre "I'm doing it for Chris. And I already was, but I'll be even more determined to convince him to leave your cheating ass."
 
                 scene v13s37no_12c
                 with dissolve
 
-                imre "And normally [name], I’d be giving you props, but you messed with the homie’s girl, and you know that crosses a line."
+                imre "And normally [name], I'd be giving you props, but you messed with the homie's girl, and you know that crosses a line."
 
                 scene v13s37no_12a
                 with dissolve
@@ -505,7 +511,7 @@ label v13s37_nora:
                 scene v13s37no_4b
                 with dissolve
 
-                no "Don't worry about him… He won't say anything and he'll only be mad at you for a few days."
+                no "Don't worry about him... He won't say anything and he'll only be mad at you for a few days."
 
                 scene v13s37no_4c
                 with dissolve
@@ -557,12 +563,14 @@ label v13s37_nora:
 
                 pause 0.75
 
-    call screen v13s37_garden2
+    call screen v13s37_garden1
 
 label v13s37_chris:
+    $ v13s37_frchris = True
+
     if chrismad:
         scene v13s37ch_1 # TPP. Show MC walking over to Chris, Chris slightly angry, mouth closed, MC slight smile, mouth closed
-        with dissolve
+        #with dissolve
 
         pause 0.75
 
@@ -574,7 +582,7 @@ label v13s37_chris:
         scene v13s37ch_2a # FPP. Same as v13s37ch_2, Chris mouth open
         with dissolve
 
-        ch "Hmph.. Here to tell me how shitty of a boyfriend I am, and what I need to be doing in my relationship?"
+        ch "Hmph... Here to tell me how shitty of a boyfriend I am, and what I need to be doing in my relationship?"
 
         scene v13s37ch_2
         with dissolve
@@ -604,7 +612,7 @@ label v13s37_chris:
     else:
         if not v12_nora_sex:
             scene v13s37ch_1a # TPP. Same as v13s37ch_1, Chris slightly sad, MC slight smile
-            with dissolve
+            #with dissolve
 
             pause 0.75
 
@@ -666,7 +674,7 @@ label v13s37_chris:
             scene v13s37ch_2b
             with dissolve
 
-            u "Well yeah, you’re right. *Chuckles*"
+            u "Well yeah, you're right. *Chuckles*"
 
             scene v13s37ch_2c
             with dissolve
@@ -685,11 +693,12 @@ label v13s37_chris:
 
         else:
             scene v13s37ch_1a 
-            with dissolve
+            #with dissolve
 
             pause 0.75
 
             scene v13s37ch_2b
+            with dissolve
 
             u "Chilling by yourself, huh?"
 
@@ -716,7 +725,8 @@ label v13s37_chris:
             scene v13s37ch_2c
             with dissolve
 
-            ch "I have no clue, but I'm not too optimistic. I'm just trying to ride this out with a smile on my face. And what's crazy is that outside of pushing her I still don't feel like I did a damn thing wrong. But don't let her hear me say that."
+            ch "I have no clue, but I'm not too optimistic. I'm just trying to ride this out with a smile on my face."
+            ch "And what's crazy is that outside of pushing her I still don't feel like I did a damn thing wrong. But don't let her hear me say that."
 
             scene v13s37ch_2e # FPP. Same as v13s27ch_2b, different pose
             with dissolve
@@ -746,7 +756,7 @@ label v13s37_chris:
             scene v13s37ch_2f
             with dissolve
 
-            ch "I will say this…"
+            ch "I will say this..."
 
             scene v13s37ch_2d
             with dissolve
@@ -756,7 +766,7 @@ label v13s37_chris:
             scene v13s37ch_2c
             with dissolve
 
-            ch "I don’t know, I just… With the way she's been acting, it seems like she's feeling guilty about something."
+            ch "I don't know, I just... With the way she's been acting, it seems like she's feeling guilty about something."
 
             scene v13s37ch_2b
             with dissolve
@@ -771,7 +781,7 @@ label v13s37_chris:
             scene v13s37ch_2b
             with dissolve
 
-            u "Wait… What? What makes you think that?"
+            u "Wait... What? What makes you think that?"
 
             scene v13s37ch_2c
             with dissolve
@@ -791,12 +801,12 @@ label v13s37_chris:
             scene v13s37ch_2d
             with dissolve
 
-            ch "It was very recent, I can tell.  I have no idea who with, but there's not many guys on this trip. Let alone, many she'd be willing to mess with."
+            ch "It was very recent, I can tell. I have no idea who with, but there's not many guys on this trip. Let alone, many she'd be willing to mess with."
 
             scene v13s37ch_2f
             with dissolve
 
-            ch "‘Cause honestly, the only guys she can even tolerate are you and Charli, so it must've been some random dude that she met."
+            ch "'Cause honestly, the only guys she can even tolerate are you and Charli, so it must've been some random dude that she met."
 
             scene v13s37ch_2d
             with dissolve
@@ -848,12 +858,13 @@ label v13s37_chris:
 
             pause 0.75
 
-
     call screen v13s37_garden1
 
 label v13s37_end:
+    $ freeRoam = False
+
     scene v13s37end_1 # TPP. Show MC walking over to Lindsey, both slight smiles, mouths closed
-    with dissolve
+    #with dissolve
 
     pause 0.75
 
@@ -963,4 +974,6 @@ label v13s37_end:
 
     pause 0.75
 
-    jump v13s38
+    stop music fadeout 3
+
+    jump v13_walk_imre

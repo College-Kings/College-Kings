@@ -9,6 +9,8 @@ label v13s31:
    
     am "Hello, our friend here is having a negative reaction to marijuana... It was her first time and I-"
 
+    play music "music/v13/Track Scene 31.mp3" fadein 2
+
     scene v13s31_2 # TPP. Show Amber looking at nurse, serious expression, mouth closed, MC looing at nurse, serious expression, mouth closed, nurse looking at amber, neutral look, mouth open
     with dissolve
 
@@ -49,7 +51,7 @@ label v13s31:
         scene v13s31_5b # FPP. Same as v13s31_5, slight smile, mouth closed 
         with dissolve
 
-        u "Oh god, Sam's here too. We should've kept an eye on her. What was I thinking...."
+        u "Oh god, Sam's here too. We should've kept an eye on her. What was I thinking..."
 
     scene v13s31_6 # FPP. MC looking at Amber, Amber neutral expression, mouth closed
     with dissolve
@@ -86,8 +88,8 @@ label v13s31:
 
     am "Let's keep this quiet. I don't want her feeling embarrassed."
 
-    scene v13s31_6 
-    with dissolve
+    #scene v13s31_6 
+    #with dissolve
 
     u "I agree."
 
@@ -96,10 +98,10 @@ label v13s31:
 
     u "(Damn, this is crazy.)"
 
-    if not v13_invite_samantha: #placeholder
+    if v11_invite_sam_europe and not v13_invite_samantha: #placeholder
         $ cameronBro = True
 
-        scene v13s21_100 # TPP. Show Cameron running towwards MC, angry, mouth closed
+        scene v13s31_100 # TPP. Show Cameron running towwards MC, angry, mouth closed
         with fade
 
         pause 0.75
@@ -114,7 +116,7 @@ label v13s31:
 
         ca "What the fuck is this shit I hear about you, and Samantha at a fucking weed tour?!"
 
-        scene v13s31_10a # FPP. Same positioning as v13s31_10 , Cameron Angry expression, mouth closed
+        scene v13s31_10a # FPP. Same positioning as v13s31_10, Cameron Angry expression, mouth closed
         with dissolve
 
         u "The weed tour I didn't let her go on?"
@@ -150,8 +152,9 @@ label v13s31:
         ca "*Whispers* Fuck."
 
         scene v13s31_10f # FPP. Same position as v13s31_10, different pose, Cameron serious expression
-        with dissolve 
+        with dissolve
 
+        $ grant_achievement("bro_moment")
         ca "I have a hard time trusting that people actually have pure intentions, man. It's obvious you do though..."
 
         scene v13s31_10d
@@ -184,7 +187,7 @@ label v13s31:
 
         u "I'll head back to the hotel, man. Give you some space. Just know, I'm always around for you, bro. Both of you."
 
-        scene v12s31_14 # TPP. Show MC and cameron hugging, MC slight smile, mouth closed, Cameron slight smile, mouth closed  
+        scene v13s31_14 # TPP. Show MC and cameron hugging, MC slight smile, mouth closed, Cameron slight smile, mouth closed  
         with fade
 
         pause 0.75
@@ -238,5 +241,7 @@ label v13s31:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s32

@@ -3,12 +3,13 @@
 # Characters: MC (Outfit: 5)
 # Time: night
 
-
 label v13s42:
     scene v13s42_1 # TPP. MC leaves the hotel lobby, smiling
     with dissolve
 
     pause 0.75
+
+    play music "music/v13/Track Scene 42.mp3" fadein 2
 
     scene v13s42_2 # TPP. MC walking in the hotel corridor heading to his room still smiling
     with dissolve
@@ -27,11 +28,16 @@ label v13s42:
 
     scene v13s42_5 # TPP. Images of MC sleeping
     with dissolve
+    
+    pause 0.75
 
     scene v13s42_6 # TPP. Images of MC sleeping
     with dissolve
 
+    pause 0.75
+
+    stop music fadeout 3
+
     jump v13s43
 
 # -Transition to Scene 43-
-

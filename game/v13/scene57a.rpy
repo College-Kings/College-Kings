@@ -3,12 +3,13 @@
 # Characters: MC (Outfit: 3), NORA (Outfit: 1), MR. LEE (Outfit: 1)
 # Time: Afternoon
 
-
 label v13s57a:
     scene v13s57a_1 # TPP. Show Nora and MC standing in the hotel lobby, Bonsai tree sitting on the ground by their feet, both slight smile, mouths closed.
     with dissolve
 
     pause 0.75
+
+    play music "music/v13/Track Scene 57.mp3" fadein 2
 
     scene v13s57a_2 # FPP. Nora looking at MC, MC looking at Nora, Nora slight smile, mouth closed.
     with dissolve
@@ -25,10 +26,12 @@ label v13s57a:
 
     pause 0.75
 
-    play sound "sound/ring.mp3"
-
+    play sound "sounds/ring.mp3"
     scene v13s57a_2c # FPP. Same as v13s57a_2b, Nora holding her phone to her ear, slight smile, mouth open.
     with dissolve
+
+    pause 1.25
+    stop sound
 
     no "Hello sir, would you mind coming to the lobby for a minute?"
 
@@ -50,7 +53,7 @@ label v13s57a:
     scene v13s57a_2c
     with dissolve
 
-    no "It won't be long I promise."
+    no "It won't be long, I promise."
 
     scene v13s57a_2d
     with dissolve
@@ -65,7 +68,9 @@ label v13s57a:
     scene v13s57a_2b
     with dissolve
 
-    play sound "sound/rejectcall.mp3"
+    play sound "sounds/rejectcall.mp3"
+
+    pause 0.75
 
     scene v13s57a_2
     with dissolve
@@ -100,7 +105,7 @@ label v13s57a:
     scene v13s57a_3 # TPP. Show MC and Nora in the hotel lobby, Different poses, both slight smile, mouth closed.
     with fade
 
-    pause 
+    pause 1
 
     scene v13s57a_4 # FPP. Show Mr.Lee walking up to MC and Nora, slight smile, mouth closed
     with dissolve
@@ -127,12 +132,12 @@ label v13s57a:
     scene v13s57a_5a # FPP. Same as v13s57a_5, Nora standing straight holding the Bonsai tree, slight smile, mouth closed.
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s57a_6 # FPP. Show Nora handing Mr.Lee the bonsai tree.
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s57a_4b # FPP. Same as v13s57a_4a, Mr. Lee looking at Nora(Off camera), Mr. Lee now holding the bonsai tree, slight smile, mouth open.
     with dissolve
@@ -164,7 +169,7 @@ label v13s57a:
     scene v13s57a_4c
     with dissolve
 
-    u "Guess you really can't have enough. That’s good. *Chuckles*"
+    u "Guess you really can't have enough. That's good. *Chuckles*"
 
     scene v13s57a_2a
     with dissolve
@@ -174,7 +179,7 @@ label v13s57a:
     scene v13s57a_4d
     with dissolve
 
-    lee "I can tell that’s an inside joke, but it's true. I can't get enough of these."
+    lee "I can tell that's an inside joke, but it's true. I can't get enough of these."
 
     scene v13s57a_2e
     with dissolve
@@ -189,22 +194,22 @@ label v13s57a:
     scene v13s57a_2e
     with dissolve
 
-    no "You too Mr. Lee."
+    no "You too, Mr. Lee."
 
     scene v13s57a_4e # FPP. Same as v13s57a_4, Show Mr.Lee walking off with the Bonsai plant.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v13s57a_2a
     with dissolve
 
-    no "That went well I think… *Laughs*"
+    no "That went well I think... *Laughs*"
 
     scene v13s57a_2
     with dissolve
 
-    u "It did, for sure. A few more gifts and we'll get A’s all semester. *Chuckles*"
+    u "It did, for sure. A few more gifts and we'll get A's all semester. *Chuckles*"
 
     scene v13s57a_2a
     with dissolve
@@ -229,7 +234,7 @@ label v13s57a:
     scene v13s57a_2a
     with dissolve
 
-    no "Oh, okay. Well… Have fun."
+    no "Oh, okay. Well... Have fun."
 
     scene v13s57a_2
     with dissolve
@@ -243,5 +248,9 @@ label v13s57a:
 
     scene v13s57a_7 # FPP. Show Nora walking away from MC, slight smile, mouth closed.
     with dissolve
+
+    pause 0.75
+
+    stop music fadeout 3
 
     jump v13s58
