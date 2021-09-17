@@ -88,8 +88,8 @@ label v13s31:
 
     am "Let's keep this quiet. I don't want her feeling embarrassed."
 
-    scene v13s31_6 
-    with dissolve
+    #scene v13s31_6 
+    #with dissolve
 
     u "I agree."
 

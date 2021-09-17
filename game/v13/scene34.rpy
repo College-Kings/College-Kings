@@ -234,7 +234,7 @@ label v13s34:
     scene v13s34_13a
     with dissolve
 
-    clipps "Of course. I'm here all day, everyday."
+    clipps "Of course. I'm here all day, every day."
 
     scene v13s34_13b
     with dissolve
@@ -309,10 +309,10 @@ label v13s34:
 
     ri "AHHHH!"
 
-    scene v13s34_20 # FPP. MC looks over to Riley's cell and knowtices she is gone
+    scene v13s34_20 # FPP. MC looks over to Riley's cell and notices she is gone
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v13s34_19
     with dissolve
