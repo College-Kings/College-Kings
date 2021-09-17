@@ -561,7 +561,7 @@ label v13s37_nora:
 
                 pause 0.75
 
-    call screen v13s37_garden2
+    call screen v13s37_garden1
 
 label v13s37_chris:
     if chrismad:
