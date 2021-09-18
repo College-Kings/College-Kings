@@ -30,7 +30,7 @@ label v13s59:
     scene v13s59_2
     with dissolve
 
-    au "Not falling into the water for one..."
+    au "Falling into the water for one..."
 
     scene v13s59_2a
     with dissolve
@@ -65,37 +65,39 @@ label v13s59:
     scene v13s59_2a
     with dissolve
 
-    u "Well, you haven't been little for a while. Why haven't you learned?"
+    u "But you swam at the lake, didn't you?"
 
     scene v13s59_2
     with dissolve
 
-    au "I was never interested, but right now I'm wishing I had been. *Laughs*"
+    au "I stayed very, very close to the shoreline. Laughs Also though, I'd been to that lake before so I was already comfortable with it, you know?"
+
+    au "Diving into a body of water, especially with unknown creatures inside of it... Is terrifying. *Chuckles*"
 
     scene v13s59_2a
     with dissolve
 
-    u "I'm surprised this conversation didn't come up while we were at the beach. *Chuckles*"
+    u "Unknown creatures? *Laughs* Really?"
 
     scene v13s59_2d # FPP. same as v13s59_2 aubrey head slightly tilted with hand on the side of her face
     with dissolve
 
-    au "It would seem like that wouldn't it? *Chuckles*"
+    au "*Chuckles* Yes, really."
 
     scene v13s59_2e # FPP. same as v13s59_2d aubrey mouth closed
     with dissolve
 
-    u "Yeah, it would. *Chuckles*"
+    u "Well, I will protect you from any of these \"creatures\", haha. Why haven't you learned yet?"
 
     scene v13s59_2d
     with dissolve
 
-    au "Alright, you ready to do this?"
+    au "I was never really interested and also horrified, but right now I'm wishing I had. *Laughs*"
 
     scene v13s59_2e
     with dissolve
 
-    u "I'm not who we need to be worried about. *Laughs* Are you ready?"
+    u "I'm surprised this conversation didn't come up while we were at the beach. *Chuckles* Are you ready?"
 
     scene v13s59_2
     with dissolve
