@@ -685,7 +685,7 @@ label v13_imre_continue:
         stop music fadeout 3
 
         if v13_aubrey_concert:
-            jump v13s12a 
+            jump v13s12a
 
         elif v13_penelope_concert:
             jump v13s12b
