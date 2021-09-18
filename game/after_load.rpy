@@ -233,6 +233,11 @@ label after_load:
         simplr_Samantha.profile_picture = "images/phone/simplr/contacts/samanthaProfilePicture.webp"
         simplr_Emmy.profile_picture = "images/phone/simplr/contacts/emmyProfilePicture.webp"
 
+        simplr_Beth.profile_picture_large = "images/phone/simplr/contacts/bethProfilePictureLarge.webp"
+        simplr_Iris.profile_picture_large = "images/phone/simplr/contacts/irisProfilePictureLarge.webp"
+        simplr_Samantha.profile_picture_large = "images/phone/simplr/contacts/samanthaProfilePictureLarge.webp"
+        simplr_Emmy.profile_picture_large = "images/phone/simplr/contacts/emmyProfilePictureLarge.webp"
+
         for contact in simplr_pendingContacts + simplr_contacts:
             try: contact.condition
             except AttributeError: contact.condition = True
