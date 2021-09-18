@@ -231,7 +231,7 @@ screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings_
 screen getaccess():
     tag endScreen
 
-    add "images/endscreen.webp"
+    add "images/end_screen.webp"
 
     hbox:
         align (0.5, 0.9)
