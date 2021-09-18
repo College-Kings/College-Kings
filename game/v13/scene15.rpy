@@ -281,3 +281,39 @@ label v13s15:
                 stop music fadeout 3
 
                 jump v13s17
+    
+    else:
+        scene v13s15_7 
+        with dissolve
+
+        pause 0.75
+
+        if not chloegf:
+            scene v13s15_8
+            with dissolve
+
+            pause 0.75
+
+            scene v13s15_9
+            with fade
+
+            pause 0.75
+
+            stop music fadeout 3
+
+            jump v13s17c
+        
+        else:
+            scene v13s15_98
+            with dissolve
+
+            pause 0.75
+
+            scene v13s15_99
+            with fade
+
+            pause 0.75
+
+            stop music fadeout 3
+
+            jump v13s17
