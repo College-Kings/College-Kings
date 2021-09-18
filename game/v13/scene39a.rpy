@@ -600,8 +600,8 @@ label v13s39a:
 
         if chloegf:
 
-            jump to v13s40
+            jump v13s40
 
         else: 
 
-            jump to v13s41
+            jump v13s41
