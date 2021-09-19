@@ -190,4 +190,4 @@ label v13s10:
 
     stop music fadeout 3
     
-    jump v13s11 # NEED PROPER VARIABLE NAME
+    jump v13s11

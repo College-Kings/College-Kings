@@ -510,4 +510,4 @@ label v13_ticket_transfer:
 
         stop music fadeout 3
         
-        jump v13s8 # REPLACE WITH PROPER SCENE LABEL
+        jump v13s8

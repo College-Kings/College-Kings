@@ -219,15 +219,6 @@ label v13s50a:
 
         stop music fadeout 3
 
-        if chloegf:
-            jump v13s52
-        
-        elif rileyrs: 
-            jump v13s53
-        
-        else: 
-            jump v13s54
-
     else: # -If coming from Scene51
 
         stop music fadeout 3
@@ -240,11 +231,11 @@ label v13s50a:
 
         stop music fadeout 3
 
-        if chloegf:
-            jump v13s52
-        
-        elif rileyrs: 
-            jump v13s53
-        
-        else: 
-            jump v13s54
+    if chloegf:
+        jump v13s52
+    
+    elif rileyrs: 
+        jump v13s53
+    
+    else: 
+        jump v13s54

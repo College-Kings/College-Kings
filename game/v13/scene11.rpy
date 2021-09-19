@@ -120,13 +120,10 @@ label v13s11:
 
             imre "He what? What the hell is happening? Were you two following me?!"
 
-            $ timed = False 
-
             jump v13_imre_continue
-        "Push Ryan in front of Imre":
-            $ timed = False
 
-            jump v13_push_ryan
+        "Push Ryan in front of Imre":
+            pass
 
     label v13_push_ryan:
         
@@ -185,510 +182,508 @@ label v13s11:
 
         imre "He what? You're following me?! What the hell is going on?"
 
-        jump v13_imre_continue
-
 label v13_imre_continue:
-        scene v13s11_14c # FPP. Same as 14b, mouth closed
-        with dissolve
+    scene v13s11_14c # FPP. Same as 14b, mouth closed
+    with dissolve
 
-        u "Okay, look... Try not to take this in a weird way, but yeah, we were following you."
+    u "Okay, look... Try not to take this in a weird way, but yeah, we were following you."
 
-        scene v13s11_14b
-        with dissolve
+    scene v13s11_14b
+    with dissolve
 
-        imre "What? Why? I don't understand how I could take this in a \"not weird\" way."
+    imre "What? Why? I don't understand how I could take this in a \"not weird\" way."
 
-        scene v13s11_14c
-        with dissolve
+    scene v13s11_14c
+    with dissolve
 
-        u "Well, there were some rumors about you going on some hot date and-"
+    u "Well, there were some rumors about you going on some hot date and-"
 
-        scene v13s11_14d # FPP. Looking at imre, slight smile on his face, one hand holding his chin, mouth opened
-        with dissolve
+    scene v13s11_14d # FPP. Looking at imre, slight smile on his face, one hand holding his chin, mouth opened
+    with dissolve
 
-        imre "Ahh, I get it... So you two are jealous and wanna ruin my date?"
+    imre "Ahh, I get it... So you two are jealous and wanna ruin my date?"
 
-        scene v13s11_14e # FPP. Same as 14d, mouth closed
-        with dissolve
+    scene v13s11_14e # FPP. Same as 14d, mouth closed
+    with dissolve
 
-        u "Haha, I couldn't care less about that. We care about you, dude. You deserve a good date. But, we don't think this date is gonna be anything like what you're expecting it'll be."
+    u "Haha, I couldn't care less about that. We care about you, dude. You deserve a good date. But, we don't think this date is gonna be anything like what you're expecting it'll be."
 
-        scene v13s11_14f # FPP. looking at imre, disapointed, mouth opened
-        with dissolve
+    scene v13s11_14f # FPP. looking at imre, disapointed, mouth opened
+    with dissolve
 
-        imre "So, Ryan got you caught up in this catfish bullshit too?"
+    imre "So, Ryan got you caught up in this catfish bullshit too?"
 
-        scene v13s11_14g # FPP. Same as 14f, mouth closed
-        with dissolve
+    scene v13s11_14g # FPP. Same as 14f, mouth closed
+    with dissolve
 
-        u "I'm not saying I do or don't believe it's a catfish, but what's the harm in us checking it out? Or at least sticking around in case it ends badly?"
+    u "I'm not saying I do or don't believe it's a catfish, but what's the harm in us checking it out? Or at least sticking around in case it ends badly?"
 
-        scene v13s11_14f
-        with dissolve
+    scene v13s11_14f
+    with dissolve
 
-        imre "You know what? You guys can follow me from a distance like the creeps you are, and when I walk in and you see the baddie I've been talking to, you guys can bounce your ugly asses out the door. Deal?"
+    imre "You know what? You guys can follow me from a distance like the creeps you are, and when I walk in and you see the baddie I've been talking to, you guys can bounce your ugly asses out the door. Deal?"
 
-        scene v13s11_14g
-        with dissolve
+    scene v13s11_14g
+    with dissolve
 
-        u "*Laughs* Deal."
+    u "*Laughs* Deal."
 
-        scene v13s11_14h # FPP. looking at ryan with a big smile on his face, mouth opened
-        with dissolve
+    scene v13s11_14h # FPP. looking at ryan with a big smile on his face, mouth opened
+    with dissolve
 
-        ry "Perfect!"
+    ry "Perfect!"
 
-        scene v13s11_14i # FPP. Imre walks off, moving his head a little as if he complaining
-        with dissolve
+    scene v13s11_14i # FPP. Imre walks off, moving his head a little as if he complaining
+    with dissolve
 
-        imre "I swear to god..."
+    imre "I swear to god..."
 
-        scene v13s11_14h
-        with dissolve
+    scene v13s11_14h
+    with dissolve
 
-        ry "*Whispers* He's not too happy about this..."
+    ry "*Whispers* He's not too happy about this..."
 
-        scene v13s11_14j # FPP. Same as 14h, mouth closed
-        with dissolve
+    scene v13s11_14j # FPP. Same as 14h, mouth closed
+    with dissolve
 
-        u "*Whispers* He'll get over it. *Chuckles* C'mon."
+    u "*Whispers* He'll get over it. *Chuckles* C'mon."
 
-        scene v13s11_15 # TPP. MC and ryan following imre on the streets (location 1)
-        with dissolve
+    scene v13s11_15 # TPP. MC and ryan following imre on the streets (location 1)
+    with dissolve
 
-        pause 0.6
+    pause 0.6
 
-        scene v13s11_16 # TPP. MC and ryan following imre on the streets (location 2)
-        with dissolve
+    scene v13s11_16 # TPP. MC and ryan following imre on the streets (location 2)
+    with dissolve
 
-        pause 0.6
+    pause 0.6
 
-        scene v13s11_17 # TPP. MC and ryan following imre on the streets (in front of the bar)
-        with dissolve
+    scene v13s11_17 # TPP. MC and ryan following imre on the streets (in front of the bar)
+    with dissolve
 
-        pause 0.75
+    pause 0.75
 
-        scene v13s11_18 # FPP. Imre in front of the bar doors, flipping them off
-        with dissolve
+    scene v13s11_18 # FPP. Imre in front of the bar doors, flipping them off
+    with dissolve
 
-        pause 0.6
+    pause 0.6
 
-        scene v13s11_19 # TPP. MC and ryan going into the bar
-        with dissolve
+    scene v13s11_19 # TPP. MC and ryan going into the bar
+    with dissolve
 
-        pause 0.6
+    pause 0.6
 
-        scene v13s11_20 # TPP. MC and ryan sitting in a table at a distance from imre
-        with dissolve
+    scene v13s11_20 # TPP. MC and ryan sitting in a table at a distance from imre
+    with dissolve
 
-        pause 0.75
+    pause 0.75
 
-        stop music fadeout 3
-        play music "music/v13/Track Scene 11_2.mp3" fadein 2
+    stop music fadeout 3
+    play music "music/v13/Track Scene 11_2.mp3" fadein 2
 
-        scene v13s11_21 # FPP. MC sitting from the other side of the table from ryan, with a view to imre, imre waiting in the back, ryan slight smiling, mouth closed
-        with dissolve
+    scene v13s11_21 # FPP. MC sitting from the other side of the table from ryan, with a view to imre, imre waiting in the back, ryan slight smiling, mouth closed
+    with dissolve
 
-        u "Looks like he beat his date..."
+    u "Looks like he beat his date..."
 
-        scene v13s11_21a # FPP. same as 21, mouth opened
-        with dissolve
+    scene v13s11_21a # FPP. same as 21, mouth opened
+    with dissolve
 
-        ry "We don't know what the girl, or guy, looks like. *Laughs* Who knows if they're here already..."
+    ry "We don't know what the girl, or guy, looks like. *Laughs* Who knows if they're here already..."
 
-        scene v13s11_21
-        with dissolve
+    scene v13s11_21
+    with dissolve
 
-        u "That's true. Let's hope this is legit."
+    u "That's true. Let's hope this is legit."
 
-        scene v13s11_21b # FPP. Imre in the back looking back at mc and ryan, imre's mouth opened
-        with dissolve
+    scene v13s11_21b # FPP. Imre in the back looking back at mc and ryan, imre's mouth opened
+    with dissolve
 
-        imre "*Inaudible*"
+    imre "*Inaudible*"
 
-        scene v13s11_21
-        with dissolve
+    scene v13s11_21
+    with dissolve
 
-        u "Looks like he's trying to figure out what the hold up is."
+    u "Looks like he's trying to figure out what the hold up is."
 
-        scene v13s11_21a
-        with dissolve
+    scene v13s11_21a
+    with dissolve
 
-        ry "His date probably needed to shave his beard. *Chuckles*"
+    ry "His date probably needed to shave his beard. *Chuckles*"
 
-        scene v13s11_21
-        with dissolve
+    scene v13s11_21
+    with dissolve
 
-        u "*Chuckles*"
+    u "*Chuckles*"
 
-        scene v13s11_21c # FPP. same as 21 fat and ugly guy sits next to imre
-        with dissolve
+    scene v13s11_21c # FPP. same as 21 fat and ugly guy sits next to imre
+    with dissolve
 
-        u "Oh, shit... Let's get closer."
+    u "Oh, shit... Let's get closer."
 
-        scene v13s11_22 # TPP. MC and ryan moving to a closer table
-        with dissolve
+    scene v13s11_22 # TPP. MC and ryan moving to a closer table
+    with dissolve
 
-        pause 0.6
+    pause 0.6
 
-        scene v13s11_23 # FPP. Now closer to imre's table, ryan sitting on the other side of the table, with a view to imre, imre sitting next to ugly guy, weirded out, looking away, ryan's mouth opened
-        with dissolve
+    scene v13s11_23 # FPP. Now closer to imre's table, ryan sitting on the other side of the table, with a view to imre, imre sitting next to ugly guy, weirded out, looking away, ryan's mouth opened
+    with dissolve
 
-        ry "Haha!"
+    ry "Haha!"
 
-        scene v13s11_23a # FPP. A bar host approaches imre's table, ashton is really comfortable, mouth opened
-        with dissolve
+    scene v13s11_23a # FPP. A bar host approaches imre's table, ashton is really comfortable, mouth opened
+    with dissolve
 
-        ash "May I get a Biz Light?"
+    ash "May I get a Biz Light?"
 
-        scene v13s11_23b # FPP. Bar's host face is a little weirded out, mouth opened
-        with dissolve
+    scene v13s11_23b # FPP. Bar's host face is a little weirded out, mouth opened
+    with dissolve
 
-        barh "Umm... Sure."
+    barh "Umm... Sure."
+
+    scene v13s11_23c # FPP. Bar host left the table, Ash puts his hand on imre's shoulder, with a smile on his face, mouth opened
+    with dissolve
+
+    ash "You aren't gonna say hi to me?"
+
+    scene v13s11_23d # FPP. Imre takes ash's hand off his shoulder and has a freaked out face, mouth opened
+    with dissolve
+
+    imre "Bro, why are you touching me?"
+
+    scene v13s11_23e # FPP. Ash poining his hands at his face, smiling, mouth opened
+    with dissolve
+
+    ash "That's a rude first impression... Don't you recognize me?"
     
-        scene v13s11_23c # FPP. Bar host left the table, Ash puts his hand on imre's shoulder, with a smile on his face, mouth opened
+    scene v13s11_23f # FPP. Imre with a mad face, mouth opened
+    with dissolve
+
+    imre "I have no idea who you are or what the hell you're talking about."
+
+    scene v13s11_23e
+    with dissolve
+
+    ash "It's me, Ashton."
+
+    scene v13s11_23f
+    with dissolve
+
+    imre "Don't play with me right now, where's the real Ashton?!"
+
+    scene v13s11_23e
+    with dissolve
+
+    ash "I am the real Ashton, silly... I haven't updated my pictures in a while, but-"
+
+    scene v13s11_23g # FPP. Imre stands up, looking really mad at ash, mouth opened
+    with dissolve
+
+    imre "You also have a fucking dick! You actually are a god damn catfish!"
+
+    scene v13s11_23g
+    with dissolve
+
+    u "(This isn't gonna be good.)"
+
+    scene v13s11_23h # FPP. Same as 23g, ash slight smiling looking at imre, imre's mouth closed ash mouth open
+    with dissolve
+
+    ash "It's not about how people look on the outside, it's about who we are on the inside..."
+    
+    scene v13s11_23g
+    with dissolve
+
+    imre "Please, shut the fuck up..."
+
+    scene v13s11_23h
+    with dissolve
+
+    ash "You liked me over the phone, right? Or at least that's what I could tell from the pictures..."
+    
+    scene v13s11_23g
+    with dissolve
+
+    imre "I liked the girl in the pictures!"
+
+    scene v13s11_23l # FPP. Same as 23g, imre's hand on his head
+    with dissolve
+
+    imre "I'm only gonna say this one time... It's best you leave because right now, you got me beyond pissed off."
+
+    scene v13s11_23i # FPP. Ash grabs one of imre's hand, imre looks freaked out, ash mouth opened
+    with dissolve
+
+    ash "Imre, please."
+
+    scene v13s11_23j # FPP. Imre uppercuts ashton
+    with dissolve
+
+    pause 0.6
+
+    scene v13s11_23k # FPP. Ashton hits the ground, imre looking really mad, mouth opened
+    with dissolve
+
+    imre "I SAID I WAS ONLY GONNA SAY IT ONCE! GET. OUT."
+
+    scene v13s11_24 # FPP. Angle change as if MC and ryan moved out of their table and are standing, ash is in the ground holding his face and crawling backwards, mouth opened
+    with dissolve
+
+    ash "You're c-crazy, man! You're f-fucking crazy!"
+
+    scene v13s11_24a # FPP. Ashton gets up, hands still covering his face
+    with dissolve
+
+    pause 0.6
+
+    scene v13s11_25 # FPP ashton runs out of the bar, back to the camera
+    with dissolve
+
+    pause 0.75
+
+    scene v13s11_24b # FPP, MC looking at ryan, who is laughing
+    with dissolve
+
+    ry "*Laughs*"
+
+    scene v13s11_24c # FPP. Imre is now standing in front of mc and ryan, looking really mad, mouth opened
+    with dissolve
+
+    imre "Shut the fuck up, Ryan! Before I rock your shit too."
+
+    scene v13s11_24b
+    with dissolve
+
+    ry "Ha! You can try... Told your ass it was a catfish."
+
+    scene v13s11_24c
+    with dissolve
+
+    imre "You know what..."
+
+    scene v13s11_24d # TPP. Imre still really mad, walking towards ryan
+    with dissolve
+
+    pause 0.6
+
+    scene v13s11_26 # TPP. MC puts himself between ryan and imre holding them both
+    with dissolve
+
+    pause 0.6
+
+    scene v13s11_27 # FPP. MC between imre and ryan, looking at imre who still has a mad expression on, mouth closed
+    with dissolve
+
+    u "Chill, chill, chill... We all know you're upset, and have good reason to be."
+
+    scene v13s11_27
+    with dissolve
+
+    u "Don't take it out on us, especially Ryan. It was his idea to follow you here and make sure you were good."
+
+    scene v13s11_27a # FPP. Same as 27, mouth opened
+    with dissolve
+
+    imre "Yeah, whatever."
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 11_3.mp3" fadein 2
+
+    scene v13s11_27b # FPP. The bar hosts walks by, standing besides imre, mouth opened
+    with dissolve
+
+    barh "I never like to assume, despite the number of times this happens... But, that guy has been pulling this stunt ever since I started working here. I always feel bad because I know his past..."
+
+    scene v13s11_27c # FPP. Imre looking at the bar host, mouth opened
+    with dissolve
+
+    imre "You need to ban his ass."
+
+    scene v13s11_27d # FPP. Same as 27b, bar host looking at imre, mouth opened
+    with dissolve
+
+    barh "So he can invite you somewhere else? At least here I can protect the victims if they can't protect themselves."
+
+    scene v13s11_27d
+    with dissolve
+    
+    barh "Plus... After what you just did, I don't think there'll be any more."
+    
+    scene v13s11_27c
+    with dissolve
+
+    imre "Man, fuck this... I'm out of here."
+
+    scene v13s11_27e # FPP. Imre turns his back to mc and the bar host starting to walk out, bar host looking at him, mouth open
+    with dissolve
+
+    barh "Wait!"
+
+    scene v13s11_27f # FPP. Imre looking at the bar host, sighing, mouth opened
+    with dissolve
+
+    imre "*Sighs?* Yeah?"
+
+    scene v13s11_27g # FPP. Bar host looking at imre, mouth opened
+    with dissolve
+
+    barh "Look... I don't know your situation, who you are, or what you're looking for, but I do know there's a Simplr event coming up within the next few days. With real girls looking to meet real guys, like yourself."
+    
+    scene v13s11_27h # FPP. Same as 27g, mouth closed
+    with dissolve
+
+    imre "I'm listening, go on..."
+
+    scene v13s11_27i # FPP. Same as 27g, bar host is smiling, mouth opened
+    with dissolve
+
+    barh "*Laughs* The event is being hosted right here actually and I'll be the one hosting."
+    
+    scene v13s11_27g
+    with dissolve
+
+    barh "I barely know all the details myself, but it's on their website. Come by and maybe you'll get something good out of this whole situation."
+    
+    scene v13s11_27j # FPP. Imre looking at MC, mouth opened
+    with dissolve
+
+    imre "You guys wanna go?"
+
+    scene v13s11_27k # FPP. Same as 27j, mouth closed
+    with dissolve
+
+    u "For sure. I don't see why not."
+
+    scene v13s11_27l # FPP. Looking at ryan, mouth opened
+    with dissolve
+
+    ry "Yeah, I'll go."
+
+    scene v13s11_27m # FPP. Imre looking at ryan with a mad face, mouth opened
+    with dissolve
+
+    imre "I was asking [name]."
+
+    scene v13s11_27n # FPP. Same as 27m, mouth closed
+    with dissolve
+
+    u "*Sighs*"
+
+    scene v13s11_27o # FPP. Bar host smiling, mouth opened
+    with dissolve
+
+    barh "Guess I'll see you guys that night! Have a good evening, and thanks again."
+
+    if v13_penelope_concert or v13_aubrey_concert:
+        scene v13s11_28 # FPP. Angle change, ryan and imre standing in front of mc, mouth closed
         with dissolve
 
-        ash "You aren't gonna say hi to me?"
+        u "I need to hurry and get back to the hotel, I got plans tonight."
 
-        scene v13s11_23d # FPP. Imre takes ash's hand off his shoulder and has a freaked out face, mouth opened
+    else:
+        scene v13s11_28
         with dissolve
-
-        imre "Bro, why are you touching me?"
-
-        scene v13s11_23e # FPP. Ash poining his hands at his face, smiling, mouth opened
-        with dissolve
-
-        ash "That's a rude first impression... Don't you recognize me?"
         
-        scene v13s11_23f # FPP. Imre with a mad face, mouth opened
-        with dissolve
+        u "Are we done here or do you have another date?"
 
-        imre "I have no idea who you are or what the hell you're talking about."
+    scene v13s11_28a # FPP. same as 28, imre's mouth opened 
+    with dissolve
 
-        scene v13s11_23e
-        with dissolve
+    imre "Yeah, I'm done here. Let's go."
 
-        ash "It's me, Ashton."
+    scene v13s11_29 # TPP. Imre mc and ryan walking off the bar
+    with dissolve
 
-        scene v13s11_23f
-        with dissolve
+    pause 0.6
 
-        imre "Don't play with me right now, where's the real Ashton?!"
+    scene v13s11_30 # TPP. Imre mc and ryan in the sidewalk
+    with dissolve
 
-        scene v13s11_23e
-        with dissolve
+    pause 0.6
 
-        ash "I am the real Ashton, silly... I haven't updated my pictures in a while, but-"
+    scene v13s11_31 # TPP. MC ryan and imre in front of the hotel
+    with dissolve
 
-        scene v13s11_23g # FPP. Imre stands up, looking really mad at ash, mouth opened
-        with dissolve
+    pause 0.6
 
-        imre "You also have a fucking dick! You actually are a god damn catfish!"
+    scene v13s11_32 # TPP. MC ryan and imre in the hotel lobby
+    with dissolve
 
-        scene v13s11_23g
-        with dissolve
+    pause 0.75
 
-        u "(This isn't gonna be good.)"
+    scene v13s11_33 # FPP. Now on the hotel lobby, ryan walks off
+    with dissolve
 
-        scene v13s11_23h # FPP. Same as 23g, ash slight smiling looking at imre, imre's mouth closed ash mouth open
-        with dissolve
+    pause 0.6
 
-        ash "It's not about how people look on the outside, it's about who we are on the inside..."
-        
-        scene v13s11_23g
-        with dissolve
+    stop music fadeout 3
+    play music "music/v13/Track Scene 11_4.mp3" fadein 2
 
-        imre "Please, shut the fuck up..."
+    scene v13s11_33a # FPP. looking at imre, mouth closed
+    with dissolve
 
-        scene v13s11_23h
-        with dissolve
+    u "Hey, Imre?"
 
-        ash "You liked me over the phone, right? Or at least that's what I could tell from the pictures..."
-        
-        scene v13s11_23g
-        with dissolve
+    scene v13s11_33b # FPP. Same as 33, mouth opened
+    with dissolve
 
-        imre "I liked the girl in the pictures!"
+    imre "Yeah?"
 
-        scene v13s11_23l # FPP. Same as 23g, imre's hand on his head
-        with dissolve
+    scene v13s11_33a
+    with dissolve
 
-        imre "I'm only gonna say this one time... It's best you leave because right now, you got me beyond pissed off."
+    u "Look, man... I'm really sorry about what went down. You didn't deserve any of it."
 
-        scene v13s11_23i # FPP. Ash grabs one of imre's hand, imre looks freaked out, ash mouth opened
-        with dissolve
+    scene v13s11_33b
+    with dissolve
 
-        ash "Imre, please."
+    imre "I don't exactly wanna talk about it, but... I'm sure Ryan is gonna have a field day with this."
 
-        scene v13s11_23j # FPP. Imre uppercuts ashton
-        with dissolve
-
-        pause 0.6
-
-        scene v13s11_23k # FPP. Ashton hits the ground, imre looking really mad, mouth opened
-        with dissolve
-
-        imre "I SAID I WAS ONLY GONNA SAY IT ONCE! GET. OUT."
-
-        scene v13s11_24 # FPP. Angle change as if MC and ryan moved out of their table and are standing, ash is in the ground holding his face and crawling backwards, mouth opened
-        with dissolve
-
-        ash "You're c-crazy, man! You're f-fucking crazy!"
-
-        scene v13s11_24a # FPP. Ashton gets up, hands still covering his face
-        with dissolve
-
-        pause 0.6
-
-        scene v13s11_25 # FPP ashton runs out of the bar, back to the camera
-        with dissolve
-
-        pause 0.75
-
-        scene v13s11_24b # FPP, MC looking at ryan, who is laughing
-        with dissolve
-
-        ry "*Laughs*"
-
-        scene v13s11_24c # FPP. Imre is now standing in front of mc and ryan, looking really mad, mouth opened
-        with dissolve
-
-        imre "Shut the fuck up, Ryan! Before I rock your shit too."
-
-        scene v13s11_24b
-        with dissolve
-
-        ry "Ha! You can try... Told your ass it was a catfish."
-
-        scene v13s11_24c
-        with dissolve
-
-        imre "You know what..."
-
-        scene v13s11_24d # TPP. Imre still really mad, walking towards ryan
-        with dissolve
-
-        pause 0.6
-
-        scene v13s11_26 # TPP. MC puts himself between ryan and imre holding them both
-        with dissolve
-
-        pause 0.6
-
-        scene v13s11_27 # FPP. MC between imre and ryan, looking at imre who still has a mad expression on, mouth closed
-        with dissolve
-
-        u "Chill, chill, chill... We all know you're upset, and have good reason to be."
-
-        scene v13s11_27
-        with dissolve
-
-        u "Don't take it out on us, especially Ryan. It was his idea to follow you here and make sure you were good."
-
-        scene v13s11_27a # FPP. Same as 27, mouth opened
-        with dissolve
-
-        imre "Yeah, whatever."
-
-        stop music fadeout 3
-        play music "music/v13/Track Scene 11_3.mp3" fadein 2
-
-        scene v13s11_27b # FPP. The bar hosts walks by, standing besides imre, mouth opened
-        with dissolve
-
-        barh "I never like to assume, despite the number of times this happens... But, that guy has been pulling this stunt ever since I started working here. I always feel bad because I know his past..."
-
-        scene v13s11_27c # FPP. Imre looking at the bar host, mouth opened
-        with dissolve
-
-        imre "You need to ban his ass."
-
-        scene v13s11_27d # FPP. Same as 27b, bar host looking at imre, mouth opened
-        with dissolve
-
-        barh "So he can invite you somewhere else? At least here I can protect the victims if they can't protect themselves."
-
-        scene v13s11_27d
-        with dissolve
-        
-        barh "Plus... After what you just did, I don't think there'll be any more."
-        
-        scene v13s11_27c
-        with dissolve
-
-        imre "Man, fuck this... I'm out of here."
-
-        scene v13s11_27e # FPP. Imre turns his back to mc and the bar host starting to walk out, bar host looking at him, mouth open
-        with dissolve
-
-        barh "Wait!"
-
-        scene v13s11_27f # FPP. Imre looking at the bar host, sighing, mouth opened
-        with dissolve
-
-        imre "*Sighs?* Yeah?"
-
-        scene v13s11_27g # FPP. Bar host looking at imre, mouth opened
-        with dissolve
-
-        barh "Look... I don't know your situation, who you are, or what you're looking for, but I do know there's a Simplr event coming up within the next few days. With real girls looking to meet real guys, like yourself."
-        
-        scene v13s11_27h # FPP. Same as 27g, mouth closed
-        with dissolve
-
-        imre "I'm listening, go on..."
-
-        scene v13s11_27i # FPP. Same as 27g, bar host is smiling, mouth opened
-        with dissolve
-
-        barh "*Laughs* The event is being hosted right here actually and I'll be the one hosting."
-        
-        scene v13s11_27g
-        with dissolve
-
-        barh "I barely know all the details myself, but it's on their website. Come by and maybe you'll get something good out of this whole situation."
-        
-        scene v13s11_27j # FPP. Imre looking at MC, mouth opened
-        with dissolve
-
-        imre "You guys wanna go?"
-
-        scene v13s11_27k # FPP. Same as 27j, mouth closed
-        with dissolve
-
-        u "For sure. I don't see why not."
-
-        scene v13s11_27l # FPP. Looking at ryan, mouth opened
-        with dissolve
-
-        ry "Yeah, I'll go."
-
-        scene v13s11_27m # FPP. Imre looking at ryan with a mad face, mouth opened
-        with dissolve
-
-        imre "I was asking [name]."
-
-        scene v13s11_27n # FPP. Same as 27m, mouth closed
-        with dissolve
-
-        u "*Sighs*"
-
-        scene v13s11_27o # FPP. Bar host smiling, mouth opened
-        with dissolve
-
-        barh "Guess I'll see you guys that night! Have a good evening, and thanks again."
-
-        if v13_penelope_concert or v13_aubrey_concert:
-            scene v13s11_28 # FPP. Angle change, ryan and imre standing in front of mc, mouth closed
+    menu:
+        "Leave it alone":
+            scene v13s11_33a
             with dissolve
 
-            u "I need to hurry and get back to the hotel, I got plans tonight."
+            u "(I'm not getting involved in it.)"
 
-        else:
-            scene v13s11_28
+        "Stick up for Ryan":
+            scene v13s11_33a
             with dissolve
-            
-            u "Are we done here or do you have another date?"
 
-        scene v13s11_28a # FPP. same as 28, imre's mouth opened 
-        with dissolve
+            u "Look man, you need to ease up on Ryan. He stuck his head out for you today and called me because he cared about you getting catfished... Maybe this can bridge the gap for you two."
 
-        imre "Yeah, I'm done here. Let's go."
+            scene v13s11_33b
+            with dissolve
 
-        scene v13s11_29 # TPP. Imre mc and ryan walking off the bar
-        with dissolve
+            imre "I doubt it."
 
-        pause 0.6
+            scene v13s11_33a
+            with dissolve
 
-        scene v13s11_30 # TPP. Imre mc and ryan in the sidewalk
-        with dissolve
+            u "*Sighs* Don't say I never tried."
 
-        pause 0.6
+    scene v13s11_33b
+    with dissolve
 
-        scene v13s11_31 # TPP. MC ryan and imre in front of the hotel
-        with dissolve
+    imre "Well... Later man."
 
-        pause 0.6
+    scene v13s11_33a
+    with dissolve
 
-        scene v13s11_32 # TPP. MC ryan and imre in the hotel lobby
-        with dissolve
+    u "Later,"
 
-        pause 0.75
+    scene v13s11_33c # FPP. Imre walks off
+    with dissolve
 
-        scene v13s11_33 # FPP. Now on the hotel lobby, ryan walks off
-        with dissolve
+    u "(Hmm, I wonder what'll go down at that event. Definitely gonna be interesting.)"
 
-        pause 0.6
+    stop music fadeout 3
 
-        stop music fadeout 3
-        play music "music/v13/Track Scene 11_4.mp3" fadein 2
+    if v13_aubrey_concert:
+        jump v13s12a
 
-        scene v13s11_33a # FPP. looking at imre, mouth closed
-        with dissolve
+    elif v13_penelope_concert:
+        jump v13s12b
 
-        u "Hey, Imre?"
-
-        scene v13s11_33b # FPP. Same as 33, mouth opened
-        with dissolve
-
-        imre "Yeah?"
-
-        scene v13s11_33a
-        with dissolve
-
-        u "Look, man... I'm really sorry about what went down. You didn't deserve any of it."
-
-        scene v13s11_33b
-        with dissolve
-
-        imre "I don't exactly wanna talk about it, but... I'm sure Ryan is gonna have a field day with this."
-
-        menu:
-            "Leave it alone":
-                scene v13s11_33a
-                with dissolve
-
-                u "(I'm not getting involved in it.)"
-
-            "Stick up for Ryan":
-                scene v13s11_33a
-                with dissolve
-
-                u "Look man, you need to ease up on Ryan. He stuck his head out for you today and called me because he cared about you getting catfished... Maybe this can bridge the gap for you two."
-
-                scene v13s11_33b
-                with dissolve
-
-                imre "I doubt it."
-
-                scene v13s11_33a
-                with dissolve
-
-                u "*Sighs* Don't say I never tried."
-
-        scene v13s11_33b
-        with dissolve
-
-        imre "Well... Later man."
-
-        scene v13s11_33a
-        with dissolve
-
-        u "Later,"
-
-        scene v13s11_33c # FPP. Imre walks off
-        with dissolve
-
-        u "(Hmm, I wonder what'll go down at that event. Definitely gonna be interesting.)"
-
-        stop music fadeout 3
-
-        if v13_aubrey_concert:
-            jump v13s12a
-
-        elif v13_penelope_concert:
-            jump v13s12b
-
-        else:
-            jump v13s12c
+    else:
+        jump v13s12c

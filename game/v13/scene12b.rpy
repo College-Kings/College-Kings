@@ -380,10 +380,10 @@ label v13s12b:
                     jump v13s13b
 
                 "Damn":
-                    jump v13s12b_failed_timer
+                    pass
                 
         "Oops":
-            jump v13s12b_failed_timer
+            pass
 
 label v13s12b_failed_timer:
     scene v13s12b_8c # TPP. Same as v13s12b_8b, Penelope falling off MC's shoulders
