@@ -6,7 +6,7 @@
 label v13s35_buy_item_dialog(item):
     scene v13s35_sex_shop
 
-    if (10 < mc.money <= 20) and (cuffs not in mc.inventory.items):
+    if (cuffs not in mc.inventory.items) and (mc.money - item.cost < cuffs.cost):
         u "Only have a bit of money left, better get the cuffs."
     else:
         $ mc.add_item(item)
@@ -107,7 +107,8 @@ label v13s35:
         $ mc.money = 100
         $ freeRoam = True
         call screen v13s35_adult_shop
-
+        
+        label v13s35_adult_shop_continue:
         u "(She'll be happy with these, I think. We're gonna have some fun... *Chuckles*)"
 
     else:

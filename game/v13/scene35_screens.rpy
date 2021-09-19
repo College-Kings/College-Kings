@@ -16,21 +16,21 @@ screen v13s35_adult_shop():
                 idle honey.idle_image
                 hover honey.hover_image
                 insensitive honey.insensitive_image
-                sensitive (honey not in mc.inventory.items) or (mc.money >= honey.cost)
+                sensitive (honey not in mc.inventory.items) and (mc.money >= honey.cost)
                 action Call("v13s35_buy_item_dialog", honey)
 
             imagebutton:
                 idle butt_plug.idle_image
                 hover butt_plug.hover_image
                 insensitive butt_plug.insensitive_image
-                sensitive (butt_plug not in mc.inventory.items) or (mc.money >= butt_plug.cost)
+                sensitive (butt_plug not in mc.inventory.items) and (mc.money >= butt_plug.cost)
                 action Call("v13s35_buy_item_dialog", butt_plug)
 
             imagebutton:
                 idle spankers.idle_image
                 hover spankers.hover_image
                 insensitive spankers.insensitive_image
-                sensitive (spankers not in mc.inventory.items) or (mc.money >= spankers.cost)
+                sensitive (spankers not in mc.inventory.items) and (mc.money >= spankers.cost)
                 action Call("v13s35_buy_item_dialog", spankers)
 
         hbox:
@@ -41,14 +41,14 @@ screen v13s35_adult_shop():
                 idle cuffs.idle_image
                 hover cuffs.hover_image
                 insensitive cuffs.insensitive_image
-                sensitive (cuffs not in mc.inventory.items) or (mc.money >= cuffs.cost)
+                sensitive (cuffs not in mc.inventory.items) and (mc.money >= cuffs.cost)
                 action Show("v13s35_end_shopping_confirm")
 
             imagebutton:
                 idle feather.idle_image
                 hover feather.hover_image
                 insensitive feather.insensitive_image
-                sensitive (feather not in mc.inventory.items) or (mc.money >= feather.cost)
+                sensitive (feather not in mc.inventory.items) and (mc.money >= feather.cost)
                 action Call("v13s35_buy_item_dialog", feather)
 
 
@@ -65,7 +65,7 @@ screen v13s35_end_shopping_confirm():
             spacing 200
 
             textbutton "Yes":
-                action [Hide("v13s35_end_shopping_confirm"), SetVariable("freeRoam", False), Return()]
+                action [Hide("v13s35_end_shopping_confirm"), SetVariable("freeRoam", False), Jump("v13s35_adult_shop_continue")]
                 
             textbutton "No":
                 action Hide("v13s35_end_shopping_confirm")
