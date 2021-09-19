@@ -178,8 +178,12 @@ screen contactsscreen():
                 if not contact.locked:
                     fixed:
                         xysize(375, 74)
+                        
+                        if hasattr(contact, "profile_picture"):
+                            add contact.profile_picture yalign 0.5 xpos 20
+                        else:
+                            add contact.profilePicture yalign 0.5 xpos 20
 
-                        add contact.profile_picture yalign 0.5 xpos 20
                         text contact.name style "nametext" yalign 0.5 xpos 100
 
                         if contact.replies:
@@ -215,7 +219,11 @@ screen messager(contact=None):
             vbox:
                 align (0.5, 0.5)
 
-                add contact.profile_picture xalign 0.5
+                if hasattr(contact, "profile_picture"):
+                    add contact.profile_picture xalign 0.5
+                else:
+                    add contact.profilePicture xalign 0.5
+
                 text contact.name style "nametext"
 
         viewport:
