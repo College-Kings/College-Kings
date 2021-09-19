@@ -245,6 +245,13 @@ label after_load:
             try: contact.profile_picture
             except AttributeError: contact.profile_picture = "images/phone/simplr/contacts/bethProfilePicture.webp"
 
+        
+        # Items
+        honey.insensitive_image = "images/v13/Scene35/sex_shop/honey_insensitive.webp"
+        butt_plug.insensitive_image = "images/v13/Scene35/sex_shop/butt_plug_insensitive.webp"
+        spankers.insensitive_image = "images/v13/Scene35/sex_shop/spankers_insensitive.webp"
+        cuffs.insensitive_image = "images/v13/Scene35/sex_shop/cuffs_insensitive.webp"
+        feather.insensitive_image = "images/v13/Scene35/sex_shop/feather_insensitive.webp"
 
         # Variables
         try:
