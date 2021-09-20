@@ -645,50 +645,52 @@ label v13s48:
 
     if aubreyrs:
         au "I know we're fucking, but..."
+
+        scene v13s48_8c
+        with dissolve
         
-    else:
-            menu:
-                "I meant as friends":
-                    $ addPoint ("bro")
+        menu:
+            "I meant as friends":
+                $ addPoint ("bro")
+
+                scene v13s48_8
+                with dissolve
+
+                u "I meant it as friends."
+
+                scene v13s48_8a
+                with dissolve
+
+                au "Mhmm, okay. *Chuckles* When are you thinking about going?"
+
+            "I meant as a date":
+                $ addPoint ("bf")
+                $ v13s48_canoeing_as_date = True
+
+                scene v13s48_8
+                with dissolve
+
+                u "I meant it as a date."
+
+                if s12v32_get_aubrey_flowers and v13s48_get_aubrey_chocolate:
+
+                    au "You've been working overtime trying to \"woo\" me, huh?"
 
                     scene v13s48_8
                     with dissolve
 
-                    u "I meant it as friends."
+                    u "How am I doing? Feeling \"woo'd\" yet?"
 
                     scene v13s48_8a
                     with dissolve
 
-                    au "Mhmm, okay. *Chuckles* When are you thinking about going?"
+                    au "*Chuckles* When are you wanting to have this... Date?"
 
-                "I meant as a date":
-                    $ addPoint ("bf")
-                    $ v13s48_canoeing_as_date = True
-
-                    scene v13s48_8
+                else:
+                    scene v13s48_8a
                     with dissolve
 
-                    u "I meant it as a date."
-
-                    if s12v32_get_aubrey_flowers and v13s48_get_aubrey_chocolate:
-
-                        au "You've been working overtime trying to \"woo\" me, huh?"
-
-                        scene v13s48_8
-                        with dissolve
-
-                        u "How am I doing? Feeling \"woo'd\" yet?"
-
-                        scene v13s48_8a
-                        with dissolve
-
-                        au "*Chuckles* When are you wanting to have this... Date?"
-
-                    else:
-                        scene v13s48_8a
-                        with dissolve
-
-                        au "We can go as friends. When are you thinking about going?"
+                    au "We can go as friends. When are you thinking about going?"
 
     scene v13s48_8
     with dissolve
