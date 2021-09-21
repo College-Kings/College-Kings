@@ -27,7 +27,6 @@ label v11_Amber_Penelope:
             pause 0.5
 
         "Don't tease her":
-
             scene v11amp1
             with dissolve
 
