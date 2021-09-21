@@ -248,7 +248,6 @@ label v11_nora_chloe_hallway:
 
     charli "And what kind of company are you?"
 
-
     menu:
         "Mellow":
             scene v11nohall11c # same 11b, just change pose a little so conversation isn't stale

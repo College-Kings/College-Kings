@@ -212,7 +212,6 @@ label v11_chicks_house:
             li "That is some good advice."
 
         "I don't know":
-
             scene v11chh6a
             with dissolve
 
@@ -284,4 +283,3 @@ label v11_chicks_house:
         jump v11_wolves_seb_prank
     else:
         jump v11_apes_manhunt
-

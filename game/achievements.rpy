@@ -112,7 +112,7 @@ init python:
     Achievement("on_target", "Hit a bullseye at Duncan's")
     Achievement("just_a_theory", "Tell Riley dinosaurs aren't real")
     Achievement("fruity", "Have a cocktail at the bar")
-    Achievement("earn_your_owl", "Get all the HP answers right",)
+    Achievement("earn_your_owl", "Get all the HP answers right")
     Achievement("political_strategist", "Tell Autumn you're into politics and encourage Lindsey to run")
     Achievement("two_timer", "Date both Lauren and Chloe")
     Achievement("dont_just_stand_there", "Break Imre and Ryan apart")
@@ -120,7 +120,7 @@ init python:
 
     #v12.0
     Achievement("good_vs_evil", "Penelope understands you")
-    Achievement("a_person_like_me", "You see yourself as Penelope’s husband material")
+    Achievement("a_person_like_me", "You see yourself as Penelope's husband material")
         # Murder Mystery Achievements
     Achievement("zero_to_hero", "Tell Riley you are poor")
     Achievement("doctors_orders", "Accept Nurse Aubrey's advances")
