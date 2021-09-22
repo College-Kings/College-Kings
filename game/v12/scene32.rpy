@@ -272,7 +272,7 @@ label v12s32:
 
     menu:
         "Turn your back to Aubrey":
-            $ addPoint("bf")
+            $ addPoint("bro")
             scene v12s32_15a #same 15, MC crosses his arms and puts his back to Aubrey, aubrey a bit dissapointed, mouth upen
             with dissolve
 
@@ -294,8 +294,7 @@ label v12s32:
             pg "I wouldn't call that sexy but, alright..."
 
         "Put your arms around Aubrey":
-            $ addPoint("bro")
-
+            $ addPoint("bf")
             scene v12s32_15c #same 15, Aubrey has her back to MC and he wraps his arms around her, squeezing her in tight, Aubrey smiles at him, mouth closed
             with dissolve
 
