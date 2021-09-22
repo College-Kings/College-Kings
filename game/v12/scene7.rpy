@@ -402,7 +402,6 @@ label v12s7fr:
         pause
         hide murder_tutorial3b
 
-
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
@@ -1750,6 +1749,7 @@ label v12s7_lauren1:
 
             "Kill her":
                 $ addPoint("tm")
+                $ v12s7_killList.add(lauren)
                 scene v12ferla1
                 with dissolve
 
