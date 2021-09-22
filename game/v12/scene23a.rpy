@@ -343,7 +343,6 @@ label v12_mc_chilling:
                 u "Yeah. Of course I can take him. He may be a lunatic, but I can handle that."
 
             "Not fighting your brother":
-                
                 scene v12mor13a 
                 with dissolve
                 
@@ -865,7 +864,6 @@ label v12_mc_chilling:
                 pause 0.75
 
             "Don't call Cameron":
-              
                 scene v12mor22
                 with dissolve
 

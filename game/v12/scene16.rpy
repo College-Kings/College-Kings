@@ -608,7 +608,6 @@ label v12_valentine:
     menu:
         "Leave her be":
             $ addPoint("bro")
-
             u "(Not the time, not in front of everyone.)"
 
             scene v12val29a # FPP. Same as v12val29, Lindsey looking at Nora, Lindsey smiling, excited, mouth open (screaming)
@@ -623,7 +622,6 @@ label v12_valentine:
 
         "Comfort her":
             pause 0.5
-        
             $ addPoint("bf")
             scene v12val31 # TPP. Show MC leaning in a whispering in Nora's ear, holding her hand, Nora slight smile, mouth closed, MC slight smile, mouth open
             with dissolve

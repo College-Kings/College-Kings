@@ -322,12 +322,10 @@ label v12_riley_cafe:
     menu:
         "Oh yeah, good idea":
             $ addPoint("bf")
-
             u "Almost forgot about that... Yeah, that's definitely the move."
 
         "Ugh, do we have to?":
             $ addPoint("bro")
-            
             u "Oh yayyy, another boring treasure hunt."
 
     scene v12ric4a

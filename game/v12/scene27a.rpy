@@ -407,7 +407,6 @@ label v12s27a:
     with dissolve
 
     menu:
-
         "It's not a bad look":
             $ addPoint("bro")
             u "Honestly Ryan, it's not a bad look. It's actually pretty cool."
@@ -416,7 +415,6 @@ label v12s27a:
             with dissolve
 
             ry "*Sighs* I hope you're not just saying that..."
-
 
         "It's not your best look":
             $ addPoint("tm")
