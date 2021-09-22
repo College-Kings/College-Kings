@@ -131,7 +131,6 @@ label v11_at_the_bank:
 
     menu:
         "Just tired":
-
             u "Oh, no, sorry. I'm just a little tired."
 
             scene v11bank3c # FPP Same angle as v11bank3, bank teller with neutral expression, mouth open
@@ -260,7 +259,6 @@ label v11_at_the_bank:
 
     menu:
         "Stealth":
-
             u "Stealth obviously. You know they have silent security measures all throughout this entire place."
 
             scene v11bank10a
@@ -270,7 +268,6 @@ label v11_at_the_bank:
         
         "Chaos":
             $ addPoint("tm")
-
             u "I'm more of a guns blazing, lots of action guy. Go in hard or don't go at all."
 
             scene v11bank10a
@@ -408,7 +405,6 @@ label v11_at_the_bank:
 
     menu:
         "Amber":
-
             u "Let's go with an Amber distraction, we know she won't get nervous or mess anything up. *Chuckles*"
 
             scene v11bank10a
@@ -533,7 +529,6 @@ label v11_at_the_bank:
     menu:
         "Yep":
             $ addPoint("tm")
-
             u "I guess so, and to think I had such a bright future. Fuck..."
 
             scene v11bank19
@@ -594,7 +589,6 @@ label v11_at_the_bank:
             u "Alright, as fun as this has been, I think it's starting to get pretty out of hand. I never thought I'd be explaining that I had no real intentions of robbing a bank in London."
 
         "Stop playing":
-
             u "Alright, as fun as this has been, I think it's starting to get pretty out of hand. I never thought I'd be explaining that I had no real intentions of robbing a bank in London."
     
     scene v11bank17b
@@ -742,7 +736,6 @@ label v11_at_the_bank:
 
     menu:
         "Go with Mr. Lee":
-
             u "(I'd rather just walk.)"
 
             scene v11bank28 # TPP Show MC following Mr. Lee out of the bank
@@ -758,7 +751,6 @@ label v11_at_the_bank:
             jump v11_nora_lingerie
 
         "Go with Ms. Rose":
-
             u "(I'm definitely not walking back.)"
 
             scene v11bank28a # TPP Show Ms. Rose, Nora, Amber, Riley, and MC leaving the bank
