@@ -753,7 +753,7 @@ label v12s33_door1:
         scene v12s33_29c
         with dissolve
 
-    u "What have you guys been up to in here? So far it sounds like you were talking about us guys."
+    u "What have you been up to in here? So far it sounds like you were talking about us guys."
 
     scene v12s33_30b
     with dissolve
@@ -764,7 +764,6 @@ label v12s33_door1:
     with dissolve
 
     menu:
-
         "Not at all":
             $ addPoint ("bro")
             u "Not at all, you can talk about me all you want. I like knowing I'm on your mind... *Chuckles*"
@@ -1279,7 +1278,6 @@ label v12s33_sneak_off2:
     u "*Whisper* Haha, alright."
 
     menu:
-
         "Crawl to the next table":
             $ addPoint ("tm")
             scene v12s33_46 #TPP MC crawls to the next table and sees Nora, mc mouth open smiling, whispering 

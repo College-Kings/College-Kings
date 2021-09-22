@@ -483,12 +483,10 @@ label v12s32:
     menu:
         "Boost Aubrey":
             $ addPoint ("tm")
-
             $ v12s32_Aubrey_Boost = True
 
             scene v12s32_21c 
             with dissolve
-
             u "You thought that was good? Aubrey can do that, and better... Get up there Aubrey!"
 
             scene v12s32_20b
@@ -507,10 +505,8 @@ label v12s32:
 
         "Leave it alone":
             $ addPoint ("bro")
-
             scene v12s32_21c 
             with dissolve
-
 
             u "(She's already pressured by her sister, I shouldn't add to it.)"
 
@@ -525,14 +521,12 @@ label v12s32:
             au "*Whisper to self* Let's get this over with."
 
     if aubrey.points == 0:
-
         scene v12s32_20
         with dissolve
 
         au "*Sighs* Fine..."
 
     if aubrey.points > 0:
-
         scene v12s32_20d # same as 20b, aubrey cute smile at mc, mouth open
         with dissolve
 
@@ -840,9 +834,7 @@ label v12s32:
     menu: 
         "Get Aubrey flowers":
             $ s12v32_get_aubrey_flowers = True
-
             $ addPoint ("bf")
-
             u "Wait a minute, Aubrey."
 
             scene v12s32_33d # aubrey turns around, looks at mc, curious, mouth open
@@ -894,13 +886,10 @@ label v12s32:
             with dissolve
 
         "Don't get her flowers":
-
             $ addPoint ("bro")
-
             u "(That'd be doing too much... We're just friends.)"
 
     u "Right, let's go."
 
     stop music fadeout 3
-
     jump v12s33 #scene 33
