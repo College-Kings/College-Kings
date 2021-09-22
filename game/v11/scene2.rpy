@@ -118,6 +118,7 @@ label v11_nora_chloe_hallway:
 
     menu:
         "Defend Chloe":
+            $ addPoint("tm")
             $ noraLike -= 1
 
             scene v11nohall2d
@@ -250,6 +251,7 @@ label v11_nora_chloe_hallway:
 
     menu:
         "Mellow":
+            $ addPoint("bf")
             scene v11nohall11c # same 11b, just change pose a little so conversation isn't stale
             with dissolve
 
@@ -268,6 +270,7 @@ label v11_nora_chloe_hallway:
 
     menu:
         "Hanging with the girls":
+            $ addPoint("bf")
             scene v11nohall11c
             with dissolve
             u "Well, we'll be in another country surrounded by beautiful women... I'm sure you can imagine what I plan on doing. *Chuckles* Really though, I just wanna have fun no matter what."

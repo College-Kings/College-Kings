@@ -191,6 +191,11 @@ label v11_chicks_house:
 
     menu:
         "You should run":
+            if lindseyfirstkiss:
+                $ addPoint("bf")
+            elif chloers:
+                $ addPoint("tm")
+            
             scene v11chh6a
             with dissolve
 

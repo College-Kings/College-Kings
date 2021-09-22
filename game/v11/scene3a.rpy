@@ -75,6 +75,7 @@ label v11_wolves_packing_chris:
     with dissolve
     menu:
         "Let him":
+            $ addPoint("bro")
             scene v10swpc4
             with dissolve
 
@@ -89,6 +90,7 @@ label v11_wolves_packing_chris:
             with dissolve
             menu:
                 "Of course":
+                    $ addPoint("bro")
                     scene v10swpc4
                     with dissolve
 
@@ -228,6 +230,7 @@ label v11_wolves_packing_chris:
                     ch "I hope you're right."
                 
                 "Her or the frat":
+                    $ addPoint("tm")
                     scene v10swpc4
                     with dissolve
 

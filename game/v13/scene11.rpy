@@ -647,6 +647,11 @@ label v13_imre_continue:
             u "(I'm not getting involved in it.)"
 
         "Stick up for Ryan":
+            if joinwolves:
+                $ addPoint("tm")
+            else:
+                $ addPoint("bro")
+        
             scene v13s11_33a
             with dissolve
 
