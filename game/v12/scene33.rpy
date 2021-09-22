@@ -798,10 +798,8 @@ label v12s33_door1:
 
             u "Haha, alright... Noted."
 
-
         "Yes, haha":
             $ addPoint ("bf")
-
             u "Yes, haha. Who knows what kind of crazy theories you girls may be coming up with?"
 
             scene v12s33_30b
@@ -884,7 +882,6 @@ label v12s33_door1:
     play music "music/v12/Scene 33/Track Scene 33_5.mp3" fadein 2
 
     if v11_pen_goes_europe:
-
         scene v12s33_33 # FPP,close up Penelope, smiling, mouth open, looking at mc
         with dissolve
   
@@ -999,7 +996,6 @@ label v12s33_door1:
     am "Later."
 
     if v11_pen_goes_europe:
-
         scene v12s33_33
         with dissolve
 
@@ -1344,9 +1340,7 @@ label v12s33_sneak_off2:
     u "Oh, okay."
 
     stop music fadeout 3
-    
     jump v12s33_after_sauna
 
 label v12s33_after_sauna:
-
     jump v12_amber_after_spa #scene 34
