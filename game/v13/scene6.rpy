@@ -153,8 +153,6 @@ label v13s06:
 
             luuk "Impressive. *Chuckles*"
 
-
-
         "Yeah, probably not":
             scene v13s06_6
             with dissolve

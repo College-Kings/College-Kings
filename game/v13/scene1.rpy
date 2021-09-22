@@ -186,7 +186,6 @@ label v13_start:
     menu:
         "Don't let it happen again":
             $ addPoint("bro")
-            
             u "Just don't let it happen again, okay? I don't like being blamed for shit I didn't do."
 
             scene v13s1_3c

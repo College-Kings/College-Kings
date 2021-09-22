@@ -291,7 +291,7 @@ label v13_ticket_transfer:
 
                     pause 0.75
 
-                    jump end_scene
+                    jump v13s7_end_scene
 
                 "Aubrey":
                     $ aubrey.points += 1
@@ -506,7 +506,7 @@ label v13_ticket_transfer:
 
         u "(Bold guy...)"
 
-    label end_scene:
+    label v13s7_end_scene:
 
         stop music fadeout 3
         

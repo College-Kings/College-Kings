@@ -104,7 +104,6 @@ label v12_nora_room:
 
         "Time is key":
             $ v12_nora_points += 1
-
             scene v12nos1h
             with dissolve
 
