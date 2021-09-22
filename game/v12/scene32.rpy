@@ -779,13 +779,13 @@ label v12s32:
     au "I wanna get back as soon as possible and show these to everyone. I posted a few on Kiwii and my sister did too. Let's hurry back."
 
     python:
-        v12s32kiwiiPost1 = KiwiiPost("LewsOfficial", "v12/v12s32_15g.webp", _("New faces in our new pieces! Check out the new Lavish Line on our website ;)"), numberLikes=3889)
+        v12s32kiwiiPost1 = KiwiiPost("LewsOfficial", "v12/lews_post1.webp", _("New faces in our new pieces! Check out the new Lavish Line on our website ;)"), numberLikes=3889)
         v12s32kiwiiPost1.newComment("Naomi", _("That's my baby sis! <3"), numberLikes=renpy.random.randint(952, 1512), queue=False)
         v12s32kiwiiPost1.newComment("Aubrey", _("Thank you so much for having us! Can't wait for the future..."), numberLikes=renpy.random.randint(367, 526), queue=False)
         v12s32kiwiiPost1.newComment("Chloe", _("OMG!?!?!?!"), numberLikes=renpy.random.randint(124,354), queue=False)
         v12s32kiwiiPost1.newComment("Imre", _("Bro... Is that you?!"), mentions="MC", numberLikes=renpy.random.randint(53,93), queue=False)
 
-        v12s32kiwiiPost2 = KiwiiPost("Naomi", "v12/v12s32_24.webp", _("When little sis visits you at work and leaves with your JOB! #ProudBigSis"), numberLikes=2107)
+        v12s32kiwiiPost2 = KiwiiPost("Naomi", "v12/lews_post2.webp", _("When little sis visits you at work and leaves with your JOB! #ProudBigSis"), numberLikes=2107)
         v12s32kiwiiPost2.newComment("Aubrey", _("Haha! I love you boo... Thank you for today :)"), mentions="Naomi", numberLikes=renpy.random.randint(278, 363), queue=False)
         v12s32kiwiiPost2.newComment("Naomi", _("You're sooo welcome sissy. #ItRunsInTheFamily"), mentions="Aubrey", numberLikes=renpy.random.randint(747, 973), queue=False) 
         v12s32kiwiiPost2.newComment("Nora", _("Hotties!! Hope you had an amazing time... Can't wait to see all the pics!"), numberLikes=renpy.random.randint(253, 462), queue=False)
@@ -793,7 +793,7 @@ label v12s32:
         v12s32kiwiiPost2.newComment("Naomi", _("Thank you... <3"), numberLikes=renpy.random.randint(346, 579), queue=False)
         v12s32kiwiiPost2.newComment("Aubrey", _("Thanks guys... I'll tell you all about it Chlo! Lol"), numberLikes=renpy.random.randint(253, 462), queue=False)
 
-        v12s32kiwiiPost3 = KiwiiPost("Aubrey", "v12/v12s32_33.webp", _("You're looking at the newest Lew's model! #BestDayEver"), numberLikes=934)
+        v12s32kiwiiPost3 = KiwiiPost("Aubrey", "v12/lews_post3.webp", _("You're looking at the newest Lew's model! #BestDayEver"), numberLikes=934)
         v12s32kiwiiPost3.newComment("Naomi", _("Watch out world, there's two of us... ;)"), numberLikes=renpy.random.randint(532, 737), queue=False)
         v12s32kiwiiPost3.newComment("Chloe", _("Holy shit, Aubs! Fucking HOTTTT!!!"), numberLikes=renpy.random.randint(320, 479), queue=False)
         v12s32kiwiiPost3.newComment("Aubrey", _("Haha, thank you babes <3"), numberLikes=renpy.random.randint(253, 462), queue=False)
