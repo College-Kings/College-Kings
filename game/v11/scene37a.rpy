@@ -70,11 +70,9 @@ label v11_ride_with_mrlee:
 
     menu:
         "Imre":
-            
             u "I'd probably say Imre."
 
         "Ryan":
-            
             u "I'd probably say Ryan."
 
     scene v11wir2b # FPP Same angle as v11wir2, Mr. Lee with neutral expression, mouth open
@@ -129,11 +127,9 @@ label v11_ride_with_mrlee:
 
     menu:
         "Having responsibility":
-
             u "Well, those that have responsibilities don't have a choice but to act like an adult so I guess having responsibility."
 
         "Acting mature":
-            
             u "Well, to be either of those you have to act mature."
 
     scene v11wir4
@@ -209,11 +205,9 @@ label v11_ride_with_mrlee:
 
     menu:
         "Brotherhood":
-
             u "I enjoy the brotherhood, really. At the end of the day I know they all have my back."
 
         "Excitement":
-   
             u "Well honestly, I enjoy the excitement. At first I wasn't sure if I wanted to join a frat, but I'm glad I did."
             u "You never know what to expect and regardless of what crazy things may happen, at least you can never say you're bored. *Chuckles*"
 

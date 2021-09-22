@@ -4,7 +4,6 @@
 # Time: Day
 
 label v11_cardealership:
-
     scene v11cd1 # TPP. Shows MC and Chloe getting into the car dealership
     with fade
     play music "music/v11/Scene 34/Track Scene 34_1.mp3" fadein 2
@@ -91,7 +90,6 @@ label v11_cardealership:
         with dissolve
         
         cl "Plus who knows, I may get used to calling you that..."
-
 
     scene v11cd6
     with dissolve

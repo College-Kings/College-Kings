@@ -707,7 +707,7 @@ label v13s48:
 
     u "Oooh, now I'm excited. *Chuckles*."
 
-    if emily_europe:
+    if v10s33_ryan_flirt_emily and emily_europe:
         play sound "sounds/vibrate.mp3"
 
         scene v13s48_8
