@@ -9,7 +9,7 @@ screen v13s40_chloe():
             align (0.5, 0.5)
             spacing 25
 
-            if mc.has_item(honey) or True:
+            if mc.has_item(honey):# or True:
                 button:
                     action Jump("v13s40_honey")
 
@@ -18,7 +18,7 @@ screen v13s40_chloe():
                         add "images/button_gray.webp"
                         text honey.name align (0.5, 0.5)
 
-            if mc.has_item(spankers) or True:
+            if mc.has_item(spankers):# or True:
                 button:
                     action Jump("v13s40_spanker")
 
@@ -27,7 +27,7 @@ screen v13s40_chloe():
                         add "images/button_gray.webp"
                         text spankers.name align (0.5, 0.5)
 
-            if mc.has_item(feather) or True:
+            if mc.has_item(feather):# or True:
                 button:
                     action Jump("v13s40_feather")
 
