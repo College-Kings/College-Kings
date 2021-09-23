@@ -347,7 +347,7 @@ label v13s39a:
             jump v13s40
 
         else: 
-            jump to v13s41
+            jump v13s41
 
     else:
         scene v13s39a_4c
