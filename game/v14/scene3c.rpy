@@ -170,7 +170,7 @@ label v14s03c:
     scene v14s03c_4e
     with dissolve
 
-    satin "Well, earlier when I said oh like that, it was because I'm pretty sure the girl he's talking to has an STD..."
+    satin "Well, earlier when I said "oh" like that, it was because I'm pretty sure the girl he's talking to has an STD"...
 
     scene v14s03c_4f
     with dissolve
@@ -307,7 +307,7 @@ label v14s03c:
 
             pause 0.75
 
-            jump sv14s03d
+            jump scene v14s03d
             
            
         "Help Ryan...":
@@ -356,4 +356,4 @@ label v14s03c:
             scene v14s03c_3b
             with dissolve
 
-            jump v14s03e
+            jump scene v14s03e
