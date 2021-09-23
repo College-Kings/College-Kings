@@ -21,14 +21,20 @@ init python:
         return rv
 
     ## SCENE GALLERY ITEMS HERE
-    SceneGallery("sexdream1")
-    SceneGallery("v1_tomShoutBack")
-    SceneGallery("continuem")
-    SceneGallery("fkcon")
-    SceneGallery("aubreysexb")
-    SceneGallery("emsex_a")
-    SceneGallery("rileysexscene")
-    SceneGallery("brbj")
+        # v1
+    SceneGallery("sexdream1") #Riley
+        # v2
+    SceneGallery("v1_tomShoutBack") #Tom
+        # v3
+    SceneGallery("continuem") #Aubrey
+        # v5
+    SceneGallery("fkcon") #Adam
+        # v6
+    SceneGallery("aubreysexb") #Aubrey
+    SceneGallery("emsex_a") #Emily
+        # v7
+    SceneGallery("rileysexscene") #Riley
+    SceneGallery("brbj") #Aubrey
 
 screen spoiler():
     modal True

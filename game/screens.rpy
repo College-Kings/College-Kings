@@ -4,6 +4,9 @@
 init python:
     yadjValue = float("inf")
     yadj = ui.adjustment()
+    
+    inf_adj = ui.adjustment()
+    inf_adj.value = float("inf")
 
 init offset = -1
 
@@ -207,7 +210,7 @@ style input:
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
 
-screen choice(items, time=3):
+screen choice(items, seconds=3, fail_label=""):
     # Show KCT
     if showkct:
         use kctChoice
@@ -261,17 +264,15 @@ screen choice(items, time=3):
                     if count > 1:
                         xalign 0.5
 
-    if timed:
-        timer time:
-            action [SetVariable("timed", False), Jump(timerexit)]
+    if fail_label:
+        timer seconds:
+            action Jump(fail_label)
 
-        bar:
-            value AnimatedValue(0, time, time, time)
-            at alpha_dissolve
+        use timerBar(seconds)
 
     if config_debug:
         $ item = renpy.random.choice(items)
-        timer 0.1 action item.action
+        on "show" action item.action
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
 ## menu captions will be displayed as empty buttons.
@@ -322,16 +323,16 @@ screen quick_menu():
             textbutton _("Q.Load") action QuickLoad()
             textbutton _("Prefs") action ShowMenu('preferences')
 
-    if renpy.loadable("bugTesting/bugTesting.rpy") and config.developer:
+    if config.developer:
         hbox:
             style_prefix "quick"
             align (1.0, 1.0)
 
             textbutton "Scene Select":
-                action ShowMenu("bugTesting_SceneSelect")
+                action Show("bugTesting_SceneSelect")
 
             textbutton "Cheats":
-                action ShowMenu("bugTesting_cheatMenu")
+                action Show("bugTesting_cheatMenu")
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.
@@ -714,8 +715,9 @@ screen load():
 
 
 screen file_slots(title):
-
     default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
+    $ incompatible_game_versions = ["12.0.0", "0.6.4"]
+    $ incompatible_renpy_versions = ["7.4.8.1895", "7.4.7.1862"]
 
     use game_menu(title):
         
@@ -734,6 +736,12 @@ screen file_slots(title):
                     yalign 0.13
                     xalign 0.5
 
+                python:
+                    game_version = FileJson(1, key="_version") or ""
+                    renpy_version = FileJson(1, key="_renpy_version") or ""
+                    renpy_version = '.'.join(str(i) for i in renpy_version)
+                    file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
+
                 button:
                     style_prefix "slot"
                     align (0.5, 0.5)
@@ -742,7 +750,12 @@ screen file_slots(title):
 
                     has vbox
 
-                    add FileScreenshot(1) xalign 0.5
+                    if file_compatable:
+                        add FileScreenshot(1) xalign 0.5
+                        text game_version outlines [ (0, "#000", 3, 3) ] xpos 5
+                    else:
+                        add "#000"
+                        text "INCOMPATIBLE" color "#f00" xalign 0.5
 
                     text FileTime(1, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
                         style "slot_time_text"
@@ -774,16 +787,28 @@ screen file_slots(title):
 
                     spacing gui.slot_spacing
 
-                    for i in range(gui.file_slot_cols * gui.file_slot_rows):
-                        
-                        $ slot = i + 1
+                    for slot in range(1, gui.file_slot_cols * gui.file_slot_rows + 1):
+                        python:
+                            game_version = FileJson(slot, key="_version") or ""
+                            renpy_version = FileJson(slot, key="_renpy_version") or ""
+                            renpy_version = '.'.join(str(i) for i in renpy_version)
+                            file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
 
                         button:
                             action FileAction(slot)
 
                             has vbox
 
-                            add FileScreenshot(slot) xalign 0.5
+                            fixed:
+                                xysize (384, 220)
+
+                                if file_compatable:
+                                    add FileScreenshot(slot) xalign 0.5
+                                    text game_version outlines [ (0, "#000", 3, 3) ] xpos 5
+                                else:
+                                    add "#000"
+                                    text "INCOMPATIBLE" color "#f00" xalign 0.5
+                                
 
                             text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
                                 style "slot_time_text"
@@ -1334,7 +1359,6 @@ style nvl_window:
 
 style main_menu_frame:
     variant "small"
-
 
 style game_menu_navigation_frame:
     variant "small"

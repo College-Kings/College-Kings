@@ -2,6 +2,7 @@
 define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
 define config.default_sfx_volume = 1
+default menu_set = set()
 
 default achievementAtList = None
 default freeRoam = False
@@ -10,6 +11,7 @@ default kct = "confident"
 default sortedKCT = ["confident", "loyal", "popular"]
 
     ## Kiwii Vars
+default kiwiiUsers = kiwii_users()
 default kiwii_firstTime = False
 
     ## Fight Vars
@@ -19,6 +21,9 @@ default reaction = 1.0
 default reactiona = 1.0
 default bodyHook = False
 default enemyhealth = 0
+
+    ## Free Roam
+default previous_location = ""
 
 # 1.0 - 6.0
 default v1_sda = False
@@ -95,23 +100,11 @@ default notcool = False
 default difficulty = None
 default laawk = True
 default meetjulia = False
-default openwound = False
-default nohardfeelings = False
-default keepitmoving = False
-default romeo = False
-default bigmouth = False
-default mixedfeelings = False
-default thenotorious = False
-default anewbeginning = False
-default overit = False
 default rileykiss = False
 default toldlauren = False
 default laurenkissb = False
 default laurentoofar = False
 default dontanswerjulia = False
-default notnowmom = False
-default lipsdontlie = False
-default truthhurts = False
 default revengeadam = False
 default liejulia = False
 default girl = ""
@@ -133,9 +126,6 @@ default trolleyb = False
 default trolleyc = False
 default laurenokay = True
 default trolleyskip = 0
-default relightthefire = False
-default rematch = False
-default keeneye = False
 default chloemad = True
 default apologize = False
 default confrontadam = False
@@ -153,9 +143,6 @@ default imremad = False
 default firstfight = True
 default hl = 0
 default noexit = False
-default onthelow = False
-default petapublicenemy = False
-default snitch = False
 default chooseimre = True
 default meetchloe = False
 default imreforgives = False
@@ -173,8 +160,6 @@ default aubreysex2 = False
 default aubreyrs = False
 default aubmsg19a = 0
 default aubrep19 = 0
-default timed = False
-default timerexit = "timera"
 default moveuppercut = False
 default joinapes = False
 default pemsgnot = 0
@@ -217,13 +202,6 @@ default upstairs = "nobody"
 default kimpuke = False
 default fr3matt = False
 default save = 0
-default brosbeforehoes = False
-default credulous = False
-default monkeybusiness = False
-default notmybusiness = False
-default reignition = False
-default seemsfishy = False
-default strike = False
 default v3_aubsex = False
 
 # 7.0
@@ -295,12 +273,4 @@ default hcAsked = [] # hcAsked.append("girl_name") to add
 default consoledSam = False
 default emilyText = False
 default laurenpt = 0
-default ecstatic = False
-default homecomingqueen = False
-default leeway = False
-default playingwithfire = False
-default silverback = False
-default slowandsteady = False
-default truetoself = False
-default wolfpack = False
 default nobeach = False

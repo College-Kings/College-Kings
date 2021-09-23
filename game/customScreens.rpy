@@ -196,16 +196,16 @@ screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings_
     modal True
     zorder 100
 
-    add "images/steam/endScreen.webp"
+    add "images/steam/end_screen.webp"
 
     imagebutton:
         idle "images/steam/playNow.webp"
         hover "images/steam/playNowHover.webp"
 
-        if achievement.steam.dlc_installed(1624520):
+        if achievement.dlc_installed(1624520):
             action [Function(renpy.quit, relaunch=True, save=True)]
-        elif achievement.steam.is_overlay_enabled():
-            action Function(achievement.steam.activate_overlay_to_web_page, link)
+        elif achievement.is_overlay_enabled():
+            action Function(achievement.activate_overlay_to_web_page, link)
         else:
             action OpenURL(link)
         align (0.5, 0.55)
@@ -231,7 +231,7 @@ screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings_
 screen getaccess():
     tag endScreen
 
-    add "images/endscreen.webp"
+    add "images/end_screen.webp"
 
     hbox:
         align (0.5, 0.9)
@@ -307,26 +307,29 @@ screen teamCredits():
         vbox:
             spacing 10
 
-            text "UndergradSteve - Game Designer"
+            text "UndergradSteve - Game Creator"
             text "KingLui - Project Manager"
-            text "OscarSix - Lead Programmer"
-            text "Lew - Lead Artist"
+            text "OscarSix - Chief Technical Officer"
             null height 20
             text "Oskin - Lead Enforcer"
             text "Lucious Lordswill - Lead Writer"
-            text "Hive - Lead Transcriber"
+            text "Cheexmarie - Lead Editor"
+            text "Peace - Head Transcriber"
             text "Condy - Quality Assurance Manager"
             text "Jany - Translation Manager"
+            text "Mozzart - Lead Artist & Coordinator"
             null height 20
             text "Maro - Marketing Specialist"
-            text "Cheyenne Alexander - Editor"
 
         vbox:
             spacing 10
 
-            text "Peace - Transcriber"
-            text "Wolf - Transcriber"
+            text "HugeBoiV2 - Transcriber"
             text "Jeffly - Transcriber"
+            text "MegaManX - Transcriber"
+            text "mstep17 - Transcriber"
+            text "SystemFailed - Transcriber"
+            text "Wolf - Transcriber"
             text "Dorkby - Animator"
             text "Wiebley - Renderer"
             text "Ranger - 3d Modeler"
@@ -336,6 +339,7 @@ screen teamCredits():
             text "Sznuk - Renderer"
             text "Raystorm41 - Render"
             text "Stefan - Photoshopper"
+            text "Space-Storm - Tech Assistant"
 
     text "Special thanks to all the community members and players who have made this project possible :)":
         align (0.5, 0.9)
