@@ -120,7 +120,7 @@ label v14s03a:  # -MC walks overs and stands in front of the night gambler-
 
             ngam "Brother man... C'mon now..."
 
-            scene v14s03a_e
+            scene v14s03a_2e
             with dissolve
 
             u "I'm good, man."
@@ -361,7 +361,7 @@ label v14s03a:  # -MC walks overs and stands in front of the night gambler-
 
             u "Now tell me, did I or didn't I just see the ball roll out of your sleeve?"
 
-            scene v14s03a_h
+            scene v14s03a_2h
             with dissolve
 
             ngam "The eyes can be deceiving brother man."
@@ -370,9 +370,6 @@ label v14s03a:  # -MC walks overs and stands in front of the night gambler-
             with dissolve
 
             imre "Alright, I'm gonna roll this motherfu-."
-
-            scene v14s03a_
-            with dissolve
 
             scene v14s03a_10  # FPP. Gambler turns and starts to run away from MC, mouth closed.
             with dissolve
