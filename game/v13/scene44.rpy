@@ -4,7 +4,6 @@
 # Time: Morning
 
 label v13s44:
-
     scene v13s44_1 # TPP. Show MC walking down the hallway, Lauren slightly behind him, both Slight smile, both mouth open.
     with dissolve
 
@@ -59,6 +58,7 @@ label v13s44:
         la "*Sighs* Yes, I'm sure. Now, look..."
 
         $ laurenrs = False
+        $ laurenrs_v11aubrey = True
 
     else:
         scene v13s44_4 # FPP. MC looking at Lauren, Lauren looking at MC, Lauren slight smile, mouth open.

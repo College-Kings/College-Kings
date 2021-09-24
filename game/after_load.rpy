@@ -619,6 +619,9 @@ label after_load:
         except NameError: v13s40_backpoint = False
         try: v13s40_shoulderpoint
         except NameError: v13s40_shoulderpoint = False
+        try: laurenrs_v11aubrey
+        except NameError: laurenrs_v11aubrey = False
+
 
     show no_hard_feelings at achievementShow
     $ achievementAtList = renpy.get_at_list("no_hard_feelings")

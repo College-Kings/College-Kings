@@ -417,7 +417,6 @@ label v13s41:
             li "I just wish they could see that."
 
         "They shouldn't":
-
             scene v13s41_14e
             with dissolve
 
@@ -529,7 +528,7 @@ label v13s41:
 
     menu:
         "You're beautiful":
-
+            $ addPoint("bf")
             scene v13s41_14l # FPP. same as v13s41_14g lindsey mouth closed slight smile
             with dissolve
 
@@ -542,7 +541,6 @@ label v13s41:
                 li "You're so sweet to me, [name]."
 
             else:
-
                 scene v13s41_14m # FPP. same as v13s41_14f Lindsey looks into MC's eyes, full smile
                 with dissolve
 
@@ -566,7 +564,6 @@ label v13s41:
 
         "Of course":
             $ addPoint("bro")
-
             scene v13s41_14g
             with dissolve
 

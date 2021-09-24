@@ -146,7 +146,6 @@ label v13s47:
     u "Okay."
 
     if laurenrs:
-
         scene v13s47_3
         with dissolve
 
@@ -174,11 +173,9 @@ label v13s47:
         u "Haha, bye."
 
         stop music fadeout 3
-
         jump v13s48
 
     else:
-
         scene v13s47_3a
         with dissolve
 
@@ -190,5 +187,4 @@ label v13s47:
         u "Bye, you too."
 
         stop music fadeout 3
-
         jump v13s48
