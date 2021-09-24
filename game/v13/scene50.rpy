@@ -166,6 +166,7 @@ label v13s50:
 
     menu:
         "He knows more":
+            $ addPoint("bro")
             scene v13s50_9a
             with dissolve
 
@@ -386,7 +387,6 @@ label v13s50:
             u "(I'm taking my ass to bed.)"
 
         "Fuck her":
-            
             scene v13s50_18a # TPP. Same as v13s50_18, MC, slight smile, mouth open
             with dissolve
 

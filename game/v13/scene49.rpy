@@ -67,7 +67,7 @@ label v13s49:
 
         jump v13s50
   
-    elif not v13s48_ryan_double_date and emily_europe:
+    elif emily_europe:
         scene v13s49_5 # FPP. Show Emily walking up to MC, angry expression, mouth closed.
         with dissolve
 
