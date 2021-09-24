@@ -145,11 +145,9 @@ label v13s18:
     with dissolve
 
     if not v12_nora_sex:
-
         u "(Well... She looked... Happy? *Chuckles*)"
 
     else:
-
         u "(We were just fucking the other night... and now she's back to holding hands with him?)"
 
         scene v13s18_3
@@ -179,7 +177,7 @@ label v13s18:
             scene v13s18_3
             with dissolve
 
-            u "*Sighs* (Nah, nevermind. I'll just let this play out on it's own...)"
+            u "*Sighs* (Nah, nevermind. I'll just let this play out on its own...)"
 
     scene v13s18_10 # FPP. MC looking at Luuk standing next to the table with the food, Luuk slight smile, mouth open.
     with dissolve
