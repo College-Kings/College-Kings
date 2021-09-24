@@ -376,7 +376,6 @@ label v13s24:
         "No kids for me":
             $ addPoint("bro")
             $ v13_told_emmy_no_kids_for_me = True
-
             u "Yeah, I'm on the no kids vibe at the moment too. Guess it's just not something I think about."
 
             scene v13s24_16d # FPP. same as v13s24_16b emmy head tilted, playing with her hair, happy smile
@@ -386,7 +385,6 @@ label v13s24:
 
         "I'm a family man":
             $ addPoint("bf")
-
             u "I'm a family man of course, a little bit of me continued through our generations. That's really what I'm all about."
 
             scene v13s24_16e # FPP. same as v13s24_16b emmy flirty smirk, squinting a little like she's trying to figure him out
@@ -417,7 +415,6 @@ label v13s24:
     menu:
         "City":
             $ v13_told_emmy_city = True
-
             scene v13s24_16b
             with dissolve
 
