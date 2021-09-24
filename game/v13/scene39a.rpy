@@ -161,7 +161,6 @@ label v13s39a:
 
         menu:
             "Shoot left pocket":
- 
                 scene v13s39a_9b # FPP. same as v13s39a_9a pool stick is now visible and mc is aiming the pool stick at the cue ball to put the 8 ball into the left pocket
                 with dissolve
 
@@ -188,7 +187,6 @@ label v13s39a:
                 u "You got lucky. *Chuckles*"
 
             "Shoot right pocket":
-
                 scene v13s39a_9c  # FPP. same as v13s39a_9a pool stick is now visible and mc is aiming the pool stick at the cue ball to put the 8 ball into the right pocket
                 with dissolve
 
@@ -224,68 +222,66 @@ label v13s39a:
 
                 u "Or I'm just good. *Laughs*"
 
-                scene v13s39a_4
+        scene v13s39a_4
+        with dissolve
+
+        ry "Sureee... *Chuckles*"
+
+        scene v13s39a_4
+        with dissolve
+
+        ry "Alright, so what's your answer man? Willing to do the date?"
+
+        scene v13s39a_4a
+        with dissolve
+
+        menu:
+            "Sure":
+                scene v13s39a_4a
                 with dissolve
 
-                ry "Sureee... *Chuckles*"
+                u "Sure man, I guess I don't see what's so bad about it."
 
-                scene v13s39a_4
+                scene v13s39a_4c
                 with dissolve
 
-                ry "Alright, so what's your answer man? Willing to do the date?"
+                ry "For real? You'll do it?"
 
                 scene v13s39a_4a
                 with dissolve
 
-                menu:
-                    "Sure":
+                u "Yeah, I don't see why not."
 
-                        scene v13s39a_4a
-                        with dissolve
+                scene v13s39a_4c
+                with dissolve
 
-                        u "Sure man, I guess I don't see what's so bad about it."
+                ry "Wow, that's not what I expected. Thanks dude, really."
 
-                        scene v13s39a_4c
-                        with dissolve
+                scene v13s39a_4a
+                with dissolve
 
-                        ry "For real? You'll do it?"
+                u "Yeah, for sure."
 
-                        scene v13s39a_4a
-                        with dissolve
+            "Sorry, but no":
+                scene v13s39a_4f # FPP. same as v13s39a_4a ryan is slightly sad
+                with dissolve
+                
+                u "Sorry man, but no. I'm not trying to throw myself in the fire like that."
 
-                        u "Yeah, I don't see why not."
+                scene v13s39a_4g # FPP. same as v13s39a_4f ryans mouth is open
+                with dissolve
 
-                        scene v13s39a_4c
-                        with dissolve
+                ry "Yeah I get it. That's kinda what I expected but I had to ask."
 
-                        ry "Wow, that's not what I expected. Thanks dude, really."
+                scene v13s39a_4f
+                with dissolve
 
-                        scene v13s39a_4a
-                        with dissolve
+                u "I'm sorry."
 
-                        u "Yeah, for sure."
+                scene v13s39a_4
+                with dissolve
 
-                    "Sorry, but no":
-
-                        scene v13s39a_4f # FPP. same as v13s39a_4a ryan is slightly sad
-                        with dissolve
-                        
-                        u "Sorry man, but no. I'm not trying to throw myself in the fire like that."
-
-                        scene v13s39a_4g # FPP. same as v13s39a_4f ryans mouth is open
-                        with dissolve
-
-                        ry "Yeah I get it. That's kinda what I expected but I had to ask."
-
-                        scene v13s39a_4f
-                        with dissolve
-
-                        u "I'm sorry."
-
-                        scene v13s39a_4
-                        with dissolve
-
-                        ry "It's all good."
+                ry "It's all good."
 
         scene v13s39a_11 # FPP. Mc sees emily and aubrey playing pool at another table, emily and aubrey looking at each other, slight smiles, emily mouth open
         with dissolve
@@ -302,7 +298,6 @@ label v13s39a:
 
         menu:
             "Stare":
-
                 scene v13s39a_11a
                 with dissolve
 
@@ -314,11 +309,10 @@ label v13s39a:
                 u "(Okay...)"
 
             "Look away":
-
                 scene v13s39a_4h # FPP. same as v13s39a_4a ryan looks concerned, emily and aubrey visible in the background, emily and aubrey looking at each other, slight smiles, mouths closed
                 with dissolve
                 
-                u "(Just ignore her [name].)"
+                u "(Just ignore her, [name].)"
 
         scene v13s39a_4i # FPP. same as v13s39a_4h mouth open
         with dissolve
@@ -403,7 +397,6 @@ label v13s39a:
 
         menu:
             "Not a sports car fan":
-        
                 scene v13s39a_4a
                 with dissolve
 
@@ -420,7 +413,6 @@ label v13s39a:
                 u "*Chuckles*"
 
             "I love sports cars":
-                
                 scene v13s39a_4a
                 with dissolve                
 
@@ -526,7 +518,6 @@ label v13s39a:
 
         menu:
             "Shoot left pocket":
- 
                 scene v13s39a_9b
                 with dissolve
 
@@ -553,7 +544,6 @@ label v13s39a:
                 u "You got lucky. *Chuckles*"
 
             "Shoot right pocket":
-
                 scene v13s39a_9c
                 with dissolve
 
@@ -584,10 +574,10 @@ label v13s39a:
 
                 u "Or I'm just good. *Laughs*"
 
-                scene v13s39a_4
-                with dissolve
+        scene v13s39a_4
+        with dissolve
 
-                ry "Sureee... *Chuckles*"
+        ry "Sureee... *Chuckles*"
 
         scene v13s39a_4m # FPP. same as v13s39a_4c ryan pulls out his phone and looks at it with a smile
         with dissolve
