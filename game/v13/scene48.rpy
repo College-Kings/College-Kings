@@ -135,7 +135,6 @@ label v13s48:
     menu:
         "Stay quiet":
             $ addPoint("bro")
-
             scene v13s48_6
             with dissolve
 
@@ -143,7 +142,6 @@ label v13s48:
 
         "DAMNNN...!":
             $ addPoint("bf")
-
             scene v13s48_6
             with dissolve
             
@@ -305,12 +303,10 @@ label v13s48:
     menu:
         "Because we're friends":
             $ addPoint("bro")
-
             u "Because we're friends and it'd be nice to know you a bit better. *Chuckles*"
 
         "Because I like you":
             $ addPoint("bf")
-
             u "Because I like you, and it'd be nice to add more reasons why I like you to my list. *Chuckles*"
 
     scene v13s48_8a
@@ -652,7 +648,6 @@ label v13s48:
         menu:
             "I meant as friends":
                 $ addPoint ("bro")
-
                 scene v13s48_8
                 with dissolve
 
