@@ -875,17 +875,17 @@ label v13s34:
 
     pause 0.75 
 
-    scene v13s34_36g
+    scene v13s34_30e
     with dissolve
 
     u "Mr. Lee, I'm gonna go as well. I don't know if I should say thanks or that I hate you..."
 
-    scene v13s34_36f
+    scene v13s34_23b
     with dissolve
 
     lee "You can do both. *Chuckles* Have a good day, [name]."
 
-    scene v13s34_36g
+    scene v13s34_30e
     with dissolve
 
     u "You too."
