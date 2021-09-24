@@ -42,7 +42,6 @@ label v13s56:
     u "I definitely feel that. *Chuckles*"
 
     if v12_nora_sex:
-
         scene v13s56_2
         with dissolve
 
@@ -103,7 +102,6 @@ label v13s56:
 
     menu:
         "*Accidently* bump against her":
-            
             scene v13s56_98 # TPP. MC grinds up against Nora's ass, Nora looks back slightly shocked, mouth open
             with dissolve
 
@@ -137,14 +135,12 @@ label v13s56:
                 no "Yeah... I heard you."
 
             else:
-
                 scene v13s56_5d
                 with dissolve
 
                 no "Yeah... I heard you."
 
         "Be respectful":
-
                 scene v13s56_99 # FPP. same as v13s56_5 MC looks down at his crotch
                 with dissolve
 
@@ -277,7 +273,6 @@ label v13s56:
     menu:
         "Perfume":
             $ v13_perfume = True
-
             scene v13s56_6h
             with dissolve
 
