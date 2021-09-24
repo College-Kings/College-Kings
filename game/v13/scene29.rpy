@@ -139,6 +139,7 @@ label v13s29:
         with dissolve
 
         gary "Can either of you tell me what this is?"
+
     else:
         scene v13s29_10
         with dissolve
@@ -265,7 +266,6 @@ label v13s29:
     with dissolve
 
     menu:
-        
         "Nope":
             scene v13s29_17a # FPP. Same angle as v13s29_17, MC hand up, refusing bong, Gary very sad, lowering bong, frowning, mouth closed
             with dissolve
@@ -284,7 +284,6 @@ label v13s29:
             
         "Okay":
             $ addPoint("bro")
-
             u "Okay, sure."
 
             scene v13s29_18 # TPP. Show MC hitting bong, bong full of smoke

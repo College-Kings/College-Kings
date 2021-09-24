@@ -111,7 +111,7 @@ label v13s30:
         scene v13s30_2
         with dissolve
 
-        am "You said you wanted to come back when we were in London so, if you get fucked up, that's on you. *Chuckles*"
+        am "You said you wanted to come back when we were in London. So if you get fucked up, that's on you. *Chuckles*"
 
     scene v13s30_2a
     with dissolve

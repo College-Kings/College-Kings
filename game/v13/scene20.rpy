@@ -37,7 +37,6 @@ label v13s20_closet:
 
     menu:
         "Soak that shit":
-
             u "(Guess I gotta be that someone...)"
 
             scene v13s20clo_4 # TPP. Show MC pissing on Charli's clothes, smirking, mouth closed
@@ -58,7 +57,6 @@ label v13s20_closet:
             u "*Laughs* Shit, man... He pisses so many people off, it's only fair he smells like it too. Haha!"
 
         "That's too far":
-
             u "*Chuckles* I can't do that nasty shit."
         
     scene v13s20clo_6 # TPP. Show MC walking away from the closet, smirking, mouth closed
@@ -83,9 +81,7 @@ label v13s20_bleach:
 
     menu:
         "Bleach his suitcase":
-
             $ v13s20_bleach_suitcase = True
-
             u "(Riley said this suitcase is special to him, and that bleach would be a good addition to it... Let's find out.) *Laughs*"
 
             scene v13s20bleach_3 # TPP. Show MC grabbing the bottle of bleach, smirking, mouth closed
@@ -129,7 +125,6 @@ label v13s20_bleach:
             pause 0.75
 
         "That's too far":
-
             u "Damn, that's potent! *Chuckles* This is so fucked up..."
 
             scene v13s20bleach_1a
@@ -176,7 +171,6 @@ label v13s20_toothbrush:
             u "This is why you shouldn't be a trashy human being, pal..."
 
         "Too much":
-            
             u "(Nah... I won't do that. I'd have to kill someone if they did that to me.)"
     
     scene v13s20brush_1a # TPP. Same as v13s20brush_1, MC putting the toothbrush back, smirking, mouth closed

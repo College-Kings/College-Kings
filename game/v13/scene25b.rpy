@@ -1,4 +1,4 @@
-# SCENE 25b: Date with Arysssa
+# SCENE 25b: Date with Aryssa
 # Locations: Simplr Bar
 # Characters: ARYSSA (Outfit: 1), MC (Outfit: 9)
 # Time: Afternoon 
