@@ -1124,7 +1124,29 @@ label v12s33_three_doors_back:
     scene v12s33_38
     with dissolve
 
-    lee "That'll count as one. *Chuckles* Let's go back to silently relaxing, boys."
+    lee "That'll count as one..."
+
+    if joinwolves:
+        u "Oh yeah, Ryan! I forgot to ask why you decided to dye your hair..."
+
+        imre "He's trying to look as good as me, [name]. Tall, dark and handsome."
+
+        ry "Uh, hell no... I lost a bet. \"Hashtag roasted ape\". Ha..."
+
+        imre "Wow, that was sad."
+
+        u "*Laughs*"
+
+    else:
+        ry "Nice cupcake, Imre. Laughs Is that the flavor of your nipples?"
+
+        imre "Shut the hell up... It was a \"pick at random\" tattoo parlor, alright?"
+
+        u "Haha, alright... I can't say it doesn't suit you, though."
+
+        imre "Thanks... I think."
+    
+    lee "*Chuckles* Alright, enough bantering. Let’s go back to silently relaxing, boys."
 
     scene v12s33_41 # close up show clock inside sauna at 16:15
     with dissolve
