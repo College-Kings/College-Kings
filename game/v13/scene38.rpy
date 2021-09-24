@@ -18,7 +18,7 @@ label v13_walk_imre:
         scene v13s38_2a # FPP. Same as 2, mouth closed
         with dissolve
 
-        u "I'm not a fuckboy Imre."
+        u "I'm not a fuckboy, Imre."
 
         scene v13s38_2b # FPP. Same as 2, imre looking confused, mouth opened
         with dissolve
@@ -28,7 +28,7 @@ label v13_walk_imre:
         scene v13s38_2c # FPP. Same as 2b, mouth closed
         with dissolve
 
-        u "We've gotten really close these past few weeks, man and shit just... happened."
+        u "We've gotten really close these past few weeks, man, and shit just... happened."
 
         scene v13s38_2a
         with dissolve

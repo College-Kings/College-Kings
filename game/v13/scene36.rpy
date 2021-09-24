@@ -4,7 +4,6 @@
 # Time: evening 
 
 label v13_walk_garden:
-    
     scene v13s36_1 # TPP. MC and lindsey walking along the sidewalk
     with fade
 
@@ -114,4 +113,4 @@ label v13_walk_garden:
 
     stop music fadeout 3
 
-    jump v13s37 #fix with real jump
+    jump v13s37
