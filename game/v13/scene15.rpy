@@ -193,7 +193,6 @@ label v13s15:
                 menu:
                     "Grabbing a snack":
                         $ chloeSus += 1
-
                         u "Oh, um... My stomach is feeling really empty, so I'm gonna go try to find something to snack on..."
 
                         scene v13s15_15

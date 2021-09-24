@@ -751,7 +751,6 @@ label v13s40_end_free_roam:
 
         $ renpy.end_replay()
 
-
         stop music fadeout 3
 
         jump v13s40a

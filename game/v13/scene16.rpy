@@ -175,14 +175,12 @@ label v13s16:
 
     menu:
         "I don't see why not":
+            $ v13s16_lauren_points += 1
             scene v13s16_7f
             with dissolve
-
             u "I don't see why not. Even if it's just out of respect for you, I'd do what I had to do in order to get along."
 
         "Might be an issue":
-            $ v13s16_lauren_points += 1
-            
             u "It might be an issue at some point, but who can say they get along with everyone?"
 
     scene v13s16_7
