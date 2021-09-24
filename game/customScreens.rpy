@@ -196,7 +196,7 @@ screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings_
     modal True
     zorder 100
 
-    add "images/steam/endScreen.webp"
+    add "images/steam/end_screen.webp"
 
     imagebutton:
         idle "images/steam/playNow.webp"
