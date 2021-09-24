@@ -178,7 +178,6 @@ label v13s12a:
             au "*Laughs*"
 
         "Say nothing":
-            
             u "(I don't want any attention.)"
 
     scene v13s12a_7a # TPP. Same as v13s12a_7, Polly singing
@@ -263,7 +262,6 @@ label v13s12a:
             pause 0.75
 
         "Ignore him":
-
             u "Hmph!"
 
             unknown "DON'T FUCKING IGNORE ME, DO YOU KNOW WHO I-"
@@ -424,7 +422,6 @@ label v13s12a:
             jump v13s13a
 
         "Say nothing":
-
             u "(OH SHIT!)"
 
             scene v13s12a_7b

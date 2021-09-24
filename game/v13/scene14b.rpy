@@ -252,7 +252,6 @@ label v13s14b:
     menu:
         "Be a gentleman":
             $ addPoint("bf")
-
             u "Penelope, you're pretty drunk. *Chuckles* I should get you back so you can get a good night's worth of sleep."
 
             scene v13s14b_16a # FPP Same angle as 16, Penelope dissapointed but still smiling, mouth open
@@ -287,7 +286,6 @@ label v13s14b:
 
         "Have fun":
             $ addPoint("tm")
-
             u "I may just let you..."
 
             play sound "sounds/kiss.mp3"

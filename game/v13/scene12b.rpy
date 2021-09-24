@@ -155,7 +155,6 @@ label v13s12b:
             pe "I just don't want people staring at me. *Laughs*"
 
         "Say nothing":
-            
             u "(I don't want any attention.)"
 
     scene v13s12b_7a # TPP. Same as v13s12b_7, Polly singing

@@ -547,6 +547,9 @@ label v11_quiz_q2:
     with dissolve
 
     menu (fail_label="v11_answer_13"):
+        "13":
+            jump v11_answer_13
+
         "29":
             $ laurenLike += 1
             $ v11_hp_points += 1
@@ -567,9 +570,6 @@ label v11_quiz_q2:
             u "I'm not a beginner..."
 
             jump v11_quiz_q3
-
-        "13":
-            jump v11_answer_13
         
 label v11_answer_13:
     $ laurenLike -= 1

@@ -1,4 +1,4 @@
-# SCENE 16: The story of Valantine
+# SCENE 16: The story of Valentine
 # Locations: Church, Hotel Lobby, Sidewalk
 # Characters: MC (Outfit: 5), RILEY (Outfit: 2), MR. LEE (Outfit: 1), LINDSEY (Outfit: 1), IMRE (Outfit: 1), BISHOP (Outfit: 1), NORA (Outfit: 1), CHARLI (Outfit: 1), CHRIS (Outfit: 1), CHLOE (Outfit: 5)
 # Time: Afternoon

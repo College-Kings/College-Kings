@@ -171,7 +171,6 @@ label v13s13b:
             polly "Yeah! That's my sister!"
 
         "Leave her alone":
-
             u "(I don't want to make it more embarrassing for her.)"
 
             scene v13s13b_3a
@@ -250,7 +249,6 @@ label v13s13b:
 
     menu:
         "We're not a couple":
-    
             u "We're not really a couple, but thanks. *Chuckles*"
 
             scene v13s13b_2k # FPP Same as 2j, Polly with phone, smiling, mouth open
@@ -260,7 +258,6 @@ label v13s13b:
 
         "Thanks":
             $ addPoint("bf")
-
             u "Haha, thanks."
 
             scene v13s13b_5a # TPP Same angle as 5, Penelope kissing MC on the cheek
@@ -351,7 +348,6 @@ label v13s13b:
 
     menu:
         "Not exactly":
-    
             u "Not exactly... Usually spend time at bars, haha."
 
             scene v13s13b_2b

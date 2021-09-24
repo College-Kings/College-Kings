@@ -280,7 +280,6 @@ label v13s13a:
 
     menu:
         "Not really":
-
             u "I'm not really... Although, I've probably never been to a real, pop star-worthy nightclub. *Laughs*"
 
             scene v13s13a_2b
