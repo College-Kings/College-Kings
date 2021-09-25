@@ -29,13 +29,11 @@ label v14s14:
 
     u "(Who's blowing up my phone?)"
 
-    call screen phone 
-
-    $ contact_Chloe.newMessage(_("You won't believe what I'm looking at right now!!!! "), queue=True)
-    $ contact_Chloe.newMessage(_("Lindsey and I are NOT friends anymore. "), queue=True)
-    $ contact_Chloe.newMessage(_("I'm gonna need your help with the president thing, big time "), queue=True)
-    $ contact_Chloe.newMessage(_("[name]!!! "), queue=True)
-    $ contact_Chloe.newMessage(_("Right, you're probably asleep. When you read this, just meet me in the hall near Ms. Rose's classroom at 10."), queue=True)
+    $ contact_Chloe.newMessage(_("You won't believe what I'm looking at right now!!!!"))
+    $ contact_Chloe.newMessage(_("Lindsey and I are NOT friends anymore."))
+    $ contact_Chloe.newMessage(_("I'm gonna need your help with the president thing, big time"))
+    $ contact_Chloe.newMessage(_("[name]!!!"))
+    $ contact_Chloe.newMessage(_("Right, you're probably asleep. When you read this, just meet me in the hall near Ms. Rose's classroom at 10."))
 
     label v14s14_PhoneContinueChloe:
         if contact_Chloe.getReplies():
