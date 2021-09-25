@@ -61,5 +61,5 @@ label v14s14:
     scene v14s14_5 # TPP. MC throwing his door open in a hurry and running out, worried face, mouth closed.
     with dissolve
 
-    jump scene v14s15
+    jump v14s15
 
