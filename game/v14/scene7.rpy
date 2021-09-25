@@ -61,7 +61,6 @@ label v14s07:
     ro "There were memories made..."
 
     if msrosers:
-
         scene v14s07_2c # FPP. same as v14s07_2a Ms. Rose makes direct eye contact with mc
         with dissolve
 
