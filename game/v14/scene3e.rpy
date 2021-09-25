@@ -137,7 +137,7 @@ label v14s03e:
         scene v14s03e_6f # FPP. Same as v14s03e_6c, annoyed expression
         with dissolve
 
-        ry "Yeah, yeah. Whatever [Name]."
+        ry "Yeah, yeah. Whatever [name]."
 
         ry "I'll give you a pass this time since nothing happened."
 
@@ -395,7 +395,7 @@ label v14s03e:
     scene v14s03e_20b # FPP. Same as v14s03e_20, serious expression 
     with dissolve
 
-    ry "Ha, alright [Name]. Chill out."
+    ry "Ha, alright [name]. Chill out."
 
     scene v14s03e_21 # TPP. Show MC and Ryan leaving the brothal, both neutral expression, mouth closed 
     with dissolve

@@ -413,7 +413,7 @@ label v13s34:
 
     ri "*Crying* I j-just blame myself for... getting you wrapped up in a-all of this..."
 
-    ri "I always force you into this stupid stuff, [Name]. *Sobs* And look where it got us!"
+    ri "I always force you into this stupid stuff, [name]. *Sobs* And look where it got us!"
 
     scene v13s34_31 # FPP. Show bag being removed from MCs face, MC can see the lower extremites of Clipps, and Mr. Lee in the background
     with dissolve

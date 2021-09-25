@@ -377,7 +377,7 @@ label v13s46:
     scene v13s46_2b # FPP. same as v13s46_2a Lauren stops her bike, and gets off her bike
     with dissolve
 
-    la "*Whispers* [Name], stop! For real, stop..."
+    la "*Whispers* [name], stop! For real, stop..."
 
     scene v13s46_2c # FPP. same as v13s46_2b MC stops his bike, and gets off his bike
     with dissolve

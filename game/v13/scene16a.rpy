@@ -71,7 +71,7 @@ label v13s16a:
     scene v13s16a_5a # FPP Same as 5, MC's fingers inside of Riley
     with dissolve
 
-    ri "*Gasps* Oh, my f- [Name]..."
+    ri "*Gasps* Oh, my f- [name]..."
 
     scene v13s16a_5b # FPP Same as 5a, MC's fingers deeper inside of Riley
     with dissolve
@@ -131,7 +131,7 @@ label v13s16a:
     scene v13s16av3f # Same as v3, but faster
     with dissolve
 
-    ri "Please… S-say that… *Moans* Tell me how much you like it, [Name]."
+    ri "Please… S-say that… *Moans* Tell me how much you like it, [name]."
 
     u "Mmm... I'm absolutely loving it!"
 

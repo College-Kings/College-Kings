@@ -114,7 +114,7 @@ label v14s08:
             scene v14s08_4b # FPP. same as v14s08_4 amber turns around and looks at mc, no expression, mouth open
             with dissolve
 
-            am "Uh, [Name]..."
+            am "Uh, [name]..."
 
             scene v14s08_4b
             with dissolve

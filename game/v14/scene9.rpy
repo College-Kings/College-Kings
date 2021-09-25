@@ -212,7 +212,7 @@ label v14s09:
     scene v14s09_6a
     with dissolve
 
-    lee "[Name]."
+    lee "[name]."
 
     scene v14s09_6
     with dissolve

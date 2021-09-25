@@ -523,7 +523,7 @@ label v14s03a:  # -MC walks overs and stands in front of the night gambler-
                     scene v14s03a_4f # FPP. Same as v14s03a_4e, but mouth open.
                     with dissolve
 
-                    imre "[Name]..."
+                    imre "[name]..."
 
                     scene v14s03a_11e # Same as v14s03a_11d, but with mouth open.
                     with dissolve

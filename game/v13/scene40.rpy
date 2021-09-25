@@ -561,7 +561,7 @@ label v13s40_end_free_roam:
         with dissolve   
         pause
 
-        cl "FUCK! I LOVE THIS, [Name]!"
+        cl "FUCK! I LOVE THIS, [name]!"
 
         scene v13s40end_10 # TPP. MC turning Chloe around
         with dissolve
@@ -623,12 +623,12 @@ label v13s40_end_free_roam:
         with dissolve
         pause
 
-        cl "Ohh, fuck! [Name]! [Name]... I-I'm cumming... *Moans*"
+        cl "Ohh, fuck! [name]! [name]... I-I'm cumming... *Moans*"
 
         scene v13chlttf # Ignore as anim
         with dissolve
 
-        cl "[Name]! *Gasps* F-f-uck… *Moans*"
+        cl "[name]! *Gasps* F-f-uck… *Moans*"
 
         scene v13chltt2 # ignore as anim
         with dissolve

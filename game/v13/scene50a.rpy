@@ -63,7 +63,7 @@ label v13s50a:
     scene v13s50av3 # MC fucking Emily from behind over the sink
     with dissolve
 
-    em "*Gasps* Oh my... Fuckk, [Name]."
+    em "*Gasps* Oh my... Fuckk, [name]."
 
     u "You wanted this you little slut and now you fucking got it!"
 

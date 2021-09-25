@@ -244,7 +244,7 @@ label v13_ticket_transfer:
 
                     pe "Things must be looking up for me because Ms. Rose just said the same thing..."
 
-                    pe "Her and Mr. Lee agreed to give me a night out whenever I wanted while we're in Amsterdam. So yes, I'll definitely go! Thank you so much for asking me, [Name]."
+                    pe "Her and Mr. Lee agreed to give me a night out whenever I wanted while we're in Amsterdam. So yes, I'll definitely go! Thank you so much for asking me, [name]."
 
                     scene v13s7_8
                     with dissolve

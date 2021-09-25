@@ -104,7 +104,7 @@ label v14s03c:
     scene v14s03c_4f
     with dissolve
 
-    u "[Name]."
+    u "[name]."
 
     scene v14s03c_4e
     with dissolve
