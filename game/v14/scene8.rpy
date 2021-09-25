@@ -45,7 +45,6 @@ label v14s08:
 
     menu:
         "Ask her what's wrong":
-    
             scene v14s08_3c
             with dissolve    
 
@@ -84,7 +83,6 @@ label v14s08:
             pause 0.75
 
         "Leave her alone":
-
             scene v14s08_3
             with dissolve
 
