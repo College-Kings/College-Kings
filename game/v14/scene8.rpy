@@ -5,7 +5,6 @@
 
 
 label v14s08:
-
     scene v14s08_1 # TPP. mc sees the bus and walks towards it, slight smile, mouth closed
     with dissolve    
 
@@ -161,4 +160,4 @@ label v14s08:
 
     pause 0.75
 
-    jump to v14s09
+    jump v14s09
