@@ -170,7 +170,7 @@ label v14s03c:
     scene v14s03c_4e
     with dissolve
 
-    satin "Well, earlier when I said "oh" like that, it was because I'm pretty sure the girl he's talking to has an STD"...
+    satin "Well, earlier when I said \"oh\" like that, it was because I'm pretty sure the girl he's talking to has an STD"...
 
     scene v14s03c_4f
     with dissolve
