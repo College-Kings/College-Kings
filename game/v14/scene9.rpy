@@ -5,7 +5,6 @@
 
 
 label v14s09:
-
     scene v14s09_1 # TPP. show mc walking through airport, pulling his luggae, slight smile, mouth closed
     with dissolve
 
@@ -67,7 +66,6 @@ label v14s09:
     lee "*Sighs* I suppose that what happens in Europe, truly does stay in Europe…"
 
     if msrosers and v13s20_bleach_suitcase:
-    
         scene v14s09_2e # FPP. same as v14s09_2a show Ms. Rose looking at mc slightly biting a pen slight smile, mouth closed, show Mr. Lee looking at Charli's suitcase with a confused expression, mouth closed
         with dissolve   
 
@@ -84,38 +82,34 @@ label v14s09:
     u "(Those two are obviously good friends, and even closer now it seems.)"
 
     if v13_charli_exposed:
-
         scene v14s09_3 # TPP. show mc looking around, slight smile, mouth closed
         with dissolve
 
         u "(I don't see Charli anywhere... Guess Mr. Lee wasn’t fucking around.)"
 
-    else:
+    elif v13s20_bleach_suitcase:
+        scene v14s09_4 # FPP. mc see's charli grabbing his bleached suitcase, charli slight sad, mouth closed, charli looks at mc
+        with dissolve    
 
-        if v13s20_bleach_suitcase:
+        pause 0.75
 
-            scene v14s09_4 # FPP. mc see's charli grabbing his bleached suitcase, charli slight sad, mouth closed, charli looks at mc
-            with dissolve    
+        scene v14s09_4a # FPP. same as v14s09_4 charli looks away.
+        with dissolve
 
-            pause 0.75
+        pause 0.75
 
-            scene v14s09_4a # FPP. same as v14s09_4 charli looks away.
-            with dissolve
+    else:  
+        scene v14s09_4b # FPP. same as v14s09_4 mc see's charli grabbing his suitcase (SUITCASE IS NOT BLEACHED,) charli slight sad, mouth closed, charli looks at mc
+        with dissolve                    
 
-            pause 0.75
+        pause 0.75
 
-        else:
-            
-            scene v14s09_4b # FPP. same as v14s09_4 mc see's charli grabbing his suitcase (SUITCASE IS NOT BLEACHED,) charli slight sad, mouth closed, charli looks at mc
-            with dissolve                    
+        scene v14s09_4c # FPP. same as v14s09_4a charli's SUITCASE IS NOT BLEACHED
+        with dissolve
 
-            pause 0.75
+        pause 0.75
 
-            scene v14s09_4c # FPP. same as v14s09_4a charli's SUITCASE IS NOT BLEACHED
-            with dissolve
-
-            pause 0.75
-
+    if not v13_charli_exposed:
         scene v14s09_5 # FPP. show just charli, no suitcase is visible, charli looks back at mc, slight sad, mouth closed
         with dissolve
 
@@ -136,7 +130,6 @@ label v14s09:
 
         menu:
             "Scare him":
-
                 scene v14s09_5b
                 with dissolve
 
@@ -198,7 +191,6 @@ label v14s09:
                 u "Ha… Good to hear, pal."
 
             "I've done enough":
-
                 scene v14s09_5f # FPP. same as v14s09_5b charli has a relieved expression on his face
                 with dissolve
 
@@ -290,7 +282,6 @@ label v14s09:
     li "Here."
 
     if v13_charli_exposed:
-
         scene v14s09_6d
         with dissolve
 
@@ -393,7 +384,6 @@ label v14s09:
     pause 0.75
 
     if emily_europe:
-
         scene v14s09_6b
         with dissolve
 
@@ -405,7 +395,6 @@ label v14s09:
         em "I’m here."
 
     if v11_invite_sam_europe:
-
         scene v14s09_8b
         with dissolve
 
@@ -447,7 +436,6 @@ label v14s09:
         ro "Right, then… I'll contact her before we take off."
 
     if josh_europe:
-
         scene v14s09_6b
         with dissolve
 
@@ -459,7 +447,6 @@ label v14s09:
         jo "*Sighs* Here."
 
     if v11_pen_goes_europe:
-
         scene v14s09_8b
         with dissolve
 
@@ -515,4 +502,4 @@ label v14s09:
 
     pause 0.75
 
-    jump to v14s10
+    jump v14s10
