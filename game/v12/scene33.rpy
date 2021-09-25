@@ -1099,7 +1099,7 @@ label v12s33_three_doors_back:
     scene v12s33_38
     with dissolve
 
-    lee "You know... Blunty? As much as you little rats annoy me, you're still like the sons I never had. It makes me happy to see that you're having a good time."
+    lee "You know... Bluntly? As much as you little rats annoy me, you're still like the sons I never had. It makes me happy to see that you're having a good time."
 
     scene v12s33_40
     with dissolve
@@ -1127,25 +1127,65 @@ label v12s33_three_doors_back:
     lee "That'll count as one..."
 
     if joinwolves:
+        scene v12s33_39
+        with dissolve
+
+        pause 0.75
+
+        scene v12s33_40b
+        with dissolve
+
         u "Oh yeah, Ryan! I forgot to ask why you decided to dye your hair..."
+
+        scene v12s33_36b
+        with dissolve
 
         imre "He's trying to look as good as me, [name]. Tall, dark and handsome."
 
+        scene v12s33_39
+        with dissolve
+
         ry "Uh, hell no... I lost a bet. \"Hashtag roasted ape\". Ha..."
 
+        scene v12s33_36b
+        with dissolve
+
         imre "Wow, that was sad."
+
+        scene v12s33_40
+        with dissolve
 
         u "*Laughs*"
 
     else:
-        ry "Nice cupcake, Imre. Laughs Is that the flavor of your nipples?"
+        scene v12s33_36b
+        with dissolve
+
+        pause 0.75
+
+        scene v12s33_39
+        with dissolve
+
+        ry "Nice cupcake by the way, Imre. *Laughs* Is that the flavor of your nipples?"
+
+        scene v12s33_36
+        with dissolve
 
         imre "Shut the hell up... It was a \"pick at random\" tattoo parlor, alright?"
 
+        scene v12s33_40b
+        with dissolve
+        
         u "Haha, alright... I can't say it doesn't suit you, though."
+
+        scene v12s33_36
+        with dissolve
 
         imre "Thanks... I think."
     
+    scene v12s33_38
+    with dissolve
+
     lee "*Chuckles* Alright, enough bantering. Let’s go back to silently relaxing, boys."
 
     scene v12s33_41 # close up show clock inside sauna at 16:15
