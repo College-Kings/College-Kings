@@ -97,14 +97,14 @@ label v14s16:
 
     cl "*Speaking fast* Like, what the actual fuck!? Am I missing something?! I have to win this race! She can't just, fuck everything up all because she's doesn't trust me!"
 
-    show screen loyaltyTutorial #Placeholder
+    show screen loyalty_tutorial # Placeholder
 
-    hide screen loyaltyTutorial #Placeholder
+    hide screen loyalty_tutorial # Placeholder
 
     scene v14s16_2a
     with dissolve
 
-    cl "I need a lot of help if I'm going to beat her, [Name]. It won't be as easy as I thought either."
+    cl "I need a lot of help if I'm going to beat her, [name]. It won't be as easy as I thought either."
 
     cl "Chris has pretty much promised that the Wolves will side with me so that's a blessing, but the main person I need support from is you."
 
@@ -113,9 +113,7 @@ label v14s16:
     cl "It would include planning campaign events like parties, making T-shirts, that kind of stuff."
 
     if v13_help_chloe:
-
         cl "I remember how you said you'd help me before but..."
-
    
     scene v14s16_2b # FPP. Same as v14s16_2a, Chloe cute pose, pouting face, mouth open.
     with dissolve
@@ -156,7 +154,6 @@ label v14s16:
 
     menu:
         "I'll help...":
-
             scene v14s16_2e # FPP. Same as v14s16_2, Chloe slight smile, mouth closed.
             with dissolve
 
@@ -174,7 +171,7 @@ label v14s16:
             scene v14s16_2f # FPP. Same as v14s16_2e, Chloe excited smile, mouth open.
             with dissolve
 
-            cl "Thank you so much, [Name]."
+            cl "Thank you so much, [name]."
 
             scene v14s16_2g # FPP. Same as v14s16_2f, Chloe exited smile, mouth closed.
             with dissolve
@@ -214,7 +211,6 @@ label v14s16:
                 pause 0.75
                 
         "I don't have the time...":
-
             scene v14s16_2
             with dissolve
 
@@ -231,7 +227,6 @@ label v14s16:
             u "I'm sorry, Chloe. I'm just really busy now that we’re back on campus and things with the-."
 
             if chloegf:
-
                 scene v14s16_2j # FPP. Same as v14s16_2a, Chloe angry expression, mouth open.
                 with dissolve
 
@@ -267,6 +262,7 @@ label v14s16:
                 with dissolve
 
                 u "(Well, time for class!)"
+
             else:
                 scene v14s16_2
                 with dissolve
@@ -312,4 +308,4 @@ label v14s16:
     scene v14s16_7a # TPP. Same as v14s16_7a, slight smile, mouth closed.
     with dissolve
 
-    jump scene v14s17
+    jump v14s17
