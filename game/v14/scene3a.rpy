@@ -445,10 +445,7 @@ label v14s03a:  # -MC walks overs and stands in front of the night gambler-
             with dissolve
 
             imre "Shut the hell up! [name], tell him."
-
-            scene v14s03a_
-            with dissolve
-                            
+                
             menu:
                 "Take the wallet": # -If Take the wallet
                     scene v14s03a_12a # FPP. Same as v14s03a_12, but Gambler mouth closed.
@@ -528,13 +525,10 @@ label v14s03a:  # -MC walks overs and stands in front of the night gambler-
 
                     imre "[Name]..."
 
-                    scene v14s03a_
+                    scene v14s03a_11e # Same as v14s03a_11d, but with mouth open.
                     with dissolve
 
                     ry "*Sighs* Let's go guys, please."
-
-                    scene v14s03a_11e # Same as v14s03a_11d, but with mouth open.
-                    with dissolve
 
             # End wallet choice 
 
