@@ -180,6 +180,7 @@ label v14s12:
         with fade
 
         jump v14s13
+        
     else:
         scene v14s12_6 # TPP. MC opening the doorr to the apes frat house, slight smile, mouth closed
         with fade
