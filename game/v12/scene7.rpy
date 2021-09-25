@@ -453,6 +453,7 @@ label v12s7_aubrey1:
             with dissolve
 
             u "It was a serious fight. I'm surprised you haven't heard about it yet. It feels as if the whole world watched it."
+
         "Light work":
             $ addPoint("tm")
             scene v12ferau1a
