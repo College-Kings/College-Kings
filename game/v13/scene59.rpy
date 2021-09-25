@@ -4,7 +4,6 @@
 # Time: Afternoon
 
 label v13s59:
-
     scene v13s59_1 # TPP. show mc and aubrey walking to the canoe rental shop, slight smiles, mouths closed, rental shop in background
     with dissolve
 

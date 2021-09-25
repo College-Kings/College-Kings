@@ -4,7 +4,6 @@
 # Time: Morning 
 
 label v13_ticket_transfer:
-
     play music "music/v13/Track Scene 7.mp3" fadein 2
 
     if v12_murder_count >= 5: # -If 5+ kills
