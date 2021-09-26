@@ -715,6 +715,7 @@ label v12s7_aubrey2:
             play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
             call screen v12s7_balcony_right
+
         "Kill her":
             $ v12s7_killList.add(aubrey)
             label v12s7_aubrey_kill:
@@ -1197,6 +1198,7 @@ label v12s7_chloe1:
             with dissolve
 
             u "Maybe I just know what you need to hear. *Chuckles*"
+
     scene v12ferch1b
     with dissolve
     cl "Okay so... I know this is off topic, but I just thought of something. What if Mr. Lee bugged the props and that's how he's \"always watching\"."
