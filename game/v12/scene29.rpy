@@ -1115,6 +1115,8 @@ label v12_lauren_sex:
                 scene v12las65 # TPP. Show Lauren rolling over to lay down next to MC
                 with dissolve
 
+                hide screen v12s29_lauren_sex_overlay
+
                 pause
 
                 scene v12las66 # FPP. MC and Lauren lieing down next to each other, looking at each other, Lauren smiling, mouth open, make her body a bit sweaty if possible

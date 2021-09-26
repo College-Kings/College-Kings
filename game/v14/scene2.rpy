@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 3), IMRE (Outfit: 2), RYAN (Outfit: 1)
 # Time: Night
 
-
 label v14s02:
     scene v13s02_1 # TPP. show mc in the hotel lobby and looking around everywhere, no expression, mouth closed
     with dissolve
