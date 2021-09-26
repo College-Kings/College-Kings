@@ -6,7 +6,7 @@ label v11_dinner_with_lauren:
 
     scene v11dwl1a # Fpp. Show Lauren from across teh table, slight smile mouth open
     with dissolve
-    play music "music/v11/Scene 46/Track Scene 46.mp3" fadein 2
+    play music "music/V10/Scene 40/Track Scene 40_2.mp3" fadein 2
     u "So... Our last event in London, how do you feel?"
 
     scene v11dwl1 # Fpp. same 1, mouth closed

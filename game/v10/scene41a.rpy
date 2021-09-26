@@ -4,7 +4,7 @@
 # Time: Thursday Morning
 
 label v10_waking_up_end:
-    play music "music/v10/Scene 41a/Track Scene 41a_1.mp3" fadein 3
+    play music "music/V10/Scene 22/Track Scene 22_1.mp3" fadein 3
     if joinwolves:
         scene v10end1 # TPP. Show MC waking up drowsy in his new Wolves room.
         with fade

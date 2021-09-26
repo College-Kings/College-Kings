@@ -8,7 +8,7 @@
 #screen 3: Penelope(Stood at the helm display)(to the right of screen 2)
 
 label v11s23_freeroamstart: # Start of freeroam
-    play music "music/v11/Scene 23/Track Scene 23.mp3" fadein 2
+    play music "music/v11/Scene 14/Track Scene 14.mp3" fadein 2
     $ freeRoam = True
 
     call screen v11s23_entrance

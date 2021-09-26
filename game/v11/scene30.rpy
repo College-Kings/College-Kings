@@ -6,7 +6,7 @@
 label v11_lauren_store:
     scene v11las1 # TPP. Lauren is in the lobby, she is looking at her phone, show MC sneaking up on her
     with fade
-    play music "music/v11/Scene 30/Track Scene 30_1.mp3" fadein 2
+    play music "music/v11/Scene 1/Track Scene 1_3.mp3" fadein 2
     pause 0.75
 
     scene v11las1a # TPP. Same cam as v11las1, MC is behind Lauren, he is smiling, mouth closed, his hands over her eyes, Lauren is surprised, mouth closed
@@ -1379,7 +1379,7 @@ label v11_quiz_bonus:
     scene v11las44k # FPP. Same as v11las44d, Lauren slight smile, mouth open
     with dissolve
     stop music fadeout 3
-    play music "music/v11/Scene 30/Track Scene 30_2.mp3" fadein 2
+    play music "music/v11/Scene 17/Track Scene 17.mp3" fadein 2
     la "If it was my choice I'd spend all day with you exploring Hogwarts, but I promised Riley I'd help her out with something, so I have to run."
 
     scene v11las44l # FPP. Same as v11las44k, Lauren slight smile, mouth closed

@@ -8,7 +8,7 @@ label v11_hotel_room:
     play sound "sounds/swoosh.mp3"
     scene s587
     with flash
-    play music "music/v11/Scene 29/Track Scene 29.mp3" fadein 2
+    play music "music/v11/Scene 19/Track Scene 19_1.mp3" fadein 2
     ri "He's coming!"
 
     scene s588  
