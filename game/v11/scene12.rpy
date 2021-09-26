@@ -367,6 +367,7 @@ label v11_sit_ryan_convo:
 
         menu:
             "Be a dick":
+                $ addPoint("tm")
                 scene v11src4a
                 with dissolve
 
@@ -403,6 +404,7 @@ label v11_sit_ryan_convo:
                 u "Keep telling yourself that man, I'm going to sleep."
 
             "Let him":
+                $ addPoint("bro")
                 scene v11src4a
                 with dissolve
 

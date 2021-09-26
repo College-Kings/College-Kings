@@ -5,9 +5,11 @@
 
 label v13s27:
     scene v13s27_1 # TPP. Show MC sitting down in the same place as the end of scene 26, MC slightly smiling, looking at the dance floor, mouth closed
-    with dissolve 
+    with dissolve
 
     pause 0.75
+
+    play music "music/v13/Track Scene 27_1.mp3" fadein 2
 
     play sound "sounds/vibrate.mp3"
 
@@ -16,9 +18,9 @@ label v13s27:
 
     u "Wow... Perfect timing, who is it this time?"
 
-    $ contact_Amber.newMessage(_("Meet me at the bus stop near the hotel. ", queue=False))
-    $ contact_Amber.addReply(_("For?"))
-    $ contact_Amber.newMessage(_("... "))
+    $ contact_Amber.newMessage("Meet me at the bus stop near the hotel. ", queue=False)
+    $ contact_Amber.addReply("For?")
+    $ contact_Amber.newMessage("... ")
 
     scene v13s27_1b # TPP. Same as v13s27_1, MC slight smile, looking at his phone, mouth closed
     with dissolve
@@ -28,7 +30,7 @@ label v13s27:
                 call screen phone
         if contact_Amber.replies:
                 u "(I should check my phone.)"
-                jump v13s27_PhoneContinueAmbers
+                jump v13s27_PhoneContinueAmber
 
     scene v13s27_1c # TPP. Same as v13s27_1, MC suspicious, mouth closed
     with dissolve
@@ -59,6 +61,9 @@ label v13s27:
     with fade
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 27_2.mp3" fadein 2
 
     scene v13s27_4 # TPP. Show MC walking in the street, slight smile, mouth closed
     with fade

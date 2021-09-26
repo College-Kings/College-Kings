@@ -132,14 +132,16 @@ label after_load:
             try: kiwiiPost.sentComments = kiwiiPost.comments
             except AttributeError: pass
 
-            kiwiiPost.profilePicture = kiwiiPost.profile_picture
+            try: kiwiiPost.profile_picture = kiwiiPost.profilePicture
+            except AttributeError: pass
 
             # Kiwii Comments
             for comment in kiwiiPost.sentComments:
                 try: comment.message = comment.text
                 except AttributeError: pass
 
-                comment.profilePicture = comment.profile_picture
+                try: comment.profile_picture = comment.profilePicture
+                except AttributeError: pass
                 
             # Old Kiwii Replies
             try:
@@ -162,7 +164,25 @@ label after_load:
 
 
         # Contacts
-        contact_Lindsey.profilePicture = "lindseyprofilepic"
+        contact_Lindsey.profile_picture = "images/phone/messages/profile_pictures/lindseyprofilepic.webp"
+        contact_Emily.profile_picture = "images/phone/messages/profile_pictures/emilyprofilepic.webp"
+        contact_Lauren.profile_picture = "images/phone/messages/profile_pictures/laurenprofilepic.webp"
+        contact_Julia.profile_picture = "images/phone/messages/profile_pictures/juliaprofilepic.webp"
+        contact_Ryan.profile_picture = "images/phone/messages/profile_pictures/ryanprofilepic.webp"
+        contact_Josh.profile_picture = "images/phone/messages/profile_pictures/joshprofilepic.webp"
+        contact_Aubrey.profile_picture = "images/phone/messages/profile_pictures/aubreyprofilepic.webp"
+        contact_Chloe.profile_picture = "images/phone/messages/profile_pictures/chloeprofilepic.webp"
+        contact_Evelyn.profile_picture = "images/phone/messages/profile_pictures/evelynprofilepic.webp"
+        contact_Amber.profile_picture = "images/phone/messages/profile_pictures/amberprofilepic.webp"
+        contact_Penelope.profile_picture = "images/phone/messages/profile_pictures/penelopeprofilepic.webp"
+        contact_Riley.profile_picture = "images/phone/messages/profile_pictures/rileyprofilepic.webp"
+        contact_Autumn.profile_picture = "images/phone/messages/profile_pictures/autumnprofilepic.webp"
+        contact_Imre.profile_picture = "images/phone/messages/profile_pictures/imreprofilepic.webp"
+        contact_Sebastian.profile_picture = "images/phone/messages/profile_pictures/sebastianprofilepicture.webp"
+        contact_Grayson.profile_picture = "images/phone/messages/profile_pictures/graysonprofilepicture.webp"
+        contact_Lindsey.profile_picture = "images/phone/messages/profile_pictures/lindseyprofilepic.webp"
+        contact_Jenny.profile_picture = "images/phone/messages/profile_pictures/jennyprofilepicture.webp"
+        contact_Nora.profile_picture = "images/phone/messages/profile_pictures/noraprofilepicture.webp"
 
         if contact_Grayson not in contacts:
             contacts.append(contact_Grayson)
@@ -175,6 +195,9 @@ label after_load:
 
             try: contact.sentMessages
             except AttributeError: contact.sentMessages = []
+
+            try: contact.profile_picture
+            except AttributeError: contact.profile_picture = "images/phone/messages/profile_pictures/chloeprofilepic.webp"
 
             # Messages
             try:
@@ -205,10 +228,30 @@ label after_load:
             except AttributeError: pass
 
         # Simplr Contacts
+        simplr_Beth.profile_picture = "images/phone/simplr/contacts/bethProfilePicture.webp"
+        simplr_Iris.profile_picture = "images/phone/simplr/contacts/irisProfilePicture.webp"
+        simplr_Samantha.profile_picture = "images/phone/simplr/contacts/samanthaProfilePicture.webp"
+        simplr_Emmy.profile_picture = "images/phone/simplr/contacts/emmyProfilePicture.webp"
+
+        simplr_Beth.profile_picture_large = "images/phone/simplr/contacts/bethProfilePictureLarge.webp"
+        simplr_Iris.profile_picture_large = "images/phone/simplr/contacts/irisProfilePictureLarge.webp"
+        simplr_Samantha.profile_picture_large = "images/phone/simplr/contacts/samanthaProfilePictureLarge.webp"
+        simplr_Emmy.profile_picture_large = "images/phone/simplr/contacts/emmyProfilePictureLarge.webp"
+
         for contact in simplr_pendingContacts + simplr_contacts:
             try: contact.condition
             except AttributeError: contact.condition = True
 
+            try: contact.profile_picture
+            except AttributeError: contact.profile_picture = "images/phone/simplr/contacts/bethProfilePicture.webp"
+
+        
+        # Items
+        honey.insensitive_image = "images/v13/Scene35/sex_shop/honey_insensitive.webp"
+        butt_plug.insensitive_image = "images/v13/Scene35/sex_shop/butt_plug_insensitive.webp"
+        spankers.insensitive_image = "images/v13/Scene35/sex_shop/spankers_insensitive.webp"
+        cuffs.insensitive_image = "images/v13/Scene35/sex_shop/cuffs_insensitive.webp"
+        feather.insensitive_image = "images/v13/Scene35/sex_shop/feather_insensitive.webp"
 
         # Variables
         try:
@@ -489,7 +532,95 @@ label after_load:
         try: emily_europe
         except NameError: emily_europe = False
 
-
+        # v13 Errors
+        try: v13_penelope_concert
+        except NameError: v13_penelope_concert = False
+        try: v13_aubrey_concert
+        except NameError: v13_aubrey_concert = False
+        try: chloeSus
+        except NameError: chloeSus = 0
+        try: v13_cuddle_lauren
+        except NameError: v13_cuddle_lauren = False
+        try: v13_cuddle_lauren_text
+        except NameError: v13_cuddle_lauren_text = False
+        try: v13s16_lauren_points
+        except NameError: v13s16_lauren_points = 0
+        try: v13_smoke_weed
+        except NameError: v13_smoke_weed = False
+        try: v13_lauren_smoke
+        except NameError: v13_lauren_smoke = False
+        try: cameronBro
+        except NameError: cameronBro = False
+        try: v13_lauren_hospital
+        except NameError: v13_lauren_hospital = False
+        try: v13_charli_exposed
+        except NameError: v13_charli_exposed = False
+        try: v13_invite_samantha
+        except NameError: v13_invite_samantha = False
+        try: v13_after_party
+        except NameError: v13_after_party = False
+        try: v13s48_get_aubrey_chocolate
+        except NameError: v13s48_get_aubrey_chocolate = False
+        try: v13s48_ryan_double_date
+        except NameError: v13s48_ryan_double_date = False
+        try: v13s48_canoeing_as_date
+        except NameError: v13s48_canoeing_as_date = False
+        try: v13_help_chloe
+        except NameError: v13_help_chloe = False
+        try: v13_help_lindsey
+        except NameError: v13_help_lindsey = False
+        try: emmyrs
+        except NameError: emmyrs = False
+        try: kourtneyrs
+        except NameError: kourtneyrs = False
+        try: aryssars
+        except NameError: aryssars = False
+        try: v13_told_emmy_no_kids_for_me
+        except NameError: v13_told_emmy_no_kids_for_me = False
+        try: v13_told_emmy_city
+        except NameError: v13_told_emmy_city = False
+        try: v13_imre_disloyal
+        except NameError: v13_imre_disloyal = False
+        try: v13s40_chloe_turned_on
+        except NameError: v13s40_chloe_turned_on = 0
+        try: v13_perfume
+        except NameError: v13_perfume = False
+        try: v13_hugged_aubrey
+        except NameError: v13_hugged_aubrey = False
+        try: v13s9_go_to_concert
+        except NameError: v13s9_go_to_concert = False
+        try: v13s41_lindsey_points
+        except NameError: v13s41_lindsey_points = 0
+        try: v13_rileysex
+        except NameError: v13_rileysex = False
+        try: v13_emmysex
+        except NameError: v13_emmysex = False
+        try: v13_chloesex
+        except NameError: v13_chloesex = False
+        try: v13_emilysex
+        except NameError: v13_emilysex = False
+        try: v13s20_bleach_suitcase
+        except NameError: v13s20_bleach_suitcase = False
+        try: v13s20_frbleach
+        except NameError: v13s20_frbleach = False
+        try: v13s20_frcloset
+        except NameError: v13s20_frcloset = False
+        try: v13s20_frbrush
+        except NameError: v13s20_frbrush = False
+        try: v13s37_frnora
+        except NameError: v13s37_frnora = False
+        try: v13s37_frchris
+        except NameError: v13s37_frchris = False
+        try: v13s40_neckpoint
+        except NameError: v13s40_neckpoint = False
+        try: v13s40_chestpoint
+        except NameError: v13s40_chestpoint = False
+        try: v13s40_backpoint
+        except NameError: v13s40_backpoint = False
+        try: v13s40_shoulderpoint
+        except NameError: v13s40_shoulderpoint = False
+        try: laurenrs_v11aubrey
+        except NameError: laurenrs_v11aubrey = False
 
 
     show no_hard_feelings at achievementShow

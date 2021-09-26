@@ -177,6 +177,7 @@ label v11_lobby_mrlee:
                 with dissolve
                 
                 la "Haha, I was wondering when you'd get over here."
+
             "Aubrey":
                 $ v11_sit_with_lauren = False
 

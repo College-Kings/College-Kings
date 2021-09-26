@@ -4,11 +4,12 @@
 # Time: evening 
 
 label v13_walk_garden:
-    
     scene v13s36_1 # TPP. MC and lindsey walking along the sidewalk
-    with fade    
+    with fade
 
     pause 0.75
+
+    play music "music/v13/Track Scene 36.mp3" fadein 2
 
     scene v13s36_2 # FPP. MC looking at lindsey who has a neutral expression, mouth closed (location 1)
     with dissolve
@@ -25,11 +26,11 @@ label v13_walk_garden:
 
     li "He finished up with all of his frat planning with Sebastian and now for the last few days of our little vacay, he wants to be the perfect boyfriend. *Chuckles*"
 
-    if v12_nora_sex = True:
+    if v12_nora_sex:
         scene v13s36_2 
         with dissolve
 
-        u "*Laughs* Right…"
+        u "*Laughs* Right..."
 
     scene v13s36_2 
     with dissolve
@@ -39,7 +40,7 @@ label v13_walk_garden:
     scene v13s36_3 # FPP. same as 2a (location 2)
     with dissolve
 
-    li "It’s really just gonna be a relaxing evening in the park; not much but it's something."
+    li "It's really just gonna be a relaxing evening in the park; not much but it's something."
 
     li "Imre, myself, Nora, Chris and you are the only people that will be there. Nora is acting a little odd, but we'll see if it all goes well."
 
@@ -68,7 +69,7 @@ label v13_walk_garden:
 
     imre "You know I don't."
 
-    if not ChrisMad:
+    if not chrismad:
         scene v13s36_5b # FPP. Chris looking at lindsey, neutral expression, mouth opened (location 3)
         with dissolve
         
@@ -83,7 +84,7 @@ label v13_walk_garden:
         scene v13s36_5c # FPP. Chris has a mad face on, looking at lindsey, mouth opened (location 3)
         with dissolve
         
-        ch "Well, he's already here isn’t he? Let's go."
+        ch "Well, he's already here isn't he? Let's go."
 
         scene v13s36_5d # FPP. Lindsey looking back at chris with a uncomfortable look, mouth opened (location 3)
         with dissolve
@@ -108,4 +109,8 @@ label v13_walk_garden:
     scene v13s36_7 # TPP. Everyone arriving at the garden
     with dissolve
 
-    jump v13_scene36 #fix with real jump
+    pause 0.75
+
+    stop music fadeout 3
+
+    jump v13s37

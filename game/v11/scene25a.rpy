@@ -1,4 +1,3 @@
-
 # SCENE 25a: Hotel Bar
 # Location: Hotel Bar
 # Characters: MC (Outfit 1), charli (Outfit 1)

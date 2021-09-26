@@ -3,13 +3,13 @@
 # Characters: MC (Outfit: 5), RILEY (Outfit: 5)
 # Time: Night
 
-default v13_double_date = False
-
 label v13s53:
     scene v13s53_1 # TPP. Show MC walking through the hallway, neutral expression, mouth closed
     with dissolve
 
     u "(I wonder if Riley is up.)"
+
+    play music "music/v13/Track Scene 52.mp3" fadein 2
 
     scene v13s53_2 # TPP. Show MC walking into the room, neutral expression, mouth closed
     with dissolve
@@ -24,7 +24,7 @@ label v13s53:
     scene v13s53_3a # FPP. Same as v13s53_3, Riley mouth open
     with dissolve
 
-    if v13_double_date:
+    if v13s48_ryan_double_date:
 
         ri "Trying to recover from that failure of a date."
 
@@ -35,12 +35,12 @@ label v13s53:
 
     else:
 
-        ri "Just getting some reading in… *Chuckles*"
+        ri "Just getting some reading in... *Chuckles*"
 
         scene v13s53_3
         with dissolve
 
-        u "On vacation? Haven’t we been over this already? *Laughs*."
+        u "On vacation? Haven't we been over this already? *Laughs*."
     
     scene v13s53_3a
     with dissolve
@@ -73,7 +73,7 @@ label v13s53:
     pause 0.75
 
     scene v13s53_8 # TPP. MC and Riley snuggling, show Riley's face, Riley slight smile, mouth open
-    with dissolves
+    with dissolve
 
     ri "Mmmm... You're always so warm. *Chuckles*"
 
@@ -85,7 +85,7 @@ label v13s53:
     scene v13s53_8
     with dissolve
 
-    ri "No, no… You're making me comfortable, I always sleep best when you're next to me."
+    ri "No, no... You're making me comfortable, I always sleep best when you're next to me."
 
     scene v13s53_8a
     with dissolve
@@ -101,5 +101,7 @@ label v13s53:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s53a

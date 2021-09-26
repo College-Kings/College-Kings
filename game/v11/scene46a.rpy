@@ -270,7 +270,6 @@ label v11_dinner_with_aubrey:
 
         menu:
             "Be More than friends":
-
                 scene v11dwa1
                 with dissolve
                 u "That's actually something I've been wanting to talk to you about."
@@ -332,6 +331,7 @@ label v11_dinner_with_aubrey:
                 with dissolve
 
                 au "Haha, it's fine. Just don't make things all awkward now."
+
             "Stay FWB":
                 scene v11dwa1d
                 with dissolve

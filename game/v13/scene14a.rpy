@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 2), AUBREY (Outfit: 1)
 # Time: Night
 
-
 label v13s14a:
     # -Upbeat club music is playing-
 
@@ -11,6 +10,8 @@ label v13s14a:
     with dissolve
 
     pause 0.75
+
+    play music "music/v13/Track Scene 14a_1.mp3" fadein 2
 
     scene v13s14a_2 # FPP MC's view as he looks around the club
     with dissolve
@@ -30,7 +31,7 @@ label v13s14a:
     scene v13s14a_4 # FPP Show Aubrey looking at MC, smiling with mouth open
     with dissolve
 
-    au "Haha, you look super shocked. This is the life you live when you’re an icon..."
+    au "Haha, you look super shocked. This is the life you live when you're an icon..."
 
     scene v13s14a_3a # FPP Same as 3, Polly looking at Aubrey
     with dissolve
@@ -66,7 +67,7 @@ label v13s14a:
 
             polly "I think I got my answer. *Laughs*"
 
-        "If I'm a one woman man":
+        "I'm a one woman man":
             $ addPoint("bf")
 
             u "I'm a one woman-man."
@@ -247,6 +248,9 @@ label v13s14a:
 
     au "Haha!"
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 14a_2.mp3" fadein 2
+
     # -The song changes to something slow and romantic-
     scene v13s14a_14 # TPP Show MC and Aubrey both looking up as if focussing on the song that just came on
     with dissolve
@@ -289,6 +293,9 @@ label v13s14a:
 
             u "Yeah, it's not too far."
 
+            stop music fadeout 3
+            play music "music/v13/Track Scene 12a_2.mp3" fadein 2
+
             scene v13s14a_15 # TPP Show MC and Aubrey walking along the streets of Amsterdam late at night
             with dissolve
 
@@ -299,6 +306,9 @@ label v13s14a:
 
             pause 0.75
 
+            stop music fadeout 3
+            play music "music/v13/Track Scene 12a_1.mp3" fadein 2
+
             scene v13s14a_17 # FPP Show Aubrey, in hotel lobby, now speaking with MC, Aubrey smiling with mouth open
             with dissolve
 
@@ -307,7 +317,7 @@ label v13s14a:
             scene v13s14a_17a # FPP Same as 17, Aubrey's mouth closed
             with dissolve
 
-            u "How could you, Miss. “soon-to-be Superstar”?"
+            u "How could you, Miss. \"soon-to-be Superstar\"?"
 
             scene v13s14a_17b # FPP Same angle as 17, Aubrey rolling her eyes and laughing slightly, mouth open
             with dissolve
@@ -323,6 +333,8 @@ label v13s14a:
             with dissolve
 
             pause 0.75
+
+            stop music fadeout 3
 
             if v11_riley_roomate:
                 jump v13s15a
@@ -351,7 +363,7 @@ label v13s14a:
             scene v13s14a_21a # FPP Same angle as 21, Aubrey smiling with mouth open
             with dissolve
 
-            au "Ha, um… Nothing, nevermind."
+            au "Ha, um... Nothing, nevermind."
 
             scene v13s14a_22 # TPP Show MC and Aubrey dancing romantically, both smiling
             with dissolve
@@ -374,7 +386,7 @@ label v13s14a:
             scene v13s14a_21b # FPP Same angle as 21, Aubrey smiling, mouth closed
             with dissolve
 
-            u "I’d be happy too."
+            u "I'd be happy too."
 
             scene v13s14a_21a
             with dissolve
@@ -386,6 +398,9 @@ label v13s14a:
 
             u "Sure, c'mon..."
 
+            stop music fadeout 3
+            play music "music/v13/Track Scene 12a_2.mp3" fadein 2
+
             scene v13s14a_15
             with dissolve
 
@@ -396,6 +411,9 @@ label v13s14a:
 
             pause 0.75
 
+            stop music fadeout 3
+            play music "music/v13/Track Scene 12a_1.mp3" fadein 2
+
             scene v13s14a_17
             with dissolve
 
@@ -404,7 +422,7 @@ label v13s14a:
             scene v13s14a_17a
             with dissolve
 
-            u "How could you, Miss. “soon-to-be Superstar”?"
+            u "How could you, Miss. \"soon-to-be Superstar\"?"
 
             scene v13s14a_17b
             with dissolve
@@ -434,7 +452,7 @@ label v13s14a:
             scene v13s14a_24a
             with dissolve
 
-            au "I just wanted to say that…"
+            au "I just wanted to say that..."
 
             scene v13s14a_24c # FPP Same as 24a, Aubrey's smiling with mouth open
             with dissolve
@@ -449,7 +467,7 @@ label v13s14a:
             scene v13s14a_24c
             with dissolve
 
-            au "Okay… Ha, good."
+            au "Okay... Ha, good."
 
             scene v13s14a_24d
             with dissolve
@@ -461,6 +479,7 @@ label v13s14a:
 
             pause 0.5
 
+            play sound "sounds/kiss.mp3"
             scene v13s14a_25a # TPP Same angle as 25, MC kissing Aubrey
             with dissolve
 
@@ -480,6 +499,8 @@ label v13s14a:
             with dissolve
 
             pause 0.75
+
+            stop music fadeout 3
             
             if v11_riley_roomate:
                 jump v13s15a

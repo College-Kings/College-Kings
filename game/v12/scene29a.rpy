@@ -573,7 +573,6 @@ label v12_late_night_workout:
 
             menu:
                 "It's fine":
-
                     u "You're fine, it was funny."
 
                     scene v12lnw21e # FPP Same angle as v12lnw21, Lindsey with big, genuine smile, mouth open
@@ -839,7 +838,6 @@ label v12_late_night_workout:
     menu:
         "Hard":
             $ addPoint("tm")
-
             play sound "sounds/ks.mp3"
             scene v12lnw25c # TPP Same angle as v12lnw25, MC kicking back at the punching bag, missing, and losing his balance
             with dissolve
@@ -857,7 +855,6 @@ label v12_late_night_workout:
             li "Just a little. *Chuckles*"
             
         "Steady":
-
             play sound "sounds/facepunch1.mp3"
             scene v12lnw25d # TPP Same angle as v12lnw25, MC kicking back at the punching bag, the kick landing squarly and knocking the bag back
             with dissolve

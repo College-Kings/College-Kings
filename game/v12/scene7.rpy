@@ -402,7 +402,6 @@ label v12s7fr:
         pause
         hide murder_tutorial3b
 
-
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
@@ -454,6 +453,7 @@ label v12s7_aubrey1:
             with dissolve
 
             u "It was a serious fight. I'm surprised you haven't heard about it yet. It feels as if the whole world watched it."
+
         "Light work":
             $ addPoint("tm")
             scene v12ferau1a
@@ -549,7 +549,6 @@ label v12s7_aubrey1:
             au "Oh, sweetie. If I didn't take a look at this I wouldn't be able to call myself a nurse. Please come by my office so I can get you fixed up."
 
             if aubreyrs:
-
                 scene v12ferau1a
                 with dissolve
 
@@ -559,7 +558,6 @@ label v12s7_aubrey1:
                 with dissolve
 
                 au "*Whisper* Meet me in the bathroom."
-
 
             else:
                 scene v12ferau2
@@ -664,7 +662,6 @@ label v12s7_aubrey2:
     menu:
         "Let her":
             $ addPoint("bf")
-
             scene v12ferauh2a # TPP. same 2, mc mouth open
             with dissolve
             $ grant_achievement("doctors_orders")
@@ -682,9 +679,7 @@ label v12s7_aubrey2:
             scene v12ferauh4a #FPP. Same 4, mouth closed
             with dissolve
 
-
             u "Absolu-"
-
             play sound "sounds/dooropen.mp3"
 
             unknown "Could've sworn I heard people talking in here... Guess not."
@@ -1750,6 +1745,7 @@ label v12s7_lauren1:
 
             "Kill her":
                 $ addPoint("tm")
+                $ v12s7_killList.add(lauren)
                 scene v12ferla1
                 with dissolve
 
@@ -2855,7 +2851,6 @@ label v12s7_lindsey_charlie1:
 
     menu:
         "Smarter to stay here":
-            ### ERROR: -This choice mades Lindsey and Charli Unkillable ###
             scene v12ferlich2a
             with dissolve
 
@@ -2892,7 +2887,6 @@ label v12s7_lindsey_charlie1:
             li "Sounds good!"
 
         "More investigators":
-
             $ v12s7_lindsey_moved = True
             
             scene v12ferlich2a
@@ -3649,6 +3643,7 @@ label v12s7_penelope1:
             pause 0.75
 
             call screen v12s7_left_walkway_front
+
         "Help her out":
             $ addPoint("bf")
             scene v12ferpen1
@@ -3730,6 +3725,7 @@ label v12s7_penelope1:
                         with dissolve
 
                         pe "That's obvious."
+
                     "Chase Lysol":
                         scene v12ferpen1
                         with dissolve
@@ -3750,7 +3746,6 @@ label v12s7_penelope1:
                         with dissolve
 
                         pe "I see."
-
 
                 scene v12ferpen1b # FPP. same 1, new pose, mouth closed
                 with dissolve
@@ -3833,6 +3828,7 @@ label v12s7_penelope1:
                 play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
                 call screen v12s7_left_walkway_front
+
             else:
                 scene v12ferpen2
                 with dissolve
@@ -4774,7 +4770,6 @@ label v12s7_sam2:
     scene v12fersam1b
     with dissolve
 
-
     u "Hmm, that's pretty smart."
 
     scene v12fersam1c
@@ -5295,6 +5290,7 @@ label v12s7_nora1:
                     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
                     call screen v12s7_balcony_left
+
                 "Of course I care":
                     $ addPoint("bf")
 

@@ -61,8 +61,8 @@ label v11s4_PhoneContinueJosh1:
         pause 0.75
 
         jump v11_thurs_night_room
-    else:
 
+    else:
         u "(This is gonna be a fun ass night.)"
 
     scene v11swc32 # TPP. Show MC walking down the side walk (further down the street)

@@ -3,12 +3,13 @@
 # Characters: MC (Outfit: 2), LUUK (Outfit: 1)
 # Time: morning 
 
-
 label v13s06:
     scene v13s06_1 # TPP. MC wakes up in the morning from his own bed, mouth closed
     with fade
 
     pause 0.75
+
+    play music "music/v13/Track Scene 6.mp3" fadein 2
 
     scene v13s06_2 # TPP. MC sits up, slight smile on his face, mouth closed
     with dissolve
@@ -108,7 +109,7 @@ label v13s06:
     scene v13s06_6b
     with dissolve
 
-    luuk "It's good to possess many conflicting skills. No one expects a confident man to be a good cook and no one expects the cook to be a confidence man."
+    luuk "It's good to possess many conflicting skills. No one expects a confidence man to be a good cook and no one expects the cook to be a confidence man."
 
     scene v13s06_6
     with dissolve
@@ -118,7 +119,7 @@ label v13s06:
     scene v13s06_6a
     with dissolve
 
-    luuk "Haha, let's just say I make more money scheming with the guests more than I do checking people in."
+    luuk "Haha, let's just say I make more money scheming with the guests than I do checking them in."
 
     scene v13s06_6
     with dissolve
@@ -152,8 +153,6 @@ label v13s06:
 
             luuk "Impressive. *Chuckles*"
 
-
-
         "Yeah, probably not":
             scene v13s06_6
             with dissolve
@@ -178,7 +177,7 @@ label v13s06:
     scene v13s06_6a
     with dissolve
 
-    luuk "Well... I'll see you soon for another breakfast, *Laughs* Also, remember what I said. I hear it all or don't hear anything."
+    luuk "Well... I'll see you soon for another breakfast. *Laughs* Also, remember what I said. I hear it all or don't hear anything."
 
     scene v13s06_6
     with dissolve
@@ -189,5 +188,7 @@ label v13s06:
     with dissolve
 
     luuk "Clever."
+
+    stop music fadeout 3
 
     jump v13_ticket_transfer

@@ -3,12 +3,13 @@
 # Characters: MC (Outfit: 9), CHLOE (Outfit: 2)
 # Time: night
 
-
 label v13s52:
     scene v13s52_1 # TPP. MC goes to the hallway, smiling
     with fade
 
     u "(I wonder how my baby girl Chloe is doing.)"
+
+    play music "music/v13/Track Scene 52.mp3" fadein 2
 
     scene v13s52_2 # TPP. MC goes to chloe's room
     with dissolve
@@ -47,6 +48,13 @@ label v13s52:
 
     cl "*Snores*"
 
-    u "Haha… Goodnight babe."
+    u "Haha... Goodnight babe."
+
+    scene black
+    with fade
+    
+    pause 2
+
+    stop music fadeout 3
 
     jump v13s52a

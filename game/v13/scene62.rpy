@@ -7,7 +7,9 @@ label v13s62:
     scene v13s62_1 # FPP. MC looking at the door, lying on his bed, Aubrey and Riley walking in, both worried, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1.5
+
+    play music "music/v13/Track Scene 62.mp3" fadein 2
 
     scene v13s62_2 # FPP. Show Aubrey and Rilet sitting on the bed next to MC, both slightly worried, looking at MC, Aubrey mouth open, RIley mouth closed
     with dissolve
@@ -47,7 +49,7 @@ label v13s62:
     scene v13s62_2f # FPP. Same as v13s62_2e, Riley mouth open, Aubrey mouth closed
     with dissolve
 
-    ri "Yeah, I'm pretty sure I heard that too… *Chuckles*"
+    ri "Yeah, I'm pretty sure I heard that too... *Chuckles*"
 
     scene v13s62_2e
     with dissolve
@@ -75,6 +77,7 @@ label v13s62:
     pause
 
     scene v13s62_2h # FPP. Same as v13s62_2f, Aubrey and Riley's hand on MC's pants (where his dick is)
+    with dissolve
 
     ri "I like that idea."
 
@@ -83,7 +86,7 @@ label v13s62:
 
     u "(Is this happening?!)"
 
-    jump end13
+    stop music fadeout 3
 
 label end13:
     if not renpy.loadable("v14/scene1.rpy"):

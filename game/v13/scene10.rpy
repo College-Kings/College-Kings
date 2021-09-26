@@ -9,12 +9,14 @@ label v13s10:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 10.mp3" fadein 2
+
     scene v13s10_2 # FPP Chloe walking away while Ryan walks toward MC
     with dissolve
 
     pause 0.75
 
-    if v13_GO_SCENE_9: # NEED PROPER VARIABLE NAME
+    if not v13s9_go_to_concert: # NEED PROPER VARIABLE NAME
         scene v13s10_3 # FPP Show Ryan talking to MC, smiling with mouth open
         with dissolve
 
@@ -69,6 +71,7 @@ label v13s10:
     pause 0.75
 
     scene v13s10_5a # TPP Same angle as v13s10_3, Ryan looking at his phone, MC with his head hanging back in boredom
+    with dissolve
     
     scene v13s10_6 # FPP Show Imre walking through lobby toward hotel doors
     with dissolve
@@ -77,7 +80,7 @@ label v13s10:
 
     u "Yep."
 
-    if v13_GO_SCENE_9: # NEED PROPER VARIABLE NAME
+    if not v13s9_go_to_concert: # NEED PROPER VARIABLE NAME
         scene v13s10_7 # FPP View of MC, sitting next to Ryan. Ryan smiling with mouth closed
         with dissolve
 
@@ -124,8 +127,15 @@ label v13s10:
 
             play sound "sounds/vibrate.mp3"
 
-            $ contact_Aubrey.newMessage("Still getting ready, meet you in about an hour? We still have plenty of time. ", queue=True)
+            $ contact_Aubrey.newMessage("Still getting ready, meet you in about an hour? We still have plenty of time.", queue=False)
             $ contact_Aubrey.addReply("Haha, OK ", func=None)
+    
+            label v13s9_PhoneContinueAubrey:
+                if contact_Aubrey.replies:
+                    call screen phone
+                if contact_Aubrey.replies:
+                    u "(I should check my phone.)"
+                    jump v13s9_PhoneContinueAubrey
     
         elif v13_penelope_concert: # If invited Penelope/Penelope invited MC    
             scene v13s10_10
@@ -135,8 +145,15 @@ label v13s10:
 
             play sound "sounds/vibrate.mp3"
 
-            $ contact_Penelope.newMessage("Trying to finish some things for Ms. Rose, give me about an hour? ", queue=True)
-            $ contact_Penelope.addReply("No worries, we have time. ", func=None)
+            $ contact_Penelope.newMessage("Trying to finish some things for Ms. Rose, give me about an hour?", queue=False)
+            $ contact_Penelope.addReply("No worries, we have time.", func=None)
+
+            label v13s9_PhoneContinuePenelope:
+                if contact_Penelope.replies:
+                    call screen phone
+                if contact_Penelope.replies:
+                    u "(I should check my phone.)"
+                    jump v13s9_PhoneContinuePenelope
 
         # SINCE IT IS POSSIBLE TO NOT GET CONCERT TICKETS AT ALL, I ADDED THIS LINE. IF THIS SCENE DOESN'T OCCUR IF MC DOESN'T GET THE TICKETS, REMOVE "ELSE" STATEMENT AND INDENT
         else: # If neither Penelope or Aubrey, then never got tickets
@@ -166,10 +183,11 @@ label v13s10:
 
         ry "Hell yeah!"
 
-        scene v12sX_ # -MC and Ryan walk out of the hotel-
-        with dissolve
+        #scene v12sX_ # -MC and Ryan walk out of the hotel-
+        #with dissolve
 
-        pause 0.75
+        #pause 0.75
 
-    # -Regardless of everything scene continued
-    jump v13s11 # NEED PROPER VARIABLE NAME
+    stop music fadeout 3
+    
+    jump v13s11

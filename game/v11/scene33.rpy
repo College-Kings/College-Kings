@@ -80,7 +80,6 @@ label v11_bar_chloe_and_aubrey:
 
             au "Now you're enjoying yourself. *Chuckles*"
 
-
         "Just water":
             scene v11caa8a
             with dissolve

@@ -9,6 +9,8 @@ label v13s39a:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 39a.mp3" fadein 2
+
     scene v13s39a_2 # TPP. show mc racking the balls on the pool table
     with dissolve
 
@@ -75,19 +77,19 @@ label v13s39a:
 
         u "That would be the most awkward date, Ryan."
 
-        if laurenrs:
-
-            scene v13s39a_5 # FPP. a dreamlike image of lauren is shown on the screen
-            with dissolve
-
-            u "I definitely wouldn't want to bring my girl."
-
-        elif chloegf:  
+        if chloegf:  
 
             scene v13s39a_5a # FPP. same as v13s39a_5 a dreamlike image of chloe is shown on the screen
             with dissolve
 
             u "I definitely wouldn't want to bring my girl."   
+
+        elif laurenrs and not v11_aubrey_sex:
+
+            scene v13s39a_5 # FPP. a dreamlike image of lauren is shown on the screen
+            with dissolve
+
+            u "I definitely wouldn't want to bring my girl."
             
         scene v13s39a_4
         with dissolve
@@ -159,7 +161,6 @@ label v13s39a:
 
         menu:
             "Shoot left pocket":
- 
                 scene v13s39a_9b # FPP. same as v13s39a_9a pool stick is now visible and mc is aiming the pool stick at the cue ball to put the 8 ball into the left pocket
                 with dissolve
 
@@ -186,11 +187,15 @@ label v13s39a:
                 u "You got lucky. *Chuckles*"
 
             "Shoot right pocket":
-
                 scene v13s39a_9c  # FPP. same as v13s39a_9a pool stick is now visible and mc is aiming the pool stick at the cue ball to put the 8 ball into the right pocket
                 with dissolve
 
                 u "Right pocket!"
+
+                scene v13s39a_8c
+                with dissolve
+                
+                pause 1
 
                 scene v13s39a_4d # FPP. same as v13s39a_4a ryan slight angry
                 with dissolve
@@ -217,68 +222,66 @@ label v13s39a:
 
                 u "Or I'm just good. *Laughs*"
 
-                scene v13s39a_4
+        scene v13s39a_4
+        with dissolve
+
+        ry "Sureee... *Chuckles*"
+
+        scene v13s39a_4
+        with dissolve
+
+        ry "Alright, so what's your answer man? Willing to do the date?"
+
+        scene v13s39a_4a
+        with dissolve
+
+        menu:
+            "Sure":
+                scene v13s39a_4a
                 with dissolve
 
-                ry "Sureee...*Chuckles*"
+                u "Sure man, I guess I don't see what's so bad about it."
 
-                scene v13s39a_4
+                scene v13s39a_4c
                 with dissolve
 
-                ry "Alright, so what's your answer man? Willing to do the date?"
+                ry "For real? You'll do it?"
 
                 scene v13s39a_4a
                 with dissolve
 
-                menu:
-                    "Sure":
+                u "Yeah, I don't see why not."
 
-                        scene v13s39a_4a
-                        with dissolve
+                scene v13s39a_4c
+                with dissolve
 
-                        u "Sure man, I guess I don't see what's so bad about it."
+                ry "Wow, that's not what I expected. Thanks dude, really."
 
-                        scene v13s39a_4c
-                        with dissolve
+                scene v13s39a_4a
+                with dissolve
 
-                        ry "For real? You'll do it?"
+                u "Yeah, for sure."
 
-                        scene v13s39a_4a
-                        with dissolve
+            "Sorry, but no":
+                scene v13s39a_4f # FPP. same as v13s39a_4a ryan is slightly sad
+                with dissolve
+                
+                u "Sorry man, but no. I'm not trying to throw myself in the fire like that."
 
-                        u "Yeah, I don't see why not."
+                scene v13s39a_4g # FPP. same as v13s39a_4f ryans mouth is open
+                with dissolve
 
-                        scene v13s39a_4c
-                        with dissolve
+                ry "Yeah I get it. That's kinda what I expected but I had to ask."
 
-                        ry "Wow, that's not what I expected. Thanks dude, really."
+                scene v13s39a_4f
+                with dissolve
 
-                        scene v13s39a_4a
-                        with dissolve
+                u "I'm sorry."
 
-                        u "Yeah, for sure."
+                scene v13s39a_4
+                with dissolve
 
-                    "Sorry, but no":
-
-                        scene v13s39a_4f # FPP. same as v13s39a_4a ryan is slightly sad
-                        with dissolve
-                        
-                        u "Sorry man, but no. I'm not trying to throw myself in the fire like that."
-
-                        scene v13s39a_4g # FPP. same as v13s39a_4f ryans mouth is open
-                        with dissolve
-
-                        ry "Yeah I get it. That's kinda what I expected but I had to ask."
-
-                        scene v13s39a_4f
-                        with dissolve
-
-                        u "I'm sorry."
-
-                        scene v13s39a_4
-                        with dissolve
-
-                        ry "It's all good."
+                ry "It's all good."
 
         scene v13s39a_11 # FPP. Mc sees emily and aubrey playing pool at another table, emily and aubrey looking at each other, slight smiles, emily mouth open
         with dissolve
@@ -295,7 +298,6 @@ label v13s39a:
 
         menu:
             "Stare":
-
                 scene v13s39a_11a
                 with dissolve
 
@@ -307,11 +309,10 @@ label v13s39a:
                 u "(Okay...)"
 
             "Look away":
-
                 scene v13s39a_4h # FPP. same as v13s39a_4a ryan looks concerned, emily and aubrey visible in the background, emily and aubrey looking at each other, slight smiles, mouths closed
                 with dissolve
                 
-                u "(Just ignore her [name].)"
+                u "(Just ignore her, [name].)"
 
         scene v13s39a_4i # FPP. same as v13s39a_4h mouth open
         with dissolve
@@ -343,9 +344,10 @@ label v13s39a:
 
         u "Wow..."
 
+        stop music fadeout 3
+
         if chloegf:
             jump v13s40
-
         else: 
             jump v13s41
 
@@ -395,7 +397,6 @@ label v13s39a:
 
         menu:
             "Not a sports car fan":
-        
                 scene v13s39a_4a
                 with dissolve
 
@@ -412,7 +413,6 @@ label v13s39a:
                 u "*Chuckles*"
 
             "I love sports cars":
-                
                 scene v13s39a_4a
                 with dissolve                
 
@@ -428,12 +428,12 @@ label v13s39a:
 
                 u "*Chuckles*"
 
-        scene v13s39a_4i
+        scene v13s39a_4e
         with dissolve
 
         ry "Man... It looks like Nora and Chris are gonna be back on the market here soon."
 
-        scene v13s39a_4h
+        scene v13s39a_4f
         with dissolve
 
         u "Maybe, maybe not. Why do you bring it up? Trying to take Chris to dinner? *Chuckles*"
@@ -518,7 +518,6 @@ label v13s39a:
 
         menu:
             "Shoot left pocket":
- 
                 scene v13s39a_9b
                 with dissolve
 
@@ -529,7 +528,7 @@ label v13s39a:
 
                 u "Damn!"
 
-                scene v13s39a_11
+                scene v13s39a_10
                 with dissolve
 
                 ry "Too bad! Right pocket. *Chuckles*"
@@ -545,7 +544,6 @@ label v13s39a:
                 u "You got lucky. *Chuckles*"
 
             "Shoot right pocket":
-
                 scene v13s39a_9c
                 with dissolve
 
@@ -576,10 +574,10 @@ label v13s39a:
 
                 u "Or I'm just good. *Laughs*"
 
-                scene v13s39a_4
-                with dissolve
+        scene v13s39a_4
+        with dissolve
 
-                ry "Sureee...*Chuckles*"
+        ry "Sureee... *Chuckles*"
 
         scene v13s39a_4m # FPP. same as v13s39a_4c ryan pulls out his phone and looks at it with a smile
         with dissolve
@@ -596,6 +594,11 @@ label v13s39a:
 
         u "Wow..."
 
+<<<<<<< HEAD
+=======
+        stop music fadeout 3
+
+>>>>>>> main
         if chloegf:
             jump v13s40
 

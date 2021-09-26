@@ -9,6 +9,8 @@ label v13s18:
 
     u "Hey Luuk, please tell me you got something for me today... *Chuckles*"
 
+    play music "music/v13/Track Scene 18.mp3" fadein 2
+
     scene v13s18_2 # FPP. MC looking at Luuk, Luuk looking back at MC, slight smile, mouth open.
     with dissolve
 
@@ -17,7 +19,7 @@ label v13s18:
     scene v13s18_98 # TPP. Show MC walking towards dining table, slight smile, mouth open.
     with dissolve
 
-    u "My man… *Laughss*"
+    u "My man... *Laughs*"
 
     scene v13s18_99 # TPP. Show MC pulling out the chair, slight smile, mouth closed
     with dissolve
@@ -112,7 +114,7 @@ label v13s18:
     scene v13s18_8a # TPP. Close up, Chris looking at Nora, Chris worried expression, mouth open, Nora looking down at the ground, worried smile, mouth closed
     with dissolve
 
-    ch "Hey… You okay?"
+    ch "Hey... You okay?"
 
     scene v13s18_6
     with dissolve
@@ -132,7 +134,7 @@ label v13s18:
     scene v13s18_9 # TPP. Chris gently pulling Nora by the arm outside the hotel, Nora following Chris outside.
     with dissolve
 
-    ch "C'mon, there’s the cab."
+    ch "C'mon, there's the cab."
 
     scene v13s18_9a # TPP. Same as v13s18_9, Chris and Nora leaving through the hotel door.
     with dissolve
@@ -143,11 +145,9 @@ label v13s18:
     with dissolve
 
     if not v12_nora_sex:
-
-        u "(Well… She looked… Happy?. *Chuckles*)"
+        u "(Well... She looked... Happy? *Chuckles*)"
 
     else:
-
         u "(We were just fucking the other night... and now she's back to holding hands with him?)"
 
         scene v13s18_3
@@ -156,32 +156,28 @@ label v13s18:
         u "(You know what? I think I'm gonna text her.)"
 
     menu:
-        "Don't Text Nora":
-            scene v13s18_3
-            with dissolve
-
-            u "*Sighs* (Nah, nevermind. I'll just let this play out on it’s own...)"
-    
         "Text Nora":
-
             $ contact_Nora.addReply(_("What was that about, you guys all good now or something? "))
-            $ contact_Nora.newMessage(_("I know it's odd, but I'm trying to figure things out. Pls just… Let me handle it?"))
+            $ contact_Nora.newMessage(_("I know it's odd, but I'm trying to figure things out. Pls just... Let me handle it?"))
             $ contact_Nora.addReply(_("Okay... "))
             
-            scene v13s15_11 # FPP. MC looking down at his phone, he is standing in same place as v13s15_6
-            with dissolve
-
             label v13s18_PhoneContinueNora:
                 if contact_Nora.replies:
                     call screen phone
                 if contact_Nora.replies:
-                    u "(I should check my phone.)"
+                    u "(I should text Nora.)"
                     jump v13s18_PhoneContinueNora
                     
             scene v13s18_4b # TPP. Show MC putting his phone away.
             with dissolve
 
             pause 0.75
+
+        "Don't text Nora":
+            scene v13s18_3
+            with dissolve
+
+            u "*Sighs* (Nah, nevermind. I'll just let this play out on its own...)"
 
     scene v13s18_10 # FPP. MC looking at Luuk standing next to the table with the food, Luuk slight smile, mouth open.
     with dissolve
@@ -196,7 +192,7 @@ label v13s18:
     scene v13s18_10
     with dissolve
 
-    luuk "Of course! So, you and Riley are getting ready to do your little “Charli stunt”, huh?"
+    luuk "Of course! So, you and Riley are getting ready to do your little \"Charli stunt\", huh?"
 
     scene v13s18_10a
     with dissolve
@@ -237,5 +233,7 @@ label v13s18:
     with fade
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s19

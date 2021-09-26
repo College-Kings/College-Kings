@@ -3,12 +3,13 @@
 # Characters: IMRE (Outfit: 1), RYAN (Outfit: 1), MC (Outfit: 5)
 # Time: evening 
 
-
 label v13_hotel_imre:
     scene v13s39_1 # FPP. Looking at imre, imre slightly annoyed, mouth opened
     with dissolve
     
     imre "I'm gonna go take a hot shower. Really not in the mood for people right now."
+
+    play music "music/v13/Track Scene 39.mp3" fadein 2
 
     scene v13s39_1a # FPP. Ryan coming behind imre, hands in his mouth as if he was calling imre, imre still looking at mc with his mouth closed
     with dissolve
@@ -33,7 +34,7 @@ label v13_hotel_imre:
     scene v13s39_1d # FPP. Same as 1c, mouth closed
     with dissolve
 
-    u "He’s just got a lot on his mind, probably best to give him his space right now."
+    u "He's just got a lot on his mind, probably best to give him his space right now."
 
     scene v13s39_1e # FPP. Ryan slight smiling, mouth opened
     with dissolve
@@ -63,4 +64,8 @@ label v13_hotel_imre:
     scene v13s39_2 # TPP. Ryan and mc walking toward the hotel arcade
     with dissolve
 
-    jump v13_scene_39a
+    pause 0.75
+
+    stop music fadeout 3
+
+    jump v13s39a
