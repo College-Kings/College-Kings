@@ -594,11 +594,8 @@ label v13s39a:
 
         u "Wow..."
 
-<<<<<<< HEAD
-=======
         stop music fadeout 3
 
->>>>>>> main
         if chloegf:
             jump v13s40
 
