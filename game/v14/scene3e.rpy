@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 3), RYAN (Outfit: 1), IMRE (Outfit: 2)
 # Time: Night
 
-
 label v14s03e:
     if Ryan_had_Sex: #placeholder 
         scene v14s03e_1 # TPP. Show MC standing outside of room, neutral expression, mouth closed 
@@ -304,13 +303,13 @@ label v14s03e:
     ry "So did he. *Laughs*"
 
     menu:
-        "Don't tell Imre"
+        "Don't tell Imre":
             scene v14s03e_12
             with dissolve
 
             u "That's cold as hell Ryan, but.. He’s on his own with this one."
 
-        "Tell Imre"
+        "Tell Imre":
             scene v14s03e_12 # FPP. Same as v14s03e_12, serious expression
             with dissolve
             u "Bro, that's fucked up. What if the guy tries to-"
