@@ -1550,7 +1550,6 @@ label v12s7_riley3:
     call screen v12s7_left_viewpoint
     ### ERROR: -If MC presses the murder button during this scene he gets caught ###
     ### ERROR: -Back to free roam ###
-
     
 label v12s7_riley3a:
     $ v12s7_riley3 = True
@@ -1600,7 +1599,6 @@ label v12s7_riley3a:
     with dissolve
 
     u "(How is he gonna do that? *Laugh*)"
-
 
     u "That does indeed sound suspicious, maybe I should check in on them and see what I can find out."
 
@@ -1708,7 +1706,6 @@ label v12s7_riley_kill:
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_left_viewpoint
-
 
 label v12s7_lauren1:
     $ v12s7_lauren = True
@@ -2004,7 +2001,6 @@ label v12s7_lauren_kill:
 
     call screen v12s7_seating_back
 
-
 label v12s7_ryan_imre1:
     $ v12s7_imre = True
     
@@ -2276,7 +2272,6 @@ label v12s7_ryan_imre1:
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_right_gallery_back
-
 
 label v12s7_ryan1:
     $ v12s7_ryan = True
@@ -2662,7 +2657,6 @@ label v12s7_imre_kill:
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_foyer
-
 
 label v12s7_lindsey_charlie1:
     $ v12s7_lindsey = True
@@ -3220,7 +3214,6 @@ label v12s7_lindsey_kill:
 
     call screen v12s7_rear
 
-
 label v12s7_charli2:
     $ v12s7_charli = True
     $ v12s7_seenList = []
@@ -3574,7 +3567,6 @@ label v12s7_ms_rose_kill:
 
     call screen v12s7_seating_front
 
-
 label v12s7_penelope1:
     $ v12s7_penelope = True
     $ v12s7_seenList = []
@@ -3752,7 +3744,6 @@ label v12s7_penelope1:
 
                 u "Hey, would you like me to say something to Mr. Lee about possibly easing up on you."
 
-
                 scene v12ferpen1c # FPP. same 1, new pose, mouth open
                 with dissolve
 
@@ -3850,7 +3841,6 @@ label v12s7_penelope_kill:
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
-
     scene v12ferpen8 # TPP. Show Penelope hugging mc
     with dissolve
 
@@ -3880,7 +3870,6 @@ label v12s7_penelope_kill:
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_left_walkway_front
-
 
 label v12s7_amber1:
     $ v12s7_amber = True
@@ -3962,7 +3951,6 @@ label v12s7_amber1:
 
     scene v12feram5 # TPP. Show amber sitting on mc's back. mouth open
     with dissolve
-
 
     am "Now I'm gonna ask you again, are you carrying contraband?"
 
@@ -4352,7 +4340,6 @@ label v12s7_riley_kill2:
 
     call screen v12s7_right_gallery_front
 
-
 label v12s7_riley2_amber:
     $ v12s7_riley2 = True
 
@@ -4370,7 +4357,6 @@ label v12s7_riley2_amber:
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
-
 
     scene v12feramb2 # Show riley, from a distance, looking at amber out of shot, mouth closed
     with dissolve
@@ -4434,7 +4420,6 @@ label v12s7_riley2_amber:
 
     ### ERROR: -If MC presses the murder button during this scene he gets caught ###
     ### ERROR: -Back to free roam ###
-
 
 label v12s7_sam_cameron:
     $ v12s7_samantha = True
@@ -4652,7 +4637,6 @@ label v12s7_sam_cameron:
 
     call screen v12s7_seating_front
 
-
 label v12s7_sam2:
     $ v12s7_samantha2 = True
     $ v12s7_seenList = []
@@ -4748,8 +4732,7 @@ label v12s7_sam2:
 
     scene v12fersam1b
     with dissolve
-
-
+    
     u "Well, let's see, novelist, can you pinpoint our murderer?"
 
     scene v12fersam1c
@@ -4904,7 +4887,6 @@ label v12s7_sam2:
     
     call screen v12s7_right_walkway_back
 
-
 label v12s7_samantha_kill:
     hide screen murder_button_overlay
 
@@ -4986,7 +4968,6 @@ label v12s7_samantha_kill:
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_right_walkway_back
-
 
 label v12s7_cameron2:
     $ v12s7_cameron = True
@@ -5117,8 +5098,6 @@ label v12s7_cameron_kill:
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_rear_gallery
-
-
 
 label v12s7_nora1:
     $ v12s7_nora = True
@@ -6108,7 +6087,6 @@ label v12s7_josh_kill:
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_utility
-
 
 label v12s7_emily1:
     $ v12s7_emily = True
