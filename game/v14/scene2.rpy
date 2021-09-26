@@ -4,7 +4,7 @@
 # Time: Night
 
 
-label v13s02:
+label v14s02:
     scene v13s02_1 # TPP. show mc in the hotel lobby and looking around everywhere, no expression, mouth closed
     with dissolve
 
