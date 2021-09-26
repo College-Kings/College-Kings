@@ -17,14 +17,12 @@ label v10_cafe_w_jenny:
         scene v10scwj2 # TPP. Show MC waking up in his Apes room in underwear.
         with fade
 
-        u "(Damn, morning comes fast. I need to get ready and head over to the cafe.)"        
+        u "(Damn, morning comes fast. I need to get ready and head over to the cafe.)"
 
     scene v10scwj3 # TPP. Show MC walking towards a table in the café (now wearing outfit 9)
-    with dissolve
+    with fade
 
-    u "(I wonder what Jenny's gonna be like.)"
-    u "(She could be just as wild as Aubrey. I wonder what she looks like.)"
-    u "(I wonder if she's hot... Maybe I shouldn't be thinking like that... maybe.)"
+    u "(I wonder what Jenny's gonna be like. She could be just as wild as Aubrey. I wonder what she looks like. I wonder if she's hot... Maybe I shouldn't be thinking like that... maybe.)"
 
     scene v10scwj4 # TPP. Show MC looking around whilst taking a seat at a table. (Make sure it is the table with four seats. Move one seat to the side: https://prnt.sc/12q1qkd)
     with dissolve
@@ -79,8 +77,7 @@ label v10_cafe_w_jenny:
     scene v10scwj7 # FPP. Close up Jenny who is now sat in the chair opposite MC. Jenny slight smile, mouth open.
     with fade
 
-    jen "It's nice to finally meet you."
-    jen "I've heard a few things about you from Penelope, but not much."
+    jen "It's nice to finally meet you. I've heard a few things about you from Penelope, but not much."
 
     scene v10scwj7a # FPP. Same as 7, slight smile, mouth closed.
     with dissolve
@@ -116,9 +113,7 @@ label v10_cafe_w_jenny:
         scene v10scwj7c
         with dissolve
 
-        u "As we both know, Penelope is a really nice and caring person."
-        u "But sometimes, she cares a little too much..."
-        u "Her kindness just gets in the way of her judgment."
+        u "As we both know, Penelope is a really nice and caring person, but sometimes she cares a little too much... Her kindness just gets in the way of her judgment."
 
         scene v10scwj7
         with dissolve
@@ -156,11 +151,9 @@ label v10_cafe_w_jenny:
         scene v10scwj7d
         with dissolve
 
-        jen "So that's how I... oh my god, I should've known."
-        jen "There was no way I was getting accepted, I had already given up." 
+        jen "So that's how I... oh my god, I should've known. There was no way I was getting accepted, I had already given up." 
         jen "But Penelope just kept telling me not to worry about it and everything would work out."
-        jen "Wow, this is all my fault. She wouldn't be in this mess if it wasn't for me."
-        jen "*sigh* So much for being a good friend..."
+        jen "Wow, this is all my fault. She wouldn't be in this mess if it wasn't for me. *Sigh* So much for being a good friend..."
 
         scene v10scwj7e
         with dissolve
@@ -180,12 +173,11 @@ label v10_cafe_w_jenny:
 
             "Stay positive":
                 u "Let's try to stay positive. Focusing on the bad stuff isn't going to help. Let's just take it one step at a time."
-        
 
         scene v10scwj7b
         with dissolve
 
-        jen "You're right, I just wish she would've told me. Maybe I could've done something." 
+        jen "You're right, I just wish she would've told me. Maybe I could've done something."
         jen "Penelope must really trust you to confide in you, she tends to keep stuff like that to herself..."
 
         scene v10scwj7c
@@ -447,8 +439,7 @@ label v10_cafe_w_jenny:
         scene v10scwj7c
         with dissolve
 
-        u "I'm not too sure how the whole thing works, but if it's anything like the hearings on TV."
-        u "You might be useful as a character witness. You know Penelope better than most people."
+        u "I'm not too sure how the whole thing works, but if it's anything like the hearings on TV. You might be useful as a character witness. You know Penelope better than most people."
 
         scene v10scwj7
         with dissolve
@@ -473,8 +464,7 @@ label v10_cafe_w_jenny:
         scene v10scwj7b
         with dissolve
 
-        jen "Yeah, I guess you're right I'm gonna have to head home now."
-        jen "But thank you so much for letting me know what was going on..."
+        jen "Yeah, I guess you're right I'm gonna have to head home now. But thank you so much for letting me know what was going on..."
         jen "I'll probably talk to Penelope later tonight."
 
         scene v10scwj7c
@@ -524,7 +514,7 @@ label v10_cafe_w_jenny:
 
         u "Yeah I should probably explain, I thought it'd be best if we all uhm... talked about the situation and laid everything out in the open."
 
-        scene v10scwj20 # TPP. Show Penelope (Camera infront of her same as 7), slight sad, mouth open.
+        scene v10scwj20f # TPP. Show Penelope (Camera infront of her same as 7), slight sad, mouth open.
         with dissolve
 
         pe "Oh okay, that's... that's fine. I guess I needed to tell her at some point."
