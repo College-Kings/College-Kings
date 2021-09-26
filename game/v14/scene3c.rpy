@@ -3,9 +3,7 @@
 # Characters: MADAME (Outfit: 1), MC (Outfit: 3), Satin (Outfit: 1), Ryan (Outfit: 1), Emerald (Outfit: 1)
 # Time: Night 
 
-
 label v14s03c:
-
     scene v14s03c_1 # TPP. Show MC walking in the Brothel bar, slight smile, mouth open.
     with dissolve
 
@@ -170,7 +168,7 @@ label v14s03c:
     scene v14s03c_4e
     with dissolve
 
-    satin "Well, earlier when I said \"oh\" like that, it was because I'm pretty sure the girl he's talking to has an STD"...
+    satin "Well, earlier when I said \"oh\" like that, it was because I'm pretty sure the girl he's talking to has an STD..."
 
     scene v14s03c_4f
     with dissolve
