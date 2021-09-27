@@ -602,6 +602,9 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     stop music fadeout 3
     play music "music/v12/Scene 33/Track Scene 33_4.mp3" fadein 2
 
+    if v12s33_door1 and v12s33_door2 and v12s33_door3:
+        jump v12s33_sauna
+
     call screen v12s33_three_doors
 
 label v12s33_door1:
