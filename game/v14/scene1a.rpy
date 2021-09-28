@@ -12,7 +12,7 @@ label v14s01a:
     scene v14s01a_1a # TPP. Same as v14s01a_1, Lindsey putting a finger on MC's lips (as if telling him to be quiet), MC confused, mouth closed, Lindsey smiling, mouth open
     with dissolve
 
-    li "Wait... Open your eyes.."
+    li "Wait... Open your eyes..."
 
     scene v14s01a_1b # TPP. Same as v13s01a_1a, Lindsey mouth closed, MC mouth open, LIndsey finger no longer on MC mouth
     with dissolve

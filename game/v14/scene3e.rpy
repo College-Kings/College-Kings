@@ -307,7 +307,7 @@ label v14s03e:
             scene v14s03e_12
             with dissolve
 
-            u "That's cold as hell Ryan, but.. He's on his own with this one."
+            u "That's cold as hell Ryan, but... He's on his own with this one."
 
         "Tell Imre":
             scene v14s03e_12 # FPP. Same as v14s03e_12, serious expression
