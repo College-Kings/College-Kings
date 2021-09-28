@@ -5,18 +5,18 @@
 
 default v14s03a_left_cup = False
 
-label v14s03a:  # -MC walks overs and stands in front of the night gambler-
-    scene v14s03a_1  # TPP. MC, far away, walking towards the night gambler, neutral expression, mouth closed.
+label v14s03a:  
+    scene v14s03a_1  # TPP. MC with Imre and Ryan right behind him, far away, walking towards the night gambler, MC/Gambler neutral expression, mouth closed,Ryan/Imre, smile, mouth closed
     with dissolve
 
     pause 0.75
 
-    scene v14s03a_1a # TPP. Same as v14s03a_1, but MC close (half the distance) to the night gambler.
+    scene v14s03a_1a # TPP. Same as v14s03a_1, but Imre, MC, and Ryan closer (half the distance) to the night gambler.
     with dissolve
 
     pause 0.75
 
-    scene v14s03a_1b # TPP. MC standing in front of the night gamble, MC neutral expression. gamble smiling, both mouths closed.
+    scene v14s03a_1b # TPP. MC standing in front of the night gamble, Imre and Ryan on each side of MC, MC neutral expression. Gambler smiling, both mouths closed.
     with dissolve
 
     pause 0.75
