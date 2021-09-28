@@ -8,6 +8,8 @@ label v13s51_emily_fight:
     with dissolve
 
     pause 0.75
+
+    play music "music/v13/Track Scene 51.mp3" fadein 2
     
     scene v13s51_2 # FPP. Same positioning as v13s51_1, Emily mouth open, mad
     with dissolve
@@ -101,7 +103,7 @@ label v13s51_emily_fight:
     scene v13s51_5 # FPP. MC looking in the mirror at himself, mad, mouth closed.
     with dissolve
 
-    u "(She’s a fucking psycho, I swear!)"
+    u "(She's a fucking psycho, I swear!)"
 
     play sound "sounds/knock.mp3"
 
@@ -113,7 +115,7 @@ label v13s51_emily_fight:
     scene v13s51_6a # TPP. Same as v13s51_6, but Emily mouth closed.
     with dissolve
 
-    u " (muffled) Emily, go chill somewhere and leave me alone."
+    u "(muffled) Emily, go chill somewhere and leave me alone."
 
     play sound "sounds/dooropen.mp3"
     
@@ -125,7 +127,7 @@ label v13s51_emily_fight:
     scene v13s51_5a # FPP. MC looking in the mirror and Emily standing behind him, mad, shocked, mouth open.
     with dissolve
 
-    u "EMILY!"
+    em "[name]!"
 
     scene v13s51_7 # TPP. MC walks away from the counter/mirror (to leave) past Emily, both mad, both mouths closed.
     with dissolve
@@ -155,12 +157,12 @@ label v13s51_emily_fight:
     scene v13s51_8b # FPP. Emily, begins taking off/lower her top to show her breasts, mad, mouth closed.    
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
-    scene v13s51_8c  # FPP. Same as v13s51_8b, but Emily's breast exposed, hands reaching toward MC. 
+    scene v13s51_8c # FPP. Same as v13s51_8b, but Emily's breast exposed, hands reaching toward MC. 
     with dissolve
 
-    pause 0.75
+    pause 1.5
 
     scene v13s51_9 # TPP. Emily, breasts exposed, arms slightly extended,one hand on each side of MC's chest, with the wall behind MC. Emily mad, MC confused, both mouths closed
     with dissolve
@@ -177,13 +179,13 @@ label v13s51_emily_fight:
 
     pause 0.75
 
-    scene v13_s51_10 # FPP. Emily, breasts exposed, holding MC against the wall with both hands, mad, mouth open.
+    scene v13s51_10 # FPP. Emily, breasts exposed, holding MC against the wall with both hands, mad, mouth open.
     with dissolve
     
     em "Fuck me then! Show me you know how to fuck me, exactly how I like it!"
 
-    menu:        
-        "Tell Emily to Fuck Off!":
+    menu:
+        "Tell Emily to fuck off!":
             scene v13s51_11 # TPP. MC, arms extended, hands on Emily (topless) shoulders, both mad, both mouthes closed.
             with dissolve
 
@@ -200,6 +202,7 @@ label v13s51_emily_fight:
             pause 0.75
                         
             scene v13s51_12 # FPP. Emily, breasts exposed, her back against the wall, surprised (eyebrows raised) with a neutral (normal) expression, mouth closed.
+            with dissolve
             
             u "We're not doing this. Like deadass, get the fuck out!"
 
@@ -258,15 +261,17 @@ label v13s51_emily_fight:
 
             pause 0.75
 
+            stop music fadeout 3
+
             if chloegf:
                 jump v13s52
 
-            elif rileyrs:  
+            elif rileyrs:
                 jump v13s53
                             
             else:
                 jump v13s54 
             
         "Fuck Emily":
-            
+            stop music fadeout 3
             jump v13s50a

@@ -139,7 +139,6 @@ label v11_riley_amber_smoking:
 
             menu:
                 "High School":
-
                     u "My first time smoking was in High School. Actually, it was Josh that made me try it. I had a really bad headache and he promised that it'd help if I smoked a bit."
 
                     scene v11ras5
@@ -203,7 +202,6 @@ label v11_riley_amber_smoking:
                     u "Yeah... That thought has definitely crossed my mind a few times since that night."
 
                 "Never smoked before":
-
                     u "I've actually never smoked before."
 
                     scene v11ras5

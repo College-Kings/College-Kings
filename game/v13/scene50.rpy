@@ -9,6 +9,8 @@ label v13s50:
     
     ry "I'm really nervous, haha."
 
+    play music "music/v13/Track Scene 50_1.mp3" fadein 2
+
     scene v13s50_2 # FPP. Ryan looking at MC, slight smile, mouth closed
     with dissolve
 
@@ -69,6 +71,9 @@ label v13s50:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 50_2.mp3" fadein 2
+
     scene v13s50_7 # FPP. Riley looking at MC, slight smile, mouth open
     with dissolve
 
@@ -117,9 +122,9 @@ label v13s50:
     scene v13s50_7b
     with dissolve
 
-    ri "Oooh okay, and look at you guys now. Having dates in other countries… *Chuckles*"
+    ri "Oooh okay, and look at you guys now. Having dates in other countries... *Chuckles*"
 
-    scene  v13s50_8
+    scene v13s50_8
     with dissolve
 
     ry "Believe it or not, this is actually our first date."
@@ -137,7 +142,7 @@ label v13s50:
     scene v13s50_7d # FPP. Same as v13s50_7b, different posture
     with dissolve
 
-    ri "I've always liked the beginning, you know? The part where you’re just getting to know each other and everything."
+    ri "I've always liked the beginning, you know? The part where you're just getting to know each other and everything."
 
     scene v13s50_8b # FPP. Same as v13s50_8, Ryan looking at Emily
     with dissolve
@@ -159,14 +164,15 @@ label v13s50:
 
     em "Isn't that right, [name]?"
 
-    menu:    
-        "He knows more...":
+    menu:
+        "He knows more":
+            $ addPoint("bro")
             scene v13s50_9a
             with dissolve
 
             u "You and I don't talk as often anymore, so he knows the new Emily way better than I do. I know the old Emily and well... Nevermind."
 
-        "I know more...":
+        "I know more":
             scene v13s50_8c # FPP. Same as v13s50_8a, mouth closed 
             with dissolve
 
@@ -277,6 +283,9 @@ label v13s50:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 50_3.mp3" fadein 2
+
     scene v13s50_14 # TPP. Show MC entering the washroom thinking to himself, slight smile, mouth closed 
     with dissolve
 
@@ -330,11 +339,14 @@ label v13s50:
     pause 0.75
 
     menu:
-        "Kick her out...":
+        "Kick her out":
             scene v13s50_19 # FPP. MC puts one hand on Emily's shoulder, pushing her back lightly, Emily, slightly surprised expression, mouth closed
             with dissolve
 
             pause 0.75
+
+            stop music fadeout 3
+            play music "music/v13/Track Scene 50_4.mp3" fadein 2
 
             scene v13s50_19a # FPP. Same as v13s50_19, MC hands down to his side
             with dissolve
@@ -366,17 +378,21 @@ label v13s50:
             
             u "(Damn, psycho. I thought no meant no!)"
 
+            if v13s48_ryan_double_date:
+                jump v13s50a_return_after_emily
+
             scene v13s50_21
             with dissolve
 
             u "(I'm taking my ass to bed.)"
 
-        "Fuck Her...":
-            
+        "Fuck her":
             scene v13s50_18a # TPP. Same as v13s50_18, MC, slight smile, mouth open
             with dissolve
 
             u "You know what?"
+
+            stop music fadeout 3
 
             jump v13s50a
 
@@ -395,14 +411,13 @@ label v13s50:
 
     pause 0.75
 
-    if chloegf:
+    stop music fadeout 3
 
+    if chloegf:
         jump v13s52
     
     elif rileyrs: 
-    
         jump v13s53
     
     else: 
-       
         jump v13s54

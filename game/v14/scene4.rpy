@@ -30,6 +30,7 @@ label v14s04:
     pause 0.75
 
     if v11_riley_roomate:
-        jump v14s05a 
+        jump v14s05a
+
     else:
         jump v14s05

@@ -5,7 +5,6 @@
 
 
 label v14s08:
-
     scene v14s08_1 # TPP. mc sees the bus and walks towards it, slight smile, mouth closed
     with dissolve    
 
@@ -46,7 +45,6 @@ label v14s08:
 
     menu:
         "Ask her what's wrong":
-    
             scene v14s08_3c
             with dissolve    
 
@@ -85,7 +83,6 @@ label v14s08:
             pause 0.75
 
         "Leave her alone":
-
             scene v14s08_3
             with dissolve
 
@@ -114,7 +111,7 @@ label v14s08:
             scene v14s08_4b # FPP. same as v14s08_4 amber turns around and looks at mc, no expression, mouth open
             with dissolve
 
-            am "Uh, [Name]..."
+            am "Uh, [name]..."
 
             scene v14s08_4b
             with dissolve
@@ -161,4 +158,4 @@ label v14s08:
 
     pause 0.75
 
-    jump to v14s09
+    jump v14s09

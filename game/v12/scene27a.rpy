@@ -165,7 +165,7 @@ label v12s27a:
 
     u "Ryan, are you sure you wanna do this?"
 
-    scene v12s27a_2j # same as 2, Ryan looking at his phone, smiling , mouth open
+    scene v12s27a_2j # same as 2, Ryan looking at his phone, smiling, mouth open
     with dissolve
 
     ry "I'll take that as a yes... Haha!"
@@ -407,7 +407,6 @@ label v12s27a:
     with dissolve
 
     menu:
-
         "It's not a bad look":
             $ addPoint("bro")
             u "Honestly Ryan, it's not a bad look. It's actually pretty cool."
@@ -416,7 +415,6 @@ label v12s27a:
             with dissolve
 
             ry "*Sighs* I hope you're not just saying that..."
-
 
         "It's not your best look":
             $ addPoint("tm")
@@ -462,7 +460,7 @@ label v12s27a:
 
     ry "Let's get back, [name]."
 
-    scene v12s27a_10 #TPP, show mc and ryan leaving the barber shop, mc smiling ,ryan neutral
+    scene v12s27a_10 #TPP, show mc and ryan leaving the barber shop, mc smiling,ryan neutral
     with dissolve
 
     pause 0.7

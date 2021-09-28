@@ -189,7 +189,6 @@ label v12_amber_after_spa:
                 pause 0.75
 
                 stop music fadeout 3
-
                 jump v12_chris_nora_room
 
     else:

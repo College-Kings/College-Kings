@@ -9,7 +9,7 @@ label v14s10:
 
     pause 0.75
 
-    call screen v14Status
+    call screen v14_status
 
 label v14s10_continuation:
     scene v14s10_2 # TPP. Show MC and Riley sitting next to each other, Riley asleep on MC's shoulder, MC smiling, both mouths closed

@@ -95,7 +95,6 @@ label v10_walk_jenny_text:
 
     menu:
         "Make a joke":
-
             u "Teachers have friends?"
 
             scene v10swjt5

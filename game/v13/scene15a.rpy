@@ -6,18 +6,20 @@
 init python:
     def v13s15a_Reply1():
         setattr(store, "v13_cuddle_lauren_text", True)
-        contact_Lauren.newMessage(_("Yayy :) "))
+        contact_Lauren.newMessage("Yayy :)")
 
     def v13s15a_Reply2():
-        contact_Lauren.newMessage(_("Aww okay, it's cool "))
-        contact_Lauren.addReply(_("Sorry babe, I'm just so tired. "))
-        contact_Lauren.newMessage(_("It's okay. "))
+        contact_Lauren.newMessage("Aww okay, it's cool")
+        contact_Lauren.addReply("Sorry babe, I'm just so tired.")
+        contact_Lauren.newMessage("It's okay.")
 
 label v13s15a:
     scene v13s15a_1 # TPP. Show MC walking into the room, it's dark inside, MC neutral expression, mouth closed
     with dissolve
 
     pause 0.75
+
+    play music "music/v13/Track Scene 15.mp3" fadein 2
 
     scene v13s15a_2 # TPP. Show MC standing in front of the door, in the room, MC neutral expression, mouth closed, room is dark
     with dissolve
@@ -81,7 +83,7 @@ label v13s15a:
 
     u "I hear you."
 
-    if laurenrs:
+    if laurenrs and not v11_aubrey_sex:
         play sound "sounds/vibrate.mp3"
 
         scene v13s15a_7 # TPP. MC looking down at his phone, he is standing in same place as v13s15a_6, slightly surprised, mouth closed
@@ -89,14 +91,16 @@ label v13s15a:
 
         u "(Kinda late for a text.)"
 
-        $ contact_Lauren.newMessage(_("You up? ", queue=False))
-        $ contact_Lauren.addReply(_("Yeah, wassup? "))
-        $ contact_Lauren.newMessage(_("Come cuddle with me? ;) "))
-        $ contact_Lauren.addReply(_("You don't have to ask me twice, omw "), v13s15a_Reply1)
-        $ contact_Lauren.addReply(_("I'm already asleep... "), v13s15a_Reply2)
+        $ contact_Lauren.newMessage("You up?", queue=False)
+        $ contact_Lauren.addReply("Yeah, wassup?")
+        $ contact_Lauren.newMessage("Come cuddle with me? ;)")
+        $ contact_Lauren.addReply("You don't have to ask me twice, omw", v13s15a_Reply1)
+        $ contact_Lauren.addReply("I'm already asleep...", v13s15a_Reply2)
 
         scene v13s15a_8 # FPP. MC looking down at his phone, he is standing in same place as v13s15a_6
         with dissolve
+
+        pause 0.75
 
         label v13s15a_PhoneContinueLauren:
             if contact_Lauren.replies:
@@ -161,8 +165,9 @@ label v13s15a:
 
         menu:
             "Stay with Riley":
-                
-                u "Is that even a question?."
+                $ grant_achievement("gentlemen_prefer_gingers")
+                $ rileyrs = True
+                u "Is that even a question?"
 
                 scene v13s15a_9 # TPP. Show MC removing his pants, shirt already off, smiling, mouth closed
                 with dissolve
@@ -178,6 +183,8 @@ label v13s15a:
                 with dissolve
 
                 pause 0.75
+
+                stop music fadeout 3
 
                 jump v13s16a
 
@@ -202,7 +209,7 @@ label v13s15a:
                 scene v13s15a_6b
                 with dissolve
 
-                u "Good, have a goodnight Riley."
+                u "Good, have a good night, Riley."
 
                 scene v13s15a_6a
                 with dissolve
@@ -213,6 +220,8 @@ label v13s15a:
                 with dissolve
 
                 pause 0.75
+
+                stop music fadeout 3
 
                 jump v13s16
 
@@ -257,7 +266,7 @@ label v13s15a:
 
         menu:
             "Let Riley do it":
-                u "Is that even a question?."
+                u "Is that even a question?"
 
                 scene v13s15a_9 
                 with dissolve
@@ -273,6 +282,8 @@ label v13s15a:
                 with dissolve
 
                 pause 0.75
+
+                stop music fadeout 3
 
                 jump v13s16a
 
@@ -311,5 +322,7 @@ label v13s15a:
                 with dissolve
 
                 pause 0.75
+
+                stop music fadeout 3
 
                 jump v13s17c

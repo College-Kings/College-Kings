@@ -9,6 +9,8 @@ label v13s41:
     
     u "(It's kinda late, but I can see if Lindsey wants to go over to that ferris wheel she was talking about.)"
 
+    play music "music/v13/Track Scene 41_1.mp3" fadein 2
+
     scene v13s41_1
     with dissolve
 
@@ -114,6 +116,9 @@ label v13s41:
 
     luuk "Later man!"
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 41_2.mp3" fadein 2
+
     scene v13s41_7 # TPP. show MC and Lindsey looking at each other slight smiles, mouths closed leaving the hotel
     with dissolve
 
@@ -137,7 +142,7 @@ label v13s41:
     scene v13s41_10 # FPP show lindsey standing in front of the ferris wheel slight smile, mouth closed, show ashton in distance behind lindsey looking at MC
     with dissolve
 
-    u "Wow… Nobody's here."
+    u "Wow... Nobody's here."
 
     scene v13s41_10a # FPP. lindsey mouth open, ashton has walked closer to lindsey
     with dissolve
@@ -152,12 +157,12 @@ label v13s41:
     scene v13s41_11a # FPP. same as v13s41_11 ashton mouth closed, lindsey mouth open
     with dissolve
 
-    li "Oh, um… We were hoping to ride the ferris wheel together."
+    li "Oh, um... We were hoping to ride the ferris wheel together."
 
     scene v13s41_11
     with dissolve
 
-    ash "Let me guess. You thought since you're a young and hot couple, it'd be nice to makeout at the top of the ferris wheel?"
+    ash "Let me guess. You thought since you're a young and hot couple, it'd be nice to make out at the top of the ferris wheel?"
 
     scene v13s41_11a
     with dissolve
@@ -172,7 +177,7 @@ label v13s41:
     scene v13s41_11b # FPP. same as v13s41_11a lindsey slight anger
     with dissolve
 
-    li "Oh, I’m sorry! I was just asking."
+    li "Oh, I'm sorry! I was just asking."
 
     scene v13s41_11c # FPP. same as v13s41_11b ashton and lindsey looking at MC, no expression, mouth closed
     with dissolve
@@ -245,9 +250,12 @@ label v13s41:
     ash "*Yells* It's ready!"
 
     scene v13s41_13 # TPP. MC and Lindsey sit on the ferris wheel, slight smiles, mouth closed, looking at each other
-    with dissolve    
+    with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 41_3.mp3" fadein 2
 
     scene v13s41_13a # TPP. same as v13s41_13 ferris wheel starts moving
     with dissolve
@@ -257,7 +265,7 @@ label v13s41:
     scene v13s41_14 # FPP. show just lindsey on the ferris wheel, looking at MC, slight frown, mouth open, background is ground level
     with dissolve
 
-    li "*Sighs* Finally… A moment to relax."
+    li "*Sighs* Finally... A moment to relax."
 
     scene v13s41_14a # FPP. same as v13s41_14 lindsey mouth closed
     with dissolve
@@ -282,7 +290,7 @@ label v13s41:
     scene v13s41_14e # FPP. same as v13s41_14d lindsey mouth closed
     with dissolve
 
-    u "Everything else as in the loss of your mom? You’ve been keeping yourself busy ever since you lost her..."
+    u "Everything else as in the loss of your mom? You've been keeping yourself busy ever since you lost her..."
 
     scene v13s41_14b
     with dissolve
@@ -368,7 +376,7 @@ label v13s41:
     scene v13s41_14
     with dissolve
 
-    li "And as of right now, they’re nothing but memories of their own past."
+    li "And as of right now, they're nothing but memories of their own past."
 
     scene v13s41_14c
     with dissolve
@@ -378,7 +386,7 @@ label v13s41:
     scene v13s41_14j # FPP. same as v13s41_14b
     with dissolve
 
-    li "Exactly! Don’t you not think they should break up?"
+    li "Exactly! Don't you not think they should break up?"
 
     scene v13s41_14b
     with dissolve
@@ -396,7 +404,7 @@ label v13s41:
             scene v13s41_14g
             with dissolve
 
-            u "In the long run, they're just hurting themselves"
+            u "In the long run, they're just hurting themselves."
 
             scene v13s41_14j
             with dissolve
@@ -409,7 +417,6 @@ label v13s41:
             li "I just wish they could see that."
 
         "They shouldn't":
-
             scene v13s41_14e
             with dissolve
 
@@ -433,12 +440,12 @@ label v13s41:
     scene v13s41_14a
     with dissolve
 
-    li "It'd be nice to have a really close girlfriend to talk to while I’m stressed about all this."
+    li "It'd be nice to have a really close girlfriend to talk to while I'm stressed about all this."
 
     scene v13s41_14a
     with dissolve
 
-    li "Not having Chloe around lately  is really getting to me..I knew this would eventually happen though, when I decided to run."
+    li "Not having Chloe around lately is really getting to me... I knew this would eventually happen though, when I decided to run."
 
     scene v13s41_14b
     with dissolve
@@ -479,9 +486,9 @@ label v13s41:
             scene v13s41_14f
             with dissolve
 
-            li "Awww"
+            li "Awww..."
 
-            scene v13s41_14g       
+            scene v13s41_14g
             with dissolve
 
             u "And I may not be a girl, but I hope I'll do."
@@ -504,7 +511,7 @@ label v13s41:
     scene v13s41_14k # FPP. same as v13s41_14f lindsey looks up at the sky
     with dissolve
 
-    li "Oh my…"
+    li "Oh my..."
 
     scene v13s41_15a # TPP. same as v13s41_15 show just the night sky with stars and the moon
     with dissolve
@@ -521,7 +528,7 @@ label v13s41:
 
     menu:
         "You're beautiful":
-
+            $ addPoint("bf")
             scene v13s41_14l # FPP. same as v13s41_14g lindsey mouth closed slight smile
             with dissolve
 
@@ -531,10 +538,9 @@ label v13s41:
                 scene v13s41_14f
                 with dissolve
 
-                li "You're so sweet to me [name]."    
+                li "You're so sweet to me, [name]."
 
-            else:  
-
+            else:
                 scene v13s41_14m # FPP. same as v13s41_14f Lindsey looks into MC's eyes, full smile
                 with dissolve
 
@@ -545,6 +551,7 @@ label v13s41:
 
                 u "I'm a guy like me."
 
+                play sound "sounds/kiss.mp3"
                 scene v13s41_16 # TPP. Lindsey smiles and then romantically kisses MC-
                 with dissolve
 
@@ -556,8 +563,7 @@ label v13s41:
                 li "Yes you are."
 
         "Of course":
-            $ addpoint("bro")
-
+            $ addPoint("bro")
             scene v13s41_14g
             with dissolve
 
@@ -566,7 +572,7 @@ label v13s41:
             scene v13s41_14g
             with dissolve
 
-            u "We're in Amsterdam, in the middle of the night, on a ferris wheel. If this isn’t beautiful, then I don’t know what beautiful is. *Chuckles*"
+            u "We're in Amsterdam, in the middle of the night, on a ferris wheel. If this isn't beautiful, then I don't know what beautiful is. *Chuckles*"
 
             scene v13s41_14f
             with dissolve
@@ -633,4 +639,6 @@ label v13s41:
 
     u "Good, maybe that worry will keep him from doing the nasty shit he usually does."
 
+    stop music fadeout 3
+    
     jump v13s41a

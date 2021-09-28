@@ -3,16 +3,16 @@
 # Characters: MC (Outfit: 2), AUBREY (Outfit: 1)
 # Time: Wednesday Night
 
-default v13_after_party = False
-
 label v13s13a:
-    if (joinwolves and len(v12s7_killList) == 15) or len(v12s7_killList) == 16: # DON'T KNOW NUMBER FOR ALL KILLS; CHANGE TO CORRECT NUMBER
+    if v12_murder_count == v12s7_victims: # DON'T KNOW NUMBER FOR ALL KILLS; CHANGE TO CORRECT NUMBER
         $ v13_after_party = True
 
     scene v13s13a_1 # TPP Show MC and Aubrey sitting backstage, Polly walking into the room, not looking at MC or Aubrey
     with fade
 
     pause 0.75
+
+    play music "music/v13/Track Scene 13a_1.mp3" fadein 2
 
     scene v13s13a_2 # FPP Show Polly sitting down near MC and Aubrey but not looking their way, Polly looking tired with mouth open
     with dissolve
@@ -57,7 +57,7 @@ label v13s13a:
     scene v13s13a_2b
     with dissolve
 
-    polly "'Cause that means I don't have to try and impress a ton of people I don’t care about... *Laughs* You guys are cool."
+    polly "'Cause that means I don't have to try and impress a ton of people I don't care about... *Laughs* You guys are cool."
 
     scene v13s13a_2c
     with dissolve
@@ -67,12 +67,12 @@ label v13s13a:
     scene v13s13a_2d # FPP Same as 2, Polly looking at Aubrey, Polly looks shocked or surprised, mouth open
     with dissolve
 
-    polly "Wait… A... Flipping... Minute! Aubrey!?"
+    polly "Wait... A... Flipping... Minute! Aubrey!?"
 
     scene v13s13a_3a # FPP Same as 3, Aubrey looking confused, mouth open
     with dissolve
 
-    au "Y-Yes… That's my name, how do you know me?"
+    au "Y-Yes... That's my name, how do you know me?"
 
     scene v13s13a_2e # FPP Same as 2, Polly looking at Aubrey, Polly leaning forward and smiling in excitement, mouth open
     with dissolve
@@ -98,7 +98,7 @@ label v13s13a:
     scene v13s13a_2f # FPP Same as 2, Polly looking like she just tasted something bad, mouth open
     with dissolve
 
-    polly "Ewww, ugh... I'm sorry, but…"
+    polly "Ewww, ugh... I'm sorry, but..."
     polly "I can't stand your sister. She thinks she's way better than she actually is."
 
     scene v13s13a_2g # FPP Same angle and expression as 2f, mouth closed
@@ -106,8 +106,7 @@ label v13s13a:
 
     menu:
         "Defend her sister":
-
-            u "Oh, come on… She's not that bad."
+            u "Oh, come on... She's not that bad."
 
             scene v13s13a_2b
             with dissolve
@@ -116,7 +115,6 @@ label v13s13a:
 
         "Laugh":
             $ aubrey.points += 1
-
             u "*Laughs*"
 
             scene v13s13a_2e
@@ -136,6 +134,7 @@ label v13s13a:
     polly "That's an understatement. But who cares, forget about your sister."
 
     scene v13s13a_2e
+    with dissolve
 
     polly "Based on what I saw, you're gonna be the Next. Big. Thing. Your first gig is international work in Paris... C'mon now. *Laughs*"
 
@@ -177,12 +176,12 @@ label v13s13a:
     scene v13s13a_3f # FPP Same as 3, Aubrey looking at Polly with annoyed expression, mouth open
     with dissolve
 
-    au "Not at all. It’s just, I know him, and he's talking about a little more than just liking you as an artist."
+    au "Not at all. It's just, I know him, and he's talking about a little more than just liking you as an artist."
 
     scene v13s13a_2b
     with dissolve
 
-    polly "Haha, well sadly… I don't swing that way, but if I did..."
+    polly "Haha, well sadly... I don't swing that way, but if I did..."
 
     scene v13s13a_2h # FPP Same angle as 2, Polly winking at Aubrey
     with dissolve
@@ -230,16 +229,16 @@ label v13s13a:
     au "CHEESE!"
     polly "CHEESE!"
 
-    scene v13s13a_5a
-    with dissolve
-
-    pause
     play sound "sounds/capture.mp3"
+    scene v13s13a_5b
+    with flash
+
+    pause 2.5
 
     scene v13s13a_6 # TPP Show MC giving Polly her phone back while Aubrey moves back to sit by MC
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v13s13a_2i # FPP Same angle as 2, Polly looking down at her phone, smiling with mouth open
     with dissolve
@@ -254,7 +253,7 @@ label v13s13a:
     scene v13s13a_2e
     with dissolve
 
-    polly "Don't forget me when you're famous… *Chuckles*"
+    polly "Don't forget me when you're famous... *Chuckles*"
 
     scene v13s13a_3g # FPP Same as 3, Aubrey looking at Polly and laughing
     with dissolve
@@ -264,7 +263,7 @@ label v13s13a:
     scene v13s13a_3h # FPP Same as 3, Aubrey looking at Polly and smiling, mouth closed
     with dissolve
 
-    u "Shit, don't forget me either… The fuck?"
+    u "Shit, don't forget me either... The fuck?"
 
     scene v13s13a_3b
     with dissolve
@@ -274,15 +273,14 @@ label v13s13a:
     scene v13s13a_2b
     with dissolve
 
-    polly "Haha, so… Are you guys into clubs?"
+    polly "Haha, so... Are you guys into clubs?"
 
     scene v13s13a_2c
     with dissolve
 
     menu:
         "Not really":
-
-            u "I'm not really... Although, I’ve probably never been to a real, pop star-worthy nightclub. *Laughs*"
+            u "I'm not really... Although, I've probably never been to a real, pop star-worthy nightclub. *Laughs*"
 
             scene v13s13a_2b
             with dissolve
@@ -293,12 +291,12 @@ label v13s13a:
             $ addPoint("tm")
             $ v13_after_party = True
 
-            u "Oh, hell yeah.  Who doesn't love a good club?"
+            u "Oh, hell yeah. Who doesn't love a good club?"
 
             scene v13s13a_2b
             with dissolve
 
-            polly "Yes!. I'm going to an after party right now and… You guys should come."
+            polly "Yes! I'm going to an after party right now and... You guys should come."
 
             scene v13s13a_3
             with dissolve
@@ -357,6 +355,8 @@ label v13s13a:
 
         pause 0.5
 
+        stop music fadeout 3
+
         jump v13s14a
 
     else: # -If don't have after party access or not invited
@@ -373,7 +373,7 @@ label v13s13a:
         scene v13s13a_9a
         with dissolve
 
-        polly "You beat me to it. I’ll be in touch with you on Kiwii, girl."
+        polly "You beat me to it. I'll be in touch with you on Kiwii, girl."
 
         scene v13s13a_14 # FPP Show Polly giving Aubrey a friendly hug
         with dissolve
@@ -395,6 +395,9 @@ label v13s13a:
 
         pause 0.5
 
+        stop music fadeout 3
+        play music "music/v13/Track Scene 12a_2.mp3" fadein 2
+
         scene v13s13a_16 # TPP Show MC and Aubrey getting into a cab
         with dissolve
 
@@ -407,13 +410,16 @@ label v13s13a:
 
         scene v13s13a_18 # TPP Show Aubrey giving MC a hug in hotel lobby. Aubrey is smiling with her mouth open
         with dissolve
+
+        stop music fadeout 3
+        play music "music/v13/Track Scene 12a_1.mp3" fadein 2
         
-        au "That was...a once in a lifetime opportunity. Thank you so much."
+        au "That was... a once in a lifetime opportunity. Thank you so much."
 
         scene v13s13a_19 # FPP Show Aubrey, in hotel lobby, smiling with mouth closed
         with dissolve
 
-        u "*Chuckles* Are you kidding? I had a blast. You’re more than welcome."
+        u "*Chuckles* Are you kidding? I had a blast. You're more than welcome."
 
         scene v13s13a_19a # FPP Same as 19, Aubrey's mouth open
         with dissolve
@@ -429,6 +435,8 @@ label v13s13a:
         with fade
 
         pause 0.75
+
+        stop music fadeout 3
 
         if v11_riley_roomate:
             jump v13s15a

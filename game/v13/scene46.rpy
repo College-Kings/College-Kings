@@ -9,10 +9,12 @@ label v13s46:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 46_1.mp3" fadein 2
+
     scene v13s46_2 # FPP. Show lauren riding her bike on MC's right side, slight smile, mouth closed, forest background
     with dissolve
 
-    u "It feels great out here…"
+    u "It feels great out here..."
 
     scene v13s46_2a # FPP. same as v13s46_2 different forest background, mouth open
     with dissolve
@@ -24,9 +26,8 @@ label v13s46:
 
     menu:
         "I love the outdoor":
-    
             scene v13s46_2
-            with dissolve    
+            with dissolve
 
             u "I absolutely love the outdoors. Just the smell of nature, like the rain and sunshine, always puts me in a good mood."
 
@@ -36,11 +37,13 @@ label v13s46:
             la "I'm the same exact way. *Chuckles*"
 
         "I'm a city man":
-            
             scene v13s46_2
             with dissolve
 
-            u "I don't hate being outside, but... *Chuckles* I’m definitely a city person."
+            if v13_told_emmy_city:
+                $ grant_achievement("urbanizer_womanizer")
+
+            u "I don't hate being outside, but... *Chuckles* I'm definitely a city person."
 
             scene v13s46_2a
             with dissolve
@@ -75,7 +78,7 @@ label v13s46:
     scene v13s46_2
     with dissolve
 
-    u "Oh, I see... You’re really into the outdoors, huh?"
+    u "Oh, I see... You're really into the outdoors, huh?"
 
     scene v13s46_2a
     with dissolve
@@ -146,6 +149,9 @@ label v13s46:
     with dissolve
 
     la "*Whispers* Shhh! Slow down! Stop here..."
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 46_2.mp3" fadein 2
 
     scene v13s46_4b # FPP. same as v13s46_4 Lauren looks off into the background and then her face shows shock
     with dissolve
@@ -233,7 +239,7 @@ label v13s46:
     la "He's looking for food from you."
 
     scene v13s46_9 # TPP. the deer sniffs the MC's crotch, MC shocked mouth open, Lauren full smile mouth open with a hand attempting to cover her mouth
-    with dissolve   
+    with dissolve
 
     pause 0.75
 
@@ -297,8 +303,7 @@ label v13s46:
 
     pause 0.75
 
-    if laurens:
-
+    if laurenrs:
         scene v13s46_4a
         with dissolve
 
@@ -324,7 +329,6 @@ label v13s46:
 
         menu:
             "Keep the spark":
-
                 scene v13s46_2
                 with dissolve
 
@@ -336,11 +340,10 @@ label v13s46:
                 la "*Chuckles* We think alike."
 
             "We'll get tired":
-
                 scene v13s46_2
-                with dissolve         
+                with dissolve
 
-                u "Like everyone Lauren, we'll get tired eventually and grow old one day. That’s just how things work, you know?"
+                u "Like everyone Lauren, we'll get tired eventually and grow old one day. That's just how things work, you know?"
 
                 scene v13s46_2a
                 with dissolve
@@ -358,7 +361,6 @@ label v13s46:
                 la "*Laughs* Oh my gosh, stop."
 
     else: 
-
         scene v13s46_2a
         with dissolve
 
@@ -377,7 +379,10 @@ label v13s46:
     scene v13s46_2b # FPP. same as v13s46_2a Lauren stops her bike, and gets off her bike
     with dissolve
 
-    la "*Whispers* [Name], stop! For real, stop..."
+    la "*Whispers* [name], stop! For real, stop..."
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 46_3.mp3" fadein 2
 
     scene v13s46_2c # FPP. same as v13s46_2b MC stops his bike, and gets off his bike
     with dissolve
@@ -412,7 +417,7 @@ label v13s46:
     scene v13s46_13c # FPP. same as v13s46_13b laurens mouth is closed
     with dissolve
 
-    u "Holy…"
+    u "Holy..."
 
     scene v13s46_13b
     with dissolve
@@ -424,11 +429,10 @@ label v13s46:
 
     menu:
         "What?! No way":
-
             scene v13s46_13c
             with dissolve
 
-            u "What?! No way...You’re being extra freaky right now. *Chuckles*"
+            u "What?! No way... You're being extra freaky right now. *Chuckles*"
 
             scene v13s46_13b
             with dissolve
@@ -438,13 +442,13 @@ label v13s46:
             scene v13s46_13c
             with dissolve
 
-            u "Let's go ahead and head back before they see us creepin’, you weirdo."
+            u "Let's go ahead and head back before they see us creepin', you weirdo."
 
-        "Haha, okay.":
-                
+        "Haha, okay":
             scene v13s46_13b
-            with dissolve                
-                            
+            with dissolve
+
+            $ grant_achievement("voyeur")
             u "Okay, lead the way. *Chuckles*"
 
             scene v13s46_15 # FPP. MC and Lauren sneak closer to the couple, just laurens head is visible full smile mouth open looking at the couple and find them fully nude in the arch sex position, male body should resemble an arch, google search sex position 173 arch, first google image for reference
@@ -467,11 +471,12 @@ label v13s46:
 
             pause 0.75
 
-            scene v13s46_15b  
+            scene v13s46_15b
             with dissolve
 
             pause 0.75
 
+            play sound "sounds/twig.mp3"
             scene v13s46_16 # FPP. show just laurens foot stepping on a branch
             with dissolve
 
@@ -522,4 +527,6 @@ label v13s46:
 
     pause 0.75
 
-    jump v13s74
+    stop music fadeout 3
+
+    jump v13s47

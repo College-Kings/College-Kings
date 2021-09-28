@@ -4,6 +4,8 @@
 # Time: Morning 
 
 label v13_ticket_transfer:
+    play music "music/v13/Track Scene 7.mp3" fadein 2
+
     if v12_murder_count >= 5: # -If 5+ kills
         scene v13s7_1 # TPP Show MC in lobby, looking around and wondering what to do next
         with dissolve
@@ -122,14 +124,14 @@ label v13_ticket_transfer:
         scene v13s7_2d
         with dissolve
 
-        lee "I had gotten you an old medallion that was significant to the real world event, but it appears it's been misplaced or worse... Stolen."
+        lee "I had gotten you an old medallion that was significant to the real world event, but it appears it's been misplaced or worse... stolen."
 
         scene v13s7_2b
         with dissolve
 
         u "(Yep, an old history thing.)"
 
-        u "*Chuckles* This was really nice of you Mr. Lee, you didn't have to do this. I'm pretty sure these were expensive..."
+        u "*Chuckles* This was really nice of you, Mr. Lee. You didn't have to do this. I'm pretty sure these were expensive..."
 
         scene v13s7_2e # FPP Same angle as v13s7_2, Mr. Lee closer now, laughing
         with dissolve
@@ -244,7 +246,7 @@ label v13_ticket_transfer:
 
                     pe "Things must be looking up for me because Ms. Rose just said the same thing..."
 
-                    pe "Her and Mr. Lee agreed to give me a night out whenever I wanted while we're in Amsterdam. So yes, I'll definitely go! Thank you so much for asking me, [Name]."
+                    pe "Her and Mr. Lee agreed to give me a night out whenever I wanted while we're in Amsterdam. So yes, I'll definitely go! Thank you so much for asking me, [name]."
 
                     scene v13s7_8
                     with dissolve
@@ -255,9 +257,11 @@ label v13_ticket_transfer:
                         scene v13s7_9 # TPP Show Penelope kissing MC
                         with dissolve
 
-                        pause 0.75
+                        play sound "sounds/kiss.mp3"
+                        pause 1.5
 
                         scene v13s7_9a # TPP Same angle as v13s7_9, Penelope leaning back after kissing MC, Penelope smiling with mouth open
+                        with dissolve
 
                         pe "My serial killer hero."
 
@@ -286,7 +290,7 @@ label v13_ticket_transfer:
 
                     pause 0.75
 
-                    jump end_scene
+                    jump v13s7_end_scene
 
                 "Aubrey":
                     $ aubrey.points += 1
@@ -364,7 +368,7 @@ label v13_ticket_transfer:
 
         u "I try my best to pay attention to your interests, you know."
 
-        scene v13s7_2b
+        scene v13s7_12b
         with dissolve
 
         au "That's pretty nice of you. *Chuckles* I'm gonna go and practice her songs, I can never remember the lyrics."
@@ -442,7 +446,7 @@ label v13_ticket_transfer:
         scene v13s7_8a
         with dissolve
 
-        pe "GREAT! I was so worried you wouldn't want to, haha! You keep the tickets, ‘cause I will most definitely lose them."
+        pe "GREAT! I was so worried you wouldn't want to, haha! You keep the tickets, 'cause I will most definitely lose them."
 
         scene v13s7_8
         with dissolve
@@ -501,6 +505,6 @@ label v13_ticket_transfer:
 
         u "(Bold guy...)"
 
-    label end_scene:
-        # If less than 5 kills and Penelope not in Europe, scene will be skipped
-        jump v13s8 # REPLACE WITH PROPER SCENE LABEL
+    label v13s7_end_scene:
+        stop music fadeout 3
+        jump v13s8

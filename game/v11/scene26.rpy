@@ -243,7 +243,6 @@ label v11_hotel_bar_wolves:
                 with dissolve
 
                 u "(*Sighs* This isn't right.)"
-
     jump v11_bartender_hotel_chat
 
 label v11_hotel_bar_apes:

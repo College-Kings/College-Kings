@@ -3,27 +3,23 @@
 # Characters: BAR HOST (Outfit: 1), MC (Outfit: 9), IMRE (Outfit: 1), RYAN (Outfit: 1), EMMY (Outfit: 1), KOURTNEY (Outfit: 1), ARYSSA (Outfit: 1)
 # Time: Afternoon
 
-default emmyrs = False
-default kourtneyrs = False
-default aryssars = False
-default v13_told_emmy_no_kids_for_me = False
-default v13_told_emmy_city = False
-
 label v13s24:
     scene v13s24_1 # TPP. show MC, imre and ryan, walking into Simplr bar up to the barhost standing at a mobile podium, all slight smiles, all mouths closed
     with dissolve
 
     pause 0.75
 
+    play music "music/v13/Track Scene 24_1.mp3" fadein 2
+
     scene v13s24_2 # TPP. show imre and ryan standing next to each other on MC's left and barhost on MC's right, imre slight anger mouth open, ryan slight smile mouth closed, barhost slight smile mouth open
     with dissolve
 
-    pause 0.75    
+    pause 0.75
 
     scene v13s24_3 # FPP. show just barhost, slight smile, mouth open
     with dissolve
 
-    barh "Well, well, well… If it isn't the guy who got catfished and his two stalker friends. *Laughs*"
+    barh "Well, well, well... If it isn't the guy who got catfished and his two stalker friends. *Laughs*"
 
     scene v13s24_3a # FPP. same as v13s24_3, barhost mouth closed
     with dissolve
@@ -67,7 +63,7 @@ label v13s24:
             scene v13s24_3a
             with dissolve
 
-            u "I actually already have a girl… Ha."
+            u "I actually already have a girl... Ha."
 
             scene v13s24_3
             with dissolve
@@ -89,7 +85,7 @@ label v13s24:
 
             pause 0.75
 
-            scene v13s24_6a # FPP. ryan and imre realize they’re both laughing at imre’s joke, look away from each other, stop laughing and get serious/awkward, mouths closed
+            scene v13s24_6a # FPP. ryan and imre realize they're both laughing at imre's joke, look away from each other, stop laughing and get serious/awkward, mouths closed
             with dissolve
 
             pause 0.75
@@ -99,7 +95,7 @@ label v13s24:
 
             barh "Awkward..."
 
-        "Fuck Yeah, let's mingle":
+        "Fuck yeah, let's mingle":
             $ addPoint("bro")
             if chloegf or laurenrs:
                 $ addPoint("tm")
@@ -107,12 +103,12 @@ label v13s24:
             scene v13s24_3a
             with dissolve
 
-            u "Fuck yeah, let’s mingle boys! *Chuckles*"
+            u "Fuck yeah, let's mingle boys! *Chuckles*"
 
             scene v13s24_2a # TPP. same as v13s24_2 imre slight smile mouth closed, barhost mouth closed
             with dissolve
 
-            u "One for all and all for…  Well, when you guys are finished it can be all for one. *Chuckles*"
+            u "One for all and all for... Well, when you guys are finished it can be all for one. *Chuckles*"
 
             scene v13s24_3
             with dissolve
@@ -122,7 +118,7 @@ label v13s24:
     scene v13s24_3
     with dissolve
 
-    barh "So, I've prepared a table for you guys and the ladies are already waiting…"
+    barh "So, I've prepared a table for you guys and the ladies are already waiting..."
 
     scene v13s24_3
     with dissolve
@@ -132,17 +128,17 @@ label v13s24:
     scene v13s24_3
     with dissolve
 
-    barh "They'll ask each of you a question or two and then they’ll leave."
+    barh "They'll ask each of you a question or two and then they'll leave."
             
     scene v13s24_4
     with dissolve
 
-    imre "No feedback?! How do I know if they’re down to pound?"
+    imre "No feedback?! How do I know if they're down to pound?"
 
     scene v13s24_3
     with dissolve
 
-    barh "*Chuckles* Don’t worry, pal."
+    barh "*Chuckles* Don't worry, pal."
 
     scene v13s24_3
     with dissolve
@@ -175,19 +171,19 @@ label v13s24:
     pause 0.75
 
     scene v13s24_10 # FPP. MC looks to his left, show just imre, imre looking at MC, slight smile, mouth open
-    with dissolve 
+    with dissolve
 
-    imre "Just so you know, you guys are gonna miss out on all the ladies…"
+    imre "Just so you know, you guys are gonna miss out on all the ladies..."
 
     scene v13s24_11 # FPP. MC looks to his right, show just ryan, ryan looking at MC, slight smile, mouth open
     with dissolve
 
-    ry "*Chuckles* Here we go…"
+    ry "*Chuckles* Here we go..."
 
     scene v13s24_10
     with dissolve
 
-    imre "I’m just saying, with the way I play... It's game over for you boys."
+    imre "I'm just saying, with the way I play... It's game over for you boys."
 
     scene v13s24_10a # FPP. same as v13s24_10 imre mouth closed
     with dissolve
@@ -207,7 +203,7 @@ label v13s24:
     scene v13s24_11
     with dissolve
 
-    ry "*Chuckless* You guys think the questions will be really deep or just like, surface level?"
+    ry "*Chuckles* You guys think the questions will be really deep or just like, surface level?"
 
     scene v13s24_11a # FPP. same as v13s24_11 ryan mouth closed
     with dissolve
@@ -217,17 +213,17 @@ label v13s24:
     scene v13s24_11
     with dissolve
 
-    ry "Hmm… We'll see I guess..."
+    ry "Hmm... We'll see I guess..."
 
     scene v13s24_11a
     with dissolve
 
-    u "What’s wrong? Getting nervous about that new hairdo all of a sudden? *Laughs*"
+    u "What's wrong? Getting nervous about that new hairdo all of a sudden? *Laughs*"
 
     scene v13s24_11
     with dissolve
 
-    ry "Maaann…. Why would you even say that? I finally stopped thinking about it."
+    ry "Maaann... Why would you even say that? I finally stopped thinking about it."
 
     scene v13s24_10
     with dissolve
@@ -237,12 +233,12 @@ label v13s24:
     scene v13s24_11b # FPP. same as v13s24_11 ryan looking at imre
     with dissolve
 
-    ry "What the hell are you on about? As soon as they see that cupcake on your boob they’ll be long gone. *Laughs*"
+    ry "What the hell are you on about? As soon as they see that cupcake on your boob they'll be long gone. *Laughs*"
 
     scene v13s24_11a
     with dissolve
 
-    u "Haha! That was pretty fucking good ryan."
+    u "Haha! That was pretty fucking good Ryan."
 
     scene v13s24_11b
     with dissolve
@@ -257,7 +253,10 @@ label v13s24:
     scene v13s24_12 # FPP. barhost standing at the podium, one hand palm up and open outstretched, half smile, mouth open
     with dissolve
 
-    barh "The first woman is coming in, stand tall gentlemen! For emmy has arrived!"
+    barh "The first woman is coming in, stand tall gentlemen! For Emmy has arrived!"
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 24_2.mp3" fadein 2
 
     scene v13s24_13 # FPP. emmy walks in, slight smile, mouth closed
     with dissolve
@@ -277,7 +276,10 @@ label v13s24:
     scene v13s24_16 # FPP. show just emmy looking at mc, slight smile, mouth open
     with dissolve
 
-    emmy "Hello boys! *Chuckles* It’s nice to meet you all."
+    emmy "Hello boys! *Chuckles* It's nice to meet you all."
+
+    if simplr_Emmy in simplr_contacts: #for v12-v13 compatibility
+        $ v12s24_emmymatch = True
 
     if v12s24_emmymatch:
         scene v13s24_17 # FPP. emmy recognizes MC, eyebrow raised, slight smile, mouth closed
@@ -313,71 +315,68 @@ label v13s24:
         scene v13s24_18e # FPP. same as v13s24_18d emmy mouth open looking back at imre, imre mouth closed looking at emmy, ryan looks at emmy's boobs one last time
         with dissolve
 
-        emmy "Oh! Haha, I’m sorry."
+        emmy "Oh! Haha, I'm sorry."
 
-    else:
+    scene v13s24_11c # FPP. same as v13s24_11 ryan looking at emmy
+    with dissolve
 
-        scene v13s24_11c # FPP. same as v13s24_11 ryan looking at emmy
-        with dissolve
+    ry "It's nice to meet you too. I'm looking forward to answering your questions."
 
-        ry "It's nice to meet you too. I’m looking forward to answering your questions."
+    scene v13s24_16a # FPP. same as v13s24_16 emmy looking at ryan
+    with dissolve
 
-        scene v13s24_16a # FPP. same as v13s24_16 emmy looking at ryan
-        with dissolve
+    emmy "How sweet of you! *Chuckles* Guess I should just hop right into it, huh?"
 
-        emmy "How sweet of you! *Chuckles* Guess I should just hop right into it, huh?"
+    scene v13s24_16b # FPP. same as v13s24_16 emmy mouth closed
+    with dissolve
 
-        scene v13s24_16b # FPP. same as v13s24_16 emmy mouth closed
-        with dissolve
+    u "I'm ready when you are. *Chuckles*"
 
-        u "I'm ready when you are. *Chuckles*"
+    scene v13s24_12a # FPP. same as v13s24_12 Both hands on podium.
+    with dissolve
 
-        scene v13s24_12a # FPP. same as v13s24_12 Both hands on podium.
-        with dissolve
+    barh "Just bypass the host, huh guys?"
 
-        barh "Just bypass the host, huh guys?"
+    scene v13s24_12b # FPP. same as v13s24_12a barhost mouth closed
+    with dissolve
 
-        scene v13s24_12b # FPP. same as v13s24_12a barhost mouth closed
-        with dissolve
+    u "Oh, right... *Laughs* Sorry."
 
-        u "Oh, right… *Laughs* Sorry."
+    scene v13s24_12a
+    with dissolve
 
-        scene v13s24_12a
-        with dissolve
+    barh "No, no, no. I'm only teasing... Go right ahead."
 
-        barh "No, no, no. I’m only teasing… Go right ahead."
+    scene v13s24_16c # FPP. same as v13s24_16 emmy looking at barhost
+    with dissolve
 
-        scene v13s24_16c # FPP. same as v13s24_16 emmy looking at barhost
-        with dissolve
+    emmy "Ha, alright..."
 
-        emmy "Ha, alright…"
+    scene v13s24_16
+    with dissolve
 
-        scene v13s24_16
-        with dissolve
+    emmy "First question... How do you feel about kids?"
 
-        emmy "First question... How do you feel about kids?"
+    scene v13s24_10e # FPP. same v13s24_10 imre looking at emmy
+    with dissolve
 
-        scene v13s24_10e # FPP. same v13s24_10 imre looking at emmy
-        with dissolve
+    imre "Man, fuck them kids! *Laughs* I'm not trying to get you pregnant."
 
-        imre "Man, fuck them kids! *Laughs* I'm not trying to get you pregnant."
+    scene v13s24_10e
+    with dissolve
 
-        scene v13s24_10e
-        with dissolve
+    imre "We can have fun and all but, no kids... Not right now at least."
 
-        imre "We can have fun and all but, no kids… Not right now at least."
+    scene v13s24_11c
+    with dissolve
 
-        scene v13s24_11c
-        with dissolve
-
-        ry "Well, I'll be honest. I'm not interested in having kids at this very moment, but I do want children in the future... And many of them. *Chuckles*"
+    ry "Well, I'll be honest. I'm not interested in having kids at this very moment, but I do want children in the future... And many of them. *Chuckles*"
 
     menu:
         "No kids for me":
-            $ addpoint("bro")
+            $ addPoint("bro")
             $ v13_told_emmy_no_kids_for_me = True
-
-            u "Yeah, I'm on the no kids vibe at the moment too. Guess it’s just not something I think about."
+            u "Yeah, I'm on the no kids vibe at the moment too. Guess it's just not something I think about."
 
             scene v13s24_16d # FPP. same as v13s24_16b emmy head tilted, playing with her hair, happy smile
             with dissolve
@@ -386,10 +385,9 @@ label v13s24:
 
         "I'm a family man":
             $ addPoint("bf")
-
             u "I'm a family man of course, a little bit of me continued through our generations. That's really what I'm all about."
 
-            scene v13s24_16e # FPP. same as v13s24_16b emmy flirty smirk, squinting a little like she’s trying to figure him out
+            scene v13s24_16e # FPP. same as v13s24_16b emmy flirty smirk, squinting a little like she's trying to figure him out
             with dissolve
 
             pause
@@ -417,7 +415,6 @@ label v13s24:
     menu:
         "City":
             $ v13_told_emmy_city = True
-
             scene v13s24_16b
             with dissolve
 
@@ -429,7 +426,6 @@ label v13s24:
             emmy "Haha! Interesting..."
             
         "Rural":
-
             scene v13s24_16b
             with dissolve
 
@@ -438,7 +434,7 @@ label v13s24:
             scene v13s24_16
             with dissolve
 
-            emmy "Oh… Interesting. *Chuckles*"
+            emmy "Oh... Interesting. *Chuckles*"
 
     scene v13s24_16
     with dissolve
@@ -458,7 +454,7 @@ label v13s24:
     scene v13s24_12a
     with dissolve
 
-    barh "Alright then, emmy. Will you send in kourtney for us, please?"
+    barh "Alright then, Emmy. Will you send in Kourtney for us, please?"
 
     scene v13s24_16
     with dissolve
@@ -486,7 +482,7 @@ label v13s24:
     scene v13s24_11b
     with dissolve
 
-    ry "You are far from being her type, imre. *Laughs* No woman brings up the idea of having kids if she doesn't want any."
+    ry "You are far from being her type, Imre. *Laughs* No woman brings up the idea of having kids if she doesn't want any."
 
     scene v13s24_10d
     with dissolve
@@ -551,7 +547,7 @@ label v13s24:
     scene v13s24_10e
     with dissolve
 
-    imre "Sorry babe, that’s not for me. *Laughs*"
+    imre "Sorry babe, that's not for me. *Laughs*"
 
     scene v13s24_11c
     with dissolve
@@ -559,7 +555,7 @@ label v13s24:
     ry "I do like to spoil my girl, so maybe."
 
     menu:
-        "Yes, I’m a romantic":
+        "Yes, I'm a romantic":
             $ addPoint("bf")
             $ kourtneyrs = True
             
@@ -568,7 +564,7 @@ label v13s24:
 
             u "I feel like I'm a romantic, so of course."
 
-        "No, that’s too old school":
+        "No, that's too old school":
             $ addPoint("tm")
 
             scene v13s24_16i # FPP. same as v13s24_16h kourtney slight frown
@@ -584,7 +580,7 @@ label v13s24:
     scene v13s24_12a
     with dissolve
 
-    barh "Thank You kourtney. Please send in aryssa."
+    barh "Thank you Kourtney. Please send in Aryssa."
 
     scene v13s24_14a
     with dissolve
@@ -698,7 +694,7 @@ label v13s24:
             scene v13s24_16m # FPP. same as v13s24_16l aryssa slight frown
             with dissolve
 
-            u "Why work if you're rich? Isn't that the point in getting rich? So that you don’t have to work? *Chuckles*"
+            u "Why work if you're rich? Isn't that the point in getting rich? So that you don't have to work? *Chuckles*"
 
             scene v13s24_10
             with dissolve
@@ -708,7 +704,7 @@ label v13s24:
     scene v13s24_16k
     with dissolve
 
-    ary "Well… You guys have pretty definitive personalities."
+    ary "Well... You guys have pretty definitive personalities."
 
     scene v13s24_16l
     with dissolve
@@ -723,7 +719,7 @@ label v13s24:
     scene v13s24_12a
     with dissolve
 
-    barh "It's now time to get to the results! emmy? kourtney? You can come on out."
+    barh "It's now time to get to the results! Emmy? Kourtney? You can come on out."
 
     scene v13s24_13e # TPP. same as v13s24_13 emmy and kourtney walking in, both slight smiles, both mouths closed
     with dissolve
@@ -753,90 +749,90 @@ label v13s24:
     scene v13s24_12a
     with dissolve
 
-    barh "Right then… Ladies, go ahead and decide on your man. If you would be willing to go on a date with [name], please raise your hand."
+    barh "Right then... Ladies, go ahead and decide on your man. If you would be willing to go on a date with [name], please raise your hand."
 
     if not emmyrs and not kourtneyrs and not aryssars:
         scene v13s24_20a # FPP. same as v13s24_20 emmy kourtney and aryssa looking in different directions, no expressions, hands MUST be at sides or in laps NOT raised, mouths closed
         with dissolve
 
-        pause 0.50
+        pause 2
 
         scene v13s24_21 # TPP. FPP from the ladies perspective, MC slightly shocked, palms of hands up raised to chest level, imre and ryan pointing and laughing at MC, all mouths open
         with dissolve
 
-        pause 0.50
+        pause 1
 
     elif emmyrs and kourtneyrs and aryssars:
         scene v13s24_20b # FPP. same as v13s24_20 emmy kourtney and aryssa looking at MC, all with one hand raised, all fully smiling, all mouths closed
         with dissolve
 
-        pause 0.50
+        pause 2
 
         scene v13s24_10i # FPP. same as v13s24_10a imre rolls his eyes
         with dissolve
 
-        pause 0.50
+        pause 1
 
         scene v13s24_11d # FPP. same as v13s24_11a ryan rolls his eyes
         with dissolve
 
-        pause 0.50           
+        pause 1
 
     elif emmyrs and kourtneyrs:
         scene v13s24_20c # FPP. same as v13s24_20b aryssa no expression and doesn't raise her hand
         with dissolve
 
-        pause 0.50
+        pause 2
 
     elif emmyrs and aryssars:
         scene v13s24_20d # FPP. same as v13s24_20b kourtney no expression and doesn't raise her hand
         with dissolve
 
-        pause 0.50
+        pause 2
 
     elif kourtneyrs and aryssars:
         scene v13s24_20e # FPP. same as v13s24_20b emmy no expression and doesn't raise her hand
         with dissolve
 
-        pause 0.50
+        pause 2
 
     elif emmyrs:
         scene v13s24_20f # FPP. same as v13s24_20b show just emmy raising her hand, full smile, mouth closed, 
         with dissolve
 
-        pause 0.50
+        pause 2
 
     elif kourtneyrs:
         scene v13s24_20g # FPP. same as v13s24_20b show just kourtney raising her hand, full smile, mouth closed, 
         with dissolve
 
-        pause 0.50
+        pause 2
 
     elif aryssars:
         scene v13s24_20h # FPP. same as v13s24_20b show just aryssa raising her hand, full smile, mouth closed, 
         with dissolve
 
-        pause 0.50
+        pause 2
 
     scene v13s24_12a
     with dissolve
 
-    barh "Alright… If you'd be willing to go out with ryan, please raise your hand."
+    barh "Alright... If you'd be willing to go out with Ryan, please raise your hand."
 
     scene v13s24_20e
     with dissolve
 
-    pause 0.50
+    pause 1.25
 
     scene v13s24_12a
     with dissolve
 
-    barh "Very well… Lastly, catfish-I mean, imre. *Chuckles* If you'd be willing to go out with imre, please raise your hand."
+    barh "Very well... Lastly, catfish-I mean, Imre. *Chuckles* If you'd be willing to go out with Imre, please raise your hand."
 
     scene v13s24_20f
     with dissolve
 
-    pause 0.50
+    pause 1.25
 
     scene v13s24_10e
     with dissolve
@@ -861,17 +857,17 @@ label v13s24:
         scene v13s24_12a
         with dissolve
 
-        barh "Sorry, [name]. You didn’t find your match today, but it was nice meeting you."
+        barh "Sorry, [name]. You didn't find your match today, but it was nice meeting you."
 
         scene v13s24_12b # FPP. same as v13s24_12a barhost mouth closed
         with dissolve
 
-        u "Ah, well… That’s alright I guess. *Chuckles* You guys have fun."
+        u "Ah, well... That's alright I guess. *Chuckles* You guys have fun."
 
         scene v13s24_10j # FPP. same as v13s24_10 imre slight frown
         with dissolve
 
-        imre "Sorry man… We will though."
+        imre "Sorry man... We will though."
 
         scene v13s24_11
         with dissolve
@@ -906,9 +902,7 @@ label v13s24:
     else:
 
         barh "We'll give you the choice based on the ladies interested in you, and you'll have a chance to talk one-on-one."
-
-        scene v13s24_25 # FPP. A homecoming like pop up menu appears and MC chooses a date, girls not interested are greyed out and a fourth option of no date is available
-        with dissolve
+        scene black
 
         call screen v13s24_girl
 
@@ -917,7 +911,7 @@ label v13s24_emmy_date:
     scene v13s24_26 # FPP show mc reaching out with his hand to emmy, emmy still sitting on the bench placing her hand into mc's hand, looking up at mc, slight smile, mouth closed
     with dissolve
 
-    u "Let's go, emmy."
+    u "Let's go, Emmy."
 
     scene v13s24_27 # TPP show mc looking imre and ryan sitting at the table, imre mouth open, slight anger, mouth open, ryan slight smile, mouth open.
     with dissolve
@@ -941,7 +935,8 @@ label v13s24_kourtney_date:
     scene v13s24_26a # FPP same as v13s24_26 kourtney instead of emmy
     with dissolve
 
-    u "Let's go, kourtney."
+    $ grant_achievement("romantic_heart")
+    u "Let's go, Kourtney."
 
     scene v13s24_28a # TPP. same as v13s24_28 kourtney instead of emmy
     with fade
@@ -955,7 +950,7 @@ label v13s24_aryssa_date:
     scene v13s24_26b # FPP same as v13s24_26 aryssa instead of emmy
     with dissolve
 
-    u "Let's go, aryssa."
+    u "Let's go, Aryssa."
     
     scene v13s24_28b # TPP. same as v13s24_28 aryssa instead of emmy
     with fade
@@ -969,7 +964,7 @@ label v13s24_no_simplr_date:
     scene v13s24_11a
     with dissolve
 
-    u "Yeah, I don’t know actually. You guys go ahead and enjoy yourselves, I’m just gonna chill."
+    u "Yeah, I don't know actually. You guys go ahead and enjoy yourselves, I'm just gonna chill."
 
     scene v13s24_11e # FPP. same as v13s24_11 ryan slight frown
     with dissolve
@@ -979,7 +974,7 @@ label v13s24_no_simplr_date:
     scene v13s24_11a
     with dissolve
 
-    u "Yeah, I’m sure."
+    u "Yeah, I'm sure."
 
     scene v13s24_10
     with dissolve
@@ -1001,14 +996,14 @@ label v13s24_no_simplr_date:
 
     pause 0.75
     
-    scene v13s24_24
-    with dissolve
+    #scene v13s24_24
+    #with dissolve
 
-    pause 0.75
+    #pause 0.75
 
-    scene v13s24_24a
-    with fade
+    #scene v13s24_24a
+    #with fade
 
-    pause 0.75
+    #pause 0.75
 
     jump v13s27

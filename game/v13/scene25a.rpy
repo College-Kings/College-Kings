@@ -5,12 +5,14 @@
 
 label v13s25a:
     scene v13s25a_1 # TPP. Show MC and Kourtney are sitting down facing each other, Kourtney slight smiles, mouth open
-    with dissolve 
+    with dissolve
 
     kourt "This is so nice. It's almost like something out of a movie."
 
+    play music "music/v13/Track Scene 25.mp3" fadein 2
+
     scene v13s25a_2 # FPP. Mc and are sitting down facing each other, Kourtney slight smiles, mouth closed
-    with dissolve 
+    with dissolve
 
     u "What kind of movie?"
 
@@ -27,7 +29,7 @@ label v13s25a:
             $ addPoint("tm")
 
             scene v13s25a_2
-            with dissolve 
+            with dissolve
 
             u "Maybe I was, I'd be down to make a little movie with you."
 
@@ -116,6 +118,8 @@ label v13s25a:
 
             pause 0.75
 
+            stop music fadeout 3
+
             jump v13s27
 
         "No":
@@ -179,7 +183,7 @@ label v13s25a:
             scene v13s25a_2k # FPP. Same as v13s25a_2j, Kourtney reaches other hand out and places one hand palm up on table towards MC
             with dissolve
 
-            kourt "*Laughs* I was just kidding"
+            kourt "*Laughs* I was just kidding."
 
             scene v13s25a_2l # FPP. Same as v13s25a_2j, MC places his hand in Kourtneys, Kourtney increases to full smile, mouth closed
             with dissolve
@@ -197,7 +201,7 @@ label v13s25a:
             u "Too bad I don't live here..."
 
             scene v13s25a_2n # FPP. Kourtney leans back and pulls her hand away from mc and places it across her heart, frowns, mouth open
-            with dissolve 
+            with dissolve
 
             kourt "What do you mean by here? Where do you stay?"
 
@@ -246,6 +250,7 @@ label v13s25a:
 
             kourt "I could have gotten over your age, you know."
 
+            play sound "sounds/kiss.mp3"
             scene v13s25a_8 # TPP. Kourtney pulls Mc's face towards her, and she kisses MC on the cheek
             with dissolve
 
@@ -275,5 +280,7 @@ label v13s25a:
             with dissolve
 
             pause 0.75
+
+            stop music fadeout 3
 
             jump v13s27

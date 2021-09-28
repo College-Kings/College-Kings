@@ -10,7 +10,7 @@ label v12_riley_cafe:
 
     pause 0.75
 
-    play music "music/v12/Scene 14/Track Scene 14 & 14a.mp3" fadein 2
+    play music "music/v12/Scene 14/Track Scene 14 _ 14a.mp3" fadein 2
 
     scene v12ric2 # TPP. Show MC and Riley approaching their table, both smiling, mouths closed
     with dissolve
@@ -322,12 +322,10 @@ label v12_riley_cafe:
     menu:
         "Oh yeah, good idea":
             $ addPoint("bf")
-
             u "Almost forgot about that... Yeah, that's definitely the move."
 
         "Ugh, do we have to?":
             $ addPoint("bro")
-            
             u "Oh yayyy, another boring treasure hunt."
 
     scene v12ric4a

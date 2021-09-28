@@ -21,7 +21,7 @@ init python:
 label v12s32:
 # -MC and Aubrey are walking along the sidewalk-
 
-    scene v12s32_1 # TPP show mc and aubrey walking along the side walk, make sure Aubrey is on the side of the wall , not the street for easier backgrounds in FPP. Mc looking at aubrey, mc mouth open, curious
+    scene v12s32_1 # TPP show mc and aubrey walking along the side walk, make sure Aubrey is on the side of the wall, not the street for easier backgrounds in FPP. Mc looking at aubrey, mc mouth open, curious
     with fade
 
     u "So, where exactly are they doing the shoot?"
@@ -227,7 +227,7 @@ label v12s32:
 
     u "Nope."
 
-    scene v12s32_14 # FPP close up Aubrey, (who's standing next to mc) looking at mc , slightly concerned for mc, whispering, mouth open
+    scene v12s32_14 # FPP close up Aubrey, (who's standing next to mc) looking at mc, slightly concerned for mc, whispering, mouth open
     with dissolve
 
     au "*Whisper* You're cool with all this right? I'm sorry if you feel kind of thrown into this, I just really wanted to do this shoot and I was too shy to come by myself."
@@ -272,7 +272,7 @@ label v12s32:
 
     menu:
         "Turn your back to Aubrey":
-            $ addPoint("bf")
+            $ addPoint("bro")
             scene v12s32_15a #same 15, MC crosses his arms and puts his back to Aubrey, aubrey a bit dissapointed, mouth upen
             with dissolve
 
@@ -294,8 +294,7 @@ label v12s32:
             pg "I wouldn't call that sexy but, alright..."
 
         "Put your arms around Aubrey":
-            $ addPoint("bro")
-
+            $ addPoint("bf")
             scene v12s32_15c #same 15, Aubrey has her back to MC and he wraps his arms around her, squeezing her in tight, Aubrey smiles at him, mouth closed
             with dissolve
 
@@ -411,7 +410,7 @@ label v12s32:
 
     pg "Ahh, my goddess..."
 
-    scene v12s32_20a # FPP close up Aubrey, who's standing next to you ,looking at naomi (off-screne), mouth close, slightly concerned expression
+    scene v12s32_20a # FPP close up Aubrey, who's standing next to you,looking at naomi (off-screne), mouth close, slightly concerned expression
     with dissolve
 
     u "She's confident!"
@@ -484,12 +483,10 @@ label v12s32:
     menu:
         "Boost Aubrey":
             $ addPoint ("tm")
-
             $ v12s32_Aubrey_Boost = True
 
             scene v12s32_21c 
             with dissolve
-
             u "You thought that was good? Aubrey can do that, and better... Get up there Aubrey!"
 
             scene v12s32_20b
@@ -508,10 +505,8 @@ label v12s32:
 
         "Leave it alone":
             $ addPoint ("bro")
-
             scene v12s32_21c 
             with dissolve
-
 
             u "(She's already pressured by her sister, I shouldn't add to it.)"
 
@@ -526,14 +521,12 @@ label v12s32:
             au "*Whisper to self* Let's get this over with."
 
     if aubrey.points == 0:
-
         scene v12s32_20
         with dissolve
 
         au "*Sighs* Fine..."
 
     if aubrey.points > 0:
-
         scene v12s32_20d # same as 20b, aubrey cute smile at mc, mouth open
         with dissolve
 
@@ -586,7 +579,7 @@ label v12s32:
 
     pg "I don't know! This all seems all nat-u-ral!"
 
-    scene v12s32_24a # same 24, aubrey looking at the camera (off-screen), mouth open , smiling
+    scene v12s32_24a # same 24, aubrey looking at the camera (off-screen), mouth open, smiling
     with dissolve
 
     au "*Chuckles* Can I see the pictures?"
@@ -622,14 +615,14 @@ label v12s32:
 
         u "Of course. I'll always be there for you."
 
-    scene v12s32_28 # FPP close up photographer looking at Aubrey (off-camera, standing near mc), mouth open ,thinking smile
+    scene v12s32_28 # FPP close up photographer looking at Aubrey (off-camera, standing near mc), mouth open,thinking smile
     with dissolve
 
     pg "Have you thought about going into modeling? I think you'd make an amazing Kiwii model... And if you're worried about looking like you're riding your sister's road to fame, don't."
 
     pg "With pictures like this... You'll make it all on your own."
 
-    scene v12s32_29 # FPP close up Aubrey, mouth open, smile , looking at photographer (off-camera)
+    scene v12s32_29 # FPP close up Aubrey, mouth open, smile, looking at photographer (off-camera)
     with dissolve
 
     au "I've always thought about it, even before my sister started modeling I wanted to, but when she started and blew up I never thought I could match her speed. I mean, look at her."
@@ -660,7 +653,7 @@ label v12s32:
 
     u "Aubrey, you looked good doing that. Really fucking good!"
 
-    scene v12s32_29d # same 29b, looking at mc (into the camera), cute smile ,mouth open
+    scene v12s32_29d # same 29b, looking at mc (into the camera), cute smile,mouth open
     with dissolve
 
     au "Do you... You actually mean that?"
@@ -841,9 +834,7 @@ label v12s32:
     menu: 
         "Get Aubrey flowers":
             $ s12v32_get_aubrey_flowers = True
-
             $ addPoint ("bf")
-
             u "Wait a minute, Aubrey."
 
             scene v12s32_33d # aubrey turns around, looks at mc, curious, mouth open
@@ -856,7 +847,7 @@ label v12s32:
 
             pause 0.75
 
-            scene v12s32_35 # FPP, mc extends Aubrey flowers (she doesn't take them yet) (show her face like a normal close up , looking at mc) (just show the flowers handed in first person), AUbrey surprised smiled
+            scene v12s32_35 # FPP, mc extends Aubrey flowers (she doesn't take them yet) (show her face like a normal close up, looking at mc) (just show the flowers handed in first person), AUbrey surprised smiled
             with dissolve
 
             u "Your first gift as a future Kiwii modeling star!"
@@ -876,12 +867,12 @@ label v12s32:
 
             au "For once [name], I'll try not to be an asshole. *Chuckles*"
 
-            scene v12s32_35d # same as 35, aubrey takes the flowers , mouth open, genuine smle
+            scene v12s32_35d # same as 35, aubrey takes the flowers, mouth open, genuine smle
             with dissolve
 
             au "Thank you."
 
-            scene v12s32_35e # same 35d , mouth closed
+            scene v12s32_35e # same 35d, mouth closed
             with dissolve
 
             u "You're very welcome."
@@ -895,13 +886,10 @@ label v12s32:
             with dissolve
 
         "Don't get her flowers":
-
             $ addPoint ("bro")
-
             u "(That'd be doing too much... We're just friends.)"
 
     u "Right, let's go."
 
     stop music fadeout 3
-
     jump v12s33 #scene 33

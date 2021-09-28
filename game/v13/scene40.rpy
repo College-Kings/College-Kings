@@ -3,13 +3,13 @@
 # Characters: CHLOE (Outfit: 1/Naked), MC (Outfit: 5/Naked)
 # Time: Night
 
-default v13s40_chloe_turned_on = 0
-
 label v13s40:
     scene v13s40_1 # TPP. Show MC standing in the lobby, Chloe walking towards him, both slight smiles, mouths closed
     with Fade(1,1,1)
 
     pause 0.75
+
+    play music "music/v13/Track Scene 40_1.mp3" fadein 2
 
     scene v13s40_2 # FPP. MC and Chloe looking at each other, in lobby, Chloe slight smile, mouth open
     with dissolve
@@ -34,7 +34,7 @@ label v13s40:
     scene v13s40_2
     with dissolve
 
-    cl "Bored and looking for something to do… *Chuckles*"
+    cl "Bored and looking for something to do... *Chuckles*"
 
     scene v13s40_2a
     with dissolve
@@ -81,6 +81,21 @@ label v13s40:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v13/Track Scene 40_2.mp3" fadein 2
+
+    jump v13s40_resume
+
+    label v13s40_sg:
+        $ mc.money += 1000
+        $ mc.add_item(honey)
+        $ mc.add_item(butt_plug)
+        $ mc.add_item(spankers)
+        $ mc.add_item(feather)
+        $ mc.money -= 1000
+
+    label v13s40_resume:
+
     scene v13s40_8 # FPP. Chloe wrapping her arms around MC, looking at him, Chloe sexy look, mouth open
     with dissolve
 
@@ -99,7 +114,7 @@ label v13s40:
     scene v13s40_10 # FPP. MC looking at Chloe laying on her bed, mouth open, slight smile
     with fade
 
-    cl "I'm a little nervous, but plenty excited… *Chuckles*"
+    cl "I'm a little nervous, but plenty excited... *Chuckles*"
 
     scene v13s40_10a # FPP. Same as v13s40_10, Chloe mouth closed
     with dissolve
@@ -133,11 +148,11 @@ label v13s40:
 
     $ freeRoam = True
 
-    call screen v13s40_chloe_items
+    call screen v13s40_chloe
 
 label v13s40_honey:
     scene v13s40ho_1 # TPP. Show MC pouring the honey on Chloe's breasts, Chloe slight smile, mouth closed
-    with dissolve
+    #with dissolve
 
     pause
 
@@ -156,6 +171,7 @@ label v13s40_honey:
 
     cl "*Chuckles*"
 
+    play sound "sounds/kiss.mp3"
     scene v13s40ho_4 # TPP. Show MC kissing Chloe's boobs with honey, mouths closed, slight smiles
     with dissolve
 
@@ -181,11 +197,11 @@ label v13s40_honey:
 
     u "I've got plenty more where that came from."
 
-    call screen v13s40_chloe_items
+    call screen v13s40_chloe
 
 label v13s40_feather:
     scene v13s40fe_1 # TPP. Show MC taking the feather and placing it on her chest, Chloe smiling, mouth closed
-    with dissolve
+    #with dissolve
 
     pause
 
@@ -222,18 +238,18 @@ label v13s40_feather:
     scene v13s40fe_3 # TPP. Close up of MC ticklig her feet with the feather
     with dissolve
 
-    cl "Ooh, ha! Okay... Way too ticklish… *Chuckles*"
+    cl "Ooh, ha! Okay... Way too ticklish... *Chuckles*"
 
     scene v13s40fe_3a # TPP. Same as v13s40fe_3, MC no longer tickling her feet
     with dissolve
 
     u "We can try something else..."
 
-    call screen v13s40_chloe_items
+    call screen v13s40_chloe
 
 label v13s40_spanker:
     scene v13s40sp_1 # TPP. Show MC untying Chloe, both smiling, mouths closed
-    with dissolve
+    #with dissolve
 
     pause
     
@@ -295,7 +311,7 @@ label v13s40_spanker:
     scene v13s40sp_5b
     with vpunch
 
-    cl "Oh! My.. My god!"
+    cl "Oh! My... My god!"
 
     scene v13s40sp_5
     with dissolve
@@ -317,15 +333,17 @@ label v13s40_spanker:
 
     pause
 
-    call screen v13s40_chloe_items
+    call screen v13s40_chloe
 
 label v13s40_neck:
     scene v13s40neck_1 # TPP. Close up of Chloe's neck
-    with dissolve
+    #with dissolve
 
     menu:
         "Choke":
-            $ v13s40_chloe_turned_on += 1
+            if not v13s40_neckpoint:
+                $ v13s40_chloe_turned_on += 1
+                $ v13s40_neckpoint = True
 
             scene v13s40neck_2 # TPP. Close up of MC's hand choking Chloe's neck, Chloe smiling, mouth closed
             with dissolve
@@ -338,11 +356,11 @@ label v13s40_neck:
 
             pause
         
-    call screen v13s40_chloe_front
+    call screen v13s40_chloe
 
 label v13s40_chest:
     scene v13s40chest_1 # TPP. Close up of Chloe's boobs
-    with dissolve
+    #with dissolve
 
     menu:
         "Kiss":
@@ -362,7 +380,9 @@ label v13s40_chest:
             pause
 
         "Massage":
-            $ v13s40_chloe_turned_on += 1
+            if not v13s40_chestpoint:
+                $ v13s40_chloe_turned_on += 1
+                $ v13s40_chestpoint = True
 
             scene v13s40chest_3 # TPP. Show MC massaging Chloe's boobs, Chloe smiling, mouth closed
             with dissolve
@@ -379,15 +399,17 @@ label v13s40_chest:
 
             pause
     
-    call screen v13s40_chloe_front
+    call screen v13s40_chloe
 
 label v13s40_back:
     scene v13s40back_1 # TPP. Close up of Chloe's back
-    with dissolve
+    #with dissolve
 
     menu:
         "Massage":
-            $ v13s40_chloe_turned_on += 1
+            if not v13s40_backpoint:
+                $ v13s40_chloe_turned_on += 1
+                $ v13s40_backpoint = True
 
             scene v13s40back_2 # TPP. MC massaging Chloe's back, Chloe smiling, mouth closed
             with dissolve
@@ -420,15 +442,17 @@ label v13s40_back:
 
             pause
     
-    call screen v13s40_chloe_back
+    call screen v13s40_chloe
 
 label v13s40_shoulder:
     scene v13s40shoulder_1 # TPP. Close up of Chloe's shoulder
-    with dissolve
+    #with dissolve
 
     menu:
         "Massage":
-            $ v13s40_chloe_turned_on += 1
+            if not v13s40_shoulderpoint:
+                $ v13s40_chloe_turned_on += 1
+                $ v13s40_shoulderpoint = True
 
             scene v13s40shoulder_2 # TPP. Show MC massaging Chloe's shoulder, Chloe smiling, mouth closed
             with dissolve
@@ -451,12 +475,16 @@ label v13s40_shoulder:
 
             pause
     
-    call screen v13s40_chloe_back
+    call screen v13s40_chloe
         
 label v13s40_end_free_roam:
+    $ freeRoam = False
+
     if v13s40_chloe_turned_on == 4:
+        $ v13_chloesex = True
+    
         scene v13s40end_1 # FPP. MC standing next to Chloe, Chloe looking up at MC, Chloe smiling, mouth open
-        with dissolve
+        #with dissolve
 
         cl "Hurry and untie me..."
 
@@ -483,7 +511,7 @@ label v13s40_end_free_roam:
         scene v13s40end_5a # FPP. Same as v13s40end_5, Chloe removing MC's pants, Chloe smiling, mouth closed, MC mouth closed, smiling
         with dissolve
 
-        u "(She’s being wild right now!)"
+        u "(She's being wild right now!)"
 
         scene v13s40end_6 # TPP. Show Chloe removing MC's shirt, both smiling, mouths closed
         with dissolve
@@ -495,28 +523,28 @@ label v13s40_end_free_roam:
 
         pause
 
-        image v13chlsd = Movie(play="images/v13/Scene 40/v13chlsd.webm", loop=True, image="images/v13/Scene 40/v13chlsdStart.webp", start_image="images/v13/Scene 40/v13chlsdStart.webp") # Chloe squatting
-        image v13chlsdf = Movie(play="images/v13/Scene 40/v13chlsdf.webm", loop=True, image="images/v13/Scene 40/v13chlsdStart.webp", start_image="images/v13/Scene 40/v13chlsdStart.webp") # Chloe squatting spedup
-        image v13chlsd2 = Movie(play="images/v13/Scene 40/v13chlsd2.webm", loop=True, image="images/v13/Scene 40/v13chlsd2Start.webp", start_image="images/v13/Scene 40/v13chlsd2Start.webp") # Chloe squatting FPP
-        image v13chlsd2f = Movie(play="images/v13/Scene 40/v13chlsd2f.webm", loop=True, image="images/v13/Scene 40/v13chlsd2Start.webp", start_image="images/v13/Scene 40/v13chlsd2Start.webp") # Chloe squatting FPP spedup
+        image v13chlsd = Movie(play="images/v13/Scene40/v13chlsd.webm", loop=True, image="images/v13/Scene40/v13chlsdStart.webp", start_image="images/v13/Scene40/v13chlsdStart.webp") # Chloe squatting
+        image v13chlsdf = Movie(play="images/v13/Scene40/v13chlsdf.webm", loop=True, image="images/v13/Scene40/v13chlsdStart.webp", start_image="images/v13/Scene40/v13chlsdStart.webp") # Chloe squatting spedup
+        image v13chlsd2 = Movie(play="images/v13/Scene40/v13chlsd2.webm", loop=True, image="images/v13/Scene40/v13chlsd2Start.webp", start_image="images/v13/Scene40/v13chlsd2Start.webp") # Chloe squatting FPP
+        image v13chlsd2f = Movie(play="images/v13/Scene40/v13chlsd2f.webm", loop=True, image="images/v13/Scene40/v13chlsd2Start.webp", start_image="images/v13/Scene40/v13chlsd2Start.webp") # Chloe squatting FPP spedup
 
         scene v13chlsd # Ignore as anim
         with dissolve
         pause
 
-        cl "*Moans* F-fuck baby… No one's ever been able to bring this side out of me!"
+        cl "*Moans* F-fuck baby... No one's ever been able to bring this side out of me!"
 
         scene v13chlsdf # Ignore as anim
         with dissolve
         pause
 
-        u "You’re getting ready to bring a new side out of me too..."
+        u "You're getting ready to bring a new side out of me too..."
 
         scene v13chlsd2 # Ignore as anim
         with dissolve
         pause
 
-        cl "Show me then… Mmm, show me that side!"
+        cl "Show me then... Mmm, show me that side!"
 
         scene v13chlsd2f # Ignore as anim
         with dissolve
@@ -534,16 +562,16 @@ label v13s40_end_free_roam:
 
         pause
 
-        image v13chlf = Movie(play="images/v13/Scene 40/v13chlf.webm", loop=True, image="images/v13/Scene 40/v13chlfStart.webp", start_image="images/v13/Scene 40/v13chlfStart.webp") # Chloe flatiron
-        image v13chlff = Movie(play="images/v13/Scene 40/v13chlff.webm", loop=True, image="images/v13/Scene 40/v13chlfStart.webp", start_image="images/v13/Scene 40/v13chlfStart.webp") # Chloe flatiron spedup
-        image v13chlf2 = Movie(play="images/v13/Scene 40/v13chlf2.webm", loop=True, image="images/v13/Scene 40/v13chlf2Start.webp", start_image="images/v13/Scene 40/v13chlf2Start.webp") # Chloe flatiron FPP
-        image v13chlf2f = Movie(play="images/v13/Scene 40/v13chlf2f.webm", loop=True, image="images/v13/Scene 40/v13chlf2Start.webp", start_image="images/v13/Scene 40/v13chlf2Start.webp") # Chloe flatiron FPP spedup
+        image v13chlf = Movie(play="images/v13/Scene40/v13chlf0.webm", loop=True, image="images/v13/Scene40/v13chlfStart.webp", start_image="images/v13/Scene40/v13chlfStart.webp") # Chloe flatiron
+        image v13chlff = Movie(play="images/v13/Scene40/v13chlf0f.webm", loop=True, image="images/v13/Scene40/v13chlfStart.webp", start_image="images/v13/Scene40/v13chlfStart.webp") # Chloe flatiron spedup
+        image v13chlf2 = Movie(play="images/v13/Scene40/v13chlf02.webm", loop=True, image="images/v13/Scene40/v13chlf2Start.webp", start_image="images/v13/Scene40/v13chlf2Start.webp") # Chloe flatiron FPP
+        image v13chlf2f = Movie(play="images/v13/Scene40/v13chlf02f.webm", loop=True, image="images/v13/Scene40/v13chlf2Start.webp", start_image="images/v13/Scene40/v13chlf2Start.webp") # Chloe flatiron FPP spedup
 
         scene v13chlf # Ignore as anim
         with dissolve
         pause
 
-        cl "I... *Moans* Like it... Rough... *Whispers* F-Fuck… Like this... [name]!"
+        cl "I... *Moans* Like it... Rough... *Whispers* F-Fuck... Like this... [name]!"
 
         scene v13chlff # Ignore as anim
         with dissolve
@@ -558,10 +586,10 @@ label v13s40_end_free_roam:
         cl "*Moans* I like it... a lot..."
 
         scene v13chlf2f # Ignore as anim
-        with dissolve   
+        with dissolve
         pause
 
-        cl "FUCK! I LOVE THIS, [Name]!"
+        cl "FUCK! I LOVE THIS, [name]!"
 
         scene v13s40end_10 # TPP. MC turning Chloe around
         with dissolve
@@ -573,10 +601,10 @@ label v13s40_end_free_roam:
 
         pause
 
-        image v13chlff = Movie(play="images/v13/Scene 40/v13chlff.webm", loop=True, image="images/v13/Scene 40/v13chlffStart.webp", start_image="images/v13/Scene 40/v13chlffStart.webp") # Chloe face fuck
-        image v13chlfff = Movie(play="images/v13/Scene 40/v13chlfff.webm", loop=True, image="images/v13/Scene 40/v13chlffStart.webp", start_image="images/v13/Scene 40/v13chlffStart.webp") # Chloe face fuck spedup
-        image v13chlff2 = Movie(play="images/v13/Scene 40/v13chlff2.webm", loop=True, image="images/v13/Scene 40/v13chlff2Start.webp", start_image="images/v13/Scene 40/v13chlff2Start.webp") # Chloe face fuck FPP
-        image v13chlff2f = Movie(play="images/v13/Scene 40/v13chlff2f.webm", loop=True, image="images/v13/Scene 40/v13chlff2Start.webp", start_image="images/v13/Scene 40/v13chlff2Start.webp") # Chloe face fuck FPP spedup
+        image v13chlff = Movie(play="images/v13/Scene40/v13chlff.webm", loop=True, image="images/v13/Scene40/v13chlffStart.webp", start_image="images/v13/Scene40/v13chlffStart.webp") # Chloe face fuck
+        image v13chlfff = Movie(play="images/v13/Scene40/v13chlfff.webm", loop=True, image="images/v13/Scene40/v13chlffStart.webp", start_image="images/v13/Scene40/v13chlffStart.webp") # Chloe face fuck spedup
+        image v13chlff2 = Movie(play="images/v13/Scene40/v13chlff2.webm", loop=True, image="images/v13/Scene40/v13chlff2Start.webp", start_image="images/v13/Scene40/v13chlff2Start.webp") # Chloe face fuck FPP
+        image v13chlff2f = Movie(play="images/v13/Scene40/v13chlff2f.webm", loop=True, image="images/v13/Scene40/v13chlff2Start.webp", start_image="images/v13/Scene40/v13chlff2Start.webp") # Chloe face fuck FPP spedup
 
         scene v13chlff
         with dissolve
@@ -602,7 +630,7 @@ label v13s40_end_free_roam:
         with dissolve
         pause
 
-        u "Way too fucking good… *Moans*"
+        u "Way too fucking good... *Moans*"
 
         scene v13s40end_12 # TPP. Show MC pushing Chloe further back on the bed while choking her
         with dissolve
@@ -614,38 +642,41 @@ label v13s40_end_free_roam:
 
         pause
 
-        image v13chltt = Movie(play="images/v13/Scene 40/v13chltt.webm", loop=True, image="images/v13/Scene 40/v13chlttStart.webp", start_image="images/v13/Scene 40/v13chlttStart.webp") # Chloe Table top
-        image v13chlttf = Movie(play="images/v13/Scene 40/v13chlttf.webm", loop=True, image="images/v13/Scene 40/v13chlttStart.webp", start_image="images/v13/Scene 40/v13chlttStart.webp") # Chloe Table top spedup
-        image v13chltt2 = Movie(play="images/v13/Scene 40/v13chltt2.webm", loop=True, image="images/v13/Scene 40/v13chltt2Start.webp", start_image="images/v13/Scene 40/v13chltt2Start.webp") # Chloe Table top FPP
-        image v13chltt2f = Movie(play="images/v13/Scene 40/v13chltt2f.webm", loop=True, image="images/v13/Scene 40/v13chltt2Start.webp", start_image="images/v13/Scene 40/v13chltt2Start.webp") # Chloe Table top FPP spedup
+        image v13chltt = Movie(play="images/v13/Scene40/v13chltt.webm", loop=True, image="images/v13/Scene40/v13chlttStart.webp", start_image="images/v13/Scene40/v13chlttStart.webp") # Chloe Table top
+        image v13chlttf = Movie(play="images/v13/Scene40/v13chlttf.webm", loop=True, image="images/v13/Scene40/v13chlttStart.webp", start_image="images/v13/Scene40/v13chlttStart.webp") # Chloe Table top spedup
+        image v13chltt2 = Movie(play="images/v13/Scene40/v13chltt2.webm", loop=True, image="images/v13/Scene40/v13chltt2Start.webp", start_image="images/v13/Scene40/v13chltt2Start.webp") # Chloe Table top FPP
+        image v13chltt2f = Movie(play="images/v13/Scene40/v13chltt2f.webm", loop=True, image="images/v13/Scene40/v13chltt2Start.webp", start_image="images/v13/Scene40/v13chltt2Start.webp") # Chloe Table top FPP spedup
 
         scene v13chltt # Ignore as anim
         with dissolve
         pause
 
-        cl "Ohh, fuck! [Name]! [Name]... I-I'm cumming... *Moans*"
+        cl "Ohh, fuck! [name]! [name]... I-I'm cumming... *Moans*"
 
         scene v13chlttf # Ignore as anim
         with dissolve
 
-        cl "[Name]! *Gasps* F-f-uck… *Moans*"
+        cl "[name]! *Gasps* F-f-uck... *Moans*"
 
         scene v13chltt2 # ignore as anim
         with dissolve
         pause
 
-        u "Ah, shit Chlo... *Moans* You- I’m-"
+        u "Ah, shit Chlo... *Moans* You- I'm-"
 
         scene v13chltt2f # ignore as anim
         with dissolve
         pause
 
-        u "*Moans* I'm gonna... Ohhh, my fucking… god!"
+        u "*Moans* I'm gonna... Ohhh, my fucking... god!"
 
         scene v13s40end_14 # TPP. MC cumming in Chloe
         with vpunch
 
         pause
+
+        stop music fadeout 3
+        play music "music/v13/Track Scene 40_3.mp3" fadein 2
 
         scene v13s40end_15 # FPP. MC laying on top of Chloe, looking into her eyes, Chloe smiling, mouth open
         with dissolve
@@ -700,6 +731,7 @@ label v13s40_end_free_roam:
         scene v13s40end_18 # TPP. Show MC laying in bed, naked, smiling, mouth closed
         with dissolve
 
+        $ grant_achievement("we_like_them_wild")
         u "(This girl is gonna drive me crazy...) *Laughs*"
 
         scene v13s40end_17a # FPP. Same as v13s40end_17, Chloe coming out of bathroom, smiling, mouth closed, naked
@@ -717,13 +749,20 @@ label v13s40_end_free_roam:
 
         pause 0.75
 
+        $ renpy.end_replay()
+
+        stop music fadeout 3
+
         jump v13s40a
 
     else:
         scene v13s40end_2
-        with dissolve
+        #with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
+        play music "music/v13/Track Scene 40_3.mp3" fadein 2
 
         scene v13s40end_3
         with dissolve
@@ -748,6 +787,10 @@ label v13s40_end_free_roam:
         scene v13s40end_20
         with dissolve
 
+        $ renpy.end_replay()
+
         pause 0.75
+
+        stop music fadeout 3
 
         jump v13s40a

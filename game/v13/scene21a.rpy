@@ -9,9 +9,12 @@ label v13s21a:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 21a.mp3" fadein 2
+
     scene v13s21a_1 # FPP. MC looking at Mr. Lee, walking around furiously, mouth open
     with dissolve
 
+    $ grant_achievement("he_is_done")
     lee "HE IS DONE!"
 
     scene v13s21a_2 # FPP. MC looking at Mr. Lee, Mr. Lee looking at Riley angrily, mouth open (Riley out of shot)
@@ -146,7 +149,7 @@ label v13s21a:
     scene v13s21a_13a # TPP. Same as v13s21a_13 Mr. Lee is angrier, yelling, mouth wide open
     with dissolve
 
-    lee "I SAID, REMOVE. YOUR HAND!"
+    lee "I SAID, REMOVE. YOUR. HAND!"
 
     scene v13s21a_12b # TPP. Same as v13s21a_12 Charli's face is shocked, mouth slightly open
     with dissolve
@@ -184,7 +187,8 @@ label v13s21a:
     pause 0.34
 
     scene v13s21a_20 # TPP. Mr. Lee pins Charli's wrists to the ground, Mr Lee ontop of Charli, Charli very scared, both mouths closed
-    with dissolve
+    with vpunch
+    play sound "sounds/fall.mp3"
 
     pause 0.75
 
@@ -196,7 +200,7 @@ label v13s21a:
     scene v13s21a_21a # TPP. Same as v13s21a_21 Mr. Lee's face is slightly more angry, eyes open looking at Charli
     with dissolve
 
-    lee "Second, you've placed your hands on me for the last time. Due to your usual manner and academic performance an “investigation” was a gift."
+    lee "Second, you've placed your hands on me for the last time. Due to your usual manner and academic performance an \"investigation\" was a gift."
 
     lee "The email alone is plenty of enough evidence to have you completely banned from San Vallejo."
 
@@ -289,5 +293,7 @@ label v13s21a:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s22

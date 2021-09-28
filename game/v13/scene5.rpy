@@ -1,13 +1,16 @@
-# SCENE 5: MC goes to bed (rooming with Chloe)
+# SCENE 5: MC goes to bed (rooming with Chloe) some random change
 # Locations: Hotel corridor, Hotel Room
 # Characters: MC (Outfit: 1), CHLOE (Outfit: 3)
 # Time: Night
 
 label v13s5:
 
+    play music "music/v13/Track Scene 5 _ 5a.mp3" fadein 2
+
     if not chloegf:
         scene v13s5_1 # TPP. Show MC and Chloe walking in the hotel corridor, carrying their luggage, Chloe frowning, tired, mouth closed, MC slight smile, mouth closed
         with dissolve
+
         pause 1
 
     scene v13s5_2 # TPP. Show MC and Chloe walking into the hotel room, carrying their luggage, Chloe frowning, tired, mouth closed, MC slight smile, mouth closed
@@ -69,5 +72,7 @@ label v13s5:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s06

@@ -4,7 +4,6 @@
 # Time: Tuesday Night
 
 label hosp_climb_seb:
-
     scene v8shos1 # TPP. Show MC and Sebastian stood at the hospital, show the hospital, MC and Sebastian looking up at the top of it. Try and portray the scale of the hospital.
     with Fade(0.75, 0.25, 0.75)
 

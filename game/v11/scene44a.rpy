@@ -248,4 +248,3 @@ label v11_rose_underground:
     pause 1
     stop music fadeout 3
     jump v11_lobby_mrlee
-

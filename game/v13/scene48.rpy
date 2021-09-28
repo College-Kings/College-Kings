@@ -3,15 +3,13 @@
 # Characters: MC (Outfit: 1), AUBREY (Outfit: 4), RYAN (Outfit: 1)
 # Time: Evening
 
-default v13s48_get_aubrey_chocolate = False
-default v13s48_ryan_double_date = False
-default v13s48_canoeing_as_date = False
-
 label v13s48:
     scene v13s48_1 # TPP. Show MC walking up to Aubrey on the beach, Both slight smile, mouth closed.
     with dissolve
 
     pause 0.75
+
+    play music "music/v13/Track Scene 48.mp3" fadein 2
 
     scene v13s48_2 # FPP. MC looking at Aubrey, Aubrey looking at MC, Slight smile, mouth closed.
     with dissolve
@@ -44,7 +42,6 @@ label v13s48:
     au "Great! Thank you..."
 
     if s12v32_get_aubrey_flowers:
-
         scene v13s48_3 # FPP. Show Aubrey turning her back to the MC and walking towards the water, slight smile, mouth closed.
         with dissolve
 
@@ -80,42 +77,42 @@ label v13s48:
 
     au "Are you sure you know what you're doing?"
 
-    scene v13s48_4
+    scene v13s48_4a
     with dissolve
 
     u "I'm sure it's not that hard, I think I can press a button or two. *Chuckles*"
 
-    scene v13s48_4a
+    scene v13s48_4
     with dissolve
 
     au "When taking the pictures, just imagine the angles and poses you'd like to see me in and take a picture of that."
 
-    scene v13s48_4
+    scene v13s48_4a
     with dissolve
 
     u "That's easy enough."
 
-    scene v13s48_4a
+    scene v13s48_4
     with dissolve
 
     au "And that's why men are the best photographers."
 
-    scene v13s48_4
+    scene v13s48_4a
     with dissolve
 
     u "*Chuckles*"
 
-    scene v13s48_4a
+    scene v13s48_4
     with dissolve
 
     au "Are you ready?"
 
-    scene v13s48_4
+    scene v13s48_4a
     with dissolve
 
     u "Pfft. Are you ready?"
 
-    scene v13s48_4a
+    scene v13s48_4
     with dissolve
 
     au "Haha, let's do this."
@@ -136,17 +133,15 @@ label v13s48:
     pause 0.75
     
     menu:
-        "Stay quiet...":
+        "Stay quiet":
             $ addPoint("bro")
-
             scene v13s48_6
             with dissolve
 
             u "(I'll let her work.)"
 
-        "DAMNNN!...":
+        "DAMNNN...!":
             $ addPoint("bf")
-
             scene v13s48_6
             with dissolve
             
@@ -190,17 +185,17 @@ label v13s48:
     scene v13s48_4
     with dissolve
 
-    au "So… How do they look?"
+    au "So... How do they look?"
 
     scene v13s48_4a
     with dissolve
 
-    u "They look amazing so far. You’re stunning!"
+    u "They look amazing so far. You're stunning!"
 
     scene v13s48_4
     with dissolve
 
-    au "Aww… Can I see?"
+    au "Aww... Can I see?"
 
     scene v13s48_4a
     with dissolve
@@ -235,7 +230,7 @@ label v13s48:
     scene v13s48_4
     with dissolve
 
-    au "Well, that was the “need you to do something” part, but now it's time for the “hangout with you” part. *Laughs*"
+    au "Well, that was the \"need you to do something\" part, but now it's time for the \"hang out with you\" part. *Laughs*"
 
     scene v13s48_4a
     with dissolve
@@ -285,73 +280,71 @@ label v13s48:
     scene v13s48_8a
     with dissolve
 
-    au "Ha.. Well, to be honest…"
+    au "Ha... Well, to be honest..."
 
-    scene v13s48_8
+    scene v13s48_8a
     with dissolve
 
     au "My childhood was very basic and I'm trying my best to avoid the sister drama for as long as I can."
 
-    scene v13s48_8a
+    scene v13s48_8
     with dissolve
 
     u "Gotcha, but now it'd be nice to actually get to know you a bit better."
 
-    scene v13s48_8
+    scene v13s48_8a
     with dissolve
 
     au "*Chuckles* Why do you wanna know me better?"
 
-    scene v13s48_8a
+    scene v13s48_8
     with dissolve
 
     menu:
-        "Because we're friends...":
+        "Because we're friends":
             $ addPoint("bro")
-
             u "Because we're friends and it'd be nice to know you a bit better. *Chuckles*"
 
-        "Because I like you...":
+        "Because I like you":
             $ addPoint("bf")
-
             u "Because I like you, and it'd be nice to add more reasons why I like you to my list. *Chuckles*"
 
-    scene v13s48_8
+    scene v13s48_8a
     with dissolve
 
     au "What if you don't like the stuff I tell you? *Chuckles*"
 
-    scene v13s48_8a
+    scene v13s48_8
     with dissolve
 
     u "Then I guess I'll have to fall back on the things I do like."
 
-    scene v13s48_8
+    scene v13s48_8a
     with dissolve
 
-    au "*Chuckles* Well…"
+    au "*Chuckles* Well..."
 
     scene v13s48_8a
     with dissolve
 
     au "Like I said, my childhood was pretty basic. I had both parents, a suburban home, an older sister, I did cheerleading... Super basic stuff."
 
-    scene v13s48_8
+    scene v13s48_8a
     with dissolve
 
     au "My sister started modeling when she turned eighteen and it always sparked my interest, but I was worried it'd seem like I was just copying her."
 
-    scene v13s48_8a
-    with dissolve
-
-    u "That’s a reasonable insecurity, but look at you now. You literally got offered a job while she was in the middle of a photoshoot."
-
     scene v13s48_8
     with dissolve
 
-    au "Yeah… You’re right. *Chuckles*"
+    u "That's a reasonable insecurity, but look at you now. You literally got offered a job while she was in the middle of a photoshoot."
 
     scene v13s48_8a
+    with dissolve
+
+    au "Yeah... You're right. *Chuckles*"
+
+    scene v13s48_8
     with dissolve
 
     u "What subjects were you good at?"
@@ -366,22 +359,22 @@ label v13s48:
 
     u "Yeah."
 
-    scene v13s48_8
+    scene v13s48_8a
     with dissolve
 
     au "None. *Chuckles*"
 
-    scene v13s48_8a
+    scene v13s48_8
     with dissolve
 
     u "Damn! Really? *Chuckles*"
 
-    scene v13s48_8
+    scene v13s48_8a
     with dissolve
 
     au "No wait, wait... I was good at PE."
 
-    scene v13s48_8a
+    scene v13s48_8
     with dissolve
 
     u "Shit Aubs..."
@@ -396,52 +389,52 @@ label v13s48:
 
     u "Is PE even considered a subject?"
 
-    scene v13s48_8
+    scene v13s48_8a
     with dissolve
 
     au "Haha! It was at my school."
 
-    scene v13s48_8a
+    scene v13s48_8
     with dissolve
 
     u "*Chuckles* You don't even know what PE stands for, do you?"
 
-    scene v13s48_8
+    scene v13s48_8a
     with dissolve
 
     au "Yes I do..."
 
-    scene v13s48_8a
+    scene v13s48_8
     with dissolve
 
     u "What?"
 
-    scene v13s48_8
+    scene v13s48_8a
     with dissolve
 
     au "It stands for..."
 
-    scene v13s48_8a
+    scene v13s48_8
     with dissolve
 
     u "Phy-"
 
-    scene v13s48_8
+    scene v13s48_8a
     with dissolve
 
     au "I don't need any hints, [name]."
 
-    scene v13s48_8a
+    scene v13s48_8
     with dissolve
 
     u "My bad, go on. *Chuckles*"
 
-    scene v13s48_8
+    scene v13s48_8a
     with dissolve
 
     au "..."
 
-    scene v13s48_8a
+    scene v13s48_8
     with dissolve
 
     u "*Whistling*"
@@ -456,95 +449,92 @@ label v13s48:
 
     u "Physical education..."
 
-    scene v13s48_8
+    scene v13s48_8a
     with dissolve
 
-    au "Pfft… I knew that."
+    au "Pfft... I knew that."
 
-    scene v13s48_8a
+    scene v13s48_8
     with dissolve
 
     u "Haha, right... So were you the cute cheerleader that wasn't all that smart? Or..."
 
-    scene v13s48_8
+    scene v13s48_8a
     with dissolve
 
     au "Just like any movie! I told you I was basic. *Chuckles*"
 
-    scene v13s48_8a
+    scene v13s48_8
     with dissolve
 
     u "Basic is better than tragic."
 
-    scene v13s48_8
+    scene v13s48_8a
     with dissolve
 
     au "That's true. *Chuckles*"
 
     au "People like Nora didn't even have that. I'm not gonna spill her tea, but yeah."
 
-    scene v13s48_8a
+    scene v13s48_8
     with dissolve
 
     u "You can spill some tea about the Chicks, though. *Chuckles*"
 
     u "What's the sway of things? Does it look like Lindsey has a chance?"
 
-    scene v13s48_8
+    scene v13s48_8a
     with dissolve
 
     au "A chance would be an understatement. Honestly, I'm thinking she'll win."
 
-    scene v13s48_8a
+    scene v13s48_8
     with dissolve
 
     u "What makes you say that?"
 
-    scene v13s48_8
+    scene v13s48_8a
     with dissolve
 
     au "All of the girls support her. Even the ones that have promised to vote for Chloe, still deep down want Lindsey to win."
 
-    au "Chloe is getting a shit ton of votes based on pity and  loyalty, but not faith in her leadership. People actually believe in Lindsey."
+    au "Chloe is getting a shit ton of votes based on pity and loyalty, but not faith in her leadership. People actually believe in Lindsey."
 
-    scene v13s48_8a
+    scene v13s48_8
     with dissolve
 
     u "That's kinda surprising with her being so new compared to Chloe, right?"
 
-    scene v13s48_8
+    scene v13s48_8a
     with dissolve
 
-    au "Well with her being a legacy, it helps alot and with her mother passing away, she's getting a few pity votes as well."
+    au "Well with her being a legacy, it helps a lot and with her mother passing away, she's getting a few pity votes as well."
 
-    scene v13s48_8a
+    scene v13s48_8
     with dissolve
 
     u "Sheeeeesh. Guess we're gonna be biting our nails on this one?"
 
-    scene v13s48_8
+    scene v13s48_8a
     with dissolve
 
     au "And this is why I don't talk about it. *Chuckles* Too much drama."
 
-    scene v13s48_8a
+    scene v13s48_8
     with dissolve
 
     u "It is a lot to take in."
 
-    scene v13s48_8
+    scene v13s48_8a
     with dissolve
 
     au "Yeah..."
 
-    scene v13s48_8a
+    scene v13s48_8
     with dissolve
 
     menu :
-        "Doing too much...":
-            u "(I'm not getting her chocolates. *Chuckles* That's doing too much.)"
-
-        "Get her chocolate...":
+        "Get her chocolates":
             $ aubrey.points += 1
             $ addPoint ("bf")
             $ v13s48_get_aubrey_chocolate = True
@@ -582,6 +572,7 @@ label v13s48:
             pause 0.75
 
             scene v13s48_11 # TPP. MC handing the chocolates to Aubrey, Aubrey slight smile, mouth closed, MC slight smile, mouth open.
+            with dissolve
 
             u "Here you go..."
 
@@ -595,22 +586,22 @@ label v13s48:
 
             u "Just getting a snack for a snacc."
 
-            scene v13s48_8
+            scene v13s48_8a
             with dissolve
 
-            au "*Laughs* That was actually funny… Nice job."
+            au "*Laughs* That was actually funny... Nice job."
 
-            scene v13s48_8a
+            scene v13s48_8
             with dissolve
 
             u "I was going for something more romantic, but funny works too. *Chuckles*"
 
-            scene v13s48_8
+            scene v13s48_8a
             with dissolve
 
             au "*Chuckles* It was both."
 
-            scene v13s48_8a
+            scene v13s48_8
             with dissolve
 
             u "So you're starting to warm up to me, huh?"
@@ -625,6 +616,9 @@ label v13s48:
 
             u "*Chuckles* Yes ma'am."
 
+        "(That's too much...)":
+            u "(I'm not getting her chocolates. *Chuckles* That's doing too much.)"
+
     u "You know what would be really cool to do in Amsterdam?"
 
     scene v13s48_8b
@@ -637,60 +631,61 @@ label v13s48:
 
     u "Canoeing, and then maybe a little picnic."
 
-    scene v13s48_8
+    scene v13s48_8a
     with dissolve
 
     au "Sounds kinda romantic don't you think?"
 
+    scene v13s48_8
+    with dissolve
+
     if aubreyrs:
         au "I know we're fucking, but..."
+
+        scene v13s48_8c
+        with dissolve
         
-    else:
-            menu:
-                "I meant as friends...":
-                    $ addPoint ("bro")
+        menu:
+            "I meant as friends":
+                $ addPoint ("bro")
+                scene v13s48_8
+                with dissolve
 
-                    scene v13s48_8a
-                    with dissolve
+                u "I meant it as friends."
 
-                    u "I meant it as friends."
+                scene v13s48_8a
+                with dissolve
+
+                au "Mhmm, okay. *Chuckles* When are you thinking about going?"
+
+            "I meant as a date":
+                $ addPoint ("bf")
+                $ v13s48_canoeing_as_date = True
+
+                scene v13s48_8
+                with dissolve
+
+                u "I meant it as a date."
+
+                if s12v32_get_aubrey_flowers and v13s48_get_aubrey_chocolate:
+
+                    au "You've been working overtime trying to \"woo\" me, huh?"
 
                     scene v13s48_8
                     with dissolve
 
-                    au "Mhmm, okay. *Chuckles* When are you thinking about going?"
-
-                "I meant as a date...":
-                    $ addPoint ("bf")
-                    $ v13s48_canoeing_as_date = True
+                    u "How am I doing? Feeling \"woo'd\" yet?"
 
                     scene v13s48_8a
                     with dissolve
 
-                    u "I meant it as a date."
+                    au "*Chuckles* When are you wanting to have this... Date?"
 
-                    scene v13s48_8
+                else:
+                    scene v13s48_8a
                     with dissolve
 
-                    if s12v32_get_aubrey_flowers and v13s48_get_aubrey_chocolate:
-
-                        au "You’ve been working overtime trying to “woo” me, huh?"
-
-                        scene v13s48_8a
-                        with dissolve
-
-                        u "How am I doing? Feeling “woo’d” yet?"
-
-                        scene v13s48_8
-                        with dissolve
-
-                        au "*Chuckles* When are you wanting to have this... Date?"
-
-                    else:
-                        scene v13s48_8
-                        with dissolve
-
-                        au "We can go as friends. When are you thinking about going?"
+                    au "We can go as friends. When are you thinking about going?"
 
     scene v13s48_8
     with dissolve
@@ -705,9 +700,9 @@ label v13s48:
     scene v13s48_8
     with dissolve
 
-    u "Oooh, now I’m excited. *Chuckles*."
+    u "Oooh, now I'm excited. *Chuckles*."
 
-    if emily_europe:
+    if v10s33_ryan_flirt_emily and emily_europe:
         play sound "sounds/vibrate.mp3"
 
         scene v13s48_8
@@ -725,10 +720,10 @@ label v13s48:
 
         ry "Hey man, just wanna make sure you're still sure about your decision regarding our date?"
 
-        ry "I thought I’d ask again 'cause I really do want you there, but I wanna be sure you’re comfortable first."
+        ry "I thought I'd ask again 'cause I really do want you there, but I wanna be sure you're comfortable first."
 
         menu :
-            "Go on the date...":
+            "Go on the date":
                 $ addPoint ("bro")
                 $ v13s48_ryan_double_date = True
 
@@ -747,13 +742,13 @@ label v13s48:
 
                 u "Alright, sounds good."
 
-            "Don't go on the date...":
-                $ addpoint ("bf")
+            "Don't go on the date":
+                $ addPoint ("bf")
 
                 scene v13s48_12
                 with dissolve
                 
-                u "Yeah man, I’m not feeling too comfortable about it."
+                u "Yeah man, I'm not feeling too comfortable about it."
 
                 scene v13s48_12a
                 with dissolve
@@ -783,11 +778,13 @@ label v13s48:
     scene v13s48_8
     with dissolve
 
-    u "Well, let's get you back before you freeze. *Chuckles* I wish I had some sort of jacket"
+    u "Well, let's get you back before you freeze. *Chuckles* I wish I had some sort of jacket."
 
     scene v13s48_7
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s49

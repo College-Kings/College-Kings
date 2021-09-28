@@ -3,12 +3,13 @@
 # Characters: LINDSEY (Outfit: 1), MC (Outfit: 5)
 # Time: night
 
-
 label v13s41a:
     scene v13s41a_1 # TPP.MC and lindsey on the sidewalk
     with fade
 
     pause 0.75
+
+    play music "music/v13/Track Scene 41a.mp3" fadein 2
 
     scene v13s41a_2 # TPP. MC and lindsey arriving in the hotel lobby
     with dissolve
@@ -38,9 +39,11 @@ label v13s41a:
     scene v13s41a_3b # FPP. Lindsey leaves the hotel lobby, back to the camera
     with dissolve
 
+    pause 0.75
+
+    stop music fadeout 3
+
     jump v13s42 
 
 # -Lindsey goes off-
 # -Transition to Scene 42-
-
-

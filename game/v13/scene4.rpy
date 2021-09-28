@@ -10,6 +10,8 @@ label v13s4:
 
         pause 0.75
 
+        play music "music/v13/Track Scene 4.mp3" fadein 2
+
         scene v13s4_2 # TPP. Show MC and Riley walking in to the hotel, Ms. Rose in front of them, all slightly smiling, mouths closed, all carrying their luggage
         with dissolve
 
@@ -20,6 +22,8 @@ label v13s4:
         with dissolve
 
         pause 0.75
+
+        play music "music/v13/Track Scene 4.mp3" fadein 2
 
         scene v13s4_2a # TPP. Same as v13s4_2, but Chloe instead of Riley, Chloe frowning, tired, mouth closed
         with dissolve
@@ -46,6 +50,8 @@ label v13s4:
         with dissolve
 
         u "(I may have been sleeping that entire ride, but it wasn't very relaxing.)"
+
+        stop music fadeout 3
 
         jump v13s5a
 
@@ -103,5 +109,7 @@ label v13s4:
             with dissolve
 
             pause 1
+
+        stop music fadeout 3
                 
         jump v13s5

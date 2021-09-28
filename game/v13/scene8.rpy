@@ -9,6 +9,8 @@ label v13s8:
 
     u "(Hmm, maybe now would be a good time to try and talk to Nora.)"
 
+    play music "music/v13/Track Scene 8.mp3" fadein 2
+
     scene v13s8_2 # TPP. Show MC walking in the hotel lobby towards the corridor, MC slight smile, mouth closed
     with dissolve
 
@@ -121,6 +123,14 @@ label v13s8:
         with dissolve
 
         menu:
+            "Agree":
+                u "*Sighs* I'm not going to sit here and say I didn't enjoy what we shared the other night."
+
+                scene v13s8_9a
+                with dissolve
+
+                u "I'm also not gonna act like I don't like you or have no feelings for you, but I do agree. We shouldn't have done what we did while you're in a relationship."
+
             "Disagree":
                 $ nora.points += 1
 
@@ -142,16 +152,7 @@ label v13s8:
                 scene v13s8_9a
                 with dissolve
 
-                u "I mean it when I say this Nora. I'm not gonna walk around feeling bad for what we did. I didn't do it because I hate Chris, I did it because I really, really like you."
-
-            "Agree":
-
-                u "*Sighs* I'm not going to sit here and say I didn't enjoy what we shared the other night."
-
-                scene v13s8_9a
-                with dissolve
-
-                u "I'm also not gonna act like I don't like you or have no feelings for you, but I do agree. We shouldn't have done what we did while you're in a relationship."
+                u "I mean it when I say this, Nora. I'm not gonna walk around feeling bad for what we did. I didn't do it because I hate Chris, I did it because I really, really like you."
 
         scene v13s8_9
         with dissolve
@@ -244,7 +245,8 @@ label v13s8:
         scene v13s8_9
         with dissolve
 
-        no "It does and it doesn't. I want to talk about what happened and where we stand, but I'm also enjoying us just being okay. He's not busy as much anymore and he's actually been trying to spend time with me, so it's all conflicting."
+        no "It does and it doesn't. I want to talk about what happened and where we stand, but I'm also enjoying us just being okay."
+        no "He's not busy as much anymore and he's actually been trying to spend time with me, so it's all conflicting."
 
         scene v13s8_9d
         with dissolve
@@ -335,7 +337,7 @@ label v13s8:
     scene v13s8_9g
     with dissolve
 
-    no "You probably already know, but the fact that Chloe has to be the President of Chick's in order to keep her Greek scholarship?"
+    no "You probably already know, but the fact that Chloe has to be the President of Chicks in order to keep her Greek scholarship?"
 
     scene v13s8_9d
     with dissolve
@@ -425,11 +427,13 @@ label v13s8:
     scene v13s8_11 # TPP. Show MC and Nora hugging
     with dissolve
 
-    pause
+    pause 1.75
 
     scene v13s8_12 # TPP. Show MC walking out of the room, slight smile, mouth closed
     with dissolve
 
-    pause 0.75 
+    pause 0.75
+
+    stop music fadeout 3
 
     jump v13s9

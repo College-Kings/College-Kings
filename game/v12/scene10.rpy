@@ -42,6 +42,7 @@ label v12_amber_bus:
 
     menu:
         "Tease her":
+            $ v11_tease_amber += 1
             $ addPoint("tm")
             scene v12amb3b # FPP. Same as v12amb3, Amber slight smile, mouth closed, different pose
             with dissolve

@@ -1,13 +1,15 @@
-# SCENE 21: MC talking to Charli  
+# SCENE 21: MC talking to Charli
 # Locations: Hotel Lobby, Cafe, Hotel Exterior
 # Characters: MC (Outfit: 9), LUUK (Outfit: 1), RILEY (Outfit: 2), CHARLI (Outfit: 1), AUBREY (Outfit: 3)
 # Time: Morning
 
 label v13s21:
-    scene v13s21_1 # TPP. MC and Riley walking from the middle of the hotel lobby toward the counter with Luuk behind the counter.    
+    scene v13s21_1 # TPP. MC and Riley walking from the middle of the hotel lobby toward the counter with Luuk behind the counter.  
     with dissolve
 
     pause 0.75
+
+    play music "music/v13/Track Scene 21.mp3" fadein 2
 
     scene v13s21_1a # TPP. Same as v13s21_1 but with MC and Riley closer to the counter.
     with dissolve
@@ -79,7 +81,7 @@ label v13s21:
 
     pause 0.75
 
-    scene v13s21_6a # TPP. Same as v13s21_6 but with MC halfway towards Charli's table.  
+    scene v13s21_6a # TPP. Same as v13s21_6 but with MC halfway towards Charli's table.
     with dissolve
 
     pause 0.75
@@ -107,7 +109,7 @@ label v13s21:
     pause 0.75
 
     scene v13s21_9 # FPP. Charli, looking down, continung to focus on writing on the paper in front of him.
-    with dissolve 
+    with dissolve
 
     u "Oh... Work? What kind of work is it?"
 
@@ -290,7 +292,7 @@ label v13s21:
     pause 0.75
 
     scene v13s21_14 # FPP. Riley looking at MC, shocked at what just happened, mouth open.
-    with dissolve 
+    with dissolve
 
     ri "That was... heavy..."
 
@@ -353,6 +355,7 @@ label v13s21:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
     
     jump v13s22 # Scene 22 
-

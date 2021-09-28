@@ -1,4 +1,4 @@
-# SCENE 25b: Date with Arysssa
+# SCENE 25b: Date with Aryssa
 # Locations: Simplr Bar
 # Characters: ARYSSA (Outfit: 1), MC (Outfit: 9)
 # Time: Afternoon 
@@ -8,6 +8,8 @@ label v13s25b:
     with dissolve
     
     ary "Doing this in person is so much better than chatting online. I feel as if there's so much more of a connection."
+
+    play music "music/v13/Track Scene 25.mp3" fadein 2
 
     scene v13s25b_2 # FPP. MC looking at Aryssa, Aryssa slight smile, mouth closed 
     with dissolve
@@ -42,7 +44,7 @@ label v13s25b:
     scene v13s25b_2 
     with dissolve
 
-    u "No way! That’s really interesting. Is it hard?"
+    u "No way! That's really interesting. Is it hard?"
 
     scene v13s25b_2a
     with dissolve
@@ -77,7 +79,7 @@ label v13s25b:
     scene v13s25b_2
     with dissolve
 
-    u "Wow, that’s… I mean, I'm just a student right now... I don't even have a job. *Chuckles*"
+    u "Wow, that's... I mean, I'm just a student right now... I don't even have a job. *Chuckles*"
 
     scene v13s25b_2c
     with dissolve
@@ -97,7 +99,7 @@ label v13s25b:
     scene v13s25b_2
     with dissolve
 
-    u "You're very impressive. I’m kinda surprised by the fact that you’re still single."
+    u "You're very impressive. I'm kinda surprised by the fact that you're still single."
 
     scene v13s25b_2c
     with dissolve
@@ -112,7 +114,7 @@ label v13s25b:
     scene v13s25b_2a
     with dissolve
 
-    ary "Thank you…"
+    ary "Thank you..."
 
     scene v13s25b_2d # FPP. Same as v13s25b_2a, serious expression, different posture 
     with dissolve
@@ -120,7 +122,7 @@ label v13s25b:
     ary "So, I know you aren't working now, but do you plan to soon?"
 
     menu:
-        "Might look into it...":
+        "Might look into it":
             scene v13s25b_4 # TPP. Show Mc flexing his bicep, slight smile, mouth open, Aryssa, slight smile, mouth closed
             with dissolve
             
@@ -141,7 +143,7 @@ label v13s25b:
 
             ary "Do think we could-"
     
-        "Not really...":
+        "Not really":
             scene v13s25b_2e # FPP. Same as v13s25b_2, neutral expression
             with dissolve
         
@@ -165,7 +167,7 @@ label v13s25b:
             scene v13s25b_2e
             with dissolve
 
-            u "Well, work  isn't a necessity for me right now. I'm enjoying school and being a part of my frat right now."
+            u "Well, work isn't a necessity for me right now. I'm enjoying school and being a part of my frat right now."
 
             scene v13s25b_2d
             with dissolve
@@ -187,10 +189,10 @@ label v13s25b:
 
             u "I didn't mean it in a rude way."
 
-            scene v13s25b_2a   
+            scene v13s25b_2a
             with dissolve
 
-            ary "It's fine, this just shows that we’re not very compatible. *Chuckles*"
+            ary "It's fine, this just shows that we're not very compatible. *Chuckles*"
 
             scene v13s25b_2b
             with dissolve
@@ -261,5 +263,7 @@ label v13s25b:
     with fade
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s27

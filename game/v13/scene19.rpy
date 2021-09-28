@@ -9,6 +9,8 @@ label v13s19:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 19_1.mp3" fadein 2
+
     scene v13s19_1a # FPP. Same as v13s19_1, Riley now standing close to MC, mouth open, slight smile
     with dissolve
 
@@ -43,6 +45,9 @@ label v13s19:
     with fade
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 19_2.mp3" fadein 2
 
     scene v13s19_6 # TPP. Show Riley trying to open the door to Charli's room (it's locked) MC standing next to her, both slight smiles, mouths closed
     with dissolve
@@ -93,6 +98,7 @@ label v13s19:
 
         u "(Luuk?)"
 
+    play sound "sounds/dooropen.mp3"
     scene v13s19_6b # TPP. Same as v13s19_6, Riley opening the door, both slight smiles, mouths closed
     with dissolve
 
@@ -125,12 +131,11 @@ label v13s19:
 
     ri "*Chuckles* Thank you..."
 
-    play sound "sounds/kiss.mp3"
-
     scene v13s19_8 # TPP. Show Riley kissing MC on the cheek
     with dissolve
-
-    pause
+    play sound "sounds/kiss.mp3"
+    
+    pause 2
 
     scene v13s19_7b
     with dissolve
@@ -141,5 +146,7 @@ label v13s19:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s20

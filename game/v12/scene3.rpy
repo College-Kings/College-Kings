@@ -177,7 +177,6 @@ label v12_penelope_roof:
 
                 "You sure are":
                     $ addPoint("bf")
-
                     u "Yes, you are."
 
                     scene v12penr10a # FPP Same angle as v12penr10, Penelope looking back at MC, neutral expression, mouth open
@@ -314,7 +313,6 @@ label v12_penelope_roof:
             pe "Always."
 
             if penelopers:
-
                 pe "I kinda hope I end up marrying a guy like you."
 
                 scene v12penr10e

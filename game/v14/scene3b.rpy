@@ -32,7 +32,7 @@ label v14s03b:
     scene v14s03b_4 # FPP Show Ryan, looking at MC. Ryan has an awkward, embarrased expression, mouth open
     with dissolve
 
-    ry "[Name]."
+    ry "[name]."
 
     scene v14s03b_4a # FPP Same as 4, Ryan's mouth closed
     with dissolve

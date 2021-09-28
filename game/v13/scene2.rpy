@@ -9,10 +9,12 @@ label v13s2:
 
     pause 0.75
 
+    play music "music/v13/Track Scene 2_1.mp3" fadein 2
+
     scene v13s2_2 # TPP. Show MC walking into his hotel room, slight smile, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s2_3 # TPP. Show MC grabbing his luggage, slight smile, mouth closed
     with dissolve
@@ -22,12 +24,15 @@ label v13s2:
     scene v13s2_4 # TPP. Show MC leaving his hotel room with his luggage, slight smile, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s2_5 # TPP. Show MC walking in the hotel lobbt with his luggage, slight smile, mouth closed
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v13/Track Scene 2_2.mp3" fadein 2
 
     if v11_pen_goes_europe:
         scene v13s2_6 # FPP. MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose slight smile, mouth open, Penelope standing next to Ms. Rose, looking at her, Penelope slight smile, mouth closed, Penelope carrying some luggage from other students
@@ -51,9 +56,11 @@ label v13s2:
 
         u "(She must be having a hard time sleeping for some reason.)"
         
-    scene v12s2_7 # TPP. Show MC leaving the hotel, Ms. Rose in front of him, both slightly smiling, mouths closed
+    scene v13s2_7 # TPP. Show MC leaving the hotel, Ms. Rose in front of him, both slightly smiling, mouths closed
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v13s3

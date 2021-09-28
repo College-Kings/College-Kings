@@ -5,7 +5,6 @@
 
 
 label v14s07:
-
     scene v14s07_1 # TPP. # MC arrives in the hotel lobby and he sees Aubrey and Riley together holding their bags, looking at each other with flirtatious expressions, mouths closed, Imre standing with Chris both of them with concerned expression looking over at Ms. Rose and Nora, Ms. Rose with a hand on Nora's soulder both of them looking at each other, slight frowns, mouths closed
     with dissolve
 
@@ -62,7 +61,6 @@ label v14s07:
     ro "There were memories made..."
 
     if msrosers:
-
         scene v14s07_2c # FPP. same as v14s07_2a Ms. Rose makes direct eye contact with mc
         with dissolve
 
@@ -106,6 +104,6 @@ label v14s07:
     scene v14s07_5 # TPP. show Ms. Rose walking towards the hotel lobby front door with mc walking behind her
     with dissolve    
 
-    jump to v14s08
+    jump v14s08
 
 # -Transition to Scene 8-
