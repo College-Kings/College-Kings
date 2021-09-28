@@ -174,7 +174,7 @@ label v14s03a:  # -MC walks overs and stands in front of the night gambler-
             scene v14s03a_9  # FPP. Imre, Ryan backs to MC but heads slghtly turned toward MC walking towards brothel, both mouth closed
             with dissolve
 
-            u "He was… Persistent."
+            u "He was... Persistent."
 
             scene v14s03a_9a # FPP. Same as v14s03a_9, but with Imre, mouth open, Ryan mouth closed, both smiling.
             with dissolve
@@ -409,7 +409,7 @@ label v14s03a:  # -MC walks overs and stands in front of the night gambler-
             scene v14s03a_11a # Same as v14s03a_11, but with Ryan holding Gambler's thick wallet.
             with dissolve
             
-            ry "Well, well, well… What do we have here boys?"
+            ry "Well, well, well... What do we have here boys?"
 
             scene v14s03a_4a
             with dissolve
@@ -518,7 +518,7 @@ label v14s03a:  # -MC walks overs and stands in front of the night gambler-
                     scene v14s03a_4e # FPP. Imre, smiling, mouth closed.
                     with dissolve
 
-                    u "Imre…"
+                    u "Imre..."
 
                     scene v14s03a_4f # FPP. Same as v14s03a_4e, but mouth open.
                     with dissolve

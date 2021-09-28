@@ -64,7 +64,7 @@ label v14s16:
     scene v14s16_2a
     with dissolve
 
-    u "Non-stop? Sheesh… About what?"
+    u "Non-stop? Sheesh... About what?"
 
     scene v14s16_2
     with dissolve
@@ -78,7 +78,7 @@ label v14s16:
 
     u "I admit, I didn't expect it to be... This much."
 
-    u "I mean… Did she do all of this overnight?"
+    u "I mean... Did she do all of this overnight?"
 
     scene v14s16_2
     with dissolve
@@ -118,7 +118,7 @@ label v14s16:
     scene v14s16_2b # FPP. Same as v14s16_2a, Chloe cute pose, pouting face, mouth open.
     with dissolve
 
-    cl "If you'd be willing to help me win, I'd be so grateful…"
+    cl "If you'd be willing to help me win, I'd be so grateful..."
 
     cl "I’d do anything to thank you."
 
@@ -126,7 +126,7 @@ label v14s16:
         scene v14s16_2c # FPP. Same as v14s16_2a, Chloe winking, slight smile, mouth open.
         with dissolve
 
-        cl "*Chuckles* I can think of a few rewards already…"
+        cl "*Chuckles* I can think of a few rewards already..."
 
         scene v14s16_5 # FPP. MC looking down at his arm as Chloe starts to run her finger down MC's arm, flirting smile, mouth open.
         with dissolve
@@ -138,14 +138,14 @@ label v14s16:
 
         cl "*Whispering* Plus, the president always needs an assistant and if it's my job to, you know... Take care of you, while also running the sorority.."
 
-        cl "*Whispering* I might end up needing someone to help me with all of that… And all of you..."
+        cl "*Whispering* I might end up needing someone to help me with all of that... And all of you..."
 
         cl "*Whispering* Following me?"
 
         scene v14s16_2b
         with dissolve
 
-        u "(I think she means having an assistant in the bedroom…?!) I'm definitely following."
+        u "(I think she means having an assistant in the bedroom...?!) I'm definitely following."
 
     scene v14s16_2b
     with dissolve
@@ -256,7 +256,7 @@ label v14s16:
 
                 scene v14s16_2h
 
-                u "*Sighs* (This is gonna cause some serious issues for us. Fuck... Kinda surprised she didn't break up with me right there… Chloe’s way or no way.)"
+                u "*Sighs* (This is gonna cause some serious issues for us. Fuck... Kinda surprised she didn't break up with me right there... Chloe’s way or no way.)"
 
                 scene v14s16_2i
                 with dissolve
@@ -288,7 +288,7 @@ label v14s16:
                 scene v14s16_2a
                 with dissolve
 
-                u "Chloe… Chloe, wait!"
+                u "Chloe... Chloe, wait!"
 
                 scene v14s16_2h
                 with dissolve
@@ -298,7 +298,7 @@ label v14s16:
                 scene v14s16_2i
                 with dissolve
 
-                u "(Oh, well… Time for class!)"
+                u "(Oh, well... Time for class!)"
 
     scene v14s16_7 # TPP. MC standing next to Mrs. Rose's classroom, slight smile, mouth open.
     with dissolve

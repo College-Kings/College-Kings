@@ -32,7 +32,7 @@ label v14s03c:
     scene v14s03c_3a
     with dissolve
 
-    u "Ha… Right..."
+    u "Ha... Right..."
 
     scene v14s03c_3
     with dissolve
@@ -72,7 +72,7 @@ label v14s03c:
     scene v14s03c_4b # FPP. Same as v14s03c_4a, Satin slightly annoyed, mouth closed.
     with dissolve
 
-    u "Hey… Are you okay?"
+    u "Hey... Are you okay?"
 
     scene v14s03c_4c # FPP. Same as v14s03c_4b, Satin now looking at MC, Satin confused face, mouth open.
     with dissolve
@@ -126,7 +126,7 @@ label v14s03c:
 
     u "I came here with two of my buddies, actually."
 
-    u "One is off having a little fun somewhere else, or at least I hope… *Chuckles* And the other is hitting it off with that girl right... there."
+    u "One is off having a little fun somewhere else, or at least I hope... *Chuckles* And the other is hitting it off with that girl right... there."
 
     scene v14s03c_5 # FPP. MC looking off past the bar pointing over at Ryan and Emerald , Ryan and Emerald both slight smile, mouth closed.
     with dissolve
@@ -141,7 +141,7 @@ label v14s03c:
     scene v14s03c_4f
     with dissolve
 
-    u "Ha, uh oh… Why'd you say \"oh\" like that?"
+    u "Ha, uh oh... Why'd you say \"oh\" like that?"
 
     scene v14s03c_4e
     with dissolve
@@ -218,7 +218,7 @@ label v14s03c:
     scene v14s03c_4h
     with dissolve
 
-    satin "I see…"
+    satin "I see..."
 
     satin "What if I gave you an entire hour for free?"
 
@@ -272,7 +272,7 @@ label v14s03c:
     scene v14s03c_4h
     with dissolve
 
-    satin "Either you and I go to the private booth and enjoy it together, or…"
+    satin "Either you and I go to the private booth and enjoy it together, or..."
 
     satin "If you're feeling generous enough, you can let me slide in and help out your virgin friend."
 
@@ -314,7 +314,7 @@ label v14s03c:
             scene v14s03c_5a # FPP. Same as v14s03c_5, Emerald on Ryan's lap, both slight smile, mouth closed.
             with dissolve
 
-            u "*Sighs* As much as I'm gonna regret this…"
+            u "*Sighs* As much as I'm gonna regret this..."
 
             scene v14s03c_4f
             with dissolve

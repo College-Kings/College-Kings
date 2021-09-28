@@ -53,7 +53,7 @@ label v14s09:
     scene v14s09_2
     with dissolve
 
-    lee "Okay… There is absolutely- *Whispers* No need to bring that up."
+    lee "Okay... There is absolutely- *Whispers* No need to bring that up."
 
     scene v14s09_2d
     with dissolve
@@ -63,7 +63,7 @@ label v14s09:
     scene v14s09_2a
     with dissolve
 
-    lee "*Sighs* I suppose that what happens in Europe, truly does stay in Europe…"
+    lee "*Sighs* I suppose that what happens in Europe, truly does stay in Europe..."
 
     if msrosers and v13s20_bleach_suitcase:
         scene v14s09_2e # FPP. same as v14s09_2a show Ms. Rose looking at mc slightly biting a pen slight smile, mouth closed, show Mr. Lee looking at Charli's suitcase with a confused expression, mouth closed
@@ -188,7 +188,7 @@ label v14s09:
                 scene v14s09_5
                 with dissolve
 
-                u "Ha… Good to hear, pal."
+                u "Ha... Good to hear, pal."
 
             "I've done enough":
                 scene v14s09_5f # FPP. same as v14s09_5b charli has a relieved expression on his face
@@ -290,7 +290,7 @@ label v14s09:
         scene v14s09_6c
         with dissolve
 
-        lee "Is not here… Right."
+        lee "Is not here... Right."
 
         scene v14s09_8
         with dissolve
@@ -433,7 +433,7 @@ label v14s09:
         scene v14s09_8a
         with dissolve
 
-        ro "Right, then… I'll contact her before we take off."
+        ro "Right, then... I'll contact her before we take off."
 
     if josh_europe:
         scene v14s09_6b
@@ -450,7 +450,7 @@ label v14s09:
         scene v14s09_8b
         with dissolve
 
-        ro "And last but not least…"
+        ro "And last but not least..."
 
         scene v14s09_8b
         with dissolve
@@ -460,7 +460,7 @@ label v14s09:
         scene v14s09_11 # FPP. show penelope looking up at Ms. Rose, slight smile, mouth open
         with dissolve
 
-        pe "*Chuckles* Yes… I'm here, Ms. Rose."
+        pe "*Chuckles* Yes... I'm here, Ms. Rose."
 
         scene v14s09_8b
         with dissolve
@@ -470,7 +470,7 @@ label v14s09:
         scene v14s09_11
         with dissolve
 
-        pe "Oh… *Chuckles* Right, sorry!"
+        pe "Oh... *Chuckles* Right, sorry!"
 
         scene v14s09_11
         with dissolve

@@ -48,7 +48,7 @@ label v14s05:
     scene v14s05_3b  # FPP. Chloe, mouth open, concerned.
     with dissolve
 
-    cl "Oh no… What happened?"
+    cl "Oh no... What happened?"
 
     scene v14s05_3a
     with dissolve
@@ -73,7 +73,7 @@ label v14s05:
     scene v14s05_3c  # FPP. Chloe, neutral expression, mouth closed.
     with dissolve
 
-    u "*Chuckles* No, you’re right…"
+    u "*Chuckles* No, you’re right..."
 
     scene v14s05_3 
     with dissolve
@@ -126,7 +126,7 @@ label v14s05:
     scene v14s05_3d
     with dissolve
 
-    cl "Haha, I’ll let you get some rest…"
+    cl "Haha, I’ll let you get some rest..."
 
     scene v14s05_3g  # FPP. Same as v14s05_3, but with mouth open.
     with dissolve

@@ -112,7 +112,7 @@ label v14s03b:
     scene v14s03b_5
     with dissolve
 
-    u "Because…?"
+    u "Because...?"
 
     scene v14s03b_5b
     with dissolve
@@ -122,7 +122,7 @@ label v14s03b:
     scene v14s03b_5c # FPP Same angle as 5, Ryan looking at MC, looking embarrassed, mouth closed
     with dissolve
 
-    u "Okay… I promise."
+    u "Okay... I promise."
 
     scene v14s03b_5b
     with dissolve
@@ -277,7 +277,7 @@ label v14s03b:
     scene v14s03b_9 # TPP Show Emerald putting her arms around Ryan's neck, her face close to his, she is smiling with her mouth open. MC is smiling
     with dissolve
 
-    emerald "Well, to begin… That voice of yours is pretty sexy, but maybe I could find out a little bit more. After a few drinks?"
+    emerald "Well, to begin... That voice of yours is pretty sexy, but maybe I could find out a little bit more. After a few drinks?"
 
     scene v14s03b_9a # TPP Same as 9, Ryan's mouth is open, Emerald's mouth closed
     with dissolve

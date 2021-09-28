@@ -94,12 +94,12 @@ label v14s03e:
         scene v14s03e_6
         with dissolve
 
-        u "Oh, my bad. *Chuckles* I was, you know… Busy. You weren't?"
+        u "Oh, my bad. *Chuckles* I was, you know... Busy. You weren't?"
 
         scene v14s03e_6a
         with dissolve
 
-        ry "Nope, I decided to wait for my first time to be a little more… Clean."
+        ry "Nope, I decided to wait for my first time to be a little more... Clean."
 
         scene v14s03e_6
         with dissolve
@@ -109,12 +109,12 @@ label v14s03e:
         scene v14s03e_6b
         with dissolve
 
-        ry "Ha… Why are you glad?"
+        ry "Ha... Why are you glad?"
 
         scene v14s03e_6
         with dissolve
 
-        u "That girl you were talking to… She had herpes."
+        u "That girl you were talking to... She had herpes."
 
         scene v14s03e_6c # FPP. Same as v14s03e_6a, angry expression, mouth open 
         with dissolve
@@ -131,7 +131,7 @@ label v14s03e:
 
         u "Sorry bro, I wasn't thinking with my head..."
 
-        u "I was thinking with my… Head. *Chuckles*"
+        u "I was thinking with my... Head. *Chuckles*"
 
         scene v14s03e_6f # FPP. Same as v14s03e_6c, annoyed expression
         with dissolve
@@ -153,7 +153,7 @@ label v14s03e:
         scene v14s03e_6
         with dissolve
 
-        u "Yeah… That."
+        u "Yeah... That."
 
     scene v14s03e_7 # TPP. Show Imre walking up to MC and Ryan, Imre, annoyed expression, mouth open, MC and Ryan, both neutral expression, mouth closed
     with dissolve
@@ -223,7 +223,7 @@ label v14s03e:
     scene v14s03e_8e # FPP. Same as v14s03e_8d, surprised expression
     with dissolve
 
-    imre "*Gasps* Ryan… Bro… Are you serious right now?"
+    imre "*Gasps* Ryan... Bro... Are you serious right now?"
 
     scene v14s03e_9a
     with dissolve
@@ -243,7 +243,7 @@ label v14s03e:
     scene v14s03e_9
     with dissolve
 
-    ry "Haha, yeah… I did try to tell you that."
+    ry "Haha, yeah... I did try to tell you that."
 
     scene v14s03e_10 # FPP. Show Ryan giving Imre money, Ryan slight smile, mouth open, Imre, slight smile, mouth closed
     with dissolve
@@ -265,7 +265,7 @@ label v14s03e:
     scene v14s03e_12 # FPP. Ryan looking at MC, slight smile, mouth closed
     with dissolve
 
-    u "That was… disgustingly nice of you..."
+    u "That was... disgustingly nice of you..."
 
     scene v14s03e_12a # FPP. Same as v14s03e_12, laughing expression, mouth open
     with dissolve

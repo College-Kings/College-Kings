@@ -64,7 +64,7 @@ label v14s12:
     scene v14s12_3a
     with dissolve
 
-    u "Oh… Alright. What's that?"
+    u "Oh... Alright. What's that?"
 
     scene v14s12_3
     with dissolve
@@ -129,12 +129,12 @@ label v14s12:
     scene v14s12_3b
     with dissolve
 
-    ju "Eh… Good call, you can keep it to yourself. *Laughs*"
+    ju "Eh... Good call, you can keep it to yourself. *Laughs*"
 
     scene v14s12_3c
     with dissolve
 
-    u "Haha…"
+    u "Haha..."
 
     u "Well, how long do you think you'll be away?"
 
@@ -173,7 +173,7 @@ label v14s12:
     scene v14s12_4 # FPP. MC walking down the side walk looking at the San Vallejo college.
     with dissolve
 
-    u "(Still keeping this job a secret is really suspicious... And having to go to New York of all places is pretty… Odd. Oh, well.)"
+    u "(Still keeping this job a secret is really suspicious... And having to go to New York of all places is pretty... Odd. Oh, well.)"
 
     if joinwolves: 
         scene v14s12_5 # TPP. MC opening the door to the wolves frat house, slight smile, mouth closed.

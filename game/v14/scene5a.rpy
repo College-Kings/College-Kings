@@ -18,7 +18,7 @@ label v14s05a:
     scene v14s05a_3a # FPP. Same as v14s05a_3, mouth open
     with dissolve
 
-    ri "Yikes… You sound stressed."
+    ri "Yikes... You sound stressed."
 
     scene v14s05a_3
     with dissolve
@@ -59,7 +59,7 @@ label v14s05a:
         scene v14s05a_7a
         with dissolve
 
-        u "It definitely picked me up… *Laughs*."
+        u "It definitely picked me up... *Laughs*."
 
         scene v14s05a_7b # FPP. Same as v14s05a_7, different posture
         with dissolve
@@ -88,7 +88,7 @@ label v14s05a:
         scene v14s05a_7
         with dissolve
 
-        ri "Well…"
+        ri "Well..."
 
         scene v14s05a_8 # TPP. Show Riley standing up, slight smile, mouth closed, MC, slight smile, mouth closed
         with dissolve
@@ -241,7 +241,7 @@ label v14s05a:
         scene v14s05a_13b # FPP. Same as v14s05a_13a, Riley having a thoughtful expression
         with dissolve
 
-        ri "Interesting…"
+        ri "Interesting..."
 
         scene v14s05a_13a
         with dissolve

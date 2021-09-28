@@ -43,7 +43,7 @@ label v14s07:
     scene v14s07_3 # FPP. Mc looks to his left and sees aubrey looking at riley with a flirtatious look, mouth open, and riley looking at aubrey with a shocked expression mouth open
     with dissolve
 
-    au "*Whispers* Involved with each other… *Chuckles*"
+    au "*Whispers* Involved with each other... *Chuckles*"
 
     scene v14s07_3a # FPP. same as v14s07_3 aubrey mouth closed
     with dissolve

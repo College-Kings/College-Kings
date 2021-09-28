@@ -28,12 +28,12 @@ label v14s08:
     scene v14s08_3b # FPP. same as v14s08_3a amber rubs a hand across her face, clearing up the running make-up
     with dissolve
 
-    u "(Oh shit… She’s crying! Oh, fuck… What do I do here?)"
+    u "(Oh shit... She’s crying! Oh, fuck... What do I do here?)"
 
     scene v14s08_3c # FPP. same as v14s08_3b amber has lowered her hand off her face, looking at mc slightly annoyed
     with dissolve
 
-    u "(I mean, for normal girls I’d just ask what’s wrong but, with Amber… I don’t want to get stabbed today, you know?)"
+    u "(I mean, for normal girls I’d just ask what’s wrong but, with Amber... I don’t want to get stabbed today, you know?)"
 
     scene v14s08_3d # FPP. same as v14s08_3c amber mouth open
     with dissolve
@@ -86,7 +86,7 @@ label v14s08:
             scene v14s08_3
             with dissolve
 
-            u "(Not gonna open that can of worms… If she wanted to, she would.)"
+            u "(Not gonna open that can of worms... If she wanted to, she would.)"
 
             scene v14s08_3e
             with dissolve
@@ -121,7 +121,7 @@ label v14s08:
             scene v14s08_4c # FPP. same as v14s08_4b amber slight smile, mouth closed
             with dissolve
 
-            u "I respect your privacy, Amber. If you need to talk, you know I’m right here. If you’d rather sit in silence, I’m still here… *Laughs*"
+            u "I respect your privacy, Amber. If you need to talk, you know I’m right here. If you’d rather sit in silence, I’m still here... *Laughs*"
 
             scene v14s08_4d # FPP. same as v14s08_4c amber half smile, mouth open
             with dissolve
