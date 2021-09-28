@@ -7,7 +7,7 @@ label v14s02:
     scene v13s02_1 # TPP. show mc in the hotel lobby and looking around everywhere, no expression, mouth closed
     with dissolve
 
-    pause 0.75    
+    pause 0.75
 
     scene v13s02_1a # TPP. same as v13s02_1 different angle
     with dissolve
@@ -15,7 +15,7 @@ label v14s02:
     pause 0.75
 
     scene v13s02_1b # TPP. same as v13s02_1a show imre sneaking up on mc, slight smile mouth closed
-    with dissolve    
+    with dissolve
 
     u "(Please don't tell me everyone is gone or asleep.)"
 
@@ -142,6 +142,6 @@ label v14s02:
     scene v13s02_5 # TPP. mc, ryan, and imre seen walking down the sidewalk, all slight smiles, mouths closed, looking straight ahead
     with dissolve
 
-    pause 0.75   
+    pause 0.75
 
     jump v14s03

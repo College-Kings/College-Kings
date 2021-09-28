@@ -59,7 +59,7 @@ label v14s16:
     scene v14s16_2
     with dissolve
 
-    cl "I didn't have a choice... I just wanted to go home and sleep last night,  yet I was up for hours being a part of non-stop sorority bickering."
+    cl "I didn't have a choice... I just wanted to go home and sleep last night, yet I was up for hours being a part of non-stop sorority bickering."
 
     scene v14s16_2a
     with dissolve

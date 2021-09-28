@@ -8,15 +8,15 @@ label v14s09:
     scene v14s09_1 # TPP. show mc walking through airport, pulling his luggae, slight smile, mouth closed
     with dissolve
 
-    pause 0.75   
+    pause 0.75 
 
     scene v14s09_1a # TPP. same as v14s09_1 mc sees and looks at Mr. Lee and Ms. Rose looking over a checklist and hears them from a distance
-    with dissolve    
+    with dissolve 
 
     pause 0.75
 
     scene v14s09_2 # FPP. show Mr. Lee no expression, mouth open standing on the right of the screen, and Ms. Rose slight smile, mouth closed, standing on the left side of the screen, both Mr. Lee and Ms. Rose are holding clipboards
-    with dissolve    
+    with dissolve 
 
     lee "It'll be a very long time before I do another one of these trips..."
 
@@ -67,7 +67,7 @@ label v14s09:
 
     if msrosers and v13s20_bleach_suitcase:
         scene v14s09_2e # FPP. same as v14s09_2a show Ms. Rose looking at mc slightly biting a pen slight smile, mouth closed, show Mr. Lee looking at Charli's suitcase with a confused expression, mouth closed
-        with dissolve   
+        with dissolve 
 
         pause 0.75
 
@@ -89,7 +89,7 @@ label v14s09:
 
     elif v13s20_bleach_suitcase:
         scene v14s09_4 # FPP. mc see's charli grabbing his bleached suitcase, charli slight sad, mouth closed, charli looks at mc
-        with dissolve    
+        with dissolve 
 
         pause 0.75
 
@@ -98,9 +98,9 @@ label v14s09:
 
         pause 0.75
 
-    else:  
+    else:
         scene v14s09_4b # FPP. same as v14s09_4 mc see's charli grabbing his suitcase (SUITCASE IS NOT BLEACHED,) charli slight sad, mouth closed, charli looks at mc
-        with dissolve                    
+        with dissolve 
 
         pause 0.75
 
@@ -326,7 +326,7 @@ label v14s09:
         scene v14s09_6c
         with dissolve
 
-        pause 0.75       
+        pause 0.75   
 
     scene v14s09_8b
     with dissolve

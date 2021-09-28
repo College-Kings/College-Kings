@@ -110,7 +110,7 @@ label v14s03c:
     satin "Nice to meet you, [name]. You seem kind of young to be hanging around in a place like this."
 
     scene v14s03c_4f
-    with dissolve   
+    with dissolve 
 
     u "Good genes. *Chuckles*"
 
