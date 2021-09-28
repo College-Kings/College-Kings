@@ -38,7 +38,7 @@ label v14s03e:
         scene v14s03e_3
         with dissolve
 
-        u "Oh, good to hear...."
+        u "Oh, good to hear..."
 
         scene v14s03e_3b # FPP. Same as v14s03e_3, mouth open
         with dissolve

@@ -48,7 +48,7 @@ label v14s07:
     scene v14s07_3a # FPP. same as v14s07_3 aubrey mouth closed
     with dissolve
 
-    ri "*Whispers* Oh my god, Aubrey! Haha, shhh...."
+    ri "*Whispers* Oh my god, Aubrey! Haha, shhh..."
 
     scene v14s07_3b # FPP. same as v14s07_3a riley half smile, mouth closed
     with dissolve
