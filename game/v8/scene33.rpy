@@ -4,7 +4,6 @@
 # Time: Tuesday Morning
 
 label hallway_w_nora:
-
     scene v8shal1 # TPP. Show MC walking down the college hallways, Nora walking towards MC in the distance with brochures in hand.
     with fade
 
