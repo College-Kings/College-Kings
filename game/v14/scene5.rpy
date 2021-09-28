@@ -196,4 +196,4 @@ label v14s05:
     
     u "(And as quickly as it began, my day has concluded.)"
 
-    jump v15s06
+    jump v14s06
