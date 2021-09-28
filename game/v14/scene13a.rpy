@@ -22,7 +22,7 @@ label v14s13a:
     scene v14s13a_4 # FPP. MC standing in front of door, door now open, Grayson on the other side, Grayson smiling, mouth open
     with dissolve
 
-    gr "Charli’s boyfriend is back!"
+    gr "Charli's boyfriend is back!"
 
     scene v14s13a_4a # FPP. Same as v14s13a_4, but Grayson mouth closed
     with dissolve
@@ -42,12 +42,12 @@ label v14s13a:
     scene v14s13a_4
     with dissolve
 
-    gr "It's pretty well-known that Charli liked fucking with you. The fact that he was on vacation and still couldn’t take his mind off of you..."
+    gr "It's pretty well-known that Charli liked fucking with you. The fact that he was on vacation and still couldn't take his mind off of you..."
 
     scene v14s13a_4b # FPP. Same as v14s13a_4, different pose
     with dissolve
 
-    gr "Maybe it’s that beautiful sparkle in your eye... *Laughs*"
+    gr "Maybe it's that beautiful sparkle in your eye... *Laughs*"
 
     scene v14s13a_4c # FPP. Same as v14s13a_4b, but Grayson mouth closed
     with dissolve

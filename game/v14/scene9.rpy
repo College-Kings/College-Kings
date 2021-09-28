@@ -43,7 +43,7 @@ label v14s09:
     scene v14s09_2c # FPP. same as v14s09_2a Mr. Lee has an eyebrow raised
     with dissolve
 
-    lee "You think you know me, don’t you?"
+    lee "You think you know me, don't you?"
 
     scene v14s09_2d # FPP. same as v14s09_2b Ms. Rose increases to half smile
     with dissolve
@@ -58,7 +58,7 @@ label v14s09:
     scene v14s09_2d
     with dissolve
 
-    ro "*Laughs* Are you saying what I think you’re saying?"
+    ro "*Laughs* Are you saying what I think you're saying?"
 
     scene v14s09_2a
     with dissolve
@@ -85,7 +85,7 @@ label v14s09:
         scene v14s09_3 # TPP. show mc looking around, slight smile, mouth closed
         with dissolve
 
-        u "(I don't see Charli anywhere... Guess Mr. Lee wasn’t fucking around.)"
+        u "(I don't see Charli anywhere... Guess Mr. Lee wasn't fucking around.)"
 
     elif v13s20_bleach_suitcase:
         scene v14s09_4 # FPP. mc see's charli grabbing his bleached suitcase, charli slight sad, mouth closed, charli looks at mc
@@ -163,7 +163,7 @@ label v14s09:
                 scene v14s09_5d # FPP. same as v14s09_5a charli slight anger
                 with dissolve
 
-                charli "As a matter of fact, I think I’ve got it handled [name]."
+                charli "As a matter of fact, I think I've got it handled [name]."
 
                 scene v14s09_5
                 with dissolve
@@ -300,7 +300,7 @@ label v14s09:
         scene v14s09_6d
         with dissolve
 
-        lee "*Whispers* I have him handled. He already left, headed back to campus. I’ll be attending his meeting with the dean when we return."
+        lee "*Whispers* I have him handled. He already left, headed back to campus. I'll be attending his meeting with the dean when we return."
 
         scene v14s09_8c # FPP. same as v14s09_8 points her pen at Mr. Lee, mouth closed
         with dissolve
@@ -351,7 +351,7 @@ label v14s09:
     scene v14s09_6e # FPP. same as v14s09_6c Mr. Lee mouth open, rolling his eyes.
     with dissolve
 
-    lee "*Sighs* There’s always one..."
+    lee "*Sighs* There's always one..."
 
     scene v14s09_6f # FPP. same as v14s09_6e Mr. Lee looking at ryan
     with dissolve
@@ -366,7 +366,7 @@ label v14s09:
     scene v14s09_9a # FPP. same as v14s09_9 imre looking at ryan, mouth open, slight smile, ryan looking at imre slight smile mouth closed
     with dissolve
 
-    imre "*Whispers* Nice one, dumbass. Haven’t heard that joke since middle school... Did you learn it from your sister? Haha-"
+    imre "*Whispers* Nice one, dumbass. Haven't heard that joke since middle school... Did you learn it from your sister? Haha-"
 
     scene v14s09_8b
     with dissolve
@@ -392,7 +392,7 @@ label v14s09:
         scene v14s09_6c
         with dissolve
 
-        em "I’m here."
+        em "I'm here."
 
     if v11_invite_sam_europe:
         scene v14s09_8b
@@ -475,7 +475,7 @@ label v14s09:
         scene v14s09_11
         with dissolve
 
-        pe "Umm, I’m here... Lorraine. *Chuckles*"
+        pe "Umm, I'm here... Lorraine. *Chuckles*"
 
     scene v14s09_8e # FPP. same as v14s09_8 Ms. Rose looks at mc
     with dissolve

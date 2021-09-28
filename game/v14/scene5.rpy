@@ -68,12 +68,12 @@ label v14s05:
     scene v14s05_3d  # FPP. Chloe, neutral expression, mouth open.
     with dissolve
 
-    cl "Sorry! I shouldn't have laughed, it’s just-"
+    cl "Sorry! I shouldn't have laughed, it's just-"
 
     scene v14s05_3c  # FPP. Chloe, neutral expression, mouth closed.
     with dissolve
 
-    u "*Chuckles* No, you’re right..."
+    u "*Chuckles* No, you're right..."
 
     scene v14s05_3 
     with dissolve
@@ -126,12 +126,12 @@ label v14s05:
     scene v14s05_3d
     with dissolve
 
-    cl "Haha, I’ll let you get some rest..."
+    cl "Haha, I'll let you get some rest..."
 
     scene v14s05_3g  # FPP. Same as v14s05_3, but with mouth open.
     with dissolve
 
-    cl "I have some campaign things I want to go over, I’ll be back in a bit."
+    cl "I have some campaign things I want to go over, I'll be back in a bit."
 
     if chloegf:
         scene v14s05_6   # TPP. Chloe, smiling, mouth closed, getting up from her bed.

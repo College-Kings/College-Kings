@@ -22,7 +22,7 @@ label v14s03c:
     scene v14s03c_3a # FPP. Same as v14s03c_3, Madame slight smile, mouth closed.
     with dissolve
 
-    u "Two of whatever you’ve got back there, please."
+    u "Two of whatever you've got back there, please."
 
     scene v14s03c_3
     with dissolve
@@ -230,7 +230,7 @@ label v14s03c:
     scene v14s03c_4h
     with dissolve
 
-    satin "Okay, first of all, don’t say my name like that again unless you plan on fucking me afterwards."
+    satin "Okay, first of all, don't say my name like that again unless you plan on fucking me afterwards."
 
     scene v14s03c_4i
     with dissolve

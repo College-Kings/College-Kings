@@ -85,7 +85,7 @@ label v14s16:
 
     cl "That's where it gets even fucking worse, 'cause I thought the same thing."
 
-    cl "Come to find out that this shit has been up for at least a week. She’s been having people work for her while we were away."
+    cl "Come to find out that this shit has been up for at least a week. She's been having people work for her while we were away."
 
     scene v14s16_2
     with dissolve
@@ -120,7 +120,7 @@ label v14s16:
 
     cl "If you'd be willing to help me win, I'd be so grateful..."
 
-    cl "I’d do anything to thank you."
+    cl "I'd do anything to thank you."
 
     if chloers or chloegf:
         scene v14s16_2c # FPP. Same as v14s16_2a, Chloe winking, slight smile, mouth open.
@@ -161,7 +161,7 @@ label v14s16:
 
             u "Honestly, I don't think I could ever see anyone filling that role other than you."
 
-            u "Not only that, but you know I'm always gonna be there for you, supporting you in whatever you may need. Of course I’ll help you win."
+            u "Not only that, but you know I'm always gonna be there for you, supporting you in whatever you may need. Of course I'll help you win."
 
             scene v14s16_6 # TPP. Chloe with her arms wrapped around MC hugging him tight, MC slight smile, mouth closed, Chloe excited smile, mouth open.
             with dissolve
@@ -176,7 +176,7 @@ label v14s16:
             scene v14s16_2g # FPP. Same as v14s16_2f, Chloe exited smile, mouth closed.
             with dissolve
 
-            u "You’re welcome, Chloe. *Chuckles*"
+            u "You're welcome, Chloe. *Chuckles*"
 
             scene v14s16_2f
             with dissolve
@@ -224,7 +224,7 @@ label v14s16:
             scene v14s16_2
             with dissolve
 
-            u "I'm sorry, Chloe. I'm just really busy now that we’re back on campus and things with the-."
+            u "I'm sorry, Chloe. I'm just really busy now that we're back on campus and things with the-."
 
             if chloegf:
                 scene v14s16_2j # FPP. Same as v14s16_2a, Chloe angry expression, mouth open.
@@ -256,7 +256,7 @@ label v14s16:
 
                 scene v14s16_2h
 
-                u "*Sighs* (This is gonna cause some serious issues for us. Fuck... Kinda surprised she didn't break up with me right there... Chloe’s way or no way.)"
+                u "*Sighs* (This is gonna cause some serious issues for us. Fuck... Kinda surprised she didn't break up with me right there... Chloe's way or no way.)"
 
                 scene v14s16_2i
                 with dissolve
@@ -279,9 +279,9 @@ label v14s16:
 
                 cl "Don't be."
 
-                cl "With or without your help I’m winning this thing."
+                cl "With or without your help I'm winning this thing."
 
-                cl "I wanted your help because I appreciate your opinion, but also because I thought it’d be nice to spend time together."
+                cl "I wanted your help because I appreciate your opinion, but also because I thought it'd be nice to spend time together."
 
                 cl "But since you don't have time, I'll leave you be. See you later."
 
@@ -293,7 +293,7 @@ label v14s16:
                 scene v14s16_2h
                 with dissolve
 
-                u "*Sighs* (I knew she wouldn’t take that well, Chloe’s way or no way.)"
+                u "*Sighs* (I knew she wouldn't take that well, Chloe's way or no way.)"
 
                 scene v14s16_2i
                 with dissolve

@@ -43,7 +43,7 @@ label v14s03e:
         scene v14s03e_3b # FPP. Same as v14s03e_3, mouth open
         with dissolve
 
-        ry "Damn right it's good! She said I was the best virgin she’s ever had."
+        ry "Damn right it's good! She said I was the best virgin she's ever had."
 
         scene v14s03e_3
         with dissolve
@@ -79,7 +79,7 @@ label v14s03e:
         scene v14s03e_6
         with dissolve
 
-        u "Imre’s not back yet?"
+        u "Imre's not back yet?"
 
         scene v14s03e_6a
         with dissolve
@@ -104,7 +104,7 @@ label v14s03e:
         scene v14s03e_6
         with dissolve
 
-        u "I’m glad you did."
+        u "I'm glad you did."
 
         scene v14s03e_6b
         with dissolve
@@ -143,12 +143,12 @@ label v14s03e:
         scene v14s03e_6e
         with dissolve
 
-        u "Haha, thanks. I promise next time I’ll-"
+        u "Haha, thanks. I promise next time I'll-"
 
         scene v14s03e_6f
         with dissolve
 
-        ry "You’ll tell me if the chick I’m about to bang is carrying a disease?"
+        ry "You'll tell me if the chick I'm about to bang is carrying a disease?"
 
         scene v14s03e_6
         with dissolve
@@ -213,7 +213,7 @@ label v14s03e:
     scene v14s03e_9a # FPP. Same as v14s03e_9, different posture
     with dissolve
 
-    ry "There's a girl named Ashley here... She’s in booth two, and in my opinion, she's the hottest girl here."
+    ry "There's a girl named Ashley here... She's in booth two, and in my opinion, she's the hottest girl here."
 
     scene v14s03e_9
     with dissolve
@@ -238,7 +238,7 @@ label v14s03e:
     scene v14s03e_8f # FPP. Same as v14s03e_8d, different posture
     with dissolve
 
-    imre "Guess you’re not so bad after all. *Chuckles*"
+    imre "Guess you're not so bad after all. *Chuckles*"
 
     scene v14s03e_9
     with dissolve
@@ -307,7 +307,7 @@ label v14s03e:
             scene v14s03e_12
             with dissolve
 
-            u "That's cold as hell Ryan, but.. He’s on his own with this one."
+            u "That's cold as hell Ryan, but.. He's on his own with this one."
 
         "Tell Imre":
             scene v14s03e_12 # FPP. Same as v14s03e_12, serious expression
@@ -389,7 +389,7 @@ label v14s03e:
     scene v14s03e_20a
     with dissolve
 
-    u "*Sighs* That's not what I’m talking about, and you know it."
+    u "*Sighs* That's not what I'm talking about, and you know it."
 
     scene v14s03e_20b # FPP. Same as v14s03e_20, serious expression 
     with dissolve

@@ -67,7 +67,7 @@ label v14s02:
     scene v13s02_2d # FPP. same as v13s02_2b imre slightly serious
     with dissolve
 
-    imre "We've been hanging out a bit, but we're not friends. I’ve decided I'd at least give the “acquaintance” thing a chance."
+    imre "We've been hanging out a bit, but we're not friends. I've decided I'd at least give the “acquaintance” thing a chance."
 
     scene v13s02_2a
     with dissolve
@@ -77,7 +77,7 @@ label v14s02:
     scene v13s02_2e # FPP. same as v13s02_2d imre rolls his eyes
     with dissolve
 
-    imre "Yeah, don’t get too excited. We'll see how long it lasts."
+    imre "Yeah, don't get too excited. We'll see how long it lasts."
 
     scene v13s02_2a
     with dissolve
@@ -102,7 +102,7 @@ label v14s02:
     scene v13s02_2g
     with dissolve
 
-    ry "I don’t know... Did Imre fill you in?"
+    ry "I don't know... Did Imre fill you in?"
 
     scene v13s02_2i # FPP. same as v13s02_2h ryan and imre slight smiles
     with dissolve

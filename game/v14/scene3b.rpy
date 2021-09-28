@@ -137,7 +137,7 @@ label v14s03b:
     scene v14s03b_5d # FPP Same angle as 5, Ryan looking at MC, looking angry, mouth open
     with dissolve
 
-    ry "*Whispers* Don’t laugh!"
+    ry "*Whispers* Don't laugh!"
 
     scene v14s03b_5e # FPP Same as 5d, Ryan's mouth closed
     with dissolve
@@ -168,7 +168,7 @@ label v14s03b:
     scene v14s03b_5b
     with dissolve
 
-    ry "Look, I guess I’m just... I'm a little nervous."
+    ry "Look, I guess I'm just... I'm a little nervous."
 
     scene v14s03b_5
     with dissolve
@@ -183,7 +183,7 @@ label v14s03b:
     scene v14s03b_5a
     with dissolve
 
-    ry "What if I’m sleeping with a girl and she doesn’t like what I'm doing?"
+    ry "What if I'm sleeping with a girl and she doesn't like what I'm doing?"
 
     scene v14s03b_5b
     with dissolve
@@ -208,7 +208,7 @@ label v14s03b:
     scene v14s03b_5f # FPP Same angle as 5, Ryan looking at MC, smiling with mouth open
     with dissolve
 
-    ry "I'm wondering. Should I get some experience while we’re here?"
+    ry "I'm wondering. Should I get some experience while we're here?"
 
     scene v14s03b_5g # FPP Same as 5f, Ryan's mouth closed
     with dissolve
@@ -226,7 +226,7 @@ label v14s03b:
     menu:
         "Go for it":
 
-            u "Well, no. Honestly, if it's just for practice then there's probably no better place than this. Just make sure that’s really what you want to do."
+            u "Well, no. Honestly, if it's just for practice then there's probably no better place than this. Just make sure that's really what you want to do."
 
             scene v14s03b_5c
             with dissolve

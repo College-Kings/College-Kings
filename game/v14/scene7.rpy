@@ -69,7 +69,7 @@ label v14s07:
         scene v14s07_2b
         with dissolve
 
-        u "(Okay Rose, let’s try to be a little less obvious here.) *Chuckles*"
+        u "(Okay Rose, let's try to be a little less obvious here.) *Chuckles*"
 
         scene v14s07_2c
         with dissolve

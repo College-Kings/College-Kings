@@ -54,7 +54,7 @@ label v14s05a:
         scene v14s05a_7
         with dissolve
 
-        ri "Aubrey and I just felt like you could’ve used a little, pick me up."
+        ri "Aubrey and I just felt like you could've used a little, pick me up."
 
         scene v14s05a_7a
         with dissolve
@@ -223,7 +223,7 @@ label v14s05a:
         scene v14s05a_13a
         with dissolve
 
-        ri "I've been trying to avoid this question, I’m so biased. Who would you pick?"
+        ri "I've been trying to avoid this question, I'm so biased. Who would you pick?"
 
         menu: 
             "Help Chloe":

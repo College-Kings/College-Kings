@@ -147,7 +147,7 @@ label v14s03a:  # -MC walks overs and stands in front of the night gambler-
 
             ngam "First game no bet, just-"
 
-            # -Imre removes the night gambler's hand from MC’s arm with an aggressive expression-
+            # -Imre removes the night gambler's hand from MC's arm with an aggressive expression-
 
             scene v14s03a_6 # FPP. Imre, mad/angry, removes Gambler's hand from MC, mouth open.
             with dissolve

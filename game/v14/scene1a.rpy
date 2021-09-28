@@ -27,7 +27,7 @@ label v14s01a:
     scene v14s01a_3 # TPP. Show MC sitting up on his bed, slightly annoyed, mouth closed, hands on head
     with dissolve
 
-    u "(A fucking dream?! Ugh! I need to get up and do something. I can't sleep right now, I don’t care what time it is.)"
+    u "(A fucking dream?! Ugh! I need to get up and do something. I can't sleep right now, I don't care what time it is.)"
 
     scene v14s01a_4 # TPP. Show MC leaving the hotel room door, slightly annoyed, mouth closed
     with dissolve

@@ -34,7 +34,7 @@ label v14s12:
     scene v14s12_3a # TPP. Same as v14s12_3, Julia slight smile, mouth closed.
     with dissolve
 
-    u "Sure was, I’m headed to my room now."
+    u "Sure was, I'm headed to my room now."
 
     scene v14s12_3
     with dissolve
@@ -54,7 +54,7 @@ label v14s12:
     scene v14s12_3a
     with dissolve
 
-    u "Haha. So what’s up?"
+    u "Haha. So what's up?"
 
     scene v14s12_3
     with dissolve
@@ -151,7 +151,7 @@ label v14s12:
     scene v14s12_3b
     with dissolve
 
-    ju "I will honey. Be safe, and please don’t hesitate to call if you need me... I love you."
+    ju "I will honey. Be safe, and please don't hesitate to call if you need me... I love you."
 
     scene v14s12_3c
     with dissolve
