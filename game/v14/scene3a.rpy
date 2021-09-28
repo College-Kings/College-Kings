@@ -357,7 +357,7 @@ label v14s03a: # -MC walks overs and stands in front of the night gambler-
             scene v14s03a_2i # FPP. Same as v14s03a_2h, but with mouth closed.
             with dissolve
 
-            u "As a matter of fact, I slept all damn day “brother man”."
+            u "As a matter of fact, I slept all damn day \"brother man\"."
 
             u "Now tell me, did I or didn't I just see the ball roll out of your sleeve?"
 

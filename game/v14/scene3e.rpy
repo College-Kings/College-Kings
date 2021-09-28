@@ -384,7 +384,7 @@ label v14s03e:
     scene v14s03e_20
     with dissolve
 
-    ry "How is weaving every punch he throws, “not cool”?"
+    ry "How is weaving every punch he throws, \"not cool\"?"
 
     scene v14s03e_20a
     with dissolve

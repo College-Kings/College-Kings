@@ -283,7 +283,7 @@ label v14s03c:
             scene v14s03c_4f
             with dissolve
 
-            u "I can't pass up on an opportunity to be with you in a “private booth”. *Chuckles*"
+            u "I can't pass up on an opportunity to be with you in a \"private booth\". *Chuckles*"
 
             scene v14s03c_4j # FPP. Same as v14s03c_4e, Satin slight smile, winking, mouth closed
             with dissolve

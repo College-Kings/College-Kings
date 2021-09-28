@@ -67,7 +67,7 @@ label v14s02:
     scene v13s02_2d # FPP. same as v13s02_2b imre slightly serious
     with dissolve
 
-    imre "We've been hanging out a bit, but we're not friends. I've decided I'd at least give the “acquaintance” thing a chance."
+    imre "We've been hanging out a bit, but we're not friends. I've decided I'd at least give the \"acquaintance\" thing a chance."
 
     scene v13s02_2a
     with dissolve

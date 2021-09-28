@@ -27,7 +27,7 @@ label v14s16:
     scene v14s16_2
     with dissolve
 
-    cl "“Serious” isn't even close."
+    cl "\"Serious\" isn't even close."
 
     scene v14s16_2
     with dissolve
