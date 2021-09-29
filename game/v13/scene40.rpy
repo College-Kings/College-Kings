@@ -84,17 +84,16 @@ label v13s40:
     stop music fadeout 3
     play music "music/v13/Track Scene 40_2.mp3" fadein 2
 
-    jump v13s40_resume
+    $ v13s40fromgame = True #to distinguish whether seeing this scene coming from gallery or from game
 
     label v13s40_sg:
-        $ mc.money += 1000
-        $ mc.add_item(honey)
-        $ mc.add_item(butt_plug)
-        $ mc.add_item(spankers)
-        $ mc.add_item(feather)
-        $ mc.money -= 1000
-
-    label v13s40_resume:
+        if not v13s40fromgame:
+            $ mc.money += 1000
+            $ mc.add_item(honey)
+            $ mc.add_item(butt_plug)
+            $ mc.add_item(spankers)
+            $ mc.add_item(feather)
+            $ mc.money -= 1000
 
     scene v13s40_8 # FPP. Chloe wrapping her arms around MC, looking at him, Chloe sexy look, mouth open
     with dissolve

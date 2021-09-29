@@ -621,6 +621,8 @@ label after_load:
         except NameError: v13s40_shoulderpoint = False
         try: laurenrs_v11aubrey
         except NameError: laurenrs_v11aubrey = False
+        try: v13s40fromgame
+        except NameError: v13s40fromgame = False
 
 
     show no_hard_feelings at achievementShow

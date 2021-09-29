@@ -584,3 +584,4 @@ default v13s40_chestpoint = False
 default v13s40_backpoint = False
 default v13s40_shoulderpoint = False
 default laurenrs_v11aubrey = True
+default v13s40fromgame = False
