@@ -16500,7 +16500,7 @@ label fr4lockerroomchloe:
                     scene sfr4cl52e # chloe gone
                     with fade
 
-                    if hcGirl == "alone":
+                    if hcGirl == "alone" or hcGirl == "na":
                         u "(I guess I'll watch it with someone.)"
 
                         scene sfr4stage4#Chloe runs up on stage
