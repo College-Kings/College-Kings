@@ -1664,7 +1664,7 @@ label apologylauren:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
 
@@ -1852,7 +1852,7 @@ label thisbelauren:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
 
@@ -2655,7 +2655,7 @@ label beachlauren:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
 
@@ -6571,7 +6571,7 @@ label hc_asking_amber:
     with fade
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
     scene s919 # Camera - FPP. Amber opens the door and talking with a confused look
@@ -7160,7 +7160,7 @@ label hc_asking_riley:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     scene s958a #mc gets on one knee, holds the glass slipper out in front of him
     with dissolve
@@ -7326,7 +7326,8 @@ label cameron_thurs_tasks:
     scene scc1a # TPP. As above but MC turns his head to look at door.
     with dissolve
 
-    "*Knock knock knock*"
+    pause 1.5
+    
     play sound "sounds/dooropen.mp3"
     scene scc2 # FPP. Show MC door, now open, Cameron stood in threshold, neutral expression.
     with dissolve
@@ -9294,7 +9295,7 @@ label signs_with_autumn:
     with fade
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
 
@@ -9774,7 +9775,8 @@ label amberhocodate:
     scene sfr4am2 #MC arrives at Amber's dorm step. He knocks
     with fade
     play sound "sounds/knock.mp3"
-    "*Knock knock knock*"
+    
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
     scene sfr4am3 #CLOSE UP Amber opens the door, excited mouth open
@@ -10158,7 +10160,7 @@ label chloehocodate:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
     scene sfr4cl3 # close up nora opening the door indifferent in her dress
@@ -10709,7 +10711,7 @@ label emilyhocodate:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
     scene sfr4em3 # close up emily opening the door in her dress smiling
@@ -11148,7 +11150,7 @@ label laurenhocodate:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
     scene sfr4la1 # first personclose up lauren opens the door shy smile
@@ -11522,7 +11524,7 @@ label penelopehocodate:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     scene sfr4pe1a # you no longer knocking
     with dissolve
@@ -11578,7 +11580,7 @@ label penelopehocodate:
 
             play sound "sounds/knock.mp3"
 
-            "*Knock knock knock*"
+            pause 1.5
 
             scene sfr4pe1a
             with dissolve
@@ -12010,7 +12012,7 @@ label rileyhocodate:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
 
