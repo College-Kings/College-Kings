@@ -314,6 +314,8 @@ label after_load:
         cameron.name = "Cameron"
         josh.name = "Josh"
 
+        try: v7_seencrowning
+        except NameError: v7_seencrowning = False
         try: v12_told_chloe
         except NameError: v12_told_chloe = False
         try: v12_kiss_riley

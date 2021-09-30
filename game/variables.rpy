@@ -274,6 +274,7 @@ default consoledSam = False
 default emilyText = False
 default laurenpt = 0
 default nobeach = False
+default v7_seencrowning = False
 
 # 8.0
 default v8AutProtest = False
