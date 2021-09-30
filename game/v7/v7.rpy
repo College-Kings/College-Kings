@@ -13249,10 +13249,10 @@ label fr4laurendate:
         "*Crowd cheers and applauds*"
 
         if not chloesad:
-            scene sfr4stage4#Chloe runs up on stage
-            with dissolve
 
             label fr4laurendatechloe:
+                scene sfr4stage4#Chloe runs up on stage
+                with dissolve
                 "*Crowd continues to cheer*"
 
                 cl "Thanks guys!"
@@ -13516,10 +13516,10 @@ label fr4penelopedate:
 
             pe "Maybe in a million lifetimes."
 
-            scene sfr4stage4#Chloe runs up on stage
-            with dissolve
-
             label fr4penelopedatechloe:
+                scene sfr4stage4
+                with dissolve
+
                 "*Crowd continues to cheer*"
 
                 cl "Thanks guys!"
@@ -13966,10 +13966,9 @@ label fr4rileydate:
 
     if not chloesad:
 
-        scene sfr4stage4#Chloe runs up on stage
-        with dissolve
-
         label fr4rileydatechloe:
+            scene sfr4stage4#Chloe runs up on stage
+            with dissolve
 
             "*Crowd continues to cheer*"
 
@@ -14696,43 +14695,43 @@ label fr4riley2:
     "*Crowd cheers and applauds*"
 
     if not chloesad:
-        scene sfr4stage4#Chloe runs up on stage
-        with dissolve
-
         label fr4alonechloe:
 
-            "*Crowd continues to cheer*"
+            if not v7_seencrowning:
+                scene sfr4stage4#Chloe runs up on stage
+                with dissolve
+                "*Crowd continues to cheer*"
 
-            cl "Thanks guys!"
+                cl "Thanks guys!"
 
-            scene sfr4stage5 #Ms. Rose puts a tiara on her.
-            with dissolve
+                scene sfr4stage5 #Ms. Rose puts a tiara on her.
+                with dissolve
 
-            ro "Congrats Chloe!"
+                ro "Congrats Chloe!"
 
-            scene sfr4stage6 # ms rose turns to the crowd
-            with dissolve
+                scene sfr4stage6 # ms rose turns to the crowd
+                with dissolve
 
-            ro "Let's give it up for Chris and Chloe!!"
+                ro "Let's give it up for Chris and Chloe!!"
 
-            scene sfr4stage7 # chris and chloe hand in hand bow
-            with dissolve
-            "*Crowd cheers and applauds*"
+                scene sfr4stage7 # chris and chloe hand in hand bow
+                with dissolve
+                "*Crowd cheers and applauds*"
 
-            scene sfr4stage6
-            with dissolve
+                scene sfr4stage6
+                with dissolve
 
-            ro "Now it is a tradition that the king and queen dance with each other."
+                ro "Now it is a tradition that the king and queen dance with each other."
 
-            scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
-            with dissolve
+                scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
+                with dissolve
 
-            pause 0.5
+                pause 0.5
 
-            scene sfr4stage9 # showing Chloe and Chris slow dancing together
-            with dissolve
+                scene sfr4stage9 # showing Chloe and Chris slow dancing together
+                with dissolve
 
-            pause 0.5
+                pause 0.5
 
     else:
         pause 0.5
@@ -16115,10 +16114,14 @@ label fr4chloe2:
                 with fade
 
                 if hcGirl == "alone":
-                    u "(I guess I'll watch it with someone.)"
+                    if not v7_seencrowning:
+                        u "(I guess I'll watch it with someone.)"
+                        
+                        scene sfr4stage4 #Chloe runs up on stage
+                        with fade
 
-                    scene sfr4stage4 #Chloe runs up on stage
-                    with fade
+                    else:
+                        u "(I guess I'll go back.)"
 
                     jump fr4alonechloe
 
@@ -16461,19 +16464,26 @@ label fr4lockerroomchloe:
 
             cl "You're cute."
 
-            scene sfr4cl52d # chloe lookig at the wall where prom is on the other side
-            with dissolve
+            if not v7_seencrowning:
+                scene sfr4cl52d # chloe lookig at the wall where prom is on the other side
+                with dissolve
 
-            ro "*Muffled* And your homecoming queen is..."
+                ro "*Muffled* And your homecoming queen is..."
 
-            ro "*Muffled* Chloe Moralez!"
+                ro "*Muffled* Chloe Moralez!"
 
-            u "See? Everyone voted for you. The people love you. So forget about all those guys."
+                u "See? Everyone voted for you. The people love you. So forget about all those guys."
 
-            scene sfr4cl52b
-            with dissolve
+                scene sfr4cl52b
+                with dissolve
 
-            cl "I don't know if I can go on stage right now."
+                cl "I don't know if I can go on stage right now."
+                
+            else:
+                scene sfr4cl52b
+                with dissolve
+                
+                cl "I don't know if I can go back right now."
 
             scene sfr4cl52c
             with dissolve
@@ -16499,9 +16509,8 @@ label fr4lockerroomchloe:
                     scene sfr4cl52e # chloe gone
                     with fade
 
-                    if hcGirl == "alone" or hcGirl == "na":
+                    if hcGirl == "alone":
                         u "(I guess I'll watch it with someone.)"
-
                         scene sfr4stage4#Chloe runs up on stage
                         with fade
 
@@ -16586,42 +16595,43 @@ label fr4lockerroomchloe:
 
                         u "You sure?"
 
+                        scene sfr4cl52b
+                        with dissolve
+
+                        cl "Yeah."
+
                         scene sfr4cl52e # chloe gone
                         with fade
 
                         if hcGirl == "alone":
-                            u "(I guess I'll watch it with someone.)"
-
-                            scene sfr4stage4#Chloe runs up on stage
-                            with fade
+                            u "(I guess I'll go back.)"
 
                             jump fr4alonechloe
 
                         elif hcGirl == "riley":
                             u "(I should probably get back to Riley.)"
 
-                            scene sfr4stage4
-                            with fade
-
                             jump fr4rileydatechloe
 
                         elif hcGirl == "lauren":
                             u "(I should probably get back to Lauren.)"
-
-                            scene sfr4stage4
-                            with fade
 
                             jump fr4laurendatechloe
 
                         elif hcGirl == "penelope":
                             u "(I should probably get back to Penelope.)"
 
-                            scene sfr4stage4
-                            with fade
-
                             jump fr4penelopedatechloe
 
+                        elif hcGirl == "emily":
+                            u "(I should probably get back to Emily.)"
+
+                            scene sfr4em20
+                            with fade
+                            jump fr4emilydate
+
                         else:
+                            pause 0.75 
                             jump labelfr4hallwaycorner
 
         else:
