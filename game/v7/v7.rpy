@@ -14629,7 +14629,6 @@ label fr4aaron2:
 
 
 label fr4riley2:
-    $ v7_seencrowning = True
 
     scene sfr4ri50 # showing riley getting a drink
 
@@ -14769,7 +14768,7 @@ label fr4riley2:
     with dissolve
 
     ri "Well we've been here for a few hours now and it's getting kinda boring."
-
+    $ v7_seencrowning = True
 
     if rileyrs and hcGirl == "alone":
 
