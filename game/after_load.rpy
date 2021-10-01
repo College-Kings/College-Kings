@@ -199,6 +199,9 @@ label after_load:
             try: contact.profile_picture
             except AttributeError: contact.profile_picture = "images/phone/messages/profile_pictures/chloeprofilepic.webp"
 
+            try: contact.profilePicture = "images/phone/messages/profile_pictures/chloeprofilepic.webp"
+            except: pass
+
             # Messages
             try:
                 for message in contact.messages:
