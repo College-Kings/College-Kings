@@ -297,4 +297,3 @@ label v10_aft_walk_home:
    
     stop music fadeout 3
     jump v10_lauren_room
-    
