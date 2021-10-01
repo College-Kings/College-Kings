@@ -56,7 +56,7 @@ label v12s33:
 
     au "Thanks Lindsey."
 
-    scene v12s33_4d # same as 4, lindsey looking at aubrey, smiling ,mouth open
+    scene v12s33_4d # same as 4, lindsey looking at aubrey, smiling,mouth open
     with dissolve
 
     li "Of course."
@@ -84,7 +84,7 @@ label v12s33:
 
     au "There's a sauna, right?"
 
-    scene v12s33_5b # same as 5, mr lee looking at aubrey, neutral expression ,mouth open
+    scene v12s33_5b # same as 5, mr lee looking at aubrey, neutral expression,mouth open
     with dissolve
 
     lee "Yes, a sauna and a one hour massage."
@@ -224,11 +224,11 @@ label v12s33:
     u "Haha, alright."
 
 # -MC hops on a table-
-# -Chris (with a bandaged hand) , Imre, Ryan and Mr. Lee are laying on a table with their faces down-
+# -Chris (with a bandaged hand), Imre, Ryan and Mr. Lee are laying on a table with their faces down-
 # -Josh and Cameron if present are sitting alone on a sofa-
 # -There's a sneak off button throughout the entire scene-
 
-    scene v12s33_16 # shows mc on a massage table, with his face down , same angle as 13
+    scene v12s33_16 # shows mc on a massage table, with his face down, same angle as 13
     with fade
 
     u "(I could always sneak off and see what the girls are doing if this gets too boring...)"
@@ -602,6 +602,9 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     stop music fadeout 3
     play music "music/v12/Scene 33/Track Scene 33_4.mp3" fadein 2
 
+    if v12s33_door1 and v12s33_door2 and v12s33_door3:
+        jump v12s33_sauna
+
     call screen v12s33_three_doors
 
 label v12s33_door1:
@@ -687,7 +690,7 @@ label v12s33_door1:
 
     au "Haha, we bet which boy would sneak off and try to come sit with us girls. I said you and Chloe said Imre."
 
-    scene v12s33_29c # same as 29b , mouth closed
+    scene v12s33_29c # same as 29b, mouth closed
     with dissolve
 
     u "Haha! Well, trust me. He wanted to, but Mr. Lee has him on lock and key."
@@ -753,7 +756,7 @@ label v12s33_door1:
         scene v12s33_29c
         with dissolve
 
-    u "What have you guys been up to in here? So far it sounds like you were talking about us guys."
+    u "What have you been up to in here? So far it sounds like you were talking about us guys."
 
     scene v12s33_30b
     with dissolve
@@ -764,12 +767,11 @@ label v12s33_door1:
     with dissolve
 
     menu:
-
         "Not at all":
             $ addPoint ("bro")
             u "Not at all, you can talk about me all you want. I like knowing I'm on your mind... *Chuckles*"
 
-            scene v12s33_30f # same as 30b , chloe flirty, mouth open
+            scene v12s33_30f # same as 30b, chloe flirty, mouth open
             with dissolve
 
             cl "Ha... Is that so?"
@@ -799,10 +801,8 @@ label v12s33_door1:
 
             u "Haha, alright... Noted."
 
-
         "Yes, haha":
             $ addPoint ("bf")
-
             u "Yes, haha. Who knows what kind of crazy theories you girls may be coming up with?"
 
             scene v12s33_30b
@@ -885,8 +885,7 @@ label v12s33_door1:
     play music "music/v12/Scene 33/Track Scene 33_5.mp3" fadein 2
 
     if v11_pen_goes_europe:
-
-        scene v12s33_33 # FPP ,close up Penelope, smiling, mouth open, looking at mc
+        scene v12s33_33 # FPP,close up Penelope, smiling, mouth open, looking at mc
         with dissolve
   
         pe "Hey, [name]."
@@ -916,7 +915,7 @@ label v12s33_door1:
 
     am "Did you know most of the Chicks back at campus have already promised to vote for her?"
 
-    scene v12s33_35a #FPP close up , lindsey, looking at mc , genuine smile, mouth closed
+    scene v12s33_35a #FPP close up, lindsey, looking at mc, genuine smile, mouth closed
     with dissolve
 
     u "Wow, Lindsey... Really?"
@@ -1000,7 +999,6 @@ label v12s33_door1:
     am "Later."
 
     if v11_pen_goes_europe:
-
         scene v12s33_33
         with dissolve
 
@@ -1104,7 +1102,7 @@ label v12s33_three_doors_back:
     scene v12s33_38
     with dissolve
 
-    lee "You know... Blunty? As much as you little rats annoy me, you're still like the sons I never had. It makes me happy to see that you're having a good time."
+    lee "You know... Bluntly? As much as you little rats annoy me, you're still like the sons I never had. It makes me happy to see that you're having a good time."
 
     scene v12s33_40
     with dissolve
@@ -1129,7 +1127,69 @@ label v12s33_three_doors_back:
     scene v12s33_38
     with dissolve
 
-    lee "That'll count as one. *Chuckles* Let's go back to silently relaxing, boys."
+    lee "That'll count as one..."
+
+    if joinwolves:
+        scene v12s33_39
+        with dissolve
+
+        pause 0.75
+
+        scene v12s33_40b
+        with dissolve
+
+        u "Oh yeah, Ryan! I forgot to ask why you decided to dye your hair..."
+
+        scene v12s33_36b
+        with dissolve
+
+        imre "He's trying to look as good as me, [name]. Tall, dark and handsome."
+
+        scene v12s33_39
+        with dissolve
+
+        ry "Uh, hell no... I lost a bet. \"Hashtag roasted ape\". Ha..."
+
+        scene v12s33_36b
+        with dissolve
+
+        imre "Wow, that was sad."
+
+        scene v12s33_40
+        with dissolve
+
+        u "*Laughs*"
+
+    else:
+        scene v12s33_36b
+        with dissolve
+
+        pause 0.75
+
+        scene v12s33_39
+        with dissolve
+
+        ry "Nice cupcake by the way, Imre. *Laughs* Is that the flavor of your nipples?"
+
+        scene v12s33_36
+        with dissolve
+
+        imre "Shut the hell up... It was a \"pick at random\" tattoo parlor, alright?"
+
+        scene v12s33_40b
+        with dissolve
+        
+        u "Haha, alright... I can't say it doesn't suit you, though."
+
+        scene v12s33_36
+        with dissolve
+
+        imre "Thanks... I think."
+    
+    scene v12s33_38
+    with dissolve
+
+    lee "*Chuckles* Alright, enough bantering. Let’s go back to silently relaxing, boys."
 
     scene v12s33_41 # close up show clock inside sauna at 16:15
     with dissolve
@@ -1279,7 +1339,6 @@ label v12s33_sneak_off2:
     u "*Whisper* Haha, alright."
 
     menu:
-
         "Crawl to the next table":
             $ addPoint ("tm")
             scene v12s33_46 #TPP MC crawls to the next table and sees Nora, mc mouth open smiling, whispering 
@@ -1330,7 +1389,7 @@ label v12s33_sneak_off2:
 
     pause 0.75
 
-    scene v12s33_50a # FPP Imre comes out of the Sauna, looking at mc, very sweaty, neutral face ,mouth closed
+    scene v12s33_50a # FPP Imre comes out of the Sauna, looking at mc, very sweaty, neutral face,mouth closed
     with dissolve
 
     u "What's going on?"
@@ -1346,9 +1405,7 @@ label v12s33_sneak_off2:
     u "Oh, okay."
 
     stop music fadeout 3
-    
     jump v12s33_after_sauna
 
 label v12s33_after_sauna:
-
     jump v12_amber_after_spa #scene 34

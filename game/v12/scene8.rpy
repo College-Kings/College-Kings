@@ -11,7 +11,7 @@ label v12_murder_mystery_reveal:
     scene v12mmr1 # FPP. Mr. Lee and Ms. Rose standing in front of the students, addressing them, only Mr. Lee in shot. Mr. Lee smiling, mouth open, looking at MC
     with dissolve
 
-    if len(v12s7_killList) == v12s7_victims:
+    if (joinwolves and len(v12s7_killList) == 15) or len(v12s7_killList) == 16:
         $ grant_achievement("mass_casualties")
 
     lee "Wow, that turned out a lot better than expected. I hope you all enjoyed yourselves. Was anyone surprised to learn [name] was my chosen murderer?"
@@ -230,9 +230,6 @@ label v12_murder_mystery_reveal:
 
             u "Well don't worry I got you."
 
-            #scene v12mmr9a # FPP. Same as v12mmr9, MC rushing back to where he was standing in v12mmr1
-            #with dissolve
-
             pause 0.75
 
     scene v12mmr7
@@ -285,10 +282,13 @@ label v12_murder_mystery_reveal:
 
     pause 0.75
 
-    scene v12mmr14 # TPP. Show MC halfway through sitting down on a seat, mouth closed, bored
+    image ferry_arrival = Movie(play="images/v12/Scene 7/animations/Ferry B - To France.webm", loop=False)
+    
+    scene ferry_arrival
     with fade
+    play sound "images/v12/Scene 7/animations/Track Scene - Ferry Ride (5 sec).mp3"
 
-    pause 1.25
+    pause 5
 
     scene v12mmr15 # TPP. Show MC sitting down, sleeping, mouth closed
     with dissolve

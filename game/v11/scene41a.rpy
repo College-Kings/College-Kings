@@ -6,7 +6,7 @@
 label v11_riley_amber_smoking:
     scene v11ras1 # TPP. Show MC walking into the room, he's slightly confused, mouth closed
     with dissolve
-    play music "music/v11/Scene 41a/Track Scene 41a.mp3" fadein 2
+    play music "music/v11/Scene 9a/Track Scene 9a_1.mp3" fadein 2
     pause 0.75
 
     scene v11ras2 # FPP. MC standing near the door, he can see Riley and Amber lying down on Riley's bed, on their stomachs, with the blanket over them, only showing their head, both smiling, Riley mouth open, Amber mouth closed, the girls are looking at each other, Riley has the vape
@@ -139,7 +139,6 @@ label v11_riley_amber_smoking:
 
             menu:
                 "High School":
-
                     u "My first time smoking was in High School. Actually, it was Josh that made me try it. I had a really bad headache and he promised that it'd help if I smoked a bit."
 
                     scene v11ras5
@@ -203,7 +202,6 @@ label v11_riley_amber_smoking:
                     u "Yeah... That thought has definitely crossed my mind a few times since that night."
 
                 "Never smoked before":
-
                     u "I've actually never smoked before."
 
                     scene v11ras5

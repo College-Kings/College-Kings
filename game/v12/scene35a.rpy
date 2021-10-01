@@ -104,7 +104,6 @@ label v12_nora_room:
 
         "Time is key":
             $ v12_nora_points += 1
-
             scene v12nos1h
             with dissolve
 
@@ -265,6 +264,7 @@ label v12_nora_room:
 
             "Kiss her":
                 $ v12_nora_sex = True
+                $ norars = True
 
                 stop music fadeout 3
                 play music "music/v12/Scene 35a/Track Scene 35a_1.mp3" fadein 2

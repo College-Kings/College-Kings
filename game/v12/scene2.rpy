@@ -171,7 +171,7 @@ label v12_nora_checks_mc:
         scene v12ncm5f
         with dissolve
 
-        u "Oh, that's just 'cause of my superpower. It let's me know when a helpless girl is in need."
+        u "Oh, that's just 'cause of my superpower. It lets me know when a helpless girl is in need."
 
         scene v12ncm5i # FPP. Nora looking annoyed, mouth opened
         with dissolve

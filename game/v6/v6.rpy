@@ -9070,7 +9070,6 @@ label v6_fr3nora1:
 
     call screen v6_fr3roofroom
 
-
 label v6_fr3nora2:
     scene fr3roofroom
 

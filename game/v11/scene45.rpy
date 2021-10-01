@@ -5,7 +5,7 @@
 label v11_lobby_mrlee:
     scene v11lob1 # FPP. Show Mr Lee, slight smile mouth open, stood in hotel lobby
     with dissolve
-    play music "music/v11/Scene 45/Track Scene 45_1.mp3" fadein 2
+    play music "music/v11/Scene 9a/Track Scene 9a_1.mp3" fadein 2
     lee "Students, so far it has been an absolute pleasure traveling with you all."
 
     scene v11lob2 # FPP. Show Nora and chris stood together, slight annoyed faces
@@ -177,6 +177,7 @@ label v11_lobby_mrlee:
                 with dissolve
                 
                 la "Haha, I was wondering when you'd get over here."
+
             "Aubrey":
                 $ v11_sit_with_lauren = False
 

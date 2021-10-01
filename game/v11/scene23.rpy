@@ -8,7 +8,7 @@
 #screen 3: Penelope(Stood at the helm display)(to the right of screen 2)
 
 label v11s23_freeroamstart: # Start of freeroam
-    play music "music/v11/Scene 23/Track Scene 23.mp3" fadein 2
+    play music "music/v11/Scene 14/Track Scene 14.mp3" fadein 2
     $ freeRoam = True
 
     call screen v11s23_entrance
@@ -65,7 +65,6 @@ label v11s23_chris1:
 
     menu:
         "Mention Nora":
-
             scene v11frmch1d
             with dissolve
 
@@ -250,7 +249,6 @@ label v11s23_mrlee1:
 
     menu:
         "Laugh":
-
             scene v11frmlee1a
             with dissolve
 
@@ -262,7 +260,6 @@ label v11s23_mrlee1:
             lee "It wasn't so funny back then."
 
         "Feel bad":
-
             scene v11frmlee1b
             with dissolve
 
@@ -383,7 +380,6 @@ label v11s23_riley1:
 
     menu:
         "Seek revenge":
-
             $ addPoint("tm")
 
             scene v11frmri3a # FPP Same angle as v11frmri3, Riley smiling with mouth closed
@@ -402,14 +398,12 @@ label v11s23_riley1:
             u "Yeah, just a little bit of payback..."
 
             if not rileyrs:
-
                 scene v11frmri3b # FPP Same angle as v11frmri3, Riley raising her eyebrow and smiling, mouth open
                 with dissolve
 
                 ri "You don't want to start a war, [name]. I never lose."
 
             else: # If rileyrs
-
                 scene v11frmri3c # FPP Same angle as v11frmri3, Riley leaning in close to MC, Riley has a sexy expression, mouth open
                 with dissolve
 
@@ -431,7 +425,6 @@ label v11s23_riley1:
                 ri "Now, if you were trying to be a bit more friendly instead... Just know I never lose."
     
         "Laugh it off":
-
             scene v11frmri3a
             with dissolve
 
@@ -458,7 +451,6 @@ label v11s23_riley1:
             u "What's the reason then?"
 
             if not rileyrs:
-
                 scene v11frmri3b
                 with dissolve
 
@@ -485,7 +477,6 @@ label v11s23_riley1:
                 ri "Also, you don't want to start a war, [name]. I never lose."
             
             else: # if rileyrs
-
                 scene v11frmri3c
                 with dissolve
 
@@ -526,7 +517,6 @@ label v11s23_riley1:
 
     menu:
         "Snitch on Riley":
-
             scene v11frmri4
             with dissolve
 
@@ -563,7 +553,6 @@ label v11s23_riley1:
             ri "You just started a war, [name], I hope you're ready."
 
         "Don't snitch on Riley":
-
             scene v11frmri3a
             with dissolve
 
@@ -749,7 +738,6 @@ label v11s23_penelope1:
     if penelopers:
         menu:
             "Flirt":
-
                 $ addPoint("bf")
 
                 scene v11frmpe10
@@ -830,7 +818,6 @@ label v11s23_penelope1:
                 pe "Okay... you're a little funny."
 
             "Just being me":
-
                 scene v11frmpe10c
                 with dissolve
 
@@ -879,7 +866,6 @@ label v11s23_penelope1:
     else: # not penelopers
         menu:
             "Just being me":
-
                 scene v11frmpe10c
                 with dissolve
 
@@ -926,7 +912,6 @@ label v11s23_penelope1:
                 u "Nevermind... scratch that idea."
 
             "Make a joke":
-
                 scene v11frmpe10c
                 with dissolve
 
@@ -1116,10 +1101,9 @@ label v11s23_freeroamend:
 
     menu:
         "Agree":
-
             scene v11frm1b
             with dissolve
-
+    
             u "Yeah it's pretty boring, but maybe it'll get better."
 
             scene v11frm1a
@@ -1151,7 +1135,6 @@ label v11s23_freeroamend:
             jump v11_hotel_bar
 
         "Sneak out":
-
             $ addPoint("tm")
 
             scene v11frm1b

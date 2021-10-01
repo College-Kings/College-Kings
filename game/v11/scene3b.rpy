@@ -122,6 +122,7 @@ label v11_cafe_with_riley:
 
     menu:
         "Scare her":
+            $ addPoint("tm")
             scene v11s3bris9
             with dissolve
 
@@ -151,6 +152,7 @@ label v11_cafe_with_riley:
             u "I'm pretty sure Imre is scared of heights, but he has no problem with the plane."
 
         "Reassure her":
+            $ addPoint("bf")
             scene v11s3bris9c
             with dissolve
             u "*Chuckles* If you need someone to hold your hand for the whole flight I will, but you really have nothing to worry about."
@@ -279,6 +281,7 @@ label v11_cafe_with_riley:
             u "Haha, maybe not yet, I mean we just met this morning..."
 
         "Of course":
+            $ addPoint("bro")
             scene v11s3bris10c
             with dissolve
             

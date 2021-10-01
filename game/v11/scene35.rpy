@@ -4,7 +4,7 @@
 # Time: Night (Day when specified)
 
 label v11_riley_sex:
-    play music "music/v11/Scene 35/Track Scene 35_1.mp3" fadein 2
+    play music "music/V10/Scene 40/Track Scene 40_2.mp3" fadein 2
     if not rileyrs:
 
         scene v11ris1 # TPP. Show MC walking through the door to his hotel room, MC slight smile, mouth closed (Riley not in shot here)
@@ -473,7 +473,7 @@ label v11_riley_sex:
                 ri "Do something about it."
                 stop music fadeout 3
 
-                play music "music/v11/Scene 35/Track Scene 35_2.mp3" fadein 2
+                play music "music/V10/Scene 26/Track Scene 26_2.mp3" fadein 2
                 scene v11ris15 # TPP. MC walking over to Riley, he is removing his shirt (Camera behind MC), show Riley big smile, mouth closed, she's getting close to the edge of the bed (not the sides, the side oposite the pillows)
                 with dissolve
 
@@ -668,7 +668,7 @@ label v11_riley_sex:
                 scene v11ris26 # TPP. Show MC getting in bed, he's smiling, mouth closed
                 with dissolve
                 stop music fadeout 3
-                play music "music/v11/Scene 35/Track Scene 35_1.mp3" fadein 2
+                play music "music/V10/Scene 40/Track Scene 40_2.mp3" fadein 2
                 pause 0.75
 
                 scene v11ris26a # TPP. Same as v11ris26, MC is lying in his bed, looking at Riley, Riley is getting into bed, both smiling, mouths closed
@@ -769,7 +769,7 @@ label v11_riley_sex:
                 with vpunch
 
                 $ renpy.end_replay()
-                play music "music/v11/Scene 35/Track Scene 35_3.mp3" fadein 2
+                play music "music/V10/Scene 41a/Track Scene 41a_2.mp3" fadein 2
                 ri "[name], wake up! I think someone's fighting in the hall!"
 
                 scene v11ris6b

@@ -38,7 +38,7 @@ label v10_room_mon_night:
             if contact_Josh.replies:
                 call screen phone
             if contact_Josh.replies:
-                "(I should reply to Josh.)"
+                u "(I should reply to Josh.)"
                 jump v10s20_PhoneContinueW
 
         if v10_simplr_known:
@@ -95,7 +95,7 @@ label v10_room_mon_night:
             if contact_Josh.replies:
                 call screen phone
             if contact_Josh.replies:
-                "(I should reply to Josh.)"
+                u "(I should reply to Josh.)"
                 jump v10s20_PhoneContinue2
 
         if v10_simplr_known:

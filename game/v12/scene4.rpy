@@ -25,7 +25,6 @@ label v12_roomate_talk:
         menu:
             "Yes":
                 $ addPoint("bf")
-
                 scene v12rcr2
                 with dissolve
 
@@ -33,7 +32,6 @@ label v12_roomate_talk:
 
             "No":
                 $ addPoint("bro")
-
                 scene v12rcr2
                 with dissolve
                        
@@ -148,7 +146,6 @@ label v12_roomate_talk:
         menu:
             "He is":
                 $ addPoint("bro")
-
                 scene v12rcr5a
                 with dissolve
 
@@ -166,7 +163,6 @@ label v12_roomate_talk:
 
             "Nope":
                 $ addPoint("tm")
-
                 scene v12rcr5a
                 with dissolve
 

@@ -301,7 +301,6 @@ label v12_chase_robber:
         menu:
             "Kick him":
                 $ addPoint("tm")
-                
                 scene v12car16b # TPP Same angle as v12car16, show MC kicking robber
                 with dissolve
                 play sound "sounds/facepunch1.mp3"
@@ -311,7 +310,6 @@ label v12_chase_robber:
 
             "Walk off":
                 $ addPoint("bf")
-
                 u "(He's had enough.)"
 
         scene v12car25 # FPP Show Imre, in alley, Imre looks winded, mouth open

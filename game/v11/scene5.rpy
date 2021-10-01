@@ -24,7 +24,7 @@ label v11_nightclub_with_josh:
     scene v11swc31
     with dissolve
 
-    play music "music/v11/Scene 5/Track Scene 5_1.mp3" fadein 2
+    play music "music/v11/Scene 4/Track Scene 4_1.mp3" fadein 2
     play sound "sounds/vibrate.mp3"
 
     u "(Let's see who this is.)"
@@ -61,8 +61,8 @@ label v11s4_PhoneContinueJosh1:
         pause 0.75
 
         jump v11_thurs_night_room
-    else:
 
+    else:
         u "(This is gonna be a fun ass night.)"
 
     scene v11swc32 # TPP. Show MC walking down the side walk (further down the street)

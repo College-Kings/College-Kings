@@ -1,4 +1,4 @@
-# SCENE 16: The story of Valantine
+# SCENE 16: The story of Valentine
 # Locations: Church, Hotel Lobby, Sidewalk
 # Characters: MC (Outfit: 5), RILEY (Outfit: 2), MR. LEE (Outfit: 1), LINDSEY (Outfit: 1), IMRE (Outfit: 1), BISHOP (Outfit: 1), NORA (Outfit: 1), CHARLI (Outfit: 1), CHRIS (Outfit: 1), CHLOE (Outfit: 5)
 # Time: Afternoon
@@ -608,7 +608,6 @@ label v12_valentine:
     menu:
         "Leave her be":
             $ addPoint("bro")
-
             u "(Not the time, not in front of everyone.)"
 
             scene v12val29a # FPP. Same as v12val29, Lindsey looking at Nora, Lindsey smiling, excited, mouth open (screaming)
@@ -623,7 +622,6 @@ label v12_valentine:
 
         "Comfort her":
             pause 0.5
-        
             $ addPoint("bf")
             scene v12val31 # TPP. Show MC leaning in a whispering in Nora's ear, holding her hand, Nora slight smile, mouth closed, MC slight smile, mouth open
             with dissolve
@@ -784,21 +782,6 @@ label v12_valentine:
                 with dissolve
 
                 cl "*Whisper* Just making sure he knows that I'm the only girl he should be talking to like that. *Chuckles*"
-
-#                scene v12val29b
-#                with dissolve
-#
-#                li "*Whisper* Are you guys dating or something?"
-#
-#                scene v12val32
-#                with dissolve
-#
-#                cl "*Whisper* Yes! He officially asked me out in London. It was so romantic..."
-#
-#                scene v12val29b
-#                with dissolve
-#
-#                li "*Whisper* Aww, that's so cute! Tell me everything..."
 
             scene v12val27
             with dissolve
