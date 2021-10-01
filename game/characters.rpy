@@ -138,3 +138,6 @@ define character.kourt = Character("Kourtney", who_color="#ff8afb", who_outlines
 define character.luuk = Character("Luuk", who_color="#ff1694", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.polly = Character("Polly", who_color="#8b0000", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.random_guy = Character("Bartender", who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+
+# 14.0
+define character.ngam = Character("Night Gambler")
