@@ -12,7 +12,7 @@ screen v11s23_entrance():
             if not v11s23_riley1:
                 hotspot (363, 403, 143, 367) action Jump("v11s23_riley1")# speak to riley
             else:
-                hotspot (363, 403, 143, 367) action Call("freeRoamSpokenToo", backgroundImg="v11s23_entrance", returnScreen="v11s23_entrance")
+                hotspot (363, 403, 143, 367) action Call("freeRoamSpokenToo", backgroundImg="v11frmri1", returnScreen="v11s23_entrance")
                 
             hotspot (1593, 531, 231, 466) action Show("endFreeRoamConfirm", continueLabel="v11s23_freeroamend") # speak to Nora
 
@@ -29,7 +29,7 @@ screen v11s23_entrance():
             if not v11s23_riley1:
                 hotspot (363, 403, 143, 367) action Jump("v11s23_riley1")# speak to riley
             else:
-                hotspot (363, 403, 143, 367) action Call("freeRoamSpokenToo", backgroundImg="v11s23_entrance", returnScreen="v11s23_entrance")
+                hotspot (363, 403, 143, 367) action Call("freeRoamSpokenToo", backgroundImg="v11frmri1", returnScreen="v11s23_entrance")
                 
             hotspot (1593, 531, 231, 466) action Show("endFreeRoamConfirm", continueLabel="v11s23_freeroamend") # speak to Nora
 
