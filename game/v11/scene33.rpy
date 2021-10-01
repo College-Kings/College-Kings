@@ -14,6 +14,8 @@ label v11_bar_chloe_and_aubrey:
 
     pause 0.75
 
+    show screen fantasyOverlay
+
     scene v11caa2a # FPP. same as 2,MC is approaching chloe and aubrey but charli steps in the middle of the way, mouth opened
     with dissolve
 
@@ -23,6 +25,8 @@ label v11_bar_chloe_and_aubrey:
 
     scene v11caa3 # TPP. MC murmors with a mad face, mouth opened
     with dissolve
+
+    hide screen fantasyOverlay
 
     u "(I am a nice guy... agenda my ass.)"
 
