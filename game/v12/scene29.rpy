@@ -878,12 +878,15 @@ label v12_lauren_sex:
                 stop music fadeout 3
                 play music "music/v12/Scene 29/Track Scene 29_8.mp3" fadein 2
 
-                show screen v12s29_lauren_sex_overlay
-
                 scene v12las53 # TPP. Show Lauren removing her dress, MC starting to remove his shirt, both smiling, mouths closed
                 with dissolve
 
                 pause
+
+                if config_censored:
+                    call screen censoredPopup("v12s29_nsfwSkipLabel1")
+
+                show screen v12s29_lauren_sex_overlay
 
                 scene v12las53a # TPP. Same as v12las53, Show Lauren in her panties, stopping MC from removing his shirt, Lauren smiling, mouth open, MC smiling, mouth closed
                 with dissolve
@@ -1168,6 +1171,8 @@ label v12_lauren_sex:
                 with dissolve
 
                 pause
+                
+                label v12s29_nsfwSkipLabel1:
 
                 scene v12las69 # TPP. Show Lauren and MC walking towards the door of the hotel room, both smiling, mouths closed
                 with dissolve

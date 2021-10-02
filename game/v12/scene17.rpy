@@ -933,7 +933,7 @@ label v12_lindsey_sex:
     scene v12esr29g # FPP. Same as v12esr29c, Lindsey eyes open, slight smile, mouth open, face close to MC
     with dissolve
 
-    li "That was... Perfect."
+    li "That was... perfect."
 
     scene v12esr29h # FPP. Same as v12esr29g, Lindsey slight smile, mouth closed
     with dissolve
@@ -1023,6 +1023,9 @@ label v12_lindsey_sex:
     with dissolve
 
     pause
+
+    if config_censored:
+        call screen censoredPopup("v12s17_nsfwSkipLabel1")
 
     show screen v12s17_lindsey_sex_overlay
 
@@ -1198,6 +1201,8 @@ label v12_lindsey_sex:
     with dissolve
 
     pause
+    
+    label v12s17_nsfwSkipLabel1:
     
     scene v12esr44 # FPP. MC and Lindsey standing in front of each other, Lindsey smiling, mouth closed, looking at MC
     with dissolve
