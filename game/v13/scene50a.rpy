@@ -9,6 +9,9 @@ label v13s50a:
     scene v13s50a_1 # TPP Show MC with his hands on Emily's shoulders, pushing her down to her knees
     with dissolve
 
+    if config_censored:
+        call screen censoredPopup("v13s50a_nsfwSkipLabel1")
+
     pause 1
 
     play music "music/v13/Track Scene 50a.mp3" fadein 2
@@ -168,6 +171,8 @@ label v13s50a:
     u "(It's kinda fucked up to just bang her, say that and walk out, but... *Sighs*)"
 
     $ renpy.end_replay()
+
+    label v13s50a_nsfwSkipLabel1:
 
     stop music fadeout 3
     play music "music/v13/Track Scene 50_2.mp3" fadein 2
