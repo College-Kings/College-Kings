@@ -5342,6 +5342,7 @@ label v12s7_nora1:
 
                 "I'd choose you":
                     $ addPoint("bf")
+                    $ noralikes = True
 
                     scene v12fernor1
                     with dissolve
@@ -5371,8 +5372,6 @@ label v12s7_nora1:
 
                     scene v12fernor1e
                     with dissolve
-
-                    $ noralikes = True
 
                     no "Haha! You aren't wrong. *Chuckles*"
 
