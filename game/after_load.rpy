@@ -36,6 +36,11 @@ python early:
     if renpy.loadable("scriptv07.rpyc"):
         os.remove(os.path.join(config.basedir, "game", "scriptv07.rpyc"))
 
+    if renpy.loadable("screen.rpy"):
+        os.remove(os.path.join(config.basedir, "game", "screen.rpy"))
+    if renpy.loadable("screen.rpyc"):
+        os.remove(os.path.join(config.basedir, "game", "screen.rpyc"))
+
     if os.path.exists(os.path.join(config.basedir, "game", "v8")):
         try:
             for file in os.listdir(os.path.join(config.basedir, "game", "v0.8")):
