@@ -99,12 +99,12 @@ label v14s15:
 
     u "Wait, that's how you're deciding? *Chuckles*"
 
-    scene v14s15_7g
+    scene v14s15_7g  # FPP. Same as v14s15_7f, but bigger smile and slight different body position.
     with dissolve
 
     imre "That's how I decide everything. It's a very fair and balanced scale."
 
-    scene v14s15_e
+    scene v14s15_7e
     with dissolve
 
     u "Ha… You never fail to surprise me, Imre."
