@@ -3,6 +3,10 @@
 # Characters: MC (Outfit 9), Chloe (outfit 2)
 # Time: Night
 label v11_chloe_sex_scene:
+
+    if config_censored:
+        call screen censoredPopup("v11s41b_nsfwSkipLabel1")
+
     scene v11css1 # TPP. Mc and chloe removing their clothes
     with dissolve
     play music "music/V10/Scene 17/Track Scene 17_2.mp3" fadein 2
@@ -213,6 +217,8 @@ label v11_chloe_sex_scene:
 
     pause 1.25
 
+    label v11s41b_nsfwSkipLabel1:
+
     scene v11css9 # TPP. Chloe and MC in bed, MC big spooning chloe
     with dissolve
 
@@ -230,4 +236,10 @@ label v11_chloe_sex_scene:
 
     $ renpy.end_replay()
     stop music fadeout 3
+    
+    scene black
+    with dissolve
+    
+    pause 2.5
+    
     jump v11_hotel_lobby_rose

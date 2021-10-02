@@ -467,6 +467,9 @@ label v11_riley_sex:
 
                 ri "Then I guess I'll say it again..."
 
+                if config_censored:
+                    call screen censoredPopup("v11s35_nsfwSkipLabel1")
+
                 scene v11ris12d # FPP. Same as v11ris12, Riley no longer under the blanket, smiling seductively, mouth open
                 with dissolve
 
@@ -740,10 +743,12 @@ label v11_riley_sex:
 
                 pause 0.75
 
+                label v11s35_nsfwSkipLabel1:
+
                 scene v11ris27d # FPP. Same as v11ris27, Riley cuddled up to MC, looking at him, Riley mouth open, smiling, room dark
                 with dissolve
 
-                ri "Goodnight [name]."
+                ri "Goodnight, [name]."
 
                 scene v11ris27e # FPP. Same as v11ris27d, Riley mouth closed, smiling
                 with dissolve

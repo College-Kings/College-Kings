@@ -490,6 +490,9 @@ label v11s28a_galleryScene:
 
     pause 1.25
 
+    if config_censored:
+        call screen censoredPopup("v11s28a_nsfwSkipLabel1")
+
     scene v11sas13d # FPP. Same as v11sas13c, Samantha with no bra, seductive look, mouth closed
     with dissolve
 
@@ -827,6 +830,8 @@ label v11s28a_galleryScene:
     with dissolve
 
     $ renpy.end_replay()
+    
+    label v11s28a_nsfwSkipLabel1:
     
     sa "Sorry... I don't know why, but I just got really tired all of a sudden."
 
