@@ -3,8 +3,6 @@
 # Characters: MC (Outfit: 3), NIGHT GAMBLER (Outfit: x), IMRE (Outfit: 2), RYAN (Outfit: 1)
 # Time: Night
 
-default v14s03a_left_cup = False
-
 label v14s03a: # -MC walks overs and stands in front of the night gambler-
     scene v14s03a_1 # TPP. MC, far away, walking towards the night gambler, neutral expression, mouth closed.
     with dissolve

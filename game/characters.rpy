@@ -141,3 +141,6 @@ define character.random_guy = Character("Bartender", who_color="#5fc9f8", who_ou
 
 # 14.0
 define character.ngam = Character("Night Gambler")
+define character.emerald = Character("Emerald")
+define character.madame = Character("Madame")
+define character.satin = Character("Satin")
