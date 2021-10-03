@@ -886,7 +886,6 @@ label v12s32:
             with dissolve
 
         "Don't get her flowers":
-            $ addPoint ("bro")
             u "(That'd be doing too much... We're just friends.)"
 
     u "Right, let's go."

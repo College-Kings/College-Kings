@@ -909,7 +909,6 @@ label v12s7_riley1:
 
     menu:
         "I'm poor":
-            $ addPoint("bf")
             scene v12ferri4a
             with dissolve
 
@@ -932,7 +931,6 @@ label v12s7_riley1:
             ri "*Southern accent* Absurd."
 
         "I'm rich":
-            $ addPoint("bro")
             scene v12ferri4a
             with dissolve
             u "The ways of the rich are quite different from the ways of the poor. You've got guys practicing how to throw balls around with a dream of becoming some sports star as we converse our way to changing the world."

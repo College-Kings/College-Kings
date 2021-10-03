@@ -342,7 +342,6 @@ label v12_urban_exploring:
 
     menu (fail_label="v12s20_faillabel"):
         "Catch her":
-            $ addPoint("bf")
             scene v12uex12a # TPP Same angle as v12uex12, show MC catching Nora from behind
             with dissolve
 

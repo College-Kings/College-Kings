@@ -532,7 +532,6 @@ label v12_riddle_riley:
                     ri "I'm definitely into the more hot and sexy vibes, but this was probably the most romantic thing I've ever experienced."
 
                 "Don't kiss her":
-                    $ addPoint("bro")
                     pass 
     
             scene v12rrl39a 
