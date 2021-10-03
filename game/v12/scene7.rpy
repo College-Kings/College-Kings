@@ -5232,6 +5232,7 @@ label v12s7_nora1:
 
             menu:
                 "Chris cares about you":
+                    $ v12_help_chris += 1
                     $ addPoint("bro")
                     scene v12fernor1b
                     with dissolve

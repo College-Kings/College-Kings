@@ -182,6 +182,7 @@ label v12_murder_mystery_reveal:
 
     menu:
         "Let Chris help her":
+            $ v12_help_chris += 1
             $ addPoint("bro")
 
             u "(It's his girl, he's got her.)"
