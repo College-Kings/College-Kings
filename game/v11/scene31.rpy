@@ -110,7 +110,6 @@ label v11_lindsey_park:
     menu:
         "Defend Chloe":
             $ lindseyLike -= 1
-
             scene v11lip3b
             with dissolve
 
@@ -118,7 +117,6 @@ label v11_lindsey_park:
 
         "Don't defend Chloe":
             $ lindseyLike += 1
-
             scene v11lip3d
             with dissolve
 
@@ -135,7 +133,6 @@ label v11_lindsey_park:
     menu:
         "Support Chloe":
             $ lindseyLike -= 1
-
             scene v11lip3b
             with dissolve
 
