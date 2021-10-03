@@ -119,8 +119,6 @@ label v12_ms_rose_sex:
 
         menu:
             "Not tonight":
-                $ addPoint("bf")
-
                 scene v12msr2c
                 with dissolve
 

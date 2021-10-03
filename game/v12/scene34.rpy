@@ -26,7 +26,6 @@ label v12_amber_after_spa:
             u "Damn Amber, is that employee merch? *Chuckles*"
 
         "Nice towel":
-            $ addPoint("bf")
             scene v12ams2b # FPP. Same as v12ams2, Amber neutral expression, mouth closed
             with dissolve
 

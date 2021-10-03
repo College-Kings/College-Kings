@@ -423,7 +423,6 @@ label v12_roomate_talk:
                 ri "Well I'm glad you told me, because I didn't know that. *Chuckles*"
 
             "Really?":
-                $ addPoint("bf")
                 scene v12rcr13b
                 with dissolve
 

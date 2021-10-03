@@ -128,6 +128,7 @@ label v12_follow_chris:
     menu:
         "She wasn't overreacting":
             $ addPoint("bf")
+            $ addPoint("tm")
             $ chrismad = True
 
             scene v12chf4a

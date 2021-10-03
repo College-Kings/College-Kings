@@ -1169,7 +1169,6 @@ label v12s7_chloe1:
 
     menu:
         "Plan for it":
-            $ addPoint("bf")
             scene v12ferch1c # FPP same 1, new pose, mouth closed
             with dissolve
             
@@ -2822,7 +2821,6 @@ label v12s7_lindsey_charlie1:
             u "Uhh no, just saying what I heard."
 
         "No, nothing":
-            $ addPoint("bf")
             scene v12ferlich2a
             with dissolve
             

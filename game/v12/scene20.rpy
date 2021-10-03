@@ -219,8 +219,6 @@ label v12_urban_exploring:
             u "*Laughs*"
         
         "Just watch":
-            $ addPoint("bf")
-
             u "I'm just here to watch, actually... I was more of a monkey bars and seesaw kind of kid. *Laughs*"
 
             scene v12uex4
