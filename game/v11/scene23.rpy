@@ -249,6 +249,7 @@ label v11s23_mrlee1:
 
     menu:
         "Laugh":
+            $ addPoint("tm")
             scene v11frmlee1a
             with dissolve
 
@@ -260,6 +261,7 @@ label v11s23_mrlee1:
             lee "It wasn't so funny back then."
 
         "Feel bad":
+            $ addPoint("bro")
             scene v11frmlee1b
             with dissolve
 
