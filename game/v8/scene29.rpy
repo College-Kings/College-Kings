@@ -12,11 +12,11 @@ label after_drugs:
     if not helpJosh:
         scene v8josh10 # TPP. Showing Josh sitting on the ground outside his room door supporting himself using the wall
         with Fade(0.75, 0.25, 0.75)
-        pause
+        pause 0.75
 
         scene v8josh11 # TPP. Showing MC rushing towards Josh, looking concerned
         with dissolve
-        pause
+        pause 0.75
 
         scene v8josh12 # TPP. Showing MC picking Josh up from the ground, concerned, mouth open
         with dissolve
@@ -33,20 +33,19 @@ label after_drugs:
         jo "*Groans*"
 
     play sound "sounds/dooropen.mp3"
-    play music "music/mlove2.mp3"
-    queue music "music/mchill1.mp3"
+    play music "music/mchill1.mp3"
 
     scene v8josh14 # TPP (This is the next scene for both v8josh12a and v8josh13, in different paths of course, so both the transitions should look smooth). Show MC opening the room door (half open) with Josh still taking support from MC
     with dissolve
-    pause 0.5
+    pause 0.75
 
     scene v8josh15 # TPP. MC walking Josh inside the building (they crossed the doorway and entered the living room now). Josh looking towards the couch (the first one after entering), mouth open
     with dissolve
-    jo "Ju-{w} Just lay me on the couch. Can't go all the way upstairs at the moment."
+    jo "Ju- Just lay me on the couch. Can't go all the way upstairs at the moment."
 
     scene v8josh16 # TPP. MC laid Josh down on the couch (the first one after entering) with his head towards right side, propped his head up with a pillow and is now standing near the couch looking at Josh
     with dissolve
-    pause 0.5
+    pause 0.75
 
     scene v8josh17 # FPP (Continuation of v8josh16). Josh looking into the camera, mouth closed
     with dissolve
