@@ -140,7 +140,7 @@ label after_drugs:
 
     scene v8josh22a
     with dissolve
-    am "What!?{w} Ugh, that fucking idiot."
+    am "What!? Ugh, that fucking idiot."
     am "I'll be right over. I'm gonna give him so much shit!"
 
     scene v8josh22b
@@ -182,7 +182,7 @@ label after_drugs:
 
     scene v8josh25 # FPP (Continuation of v8josh24b). Amber turned towards the MC. She's looking upset, concerned, mouth open
     with dissolve
-    am "Fuck!{w} What the hell was he thinking?"
+    am "Fuck! What the hell was he thinking?"
 
     scene v8josh25a # Same as v8josh25 but Amber mouth closed
     with dissolve
@@ -230,7 +230,7 @@ label after_drugs:
 
             scene v8josh25g # Amber brushing MC's cheek, empathetic, comforting smile, mouth open (Use DoF so Amber's hand is blurred)
             with dissolve
-            am "Hey, it's not your fault.{w} I'm sorry I yelled. You did more than anyone had a right to expect."
+            am "Hey, it's not your fault. I'm sorry I yelled. You did more than anyone had a right to expect."
 
             scene v8josh25h # Same as v8josh25g but Amber mouth closed
             with dissolve
@@ -318,7 +318,7 @@ label after_drugs:
                 scene v8josh28c # Amber concerned, mouth open
                 with dissolve
                 am "...but to think he was in any frame of mind to pull this off is just stupid."
-                am "He needs to stop before he's caught...{w} or gets killed."
+                am "He needs to stop before he's caught... or gets killed."
 
                 scene v8josh28d # Same as v8josh28c but Amber mouth closed
                 with dissolve
@@ -345,7 +345,7 @@ label after_drugs:
 
             scene v8josh25g
             with dissolve
-            am "Hey, it's ok. You tried.{w} You did more than anyone had a right to expect."
+            am "Hey, it's ok. You tried. You did more than anyone had a right to expect."
 
             scene v8josh25h
             with dissolve
@@ -385,7 +385,7 @@ label after_drugs:
         scene v8josh25e
         with dissolve
         am "Hey, at least you're here taking care of him. I've had friends that wouldn't bat an eye."
-        am "*Sigh* He needs to stop before he's caught...{w} or worse, gets killed."
+        am "*Sigh* He needs to stop before he's caught... or worse, gets killed."
 
         scene v8josh25f
         with dissolve
@@ -635,7 +635,7 @@ label after_drugs:
 
                 scene v8josh35b # Amber disappointed, mouth open
                 with dissolve
-                am "*Whispers* Oh{w}, okay. Sorry I woke you up at midnight."
+                am "*Whispers* Oh, okay. Sorry I woke you up at midnight."
 
                 scene v8josh35c # Same as v8josh35b but Amber mouth closed
                 with dissolve
