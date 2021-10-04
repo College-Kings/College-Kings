@@ -113,7 +113,7 @@ label v11_start:
     scene v11coc12
     with dissolve
 
-    de "And you agree to this manner of representation young lady?"
+    de "And you agree to this manner of representation, young lady?"
 
     scene v11coc15 # TPP. Show Penelope sat down mouth open, slightly nervous, looking at the board's direction
     with dissolve
