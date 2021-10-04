@@ -88,7 +88,7 @@ label v13s35:
     scene v13s35_4a # TPP. Same as v13s35_4, Show Aubrey walking away from mc.
     with dissolve
 
-    if chloegf:
+    if chloers:
         u "(Guess I could look around a bit...)"
 
         scene v13s35_5 # FPP. MC looking at the general view of the shop.
