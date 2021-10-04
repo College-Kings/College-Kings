@@ -308,7 +308,7 @@ label v13_ticket_transfer:
 
         u "I could say the same to you. *Chuckles* I got up for food, you?"
 
-        scene v13s7_11a2 # FPP Same angle as v13s7_11, Aubrey smiling with mouth open
+        scene v13s7_11ax # FPP Same angle as v13s7_11, Aubrey smiling with mouth open
         with dissolve
 
         au "I slept really well on the bus so I wasn't super sleepy when we arrived. Eventually I just got out of bed and I went to the spa and everything. Luuk actually just let me in."
@@ -318,7 +318,7 @@ label v13_ticket_transfer:
 
         u "Oh, you met Luuk?"
 
-        scene v13s7_11a2
+        scene v13s7_11ax
         with dissolve
 
         au "Yeah, he's nice, isn't he?"
@@ -328,7 +328,7 @@ label v13_ticket_transfer:
 
         u "Definitely a character. *Laughs*"
 
-        scene v13s7_11a2
+        scene v13s7_11ax
         with dissolve
 
         au "So, what's up? I saw you talking to Mr. Lee."
