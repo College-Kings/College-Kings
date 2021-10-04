@@ -29,8 +29,8 @@ label mc_wolves_sun_aft:
 
     u "(Guess I'll chill out for a bit.)"
 
-    scene v8smcrm2a # TPP. Show MC sitting on the edge of his bed, phone in hand.
-    with dissolve
+    #scene v8smcrm2a # TPP. Show MC sitting on the edge of his bed, phone in hand.
+    #with dissolve
 
     $ v8s16_kiwiiPost1 = KiwiiPost("Chloe", "v8/chlaubpost1.webp", _("Hanging with my best friend. Good times!"), numberLikes=346) # Chloe & Aubrey having fun at the beach.
     $ v8s16_kiwiiPost1.newComment("Aubrey", _("Awww, I love hanging out with you <3"), queue=False)
