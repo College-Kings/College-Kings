@@ -326,6 +326,8 @@ label after_load:
         except NameError: v7_seencrowning = False
         try: v7_emily_bowling
         except NameError: v7_emily_bowling = False
+        try: v11_samantha_spa
+        except NameError: v11_samantha_spa = False
         try: v12_told_chloe
         except NameError: v12_told_chloe = False
         try: v12_kiss_riley

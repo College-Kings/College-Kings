@@ -440,6 +440,7 @@ default v11_talk_with_emily = False
 default v11_josh_nightclub = False
 default candyLike = 0
 default v11_fucked_candy = False
+default v11_samantha_spa = False
 default v11_aubrey_blue_outfit = False
 default v11_tease_amber = 0
 default v11_manhunt_winner = "Ryan"
