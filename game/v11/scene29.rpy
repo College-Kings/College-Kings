@@ -62,6 +62,8 @@ label v11_hotel_room:
             scene v11bane4a # FPP. Show charli on the floor screaming over Riley's dead body
             with dissolve
 
+            pause 1.5
+
             jump v11wakeupa
 
         "Save Riley":
@@ -71,7 +73,7 @@ label v11_hotel_room:
             scene v11bane6 # Mc tackles Riley out of the guns aim (replace bane character with MC, Mc should still be tackling Riley out the way)
             with dissolve
 
-            unknown "1..."
+            u "1..."
             play sound "sounds/fall.mp3"
 
             scene s595 # Mc and Riley on the ground terrified
@@ -88,7 +90,7 @@ label v11_hotel_room:
             scene v11bane4 # FPP. Show charli on the floor screaming over chloe's dead body
             with dissolve
             
-            pause 0.75
+            pause 1.5
             
             jump v11wakeupa
 
@@ -98,7 +100,7 @@ label v11timera:
     scene s596 # close up of your face terried
     with dissolve
 
-    unknown "1..."
+    u "1..."
     play sound "sounds/gun.mp3"
 
     scene s596a # Mc screaming terrified
