@@ -8,7 +8,6 @@ label v11_hotel_room:
     play sound "sounds/swoosh.mp3"
     scene s587
     with flash
-    play music "music/v11/Scene 19/Track Scene 19_1.mp3" fadein 2
     ri "He's coming!"
 
     scene s588  
@@ -111,6 +110,7 @@ label v11wakeupa:
     stop sound
     hide screen fantasyOverlay
     play sound "sounds/swoosh.mp3"
+    play music "music/v11/Scene 19/Track Scene 19_1.mp3" fadein 2
 
     if not v11_riley_roomate:
         scene v11bane2 # TPP. Close up of mc, MC jumps awake from the dream. Sitting up in bed, scared face
