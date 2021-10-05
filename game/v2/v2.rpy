@@ -2558,22 +2558,15 @@ label bo_bd:
 label csaub:
     scene s156
     with Fade (1,0,1)
-
-    # nora opens the door
-
-    # play knock sound
-
     play sound "sounds/knock.mp3"
-
-    "*Knock knock knock*"
-
+    pause 1
     play sound "sounds/dooropen.mp3"
 
-    play music "music/m7punk.mp3"
-
-# play dsoor open sound
     scene s157
     with dissolve
+    pause 0.75
+    play music "music/m7punk.mp3"
+
 
     no "Oh, look who it is."
 
