@@ -653,31 +653,6 @@ label v11_roommate:
                     u "*Laughs*"
 
         else:
-            scene v11rm14
-            with dissolve
-
-            u "Hey."
-
-            scene v11rm14a
-            with dissolve
-
-            ri "Hey, I'm surprised you chose to room with me over Chloe."
-
-            scene v11rm14
-            with dissolve
-
-            u "Why?"
-
-            scene v11rm14a
-            with dissolve
-
-            ri "Most guys would leap at an opportunity like that with her. But I guess you're not most guys."
-
-            scene v11rm14
-            with dissolve
-
-            u "Guess not."
-
             scene v11rm14a
             with dissolve
 
