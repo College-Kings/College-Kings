@@ -212,12 +212,12 @@ label v11_at_the_bank:
     scene v11bank8
     with dissolve
 
-    no "Well, right now the dollar is."
+    no "Well, right now the pound is."
 
     scene v11bank6
     with dissolve
 
-    bank "Correct, and I like that you say right now. As I'm sure you all know, currency values fluctuate."
+    bank "Correct, and I like that you say right now. As I'm sure you all know, currency values can fluctuate."
 
     scene v11bank9 # TPP Amber leaning to whisper into MC's ear, smiling with mouth open, Riley is near enough to hear
     with dissolve
@@ -318,7 +318,7 @@ label v11_at_the_bank:
     scene v11bank12 # FPP Show Riley, in vault, leaning very close to Amber, Riley's hand on Amber's shoulder, both smiling, Riley's mouth open
     with dissolve
     
-    ri "Excuse me, hi! I was just wondering... Someone said the US dollar was worth more than the pound? So if I moved to London would I become rich? What if I get lonely in a new country, all by myself?"
+    ri "Excuse me, hi! I was just wondering... Someone said the pound was worth more than our dollars? So if I moved to London would I become rich? What if I get lonely in a new country, all by myself?"
 
     scene v11bank10c # FPP Same angle as v11bank10, Amber looking surprised, mouth open
     with dissolve
@@ -436,7 +436,7 @@ label v11_at_the_bank:
     scene v11bank13b # FPP Same as v11bank13a, Amber with mouth open
     with dissolve
 
-    am "Excuse me miss, earlier you said that pounds are worth less than the dollar. Does that mean that if I moved here and converted my currency I'd be a rich woman?"
+    am "Excuse me miss, earlier you said that pounds are worth more than the dollar. Does that mean that if I moved here and converted my currency I'd be a rich woman?"
 
     scene v11bank11
     with dissolve
@@ -594,7 +594,7 @@ label v11_at_the_bank:
     scene v11bank17b
     with dissolve
 
-    am "If I planned on robbing a bank it wouldn't be one in London. The money ain't worth it compared to ours. *Laughs*"
+    am "Although if I planned on robbing a bank it would be one in London. The money is worth more compared to ours. *Laughs*"
 
     scene v11bank18c # FPP Same angle as v11bank18, bank teller with a small, relieved smile, mouth open
     with dissolve
