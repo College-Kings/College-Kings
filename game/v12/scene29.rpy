@@ -348,7 +348,7 @@ label v12_lauren_sex:
             scene v12las22b
             with dissolve
 
-            greeter "My apologies, Madame. If we had an empty table I'd be happy to accommodate you, but unfortunately we do not."
+            greeter "My apologies, Madame. If we had an empty table I'd be happy to accommodate you, but unfortunately we are fully booked for tonight."
 
             scene v12las22c # FPP. Same as v12las22, greeter looking at MC, greeter slight smile, mouth closed
             with dissolve
