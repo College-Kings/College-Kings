@@ -236,6 +236,7 @@ label v11_chloe_bathroom:
 
             if chloers or chloegf or kct == "popular":
                 $ v11_chloe_sex = True
+                $ chloers = True
 
                 if not chloers and not chloegf:
                     call screen kctPopup
