@@ -78,7 +78,7 @@ label v11_museum_tour:
             scene v11tm5b # FPP. Same as v11tm5a, Riley mouth open, slightly annoyed
             with dissolve
 
-            ri "Okay Mr. Scientist."
+            ri "Okay, Mr. Scientist."
     
     scene v11tm3
     with dissolve
