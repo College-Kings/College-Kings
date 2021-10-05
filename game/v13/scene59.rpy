@@ -69,7 +69,7 @@ label v13s59:
     scene v13s59_2
     with dissolve
 
-    au "I stayed very, very close to the shoreline. Laughs Also though, I'd been to that lake before so I was already comfortable with it, you know?"
+    au "I stayed very, very close to the shoreline. *Laughs* Also though, I'd been to that lake before so I was already comfortable with it, you know?"
 
     au "Diving into a body of water, especially with unknown creatures inside of it... Is terrifying. *Chuckles*"
 
