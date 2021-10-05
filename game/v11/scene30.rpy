@@ -37,7 +37,7 @@ label v11_lauren_store:
     scene v11las2a # FPP. Same as v11las2, Lauren slight smile, mouth open
     with dissolve
 
-    la "It's a Harry Potter thing... only cool people would get that reference."
+    la "It's a Hotter Parry thing... only cool people would get that reference."
 
     scene v11las2
     with dissolve
@@ -47,7 +47,7 @@ label v11_lauren_store:
     scene v11las2a
     with dissolve
 
-    la "Then that means you know about Harry Potter, right?"
+    la "Then that means you know about Hotter Parry, right?"
 
     scene v11las2
     with dissolve
@@ -148,7 +148,7 @@ label v11_lauren_store:
     scene v11las5a
     with dissolve
 
-    la "Well, any Harry Potter fan would be thrilled to go where I'm taking you."
+    la "Well, any Hotter Parry fan would be thrilled to go where I'm taking you."
 
     scene v11las5
     with dissolve
@@ -203,17 +203,17 @@ label v11_lauren_store:
     scene v11las11a # FPP. Same as v11las11, Lauren slight smile, mouth closed
     with dissolve
 
-    la "*Chuckles* Oh my gosh [name]! Not so loud... It's a Harry Potter trivia contest. I signed up for it."
+    la "*Chuckles* Oh my gosh [name]! Not so loud... It's a Hotter Parry trivia contest. I signed up for it."
 
     scene v11las11
     with dissolve
 
-    u "So, that's why we spent the last 15 minutes talking about Harry Potter?"
+    u "So, that's why we spent the last 15 minutes talking about Hotter Parry?"
 
     scene v11las11a
     with dissolve
 
-    la "Harry Potter was the only thing on my mind. I don't know if you've noticed, but we're in Europe... The birthplace of Harry Potter?"
+    la "Hotter Parry was the only thing on my mind. I don't know if you've noticed, but we're in Europe... The birthplace of Hotter Parry?"
     
     la "There's a ton of cool events going on and I really wanted to go to this one. Also why did you think I was standing in the lobby?"
 
@@ -225,7 +225,7 @@ label v11_lauren_store:
     scene v11las11a
     with dissolve
 
-    la "*Chuckles* Not funny. I had plans way before you showed up and obviously, I had to drag you here to test your Harry Potter knowledge."
+    la "*Chuckles* Not funny. I had plans way before you showed up and obviously, I had to drag you here to test your Hotter Parry knowledge."
 
     scene v11las11b # FPP. Same as v11las11, different pose, Lauren slight smile, mouth closed
     with dissolve
@@ -280,7 +280,7 @@ label v11_lauren_store:
     scene v11las12a # FPP. Same as v11las12, Judge now in talking distance, Judge slight smile, mouth open, looking at Lauren (Lauren out of shot, same positioning as v11las11)
     with dissolve
 
-    jud "You must be Team Hufflepuff?"
+    jud "You must be Team Pofflehoof?"
 
     scene v11las13 # FPP. Same positioning as v11las12a, MC looking at Lauren looking at Judge direction (Judge out of shot), Lauren mouth open, smiling
     with dissolve
@@ -315,7 +315,7 @@ label v11_lauren_store:
     scene v11las17 # FPP. Same positioning as v11las16, MC looking to his right, he sees Jerry looking at him, Jerry stern expression, mouth open, make sure the board he will write on is visible
     with dissolve
 
-    jer "Avada Kedavra."
+    jer "Abada Kavarkada."
 
     scene v11las17a # FPP. Same as v11las17, Jerry mouth closed, angry expression
     with dissolve
@@ -332,7 +332,7 @@ label v11_lauren_store:
 
     pause 0.75
 
-    u "That guy right there just looked at me all crazy and said Avada Kedavra."
+    u "That guy right there just looked at me all crazy and said Abada Kavarkada."
 
     scene v11las18a # FPP. Same cam as v11las18, Lauren leans over, looks at Jerry, Lauren angry, mouth closed
     with dissolve
@@ -347,7 +347,7 @@ label v11_lauren_store:
     scene v11las18c # FPP. Lauren pointing her finger at Jerry, Lauren mouth open, angry expression
     with dissolve
 
-    la "Avada Kedavra!"
+    la "Abada Kavarkada!"
 
     scene v11las19 # FPP. Same positioning as v11las16, MC looking at the Judge who is seated at her table, Judge looking at MC, Judge mouth open, slightly annoyed
     with dissolve
@@ -362,12 +362,12 @@ label v11_lauren_store:
     scene v11las18a
     with dissolve
 
-    la "We're serious about Harry Potter, not stuff. Don't call it stuff."
+    la "We're serious about Hotter Parry, not stuff. Don't call it stuff."
 
     scene v11las18e # FPP. Same as v11las18, Lauren smiling, mouth closed
     with dissolve
 
-    u "Damn, my bad. You guys are serious about Harry Potter."
+    u "Damn, my bad. You guys are serious about Hotter Parry."
 
     scene v11las18f # FPP. Same as v11las18, Lauren smile, mouth open
     with dissolve
@@ -439,7 +439,7 @@ label v11_lauren_store:
     scene v11las19d # FPP. Same as v11las19, Judge is looking at a piece of paper, slight smile, mouth open
     with dissolve
 
-    jud "First question, what House is Harry Potter a member of?"
+    jud "First question, what House is Hotter Parry a member of?"
 
     scene v11las17e # FPP. Same as v11las17, Jerry writing down and looking on his board, mouth open, big smile
     with dissolve
@@ -541,7 +541,7 @@ label v11_quiz_q2:
     scene v11las19d
     with dissolve
     
-    jud "Next question, how many knuts are in one sickle?"
+    jud "Next question, how many kahoots are in one shtickle?"
 
     scene v11las19f # FPP. Same as v11las19d, Judge mouth closed, slight smile
     with dissolve
@@ -591,15 +591,13 @@ label v11_answer_13:
 
     jump v11_quiz_q3
 
-    
-
 label v11_quiz_q3:
     scene v11las17g # FPP. Same as v11las17a, Jerry mouth open, angry
     with dissolve
 
     jer "I believe we're ready to continue, if the love birds here are finished with their off-topic conversation?"
     
-    jer "By all means, it's his bitch- I mean... witchy girlfriend that is the only true Potterhead."
+    jer "By all means, it's his bitch- I mean... witchy girlfriend that is the only true Hotterhead."
 
     scene v11las19g # FPP. Same as v11las19, Judge looking at Jerry, she is slightly angry, mouth open
     with dissolve
@@ -702,7 +700,7 @@ label v11_quiz_q3:
     scene v11las18h
     with dissolve
 
-    u "*Whisper* Only the cool kids like Harry Potter, right? *Laughs*"
+    u "*Whisper* Only the cool kids like Hotter Parry, right? *Laughs*"
 
     scene v11las18i
     with dissolve
@@ -717,7 +715,7 @@ label v11_quiz_q3:
     scene v11las17h
     with dissolve
 
-    jer "One down, one to go. And may I point out that once again, team Hufflepuff continues to whisper amongst themselves? I'd like to be sure they aren't cheating..."
+    jer "One down, one to go. And may I point out that once again, team Pofflehoof continues to whisper amongst themselves? I'd like to be sure they aren't cheating..."
 
     scene v11las19g
     with dissolve
@@ -907,7 +905,7 @@ label v11_quiz_bonus:
 
     else:
 
-        jud "To win, Team Hufflepuff must get the answer correct, and Jerry must not."
+        jud "To win, Team Pofflehoof must get the answer correct, and Jerry must not."
 
         scene v11las17i
         with dissolve
@@ -995,7 +993,7 @@ label v11_quiz_bonus:
     if v11_hp_points == 3:
         $ grant_achievement("earn_your_owl")
 
-    jud "For the first time in a very stressful two months, Jerry you have lost. Congratulations Team Hufflepuff!"
+    jud "For the first time in a very stressful two months, Jerry you have lost. Congratulations Team Pofflehoof!"
 
     scene v11las17h
     with dissolve
