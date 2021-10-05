@@ -1395,6 +1395,9 @@ label conyourdorm:
         u "(What the hell?)"
 
         label phoneam:
+            if bowling and emilyrs:
+                $ v7_emily_bowling = True
+        
             if contact_Riley.replies:
                 call screen messager(contact_Riley)
             if contact_Riley.replies:

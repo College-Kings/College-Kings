@@ -275,6 +275,7 @@ default emilyText = False
 default laurenpt = 0
 default nobeach = False
 default v7_seencrowning = False
+default v7_emily_bowling = False
 
 # 8.0
 default v8AutProtest = False
