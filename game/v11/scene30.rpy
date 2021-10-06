@@ -908,12 +908,12 @@ label v11_quiz_bonus:
         
         jud "Since we are tied, in order for a win, one team must be correct and the other must get it incorrect."
 
-        scene v11las17i
+        scene v11las17d
         with dissolve
 
         jer "You two may leave now if you'd like."
 
-        scene v11las17j
+        scene v11las17d
         with dissolve
 
         u "After you, Jerry."
