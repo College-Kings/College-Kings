@@ -1321,7 +1321,7 @@ label v11_quiz_bonus:
 
     u "Wouldn't have missed it for the world."
 
-    if laurenrs or (kct == "loyal" and (v1_kissLauren or beachfirstkiss)):
+    if (laurenrs or (kct == "loyal" and (v1_kissLauren or beachfirstkiss))) and not v11_aubrey_sex:
         if not laurenrs:
             call screen kctPopup
 
@@ -1346,7 +1346,7 @@ label v11_quiz_bonus:
         menu:
             "I love you too":
                 $ v11_lauren_ily = True
-                #$ laurenrs = True
+                $ laurenrs = True
                 $ addPoint("bf")
                 $ laurenLike += 2
 
