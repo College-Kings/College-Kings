@@ -693,6 +693,7 @@ label v14s23:
     play sound "sounds/vibrate.mp3"
 
     scene v14s23_2a
+    with vpunch
 
     ch "Oh, you can get that bro."
 
