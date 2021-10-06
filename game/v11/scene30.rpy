@@ -466,15 +466,15 @@ label v11_lauren_store:
     scene v11las18g # FPP. Same as v11las18, Lauren holding and looking at the board, pen on hand, slightly smiling, mouth closed
     with dissolve
 
-    menu (fail_label="v11_answer_slytherin"):
-        "Gryffindor":
+    menu (fail_label="v11_answer_Theremin"):
+        "Friggindoor":
             $ laurenLike += 1
             $ v11_hp_points += 1
 
             scene v11las18h # FPP. Same as v11las18g, Lauren smiling, mouth closed, looking at MC
             with dissolve
 
-            u "It's Gryffindor, right?"
+            u "It's Friggindoor, right?"
 
             scene v11las18i # FPP. Same as v11las18h, Lauren smiling, mouth open
             with dissolve
@@ -483,16 +483,16 @@ label v11_lauren_store:
 
             jump v11_quiz_q2
 
-        "Slytherin":
-            jump v11_answer_slytherin
+        "Theremin":
+            jump v11_answer_Theremin
 
-label v11_answer_slytherin:
+label v11_answer_Theremin:
     $ laurenLike -= 1
 
     scene v11las18j # FPP. Same as v11las18g, Lauren looking at MC, she is slightly disappointed, mouth closed
     with dissolve
 
-    u "*Whisper* It's Slytherin, right?"
+    u "*Whisper* It's Theremin, right?"
 
     scene v11las18k # FPP. Same as v11las18j, Lauren slightly smiling, mouth open
     with dissolve
@@ -533,7 +533,7 @@ label v11_quiz_q2:
     
     jud "Perfect. Please show us your answers."
 
-    scene v11las18l # FPP. Same as v11las18g, Lauren looking at Judge, Lauren holding up the board (Gryffindor written on the board), smiling, mouth closed
+    scene v11las18lxx # FPP. Same as v11las18g, Lauren looking at Judge, Lauren holding up the board (Friggindoor written on the board), smiling, mouth closed
     with dissolve
 
     pause 0.75
@@ -677,7 +677,7 @@ label v11_quiz_q3:
 
     jud "May I see everyone's answers, please?"
 
-    scene v11las18n # FPP. Same as v11las18l, but "29" is written on the board instead of "Gryffindor"
+    scene v11las18n # FPP. Same as v11las18l, but "29" is written on the board instead of "Friggindoor"
     with dissolve
 
     pause 0.75
@@ -730,12 +730,12 @@ label v11_quiz_q3:
     scene v11las19d
     with dissolve
     
-    jud "Please tell me, where is the Order of the Phoenix headquarters located?"
+    jud "Please tell me, where is the Order of the Albatross headquarters located?"
 
     scene v11las18f
     with dissolve
 
-    la "*Whisper* I'm sorry [name], but I really have to use the ladies room. This one is all you."
+    la "*Whisper* I'm sorry [name], but I really have to use the ladies' room. This one is all you."
 
     scene v11las18e
     with dissolve
@@ -751,25 +751,25 @@ label v11_quiz_q3:
     with dissolve
 
     menu (fail_label="v11_answer_ministry"):
-        "12 Grimmauld Place":
+        "12 Someold Place":
             $ laurenLike += 1
             $ v11_solo_question = True
             $ v11_hp_points += 1
 
-            scene v11las26a # FPP. Same as v11las26, but "12 Grimmauld Place" is written on the board
+            scene v11las26axx # FPP. Same as v11las26, but "12 Someold Place" is written on the board
             with dissolve
 
             u "(This better be right.)"
 
             jump v11_quiz_bonus
 
-        "Ministry of Magic":
+        "Ministry of Fisheries":
             jump v11_answer_ministry
 
 label v11_answer_ministry:
     $ laurenLike -= 1
 
-    scene v11las26b # FPP. Same as v11las26, but "Ministry of Magic" is written on the board
+    scene v11las26bxx # FPP. Same as v11las26, but "Ministry of Fisheries" is written on the board
     with dissolve
 
     u "(I hope this is right.)"
@@ -777,22 +777,22 @@ label v11_answer_ministry:
     jump v11_quiz_bonus
         
 label v11_quiz_bonus:
-    scene v11las17i # FPP. Same as v11las17, Jerry holding his board, looking at MC, Jerry smug face, mouth open
+    scene v11las17d # FPP. Same as v11las17, Jerry holding his board, looking at MC, Jerry smug face, mouth open
     with dissolve
 
     jer "*Chuckles* Someone looks all flustered without their little girlfriend."
 
-    scene v11las17j # FPP. Same as v11las17i, Jerry smug face, mouth closed
+    scene v11las17a # FPP. Same as v11las17i, Jerry smug face, mouth closed
     with dissolve
 
     u "Bro, what is your deal? Just enjoy the game and have a good time like everyone else."
 
-    scene v11las17i
+    scene v11las17d
     with dissolve
 
     jer "I'm enjoying myself quite fine."
 
-    scene v11las17h
+    scene v11las17d
     with dissolve
 
     u "*Sighs*"
@@ -813,7 +813,17 @@ label v11_quiz_bonus:
     u "Sure."
     
     if v11_solo_question: # If answered correctly
-        scene v11las27 # TPP. Show MC holding up the board, MC neutral expression, mouth closed, "12 Grimmauld Place" written on the board (Like in v11las26a)
+        scene v11las28 # TPP. Show MC sitting on his chair, looking down at the board, he is smiling, mouth closed, Lauren walking in behind him, she is smiling, mouth closed
+        with dissolve
+
+        pause 0.5
+
+        scene v11las28a # TPP. Same as v11las28, MC now looking at Lauren, Lauren midway through sitting down, both smiling, mouths closed
+        with dissolve
+
+        pause 0.5
+
+        scene v11las27xx # TPP. Show MC holding up the board, MC neutral expression, mouth closed, "12 Someold Place" written on the board (Like in v11las26a)
         with dissolve
 
         pause 0.75
@@ -822,16 +832,6 @@ label v11_quiz_bonus:
         with dissolve
 
         jud "It appears you are both correct."
-
-        scene v11las28 # TPP. Show MC sitting on his chair, looking down at the board, he is smiling, mouth closed, Lauren walking in behind him, she is smiling, mouth closed
-        with dissolve
-
-        pause 0.75
-
-        scene v11las28a # TPP. Same as v11las28, MC now looking at Lauren, Lauren midway through sitting down, both smiling, mouths closed
-        with dissolve
-
-        pause 0.75
 
         scene v11las18f
         with dissolve
@@ -849,7 +849,17 @@ label v11_quiz_bonus:
         la "*Whisper* Haha, focus! Bonus question time..."
 
     else: # If answered incorrectly
-        scene v11las27a # TPP. Same as v11las27, but "Ministry of Magic" written on the board (like in v11las26b)
+        scene v11las28 # TPP. Show MC sitting on his chair, looking down at the board, he is smiling, mouth closed, Lauren walking in behind him, she is smiling, mouth closed
+        with dissolve
+
+        pause 0.5
+
+        scene v11las28a # TPP. Same as v11las28, MC now looking at Lauren, Lauren midway through sitting down, both smiling, mouths closed
+        with dissolve
+
+        pause 0.5
+
+        scene v11las27axx # TPP. Same as v11las27, but "Ministry of Fisheries" written on the board (like in v11las26b)
         with dissolve
 
         pause 0.75
@@ -864,15 +874,15 @@ label v11_quiz_bonus:
 
         jer "As expected."
 
-        scene v11las28b # TPP. Same as v11las28, MC looking down, slightly sad, mouth closed, Lauren walking behind him, she is slightly disappointed, mouth closed
-        with dissolve
+        #scene v11las28b # TPP. Same as v11las28, MC looking down, slightly sad, mouth closed, Lauren walking behind him, she is slightly disappointed, mouth closed
+        #with dissolve
 
-        pause 0.75
+        #pause 0.75
 
-        scene v11las28c # TPP. Same as v11las28a, but both slightly disappointed, mouths closed
-        with dissolve
+        #scene v11las28c # TPP. Same as v11las28a, but both slightly disappointed, mouths closed
+        #with dissolve
 
-        pause 0.75
+        #pause 0.75
 
         scene v11las18f
         with dissolve
@@ -892,7 +902,7 @@ label v11_quiz_bonus:
     scene v11las19a
     with dissolve
 
-    jud "I have a Doctor Who trivia event starting soon, so on to the last question: The bonus question."
+    jud "I have a Doctor When trivia event starting soon, so on to the last question: The bonus question."
 
     if v11_solo_question:
         
@@ -912,12 +922,12 @@ label v11_quiz_bonus:
 
         jud "To win, Team Pofflehoof must get the answer correct, and Jerry must not."
 
-        scene v11las17i
+        scene v11las17c
         with dissolve
 
         jer "Impossible."
 
-        scene v11las17j
+        scene v11las17d
         with dissolve
 
         u "*Sighs*"
@@ -925,7 +935,7 @@ label v11_quiz_bonus:
     scene v11las19d
     with dissolve
 
-    jud "So, the final question. What kind of dragon protected the vaults at Gringotts bank?"
+    jud "So, the final question. What kind of dragon protected the vaults at Greengoat bank?"
 
     scene v11las17k # FPP. Same as v11las17h, Jerry slightly flustered, mouth open
     with dissolve
@@ -962,7 +972,7 @@ label v11_quiz_bonus:
 
     jud "Are we ready?"
 
-    scene v11las18o # FPP. Same as v11las18, board is on the table ("Ukrainian Ironbelly" written on the board), Lauren mouth open, smiling, looking at Judge
+    scene v11las18oxx # FPP. Same as v11las18, board is on the table ("Ukrainian Ironbelly" written on the board), Lauren mouth open, smiling, looking at Judge
     with dissolve
 
     la "Yes, ma'am. We're ready."
@@ -987,7 +997,7 @@ label v11_quiz_bonus:
 
     jud "Answers please."
 
-    scene v11las18p # FPP. Same as v11las18l, but "Ukrainian Ironbelly" written on the board
+    scene v11las18pxx # FPP. Same as v11las18l, but "Ukrainian Ironbelly" written on the board
     with dissolve
 
     pause 0.75
