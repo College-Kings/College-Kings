@@ -1346,7 +1346,7 @@ label v11_quiz_bonus:
         menu:
             "I love you too":
                 $ v11_lauren_ily = True
-                $ laurenrs = True
+                #$ laurenrs = True
                 $ addPoint("bf")
                 $ laurenLike += 2
 
