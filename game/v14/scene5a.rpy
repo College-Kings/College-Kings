@@ -227,13 +227,13 @@ label v14s05a:
         ri "I've been trying to avoid this question, I’m so biased. Who would you pick?"
 
         menu: 
-            "Help Chloe"
+            "Help Chloe":
                 scene v14s05a_13
                 with dissolve
 
                 u "Well, I'd support Chloe."
 
-            "Help Lindsey"
+            "Help Lindsey":
                 scene v14s05a_13
                 with dissolve
 

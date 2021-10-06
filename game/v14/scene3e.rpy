@@ -304,7 +304,7 @@ label v14s03e:
     ry "So did he. *Laughs*"
 
     menu:
-        "Don't tell Imre"
+        "Don't tell Imre":
             scene v14s03e_12
             with dissolve
 
