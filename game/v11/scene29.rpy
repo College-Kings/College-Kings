@@ -438,20 +438,20 @@ label v11wakeupa:
 
         u "Haha."
 
-    scene v11hr12 # TPP. Show MC getting dressed (neutral expression, mouth closed) (only mc is in this shot)
-    with dissolve
+    #scene v11hr12 # TPP. Show MC getting dressed (neutral expression, mouth closed) (only mc is in this shot)
+    #with dissolve
 
-    pause 0.75
+    #pause 0.75
 
-    scene v11hr13 # TPP. Show MC going out the door of his hotel room (only mc is in this shot)
-    with dissolve
+    #scene v11hr13 # TPP. Show MC going out the door of his hotel room (only mc is in this shot)
+    #with dissolve
 
-    pause 0.75
+    #pause 0.75
 
-    scene v11hr14 # TPP. Show MC walking in the corridor outside his hotel room (only mc is in the shot)
-    with dissolve
+    #scene v11hr14 # TPP. Show MC walking in the corridor outside his hotel room (only mc is in the shot)
+    #with dissolve
 
-    pause 0.75
+    #pause 0.75
     stop music fadeout 3
     if v11_aubrey_sex and laurenrs:
         jump v11_lauren_apology

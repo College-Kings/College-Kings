@@ -4,6 +4,11 @@
 # Time: Morning
 
 label v11_lauren_store:
+    scene v11laa1
+    with fade
+    
+    pause 0.5
+    
     scene v11las1 # TPP. Lauren is in the lobby, she is looking at her phone, show MC sneaking up on her
     with fade
     play music "music/v11/Scene 1/Track Scene 1_3.mp3" fadein 2
