@@ -935,7 +935,7 @@ label v11_quiz_bonus:
     scene v11las19d
     with dissolve
 
-    jud "So, the final question. What kind of dragon protected the vaults at Greengoat bank?"
+    jud "So, the final question. What kind of dragon protected the vaults at Greengoat Bank?"
 
     scene v11las17k # FPP. Same as v11las17h, Jerry slightly flustered, mouth open
     with dissolve
