@@ -133,7 +133,7 @@ label v11wakeupa:
         scene v11bane3b # FPP. Same 3, chloe now looking at her suitcase accross the room, mouth open.
         with dissolve
 
-        cl "I'm trying to finish unpacking. Something I haven't had a chance to do some how, ha."
+        cl "I'm trying to finish unpacking. Something I haven't had a chance to do somehow, ha."
 
         scene v11hr3 # FPP. MC is now standing next to Chloe, Chloe looking at MC, Chloe mouth closed, slight smile
         with dissolve
