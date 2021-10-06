@@ -292,7 +292,7 @@ label v10_lauren_room:
                 with dissolve
                 pause
 
-                if laurenrs or ((v1_laurenKiss or beachfirstkiss) and kct == "loyal"):
+                if laurenrs or ((v1_laurenKiss or beachfirstkiss or laurenkissb) and kct == "loyal"):
 
                     if not laurenrs:
                         $ laurenrs = True
