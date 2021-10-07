@@ -14,7 +14,7 @@ label v13s37:
     scene v13s37_2 # FPP. Same positioning as v13s37_1, MC looking at Lindsey, Lindsey looking at Chris' direction (Only Lindsey in shot), Lindsey slight smile, mouth open
     with dissolve
 
-    li "Well, you didn't come short in choosing a location Chris... I gotta give you that."
+    li "Well, you didn't come short in choosing a location, Chris... I gotta give you that."
 
     scene v13s37_2
     with dissolve
@@ -796,7 +796,7 @@ label v13s37_chris:
             scene v13s37ch_2e
             with dissolve
 
-            u "Do you have an idea who with or when this switch in her started."
+            u "Do you have an idea who with or when this switch in her started?"
 
             scene v13s37ch_2d
             with dissolve
@@ -923,7 +923,7 @@ label v13s37_end:
 
     u "*Chuckles*"
 
-    if not v11_chloe_sex:
+    if not chloers:
         scene v13s37end_2a
         with dissolve
 
