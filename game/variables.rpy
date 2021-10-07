@@ -595,3 +595,4 @@ default v13s40fromgame = False
 default v14s03a_left_cup = False
 default v14s23_agree = False
 default v14s23_disagree = False
+default v14_emily_ily = False
