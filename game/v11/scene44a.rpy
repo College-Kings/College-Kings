@@ -85,6 +85,7 @@ label v11_rose_underground:
         with dissolve
 
         ro "I'll be sure to have your assigned room close to mine, because I plan on-"
+        
     else:
 
         scene v11sub2c

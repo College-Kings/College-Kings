@@ -751,6 +751,7 @@ label v11_at_the_bank:
             jump v11_nora_lingerie
 
         "Go with Ms. Rose":
+            $ v11_underground_rose = True
             u "(I'm definitely not walking back.)"
 
             scene v11bank28a # TPP Show Ms. Rose, Nora, Amber, Riley, and MC leaving the bank

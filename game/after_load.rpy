@@ -330,6 +330,8 @@ label after_load:
         except NameError: v11_samantha_spa = False
         try: v11_lauren_ily
         except NameError: v11_lauren_ily = False
+        try: v11_underground_rose
+        except NameError: v11_underground_rose = False
         try: v12_told_chloe
         except NameError: v12_told_chloe = False
         try: v12_kiss_riley

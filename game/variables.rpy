@@ -476,6 +476,7 @@ default v11_hp_points = 0
 default political_strategist = False
 default v11_smoke_amber_amsterdam = False
 default v11_lauren_ily = False
+default v11_underground_rose = False
 
 # 12.0
 default v12_told_chloe = False

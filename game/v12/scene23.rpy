@@ -112,7 +112,10 @@ label v12_ms_rose_sex:
         scene v12msr2b
         with dissolve
 
-        ro "As I said before, I have something special planned for us here in Paris. Want me to show you?"
+        if v11_underground_rose:
+            ro "As I said before, I have something special planned for us here in Paris. Want me to show you?"
+        else:
+            ro "I have something special planned for us here in Paris. Want me to show you?"
 
         scene v12msr2a
         with dissolve
