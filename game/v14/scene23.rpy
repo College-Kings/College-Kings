@@ -348,7 +348,7 @@ label v14s23:
 
         cl "Ugh, asshole! *Chuckles* I’m being serious."
      
-        if v14s23_agree and v14_realwolf:
+        if v14s23_agree:
             scene v14s23_2c
             with dissolve
 
@@ -414,7 +414,7 @@ label v14s23:
 
             ch "That's what I'm-"
 
-        elif not v14s23_agree and v14_realwolf:
+        elif not v14s23_agree:
             scene v14s23_2c
             with dissolve
 
@@ -510,7 +510,7 @@ label v14s23:
 
             menu:
                 "Agree with Chris.":
-                    $addPoint ("bro")
+                    $ addPoint("bro")
 
                     scene v14s23_2b
                     with dissolve
@@ -543,7 +543,7 @@ label v14s23:
 
                 "Disagree with Chris.":
                     $ v14s23_disagree = True
-                    $ addPoint ("bf")
+                    $ addPoint("bf")
                     scene v14s23_2b
                     
                     u "I gotta disagree. Having a real wolf would look like you're pandering to a masculine audience."
@@ -645,6 +645,7 @@ label v14s23:
                         with dissolve
 
                         ch "That's what I'm-"
+                        
                     else:
                         scene v14s23_2c
                         with dissolve
