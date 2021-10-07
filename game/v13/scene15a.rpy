@@ -307,7 +307,7 @@ label v13s15a:
                 scene v13s15a_6b
                 with dissolve
 
-                u "Good, have a goodnight Riley."
+                u "Good, have a good night, Riley."
 
                 scene v13s15a_6a
                 with dissolve
