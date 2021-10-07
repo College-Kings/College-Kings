@@ -26,13 +26,15 @@ label v13s23:
 
     ry "I am... Imre's acting like he doesn't want me to come but, I'm on some \"fuck Imre\" vibes right now."
 
-    scene v13s23_4 # FPP. Same positioning as v13s23_2, MC looking at Imre, Imre looking at Ryan's direction, Imre slightly annoyed, mouth open
+    #scene v13s23_4 # FPP. Same positioning as v13s23_2, MC looking at Imre, Imre looking at Ryan's direction, Imre slightly annoyed, mouth open
+    scene v13s23_3b
     with dissolve
 
     imre "I don't want you to come, but two people isn't enough and Chris didn't wanna go out. So, here we are. It was either Chris or Mr. Lee, and he's a little occupied right now."
 
     if v13_charli_exposed:
-        scene v13s23_3b # FPP. Same as v13s23_3a, Ryan looking at Imre, Ryan slight smile, mouth open
+        #scene v13s23_3b # FPP. Same as v13s23_3a, Ryan looking at Imre, Ryan slight smile, mouth open
+        scene v13s23_2
         with dissolve
 
         ry "Oh yeah, what was all that yelling about? Did someone break one of his precious valuables or something?"
@@ -42,20 +44,19 @@ label v13s23:
 
         imre "*Laughs* When I got there, Mr. Lee had Charli pinned to the ground..."
 
-        scene v13s23_3
+        #scene v13s23_3
+        scene v13s23_4c
         with dissolve
 
         u "Long story short, he won't be around anymore."
-
-        scene v13s23_3a
-        with dissolve
-
-        ry "What do you mean?"
-
-        scene v13s23_3
-        with dissolve
-
         u "In fact, I'm pretty sure he's banned from San Vallejo. *Chuckles*"
+
+        #scene v13s23_3a
+        #scene v13s23_2
+        #with dissolve
+        #ry "What do you mean?"
+        #scene v13s23_3
+        #with dissolve
 
         scene v13s23_4b # FPP. Same as v13s23_4, Imre looking at MC, Imre slight smile, mouth open
         with dissolve
@@ -67,7 +68,8 @@ label v13s23:
 
         u "Hell yeah I did. He kind of did it to himself but, I just had to press the right button. *Chuckles*"
 
-        scene v13s23_3b
+        #scene v13s23_3b
+        scene v13s23_2
         with dissolve
 
         ry "Well, good. Now Imre can stop talking about how he's gonna kick his ass every day. *Chuckles*"
@@ -77,7 +79,8 @@ label v13s23:
 
     u "*Sighs* You guys really do go at it like a married couple, aren't you guys excited for this? I know I am!"
 
-    scene v13s23_3a
+    #scene v13s23_3a
+    scene v13s23_2
     with dissolve
 
     ry "Hell yeah, and Imre should be. Today he'll finally see a real girl."
@@ -87,13 +90,14 @@ label v13s23:
 
     imre "Shut the fuck up."
 
-    scene v13s23_3b
+    #scene v13s23_3b
+    scene v13s23_2
     with dissolve
 
     ry "*Laughs*"
 
-    scene v13s23_3
-    with dissolve
+    #scene v13s23_3
+    #with dissolve
 
     u "Let's get over there."
 
