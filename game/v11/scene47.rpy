@@ -6,7 +6,7 @@
 label v11_walking_back:
     scene v11wb1 # TPP. Show MC walking on the sidewalk, Charli a few feet behind him, Charli smirking, mouth closed, MC mouth closed, slight smile
     with dissolve
-    play music "music/v11/Scene 47/Track Scene 47.mp3" fadein 2
+    play music "music/V10/Scene 41/Track Scene 41_1.mp3" fadein 2
     pause 0.75
     
     scene v11wb1a # TPP. Same as v11wb1, Show MC looking back at Charli, Charli smirking, mouth closed, MC mouth closed, slightly annoyed
@@ -24,7 +24,10 @@ label v11_walking_back:
 
     play sound "sounds/vibrate.mp3"
 
-    $ contact_Jenny.newImgMessage("images/v11/Scene 47/jennynude.webp", queue=False) # Jenny nude pic (selfie or pic in a mirror)
+    if config_censored:
+        $ contact_Jenny.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
+    else:
+        $ contact_Jenny.newImgMessage("images/v11/Scene 47/jennynude.webp", queue=False) # Jenny nude pic (selfie or pic in a mirror)
     $ contact_Jenny.newMessage("OMG, I'M SO SORRY!", queue=False)
     $ contact_Jenny.newMessage("I DID NOT MEAN TO SEND THAT!", queue=False)
     $ contact_Jenny.addReply("Haha, don't worry about it.")

@@ -484,6 +484,7 @@ label v12s32:
         "Boost Aubrey":
             $ addPoint ("tm")
             $ v12s32_Aubrey_Boost = True
+            $ aubrey.points += 1
 
             scene v12s32_21c 
             with dissolve
@@ -605,8 +606,6 @@ label v12s32:
     if v12s32_Aubrey_Boost:
         scene v12s32_27 # TPP show aubrey hugging mc, aubrey mouth open, cute smile
         with dissolve
-
-        $ aubrey.points += 1
 
         au "Thanks for the support, that was definitely the boost of confidence I needed."
 
@@ -886,7 +885,6 @@ label v12s32:
             with dissolve
 
         "Don't get her flowers":
-            $ addPoint ("bro")
             u "(That'd be doing too much... We're just friends.)"
 
     u "Right, let's go."

@@ -223,6 +223,7 @@ label v11_sit_ryan_convo:
 
         menu:
             "Give blessing":
+                $ addPoint("bro")
                 scene v11src4d
                 with dissolve
 

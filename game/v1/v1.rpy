@@ -1212,8 +1212,6 @@ label efra:
     stop music fadeout 2.0
     play sound "sounds/knock.mp3"
     
-    "*Knock knock knock*"
-
     scene s60
     with dissolve
 
@@ -1456,14 +1454,13 @@ label efra:
 
     imre "Awesome! Get ready for a wild night, my man."
 
+    label continueonea: #for compatibility only
     scene s65
     with Fade(1, 0, 1)
     stop music fadeout 2.0
-    " "
 
-    label continueonea: #for compatibility only
     play sound "sounds/knock.mp3"
-    "*Knock knock knock*"
+    pause 0.75
 
     scene s66
     with dissolve
@@ -1500,10 +1497,9 @@ label efra:
         with dissolve
         u "Yeah, that's right. Good to see you again."
 
+    label talktorib: #for compatibility only
     scene s68
     with fade
-
-    label talktorib: #for compatibility only
     ri "Sooo, is it just us three for tonight?"
 
     scene s68a
@@ -1517,8 +1513,6 @@ label efra:
     u "Yeah, she should be here any minute."
 
     play sound "sounds/knock.mp3"
-
-    "*Knock knock knock*"
 
     scene s68a
     with dissolve
@@ -1702,10 +1696,10 @@ label efra:
 
             imre "Damn..."
 
+    label ao_bd: #for compatibility only
     scene s72f
     with dissolve
 
-    label ao_bd: #for compatibility only
     imre "Okay, it's your turn to dare someone, Lauren."
 
     scene s73bl
@@ -1719,7 +1713,7 @@ label efra:
     ri "Oh that's easy. Let's do it, Imre."
 
     scene s75
-    with fade
+    with dissolve
 
     imre "Great idea, Lauren!"
 
@@ -1727,8 +1721,7 @@ label efra:
     with hpunch
 
     play sound "sounds/slap.mp3"
-
-    "*Slap*"
+    pause 1.5
 
     scene s75b
     with dissolve
@@ -3826,7 +3819,7 @@ label fr2end: #for compatibility only
             scene s110 ### ryans hand on your back
             with dissolve
 
-            "*Push*"
+            pause 0.75
 
             scene s111 ### you stumbling into chloe and the guy
             with vpunch

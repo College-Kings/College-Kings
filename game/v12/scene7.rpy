@@ -9,6 +9,14 @@ label v12s7_free_roam_spoken(backgroundImg, returnScreen, seenList, victim):
     $ renpy.call_screen(returnScreen)
 
 label v12s7fr:
+    image ferry_depart = Movie(play="images/v12/Scene 7/animations/Ferry A - From UK.webm", loop=False)
+    
+    scene ferry_depart
+    with fade
+    play sound "images/v12/Scene 7/animations/Track Scene - Ferry Ride (5 sec).mp3"
+
+    pause 5
+
     $ v12s7_victims = 12
     $ v12s7_victims += sum([ v11_invite_sam_europe, emily_europe, josh_europe, v11_pen_goes_europe ])
 
@@ -320,7 +328,7 @@ label v12s7fr:
     scene v12fer1
     with dissolve
 
-    lee "The murderer will kill people by pointing at them with a fake finger gun. If you get killed then quietly make your way to the dining hall. Do not give any hints to any of the players that haven't been killed."
+    lee "The murderer will kill people by pointing at them with a fake finger gun. If you get killed then quietly make your way to the dining hallway. Do not give any hints to any of the players that haven't been killed."
 
     scene v12fer10d
     with dissolve
@@ -715,6 +723,7 @@ label v12s7_aubrey2:
             play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
             call screen v12s7_balcony_right
+
         "Kill her":
             $ v12s7_killList.add(aubrey)
             label v12s7_aubrey_kill:
@@ -900,7 +909,6 @@ label v12s7_riley1:
 
     menu:
         "I'm poor":
-            $ addPoint("bf")
             scene v12ferri4a
             with dissolve
 
@@ -923,7 +931,6 @@ label v12s7_riley1:
             ri "*Southern accent* Absurd."
 
         "I'm rich":
-            $ addPoint("bro")
             scene v12ferri4a
             with dissolve
             u "The ways of the rich are quite different from the ways of the poor. You've got guys practicing how to throw balls around with a dream of becoming some sports star as we converse our way to changing the world."
@@ -1160,7 +1167,6 @@ label v12s7_chloe1:
 
     menu:
         "Plan for it":
-            $ addPoint("bf")
             scene v12ferch1c # FPP same 1, new pose, mouth closed
             with dissolve
             
@@ -1197,6 +1203,7 @@ label v12s7_chloe1:
             with dissolve
 
             u "Maybe I just know what you need to hear. *Chuckles*"
+
     scene v12ferch1b
     with dissolve
     cl "Okay so... I know this is off topic, but I just thought of something. What if Mr. Lee bugged the props and that's how he's \"always watching\"."
@@ -1550,7 +1557,6 @@ label v12s7_riley3:
     call screen v12s7_left_viewpoint
     ### ERROR: -If MC presses the murder button during this scene he gets caught ###
     ### ERROR: -Back to free roam ###
-
     
 label v12s7_riley3a:
     $ v12s7_riley3 = True
@@ -1600,7 +1606,6 @@ label v12s7_riley3a:
     with dissolve
 
     u "(How is he gonna do that? *Laugh*)"
-
 
     u "That does indeed sound suspicious, maybe I should check in on them and see what I can find out."
 
@@ -1708,7 +1713,6 @@ label v12s7_riley_kill:
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_left_viewpoint
-
 
 label v12s7_lauren1:
     $ v12s7_lauren = True
@@ -2004,7 +2008,6 @@ label v12s7_lauren_kill:
 
     call screen v12s7_seating_back
 
-
 label v12s7_ryan_imre1:
     $ v12s7_imre = True
     
@@ -2276,7 +2279,6 @@ label v12s7_ryan_imre1:
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_right_gallery_back
-
 
 label v12s7_ryan1:
     $ v12s7_ryan = True
@@ -2663,7 +2665,6 @@ label v12s7_imre_kill:
 
     call screen v12s7_foyer
 
-
 label v12s7_lindsey_charlie1:
     $ v12s7_lindsey = True
     $ v12s7_seenList = [lindsey, charli]
@@ -2818,7 +2819,6 @@ label v12s7_lindsey_charlie1:
             u "Uhh no, just saying what I heard."
 
         "No, nothing":
-            $ addPoint("bf")
             scene v12ferlich2a
             with dissolve
             
@@ -3220,7 +3220,6 @@ label v12s7_lindsey_kill:
 
     call screen v12s7_rear
 
-
 label v12s7_charli2:
     $ v12s7_charli = True
     $ v12s7_seenList = []
@@ -3574,7 +3573,6 @@ label v12s7_ms_rose_kill:
 
     call screen v12s7_seating_front
 
-
 label v12s7_penelope1:
     $ v12s7_penelope = True
     $ v12s7_seenList = []
@@ -3752,7 +3750,6 @@ label v12s7_penelope1:
 
                 u "Hey, would you like me to say something to Mr. Lee about possibly easing up on you."
 
-
                 scene v12ferpen1c # FPP. same 1, new pose, mouth open
                 with dissolve
 
@@ -3850,7 +3847,6 @@ label v12s7_penelope_kill:
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
-
     scene v12ferpen8 # TPP. Show Penelope hugging mc
     with dissolve
 
@@ -3864,7 +3860,7 @@ label v12s7_penelope_kill:
     scene v12ferpen1a
     with dissolve
 
-    pe "Well, now I can relax. Mr. Lee said go to the dining hall if you're killed so that's where I'm going."
+    pe "Well, now I can relax. Mr. Lee said go to the hallway if you're killed so that's where I'm going."
 
     scene v12ferpen1
     with dissolve
@@ -3880,7 +3876,6 @@ label v12s7_penelope_kill:
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_left_walkway_front
-
 
 label v12s7_amber1:
     $ v12s7_amber = True
@@ -3962,7 +3957,6 @@ label v12s7_amber1:
 
     scene v12feram5 # TPP. Show amber sitting on mc's back. mouth open
     with dissolve
-
 
     am "Now I'm gonna ask you again, are you carrying contraband?"
 
@@ -4221,7 +4215,7 @@ label v12s7_riley2:
     scene v12ferrile1a
     with dissolve
 
-    ri "I asked Mr. Lee if we could get hints from the people in the dining hall and he said the only person able to talk to the people in the dining hall for clues is the cook aka Chris. I talked to Chris and he refused to help."
+    ri "I asked Mr. Lee if we could get hints from the people in the hallway and he said the only person able to talk to the people in the hallway for clues is the cook aka Chris. I talked to Chris and he refused to help."
 
     scene v12ferrile1
     with dissolve
@@ -4352,7 +4346,6 @@ label v12s7_riley_kill2:
 
     call screen v12s7_right_gallery_front
 
-
 label v12s7_riley2_amber:
     $ v12s7_riley2 = True
 
@@ -4370,7 +4363,6 @@ label v12s7_riley2_amber:
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
-
 
     scene v12feramb2 # Show riley, from a distance, looking at amber out of shot, mouth closed
     with dissolve
@@ -4434,7 +4426,6 @@ label v12s7_riley2_amber:
 
     ### ERROR: -If MC presses the murder button during this scene he gets caught ###
     ### ERROR: -Back to free roam ###
-
 
 label v12s7_sam_cameron:
     $ v12s7_samantha = True
@@ -4652,7 +4643,6 @@ label v12s7_sam_cameron:
 
     call screen v12s7_seating_front
 
-
 label v12s7_sam2:
     $ v12s7_samantha2 = True
     $ v12s7_seenList = []
@@ -4748,8 +4738,7 @@ label v12s7_sam2:
 
     scene v12fersam1b
     with dissolve
-
-
+    
     u "Well, let's see, novelist, can you pinpoint our murderer?"
 
     scene v12fersam1c
@@ -4904,7 +4893,6 @@ label v12s7_sam2:
     
     call screen v12s7_right_walkway_back
 
-
 label v12s7_samantha_kill:
     hide screen murder_button_overlay
 
@@ -4986,7 +4974,6 @@ label v12s7_samantha_kill:
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_right_walkway_back
-
 
 label v12s7_cameron2:
     $ v12s7_cameron = True
@@ -5118,8 +5105,6 @@ label v12s7_cameron_kill:
 
     call screen v12s7_rear_gallery
 
-
-
 label v12s7_nora1:
     $ v12s7_nora = True
     $ v12s7_seenList = []
@@ -5247,6 +5232,7 @@ label v12s7_nora1:
 
             menu:
                 "Chris cares about you":
+                    $ v12_help_chris += 1
                     $ addPoint("bro")
                     scene v12fernor1b
                     with dissolve
@@ -5353,6 +5339,7 @@ label v12s7_nora1:
 
                 "I'd choose you":
                     $ addPoint("bf")
+                    $ noralikes = True
 
                     scene v12fernor1
                     with dissolve
@@ -5382,8 +5369,6 @@ label v12s7_nora1:
 
                     scene v12fernor1e
                     with dissolve
-
-                    $ noralikes = True
 
                     no "Haha! You aren't wrong. *Chuckles*"
 
@@ -5689,7 +5674,7 @@ label v12s7_chris_kill:
         scene v12ferchrnoem1b
         with dissolve
 
-    u "*Chuckles* Bro, you gotta go sit in the dining hall."
+    u "*Chuckles* Bro, you gotta go sit in the hallway."
 
     if v12s7_emily and emily not in v12s7_killList:
         scene v12ferchr1c # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
@@ -6088,7 +6073,7 @@ label v12s7_josh_kill:
         scene v12ferjos3bnoau
         with dissolve
 
-    u "Don't then, but act like him as a corpse in the dining hall."
+    u "Don't then, but act like him as a corpse in the hallway."
 
     if not v12s7_aubrey_moved:
         scene v12ferjos3c # FPP. Same 3b, mouth open
@@ -6108,7 +6093,6 @@ label v12s7_josh_kill:
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_utility
-
 
 label v12s7_emily1:
     $ v12s7_emily = True

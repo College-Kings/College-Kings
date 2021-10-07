@@ -11,7 +11,7 @@ label v13s54a:
 
     play music "music/v13/Track Scene 52a.mp3" fadein 2
 
-    scene v13s54_2 # TPP. MC looking up at the ceiling, slight smile, mouth closed
+    scene v13s54a_2 # TPP. MC looking up at the ceiling, slight smile, mouth closed
     with dissolve
 
     u "(Another day of god knows what... *Laughs* Let's get started, shall we?)"

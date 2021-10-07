@@ -1,4 +1,3 @@
-
 label v10_chloe_vs_nora:
 
     scene v10cvn1 #First with Chloe grabbing Nora's shoulders and Nora making an aggressive face,

@@ -8,7 +8,7 @@ label v11_ms_rose_sex:
 
     scene v11ros1 # TPP. Show MC walking thourgh the corridor, he is slightly nervous, mouth closed
     with fade
-    play music "music/v11/Scene 28/Track Scene 28_1.mp3" fadein 2
+    play music "music/V10/Scene 41/Track Scene 41_2.mp3" fadein 2
     pause 0.75
 
     scene v11ros2 # FPP. MC is standing outside Ms Rose's room, he is looking at the door
@@ -106,6 +106,9 @@ label v11_ms_rose_sex_sg:
     with dissolve
 
     pause 1.25
+
+    if config_censored:
+        call screen censoredPopup("v11s28_nsfwSkipLabel1")
 
     scene v11ros5 # TPP. Show Ms Rose removing MC's pants, show her ass appearing from under the bathrobe while she's bending over to remove his pants
     with dissolve
@@ -269,7 +272,7 @@ label v11_ms_rose_sex_sg:
     scene v11ros16 # TPP. Show MC getting out of bed, slight smile, mouth closed, Ms Rose lying down in the bed, mouth closed, neutral expression
     with dissolve
     stop music fadeout 3
-    play music "music/v11/Scene 28/Track Scene 28_3.mp3" fadein 2
+    play music "music/V10/Scene 41/Track Scene 41_2.mp3" fadein 2
     pause 1
 
     scene v11ros17 # TPP. Show MC putting on his pants, Ms Rose sitting down in the bed behind him, still naked, both mouths closed, slight smiles
@@ -296,6 +299,8 @@ label v11_ms_rose_sex_sg:
     with dissolve
 
     pause 1
+
+    label v11s28_nsfwSkipLabel1:
 
     scene v11ros20 # TPP. Show MC slosing the door behind him
     with dissolve

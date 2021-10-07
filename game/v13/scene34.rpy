@@ -289,6 +289,7 @@ label v13s34:
             clipps "Your words mean nothing."
 
         "Push him":
+            $ addPoint("tm")
             scene v13s34_18 # TPP. Show MC pushing Clipps back, MC, angry expression mouth closed, Clipps, serious expression, mouth closed 
             with dissolve
 

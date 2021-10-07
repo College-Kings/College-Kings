@@ -131,7 +131,7 @@ init python:
     Achievement("killing_spree", "Kill enough people to win the game")
     Achievement("mass_casualties", "Kill everyone (including optional characters)")
         #Back to v12
-    Achievement("throw_her_to_the_lions", "Encourage Lindsey to run but then tell Aubrey and Chloe about it")
+    Achievement("thrown_to_the_lions", "Encourage Lindsey to run but then tell Aubrey and Chloe about it")
     Achievement("you_may_kiss_the_bride", "Kiss Nora at the altar")
     Achievement("a_bet_is_a_bet", "Embarrassing Kiwii picture for losing the race")
     Achievement("brotherhood_of_men", "Defend Chris every time as a Wolf")

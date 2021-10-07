@@ -102,6 +102,7 @@ label v13s56:
 
     menu:
         "*Accidently* bump against her":
+            $ addPoint("tm")
             scene v13s56_98 # TPP. MC grinds up against Nora's ass, Nora looks back slightly shocked, mouth open
             with dissolve
 
@@ -141,11 +142,12 @@ label v13s56:
                 no "Yeah... I heard you."
 
         "Be respectful":
-                scene v13s56_99 # FPP. same as v13s56_5 MC looks down at his crotch
-                with dissolve
+            $ addPoint("bro")
+            scene v13s56_99 # FPP. same as v13s56_5 MC looks down at his crotch
+            with dissolve
 
-                $ grant_achievement("calm_down_big_fella")
-                u "(Calm down big fella.)"
+            $ grant_achievement("calm_down_big_fella")
+            u "(Calm down big fella.)"
 
     scene v13s56_5f
     with dissolve

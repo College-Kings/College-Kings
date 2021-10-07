@@ -69,14 +69,14 @@ label v14s06:
     scene v14s06_7c # FPP. Same as v14s06_7, but Imre slightly annoyed
     with dissolve
 
-    u "Look... I’m really sorry for last night. I know you were trying with Ryan and-"
+    u "Look... I'm really sorry for last night. I know you were trying with Ryan and-"
 
     scene v14s06_7d # FPP. Same as v14s06_7c, but Imre mouth open
     with dissolve
 
     imre "[name], Ryan and I are done!"
 
-    imre "I'm trying to stay reserved, but in truth, I want to beat his ass. I’m just not sure if that'll give me the hint of justification I’m looking for."
+    imre "I'm trying to stay reserved, but in truth, I want to beat his ass. I'm just not sure if that'll give me the hint of justification I'm looking for."
 
     scene v14s06_7c
     with dissolve

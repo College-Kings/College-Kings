@@ -43,12 +43,12 @@ label v14s07:
     scene v14s07_3 # FPP. Mc looks to his left and sees aubrey looking at riley with a flirtatious look, mouth open, and riley looking at aubrey with a shocked expression mouth open
     with dissolve
 
-    au "*Whispers* Involved with each other… *Chuckles*"
+    au "*Whispers* Involved with each other... *Chuckles*"
 
     scene v14s07_3a # FPP. same as v14s07_3 aubrey mouth closed
     with dissolve
 
-    ri "*Whispers* Oh my god, Aubrey! Haha, shhh...."
+    ri "*Whispers* Oh my god, Aubrey! Haha, shhh..."
 
     scene v14s07_3b # FPP. same as v14s07_3a riley half smile, mouth closed
     with dissolve
@@ -69,7 +69,7 @@ label v14s07:
         scene v14s07_2b
         with dissolve
 
-        u "(Okay Rose, let’s try to be a little less obvious here.) *Chuckles*"
+        u "(Okay Rose, let's try to be a little less obvious here.) *Chuckles*"
 
         scene v14s07_2c
         with dissolve
@@ -102,7 +102,7 @@ label v14s07:
     ro "I now invite you all to the bus so that we can get on our way to the airport."
 
     scene v14s07_5 # TPP. show Ms. Rose walking towards the hotel lobby front door with mc walking behind her
-    with dissolve    
+    with dissolve 
 
     jump v14s08
 

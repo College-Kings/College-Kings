@@ -3,9 +3,7 @@
 # Characters: MADAME (Outfit: 1), MC (Outfit: 3), Satin (Outfit: 1), Ryan (Outfit: 1), Emerald (Outfit: 1)
 # Time: Night 
 
-
 label v14s03c:
-
     scene v14s03c_1 # TPP. Show MC walking in the Brothel bar, slight smile, mouth open.
     with dissolve
 
@@ -24,7 +22,7 @@ label v14s03c:
     scene v14s03c_3a # FPP. Same as v14s03c_3, Madame slight smile, mouth closed.
     with dissolve
 
-    u "Two of whatever you’ve got back there, please."
+    u "Two of whatever you've got back there, please."
 
     scene v14s03c_3
     with dissolve
@@ -34,7 +32,7 @@ label v14s03c:
     scene v14s03c_3a
     with dissolve
 
-    u "Ha… Right..."
+    u "Ha... Right..."
 
     scene v14s03c_3
     with dissolve
@@ -74,7 +72,7 @@ label v14s03c:
     scene v14s03c_4b # FPP. Same as v14s03c_4a, Satin slightly annoyed, mouth closed.
     with dissolve
 
-    u "Hey… Are you okay?"
+    u "Hey... Are you okay?"
 
     scene v14s03c_4c # FPP. Same as v14s03c_4b, Satin now looking at MC, Satin confused face, mouth open.
     with dissolve
@@ -112,7 +110,7 @@ label v14s03c:
     satin "Nice to meet you, [name]. You seem kind of young to be hanging around in a place like this."
 
     scene v14s03c_4f
-    with dissolve   
+    with dissolve 
 
     u "Good genes. *Chuckles*"
 
@@ -128,7 +126,7 @@ label v14s03c:
 
     u "I came here with two of my buddies, actually."
 
-    u "One is off having a little fun somewhere else, or at least I hope… *Chuckles* And the other is hitting it off with that girl right... there."
+    u "One is off having a little fun somewhere else, or at least I hope... *Chuckles* And the other is hitting it off with that girl right... there."
 
     scene v14s03c_5 # FPP. MC looking off past the bar pointing over at Ryan and Emerald , Ryan and Emerald both slight smile, mouth closed.
     with dissolve
@@ -143,7 +141,7 @@ label v14s03c:
     scene v14s03c_4f
     with dissolve
 
-    u "Ha, uh oh… Why'd you say \"oh\" like that?"
+    u "Ha, uh oh... Why'd you say \"oh\" like that?"
 
     scene v14s03c_4e
     with dissolve
@@ -220,7 +218,7 @@ label v14s03c:
     scene v14s03c_4h
     with dissolve
 
-    satin "I see…"
+    satin "I see..."
 
     satin "What if I gave you an entire hour for free?"
 
@@ -232,7 +230,7 @@ label v14s03c:
     scene v14s03c_4h
     with dissolve
 
-    satin "Okay, first of all, don’t say my name like that again unless you plan on fucking me afterwards."
+    satin "Okay, first of all, don't say my name like that again unless you plan on fucking me afterwards."
 
     scene v14s03c_4i
     with dissolve
@@ -274,7 +272,7 @@ label v14s03c:
     scene v14s03c_4h
     with dissolve
 
-    satin "Either you and I go to the private booth and enjoy it together, or…"
+    satin "Either you and I go to the private booth and enjoy it together, or..."
 
     satin "If you're feeling generous enough, you can let me slide in and help out your virgin friend."
 
@@ -285,7 +283,7 @@ label v14s03c:
             scene v14s03c_4f
             with dissolve
 
-            u "I can't pass up on an opportunity to be with you in a “private booth”. *Chuckles*"
+            u "I can't pass up on an opportunity to be with you in a \"private booth\". *Chuckles*"
 
             scene v14s03c_4j # FPP. Same as v14s03c_4e, Satin slight smile, winking, mouth closed
             with dissolve
@@ -316,7 +314,7 @@ label v14s03c:
             scene v14s03c_5a # FPP. Same as v14s03c_5, Emerald on Ryan's lap, both slight smile, mouth closed.
             with dissolve
 
-            u "*Sighs* As much as I'm gonna regret this…"
+            u "*Sighs* As much as I'm gonna regret this..."
 
             scene v14s03c_4f
             with dissolve

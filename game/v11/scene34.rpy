@@ -6,7 +6,7 @@
 label v11_cardealership:
     scene v11cd1 # TPP. Shows MC and Chloe getting into the car dealership
     with fade
-    play music "music/v11/Scene 34/Track Scene 34_1.mp3" fadein 2
+    play music "music/v11/Scene 3/Track Scene 3.mp3" fadein 2
     pause 0.75
 
     scene v11cd2 # TPP. MC is looking for a car salesman, spotting one, him looking back at them
@@ -178,7 +178,7 @@ label v11_cardealership:
 
     u "Thank you."
     stop music fadeout 3
-    play music "music/v11/Scene 34/Track Scene 34_2.mp3" fadein 2
+    play music "music/V10/Scene 13/Track Scene 13.mp3" fadein 2
     scene v11cd15 # TPP. MC and chloe getting into the car
     with dissolve
 
@@ -536,7 +536,7 @@ label v11_cardealership:
                             else:
                                 pass
 
-                            pause 1.5
+                            pause 2.5
 
                             scene v11cd36 # FPP. MC sets chloe down, mouth closed
                             with dissolve

@@ -280,7 +280,6 @@ label v12_riley_cafe:
             ri "Hehe..."
 
         "I don't think I'd be able to tell":
-            $ addPoint("bf")
             scene v12ric4a
             with dissolve
 
@@ -326,6 +325,7 @@ label v12_riley_cafe:
 
         "Ugh, do we have to?":
             $ addPoint("bro")
+            $ addPoint("tm")
             u "Oh yayyy, another boring treasure hunt."
 
     scene v12ric4a

@@ -615,8 +615,6 @@ label v10_aubrey_house:
                 u "*Laughs* True."
 
         "Say you'll wait":
-            $ addPoint("bf", 1)
-
             scene v10auh2b
             with dissolve
 

@@ -182,7 +182,7 @@ label v8_cl_start:
     scene v8s21 # FPP. Chloe got out of bed and started getting into her casual clothes hurriedly, mouth open
     with dissolve
     cl "*Whispers* Quick! Get dressed."
-    li "Chlooeee? Open up! It's Lindsey!{w} Pleeaasee!"
+    li "Chlooeee? Open up! It's Lindsey! Pleeaasee!"
     cl "Coming, Lindsey!"
 
     scene v8s22d

@@ -26,7 +26,6 @@ label v12_amber_after_spa:
             u "Damn Amber, is that employee merch? *Chuckles*"
 
         "Nice towel":
-            $ addPoint("bf")
             scene v12ams2b # FPP. Same as v12ams2, Amber neutral expression, mouth closed
             with dissolve
 
@@ -142,7 +141,6 @@ label v12_amber_after_spa:
                 jump v12_chris_nora_room
 
             "Don't pull away":
-                $ addPoint("bf")
                 scene v12ams5a # TPP. Same as v12ams5, MC placing his hand on Amber's butt
                 with dissolve
 

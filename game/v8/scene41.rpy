@@ -86,7 +86,6 @@ label walk_home_hosp:
         scene v8sbws4 # TPP. Show MC and Sebastian both looking at eachother, MC serious expression, Sebastian curious expression, Sebastian mouth open.
         with dissolve
 
-
         se "What is it, [name]?"
 
         scene v8sbws5 # FPP. Show Sebastian looking at camera (MC), Sebastian neutral expression, mouth closed.
@@ -178,27 +177,27 @@ label walk_home_hosp:
 
         u "You know..."
 
-        scene v8sbws11a # FPP. Show Sebastian slightly ahead of MC, Sebastian stops and turns behind him to look at camera, Sebastian neutral expression, mouth closed.
+        scene v8sbws11 # FPP. Show Sebastian slightly ahead of MC, Sebastian stops and turns behind him to look at camera, Sebastian neutral expression, mouth closed.
         with dissolve
 
         se "Sup, cub?"
 
-        scene v8sbws11 # FPP. Same camera as v8sbws11, Sebastian neutral expression, mouth open.
+        scene v8sbws11a # FPP. Same camera as v8sbws11, Sebastian neutral expression, mouth open.
         with dissolve
 
         u "Alright, stop calling me a cub! I wasn't scared, alright?"
 
-        scene v8sbws11a
+        scene v8sbws11
         with dissolve
 
         se "Sure."
 
-        scene v8sbws11
+        scene v8sbws11a
         with dissolve
 
         u "It's just... what's with the stupid roof anyway?"
 
-        scene v8sbws11a
+        scene v8sbws11
         with dissolve
 
         se "Someday, you might just find out."
@@ -211,7 +210,7 @@ label walk_home_hosp:
         scene v8sbws13 # FPP. Show Sebastian, camera closer to him as MC now stood closer to him, Sebastian looking at camera, neutral expression, mouth closed.
         with dissolve
 
-        u "I sure hope everything is okay with Marcus' father."
+        u "I sure hope everything is okay with Marcus's father."
 
         scene v8sbws13a # FPP. Same camera as v8sbws13, neutral expression, mouth open.
         with dissolve

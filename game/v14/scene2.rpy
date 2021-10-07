@@ -3,12 +3,11 @@
 # Characters: MC (Outfit: 3), IMRE (Outfit: 2), RYAN (Outfit: 1)
 # Time: Night
 
-
-label v13s02:
+label v14s02:
     scene v13s02_1 # TPP. show mc in the hotel lobby and looking around everywhere, no expression, mouth closed
     with dissolve
 
-    pause 0.75    
+    pause 0.75
 
     scene v13s02_1a # TPP. same as v13s02_1 different angle
     with dissolve
@@ -16,7 +15,7 @@ label v13s02:
     pause 0.75
 
     scene v13s02_1b # TPP. same as v13s02_1a show imre sneaking up on mc, slight smile mouth closed
-    with dissolve    
+    with dissolve
 
     u "(Please don't tell me everyone is gone or asleep.)"
 
@@ -68,7 +67,7 @@ label v13s02:
     scene v13s02_2d # FPP. same as v13s02_2b imre slightly serious
     with dissolve
 
-    imre "We've been hanging out a bit, but we're not friends. I’ve decided I'd at least give the “acquaintance” thing a chance."
+    imre "We've been hanging out a bit, but we're not friends. I've decided I'd at least give the \"acquaintance\" thing a chance."
 
     scene v13s02_2a
     with dissolve
@@ -78,7 +77,7 @@ label v13s02:
     scene v13s02_2e # FPP. same as v13s02_2d imre rolls his eyes
     with dissolve
 
-    imre "Yeah, don’t get too excited. We'll see how long it lasts."
+    imre "Yeah, don't get too excited. We'll see how long it lasts."
 
     scene v13s02_2a
     with dissolve
@@ -103,7 +102,7 @@ label v13s02:
     scene v13s02_2g
     with dissolve
 
-    ry "I don’t know... Did Imre fill you in?"
+    ry "I don't know... Did Imre fill you in?"
 
     scene v13s02_2i # FPP. same as v13s02_2h ryan and imre slight smiles
     with dissolve
@@ -143,6 +142,6 @@ label v13s02:
     scene v13s02_5 # TPP. mc, ryan, and imre seen walking down the sidewalk, all slight smiles, mouths closed, looking straight ahead
     with dissolve
 
-    pause 0.75   
+    pause 0.75
 
     jump v14s03

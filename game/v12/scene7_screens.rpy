@@ -806,7 +806,7 @@ screen v12s7_captains_room():
             idle "images/v12/Scene 7/Screens/Navigation 26c.webp" # No one
             hover "images/v12/Scene 7/Buttons/nav 26c.webp"
 
-            hotspot (339, 983, 1198, 97) action Show("v12s7_left_gallery_front")
+            hotspot (1824, 79, 95, 957) action Show("v12s7_left_gallery_front")
 
         
 

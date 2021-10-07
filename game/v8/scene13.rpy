@@ -281,7 +281,7 @@ label phn_chloe11_done:
 
     scene v8apes34b # Cameron forcing a smile and talking
     with dissolve
-    ca "Of course, yeah.{w} Uh... congrats on getting in. How you enjoying tonig-"
+    ca "Of course, yeah. Uh... congrats on getting in. How you enjoying tonig-"
 
     scene v8apes34c # Same as 34b but mouth closed
     with dissolve
@@ -346,7 +346,7 @@ label phn_chloe11_done:
 
     scene v8apes37b # Cameron talking seriously but with a tinge of sadness
     with dissolve
-    ca "She...{w} she wouldn't wake up. I thought she was..."
+    ca "She... she wouldn't wake up. I thought she was..."
 
     scene v8apes37c # Same as 37b but Cameron mouth closed
     with dissolve

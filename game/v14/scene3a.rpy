@@ -21,7 +21,7 @@ label v14s03a:
 
     pause 0.75
 
-    scene v14s03a_2  # FPP. Night gambler, looking at MC, smiling, mouth closed.
+    scene v14s03a_2 # FPP. Night gambler, looking at MC, smiling, mouth closed.
 
     u "You got some kind of game going on over here?"
 
@@ -69,7 +69,7 @@ label v14s03a:
         
         "Never heard of it":
             scene v14s03a_2
-            with dissolve    
+            with dissolve 
             
             u "I don't believe I have."
 
@@ -108,7 +108,7 @@ label v14s03a:
 
     ngam "Ready to try your luck?"
 
-    menu:   # Play the game 
+    menu: # Play the game 
         "I'll pass":
             scene v14s03a_2e # FPP. Gambler, slightly sad, mouth closed.
             with dissolve
@@ -127,7 +127,7 @@ label v14s03a:
 
             # -The night gambler grabs MC's arm-
 
-            scene v14s03a_5  # TPP. MC turns to walk away from Gambler.
+            scene v14s03a_5 # TPP. MC turns to walk away from Gambler.
             with dissolve
 
             pause 0.75 
@@ -143,25 +143,25 @@ label v14s03a:
             pause 0.75
             
             scene v14s03a_2
-            with dissolve    
+            with dissolve 
 
             ngam "First game no bet, just-"
 
-            # -Imre removes the night gambler's hand from MC’s arm with an aggressive expression-
+            # -Imre removes the night gambler's hand from MC's arm with an aggressive expression-
 
             scene v14s03a_6 # FPP. Imre, mad/angry, removes Gambler's hand from MC, mouth open.
             with dissolve
             
             imre "He said he was good."
 
-            scene v14s03a_7  # FPP. Gamber holding his hand that Imre removed from MC (like its hurt), mad/angry, mouth open
+            scene v14s03a_7 # FPP. Gamber holding his hand that Imre removed from MC (like its hurt), mad/angry, mouth open
             with dissolve
 
             ngam "*Whispers* Filthy kids."
 
             # -MC, Imre and Ryan start walking away toward the brothel-
 
-            scene v14s03a_8  # TPP, same as v14s03a_5, but with Gamble mad/angry, holding his hand that Imre removed from MC.
+            scene v14s03a_8 # TPP, same as v14s03a_5, but with Gamble mad/angry, holding his hand that Imre removed from MC.
             with dissolve
 
             pause 0.75 
@@ -171,10 +171,10 @@ label v14s03a:
 
             pause 0.75 
 
-            scene v14s03a_9  # FPP. Imre, Ryan backs to MC but heads slghtly turned toward MC walking towards brothel, both mouth closed
+            scene v14s03a_9 # FPP. Imre, Ryan backs to MC but heads slghtly turned toward MC walking towards brothel, both mouth closed
             with dissolve
 
-            u "He was… Persistent."
+            u "He was... Persistent."
 
             scene v14s03a_9a # FPP. Same as v14s03a_9, but with Imre, mouth open, Ryan mouth closed, both smiling.
             with dissolve
@@ -201,7 +201,7 @@ label v14s03a:
 
             u "*Chuckles*"
 
-        "Give it a try":  # -If Give it a try
+        "Give it a try": # -If Give it a try
             
             scene v14s03a_2
             with dissolve
@@ -357,7 +357,7 @@ label v14s03a:
             scene v14s03a_2i # FPP. Same as v14s03a_2h, but with mouth closed.
             with dissolve
 
-            u "As a matter of fact, I slept  all damn day “brother man”."
+            u "As a matter of fact, I slept all damn day \"brother man\"."
 
             u "Now tell me, did I or didn't I just see the ball roll out of your sleeve?"
 
@@ -371,7 +371,7 @@ label v14s03a:
 
             imre "Alright, I'm gonna roll this motherfu-."
 
-            scene v14s03a_10  # FPP. Gambler turns and starts to run away from MC, mouth closed.
+            scene v14s03a_10 # FPP. Gambler turns and starts to run away from MC, mouth closed.
             with dissolve
 
             pause 0.75
@@ -392,7 +392,7 @@ label v14s03a:
             pause 0.75
 
             scene v14s03a_11 # FPP. Ryan, smiling, mouth open.
-            with dissolve  
+            with dissolve 
 
             ry "DAMN! *Chuckles*"
 
@@ -409,7 +409,7 @@ label v14s03a:
             scene v14s03a_11a # Same as v14s03a_11, but with Ryan holding Gambler's thick wallet.
             with dissolve
             
-            ry "Well, well, well… What do we have here boys?"
+            ry "Well, well, well... What do we have here boys?"
 
             scene v14s03a_4a
             with dissolve
@@ -518,7 +518,7 @@ label v14s03a:
                     scene v14s03a_4e # FPP. Imre, smiling, mouth closed.
                     with dissolve
 
-                    u "Imre…"
+                    u "Imre..."
 
                     scene v14s03a_4f # FPP. Same as v14s03a_4e, but mouth open.
                     with dissolve
@@ -532,7 +532,7 @@ label v14s03a:
 
             # End wallet choice 
 
-    # End play the game choice  
+    # End play the game choice
 
     scene v14s03a_9
     with dissolve

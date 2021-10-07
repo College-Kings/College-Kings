@@ -240,7 +240,7 @@ label v12_valentine:
     scene v12val15a
     with dissolve
 
-    bishop "Another common mistake. Cupid is the Roman God of love and within Greek mythology, he is the son of Aphrodite who is the God of Love in Greek mythology."
+    bishop "Another common mistake. Cupid is the Roman God of Love and within Greek mythology, he is the son of Aphrodite who is the God of Love in Greek mythology."
 
     scene v12val17a # FPP. Same as v12val17, Lindsey looking at MC, Lindsey slight smile, mouth closed
     with dissolve

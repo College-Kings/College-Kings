@@ -219,8 +219,6 @@ label v12_urban_exploring:
             u "*Laughs*"
         
         "Just watch":
-            $ addPoint("bf")
-
             u "I'm just here to watch, actually... I was more of a monkey bars and seesaw kind of kid. *Laughs*"
 
             scene v12uex4
@@ -344,7 +342,6 @@ label v12_urban_exploring:
 
     menu (fail_label="v12s20_faillabel"):
         "Catch her":
-            $ addPoint("bf")
             scene v12uex12a # TPP Same angle as v12uex12, show MC catching Nora from behind
             with dissolve
 

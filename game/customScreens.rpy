@@ -202,10 +202,10 @@ screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings_
         idle "images/steam/playNow.webp"
         hover "images/steam/playNowHover.webp"
 
-        if achievement.dlc_installed(1624520):
-            action [Function(renpy.quit, relaunch=True, save=True)]
-        elif achievement.is_overlay_enabled():
-            action Function(achievement.activate_overlay_to_web_page, link)
+        if achievement.steam.dlc_installed(1624520):
+            action Function(renpy.quit, relaunch=True, save=True)
+        elif achievement.steam.is_overlay_enabled():
+            action Function(achievement.steam.activate_overlay_to_web_page, link)
         else:
             action OpenURL(link)
         align (0.5, 0.55)
@@ -226,6 +226,38 @@ screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings_
         textbutton "The Team":
             text_style "steam_endScreenTextButton"
             action Show("teamCredits")
+
+
+screen steam_join_discord():
+    tag credits
+    modal True
+    zorder 100
+
+    add "images/steam/end_screen_discord.webp"
+
+    imagebutton:
+        idle "images/discordbutton1.webp"
+        hover "images/discordbutton2.webp"
+        action OpenURL("https://discord.gg/collegekings")
+        align (0.5, 0.65)
+
+    hbox:
+        spacing 50
+        xpos 20
+        yalign 1.0
+
+        textbutton "Main Menu":
+            text_style "steam_endScreenTextButton"
+            action MainMenu()
+
+        textbutton "Credits":
+            text_style "steam_endScreenTextButton"
+            action Jump("gameEnd")
+
+        textbutton "The Team":
+            text_style "steam_endScreenTextButton"
+            action Show("teamCredits")
+
 
 # End Screens
 screen getaccess():
@@ -249,6 +281,7 @@ screen getaccess():
             action Jump("credits")
             yalign 0.5
             text_size 100
+
 
 screen credits():
     tag endScreen
@@ -320,12 +353,12 @@ screen teamCredits():
             text "Mozzart - Lead Artist & Coordinator"
             null height 20
             text "Maro - Marketing Specialist"
+            text "HugeBoiV2 - Transcriber"
+            text "Jeffly - Transcriber"
 
         vbox:
             spacing 10
 
-            text "HugeBoiV2 - Transcriber"
-            text "Jeffly - Transcriber"
             text "MegaManX - Transcriber"
             text "mstep17 - Transcriber"
             text "SystemFailed - Transcriber"

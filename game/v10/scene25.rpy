@@ -137,6 +137,7 @@ label v10_ms_rose_fight:
 
     menu:
         "Insult him":
+            $ addPoint("tm")
             scene v10msf4a # FPP. same camera as v10msf4, Show MS rose, crying mouth closed, FPP now from right infront of door to have conversation with ms rose.
             with dissolve
 
@@ -148,8 +149,6 @@ label v10_ms_rose_fight:
             ro "Tell me about it."
 
         "Comfort her":
-            $ addPoint("bf", 1)
-
             scene v10msf4a 
             with dissolve
 

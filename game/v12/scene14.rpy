@@ -375,7 +375,7 @@ label v12_chloe_cafe:
 
     menu:
         "Tell her about Lindsey":
-            $ addPoint("bf")
+            $ addPoint("tm")
             $ v12_told_chloe = True
 
             u "(I can't keep this from her.) *Sighs* There's something I need to tell you."
@@ -412,7 +412,7 @@ label v12_chloe_cafe:
                 $ v11_lindsey_run = True
             
             if v11_lindsey_run and v11_told_aubrey:
-                $ grant_achievement("throw_her_to_the_lions")
+                $ grant_achievement("thrown_to_the_lions")
             
             u "Good. Now, again, don't quote me. I'm not sure of all the details and I'm not even positive if this is truly her plan, but I heard that Lindsey's been considering running for President of the Chicks, against you."
            
@@ -451,8 +451,6 @@ label v12_chloe_cafe:
             cl "Rather than seeing how she can help she'd rather just take over? No way. This can't be real."
 
         "Don't tell her about Lindsey":
-            $ addPoint("tm")
-            
             u "(No way I'm telling her. She's not hearing that news from me.)"
 
             scene v12chc5n # FPP. Same as v12chc5m, Chloe slightly worried, mouth closed

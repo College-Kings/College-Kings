@@ -211,6 +211,8 @@ label v13_emmy_sex:
 
     emmy "*Chuckles* Don't worry, if anything happens I'll handle it."
 
+    label v13s25_nsfwSkipLabel1:
+
     scene v13s26_1c # FPP. Same as one, emmy putting her clothes back on, mouth opened
     with dissolve
 

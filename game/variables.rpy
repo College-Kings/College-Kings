@@ -274,6 +274,8 @@ default consoledSam = False
 default emilyText = False
 default laurenpt = 0
 default nobeach = False
+default v7_seencrowning = False
+default v7_emily_bowling = False
 
 # 8.0
 default v8AutProtest = False
@@ -438,6 +440,7 @@ default v11_talk_with_emily = False
 default v11_josh_nightclub = False
 default candyLike = 0
 default v11_fucked_candy = False
+default v11_samantha_spa = False
 default v11_aubrey_blue_outfit = False
 default v11_tease_amber = 0
 default v11_manhunt_winner = "Ryan"
@@ -472,6 +475,8 @@ default v11_overtake_points = 0
 default v11_hp_points = 0
 default political_strategist = False
 default v11_smoke_amber_amsterdam = False
+default v11_lauren_ily = False
+default v11_underground_rose = False
 
 # 12.0
 default v12_told_chloe = False
@@ -584,3 +589,7 @@ default v13s40_chestpoint = False
 default v13s40_backpoint = False
 default v13s40_shoulderpoint = False
 default laurenrs_v11aubrey = True
+default v13s40fromgame = False
+
+#14
+default v14s03a_left_cup = False
