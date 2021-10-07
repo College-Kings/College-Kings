@@ -7,14 +7,14 @@ label v13s43:
     scene v13s43_1 # TPP. Show MC in bed, phone buzzing on nightstand, eyes closed, neutral expression, mouth closed
     with dissolve
 
-    pause 0.75
-
     play music "music/v13/Track Scene 43.mp3" fadein 2 
+
+    pause 0.75
 
     scene v13s43_2 # TPP. Show MCs phone ringing, MC in the process of picking it up from nightstand, neutral expression, mouth closed 
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v13s43_3 # TPP. Show MC having phone to his ear while in bed, slight smile, mouth open
     with dissolve

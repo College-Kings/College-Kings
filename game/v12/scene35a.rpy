@@ -355,6 +355,9 @@ label v12_nora_no_sex:
         jump v12_lindsey_lobby
 
 label v12_nora_sex:
+
+        play sound "sounds/kiss.mp3"
+
         scene v12nos15 # TPP. Nora and MC on her bed, kissing
         with dissolve
 
@@ -364,6 +367,8 @@ label v12_nora_sex:
         with dissolve
 
         no "Is this-"
+
+        play sound "sounds/kiss.mp3"
 
         scene v12nos15a # TPP. Same as v12nos15, MC and Nora making out even more intensely
         with dissolve
@@ -389,6 +394,9 @@ label v12_nora_sex:
         with dissolve
 
         no "[name]..."
+        
+        if config_censored:
+            call screen censoredPopup("v12s35a_nsfwSkipLabel1")
 
         scene v12nos19 # TPP. Show MC and Nora taking off their shirts
         with dissolve
@@ -692,6 +700,8 @@ label v12_nora_sex:
             $ grant_achievement("city_of_love")
 
         u "You too..."
+
+        label v12s35a_nsfwSkipLabel1:
 
         scene v12nos9a # TPP. Same as v12nos9, MC smiling, mouth closed
         with dissolve

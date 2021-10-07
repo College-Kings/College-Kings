@@ -348,7 +348,7 @@ label v12_lauren_sex:
             scene v12las22b
             with dissolve
 
-            greeter "My apologies, Madame. If we had an empty table I'd be happy to accommodate you, but unfortunately we do not."
+            greeter "My apologies, Madame. If we had an empty table I'd be happy to accommodate you, but unfortunately we are fully booked for tonight."
 
             scene v12las22c # FPP. Same as v12las22, greeter looking at MC, greeter slight smile, mouth closed
             with dissolve
@@ -878,12 +878,15 @@ label v12_lauren_sex:
                 stop music fadeout 3
                 play music "music/v12/Scene 29/Track Scene 29_8.mp3" fadein 2
 
-                show screen v12s29_lauren_sex_overlay
-
                 scene v12las53 # TPP. Show Lauren removing her dress, MC starting to remove his shirt, both smiling, mouths closed
                 with dissolve
 
                 pause
+
+                if config_censored:
+                    call screen censoredPopup("v12s29_nsfwSkipLabel1")
+
+                show screen v12s29_lauren_sex_overlay
 
                 scene v12las53a # TPP. Same as v12las53, Show Lauren in her panties, stopping MC from removing his shirt, Lauren smiling, mouth open, MC smiling, mouth closed
                 with dissolve
@@ -1122,7 +1125,7 @@ label v12_lauren_sex:
                 scene v12las66 # FPP. MC and Lauren lieing down next to each other, looking at each other, Lauren smiling, mouth open, make her body a bit sweaty if possible
                 with dissolve
 
-                if laurenrs and not chloers and not aubreyrs and not evelynrs and not emilyrs and not rileyrs and not amberrs and not penelopers:
+                if laurenrs and not chloers and not aubreyrs and not evelynrs and not emilyrs and not rileyrs and not amberrs and not penelopers and not msrosers and not lindseyrs and not lindseyfirstkiss and not v11_fucked_candy and not v11_samantha_spa:
                     $ grant_achievement("worth_the_wait")
 
                 $ laurenrs = True
@@ -1168,6 +1171,8 @@ label v12_lauren_sex:
                 with dissolve
 
                 pause
+                
+                label v12s29_nsfwSkipLabel1:
 
                 scene v12las69 # TPP. Show Lauren and MC walking towards the door of the hotel room, both smiling, mouths closed
                 with dissolve

@@ -909,7 +909,6 @@ label v12s7_riley1:
 
     menu:
         "I'm poor":
-            $ addPoint("bf")
             scene v12ferri4a
             with dissolve
 
@@ -932,7 +931,6 @@ label v12s7_riley1:
             ri "*Southern accent* Absurd."
 
         "I'm rich":
-            $ addPoint("bro")
             scene v12ferri4a
             with dissolve
             u "The ways of the rich are quite different from the ways of the poor. You've got guys practicing how to throw balls around with a dream of becoming some sports star as we converse our way to changing the world."
@@ -1169,7 +1167,6 @@ label v12s7_chloe1:
 
     menu:
         "Plan for it":
-            $ addPoint("bf")
             scene v12ferch1c # FPP same 1, new pose, mouth closed
             with dissolve
             
@@ -2822,7 +2819,6 @@ label v12s7_lindsey_charlie1:
             u "Uhh no, just saying what I heard."
 
         "No, nothing":
-            $ addPoint("bf")
             scene v12ferlich2a
             with dissolve
             
@@ -5236,6 +5232,7 @@ label v12s7_nora1:
 
             menu:
                 "Chris cares about you":
+                    $ v12_help_chris += 1
                     $ addPoint("bro")
                     scene v12fernor1b
                     with dissolve
@@ -5342,6 +5339,7 @@ label v12s7_nora1:
 
                 "I'd choose you":
                     $ addPoint("bf")
+                    $ noralikes = True
 
                     scene v12fernor1
                     with dissolve
@@ -5371,8 +5369,6 @@ label v12s7_nora1:
 
                     scene v12fernor1e
                     with dissolve
-
-                    $ noralikes = True
 
                     no "Haha! You aren't wrong. *Chuckles*"
 

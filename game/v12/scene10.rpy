@@ -189,8 +189,6 @@ label v12_amber_bus:
 
     menu:
         "Stay out of it":
-            $ addPoint("bf")
-
             u "It's all your decision, I don't wanna sway you either way. It's gotta be your choice."
 
             scene v12amb3g

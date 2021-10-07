@@ -97,7 +97,7 @@ label v13s24:
 
         "Fuck yeah, let's mingle":
             $ addPoint("bro")
-            if chloegf or laurenrs:
+            if chloegf or (laurenrs and not v11_aubrey_sex):
                 $ addPoint("tm")
 
             scene v13s24_3a

@@ -85,9 +85,9 @@ label v13s49:
     else:
         stop music fadeout 3
         
-        if chloegf:
+        if chloegf and not v11_riley_roomate:
             jump v13s52
-        elif rileyrs:
+        elif rileyrs and v11_riley_roomate:
             jump v13s53
         else:
             jump v13s54

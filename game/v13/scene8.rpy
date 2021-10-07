@@ -313,12 +313,14 @@ label v13s8:
 
     menu:
         "Yeah":
+            $ addPoint("bf")
             scene v13s8_9f
             with dissolve
 
             u "Yeah, I think I'd have to pick Lindsey at the moment."
 
         "I haven't decided yet":
+            $ addPoint("tm")
             scene v13s8_9f
             with dissolve
 

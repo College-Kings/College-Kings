@@ -119,8 +119,6 @@ label v12_ms_rose_sex:
 
         menu:
             "Not tonight":
-                $ addPoint("bf")
-
                 scene v12msr2c
                 with dissolve
 
@@ -259,6 +257,9 @@ label v12_ms_rose_sex:
                 with dissolve
 
                 u "Good... Fucking... God."
+
+                if config_censored:
+                    call screen censoredPopup("v12s23_nsfwSkipLabel1")
 
                 scene v12msr15a # FPP. Same as v12msr15, Ms. Rose topless, seductive look, mouth open
                 with dissolve
@@ -506,10 +507,12 @@ label v12_ms_rose_sex:
                 scene v12msr27b # FPP. Same as v12msr27, screen blurry
                 with dissolve
 
-                u "I'm feeling... Really..."
+                u "I'm feeling... really..."
 
                 stop music fadeout 3
                 play music "music/v12/Scene 23/Track Scene 23_3.mp3" fadein 2
+
+                label v12s23_nsfwSkipLabel1:
 
                 scene black
                 with dissolve

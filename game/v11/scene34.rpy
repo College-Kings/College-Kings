@@ -536,7 +536,7 @@ label v11_cardealership:
                             else:
                                 pass
 
-                            pause 1.5
+                            pause 2.5
 
                             scene v11cd36 # FPP. MC sets chloe down, mouth closed
                             with dissolve

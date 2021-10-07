@@ -4,24 +4,28 @@
 # Time: Night
 
 label v13s54:
-    scene v13s54_1 # TPP. MC walking in corridor, neutral expression, mouth closed
+    #scene v13s54_1 # TPP. MC walking in corridor, neutral expression, mouth closed ###ERROR wrong outfit
+    scene v12pht11
     with dissolve
 
     u "(What will be in store for me tomorrow?)"
 
     play music "music/v13/Track Scene 52.mp3" fadein 2
 
-    scene v13s54_2 # TPP. MC walking into his room, neutral expression, mouth closed
+    #scene v13s54_2 # TPP. MC walking into his room, neutral expression, mouth closed ###ERROR wrong outfit
+    scene v13s5_8
     with dissolve
 
-    pause 0.75
+    pause 0.5
 
-    scene v13s54_3 # TPP. Show MC removing his shirt, only in his boxers, neutral expression, mouth closed
+    #scene v13s54_3 # TPP. Show MC removing his shirt, only in his boxers, neutral expression, mouth closed ###ERROR wrong outfit
+    scene v13s43_9
     with dissolve
 
     u "*Sighs*"
 
-    scene v13s54_4 # TPP. Show MC turning off the lights
+    #scene v13s54_4 # TPP. Show MC turning off the lights ###ERROR wrong outfit
+    scene v13s43_8
     with dissolve
 
     pause 0.75

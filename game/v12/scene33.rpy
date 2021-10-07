@@ -802,7 +802,6 @@ label v12s33_door1:
             u "Haha, alright... Noted."
 
         "Yes, haha":
-            $ addPoint ("bf")
             u "Yes, haha. Who knows what kind of crazy theories you girls may be coming up with?"
 
             scene v12s33_30b
@@ -1382,7 +1381,7 @@ label v12s33_sneak_off2:
             u "My bad, I uhm... got lost."
 
         "Go back to the sauna":
-            $ addPoint ("bf")
+            pass
 
     scene v12s33_49 # TPP shows mc about to walk back into the Sauna (from outside the Sauna) (read the next image description before setting up)
     with fade

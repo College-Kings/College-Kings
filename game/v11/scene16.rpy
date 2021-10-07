@@ -112,6 +112,7 @@ label v11_lauren_airport_convo:
 
                 menu:
                     "Yes":
+                        $ addPoint("tm")
                         $ v11_want_date_aubrey = True
 
                         scene v11laac2e

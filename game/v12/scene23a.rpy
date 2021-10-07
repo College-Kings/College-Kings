@@ -148,6 +148,7 @@ label v12_mc_chilling:
 
         menu:
             "What?":
+                $ addPoint("tm")
                 scene v12mor9
                 with dissolve
 
@@ -164,6 +165,7 @@ label v12_mc_chilling:
                 u "No, Sam. I mean, yeah. Of course you're pretty. I just wasn't expecting that question I guess."
 
             "Yes":
+                $ addPoint("bf")
                 scene v12mor9
                 with dissolve
 
@@ -303,6 +305,7 @@ label v12_mc_chilling:
                 sa "*Drunk* Good... Right answer."
 
             "No":
+                $ addPoint("tm")
                 scene v12mor13a
                 with dissolve
 
@@ -336,6 +339,7 @@ label v12_mc_chilling:
         menu:
             "I can beat Cameron":
                 $ v12s23a_beatcameron = True
+                $ addPoint("tm")
                 
                 scene v12mor13a
                 with dissolve
@@ -343,6 +347,7 @@ label v12_mc_chilling:
                 u "Yeah. Of course I can take him. He may be a lunatic, but I can handle that."
 
             "Not fighting your brother":
+                $ addPoint("bro")
                 scene v12mor13a 
                 with dissolve
                 
@@ -480,6 +485,7 @@ label v12_mc_chilling:
 
         menu:
             "Call Cameron":
+                $ addPoint("bro")
                 $ v12_call_cameron = True
                 scene v12mor23 # TPP. MC holding his phone, mouth closed
                 with dissolve
@@ -573,6 +579,7 @@ label v12_mc_chilling:
                 pause 0.75
 
             "Don't call Cameron":
+                $ addPoint("bf")
                 scene v12mor22
                 with dissolve
 
@@ -657,6 +664,7 @@ label v12_mc_chilling:
 
 
             "No, I don't miss you (Joke)":
+                $ addPoint("tm")
                 scene v12mor24a
                 with dissolve
 
@@ -774,6 +782,7 @@ label v12_mc_chilling:
 
         menu:
             "Call Cameron":
+                $ addPoint("br")
                 $ v12_call_cameron = True
                 scene v12mor24d
                 with dissolve
@@ -864,6 +873,7 @@ label v12_mc_chilling:
                 pause 0.75
 
             "Don't call Cameron":
+                $ addPoint("bf")
                 scene v12mor22
                 with dissolve
 

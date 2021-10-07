@@ -9,25 +9,33 @@ label v13s50a:
     scene v13s50a_1 # TPP Show MC with his hands on Emily's shoulders, pushing her down to her knees
     with dissolve
 
-    pause 0.5
+    if config_censored:
+        call screen censoredPopup("v13s50a_nsfwSkipLabel1")
+
+    pause 1
 
     play music "music/v13/Track Scene 50a.mp3" fadein 2
     
     scene v13s50a_2 # TPP Show MC roughly pulling Emily's shirt off while she gets up to her feet
     with dissolve
 
-    pause 0.5
+    pause 1
 
     scene v13s50a_3 # TPP Show Emily, now naked, pulling down MC's pants while he takes off his shirt
     with dissolve
 
-    pause 0.5
+    pause 1
+    
+    scene v13s50b
+    with dissolve
+    
+    pause
 
     # FPP, Emily down on her knees with MC fucking her face
-    image v13emiff = Movie(play="images/v13/Scene50a/v13emiff.webm", loop=True, image="images/v13/Scene50a/v13emiffStart.webp", start_image="images/v13/Scene50a/v13emiffStart.webp")
-    image v13emifff = Movie(play="images/v13/Scene50a/v13emifff.webm", loop=True, image="images/v13/Scene50a/v13emiffStart.webp", start_image="images/v13/Scene50a/v13emiffStart.webp")
-    image v13emiff2 = Movie(play="images/v13/Scene50a/v13emiff2.webm", loop=True, image="images/v13/Scene50a/v13emiff2Start.webp", start_image="images/v13/Scene50a/v13emiff2Start.webp")
-    image v13emiff2f = Movie(play="images/v13/Scene50a/v13emiff2f.webm", loop=True, image="images/v13/Scene50a/v13emiff2Start.webp", start_image="images/v13/Scene50a/v13emiff2Start.webp")
+    image v13emiff = Movie(play="images/v13/Scene50a/v13emiff.webm", loop=True, image="images/v13/Scene50a/v13s50b.webp", start_image="images/v13/Scene50a/v13s50b.webp")
+    image v13emifff = Movie(play="images/v13/Scene50a/v13emifff.webm", loop=True, image="images/v13/Scene50a/v13s50b.webp", start_image="images/v13/Scene50a/v13s50b.webp")
+    image v13emiff2 = Movie(play="images/v13/Scene50a/v13emiff2.webm", loop=True, image="images/v13/Scene50a/v13s50b2.webp", start_image="images/v13/Scene50a/v13s50b2.webp")
+    image v13emiff2f = Movie(play="images/v13/Scene50a/v13emiff2f.webm", loop=True, image="images/v13/Scene50a/v13s50b2.webp", start_image="images/v13/Scene50a/v13s50b2.webp")
     
     scene v13emiff # MC fucking Emily's face
     with dissolve
@@ -38,6 +46,11 @@ label v13s50a:
     with dissolve
 
     u "This is what you wanted, right?"
+
+    scene v13s50b2
+    with dissolve
+    
+    pause
 
     scene v13emiff2 # Same but faster
     with dissolve
@@ -50,8 +63,12 @@ label v13s50a:
     em "*Gags*"
 
     # FPP, MC grabbing Emily's neck and bending her against the sink as he fucks her
-    image v13s50av2 = Movie(play="images/v13/Scene50a/v13s50av2.webm", loop=True, image="images/v13/Scene50a/v13s50av2Start.webp", start_image="images/v13/Scene50a/v13s50av2Start.webp")
-    image v13s50av2f = Movie(play="images/v13/Scene50a/v13s50av2f.webm", loop=True, image="images/v13/Scene50a/v13s50av2Start.webp", start_image="images/v13/Scene50a/v13s50av2Start.webp")
+    image v13s50av2 = Movie(play="images/v13/Scene50a/v13s50av2.webm", loop=True, image="images/v13/Scene50a/v13s50b3.webp", start_image="images/v13/Scene50a/v13s50b3.webp")
+    image v13s50av2f = Movie(play="images/v13/Scene50a/v13s50av2f.webm", loop=True, image="images/v13/Scene50a/v13s50b3.webp", start_image="images/v13/Scene50a/v13s50b3.webp")
+
+    scene v13s50b3
+    with dissolve
+    pause
 
     scene v13s50av2 # MC fucking Emily against a sink
     with dissolve
@@ -63,12 +80,12 @@ label v13s50a:
     scene v13s50av2f # Same but faster
     with dissolve
 
-    u "Stop... Talking."
+    u "Stop... talking."
 
     scene v13s50a_4 # TPP Show MC turning Emily around to face the sink, his hand on her back, about to bend her over the sink
     with dissolve
 
-    pause 0.5
+    pause
 
     # FPP, MC bends Emily's head down toward the sink and fucks her from behind
     image v13s50av3 = Movie(play="images/v13/Scene50a/v13s50av3.webm", loop=True, image="images/v13/Scene50a/v13s50av3Start.webp", start_image="images/v13/Scene50a/v13s50av3Start.webp")
@@ -89,7 +106,7 @@ label v13s50a:
     scene v13s50a_5 # TPP Show MC pulling Emily toward him, wrapping his arm around her neck
     with dissolve
 
-    pause 0.5
+    pause
 
     # FPP, MC wraps his elbow around Emily's neck and pulls her back into an arch as he continues to fuck her from behind
     image v13s50av4 = Movie(play="images/v13/Scene50a/v13s50av4.webm", loop=True, image="images/v13/Scene50a/v13s50av4Start.webp", start_image="images/v13/Scene50a/v13s50av4Start.webp")
@@ -98,13 +115,12 @@ label v13s50a:
     image v13s50av4bf = Movie(play="images/v13/Scene50a/v13s50av4bf.webm", loop=True, image="images/v13/Scene50a/v13s50av4bStart.webp", start_image="images/v13/Scene50a/v13s50av4bStart.webp")
 
 
-
     scene v13s50av4 # MC fucking Emily from behind with his arm around her neck
     with dissolve
 
     em "*Moans* Ahh! You feel... Better than ever... Mmm, yes!"
 
-    em "Cum inside of me [name]."
+    em "Cum inside of me, [name]."
 
     scene v13s50av4f # Same but faster
     with dissolve
@@ -155,6 +171,8 @@ label v13s50a:
     u "(It's kinda fucked up to just bang her, say that and walk out, but... *Sighs*)"
 
     $ renpy.end_replay()
+
+    label v13s50a_nsfwSkipLabel1:
 
     stop music fadeout 3
     play music "music/v13/Track Scene 50_2.mp3" fadein 2

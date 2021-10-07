@@ -36,6 +36,11 @@ python early:
     if renpy.loadable("scriptv07.rpyc"):
         os.remove(os.path.join(config.basedir, "game", "scriptv07.rpyc"))
 
+    if renpy.loadable("screen.rpy"):
+        os.remove(os.path.join(config.basedir, "game", "screen.rpy"))
+    if renpy.loadable("screen.rpyc"):
+        os.remove(os.path.join(config.basedir, "game", "screen.rpyc"))
+
     if os.path.exists(os.path.join(config.basedir, "game", "v8")):
         try:
             for file in os.listdir(os.path.join(config.basedir, "game", "v0.8")):
@@ -199,6 +204,9 @@ label after_load:
             try: contact.profile_picture
             except AttributeError: contact.profile_picture = "images/phone/messages/profile_pictures/chloeprofilepic.webp"
 
+            try: contact.profilePicture = "images/phone/messages/profile_pictures/chloeprofilepic.webp"
+            except: pass
+
             # Messages
             try:
                 for message in contact.messages:
@@ -316,6 +324,12 @@ label after_load:
 
         try: v7_seencrowning
         except NameError: v7_seencrowning = False
+        try: v7_emily_bowling
+        except NameError: v7_emily_bowling = False
+        try: v11_samantha_spa
+        except NameError: v11_samantha_spa = False
+        try: v11_lauren_ily
+        except NameError: v11_lauren_ily = False
         try: v12_told_chloe
         except NameError: v12_told_chloe = False
         try: v12_kiss_riley

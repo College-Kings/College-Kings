@@ -209,7 +209,7 @@ label v11_airport_arrival:
             ri "Oh hush, quit trying to ruin the fun."
 
         "Be excited":
-            $ addPoint("bf")
+            $ addPoint("bro")
             $ rileyLike += 1
 
             scene v11aira10a
@@ -245,7 +245,7 @@ label v11_airport_arrival:
     scene v11aira11 # FPP. MC is looking behind him, he sees Amber gesticulating at him to come over
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11aira10a
     with dissolve

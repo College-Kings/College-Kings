@@ -76,6 +76,8 @@ label v13s17a:
 
     u "*Chuckles* Sounds like a plan."
 
+    label v13s15a_nsfwSkipLabel1:
+
     scene v13s17a_3 # TPP. Show MC getting out of bed, slight smile, mouth closed
     with dissolve
 

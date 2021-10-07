@@ -346,7 +346,7 @@ label v13s39a:
 
         stop music fadeout 3
 
-        if chloegf:
+        if chloers:
             jump v13s40
         else: 
             jump v13s41
@@ -596,7 +596,7 @@ label v13s39a:
 
         stop music fadeout 3
 
-        if chloegf:
+        if chloers:
             jump v13s40
 
         else: 

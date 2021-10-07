@@ -216,7 +216,6 @@ label v12_nursing_aubrey:
             u "*Chuckles*"
 
         "That's what friends are for":
-            $ addPoint("bro")
             scene v12aun4f
             with dissolve
 

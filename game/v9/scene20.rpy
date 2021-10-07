@@ -30,7 +30,7 @@ label v9_room_fri_aft:
             if s20KiwiiPost.replies:
                 call screen phone
             if s20KiwiiPost.replies:
-                "(I should check Kiwii.)"
+                "(I should reply to that post on Kiwii.)"
                 jump s20_phoneExit1
         jump v9_room_fri_aft_contW
 
@@ -60,7 +60,7 @@ label v9_room_fri_aft:
             if s20KiwiiPost.replies:
                 call screen phone
             if s20KiwiiPost.replies:
-                "(I should check Kiwii.)"
+                "(I should reply to that post on Kiwii)"
                 jump s20_phoneExit2
         jump v9_room_fri_aft_contA
 

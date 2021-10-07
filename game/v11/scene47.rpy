@@ -24,7 +24,10 @@ label v11_walking_back:
 
     play sound "sounds/vibrate.mp3"
 
-    $ contact_Jenny.newImgMessage("images/v11/Scene 47/jennynude.webp", queue=False) # Jenny nude pic (selfie or pic in a mirror)
+    if config_censored:
+        $ contact_Jenny.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
+    else:
+        $ contact_Jenny.newImgMessage("images/v11/Scene 47/jennynude.webp", queue=False) # Jenny nude pic (selfie or pic in a mirror)
     $ contact_Jenny.newMessage("OMG, I'M SO SORRY!", queue=False)
     $ contact_Jenny.newMessage("I DID NOT MEAN TO SEND THAT!", queue=False)
     $ contact_Jenny.addReply("Haha, don't worry about it.")
