@@ -1440,7 +1440,7 @@ label v11_quiz_bonus:
             if contact_Lauren.replies:
                 call screen phone
             if contact_Lauren.replies:
-                u "(I should check my phone.)"
+                u "(I should reply to Lauren.)"
                 jump v11s30_PhoneContinuelauren1
 
     else:
