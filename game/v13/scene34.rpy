@@ -711,7 +711,7 @@ label v13s34:
 
     u "So, wait... You did all of this because she cheated?"
 
-    scene v13s34_36c # FPP. Same as v13s34_36b, laughing expression, mouth open 
+    scene v13s34_36d # FPP. Same as v13s34_36b, laughing expression, mouth open 
     with dissolve
 
     lee "And other reasons. One was to make sure I enjoyed my time in Europe. *Laughs*"
@@ -751,7 +751,7 @@ label v13s34:
 
     u "Wow, I wanna be mad at you but... I'm kinda impressed."
 
-    scene v13s34_36c
+    scene v13s34_36d
     with dissolve
 
     lee "As you should. *Chuckles*"
