@@ -311,4 +311,4 @@ label v14s21:
 
             u "(She's something else. *Chuckles*)"
 
-           jump v14s21b
+            jump v14s21b
