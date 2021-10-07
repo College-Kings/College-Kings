@@ -328,7 +328,7 @@ label v12s7fr:
     scene v12fer1
     with dissolve
 
-    lee "The murderer will kill people by pointing at them with a fake finger gun. If you get killed then quietly make your way to the dining hall. Do not give any hints to any of the players that haven't been killed."
+    lee "The murderer will kill people by pointing at them with a fake finger gun. If you get killed then quietly make your way to the dining hallway. Do not give any hints to any of the players that haven't been killed."
 
     scene v12fer10d
     with dissolve
@@ -3860,7 +3860,7 @@ label v12s7_penelope_kill:
     scene v12ferpen1a
     with dissolve
 
-    pe "Well, now I can relax. Mr. Lee said go to the dining hall if you're killed so that's where I'm going."
+    pe "Well, now I can relax. Mr. Lee said go to the hallway if you're killed so that's where I'm going."
 
     scene v12ferpen1
     with dissolve
@@ -4215,7 +4215,7 @@ label v12s7_riley2:
     scene v12ferrile1a
     with dissolve
 
-    ri "I asked Mr. Lee if we could get hints from the people in the dining hall and he said the only person able to talk to the people in the dining hall for clues is the cook aka Chris. I talked to Chris and he refused to help."
+    ri "I asked Mr. Lee if we could get hints from the people in the hallway and he said the only person able to talk to the people in the hallway for clues is the cook aka Chris. I talked to Chris and he refused to help."
 
     scene v12ferrile1
     with dissolve
@@ -5674,7 +5674,7 @@ label v12s7_chris_kill:
         scene v12ferchrnoem1b
         with dissolve
 
-    u "*Chuckles* Bro, you gotta go sit in the dining hall."
+    u "*Chuckles* Bro, you gotta go sit in the hallway."
 
     if v12s7_emily and emily not in v12s7_killList:
         scene v12ferchr1c # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
@@ -6073,7 +6073,7 @@ label v12s7_josh_kill:
         scene v12ferjos3bnoau
         with dissolve
 
-    u "Don't then, but act like him as a corpse in the dining hall."
+    u "Don't then, but act like him as a corpse in the hallway."
 
     if not v12s7_aubrey_moved:
         scene v12ferjos3c # FPP. Same 3b, mouth open
