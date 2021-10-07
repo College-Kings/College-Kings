@@ -3,9 +3,6 @@
 # Characters: MC (Outfit: 9), CHRIS (Outfit: 2), CHLOE (Outfit: 2)
 # Time: Evening 
 
-default v14s23_agree = False
-default v14s23_disagree = False
-
 label v14s23:
     scene v14s23_1 # TPP. Show MC walking up to the steps of the wolves house and seeing Chris, Chris looking at the sky, Both slight smile, mouth closed.
     with dissolve

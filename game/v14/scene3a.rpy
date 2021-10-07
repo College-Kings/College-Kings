@@ -3,8 +3,6 @@
 # Characters: MC (Outfit: 3), NIGHT GAMBLER (Outfit: x), IMRE (Outfit: 2), RYAN (Outfit: 1)
 # Time: Night
 
-default v14s03a_left_cup = False
-
 label v14s03a:  
     scene v14s03a_1  # TPP. MC with Imre and Ryan right behind him, far away, walking towards the night gambler, MC/Gambler neutral expression, mouth closed,Ryan/Imre, smile, mouth closed
     with dissolve
