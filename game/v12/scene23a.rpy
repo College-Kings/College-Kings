@@ -50,7 +50,6 @@ label v12_mc_chilling:
     u "(I feel like I haven't had any time to just lay back and chill. There's always so-)"
 
     if v11_invite_sam_europe:
-        
         scene v12mor7 # FPP. Samantha bursts into MC's room holding a bottle of alcohol, looking drunk, mouth opened
         with dissolve
 
