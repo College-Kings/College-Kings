@@ -136,7 +136,7 @@ label v14s03e:
         scene v14s03e_6f # FPP. Same as v14s03e_6c, annoyed expression
         with dissolve
 
-        ry "Yeah, yeah. Whatever [name]."
+        ry "Yeah, yeah. Whatever [Name]."
 
         ry "I'll give you a pass this time since nothing happened."
 
@@ -309,9 +309,10 @@ label v14s03e:
 
             u "That's cold as hell Ryan, but... He's on his own with this one."
 
-        "Tell Imre":
-            scene v14s03e_12 # FPP. Same as v14s03e_12, serious expression
+        "Tell Imre"
+            scene v14s03e_12c # FPP. Same as v14s03e_12, serious expression
             with dissolve
+            
             u "Bro, that's fucked up. What if the guy tries to-"
 
             u "Nah... I gotta stop this from happening, Ryan."
@@ -394,7 +395,7 @@ label v14s03e:
     scene v14s03e_20b # FPP. Same as v14s03e_20, serious expression 
     with dissolve
 
-    ry "Ha, alright [name]. Chill out."
+    ry "Ha, alright [Name]. Chill out."
 
     scene v14s03e_21 # TPP. Show MC and Ryan leaving the brothal, both neutral expression, mouth closed 
     with dissolve

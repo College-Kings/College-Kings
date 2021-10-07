@@ -1,6 +1,6 @@
 # SCENE 05: Going to bed - Chloe Roommate
 # Locations: Hotel Room
-# Characters: MC (Outfit: 9, Boxers), CHLOE (Outfit: 5)
+# Characters: MC (Outfit: 3, Boxers), CHLOE (Outfit: 3)
 # Time: Evening 
 
 label v14s05:

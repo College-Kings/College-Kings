@@ -1,0 +1,76 @@
+# SCENE 03: Red Light District With Imre and Ryan
+# Locations: 
+# Characters: IMRE (Outfit: x), MC (Outfit: x), RYAN (Outfit: x)
+# Time: 
+
+
+label v13s03:
+    scene v13s03_1 # TPP. MC Imre and ryan arriving at red light district
+    with dissolve
+    
+    pause 0.75
+
+    scene v13s03_2 # FPP. MC looking at imre, with a big smile on his face, mouth opened
+    with dissolve
+
+    imre "Hell yeah boys! This is my kind of place!"
+
+    scene v13s03_2a # FPP. Same as 2, mouth closed
+    with dissolve
+
+    u "Who would've guessed? *Chuckles*"
+
+    scene v13s03_2b # FPP. MC now looking at ryan, big smile on his face, mouth opened
+    with dissolve
+
+    ry "There's gambling, a brothel, and hoes everywhere!"
+
+    scene v13s03_2c # FPP. Same as 2, imre whispering, mouth opened
+    with dissolve
+
+    imre "*Whispers* Hey! The fuck? Don't say hoes... You gotta show respect to these beautiful creatures."
+
+    scene v13s03_2d # FPP. Same as 2b, ryan whispering, mouth opened
+    with dissolve
+
+    ry "My bad... The ladies of the night!"
+
+    scene v13s03_2
+    with dissolve
+
+    imre "Good deal. I'm only here to get some, but I still show respect."
+
+    scene v13s03_2b
+    with dissolve
+
+    ry "Don't worry bro, I'll help you with that."
+
+    scene v13s03_2
+    with dissolve
+
+    imre "My man!"
+
+    scene v13s03_2e # FPP. Imre and ryan doing a special handshake or fist bump, both smiling (whatever is easier)
+    with dissolve
+
+    pause 0.75
+
+    scene v13s03_3 # FPP. Background change, now looking at a night gambler
+    with dissolve
+
+    u "Who’s that dude over there?"
+
+    scene v13s03_3a # FPP. Imre looking suspeciously, mouth opened
+    with dissolve
+
+    imre "I… Don’t know. Looks sketchy."
+
+    scene v13s03_3b # FPP. Same as 3a, mouth closed
+    with dissolve
+
+    u "Only one way to find out."
+
+    scene v13s03_4 # TPP. MC walking over to the night gambler with imre and ryan right behind him
+    with dissolve
+
+    jump v13s03a
