@@ -173,7 +173,7 @@ label v12_ms_rose_sex:
 
                 pause 0.75
 
-                scene v12msr6 # TPP. Show MC and Ms. Rose getting into the care (Ms. Rose driving), both smiling, mouths closed
+                scene v12msr6 # TPP. Show MC and Ms. Rose getting into the car (Ms. Rose driving), both smiling, mouths closed
                 with dissolve
 
                 pause 0.75
