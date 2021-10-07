@@ -641,6 +641,8 @@ label after_load:
         except NameError: laurenrs_v11aubrey = False
         try: v13s40fromgame
         except NameError: v13s40fromgame = False
+        try: v13_aubrey_vote
+        except NameError: v13_aubrey_vote = "na"
 
 
     show no_hard_feelings at achievementShow

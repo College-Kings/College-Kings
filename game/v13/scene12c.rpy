@@ -342,7 +342,6 @@ label v13s12c:
     menu:
         "Chloe":
             $ v13_aubrey_vote = "Chloe"
-
             scene v13s12c_11e
             with dissolve
 
@@ -354,6 +353,7 @@ label v13s12c:
             u "If people are losing faith in her, they can always just wait until next year. Lindsey included."
 
         "Lindsey":
+            $ v13_aubrey_vote = "Lindsey"
             scene v13s12c_11e
             with dissolve
 
