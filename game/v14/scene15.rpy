@@ -141,6 +141,5 @@ label v14s15:
 
     u "(That man is a whole ass character… But I think he has more than one reason why he’s on Chloe’s side. *Laughs*)"
 
-jump v14s16
-
-
+    jump v14s16
+    
