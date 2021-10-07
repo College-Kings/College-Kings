@@ -660,15 +660,13 @@ label v13s48:
 
             "I meant as a date":
                 $ addPoint ("bf")
-                $ v13s48_canoeing_as_date = True
-
                 scene v13s48_8
                 with dissolve
 
                 u "I meant it as a date."
 
                 if s12v32_get_aubrey_flowers and v13s48_get_aubrey_chocolate:
-
+                    $ v13s48_canoeing_as_date = True
                     au "You've been working overtime trying to \"woo\" me, huh?"
 
                     scene v13s48_8
@@ -679,7 +677,7 @@ label v13s48:
                     scene v13s48_8a
                     with dissolve
 
-                    au "*Chuckles* When are you wanting to have this... Date?"
+                    au "*Chuckles* When are you wanting to have this... date?"
 
                 else:
                     scene v13s48_8a
