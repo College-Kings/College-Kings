@@ -596,3 +596,7 @@ default v14s03a_left_cup = False
 default v14s23_agree = False
 default v14s23_disagree = False
 default v14_emily_ily = False
+default v14s24a_gummyfish = False
+default v14s24a_twezzlers = False
+default v14_amber_clean = False
+default v14_amber_drugs = False
