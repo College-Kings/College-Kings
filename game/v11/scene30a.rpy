@@ -5,8 +5,8 @@
 
 label v11_lauren_apology:
     scene v11laa1 # TPP. MC is walking through the hotel corridor, mouth closed, slightly sad
-    with dissolve
-    play music "music/v11/Scene 30a/Track Scene 30a.mp3" fadein 2
+    with fade
+    play music "music/V10/Scene 40/Track Scene 40_3.mp3" fadein 2
     u "(*Sighs* I should try and talk to Lauren.)"
 
     scene v11laa1a # TPP. Same camera as v11laa1, but MC is now further down the corridor

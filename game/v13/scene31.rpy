@@ -42,7 +42,7 @@ label v13s31:
     nurse "Based on her current state she'll need to stay the night."
 
 # -If didn't invite Sam
-    if not v13_invite_samantha:
+    if v11_invite_sam_europe and not v13_invite_samantha:
         scene v13s31_5a # FPP. Same position as v13s31_5, Nurse looking at MC, annoyed looking, mouth open
         with dissolve
 
@@ -94,7 +94,7 @@ label v13s31:
     u "I agree."
 
     scene v13s31_8 # FPP. MC watches Amber walk off with Lauren, As Amber is walking off, MC thinks to himself
-    with fade
+    with dissolve
 
     u "(Damn, this is crazy.)"
 
@@ -137,7 +137,7 @@ label v13s31:
         u "When she asked to go with Amber and I, I simply said I didn't think it was a good idea due to her history. She took offense and ran off, but I still stand by my decision of not letting her come. I'm sorry."
 
         scene v13s31_10d # FPP. Same positioning as v13s31_10, Cameron slight smile, mouth open
-        with fade
+        with dissolve
 
         ca "You really tried to stop her from getting high, huh?"
 
@@ -163,7 +163,7 @@ label v13s31:
         ca "I'll stop tripping, like, whenever you try talking to her and everything. I don't know how you feel, but I'm pretty sure she likes you. And, I think you're a good person to be around her."
 
         scene v13s31_11 # TPP. MC and Cameron moved down the hallway to isolated area, both neutral expression, both mouth closed
-        with fade
+        with dissolve
 
         pause 1.0
        
@@ -178,7 +178,7 @@ label v13s31:
         ca "This is getting to me, but I'm... I'm holding it together, you know? For her."
 
         scene v13s31_13a # FPP. Same position as v13s31_13, Cameron tears up, sad expression, eyes looking away, mouth open
-        with fade
+        with dissolve
 
         ca "*Whisper* Fuck."
 
@@ -188,7 +188,7 @@ label v13s31:
         u "I'll head back to the hotel, man. Give you some space. Just know, I'm always around for you, bro. Both of you."
 
         scene v13s31_14 # TPP. Show MC and cameron hugging, MC slight smile, mouth closed, Cameron slight smile, mouth closed  
-        with fade
+        with dissolve
 
         pause 0.75
 
@@ -210,7 +210,7 @@ label v13s31:
         scene v13s31_15 # FPP. MC watches Cameron walk away, Camerons back toward MC
         with fade
 
-        pause 0.75
+        pause 1
  
         scene v13s31_16 # TPP. Show MC thinking to himself, puzzeled expression, mouth closed   
         with dissolve

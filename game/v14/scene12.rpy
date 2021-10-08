@@ -34,7 +34,7 @@ label v14s12:
     scene v14s12_3a # TPP. Same as v14s12_3, Julia slight smile, mouth closed.
     with dissolve
 
-    u "Sure was, I’m headed to my room now."
+    u "Sure was, I'm headed to my room now."
 
     scene v14s12_3
     with dissolve
@@ -54,7 +54,7 @@ label v14s12:
     scene v14s12_3a
     with dissolve
 
-    u "Haha. So what’s up?"
+    u "Haha. So what's up?"
 
     scene v14s12_3
     with dissolve
@@ -64,7 +64,7 @@ label v14s12:
     scene v14s12_3a
     with dissolve
 
-    u "Oh… Alright. What's that?"
+    u "Oh... Alright. What's that?"
 
     scene v14s12_3
     with dissolve
@@ -129,12 +129,12 @@ label v14s12:
     scene v14s12_3b
     with dissolve
 
-    ju "Eh… Good call, you can keep it to yourself. *Laughs*"
+    ju "Eh... Good call, you can keep it to yourself. *Laughs*"
 
     scene v14s12_3c
     with dissolve
 
-    u "Haha…"
+    u "Haha..."
 
     u "Well, how long do you think you'll be away?"
 
@@ -151,7 +151,7 @@ label v14s12:
     scene v14s12_3b
     with dissolve
 
-    ju "I will honey. Be safe, and please don’t hesitate to call if you need me... I love you."
+    ju "I will honey. Be safe, and please don't hesitate to call if you need me... I love you."
 
     scene v14s12_3c
     with dissolve
@@ -173,7 +173,7 @@ label v14s12:
     scene v14s12_4 # FPP. MC walking down the side walk looking at the San Vallejo college.
     with dissolve
 
-    u "(Still keeping this job a secret is really suspicious... And having to go to New York of all places is pretty… Odd. Oh, well.)"
+    u "(Still keeping this job a secret is really suspicious... And having to go to New York of all places is pretty... Odd. Oh, well.)"
 
     if joinwolves: 
         scene v14s12_5 # TPP. MC opening the door to the wolves frat house, slight smile, mouth closed.

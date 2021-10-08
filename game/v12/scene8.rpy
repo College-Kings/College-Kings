@@ -182,6 +182,7 @@ label v12_murder_mystery_reveal:
 
     menu:
         "Let Chris help her":
+            $ v12_help_chris += 1
             $ addPoint("bro")
 
             u "(It's his girl, he's got her.)"
@@ -282,10 +283,13 @@ label v12_murder_mystery_reveal:
 
     pause 0.75
 
-    scene v12mmr14 # TPP. Show MC halfway through sitting down on a seat, mouth closed, bored
+    image ferry_arrival = Movie(play="images/v12/Scene 7/animations/Ferry B - To France.webm", loop=False)
+    
+    scene ferry_arrival
     with fade
+    play sound "images/v12/Scene 7/animations/Track Scene - Ferry Ride (5 sec).mp3"
 
-    pause 1.25
+    pause 5
 
     scene v12mmr15 # TPP. Show MC sitting down, sleeping, mouth closed
     with dissolve

@@ -20,7 +20,7 @@ label v11_museum_tour:
     lee "Ahh, the museum. Students, look around, are you not just... enthralled? The past is right here, before you in all its glory. Gaze upon these dinosaurs, students."
 
     lee "Those of us that study history have debated whether the world is actually billions of years old and these are real..."
-    lee "or if it's only thousands of years old and these are just put together parts of a scientist's imagination."
+    lee "Or if it's only thousands of years old and these are just put together parts of a scientist's imagination."
 
     scene v11tm4 # FPP. Same positioning as v11tm2, MC looking at Nora, she is rolling her eyes, mouth closed, slightly annoyed, looking at Mr Lee (Lee out of shot)
     with dissolve
@@ -78,7 +78,7 @@ label v11_museum_tour:
             scene v11tm5b # FPP. Same as v11tm5a, Riley mouth open, slightly annoyed
             with dissolve
 
-            ri "Okay Mr. Scientist."
+            ri "Okay, Mr. Scientist."
     
     scene v11tm3
     with dissolve

@@ -187,7 +187,7 @@ label v8s3_rileyLiftDoggy:
     scene v8ridg3f
     with dissolve
     ri "*Moans loudly*"
-    ri "Harder! Show me your... *moans*{w} best."
+    ri "Harder! Show me your... *moans* best."
     u "Ahh! Get your hands here."
 
 label v8s3_rileyDoggy:
@@ -212,7 +212,7 @@ label v8s3_rileyDoggy:
     u "Did you-"
     ri "Yes! *moans*"
     pause 2
-    ri "Cum in me. I want it.{w} Now!!!"
+    ri "Cum in me. I want it. Now!!!"
     u "You sure?"
     ri "Yes, I'm on the pill."
     pause 5

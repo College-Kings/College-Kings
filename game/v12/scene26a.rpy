@@ -128,6 +128,7 @@ label v12_follow_chris:
     menu:
         "She wasn't overreacting":
             $ addPoint("bf")
+            $ addPoint("tm")
             $ chrismad = True
 
             scene v12chf4a
@@ -212,6 +213,12 @@ label v12_follow_chris:
 
         "You're right":
             $ v12_help_chris += 1
+            if v12_help_chris >= 4:
+                if joinwolves:
+                    $ grant_achievement("brotherhood_of_men")
+                else:
+                    $ grant_achievement("best_frenemies")
+            
             $ addPoint("bro")
             scene v12chf4l # FPP. Same as v12chf4a, different pose
             with dissolve

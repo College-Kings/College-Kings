@@ -485,7 +485,6 @@ label v12s27:
             u "*Chuckles* Okay."
 
         "Sorry, man":
-            $ addPoint ("bf")
             u "I'm sorry man, I know you don't like it but, at least you have a story to tell."
 
             scene v12s27_16

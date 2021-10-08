@@ -602,6 +602,9 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     stop music fadeout 3
     play music "music/v12/Scene 33/Track Scene 33_4.mp3" fadein 2
 
+    if v12s33_door1 and v12s33_door2 and v12s33_door3:
+        jump v12s33_sauna
+
     call screen v12s33_three_doors
 
 label v12s33_door1:
@@ -799,7 +802,6 @@ label v12s33_door1:
             u "Haha, alright... Noted."
 
         "Yes, haha":
-            $ addPoint ("bf")
             u "Yes, haha. Who knows what kind of crazy theories you girls may be coming up with?"
 
             scene v12s33_30b
@@ -1379,7 +1381,7 @@ label v12s33_sneak_off2:
             u "My bad, I uhm... got lost."
 
         "Go back to the sauna":
-            $ addPoint ("bf")
+            pass
 
     scene v12s33_49 # TPP shows mc about to walk back into the Sauna (from outside the Sauna) (read the next image description before setting up)
     with fade

@@ -7,7 +7,7 @@ label v9_ri_sex:
     scene v9ris1 # TPP. Show MC outside Riley's dorm knocking on the door.
     with fade
 
-    play music "music/v9/Scene 34/Track Scene 34_1.mp3" fadein 2
+    play music "music/v9/Scene 12/Track Scene 12_2.mp3" fadein 2
 
     pause 1
 

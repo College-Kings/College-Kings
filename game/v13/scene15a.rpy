@@ -125,6 +125,9 @@ label v13s15a:
 
         u "Yeah?"
 
+        if config_censored:
+            call screen censoredPopup("v13s15a_nsfwSkipLabel1")
+
         scene v13s15a_6g # FPP. Same as v13s15a_6f, Riley sexy look, mouth open
         with dissolve
 
@@ -245,6 +248,9 @@ label v13s15a:
         with dissolve
 
         u "How so?"
+
+        if config_censored:
+            call screen censoredPopup("v13s15a_nsfwSkipLabel1")
 
         scene v13s15a_6j
         with dissolve

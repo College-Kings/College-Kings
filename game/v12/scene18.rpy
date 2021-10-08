@@ -1284,7 +1284,6 @@ label v12s18_fmk:
 
     menu:
         "Marry Nora":
-            $ addPoint("bf")
             scene v12slpfmk5f # FPP. Same as v12slpfmk5c, Nora slight smile, mouth closed
             with dissolve
 

@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 3), RYAN (Outfit: 1), IMRE (Outfit: 2)
 # Time: Night
 
-
 label v14s03e:
     if Ryan_had_Sex: #placeholder 
         scene v14s03e_1 # TPP. Show MC standing outside of room, neutral expression, mouth closed 
@@ -39,12 +38,12 @@ label v14s03e:
         scene v14s03e_3
         with dissolve
 
-        u "Oh, good to hear...."
+        u "Oh, good to hear..."
 
         scene v14s03e_3b # FPP. Same as v14s03e_3, mouth open
         with dissolve
 
-        ry "Damn right it's good! She said I was the best virgin she’s ever had."
+        ry "Damn right it's good! She said I was the best virgin she's ever had."
 
         scene v14s03e_3
         with dissolve
@@ -80,7 +79,7 @@ label v14s03e:
         scene v14s03e_6
         with dissolve
 
-        u "Imre’s not back yet?"
+        u "Imre's not back yet?"
 
         scene v14s03e_6a
         with dissolve
@@ -95,27 +94,27 @@ label v14s03e:
         scene v14s03e_6
         with dissolve
 
-        u "Oh, my bad. *Chuckles* I was, you know… Busy. You weren't?"
+        u "Oh, my bad. *Chuckles* I was, you know... Busy. You weren't?"
 
         scene v14s03e_6a
         with dissolve
 
-        ry "Nope, I decided to wait for my first time to be a little more… Clean."
+        ry "Nope, I decided to wait for my first time to be a little more... Clean."
 
         scene v14s03e_6
         with dissolve
 
-        u "I’m glad you did."
+        u "I'm glad you did."
 
         scene v14s03e_6b
         with dissolve
 
-        ry "Ha… Why are you glad?"
+        ry "Ha... Why are you glad?"
 
         scene v14s03e_6
         with dissolve
 
-        u "That girl you were talking to… She had herpes."
+        u "That girl you were talking to... She had herpes."
 
         scene v14s03e_6c # FPP. Same as v14s03e_6a, angry expression, mouth open 
         with dissolve
@@ -132,7 +131,7 @@ label v14s03e:
 
         u "Sorry bro, I wasn't thinking with my head..."
 
-        u "I was thinking with my… Head. *Chuckles*"
+        u "I was thinking with my... Head. *Chuckles*"
 
         scene v14s03e_6f # FPP. Same as v14s03e_6c, annoyed expression
         with dissolve
@@ -144,17 +143,17 @@ label v14s03e:
         scene v14s03e_6e
         with dissolve
 
-        u "Haha, thanks. I promise next time I’ll-"
+        u "Haha, thanks. I promise next time I'll-"
 
         scene v14s03e_6f
         with dissolve
 
-        ry "You’ll tell me if the chick I’m about to bang is carrying a disease?"
+        ry "You'll tell me if the chick I'm about to bang is carrying a disease?"
 
         scene v14s03e_6
         with dissolve
 
-        u "Yeah… That."
+        u "Yeah... That."
 
     scene v14s03e_7 # TPP. Show Imre walking up to MC and Ryan, Imre, annoyed expression, mouth open, MC and Ryan, both neutral expression, mouth closed
     with dissolve
@@ -214,7 +213,7 @@ label v14s03e:
     scene v14s03e_9a # FPP. Same as v14s03e_9, different posture
     with dissolve
 
-    ry "There's a girl named Ashley here... She’s in booth two, and in my opinion, she's the hottest girl here."
+    ry "There's a girl named Ashley here... She's in booth two, and in my opinion, she's the hottest girl here."
 
     scene v14s03e_9
     with dissolve
@@ -224,7 +223,7 @@ label v14s03e:
     scene v14s03e_8e # FPP. Same as v14s03e_8d, surprised expression
     with dissolve
 
-    imre "*Gasps* Ryan… Bro… Are you serious right now?"
+    imre "*Gasps* Ryan... Bro... Are you serious right now?"
 
     scene v14s03e_9a
     with dissolve
@@ -239,12 +238,12 @@ label v14s03e:
     scene v14s03e_8f # FPP. Same as v14s03e_8d, different posture
     with dissolve
 
-    imre "Guess you’re not so bad after all. *Chuckles*"
+    imre "Guess you're not so bad after all. *Chuckles*"
 
     scene v14s03e_9
     with dissolve
 
-    ry "Haha, yeah… I did try to tell you that."
+    ry "Haha, yeah... I did try to tell you that."
 
     scene v14s03e_10 # FPP. Show Ryan giving Imre money, Ryan slight smile, mouth open, Imre, slight smile, mouth closed
     with dissolve
@@ -266,7 +265,7 @@ label v14s03e:
     scene v14s03e_12 # FPP. Ryan looking at MC, slight smile, mouth closed
     with dissolve
 
-    u "That was… disgustingly nice of you..."
+    u "That was... disgustingly nice of you..."
 
     scene v14s03e_12a # FPP. Same as v14s03e_12, laughing expression, mouth open
     with dissolve
@@ -308,7 +307,7 @@ label v14s03e:
             scene v14s03e_12
             with dissolve
 
-            u "That's cold as hell Ryan, but.. He’s on his own with this one."
+            u "That's cold as hell Ryan, but... He's on his own with this one."
 
         "Tell Imre"
             scene v14s03e_12c # FPP. Same as v14s03e_12, serious expression
@@ -386,12 +385,12 @@ label v14s03e:
     scene v14s03e_20
     with dissolve
 
-    ry "How is weaving every punch he throws, “not cool”?"
+    ry "How is weaving every punch he throws, \"not cool\"?"
 
     scene v14s03e_20a
     with dissolve
 
-    u "*Sighs* That's not what I’m talking about, and you know it."
+    u "*Sighs* That's not what I'm talking about, and you know it."
 
     scene v14s03e_20b # FPP. Same as v14s03e_20, serious expression 
     with dissolve

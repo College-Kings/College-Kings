@@ -74,5 +74,3 @@ label v13s03:
     with dissolve
 
     jump v13s03a
-
-

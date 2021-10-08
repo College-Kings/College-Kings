@@ -75,6 +75,7 @@ label v12_chase_robber:
 
             menu (fail_label="v12s1a_failed_timer"):
                 "Dodge":
+                    $ addPoint("tm")
                     $ v12_fight_win = True
                     scene v12car12 # TPP Show MC dodging robber's punch
                     with dissolve
@@ -309,7 +310,6 @@ label v12_chase_robber:
                 u "Bitch!"
 
             "Walk off":
-                $ addPoint("bf")
                 u "(He's had enough.)"
 
         scene v12car25 # FPP Show Imre, in alley, Imre looks winded, mouth open

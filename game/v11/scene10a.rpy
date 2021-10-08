@@ -101,7 +101,7 @@ label v11_airport_charli:
 
     pause 1
 
-    u "Aubrey'"
+    u "Aubrey?"
 
     scene v11air7a # FPP. same 7 now facing camera, mouth open
     with dissolve

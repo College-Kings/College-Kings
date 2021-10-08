@@ -6,7 +6,7 @@
 label v11_hotel_bar:
     scene v11hob1 # TPP Show MC getting on to a stool at the hotel bar
     with dissolve
-    play music "music/v11/Scene 25/Track Scene 25.mp3" fadein 2
+    play music "music/v11/Scene 5/Track Scene 5_6.mp3" fadein 2
     pause 0.75
 
     scene v11hob2 # FPP Show bartender, mouth open

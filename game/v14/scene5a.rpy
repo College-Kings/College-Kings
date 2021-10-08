@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 3), RILEY (Outfit: 5)
 # Time: Night
 
-
 label v14s05a:
     scene v14s05a_1 # TPP. Show walking into his room, neutral expression, mouth closed
     with dissolve
@@ -19,7 +18,7 @@ label v14s05a:
     scene v14s05a_3a # FPP. Same as v14s05a_3, mouth open
     with dissolve
 
-    ri "Yikes… You sound stressed."
+    ri "Yikes... You sound stressed."
 
     scene v14s05a_3
     with dissolve
@@ -55,12 +54,12 @@ label v14s05a:
         scene v14s05a_7
         with dissolve
 
-        ri "Aubrey and I just felt like you could’ve used a little, pick me up."
+        ri "Aubrey and I just felt like you could've used a little, pick me up."
 
         scene v14s05a_7a
         with dissolve
 
-        u "It definitely picked me up… *Laughs*."
+        u "It definitely picked me up... *Laughs*."
 
         scene v14s05a_7b # FPP. Same as v14s05a_7, different posture
         with dissolve
@@ -89,7 +88,7 @@ label v14s05a:
         scene v14s05a_7
         with dissolve
 
-        ri "Well…"
+        ri "Well..."
 
         scene v14s05a_8 # TPP. Show Riley standing up, slight smile, mouth closed, MC, slight smile, mouth closed
         with dissolve
@@ -224,7 +223,7 @@ label v14s05a:
         scene v14s05a_13a
         with dissolve
 
-        ri "I've been trying to avoid this question, I’m so biased. Who would you pick?"
+        ri "I've been trying to avoid this question, I'm so biased. Who would you pick?"
 
         menu: 
             "Help Chloe":
@@ -242,7 +241,7 @@ label v14s05a:
         scene v14s05a_13b # FPP. Same as v14s05a_13a, Riley having a thoughtful expression
         with dissolve
 
-        ri "Interesting…"
+        ri "Interesting..."
 
         scene v14s05a_13a
         with dissolve

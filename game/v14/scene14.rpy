@@ -15,7 +15,7 @@ label v14s14:
     $ contact_Chloe.newMessage(_("Lindsey and I are NOT friends anymore."))
     play sound "sounds/vibrate.mp3"
 
-    u "Mmm… Huh?"
+    u "Mmm... Huh?"
 
     scene v14s14_2 # TPP. MC sitting up on his bed, confused face, mouth closed.
     with dissolve
@@ -45,7 +45,7 @@ label v14s14:
     scene v14s14_2b # TPP. Same as v14s14_2a, MC putting his phone aways, slight smile, mouth closed.
     with dissolve
 
-    u "(Fuck… What time is it now?)"
+    u "(Fuck... What time is it now?)"
 
     scene v14s14_3 # FPP. MC looking at the clock on his nightstand, Time shows 9:59.
     with dissolve
@@ -62,4 +62,3 @@ label v14s14:
     with dissolve
 
     jump v14s15
-

@@ -207,6 +207,11 @@ label v12_morning_london:
 
     u "What's up?"
 
+    scene v12mol99
+    with dissolve
+
+    pause 0.75
+
     scene v12mol11 # TPP. Show MC opening the door to the hallway, slight smile, mouth closed, Amber on the other side, mouth closed, slight smile
     with dissolve
 

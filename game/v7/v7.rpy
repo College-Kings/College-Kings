@@ -1395,6 +1395,9 @@ label conyourdorm:
         u "(What the hell?)"
 
         label phoneam:
+            if bowling and emilyrs:
+                $ v7_emily_bowling = True
+        
             if contact_Riley.replies:
                 call screen messager(contact_Riley)
             if contact_Riley.replies:
@@ -1664,7 +1667,7 @@ label apologylauren:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
 
@@ -1852,7 +1855,7 @@ label thisbelauren:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
 
@@ -2655,7 +2658,7 @@ label beachlauren:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
 
@@ -6571,7 +6574,7 @@ label hc_asking_amber:
     with fade
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
     scene s919 # Camera - FPP. Amber opens the door and talking with a confused look
@@ -7160,7 +7163,7 @@ label hc_asking_riley:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     scene s958a #mc gets on one knee, holds the glass slipper out in front of him
     with dissolve
@@ -7326,7 +7329,8 @@ label cameron_thurs_tasks:
     scene scc1a # TPP. As above but MC turns his head to look at door.
     with dissolve
 
-    "*Knock knock knock*"
+    pause 1.5
+    
     play sound "sounds/dooropen.mp3"
     scene scc2 # FPP. Show MC door, now open, Cameron stood in threshold, neutral expression.
     with dissolve
@@ -9294,7 +9298,7 @@ label signs_with_autumn:
     with fade
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
 
@@ -9774,7 +9778,8 @@ label amberhocodate:
     scene sfr4am2 #MC arrives at Amber's dorm step. He knocks
     with fade
     play sound "sounds/knock.mp3"
-    "*Knock knock knock*"
+    
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
     scene sfr4am3 #CLOSE UP Amber opens the door, excited mouth open
@@ -10158,7 +10163,7 @@ label chloehocodate:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
     scene sfr4cl3 # close up nora opening the door indifferent in her dress
@@ -10709,7 +10714,7 @@ label emilyhocodate:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
     scene sfr4em3 # close up emily opening the door in her dress smiling
@@ -11148,7 +11153,7 @@ label laurenhocodate:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
     scene sfr4la1 # first personclose up lauren opens the door shy smile
@@ -11522,7 +11527,7 @@ label penelopehocodate:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     scene sfr4pe1a # you no longer knocking
     with dissolve
@@ -11578,7 +11583,7 @@ label penelopehocodate:
 
             play sound "sounds/knock.mp3"
 
-            "*Knock knock knock*"
+            pause 1.5
 
             scene sfr4pe1a
             with dissolve
@@ -12010,7 +12015,7 @@ label rileyhocodate:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
 
@@ -12533,289 +12538,290 @@ label fr4chloedate:
 
     u "*Chuckles* True."
 
-    scene sfr4stage1 # close up ms rose on the stage on the microphone
-    with dissolve
+    if not v7_seencrowning:
+        scene sfr4stage1 # close up ms rose on the stage on the microphone
+        with dissolve
 
-    ro "Ahem. Hello... Hello... Hi!"
+        ro "Ahem. Hello... Hello... Hi!"
 
-    scene sfr4stage1a
-    with dissolve
+        scene sfr4stage1a
+        with dissolve
 
-    pause 0.5
+        pause 0.5
 
-    scene sfr4stage1
-    with dissolve
+        scene sfr4stage1
+        with dissolve
 
-    ro "So it's time for big announcement as you all know... time to announce the homecoming queen and king!"
+        ro "So it's time for big announcement as you all know... time to announce the homecoming queen and king!"
 
-    scene sfr4stage1a
-    with dissolve
+        scene sfr4stage1a
+        with dissolve
 
-    "*Crowd cheers and applauds*"
+        "*Crowd cheers and applauds*"
 
-    scene sfr4stage1
-    with dissolve
+        scene sfr4stage1
+        with dissolve
 
-    ro "And your homecoming king is..."
+        ro "And your homecoming king is..."
 
-    ro "Chris Smith!"
+        ro "Chris Smith!"
 
-    scene sfr4stage2 # chris walks up on stage
-    with dissolve
+        scene sfr4stage2 # chris walks up on stage
+        with dissolve
 
-    "*Crowd cheers and applauds*"
+        "*Crowd cheers and applauds*"
 
-    scene sfr4stage2a # chris on stage looking at the crowd
-    with dissolve
+        scene sfr4stage2a # chris on stage looking at the crowd
+        with dissolve
 
-    ch "Thank you! Thank you!"
+        ch "Thank you! Thank you!"
 
-    scene sfr4stage3 # ms rose puts a crown on chris' head
-    with dissolve
+        scene sfr4stage3 # ms rose puts a crown on chris' head
+        with dissolve
 
-    ro "Congratulations Chris!"
+        ro "Congratulations Chris!"
 
-    scene sfr4stage3a # ms rose turning to the crowd
-    with dissolve
+        scene sfr4stage3a # ms rose turning to the crowd
+        with dissolve
 
-    ro "Next up, your homecoming queen is..."
+        ro "Next up, your homecoming queen is..."
 
-    ro "Chloe Moralez!"
+        ro "Chloe Moralez!"
 
-    "*Crowd cheers and applauds*"
+        "*Crowd cheers and applauds*"
 
-    scene sfr4cl31
-    with dissolve
+        scene sfr4cl31
+        with dissolve
 
-    cl "That's my cue."
+        cl "That's my cue."
 
-    scene sfr4cl31a
-    with dissolve
+        scene sfr4cl31a
+        with dissolve
 
-    u "Go get 'em!"
+        u "Go get 'em!"
 
-    scene sfr4stage4#Chloe runs up on stage
-    with dissolve
+        scene sfr4stage4#Chloe runs up on stage
+        with dissolve
 
-    "*Crowd continues to cheer*"
+        "*Crowd continues to cheer*"
 
-    cl "Thanks guys!"
+        cl "Thanks guys!"
 
-    scene sfr4stage5 #Ms. Rose puts a tiara on her.
-    with dissolve
+        scene sfr4stage5 #Ms. Rose puts a tiara on her.
+        with dissolve
 
-    ro "Congrats Chloe!"
+        ro "Congrats Chloe!"
 
-    scene sfr4stage6 # ms rose turns to the crowd
-    with dissolve
+        scene sfr4stage6 # ms rose turns to the crowd
+        with dissolve
 
-    ro "Let's give it up for Chris and Chloe!!"
+        ro "Let's give it up for Chris and Chloe!!"
 
-    scene sfr4stage7 # chris and chloe hand in hand bow
-    with dissolve
-    "*Crowd cheers and applauds*"
+        scene sfr4stage7 # chris and chloe hand in hand bow
+        with dissolve
+        "*Crowd cheers and applauds*"
 
-    scene sfr4stage6
-    with dissolve
+        scene sfr4stage6
+        with dissolve
 
-    ro "Now it is a tradition that the king and queen dance with each other."
+        ro "Now it is a tradition that the king and queen dance with each other."
 
-    scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
-    with dissolve
+        scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
+        with dissolve
 
-    pause 0.5
+        pause 0.5
 
-    scene sfr4stage9 # showing Chloe and Chris slow dancing together
-    with dissolve
+        scene sfr4stage9 # showing Chloe and Chris slow dancing together
+        with dissolve
 
-    pause 0.5
+        pause 0.5
 
-    u "(Well this is great...)"
+        u "(Well this is great...)"
 
-    scene sfr4cl33 # showing Nora stand arms crossed in the corner
-    with dissolve
+        scene sfr4cl33 # showing Nora stand arms crossed in the corner
+        with dissolve
 
-    u "(Hmm...)"
+        u "(Hmm...)"
 
-    menu:
-        "Ask Nora to dance":
-            scene sfr4cl34 # showing mc walking over to nora
-            with dissolve
-
-            pause 0.5
-
-            scene sfr4cl35 # close up nora looking not at you
-            with dissolve
-
-            u "Hey... you wanna dance?"
-
-            scene sfr4cl35b # close up nora looking at you hesitant
-            with dissolve
-
-            no "Uhm..."
-
-            if not noramad and fr3nora:
-                #If Nora likes you:
-                no "Yeah, why not."
-
-                scene sfr4cl35c
-                with dissolve
-
-                u "Cool."
-
-                scene sfr4cl36 # TPP nora and mc slow dancing, nora slight smile
-                with Dissolve(1)
-
-                no "Guess we can't let our dates have all the fun."
-
-                scene sfr4cl36a
-                with dissolve
-
-                u "Exactly. You having a good night?"
-
-                scene sfr4cl36b # new pose
-                with dissolve
-
-                no "Can't complain, well not too much at least. But you know Chris, Mr. Popular."
-
-                scene sfr4cl36c
-                with dissolve
-
-                u "Well I'm glad you're at least having a good time."
-
-                scene sfr4cl36
-                with dissolve
-
-                no "Haha at least the best I could in this shitty place."
-
-                scene sfr4cl36a
-                with dissolve
-
-                u "Oh come on. It's not that bad."
-
-                scene sfr4cl36b
-                with dissolve
-
-                no "Well it's not hell if that's what you mean."
-
-                scene sfr4cl36c
-                with dissolve
-
-                u "Haha."
-
-                scene sfr4cl37 #Chloe and Chris walk up. they both have their tiara / crown in their hand no longer on their head
-                with dissolve
-
-                ch "You guys having fun?"
-
-                scene sfr4cl38a # close up chris smiling mouth closed
-                with dissolve
-
-                u "Haha yeah, congrats!"
-
-                scene sfr4cl38
-                with dissolve
-
-                ch "Yeah, yeah. Thanks man."
-
-                scene sfr4cl39 # showing chris and nora, chris talking to nora
-                with dissolve
-
-                ch "Wanna get a drink?"
-
-                scene sfr4cl39a
-                with dissolve
-
-                no "Sure."
-
-                scene sfr4cl40 #Chris and Nora walk off.
+        menu:
+            "Ask Nora to dance":
+                scene sfr4cl34 # showing mc walking over to nora
                 with dissolve
 
                 pause 0.5
 
-                scene sfr4cl41 # fpp close up chloe smiling at you
+                scene sfr4cl35 # close up nora looking not at you
                 with dissolve
 
-                cl "Now for that dance?"
+                u "Hey... you wanna dance?"
 
-                scene sfr4cl41a
+                scene sfr4cl35b # close up nora looking at you hesitant
                 with dissolve
 
-                u "Finally, haha."
+                no "Uhm..."
 
-                jump chloe_dance
+                if not noramad and fr3nora:
+                    #If Nora likes you:
+                    no "Yeah, why not."
 
-            elif not noramad:
-                no "I don't really feel like dancing, sorry."
+                    scene sfr4cl35c
+                    with dissolve
 
-                scene sfr4cl35c
-                with dissolve
+                    u "Cool."
 
-                u "Oh, okay."
+                    scene sfr4cl36 # TPP nora and mc slow dancing, nora slight smile
+                    with Dissolve(1)
 
-            else:
-                no "I don't."
+                    no "Guess we can't let our dates have all the fun."
 
-                scene sfr4cl35c
-                with dissolve
+                    scene sfr4cl36a
+                    with dissolve
 
-                u "Uh, okay..."
+                    u "Exactly. You having a good night?"
 
-        "Leave her be":
-            u "(I'll leave her be.)"
+                    scene sfr4cl36b # new pose
+                    with dissolve
 
-label walk_to_ryan:
-    scene sfr4cl42 #MC walks over to Ryan.
-    with dissolve
+                    no "Can't complain, well not too much at least. But you know Chris, Mr. Popular."
 
-    pause 0.5
+                    scene sfr4cl36c
+                    with dissolve
 
-    scene sfr4cl43 # close up ryan djing
-    with dissolve
+                    u "Well I'm glad you're at least having a good time."
 
-    u "Hey, what's up?"
+                    scene sfr4cl36
+                    with dissolve
 
-    scene sfr4cl43b # ryan looking up at you smiling
-    with dissolve
+                    no "Haha at least the best I could in this shitty place."
 
-    ry "Hey."
+                    scene sfr4cl36a
+                    with dissolve
 
-    scene sfr4cl43c
-    with dissolve
+                    u "Oh come on. It's not that bad."
 
-    u "How's the DJing?"
+                    scene sfr4cl36b
+                    with dissolve
 
-    scene sfr4cl43b
-    with dissolve
+                    no "Well it's not hell if that's what you mean."
 
-    ry "It's good, just wish there were more girls coming by, that's kinda why I offered to do it."
+                    scene sfr4cl36c
+                    with dissolve
 
-    scene sfr4cl43c
-    with dissolve
+                    u "Haha."
 
-    u "Haha, I feel you."
+                    scene sfr4cl37 #Chloe and Chris walk up. they both have their tiara / crown in their hand no longer on their head
+                    with dissolve
 
-    scene sfr4cl44 # close up chloe embarrassed smile, tiara in her hand not on her hand
-    with dissolve
+                    ch "You guys having fun?"
 
-    cl "Hey, sorry about that."
+                    scene sfr4cl38a # close up chris smiling mouth closed
+                    with dissolve
 
-    scene sfr4cl44a
-    with dissolve
+                    u "Haha yeah, congrats!"
 
-    u "Congrats!"
+                    scene sfr4cl38
+                    with dissolve
 
-    scene sfr4cl44
-    with dissolve
+                    ch "Yeah, yeah. Thanks man."
 
-    cl "Oh yeah, thanks!"
+                    scene sfr4cl39 # showing chris and nora, chris talking to nora
+                    with dissolve
 
-    cl "Now for that dance?"
+                    ch "Wanna get a drink?"
 
-    scene sfr4cl44a
-    with dissolve
+                    scene sfr4cl39a
+                    with dissolve
 
-    u "Finally, haha."
+                    no "Sure."
+
+                    scene sfr4cl40 #Chris and Nora walk off.
+                    with dissolve
+
+                    pause 0.5
+
+                    scene sfr4cl41 # fpp close up chloe smiling at you
+                    with dissolve
+
+                    cl "Now for that dance?"
+
+                    scene sfr4cl41a
+                    with dissolve
+
+                    u "Finally, haha."
+
+                    jump chloe_dance
+
+                elif not noramad:
+                    no "I don't really feel like dancing, sorry."
+
+                    scene sfr4cl35c
+                    with dissolve
+
+                    u "Oh, okay."
+
+                else:
+                    no "I don't."
+
+                    scene sfr4cl35c
+                    with dissolve
+
+                    u "Uh, okay..."
+
+            "Leave her be":
+                u "(I'll leave her be.)"
+
+        label walk_to_ryan:
+        scene sfr4cl42 #MC walks over to Ryan.
+        with dissolve
+
+        pause 0.5
+
+        scene sfr4cl43 # close up ryan djing
+        with dissolve
+
+        u "Hey, what's up?"
+
+        scene sfr4cl43b # ryan looking up at you smiling
+        with dissolve
+
+        ry "Hey."
+
+        scene sfr4cl43c
+        with dissolve
+
+        u "How's the DJing?"
+
+        scene sfr4cl43b
+        with dissolve
+
+        ry "It's good, just wish there were more girls coming by, that's kinda why I offered to do it."
+
+        scene sfr4cl43c
+        with dissolve
+
+        u "Haha, I feel you."
+
+        scene sfr4cl44 # close up chloe embarrassed smile, tiara in her hand not on her hand
+        with dissolve
+
+        cl "Hey, sorry about that."
+
+        scene sfr4cl44a
+        with dissolve
+
+        u "Congrats!"
+
+        scene sfr4cl44
+        with dissolve
+
+        cl "Oh yeah, thanks!"
+
+        cl "Now for that dance?"
+
+        scene sfr4cl44a
+        with dissolve
+
+        u "Finally, haha."
 
 label chloe_dance:
     play music "music/mlove2.mp3"
@@ -13193,114 +13199,115 @@ label fr4laurendate:
 
     la "Well, I'm glad you're back."
 
-    scene sfr4stage1 # close up ms rose on the stage on the microphone
-    with dissolve
-
-    ro "Ahem. Hello... Hello... Hi!"
-
-    scene sfr4stage1a
-    with dissolve
-
-    pause 0.5
-
-    scene sfr4stage1
-    with dissolve
-
-    ro "So it's time for big announcement as you all know... time to announce the homecoming queen and king!"
-
-    scene sfr4stage1a
-    with dissolve
-
-    "*Crowd cheers and applauds*"
-
-    scene sfr4stage1
-    with dissolve
-
-    ro "And your homecoming king is..."
-
-    ro "Chris Smith!"
-
-    scene sfr4stage2 # chris walks up on stage
-    with dissolve
-
-    "*Crowd cheers and applauds*"
-
-    scene sfr4stage2a # chris on stage looking at the crowd
-    with dissolve
-
-    ch "Thank you! Thank you!"
-
-    scene sfr4stage3 # ms rose puts a crown on chris' head
-    with dissolve
-
-    ro "Congratulations Chris!"
-
-    scene sfr4stage3a # ms rose turning to the crowd
-    with dissolve
-
-    ro "Next up, your homecoming queen is..."
-
-    ro "Chloe Moralez!"
-
-    "*Crowd cheers and applauds*"
-
-    if not chloesad:
-        scene sfr4stage4#Chloe runs up on stage
+    if not v7_seencrowning:
+        scene sfr4stage1 # close up ms rose on the stage on the microphone
         with dissolve
 
-        label fr4laurendatechloe:
-            "*Crowd continues to cheer*"
+        ro "Ahem. Hello... Hello... Hi!"
 
-            cl "Thanks guys!"
+        scene sfr4stage1a
+        with dissolve
 
-            scene sfr4stage5 #Ms. Rose puts a tiara on her.
-            with dissolve
-
-            ro "Congrats Chloe!"
-
-            scene sfr4stage6 # ms rose turns to the crowd
-            with dissolve
-
-            ro "Let's give it up for Chris and Chloe!!"
-
-            scene sfr4stage7 # chris and chloe hand in hand bow
-            with dissolve
-            "*Crowd cheers and applauds*"
-
-            scene sfr4stage6
-            with dissolve
-
-            ro "Now it is a tradition that the king and queen dance with each other."
-
-            scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
-            with dissolve
-
-            pause 0.5
-
-            scene sfr4stage9 # showing Chloe and Chris slow dancing together
-            with dissolve
-
-            pause 0.5
-
-    else:
         pause 0.5
 
-        ro "Chloe?... Chloe?"
-
-        scene sfr4la19b # lauren curious
+        scene sfr4stage1
         with dissolve
 
-        la "That's weird, where is she?"
+        ro "So it's time for big announcement as you all know... time to announce the homecoming queen and king!"
 
-        scene sfr4la19c
+        scene sfr4stage1a
         with dissolve
 
-        u "Who knows."
+        "*Crowd cheers and applauds*"
 
-        scene sfr4stage3a
+        scene sfr4stage1
         with dissolve
 
-        ro "Well, let's just start the dance back up then!"
+        ro "And your homecoming king is..."
+
+        ro "Chris Smith!"
+
+        scene sfr4stage2 # chris walks up on stage
+        with dissolve
+
+        "*Crowd cheers and applauds*"
+
+        scene sfr4stage2a # chris on stage looking at the crowd
+        with dissolve
+
+        ch "Thank you! Thank you!"
+
+        scene sfr4stage3 # ms rose puts a crown on chris' head
+        with dissolve
+
+        ro "Congratulations Chris!"
+
+        scene sfr4stage3a # ms rose turning to the crowd
+        with dissolve
+
+        ro "Next up, your homecoming queen is..."
+
+        ro "Chloe Moralez!"
+
+        "*Crowd cheers and applauds*"
+
+        if not chloesad:
+
+            label fr4laurendatechloe:
+                scene sfr4stage4#Chloe runs up on stage
+                with dissolve
+                "*Crowd continues to cheer*"
+
+                cl "Thanks guys!"
+
+                scene sfr4stage5 #Ms. Rose puts a tiara on her.
+                with dissolve
+
+                ro "Congrats Chloe!"
+
+                scene sfr4stage6 # ms rose turns to the crowd
+                with dissolve
+
+                ro "Let's give it up for Chris and Chloe!!"
+
+                scene sfr4stage7 # chris and chloe hand in hand bow
+                with dissolve
+                "*Crowd cheers and applauds*"
+
+                scene sfr4stage6
+                with dissolve
+
+                ro "Now it is a tradition that the king and queen dance with each other."
+
+                scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
+                with dissolve
+
+                pause 0.5
+
+                scene sfr4stage9 # showing Chloe and Chris slow dancing together
+                with dissolve
+
+                pause 0.5
+
+        else:
+            pause 0.5
+
+            ro "Chloe?... Chloe?"
+
+            scene sfr4la19b # lauren curious
+            with dissolve
+
+            la "That's weird, where is she?"
+
+            scene sfr4la19c
+            with dissolve
+
+            u "Who knows."
+
+            scene sfr4stage3a
+            with dissolve
+
+            ro "Well, let's just start the dance back up then!"
 
     play music "music/mlove2.mp3"
 
@@ -13438,140 +13445,141 @@ label fr4penelopedate:
 
     pe "Okay, yay." # Hi Steve!
 
-    scene sfr4stage1 # close up ms rose on the stage on the microphone
-    with dissolve
-
-    ro "Ahem. Hello... Hello... Hi!"
-
-    scene sfr4stage1a
-    with dissolve
-
-    pause 0.5
-
-    scene sfr4stage1
-    with dissolve
-
-    ro "So it's time for big announcement as you all know... time to announce the homecoming queen and king!"
-
-    scene sfr4stage1a
-    with dissolve
-
-    "*Crowd cheers and applauds*"
-
-    scene sfr4stage1
-    with dissolve
-
-    ro "And your homecoming king is..."
-
-    ro "Chris Smith!"
-
-    scene sfr4stage2 # chris walks up on stage
-    with dissolve
-
-    "*Crowd cheers and applauds*"
-
-    scene sfr4stage2a # chris on stage looking at the crowd
-    with dissolve
-
-    ch "Thank you! Thank you!"
-
-    scene sfr4stage3 # ms rose puts a crown on chris' head
-    with dissolve
-
-    ro "Congratulations Chris!"
-
-    scene sfr4stage3a # ms rose turning to the crowd
-    with dissolve
-
-    ro "Next up, your homecoming queen is..."
-
-    ro "Chloe Moralez!"
-
-    "*Crowd cheers and applauds*"
-
-    if not chloesad:
-
-        scene sfr4pe14d # penelope looking at the stage
+    if not v7_seencrowning:
+        scene sfr4stage1 # close up ms rose on the stage on the microphone
         with dissolve
 
-        pe "Aw that's good for her! Of course she would win it!"
+        ro "Ahem. Hello... Hello... Hi!"
 
-        scene sfr4pe14b
+        scene sfr4stage1a
         with dissolve
 
-        pe "I could never! I would be so nervous walking up like that."
-
-        scene sfr4pe14c
-        with dissolve
-
-        u "I'm sure you could."
-
-        scene sfr4pe14c
-        with dissolve
-
-        pe "Maybe in a million lifetimes."
-
-        scene sfr4stage4#Chloe runs up on stage
-        with dissolve
-
-        label fr4penelopedatechloe:
-            "*Crowd continues to cheer*"
-
-            cl "Thanks guys!"
-
-            scene sfr4stage5 #Ms. Rose puts a tiara on her.
-            with dissolve
-
-            ro "Congrats Chloe!"
-
-            scene sfr4stage6 # ms rose turns to the crowd
-            with dissolve
-
-            ro "Let's give it up for Chris and Chloe!!"
-
-            scene sfr4stage7 # chris and chloe hand in hand bow
-            with dissolve
-            "*Crowd cheers and applauds*"
-
-            scene sfr4stage6
-            with dissolve
-
-            ro "Now it is a tradition that the king and queen dance with each other."
-
-            scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
-            with dissolve
-
-            pause 0.5
-
-            scene sfr4stage9 # showing Chloe and Chris slow dancing together
-            with dissolve
-
-            pause 0.5
-
-    else:
         pause 0.5
 
-        ro "Chloe?... Chloe?"
-
-        scene sfr4pe14d
+        scene sfr4stage1
         with dissolve
 
-        pe "That's strange! I hope she's alright!"
+        ro "So it's time for big announcement as you all know... time to announce the homecoming queen and king!"
 
-        scene sfr4pe14b
+        scene sfr4stage1a
         with dissolve
 
-        pe "Maybe she was too nervous to come up. Oh my god, I would be too!"
+        "*Crowd cheers and applauds*"
 
-        scene sfr4pe14c
+        scene sfr4stage1
         with dissolve
 
-        u "Yeah, maybe."
+        ro "And your homecoming king is..."
 
-        scene sfr4stage3a
+        ro "Chris Smith!"
+
+        scene sfr4stage2 # chris walks up on stage
         with dissolve
 
-        ro "Well, let's just start the dance back up then!"
+        "*Crowd cheers and applauds*"
+
+        scene sfr4stage2a # chris on stage looking at the crowd
+        with dissolve
+
+        ch "Thank you! Thank you!"
+
+        scene sfr4stage3 # ms rose puts a crown on chris' head
+        with dissolve
+
+        ro "Congratulations Chris!"
+
+        scene sfr4stage3a # ms rose turning to the crowd
+        with dissolve
+
+        ro "Next up, your homecoming queen is..."
+
+        ro "Chloe Moralez!"
+
+        "*Crowd cheers and applauds*"
+
+        if not chloesad:
+
+            scene sfr4pe14d # penelope looking at the stage
+            with dissolve
+
+            pe "Aw that's good for her! Of course she would win it!"
+
+            scene sfr4pe14b
+            with dissolve
+
+            pe "I could never! I would be so nervous walking up like that."
+
+            scene sfr4pe14c
+            with dissolve
+
+            u "I'm sure you could."
+
+            scene sfr4pe14c
+            with dissolve
+
+            pe "Maybe in a million lifetimes."
+
+            label fr4penelopedatechloe:
+                scene sfr4stage4
+                with dissolve
+
+                "*Crowd continues to cheer*"
+
+                cl "Thanks guys!"
+
+                scene sfr4stage5 #Ms. Rose puts a tiara on her.
+                with dissolve
+
+                ro "Congrats Chloe!"
+
+                scene sfr4stage6 # ms rose turns to the crowd
+                with dissolve
+
+                ro "Let's give it up for Chris and Chloe!!"
+
+                scene sfr4stage7 # chris and chloe hand in hand bow
+                with dissolve
+                "*Crowd cheers and applauds*"
+
+                scene sfr4stage6
+                with dissolve
+
+                ro "Now it is a tradition that the king and queen dance with each other."
+
+                scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
+                with dissolve
+
+                pause 0.5
+
+                scene sfr4stage9 # showing Chloe and Chris slow dancing together
+                with dissolve
+
+                pause 0.5
+
+        else:
+            pause 0.5
+
+            ro "Chloe?... Chloe?"
+
+            scene sfr4pe14d
+            with dissolve
+
+            pe "That's strange! I hope she's alright!"
+
+            scene sfr4pe14b
+            with dissolve
+
+            pe "Maybe she was too nervous to come up. Oh my god, I would be too!"
+
+            scene sfr4pe14c
+            with dissolve
+
+            u "Yeah, maybe."
+
+            scene sfr4stage3a
+            with dissolve
+
+            ro "Well, let's just start the dance back up then!"
 
     play music "music/mlove2.mp3"
 
@@ -13590,12 +13598,12 @@ label fr4penelopedate:
     scene sfr4pe15b # penelope and mc slow dancing pose 2, penelope cute nervous
     with dissolve
 
-    pe "About everything. About going to homecoming with you. I don't know I didn't wanna disappoint you!"
+    pe "About everything. About going to homecoming with you. I don't know... I didn't wanna disappoint you!"
 
     scene sfr4pe15c
     with dissolve
 
-    u "Penelope come on! You could never disappoint me. I asked you for a reason."
+    u "Penelope, come on! You could never disappoint me. I asked you out for a reason."
 
     scene sfr4pe15
     with dissolve
@@ -13961,10 +13969,9 @@ label fr4rileydate:
 
     if not chloesad:
 
-        scene sfr4stage4#Chloe runs up on stage
-        with dissolve
-
         label fr4rileydatechloe:
+            scene sfr4stage4#Chloe runs up on stage
+            with dissolve
 
             "*Crowd continues to cheer*"
 
@@ -14624,6 +14631,7 @@ label fr4aaron2:
 
 
 label fr4riley2:
+
     scene sfr4ri50 # showing riley getting a drink
 
     u "Hey."
@@ -14690,43 +14698,43 @@ label fr4riley2:
     "*Crowd cheers and applauds*"
 
     if not chloesad:
-        scene sfr4stage4#Chloe runs up on stage
-        with dissolve
-
         label fr4alonechloe:
 
-            "*Crowd continues to cheer*"
+            if not v7_seencrowning:
+                scene sfr4stage4#Chloe runs up on stage
+                with dissolve
+                "*Crowd continues to cheer*"
 
-            cl "Thanks guys!"
+                cl "Thanks guys!"
 
-            scene sfr4stage5 #Ms. Rose puts a tiara on her.
-            with dissolve
+                scene sfr4stage5 #Ms. Rose puts a tiara on her.
+                with dissolve
 
-            ro "Congrats Chloe!"
+                ro "Congrats Chloe!"
 
-            scene sfr4stage6 # ms rose turns to the crowd
-            with dissolve
+                scene sfr4stage6 # ms rose turns to the crowd
+                with dissolve
 
-            ro "Let's give it up for Chris and Chloe!!"
+                ro "Let's give it up for Chris and Chloe!!"
 
-            scene sfr4stage7 # chris and chloe hand in hand bow
-            with dissolve
-            "*Crowd cheers and applauds*"
+                scene sfr4stage7 # chris and chloe hand in hand bow
+                with dissolve
+                "*Crowd cheers and applauds*"
 
-            scene sfr4stage6
-            with dissolve
+                scene sfr4stage6
+                with dissolve
 
-            ro "Now it is a tradition that the king and queen dance with each other."
+                ro "Now it is a tradition that the king and queen dance with each other."
 
-            scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
-            with dissolve
+                scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
+                with dissolve
 
-            pause 0.5
+                pause 0.5
 
-            scene sfr4stage9 # showing Chloe and Chris slow dancing together
-            with dissolve
+                scene sfr4stage9 # showing Chloe and Chris slow dancing together
+                with dissolve
 
-            pause 0.5
+                pause 0.5
 
     else:
         pause 0.5
@@ -14762,7 +14770,7 @@ label fr4riley2:
     with dissolve
 
     ri "Well we've been here for a few hours now and it's getting kinda boring."
-
+    $ v7_seencrowning = True
 
     if rileyrs and hcGirl == "alone":
 
@@ -16109,10 +16117,14 @@ label fr4chloe2:
                 with fade
 
                 if hcGirl == "alone":
-                    u "(I guess I'll watch it with someone.)"
+                    if not v7_seencrowning:
+                        u "(I guess I'll watch it with someone.)"
+                        
+                        scene sfr4stage4 #Chloe runs up on stage
+                        with fade
 
-                    scene sfr4stage4 #Chloe runs up on stage
-                    with fade
+                    else:
+                        u "(I guess I'll go back.)"
 
                     jump fr4alonechloe
 
@@ -16455,19 +16467,26 @@ label fr4lockerroomchloe:
 
             cl "You're cute."
 
-            scene sfr4cl52d # chloe lookig at the wall where prom is on the other side
-            with dissolve
+            if not v7_seencrowning:
+                scene sfr4cl52d # chloe lookig at the wall where prom is on the other side
+                with dissolve
 
-            ro "*Muffled* And your homecoming queen is..."
+                ro "*Muffled* And your homecoming queen is..."
 
-            ro "*Muffled* Chloe Moralez!"
+                ro "*Muffled* Chloe Moralez!"
 
-            u "See? Everyone voted for you. The people love you. So forget about all those guys."
+                u "See? Everyone voted for you. The people love you. So forget about all those guys."
 
-            scene sfr4cl52b
-            with dissolve
+                scene sfr4cl52b
+                with dissolve
 
-            cl "I don't know if I can go on stage right now."
+                cl "I don't know if I can go on stage right now."
+                
+            else:
+                scene sfr4cl52b
+                with dissolve
+                
+                cl "I don't know if I can go back right now."
 
             scene sfr4cl52c
             with dissolve
@@ -16495,7 +16514,6 @@ label fr4lockerroomchloe:
 
                     if hcGirl == "alone":
                         u "(I guess I'll watch it with someone.)"
-
                         scene sfr4stage4#Chloe runs up on stage
                         with fade
 
@@ -16580,42 +16598,43 @@ label fr4lockerroomchloe:
 
                         u "You sure?"
 
+                        scene sfr4cl52b
+                        with dissolve
+
+                        cl "Yeah."
+
                         scene sfr4cl52e # chloe gone
                         with fade
 
                         if hcGirl == "alone":
-                            u "(I guess I'll watch it with someone.)"
-
-                            scene sfr4stage4#Chloe runs up on stage
-                            with fade
+                            u "(I guess I'll go back.)"
 
                             jump fr4alonechloe
 
                         elif hcGirl == "riley":
                             u "(I should probably get back to Riley.)"
 
-                            scene sfr4stage4
-                            with fade
-
                             jump fr4rileydatechloe
 
                         elif hcGirl == "lauren":
                             u "(I should probably get back to Lauren.)"
-
-                            scene sfr4stage4
-                            with fade
 
                             jump fr4laurendatechloe
 
                         elif hcGirl == "penelope":
                             u "(I should probably get back to Penelope.)"
 
-                            scene sfr4stage4
-                            with fade
-
                             jump fr4penelopedatechloe
 
+                        elif hcGirl == "emily":
+                            u "(I should probably get back to Emily.)"
+
+                            scene sfr4em20
+                            with fade
+                            jump fr4emilydate
+
                         else:
+                            pause 0.75 
                             jump labelfr4hallwaycorner
 
         else:

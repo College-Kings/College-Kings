@@ -115,6 +115,29 @@ label v12_jc_riley:
 
     u "It's definitely been... something. *Chuckles*"
 
+    if girl == "Emily":
+        scene v12juc3g
+        with dissolve
+        ju "What happened with [girl]?"
+        
+        scene v12juc3d
+        with dissolve
+        u "It's complicated..."    
+   
+    elif not girl == "Riley":
+        scene v12juc3g
+        with dissolve
+        ju "What happened with [girl]? You told me about her last time."
+        
+        scene v12juc3d
+        with dissolve
+        u "It's complicated..."
+
+    elif girl == "Riley":
+        scene v12juc3g
+        with dissolve
+        ju "I remember you telling me about her. This sounds promising."
+
     jump v12_jc_continue
 
 label v12_jc_amber:
@@ -135,6 +158,24 @@ label v12_jc_amber:
 
     u "Haha, don't worry. Amber is harmless... (I think.)"
 
+    if girl == "Emily":
+        scene v12juc3g
+        with dissolve
+        ju "What happened with [girl]?"
+        
+        scene v12juc3d
+        with dissolve
+        u "It's complicated..."    
+   
+    elif not girl == "Amber":
+        scene v12juc3g
+        with dissolve
+        ju "What happened with [girl]? You told me about her last time."
+        
+        scene v12juc3d
+        with dissolve
+        u "It's complicated..."
+
     jump v12_jc_continue
 
 label v12_jc_chloe:
@@ -145,15 +186,47 @@ label v12_jc_chloe:
 
     u "I guess Chloe, her and I have gotten a lot closer. We even test drove a luxury car together."
 
+    if volleyball and girl == "Chloe":
+        scene v12juc3g
+        with dissolve
+        ju "Chloe is the we got the volleyball at the shopping for, right?"
+        
+        scene v12juc3d
+        with dissolve
+        u "That's right!"
+
+    elif girl == "Chloe":
+        scene v12juc3g
+        with dissolve
+        ju "I remember you telling me about her. This sounds promising."
+        
     scene v12juc3g # TPP. Same as v12juc3f, Julia smiling, mouth open
     with dissolve
 
-    ju "As long as that's the only thing she's test driving."
+    ju "As long as that car is the only thing she's test driving."
 
     scene v12juc3f
     with dissolve
 
     u "Yeah, okay. Thanks for that middle school reminder..."
+
+    if girl == "Emily":
+        scene v12juc3g
+        with dissolve
+        ju "What happened with [girl]?"
+        
+        scene v12juc3d
+        with dissolve
+        u "It's complicated..."    
+   
+    elif not girl == "Chloe":
+        scene v12juc3g
+        with dissolve
+        ju "What happened with [girl]? You told me about her last time."
+        
+        scene v12juc3d
+        with dissolve
+        u "It's complicated..."
 
     jump v12_jc_continue
 
@@ -185,6 +258,29 @@ label v12_jc_lauren:
 
     u "I hope so."
 
+    if girl == "Emily":
+        scene v12juc3g
+        with dissolve
+        ju "What happened with [girl]?"
+        
+        scene v12juc3d
+        with dissolve
+        u "It's complicated..."    
+   
+    elif not girl == "Lauren":
+        scene v12juc3g
+        with dissolve
+        ju "What happened with [girl]? You told me about her last time."
+        
+        scene v12juc3d
+        with dissolve
+        u "It's complicated..."
+
+    elif girl == "Lauren":
+        scene v12juc3g
+        with dissolve
+        ju "I remember you telling me about her. This sounds promising."
+
     jump v12_jc_continue
 
 label v12_jc_nora:
@@ -204,6 +300,24 @@ label v12_jc_nora:
     with dissolve
 
     u "I'm sure I can do that."
+
+    if girl == "Emily":
+        scene v12juc3g
+        with dissolve
+        ju "What happened with [girl]?"
+        
+        scene v12juc3d
+        with dissolve
+        u "It's complicated..."    
+   
+    elif not girl == "Nora":
+        scene v12juc3g
+        with dissolve
+        ju "What happened with [girl]? You told me about her last time."
+        
+        scene v12juc3d
+        with dissolve
+        u "It's complicated..."
 
     jump v12_jc_continue
 
@@ -237,6 +351,29 @@ label v12_jc_penelope:
 
     u "She's great, yeah."
 
+    if girl == "Emily":
+        scene v12juc3g
+        with dissolve
+        ju "What happened with [girl]?"
+        
+        scene v12juc3d
+        with dissolve
+        u "It's complicated..."    
+   
+    elif not girl == "Penelope":
+        scene v12juc3g
+        with dissolve
+        ju "What happened with [girl]? You told me about her last time."
+        
+        scene v12juc3d
+        with dissolve
+        u "It's complicated..."
+
+    elif girl == "Penelope":
+        scene v12juc3g
+        with dissolve
+        ju "I remember you telling me about her. This sounds promising."
+
     jump v12_jc_continue
 
 label v12_jc_samantha:
@@ -256,6 +393,24 @@ label v12_jc_samantha:
     with dissolve
 
     u "I'm trying to be. *Chuckles*"
+
+    if girl == "Emily":
+        scene v12juc3g
+        with dissolve
+        ju "What happened with [girl]?"
+        
+        scene v12juc3d
+        with dissolve
+        u "It's complicated..."    
+   
+    elif not girl == "Samantha":
+        scene v12juc3g
+        with dissolve
+        ju "What happened with [girl]? You told me about her last time."
+        
+        scene v12juc3d
+        with dissolve
+        u "It's complicated..."
 
     jump v12_jc_continue
 
@@ -277,6 +432,15 @@ label v12_jc_lindsey:
 
     u "Yeah, she's really sweet."
 
+    if not girl == "Lindsey":
+        scene v12juc3g
+        with dissolve
+        ju "What happened with [girl]? You told me about her last time."
+        
+        scene v12juc3d
+        with dissolve
+        u "It's complicated..."
+
     jump v12_jc_continue
 
 label v12_jc_aubrey:
@@ -286,6 +450,29 @@ label v12_jc_aubrey:
     with dissolve
 
     u "I guess Aubrey. We haven't done too much, but anytime we are together it's something major."
+
+    if girl == "Emily":
+        scene v12juc3g
+        with dissolve
+        ju "What happened with [girl]?"
+        
+        scene v12juc3d
+        with dissolve
+        u "It's complicated..."    
+   
+    elif not girl == "Aubrey":
+        scene v12juc3g
+        with dissolve
+        ju "What happened with [girl]? You told me about her last time."
+        
+        scene v12juc3d
+        with dissolve
+        u "It's complicated..."
+
+    elif girl == "Aubrey":
+        scene v12juc3g
+        with dissolve
+        ju "I remember you telling me about her. This sounds promising."
 
     scene v12juc3g
     with dissolve
@@ -298,7 +485,7 @@ label v12_jc_continue:
     scene v12juc3c
     with dissolve
 
-    ju "I'm so happy to hear you're enjoying all that Europe has to offer and that you're not doing it all alone."
+    ju "Well, I'm so happy to hear you're enjoying all that Europe has to offer and that you're not doing it all alone."
 
     scene v12juc3b
     with dissolve

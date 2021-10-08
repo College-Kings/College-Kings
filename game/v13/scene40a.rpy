@@ -73,4 +73,6 @@ label v13s40a:
 
     stop music fadeout 3
 
+    label v13s40_nsfwSkipLabel1:
+
     jump v13s43

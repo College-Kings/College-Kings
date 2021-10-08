@@ -60,7 +60,7 @@ label v9_thur_room_w_cam_punch:
     $ s15KiwiiPost.newComment("Cameron", "Fuckin' A!", numberLikes=renpy.random.randint(100, 200), queue=False)
     $ s15KiwiiPost.newComment("Riley", "Knew he had it in him!", numberLikes=renpy.random.randint(200, 250), queue=False)
     
-    "(I should check Kiwii.)"
+    "(I should reply to that post on Kiwii.)"
 
     menu:
         "Brag":
@@ -259,7 +259,7 @@ label v9_thur_room_w_cam_no_punch:
         if s15KiwiiPost.replies:
             call screen phone
         if s15KiwiiPost.replies:
-            "(I should check Kiwii.)"
+            "(I should reply to that post on Kiwii.)"
             jump v9_s15_phoneExit_no_Punch
 
     menu:

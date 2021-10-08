@@ -113,7 +113,7 @@ label v11_start:
     scene v11coc12
     with dissolve
 
-    de "And you agree to this manner of representation young lady?"
+    de "And you agree to this manner of representation, young lady?"
 
     scene v11coc15 # TPP. Show Penelope sat down mouth open, slightly nervous, looking at the board's direction
     with dissolve
@@ -562,12 +562,12 @@ label v11_start:
             scene v11coc20a
             with dissolve
 
-            pe "Yes ma'am I understand."
+            pe "Yes ma'am, I understand."
 
             scene v11coc14
             with dissolve
 
-            lee "One second there Dean. Miss Cross, before I ask you this question you understand that lying can result in causing harm to your case, yes?"
+            lee "One second there, Dean. Miss Cross, before I ask you this question you understand that lying can result in causing harm to your case, yes?"
 
             scene v11coc20b # TPP. Same as 20a, Penelope is looking at Mr Lee now
             with dissolve

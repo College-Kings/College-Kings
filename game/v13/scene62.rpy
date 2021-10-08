@@ -96,5 +96,7 @@ label end13:
 
     if renpy.loadable("v14/scene1.rpy"):
         jump v14_start
+    elif config.enable_steam:
+        call screen steam_join_discord
     else:
         jump end_credits

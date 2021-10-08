@@ -6,7 +6,7 @@
 label v11_carriage_ride:
     scene v11car1 # FPP. MC standing in the lobby next to the other students (Charli leaning on the wall, Imre, Lindsey, out of shot), looking at Mr Lee in front of the counter, Mr Lee slight smile, mouth open
     with dissolve
-    play music "music/v11/Scene 40/Track Scene 40.mp3" fadein 2
+    play music "music/V10/Scene 10/Track Scene 10.mp3" fadein 2
     lee "Settle down, everyone... If you haven't yet heard from your fellow students or myself, we have a planned event tonight. An event that I certainly will enjoy, and I believe you all will as well..."
 
     scene v11car2 # FPP. Same positioning as v11car1, MC looking at Imre, Imre looking at Mr Lee's direction, Imre slight grin, mouth open
@@ -163,6 +163,7 @@ label v11_carriage_ride:
 
     menu:
         "Tease":
+            $ addPoint("tm")
             scene v11car4m # FPP. Same as v11car4l, different pose, Lindsey slightly sad, mouth closed
             with dissolve
 
@@ -855,6 +856,7 @@ label v11_carriage_ride:
 
     menu:
         "Tell her about Lindsey":
+            $ addPoint("tm")
             $ v11_told_aubrey = True
 
             scene v11car22c # FPP. Same as v11car22a, different pose, Aubrey curious, mouth closed
