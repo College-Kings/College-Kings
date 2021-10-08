@@ -1,8 +1,10 @@
-define config.enable_steam = True
+define config.enable_steam = False
 define config.developer = False
 define config.console = True
 define config_debug = False
 define config_censored = False
+
+define gui.main_menu_background = "gui/mainMenu/mainMenuBackground.webp"
 
 define config.steam_appid = 1463120
 
