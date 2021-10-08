@@ -408,7 +408,7 @@ label v12s18_bottlespin:
     scene v12slpbs4a
     with dissolve
 
-    u "That's a lot of rules, but I'll try ro remember. *Chuckles*"
+    u "That's a lot of rules, but I'll try to remember. *Chuckles*"
 
     scene v12slpbs3a # FPP. Same as v12slpbs3, Imre slightly annoyed, mouth open
     with dissolve
