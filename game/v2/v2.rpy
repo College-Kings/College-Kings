@@ -1206,7 +1206,7 @@ label meet_lauren2:
                 $ laurenrs = True
                 $ laawk = False
 
-                if kct == "loyal":
+                if not v1_kissLauren:
                     call screen kctPopup
 
                 scene s131 ### Lauren grabbing your hand on the table
