@@ -25,7 +25,6 @@ label v14s27:
         with dissolve    
 
         u "What's up, Emily?"
-        
     else:
         scene v14s27_2a
         with dissolve

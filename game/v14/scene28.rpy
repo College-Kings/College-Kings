@@ -3,6 +3,8 @@
 # Characters: EMILY (Outfit: 1), MC (Outfit: 2)
 # Time: Morning
 
+$ v14_emilyily = False
+
 label v14s28:
     scene v14s28_1 # TPP. Show MC and Emily standing in the Gym Lockerroom (Same room as the Chloe Lockerroom sex scene.), Both nervous smile, mouth closed.
     with dissolve
