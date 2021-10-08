@@ -349,6 +349,7 @@ label v14s23:
         cl "Ugh, asshole! *Chuckles* I’m being serious."
      
         if v14s23_agree:
+            $ v14_full_chris_support = True
             scene v14s23_2c
             with dissolve
 
@@ -415,6 +416,7 @@ label v14s23:
             ch "That's what I'm-"
 
         elif not v14s23_agree:
+            v14_rw_half_chris_support = True
             scene v14s23_2c
             with dissolve
 
@@ -477,216 +479,218 @@ label v14s23:
 
             ch "That's what I'm-"
 
-        elif v14_plushwolf: # Placeholder for choosing the plushie wolf on Planning board
-            scene v14s23_4a
-            with dissolve
+    elif v14_plushwolf: # Placeholder for choosing the plushie wolf on Planning board
+        scene v14s23_4a
+        with dissolve
 
-            cl "I'm glad you asked, hehe…"
+        cl "I'm glad you asked, hehe…"
 
-            cl "After a quick talk with [name], we’ve decided that we're gonna get this really cute plush toy Wolf to pose with."
+        cl "After a quick talk with [name], we’ve decided that we're gonna get this really cute plush toy Wolf to pose with."
 
-            scene v14s23_2c
-            with dissolve
+        scene v14s23_2c
+        with dissolve
 
-            ch "*Laughs* I know you're joking."
+        ch "*Laughs* I know you're joking."
 
-            scene v14s23_4a
-            with dissolve
+        scene v14s23_4a
+        with dissolve
 
-            cl "*Chuckles* I'm serious! I think it'd be cute."
+        cl "*Chuckles* I'm serious! I think it'd be cute."
 
-            scene v14s23_2c
-            with dissolve
+        scene v14s23_2c
+        with dissolve
 
-            ch "I agree, it would be cute. Cute isn't the kind of image I'm trying to have on the Wolves."
+        ch "I agree, it would be cute. Cute isn't the kind of image I'm trying to have on the Wolves."
 
-            scene v14s23_4e # FPP. Same as v14s23_4a, Chloe slight pouty face, mouth open.
-            with dissolve
+        scene v14s23_4e # FPP. Same as v14s23_4a, Chloe slight pouty face, mouth open.
+        with dissolve
 
-            cl "Maybe you’re right…"
+        cl "Maybe you’re right…"
 
-            scene v14s23_4f # FPP. Same as v14s23_4b, Chloe looking at MC with puppy dog eyes and pouty face, mouth closed.
-            with dissolve
+        scene v14s23_4f # FPP. Same as v14s23_4b, Chloe looking at MC with puppy dog eyes and pouty face, mouth closed.
+        with dissolve
 
-            menu:
-                "Agree with Chris.":
-                    $ addPoint("bro")
+        menu:
+            "Agree with Chris.":
+                $ addPoint("bro")
 
-                    scene v14s23_2b
+                scene v14s23_2b
+                with dissolve
+
+                u "Looking back on it now, a plush toy probably wasn't the best idea… but let's be clear, any \"image\" we put out will be the image of supporting Chloe’s campaign."
+
+                u "It’s not really about what the Wolves will look like."
+
+                u "The only thing put on the Wolves is that you're supporting Chloe because you’re respectable and trustworthy, and that's the image you want right?"
+
+                scene v14s23_2a
+                with dissolve
+
+                ch "Okay, damn, you little politician... *Laughs* I’m not all for the idea of it, but if you think that's our best option, I trust you."
+
+                scene v14s23_4a
+                with dissolve
+
+                cl "Financially I think it's best, but I also just think it's extremely adorable."
+
+                scene v14s23_2e
+                with dissolve
+
+                u "*Chuckles*"
+
+                scene v14s23_2c
+                with dissolve
+
+                ch "*Whispers* Adorable… *Chuckles*."
+
+            "Disagree with Chris.":
+                $ v14s23_disagree = True
+                $ addPoint("bf")
+                scene v14s23_2b
+                
+                u "I gotta disagree. Having a real wolf would look like you're pandering to a masculine audience."
+
+                scene v14s23_2a
+                with dissolve
+
+                ch "We're a male fraternity, we're not pandering to a feminine audience."
+
+                scene v14s23_4a
+                with dissolve
+
+                cl "*Chuckles* Oh-"
+
+                cl "Sorry for laughing, honestly. It’s just…"
+
+                cl "I know you're not some fruity fraternity and everyone else knows that too. *Chuckles*"
+
+                scene v14s23_4b
+                with dissolve
+
+                u "*Laughs* I would hope so."
+
+                scene v14s23_4a
+                with dissolve
+
+                cl "This entire photoshoot is for the Chicks to show our support of the Wolves, as we get the same in return."
+
+                cl "I mean… Imagine how cute it'd be seeing all the girls walk around with little wolf plushies."
+
+                scene v14s23_2c
+                with dissolve
+
+                ch "Hmm… You’re not wrong… That’s pretty damn cute. *Chuckles*"
+
+                scene v14s23_2b
+                with dissolve
+
+                u "Good marketing right there. *Chuckles*"
+
+                scene v14s23_2a
+                with dissolve
+
+                ch "Haha, you two are something else, really."
+                
+                if v14s23_agree and v14s23_disagree:
+                    $ v14_pw_half_chris_support
+                    scene v14s23_2c
                     with dissolve
 
-                    u "Looking back on it now, a plush toy probably wasn't the best idea… but let's be clear, any \"image\" we put out will be the image of supporting Chloe’s campaign."
+                    ch "Honestly, I wish we were taken a bit more seriously than posing with toys, but…"
 
-                    u "It’s not really about what the Wolves will look like."
+                    ch "I see the vision you guys have and I support the trust and respect that comes with this alliance. So, this is what I'm gonna do."
 
-                    u "The only thing put on the Wolves is that you're supporting Chloe because you’re respectable and trustworthy, and that's the image you want right?"
-
-                    scene v14s23_2a
-                    with dissolve
-
-                    ch "Okay, damn, you little politician... *Laughs* I’m not all for the idea of it, but if you think that's our best option, I trust you."
+                    ch "I'm gonna back you halfway."
 
                     scene v14s23_4a
                     with dissolve
 
-                    cl "Financially I think it's best, but I also just think it's extremely adorable."
+                    cl "Wait, what?!"
+
+                    scene v14s23_2c
+                    with dissolve
+
+                    ch "Half of everything."
+
+                    ch "The photoshoot, the fee for the wolf, everything. The Wolves have got half of it all."
 
                     scene v14s23_2e
                     with dissolve
 
-                    u "*Chuckles*"
-
-                    scene v14s23_2c
-                    with dissolve
-
-                    ch "*Whispers* Adorable… *Chuckles*."
-
-                "Disagree with Chris.":
-                    $ v14s23_disagree = True
-                    $ addPoint("bf")
-                    scene v14s23_2b
-                    
-                    u "I gotta disagree. Having a real wolf would look like you're pandering to a masculine audience."
-
-                    scene v14s23_2a
-                    with dissolve
-
-                    ch "We're a male fraternity, we're not pandering to a feminine audience."
+                    u "Chris…"
 
                     scene v14s23_4a
                     with dissolve
 
-                    cl "*Chuckles* Oh-"
-
-                    cl "Sorry for laughing, honestly. It’s just…"
-
-                    cl "I know you're not some fruity fraternity and everyone else knows that too. *Chuckles*"
-
-                    scene v14s23_4b
-                    with dissolve
-
-                    u "*Laughs* I would hope so."
-
-                    scene v14s23_4a
-                    with dissolve
-
-                    cl "This entire photoshoot is for the Chicks to show our support of the Wolves, as we get the same in return."
-
-                    cl "I mean… Imagine how cute it'd be seeing all the girls walk around with little wolf plushies."
+                    cl "You're joking..?"
 
                     scene v14s23_2c
                     with dissolve
 
-                    ch "Hmm… You’re not wrong… That’s pretty damn cute. *Chuckles*"
+                    ch "I'm very serious. I like the plan you guys came up with, I like the respect you're giving to the Wolves, and I like you as President."
 
-                    scene v14s23_2b
+                    scene v14s23_5
                     with dissolve
 
-                    u "Good marketing right there. *Chuckles*"
+                    pause 0.75
 
-                    scene v14s23_2a
+                    scene v14s23_5a
                     with dissolve
 
-                    ch "Haha, you two are something else, really."
-                    
-                    if v14s23_agree and v14s23_disagree:
-                        scene v14s23_2c
-                        with dissolve
+                    pause 0.75
 
-                        ch "Honestly, I wish we were taken a bit more seriously than posing with toys, but…"
+                    scene v14s23_4a
+                    with dissolve
 
-                        ch "I see the vision you guys have and I support the trust and respect that comes with this alliance. So, this is what I'm gonna do."
+                    cl "Thank you so much, Chris! This is going to help tremendously."
 
-                        ch "I'm gonna back you halfway."
+                    scene v14s23_2c
+                    with dissolve
 
-                        scene v14s23_4a
-                        with dissolve
-
-                        cl "Wait, what?!"
-
-                        scene v14s23_2c
-                        with dissolve
-
-                        ch "Half of everything."
-
-                        ch "The photoshoot, the fee for the wolf, everything. The Wolves have got half of it all."
-
-                        scene v14s23_2e
-                        with dissolve
-
-                        u "Chris…"
-
-                        scene v14s23_4a
-                        with dissolve
-
-                        cl "You're joking..?"
-
-                        scene v14s23_2c
-                        with dissolve
-
-                        ch "I'm very serious. I like the plan you guys came up with, I like the respect you're giving to the Wolves, and I like you as President."
-
-                        scene v14s23_5
-                        with dissolve
-
-                        pause 0.75
-
-                        scene v14s23_5a
-                        with dissolve
-
-                        pause 0.75
-
-                        scene v14s23_4a
-                        with dissolve
-
-                        cl "Thank you so much, Chris! This is going to help tremendously."
-
-                        scene v14s23_2c
-                        with dissolve
-
-                        ch "That's what I'm-"
+                    ch "That's what I'm-"
                         
-                    else:
-                        scene v14s23_2c
-                        with dissolve
+                else:
+                    $ v14_low_chris_support = True
+                    scene v14s23_2c
+                    with dissolve
 
-                        ch "Overall, I hope you guys know through and through that I'm on board with supporting you and this campaign."
+                    ch "Overall, I hope you guys know through and through that I'm on board with supporting you and this campaign."
 
-                        ch "However, I don't wanna be in a photoshoot with a wolf plushie."
+                    ch "However, I don't wanna be in a photoshoot with a wolf plushie."
 
-                        scene v14s23_2b
-                        with dissolve
+                    scene v14s23_2b
+                    with dissolve
 
-                        u "I’m sorry man we can try to-"
+                    u "I’m sorry man we can try to-"
 
-                        scene v14s23_2c
-                        with dissolve
+                    scene v14s23_2c
+                    with dissolve
 
-                        ch "Don't change the plan because of me, it's really not a bad idea, but I don't wanna do it with you guys."
+                    ch "Don't change the plan because of me, it's really not a bad idea, but I don't wanna do it with you guys."
 
-                        ch "I wish you luck with the campaign of course and I want the best for you, but this isn’t the move for the Wolves or myself."
+                    ch "I wish you luck with the campaign of course and I want the best for you, but this isn’t the move for the Wolves or myself."
 
-                        ch "Maybe something else will come up later on and I can help you out."
+                    ch "Maybe something else will come up later on and I can help you out."
 
-                        scene v14s23_4g # FPP. Same as v14s23_4a, Chloe looking at Chris, Sad expression, mouth open
-                        with dissolve
+                    scene v14s23_4g # FPP. Same as v14s23_4a, Chloe looking at Chris, Sad expression, mouth open
+                    with dissolve
 
-                        cl "*Sighs* I understand... I will make sure it blows up though."
+                    cl "*Sighs* I understand... I will make sure it blows up though."
 
-                        scene v14s23_4a
-                        with dissolve
+                    scene v14s23_4a
+                    with dissolve
 
-                        cl "When the Wolves’ recruiting numbers are doubled next year, you better be thanking me."
+                    cl "When the Wolves’ recruiting numbers are doubled next year, you better be thanking me."
 
-                        scene v14s23_2c
-                        with dissolve
+                    scene v14s23_2c
+                    with dissolve
 
-                        ch "Haha, we'll see."
+                    ch "Haha, we'll see."
 
-                        scene v14s23_4a
-                        with dissolve
+                    scene v14s23_4a
+                    with dissolve
 
-                        cl "*Chuckles* Thanks for talking with me. I know it's-"
+                    cl "*Chuckles* Thanks for talking with me. I know it's-"
 
     play sound "sounds/vibrate.mp3"
 
