@@ -452,6 +452,8 @@ label v14s25:
 
     menu:
         "No more drugs, Amber...":
+            $ addPoint("bf")
+            $ addPoint("bro")
             $ v14_amber_clean = True
             scene v14s25_8k
             with dissolve
@@ -804,13 +806,14 @@ label v14s25:
 
             menu:
                 "Let her stay...":
+                    $ addPoint("tm")
                     u "(Ha, hard as stone on the outside but a softie on the inside.)"
 
                     scene v14s25_17e # TPP. Show MC going back to sleep with his arm around Amber as she lays on him.
                     with dissolve
 
                 "Move away...":
-
+                    $ addPoint("bf")
                     u "*Chuckles* (Sorry, Amber.)"
 
                     scene v14s25_17f # TPP. Show MC and Amber with their backs against each other sleeping.
@@ -819,6 +822,7 @@ label v14s25:
             jump v14s25b
 
         "Let Amber, Be Amber...":
+            $ addPoint("tm")
             $ v14_amber_drugs = True
             scene v14s25_8m
             with dissolve
@@ -944,6 +948,7 @@ label v14s25:
 
             menu:
                 "Fuck Amber...":
+                    $ addPoint("tm")
                     scene v14s25_21a # FPP. Same as v14s25_21, Amber flirtatious smile, mouth closed.
                     with dissolve
 
@@ -952,6 +957,7 @@ label v14s25:
                     jump v14s25a
 
                 "Don't Fuck Amber...": 
+                    $ addPoint("bf")
                     scene v14s25_21a
                     with dissolve
 
@@ -1032,13 +1038,14 @@ label v14s25:
 
                     menu:
                         "Let her stay...":
+                            $ addPoint("tm")
                             u "(Ha, hard as stone on the outside but a softie on the inside.)"
 
                             scene v14s25_17e
                             with dissolve
 
                         "Move away...":
-
+                            $ addPoint("bf")
                             u "*Chuckles* (Sorry, Amber.)"
 
                             scene v14s25_17f
