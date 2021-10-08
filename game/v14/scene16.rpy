@@ -154,6 +154,7 @@ label v14s16:
 
     menu:
         "I'll help...":
+            $ v14_support_chloe = True
             scene v14s16_2e # FPP. Same as v14s16_2, Chloe slight smile, mouth closed.
             with dissolve
 
