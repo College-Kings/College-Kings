@@ -73,7 +73,7 @@ label v14s13:
     scene v14s13_4
     with dissolve
 
-    se "Friend. Sounds like my friend is calling. There's no bosses around here, [Name]."
+    se "Friend. Sounds like my friend is calling. There's no bosses around here, [name]."
 
     scene v14s13_4c
     with dissolve
