@@ -781,7 +781,7 @@ label v12_mc_chilling:
 
         menu:
             "Call Cameron":
-                $ addPoint("br")
+                $ addPoint("bro")
                 $ v12_call_cameron = True
                 scene v12mor24d
                 with dissolve
