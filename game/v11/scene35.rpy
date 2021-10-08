@@ -202,7 +202,7 @@ label v11_riley_sex:
                 scene v11ris3
                 with dissolve
 
-                u "*Chuckles* Night Riley."
+                u "*Chuckles* Night, Riley."
 
         scene v11ris4 # TPP. Show MC taking his shirt off, he has a slight smile, mouth closed, standing next to his bed
         with dissolve
