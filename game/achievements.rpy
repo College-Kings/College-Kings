@@ -95,7 +95,7 @@ init python:
     Achievement("fright_club", "Don't fight Ryan at the Brawl")
     Achievement("golden_boy", "Beat Imre on Hard difficulty at the Brawl")
     Achievement("bros_before_blows", "Don't fight Imre at the Brawl")
-    Achievement("rawr_im_a_lion!", "Tell Lauren you like Lions")
+    Achievement("rawr_im_a_lion", "Tell Lauren you like Lions")
     Achievement("getting_clean", "Have fun in the bathroom")
     Achievement("forbidden_romance", "Kiss Ms. Rose")
     Achievement("rough_rider", "Have fun at the skatepark")
