@@ -477,6 +477,7 @@ default political_strategist = False
 default v11_smoke_amber_amsterdam = False
 default v11_lauren_ily = False
 default v11_underground_rose = False
+default v11_check_on_nora = False
 
 # 12.0
 default v12_told_chloe = False
