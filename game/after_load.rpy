@@ -549,6 +549,8 @@ label after_load:
         except NameError: political_strategist = False
         try: emily_europe
         except NameError: emily_europe = False
+        try: v11_check_on_nora
+        except NameError: v11_check_on_nora = False
 
         # v13 Errors
         try: v13_penelope_concert
