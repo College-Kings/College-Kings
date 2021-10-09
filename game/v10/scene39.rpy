@@ -47,7 +47,7 @@ label v10_riley_walk:
     scene v10srwh2 # TPP. Show MC and Riley (dirty) walking together, both smiling, mouth closed.
     with fade
 
-    if v10s33_riley2: # if spoke to Aubrey and RIley at dancing booth
+    if v10s33_aubreyriley: # if spoke to Aubrey and RIley at dancing booth
         scene v10srwh3 # FPP. Show Riley as though she's walking next to MC, smiling, mouth open.
         with dissolve
         
