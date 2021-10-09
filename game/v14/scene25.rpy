@@ -38,7 +38,7 @@ label v14s25:
 
     am "There you are."
 
-    if not v14s24a_gummyfish and not v14s24a_twezzlers: 
+    if not v14s03a_take_wallet: 
         scene v14s25_4b # FPP. Same as v14s25_4a, Amber starting to get up from off the floor, Amber slight smile, mouth closed
         with dissolve
 
@@ -57,7 +57,7 @@ label v14s25:
         scene v14s25_4e # FPP. Same as v14s25_4d, Amber standing infront of MC, Looking at eachother, Amber slight smile, mouth closed.
         with dissolve
 
-    if v14s24a_twezzlers or v14s24a_gummyfish:
+    if v14s03a_take_wallet:
         scene v14s25_4e
         with dissolve
 
@@ -78,7 +78,7 @@ label v14s25:
 
         pause 0.25
 
-        if v14s24a_twezzlers:
+        if not v14s24a_gummyfish:
             scene v14s25_4g # FPP. Same as v14s25_4f, Amber looking down as MC hands her the twezzlers candy, Amber slight smile, mouth open.  
             with dissolve
 
@@ -94,7 +94,7 @@ label v14s25:
 
             am "You know me too well."
 
-        if v14s24a_gummyfish:
+        else:
             scene v14s25_4h # FPP. Same as v14s25_4g, Amber looking down as MC hands her the Gummy Fish candy, Amber slight smile, mouth closed
             with dissolve
 
