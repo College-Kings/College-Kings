@@ -593,6 +593,7 @@ default v13s40fromgame = False
 
 # 14.0
 default v14s03a_left_cup = False
+default v14s03a_take_wallet = False
 default v14_support_chloe = False
 default v14_full_chris_support = False
 default v14_rw_half_chris_support = False # Chris backs half the cost of the real wolf photoshoot
