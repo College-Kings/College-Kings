@@ -3,7 +3,6 @@
 # Characters: MC(Outfit 1 ), Aubrey(outfit 3), Nora (outfit 1)
 # Time: Sunday evening
 
-
 label v10_aubrey_house:
     play music "music/v10/Scene 17/Track Scene 17_1.mp3" fadein 3
     scene v10auh1 # FPP Show Aubrey, walking on sidewalk in the evening, slight smile, mouth closed
@@ -12,7 +11,6 @@ label v10_aubrey_house:
     u "Look at me, walking you home, out of the kindness of my heart."
 
     if aubreyrs: # If in relationship with Aubrey
-
         scene v10auh1a # FPP Same angle as v10auh1, Aubrey with slight smile and eyebrow raised, mouth open
         with dissolve
         
@@ -20,8 +18,7 @@ label v10_aubrey_house:
 
         menu:
             "Maybe":
-                $ addPoint("tm", 1)
-                
+                $ addPoint("tm")
                 scene v10auh1b # FPP Same angle and expression as v10auh1a,, Aubrey mouth closed
                 with dissolve
 
@@ -144,7 +141,7 @@ label v10_aubrey_house:
             u "*Laughs*"
 
         "Make a joke":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene v10auh1b
             with dissolve
@@ -213,7 +210,7 @@ label v10_aubrey_house:
 
     menu:
         "Ask about her":
-            $ addPoint("bf", 1)
+            $ addPoint("bf")
             
             scene v10auh1
             with dissolve
@@ -238,7 +235,7 @@ label v10_aubrey_house:
                 au "Not too bad. *Chuckles*"
 
         "Ask about her sister":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
 
             scene v10auh1h
             with dissolve
@@ -260,10 +257,12 @@ label v10_aubrey_house:
 
     menu:
         "Ask to watch":
-            $ addPoint("tm", 1)
+            $ addPoint("tm")
             if aubreyrs: # Aubrey relationship check
                 label v10s17_galleryScene:
                 $ aubrey_bathroom_sex = True
+                #$ addPoint("tm", sum([ amberSexAtJoshs, v9_em_dorm_scene, v9_sex_with_riley, lindseyfirstkiss ])) ###Loyaltymod
+                
                 scene v10auh2b # FPP Same angle as v10auh2, show Aubrey at door to bathroom, turning to look at MC, mouth closed
                 with dissolve
 
@@ -302,6 +301,9 @@ label v10_aubrey_house:
 
                         u "How about we start with your top?"
 
+                        if config_censored:
+                            call screen censoredPopup("v10s17_nsfwSkipLabel1")
+
                         scene v10auh5b # FPP Same angle as v10auh5, Aubrey removing top with bottoms still on while smiling, mouth open
                         with dissolve
 
@@ -332,6 +334,9 @@ label v10_aubrey_house:
                         with dissolve
                         
                         u "Let's start with the bottoms."
+
+                        if config_censored:
+                            call screen censoredPopup("v10s17_nsfwSkipLabel1")
 
                         scene v10auh5f # FPP Same angle as v10auh5, Aubrey removing bottoms while top still on, smiling, mouth open
                         with dissolve
@@ -536,9 +541,7 @@ label v10_aubrey_house:
                         u "(Yup. Classic day in my life.) *Chuckles*"
 
                     "Make a joke":
-
-                        $ addPoint("tm", 1)
-
+                        $ addPoint("tm")
                         scene v10auh6a
                         with dissolve
 
@@ -564,6 +567,7 @@ label v10_aubrey_house:
 
                 u "*Laughs* You won't believe what just happened!"
 
+                label v10s17_nsfwSkipLabel1:
                 jump v10_aubrey_room
 
             else: # Not in a relationship with Aubrey

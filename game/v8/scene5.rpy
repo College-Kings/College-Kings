@@ -3,6 +3,8 @@
 # OUTFITS: SAME AS AMBER HOCO ENDING
 
 label hoco_amb_night:
+    $ v8_hocoamber = True
+    #$ addPoint("tm", sum([ aubreysex2, v6_emilysex, v7_rileysex, bathroomblowjob ])) ###Loyaltymod
     stop music fadeout 2
     if config_censored:
         call screen censoredPopup("v8s5_nsfwSkipLabel1")

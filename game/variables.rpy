@@ -203,6 +203,7 @@ default kimpuke = False
 default fr3matt = False
 default save = 0
 default v3_aubsex = False
+default v6_emilysex = False
 
 # 7.0
 default follownora = False
@@ -276,8 +277,11 @@ default laurenpt = 0
 default nobeach = False
 default v7_seencrowning = False
 default v7_emily_bowling = False
+default v7_rileysex = False
 
 # 8.0
+default v8_chloesex = False
+default v8_hocoamber = False
 default v8AutProtest = False
 default openedUpToSeb = False
 default chloeMsg11Reply = 0
@@ -377,6 +381,7 @@ default v10_color_blue = False
 default v10_lauren_suck = False
 default v10_chloe_locker = False
 default v10_ri_sex = False
+default v10_ambersex = False
 
     # Freeroam
 default v10s33_riley = False
@@ -591,6 +596,7 @@ default v13s40_backpoint = False
 default v13s40_shoulderpoint = False
 default laurenrs_v11aubrey = True
 default v13s40fromgame = False
+default v13_chloe_sex = False
 
 # 14.0
 default v14s03a_left_cup = False

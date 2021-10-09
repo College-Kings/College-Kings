@@ -265,6 +265,7 @@ label v12_nora_room:
             "Kiss her":
                 $ v12_nora_sex = True
                 $ norars = True
+                #$ addPoint("tm", sum([ v11_chloe_sex, v12_lindsey_sex, v12_msrose_sex, v12_lauren_sex ])) ###Loyaltymod
 
                 stop music fadeout 3
                 play music "music/v12/Scene 35a/Track Scene 35a_1.mp3" fadein 2
@@ -355,9 +356,7 @@ label v12_nora_no_sex:
         jump v12_lindsey_lobby
 
 label v12_nora_sex:
-
         play sound "sounds/kiss.mp3"
-
         scene v12nos15 # TPP. Nora and MC on her bed, kissing
         with dissolve
 

@@ -26,51 +26,51 @@ init python:
         # v2
     SceneGallery("v1_tomShoutBack") #Tom
         # v3
-    SceneGallery("continuem") #Aubrey
+    SceneGallery("continuem") #Aubrey, day 4, aubreysex
         # v5
     SceneGallery("fkcon") #Adam
         # v6
-    SceneGallery("aubreysexb") #Aubrey
-    SceneGallery("emsex_a") #Emily
+    SceneGallery("emsex_a") #Emily, day 7, v6_emilysex
+    SceneGallery("aubreysexb") #Aubrey, day 7, aubreysex2
         # v7
-    SceneGallery("rileysexscene") #Riley
-    SceneGallery("brbj") #Aubrey
+    SceneGallery("rileysexscene") #Riley, day 10, v7_rileysex
+    SceneGallery("brbj") #Aubrey, day 11, bathroomblowjob
         # v8
-    SceneGallery("v8_cl_start") #2, Chloe
-    SceneGallery("v8_ri_start") #3, Riley
-    SceneGallery("hoco_amb_night") #5, Amber
+    SceneGallery("v8_cl_start") #2, Chloe, day 11, v8_chloesex
+    SceneGallery("v8_ri_start") #3, Riley, day 11, v8_riley_lewd_ending
+    SceneGallery("hoco_amb_night") #5, Amber, day 11, v8_hocoamber
     SceneGallery("int_deal_w_josh") #28, Lars Joe
-    SceneGallery("amber_sex_at_joshs") #30, Amber
+    SceneGallery("amber_sex_at_joshs") #30, Amber, day 14, amberSexAtJoshs
         # v9
-    SceneGallery("v9_aubrey_scene_lake") #7, Aubrey
-    SceneGallery("v9_emily_dorm") #16, Emily
-    SceneGallery("v9_ri_sex") #34, Riley
-    SceneGallery("v9_make_out_w_lin") #39, Lindsey
+    SceneGallery("v9_aubrey_scene_lake") #7, Aubrey, day 16, v9_aubrey_lake
+    SceneGallery("v9_emily_dorm") #16, Emily, day 17, v9_em_dorm_scene
+    SceneGallery("v9_ri_sex") #34, Riley, day 19, v9_sex_with_riley
+    SceneGallery("v9_make_out_w_lin") #39, Lindsey, day 19, lindseyfirstkiss
         # v10
     SceneGallery("v10_mc_vs_ryan_fight") #6, Ryan
     SceneGallery("v10_mc_vs_imre_fight") #7, Imre
-    SceneGallery("v10s17_galleryScene") #17, Aubrey
-    SceneGallery("v10_lauren_room_sg", scope={"laurenrs": True}) #24, Lauren
-    SceneGallery("v10_amber_skatepark_sg") #26, Amber
-    SceneGallery("v10s30_galleryScene") #30, Chloe
-    SceneGallery("v10s40_galleryScene", scope={"rileyrs": True}) #40, Riley
+    SceneGallery("v10s17_galleryScene") #17, Aubrey, day 20, aubrey_bathroom_sex
+    SceneGallery("v10_lauren_room_sg", scope={"laurenrs": True}) #24, Lauren, day 21, v10_lauren_suck (otherwise forced)
+    SceneGallery("v10_amber_skatepark_sg") #26, Amber, day 21, v10_ambersex
+    SceneGallery("v10s30_galleryScene") #30, Chloe, day 22, v10_chloe_locker
+    SceneGallery("v10s40_galleryScene", scope={"rileyrs": True}) #40, Riley, day 23, v10_ri_sex
         # v11
-    SceneGallery("v11s5_galleryScene") #5, Candy
-    SceneGallery("v11_aubrey_plane_sex_sg") #13, Aubrey
-    SceneGallery("v11_ms_rose_sex_sg") #28, Rose
-    SceneGallery("v11s28a_galleryScene") #28a, Samantha
-    SceneGallery("v11_riley_sex_sg") #35, Riley
-    SceneGallery("v11_chloe_sex_scene") #41b, Chloe
+    SceneGallery("v11s5_galleryScene") #5, Candy, day 24, v11_fucked_candy
+    SceneGallery("v11_aubrey_plane_sex_sg") #13, Aubrey, day 26, v11_aubrey_sex
+    SceneGallery("v11_ms_rose_sex_sg") #28, Rose, day 27, v11_msrose_scene
+    SceneGallery("v11s28a_galleryScene") #28a, Samantha, day 27, v11_samantha_spa
+    SceneGallery("v11_riley_sex_sg") #35, Riley, day 28, v11_rileysex
+    SceneGallery("v11_chloe_sex_scene") #41b, Chloe, day 29, v11_chloe_sex
         #v12
-    SceneGallery("v12_lindsey_sex") #17, Lindsey
-    SceneGallery("v12_ms_rose_sex_sg") #23, Rose
-    SceneGallery("v12_lauren_sex_sg") #29, Lauren
-    SceneGallery("v12_nora_sex") #35a, Nora
+    SceneGallery("v12_lindsey_sex") #17, Lindsey, day 32, v12_lindsey_sex
+    SceneGallery("v12_ms_rose_sex_sg") #23, Rose, day 33, v12_msrose_sex
+    SceneGallery("v12_lauren_sex_sg") #29, Lauren, day 34, v12_lauren_sex
+    SceneGallery("v12_nora_sex") #35a, Nora, day 35, v12_nora_sex
         #v13
-    SceneGallery("v13s16a") #16a, Riley
-    SceneGallery("v13s25_emmysg") #26, Emmy
-    SceneGallery("v13s40_sg") #40, Chloe
-    SceneGallery("v13s50a") #50a, Emily
+    SceneGallery("v13s16a") #16a, Riley, day 37, v13_rileysex
+    SceneGallery("v13s25_emmysg") #26, Emmy, day 38, v13_emmysex
+    SceneGallery("v13s40_sg") #40, Chloe, day 39, v13_chloe_sex
+    SceneGallery("v13s50a") #50a, Emily, day 40, v13_emilysex
 
 screen spoiler():
     modal True

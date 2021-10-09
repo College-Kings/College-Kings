@@ -2724,6 +2724,8 @@ label emsex_c:
     pause 0.5
 
 label emsex_a:
+    $ v6_emilysex = True 
+    #$ addPoint("tm", sum([ aubreysex ])) ###Loyaltymod    
     scene emvid2
     with dissolve
 
@@ -3989,6 +3991,8 @@ label fy_bd: # not gone to Emily's
 label aubreysexb: # aubreysex scene
     $ aubreyrs = True
     $ aubreysex2 = True
+
+    #$ addPoint("tm", sum([ v6_emilysex ])) ###Loyaltymod
 
     stop music fadeout 2.0
     play music "music/msexy.mp3"

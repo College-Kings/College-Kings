@@ -5,6 +5,7 @@
 
 label v13s50a:
     $ v13_emilysex = True
+    #$ addPoint("tm", sum([ v12_lauren_sex, v12_nora_sex, v13_rileysex, v13_emmysex, v13_chloe_sex, v13_emilysex ])) ###Loyaltymod
 
     scene v13s50a_1 # TPP Show MC with his hands on Emily's shoulders, pushing her down to her knees
     with dissolve
