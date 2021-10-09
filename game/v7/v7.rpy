@@ -16053,7 +16053,7 @@ label fr4penelope2:
 label fr4chloe2:
     $ fr4chloe2 = True
 
-    if not chloemad or ryandefendchloe:
+    if not chloemad:
         scene sfr4cl53a # fpp close up chloe mad
 
         u "You okay?"
@@ -16417,7 +16417,7 @@ label fr4lockerroomchloe:
 
         u "Chloe? You in there?"
 
-        if not chloemad or ryandefendchloe:
+        if not chloemad:
             scene sfr4cl51 # fpp close up of the door
             with dissolve
 
@@ -16664,7 +16664,7 @@ label fr4lockerroomchloe:
     else:
         scene sfr4cl51
 
-        if chloemad and not ryandefendchloe:
+        if chloemad:
             u "(I better leave her alone.)"
 
         else:
