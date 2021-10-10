@@ -374,6 +374,7 @@ label v11_cardealership:
     scene v11cd24 # TPP. Show's the car parking in location c (artist chooses location)
     with dissolve
 
+    stop sound
     pause 0.75
 
     scene v11cd25 # FPP. looking at chloe, mouth opened
