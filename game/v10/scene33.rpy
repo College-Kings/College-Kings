@@ -3846,6 +3846,5 @@ label v10s33_deergirl41:
         scene fr6thrift
 
     u "(I'd rather not get talked into buying one of these hats.)"
-    stop music fadeout 3
-
+    
     call screen v10s33_thrift
