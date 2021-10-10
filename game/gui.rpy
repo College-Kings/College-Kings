@@ -88,7 +88,7 @@ define gui.title_text_size = 120
 
 ## The images used for the main and game menus.
 
-# Moved to "script.rpy"
+### Moved to "script.rpy" ###
 
 
 ## Dialogue ####################################################################
