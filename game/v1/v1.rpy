@@ -140,7 +140,7 @@ label starta: #for compatibility only
     scene v1jul1
     with dissolve
 
-    u "Oh you're dropping me off? I was gonna take the train."
+    u "Oh, you're dropping me off? I was gonna take the train."
 
     scene v1jul1a
     with dissolve
