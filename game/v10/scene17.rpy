@@ -474,7 +474,7 @@ label v10_aubrey_house:
                     with dissolve
                     pause 
 
-                    au "This feel so good!"
+                    au "This feels so good!"
 
                 scene v10aubfa # Aubrey gets on her knees in front MC while he's standing to finish him off
                 with dissolve
