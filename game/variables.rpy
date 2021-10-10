@@ -549,6 +549,7 @@ default v12s33_door2 = False
 default v12s33_door3 = False
 default v12s24_emmymatch = False
 default chrismad = False
+default v12_sauna_sneak1 = False
 
 # 13.0
 default v13_penelope_concert = False
