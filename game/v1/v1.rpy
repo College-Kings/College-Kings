@@ -1255,7 +1255,7 @@ label efra:
     scene s63e
     with dissolve
 
-    u "Oh that's cool."
+    u "Oh, that's cool."
 
     scene s63d
     with dissolve
