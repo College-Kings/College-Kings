@@ -1447,7 +1447,7 @@ label efra:
     scene s61a
     with dissolve
 
-    u "Okay man I did it."
+    u "Okay man, I did it."
 
     scene s61c
     with dissolve
