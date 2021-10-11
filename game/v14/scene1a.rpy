@@ -14,7 +14,7 @@ label v14s01a:
 
     li "Wait... Open your eyes..."
 
-    scene v14s01a_1b # TPP. Same as v13s01a_1a, Lindsey mouth closed, MC mouth open, LIndsey finger no longer on MC mouth
+    scene v14s01a_1b # TPP. Same as v14s01a_1a, Lindsey mouth closed, MC mouth open, LIndsey finger no longer on MC mouth
     with dissolve
 
     u "Huh?"
