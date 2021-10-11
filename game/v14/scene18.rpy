@@ -100,7 +100,7 @@ label v14s18:
     scene v14s18_4d # FPP. Same as v14s18_4a, Lindsey slightly worried, looking down, mouth open
     with dissolve
 
-    li "Honestly [Name]... I need you. I need your help."
+    li "Honestly [name]... I need you. I need your help."
 
     scene v14s18_4e # FPP. Same as v14s18_4d, Lindsey looking at MC now
     with dissolve
