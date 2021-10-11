@@ -3,7 +3,6 @@
 # Characters: EMILY (Outfit: 1), MC (Outfit: 2)
 # Time: Morning
 
-
 label v14s27:
     scene v14s27_1 # TPP. MC and Emily walking towards each other on the sidewalk on Campus, both slight smile, mouth closed.
     with dissolve
