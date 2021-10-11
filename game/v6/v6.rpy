@@ -1133,7 +1133,7 @@ label continuebd:
 
             play sound "sounds/kiss.mp3"
 
-            "*Kiss*"
+            pause 1.5
 
             scene s491a # Lauren looking at you
             with dissolve
