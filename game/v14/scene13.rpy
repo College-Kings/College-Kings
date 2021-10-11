@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 5), SEBASTIAN (Outfit: x), CHRIS (Outfit: 1)
 # Time: Evening                     : I left Sebastian X because I couldn't find his outfit in the spreadsheet and he is not wearing a shirt anywayc for this scene
 
-
 label v14s13:
     scene v14s13_1 # TPP. Show MC walking into his room, neutral expression, mouth closed
     with dissolve

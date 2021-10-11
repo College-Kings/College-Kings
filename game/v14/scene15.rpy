@@ -17,15 +17,15 @@ label v14s15:
     scene v14s15_3   # FPP. MC looking down a hallway and seeing "Lindsey for President" posters down both walls.
     with dissolve
 
-    u "(Holy... Shit... This is serious!)"
+    u "(Holy... shit... This is serious!)"
 
     if v11_lindsey_slogan <= 0: # 0 or 1, just in case someone fudges the variables
         scene v14s15_4   # FPP. MC looking at a banner with the campaign slogan "Lindsey, Returning The Promise".
+        with dissolve
         
     else:
         scene v14s15_4a  # FPP. MC looking at a banner with the campaign slogan "Lindsey, Say Bye To The Bullshit" 
-
-    with dissolve
+        with dissolve
 
     pause 0.75
 
@@ -142,4 +142,3 @@ label v14s15:
     u "(That man is a whole ass character... But I think he has more than one reason why he's on Chloe's side. *Laughs*)"
 
     jump v14s16
-    

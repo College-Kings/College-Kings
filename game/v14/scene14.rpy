@@ -3,9 +3,7 @@
 # Characters: MC (Outfit: 9)
 # Time: Morning
 
-
 label v14s14:
-
     $ contact_Chloe.newMessage(_("You won't believe what I'm looking at right now!!!!"))
     play sound "sounds/vibrate.mp3"
 
@@ -49,7 +47,6 @@ label v14s14:
 
     scene v14s14_3 # FPP. MC looking at the clock on his nightstand, Time shows 9:59.
     with dissolve
-
 
     u "Nine fifty ni- OH, SHIT!"
 

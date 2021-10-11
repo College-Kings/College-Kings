@@ -821,7 +821,7 @@ label v14s25:
             
             jump v14s25b
 
-        "Let Amber, Be Amber...":
+        "Let Amber be Amber...":
             $ addPoint("tm")
             $ v14_amber_drugs = True
             scene v14s25_8m
@@ -956,7 +956,7 @@ label v14s25:
 
                     jump v14s25a
 
-                "Don't Fuck Amber...": 
+                "Don't fuck Amber...": 
                     $ addPoint("bf")
                     scene v14s25_21a
                     with dissolve

@@ -306,7 +306,6 @@ label v14s03c:
             pause 0.75
 
             jump v14s03d
-            
            
         "Help Ryan...":
             $ addPoint ("bro")

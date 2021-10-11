@@ -119,7 +119,6 @@ label v14s18:
         li "Nevermind, It doesn't matter."
 
     if chloegf:
-
         scene v14s18_4a
         with dissolve
 

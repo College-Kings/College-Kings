@@ -3,7 +3,6 @@
 # Characters: CHLOE (Outfit: x), MC (Outfit: 1), UNKNOWN (Outfit: N/A (not seen))
 # Time: 
 
-
 label v14s19a:
     scene v14s19a_1 # FPP Show Chloe, in library, looking at MC, smiling with mouth open
     with dissolve
@@ -145,50 +144,52 @@ label v14s19a:
 
     cl "So, do you think you can talk to Chris about this? Today?"
 
-if not v13_help_lindsey: # -If don't help Lindsey
-    $ chloe.points += 1
+    if not v13_help_lindsey: # -If don't help Lindsey
+        $ chloe.points += 1
 
-    scene v14s19a_1g # FPP Same as 1f, Chloe's mouth closed, she is biting her lower lip slightly
-    with dissolve
+        scene v14s19a_1g # FPP Same as 1f, Chloe's mouth closed, she is biting her lower lip slightly
+        with dissolve
 
-    u "Of course I can."
+        u "Of course I can."
 
-    scene v14s19a_2
-    with dissolve
+        scene v14s19a_2
+        with dissolve
 
-    cl "Perfect! Thank you so so so much, [name]."
+        cl "Perfect! Thank you so so so much, [name]."
 
-else: # If helped Lindsey
+    else: # If helped Lindsey
 
-    scene v14s19a_1g
-    with dissolve
+        scene v14s19a_1g
+        with dissolve
 
-    u "(Damn, I can't help her with this and talk to Lindsey at the same time. Gonna have to decide what to do here...)"
+        u "(Damn, I can't help her with this and talk to Lindsey at the same time. Gonna have to decide what to do here...)"
 
-    menu:
-        "Talk to Chris":
-            $ chloe.points += 1
+        menu:
+            "Talk to Chris":
+                $ chloe.points += 1
+                scene v14s19a_1g
+                with dissolve
+                u "Of course I can."
 
-            u "Of course I can."
+                scene v14s19a_2
+                with dissolve
 
-            scene v14s19a_2
-            with dissolve
+                cl "Perfect! Thank you so much, [name]. This means the world to me."
 
-            cl "Perfect! Thank you so much, [name]. This means the world to me."
+            "Talk to Lindsey":
+                scene v14s19a_1g
+                with dissolve
+                u "I hate to state the obvious but, Chris and I aren't on the best of terms right now... And he's got Nora on his mind, so..."
 
-        "Talk to Lindsey":
+                scene v14s19a_1c
+                with dissolve
 
-            u "I hate to state the obvious but, Chris and I aren't on the best of terms right now... And he's got Nora on his mind, so..."
+                u "It's probably not best if I'm the one who talks to him."
 
-            scene v14s19a_1c
-            with dissolve
+                scene v14s19a_1h # FPP Same angle as 1, Chloe looking a bit sad and dissapointed, mouth open
+                with dissolve
 
-            u "It's probably not best if I'm the one who talks to him."
-
-            scene v14s19a_1h # FPP Same angle as 1, Chloe looking a bit sad and dissapointed, mouth open
-            with dissolve
-
-            cl "*Sighs* Yeah, I get it. His head isn't in the right space around you. Smart thinking."
+                cl "*Sighs* Yeah, I get it. His head isn't in the right space around you. Smart thinking."
 
     # -Continue regardless of everything
     scene v14s19a_3 # Show a book dropping flat on the ground with a loud "smack"

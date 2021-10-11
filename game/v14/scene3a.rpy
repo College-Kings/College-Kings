@@ -326,6 +326,7 @@ label v14s03a:
                 with dissolve
 
                 pause 0.75
+                
             else:
                 scene v14s03a_3o # FPP. Close up, Gambler tilts RIGHT cup forward (like he is going to lift it up).
                 with dissolve

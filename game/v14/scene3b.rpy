@@ -225,7 +225,6 @@ label v14s03b:
 
     menu:
         "Go for it":
-
             u "Well, no. Honestly, if it's just for practice then there's probably no better place than this. Just make sure that's really what you want to do."
 
             scene v14s03b_5c
@@ -239,7 +238,6 @@ label v14s03b:
             u "*Chuckles* Not at all. I think you should go for it."
 
         "Don't ruin your first time":
-
             u "Well, honestly... I wouldn't want my first time to be in a brothel."
 
             scene v14s03b_5a
