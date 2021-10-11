@@ -57,7 +57,7 @@ label v14s25:
         scene v14s25_4e # FPP. Same as v14s25_4d, Amber standing infront of MC, Looking at eachother, Amber slight smile, mouth closed.
         with dissolve
 
-    if v14s24a_twezzlers or v14s24a_gummyfish:
+    else:
         scene v14s25_4e
         with dissolve
 
