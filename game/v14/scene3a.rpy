@@ -325,7 +325,7 @@ label v14s03a:
                 scene v14s03a_3n # FPP. Same as v14s03a_3l, but Gambler lifts up the LEFT cup and there is a ball under it.
                 with dissolve
 
-                pause .075
+                pause 0.75
             else:
                 scene v14s03a_3o # FPP. Close up, Gambler tilts RIGHT cup forward (like he is going to lift it up).
                 with dissolve
