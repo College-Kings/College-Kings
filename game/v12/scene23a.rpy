@@ -882,9 +882,9 @@ label v12_mc_chilling:
         with dissolve
 
         if v11_riley_roomate:
-            u "(Don't know where Riley went, but she's gonna have to deal with Sam from here on out. I'm going to sleep.)"
+            u "(Don't know where Riley went, but I'm going to sleep now.)"
         else:
-            u "(Don't know where Chloe went, but she's gonna have to deal with Sam from here on out. I'm going to sleep.)"
+            u "(Don't know where Chloe went, but I'm going to sleep now.)"
 
         scene v12mor27
         with dissolve
