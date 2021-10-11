@@ -105,23 +105,27 @@ label v10_ms_rose_fight:
             with dissolve
 
             pause 0.5
+
         "Stay quiet":
-            
-            scene v10msf2c
+            #scene v10msf2c
+            scene v10msf1a
             with dissolve
             ro "I SAID NO! What do you not understand? We are done, there's nothing for you to explain. I don't care about your money, your cars, none of that! Leave!"
 
-            scene v10msf2a
+            #scene v10msf2a
+            scene v10msf1
             with dissolve
 
             mrr "So that's it, you just want to give up on us?"
 
-            scene v10msf2c
+            #scene v10msf2c
+            scene v10msf1a
             with dissolve
 
             ro "I didn't give up on us Lucious, you did. Please, just go."
 
-            scene v10msf2a
+            #scene v10msf2a
+            scene v10msf1
             with dissolve
 
             mrr "When everything is said and done, you're gonna regret this."
@@ -129,6 +133,7 @@ label v10_ms_rose_fight:
             play music "music/v10/Scene 25/Track Scene 25_2.mp3" fadein 3
             scene v10msf3
             with dissolve
+            pause 0.75
     
     scene v10msf4 # FPP. Show MS rose, crying mouth open, FPP now from right infront of door to have conversation with ms rose.
     with dissolve
