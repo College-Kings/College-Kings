@@ -1073,7 +1073,7 @@ label continuebd:
 
             play sound "sounds/kiss.mp3"
 
-            "*Kiss*"
+            pause 1.5
 
             scene s486d # You sit down
             with dissolve
