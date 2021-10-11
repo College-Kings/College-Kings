@@ -3,7 +3,6 @@
 # Characters: CHLOE (Outfit: 1), MC (Outfit: 2)
 # Time: Afternoon
 
-
 label v14s30:
     scene v14s30_1 # TPP. Show MC walking in the woods towards the photoshoot location, Slight smile, mouth closed.
     with dissolve
@@ -22,7 +21,6 @@ label v14s30:
 
     scene v14s30_3a # FPP. Same as v14s30_3, Chloe turns to see MC, slight smile, mouth open.
     with dissolve
-
 
     cl "[Name], there you are!"
 
@@ -170,7 +168,7 @@ label v14s30:
         scene v14s30_7a # TPP. Same as v14s30_7, Chloe and MC kissing put a different position.
         with dissolve
 
-        pause .25
+        pause 0.25
 
         scene v14s30_6a
         with dissolve
@@ -201,5 +199,7 @@ label v14s30:
 
     scene v14s30_8 # TPP. Show MC and Chloe walking together out of the woods, both slight smile, mouth closed.
     with dissolve
+
+    pause .25
 
     jump v14s30b
