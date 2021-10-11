@@ -38,7 +38,7 @@ label v14s13:
     scene v14s13_4
     with dissolve
 
-    se "You never know when it's the last time you'll see someone, so you’ve gotta take advantage of the little moments."
+    se "You never know when it's the last time you'll see someone, so you've gotta take advantage of the little moments."
 
     scene v14s13_4a
     with dissolve
@@ -78,7 +78,7 @@ label v14s13:
     scene v14s13_4c
     with dissolve
 
-    se "Didn’t you notice how he asked for my help rather than telling me to do something?"
+    se "Didn't you notice how he asked for my help rather than telling me to do something?"
 
     scene v14s13_4a
     with dissolve
@@ -108,12 +108,12 @@ label v14s13:
     scene v14s13_4b
     with dissolve
 
-    se "Very funny... I’m glad you're back, man. Really, I kinda missed you guys more than I thought I would. *Laughs*"
+    se "Very funny... I'm glad you're back, man. Really, I kinda missed you guys more than I thought I would. *Laughs*"
 
     scene v14s13_4a
     with dissolve
 
-    u "I’m happy to be home, haha. We’ll catch up tomorrow, alright? Have a good one."
+    u "I'm happy to be home, haha. We'll catch up tomorrow, alright? Have a good one."
 
     scene v14s13_4
     with dissolve

@@ -124,7 +124,7 @@ label v14s15:
 
     imre "Oh, ‘cause that part is true. Chris and Chloe have always been tight, and they get along well as Presidents."
 
-    imre "There’s no doubt in my mind that this is what Chris would want me to be doing... So, if you’ll excuse me, I'll be getting back to impressing the pretty woma-"
+    imre "There's no doubt in my mind that this is what Chris would want me to be doing... So, if you'll excuse me, I'll be getting back to impressing the pretty woma-"
 
     scene v14s15_7g
     with dissolve
@@ -139,7 +139,7 @@ label v14s15:
     scene v14s15_8   # TPP. MC, smiling and thinking to himself.
     with dissolve
 
-    u "(That man is a whole ass character... But I think he has more than one reason why he’s on Chloe’s side. *Laughs*)"
+    u "(That man is a whole ass character... But I think he has more than one reason why he's on Chloe's side. *Laughs*)"
 
     jump v14s16
     

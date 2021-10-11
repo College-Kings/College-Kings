@@ -27,7 +27,7 @@ label v14s21:
     scene v14s21_2b # FPP. Same as v14s21_2a, Chloe reaches MC and is standing still infront of him, Chloe looking at MC, Chloe slight smile, mouth closed.
     with dissolve
 
-    u "*Chuckles* What’s happening? Something wrong?"
+    u "*Chuckles* What's happening? Something wrong?"
 
     scene v14s21_2c # FPP. Same as v14s21_2b, Chloe slight smile, mouth open.
     with dissolve
@@ -52,7 +52,7 @@ label v14s21:
 
     cl "A lot of people that I know tend to avoid hanging out with me, because of the rumors or preconceived images that float around. But..."
 
-    cl "You don’t care what people say. And that’s what I appreciate the most."
+    cl "You don't care what people say. And that's what I appreciate the most."
 
     scene v14s21_3 # TPP. Show MC holding Chloe's face, both slight smile, mouth closed.
     with dissolve
@@ -86,17 +86,17 @@ label v14s21:
     scene v14s21_2d
     with dissolve
 
-    u "And honestly Chloe,  I’ll do whatever I can to help keep that gorgeous smile on your face for as long as humanly possible."
+    u "And honestly Chloe,  I'll do whatever I can to help keep that gorgeous smile on your face for as long as humanly possible."
 
     scene v14s21_2f # FPP. Same as v14s21_2d, MC no longer holding Chloe's face, Chloe's arms wrapped around MC's neck, Chloe slight smile, mouth open.
     with dissolve
 
-    cl "You're the most amazing person I’ve ever met, do you know that?"
+    cl "You're the most amazing person I've ever met, do you know that?"
 
     scene v14s21_2g # FPP. Same as v14s21_2f, Chloe slight smile, mouth closed.
     with dissolve
 
-    u "*Chuckles* I do now, I suppose. Although, I’m not completely agreeing with you on that one... ."
+    u "*Chuckles* I do now, I suppose. Although, I'm not completely agreeing with you on that one... ."
 
     scene v14s21_2f
     with dissolve
@@ -113,9 +113,9 @@ label v14s21:
     scene v14s21_2f
     with dissolve
 
-    cl "I mean, with the campaign being this real and competitive, I'm gonna have a lot less time than what we’re used to."
+    cl "I mean, with the campaign being this real and competitive, I'm gonna have a lot less time than what we're used to."
 
-    cl "So, sadly that means we’ll have less time to be together, you know?"
+    cl "So, sadly that means we'll have less time to be together, you know?"
 
     scene v14s21_2g
     with dissolve
@@ -180,7 +180,7 @@ label v14s21:
     scene v14s21_8 # FPP. In the back area of the parking lot, MC looking at Chloe, Chloe looking at MC, Chloe slight smile, mouth closed.
     with dissolve
 
-    u "Is there a reason we’re in the parking lot?"
+    u "Is there a reason we're in the parking lot?"
 
     scene v14s21_8a # FPP. Same as v14s21_8, Chloe slight smile, mouth open.
     with dissolve
@@ -189,7 +189,7 @@ label v14s21:
 
     cl "I used to sit out here and study everyday after class during my first couple of years on campus."
 
-    cl "One of the very few places on campus where I know I won’t be bothered."
+    cl "One of the very few places on campus where I know I won't be bothered."
 
     scene v14s21_8
     with dissolve
@@ -287,7 +287,7 @@ label v14s21:
             scene v14s21_8a
             with dissolve
 
-            cl "I’ll meet you there soon, okay?"
+            cl "I'll meet you there soon, okay?"
 
             scene v14s21_8
             with dissolve

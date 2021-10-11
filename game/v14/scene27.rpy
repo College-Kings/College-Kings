@@ -76,7 +76,7 @@ label v14s27:
     scene v14s27_2a
     with dissolve
 
-    u "*Sighs* Okay, let’s talk."
+    u "*Sighs* Okay, let's talk."
 
     scene v14s27_2
     with dissolve

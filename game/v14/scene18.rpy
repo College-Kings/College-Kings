@@ -50,7 +50,7 @@ label v14s18:
     scene v14s18_4b # FPP. Same as v14s18_4, Lindsey different pose
     with dissolve
 
-    u "Seems like you have all the help you need... I don’t see much of Chloe anywhere. *Chuckles*"
+    u "Seems like you have all the help you need... I don't see much of Chloe anywhere. *Chuckles*"
 
     scene v14s18_4c # FPP. Same as v14s18_4b, Lindsey mouth open
     with dissolve
@@ -60,7 +60,7 @@ label v14s18:
     scene v14s18_4a
     with dissolve
 
-    li "And if I can't get any help then I’ll just be putting in the extra work every day. To make sure I’ve done everything I possibly can."
+    li "And if I can't get any help then I'll just be putting in the extra work every day. To make sure I've done everything I possibly can."
 
     scene v14s18_4
     with dissolve
@@ -105,7 +105,7 @@ label v14s18:
     scene v14s18_4e # FPP. Same as v14s18_4d, Lindsey looking at MC now
     with dissolve
 
-    li "I'm worried that without your help, I'm a lost cause. I mean, we’re friends... Right?"
+    li "I'm worried that without your help, I'm a lost cause. I mean, we're friends... Right?"
 
     if lindseyrs:
         scene v14s18_4a
@@ -123,7 +123,7 @@ label v14s18:
         scene v14s18_4a
         with dissolve
 
-        li "I know you’re like, dating her, or whatever you’re calling it... *Chuckles* But genuinely, my only chance at beating Chloe starts with you joining my team."
+        li "I know you're like, dating her, or whatever you're calling it... *Chuckles* But genuinely, my only chance at beating Chloe starts with you joining my team."
 
     if lindseyrs:
         scene v14s18_4f # FPP. Lindsey very close to MC, she is whispering, mouth open, seductive smile
@@ -169,7 +169,7 @@ label v14s18:
         "Help Lindsey":
             $ help_Lindsey = True
   
-            u "From the very beginning I've been in support of your campaign, and I don’t plan on stopping anytime soon."
+            u "From the very beginning I've been in support of your campaign, and I don't plan on stopping anytime soon."
 
             scene v14s18_6 # TPP. Show Lindsey hugging MC tightly, MC smiling, mouth closed, Lindsey smiling, mouth open
             with dissolve
@@ -208,7 +208,7 @@ label v14s18:
             scene v14s18_4i # FPP. Same as v14s18_4, Lindsey sad
             with dissolve
 
-            u "Look, I’ve been thinking about it and now that we're actually back on campus I'm finally starting to get back into the swing of things. So, I don't think-"
+            u "Look, I've been thinking about it and now that we're actually back on campus I'm finally starting to get back into the swing of things. So, I don't think-"
 
             scene v14s18_4j # FPP. Same as v14s18_4i, Lindsey mouth open
             with dissolve

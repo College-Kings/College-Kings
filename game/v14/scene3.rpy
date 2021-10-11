@@ -57,12 +57,12 @@ label v14s03:
     scene v14s03_3 # FPP. Background change, now looking at a night gambler
     with dissolve
 
-    u "Who’s that dude over there?"
+    u "Who's that dude over there?"
 
     scene v14s03_3a # FPP. Imre looking suspeciously, mouth opened
     with dissolve
 
-    imre "I... Don’t know. Looks sketchy."
+    imre "I... Don't know. Looks sketchy."
 
     scene v14s03_3b # FPP. Same as 3a, mouth closed
     with dissolve

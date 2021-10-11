@@ -18,7 +18,7 @@ label v14s19a:
     scene v14s19a_1
     with dissolve
 
-    cl "Especially since I basically already have the Wolves’ support, I feel confident about this."
+    cl "Especially since I basically already have the Wolves' support, I feel confident about this."
 
     scene v14s19a_1a
     with dissolve
@@ -48,7 +48,7 @@ label v14s19a:
     scene v14s19a_1d # FPP Same angle as 1, Chloe with her arms out to her sides, smiling like she's giving a speech
     with dissolve
 
-    cl "You have to work on improving the leadership that’s already comfortably in place."
+    cl "You have to work on improving the leadership that's already comfortably in place."
 
     scene v14s19a_1a
     with dissolve
@@ -73,7 +73,7 @@ label v14s19a:
     scene v14s19a_1
     with dissolve
 
-    cl "Whatever’s happening between Chris and Nora is their business, and I think because I don't get involved as much as others, we have this unspoken respective relationship, you know?."
+    cl "Whatever's happening between Chris and Nora is their business, and I think because I don't get involved as much as others, we have this unspoken respective relationship, you know?."
 
     scene v14s19a_1a
     with dissolve
@@ -108,7 +108,7 @@ label v14s19a:
     scene v14s19a_1a
     with dissolve
 
-    u "*Laughs* No, go ahead. What’s the favor?"
+    u "*Laughs* No, go ahead. What's the favor?"
 
     scene v14s19a_1f
     with dissolve
@@ -133,12 +133,12 @@ label v14s19a:
     scene v14s19a_1
     with dissolve
 
-    cl "And honestly when it comes to Imre, he’s had a crush on me for as long as I can remember. *Laughs* When I called him this morning he picked up right away and was way too excited to help..."
+    cl "And honestly when it comes to Imre, he's had a crush on me for as long as I can remember. *Laughs* When I called him this morning he picked up right away and was way too excited to help..."
 
     scene v14s19a_1a
     with dissolve
 
-    u "*Laughs* That’s amazing."
+    u "*Laughs* That's amazing."
 
     scene v14s19a_1f
     with dissolve
@@ -178,17 +178,17 @@ else: # If helped Lindsey
 
         "Talk to Lindsey":
 
-            u "I hate to state the obvious but, Chris and I aren't on the best of terms right now... And he’s got Nora on his mind, so..."
+            u "I hate to state the obvious but, Chris and I aren't on the best of terms right now... And he's got Nora on his mind, so..."
 
             scene v14s19a_1c
             with dissolve
 
-            u "It’s probably not best if I'm the one who talks to him."
+            u "It's probably not best if I'm the one who talks to him."
 
             scene v14s19a_1h # FPP Same angle as 1, Chloe looking a bit sad and dissapointed, mouth open
             with dissolve
 
-            cl "*Sighs* Yeah, I get it. His head isn’t in the right space around you. Smart thinking."
+            cl "*Sighs* Yeah, I get it. His head isn't in the right space around you. Smart thinking."
 
     # -Continue regardless of everything
     scene v14s19a_3 # Show a book dropping flat on the ground with a loud "smack"

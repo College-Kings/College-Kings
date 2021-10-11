@@ -54,7 +54,7 @@ label v14s28:
 
                 u "We've had our bumps in the road but someway, somehow, we always get drawn right back to each other."
 
-                u "That’s what tells me that there’s something between us, and it is meant to be."
+                u "That's what tells me that there's something between us, and it is meant to be."
 
                 u "I love you too, Em."
 
@@ -81,7 +81,7 @@ label v14s28:
                 scene v14s28_2c
                 with dissolve
 
-                em "You just made me the happiest I’ve ever been."
+                em "You just made me the happiest I've ever been."
 
                 em "God, I love you so much..."
 
@@ -163,12 +163,12 @@ label v14s28:
     scene v14s28_2
     with dissolve
 
-    em "You’re telling me? *Chuckles*"
+    em "You're telling me? *Chuckles*"
 
     scene v14s28_2a
     with dissolve
 
-    u "You’re sure about this?"
+    u "You're sure about this?"
 
     scene v14s28_2
     with dissolve
@@ -180,7 +180,7 @@ label v14s28:
     scene v14s28_2a
     with dissolve
 
-    u "I wasn’t aware that you were even considering this."
+    u "I wasn't aware that you were even considering this."
 
     scene v14s28_2
     with dissolve
