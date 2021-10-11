@@ -200,10 +200,10 @@ label v8s30_amberAnal:
     am "*Moans very loud*"
     am "...not able to control myself!!"
     pause 3
-    am "I'm gonna come! [name] I'm gonna come!!"
+    am "I'm gonna cum! [name] I'm gonna cum!!"
 
     u "I think I'm close too."
-    am "Come in my ass [name]. *Moans* Fill it up good!"
+    am "Cum in my ass [name]. *Moans* Fill it up good!"
     pause 3
 
     scene cgt_119 # TPP. Close up of MC's penis inside Amber's a-hole with cum leaking outside
