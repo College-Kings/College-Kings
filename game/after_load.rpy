@@ -464,6 +464,8 @@ label after_load:
         except NameError: v12s24_emmymatch = False
         try: v12_sauna_sneak1
         except NameError: v12_sauna_sneak1 = False
+        try: v12_girl
+        except NameError: v12_girl = "na"
 
         #v11 variables
         try: laurenLike
