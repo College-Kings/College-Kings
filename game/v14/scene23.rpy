@@ -619,7 +619,7 @@ label v14s23:
                         scene v14s23_4a
                         with dissolve
 
-                        cl "You're joking..?"
+                        cl "You're joking...?"
 
                         scene v14s23_2c
                         with dissolve
