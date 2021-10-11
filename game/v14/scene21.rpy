@@ -50,7 +50,7 @@ label v14s21:
 
     cl "You're not only there for me in private but now in public as well. That's something I can't thank you enough for."
 
-    cl "A lot of people that I know tend to avoid hanging out with me, because of the rumors or preconceived images that float around. But…"
+    cl "A lot of people that I know tend to avoid hanging out with me, because of the rumors or preconceived images that float around. But..."
 
     cl "You don’t care what people say. And that’s what I appreciate the most."
 
@@ -135,7 +135,7 @@ label v14s21:
     scene v14s21_2f
     with dissolve
 
-    cl "Haha. You know, I have some time right now…"
+    cl "Haha. You know, I have some time right now..."
 
     scene v14s21_2g
     with dissolve
@@ -145,7 +145,7 @@ label v14s21:
     scene v14s21_2f
     with dissolve
 
-    cl "Yeah… I think I have a nice idea in mind to kick off our campaign as well."
+    cl "Yeah... I think I have a nice idea in mind to kick off our campaign as well."
 
     scene v14s21_2g
     with dissolve
@@ -234,7 +234,7 @@ label v14s21:
             scene v14s21_8b # FPP. Same as v14s21_8a, Chloe confused expression, mouth closed.
             with dissolve
 
-            u "N-No… Nothing's wrong at all I just-"
+            u "N-No... Nothing's wrong at all I just-"
 
             scene v14s21_8c # FPP. Same as v14s21_8b, Chloe sad and confused expression, mouth closed.
             with dissolve

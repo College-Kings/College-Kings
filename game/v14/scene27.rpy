@@ -59,7 +59,7 @@ label v14s27:
     scene v14s27_2
     with dissolve
 
-    em "Can we speak somewhere a little more… private?"
+    em "Can we speak somewhere a little more... private?"
 
     scene v14s27_2a
     with dissolve

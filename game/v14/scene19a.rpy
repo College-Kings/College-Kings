@@ -178,7 +178,7 @@ else: # If helped Lindsey
 
         "Talk to Lindsey":
 
-            u "I hate to state the obvious but, Chris and I aren't on the best of terms right now… And he’s got Nora on his mind, so..."
+            u "I hate to state the obvious but, Chris and I aren't on the best of terms right now... And he’s got Nora on his mind, so..."
 
             scene v14s19a_1c
             with dissolve

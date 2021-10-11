@@ -62,7 +62,7 @@ label v14s03:
     scene v14s03_3a # FPP. Imre looking suspeciously, mouth opened
     with dissolve
 
-    imre "I… Don’t know. Looks sketchy."
+    imre "I... Don’t know. Looks sketchy."
 
     scene v14s03_3b # FPP. Same as 3a, mouth closed
     with dissolve

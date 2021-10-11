@@ -28,7 +28,7 @@ label v14s13:
     scene v14s13_4a # FPP. Same as v14s13_4, mouth closed
     with dissolve
 
-    u "Ha… Sorry Seb, I was gonna save that for the morning."
+    u "Ha... Sorry Seb, I was gonna save that for the morning."
 
     scene v14s13_4b # FPP. Same as v14s13_4, slight laughing expression
     with dissolve
@@ -43,17 +43,17 @@ label v14s13:
     scene v14s13_4a
     with dissolve
 
-    u "Ha, alright… You make it sound like you're dying though. *Laughs*"
+    u "Ha, alright... You make it sound like you're dying though. *Laughs*"
 
     scene v14s13_4
     with dissolve
 
-    se "Well… You never know."
+    se "Well... You never know."
 
     scene v14s13_4a
     with dissolve
 
-    u "Wait… Sebastian, are you-?"
+    u "Wait... Sebastian, are you-?"
 
     scene v14s13_4c # FPP. Same as v14s13_4, different posture
     with dissolve

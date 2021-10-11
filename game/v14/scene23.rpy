@@ -42,7 +42,7 @@ label v14s23:
     scene v14s23_2a
     with dissolve
 
-    ch "*Chuckles* Yeah…"
+    ch "*Chuckles* Yeah..."
 
     ch "Sometimes taking a moment to relax despite having too much shit to do, is what you need to do most."
 
@@ -54,7 +54,7 @@ label v14s23:
     scene v14s23_2a
     with dissolve
 
-    ch "Dammit… I knew I spent too much time around that boomer while we were away…"
+    ch "Dammit... I knew I spent too much time around that boomer while we were away..."
 
     scene v14s23_2b
     with dissolve
@@ -155,7 +155,7 @@ label v14s23:
     scene v14s23_4a # FPP. Same as v14s23_4, Chloe slight smile, mouth open.
     with dissolve
 
-    cl "Oh. *Chuckles* That’s why I felt my ears burning…"
+    cl "Oh. *Chuckles* That’s why I felt my ears burning..."
 
     scene v14s23_4b # FPP. Same as v14s23_4a, Chloe now looking at MC, slight smile, mouth open.
 
@@ -174,7 +174,7 @@ label v14s23:
     scene v14s23_2c
     with dissolve
 
-    ch "Now look, Chloe… I did agree to help you, but I didn't specify how involved or supportive I'd be."
+    ch "Now look, Chloe... I did agree to help you, but I didn't specify how involved or supportive I'd be."
 
     ch "Putting my head out there in full support of you means that the Wolves must all be convinced or we'll have a divided frat with similar issues to what you have now."
 
@@ -270,14 +270,14 @@ label v14s23:
     scene v14s23_4c
     with dissolve
 
-    u "Actually, for this… It's probably best if it's just you and Chris, right?"
+    u "Actually, for this... It's probably best if it's just you and Chris, right?"
 
     u "It’s better not to drag anyone else into this, I think. Don't wanna cause any unintended tension for others."
 
     scene v14s23_4b
     with dissolve
 
-    cl "That's true… A lot of the girls are already stressed about choosing sides so, yeah. Just you and I then, Chris."
+    cl "That's true... A lot of the girls are already stressed about choosing sides so, yeah. Just you and I then, Chris."
 
     scene v14s23_2c
     with dissolve
@@ -288,14 +288,14 @@ label v14s23:
         scene v14s23_4a
         with dissolve
 
-        cl "I'm glad you asked, hehe…"
+        cl "I'm glad you asked, hehe..."
 
         cl "A really good friend of mine is willing to let us shoot with her for a fee, but with her we'll get to pose with a real life wolf!"
 
         scene v14s23_2d # FPP. Same as v14s23_2c, Chris shocked smile, mouth open.
         with dissolve
 
-        ch "Are you guys… serious?"
+        ch "Are you guys... serious?"
 
         scene v14s23_2a
         with dissolve
@@ -310,14 +310,14 @@ label v14s23:
         scene v14s23_2c
         with dissolve
 
-        ch "Sheesh…"
+        ch "Sheesh..."
 
         scene v14s23_4a
         with dissolve
 
         cl "It'd give the Wolves a really good look, Chris."
 
-        cl "The Apes are always looked at as the tough guys, right? But this…"
+        cl "The Apes are always looked at as the tough guys, right? But this..."
 
         cl "This would change that."
 
@@ -377,7 +377,7 @@ label v14s23:
             scene v14s23_2e # FPP. Same as v14s23_2c, Chris slight smile, mouth closed.
             with dissolve
 
-            u "You mean…"
+            u "You mean..."
 
             scene v14s23_2c
             with dissolve
@@ -387,7 +387,7 @@ label v14s23:
             scene v14s23_4a
             with dissolve
 
-            cl "Chris… You're joking, right?"
+            cl "Chris... You're joking, right?"
 
             scene v14s23_2c
             with dissolve
@@ -445,12 +445,12 @@ label v14s23:
             scene v14s23_2e
             with dissolve
 
-            u "Chris…"
+            u "Chris..."
 
             scene v14s23_4a
             with dissolve
 
-            cl "You're joking…"
+            cl "You're joking..."
 
             scene v14s23_2c
             with dissolve
@@ -481,7 +481,7 @@ label v14s23:
             scene v14s23_4a
             with dissolve
 
-            cl "I'm glad you asked, hehe…"
+            cl "I'm glad you asked, hehe..."
 
             cl "After a quick talk with [name], we’ve decided that we're gonna get this really cute plush toy Wolf to pose with."
 
@@ -503,7 +503,7 @@ label v14s23:
             scene v14s23_4e # FPP. Same as v14s23_4a, Chloe slight pouty face, mouth open.
             with dissolve
 
-            cl "Maybe you’re right…"
+            cl "Maybe you’re right..."
 
             scene v14s23_4f # FPP. Same as v14s23_4b, Chloe looking at MC with puppy dog eyes and pouty face, mouth closed.
             with dissolve
@@ -515,7 +515,7 @@ label v14s23:
                     scene v14s23_2b
                     with dissolve
 
-                    u "Looking back on it now, a plush toy probably wasn't the best idea… but let's be clear, any \"image\" we put out will be the image of supporting Chloe’s campaign."
+                    u "Looking back on it now, a plush toy probably wasn't the best idea... but let's be clear, any \"image\" we put out will be the image of supporting Chloe’s campaign."
 
                     u "It’s not really about what the Wolves will look like."
 
@@ -539,7 +539,7 @@ label v14s23:
                     scene v14s23_2c
                     with dissolve
 
-                    ch "*Whispers* Adorable… *Chuckles*."
+                    ch "*Whispers* Adorable... *Chuckles*."
 
                 "Disagree with Chris.":
                     $ v14s23_disagree = True
@@ -558,7 +558,7 @@ label v14s23:
 
                     cl "*Chuckles* Oh-"
 
-                    cl "Sorry for laughing, honestly. It’s just…"
+                    cl "Sorry for laughing, honestly. It’s just..."
 
                     cl "I know you're not some fruity fraternity and everyone else knows that too. *Chuckles*"
 
@@ -572,12 +572,12 @@ label v14s23:
 
                     cl "This entire photoshoot is for the Chicks to show our support of the Wolves, as we get the same in return."
 
-                    cl "I mean… Imagine how cute it'd be seeing all the girls walk around with little wolf plushies."
+                    cl "I mean... Imagine how cute it'd be seeing all the girls walk around with little wolf plushies."
 
                     scene v14s23_2c
                     with dissolve
 
-                    ch "Hmm… You’re not wrong… That’s pretty damn cute. *Chuckles*"
+                    ch "Hmm... You’re not wrong... That’s pretty damn cute. *Chuckles*"
 
                     scene v14s23_2b
                     with dissolve
@@ -593,7 +593,7 @@ label v14s23:
                         scene v14s23_2c
                         with dissolve
 
-                        ch "Honestly, I wish we were taken a bit more seriously than posing with toys, but…"
+                        ch "Honestly, I wish we were taken a bit more seriously than posing with toys, but..."
 
                         ch "I see the vision you guys have and I support the trust and respect that comes with this alliance. So, this is what I'm gonna do."
 
@@ -614,7 +614,7 @@ label v14s23:
                         scene v14s23_2e
                         with dissolve
 
-                        u "Chris…"
+                        u "Chris..."
 
                         scene v14s23_4a
                         with dissolve

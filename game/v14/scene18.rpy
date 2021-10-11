@@ -40,7 +40,7 @@ label v14s18:
     scene v14s18_4
     with dissolve
 
-    u "Oh, sure…"
+    u "Oh, sure..."
 
     scene v14s18_4a
     with dissolve
@@ -75,12 +75,12 @@ label v14s18:
     scene v14s18_4c
     with dissolve
 
-    li "I still have a shit ton of campaign planning to do and I can't exactly let just anyone in on that… but I would enjoy your advice."
+    li "I still have a shit ton of campaign planning to do and I can't exactly let just anyone in on that... but I would enjoy your advice."
 
     scene v14s18_4b
     with dissolve
 
-    u "Lindsey…"
+    u "Lindsey..."
 
     scene v14s18_4c
     with dissolve
@@ -95,7 +95,7 @@ label v14s18:
     scene v14s18_4a
     with dissolve
 
-    li "Wait! Before you answer, let me just say this…"
+    li "Wait! Before you answer, let me just say this..."
 
     scene v14s18_4d # FPP. Same as v14s18_4a, Lindsey slightly worried, looking down, mouth open
     with dissolve
@@ -123,7 +123,7 @@ label v14s18:
         scene v14s18_4a
         with dissolve
 
-        li "I know you’re like, dating her, or whatever you’re calling it… *Chuckles* But genuinely, my only chance at beating Chloe starts with you joining my team."
+        li "I know you’re like, dating her, or whatever you’re calling it... *Chuckles* But genuinely, my only chance at beating Chloe starts with you joining my team."
 
     if lindseyrs:
         scene v14s18_4f # FPP. Lindsey very close to MC, she is whispering, mouth open, seductive smile
@@ -144,7 +144,7 @@ label v14s18:
         scene v14s18_4g
         with dissolve
 
-        li "I was in the bathroom and I was…"
+        li "I was in the bathroom and I was..."
 
         scene v14s18_4a
         with dissolve
@@ -160,7 +160,7 @@ label v14s18:
     scene v14s18_4c
     with dissolve
 
-    li "So… What do you say, will you help me win this thing?"
+    li "So... What do you say, will you help me win this thing?"
 
     scene v14s18_4b
     with dissolve
@@ -174,7 +174,7 @@ label v14s18:
             scene v14s18_6 # TPP. Show Lindsey hugging MC tightly, MC smiling, mouth closed, Lindsey smiling, mouth open
             with dissolve
 
-            li "That's exactly what I expected…"
+            li "That's exactly what I expected..."
 
             if lindseyrs:
                 scene v14s18_4h # FPP. Same as v14s18_4, show Lindsey looking around

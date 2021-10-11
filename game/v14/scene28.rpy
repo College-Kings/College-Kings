@@ -11,7 +11,7 @@ label v14s28:
         scene v14s28_2 # FPP. Emily looking at MC, MC Looking at Emily, Emily worried smile, mouth open.
         with dissolve
 
-        em "So… You and I have been on and off, and on and off..."
+        em "So... You and I have been on and off, and on and off..."
 
         em "Seems like you don't mind fucking me but when it comes to actually being nice person or ressurecting our relationship, you're not for it."
 
@@ -40,7 +40,7 @@ label v14s28:
         scene v14s28_2a
         with dissolve
 
-        u "(Oh… Fuck…)"
+        u "(Oh... Fuck...)"
 
         menu:
             "I love you too...":
@@ -48,7 +48,7 @@ label v14s28:
                 scene v14s28_2a
                 with dissolve
 
-                u "Emily…"
+                u "Emily..."
 
                 u "I've had a hard time admitting to myself, let alone expressing to you, how I feel about you."
 
@@ -83,7 +83,7 @@ label v14s28:
 
                 em "You just made me the happiest I’ve ever been."
 
-                em "God, I love you so much…"
+                em "God, I love you so much..."
 
                 scene v14s28_2d # FPP. Same as v14s28_2c, Emily crying, MC wiping away her tears, Emily slight smile, mouth closed.
                 with dissolve
@@ -104,7 +104,7 @@ label v14s28:
 
                 u "I feel like I've made that clear in the past few months, but in the event that I haven't, I will now."
 
-                u "Considering you cheat on me, my friend is interested in you, and the fact that I've met other people…"
+                u "Considering you cheat on me, my friend is interested in you, and the fact that I've met other people..."
 
                 u "I just really don't see us working out."
 
@@ -113,7 +113,7 @@ label v14s28:
 
                 em "*Sighs*"
 
-                em "I knew that's what you were going to say. And honestly, I'm upset, but…"
+                em "I knew that's what you were going to say. And honestly, I'm upset, but..."
 
                 em "This is exactly why I'm doing what I'm doing."
 
@@ -125,7 +125,7 @@ label v14s28:
     scene v14s28_2
     with dissolve
 
-    em "I've put a lot of thought into what I'm about to say…"
+    em "I've put a lot of thought into what I'm about to say..."
 
     em "I've talked it over with a lot of people, and I'm set in my decision."
 
@@ -142,7 +142,7 @@ label v14s28:
     scene v14s28_2a
     with dissolve
 
-    u "Huh? Emily… Why?"
+    u "Huh? Emily... Why?"
 
     scene v14s28_2
     with dissolve
@@ -222,7 +222,7 @@ label v14s28:
     scene v14s28_2a
     with dissolve
 
-    u "That soon? Jeez…"
+    u "That soon? Jeez..."
 
     scene v14s28_2
     with dissolve
@@ -324,9 +324,9 @@ label v14s28:
     scene v14s28_5a # FPP. Same as v14s28_5, MC looking at the empty Gym Lockerroom.
     with dissolve
 
-    u "(Damn, she's actually gone…)"
+    u "(Damn, she's actually gone...)"
 
-    u "(After all our history, our ups and downs on campus… She's actually gone.)"
+    u "(After all our history, our ups and downs on campus... She's actually gone.)"
 
     if v14_emily_ily:
         u "(I'm sure I'll see her again, but still... It won't be the same around here.)"
