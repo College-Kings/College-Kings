@@ -888,13 +888,13 @@ label conl:
 
     u "NO! This is wrong. Just get out! Leave me alone!"
 
-    hide screen fantasyOverlay
     play sound "sounds/swoosh.mp3"
 
     stop music fadeout 2.0
 
     scene s225a # you open your eyes
     with flash
+    hide screen fantasyOverlay
 
     u "*Breathing heavily*"
 
