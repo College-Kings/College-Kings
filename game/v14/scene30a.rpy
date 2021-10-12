@@ -194,7 +194,7 @@ label v14s30a:
     cl "[name]?!"
 
     scene v14s30a_10 # TPP. Show the Wolf tugging at MC's pants, the wolfs tail wagging to the left.
-    with dissolve
+    with vpunch
 
     u "(This is it… This is how I die…)"
 
