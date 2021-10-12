@@ -142,7 +142,7 @@ label v13s37_nora:
     scene v13s37no_2b # FPP. Same as v13s37no2, Nora slightly sad, mouth closed
     with dissolve
 
-    u "It is a surprise seeing you and Chris together, holding hands and slight smile at each other after everything that's happened."
+    u "It is a surprise seeing you and Chris together, holding hands and still slightly smiling at each other after everything that's happened."
 
     scene v13s37no_2c # FPP. Same as v13s37no_2b, mouth open
     with dissolve
@@ -629,7 +629,7 @@ label v13s37_chris:
             scene v13s37ch_2b
             with dissolve
 
-            u "You guys are slight smile and holding each others' hands, one would think things are good between you guys."
+            u "You guys are still slightly smiling and holding each others' hands, one would think things are good between you guys."
 
             scene v13s37ch_2c
             with dissolve
@@ -710,7 +710,7 @@ label v13s37_chris:
             scene v13s37ch_2b
             with dissolve
 
-            u "You guys are slight smile and holding each others' hands, one would think things are good between you guys."
+            u "You guys are still slightly smiling and holding each others' hands, one would think things are good between you guys."
 
             scene v13s37ch_2c
             with dissolve
