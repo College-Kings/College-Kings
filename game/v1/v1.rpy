@@ -1986,12 +1986,12 @@ label at_bd:
 
     ### Sex dream
     label sexdream1: #for compatibility only
+    show screen fantasyOverlay
     scene sda1  ### close to the kitchen counter
     with Fade (1,0,1)
 
     ri "Wow, you guys have a really nice house."
 
-    show screen fantasyOverlay
     scene sda1a
     with dissolve
 
