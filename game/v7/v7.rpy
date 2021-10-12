@@ -3481,17 +3481,13 @@ label afterbeach:
 
             menu:
                 "Pledge to the Apes":
-
                     $ grant_achievement("silverback")
-
                     u "(Fuck it. I'm gonna be winner, no matter what it costs. Time to pledge to the Apes.)"
 
                     jump pledgeapes
 
                 "Pledge to the Wolves":
-
                     $ grant_achievement("wolfpack")
-
                     u "(Grayson might kill me when he finds out, but I can't join the Apes. I gotta pledge to the Wolves.)"
 
     else:
@@ -3510,16 +3506,13 @@ label afterbeach:
 
         menu:
             "Pledge to the Apes":
-
                 $ grant_achievement("silverback")
-
                 u "(Fuck it. I'm gonna be winner, no matter what it costs. I'ma go to the Apes' house and tell Grayson I changed my mind.)"
 
                 jump pledgeapes
 
             "Pledge to the Wolves":
                 $ grant_achievement("wolfpack")
-
                 u "(Nah, Grayson's done more than enough questionable shit. The Wolves been nothing but good to me. I'ma pledge to the Wolves.)"
 
 
