@@ -655,7 +655,7 @@ label v12_nora_sex:
         scene v12nos35a
         with dissolve
 
-        no "We don't have to talk about what happened, just... Know that I'm happy you came and checked up on me."
+        no "We don't have to talk about what happened, just... know that I'm happy you came and checked up on me."
 
         scene v12nos35
         with dissolve

@@ -645,7 +645,7 @@ label v13s24:
     scene v13s24_16j # FPP. same as v13s24_16f aryssa instead of emmy
     with dissolve
 
-    ary "Flipping two people off already? Not an impressive site."
+    ary "Flipping two people off already? Not an impressive sight."
 
     scene v13s24_10h # FPP. same as v13s24_10e imre slightly shocked
     with dissolve
