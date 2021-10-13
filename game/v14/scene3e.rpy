@@ -337,7 +337,7 @@ label v14s03e:
 
     u "Imre, calm down!"
 
-    scene v14s03e__16 # TPP. Show Imre breaking free from MC, angry expression, mouth closed, MC, surprised expression, mouth closed
+    scene v14s03e_16 # TPP. Show Imre breaking free from MC, angry expression, mouth closed, MC, surprised expression, mouth closed
     with dissolve
 
     pause 0.75
