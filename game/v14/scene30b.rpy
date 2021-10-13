@@ -249,7 +249,9 @@ label v14s30b:
         play sound "sounds/doorclose.mp3"
 
         scene v14s30b_11 # TPP. Show MC sitting on his bed in the Apes room, slight smile, mouth closed.
-
+        with dissolve
+    
+    # Don't know if it was done correctly I tried my best :P
     if v14s30b_pw_image_one and v14s30b_its_perfect:
         $ kiwii_post = KiwiiPost("Chloe", In the woods Chloe standing next to the plush wolf, smiling proudly with her hand on her hip, _("What’s a chick without her wolf? <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=712)
         if v14_pw_half_chris_support:
