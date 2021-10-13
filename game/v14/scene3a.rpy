@@ -56,12 +56,12 @@ label v14s03a:
 
     menu:
         "Yes, of course":
-            scene v14s03a_2a
+            scene v14s03a_2
             with dissolve
         
             u "Of course, who hasn't is a better question. *Chuckles*"
 
-            scene v14s03a_2
+            scene v14s03a_2a
             with dissolve
 
             ngam "My man!" 
@@ -77,17 +77,17 @@ label v14s03a:
 
             ngam "Have you been living under a rock, brother man?! Three cups and a ball is the game of the century."
 
-            scene v14s03a_2
+            scene v14s03a_2a
             with dissolve
 
             ngam "I put a ball in one of the three cups, mix 'em up, and you choose the one you think the ball is under. Make sense?"
 
-            scene v14s03a_2a
+            scene v14s03a_2
             with dissolve
 
             u "Makes sense."
 
-            scene v14s03a_2
+            scene v14s03a_2a
             with dissolve
 
             ngam "My man!"
@@ -201,7 +201,6 @@ label v14s03a:
             u "*Chuckles*"
 
         "Give it a try": # -If Give it a try
-            
             scene v14s03a_2
             with dissolve
 
@@ -242,12 +241,12 @@ label v14s03a:
             scene v14s03a_3e # FPP. Gambler's right hand on right cup; left hand on middle cup, switching places.
             with dissolve
 
-            pause 0.75
+            pause 0.5
 
             scene v14s03a_3f # FPP. Gambler's right hand on right cup, now in middle; left hand on middle cup; now on the right.
             with dissolve
 
-            pause 0.75
+            pause 0.5
 
             scene v14s03a_2a
             with dissolve
@@ -274,7 +273,7 @@ label v14s03a:
             scene v14s03a_2b
             with dissolve
 
-            ngam "Fifty, fifty chance brother man."
+            ngam "It's not in the middle. Fifty, fifty chance brother man."
             
             menu:
                 "Left cup": # -If Left cup
@@ -297,6 +296,8 @@ label v14s03a:
                     with dissolve
                     
             # End cup choice
+
+            pause 0.75
 
             scene v14s03a_2a
             with dissolve
@@ -430,7 +431,7 @@ label v14s03a:
             scene v14s03a_11b # Ryan leaning (towards Imre off camera) cuping his hand around his mouth (whisper), open, neutral expression.
             with dissolve
 
-            ry "*Whispers* Imre, that's enough man. He learned his lesson I think."
+            ry "*Whispers* Imre, that's enough, man. He learned his lesson I think."
 
             scene v14s03a_4a
             with dissolve
@@ -458,7 +459,7 @@ label v14s03a:
                     scene v14s03a_4b # FPP, Imre holding Gambler's wallet wide open showing lots of paper cash/Euros.
                     with dissolve
                     
-                    imre "Hooo! Real nice haul tonight."
+                    u "Hooo! Real nice haul tonight."
 
                     scene v14s03a_12b # FPP. Same as v14s03a_12a, but with few bills of cash on the ground and a few bills floating in the air.
                     with dissolve
@@ -540,12 +541,12 @@ label v14s03a:
     scene v14s03a_9
     with dissolve
 
-    pause 0.75 
+    pause 0.25 
 
     scene v14s03a_9a
     with dissolve
 
-    pause 0.75
+    pause 0.25
 
     scene v14s03a_9b
     with dissolve

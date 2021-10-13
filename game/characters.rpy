@@ -140,8 +140,7 @@ define character.polly = Character("Polly", who_color="#8b0000", who_outlines=[ 
 define character.random_guy = Character("Bartender", who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 
 # 14.0
-define character.ngam = Character("Night Gambler")
 define character.emerald = Character("Emerald")
 define character.madame = Character("Madame")
 define character.satin = Character("Satin")
-define character.wtrain = Character("Woman")
+define character.wtrain = Character("Woman")define character.emerald = Character("Emerald", who_color="#ff1694", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
