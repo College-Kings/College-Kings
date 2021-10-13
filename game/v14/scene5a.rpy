@@ -45,7 +45,7 @@ label v14s05a:
 
     pause 0.75
 
-    if Threesome: #placeholder
+    if aubreyrs and rileyrs: #placeholder
         scene v14s05a_7 # FPP. Riley just beside MC on her bedside sitting up straight, slight smile, mouth open
         with dissolve
 
