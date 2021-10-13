@@ -407,4 +407,9 @@ label v14s03e:
 
     pause 0.75
 
+    scene v13s31_19
+    with dissolve
+    
+    pause 0.75
+
     jump v14s04
