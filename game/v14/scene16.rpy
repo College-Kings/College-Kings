@@ -113,7 +113,7 @@ label v14s16:
     cl "It would include planning campaign events like parties, making T-shirts, that kind of stuff."
 
     if v13_help_chloe:
-        cl "I remember how you said you'd help me before but..."
+        cl "I remember how you said you'd support me before but..."
    
     scene v14s16_2b # FPP. Same as v14s16_2a, Chloe cute pose, pouting face, mouth open.
     with dissolve
