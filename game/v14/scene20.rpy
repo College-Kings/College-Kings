@@ -38,12 +38,12 @@ label v14s20:
     scene v14s20_3c # FPP Same angle as 3, Autumn looks embarrassed, mouth open
     with dissolve
     
-    aut "*Chuckles* I’m not kidnapping you, haha."
+    aut "*Chuckles* I'm not kidnapping you, haha."
 
     scene v14s20_3a
     with dissolve
 
-    u "*Chuckles* That’s what a kidnapper would say."
+    u "*Chuckles* That's what a kidnapper would say."
 
     scene v14s20_3
     with dissolve
@@ -58,7 +58,7 @@ label v14s20:
     scene v14s20_3
     with dissolve
 
-    aut "Oh, you remember the dog shelter I’m working for?"
+    aut "Oh, you remember the dog shelter I'm working for?"
 
     scene v14s20_3a
     with dissolve
@@ -68,7 +68,7 @@ label v14s20:
     scene v14s20_3
     with dissolve
 
-    aut "We’re having a grand re-opening."
+    aut "We're having a grand re-opening."
 
     scene v14s20_3a
     with dissolve
@@ -78,7 +78,7 @@ label v14s20:
     scene v14s20_3
     with dissolve
 
-    aut "We didn’t really. We just had some major exterior renovations and they also renamed the place. After about a month or so of being closed we wanted to have a little celebration day for the community."
+    aut "We didn't really. We just had some major exterior renovations and they also renamed the place. After about a month or so of being closed we wanted to have a little celebration day for the community."
 
     scene v14s20_3a
     with dissolve
@@ -139,12 +139,12 @@ label v14s20:
         scene v14s20_3a
         with dissolve
 
-        u "It definitely wasn't a good day. Not proud of some of the decisions I made but, we’re still there for each other."
+        u "It definitely wasn't a good day. Not proud of some of the decisions I made but, we're still there for each other."
 
         scene v14s20_3
         with dissolve
 
-        aut "I'm glad to hear that. My sister’s first real boyfriend wasn’t a complete dickhead... Phew! *Laughs*"
+        aut "I'm glad to hear that. My sister's first real boyfriend wasn't a complete dickhead... Phew! *Laughs*"
 
         scene v14s20_3a
         with dissolve
@@ -227,7 +227,7 @@ label v14s20:
         scene v14s20_3a
         with dissolve
 
-        u "Amber is a wild card, we all definitely have fun with her. There’s no doubt about that, haha."
+        u "Amber is a wild card, we all definitely have fun with her. There's no doubt about that, haha."
 
         scene v14s20_3e
         with dissolve
@@ -244,12 +244,12 @@ label v14s20:
         scene v14s20_3a
         with dissolve
 
-        u "Lauren’s great at handling peer pressure, though."
+        u "Lauren's great at handling peer pressure, though."
 
         scene v14s20_3
         with dissolve
 
-        aut "*Chuckles* I'm glad to hear that. But, I don’t worry much about her anymore. She’s become very independent since the start of the semester."
+        aut "*Chuckles* I'm glad to hear that. But, I don't worry much about her anymore. She's become very independent since the start of the semester."
 
         scene v14s20_3a
         with dissolve
@@ -300,7 +300,7 @@ label v14s20:
     scene v14s20_3
     with dissolve
 
-    aut "*Laughs* It’s so weird but, you remind me of my childhood friend, Hero."
+    aut "*Laughs* It's so weird but, you remind me of my childhood friend, Hero."
 
     scene v14s20_3a
     with dissolve
@@ -315,7 +315,7 @@ label v14s20:
     scene v14s20_3a
     with dissolve
 
-    u "Hell yeah it’s cool. No one else is named that. *Laughs*"
+    u "Hell yeah it's cool. No one else is named that. *Laughs*"
 
     scene v14s20_3
     with dissolve
@@ -360,7 +360,7 @@ label v14s20:
     scene v14s20_3g
     with dissolve
 
-    aut "I really don't have many friends, and it’s mostly by choice."
+    aut "I really don't have many friends, and it's mostly by choice."
 
     scene v14s20_3h # FPP Same as 3g, Autumn's mouth closed
     with dissolve
@@ -390,7 +390,7 @@ label v14s20:
     scene v14s20_3c
     with dissolve
 
-    aut "Ha, it’s okay. I'd rather not, though."
+    aut "Ha, it's okay. I'd rather not, though."
 
     scene v14s20_3h
     with dissolve
@@ -410,7 +410,7 @@ label v14s20:
     scene v14s20_3e
     with dissolve
 
-    u "With me being close as I am to Lauren, yeah. It is a bit odd, isn’t it? *Chuckles*"
+    u "With me being close as I am to Lauren, yeah. It is a bit odd, isn't it? *Chuckles*"
 
     scene v14s20_3f
     with dissolve
@@ -453,7 +453,7 @@ label v14s20:
             scene v14s20_3a
             with dissolve
 
-            u "I’ll be waiting by the phone. *Chuckles*."
+            u "I'll be waiting by the phone. *Chuckles*."
 
             scene v14s20_3
             with dissolve
@@ -463,7 +463,7 @@ label v14s20:
             scene v14s20_3a
             with dissolve
 
-            u "Nope, I’ve got plenty... Just don’t have you."
+            u "Nope, I've got plenty... Just don't have you."
 
             scene v14s20_3i # FPP Same angle as 3, Autumn blushes and looks embarrassed, looks down, smiles and bites her lower lip
             with dissolve
@@ -472,7 +472,7 @@ label v14s20:
 
         "It was nice catching up":
 
-            u "It was really nice catching up with you, but I actually need to hurry. I’ve got this thing..."
+            u "It was really nice catching up with you, but I actually need to hurry. I've got this thing..."
 
             scene v14s20_3a
             with dissolve

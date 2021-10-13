@@ -66,7 +66,7 @@ label v14s25:
         scene v14s25_4f # FPP. Same as v14s25_4e, Amber slight smile, mouth open.
         with dissolve
 
-        am "Oh, wow. Ha…"
+        am "Oh, wow. Ha..."
 
         scene v14s25_5 # TPP. Amber hugging MC tightly, both slight smile, mouth closed.
         with vpunch
@@ -103,12 +103,12 @@ label v14s25:
             scene v14s25_4f
             with dissolve
 
-            am "I've never tried these, I usually don't eat candy except for those red licorice things, but I’ll definitely give these a shot."
+            am "I've never tried these, I usually don't eat candy except for those red licorice things, but I'll definitely give these a shot."
 
             scene v14s25_4e
             with dissolve
 
-            u "(Damn, should’ve gotten the Twezzlers…) Well, I hope you like them."
+            u "(Damn, should've gotten the Twezzlers...) Well, I hope you like them."
 
             scene v14s25_4f
             with dissolve
@@ -138,7 +138,7 @@ label v14s25:
     scene v14s25_4f
     with dissolve
 
-    am "I laugh my ass off everytime I see one of her victims. Especially the ones I've set up…"
+    am "I laugh my ass off everytime I see one of her victims. Especially the ones I've set up..."
 
     scene v14s25_4e
     with dissolve
@@ -225,7 +225,7 @@ label v14s25:
     scene v14s25_8a
     with dissolve
 
-    u "Okay… I know you like being wild Amber, but you've always been responsible when it comes to this stuff."
+    u "Okay... I know you like being wild Amber, but you've always been responsible when it comes to this stuff."
 
     u "When Josh was at his lowest point, it was you that helped him."
 
@@ -234,9 +234,9 @@ label v14s25:
     scene v14s25_8
     with dissolve
 
-    am "Wow… So someone does see me as the responsible one!"
+    am "Wow... So someone does see me as the responsible one!"
 
-    am "But good ole Shane just thinks I'm another worthless junkie… Ha!"
+    am "But good ole Shane just thinks I'm another worthless junkie... Ha!"
 
     scene v14s25_8a
     with dissolve
@@ -246,21 +246,21 @@ label v14s25:
     scene v14s25_8d # FPP. Same as v14s25_8, Amber slight frown, mouth open.
     with dissolve
 
-    am "Shane is my friend- WAS my friend…"
+    am "Shane is my friend- WAS my friend..."
 
     am "He doesn't want to talk to me anymore."
 
     scene v14s25_8e # FPP. Same as v14s25_8d, Amber slight frown, mouth closed.
     with dissolve
 
-    u "I can tell this is serious for you, Amber… If you wanna talk we can talk or we can just leave it be."
+    u "I can tell this is serious for you, Amber... If you wanna talk we can talk or we can just leave it be."
 
     scene v14s25_8d
     with dissolve
 
     am "Ha! Why not talk about it, right?"
 
-    am "Shane went to rehab and blocked me on everything. *Scoffs* He and I have been friends forever, and now that he wants to turn a new leaf…"
+    am "Shane went to rehab and blocked me on everything. *Scoffs* He and I have been friends forever, and now that he wants to turn a new leaf..."
 
     am "He needs to cut me off since I'm such a bad influence."
 
@@ -284,14 +284,14 @@ label v14s25:
     scene v14s25_8i # FPP. Same as v14s25_8h, Amber angry frown, mouth closed.
     with dissolve
 
-    u "Damn… That’s not fair at all, Amber."
+    u "Damn... That's not fair at all, Amber."
 
     u "I'm sorry you're going through this, you-."
 
     scene v14s25_8h
     with dissolve
 
-    am "Why? Haha…"
+    am "Why? Haha..."
 
     scene v14s25_8f
     with dissolve
@@ -345,12 +345,12 @@ label v14s25:
     scene v14s25_8d
     with dissolve
 
-    am "It’s true!"
+    am "It's true!"
 
     scene v14s25_8e
     with dissolve
 
-    u "No… Don't give yourself that much credit, ha. Josh was on that shit way before he met you."
+    u "No... Don't give yourself that much credit, ha. Josh was on that shit way before he met you."
 
     scene v14s25_8d
     with dissolve
@@ -399,16 +399,16 @@ label v14s25:
     scene v14s25_8l
     with dissolve
 
-    am "I only got into trouble because their rules were so ridiculous. I mean…"
+    am "I only got into trouble because their rules were so ridiculous. I mean..."
 
     am "I couldn't even sit back or slouch in my chair when I ate food at the dinner table, that's how strict they were."
 
     scene v14s25_8m
     with dissolve
 
-    u "That sounds close to torture… *Chuckles*"
+    u "That sounds close to torture... *Chuckles*"
 
-    u "I hate that you’ve had to go through those things."
+    u "I hate that you've had to go through those things."
 
     scene v14s25_8l
     with dissolve
@@ -418,12 +418,12 @@ label v14s25:
     scene v14s25_8m
     with dissolve
 
-    u "Yeah, I heard small things about her parents. I knew they were religious, but nothing compared to what you’ve dealt with."
+    u "Yeah, I heard small things about her parents. I knew they were religious, but nothing compared to what you've dealt with."
 
     scene v14s25_8l
     with dissolve
 
-    am "So, yeah. That’s why I am who I am today."
+    am "So, yeah. That's why I am who I am today."
 
     scene v14s25_9 # TPP. Close up of Amber looking at the pill bottle, MC off camera, slight frown, mouth closed.
     with dissolve
@@ -438,17 +438,17 @@ label v14s25:
     scene v14s25_8e
     with dissolve
 
-    u "I don’t know if you absolutely need those-"
+    u "I don't know if you absolutely need those-"
 
     scene v14s25_8d
     with dissolve
 
-    am "[name], If I didn’t have one of these every now and again, especially on days like this…"
+    am "[name], If I didn't have one of these every now and again, especially on days like this..."
 
     scene v14s25_8j
     with dissolve
 
-    am "It gets to the point where I can’t stand to even be around myself anymore."
+    am "It gets to the point where I can't stand to even be around myself anymore."
 
     menu:
         "No more drugs, Amber...":
@@ -475,7 +475,7 @@ label v14s25:
 
             u "Every single decision we make as human beings, is a decision that we make on our own."
 
-            u "Unless you’ve put a pill into someone’s unwilling mouth, there's nothing you've ever done that has forced anyone else to do the same as you."
+            u "Unless you've put a pill into someone's unwilling mouth, there's nothing you've ever done that has forced anyone else to do the same as you."
 
             scene v14s25_8j
             with dissolve
@@ -509,7 +509,7 @@ label v14s25:
 
             u "You're influenctial, Amber. And being influential is a great thing if you influence people to do good."
 
-            u "Sadly…"
+            u "Sadly..."
 
             scene v14s25_11a # TPP. Show MC and Amber still holding hands, MC's free hand holding up the bottle of pills.
             with dissolve
@@ -521,19 +521,19 @@ label v14s25:
 
             u "This right here, isn't good. At all."
 
-            u "If what you’re feeling is guilt, don't feel guilty for the choices that others have made."
+            u "If what you're feeling is guilt, don't feel guilty for the choices that others have made."
 
-            u "Feel guilty for what choices you've allowed others to see you make, and think that they’re safe, or “good” decisions to make."
+            u "Feel guilty for what choices you've allowed others to see you make, and think that they're safe, or “good” decisions to make."
 
             scene v14s25_8n # FPP. Same as v14s25_8m, Amber crying heavily with her face buried in her hands.
             with dissolve
 
-            u "I’m sorry Amber, I didn't mean to..."
+            u "I'm sorry Amber, I didn't mean to..."
 
             scene v14s25_8o # FPP. Same as v14s25_8j, Amber looking at MC, Amber crying heavily, mouth open.
             with dissolve
 
-            am "*Crying* No, no, I'm not mad…"
+            am "*Crying* No, no, I'm not mad..."
 
             am "Maybe most times I can throw on a tough girl attitude and avoid these types of conversations, but not when I know you're right."
 
@@ -545,7 +545,7 @@ label v14s25:
             scene v14s25_8o
             with dissolve
 
-            am "*Crying* It doesn't make me a good person either, and that's what I want to be…"
+            am "*Crying* It doesn't make me a good person either, and that's what I want to be..."
 
             am "*Sniffles* So I've decided."
 
@@ -649,7 +649,7 @@ label v14s25:
 
             am "Thank you, [name]."
 
-            am "I'm really glad you came by tonight. I'm sure things could've gone a lot differently if you hadn’t."
+            am "I'm really glad you came by tonight. I'm sure things could've gone a lot differently if you hadn't."
 
             scene v14s25_8a
             with dissolve
@@ -679,9 +679,9 @@ label v14s25:
             scene v14s25_8
             with dissolve
 
-            am "I heard that she can't cook for shit. *Chuckles* So…"
+            am "I heard that she can't cook for shit. *Chuckles* So..."
 
-            am "Unless she has some help in the kitchen, it’s gonna be hilarious."
+            am "Unless she has some help in the kitchen, it's gonna be hilarious."
 
             scene v14s25_8a
             with dissolve
@@ -708,7 +708,7 @@ label v14s25:
             scene v14s25_8a
             with dissolve
 
-            u "Ha… Wait."
+            u "Ha... Wait."
 
             u "For real?"
 
@@ -725,7 +725,7 @@ label v14s25:
             scene v14s25_8a
             with dissolve
 
-            u "Mmm…"
+            u "Mmm..."
 
             u "I do, yeah."
 
@@ -754,7 +754,7 @@ label v14s25:
             scene v14s25_18 # TPP. (MC off Camera) Close up of Amber standing at the entrance of her room, Amber topless in a flirty pose, Wearing nothing but black panties, Amber Slight Smile, Mouth closed.
             with dissolve
 
-            u "Amber…"
+            u "Amber..."
 
             scene v14s25_18a # TPP. Same as v14s25_18, Amber slight smile, mouth open.
             with dissolve
@@ -827,11 +827,11 @@ label v14s25:
             scene v14s25_8m
             with dissolve
 
-            u "Look, Amber…"
+            u "Look, Amber..."
 
             u "Fuck what other people think. You can't possibly blame yourself for the stupid shit that other people choose to do."
 
-            u "No one is following you off the bridge if you jump. Sorry, but you don’t have quite that much influence. *Chuckles*"
+            u "No one is following you off the bridge if you jump. Sorry, but you don't have quite that much influence. *Chuckles*"
 
             scene v14s25_8l
             with dissolve
@@ -848,7 +848,7 @@ label v14s25:
             scene v14s25_8l
             with dissolve
 
-            am "That's all true, but I don’t-"
+            am "That's all true, but I don't-"
 
             scene v14s25_8m
             with dissolve
@@ -971,7 +971,7 @@ label v14s25:
                     scene v14s25_21c # FPP. Same as v14s25_21b, Amber slightly disappointed, mouth open.
                     with dissolve
 
-                    am "Bummer…"
+                    am "Bummer..."
 
                     scene v14s25_24 # TPP. Show Amber starting to undress.
                     with dissolve
@@ -986,7 +986,7 @@ label v14s25:
                     scene v14s25_18
                     with dissolve
 
-                    u "I'm talking about you being naked…"
+                    u "I'm talking about you being naked..."
 
                     scene v14s25_18a
                     with dissolve

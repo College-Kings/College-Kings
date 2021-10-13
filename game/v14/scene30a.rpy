@@ -33,17 +33,17 @@ label v14s30a:
     scene v14s30a_5 # FPP. MC standing with Chloe and the Wolf Trainer, MC looking at Chloe, Chloe and Wolf Trainer looking at MC, Both slight smile, mouth closed.
     with dissolve
 
-    u "Hey, I see this is a real fucking wolf…"
+    u "Hey, I see this is a real fucking wolf..."
 
     scene v14s30a_5a # FPP. Same as v14s30a_5, Wolf trainer looking at Chloe, Chloe slight smile, mouth open, Wolf Trainer slight smile, mouth closed.
     with dissolve
 
-    cl "Yes! He’s so cute!"
+    cl "Yes! He's so cute!"
 
     scene v14s30a_5
     with dissolve
 
-    u "Haha, don't think cute is the word I’d use to describe him."
+    u "Haha, don't think cute is the word I'd use to describe him."
 
     scene v14s30a_6 # FPP. MC looking at the Wolf Trainer, Chloe looking at Wolf trainer, Wolf trainer slight smile, mouth open.
     with dissolve
@@ -53,7 +53,7 @@ label v14s30a:
     scene v14s30a_6a # FPP. Same as v14s30a_6, Wolf Trainer slight smile, mouth closed.
     with dissolve
 
-    u "Trust you, huh? I don’t even know your name."
+    u "Trust you, huh? I don't even know your name."
 
     scene v14s30a_6
     with dissolve
@@ -63,7 +63,7 @@ label v14s30a:
     scene v14s30a_6a
     with dissolve
 
-    u "Ah, nice…"
+    u "Ah, nice..."
 
     scene v14s30a_5a
     with dissolve
@@ -78,12 +78,12 @@ label v14s30a:
     scene v14s30a_6
     with dissolve
 
-    wtrain "Right on, mate…"
+    wtrain "Right on, mate..."
 
     scene v14s30a_5a
     with dissolve
 
-    cl "He used to date one of my close friends, until the accident…"
+    cl "He used to date one of my close friends, until the accident..."
 
     scene v14s30a_5
     with dissolve
@@ -93,14 +93,14 @@ label v14s30a:
     scene v14s30a_6b # FPP. Same as v14s30a_6a, MC looking at Wolf Trainer, Wolf Trainer looking at Chloe, Chloe slight smile, mouth closed, Wolf trainer slight smile, mouth open.
     with dissolve
 
-    wtrain "Oh, pfft…"
+    wtrain "Oh, pfft..."
 
-    wtrain "Come on, Chloe… It was just a scratch."
+    wtrain "Come on, Chloe... It was just a scratch."
 
     scene v14s30a_5b # FPP. Same as v14s30a_5a, Chloe looking at Wolf Trainer, MC looking at Chloe, Wolf Trainer looking at Chloe, Chloe slight smile, mouth open, Wolf Trainer, slight smile, mouth closed.
     with dissolve
 
-    cl "Right… That’s what you kept telling Jenny, right?"
+    cl "Right... That's what you kept telling Jenny, right?"
 
     scene v14s30a_5c # FPP. Same as v14s30a_5b, Chloe looking at Wolf Trainer, MC looking at Chloe, Wolf Trainer looking at Chloe, Both slight smile, mouth closed.
     with dissolve
@@ -120,17 +120,17 @@ label v14s30a:
     scene v14s30a_6a
     with dissolve
 
-    u "Ha…"
+    u "Ha..."
 
     scene v14s30a_5a
     with dissolve
 
-    cl "Right, so…"
+    cl "Right, so..."
 
     scene v14s30a_6
     with dissolve
 
-    wtrain "So… Bet you're wondering what an Australian is doing with a wolf, huh?"
+    wtrain "So... Bet you're wondering what an Australian is doing with a wolf, huh?"
 
     scene v14s30a_6a
     with dissolve
@@ -140,7 +140,7 @@ label v14s30a:
     scene v14s30a_5a
     with dissolve
 
-    cl "Okay, let’s get this party started shall we?"
+    cl "Okay, let's get this party started shall we?"
 
     scene v14s30a_5
     with dissolve
@@ -166,7 +166,7 @@ label v14s30a:
         scene v14s30a_5
         with dissolve
 
-        u "It’d be impossible to make you look bad."
+        u "It'd be impossible to make you look bad."
 
         scene v14s30a_7 # TPP. Chloe kissing MC on the cheek.
         with dissolve
@@ -181,12 +181,12 @@ label v14s30a:
     scene v14s30a_9 # FPP. MC behind the Camera the equipment visible, The wolf running towards MC, Chloe and Wolf Trainer slight smile, mouths closed.
     with dissolve
 
-    u "Woah, woah, woa- Oh… Umm, excuse me?"
+    u "Woah, woah, woa- Oh... Umm, excuse me?"
 
     scene v14s30a_9a # FPP. Same as v14s30a_9, The wolf walking up to MC, Wolf trainer slight smile, mouth open, Chloe slight smile, mouth closed.
     with dissolve
 
-    wtrain "Oh, uh, don’t worry! Just stay calm, and so will he. *Nervous chuckling*"
+    wtrain "Oh, uh, don't worry! Just stay calm, and so will he. *Nervous chuckling*"
 
     scene v14s30a_9b # FPP. Same as v14s30a_9a, The wolf sniffing MC, Chloe slight smile, mouth open, Wolf trainer slight smile, mouth closed.
     with dissolve
@@ -196,7 +196,7 @@ label v14s30a:
     scene v14s30a_10 # TPP. Show the Wolf tugging at MC's pants, the wolfs tail wagging to the left.
     with vpunch
 
-    u "(This is it… This is how I die…)"
+    u "(This is it... This is how I die...)"
 
     scene v14s30a_10a # TPP. Same as v14s30a_10, Wolf tugging a little harder on MC's pants, wolfs tail now wagging to the right.
     with dissolve
@@ -304,7 +304,7 @@ label v14s30a:
     scene v14s30a_8
     with dissolve
 
-    u "Fuck’s sake… Never living that one down."
+    u "Fuck's sake... Never living that one down."
 
     scene v14s30a_8b # TPP. Same as v14s30a_8a, Chloe posing with one hand on her hip and one hand on the wolf's head, Chloe smiling proudly, Mouth closed.
     with flash
@@ -329,7 +329,7 @@ label v14s30a:
     scene v14s30a_8a
     with dissolve
 
-    cl "Yay! Let’s see…"
+    cl "Yay! Let's see..."
 
     scene v14s30a_9c # FPP. Same as v14s30_9b, Chloe running towards MC, The wolf and the wolf trainer in the background, Chloe slight smile, mouth closed.
     with dissolve
@@ -344,7 +344,7 @@ label v14s30a:
     scene v14s30a_14a # FPP. Same as v14s30a_14, Chloe looking at MC, Slight smile, mouth closed.
     with dissolve
 
-    u "I’ve already seen them all, Chloe. *Laughs* Pick your favorites and maybe I can help you choose."
+    u "I've already seen them all, Chloe. *Laughs* Pick your favorites and maybe I can help you choose."
 
     scene v14s30a_14b # FPP. Same as v14s30a_14a, Chloe looking at MC, slight smile, mouth open. 
     with dissolve

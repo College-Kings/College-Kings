@@ -57,7 +57,7 @@ label v14s32:
     scene v14s32_2d
     with dissolve
 
-    u "Ha… I won't be crying."
+    u "Ha... I won't be crying."
 
     scene v14s32_2e
     with dissolve
@@ -106,7 +106,7 @@ label v14s32:
 
     imre "He didn't mention that the guy was a piece of shit, who stole the money from other people in the first place."
 
-    imre "Hell, I mean… I was basically giving back."
+    imre "Hell, I mean... I was basically giving back."
 
     scene v14s32_2d
     with dissolve
@@ -118,12 +118,12 @@ label v14s32:
     scene v14s32_2e
     with dissolve
 
-    imre "Not gonna happen, don’t even start. I tried and he fucked me over again."
+    imre "Not gonna happen, don't even start. I tried and he fucked me over again."
 
     scene v14s32_2d
     with dissolve
 
-    u "Whatever man, but don’t say I didn’t tell you that this is going to cause more harm than good, for both of you."
+    u "Whatever man, but don't say I didn't tell you that this is going to cause more harm than good, for both of you."
 
     scene v14s32_2e
     with dissolve
@@ -147,7 +147,7 @@ label v14s32:
     scene v14s32_2d
     with dissolve
 
-    u "That's why I couldn't find you…"
+    u "That's why I couldn't find you..."
 
     scene v14s32_2e
     with dissolve
@@ -169,7 +169,7 @@ label v14s32:
     scene v14s32_2d
     with dissolve
 
-    u "Okay… That sounds healthy."
+    u "Okay... That sounds healthy."
 
     scene v14s32_2e
     with dissolve
@@ -224,7 +224,7 @@ label v14s32:
     scene v14s32_2e
     with dissolve
 
-    imre "Wait…"
+    imre "Wait..."
 
     scene v14s32_2d
     with dissolve
@@ -254,7 +254,7 @@ label v14s32:
     scene v14s32_4
     with dissolve
 
-    rub "No… *Grunts* Five more…"
+    rub "No... *Grunts* Five more..."
 
     scene v14s32_4b # FPP. Same as v14s32_4a, Trainer slight smile, mouth open, Rubee Neutral face, mouth closed.
     with dissolve
@@ -264,7 +264,7 @@ label v14s32:
     scene v14s32_2h # FPP. Same as v14s32_2f,Imre looking at MC, Imre shocked face, mouth open.
     with dissolve
 
-    imre "She looks like a warrior…"
+    imre "She looks like a warrior..."
 
     scene v14s32_2i # FPP. Same as v14s32_2h, Imre shocked face, mouth closed.
     with dissolve
@@ -274,12 +274,12 @@ label v14s32:
     scene v14s32_2h
     with dissolve
 
-    imre "No… Shit…"
+    imre "No... Shit..."
 
     scene v14s32_5 # TPP. (Similar to v14s32_4) Close up of Rubee bending over and picking up her gym bag, camera focused in on her butt mainly.
     with dissolve
 
-    u "(Holy hell…)"
+    u "(Holy hell...)"
 
     scene v14s32_5a # TPP. Same as v14s32_5, Rubee stands up straight.
     with dissolve
@@ -294,7 +294,7 @@ label v14s32:
     scene v14s32_2h
     with dissolve
 
-    imre "Shit! Here she comes…"
+    imre "Shit! Here she comes..."
 
     scene v14s32_2i
     with dissolve
@@ -304,9 +304,9 @@ label v14s32:
     scene v14s32_6 # FPP. Rubee standing next to MC and Imre, slight smile, mouth open.
     with dissolve
 
-    rub "Hey… I’m Rubee."
+    rub "Hey... I'm Rubee."
 
-    rub "Sorry if this is weird, but… Do you have an older sister? Named Kylie?"
+    rub "Sorry if this is weird, but... Do you have an older sister? Named Kylie?"
 
     scene v14s32_6a # FPP. Same as v14s32_6, slight smile, mouth closed.
     with dissolve
@@ -316,23 +316,23 @@ label v14s32:
     scene v14s32_6
     with dissolve
 
-    rub "It’s just that, one of my military friends…"
+    rub "It's just that, one of my military friends..."
 
-    rub "She looks… Just like you. Haha…"
+    rub "She looks... Just like you. Haha..."
     
     rub "The female version of you pretty much. *Chuckles*"
 
     scene v14s32_6a
     with dissolve
 
-    u "Oh, haha. No, as far as I know I’m an only child."
+    u "Oh, haha. No, as far as I know I'm an only child."
 
     scene v14s32_6
     with dissolve
 
-    rub "As far as you know… *Chuckles*"
+    rub "As far as you know... *Chuckles*"
 
-    rub "Just kidding, haha. Sorry about that, though. It’s been a while since we’ve all gotten home so maybe I’m just imagining things."
+    rub "Just kidding, haha. Sorry about that, though. It's been a while since we've all gotten home so maybe I'm just imagining things."
 
     scene v14s32_6a
     with dissolve
@@ -347,7 +347,7 @@ label v14s32:
     scene v14s32_2j # FPP. Same as v14s32_2i, Imre looking at Rubee with his jaw dropped, Shocked face, mouth open.
     with dissolve
 
-    imre "*Whispers* You’re a total badass…"
+    imre "*Whispers* You're a total badass..."
 
     scene v14s32_6
     with dissolve
@@ -386,12 +386,12 @@ label v14s32:
     scene v14s32_7a # FPP. Same as v14s32_7, Imre slight smile, mouth closed.
     with dissolve
 
-    u "Quit whispering compliments to them when they’re standing right next to you? *Chuckles*"
+    u "Quit whispering compliments to them when they're standing right next to you? *Chuckles*"
 
     scene v14s32_7
     with dissolve
 
-    imre "Ha ha. Kicking people while they’re down is one of your favorite things to do, huh?"
+    imre "Ha ha. Kicking people while they're down is one of your favorite things to do, huh?"
 
     scene v14s32_7a
     with dissolve
@@ -401,7 +401,7 @@ label v14s32:
     scene v14s32_7
     with dissolve
 
-    imre "Speaking of women…"
+    imre "Speaking of women..."
 
     imre "Has Chloe been talking about me at all?"
 
@@ -448,9 +448,9 @@ label v14s32:
     scene v14s32_7a
     with dissolve
 
-    u "Ha… Why are you so supportive of her?"
+    u "Ha... Why are you so supportive of her?"
 
-    u "I know what you said in the hall, but it seems like there’s more to it than that."
+    u "I know what you said in the hall, but it seems like there's more to it than that."
 
     scene v14s32_7b # FPP. Same as v14s30_7, Imre looking away from MC, Slight smile, mouth open.
     with dissolve
@@ -482,7 +482,7 @@ label v14s32:
     scene v14s32_2e
     with dissolve
 
-    imre "Let me show you something I’ve been working on. I'm thinking about calling it “Combo Imre.”"
+    imre "Let me show you something I've been working on. I'm thinking about calling it “Combo Imre.”"
 
     scene v14s32_2d
     with dissolve
@@ -492,7 +492,7 @@ label v14s32:
     scene v14s32_2e
     with dissolve
 
-    imre "No, not really, it's kinda simple…"
+    imre "No, not really, it's kinda simple..."
 
     scene v14s32_2d
     with dissolve
@@ -615,7 +615,7 @@ label v14s32:
     scene v14s32_2d
     with dissolve
 
-    u "Oh… Who?"
+    u "Oh... Who?"
 
     scene v14s32_2e
     with dissolve
@@ -669,7 +669,7 @@ label v14s32:
     scene v14s32_2d
     with dissolve
 
-    u "*Sighs* That’s rough."
+    u "*Sighs* That's rough."
 
     scene v14s32_2e
     with dissolve
@@ -720,7 +720,7 @@ label v14s32:
         scene v14s32_5g
         with dissolve
 
-        imre "Part of me feels like you had a lot to do with the problems they’ve been having."
+        imre "Part of me feels like you had a lot to do with the problems they've been having."
 
         scene v14s32_5h
         with dissolve

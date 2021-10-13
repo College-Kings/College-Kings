@@ -63,7 +63,7 @@ label v14s30:
     scene v14s30_3c
     with dissolve
 
-    u "This better be a nice ass toy…"
+    u "This better be a nice ass toy..."
 
     scene v14s30_3d
     with dissolve
@@ -97,7 +97,7 @@ label v14s30:
     scene v14s30_3c
     with dissolve
 
-    u "Can’t go wrong with that."
+    u "Can't go wrong with that."
 
     scene v14s30_3d
     with dissolve

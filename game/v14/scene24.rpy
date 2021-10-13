@@ -41,7 +41,7 @@ label v14s24:
         scene v14s24_4  # TPP. MC, happy, smiling mouth closed.
         with dissolve
 
-        u "(Oh, shit… You know what? I still have some extra money from that scummy night gambler.)"
+        u "(Oh, shit... You know what? I still have some extra money from that scummy night gambler.)"
 
         scene v14s24_5  # FPP. MC looks ahead (or across the street) and see's a gas station not too far from him.
         with dissolve
