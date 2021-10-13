@@ -157,7 +157,7 @@ label v14s03b:
     # -If blessed with Emily (extra dialog)
     # I HAVE NO IDEA WHAT VARIABLE THIS IS ASKING FOR
 
-    if v14_blessed_emily: #REPLACE - THIS IS ONLY A GUESS/PLACEHOLDER VARIABLE NAME
+    if v10s33_ryan_flirt_emily:
         scene v14s03b_5a
         with dissolve
 
