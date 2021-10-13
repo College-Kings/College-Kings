@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 5), AMBER (Outfit: 1)
 # Time: Morning
 
-
 label v14s08:
     scene v14s08_1 # TPP. mc sees the bus and walks towards it, slight smile, mouth closed
     with dissolve 

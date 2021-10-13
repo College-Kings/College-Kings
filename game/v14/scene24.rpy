@@ -4,7 +4,6 @@
 # Time: Evening (Tuesday)
 
 label v14s24:
-        
     scene v14s24_1   # TPP. MC, slight smile, mouth closed. m walking down the side walk (similar to v14s23_7 but different angle)
     with dissolve
 

@@ -3,7 +3,6 @@
 # Characters: AUTUMN (Outfit: 1), MC (Outfit: 1)
 # Time: Tuesday
 
-
 label v14s20:
     scene v14s20_1 # FPP Show Autumn, in school hallway, handing out candy to people walking by, smiling with mouth open
     with dissolve

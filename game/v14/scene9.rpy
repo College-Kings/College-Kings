@@ -3,7 +3,6 @@
 # Characters: MR. LEE (Outfit: 1), MS. ROSE (Outfit: 1), MC (Outfit: 5), CHARLI (Outfit: 1), AUBREY (Outfit: 1), AMBER (Outfit: 1), CHLOE (Outfit: 4), RILEY (Outfit: 2), NORA (Outfit: 2), CHRIS (Outfit: 1), LINDSEY (Outfit: 3), LAUREN (Outfit: 1), RYAN (Outfit: 1), IMRE (Outfit: 1), EMILY (Outfit: 2), JOSH (Outfit: 1), PENELOPE (Outfit: 2)
 # Time: Afternoon
 
-
 label v14s09:
     scene v14s09_1 # TPP. show mc walking through airport, pulling his luggae, slight smile, mouth closed
     with dissolve

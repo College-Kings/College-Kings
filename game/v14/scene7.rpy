@@ -3,7 +3,6 @@
 # Characters: MS. ROSE (Outfit: 1), CHRIS (Outfit: 1), AUBREY (Outfit: 1), RILEY (Outfit: 2), MC (Outfit: 5), IMRE (Outfit: 1), NORA (Outfit: 2)
 # Time: Morning
 
-
 label v14s07:
     scene v14s07_1 # TPP. # MC arrives in the hotel lobby and he sees Aubrey and Riley together holding their bags, looking at each other with flirtatious expressions, mouths closed, Imre standing with Chris both of them with concerned expression looking over at Ms. Rose and Nora, Ms. Rose with a hand on Nora's soulder both of them looking at each other, slight frowns, mouths closed
     with dissolve
