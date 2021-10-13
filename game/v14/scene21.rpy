@@ -48,9 +48,21 @@ label v14s21:
 
     cl "When I left the library earlier, I couldn't help but feel like I didn't really translate how thankful I am for all of your help."
 
+    scene v14s21_2b
+    with dissolve
+    
+    scene v14s21_2c
+    with dissolve
+
     cl "You're not only there for me in private but now in public as well. That's something I can't thank you enough for."
 
     cl "A lot of people that I know tend to avoid hanging out with me, because of the rumors or preconceived images that float around. But..."
+
+    scene v14s21_2b
+    with dissolve
+    
+    scene v14s21_2c
+    with dissolve
 
     cl "You don't care what people say. And that's what I appreciate the most."
 
@@ -120,7 +132,7 @@ label v14s21:
     scene v14s21_2g
     with dissolve
 
-    u "I'm a patient man when it comes to the things I care about, Chloe I know your situation and I understand that this campaign is more important right now."
+    u "I'm a patient man when it comes to the things I care about, Chloe. I know your situation and I understand that this campaign is more important right now."
 
     scene v14s21_2f
     with dissolve
@@ -206,17 +218,16 @@ label v14s21:
 
     cl "We can call it that."
 
-    play sound "sounds/kiss.mp3"
 
     scene v14s21_10 # TPP. Show Chloe kissing MC.
     with dissolve
-
-    pause 0.75
-
     play sound "sounds/kiss.mp3"
+
+    pause 1.5
 
     scene v14s21_10a # TPP. Chloe and MC kissing in a different position.
     with dissolve
+    play sound "sounds/kiss.mp3"
 
     menu:
         "Continue":
@@ -253,12 +264,11 @@ label v14s21:
 
             pause 0.75
 
-            play sound "sounds/kiss.mp3"
-
             scene v14s21_8f # FPP. Same as v14s21_8e, Chloe kissing MC.
             with dissolve
+            play sound "sounds/kiss.mp3"
 
-            pause 0.75
+            pause 1.5
 
             scene v14s21_8a
             with dissolve
@@ -299,12 +309,11 @@ label v14s21:
 
             pause 0.75
 
-            play sound "sounds/kiss.mp3"
-
             scene v14s21_8f 
             with dissolve
+            play sound "sounds/kiss.mp3"
 
-            pause 0.75
+            pause 1.5
 
             scene v14s21_8g # FPP. Same as v14s21_8f, Chloe walking away from MC.
             with dissolve
