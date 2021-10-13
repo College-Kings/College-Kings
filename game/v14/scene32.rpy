@@ -29,6 +29,7 @@ label v14s32:
     pause .25
 
     scene v14s32_2c # FPP. Same as v14s32_2b, Imre now looking at MC, shocked smile, mouth open.
+    with dissolve
 
     imre "What are you wearing? *Laughs*  Why didn't you come dressed to workout?"
 
@@ -203,6 +204,7 @@ label v14s32:
     play sound "sounds/hs.mp3"
 
     scene v14s32_3c # TPP. MC hits the bag hard, Imre slight smile, mouth open.
+    with dissolve
 
     imre "Okay, I see you."
 

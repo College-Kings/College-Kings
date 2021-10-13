@@ -17,6 +17,7 @@ label v14s05:
     pause 0.75 
 
     scene v14s05_3 # FPP. Chloe, mouth closed, smiling at MC.
+    with dissolve
     
     u "*Sighs*"
 
@@ -111,9 +112,6 @@ label v14s05:
     pause 0.75
 
     scene v14s05_5d # TPP. MC getting in bed, covers pulled back.
-    with dissolve
-
-    pause 0.75
     with dissolve
 
     pause 0.75

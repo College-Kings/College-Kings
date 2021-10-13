@@ -256,6 +256,7 @@ label v14s16:
                 cl "I'll remember just how busy you are the next time you want to \"hangout\"."
 
                 scene v14s16_2h
+                with dissolve
 
                 u "*Sighs* (This is gonna cause some serious issues for us. Fuck... Kinda surprised she didn't break up with me right there... Chloe's way or no way.)"
 

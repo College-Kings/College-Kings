@@ -158,6 +158,7 @@ label v14s23:
     cl "Oh. *Chuckles* That's why I felt my ears burning..."
 
     scene v14s23_4b # FPP. Same as v14s23_4a, Chloe now looking at MC, slight smile, mouth open.
+    with dissolve
 
     cl "Have you guys gotten started on talking about things?"
 
@@ -549,6 +550,7 @@ label v14s23:
                 $ v14s23_disagree = True
                 $ addPoint("bf")
                 scene v14s23_2b
+                with dissolve
                 
                 u "I gotta disagree. Having a real wolf would look like you're pandering to a masculine audience."
 

@@ -20,6 +20,7 @@ label v14s03a:
     pause 0.75
 
     scene v14s03a_2 # FPP. Night gambler, looking at MC, smiling, mouth closed.
+    with dissolve
 
     u "You got some kind of game going on over here?"
 
@@ -244,6 +245,7 @@ label v14s03a:
             pause 0.75
 
             scene v14s03a_3f # FPP. Gambler's right hand on right cup, now in middle; left hand on middle cup; now on the right.
+            with dissolve
 
             pause 0.75
 
