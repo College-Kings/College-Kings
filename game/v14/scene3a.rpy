@@ -446,6 +446,8 @@ label v14s03a:
                 
             menu:
                 "Take the wallet": # -If Take the wallet
+                    $ v14s03a_take_wallet = True
+                    
                     scene v14s03a_12a # FPP. Same as v14s03a_12, but Gambler mouth closed.
                     with dissolve
                     u "The audacity you must have to suggest that we let you get away with this... Imre, go ahead."
