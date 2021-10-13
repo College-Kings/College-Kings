@@ -72,7 +72,7 @@ label v14s02:
     scene v14s02_2a
     with dissolve
 
-    u "*Laughs*Look at you. Being mature and all."
+    u "*Laughs* Look at you. Being mature and all."
 
     scene v14s02_2e # FPP. same as v14s02_2d imre rolls his eyes
     with dissolve
