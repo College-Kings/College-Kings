@@ -609,3 +609,4 @@ default v14s30b_pw_image_one = False  # MC chose the first photo of the Plush Wo
 default v14s30b_pw_image_two = False  # MC chose the second photo of the Plush Wolf for Chloe's kiwi post
 default v14s30b_rw_image_one = False  # MC chose the first photo of the Real Wolf for Chloe's kiwi post
 default v14s30b_rw_image_two = False  # MC chose the second photo of the Real Wolf for Chloe's kiwi post
+default v14s30b_its_perfect = False  # Telling Chloe that the caption is perfect
