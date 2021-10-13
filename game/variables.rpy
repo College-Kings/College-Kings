@@ -605,3 +605,7 @@ default v14_emily_ily = False
 default v14s24a_gummyfish = False
 default v14_amber_clean = False
 default v14_amber_drugs = False
+default v14s30b_pw_image_one = False  # MC chose the first photo of the Plush Wolf for Chloe's kiwi post
+default v14s30b_pw_image_two = False  # MC chose the second photo of the Plush Wolf for Chloe's kiwi post
+default v14s30b_rw_image_one = False  # MC chose the first photo of the Real Wolf for Chloe's kiwi post
+default v14s30b_rw_image_two = False  # MC chose the second photo of the Real Wolf for Chloe's kiwi post
