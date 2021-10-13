@@ -234,12 +234,12 @@ label v14s21:
             scene v14s21_8b # FPP. Same as v14s21_8a, Chloe confused expression, mouth closed.
             with dissolve
 
-            u "N-No... Nothing's wrong at all I just-"
+            u "N-No... Nothing's wrong at all, I just-"
 
             scene v14s21_8c # FPP. Same as v14s21_8b, Chloe sad and confused expression, mouth closed.
             with dissolve
 
-            u "Look, Chlo... I don't want you to feel like you owe me anything just for supporting you."
+            u "Look, Chloe... I don't want you to feel like you owe me anything just for supporting you."
 
             scene v14s21_8d # FPP. Same as v14s21_8c, MC holding Chloe's face, Chloe sad and confused expression, mouth closed.
             with dissolve

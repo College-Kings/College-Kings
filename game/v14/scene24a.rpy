@@ -78,7 +78,7 @@ label v14s24a:
     scene v14s24a_11a
     with dissolve
 
-    u "Ha, no... Nothing. I'm just shocked to find you working here."
+    u "Ha, no... nothing. I'm just shocked to find you working here."
 
     scene v14s24a_11b
     with dissolve

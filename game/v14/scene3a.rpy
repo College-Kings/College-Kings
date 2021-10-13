@@ -172,7 +172,7 @@ label v14s03a:
             scene v14s03a_9 # FPP. Imre, Ryan backs to MC but heads slghtly turned toward MC walking towards brothel, both mouth closed
             with dissolve
 
-            u "He was... Persistent."
+            u "He was... persistent."
 
             scene v14s03a_9a # FPP. Same as v14s03a_9, but with Imre, mouth open, Ryan mouth closed, both smiling.
             with dissolve
