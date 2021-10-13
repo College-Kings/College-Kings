@@ -299,7 +299,7 @@ label v14s09:
         scene v14s09_6d
         with dissolve
 
-        lee "*Whispers* I have him handled. He already left, headed back to campus. I'll be attending his meeting with the dean when we return."
+        lee "*Whispers* I have him handled. He already left, headed back to campus. I'll be attending his meeting with the Dean when we return."
 
         scene v14s09_8c # FPP. same as v14s09_8 points her pen at Mr. Lee, mouth closed
         with dissolve
