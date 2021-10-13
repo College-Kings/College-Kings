@@ -4,6 +4,11 @@
 # Time: Morning
 
 label v14s06:
+    scene black
+    with fade
+    
+    pause 2
+
     scene v14s06_1 # TPP. Show MC waking up in his bed
     with dissolve
 

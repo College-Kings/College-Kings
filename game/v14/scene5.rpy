@@ -4,10 +4,11 @@
 # Time: Evening 
 
 label v14s05:
+    play sound "sounds/dooropen.mp3"
+    pause 0.5
+
     scene v14s05_1 # TPP. MC, mouth closed, worried, enters through his hotel room door.
     with dissolve
-
-    play sound "sounds/dooropen.mp3"
 
     pause 0.75
 

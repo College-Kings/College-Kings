@@ -4,11 +4,16 @@
 # Time: Night
 
 label v14s05a:
+    play sound "sounds/dooropen.mp3"
+    pause 0.5
+
     scene v14s05a_1 # TPP. Show walking into his room, neutral expression, mouth closed
     with dissolve
+    pause 0.75
 
     scene v14s05a_2 # FPP. Show Riley sitting on the side of her bed, slight smile, mouth closed
     with dissolve
+    pause 0.75
 
     scene v14s05a_3 # FPP. MC, closer to Riley, slight smile, mouth closed
     with dissolve
