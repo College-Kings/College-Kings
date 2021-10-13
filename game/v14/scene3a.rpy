@@ -64,7 +64,7 @@ label v14s03a:
             scene v14s03a_2a
             with dissolve
 
-            ngam "My man!" 
+            ngam "My man!"
         
         "Never heard of it":
             scene v14s03a_2

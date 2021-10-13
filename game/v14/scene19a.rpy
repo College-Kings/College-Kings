@@ -64,7 +64,7 @@ label v14s19a:
 
     u "Even with Nor-"
 
-    scene v14s19a_1e # FPP Same angle as 1, Chloe holding her hand out in a "hold on" gesture, smiling with mouth open
+    scene v14s19a_1e # FPP Same angle as 1, Chloe holding her hand out in a «hold on» gesture, smiling with mouth open
     with dissolve
 
     cl "I already know what you're gonna say, haha."

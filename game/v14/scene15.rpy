@@ -14,17 +14,17 @@ label v14s15:
 
     pause 0.75
 
-    scene v14s15_3   # FPP. MC looking down a hallway and seeing "Lindsey for President" posters down both walls.
+    scene v14s15_3   # FPP. MC looking down a hallway and seeing «Lindsey for President» posters down both walls.
     with dissolve
 
     u "(Holy... shit... This is serious!)"
 
-    if v11_lindsey_slogan <= 0: # 0 or 1, just in case someone fudges the variables
-        scene v14s15_4   # FPP. MC looking at a banner with the campaign slogan "Lindsey, Returning The Promise".
+    if v11_lindsey_slogan <= 1: # 0 or 1, just in case someone fudges the variables
+        scene v14s15_4   # FPP. MC looking at a banner with the campaign slogan «Lindsey, Returning The Promise».
         with dissolve
         
     else:
-        scene v14s15_4a  # FPP. MC looking at a banner with the campaign slogan "Lindsey, Say Bye To The Bullshit" 
+        scene v14s15_4a  # FPP. MC looking at a banner with the campaign slogan «Lindsey, Say Bye To The Bullshit»
         with dissolve
 
     pause 0.75
