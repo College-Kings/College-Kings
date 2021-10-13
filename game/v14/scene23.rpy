@@ -230,7 +230,7 @@ label v14s23:
     ch "Photoshoots are expensive, especially with a lot of people."
 
     menu:
-        "Agree.":
+        "Agree":
             $ v14s23_agree = True
             $ addPoint("bf")
             scene v14s23_2b
@@ -238,7 +238,7 @@ label v14s23:
 
             u "You're right. It is expensive, but money is just an object when it comes to keeping the Chicks legacy in good hands."
             
-        "Disagree.":
+        "Disagree":
             scene v14s23_2b
             with dissolve
 
@@ -514,7 +514,7 @@ label v14s23:
         with dissolve
 
         menu:
-            "Agree with Chris.":
+            "Agree with Chris":
                 $ addPoint("bro")
 
                 scene v14s23_2b
@@ -546,7 +546,7 @@ label v14s23:
 
                 ch "*Whispers* Adorable... *Chuckles*."
 
-            "Disagree with Chris.":
+            "Disagree with Chris":
                 $ v14s23_disagree = True
                 $ addPoint("bf")
                 scene v14s23_2b

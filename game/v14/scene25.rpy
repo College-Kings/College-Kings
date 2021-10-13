@@ -451,7 +451,7 @@ label v14s25:
     am "It gets to the point where I can't stand to even be around myself anymore."
 
     menu:
-        "No more drugs, Amber...":
+        "No more drugs, Amber":
             $ addPoint("bf")
             $ addPoint("bro")
             $ v14_amber_clean = True
@@ -805,14 +805,14 @@ label v14s25:
             with dissolve
 
             menu:
-                "Let her stay...":
+                "Let her stay":
                     $ addPoint("tm")
                     u "(Ha, hard as stone on the outside but a softie on the inside.)"
 
                     scene v14s25_17e # TPP. Show MC going back to sleep with his arm around Amber as she lays on him.
                     with dissolve
 
-                "Move away...":
+                "Move away":
                     $ addPoint("bf")
                     u "*Chuckles* (Sorry, Amber.)"
 
@@ -821,7 +821,7 @@ label v14s25:
             
             jump v14s25b
 
-        "Let Amber, Be Amber...":
+        "Let Amber be Amber":
             $ addPoint("tm")
             $ v14_amber_drugs = True
             scene v14s25_8m
@@ -947,7 +947,7 @@ label v14s25:
             am "*Whispers* You wanna do something about that?"
 
             menu:
-                "Fuck Amber...":
+                "Fuck Amber":
                     $ addPoint("tm")
                     scene v14s25_21a # FPP. Same as v14s25_21, Amber flirtatious smile, mouth closed.
                     with dissolve
@@ -956,7 +956,7 @@ label v14s25:
 
                     jump v14s25a
 
-                "Don't Fuck Amber...": 
+                "Don't fuck Amber": 
                     $ addPoint("bf")
                     scene v14s25_21a
                     with dissolve
@@ -1037,14 +1037,14 @@ label v14s25:
                     with dissolve
 
                     menu:
-                        "Let her stay...":
+                        "Let her stay":
                             $ addPoint("tm")
                             u "(Ha, hard as stone on the outside but a softie on the inside.)"
 
                             scene v14s25_17e
                             with dissolve
 
-                        "Move away...":
+                        "Move away":
                             $ addPoint("bf")
                             u "*Chuckles* (Sorry, Amber.)"
 

@@ -43,7 +43,7 @@ label v14s28:
         u "(Oh... Fuck...)"
 
         menu:
-            "I love you too...":
+            "I love you too":
                 $ addPoint ("bf")
                 scene v14s28_2a
                 with dissolve
@@ -90,7 +90,7 @@ label v14s28:
 
                 pause 0.75
 
-            "It'll never work between us...":
+            "It'll never work between us":
                 $ addPoint ("tm")
                 scene v14s28_2a
                 with dissolve

@@ -202,7 +202,7 @@ label v14s30a:
     with dissolve
 
     menu:
-        "Run...":
+        "Run":
             scene v14s30a_11 # TPP. MC walking backwards getting prepared to run, MC worried face, mouth open.
             with dissolve    
 
@@ -251,7 +251,7 @@ label v14s30a:
             scene v14s30a_13c # TPP. Same as v14s30a_13b, The Wolf goes back to sitting next to Chloe, Both slight smile, mouth closed.
             with dissolve
 
-        "Stay Still":
+        "Stay still":
             scene v14s30a_10
             with dissolve
 

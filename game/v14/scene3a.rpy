@@ -55,7 +55,7 @@ label v14s03a:
     ngam "Sure deal brother man! Real simple. Three cups and a ball. Heard of it?"
 
     menu:
-        "Yes, of course.":
+        "Yes, of course":
             scene v14s03a_2a
             with dissolve
         
