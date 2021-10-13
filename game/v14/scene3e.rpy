@@ -272,25 +272,25 @@ label v14s03e:
 
     ry "*Laughs* No it wasn't."
 
-    scene v14s03e_12
-    with dissolve
+    #scene v14s03e_12
+    #with dissolve
 
-    u "Huh? *Chuckles*"
+    #u "Huh? *Chuckles*"
 
     scene v14s03e_12b # FPP. Same as v14s03e_12a, slight smile
     with dissolve
 
     ry "Ashley is a man."
 
-    scene v14s03e_12
-    with dissolve
-
-    u "What the fuck?!"
-
     scene v14s03e_12a
     with dissolve
 
     ry "*Laughs* Emerald told me about him."
+
+    scene v14s03e_12
+    with dissolve
+
+    u "What the fuck?!"
 
     scene v14s03e_12
     with dissolve
@@ -365,7 +365,7 @@ label v14s03e:
     scene v14s03e_18a # FPP. Same as v14s03e_18, Imre middle fingers Ryan
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v14s03e_19 # FPP. Imre's back facing MC as he watches him walk back from where he came from
     with dissolve
