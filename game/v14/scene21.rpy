@@ -219,12 +219,12 @@ label v14s21:
     with dissolve
 
     menu:
-        "Continue...":
+        "Continue":
             $ addPoint("bf")
             $ addPoint("tm")
             jump v14s21a
         
-        "Pull back...":
+        "Pull back":
             $ addPoint("bf")
             scene v14s21_10b # TPP. MC pulling away from the kissing, MC slight smile, mouth closed, Chloe confused expression, mouth open
             with dissolve

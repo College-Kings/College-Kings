@@ -242,7 +242,7 @@ label v14s03c:
 
     satin "Secondly, before you answer, you should know that I was getting ready to go home anyways. *Chuckles*"
 
-    satin "My shift has been over for a while now but like I said, I like you. You're different and it's refreshing to meet someone who isn't a complete pervert."
+    satin "My shift has been over for a while now, but I like you. You're different and it's refreshing to meet someone who isn't a complete pervert."
 
     scene v14s03c_4i
     with dissolve
@@ -277,7 +277,7 @@ label v14s03c:
     satin "If you're feeling generous enough, you can let me slide in and help out your virgin friend."
 
     menu:
-        "Go with her...":
+        "Go with her":
             $ addPoint ("tm")
 
             scene v14s03c_4f
@@ -307,7 +307,7 @@ label v14s03c:
 
             jump v14s03d
            
-        "Help Ryan...":
+        "Help Ryan":
             $ addPoint ("bro")
 
             scene v14s03c_5a # FPP. Same as v14s03c_5, Emerald on Ryan's lap, both slight smile, mouth closed.

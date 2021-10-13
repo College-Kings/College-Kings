@@ -147,7 +147,7 @@ label v14s03b:
     scene v14s03b_5d
     with dissolve
 
-    ry "Yeah, I am... Dickhead."
+    ry "Yeah, I am... dickhead."
 
     scene v14s03b_5e
     with dissolve
@@ -193,7 +193,7 @@ label v14s03b:
     scene v14s03b_5c
     with dissolve
 
-    u "I mean, I feel where you're coming from. Everyone feels like that at first I think"
+    u "I mean, I feel where you're coming from. Everyone feels like that at first I think."
 
     scene v14s03b_5a
     with dissolve
@@ -227,12 +227,12 @@ label v14s03b:
         "Go for it":
             u "Well, no. Honestly, if it's just for practice then there's probably no better place than this. Just make sure that's really what you want to do."
 
-            scene v14s03b_5c
+            scene v14s03b_5b
             with dissolve
 
             ry "So, you don't think it's weird?"
 
-            scene v14s03b_5b
+            scene v14s03b_5c
             with dissolve
 
             u "*Chuckles* Not at all. I think you should go for it."
@@ -267,7 +267,7 @@ label v14s03b:
 
     u "Thank you, you-"
 
-    scene v14s03b_8
+    scene v14s03b_8a
     with dissolve
 
     ry "What is it about me that you find so handsome?"

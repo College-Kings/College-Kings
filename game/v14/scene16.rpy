@@ -153,7 +153,7 @@ label v14s16:
     cl "So, what's your answer? Will you help me try and win this campaign?"
 
     menu:
-        "I'll help...":
+        "I'll help":
             $ v14_support_chloe = True
             scene v14s16_2e # FPP. Same as v14s16_2, Chloe slight smile, mouth closed.
             with dissolve
@@ -211,7 +211,7 @@ label v14s16:
 
                 pause 0.75
                 
-        "I don't have the time...":
+        "I don't have the time":
             scene v14s16_2
             with dissolve
 
