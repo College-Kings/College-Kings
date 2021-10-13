@@ -453,6 +453,7 @@ default v11s23_chris1 = False
 default v11s23_riley1 = False
 default v11s23_mrlee1 = False
 default v11s23_penelope1 = False
+default v11s23_penelope_date = False
 default v11s25_beer = True
 default v11_bartender_have_gf = False
 default msrosers = False
