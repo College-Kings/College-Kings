@@ -158,7 +158,7 @@ label v14s03c:
 
     satin "Oh, wow... It's rare for a virgin to walk in here. *Laughs*"
 
-    satin "Is he planning on, you know... Not being a virgin anymore?"
+    satin "Is he planning on, you know... not being a virgin anymore?"
 
     scene v14s03c_4f
     with dissolve

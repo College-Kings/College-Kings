@@ -94,12 +94,12 @@ label v14s03e:
         scene v14s03e_6
         with dissolve
 
-        u "Oh, my bad. *Chuckles* I was, you know... Busy. You weren't?"
+        u "Oh, my bad. *Chuckles* I was, you know... busy. You weren't?"
 
         scene v14s03e_6a
         with dissolve
 
-        ry "Nope, I decided to wait for my first time to be a little more... Clean."
+        ry "Nope, I decided to wait for my first time to be a little more... clean."
 
         scene v14s03e_6
         with dissolve
@@ -131,7 +131,7 @@ label v14s03e:
 
         u "Sorry bro, I wasn't thinking with my head..."
 
-        u "I was thinking with my... Head. *Chuckles*"
+        u "I was thinking with my... head. *Chuckles*"
 
         scene v14s03e_6f # FPP. Same as v14s03e_6c, annoyed expression
         with dissolve
@@ -153,7 +153,7 @@ label v14s03e:
         scene v14s03e_6
         with dissolve
 
-        u "Yeah... That."
+        u "Yeah... that."
 
     scene v14s03e_7 # TPP. Show Imre walking up to MC and Ryan, Imre, annoyed expression, mouth open, MC and Ryan, both neutral expression, mouth closed
     with dissolve
@@ -307,7 +307,7 @@ label v14s03e:
             scene v14s03e_12
             with dissolve
 
-            u "That's cold as hell Ryan, but... He's on his own with this one."
+            u "That's cold as hell Ryan, but... he's on his own with this one."
 
         "Tell Imre":
             scene v14s03e_12c # FPP. Same as v14s03e_12, serious expression

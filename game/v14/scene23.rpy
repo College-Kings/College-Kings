@@ -270,7 +270,7 @@ label v14s23:
     scene v14s23_4c
     with dissolve
 
-    u "Actually, for this... It's probably best if it's just you and Chris, right?"
+    u "Actually, for this... it's probably best if it's just you and Chris, right?"
 
     u "It's better not to drag anyone else into this, I think. Don't wanna cause any unintended tension for others."
 
@@ -336,7 +336,7 @@ label v14s23:
         scene v14s23_2c
         with dissolve
 
-        ch "Haha! If kissing ass was a profession, you'd be making a really good salary, Chlo."
+        ch "Haha! If kissing ass was a profession, you'd be making a really good salary, Chloe."
 
         scene v14s23_4c
         with dissolve

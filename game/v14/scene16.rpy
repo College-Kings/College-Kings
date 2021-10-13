@@ -76,9 +76,9 @@ label v14s16:
     scene v14s16_2a
     with dissolve
 
-    u "I admit, I didn't expect it to be... This much."
+    u "I admit, I didn't expect it to be... this much."
 
-    u "I mean... Did she do all of this overnight?"
+    u "I mean... did she do all of this overnight?"
 
     scene v14s16_2
     with dissolve
@@ -136,9 +136,9 @@ label v14s16:
         scene v14s16_2d # FPP. Same as v14s16_2c, Chloe leaning in towards MC's ear and whispering to him, Chloe flirting smile, mouth open.
         with dissolve
 
-        cl "*Whispering* Plus, the president always needs an assistant and if it's my job to, you know... Take care of you, while also running the sorority..."
+        cl "*Whispering* Plus, the president always needs an assistant and if it's my job to, you know... take care of you, while also running the sorority..."
 
-        cl "*Whispering* I might end up needing someone to help me with all of that... And all of you..."
+        cl "*Whispering* I might end up needing someone to help me with all of that... and all of you..."
 
         cl "*Whispering* Following me?"
 
@@ -158,7 +158,7 @@ label v14s16:
             scene v14s16_2e # FPP. Same as v14s16_2, Chloe slight smile, mouth closed.
             with dissolve
 
-            u "You know how I feel when it comes to you being President, Chlo."
+            u "You know how I feel when it comes to you being President, Chloe."
 
             u "Honestly, I don't think I could ever see anyone filling that role other than you."
 
@@ -246,7 +246,7 @@ label v14s16:
                 scene v14s16_2k
                 with dissolve
 
-                u "It's not that I don't want to Chlo, it's just that I'm kinda busy with my own Greek life. We just got back to campus for crying out loud, I mea-"
+                u "It's not that I don't want to Chloe, it's just that I'm kinda busy with my own Greek life. We just got back to campus for crying out loud, I mea-"
 
                 scene v14s16_2j
                 with dissolve

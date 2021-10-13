@@ -157,7 +157,7 @@ label v14s09:
                 scene v14s09_5c # FPP. same as v14s09_5b charli looking at Mr. Lee, mouth open
                 with dissolve
 
-                charli "*High pitch* It... It can wait, yeah. No rush."
+                charli "*High pitch* It... it can wait, yeah. No rush."
 
                 scene v14s09_5d # FPP. same as v14s09_5a charli slight anger
                 with dissolve
