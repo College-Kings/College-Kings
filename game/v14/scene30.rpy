@@ -129,7 +129,7 @@ label v14s30:
 
     pause .25
 
-    scene v14s30_5b # TPP. Same as v14s30_5a, Chloe in a cheering pose, slight smile, mouth closed.
+    scene v14s30_5b # TPP. Same as v14s30_5a, Chloe holding the plush wolf with one arm and her other hand in the air like she is cheering, slight smile, mouth closed.
     with flash
 
     pause .25 
