@@ -23,6 +23,7 @@ label v14s12:
 
     scene v14s12_2b # TPP. Same as v14s12_2b, MC holding phone to his ear, slight smile, mouth open.
     with dissolve
+    stop sound
 
     u "Hello?"
 

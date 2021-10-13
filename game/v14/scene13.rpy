@@ -32,7 +32,7 @@ label v14s13:
     scene v14s13_4b # FPP. Same as v14s13_4, slight laughing expression
     with dissolve
 
-    se "*Chuckles* Wolves don't roll like that my man."
+    se "*Chuckles* Wolves don't roll like that, my man."
 
     scene v14s13_4
     with dissolve
