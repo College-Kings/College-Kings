@@ -12,7 +12,7 @@ label v14s13a:
     scene v14s13a_2 # TPP. Show MC inside his room, closing the door (door not fully closed yet), smiling, mouth closed
     with dissolve
 
-    u "(I won't be letting anyone one bother me tonight.)"
+    u "(I won't be letting anyone bother me tonight.)"
 
     scene v14s13a_3 # TPP. Close up of Grayson's foot blocking the door from closing
     with dissolve
@@ -67,7 +67,7 @@ label v14s13a:
     scene v14s13a_4
     with dissolve
 
-    gr "There's a smell of... *Sniffs* Change. In the air... and you need to be ready."
+    gr "There's a smell of... *Sniffs* change... in the air. And you need to be ready."
 
     scene v14s13a_4a
     with dissolve

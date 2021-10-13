@@ -27,12 +27,12 @@ label v14s15:
         scene v14s15_4a  # FPP. MC looking at a banner with the campaign slogan «Lindsey, Say Bye To The Bullshit»
         with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v14s15_5   # FPP. MC looking at a hallways intersection, seeing Lindsey posters on all the walls.
     with dissolve
 
-    pause 0.75  
+    pause 1.25  
 
     scene v14s15_6   # FPP. MC looking at wall with several Lindsey posters. 
     with dissolve
