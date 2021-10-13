@@ -65,22 +65,22 @@ label v14s07:
     ro "There were memories made..."
 
     if v12_msrose_sex or v11_msrose_scene:
-        scene v14s07_2c # FPP. same as v14s07_2a Ms. Rose makes direct eye contact with mc
+        scene v14s07_2 # FPP. same as v14s07_2a Ms. Rose makes direct eye contact with mc
         with dissolve
 
         ro "Some of my most unforgettable experiences happened on this journey, as have yours."
 
-        scene v14s07_2b
+        scene v14s07_2c
         with dissolve
 
         u "(Okay Rose, let's try to be a little less obvious here.) *Chuckles*"
 
-        scene v14s07_2c
+        scene v14s07_2a
         with dissolve
 
         ro "Maybe one day I'll come back here to create even more memories, but with someone special."
 
-    scene v14s07_2a
+    scene v14s07_2
     with dissolve
 
     ro "You should all consider coming back to these beautiful countries some time, and enjoy it with your new found freedom and someone special by your side."
