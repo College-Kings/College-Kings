@@ -77,6 +77,11 @@ label v14s02:
     scene v14s02_2e # FPP. same as v14s02_2d imre rolls his eyes
     with dissolve
 
+    pause 0.75
+    
+    scene v14s02_2
+    with dissolve
+
     imre "Yeah, don't get too excited. We'll see how long it lasts."
 
     scene v14s02_2a
