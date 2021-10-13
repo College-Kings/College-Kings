@@ -44,6 +44,11 @@ label v14s07:
 
     au "*Whispers* Involved with each other... *Chuckles*"
 
+    scene v14s07_3b
+    with dissolve
+    
+    pause 0.5
+
     scene v14s07_3a # FPP. same as v14s07_3 aubrey mouth closed
     with dissolve
 
@@ -59,7 +64,7 @@ label v14s07:
 
     ro "There were memories made..."
 
-    if msrosers:
+    if v12_msrose_sex or v11_msrose_scene:
         scene v14s07_2c # FPP. same as v14s07_2a Ms. Rose makes direct eye contact with mc
         with dissolve
 
@@ -102,6 +107,7 @@ label v14s07:
 
     scene v14s07_5 # TPP. show Ms. Rose walking towards the hotel lobby front door with mc walking behind her
     with dissolve 
+    pause 0.75
 
     jump v14s08
 
