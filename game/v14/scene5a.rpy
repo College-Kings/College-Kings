@@ -80,7 +80,7 @@ label v14s05a:
 
         u "That's kind of surprising."
 
-        scene v14s05a_7b
+        scene v14s05a_7
         with dissolve
 
         ri "Ha, yeah. I thought the same thing."

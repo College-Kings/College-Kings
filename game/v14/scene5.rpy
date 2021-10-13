@@ -22,7 +22,7 @@ label v14s05:
     
     u "*Sighs*"
 
-    scene v14s05_3a # FPP. Chloe, mouth closed, concerned.
+    scene v14s05_3b # FPP. Chloe, mouth closed, concerned.
     with dissolve
 
     cl "Everything okay?"
