@@ -22,7 +22,7 @@ label v14s01a:
     scene v14s01a_2 # TPP. Show MC startled, waking up (still night time), he is laying on his bed, mouth open
     with dissolve
 
-    u "What the- Holy shit..."
+    u "What the- holy shit...!"
 
     scene v14s01a_3 # TPP. Show MC sitting up on his bed, slightly annoyed, mouth closed, hands on head
     with dissolve
