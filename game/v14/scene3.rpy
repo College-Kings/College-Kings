@@ -1,7 +1,7 @@
 # SCENE 03: Red Light District With Imre and Ryan
-# Locations: 
-# Characters: IMRE (Outfit: x), MC (Outfit: x), RYAN (Outfit: x)
-# Time: 
+# Locations: Red light district with Imre & Ryan
+# Characters: IMRE (Outfit: 2), MC (Outfit: 3), RYAN (Outfit: 1)
+# Time: Night
 
 label v14s03:
     scene v14s03_1 # TPP. MC Imre and ryan arriving at red light district
