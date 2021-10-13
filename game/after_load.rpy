@@ -662,6 +662,8 @@ label after_load:
         except NameError: v13_aubrey_vote = "na"
         try: v13_chloe_sex
         except NameError: v13_chloe_sex = False
+        try: v14_ryan_satin
+        except NameError: v14_ryan_satin = False
 
 
     show no_hard_feelings at achievementShow

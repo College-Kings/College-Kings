@@ -4,7 +4,7 @@
 # Time: Night
 
 label v14s03e:
-    if Ryan_had_Sex: #placeholder 
+    if v14_ryan_satin: 
         scene v14s03e_1 # TPP. Show MC standing outside of room, neutral expression, mouth closed 
         with fade
 
@@ -55,7 +55,7 @@ label v14s03e:
 
         ry "You know it!"
 
-    if MC_had_sex: #placeholder
+    else: #placeholder
         scene v14s03e_4 # TPP. Show MC walking through brothal corridor, neutral expression, mouth closed 
         with dissolve
 

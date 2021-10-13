@@ -309,6 +309,7 @@ label v14s03c:
            
         "Help Ryan":
             $ addPoint ("bro")
+            $ v14_ryan_satin = True
 
             scene v14s03c_5a # FPP. Same as v14s03c_5, Emerald on Ryan's lap, both slight smile, mouth closed.
             with dissolve
@@ -348,9 +349,11 @@ label v14s03c:
             scene v14s03c_5d # FPP. Same as v14s03c_5c, Satin leading Ryan towards the private booth, Ryan excited expression looking at MC, mouth closed, Satin slight smile, mouth closed, Emerald sad expression, mouth closed.
             with dissolve
 
-            u "*Sighs* ( I'll try to sit here and not be jealous.)"
+            u "*Sighs* (I'll try to sit here and not be jealous.)"
 
             scene v14s03c_3b
             with dissolve
+
+            pause 0.75
 
             jump v14s03e

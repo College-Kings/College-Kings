@@ -615,3 +615,4 @@ default v14_emily_ily = False
 default v14s24a_gummyfish = False
 default v14_amber_clean = False
 default v14_amber_drugs = False
+default v14_ryan_satin = False
