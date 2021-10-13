@@ -297,6 +297,7 @@ default helpJosh = False
 default larsdmg = 0
 default simLarsFight = False
 default s28_fightWinner = "MC"
+default v8_dodged_pipe = False
 
 default amberSexOfferAtJoshs = False
 default amberSexAtJoshs = False

@@ -259,7 +259,6 @@ label mc_LarsKickBlock: # MC Kicks Lars (Blocks)
 
 label mc_LarsJabsHit: # MC Jabs Lars (Hits/No Block)
 
-
     $ larsdmg += 1
     scene MC_Lars_Jab_hit
     pause 0.7 # Trial/Error
@@ -533,6 +532,7 @@ label no_int_deal_w_josh:
     jump check_on_josh
 
 label dodged_pipe:
+    $ v8_dodged_pipe = True
     scene v8sdd13 # TPP. Show MC ducking as Joe swings the pipe over his head, Lars stood directly behind MC.
     with dissolve
 

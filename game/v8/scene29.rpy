@@ -208,13 +208,14 @@ label after_drugs:
             u "While I fought the fat guy, the other guy got into it with Josh."
             u "By the time I was done beating that guy's ass, Josh was already on the ground all fucked up."
 
-            scene v8josh25b
-            with dissolve
-            am "And the other guy?"
+            if v8_dodged_pipe:
+                scene v8josh25b
+                with dissolve
+                am "And the other guy?"
 
-            scene v8josh25c
-            with dissolve
-            u "I beat the shit outta him."
+                scene v8josh25c
+                with dissolve
+                u "I beat the shit outta him."
 
             scene v8josh25d # Amber less upset, relaxed and smiling a little, mouth open
             with dissolve

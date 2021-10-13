@@ -536,7 +536,7 @@ label v10_lauren_room:
         scene v10lar10 # TPP Show MC sitting on Lauren's bed, holding phone to his ear, neutral expression, mouth closed
         with dissolve
 
-        ro "Hey [name], it's Ms. Rose, I'm sorry for calling this late."
+        ro "Hey [name], it's Ms. Rose, I'm sorry for calling out of the blue."
         ro "But I don't really know who else to turn to. My husband is outside parked in his car and just won't leave."
         
         ro "I'm starting to feel a little unsafe."

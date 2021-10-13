@@ -334,6 +334,8 @@ label after_load:
         except NameError: v8_chloesex = False
         try: v8_hocoamber
         except NameError: v8_hocoamber = False
+        try: v8_dodged_pipe
+        except NameError: v8_dodged_pipe = False
         try: v10_ambersex
         except NameError: v10_ambersex = False
         try: v11_samantha_spa
