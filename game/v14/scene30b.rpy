@@ -240,6 +240,8 @@ label v14s30b:
 
         scene v14s30b_9 # TPP. MC sitting on his bed in the Wolves room, slight smile, mouth closed.
         with dissolve
+
+        pause .5
     if joinapes:
         scene v14s30b_10 # TPP. Show MC walking into the Apes house.
         with fade
@@ -250,6 +252,8 @@ label v14s30b:
 
         scene v14s30b_11 # TPP. Show MC sitting on his bed in the Apes room, slight smile, mouth closed.
         with dissolve
+
+        pause .5
     
     # Don't know if it was done correctly I tried my best :P
     if v14s30b_pw_image_one and v14s30b_its_perfect:
