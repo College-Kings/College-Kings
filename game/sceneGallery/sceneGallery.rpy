@@ -71,6 +71,12 @@ init python:
     SceneGallery("v13s25_emmysg") #26, Emmy, day 38, v13_emmysex
     SceneGallery("v13s40_sg") #40, Chloe, day 39, v13_chloe_sex
     SceneGallery("v13s50a") #50a, Emily, day 40, v13_emilysex
+        #v14
+    SceneGallery("") #3d
+    SceneGallery("") #21a
+    SceneGallery("") #25a
+    SceneGallery("") #36
+    SceneGallery("") #53a
 
 screen spoiler():
     modal True
