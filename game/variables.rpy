@@ -203,6 +203,7 @@ default kimpuke = False
 default fr3matt = False
 default save = 0
 default v3_aubsex = False
+default v6_emilysex = False
 
 # 7.0
 default follownora = False
@@ -276,8 +277,11 @@ default laurenpt = 0
 default nobeach = False
 default v7_seencrowning = False
 default v7_emily_bowling = False
+default v7_rileysex = False
 
 # 8.0
+default v8_chloesex = False
+default v8_hocoamber = False
 default v8AutProtest = False
 default openedUpToSeb = False
 default chloeMsg11Reply = 0
@@ -302,6 +306,7 @@ default chloeSteakHouse = False
 default climbwseb = False
 default hesitantwgrayson = False
 default v8_riley_lewd_ending = False
+default v8_dodged_pipe = False
 
 # 9.0
 default mcBrawlStance1 = False
@@ -425,6 +430,7 @@ default v10s33_ryanb = False
 default v10_ri_hat_good = False
 default emily_europe = False
 default josh_europe = False
+default v10_ambersex = False
 
 # 11.0
 default laurenLike = 0
@@ -478,6 +484,7 @@ default political_strategist = False
 default v11_smoke_amber_amsterdam = False
 default v11_lauren_ily = False
 default v11_underground_rose = False
+default v11_check_on_nora = False
 
 # 12.0
 default v12_told_chloe = False
@@ -544,6 +551,8 @@ default v12s33_door2 = False
 default v12s33_door3 = False
 default v12s24_emmymatch = False
 default chrismad = False
+default v12_sauna_sneak1 = False
+default v12_girl = "na"
 
 # 13.0
 default v13_penelope_concert = False
@@ -591,6 +600,7 @@ default v13s40_backpoint = False
 default v13s40_shoulderpoint = False
 default laurenrs_v11aubrey = True
 default v13s40fromgame = False
+default v13_chloe_sex = False
 
 # 14.0
 default v14s03a_left_cup = False
