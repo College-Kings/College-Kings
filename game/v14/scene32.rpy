@@ -7,7 +7,7 @@ label v14s32:
     scene v14s32_1 # TPP. MC walking into the Gym, slight smile, mouth closed
     with dissolve
 
-    pause .25
+    pause 0.75
 
     play sound "sounds/hs.mp3"
 
@@ -26,7 +26,7 @@ label v14s32:
     scene v14s32_2b # FPP. Same as v14s32_2a, Imre punches the bag hard, Imre slight smile, mouth closed
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s32_2c # FPP. Same as v14s32_2b, Imre now looking at MC, shocked smile, mouth open.
     with dissolve
@@ -185,21 +185,21 @@ label v14s32:
     scene v14s32_3 # TPP. MC walking up to the punching bag, Imre standing off to MC's side, Both slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     play sound "sounds/hs.mp3"
 
     scene v14s32_3a # TPP. Same as v14s32_3, MC throwing a punch at the punching bag.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     play sound "sounds/hs.mp3"
 
     scene v14s32_3b # TPP. Same as v14s32_3a, MC throwing a punch with his other hand.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     play sound "sounds/hs.mp3"
 
@@ -236,12 +236,12 @@ label v14s32:
     scene v14s32_2f # FPP. Same as v14s32_2e, Imre staring off past MC, shocked face, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s32_2g # FPP. Same  as v14s32_2f, Imre pointing behind MC, shocked face, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s32_4 # FPP. MC looking behind him and sees Rubee kickboxing with a punching with her male personal trainer holding the bag, Rubee and Trainer neutral face, Rubee mouth open, Trainer mouth closed.
     with dissolve
@@ -286,12 +286,12 @@ label v14s32:
     scene v14s32_5a # TPP. Same as v14s32_5, Rubee stands up straight.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s32_5b # TPP. Rubee turned around and starting to walk towards MC and Imre.
     with dissolve
     
-    pause .25
+    pause 0.75
 
     scene v14s32_2h
     with dissolve
@@ -364,7 +364,7 @@ label v14s32:
     scene v14s32_5c # TPP. Same as v14s32_5b, Rubee starting to walk to the gym door.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     play sound "sounds/dooropen.mp3"
 
@@ -378,7 +378,7 @@ label v14s32:
     scene v14s32_5e #TPP. Same as v14s32_5d, The gym door closed and Rubee gone(Don't show Rubee here anywhere to reuse for Imre leaving.).
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s32_7 # FPP. MC and Imre now at the bench pressing stations, Imre sitting on the benchpress, slight smile, mouth open.
     with dissolve
@@ -479,7 +479,7 @@ label v14s32:
     scene v14s32_8 # TPP. Show MC and Imre walking back over to the Punching bag.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s32_2e
     with dissolve
@@ -511,17 +511,17 @@ label v14s32:
     scene v14s32_9 # TPP. Close up of Imre hitting the punching bag with his left fist.
     with dissolve
 
-    pause .15
+    pause 0.15
 
     scene v14s32_9a # TPP. Same as v14s32_9, Imre hitting the punching bag with his right fist.
     with dissolve
 
-    pause .15
+    pause 0.15
 
     scene v14s32_9b # TPP. Same as v14s32_9a, Imre kicking the punching bag with a roundhouse kick.
     with dissolve
 
-    pause .15
+    pause 0.15
 
     scene v14s32_2e
     with dissolve
@@ -556,17 +556,17 @@ label v14s32:
     scene v14s32_9c # TPP. Same as v14s32_9, MC punching the bag with his left fist.
     with dissolve
 
-    pause .15
+    pause 0.15
 
     scene v14s32_9d # TPP. Same as v14s32_9a, MC punching the bag with his right fist.
     with dissolve
 
-    pause .15
+    pause 0.15
 
     scene v14s32_9e # TPP. Same as v14s32_9b, MC kicking the punching bag with a roundhouse kick.
     with dissolve
 
-    pause .15
+    pause 0.15
 
     scene v14s32_2e
     with dissolve
@@ -707,7 +707,7 @@ label v14s32:
     with dissolve
 
     if v13_imre_disloyal:
-        pause .15
+        pause 0.15
 
         scene v14s32_5g # TPP. Same as v14s32_5e, Imre looks over his shoulder, Imre neutral face, mouth open.
         with dissolve
@@ -737,16 +737,16 @@ label v14s32:
     scene v14s32_5i # FPP. Same as v14s32_5h, Show Imre opening the door to leave the gym, Imre slight smile, mouth closed. 
     with dissolve
 
-    pause .15 
+    pause 0.15 
 
     scene v14s32_5j # FPP. Same as v14s32_5i, Show Imre leaving the gym. 
     with dissolve
 
-    pause .15
+    pause 0.15
 
     scene v14s32_5e
     with dissolve
 
-    pause .15
+    pause 0.15
 
     jump v14s33 

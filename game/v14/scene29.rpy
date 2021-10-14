@@ -7,7 +7,7 @@ label v14s29:
     scene v14s29_1 # TPP. Show MC walking down the Sidewalk campus, slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     play sound "sounds/call.mp3"
 

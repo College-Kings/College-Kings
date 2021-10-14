@@ -7,14 +7,14 @@ label v14s25:
     scene v14s25_1 # TPP. Show MC walking up to the front door of Amber's home, MC neutral expression, mouth closed.
     with fade
 
-    pause .75
+    pause 0.75
 
     play sound "sounds/knock.mp3"
 
     scene v14s25_1a # TPP. Same as v14s25_1, MC standing at the front of Amber's door and knocking on the door.
     with dissolve
 
-    pause .75
+    pause 0.75
 
     play sound "sounds/dooropen.mp3"
 
@@ -26,12 +26,12 @@ label v14s25:
     scene v14s25_3 # TPP. MC walking inside of Amber's house.
     with dissolve
 
-    pause .5
+    pause 0.5
 
     scene v14s25_4 # FPP. MC finds Amber in the living room sitting on the floor with her back against the couch as she is smoking, Amber not realising MC is in the room yet, Amber neutral smile, mouth closed.
     with dissolve
 
-    pause .75
+    pause 0.75
 
     scene v14s25_4a # FPP. Same as v14s25_4, Amber turns and has now seen MC, Amber slight smile, mouth open.
     with dissolve
@@ -42,17 +42,17 @@ label v14s25:
         scene v14s25_4b # FPP. Same as v14s25_4a, Amber starting to get up from off the floor, Amber slight smile, mouth closed
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v14s25_4c # FPP. Same as v14s25_4b, Amber now standing up, Amber slight smile, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v14s25_4d # FPP. Same as v14s25_4c. Amber walking over to MC, Amber slight smile, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v14s25_4e # FPP. Same as v14s25_4d, Amber standing infront of MC, Looking at eachother, Amber slight smile, mouth closed.
         with dissolve
@@ -71,12 +71,12 @@ label v14s25:
         scene v14s25_5 # TPP. Amber hugging MC tightly, both slight smile, mouth closed.
         with vpunch
 
-        pause 0.25
+        pause 0.75
 
         scene v14s25_4e
         with dissolve
 
-        pause 0.25
+        pause 0.75
 
         if not v14s24a_gummyfish:
             scene v14s25_4g # FPP. Same as v14s25_4f, Amber looking down as MC hands her the twezzlers candy, Amber slight smile, mouth open.  
@@ -168,12 +168,12 @@ label v14s25:
     scene v14s25_6 # TPP. Show Amber grabbing MC by the hand and leading him to her room, both slight smile, mouth closed.
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s25_7 # TPP. In Amber's room, MC and Amber sitting on her bed, both slight smile, mouth closed.
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s25_8 # FPP. MC and Amber on Amber's bed in her room, MC looking at Amber, Amber looking at MC, Amber slight smile, mouth open.
     with dissolve
@@ -193,7 +193,7 @@ label v14s25:
     scene v14s25_8b # FPP. Same as v14s25_8a, Amber reaching behind her pillow, slight smile, mouth closed.
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s25_8c # FPP. Same as v14s25_8, Amber holding a bottle of pills up, slight smile, mouth open.
     with dissolve
@@ -267,7 +267,7 @@ label v14s25:
     scene v14s25_8f # FPP. Same as v14s25_8e, Amber taking a hit from her vape.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s25_8g # FPP. Same as v14s25_8f, Amber blowing out the smoke from her vape.
     with dissolve
@@ -296,12 +296,12 @@ label v14s25:
     scene v14s25_8f
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s25_8g
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s25_8d
     with dissolve
@@ -335,7 +335,7 @@ label v14s25:
     scene v14s25_8f
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s25_8g
     with dissolve
@@ -428,7 +428,7 @@ label v14s25:
     scene v14s25_9 # TPP. Close up of Amber looking at the pill bottle, MC off camera, slight frown, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s25_8d
     with dissolve
@@ -463,12 +463,12 @@ label v14s25:
             scene v14s25_10 # TPP. Show MC putting Amber's pills and vape on her nightstand.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s25_11 # TPP. Show MC and Amber holding hands, MC slight smile, mouth closed, Amber slight frown, Amber crying lightly, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s25_8k
             with dissolve
@@ -514,7 +514,7 @@ label v14s25:
             scene v14s25_11a # TPP. Show MC and Amber still holding hands, MC's free hand holding up the bottle of pills.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s25_8k
             with dissolve
@@ -557,7 +557,7 @@ label v14s25:
             scene v14s25_12 # TPP. Amber standing up from off the bed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s25_13 # FPP. Amber standing up infront of MC, MC looking at Amber, Amber looking at MC, Amber slight smile, mouth open.
             with dissolve
@@ -572,7 +572,7 @@ label v14s25:
             scene v14s25_13b # FPP. Same as v14s25_13, Show Amber wiping her face, Amber slight smile, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s25_13
             with dissolve
@@ -584,7 +584,7 @@ label v14s25:
             scene v14s25_13c # FPP. Same as v14s25_13b, Show Amber walking away from MC, Amber holding the pill bottle in one hand, a bag of weed in her other hand, slight smile, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s25_13d # FPP. Same as v14s25_13c, MC looking at Amber's empty room.
             with dissolve
@@ -601,7 +601,7 @@ label v14s25:
             scene v14s25_14 # FPP. Amber walking back in the room towards MC, Amber slight smile, mouth closed
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s25_8
             with dissolve
@@ -642,7 +642,7 @@ label v14s25:
             scene v14s25_11b # TPP. Same as v14s25_11, Show Amber and MC hugging.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s25_8
             with dissolve
@@ -720,7 +720,7 @@ label v14s25:
             scene v14s25_11d # TPP. Same as v14s25_11b, Show MC doing the generic thinking pose, MC cheeky smirk, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s25_8a
             with dissolve
@@ -784,22 +784,22 @@ label v14s25:
             scene v14s25_18b # TPP. Same as v14s25_18a, Amber flipping the light switch, Amber slight smile, mouth closed.
             with dissolve
 
-            pause .5
+            pause 0.5
 
             scene v14s25_17a # TPP. Same as v14s25_17, Show MC and Amber laying in bed, both slight smile, mouth closed.
             with dissolve
 
-            pause .5
+            pause 0.5
 
             scene v14s25_17b # TPP. Same as v14s25_17a, MC and Amber sleeping.
             with fade
 
-            pause .25
+            pause 0.75
 
             scene v14s25_17c # TPP. Same as v14s25_17b, MC and Amber sleeping in different positions.
             with fade
 
-            pause .5
+            pause 0.5
 
             scene v14s25_17d # TPP. MC wakes up with topless Amber sleeping on him.
             with dissolve
@@ -862,7 +862,7 @@ label v14s25:
             scene v14s25_10a # TPP. Same as v14s25_10, Show MC holding the pill bottle in one hand and taking one of the pills with his other hand.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s25_8l
             with dissolve
@@ -887,7 +887,7 @@ label v14s25:
             scene v14s25_8r # FPP. Same as v14s25_8m, Amber opening her mouth as MC puts the pill in her mouth. 
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s25_8l
             with dissolve
@@ -914,7 +914,7 @@ label v14s25:
             scene v14s25_20 # TPP. Show Amber pinning MC against the wall as they kiss.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s25_21 # FPP. Amber pinning MC against the wall, Amber flirtatious smile, mouth open.
             with dissolve
@@ -924,12 +924,12 @@ label v14s25:
             scene v14s25_20a # TPP. Same as v14s25_20, MC kissing Amber's neck.
             with fade
 
-            pause .25
+            pause 0.75
 
             scene v14s25_22 # TPP. Close up of just Amber's face, Amber biting her lip.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s25_22a # TPP. Same as v14s25_22, Amber flirtatious smile, mouth open.
             with dissolve
@@ -939,7 +939,7 @@ label v14s25:
             scene v14s25_23 # TPP. Amber's hand on MC's crotch.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s25_21
             with dissolve
@@ -1016,22 +1016,22 @@ label v14s25:
                     scene v14s25_18b
                     with dissolve
 
-                    pause .5
+                    pause 0.5
 
                     scene v14s25_17a
                     with dissolve
 
-                    pause .5
+                    pause 0.5
 
                     scene v14s25_17b
                     with fade
 
-                    pause .25
+                    pause 0.75
 
                     scene v14s25_17c
                     with fade
 
-                    pause .5
+                    pause 0.5
 
                     scene v14s25_17d
                     with dissolve

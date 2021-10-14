@@ -7,7 +7,7 @@ label v14s30b:
     scene v14s30b_1 # TPP. Show MC and Chloe walking on the Campus sidewalk, Both slight smile, mouth closed.
     with fade
 
-    pause 0.25
+    pause 0.75
 
     scene v14s30b_2 # FPP. MC looking at Chloe, Chloe looking down at her phone, Chloe slight smile, mouth open.
     with dissolve
@@ -224,7 +224,7 @@ label v14s30b:
     scene v14s30b_6 # FPP. Show Chloe running off away from MC.
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s30b_7 # TPP. Show MC walking down the Campus sidewalk.
     with dissolve

@@ -541,12 +541,12 @@ label v14s03a:
     scene v14s03a_9
     with dissolve
 
-    pause 0.25 
+    pause 0.26 
 
     scene v14s03a_9a
     with dissolve
 
-    pause 0.25
+    pause 0.26
 
     scene v14s03a_9b
     with dissolve

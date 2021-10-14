@@ -18,14 +18,14 @@ label v14s33:
             scene v14s33_2a # TPP. Same as v14s33_2, Mc in a different pose looking at his phone in his wolves room, slight smile, mouth closed.
             with dissolve
 
-            pause 0.25
+            pause 0.75
 
             if v11s23_penelope_date:
                 jump v14s34
             else:
                 jump v14s35
         else:
-            pause 0.25
+            pause 0.75
 
             play sound "sounds/call.mp3"
 
@@ -155,7 +155,7 @@ label v14s33:
 
                     u "(Lauren watching porn for the first time? Haha! I hope she didn’t take that the wrong way… But, damn…)"
 
-                    pause 0.25
+                    pause 0.75
 
                     if v11s23_penelope_date:
                         jump v14s34
@@ -203,7 +203,7 @@ label v14s33:
 
                     la "Good Night!"
 
-                    pause 0.25
+                    pause 0.75
 
                     play sound "sounds/rejectcall.mp3"
 
@@ -212,7 +212,7 @@ label v14s33:
 
                     u "(Lauren is watching porn for the first time….)"
 
-                    pause 0.25
+                    pause 0.75
                     
                     if v11s23_penelope_date:
                         jump v14s34
@@ -231,14 +231,14 @@ label v14s33:
                 scene v14s33_4a # TPP. Same as v14s33_4, Mc in a different pose looking at his phone in his Apes room, slight smile, mouth closed.
                 with dissolve
 
-                pause 0.25
+                pause 0.75
 
                 if v11s23_penelope_date:
                     jump v14s34
                 else:
                     jump v14s35
             else:
-                pause 0.25
+                pause 0.75
 
                 play sound "sounds/call.mp3"
 
@@ -369,7 +369,7 @@ label v14s33:
 
                         u "(Lauren watching porn for the first time? Haha! I hope she didn’t take that the wrong way… But, damn…)"
 
-                        pause 0.25
+                        pause 0.75
 
                         if v11s23_penelope_date:
                             jump v14s34
@@ -418,7 +418,7 @@ label v14s33:
 
                         la "Good Night!"
 
-                        pause 0.25
+                        pause 0.75
 
                         play sound "sounds/rejectcall.mp3"
 
@@ -427,7 +427,7 @@ label v14s33:
 
                         u "(Lauren is watching porn for the first time….)"
 
-                        pause 0.25
+                        pause 0.75
                         
                         if v11s23_penelope_date:
                             jump v14s34
