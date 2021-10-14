@@ -68,7 +68,7 @@ label v14s33:
 
                     la "Haha, I wish."
 
-                "I miss you too...":
+                "I miss you too":
                     scene v14s33_3a
                     with dissolve
 
@@ -106,7 +106,7 @@ label v14s33:
             la "*Chuckles* I don't know... See what it does for me?"
 
             menu:
-                "Laugh...":
+                "Laugh":
                     scene v14s33_3a
                     with dissolve
 
@@ -162,7 +162,7 @@ label v14s33:
                     else:
                         jump v14s35
 
-                "Get excited...":
+                "Get excited":
                     scene v14s33_3a
                     with dissolve
 
@@ -281,7 +281,7 @@ label v14s33:
 
                         la "Haha, I wish."
 
-                    "I miss you too...":
+                    "I miss you too":
                         $ addPoint("bf")
                         scene v14s33_3a
                         with dissolve
@@ -320,7 +320,7 @@ label v14s33:
                 la "*Chuckles* I don't know... See what it does for me?"
 
                 menu:
-                    "Laugh...":
+                    "Laugh":
                         scene v14s33_3a
                         with dissolve
 
@@ -376,7 +376,7 @@ label v14s33:
                         else:
                             jump v14s35
 
-                    "Get excited...":
+                    "Get excited":
                         $ addPoint("bf")
                         scene v14s33_3a
                         with dissolve

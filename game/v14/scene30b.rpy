@@ -83,13 +83,13 @@ label v14s30b:
         cl "Which one is your favorite?"
 
         menu:
-            "Chloe standing next to the plush wolf...":
+            "Standing next to the plush":
                 $ v14s30b_pw_image_one = True
 
                 scene v14s30b_3
                 with dissolve
 
-            "Chloe holding plush wolf and cheering...":
+            "Holding the plush and cheering":
                 $ v14s30b_pw_image_two = True
 
                 scene v14s30b_3a 
@@ -117,12 +117,12 @@ label v14s30b:
         cl "Which one is your favorite?"
 
         menu:
-            "Chloe standing next to the real wolf...":
+            "Standing next to the wolf":
                 $ v14s30b_rw_image_one = True
 
                 scene v14s30b_3b
                 with dissolve
-            "Chloe high fiving the real wolf...":
+            "High-fiving the wolf":
                 $ v14s30b_rw_image_two = True
 
                 scene v14s30b_3c
@@ -147,7 +147,7 @@ label v14s30b:
     cl "Well, I'll definitely include \"#PresidentialStatus\"."
 
     menu:
-        "It's perfect...":
+        "It's perfect":
             $ v14s30b_its_perfect = True
             $ LindseyPopularity += 3
 
@@ -256,7 +256,7 @@ label v14s30b:
     
     # Don't know if it was done correctly I tried my best :P
     if v14s30b_pw_image_one and v14s30b_its_perfect:
-        $ kiwii_post = KiwiiPost("Chloe", _("What's a chick without her wolf? <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=712)
+        $ kiwii_post = KiwiiPost("Chloe", _("What's a Chick without her Wolf? <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=712)
         if v14_pw_half_chris_support:
             $ kiwii_post.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ kiwii_post.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chlo <3"))
@@ -304,7 +304,7 @@ label v14s30b:
         $ kiwii_post.addReply(_("Aww, haha. Congrats!"))
 
     if v14s30b_rw_image_one and v14s30b_its_perfect:
-        $ kiwii_post = KiwiiPost("Chloe", _("What's a chick without her wolf? <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=973)
+        $ kiwii_post = KiwiiPost("Chloe", _("What's a Chick without her Wolf? <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=973)
         if v14_pw_half_chris_support:
             $ kiwii_post.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ kiwii_post.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chlo <3"))
