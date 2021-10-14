@@ -484,7 +484,7 @@ label v14s32:
     scene v14s32_2e
     with dissolve
 
-    imre "Let me show you something I've been working on. I'm thinking about calling it “Combo Imre.”"
+    imre "Let me show you something I've been working on. I'm thinking about calling it \"Combo Imre.\""
 
     scene v14s32_2d
     with dissolve

@@ -372,7 +372,7 @@ label v14s25:
 
     am "*Chuckles* That's all my parents wanted me to do when I was little..."
 
-    am "“Just tell the priest what you did, Amber. Confess to your sins, Amber.”"
+    am "\"Just tell the priest what you did, Amber. Confess to your sins, Amber.\""
 
     scene v14s25_8k # FPP. Same as v14s25_8j, Amber slight frown, Amber crying lightly, mouth closed.
     with dissolve
@@ -523,7 +523,7 @@ label v14s25:
 
             u "If what you're feeling is guilt, don't feel guilty for the choices that others have made."
 
-            u "Feel guilty for what choices you've allowed others to see you make, and think that they're safe, or “good” decisions to make."
+            u "Feel guilty for what choices you've allowed others to see you make, and think that they're safe, or \"good\" decisions to make."
 
             scene v14s25_8n # FPP. Same as v14s25_8m, Amber crying heavily with her face buried in her hands.
             with dissolve

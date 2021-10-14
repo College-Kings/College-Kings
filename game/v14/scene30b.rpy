@@ -144,7 +144,7 @@ label v14s30b:
     scene v14s30b_2
     with dissolve
 
-    cl "Well, I'll definitely include “#PresidentialStatus”."
+    cl "Well, I'll definitely include \"#PresidentialStatus\"."
 
     menu:
         "It's perfect...":
@@ -187,7 +187,7 @@ label v14s30b:
             scene v14s30b_2a
             with dissolve
 
-            u "Exactly, so maybe something like, “#TheChicksWhoCriedWolves”."
+            u "Exactly, so maybe something like, \"#TheChicksWhoCriedWolves\"."
 
             scene v14s30b_2
             with dissolve
