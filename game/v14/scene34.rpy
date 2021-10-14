@@ -111,22 +111,22 @@ label v14s34:
         scene v14s34_10 # TPP. Show MC standing in his Wolves room, slight smile, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.25
 
         scene v14s33_10a # TPP. Same as v14s34_10, Show MC standing in his wolves room wearing nicer clothes for his date with Penelope, slight smile, mouth closed.
         with fade
 
-        pause .25
+        pause 0.25
     else: 
         scene v14s34_11 # TPP. Show MC standing in his apes room, slight smile, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.25
 
         scene v14s33_11a # TPP. Same as v14s34_11, Show MC standing in his apes room wearing nicer clothes for his date with Penelope, slight smile, mouth closed.
         with fade
 
-        pause .25
+        pause 0.25
 
     scene v14s34_12 # TPP. Show MC outside walking towards the restraunt in his nice clothes, slight smile, mouth closed.
     with dissolve

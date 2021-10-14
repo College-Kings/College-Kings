@@ -7,7 +7,7 @@ label v14s30b:
     scene v14s30b_1 # TPP. Show MC and Chloe walking on the Campus sidewalk, Both slight smile, mouth closed.
     with fade
 
-    pause .25
+    pause 0.25
 
     scene v14s30b_2 # FPP. MC looking at Chloe, Chloe looking down at her phone, Chloe slight smile, mouth open.
     with dissolve
@@ -224,7 +224,7 @@ label v14s30b:
     scene v14s30b_6 # FPP. Show Chloe running off away from MC.
     with dissolve
 
-    pause .25
+    pause 0.25
 
     scene v14s30b_7 # TPP. Show MC walking down the Campus sidewalk.
     with dissolve
@@ -233,26 +233,26 @@ label v14s30b:
         scene v14s30b_8 # TPP. Show MC walking into the wolves house.
         with fade
 
-        pause .5
+        pause 0.5
 
         play sound "sounds/doorclose.mp3"
 
         scene v14s30b_9 # TPP. MC sitting on his bed in the Wolves room, slight smile, mouth closed.
         with dissolve
 
-        pause .5
+        pause 0.5
     if joinapes:
         scene v14s30b_10 # TPP. Show MC walking into the Apes house.
         with fade
 
-        pause .5
+        pause 0.5
 
         play sound "sounds/doorclose.mp3"
 
         scene v14s30b_11 # TPP. Show MC sitting on his bed in the Apes room, slight smile, mouth closed.
         with dissolve
 
-        pause .5
+        pause 0.5
     
     # Don't know if it was done correctly I tried my best :P
     if v14s30b_pw_image_one and v14s30b_its_perfect:

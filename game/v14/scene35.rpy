@@ -33,25 +33,26 @@ label v14s35:
         scene v14s35_3 # TPP. Show MC standing naked in his wolves room, slight smile, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.25
 
         scene v14s35_3a # TPP. Same as v14s35_3, MC pulling up his swimming trunks still slightly naked, slight smile, mouth closed
         with dissolve
 
-        pause .25
+        pause 0.25
 
         scene v14s35_3b # TPP. Same as v14s35_3a, MC standing in the room with his swimming trunks fully on, slight smile, mouth closed
         with dissolve
+
     if joinapes:
         scene v14s35_4 # TPP. Show MC standing naked in his Apes room, slight smile, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.25
 
         scene v14s35_4a # TPP. Same as v14s35_4, MC pulling up his swimming trunks still slightly naked, slight smile, mouth closed
         with dissolve
 
-        pause .25
+        pause 0.25
 
         scene v14s35_4b # TPP. Same as v14s35_4a, MC standing in the room with his swimming trunks fully on, slight smile, mouth closed
         with dissolve
