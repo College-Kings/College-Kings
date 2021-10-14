@@ -440,7 +440,7 @@ label v9_fri_training_w_wolves:
 
         menu:
             "Act cool":
-                $ addPoint ("tm", 1)
+                $ addPoint ("tm")
 
                 scene v9tww15a
                 with dissolve
@@ -453,7 +453,7 @@ label v9_fri_training_w_wolves:
                 u "How?"
 
             "Ask for help":
-                $ addPoint ("bro", 1)
+                $ addPoint ("bro")
 
                 u "I need it. I don't know what happened."
 
@@ -539,7 +539,7 @@ label v9_fri_training_w_wolves:
                 ch "So we use that to our advantage."
 
             "Defend yourself":
-                $ addPoint ("tm", 1)
+                $ addPoint ("tm")
 
                 u "I mean, it's not my first fight ever. I can still have some tricks up my sleeve."
 

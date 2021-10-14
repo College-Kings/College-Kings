@@ -10212,9 +10212,9 @@ label upstairsemily:
     scene sufr3em2b # emily cute
     with dissolve
 
-    em "Just missed you is all."
+    em "Just missed you is all?"
 
-    em "Soo, I was thinking the next we..."
+    em "Soo, actually I was thinking the next we..."
 
     em "You know..."
 
