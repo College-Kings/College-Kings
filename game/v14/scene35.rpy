@@ -15,10 +15,10 @@ label v14s35:
 
     $ contact_Jenny.newMessage(_("Hey [name], you busy right now?"), queue =False)
     $ contact_Jenny.addReply(_("No, what's up?"))
-    $ contact_Jenny.newMessage(_("Well, I’ve been wanting to swimming in this little lagoon I found."))
+    $ contact_Jenny.newMessage(_("Well, I've been wanting to swimming in this little lagoon I found."))
     $ contact_Jenny.addReply(_("You wanna go now?"))
     $ contact_Jenny.newMessage(_("Yeah, why not? ;) Penelope is busy, so I wanted to see if you'd be down."))
-    $ contact_Jenny.addReply(_("Okay sure, where’s this lagoon at?"))
+    $ contact_Jenny.addReply(_("Okay sure, where's this lagoon at?"))
     $ contact_Jenny.newImgMessage(_("Picture of the Lagoon, somehow with a location marker in the photo"))
     $ contact_Jenny.newMessage(_("See you soon!"))
 

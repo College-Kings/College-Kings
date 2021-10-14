@@ -12,7 +12,7 @@ label v14s30b:
     scene v14s30b_2 # FPP. MC looking at Chloe, Chloe looking down at her phone, Chloe slight smile, mouth open.
     with dissolve
 
-    cl "Alright… Let’s get a good look at these."
+    cl "Alright... Let's get a good look at these."
 
     scene v14s30b_2a # FPP. Same as v14s30b_2, Chloe slight smile, mouth closed.
     with dissolve
@@ -24,7 +24,7 @@ label v14s30b:
 
     cl "I do. I also think this helps the campaign a lot."
 
-    cl "Of the two frats, the Wolves are way more respected than the Apes and so…"
+    cl "Of the two frats, the Wolves are way more respected than the Apes and so..."
 
     cl "Just strategically speaking, this helps a lot."
 
@@ -41,7 +41,7 @@ label v14s30b:
     scene v14s30b_2a
     with dissolve
 
-    u "So you know about Lew’s and all that?"
+    u "So you know about Lew's and all that?"
 
     scene v14s30b_2
     with dissolve
@@ -144,7 +144,7 @@ label v14s30b:
     scene v14s30b_2
     with dissolve
 
-    cl "Well, I’ll definitely include “#PresidentialStatus”."
+    cl "Well, I'll definitely include “#PresidentialStatus”."
 
     menu:
         "It's perfect...":
@@ -154,7 +154,7 @@ label v14s30b:
             scene v14s30b_2a
             with dissolve
 
-            u "Yeah, that’s perfect. Standing tall and proud with a short and sweet caption."
+            u "Yeah, that's perfect. Standing tall and proud with a short and sweet caption."
 
             scene v14s30b_2
             with dissolve
@@ -182,7 +182,7 @@ label v14s30b:
             scene v14s30b_2
             with dissolve
 
-            cl "I guess that makes sense considering it’s an alliance announcement, as well as a good pic for my feed, haha."
+            cl "I guess that makes sense considering it's an alliance announcement, as well as a good pic for my feed, haha."
 
             scene v14s30b_2a
             with dissolve
@@ -192,12 +192,12 @@ label v14s30b:
             scene v14s30b_2
             with dissolve
 
-            cl "You’re right! That’s perfect, [name]."
+            cl "You're right! That's perfect, [name]."
 
             scene v14s30b_2a
             with dissolve
 
-            u "*Laughs* You’re welcome."
+            u "*Laughs* You're welcome."
 
     scene v14s30b_4 # FPP. Chloe looking at MC, MC looking at Chloe, Chloe slight smile, mouth open.
     with dissolve
@@ -209,7 +209,7 @@ label v14s30b:
     scene v14s30b_4a # FPP. Same as v14s30b_4a, Chloe slight smile, mouth closed.
     with dissolve
 
-    u "Of course! I’ll be on the lookout for your big announcement."
+    u "Of course! I'll be on the lookout for your big announcement."
 
     scene v14s30b_4
     with dissolve
@@ -256,60 +256,60 @@ label v14s30b:
     
     # Don't know if it was done correctly I tried my best :P
     if v14s30b_pw_image_one and v14s30b_its_perfect:
-        $ kiwii_post = KiwiiPost("Chloe", _("What’s a chick without her wolf? <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=712)
+        $ kiwii_post = KiwiiPost("Chloe", _("What's a chick without her wolf? <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=712)
         if v14_pw_half_chris_support:
             $ kiwii_post.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ kiwii_post.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chlo <3"))
         $ kiwii_post.newComment("Imre", _("Yessss!!!!!"))
-        $ kiwii_post.newComment("Grayson", _("LMAO you’re down bad, huh?"))
+        $ kiwii_post.newComment("Grayson", _("LMAO you're down bad, huh?"))
         $ kiwii_post.newComment("Chloe", _("Be civil at least, Grayson"), mentions="Grayson")
         $ kiwii_post.newComment("Riley", _("Omg! Can I have that thing?"))
         $ kiwii_post.addReply(_("These turned out perfect! #Vote4Chloe"))
         $ kiwii_post.addReply(_("Aww, haha. Congrats!"))
 
     if v14s30b_pw_image_one and not v14s30b_its_perfect:
-        $ kiwii_post = KiwiiPost("Chloe", _("It’s official! The Wolves and The Chicks are uniting as one to ensure that I stay president and furthermore, bring a wonderful balance to our new and improved sorority. #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=812)
+        $ kiwii_post = KiwiiPost("Chloe", _("It's official! The Wolves and The Chicks are uniting as one to ensure that I stay president and furthermore, bring a wonderful balance to our new and improved sorority. #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=812)
         if v14_pw_half_chris_support:
             $ kiwii_post.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ kiwii_post.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chlo <3"))
         $ kiwii_post.newComment("Imre", _("Yessss!!!!!"))
-        $ kiwii_post.newComment("Grayson", _("LMAO you’re down bad, huh?"))
+        $ kiwii_post.newComment("Grayson", _("LMAO you're down bad, huh?"))
         $ kiwii_post.newComment("Chloe", _("Be civil at least, Grayson"), mentions="Grayson")
         $ kiwii_post.newComment("Riley", _("Omg! Can I have that thing?"))
         $ kiwii_post.addReply(_("These turned out perfect! #Vote4Chloe"))
         $ kiwii_post.addReply(_("Aww, haha. Congrats!"))
 
     if v14s30b_pw_image_two and v14s30b_its_perfect:
-        $ kiwii_post = KiwiiPost("Chloe", _("I’d like to officially announce The Chick’s partnership with The Wolves! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=756)
+        $ kiwii_post = KiwiiPost("Chloe", _("I'd like to officially announce The Chick's partnership with The Wolves! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=756)
         if v14_pw_half_chris_support:
             $ kiwii_post.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ kiwii_post.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chlo <3"))
         $ kiwii_post.newComment("Imre", _("Yessss!!!!!"))
-        $ kiwii_post.newComment("Grayson", _("LMAO you’re down bad, huh?"))
+        $ kiwii_post.newComment("Grayson", _("LMAO you're down bad, huh?"))
         $ kiwii_post.newComment("Chloe", _("Be civil at least, Grayson"), mentions="Grayson")
         $ kiwii_post.newComment("Riley", _("Omg! Can I have that thing?"))
         $ kiwii_post.addReply(_("These turned out perfect! #Vote4Chloe"))
         $ kiwii_post.addReply(_("Aww, haha. Congrats!"))
 
     if v14s30b_pw_image_two and not v14s30b_its_perfect:
-        $ kiwii_post = KiwiiPost("Chloe", _("It’s official! The Wolves and The Chicks are uniting as one to ensure that I stay president and furthermore, bring a wonderful balance to our new and improved sorority. #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=856)
+        $ kiwii_post = KiwiiPost("Chloe", _("It's official! The Wolves and The Chicks are uniting as one to ensure that I stay president and furthermore, bring a wonderful balance to our new and improved sorority. #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=856)
         if v14_pw_half_chris_support:
             $ kiwii_post.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ kiwii_post.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chlo <3"))
         $ kiwii_post.newComment("Imre", _("Yessss!!!!!"))
-        $ kiwii_post.newComment("Grayson", _("LMAO you’re down bad, huh?"))
+        $ kiwii_post.newComment("Grayson", _("LMAO you're down bad, huh?"))
         $ kiwii_post.newComment("Chloe", _("Be civil at least, Grayson"), mentions="Grayson")
         $ kiwii_post.newComment("Riley", _("Omg! Can I have that thing?"))
         $ kiwii_post.addReply(_("These turned out perfect! #Vote4Chloe"))
         $ kiwii_post.addReply(_("Aww, haha. Congrats!"))
 
     if v14s30b_rw_image_one and v14s30b_its_perfect:
-        $ kiwii_post = KiwiiPost("Chloe", _("What’s a chick without her wolf? <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=973)
+        $ kiwii_post = KiwiiPost("Chloe", _("What's a chick without her wolf? <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=973)
         if v14_pw_half_chris_support:
             $ kiwii_post.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ kiwii_post.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chlo <3"))
         $ kiwii_post.newComment("Imre", _("Yessss!!!!!"))
-        $ kiwii_post.newComment("Grayson", _("LMAO you’re down bad, huh?"))
+        $ kiwii_post.newComment("Grayson", _("LMAO you're down bad, huh?"))
         $ kiwii_post.newComment("Chloe", _("Be civil at least, Grayson"), mentions="Grayson")
         $ kiwii_post.newComment("Riley", _("Omg! Can I have that thing?"))
         $ kiwii_post.addReply(_("These turned out perfect! #Vote4Chloe"))
@@ -321,7 +321,7 @@ label v14s30b:
             $ kiwii_post.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ kiwii_post.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chlo <3"))
         $ kiwii_post.newComment("Imre", _("Yessss!!!!!"))
-        $ kiwii_post.newComment("Grayson", _("LMAO you’re down bad, huh?"))
+        $ kiwii_post.newComment("Grayson", _("LMAO you're down bad, huh?"))
         $ kiwii_post.newComment("Chloe", _("Be civil at least, Grayson"), mentions="Grayson")
         $ kiwii_post.newComment("Riley", _("Omg! Can I have that thing?"))
         $ kiwii_post.addReply(_("These turned out perfect! #Vote4Chloe"))
@@ -333,7 +333,7 @@ label v14s30b:
             $ kiwii_post.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ kiwii_post.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chlo <3"))
         $ kiwii_post.newComment("Imre", _("Yessss!!!!!"))
-        $ kiwii_post.newComment("Grayson", _("LMAO you’re down bad, huh?"))
+        $ kiwii_post.newComment("Grayson", _("LMAO you're down bad, huh?"))
         $ kiwii_post.newComment("Chloe", _("Be civil at least, Grayson"), mentions="Grayson")
         $ kiwii_post.newComment("Riley", _("Omg! Can I have that thing?"))
         $ kiwii_post.addReply(_("These turned out perfect! #Vote4Chloe"))
@@ -345,7 +345,7 @@ label v14s30b:
             $ kiwii_post.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ kiwii_post.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chlo <3"))
         $ kiwii_post.newComment("Imre", _("Yessss!!!!!"))
-        $ kiwii_post.newComment("Grayson", _("LMAO you’re down bad, huh?"))
+        $ kiwii_post.newComment("Grayson", _("LMAO you're down bad, huh?"))
         $ kiwii_post.newComment("Chloe", _("Be civil at least, Grayson"), mentions="Grayson")
         $ kiwii_post.newComment("Riley", _("Omg! Can I have that thing?"))
         $ kiwii_post.addReply(_("These turned out perfect! #Vote4Chloe"))

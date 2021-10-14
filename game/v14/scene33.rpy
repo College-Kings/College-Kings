@@ -54,7 +54,7 @@ label v14s33:
             scene v14s33_3
             with dissolve
 
-            la "Not much, I just miss you. *Chuckles* I’ve been thinking about you all night…"
+            la "Not much, I just miss you. *Chuckles* I've been thinking about you all night..."
 
             menu:
                 "Want me to come over?":
@@ -77,7 +77,7 @@ label v14s33:
                     scene v14s33_3
                     with dissolve
 
-                    la "I wish you could come over…"
+                    la "I wish you could come over..."
 
             la "But sadly, I have an early meeting with the Deers tomorrow."
 
@@ -89,7 +89,7 @@ label v14s33:
             scene v14s33_3
             with dissolve
 
-            la "Well… I was thinking about trying something."
+            la "Well... I was thinking about trying something."
 
             scene v14s33_3a
             with dissolve
@@ -99,11 +99,11 @@ label v14s33:
             scene v14s33_3
             with dissolve
 
-            la "I mean…"
+            la "I mean..."
 
-            la "I'm in bed naked, all alone, and I'm thinking I should try to watch some porn and…"
+            la "I'm in bed naked, all alone, and I'm thinking I should try to watch some porn and..."
 
-            la "*Chuckles* I don’t know… See what it does for me?"
+            la "*Chuckles* I don't know... See what it does for me?"
 
             menu:
                 "Laugh...":
@@ -117,7 +117,7 @@ label v14s33:
 
                     la "Oh my gosh, don't laugh!"
 
-                    la "And no, I haven’t ever felt the need to but… I've been really curious."
+                    la "And no, I haven't ever felt the need to but... I've been really curious."
 
                     scene v14s33_3a
                     with dissolve
@@ -127,7 +127,7 @@ label v14s33:
                     scene v14s33_3
                     with dissolve
 
-                    la "I don't know if I want to now…"
+                    la "I don't know if I want to now..."
 
                     la "Kinda embarrassed, ha."
 
@@ -139,7 +139,7 @@ label v14s33:
                     scene v14s33_3
                     with dissolve
 
-                    la "I will. Just, um…"
+                    la "I will. Just, um..."
 
                     la "Just go  back to whatever you were doing."
 
@@ -153,7 +153,7 @@ label v14s33:
                     scene v14s33_2a
                     with dissolve
 
-                    u "(Lauren watching porn for the first time? Haha! I hope she didn’t take that the wrong way… But, damn…)"
+                    u "(Lauren watching porn for the first time? Haha! I hope she didn't take that the wrong way... But, damn...)"
 
                     pause 0.75
 
@@ -186,7 +186,7 @@ label v14s33:
                     scene v14s33_3a
                     with dissolve
 
-                    u "O-Oh! *Chuckles* Well shit, I guess I’ll let you go handle your biz. ."
+                    u "O-Oh! *Chuckles* Well shit, I guess I'll let you go handle your biz. ."
 
                     scene v14s33_3
                     with dissolve
@@ -210,7 +210,7 @@ label v14s33:
                     scene v14s33_2a
                     with dissolve
 
-                    u "(Lauren is watching porn for the first time….)"
+                    u "(Lauren is watching porn for the first time...)"
 
                     pause 0.75
                     
@@ -267,7 +267,7 @@ label v14s33:
                 scene v14s33_3
                 with dissolve
 
-                la "Not much, I just miss you. *Chuckles* I’ve been thinking about you all night…"
+                la "Not much, I just miss you. *Chuckles* I've been thinking about you all night..."
 
                 menu:
                     "Want me to come over?":
@@ -291,7 +291,7 @@ label v14s33:
                         scene v14s33_3
                         with dissolve
 
-                        la "I wish you could come over…"
+                        la "I wish you could come over..."
 
                 la "But sadly, I have an early meeting with the Deers tomorrow."
 
@@ -303,7 +303,7 @@ label v14s33:
                 scene v14s33_3
                 with dissolve
 
-                la "Well… I was thinking about trying something."
+                la "Well... I was thinking about trying something."
 
                 scene v14s33_3a
                 with dissolve
@@ -313,11 +313,11 @@ label v14s33:
                 scene v14s33_3
                 with dissolve
 
-                la "I mean…"
+                la "I mean..."
 
-                la "I'm in bed naked, all alone, and I'm thinking I should try to watch some porn and…"
+                la "I'm in bed naked, all alone, and I'm thinking I should try to watch some porn and..."
 
-                la "*Chuckles* I don’t know… See what it does for me?"
+                la "*Chuckles* I don't know... See what it does for me?"
 
                 menu:
                     "Laugh...":
@@ -331,7 +331,7 @@ label v14s33:
 
                         la "Oh my gosh, don't laugh!"
 
-                        la "And no, I haven’t ever felt the need to but… I've been really curious."
+                        la "And no, I haven't ever felt the need to but... I've been really curious."
 
                         scene v14s33_3a
                         with dissolve
@@ -341,7 +341,7 @@ label v14s33:
                         scene v14s33_3
                         with dissolve
 
-                        la "I don't know if I want to now…"
+                        la "I don't know if I want to now..."
 
                         la "Kinda embarrassed, ha."
 
@@ -353,7 +353,7 @@ label v14s33:
                         scene v14s33_3
                         with dissolve
 
-                        la "I will. Just, um…"
+                        la "I will. Just, um..."
 
                         la "Just go  back to whatever you were doing."
 
@@ -367,7 +367,7 @@ label v14s33:
                         scene v14s33_4a
                         with dissolve
 
-                        u "(Lauren watching porn for the first time? Haha! I hope she didn’t take that the wrong way… But, damn…)"
+                        u "(Lauren watching porn for the first time? Haha! I hope she didn't take that the wrong way... But, damn...)"
 
                         pause 0.75
 
@@ -401,7 +401,7 @@ label v14s33:
                         scene v14s33_3a
                         with dissolve
 
-                        u "O-Oh! *Chuckles* Well shit, I guess I’ll let you go handle your biz. ."
+                        u "O-Oh! *Chuckles* Well shit, I guess I'll let you go handle your biz. ."
 
                         scene v14s33_3
                         with dissolve
@@ -425,7 +425,7 @@ label v14s33:
                         scene v14s33_4a
                         with dissolve
 
-                        u "(Lauren is watching porn for the first time….)"
+                        u "(Lauren is watching porn for the first time...)"
 
                         pause 0.75
                         
