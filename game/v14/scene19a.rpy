@@ -158,7 +158,6 @@ label v14s19a:
         cl "Perfect! Thank you so so so much, [name]."
 
     else: # If helped Lindsey
-
         scene v14s19a_1g
         with dissolve
 
@@ -193,7 +192,8 @@ label v14s19a:
 
     # -Continue regardless of everything
     scene v14s19a_3 # Show a book dropping flat on the ground with a loud "smack"
-    with dissolve
+    with vpunch
+    play sound "sounds/hs.mp3"
 
     pause 0.75
 
@@ -213,7 +213,7 @@ label v14s19a:
     cl "That scared me!"
 
     # -An unknown that isn't seen speaks-
-    scene v14s19a_# Show a bookshelf, the type in a library with books on both sides, someone not visible on the other side of the shelf
+    scene v14s19a_5 # Show a bookshelf, the type in a library with books on both sides, someone not visible on the other side of the shelf
     with dissolve
 
     unknown "SHHH!"
