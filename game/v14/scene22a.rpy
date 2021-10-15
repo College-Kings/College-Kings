@@ -3,9 +3,7 @@
 # Characters: LINDSEY (Outfit: 1), MC (Outfit: 9)
 # Time: Evening
 
-
 label v14s22a:
-
     scene v14s22a_1 # FPP. show just lindsey, looking at mc, half smile, mouth open, hand up gesture
     with dissolve
 
@@ -108,4 +106,4 @@ label v14s22a:
 
     u "(Let's see who this is...)"
 
-    jump to v14s24
+    jump v14s24
