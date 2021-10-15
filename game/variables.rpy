@@ -494,6 +494,7 @@ default v12_fight_win = False
 default v12_chase_robber = False
 default v12s7_seenList = []
 default v12s7_killList = set()
+default v12s7_endtalkList = []
 default v12_msrose_sex = False
 default v11_lindsey_run = False
 default v12_help_chris = 0

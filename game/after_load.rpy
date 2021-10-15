@@ -356,6 +356,8 @@ label after_load:
         except NameError: v12_chase_robber = False
         try: v12s7_seenList
         except NameError: v12s7_seenList = []
+        try: v12s7_endtalkList
+        except NameError: v12s7_endtalkList = []
         try: v12s7_killList
         except NameError: v12s7_killList = set()
         try: v12_msrose_sex

@@ -57,9 +57,11 @@ init python:
                     self.points -= 1
 
             # Check Talkative stat
-            if self.stats["Talkative"] == True:
+            if self.stats["Talkative"] == True and self in v12s7_endtalkList:
                 self.points += 1
-            elif self.stats["Talkative"] == False:
+            elif self.stats["Talkative"] == True:
+                self.points -= 1
+            elif self.stats["Talkative"] == False and self in v12s7_endtalkList:
                 self.points -= 1
 
             # Add character to kill list
