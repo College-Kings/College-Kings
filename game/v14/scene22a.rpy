@@ -108,4 +108,4 @@ label v14s22a:
 
     u "(Let's see who this is...)"
 
-    jump to v14s24
+    jump v14s24
