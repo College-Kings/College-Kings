@@ -276,7 +276,7 @@ label v14s32:
     scene v14s32_2h
     with dissolve
 
-    imre "No... Shit..."
+    imre "No... shit..."
 
     scene v14s32_5 # TPP. (Similar to v14s32_4) Close up of Rubee bending over and picking up her gym bag, camera focused in on her butt mainly.
     with dissolve
@@ -320,7 +320,7 @@ label v14s32:
 
     rub "It's just that, one of my military friends..."
 
-    rub "She looks... Just like you. Haha..."
+    rub "She looks... just like you. Haha..."
     
     rub "The female version of you pretty much. *Chuckles*"
 
