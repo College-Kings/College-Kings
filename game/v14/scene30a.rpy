@@ -272,7 +272,7 @@ label v14s30a:
 
             wtrain "Exactly what you're doing now, mate. Seems as though he just likes your meat! *Chuckles*"
 
-            scene v14s30a_13c # TPP. Same as v14s30a_13, Chloe slight smile, mouth open, Wolf Trainer slight smile, mouth closed.
+            scene v14s30a_13d # TPP. Same as v14s30a_13, Chloe slight smile, mouth open, Wolf Trainer slight smile, mouth closed.
             with dissolve
 
             cl "*Laughs*"
