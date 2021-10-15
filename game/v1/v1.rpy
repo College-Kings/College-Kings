@@ -2837,7 +2837,7 @@ label aw_bd:
     scene s95 # you falling onto bed
     with vpunch
 
-    "*Hmpf*"
+    pause 1
 
     scene s96 #showing Imre in front of your bed looking down on you
     with dissolve
