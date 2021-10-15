@@ -34,8 +34,6 @@ label before_main_menu:
         charli.stats["Competitive"] = True
         charli.stats["Talkative"] = False
 
-        cameron.stats["Vindictive"] = [samantha]
-
         josh.stats["Competitive"] = True
 
     return
