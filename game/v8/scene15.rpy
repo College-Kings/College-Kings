@@ -91,7 +91,7 @@ label penelope_dorm_hack:
 
     menu:
         "Offer to help Penelope":
-            $ addPoint ("bf", 1)
+            $ addPoint ("bf")
             $ penHelpDean = True
             jump help_pen
 

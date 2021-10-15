@@ -297,7 +297,6 @@ default helpJosh = False
 default larsdmg = 0
 default simLarsFight = False
 default s28_fightWinner = "MC"
-default v8_dodged_pipe = False
 
 default amberSexOfferAtJoshs = False
 default amberSexAtJoshs = False
@@ -307,6 +306,7 @@ default chloeSteakHouse = False
 default climbwseb = False
 default hesitantwgrayson = False
 default v8_riley_lewd_ending = False
+default v8_dodged_pipe = False
 
 # 9.0
 default mcBrawlStance1 = False
@@ -382,7 +382,6 @@ default v10_color_blue = False
 default v10_lauren_suck = False
 default v10_chloe_locker = False
 default v10_ri_sex = False
-default v10_ambersex = False
 
     # Freeroam
 default v10s33_riley = False
@@ -431,6 +430,7 @@ default v10s33_ryanb = False
 default v10_ri_hat_good = False
 default emily_europe = False
 default josh_europe = False
+default v10_ambersex = False
 
 # 11.0
 default laurenLike = 0
@@ -459,6 +459,7 @@ default v11s23_chris1 = False
 default v11s23_riley1 = False
 default v11s23_mrlee1 = False
 default v11s23_penelope1 = False
+default v11s23_penelope_date = False
 default v11s25_beer = True
 default v11_bartender_have_gf = False
 default msrosers = False
@@ -616,3 +617,8 @@ default v14s24a_gummyfish = False
 default v14_amber_clean = False
 default v14_amber_drugs = False
 default v14_ryan_satin = False
+default v14s30b_pw_image_one = False  # MC chose the first photo of the Plush Wolf for Chloe's kiwi post
+default v14s30b_pw_image_two = False  # MC chose the second photo of the Plush Wolf for Chloe's kiwi post
+default v14s30b_rw_image_one = False  # MC chose the first photo of the Real Wolf for Chloe's kiwi post
+default v14s30b_rw_image_two = False  # MC chose the second photo of the Real Wolf for Chloe's kiwi post
+default v14s30b_its_perfect = False  # Telling Chloe that the caption is perfect

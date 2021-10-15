@@ -740,6 +740,7 @@ label v11s23_penelope1:
     if penelopers:
         menu:
             "Flirt":
+                $ v11s23_penelope_date = True
                 $ addPoint("bf")
 
                 scene v11frmpe10
