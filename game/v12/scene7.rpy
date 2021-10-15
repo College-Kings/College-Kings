@@ -3272,7 +3272,6 @@ label v12s7_charli2:
 
     call screen v12s7_captains_room
 
-
 label v12s7_charli_kill:
     hide screen murder_button_overlay
     
