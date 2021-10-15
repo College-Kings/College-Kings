@@ -17,8 +17,6 @@ label before_main_menu:
         lindsey.stats["Competitive"] = lindsey.stats["Talkative"] = True
         lindsey.stats["Vindictive"] = [chloe]
 
-        samantha.stats["Vindictive"] = [cameron]
-
         emily.stats["Talkative"] = False
 
         nora.stats["Talkative"] = True
