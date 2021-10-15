@@ -3,6 +3,7 @@
 # Characters: MC (Outfit:9), GRAYSON (Gas Station Outfit)
 # Time: Evening (Tuesday)
 
+
 label v14s24a:
     scene v14s24a_1  # TPP. MC, smiling, walking towards the door of the gas station.
     with dissolve
@@ -17,7 +18,7 @@ label v14s24a:
     scene v14s24a_3  # TPP. MC walking down an aisle looking for soemthing to buy.
     with dissolve
     
-    u "What to buy, what to buy..."
+    u "What to buy, what to buy…"
 
     scene v14s24a_4  # TPP. MC walking down a different aisle looking for something to buy.
     with dissolve
@@ -30,9 +31,8 @@ label v14s24a:
     pause 0.75
 
     scene v14s24a_6  # TPP. MC stops in the middle of the candy aisle and looks at candy.
-    with dissolve
 
-    u "Hmm... (What candy would Amber like best?)"
+    u "Hmm… (What candy would Amber like best?)"
 
     scene v14s24a_7  # FPP. Close up on the candy MC has to choose from Twezzlers or Gummy Fish?
     with dissolve
@@ -79,7 +79,7 @@ label v14s24a:
     scene v14s24a_11a
     with dissolve
 
-    u "Ha, no... nothing. I'm just shocked to find you working here."
+    u "Ha, no… Nothing. I'm just shocked to find you working here."
 
     scene v14s24a_11b
     with dissolve
@@ -94,7 +94,7 @@ label v14s24a:
     scene v14s24a_11c # FPP. Same as v14s24a_11b, but Grayson mad, mouth open.
     with dissolve
 
-    gr "Well I do. Make a big deal of it and it'll be lights out all over again."
+    gr "Well I do. Make a big deal of it and it’ll be lights out all over again."
 
     scene v14s24a_11a
     with dissolve
@@ -107,12 +107,8 @@ label v14s24a:
     pause 0.75
 
     scene v14s24a_11e # Same as v14s24a_11d, but with MC handing some bills to Grayson.
-    with dissolve
-    
-    pause 0.75
 
-    scene v13s24a_11c
-    with dissolve
+    scene v14s24a_11c
 
     gr "Now get the fuck out so I can get back to watching my shows."
 
@@ -124,7 +120,7 @@ label v14s24a:
     scene v14s24a_11b
     with dissolve
 
-    gr "You got jokes today or somethin'?"
+    gr "You got jokes today or somethin’?"
 
     scene v14s24a_11a
     with dissolve
@@ -142,6 +138,5 @@ label v14s24a:
     pause 0.75
     
     scene v14s24a_14  # TPP. MC, smiling, walking down the side walk toward Amber's house. Candy is either in pocket or in a bag.  
-    with dissolve
 
     jump v14s25
