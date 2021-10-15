@@ -108,7 +108,7 @@ label v14s24a:
 
     scene v14s24a_11e # Same as v14s24a_11d, but with MC handing some bills to Grayson.
 
-    scene v13s24a_11c
+    scene v14s24a_11c
 
     gr "Now get the fuck out so I can get back to watching my shows."
 
