@@ -9006,8 +9006,6 @@ label rileysexscene:
     with dissolve
     ri "Let me show you what I mean."
 
-    stop music fadeout 2.0
-
     scene ridrm4a # Same as above but mouth closed now (first person)#
     with dissolve
     u "I like that sound of that."
