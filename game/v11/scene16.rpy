@@ -51,7 +51,7 @@ label v11_lauren_airport_convo:
 
         ro "C'mon everyone, the shuttles are ready. Grab your bags."
 
-    elif v11_aubrey_sex and not laurenrs:
+    elif v11_aubrey_sex: #and not laurenrs
         scene v11laac1c # TPP. Show Lauren standing in the airport, she is smiling, mouth closed, MC is in the background looking at her, walkingtowards her direction (he is relatively far away), MC mouth closed, slight smile (make sure diff location in airport to v11noac1)
         with dissolve
 
@@ -209,11 +209,10 @@ label v11_lauren_airport_convo:
 
             la "Well I was hoping maybe we could explore some things... together."
 
-            if v11_want_date_aubrey:
-                scene v11laac2g
-                with dissolve
+            scene v11laac2g
+            with dissolve
 
-                la "If it doesn't interfere with your plans with Aubrey..."
+            la "If it doesn't interfere with your plans with Aubrey..."
 
             menu:
                 "Play it cool":
@@ -262,7 +261,7 @@ label v11_lauren_airport_convo:
 
         la "Time to go."
 
-    elif (laurenrs or v1_kissLauren or laurenkissb or beachfirstkiss) and not v11_aubrey_sex:
+    elif (laurenrs or v1_kissLauren or laurenkissb or beachfirstkiss): #and not v11_aubrey_sex
         scene v11laac1c 
         with dissolve
 
@@ -360,7 +359,7 @@ label v11_lauren_airport_convo:
 
         la "Time to go."
 
-    else:
+    else: #not v11_aubrey_sex but also no relationship of any kind with Lauren
         scene v11laac1c 
         with dissolve
 
