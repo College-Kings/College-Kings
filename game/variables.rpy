@@ -623,4 +623,4 @@ default v14s30b_pw_image_two = False  # MC chose the second photo of the Plush W
 default v14s30b_rw_image_one = False  # MC chose the first photo of the Real Wolf for Chloe's kiwi post
 default v14s30b_rw_image_two = False  # MC chose the second photo of the Real Wolf for Chloe's kiwi post
 default v14s30b_its_perfect = False  # Telling Chloe that the caption is perfect
-default v14s31bTrustChole = False # MC trust Chloe alone with Grayson
+default v14s31bTrustChloe = False # MC trust Chloe alone with Grayson
