@@ -622,3 +622,5 @@ default v14s30b_pw_image_two = False  # MC chose the second photo of the Plush W
 default v14s30b_rw_image_one = False  # MC chose the first photo of the Real Wolf for Chloe's kiwi post
 default v14s30b_rw_image_two = False  # MC chose the second photo of the Real Wolf for Chloe's kiwi post
 default v14s30b_its_perfect = False  # Telling Chloe that the caption is perfect
+default v14s37_focus_on_us = False # Tell Penelope to focus on them during the date.
+default v14s39_id_wait = False # Tell Penelope you'd wait till they got home
