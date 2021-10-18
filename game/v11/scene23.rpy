@@ -740,6 +740,7 @@ label v11s23_penelope1:
     if penelopers:
         menu:
             "Flirt":
+                $ v11s23_penelope_date = True
                 $ addPoint("bf")
 
                 scene v11frmpe10
@@ -1128,9 +1129,18 @@ label v11s23_freeroamend:
 
             no "At least someone enjoyed themselves. We literally wasted so much time here it's already starting to get dark."
 
-            scene v11frm4 # TPP Show all characters in scene getting on to shuttle bus
-            with dissolve
+            if v11_pen_goes_europe:
+                scene v11frm4 # TPP Show all characters in scene getting on to shuttle bus
+                with fade
+            else:
+                scene v11gtm8
+                with fade
 
+            pause 0.75
+
+            scene v11bb12
+            with fade
+            
             pause 0.75
 
             # Transition to Scene 25

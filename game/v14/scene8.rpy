@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 5), AMBER (Outfit: 1)
 # Time: Morning
 
-
 label v14s08:
     scene v14s08_1 # TPP. mc sees the bus and walks towards it, slight smile, mouth closed
     with dissolve 
@@ -58,19 +57,23 @@ label v14s08:
             scene v14s08_3e # FPP. same as v14s08_3d amber looks at her phone, mouth closed
             with dissolve
 
-            u "*Sighs*(I knew I shouldn't have asked.)"
+            u "*Sighs* (I knew I shouldn't have asked.)"
 
             scene v14s08_3
             with dissolve
+            pause 0.75
 
             scene v14s08_3e
             with dissolve
+            pause 0.75
 
             scene v14s08_3
             with dissolve
+            pause 0.75
 
             scene v14s08_4 # FPP. show amber walking down the bus aisle, back turned, face not visible
             with dissolve
+            pause 0.75
 
             scene v14s08_4a # FPP. same as v14s08_4 amber has walked further away
             with dissolve
@@ -90,12 +93,15 @@ label v14s08:
 
             scene v14s08_3e
             with dissolve
+            pause 0.75
 
             scene v14s08_3
             with dissolve
+            pause 0.75
 
             scene v14s08_3e
             with dissolve
+            pause 0.75
 
             scene v14s08_3d
             with dissolve
@@ -104,9 +110,11 @@ label v14s08:
 
             scene v14s08_3e
             with dissolve
+            pause 0.75
 
             scene v14s08_4
             with dissolve
+            pause 0.75
 
             scene v14s08_4b # FPP. same as v14s08_4 amber turns around and looks at mc, no expression, mouth open
             with dissolve

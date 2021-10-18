@@ -279,6 +279,7 @@ label v10_lauren_room:
         menu:
             "Suck on her tits":
                 $ v10_lauren_suck = True
+                #$ addPoint("tm", sum([ v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex ])) ###Loyaltymod
 
                 # MC starts kissing around her boobs and nipples. Ensure this scene is detailed and long, kissing all over her upper body
                 image v10lautk = Movie(play="images/v10/Scene 24/v10lautk.webm", loop=True, image="images/v10/Scene 24/v10lautkStart.webp", start_image="images/v10/Scene 24/v10lautkStart.webp") # TPP MC tenderly kissing Lauren on upper chest, holding her breast and playing with her nipple
@@ -535,7 +536,7 @@ label v10_lauren_room:
         scene v10lar10 # TPP Show MC sitting on Lauren's bed, holding phone to his ear, neutral expression, mouth closed
         with dissolve
 
-        ro "Hey [name], it's Ms. Rose, I'm sorry for calling this late."
+        ro "Hey [name], it's Ms. Rose, I'm sorry for calling out of the blue."
         ro "But I don't really know who else to turn to. My husband is outside parked in his car and just won't leave."
         
         ro "I'm starting to feel a little unsafe."

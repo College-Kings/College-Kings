@@ -362,7 +362,6 @@ label v10_amber_skatepark:
     u "*Laughs*"
 
     if amberrs:
-
         label v10_amber_skatepark_sg:
         scene v10sasp5b # FPP. Same camera as v10sasp5. Show Amber leaning in to whisper into MC's ear, smiling, mouth open.
         with fade
@@ -384,9 +383,6 @@ label v10_amber_skatepark:
 
         u "*Whisper* Here?"
 
-        if config_censored:
-            call screen censoredPopup("v10s26_nsfwSkipLabel1")
-
         scene v10sasp5d # FPP. Same camera as v10sasp5. Show Amber looking down and attempting to pull MC's pants down. Smiling, mouth open.
         with dissolve
 
@@ -396,7 +392,12 @@ label v10_amber_skatepark:
         with dissolve
         menu:
             "Let her":
+                $ v10_ambersex = True
+                #$ addPoint("tm", sum([ v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck ])) ###Loyaltymod
                 show screen v10s26_amberSexOverlay
+
+                if config_censored:
+                    call screen censoredPopup("v10s26_nsfwSkipLabel1")
 
                 stop music fadeout 3
                 play music "music/v10/Scene 26/Track Scene 26_2.mp3" fadein 3
@@ -710,6 +711,8 @@ label v10_amber_skatepark:
                     menu:
                         "Let her":
                             $ amberrs = True
+                            $ v10_ambersex = True
+                            #$ addPoint("tm", sum([ v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck ])) ###Loyaltymod
 
                             if config_censored:
                                 call screen censoredPopup("v10s26_nsfwSkipLabel1")

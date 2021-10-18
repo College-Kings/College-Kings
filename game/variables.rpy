@@ -203,6 +203,7 @@ default kimpuke = False
 default fr3matt = False
 default save = 0
 default v3_aubsex = False
+default v6_emilysex = False
 
 # 7.0
 default follownora = False
@@ -276,8 +277,11 @@ default laurenpt = 0
 default nobeach = False
 default v7_seencrowning = False
 default v7_emily_bowling = False
+default v7_rileysex = False
 
 # 8.0
+default v8_chloesex = False
+default v8_hocoamber = False
 default v8AutProtest = False
 default openedUpToSeb = False
 default chloeMsg11Reply = 0
@@ -302,6 +306,7 @@ default chloeSteakHouse = False
 default climbwseb = False
 default hesitantwgrayson = False
 default v8_riley_lewd_ending = False
+default v8_dodged_pipe = False
 
 # 9.0
 default mcBrawlStance1 = False
@@ -425,8 +430,9 @@ default v10s33_ryanb = False
 default v10_ri_hat_good = False
 default emily_europe = False
 default josh_europe = False
+default v10_ambersex = False
 
-#11.0
+# 11.0
 default laurenLike = 0
 default v11_pen_goes_europe = False
 default v11s1_riley1 = False
@@ -453,6 +459,7 @@ default v11s23_chris1 = False
 default v11s23_riley1 = False
 default v11s23_mrlee1 = False
 default v11s23_penelope1 = False
+default v11s23_penelope_date = False
 default v11s25_beer = True
 default v11_bartender_have_gf = False
 default msrosers = False
@@ -476,6 +483,8 @@ default v11_hp_points = 0
 default political_strategist = False
 default v11_smoke_amber_amsterdam = False
 default v11_lauren_ily = False
+default v11_underground_rose = False
+default v11_check_on_nora = False
 
 # 12.0
 default v12_told_chloe = False
@@ -485,6 +494,7 @@ default v12_fight_win = False
 default v12_chase_robber = False
 default v12s7_seenList = []
 default v12s7_killList = set()
+default v12s7_endtalkList = []
 default v12_msrose_sex = False
 default v11_lindsey_run = False
 default v12_help_chris = 0
@@ -542,8 +552,10 @@ default v12s33_door2 = False
 default v12s33_door3 = False
 default v12s24_emmymatch = False
 default chrismad = False
+default v12_sauna_sneak1 = False
+default v12_girl = "na"
 
-#13.0
+# 13.0
 default v13_penelope_concert = False
 default v13_aubrey_concert = False
 default chloeSus = 0
@@ -589,6 +601,29 @@ default v13s40_backpoint = False
 default v13s40_shoulderpoint = False
 default laurenrs_v11aubrey = True
 default v13s40fromgame = False
+default v13_chloe_sex = False
 
-#14
+# 14.0
+default v14_lindsey_popularity = 45
 default v14s03a_left_cup = False
+default v14s03a_take_wallet = False
+default v14_support_chloe = False
+default v14_full_chris_support = False
+default v14_rw_half_chris_support = False # Chris backs half the cost of the real wolf photoshoot
+default v14_pw_half_chris_support = False # Chris backs half the cost of the plush wolf photoshoot
+default v14_low_chris_support = False
+default v14s23_agree = False
+default v14s23_disagree = False
+default v14_emily_ily = False
+default v14s24a_gummyfish = False
+default v14_amber_clean = False
+default v14_amber_drugs = False
+default v14_ryan_satin = False
+default v14s30b_pw_image_one = False  # MC chose the first photo of the Plush Wolf for Chloe's kiwi post
+default v14s30b_pw_image_two = False  # MC chose the second photo of the Plush Wolf for Chloe's kiwi post
+default v14s30b_rw_image_one = False  # MC chose the first photo of the Real Wolf for Chloe's kiwi post
+default v14s30b_rw_image_two = False  # MC chose the second photo of the Real Wolf for Chloe's kiwi post
+default v14s30b_its_perfect = False  # Telling Chloe that the caption is perfect
+default v14s37_focus_on_us = False # Tell Penelope to focus on them during the date.
+default v14s39_id_wait = False # Tell Penelope you'd wait till they got home
+default v14s31bTrustChloe = False # MC trust Chloe alone with Grayson

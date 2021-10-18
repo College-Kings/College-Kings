@@ -87,8 +87,8 @@ define gui.title_text_size = 120
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = "gui/mainMenu/mainMenuBackgroundSteam.webp"
 
+### Moved to "script.rpy" ###
 
 
 ## Dialogue ####################################################################

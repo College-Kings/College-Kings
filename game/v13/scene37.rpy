@@ -14,7 +14,7 @@ label v13s37:
     scene v13s37_2 # FPP. Same positioning as v13s37_1, MC looking at Lindsey, Lindsey looking at Chris' direction (Only Lindsey in shot), Lindsey slight smile, mouth open
     with dissolve
 
-    li "Well, you didn't come short in choosing a location Chris... I gotta give you that."
+    li "Well, you didn't come short in choosing a location, Chris... I gotta give you that."
 
     scene v13s37_2
     with dissolve
@@ -142,7 +142,7 @@ label v13s37_nora:
     scene v13s37no_2b # FPP. Same as v13s37no2, Nora slightly sad, mouth closed
     with dissolve
 
-    u "It is a surprise seeing you and Chris together, holding hands and slight smile at each other after everything that's happened."
+    u "It is a surprise seeing you and Chris together, holding hands and still slightly smiling at each other after everything that's happened."
 
     scene v13s37no_2c # FPP. Same as v13s37no_2b, mouth open
     with dissolve
@@ -629,7 +629,7 @@ label v13s37_chris:
             scene v13s37ch_2b
             with dissolve
 
-            u "You guys are slight smile and holding each others' hands, one would think things are good between you guys."
+            u "You guys are still slightly smiling and holding each others' hands, one would think things are good between you guys."
 
             scene v13s37ch_2c
             with dissolve
@@ -710,7 +710,7 @@ label v13s37_chris:
             scene v13s37ch_2b
             with dissolve
 
-            u "You guys are slight smile and holding each others' hands, one would think things are good between you guys."
+            u "You guys are still slightly smiling and holding each others' hands, one would think things are good between you guys."
 
             scene v13s37ch_2c
             with dissolve
@@ -796,7 +796,7 @@ label v13s37_chris:
             scene v13s37ch_2e
             with dissolve
 
-            u "Do you have an idea who with or when this switch in her started."
+            u "Do you have an idea who with or when this switch in her started?"
 
             scene v13s37ch_2d
             with dissolve
@@ -923,7 +923,7 @@ label v13s37_end:
 
     u "*Chuckles*"
 
-    if not v11_chloe_sex:
+    if not chloers:
         scene v13s37end_2a
         with dissolve
 

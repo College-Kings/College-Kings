@@ -240,7 +240,7 @@ label v12_valentine:
     scene v12val15a
     with dissolve
 
-    bishop "Another common mistake. Cupid is the Roman God of love and within Greek mythology, he is the son of Aphrodite who is the God of Love in Greek mythology."
+    bishop "Another common mistake. Cupid is the Roman God of Love and within Greek mythology, he is the son of Aphrodite who is the God of Love in Greek mythology."
 
     scene v12val17a # FPP. Same as v12val17, Lindsey looking at MC, Lindsey slight smile, mouth closed
     with dissolve
@@ -387,7 +387,7 @@ label v12_valentine:
     scene v12val15b
     with dissolve
 
-    bishop "Bare with me, my son."
+    bishop "Bear with me, my son."
     bishop "While in prison, prior to his execution, the jailer's blind daughter would bring him his meals and from that stemmed many conversations. From those many conversations, they fell in love."
     bishop "One day, Saint Valentine slid his hand through the bars of his cell, touched the lids of the girl's eyes and miraculously she could see."
 

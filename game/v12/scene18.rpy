@@ -408,7 +408,7 @@ label v12s18_bottlespin:
     scene v12slpbs4a
     with dissolve
 
-    u "That's a lot of rules, but I'll try ro remember. *Chuckles*"
+    u "That's a lot of rules, but I'll try to remember. *Chuckles*"
 
     scene v12slpbs3a # FPP. Same as v12slpbs3, Imre slightly annoyed, mouth open
     with dissolve
@@ -1283,6 +1283,28 @@ label v12s18_fmk:
     u "(Hmm, who to marry?)"
 
     menu:
+        "Marry Amber":
+            $ addPoint("bro")
+            scene v12slpfmk4d
+            with dissolve
+
+            u "In that case, I'd have to go with... fuck Nora and marry Amber."
+
+            scene v12slpfmk4a
+            with dissolve
+
+            am "We wouldn't be married for long. *Chuckles*"
+
+            scene v12slpfmk4d
+            with dissolve
+
+            u "*Chuckles* Why not?"
+
+            scene v12slpfmk4a
+            with dissolve
+
+            am "Because this horse can't be tamed, baby."
+
         "Marry Nora":
             scene v12slpfmk5f # FPP. Same as v12slpfmk5c, Nora slight smile, mouth closed
             with dissolve
@@ -1318,28 +1340,6 @@ label v12s18_fmk:
             with dissolve
 
             am "*Laughs*"
-
-        "Marry Amber":
-            $ addPoint("bro")
-            scene v12slpfmk4d
-            with dissolve
-
-            u "In that case, I'd have to go with... fuck Nora and marry Amber."
-
-            scene v12slpfmk4a
-            with dissolve
-
-            am "We wouldn't be married for long. *Chuckles*"
-
-            scene v12slpfmk4d
-            with dissolve
-
-            u "*Chuckles* Why not?"
-
-            scene v12slpfmk4a
-            with dissolve
-
-            am "Because this horse can't be tamed, baby."
 
     scene v12slpfmk5f
     with dissolve

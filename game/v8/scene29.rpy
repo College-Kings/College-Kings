@@ -156,10 +156,10 @@ label after_drugs:
 
     scene v8josh23 # TPP. Show MC sitting on the couch watching TV, neutral expression, mouth closed
     with Fade(1, 0.25, 0.5)
-    pause
+    pause 0.75
 
     play sound "sounds/knock.mp3"
-    "*Knock knock knock*"
+    pause 0.75
 
     scene v8josh21
     with dissolve
@@ -208,13 +208,14 @@ label after_drugs:
             u "While I fought the fat guy, the other guy got into it with Josh."
             u "By the time I was done beating that guy's ass, Josh was already on the ground all fucked up."
 
-            scene v8josh25b
-            with dissolve
-            am "And the other guy?"
+            if v8_dodged_pipe:
+                scene v8josh25b
+                with dissolve
+                am "And the other guy?"
 
-            scene v8josh25c
-            with dissolve
-            u "I beat the shit outta him."
+                scene v8josh25c
+                with dissolve
+                u "I beat the shit outta him."
 
             scene v8josh25d # Amber less upset, relaxed and smiling a little, mouth open
             with dissolve
@@ -228,11 +229,13 @@ label after_drugs:
             with dissolve
             u "I tried. But he wouldn't listen. Maybe I should have tried harder."
 
-            scene v8josh25g # Amber brushing MC's cheek, empathetic, comforting smile, mouth open (Use DoF so Amber's hand is blurred)
+            #scene v8josh25g # Amber brushing MC's cheek, empathetic, comforting smile, mouth open (Use DoF so Amber's hand is blurred)
+            scene v8josh25d
             with dissolve
             am "Hey, it's not your fault. I'm sorry I yelled. You did more than anyone had a right to expect."
 
-            scene v8josh25h # Same as v8josh25g but Amber mouth closed
+            #scene v8josh25h # Same as v8josh25g but Amber mouth closed
+            scene v8josh25c
             with dissolve
             u "It's ok. I mean, we're alive, and I swiped the cash from them."
 
@@ -274,15 +277,16 @@ label after_drugs:
             u "(What is she up to?)"
 
             play sound "sounds/flush.mp3"
-            pause 0.5
+            pause 0.75
 
             scene v8josh27a # Amber walking towards the couch to sit beside MC, looking at him neutral expression. MC neutral expression, mouth open
             with dissolve
             u "Did you just..."
 
+            stop sound
             scene v8josh27c # Amber sits beside MC, smiling a little, looking at him, mouth closed. MC neutral expression, mouth closed
             with dissolve
-            pause 0.5
+            pause 0.75
 
             scene v8josh28 # FPP (continuation of v8josh27c, so both MC and Amber are sitting on the couch. MC is sitting towards Josh to avoid showing him in all renders). Amber confident, smiling a little, mouth open
             with dissolve
@@ -617,6 +621,7 @@ label after_drugs:
             "Go with her":
                 $ amberSexAtJoshs = True
                 $ amberrs = True
+                #$ addPoint("tm", sum([ v7_rileysex, bathroomblowjob, v8_chloesex, v8_riley_lewd_ending ])) ###Loyaltymod
                 if laurenrs:
                     $ addPoint("tm")
                 else:

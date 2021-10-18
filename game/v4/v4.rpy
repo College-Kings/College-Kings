@@ -514,12 +514,11 @@ label v4start:
 
     u "Ahhh! Stop! Stop!"
 
-    hide screen fantasyOverlay
-
     stop music fadeout 2.0
 
     scene s225a # already in the game, no need to render again
     with flash
+    hide screen fantasyOverlay
 
     u "*Breathing heavily*"
 

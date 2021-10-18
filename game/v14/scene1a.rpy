@@ -14,7 +14,7 @@ label v14s01a:
 
     li "Wait... Open your eyes..."
 
-    scene v14s01a_1b # TPP. Same as v13s01a_1a, Lindsey mouth closed, MC mouth open, LIndsey finger no longer on MC mouth
+    scene v14s01a_1b # TPP. Same as v14s01a_1a, Lindsey mouth closed, MC mouth open, LIndsey finger no longer on MC mouth
     with dissolve
 
     u "Huh?"
@@ -22,7 +22,7 @@ label v14s01a:
     scene v14s01a_2 # TPP. Show MC startled, waking up (still night time), he is laying on his bed, mouth open
     with dissolve
 
-    u "What the- Holy shit..."
+    u "What the- holy shit...!"
 
     scene v14s01a_3 # TPP. Show MC sitting up on his bed, slightly annoyed, mouth closed, hands on head
     with dissolve

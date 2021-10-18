@@ -3,7 +3,6 @@
 # Characters: MR. LEE (Outfit: 1), MS. ROSE (Outfit: 1), MC (Outfit: 5), CHARLI (Outfit: 1), AUBREY (Outfit: 1), AMBER (Outfit: 1), CHLOE (Outfit: 4), RILEY (Outfit: 2), NORA (Outfit: 2), CHRIS (Outfit: 1), LINDSEY (Outfit: 3), LAUREN (Outfit: 1), RYAN (Outfit: 1), IMRE (Outfit: 1), EMILY (Outfit: 2), JOSH (Outfit: 1), PENELOPE (Outfit: 2)
 # Time: Afternoon
 
-
 label v14s09:
     scene v14s09_1 # TPP. show mc walking through airport, pulling his luggae, slight smile, mouth closed
     with dissolve
@@ -158,7 +157,7 @@ label v14s09:
                 scene v14s09_5c # FPP. same as v14s09_5b charli looking at Mr. Lee, mouth open
                 with dissolve
 
-                charli "*High pitch* It... It can wait, yeah. No rush."
+                charli "*High pitch* It... it can wait, yeah. No rush."
 
                 scene v14s09_5d # FPP. same as v14s09_5a charli slight anger
                 with dissolve
@@ -300,7 +299,7 @@ label v14s09:
         scene v14s09_6d
         with dissolve
 
-        lee "*Whispers* I have him handled. He already left, headed back to campus. I'll be attending his meeting with the dean when we return."
+        lee "*Whispers* I have him handled. He already left, headed back to campus. I'll be attending his meeting with the Dean when we return."
 
         scene v14s09_8c # FPP. same as v14s09_8 points her pen at Mr. Lee, mouth closed
         with dissolve

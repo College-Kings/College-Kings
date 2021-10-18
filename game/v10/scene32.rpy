@@ -58,7 +58,7 @@ label v10_tues_room_night:
         scene v10strn4 # TPP. Show MC waking up and stretching, now wearing underwear, now daylight.
         with dissolve
 
-        u "(Bright and fucking early! I'm so excited for this charity event. I need to get ready.)"
+        u "(I woke up so fucking early! But I'm so excited for this charity event. I should get ready.)"
 
         scene v10strn5 # TPP. Show MC leaving his Wolves room, now wearing outfit 10
         with fade
@@ -120,7 +120,7 @@ label v10_tues_room_night:
         scene v10strn9 # TPP. Show MC waking up and stretching, now wearing underwear, now daylight.
         with dissolve
 
-        u "(Bright and fucking early! I'm so excited for this charity event. I need to get ready.)"
+        u "(I woke up so fucking early! But I'm so excited for this charity event. I should get ready.)"
 
         scene v10strn10 # TPP. Show MC leaving his Wolves room, now wearing outfit 10
         with fade

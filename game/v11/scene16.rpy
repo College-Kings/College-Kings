@@ -51,7 +51,7 @@ label v11_lauren_airport_convo:
 
         ro "C'mon everyone, the shuttles are ready. Grab your bags."
 
-    elif v11_aubrey_sex and not laurenrs:
+    elif v11_aubrey_sex: #and not laurenrs
         scene v11laac1c # TPP. Show Lauren standing in the airport, she is smiling, mouth closed, MC is in the background looking at her, walkingtowards her direction (he is relatively far away), MC mouth closed, slight smile (make sure diff location in airport to v11noac1)
         with dissolve
 
@@ -209,11 +209,10 @@ label v11_lauren_airport_convo:
 
             la "Well I was hoping maybe we could explore some things... together."
 
-            if v11_want_date_aubrey:
-                scene v11laac2g
-                with dissolve
+            scene v11laac2g
+            with dissolve
 
-                la "If it doesn't interfere with your plans with Aubrey..."
+            la "If it doesn't interfere with your plans with Aubrey..."
 
             menu:
                 "Play it cool":
@@ -262,7 +261,7 @@ label v11_lauren_airport_convo:
 
         la "Time to go."
 
-    elif (laurenrs or v1_kissLauren or laurenkissb or beachfirstkiss) and not v11_aubrey_sex:
+    elif (laurenrs or v1_kissLauren or laurenkissb or beachfirstkiss): #and not v11_aubrey_sex
         scene v11laac1c 
         with dissolve
 
@@ -360,7 +359,7 @@ label v11_lauren_airport_convo:
 
         la "Time to go."
 
-    else:
+    else: #not v11_aubrey_sex but also no relationship of any kind with Lauren
         scene v11laac1c 
         with dissolve
 
@@ -470,6 +469,59 @@ label v11_lauren_airport_convo:
         with dissolve
 
         u "Let's go."
+
+    if not v11_check_on_nora:
+        scene v11nca2a
+        with dissolve
+        
+        pause 0.75
+        
+        scene v11nca2b
+        with dissolve
+        
+        pause 0.75
+        
+        scene v11nca2
+        with dissolve
+        
+        u "(What the...?!)"
+        u "*Whisper* Fucking asshole!"
+
+        scene v11nca10 # FPP. Show Riley rushing over to MC, mouth open
+        with dissolve
+
+        ri "*Whisper* [name]! Why'd you say that to him?"
+
+        scene v11nca10a # FPP. same 10, now right infront of mc, slightly annoyed, mouth closed
+        with dissolve
+
+        u "Cause it's true, he's pissing me off."
+
+        scene v11nca10b # FPP. same 10, now right infront of mc, slightly annoyed, mouth open
+        with dissolve
+
+        ri "He didn't even do anything wrong. You know he's gay, right?"
+
+        scene v11nca10a
+        with dissolve
+
+        u "No, I didn't know that, but I still don't fuck with him. He just comes out of nowhere and all of a sudden he's buddied up to everyone. Like what the fuck?"
+
+        scene v11nca10b
+        with dissolve
+
+        ri "Well, I've gotten to know him pretty well, [name], he's really not that bad. At least try and get to know him, alright?"
+        ri "I can get why you may feel the way you do, but get all the info before you pop off on someone like that."
+
+        scene v11nca10a
+        with dissolve
+
+        u "*Sighs* If you say so."
+
+        scene v11nca10b
+        with dissolve
+
+        ri "Now be happy! We're on vacation, grumpy man. Now let's go, they're waiting for us already at the shuttle."
 
     scene v11laac5 # TPP. Show Lindsey getting on the shuttle
     with dissolve

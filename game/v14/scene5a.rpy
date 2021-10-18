@@ -4,11 +4,16 @@
 # Time: Night
 
 label v14s05a:
+    play sound "sounds/dooropen.mp3"
+    pause 0.5
+
     scene v14s05a_1 # TPP. Show walking into his room, neutral expression, mouth closed
     with dissolve
+    pause 0.75
 
     scene v14s05a_2 # FPP. Show Riley sitting on the side of her bed, slight smile, mouth closed
     with dissolve
+    pause 0.75
 
     scene v14s05a_3 # FPP. MC, closer to Riley, slight smile, mouth closed
     with dissolve
@@ -40,7 +45,7 @@ label v14s05a:
 
     pause 0.75
 
-    if Threesome: #placeholder
+    if aubreyrs and rileyrs: #placeholder
         scene v14s05a_7 # FPP. Riley just beside MC on her bedside sitting up straight, slight smile, mouth open
         with dissolve
 
@@ -75,7 +80,7 @@ label v14s05a:
 
         u "That's kind of surprising."
 
-        scene v14s05a_7b
+        scene v14s05a_7
         with dissolve
 
         ri "Ha, yeah. I thought the same thing."
@@ -108,6 +113,7 @@ label v14s05a:
         scene v14s05a_11 # TPP. Closeup of Riley and MC kissing
         with dissolve
 
+        play sound "sounds/kiss.mp3"
         pause 0.75
 
         scene v14s05a_11a # TPP. Same postion as v14s05a_11, Riley slight smile, mouth closed, MC, slight smile, mouth closed

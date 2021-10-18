@@ -140,7 +140,7 @@ label starta: #for compatibility only
     scene v1jul1
     with dissolve
 
-    u "Oh you're dropping me off? I was gonna take the train."
+    u "Oh, you're dropping me off? I was gonna take the train."
 
     scene v1jul1a
     with dissolve
@@ -1255,7 +1255,7 @@ label efra:
     scene s63e
     with dissolve
 
-    u "Oh that's cool."
+    u "Oh, that's cool."
 
     scene s63d
     with dissolve
@@ -1447,7 +1447,7 @@ label efra:
     scene s61a
     with dissolve
 
-    u "Okay man I did it."
+    u "Okay man, I did it."
 
     scene s61c
     with dissolve
@@ -1986,12 +1986,12 @@ label at_bd:
 
     ### Sex dream
     label sexdream1: #for compatibility only
+    show screen fantasyOverlay
     scene sda1  ### close to the kitchen counter
     with Fade (1,0,1)
 
     ri "Wow, you guys have a really nice house."
 
-    show screen fantasyOverlay
     scene sda1a
     with dissolve
 
@@ -2837,7 +2837,7 @@ label aw_bd:
     scene s95 # you falling onto bed
     with vpunch
 
-    "*Hmpf*"
+    pause 1
 
     scene s96 #showing Imre in front of your bed looking down on you
     with dissolve

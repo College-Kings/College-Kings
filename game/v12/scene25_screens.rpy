@@ -62,7 +62,7 @@ screen v12_girls():
                 hover "images/head shots/Nora2.webp"
 
         imagebutton:
-            if v11_pen_goes_europe:
+            if True:
                 idle "images/v7/HCPenelope.webp"
                 hover "images/v7/HCPenelope2.webp"
                 action Jump("v12_jc_penelope")

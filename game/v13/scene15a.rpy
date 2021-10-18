@@ -169,7 +169,6 @@ label v13s15a:
         menu:
             "Stay with Riley":
                 $ grant_achievement("gentlemen_prefer_gingers")
-                $ rileyrs = True
                 u "Is that even a question?"
 
                 scene v13s15a_9 # TPP. Show MC removing his pants, shirt already off, smiling, mouth closed
@@ -307,7 +306,7 @@ label v13s15a:
                 scene v13s15a_6b
                 with dissolve
 
-                u "Good, have a goodnight Riley."
+                u "Good, have a good night, Riley."
 
                 scene v13s15a_6a
                 with dissolve

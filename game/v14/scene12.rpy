@@ -23,6 +23,7 @@ label v14s12:
 
     scene v14s12_2b # TPP. Same as v14s12_2b, MC holding phone to his ear, slight smile, mouth open.
     with dissolve
+    stop sound
 
     u "Hello?"
 
@@ -178,11 +179,13 @@ label v14s12:
     if joinwolves: 
         scene v14s12_5 # TPP. MC opening the door to the wolves frat house, slight smile, mouth closed.
         with fade
+        pause 0.75
 
         jump v14s13
         
     else:
         scene v14s12_6 # TPP. MC opening the doorr to the apes frat house, slight smile, mouth closed
         with fade
+        pause 0.75
 
         jump v14s13a

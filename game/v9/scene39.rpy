@@ -207,6 +207,7 @@ label v9_hang_w_linds:
                         $ addPoint("bf")
 
                     $ lindseyfirstkiss = True
+                    #$ addPoint("tm", sum([ amberSexAtJoshs, v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley ])) ###Loyaltymod
                     
                     scene v9links # Animations pls ignore
                     with dissolve

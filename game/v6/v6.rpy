@@ -1073,7 +1073,7 @@ label continuebd:
 
             play sound "sounds/kiss.mp3"
 
-            "*Kiss*"
+            pause 1.5
 
             scene s486d # You sit down
             with dissolve
@@ -1133,7 +1133,7 @@ label continuebd:
 
             play sound "sounds/kiss.mp3"
 
-            "*Kiss*"
+            pause 1.5
 
             scene s491a # Lauren looking at you
             with dissolve
@@ -2724,6 +2724,8 @@ label emsex_c:
     pause 0.5
 
 label emsex_a:
+    $ v6_emilysex = True 
+    #$ addPoint("tm", sum([ aubreysex ])) ###Loyaltymod    
     scene emvid2
     with dissolve
 
@@ -3989,6 +3991,8 @@ label fy_bd: # not gone to Emily's
 label aubreysexb: # aubreysex scene
     $ aubreyrs = True
     $ aubreysex2 = True
+
+    #$ addPoint("tm", sum([ v6_emilysex ])) ###Loyaltymod
 
     stop music fadeout 2.0
     play music "music/msexy.mp3"
@@ -10208,9 +10212,9 @@ label upstairsemily:
     scene sufr3em2b # emily cute
     with dissolve
 
-    em "Just missed you is all."
+    em "Just missed you is all?"
 
-    em "Soo, I was thinking the next we..."
+    em "Soo, actually I was thinking the next we..."
 
     em "You know..."
 

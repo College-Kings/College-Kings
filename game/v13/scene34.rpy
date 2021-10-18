@@ -259,7 +259,7 @@ label v13s34:
     scene v13s34_16 # FPP. Clipps turns around and looks at MC, nervous expression, mouth closed 
     with dissolve
 
-    u "Maybe... If you're trapped in here, you'll be motivated!"
+    u "Maybe if you're trapped in here, you'll be motivated!"
 
     scene v13s34_16a # FPP. Same as v13s34_16, slight angry expression
     with dissolve
@@ -374,7 +374,7 @@ label v13s34:
 
     clipps "You can thank him for leading you right to us, actually. We got a hold of the little treasure you were searching for and now, we have you cornered."
 
-    u "The treasure, it's... It's not as secretive as one may think. *Chuckles*"
+    u "The treasure, it's... it's not as secretive as one may think. *Chuckles*"
 
     unknown "Today will be a day of confessions."
 
@@ -494,7 +494,7 @@ label v13s34:
 
             u "I'm not sure..."
             
-            u "They just took the bag off my head and... Here we are."
+            u "They just took the bag off my head and... here we are."
 
             scene v13s34_29b # FPP. Same as v13s34_29a, different posture
             with dissolve
@@ -541,7 +541,7 @@ label v13s34:
             scene v13s34_24
             with dissolve
 
-            ri "Please... Just let us go. *Crying*"
+            ri "Please... Just let us go! *Crying*"
 
             scene v13s34_30 # FPP. Clipps looking at Riley, slight smile, mouth open
             with dissolve
@@ -596,7 +596,7 @@ label v13s34:
             scene v13s34_24
             with dissolve
 
-            ri "During two tests, but... They were really hard! You don't unders-"
+            ri "During two tests, but... they were really hard! You don't unders-"
 
             scene v13s34_25a # FPP. Same as v13s34_25, serious expression
             with dissolve
@@ -711,7 +711,7 @@ label v13s34:
 
     u "So, wait... You did all of this because she cheated?"
 
-    scene v13s34_36c # FPP. Same as v13s34_36b, laughing expression, mouth open 
+    scene v13s34_36d # FPP. Same as v13s34_36b, laughing expression, mouth open 
     with dissolve
 
     lee "And other reasons. One was to make sure I enjoyed my time in Europe. *Laughs*"
@@ -751,7 +751,7 @@ label v13s34:
 
     u "Wow, I wanna be mad at you but... I'm kinda impressed."
 
-    scene v13s34_36c
+    scene v13s34_36d
     with dissolve
 
     lee "As you should. *Chuckles*"
@@ -814,7 +814,7 @@ label v13s34:
     scene v13s34_30e # FPP. Same as v13s34_30, Clipps looking at MC, mouth closed 
     with dissolve
 
-    u "Hey. uh... Sorry about all that Clipps."
+    u "Hey. uh... Sorry about all that, Clipps."
 
     scene v13s34_30d # FPP. Same as v13s34_30e, mouth open 
     with dissolve

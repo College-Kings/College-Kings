@@ -3,7 +3,6 @@
 # Characters: MS. ROSE (Outfit: 1), CHRIS (Outfit: 1), AUBREY (Outfit: 1), RILEY (Outfit: 2), MC (Outfit: 5), IMRE (Outfit: 1), NORA (Outfit: 2)
 # Time: Morning
 
-
 label v14s07:
     scene v14s07_1 # TPP. # MC arrives in the hotel lobby and he sees Aubrey and Riley together holding their bags, looking at each other with flirtatious expressions, mouths closed, Imre standing with Chris both of them with concerned expression looking over at Ms. Rose and Nora, Ms. Rose with a hand on Nora's soulder both of them looking at each other, slight frowns, mouths closed
     with dissolve
@@ -45,6 +44,11 @@ label v14s07:
 
     au "*Whispers* Involved with each other... *Chuckles*"
 
+    scene v14s07_3b
+    with dissolve
+    
+    pause 0.5
+
     scene v14s07_3a # FPP. same as v14s07_3 aubrey mouth closed
     with dissolve
 
@@ -60,23 +64,23 @@ label v14s07:
 
     ro "There were memories made..."
 
-    if msrosers:
-        scene v14s07_2c # FPP. same as v14s07_2a Ms. Rose makes direct eye contact with mc
+    if v12_msrose_sex or v11_msrose_scene:
+        scene v14s07_2 # FPP. same as v14s07_2a Ms. Rose makes direct eye contact with mc
         with dissolve
 
         ro "Some of my most unforgettable experiences happened on this journey, as have yours."
 
-        scene v14s07_2b
+        scene v14s07_2c
         with dissolve
 
         u "(Okay Rose, let's try to be a little less obvious here.) *Chuckles*"
 
-        scene v14s07_2c
+        scene v14s07_2a
         with dissolve
 
         ro "Maybe one day I'll come back here to create even more memories, but with someone special."
 
-    scene v14s07_2a
+    scene v14s07_2
     with dissolve
 
     ro "You should all consider coming back to these beautiful countries some time, and enjoy it with your new found freedom and someone special by your side."
@@ -103,6 +107,7 @@ label v14s07:
 
     scene v14s07_5 # TPP. show Ms. Rose walking towards the hotel lobby front door with mc walking behind her
     with dissolve 
+    pause 0.75
 
     jump v14s08
 

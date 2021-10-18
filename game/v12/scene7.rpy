@@ -328,7 +328,7 @@ label v12s7fr:
     scene v12fer1
     with dissolve
 
-    lee "The murderer will kill people by pointing at them with a fake finger gun. If you get killed then quietly make your way to the dining hall. Do not give any hints to any of the players that haven't been killed."
+    lee "The murderer will kill people by pointing at them with a fake finger gun. If you get killed then quietly make your way to the dining hallway. Do not give any hints to any of the players that haven't been killed."
 
     scene v12fer10d
     with dissolve
@@ -1421,6 +1421,8 @@ label v12s7_chloe_kill:
 label v12s7_riley3:
     $ v12s7_riley3 = True
 
+    $ v12s7_endtalkList.remove(riley)
+
     $ v12s7_seenList = [chloe]
     if josh_europe and not v12s7_josh:
         $ v12s7_seenList.append(josh)
@@ -1553,6 +1555,8 @@ label v12s7_riley3:
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
+    $ v12s7_endtalkList.append(riley)
 
     call screen v12s7_left_viewpoint
     ### ERROR: -If MC presses the murder button during this scene he gets caught ###
@@ -3156,7 +3160,7 @@ label v12s7_lindsey2:
         scene v12ferli5 # TPP. Show mc and lindsey kissing
         with dissolve
 
-        pause
+        pause 1.75
 
     scene v12ferli3b
     with dissolve
@@ -3173,6 +3177,8 @@ label v12s7_lindsey2:
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
+    $ v12s7_endtalkList.append(lindsey)
 
     call screen v12s7_rear
 
@@ -3262,11 +3268,9 @@ label v12s7_charli2:
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
+    $ v12s7_endtalkList.append(charli)
+
     call screen v12s7_captains_room
-
-    # -MC leaves-
-
-    ### ERROR: -If MC presses the murder button during this convo ###
 
 label v12s7_charli_kill:
     hide screen murder_button_overlay
@@ -3860,7 +3864,7 @@ label v12s7_penelope_kill:
     scene v12ferpen1a
     with dissolve
 
-    pe "Well, now I can relax. Mr. Lee said go to the dining hall if you're killed so that's where I'm going."
+    pe "Well, now I can relax. Mr. Lee said go to the hallway if you're killed so that's where I'm going."
 
     scene v12ferpen1
     with dissolve
@@ -4095,6 +4099,8 @@ label v12s7_amber1:
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
+    $ v12s7_endtalkList.append(amber)
+
     call screen v12s7_right_gallery_front
 
 label v12s7_amber_kill:
@@ -4215,7 +4221,7 @@ label v12s7_riley2:
     scene v12ferrile1a
     with dissolve
 
-    ri "I asked Mr. Lee if we could get hints from the people in the dining hall and he said the only person able to talk to the people in the dining hall for clues is the cook aka Chris. I talked to Chris and he refused to help."
+    ri "I asked Mr. Lee if we could get hints from the people in the hallway and he said the only person able to talk to the people in the hallway for clues is the cook aka Chris. I talked to Chris and he refused to help."
 
     scene v12ferrile1
     with dissolve
@@ -4292,6 +4298,8 @@ label v12s7_riley2:
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
+    $ v12s7_endtalkList.append(riley)
 
     call screen v12s7_right_gallery_front
 
@@ -5196,6 +5204,8 @@ label v12s7_nora1:
             stop music fadeout 3
             play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
+            $ v12s7_endtalkList.append(nora)
+
             call screen v12s7_balcony_left
 
         "Want some company?":
@@ -5275,6 +5285,8 @@ label v12s7_nora1:
                     stop music fadeout 3
                     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
+                    $ v12s7_endtalkList.append(nora)
+
                     call screen v12s7_balcony_left
 
                 "Of course I care":
@@ -5337,6 +5349,13 @@ label v12s7_nora1:
 
                     pause 0.75
 
+                    stop music fadeout 3
+                    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
+                    $ v12s7_endtalkList.append(nora)
+                    
+                    call screen v12s7_balcony_left
+                    
                 "I'd choose you":
                     $ addPoint("bf")
                     $ noralikes = True
@@ -5394,6 +5413,7 @@ label v12s7_nora1:
 
                     stop music fadeout 3
                     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+                    $ v12s7_endtalkList.append(nora)
 
                     call screen v12s7_balcony_left
 
@@ -5609,6 +5629,7 @@ label v12s7_chris1:
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
+    $ v12s7_endtalkList.append(chris)
     call screen v12s7_kitchen
 
 label v12s7_chris_kill:
@@ -5674,7 +5695,7 @@ label v12s7_chris_kill:
         scene v12ferchrnoem1b
         with dissolve
 
-    u "*Chuckles* Bro, you gotta go sit in the dining hall."
+    u "*Chuckles* Bro, you gotta go sit in the hallway."
 
     if v12s7_emily and emily not in v12s7_killList:
         scene v12ferchr1c # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
@@ -6073,7 +6094,7 @@ label v12s7_josh_kill:
         scene v12ferjos3bnoau
         with dissolve
 
-    u "Don't then, but act like him as a corpse in the dining hall."
+    u "Don't then, but act like him as a corpse in the hallway."
 
     if not v12s7_aubrey_moved:
         scene v12ferjos3c # FPP. Same 3b, mouth open
@@ -6175,6 +6196,7 @@ label v12s7_emily2:
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
+    $ v12s7_endtalkList.append(emily)
     call screen v12s7_bow
 
 label v12s7_emily_kill:

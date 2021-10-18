@@ -3,23 +3,24 @@
 # Characters: MC (Outfit: 3), NIGHT GAMBLER (Outfit: x), IMRE (Outfit: 2), RYAN (Outfit: 1)
 # Time: Night
 
-label v14s03a: # -MC walks overs and stands in front of the night gambler-
-    scene v14s03a_1 # TPP. MC, far away, walking towards the night gambler, neutral expression, mouth closed.
+label v14s03a:  
+    scene v14s03a_1  # TPP. MC with Imre and Ryan right behind him, far away, walking towards the night gambler, MC/Gambler neutral expression, mouth closed,Ryan/Imre, smile, mouth closed
     with dissolve
 
     pause 0.75
 
-    scene v14s03a_1a # TPP. Same as v14s03a_1, but MC close (half the distance) to the night gambler.
+    scene v14s03a_1a # TPP. Same as v14s03a_1, but Imre, MC, and Ryan closer (half the distance) to the night gambler.
     with dissolve
 
     pause 0.75
 
-    scene v14s03a_1b # TPP. MC standing in front of the night gamble, MC neutral expression. gamble smiling, both mouths closed.
+    scene v14s03a_1b # TPP. MC standing in front of the night gamble, Imre and Ryan on each side of MC, MC neutral expression. Gambler smiling, both mouths closed.
     with dissolve
 
     pause 0.75
 
     scene v14s03a_2 # FPP. Night gambler, looking at MC, smiling, mouth closed.
+    with dissolve
 
     u "You got some kind of game going on over here?"
 
@@ -54,16 +55,16 @@ label v14s03a: # -MC walks overs and stands in front of the night gambler-
     ngam "Sure deal brother man! Real simple. Three cups and a ball. Heard of it?"
 
     menu:
-        "Yes, of course.":
-            scene v14s03a_2a
+        "Yes, of course":
+            scene v14s03a_2
             with dissolve
         
             u "Of course, who hasn't is a better question. *Chuckles*"
 
-            scene v14s03a_2
+            scene v14s03a_2a
             with dissolve
 
-            ngam "My man!" 
+            ngam "My man!"
         
         "Never heard of it":
             scene v14s03a_2
@@ -76,17 +77,17 @@ label v14s03a: # -MC walks overs and stands in front of the night gambler-
 
             ngam "Have you been living under a rock, brother man?! Three cups and a ball is the game of the century."
 
-            scene v14s03a_2
+            scene v14s03a_2a
             with dissolve
 
             ngam "I put a ball in one of the three cups, mix 'em up, and you choose the one you think the ball is under. Make sense?"
 
-            scene v14s03a_2a
+            scene v14s03a_2
             with dissolve
 
             u "Makes sense."
 
-            scene v14s03a_2
+            scene v14s03a_2a
             with dissolve
 
             ngam "My man!"
@@ -172,7 +173,7 @@ label v14s03a: # -MC walks overs and stands in front of the night gambler-
             scene v14s03a_9 # FPP. Imre, Ryan backs to MC but heads slghtly turned toward MC walking towards brothel, both mouth closed
             with dissolve
 
-            u "He was... Persistent."
+            u "He was... persistent."
 
             scene v14s03a_9a # FPP. Same as v14s03a_9, but with Imre, mouth open, Ryan mouth closed, both smiling.
             with dissolve
@@ -200,7 +201,6 @@ label v14s03a: # -MC walks overs and stands in front of the night gambler-
             u "*Chuckles*"
 
         "Give it a try": # -If Give it a try
-            
             scene v14s03a_2
             with dissolve
 
@@ -241,11 +241,12 @@ label v14s03a: # -MC walks overs and stands in front of the night gambler-
             scene v14s03a_3e # FPP. Gambler's right hand on right cup; left hand on middle cup, switching places.
             with dissolve
 
-            pause 0.75
+            pause 0.5
 
             scene v14s03a_3f # FPP. Gambler's right hand on right cup, now in middle; left hand on middle cup; now on the right.
+            with dissolve
 
-            pause 0.75
+            pause 0.5
 
             scene v14s03a_2a
             with dissolve
@@ -272,7 +273,7 @@ label v14s03a: # -MC walks overs and stands in front of the night gambler-
             scene v14s03a_2b
             with dissolve
 
-            ngam "Fifty, fifty chance brother man."
+            ngam "It's not in the middle. Fifty, fifty chance brother man."
             
             menu:
                 "Left cup": # -If Left cup
@@ -295,6 +296,8 @@ label v14s03a: # -MC walks overs and stands in front of the night gambler-
                     with dissolve
                     
             # End cup choice
+
+            pause 0.75
 
             scene v14s03a_2a
             with dissolve
@@ -325,7 +328,8 @@ label v14s03a: # -MC walks overs and stands in front of the night gambler-
                 scene v14s03a_3n # FPP. Same as v14s03a_3l, but Gambler lifts up the LEFT cup and there is a ball under it.
                 with dissolve
 
-                pause .075
+                pause 0.75
+                
             else:
                 scene v14s03a_3o # FPP. Close up, Gambler tilts RIGHT cup forward (like he is going to lift it up).
                 with dissolve
@@ -427,7 +431,7 @@ label v14s03a: # -MC walks overs and stands in front of the night gambler-
             scene v14s03a_11b # Ryan leaning (towards Imre off camera) cuping his hand around his mouth (whisper), open, neutral expression.
             with dissolve
 
-            ry "*Whispers* Imre, that's enough man. He learned his lesson I think."
+            ry "*Whispers* Imre, that's enough, man. He learned his lesson I think."
 
             scene v14s03a_4a
             with dissolve
@@ -446,6 +450,8 @@ label v14s03a: # -MC walks overs and stands in front of the night gambler-
                 
             menu:
                 "Take the wallet": # -If Take the wallet
+                    $ v14s03a_take_wallet = True
+                    
                     scene v14s03a_12a # FPP. Same as v14s03a_12, but Gambler mouth closed.
                     with dissolve
                     u "The audacity you must have to suggest that we let you get away with this... Imre, go ahead."
@@ -453,7 +459,7 @@ label v14s03a: # -MC walks overs and stands in front of the night gambler-
                     scene v14s03a_4b # FPP, Imre holding Gambler's wallet wide open showing lots of paper cash/Euros.
                     with dissolve
                     
-                    imre "Hooo! Real nice haul tonight."
+                    u "Hooo! Real nice haul tonight."
 
                     scene v14s03a_12b # FPP. Same as v14s03a_12a, but with few bills of cash on the ground and a few bills floating in the air.
                     with dissolve
@@ -535,12 +541,12 @@ label v14s03a: # -MC walks overs and stands in front of the night gambler-
     scene v14s03a_9
     with dissolve
 
-    pause 0.75 
+    pause 0.26 
 
     scene v14s03a_9a
     with dissolve
 
-    pause 0.75
+    pause 0.26
 
     scene v14s03a_9b
     with dissolve

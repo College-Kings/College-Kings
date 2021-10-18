@@ -202,7 +202,7 @@ label v11_riley_sex:
                 scene v11ris3
                 with dissolve
 
-                u "*Chuckles* Night Riley."
+                u "*Chuckles* Night, Riley."
 
         scene v11ris4 # TPP. Show MC taking his shirt off, he has a slight smile, mouth closed, standing next to his bed
         with dissolve
@@ -458,6 +458,7 @@ label v11_riley_sex:
 
             "Do something about it":
                 $ v11_rileysex = True
+                #$ addPoint("tm", sum([ v10_chloe_locker, v11_fucked_candy, v11_aubrey_sex, v11_msrose_scene, v11_samantha_spa ])) ###Loyaltymod
                 $ rileyLike += 1
 
                 u "Keep talking like that and I will."

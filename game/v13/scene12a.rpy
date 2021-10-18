@@ -294,10 +294,10 @@ label v13s12a:
 
     polly "My love in the front, could you chill with the camera? What's with all the pictures? People usually use video at concerts these days. *Chuckles*"
 
-    scene v13s12a_6l # TPP. Same as v13s12a_6b, but Aubrey not excited
-    with dissolve
+    #scene v13s12a_6l # TPP. Same as v13s12a_6b, but Aubrey not excited
+    #with dissolve
 
-    au "*Shocked* I... Uhh..."
+    #au "*Shocked* I... Uhh..."
 
     menu:
         "Defend her":

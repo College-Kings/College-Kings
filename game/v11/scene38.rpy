@@ -141,7 +141,7 @@ label v11_amber_bar:
     scene v11amb7
     with dissolve
 
-    u "Yes Amber I know what go-karts are. *Chuckles* I just thought they were more for little kids."
+    u "Yes, Amber, I know what go-karts are. *Chuckles* I just thought they were more for little kids."
 
     scene v11amb7a
     with dissolve

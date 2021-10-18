@@ -50,7 +50,6 @@ label v12_mc_chilling:
     u "(I feel like I haven't had any time to just lay back and chill. There's always so-)"
 
     if v11_invite_sam_europe:
-        
         scene v12mor7 # FPP. Samantha bursts into MC's room holding a bottle of alcohol, looking drunk, mouth opened
         with dissolve
 
@@ -782,7 +781,7 @@ label v12_mc_chilling:
 
         menu:
             "Call Cameron":
-                $ addPoint("br")
+                $ addPoint("bro")
                 $ v12_call_cameron = True
                 scene v12mor24d
                 with dissolve
@@ -883,9 +882,9 @@ label v12_mc_chilling:
         with dissolve
 
         if v11_riley_roomate:
-            u "(Don't know where Riley went, but she's gonna have to deal with Sam from here on out. I'm going to sleep.)"
+            u "(Don't know where Riley went, but I'm going to sleep now.)"
         else:
-            u "(Don't know where Chloe went, but she's gonna have to deal with Sam from here on out. I'm going to sleep.)"
+            u "(Don't know where Chloe went, but I'm going to sleep now.)"
 
         scene v12mor27
         with dissolve

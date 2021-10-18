@@ -133,6 +133,7 @@ label v11_nora_chris_plane:
     stop music fadeout 5
     menu:
         "Chase after Nora":
+            $ v11_check_on_nora = True
             scene v11noch7a # TPP. Same cam as v11noch7, but MC is now walking towards the plane exit, neutral expression, mouth closed
             with dissolve
 

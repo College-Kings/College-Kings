@@ -981,8 +981,9 @@ screen preferences():
         pos (975, 990)
         spacing 120
 
-        textbutton _("Change Language"):
-            action ShowMenu("changeLanguage")
+        if os.path.exists("game/tl"):
+            textbutton _("Change Language"):
+                action ShowMenu("changeLanguage")
 
         textbutton _("Return"):
             action Return()
