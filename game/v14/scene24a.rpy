@@ -56,7 +56,7 @@ label v14s24a:
 
     pause 0.75
 
-    scene  v14s24a_10 # TPP. Camera behind MC, standing at the front counter looking at the clerk who has their back to MC.
+    scene v14s24a_10 # TPP. Camera behind MC, standing at the front counter looking at the clerk who has their back to MC.
     with dissolve
 
     pause 0.75

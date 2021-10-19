@@ -3,9 +3,6 @@
 # Characters: MC (Outfit: 9), LINDSEY (Outfit: 1)
 # Time: Morning
 
-default help_Lindsey = False
-default help_Chloe = False
-
 label v14s18:
     scene v14s18_1 # TPP. Show MC leaving the classroom, slight smile, mouth closed
     with dissolve
@@ -30,7 +27,7 @@ label v14s18:
     scene v14s18_4a # FPP. Same as v14s18_4, Lindsey mouth open
     with dissolve
 
-    li "The more they merrier! Also, it's good you're here, hold these?"
+    li "The more the merrier! Also, it's good you're here. Hold these?"
 
     scene v14s18_5 # TPP. Show Lindsey giving the stack of flyers to MC, both slight smiles, mouths closed
     with dissolve
@@ -85,7 +82,7 @@ label v14s18:
     scene v14s18_4c
     with dissolve
 
-    li "I know I've already asked before, but this my final choice, are you willing to help me with my campaign?"
+    li "I know I've already asked before, but now I really need to know, are you willing to help me with my campaign?"
 
     scene v14s18_4
     with dissolve
@@ -105,7 +102,7 @@ label v14s18:
     scene v14s18_4e # FPP. Same as v14s18_4d, Lindsey looking at MC now
     with dissolve
 
-    li "I'm worried that without your help, I'm a lost cause. I mean, we're friends... Right?"
+    li "I'm worried that without your help, I'm a lost cause. I mean, we're friends... right?"
 
     if lindseyrs:
         scene v14s18_4a
@@ -116,19 +113,19 @@ label v14s18:
         scene v14s18_4d
         with dissolve
         
-        li "Nevermind, It doesn't matter."
+        li "Nevermind, it doesn't matter."
 
     if chloegf:
         scene v14s18_4a
         with dissolve
 
-        li "I know you're like, dating her, or whatever you're calling it... *Chuckles* But genuinely, my only chance at beating Chloe starts with you joining my team."
+        li "I know you're like, dating Chloe, or whatever you're calling it... *Chuckles* But genuinely, my only chance at beating Chloe starts with you joining my team."
 
     if lindseyrs:
         scene v14s18_4f # FPP. Lindsey very close to MC, she is whispering, mouth open, seductive smile
         with dissolve
 
-        li "*Whispers* Maybe if we win you can have your way with the new president..."
+        li "*Whispers* Maybe if we win you can have your way with the new President..."
 
         scene v14s18_4g # FPP. Same as v14s18_4f, Lindsey mouth closed
         with dissolve
@@ -166,7 +163,7 @@ label v14s18:
 
     menu:
         "Help Lindsey":
-            $ help_Lindsey = True
+            $ v14_help_lindsey = True
   
             u "From the very beginning I've been in support of your campaign, and I don't plan on stopping anytime soon."
 
@@ -186,7 +183,7 @@ label v14s18:
                 scene v14s18_7 # TPP. Show Lindsey giving MC a kiss on the cheek
                 with dissolve
 
-                pause
+                pause 1.5
 
             scene v14s18_4a
             with dissolve
@@ -221,7 +218,7 @@ label v14s18:
 
             u "I'm sorry Lindsey, but-"
 
-            scene v14s18_4
+            scene v14s18_4j
             with dissolve
 
             li "It's fine."
@@ -236,11 +233,11 @@ label v14s18:
 
     pause 0.75
 
-    if help_Chloe:
+    if v14_help_chloe:
         scene v14s18_9 # TPP. Show MC standing in hallway, slight smile, mouth open
         with dissolve
 
-        u "Well, oddly enough, it's  time to go help Chloe."
+        u "Well, oddly enough, it's time to go help Chloe."
 
         scene v14s18_10 # TPP. Show MC leaving the college, going outside, slight smile, mouth closed
         with fade

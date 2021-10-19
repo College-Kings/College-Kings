@@ -22,7 +22,7 @@ label v14s30:
     scene v14s30_3a # FPP. Same as v14s30_3, Chloe turns to see MC, slight smile, mouth open.
     with dissolve
 
-    cl "[Name], there you are!"
+    cl "[name], there you are!"
 
     scene v14s30_3b # FPP. Same as v14s30_3a, Chloe walking towards MC, slight smile, mouth closed.
     with dissolve

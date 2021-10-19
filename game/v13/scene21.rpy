@@ -358,4 +358,4 @@ label v13s21:
 
     stop music fadeout 3
     
-    jump v13s22 # Scene 22 
+    jump v13s22 # Scene 22

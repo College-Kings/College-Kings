@@ -20,7 +20,7 @@ label v14s26:
     scene v14s26_2a # FPP. same as v14s26_2 lindsey's mouth is now open
     with dissolve
 
-    li "Hey, you! It's going good, actually…"
+    li "Hey, you! It's going good, actually..."
 
     scene v14s26_2b # FPP. same as v14s26_2a increase lindsey to full smile
     with dissolve
@@ -75,7 +75,7 @@ label v14s26:
     scene v14s26_2 
     with dissolve
 
-    u "Hmm… I don’t think I’m that hungry today, but…"
+    u "Hmm... I don't think I'm that hungry today, but..."
 
     scene v14s26_2a
     with dissolve
@@ -90,7 +90,7 @@ label v14s26:
     scene v14s26_2e # FPP. Lindsey has a sinister looking expression
     with dissolve
 
-    la "Right behind you…"
+    la "Right behind you..."
 
     scene v14s26_2e
     with dissolve
@@ -125,7 +125,7 @@ label v14s26:
     scene v14s26_5
     with dissolve
 
-    u "Wow, that’s… Thanks. *Chuckles*"
+    u "Wow, that's... Thanks. *Chuckles*"
 
     scene v14s26_5a
     with dissolve
@@ -155,7 +155,7 @@ label v14s26:
     scene v14s26_5
     with dissolve
 
-    u "Well, it’s good to know I'm special. *Chuckles*"
+    u "Well, it's good to know I'm special. *Chuckles*"
 
     scene v14s26_5
     with dissolve
@@ -195,7 +195,7 @@ label v14s26:
     scene v14s26_5b
     with dissolve
 
-    li "Of course I did, ha. You’re the reason I decided to run in the first place."
+    li "Of course I did, ha. You're the reason I decided to run in the first place."
 
     scene v14s26_5d # FPP. same as v14s26_5 lauren and lindsey are looking at each other, lauren's mouth is open
     with dissolve
@@ -220,7 +220,7 @@ label v14s26:
     scene v14s26_5e
     with dissolve
 
-    li "Thanks babe, I just wish your sister felt the same…"
+    li "Thanks babe, I just wish your sister felt the same..."
 
     scene v14s26_5d
     with dissolve
@@ -266,33 +266,34 @@ label v14s26:
 
     if v11_lindsey_slogan = 1:
 
-        $ kiwii_post = KiwiiPost("Lindsey", Selfie with Lauren in front of slogan banner that says Lindsey, Returning The Promise, "Don’t forget to stop by and pick up one of Lauren’s famous cakes today! All proceeds go to my campaign fund and to the future of the Chicks! <3," mentions="Lauren", numberLikes=748)
+        #Selfie with Lauren in front of slogan banner that says Lindsey, Returning The Promise
+        $ kiwii_post = KiwiiPost("Lindsey", "Don't forget to stop by and pick up one of Lauren's famous cakes today! All proceeds go to my campaign fund and to the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
         $ kiwii_post.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
         $ kiwii_post.newComment("Nora", "Cuties <3", queue=False)
         $ kiwii_post.newComment("Imre", "Actually that cookie this morning made me shit myself!", queue=False)
-        $ kiwii_post.newComment("Chloe", "Eww…", queue=False)
+        $ kiwii_post.newComment("Chloe", "Eww...", queue=False)
         $ kiwii_post.newComment("Lauren", "Oh, is that why you came back for three more?", mentions="Imre", queue=False)
         $ kiwii_post.newComment("Sebastian", "Yeah dude, you gave me one of them, lol. Tasted great ladies!", queue=False)
         $ kiwii_post.newComment("Imre", "Whatever, so what?", queue=False)
         $ kiwii_post.newComment("Chloe", "...", queue=False)
-        $ kiwii_post.addReply("Thank you for the cake! It’s amazing you guys...", mentions="Lindsey")
+        $ kiwii_post.addReply("Thank you for the cake! It's amazing you guys...", mentions="Lindsey")
         $ kiwii_post.newComment("Lindsey", "<3")
         $ kiwii_post.newComment("Lauren", ":)")
 
 # Kiwi Post: v14kw26_1 - Lindsey and Lauren Selfie in front of her banner (Lindsey, Say Bye To The Bullshit) on the banner
 
     else:
-
-        $ kiwii_post = KiwiiPost("Lindsey", Selfie with Lauren in front of slogan banner that says Lindsey, Say Bye To The Bullshit, "Don’t forget to stop by and pick up one of Lauren’s famous cakes today! All proceeds go to my campaign fund and to the future of the Chicks! <3," mentions="Lauren", numberLikes=748)
+        #Selfie with Lauren in front of slogan banner that says Lindsey, Say Bye To The Bullshit
+        $ kiwii_post = KiwiiPost("Lindsey", "Don't forget to stop by and pick up one of Lauren's famous cakes today! All proceeds go to my campaign fund and to the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
         $ kiwii_post.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
         $ kiwii_post.newComment("Nora", "Cuties <3", queue=False)
         $ kiwii_post.newComment("Imre", "Actually that cookie this morning made me shit myself!", queue=False)
-        $ kiwii_post.newComment("Chloe", "Eww…", queue=False)
+        $ kiwii_post.newComment("Chloe", "Eww...", queue=False)
         $ kiwii_post.newComment("Lauren", "Oh, is that why you came back for three more?", mentions="Imre", queue=False)
         $ kiwii_post.newComment("Sebastian", "Yeah dude, you gave me one of them, lol. Tasted great ladies!", queue=False)
         $ kiwii_post.newComment("Imre", "Whatever, so what?", queue=False)
         $ kiwii_post.newComment("Chloe", "...", queue=False)
-        $ kiwii_post.addReply("Thank you for the cake! It’s amazing you guys...", mentions="Lindsey")
+        $ kiwii_post.addReply("Thank you for the cake! It's amazing you guys...", mentions="Lindsey")
         $ kiwii_post.newComment("Lindsey", "<3")
         $ kiwii_post.newComment("Lauren", ":)")
 
@@ -328,12 +329,12 @@ label v14s26:
         scene v14s26_10c
         with dissolve
 
-        u "Are you all good? What’s going on?"
+        u "Are you all good? What's going on?"
 
         scene v14s26_10c
         with dissolve
 
-        am "I'm fine, sorry…"
+        am "I'm fine, sorry..."
 
         scene v14s26_10b
         with dissolve
@@ -343,7 +344,7 @@ label v14s26:
         scene v14s26_10c
         with dissolve
 
-        u "*Chuckles* That’s okay."
+        u "*Chuckles* That's okay."
 
         scene v14s26_10d # FPP. same as v14s26_10c show amber slight smile, mouth open
         with dissolve
@@ -393,7 +394,7 @@ label v14s26:
     scene v14s26_2b
     with dissolve
 
-    li "I made $450… *Laughs*"
+    li "I made $450... *Laughs*"
 
     scene v14s26_2
     with dissolve
@@ -408,7 +409,7 @@ label v14s26:
     scene v14s26_2
     with dissolve
 
-    u "Hell yeah… Really, though. I'm impressed."
+    u "Hell yeah... Really, though. I'm impressed."
 
     scene v14s26_2a
     with dissolve
@@ -418,7 +419,7 @@ label v14s26:
     scene v14s26_2
     with dissolve
 
-    u "*Chuckles* Maybe…"
+    u "*Chuckles* Maybe..."
 
     scene v14s26_2
     with dissolve
@@ -435,17 +436,17 @@ label v14s26:
 
     u "See you around, Linds."
 
-    if LindseyRS:
+    if lindseyrs:
 
         scene v14s26_13 # FPP. Lindsey winks at MC, slight smile, mouth open
         with dissolve
 
-        li "See you, [Name]."
+        li "See you, [name]."
 
     scene v14s26_14 # TPP. mc walks away from lindsey, no expression, mouth closed
     with dissolve
 
-    pause: 0.75
+    pause 0.75
 
     scene v14s26_15 # TPP. mc walking through the campus, no expression, mouth closed
     with dissolve

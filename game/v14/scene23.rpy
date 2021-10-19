@@ -544,7 +544,7 @@ label v14s23:
                 scene v14s23_2c
                 with dissolve
 
-                ch "*Whispers* Adorable... *Chuckles*."
+                ch "*Whispers* Adorable... *Chuckles*"
 
             "Disagree with Chris":
                 $ v14s23_disagree = True

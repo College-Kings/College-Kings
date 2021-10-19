@@ -2,7 +2,6 @@
 # Locations: Economics Class
 # Characters: MC (Outfit: 9), MS. ROSE (Outfit: 1), LAUREN (Outfit: 1)
 # Time: Morning
-$ SabotageLindsey=True
 
 label v14s17:
     scene v14s17_1 # TPP. Show MC walking into class, slight smile, mouth closed
@@ -28,12 +27,12 @@ label v14s17:
     scene v14s17_4a # FPP. Same as v14s17_4, mouth closed
     with dissolve
 
-    u "Haha, yeah a bit. I don’t think we've ever worked in groups before."
+    u "Haha, yeah a bit. I don't think we've ever worked in groups before."
 
     scene v14s17_4
     with dissolve
 
-    ro "You’re right, we haven’t, but because of the trip I wanted to give those of you who went a chance to catch up on the curriculum."
+    ro "You're right, we haven't, but because of the trip I wanted to give those of you who went a chance to catch up on the curriculum."
 
     scene v14s17_4b # FPP. Same as v14s17_4, different posture
     with dissolve
@@ -53,7 +52,7 @@ label v14s17:
     scene v14s17_4a
     with dissolve
 
-    u "That's pretty messed up to call Lauren the class clown behind her back…"
+    u "That's pretty messed up to call Lauren the class clown behind her back..."
 
     if msrosers: #placeholder
         scene v14s17_4c
@@ -64,7 +63,7 @@ label v14s17:
         scene v14s17_4a
         with dissolve
 
-        u "*Chuckles* I’ll always find new ways to-"
+        u "*Chuckles* I'll always find new ways to-"
 
         scene v14s17_5 # TPP. Show Ms. Rose slapping MC on his ass with her hand, Ms. Rose slight smile, mouth closed, MC, slight surprised expression, mouth closed
         with dissolve
@@ -84,7 +83,7 @@ label v14s17:
         scene v14s17_4a
         with dissolve
 
-        u "Yes, ma’am..."
+        u "Yes, ma'am..."
 
         scene v14s17_4c
         with dissolve
@@ -94,7 +93,7 @@ label v14s17:
         scene v14s17_6 # TPP. Show MC walking away towards his seat, slight smile, mouth closed, Ms. Rose in the background, slight smile, mouth closed
         with dissolve
 
-        u "(Hot damn… I like when she does that sneaky shit, haha.)"
+        u "(Hot damn... I like when she does that sneaky shit, haha.)"
 
         scene v14s17_7 # TPP. MC Now sitting beside lauren, both looking at eachother, both slight smile, mouths closed
         with dissolve    
@@ -105,12 +104,12 @@ label v14s17:
         scene v14s17_4c
         with dissolve
         
-        ro "*Laughs* See? My point exactly. Now, off you go. She’s waiting for you."
+        ro "*Laughs* See? My point exactly. Now, off you go. She's waiting for you."
 
         scene v14s17_4a
         with dissolve
 
-        u "Yes, ma’am."
+        u "Yes, ma'am."
 
         scene v14s17_6
         with dissolve
@@ -141,12 +140,12 @@ label v14s17:
     scene v14s17_8b # FPP. Same as v14s17_8, slightly surprised expression
     with dissolve
 
-    la "*Chuckles* Wow…"
+    la "*Chuckles* Wow..."
 
     scene v14s17_8
     with dissolve
 
-    la "I don't know if I should be offended that you think my life revolves only around my education, or flattered because that just means you consider me responsible… *Chuckles*"
+    la "I don't know if I should be offended that you think my life revolves only around my education, or flattered because that just means you consider me responsible... *Chuckles*"
 
     menu:
         "Joke":
@@ -164,12 +163,12 @@ label v14s17:
             scene v14s17_8a
             with dissolve
 
-            u "Really? I think you’re laughing..."
+            u "Really? I think you're laughing..."
 
             scene v14s17_8c
             with dissolve
 
-            la "*Chuckles* Okay, okay… Fair enough."
+            la "*Chuckles* Okay, okay... Fair enough."
 
         "Compliment":
             $ addPoint ("bf")
@@ -186,9 +185,9 @@ label v14s17:
             scene v14s17_8a
             with dissolve
 
-            u "Ha… Just stating facts."
+            u "Ha... Just stating facts."
 
-            u "And might also be trying to tell you that you should get out more, in the most subtle way possible of course…"
+            u "And might also be trying to tell you that you should get out more, in the most subtle way possible of course..."
 
             scene v14s17_8c
             with dissolve
@@ -200,7 +199,8 @@ label v14s17:
 
             u "*Chuckles*"
 
-    if Lauren_Mad_path: #placeholder
+    if laurenrs_v11aubrey: #placeholder
+        $ laurenmad = True
         scene v14s17_8d # FPP. Same as v14s17_8, neutral expression
         with dissolve
         
@@ -214,51 +214,51 @@ label v14s17:
         scene v14s17_8d
         with dissolve
 
-        la "I just…"
+        la "I just..."
 
         scene v14s17_8f # FPP. Same as v14s17_8d, slightly annoyed expression
         with dissolve
 
-        la "I really wish you hadn't done the things that you did… You know?"
+        la "I really wish you hadn't done the things that you did... You know?"
 
         scene v14s17_8
         with dissolve
 
-        la "We have so much in common, and I genuinely do think you're an amazing guy. It's just…"
+        la "We have so much in common, and I genuinely do think you're an amazing guy. It's just..."
 
         scene v14s17_8g # FPP. Same as v14s17_8f, different posture 
         with dissolve
 
-        la "When you mess up [Name], you mess up in such horrible ways."
+        la "When you mess up [name], you mess up in such horrible ways."
 
         scene v14s17_8e
         with dissolve
 
-        u "Lauren, I…"
+        u "Lauren, I..."
 
-        u "I'm extremely sorry about all and any of the mistakes I've made, I really am.  I hope that one day you can forgive me."
+        u "I'm extremely sorry about all and any of the mistakes I've made, I really am. I hope that one day you can forgive me."
 
         scene v14s17_8d
         with dissolve
 
-        la "Yeah… One day maybe."
+        la "Yeah... One day maybe."
 
-        la "I’ve moved on from it regardless though... So…"
+        la "I've moved on from it regardless though... So..."
 
         scene v14s17_8e
         with dissolve
 
-        u "(Yeah, sure as hell sounds like it…)"
+        u "(Yeah, sure as hell sounds like it...)"
 
     scene v14s17_8
     with dissolve
 
-    la "Alright then, let’s get to work."
+    la "Alright then, let's get to work."
 
     scene v14s17_8a
     with dissolve
 
-    u "Yes, let’s."
+    u "Yes, let's."
 
     scene v14s17_9 # TPP. Show MC looking at his book, slight smile, mouth closed, Lauren turning the page of her text book, slight smile, mouth closed 
     with dissolve
@@ -278,14 +278,14 @@ label v14s17:
     scene v14s17_10a # FPP. Same as v14s17_10, Lauren now looking at MC, mouth open
     with dissolve
 
-    la "So… According to the notes, we're looking into macro versus micro economics."
+    la "So... According to the notes, we're looking into macro versus micro economics."
 
     scene v14s17_10b # FPP. Same as v14s17_10a, mouth closed 
     with dissolve
 
-    u "*Sighs* Okay…"
+    u "*Sighs* Okay..."
 
-    u "(My brain is still in Europe I think…)"
+    u "(My brain is still in Europe I think...)"
 
     scene v14s17_10c # FFP. Same as v14s17_10b, Lauren tilting her head at MC
     with dissolve
@@ -317,7 +317,7 @@ label v14s17:
     scene v14s17_10b
     with dissolve
 
-    u "Well, thanks… How do you have the TA notes?"
+    u "Well, thanks... How do you have the TA notes?"
 
     scene v14s17_10a
     with dissolve
@@ -357,12 +357,12 @@ label v14s17:
     scene v14s17_10d
     with dissolve
 
-    la "*Chuckles* No… We can talk."
+    la "*Chuckles* No... We can talk."
 
     scene v14s17_10e
     with dissolve
 
-    u "Ooooh… *Chuckles* About what?"
+    u "Ooooh... *Chuckles* About what?"
 
     scene v14s17_10a
     with dissolve
@@ -392,12 +392,12 @@ label v14s17:
     scene v14s17_10e
     with dissolve
 
-    u "Oh, wow, I see… (Lindsey really has been busy…)"
+    u "Oh, wow, I see... (Lindsey really has been busy...)"
 
     scene v14s17_10b
     with dissolve
 
-    u "What’d she ask for from you?"
+    u "What'd she ask for from you?"
 
     scene v14s17_10a
     with dissolve
@@ -427,12 +427,12 @@ label v14s17:
     scene v14s17_10a
     with dissolve
 
-    la "Exactly, it’s all kinda crazy right now…"
+    la "Exactly, it's all kinda crazy right now..."
 
     scene v14s17_10g # FPP. Same as v14s17_10a, different posture
     with dissolve
 
-    la "I mean, I appreciate Chloe and I’ve always seen her as the leader of the Chicks."
+    la "I mean, I appreciate Chloe and I've always seen her as the leader of the Chicks."
 
     scene v14s17_10a
     with dissolve
@@ -469,7 +469,7 @@ label v14s17:
             scene v14s17_10b
             with dissolve
 
-            u "Plus, she came to you, of all people, for a reason. She trusts you, and knows what you’re capable of."
+            u "Plus, she came to you, of all people, for a reason. She trusts you, and knows what you're capable of."
 
             if kct == "loyal": 
                 scene v14s17_10g
@@ -477,21 +477,21 @@ label v14s17:
                 
                 la "You're right. I guess in the end it's all about loyalty, huh?"
 
-                if won_HP_trivia_in_London:
+                if v11_hp_points == 3:
                     scene v14s17_10b
                     with dissolve
 
-                    u "A true Hofflepoff… *Chuckles*"
+                    u "A true Pofflehoof... *Chuckles*"
 
                     scene v14s17_10d
                     with dissolve
 
-                    la "Haha, I guess you’re right."
+                    la "Haha, I guess you're right."
 
-            scene v14s17_10a
-            with dissolve
+                scene v14s17_10a
+                with dissolve
 
-            la "I'll talk to her and see what she needs me to do."
+                la "I'll talk to her and see what she needs me to do."
 
             else: 
                 scene v14s17_10g
@@ -509,11 +509,11 @@ label v14s17:
 
             u "Sounds like a plan."
 
-        "Dont help Lindsey":
+        "Don't help Lindsey":
             scene v14s17_10b
             with dissolve
 
-            u "Honestly Lauren…"
+            u "Honestly, Lauren..."
 
             scene v14s17_10e
             with dissolve
@@ -528,7 +528,7 @@ label v14s17:
             scene v14s17_10b
             with dissolve
 
-            u "If she came to you for just another bake sale then it’d be different, but this is a bake sale with a hidden agenda."
+            u "If she came to you for just another bake sale then it'd be different, but this is a bake sale with a hidden agenda."
 
             scene v14s17_10e
             with dissolve
@@ -543,7 +543,7 @@ label v14s17:
             scene v14s17_10a
             with dissolve
 
-            la "*Sighs* You're right… Thank you."
+            la "*Sighs* You're right... Thank you."
 
             scene v14s17_10h
             with dissolve
@@ -555,19 +555,19 @@ label v14s17:
 
             u "That sounds like a plan."
 
-            u "(Unless…)"
+            u "(Unless...)"
 
     menu:
         "Ask Lauren to sabotage Lindsey":
             scene v14s17_10b
             with dissolve
             
-            u "(That would be very beneficial for Chloe’s campaign...)"
+            u "(That would be very beneficial for Chloe's campaign...)"
 
             scene v14s17_10e
             with dissolve
 
-            u "Unless…"
+            u "Unless..."
 
             scene v14s17_10h
             with dissolve
@@ -577,7 +577,7 @@ label v14s17:
             scene v14s17_13 # TPP. Show MC whispering into Lauren's ear, slight smile, mouth open, Lauren, slight smile, mouth closed
             with dissolve
 
-            u "*Whispers* Do you think you could... “sabotage” Lindsey's bake sale?"
+            u "*Whispers* Do you think you could... \"sabotage\" Lindsey's bake sale?"
 
             scene v14s17_14 # TPP. Show MC from Laurens perspective, MC with one finger over his mouth, shushing expression, slight smile, mouth slightly open
             with dissolve
@@ -604,7 +604,7 @@ label v14s17:
 
             u "*Whispers* Truth is, I don't want her to win."
 
-            u "*Whispers*  It’s Chloe’s last year and if I can keep Lindsey from taking over, that's what I'll do. She doesn't need to be president."
+            u "*Whispers* It's Chloe's last year and if I can keep Lindsey from taking over, that's what I'll do. She doesn't need to be president."
 
             scene v14s17_13a
             with dissolve
@@ -619,7 +619,7 @@ label v14s17:
             scene v14s17_13a
             with dissolve
 
-            la "*Whispers* [Name]! This is something I’d never do for anyone, you know that."
+            la "*Whispers* [name]! This is something I'd never do for anyone, you know that."
 
             scene v14s17_13
             with dissolve
@@ -634,13 +634,13 @@ label v14s17:
             scene v14s17_10e
             with dissolve
 
-            u "You're the most loyal person I know, Lauren. That’s why I’m asking you, the one person I trust with anything and everything."
+            u "You're the most loyal person I know, Lauren. That's why I'm asking you, the one person I trust with anything and everything."
 
             if kct == "loyal":
                 scene v14s17_10a
                 with dissolve
 
-                la "I guess you’re that one person for me too. It must feel like Lindsey is crossing the line by running against Chloe, no?"
+                la "I guess you're that one person for me too. It must feel like Lindsey is crossing the line by running against Chloe, no?"
 
                 scene v14s17_10e
                 with dissolve
@@ -665,7 +665,7 @@ label v14s17:
                 scene v14s17_10i # FPP. Same as v14s17_10a, Lauren looking to the side, neutral expresssion, mouth open
                 with dissolve
 
-                la "*Sighs* Look…"
+                la "*Sighs* Look..."
 
                 scene v14s17_13a
                 with dissolve
@@ -739,7 +739,7 @@ label v14s17_end:
     scene v14s17_17b # FPP. Same as v14s17_17, slight smile
     with dissolve
 
-    la "Oh perfect, class is over... Be careful about everything you do during this whole... “Mess”, okay?"
+    la "Oh perfect, class is over... Be careful about everything you do during this whole... \"mess\", okay?"
 
     scene v14s17_17c # FPP. Same as v14s17_17b, mouth closed
     with dissolve
@@ -761,7 +761,7 @@ label v14s17_end:
 
     pause 0.75
 
-    if LaurenRS: 
+    if laurenrs: 
         scene v14s17_19 # TPP. Show MC and Lauren kissing
         with dissolve
 

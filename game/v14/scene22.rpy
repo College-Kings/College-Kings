@@ -49,7 +49,7 @@ label v14s22:
     scene v14s22_5
     with dissolve
 
-    li "I did a little favor for the janitor and now…"
+    li "I did a little favor for the janitor and now..."
 
     scene v14s22_5
     with dissolve
@@ -74,7 +74,7 @@ label v14s22:
     scene v14s22_5a
     with dissolve
 
-    u "*Whispers* Thank fucking god… *Chuckles*"
+    u "*Whispers* Thank fucking god... *Chuckles*"
 
     scene v14s22_5
     with dissolve
@@ -84,7 +84,7 @@ label v14s22:
     scene v14s22_5a
     with dissolve
 
-    u "Oh… Wow, Lindsey."
+    u "Oh... Wow, Lindsey."
 
     scene v14s22_5e # FPP. same as v14s22_5 lindsey hand gesture, hand open, palm up
     with dissolve
@@ -94,7 +94,7 @@ label v14s22:
     scene v14s22_5a
     with dissolve
 
-    u "“Just helped”? You’re an angel, Lindsey. *Chuckles*"
+    u "\"Just helped\"? You're an angel, Lindsey. *Chuckles*"
 
     scene v14s22_5a
     with dissolve
@@ -109,7 +109,7 @@ label v14s22:
     scene v14s22_5a
     with dissolve
 
-    u "(Yep, he’s definitely the devil.)"
+    u "(Yep, he's definitely the devil.)"
 
     scene v14s22_5e
     with dissolve
@@ -126,7 +126,7 @@ label v14s22:
 
     pause 0.75
 
-    scene v14s22_7 # TPP. from the hallways perspective Lindsey makes sure no one’s around and/or coming, closes door and then back at MC
+    scene v14s22_7 # TPP. from the hallways perspective Lindsey makes sure no one's around and/or coming, closes door and then back at MC
     with dissolve
 
     pause 0.75
@@ -164,7 +164,7 @@ label v14s22:
     scene v14s22_5f
     with dissolve
 
-    li "Before we start, I wanna run you through some things because this isn’t as easy as I originally thought."
+    li "Before we start, I wanna run you through some things because this isn't as easy as I originally thought."
 
     scene v14s22_5g
     with dissolve
@@ -179,7 +179,7 @@ label v14s22:
     scene v14s22_5f
     with dissolve
 
-    li "So money is priority number one, aka “secure funding”."
+    li "So money is priority number one, aka \"secure funding\"."
 
     scene v14s22_5g
     with dissolve
@@ -189,7 +189,7 @@ label v14s22:
     scene v14s22_5i # FPP. same as v14s22_5f lindsey rolls her eyes
     with dissolve
 
-    li "Right. Unlike, well… Others."
+    li "Right. Unlike, well... Others."
 
     scene v14s22_5g
     with dissolve
@@ -204,7 +204,7 @@ label v14s22:
     scene v14s22_5e
     with dissolve
 
-    li "Both plans work and I’m comfortable with either one so...Whatever you decide is what I'll go with."
+    li "Both plans work and I'm comfortable with either one so...Whatever you decide is what I'll go with."
 
     scene v14s22_5g
     with dissolve
@@ -236,14 +236,14 @@ label v14s22_sell_car:
     scene v14s22_5a
     with dissolve
 
-    u "What’s so funny?"
+    u "What's so funny?"
 
     if chloegf:
 
         scene v14s22_5e
         with dissolve
 
-        li "I just kinda figured that you wouldn’t have chosen the other option. Based on your relationship with her, you know?"
+        li "I just kinda figured that you wouldn't have chosen the other option. Based on your relationship with her, you know?"
 
         scene v14s22_5e
         with dissolve
@@ -253,7 +253,7 @@ label v14s22_sell_car:
         scene v14s22_5a
         with dissolve
 
-        u "Yeah, I think we’ll be alright. I’m quite confident in myself. *Chuckles*"
+        u "Yeah, I think we'll be alright. I'm quite confident in myself. *Chuckles*"
 
     else:
 
@@ -275,7 +275,7 @@ label v14s22_sell_car:
         scene v14s22_5a
         with dissolve
 
-        u "Mmm… Probably. *Chuckles*"
+        u "Mmm... Probably. *Chuckles*"
     
     jump v14s22_end
 
@@ -283,53 +283,53 @@ label v14s22_steal:
     scene v14s22_5j # FPP. same as v14s22_5 lindsey is really excited, and throws her hands up in the air
     with dissolve
 
-    li "Haha! This is going to be insane…"
+    li "Haha! This is going to be insane..."
 
     scene v14s22_5
     with dissolve
 
-    u "It’s a really smart plan, I just hope we can pull it off."
+    u "It's a really smart plan, I just hope we can pull it off."
 
     if chloegf:
 
         scene v14s22_5k # FPP. same as v14s22_5f head tilted down, but looking directly up at mc
         with dissolve
 
-        li "I know, me too. And…"
+        li "I know, me too. And..."
 
         scene v14s22_5k
         with dissolve
 
-        li "I really do appreciate the lengths you’re willing to go for me, [name]."
+        li "I really do appreciate the lengths you're willing to go for me, [name]."
 
         scene v14s22_5f
         with dissolve
 
-        li "I wasn’t exactly sure if you’d be “all in” when it came to helping me, you know?"
+        li "I wasn't exactly sure if you'd be \"all in\" when it came to helping me, you know?"
 
         scene v14s22_5g 
         with dissolve
 
-        u "I wouldn’t have chosen to help you if I was too afraid to make hard decisions. My personal relationship with Chloe has nothing to do with this."
+        u "I wouldn't have chosen to help you if I was too afraid to make hard decisions. My personal relationship with Chloe has nothing to do with this."
 
     elif lindseyrs:
 
         scene v14s22_5g
         with dissolve
 
-        u "Or you. I’m here for us. Me and you."
+        u "Or you. I'm here for us. Me and you."
 
     else:
 
         scene v14s22_5f
         with dissolve
 
-        li "Me too, this amount of money could help us tremendously with the rest of the ideas I have for the campaign. Even though it’s a hard pill to swallow..."
+        li "Me too, this amount of money could help us tremendously with the rest of the ideas I have for the campaign. Even though it's a hard pill to swallow..."
 
         scene v14s22_5g
         with dissolve
 
-        u "There’s nothing hard to swallow, Linds. It’s the Chick’s Treasury, right? To help fund the Chick’s?"
+        u "There's nothing hard to swallow, Linds. It's the Chick's Treasury, right? To help fund the Chick's?"
 
         scene v14s22_5f
         with dissolve
@@ -339,7 +339,7 @@ label v14s22_steal:
         scene v14s22_5g
         with dissolve
 
-        u "You’re a chick. No buts. It all adds up to me. *Chuckles*"
+        u "You're a chick. No buts. It all adds up to me. *Chuckles*"
 
     jump v14s22_end
 
@@ -363,7 +363,7 @@ label v14s22_end:
     scene v14s22_5e
     with dissolve
 
-    li "I can’t say I’m very surprised by your choices, though."
+    li "I can't say I'm very surprised by your choices, though."
 
     scene v14s22_5a
     with dissolve
@@ -383,7 +383,7 @@ label v14s22_end:
     scene v14s22_5g
     with dissolve
 
-    u "Haha. Right… Either that, you spy on me, or you're a psychic."
+    u "Haha. Right... Either that, you spy on me, or you're a psychic."
 
     scene v14s22_5f
     with dissolve
@@ -398,7 +398,7 @@ label v14s22_end:
     scene v14s22_5e 
     with dissolve
 
-    li "I may have permission to use this place, but I don't like being in their way when they’re trying to get their job done, haha."
+    li "I may have permission to use this place, but I don't like being in their way when they're trying to get their job done, haha."
 
     scene v14s22_5g
     with dissolve

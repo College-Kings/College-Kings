@@ -75,12 +75,12 @@ label v14s39:
             scene v14s39_1a
             with dissolve
 
-            u "What’d I say?"
+            u "What'd I say?"
 
             scene v14s39_1
             with dissolve
 
-            pe "“We’ll discuss what happened… in private”."
+            pe "\"We'll discuss what happened... in private.\""
 
             scene v14s39_1a
             with dissolve
@@ -112,7 +112,7 @@ label v14s39:
             scene v14s39_2
             with dissolve
 
-            pe "*Chuckles* You’re naughty…"
+            pe "*Chuckles* You're naughty..."
 
         "Hell yeah!":
             scene v14s39_1a
@@ -123,7 +123,7 @@ label v14s39:
             scene v14s39_2
             with dissolve
 
-            pe "Well, I don’t plan to ever push you that far… Ha."
+            pe "Well, I don't plan to ever push you that far... Ha."
 
             scene v14s39_2a
             with dissolve
@@ -133,27 +133,27 @@ label v14s39:
             scene v14s39_2
             with dissolve
 
-            pe "Let’s hope I never do. Ha."
+            pe "Let's hope I never do. Ha."
 
             scene v14s39_2a
             with dissolve
 
-            u "I can’t even imagine you being angry besides with what just happened..."
+            u "I can't even imagine you being angry besides with what just happened..."
 
             scene v14s39_2
             with dissolve
 
-            pe "Haha, it’s not pretty."
+            pe "Haha, it's not pretty."
 
             scene v14s39_2a
             with dissolve
 
-            u "Now I’m curious…"
+            u "Now I'm curious..."
 
             scene v14s39_2
             with dissolve
 
-            pe "Oh my god… *Chuckles*"
+            pe "Oh my god... *Chuckles*"
 
     scene v14s39_3 # TPP. Show MC and Penelope stopping at a cross in the road.
     with dissolve
@@ -177,9 +177,9 @@ label v14s39:
         scene v14s39_4b # FPP. Same as v14s39_4, Penelope nervous smile, mouth open.
         with dissolve
 
-        pe "I…"
+        pe "I..."
 
-        pe "Was kinda hoping…"
+        pe "Was kinda hoping..."
 
         scene v14s39_4c # FPP. Same as v14s39_4b, Penelope nervous smile, mouth closed.
         with dissolve
@@ -194,7 +194,7 @@ label v14s39:
         scene v14s39_5 # TPP. Show MC holding Penelope's hands romantically.
         with dissolve
 
-        pause .25
+        pause 0.25
 
         scene v14s39_4d # FPP. Same as v14s39_4c, Penelope's arms extended out holding MC's, Penelope slight smile, mouth closed.
         with dissolve
@@ -204,9 +204,9 @@ label v14s39:
         scene v14s39_4e # FPP. Same as v14s39_4c, Still holding hands, Penelope slight smile, mouth open.
         with dissolve
 
-        pe "Would you, umm…"
+        pe "Would you, umm..."
 
-        pe "Would you want to come over? And like, stay over? Or…"
+        pe "Would you want to come over? And like, stay over? Or..."
 
         scene v14s39_4d
         with dissolve
@@ -226,7 +226,7 @@ label v14s39:
         scene v14s39_4e
         with dissolve
 
-        pe "You probably think that's stupid, I'm probably rushing things../ This was our first “date” date and here I am trying to-"
+        pe "You probably think that's stupid, I'm probably rushing things... This was our first \"date\" date and here I am trying to-"
 
         scene v14s39_4f # FPP. Same as v14s39_4e, MC grabbing Penelope's face with both hands gently, Penelope slight smile, mouth closed.
         with dissolve
@@ -241,7 +241,7 @@ label v14s39:
         scene v14s39_4f
         with dissolve
 
-        u "Are you kidding? I can’t wait, haha."
+        u "Are you kidding? I can't wait, haha."
 
         play sound "sounds/kiss.mp3"
 
@@ -280,12 +280,12 @@ label v14s39:
             scene v14s39_4a
             with dissolve
 
-            u "It’s fine, I’m sorry if tonight was… also weird,"
+            u "It's fine, I'm sorry if tonight was... also weird,"
 
             scene v14s39_4
             with dissolve
 
-            pe "It’s okay. At least you kept your promise, haha. I'm gonna go."
+            pe "It's okay. At least you kept your promise, haha. I'm gonna go."
 
             scene v14s39_4a
             with dissolve
@@ -298,7 +298,7 @@ label v14s39:
                 scene v14s39_4
                 with dissolve
 
-                pe "I mean…"
+                pe "I mean..."
 
                 pe "Maybe we can try this again? Maybe with a little more planning or something? *Chuckles*"
 
@@ -320,7 +320,7 @@ label v14s39:
             scene v14s39_8 # FPP. Show Penelope walking her way down the side walk.
             with dissolve
 
-            pause .25
+            pause 0.25
 
             scene v14s39_9 # TPP. MC walking down the side walk to his room, slight smile, mouth closed.
             with dissolve
@@ -330,7 +330,7 @@ label v14s39:
             scene v14s39_9
             with dissolve
 
-            pause .25
+            pause 0.25
 
             if joinwolves:
                 jump v14s40
