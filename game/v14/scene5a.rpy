@@ -64,7 +64,7 @@ label v14s05a:
         scene v14s05a_7a
         with dissolve
 
-        u "It definitely picked me up... *Laughs*."
+        u "It definitely picked me up... *Laughs*"
 
         scene v14s05a_7b # FPP. Same as v14s05a_7, different posture
         with dissolve

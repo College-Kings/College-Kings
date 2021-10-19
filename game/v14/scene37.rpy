@@ -7,17 +7,17 @@ label v14s37:
     scene v14s37_1 # TPP. Show MC arriving at the restaurant wearing the nice clothes he put on in scene 34, his clothes slightly blowing from the wind, MC slight smile, mouth closed. 
     with fade
 
-    pause .25
+    pause 0.25
 
     scene v14s37_2 # TPP. Show MC spotting Penelope in the dress she put on in scene 34 outside of the restraunt and walking towards her, both slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.25
 
     scene v14s37_2a # TPP. Same as v14s37_2, MC standing infront of Penelope, both slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.25
 
     scene v14s37_3 # FPP. MC and Penlope outside of the restaurant, Penelope looking at MC, MC looking at Penelope, Penelope slight smile, mouth closed.
     with dissolve
@@ -57,7 +57,7 @@ label v14s37:
     scene v14s37_4 # TPP. Show MC holding the door open for Penelope, Penelope not entering yet, MC slight smile, mouth open, Penelope slight smile, mouth closed.
     with dissolve
 
-    u "After you, m’lady."
+    u "After you, m'lady."
 
     scene v14s37_4a # TPP. Penelope walking into the restaurant as MC holds open the door, MC slight smile, mouth closed, Penelope slight smile, mouth open.
     with dissolve
@@ -82,12 +82,12 @@ label v14s37:
     scene v14s37_7 # TPP. Show MC and Penelope following the Host to their table.
     with dissolve
 
-    pause .25
+    pause 0.25
 
     scene v14s37_8 # TPP. Show MC and Penelope pulling out their seats from under the table.
     with dissolve
 
-    pause .25
+    pause 0.25
 
     scene v14s37_9 # FPP. MC and Penelope(Penelope off camera) sitting at the table. MC looking at the host, Host looking at MC, Host slight smile, mouth open.
     with dissolve
@@ -97,7 +97,7 @@ label v14s37:
     scene v14s37_9a # FPP. Same as v14s37_9, Host slight smile, mouth closed.
     with dissolve
 
-    u "I’ll just have water, please."
+    u "I'll just have water, please."
 
     scene v14s37_10 # FPP. MC and Penelope still sitting down, MC looking at Penelope, Penelope looking at Host (Host off camera), Penolope slight smile, mouth open.
     with dissolve
@@ -122,12 +122,12 @@ label v14s37:
     scene v14s37_9c # FPP. Same as v14s37_9b, Show the Host walking off.
     with dissolve
 
-    pause .25
+    pause 0.25
 
     scene v14s37_10a # FPP. Same as v14s37_10, Penelope looking at MC, MC looking at Penelope, Penelope slight smile, mouth open.
     with dissolve
 
-    pe "I'll be honest… I'm not hungry at all. *Chuckles*"
+    pe "I'll be honest... I'm not hungry at all. *Chuckles*"
 
     scene v14s37_10b # FPP. Same as v14s37_10a, Penelope slight smile, mouth closed.
     with dissolve
@@ -142,7 +142,7 @@ label v14s37:
     scene v14s37_10b
     with dissolve
 
-    u "Haha no, I won’t force you to."
+    u "Haha no, I won't force you to."
 
     scene v14s37_10a
     with dissolve
@@ -166,7 +166,7 @@ label v14s37:
     scene v14s37_10a
     with dissolve
 
-    pe "Oh… Are you sure?"
+    pe "Oh... Are you sure?"
 
     scene v14s37_10b
     with dissolve
@@ -266,12 +266,12 @@ label v14s37:
     scene v14s37_14
     with dissolve
 
-    gentleman "Hmm, do you guys have a dessert menu? I didn't find one…"
+    gentleman "Hmm, do you guys have a dessert menu? I didn't find one..."
 
     scene v14s37_15
     with dissolve
 
-    lady "For suck’s sake, you're like a child. That'll be all for now."
+    lady "For suck's sake, you're like a child. That'll be all for now."
 
     scene v14s37_14a # TPP. Same as v14s37_14, Gentleman looking at the lady (Lady off-camera), gentleman slight frown, mouth open.
     with dissolve
@@ -291,7 +291,7 @@ label v14s37:
     scene v14s37_12a # TPP. Same as v14s37_12, The host walking away from the table, confused face, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.25
 
     scene v14s37_10c # FPP. Same as v14s37_10b, MC looking at Penelope, Penelope looking at MC, Penlope slight sad face, mouth open.
     with dissolve
@@ -306,7 +306,7 @@ label v14s37:
     scene v14s37_10c
     with dissolve
 
-    pe "*Sighs* Some people…"
+    pe "*Sighs* Some people..."
 
     scene v14s37_10e # FPP. Same as v14s37_10d, Penlope turning to look over at the previous couple that was having issues, Penelope sad face, mouth closed.
     with dissolve
@@ -336,7 +336,7 @@ label v14s37:
     scene v14s37_10c
     with dissolve
 
-    pe "Nope. You're gonna laugh…"
+    pe "Nope. You're gonna laugh..."
 
     scene v14s37_10d
     with dissolve
@@ -351,7 +351,7 @@ label v14s37:
     scene v14s37_10b
     with dissolve
 
-    u "Haha, okay, okay… Phew. I’m ready."
+    u "Haha, okay, okay... Phew. I'm ready."
 
     scene v14s37_10a
     with dissolve
@@ -374,14 +374,14 @@ label v14s37:
             scene v14s37_10b
             with dissolve 
             
-            u "Woah, I didn’t know that was a thing. Why’d it get cancelled?"
+            u "Woah, I didn't know that was a thing. Why'd it get cancelled?"
 
         "Laugh...":
             $ addPoint("tm")
             scene v14s37_10b
             with dissolve
             
-            u "*Laughs* I'm sorry… I-"
+            u "*Laughs* I'm sorry... I-"
 
             scene v14s37_10c
             with dissolve
@@ -391,12 +391,12 @@ label v14s37:
             scene v14s37_10d
             with dissolve
 
-            u "*Chuckles* I'm sorry. I just…  I thought of a cartoon I used to watch that had a hall monitor episode, and it made me-"
+            u "*Chuckles* I'm sorry. I just... I thought of a cartoon I used to watch that had a hall monitor episode, and it made me-"
 
             scene v14s37_10f # FPP. Same as v14s37_10c, Penelope neutral face as she is unamused, mouth closed.
             with dissolve
 
-            u "*Coughs* Ahem, excuse me… So, why’d it get cancelled?"
+            u "*Coughs* Ahem, excuse me... So, why'd it get cancelled?"
 
     scene v14s37_10c
     with dissolve
@@ -418,7 +418,7 @@ label v14s37:
 
     lady "Get your elbows off of the table! What part of that seems mature to you?"
 
-    lady "I ask for one nice dinner, no hassle and this is the bullshit you give me. *Whispers* What a fucking loser…"
+    lady "I ask for one nice dinner, no hassle and this is the bullshit you give me. *Whispers* What a fucking loser..."
 
     scene v14s37_14a
     with dissolve
@@ -499,7 +499,7 @@ label v14s37:
     scene v14s37_10b
     with dissolve
 
-    u "Definitely feels like we didn't miss a beat. *Chuckles* Classes, frat stuff, Julia across the country… Everything just picked right back up."
+    u "Definitely feels like we didn't miss a beat. *Chuckles* Classes, frat stuff, Julia across the country... Everything just picked right back up."
 
     scene v14s37_10m # FPP. Same as v14s37_10a, Penelope confused worried face, mouth open.
     with dissolve
@@ -509,17 +509,17 @@ label v14s37:
     scene v14s37_10b
     with dissolve
 
-    u "Oh! Shit! No, no. It’s not what you’re thinking. She’s my dad’s ex. The person who raised me pretty much."
+    u "Oh! Shit! No, no. It's not what you're thinking. She's my dad's ex. The person who raised me pretty much."
 
     scene v14s37_10a
     with dissolve
 
-    pe "Oh! *Laughs* I’m sorry, haha."
+    pe "Oh! *Laughs* I'm sorry, haha."
 
     scene v14s37_10b
     with dissolve
 
-    u "Haha, no need to apologize. I didn’t realize I never really speak about her to anyone."
+    u "Haha, no need to apologize. I didn't realize I never really speak about her to anyone."
 
     scene v14s37_10n # FPP. Same as v14s30_10m, Penelope full smile, mouth closed.
     with dissolve
@@ -529,7 +529,7 @@ label v14s37:
     scene v14s37_10b
     with dissolve
 
-    u "She’s in New York for work, and probably won’t be back for a while. So with that and school and the frat… Yeah, it’s a lot."
+    u "She's in New York for work, and probably won't be back for a while. So with that and school and the frat... Yeah, it's a lot."
 
     scene v14s37_10a
     with dissolve
@@ -554,7 +554,7 @@ label v14s37:
     scene v14s37_10a
     with dissolve
 
-    pe "*Laughs* Those girls would eat me alive like a pack of wolves. No pun intended…"
+    pe "*Laughs* Those girls would eat me alive like a pack of wolves. No pun intended..."
 
     scene v14s37_10b
     with dissolve
@@ -584,7 +584,7 @@ label v14s37:
     scene v14s37_10a
     with dissolve
 
-    pe "Yeah, you're right. Again. Ugh…"
+    pe "Yeah, you're right. Again. Ugh..."
 
     scene v14s37_10b
     with dissolve
@@ -614,12 +614,12 @@ label v14s37:
     scene v14s37_10a
     with dissolve
 
-    pe "Yes. I think she said something to the school board so that they didn’t want to give me a chance."
+    pe "Yes. I think she said something to the school board so that they didn't want to give me a chance."
 
     scene v14s37_10b
     with dissolve
 
-    u "Sounds like slander, bullying, all of the above…"
+    u "Sounds like slander, bullying, all of the above..."
 
     scene v14s37_10a
     with dissolve
@@ -664,7 +664,7 @@ label v14s37:
     scene v14s37_17 # TPP. Shot of both Penelope and MC starting to lean over the table to kiss each other.
     with dissolve
 
-    pause .25
+    pause 0.25
 
     scene v14s37_17a # TPP. Same as v14s37_17, Penelope and MC kissing across the table.
     with dissolve
@@ -674,7 +674,7 @@ label v14s37:
     scene v14s37_10a
     with dissolve
 
-    pe "I love how you're always looking out for me. Makes me feel like I can be completely vulnerable around you…"
+    pe "I love how you're always looking out for me. Makes me feel like I can be completely vulnerable around you..."
 
     scene v14s37_10b
     with dissolve
@@ -707,12 +707,12 @@ label v14s37:
         scene v14s37_18 # TPP. Penelope walking up to the table that the gentleman and the lady are at, Penelope angry face, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.25
 
         scene v14s37_19 # TPP. Close up of Penelope putting her finger in the ladies face, Penleope angry face, mouth open, Lady shocked face, mouth closed.
         with dissolve
 
-        pe "Listen up, Princess!  I came here to go on a wonderful date, just like you. And I CAN’T DO THAT because YOU won’t stop being A BITCH!"
+        pe "Listen up, Princess! I came here to go on a wonderful date, just like you. And I CAN'T DO THAT because YOU won't stop being A BITCH!"
 
         scene v14s37_20 # TPP. Close up of Penelope and the Gentleman looking at each other, Gentleman slight frown, mouth closed, Penelope angry face, mouth open.
         with dissolve
@@ -724,7 +724,7 @@ label v14s37:
 
         pe "And you."
 
-        pe "Keep your shitty attitude, and your miserable life to yourself, okay? This world doesn’t revolve around you. If I ever see you again and you're speaking to someone like this, I’ll have more than just words to say next time."
+        pe "Keep your shitty attitude, and your miserable life to yourself, okay? This world doesn't revolve around you. If I ever see you again and you're speaking to someone like this, I'll have more than just words to say next time."
 
         scene v14s37_19b # TPP. Same as v14ss37_19a, Penelope with a disgusted angry face, mouth closed, Lady shocked face, mouth open.
         with dissolve
@@ -734,7 +734,7 @@ label v14s37:
         scene v14s37_20a # TPP. Same as v14s37_20, Penelope angry face, mouth closed, Gentleman slight frown, mouth open.
         with dissolve
 
-        gentleman "I-…"
+        gentleman "I-..."
 
         scene v14s37_21 # TPP. Close up of just Penelope, Penelope angry face, mouth open.
         with dissolve
@@ -764,7 +764,7 @@ label v14s37:
         scene v14s37_24a # FPP. Same as v14s37_24, Penelope slight smile, mouth open.
         with dissolve
         
-        pe "Yeah, I’m fine. She just really pissed me off, that’s all."
+        pe "Yeah, I'm fine. She just really pissed me off, that's all."
 
         scene v14s37_24
         with dissolve
@@ -779,12 +779,12 @@ label v14s37:
         scene v14s37_10h
         with dissolve
 
-        pe "*Sighs* [name]... I don’t want to ruin our night, but-"
+        pe "*Sighs* [name]... I don't want to ruin our night, but-"
 
         scene v14s37_10i
         with dissolve
 
-        u "Say no more, let’s go. We’ll come back another time."
+        u "Say no more, let's go. We'll come back another time."
 
         scene v14s37_10a
         with dissolve

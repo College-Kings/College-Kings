@@ -97,7 +97,7 @@ label v14s25b:
 
     pause 0.75
 
-    if help_Lindsay: 
+    if v14_help_lindsey: 
 
         jump v14s26
     

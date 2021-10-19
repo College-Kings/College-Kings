@@ -164,7 +164,7 @@ label v13s37_nora:
     scene v13s37no_2b
     with dissolve
 
-    u "I saw you avoiding him and it looks as though every smile you give is forced so hard that you're going to throw up. *Chuckles*."
+    u "I saw you avoiding him and it looks as though every smile you give is forced so hard that you're going to throw up. *Chuckles*"
 
     scene v13s37no_2c
     with dissolve

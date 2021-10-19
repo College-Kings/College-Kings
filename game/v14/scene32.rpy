@@ -31,7 +31,7 @@ label v14s32:
     scene v14s32_2c # FPP. Same as v14s32_2b, Imre now looking at MC, shocked smile, mouth open.
     with dissolve
 
-    imre "What are you wearing? *Laughs*  Why didn't you come dressed to workout?"
+    imre "What are you wearing? *Laughs* Why didn't you come dressed to work out?"
 
     scene v14s32_2d # FPP. Same as v14s32_2c, Imre slight smile, mouth closed.
     with dissolve
@@ -238,7 +238,7 @@ label v14s32:
 
     pause 0.75
 
-    scene v14s32_2g # FPP. Same  as v14s32_2f, Imre pointing behind MC, shocked face, mouth closed.
+    scene v14s32_2g # FPP. Same as v14s32_2f, Imre pointing behind MC, shocked face, mouth closed.
     with dissolve
 
     pause 0.75

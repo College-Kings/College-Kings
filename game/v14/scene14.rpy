@@ -4,6 +4,11 @@
 # Time: Morning
 
 label v14s14:
+    scene black
+    with fade
+    
+    pause 2
+
     $ contact_Chloe.newMessage(_("You won't believe what I'm looking at right now!!!!"), queue=False)
     play sound "sounds/vibrate.mp3"
 

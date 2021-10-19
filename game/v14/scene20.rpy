@@ -1,4 +1,4 @@
-# SCENE 20:  AUTUMN PROMOTING THE GRAND RE-OPENING OF DOG SHELTER
+# SCENE 20: AUTUMN PROMOTING THE GRAND RE-OPENING OF DOG SHELTER
 # Locations: School hallways
 # Characters: AUTUMN (Outfit: 1), MC (Outfit: 1)
 # Time: Tuesday
@@ -77,7 +77,7 @@ label v14s20:
     scene v14s20_3
     with dissolve
 
-    aut "We didn't really. We just had some major exterior renovations and they also renamed the place. After about a month or so of being closed we wanted to have a little celebration day for the community."
+    aut "We didn't really. We just had some major exterior renovations and they also renamed the place. It took a few weeks and we wanted to have a little celebration day for the community."
 
     scene v14s20_3a
     with dissolve
@@ -233,7 +233,7 @@ label v14s20:
 
         u "That girl can give anyone a good time, but she's very influential. She knows how to..."
 
-        u "Lure other people to the darkside. *Chuckles* If you know what I mean."
+        u "...lure other people to the darkside. *Chuckles* If you know what I mean."
 
         scene v14s20_3f
         with dissolve
@@ -344,7 +344,7 @@ label v14s20:
     scene v14s20_3a
     with dissolve
 
-    u "*Laughs* You know, I don't think I've ever seen you hangout with anyone."
+    u "*Laughs* You know, I don't think I've ever seen you hang out with anyone."
 
     scene v14s20_3c
     with dissolve
@@ -421,7 +421,6 @@ label v14s20:
 
     menu:
         "We should hang out more":
-
             u "We should just hang out more. *Laughs*"
 
             scene v14s20_3
@@ -452,7 +451,7 @@ label v14s20:
             scene v14s20_3a
             with dissolve
 
-            u "I'll be waiting by the phone. *Chuckles*."
+            u "I'll be waiting by the phone. *Chuckles*"
 
             scene v14s20_3
             with dissolve
@@ -470,7 +469,6 @@ label v14s20:
             pause 0.75
 
         "It was nice catching up":
-
             u "It was really nice catching up with you, but I actually need to hurry. I've got this thing..."
 
             scene v14s20_3a

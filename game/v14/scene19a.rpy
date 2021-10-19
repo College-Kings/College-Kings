@@ -32,7 +32,7 @@ label v14s19a:
     scene v14s19a_1c # FPP Same angle as 1, Chloe with neutral expression, mouth closed
     with dissolve
 
-    u "The Wolves supporting you already? I ran into Imre this morning while he was chanting in your favor. *Chuckles*."
+    u "The Wolves supporting you already? I ran into Imre this morning while he was chanting in your favor. *Chuckles*"
 
     scene v14s19a_2 # TPP Chloe talking to MC, Chloe's hand on MC's arm, Chloe laughing, mouth open
     with dissolve
@@ -72,7 +72,7 @@ label v14s19a:
     scene v14s19a_1
     with dissolve
 
-    cl "Whatever's happening between Chris and Nora is their business, and I think because I don't get involved as much as others, we have this unspoken respective relationship, you know?."
+    cl "Whatever's happening between Chris and Nora is their business, and I think because I don't get involved as much as others, we have this unspoken respective relationship, you know?"
 
     scene v14s19a_1a
     with dissolve
@@ -166,6 +166,7 @@ label v14s19a:
         menu:
             "Talk to Chris":
                 $ chloe.points += 1
+                $ v14_talk_to_chris = True
                 scene v14s19a_1g
                 with dissolve
                 u "Of course I can."

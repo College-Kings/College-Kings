@@ -100,7 +100,7 @@ label v14s30b:
         scene v14s30b_2
         with dissolve
 
-        cl "Good call, *Chuckles*. I'm gonna post that one on Kiwii."
+        cl "Good call. *Chuckles* I'm gonna post that one on Kiwii."
 
     if v14_full_chris_support or v14_rw_half_chris_support:
      
@@ -134,7 +134,7 @@ label v14s30b:
         with dissolve
 
 
-        cl "Good call, *Chuckles*. I'm gonna post that one on Kiwii."
+        cl "Good call. *Chuckles* I'm gonna post that one on Kiwii."
 
     scene v14s30b_2a
     with dissolve

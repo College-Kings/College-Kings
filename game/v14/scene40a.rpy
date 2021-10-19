@@ -22,7 +22,7 @@ label v14s40a:
     scene v14s40a_3 # TPP. MC walking down the stairs in the Wolves house, slight smile, mouth closed.
     with dissolve
 
-    u "(Let’s start the day, shall we?)"
+    u "(Let's start the day, shall we?)"
 
     scene v14s40a_4 # TPP. MC walking up to Sebastian who is in the living room of the Wolves house.
     with dissolve
@@ -46,10 +46,10 @@ label v14s40a:
 
     menu:
         "I don't hate it...":
-           scene v14s40a_5a
+            scene v14s40a_5a
             with dissolve
 
-            u "I… don’t hate it, actually. *Laughs*"
+            u "I... don't hate it, actually. *Laughs*"
 
             scene v14s40a_5
             with dissolve
@@ -86,7 +86,7 @@ label v14s40a:
     scene v14s40a_5
     with dissolve
 
-    se "Anyway… Just a little heads up. There may be a drug test coming up soon so make sure you're clean. Are you clean?"
+    se "Anyway... Just a little heads up. There may be a drug test coming up soon so make sure you're clean. Are you clean?"
 
     menu:
         "I'm clean...":
@@ -120,7 +120,7 @@ label v14s40a:
     with dissolve
 
 
-    u "(This man is calling me sunshine and he knows my class schedule? Is this what it’s like to have a father…? *Laughs*)"
+    u "(This man is calling me sunshine and he knows my class schedule? Is this what it's like to have a father...? *Laughs*)"
 
     scene v14s40a_6 # TPP. Show MC entering the class hallways, slight smile, mouth closed.
     with fade

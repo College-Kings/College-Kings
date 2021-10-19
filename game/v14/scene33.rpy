@@ -141,7 +141,7 @@ label v14s33:
 
                     la "I will. Just, um..."
 
-                    la "Just go  back to whatever you were doing."
+                    la "Just go back to whatever you were doing."
 
                     scene v14s33_3a
                     with dissolve
@@ -186,7 +186,7 @@ label v14s33:
                     scene v14s33_3a
                     with dissolve
 
-                    u "O-Oh! *Chuckles* Well shit, I guess I'll let you go handle your biz. ."
+                    u "O-Oh! *Chuckles* Well shit, I guess I'll let you go handle your biz."
 
                     scene v14s33_3
                     with dissolve
@@ -355,7 +355,7 @@ label v14s33:
 
                         la "I will. Just, um..."
 
-                        la "Just go  back to whatever you were doing."
+                        la "Just go back to whatever you were doing."
 
                         scene v14s33_3a
                         with dissolve
@@ -401,7 +401,7 @@ label v14s33:
                         scene v14s33_3a
                         with dissolve
 
-                        u "O-Oh! *Chuckles* Well shit, I guess I'll let you go handle your biz. ."
+                        u "O-Oh! *Chuckles* Well shit, I guess I'll let you go handle your biz."
 
                         scene v14s33_3
                         with dissolve

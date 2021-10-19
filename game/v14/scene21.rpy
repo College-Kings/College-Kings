@@ -98,7 +98,7 @@ label v14s21:
     scene v14s21_2d
     with dissolve
 
-    u "And honestly Chloe,  I'll do whatever I can to help keep that gorgeous smile on your face for as long as humanly possible."
+    u "And honestly Chloe, I'll do whatever I can to help keep that gorgeous smile on your face for as long as humanly possible."
 
     scene v14s21_2f # FPP. Same as v14s21_2d, MC no longer holding Chloe's face, Chloe's arms wrapped around MC's neck, Chloe slight smile, mouth open.
     with dissolve
@@ -108,7 +108,7 @@ label v14s21:
     scene v14s21_2g # FPP. Same as v14s21_2f, Chloe slight smile, mouth closed.
     with dissolve
 
-    u "*Chuckles* I do now, I suppose. Although, I'm not completely agreeing with you on that one... ."
+    u "*Chuckles* I do now, I suppose. Although, I'm not completely agreeing with you on that one..."
 
     scene v14s21_2f
     with dissolve
