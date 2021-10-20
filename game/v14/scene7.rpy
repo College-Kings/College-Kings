@@ -17,7 +17,7 @@ label v14s07:
     scene v14s07_2 # FPP. show just Ms. Rose in hotel lobby, full smile, mouth open, one arm raised
     with dissolve
 
-    ro "Students, thank you for all being quick and ready to head back home."
+    ro "Students, thank you all for being quick and ready to head back home."
 
     scene v14s07_2a # FPP. same asv14s07_2 ms rose has put her hand down
     with dissolve
