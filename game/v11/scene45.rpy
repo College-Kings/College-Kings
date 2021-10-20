@@ -23,6 +23,7 @@ label v11_lobby_mrlee:
         with dissolve
 
         lee "The nostalgia while being at the museum and the deep dive into a dinosaur debate..."
+    
     else:
         scene v11lob1
         with dissolve
@@ -33,26 +34,32 @@ label v11_lobby_mrlee:
     with dissolve
 
     lee "The teaching of maturity and manhood..."
-
-    scene v11lob6 # FPP. Show Chloe and lindsey slight smile
-    with dissolve
-
-    lee "The feeling of fantasy as we rode in the carriages..."
+  
     if emily_europe:
+        scene v11lob6 # FPP. Show Chloe and lindsey slight smile
+        with dissolve
+
+        lee "The feeling of fantasy as we rode in the carriages..."
+
         scene v11lob7 # FPP. Show Emily, slight sad face
         with dissolve
 
         lee "Even the most trying times are moments that I look back on with great satisfaction. From every trial, there is much to be learned."
+    
     else:
         scene v11lob1
         with dissolve
+        
+        lee "The feeling of fantasy as we rode in the carriages..."
 
         lee "Even the most trying times are moments that I look back on with great satisfaction. From every trial, there is much to be learned."
+    
     if v11_invite_sam_europe:
         scene v11lob8 # FPP. Show samantha and cameron neutral look
         with dissolve
 
         lee "I know many of you were really looking forward to this trip, and I hope that so far it has reached your expectations, but if not... There are many more opportunities ahead."
+    
     else:
         scene v11lob1
         with dissolve
@@ -64,6 +71,7 @@ label v11_lobby_mrlee:
         with dissolve
 
         lee "To end our time here in London before we take off on our next Europe adventure, I'll be treating everyone to a wonderful dinner."
+    
     else:
         scene v11lob1
         with dissolve
