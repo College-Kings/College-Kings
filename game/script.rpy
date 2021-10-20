@@ -1,12 +1,10 @@
-define config.enable_steam = False
+define config.enable_steam = True
 define config.developer = False
 define config.console = True
 define config_debug = False
 define config_censored = False
 
-#define config.version = "13.1.3{}".format('s' if config.enable_steam)
-define config.version = "13.1.3"
-define gui.main_menu_background = "gui/mainMenu/mainMenuBackground.webp"
+define config.version = "13.1.4{}".format('s' if config.enable_steam else "")
 
 define config.steam_appid = 1463120
 
