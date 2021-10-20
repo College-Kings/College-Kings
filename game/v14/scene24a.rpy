@@ -51,8 +51,13 @@ label v14s24a:
     
     pause 0.75
 
-    scene v14s24a_9  # TPP. MC, smiling, walks with the candy towards the cash register (do not show the cashier).
-    with dissolve
+    if v14s24a_gummyfish:
+        scene v14s24a_9  # TPP. MC, smiling, walks with the gummy fish towards the cash register (do not show the cashier).
+        with dissolve
+    
+    else:
+        scene v14s24a_9a # # TPP. MC, smiling, walks with the Twezzlers towards the cash register (do not show the cashier).
+        with dissolve
 
     pause 0.75
 
