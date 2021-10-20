@@ -95,7 +95,7 @@ label v14s16:
     scene v14s16_2
     with dissolve
 
-    cl "*Speaking fast* Like, what the actual fuck!? Am I missing something?! I have to win this race! She can't just, fuck everything up all because she's doesn't trust me!"
+    cl "*Speaking fast* Like, what the actual fuck!? Am I missing something?! I have to win this race! She can't just, fuck everything up all because she doesn't trust me!"
 
     show screen loyalty_tutorial # Placeholder
 
