@@ -147,3 +147,5 @@ define character.satin = Character("Satin", who_color="#ecd9c9", who_outlines=[ 
 define character.wtrain = Character("Woman", who_color="#ff1694", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.rub = Character("Rubee", who_color="#8b0000", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.trainer = Character("Trainer", who_color="#147efb", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.lady = Character("Lady")
+define character.gentleman = Character("Gentleman")
