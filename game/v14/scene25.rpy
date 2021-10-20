@@ -26,7 +26,7 @@ label v14s25:
     scene v14s25_3 # TPP. MC walking inside of Amber's house.
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v14s25_4 # FPP. MC finds Amber in the living room sitting on the floor with her back against the couch as she is smoking, Amber not realising MC is in the room yet, Amber neutral smile, mouth closed.
     with dissolve
@@ -148,7 +148,7 @@ label v14s25:
     scene v14s25_4f
     with dissolve
 
-    am "Haha, c'mon let's go to my room."
+    am "Haha, c'mon. Let's go to my room."
 
     scene v14s25_4e
     with dissolve
@@ -225,7 +225,7 @@ label v14s25:
     scene v14s25_8a
     with dissolve
 
-    u "Okay... I know you like being wild Amber, but you've always been responsible when it comes to this stuff."
+    u "Okay... I know you like being wild, Amber. But you've always been responsible when it comes to this stuff."
 
     u "When Josh was at his lowest point, it was you that helped him."
 
@@ -360,7 +360,7 @@ label v14s25:
     scene v14s25_8e
     with dissolve
 
-    u "Forgive yourself for what you have done in the past. Iff things happened outside of your control, then oh well."
+    u "Forgive yourself for what you have done in the past. If things happened outside of your control, then oh well."
 
     scene v14s25_8d
     with dissolve
@@ -428,7 +428,7 @@ label v14s25:
     scene v14s25_9 # TPP. Close up of Amber looking at the pill bottle, MC off camera, slight frown, mouth closed.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v14s25_8d
     with dissolve
@@ -443,7 +443,7 @@ label v14s25:
     scene v14s25_8d
     with dissolve
 
-    am "[name], If I didn't have one of these every now and again, especially on days like this..."
+    am "[name], if I didn't have one of these every now and again, especially on days like this..."
 
     scene v14s25_8j
     with dissolve
@@ -589,14 +589,14 @@ label v14s25:
             scene v14s25_13d # FPP. Same as v14s25_13c, MC looking at Amber's empty room.
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             play sound "sounds/flush.mp3"
             
             scene v14s25_13d
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v14s25_14 # FPP. Amber walking back in the room towards MC, Amber slight smile, mouth closed
             with dissolve
@@ -784,12 +784,12 @@ label v14s25:
             scene v14s25_18b # TPP. Same as v14s25_18a, Amber flipping the light switch, Amber slight smile, mouth closed.
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v14s25_17a # TPP. Same as v14s25_17, Show MC and Amber laying in bed, both slight smile, mouth closed.
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v14s25_17b # TPP. Same as v14s25_17a, MC and Amber sleeping.
             with fade
@@ -799,7 +799,7 @@ label v14s25:
             scene v14s25_17c # TPP. Same as v14s25_17b, MC and Amber sleeping in different positions.
             with fade
 
-            pause 0.5
+            pause 0.75
 
             scene v14s25_17d # TPP. MC wakes up with topless Amber sleeping on him.
             with dissolve
@@ -1016,12 +1016,12 @@ label v14s25:
                     scene v14s25_18b
                     with dissolve
 
-                    pause 0.5
+                    pause 0.75
 
                     scene v14s25_17a
                     with dissolve
 
-                    pause 0.5
+                    pause 0.75
 
                     scene v14s25_17b
                     with fade
@@ -1031,7 +1031,7 @@ label v14s25:
                     scene v14s25_17c
                     with fade
 
-                    pause 0.5
+                    pause 0.75
 
                     scene v14s25_17d
                     with dissolve

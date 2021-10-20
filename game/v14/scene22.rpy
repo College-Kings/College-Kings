@@ -3,9 +3,7 @@
 # Characters: MC (Outfit: 9), LINDSEY (Outfit: 1)
 # Time: Evening
 
-
 label v14s22:
-    
     scene v14s22_1 # TPP. MC is walking on campus and stumbles upon the janitor's closet, slight smile, mouth closed
     with dissolve
 
@@ -114,7 +112,7 @@ label v14s22:
     scene v14s22_5e
     with dissolve
 
-    li "He said it with a smile and the janitor laughed, but it really seemed like a deal with the devil type of moment... We should be careful about making deals with him in the future."
+    li "He said it with a smile and the janitor laughed, but it really seemed like a \"deal with the devil\" type of moment... We should be careful about making deals with him in the future."
 
     scene v14s22_5a
     with dissolve
@@ -133,6 +131,7 @@ label v14s22:
 
     scene v14s22_5f # FPP. same as v14s22_5e lindsey slight smile, but serious look, mouth open
     with dissolve
+    play sound "sounds/doorclose.mp3"
 
     li "Okay, so... the reason we're here."
 
@@ -189,7 +188,7 @@ label v14s22:
     scene v14s22_5i # FPP. same as v14s22_5f lindsey rolls her eyes
     with dissolve
 
-    li "Right. Unlike, well... Others."
+    li "Right. Unlike, well... others."
 
     scene v14s22_5g
     with dissolve
@@ -204,7 +203,7 @@ label v14s22:
     scene v14s22_5e
     with dissolve
 
-    li "Both plans work and I'm comfortable with either one so...Whatever you decide is what I'll go with."
+    li "Both plans work and I'm comfortable with either one so... Whatever you decide is what I'll go with."
 
     scene v14s22_5g
     with dissolve
@@ -239,7 +238,6 @@ label v14s22_sell_car:
     u "What's so funny?"
 
     if chloegf:
-
         scene v14s22_5e
         with dissolve
 
@@ -256,7 +254,6 @@ label v14s22_sell_car:
         u "Yeah, I think we'll be alright. I'm quite confident in myself. *Chuckles*"
 
     else:
-
         scene v14s22_5
         with dissolve
 
@@ -291,7 +288,6 @@ label v14s22_steal:
     u "It's a really smart plan, I just hope we can pull it off."
 
     if chloegf:
-
         scene v14s22_5k # FPP. same as v14s22_5f head tilted down, but looking directly up at mc
         with dissolve
 
@@ -313,14 +309,12 @@ label v14s22_steal:
         u "I wouldn't have chosen to help you if I was too afraid to make hard decisions. My personal relationship with Chloe has nothing to do with this."
 
     elif lindseyrs:
-
         scene v14s22_5g
         with dissolve
 
         u "Or you. I'm here for us. Me and you."
 
     else:
-
         scene v14s22_5f
         with dissolve
 
@@ -344,9 +338,7 @@ label v14s22_steal:
     jump v14s22_end
 
 label v14s22_end:
-
     if lindseyrs:
-
         scene v14s22_8 # TPP. Lindsey embraces and kisses MC passionately
         with dissolve
 

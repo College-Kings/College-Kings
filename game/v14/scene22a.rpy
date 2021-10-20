@@ -65,7 +65,6 @@ label v14s22a:
     li "Yeah, I know that."
 
     play sound "sounds/vibrate.mp3"
-
     scene v14s22a_1b
     with dissolve
 
