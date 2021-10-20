@@ -916,17 +916,17 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         u "*Sighs*"
 
         # -Grayson and Chloe come back and Grayson sits down but Chloe keeps standing-   # -Grayson is smiling-
-        scene v14s31b_21c # FPP. Chloe appears from the dark hallway entrance, neutral, mouth closed.
+        scene v14s31b_21d # FPP. Chloe appears from the dark hallway entrance, neutral, mouth closed.
         with dissolve
 
         pause 0.75
 
-        scene v14s31b_21d # FPP. Same as v14s31b_21c, but Chloe, neutral, mouth closed, is half the distance from the hallway and Grayson, smiling, mouth closed, follows her.
+        scene v14s31b_21e # FPP. Same as v14s31b_21d, but Chloe, neutral, mouth closed, is half the distance from the hallway and Grayson, smiling, mouth closed, follows her.
         with dissolve
 
         pause 0.75
 
-        scene v14s31b_21e # FPP. Same as v14s31b_21d, but Grayson, smiling, mouth closed, sitting in his bean bag chair, Chloe standing in front of Grayson.
+        scene v14s31b_21f # FPP. Same as v14s31b_21e, but Grayson, smiling, mouth closed, sitting in his bean bag chair, Chloe standing in front of Grayson.
         with dissolve
 
         pause 0.75 
@@ -1121,22 +1121,22 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         gr "*Sighs* C'mon."
 
         # -Grayson leads Mc and Chloe to his bedroom-
-        scene v14s31b_21f # TPP. Grayson leads Chloe, with MC following toward the dark hallway entrance.
+        scene v14s31b_21g # TPP. Grayson leads Chloe, with MC following toward the dark hallway entrance.
         with dissolve
 
         pause 0.75
 
-        scene v14s31b_21g # TPP. Grayson disappeared in the dark hallways (off camera), Chloe entering the dark hallway with MC following her.
+        scene v14s31b_21h # TPP. Grayson disappeared in the dark hallways (off camera), Chloe entering the dark hallway with MC following her.
         with dissolve
 
         pause 0.75
 
-        scene v14s31b_21h # TPP. Grayson opening the door to his bedroom with Chloe following him and MC following Chloe.
+        scene v14s31b_21i # TPP. Grayson opening the door to his bedroom with Chloe following him and MC following Chloe.
         with dissolve
 
         pause 0.75
 
-        scene v14s31b_21i # TPP. Grayson, smiling, mouth closed, sits on his bed, Chloe, nervous, mouth closed, stands in front of him. MC, nuetral, mouth closed, stands close to the door.
+        scene v14s31b_21j # TPP. Grayson, smiling, mouth closed, sits on his bed, Chloe, nervous, mouth closed, stands in front of him. MC, nuetral, mouth closed, stands close to the door.
         with dissolve
 
         scene v14s31b_31 # Grayson, sitting on his bed, smiling, mouth open.
@@ -1191,7 +1191,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
         gr "Hmm…"
 
-        scene v14s31b_21j # FPP. Chloe, slight sex smile, braces herself on her thighs/knees as she leans in toward Grayson, smiling, mouth closed.
+        scene v14s31b_21k # FPP. Chloe, slight sex smile, braces herself on her thighs/knees as she leans in toward Grayson, smiling, mouth closed.
         with dissolve
 
         pause 0.75
@@ -1218,7 +1218,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
         gr "..."
 
-        scene v14s31b_21k # FPP. Same as v14s31b_21j, but Chloe standing, angry, frowning, mouth open, looking at Grayson, smiling, mouth closed.
+        scene v14s31b_21l # FPP. Same as v14s31b_21k, but Chloe standing, angry, frowning, mouth open, looking at Grayson, smiling, mouth closed.
         with dissolve
 
         cl "What?"
@@ -1263,7 +1263,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
         cl "*Sighs*"
 
-        scene v14s31b_211 # TPP. Same as v14s31b_21i, but Chloe, frowning, angry, mouth closed, past MC stomping out of Grayson room. MC confused, neutral, mouthc closed.
+        scene v14s31b_21m # TPP. Same as v14s31b_21j, but Chloe, frowning, angry, mouth closed, past MC stomping out of Grayson room. MC confused, neutral, mouthc closed.
         with dissolve
         
         u "…"
