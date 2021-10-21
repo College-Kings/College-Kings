@@ -13,7 +13,8 @@ label v13s14a:
 
     play music "music/v13/Track Scene 14a_1.mp3" fadein 2
 
-    scene v13s14a_2 # FPP MC's view as he looks around the club
+    #scene v13s14a_2 # FPP MC's view as he looks around the club
+    scene v13s14a_1
     with dissolve
 
     u "Oh shit, this is a club, club!"
@@ -23,7 +24,8 @@ label v13s14a:
 
     polly "*Chuckles* What were you expecting?"
 
-    scene v13s14a_2
+    #scene v13s14a_2
+    scene v13s14a_1
     with dissolve
 
     u "I don't know, but I wasn't expecting this..."
