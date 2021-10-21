@@ -578,7 +578,7 @@ label v11_roommate:
                 scene v11rm21
                 with dissolve
 
-                u "Uh, yeah..."
+                u "Uh, yeah...?"
 
                 scene v11rm21a
                 with dissolve
