@@ -133,7 +133,7 @@ label v11_lauren_store:
     scene v11las5a # FPP. Same as v11las5, Lauren slight smile, mouth open
     with dissolve
 
-    la "We're going to Hogwarts. *Chuckles*"
+    la "We're going to Hogwash. *Chuckles*"
 
     scene v11las5
     with dissolve
@@ -1395,7 +1395,7 @@ label v11_quiz_bonus:
     with dissolve
     stop music fadeout 3
     play music "music/v11/Scene 17/Track Scene 17.mp3" fadein 2
-    la "If it was my choice I'd spend all day with you exploring Hogwarts, but I promised Riley I'd help her out with something, so I have to run."
+    la "If it was my choice I'd spend all day with you exploring Hogwash, but I promised Riley I'd help her out with something, so I have to run."
 
     scene v11las44l # FPP. Same as v11las44k, Lauren slight smile, mouth closed
     with dissolve
