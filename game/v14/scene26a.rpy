@@ -378,7 +378,7 @@ label v14s26a:
     scene v14s26a_2d
     with dissolve
 
-    li "See you, [Name]."
+    li "See you, [name]."
 
     scene v14s26a_3
     with dissolve
@@ -388,7 +388,7 @@ label v14s26a:
     scene v14s26_14 # Ignore as reused from another scene
     with dissolve
 
-    pause: 0.75
+    pause 0.75
 
     scene v14s26_15 # Ignore as reused from another scene
     with dissolve

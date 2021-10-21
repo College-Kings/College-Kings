@@ -46,7 +46,7 @@ label v14s40a:
 
     menu:
         "I don't hate it...":
-           scene v14s40a_5a
+            scene v14s40a_5a
             with dissolve
 
             u "I… don’t hate it, actually. *Laughs*"

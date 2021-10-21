@@ -440,12 +440,12 @@ label v14s26:
         scene v14s26_13 # FPP. Lindsey winks at MC, slight smile, mouth open
         with dissolve
 
-        li "See you, [Name]."
+        li "See you, [name]."
 
     scene v14s26_14 # TPP. mc walks away from lindsey, no expression, mouth closed
     with dissolve
 
-    pause: 0.75
+    pause 0.75
 
     scene v14s26_15 # TPP. mc walking through the campus, no expression, mouth closed
     with dissolve
