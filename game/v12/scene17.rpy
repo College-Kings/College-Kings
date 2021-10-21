@@ -1505,11 +1505,6 @@ label v12_after_sex:
 
     escman "*Dry tone* No, thank you."
 
-    #scene v12esr7c # FPP. Same as v12esr7, Lindsey looking at MC, Lindsey slight smile, mouth closed
-    #with dissolve
-
-    #u "Let's get back to the hotel."
-
     scene v12esr59 # FPP. MC looking as Aubrey and Imre walk out the escape room building, Aubrey looking back, mouth open, disgusted expression, mouth open
     with dissolve
 
