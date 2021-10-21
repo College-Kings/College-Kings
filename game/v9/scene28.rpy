@@ -52,9 +52,8 @@ label v9_call_w_lindsey:
         with dissolve
 
         li "Ha, guess you'll never know. Anyway though, I called to ask how you're feeling about the fight tomorrow?"
-        li "I gave you my number but you never called so I got your number from Aubrey."
 
-        li "Anyway, this fight could be major for you. Think you'll come out on top?"
+        li "This fight could be major for you. Think you'll come out on top?"
 
         scene v9cwl3b
         with dissolve
