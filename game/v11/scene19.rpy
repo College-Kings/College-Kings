@@ -558,20 +558,37 @@ label v11_roommate:
 
             ri "Hmm, interesting... Well, you know how I'm, like, interested in girls? *Chuckles*"
 
-            scene v11rm21
-            with dissolve
+            if ending == "riley" and not v8_riley_lewd_ending:
+                scene v11rm21
+                with dissolve
 
-            u "Uh, yeah..."
+                u "Yeah, I remember."
 
-            scene v11rm21a
-            with dissolve
+                scene v11rm21a
+                with dissolve
 
-            ri "You look interested and awake now. *Chuckles* But yeah for real, I'm bi."
+                ri "I think it's been confirmed. *Chuckles*"
 
-            scene v11rm21
-            with dissolve
+                scene v11rm21
+                with dissolve
 
-            u "Well, congrats. How'd you find that out?"
+                u "Haha, by who?"            
+            
+            else:
+                scene v11rm21
+                with dissolve
+
+                u "Uh, yeah..."
+
+                scene v11rm21a
+                with dissolve
+
+                ri "You look interested and awake now. *Chuckles* But yeah for real, I'm bi."
+
+                scene v11rm21
+                with dissolve
+
+                u "Well, congrats. How'd you find that out?"
 
             scene v11rm21a
             with dissolve
