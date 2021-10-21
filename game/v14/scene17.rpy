@@ -488,10 +488,10 @@ label v14s17:
 
                     la "Haha, I guess you’re right."
 
-            scene v14s17_10a
-            with dissolve
+                scene v14s17_10a
+                with dissolve
 
-            la "I'll talk to her and see what she needs me to do."
+                la "I'll talk to her and see what she needs me to do."
 
             else: 
                 scene v14s17_10g

@@ -200,7 +200,7 @@ label v14s26a:
 
 # Kiwi Post: v14kw26a - Lindsey Selfie in front of her banner (Lindsey, Returning The Promise) on the banner
 
-    if v11_lindsey_slogan = 1:
+    if v11_lindsey_slogan == 1:
 
         $ kiwii_post = KiwiiPost("Lindsey", Lindsey by herself infront of slogan banner half-smiling that says Lindsey, Returning The Promise, "Still selling treats to raise money for my campaign and the future of the Chicks! Don’t forget to stop by <3 #Vote4Lindsey," numberLikes=593)
         $ kiwii_post.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
