@@ -851,7 +851,6 @@ label tues_morning_at_joshs:
         scene v8josh43a
         with dissolve
         u "No worries, man. Glad you're feeling a bit better."
-        label bababa:
 
         scene v8josh44
         with dissolve
