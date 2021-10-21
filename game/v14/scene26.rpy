@@ -162,7 +162,7 @@ label v14s26:
 
     pause 0.75
 
-    if v11_lindsey_slogan = 1:
+    if v11_lindsey_slogan == 1:
 
         scene v14s26_6 # FPP. Mc looks up at the banner above the counter, The banner reads "Lindsey, Returning The Promise"
         with dissolve
@@ -264,7 +264,7 @@ label v14s26:
 
 # Kiwi Post: v14kw26 - Lindsey and Lauren Selfie in front of her banner (Lindsey, Returning The Promise) on the banner
 
-    if v11_lindsey_slogan = 1:
+    if v11_lindsey_slogan == 1:
 
         #Selfie with Lauren in front of slogan banner that says Lindsey, Returning The Promise
         $ kiwii_post = KiwiiPost("Lindsey", "Don't forget to stop by and pick up one of Lauren's famous cakes today! All proceeds go to my campaign fund and to the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
