@@ -174,7 +174,6 @@ label v14s39:
         if not v14s37_focus_on_us:
             call screen kctPopup
 
-        $ penelopers = True
         scene v14s39_4b # FPP. Same as v14s39_4, Penelope nervous smile, mouth open.
         with dissolve
 
