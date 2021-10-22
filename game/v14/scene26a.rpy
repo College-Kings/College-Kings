@@ -121,12 +121,12 @@ label v14s26a:
 
     u "I'm sorry Lindsey, but-"
 
-    scene v14s26a_2i # FPP. same as v14s26a_2g lindsey's mouth is is open
+    scene v14s26a_2k # FPP. same as v14s26a_2g lindsey's mouth is is open
     with dissolve
 
     li "Like I said before, I'm not interested in hearing your reasons for not being able to help me."
 
-    scene v14s26a_2i
+    scene v14s26a_2k
     with dissolve
 
     li "Because honestly, if the reason isn't a good one it's just gonna upset me even more than I already am."
@@ -200,7 +200,7 @@ label v14s26a:
 
 # Kiwi Post: v14kw26a - Lindsey Selfie in front of her banner (Lindsey, Returning The Promise) on the banner
 
-    if v11_lindsey_slogan == 1:
+    if v11_lindsey_slogan = 1:
 
         $ kiwii_post = KiwiiPost("Lindsey", Lindsey by herself infront of slogan banner half-smiling that says Lindsey, Returning The Promise, "Still selling treats to raise money for my campaign and the future of the Chicks! Don’t forget to stop by <3 #Vote4Lindsey," numberLikes=593)
         $ kiwii_post.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
@@ -378,7 +378,7 @@ label v14s26a:
     scene v14s26a_2d
     with dissolve
 
-    li "See you, [name]."
+    li "See you, [Name]."
 
     scene v14s26a_3
     with dissolve
@@ -388,7 +388,7 @@ label v14s26a:
     scene v14s26_14 # Ignore as reused from another scene
     with dissolve
 
-    pause 0.75
+    pause: 0.75
 
     scene v14s26_15 # Ignore as reused from another scene
     with dissolve
