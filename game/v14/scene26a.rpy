@@ -119,12 +119,12 @@ label v14s26a:
 
     u "I'm sorry Lindsey, but-"
 
-    scene v14s26a_2i # FPP. same as v14s26a_2g lindsey's mouth is is open
+    scene v14s26a_2k # FPP. same as v14s26a_2g lindsey's mouth is is open
     with dissolve
 
     li "Like I said before, I'm not interested in hearing your reasons for not being able to help me."
 
-    scene v14s26a_2i
+    scene v14s26a_2k
     with dissolve
 
     li "Because honestly, if the reason isn't a good one it's just gonna upset me even more than I already am."
