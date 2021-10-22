@@ -3463,6 +3463,7 @@ label afterbeach:
     if not meetgrayson:
         u "(Wolves pledging starts soon... is it stupid of me to wanna pledge now? I didn't think frat life was for me..."
 
+        $ grant_achievement("wolfpack")
         u "(But after everything that happened I feel like I gotta at least try and get in, otherwise I'll miss out on too much.)"
 
     elif joinapes:
