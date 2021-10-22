@@ -31,7 +31,7 @@ label v14s14a:
     $ contact_Chloe.newMessage(_("You won't believe what I'm looking at right now!!!! "))
     $ contact_Chloe.newMessage(_("Lindsey and I are NOT friends anymore. "))
     $ contact_Chloe.newMessage(_("I'm gonna need your help with the president thing, big time "))
-    $ contact_Chloe.newMessage(_("[name]!!! "))
+    $ contact_Chloe.newMessage(_("[name!u]!!! "))
     $ contact_Chloe.newMessage(_("Right, you're probably asleep. When you read this, just meet me in the hall near Ms. Rose's classroom at 10. "))
 
     scene v14s14a_1c # TPP. same as v14s14a_1b MC puts his phone away
