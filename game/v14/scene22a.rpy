@@ -3,13 +3,11 @@
 # Characters: LINDSEY (Outfit: 1), MC (Outfit: 9)
 # Time: Evening
 
-
 label v14s22a:
-
     scene v14s22a_1 # FPP. show just lindsey, looking at mc, half smile, mouth open, hand up gesture
     with dissolve
 
-    li "So… People have been treating me like the vice president of the United States."
+    li "So... People have been treating me like the vice president of the United States."
 
     scene v14s22a_1a # FPP. same as v14s22a_1 lindsey's hand is down mouth closed
     with dissolve
@@ -19,7 +17,7 @@ label v14s22a:
     scene v14s22a_1b # FPP. same as v14s22a_1a lindsey mouth open
     with dissolve
 
-    li "They either respect, love and pray that I succeed, or they completely despise me and won’t even look in my direction."
+    li "They either respect, love and pray that I succeed, or they completely despise me and won't even look in my direction."
 
     scene v14s22a_1a
     with dissolve
@@ -54,12 +52,12 @@ label v14s22a:
     scene v14s22a_1
     with dissolve
 
-    li "*Sighs* You’re preaching to the choir."
+    li "*Sighs* You're preaching to the choir."
 
     scene v14s22a_1a
     with dissolve
 
-    u "*Chuckles* You know I’m here for you though."
+    u "*Chuckles* You know I'm here for you though."
 
     scene v14s22a_1
     with dissolve
@@ -67,7 +65,6 @@ label v14s22a:
     li "Yeah, I know that."
 
     play sound "sounds/vibrate.mp3"
-
     scene v14s22a_1b
     with dissolve
 

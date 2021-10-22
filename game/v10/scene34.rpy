@@ -9,7 +9,7 @@ label v10_autumn_announcement:
     
     scene v10samw1 # FPP. Show Autumn standing near the mud wrestling pool, smiling, mouth open.
     with dissolve
-
+    stop music fadeout 3
     play music "music/v10/Scene 34/Track Scene 34.mp3" fadein 3
 
     aut "Alright everyone, if you could all gather around."

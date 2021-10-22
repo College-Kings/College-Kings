@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 2), AMBER (Outfit: 4)
 # Time: Morning
 
-
 label v14s25b:
     scene v14s25b_1 # TPP. Show MC birds eye view in bed, looking up to the roof, slight smile, mouth closed, Amber beside him, sleeping on her right side though, neutral expression, mouth closed
     with dissolve
@@ -98,7 +97,7 @@ label v14s25b:
 
     pause 0.75
 
-    if help_Lindsay: 
+    if v14_help_lindsey: 
 
         jump v14s26
     

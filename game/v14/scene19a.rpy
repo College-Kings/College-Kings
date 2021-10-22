@@ -3,7 +3,6 @@
 # Characters: CHLOE (Outfit: x), MC (Outfit: 1), UNKNOWN (Outfit: N/A (not seen))
 # Time: 
 
-
 label v14s19a:
     scene v14s19a_1 # FPP Show Chloe, in library, looking at MC, smiling with mouth open
     with dissolve
@@ -18,7 +17,7 @@ label v14s19a:
     scene v14s19a_1
     with dissolve
 
-    cl "Especially since I basically already have the Wolves’ support, I feel confident about this."
+    cl "Especially since I basically already have the Wolves' support, I feel confident about this."
 
     scene v14s19a_1a
     with dissolve
@@ -33,7 +32,7 @@ label v14s19a:
     scene v14s19a_1c # FPP Same angle as 1, Chloe with neutral expression, mouth closed
     with dissolve
 
-    u "The Wolves supporting you already? I ran into Imre this morning while he was chanting in your favor. *Chuckles*."
+    u "The Wolves supporting you already? I ran into Imre this morning while he was chanting in your favor. *Chuckles*"
 
     scene v14s19a_2 # TPP Chloe talking to MC, Chloe's hand on MC's arm, Chloe laughing, mouth open
     with dissolve
@@ -48,7 +47,7 @@ label v14s19a:
     scene v14s19a_1d # FPP Same angle as 1, Chloe with her arms out to her sides, smiling like she's giving a speech
     with dissolve
 
-    cl "You have to work on improving the leadership that’s already comfortably in place."
+    cl "You have to work on improving the leadership that's already comfortably in place."
 
     scene v14s19a_1a
     with dissolve
@@ -65,7 +64,7 @@ label v14s19a:
 
     u "Even with Nor-"
 
-    scene v14s19a_1e # FPP Same angle as 1, Chloe holding her hand out in a "hold on" gesture, smiling with mouth open
+    scene v14s19a_1e # FPP Same angle as 1, Chloe holding her hand out in a «hold on» gesture, smiling with mouth open
     with dissolve
 
     cl "I already know what you're gonna say, haha."
@@ -73,7 +72,7 @@ label v14s19a:
     scene v14s19a_1
     with dissolve
 
-    cl "Whatever’s happening between Chris and Nora is their business, and I think because I don't get involved as much as others, we have this unspoken respective relationship, you know?."
+    cl "Whatever's happening between Chris and Nora is their business, and I think because I don't get involved as much as others, we have this unspoken respective relationship, you know?"
 
     scene v14s19a_1a
     with dissolve
@@ -108,7 +107,7 @@ label v14s19a:
     scene v14s19a_1a
     with dissolve
 
-    u "*Laughs* No, go ahead. What’s the favor?"
+    u "*Laughs* No, go ahead. What's the favor?"
 
     scene v14s19a_1f
     with dissolve
@@ -133,66 +132,69 @@ label v14s19a:
     scene v14s19a_1
     with dissolve
 
-    cl "And honestly when it comes to Imre, he’s had a crush on me for as long as I can remember. *Laughs* When I called him this morning he picked up right away and was way too excited to help..."
+    cl "And honestly when it comes to Imre, he's had a crush on me for as long as I can remember. *Laughs* When I called him this morning he picked up right away and was way too excited to help..."
 
     scene v14s19a_1a
     with dissolve
 
-    u "*Laughs* That’s amazing."
+    u "*Laughs* That's amazing."
 
     scene v14s19a_1f
     with dissolve
 
     cl "So, do you think you can talk to Chris about this? Today?"
 
-if not v13_help_lindsey: # -If don't help Lindsey
-    $ chloe.points += 1
+    if not v13_help_lindsey: # -If don't help Lindsey
+        $ chloe.points += 1
 
-    scene v14s19a_1g # FPP Same as 1f, Chloe's mouth closed, she is biting her lower lip slightly
-    with dissolve
+        scene v14s19a_1g # FPP Same as 1f, Chloe's mouth closed, she is biting her lower lip slightly
+        with dissolve
 
-    u "Of course I can."
+        u "Of course I can."
 
-    scene v14s19a_2
-    with dissolve
+        scene v14s19a_2
+        with dissolve
 
-    cl "Perfect! Thank you so so so much, [name]."
+        cl "Perfect! Thank you so so so much, [name]."
 
-else: # If helped Lindsey
+    else: # If helped Lindsey
+        scene v14s19a_1g
+        with dissolve
 
-    scene v14s19a_1g
-    with dissolve
+        u "(Damn, I can't help her with this and talk to Lindsey at the same time. Gonna have to decide what to do here...)"
 
-    u "(Damn, I can't help her with this and talk to Lindsey at the same time. Gonna have to decide what to do here...)"
+        menu:
+            "Talk to Chris":
+                $ chloe.points += 1
+                $ v14_talk_to_chris = True
+                scene v14s19a_1g
+                with dissolve
+                u "Of course I can."
 
-    menu:
-        "Talk to Chris":
-            $ chloe.points += 1
+                scene v14s19a_2
+                with dissolve
 
-            u "Of course I can."
+                cl "Perfect! Thank you so much, [name]. This means the world to me."
 
-            scene v14s19a_2
-            with dissolve
+            "Talk to Lindsey":
+                scene v14s19a_1g
+                with dissolve
+                u "I hate to state the obvious but, Chris and I aren't on the best of terms right now... And he's got Nora on his mind, so..."
 
-            cl "Perfect! Thank you so much, [name]. This means the world to me."
+                scene v14s19a_1c
+                with dissolve
 
-        "Talk to Lindsey":
+                u "It's probably not best if I'm the one who talks to him."
 
-            u "I hate to state the obvious but, Chris and I aren't on the best of terms right now… And he’s got Nora on his mind, so..."
+                scene v14s19a_1h # FPP Same angle as 1, Chloe looking a bit sad and dissapointed, mouth open
+                with dissolve
 
-            scene v14s19a_1c
-            with dissolve
-
-            u "It’s probably not best if I'm the one who talks to him."
-
-            scene v14s19a_1h # FPP Same angle as 1, Chloe looking a bit sad and dissapointed, mouth open
-            with dissolve
-
-            cl "*Sighs* Yeah, I get it. His head isn’t in the right space around you. Smart thinking."
+                cl "*Sighs* Yeah, I get it. His head isn't in the right space around you. Smart thinking."
 
     # -Continue regardless of everything
     scene v14s19a_3 # Show a book dropping flat on the ground with a loud "smack"
-    with dissolve
+    with vpunch
+    play sound "sounds/hs.mp3"
 
     pause 0.75
 
@@ -212,7 +214,7 @@ else: # If helped Lindsey
     cl "That scared me!"
 
     # -An unknown that isn't seen speaks-
-    scene v14s19a_# Show a bookshelf, the type in a library with books on both sides, someone not visible on the other side of the shelf
+    scene v14s19a_5 # Show a bookshelf, the type in a library with books on both sides, someone not visible on the other side of the shelf
     with dissolve
 
     unknown "SHHH!"

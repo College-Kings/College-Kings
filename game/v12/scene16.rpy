@@ -387,7 +387,7 @@ label v12_valentine:
     scene v12val15b
     with dissolve
 
-    bishop "Bare with me, my son."
+    bishop "Bear with me, my son."
     bishop "While in prison, prior to his execution, the jailer's blind daughter would bring him his meals and from that stemmed many conversations. From those many conversations, they fell in love."
     bishop "One day, Saint Valentine slid his hand through the bars of his cell, touched the lids of the girl's eyes and miraculously she could see."
 

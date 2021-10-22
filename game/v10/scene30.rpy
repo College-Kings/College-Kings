@@ -169,6 +169,7 @@ label v10_chloe_gym:
             "Look closer":
                 label v10s30_galleryScene:
                 $ v10_chloe_locker = True
+                #$ addPoint("tm", sum([ v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck, v10_ambersex ])) ###Loyaltymod
                 scene v10chg6a # FPP Same angle as c10chg6a, Close up shot of Chloe's butt while she's bending over
                 with dissolve
 

@@ -363,22 +363,22 @@ label v11s23_riley1:
     scene v11frmri2b
     with dissolve
 
-    u "Stand still while I go get Duncan's gun, then you can enjoy yourself."
+    u "Shooting off a random guy's gun isn't enough excitement? *Chuckles*"
 
     scene v11frmri2a
     with dissolve
 
-    ri "Hey, I said I was sorry. But I have to admit, it was kinda funny seeing you scream and beg like that. *Chuckles*"
+    ri "Yeah, no. Not really *Chuckles*"
 
     scene v11frmri2c # FPP Same angle as v11frmri2, Riley climbing back under ropes to get out of triceratops exhibit
     with dissolve
 
-    u "It was funny watching me scream and beg?"
+    u "You're lucky no one's watching you. You're gonna get us kicked outta here."
 
     scene v11frmri3 # FPP Show Riley looking at MC with a big smile, mouth open
     with dissolve
 
-    ri "RILEY PLEASE STOP, IT HURTS! *Laughs*"
+    ri "*Mocking voice* You're gonna get us kicked out of here! *Laughs*"
 
     menu:
         "Seek revenge":
@@ -387,7 +387,7 @@ label v11s23_riley1:
             scene v11frmri3a # FPP Same angle as v11frmri3, Riley smiling with mouth closed
             with dissolve
             
-            u "Since you like seeing people in pain so much, we'll see how much you like it."
+            u "Haha, okay. I see how we're playing today."
 
             scene v11frmri3
             with dissolve
@@ -397,7 +397,7 @@ label v11s23_riley1:
             scene v11frmri3a
             with dissolve
 
-            u "Yeah, just a little bit of payback..."
+            u "Yeah, just a little bit of excitement..."
 
             if not rileyrs:
                 scene v11frmri3b # FPP Same angle as v11frmri3, Riley raising her eyebrow and smiling, mouth open
@@ -430,22 +430,22 @@ label v11s23_riley1:
             scene v11frmri3a
             with dissolve
 
-            u "*Laughs* That is not what I sound like."
+            u "*Laughs* And then you'll be upset when you've got nothing exciting to do. You'll be screaming for my attention..."
 
             scene v11frmri3
             with dissolve
 
-            ri "You have no idea what you sounded like over all that crying."
+            ri "*Chuckles*"
 
             scene v11frmri3a
             with dissolve
 
-            u "You would've been screaming too!"
+            u "See? It's true."
 
             scene v11frmri3
             with dissolve
 
-            ri "I only scream for one reason..."
+            ri "I only scream for one reason and it's not because I want attention..."
 
             scene v11frmri3a
             with dissolve
@@ -1129,9 +1129,18 @@ label v11s23_freeroamend:
 
             no "At least someone enjoyed themselves. We literally wasted so much time here it's already starting to get dark."
 
-            scene v11frm4 # TPP Show all characters in scene getting on to shuttle bus
-            with dissolve
+            if v11_pen_goes_europe:
+                scene v11frm4 # TPP Show all characters in scene getting on to shuttle bus
+                with fade
+            else:
+                scene v11gtm8
+                with fade
 
+            pause 0.75
+
+            scene v11bb12
+            with fade
+            
             pause 0.75
 
             # Transition to Scene 25

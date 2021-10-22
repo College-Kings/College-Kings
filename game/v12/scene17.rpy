@@ -929,6 +929,7 @@ label v12_lindsey_kiss_or_not:
 label v12_lindsey_sex:
     $ v12_lindsey_sex = True
     $ lindseyrs = True
+    #$ addPoint("tm", sum([ v11_aubrey_sex, v11_msrose_scene, v11_samantha_spa, v11_rileysex, v11_chloe_sex ])) ###Loyaltymod
 
     scene v12esr29g # FPP. Same as v12esr29c, Lindsey eyes open, slight smile, mouth open, face close to MC
     with dissolve
@@ -1503,11 +1504,6 @@ label v12_after_sex:
     with dissolve
 
     escman "*Dry tone* No, thank you."
-
-    #scene v12esr7c # FPP. Same as v12esr7, Lindsey looking at MC, Lindsey slight smile, mouth closed
-    #with dissolve
-
-    #u "Let's get back to the hotel."
 
     scene v12esr59 # FPP. MC looking as Aubrey and Imre walk out the escape room building, Aubrey looking back, mouth open, disgusted expression, mouth open
     with dissolve

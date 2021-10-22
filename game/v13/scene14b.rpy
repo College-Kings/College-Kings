@@ -13,20 +13,22 @@ label v13s14b:
 
     play music "music/v13/Track Scene 14a_1.mp3" fadein 2
 
-    scene v13s14b_2 # FPP MC's view as he looks around the club
+    #scene v13s14b_2 # FPP MC's view as he looks around the club
+    scene v13s14b_1
     with dissolve
     
-    u "Of shit, this is a club club."
+    u "Oh shit, this is a club, club!"
 
     scene v13s14b_3 # FPP Show Polly looking at MC, smiling with mouth open
     with dissolve
 
     polly "*Chuckles* What were you expecting?"
 
-    scene v13s14b_2
+    #scene v13s14b_2
+    scene v13s14b_1
     with dissolve
 
-    u "I don't know, but I wasn't expecting this."
+    u "I don't know, but I wasn't expecting this..."
 
     scene v13s14b_4 # FPP Show Penelope looking around club, smiling with mouth open
     with dissolve

@@ -55,8 +55,8 @@ label v9_sat_cafe_w_nora:
     with dissolve
 
     menu:
-        "Correct Waiter":
-            $ addPoint("bro", 1)
+        "Correct waiter":
+            $ addPoint("bro")
 
             u "Actually, we're just friends."
 
@@ -117,8 +117,8 @@ label v9_sat_cafe_w_nora:
             scene v9cwn7 # FPP. Show MC and Nora walking away in opposite directions.
             with dissolve
 
-        "Don't Correct Waiter":
-            $ addPoint("bf", 1)
+        "Don't correct waiter":
+            $ addPoint("bf")
 
             scene v9cwn3c
             with fade

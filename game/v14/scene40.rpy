@@ -33,7 +33,7 @@ label v14s40:
         scene v14s40_3 # FPP. Show a close up of laurens face talking on her phone, lauren is lying in her bed, slight smile, mouth open
         with dissolve
 
-        la "Sorry, babe… I'm sure I just woke you but, I just had the most amazing experience of my life!"
+        la "Sorry, babe... I'm sure I just woke you but, I just had the most amazing experience of my life!"
 
         scene v14s40_3a # FPP. same as v14s40_3 laurens mouth is closed
         with dissolve
@@ -43,12 +43,12 @@ label v14s40:
         scene v14s40_3
         with dissolve
 
-        la "Don't laugh but…"
+        la "Don't laugh but..."
 
         scene v14s40_4 # FPP. wide shot of lauren laying on her bed, one hand holding her phone, the other hand laying to her side, fully nude, hey body is sweaty, full smile, mouth open
         with dissolve
 
-        la "I just masturbated for the first time and… it felt amazing."
+        la "I just masturbated for the first time and... it felt amazing."
 
         scene v14s40_4a # FPP. same as v14s40_4 lauren places her hand not holding the phone on one of her nipples
         with dissolve
@@ -58,7 +58,7 @@ label v14s40:
         scene v14s40_4b # FPP. same as v14s40_4a laurens mouth is closed
         with dissolve
 
-        u "Ha… Wow, I’m happy for you, I think? *Laughs* You've never touched yourself before?"
+        u "Ha... Wow, I'm happy for you, I think? *Laughs* You've never touched yourself before?"
 
         scene v14s40_4a
         with dissolve
@@ -73,17 +73,17 @@ label v14s40:
         scene v14s40_4b
         with dissolve
 
-        u "(\"There's a first time for everything\", The fuck am I on about? I need sleep…)"
+        u "(\"There's a first time for everything\", The fuck am I on about? I need sleep...)"
 
         scene v14s40_4
         with dissolve
 
-        la "Haha, yeah I guess…"
+        la "Haha, yeah I guess..."
 
         scene v14s40_4c # FPP. same as v14s40_4 lauren has a concerned expression, laurens mouth is closed
         with dissolve
 
-        la "Are you tired or something? You don't sound like yourself…"
+        la "Are you tired or something? You don't sound like yourself..."
 
         scene v14s40_4c
         with dissolve
@@ -96,7 +96,7 @@ label v14s40:
                 scene v14s40_4b
                 with dissolve
 
-                u "What'd I say again? I don't even remember…"
+                u "What'd I say again? I don't even remember..."
 
                 scene v14s40_4a
                 with dissolve
@@ -144,7 +144,7 @@ label v14s40:
                 scene v14s40_4e # FPP. same as v14s40_4d laurens mouth is closed
                 with dissolve
 
-                u "Ha, I’m glad. Most importantly, what did you wanna call and tell me?"
+                u "Ha, I'm glad. Most importantly, what did you wanna call and tell me?"
 
                 scene v14s40_4d
                 with dissolve
@@ -159,7 +159,7 @@ label v14s40:
                 scene v14s40_4d
                 with dissolve
 
-                la "Hehe… Goodnight, sweet [name]. I want to see you soon, okay?"
+                la "Hehe... Goodnight, sweet [name]. I want to see you soon, okay?"
 
                 scene v14s40_4e
                 with dissolve
@@ -169,7 +169,7 @@ label v14s40:
                 scene v14s40_2c # TPP. same as v14s40_2a MC puts the phone away and lays back down
                 with dissolve
 
-                u "(Finally…)"
+                u "(Finally...)"
 
     scene v14s40_5 # TPP. MC's bedroom lights are off, Mc is sleeping in his wolves bed
     with dissolve

@@ -36,7 +36,7 @@ screen phoneIcon():
             # else:
             idle "images/phone/phoneIcon.webp"
             
-            if freeRoam:
+            if renpy.get_screen("free_roam") or freeRoam:
                 action Show("phone")
             else:
                 action Call("enterPhone")
@@ -53,7 +53,7 @@ screen phoneTemplate():
     if renpy.get_screen("phone"):
         # Click background to close phone
         button:
-            if freeRoam:
+            if renpy.get_screen("free_roam") or freeRoam:
                 action [Hide("tutorial"), Hide("phone")]
             else:
                 action [Hide("tutorial"), Return()]

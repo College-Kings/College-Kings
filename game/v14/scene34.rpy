@@ -12,6 +12,7 @@ label v14s34:
 
         scene v14s34_2 # TPP. Show MC holding the phone to his ear in his wolves room, slight smile, mouth closed.
         with dissolve
+
     else:
         scene v14s34_3 # TPP. MC sitting on his bed in his Apes room, slight smile, mouth closed.
         with dissolve
@@ -36,7 +37,7 @@ label v14s34:
     scene v14s34_6 # TPP. Penelope sitting up in her bed holding the phone to her ear, one of her boobs popping out of her shirt, slight smile, mouth open
     with dissolve
 
-    pe "Nope, not at all…"
+    pe "Nope, not at all..."
 
     pe "I'm actually wide awake."
 
@@ -48,7 +49,7 @@ label v14s34:
     scene v14s34_7 # TPP. Penelope standing up on her bed with the phone to her ear, slight smile, mouth closed.
     with dissolve
 
-    pe  "R-Right now?"
+    pe "R-Right now?"
 
     scene v14s34_7a # TPP. Same as v14s34_7, Penelope mid-jump off of her bed holding the phone to her ear, slight smile, mouth closed.
     with dissolve
@@ -58,12 +59,12 @@ label v14s34:
     scene v14s34_8 # TPP. Show most of Penelope's room. Penelope holding the phone to her ear. Penelope looking at her closet in an excited stance, excited smile, mouth open.
     with dissolve
 
-    pe  "Well, okay, sure. Um…"
+    pe "Well, okay, sure. Um..."
 
     scene v14s34_8a # TPP. Same as v14s34_8, Penelope's phone sitting on her nightstand on speaker phone, Penelope taking her shirt off, slight smile, mouth open.
     with dissolve
 
-    pe  "Where to?"
+    pe "Where to?"
 
     scene v14s34_8b # TPP. Same as v14s34_8a, Penelope shirtless with no bra, Penelope taking her pants off, slight smile, mouth closed.
     with dissolve
@@ -93,7 +94,7 @@ label v14s34:
     scene v14s34_9
     with dissolve
 
-    pe  "Yes. Sounds perfect."
+    pe "Yes. Sounds perfect."
 
     scene v14s34_9a
     with dissolve
@@ -111,22 +112,23 @@ label v14s34:
         scene v14s34_10 # TPP. Show MC standing in his Wolves room, slight smile, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v14s33_10a # TPP. Same as v14s34_10, Show MC standing in his wolves room wearing nicer clothes for his date with Penelope, slight smile, mouth closed.
         with fade
 
-        pause .25
+        pause 0.75
+
     else: 
         scene v14s34_11 # TPP. Show MC standing in his apes room, slight smile, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v14s33_11a # TPP. Same as v14s34_11, Show MC standing in his apes room wearing nicer clothes for his date with Penelope, slight smile, mouth closed.
         with fade
 
-        pause .25
+        pause 0.75
 
     scene v14s34_12 # TPP. Show MC outside walking towards the restraunt in his nice clothes, slight smile, mouth closed.
     with dissolve

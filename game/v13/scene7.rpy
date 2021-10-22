@@ -192,6 +192,9 @@ label v13_ticket_transfer:
             with dissolve
 
             menu:
+                "Aubrey":
+                    $ aubrey.points += 1
+
                 "Penelope":
                     $ penelope.points += 1
                     $ v13_penelope_concert = True
@@ -291,9 +294,6 @@ label v13_ticket_transfer:
                     pause 0.75
 
                     jump v13s7_end_scene
-
-                "Aubrey":
-                    $ aubrey.points += 1
 
         # -There is no choice and Aubrey is forced if Penelope isn't there-
         $ v13_aubrey_concert = True

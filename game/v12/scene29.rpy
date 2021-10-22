@@ -802,6 +802,8 @@ label v12_lauren_sex:
 
                 label v12_lauren_sex_sg:
                 
+                #$ addPoint("tm", sum([ v11_rileysex, v11_chloe_sex, v12_lindsey_sex, v12_msrose_sex ])) ###Loyaltymod
+
                 scene v12las46e
                 with dissolve
 
@@ -1209,7 +1211,7 @@ label v12_lauren_sex:
                 scene v12las71
                 with dissolve
 
-                la "I had so much fun tonight, but now I'm going to bed... If I don't leave now I'm gonna end up trying to stay with you all night. Roommate or not... *Chuckles*"
+                la "I had so much fun tonight, but now I'm going to bed... or else I'm gonna end up asking you to stay all night. Roommate or not... *Chuckles*"
 
                 la "Goodnight baby, I love you."
 

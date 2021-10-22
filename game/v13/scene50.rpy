@@ -201,7 +201,7 @@ label v13s50:
     scene v13s50_7d
     with dissolve
 
-    ri "Oh yeah, have you seen him fight Emily?"
+    ri "Oh yeah, have you seen him fight, Emily?"
 
     scene v13s50_9d # FPP. Same as v13s50_9c, slightly surprised expression
     with dissolve
@@ -231,7 +231,7 @@ label v13s50:
     scene v13s50_7b
     with dissolve
 
-    ri "Let's not make it awkward guys. Ha..."
+    ri "Let's not make it awkward, guys. Ha..."
 
     scene v13s50_7a
     with dissolve

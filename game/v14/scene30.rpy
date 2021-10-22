@@ -7,27 +7,27 @@ label v14s30:
     scene v14s30_1 # TPP. Show MC walking in the woods towards the photoshoot location, Slight smile, mouth closed.
     with dissolve
 
-    pause .5
+    pause 0.5
 
     scene v14s30_2 # TPP. Show MC finding Chloe in the woods pressing button on the camera, both slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s30_3 # FPP. MC looking at Chloe play with the camera, Chloe not realizing MC is there yet, Chloe slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s30_3a # FPP. Same as v14s30_3, Chloe turns to see MC, slight smile, mouth open.
     with dissolve
 
-    cl "[Name], there you are!"
+    cl "[name], there you are!"
 
     scene v14s30_3b # FPP. Same as v14s30_3a, Chloe walking towards MC, slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s30_3c # FPP. Same as v14s30_3b, Chloe standing infront of MC, Looking at MC, Chloe slight smile, mouth closed.
     with dissolve
@@ -63,7 +63,7 @@ label v14s30:
     scene v14s30_3c
     with dissolve
 
-    u "This better be a nice ass toy…"
+    u "This better be a nice ass toy..."
 
     scene v14s30_3d
     with dissolve
@@ -97,7 +97,7 @@ label v14s30:
     scene v14s30_3c
     with dissolve
 
-    u "Can’t go wrong with that."
+    u "Can't go wrong with that."
 
     scene v14s30_3d
     with dissolve
@@ -107,7 +107,7 @@ label v14s30:
     scene v14s30_4 # TPP. Close up of only Chloe. Show Chloe walking over to the front of the Camera, Slight Smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s30_4a # TPP. Same as v14s30_4, Chloe infront of the camera in position for the pictures, slight smile, mouth closed.
     with dissolve
@@ -127,17 +127,17 @@ label v14s30:
     scene v14s30_5a # TPP. Same as v14s30_5, Chloe posing with her hand on her hip, Chloe proud smile, mouth closed
     with flash
 
-    pause .25
+    pause 0.75
 
     scene v14s30_5b # TPP. Same as v14s30_5a, Chloe holding the plush wolf with one arm and her other hand in the air like she is cheering, slight smile, mouth closed.
     with flash
 
-    pause .25 
+    pause 0.75 
 
     scene v14s30_5c # TPP. Same as v14s30_5b, Chloe in a new pose, slight smile, mouth closed.
     with flash
 
-    pause .25
+    pause 0.75
 
     scene v14s30_5d # TPP. Chloe standing normally infront of the camera, slight smile, mouth closed.
     with dissolve
@@ -147,7 +147,7 @@ label v14s30:
     scene v14s30_6 # FPP. Chloe walking over to MC off the photoshoot spot, Chloe slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s30_6a # FPP. Chloe standing infront of MC, slight smile, mouth open.
     with dissolve
@@ -163,12 +163,12 @@ label v14s30:
         scene v14s30_7 # TPP. Show Chloe kissing MC passionately.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v14s30_7a # TPP. Same as v14s30_7, Chloe and MC kissing put a different position.
         with dissolve
 
-        pause 0.25
+        pause 0.75
 
         scene v14s30_6a
         with dissolve
@@ -200,6 +200,6 @@ label v14s30:
     scene v14s30_8 # TPP. Show MC and Chloe walking together out of the woods, both slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     jump v14s30b

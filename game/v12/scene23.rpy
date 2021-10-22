@@ -154,6 +154,8 @@ label v12_ms_rose_sex:
 
             "Let's go":
                 $ addPoint("tm")
+                #$ addPoint("tm", sum([ v11_samantha_spa, v11_rileysex, v11_chloe_sex, v12_lindsey_sex ])) ###Loyaltymod
+                
                 $ v12_msrose_sex = True
 
                 label v12_ms_rose_sex_sg:

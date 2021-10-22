@@ -8,17 +8,17 @@ label v14s30a:
     scene v14s30a_1 # TPP. Show MC walking in the woods towards the photoshoot location, Slight smile, mouth closed. (Can reuse the one from v14s30)
     with dissolve
 
-    pause .5
+    pause 0.5
 
     scene v14s30a_2 # TPP. MC finds Chloe in the woods with the Wolf Trainer at the photoshoot set, Chloe petting the wolf, All slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s30a_3 # FPP. MC looking at Chloe petting the wolf and the Wolf trainer pointing over at MC, Chloe and Wolf Trainer slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s30a_3a # FPP. Same as v14s30a_3, Chloe turns to see MC, Wolf Trainer no longer pointing, Wolf Trainer, slight smile, mouth closed, Chloe slight smile, mouth open.
     with dissolve
@@ -28,7 +28,7 @@ label v14s30a:
     scene v14s30a_4 # FPP. MC walking over to Chloe and the wolf trainer, Chloe and Wolf trainer, slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s30a_5 # FPP. MC standing with Chloe and the Wolf Trainer, MC looking at Chloe, Chloe and Wolf Trainer looking at MC, Both slight smile, mouth closed.
     with dissolve
@@ -171,12 +171,12 @@ label v14s30a:
         scene v14s30a_7 # TPP. Chloe kissing MC on the cheek.
         with dissolve
         
-        pause .25
+        pause 0.75
 
     scene v14s30a_8 # TPP. Camera positioned infront of Photoshoot Camera to just show Chloe, the wolf, and the wolf trainer, Both slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s30a_9 # FPP. MC behind the Camera the equipment visible, The wolf running towards MC, Chloe and Wolf Trainer slight smile, mouths closed.
     with dissolve
@@ -211,17 +211,17 @@ label v14s30a:
             scene v14s30a_12 # TPP. Mc falls backwards onto his butt, worried face, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s30a_12a # TPP. Same as v14s30a_12, The wolf walks up to MC and sniffs his crotch, MC worried face, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s30a_12b # TPP. Same as v14s30a_12a, The wolf licks MC's face, MC worried face, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s30a_13 # TPP. Close up of Chloe and the Wolf Trainer standing next to each other, Chloe slight smile, mouth closed, Wolf trainer slight smile, mouth open.
             with dissolve
@@ -309,17 +309,17 @@ label v14s30a:
     scene v14s30a_8b # TPP. Same as v14s30a_8a, Chloe posing with one hand on her hip and one hand on the wolf's head, Chloe smiling proudly, Mouth closed.
     with flash
 
-    pause .5
+    pause 0.5
 
     scene v14s30a_8c # TPP. Same as v14s30a_8b, Chloe giving the wolf a high five, Chloe slight smile, mouth closed.
     with flash
 
-    pause .5
+    pause 0.5
 
     scene v14s30a_8d # TPP. Same as v14s30a_8c, Chloe with her hands in the shape of Wolf's claws acting scary for the camera, The wolf growling towards the camera, Chloe Intimidating face, mouth closed.
     with flash
 
-    pause .5
+    pause 0.5
 
     scene v14s30a_8
     with dissolve
@@ -334,7 +334,7 @@ label v14s30a:
     scene v14s30a_9c # FPP. Same as v14s30_9b, Chloe running towards MC, The wolf and the wolf trainer in the background, Chloe slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s30a_14 # FPP(Keep wolf and wolf trainer out of shot to make it easier). Chloe looking at the camera, slight smile, mouth open.
     with dissolve
@@ -389,6 +389,6 @@ label v14s30a:
     scene v14s30a_17 # TPP. Show MC and Chloe walking together out of the woods, both slight smile, mouth closed. (Can reuse v14s30_8)
     with dissolve
 
-    pause .25
+    pause 0.75
 
     jump v14s30b

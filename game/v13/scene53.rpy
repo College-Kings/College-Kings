@@ -40,7 +40,7 @@ label v13s53:
         scene v13s53_3
         with dissolve
 
-        u "On vacation? Haven't we been over this already? *Laughs*."
+        u "On vacation? Haven't we been over this already? *Laughs*"
     
     scene v13s53_3a
     with dissolve

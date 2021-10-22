@@ -3,7 +3,6 @@
 # Characters: EMILY (Outfit: 1), MC (Outfit: 2)
 # Time: Morning
 
-
 label v14s27:
     scene v14s27_1 # TPP. MC and Emily walking towards each other on the sidewalk on Campus, both slight smile, mouth closed.
     with dissolve
@@ -25,6 +24,7 @@ label v14s27:
         with dissolve    
 
         u "What's up, Emily?"
+
     else:
         scene v14s27_2a
         with dissolve
@@ -59,7 +59,7 @@ label v14s27:
     scene v14s27_2
     with dissolve
 
-    em "Can we speak somewhere a little more… private?"
+    em "Can we speak somewhere a little more... private?"
 
     scene v14s27_2a
     with dissolve
@@ -76,7 +76,7 @@ label v14s27:
     scene v14s27_2a
     with dissolve
 
-    u "*Sighs* Okay, let’s talk."
+    u "*Sighs* Okay, let's talk."
 
     scene v14s27_2
     with dissolve

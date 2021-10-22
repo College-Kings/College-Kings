@@ -2,9 +2,9 @@
 # Note to renderers, MC wearing outfit 3, Aubrey wearing outfit 1.
 label caf_w_aub:
     scene scaf5 # FPP. Sweeping shot of inside the cafe, show Aubrey sat at a table on her own.
-    with Fade(0.75, 0.25, 0.75)
+    with fade
 
-    pause 0.5
+    pause 0.75
 
     scene scaf6 # FPP. Closer to where Aubrey is sat in the Cafe.
     with dissolve
@@ -14,7 +14,7 @@ label caf_w_aub:
     scene scaf6a # FPP. Same camera as scaf6, but Aubrey turns to look at the camera, Aubrey smile.
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene scaf6b # FPP. Same camera as scaf6, but Aubrey turns to look at the camera, Aubrey smile, mouth open.
     with dissolve
@@ -24,7 +24,7 @@ label caf_w_aub:
     scene scaf7 # TPP. Show MC sitting at table with Aubrey, MC should be sitting directly opposite Aubrey.
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene scaf8 # FPP. Close up of Aubrey sat at cafe table, Aubrey slight smile.
     with dissolve
@@ -71,7 +71,7 @@ label caf_w_aub:
         scene scaf8
         with dissolve
 
-        pause 0.5
+        pause 0.75
 
         scene scaf8a
         with dissolve
@@ -229,7 +229,7 @@ stop music fadeout 2
 
 scene black
 with Dissolve(1)
-pause 0.5
+pause 0.75
 
 if joinwolves:
     jump after_prot_wolves
@@ -283,7 +283,7 @@ label caf_prot_au:
     scene scaf10b
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene scaf12 # TPP. Show Aubrey sat at table, with MC stood opposite her, Aubrey neutral expression looking up at MC, mouth closed, MC neutral expression, mouth open.
     with dissolve
@@ -310,7 +310,7 @@ label caf_prot_au:
     scene scaf14 # TPP. Show MC walking towards the cafe door, leaving the cafe, Camera from behind MC.
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     jump prot_w_au
 
@@ -343,7 +343,7 @@ label caf_no_prot_au:
     scene scaf10b # TPP. Same camera as scaf10, show MC walking out of view, no longer on the phone, neutral expression, mouth closed.
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene scaf12a # TPP. Same camera as scaf12, Aubrey neutral expression looking up at MC, mouth open, MC neutral expression, mouth closed.
     with dissolve
@@ -363,13 +363,39 @@ label caf_no_prot_au:
     scene scaf8
     with dissolve
 
-    u "Nah. Can I have a bite? I'm starving."
+    u "I probably should be heading off actually."
 
+    scene scaf8a
+    with dissolve
+
+    au "Well don't let me keep you."
+
+    scene scaf8
+    with dissolve
+
+    u "See you later Aubrey."
+
+    scene scaf8a
+    with dissolve
+    au "Bye [name]."
+
+    scene scaf16 # TPP MC getting out of his chair leaving Aubrey sittin there, both smiling.
+    with dissolve
+    pause 0.75
+
+    scene scaf17 # TPP MC heading to the door, aubs still sitting there watching him go.
+    with dissolve
+    pause 0.75
+
+    scene scaf18 # TPP MC walking down the street going home.
+    with dissolve
+    pause 0.75
+    
     stop music fadeout 2
 
     scene black
     with Dissolve(1)
-    pause 0.5
+    pause 0.75
 
     if joinwolves:
         jump after_prot_wolves

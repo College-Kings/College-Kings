@@ -574,6 +574,8 @@ label v12s33:
 label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massage
     hide screen v12s33_sneak_off_overlay
 
+    $ v12_sauna_sneak1 = True
+
     scene v12s33_16
     with dissolve
 
@@ -1234,25 +1236,39 @@ label v12s33_three_doors_back:
 label v12s33_sneak_off2:
     hide screen v12s33_sneak_off_overlay
 
-    scene v12s33_40
-    with dissolve
+    if v12_sauna_sneak1:
+        scene v12s33_40
+        with dissolve
+        u "You guys are gonna think I'm playing around, but I seriously have to poop again."
 
-    u "You guys are gonna think I'm playing around, but I seriously have to poop again."
+        scene v12s33_36b
+        with dissolve
+        imre "Bro, there's no way... Unless you're sick?"
 
-    scene v12s33_36b
-    with dissolve
+        scene v12s33_40
+        with dissolve
+        u "Nah, I'm not sick."
 
-    imre "Bro, there's no way... Unless you're sick?"
+        scene v12s33_39
+        with dissolve
+        ry "If you're not sick then, there's no way you gotta use the restroom again."
 
-    scene v12s33_40
-    with dissolve
+    else:
+        scene v12s33_40
+        with dissolve
+        u "Sorry guys, I suddenly really gotta poop..."
 
-    u "Nah, I'm not sick."
+        scene v12s33_36b
+        with dissolve
+        imre "*Laughs* Gross dude! You don't need to announce it."
 
-    scene v12s33_39
-    with dissolve
+        scene v12s33_39
+        with dissolve
+        ry "*Laughs*"
 
-    ry "If you're not sick then, there's no way you gotta use the restroom again."
+        scene v12s33_38
+        with dissolve
+        lee "Please, [name], just go."
 
     scene v12s33_36b
     with dissolve

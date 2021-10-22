@@ -342,7 +342,6 @@ label v13s12c:
     menu:
         "Chloe":
             $ v13_aubrey_vote = "Chloe"
-
             scene v13s12c_11e
             with dissolve
 

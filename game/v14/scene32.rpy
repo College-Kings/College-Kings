@@ -7,7 +7,7 @@ label v14s32:
     scene v14s32_1 # TPP. MC walking into the Gym, slight smile, mouth closed
     with dissolve
 
-    pause .25
+    pause 0.75
 
     play sound "sounds/hs.mp3"
 
@@ -26,11 +26,12 @@ label v14s32:
     scene v14s32_2b # FPP. Same as v14s32_2a, Imre punches the bag hard, Imre slight smile, mouth closed
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s32_2c # FPP. Same as v14s32_2b, Imre now looking at MC, shocked smile, mouth open.
+    with dissolve
 
-    imre "What are you wearing? *Laughs*  Why didn't you come dressed to workout?"
+    imre "What are you wearing? *Laughs* Why didn't you come dressed to work out?"
 
     scene v14s32_2d # FPP. Same as v14s32_2c, Imre slight smile, mouth closed.
     with dissolve
@@ -57,7 +58,7 @@ label v14s32:
     scene v14s32_2d
     with dissolve
 
-    u "Ha… I won't be crying."
+    u "Ha... I won't be crying."
 
     scene v14s32_2e
     with dissolve
@@ -106,7 +107,7 @@ label v14s32:
 
     imre "He didn't mention that the guy was a piece of shit, who stole the money from other people in the first place."
 
-    imre "Hell, I mean… I was basically giving back."
+    imre "Hell, I mean... I was basically giving back."
 
     scene v14s32_2d
     with dissolve
@@ -118,12 +119,12 @@ label v14s32:
     scene v14s32_2e
     with dissolve
 
-    imre "Not gonna happen, don’t even start. I tried and he fucked me over again."
+    imre "Not gonna happen, don't even start. I tried and he fucked me over again."
 
     scene v14s32_2d
     with dissolve
 
-    u "Whatever man, but don’t say I didn’t tell you that this is going to cause more harm than good, for both of you."
+    u "Whatever man, but don't say I didn't tell you that this is going to cause more harm than good, for both of you."
 
     scene v14s32_2e
     with dissolve
@@ -147,7 +148,7 @@ label v14s32:
     scene v14s32_2d
     with dissolve
 
-    u "That's why I couldn't find you…"
+    u "That's why I couldn't find you..."
 
     scene v14s32_2e
     with dissolve
@@ -169,7 +170,7 @@ label v14s32:
     scene v14s32_2d
     with dissolve
 
-    u "Okay… That sounds healthy."
+    u "Okay... That sounds healthy."
 
     scene v14s32_2e
     with dissolve
@@ -184,25 +185,26 @@ label v14s32:
     scene v14s32_3 # TPP. MC walking up to the punching bag, Imre standing off to MC's side, Both slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     play sound "sounds/hs.mp3"
 
     scene v14s32_3a # TPP. Same as v14s32_3, MC throwing a punch at the punching bag.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     play sound "sounds/hs.mp3"
 
     scene v14s32_3b # TPP. Same as v14s32_3a, MC throwing a punch with his other hand.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     play sound "sounds/hs.mp3"
 
     scene v14s32_3c # TPP. MC hits the bag hard, Imre slight smile, mouth open.
+    with dissolve
 
     imre "Okay, I see you."
 
@@ -224,7 +226,7 @@ label v14s32:
     scene v14s32_2e
     with dissolve
 
-    imre "Wait…"
+    imre "Wait..."
 
     scene v14s32_2d
     with dissolve
@@ -234,12 +236,12 @@ label v14s32:
     scene v14s32_2f # FPP. Same as v14s32_2e, Imre staring off past MC, shocked face, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
-    scene v14s32_2g # FPP. Same  as v14s32_2f, Imre pointing behind MC, shocked face, mouth closed.
+    scene v14s32_2g # FPP. Same as v14s32_2f, Imre pointing behind MC, shocked face, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s32_4 # FPP. MC looking behind him and sees Rubee kickboxing with a punching with her male personal trainer holding the bag, Rubee and Trainer neutral face, Rubee mouth open, Trainer mouth closed.
     with dissolve
@@ -254,7 +256,7 @@ label v14s32:
     scene v14s32_4
     with dissolve
 
-    rub "No… *Grunts* Five more…"
+    rub "No... *Grunts* Five more..."
 
     scene v14s32_4b # FPP. Same as v14s32_4a, Trainer slight smile, mouth open, Rubee Neutral face, mouth closed.
     with dissolve
@@ -264,7 +266,7 @@ label v14s32:
     scene v14s32_2h # FPP. Same as v14s32_2f,Imre looking at MC, Imre shocked face, mouth open.
     with dissolve
 
-    imre "She looks like a warrior…"
+    imre "She looks like a warrior..."
 
     scene v14s32_2i # FPP. Same as v14s32_2h, Imre shocked face, mouth closed.
     with dissolve
@@ -274,27 +276,27 @@ label v14s32:
     scene v14s32_2h
     with dissolve
 
-    imre "No… Shit…"
+    imre "No... shit..."
 
     scene v14s32_5 # TPP. (Similar to v14s32_4) Close up of Rubee bending over and picking up her gym bag, camera focused in on her butt mainly.
     with dissolve
 
-    u "(Holy hell…)"
+    u "(Holy hell...)"
 
     scene v14s32_5a # TPP. Same as v14s32_5, Rubee stands up straight.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s32_5b # TPP. Rubee turned around and starting to walk towards MC and Imre.
     with dissolve
     
-    pause .25
+    pause 0.75
 
     scene v14s32_2h
     with dissolve
 
-    imre "Shit! Here she comes…"
+    imre "Shit! Here she comes..."
 
     scene v14s32_2i
     with dissolve
@@ -304,9 +306,9 @@ label v14s32:
     scene v14s32_6 # FPP. Rubee standing next to MC and Imre, slight smile, mouth open.
     with dissolve
 
-    rub "Hey… I’m Rubee."
+    rub "Hey... I'm Rubee."
 
-    rub "Sorry if this is weird, but… Do you have an older sister? Named Kylie?"
+    rub "Sorry if this is weird, but... Do you have an older sister? Named Kylie?"
 
     scene v14s32_6a # FPP. Same as v14s32_6, slight smile, mouth closed.
     with dissolve
@@ -316,23 +318,23 @@ label v14s32:
     scene v14s32_6
     with dissolve
 
-    rub "It’s just that, one of my military friends…"
+    rub "It's just that, one of my military friends..."
 
-    rub "She looks… Just like you. Haha…"
+    rub "She looks... just like you. Haha..."
     
     rub "The female version of you pretty much. *Chuckles*"
 
     scene v14s32_6a
     with dissolve
 
-    u "Oh, haha. No, as far as I know I’m an only child."
+    u "Oh, haha. No, as far as I know I'm an only child."
 
     scene v14s32_6
     with dissolve
 
-    rub "As far as you know… *Chuckles*"
+    rub "As far as you know... *Chuckles*"
 
-    rub "Just kidding, haha. Sorry about that, though. It’s been a while since we’ve all gotten home so maybe I’m just imagining things."
+    rub "Just kidding, haha. Sorry about that, though. It's been a while since we've all gotten home so maybe I'm just imagining things."
 
     scene v14s32_6a
     with dissolve
@@ -347,7 +349,7 @@ label v14s32:
     scene v14s32_2j # FPP. Same as v14s32_2i, Imre looking at Rubee with his jaw dropped, Shocked face, mouth open.
     with dissolve
 
-    imre "*Whispers* You’re a total badass…"
+    imre "*Whispers* You're a total badass..."
 
     scene v14s32_6
     with dissolve
@@ -362,7 +364,7 @@ label v14s32:
     scene v14s32_5c # TPP. Same as v14s32_5b, Rubee starting to walk to the gym door.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     play sound "sounds/dooropen.mp3"
 
@@ -376,7 +378,7 @@ label v14s32:
     scene v14s32_5e #TPP. Same as v14s32_5d, The gym door closed and Rubee gone(Don't show Rubee here anywhere to reuse for Imre leaving.).
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s32_7 # FPP. MC and Imre now at the bench pressing stations, Imre sitting on the benchpress, slight smile, mouth open.
     with dissolve
@@ -386,12 +388,12 @@ label v14s32:
     scene v14s32_7a # FPP. Same as v14s32_7, Imre slight smile, mouth closed.
     with dissolve
 
-    u "Quit whispering compliments to them when they’re standing right next to you? *Chuckles*"
+    u "Quit whispering compliments to them when they're standing right next to you? *Chuckles*"
 
     scene v14s32_7
     with dissolve
 
-    imre "Ha ha. Kicking people while they’re down is one of your favorite things to do, huh?"
+    imre "Ha ha. Kicking people while they're down is one of your favorite things to do, huh?"
 
     scene v14s32_7a
     with dissolve
@@ -401,7 +403,7 @@ label v14s32:
     scene v14s32_7
     with dissolve
 
-    imre "Speaking of women…"
+    imre "Speaking of women..."
 
     imre "Has Chloe been talking about me at all?"
 
@@ -448,9 +450,9 @@ label v14s32:
     scene v14s32_7a
     with dissolve
 
-    u "Ha… Why are you so supportive of her?"
+    u "Ha... Why are you so supportive of her?"
 
-    u "I know what you said in the hall, but it seems like there’s more to it than that."
+    u "I know what you said in the hall, but it seems like there's more to it than that."
 
     scene v14s32_7b # FPP. Same as v14s30_7, Imre looking away from MC, Slight smile, mouth open.
     with dissolve
@@ -477,12 +479,12 @@ label v14s32:
     scene v14s32_8 # TPP. Show MC and Imre walking back over to the Punching bag.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s32_2e
     with dissolve
 
-    imre "Let me show you something I’ve been working on. I'm thinking about calling it “Combo Imre.”"
+    imre "Let me show you something I've been working on. I'm thinking about calling it \"Combo Imre.\""
 
     scene v14s32_2d
     with dissolve
@@ -492,7 +494,7 @@ label v14s32:
     scene v14s32_2e
     with dissolve
 
-    imre "No, not really, it's kinda simple…"
+    imre "No, not really, it's kinda simple..."
 
     scene v14s32_2d
     with dissolve
@@ -509,17 +511,17 @@ label v14s32:
     scene v14s32_9 # TPP. Close up of Imre hitting the punching bag with his left fist.
     with dissolve
 
-    pause .15
+    pause 0.15
 
     scene v14s32_9a # TPP. Same as v14s32_9, Imre hitting the punching bag with his right fist.
     with dissolve
 
-    pause .15
+    pause 0.15
 
     scene v14s32_9b # TPP. Same as v14s32_9a, Imre kicking the punching bag with a roundhouse kick.
     with dissolve
 
-    pause .15
+    pause 0.15
 
     scene v14s32_2e
     with dissolve
@@ -554,17 +556,17 @@ label v14s32:
     scene v14s32_9c # TPP. Same as v14s32_9, MC punching the bag with his left fist.
     with dissolve
 
-    pause .15
+    pause 0.15
 
     scene v14s32_9d # TPP. Same as v14s32_9a, MC punching the bag with his right fist.
     with dissolve
 
-    pause .15
+    pause 0.15
 
     scene v14s32_9e # TPP. Same as v14s32_9b, MC kicking the punching bag with a roundhouse kick.
     with dissolve
 
-    pause .15
+    pause 0.15
 
     scene v14s32_2e
     with dissolve
@@ -615,7 +617,7 @@ label v14s32:
     scene v14s32_2d
     with dissolve
 
-    u "Oh… Who?"
+    u "Oh... Who?"
 
     scene v14s32_2e
     with dissolve
@@ -669,7 +671,7 @@ label v14s32:
     scene v14s32_2d
     with dissolve
 
-    u "*Sighs* That’s rough."
+    u "*Sighs* That's rough."
 
     scene v14s32_2e
     with dissolve
@@ -705,7 +707,7 @@ label v14s32:
     with dissolve
 
     if v13_imre_disloyal:
-        pause .15
+        pause 0.15
 
         scene v14s32_5g # TPP. Same as v14s32_5e, Imre looks over his shoulder, Imre neutral face, mouth open.
         with dissolve
@@ -720,7 +722,7 @@ label v14s32:
         scene v14s32_5g
         with dissolve
 
-        imre "Part of me feels like you had a lot to do with the problems they’ve been having."
+        imre "Part of me feels like you had a lot to do with the problems they've been having."
 
         scene v14s32_5h
         with dissolve
@@ -735,16 +737,16 @@ label v14s32:
     scene v14s32_5i # FPP. Same as v14s32_5h, Show Imre opening the door to leave the gym, Imre slight smile, mouth closed. 
     with dissolve
 
-    pause .15 
+    pause 0.15 
 
     scene v14s32_5j # FPP. Same as v14s32_5i, Show Imre leaving the gym. 
     with dissolve
 
-    pause .15
+    pause 0.15
 
     scene v14s32_5e
     with dissolve
 
-    pause .15
+    pause 0.15
 
     jump v14s33 

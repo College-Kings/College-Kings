@@ -4,7 +4,6 @@
 # Time: Evening (Tuesday)
 
 label v14s24:
-        
     scene v14s24_1   # TPP. MC, slight smile, mouth closed. m walking down the side walk (similar to v14s23_7 but different angle)
     with dissolve
 
@@ -41,7 +40,7 @@ label v14s24:
         scene v14s24_4  # TPP. MC, happy, smiling mouth closed.
         with dissolve
 
-        u "(Oh, shit… You know what? I still have some extra money from that scummy night gambler.)"
+        u "(Oh, shit... You know what? I still have some extra money from that scummy night gambler.)"
 
         scene v14s24_5  # FPP. MC looks ahead (or across the street) and see's a gas station not too far from him.
         with dissolve
@@ -58,4 +57,8 @@ label v14s24:
     else:
 
         scene v14s24_8  # TPP. MC walking down the side walk towards Amber's house.   
+        with dissolve
+        
+        pause 0.75
+        
         jump v14s25

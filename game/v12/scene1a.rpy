@@ -215,6 +215,11 @@ label v12_chase_robber:
         stop music fadeout 3
         play music "music/v12/Scene 1a/Track Scene 1a_3.mp3" fadein 2
 
+        scene v12car100
+        with fade
+
+        pause 0.75
+
         scene v12car22 # FPP Show Charli walking away from the hotel lobby down the hallway
         with dissolve
 

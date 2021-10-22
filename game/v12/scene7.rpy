@@ -1421,6 +1421,8 @@ label v12s7_chloe_kill:
 label v12s7_riley3:
     $ v12s7_riley3 = True
 
+    $ v12s7_endtalkList.remove(riley)
+
     $ v12s7_seenList = [chloe]
     if josh_europe and not v12s7_josh:
         $ v12s7_seenList.append(josh)
@@ -1553,6 +1555,8 @@ label v12s7_riley3:
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
+    $ v12s7_endtalkList.append(riley)
 
     call screen v12s7_left_viewpoint
     ### ERROR: -If MC presses the murder button during this scene he gets caught ###
@@ -3156,7 +3160,7 @@ label v12s7_lindsey2:
         scene v12ferli5 # TPP. Show mc and lindsey kissing
         with dissolve
 
-        pause
+        pause 1.75
 
     scene v12ferli3b
     with dissolve
@@ -3173,6 +3177,8 @@ label v12s7_lindsey2:
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
+    $ v12s7_endtalkList.append(lindsey)
 
     call screen v12s7_rear
 
@@ -3262,11 +3268,9 @@ label v12s7_charli2:
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
+    $ v12s7_endtalkList.append(charli)
+
     call screen v12s7_captains_room
-
-    # -MC leaves-
-
-    ### ERROR: -If MC presses the murder button during this convo ###
 
 label v12s7_charli_kill:
     hide screen murder_button_overlay
@@ -4095,6 +4099,8 @@ label v12s7_amber1:
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
+    $ v12s7_endtalkList.append(amber)
+
     call screen v12s7_right_gallery_front
 
 label v12s7_amber_kill:
@@ -4292,6 +4298,8 @@ label v12s7_riley2:
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
+    $ v12s7_endtalkList.append(riley)
 
     call screen v12s7_right_gallery_front
 
@@ -5196,6 +5204,8 @@ label v12s7_nora1:
             stop music fadeout 3
             play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
+            $ v12s7_endtalkList.append(nora)
+
             call screen v12s7_balcony_left
 
         "Want some company?":
@@ -5275,6 +5285,8 @@ label v12s7_nora1:
                     stop music fadeout 3
                     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
+                    $ v12s7_endtalkList.append(nora)
+
                     call screen v12s7_balcony_left
 
                 "Of course I care":
@@ -5337,6 +5349,13 @@ label v12s7_nora1:
 
                     pause 0.75
 
+                    stop music fadeout 3
+                    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+
+                    $ v12s7_endtalkList.append(nora)
+                    
+                    call screen v12s7_balcony_left
+                    
                 "I'd choose you":
                     $ addPoint("bf")
                     $ noralikes = True
@@ -5394,6 +5413,7 @@ label v12s7_nora1:
 
                     stop music fadeout 3
                     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+                    $ v12s7_endtalkList.append(nora)
 
                     call screen v12s7_balcony_left
 
@@ -5609,6 +5629,7 @@ label v12s7_chris1:
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
+    $ v12s7_endtalkList.append(chris)
     call screen v12s7_kitchen
 
 label v12s7_chris_kill:
@@ -6175,6 +6196,7 @@ label v12s7_emily2:
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
+    $ v12s7_endtalkList.append(emily)
     call screen v12s7_bow
 
 label v12s7_emily_kill:

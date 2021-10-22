@@ -14,25 +14,25 @@ label v14s15:
 
     pause 0.75
 
-    scene v14s15_3   # FPP. MC looking down a hallway and seeing "Lindsey for President" posters down both walls.
+    scene v14s15_3   # FPP. MC looking down a hallway and seeing «Lindsey for President» posters down both walls.
     with dissolve
 
-    u "(Holy… Shit... This is serious!)"
+    u "(Holy... shit... This is serious!)"
 
-    if v11_lindsey_slogan <= 0: # 0 or 1, just in case someone fudges the variables
-        scene v14s15_4   # FPP. MC looking at a banner with the campaign slogan "Lindsey, Returning The Promise".
+    if v11_lindsey_slogan <= 1: # 0 or 1, just in case someone fudges the variables
+        scene v14s15_4   # FPP. MC looking at a banner with the campaign slogan «Lindsey, Returning The Promise».
+        with dissolve
         
     else:
-        scene v14s15_4a  # FPP. MC looking at a banner with the campaign slogan "Lindsey, Say Bye To The Bullshit" 
+        scene v14s15_4a  # FPP. MC looking at a banner with the campaign slogan «Lindsey, Say Bye To The Bullshit»
+        with dissolve
 
-    with dissolve
-
-    pause 0.75
+    pause 1.25
 
     scene v14s15_5   # FPP. MC looking at a hallways intersection, seeing Lindsey posters on all the walls.
     with dissolve
 
-    pause 0.75  
+    pause 1.25  
 
     scene v14s15_6   # FPP. MC looking at wall with several Lindsey posters. 
     with dissolve
@@ -107,7 +107,7 @@ label v14s15:
     scene v14s15_7e
     with dissolve
 
-    u "Ha… You never fail to surprise me, Imre."
+    u "Ha... You never fail to surprise me, Imre."
 
     scene v14s15_7f
     with dissolve
@@ -122,9 +122,9 @@ label v14s15:
     scene v14s15_7f
     with dissolve
 
-    imre "Oh, ‘cause that part is true. Chris and Chloe have always been tight, and they get along well as Presidents."
+    imre "Oh, 'cause that part is true. Chris and Chloe have always been tight, and they get along well as Presidents."
 
-    imre "There’s no doubt in my mind that this is what Chris would want me to be doing… So, if you’ll excuse me, I'll be getting back to impressing the pretty woma-"
+    imre "There's no doubt in my mind that this is what Chris would want me to be doing... So, if you'll excuse me, I'll be getting back to impressing the pretty woma-"
 
     scene v14s15_7g
     with dissolve
@@ -139,7 +139,6 @@ label v14s15:
     scene v14s15_8   # TPP. MC, smiling and thinking to himself.
     with dissolve
 
-    u "(That man is a whole ass character… But I think he has more than one reason why he’s on Chloe’s side. *Laughs*)"
+    u "(That man is a whole ass character... But I think he has more than one reason why he's on Chloe's side. *Laughs*)"
 
     jump v14s16
-    

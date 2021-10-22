@@ -4,6 +4,8 @@
 # Time: Night
 label v11_chloe_sex_scene:
 
+    #$ addPoint("tm", sum([ v10_ri_sex, v11_fucked_candy, v11_aubrey_sex, v11_msrose_scene, v11_samantha_spa, v11_rileysex ])) ###Loyaltymod
+
     if config_censored:
         call screen censoredPopup("v11s41b_nsfwSkipLabel1")
 

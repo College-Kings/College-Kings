@@ -11,28 +11,33 @@ label v13_walk_garden:
 
     play music "music/v13/Track Scene 36.mp3" fadein 2
 
-    scene v13s36_2 # FPP. MC looking at lindsey who has a neutral expression, mouth closed (location 1)
-    with dissolve
+    #scene v13s36_2 # FPP. MC looking at lindsey who has a neutral expression, mouth closed (location 1)
+    scene v13s36_3a
+    with fade
 
     u "So, what exactly is going on?"
 
-    scene v13s36_2a # FPP same as 2, mouth opened
+    #scene v13s36_2a # FPP same as 2, mouth opened
+    scene v13s36_3
     with dissolve
 
     li "Chris is trying his best to win Nora over..."
 
-    scene v13s36_2b # FPP. same as 2, Lindsey now smiling, mouth opened
+    #scene v13s36_2b # FPP. same as 2, Lindsey now smiling, mouth opened
+    scene v13s36_3b
     with dissolve
 
     li "He finished up with all of his frat planning with Sebastian and now for the last few days of our little vacay, he wants to be the perfect boyfriend. *Chuckles*"
 
     if v12_nora_sex:
-        scene v13s36_2 
+        #scene v13s36_2 
+        scene v13s36_3a
         with dissolve
 
         u "*Laughs* Right..."
 
-    scene v13s36_2 
+    #scene v13s36_2
+    scene v13s36_3a
     with dissolve
 
     u "Okay then, so what did he set up?"
@@ -55,7 +60,7 @@ label v13_walk_garden:
     li "Well, here's your chance. *Chuckles*"
 
     scene v13s36_4 # TPP, MC and lindsey walk up to imre nora and chris(location 3)
-    with dissolve
+    with fade
 
     pause 0.75
 

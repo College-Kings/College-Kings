@@ -4,7 +4,7 @@
 # Time: Night
 
 label v14s03e:
-    if Ryan_had_Sex: #placeholder 
+    if v14_ryan_satin: 
         scene v14s03e_1 # TPP. Show MC standing outside of room, neutral expression, mouth closed 
         with fade
 
@@ -55,7 +55,7 @@ label v14s03e:
 
         ry "You know it!"
 
-    if MC_had_sex: #placeholder
+    else: #placeholder
         scene v14s03e_4 # TPP. Show MC walking through brothal corridor, neutral expression, mouth closed 
         with dissolve
 
@@ -94,12 +94,12 @@ label v14s03e:
         scene v14s03e_6
         with dissolve
 
-        u "Oh, my bad. *Chuckles* I was, you know... Busy. You weren't?"
+        u "Oh, my bad. *Chuckles* I was, you know... busy. You weren't?"
 
         scene v14s03e_6a
         with dissolve
 
-        ry "Nope, I decided to wait for my first time to be a little more... Clean."
+        ry "Nope, I decided to wait for my first time to be a little more... clean."
 
         scene v14s03e_6
         with dissolve
@@ -131,12 +131,12 @@ label v14s03e:
 
         u "Sorry bro, I wasn't thinking with my head..."
 
-        u "I was thinking with my... Head. *Chuckles*"
+        u "I was thinking with my... head. *Chuckles*"
 
         scene v14s03e_6f # FPP. Same as v14s03e_6c, annoyed expression
         with dissolve
 
-        ry "Yeah, yeah. Whatever [Name]."
+        ry "Yeah, yeah. Whatever [name]."
 
         ry "I'll give you a pass this time since nothing happened."
 
@@ -153,7 +153,7 @@ label v14s03e:
         scene v14s03e_6
         with dissolve
 
-        u "Yeah... That."
+        u "Yeah... that."
 
     scene v14s03e_7 # TPP. Show Imre walking up to MC and Ryan, Imre, annoyed expression, mouth open, MC and Ryan, both neutral expression, mouth closed
     with dissolve
@@ -272,25 +272,25 @@ label v14s03e:
 
     ry "*Laughs* No it wasn't."
 
-    scene v14s03e_12
-    with dissolve
+    #scene v14s03e_12
+    #with dissolve
 
-    u "Huh? *Chuckles*"
+    #u "Huh? *Chuckles*"
 
     scene v14s03e_12b # FPP. Same as v14s03e_12a, slight smile
     with dissolve
 
     ry "Ashley is a man."
 
-    scene v14s03e_12
-    with dissolve
-
-    u "What the fuck?!"
-
     scene v14s03e_12a
     with dissolve
 
     ry "*Laughs* Emerald told me about him."
+
+    scene v14s03e_12
+    with dissolve
+
+    u "What the fuck?!"
 
     scene v14s03e_12
     with dissolve
@@ -307,7 +307,7 @@ label v14s03e:
             scene v14s03e_12
             with dissolve
 
-            u "That's cold as hell Ryan, but... He's on his own with this one."
+            u "That's cold as hell Ryan, but... he's on his own with this one."
 
         "Tell Imre":
             scene v14s03e_12c # FPP. Same as v14s03e_12, serious expression
@@ -337,7 +337,7 @@ label v14s03e:
 
     u "Imre, calm down!"
 
-    scene v14s03e__16 # TPP. Show Imre breaking free from MC, angry expression, mouth closed, MC, surprised expression, mouth closed
+    scene v14s03e_16 # TPP. Show Imre breaking free from MC, angry expression, mouth closed, MC, surprised expression, mouth closed
     with dissolve
 
     pause 0.75
@@ -365,7 +365,7 @@ label v14s03e:
     scene v14s03e_18a # FPP. Same as v14s03e_18, Imre middle fingers Ryan
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v14s03e_19 # FPP. Imre's back facing MC as he watches him walk back from where he came from
     with dissolve
@@ -395,7 +395,7 @@ label v14s03e:
     scene v14s03e_20b # FPP. Same as v14s03e_20, serious expression 
     with dissolve
 
-    ry "Ha, alright [Name]. Chill out."
+    ry "Ha, alright [name]. Chill out."
 
     scene v14s03e_21 # TPP. Show MC and Ryan leaving the brothal, both neutral expression, mouth closed 
     with dissolve
@@ -405,6 +405,11 @@ label v14s03e:
     scene v14s03e_22 # TPP. Show MC and Ryan crossing the road, both neutral expression, mouth closed
     with dissolve
 
+    pause 0.75
+
+    scene v13s31_19
+    with dissolve
+    
     pause 0.75
 
     jump v14s04

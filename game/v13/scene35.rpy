@@ -147,7 +147,7 @@ label v13s35:
     scene v13s35_9
     with dissolve
 
-    u "I don't know why I was expecting so much more. It's so clean and... Innocent here."
+    u "I don't know why I was expecting so much more. It's so clean and... innocent here."
 
     scene v13s35_9a
     with dissolve

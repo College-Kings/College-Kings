@@ -3481,17 +3481,13 @@ label afterbeach:
 
             menu:
                 "Pledge to the Apes":
-
                     $ grant_achievement("silverback")
-
                     u "(Fuck it. I'm gonna be winner, no matter what it costs. Time to pledge to the Apes.)"
 
                     jump pledgeapes
 
                 "Pledge to the Wolves":
-
                     $ grant_achievement("wolfpack")
-
                     u "(Grayson might kill me when he finds out, but I can't join the Apes. I gotta pledge to the Wolves.)"
 
     else:
@@ -3510,16 +3506,13 @@ label afterbeach:
 
         menu:
             "Pledge to the Apes":
-
                 $ grant_achievement("silverback")
-
                 u "(Fuck it. I'm gonna be winner, no matter what it costs. I'ma go to the Apes' house and tell Grayson I changed my mind.)"
 
                 jump pledgeapes
 
             "Pledge to the Wolves":
                 $ grant_achievement("wolfpack")
-
                 u "(Nah, Grayson's done more than enough questionable shit. The Wolves been nothing but good to me. I'ma pledge to the Wolves.)"
 
 
@@ -8970,6 +8963,10 @@ label rileysexscene:
 
 # Pre-cursor to sex with Riley
     $ rileyrs = True
+    $ v7_rileysex = True
+    
+    #$ addPoint("tm", sum([ aubreysex, aubreysex2, v6_emilysex ])) ###Loyaltymod
+    
     scene ridrm1 # You knocking on Riley's dorm door (third person)
     with dissolve
 
@@ -9008,8 +9005,6 @@ label rileysexscene:
     scene ridrm4 # Same as above but mouth closed now (first person)#
     with dissolve
     ri "Let me show you what I mean."
-
-    stop music fadeout 2.0
 
     scene ridrm4a # Same as above but mouth closed now (first person)#
     with dissolve
@@ -15219,6 +15214,8 @@ label fr4aubrey1:
                 $ addPoint("bro")
                 $ bathroomblowjob = True
 
+                #$ addPoint("tm", sum([ v6_emilysex, v7_rileysex ])) ###Loyaltymod
+
                 u "Yeah, alright. Let's go."
 
                 if config_censored:
@@ -16053,7 +16050,7 @@ label fr4penelope2:
 label fr4chloe2:
     $ fr4chloe2 = True
 
-    if not chloemad or ryandefendchloe:
+    if not chloemad:
         scene sfr4cl53a # fpp close up chloe mad
 
         u "You okay?"
@@ -16417,7 +16414,7 @@ label fr4lockerroomchloe:
 
         u "Chloe? You in there?"
 
-        if not chloemad or ryandefendchloe:
+        if not chloemad:
             scene sfr4cl51 # fpp close up of the door
             with dissolve
 
@@ -16664,7 +16661,7 @@ label fr4lockerroomchloe:
     else:
         scene sfr4cl51
 
-        if chloemad and not ryandefendchloe:
+        if chloemad:
             u "(I better leave her alone.)"
 
         else:
@@ -17303,6 +17300,8 @@ label fr4chloeending:
 
     # towel drop sound #check - add towel.mp3 sound file
     play sound "sounds/towel.mp3"
+
+    #$ addPoint("tm", sum([ aubreysex2, v6_emilysex, v7_rileysex, bathroomblowjob ])) ###Loyaltymod
 
     if config_censored and renpy.loadable("v8/scene2.rpy"):
         call screen censoredPopup("v8s2_nsfwSkipLabel1")

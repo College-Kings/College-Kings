@@ -4,6 +4,8 @@ define config.console = True
 define config_debug = False
 define config_censored = False
 
+define config.version = "13.1.5{}".format('s' if config.enable_steam else "")
+
 define config.steam_appid = 1463120
 
 define _quit_slot = "99-1"

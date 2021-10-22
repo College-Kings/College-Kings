@@ -4,10 +4,11 @@
 # Time: Evening 
 
 label v14s05:
+    play sound "sounds/dooropen.mp3"
+    pause 0.5
+
     scene v14s05_1 # TPP. MC, mouth closed, worried, enters through his hotel room door.
     with dissolve
-
-    play sound "sounds/dooropen.mp3"
 
     pause 0.75
 
@@ -17,10 +18,11 @@ label v14s05:
     pause 0.75 
 
     scene v14s05_3 # FPP. Chloe, mouth closed, smiling at MC.
+    with dissolve
     
     u "*Sighs*"
 
-    scene v14s05_3a # FPP. Chloe, mouth closed, concerned.
+    scene v14s05_3b # FPP. Chloe, mouth closed, concerned.
     with dissolve
 
     cl "Everything okay?"
@@ -111,9 +113,6 @@ label v14s05:
     pause 0.75
 
     scene v14s05_5d # TPP. MC getting in bed, covers pulled back.
-    with dissolve
-
-    pause 0.75
     with dissolve
 
     pause 0.75

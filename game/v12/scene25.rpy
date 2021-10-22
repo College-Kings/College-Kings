@@ -100,6 +100,7 @@ label v12_julia_call:
 # -A menu similar to homecoming pops up and MC chooses between Chloe, Lauren, Nora, Penelope, Samantha, Lindsey, Riley, and Aubrey (Greyed out if not present or mad)-
 
 label v12_jc_riley:
+    $ v12_girl = "riley"
     scene v12juc3d
     with dissolve
 

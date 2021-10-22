@@ -500,6 +500,15 @@ label v11_carriage_ride:
     with dissolve
 
     menu:
+        "Side with Nora":
+            $ noraLike += 1
+            $ chloeLike -= 1
+
+            scene v11car11h # FPP. Same as v11car11, Chloe annoyed, mouth closed, looking at MC, different pose
+            with dissolve
+
+            u "I actually think it's really cool, too. I'm sure the benefits would outweigh the negatives. I already have nicknames for some of my frat bros in mind... *Chuckles*"
+
         "Side with Chloe":
             $ noraLike -= 1
             $ chloeLike += 1
@@ -513,15 +522,6 @@ label v11_carriage_ride:
             with dissolve
 
             no "Yeah sure, but you can't just turn the idea down right away when one of your sisters is coming to you with something that could be really awesome."
-
-        "Side with Nora":
-            $ noraLike += 1
-            $ chloeLike -= 1
-
-            scene v11car11h # FPP. Same as v11car11, Chloe annoyed, mouth closed, looking at MC, different pose
-            with dissolve
-
-            u "I actually think it's really cool, too. I'm sure the benefits would outweigh the negatives. I already have nicknames for some of my frat bros in mind... *Chuckles*"
 
     scene v11car15g # FPP. Same as v11car15e, Lindsey slightly worried, mouth open, different pose
     with dissolve

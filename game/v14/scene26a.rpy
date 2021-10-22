@@ -20,15 +20,14 @@ label v14s26a:
     scene v14s26a_2a # FPP. show lindsey no expression, mouth open
     with dissolve
 
-    li "It'd be going a hell of a lot better if I had any help… Ha."
+    li "It'd be going a hell of a lot better if I had any help... Ha."
 
     scene v14s26a_2b # FPP. same as v14s26a_2a show lindsey mouth closed
     with dissolve
 
-    u "I’m sorry I couldn’t help, was there no one else willing to help you?"
+    u "I'm sorry I couldn't help, was there no one else willing to help you?"
 
     if lauren_sabotage:
-
         scene v14s26a_2a
         with dissolve
 
@@ -40,16 +39,15 @@ label v14s26a:
         u "(So Lauren did end up helping... Or did she fake help?)"
 
     else:
-
         scene v14s26a_2a
         with dissolve
 
-        li "I asked her but she ended up not feeling well enough to come over last night… Something about a stomach ache. *Sighs*"
+        li "I asked her but she ended up not feeling well enough to come over last night... Something about a stomach ache. *Sighs*"
 
     scene v14s26a_2b
     with dissolve
 
-    u "Well, what's going on? Everyone loves baked goods… *Laughs*"
+    u "Well, what's going on? Everyone loves baked goods... *Laughs*"
 
     scene v14s26a_2c # FPP. same as v14s26a_2a Show lindsey slightly upset
     with dissolve
@@ -64,7 +62,7 @@ label v14s26a:
     scene v14s26a_2b
     with dissolve
 
-    u "Damn. Okay, well…"
+    u "Damn. Okay, well..."
 
     scene v14s26a_2b
     with dissolve
@@ -74,7 +72,7 @@ label v14s26a:
     scene v14s26a_2a
     with dissolve
 
-    li "The only way this bake sale can be saved is…"
+    li "The only way this bake sale can be saved is..."
 
     scene v14s26a_2d # FPP. same as v14s26a_2a lindsey slight smile, mouth open
     with dissolve
@@ -84,7 +82,7 @@ label v14s26a:
     scene v14s26a_2e # FPP. same as v14s26a_2d lindsey mouth closed
     with dissolve
 
-    u "And…?"
+    u "And...?"
 
     scene v14s26a_2f # FPP. same as v14s26a_2a lindsey is angry, mouth open
     with dissolve
@@ -109,7 +107,7 @@ label v14s26a:
     scene v14s26a_2h # FPP same as v14s26a_2a lindsey is slightly sad, mouth open
     with dissolve
 
-    li "I'm not trying to put this on you, [name] because it's not like the whole campaign depended on you, but…"
+    li "I'm not trying to put this on you, [name] because it's not like the whole campaign depended on you, but..."
 
     scene v14s26a_2h
     with dissolve
@@ -154,12 +152,12 @@ label v14s26a:
     scene v14s26a_2c
     with dissolve
 
-    u "It’s fine, Linds."
+    u "It's fine, Linds."
 
     scene v14s26a_2a
     with dissolve
 
-    li "No, it’s not. You know what?"
+    li "No, it's not. You know what?"
 
     scene v14s26a_2j # FPP. same as v14s26a_2a Lindsey grabs a cake and hands it to MC, no expression, mouth open
     with dissolve
@@ -181,7 +179,7 @@ label v14s26a:
         scene v14s26a_2i
         with dissolve
 
-        u "I’m sure it’ll be fine... Thanks Lindsey."
+        u "I'm sure it'll be fine... Thanks Lindsey."
 
         scene v14s26a_2h
         with dissolve
@@ -200,17 +198,17 @@ label v14s26a:
 
 # Kiwi Post: v14kw26a - Lindsey Selfie in front of her banner (Lindsey, Returning The Promise) on the banner
 
-    if v11_lindsey_slogan = 1:
-
-        $ kiwii_post = KiwiiPost("Lindsey", Lindsey by herself infront of slogan banner half-smiling that says Lindsey, Returning The Promise, "Still selling treats to raise money for my campaign and the future of the Chicks! Don’t forget to stop by <3 #Vote4Lindsey," numberLikes=593)
+    if v11_lindsey_slogan == 1:
+        #Lindsey by herself infront of slogan banner half-smiling that says Lindsey, Returning The Promise
+        $ kiwii_post = KiwiiPost("Lindsey", "Still selling treats to raise money for my campaign and the future of the Chicks! Don't forget to stop by <3 #Vote4Lindsey", numberLikes=593)
         $ kiwii_post.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
         $ kiwii_post.newComment("Nora", "Cutie <3", queue=False)
         $ kiwii_post.newComment("Imre", "Actually, that cookie this morning made me shit myself!", queue=False)
-        $ kiwii_post.newComment("Chloe", "Eww…", queue=False)
-        $ kiwii_post.newComment("Lindsey", "Really, Imre… Please stop.", mentions="Imre", queue=False)
-        $ kiwii_post.newComment("Sebastian", "Yeah dude, and you gave me one of them…", queue=False)
-        $ kiwii_post.newComment("Imre", "Sorry dude! I thought I was doing something nice…", queue=False)
-        $ kiwii_post.newComment("Chloe", "Omg, you guys will have to try my family’s chocolate chip cookies! Maybe I’ll make some soon :)", queue=False)
+        $ kiwii_post.newComment("Chloe", "Eww...", queue=False)
+        $ kiwii_post.newComment("Lindsey", "Really, Imre... Please stop.", mentions="Imre", queue=False)
+        $ kiwii_post.newComment("Sebastian", "Yeah dude, and you gave me one of them...", queue=False)
+        $ kiwii_post.newComment("Imre", "Sorry dude! I thought I was doing something nice...", queue=False)
+        $ kiwii_post.newComment("Chloe", "Omg, you guys will have to try my family's chocolate chip cookies! Maybe I'll make some soon :)", queue=False)
         $ kiwii_post.newComment("Imre", "Hell yeah Chloe", queue=False)
         $ kiwii_post.addReply("Thank you for the cake! Mine tastes perfectly fine :)", mentions="Lindsey")
         $ kiwii_post.newComment("Lindsey", "<3")
@@ -218,16 +216,16 @@ label v14s26a:
 # Kiwi Post: v14kw26a_1 - Lindsey Selfie in front of her banner (Lindsey, Say Bye To The Bullshit) on the banner
 
     else: 
-
-        $ kiwii_post = KiwiiPost("Lindsey", Lindsey by herself infront of slogan banner half-smiling that says Lindsey, Say Bye To The Bullshit, "Still selling treats to raise money for my campaign and the future of the Chicks! Don’t forget to stop by <3 #Vote4Lindsey," numberLikes=593)
+        #Lindsey by herself infront of slogan banner half-smiling that says Lindsey, Say Bye To The Bullshit
+        $ kiwii_post = KiwiiPost("Lindsey", "Still selling treats to raise money for my campaign and the future of the Chicks! Don't forget to stop by <3 #Vote4Lindsey", numberLikes=593)
         $ kiwii_post.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
         $ kiwii_post.newComment("Nora", "Cutie <3", queue=False)
         $ kiwii_post.newComment("Imre", "Actually, that cookie this morning made me shit myself!", queue=False)
-        $ kiwii_post.newComment("Chloe", "Eww…", queue=False)
-        $ kiwii_post.newComment("Lindsey", "Really, Imre… Please stop.", mentions="Imre", queue=False)
-        $ kiwii_post.newComment("Sebastian", "Yeah dude, and you gave me one of them…", queue=False)
-        $ kiwii_post.newComment("Imre", "Sorry dude! I thought I was doing something nice…", queue=False)
-        $ kiwii_post.newComment("Chloe", "Omg, you guys will have to try my family’s chocolate chip cookies! Maybe I’ll make some soon :)", queue=False)
+        $ kiwii_post.newComment("Chloe", "Eww...", queue=False)
+        $ kiwii_post.newComment("Lindsey", "Really, Imre... Please stop.", mentions="Imre", queue=False)
+        $ kiwii_post.newComment("Sebastian", "Yeah dude, and you gave me one of them...", queue=False)
+        $ kiwii_post.newComment("Imre", "Sorry dude! I thought I was doing something nice...", queue=False)
+        $ kiwii_post.newComment("Chloe", "Omg, you guys will have to try my family's chocolate chip cookies! Maybe I'll make some soon :)", queue=False)
         $ kiwii_post.newComment("Imre", "Hell yeah Chloe", queue=False)
         $ kiwii_post.addReply("Thank you for the cake! Mine tastes perfectly fine :)", mentions="Lindsey")
         $ kiwii_post.newComment("Lindsey", "<3")
@@ -264,12 +262,12 @@ label v14s26a:
         scene v14s26_10c # Ignore as reused from another scene
         with dissolve
 
-        u "Are you all good? What’s going on?"
+        u "Are you all good? What's going on?"
 
         scene v14s26_10c # Ignore as reused from another scene
         with dissolve
 
-        am "I'm fine, sorry…"
+        am "I'm fine, sorry..."
 
         scene v14s26_10b # Ignore as reused from another scene
         with dissolve
@@ -279,7 +277,7 @@ label v14s26a:
         scene v14s26_10c # Ignore as reused from another scene
         with dissolve
 
-        u "*Chuckles* That’s okay."
+        u "*Chuckles* That's okay."
 
         scene v14s26_10d # Ignore as reused from another scene
         with dissolve
@@ -338,7 +336,7 @@ label v14s26a:
         scene v14s26a_2b
         with dissolve
 
-        u "Hey… Trial and error, right?"
+        u "Hey... Trial and error, right?"
 
         scene v14s26a_2b
         with dissolve
@@ -358,7 +356,7 @@ label v14s26a:
     scene v14s26a_2d
     with dissolve
 
-    li "Yeah, I am. I’m ready for a nap. *Chuckles*"
+    li "Yeah, I am. I'm ready for a nap. *Chuckles*"
 
     scene v14s26a_2e
     with dissolve
@@ -383,7 +381,7 @@ label v14s26a:
     scene v14s26a_3
     with dissolve
 
-    u "(It’s a sad day for honesty.)"
+    u "(It's a sad day for honesty.)"
 
     scene v14s26_14 # Ignore as reused from another scene
     with dissolve

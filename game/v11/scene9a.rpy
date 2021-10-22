@@ -470,11 +470,6 @@ label v11_wolves_seb_prank:
 
             pause 0.75
 
-            scene v11wsp3a
-            with dissolve
-
-            pause 0.75
-
             scene v11wsp4b
             with dissolve
 

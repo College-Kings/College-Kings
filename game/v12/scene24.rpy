@@ -51,7 +51,7 @@ label v12_simplr_convo:
         $ simplr_Emmy.addReply("Ha, I'm thinking I'm the lucky one.")
         $ simplr_Emmy.newMessage("There's actually a Simplr event they do regularly here, you should stop by when you come and maybe we'll run into each other.")
         $ simplr_Emmy.addReply("I'll definitely look into that.")
-        $ simplr_Emmy.newMessage("Good, I know it's late in Paris so goodnight handsome ;)")
+        $ simplr_Emmy.newMessage("Good, I know it's late so goodnight handsome ;)")
         $ simplr_Emmy.addReply("Goodnight ;)")
 
         call screen phone

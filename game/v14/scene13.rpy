@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 5), SEBASTIAN (Outfit: x), CHRIS (Outfit: 1)
 # Time: Evening                     : I left Sebastian X because I couldn't find his outfit in the spreadsheet and he is not wearing a shirt anywayc for this scene
 
-
 label v14s13:
     scene v14s13_1 # TPP. Show MC walking into his room, neutral expression, mouth closed
     with dissolve
@@ -28,32 +27,32 @@ label v14s13:
     scene v14s13_4a # FPP. Same as v14s13_4, mouth closed
     with dissolve
 
-    u "Ha… Sorry Seb, I was gonna save that for the morning."
+    u "Ha... Sorry Seb, I was gonna save that for the morning."
 
     scene v14s13_4b # FPP. Same as v14s13_4, slight laughing expression
     with dissolve
 
-    se "*Chuckles* Wolves don't roll like that my man."
+    se "*Chuckles* Wolves don't roll like that, my man."
 
     scene v14s13_4
     with dissolve
 
-    se "You never know when it's the last time you'll see someone, so you’ve gotta take advantage of the little moments."
+    se "You never know when it's the last time you'll see someone, so you've gotta take advantage of the little moments."
 
     scene v14s13_4a
     with dissolve
 
-    u "Ha, alright… You make it sound like you're dying though. *Laughs*"
+    u "Ha, alright... You make it sound like you're dying though. *Laughs*"
 
     scene v14s13_4
     with dissolve
 
-    se "Well… You never know."
+    se "Well... You never know."
 
     scene v14s13_4a
     with dissolve
 
-    u "Wait… Sebastian, are you-?"
+    u "Wait... Sebastian, are you-?"
 
     scene v14s13_4c # FPP. Same as v14s13_4, different posture
     with dissolve
@@ -73,12 +72,12 @@ label v14s13:
     scene v14s13_4
     with dissolve
 
-    se "Friend. Sounds like my friend is calling. There's no bosses around here, [Name]."
+    se "Friend. Sounds like my friend is calling. There's no bosses around here, [name]."
 
     scene v14s13_4c
     with dissolve
 
-    se "Didn’t you notice how he asked for my help rather than telling me to do something?"
+    se "Didn't you notice how he asked for my help rather than telling me to do something?"
 
     scene v14s13_4a
     with dissolve
@@ -108,12 +107,12 @@ label v14s13:
     scene v14s13_4b
     with dissolve
 
-    se "Very funny... I’m glad you're back, man. Really, I kinda missed you guys more than I thought I would. *Laughs*"
+    se "Very funny... I'm glad you're back, man. Really, I kinda missed you guys more than I thought I would. *Laughs*"
 
     scene v14s13_4a
     with dissolve
 
-    u "I’m happy to be home, haha. We’ll catch up tomorrow, alright? Have a good one."
+    u "I'm happy to be home, haha. We'll catch up tomorrow, alright? Have a good one."
 
     scene v14s13_4
     with dissolve

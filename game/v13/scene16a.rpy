@@ -5,6 +5,8 @@
 
 label v13s16a:
     $ v13_rileysex = True
+    $ rileyrs = True
+    #$ addPoint("tm", sum([ v12_lindsey_sex, v12_msrose_sex, v12_lauren_sex, v12_nora_sex ])) ###Loyaltymod
 
     scene v13s16a_1 # FPP Show Riley in bed, MC on top of her and very close to her face. Riley with a sexy smile, mouth open
     with dissolve

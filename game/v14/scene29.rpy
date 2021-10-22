@@ -7,7 +7,7 @@ label v14s29:
     scene v14s29_1 # TPP. Show MC walking down the Sidewalk campus, slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     play sound "sounds/call.mp3"
 
@@ -68,7 +68,7 @@ label v14s29:
         scene v14s29_3
         with dissolve
 
-        imre "Ahh shit… Sorry, I just remembered something I gotta do."
+        imre "Ahh shit... Sorry, I just remembered something I gotta do."
 
         scene v14s29_3a
         with dissolve
@@ -80,7 +80,7 @@ label v14s29:
         scene v14s29_2
         with dissolve
 
-        u "(This dude’s weird.) *Chuckles*"
+        u "(This dude's weird.) *Chuckles*"
 
         scene v14s29_5 # TPP. Show MC standing on the sidewalk, slight smile, mouth closed.
         with dissolve

@@ -322,10 +322,22 @@ label after_load:
         cameron.name = "Cameron"
         josh.name = "Josh"
 
+        try: v6_emilysex
+        except NameError: v6_emilysex = False
         try: v7_seencrowning
         except NameError: v7_seencrowning = False
         try: v7_emily_bowling
         except NameError: v7_emily_bowling = False
+        try: v7_rileysex
+        except NameError: v7_rileysex = False
+        try: v8_chloesex
+        except NameError: v8_chloesex = False
+        try: v8_hocoamber
+        except NameError: v8_hocoamber = False
+        try: v8_dodged_pipe
+        except NameError: v8_dodged_pipe = False
+        try: v10_ambersex
+        except NameError: v10_ambersex = False
         try: v11_samantha_spa
         except NameError: v11_samantha_spa = False
         try: v11_lauren_ily
@@ -344,6 +356,8 @@ label after_load:
         except NameError: v12_chase_robber = False
         try: v12s7_seenList
         except NameError: v12s7_seenList = []
+        try: v12s7_endtalkList
+        except NameError: v12s7_endtalkList = []
         try: v12s7_killList
         except NameError: v12s7_killList = set()
         try: v12_msrose_sex
@@ -452,7 +466,10 @@ label after_load:
         except NameError: v12s33_door3 = False
         try: v12s24_emmymatch
         except NameError: v12s24_emmymatch = False
-
+        try: v12_sauna_sneak1
+        except NameError: v12_sauna_sneak1 = False
+        try: v12_girl
+        except NameError: v12_girl = "na"
 
         #v11 variables
         try: laurenLike
@@ -549,6 +566,8 @@ label after_load:
         except NameError: political_strategist = False
         try: emily_europe
         except NameError: emily_europe = False
+        try: v11_check_on_nora
+        except NameError: v11_check_on_nora = False
 
         # v13 Errors
         try: v13_penelope_concert
@@ -641,6 +660,12 @@ label after_load:
         except NameError: laurenrs_v11aubrey = False
         try: v13s40fromgame
         except NameError: v13s40fromgame = False
+        try: v13_aubrey_vote
+        except NameError: v13_aubrey_vote = "na"
+        try: v13_chloe_sex
+        except NameError: v13_chloe_sex = False
+        try: v14_ryan_satin
+        except NameError: v14_ryan_satin = False
 
 
     show no_hard_feelings at achievementShow

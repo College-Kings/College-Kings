@@ -27,7 +27,7 @@ label v14s21:
     scene v14s21_2b # FPP. Same as v14s21_2a, Chloe reaches MC and is standing still infront of him, Chloe looking at MC, Chloe slight smile, mouth closed.
     with dissolve
 
-    u "*Chuckles* What’s happening? Something wrong?"
+    u "*Chuckles* What's happening? Something wrong?"
 
     scene v14s21_2c # FPP. Same as v14s21_2b, Chloe slight smile, mouth open.
     with dissolve
@@ -48,11 +48,23 @@ label v14s21:
 
     cl "When I left the library earlier, I couldn't help but feel like I didn't really translate how thankful I am for all of your help."
 
+    scene v14s21_2b
+    with dissolve
+    
+    scene v14s21_2c
+    with dissolve
+
     cl "You're not only there for me in private but now in public as well. That's something I can't thank you enough for."
 
-    cl "A lot of people that I know tend to avoid hanging out with me, because of the rumors or preconceived images that float around. But…"
+    cl "A lot of people that I know tend to avoid hanging out with me, because of the rumors or preconceived images that float around. But..."
 
-    cl "You don’t care what people say. And that’s what I appreciate the most."
+    scene v14s21_2b
+    with dissolve
+    
+    scene v14s21_2c
+    with dissolve
+
+    cl "You don't care what people say. And that's what I appreciate the most."
 
     scene v14s21_3 # TPP. Show MC holding Chloe's face, both slight smile, mouth closed.
     with dissolve
@@ -86,17 +98,17 @@ label v14s21:
     scene v14s21_2d
     with dissolve
 
-    u "And honestly Chloe,  I’ll do whatever I can to help keep that gorgeous smile on your face for as long as humanly possible."
+    u "And honestly Chloe, I'll do whatever I can to help keep that gorgeous smile on your face for as long as humanly possible."
 
     scene v14s21_2f # FPP. Same as v14s21_2d, MC no longer holding Chloe's face, Chloe's arms wrapped around MC's neck, Chloe slight smile, mouth open.
     with dissolve
 
-    cl "You're the most amazing person I’ve ever met, do you know that?"
+    cl "You're the most amazing person I've ever met, do you know that?"
 
     scene v14s21_2g # FPP. Same as v14s21_2f, Chloe slight smile, mouth closed.
     with dissolve
 
-    u "*Chuckles* I do now, I suppose. Although, I’m not completely agreeing with you on that one... ."
+    u "*Chuckles* I do now, I suppose. Although, I'm not completely agreeing with you on that one..."
 
     scene v14s21_2f
     with dissolve
@@ -113,14 +125,14 @@ label v14s21:
     scene v14s21_2f
     with dissolve
 
-    cl "I mean, with the campaign being this real and competitive, I'm gonna have a lot less time than what we’re used to."
+    cl "I mean, with the campaign being this real and competitive, I'm gonna have a lot less time than what we're used to."
 
-    cl "So, sadly that means we’ll have less time to be together, you know?"
+    cl "So, sadly that means we'll have less time to be together, you know?"
 
     scene v14s21_2g
     with dissolve
 
-    u "I'm a patient man when it comes to the things I care about, Chloe I know your situation and I understand that this campaign is more important right now."
+    u "I'm a patient man when it comes to the things I care about, Chloe. I know your situation and I understand that this campaign is more important right now."
 
     scene v14s21_2f
     with dissolve
@@ -135,7 +147,7 @@ label v14s21:
     scene v14s21_2f
     with dissolve
 
-    cl "Haha. You know, I have some time right now…"
+    cl "Haha. You know, I have some time right now..."
 
     scene v14s21_2g
     with dissolve
@@ -145,7 +157,7 @@ label v14s21:
     scene v14s21_2f
     with dissolve
 
-    cl "Yeah… I think I have a nice idea in mind to kick off our campaign as well."
+    cl "Yeah... I think I have a nice idea in mind to kick off our campaign as well."
 
     scene v14s21_2g
     with dissolve
@@ -180,7 +192,7 @@ label v14s21:
     scene v14s21_8 # FPP. In the back area of the parking lot, MC looking at Chloe, Chloe looking at MC, Chloe slight smile, mouth closed.
     with dissolve
 
-    u "Is there a reason we’re in the parking lot?"
+    u "Is there a reason we're in the parking lot?"
 
     scene v14s21_8a # FPP. Same as v14s21_8, Chloe slight smile, mouth open.
     with dissolve
@@ -189,7 +201,7 @@ label v14s21:
 
     cl "I used to sit out here and study everyday after class during my first couple of years on campus."
 
-    cl "One of the very few places on campus where I know I won’t be bothered."
+    cl "One of the very few places on campus where I know I won't be bothered."
 
     scene v14s21_8
     with dissolve
@@ -206,25 +218,24 @@ label v14s21:
 
     cl "We can call it that."
 
-    play sound "sounds/kiss.mp3"
 
     scene v14s21_10 # TPP. Show Chloe kissing MC.
     with dissolve
-
-    pause 0.75
-
     play sound "sounds/kiss.mp3"
+
+    pause 1.5
 
     scene v14s21_10a # TPP. Chloe and MC kissing in a different position.
     with dissolve
+    play sound "sounds/kiss.mp3"
 
     menu:
-        "Continue...":
+        "Continue":
             $ addPoint("bf")
             $ addPoint("tm")
             jump v14s21a
         
-        "Pull back...":
+        "Pull back":
             $ addPoint("bf")
             scene v14s21_10b # TPP. MC pulling away from the kissing, MC slight smile, mouth closed, Chloe confused expression, mouth open
             with dissolve
@@ -234,12 +245,12 @@ label v14s21:
             scene v14s21_8b # FPP. Same as v14s21_8a, Chloe confused expression, mouth closed.
             with dissolve
 
-            u "N-No… Nothing's wrong at all I just-"
+            u "N-No... Nothing's wrong at all, I just-"
 
             scene v14s21_8c # FPP. Same as v14s21_8b, Chloe sad and confused expression, mouth closed.
             with dissolve
 
-            u "Look, Chlo... I don't want you to feel like you owe me anything just for supporting you."
+            u "Look, Chloe... I don't want you to feel like you owe me anything just for supporting you."
 
             scene v14s21_8d # FPP. Same as v14s21_8c, MC holding Chloe's face, Chloe sad and confused expression, mouth closed.
             with dissolve
@@ -253,12 +264,11 @@ label v14s21:
 
             pause 0.75
 
-            play sound "sounds/kiss.mp3"
-
             scene v14s21_8f # FPP. Same as v14s21_8e, Chloe kissing MC.
             with dissolve
+            play sound "sounds/kiss.mp3"
 
-            pause 0.75
+            pause 1.5
 
             scene v14s21_8a
             with dissolve
@@ -287,7 +297,7 @@ label v14s21:
             scene v14s21_8a
             with dissolve
 
-            cl "I’ll meet you there soon, okay?"
+            cl "I'll meet you there soon, okay?"
 
             scene v14s21_8
             with dissolve
@@ -299,12 +309,11 @@ label v14s21:
 
             pause 0.75
 
-            play sound "sounds/kiss.mp3"
-
             scene v14s21_8f 
             with dissolve
+            play sound "sounds/kiss.mp3"
 
-            pause 0.75
+            pause 1.5
 
             scene v14s21_8g # FPP. Same as v14s21_8f, Chloe walking away from MC.
             with dissolve

@@ -76,9 +76,9 @@ label v14s16:
     scene v14s16_2a
     with dissolve
 
-    u "I admit, I didn't expect it to be... This much."
+    u "I admit, I didn't expect it to be... this much."
 
-    u "I mean... Did she do all of this overnight?"
+    u "I mean... did she do all of this overnight?"
 
     scene v14s16_2
     with dissolve
@@ -87,38 +87,47 @@ label v14s16:
 
     cl "Come to find out that this shit has been up for at least a week. She's been having people work for her while we were away."
 
-    scene v14s16_2
+    scene v14s16_2a
     with dissolve
 
     u "(Damn, Lindsey. That's good.)"
 
-    scene v14s16_2a
+    scene v14s16_2
     with dissolve
 
-    cl "*Speaking fast* Like, what the actual fuck!? Am I missing something?! I have to win this race! She can't just, fuck everything up all because she's doesn't trust me!"
+    cl "*Speaking fast* Like, what the actual fuck!? Am I missing something?! I have to win this race! She can't just, fuck everything up all because she doesn't trust me!"
 
     show screen loyalty_tutorial # Placeholder
 
     hide screen loyalty_tutorial # Placeholder
 
-    scene v14s16_2a
+    scene v14s16_2
     with dissolve
 
     cl "I need a lot of help if I'm going to beat her, [name]. It won't be as easy as I thought either."
 
     cl "Chris has pretty much promised that the Wolves will side with me so that's a blessing, but the main person I need support from is you."
 
+    scene v14s16_2a
+    with dissolve
+    
+    scene v14s16_2
+    with dissolve
+
     cl "I know I've asked you before, but this time I need a final answer. Are you going to help me with this campaign so I can beat Lindsey?"
 
     cl "It would include planning campaign events like parties, making T-shirts, that kind of stuff."
 
     if v13_help_chloe:
-        cl "I remember how you said you'd help me before but..."
+        cl "I remember how you said you'd support me before but..."
    
     scene v14s16_2b # FPP. Same as v14s16_2a, Chloe cute pose, pouting face, mouth open.
     with dissolve
 
     cl "If you'd be willing to help me win, I'd be so grateful..."
+
+    scene v14s16_2b
+    with dissolve
 
     cl "I'd do anything to thank you."
 
@@ -136,9 +145,9 @@ label v14s16:
         scene v14s16_2d # FPP. Same as v14s16_2c, Chloe leaning in towards MC's ear and whispering to him, Chloe flirting smile, mouth open.
         with dissolve
 
-        cl "*Whispering* Plus, the president always needs an assistant and if it's my job to, you know... Take care of you, while also running the sorority..."
+        cl "*Whispering* Plus, the President always needs an assistant and if it's my job to, you know... take care of you, while also running the sorority..."
 
-        cl "*Whispering* I might end up needing someone to help me with all of that... And all of you..."
+        cl "*Whispering* I might end up needing someone to help me with all of that... and all of you..."
 
         cl "*Whispering* Following me?"
 
@@ -153,12 +162,12 @@ label v14s16:
     cl "So, what's your answer? Will you help me try and win this campaign?"
 
     menu:
-        "I'll help...":
-            $ v14_support_chloe = True
+        "I'll help":
+            $ v14_help_chloe = True
             scene v14s16_2e # FPP. Same as v14s16_2, Chloe slight smile, mouth closed.
             with dissolve
 
-            u "You know how I feel when it comes to you being President, Chlo."
+            u "You know how I feel when it comes to you being President, Chloe."
 
             u "Honestly, I don't think I could ever see anyone filling that role other than you."
 
@@ -188,12 +197,15 @@ label v14s16:
                 scene v14s16_6a # TPP. Same as v14s16_6, Chloe kisses MC.
                 with dissolve
 
-                pause 0.75
+                play sound "sounds/kiss.mp3"
+
+                pause 1.5
 
                 scene v14s16_2h # FPP. Same as v14s16_2f, Chloe walking away from MC. (Just Chloe's backside so we can reuse the scene for other outcomes.)
                 with dissolve
 
-                u "(If her goal was to make me feel sorry enough for her that I would agree to help, she succeeded.) *Chuckles* (I don't wanna get in my head too much about what her intentions are... I want to help her, so that's what I'm gonna do.)"
+                u "(If her goal was to make me feel sorry enough for her that I would agree to help, she succeeded.) *Chuckles*"
+                u "(I don't wanna get in my head too much about what her intentions are... I want to help her, so that's what I'm gonna do.)"
 
                 scene v14s16_2i # FPP. Same as v14s16_2h, Chloe further away from MC. 
                 with dissolve
@@ -211,18 +223,18 @@ label v14s16:
 
                 pause 0.75
                 
-        "I don't have the time...":
-            scene v14s16_2
+        "I don't have the time":
+            scene v14s16_2a
             with dissolve
 
             u "Chloe I... I want to help you, but I don't have the time."
 
-            scene v14s16_2a
+            scene v14s16_2
             with dissolve
 
             cl "You can't make an ounce of time to help me out? With any of this?"
 
-            scene v14s16_2
+            scene v14s16_2a
             with dissolve
 
             u "I'm sorry, Chloe. I'm just really busy now that we're back on campus and things with the-."
@@ -246,16 +258,17 @@ label v14s16:
                 scene v14s16_2k
                 with dissolve
 
-                u "It's not that I don't want to Chlo, it's just that I'm kinda busy with my own Greek life. We just got back to campus for crying out loud, I mea-"
+                u "It's not that I don't want to Chloe, it's just that I'm kinda busy with my own Greek life. We just got back to campus for crying out loud, I mea-"
 
                 scene v14s16_2j
                 with dissolve
 
                 cl "It's fine, really."
 
-                cl "I'll remember just how busy you are the next time you want to \"hangout\"."
+                cl "I'll remember just how busy you are the next time you want to \"hang out\"."
 
                 scene v14s16_2h
+                with dissolve
 
                 u "*Sighs* (This is gonna cause some serious issues for us. Fuck... Kinda surprised she didn't break up with me right there... Chloe's way or no way.)"
 

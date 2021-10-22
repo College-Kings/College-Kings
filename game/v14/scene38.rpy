@@ -22,12 +22,12 @@ label v14s38:
     scene v14s38_2b  # FPP. same as v14s38_2a, but Jenny mouth closed.
     with dissolve
 
-    u "I hung back for a quick phone call, I thought you’d be gone by now."
+    u "I hung back for a quick phone call, I thought you'd be gone by now."
 
     scene v14s38_3   # FPP. Jenny's body facing forward, her head turned toward MC (camera), smiling, mouth open, background 1 behind Jenny.
     with dissolve
 
-    jen "Oh, I’m honestly taking my sweet time tonight. *Chuckles*"
+    jen "Oh, I'm honestly taking my sweet time tonight. *Chuckles*"
 
     scene v14s38_3a  # FPP. Same as v14s38_3, but Jenny's mouth closed
     with dissolve
@@ -42,7 +42,7 @@ label v14s38:
     scene v14s38_4a  # FPP. Same as v14s38_3a, but background 2 behind Jenny.
     with dissolve
 
-    u "Okay, well don’t say it like that. *Laughs* Hopefully nothing ever happens."
+    u "Okay, well don't say it like that. *Laughs* Hopefully nothing ever happens."
 
     scene v14s38_5   # FPP. Same as v14s38_4, but Jenny's head has a subtle tilt different than v14s38_4 and background 3 behind Jenny.
     with dissolve
@@ -62,7 +62,7 @@ label v14s38:
     scene v14s38_3a
     with dissolve
 
-    u "*Laughs* Cool, I don’t want you thinking I’m some creep."
+    u "*Laughs* Cool, I don't want you thinking I'm some creep."
 
     scene v14s38_5
     with dissolve
@@ -72,7 +72,7 @@ label v14s38:
     scene v14s38_5a
     with dissolve
 
-    u "So, since you haven’t said anything by now…"
+    u "So, since you haven't said anything by now…"
 
     scene v14s38_4
     with dissolve
@@ -114,8 +114,8 @@ label v14s38:
 
     pause 0.75
 
-    if joinapes:
-        jump v14s41
+    if joinwolves:
+        jump v14s40
     
     else:
-        jump v14s40
+        jump v14s41

@@ -147,7 +147,7 @@ label v14s03b:
     scene v14s03b_5d
     with dissolve
 
-    ry "Yeah, I am... Dickhead."
+    ry "Yeah, I am... dickhead."
 
     scene v14s03b_5e
     with dissolve
@@ -157,7 +157,7 @@ label v14s03b:
     # -If blessed with Emily (extra dialog)
     # I HAVE NO IDEA WHAT VARIABLE THIS IS ASKING FOR
 
-    if v14_blessed_emily: #REPLACE - THIS IS ONLY A GUESS/PLACEHOLDER VARIABLE NAME
+    if v10s33_ryan_flirt_emily:
         scene v14s03b_5a
         with dissolve
 
@@ -193,7 +193,7 @@ label v14s03b:
     scene v14s03b_5c
     with dissolve
 
-    u "I mean, I feel where you're coming from. Everyone feels like that at first I think"
+    u "I mean, I feel where you're coming from. Everyone feels like that at first I think."
 
     scene v14s03b_5a
     with dissolve
@@ -225,21 +225,19 @@ label v14s03b:
 
     menu:
         "Go for it":
-
             u "Well, no. Honestly, if it's just for practice then there's probably no better place than this. Just make sure that's really what you want to do."
 
-            scene v14s03b_5c
+            scene v14s03b_5b
             with dissolve
 
             ry "So, you don't think it's weird?"
 
-            scene v14s03b_5b
+            scene v14s03b_5c
             with dissolve
 
             u "*Chuckles* Not at all. I think you should go for it."
 
         "Don't ruin your first time":
-
             u "Well, honestly... I wouldn't want my first time to be in a brothel."
 
             scene v14s03b_5a
@@ -269,7 +267,7 @@ label v14s03b:
 
     u "Thank you, you-"
 
-    scene v14s03b_8
+    scene v14s03b_8a
     with dissolve
 
     ry "What is it about me that you find so handsome?"
