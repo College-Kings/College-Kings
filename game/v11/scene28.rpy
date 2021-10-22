@@ -5,10 +5,11 @@
 
 label v11_ms_rose_sex:
     $ v11_msrose_scene = True
+    #$ addPoint("tm", sum([ v10_lauren_suck, v10_ambersex, v10_chloe_locker, v10_ri_sex, v11_fucked_candy, v11_aubrey_sex ])) ###Loyaltymod
 
     scene v11ros1 # TPP. Show MC walking thourgh the corridor, he is slightly nervous, mouth closed
     with fade
-    play music "music/v11/Scene 28/Track Scene 28_1.mp3" fadein 2
+    play music "music/V10/Scene 41/Track Scene 41_2.mp3" fadein 2
     pause 0.75
 
     scene v11ros2 # FPP. MC is standing outside Ms Rose's room, he is looking at the door
@@ -20,6 +21,7 @@ label v11_ms_rose_sex:
 
             scene v11ros2a # FPP. Same as v11ros2, MC is grabbing the door handle
             with dissolve
+            play sound "sounds/dooropen.mp3"
 
             pause 0.75
 
@@ -70,7 +72,7 @@ label v11_ms_rose_sex:
 
 label v11_ms_rose_sex_sg:
     stop music fadeout 3
-    play music "music/v11/Scene 28/Track Scene 28_2.mp3" fadein 2
+    play music "music/V10/Scene 17/Track Scene 17_2.mp3" fadein 2
     scene v11ros3a # FPP. Same as v11ros3, Rose mouth open, seductive look
     with dissolve
 
@@ -99,17 +101,20 @@ label v11_ms_rose_sex_sg:
     scene v11ros3b # FPP. Same cam as v11ros3, Show Ms Rose getting very close to MC, she has a seductive look, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11ros4 # TPP. Show Ms Rose removing MC's shirt, she is slightly smiling, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
+
+    if config_censored:
+        call screen censoredPopup("v11s28_nsfwSkipLabel1")
 
     scene v11ros5 # TPP. Show Ms Rose removing MC's pants, show her ass appearing from under the bathrobe while she's bending over to remove his pants
     with dissolve
 
-    pause 1
+    pause 1.25
 
     scene v11ros3a
     with dissolve
@@ -268,7 +273,7 @@ label v11_ms_rose_sex_sg:
     scene v11ros16 # TPP. Show MC getting out of bed, slight smile, mouth closed, Ms Rose lying down in the bed, mouth closed, neutral expression
     with dissolve
     stop music fadeout 3
-    play music "music/v11/Scene 28/Track Scene 28_3.mp3" fadein 2
+    play music "music/V10/Scene 41/Track Scene 41_2.mp3" fadein 2
     pause 1
 
     scene v11ros17 # TPP. Show MC putting on his pants, Ms Rose sitting down in the bed behind him, still naked, both mouths closed, slight smiles
@@ -296,8 +301,12 @@ label v11_ms_rose_sex_sg:
 
     pause 1
 
+    label v11s28_nsfwSkipLabel1:
+
     scene v11ros20 # TPP. Show MC slosing the door behind him
     with dissolve
+
+    play sound "sounds/doorclose.mp3"
 
     $ renpy.end_replay()
 
@@ -321,23 +330,23 @@ label v11_ms_rose_sex_sg:
     scene v11ros24 # TPP. Show MC walking through the hotel room door 
     with dissolve
 
-    pause 0.75
+    pause 1
 
     if v11_riley_roomate:
         scene v11ros25 # FPP. MC is standing in the room, he can see Riley sleeping on her bed
         with dissolve
 
-        pause 0.75
+        pause 1
 
     else:
         scene v11ros25a # FPP. Same cam as v11ros25, but MC can see Chloe sleeping on her bed instead of Riley
         with dissolve
 
-        pause 0.75 
+        pause 1 
 
     scene v11ros26 # TPP. Show MC lying in his bed, under the covers, he is sleeping, room is dark
     with dissolve
 
-    pause 0.75
+    pause 1
     stop music fadeout 3
     jump v11_hotel_room

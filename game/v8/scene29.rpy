@@ -12,11 +12,11 @@ label after_drugs:
     if not helpJosh:
         scene v8josh10 # TPP. Showing Josh sitting on the ground outside his room door supporting himself using the wall
         with Fade(0.75, 0.25, 0.75)
-        pause
+        pause 0.75
 
         scene v8josh11 # TPP. Showing MC rushing towards Josh, looking concerned
         with dissolve
-        pause
+        pause 0.75
 
         scene v8josh12 # TPP. Showing MC picking Josh up from the ground, concerned, mouth open
         with dissolve
@@ -33,20 +33,19 @@ label after_drugs:
         jo "*Groans*"
 
     play sound "sounds/dooropen.mp3"
-    play music "music/mlove2.mp3"
-    queue music "music/mchill1.mp3"
+    play music "music/mchill1.mp3"
 
     scene v8josh14 # TPP (This is the next scene for both v8josh12a and v8josh13, in different paths of course, so both the transitions should look smooth). Show MC opening the room door (half open) with Josh still taking support from MC
     with dissolve
-    pause 0.5
+    pause 0.75
 
     scene v8josh15 # TPP. MC walking Josh inside the building (they crossed the doorway and entered the living room now). Josh looking towards the couch (the first one after entering), mouth open
     with dissolve
-    jo "Ju-{w} Just lay me on the couch. Can't go all the way upstairs at the moment."
+    jo "Ju- Just lay me on the couch. Can't go all the way upstairs at the moment."
 
     scene v8josh16 # TPP. MC laid Josh down on the couch (the first one after entering) with his head towards right side, propped his head up with a pillow and is now standing near the couch looking at Josh
     with dissolve
-    pause 0.5
+    pause 0.75
 
     scene v8josh17 # FPP (Continuation of v8josh16). Josh looking into the camera, mouth closed
     with dissolve
@@ -141,7 +140,7 @@ label after_drugs:
 
     scene v8josh22a
     with dissolve
-    am "What!?{w} Ugh, that fucking idiot."
+    am "What!? Ugh, that fucking idiot."
     am "I'll be right over. I'm gonna give him so much shit!"
 
     scene v8josh22b
@@ -157,10 +156,10 @@ label after_drugs:
 
     scene v8josh23 # TPP. Show MC sitting on the couch watching TV, neutral expression, mouth closed
     with Fade(1, 0.25, 0.5)
-    pause
+    pause 0.75
 
     play sound "sounds/knock.mp3"
-    "*Knock knock knock*"
+    pause 0.75
 
     scene v8josh21
     with dissolve
@@ -183,7 +182,7 @@ label after_drugs:
 
     scene v8josh25 # FPP (Continuation of v8josh24b). Amber turned towards the MC. She's looking upset, concerned, mouth open
     with dissolve
-    am "Fuck!{w} What the hell was he thinking?"
+    am "Fuck! What the hell was he thinking?"
 
     scene v8josh25a # Same as v8josh25 but Amber mouth closed
     with dissolve
@@ -209,13 +208,14 @@ label after_drugs:
             u "While I fought the fat guy, the other guy got into it with Josh."
             u "By the time I was done beating that guy's ass, Josh was already on the ground all fucked up."
 
-            scene v8josh25b
-            with dissolve
-            am "And the other guy?"
+            if v8_dodged_pipe:
+                scene v8josh25b
+                with dissolve
+                am "And the other guy?"
 
-            scene v8josh25c
-            with dissolve
-            u "I beat the shit outta him."
+                scene v8josh25c
+                with dissolve
+                u "I beat the shit outta him."
 
             scene v8josh25d # Amber less upset, relaxed and smiling a little, mouth open
             with dissolve
@@ -229,11 +229,13 @@ label after_drugs:
             with dissolve
             u "I tried. But he wouldn't listen. Maybe I should have tried harder."
 
-            scene v8josh25g # Amber brushing MC's cheek, empathetic, comforting smile, mouth open (Use DoF so Amber's hand is blurred)
+            #scene v8josh25g # Amber brushing MC's cheek, empathetic, comforting smile, mouth open (Use DoF so Amber's hand is blurred)
+            scene v8josh25d
             with dissolve
-            am "Hey, it's not your fault.{w} I'm sorry I yelled. You did more than anyone had a right to expect."
+            am "Hey, it's not your fault. I'm sorry I yelled. You did more than anyone had a right to expect."
 
-            scene v8josh25h # Same as v8josh25g but Amber mouth closed
+            #scene v8josh25h # Same as v8josh25g but Amber mouth closed
+            scene v8josh25c
             with dissolve
             u "It's ok. I mean, we're alive, and I swiped the cash from them."
 
@@ -275,15 +277,16 @@ label after_drugs:
             u "(What is she up to?)"
 
             play sound "sounds/flush.mp3"
-            pause 0.5
+            pause 0.75
 
             scene v8josh27a # Amber walking towards the couch to sit beside MC, looking at him neutral expression. MC neutral expression, mouth open
             with dissolve
             u "Did you just..."
 
+            stop sound
             scene v8josh27c # Amber sits beside MC, smiling a little, looking at him, mouth closed. MC neutral expression, mouth closed
             with dissolve
-            pause 0.5
+            pause 0.75
 
             scene v8josh28 # FPP (continuation of v8josh27c, so both MC and Amber are sitting on the couch. MC is sitting towards Josh to avoid showing him in all renders). Amber confident, smiling a little, mouth open
             with dissolve
@@ -319,7 +322,7 @@ label after_drugs:
                 scene v8josh28c # Amber concerned, mouth open
                 with dissolve
                 am "...but to think he was in any frame of mind to pull this off is just stupid."
-                am "He needs to stop before he's caught...{w} or gets killed."
+                am "He needs to stop before he's caught... or gets killed."
 
                 scene v8josh28d # Same as v8josh28c but Amber mouth closed
                 with dissolve
@@ -346,7 +349,7 @@ label after_drugs:
 
             scene v8josh25g
             with dissolve
-            am "Hey, it's ok. You tried.{w} You did more than anyone had a right to expect."
+            am "Hey, it's ok. You tried. You did more than anyone had a right to expect."
 
             scene v8josh25h
             with dissolve
@@ -386,7 +389,7 @@ label after_drugs:
         scene v8josh25e
         with dissolve
         am "Hey, at least you're here taking care of him. I've had friends that wouldn't bat an eye."
-        am "*Sigh* He needs to stop before he's caught...{w} or worse, gets killed."
+        am "*Sigh* He needs to stop before he's caught... or worse, gets killed."
 
         scene v8josh25f
         with dissolve
@@ -618,6 +621,7 @@ label after_drugs:
             "Go with her":
                 $ amberSexAtJoshs = True
                 $ amberrs = True
+                #$ addPoint("tm", sum([ v7_rileysex, bathroomblowjob, v8_chloesex, v8_riley_lewd_ending ])) ###Loyaltymod
                 if laurenrs:
                     $ addPoint("tm")
                 else:
@@ -636,7 +640,7 @@ label after_drugs:
 
                 scene v8josh35b # Amber disappointed, mouth open
                 with dissolve
-                am "*Whispers* Oh{w}, okay. Sorry I woke you up at midnight."
+                am "*Whispers* Oh, okay. Sorry I woke you up at midnight."
 
                 scene v8josh35c # Same as v8josh35b but Amber mouth closed
                 with dissolve
@@ -861,6 +865,11 @@ label tues_morning_at_joshs:
 
         scene v8josh44
         with dissolve
+        pause 1
+
+        scene black
+        with fade
+        
         pause 1
 
         jump v8_tues_eco_class

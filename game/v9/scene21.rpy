@@ -84,9 +84,9 @@ label v9_room_w_chris:
     $ contact_Julia.newMessage(_("<3"))
     
     label s21_PhoneContinue:
-        if contact_Julia.getReplies():
+        if contact_Julia.replies:
             call screen phone
-        if contact_Julia.getReplies():
+        if contact_Julia.replies:
             "(I should text Julia.)"
             jump s21_PhoneContinue
 

@@ -257,9 +257,7 @@ label imrecona: # Find Imre
     jump continuebb
 
 label imreconb: # Help Imre
-    $ brosbeforehoes = True
-    $ grantAchievement("bros_before_hoes")
-        
+    $ grant_achievement("bros_before_hoes")
 
     u "(I need to help Imre, Adam will destroy him in his current condition.)"
 
@@ -360,9 +358,9 @@ label imreconc: # Keep talking to Amber
     $ contact_Amber.addReply(_("Oh wow, you're so fucking hot"), v6_reply4)
 
     label phonead:
-        if contact_Amber.getReplies():
+        if contact_Amber.replies:
             call screen phone
-        if contact_Amber.getReplies():
+        if contact_Amber.replies:
             u "(Time to text Amber.)"
             jump phonead
 
@@ -383,9 +381,9 @@ label imrecond: # Meet Chloe
     $ contact_Chloe.addReply(_("Cool, see you there"))
 
     label phoneac:
-        if contact_Chloe.getReplies():
+        if contact_Chloe.replies:
             call screen phone
-        if contact_Chloe.getReplies():
+        if contact_Chloe.replies:
             u "(I should reply to Chloe.)"
             jump phoneac
 
@@ -861,9 +859,7 @@ label imrecond: # Meet Chloe
 
         "Trust her":
             $ addPoint("bf")
-            $ credulous = True
-            $ grantAchievement("credulous")
-                
+            $ grant_achievement("credulous")
 
             u "(I shouldn't spy on her. It's not right.)"
 
@@ -995,9 +991,9 @@ label continuebb:
         " "
 
         label phoneae:
-            if contact_Amber.getReplies():
+            if contact_Amber.replies:
                 call screen phone
-            if contact_Amber.getReplies():
+            if contact_Amber.replies:
                 u "(I should probably reply to my messages.)"
                 jump phoneae
 
@@ -1023,9 +1019,9 @@ label continuebb:
     " "
 
     label phoneaf:
-        if contact_Amber.getReplies():
+        if contact_Amber.replies:
             call screen phone
-        if contact_Amber.getReplies():
+        if contact_Amber.replies:
             u "(I should probably reply to my messages.)"
             jump phoneaf
 
@@ -1077,7 +1073,7 @@ label continuebd:
 
             play sound "sounds/kiss.mp3"
 
-            "*Kiss*"
+            pause 1.5
 
             scene s486d # You sit down
             with dissolve
@@ -1137,7 +1133,7 @@ label continuebd:
 
             play sound "sounds/kiss.mp3"
 
-            "*Kiss*"
+            pause 1.5
 
             scene s491a # Lauren looking at you
             with dissolve
@@ -1765,9 +1761,7 @@ label continuebd:
             scene s510 # Mc arrives at his dorm, down at his door there's a flyer (Matt's design)
             with fade
 
-            $ notmybusiness = True
-            $ grantAchievement("not_my_business")
-                
+            $ grant_achievement("not_my_business")
 
     label nr_bb: #for compatibility only
     u "(Huh, what's this?)"
@@ -2705,9 +2699,7 @@ label emsex_c:
     scene emvid1
     with dissolve
 
-    $ reignition = True
-    $ grantAchievement("reignition")
-        
+    $ grant_achievement("reignition")
 
     " "
 
@@ -2732,14 +2724,15 @@ label emsex_c:
     pause 0.5
 
 label emsex_a:
+    $ v6_emilysex = True 
+    #$ addPoint("tm", sum([ aubreysex ])) ###Loyaltymod    
     scene emvid2
     with dissolve
 
-    if not reignition:
+    if not achievement.has("reignition"):
         play music "music/msexy.mp3"
 
-        $ reignition = True
-        $ grantAchievement("reignition")
+        $ grant_achievement("reignition")
             
 
     " "
@@ -2769,8 +2762,7 @@ label emsex_a:
 
     show screen emilysexoverlay
 
-    label emhead:
-
+label emhead:
     scene emvid3
     with dissolve
 
@@ -3690,9 +3682,9 @@ label fy_bd: # not gone to Emily's
 
         label phoneag:
             stop music fadeout 2.0
-            if contact_Aubrey.getReplies():
+            if contact_Aubrey.replies:
                 call screen phone
-            if contact_Aubrey.getReplies():
+            if contact_Aubrey.replies:
                 u "(I should check my messages.)"
                 jump phoneag
 
@@ -3719,9 +3711,9 @@ label fy_bd: # not gone to Emily's
             scene s565 # mc sitting at his desk
             with dissolve
 
-            if contact_Aubrey.getReplies():
+            if contact_Aubrey.replies:
                 call screen phone
-            if contact_Aubrey.getReplies():
+            if contact_Aubrey.replies:
                 u "(I should probably reply to Aubrey.)"
                 jump v6_phoneah
 
@@ -3999,6 +3991,8 @@ label fy_bd: # not gone to Emily's
 label aubreysexb: # aubreysex scene
     $ aubreyrs = True
     $ aubreysex2 = True
+
+    #$ addPoint("tm", sum([ v6_emilysex ])) ###Loyaltymod
 
     stop music fadeout 2.0
     play music "music/msexy.mp3"
@@ -4439,7 +4433,7 @@ label afteraubrey:
         play sound "sounds/vibrate.mp3"
 
         if config_censored:
-            $ contact_Aubrey.newImgMessage("images/gui/censoredPopup/censoredBackground.webp", queue=False)
+            $ contact_Aubrey.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
         else:
             $ contact_Aubrey.newImgMessage("images/text3.webp", queue=False)
 
@@ -4855,9 +4849,7 @@ label afteraubrey:
                     with dissolve
                     # handshake clap sound
 
-                    $ monkeybusiness = True
-                    $ grantAchievement("monkey_business")
-                        
+                    $ grant_achievement("monkey_business")
 
                     gr "That's what I'm talking about!"
 
@@ -5002,9 +4994,7 @@ label afteraubrey:
         "Stay home":
             $ meetgrayson = False
             $ addPoint("bro")
-            $ seemsfishy = True
-            $ grantAchievement("seems_fishy")
-                
+            $ grant_achievement("seems_fishy")
 
             u "(Fuck Grayson, I'm not meeting him.)"
 
@@ -5056,14 +5046,11 @@ label afteraubrey:
     unknown "I guess it's time for you two to die."
     unknown "3..."
     unknown "2..."
-    $ timed = True
-    $ timerexit = "timera"
 
-    menu:
+    menu (fail_label="timera"):
         "Save Lauren":
             $ addPoint("bf")
             $ save = 1
-            $ timed = False
 
             scene s592 # Mc tackles Lauren out of the guns aim
             with dissolve
@@ -5087,7 +5074,6 @@ label afteraubrey:
         "Save Riley":
             $ addPoint("bro")
             $ save = 2
-            $ timed = False
 
             scene s594 # Mc tackles Riley out of the guns aim
             with dissolve
@@ -5124,7 +5110,6 @@ label timera:
 
 label wakeupa:
     stop sound
-    $ timed = False
     hide screen fantasyOverlay
     play sound "sounds/swoosh.mp3"
     scene s586b # you wake up in disstress
@@ -5454,9 +5439,9 @@ label wakeupa:
 
         call screen phone
         label phoneak:
-            if contact_Penelope.getReplies():
+            if contact_Penelope.replies:
                 call screen phone
-            if contact_Penelope.getReplies():
+            if contact_Penelope.replies:
                 u "(I should really text Penelope.)"
                 jump phoneak
 
@@ -5742,35 +5727,35 @@ label wakeupa:
     scene s623a # performance pose 1
     with dissolve
 
-    poet3 "When I was a little girl,"
+    sa "When I was a little girl,"
 
-    poet3 "All I wanted to be was a super star."
+    sa "All I wanted to be was a super star."
 
-    poet3 "In my room I'd twirl,"
+    sa "In my room I'd twirl,"
 
-    poet3 "Dreaming of the day I could go far."
+    sa "Dreaming of the day I could go far."
 
     scene s623b # performance pose 1
     with dissolve
 
-    poet3 "Now that I am older,"
+    sa "Now that I am older,"
 
-    poet3 "I know that I'm a star."
+    sa "I know that I'm a star."
 
-    poet3 "I am the beholder,"
+    sa "I am the beholder,"
 
-    poet3 "You'll never be at par."
+    sa "You'll never be at par."
 
     scene s623c # performance pose 1
     with dissolve
 
-    poet3 "I know you all want to be me,"
+    sa "I know you all want to be me,"
 
-    poet3 "But no one will ever compare."
+    sa "But no one will ever compare."
 
-    poet3 "So why not take a knee,"
+    sa "So why not take a knee,"
 
-    poet3 "And maybe I'll let you breathe my air."
+    sa "And maybe I'll let you breathe my air."
 
     scene s624 # poet 3 leaves the stage
     with dissolve
@@ -6603,10 +6588,8 @@ label wakeupa:
                 scene s658a # penelope blushing and smiling mouth closed
                 with dissolve
 
-                $ strike = True
-                $ grantAchievement("strike")
+                $ grant_achievement("strike")
                     
-
                 pe "*Giggles*"
 
                 u "That was nice..."
@@ -7001,6 +6984,7 @@ label wolvesfr:
 
 ### WOLVES RUSH PARTY FREE ROAM freeroam3 freeroam 3 free roam 3
 label wolvesfr2:
+    $ freeRoam = True
     play music "music/mparty2.mp3"
 
     queue music [ "music/mparty3.mp3", "music/mparty4.mp3"]
@@ -9090,7 +9074,6 @@ label v6_fr3nora1:
 
     call screen v6_fr3roofroom
 
-
 label v6_fr3nora2:
     scene fr3roofroom
 
@@ -10229,9 +10212,9 @@ label upstairsemily:
     scene sufr3em2b # emily cute
     with dissolve
 
-    em "Just missed you is all."
+    em "Just missed you is all?"
 
-    em "Soo, I was thinking the next we..."
+    em "Soo, actually I was thinking the next we..."
 
     em "You know..."
 
@@ -10648,6 +10631,7 @@ label upstairsriley:
 
 
 label v6_fr3chris3: ### ENDING
+    $ freeRoam = False
     scene sfr3ch2
 
     ch "You ready?"

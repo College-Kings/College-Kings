@@ -105,9 +105,9 @@ label v8_ending:
         $ newKiwiiPost = KiwiiPost("Samantha", "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
 
         label v8s46_phoneCheck:
-            if contact_Ryan.getReplies():
+            if contact_Ryan.replies:
                 call screen phone
-            if contact_Ryan.getReplies():
+            if contact_Ryan.replies:
                 u "I need to check my phone."
                 jump v8s46_phoneCheck
 

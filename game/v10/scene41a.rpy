@@ -4,7 +4,10 @@
 # Time: Thursday Morning
 
 label v10_waking_up_end:
-    play music "music/v10/Scene 41a/Track Scene 41a_1.mp3" fadein 3
+    play music "music/V10/Scene 22/Track Scene 22_1.mp3" fadein 3
+    $ freeRoam = False
+
+
     if joinwolves:
         scene v10end1 # TPP. Show MC waking up drowsy in his new Wolves room.
         with fade
@@ -91,5 +94,7 @@ label end10:
 
     if renpy.loadable("v11/scene1.rpy"):
         jump v11_start
+    elif config.enable_steam:
+        call screen steam_end(link="https://store.steampowered.com/app/1732640/College_Kings__Act_III/")
     else:
         jump gameEnd

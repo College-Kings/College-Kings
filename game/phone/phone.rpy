@@ -36,7 +36,7 @@ screen phoneIcon():
             # else:
             idle "images/phone/phoneIcon.webp"
             
-            if freeRoam:
+            if renpy.get_screen("free_roam") or freeRoam:
                 action Show("phone")
             else:
                 action Call("enterPhone")
@@ -47,13 +47,13 @@ label enterPhone:
 
 screen phoneTemplate():
     modal True
-    zorder 200
 
     add "images/phonescreen.webp"
 
     if renpy.get_screen("phone"):
+        # Click background to close phone
         button:
-            if freeRoam:
+            if renpy.get_screen("free_roam") or freeRoam:
                 action [Hide("tutorial"), Hide("phone")]
             else:
                 action [Hide("tutorial"), Return()]
@@ -65,6 +65,7 @@ screen phoneTemplate():
             else:
                 action [Hide("tutorial"), Return()]
 
+    # Button to prevent phone closing on phone ui
     button:
         align (0.5, 0.5)
         xysize (400, 800)
@@ -88,7 +89,7 @@ screen phoneTemplate():
 screen phone():
     tag phoneTag
     modal True
-    zorder 200
+    zorder 100
 
     use phoneTemplate:
 

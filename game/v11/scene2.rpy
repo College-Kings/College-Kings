@@ -21,7 +21,7 @@ label v11_nora_chloe_hallway:
         scene v11nohall2a # FPP. Same as 2, but now Nora is looking at MC, Nora mouth open, happy expression
         with dissolve
 
-        no "Yeah, there's Plenty. I'm surprised we actually got enough people."
+        no "Yeah, there's plenty. I'm surprised we actually got enough people."
     else:
         scene v11nohall2a # FPP. Same as 2, but now Nora is looking at MC, Nora mouth open, happy expression
         with dissolve
@@ -37,8 +37,6 @@ label v11_nora_chloe_hallway:
     with dissolve
 
     no "Well, Chris and I have been having... moments. So that could cause unneeded stress. Then there's Chloe."
-
-    no "I asked Mr. Lee and Ms. Rose to put out a sign-up sheet because I was afraid I wasn't going to get enough people, but it kinda got out of hand."
 
     scene v11nohall2d # FPP. Same as 2, but now Nora is looking at MC, Nora mouth closed, slightly sad expression
     with dissolve
@@ -120,6 +118,7 @@ label v11_nora_chloe_hallway:
 
     menu:
         "Defend Chloe":
+            $ addPoint("tm")
             $ noraLike -= 1
 
             scene v11nohall2d
@@ -195,8 +194,13 @@ label v11_nora_chloe_hallway:
 
     charli "Yeah, an exchange student. I've been here since the start of the year, but I'm living off campus so I don't know that many students."
     charli "Nora and I have talked a few times, but that's about it as I'm often tied up doing other things..."
-    charli "So, are you going on this Europe trip? Mr. Lee invited me to go."
-    charli "But I'm not sure I actually want to."
+
+    scene v11nohall11b
+    with dissolve
+    scene v11nohall11a
+    with dissolve
+    
+    charli "So, are you going on this Europe trip? Mr. Lee invited me to go. But I'm not sure I actually want to."
 
     scene v11nohall11b
     with dissolve
@@ -243,11 +247,11 @@ label v11_nora_chloe_hallway:
     scene v11nohall11a
     with dissolve
 
-    charli "And What kind of company are you?"
-
+    charli "And what kind of company are you?"
 
     menu:
         "Mellow":
+            $ addPoint("bf")
             scene v11nohall11c # same 11b, just change pose a little so conversation isn't stale
             with dissolve
 
@@ -266,6 +270,7 @@ label v11_nora_chloe_hallway:
 
     menu:
         "Hanging with the girls":
+            $ addPoint("bf")
             scene v11nohall11c
             with dissolve
             u "Well, we'll be in another country surrounded by beautiful women... I'm sure you can imagine what I plan on doing. *Chuckles* Really though, I just wanna have fun no matter what."
@@ -273,7 +278,7 @@ label v11_nora_chloe_hallway:
             scene v11nohall11d
             with dissolve
 
-            charli "With that attitude there's no way this will be a boring trip! *Laughs*."
+            charli "With that attitude there's no way this will be a boring trip! *Laughs*"
 
         "Sleeping":
             scene v11nohall11c
@@ -300,8 +305,8 @@ label v11_nora_chloe_hallway:
 
             u "Haha, exactly."
 
-    scene v11nohall11d
-    with dissolve
+            scene v11nohall11d
+            with dissolve
 
     charli "Well, as much as I'm enjoying this, I guess I should go start packing for the trip... See you around?"
 
@@ -518,7 +523,7 @@ label v11_nora_chloe_hallway:
                                 scene v11clb1
                                 with dissolve
 
-                                cl "You make good company... well sometimes."
+                                cl "You make good company... well, sometimes."
 
                                 scene v11clb1a
                                 with dissolve
@@ -577,7 +582,7 @@ label v11_nora_chloe_hallway:
                     scene v11clhall1f
                     with dissolve
 
-                    u "Hey, Cutie."
+                    u "Hey, cutie."
                 else:
                     scene v11clhall1f
                     with dissolve
@@ -588,7 +593,7 @@ label v11_nora_chloe_hallway:
                     scene v11clhall1e
                     with dissolve
 
-                    cl "Oh, hey handsome."
+                    cl "Oh, hey handsome. What's up?"
                 else:
                     scene v11clhall1e
                     with dissolve
@@ -613,7 +618,7 @@ label v11_nora_chloe_hallway:
                 scene v11clhall1e
                 with dissolve
 
-                cl "Haha, me too. You know, I have a few minutes before my next class. Wanna go outside and talk for a few minutes?"
+                cl "Haha, me too. You know, I have a few minutes before my next class. Wanna go outside and talk for a bit?"
 
                 menu:
                     "Yes":
@@ -768,7 +773,7 @@ label v11_nora_chloe_hallway:
                             scene v11clb1a
                             with dissolve
 
-                            u "See you later beautiful."
+                            u "See you later, beautiful."
                         else:
                             scene v11clb1a
                             with dissolve

@@ -4,7 +4,7 @@
 # Time: Morning
 
 label v11_walk_or_ride:
-    play music "music/v11/Scene 37a/Track Scene 37a.mp3" fadein 2
+    play music "music/V10/Scene 17/Track Scene 17_1.mp3" fadein 2
     menu:
         "Ride with Mr. Lee":
             scene v11wap11 # TPP. Show MC running towards Mr Lee, MC screaming, mouth open, slightly worried
@@ -23,7 +23,7 @@ label v11_ride_with_mrlee:
     scene v11wir1 # TPP Show MC running toward Mr. Lee. Mr. Lee is approaching his car.
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11wir2 # FPP Show Mr. Lee, standing outside, annoyed or dissapointed expression, mouth closed
     with dissolve
@@ -70,11 +70,9 @@ label v11_ride_with_mrlee:
 
     menu:
         "Imre":
-            
             u "I'd probably say Imre."
 
         "Ryan":
-            
             u "I'd probably say Ryan."
 
     scene v11wir2b # FPP Same angle as v11wir2, Mr. Lee with neutral expression, mouth open
@@ -120,7 +118,7 @@ label v11_ride_with_mrlee:
     pause 0.5
 
     scene v11wir4 # FPP Show Mr. Lee driving car, looking forward, neutral expression, mouth open
-    with dissolve    
+    with dissolve
 
     lee "[name], do you know what it means to be a man and act as an adult?"
 
@@ -129,11 +127,9 @@ label v11_ride_with_mrlee:
 
     menu:
         "Having responsibility":
-
             u "Well, those that have responsibilities don't have a choice but to act like an adult so I guess having responsibility."
 
         "Acting mature":
-            
             u "Well, to be either of those you have to act mature."
 
     scene v11wir4
@@ -190,7 +186,7 @@ label v11_ride_with_mrlee:
     scene v11wir4
     with dissolve
 
-    lee "Yes, you. What do you get out of it? As a matter of fact, I asked Imre this same question before he pledged Wolves and I wasn't too happy with his answer."
+    lee "Yes, you. What do you get out of it? As a matter of fact, I asked Imre this same question before he pledged to the Wolves and I wasn't too happy with his answer."
 
     scene v11wir4a
     with dissolve
@@ -209,11 +205,9 @@ label v11_ride_with_mrlee:
 
     menu:
         "Brotherhood":
-
             u "I enjoy the brotherhood, really. At the end of the day I know they all have my back."
 
         "Excitement":
-   
             u "Well honestly, I enjoy the excitement. At first I wasn't sure if I wanted to join a frat, but I'm glad I did."
             u "You never know what to expect and regardless of what crazy things may happen, at least you can never say you're bored. *Chuckles*"
 
@@ -250,6 +244,7 @@ label v11_ride_with_mrlee:
     lee "Let me tell you something [name], in our lives we make mistakes, and we also make choices that in our opinion aren't mistakes, but others are hurt by them."
 
     scene v11wir4b
+    with dissolve
 
     lee "Listen closely to what I'm about to say."
 
@@ -303,12 +298,12 @@ label v11_ride_with_mrlee:
     u "Cool, thanks again Mr. Lee."
 
     scene v11wir5 # TPP Show MC and Mr. Lee walking into the hotel lobby
-    with dissolve
+    with fade
 
-    pause 0.5
+    pause 0.75
 
     scene v11wir6 # FPP Show Mr. Lee walking away from MC down the hall, away from the lobby
-    with dissolve    
+    with dissolve
 
     u "(I really respect that guy.)"
 
@@ -318,7 +313,7 @@ label v11_imre_and_ryan:
     scene v11wir1a # TPP Same angle as v11wir1, show Mr. Lee walking to his car
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11wir7 # FPP Show Imre and Ryan glaring at each other, both angry with mouths closed
     with dissolve
@@ -483,7 +478,7 @@ label v11_imre_and_ryan:
     scene v11wir7c
     with dissolve
 
-    ry "*Scoffs* I barely apologize when I actually do something wrong, And I'm definitely not when I didn't do shit."
+    ry "*Scoffs* I barely apologize when I actually do something wrong, and I'm definitely not when I didn't do shit."
 
     scene v11wir7b
     with dissolve
@@ -503,7 +498,7 @@ label v11_imre_and_ryan:
     scene v11wir7c
     with dissolve
 
-    ry "Just like you were ready when Adam beat your ass? Hmph, please"
+    ry "Just like you were ready when Adam beat your ass? Hmph, please."
 
     scene v11wir8 # FPP Show Imre squarring up to Ryan like he is going to fight him, both are angry, Imre's mouth open
     with dissolve
@@ -519,7 +514,7 @@ label v11_imre_and_ryan:
     scene v11wir7c
     with dissolve
 
-    ry "I'll get an uber."
+    ry "I'll get an Uber."
 
     scene v11wir9 # FPP Show Ryan turning around and looking down at his phone
     with dissolve
@@ -560,17 +555,17 @@ label v11_imre_and_ryan:
     scene v11wir11 # TPP Show MC, Ryan, and Imre standing by the road, all angry, not looking at each other, MC between Imre and Ryan
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11wir11a # TPP Same angle as v11wir11a, Ryan and Imre giving each other dirty looks, MC looking down and looking frustrated
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11wir12 # FPP Show rideshare arriving
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11wir13 # TPP Show Ryan rushing to the passenger door of the ride share, angry expression, mouth open, while MC and Imre are left standing by the back doors
     with dissolve
@@ -585,21 +580,21 @@ label v11_imre_and_ryan:
     scene v11wir13a # TPP Same angle as v11wir13, show MC and Imre climbing into the back seats of the ride share, Ryan is already in the front
     with dissolve
     
-    pause 0.5
+    pause 0.75
     
     scene v11wir15 # TPP Show MC, Imre, and Ryan all sitting in the ride share, everyone looking angry and not looking at each other
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11wir5a # TPP Same angle as v11wir5, show MC, Ryan, and Imre walking into the hotel lobby, all looking angry
     with fade
 
-    pause 0.5
+    pause 0.75
     
     scene v11wir6a # FPP Same angle as v11wir6, show Ryan and Imre walking away from MC down the hall, away from the lobby
     with dissolve
 
-    pause 0.5
+    pause 0.75
     stop music fadeout 3
     jump v11_amber_bar

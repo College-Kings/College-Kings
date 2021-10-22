@@ -26,8 +26,7 @@ label amber_sex_at_joshs:
     scene v8amber4a # Amber pulls back her head and is speaking now while looking into the MC's eyes seductively
     with dissolve
 
-    $ get_a_room = True
-    $ grantAchievement("get_a_room")
+    $ grant_achievement("get_a_room")
 
     if ending == "amber":
         am "I've been waiting for this since the last time."
@@ -201,10 +200,10 @@ label v8s30_amberAnal:
     am "*Moans very loud*"
     am "...not able to control myself!!"
     pause 3
-    am "I'm gonna come! [name] I'm gonna come!!"
+    am "I'm gonna cum! [name] I'm gonna cum!!"
 
     u "I think I'm close too."
-    am "Come in my ass [name]. *Moans* Fill it up good!"
+    am "Cum in my ass [name]. *Moans* Fill it up good!"
     pause 3
 
     scene cgt_119 # TPP. Close up of MC's penis inside Amber's a-hole with cum leaking outside

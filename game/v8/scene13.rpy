@@ -55,9 +55,9 @@ label after_apes_ceremony:
     with dissolve
 
     label phn_chloe11:
-        if contact_Chloe.getReplies():
+        if contact_Chloe.replies:
             call screen phone
-        if contact_Chloe.getReplies():
+        if contact_Chloe.replies:
             u "(I should probably reply.)"
             jump phn_chloe11
 
@@ -173,7 +173,7 @@ label phn_chloe11_done:
     with dissolve
     ry "Woohoooo!"
 
-    if contact_Chloe.getMessage("Guess you'll have to wait and see ;)"):
+    if contact_Chloe.get_message("Guess you'll have to wait and see ;)"):
         scene v8apes28 # FPP. MC inside the room now and he notices Chloe and Caleb chitchatting
         with dissolve
         u "(Oh, Chloe is here.)"
@@ -281,7 +281,7 @@ label phn_chloe11_done:
 
     scene v8apes34b # Cameron forcing a smile and talking
     with dissolve
-    ca "Of course, yeah.{w} Uh... congrats on getting in. How you enjoying tonig-"
+    ca "Of course, yeah. Uh... congrats on getting in. How you enjoying tonig-"
 
     scene v8apes34c # Same as 34b but mouth closed
     with dissolve
@@ -346,7 +346,7 @@ label phn_chloe11_done:
 
     scene v8apes37b # Cameron talking seriously but with a tinge of sadness
     with dissolve
-    ca "She...{w} she wouldn't wake up. I thought she was..."
+    ca "She... she wouldn't wake up. I thought she was..."
 
     scene v8apes37c # Same as 37b but Cameron mouth closed
     with dissolve

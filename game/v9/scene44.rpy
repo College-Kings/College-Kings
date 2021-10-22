@@ -9,7 +9,7 @@ label v9_warehouse_lindsey:
 
     u "(I need a breather. I should go see what this lineup looks like. Prepare myself for the night.)"
 
-    play music "music/v9/Scene 44/Track Scene 44.mp3" fadein 2
+    play music "music/v9/Scene 7/Track Scene 7.mp3" fadein 2
 
     scene v9wwl2 # TPP. Show MC continuing to walk, he bumps into Lindsey as he is walking.
     with dissolve
@@ -62,6 +62,7 @@ label v9_warehouse_lindsey:
                 pause 0.75
 
                 scene v9wwl3
+                with dissolve
 
                 u "I just wanted to say I'm sorry for not coming over. I've been so distracted with this fight. It's really gotten in my head."
 

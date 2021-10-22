@@ -8,7 +8,7 @@ label v9_call_w_lindsey:
         scene v9cwl3 # TPP. Show MC on his bed in his Wolves room, phone in hand, looking tired.
         with fade
 
-        play music "music/v9/Scene 28/Track Scene 28.mp3" fadein 2
+        play music "music/v9/Scene 3/Track Scene 3.mp3" fadein 2
 
         u "(What a jam-packed day. And this wasn't even the real deal. Tomorrow is showtime.)"
         u "(I didn't see myself going down this road when I started college, but I'm in too deep now. There's no way I'll lose, no way in hell.)"
@@ -52,9 +52,8 @@ label v9_call_w_lindsey:
         with dissolve
 
         li "Ha, guess you'll never know. Anyway though, I called to ask how you're feeling about the fight tomorrow?"
-        li "I gave you my number but you never called so I got your number from Aubrey."
 
-        li "Anyway, this fight could be major for you. Think you'll come out on top?"
+        li "This fight could be major for you. Think you'll come out on top?"
 
         scene v9cwl3b
         with dissolve

@@ -56,7 +56,7 @@ label v11_nora_airport_convo:
     with dissolve
 
     u "I think with the situation being so stressful and the fact that I've already had a talk with her about this, it'd be good if I spoke with her."
-    u "Between the frat situations, this whole Europe trip, her and Chris' I'm pretty involved already."
+    u "Between the frat situations, this whole Europe trip, her and Chris... I'm pretty involved already."
     u "No offense, but I doubt you have weeks of drama under control without a clear understanding of everyone's perspective."
 
     scene v11nca5a
@@ -64,6 +64,13 @@ label v11_nora_airport_convo:
 
     charli "That's true, but although I lack everyone else's perspective I know Nora very well."
     charli "And to be frank [name], that's the only perspective I'm concerned about right now. I mean think about it. Sure it's reasonable for everything and all sides to be out in the air, but look at her."
+
+    scene v11nca5
+    with dissolve
+
+    scene v11nca5a
+    with dissolve
+
     charli "She couldn't care less about any of that right now. I know during my own times of frustration I don't want to hear what anyone has to say unless they're agreeing with me. *Chuckles*"
     charli "Look, she's expecting me to come back, but if you'd like me to step aside and let you speak with her, I will."
 
@@ -75,7 +82,7 @@ label v11_nora_airport_convo:
     scene v11nca5b # FPP. Same as 5a, different pose to make things less stale
     with dissolve
 
-    charli "Are you sure? I know she's your friend, I'm not trying to be 'that guy'."
+    charli "Are you sure? I know she's your friend, I'm not trying to be \"that guy\"."
 
     scene v11nca5c # FPP. Same as 5, different pose to make things less stale
     with dissolve
@@ -115,7 +122,8 @@ label v11_nora_airport_convo:
     scene v11nca2a
     with dissolve
 
-    u "(Okay, now I'm kinda getting pissed. He doesn't even know her like that. It's obvious he's just trying to get close to her while she's upset so she'll let him fuck. I officially don't like this guy. Acting all nice and shit.)"
+    u "(Okay, now I'm kinda getting pissed. He doesn't even know her like that.)"
+    u "(It's obvious he's just trying to get close to her while she's upset so she'll let him fuck. I officially don't like this guy. Acting all nice and shit.)"
 
     scene v11nca2b # FPP. Show charli and nora hugging
     with dissolve

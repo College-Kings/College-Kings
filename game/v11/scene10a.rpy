@@ -12,17 +12,17 @@ label v11_airport_charli:
     scene v11air2 # FPP. Show lindsey slight smile mouth closed
     with dissolve
 
-    li "…"
+    li "..."
 
     scene v11air3 # FPP. show chloe slight smile mouth closed
     with dissolve
 
-    cl "…"
+    cl "..."
 
     scene v11air4 # FPP. Show aubrey slight smile mouth closed
     with dissolve
 
-    au "…"
+    au "..."
 
     u "(So what, now he's keeping them all quiet?)"
 
@@ -74,7 +74,7 @@ label v11_airport_charli:
     scene v11air5a
     with dissolve
 
-    u "I'm fine, just uh...got some things on my mind."
+    u "I'm fine, just uh... got some things on my mind."
 
     scene v11air5
     with dissolve
@@ -101,7 +101,7 @@ label v11_airport_charli:
 
     pause 1
 
-    u "Aubrey'"
+    u "Aubrey?"
 
     scene v11air7a # FPP. same 7 now facing camera, mouth open
     with dissolve
@@ -116,17 +116,17 @@ label v11_airport_charli:
     scene v11air7a
     with dissolve
 
-    au "One of the girls made a joke and he said 'who, [name]?' It really wasn't that big of a deal."
+    au "One of the girls made a joke and he said \"who, [name]?\" It really wasn't that big of a deal."
 
     scene v11air7b
     with dissolve
 
-    u "Oh' I don't know, something about Charli just rubs me the wrong way."
+    u "Oh, I don't know, something about Charli just rubs me the wrong way."
 
     scene v11air7a
     with dissolve
 
-    au "Keep getting worked  up over nothing and your head may just explode. *Chuckles* Just shrug  it off. Like Amber did when I teased her."
+    au "Keep getting worked up over nothing and your head may just explode. *Chuckles* Just shrug it off. Like Amber did when I teased her."
 
     scene v11air7b
     with dissolve

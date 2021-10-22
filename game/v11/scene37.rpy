@@ -6,7 +6,7 @@
 label v11_walk_park:
     scene v11wap1 # TPP. Show the car stopping at the lake
     with dissolve
-    play music "music/v11/Scene 37/Track Scene 37.mp3" fadein 2
+    play music "music/v11/Scene 3/Track Scene 3.mp3" fadein 2
     pause 0.75
 
     scene v11wap2 # TPP. Show Mr Lee, MC, Ryan and Imre getting out of the car, Mr Lee slight smile, mouth closed, the rest slightly annoyed, mouth angry
@@ -32,7 +32,7 @@ label v11_walk_park:
     scene v11wap4 # FPP. Same positioning as v11wap2, show Ryan looking at Mr Lee, Ryan mouth open, slightly annoyed
     with dissolve
 
-    ry "Me either."
+    ry "Me neither."
 
     scene v11wap2
     with dissolve
@@ -57,12 +57,12 @@ label v11_walk_park:
     scene v11wap2c # FPP. Same as v11wap2, Mr Lee looking at Imre, Mr Lee, slightly annoyed, mouth open
     with dissolve
 
-    lee "*Sighs* Your instigating will get you nowhere Imre. This is college, not kindergarten."
+    lee "*Sighs* Your instigating will get you nowhere, Imre. This is college, not kindergarten."
 
     scene v11wap4b # FPP. Same as v11wap4, Ryan looking at Imre, Ryan angry, mouth open
     with dissolve
 
-    ry "Bro I'm warning you right now, watch your mouth. I'm really starting to get fed up. Mr. Lee doesn't want to hear your shitty fucking comments and neither do I."
+    ry "Bro, I'm warning you right now, watch your mouth. I'm really starting to get fed up. Mr. Lee doesn't want to hear your shitty fucking comments and neither do I."
 
     scene v11wap4c # FPP. Same as v11wap4, Ryan looking at MC, Ryan mouth open, angry
     with dissolve

@@ -6,7 +6,7 @@
 label v11_chloe_bathroom:
     scene v11chb1 # TPP. Show MC walking into the room, confused, mouth closed
     with dissolve
-    play music "music/v11/Scene 41/Track Scene 41_1.mp3" fadein 2
+    play music "music/V10/Scene 40/Track Scene 40_3.mp3" fadein 2
     cl "*Crying*"
 
     scene v11chb2 # TPP. Show MC walking up to the bathroom door, worried expression, mouth closed
@@ -178,16 +178,16 @@ label v11_chloe_bathroom:
 
             u "You're right, that was your fault... *Chuckles*"
 
-            scene v11chb13
+            scene v11chb13b
             with dissolve
 
             cl "You really have been there for me whenever I needed you, [name]. Thank you."
 
             if chloegf or chloers:
 
-                play sound "sounds/kiss.mp3"
                 scene v11chb12b # TPP. Same as v11chb12a, MC and Chloe kissing (just a peck on the lips)
                 with dissolve
+                play sound "sounds/kiss.mp3"
 
                 pause 0.75
             
@@ -236,6 +236,7 @@ label v11_chloe_bathroom:
 
             if chloers or chloegf or kct == "popular":
                 $ v11_chloe_sex = True
+                $ chloers = True
 
                 if not chloers and not chloegf:
                     call screen kctPopup

@@ -22,6 +22,7 @@ label v11_arrive_hotel:
     pause 0.75
 
     scene v11arrh3a # FPP. Same cam as v11arrh3, Ms Rose is now in talking distance to MC, Ms Rose mouth open, slight smile
+    with dissolve
 
     ro "[name], you never submitted any preferences and there's two students without a roommate because their preferences were just too uhm... yeah..."
 
@@ -46,6 +47,7 @@ label v11_arrive_hotel:
             u "I'll room with Riley."
         
     scene v11arrh3a
+    with dissolve
 
     ro "Very good."
 
@@ -55,6 +57,7 @@ label v11_arrive_hotel:
     pause 0.75
 
     scene v11arrh1
+    with dissolve
 
     ro "Everyone please wait and talk amongst yourselves while we wait on the keys."
     stop music fadeout 3

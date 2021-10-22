@@ -30,6 +30,7 @@ label v10_aft_walk_home:
     with dissolve
     menu:
         "Check it out":
+            $ addPoint("bro")
             scene v10smwh3 # FPP. POV is MC and Josh close in the alley, talking. Show Josh, normal expression, mouth closed.
             with fade
 
@@ -169,8 +170,6 @@ label v10_aft_walk_home:
             scene v10smwh3
             with dissolve
 
-            $ josh_europe = True
-
             u "Alright, let's get out of this alley."
 
             scene v10smwh3d
@@ -186,6 +185,7 @@ label v10_aft_walk_home:
             scene v10smwh4 # FPP. POV is MC and Josh close on the sidewalk, talking. Show Josh, normal expression, mouth closed.
             with dissolve
 
+            $ josh_europe = True
             u "I don't know why I haven't thought to ask you this before, but have you heard about the big Europe trip?"
 
             scene v10smwh4a # FPP. Same camera as v10smwh4. Show Josh, normal expression, mouth open.
@@ -264,6 +264,7 @@ label v10_aft_walk_home:
             pause 0.5
         
         "Keep walking":
+            $ addPoint("tm")
             scene v10smwh2b
             with dissolve
 
@@ -285,9 +286,9 @@ label v10_aft_walk_home:
         contact_Lauren.newMessage(":)")
 
     label v10s23_phoneCheckLau:
-        if contact_Lauren.getReplies():
+        if contact_Lauren.replies:
             call screen phone
-        if contact_Lauren.getReplies():
+        if contact_Lauren.replies:
             u "(I should reply to Lauren)"
             jump v10s23_phoneCheckLau
 
@@ -298,4 +299,3 @@ label v10_aft_walk_home:
    
     stop music fadeout 3
     jump v10_lauren_room
-    

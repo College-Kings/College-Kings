@@ -299,6 +299,7 @@ label v11_treasure_hunt:
 
     menu:
         "She will miss":
+            $ addPoint("tm")
             scene v11th14d # FPP. Same as v11th14, MC and Riley looking at each other, Riley holding the gun, Riley mouth closed, slight smirk
             with dissolve
 
@@ -329,12 +330,14 @@ label v11_treasure_hunt:
 
             u "Three... Two... One..."
 
+            play sound "sounds/gun.mp3"
+
+            pause 0.5
+
             scene v11th18 # TPP. Show a bullet mark that nearly missed the bullseye
             with dissolve
 
-            play sound "sounds/gun.mp3"
-
-            pause 0.75
+            pause 1
 
             scene v11th19 # FPP. Riley standing next to MC, MC standing same place as v11th17, MC and Riley looking at each other, Riley slight smile, mouth closed
             with dissolve
@@ -359,14 +362,13 @@ label v11_treasure_hunt:
             scene v11th17c # TPP. Same as v11th17b, Riley now aiming the gun at the bullseye, mouth closed, nervous expression
             with dissolve
 
-            pause 0.75
+            play sound "sounds/gun.mp3"
+            pause 1
 
             scene v11th18a # TPP. Show a bullet mark that hit right in the middle of the bullseye
             with dissolve
 
-            play sound "sounds/gun.mp3"
-
-            pause 0.75
+            pause 1
 
             scene v11th17d # TPP. Same as v11th17b, Riley not aiming, very shocked, mouth closed
             with dissolve
@@ -381,7 +383,7 @@ label v11_treasure_hunt:
             scene v11th21 # TPP. Show MC and Riley hugging, same position as v11th17b, both very excited, mouths closed
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             scene v11th22 # FPP. Same positioning as v11th21, MC and Riley no longer hugging, looking at each other, Riley very excited, mouth closed
             with dissolve
@@ -394,6 +396,7 @@ label v11_treasure_hunt:
             ri "I guess it just comes naturally... *Chuckles*"
 
         "She won't miss":
+            $ addPoint("bro")
             scene v11th14g # FPP. Same as v11th14d, Riley smiling, mouth closed, different pose
             with dissolve
 
@@ -417,14 +420,14 @@ label v11_treasure_hunt:
             scene v11th17c
             with dissolve
 
-            pause 0.75
+            play sound "sounds/gun.mp3"
+
+            pause 1
 
             scene v11th18
             with dissolve
 
-            play sound "sounds/gun.mp3"
-
-            pause 1.75
+            pause 1
 
             scene v11th22b # FPP. Same as v11th22, Riley sad, mouth open, different pose, holding the gun
             with dissolve
@@ -446,15 +449,16 @@ label v11_treasure_hunt:
 
             u "Three... Two... One..."
 
-            $ on_target = True
-            $ grantAchievement("on_target")
+            play sound "sounds/gun.mp3"
+
+            pause 0.75
 
             scene v11th18a
             with dissolve
 
-            play sound "sounds/gun.mp3"
+            $ grant_achievement("on_target")
 
-            pause 1.75
+            pause 2
 
             scene v11th21a # TPP. Same as v11th21, but MC and Riley inverted positions
             with dissolve

@@ -28,7 +28,7 @@ label josh_room:
 
     scene v8josh4b # Josh looking somewhat shady, mouth open
     with dissolve
-    jo "Coke deal, you know *sniffs*{w}, and I need someone I can trust to watch my ass, you know, in case they try to rob me."
+    jo "Coke deal, you know *sniffs*, and I need someone I can trust to watch my ass, you know, in case they try to rob me."
     jo "Normally, my cousin does it but he broke his arm so he can't do shit. Can I count on you?"
 
     scene v8josh4c # Same as v8josh4b but Josh mouth closed

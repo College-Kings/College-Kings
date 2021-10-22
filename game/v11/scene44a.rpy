@@ -5,7 +5,7 @@
 label v11_rose_underground:
     scene v11sub1 # TPP. Show MC sitting down next to ms. rose on subway
     with dissolve
-    play music "music/v11/Scene 44a/Track Scene 44a.mp3" fadein 2
+    play music "music/v11/Scene 16/Track Scene 16.mp3" fadein 2
     pause 1
 
     scene v11sub2 # FPP. Show ms rose, mouth open
@@ -38,7 +38,6 @@ label v11_rose_underground:
 
     u "Yeah. The quiet moments."
 
-    ### ERROR: -If Rosers ###
     if msrosers:
         scene v11sub2
         with dissolve
@@ -57,7 +56,7 @@ label v11_rose_underground:
 
         ro "When we aren't so public... I just may have you help me a bit more. With a few private issues."
 
-        scene v11sub2
+        scene v11sub2a
         with dissolve
 
         u "I'm sure I could help by doing one thing or another."
@@ -86,6 +85,7 @@ label v11_rose_underground:
         with dissolve
 
         ro "I'll be sure to have your assigned room close to mine, because I plan on-"
+        
     else:
 
         scene v11sub2c
@@ -138,7 +138,7 @@ label v11_rose_underground:
         with dissolve
 
         ro "I never wanted to be that professor that was really harsh about things like titles, but I won't fall back to being called a teacher. *Chuckles*"
-        ro "That's like calling the president \"mister\" and then their last name. It's just not their title you know?"
+        ro "That's like calling the President \"mister\" and then their last name. It's just not their title you know?"
 
         scene v11sub2c
         with dissolve
@@ -249,4 +249,3 @@ label v11_rose_underground:
     pause 1
     stop music fadeout 3
     jump v11_lobby_mrlee
-

@@ -4,7 +4,6 @@
 # Time: Tuesday Morning
 
 label hallway_w_nora:
-
     scene v8shal1 # TPP. Show MC walking down the college hallways, Nora walking towards MC in the distance with brochures in hand.
     with fade
 
@@ -197,14 +196,13 @@ label cont_nora_hall_3:
         "Help Nora":
             $ addPoint("bf")
             $ helpedNora = True
-            $ helping_hand = True
-            $ grantAchievement("helping_hand")
             jump hallway_help_nora
         "Don't help Nora":
             $ helpedNora = False
             jump hallway_no_help_nora
 
 label hallway_help_nora:
+    $ grant_achievement("helping_hand")
     u "(I kinda like this nicer Nora.)"
 
     scene v8shal3c

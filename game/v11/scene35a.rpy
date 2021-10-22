@@ -4,7 +4,7 @@
 # Time: Day
 
 label v11_chloe_hotel_room_amber_call:
-    play music "music/v11/Scene 35a/Track Scene 35a_1.mp3" fadein 2
+    play music "music/V10/Scene 40/Track Scene 40_2.mp3" fadein 2
     if chloemad and not v11_riley_roomate:
         scene v11hrc1 # TPP. MC is inside his hotel room, next to the door, mouth closed
         with fade
@@ -16,6 +16,7 @@ label v11_chloe_hotel_room_amber_call:
         scene v11hrc2 # TPP. MC moves to his bed, mouth opened
         with dissolve
 
+        stop sound
         u "Hello?"
 
         scene v11hrc3 # TPP. Amber is laying on her bed in her hotel room, mouth opened
@@ -33,7 +34,7 @@ label v11_chloe_hotel_room_amber_call:
 
         am "I just wanna know what's up with Lauren."
 
-        if laurenmad: 
+        if v11_aubrey_sex and laurenrs: 
 
             scene v11hrc3 
             with dissolve
@@ -135,6 +136,7 @@ label v11_chloe_hotel_room_amber_call:
             scene v11hrc5 
             with dissolve
 
+            pause 0.75
 
     scene v11hrc6 # TPP. MC is now laid in bed trying to sleep, eyes closed
     with dissolve
@@ -147,7 +149,7 @@ label v11_chloe_hotel_room_amber_call:
     pause 0.75
 
     scene v11hrc8 # TPP. Chloe is shaking mc, waking him up
-    with dissolve
+    with fade
 
     pause 0.75
 
@@ -161,33 +163,33 @@ label v11_chloe_hotel_room_amber_call:
 
     u "*Yawn*"
 
-    scene v11hrc11 # FPP. Mc still siting on the bed looking at chloe, mouth opened
+    scene v11hrc11a # FPP. Mc still siting on the bed looking at chloe, mouth opened
     with dissolve
 
     cl "Mr. Lee has something planned tonight so if there's anything you want to do, do it during the day."
 
-    scene v11hrc11a # FPP. Same as 11, mouth closed
+    scene v11hrc11 # FPP. Same as 11, mouth closed
     with dissolve
 
     u "Thanks."
 
-    scene v11hrc11
+    scene v11hrc11a
     with dissolve
 
     cl "Yep."
 
     if not chloers and not chloegf and not chloemad:
-        scene v11hrc11
+        scene v11hrc11a
         with dissolve
 
         cl "\"Such a beautiful couple\", that guy was so sweet to us. He thought hhe had a sale though, now I feel bad..."
 
-        scene v11hrc11a 
+        scene v11hrc11
         with dissolve
 
         u "Well honey, once the stock market reaches expectations I'll buy you that car."
 
-        scene v11hrc11 
+        scene v11hrc11a
         with dissolve
 
         cl "Oh husband... will you really?"
@@ -195,7 +197,7 @@ label v11_chloe_hotel_room_amber_call:
         scene v11hrc11b # FPP. Same as 11, smile on her face, mouth closed
         with dissolve
 
-        u "Of course, anything for my wife. *Chuckles"
+        u "Of course, anything for my wife. *Chuckles*"
 
         scene v11hrc11c # FPP. same as 11b, mouth opened
         with dissolve
@@ -208,6 +210,8 @@ label v11_chloe_hotel_room_amber_call:
         u "I am too. *Chuckles*"
 
         play sound "sounds/knock.mp3"
+
+        pause 0.5
 
         scene v11hrc12 # FPP. chloe walks to answer the door
         with dissolve
@@ -235,10 +239,10 @@ label v11_chloe_hotel_room_amber_call:
 
         pause 0.75
 
-        play sound "sounds/kiss.mp3"
-
         scene v11hrc11e # FPP. MC kisses chloe
         with dissolve
+
+        play sound "sounds/kiss.mp3"
 
         pause 0.75
 
@@ -263,6 +267,8 @@ label v11_chloe_hotel_room_amber_call:
         u "I was thinking maybe we could-"
 
         play sound "sounds/knock.mp3"
+
+        pause 0.5
 
         scene v11hrc12 
         with dissolve
@@ -322,10 +328,12 @@ label v11_chloe_hotel_room_amber_call:
     scene v11hrc7
     with dissolve
 
+    pause 0.75
+
     if chloegf or chloers:
 
         scene v11hrc18 # TPP. MC wakes up with chloe sitting on top of him
-        with dissolve
+        with fade
 
         pause 0.75
 
@@ -334,9 +342,14 @@ label v11_chloe_hotel_room_amber_call:
 
         cl "Wake up sleepy head! I'm the one that had a late night. *Chuckles*"
 
-        play sound "sounds/kiss.mp3"
-        
         scene v11hrc19a # FPP MC kisses chloe's forehead, mouth closed
+        with dissolve
+
+        play sound "sounds/kiss.mp3"
+
+        pause 0.75
+
+        scene v11hrc19
         with dissolve
 
         u "Good morning, beautiful."
@@ -349,16 +362,16 @@ label v11_chloe_hotel_room_amber_call:
     elif not chloemad:
         
         scene v11hrc9b # FPP. same as 9, chloe is smiling
-        with dissolve
+        with fade
 
         cl "Wake up, [name]! How do you not feel the light shining right on your face? *Chuckles*"
 
-        scene v11hrc19a 
+        scene v11hrc9 
         with dissolve
 
         u "I'm a deep sleeper I guess."
 
-        scene v11hrc9
+        scene v11hrc9b
         with dissolve
 
         cl "Well get up deep sleeper, Mr. Lee has plans for us tonight, so the daytime is the only freedom we have."
@@ -374,19 +387,40 @@ label v11_chloe_hotel_room_amber_call:
         u "*Yawn* Alright... I'm getting up."
 
     if not v11_riley_roomate:
-        play sound "sounds/facepunch1.mp3"
-        
-        scene v11hrc20 # TPP. MC gets up from bed
+       
+        scene v11ris7 # TPP. Show MC sitting up on his bed now, in his boxers, he is yawning and stretching (day)
         with dissolve
 
         pause 0.75
 
-        scene v11hrc21 # TPP. MC looks toward the door
-        with dissolve
+        scene v11ris7a # TPP. Same cam as v11ris7, MC is startled, mouth closed, still sitting down, looking at the door to the hallway direction (day)
+        with vpunch
+
+        play sound "sounds/fall.mp3"
+
+        pause 0.75
 
         imre "GET THE FUCK OFF ME!"
 
-        scene v11hrc22 # TPP. MC runs to the hallway outside his room
+        scene v11ris8 # TPP. Show MC getting up from his bed, he is startled, mouth closed (day)
         with dissolve
+
+        pause 0.75
+
+        scene v11ris9 # TPP. Show MC putting his shirt on (he already has pants on) (day)
+        with dissolve
+
+        pause 0.75
+
+        scene v11ris10 # TPP. Show MC opening the door to the hallway, he is startled, mouth closed (day)
+        with dissolve
+
+        pause 0.75
+
+        scene v11ris11 # TPP. Show MC looking down the hallway, very startled, mouth closed (day)
+        with dissolve
+
+        pause 0.75
+
     stop music fadeout 3
     jump v11_imre_ryan_grapple

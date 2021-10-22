@@ -14,7 +14,7 @@ label v11_big_ben:
 
     scene v11bb1 # FPP Show Nora, neutral expression, mouth closed
     with dissolve
-    play music "music/v11/Scene 24/Track Scene 24_1.mp3" fadein 2
+    play music "music/v11/Scene 5/Track Scene 5_5.mp3" fadein 2
     u "So, I know pretty much nothing about London..."
 
     scene v11bb1a # FPP Same angle as v11bb1, Nora with neutral expression, mouth open
@@ -141,7 +141,7 @@ label v11_big_ben:
     scene v11bb3 # TPP Show MC and Nora climbing into the back of the Uber
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11bb4 # FPP Show Nora in back of Uber looking toward the driver, neutral expression, mouth open
     with dissolve
@@ -156,7 +156,7 @@ label v11_big_ben:
     scene v11bb5 # TPP Show MC and Nora in the back of the black cab, Big Ben in the background
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11bb4
     with dissolve
@@ -181,7 +181,7 @@ label v11_big_ben:
     scene v11bb6 # TPP Show MC and Nora getting out of the Uber
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11bb7 # FPP Show Nora looking up toward the clock tower, smiling with mouth open
     with dissolve
@@ -264,10 +264,11 @@ label v11_big_ben:
     u "I'm pretty sure you-"
 
     # Big Ben rings very loudly
+    play sound "sounds/bells.mp3"
     scene v11bb9 # Show MC looking shocked, Nora looking at him, smiling with mouth closed
     with dissolve
 
-    pause 0.5
+    pause 3
     
     scene v11bb7c
     with dissolve
@@ -356,12 +357,12 @@ label v11_big_ben:
             scene v11bb9b # TPP Same angle as v11bb9, Nora walking away pulling MC by the hand
             with dissolve
 
-            pause 0.5
+            pause 1
 
             scene v11bb10 # TPP MC and Nora climbing into a Uber, Nora holding MC's hand
             with dissolve
 
-            pause 0.5
+            pause 1
 
         "Make a move":
             $ v11_kiss_nora = True
@@ -372,7 +373,7 @@ label v11_big_ben:
             u "You're what's beautiful Nora."
 
             scene v11bb9d # TPP Same angle as v11bb9, MC trying to kiss Nora, Nora pushing him back, looking very angry with mouth open
-            with dissolve            
+            with dissolve
 
             no "WHAT THE FUCK ARE YOU DOING!?"
 
@@ -426,11 +427,11 @@ label v11_big_ben:
             scene v11bb10a # TPP Same angle as v11bb10, MC and Nora getting into a black cab, Nora crossing her arms and looking upset
             with dissolve
 
-            pause 0.5
+            pause 1
 
     scene v11bb12 # TPP Back at hotel, Nora walking one direction, MC walking the other
     with dissolve
 
-    pause 0.5
+    pause 1
     stop music fadeout 3
     jump v11_hotel_bar

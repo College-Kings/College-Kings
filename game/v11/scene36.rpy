@@ -6,7 +6,7 @@
 label v11_imre_ryan_grapple:
     scene v11irg1 # FPP. MC looking down the hallway, he can see Imre and Ryan grappling on the floor, both angry, mouths closed, show Mr Lee worried, mouth closed, running towards them
     with dissolve
-    play music "music/v11/Scene 36/Track Scene 36.mp3" fadein 2
+    play music "music/V10/Scene 10/Track Scene 10.mp3" fadein 2
     pause 0.75
 
     scene v11irg1a # FPP. Same as v11irg1, Ryan and Imre still grappling on the floor (different pose to v11irg1), Mr Lee's hands on Imre's shoulders, Imre and Ryan angry, mouths closed, Mr Lee worried, mouth closed
@@ -23,6 +23,20 @@ label v11_imre_ryan_grapple:
     with dissolve
 
     menu:
+        "Intervene":
+            $ mrleeLike += 1
+
+            scene v11irg2 # TPP. Show MC grabbing Imre, Mr Lee grabbing Ryan, everyone angry, mouths closed
+            with dissolve
+
+            $ grant_achievement("dont_just_stand_there")
+            pause 1.75
+
+            scene v11irg3 # TPP. Show MC holding Imre back, Mr Lee in the middle of Imre and Ryan, Ryan and Imre standing and looking at each other, everyone angry, mouths closed
+            with dissolve
+
+            pause 1.25
+
         "Don't intervene":
             $ mrleeLike -= 1
 
@@ -37,21 +51,6 @@ label v11_imre_ryan_grapple:
             u "Sorry, I-"
 
             scene v11irg1f # FPP. Same as v11irg1, Ryan and Imre now standing and looking at each other, Mr Lee has pulled them apart from each other, standing in the middle, everyone angry, mouths closed
-            with dissolve
-
-            pause 0.75
-
-        "Intervene":
-            $ dont_just_stand_there = True
-            $ grantAchievement("dont_just_stand_there")
-            $ mrleeLike += 1
-
-            scene v11irg2 # TPP. Show MC grabbing Imre, Mr Lee grabbing Ryan, everyone angry, mouths closed
-            with dissolve
-
-            pause 0.75
-
-            scene v11irg3 # TPP. Show MC holding Imre back, Mr Lee in the middle of Imre and Ryan, Ryan and Imre standing and looking at each other, everyone angry, mouths closed
             with dissolve
 
             pause 0.75
@@ -79,7 +78,7 @@ label v11_imre_ryan_grapple:
     pause 0.75
 
     scene v11irg7 # FPP. MC looking at Imre on the ground, holding his jaw, mouth closed, in pain and angry
-    with dissolve
+    with vpunch
 
     play sound "sounds/fall.mp3"
 
@@ -91,13 +90,14 @@ label v11_imre_ryan_grapple:
     lee "DID YOU NOT HEAR ME?!"
 
     scene v11irg8 # FPP. Show Ryan on the ground, in pain, mouth closed
-    with dissolve
+    with vpunch
 
     play sound "sounds/fall.mp3"
 
     pause 0.75
 
     scene v11irg4b # FPP. Same cam as v11irg4, Imre and Ryan on the ground, out of shot, Mr Lee looking down at Imre, Mr Lee mouth open, very angry
+    with dissolve
 
     lee "Clearly you are both deaf or incompetent. I can't even enjoy my breakfast and a morning coffee? Imre, what did you say to him?"
 

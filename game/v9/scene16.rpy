@@ -73,9 +73,9 @@ label v9_room_thur_night:
             $ contact_Emily.addReply(_("It's kinda late"), v9s16_reply5)
 
             label s16_PhoneContinueW:
-                if contact_Emily.getReplies():
+                if contact_Emily.replies:
                     call screen phone
-                if contact_Emily.getReplies():
+                if contact_Emily.replies:
                     "(I should reply to Emily.)"
                     jump s16_PhoneContinueW
 
@@ -108,9 +108,9 @@ label v9_room_thur_night:
             $ contact_Emily.addReply(_("It's kinda late"), v9s16_reply6)
             
             label s16_PhoneContinueA:
-                if contact_Emily.getReplies():
+                if contact_Emily.replies:
                     call screen phone
-                if contact_Emily.getReplies():
+                if contact_Emily.replies:
                     "(I should reply to Emily.)"
                     jump s16_PhoneContinueA
 
@@ -403,7 +403,7 @@ label v9_emily_dorm:
 
                 u "Great job."
 
-    if not hl_punch:
+    else:
         scene v9emi11b
         with dissolve
 
@@ -426,6 +426,7 @@ label v9_emily_dorm:
             "Make a move on Emily":
                 u "(This feels like the right time)"
                 $ v9_em_dorm_scene = True
+                #$ addPoint("tm", sum([ bathroomblowjob, v8_chloesex, v8_riley_lewd_ending, v8_hocoamber, amberSexAtJoshs, v9_aubrey_lake ])) ###Loyaltymod
 
             "Head home":
                 scene v9emi37 # TPP. Show MC walking towards the exit of Emily's room, Emily in view still sat on the bed, cheeky grin, mouth open, MC smile, mouth closed.
@@ -545,7 +546,7 @@ label v9s16_emilyBlowjob:
     em "*Suck* *Suck*"
     u "(I'm gonna blow if I don't do something.)"
 
-    scene v9emi13a
+    scene v9emi13c
     with dissolve
 
     pause 1
@@ -866,9 +867,9 @@ label v9_thur_night_aft_em_w:
         $ contact_Lindsey.addReply(_("I'm ok, it's really not that bad"), v9s16_reply4)
 
     label s16_ContinueW1:
-        if contact_Lindsey.getReplies():
+        if contact_Lindsey.replies:
             call screen phone
-        if contact_Lindsey.getReplies():
+        if contact_Lindsey.replies:
             "(I should reply to Lindsey.)"
             jump s16_ContinueW1
 
@@ -913,9 +914,9 @@ label v9_thur_night_aft_em_a:
         $ contact_Lindsey.addReply(_("I'm ok, it's really not that bad"), v9s16_reply4)
 
     label s16_ContinueA1:
-        if contact_Lindsey.getReplies():
+        if contact_Lindsey.replies:
             call screen phone
-        if contact_Lindsey.getReplies():
+        if contact_Lindsey.replies:
             "(I should reply to Lindsey.)"
             jump s16_ContinueA1
 

@@ -8,7 +8,7 @@
 #screen 3: Penelope(Stood at the helm display)(to the right of screen 2)
 
 label v11s23_freeroamstart: # Start of freeroam
-    play music "music/v11/Scene 23/Track Scene 23.mp3" fadein 2
+    play music "music/v11/Scene 14/Track Scene 14.mp3" fadein 2
     $ freeRoam = True
 
     call screen v11s23_entrance
@@ -64,35 +64,7 @@ label v11s23_chris1:
     ch "What's up?"
 
     menu:
-        "Don't mention Nora":
-
-            scene v11frmch1d # FPP Same angle as v11frmch1, Chris holding phone away from his head and looking at MC, mouth closed
-            with dissolve
-
-            u "Actually, nevermind."
-
-            scene v11frmch1a
-            with dissolve
-
-            ch "You sure?"
-
-            scene v11frmch1d
-            with dissolve
-
-            u "Yeah man, sorry."
-
-            scene v11frmch1a
-            with dissolve
-
-            ch "No worries, talk to you later."
-
-            scene v11frmch1c
-            with dissolve
-
-            ch "Bash, I'm back."
-
         "Mention Nora":
-
             scene v11frmch1d
             with dissolve
 
@@ -132,6 +104,32 @@ label v11s23_chris1:
             with dissolve
 
             u "Alright."
+
+        "Don't mention Nora":
+            scene v11frmch1d # FPP Same angle as v11frmch1, Chris holding phone away from his head and looking at MC, mouth closed
+            with dissolve
+
+            u "Actually, nevermind."
+
+            scene v11frmch1a
+            with dissolve
+
+            ch "You sure?"
+
+            scene v11frmch1d
+            with dissolve
+
+            u "Yeah man, sorry."
+
+            scene v11frmch1a
+            with dissolve
+
+            ch "No worries, talk to you later."
+
+            scene v11frmch1c
+            with dissolve
+
+            ch "Bash, I'm back."
 
     # Back to free roam
     call screen v11s23_mid
@@ -184,7 +182,7 @@ label v11s23_mrlee1:
     with dissolve
 
     lee "I had long black hair. People assumed I was a good fighter, because I was... well you know. Bruce was really famous around that time and everyone wanted to do some sort of martial arts."
-    lee "Studios were popping up everywhere. I had family in the states so I visited during the summer. Have you ever been outside of the US?"
+    lee "Studios were popping up everywhere. I had family in the States so I visited during the summer. Have you ever been outside of the US?"
 
     scene v11frmlee1a
     with dissolve
@@ -251,7 +249,7 @@ label v11s23_mrlee1:
 
     menu:
         "Laugh":
-
+            $ addPoint("tm")
             scene v11frmlee1a
             with dissolve
 
@@ -263,7 +261,7 @@ label v11s23_mrlee1:
             lee "It wasn't so funny back then."
 
         "Feel bad":
-
+            $ addPoint("bro")
             scene v11frmlee1b
             with dissolve
 
@@ -334,9 +332,10 @@ label v11s23_riley1:
     scene v11frmri2 # FPP Show Riley climbing under ropes to get to the triceratops
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11frmri2a # FPP Same angle as v11frmri2, Riley very close to triceratops skull, examining closely, mouth open
+    with dissolve
 
     ri "Look how big this thing is! I wonder if it was a boy or a girl..."
     ri "If these things were alive right now you know we could hang out with them and pet them and they wouldn't attack us? They're grazing herbivores."
@@ -364,32 +363,31 @@ label v11s23_riley1:
     scene v11frmri2b
     with dissolve
 
-    u "Stand still while I go get Duncan's gun, then you can enjoy yourself."
+    u "Shooting off a random guy's gun isn't enough excitement? *Chuckles*"
 
     scene v11frmri2a
     with dissolve
 
-    ri "Hey, I said I was sorry. But I have to admit, it was kinda funny seeing you scream and beg like that. *Chuckles*"
+    ri "Yeah, no. Not really *Chuckles*"
 
     scene v11frmri2c # FPP Same angle as v11frmri2, Riley climbing back under ropes to get out of triceratops exhibit
     with dissolve
 
-    u "It was funny watching me scream and beg?"
+    u "You're lucky no one's watching you. You're gonna get us kicked outta here."
 
     scene v11frmri3 # FPP Show Riley looking at MC with a big smile, mouth open
     with dissolve
 
-    ri "RILEY PLEASE STOP, IT HURTS! *Laughs*"
+    ri "*Mocking voice* You're gonna get us kicked out of here! *Laughs*"
 
     menu:
         "Seek revenge":
-
             $ addPoint("tm")
 
             scene v11frmri3a # FPP Same angle as v11frmri3, Riley smiling with mouth closed
             with dissolve
             
-            u "Since you like seeing people in pain so much, we'll see how much you like it."
+            u "Haha, okay. I see how we're playing today."
 
             scene v11frmri3
             with dissolve
@@ -399,17 +397,15 @@ label v11s23_riley1:
             scene v11frmri3a
             with dissolve
 
-            u "Yeah, just a little bit of payback..."
+            u "Yeah, just a little bit of excitement..."
 
             if not rileyrs:
-
                 scene v11frmri3b # FPP Same angle as v11frmri3, Riley raising her eyebrow and smiling, mouth open
                 with dissolve
 
                 ri "You don't want to start a war, [name]. I never lose."
 
             else: # If rileyrs
-
                 scene v11frmri3c # FPP Same angle as v11frmri3, Riley leaning in close to MC, Riley has a sexy expression, mouth open
                 with dissolve
 
@@ -431,26 +427,25 @@ label v11s23_riley1:
                 ri "Now, if you were trying to be a bit more friendly instead... Just know I never lose."
     
         "Laugh it off":
-
             scene v11frmri3a
             with dissolve
 
-            u "*Laughs* That is not what I sound like."
+            u "*Laughs* And then you'll be upset when you've got nothing exciting to do. You'll be screaming for my attention..."
 
             scene v11frmri3
             with dissolve
 
-            ri "You have no idea what you sounded like over all that crying."
+            ri "*Chuckles*"
 
             scene v11frmri3a
             with dissolve
 
-            u "You would've been screaming too!"
+            u "See? It's true."
 
             scene v11frmri3
             with dissolve
 
-            ri "I only scream for one reason and it's not because I got hit with a little rubber bullet..."
+            ri "I only scream for one reason and it's not because I want attention..."
 
             scene v11frmri3a
             with dissolve
@@ -458,11 +453,10 @@ label v11s23_riley1:
             u "What's the reason then?"
 
             if not rileyrs:
-
                 scene v11frmri3b
                 with dissolve
 
-                ri "Wouldn't you like to know."
+                ri "Wouldn't you like to know?"
 
                 scene v11frmri3a
                 with dissolve
@@ -485,7 +479,6 @@ label v11s23_riley1:
                 ri "Also, you don't want to start a war, [name]. I never lose."
             
             else: # if rileyrs
-
                 scene v11frmri3c
                 with dissolve
 
@@ -506,10 +499,10 @@ label v11s23_riley1:
 
     u "You lost against Amber."
 
-    scene v11frmri3e # FPP Same angle as v11frmri3, Riley looking offended, mouth open
+    scene v11frmri3 # FPP Same angle as v11frmri3, Riley looking offended, mouth open
     with dissolve
 
-    ri "That was just one fight! And she played dirty... don't worry I'll get her back."
+    ri "That was just one fight! And she played dirty... don't worry, I'll get her back."
 
     scene v11frmri3a
     with dissolve
@@ -526,7 +519,6 @@ label v11s23_riley1:
 
     menu:
         "Snitch on Riley":
-
             scene v11frmri4
             with dissolve
 
@@ -535,7 +527,7 @@ label v11s23_riley1:
             scene v11frmri3f # FPP Same angle as v11frmri3, Riley looking shocked with her mouth hanging open
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v11frmri5 # FPP Show Mr. Lee and Riley standing near triceratops, Mr. Lee with mouth open, Riley with an ashamed expression and mouth closed
             with dissolve
@@ -545,7 +537,7 @@ label v11s23_riley1:
             scene v11frmri5a # FPP Same as v11frmri5, but Mr. Lee's mouth closed and Riley's mouth open
             with dissolve
 
-            ri "No, uhm...I was just-"
+            ri "No, uhm... I was just-"
 
             scene v11frmri5
             with dissolve
@@ -555,7 +547,7 @@ label v11s23_riley1:
             scene v11frmri4a # FPP Same angle as v11frmri4, Mr. Lee walking away
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v11frmri3e
             with dissolve
@@ -563,7 +555,6 @@ label v11s23_riley1:
             ri "You just started a war, [name], I hope you're ready."
 
         "Don't snitch on Riley":
-
             scene v11frmri3a
             with dissolve
 
@@ -604,7 +595,7 @@ label v11s23_penelope1:
     scene v11frmpe1 # FPP Show Penelope starting to walk away from helmet exhibit right as MC goes to talk to her
     #with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11frmpe2 # TPP Show MC's hand grabbing Penelope's exactly like the first time they met
     with dissolve
@@ -614,7 +605,7 @@ label v11s23_penelope1:
     scene v11frmpe3 # FPP Show Penelope looking back and down at her and MC's hand, she's smiling with mouth closed
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11frmpe3a # FPP Same angle as v11frmpe3, Penelope looking at MC and smiling, mouth open
     with dissolve
@@ -699,7 +690,7 @@ label v11s23_penelope1:
     scene v11frmpe4 # TPP Show MC and Penelope looking around museum back hallways
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11frmpe6 # FPP View looking into a big supply closet from the doorway
     with dissolve
@@ -724,7 +715,7 @@ label v11s23_penelope1:
     scene v11frmpe9 # TPP Show MC sitting down on the closet floor next to Penelope
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11frmpe10 # FPP View of MC looking at Penelope, both sitting on closet floor. Penelope with neutral expression, mouth closed
     with dissolve
@@ -749,7 +740,7 @@ label v11s23_penelope1:
     if penelopers:
         menu:
             "Flirt":
-
+                $ v11s23_penelope_date = True
                 $ addPoint("bf")
 
                 scene v11frmpe10
@@ -772,7 +763,7 @@ label v11s23_penelope1:
                 scene v11frmpe11 # TPP Show Penelope leaning over and kissing MC on the lips
                 with dissolve
 
-                pause 0.5
+                pause 0.75
 
                 scene v11frmpe10b
                 with dissolve
@@ -830,7 +821,6 @@ label v11s23_penelope1:
                 pe "Okay... you're a little funny."
 
             "Just being me":
-
                 scene v11frmpe10c
                 with dissolve
 
@@ -879,7 +869,6 @@ label v11s23_penelope1:
     else: # not penelopers
         menu:
             "Just being me":
-
                 scene v11frmpe10c
                 with dissolve
 
@@ -926,7 +915,6 @@ label v11s23_penelope1:
                 u "Nevermind... scratch that idea."
 
             "Make a joke":
-
                 scene v11frmpe10c
                 with dissolve
 
@@ -1041,12 +1029,12 @@ label v11s23_penelope1:
     scene v11frmpe12 # TPP Show MC and Penelope picking up as many bottles of water as they can carry
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11frmpe13 # TPP Show MC and Penelope carrying bottles of water into museum entrance hall
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11frmpe3a
     with dissolve
@@ -1116,10 +1104,9 @@ label v11s23_freeroamend:
 
     menu:
         "Agree":
-
             scene v11frm1b
             with dissolve
-
+    
             u "Yeah it's pretty boring, but maybe it'll get better."
 
             scene v11frm1a
@@ -1142,16 +1129,24 @@ label v11s23_freeroamend:
 
             no "At least someone enjoyed themselves. We literally wasted so much time here it's already starting to get dark."
 
-            scene v11frm4 # TPP Show all characters in scene getting on to shuttle bus
-            with dissolve
+            if v11_pen_goes_europe:
+                scene v11frm4 # TPP Show all characters in scene getting on to shuttle bus
+                with fade
+            else:
+                scene v11gtm8
+                with fade
 
-            pause 0.5
+            pause 0.75
+
+            scene v11bb12
+            with fade
+            
+            pause 0.75
 
             # Transition to Scene 25
             jump v11_hotel_bar
 
         "Sneak out":
-
             $ addPoint("tm")
 
             scene v11frm1b
@@ -1172,12 +1167,12 @@ label v11s23_freeroamend:
             scene v11frm5 # FPP Show Nora standing up and smiling at MC, mouth closed
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v11frm5a # FPP Same angle as v11frm5, Nora looking around the museum entrance hall
             with dissolve
         
-            pause 0.5
+            pause 0.75
 
             scene v11frm5b # FPP Same angle as v11frm5, Nora leaning close to MC, she's smiling with mouth open
             with dissolve
@@ -1202,7 +1197,7 @@ label v11s23_freeroamend:
             scene v11frm6 # TPP Show MC grabbing Nora's hand and pulling her toward the museum entrance
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v11frm7 # FPP Outside of museum on sidewalk, sun has just set, looking at Nora who is smiling with mouth closed
             with dissolve
@@ -1212,7 +1207,7 @@ label v11s23_freeroamend:
             scene v11frm8 # TPP Outside of museum on sidewalk, Nora giving MC a big hug, her body pressed against his
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v11frm7
             with dissolve

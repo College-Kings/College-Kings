@@ -761,10 +761,10 @@ label fr5aubrey1:
             if aubreyrs:
                 label v9_aubrey_scene_lake:
                     $ v9_aubrey_lake = True
+                    #$ addPoint("tm", sum([ v7_rileysex, v8_chloesex, v8_riley_lewd_ending, v8_hocoamber, amberSexAtJoshs ])) ###Loyaltymod
 
                     scene v9slake6
                     with dissolve
-
 
                     au "Wow, you keep on surprising me, [name]. And you are right, I did think of something fun just now."
 
@@ -820,8 +820,7 @@ label fr5aubrey1:
                     scene v9slake17vid # mc and aubrey make out animation
                     with dissolve
                     
-                    $ lake_hj = True
-                    $ grantAchievement("relaxing_day")
+                    $ grant_achievement("relaxing_day")
 
                     " "
 

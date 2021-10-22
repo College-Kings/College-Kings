@@ -6,7 +6,7 @@ label v11_dinner_with_lauren:
 
     scene v11dwl1a # Fpp. Show Lauren from across teh table, slight smile mouth open
     with dissolve
-    play music "music/v11/Scene 46/Track Scene 46.mp3" fadein 2
+    play music "music/V10/Scene 40/Track Scene 40_2.mp3" fadein 2
     u "So... Our last event in London, how do you feel?"
 
     scene v11dwl1 # Fpp. same 1, mouth closed
@@ -33,7 +33,7 @@ label v11_dinner_with_lauren:
     scene v11dwl1a
     with dissolve
 
-    la "I think 'getting close' is an understatement. *Chuckles*"
+    la "I think \"getting close\" is an understatement. *Chuckles*"
 
     scene v11dwl1
     with dissolve
@@ -88,7 +88,7 @@ label v11_dinner_with_lauren:
     scene v11dwl1c
     with dissolve
 
-    u "Okay, yeah' *Chuckles* Maybe 'cornball' was the wrong word but either way, I really respect him after seeing what he's been doing for us on this trip."
+    u "Okay, yeah... *Chuckles* Maybe \"cornball\" was the wrong word but either way, I really respect him after seeing what he's been doing for us on this trip."
     u "Also, how fair he was during Penelope's trial, it's crazy. He's such a good guy."
 
     scene v11dwl1b
@@ -99,7 +99,7 @@ label v11_dinner_with_lauren:
     scene v11dwl1
     with dissolve
 
-    u "Well, thank you' What makes you say that?"
+    u "Well, thank you... What makes you say that?"
 
     scene v11dwl1a
     with dissolve
@@ -114,15 +114,30 @@ label v11_dinner_with_lauren:
     scene v11dwl1a
     with dissolve
 
-    la "Well, I have to give it to him actually. He started off with a super charming approach, like wanting to know where I got my shoes, and complimenting my laugh... but I saw right through his weird facade."
-    la "I let him talk for a second though, you know? I wanted to figure out what he actually wanted. But, by the end of his little speech he had gone from 'trying to look out for us girls' to just straight up bashing you."
+    la "Well, I have to give it to him actually. He started off with a super charming approach, like wanting to know where I got my shoes, and complimenting my laugh... but I saw right through his weird façade."
+    la "I let him talk for a second though, you know? I wanted to figure out what he actually wanted."
+
+    scene v11dwl1
+    with dissolve
+    
+    scene v11dwl1a
+    with dissolve
+
+    la "But, by the end of his little speech he had gone from \"trying to look out for us girls\" to just straight up bashing you."
     la "At that point I'd had enough. I said a few regrettable things, but I think I got my point across. It's not what I said that I regret, it's just how I said it."
+    
+    scene v11dwl1
+    with dissolve
+    
+    scene v11dwl1a
+    with dissolve
+    
     la "Maybe you were right when you said Amber has rubbed off on me. *Chuckles*"
 
     scene v11dwl1
     with dissolve
 
-    u "Wow, Lauren. I mean, thank you' *Chuckles* I'm just kind of surprised that of all people it was you who told him off."
+    u "Wow, Lauren. I mean, thank you... *Chuckles* I'm just kind of surprised that of all people it was you who told him off."
 
     scene v11dwl1b
     with dissolve
@@ -185,7 +200,7 @@ label v11_dinner_with_lauren:
                 scene v11dwl1d
                 with dissolve
 
-                u "*Chuckles* Well, your gut was right.."
+                u "*Chuckles* Well, your gut was right..."
 
             "No":
                 scene v11dwl1d
@@ -233,7 +248,7 @@ label v11_dinner_with_lauren:
         scene v11dwl1f # FPP. Show close up of lauren, eyebrow raised, mouth open, seductive look
         with dissolve
 
-        la "You know' Like, closer, closer."
+        la "You know... Like, closer, closer."
 
         scene v11dwl1d
         with dissolve
@@ -263,7 +278,7 @@ label v11_dinner_with_lauren:
         scene v11dwl1a
         with dissolve
 
-        la "Nothing, [name], Seriously, don't worry about it."
+        la "Nothing, [name]. Seriously, don't worry about it."
 
         scene v11dwl1
         with dissolve
@@ -377,7 +392,7 @@ label v11_dinner_with_lauren:
     scene v11dwl8a # FPP. same 8, mouth closed
     with dissolve
 
-    u "Alright, sounds good.."
+    u "Alright, sounds good..."
 
     scene v11dwl9 # FPP. Show lauren walking over to riley and amber
     with dissolve
@@ -397,7 +412,7 @@ label v11_dinner_with_lauren:
     scene v11dwl11 # FPP. Show lauren, amber and riley, Amber looking at MC, lauren and riley looking at each other as if talking
     with dissolve
 
-    pause 1
+    pause 1.25
 
     scene v11dwl10b # FPP. Show imre walking away
     with dissolve
@@ -410,10 +425,10 @@ label v11_dinner_with_lauren:
 
     lee "Alright students, we're going to enjoy one final walk back to the hotel."
 
-    scene v11dwl14a  # FPP. same 11, mouth closed
+    scene v11dwl14a # FPP. same 11, mouth closed
     with dissolve
 
-    u "(A nice dinner and a relaxing walk, not a bad night Mr. Lee.)"
+    u "(A nice dinner and a relaxing walk... Not a bad night, Mr. Lee.)"
 
     scene v11dwl12 # TPP. Show some of the students walking out the restraunt
     with dissolve
@@ -422,6 +437,8 @@ label v11_dinner_with_lauren:
 
     scene v11dwl13 # TPP. Show Nora,chris, Mc, Chloe walking alond the sidewalk (camera from slightly above so you can't tell everyone else isn't with them)
     with dissolve
+
+    pause 1
 
     stop music fadeout 3
 

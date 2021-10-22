@@ -14,10 +14,9 @@ label v10_sun_morn:
     if joinwolves:
         scene v10sum1 # TPP. Show MC in his Wolves bed looking up at the ceiling, MC looks tired.
         with fade
-
-        pause 0.75
-
         play sound "sounds/vibrate.mp3"
+
+        pause 1.25
 
         scene v10sum2 # TPP. Show MC reaching for his phone.
         with dissolve
@@ -26,7 +25,8 @@ label v10_sun_morn:
 
         scene v10sum2a # TPP. Same as sum2, MC now on his phone in bed.
         with dissolve
-        
+        pause 0.75
+    
         if v10_ryan_fight and not v10_ryan_win:
             $ contact_Riley.newMessage("Hey [name], what you up to?", queue=False)
             $ contact_Riley.addReply("Nothing much.")
@@ -65,9 +65,9 @@ label v10_sun_morn:
             $ contact_Josh.addReply("Whatever man.")
 
         label v10s10_PhoneContinueJoshW1:
-            if contact_Josh.getReplies() or contact_Riley.getReplies():
+            if contact_Josh.replies or contact_Riley.replies:
                 call screen phone
-            if contact_Josh.getReplies() or contact_Riley.getReplies():
+            if contact_Josh.replies or contact_Riley.replies:
                 u "(I should check my phone.)"
                 jump v10s10_PhoneContinueJoshW1
 
@@ -90,9 +90,9 @@ label v10_sun_morn:
         $ contact_Lindsey.addReply("Uhm okay. No worries, let me know if you need anything")
 
         label v10s10_PhoneContinueLinW:
-            if contact_Lindsey.getReplies():
+            if contact_Lindsey.replies:
                 call screen phone
-            if contact_Lindsey.getReplies():
+            if contact_Lindsey.replies:
                 u "(I should reply to Lindsey.)"
                 jump v10s10_PhoneContinueLinW
 
@@ -113,13 +113,14 @@ label v10_sun_morn:
     else:
         scene v10sum4 # TPP. Show MC in his Apes bed looking up at the ceiling, MC looks tired.
         with fade
-
-        pause 0.75
-
         play sound "sounds/vibrate.mp3"
+
+        pause 1.25
 
         scene v10sum5a # TPP. Same as sum2, MC now on his phone in bed.
         with dissolve
+
+        pause 0.75
         
         if v10_imre_fight and not v10_imre_win:
             $ contact_Riley.newMessage("Hey [name], what you up to?", queue=False)
@@ -159,9 +160,9 @@ label v10_sun_morn:
             $ contact_Josh.addReply("Whatever man.")
 
         label v10s10_PhoneContinueJoshW2:
-            if contact_Josh.getReplies() or contact_Riley.getReplies():
+            if contact_Josh.replies or contact_Riley.replies:
                 call screen phone
-            if contact_Josh.getReplies() or contact_Riley.getReplies():
+            if contact_Josh.replies or contact_Riley.replies:
                 u "(I should check my phone.)"
                 jump v10s10_PhoneContinueJoshW2
 
@@ -184,9 +185,9 @@ label v10_sun_morn:
         $ contact_Lindsey.addReply("Uhm okay. No worries, let me know if you need anything")
 
         label v10s10_PhoneContinueLinA:
-            if contact_Lindsey.getReplies():
+            if contact_Lindsey.replies:
                 call screen phone
-            if contact_Lindsey.getReplies():
+            if contact_Lindsey.replies:
                 u "(I should reply to Lindsey.)"
                 jump v10s10_PhoneContinueLinA
 

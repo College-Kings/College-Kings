@@ -5,8 +5,8 @@
 
 label v11_lauren_apology:
     scene v11laa1 # TPP. MC is walking through the hotel corridor, mouth closed, slightly sad
-    with dissolve
-    play music "music/v11/Scene 30/Track Scene 30_1.mp3" fadein 2
+    with fade
+    play music "music/V10/Scene 40/Track Scene 40_3.mp3" fadein 2
     u "(*Sighs* I should try and talk to Lauren.)"
 
     scene v11laa1a # TPP. Same camera as v11laa1, but MC is now further down the corridor
@@ -19,10 +19,10 @@ label v11_lauren_apology:
 
     pause 0.75
 
+    play sound "sounds/knock.mp3"
+
     scene v11laa3 # FPP. MC is looking at the door, he is knocking on the door
     with dissolve
-
-    play sound "sounds/knock.mp3"
 
     u "Lauren... can we please talk?"
 
@@ -43,17 +43,17 @@ label v11_lauren_apology:
     scene v11laa3b # FPP. Same cam as v11laa3, MC is looking at Lauren opening the door (make sure not fully open yet), Lauren tears in her eye, mouth closed, very sad
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11laa3c # FPP. Same cam as v11laa3, The door is fully open, she has her back turned to MC, she is heading towards the bed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11laa5 # FPP. MC is now in the room, Lauren is sitting on the bed, looking down, tears in her eyes, mouth closed, very sad
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11laa6 # FPP. MC is now sitting on the bed, he is next to Lauren, Lauren looking down, tears in eyes, mouth closed, very sad
     with dissolve

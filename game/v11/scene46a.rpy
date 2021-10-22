@@ -7,11 +7,11 @@ label v11_dinner_with_aubrey:
     scene v11dwa1 # FPP. Show Aubrey slight smile mouth closed
     with dissolve
     u "So, do you like fancy restaurants like this?"
-    play music "music/v11/Scene 46/Track Scene 46.mp3" fadein 2
+    play music "music/V10/Scene 40/Track Scene 40_2.mp3" fadein 2
     scene v11dwa1a # FPP. # FPP. Show Aubrey slight smile mouth open
     with dissolve
 
-    au "When I'm not the one paying, of course I do. *Laughs* What's not to like? It beats fast food any day and I definitely can't cook myself.."
+    au "When I'm not the one paying, of course I do. *Laughs* What's not to like? It beats fast food any day and I definitely can't cook myself..."
 
     scene v11dwa1
     with dissolve
@@ -84,7 +84,7 @@ label v11_dinner_with_aubrey:
     scene v11dwa1c
     with dissolve
 
-    au "Oh, it will be. Hopefully we make it in time because I really think you'll like my sister' *Chuckles*"
+    au "Oh, it will be. Hopefully we make it in time because I really think you'll like my sister. *Chuckles*"
 
     scene v11dwa1b
     with dissolve
@@ -99,7 +99,7 @@ label v11_dinner_with_aubrey:
     scene v11dwa1b
     with dissolve
 
-    u "Wait' More blunt than you? That can't be possible. *Laughs*"
+    u "Wait... More blunt than you? That can't be possible. *Laughs*"
 
     scene v11dwa1a
     with dissolve
@@ -109,7 +109,7 @@ label v11_dinner_with_aubrey:
     scene v11dwa1
     with dissolve
 
-    u "Hmm' Must be nice."
+    u "Hmm... Must be nice."
 
     scene v11dwa1a
     with dissolve
@@ -172,7 +172,7 @@ label v11_dinner_with_aubrey:
         scene v11dwa1e
         with dissolve
 
-        au "He basically just said that you 're a man whore."
+        au "He basically just said that you're a man whore."
 
         scene v11dwa1
         with dissolve
@@ -192,7 +192,7 @@ label v11_dinner_with_aubrey:
         scene v11dwa1c
         with dissolve
 
-        au "That 'one' could easily be you."
+        au "That \"one\" could easily be you."
 
         scene v11dwa1b
         with dissolve
@@ -219,7 +219,7 @@ label v11_dinner_with_aubrey:
                 scene v11dwa1b
                 with dissolve
 
-                u "*Laughs*."
+                u "*Laughs*"
 
             "No":
                 scene v11dwa1b
@@ -270,7 +270,6 @@ label v11_dinner_with_aubrey:
 
         menu:
             "Be More than friends":
-
                 scene v11dwa1
                 with dissolve
                 u "That's actually something I've been wanting to talk to you about."
@@ -332,6 +331,7 @@ label v11_dinner_with_aubrey:
                 with dissolve
 
                 au "Haha, it's fine. Just don't make things all awkward now."
+
             "Stay FWB":
                 scene v11dwa1d
                 with dissolve
@@ -341,7 +341,7 @@ label v11_dinner_with_aubrey:
                 scene v11dwa1e
                 with dissolve
 
-                au "*Chuckles* Yeah, you do. But the minute you start acting like you're my 'boyfriend' or something, I'll have to cut you loose."
+                au "*Chuckles* Yeah, you do. But the minute you start acting like you're my \"boyfriend\" or something, I'll have to cut you loose."
 
                 scene v11dwa1d
                 with dissolve
@@ -356,81 +356,84 @@ label v11_dinner_with_aubrey:
                 scene v11dwa1
                 with dissolve
 
-                u "Okay' I think you can stop with Pimp Daddy stuff now. *Chuckles*"
+                u "Okay, I think you can stop with Pimp Daddy stuff now. *Chuckles*"
 
                 scene v11dwa1a
                 with dissolve
 
                 au "Haha. As long as you keep me satisfied, [name]."
 
-        scene v11dwa1c
-        with dissolve
+    scene v11dwa1c
+    with dissolve
 
-        au "Oh, look! The food's coming out."
+    au "Oh, look! The food's coming out."
 
-        scene v11dwa1b
-        with dissolve
+    scene v11dwa1b
+    with dissolve
 
-        u "We didn't even order anything..."
+    u "We didn't even order anything..."
 
-        scene v11dwa1c
-        with dissolve
+    scene v11dwa1c
+    with dissolve
 
-        au "Oh yeah, Pimp Daddy-I mean... Mr. Lee, ordered for everybody. *Chuckles*"
+    au "Oh yeah, Pimp Daddy-I mean... Mr. Lee, ordered for everybody. *Chuckles*"
 
-        scene v11dwa1b
-        with dissolve
+    scene v11dwa1b
+    with dissolve
 
-        u "Wow, you really can't stop thinking about Mr. Lee as your pimp, can you? *Laughs*"
+    u "Wow, you really can't stop thinking about Mr. Lee as your pimp, can you? *Laughs*"
 
-        scene v11dwa1c
-        with dissolve
+    scene v11dwa1c
+    with dissolve
 
-        au "Haha, stop it."
+    au "Haha, stop it."
 
-        scene v11dwa3 # TPP. Show MC and aubrey talking and eating
-        with dissolve
+    scene v11dwa3 # TPP. Show MC and aubrey talking and eating
+    with dissolve
 
-        pause 2
+    pause 2
 
-        scene v11dwa4 # TPP. Show Riley and Amber talking and eating
-        with fade
+    scene v11dwa4 # TPP. Show Riley and Amber talking and eating
+    with fade
 
-        pause 2
+    pause 2
 
-        scene v11dwa5 # TPP. Show Lindsey and charli talking and eating
-        with fade
+    scene v11dwa5 # TPP. Show Lindsey and charli talking and eating
+    with fade
 
-        pause 2
+    pause 2
 
-        scene v11dwa6 # FPP. Show aubrey, laid back slightly hands on stomach mouth open
-        with dissolve
+    scene v11dwa6 # FPP. Show aubrey, laid back slightly hands on stomach mouth open
+    with dissolve
 
-        au "Wow, I'm so full' That was amazing, I'm gonna go thank Mr. Lee."
+    au "Wow, I'm so full... That was amazing, I'm gonna go thank Mr. Lee."
 
-        scene v11dwa7 # FPP. Show aubrey walking off towards Mr. Lee
-        with dissolve
+    scene v11dwa7 # FPP. Show aubrey walking off towards Mr. Lee
+    with dissolve
 
-        u "Haha, alright. You go do that."
+    u "Haha, alright. You go do that."
 
-        u "(*Laughs* She's definitely got a little thing for Mr. Lee.)"
+    u "(*Laughs* She's definitely got a little thing for Mr. Lee.)"
 
-        scene v11dwa8 # FPP. Show Mr Lee infront of the students, mouth open
-        with dissolve
+    scene v11dwa8 # FPP. Show Mr Lee infront of the students, mouth open
+    with dissolve
 
-        lee "Alright students, we're going to enjoy one final walk back to the hotel."
+    lee "Alright students, we're going to enjoy one final walk back to the hotel."
 
-        scene v11dwa8a # FPP. Show Mr Lee infront of the students, mouth closed
-        with dissolve
+    scene v11dwa8a # FPP. Show Mr Lee infront of the students, mouth closed
+    with dissolve
 
-        u "(A nice dinner and a relaxing walk, not a bad night Mr. Lee.)"
+    u "(A nice dinner and a relaxing walk... Not a bad night, Mr. Lee.)"
 
-        scene v11dwa9 # TPP. Show some of the students walking out the restraunt
-        with dissolve
+    scene v11dwa9 # TPP. Show some of the students walking out the restraunt
+    with dissolve
 
-        pause 1
+    pause 1
 
-        scene v11dwa10 # TPP. Show Nora,chris, Mc, Chloe walking alond the sidewalk (camera from slightly above so you can't tell everyone else isn't with them)
-        with dissolve
+    scene v11dwa10 # TPP. Show Nora,chris, Mc, Chloe walking alond the sidewalk (camera from slightly above so you can't tell everyone else isn't with them)
+    with dissolve
+
+    pause 1
+
     stop music fadeout 3
     jump v11_walking_back

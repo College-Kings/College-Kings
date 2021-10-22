@@ -114,6 +114,7 @@ label v11_wolves_seb_prank:
             $ addPoint("bf")
 
             scene v11wsp8a
+            with dissolve
 
             u "Nah guys, that's not for me. I'm going to get some extra sleep so I'm ready for the trip."
 
@@ -203,10 +204,10 @@ label v11_wolves_seb_prank:
             $ v11s9a_kiwiiPost1.addReply(_("Someone's got \"balls\""), numberLikes=334)
 
             label v11s9a_kiwiiPost1_continue:
-                if v11s9a_kiwiiPost1.getReplies():
+                if v11s9a_kiwiiPost1.replies:
                     call screen phone
-                if v11s9a_kiwiiPost1.getReplies():
-                    u "(I should check Kiwii)"
+                if v11s9a_kiwiiPost1.replies:
+                    u "(I should reply on Kiwii)"
                     jump v11s9a_kiwiiPost1_continue
 
             scene v11wsp4b
@@ -249,6 +250,7 @@ label v11_wolves_seb_prank:
             pause 0.75
 
             scene v11wsp13 # FPP. MC is still sitting on the couch, Imre is standing in front of him, Imre mouth open, neutral expression
+            with dissolve
 
             imre "*Whisper* It's time man!"
 
@@ -282,7 +284,7 @@ label v11_wolves_seb_prank:
 
             pause 0.75
 
-            scene v11wsp17  # FPP. MC is looking at Imre, Imre mouth open, neutral expression (Imre is standing next to the wagon)
+            scene v11wsp17 # FPP. MC is looking at Imre, Imre mouth open, neutral expression (Imre is standing next to the wagon)
             with dissolve
 
             imre "*Whisper* Alright, let's go."
@@ -468,11 +470,6 @@ label v11_wolves_seb_prank:
 
             pause 0.75
 
-            scene v11wsp3a
-            with dissolve
-
-            pause 0.75
-
             scene v11wsp4b
             with dissolve
 
@@ -501,10 +498,10 @@ label v11_wolves_seb_prank:
             $ v11s9a_kiwiiPost2.addReply(_("Someone's got \"balls\""), numberLikes=218)
 
             label v11s9a_kiwiiPost2_continue:
-                if v11s9a_kiwiiPost2.getReplies():
+                if v11s9a_kiwiiPost2.replies:
                     call screen phone
-                if v11s9a_kiwiiPost2.getReplies():
-                    u "(I should check Kiwii)"
+                if v11s9a_kiwiiPost2.replies:
+                    u "(I should reply on Kiwii)"
                     jump v11s9a_kiwiiPost2_continue
 
             scene v11wsp4b
@@ -585,7 +582,7 @@ label v11_wolves_seb_prank:
     scene v11wsp33c # FPP. Same as v11wsp32a, Sebastian wearing shorts, mouth open, slightly smiling, looking at his phone
     with dissolve
 
-    se "Bro who took this?"
+    se "Bro, who took this?"
 
     scene v11wsp33d # FPP. Same as v11wsp32c, but Sebastian mouth closed, looking at MC
     with dissolve
@@ -595,7 +592,7 @@ label v11_wolves_seb_prank:
     scene v11wsp33c
     with dissolve
 
-    se "Says @CalebTheApeBoy posted it. That's the new Ape pledge. Oh it's on now."
+    se "Says @CalebTheApeBoy posted it. That's the new Ape pledge. Oh, it's on now."
 
     scene v11wsp33d
     with dissolve

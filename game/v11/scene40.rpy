@@ -6,8 +6,8 @@
 label v11_carriage_ride:
     scene v11car1 # FPP. MC standing in the lobby next to the other students (Charli leaning on the wall, Imre, Lindsey, out of shot), looking at Mr Lee in front of the counter, Mr Lee slight smile, mouth open
     with dissolve
-    play music "music/v11/Scene 40/Track Scene 40.mp3" fadein 2
-    lee "Settle down, everyone... If you haven't yet heard from your fellow students or myself, we have a planned event tonight. An event that I certainly will enjoy, and I believe you all will as well.."
+    play music "music/V10/Scene 10/Track Scene 10.mp3" fadein 2
+    lee "Settle down, everyone... If you haven't yet heard from your fellow students or myself, we have a planned event tonight. An event that I certainly will enjoy, and I believe you all will as well..."
 
     scene v11car2 # FPP. Same positioning as v11car1, MC looking at Imre, Imre looking at Mr Lee's direction, Imre slight grin, mouth open
     with dissolve
@@ -54,7 +54,7 @@ label v11_carriage_ride:
     scene v11car4b # FPP. Same as v11car4, Show Lindsey walking towards MC, Charli mocking look, mouth closed, Lindsey smiling, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v11car4c # FPP. Same as v11car4, Lindsey standing in front of MC, blocking the view of Charli, she's looking back at Charli, she's slightly worried, mouth closed
     with dissolve
@@ -163,6 +163,7 @@ label v11_carriage_ride:
 
     menu:
         "Tease":
+            $ addPoint("tm")
             scene v11car4m # FPP. Same as v11car4l, different pose, Lindsey slightly sad, mouth closed
             with dissolve
 
@@ -384,7 +385,7 @@ label v11_carriage_ride:
     scene v11car15c
     with dissolve
 
-    li "Yeah, for the Chicks"
+    li "Yeah, for the Chicks."
 
     scene v11car11d # FPP. Same as v11car11c, different pose, Chloe slightly surprised, mouth open
     with dissolve
@@ -446,7 +447,7 @@ label v11_carriage_ride:
     scene v11car15f # FPP. Same as v11car15c, different pose
     with dissolve
 
-    li "What do you think Chloe?"
+    li "What do you think, Chloe?"
 
     scene v11car11e # FPP. Same as v11car11d, Chloe slightly skeptical, mouth open, different pose
     with dissolve
@@ -461,7 +462,7 @@ label v11_carriage_ride:
     scene v11car11f # FPP. Same as v11car11e, Chloe looking at Nora, Chloe slightly skeptical, mouth open
     with dissolve
 
-    cl "I mean.... I don't know, have the Chicks ever done this sort of thing before?"
+    cl "I mean... I don't know, have the Chicks ever done this sort of thing before?"
 
     scene v11car15c
     with dissolve
@@ -499,6 +500,15 @@ label v11_carriage_ride:
     with dissolve
 
     menu:
+        "Side with Nora":
+            $ noraLike += 1
+            $ chloeLike -= 1
+
+            scene v11car11h # FPP. Same as v11car11, Chloe annoyed, mouth closed, looking at MC, different pose
+            with dissolve
+
+            u "I actually think it's really cool, too. I'm sure the benefits would outweigh the negatives. I already have nicknames for some of my frat bros in mind... *Chuckles*"
+
         "Side with Chloe":
             $ noraLike -= 1
             $ chloeLike += 1
@@ -512,15 +522,6 @@ label v11_carriage_ride:
             with dissolve
 
             no "Yeah sure, but you can't just turn the idea down right away when one of your sisters is coming to you with something that could be really awesome."
-
-        "Side with Nora":
-            $ noraLike += 1
-            $ chloeLike -= 1
-
-            scene v11car11h # FPP. Same as v11car11, Chloe annoyed, mouth closed, looking at MC, different pose
-            with dissolve
-
-            u "I actually think it's really cool, too. I'm sure the benefits would outweigh the negatives. I already have nicknames for some of my frat bros in mind... *Chuckles*"
 
     scene v11car15g # FPP. Same as v11car15e, Lindsey slightly worried, mouth open, different pose
     with dissolve
@@ -550,7 +551,8 @@ label v11_carriage_ride:
     scene v11car14e
     with dissolve
 
-    no "Do I really need to read from the list? One thing I can say about Chris is that even though he's so fucking busy and never has time for me, the dedication he has for the Wolves is clearly seen in every single thing he does..."
+    no "Do I really need to read from the list?"
+    no "One thing I can say about Chris is that even though he's so fucking busy and never has time for me, the dedication he has for the Wolves is clearly seen in every single thing he does..."
 
     scene v11car14f
     with dissolve
@@ -684,7 +686,7 @@ label v11_carriage_ride:
     scene v11car14e
     with dissolve
     
-    no "What about the time you told a chick to leave campus cause she was wearing the same dress as you?!"
+    no "What about the time you told a Chick to leave campus cause she was wearing the same dress as you?!"
 
     scene v11car11j
     with dissolve
@@ -754,12 +756,11 @@ label v11_carriage_ride:
     scene v11car17 # TPP. Show Nora and Chloe falling out towards the ground
     with dissolve
 
+    pause 0.75
     play sound "sounds/fall.mp3"
 
-    pause 0.75
-
     scene v11car18 # TPP. Show Nora and Chloe on the ground, both angry, mouths closed
-    with dissolve
+    with vpunch
 
     # -Both Nora and Chloe fall out of the carriage onto the ground-
 
@@ -776,6 +777,7 @@ label v11_carriage_ride:
     pause 0.75
 
     scene v11car19a # FPP. Same as v11car19, Mr Lee now in talking distance, Mr Lee concerned and worried, mouth open, looking down at Nora and Chloe (they're out of shot) 
+    with dissolve
 
     lee "What's going on? Are you two alright?"
 
@@ -854,6 +856,7 @@ label v11_carriage_ride:
 
     menu:
         "Tell her about Lindsey":
+            $ addPoint("tm")
             $ v11_told_aubrey = True
 
             scene v11car22c # FPP. Same as v11car22a, different pose, Aubrey curious, mouth closed

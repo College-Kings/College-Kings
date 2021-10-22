@@ -514,12 +514,11 @@ label v4start:
 
     u "Ahhh! Stop! Stop!"
 
-    hide screen fantasyOverlay
-
     stop music fadeout 2.0
 
     scene s225a # already in the game, no need to render again
     with flash
+    hide screen fantasyOverlay
 
     u "*Breathing heavily*"
 
@@ -749,10 +748,8 @@ label v4start:
             show s316c
             with dissolve
 
-            $ relightthefire = True
-            $ grantAchievement("relight_the_fire")
+            $ grant_achievement("relight_the_fire")
                 
-
             ju "Emily? I thought you guys broke up?"
 
             hide s316c
@@ -951,9 +948,7 @@ label v4start:
             menu:
                 "Buy it":
                     $ volleyball = True
-                    $ rematch = True
-                    $ grantAchievement("rematch")
-                        
+                    $ grant_achievement("rematch")
 
                     u "Yeah, you're right. Maybe I could give it to her when we talk about what Ryan said."
 
@@ -1058,9 +1053,9 @@ label v4start:
     play music "music/mindie4.mp3"
 
     label phonev:
-        if contact_Chloe.getReplies():
+        if contact_Chloe.replies:
             call screen phone
-        if contact_Chloe.getReplies():
+        if contact_Chloe.replies:
             u "(I should message Chloe about meeting up later.)"
             jump phonev
     
@@ -1698,9 +1693,7 @@ label readmontagea:
                 scene s344a
                 with dissolve
 
-                $ keeneye = True
-                $ grantAchievement("keen_eye")
-                    
+                $ grant_achievement("keen_eye")
 
                 u "Can I get a muffin and a coffee please?"
 
@@ -2173,9 +2166,9 @@ label continueab:
     $ contact_Josh.addReply(_("I'm meeting a friend at 11, so I can't really."), v4_reply2)
 
     label phonew:
-        if contact_Josh.getReplies():
+        if contact_Josh.replies:
             call screen phone
-        if contact_Josh.getReplies():
+        if contact_Josh.replies:
             u "(I should probably reply to my messages.)"
             jump phonew
 

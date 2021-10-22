@@ -4,7 +4,7 @@
 # Time: Evening
 
 label v11_hotel_bar_wolves:
-    play music "music/v11/Scene 26/Track Scene 26.mp3" fadein 2
+    play music "music/v11/Scene 5/Track Scene 5_6.mp3" fadein 2
     if v11s25_beer:
         scene v11hrs1 # TPP Show MC taking a drink of his beer
         with dissolve
@@ -109,11 +109,16 @@ label v11_hotel_bar_wolves:
 
     ro "No thank you, not for me. I was just heading up to my room."
 
-    if msrosers:
-        scene v11hrs8 # TPP Close up of Ms. Rose whispering in MC's ear, Ms. Rose smiling with mouth open
-        with dissolve        
+    scene v11hrs6
+    with dissolve
 
-        ro "*Whisper* Speaking of what happens in London stays in London... Room 105, 10 minutes. Don't be late."
+    if msrosers:
+        pause 0.5
+
+        scene v11hrs8 # TPP Close up of Ms. Rose whispering in MC's ear, Ms. Rose smiling with mouth open
+        with dissolve
+
+        ro "*Whisper* Speaking of what happens in London stays in London... Room 404, 10 minutes. Don't be late."
 
         #play sound "sounds/kiss.mp3"
 
@@ -219,7 +224,7 @@ label v11_hotel_bar_wolves:
                 scene v11hrs5a # TPP Same angle as v11hrs5, MC alone at bar, getting off of bar stool to leave
                 with dissolve
 
-                pause 0.5
+                pause 0.75
 
                 scene v11hrs10 # FPP View of bartender from entrance to bar, bartender still behind the bar, smiling with mouth open
                 with dissolve
@@ -238,7 +243,6 @@ label v11_hotel_bar_wolves:
                 with dissolve
 
                 u "(*Sighs* This isn't right.)"
-
     jump v11_bartender_hotel_chat
 
 label v11_hotel_bar_apes:

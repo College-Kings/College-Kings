@@ -22,7 +22,7 @@ label v9_walk_li_txt:
 
     u "(I may need some help if they run into each other again)"
 
-    play music "music/v9/Scene 38/Track Scene 38.mp3" fadein 2
+    play music "music/v9/Scene 8/Track Scene 8_3.mp3" fadein 2
 
     scene v9wlt1a # TPP. Same camera as v9wlt1, MC checking his phone.
     with dissolve
@@ -40,9 +40,9 @@ label v9_walk_li_txt:
     $ contact_Lindsey.addReply(_("Aww, I wish I could, but I gotta get ready for the brawl"), v9s38_reply2)
     
     label s38_PhoneContinue:
-        if contact_Lindsey.getReplies():
+        if contact_Lindsey.replies:
             call screen phone
-        if contact_Lindsey.getReplies():
+        if contact_Lindsey.replies:
             "(I should reply to Lindsey.)"
             jump s38_PhoneContinue 
     

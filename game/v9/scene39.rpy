@@ -7,7 +7,7 @@ label v9_hang_w_linds:
     scene v9hwl1 # TPP. Show MC knocking on the door of the chicks house.
     with fade
 
-    play music "music/v9/Scene 39/Track Scene 39_1.mp3" fadein 2
+    play music "music/v9/Scene 8/Track Scene 8_1.mp3" fadein 2
 
     pause 1
 
@@ -207,6 +207,7 @@ label v9_hang_w_linds:
                         $ addPoint("bf")
 
                     $ lindseyfirstkiss = True
+                    #$ addPoint("tm", sum([ amberSexAtJoshs, v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley ])) ###Loyaltymod
                     
                     scene v9links # Animations pls ignore
                     with dissolve
@@ -265,6 +266,7 @@ label v9_hang_w_linds:
                     scene v9hwl10 # FPP. Show Lindsey (camera as if MC has gotten off the bed but Lindsey still on it). Lindsey a little sad, mouth closed.
                     with dissolve
 
+                    stop sound
                     u "Dammit! I have to get ready for the Brawl."
 
                     u "I'm so sorry. I really don't want to go... REALLY!"
@@ -313,8 +315,6 @@ label v9_hang_w_linds:
                     if chloers:
                         $ addPoint("bf")
                         
-                    $ the_wrong_time = True
-                    $ grantAchievement("the_wrong_time")
                     scene v9hwl7b # TPP. Same camera as v9hwl7, Show MC pulling away from Lindsey who is trying to kiss him.
                     with dissolve
 
@@ -323,6 +323,7 @@ label v9_hang_w_linds:
                     scene v9hwl5h # FPP. Same camera as v9hwl5, quite sad, mouth open.
                     with dissolve
 
+                    $ grant_achievement("the_wrong_time")
                     li "What's wrong?"
 
                     scene v9hwl5i # FPP. Same camera as v9hwl5, quite sad, mouth closed.

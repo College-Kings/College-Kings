@@ -30,7 +30,7 @@ label apes_join_ceremony:
 
     scene v8apes3 # FPP. MC inside Apes main hall. Caleb, Ryan, Kai visible in shot talking to each other (all in casual clothes). MC not too close to them
     with dissolve
-    u "(What the hell?{w} Maybe I have time to change into something casual.)"
+    u "(What the hell? Maybe I have time to change into something casual.)"
 
     scene v8apes3a # Now they're looking at MC and laughing. Kai and Ryan talking. Kai pointing at the MC
     with dissolve
@@ -73,7 +73,7 @@ label apes_join_ceremony:
 
     scene v8apes6
     with dissolve
-    gr "Dude... I think you got the most of anyone! Great work. You'll be a great Ape...{w} maybe."
+    gr "Dude... I think you got the most of anyone! Great work. You'll be a great Ape... maybe."
 
     scene v8apes6a
     with dissolve
@@ -197,7 +197,8 @@ label apes_join_ceremony:
 
         scene v8apes6a
         with dissolve
-        gr "Next Ape with an impressive score is gonna be...{w} Caleb!"
+        gr "Next Ape with an impressive score is gonna be..."
+        gr "Caleb!"
 
         scene v8apes10
         with dissolve
@@ -238,7 +239,8 @@ label apes_join_ceremony:
 
         scene v8apes6a
         with dissolve
-        gr "Next Ape with an impressive score is gonna be...{w} Caleb!"
+        gr "Next Ape with an impressive score is gonna be..."
+        gr "Caleb!"
 
         scene v8apes10
         with dissolve
@@ -287,7 +289,7 @@ label apes_faceoff_task:
 
     scene v8apes11
     with dissolve
-    ca "Get video of whatever you do and send it to me. We'll then review it{w} with interest."
+    ca "Get video of whatever you do and send it to me. We'll then review it with interest."
 
     scene v8apes11a
     with dissolve
@@ -343,12 +345,12 @@ label apes_faceoff_task:
 
     scene v8apes6a
     with dissolve
-    gr "Cooper.{w} Not bad! Bananas in the tailpipe of 3 security cars."
+    gr "Cooper. Not bad! Bananas in the tailpipe of 3 security cars."
     gr "One of them couldn't even start for more than an hour, the way I heard it."
 
     scene v8apes6
     with dissolve
-    gr "Kai.{w} Not bad as well, sneaking into the cafeteria and adding Ex Lax to the beef stew."
+    gr "Kai. Not bad as well, sneaking into the cafeteria and adding Ex Lax to the beef stew."
     gr "Campus bathrooms are gonna be busy today!"
 
     scene v8apes6d

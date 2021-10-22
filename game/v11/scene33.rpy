@@ -6,13 +6,16 @@
 label v11_bar_chloe_and_aubrey:
     scene v11caa1 # TPP. Show MC walking to the bar, mouth closed
     with fade
-    play music "music/v11/Scene 33/Track Scene 33.mp3" fadein 2
+    play music "music/v11/Scene 11/Track Scene 11.mp3" fadein 2
     pause 0.75
 
     scene v11caa2 # FPP. MC spots chloe and aubrey sitting at the bar holding beer, mouth closed
     with dissolve
 
+    play sound "sounds/swoosh.mp3"
     pause 0.75
+
+    show screen fantasyOverlay
 
     scene v11caa2a # FPP. same as 2,MC is approaching chloe and aubrey but charli steps in the middle of the way, mouth opened
     with dissolve
@@ -21,8 +24,14 @@ label v11_bar_chloe_and_aubrey:
     charli "First you thought I was being kind to the girls with a hidden agenda, but now that you know I'm gay you've lost the ability to connect those dots."
     charli "You can't comprehend being nice without an agenda, because you yourself aren't nice without an agenda."
 
+    play sound "sounds/swoosh.mp3"
+
+    pause 0.75
+    hide screen fantasyOverlay
+
     scene v11caa3 # TPP. MC murmors with a mad face, mouth opened
     with dissolve
+
 
     u "(I am a nice guy... agenda my ass.)"
 
@@ -80,7 +89,6 @@ label v11_bar_chloe_and_aubrey:
 
             au "Now you're enjoying yourself. *Chuckles*"
 
-
         "Just water":
             scene v11caa8a
             with dissolve
@@ -126,7 +134,6 @@ label v11_bar_chloe_and_aubrey:
     with dissolve
 
     u "Maybe he's just really passionate."
-
 
     if chloemad:
         scene v11caa9b
@@ -180,6 +187,8 @@ label v11_bar_chloe_and_aubrey:
     scene v11caa11a # FPP. looking at aubrey leaving, back turned to mc
     with dissolve
 
+    stop sound
+
     u "Haha, later Aubrey."
 
     if chloemad:
@@ -219,7 +228,6 @@ label v11_bar_chloe_and_aubrey:
                 with dissolve
 
                 u "Definitely going with the round ones."
-
 
             "Square":
                 scene v11caa12
@@ -292,15 +300,22 @@ label v11_bar_chloe_and_aubrey:
 
         u "No problem, grumpy."
 
-        scene v11caa14b
+        scene v11caa14a
         with dissolve
 
         cl "*Chuckles*"
 
         scene v11caa15 # TPP. MC leaving the bar
         with dissolve
+        
+        pause 0.75
+        
         stop music fadeout 3
-        jump v11_riley_sex
+
+        if v11_riley_roomate:
+            jump v11_riley_sex
+        else:
+            jump v11_chloe_hotel_room_amber_call
 
     else:
         scene v11caa16 # FPP. looking at chloe, still sitted, mouth opened
@@ -353,7 +368,7 @@ label v11_bar_chloe_and_aubrey:
         scene v11caa19b # FPP. same as 19a, mouth opened
         with dissolve
 
-        bartender "Sure she is, A little advice? If you want a girl like her to stay, you might want to put a ring on it. That or give her a baby."
+        bartender "Sure she is... A little advice? If you want a girl like her to stay, you might want to put a ring on it. That or give her a baby."
 
         scene v11caa19a
         with dissolve

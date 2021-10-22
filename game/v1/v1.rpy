@@ -1,14 +1,12 @@
 init python:
     # Emily's messages
     def v1_reply1():
-        setattr(store, "nohardfeelings", True)
-        grantAchievement("no_hard_feelings")
+        grant_achievement("no_hard_feelings")
 
         contact_Emily.newMessage(_("Cool :)"))
 
     def v1_reply2():
-        setattr(store, "openwound", True)
-        grantAchievement("open_wound")
+        grant_achievement("open_wound")
 
         addPoint("tm")
         contact_Emily.newMessage(_("Ugh :/"))
@@ -142,7 +140,7 @@ label starta: #for compatibility only
     scene v1jul1
     with dissolve
 
-    u "Oh you're dropping me off? I was gonna take the train."
+    u "Oh, you're dropping me off? I was gonna take the train."
 
     scene v1jul1a
     with dissolve
@@ -1151,8 +1149,7 @@ label starta: #for compatibility only
                 scene s56no1a
                 with dissolve
 
-                $ keepitmoving = True
-                $ grantAchievement("keep_it_moving")
+                $ grant_achievement("keep_it_moving")
 
                 u "Actually, I knew that. I just wanted to talk to you 'cause you're really cute."
 
@@ -1210,12 +1207,11 @@ label starta: #for compatibility only
         call screen v1_freeRoam1_3
 
 label efra:
+    $ freeRoam = False
     scene s59
     stop music fadeout 2.0
     play sound "sounds/knock.mp3"
     
-    "*Knock knock knock*"
-
     scene s60
     with dissolve
 
@@ -1259,7 +1255,7 @@ label efra:
     scene s63e
     with dissolve
 
-    u "Oh that's cool."
+    u "Oh, that's cool."
 
     scene s63d
     with dissolve
@@ -1433,9 +1429,9 @@ label efra:
     $ contact_Lauren.addReply(_("Cool"))
 
     label v1_phoneCheck1:
-        if contact_Lauren.getReplies():
+        if contact_Lauren.replies:
             call screen phone
-        if contact_Lauren.getReplies():
+        if contact_Lauren.replies:
             "(I should reply to Lauren.)"
 
             scene s61
@@ -1451,21 +1447,20 @@ label efra:
     scene s61a
     with dissolve
 
-    u "Okay man I did it."
+    u "Okay man, I did it."
 
     scene s61c
     with dissolve
 
     imre "Awesome! Get ready for a wild night, my man."
 
+    label continueonea: #for compatibility only
     scene s65
     with Fade(1, 0, 1)
     stop music fadeout 2.0
-    " "
 
-    label continueonea: #for compatibility only
     play sound "sounds/knock.mp3"
-    "*Knock knock knock*"
+    pause 0.75
 
     scene s66
     with dissolve
@@ -1502,10 +1497,9 @@ label efra:
         with dissolve
         u "Yeah, that's right. Good to see you again."
 
+    label talktorib: #for compatibility only
     scene s68
     with fade
-
-    label talktorib: #for compatibility only
     ri "Sooo, is it just us three for tonight?"
 
     scene s68a
@@ -1519,8 +1513,6 @@ label efra:
     u "Yeah, she should be here any minute."
 
     play sound "sounds/knock.mp3"
-
-    "*Knock knock knock*"
 
     scene s68a
     with dissolve
@@ -1704,10 +1696,10 @@ label efra:
 
             imre "Damn..."
 
+    label ao_bd: #for compatibility only
     scene s72f
     with dissolve
 
-    label ao_bd: #for compatibility only
     imre "Okay, it's your turn to dare someone, Lauren."
 
     scene s73bl
@@ -1721,7 +1713,7 @@ label efra:
     ri "Oh that's easy. Let's do it, Imre."
 
     scene s75
-    with fade
+    with dissolve
 
     imre "Great idea, Lauren!"
 
@@ -1729,8 +1721,7 @@ label efra:
     with hpunch
 
     play sound "sounds/slap.mp3"
-
-    "*Slap*"
+    pause 1.5
 
     scene s75b
     with dissolve
@@ -1995,12 +1986,12 @@ label at_bd:
 
     ### Sex dream
     label sexdream1: #for compatibility only
+    show screen fantasyOverlay
     scene sda1  ### close to the kitchen counter
     with Fade (1,0,1)
 
     ri "Wow, you guys have a really nice house."
 
-    show screen fantasyOverlay
     scene sda1a
     with dissolve
 
@@ -2766,10 +2757,7 @@ label aw_bd:
                 scene s90
                 with dissolve # kiss
                 $ v1_kissLauren = True
-
-                $ romeo = True
-                $ grantAchievement("romeo")
-                    
+                $ grant_achievement("romeo")
 
                 play sound "sounds/kiss.mp3"
 
@@ -2849,7 +2837,7 @@ label aw_bd:
     scene s95 # you falling onto bed
     with vpunch
 
-    "*Hmpf*"
+    pause 1
 
     scene s96 #showing Imre in front of your bed looking down on you
     with dissolve
@@ -2927,9 +2915,9 @@ label aw_bd:
     $ contact_Ryan.addReply(_("Okay, will do."))
 
     label repeata:
-        if contact_Ryan.getReplies():
+        if contact_Ryan.replies:
              call screen phone
-        if contact_Ryan.getReplies():
+        if contact_Ryan.replies:
             u "(I should really check who texted me.)"
             jump repeata
 
@@ -3447,7 +3435,7 @@ label v1_freeRoam2_camp:
     else:
         play sound "sounds/vibrate.mp3"
 
-        if not contact_Lauren.getMessage("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"):
+        if not contact_Lauren.get_message("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"):
             $ contact_Lauren.newMessage(_("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"), queue=False)
             $ contact_Lauren.addReply(_("Yeah, sure."), v1_reply6)
             $ contact_Lauren.addReply(_("What is there to talk about?"), v1_reply7)
@@ -3477,10 +3465,8 @@ label v1_freeRoam2_mason:
             scene fr2ma1a
             with dissolve
 
-            $ bigmouth = True
-            $ grantAchievement("big_mouth")
+            $ grant_achievement("big_mouth")
                 
-
             u "Yeah, he better watch out, or I'll kick his ass."
 
             u "(Yeah [name], that seems like a brilliant thing to say about a hyper-aggressive idiot that prides himself in his fighting skills.)"
@@ -3725,7 +3711,7 @@ label v1_freeRoam2_grayson:
     scene fr2gr2b
     with dissolve
 
-    gr "We're building the Apes' legacy here. 10 Years from now, I'll be the most successful Ape president in history."
+    gr "We're building the Apes' legacy here. 10 years from now, I'll be the most successful Ape president in history."
 
     gr "And you could be the most successful vice president."
 
@@ -3751,6 +3737,8 @@ label v1_freeRoam2_grayson2:
 
 label v1_freeRoam2_end:
 label fr2end: #for compatibility only
+    $ freeRoam = False
+
     stop music fadeout 2.0
     
     scene chloelook:
@@ -3831,7 +3819,7 @@ label fr2end: #for compatibility only
             scene s110 ### ryans hand on your back
             with dissolve
 
-            "*Push*"
+            pause 0.75
 
             scene s111 ### you stumbling into chloe and the guy
             with vpunch
@@ -3986,16 +3974,22 @@ label fr2end: #for compatibility only
 
     cl "One time a guy stole my underwear and somehow the dean found out about it."
 
+    scene s116a
+    with dissolve
+    
+    scene s116
+    with dissolve
+
     cl "Both of us then had to come to his office, so that the guy could apologize and give me my panties back right in front of the dean."
 
     cl "It was sooo embarrassing."
 
+    scene s116a
+    with dissolve
+
     menu:
         "Empathize":
             $ addPoint("bf")
-
-            scene s116a
-            with dissolve
 
             u "Wow, that sounds awful."
 
@@ -4006,9 +4000,6 @@ label fr2end: #for compatibility only
 
         "Poke fun":
             $ addPoint("tm")
-
-            scene s116a
-            with dissolve
 
             u "Hahaha, sounds like the dean was into you."
 

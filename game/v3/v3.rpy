@@ -7,8 +7,6 @@ label v3start:
     stop music fadeout 2.0
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
-
     u "(Who could that be?)"
 
     play music "music/mlove2.mp3"
@@ -689,8 +687,7 @@ label conl:
     scene s220c # chloe in shockc face
     with dissolve
 
-    "*Metal Door Sound*"
-
+    pause 0.75
     sec "Hello? Is there anyone in here?"
 
     scene s220d
@@ -725,7 +722,7 @@ label conl:
     play sound "sounds/switch.mp3"
     scene s223c # security out, lights off
 
-    "*Click*"
+    pause 0.75
 
     scene s222b
     with dissolve
@@ -772,7 +769,9 @@ label conl:
     scene s225  #Showing you in bed
     with Fade (2,0,2)
 
-    pause 1.0
+    pause 0.5
+    play sound "sounds/swoosh.mp3"
+    pause 0.5
 
     show screen fantasyOverlay
 
@@ -831,17 +830,17 @@ label conl:
 
     play sound "sounds/doorbell.mp3"
 
-    "*Doorbell rings*"
+    pause 1
 
     scene s228b
     with dissolve
 
-    pause 0.5
+    pause 1
 
     scene s229
     with dissolve
 
-    pause 0.5
+    pause 1
 
     play sound "sounds/dooropen.mp3"
     scene s230 # you open door and i's emily at night crying
@@ -860,7 +859,6 @@ label conl:
     pause 0.1
 
     hide glitch
-
     # GLITCH SOUND
 
     scene s231 # You arguing
@@ -890,12 +888,13 @@ label conl:
 
     u "NO! This is wrong. Just get out! Leave me alone!"
 
-    hide screen fantasyOverlay
+    play sound "sounds/swoosh.mp3"
 
     stop music fadeout 2.0
 
     scene s225a # you open your eyes
     with flash
+    hide screen fantasyOverlay
 
     u "*Breathing heavily*"
 
@@ -1394,9 +1393,9 @@ label conl:
                 $ contact_Aubrey.addReply(_("Uhm... sure."))
 
                 label repeatk:
-                    if contact_Aubrey.getReplies():
+                    if contact_Aubrey.replies:
                         call screen phone
-                    if contact_Aubrey.getReplies():
+                    if contact_Aubrey.replies:
                         u "(I should probably check my phone.)"
                         jump repeatk
 
@@ -1591,9 +1590,9 @@ label conl:
 
                 call screen phone
                 label repeatl:
-                    if contact_Aubrey.getReplies():
+                    if contact_Aubrey.replies:
                         call screen phone
-                    if contact_Aubrey.getReplies():
+                    if contact_Aubrey.replies:
                         u "(I should probably check my phone.)"
                         jump repeatl
 
@@ -1848,9 +1847,9 @@ label conl:
         $ contact_Aubrey.addReply(_("Uhm... sure."))
 
         label repeatm:
-            if contact_Aubrey.getReplies():
+            if contact_Aubrey.replies:
                 call screen phone
-            if contact_Aubrey.getReplies():
+            if contact_Aubrey.replies:
                 u "(I should probably check my phone.)"
                 jump repeatm
 
@@ -2704,10 +2703,8 @@ label continueq:
             scene s270
             with dissolve
 
-            $ notnowmom = True
-            $ grantAchievement("not_now_mom")
+            $ grant_achievement("not_now_mom")
                 
-
             u "(I don't really feel like talking to her right now.)"
 
     label de_bd: #for compatibility only
@@ -2715,10 +2712,7 @@ label continueq:
     with fade
     play sound "sounds/knock.mp3"
 
-    # knock sound
-
-    "*Knock knock knock*"
-
+    pause 0.75
     scene s272 # showing you sitting on the side of bed pushing ready to stand up // camera angle to side of bed, looking at you from front
     with dissolve
 
@@ -3086,10 +3080,8 @@ label continueq:
                     pause(1)
                     play sound "sounds/kiss.mp3"
 
-                    $ lipsdontlie = True
-                    $ grantAchievement("lips_dont_lie")
+                    $ grant_achievement("lips_dont_lie")
                         
-
                     " "
 
                     scene s281f # riley stunned but happy
@@ -3116,10 +3108,9 @@ label continueq:
 
                     u "Thanks, Riley."
 
+    label dj_bd: #for compatibility only
     scene s281
     with dissolve
-
-    label dj_bd: #for compatibility only
     ri "You know, Ryan is probably waiting for me to come back. Are you sure you wanna leave?"
 
     scene s281a
@@ -3152,13 +3143,13 @@ label continueq:
         scene s284 # Knocking on lauren's dorm
         with Fade (1,0,1)
         play sound "sounds/knock.mp3"
-
-        "*Knock knock knock*"
+        pause 1
 
         play sound "sounds/dooropen.mp3"
 
         scene s285 # Lauren oppens the door smiling
         with dissolve
+        pause 0.25
 
         la "Heyyy."
 
@@ -3258,10 +3249,8 @@ label continueq:
                     scene s287f # Lauren gone
                     with dissolve
 
-                    $ truthhurts = True
-                    $ grantAchievement("truth_hurts")
+                    $ grant_achievement("truth_hurts")
                         
-
                     u "(Fuck me... I guess that's what honesty gets you.)"
 
                     jump dk_ad

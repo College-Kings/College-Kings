@@ -6,7 +6,7 @@
 label v11_bartender_hotel_chat:
     scene v11hbc1 # FPP. MC is sitting at the bar, looking at the bartender, the bartender is slightly smiling, mouth open
     with dissolve
-    play music "music/v11/Scene 27/Track Scene 27.mp3" fadein 2
+    play music "music/v11/Scene 5/Track Scene 5_6.mp3" fadein 2
     bartender "You're the most company I've had all year long... most people go to an actual bar."
 
     scene v11hbc1a # FPP. Same as v11hbc1, Bartender slightly smiling, mouth closed
@@ -50,6 +50,7 @@ label v11_bartender_hotel_chat:
     bartender "You're not so bad looking either. What's your name?"
 
     scene v11hbc1c
+    with dissolve
 
     u "My name is [name]."
 
@@ -139,15 +140,12 @@ label v11_bartender_hotel_chat:
             scene v11hbc1e # FPP. Same as v11hbc1, Bartender behind the bar, back turned to MC, she's bending down to grab a bottle, focus on her ass
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             scene v11hbc1f # FPP. Same as v11hbc1, Bartender has a bottle in her hand, pouring a drink in a cup, seductive look, mouth closed
             with dissolve
 
             u "You're very pretty."
-
-            scene v11hbc1e
-            with dissolve
 
             scene v11hbc1
             with dissolve
@@ -212,6 +210,7 @@ label v11_bartender_hotel_chat:
             pause 0.75
 
             scene v11hbc1h
+            with dissolve
 
             u "(What is going on with her?)"
 

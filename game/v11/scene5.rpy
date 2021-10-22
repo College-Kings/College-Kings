@@ -8,37 +8,41 @@ init python:
         contact_Josh.newMessage("Really bro, that's lame.")
         contact_Josh.addReply("No for real, I have to pack for the trip.")
 
-        if not joshmad:
+        if josh_europe:
             contact_Josh.newMessage("Fuck, me too.")
         else:
             contact_Josh.newMessage("Whatever man!")
 
     def v11s5_reply2():
         setattr(store, "v11_josh_nightclub", True)
-        contact_Josh.newMessage("Let's Party!")
+        contact_Josh.newMessage("Let's party!")
 
 label v11_nightclub_with_josh:
-    scene v11swc1 # FPP. Show the Park, Show Emily just leaving
-    with fade
+    #scene v11seap4e # FPP. Show the Park, Show Emily just leaving
+    #with fade
+
+    scene v11swc31
+    with dissolve
+
+    play music "music/v11/Scene 4/Track Scene 4_1.mp3" fadein 2
+    play sound "sounds/vibrate.mp3"
 
     u "(Let's see who this is.)"
-    play music "music/v11/Scene 5/Track Scene 5_1.mp3" fadein 2
-    play sound "sounds/vibrate.mp3"
 
     $ contact_Josh.newMessage("WE GETTIN FUCKED UP TONIGHT!", queue = False)
     $ contact_Josh.addReply("Who?")
     $ contact_Josh.newMessage("You and me, meet me at the bar on Stevenson.")
     $ contact_Josh.addReply("There's a lot of bars on Stevenson.")
     $ contact_Josh.newMessage("The Hive duh!")
-    $ contact_Josh.addReply("Josh We can't even get in.")
+    $ contact_Josh.addReply("Josh, we can't even get in.")
     $ contact_Josh.newMessage("With these fake IDs we can...")
     $ contact_Josh.addReply("I can't be staying up anyway, I still have a ton of stuff to do tonight.", v11s5_reply1)
     $ contact_Josh.addReply("LET'S FUCKING GOOOOO! OMW NOW!", v11s5_reply2)
 
 label v11s4_PhoneContinueJosh1:
-    if contact_Josh.getReplies():
+    if contact_Josh.replies:
         call screen phone
-    if contact_Josh.getReplies():
+    if contact_Josh.replies:
         u "(I should check my phone.)"
         jump v11s4_PhoneContinueJosh1
 
@@ -46,15 +50,20 @@ label v11s4_PhoneContinueJosh1:
 
         u "(I'm going home and straight to bed.)"
 
+        scene v11swc32 # TPP. Show MC walking down the side walk (further down the street)
+        with dissolve
+
+        pause 0.75
+
+        scene v11swc33 # TPP. Show MC walking down the side walk (even further down the street)
+        with dissolve
+
+        pause 0.75
+
         jump v11_thurs_night_room
+
     else:
-
         u "(This is gonna be a fun ass night.)"
-
-    scene v11swc31 # TPP. Show MC walking down the side walk
-    with dissolve
-
-    pause 1 
 
     scene v11swc32 # TPP. Show MC walking down the side walk (further down the street)
     with dissolve
@@ -154,6 +163,7 @@ label v11s4_PhoneContinueJosh1:
         menu:
             "Invite to Europe":
                 $ addPoint("bro")
+                $ josh_europe = True
 
                 scene v11swc3
                 with dissolve
@@ -199,7 +209,7 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc4a # TPP Same angle as v11swc4, Security Guard mouth closed, Josh and MC holding up IDs
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11swc4b # TPP Same angle as v11swc4, Security Guard hand down, neutral expression, mouth open
     with dissolve
@@ -214,7 +224,7 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc5 # TPP Show Josh and MC at bar
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11swc6 # FPP At bar, show Josh smiling, mouth closed
     with dissolve
@@ -253,7 +263,7 @@ label v11s4_PhoneContinueJosh1:
             scene v11swc6d # FPP Show three shots of amber liquor on the bar
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
         "Vodka":
             scene v11swc6c
@@ -264,7 +274,7 @@ label v11s4_PhoneContinueJosh1:
             scene v11swc6e # FPP Show three shots of clear liquor on the bar
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
     scene v11swc6a
     with dissolve
@@ -289,12 +299,12 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc7 # FPP Show cute girl talking to her friend
     with dissolve
 
-    pause 0.5
+    pause 1.25
 
     scene v11swc8 # FPP Show another cute girl taking a drink
     with dissolve
 
-    pause 0.5
+    pause 1.25
 
     scene v11swc9 # FPP Show Ericka, Candy, and Jane at their table, talking to each other
     with dissolve
@@ -349,7 +359,7 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc11 # TPP Josh walking to Ericka, Candy, and Jane's table, MC following
     with dissolve
 
-    pause 0.5
+    pause 0.75
     
     scene v11swc9b # FPP Same angle and characters v11swc9, Ericka smiling mouth open, Jane smiling mouth closed, Candy still looking bored
     with dissolve
@@ -404,7 +414,7 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc12 # FPP Show Candy walking up to bar
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11swc13 # FPP Show Josh, grinning, mouth open
     with dissolve
@@ -414,7 +424,7 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc14 # FPP Show Josh walking away with Ericka and Jane, Josh has an arm around each girl
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11swc5c # TPP Same angle as v11swc5, MC and Candy at bar, Candy with mouth open and her hand up, getting Bartender's attention
     with dissolve
@@ -588,12 +598,12 @@ label v11s4_PhoneContinueJosh1:
         scene v11swc15 # FPP Show Candy walking away
         with dissolve
 
-        pause 0.5
+        pause 0.75
 
         scene v11swc5e # TPP Same angle as v11swc5, show MC at bar, alone, looking around
         with dissolve
 
-        pause 0.5
+        pause 0.75
 
         scene v11swc15a # TPP Same angle as v11swc15, show crowd in the bar, Josh is nowhere to be seen
         with dissolve
@@ -647,12 +657,12 @@ label v11s4_PhoneContinueJosh1:
             scene v11swc15
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v11swc5e
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v11swc15a
             with dissolve
@@ -685,7 +695,7 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc11a # TPP Same angle as v11swc11, Candy holding MC's hand, leading him away from bar
     with dissolve
 
-    pause 0.5
+    pause 0.75
     stop music fadeout 3
     play music "music/v11/Scene 5/Track Scene 5_4.mp3" fadein 2
     scene v11swc16 # TPP Outside of bar, Dannis walking up to MC and Candy, Dennis looks angry with mouth open
@@ -717,8 +727,9 @@ label v11s4_PhoneContinueJosh1:
 
             scene v11swc16a # TPP Same angle as v11swc16, Show Dennis punching MC
             with dissolve
+            play sound "sounds/facepunch1.mp3"
 
-            pause 0.5
+            pause 0.75
             
             scene v11swc16b # TPP Same angle as v11swc16, Dennis pulling Candy away by her hand, MC not in the frame
             with dissolve
@@ -756,13 +767,11 @@ label v11s4_PhoneContinueJosh1:
             $ v11_fucked_candy = True
             scene v11swc16e # TPP Same angle and characters as v11swc16, MC puts one hand on his waist, stands in a faminine way, and holds his other hand up, wrist limp
             with dissolve
-
-            pause 0.5
+            u "She's my cousin, dude."
 
     scene v11swc3i # FPP Show Dennis looking confused, mouth closed
     with dissolve
-
-    u "She's my cousin, dude."
+    pause 0.75
 
     scene v11swc3j # FPP Show Candy, laughing, mouth open
     with dissolve
@@ -787,7 +796,7 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc16f # TPP Same angle and characters as v11swc16, Dennis walking away from MC and Candy
     with dissolve
 
-    pause 0.5
+    pause 1
 
     scene v11swc3j
     with dissolve
@@ -797,9 +806,10 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc19 # TPP Show MC and Candy walking through a neighborhood to her house
     with fade
 
-    pause 0.5
+    pause 1
 
 label v11s5_galleryScene:
+    #$ addPoint("tm", sum([ v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck, v10_ambersex, v10_chloe_locker, v10_ri_sex ])) ###Loyaltymod
 
     scene v11swc20 # FPP At Candy's house, show Candy smiling, mouth closed
     with fade
@@ -830,22 +840,23 @@ label v11s5_galleryScene:
     scene v11swc22 # FPP Show Candy standing above MC, Candy smiling with mouth closed
     with dissolve
 
+    $ grant_achievement("candy_crusher")
     u "Candy it is."
 
-    $ candy_crusher = True
-    $ grantAchievement("candy_crusher")
-    
+    if config_censored:
+        call screen censoredPopup("v11s5_nsfwSkipLabel1")
+
     scene v11swc21a # TPP Same angle as v11swc21, Candy removing her clothing
     with dissolve
 
-    pause 0.5
+    pause 1.25
 
     scene v11swc21b # TPP Same angle as v11swc21, Candy, now naked, undressing MC
     with fade
 
     stop music fadeout 3
     play music "music/v11/Scene 5/Track Scene 5_6.mp3" fadein 2
-    pause 0.5
+    pause 1.25
 
     image v11cbj = Movie(play="images/v11/Scene 5/v11canbj.webm", loop=True, image="images/v11/Scene 5/v11canbjStart.webp", start_image="images/v11/Scene 5/v11canbjStart.webp") # FPP Candy giving MC a blowjob
     image v11cbjf = Movie(play="images/v11/Scene 5/v11canbjf.webm", loop=True, image="images/v11/Scene 5/v11canbjStart.webp", start_image="images/v11/Scene 5/v11canbjStart.webp")
@@ -957,17 +968,19 @@ label v11s5_galleryScene:
     scene v11swc21c # TPP Same angle as v11swc21, MC and Candy finishing in doggy style
     with flash
 
-    pause 0.5
+    pause 0.75
 
     scene v11swc36 # FPP. Show Candy with cum dripping out her pussy, same position as v10cdg animation
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11swc24 # TPP MC and Candy laying beside each other in bed, both with small smiles, Candy's mouth open
     with dissolve
 
     candy "That was exactly what I needed."
+
+    label v11s5_nsfwSkipLabel1:
 
     scene v11swc25 # FPP Show Candy, laying in bed, smiling with mouth closed
     with dissolve
@@ -977,12 +990,12 @@ label v11s5_galleryScene:
     scene v11swc25a # FPP Same angle as v11swc25, Candy looking scared
     with dissolve
 
-    dennis "ANGELINA!, WHO THE FUCK IS THAT IN THERE WITH YOU? I HEAR YOU IN THERE FUCKING!"
+    dennis "ANGELINA! WHO THE FUCK IS THAT IN THERE WITH YOU? I HEAR YOU IN THERE FUCKING!"
 
     scene v11swc21d # TPP Same angle as v11swc21, MC frantically putting his clothes on
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     stop music fadeout 3
     play music "music/v11/Scene 5/Track Scene 5_7.mp3" fadein 2
@@ -991,6 +1004,8 @@ label v11s5_galleryScene:
     with dissolve
 
     u "Oh fuck!"
+
+    play sound "sounds/slam.mp3"
 
     scene v11swc26a # FPP Same angle as v11swc26, Dennis kicking in bedroom door, looking angry with mouth open
     with dissolve
@@ -1005,9 +1020,12 @@ label v11s5_galleryScene:
             scene v11swc27 # TPP Dennis throwing a punch at MC, MC dodging
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v11swc27a # TPP MC rushing out of the door to Candy's bedroom
+            with dissolve
+            
+            pause 0.75
 
             scene v11swc28 # FPP Show Dennis looking very angry, mouth closed
             with dissolve
@@ -1018,22 +1036,23 @@ label v11s5_galleryScene:
             scene v11swc27b # TPP MC tripping as he tries to run away from Dennis
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v11swc27c # TPP Dennis stomping on MC's back
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
-            scene v11swc29 # FPP MC's view while on the bedroom floor
-            with dissolve
+            if not config_censored:
+                scene v11swc29 # FPP MC's view while on the bedroom floor
+                with dissolve
     
             u "FUCK!"
 
             scene v11swc27d # TPP MC getting up and running out the door
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v11swc28
             with dissolve
@@ -1043,12 +1062,12 @@ label v11s5_galleryScene:
     scene v11swc30 # TPP MC outside, walking home
     with fade
 
-    pause 0.5
+    pause 0.75
 
     scene v11swc18
     with dissolve
     
-    u "Pheww"
+    u "Pheww."
 
     stop music fadeout 3
 

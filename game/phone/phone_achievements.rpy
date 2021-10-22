@@ -22,22 +22,21 @@ screen achievements():
             vbox:
                 spacing 10
                 
-                for achievement in achievements:
-                    if achievement.checkCondition():
+                for ach in achievements:
+                    if achievement.has(ach.achievement):
                         vbox:
                             spacing -10
                             
-                            textbutton achievement.achieve.replace("_", " ") style "ach"
-                            textbutton achievement.text style "ach2"
+                            textbutton ach.display_name style "ach"
+                            textbutton ach.text style "ach2"
                     else:
-                        textbutton achievement.achieve.replace("_", " ") style "ach3"
+                        textbutton ach.display_name style "ach3"
 
 
 style ach is button:
     background "#d4af37"
     xalign 0.5
     xsize 358
-    ysize 50
 
 style ach_text is text:
     color "#ffffff"
@@ -49,7 +48,6 @@ style ach2 is button:
     background "#d4af37"
     xalign 0.5
     xsize 358
-    ysize 50
 
 style ach2_text is text:
     color "#ffffff"
@@ -61,7 +59,6 @@ style ach3 is button:
     background "#dcdcdc"
     xalign 0.5
     xsize 358
-    ysize 50
 
 style ach3_text is text:
     color "#ffffff"

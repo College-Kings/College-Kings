@@ -22,7 +22,7 @@ label v9_sat_gym:
     with fade
     u "(I should probably freshen up my skills.)"
 
-    play music "music/v9/Scene 32/Track Scene 32.mp3" fadein 2
+    play music "music/v9/Scene 8/Track Scene 8_3.mp3" fadein 2
 
     menu:
         "Hit the gym":
@@ -80,10 +80,9 @@ label v9_sat_hit_gym:
 
             scene v9atg3b
             with dissolve
-            u "Great, I'll text you."
 
-            $ second_date = True
-            $grantAchievement("second_date")
+            $ grant_achievement("second_date")
+            u "Great, I'll text you."
 
             scene v9atg4 # TPP. Show MC walking away from Evelyn, evelyn still on weight bench, MC walking towards punching bag, both smiling mouth closed
             with dissolve
@@ -164,9 +163,9 @@ label v9_sat_skip_gym:
         $ contact_Riley.addReply(_("Man, I'd really love to but..."), v9s32_reply2)
         
         label s32_PhoneContinue:
-            if contact_Riley.getReplies():
+            if contact_Riley.replies:
                 call screen phone
-            if contact_Riley.getReplies():
+            if contact_Riley.replies:
                 "(I should reply to Riley.)"
                 jump s32_PhoneContinue
 

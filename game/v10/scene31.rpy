@@ -10,6 +10,7 @@ label v10_late_alley:
     pause 0.75
 
     scene v10all2 # FPP. Show Alley, 2 hookers against the wall near the entrance, Josh down the bottom of the alley with unknown guy in hoody,
+    with dissolve
 
     u "Josh!"
 
@@ -206,6 +207,7 @@ label v10_late_alley:
 
             else:
                 $ joshmad = True
+                $ josh_europe = False
                 scene v10all3
                 with dissolve
                 u "I get that this isn't supposed to be a permanent thing for you and you have an out plan, but I still don't support what you're doing. There's other ways to get money. You're gonna end up fucking up your life."

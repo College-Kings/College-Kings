@@ -2,13 +2,10 @@
 # Location: MC Wolves Room
 # Outfits: MC Outfit 2, Sebastian Outfit 1
 # Time: Tuesday Night
-
     # -Tuesday night in MC's room if he joined Wolves-
-
-
     # -MC is at his desk, getting up to go sit on his bed and check his phone-
-
     # -There is a knock at his door-
+
 label seb_in_room:
     scene v8ssir1 # FPP. Show MC sat on his bed checking his phone.
     with fade

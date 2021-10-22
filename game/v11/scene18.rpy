@@ -6,7 +6,7 @@
 label v11_msrose_convo:
     scene v11roc1 # FPP. Ms Rose and MC are in a secluded area, lookign at each other, Ms Rose is slightly embarrassed, mouth open (Ms Rose should have her back facing a wall, the wall should be relatively close)
     with fade
-    play music "music/v11/Scene 18/Track Scene 18.mp3" fadein 2
+    play music "music/v11/Scene 3/Track Scene 3.mp3" fadein 2
     ro "I wanted to apologize for my behavior. I shouldn't have let our relationship get inappropriate, and should've never treated you like anything more than a student."
 
     ro "From now on I'm going to keep things strictly professional."
@@ -15,27 +15,6 @@ label v11_msrose_convo:
     with dissolve
 
     menu:
-        "Don't kiss her":
-            scene v11roc1b # FPP. Same as v11roc1, but Ms Rose slightly smiling, mouth closed
-            with dissolve
-
-            u "You don't have to apologize Ms. Rose, I stepped out of line as well. You're a wonderful person, but I agree. We should keep things professional."
-
-            scene v11roc1c # FPP. Same as v11roc1b, but Ms Rose mouth open
-            with dissolve
-
-            ro "You'll make a young lady very happy one day."
-
-            scene v11roc1b
-            with dissolve
-
-            u "And you'll get the life you've always deserved."
-
-            scene v11roc1c
-            with dissolve
-
-            ro "C'mon, I'm sure the keys are ready. Let's get everyone to bed."
-
         "Kiss her":
             $ v11_msrose_kiss = True
             $ msrosers = True
@@ -70,6 +49,8 @@ label v11_msrose_convo:
             scene v11roc5 # TPP. MC and Ms Rose are making out again, MC has his hands on her waist, pulling her close
             with dissolve
 
+            play sound "sounds/kiss.mp3"
+
             pause 0.75
 
             scene v11roc6 # TPP. MC and Ms Rose continue making out, change head positioning a bit compared to v11roc4, Ms Rose now has her arms wrapped around MC
@@ -92,6 +73,26 @@ label v11_msrose_convo:
 
             ro "Let's go get everyone their keys."
 
+        "Don't kiss her":
+            scene v11roc1b # FPP. Same as v11roc1, but Ms Rose slightly smiling, mouth closed
+            with dissolve
+
+            u "You don't have to apologize Ms. Rose, I stepped out of line as well. You're a wonderful person, but I agree. We should keep things professional."
+
+            scene v11roc1c # FPP. Same as v11roc1b, but Ms Rose mouth open
+            with dissolve
+
+            ro "You'll make a young lady very happy one day."
+
+            scene v11roc1b
+            with dissolve
+
+            u "And you'll get the life you've always deserved."
+
+            scene v11roc1c
+            with dissolve
+
+            ro "C'mon, I'm sure the keys are ready. Let's get everyone to bed."
 
     scene v11roc8 # TPP. Show MC walking back to the lobby with everyone else, he is smiling, mouth closed
     with dissolve

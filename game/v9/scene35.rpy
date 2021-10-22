@@ -79,30 +79,31 @@ label v9_room_sat_aft:
 
         u "(How much longer do I have?)"
 
-        scene v9rsa3 # TPP. Show MC now on his back on his bed, looking at his phone (don't show phone screen)
-        with dissolve
+        if not chloemad:
+            scene v9rsa3 # TPP. Show MC now on his back on his bed, looking at his phone (don't show phone screen)
+            with dissolve
+            
+            $ contact_Chloe.newMessage(_("Hey [name], what you up to?"), queue=False)
+            $ contact_Chloe.addReply(_("Nothing much. Just relaxing. I'm kind of tired."))
+            $ contact_Chloe.newMessage(_("Awwww. Long day?"))
+            if chloers:
+                $ contact_Chloe.addReply(_("Yeah haha, I feel wiped."), v9s35_reply1)
+            else:
+                $ contact_Chloe.addReply(_("Yeah haha, I feel wiped."), v9s35_reply8)
         
-        $ contact_Chloe.newMessage(_("Hey [name], what you up to?"), queue=False)
-        $ contact_Chloe.addReply(_("Nothing much. Just relaxing. I'm kind of tired."))
-        $ contact_Chloe.newMessage(_("Awwww. Long day?"))
-        if chloers:
-            $ contact_Chloe.addReply(_("Yeah haha, I feel wiped."), v9s35_reply1)
-        else:
-            $ contact_Chloe.addReply(_("Yeah haha, I feel wiped."), v9s35_reply8)
-    
-        play sound "sounds/vibrate.mp3"
+            play sound "sounds/vibrate.mp3"
 
-        u "(I wonder who this is.)"
+            u "(I wonder who this is.)"
 
-        label s35_PhoneContinueW:
-            if contact_Chloe.getReplies():
-                call screen phone
-            if contact_Chloe.getReplies():
-                "(I should reply to Chloe.)"
-                jump s35_PhoneContinueW
+            label s35_PhoneContinueW:
+                if contact_Chloe.replies:
+                    call screen phone
+                if contact_Chloe.replies:
+                    "(I should reply to Chloe.)"
+                    jump s35_PhoneContinueW
 
-        scene v9rsa3a # TPP. Same camera as v9rsa3, MC puts his phone down and yawns.
-        with dissolve
+            scene v9rsa3a # TPP. Same camera as v9rsa3, MC puts his phone down and yawns.
+            with dissolve
 
         u "(Just a quick nap.)"
 
@@ -126,30 +127,31 @@ label v9_room_sat_aft:
 
         u "(How much longer do I have?)"
 
-        scene v9rsa7 # TPP. Show MC now on his back on his bed, looking at his phone (don't show phone screen)
-        with dissolve
-        
-        play sound "sounds/vibrate.mp3"
+        if not chloemad:
+            scene v9rsa7 # TPP. Show MC now on his back on his bed, looking at his phone (don't show phone screen)
+            with dissolve
+            
+            play sound "sounds/vibrate.mp3"
 
-        u "(I wonder who this is.)"
+            u "(I wonder who this is.)"
 
-        $ contact_Chloe.newMessage(_("Hey [name], what you up to?"), queue=False)
-        $ contact_Chloe.addReply(_("Nothing much. Just relaxing. I'm kind of tired."))
-        $ contact_Chloe.newMessage(_("Awwww. Long day?"))
-        if chloers:
-            $ contact_Chloe.addReply(_("Yeah haha, I feel wiped."), v9s35_reply1)
-        else:
-            $ contact_Chloe.addReply(_("Yeah haha, I feel wiped."), v9s35_reply8)
+            $ contact_Chloe.newMessage(_("Hey [name], what you up to?"), queue=False)
+            $ contact_Chloe.addReply(_("Nothing much. Just relaxing. I'm kind of tired."))
+            $ contact_Chloe.newMessage(_("Awwww. Long day?"))
+            if chloers:
+                $ contact_Chloe.addReply(_("Yeah haha, I feel wiped."), v9s35_reply1)
+            else:
+                $ contact_Chloe.addReply(_("Yeah haha, I feel wiped."), v9s35_reply8)
 
-        label s35_PhoneContinueA:
-            if contact_Chloe.getReplies():
-                call screen phone
-            if contact_Chloe.getReplies():
-                "(I should reply to Chloe.)"
-                jump s35_PhoneContinueA
+            label s35_PhoneContinueA:
+                if contact_Chloe.replies:
+                    call screen phone
+                if contact_Chloe.replies:
+                    "(I should reply to Chloe.)"
+                    jump s35_PhoneContinueA
 
-        scene v9rsa7a # TPP. Same camera as v9rsa3, MC puts his phone down and yawns.
-        with dissolve
+            scene v9rsa7a # TPP. Same camera as v9rsa3, MC puts his phone down and yawns.
+            with dissolve
 
         u "(Just a quick nap.)"
 

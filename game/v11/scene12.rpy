@@ -17,12 +17,12 @@ label v11_sit_ryan_convo:
     scene v11src2 # TPP MC moving down aisle of plane to his seat
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11src3 # TPP MC sitting next to Ryan. MC in aisle seat of row
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     if v10s33_ryan_flirt_emily: # Talked to Ryan at Charity event and gave him your blessing
         scene v11src4 # FPP Show Ryan, sitting in seat next to window, neutral expression, mouth open
@@ -223,6 +223,7 @@ label v11_sit_ryan_convo:
 
         menu:
             "Give blessing":
+                $ addPoint("bro")
                 scene v11src4d
                 with dissolve
 
@@ -352,7 +353,7 @@ label v11_sit_ryan_convo:
                 scene v11src4g # FPP Same angle as v11src4, Ryan looks away from MC, out of the window of the plane
                 with dissolve
 
-                pause 0.5
+                pause 0.75
 
     else: # Talked to Ryan at charity event, but did not give blessing
         scene v11src5 # Show MC's arm resting on arm rest, Ryan's arm next to it beside arm rest
@@ -367,6 +368,7 @@ label v11_sit_ryan_convo:
 
         menu:
             "Be a dick":
+                $ addPoint("tm")
                 scene v11src4a
                 with dissolve
 
@@ -403,6 +405,7 @@ label v11_sit_ryan_convo:
                 u "Keep telling yourself that man, I'm going to sleep."
 
             "Let him":
+                $ addPoint("bro")
                 scene v11src4a
                 with dissolve
 
@@ -426,7 +429,7 @@ label v11_sit_ryan_convo:
     scene v11src6 # TPP Show MC slouching in aisle seat, arms folded across his chest, eyes closed (asleep)
     with dissolve
 
-    pause 0.5
+    pause 0.75
     stop music fadeout 3
     # -Fades to Scene 13-
     jump v11_aubrey_plane_sex

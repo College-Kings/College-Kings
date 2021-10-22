@@ -129,8 +129,7 @@ label steak_w_chloe:
 
 label steak_flirt_w_chloe:
 
-    $ up_for_more = True
-    $ grantAchievement("up_for_more")
+    $ grant_achievement("up_for_more")
 
     u "Unlesssss..."
 
@@ -237,8 +236,9 @@ label steak_w_chloe_cont:
 
     menu:
         "Ask to see Chloe's muscles":
-            jump steak_w_chloe_muscles
             $ addPoint("bf")
+            jump steak_w_chloe_muscles
+
         "Turn the conversation serious":
             jump steak_w_chloe_serious
 
@@ -256,7 +256,7 @@ label steak_w_chloe_muscles:
     scene v8steak3g # FPP. Same camera as v8steak3, Chloe confused expression, mouth closed.
     with dissolve
 
-    u "Let me see your muscles. All that sushi protein, I bet you're stronger than me."
+    u "Let me see your muscles. All that protein, I bet you're stronger than me."
 
     scene v8steak10 # FPP. Show Chloe, flexing her muscles, Chloe laughing, mouth closed.
     with dissolve
@@ -632,4 +632,3 @@ label steak_w_chloe_cont_3:
         pause 0.5
 
         jump v8_julia_call
-        

@@ -35,10 +35,10 @@ label v10_room_mon_night:
         $ contact_Josh.addReply("I have no idea what you're talking about.", v10s20_reply2)
 
         label v10s20_PhoneContinueW:
-            if contact_Josh.getReplies():
+            if contact_Josh.replies:
                 call screen phone
-            if contact_Josh.getReplies():
-                "(I should reply to Josh.)"
+            if contact_Josh.replies:
+                u "(I should reply to Josh.)"
                 jump v10s20_PhoneContinueW
 
         if v10_simplr_known:
@@ -75,7 +75,7 @@ label v10_room_mon_night:
         jump v10_cafe_w_jenny
 
     else:
-        scene v10smnr3 # TPP. Show mc in his Apes room chilling on his bed  on his phone.
+        scene v10smnr3 # TPP. Show mc in his Apes room chilling on his bed on his phone.
         with Fade(1, 0, 1)
 
         pause 0.75
@@ -92,10 +92,10 @@ label v10_room_mon_night:
         $ contact_Josh.addReply("I have no idea what you're talking about.", v10s20_reply2)
 
         label v10s20_PhoneContinue2:
-            if contact_Josh.getReplies():
+            if contact_Josh.replies:
                 call screen phone
-            if contact_Josh.getReplies():
-                "(I should reply to Josh.)"
+            if contact_Josh.replies:
+                u "(I should reply to Josh.)"
                 jump v10s20_PhoneContinue2
 
         if v10_simplr_known:
@@ -127,4 +127,4 @@ label v10_room_mon_night:
 
         pause 1
         stop music fadeout 3
-        jump v10_cafe_w_jenny        
+        jump v10_cafe_w_jenny

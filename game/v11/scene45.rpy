@@ -5,7 +5,7 @@
 label v11_lobby_mrlee:
     scene v11lob1 # FPP. Show Mr Lee, slight smile mouth open, stood in hotel lobby
     with dissolve
-    play music "music/v11/Scene 45/Track Scene 45_1.mp3" fadein 2
+    play music "music/v11/Scene 9a/Track Scene 9a_1.mp3" fadein 2
     lee "Students, so far it has been an absolute pleasure traveling with you all."
 
     scene v11lob2 # FPP. Show Nora and chris stood together, slight annoyed faces
@@ -23,6 +23,7 @@ label v11_lobby_mrlee:
         with dissolve
 
         lee "The nostalgia while being at the museum and the deep dive into a dinosaur debate..."
+    
     else:
         scene v11lob1
         with dissolve
@@ -33,26 +34,32 @@ label v11_lobby_mrlee:
     with dissolve
 
     lee "The teaching of maturity and manhood..."
-
-    scene v11lob6 # FPP. Show Chloe and lindsey slight smile
-    with dissolve
-
-    lee "The feeling of fantasy as we rode in the carriages..."
+  
     if emily_europe:
+        scene v11lob6 # FPP. Show Chloe and lindsey slight smile
+        with dissolve
+
+        lee "The feeling of fantasy as we rode in the carriages..."
+
         scene v11lob7 # FPP. Show Emily, slight sad face
         with dissolve
 
         lee "Even the most trying times are moments that I look back on with great satisfaction. From every trial, there is much to be learned."
+    
     else:
         scene v11lob1
         with dissolve
+        
+        lee "The feeling of fantasy as we rode in the carriages..."
 
         lee "Even the most trying times are moments that I look back on with great satisfaction. From every trial, there is much to be learned."
+    
     if v11_invite_sam_europe:
         scene v11lob8 # FPP. Show samantha and cameron neutral look
         with dissolve
 
         lee "I know many of you were really looking forward to this trip, and I hope that so far it has reached your expectations, but if not... There are many more opportunities ahead."
+    
     else:
         scene v11lob1
         with dissolve
@@ -64,6 +71,7 @@ label v11_lobby_mrlee:
         with dissolve
 
         lee "To end our time here in London before we take off on our next Europe adventure, I'll be treating everyone to a wonderful dinner."
+    
     else:
         scene v11lob1
         with dissolve
@@ -79,13 +87,13 @@ label v11_lobby_mrlee:
     with dissolve
 
     lee "*Laughs* Throughout it all, food will always have a special way of bringing everyone together."
-    lee "Tonight, we celebrate the experiences we've had so far and the fact that you're all legally allowed to drink here' *Chuckles* Please drink responsibly."
+    lee "Tonight, we celebrate the experiences we've had so far and the fact that you're all legally allowed to drink here. *Chuckles* Please drink responsibly."
     lee "Now, the shuttles are prepared and ready to go so let's get moving."
 
     scene v11lob1a # FPP. same 1, mouth closed
     with dissolve
 
-    u "(People can say what they want, even I have said some things about him in the past, but Mr. Lee really is such a cool guy..)"
+    u "(People can say what they want, even I have said some things about him in the past, but Mr. Lee really is such a cool guy...)"
 
     scene v11lob11 # TPP. Show mr. Lee, and a couple of the students walking through the front door (can be any from within the scene except Penelope, Samantha, Cameron, Emily and Josh)
     with dissolve
@@ -121,7 +129,7 @@ label v11_lobby_mrlee:
 
     u "(Hmm, who to sit with?)"
 
-    if laurenmad:
+    if v11_aubrey_sex and laurenrs:
         $ v11_sit_with_lauren = False
         # -MC sees Aubrey sitting by herself-
 
@@ -141,8 +149,10 @@ label v11_lobby_mrlee:
 
         scene v11lob17 # TPP. Show MC now sat opposite aubrey
         with dissolve
-    elif laurenrs:
 
+        pause 1
+
+    elif laurenrs:
         scene v11lob18 # FPP. Show Lauren sat alone, slight sad look
         with dissolve
 
@@ -159,7 +169,6 @@ label v11_lobby_mrlee:
         la "Actually, I was just starting to wonder what was taking you so long. *Chuckles*"
 
     else:
-
         menu:
             "Lauren":
                 scene v11lob18 
@@ -176,6 +185,7 @@ label v11_lobby_mrlee:
                 with dissolve
                 
                 la "Haha, I was wondering when you'd get over here."
+
             "Aubrey":
                 $ v11_sit_with_lauren = False
 
@@ -195,6 +205,9 @@ label v11_lobby_mrlee:
 
                 scene v11lob17
                 with dissolve
+
+                pause 1
+
     stop music fadeout 3
 
     if v11_sit_with_lauren:

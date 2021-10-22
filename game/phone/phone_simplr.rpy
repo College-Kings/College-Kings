@@ -1,9 +1,9 @@
 init python:
     class SimplrContact(Contact):
-            def __init__(self, name, profilePicture, profilePictureLarge, condition=True):
+            def __init__(self, name, profile_picture, profile_picture_large, condition=True):
                 self.name = name
-                self.profilePicture = "images/phone/simplr/contacts/{}".format(profilePicture)
-                self.profilePictureLarge = "images/phone/simplr/contacts/{}".format(profilePictureLarge)
+                self.profile_picture = "images/phone/simplr/contacts/{}".format(profile_picture)
+                self.profile_picture_large = "images/phone/simplr/contacts/{}".format(profile_picture_large)
                 self.condition = condition
 
                 self.sentMessages = []
@@ -83,8 +83,18 @@ init python:
                     self.pendingMessages[-1].replies.append(reply)
 
             def seenMessage(self):
-                if not any([contact.getReplies() for contact in simplr_contacts]):
+                if not any([contact.replies for contact in simplr_contacts]):
                     simplrApp.seenNotification()
+
+            def getMessage(self, message):
+                for msg in self.sentMessages:
+                    try:
+                        if message == msg.message:
+                            return msg
+                    except AttributeError:
+                        if message == msg.image:
+                            return msg
+                return False
 
 init -1:
     default simplr_pendingContacts = []
@@ -124,7 +134,9 @@ screen simplr_app():
                     action Show("simplr_contacts")
 
             # Profile Picture
-            if simplr_contact:
+            if (simplr_contact is not None) and (hasattr(simplr_contact, "profile_picture_large")):
+                add Transform(simplr_contact.profile_picture_large, size=(362, 585)) align (0.5, 0.5)
+            elif simplr_contact is not None:
                 add Transform(simplr_contact.profilePictureLarge, size=(362, 585)) align (0.5, 0.5)
 
             # Bottom UI
@@ -173,10 +185,14 @@ screen simplr_contacts():
                 fixed:
                     xysize(375, 74)
 
-                    add contact.profilePicture yalign 0.5 xpos 20
+                    if hasattr(contact, "profile_picture"):
+                        add Transform(contact.profile_picture, size=(55, 55)) yalign 0.5 xpos 20
+                    else:
+                        add Transform(contact.profilePicture, size=(55, 55)) yalign 0.5 xpos 20
+
                     text contact.name style "nametext" yalign 0.5 xpos 100
 
-                    if contact.getReplies():
+                    if contact.replies:
                         add "images/contactmsgnot.webp" yalign 0.5 xpos 275
 
                     imagebutton:
@@ -186,9 +202,6 @@ screen simplr_contacts():
 
 screen simplr_messenger(contact=None):
     tag phoneTag
-
-    python:
-        yadj.value = yadjValue
 
     use phoneTemplate:
 
@@ -207,17 +220,24 @@ screen simplr_messenger(contact=None):
             vbox:
                 align (0.5, 0.5)
 
-                add contact.profilePicture xalign 0.5
+                if hasattr(contact, "profile_picture"):
+                    add Transform(contact.profile_picture, size=(55, 55)) xalign 0.5
+                else:
+                    add Transform(contact.profilePicture, size=(55, 55)) xalign 0.5
+
                 text contact.name style "nametext"
 
         viewport:
-            yadjustment yadj
+            yadjustment inf_adj
             mousewheel True
-            xysize(374, 556)
             pos(773, 282)
+            xysize(374, 556)
 
             vbox:
+                xsize 374
                 spacing 5
+
+                null height 5
                 
                 for message in contact.sentMessages:
                     if isinstance(message, Message) and message.message.strip():
@@ -235,14 +255,14 @@ screen simplr_messenger(contact=None):
                             style "msgright"
                             action Show("simplr_image", img=message.image)
 
-        if contact.getReplies():
+        if contact.replies:
                 hbox:
                     xalign 0.5
                     ypos 855
 
                     textbutton "Reply":
                         style "replybox"
-                        action Show("reply", contact=contact)
+                        action Show("simplr_reply", contact=contact)
 
 
 screen simplr_reply(contact=None):
@@ -252,7 +272,7 @@ screen simplr_reply(contact=None):
         yalign 0.84
         spacing 15
 
-        for reply in contact.getReplies():
+        for reply in contact.replies:
             if isinstance(reply, Reply):
                 textbutton reply.message:
                     style "replies_style"

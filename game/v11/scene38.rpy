@@ -22,16 +22,16 @@ label v11_amber_bar:
     $ v11s38_kiwiiPost1.newComment("Charli", _("I told you that outfit was made for you... absolutely stunning."), numberLikes=renpy.random.randint(150,300), queue=False)
     $ v11s38_kiwiiPost1.addReply(_("Woah! Hot as always"), v11s38_kiwiiReply1, numberLikes=renpy.random.randint(260, 340))
     $ v11s38_kiwiiPost1.addReply(_("Thanks for the invite... lol"), v11s38_kiwiiReply2, numberLikes=renpy.random.randint(250, 330))
-    play music "music/v11/Scene 38/Track Scene 38.mp3" fadein 2
+    play music "music/v11/Scene 3/Track Scene 3.mp3" fadein 2
     scene v11amb1 # TPP. Show MC walking in the lobby, he has a slight smile, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v11amb2 # TPP. Show MC walking into the bar, MC slight smile, show the bartender and Amber talking at the counter in the background, everyone smiling (Amber has her back to MC and the camera)
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v11amb3 # FPP. MC standing relatively far from Amber and the bartender, MC looking at Amber (bartender out of shot), Amber mouth open, smiling seductively, looking at Bartender
     with dissolve
@@ -51,7 +51,7 @@ label v11_amber_bar:
     scene v11amb3a # FPP. Same as v11amb3, Amber holding her hand in front of her mouth as if she was holding a microphone, mouth open, smiling
     with dissolve
     
-    am "*Singing* \"I'm at the Bartender, if you're lookin' for me I'm at the bar-r with her\". *Laughs*"
+    am "*Singing* \"I like the Bartender, if you're lookin' for me I'm at the bar-r with her\". *Laughs*"
 
     scene v11amb4
     with dissolve
@@ -136,12 +136,12 @@ label v11_amber_bar:
     scene v11amb7a
     with dissolve
 
-    am "What? No... Do you not know what go karts are? *Chuckles*"
+    am "What? No... Do you not know what go-karts are? *Chuckles*"
 
     scene v11amb7
     with dissolve
 
-    u "Yes Amber I know what go-karts are. *Chuckles* I just thought they were more for little kids."
+    u "Yes, Amber, I know what go-karts are. *Chuckles* I just thought they were more for little kids."
 
     scene v11amb7a
     with dissolve

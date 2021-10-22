@@ -113,7 +113,7 @@ label v11_start:
     scene v11coc12
     with dissolve
 
-    de "And you agree to this manner of representation young lady?"
+    de "And you agree to this manner of representation, young lady?"
 
     scene v11coc15 # TPP. Show Penelope sat down mouth open, slightly nervous, looking at the board's direction
     with dissolve
@@ -562,12 +562,12 @@ label v11_start:
             scene v11coc20a
             with dissolve
 
-            pe "Yes ma'am I understand."
+            pe "Yes ma'am, I understand."
 
             scene v11coc14
             with dissolve
 
-            lee "One second there Dean. Miss Cross, before I ask you this question you understand that lying can result in causing harm to your case, yes?"
+            lee "One second there, Dean. Miss Cross, before I ask you this question you understand that lying can result in causing harm to your case, yes?"
 
             scene v11coc20b # TPP. Same as 20a, Penelope is looking at Mr Lee now
             with dissolve
@@ -878,7 +878,7 @@ label v11s1_mrrose:
             with dissolve
 
             mrr "Listen, [name]."
-            mrr "I know we started off on a wrong foot, but I think your friend would be quite glad to know I’m here."
+            mrr "I know we started off on a wrong foot, but I think your friend would be quite glad to know I'm here."
 
             scene v11cocmrr1a
             with dissolve
@@ -888,22 +888,22 @@ label v11s1_mrrose:
             scene v11cocmrr1
             with dissolve
 
-            mrr "Because I have connections champ. It’s always better to have someone like me on your side."
+            mrr "Because I have connections champ. It's always better to have someone like me on your side."
 
             scene v11cocmrr1a
             with dissolve
 
-            u "If you were really on our side you’d be in there helping her."
+            u "If you were really on our side you'd be in there helping her."
 
             scene v11cocmrr1
             with dissolve
 
-            mrr "If you really believe you can help her from in there, you’re a fool. The real game is played out here."
+            mrr "If you really believe you can help her from in there, you're a fool. The real game is played out here."
 
             scene v11cocmrr1a
             with dissolve
 
-            u "Whatever man, at least I’m actually doing something. Now, if you'll excuse me I have a friend to fight for."
+            u "Whatever man, at least I'm actually doing something. Now, if you'll excuse me I have a friend to fight for."
 
             call screen v11s1_hallway2
 
@@ -1075,8 +1075,6 @@ label v11_case_verdict:
 
     if v11s1_courtpoints >= 4:
         play music "music/v11/Scene 1/Track Scene 1_5.mp3" fadein 2
-        $ perry_mason = True
-        $ grantAchievement("perry_mason")
         $ v11_pen_goes_europe = True
         scene v11coc14b # TPP. Same as 14, Mr Lee looking at Penelope
         with dissolve
@@ -1085,9 +1083,15 @@ label v11_case_verdict:
 
         lee "We must make it clear that this is a civil case at this point, charges will not be pressed unless you choose not to comply with the school's agreed upon discipline."
 
+        scene v11coc14
+        with dissolve
+
         lee "We acknowledge your great academic standing and the benefit you've been to this school, we feel to disregard that is in poor taste. However, we can't simply let you go for being a good student."
 
         lee "As always preferred, the board has decided to go with a more creative and case based discipline tailored to the events that have occurred."
+
+        scene v11coc14b
+        with dissolve
 
         lee "As punishment for the actions taken, you will be subject to attend this year's abroad trip to Europe. While attending, you will serve as an Assistant Chaperone and help with all the chaperones may need."
 
@@ -1101,6 +1105,7 @@ label v11_case_verdict:
         scene v11coc14b
         with dissolve
 
+        $ grant_achievement("perry_mason")
         lee "Don't thank us, thank your friend. He did a very good job representing you. We may just have a future lawyer in our midst."
 
         scene v11coc14c
@@ -1273,6 +1278,7 @@ label v11_case_verdict:
         pause 0.75
 
         scene v11coc23b
+        with dissolve
 
         jen "I better run after her."
 
