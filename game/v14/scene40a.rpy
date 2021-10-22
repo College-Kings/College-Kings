@@ -118,7 +118,6 @@ label v14s40a:
     scene v14s40a_5b # FPP. Show Sebastian walking off.
     with dissolve
 
-
     u "(This man is calling me sunshine and he knows my class schedule? Is this what it's like to have a father...? *Laughs*)"
 
     scene v14s40a_6 # TPP. Show MC entering the class hallways, slight smile, mouth closed.

@@ -43,7 +43,7 @@ label v14s35:
         scene v14s35_3b # TPP. Same as v14s35_3a, MC standing in the room with his swimming trunks fully on, slight smile, mouth closed
         with dissolve
 
-    if joinapes:
+    else:
         scene v14s35_4 # TPP. Show MC standing naked in his Apes room, slight smile, mouth closed.
         with dissolve
 

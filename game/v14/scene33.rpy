@@ -218,7 +218,7 @@ label v14s33:
                         jump v14s34
                     else:
                         jump v14s35
-    if joinapes:
+    else:
             scene v14s33_1 # TPP. Show MC showering, slight smile, mouth closed
             with dissolve
 

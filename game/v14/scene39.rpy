@@ -179,12 +179,12 @@ label v14s39:
 
         pe "I..."
 
-        pe "Was kinda hoping..."
+        pe "...was kinda hoping..."
 
         scene v14s39_4c # FPP. Same as v14s39_4b, Penelope nervous smile, mouth closed.
         with dissolve
 
-        u "What do you want, Penelope. *Chuckles* Just say the words."
+        u "What do you want, Penelope? *Chuckles* Just say the words."
 
         scene v14s39_4b
         with dissolve
@@ -261,7 +261,6 @@ label v14s39:
         jump v14s42
 
         if not v14s37_focus_on_us or not kct == "loyal":
-        
             scene v14s39_4
             with dissolve
 
@@ -292,9 +291,7 @@ label v14s39:
 
             u "Okay, be safe."
 
-
             if v14s39_id_wait:
-
                 scene v14s39_4
                 with dissolve
 
@@ -311,6 +308,7 @@ label v14s39:
                 with dissolve
 
                 pe "Perfect."
+
             else:
                 scene v14s39_4
                 with dissolve

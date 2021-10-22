@@ -17,7 +17,6 @@ label v14s40:
     u "(Finally, time for some sleep.)"
 
     if laurenrs:
-
         play sound "sounds/vibrate.mp3"
 
         scene v14s40_2a # TPP. MC gets a call from Lauren, MC looks at his phone, no expression
@@ -89,7 +88,6 @@ label v14s40:
         with dissolve
 
         menu:
-
             "What'd I say?":
                 $ addpoint("tm")
 
