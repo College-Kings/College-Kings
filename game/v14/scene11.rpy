@@ -198,7 +198,7 @@ label v14s11:
 
     ri "Knowing Aubrey she probably doesn't wanna talk about that stuff right now either. Being around her is probably the safest way to stay out of any Chicks drama. *Chuckles*"
 
-    if RileyRS:
+    if rileyrs:
 
         scene v14s11_4a
         with dissolve
@@ -258,162 +258,161 @@ label v14s11:
         scene v14s11_4b
         with dissolve
 
-    menu:
+        menu:
+            "Like us both":
+                $ addpoint("bro")
 
-        "Like us both":
-            $ addpoint("bro")
+                scene v14s11_4i
+                with dissolve       
 
-            scene v14s11_4i
-            with dissolve       
+                u "Well, for starters... It means a lot to me to know that the feeling is mutual. *Chuckles*"
 
-            u "Well, for starters... It means a lot to me to know that the feeling is mutual. *Chuckles*"
+                scene v14s11_4c
+                with dissolve
 
-            scene v14s11_4c
-            with dissolve
+                ri "*Chuckles* Right…"
 
-            ri "*Chuckles* Right…"
+                scene v14s11_4j # FPP. same as v14s11_4c Riley increases to a half smile
+                with dissolve
 
-            scene v14s11_4j # FPP. same as v14s11_4c Riley increases to a half smile
-            with dissolve
+                u "Plus, I'm sure Aubrey would be more than happy to hear that you have feelings for her too."
 
-            u "Plus, I'm sure Aubrey would be more than happy to hear that you have feelings for her too."
+                scene v14s11_4i
+                with dissolve
 
-            scene v14s11_4i
-            with dissolve
+                ri "Yeah… So…"
 
-            ri "Yeah… So…"
+                scene v14s11_4b
+                with dissolve
 
-            scene v14s11_4b
-            with dissolve
+                u "I don't see how you having feelings for both of us is a problem. Is that supposed to be a problem?"
 
-            u "I don't see how you having feelings for both of us is a problem. Is that supposed to be a problem?"
+                scene v14s11_4k # FPP. same as v14s11_4c Riley has a slightly shocked expression, mouth open
+                with dissolve
 
-            scene v14s11_4k # FPP. same as v14s11_4c Riley has a slightly shocked expression, mouth open
-            with dissolve
+                ri "Wait... You're okay with that?!"
 
-            ri "Wait... You're okay with that?!"
+                scene v14s11_4j
+                with dissolve
 
-            scene v14s11_4j
-            with dissolve
+                u "Haha, why wouldn't I be? That’s what life is all about right? Spending time with the people you like most?"
 
-            u "Haha, why wouldn't I be? That’s what life is all about right? Spending time with the people you like most?"
+                scene v14s11_4l # FPP. same as v14s11_4k Riley mouth closed, increases to a full smile, no hand gesture
+                with dissolve
 
-            scene v14s11_4l # FPP. same as v14s11_4k Riley mouth closed, increases to a full smile, no hand gesture
-            with dissolve
+                u "And if that means the three of us get to spend the most of our time together, I’m not complaining. *Chuckles* You’re my two favorite ladies."
 
-            u "And if that means the three of us get to spend the most of our time together, I’m not complaining. *Chuckles* You’re my two favorite ladies."
+                scene v14s11_4m # FPP. same as v14s11_4l Riley mouth open, full smile, no hand gesture
+                with dissolve
 
-            scene v14s11_4m # FPP. same as v14s11_4l Riley mouth open, full smile, no hand gesture
-            with dissolve
+                ri "*Chuckles* Wow…"
 
-            ri "*Chuckles* Wow…"
+                scene v14s11_4l
+                with dissolve
 
-            scene v14s11_4l
-            with dissolve
+                u "Is that a good wow? *Laughs*"
 
-            u "Is that a good wow? *Laughs*"
+                scene v14s11_4m
+                with dissolve
 
-            scene v14s11_4m
-            with dissolve
+                ri "I don't know, I mean- Yes! That was definitely a good wow..,"
 
-            ri "I don't know, I mean- Yes! That was definitely a good wow..,"
+                scene v14s11_4m
+                with dissolve
 
-            scene v14s11_4m
-            with dissolve
+                ri "I guess I just didn't think you’d be open to something like that. It’s kind of my fantasy… *Chuckles*"
 
-            ri "I guess I just didn't think you’d be open to something like that. It’s kind of my fantasy… *Chuckles*"
+                scene v14s11_4l
+                with dissolve
 
-            scene v14s11_4l
-            with dissolve
+                u "Well, looks like your wet dreams are finally coming true. *Laughs*"
 
-            u "Well, looks like your wet dreams are finally coming true. *Laughs*"
+                scene v14s11_4n # FPP. same as v14s11_4m Riley non-aggressively shoves mc's shoulder
+                with dissolve
 
-            scene v14s11_4n # FPP. same as v14s11_4m Riley non-aggressively shoves mc's shoulder
-            with dissolve
+                ri "*Chuckles* Stop it, loser! I'm actually really relieved."
 
-            ri "*Chuckles* Stop it, loser! I'm actually really relieved."
+                scene v14s11_4l
+                with dissolve
 
-            scene v14s11_4l
-            with dissolve
+                u "Glad I could do that for you. *Chuckles*"
 
-            u "Glad I could do that for you. *Chuckles*"
+                scene v14s11_4m
+                with dissolve
 
-            scene v14s11_4m
-            with dissolve
+                ri "Haha, thanks. I'm going to go meet with Aubrey now."
 
-            ri "Haha, thanks. I'm going to go meet with Aubrey now."
+                scene v14s11_5 # TPP. Riley kisses Mc's cheek
+                with dissolve
 
-            scene v14s11_5 # TPP. Riley kisses Mc's cheek
-            with dissolve
+                pause 0.75
 
-            pause 0.75
+                scene v14s11_4m
+                with dissolve
 
-            scene v14s11_4m
-            with dissolve
+                ri "I'll see you soon, handsome. Very soon..."
 
-            ri "I'll see you soon, handsome. Very soon..."
+                scene v14s11_4l
+                with dissolve
 
-            scene v14s11_4l
-            with dissolve
+                u "Ha.. Catch you later."
+            
+                scene v14s11_4o # FPP. same as v14s11_4 Riley's back is turned walking away from the mc, her face is not visible
+                with dissolve
 
-            u "Ha.. Catch you later."
-        
-            scene v14s11_4o # FPP. same as v14s11_4 Riley's back is turned walking away from the mc, her face is not visible
-            with dissolve
+            "Pick one of us":
+                $ addpoint("tm")
+                $ addpoint("bf")
 
-        "Pick one of us":
-            $ addpoint("tm")
-            $ addpoint("bf")
+                scene v14s11_4b
+                with dissolve
 
-            scene v14s11_4b
-            with dissolve
+                u "I'll be honest, I like you a lot Riley. The feelings are definitely mutual and I’m really happy you told me, but relationship-wise…"
 
-            u "I'll be honest, I like you a lot Riley. The feelings are definitely mutual and I’m really happy you told me, but relationship-wise…"
+                scene v14s11_4b
+                with dissolve
 
-            scene v14s11_4b
-            with dissolve
+                u "I'm just not the sharing type, I guess."
 
-            u "I'm just not the sharing type, I guess."
+                scene v14s11_4p # FPP. same as v14s11_4h Riley mouths is closed
+                with dissolve
 
-            scene v14s11_4p # FPP. same as v14s11_4h Riley mouths is closed
-            with dissolve
+                u "I don't really know if I'd feel comfortable with the whole situation."
 
-            u "I don't really know if I'd feel comfortable with the whole situation."
+                scene v14s11_4h
+                with dissolve
 
-            scene v14s11_4h
-            with dissolve
+                ri "I... I completely understand. It definitely makes sense why you wouldn’t want that. I just wanted to be honest with you."
 
-            ri "I... I completely understand. It definitely makes sense why you wouldn’t want that. I just wanted to be honest with you."
+                scene v14s11_4p
+                with dissolve
 
-            scene v14s11_4p
-            with dissolve
+                u "Of course, and thank you for that."
 
-            u "Of course, and thank you for that."
+                scene v14s11_4q # FPP. same as v14s11_4a Riley slightly sad, mouth open
+                with dissolve
 
-            scene v14s11_4q # FPP. same as v14s11_4a Riley slightly sad, mouth open
-            with dissolve
+                ri "Yeah, well… I'm gonna go and track down Aubrey then."
 
-            ri "Yeah, well… I'm gonna go and track down Aubrey then."
+                scene v14s11_4r # FPP. same as v14s11_4q Rileys mouth is closed
+                with dissolve
 
-            scene v14s11_4r # FPP. same as v14s11_4q Rileys mouth is closed
-            with dissolve
+                u "Oh... Okay. See you later?"
 
-            u "Oh... Okay. See you later?"
+                scene v14s11_4q
+                with dissolve
 
-            scene v14s11_4q
-            with dissolve
+                ri "Uh, yeah. Bye."
 
-            ri "Uh, yeah. Bye."
+                scene v14s11_4r
+                with dissolve
 
-            scene v14s11_4r
-            with dissolve
+                u "See ya."
 
-            u "See ya."
+                scene v14s11_4o
+                with dissolve
 
-            scene v14s11_4o
-            with dissolve
-
-            u "(I don't think she liked hearing that answer.)"
+                u "(I don't think she liked hearing that answer.)"
         
     else:
 
