@@ -7,9 +7,6 @@ default menu_set = set()
 default achievementAtList = None
 default freeRoam = False
 
-default kct = "confident"
-default sortedKCT = ["confident", "loyal", "popular"]
-
     ## Kiwii Vars
 default kiwiiUsers = kiwii_users()
 default kiwii_firstTime = False
@@ -25,6 +22,14 @@ default enemyhealth = 0
     ## Free Roam
 default previous_location = ""
 
+# KCT
+default kct = "confident"
+default sortedKCT = ["confident", "loyal", "popular"]
+
+default bro = 1
+default boyfriend = 2
+default troublemaker = 1
+
 # 1.0 - 6.0
 default v1_sda = False
 default evelynmove = False
@@ -39,9 +44,6 @@ default youHealth = 5
 default influencetut = False
 default meetlauren = False
 default laurenrs = False
-default bro = 1
-default boyfriend = 2
-default troublemaker = 1
 default phoneTutorialPage = 1
 default freeRoamTutorialPage = 1
 default v1_freeRoam1_riley = False
