@@ -60,7 +60,7 @@ label v14s39:
     pe "Haha, you'd snap back at me in front of everyone?"
 
     menu:
-        "I'd wait...":
+        "I'd wait":
             $ v14s39_id_wait = True
             scene v14s39_1a
             with dissolve
