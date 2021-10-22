@@ -166,7 +166,7 @@ label v14s20:
 
         menu:
             "I love her":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "I love your sister, Autumn. I honestly couldn't imagine being with anyone other than Lauren."
 

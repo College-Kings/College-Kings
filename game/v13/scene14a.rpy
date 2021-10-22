@@ -70,7 +70,7 @@ label v13s14a:
             polly "I think I got my answer. *Laughs*"
 
         "I'm a one woman man":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "I'm a one woman-man."
 

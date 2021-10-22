@@ -77,7 +77,7 @@ label prot_w_au:
             jump prot_w_au_wing
 
         "Ask what you need to do":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             jump prot_w_au_no_wing
 
 label prot_w_au_wing:

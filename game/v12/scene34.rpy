@@ -95,7 +95,7 @@ label v12_amber_after_spa:
 
         menu:
             "Pull away":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 scene v12ams4
                 with dissolve
 

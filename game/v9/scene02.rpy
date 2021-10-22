@@ -69,7 +69,7 @@ label v9_start_apes:
             u "Something's going on. I just don't know what."
 
         "Let it slide":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "(Cam's just a dick. Not worth it.)"
             u "Do you know what's going on?"
@@ -141,7 +141,7 @@ label v9_start_apes:
             ca "That's for the Freshman Brawl! It's gonna be epic!"
 
         "Just ask him about the red square":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "What's up with the red square? That's all I wanna know."
 
@@ -202,7 +202,7 @@ label v9_start_apes:
             pause
 
         "Hesitant reply":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ mcBrawlStance3 = False
 
             u "(Bloodbath? I don't like the sound of that.)"

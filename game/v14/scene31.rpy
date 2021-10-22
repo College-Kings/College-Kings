@@ -90,7 +90,7 @@ label v14s31:
 
         menu:
             "I'm glad she's focused":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene v14s31_5 # FPP Show Chloe's campaign poster hung nearby
                 with dissolve

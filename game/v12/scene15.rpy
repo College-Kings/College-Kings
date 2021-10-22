@@ -114,7 +114,7 @@ label v12_riddle_riley:
 
     menu:
         "Keep looking":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v12rrl10 # FPP. MC still searching looking at riley who is also still searching, mouth closed
             with dissolve
 
@@ -131,7 +131,7 @@ label v12_riddle_riley:
             u "Nope, still looking. I'm telling you Riley, there's nothing down h-"
 
         "Give up":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v12rrl11 # TPP. MC sits down
             with dissolve
 
@@ -421,7 +421,7 @@ label v12_riddle_riley:
 
     menu:
         "Help her walk":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v12rrl32 # TPP. MC helps riley stand up
             with dissolve
 
@@ -483,7 +483,7 @@ label v12_riddle_riley:
             pause 1
 
         "Carry her":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v12rrl38 # TPP. MC Picks up riley
             with dissolve
 
@@ -516,7 +516,7 @@ label v12_riddle_riley:
 
             menu:
                 "Kiss her":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
                     $ v12_kiss_riley = True
 
                     scene v12rrl41 # TPP MC kisses Riley
@@ -589,7 +589,7 @@ label v12_riddle_riley:
 
             menu:
                 "Hold her hand":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
                     scene v12rrl45 # TPP. MC and riley hold hands 
                     with dissolve
 
@@ -604,7 +604,7 @@ label v12_riddle_riley:
                     with dissolve
 
                 "Scratch your face":
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
                     scene v12rrl48 # TPP. MC scratches his face
                     with dissolve
 

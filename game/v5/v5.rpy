@@ -1,7 +1,7 @@
 init python:
     # Amber messages
     def v5_reply1():
-        addPoint("bro")
+        add_point(KCT.BRO)
         contact_Amber.newMessage(_("Oh really? How are you gonna do that?"))
         contact_Amber.addReply(_("I give some world-class massages"), v5_reply2)
         contact_Amber.addReply(_("I'll stay longer next time"), v5_reply3)
@@ -19,7 +19,7 @@ init python:
         contact_Amber.newMessage(_("Deal xx"))
 
     def v5_reply5():
-        addPoint("bro")
+        add_point(KCT.BRO)
         contact_Amber.newMessage(_("Oh wow, I was just checking. :P"))
         contact_Amber.addReply(_("Don't worry, you'll see me soon."), v5_reply6)
         contact_Amber.addReply(_("Haha, I'm fine."), v5_reply7)
@@ -37,7 +37,7 @@ init python:
         contact_Amber.newMessage(_("That's good xx"))
 
     def v5_reply9():
-        addPoint("bro")
+        add_point(KCT.BRO)
         contact_Amber.newMessage(_("Oh shut up, I was just checking in"))
         contact_Amber.addReply(_("Don't worry, you'll see me again"), v5_reply10)
         contact_Amber.addReply(_("Haha, I'm fine"), v5_reply11)
@@ -288,7 +288,7 @@ label jorepb:
 
     menu:
         "I believe you.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ chloemad = False
 
             scene s370
@@ -729,7 +729,7 @@ label continuez:
         menu:
             "Complaints? I love it.":
                 $ laurenpublic = True
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "Complaints? I love kissing you. I can't wait till we say goodbye and I can kiss you again. *Laughs*"
 
@@ -879,7 +879,7 @@ label gokissb:
 
     menu:
         "Agree":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s382a
             with dissolve
@@ -902,8 +902,8 @@ label gokissb:
 
     menu:
         "Agree":
-            $ addPoint("bf")
-            $ addPoint("bro")
+            $ add_point(KCT.BOYFRIEND)
+            $ add_point(KCT.BRO)
 
             scene s382a
             with dissolve
@@ -931,7 +931,7 @@ label gokissb:
 
     menu:
         "Agree":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s382a
             with dissolve
@@ -1001,7 +1001,7 @@ label gokissb:
                 pause 0.5
 
         "Disagree":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ la3 = False
 
             scene s382a
@@ -1172,7 +1172,7 @@ label continuetrolley:
 
 label trolleyaa: # you don't press the lever
     stop sound
-    $ addPoint("bf")
+    $ add_point(KCT.BOYFRIEND)
     $ trolleya = False
 
     scene s388 # hands away from lever
@@ -1191,7 +1191,7 @@ label trolleyaa: # you don't press the lever
 
 label trolleyab: # you do press the lever
     stop sound
-    $ addPoint("bro")
+    $ add_point(KCT.BRO)
     $ trolleya = True
     play sound "sounds/lever.mp3"
     scene s388e #you press lever
@@ -1404,7 +1404,7 @@ label continuean:
 label trolleyca: # you don't press the lever
     stop sound
     $ trolleyc = False
-    $ addPoint("bro")
+    $ add_point(KCT.BRO)
 
     scene s388 # hands away from lever
     with dissolve
@@ -1423,7 +1423,7 @@ label trolleyca: # you don't press the lever
 label trolleycb: # you do press the lever
     stop sound
     $ trolleyc = True
-    $ addPoint("bf")
+    $ add_point(KCT.BOYFRIEND)
     play sound "sounds/lever.mp3"
     scene s388e #you press lever
     with dissolve
@@ -1453,7 +1453,7 @@ label continueao:
 
     menu:
         "At least we're done now.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s382a
             with dissolve
@@ -1705,7 +1705,7 @@ label continueaf:
                             jump hospitala
 
                     "I didn't mean to":
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
 
                         u "I didn't mean to... it was a misunderstanding!"
 
@@ -2099,7 +2099,7 @@ label continueaf:
     menu:
         "Complaints? I love it.":
             $ laurenpublic = True
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "Complaints? Kissing you rules."
 
@@ -2712,7 +2712,7 @@ label hospitala:
 
     menu:
         "Confront Adam":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ confrontadam = True
 
             scene s397
@@ -2737,7 +2737,7 @@ label hospitala:
                     jump fk_a
 
                 "Talk to him":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                     scene s398a
                     with dissolve
@@ -2762,7 +2762,7 @@ label hospitala:
                             jump fk_a
 
                         "Threaten to tell school":
-                            $ addPoint("bf")
+                            $ add_point(KCT.BOYFRIEND)
 
                             scene s398a
                             with dissolve
@@ -2788,18 +2788,18 @@ label hospitala:
                             menu:
                                 "Tell the school":
                                     $ tellschool = True
-                                    $ addPoint("bf")
+                                    $ add_point(KCT.BOYFRIEND)
 
                                     jump fl_a
 
                                 "Keep it to yourself":
                                     $ tellschool = False
-                                    $ addPoint("bro")
+                                    $ add_point(KCT.BRO)
 
                                     jump fl_b
 
         "Leave it":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ confrontadam = False
 
             scene s397b
@@ -2813,13 +2813,13 @@ label hospitala:
                 "Tell the school":
 
                     $ tellschool = True
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
                     jump fl_a
 
                 "Keep it to yourself":
 
                     $ tellschool = False
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
                     jump fl_b
 
 ########## Adam fight
@@ -3739,7 +3739,7 @@ label youfinishadam: #### You beat adam
 
     menu:
         "Yeah, I'm interested.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s428a
             with dissolve
@@ -3776,7 +3776,7 @@ label youfinishadam: #### You beat adam
             jump findimre
 
         "Not really.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s428a
             with dissolve

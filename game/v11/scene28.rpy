@@ -36,7 +36,7 @@ label v11_ms_rose_sex:
             pause 1
 
         "Knock":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene v11ros2c # FPP. Same as v11ros2, show MC knocking on the door
             with dissolve

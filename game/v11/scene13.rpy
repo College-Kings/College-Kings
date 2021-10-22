@@ -321,7 +321,7 @@ label v11_aubrey_plane_sex:
                         u "Uhm... I'm not sure I agree."
                         
                     "Kinda hot":
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
                         scene v11aub18a
                         with dissolve
 

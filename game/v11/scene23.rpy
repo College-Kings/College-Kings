@@ -261,7 +261,7 @@ label v11s23_mrlee1:
             lee "It wasn't so funny back then."
 
         "Feel bad":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v11frmlee1b
             with dissolve
 
@@ -741,7 +741,7 @@ label v11s23_penelope1:
         menu:
             "Flirt":
                 $ v11s23_penelope_date = True
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene v11frmpe10
                 with dissolve

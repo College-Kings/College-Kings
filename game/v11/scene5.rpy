@@ -105,7 +105,7 @@ label v11s4_PhoneContinueJosh1:
 
     menu:
         "Cool":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene v11swc3
             with dissolve
@@ -162,7 +162,7 @@ label v11s4_PhoneContinueJosh1:
     if not josh_europe:
         menu:
             "Invite to Europe":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ josh_europe = True
 
                 scene v11swc3
@@ -253,7 +253,7 @@ label v11s4_PhoneContinueJosh1:
 
     menu:
         "Henny":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene v11swc6c # FPP Same angle as v11swc6b, Bartender mouth closed
             with dissolve

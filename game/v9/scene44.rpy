@@ -52,7 +52,7 @@ label v9_warehouse_lindsey:
 
         menu:
             "Stop her":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "Um... Lindsey?"
 
@@ -131,7 +131,7 @@ label v9_warehouse_lindsey:
                 u "(Am I nuts or was that a cold shoulder? Damn. I really want to fix it but I have to get ready.)"
 
             "Stop her":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "Um, I'm sorry about earlier. I..."
 
@@ -243,7 +243,7 @@ label v9_warehouse_lindsey:
 
         menu:
             "It was a joke":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 
                 u "Aww, don't worry. No cold feet here. You're just very hard to resist."
                 
@@ -291,7 +291,7 @@ label v9_warehouse_lindsey:
                 with dissolve
     
             "Be serious":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "Sorry, I'm just getting in my head. There's a lot riding on this fight."
 

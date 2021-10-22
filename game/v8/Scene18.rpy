@@ -169,7 +169,7 @@ label sun_aft_apes_house:
             $ addPoint("tm")
             jump sun_aft_grayson
         "Side with Cameron":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ sideWithCameron = True
             jump sun_aft_cameron
 

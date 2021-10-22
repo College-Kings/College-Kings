@@ -370,7 +370,7 @@ label v14s37:
 
     menu:
         "Be serious...":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v14s37_10b
             with dissolve 
             
@@ -450,14 +450,14 @@ label v14s37:
 
     menu:
         "Same here...":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v14s37_10h
             with dissolve
 
             u "If she keeps going at him like that, I am too."
 
         "Focus on us...":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ v14s37_focus_on_us = True
             scene v14s37_10h
             with dissolve

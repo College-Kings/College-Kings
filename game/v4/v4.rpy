@@ -1,7 +1,7 @@
 init python:
     # Josh messages
     def v4_reply1():
-        addPoint("bro")
+        add_point(KCT.BRO)
         contact_Josh.newMessage(_("Dope"))
         contact_Josh.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
 
@@ -23,7 +23,7 @@ init python:
         contact_Josh.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
 
     def v4_reply5():
-        addPoint("bf")
+        add_point(KCT.BOYFRIEND)
         contact_Josh.newMessage(_("This guy"))
 
 label v4start:
@@ -82,7 +82,7 @@ label v4start:
 
     menu:
         "You should be more careful.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s297a
             with dissolve
@@ -99,7 +99,7 @@ label v4start:
             menu:
                 "Let me help.":
                     $ revengeadam = True
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
 
                     scene s297a
                     with dissolve
@@ -129,7 +129,7 @@ label v4start:
                     u "I'll see you then, get better soon."
 
                 "That's a dumb idea.":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                     scene s297a
                     with dissolve
@@ -159,7 +159,7 @@ label v4start:
                     u "I'll see you then, get better soon."
 
         "Let's fuck him up.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ addPoint("tm")
             $ revengeadam = True
 
@@ -316,8 +316,8 @@ label v4start:
 
     menu:
         "Take responsibility":
-            $ addPoint("bro")
-            $ addPoint("bf")
+            $ add_point(KCT.BRO)
+            $ add_point(KCT.BOYFRIEND)
 
             scene s303c
             with dissolve
@@ -574,7 +574,7 @@ label v4start:
 
         menu:
             "Someone punched me.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene s315a
                 with dissolve
@@ -1263,7 +1263,7 @@ label v4start:
 
 
     elif not laurenrs:
-        $ addPoint("bf")
+        $ add_point(KCT.BOYFRIEND)
         scene s334
         with dissolve
 
@@ -1302,7 +1302,7 @@ label v4start:
         jump autumnsita
 
     else:
-        $ addPoint("bf")
+        $ add_point(KCT.BOYFRIEND)
         scene s334
         with dissolve
 
@@ -1476,7 +1476,7 @@ label readmontagea:
 
     menu:
         "Talk to him":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s339 #you walking closer to Ryan
             with dissolve
@@ -1635,7 +1635,7 @@ label readmontagea:
 
         menu:
             "Magic Powers.":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 scene s349d
                 with dissolve
@@ -1658,7 +1658,7 @@ label readmontagea:
                 u "Yeah, sure."
 
             "I didn't.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene s349d
                 with dissolve
@@ -1686,7 +1686,7 @@ label readmontagea:
 
         menu:
             "Buy Penelope a muffin":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ muffin = True
                 $ caughtpeekingpenelopecounter = True
 
@@ -1770,7 +1770,7 @@ label readmontagea:
 
             menu:
                 "Grab her hand":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                     scene s347 # your hand grabbing her hand
                     with dissolve
@@ -1881,7 +1881,7 @@ label readmontagea:
 
         menu:
             "Magic Powers.":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 scene s345g
                 with dissolve
@@ -1901,7 +1901,7 @@ label readmontagea:
                 u "Yeah, sure."
 
             "I didn't.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene s345g
                 with dissolve
@@ -2031,7 +2031,7 @@ label ef_bd:
             pe "Right, thank you."
 
         "You should try it.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "You know, you should try it sometime."
 
@@ -2067,7 +2067,7 @@ label ef_bd:
 
             menu:
                 "Encourage her":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
                     $ bowling = True
 
                     scene s350e
@@ -2093,7 +2093,7 @@ label ef_bd:
                     jump el_ad
 
                 "Tease her":
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
                     $ bowling = False
 
                     scene s350e
@@ -2277,8 +2277,8 @@ label continueab:
 
     menu:
         "I can move.":
-            $ addPoint("bf")
-            $ addPoint("bro")
+            $ add_point(KCT.BOYFRIEND)
+            $ add_point(KCT.BRO)
 
             scene s359a
             with dissolve
@@ -2339,7 +2339,7 @@ label continueab:
 
     menu:
         "I'll join the Wolves.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "I'll join the Wolves."
 
@@ -2349,7 +2349,7 @@ label continueab:
             jo "See? I knew he was a fighter."
 
         "I don't know yet.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "I don't know yet."
 
@@ -2398,7 +2398,7 @@ label continueab:
 
     menu:
         "Sounds good.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s361g
             with dissolve
@@ -2406,7 +2406,7 @@ label continueab:
             u "Cool, sounds good."
 
         "I should stop here.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s361f
             with dissolve
@@ -2466,10 +2466,10 @@ label continueab:
 
     menu:
         "Do a handstand":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
         "Drink three sips":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             
             u "I'll drink."
 

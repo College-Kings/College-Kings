@@ -55,7 +55,7 @@ label v9_sat_hit_gym:
 
         menu:
             "Convince her":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 jump v9_sat_hit_gym_convince
             "Forget it":
                 jump v9_sat_hit_gym_forget

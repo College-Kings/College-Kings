@@ -283,7 +283,7 @@ label v13s29:
             u "It wasn't my choice to come."
             
         "Okay":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             u "Okay, sure."
 
             scene v13s29_18 # TPP. Show MC hitting bong, bong full of smoke

@@ -64,7 +64,7 @@ label v11_sam_spa:
 
     menu:
         "Check her out":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene v11sas3d # FPP. Same as v11sas3, but Samantha only in underwear
             with dissolve
@@ -747,7 +747,7 @@ label v11s28a_galleryScene:
             u "Oh."
 
         "Don't massage her boob":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene v11sas18
             with dissolve

@@ -6,7 +6,7 @@
 
 init python:
     def v8s34_reply1():
-        addPoint("bf")
+        add_point(KCT.BOYFRIEND)
         contact_Chloe.newMessage(_("I bet you were"))
         contact_Chloe.addReply(_("I miss them"))
         contact_Chloe.newMessage(_("I know... we should def try again"))
@@ -34,7 +34,7 @@ init python:
 
     def v8s34_reply5():
         setattr(store, "chloeSteakHouse", True)
-        addPoint("bf")
+        add_point(KCT.BOYFRIEND)
         contact_Chloe.newMessage(_("Um... how's now? ;)"))
         contact_Chloe.addReply(_("Now's perfect! Should I cum to your place or you wanna cum here? ;)"))
         contact_Chloe.newMessage(_("I was thinking more along the lines of food. I'm hungry!"))
@@ -44,7 +44,7 @@ init python:
 
     def v8s34_reply6():
         setattr(store, "chloeSteakHouse", True)
-        addPoint("bf")
+        add_point(KCT.BOYFRIEND)
         contact_Chloe.newMessage(_("..."))
         contact_Chloe.addReply(_("As friends"))
         contact_Chloe.newMessage(_("Ok, yeah. I'm actually starving!"))

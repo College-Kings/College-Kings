@@ -320,11 +320,11 @@ label v12_riley_cafe:
 
     menu:
         "Oh yeah, good idea":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             u "Almost forgot about that... Yeah, that's definitely the move."
 
         "Ugh, do we have to?":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ addPoint("tm")
             u "Oh yayyy, another boring treasure hunt."
 

@@ -12,7 +12,7 @@ init python:
         contact_Chloe.addReply(_("That's better haha"), v9s35_reply3)
 
     def v9s35_reply2():
-        addPoint("bf")
+        add_point(KCT.BOYFRIEND)
         v9s35_reply3()
 
     def v9s35_reply3():
@@ -21,7 +21,7 @@ init python:
         contact_Chloe.addReply(_("You need to ask? :)"), v9s35_reply5)
 
     def v9s35_reply4():
-        addPoint("bf")
+        add_point(KCT.BOYFRIEND)
         v9s35_reply5()
 
     def v9s35_reply5():
@@ -46,7 +46,7 @@ init python:
         contact_Chloe.addReply(_("Goodnight, Chloe."))
 
     def v9s35_reply7():
-        addPoint("bf")
+        add_point(KCT.BOYFRIEND)
 
     def v9s35_reply8():
         contact_Chloe.newMessage(_("Ugh. I'm so tired of studying."))

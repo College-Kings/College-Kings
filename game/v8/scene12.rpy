@@ -301,7 +301,7 @@ label apes_faceoff_task:
 
     menu:
         "Wish them good luck":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "Good luck, guys!"
 

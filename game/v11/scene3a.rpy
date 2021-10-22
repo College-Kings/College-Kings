@@ -75,7 +75,7 @@ label v11_wolves_packing_chris:
     with dissolve
     menu:
         "Let him":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v10swpc4
             with dissolve
 
@@ -90,7 +90,7 @@ label v11_wolves_packing_chris:
             with dissolve
             menu:
                 "Of course":
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
                     scene v10swpc4
                     with dissolve
 

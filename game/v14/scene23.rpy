@@ -232,7 +232,7 @@ label v14s23:
     menu:
         "Agree":
             $ v14s23_agree = True
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v14s23_2b
             with dissolve
 
@@ -515,7 +515,7 @@ label v14s23:
 
         menu:
             "Agree with Chris":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 scene v14s23_2b
                 with dissolve
@@ -548,7 +548,7 @@ label v14s23:
 
             "Disagree with Chris":
                 $ v14s23_disagree = True
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 scene v14s23_2b
                 with dissolve
                 

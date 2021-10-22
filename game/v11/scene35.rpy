@@ -89,7 +89,7 @@ label v11_riley_sex:
 
         menu:
             "Ladies love me":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 scene v11ris3e # FPP. Same as v11ris3d, different pose
                 with dissolve
@@ -147,7 +147,7 @@ label v11_riley_sex:
                 u "*Chuckles* Night Riley."
 
             "Wasn't a ladies man":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene v11ris3e
                 with dissolve

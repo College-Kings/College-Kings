@@ -142,7 +142,7 @@ label v13s56:
                 no "Yeah... I heard you."
 
         "Be respectful":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v13s56_99 # FPP. same as v13s56_5 MC looks down at his crotch
             with dissolve
 

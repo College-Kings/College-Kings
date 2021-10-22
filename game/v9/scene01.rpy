@@ -97,7 +97,7 @@ label v9_start_wolves:
             ch "Great! We're gonna need it if we plan on beating the Apes."
 
         "Hesitant reply":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ mcBrawlStance1 = False
 
             u "(I haven't been training enough for this.)"
@@ -156,7 +156,7 @@ label v9_start_wolves:
 
     menu:
         "Try to back out":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ mcBrawlStance2 = False
 
             u "I don't know... I'm not ready for something like this. A... BRAWL?"

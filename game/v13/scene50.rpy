@@ -166,7 +166,7 @@ label v13s50:
 
     menu:
         "He knows more":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v13s50_9a
             with dissolve
 

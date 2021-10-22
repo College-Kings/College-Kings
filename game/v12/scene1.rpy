@@ -18,7 +18,7 @@ label v12_nora_robbed:
     
     menu:
         "Go to Nora":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             
             scene v12nrb2 # TPP. MC runs to nora, Nora shocked, MC worries, mouths closed
             with dissolve

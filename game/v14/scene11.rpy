@@ -133,7 +133,7 @@ label v14s11:
     menu:
 
         "He did":
-            $ addpoint("bro")
+            $ add_point(KCT.BRO)
 
             scene v14s11_4b
             with dissolve
@@ -260,7 +260,7 @@ label v14s11:
 
         menu:
             "Like us both":
-                $ addpoint("bro")
+                $ add_point(KCT.BRO)
 
                 scene v14s11_4i
                 with dissolve       
@@ -362,7 +362,7 @@ label v14s11:
 
             "Pick one of us":
                 $ addpoint("tm")
-                $ addpoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene v14s11_4b
                 with dissolve

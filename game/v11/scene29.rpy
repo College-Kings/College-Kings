@@ -39,7 +39,7 @@ label v11_hotel_room:
 
     menu (fail_label="v11timera"):
         "Save Lauren":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ v11save = 1
 
             scene v11bane5 # Mc tackles Lauren out of the guns aim (replace bane like character for MC )
@@ -67,7 +67,7 @@ label v11_hotel_room:
             jump v11wakeupa
 
         "Save Riley":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ v11save = 2
 
             scene v11bane6 # Mc tackles Riley out of the guns aim (replace bane character with MC, Mc should still be tackling Riley out the way)
@@ -358,7 +358,7 @@ label v11wakeupa:
                 ri "You wish."
 
             "Flirt":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ rileyLike += 1
 
                 scene v11hr11b # FPP. Same as v11hr11, Riley slightly smiling, mouth closed

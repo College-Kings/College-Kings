@@ -17,7 +17,7 @@ label v9_at_warehouse:
 
         menu:
             "Be upset":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "Shit, Sebastian, was that really necessary?"
 
@@ -27,7 +27,7 @@ label v9_at_warehouse:
                 se "You tell me."
 
             "Be excited":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 u "Mysterious! I like it."
 
@@ -221,7 +221,7 @@ label v9_at_warehouse:
 
 
             "Keep quiet":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 u "(Not my place.)"
 
@@ -263,7 +263,7 @@ label v9_at_warehouse:
                 u "Geez."
 
             "Deal with it":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 u "(A bit over the top with the ambiance, bro.)"
 
@@ -396,7 +396,7 @@ label v9_at_warehouse:
 
         menu:
             "Get pumped":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 u "They're going down!"
                 

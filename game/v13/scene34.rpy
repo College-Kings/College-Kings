@@ -465,7 +465,7 @@ label v13s34:
 
     menu:
         "Stop this":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v13s34_26 # FPP. MC starts walking over to Riley
             with dissolve
 

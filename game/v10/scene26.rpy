@@ -7,7 +7,7 @@ init python:
 
     def v10s26_reply1():
         setattr(store, "v10_amber_condoms", True)
-        addPoint("bf")
+        add_point(KCT.BOYFRIEND)
         contact_Amber.newMessage("Beer, obviously")
 
 label v10_amber_skatepark:

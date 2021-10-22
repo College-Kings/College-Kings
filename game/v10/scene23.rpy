@@ -30,7 +30,7 @@ label v10_aft_walk_home:
     with dissolve
     menu:
         "Check it out":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v10smwh3 # FPP. POV is MC and Josh close in the alley, talking. Show Josh, normal expression, mouth closed.
             with fade
 

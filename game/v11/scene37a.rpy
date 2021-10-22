@@ -404,13 +404,13 @@ label v11_imre_and_ryan:
     menu:
         "Side with Imre":
             if joinwolves:
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
             u "Ryan, really? You remember what he said."
 
         "Side with Ryan":
             if not joinwolves:
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
             u "If he doesn't even remember it must not have been that serious."
 
