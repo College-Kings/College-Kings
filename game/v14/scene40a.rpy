@@ -71,7 +71,6 @@ label v14s40a:
 
             u "A little."
 
-            
         "Don't do it again":
             scene v14s40a_5a
             with dissolve

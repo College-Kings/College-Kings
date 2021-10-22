@@ -194,7 +194,7 @@ label v14s39:
         scene v14s39_5 # TPP. Show MC holding Penelope's hands romantically.
         with dissolve
 
-        pause 0.25
+        pause 0.75
 
         scene v14s39_4d # FPP. Same as v14s39_4c, Penelope's arms extended out holding MC's, Penelope slight smile, mouth closed.
         with dissolve
@@ -320,7 +320,7 @@ label v14s39:
             scene v14s39_8 # FPP. Show Penelope walking her way down the side walk.
             with dissolve
 
-            pause 0.25
+            pause 0.75
 
             scene v14s39_9 # TPP. MC walking down the side walk to his room, slight smile, mouth closed.
             with dissolve
@@ -330,7 +330,7 @@ label v14s39:
             scene v14s39_9
             with dissolve
 
-            pause 0.25
+            pause 0.75
 
             if joinwolves:
                 jump v14s40
