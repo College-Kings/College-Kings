@@ -96,7 +96,6 @@ default w = "w"
 default q = "q"
 default e = "e"
 default r = "r"
-default qwer = True
 default fighttom = False
 default notcool = False
 default difficulty = None
