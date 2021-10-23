@@ -158,7 +158,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
     menu: 
         "Trust Choloe": # -Event1 Trust her- LindseyPopularity minus 3
             $ v14_lindsey_popularity -= 3
-            $ v14s31bTrustChole = True
+            $ v14s31bTrustChloe = True
             $ addPoint("bf")
             $ chloe.points +=1
 
