@@ -60,7 +60,7 @@ label v14s39:
     pe "Haha, you'd snap back at me in front of everyone?"
 
     menu:
-        "I'd wait...":
+        "I'd wait":
             $ v14s39_id_wait = True
             scene v14s39_1a
             with dissolve
@@ -173,18 +173,18 @@ label v14s39:
     if v14s37_focus_on_us or kct == "loyal":
         if not v14s37_focus_on_us:
             call screen kctPopup
-        $ penelopers = True
+
         scene v14s39_4b # FPP. Same as v14s39_4, Penelope nervous smile, mouth open.
         with dissolve
 
         pe "I..."
 
-        pe "Was kinda hoping..."
+        pe "...was kinda hoping..."
 
         scene v14s39_4c # FPP. Same as v14s39_4b, Penelope nervous smile, mouth closed.
         with dissolve
 
-        u "What do you want, Penelope. *Chuckles* Just say the words."
+        u "What do you want, Penelope? *Chuckles* Just say the words."
 
         scene v14s39_4b
         with dissolve
@@ -194,7 +194,7 @@ label v14s39:
         scene v14s39_5 # TPP. Show MC holding Penelope's hands romantically.
         with dissolve
 
-        pause 0.25
+        pause 0.75
 
         scene v14s39_4d # FPP. Same as v14s39_4c, Penelope's arms extended out holding MC's, Penelope slight smile, mouth closed.
         with dissolve
@@ -261,7 +261,6 @@ label v14s39:
         jump v14s42
 
         if not v14s37_focus_on_us or not kct == "loyal":
-        
             scene v14s39_4
             with dissolve
 
@@ -292,9 +291,7 @@ label v14s39:
 
             u "Okay, be safe."
 
-
             if v14s39_id_wait:
-
                 scene v14s39_4
                 with dissolve
 
@@ -311,6 +308,7 @@ label v14s39:
                 with dissolve
 
                 pe "Perfect."
+
             else:
                 scene v14s39_4
                 with dissolve
@@ -320,7 +318,7 @@ label v14s39:
             scene v14s39_8 # FPP. Show Penelope walking her way down the side walk.
             with dissolve
 
-            pause 0.25
+            pause 0.75
 
             scene v14s39_9 # TPP. MC walking down the side walk to his room, slight smile, mouth closed.
             with dissolve
@@ -330,7 +328,7 @@ label v14s39:
             scene v14s39_9
             with dissolve
 
-            pause 0.25
+            pause 0.75
 
             if joinwolves:
                 jump v14s40

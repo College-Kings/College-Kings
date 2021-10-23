@@ -241,7 +241,8 @@ label v14s30b:
         with dissolve
 
         pause 0.5
-    if joinapes:
+
+    else:
         scene v14s30b_10 # TPP. Show MC walking into the Apes house.
         with fade
 
