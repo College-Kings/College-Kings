@@ -602,6 +602,7 @@ default v13s40_shoulderpoint = False
 default laurenrs_v11aubrey = True
 default v13s40fromgame = False
 default v13_chloe_sex = False
+default v13_FirstThreesome = False # Variable used to call for Riley and Aubrey threesome happening.
 
 # 14.0
 default v14_help_chloe = False
