@@ -3,14 +3,13 @@
 # Characters: RILEY (Outfit: 4), MC (Outfit: 1)
 # Time: Morning
 
-
 label v14s43d:
 # -MC and Riley are sitting across from each other in the empty classroom-
 
     scene v14s43d_1 # TPP. Show MC and Riley sitting across from each other in the class room.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s43d_2 # FPP. MC and Riley sitting across from each other. MC looking at Riley, Riley looking at MC, Riley slight smile, mouth open.
     with dissolve
@@ -25,12 +24,12 @@ label v14s43d:
     scene v14s43d_2
     with dissolve
 
-    ri "I saw Imre floating around the room and I thought I was gonna have to be with him for a second, but thankfully… You came to the rescue. *Laughs*"
+    ri "I saw Imre floating around the room and I thought I was gonna have to be with him for a second, but thankfully... You came to the rescue. *Laughs*"
 
     scene v14s43d_2a
     with dissolve
 
-    u "Haha, it’s no problem. He actually told me what he did and begged me to work with you so that it wasn't awkward for either of you."
+    u "Haha, it's no problem. He actually told me what he did and begged me to work with you so that it wasn't awkward for either of you."
 
     scene v14s43d_2
     with dissolve
@@ -68,7 +67,7 @@ label v14s43d:
 
     ri "Let's get started on this before I get bored. I don't plan on being here long."
 
-    if RileyRS:
+    if rileyrs:
         scene v14s43d_2b # FPP. Same as v14s43d_2a, Riley flirtatious smile, mouth closed
         with dissolve
 
@@ -83,7 +82,7 @@ label v14s43d:
     scene v14s43d_2a
     with dissolve
 
-    u "*Chuckles* Alright, well… What ideas did you have for the scene?"
+    u "*Chuckles* Alright, well... What ideas did you have for the scene?"
 
     scene v14s43d_2
     with dissolve
@@ -103,7 +102,7 @@ label v14s43d:
     scene v14s43d_2a
     with dissolve
 
-    u "…"
+    u "..."
 
     scene v14s43d_2
     with dissolve
@@ -113,12 +112,12 @@ label v14s43d:
     scene v14s43d_2a
     with dissolve
 
-    u "C'mon already, weirdo. I thought you didn’t wanna be here long? *Chuckles*"
+    u "C'mon already, weirdo. I thought you didn't wanna be here long? *Chuckles*"
 
     scene v14s43d_2
     with dissolve
 
-    ri "*Sighs* You're no fun…"
+    ri "*Sighs* You're no fun..."
 
     ri "The one thing I really wanna do is improv."
 
@@ -130,12 +129,12 @@ label v14s43d:
     scene v14s43d_2
     with dissolve
 
-    ri "Well… We can come up with a premise."
+    ri "Well... We can come up with a premise."
 
     scene v14s43d_2a
     with dissolve
 
-    u "Explain…"
+    u "Explain..."
 
     scene v14s43d_2d # FPP. Same as v14s43_2c, Riley new pose, slight smile, mouth open.
     with dissolve
@@ -147,7 +146,7 @@ label v14s43d:
 
     u "Ha, okay. And how is that?"
 
-    if RileyRS:
+    if rileyrs:
 
         scene v14s43d_2f # FPP. Same as v14s43_2e,in the same pose from last scene, Riley flirtatious smile, mouth open.
         with dissolve
@@ -167,12 +166,12 @@ label v14s43d:
         scene v14s43d_2h # FPP. Same as v14s43_2g, Riley leaning in slightly towards the MC across the table, Riley Flirtatious smile, mouth open.
         with dissolve
 
-        ri "*Whispers* And he loves treating her just as much as she loves being treated…"
+        ri "*Whispers* And he loves treating her just as much as she loves being treated..."
 
         scene v14s43d_2g
         with dissolve
 
-        u "Hmm… Okay, I think I understand. (This scene is gonna be hot as fuck…)"
+        u "Hmm... Okay, I think I understand. (This scene is gonna be hot as fuck...)"
 
         scene v14s43d_2f
         with dissolve
@@ -182,12 +181,12 @@ else:
         scene v14s43d_2
         with dissolve
 
-        ri "I don't need to explain myself to you! King or not, you will do as the Queen demands. And that’s final."
+        ri "I don't need to explain myself to you! King or not, you will do as the Queen demands. And that's final."
 
         scene v14s43d_2a
         with dissolve
 
-        u "Oh, shit… How the hell am I supposed to compete with an A-list actress?"
+        u "Oh, shit... How the hell am I supposed to compete with an A-list actress?"
 
         scene v14s43d_2
         with dissolve
@@ -219,7 +218,7 @@ menu:
         scene v14s43d_2b
         with dissolve
 
-        ri "Oh… You like taking control, huh? *Chuckles*"
+        ri "Oh... You like taking control, huh? *Chuckles*"
 
     "I'm Submissive...": # ;O 
 
@@ -237,7 +236,7 @@ menu:
         with dissolve
 
 
-        u "Haha. Umm…"
+        u "Haha. Umm..."
 
 
     if v13_FirstThreesome:
@@ -247,12 +246,12 @@ menu:
         scene v14s43d_3 # TPP. Show MC winking at Riley, Both slight smile, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v14s43d_2i # FPP. Same as v14s43_2b, Riley looking at MC, super flirtatious smile, mouth open.
         with dissolve
 
-        ri "Haha, that I do…"
+        ri "Haha, that I do..."
 
     scene v14s43d_2
     with dissolve
@@ -279,7 +278,7 @@ menu:
     scene v14s43d_2
     with dissolve
 
-    ri "Alright, so… We're good for next week then?"
+    ri "Alright, so... We're good for next week then?"
 
     scene v14s43d_2a
     with dissolve
@@ -296,7 +295,7 @@ menu:
         scene v14s43d_2g
         with dissolve
 
-        u "Don’t have too much fun without me. *Chuckles*"
+        u "Don't have too much fun without me. *Chuckles*"
 
         scene v14s43d_2j # FPP. Same as v14s43d_2f, Riley blushing, Riley flirtatious smile, mouth open.
         with dissolve
@@ -306,7 +305,7 @@ menu:
         scene v14s43d_2g
         with dissolve
 
-        u "*Laughs* (She can’t get enough of her Aubs, can she?)"
+        u "*Laughs* (She can't get enough of her Aubs, can she?)"
 
         scene v14s43d_2
         with dissolve
@@ -321,12 +320,12 @@ menu:
     scene v14s43d_4 # TPP. Show Riley walking out of the classroom, slight smile, mouth closed.
     with dissolve
 
-    u "(Should've known she'd choose to do the whole thing on a whim… As long as I get a passing grade, she can have as much fun as she wants with the class, haha.)"
+    u "(Should've known she'd choose to do the whole thing on a whim... As long as I get a passing grade, she can have as much fun as she wants with the class, haha.)"
 
     scene v14s43d_5 # TPP. Show MC walking outside of the Campus building, slight smile, mouth closed
     with fade
 
-    pause .25
+    pause 0.75
 
     scene v14s43d_6 # TPP. MC walking down the sidewalk of campus
     with dissolve
