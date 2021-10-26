@@ -1055,9 +1055,6 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
         cl "*Chuckles* Me too."
 
-        scene v14s31b_
-        with dissolve
-
         if chloegf: 
             scene v14s31b_29 # TPP. Chloe kisses MC on the cheek.
             with dissolve

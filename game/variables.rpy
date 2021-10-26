@@ -602,6 +602,7 @@ default v13s40_shoulderpoint = False
 default laurenrs_v11aubrey = True
 default v13s40fromgame = False
 default v13_chloe_sex = False
+default v13_FirstThreesome = False # Variable used to call for Riley and Aubrey threesome happening.
 
 # 14.0
 default v14_help_chloe = False
@@ -629,3 +630,4 @@ default v14s31bTrustChloe = False # MC trust Chloe alone with Grayson
 default v14s37_focus_on_us = False # Tell Penelope to focus on them during the date.
 default v14s39_id_wait = False # Tell Penelope you'd wait till they got home
 default v14_talk_to_chris = False
+default ElijahFriend = False
