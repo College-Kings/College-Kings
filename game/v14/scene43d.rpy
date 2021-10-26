@@ -177,7 +177,7 @@ label v14s43d:
         with dissolve
 
         ri "*Chuckles*"
-else:
+    else:
         scene v14s43d_2
         with dissolve
 
@@ -208,35 +208,35 @@ else:
 
     ri "You couldn't tell? Obviously I wanna do a little sub/dom action. *Chuckles*"
 
-menu:
-    "I'm Dominant...": # ;)
-        scene v14s43d_2
-        with dissolve
+    menu:
+        "I'm Dominant...": # ;)
+            scene v14s43d_2
+            with dissolve
 
-        u "Well if that's the case, I'm the dominant."
+            u "Well if that's the case, I'm the dominant."
 
-        scene v14s43d_2b
-        with dissolve
+            scene v14s43d_2b
+            with dissolve
 
-        ri "Oh... You like taking control, huh? *Chuckles*"
+            ri "Oh... You like taking control, huh? *Chuckles*"
 
-    "I'm Submissive...": # ;O 
+        "I'm Submissive...": # ;O 
 
-        scene v14s43d_2
-        with dissolve
-        
-        u "If that's the case, I'll play the submissive."
+            scene v14s43d_2
+            with dissolve
+            
+            u "If that's the case, I'll play the submissive."
 
-        scene v14s43d_2b
-        with dissolve
+            scene v14s43d_2b
+            with dissolve
 
-        ri "You like being told what to do, huh? *Chuckles*"
+            ri "You like being told what to do, huh? *Chuckles*"
 
-        scene v14s43d_2c
-        with dissolve
+            scene v14s43d_2c
+            with dissolve
 
 
-        u "Haha. Umm..."
+            u "Haha. Umm..."
 
 
     if v13_FirstThreesome:
@@ -331,4 +331,4 @@ menu:
     with dissolve
 
     jump v14s44
-    
+        
