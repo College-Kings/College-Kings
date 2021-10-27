@@ -141,7 +141,7 @@ label v14s11:
             ri "I wouldn't expect you to. He was worse to you than most of us."
 
         "He didn't":
-            $ addpoint("tm")
+            $ addPoint("tm")
 
             scene v14s11_4b
             with dissolve
@@ -355,7 +355,7 @@ label v14s11:
                 with dissolve
 
             "Pick one of us":
-                $ addpoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ add_point(KCT.BOYFRIEND)
 
                 scene v14s11_4b

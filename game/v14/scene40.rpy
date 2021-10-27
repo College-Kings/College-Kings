@@ -89,7 +89,7 @@ label v14s40:
 
         menu:
             "What'd I say?":
-                $ addpoint("tm")
+                $ addPoint("tm")
 
                 scene v14s40_4b
                 with dissolve
