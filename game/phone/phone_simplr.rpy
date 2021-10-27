@@ -1,4 +1,6 @@
 init python:
+    import os
+
     class SimplrContact(Contact):
         """
         The Contact class for Simplr. Used to manage and create messages for simplr characters.
@@ -6,15 +8,18 @@ init python:
         Attributes:
             name (str): The display name for the character
             profile_picture (str): The relative path for this character's contact profile picture
-            profile_picture_large (str): The relative path for this character's yes/no profile picture (370 x 593)
             condition (str): A string repersenting a python condition which deems if the character unlocks 
         """
 
-        def __init__(self, name, profile_picture, profile_picture_large, condition="True"):
+        def __init__(self, name, condition="True"):
             self.name = name
-            self.profile_picture = "images/phone/simplr/contacts/{}".format(profile_picture)
-            self.profile_picture_large = "images/phone/simplr/contacts/{}".format(profile_picture_large)
             self.condition = condition
+
+            self.profile_picture = os.path.join(contacts_file_path, name.lower(), "{}_profile_picture".format(name.lower()))
+            
+            self.large_profile_pictures = []
+            for (dirpath, dirname, filenames) in os.walk(os.path.join(contacts_file_path, name.lower(), "large_profile_pictures")):
+                self.large_profile_pictures.extend([os.path.join(dirpath, filename) for filename in filenames])
 
             self.sentMessages = []
             self.pendingMessages = []
@@ -145,7 +150,7 @@ screen simplr_app():
 
             # Profile Picture
             if (simplr_contact is not None) and (hasattr(simplr_contact, "profile_picture_large")):
-                add Transform(simplr_contact.profile_picture_large, size=(362, 585)) align (0.5, 0.5)
+                add Transform(simplr_contact.profile_picture_large[0], size=(362, 585)) align (0.5, 0.5)
             elif simplr_contact is not None:
                 add Transform(simplr_contact.profilePictureLarge, size=(362, 585)) align (0.5, 0.5)
 
