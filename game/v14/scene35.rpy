@@ -19,8 +19,11 @@ label v14s35:
     $ contact_Jenny.addReply(_("You wanna go now?"))
     $ contact_Jenny.newMessage(_("Yeah, why not? ;) Penelope is busy, so I wanted to see if you'd be down."))
     $ contact_Jenny.addReply(_("Okay sure, where's this lagoon at?"))
-    $ contact_Jenny.newImgMessage(_("Picture of the Lagoon, somehow with a location marker in the photo"))
+    $ contact_Jenny.newImgMessage("images/v14/scene 35/v14jenText.webp") #Picture of the Lagoon, somehow with a location marker in the photo
     $ contact_Jenny.newMessage(_("See you soon!"))
+
+    if False: ### just making sure it shows up on lint
+        scene v14jenText
 
     label s35_PhoneContinue:
         if contact_Jenny.replies:
