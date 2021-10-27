@@ -1,100 +1,110 @@
 init python:
     class SimplrContact(Contact):
-            def __init__(self, name, profile_picture, profile_picture_large, condition=True):
-                self.name = name
-                self.profile_picture = "images/phone/simplr/contacts/{}".format(profile_picture)
-                self.profile_picture_large = "images/phone/simplr/contacts/{}".format(profile_picture_large)
-                self.condition = condition
+        """
+        The Contact class for Simplr. Used to manage and create messages for simplr characters.
 
-                self.sentMessages = []
+        Attributes:
+            name (str): The display name for the character
+            profile_picture (str): The relative path for this character's contact profile picture
+            profile_picture_large (str): The relative path for this character's yes/no profile picture (370 x 593)
+            condition (str): A string repersenting a python condition which deems if the character unlocks 
+        """
+
+        def __init__(self, name, profile_picture, profile_picture_large, condition="True"):
+            self.name = name
+            self.profile_picture = "images/phone/simplr/contacts/{}".format(profile_picture)
+            self.profile_picture_large = "images/phone/simplr/contacts/{}".format(profile_picture_large)
+            self.condition = condition
+
+            self.sentMessages = []
+            self.pendingMessages = []
+
+            simplr_pendingContacts.append(self)
+
+        def removeContact(self):
+            simplr_pendingContacts.pop(0)
+
+        def likedContact(self):
+            self.removeContact()
+
+            if self.condition:
+                simplr_contacts.append(self)
+            
+        def newMessage(self, message, queue=True):
+            message = Message(self, message)
+
+            # Moves contact to the top when recieving a new message
+            if self in simplr_contacts:
+                simplr_contacts.insert(0, simplr_contacts.pop(simplr_contacts.index(self)))
+
+            # Add message to queue
+            if queue:
+                self.pendingMessages.append(message)
+            else:
                 self.pendingMessages = []
+                self.sentMessages.append(message)
 
-                simplr_pendingContacts.append(self)
+            if self in simplr_contacts: simplrApp.newNotification()
+            
+            return message
 
-            def removeContact(self):
-                simplr_pendingContacts.pop(0)
+        def newImgMessage(self, img, queue=True):
+            message = ImageMessage(self, img)
 
-            def likedContact(self):
-                self.removeContact()
+            # Moves contact to the top when recieving a new message
+            if self in simplr_contacts:
+                simplr_contacts.insert(0, simplr_contacts.pop(simplr_contacts.index(self)))
 
-                if self.condition:
-                    simplr_contacts.append(self)
-                
-            def newMessage(self, message, queue=True):
-                message = Message(self, message)
+            # Add message to queue
+            if queue:
+                self.pendingMessages.append(message)
+            else:
+                self.pendingMessages = []
+                self.sentMessages.append(message)
 
-                # Moves contact to the top when recieving a new message
-                if self in simplr_contacts:
-                    simplr_contacts.insert(0, simplr_contacts.pop(simplr_contacts.index(self)))
+            if self in simplr_contacts: simplrApp.newNotification()
 
-                # Add message to queue
-                if queue:
-                    self.pendingMessages.append(message)
-                else:
-                    self.pendingMessages = []
-                    self.sentMessages.append(message)
+            return message
 
-                if self in simplr_contacts: simplrApp.newNotification()
-                
-                return message
+        def addReply(self, message, func=None):
+            reply = Reply(message, func)
 
-            def newImgMessage(self, img, queue=True):
-                message = ImageMessage(self, img)
-
-                # Moves contact to the top when recieving a new message
-                if self in simplr_contacts:
-                    simplr_contacts.insert(0, simplr_contacts.pop(simplr_contacts.index(self)))
-
-                # Add message to queue
-                if queue:
-                    self.pendingMessages.append(message)
-                else:
-                    self.pendingMessages = []
-                    self.sentMessages.append(message)
-
-                if self in simplr_contacts: simplrApp.newNotification()
-
-                return message
-
-            def addReply(self, message, func=None):
-                reply = Reply(message, func)
-
-                # Append reply to last sent message
-                try:
-                    if self.pendingMessages:
-                        self.pendingMessages[-1].replies.append(reply)
-                    else:
-                        self.sentMessages[-1].replies.append(reply)
-                except IndexError:
-                    message = self.newMessage("", queue=False)
-                    message.replies.append(reply)
-
-            def addImgReply(self, image, func):
-                reply = ImgReply(image, func)
-
-                # Append reply to last sent message
-                try:
-                    if self.pendingMessages:
-                        self.pendingMessages[-1].replies.append(reply)
-                    else:
-                        self.sentMessages[-1].replies.append(reply)
-                except Exception:
-                    self.newMessage("", queue=False)
+            # Append reply to last sent message
+            try:
+                if self.pendingMessages:
                     self.pendingMessages[-1].replies.append(reply)
+                else:
+                    self.sentMessages[-1].replies.append(reply)
+            except IndexError:
+                message = self.newMessage("", queue=False)
+                message.replies.append(reply)
 
-            def seenMessage(self):
-                if not any([contact.replies for contact in simplr_contacts]):
-                    simplrApp.seenNotification()
+        def addImgReply(self, image, func):
+            reply = ImgReply(image, func)
 
-            def getMessage(self, message):
-                for msg in self.sentMessages:
-                    try:
-                        if message == msg.message:
-                            return msg
-                    except AttributeError:
-                        if message == msg.image:
-                            return msg
-                return False
+            # Append reply to last sent message
+            try:
+                if self.pendingMessages:
+                    self.pendingMessages[-1].replies.append(reply)
+                else:
+                    self.sentMessages[-1].replies.append(reply)
+            except Exception:
+                self.newMessage("", queue=False)
+                self.pendingMessages[-1].replies.append(reply)
+
+        def seenMessage(self):
+            if not any([contact.replies for contact in simplr_contacts]):
+                simplrApp.seenNotification()
+
+        def getMessage(self, message):
+            for msg in self.sentMessages:
+                try:
+                    if message == msg.message:
+                        return msg
+                except AttributeError:
+                    if message == msg.image:
+                        return msg
+            return False
 
 init -1:
     default simplr_pendingContacts = []
