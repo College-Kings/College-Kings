@@ -11,9 +11,6 @@ default menu_set = set()
 default achievementAtList = None
 default freeRoam = False
 
-default kct = "confident"
-default sortedKCT = ["confident", "loyal", "popular"]
-
 
     ## Phone
 default contacts_file_path = os.path.join(config.basedir, "game", "images", "phone", "contacts")
