@@ -5,7 +5,6 @@
 
 label v14s43d:
 # -MC and Riley are sitting across from each other in the empty classroom-
-
     scene v14s43d_1 # TPP. Show MC and Riley sitting across from each other in the class room.
     with dissolve
 
@@ -54,7 +53,6 @@ label v14s43d:
     scene v14s43d_2
     with dissolve
 
-
     ri "You don't."
 
     scene v14s43d_2a
@@ -75,7 +73,6 @@ label v14s43d:
 
         scene v14s43d_2c # FPP. Same as v14s43d_2b, Riley Flirtation smile, mouth open.
         with dissolve
-
 
         ri "Yeah, ha. I am now... Yeah."
 
@@ -147,7 +144,6 @@ label v14s43d:
     u "Ha, okay. And how is that?"
 
     if rileyrs:
-
         scene v14s43d_2f # FPP. Same as v14s43_2e,in the same pose from last scene, Riley flirtatious smile, mouth open.
         with dissolve
 
@@ -177,6 +173,7 @@ label v14s43d:
         with dissolve
 
         ri "*Chuckles*"
+
     else:
         scene v14s43d_2
         with dissolve
@@ -221,7 +218,6 @@ label v14s43d:
             ri "Oh... You like taking control, huh? *Chuckles*"
 
         "I'm submissive": # ;O 
-
             scene v14s43d_2
             with dissolve
             

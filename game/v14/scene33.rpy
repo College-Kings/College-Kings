@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 2), Lauren (Outfit: Nude)
 # Time: Evening
 
-
 label v14s33:
     if joinwolves:
         scene v14s33_1 # TPP. Show MC showering, slight smile, mouth closed
@@ -22,8 +21,10 @@ label v14s33:
 
             if v11s23_penelope_date:
                 jump v14s34
+
             else:
                 jump v14s35
+
         else:
             pause 0.75
 
@@ -216,8 +217,10 @@ label v14s33:
                     
                     if v11s23_penelope_date:
                         jump v14s34
+
                     else:
                         jump v14s35
+
     else:
             scene v14s33_1 # TPP. Show MC showering, slight smile, mouth closed
             with dissolve
