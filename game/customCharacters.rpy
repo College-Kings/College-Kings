@@ -42,13 +42,13 @@ init python:
             self.opinion = None
 
 
-        def create_contact(profile_picture, locked=True):
+        def create_contact(self, profile_picture, locked=True):
             self.messenger = Contact(self.name, profile_picture, locked)
             contacts.append(self.messenger)
 
         
-        def create_simplr(profile_picture, large_profile_picture, condition="True"):
-            self.simplr = SimplrContact(self.name, profile_picture, large_profile_picture, condition)
+        def create_simplr(self, condition="True"):
+            self.simplr = SimplrContact(self.name, condition)
 
 
         def kill(self):
@@ -90,7 +90,6 @@ default penelope = CustomCharacter("Penelope")
 default riley = CustomCharacter("Riley")
 default lindsey = CustomCharacter("Lindsey")
 default lauren = CustomCharacter("Lauren")
-default samantha = CustomCharacter("Samantha")
 default emily = CustomCharacter("Emily")
 default ms_rose = CustomCharacter("Ms Rose")
 default nora = CustomCharacter("Nora")
@@ -108,7 +107,7 @@ default sebastian = CustomCharacter("Sebastian")
 default grayson = CustomCharacter("Grayson")
 default jenny = CustomCharacter("Jenny")
 
-# default simplr_Beth = SimplrContact("Beth", "bethProfilePicture.webp", "bethProfilePictureLarge.webp")
-# default simplr_Iris = SimplrContact("Iris", "irisProfilePicture.webp", "irisProfilePictureLarge.webp")
-# default simplr_Samantha = SimplrContact("Samantha", "samanthaProfilePicture.webp", "samanthaProfilePictureLarge.webp")
-# default simplr_Emmy = SimplrContact("Emmy", "emmyProfilePicture.webp", "emmyProfilePictureLarge.webp")
+default beth = CustomCharacter("Beth")
+default iris = CustomCharacter("Iris")
+default samantha = CustomCharacter("Samantha")
+default emmy = CustomCharacter("Emmy")
