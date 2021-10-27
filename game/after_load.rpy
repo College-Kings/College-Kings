@@ -283,22 +283,22 @@ label after_load:
 
 
         # Simplr Contacts
-        simplr_Beth.profile_picture = "images/phone/simplr/contacts/bethProfilePicture.webp"
-        simplr_Iris.profile_picture = "images/phone/simplr/contacts/irisProfilePicture.webp"
-        simplr_Samantha.profile_picture = "images/phone/simplr/contacts/samanthaProfilePicture.webp"
-        simplr_Emmy.profile_picture = "images/phone/simplr/contacts/emmyProfilePicture.webp"
-
-        simplr_Beth.profile_picture_large = "images/phone/simplr/contacts/bethProfilePictureLarge.webp"
-        simplr_Iris.profile_picture_large = "images/phone/simplr/contacts/irisProfilePictureLarge.webp"
-        simplr_Samantha.profile_picture_large = "images/phone/simplr/contacts/samanthaProfilePictureLarge.webp"
-        simplr_Emmy.profile_picture_large = "images/phone/simplr/contacts/emmyProfilePictureLarge.webp"
-
-        for contact in simplr_pendingContacts + simplr_contacts:
-            try: contact.condition
-            except AttributeError: contact.condition = True
-
-            try: contact.profile_picture
-            except AttributeError: contact.profile_picture = "images/phone/simplr/contacts/bethProfilePicture.webp"
+        try:
+            beth.simplr = simplr_Beth
+            del simplr_Beth
+        except NameError: pass
+        try:
+            iris.simplr = simplr_Iris
+            del simplr_Iris
+        except NameError: pass
+        try:
+            samantha.simplr = simplr_Samantha
+            del simplr_Samantha
+        except NameError: pass
+        try:
+            emmy.simplr = simplr_Emmy
+            del simplr_Emmy
+        except NameError: pass
 
         
         # Items
