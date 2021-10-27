@@ -235,6 +235,44 @@ label after_load:
                         except AttributeError: reply.disabled = False
             except AttributeError: pass
 
+        try: emily = contact_Emily
+        except NameError as e: print(e)
+        try: lauren = contact_Lauren
+        except NameError as e: print(e)
+        try: julia = contact_Julia
+        except NameError as e: print(e)
+        try: ryan = contact_Ryan
+        except NameError as e: print(e)
+        try: josh = contact_Josh
+        except NameError as e: print(e)
+        try: aubrey = contact_Aubrey
+        except NameError as e: print(e)
+        try: chloe = contact_Chloe
+        except NameError as e: print(e)
+        try: evelyn = contact_Evelyn
+        except NameError as e: print(e)
+        try: amber = contact_Amber
+        except NameError as e: print(e)
+        try: penelope = contact_Penelope
+        except NameError as e: print(e)
+        try: riley = contact_Riley
+        except NameError as e: print(e)
+        try: autumn = contact_Autumn
+        except NameError as e: print(e)
+        try: imre = contact_Imre
+        except NameError as e: print(e)
+        try: sebastian = contact_Sebastian
+        except NameError as e: print(e)
+        try: grayson = contact_Grayson
+        except NameError as e: print(e)
+        try: lindsey = contact_Lindsey
+        except NameError as e: print(e)
+        try: jenny = contact_Jenny
+        except NameError as e: print(e)
+        try: nora = contact_Nora
+        except NameError as e: print(e)
+
+
         # Simplr Contacts
         simplr_Beth.profile_picture = "images/phone/simplr/contacts/bethProfilePicture.webp"
         simplr_Iris.profile_picture = "images/phone/simplr/contacts/irisProfilePicture.webp"
