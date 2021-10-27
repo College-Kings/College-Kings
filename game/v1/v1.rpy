@@ -3,13 +3,13 @@ init python:
     def v1_reply1():
         grant_achievement("no_hard_feelings")
 
-        contact_Emily.newMessage(_("Cool :)"))
+        emily.messenger.newMessage(_("Cool :)"))
 
     def v1_reply2():
         grant_achievement("open_wound")
 
         addPoint("tm")
-        contact_Emily.newMessage(_("Ugh :/"))
+        emily.messenger.newMessage(_("Ugh :/"))
 
     # Julia messages
     def v1_reply3():
@@ -25,13 +25,13 @@ init python:
     # Lauren messages
     def v1_reply6():
         addPoint("bf")
-        contact_Lauren.newMessage(_("Cool :)"))
+        lauren.messenger.newMessage(_("Cool :)"))
 
     def v1_reply7():
         addPoint("tm")
-        contact_Lauren.newMessage(_("Idk, it's just feels kinda weird now. Can we please just talk tomorrow?"))
-        contact_Lauren.addReply(_("Fine"))
-        contact_Lauren.newMessage(_(":)"))
+        lauren.messenger.newMessage(_("Idk, it's just feels kinda weird now. Can we please just talk tomorrow?"))
+        lauren.messenger.addReply(_("Fine"))
+        lauren.messenger.newMessage(_(":)"))
 
 label v1start:
 label starta: #for compatibility only
@@ -162,9 +162,9 @@ label starta: #for compatibility only
     u "(Huh?)"
     
     # Emily's messages
-    $ contact_Emily.newMessage(_("Hey...\nI know we haven't talked much after we broke up, but I just wanted to let you know that I didn't get into Stanford, so I'll be going to San Vallejo as well.\nGuess I'll see you there. :)"), queue=False)
-    $ contact_Emily.addReply(_("Yeah... I'll see you there."), v1_reply1)
-    $ contact_Emily.addReply(_("You cheated on me.\nGo to hell!"), v1_reply2)
+    $ emily.messenger.newMessage(_("Hey...\nI know we haven't talked much after we broke up, but I just wanted to let you know that I didn't get into Stanford, so I'll be going to San Vallejo as well.\nGuess I'll see you there. :)"), queue=False)
+    $ emily.messenger.addReply(_("Yeah... I'll see you there."), v1_reply1)
+    $ emily.messenger.addReply(_("You cheated on me.\nGo to hell!"), v1_reply2)
 
     show screen phoneTutorial
     call screen phone
@@ -868,9 +868,9 @@ label starta: #for compatibility only
     scene s50 # freeroam
     with dissolve
 
-    $ contact_Julia.newMessage(_("Hey honey,\nenjoy your time in college.\nStay safe and don't forget to visit me.\nLove you"), queue=False)
-    $ contact_Julia.addReply(_("Love you too."), v1_reply3)
-    $ contact_Julia.addReply(_("Thanks, Julia :)"), v1_reply4)
+    $ julia.messenger.newMessage(_("Hey honey,\nenjoy your time in college.\nStay safe and don't forget to visit me.\nLove you"), queue=False)
+    $ julia.messenger.addReply(_("Love you too."), v1_reply3)
+    $ julia.messenger.addReply(_("Thanks, Julia :)"), v1_reply4)
 
     play sound "sounds/vibrate.mp3"
     
@@ -1421,17 +1421,17 @@ label efra:
     scene s61a
     with dissolve
 
-    $ contact_Lauren.addReply(_("Hey Lauren, would you want to hang out with me and my friends tonight?"))
-    $ contact_Lauren.newMessage(_("Yeah sounds good :) Where do you wanna meet?"))
-    $ contact_Lauren.addReply(_("Just come to dorm 109 at 8"))
-    $ contact_Lauren.newMessage(_("Okay, will do"))
-    $ contact_Lauren.addReply(_("See you later, cutie"), v1_reply5)
-    $ contact_Lauren.addReply(_("Cool"))
+    $ lauren.messenger.addReply(_("Hey Lauren, would you want to hang out with me and my friends tonight?"))
+    $ lauren.messenger.newMessage(_("Yeah sounds good :) Where do you wanna meet?"))
+    $ lauren.messenger.addReply(_("Just come to dorm 109 at 8"))
+    $ lauren.messenger.newMessage(_("Okay, will do"))
+    $ lauren.messenger.addReply(_("See you later, cutie"), v1_reply5)
+    $ lauren.messenger.addReply(_("Cool"))
 
     label v1_phoneCheck1:
-        if contact_Lauren.replies:
+        if lauren.messenger.replies:
             call screen phone
-        if contact_Lauren.replies:
+        if lauren.messenger.replies:
             "(I should reply to Lauren.)"
 
             scene s61
@@ -2908,16 +2908,16 @@ label aw_bd:
     stop music fadeout 2.0
     play sound "sounds/vibrate.mp3"
 
-    $ contact_Ryan.newMessage(_("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???"), queue=False)
-    $ contact_Ryan.addReply(_("Alright, but I'll only stay for a few hours."))
-    $ contact_Ryan.newMessage(_("Haha, trust me, you're not gonna want to leave once you see all the hot chicks there."))
-    $ contact_Ryan.newMessage(_("Just meet me in front of the Apes' frat house at 9."))
-    $ contact_Ryan.addReply(_("Okay, will do."))
+    $ ryan.messenger.newMessage(_("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???"), queue=False)
+    $ ryan.messenger.addReply(_("Alright, but I'll only stay for a few hours."))
+    $ ryan.messenger.newMessage(_("Haha, trust me, you're not gonna want to leave once you see all the hot chicks there."))
+    $ ryan.messenger.newMessage(_("Just meet me in front of the Apes' frat house at 9."))
+    $ ryan.messenger.addReply(_("Okay, will do."))
 
     label repeata:
-        if contact_Ryan.replies:
-             call screen phone
-        if contact_Ryan.replies:
+        if ryan.messenger.replies:
+            call screen phone
+        if ryan.messenger.replies:
             u "(I should really check who texted me.)"
             jump repeata
 
@@ -3435,10 +3435,10 @@ label v1_freeRoam2_camp:
     else:
         play sound "sounds/vibrate.mp3"
 
-        if not contact_Lauren.get_message("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"):
-            $ contact_Lauren.newMessage(_("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"), queue=False)
-            $ contact_Lauren.addReply(_("Yeah, sure."), v1_reply6)
-            $ contact_Lauren.addReply(_("What is there to talk about?"), v1_reply7)
+        if not lauren.messenger.get_message("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"):
+            $ lauren.messenger.newMessage(_("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"), queue=False)
+            $ lauren.messenger.addReply(_("Yeah, sure."), v1_reply6)
+            $ lauren.messenger.addReply(_("What is there to talk about?"), v1_reply7)
 
         call screen v1_freeRoam2_4
 

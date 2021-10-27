@@ -23,10 +23,10 @@ label v10_waking_up_end:
         with dissolve
 
         python:
-            contact_Penelope.newMessage("Hey, do you mind coming by before the hearing starts?", queue=False)
-            contact_Penelope.newMessage("Hey! Where are you, the hearing is in two hours.", queue=False)
-            contact_Penelope.newMessage("WHERE ARE YOU THE HEARING IS IN 15 MINUTES!?", queue=False)
-            contact_Penelope.newMessage("OMG, WE'RE STARTING! WHERE ARE YOU?", queue=False)
+            penelope.messenger.newMessage("Hey, do you mind coming by before the hearing starts?", queue=False)
+            penelope.messenger.newMessage("Hey! Where are you, the hearing is in two hours.", queue=False)
+            penelope.messenger.newMessage("WHERE ARE YOU THE HEARING IS IN 15 MINUTES!?", queue=False)
+            penelope.messenger.newMessage("OMG, WE'RE STARTING! WHERE ARE YOU?", queue=False)
 
         u "(Oh shit, Penelope has been blowing me up.)"
         
@@ -62,10 +62,10 @@ label v10_waking_up_end:
         with dissolve
 
         python:
-            contact_Penelope.newMessage("Hey, do you mind coming by before the hearing starts?", queue=False)
-            contact_Penelope.newMessage("Hey! Where are you, the hearing is in two hours.", queue=False)
-            contact_Penelope.newMessage("WHERE ARE YOU THE HEARING IS IN 15 MINUTES!?", queue=False)
-            contact_Penelope.newMessage("OMG, WE'RE STARTING! WHERE ARE YOU?", queue=False)
+            penelope.messenger.newMessage("Hey, do you mind coming by before the hearing starts?", queue=False)
+            penelope.messenger.newMessage("Hey! Where are you, the hearing is in two hours.", queue=False)
+            penelope.messenger.newMessage("WHERE ARE YOU THE HEARING IS IN 15 MINUTES!?", queue=False)
+            penelope.messenger.newMessage("OMG, WE'RE STARTING! WHERE ARE YOU?", queue=False)
 
         u "(Oh shit, Penelope has been blowing me up.)"
 

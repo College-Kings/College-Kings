@@ -39,20 +39,20 @@ label v12_simplr_convo:
 
     u "(Haven't checked out Simplr in a while.)"
 
-    if simplr_Emmy in simplr_contacts:
+    if emmy.simplr in simplr_contacts:
 
         $ v12s24_emmymatch = True
 
-        $ simplr_Emmy.newMessage("Hey handsome, I was hoping I'd match with you. Where are you from?", queue=False)
-        $ simplr_Emmy.addReply("I'm actually in Paris right now, but I'm from California. Wbu?")
-        $ simplr_Emmy.newMessage("Wow, my distance settings are way off. I'm from Amsterdam.")
-        $ simplr_Emmy.addReply("Haha, call it a coincidence, but I'm actually headed to Amsterdam here soon.")
-        $ simplr_Emmy.newMessage("Wowww, guess I got a headstart on all the other Amsterdam chicks huh?")
-        $ simplr_Emmy.addReply("Ha, I'm thinking I'm the lucky one.")
-        $ simplr_Emmy.newMessage("There's actually a Simplr event they do regularly here, you should stop by when you come and maybe we'll run into each other.")
-        $ simplr_Emmy.addReply("I'll definitely look into that.")
-        $ simplr_Emmy.newMessage("Good, I know it's late so goodnight handsome ;)")
-        $ simplr_Emmy.addReply("Goodnight ;)")
+        $ emmy.simplr.newMessage("Hey handsome, I was hoping I'd match with you. Where are you from?", queue=False)
+        $ emmy.simplr.addReply("I'm actually in Paris right now, but I'm from California. Wbu?")
+        $ emmy.simplr.newMessage("Wow, my distance settings are way off. I'm from Amsterdam.")
+        $ emmy.simplr.addReply("Haha, call it a coincidence, but I'm actually headed to Amsterdam here soon.")
+        $ emmy.simplr.newMessage("Wowww, guess I got a headstart on all the other Amsterdam chicks huh?")
+        $ emmy.simplr.addReply("Ha, I'm thinking I'm the lucky one.")
+        $ emmy.simplr.newMessage("There's actually a Simplr event they do regularly here, you should stop by when you come and maybe we'll run into each other.")
+        $ emmy.simplr.addReply("I'll definitely look into that.")
+        $ emmy.simplr.newMessage("Good, I know it's late so goodnight handsome ;)")
+        $ emmy.simplr.addReply("Goodnight ;)")
 
         call screen phone
 

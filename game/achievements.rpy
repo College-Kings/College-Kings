@@ -1,4 +1,4 @@
-init python:
+init python: # test - steve is cool.
     achievements = []
 
     class Achievement:

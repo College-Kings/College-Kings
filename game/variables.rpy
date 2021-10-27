@@ -1,3 +1,7 @@
+init python:
+    import os
+
+
 ## Init
 define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
@@ -9,6 +13,11 @@ default freeRoam = False
 
 default kct = "confident"
 default sortedKCT = ["confident", "loyal", "popular"]
+
+
+    ## Phone
+default contacts_file_path = os.path.join(config.basedir, "game", "images", "phone", "contacts")
+
 
     ## Kiwii Vars
 default kiwiiUsers = kiwii_users()
