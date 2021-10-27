@@ -1,52 +1,52 @@
 init python:
     def v6_reply1():
         addPoint("bro")
-        contact_Amber.newMessage(_("I'm playing drink or dare and got dared to send an underwear pic to a guy."))
-        contact_Amber.addReply(_("And you chose me, huh?"), v6_reply2)
-        contact_Amber.addReply(_("Feel free to do so anytime :)"), v6_reply3)
+        amber.messenger.newMessage(_("I'm playing drink or dare and got dared to send an underwear pic to a guy."))
+        amber.messenger.addReply(_("And you chose me, huh?"), v6_reply2)
+        amber.messenger.addReply(_("Feel free to do so anytime :)"), v6_reply3)
 
     def v6_reply2():
         addPoint("bro")
-        contact_Amber.newMessage(_("Maybe I picked someone at random ;)"))
+        amber.messenger.newMessage(_("Maybe I picked someone at random ;)"))
 
     def v6_reply3():
         addPoint("bf")
-        contact_Amber.newMessage(_("Maybe if you're lucky xx"))
+        amber.messenger.newMessage(_("Maybe if you're lucky xx"))
 
     def v6_reply4():
         addPoint("bf")
-        contact_Amber.newMessage(_("I'm glad you like it xx"))
-        contact_Amber.addReply(_( "I hope there's more of that in the future :P"))
-        contact_Amber.newMessage(_("Maybe if you're lucky xx"))
+        amber.messenger.newMessage(_("I'm glad you like it xx"))
+        amber.messenger.addReply(_( "I hope there's more of that in the future :P"))
+        amber.messenger.newMessage(_("Maybe if you're lucky xx"))
 
     def v6_reply5():
         addPoint("tm")
         addPoint("bro")
-        contact_Amber.newMessage(_("Moment's passed..."))
+        amber.messenger.newMessage(_("Moment's passed..."))
 
     def v6_reply6():
         addPoint("bf")
-        contact_Amber.newMessage(_("You better xx"))
+        amber.messenger.newMessage(_("You better xx"))
 
     def v6_reply7():
         setattr(store, "meetaubrey", True)
-        contact_Aubrey.newMessage(_(":)"))
+        aubrey.messenger.newMessage(_(":)"))
 
     def v6_reply8():
         setattr(store, "meetaubrey", False)
-        contact_Aubrey.newMessage(_("Oh, okay"))
+        aubrey.messenger.newMessage(_("Oh, okay"))
 
     def v6_reply9():
         setattr(store, "homeworkout", True)
-        contact_Amber.newMessage(_("Yeah maybe we should xx"))
+        amber.messenger.newMessage(_("Yeah maybe we should xx"))
 
     def v6_reply10():
         addPoint("bf")
         setattr(store, "homrworkout", False)
 
     def v6_reply11():
-        contact_Amber.addReply(_("I'm alone now, if the surprise is still on ;)"), v6_reply5)
-        contact_Amber.addReply(_("I'll make it up to you tho"), v6_reply6)
+        amber.messenger.addReply(_("I'm alone now, if the surprise is still on ;)"), v6_reply5)
+        amber.messenger.addReply(_("I'll make it up to you tho"), v6_reply6)
 
 label script06: #for compatibility only
 label v6start:
@@ -352,15 +352,15 @@ label imreconc: # Keep talking to Amber
     scene s475 # MC in a remote location
     with fade
 
-    $ contact_Amber.addReply(_("I'm all by myself now."))
-    $ contact_Amber.newImgMessage("images/text2.webp")
-    $ contact_Amber.addReply(_("Woah, what was that for?"), v6_reply1)
-    $ contact_Amber.addReply(_("Oh wow, you're so fucking hot"), v6_reply4)
+    $ amber.messenger.addReply(_("I'm all by myself now."))
+    $ amber.messenger.newImgMessage("images/text2.webp")
+    $ amber.messenger.addReply(_("Woah, what was that for?"), v6_reply1)
+    $ amber.messenger.addReply(_("Oh wow, you're so fucking hot"), v6_reply4)
 
     label phonead:
-        if contact_Amber.replies:
+        if amber.messenger.replies:
             call screen phone
-        if contact_Amber.replies:
+        if amber.messenger.replies:
             u "(Time to text Amber.)"
             jump phonead
 
@@ -375,15 +375,15 @@ label imreconc: # Keep talking to Amber
 label imrecond: # Meet Chloe
     u "(Fuck it, Chloe's more important.)"
 
-    $ contact_Chloe.addReply(_("I'll make time for you :)"))
-    $ contact_Chloe.newMessage(_("That's what I like to hear :*"))
-    $ contact_Chloe.newMessage(_("Meet me at the school's swimming pool"))
-    $ contact_Chloe.addReply(_("Cool, see you there"))
+    $ chloe.messenger.addReply(_("I'll make time for you :)"))
+    $ chloe.messenger.newMessage(_("That's what I like to hear :*"))
+    $ chloe.messenger.newMessage(_("Meet me at the school's swimming pool"))
+    $ chloe.messenger.addReply(_("Cool, see you there"))
 
     label phoneac:
-        if contact_Chloe.replies:
+        if chloe.messenger.replies:
             call screen phone
-        if contact_Chloe.replies:
+        if chloe.messenger.replies:
             u "(I should reply to Chloe.)"
             jump phoneac
 
@@ -985,15 +985,15 @@ label continuebb:
     if chooseimre and chloemad: # Amber texts why you never got back to her
         play sound "sounds/vibrate.mp3"
         
-        $ contact_Amber.newMessage(_("I guess you didn't want my surprise :/"), queue=False)
-        $ contact_Amber.addReply(_("Sorry something important came up and I didn't have time."), v6_reply11)
+        $ amber.messenger.newMessage(_("I guess you didn't want my surprise :/"), queue=False)
+        $ amber.messenger.addReply(_("Sorry something important came up and I didn't have time."), v6_reply11)
 
         " "
 
         label phoneae:
-            if contact_Amber.replies:
+            if amber.messenger.replies:
                 call screen phone
-            if contact_Amber.replies:
+            if amber.messenger.replies:
                 u "(I should probably reply to my messages.)"
                 jump phoneae
 
@@ -1001,27 +1001,27 @@ label continuebb:
 
     elif chooseimre: # Amber texts you about the pic, chloe texts you about you not responding
         play sound "sounds/vibrate.mp3"
-        $ contact_Chloe.newMessage(_("I guess we'll do it another time..."), queue=False)
-        $ contact_Chloe.addReply(_("Sorry, something really important came up. Definitely another time"))
-        $ contact_Chloe.newMessage(_("Okay"))
+        $ chloe.messenger.newMessage(_("I guess we'll do it another time..."), queue=False)
+        $ chloe.messenger.addReply(_("Sorry, something really important came up. Definitely another time"))
+        $ chloe.messenger.newMessage(_("Okay"))
 
     elif chloemad and not chloecaught:
         jump continuebd
             
     play sound "sounds/vibrate.mp3"
     
-    $ contact_Amber.newMessage(_("Hey, you alone? xx"), queue=False)
-    $ contact_Amber.addReply(_("Yeah, I'm in my dorm, why?"))
-    $ contact_Amber.newImgMessage("images/text2.webp")
-    $ contact_Amber.addReply(_("Woah, what was that for?"), v6_reply1)
-    $ contact_Amber.addReply(_("Oh wow, you're so fucking hot"), v6_reply4)
+    $ amber.messenger.newMessage(_("Hey, you alone? xx"), queue=False)
+    $ amber.messenger.addReply(_("Yeah, I'm in my dorm, why?"))
+    $ amber.messenger.newImgMessage("images/text2.webp")
+    $ amber.messenger.addReply(_("Woah, what was that for?"), v6_reply1)
+    $ amber.messenger.addReply(_("Oh wow, you're so fucking hot"), v6_reply4)
 
     " "
 
     label phoneaf:
-        if contact_Amber.replies:
+        if amber.messenger.replies:
             call screen phone
-        if contact_Amber.replies:
+        if amber.messenger.replies:
             u "(I should probably reply to my messages.)"
             jump phoneaf
 
@@ -3674,17 +3674,17 @@ label fy_bd: # not gone to Emily's
             u "(We never really clicked. That probably means I missed my shot with her...)"
 
         play sound "sounds/vibrate.mp3"
-        $ contact_Aubrey.newMessage(_("Hey, I know it's late... but wanna come over?"), queue=False)
-        $ contact_Aubrey.addReply(_("Yeah, sure."), v6_reply7)
-        $ contact_Aubrey.addReply(_("Sorry, I can't tonight."), v6_reply8)
+        $ aubrey.messenger.newMessage(_("Hey, I know it's late... but wanna come over?"), queue=False)
+        $ aubrey.messenger.addReply(_("Yeah, sure."), v6_reply7)
+        $ aubrey.messenger.addReply(_("Sorry, I can't tonight."), v6_reply8)
 
         " "
 
         label phoneag:
             stop music fadeout 2.0
-            if contact_Aubrey.replies:
+            if aubrey.messenger.replies:
                 call screen phone
-            if contact_Aubrey.replies:
+            if aubrey.messenger.replies:
                 u "(I should check my messages.)"
                 jump phoneag
 
@@ -3701,9 +3701,9 @@ label fy_bd: # not gone to Emily's
         scene s546 # phone close up, it's 10:30 pm, message from Aubrey
         with dissolve
 
-        $ contact_Aubrey.newMessage(_("Hey, I know it's late... but wanna come over?"), queue=False)
-        $ contact_Aubrey.addReply(_("Yeah, sure."), v6_reply7)
-        $ contact_Aubrey.addReply(_("Sorry, I can't tonight."), v6_reply8)
+        $ aubrey.messenger.newMessage(_("Hey, I know it's late... but wanna come over?"), queue=False)
+        $ aubrey.messenger.addReply(_("Yeah, sure."), v6_reply7)
+        $ aubrey.messenger.addReply(_("Sorry, I can't tonight."), v6_reply8)
 
         u "(Shit, it's already 10:30? Wonder what Aubrey's messaging about.)"
 
@@ -3711,9 +3711,9 @@ label fy_bd: # not gone to Emily's
             scene s565 # mc sitting at his desk
             with dissolve
 
-            if contact_Aubrey.replies:
+            if aubrey.messenger.replies:
                 call screen phone
-            if contact_Aubrey.replies:
+            if aubrey.messenger.replies:
                 u "(I should probably reply to Aubrey.)"
                 jump v6_phoneah
 
@@ -4433,17 +4433,17 @@ label afteraubrey:
         play sound "sounds/vibrate.mp3"
 
         if config_censored:
-            $ contact_Aubrey.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
+            $ aubrey.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
         else:
-            $ contact_Aubrey.newImgMessage("images/text3.webp", queue=False)
+            $ aubrey.messenger.newImgMessage("images/text3.webp", queue=False)
 
         if meetaubrey:
-            $ contact_Aubrey.newMessage(_("Still shaking from earlier"), queue=False)
-            $ contact_Aubrey.addReply(_("Hahaha, we should definitely do this more ;)"))
+            $ aubrey.messenger.newMessage(_("Still shaking from earlier"), queue=False)
+            $ aubrey.messenger.addReply(_("Hahaha, we should definitely do this more ;)"))
 
         else:
-            $ contact_Aubrey.newMessage(_("You missed out today"), queue=False)
-            $ contact_Aubrey.addReply(_("Daaaamn, I'll be there next time"))
+            $ aubrey.messenger.newMessage(_("You missed out today"), queue=False)
+            $ aubrey.messenger.addReply(_("Daaaamn, I'll be there next time"))
 
         " "
 
@@ -5419,29 +5419,29 @@ label wakeupa:
     scene s609 # mc walking home by himself after the gym
     with fade
     
-    $ contact_Amber.newMessage(_("Heyy, what are you up to? xx"), queue=False)
-    $ contact_Amber.addReply(_("Just walking back from the gym wbu?"))
-    $ contact_Amber.newMessage(_("Going to my next lecture x_x"))
-    $ contact_Amber.newMessage(_("Which gym do you go to? Maybe we can go together at some point"))
-    $ contact_Amber.addReply(_("Sports X and you?"))
-    $ contact_Amber.newMessage(_("Awww I'm SV Fitness :("))
-    $ contact_Amber.addReply(_("Maybe we should do a home workout together sometime ;)"), v6_reply9)
-    $ contact_Amber.addReply(_("Yeah, that's too bad :/"), v6_reply10)
+    $ amber.messenger.newMessage(_("Heyy, what are you up to? xx"), queue=False)
+    $ amber.messenger.addReply(_("Just walking back from the gym wbu?"))
+    $ amber.messenger.newMessage(_("Going to my next lecture x_x"))
+    $ amber.messenger.newMessage(_("Which gym do you go to? Maybe we can go together at some point"))
+    $ amber.messenger.addReply(_("Sports X and you?"))
+    $ amber.messenger.newMessage(_("Awww I'm SV Fitness :("))
+    $ amber.messenger.addReply(_("Maybe we should do a home workout together sometime ;)"), v6_reply9)
+    $ amber.messenger.addReply(_("Yeah, that's too bad :/"), v6_reply10)
 
     if bowling:
-        $ contact_Penelope.addReply(_("Hey, you wanna go bowling today? I'm free this afternoon"))
-        $ contact_Penelope.newMessage(_("Yeah, sounds good :)"))
-        $ contact_Penelope.newMessage(_("I have a lecture at 2:30 but I can go straight to the bowling alley afterwards"))
-        $ contact_Penelope.newMessage(_("Meet there at 4?"))
-        $ contact_Penelope.addReply(_("Yesss, see you there"))
+        $ penelope.messenger.addReply(_("Hey, you wanna go bowling today? I'm free this afternoon"))
+        $ penelope.messenger.newMessage(_("Yeah, sounds good :)"))
+        $ penelope.messenger.newMessage(_("I have a lecture at 2:30 but I can go straight to the bowling alley afterwards"))
+        $ penelope.messenger.newMessage(_("Meet there at 4?"))
+        $ penelope.messenger.addReply(_("Yesss, see you there"))
 
         u "(I should ask Penelope whether she wants to do bowling this afternoon.)"
 
         call screen phone
         label phoneak:
-            if contact_Penelope.replies:
+            if penelope.messenger.replies:
                 call screen phone
-            if contact_Penelope.replies:
+            if penelope.messenger.replies:
                 u "(I should really text Penelope.)"
                 jump phoneak
 

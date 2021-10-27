@@ -6,10 +6,10 @@
 # Please look at the rpy file along with the render table to get a good idea of the scene's dynamics
 
 label msrose_moving:
-    $ contact_Penelope.addReply(_("Hey, how you holding up?"))
-    $ contact_Penelope.newMessage(_("Better, thanks to you"))
-    $ contact_Penelope.addReply(_("No problem. I'm here for you. Let me know if you need anything else."))
-    $ contact_Penelope.newMessage(_("Thank you! :)"))
+    $ penelope.messenger.addReply(_("Hey, how you holding up?"))
+    $ penelope.messenger.newMessage(_("Better, thanks to you"))
+    $ penelope.messenger.addReply(_("No problem. I'm here for you. Let me know if you need anything else."))
+    $ penelope.messenger.newMessage(_("Thank you! :)"))
 
     scene v8smcrm99
     with dissolve
@@ -20,9 +20,9 @@ label msrose_moving:
     u "(Should I check how Penelope's doing?)"
 
     label phn_penelope6:
-        if contact_Penelope.replies:
+        if penelope.messenger.replies:
             call screen phone
-        if contact_Penelope.replies:
+        if penelope.messenger.replies:
             u "(I should talk to Penelope.)"
             jump phn_penelope6
 

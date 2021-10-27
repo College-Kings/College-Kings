@@ -18,11 +18,13 @@ init python:
 
     class CustomCharacter:
         """
-        Custom character class primarily used for the murder mystery game in v12s7
+        Custom character class primarily used for managing all the character specific function of the game.
+            - Messenger
+            - Simplr
+            - Murder Mystery
 
         Attributes:
             name (str): The display name for the character
-            profile_picture (str): The relative path for this character's profile picture
         """
 
         def __init__(self, name):
@@ -42,6 +44,7 @@ init python:
 
         def create_contact(profile_picture, locked=True):
             self.messenger = Contact(self.name, profile_picture, locked)
+            contacts.append(self.messenger)
 
         
         def create_simplr(profile_picture, large_profile_picture, condition="True"):
@@ -98,26 +101,12 @@ default chris = CustomCharacter("Chris")
 default charli = CustomCharacter("Charli")
 default cameron = CustomCharacter("Cameron")
 default josh = CustomCharacter("Josh")
-
-
-# default contact_Emily = Contact("Emily", "emilyprofilepic.webp")
-# default contact_Lauren = Contact("Lauren", "laurenprofilepic.webp")
-# default contact_Julia = Contact("Julia", "juliaprofilepic.webp")
-# default contact_Ryan = Contact("Ryan", "ryanprofilepic.webp")
-# default contact_Josh = Contact("Josh", "joshprofilepic.webp")
-# default contact_Aubrey = Contact("Aubrey", "aubreyprofilepic.webp")
-# default contact_Chloe = Contact("Chloe", "chloeprofilepic.webp")
-# default contact_Evelyn = Contact("Evelyn", "evelynprofilepic.webp")
-# default contact_Amber = Contact("Amber", "amberprofilepic.webp")
-# default contact_Penelope = Contact("Penelope", "penelopeprofilepic.webp")
-# default contact_Riley = Contact("Riley", "rileyprofilepic.webp")
-# default contact_Autumn = Contact("Autumn", "autumnprofilepic.webp")
-# default contact_Imre = Contact("Imre", "imreprofilepic.webp")
-# default contact_Sebastian = Contact("Sebastian", "sebastianprofilepicture.webp")
-# default contact_Grayson = Contact("Grayson", "graysonprofilepicture.webp")
-# default contact_Lindsey = Contact("Lindsey", "lindseyprofilepic.webp")
-# default contact_Jenny = Contact("Jenny", "jennyprofilepicture.webp")
-# default contact_Nora = Contact("Nora", "noraprofilepicture.webp")
+default julia = CustomCharacter("Julia")
+default evelyn = CustomCharacter("Evelyn")
+default autumn = CustomCharacter("Autumn")
+default sebastian = CustomCharacter("Sebastian")
+default grayson = CustomCharacter("Grayson")
+default jenny = CustomCharacter("Jenny")
 
 # default simplr_Beth = SimplrContact("Beth", "bethProfilePicture.webp", "bethProfilePictureLarge.webp")
 # default simplr_Iris = SimplrContact("Iris", "irisProfilePicture.webp", "irisProfilePictureLarge.webp")

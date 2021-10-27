@@ -169,31 +169,6 @@ label after_load:
 
 
         # Contacts
-        contact_Lindsey.profile_picture = "images/phone/messages/profile_pictures/lindseyprofilepic.webp"
-        contact_Emily.profile_picture = "images/phone/messages/profile_pictures/emilyprofilepic.webp"
-        contact_Lauren.profile_picture = "images/phone/messages/profile_pictures/laurenprofilepic.webp"
-        contact_Julia.profile_picture = "images/phone/messages/profile_pictures/juliaprofilepic.webp"
-        contact_Ryan.profile_picture = "images/phone/messages/profile_pictures/ryanprofilepic.webp"
-        contact_Josh.profile_picture = "images/phone/messages/profile_pictures/joshprofilepic.webp"
-        contact_Aubrey.profile_picture = "images/phone/messages/profile_pictures/aubreyprofilepic.webp"
-        contact_Chloe.profile_picture = "images/phone/messages/profile_pictures/chloeprofilepic.webp"
-        contact_Evelyn.profile_picture = "images/phone/messages/profile_pictures/evelynprofilepic.webp"
-        contact_Amber.profile_picture = "images/phone/messages/profile_pictures/amberprofilepic.webp"
-        contact_Penelope.profile_picture = "images/phone/messages/profile_pictures/penelopeprofilepic.webp"
-        contact_Riley.profile_picture = "images/phone/messages/profile_pictures/rileyprofilepic.webp"
-        contact_Autumn.profile_picture = "images/phone/messages/profile_pictures/autumnprofilepic.webp"
-        contact_Imre.profile_picture = "images/phone/messages/profile_pictures/imreprofilepic.webp"
-        contact_Sebastian.profile_picture = "images/phone/messages/profile_pictures/sebastianprofilepicture.webp"
-        contact_Grayson.profile_picture = "images/phone/messages/profile_pictures/graysonprofilepicture.webp"
-        contact_Lindsey.profile_picture = "images/phone/messages/profile_pictures/lindseyprofilepic.webp"
-        contact_Jenny.profile_picture = "images/phone/messages/profile_pictures/jennyprofilepicture.webp"
-        contact_Nora.profile_picture = "images/phone/messages/profile_pictures/noraprofilepicture.webp"
-
-        if contact_Grayson not in contacts:
-            contacts.append(contact_Grayson)
-        if contact_Lindsey not in contacts:
-            contacts.append(contact_Lindsey)
-
         for contact in contacts:
             try: contact.pendingMessages
             except AttributeError: contact.pendingMessages = []
@@ -235,42 +210,76 @@ label after_load:
                         except AttributeError: reply.disabled = False
             except AttributeError: pass
 
-        try: emily = contact_Emily
-        except NameError as e: print(e)
-        try: lauren = contact_Lauren
-        except NameError as e: print(e)
-        try: julia = contact_Julia
-        except NameError as e: print(e)
-        try: ryan = contact_Ryan
-        except NameError as e: print(e)
-        try: josh = contact_Josh
-        except NameError as e: print(e)
-        try: aubrey = contact_Aubrey
-        except NameError as e: print(e)
-        try: chloe = contact_Chloe
-        except NameError as e: print(e)
-        try: evelyn = contact_Evelyn
-        except NameError as e: print(e)
-        try: amber = contact_Amber
-        except NameError as e: print(e)
-        try: penelope = contact_Penelope
-        except NameError as e: print(e)
-        try: riley = contact_Riley
-        except NameError as e: print(e)
-        try: autumn = contact_Autumn
-        except NameError as e: print(e)
-        try: imre = contact_Imre
-        except NameError as e: print(e)
-        try: sebastian = contact_Sebastian
-        except NameError as e: print(e)
-        try: grayson = contact_Grayson
-        except NameError as e: print(e)
-        try: lindsey = contact_Lindsey
-        except NameError as e: print(e)
-        try: jenny = contact_Jenny
-        except NameError as e: print(e)
-        try: nora = contact_Nora
-        except NameError as e: print(e)
+
+        # Transfer Contact object to CustomCharacter class
+        try:
+            emily.messenger = contact_Emily
+            del contact_Emily
+        except NameError: pass
+        try:
+            lauren.messenger = contact_Lauren
+            del contact_Lauren
+        except NameError: pass
+        try:
+            julia.messenger = contact_Julia
+            del contact_Julia
+        except NameError: pass
+        try:
+            ryan.messenger = contact_Ryan
+            del contact_Ryan
+        except NameError: pass
+        try:
+            josh.messenger = contact_Josh
+            del contact_Josh
+        except NameError: pass
+        try:
+            aubrey.messenger = contact_Aubrey
+            del contact_Aubrey
+        except NameError: pass
+        try:
+            chloe.messenger = contact_Chloe
+            del contact_Chloe
+        except NameError: pass
+        try:
+            amber.messenger = contact_Amber
+            del contact_Amber
+        except NameError: pass
+        try:
+            penelope.messenger = contact_Penelope
+            del contact_Penelope
+        except NameError: pass
+        try:
+            riley.messenger = contact_Riley
+            del contact_Riley
+        except NameError: pass
+        try:
+            autumn.messenger = contact_Autumn
+            del contact_Autumn
+        except NameError: pass
+        try:
+            imre.messenger = contact_Imre
+            del contact_Imre
+        except NameError: pass
+        try:
+            sebastian.messenger = contact_Sebastian
+            del contact_Sebastian
+        except NameError: pass
+        try:
+            grayson.messenger = contact_Grayson
+            del contact_Grayson
+        except NameError: pass
+        try:
+            lindsey.messenger = contact_Lindsey
+            del contact_Lindsey
+        except NameError: pass
+        try:
+            jenny.messenger = contact_Jenny
+            del contact_Jenny
+        except NameError: pass
+        try:
+            nora.messenger = contact_Nora
+            del contact_Nora
+        except NameError: pass
 
 
         # Simplr Contacts

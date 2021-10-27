@@ -24,17 +24,17 @@ label v9_room_fri_eve:
             u "(Wonder how Lauren's doing with the Deers charity.)"
 
 
-            $ contact_Lauren.addReply(_("How's it going? You still doing our statue idea?"))
-            $ contact_Lauren.newMessage(_("Of course. I'm glad you talked me into it."))
-            $ contact_Lauren.addReply(_("Me too. I don't think anyone's tried something like this before. You'll be the talk of the school!"))
-            $ contact_Lauren.newMessage(_("No, WE will. I couldn't have done it without your help."))
-            $ contact_Lauren.addReply(_("Don't mention it, talk soon?"))
-            $ contact_Lauren.newMessage(_("Sure!"))
+            $ lauren.messenger.addReply(_("How's it going? You still doing our statue idea?"))
+            $ lauren.messenger.newMessage(_("Of course. I'm glad you talked me into it."))
+            $ lauren.messenger.addReply(_("Me too. I don't think anyone's tried something like this before. You'll be the talk of the school!"))
+            $ lauren.messenger.newMessage(_("No, WE will. I couldn't have done it without your help."))
+            $ lauren.messenger.addReply(_("Don't mention it, talk soon?"))
+            $ lauren.messenger.newMessage(_("Sure!"))
 
             label s25_ContinueW:
-                if contact_Lauren.replies:
+                if lauren.messenger.replies:
                     call screen phone
-                if contact_Lauren.replies:
+                if lauren.messenger.replies:
                     "(I should text Lauren.)"
                     jump s25_ContinueW
 
@@ -68,17 +68,17 @@ label v9_room_fri_eve:
 
             u "(Wonder how Lauren's doing with the Deers charity.)"
 
-            $ contact_Lauren.addReply(_("How's it going? You still doing our statue idea?"))
-            $ contact_Lauren.newMessage(_("Of course. I'm glad you talked me into it."))
-            $ contact_Lauren.addReply(_("Me too. I don't think anyone's tried something like this before. You'll be the talk of the school!"))
-            $ contact_Lauren.newMessage(_("No, WE will. I couldn't have done it without your help."))
-            $ contact_Lauren.addReply(_("Don't mention it, talk soon?"))
-            $ contact_Lauren.newMessage(_("Sure!"))
+            $ lauren.messenger.addReply(_("How's it going? You still doing our statue idea?"))
+            $ lauren.messenger.newMessage(_("Of course. I'm glad you talked me into it."))
+            $ lauren.messenger.addReply(_("Me too. I don't think anyone's tried something like this before. You'll be the talk of the school!"))
+            $ lauren.messenger.newMessage(_("No, WE will. I couldn't have done it without your help."))
+            $ lauren.messenger.addReply(_("Don't mention it, talk soon?"))
+            $ lauren.messenger.newMessage(_("Sure!"))
             
             label s25_ContinueA:
-                if contact_Lauren.replies:
+                if lauren.messenger.replies:
                     call screen phone
-                if contact_Lauren.replies:
+                if lauren.messenger.replies:
                     "(I should text Lauren.)"
                     jump s25_ContinueA
 

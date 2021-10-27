@@ -9,12 +9,12 @@ label v14s24:
 
     pause 0.75
 
-    $ contact_Amber.newMessage("Hey.", queue=False)
-    $ contact_Amber.newMessage("Are you busy?", queue=False)
-    $ contact_Amber.addReply("Nope, what's up?")
-    $ contact_Amber.newMessage("I could really use a friend right now.")
-    $ contact_Amber.addReply("I'm on my way, ok?")
-    $ contact_Amber.newMessage("Okay");
+    $ amber.messenger.newMessage("Hey.", queue=False)
+    $ amber.messenger.newMessage("Are you busy?", queue=False)
+    $ amber.messenger.addReply("Nope, what's up?")
+    $ amber.messenger.newMessage("I could really use a friend right now.")
+    $ amber.messenger.addReply("I'm on my way, ok?")
+    $ amber.messenger.newMessage("Okay");
 
     play sound "sounds/vibrate.mp3"
 
@@ -24,9 +24,9 @@ label v14s24:
     pause 1
 
     label v14s24_PhoneContinueAmber:
-        if contact_Amber.replies:
+        if amber.messenger.replies:
             call screen phone
-        if contact_Amber.replies:
+        if amber.messenger.replies:
             u "(I should check my phone.)"
             jump v14s24_PhoneContinueAmber
     

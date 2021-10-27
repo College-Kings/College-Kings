@@ -157,14 +157,14 @@ label v13s18:
 
     menu:
         "Text Nora":
-            $ contact_Nora.addReply(_("What was that about, you guys all good now or something? "))
-            $ contact_Nora.newMessage(_("I know it's odd, but I'm trying to figure things out. Pls just... Let me handle it?"))
-            $ contact_Nora.addReply(_("Okay... "))
+            $ nora.messenger.addReply(_("What was that about, you guys all good now or something? "))
+            $ nora.messenger.newMessage(_("I know it's odd, but I'm trying to figure things out. Pls just... Let me handle it?"))
+            $ nora.messenger.addReply(_("Okay... "))
             
             label v13s18_PhoneContinueNora:
-                if contact_Nora.replies:
+                if nora.messenger.replies:
                     call screen phone
-                if contact_Nora.replies:
+                if nora.messenger.replies:
                     u "(I should text Nora.)"
                     jump v13s18_PhoneContinueNora
                     

@@ -585,17 +585,17 @@ label v12_chloe_cafe:
     scene v12chc10 # TPP. Show MC sitting down, looking down at his phone, neutral expression, mouth closed
     with dissolve
 
-    $ contact_Riley.newMessage("TREASURE HUNT TIME!", queue=False)
-    $ contact_Riley.addReply("Really... now?")
-    $ contact_Riley.newMessage("Yep, and I'm already at the spot of the next clue... I think.")
-    $ contact_Riley.newImgMessage("images/v12/Scene 14/rileycatacomb.webp") # Riley selfie at the catacomb entrance with a street sign behind her with the address of where she is at, Riley smiling, mouth closed
-    $ contact_Riley.newMessage("Meet me here :)")
-    $ contact_Riley.addReply("Okay, I'll be there soon.")
+    $ riley.messenger.newMessage("TREASURE HUNT TIME!", queue=False)
+    $ riley.messenger.addReply("Really... now?")
+    $ riley.messenger.newMessage("Yep, and I'm already at the spot of the next clue... I think.")
+    $ riley.messenger.newImgMessage("images/v12/Scene 14/rileycatacomb.webp") # Riley selfie at the catacomb entrance with a street sign behind her with the address of where she is at, Riley smiling, mouth closed
+    $ riley.messenger.newMessage("Meet me here :)")
+    $ riley.messenger.addReply("Okay, I'll be there soon.")
 
     label v12s14_PhoneContinueRiley:
-        if contact_Riley.replies:
+        if riley.messenger.replies:
             call screen phone
-        if contact_Riley.replies:
+        if riley.messenger.replies:
             u "(I should check my phone.)"
             jump v12s14_PhoneContinueRiley
 
