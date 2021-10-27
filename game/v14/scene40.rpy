@@ -89,7 +89,7 @@ label v14s40:
 
         menu:
             "What'd I say?":
-                $ addpoint("tm")
+                $ addPoint("tm")
 
                 scene v14s40_4b
                 with dissolve
@@ -112,7 +112,7 @@ label v14s40:
                 la "Ha, goodnight. I'll keep my late night adventures to myself for now."
 
             "Yeah I'm tired":
-                $ addpoint("bf")
+                $ addPoint("bf")
 
                 scene v14s40_4b
                 with dissolve

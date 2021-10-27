@@ -91,7 +91,7 @@ label v14s41:
         menu:
 
             "What'd I say?":
-                $ addpoint("tm")
+                $ addPoint("tm")
 
                 scene v14s40_4b # Ignore as reused from another scene
                 with dissolve
@@ -114,7 +114,7 @@ label v14s41:
                 la "Ha, goodnight. I'll keep my late night adventures to myself for now."
 
             "Yeah I'm tired":
-                $ addpoint("bf")
+                $ addPoint("bf")
 
                 scene v14s40_4b # Ignore as reused from another scene
                 with dissolve

@@ -128,7 +128,7 @@ label v14s11:
 
     menu:
         "He did":
-            $ addpoint("bro")
+            $ addPoint("bro")
 
             scene v14s11_4b
             with dissolve
@@ -141,7 +141,7 @@ label v14s11:
             ri "I wouldn't expect you to. He was worse to you than most of us."
 
         "He didn't":
-            $ addpoint("tm")
+            $ addPoint("tm")
 
             scene v14s11_4b
             with dissolve
@@ -254,7 +254,7 @@ label v14s11:
 
         menu:
             "Like us both":
-                $ addpoint("bro")
+                $ addPoint("bro")
 
                 scene v14s11_4i
                 with dissolve       
@@ -355,8 +355,8 @@ label v14s11:
                 with dissolve
 
             "Pick one of us":
-                $ addpoint("tm")
-                $ addpoint("bf")
+                $ addPoint("tm")
+                $ addPoint("bf")
 
                 scene v14s11_4b
                 with dissolve
