@@ -209,7 +209,7 @@ label v14s43d:
     ri "You couldn't tell? Obviously I wanna do a little sub/dom action. *Chuckles*"
 
     menu:
-        "I'm Dominant...": # ;)
+        "I'm dominant": # ;)
             scene v14s43d_2
             with dissolve
 
@@ -220,7 +220,7 @@ label v14s43d:
 
             ri "Oh... You like taking control, huh? *Chuckles*"
 
-        "I'm Submissive...": # ;O 
+        "I'm submissive": # ;O 
 
             scene v14s43d_2
             with dissolve
