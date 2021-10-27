@@ -1,5 +1,6 @@
-init python: # test - steve is cool.
+init python:
     achievements = []
+
 
     class Achievement:
         """
@@ -24,6 +25,15 @@ init python: # test - steve is cool.
 
         def checkCondition(self):
             return getattr(store, self.condition)
+
+
+    def grant_achievement(_achievement):
+        try:
+            renpy.show(_achievement, at_list=achievementAtList)
+        except TypeError: pass
+        achievement.grant(_achievement) 
+        achievement.sync()
+
 
 # ACHIEVEMENT ITEMS HERE
     # v1.0

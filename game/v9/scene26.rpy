@@ -61,7 +61,7 @@ label v9_fri_training_w_wolves:
 
     menu: 
         "Answer": 
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "The Brawl."
 
@@ -116,7 +116,7 @@ label v9_fri_training_w_wolves:
             ch "Yes, I'm sure it will be."
 
         "Agree":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "(I don't want to interrupt.)"
    
@@ -288,7 +288,7 @@ label v9_fri_training_w_wolves:
                 u "What's that?"
 
             "Agree":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 u "Yeah that was kinda lucky."
 
@@ -357,7 +357,7 @@ label v9_fri_training_w_wolves:
 
         menu: 
             "Hit first": 
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 u "Hit first."
 
@@ -529,7 +529,7 @@ label v9_fri_training_w_wolves:
     
         menu:
             "Agree":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 u "Yeah, I know."
 

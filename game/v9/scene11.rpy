@@ -164,7 +164,7 @@ label v9_hc_demo_cont1:
 
     menu:
         "Discuss War":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             jump v9_hc_demo_war
         "Discuss Riches":
             jump v9_hc_demo_riches

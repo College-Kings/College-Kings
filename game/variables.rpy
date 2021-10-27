@@ -34,6 +34,14 @@ default enemyhealth = 0
     ## Free Roam
 default previous_location = ""
 
+# KCT
+default kct = "confident"
+default sortedKCT = ["confident", "loyal", "popular"]
+
+default bro = 1
+default boyfriend = 2
+default troublemaker = 1
+
 # 1.0 - 6.0
 default v1_sda = False
 default evelynmove = False
@@ -48,9 +56,6 @@ default youHealth = 5
 default influencetut = False
 default meetlauren = False
 default laurenrs = False
-default bro = 1
-default boyfriend = 2
-default troublemaker = 1
 default phoneTutorialPage = 1
 default freeRoamTutorialPage = 1
 default v1_freeRoam1_riley = False
@@ -103,7 +108,6 @@ default w = "w"
 default q = "q"
 default e = "e"
 default r = "r"
-default qwer = True
 default fighttom = False
 default notcool = False
 default difficulty = None

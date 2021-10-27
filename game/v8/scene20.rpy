@@ -69,7 +69,7 @@ label emily_arcade:
 
         menu:
             "Take the bet":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ emilyArcade = 1
 
                 jump em_arcade_1
@@ -126,7 +126,7 @@ label emily_arcade:
 
         menu:
             "Take the bet":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ emilyArcade = 3
 
                 jump em_arcade_3
@@ -804,7 +804,7 @@ label em_arcade_1:
             if laurenrs:
                 $ addPoint("tm")
             else:
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
             $ kissedEmilyArcade = True
 
             scene v8arcade24
@@ -852,7 +852,7 @@ label em_arcade_1:
 
         "Good night":
             if laurenrs:
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
             $ kissedEmilyArcade = False
 
             scene v8arcade23a
@@ -1260,7 +1260,7 @@ label v8s20_nsfwSkipLabel1:
             if laurenrs:
                 $ addPoint("tm")
             else:
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
             $ kissedEmilyArcade = True
 
             scene v8arcade24
@@ -1308,7 +1308,7 @@ label v8s20_nsfwSkipLabel1:
 
         "Good night":
             if laurenrs:
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
             $ kissedEmilyArcade = False
 
             scene v8arcade23a

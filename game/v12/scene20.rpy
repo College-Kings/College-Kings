@@ -461,7 +461,7 @@ label v12_urban_exploring:
 
     menu:
         "Walk Aubrey back to hotel":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "Of course, c'mon Aubrey. I'll walk you back."
 

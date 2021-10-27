@@ -56,7 +56,7 @@ label v9_sat_cafe_w_nora:
 
     menu:
         "Correct waiter":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "Actually, we're just friends."
 
@@ -118,7 +118,7 @@ label v9_sat_cafe_w_nora:
             with dissolve
 
         "Don't correct waiter":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene v9cwn3c
             with fade

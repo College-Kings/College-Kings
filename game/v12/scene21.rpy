@@ -59,7 +59,7 @@ label v12_nora_exploring:
             u "No, not at all. *Chuckles* You're good."
 
         "A little surprising...":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v12noe2i # FPP. Same as v12noe2f, Nora slight smile, mouth closed
             with dissolve
 
@@ -314,7 +314,7 @@ label v12_nora_exploring:
             clady "You're... so kind! Thank you! Thank you..."
 
         "Tell her off":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v12noe6g # FPP. Same as v12noe6e, Nora slightly annoyed, mouth closed
             with dissolve
 

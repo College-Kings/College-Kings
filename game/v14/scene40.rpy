@@ -112,7 +112,7 @@ label v14s40:
                 la "Ha, goodnight. I'll keep my late night adventures to myself for now."
 
             "Yeah I'm tired":
-                $ addpoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene v14s40_4b
                 with dissolve

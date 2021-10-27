@@ -206,14 +206,14 @@ label v12_chloe_cafe:
 
         menu:
             "It'd be nice":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 scene v12chc5c
                 with dissolve
 
                 u "Mmm, yeah... It'd be nice. *Chuckles*"
 
             "Not really":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 scene v12chc5c
                 with dissolve
 

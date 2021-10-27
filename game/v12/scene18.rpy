@@ -608,7 +608,7 @@ label v12s18_bottlespin:
                 ch "Wish you were a Wolf, hitting like that."
 
         "Get slapped":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v12slpbs7f # FPP. Same as v12slpbs7b, Ryan slight smile, mouth closed
             with dissolve
 
@@ -1284,7 +1284,7 @@ label v12s18_fmk:
 
     menu:
         "Marry Amber":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v12slpfmk4d
             with dissolve
 
@@ -1880,7 +1880,7 @@ label v12s18_bet: # END OF FREE ROAM
 
     menu:
         "Cuddle":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v12slpbet16b # TPP. Show MC cuddling with Amber, both smiling, mouths closed
             with dissolve
 
@@ -1937,7 +1937,7 @@ label v12s18_bet: # END OF FREE ROAM
                 pause 0.75
 
         "Stay away":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v12slpbet18 # FPP. MC and Amber lying in bed, not cuddled up (check v12slpbet16a), MC looking at Amber, Amber's back turned to MC
             with dissolve
 

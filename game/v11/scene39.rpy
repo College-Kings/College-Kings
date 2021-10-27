@@ -282,7 +282,7 @@ label v11_mc_amber_gokart:
 
 
         "Be excited":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v11cam7
             with dissolve
 
@@ -456,7 +456,7 @@ label v11_mc_amber_gokart:
             with dissolve
 
         "Disagree":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v11cam14c # FPP. Same as 14, mouth closed
             with dissolve
 
@@ -1021,7 +1021,7 @@ label v11_race_continue3:
 
     menu:
         "Stand up for Amber":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ addPoint("tm")
             $ amberLike += 1
 
@@ -1088,7 +1088,7 @@ label v11_race_continue3:
             u "At least we both had a good time, right?"
 
         "Let her handle it":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v11cam14f
             with dissolve
 

@@ -1,31 +1,31 @@
 init python:
     def v6_reply1():
-        addPoint("bro")
+        addPoint(KCT.BRO)
         amber.messenger.newMessage(_("I'm playing drink or dare and got dared to send an underwear pic to a guy."))
         amber.messenger.addReply(_("And you chose me, huh?"), v6_reply2)
         amber.messenger.addReply(_("Feel free to do so anytime :)"), v6_reply3)
 
     def v6_reply2():
-        addPoint("bro")
+        addPoint(KCT.BRO)
         amber.messenger.newMessage(_("Maybe I picked someone at random ;)"))
 
     def v6_reply3():
-        addPoint("bf")
+        addPoint(KCT.BOYFRIEND)
         amber.messenger.newMessage(_("Maybe if you're lucky xx"))
 
     def v6_reply4():
-        addPoint("bf")
+        addPoint(KCT.BOYFRIEND)
         amber.messenger.newMessage(_("I'm glad you like it xx"))
         amber.messenger.addReply(_( "I hope there's more of that in the future :P"))
         amber.messenger.newMessage(_("Maybe if you're lucky xx"))
 
     def v6_reply5():
-        addPoint("tm")
-        addPoint("bro")
+        addPoint(KCT.TROUBLEMAKER)
+        addPoint(KCT.BRO)
         amber.messenger.newMessage(_("Moment's passed..."))
 
     def v6_reply6():
-        addPoint("bf")
+        addPoint(KCT.BOYFRIEND)
         amber.messenger.newMessage(_("You better xx"))
 
     def v6_reply7():
@@ -41,7 +41,7 @@ init python:
         amber.messenger.newMessage(_("Yeah maybe we should xx"))
 
     def v6_reply10():
-        addPoint("bf")
+        add_point(KCT.BOYFRIEND)
         setattr(store, "homrworkout", False)
 
     def v6_reply11():
@@ -53,7 +53,7 @@ label v6start:
     if imremad and chloemad:
         menu:
             "Find Imre":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ chooseimre = True
                 $ meetchloe = False
 
@@ -69,14 +69,14 @@ label v6start:
     elif imremad:
         menu:
             "Find Imre":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ chooseimre = True
                 $ meetchloe = False
 
                 jump imrecona
 
             "Meet Chloe":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ chooseimre = False
                 $ meetchloe = True
 
@@ -86,7 +86,7 @@ label v6start:
     elif chloemad:
         menu:
             "Help Imre":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ chooseimre = True
                 $ meetchloe = False
 
@@ -102,14 +102,14 @@ label v6start:
     else:
         menu:
             "Help Imre":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ chooseimre = True
                 $ meetchloe = False
 
                 jump imreconb
 
             "Meet Chloe":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ chooseimre = False
                 $ meetchloe = True
 
@@ -147,7 +147,7 @@ label imrecona: # Find Imre
 
     menu:
         "Explain yourself":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s445c
             with dissolve
@@ -225,7 +225,7 @@ label imrecona: # Find Imre
                 imre "Fuck do you know about loyalty?! You just wanna be in control!"
 
         "Apologize":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ imreforgives = False
 
             scene s445c
@@ -550,7 +550,7 @@ label imrecond: # Meet Chloe
     menu:
         "Just let it ring.":
             $ addPoint("tm")
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s460a # FIRST PERSON: chloe close up, she's turned around looking at her phone
             with dissolve
@@ -573,7 +573,7 @@ label imrecond: # Meet Chloe
             cl "I'll be right back."
 
         "You should get that.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s460a
             with dissolve
@@ -638,7 +638,7 @@ label imrecond: # Meet Chloe
 
     menu:
         "Ask about the call":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s463a # chloe sits down next to you with towel , mc looks at her mouth open
             with dissolve
@@ -651,7 +651,7 @@ label imrecond: # Meet Chloe
             cl "Oh, just a friend."
 
         "Don't ask":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s463b # same as s463a but mouth closed
             with dissolve
@@ -853,12 +853,12 @@ label imrecond: # Meet Chloe
                     u "*Sighs*"
 
                 "Leave":
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
 
                     u "(No, I should just get out of here and stop spying on her.)"
 
         "Trust her":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ grant_achievement("credulous")
 
             u "(I shouldn't spy on her. It's not right.)"
@@ -1328,7 +1328,7 @@ label continuebd:
 
             menu:
                 "Call after her":
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
 
                     scene s493b # Lauren at door
                     with dissolve
@@ -1341,7 +1341,7 @@ label continuebd:
                     u "Damn it."
 
                 "Leave her be":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                     scene s493b
                     with dissolve
@@ -1597,7 +1597,7 @@ label continuebd:
 
     menu:
         "What do you want?":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s501e
             with dissolve
@@ -1671,7 +1671,7 @@ label continuebd:
 
     menu:
         "Check it out":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ checkonrose = True
 
             scene s505 # First Person: Enter classrom, only Ms Rose at her laptop crying
@@ -1995,7 +1995,7 @@ label continuebd:
 
         menu:
             "It'll be an adventure.":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ evelyndate = False
 
                 scene s524e
@@ -2040,7 +2040,7 @@ label continuebd:
                 u "Damnit."
 
             "It'll be a nice dinner.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ evelyndate = True
 
                 scene s524e
@@ -2200,7 +2200,7 @@ label continuebd:
         "Accept call":
             stop sound
             play sound "sounds/answercall.mp3"
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             # aceept call sound
             if not forgiveemily:
@@ -2247,7 +2247,7 @@ label continuebd:
                 menu:
                     "Fine, I'll come.":
                         $ meetemily = True
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
 
                         scene s531b # mc empathy
                         with dissolve
@@ -2326,7 +2326,7 @@ label continuebd:
 
                         menu:
                             "Be understanding":
-                                $ addPoint("bf")
+                                $ add_point(KCT.BOYFRIEND)
 
                                 jump fz_a
 
@@ -2447,7 +2447,7 @@ label continuebd:
                 menu:
                     "Be understanding":
                         $ forgiveemily = True
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
 
                         jump fz_a
 
@@ -3168,7 +3168,7 @@ label fy_bd: # not gone to Emily's
 
         menu:
             "Hot":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 scene s550a
                 with dissolve
@@ -3181,7 +3181,7 @@ label fy_bd: # not gone to Emily's
                 ev "*Smirks* Of course you were."
 
             "Stunning":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene s550a
                 with dissolve
@@ -3334,7 +3334,7 @@ label fy_bd: # not gone to Emily's
 
         menu:
             "Make a joke":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 u "So uhm, is this the only eggplant you're looking to eat tonight?"
 
@@ -3351,7 +3351,7 @@ label fy_bd: # not gone to Emily's
                 pause 0.5
 
             "Say something smart":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "So did you hear about the new discoveries they made on Mars recently?"
 
@@ -3443,7 +3443,7 @@ label fy_bd: # not gone to Emily's
 
         menu:
             "Ask about her job":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ evelynrs = False
 
                 scene s558d
@@ -3479,7 +3479,7 @@ label fy_bd: # not gone to Emily's
                 u "(This date really isn't getting better.)"
 
             "Ask about her dreams":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ evelynrs = True
 
                 scene s558d
@@ -3628,7 +3628,7 @@ label fy_bd: # not gone to Emily's
                     if laurenrs:
                         $ addPoint("tm")
                     else:
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
 
                     scene s563 # showing you and evelyn standing close to each other, smiling at each other
                     with dissolve
@@ -3649,9 +3649,9 @@ label fy_bd: # not gone to Emily's
                 "Don't kiss her":
                     $ kissevelyn = False
                     if laurenrs:
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
                     else:
-                        $ addPoint("bro")
+                        $ add_point(KCT.BRO)
 
         label gf_b: #for compatibility only
         scene s562
@@ -3838,7 +3838,7 @@ label fy_bd: # not gone to Emily's
 
     menu:
         "A few different girls.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ addPoint("tm")
 
             u "You know, a few different girls."
@@ -3867,7 +3867,7 @@ label fy_bd: # not gone to Emily's
 
                 menu:
                     "I think you know.":
-                        $ addPoint("bro")
+                        $ add_point(KCT.BRO)
                         $ addPoint("tm")
 
                         u "I think you know."
@@ -3883,7 +3883,7 @@ label fy_bd: # not gone to Emily's
                         au "I think I do."
 
                     "We're just friends.":
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
                         $ addPoint("tm")
 
                         u "Uhm, Aubrey I think we should just stay friends."
@@ -3903,7 +3903,7 @@ label fy_bd: # not gone to Emily's
                         jump aubreytalk
 
         "No one, really.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "No one, really."
 
@@ -3933,7 +3933,7 @@ label fy_bd: # not gone to Emily's
 
                 menu:
                     "You got me.":
-                        $ addPoint("bro")
+                        $ add_point(KCT.BRO)
                         $ addPoint("tm")
 
                         u "You got me."
@@ -3949,7 +3949,7 @@ label fy_bd: # not gone to Emily's
                         au "That's what I thought."
 
                     "I'm not seducing you.":
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
                         $ addPoint("tm")
 
                         u "Uhm, Aubrey I'm not trying to seduce you."
@@ -4648,7 +4648,7 @@ label afteraubrey:
 
             menu:
                 "Empathize":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                     u "Man, I'm sorry. That's really terrible. I didn't know you had it so rough."
 
@@ -4932,7 +4932,7 @@ label afteraubrey:
                     stop music fadeout 2.0
 
                 "I'm not in.":
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
                     $ joinapes = False
 
                     u "Sorry, Grayson. But I don't wanna be an Ape."
@@ -4993,7 +4993,7 @@ label afteraubrey:
 
         "Stay home":
             $ meetgrayson = False
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ grant_achievement("seems_fishy")
 
             u "(Fuck Grayson, I'm not meeting him.)"
@@ -5049,7 +5049,7 @@ label afteraubrey:
 
     menu (fail_label="timera"):
         "Save Lauren":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ save = 1
 
             scene s592 # Mc tackles Lauren out of the guns aim
@@ -5072,7 +5072,7 @@ label afteraubrey:
             jump wakeupa
 
         "Save Riley":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ save = 2
 
             scene s594 # Mc tackles Riley out of the guns aim
@@ -5584,7 +5584,7 @@ label wakeupa:
 
     menu:
         "Praise her":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "That was incredible."
 
@@ -5604,7 +5604,7 @@ label wakeupa:
             ri "Honestly, she's so brave. My heart goes out to her."
 
         "Mock her":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ addPoint("tm")
 
             scene s614a
@@ -5671,7 +5671,7 @@ label wakeupa:
 
     menu:
         "Praise him":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "Honestly, that was kinda profound."
 
@@ -5691,7 +5691,7 @@ label wakeupa:
             ri "Pff, you're ridiculous."
 
         "Mock him":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ addPoint("tm")
 
             u "Okay, that was bad. He might as well perform whale sounds."
@@ -5767,7 +5767,7 @@ label wakeupa:
 
     menu:
         "Praise her":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ addPoint("tm")
 
             u "She was good."
@@ -5798,7 +5798,7 @@ label wakeupa:
             ri "Yeah, right."
 
         "Mock her":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "Man, that girl was into herself. You think she runs her own fan club?"
 
@@ -5850,7 +5850,7 @@ label wakeupa:
 
     menu:
         "Okay, I'll do it.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ perform = 1
 
             u "Okay, I'll do it."
@@ -5882,7 +5882,7 @@ label wakeupa:
 
             menu:
                 "Act out a lullaby.":
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
 
                     if kct == "confident":
                         call screen kctPopup
@@ -5981,7 +5981,7 @@ label wakeupa:
                     "*Crowd applauds"
 
         "No way I'm doing that.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ perform = 0
 
             u "No. No way. I'm not going up there."
@@ -6564,9 +6564,9 @@ label wakeupa:
                 $ kisspenelope = True
                 if laurenrs:
                     $ addPoint("tm")
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
                 else:
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                 scene s658k
                 with dissolve
@@ -6605,7 +6605,7 @@ label wakeupa:
             "Say Goodbye":
                 $ kisspenelope = False
                 if laurenrs:
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
         u "I gotta go now and get ready for the Wolves' party, but I'll see you soon, okay?"
 
@@ -7045,7 +7045,7 @@ label v6_fr3josh1:
 
     menu:
         "Take the shot":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ takeshot = True
 
             u "Fuck it. Why not."
@@ -7069,7 +7069,7 @@ label v6_fr3josh1:
             with dissolve
 
         "Decline":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ takeshot = False
 
             u "Nah, I'm good."
@@ -7229,7 +7229,7 @@ label v6_fr3guy1:
 
     menu:
         "Kylie":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ kylie = True
 
             u "Yeah I agree, Kylie's way hotter."
@@ -7282,7 +7282,7 @@ label v6_fr3guy1:
             u "Alright, I'ma leave you guys to it."
 
         "Kourtney":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ kylie = False
 
             u "Definitely Kourtney."
@@ -7543,7 +7543,7 @@ label v6_fr3aubrey1:
 
         menu:
             "Anything for a girl like that.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ simp = True
 
                 u "Anything for a girl like that..."
@@ -7585,7 +7585,7 @@ label v6_fr3aubrey1:
 
             "What people do for pussy...":
                 $ addPoint("tm")
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ simp = False
 
                 u "What people do for pussy, am I right?"
@@ -7694,7 +7694,7 @@ label v6_fr3aubrey1:
 
         menu:
             "I was in love.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ simp = True
 
                 u "What can I say? I was young and in love."
@@ -7748,7 +7748,7 @@ label v6_fr3aubrey1:
 
             "It was nothing.":
                 $ addPoint("tm")
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ simp = False
 
                 u "Really, it was nothing. Was so long ago."
@@ -8310,7 +8310,7 @@ label v6_fr3riley1: #If you click on Riley and finn*
 
     menu:
         "Ask Riley something":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ askfinn = False
 
             scene sfr3ri2a
@@ -8379,7 +8379,7 @@ label v6_fr3riley1: #If you click on Riley and finn*
             ri "Okay, see you later then."
 
         "Ask Finn something":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ askfinn = True
 
             scene sfr3ri3a
@@ -8606,7 +8606,7 @@ label v6_fr3amber1:
 
     menu:
         "You're such a tease.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "Wow. You're such a tease."
 
@@ -8619,7 +8619,7 @@ label v6_fr3amber1:
             with dissolve
 
         "Not gonna happen.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "Mhhh... I don't think that's gonna happen."
 
@@ -8948,7 +8948,7 @@ label v6_fr3nora1:
     menu:
         "Defend Chloe":
             $ noramad = True
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "Chloe's not manipulative. She's just being bad mouthed because people like you see her as a threat."
 
@@ -8974,7 +8974,7 @@ label v6_fr3nora1:
             u "Fine. But you're wrong about Chloe."
 
         "Don't defend Chloe":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ noramad = False
 
             u "Yeah, it sounds kinda messed up."
@@ -9200,7 +9200,7 @@ label v6_fr3chloe1:
 
     menu:
         "Maybe you should step down.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ chloemad = True
 
             u "You ever think, maybe you should step down?"
@@ -9262,7 +9262,7 @@ label v6_fr3chloe1:
             u "Fine..."
 
         "Nora's being stupid.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ addPoint("tm")
 
             u "Nora's being stupid. You're a great president. You're smart, you're driven and you care so much..."
@@ -9890,7 +9890,7 @@ label upstairsaubrey:
 
         menu:
             "We could lock the door.":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ addPoint("tm")
 
                 u "But we could also lock the door and be quiet..."
@@ -9910,7 +9910,7 @@ label upstairsaubrey:
                 u "(I should probably talk to Chris soon.)"
 
             "It was nice talking.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "It was nice talking though."
 
@@ -10038,7 +10038,7 @@ label upstairsaubrey:
 
         menu:
             "He turned down a threesome?!":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 scene sufr3au2c
                 with dissolve
@@ -10104,7 +10104,7 @@ label upstairsaubrey:
 
                 menu:
                     "We could lock the door.":
-                        $ addPoint("bro")
+                        $ add_point(KCT.BRO)
                         $ addPoint("tm")
 
                         u "But we could also lock the door and be quiet..."
@@ -10122,7 +10122,7 @@ label upstairsaubrey:
                         u "(I should probably talk to Chris soon.)"
 
                     "At least we got to talk.":
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
 
                         u "At least we got to talk a bit, haha."
 
@@ -10137,7 +10137,7 @@ label upstairsaubrey:
                         u "(I should probably talk to Chris soon.)"
 
             "I kinda get what he means.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ simp = True
                 $ aubreyrs = False
 

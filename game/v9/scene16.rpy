@@ -208,7 +208,7 @@ label v9_emily_dorm:
 
         menu:
             "Let Emily gloat":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "You're just so much better than me."
 
@@ -359,7 +359,7 @@ label v9_emily_dorm:
                 em "Well, in that case..."
 
             "Play it off":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 u "Aww, you don't have anything to worry about. One punch isn't gonna change me."
 
@@ -443,7 +443,7 @@ label v9_emily_dorm:
 
         menu:
             "Be Macho":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 u "I've been training. Gotta learn to take a punch as much as land one."
 

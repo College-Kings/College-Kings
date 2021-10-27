@@ -8,23 +8,23 @@ init python:
     def v1_reply2():
         grant_achievement("open_wound")
 
-        addPoint("tm")
+        addPoint(KCT.TROUBLEMAKER)
         emily.messenger.newMessage(_("Ugh :/"))
 
     # Julia messages
     def v1_reply3():
-        addPoint("bf")
+        add_point(KCT.BOYFRIEND)
 
     def v1_reply4():
-        addPoint("bro")
+        add_point(KCT.BRO)
 
     # Lauren messages
     def v1_reply5():
-        addPoint("bf")
+        add_point(KCT.BOYFRIEND)
 
     # Lauren messages
     def v1_reply6():
-        addPoint("bf")
+        addPoint(KCT.BOYFRIEND)
         lauren.messenger.newMessage(_("Cool :)"))
 
     def v1_reply7():
@@ -211,7 +211,7 @@ label starta: #for compatibility only
             hide s14
             show s14a
             with dissolve
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "No, I don't think so, Julia."
 
@@ -700,7 +700,7 @@ label starta: #for compatibility only
 
     menu:
         "Agree":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s50a
             with dissolve
@@ -775,7 +775,7 @@ label starta: #for compatibility only
             la "I bet you think she's cute, don't you?"
 
         "Defend Autumn":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s50a
             with dissolve
@@ -804,7 +804,7 @@ label starta: #for compatibility only
             u "Only for the right girl."
 
         "Yeah, kinda":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s53a
             with dissolve
@@ -910,7 +910,7 @@ label starta: #for compatibility only
 
         menu:
             "She's hot.":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 scene s50ri2a
                 with dissolve
@@ -1061,7 +1061,7 @@ label starta: #for compatibility only
                 el "Just get out of my face."
 
             "That's cool.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene s50el2a
                 with dissolve
@@ -1324,7 +1324,7 @@ label efra:
             with dissolve
 
         "The Wolves sound sick.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s64a
             with dissolve
@@ -1811,7 +1811,7 @@ label efra:
 
     menu:
         "Do it, or drink.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s71ef
             with dissolve
@@ -1828,7 +1828,7 @@ label efra:
             " "
 
         "You're right.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             
             scene s71ef
             with dissolve
@@ -1877,7 +1877,7 @@ label efra:
 
             menu:
                 "You're right, sorry.":
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
 
                     scene s79a
                     with dissolve
@@ -1916,7 +1916,7 @@ label efra:
                     jump at_bd
 
         "They're both hot.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s79
             with dissolve
@@ -2400,7 +2400,7 @@ label v1_nsfwSkipLabel1:
 
     menu:
         "Move in with me?":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s87a
             with dissolve
@@ -2418,7 +2418,7 @@ label v1_nsfwSkipLabel1:
             u "How about we go to the park this afternoon? I'll bring some sandwiches and we'll make your day better."
 
         "Bad roommates suck.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s87a
             with dissolve
@@ -2725,7 +2725,7 @@ label aw_bd:
 
     menu:
         "You're really beautiful.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "You know... you're really beautiful."
 
@@ -2734,7 +2734,7 @@ label aw_bd:
             la "Awww."
 
         "You're not ugly.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "You know... you're not ugly."
 
@@ -3314,7 +3314,7 @@ label v1_freeRoam2_josh:
                     u "Who's Grayson?"
 
         "Ask if she likes fighters":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene fr2jo2b
             with dissolve
@@ -3460,7 +3460,7 @@ label v1_freeRoam2_mason:
     menu:
         "Yeah, he better watch out.":
             $ addPoint("tm")
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene fr2ma1a
             with dissolve
@@ -3778,7 +3778,7 @@ label fr2end: #for compatibility only
 
     menu:
         "You're right, I'll talk to her.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s108e
             with dissolve
@@ -3884,7 +3884,7 @@ label fr2end: #for compatibility only
 
     menu:
         "Apologize":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "I'm really sorry for interrupting your conversation."
 
@@ -3899,7 +3899,7 @@ label fr2end: #for compatibility only
             u "In that case, you're very welcome."
 
         "Make fun of him":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "Don't worry, I'm not gonna start talking about my rock collection."
 
@@ -3989,7 +3989,7 @@ label fr2end: #for compatibility only
 
     menu:
         "Empathize":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "Wow, that sounds awful."
 

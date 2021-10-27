@@ -54,7 +54,7 @@ label v10_lauren_room:
         "Agree":
             $ v10s33_laurenBakeSale = True
 
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v10lar3a
             with dissolve
 

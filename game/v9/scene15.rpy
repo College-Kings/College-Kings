@@ -155,7 +155,7 @@ label v9_thur_room_w_cam_cont1:
 
     menu:
         "Drink":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             jump v9_thur_room_w_cam_drink
         "Don't drink":
             jump v9_thur_room_w_cam_no_drink

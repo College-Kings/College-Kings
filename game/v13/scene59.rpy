@@ -144,7 +144,7 @@ label v13s59:
     menu:
         "Agree":
             $ aubrey.points += 1
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v13s59_4a
             with dissolve
 
@@ -267,7 +267,7 @@ label v13s59:
 
     menu:
         "Teach her":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v13s59_6a
             with dissolve
 
@@ -361,7 +361,7 @@ label v13s59:
                 au "Hmm... Many reasons."
 
         "Let her figure it out":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v13s59_6a
             with dissolve
 

@@ -452,8 +452,8 @@ label v14s25:
 
     menu:
         "No more drugs, Amber":
-            $ addPoint("bf")
-            $ addPoint("bro")
+            $ add_point(KCT.BOYFRIEND)
+            $ add_point(KCT.BRO)
             $ v14_amber_clean = True
             scene v14s25_8k
             with dissolve
@@ -813,7 +813,7 @@ label v14s25:
                     with dissolve
 
                 "Move away":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
                     u "*Chuckles* (Sorry, Amber.)"
 
                     scene v14s25_17f # TPP. Show MC and Amber with their backs against each other sleeping.
@@ -957,7 +957,7 @@ label v14s25:
                     jump v14s25a
 
                 "Don't fuck Amber": 
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
                     scene v14s25_21a
                     with dissolve
 
@@ -1045,7 +1045,7 @@ label v14s25:
                             with dissolve
 
                         "Move away":
-                            $ addPoint("bf")
+                            $ add_point(KCT.BOYFRIEND)
                             u "*Chuckles* (Sorry, Amber.)"
 
                             scene v14s25_17f

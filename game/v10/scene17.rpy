@@ -210,7 +210,7 @@ label v10_aubrey_house:
 
     menu:
         "Ask about her":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             
             scene v10auh1
             with dissolve

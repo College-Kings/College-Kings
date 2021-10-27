@@ -153,7 +153,7 @@ label v9_train_w_apes:
 
         menu:
             "Be confident":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 scene v9twa5a
                 with dissolve
@@ -171,7 +171,7 @@ label v9_train_w_apes:
                 ca "When I get done with you, no punk will even THINK about starting shit again. You hear me?"
 
             "Be humble":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene v9twa5a # FPP. Show Cameron, hands behind back, serious look, mouth open
                 with dissolve
@@ -239,7 +239,7 @@ label v9_train_w_apes:
 
         menu:
             "Be pumped":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 scene v9twa8 # TPP. Show MC Punching bag, back to camera, in boxing stance
                 with dissolve
@@ -306,7 +306,7 @@ label v9_train_w_apes:
                 ca "Great! Over here!"
 
             "Stay quiet":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene v9twa5a
                 with dissolve

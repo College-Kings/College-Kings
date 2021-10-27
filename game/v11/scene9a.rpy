@@ -111,7 +111,7 @@ label v11_wolves_seb_prank:
 
     menu:
         "Not for me":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene v11wsp8a
             with dissolve

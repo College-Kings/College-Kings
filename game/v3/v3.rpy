@@ -144,7 +144,7 @@ label v3start:
 
     menu:
         "You're crazy.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s206c
             with dissolve
@@ -152,7 +152,7 @@ label v3start:
             u "Hahaha, man you're crazy."
 
         "That's not cool.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ notcool = True
 
             scene s206c
@@ -204,7 +204,7 @@ label v3start:
 
     menu:
         "Hell yeah.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s208a
             with dissolve
@@ -538,7 +538,7 @@ label conl:
             cl "Haha, good."
 
         "Don't question it":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             label cq_b: #for compatibility only
 
     scene s216c # cl grabs volleyball
@@ -632,7 +632,7 @@ label conl:
             u "I'm sure you'll get me next time."
 
         "Let her win":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s218c # you missing the ball
             with vpunch
@@ -1059,7 +1059,7 @@ label conl:
 
     menu:
         "Show off":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             label cw_a: #for compatibility only
 
             scene s240
@@ -1164,7 +1164,7 @@ label conl:
 
         menu:
             "Approach her":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 label cx_a: #for compatibility only
 
                 scene s244
@@ -1269,7 +1269,7 @@ label conl:
                         u "(Damn, that didn't go as planned...)"
 
             "Leave it":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 label cx_ad: #for compatibility only
 
     scene s247 # imre coming back
@@ -1526,8 +1526,8 @@ label conl:
                 label cy_b: #for compatibility only
                 menu:
                     "Take off your clothes":
-                        $ addPoint("bf")
-                        $ addPoint("bro")
+                        $ add_point(KCT.BOYFRIEND)
+                        $ add_point(KCT.BRO)
 
                         scene s256b #showing you pulling down your pants
                         with dissolve
@@ -1715,7 +1715,7 @@ label conl:
 
                 menu:
                     "Truth":
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
 
                         scene s254h
                         with dissolve
@@ -1781,7 +1781,7 @@ label conl:
 
                     "Dare":
                         $ addPoint("tm")
-                        $ addPoint("bro")
+                        $ add_point(KCT.BRO)
 
                 scene s254m
                 with dissolve
@@ -1960,7 +1960,7 @@ label conl:
 
         menu:
             "Truth":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene s254h
                 with dissolve
@@ -2021,7 +2021,7 @@ label conl:
 
             "Dare":
                 $ addPoint("tm")
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
         scene s254m
         with dissolve
@@ -2540,7 +2540,7 @@ label continuen:
 
     menu:
         "I'd love to.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s268a
             with dissolve
@@ -2618,7 +2618,7 @@ label continueq:
         "Answer":
             stop sound
             play sound "sounds/answercall.mp3"
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s270b # you answer, hold phone next to your ear
             with dissolve
@@ -2652,7 +2652,7 @@ label continueq:
             menu:
                 "Shopping sounds great.":
                     $ meetjulia = True
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                     u "Yeah, shopping sounds great, Julia."
 
@@ -2756,7 +2756,7 @@ label continueq:
 
     menu:
         "Compliment Riley":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s273d # Riley looking at ryan joking annoyed but her mouth is closed, ryan looking at her with a grin
             with dissolve
@@ -2781,7 +2781,7 @@ label continueq:
             u "Yeah, alright. Let me just change out of my gym clothes."
 
         "Agree with Ryan":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s273d
             with dissolve
@@ -2940,7 +2940,7 @@ label continueq:
             u "You don't know Chloe at all! You're just fucking jealous!"
 
         "Walk away":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
     scene s276b #RIley sad and concerned
     with dissolve
@@ -3032,7 +3032,7 @@ label continueq:
 
     menu:
         "I like her.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s281a
             with dissolve
@@ -3100,7 +3100,7 @@ label continueq:
                     ri "I'm glad you did."
 
                 "Don't kiss her":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                     ri "Just a really great guy."
 
@@ -3191,7 +3191,7 @@ label continueq:
             menu:
                 "Tell her what happened.":
                     $ toldlauren = True
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
                     $ laurenrs = False
 
                     u "(Lauren values honesty and we're not in a relationship yet, so she'll probably be understanding as long as I tell her the truth.)"
@@ -3396,7 +3396,7 @@ label continueq:
                                 jump dk_ad
 
                             "Stop":
-                                $ addPoint("bf")
+                                $ add_point(KCT.BOYFRIEND)
 
                                 scene s290b
                                 with dissolve
@@ -3411,7 +3411,7 @@ label continueq:
                                 pause 0.5
 
                     "Keep hands to yourself":
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
 
                         pause 1.0
 

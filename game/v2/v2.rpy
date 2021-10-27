@@ -2,13 +2,13 @@ init python:
 
     # Ryan messages
     def v2_reply1():
-        addPoint("bro")
+        addPoint(KCT.BRO)
         ryan.messenger.newMessage(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
         ryan.messenger.addReply(_("Whatever"), v2_reply2)
         ryan.messenger.addReply(_("Don't you dare defend that guy"), v2_reply3)
 
     def v2_reply2():
-        addPoint("bro")
+        add_point(KCT.BRO)
 
     def v2_reply3():
         addPoint("tm")
@@ -23,7 +23,7 @@ init python:
     # Lauren messages
     def v2_reply5():
         setattr(store, "meetlauren", True)
-        addPoint("bf")
+        addPoint(KCT.BOYFRIEND)
         lauren.messenger.newMessage(_("Great, I'll see you then :)"))
 
     def v2_reply6():
@@ -31,17 +31,17 @@ init python:
 
     # Josh messages
     def v2_reply7():
-        addPoint("bro")
+        addPoint(KCT.BRO)
         josh.messenger.newMessage(_("It's fine, you go get her."))
 
     def v2_reply8():
-        addPoint("bf")
+        addPoint(KCT.BOYFRIEND)
         josh.messenger.newMessage(_("Nah, you don't want a bitch like her."))
         josh.messenger.addReply(_("Yeah, I guess you're right."), v2_reply9)
         josh.messenger.addReply(_("Dude, what the fuck?!"), v2_reply10)
 
     def v2_reply9():
-        addPoint("bro")
+        addPoint(KCT.BRO)
         josh.messenger.newMessage(_("Hahaha, I'm just kidding, yo."))
         josh.messenger.newMessage(_("Of course I gave her your number."))
         josh.messenger.addReply(_("Damn, you got me."))
@@ -54,13 +54,13 @@ init python:
 
     # Aubrey messages
     def v2_reply11():
-        addPoint("bro")
+        addPoint(KCT.BRO)
         aubrey.messenger.newMessage(_("Yeah, I mean they had a thing a while ago but she broke it off 'cause he lied about some shit."))
         aubrey.messenger.newMessage(_("So... tomorrow?"))
         aubrey.messenger.addReply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v2_reply12)
 
     def v2_reply12():
-        addPoint("bf")
+        addPoint(KCT.BOYFRIEND)
         aubrey.messenger.newMessage(_("I've got dance practice tonight \n:("))
         aubrey.messenger.addReply(_("I'm not talking tonight, I can pick you up right now."))
         aubrey.messenger.newMessage(_("Oh wow, that's spontaneous, I like it haha.\n\nI guess come to the Chicks' house whenever you're ready and then we can go costume shopping."))
@@ -68,7 +68,7 @@ init python:
 
     def v2_reply13():
         setattr(store, "costumeaubrey", True)
-        addPoint("bf")
+        addPoint(KCT.BOYFRIEND)
         aubrey.messenger.newMessage(_("Good :)"))
 
     def v2_reply14():
@@ -137,7 +137,7 @@ label v2start:
 
     menu:
         "Hmm... maybe.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s123d
             with dissolve
@@ -148,7 +148,7 @@ label v2start:
             imre "Just think about it, okay? I'll see you later."
 
         "I'm not fighting.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s123d
             with dissolve
@@ -163,7 +163,7 @@ label v2start:
 
             menu:
                 "I'll think about it.":
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
 
                     scene s123d
                     with dissolve
@@ -174,7 +174,7 @@ label v2start:
                     imre "That's all I'm asking for. I'll see you later."
 
                 "I won't fight.":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                     scene s123d
                     with dissolve
@@ -1076,7 +1076,7 @@ label youfinish:
             u "Fuck you!"
 
         "Walk away":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
 label tf2: #for compatibility only
 label v1_tomWalkAway:
@@ -1173,7 +1173,7 @@ label meet_lauren2:
 
     menu:
         "There was something there.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             
             if v1_laurenKiss and v1_laurenPoints == 2:
                     scene s130c
@@ -1309,7 +1309,7 @@ label meet_lauren2:
                             u "(I should probably wash the blood off my face in the restroom before I go to class.)"
 
         "Let's forget about it.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ laawk = False
 
             scene s130a
@@ -1810,7 +1810,7 @@ label history2:
     menu:
         "Okay, I guess.":
             $ forgiveemily = True
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s144c
             with dissolve
@@ -1921,7 +1921,7 @@ label bo_ad:
             em "Maybe a little bit."
 
         "I'm still single.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             hide s145
             show s145e
@@ -1957,7 +1957,7 @@ label bo_ad:
 
     menu:
         "It was adorable.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             hide s145c
             show s145d
@@ -1974,7 +1974,7 @@ label bo_ad:
             em "It was so thoughtful."
 
         "It was so funny.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             hide s145c
             show s145d
@@ -2100,7 +2100,7 @@ label bo_ad:
     menu:
         "Sure, knock yourself out.":
             $ emilyandben = True
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s148b
             with dissolve
@@ -2121,7 +2121,7 @@ label bo_ad:
 
         "Stay away from her.":
             $ emilyandben = False
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s148b
             with dissolve
@@ -2141,7 +2141,7 @@ label bo_ad:
 
     menu:
         "Tell Emily about Benjamin":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ addPoint("tm")
 
             scene s149a
@@ -2201,7 +2201,7 @@ label bo_ad:
                 u "As a receptionist."
 
         "Don't tell Emily":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s149a
             with dissolve
@@ -2746,7 +2746,7 @@ label try1new:
                     pass
 
         "Don't peek":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
 label v2_nsfwSkipLabel1:
     scene s163
@@ -2776,7 +2776,7 @@ label v2_nsfwSkipLabel1:
 
     menu:
         "It's kinda hot.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s166c
             with dissolve
@@ -2803,7 +2803,7 @@ label v2_nsfwSkipLabel1:
                 au "Have you decided which one to buy yet?"
 
         "It's definitely something.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s166c
             with dissolve
@@ -2885,7 +2885,7 @@ label try2new:
                     pass
 
         "Don't peek":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
 label v2_nsfwSkipLabel2:
     scene s167
@@ -2912,7 +2912,7 @@ label v2_nsfwSkipLabel2:
 
     menu:
         "looking mighty fine.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "...looking mighty fine as well."
 
@@ -2939,7 +2939,7 @@ label v2_nsfwSkipLabel2:
                 au "Are you gonna buy this one?"
 
         "certainly practical.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "... certainly practical."
 
@@ -3035,7 +3035,7 @@ label try3new:
                     pass
 
         "Don't peek":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
 label v2_nsfwSkipLabel3:
     scene s171
@@ -3105,7 +3105,7 @@ label v2_nsfwSkipLabel3:
 
         "Fine.":
             hide screen influenceTutorial
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "Alright, fine."
 
@@ -3273,7 +3273,7 @@ label try4new:
                     pass
 
         "Don't peek":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
 label v2_nsfwSkipLabel4:
     scene s163
@@ -3314,7 +3314,7 @@ label v2_nsfwSkipLabel4:
 
     menu:
         "You look beautiful.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s179a
             with dissolve
@@ -3335,7 +3335,7 @@ label v2_nsfwSkipLabel4:
                 pe "Are you ready to buy an outfit?"
 
         "I guess it's nice":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s179a
             with dissolve
@@ -3418,7 +3418,7 @@ label try5new:
                     pass
 
         "Don't peek":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
 label v2_nsfwSkipLabel5:
     scene s167
@@ -3458,7 +3458,7 @@ label v2_nsfwSkipLabel5:
 
     menu:
         "Flirt":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "Yeah, maybe it's like the costume of two lovers, you know... historically speaking."
 
@@ -3474,7 +3474,7 @@ label v2_nsfwSkipLabel5:
                 pe "Are you ready to buy an outfit?"
 
         "Agree":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "Yeah, it would be a cool partner costume."
 
@@ -3554,7 +3554,7 @@ label try6new:
                     pass
 
         "Don't peek":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
 label v2_nsfwSkipLabel6:
     scene s171
@@ -3587,7 +3587,7 @@ label v2_nsfwSkipLabel6:
             u "Alright, fine."
 
         "Fine.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "Okay, fine."
 
@@ -3677,7 +3677,7 @@ label v1_caughtContinue:
 
     menu:
         "Apologize":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ caughtpeekingaubreycounter = True
 
             scene s177e
@@ -3793,7 +3793,7 @@ label v1_caughtContinue_pen:
     menu:
         "Apologize":
             hide screen influenceTutorial
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s186a
             with dissolve
@@ -4058,7 +4058,7 @@ label eve1:
     menu:
         "Make a move.":
             $ evelynmove = True
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s188d
             with dissolve
@@ -4146,7 +4146,7 @@ label eve1:
                     u "(Damn, that didn't go as planned...)"
 
         "Leave":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s188d
             with dissolve

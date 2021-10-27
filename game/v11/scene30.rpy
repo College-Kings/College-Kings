@@ -1362,7 +1362,7 @@ label v11_quiz_bonus:
             "I love you too":
                 $ v11_lauren_ily = True
                 $ laurenrs = True
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ laurenLike += 2
 
                 scene v11las44h # FPP. Same as v11las44g, Lauren mouth closed, big smile
@@ -1378,7 +1378,7 @@ label v11_quiz_bonus:
                 pause 1
 
             "Play it off":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ laurenLike -= 2
 
                 scene v11las44i # FPP. Same as v11las44g, Lauren mouth closed, sad and embarrassed, no longer holding MC's neck

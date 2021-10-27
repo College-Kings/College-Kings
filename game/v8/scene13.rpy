@@ -134,7 +134,7 @@ label phn_chloe11_done:
             pause 0.5
 
         "Stay back and study":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ rejectedApesFun = True
 
             scene v8apes25d
@@ -293,7 +293,7 @@ label phn_chloe11_done:
 
     menu:
         "Press it":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene v8apes34c
             with dissolve
@@ -304,7 +304,7 @@ label phn_chloe11_done:
             ca "It's just..."
 
         "Let it go":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene v8apes34c
             with dissolve

@@ -282,7 +282,7 @@ label v14s33:
                         la "Haha, I wish."
 
                     "I miss you too":
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
                         scene v14s33_3a
                         with dissolve
 
@@ -377,7 +377,7 @@ label v14s33:
                             jump v14s35
 
                     "Get excited":
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
                         scene v14s33_3a
                         with dissolve
 

@@ -253,7 +253,7 @@ label v13s14b:
 
     menu:
         "Be a gentleman":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             u "Penelope, you're pretty drunk. *Chuckles* I should get you back so you can get a good night's worth of sleep."
 
             scene v13s14b_16a # FPP Same angle as 16, Penelope dissapointed but still smiling, mouth open

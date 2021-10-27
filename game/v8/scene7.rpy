@@ -252,7 +252,7 @@ label au_prot_call:
 
     menu:
         "Go to the protest":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ v8AutProtest = True
             jump caf_prot_au
         "Don't go to the protest":
