@@ -200,7 +200,7 @@ label v14s26a:
 
     if v11_lindsey_slogan == 1:
         #Lindsey by herself infront of slogan banner half-smiling that says Lindsey, Returning The Promise
-        $ kiwii_post = KiwiiPost("Lindsey", "Still selling treats to raise money for my campaign and the future of the Chicks! Don't forget to stop by <3 #Vote4Lindsey", numberLikes=593)
+        $ kiwii_post = KiwiiPost("Lindsey", "v14/lindseyselfie1.webp", "Still selling treats to raise money for my campaign and the future of the Chicks! Don't forget to stop by <3 #Vote4Lindsey", numberLikes=593)
         $ kiwii_post.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
         $ kiwii_post.newComment("Nora", "Cutie <3", queue=False)
         $ kiwii_post.newComment("Imre", "Actually, that cookie this morning made me shit myself!", queue=False)
@@ -217,7 +217,7 @@ label v14s26a:
 
     else: 
         #Lindsey by herself infront of slogan banner half-smiling that says Lindsey, Say Bye To The Bullshit
-        $ kiwii_post = KiwiiPost("Lindsey", "Still selling treats to raise money for my campaign and the future of the Chicks! Don't forget to stop by <3 #Vote4Lindsey", numberLikes=593)
+        $ kiwii_post = KiwiiPost("Lindsey", "v14/lindseyselfie2.webp", "Still selling treats to raise money for my campaign and the future of the Chicks! Don't forget to stop by <3 #Vote4Lindsey", numberLikes=593)
         $ kiwii_post.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
         $ kiwii_post.newComment("Nora", "Cutie <3", queue=False)
         $ kiwii_post.newComment("Imre", "Actually, that cookie this morning made me shit myself!", queue=False)

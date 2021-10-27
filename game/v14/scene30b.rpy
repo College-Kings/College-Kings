@@ -257,7 +257,7 @@ label v14s30b:
     
     # Don't know if it was done correctly I tried my best :P
     if v14s30b_pw_image_one and v14s30b_its_perfect:
-        $ kiwii_post = KiwiiPost("Chloe", _("What's a Chick without her Wolf? <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=712)
+        $ kiwii_post = KiwiiPost("Chloe", "v14/chloeplush1perfect.webp", _("What's a Chick without her Wolf? <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=712)
         if v14_pw_half_chris_support:
             $ kiwii_post.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ kiwii_post.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chlo <3"))
@@ -269,7 +269,7 @@ label v14s30b:
         $ kiwii_post.addReply(_("Aww, haha. Congrats!"))
 
     if v14s30b_pw_image_one and not v14s30b_its_perfect:
-        $ kiwii_post = KiwiiPost("Chloe", _("It's official! The Wolves and The Chicks are uniting as one to ensure that I stay president and furthermore, bring a wonderful balance to our new and improved sorority. #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=812)
+        $ kiwii_post = KiwiiPost("Chloe", "v14/chloeplush1notperfect.webp", _("It's official! The Wolves and The Chicks are uniting as one to ensure that I stay president and furthermore, bring a wonderful balance to our new and improved sorority. #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=812)
         if v14_pw_half_chris_support:
             $ kiwii_post.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ kiwii_post.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chlo <3"))
@@ -281,7 +281,7 @@ label v14s30b:
         $ kiwii_post.addReply(_("Aww, haha. Congrats!"))
 
     if v14s30b_pw_image_two and v14s30b_its_perfect:
-        $ kiwii_post = KiwiiPost("Chloe", _("I'd like to officially announce The Chick's partnership with The Wolves! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=756)
+        $ kiwii_post = KiwiiPost("Chloe", "v14/chloeplush2perfect.webp", _("I'd like to officially announce The Chick's partnership with The Wolves! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=756)
         if v14_pw_half_chris_support:
             $ kiwii_post.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ kiwii_post.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chlo <3"))
@@ -293,7 +293,7 @@ label v14s30b:
         $ kiwii_post.addReply(_("Aww, haha. Congrats!"))
 
     if v14s30b_pw_image_two and not v14s30b_its_perfect:
-        $ kiwii_post = KiwiiPost("Chloe", _("It's official! The Wolves and The Chicks are uniting as one to ensure that I stay president and furthermore, bring a wonderful balance to our new and improved sorority. #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=856)
+        $ kiwii_post = KiwiiPost("Chloe", "v14/chloeplush2notperfect.webp", _("It's official! The Wolves and The Chicks are uniting as one to ensure that I stay president and furthermore, bring a wonderful balance to our new and improved sorority. #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=856)
         if v14_pw_half_chris_support:
             $ kiwii_post.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ kiwii_post.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chlo <3"))
@@ -305,7 +305,7 @@ label v14s30b:
         $ kiwii_post.addReply(_("Aww, haha. Congrats!"))
 
     if v14s30b_rw_image_one and v14s30b_its_perfect:
-        $ kiwii_post = KiwiiPost("Chloe", _("What's a Chick without her Wolf? <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=973)
+        $ kiwii_post = KiwiiPost("Chloe", "v14/chloereal1perfect.webp", _("What's a Chick without her Wolf? <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=973)
         if v14_pw_half_chris_support:
             $ kiwii_post.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ kiwii_post.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chlo <3"))
@@ -317,7 +317,7 @@ label v14s30b:
         $ kiwii_post.addReply(_("Aww, haha. Congrats!"))
 
     if v14s30b_rw_image_one and not v14s30b_its_perfect:
-        $ kiwii_post = KiwiiPost("Chloe", _("A vote for me is a vote for The Chicks AND a vote for The Wolves :) #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=1273)
+        $ kiwii_post = KiwiiPost("Chloe", "v14/chloereal1notperfect.webp", _("A vote for me is a vote for The Chicks AND a vote for The Wolves :) #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=1273)
         if v14_pw_half_chris_support:
             $ kiwii_post.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ kiwii_post.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chlo <3"))
@@ -329,7 +329,7 @@ label v14s30b:
         $ kiwii_post.addReply(_("Aww, haha. Congrats!"))
 
     if v14s30b_rw_image_two and v14s30b_its_perfect:
-        $ kiwii_post = KiwiiPost("Chloe", _("Teamwork makes the dreamwork! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=981)
+        $ kiwii_post = KiwiiPost("Chloe", "v14/chloereal2perfect.webp", _("Teamwork makes the dreamwork! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=981)
         if v14_pw_half_chris_support:
             $ kiwii_post.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ kiwii_post.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chlo <3"))
@@ -341,7 +341,7 @@ label v14s30b:
         $ kiwii_post.addReply(_("Aww, haha. Congrats!"))
 
     if v14s30b_rw_image_two and not v14s30b_its_perfect:
-        $ kiwii_post = KiwiiPost("Chloe", _("Teamwork makes the dreamwork! <3 #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=1294)
+        $ kiwii_post = KiwiiPost("Chloe", "v14/chloereal2notperfect.webp", _("Teamwork makes the dreamwork! <3 #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=1294)
         if v14_pw_half_chris_support:
             $ kiwii_post.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ kiwii_post.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chlo <3"))
