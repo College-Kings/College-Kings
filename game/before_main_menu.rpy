@@ -8,40 +8,50 @@ label before_main_menu:
 
         # Create messenger contacts
         try: emily.messenger
-        except AttributeError: emily.create_contact("Emily", "emilyprofilepic.webp", locked=False)
+        except AttributeError: emily.create_contact("emilyprofilepic.webp", locked=False)
         try: lauren.messenger
-        except AttributeError: lauren.create_contact("Lauren", "laurenprofilepic.webp")
+        except AttributeError: lauren.create_contact("laurenprofilepic.webp")
         try: julia.messenger
-        except AttributeError: julia.create_contact("Julia", "juliaprofilepic.webp")
+        except AttributeError: julia.create_contact("juliaprofilepic.webp")
         try: ryan.messenger
-        except AttributeError: ryan.create_contact("Ryan", "ryanprofilepic.webp")
+        except AttributeError: ryan.create_contact("ryanprofilepic.webp")
         try: josh.messenger
-        except AttributeError: josh.create_contact("Josh", "joshprofilepic.webp")
+        except AttributeError: josh.create_contact("joshprofilepic.webp")
         try: aubrey.messenger
-        except AttributeError: aubrey.create_contact("Aubrey", "aubreyprofilepic.webp")
+        except AttributeError: aubrey.create_contact("aubreyprofilepic.webp")
         try: chloe.messenger
-        except AttributeError: chloe.create_contact("Chloe", "chloeprofilepic.webp")
+        except AttributeError: chloe.create_contact("chloeprofilepic.webp")
         try: amber.messenger
-        except AttributeError: amber.create_contact("Amber", "amberprofilepic.webp")
+        except AttributeError: amber.create_contact("amberprofilepic.webp")
         try: penelope.messenger
-        except AttributeError: penelope.create_contact("Penelope", "penelopeprofilepic.webp")
+        except AttributeError: penelope.create_contact("penelopeprofilepic.webp")
         try: riley.messenger
-        except AttributeError: riley.create_contact("Riley", "rileyprofilepic.webp")
+        except AttributeError: riley.create_contact("rileyprofilepic.webp")
         try: autumn.messenger
-        except AttributeError: autumn.create_contact("Autumn", "autumnprofilepic.webp")
+        except AttributeError: autumn.create_contact("autumnprofilepic.webp")
         try: imre.messenger
-        except AttributeError: imre.create_contact("Imre", "imreprofilepic.webp")
+        except AttributeError: imre.create_contact("imreprofilepic.webp")
         try: sebastian.messenger
-        except AttributeError: sebastian.create_contact("Sebastian", "sebastianprofilepicture.webp")
+        except AttributeError: sebastian.create_contact("sebastianprofilepicture.webp")
         try: grayson.messenger
-        except AttributeError: grayson.create_contact("Grayson", "graysonprofilepicture.webp")
+        except AttributeError: grayson.create_contact("graysonprofilepicture.webp")
         try: lindsey.messenger
-        except AttributeError: lindsey.create_contact("Lindsey", "lindseyprofilepic.webp")
+        except AttributeError: lindsey.create_contact("lindseyprofilepic.webp")
         try: jenny.messenger
-        except AttributeError: jenny.create_contact("Jenny", "jennyprofilepicture.webp")
+        except AttributeError: jenny.create_contact("jennyprofilepicture.webp")
         try: nora.messenger
-        except AttributeError: nora.create_contact("Nora", "noraprofilepicture.webp")
+        except AttributeError: nora.create_contact("noraprofilepicture.webp")
 
+
+        # Create simplr contacts
+        try: beth.simplr
+        except AttributeError: beth.create_simplr()
+        try: iris.simplr
+        except AttributeError: iris.create_simplr()
+        try: samantha.simplr
+        except AttributeError: samantha.create_simplr()
+        try: emmy.simplr
+        except AttributeError: emmy.create_simplr()
 
         # Set up murder mystery stats
         chloe.stats["Competitive"] = True
