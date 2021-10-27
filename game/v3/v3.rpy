@@ -1385,17 +1385,17 @@ label conl:
                 jump talkedout
 
             else: # caught and she's mad
-                $ contact_Aubrey.newMessage(_("I wanna talk about what happened yesterday."), queue=False)
-                $ contact_Aubrey.newMessage(_("Any chance that you could come over now?"))
-                $ contact_Aubrey.addReply(_("Yeah, I can."))
-                $ contact_Aubrey.newMessage(_("My room has a window facing the backyard. Can you climb in through there? I'll leave it open."))
-                $ contact_Aubrey.newMessage(_("I'd prefer if none of the girls saw you."))
-                $ contact_Aubrey.addReply(_("Uhm... sure."))
+                $ aubrey.messenger.newMessage(_("I wanna talk about what happened yesterday."), queue=False)
+                $ aubrey.messenger.newMessage(_("Any chance that you could come over now?"))
+                $ aubrey.messenger.addReply(_("Yeah, I can."))
+                $ aubrey.messenger.newMessage(_("My room has a window facing the backyard. Can you climb in through there? I'll leave it open."))
+                $ aubrey.messenger.newMessage(_("I'd prefer if none of the girls saw you."))
+                $ aubrey.messenger.addReply(_("Uhm... sure."))
 
                 label repeatk:
-                    if contact_Aubrey.replies:
+                    if aubrey.messenger.replies:
                         call screen phone
-                    if contact_Aubrey.replies:
+                    if aubrey.messenger.replies:
                         u "(I should probably check my phone.)"
                         jump repeatk
 
@@ -1579,20 +1579,20 @@ label conl:
 
         else: # not caught peeking but met
             label talkedout:
-                $ contact_Aubrey.newMessage(_("Hey, I really need your help."), queue=False)
-                $ contact_Aubrey.newMessage(_("Any chance that you could come over now?"), queue=False)
-                $ contact_Aubrey.addReply(_("Yeah, I'll be right there.."))
-                $ contact_Aubrey.newMessage(_("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
-                $ contact_Aubrey.newMessage(_("I'll leave it open."))
-                $ contact_Aubrey.addReply(_("Uhm... sure."))
+                $ aubrey.messenger.newMessage(_("Hey, I really need your help."), queue=False)
+                $ aubrey.messenger.newMessage(_("Any chance that you could come over now?"), queue=False)
+                $ aubrey.messenger.addReply(_("Yeah, I'll be right there.."))
+                $ aubrey.messenger.newMessage(_("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
+                $ aubrey.messenger.newMessage(_("I'll leave it open."))
+                $ aubrey.messenger.addReply(_("Uhm... sure."))
 
                 " "
 
                 call screen phone
                 label repeatl:
-                    if contact_Aubrey.replies:
+                    if aubrey.messenger.replies:
                         call screen phone
-                    if contact_Aubrey.replies:
+                    if aubrey.messenger.replies:
                         u "(I should probably check my phone.)"
                         jump repeatl
 
@@ -1839,17 +1839,17 @@ label conl:
                 au "Yeah..."
 
     else: # you didn't meet aubrey
-        $ contact_Aubrey.newMessage(_("Hey, you know how you had to cancel on me yesterday and you really want to make it up to me?"), queue=False)
-        $ contact_Aubrey.newMessage(_("Wanna come over now?"), queue=False)
-        $ contact_Aubrey.addReply(_("Uhh... okay."))
-        $ contact_Aubrey.newMessage(_("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
-        $ contact_Aubrey.newMessage(_("I'll leave it open."))
-        $ contact_Aubrey.addReply(_("Uhm... sure."))
+        $ aubrey.messenger.newMessage(_("Hey, you know how you had to cancel on me yesterday and you really want to make it up to me?"), queue=False)
+        $ aubrey.messenger.newMessage(_("Wanna come over now?"), queue=False)
+        $ aubrey.messenger.addReply(_("Uhh... okay."))
+        $ aubrey.messenger.newMessage(_("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
+        $ aubrey.messenger.newMessage(_("I'll leave it open."))
+        $ aubrey.messenger.addReply(_("Uhm... sure."))
 
         label repeatm:
-            if contact_Aubrey.replies:
+            if aubrey.messenger.replies:
                 call screen phone
-            if contact_Aubrey.replies:
+            if aubrey.messenger.replies:
                 u "(I should probably check my phone.)"
                 jump repeatm
 

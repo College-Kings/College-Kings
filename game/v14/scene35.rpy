@@ -13,19 +13,19 @@ label v14s35:
 
     play sound "sounds/vibrate.mp3"
 
-    $ contact_Jenny.newMessage(_("Hey [name], you busy right now?"), queue =False)
-    $ contact_Jenny.addReply(_("No, what's up?"))
-    $ contact_Jenny.newMessage(_("Well, I've been wanting to swimming in this little lagoon I found."))
-    $ contact_Jenny.addReply(_("You wanna go now?"))
-    $ contact_Jenny.newMessage(_("Yeah, why not? ;) Penelope is busy, so I wanted to see if you'd be down."))
-    $ contact_Jenny.addReply(_("Okay sure, where's this lagoon at?"))
-    $ contact_Jenny.newImgMessage(_("Picture of the Lagoon, somehow with a location marker in the photo"))
-    $ contact_Jenny.newMessage(_("See you soon!"))
+    $ jenny.messenger.newMessage(_("Hey [name], you busy right now?"), queue =False)
+    $ jenny.messenger.addReply(_("No, what's up?"))
+    $ jenny.messenger.newMessage(_("Well, I've been wanting to swimming in this little lagoon I found."))
+    $ jenny.messenger.addReply(_("You wanna go now?"))
+    $ jenny.messenger.newMessage(_("Yeah, why not? ;) Penelope is busy, so I wanted to see if you'd be down."))
+    $ jenny.messenger.addReply(_("Okay sure, where's this lagoon at?"))
+    $ jenny.messenger.newImgMessage(_("Picture of the Lagoon, somehow with a location marker in the photo"))
+    $ jenny.messenger.newMessage(_("See you soon!"))
 
     label s35_PhoneContinue:
-        if contact_Jenny.replies:
+        if jenny.messenger.replies:
             call screen phone
-        if contact_Jenny.replies:
+        if jenny.messenger.replies:
             "(I should reply to Jenny.)"
             jump s35_PhoneContinue
 
@@ -43,7 +43,7 @@ label v14s35:
         scene v14s35_3b # TPP. Same as v14s35_3a, MC standing in the room with his swimming trunks fully on, slight smile, mouth closed
         with dissolve
 
-    if joinapes:
+    else:
         scene v14s35_4 # TPP. Show MC standing naked in his Apes room, slight smile, mouth closed.
         with dissolve
 

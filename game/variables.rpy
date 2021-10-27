@@ -1,3 +1,7 @@
+init python:
+    import os
+
+
 ## Init
 define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
@@ -6,6 +10,14 @@ default menu_set = set()
 
 default achievementAtList = None
 default freeRoam = False
+
+default kct = "confident"
+default sortedKCT = ["confident", "loyal", "popular"]
+
+
+    ## Phone
+default contacts_file_path = os.path.join(config.basedir, "game", "images", "phone", "contacts")
+
 
     ## Kiwii Vars
 default kiwiiUsers = kiwii_users()
@@ -603,6 +615,7 @@ default v13s40_shoulderpoint = False
 default laurenrs_v11aubrey = True
 default v13s40fromgame = False
 default v13_chloe_sex = False
+default v13_FirstThreesome = False # Variable used to call for Riley and Aubrey threesome happening.
 
 # 14.0
 default v14_help_chloe = False
@@ -630,3 +643,4 @@ default v14s31bTrustChloe = False # MC trust Chloe alone with Grayson
 default v14s37_focus_on_us = False # Tell Penelope to focus on them during the date.
 default v14s39_id_wait = False # Tell Penelope you'd wait till they got home
 default v14_talk_to_chris = False
+default ElijahFriend = False

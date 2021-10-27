@@ -12,8 +12,8 @@ label v12_penelope_roof:
 
     play music "music/v12/Scene 3/Track Scene 3_1.mp3" fadein 2
 
-    $ contact_Penelope.newMessage("Hey, are you up still?", queue=False)
-    $ contact_Penelope.newMessage("If you are, can you meet me in the hallway?", queue=False)
+    $ penelope.messenger.newMessage("Hey, are you up still?", queue=False)
+    $ penelope.messenger.newMessage("If you are, can you meet me in the hallway?", queue=False)
 
     u "(It's Penelope.)"
 
@@ -24,12 +24,12 @@ label v12_penelope_roof:
             if penelopers:
                 $ add_point(KCT.BOYFRIEND)
 
-            $ contact_Penelope.addReply("Yeah, one sec", func=None)
+            $ penelope.messenger.addReply("Yeah, one sec", func=None)
 
             label v12_penelope_roof_text:
-                if contact_Penelope.replies:
+                if penelope.messenger.replies:
                     call screen phone
-                if contact_Penelope.replies:
+                if penelope.messenger.replies:
                     u "(I should probably reply.)"
                     jump v12_penelope_roof_text
 

@@ -305,7 +305,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
     u "*Chuckles*"
 
-    if not joinapes: # -If Wolf
+    if joinwolves: # -If Wolf
         scene v14s31b_10d # FPP. Same as v14s31b_10c, but mouth open, a little more angry.
         with dissolve
 
@@ -1055,9 +1055,6 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
         cl "*Chuckles* Me too."
 
-        scene v14s31b_
-        with dissolve
-
         if chloegf: 
             scene v14s31b_29 # TPP. Chloe kisses MC on the cheek.
             with dissolve
@@ -1092,7 +1089,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
         u "Bye."
 
-        if not joinapes:
+        if joinwolves:
             scene v14s31b_30  # TPP. In front of the Ape, Chloe on the side walk walking to the left, MC on the side walk walking right (away from each other), neutral, mouths closed.
             with dissolve
             
@@ -1342,7 +1339,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
         u "*Sighs* What the fuck, man?"
 
-        if not joinapes:
+        if joinwolves:
             scene v14s31b_30c # TPP. Same as v14s31b_30b, but cut Chloe from the scene and have MC walking on the side walk to the left (going to Wolf House).
             with dissolve
             

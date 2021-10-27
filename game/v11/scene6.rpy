@@ -30,15 +30,15 @@ label v11_thurs_night_room:
 
         #-MC gets out his phone and text Riley-
 
-        $ contact_Riley.addReply("You wanna catch the indoor skydiving thing tomorrow before the trip?")
-        $ contact_Riley.newMessage("I knew I was forgetting something... I actually made plans with Charli already. Sorry :(")
-        $ contact_Riley.addReply("It's fine, gn.")
-        $ contact_Riley.newMessage("Goodnight")
+        $ riley.messenger.addReply("You wanna catch the indoor skydiving thing tomorrow before the trip?")
+        $ riley.messenger.newMessage("I knew I was forgetting something... I actually made plans with Charli already. Sorry :(")
+        $ riley.messenger.addReply("It's fine, gn.")
+        $ riley.messenger.newMessage("Goodnight")
 
         label v11s6_PhoneContinue:
-            if contact_Riley.replies:
+            if riley.messenger.replies:
                 call screen phone
-            if contact_Riley.replies:
+            if riley.messenger.replies:
                 "(I should reply to Riley.)"
                 jump v11s6_PhoneContinue
 
@@ -72,10 +72,10 @@ label v11_thurs_night_room:
 
             u "(I'm tired as hell... I'll pack tomorrow.)"
 
-        $ contact_Riley.addReply("You wanna catch the indoor skydiving thing tomorrow before the trip?")
-        $ contact_Riley.newMessage("I knew I was forgetting something... I actually made plans with Charli already. Sorry :(")
-        $ contact_Riley.addReply("It's fine, gn.")
-        $ contact_Riley.newMessage("Goodnight")
+        $ riley.messenger.addReply("You wanna catch the indoor skydiving thing tomorrow before the trip?")
+        $ riley.messenger.newMessage("I knew I was forgetting something... I actually made plans with Charli already. Sorry :(")
+        $ riley.messenger.addReply("It's fine, gn.")
+        $ riley.messenger.newMessage("Goodnight")
 
         scene v11seap2b
         with dissolve
@@ -85,9 +85,9 @@ label v11_thurs_night_room:
         #-MC gets out his phone and text Riley-
 
         label v11s6_PhoneContinue1:
-            if contact_Riley.replies:
+            if riley.messenger.replies:
                 call screen phone
-            if contact_Riley.replies:
+            if riley.messenger.replies:
                 "(I should reply to Riley.)"
                 jump v11s6_PhoneContinue1
                 

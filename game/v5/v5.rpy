@@ -1,58 +1,58 @@
 init python:
     # Amber messages
     def v5_reply1():
-        add_point(KCT.BRO)
-        contact_Amber.newMessage(_("Oh really? How are you gonna do that?"))
-        contact_Amber.addReply(_("I give some world-class massages"), v5_reply2)
-        contact_Amber.addReply(_("I'll stay longer next time"), v5_reply3)
+        addPoint(KCT.BRO)
+        amber.messenger.newMessage(_("Oh really? How are you gonna do that?"))
+        amber.messenger.addReply(_("I give some world-class massages"), v5_reply2)
+        amber.messenger.addReply(_("I'll stay longer next time"), v5_reply3)
 
     def v5_reply2():
         addPoint("tm")
-        contact_Amber.newMessage(_("That does sound enticing ;)"))
+        amber.messenger.newMessage(_("That does sound enticing ;)"))
 
     def v5_reply3():
-        contact_Amber.newMessage(_("Deal xx"))
+        amber.messenger.newMessage(_("Deal xx"))
 
     def v5_reply4():
-        contact_Amber.newMessage(_("Oh okay, hope everything's okay xx"))
-        contact_Amber.addReply(_("Yeah, it's all good."))
-        contact_Amber.newMessage(_("Deal xx"))
+        amber.messenger.newMessage(_("Oh okay, hope everything's okay xx"))
+        amber.messenger.addReply(_("Yeah, it's all good."))
+        amber.messenger.newMessage(_("Deal xx"))
 
     def v5_reply5():
-        add_point(KCT.BRO)
-        contact_Amber.newMessage(_("Oh wow, I was just checking. :P"))
-        contact_Amber.addReply(_("Don't worry, you'll see me soon."), v5_reply6)
-        contact_Amber.addReply(_("Haha, I'm fine."), v5_reply7)
+        addPoint(KCT.BRO)
+        amber.messenger.newMessage(_("Oh wow, I was just checking. :P"))
+        amber.messenger.addReply(_("Don't worry, you'll see me soon."), v5_reply6)
+        amber.messenger.addReply(_("Haha, I'm fine."), v5_reply7)
 
     def v5_reply6():
         addPoint("tm")
-        contact_Amber.newMessage(_("Was hoping xx"))
+        amber.messenger.newMessage(_("Was hoping xx"))
 
     def v5_reply7():
-        contact_Amber.newMessage(_("That's good xx"))
+        amber.messenger.newMessage(_("That's good xx"))
 
     def v5_reply8():
-        contact_Amber.newMessage(_("Oh okay, hope you're good xx"))
-        contact_Amber.addReply(_("Yeah, no worries"))
-        contact_Amber.newMessage(_("That's good xx"))
+        amber.messenger.newMessage(_("Oh okay, hope you're good xx"))
+        amber.messenger.addReply(_("Yeah, no worries"))
+        amber.messenger.newMessage(_("That's good xx"))
 
     def v5_reply9():
-        add_point(KCT.BRO)
-        contact_Amber.newMessage(_("Oh shut up, I was just checking in"))
-        contact_Amber.addReply(_("Don't worry, you'll see me again"), v5_reply10)
-        contact_Amber.addReply(_("Haha, I'm fine"), v5_reply11)
+        addPoint(KCT.BRO)
+        amber.messenger.newMessage(_("Oh shut up, I was just checking in"))
+        amber.messenger.addReply(_("Don't worry, you'll see me again"), v5_reply10)
+        amber.messenger.addReply(_("Haha, I'm fine"), v5_reply11)
 
     def v5_reply10():
         addPoint("tm")
-        contact_Amber.newMessage(_("Was hoping xx"))
+        amber.messenger.newMessage(_("Was hoping xx"))
 
     def v5_reply11():
-        contact_Amber.newMessage(_("That's good xx"))
+        amber.messenger.newMessage(_("That's good xx"))
 
     def v5_reply12():
-        contact_Amber.newMessage(_("Oh okay, hope you're good xx"))
-        contact_Amber.addReply(_("Yeah, no worries"))
-        contact_Amber.newMessage(_("That's good xx"))
+        amber.messenger.newMessage(_("Oh okay, hope you're good xx"))
+        amber.messenger.addReply(_("Yeah, no worries"))
+        amber.messenger.newMessage(_("That's good xx"))
 
 label ev_a: #for compatibility only
 label ev_b: #for compatibility only
@@ -634,40 +634,40 @@ label newchloec:
     #################
 
     if kissamber:
-        $ contact_Amber.newMessage(_("Hey, it's Amber"), queue=False)
-        $ contact_Amber.newMessage(_("Josh gave me your number"), queue=False)
-        $ contact_Amber.newMessage(_("You know, you never came back, I thought we were having a good time xx"), queue=False)
-        $ contact_Amber.addReply(_("We did, I'll make it up to you."), v5_reply1)
-        $ contact_Amber.addReply(_("Sorry, something came up."), v5_reply4)
+        $ amber.messenger.newMessage(_("Hey, it's Amber"), queue=False)
+        $ amber.messenger.newMessage(_("Josh gave me your number"), queue=False)
+        $ amber.messenger.newMessage(_("You know, you never came back, I thought we were having a good time xx"), queue=False)
+        $ amber.messenger.addReply(_("We did, I'll make it up to you."), v5_reply1)
+        $ amber.messenger.addReply(_("Sorry, something came up."), v5_reply4)
 
-    elif contact_Josh.sentMessages[-2].reply and contact_Josh.sentMessages[-2].reply.message == "I can't, sorry.":
-        $ contact_Amber.newMessage(_("Hey, it's Amber"), queue=False)
-        $ contact_Amber.newMessage(_("Josh gave me your number"), queue=False)
-        $ contact_Amber.newMessage(_("How come you didn't show up yesterday? Everything okay? xx"), queue=False)
-        $ contact_Amber.addReply(_("Wow, you really wanted to see me, huh?"), v5_reply5)
-        $ contact_Amber.addReply(_("Sorry, something came up."), v5_reply8)
+    elif josh.messenger.sentMessages[-2].reply and josh.messenger.sentMessages[-2].reply.message == "I can't, sorry.":
+        $ amber.messenger.newMessage(_("Hey, it's Amber"), queue=False)
+        $ amber.messenger.newMessage(_("Josh gave me your number"), queue=False)
+        $ amber.messenger.newMessage(_("How come you didn't show up yesterday? Everything okay? xx"), queue=False)
+        $ amber.messenger.addReply(_("Wow, you really wanted to see me, huh?"), v5_reply5)
+        $ amber.messenger.addReply(_("Sorry, something came up."), v5_reply8)
 
     else:
-        $ contact_Amber.newMessage(_("Hey, it's Amber"), queue=False)
-        $ contact_Amber.newMessage(_("Josh gave me your number"), queue=False)
-        $ contact_Amber.newMessage(_("You know, you never came back, everything okay?"), queue=False)
-        $ contact_Amber.addReply(_("Wow, you really missed me that much, huh?"), v5_reply9)
-        $ contact_Amber.addReply(_("Sorry, something came up."), v5_reply12)
+        $ amber.messenger.newMessage(_("Hey, it's Amber"), queue=False)
+        $ amber.messenger.newMessage(_("Josh gave me your number"), queue=False)
+        $ amber.messenger.newMessage(_("You know, you never came back, everything okay?"), queue=False)
+        $ amber.messenger.addReply(_("Wow, you really missed me that much, huh?"), v5_reply9)
+        $ amber.messenger.addReply(_("Sorry, something came up."), v5_reply12)
 
     if not toldlauren and not laurentoofar:
         play sound "sounds/vibrate.mp3"
 
-        $ contact_Lauren.newMessage(_("Hey"), queue=False)
-        $ contact_Lauren.newMessage(_("Wanna do the personality tests today at noon?"), queue=False)
-        $ contact_Lauren.addReply(_("Yeah, sure."))
-        $ contact_Lauren.newMessage(_("Great :) Meet me at our economics' classroom."))
+        $ lauren.messenger.newMessage(_("Hey"), queue=False)
+        $ lauren.messenger.newMessage(_("Wanna do the personality tests today at noon?"), queue=False)
+        $ lauren.messenger.addReply(_("Yeah, sure."))
+        $ lauren.messenger.newMessage(_("Great :) Meet me at our economics' classroom."))
 
         u "(Oh shit, I'm getting a bunch of messages.)"
 
         label phonex:
-            if contact_Lauren.replies:
+            if lauren.messenger.replies:
                 call screen phone
-            if contact_Lauren.replies:
+            if lauren.messenger.replies:
                 u "(I should probably reply to some of them.)"
                 jump phonex
             
@@ -675,9 +675,9 @@ label newchloec:
 
     else:
         label phoney:
-            if contact_Amber.replies:
+            if amber.messenger.replies:
                 call screen phone
-            if contact_Amber.replies:
+            if amber.messenger.replies:
                 "(Maybe it's Lauren and she wants to talk about what happened? I should definitely check.)"
                 jump phoney
 
@@ -4288,10 +4288,10 @@ label findimre:
     u "(Maybe that's Imre...)"
 
     if chloemad:
-        $ contact_Amber.newMessage(_("Hey, you alone? xx"), queue=False)
-        $ contact_Amber.addReply(_("I'm at the park, but I'm by myself."))
-        $ contact_Amber.newMessage(_("Go somewhere where you're completely alone xx"))
-        $ contact_Amber.newMessage(_("I got a surprise for you ;)"))
+        $ amber.messenger.newMessage(_("Hey, you alone? xx"), queue=False)
+        $ amber.messenger.addReply(_("I'm at the park, but I'm by myself."))
+        $ amber.messenger.newMessage(_("Go somewhere where you're completely alone xx"))
+        $ amber.messenger.newMessage(_("I got a surprise for you ;)"))
 
         call screen phone
 
@@ -4305,10 +4305,10 @@ label findimre:
             u "(I gotta make a decision. Should I help Imre, or keep talking to Amber?)"
 
     else:
-        $ contact_Chloe.newMessage(_("I got some free time right now :)"), queue=False)
-        $ contact_Chloe.newMessage(_("Wanna go swimming?"), queue=False)
-        $ contact_Chloe.addReply(_("Any chance we could do it later? Or tomorrow?"))
-        $ contact_Chloe.newMessage(_("I'm busy later tonight and I'm pretty much booked for the entire week :/"))
+        $ chloe.messenger.newMessage(_("I got some free time right now :)"), queue=False)
+        $ chloe.messenger.newMessage(_("Wanna go swimming?"), queue=False)
+        $ chloe.messenger.addReply(_("Any chance we could do it later? Or tomorrow?"))
+        $ chloe.messenger.newMessage(_("I'm busy later tonight and I'm pretty much booked for the entire week :/"))
 
         call screen phone
 

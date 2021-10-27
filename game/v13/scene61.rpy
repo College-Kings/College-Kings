@@ -106,6 +106,7 @@ label v13s61:
     stop music fadeout 3
 
     if aubreyrs and rileyrs: 
+        $ v13_FirstThreesome = True # ;)
         jump v13s62 
     else:
         jump v13s62a

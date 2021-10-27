@@ -24,16 +24,16 @@ label v10_tues_room_night:
 
             python:
                 if config_censored:
-                    contact_Lauren.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
+                    lauren.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
                 else:
-                    contact_Lauren.newImgMessage("images/v10/scene 32/v9lauText.webp", queue=False)
-                contact_Lauren.newMessage("Sweet Dreams ;)", queue=False)
-                contact_Lauren.addReply("They will be now.")
+                    lauren.messenger.newImgMessage("images/v10/scene 32/v9lauText.webp", queue=False)
+                lauren.messenger.newMessage("Sweet Dreams ;)", queue=False)
+                lauren.messenger.addReply("They will be now.")
 
             label v10s32_phoneCheckW:
-                if contact_Lauren.replies:
+                if lauren.messenger.replies:
                     call screen phone
-                if contact_Lauren.replies:
+                if lauren.messenger.replies:
                     u "(I should reply to Lauren)"
                     jump v10s32_phoneCheckW
 
@@ -86,16 +86,16 @@ label v10_tues_room_night:
 
             python:
                 if config_censored:
-                    contact_Lauren.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
+                    lauren.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
                 else:
-                    contact_Lauren.newImgMessage("images/v10/scene 32/v9lauText.webp", queue=False)
-                contact_Lauren.newMessage("Sweet Dreams ;)", queue=False)
-                contact_Lauren.addReply("They will be now.")
+                    lauren.messenger.newImgMessage("images/v10/scene 32/v9lauText.webp", queue=False)
+                lauren.messenger.newMessage("Sweet Dreams ;)", queue=False)
+                lauren.messenger.addReply("They will be now.")
 
             label v10s32_phoneCheckA:
-                if contact_Lauren.replies:
+                if lauren.messenger.replies:
                     call screen phone
-                if contact_Lauren.replies:
+                if lauren.messenger.replies:
                     u "(I should reply to Lauren)"
                     jump v10s32_phoneCheckA
 

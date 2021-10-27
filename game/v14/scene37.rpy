@@ -7,17 +7,17 @@ label v14s37:
     scene v14s37_1 # TPP. Show MC arriving at the restaurant wearing the nice clothes he put on in scene 34, his clothes slightly blowing from the wind, MC slight smile, mouth closed. 
     with fade
 
-    pause 0.25
+    pause 0.75
 
     scene v14s37_2 # TPP. Show MC spotting Penelope in the dress she put on in scene 34 outside of the restraunt and walking towards her, both slight smile, mouth closed.
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s37_2a # TPP. Same as v14s37_2, MC standing infront of Penelope, both slight smile, mouth closed.
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s37_3 # FPP. MC and Penlope outside of the restaurant, Penelope looking at MC, MC looking at Penelope, Penelope slight smile, mouth closed.
     with dissolve
@@ -82,12 +82,12 @@ label v14s37:
     scene v14s37_7 # TPP. Show MC and Penelope following the Host to their table.
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s37_8 # TPP. Show MC and Penelope pulling out their seats from under the table.
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s37_9 # FPP. MC and Penelope(Penelope off camera) sitting at the table. MC looking at the host, Host looking at MC, Host slight smile, mouth open.
     with dissolve
@@ -122,7 +122,7 @@ label v14s37:
     scene v14s37_9c # FPP. Same as v14s37_9b, Show the Host walking off.
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s37_10a # FPP. Same as v14s37_10, Penelope looking at MC, MC looking at Penelope, Penelope slight smile, mouth open.
     with dissolve
@@ -291,7 +291,7 @@ label v14s37:
     scene v14s37_12a # TPP. Same as v14s37_12, The host walking away from the table, confused face, mouth closed.
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s37_10c # FPP. Same as v14s37_10b, MC looking at Penelope, Penelope looking at MC, Penlope slight sad face, mouth open.
     with dissolve
@@ -376,7 +376,7 @@ label v14s37:
             
             u "Woah, I didn't know that was a thing. Why'd it get cancelled?"
 
-        "Laugh...":
+        "Laugh":
             $ addPoint("tm")
             scene v14s37_10b
             with dissolve
@@ -664,7 +664,7 @@ label v14s37:
     scene v14s37_17 # TPP. Shot of both Penelope and MC starting to lean over the table to kiss each other.
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s37_17a # TPP. Same as v14s37_17, Penelope and MC kissing across the table.
     with dissolve
@@ -691,10 +691,41 @@ label v14s37:
 
     lady "And that's also why you can't keep a fucking job, you're a loser!"
 
-    if not v14s37_focus_on_us or not kct == "loyal":
-        if not kct == "loyal":
-            call screen kctPopup
+    if v14s37_focus_on_us or kct == "loyal":
+        scene v14s37_10h
+        with dissolve
 
+        pe "*Sighs* [name]... I don't want to ruin our night, but-"
+
+        scene v14s37_10i
+        with dissolve
+
+        u "Say no more, let's go. We'll come back another time."
+
+        scene v14s37_10a
+        with dissolve
+
+        pe "Thank you."
+
+        scene v14s37_10b
+        with dissolve
+
+        u "Always."
+
+        scene v14s37_25 # TPP. Show Penelope leaving money on the table for the waitress, Penlope slight smile, mouth closed.
+        with dissolve
+
+        u "(The nicest human in the entire world.)"
+
+        scene v14s37_26 # FPP. MC standing next to the table and holding Penelope's hand and helping her get up, Penelope slight smile, mouth closed.
+        with dissolve
+
+        pause 
+
+        scene v14s37_23
+        with fade
+
+    else:
         scene v14s37_10g
         with dissolve
 
@@ -707,7 +738,7 @@ label v14s37:
         scene v14s37_18 # TPP. Penelope walking up to the table that the gentleman and the lady are at, Penelope angry face, mouth closed.
         with dissolve
 
-        pause 0.25
+        pause 0.75
 
         scene v14s37_19 # TPP. Close up of Penelope putting her finger in the ladies face, Penleope angry face, mouth open, Lady shocked face, mouth closed.
         with dissolve
@@ -771,42 +802,4 @@ label v14s37:
 
         u "I understand why."
 
-        jump v14s39
-
-
-    if v14s37_focus_on_us or kct == "loyal":
-        
-        scene v14s37_10h
-        with dissolve
-
-        pe "*Sighs* [name]... I don't want to ruin our night, but-"
-
-        scene v14s37_10i
-        with dissolve
-
-        u "Say no more, let's go. We'll come back another time."
-
-        scene v14s37_10a
-        with dissolve
-
-        pe "Thank you."
-
-        scene v14s37_10b
-        with dissolve
-
-        u "Always."
-
-        scene v14s37_25 # TPP. Show Penelope leaving money on the table for the waitress, Penlope slight smile, mouth closed.
-        with dissolve
-
-        u "(The nicest human in the entire world.)"
-
-        scene v14s37_26 # FPP. MC standing next to the table and holding Penelope's hand and helping her get up, Penelope slight smile, mouth closed.
-        with dissolve
-
-        pause 
-
-        scene v14s37_23
-        with fade
-
-        jump v14s39
+    jump v14s39

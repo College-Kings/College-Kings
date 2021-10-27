@@ -24,46 +24,46 @@ init python:
 
     def v7_msgReply1():
         setattr(store, "tellpenelope", True)
-        add_point(KCT.BRO)
-        contact_Penelope.newMessage(_("Okay..."))
+        addPoint(KCT.BRO)
+        penelope.messenger.newMessage(_("Okay..."))
 
     def v7_msgReply2():
-        contact_Penelope.newMessage(_("Okay..."))
+        penelope.messenger.newMessage(_("Okay..."))
 
     def v7_msgReply3():
-        contact_Lauren.newMessage(_("How about now?"))
-        contact_Lauren.addReply(_("Sure, I'll come pick you up"))
-        contact_Lauren.newMessage(_("Great :)"))
+        lauren.messenger.newMessage(_("How about now?"))
+        lauren.messenger.addReply(_("Sure, I'll come pick you up"))
+        lauren.messenger.newMessage(_("Great :)"))
 
     def v7_msgReply4():
         setattr(store, "nobeach", True)
-        contact_Lauren.newMessage(_("Oh okay, another time then."))
+        lauren.messenger.newMessage(_("Oh okay, another time then."))
 
     def v7_msgReply5():
         setattr(store, "rileysex", True)
-        contact_Riley.newMessage(_("Yayyy"))
+        riley.messenger.newMessage(_("Yayyy"))
 
     def v7_msgReply6():
         setattr(store, "rileysex", False)
-        contact_Riley.newMessage(_("Oh oki"))
+        riley.messenger.newMessage(_("Oh oki"))
 
     def kiwii_firstTimeMessages():
         if emilyrs:
-            contact_Riley.addReply(_("We're not back together"))
-            contact_Riley.newMessage(_("Okay... just looked like it"))
-            contact_Riley.addReply(_("Well we're not."))
-            contact_Riley.newMessage(_("k"))
+            riley.messenger.addReply(_("We're not back together"))
+            riley.messenger.newMessage(_("Okay... just looked like it"))
+            riley.messenger.addReply(_("Well we're not."))
+            riley.messenger.newMessage(_("k"))
         if bowling and emilyrs:
-            contact_Penelope.newMessage(_("I didn't know you and Emily were a thing..."), queue=False)
-            contact_Penelope.addReply(_("We're not a thing"), v7_msgReply1)
-            contact_Penelope.addReply(_("It was a one time thing"), v7_msgReply2)
+            penelope.messenger.newMessage(_("I didn't know you and Emily were a thing..."), queue=False)
+            penelope.messenger.addReply(_("We're not a thing"), v7_msgReply1)
+            penelope.messenger.addReply(_("It was a one time thing"), v7_msgReply2)
         if emilyrs and laurenrs:
-            contact_Lauren.newMessage(_("I saw what Emily posted. I really thought you liked me..."), queue=False)
-            contact_Lauren.newMessage(_("I guess we're done now, so please just delete my number."), queue=False)
-            contact_Lauren.addReply(_("Lauren can we please just talk about it? I can explain"))
-            contact_Lauren.newMessage(_("What is there to talk about? How could you betray me like that?!"))
-            contact_Lauren.addReply(_("Please, it's just a big misunderstanding"))
-            contact_Lauren.newMessage(_("Fine. I'm in my dorm, we can talk now."))
+            lauren.messenger.newMessage(_("I saw what Emily posted. I really thought you liked me..."), queue=False)
+            lauren.messenger.newMessage(_("I guess we're done now, so please just delete my number."), queue=False)
+            lauren.messenger.addReply(_("Lauren can we please just talk about it? I can explain"))
+            lauren.messenger.newMessage(_("What is there to talk about? How could you betray me like that?!"))
+            lauren.messenger.addReply(_("Please, it's just a big misunderstanding"))
+            lauren.messenger.newMessage(_("Fine. I'm in my dorm, we can talk now."))
 
     def v7_msgReply7():
         setattr(store, "kiwii_firstTime", True)
@@ -1383,9 +1383,9 @@ label conyourdorm:
         $ v7_kiwiiPost4.addReply(_("No, we're not."), v7_kiwiiReply6, mentions="Josh", numberLikes=renpy.random.randint(5, 15))
 
         play sound "sounds/vibrate.mp3"
-        $ contact_Riley.newMessage(_("Are you and Emily back together?"), queue=False)
-        $ contact_Riley.addReply(_("What are you talking about???"), v7_msgReply7)
-        $ contact_Riley.newMessage(_("Check Kiwii..."))
+        $ riley.messenger.newMessage(_("Are you and Emily back together?"), queue=False)
+        $ riley.messenger.addReply(_("What are you talking about???"), v7_msgReply7)
+        $ riley.messenger.newMessage(_("Check Kiwii..."))
 
         pause 0.5
 
@@ -1398,9 +1398,9 @@ label conyourdorm:
             if bowling and emilyrs:
                 $ v7_emily_bowling = True
         
-            if contact_Riley.replies:
-                call screen messager(contact_Riley)
-            if contact_Riley.replies:
+            if riley.messenger.replies:
+                call screen messager(riley.messenger)
+            if riley.messenger.replies:
                 "(I need to respond to some of these messages.)"
                 jump phoneam
 
@@ -1408,11 +1408,11 @@ label conyourdorm:
                 "(I should check out what Emily posted on Kiwii.)"
                 jump phoneam
 
-            if bowling and contact_Penelope.replies:
+            if bowling and penelope.messenger.replies:
                 "(I should answer Penelope.)"
                 jump phoneam
 
-            if laurenrs and contact_Lauren.replies:
+            if laurenrs and lauren.messenger.replies:
                 "(I should respond to Lauren.)"
                 jump phoneam
 
@@ -1621,10 +1621,10 @@ label conyourdorm:
 
     else:
         play sound "sounds/vibrate.mp3"
-        $ contact_Riley.newMessage(_("Hey, how come you're not on Kiwii?"), queue=False)
-        $ contact_Riley.addReply(_("What's that?"))
-        $ contact_Riley.newMessage(_("It's a new social media app, you should give it a try"))
-        $ contact_Riley.addReply(_("Okay, I'll have a look"), v7_msgReply7)
+        $ riley.messenger.newMessage(_("Hey, how come you're not on Kiwii?"), queue=False)
+        $ riley.messenger.addReply(_("What's that?"))
+        $ riley.messenger.newMessage(_("It's a new social media app, you should give it a try"))
+        $ riley.messenger.addReply(_("Okay, I'll have a look"), v7_msgReply7)
 
         pause 0.5
 
@@ -1634,9 +1634,9 @@ label conyourdorm:
         u "(Huh? What did Riley text me?)"
 
         label phonean:
-            if contact_Riley.replies:
-                call screen messager(contact_Riley)
-            if contact_Riley.replies:
+            if riley.messenger.replies:
+                call screen messager(riley.messenger)
+            if riley.messenger.replies:
                 u "(I should respond to Riley.)"
                 jump phonean
             
@@ -2556,36 +2556,36 @@ label thisbewalk:
         play sound "sounds/vibrate.mp3"
 
         if seenlauren and laurenrs:
-            $ contact_Lauren.newMessage(_("Wanna go now babe?"), queue=False)
-            $ contact_Lauren.addReply(_("Sure, I'll come pick you up"))
-            $ contact_Lauren.newMessage(_("Great :)"))
+            $ lauren.messenger.newMessage(_("Wanna go now babe?"), queue=False)
+            $ lauren.messenger.addReply(_("Sure, I'll come pick you up"))
+            $ lauren.messenger.newMessage(_("Great :)"))
 
         elif seenlauren:
-            $ contact_Lauren.newMessage(_("Wanna go now?"), queue=False)
-            $ contact_Lauren.addReply(_("Sure, I'll come pick you up"))
-            $ contact_Lauren.newMessage(_("Great :)"))
+            $ lauren.messenger.newMessage(_("Wanna go now?"), queue=False)
+            $ lauren.messenger.addReply(_("Sure, I'll come pick you up"))
+            $ lauren.messenger.newMessage(_("Great :)"))
 
         else:
-            $ contact_Lauren.newMessage(_("Hey :)"), queue=False)
+            $ lauren.messenger.newMessage(_("Hey :)"), queue=False)
 
             if laurenrs:
-                $ contact_Lauren.newMessage(_("You wanna go to the beach today?"), queue=False)
-                $ contact_Lauren.addReply(_("Sounds good, when were you thinking?"))
-                $ contact_Lauren.newMessage(_("How about now?"))
-                $ contact_Lauren.addReply(_("Sure, I'll come pick you up"))
-                $ contact_Lauren.newMessage(_("Great :)"))
+                $ lauren.messenger.newMessage(_("You wanna go to the beach today?"), queue=False)
+                $ lauren.messenger.addReply(_("Sounds good, when were you thinking?"))
+                $ lauren.messenger.newMessage(_("How about now?"))
+                $ lauren.messenger.addReply(_("Sure, I'll come pick you up"))
+                $ lauren.messenger.newMessage(_("Great :)"))
 
             else:
-                $ contact_Lauren.newMessage(_("You wanna go to the beach today?"), queue=False)
-                $ contact_Lauren.addReply(_("Sounds good, when were you thinking?"), v7_msgReply3)
-                $ contact_Lauren.addReply(_("Sorry, I can't I'm really busy today"), v7_msgReply4)
+                $ lauren.messenger.newMessage(_("You wanna go to the beach today?"), queue=False)
+                $ lauren.messenger.addReply(_("Sounds good, when were you thinking?"), v7_msgReply3)
+                $ lauren.messenger.addReply(_("Sorry, I can't I'm really busy today"), v7_msgReply4)
 
         " "
 
         label phoneao:
-            if contact_Lauren.replies:
+            if lauren.messenger.replies:
                 call screen phone
-            if contact_Lauren.replies:
+            if lauren.messenger.replies:
                 u "(I should probably reply.)"
                 jump phoneao
 
@@ -5447,12 +5447,12 @@ label after_pledges:
                 $ emilyText = True
                 $ add_point(KCT.BOYFRIEND)
 
-                $ contact_Emily.addReply(_("Hey, sorry I lost track of time. You up?"))
+                $ emily.messenger.addReply(_("Hey, sorry I lost track of time. You up?"))
 
                 label phonebb:
-                    if contact_Emily.replies:
+                    if emily.messenger.replies:
                         call screen phone
-                    if contact_Emily.replies:
+                    if emily.messenger.replies:
                         u "(I should text Emily that I lost track of time.)"
                         jump phonebb
 
@@ -5487,8 +5487,8 @@ label after_pledges:
     if emilyText:
         play sound "sounds/vibrate.mp3"
         
-        $ contact_Emily.newMessage(_("It's okay. You'll get the surprise another time..."), queue=False)
-        $ contact_Emily.addReply(_("Exciting :)"))
+        $ emily.messenger.newMessage(_("It's okay. You'll get the surprise another time..."), queue=False)
+        $ emily.messenger.addReply(_("Exciting :)"))
 
     " "
 
@@ -8915,16 +8915,16 @@ label rileytext:
     if rileyrs:
         play sound "sounds/vibrate.mp3"
 
-        $ contact_Riley.newMessage(_("Wanna come over? ;)"), queue=False)
-        $ contact_Riley.addReply(_("Sure, on my way :)"), v7_msgReply5)
-        $ contact_Riley.addReply(_("Sorry I'm really exhausted. Another time"), v7_msgReply6)
+        $ riley.messenger.newMessage(_("Wanna come over? ;)"), queue=False)
+        $ riley.messenger.addReply(_("Sure, on my way :)"), v7_msgReply5)
+        $ riley.messenger.addReply(_("Sorry I'm really exhausted. Another time"), v7_msgReply6)
         
         " "
 
         label rtnow:
-            if contact_Riley.replies:
+            if riley.messenger.replies:
                 call screen phone
-            if contact_Riley.replies:
+            if riley.messenger.replies:
                 u "(I should check my messages.)"
                 jump rtnow
 
@@ -9268,21 +9268,21 @@ label v7_nsfwSkipLabel1:
 
 ########## SCENE 36 MAKING SIGNS W/ AUTUMN
 label signs_with_autumn:
-    $ contact_Autumn.newMessage(_("Hey, it's Autumn."), queue=False)
-    $ contact_Autumn.newMessage(_("I'm just about to start making signs. Do you still want to join?"), queue=False)
-    $ contact_Autumn.addReply(_("Yes, of course. I'd love to."))
-    $ contact_Autumn.newMessage(_("Great. I'm at the Deer's House. Do you know how to get there?"))
-    $ contact_Autumn.addReply(_("Yeah, I think I do. On my way."))
-    $ contact_Autumn.newMessage(_("Alright, see you soon."))
+    $ autumn.messenger.newMessage(_("Hey, it's Autumn."), queue=False)
+    $ autumn.messenger.newMessage(_("I'm just about to start making signs. Do you still want to join?"), queue=False)
+    $ autumn.messenger.addReply(_("Yes, of course. I'd love to."))
+    $ autumn.messenger.newMessage(_("Great. I'm at the Deer's House. Do you know how to get there?"))
+    $ autumn.messenger.addReply(_("Yeah, I think I do. On my way."))
+    $ autumn.messenger.newMessage(_("Alright, see you soon."))
 
     play sound "sounds/vibrate.mp3"
 
     " "
 
     label phoneba:
-        if contact_Autumn.replies:
+        if autumn.messenger.replies:
             call screen phone
-        if contact_Autumn.replies:
+        if autumn.messenger.replies:
             u "(I should probably check my messages.)"
             jump phoneba
 

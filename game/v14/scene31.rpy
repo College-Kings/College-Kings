@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 2), CHLOE (Outfit: 1)
 # Time: Wednesday Afternoon
 
-
 label v14s31:
     scene v14s31_1 # TPP Show MC holding and looking down at his phone
     with dissolve
@@ -29,7 +28,7 @@ label v14s31:
     scene v14s31_3b # FPP Same angle as 3, Chloe looks worried, with mouth open
     with dissolve
 
-    cl "Yeah… Of course. Also, I know you know already, but please be very cautious of what you say."
+    cl "Yeah... Of course. Also, I know you know already, but please be very cautious of what you say."
 
     scene v14s31_3c # FPP Same angle as 3, Chloe has her hand on her forehead, looking annoyed, mouth open
     with dissolve
@@ -39,7 +38,7 @@ label v14s31:
     scene v14s31_3d # FPP Same as 3b, Chloe's mouth closed
     with dissolve
 
-    u "I'm sure it'll be fine, Chlo."
+    u "I'm sure it'll be fine, Chloe."
 
     scene v14s31_3b
     with dissolve
@@ -53,11 +52,9 @@ label v14s31:
 
     menu:
         "I got this":
-
             u "Chloe, I got this. I know this is serious for you. I’m going to be on my best behavior. *Chuckles*"
 
         "Relax":
-
             u "Chloe, relax. I'm doing the best I can for you, and that’s exactly what I promised."
 
     # -Continue regardless of choice
@@ -103,7 +100,7 @@ label v14s31:
                 scene v14s31_4b # TPP Same angle as 4, MC looks annoyed and repulsed, like he just tasted something bad
                 with dissolve
                 
-                u "(And it's kind of a turn off…)"
+                u "(And it's kind of a turn off...)"
 
     # -Regardless of everything scene continued
     scene v14s31_6 # TPP Show MC heading out the door

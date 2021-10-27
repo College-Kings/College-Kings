@@ -2,79 +2,79 @@ init python:
 
     # Ryan messages
     def v2_reply1():
-        add_point(KCT.BRO)
-        contact_Ryan.newMessage(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
-        contact_Ryan.addReply(_("Whatever"), v2_reply2)
-        contact_Ryan.addReply(_("Don't you dare defend that guy"), v2_reply3)
+        addPoint(KCT.BRO)
+        ryan.messenger.newMessage(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
+        ryan.messenger.addReply(_("Whatever"), v2_reply2)
+        ryan.messenger.addReply(_("Don't you dare defend that guy"), v2_reply3)
 
     def v2_reply2():
         add_point(KCT.BRO)
 
     def v2_reply3():
         addPoint("tm")
-        contact_Ryan.newMessage(_("Sorry..."))
+        ryan.messenger.newMessage(_("Sorry..."))
 
     def v2_reply4():
         addPoint("tm")
-        contact_Ryan.newMessage(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
-        contact_Ryan.addReply(_("Whatever"), v2_reply2)
-        contact_Ryan.addReply(_("Don't you dare defend that guy"), v2_reply3)
+        ryan.messenger.newMessage(_("Look, I know what Grayson did was a dick move, but he was just being overprotective of Chloe"))
+        ryan.messenger.addReply(_("Whatever"), v2_reply2)
+        ryan.messenger.addReply(_("Don't you dare defend that guy"), v2_reply3)
 
     # Lauren messages
     def v2_reply5():
         setattr(store, "meetlauren", True)
-        add_point(KCT.BOYFRIEND)
-        contact_Lauren.newMessage(_("Great, I'll see you then :)"))
+        addPoint(KCT.BOYFRIEND)
+        lauren.messenger.newMessage(_("Great, I'll see you then :)"))
 
     def v2_reply6():
         grant_achievement("mixed_feelings")
 
     # Josh messages
     def v2_reply7():
-        add_point(KCT.BRO)
-        contact_Josh.newMessage(_("It's fine, you go get her."))
+        addPoint(KCT.BRO)
+        josh.messenger.newMessage(_("It's fine, you go get her."))
 
     def v2_reply8():
-        add_point(KCT.BOYFRIEND)
-        contact_Josh.newMessage(_("Nah, you don't want a bitch like her."))
-        contact_Josh.addReply(_("Yeah, I guess you're right."), v2_reply9)
-        contact_Josh.addReply(_("Dude, what the fuck?!"), v2_reply10)
+        addPoint(KCT.BOYFRIEND)
+        josh.messenger.newMessage(_("Nah, you don't want a bitch like her."))
+        josh.messenger.addReply(_("Yeah, I guess you're right."), v2_reply9)
+        josh.messenger.addReply(_("Dude, what the fuck?!"), v2_reply10)
 
     def v2_reply9():
-        add_point(KCT.BRO)
-        contact_Josh.newMessage(_("Hahaha, I'm just kidding, yo."))
-        contact_Josh.newMessage(_("Of course I gave her your number."))
-        contact_Josh.addReply(_("Damn, you got me."))
+        addPoint(KCT.BRO)
+        josh.messenger.newMessage(_("Hahaha, I'm just kidding, yo."))
+        josh.messenger.newMessage(_("Of course I gave her your number."))
+        josh.messenger.addReply(_("Damn, you got me."))
 
     def v2_reply10():
         addPoint("tm")
-        contact_Josh.newMessage(_("Hahaha, I'm just kidding, yo."))
-        contact_Josh.newMessage(_("Of course I gave her your number."))
-        contact_Josh.addReply(_("Damn, you got me."))
+        josh.messenger.newMessage(_("Hahaha, I'm just kidding, yo."))
+        josh.messenger.newMessage(_("Of course I gave her your number."))
+        josh.messenger.addReply(_("Damn, you got me."))
 
     # Aubrey messages
     def v2_reply11():
-        add_point(KCT.BRO)
-        contact_Aubrey.newMessage(_("Yeah, I mean they had a thing a while ago but she broke it off 'cause he lied about some shit."))
-        contact_Aubrey.newMessage(_("So... tomorrow?"))
-        contact_Aubrey.addReply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v2_reply12)
+        addPoint(KCT.BRO)
+        aubrey.messenger.newMessage(_("Yeah, I mean they had a thing a while ago but she broke it off 'cause he lied about some shit."))
+        aubrey.messenger.newMessage(_("So... tomorrow?"))
+        aubrey.messenger.addReply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v2_reply12)
 
     def v2_reply12():
-        add_point(KCT.BOYFRIEND)
-        contact_Aubrey.newMessage(_("I've got dance practice tonight \n:("))
-        contact_Aubrey.addReply(_("I'm not talking tonight, I can pick you up right now."))
-        contact_Aubrey.newMessage(_("Oh wow, that's spontaneous, I like it haha.\n\nI guess come to the Chicks' house whenever you're ready and then we can go costume shopping."))
-        contact_Aubrey.addReply(_("Cool, I'll be 20 mins."))
+        addPoint(KCT.BOYFRIEND)
+        aubrey.messenger.newMessage(_("I've got dance practice tonight \n:("))
+        aubrey.messenger.addReply(_("I'm not talking tonight, I can pick you up right now."))
+        aubrey.messenger.newMessage(_("Oh wow, that's spontaneous, I like it haha.\n\nI guess come to the Chicks' house whenever you're ready and then we can go costume shopping."))
+        aubrey.messenger.addReply(_("Cool, I'll be 20 mins."))
 
     def v2_reply13():
         setattr(store, "costumeaubrey", True)
-        add_point(KCT.BOYFRIEND)
-        contact_Aubrey.newMessage(_("Good :)"))
+        addPoint(KCT.BOYFRIEND)
+        aubrey.messenger.newMessage(_("Good :)"))
 
     def v2_reply14():
         setattr(store, "costumeaubrey", False)
         addPoint("tm")
-        contact_Aubrey.newMessage(_("Oh, okay. Guess we'll have to postpone the costume buying."))
+        aubrey.messenger.newMessage(_("Oh, okay. Guess we'll have to postpone the costume buying."))
 
 label v2start:
     play music "music/muffledparty.mp3"
@@ -192,23 +192,23 @@ label v2start:
     play sound "sounds/vibrate.mp3"
     queue sound "sounds/vibrate.mp3"
 
-    $ contact_Ryan.newMessage(_("You okay?"), queue=False)
-    $ contact_Ryan.addReply(_("I'm fine"), v2_reply1)
-    $ contact_Ryan.addReply(_("No, wtf was that?! Fuck Grayson and fuck the Apes"), v2_reply4)
+    $ ryan.messenger.newMessage(_("You okay?"), queue=False)
+    $ ryan.messenger.addReply(_("I'm fine"), v2_reply1)
+    $ ryan.messenger.addReply(_("No, wtf was that?! Fuck Grayson and fuck the Apes"), v2_reply4)
 
     $ addPoint("tm")
-    $ contact_Lauren.newMessage(_("Is everything okay?"))
-    $ contact_Lauren.addReply(_("Yeah, I'm fine."))
-    $ contact_Lauren.newMessage(_("Okay..."))
+    $ lauren.messenger.newMessage(_("Is everything okay?"))
+    $ lauren.messenger.addReply(_("Yeah, I'm fine."))
+    $ lauren.messenger.newMessage(_("Okay..."))
 
-    if contact_Lauren.replies:
-        $ contact_Lauren.newMessage(_("Hello?? Can we please talk today?"), queue=False)
-        $ contact_Lauren.addReply(_("Yeah, SV cafe in 20 mins?"), v2_reply5)
-        $ contact_Lauren.addReply(_("Sorry, I can't"), v2_reply6)
+    if lauren.messenger.replies:
+        $ lauren.messenger.newMessage(_("Hello?? Can we please talk today?"), queue=False)
+        $ lauren.messenger.addReply(_("Yeah, SV cafe in 20 mins?"), v2_reply5)
+        $ lauren.messenger.addReply(_("Sorry, I can't"), v2_reply6)
     else:
-        $ contact_Lauren.newMessage(_("Are we still on for today? :)"), queue=False)
-        $ contact_Lauren.addReply(_("Yeah, SV cafe in 20 mins?"), v2_reply5)
-        $ contact_Lauren.addReply(_("Sorry, I can't"), v2_reply6)
+        $ lauren.messenger.newMessage(_("Are we still on for today? :)"), queue=False)
+        $ lauren.messenger.addReply(_("Yeah, SV cafe in 20 mins?"), v2_reply5)
+        $ lauren.messenger.addReply(_("Sorry, I can't"), v2_reply6)
 
     " "
 
@@ -216,9 +216,9 @@ label v2start:
     with dissolve
 
     label repeatb:
-        if contact_Lauren.replies:
+        if lauren.messenger.replies:
             call screen phone
-        if contact_Lauren.replies:
+        if lauren.messenger.replies:
             u "(Damn, my phone's blowing up. I should probably check my messages.)"
             jump repeatb
 
@@ -1364,11 +1364,11 @@ label historye: #for compatibility only
 label history2:
     play sound "sounds/vibrate.mp3"
 
-    $ contact_Josh.newMessage(_("Dude, I talked to this Aubrey chick the entire night and guess who's number she wanted..."), queue=False)
-    $ contact_Josh.newMessage(_("YOURS"), queue=False)
-    $ contact_Josh.newMessage(_("What a bitch..."), queue=False)
-    $ contact_Josh.addReply(_("Sorry, man. She doesn't know what she's missing."), v2_reply7)
-    $ contact_Josh.addReply(_("Sooo, did you give it to her?"), v2_reply8)
+    $ josh.messenger.newMessage(_("Dude, I talked to this Aubrey chick the entire night and guess who's number she wanted..."), queue=False)
+    $ josh.messenger.newMessage(_("YOURS"), queue=False)
+    $ josh.messenger.newMessage(_("What a bitch..."), queue=False)
+    $ josh.messenger.addReply(_("Sorry, man. She doesn't know what she's missing."), v2_reply7)
+    $ josh.messenger.addReply(_("Sooo, did you give it to her?"), v2_reply8)
 
     scene s133
     with dissolve
@@ -2331,17 +2331,17 @@ label bo_bd:
     # text from aubrey
     play sound "sounds/vibrate.mp3"
 
-    $ contact_Aubrey.newMessage(_("Hey,\nJosh gave me your number\n\nI hope your face is feeling better after the shit that Grayson pulled..."), queue=False)
-    $ contact_Aubrey.newMessage(_("He's not even dating Chloe and you guys didn't even do anything so I don't know what he was thinking.\n\nAnyway, do you wanna like... hang out tomorrow?"), queue=False)
-    $ contact_Aubrey.addReply(_("Wait they're not dating?"), v2_reply11)
-    $ contact_Aubrey.addReply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v2_reply12)
+    $ aubrey.messenger.newMessage(_("Hey,\nJosh gave me your number\n\nI hope your face is feeling better after the shit that Grayson pulled..."), queue=False)
+    $ aubrey.messenger.newMessage(_("He's not even dating Chloe and you guys didn't even do anything so I don't know what he was thinking.\n\nAnyway, do you wanna like... hang out tomorrow?"), queue=False)
+    $ aubrey.messenger.addReply(_("Wait they're not dating?"), v2_reply11)
+    $ aubrey.messenger.addReply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v2_reply12)
 
     u "(Oh, I just got a message.)"
 
     label repeatc:
-        if contact_Aubrey.replies:
+        if aubrey.messenger.replies:
             call screen phone
-        if contact_Aubrey.replies:
+        if aubrey.messenger.replies:
             u "(I should check my messages.)"
             jump repeatc
     
@@ -2501,16 +2501,16 @@ label bo_bd:
 
     play sound "sounds/vibrate.mp3"
 
-    $ contact_Aubrey.newMessage(_("Hey, are you nearby?"), queue=False)
-    $ contact_Aubrey.addReply(_("Yeah, I'm just on my way, I'll be right there."), v2_reply13)
-    $ contact_Aubrey.addReply(_("Sorry, something came up and I can't make it."), v2_reply14)
+    $ aubrey.messenger.newMessage(_("Hey, are you nearby?"), queue=False)
+    $ aubrey.messenger.addReply(_("Yeah, I'm just on my way, I'll be right there."), v2_reply13)
+    $ aubrey.messenger.addReply(_("Sorry, something came up and I can't make it."), v2_reply14)
 
     u "(Fuck, I totally forgot about Aubrey. I guess it's time to make a decision.)"
 
     label repeatg:
-        if contact_Aubrey.replies:
+        if aubrey.messenger.replies:
             call screen phone
-        if contact_Aubrey.replies:
+        if aubrey.messenger.replies:
             u "(Aubrey's waiting for me, I need to let her know whether I'm coming or not.)"
             jump repeatg
 

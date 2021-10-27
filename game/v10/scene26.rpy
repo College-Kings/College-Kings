@@ -7,8 +7,8 @@ init python:
 
     def v10s26_reply1():
         setattr(store, "v10_amber_condoms", True)
-        add_point(KCT.BOYFRIEND)
-        contact_Amber.newMessage("Beer, obviously")
+        addPoint(KCT.BOYFRIEND)
+        amber.messenger.newMessage("Beer, obviously")
 
 label v10_amber_skatepark:
     play music "music/v10/Scene 26/Track Scene 26_1.mp3" fadein 3
@@ -18,9 +18,9 @@ label v10_amber_skatepark:
 
     u "(I should get that.)"
 
-    $ contact_Amber.newMessage("Skatepark behind SVC, 10pm, bring a six pack.", queue=False)
-    $ contact_Amber.addReply("Condoms or beer?", v10s26_reply1)
-    $ contact_Amber.addReply("Alright sure")
+    $ amber.messenger.newMessage("Skatepark behind SVC, 10pm, bring a six pack.", queue=False)
+    $ amber.messenger.addReply("Condoms or beer?", v10s26_reply1)
+    $ amber.messenger.addReply("Alright sure")
 
     call screen phone
 
