@@ -2916,7 +2916,7 @@ label aw_bd:
 
     label repeata:
         if contact_Ryan.replies:
-             call screen phone
+            call screen phone
         if contact_Ryan.replies:
             u "(I should really check who texted me.)"
             jump repeata
