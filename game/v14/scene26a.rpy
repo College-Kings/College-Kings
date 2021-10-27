@@ -230,6 +230,10 @@ label v14s26a:
         $ kiwii_post.addReply("Thank you for the cake! Mine tastes perfectly fine :)", mentions="Lindsey")
         $ kiwii_post.newComment("Lindsey", "<3")
 
+    if False: ##just making sure it shows up on lint
+        scene lindseyselfie1
+        scene lindseyselfie2
+
     if AmberDrugs:
 
         play sound "sounds/vibrate.mp3"

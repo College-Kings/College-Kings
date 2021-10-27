@@ -352,4 +352,14 @@ label v14s30b:
         $ kiwii_post.addReply(_("These turned out perfect! #Vote4Chloe"))
         $ kiwii_post.addReply(_("Aww, haha. Congrats!"))
 
+    if False: ##just making sure it shows up on lint
+        scene chloeplush1perfect
+        scene chloeplush1notperfect
+        scene chloereal1perfect
+        scene chloereal1notperfect
+        scene chloeplush2notperfect
+        scene chloeplush2perfect
+        scene chloereal2notperfect
+        scene chloereal2perfect
+        
     jump v14s33

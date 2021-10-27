@@ -297,6 +297,10 @@ label v14s26:
         $ kiwii_post.newComment("Lindsey", "<3")
         $ kiwii_post.newComment("Lauren", ":)")
 
+    if False: ##just making sure it shows up on lint
+        scene lindseylauren1
+        scene lindseylauren2
+
     if AmberDrugs:
         play sound "sounds/vibrate.mp3"
 
