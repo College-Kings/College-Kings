@@ -267,7 +267,7 @@ label v14s26:
     if v11_lindsey_slogan == 1:
 
         #Selfie with Lauren in front of slogan banner that says Lindsey, Returning The Promise
-        $ kiwii_post = KiwiiPost("Lindsey", "Don't forget to stop by and pick up one of Lauren's famous cakes today! All proceeds go to my campaign fund and to the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
+        $ kiwii_post = KiwiiPost("Lindsey", "v14/lindseylauren1.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! All proceeds go to my campaign fund and to the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
         $ kiwii_post.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
         $ kiwii_post.newComment("Nora", "Cuties <3", queue=False)
         $ kiwii_post.newComment("Imre", "Actually that cookie this morning made me shit myself!", queue=False)
@@ -284,7 +284,7 @@ label v14s26:
 
     else:
         #Selfie with Lauren in front of slogan banner that says Lindsey, Say Bye To The Bullshit
-        $ kiwii_post = KiwiiPost("Lindsey", "Don't forget to stop by and pick up one of Lauren's famous cakes today! All proceeds go to my campaign fund and to the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
+        $ kiwii_post = KiwiiPost("Lindsey", "v14/lindseylauren2.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! All proceeds go to my campaign fund and to the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
         $ kiwii_post.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
         $ kiwii_post.newComment("Nora", "Cuties <3", queue=False)
         $ kiwii_post.newComment("Imre", "Actually that cookie this morning made me shit myself!", queue=False)
@@ -297,8 +297,11 @@ label v14s26:
         $ kiwii_post.newComment("Lindsey", "<3")
         $ kiwii_post.newComment("Lauren", ":)")
 
-    if AmberDrugs:
+    if False: ##just making sure it shows up on lint
+        scene lindseylauren1
+        scene lindseylauren2
 
+    if AmberDrugs:
         play sound "sounds/vibrate.mp3"
 
         scene v14s26_9 # TPP. MC gets a call from Amber and answers

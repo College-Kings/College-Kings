@@ -22,6 +22,9 @@ label v14s35:
     $ jenny.messenger.newImgMessage(_("Picture of the Lagoon, somehow with a location marker in the photo"))
     $ jenny.messenger.newMessage(_("See you soon!"))
 
+    if False: ### just making sure it shows up on lint
+        scene v14jenText
+
     label s35_PhoneContinue:
         if jenny.messenger.replies:
             call screen phone

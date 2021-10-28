@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 2), Lauren (Outfit: Nude)
 # Time: Evening
 
-
 label v14s33:
     if joinwolves:
         scene v14s33_1 # TPP. Show MC showering, slight smile, mouth closed
@@ -22,8 +21,10 @@ label v14s33:
 
             if v11s23_penelope_date:
                 jump v14s34
+
             else:
                 jump v14s35
+
         else:
             pause 0.75
 
@@ -216,220 +217,223 @@ label v14s33:
                     
                     if v11s23_penelope_date:
                         jump v14s34
+
                     else:
                         jump v14s35
+
     else:
-            scene v14s33_1 # TPP. Show MC showering, slight smile, mouth closed
+        scene v14s33_1 # TPP. Show MC showering, slight smile, mouth closed
+        with dissolve
+
+        pause 0.5
+
+        scene v14s33_4 # TPP. Show MC looking at his phone while sitting on the bed in his Apes room, slight smile, mouth closed.
+        with dissolve
+
+        if not laurenrs:
+            scene v14s33_4a # TPP. Same as v14s33_4, Mc in a different pose looking at his phone in his Apes room, slight smile, mouth closed.
+            with dissolve
+
+            pause 0.75
+
+            if v11s23_penelope_date:
+                jump v14s34
+
+            else:
+                jump v14s35
+        else:
+            pause 0.75
+
+            play sound "sounds/call.mp3"
+
+            scene v14s33_2a
             with dissolve
 
             pause 0.5
 
-            scene v14s33_4 # TPP. Show MC looking at his phone while sitting on the bed in his Apes room, slight smile, mouth closed.
+            play sound "sounds/answercall.mp3"
+
+            scene v14s33_4b # TPP. Same as v14s33_4a. MC with the phone to his ear, slight smile, mouth open. 
+            with dissolve
+            
+            u "Hello?"
+
+            scene v14s33_3 # TPP. Show Lauren nude in her bed with the phone up to her ear, her other hand rubbing to the left of her vagina, slight smile, mouth open.
             with dissolve
 
-            if not laurenrs:
-                scene v14s33_4a # TPP. Same as v14s33_4, Mc in a different pose looking at his phone in his Apes room, slight smile, mouth closed.
-                with dissolve
+            la "Hey, babe. Did I wake you?"
 
-                pause 0.75
+            scene v14s33_3a # TPP. Same as v14s33_3, Laurens hand now rubbing to the right of her vagina, slight smile, mouth closed. 
+            with dissolve
 
-                if v11s23_penelope_date:
-                    jump v14s34
-                else:
-                    jump v14s35
-            else:
-                pause 0.75
+            u "Nope. What's up?"
 
-                play sound "sounds/call.mp3"
+            scene v14s33_3
+            with dissolve
 
-                scene v14s33_2a
-                with dissolve
+            la "Not much, I just miss you. *Chuckles* I've been thinking about you all night..."
 
-                pause 0.5
+            menu:
+                "Want me to come over?":
+                    scene v14s33_3a
+                    with dissolve
 
-                play sound "sounds/answercall.mp3"
+                    u "Want me to come over?"
 
-                scene v14s33_4b # TPP. Same as v14s33_4a. MC with the phone to his ear, slight smile, mouth open. 
-                with dissolve
-                
-                u "Hello?"
+                    scene v14s33_3
+                    with dissolve
 
-                scene v14s33_3 # TPP. Show Lauren nude in her bed with the phone up to her ear, her other hand rubbing to the left of her vagina, slight smile, mouth open.
-                with dissolve
+                    la "Haha, I wish."
 
-                la "Hey, babe. Did I wake you?"
+                "I miss you too":
+                    $ add_point(KCT.BOYFRIEND)
+                    scene v14s33_3a
+                    with dissolve
 
-                scene v14s33_3a # TPP. Same as v14s33_3, Laurens hand now rubbing to the right of her vagina, slight smile, mouth closed. 
-                with dissolve
+                    u "I miss you too."
 
-                u "Nope. What's up?"
+                    scene v14s33_3
+                    with dissolve
 
-                scene v14s33_3
-                with dissolve
+                    la "I wish you could come over..."
 
-                la "Not much, I just miss you. *Chuckles* I've been thinking about you all night..."
+            la "But sadly, I have an early meeting with the Deers tomorrow."
 
-                menu:
-                    "Want me to come over?":
-                        scene v14s33_3a
-                        with dissolve
+            scene v14s33_3a
+            with dissolve
 
-                        u "Want me to come over?"
+            u "Oh, haha."
 
-                        scene v14s33_3
-                        with dissolve
+            scene v14s33_3
+            with dissolve
 
-                        la "Haha, I wish."
+            la "Well... I was thinking about trying something."
 
-                    "I miss you too":
-                        $ add_point(KCT.BOYFRIEND)
-                        scene v14s33_3a
-                        with dissolve
+            scene v14s33_3a
+            with dissolve
 
-                        u "I miss you too."
+            u "Oh? What's that?"
 
-                        scene v14s33_3
-                        with dissolve
+            scene v14s33_3
+            with dissolve
 
-                        la "I wish you could come over..."
+            la "I mean..."
 
-                la "But sadly, I have an early meeting with the Deers tomorrow."
+            la "I'm in bed naked, all alone, and I'm thinking I should try to watch some porn and..."
 
-                scene v14s33_3a
-                with dissolve
+            la "*Chuckles* I don't know... See what it does for me?"
 
-                u "Oh, haha."
+            menu:
+                "Laugh":
+                    scene v14s33_3a
+                    with dissolve
 
-                scene v14s33_3
-                with dissolve
+                    u "*Laughs* You've never watched porn before?"
 
-                la "Well... I was thinking about trying something."
+                    scene v14s33_3
+                    with dissolve
 
-                scene v14s33_3a
-                with dissolve
+                    la "Oh my gosh, don't laugh!"
 
-                u "Oh? What's that?"
+                    la "And no, I haven't ever felt the need to but... I've been really curious."
 
-                scene v14s33_3
-                with dissolve
+                    scene v14s33_3a
+                    with dissolve
 
-                la "I mean..."
+                    u "Well, be sure to tell me how it goes. *Chuckles*"
 
-                la "I'm in bed naked, all alone, and I'm thinking I should try to watch some porn and..."
+                    scene v14s33_3
+                    with dissolve
 
-                la "*Chuckles* I don't know... See what it does for me?"
+                    la "I don't know if I want to now..."
 
-                menu:
-                    "Laugh":
-                        scene v14s33_3a
-                        with dissolve
+                    la "Kinda embarrassed, ha."
 
-                        u "*Laughs* You've never watched porn before?"
+                    scene v14s33_3a
+                    with dissolve
 
-                        scene v14s33_3
-                        with dissolve
+                    u "No need to be embarrassed, haha. Enjoy yourself."
 
-                        la "Oh my gosh, don't laugh!"
+                    scene v14s33_3
+                    with dissolve
 
-                        la "And no, I haven't ever felt the need to but... I've been really curious."
+                    la "I will. Just, um..."
 
-                        scene v14s33_3a
-                        with dissolve
+                    la "Just go back to whatever you were doing."
 
-                        u "Well, be sure to tell me how it goes. *Chuckles*"
+                    scene v14s33_3a
+                    with dissolve
 
-                        scene v14s33_3
-                        with dissolve
+                    u "Will do. *Chuckles*"
 
-                        la "I don't know if I want to now..."
+                    play sound "sounds/rejectcall.mp3"
 
-                        la "Kinda embarrassed, ha."
+                    scene v14s33_4a
+                    with dissolve
 
-                        scene v14s33_3a
-                        with dissolve
+                    u "(Lauren watching porn for the first time? Haha! I hope she didn't take that the wrong way... But, damn...)"
 
-                        u "No need to be embarrassed, haha. Enjoy yourself."
+                    pause 0.75
 
-                        scene v14s33_3
-                        with dissolve
+                    if v11s23_penelope_date:
+                        jump v14s34
+                    else:
+                        jump v14s35
 
-                        la "I will. Just, um..."
+                "Get excited":
+                    $ add_point(KCT.BOYFRIEND)
+                    scene v14s33_3a
+                    with dissolve
 
-                        la "Just go back to whatever you were doing."
+                    u "Oh shit, now I really wish I was there."
 
-                        scene v14s33_3a
-                        with dissolve
+                    scene v14s33_3
+                    with dissolve
 
-                        u "Will do. *Chuckles*"
+                    la "*Chuckles* We think a lot alike."
 
-                        play sound "sounds/rejectcall.mp3"
+                    scene v14s33_3a
+                    with dissolve
 
-                        scene v14s33_4a
-                        with dissolve
+                    u "Do you know what you wanna watch?"
 
-                        u "(Lauren watching porn for the first time? Haha! I hope she didn't take that the wrong way... But, damn...)"
+                    scene v14s33_3
+                    with dissolve
 
-                        pause 0.75
+                    la "Plenty!"
 
-                        if v11s23_penelope_date:
-                            jump v14s34
-                        else:
-                            jump v14s35
+                    scene v14s33_3a
+                    with dissolve
 
-                    "Get excited":
-                        $ add_point(KCT.BOYFRIEND)
-                        scene v14s33_3a
-                        with dissolve
+                    u "O-Oh! *Chuckles* Well shit, I guess I'll let you go handle your biz."
 
-                        u "Oh shit, now I really wish I was there."
+                    scene v14s33_3
+                    with dissolve
 
-                        scene v14s33_3
-                        with dissolve
+                    la "When we get together again, I wanna talk about it. *Chuckles*"
 
-                        la "*Chuckles* We think a lot alike."
+                    scene v14s33_3a
+                    with dissolve
 
-                        scene v14s33_3a
-                        with dissolve
+                    u "Okay, sure. I'd like that."
 
-                        u "Do you know what you wanna watch?"
+                    scene v14s33_3
+                    with dissolve
 
-                        scene v14s33_3
-                        with dissolve
+                    la "Good Night!"
 
-                        la "Plenty!"
+                    pause 0.75
 
-                        scene v14s33_3a
-                        with dissolve
+                    play sound "sounds/rejectcall.mp3"
 
-                        u "O-Oh! *Chuckles* Well shit, I guess I'll let you go handle your biz."
+                    scene v14s33_4a
+                    with dissolve
 
-                        scene v14s33_3
-                        with dissolve
+                    u "(Lauren is watching porn for the first time...)"
 
-                        la "When we get together again, I wanna talk about it. *Chuckles*"
-
-                        scene v14s33_3a
-                        with dissolve
-
-                        u "Okay, sure. I'd like that."
-
-                        scene v14s33_3
-                        with dissolve
-
-                        la "Good Night!"
-
-                        pause 0.75
-
-                        play sound "sounds/rejectcall.mp3"
-
-                        scene v14s33_4a
-                        with dissolve
-
-                        u "(Lauren is watching porn for the first time...)"
-
-                        pause 0.75
-                        
-                        if v11s23_penelope_date:
-                            jump v14s34
-                        else:
-                            jump v14s35
+                    pause 0.75
+                    
+                    if v11s23_penelope_date:
+                        jump v14s34
+                    else:
+                        jump v14s35

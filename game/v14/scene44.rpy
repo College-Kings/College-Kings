@@ -95,7 +95,7 @@ label v14s44:
     el "*Scoffs* Anyway... Who are you supporting?"
 
     menu:
-        "Chloe...":
+        "Chloe":
             $ LindseyPopularity -= 2
 
             scene v14s44_4
@@ -113,7 +113,7 @@ label v14s44:
 
             u "Ha. Yeah."
 
-        "Lindsey...":
+        "Lindsey":
             $ LindseyPopularity += 2
 
             scene v14s44_4
@@ -206,7 +206,7 @@ label v14s44:
     elm "I apologize for my son, he can be rude from time to time. It was nice meeting you..."
 
     menu:
-        "Introduce yourself...":
+        "Introduce yourself":
             scene v14s44_10 # TPP. Show MC shaking Elijah's mom's hand, Elijah's mom slight smile, mouth closed, MC slight smile, mouth open.
             with dissolve
 
@@ -235,7 +235,7 @@ label v14s44:
             scene v14s44_7a
             with dissolve
 
-        "Introduce yourself as Eli's friend...":
+        "I'm Eli's friend":
             $ addPoint("bro")
             $ ElijahFriend = True
 

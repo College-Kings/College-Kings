@@ -5,7 +5,6 @@
 
 label v14s40:
 # -Scene 40 and 41 are identical except for location
-
     scene v14s40_1 # TPP. MC walks into his wolves room, tired expression, mouth closed
     with dissolve    
 
@@ -18,7 +17,6 @@ label v14s40:
 
     if laurenrs:
         play sound "sounds/vibrate.mp3"
-
         scene v14s40_2a # TPP. MC gets a call from Lauren, MC looks at his phone, no expression
         with dissolve
 
