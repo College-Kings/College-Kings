@@ -5,7 +5,6 @@
 
 
 label v14s14a:
-
     play sound "sounds/vibrate.mp3"
 
     scene v14s14a_1 # TPP. MC wakes up to his phone vibrating, reaches one hand towards his phone on his night stand newt to his alarm clock, tired expression, mouth closed
@@ -18,7 +17,7 @@ label v14s14a:
     scene v14s14a_1a # TPP. same as v14s14a_1 MC no espression, picks up his phone
     with dissolve
 
-    u "Mmm… Huh?"
+    u "Mmm... Huh?"
 
     scene v14s14a_1b # TPP. same as v14s14a_1a mc checks his phone
     with dissolve
@@ -37,7 +36,7 @@ label v14s14a:
     scene v14s14a_1c # TPP. same as v14s14a_1b MC puts his phone away
     with dissolve
 
-    u "(Fuck… What time is it now?)"
+    u "(Fuck... What time is it now?)"
 
     scene v14s14a_1d # TPP. same as v14s14a_1c Mc looks at his clock on his night stand
     with dissolve

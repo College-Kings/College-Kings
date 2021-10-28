@@ -7,37 +7,37 @@ label v14s44:
     scene v14s44_1 # TPP. Show MC walking down the sidewalk of campus near the parking lot, slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s44_1a # TPP. Same as v14s44_1, Show MC squinting looking off at the distance, slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s44_2 # TPP. Close up of just Elijah in the parking lot wearing a Team Chloe shirt, Elijah slight smile, mouth closed.
     with dissolve
     
-    pause .25
+    pause 0.75
 
     scene v14s44_3 # TPP. Close up of just the shirt Elijah is wearing. Focus in on Chloe's boobs.
     with dissolve
     
-    pause .25
+    pause 0.75
 
     scene v14s44_2
     with dissolve
 
-    u "SO YOU’RE SUPPORTING CHLOE???"
+    u "SO YOU'RE SUPPORTING CHLOE???"
 
     scene v14s44_2a # TPP. Same as v14s44_2, Elijah now looking at MC, Elijah neutral face, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s44_2b # TPP. Same as v14s44_2a, Show Elijah walking towards MC, Elijah, neutral face, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s44_4 # FPP. Elijah now standing infront of MC, Elijah looking at MC, MC looking at Elijah, Neutral face, mouth open.
     with dissolve
@@ -67,12 +67,12 @@ label v14s44:
     scene v14s44_4a
     with dissolve
 
-    u "New opportunities… Personal feelings… Etc?"
+    u "New opportunities... Personal feelings... Etc?"
 
     scene v14s44_4
     with dissolve
 
-    el "Nah, I’m sticking with Chloe. I trust tested waters over new boots."
+    el "Nah, I'm sticking with Chloe. I trust tested waters over new boots."
 
     scene v14s44_4a
     with dissolve
@@ -92,10 +92,10 @@ label v14s44:
     scene v14s44_4b # FPP. Same as v14s44_4a, Elijah unamused expression, mouth open.
     with dissolve
 
-    el "*Scoffs* Anyway… Who are you supporting?"
+    el "*Scoffs* Anyway... Who are you supporting?"
 
     menu:
-        "Chloe...":
+        "Chloe":
             $ LindseyPopularity -= 2
 
             scene v14s44_4
@@ -113,7 +113,7 @@ label v14s44:
 
             u "Ha. Yeah."
 
-        "Lindsey...":
+        "Lindsey":
             $ LindseyPopularity += 2
 
             scene v14s44_4
@@ -134,36 +134,36 @@ label v14s44:
             scene v14s44_4a
             with dissolve
 
-            el "It’s not that I have anything against her, dude."
+            el "It's not that I have anything against her, dude."
 
-            el "I’m used to Chloe being president, you know?"
+            el "I'm used to Chloe being president, you know?"
 
             scene v14s44_4
             with dissolve
 
-            u "Yeah, I think everyone is. That’s why most people are voting for Lindsey, ha."
+            u "Yeah, I think everyone is. That's why most people are voting for Lindsey, ha."
 
             scene v14s44_4a
             with dissolve
 
-            el "Hmm…"
+            el "Hmm..."
 
     play sound "sounds/carbrake.mp3"
 
     scene v14s44_5 # TPP. Of a nice car pulling into the parking lot, With Elijah's mom (Elijah's mom should look like a very young hot woman, she should be wearing a nice suite and nice jewelry showing she is rich, requested that she is of differen't ethnic background than most characters.) inside, Elijah's mom slight smile, mouth closed
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s44_6 # TPP. The nice car with Elija's mom parking near Elijah and MC, Elijah's Mom slight smile, mouth closed.
     with dissolve
 
-    pause .25 
+    pause 0.75 
 
     scene v14s44_7 # TPP. Close up of Elijah's mom standing outside of the car with the driver door open looking over at Elijah, Elijah's Mom slight smile, mouth open.
     with dissolve
 
-    elm "Elijah, are you coming? I’ve been waiting over there for-"
+    elm "Elijah, are you coming? I've been waiting over there for-"
 
     scene v14s44_4c # FPP. Same as v14s44_4a, Elijah looking over at his mom(Mom off-camera), Elijah neutral face, mouth open.
     with dissolve
@@ -173,12 +173,12 @@ label v14s44:
     scene v14s44_7a # TPP. Same as v14s44_7, Elijah's mom looking at MC, Slight smile, mouth open.
     with dissolve
 
-    elm "Wait a minute…"
+    elm "Wait a minute..."
 
     scene v14s44_8 # TPP. Close up of Elijah's mom walking up to Elijah and MC.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s44_9 # FPP. Elijah standing next to MC and Elijah, Elijah's mom looking at Elijah(Elijah Off-camera), Elijah's mom slight smile, mouth open.
     with dissolve
@@ -188,17 +188,17 @@ label v14s44:
     scene v14s44_4d # FPP. Same as v14s44_4c, Elijah looking at his mom(Elijah's mom off-camera), Elijah slightly annoyed, mouth open.
     with dissolve
 
-    el "I don't…"
+    el "I don't..."
 
     scene v14s44_9a # FPP. Same as v14s44_9, Elijah's mom slightly angry, mouth open/
     with hpunch
 
-    elm "Well, for fuck’s sake Eli. It wouldn't kill you to try and make one."
+    elm "Well, for fuck's sake Eli. It wouldn't kill you to try and make one."
 
     scene v14s44_4d
     with dissolve
 
-    el "*Sighs* Can we just go? Come on. Get back in the car before more people see you…"
+    el "*Sighs* Can we just go? Come on. Get back in the car before more people see you..."
 
     scene v14s44_9b # FPP. Same as v14s44_9a, Elijah's mom now looking at MC, Elijah's mom extending her hand out for MC to shake, Elijah's mom slight smile, mouth open.
     with dissolve
@@ -206,7 +206,7 @@ label v14s44:
     elm "I apologize for my son, he can be rude from time to time. It was nice meeting you..."
 
     menu:
-        "Introduce yourself...":
+        "Introduce yourself":
             scene v14s44_10 # TPP. Show MC shaking Elijah's mom's hand, Elijah's mom slight smile, mouth closed, MC slight smile, mouth open.
             with dissolve
 
@@ -225,24 +225,24 @@ label v14s44:
             scene v14s44_8a # TPP. Same as v14s44_8a, Elijah's mom walking back to the car, waving at MC, Elija's mom slight smile, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s44_11 # TPP. Close up of Elijah's mom's butt to show MC checking her out as she walks away.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s44_7a
             with dissolve
 
-        "Introduce yourself as Eli's friend...":
+        "I'm Eli's friend":
             $ addPoint("bro")
             $ ElijahFriend = True
 
             scene v14s44_10
             with dissolve
 
-            u "[name]. Eli’s friend."
+            u "[name]. Eli's friend."
 
             scene v14s44_4e # FPP. Same as v14s44_4d, Elijah neutral face with raised eyebrows, mouth closed,
             with dissolve
@@ -252,12 +252,12 @@ label v14s44:
             scene v14s44_4f # FPP. Same as v14s44_4e, Elijah slight smile, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s44_4e
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s44_9d # FPP. Same as v14s44_9c, Elijah's mom looking over at him, slight smile, mouth closed.
             with dissolve
@@ -267,7 +267,7 @@ label v14s44:
             scene v14s44_9c
             with dissolve
 
-            elm "[name]. I’ll remember that. *Chuckles*"
+            elm "[name]. I'll remember that. *Chuckles*"
 
             scene v14s44_9e # FPP. Same as v14s44_9c, Elijah's mom looking at MC, slight smile, mouth closed.
             with dissolve
@@ -282,22 +282,22 @@ label v14s44:
             scene v14s44_8a
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s44_11
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v14s44_7a
             with dissolve
 
-    elm "Alright, we’re leaving. Bye, [name]!"
+    elm "Alright, we're leaving. Bye, [name]!"
 
     scene v14s44_12 # TPP. Show Elijah walking towards the car.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     play sound "sounds/cardooropen.mp3"
 
@@ -306,12 +306,12 @@ label v14s44:
 
     play sound "sound/doorclose.mp3"
 
-    u "(I did not expect Elijah’s mom to be a complete fucking MILF?! God… Damn…)"
+    u "(I did not expect Elijah's mom to be a complete fucking MILF?! God... Damn...)"
 
     scene v14s44_6a # TPP. Same as v14s44_6a, Elijah's mom and Elijah in the car, the car backing out, both slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s44_5a # TPP. Same as v14s44_5, Elijah's mom and Elijah in the car driving out of the parking lot, both slight smile, mouth closed.
     with dissolve
@@ -321,12 +321,12 @@ label v14s44:
     scene v14s44_13 # TPP. Show a close up of a finger tapping on MC's shoulder.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v14s44_14 # TPP. Show MC turned around in a fighting stance looking at Imre, Neutral expression, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
     
     scene v14s44_15 # FPP. MC looking at Imre, Imre looking at MC, Imre slight smile, mouth closed.
     with dissolve
@@ -350,7 +350,7 @@ label v14s44:
     scene v14s44_15a
     with dissolve
 
-    imre "His Mom?! You’re fucking kidding-"
+    imre "His Mom?! You're fucking kidding-"
 
     imre "Her? The one that just got in the car?"
 
@@ -372,7 +372,7 @@ label v14s44:
     scene v14s44_15a
     with dissolve
 
-    imre "I'm gonna have to apologize to my mom…"
+    imre "I'm gonna have to apologize to my mom..."
 
     scene v14s44_15
     with dissolve
@@ -405,13 +405,13 @@ label v14s44:
     with dissolve
 
 
-    imre "Sorry, [name]! I'll catch you later. I’ve got something fun planned and I’m about to be late."
+    imre "Sorry, [name]! I'll catch you later. I've got something fun planned and I'm about to be late."
 
     scene v14s44_16 # FPP. Show Imre running off away from MC, Imre slight smile, mouth closed.
     with dissolve
 
-    u "(Forgot all about the Riley thing, I guess? Either that or he’s avoiding the hell out of it, ha.)"
+    u "(Forgot all about the Riley thing, I guess? Either that or he's avoiding the hell out of it, ha.)"
 
-    pause .25
+    pause 0.75
 
     jump v14s45

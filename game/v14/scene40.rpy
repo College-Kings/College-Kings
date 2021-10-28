@@ -5,7 +5,6 @@
 
 label v14s40:
 # -Scene 40 and 41 are identical except for location
-
     scene v14s40_1 # TPP. MC walks into his wolves room, tired expression, mouth closed
     with dissolve    
 
@@ -17,9 +16,7 @@ label v14s40:
     u "(Finally, time for some sleep.)"
 
     if laurenrs:
-
         play sound "sounds/vibrate.mp3"
-
         scene v14s40_2a # TPP. MC gets a call from Lauren, MC looks at his phone, no expression
         with dissolve
 
@@ -89,9 +86,8 @@ label v14s40:
         with dissolve
 
         menu:
-
             "What'd I say?":
-                $ addpoint("tm")
+                $ addPoint("tm")
 
                 scene v14s40_4b
                 with dissolve
@@ -114,7 +110,7 @@ label v14s40:
                 la "Ha, goodnight. I'll keep my late night adventures to myself for now."
 
             "Yeah I'm tired":
-                $ addpoint("bf")
+                $ addPoint("bf")
 
                 scene v14s40_4b
                 with dissolve

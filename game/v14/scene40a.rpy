@@ -45,7 +45,7 @@ label v14s40a:
     se "Ah, sorry. Heard it in a show and can't stop saying it."
 
     menu:
-        "I don't hate it...":
+        "I don't hate it":
             scene v14s40a_5a
             with dissolve
 
@@ -71,8 +71,7 @@ label v14s40a:
 
             u "A little."
 
-            
-        "Don't do it again...":
+        "Don't do it again":
             scene v14s40a_5a
             with dissolve
 
@@ -89,13 +88,13 @@ label v14s40a:
     se "Anyway... Just a little heads up. There may be a drug test coming up soon so make sure you're clean. Are you clean?"
 
     menu:
-        "I'm clean...":
+        "I'm clean":
             scene v14s40a_5a
             with dissolve
 
             u "I am, yeah."
 
-        "I'm not clean...":
+        "I'm not clean":
             scene v14s40a_5a
             with dissolve
     
@@ -118,7 +117,6 @@ label v14s40a:
 
     scene v14s40a_5b # FPP. Show Sebastian walking off.
     with dissolve
-
 
     u "(This man is calling me sunshine and he knows my class schedule? Is this what it's like to have a father...? *Laughs*)"
 

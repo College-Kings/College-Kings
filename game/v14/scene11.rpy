@@ -3,9 +3,7 @@
 # Characters: MC (Outfit: 5), MR. LEE (Outfit: 1), MS. ROSE (Outfit: 1), RILEY (Outfit: 2), CHARLI (Outfit: 1)
 # Time: Afternoon
 
-
 label v14s11:
-
     scene v14s11_1 # TPP. MC walks into the airport and closes his eyes as he takes a deep breath, slight smile
     with dissolve
 
@@ -17,11 +15,10 @@ label v14s11:
     u "(It feels so good to be back on home turf.)"
 
     if v13_charli_exposed:
-
         scene v14s11_2 # FPP. MC looks over sees and overhears Mr. Lee talking to Ms. Rose, Mr Lee. extends one hand out slightly palm up, no expression mouth open, Ms. Rose. no expression, mouth closed
         with dissolve
 
-        lee "Right, well… I need to be on my way! It's insisted that I attend Charli's meeting with the dean."
+        lee "Right, well... I need to be on my way! It's insisted that I attend Charli's meeting with the dean."
 
         scene v14s11_2a # FPP. same as v14s11_2 Mr. Lee no hand gesture mouth closed, Ms Rose. mouth open
         with dissolve
@@ -64,7 +61,6 @@ label v14s11:
         lee "I am too!"
 
     else: 
-
         scene v14s11_3 #FPP. MC sees Charli with his bag leaving the airport, without speaking to anyone, Charli's back is turned
         with dissolve
 
@@ -113,7 +109,7 @@ label v14s11:
     scene v14s11_4a
     with dissolve
 
-    ri "But……"
+    ri "But..."
 
     scene v14s11_4c
     with dissolve
@@ -131,9 +127,8 @@ label v14s11:
     ri "You're telling me that Charli never said anything to you that made you think about the choices you’ve made or ponder about who you are as a person?"
 
     menu:
-
         "He did":
-            $ addpoint("bro")
+            $ addPoint("bro")
 
             scene v14s11_4b
             with dissolve
@@ -145,8 +140,8 @@ label v14s11:
 
             ri "I wouldn't expect you to. He was worse to you than most of us."
 
-        "He Didn't":
-            $ addpoint("tm")
+        "He didn't":
+            $ addPoint("tm")
 
             scene v14s11_4b
             with dissolve
@@ -199,7 +194,6 @@ label v14s11:
     ri "Knowing Aubrey she probably doesn't wanna talk about that stuff right now either. Being around her is probably the safest way to stay out of any Chicks drama. *Chuckles*"
 
     if rileyrs:
-
         scene v14s11_4a
         with dissolve
 
@@ -213,7 +207,7 @@ label v14s11:
         scene v14s11_4a
         with dissolve
 
-        ri "I guess I just feel…"
+        ri "I guess I just feel..."
 
         scene v14s11_4h
         with dissolve
@@ -233,7 +227,7 @@ label v14s11:
         scene v14s11_4b
         with dissolve
 
-        u "I'm listening… *Chuckles*"
+        u "I'm listening... *Chuckles*"
 
         scene v14s11_4i # FPP. same as v14s11_4a Riley is blushing, shy expression, slightly looking away from mc, mouth open
         with dissolve
@@ -253,14 +247,14 @@ label v14s11:
         scene v14s11_4i
         with dissolve
 
-        ri "I think it might help… Yeah."
+        ri "I think it might help... Yeah."
 
         scene v14s11_4b
         with dissolve
 
         menu:
             "Like us both":
-                $ addpoint("bro")
+                $ addPoint("bro")
 
                 scene v14s11_4i
                 with dissolve       
@@ -270,7 +264,7 @@ label v14s11:
                 scene v14s11_4c
                 with dissolve
 
-                ri "*Chuckles* Right…"
+                ri "*Chuckles* Right..."
 
                 scene v14s11_4j # FPP. same as v14s11_4c Riley increases to a half smile
                 with dissolve
@@ -280,7 +274,7 @@ label v14s11:
                 scene v14s11_4i
                 with dissolve
 
-                ri "Yeah… So…"
+                ri "Yeah... So..."
 
                 scene v14s11_4b
                 with dissolve
@@ -305,7 +299,7 @@ label v14s11:
                 scene v14s11_4m # FPP. same as v14s11_4l Riley mouth open, full smile, no hand gesture
                 with dissolve
 
-                ri "*Chuckles* Wow…"
+                ri "*Chuckles* Wow..."
 
                 scene v14s11_4l
                 with dissolve
@@ -320,7 +314,7 @@ label v14s11:
                 scene v14s11_4m
                 with dissolve
 
-                ri "I guess I just didn't think you’d be open to something like that. It’s kind of my fantasy… *Chuckles*"
+                ri "I guess I just didn't think you’d be open to something like that. It’s kind of my fantasy... *Chuckles*"
 
                 scene v14s11_4l
                 with dissolve
@@ -361,13 +355,13 @@ label v14s11:
                 with dissolve
 
             "Pick one of us":
-                $ addpoint("tm")
-                $ addpoint("bf")
+                $ addPoint("tm")
+                $ addPoint("bf")
 
                 scene v14s11_4b
                 with dissolve
 
-                u "I'll be honest, I like you a lot Riley. The feelings are definitely mutual and I’m really happy you told me, but relationship-wise…"
+                u "I'll be honest, I like you a lot Riley. The feelings are definitely mutual and I’m really happy you told me, but relationship-wise..."
 
                 scene v14s11_4b
                 with dissolve
@@ -392,7 +386,7 @@ label v14s11:
                 scene v14s11_4q # FPP. same as v14s11_4a Riley slightly sad, mouth open
                 with dissolve
 
-                ri "Yeah, well… I'm gonna go and track down Aubrey then."
+                ri "Yeah, well... I'm gonna go and track down Aubrey then."
 
                 scene v14s11_4r # FPP. same as v14s11_4q Rileys mouth is closed
                 with dissolve
@@ -415,7 +409,6 @@ label v14s11:
                 u "(I don't think she liked hearing that answer.)"
         
     else:
-
         scene v14s11_4j
         with dissolve
 
