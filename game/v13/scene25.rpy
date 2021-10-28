@@ -178,7 +178,7 @@ label v13s25:
                         jump v13_emmy_sex
 
                     "Stop her":
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
 
                         scene v13s25_9
                         with dissolve
@@ -272,7 +272,7 @@ label v13s25:
                 jump v13s25_no_sex
 
         "No":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v13s25_3
             with dissolve
 

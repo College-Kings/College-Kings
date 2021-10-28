@@ -1,30 +1,30 @@
 init python:
     # Josh messages
     def v4_reply1():
-        addPoint("bro")
-        contact_Josh.newMessage(_("Dope"))
-        contact_Josh.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
+        addPoint(KCT.BRO)
+        josh.messenger.newMessage(_("Dope"))
+        josh.messenger.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
 
     def v4_reply2():
-        contact_Josh.newMessage(_("Aww, come on. You'll be back by 11."))
-        contact_Josh.newImgMessage("images/text1.webp")
-        contact_Josh.newMessage(_("I told my friend Amber about you and she really wants to meet you."))
-        contact_Josh.addReply(_("Alright, I'll come."), v4_reply1)
-        contact_Josh.addReply(_("Josh, I don't know, man. I don't wanna be late."), v4_reply3)
+        josh.messenger.newMessage(_("Aww, come on. You'll be back by 11."))
+        josh.messenger.newImgMessage("images/text1.webp")
+        josh.messenger.newMessage(_("I told my friend Amber about you and she really wants to meet you."))
+        josh.messenger.addReply(_("Alright, I'll come."), v4_reply1)
+        josh.messenger.addReply(_("Josh, I don't know, man. I don't wanna be late."), v4_reply3)
 
     def v4_reply3():
-        contact_Josh.newMessage(_("Remember how you told me in high school that you felt like you always missed out on all the crazy stories?"))
-        contact_Josh.newMessage(_("Don't miss out now."))
-        contact_Josh.addReply(_("Fine, I'll come. But I need to go before 11."), v4_reply4)
-        contact_Josh.addReply(_("I can't, sorry."), v4_reply5)
+        josh.messenger.newMessage(_("Remember how you told me in high school that you felt like you always missed out on all the crazy stories?"))
+        josh.messenger.newMessage(_("Don't miss out now."))
+        josh.messenger.addReply(_("Fine, I'll come. But I need to go before 11."), v4_reply4)
+        josh.messenger.addReply(_("I can't, sorry."), v4_reply5)
 
     def v4_reply4():
-        contact_Josh.newMessage(_("Dope"))
-        contact_Josh.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
+        josh.messenger.newMessage(_("Dope"))
+        josh.messenger.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
 
     def v4_reply5():
-        addPoint("bf")
-        contact_Josh.newMessage(_("This guy"))
+        addPoint(KCT.BOYFRIEND)
+        josh.messenger.newMessage(_("This guy"))
 
 label v4start:
     play music "music/m4punk.mp3"
@@ -82,7 +82,7 @@ label v4start:
 
     menu:
         "You should be more careful.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s297a
             with dissolve
@@ -99,7 +99,7 @@ label v4start:
             menu:
                 "Let me help.":
                     $ revengeadam = True
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
 
                     scene s297a
                     with dissolve
@@ -129,7 +129,7 @@ label v4start:
                     u "I'll see you then, get better soon."
 
                 "That's a dumb idea.":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                     scene s297a
                     with dissolve
@@ -159,7 +159,7 @@ label v4start:
                     u "I'll see you then, get better soon."
 
         "Let's fuck him up.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ addPoint("tm")
             $ revengeadam = True
 
@@ -316,8 +316,8 @@ label v4start:
 
     menu:
         "Take responsibility":
-            $ addPoint("bro")
-            $ addPoint("bf")
+            $ add_point(KCT.BRO)
+            $ add_point(KCT.BOYFRIEND)
 
             scene s303c
             with dissolve
@@ -574,7 +574,7 @@ label v4start:
 
         menu:
             "Someone punched me.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene s315a
                 with dissolve
@@ -1045,17 +1045,17 @@ label v4start:
 
     u "(I should text Chloe and see if she wants to meet up... I need to find out if there's any truth in what Ryan said.)"
 
-    $ contact_Chloe.addReply(_("Hey Chloe, any chance you can meet up in a bit?"))
-    $ contact_Chloe.newMessage(_("I'm really busy today, but I could do tonight after 11 or so."))
-    $ contact_Chloe.addReply(_("Alright, cool. I'll be at yours for 11"))
-    $ contact_Chloe.newMessage(_("Sounds good :)"))
+    $ chloe.messenger.addReply(_("Hey Chloe, any chance you can meet up in a bit?"))
+    $ chloe.messenger.newMessage(_("I'm really busy today, but I could do tonight after 11 or so."))
+    $ chloe.messenger.addReply(_("Alright, cool. I'll be at yours for 11"))
+    $ chloe.messenger.newMessage(_("Sounds good :)"))
 
     play music "music/mindie4.mp3"
 
     label phonev:
-        if contact_Chloe.replies:
+        if chloe.messenger.replies:
             call screen phone
-        if contact_Chloe.replies:
+        if chloe.messenger.replies:
             u "(I should message Chloe about meeting up later.)"
             jump phonev
     
@@ -1263,7 +1263,7 @@ label v4start:
 
 
     elif not laurenrs:
-        $ addPoint("bf")
+        $ add_point(KCT.BOYFRIEND)
         scene s334
         with dissolve
 
@@ -1302,7 +1302,7 @@ label v4start:
         jump autumnsita
 
     else:
-        $ addPoint("bf")
+        $ add_point(KCT.BOYFRIEND)
         scene s334
         with dissolve
 
@@ -1476,7 +1476,7 @@ label readmontagea:
 
     menu:
         "Talk to him":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s339 #you walking closer to Ryan
             with dissolve
@@ -1635,7 +1635,7 @@ label readmontagea:
 
         menu:
             "Magic Powers.":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 scene s349d
                 with dissolve
@@ -1658,7 +1658,7 @@ label readmontagea:
                 u "Yeah, sure."
 
             "I didn't.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene s349d
                 with dissolve
@@ -1686,7 +1686,7 @@ label readmontagea:
 
         menu:
             "Buy Penelope a muffin":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ muffin = True
                 $ caughtpeekingpenelopecounter = True
 
@@ -1770,7 +1770,7 @@ label readmontagea:
 
             menu:
                 "Grab her hand":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                     scene s347 # your hand grabbing her hand
                     with dissolve
@@ -1881,7 +1881,7 @@ label readmontagea:
 
         menu:
             "Magic Powers.":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 scene s345g
                 with dissolve
@@ -1901,7 +1901,7 @@ label readmontagea:
                 u "Yeah, sure."
 
             "I didn't.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene s345g
                 with dissolve
@@ -2031,7 +2031,7 @@ label ef_bd:
             pe "Right, thank you."
 
         "You should try it.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "You know, you should try it sometime."
 
@@ -2067,7 +2067,7 @@ label ef_bd:
 
             menu:
                 "Encourage her":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
                     $ bowling = True
 
                     scene s350e
@@ -2093,7 +2093,7 @@ label ef_bd:
                     jump el_ad
 
                 "Tease her":
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
                     $ bowling = False
 
                     scene s350e
@@ -2161,18 +2161,18 @@ label continueab:
 
     play music "music/m9punk.mp3"
 
-    $ contact_Josh.newMessage(_("Hey man, you wanna hang out with me and some friends tonight?"), queue=False)
-    $ contact_Josh.addReply(_("Uhh, sure."), v4_reply1)
-    $ contact_Josh.addReply(_("I'm meeting a friend at 11, so I can't really."), v4_reply2)
+    $ josh.messenger.newMessage(_("Hey man, you wanna hang out with me and some friends tonight?"), queue=False)
+    $ josh.messenger.addReply(_("Uhh, sure."), v4_reply1)
+    $ josh.messenger.addReply(_("I'm meeting a friend at 11, so I can't really."), v4_reply2)
 
     label phonew:
-        if contact_Josh.replies:
+        if josh.messenger.replies:
             call screen phone
-        if contact_Josh.replies:
+        if josh.messenger.replies:
             u "(I should probably reply to my messages.)"
             jump phonew
 
-    if contact_Josh.sentMessages[-2].reply and contact_Josh.sentMessages[-2].reply.message == "I can't, sorry.":
+    if josh.messenger.sentMessages[-2].reply and josh.messenger.sentMessages[-2].reply.message == "I can't, sorry.":
         u "(Fucking hell, I forgot how persistent Josh could be...)"
         jump jorepb
 
@@ -2204,7 +2204,7 @@ label continueab:
 
     jo "What's up, bro?"
 
-    if contact_Josh.sentMessages[-2].reply and contact_Josh.sentMessages[-2].reply.message == "Alright, I'll come.":
+    if josh.messenger.sentMessages[-2].reply and josh.messenger.sentMessages[-2].reply.message == "Alright, I'll come.":
         jo "Picture of Amber did it, eh?"
 
         scene s353b
@@ -2277,8 +2277,8 @@ label continueab:
 
     menu:
         "I can move.":
-            $ addPoint("bf")
-            $ addPoint("bro")
+            $ add_point(KCT.BOYFRIEND)
+            $ add_point(KCT.BRO)
 
             scene s359a
             with dissolve
@@ -2339,7 +2339,7 @@ label continueab:
 
     menu:
         "I'll join the Wolves.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "I'll join the Wolves."
 
@@ -2349,7 +2349,7 @@ label continueab:
             jo "See? I knew he was a fighter."
 
         "I don't know yet.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "I don't know yet."
 
@@ -2398,7 +2398,7 @@ label continueab:
 
     menu:
         "Sounds good.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s361g
             with dissolve
@@ -2406,7 +2406,7 @@ label continueab:
             u "Cool, sounds good."
 
         "I should stop here.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s361f
             with dissolve
@@ -2466,10 +2466,10 @@ label continueab:
 
     menu:
         "Do a handstand":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
         "Drink three sips":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             
             u "I'll drink."
 

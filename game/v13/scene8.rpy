@@ -313,7 +313,7 @@ label v13s8:
 
     menu:
         "Yeah":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v13s8_9f
             with dissolve
 

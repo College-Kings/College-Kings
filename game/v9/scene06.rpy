@@ -288,7 +288,7 @@ label drive_to_lake:
 
     menu:
         "Flirt":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             jump dtl_f
 
         "Serious":

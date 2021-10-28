@@ -231,12 +231,12 @@ label v14s21:
 
     menu:
         "Continue":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ addPoint("tm")
             jump v14s21a
         
         "Pull back":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v14s21_10b # TPP. MC pulling away from the kissing, MC slight smile, mouth closed, Chloe confused expression, mouth open
             with dissolve
 

@@ -6,15 +6,15 @@
 init python:
     def v11s4_reply1():
         setattr(store, "v11_talk_with_emily", True)
-        contact_Emily.newMessage("This is important, we need to talk now.")
-        contact_Emily.addReply("What's up?")
-        contact_Emily.newMessage("Meet me at the park.")
-        contact_Emily.addReply("Okay.")
+        emily.messenger.newMessage("This is important, we need to talk now.")
+        emily.messenger.addReply("What's up?")
+        emily.messenger.newMessage("Meet me at the park.")
+        emily.messenger.addReply("Okay.")
 
     def v11s4_reply2():
         setattr(store, "v11_talk_with_emily", True)
-        contact_Emily.newMessage("Meet me at the park.")
-        contact_Emily.addReply("Okay.")
+        emily.messenger.newMessage("Meet me at the park.")
+        emily.messenger.addReply("Okay.")
 
 label v11_emily_park:
     play music "music/v11/Scene 4/Track Scene 4_1.mp3" fadein 2
@@ -42,14 +42,14 @@ label v11_emily_park:
 
         pause 0.75
 
-    $ contact_Emily.newMessage("Hey, we need to talk.", queue=False)
-    $ contact_Emily.addReply("I'm pretty busy right now.", v11s4_reply1)
-    $ contact_Emily.addReply("What's up?", v11s4_reply2)
+    $ emily.messenger.newMessage("Hey, we need to talk.", queue=False)
+    $ emily.messenger.addReply("I'm pretty busy right now.", v11s4_reply1)
+    $ emily.messenger.addReply("What's up?", v11s4_reply2)
 
     label v11s4_PhoneContinueEmily1:
-        if contact_Emily.replies:
+        if emily.messenger.replies:
             call screen phone
-        if contact_Emily.replies:
+        if emily.messenger.replies:
             u "(I should check my phone.)"
             jump v11s4_PhoneContinueEmily1
 
@@ -159,7 +159,7 @@ label v11_emily_park:
             u "Ugh, obviously your mind is made up."
         
         "Be friends":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v11seap4d
             with dissolve
 

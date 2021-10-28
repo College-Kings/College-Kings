@@ -41,7 +41,7 @@ label v9_hallway:
 
     menu (fail_label="v9_hall_calm"): 
         "Apologize": 
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             jump v9_hall_apol
 
         "Tell him to calm down":
@@ -120,7 +120,7 @@ label v9_hall_cont1:
 
     menu (fail_label="v9_hall_no_punch"): 
         "Punch the guy": 
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ hl_punch = True
             jump v9_hall_punch
 

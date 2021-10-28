@@ -121,7 +121,7 @@ label steak_w_chloe:
 
         menu:
             "Flirt with Chloe":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 jump steak_flirt_w_chloe
 
             "Don't flirt with Chloe":
@@ -236,7 +236,7 @@ label steak_w_chloe_cont:
 
     menu:
         "Ask to see Chloe's muscles":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             jump steak_w_chloe_muscles
 
         "Turn the conversation serious":

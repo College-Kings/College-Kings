@@ -396,7 +396,7 @@ label v11_treasure_hunt:
             ri "I guess it just comes naturally... *Chuckles*"
 
         "She won't miss":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v11th14g # FPP. Same as v11th14d, Riley smiling, mouth closed, different pose
             with dissolve
 

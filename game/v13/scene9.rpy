@@ -298,7 +298,7 @@ label v13s9:
             cl "I knew I could count on you."
 
             if chloegf: # -If Chloegirlfriend (extra dialog)
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 play sound "sounds/kiss.mp3"
                 
@@ -610,7 +610,7 @@ label v13s9:
         
         menu:
             "Go with Ryan":
-                $ addPoint("bro") # only give points for the decision; not the else (default) flow.   
+                $ add_point(KCT.BRO) # only give points for the decision; not the else (default) flow.   
                 jump v13s9_no_concert
 
             "Don't go with Ryan":

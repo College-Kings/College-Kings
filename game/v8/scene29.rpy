@@ -625,7 +625,7 @@ label after_drugs:
                 if laurenrs:
                     $ addPoint("tm")
                 else:
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                 u "*Whispers* Fuck yes! Let's go!"
 
@@ -634,7 +634,7 @@ label after_drugs:
             "Reject her advances":
                 $ amberrs = False
                 if laurenrs:
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                 u "*Whispers* Sorry Amber, I'm not feeling it tonight."
 

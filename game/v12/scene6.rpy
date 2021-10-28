@@ -98,7 +98,7 @@ label v12_docks:
             u "Not much, we didn't really talk. What's going on?"
 
         "No":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v12dock6e
             with dissolve
 

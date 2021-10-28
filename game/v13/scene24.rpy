@@ -58,7 +58,7 @@ label v13s24:
 
     menu:
         "I already have a girl":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene v13s24_3a
             with dissolve
@@ -96,7 +96,7 @@ label v13s24:
             barh "Awkward..."
 
         "Fuck yeah, let's mingle":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             if chloegf or (laurenrs and not v11_aubrey_sex):
                 $ addPoint("tm")
 
@@ -278,7 +278,7 @@ label v13s24:
 
     emmy "Hello boys! *Chuckles* It's nice to meet you all."
 
-    if simplr_Emmy in simplr_contacts: #for v12-v13 compatibility
+    if emmy.simplr in simplr_contacts: #for v12-v13 compatibility
         $ v12s24_emmymatch = True
 
     if v12s24_emmymatch:
@@ -374,7 +374,7 @@ label v13s24:
 
     menu:
         "No kids for me":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ v13_told_emmy_no_kids_for_me = True
             u "Yeah, I'm on the no kids vibe at the moment too. Guess it's just not something I think about."
 
@@ -384,7 +384,7 @@ label v13s24:
             pause
 
         "I'm a family man":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             u "I'm a family man of course, a little bit of me continued through our generations. That's really what I'm all about."
 
             scene v13s24_16e # FPP. same as v13s24_16b emmy flirty smirk, squinting a little like she's trying to figure him out
@@ -556,7 +556,7 @@ label v13s24:
 
     menu:
         "Yes, I'm a romantic":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ kourtneyrs = True
             
             scene v13s24_16h
@@ -679,7 +679,7 @@ label v13s24:
 
     menu:
         "Work":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ aryssars = True
             
             scene v13s24_16l
@@ -688,7 +688,7 @@ label v13s24:
             u "I'd still be working in some way, shape or form. Don't have time for boredom."
 
         "Retired life":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ addPoint("tm")
 
             scene v13s24_16m # FPP. same as v13s24_16l aryssa slight frown

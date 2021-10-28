@@ -89,7 +89,7 @@ label v10_autumn_announcement:
         "Root for Chloe":
             $ chloeLike += 1
             $ noraLike -= 1
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v10samw6 
             with dissolve
     
@@ -144,7 +144,7 @@ label v10_autumn_announcement:
             $ v10_cvn_cheer_emily = True
             $ forgiveemily = True
             $ emilyLike += 1
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v10samw6a
             with dissolve
 
@@ -161,7 +161,7 @@ label v10_autumn_announcement:
         "Root for Riley":
             $ amberLike -= 1
             $ rileyLike += 1
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v10samw6b
             with dissolve
 

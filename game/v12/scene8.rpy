@@ -183,7 +183,7 @@ label v12_murder_mystery_reveal:
     menu:
         "Let Chris help her":
             $ v12_help_chris += 1
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "(It's his girl, he's got her.)"
 
@@ -208,7 +208,7 @@ label v12_murder_mystery_reveal:
             pause 0.75
 
         "Hurry to help her":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ noralikes = True
             
             scene v12mmr9 # TPP. Show MC rushing to Nora, MC worried, mouth closed, Nora feeling sick, mouth closed

@@ -44,7 +44,7 @@ label v12_room_chloe_riley:
 
         menu:
             "Truth":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 scene v12crm2
                 with dissolve
 

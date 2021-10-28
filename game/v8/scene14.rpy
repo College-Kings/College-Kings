@@ -15,8 +15,8 @@ label mc_wolves_sun_morn:
     with dissolve
     pause 0.5
 
-    $ contact_Penelope.newMessage(_("[name] I'm really scared! I am in so much trouble! I need you! Please come over??"), queue=False)
-    $ contact_Penelope.addReply(_("Ok try to stay calm. I'll be right over."))
+    $ penelope.messenger.newMessage(_("[name] I'm really scared! I am in so much trouble! I need you! Please come over??"), queue=False)
+    $ penelope.messenger.addReply(_("Ok try to stay calm. I'll be right over."))
     
 
     play sound "sounds/vibrate.mp3"
@@ -38,8 +38,8 @@ label mc_apes_sun_morn:
 
     pause 0.5
 
-    $ contact_Penelope.newMessage(_("[name] I'm really scared! I am in so much trouble! I need you! Please come over??"), queue=False)
-    $ contact_Penelope.addReply(_("Ok try to stay calm. I'll be right over."))
+    $ penelope.messenger.newMessage(_("[name] I'm really scared! I am in so much trouble! I need you! Please come over??"), queue=False)
+    $ penelope.messenger.addReply(_("Ok try to stay calm. I'll be right over."))
     
 
     play sound "sounds/vibrate.mp3"
@@ -51,9 +51,9 @@ label mc_apes_sun_morn:
     jump v8_s14_pen_text
 
 label v8_s14_pen_text:
-    if contact_Penelope.replies:
+    if penelope.messenger.replies:
         call screen phone
-    if contact_Penelope.replies:
+    if penelope.messenger.replies:
         u "(I should reply to her.)"
         jump v8_s14_pen_text
         

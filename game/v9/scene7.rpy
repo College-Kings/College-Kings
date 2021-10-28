@@ -222,7 +222,7 @@ label fr5ryan1:
 
         menu:
             "Talk about your dream":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "I'm not so sure about that. Last night I had a fucked up dream."
 
@@ -326,7 +326,7 @@ label fr5ryan1:
                 u "Right as fuck, my man."
 
             "Talk about the brawl":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 # -if MC chooses to tell Ryan how excited he is about the Brawl-
 
@@ -683,7 +683,7 @@ label fr5aubrey1:
             u "Sounds interesting. I guess we will see."
 
         "Join her":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ joinAubreyLake = True
 
             u "Fine, let me just take my clothes off."

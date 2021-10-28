@@ -343,7 +343,7 @@ label v12_game_roommate:
                 u "I guess so. *Laughs*"
 
             "Sell your house":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 scene v12grm2d
                 with dissolve
 

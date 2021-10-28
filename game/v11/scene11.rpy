@@ -240,7 +240,7 @@ label v11_Amber_Penelope:
         menu:
             "Kiss her":
                 $ penelopers = True
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 play sound "sounds/kiss.mp3"
 

@@ -7,8 +7,6 @@ init python:
             self.sentMessages = []
             self.pendingMessages = []
 
-            contacts.append(self)
-
         @property
         def replies(self):
             try:
@@ -123,12 +121,14 @@ init python:
                         return msg
             return False
 
+
     class Message:
         def __init__(self, contact, message):
             self.contact = contact
             self.message = message
             self.replies = []
             self.reply = None
+
 
     class ImageMessage:
         def __init__(self, contact, image):
@@ -137,11 +137,13 @@ init python:
             self.replies = []
             self.reply = None
 
+
     class Reply:
         def __init__(self, message, func=None, disabled=False):
             self.message = message
             self.func = func
             self.disabled = disabled
+
 
     class ImgReply:
         def __init__(self, image, func=None, disabled=False):
@@ -149,7 +151,7 @@ init python:
             self.func = func
             self.disabled = disabled
 
-init offset = -1
+
 default contacts = []
 
 screen contactsscreen():

@@ -1362,7 +1362,7 @@ label v11_quiz_bonus:
             "I love you too":
                 $ v11_lauren_ily = True
                 $ laurenrs = True
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ laurenLike += 2
 
                 scene v11las44h # FPP. Same as v11las44g, Lauren mouth closed, big smile
@@ -1378,7 +1378,7 @@ label v11_quiz_bonus:
                 pause 1
 
             "Play it off":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ laurenLike -= 2
 
                 scene v11las44i # FPP. Same as v11las44g, Lauren mouth closed, sad and embarrassed, no longer holding MC's neck
@@ -1432,14 +1432,14 @@ label v11_quiz_bonus:
 
         u "(Probably our picture.)"
 
-        $ contact_Lauren.newImgMessage("images/v11/Scene 30/Laurentxtimg1.webp", queue=False) # Lauren and MC picture together holding wands (check v11las45a for the pose)
-        $ contact_Lauren.addReply("Some good looking people.")
-        $ contact_Lauren.newMessage("Sure are.")
+        $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg1.webp", queue=False) # Lauren and MC picture together holding wands (check v11las45a for the pose)
+        $ lauren.messenger.addReply("Some good looking people.")
+        $ lauren.messenger.newMessage("Sure are.")
 
         label v11s30_PhoneContinuelauren1:
-            if contact_Lauren.replies:
+            if lauren.messenger.replies:
                 call screen phone
-            if contact_Lauren.replies:
+            if lauren.messenger.replies:
                 u "(I should reply to Lauren.)"
                 jump v11s30_PhoneContinuelauren1
 
@@ -1453,15 +1453,15 @@ label v11_quiz_bonus:
 
         u "(Probably our pictures.)"
 
-        $ contact_Lauren.newImgMessage("images/v11/Scene 30/Laurentxtimg1.webp", queue=False)
-        $ contact_Lauren.newImgMessage("images/v11/Scene 30/Laurentxtimg2.webp") # Lauren and MC picture together kissing (check v11las45 for the pose)
-        $ contact_Lauren.addReply("Some good looking people.")
-        $ contact_Lauren.newMessage("Sure are.")
+        $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg1.webp", queue=False)
+        $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg2.webp") # Lauren and MC picture together kissing (check v11las45 for the pose)
+        $ lauren.messenger.addReply("Some good looking people.")
+        $ lauren.messenger.newMessage("Sure are.")
 
         label v11s30_PhoneContinuelauren2:
-            if contact_Lauren.replies:
+            if lauren.messenger.replies:
                 call screen phone
-            if contact_Lauren.replies:
+            if lauren.messenger.replies:
                 u "(I should check my phone.)"
                 jump v11s30_PhoneContinuelauren2
 
