@@ -209,7 +209,7 @@ label v14s41a:
 
         u "(Oh… shit!)"
 
-        if ChloeGF:
+        if chloegf:
 
             scene v14s41a_9 # FPP. A close up view of just the TV with the image from v14s41a_3b being projected on the screen
             with dissolve
