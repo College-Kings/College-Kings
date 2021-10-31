@@ -80,7 +80,7 @@ label v10_apes_samantha:
     with dissolve
     menu:
         "I can be a hothead":
-            $ add_point(KCT.TROUBLEMAKER, 1)
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene v10ssap2c
             with dissolve
@@ -205,7 +205,7 @@ label v10_apes_samantha:
     with dissolve
     menu:
         "Maybe":
-            $ add_point(KCT.TROUBLEMAKER, 1)
+            $ add_point(KCT.TROUBLEMAKER)
             
             scene v10ssap3a
             with dissolve

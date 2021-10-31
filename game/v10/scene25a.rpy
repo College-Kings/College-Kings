@@ -119,7 +119,7 @@ label v10_sam_kitchen:
 
         "Get mad":
             $ samLike -= 1
-            $ add_point(KCT.TROUBLEMAKER, 1)
+            $ add_point(KCT.TROUBLEMAKER)
             scene v10skt2
             with dissolve
 
