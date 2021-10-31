@@ -449,6 +449,7 @@ default v11_fucked_candy = False
 default v11_samantha_spa = False
 default v11_aubrey_blue_outfit = False
 default v11_tease_amber = 0
+default v11_amber_sauna_convo = False
 default v11_manhunt_winner = "Ryan"
 default v11_pranked_seb = False
 default v11_aubrey_sex = False
