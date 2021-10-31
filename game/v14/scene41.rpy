@@ -87,7 +87,7 @@ label v14s41:
 
         menu:
             "What'd I say?":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene v14s40_4b # Ignore as reused from another scene
                 with dissolve

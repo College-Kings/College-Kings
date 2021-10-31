@@ -368,7 +368,7 @@ label v11_sit_ryan_convo:
 
         menu:
             "Be a dick":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 scene v11src4a
                 with dissolve
 

@@ -809,7 +809,7 @@ label v11s4_PhoneContinueJosh1:
     pause 1
 
 label v11s5_galleryScene:
-    #$ addPoint("tm", sum([ v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck, v10_ambersex, v10_chloe_locker, v10_ri_sex ])) ###Loyaltymod
+    #$ add_point(KCT.TROUBLEMAKER, sum([ v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck, v10_ambersex, v10_chloe_locker, v10_ri_sex ])) ###Loyaltymod
 
     scene v11swc20 # FPP At Candy's house, show Candy smiling, mouth closed
     with fade

@@ -296,7 +296,7 @@ label v12_game_roommate:
 
         menu:
             "Kill parents for insurance":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 scene v12grm2f
                 with dissolve
 

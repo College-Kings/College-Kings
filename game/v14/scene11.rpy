@@ -141,7 +141,7 @@ label v14s11:
             ri "I wouldn't expect you to. He was worse to you than most of us."
 
         "He didn't":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene v14s11_4b
             with dissolve

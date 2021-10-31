@@ -118,7 +118,7 @@ label v11_nora_chloe_hallway:
 
     menu:
         "Defend Chloe":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ noraLike -= 1
 
             scene v11nohall2d

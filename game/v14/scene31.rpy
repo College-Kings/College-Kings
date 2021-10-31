@@ -95,7 +95,7 @@ label v14s31:
                 u "(I'm glad she's focused, this is how it should be right now.)"
 
             "That's a turn off":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene v14s31_4b # TPP Same angle as 4, MC looks annoyed and repulsed, like he just tasted something bad
                 with dissolve

@@ -91,7 +91,7 @@ label v12_docks:
 
     menu:
         "Not much":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v12dock6e # FPP. Same as v12dock6d, Riley looking at MC, slightly worried, mouth closed, different pose
             with dissolve
 

@@ -118,7 +118,7 @@ label phn_chloe11_done:
 
     menu:
         "Party":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ rejectedApesFun = False
 
             scene v8apes25d

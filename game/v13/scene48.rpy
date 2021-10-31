@@ -536,7 +536,7 @@ label v13s48:
     menu :
         "Get her chocolates":
             $ aubrey.points += 1
-            $ addPoint ("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ v13s48_get_aubrey_chocolate = True
 
             u "Wait right here okay?"
@@ -647,7 +647,7 @@ label v13s48:
         
         menu:
             "I meant as friends":
-                $ addPoint ("bro")
+                $ add_point(KCT.BRO)
                 scene v13s48_8
                 with dissolve
 
@@ -659,7 +659,7 @@ label v13s48:
                 au "Mhmm, okay. *Chuckles* When are you thinking about going?"
 
             "I meant as a date":
-                $ addPoint ("bf")
+                $ add_point(KCT.BOYFRIEND)
                 scene v13s48_8
                 with dissolve
 
@@ -722,7 +722,7 @@ label v13s48:
 
         menu :
             "Go on the date":
-                $ addPoint ("bro")
+                $ add_point(KCT.BRO)
                 $ v13s48_ryan_double_date = True
 
                 scene v13s48_12
@@ -741,7 +741,7 @@ label v13s48:
                 u "Alright, sounds good."
 
             "Don't go on the date":
-                $ addPoint ("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene v13s48_12
                 with dissolve

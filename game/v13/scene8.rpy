@@ -320,7 +320,7 @@ label v13s8:
             u "Yeah, I think I'd have to pick Lindsey at the moment."
 
         "I haven't decided yet":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v13s8_9f
             with dissolve
 

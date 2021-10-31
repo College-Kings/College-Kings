@@ -311,7 +311,7 @@ label apes_faceoff_task:
             coop "Let the best man win."
 
         "Just get to the task":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
     scene black
     with dissolve

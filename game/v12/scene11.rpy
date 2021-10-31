@@ -362,7 +362,7 @@ label v12_paris_hotel:
 
     menu:
         "Yes":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v12pht9h
             with dissolve
 

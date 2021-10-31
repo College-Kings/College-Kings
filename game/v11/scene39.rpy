@@ -421,7 +421,7 @@ label v11_mc_amber_gokart:
 
     menu:
         "Agree":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v11cam14a # FPP. looking at amber, mouth closed
             with dissolve
 
@@ -1022,7 +1022,7 @@ label v11_race_continue3:
     menu:
         "Stand up for Amber":
             $ add_point(KCT.BOYFRIEND)
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ amberLike += 1
 
             scene v11cam14f
@@ -1140,7 +1140,7 @@ label v11_race_continue3:
 
     menu:
         "Tease":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ v11_tease_amber += 1
 
             u "You know what, if the job at Lew's doesn't work out, maybe you can work with our friend back there."

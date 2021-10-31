@@ -139,7 +139,7 @@ label v11_at_the_bank:
             bank "Ahh, I see. Let's begin."
 
         "A little":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "A little... I'm just not interested in all this kind of stuff I guess."
 
@@ -267,7 +267,7 @@ label v11_at_the_bank:
             am "Yes! Stealth is definitely the way to go here."
         
         "Chaos":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             u "I'm more of a guns blazing, lots of action guy. Go in hard or don't go at all."
 
             scene v11bank10a
@@ -528,7 +528,7 @@ label v11_at_the_bank:
 
     menu:
         "Yep":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             u "I guess so, and to think I had such a bright future. Fuck..."
 
             scene v11bank19

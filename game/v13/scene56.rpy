@@ -102,7 +102,7 @@ label v13s56:
 
     menu:
         "*Accidently* bump against her":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v13s56_98 # TPP. MC grinds up against Nora's ass, Nora looks back slightly shocked, mouth open
             with dissolve
 

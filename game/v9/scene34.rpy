@@ -4,7 +4,7 @@
 # Time: Saturday Morning
 
 label v9_ri_sex:
-    #$ addPoint("tm", sum([ amberSexAtJoshs, v9_aubrey_lake, v9_em_dorm_scene ])) ###Loyaltymod
+    #$ add_point(KCT.TROUBLEMAKER, sum([ amberSexAtJoshs, v9_aubrey_lake, v9_em_dorm_scene ])) ###Loyaltymod
     scene v9ris1 # TPP. Show MC outside Riley's dorm knocking on the door.
     with fade
 

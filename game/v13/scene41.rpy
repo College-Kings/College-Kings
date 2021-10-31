@@ -394,7 +394,7 @@ label v13s41:
     menu:
         "They should":
             $ v13s41_lindsey_points += 1
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene v13s41_14g
             with dissolve

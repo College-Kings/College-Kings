@@ -75,7 +75,7 @@ label emily_arcade:
                 jump em_arcade_1
 
             "Make it more interesting":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ emilyArcade = 2
 
                 jump em_arcade_2
@@ -132,7 +132,7 @@ label emily_arcade:
                 jump em_arcade_3
 
             "Make it more fun":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ emilyArcade = 4
 
                 jump em_arcade_4
@@ -802,7 +802,7 @@ label em_arcade_1:
     menu:
         "Kiss her":
             if laurenrs:
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
             else:
                 $ add_point(KCT.BOYFRIEND)
             $ kissedEmilyArcade = True
@@ -1258,7 +1258,7 @@ label v8s20_nsfwSkipLabel1:
     menu:
         "Kiss her":
             if laurenrs:
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
             else:
                 $ add_point(KCT.BOYFRIEND)
             $ kissedEmilyArcade = True

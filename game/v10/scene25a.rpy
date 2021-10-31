@@ -34,7 +34,7 @@ label v10_sam_kitchen:
     menu:
         "Make her a cocktail":
             $ makeSamCock = True
-            $ addPoint("bf", 1)
+            $ add_point(KCT.BOYFRIEND)
             $ samLike += 1
             scene v10skt2 
             with dissolve
@@ -91,7 +91,7 @@ label v10_sam_kitchen:
             menu:
                 "Drink with her":
                     $ drinkWsam = True
-                    $ addPoint("bf", 1)
+                    $ add_point(KCT.BOYFRIEND)
                     $ samLike += 1
                     scene v10skt4a 
                     with dissolve
@@ -119,7 +119,7 @@ label v10_sam_kitchen:
 
         "Get mad":
             $ samLike -= 1
-            $ addPoint("tm", 1)
+            $ add_point(KCT.TROUBLEMAKER, 1)
             scene v10skt2
             with dissolve
 
@@ -172,7 +172,7 @@ label v10_sam_kitchen:
 
     menu:
         "Tease her":
-            $ addPoint("bf", 1)
+            $ add_point(KCT.BOYFRIEND)
             $ samLike += 1
             scene v10skt4a
             with dissolve

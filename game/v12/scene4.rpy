@@ -162,7 +162,7 @@ label v12_roomate_talk:
                 u "Not Grayson-level crazy. *Laughs*"
 
             "Nope":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 scene v12rcr5a
                 with dissolve
 
@@ -401,7 +401,7 @@ label v12_roomate_talk:
 
         menu:
             "I know":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 scene v12rcr13b
                 with dissolve
 

@@ -549,7 +549,7 @@ label v12s18_bottlespin:
 
     menu:
         "Kiss him":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Fuck. Well, I'm not in the mood to get slapped, so let's get this over with."
 

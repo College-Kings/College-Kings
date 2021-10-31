@@ -122,7 +122,7 @@ label v11_cafe_with_riley:
 
     menu:
         "Scare her":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v11s3bris9
             with dissolve
 

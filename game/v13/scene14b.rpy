@@ -287,7 +287,7 @@ label v13s14b:
             u "You could say that. *Chuckles*"
 
         "Have fun":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             u "I may just let you..."
 
             play sound "sounds/kiss.mp3"

@@ -79,7 +79,7 @@ label v9_start_wolves:
 
     menu:
         "Excited reply":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ mcBrawlStance1 = True
 
             u "No shit! That's amazing!"
@@ -177,7 +177,7 @@ label v9_start_wolves:
             stop music fadeout 3
 
         "Go with it":
-            # $ addPoint("tm")
+            # $ add_point(KCT.TROUBLEMAKER)
             $ mcBrawlStance2 = True
 
             u "Wow, trial by fire!"

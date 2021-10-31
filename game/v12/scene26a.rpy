@@ -128,7 +128,7 @@ label v12_follow_chris:
     menu:
         "She wasn't overreacting":
             $ add_point(KCT.BOYFRIEND)
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ chrismad = True
 
             scene v12chf4a

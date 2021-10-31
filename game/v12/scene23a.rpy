@@ -147,7 +147,7 @@ label v12_mc_chilling:
 
         menu:
             "What?":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 scene v12mor9
                 with dissolve
 
@@ -304,7 +304,7 @@ label v12_mc_chilling:
                 sa "*Drunk* Good... Right answer."
 
             "No":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 scene v12mor13a
                 with dissolve
 
@@ -338,7 +338,7 @@ label v12_mc_chilling:
         menu:
             "I can beat Cameron":
                 $ v12s23a_beatcameron = True
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 
                 scene v12mor13a
                 with dissolve
@@ -663,7 +663,7 @@ label v12_mc_chilling:
 
 
             "No, I don't miss you (Joke)":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 scene v12mor24a
                 with dissolve
 

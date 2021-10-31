@@ -264,7 +264,7 @@ label v10_aft_walk_home:
             pause 0.5
         
         "Keep walking":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v10smwh2b
             with dissolve
 

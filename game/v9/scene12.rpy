@@ -45,7 +45,7 @@ label v9_hallway:
             jump v9_hall_apol
 
         "Tell him to calm down":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             jump v9_hall_calm
 
 label v9_hall_apol:
@@ -125,7 +125,7 @@ label v9_hall_cont1:
             jump v9_hall_punch
 
         "Don't punch the guy":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ hl_punch = False
             jump v9_hall_no_punch
 

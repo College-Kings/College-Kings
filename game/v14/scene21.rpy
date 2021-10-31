@@ -232,7 +232,7 @@ label v14s21:
     menu:
         "Continue":
             $ add_point(KCT.BOYFRIEND)
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             jump v14s21a
         
         "Pull back":

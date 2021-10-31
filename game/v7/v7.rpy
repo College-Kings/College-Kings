@@ -6,7 +6,7 @@ init python:
     def v7_kiwiiReply2():
         v7_kiwiiPost1.newComment("Imre", _("Slide into her DMs bro!"), mentions="MC", numberLikes=renpy.random.randint(5, 15))
         add_point(KCT.BRO)
-        addPoint("tm")
+        add_point(KCT.TROUBLEMAKER)
 
     def v7_kiwiiReply3():
         add_point(KCT.BOYFRIEND)
@@ -19,12 +19,12 @@ init python:
         v7_kiwiiPost3.newComment("Aubrey", _("Bring it on!"), mentions="MC", numberLikes=renpy.random.randint(15, 35))
 
     def v7_kiwiiReply6():
-        addPoint("tm")
+        add_point(KCT.TROUBLEMAKER)
         v7_kiwiiPost4.newComment("Josh", _("lol"), mentions="MC", numberLikes=renpy.random.randint(3, 7))
 
     def v7_msgReply1():
         setattr(store, "tellpenelope", True)
-        addPoint(KCT.BRO)
+        add_point(KCT.BRO)
         penelope.messenger.newMessage(_("Okay..."))
 
     def v7_msgReply2():
@@ -267,7 +267,7 @@ label v7start:
     menu:
         "Why aren't you on here?":
             $ add_point(KCT.BRO)
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "So, I don't know if it's weird asking, but if you're not one of the Fight Kings, how come you're the current president?"
 
@@ -485,7 +485,7 @@ label v7start:
 
             "Go after Nora":
                 $ follownora = True
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene s683a
                 with dissolve
@@ -1094,7 +1094,7 @@ label hd_ad:
 
         "Start flirting":
             if laurenrs :
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
             $ add_point(KCT.BRO)
 
@@ -1203,7 +1203,7 @@ label hd_ad:
     menu:
         "Yeah, I'd like that.":
             if laurenrs or emilyrs:
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
             $ add_point(KCT.BRO)
             $ rileyrs = True
@@ -1547,7 +1547,7 @@ label conyourdorm:
                         jump thisbewalk
 
             "Get angry":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene s714b # mc angry mouth open
                 with dissolve
@@ -2040,7 +2040,7 @@ label thisbelauren:
                 "Open relationship?":
                     $ laurenemily = 3
                     $ add_point(KCT.BRO)
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
                     $ laurenrs = False
                     $ laurenmad = True
                     $ autumnmad = True
@@ -2089,7 +2089,7 @@ label thisbelauren:
         "Deny the cheating":
             $ laurenemily = 1
             $ add_point(KCT.BRO)
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ laurenrs = True
             $ laurenmad = False
 
@@ -2255,7 +2255,7 @@ label thisbewalk:
         menu:
             "Almost as cute as you.":
                 if laurenrs:
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
                 else:
                     $ add_point(KCT.BOYFRIEND)
 
@@ -2308,7 +2308,7 @@ label thisbewalk:
 
         menu:
             "Yes, of course.":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ politics = True
 
                 u "Yes, of course. I guess we all have something. Am I right?"
@@ -2773,7 +2773,7 @@ label beachlauren:
             menu:
                 "Tell her it's fine":
                     $ add_point(KCT.BRO)
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     u "Good, great. You know how he is. It's just uhm... really good."
 
@@ -3174,7 +3174,7 @@ label beachlauren:
             menu:
                 "Tell her it's fine":
                     $ add_point(KCT.BRO)
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     u "Good, great. You know how he is. It's just uhm... really good."
 
@@ -3265,7 +3265,7 @@ label beachlauren:
 
         menu:
             "You're cute.":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene s742e
                 with dissolve
@@ -3761,7 +3761,7 @@ label pledgewolves:
     menu:
         "Eliminate Imre":
             $ wolvesTask1 = False
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s768a
             with dissolve
@@ -3904,7 +3904,7 @@ label pledgewolves:
         "Get the call":
             $ wolvesTask2 = False
             $ add_point(KCT.BOYFRIEND)
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s779 # Close up of MC leaving out of the tub, mouth open
             with dissolve
@@ -4322,7 +4322,7 @@ label aftercall:
     with dissolve
     menu:
         "Do it":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ add_point(KCT.BRO)
 
             u "Why not, you should do it."
@@ -4433,9 +4433,9 @@ label aftercall:
         "Kiss her back":
             $ wolvesTask4 = False
             if laurenrs:
-                $ addPoint("tm", 2)
+                $ add_point(KCT.TROUBLEMAKER, 2)
             else:
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ add_point(KCT.BOYFRIEND)
 
             ### NEW ACHIEVEMENT UNLOCK? ###
@@ -4704,7 +4704,7 @@ label aftercall:
 
 ######## SCENE 14 APES
 label pledgeapes:
-    $ addPoint("tm", 3) # I think more TM points for joining the Apes makes sense
+    $ add_point(KCT.TROUBLEMAKER, 3) # I think more TM points for joining the Apes makes sense
     $ joinwolves = False
 
     scene s756 # Not a new render
@@ -4985,7 +4985,7 @@ label pledgeapes:
 
     menu:
         "Stand up to him":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ stoodUpToCam = True
 
             scene s843a # Cameron threatening and mouth closed
@@ -5061,7 +5061,7 @@ label ep7_fight_cam:
     menu:
         "Punch him":
             $ punchedCam = True
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s846b # MC throws a punch but Cameron blocks it
             with hpunch
@@ -5228,7 +5228,7 @@ label ep7_cam_picture:
     menu:
         "Take the slip":
             $ cameronSisNumber = True
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s856
             with dissolve
@@ -5316,7 +5316,7 @@ label ep7_cam_picture:
 
         "Refuse to do it":
             $ apesTask1 = False
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Nah, I'm not calling Chloe."
 
@@ -5461,7 +5461,7 @@ label after_pledges:
             "Don't text her":
                 $ forgiveemily = False
                 $ emilyText = False
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "(Nah, I've had enough of her.)"
 
@@ -5944,7 +5944,7 @@ label after_pledges:
 
         menu:
             "Defend yourself":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ madeFunOfLee = True
 
                 scene s886 # Camera - TPP (Similar to s884 but closer). MC confident and talking looking at Lee. Lee mouth closed and looking at the MC
@@ -6331,7 +6331,7 @@ label after_history:
 
     menu:
         "Make fun of his costume":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "You serious bro? Elvis? Is that how far you could think back? Hahaha."
 
@@ -6402,7 +6402,7 @@ label after_history:
     menu:
         "Do it":
             $ apesTask2Try = True
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Fine! If you're that interested in looking at Mr. Lee's naked ass."
 
@@ -6450,7 +6450,7 @@ label after_history:
     menu (fail_label="lee_pants_fail"): # 3 second timer default
         "Pull it":
             $ apesTask2Success = True
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ apesVids += 1
             stop sound
 
@@ -6627,7 +6627,7 @@ label hc_asking_amber:
         am "How about we skip the dance together? I promise it'll be a lot more fun."
         menu:
             "Alright, I'm in.":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ hcGirl = "amber"
                 $ amberrs = True
 
@@ -7505,7 +7505,7 @@ label cameron_thurs_tasks:
 
     menu:
         "Do it":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ apesVids += 1
 
             scene scc19 # TPP. Show MC grabbing the glue from Cameron, Cameron smile, MC mouth open.
@@ -7623,7 +7623,7 @@ label cameron_thurs_tasks:
 
     menu:
         "Do it":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene scc28 # TPP. Show MC and Cameron high fiving, smile on both faces, MC mouth open.
             with dissolve
@@ -7661,7 +7661,7 @@ label cameron_thurs_tasks:
             # CRICKET DROP TIMER
             menu (fail_label="av_crickets_no_drop"):
                 "Drop the crickets":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
                     $ apesVids += 1
 
                     scene scc31a # FPP. As above but, show MC arms turning the container of crickets upside down with them falling out.
@@ -8966,7 +8966,7 @@ label rileysexscene:
     $ rileyrs = True
     $ v7_rileysex = True
     
-    #$ addPoint("tm", sum([ aubreysex, aubreysex2, v6_emilysex ])) ###Loyaltymod
+    #$ add_point(KCT.TROUBLEMAKER, sum([ aubreysex, aubreysex2, v6_emilysex ])) ###Loyaltymod
     
     scene ridrm1 # You knocking on Riley's dorm door (third person)
     with dissolve
@@ -10454,7 +10454,7 @@ label chloehocodate:
             au "This man's got taste!"
 
         "Lindsey":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "I'm gonna go with Lindsey. Sorry, Aubrey."
 
@@ -10484,7 +10484,7 @@ label chloehocodate:
     menu:
         "Ask something sexual":
             $ add_point(KCT.BRO)
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Would you rather have a threesome with two guys, or a guy and a girl?"
 
@@ -10564,7 +10564,7 @@ label chloehocodate:
     menu:
         "Joke around":
             $ add_point(KCT.BRO)
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "And then on the other side of me, you're sitting. So that's really cool too."
 
@@ -11532,7 +11532,7 @@ label penelopehocodate:
 
     menu:
         "Enter her room":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             play sound "sounds/dooropen.mp3"
             scene sfr4pe1b # showing mc entering her room, door still only half open, cant see penelope or much in the room
             with dissolve
@@ -11684,7 +11684,7 @@ label penelopehocodate:
     menu:
         "Ask about sex toys":
             $ penelopesextoys = True
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Come on, were you hiding your sex toys?"
 
@@ -14254,7 +14254,7 @@ label fr4elijah1:
             u "*Chuckles* Keep it up."
 
         "Make fun of Elijah":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ add_point(KCT.BRO)
 
 
@@ -14795,7 +14795,7 @@ label fr4riley2:
 
         menu:
             "Alright, let's go.":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "Alright. Let me tell my date that I gotta leave early and let's go."
 
@@ -14855,7 +14855,7 @@ label fr4riley2:
 
         menu:
             "Alright, let's go.":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "Alright. Let me tell my date that I gotta leave early and let's go."
 
@@ -15215,7 +15215,7 @@ label fr4aubrey1:
                 $ add_point(KCT.BRO)
                 $ bathroomblowjob = True
 
-                #$ addPoint("tm", sum([ v6_emilysex, v7_rileysex ])) ###Loyaltymod
+                #$ add_point(KCT.TROUBLEMAKER, sum([ v6_emilysex, v7_rileysex ])) ###Loyaltymod
 
                 u "Yeah, alright. Let's go."
 
@@ -15310,7 +15310,7 @@ label fr4aubrey1:
                     jump labelfr4hallwaybathroom
 
             "I'm not really feeling it.":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene sfr4ri39d # aubrey a bit disappointed
                 with dissolve
@@ -15401,7 +15401,7 @@ label fr4chloe1:
             $ ryandefendchloe = True
             $ chloemad = False
             $ add_point(KCT.BOYFRIEND)
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene sfr4cl48a
             with dissolve
@@ -15881,7 +15881,7 @@ label fr4imre1:
         menu:
             "Say something to Imre":
                 $ add_point(KCT.BRO)
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "*Laughs* Imre?"
 
@@ -16151,7 +16151,7 @@ label fr4chloe2:
                     jump fr4penelopedatechloe
 
             "Or we could just leave.":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "Or we could just leave right now and not look back..."
 
@@ -16314,7 +16314,7 @@ label fr4grayson1:
                     u "*Sighs* Fine."
 
             "Alright, enjoy.":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "Alright, enjoy."
 
@@ -16388,7 +16388,7 @@ label fr4grayson1:
                 pause 0.5
 
             "Alright, enjoy.":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "Alright, enjoy."
 
@@ -16549,7 +16549,7 @@ label fr4lockerroomchloe:
                         jump fr4emilydate
                         
                 "Let's get out of here.":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     u "You don't have to. Let's just get out of here."
 
@@ -17302,7 +17302,7 @@ label fr4chloeending:
     # towel drop sound #check - add towel.mp3 sound file
     play sound "sounds/towel.mp3"
 
-    #$ addPoint("tm", sum([ aubreysex2, v6_emilysex, v7_rileysex, bathroomblowjob ])) ###Loyaltymod
+    #$ add_point(KCT.TROUBLEMAKER, sum([ aubreysex2, v6_emilysex, v7_rileysex, bathroomblowjob ])) ###Loyaltymod
 
     if config_censored and renpy.loadable("v8/scene2.rpy"):
         call screen censoredPopup("v8s2_nsfwSkipLabel1")

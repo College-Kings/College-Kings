@@ -806,7 +806,7 @@ label v14s25:
 
             menu:
                 "Let her stay":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
                     u "(Ha, hard as stone on the outside but a softie on the inside.)"
 
                     scene v14s25_17e # TPP. Show MC going back to sleep with his arm around Amber as she lays on him.
@@ -822,7 +822,7 @@ label v14s25:
             jump v14s25b
 
         "Let Amber be Amber":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ v14_amber_drugs = True
             scene v14s25_8m
             with dissolve
@@ -948,7 +948,7 @@ label v14s25:
 
             menu:
                 "Fuck Amber":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
                     scene v14s25_21a # FPP. Same as v14s25_21, Amber flirtatious smile, mouth closed.
                     with dissolve
 
@@ -1038,7 +1038,7 @@ label v14s25:
 
                     menu:
                         "Let her stay":
-                            $ addPoint("tm")
+                            $ add_point(KCT.TROUBLEMAKER)
                             u "(Ha, hard as stone on the outside but a softie on the inside.)"
 
                             scene v14s25_17e

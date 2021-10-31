@@ -1,7 +1,7 @@
 init python:
     # Josh messages
     def v4_reply1():
-        addPoint(KCT.BRO)
+        add_point(KCT.BRO)
         josh.messenger.newMessage(_("Dope"))
         josh.messenger.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
 
@@ -23,7 +23,7 @@ init python:
         josh.messenger.newMessage(_("Come by 995 Sereno Drive at 8, it's my friends house."))
 
     def v4_reply5():
-        addPoint(KCT.BOYFRIEND)
+        add_point(KCT.BOYFRIEND)
         josh.messenger.newMessage(_("This guy"))
 
 label v4start:
@@ -160,7 +160,7 @@ label v4start:
 
         "Let's fuck him up.":
             $ add_point(KCT.BRO)
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ revengeadam = True
 
             scene s297a
@@ -333,7 +333,7 @@ label v4start:
             with dissolve
 
         "Blame Ryan":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s303c
             with dissolve
@@ -609,7 +609,7 @@ label v4start:
                 ju "Okay honey, let's go shopping then."
 
             "It was an accident.":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ liejulia = True
 
                 scene s315a
@@ -1088,7 +1088,7 @@ label v4start:
     u "(Oh that's Lauren's sister Autumn...)"
 
     if not laurenrs and toldlauren:
-        $ addPoint("tm")
+        $ add_point(KCT.TROUBLEMAKER)
 
         u "(Hopefully Lauren didn't tell her about what happened...)"
 
@@ -1175,7 +1175,7 @@ label v4start:
 
 
     elif not laurenrs and laurentoofar:
-        $ addPoint("tm")
+        $ add_point(KCT.TROUBLEMAKER)
 
         u "(Hopefully Lauren didn't tell her about what happened...)"
 
@@ -1501,7 +1501,7 @@ label readmontagea:
             ry "Yeah, man. I messed up, I'm sorry."
 
         "Ignore him":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s339 #you walking closer to Ryan
             with dissolve
@@ -1787,7 +1787,7 @@ label readmontagea:
 
                     menu:
                         "Kiss her":
-                            $ addPoint("tm")
+                            $ add_point(KCT.TROUBLEMAKER)
                             $ penelopekiss = True
 
                             scene s348 # you reaching for kiss, she's pulled away
@@ -2011,7 +2011,7 @@ label ef_bd:
 
     menu:
         "We should watch some.":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "You know, we should watch some together sometime."
 
@@ -2291,7 +2291,7 @@ label continueab:
             jo "Hahaha, buddy I'm just kidding, stay put."
 
         "It's my spot now.":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s359a
             with dissolve
@@ -2682,7 +2682,7 @@ label continueab:
 
             menu:
                 "Kiss her":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
                     $ kissamber = True
 
                     play sound "sounds/spit.mp3"
@@ -2707,7 +2707,7 @@ label continueab:
                     pause 0.5
 
                 "Don't kiss her":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
                     $ kissamber = False
 
                     play sound "sounds/spit.mp3"
@@ -2752,7 +2752,7 @@ label continueab:
 
             menu:
                 "Kiss her":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
                     $ kisskim = True
 
                     play sound "sounds/spit.mp3"
@@ -2780,7 +2780,7 @@ label continueab:
                     pause 0.5
 
                 "Don't kiss her":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
                     $ kisskim = False
 
                     play sound "sounds/spit.mp3"
@@ -2882,7 +2882,7 @@ label continueab:
 
     menu:
         "Accuse her of lying":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s370c
             with dissolve

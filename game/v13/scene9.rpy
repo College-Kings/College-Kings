@@ -349,7 +349,7 @@ label v13s9:
             if chloegf: # -If Chloegirlfriend (extra dialog)
                 $ chloe.points -= 1 
                 
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 
                 scene v13s9_12l # FPP. Chloe facing MC (not leaning) very MAD, leaning in towards MC, pointing finger at MC (Yelling at him)
                 with dissolve

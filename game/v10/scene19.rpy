@@ -41,7 +41,7 @@ label v10_walk_jenny_text:
         "Invite Penelope":
             $ penelopeLike += 1
             $ v10_inv_pen_cafe = True
-            $ addPoint("bf", 1)
+            $ add_point(KCT.BOYFRIEND)
 
             u "(Yeah, I should invite her. Best if she's the one that breaks the news to her.)"
 

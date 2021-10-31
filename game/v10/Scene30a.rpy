@@ -149,7 +149,7 @@ label v10_emily_course:
                                 be "Looks like you two are really getting into it."                                
 
                             "Don't save Emily":
-                                $ addPoint("tm")
+                                $ add_point(KCT.TROUBLEMAKER)
                             
                                 u "Oh no, if only someone could save her."
 
@@ -231,7 +231,7 @@ label v10_emily_course:
                         jump v10_late_alley
 
                     "Leave":
-                        $ addPoint("tm")
+                        $ add_point(KCT.TROUBLEMAKER)
 
                         u "Shoot, what time is it?"
 
@@ -375,7 +375,7 @@ label v10_emily_course:
                                 be "Looks like you two are really getting into it."                                
 
                             "Don't save Emily":
-                                $ addPoint("tm")
+                                $ add_point(KCT.TROUBLEMAKER)
                             
                                 u "Oh no, if only someone could save her."
 
@@ -457,7 +457,7 @@ label v10_emily_course:
                         jump v10_late_alley
 
                     "Leave":
-                        $ addPoint("tm")
+                        $ add_point(KCT.TROUBLEMAKER)
 
                         u "Shoot, what time is it?"
 

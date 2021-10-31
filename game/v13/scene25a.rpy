@@ -26,7 +26,7 @@ label v13s25a:
 
     menu:
         "Maybe":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene v13s25a_2
             with dissolve

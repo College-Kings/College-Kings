@@ -770,7 +770,7 @@ label v12s33_door1:
 
     menu:
         "Not at all":
-            $ addPoint ("bro")
+            $ add_point(KCT.BRO)
             u "Not at all, you can talk about me all you want. I like knowing I'm on your mind... *Chuckles*"
 
             scene v12s33_30f # same as 30b, chloe flirty, mouth open
@@ -1355,7 +1355,7 @@ label v12s33_sneak_off2:
 
     menu:
         "Crawl to the next table":
-            $ addPoint ("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v12s33_46 #TPP MC crawls to the next table and sees Nora, mc mouth open smiling, whispering 
             with dissolve
 

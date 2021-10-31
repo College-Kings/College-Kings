@@ -326,7 +326,7 @@ label v12_nora_robbed:
             jump v12_nora_checks_mc #scene 2
 
         "Chase after robber":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             stop music fadeout 3
 
             jump v12_chase_robber #scene 1a

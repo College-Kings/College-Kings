@@ -118,7 +118,7 @@ label v9_at_warehouse:
 
         menu:
             "Talk about Ryan":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "*Whispers* Hey, Im, if I draw Ryan first, want me to warm him up for you?"
 
@@ -203,7 +203,7 @@ label v9_at_warehouse:
 
         menu:
             "Tell Chris about Ryan":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 
                 u "(If I don't say something, this could get out of hand.)"
 
@@ -248,7 +248,7 @@ label v9_at_warehouse:
 
         menu:
             "Complain":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "What the fuck, man?"
 
@@ -339,7 +339,7 @@ label v9_at_warehouse:
 
         menu:
             "Say something":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 u "Um... what's up with Cam?"
 
                 scene v9aaw12d # FPP. Same camera as v9aaw12, Grayson turns to face cameron, Cameron looks at Grayson, Cameron angry, Grayson serious, Grayson mouth open.

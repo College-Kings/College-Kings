@@ -103,7 +103,7 @@ label v9_hc_demo:
             $ the_king = True
             jump v9_hc_demo_rec
         "Don't recognize the King":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             jump v9_hc_demo_norec
         
 label v9_hc_demo_rec:

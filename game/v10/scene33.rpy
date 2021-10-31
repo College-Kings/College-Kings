@@ -110,7 +110,7 @@ label v10s33_autumn1:
     menu:
         "Ask why":
             $ v10s33_autwhypledge = True
-            $ addPoint("bf", 1)
+            $ add_point(KCT.BOYFRIEND)
             $ autumnLike += 1
             u "Why wouldn't you expect her to pledge?"
 
@@ -125,7 +125,7 @@ label v10s33_autumn1:
             u "(I doubt she's told many people everything she's told me.)"
 
         "Leave it be":
-            $ addPoint("bro", 1)
+            $ add_point(KCT.BRO)
             u "(Not really my business.)"
 
     scene v10cfraut1
@@ -149,11 +149,11 @@ label v10s33_autumn1:
     menu:
         "That's the main reason":
             $ v10s33_authereformud = True
-            $ addPoint("bro", 1)
+            $ add_point(KCT.BRO)
             u "I'll be sure to try the other things too, but it's definitely the main attraction."
         
         "I'd be here without it":
-            $ addPoint("bf", 1)
+            $ add_point(KCT.BOYFRIEND)
             $ autumnLike += 1
             u "I didn't even know about the mud wrestling until recently, I'd be here with or without it."
 
@@ -515,7 +515,7 @@ label v10s33_deergirl11:
     menu:
         "Sure":
             u "Sure."
-            $ addPoint("bf", 1)
+            $ add_point(KCT.BOYFRIEND)
             $ v10s33_audance = True
             $ aubreyLike += 1
             scene v10cfrau5 #TPP, Aubrey grabs MC holding his hands, they're both smiling, mouth closed
@@ -594,7 +594,7 @@ label v10s33_deergirl11:
 
         "No way":
             $ aubreyLike -= 1
-            $ addPoint("bro", 1)
+            $ add_point(KCT.BRO)
             u "Oh no way, I don't wanna be an embarrassment. *Laughs*"
 
             scene v10cfrau2b
@@ -672,7 +672,7 @@ label v10s33_deergirl11:
             au "Of course she is!"
        
         "Not":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Not."
 
@@ -691,7 +691,7 @@ label v10s33_deergirl11:
 
     menu:
         "Hot":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             u "Hot."
 
             scene v10cfrau4b
@@ -727,7 +727,7 @@ label v10s33_deergirl11:
             au "Cute, but I don't know about hot."
         
         "Not":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             u "Not."
 
             scene v10cfrau4d
@@ -807,7 +807,7 @@ label v10s33_deergirl11:
             au "It seems we both have good taste."
 
         "Not":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             u "Not."
 
             scene v10cfrau4f
@@ -927,7 +927,7 @@ label v10s33_deergirl11:
 
             "Don't invite her":
                 $ aubreyLike -= 1
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "(If she goes she goes, if she doesn't she doesn't.)"
 
@@ -1402,7 +1402,7 @@ label v10s33_deergirl21:
             u "Thanks."
 
         "Don't get a ticket":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             u "Well, good luck."
 
             scene v10cfrdg31d #same 1, dissappointed, mouth open
@@ -1611,7 +1611,7 @@ label v10s33_deergirl21:
             menu:
                 "Invite her to Europe":
                     $ v10s33_inv_lauren_europe = True
-                    $ addPoint ("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                     u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
 
@@ -1640,7 +1640,7 @@ label v10s33_deergirl21:
                         u "No problem, you still have some time to decide."
 
                 "Don't invite her":
-                    $ addPoint ("bro")
+                    $ add_point(KCT.BRO)
                     u "(I don't really feel like inviting Lauren.)"
 
     u "I'm gonna check out some more stuff, I'll check back in later."
@@ -1710,7 +1710,7 @@ label v10s33_deergirl21:
             u "*Laughs*"
 
         "Joke around":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             u "Oh my gosh, did that statue just talk to me? Everyone, that statue just talked!"
 
             scene v10cfrla3b
@@ -1812,7 +1812,7 @@ label v10s33_deergirl21:
             menu:
                 "Invite her to Europe":
                     $ v10s33_inv_lauren_europe = True
-                    $ addPoint ("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                     u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
 
@@ -1841,7 +1841,7 @@ label v10s33_deergirl21:
                         u "No problem, you still have some time to decide."
 
                 "Don't invite her":
-                    $ addPoint ("bro")
+                    $ add_point(KCT.BRO)
                     u "(I don't really feel like inviting Lauren.)"
 
     u "I'm gonna check out some more stuff, I'll check back in later."
@@ -2984,7 +2984,7 @@ label v10s33_riley2:
 
     menu:
         "Witty retort":
-            $ addPoint ("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             u "Ha, you just wanna see me shirtless wrestling other guys."
 
             scene v10cfram1
@@ -3497,7 +3497,7 @@ label v10s33_riley2:
                 ry "Yeah yeah, uhm... that's cool. See you around."
 
             "It's not okay": 
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 u "You would really ask me that? Why would I be cool with my friend dating my ex?!"
 
                 scene v10cfrry1c
@@ -3823,7 +3823,7 @@ label v10s33_emily1:
                 ev "Someone's eager. *Chuckles* Soon, but let's enjoy the event for today."
 
             "I'll think about it":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 u "I'll think about it. *Chuckles*"
 
                 scene v10cfrev1b

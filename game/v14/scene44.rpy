@@ -236,7 +236,7 @@ label v14s44:
             with dissolve
 
         "I'm Eli's friend":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ ElijahFriend = True
 
             scene v14s44_10

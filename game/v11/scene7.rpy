@@ -430,7 +430,7 @@ label v11_room_aubrey_shopping:
             am "Thanks, Aubrey."
 
         "Tease":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ amberLike -= 1
             $ v11_tease_amber += 1
 

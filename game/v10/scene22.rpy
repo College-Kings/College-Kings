@@ -161,7 +161,7 @@ label v10_cafe_w_jenny:
         menu:
             "Reassure her":
                 $ v10_reassure_jenny = True
-                $ addPoint("bf", 1)
+                $ add_point(KCT.BOYFRIEND)
                 $ jennyLike += 1
 
                 u "Penelope always puts others before herself, even if you knew and tried to stop her, she probably still would've done it."
@@ -206,7 +206,7 @@ label v10_cafe_w_jenny:
 
         menu:
             "Flirt":
-                $ addPoint("bf", 1)
+                $ add_point(KCT.BOYFRIEND)
                 if kct == "confident":
                     $ jennyLike += 1
 
@@ -287,7 +287,7 @@ label v10_cafe_w_jenny:
 
         menu:
             "Be helpful":
-                $ addPoint("bro", 1)
+                $ add_point(KCT.BRO)
 
                 scene v10scwj11
                 with dissolve
@@ -304,7 +304,7 @@ label v10_cafe_w_jenny:
                 u "And if they don't then I'll just rob a bank for you. "
 
             "Be supportive":
-                $ addPoint("bf", 1)
+                $ add_point(KCT.BOYFRIEND)
                 $ penelopeLike += 1
 
                 scene v10scwj11

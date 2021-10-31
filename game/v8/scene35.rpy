@@ -438,7 +438,7 @@ label steak_w_chloe_cont_2:
         menu:
             "Say a dirty joke":
                 jump steak_w_chloe_dirty
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
             "Don't say a joke":
                 jump steak_w_chloe_dirty_no
 

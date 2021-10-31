@@ -17,7 +17,7 @@ label v12_amber_after_spa:
 
     menu:
         "Tease Amber":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ v11_tease_amber += 1
 
             scene v12ams2a # FPP. Same as v12ams2, Amber slightly annoyed, mouth closed

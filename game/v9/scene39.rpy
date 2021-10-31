@@ -148,7 +148,7 @@ label v9_hang_w_linds:
     menu:
         "Let Lindsey grab your hand":
             if chloers:
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
             else:
                 $ add_point(KCT.BOYFRIEND)
@@ -201,13 +201,13 @@ label v9_hang_w_linds:
             menu:
                 "Make out with Lindsey":
                     if chloers:
-                        $ addPoint("tm")
+                        $ add_point(KCT.TROUBLEMAKER)
                     
                     else:
                         $ add_point(KCT.BOYFRIEND)
 
                     $ lindseyfirstkiss = True
-                    #$ addPoint("tm", sum([ amberSexAtJoshs, v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley ])) ###Loyaltymod
+                    #$ add_point(KCT.TROUBLEMAKER, sum([ amberSexAtJoshs, v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley ])) ###Loyaltymod
                     
                     scene v9links # Animations pls ignore
                     with dissolve

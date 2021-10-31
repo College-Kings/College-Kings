@@ -445,7 +445,7 @@ label v13s46:
             u "Let's go ahead and head back before they see us creepin', you weirdo."
 
         "Haha, okay":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v13s46_13b
             with dissolve
 

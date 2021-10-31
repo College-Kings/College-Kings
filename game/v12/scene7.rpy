@@ -463,7 +463,7 @@ label v12s7_aubrey1:
             u "It was a serious fight. I'm surprised you haven't heard about it yet. It feels as if the whole world watched it."
 
         "Light work":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v12ferau1a
             with dissolve
 
@@ -729,7 +729,7 @@ label v12s7_aubrey2:
             label v12s7_aubrey_kill:
             hide screen murder_button_overlay
 
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v12ferauh6 # TPP. Show MC pointing finger gun at aubrey, mc mouth open, aubrey mouth closed
             with dissolve
 
@@ -1188,7 +1188,7 @@ label v12s7_chloe1:
             cl "Exactly. So, I don't know. I'm doing my best to not think about it..."
 
         "Enjoy Europe":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v12ferch1c
             with dissolve
             
@@ -1632,7 +1632,7 @@ label v12s7_riley3a:
             ri "*Southern accent* Someone else must come by when neither of us were with her."
 
         "You":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v12ferril1
             with dissolve
 
@@ -1752,7 +1752,7 @@ label v12s7_lauren1:
                 u "(Damn, she's still really pissed.)"
 
             "Kill her":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ v12s7_killList.add(lauren)
                 scene v12ferla1
                 with dissolve
@@ -2146,7 +2146,7 @@ label v12s7_ryan_imre1:
 
     menu:
         "Tease Imre":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v12ferryi9a
             with dissolve
             
@@ -2806,7 +2806,7 @@ label v12s7_lindsey_charlie1:
 
     menu:
         "Ryan is suspicious":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v12ferlich2a
             with dissolve
             
@@ -3039,7 +3039,7 @@ label v12s7_lindsey2:
             u "I can be your distraction. I'll just try and separate them... then see if I get murked or not."
 
         "Charli":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v12ferli3a
             with dissolve
 
@@ -5313,7 +5313,7 @@ label v12s7_nora1:
 
             menu:
                 "Sounds like you're dumping him":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
                     scene v12fernor1b
                     with dissolve
 
@@ -5831,7 +5831,7 @@ label v12s7_josh1:
 
     menu:
         "Really care about cats, huh?":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ joshmadfr = True
             scene v12ferjo1
             with dissolve

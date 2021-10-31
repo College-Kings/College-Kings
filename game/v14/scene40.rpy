@@ -87,7 +87,7 @@ label v14s40:
 
         menu:
             "What'd I say?":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene v14s40_4b
                 with dissolve

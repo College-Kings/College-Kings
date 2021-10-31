@@ -7,7 +7,7 @@ init python:
 
     def v10s26_reply1():
         setattr(store, "v10_amber_condoms", True)
-        addPoint(KCT.BOYFRIEND)
+        add_point(KCT.BOYFRIEND)
         amber.messenger.newMessage("Beer, obviously")
 
 label v10_amber_skatepark:
@@ -393,7 +393,7 @@ label v10_amber_skatepark:
         menu:
             "Let her":
                 $ v10_ambersex = True
-                #$ addPoint("tm", sum([ v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck ])) ###Loyaltymod
+                #$ add_point(KCT.TROUBLEMAKER, sum([ v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck ])) ###Loyaltymod
                 show screen v10s26_amberSexOverlay
 
                 if config_censored:
@@ -712,7 +712,7 @@ label v10_amber_skatepark:
                         "Let her":
                             $ amberrs = True
                             $ v10_ambersex = True
-                            #$ addPoint("tm", sum([ v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck ])) ###Loyaltymod
+                            #$ add_point(KCT.TROUBLEMAKER, sum([ v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck ])) ###Loyaltymod
 
                             if config_censored:
                                 call screen censoredPopup("v10s26_nsfwSkipLabel1")

@@ -8,7 +8,7 @@ init python:
     def v1_reply2():
         grant_achievement("open_wound")
 
-        addPoint(KCT.TROUBLEMAKER)
+        add_point(KCT.TROUBLEMAKER)
         emily.messenger.newMessage(_("Ugh :/"))
 
     # Julia messages
@@ -24,11 +24,11 @@ init python:
 
     # Lauren messages
     def v1_reply6():
-        addPoint(KCT.BOYFRIEND)
+        add_point(KCT.BOYFRIEND)
         lauren.messenger.newMessage(_("Cool :)"))
 
     def v1_reply7():
-        addPoint("tm")
+        add_point(KCT.TROUBLEMAKER)
         lauren.messenger.newMessage(_("Idk, it's just feels kinda weird now. Can we please just talk tomorrow?"))
         lauren.messenger.addReply(_("Fine"))
         lauren.messenger.newMessage(_(":)"))
@@ -203,7 +203,7 @@ label starta: #for compatibility only
             hide s14
             show s14a
             with dissolve
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "I don't know... it might be fun."
 
@@ -618,7 +618,7 @@ label starta: #for compatibility only
             u "Wow Elijah, way to start the fun."
 
             $ funofelijah = True
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s46b
             with dissolve
@@ -715,7 +715,7 @@ label starta: #for compatibility only
             la "Not at all, pretty much any girl that's part of the Deer hates it."
 
         "Disagree":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s50a
             with dissolve
@@ -1046,7 +1046,7 @@ label starta: #for compatibility only
 
         menu:
             "So... the nerds?":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene s50el2a
                 with dissolve
@@ -1143,7 +1143,7 @@ label starta: #for compatibility only
 
         menu:
             "Flirt":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ v1_hitOnNora = True
 
                 scene s56no1a
@@ -1303,7 +1303,7 @@ label efra:
 
     menu:
         "So, they're equally good?":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s63a
             with dissolve
@@ -1684,7 +1684,7 @@ label efra:
             la "I guess we'll never know."
 
         "Dodged a bullet there.":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s73gr
             with dissolve
@@ -1754,7 +1754,7 @@ label efra:
 
     menu:
         "Take your shirt off":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s76
             with dissolve
@@ -1865,7 +1865,7 @@ label efra:
 
     menu:
         "Riley's mine.":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s79b
             with dissolve
@@ -1889,7 +1889,7 @@ label efra:
                     imre "It's fine bro, I get it. She is really cute."
 
                 "She wants me.":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     scene s79b
                     with dissolve
@@ -3265,7 +3265,7 @@ label v1_freeRoam2_josh:
 
             menu:
                 "Say you're a fighter":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
                     $ v1_aubreywannafight = True
 
                     scene fr2jo2d
@@ -3334,7 +3334,7 @@ label v1_freeRoam2_josh:
 
 
                 "I'll be the next Fight King.":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
                     $ v1_aubreywannafight = True
 
                     scene fr2jo2d
@@ -3459,7 +3459,7 @@ label v1_freeRoam2_mason:
 
     menu:
         "Yeah, he better watch out.":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ add_point(KCT.BRO)
 
             scene fr2ma1a
@@ -3999,7 +3999,7 @@ label fr2end: #for compatibility only
             cl "It really was."
 
         "Poke fun":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Hahaha, sounds like the dean was into you."
 

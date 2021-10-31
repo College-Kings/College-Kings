@@ -60,7 +60,7 @@ label v13s14a:
 
     menu:
         "Plead the fifth": 
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "I plead the fifth. *Chuckles*"
 

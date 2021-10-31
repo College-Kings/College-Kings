@@ -278,7 +278,7 @@ label v14s03c:
 
     menu:
         "Go with her":
-            $ addPoint ("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene v14s03c_4f
             with dissolve
@@ -308,7 +308,7 @@ label v14s03c:
             jump v14s03d
            
         "Help Ryan":
-            $ addPoint ("bro")
+            $ add_point(KCT.BRO)
             $ v14_ryan_satin = True
 
             scene v14s03c_5a # FPP. Same as v14s03c_5, Emerald on Ryan's lap, both slight smile, mouth closed.

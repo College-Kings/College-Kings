@@ -248,7 +248,7 @@ label v9_emily_dorm:
                 em "You always were a slick one, [name]."
 
             "Say you were winning":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "I was one second away from the holy grail."
 
@@ -339,7 +339,7 @@ label v9_emily_dorm:
 
         menu:
             "Brag":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "I guess that makes you my Adrian."
 
@@ -426,7 +426,7 @@ label v9_emily_dorm:
             "Make a move on Emily":
                 u "(This feels like the right time)"
                 $ v9_em_dorm_scene = True
-                #$ addPoint("tm", sum([ bathroomblowjob, v8_chloesex, v8_riley_lewd_ending, v8_hocoamber, amberSexAtJoshs, v9_aubrey_lake ])) ###Loyaltymod
+                #$ add_point(KCT.TROUBLEMAKER, sum([ bathroomblowjob, v8_chloesex, v8_riley_lewd_ending, v8_hocoamber, amberSexAtJoshs, v9_aubrey_lake ])) ###Loyaltymod
 
             "Head home":
                 scene v9emi37 # TPP. Show MC walking towards the exit of Emily's room, Emily in view still sat on the bed, cheeky grin, mouth open, MC smile, mouth closed.

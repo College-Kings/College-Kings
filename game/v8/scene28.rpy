@@ -572,7 +572,7 @@ label dodged_pipe:
 
     menu:
         "Kick Joe":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             jump volley_joe
 
         "Walk away":

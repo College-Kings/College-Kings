@@ -130,7 +130,7 @@ label v14s03d:
 
     menu:
         "You get what you pay for":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "*Chuckles* Hey, you get what you pay for right?"
 

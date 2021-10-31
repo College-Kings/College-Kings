@@ -377,7 +377,7 @@ label v14s37:
             u "Woah, I didn't know that was a thing. Why'd it get cancelled?"
 
         "Laugh":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v14s37_10b
             with dissolve
             

@@ -227,7 +227,7 @@ label v11_wolves_seb_prank:
 
         "Sure":
             $ v11_pranked_seb = True
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene v11wsp4
             with dissolve

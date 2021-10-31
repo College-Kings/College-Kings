@@ -98,7 +98,7 @@ label v13s24:
         "Fuck yeah, let's mingle":
             $ add_point(KCT.BRO)
             if chloegf or (laurenrs and not v11_aubrey_sex):
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
             scene v13s24_3a
             with dissolve
@@ -565,7 +565,7 @@ label v13s24:
             u "I feel like I'm a romantic, so of course."
 
         "No, that's too old school":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene v13s24_16i # FPP. same as v13s24_16h kourtney slight frown
             with dissolve
@@ -689,7 +689,7 @@ label v13s24:
 
         "Retired life":
             $ add_point(KCT.BRO)
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene v13s24_16m # FPP. same as v13s24_16l aryssa slight frown
             with dissolve

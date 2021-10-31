@@ -80,7 +80,7 @@ label v10_apes_samantha:
     with dissolve
     menu:
         "I can be a hothead":
-            $ addPoint("tm", 1)
+            $ add_point(KCT.TROUBLEMAKER, 1)
 
             scene v10ssap2c
             with dissolve
@@ -144,7 +144,7 @@ label v10_apes_samantha:
             u "Haha, I'll remember that."
        
         "What's that supposed to mean?":
-            $ addPoint("bro", 1)
+            $ add_point(KCT.BRO)
             
             scene v10ssap2c
             with dissolve
@@ -205,7 +205,7 @@ label v10_apes_samantha:
     with dissolve
     menu:
         "Maybe":
-            $ addPoint("tm", 1)
+            $ add_point(KCT.TROUBLEMAKER, 1)
             
             scene v10ssap3a
             with dissolve

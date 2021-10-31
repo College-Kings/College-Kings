@@ -45,7 +45,7 @@ label josh_room:
 
     menu:
         "Agree to help":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ add_point(KCT.BRO)
             $ helpJosh = True
 

@@ -344,7 +344,7 @@ label v11wakeupa:
 
         menu:
             "Tease":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ rileyLike -= 1
 
                 scene v11hr11

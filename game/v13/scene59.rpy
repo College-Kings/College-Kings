@@ -151,7 +151,7 @@ label v13s59:
             u "It is a little hard... I'm not gonna lie."
 
         "Disagree":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v13s59_4a
             with dissolve
 

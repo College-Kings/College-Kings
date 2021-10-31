@@ -124,7 +124,7 @@ label v13s11:
             jump v13_imre_continue
 
         "Push Ryan in front of Imre":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             pass
 
     label v13_push_ryan:
@@ -650,7 +650,7 @@ label v13_imre_continue:
 
         "Stick up for Ryan":
             if joinwolves:
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
             else:
                 $ add_point(KCT.BRO)
         

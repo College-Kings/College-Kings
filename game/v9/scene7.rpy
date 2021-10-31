@@ -452,7 +452,7 @@ label fr5riley1:
 
         menu:
             "Kiss her":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 play sound "sounds/kiss.mp3"
 
@@ -648,7 +648,7 @@ label fr5aubrey1:
 
     menu: 
         "Don't join her":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "That was a nice try, miss. But you must be mistaking me for a child, if you thought that would work."
 
@@ -761,7 +761,7 @@ label fr5aubrey1:
             if aubreyrs:
                 label v9_aubrey_scene_lake:
                     $ v9_aubrey_lake = True
-                    #$ addPoint("tm", sum([ v7_rileysex, v8_chloesex, v8_riley_lewd_ending, v8_hocoamber, amberSexAtJoshs ])) ###Loyaltymod
+                    #$ add_point(KCT.TROUBLEMAKER, sum([ v7_rileysex, v8_chloesex, v8_riley_lewd_ending, v8_hocoamber, amberSexAtJoshs ])) ###Loyaltymod
 
                     scene v9slake6
                     with dissolve

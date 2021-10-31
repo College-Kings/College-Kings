@@ -58,7 +58,7 @@ label v9_hc_cont1:
 
     menu:
         "Heckle":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             jump v9_hc_heckle
         "Stay quiet":
             jump v9_hc_quiet

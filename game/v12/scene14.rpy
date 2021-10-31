@@ -375,7 +375,7 @@ label v12_chloe_cafe:
 
     menu:
         "Tell her about Lindsey":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ v12_told_chloe = True
 
             u "(I can't keep this from her.) *Sighs* There's something I need to tell you."

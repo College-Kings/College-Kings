@@ -52,7 +52,7 @@ label v12_nora_exploring:
 
     menu:
         "Not at all":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v12noe2h # FPP. Same as v12noe2f, Nora taking a sip of her drink
             with dissolve
 
@@ -236,7 +236,7 @@ label v12_nora_exploring:
 
     menu:
         "Speak her language":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v12noe6c
             with dissolve
 

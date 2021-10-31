@@ -179,7 +179,7 @@ label v12_urban_exploring:
 
     menu:
         "Of course":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "*Chuckles* Of course I can."
 
@@ -364,7 +364,7 @@ label v12_urban_exploring:
 
         "Move":
             label v12s20_faillabel:
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene v12uex12b # TPP Same angle as v12uex12, show MC dodging out of the way of Nora
                 with dissolve
@@ -505,7 +505,7 @@ label v12_urban_exploring:
             jump v12_nursing_aubrey #scene 21a
 
         "Share a drink with Nora":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Gotta be honest, cold drinks in the sun sounds pretty fucking nice. Imre, you're gonna have to walk Aubrey back."
 

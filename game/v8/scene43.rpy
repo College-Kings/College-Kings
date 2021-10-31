@@ -25,7 +25,7 @@ label for_w_gray:
 
     menu:
         "Ask questions":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             jump for_w_gray_q
         "Don't say anything":
             $ add_point(KCT.BOYFRIEND)
@@ -256,7 +256,7 @@ label for_w_gray_cont_3:
             $ add_point(KCT.BRO)
             jump for_w_gray_agree
         "Tell Grayson you joined for the fights":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             jump for_w_gray_fights
 
 label for_w_gray_agree:

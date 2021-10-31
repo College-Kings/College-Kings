@@ -71,7 +71,7 @@ label v9_fri_training_w_wolves:
             ch "Right."
 
         "Keep quiet":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
     
             pause 1
 
@@ -106,7 +106,7 @@ label v9_fri_training_w_wolves:
 
     menu: 
         "Make joke": 
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "I think punching an Ape's thick skull is gonna be like hitting a wall."
 
@@ -273,7 +273,7 @@ label v9_fri_training_w_wolves:
         
         menu: 
             "Be cocky": 
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "Never know."
 
@@ -377,7 +377,7 @@ label v9_fri_training_w_wolves:
                 ch "So you have to be ready for it."
 
             "Run":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "Run!"
 
@@ -440,7 +440,7 @@ label v9_fri_training_w_wolves:
 
         menu:
             "Act cool":
-                $ addPoint ("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene v9tww15a
                 with dissolve
@@ -453,7 +453,7 @@ label v9_fri_training_w_wolves:
                 u "How?"
 
             "Ask for help":
-                $ addPoint ("bro")
+                $ add_point(KCT.BRO)
 
                 u "I need it. I don't know what happened."
 
@@ -539,7 +539,7 @@ label v9_fri_training_w_wolves:
                 ch "So we use that to our advantage."
 
             "Defend yourself":
-                $ addPoint ("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "I mean, it's not my first fight ever. I can still have some tricks up my sleeve."
 

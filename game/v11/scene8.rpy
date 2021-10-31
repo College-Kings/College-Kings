@@ -194,7 +194,7 @@ label v11_chicks_house:
             if lindseyfirstkiss:
                 $ add_point(KCT.BOYFRIEND)
             elif chloers:
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
             
             scene v11chh6a
             with dissolve

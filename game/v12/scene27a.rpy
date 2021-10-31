@@ -417,7 +417,7 @@ label v12s27a:
             ry "*Sighs* I hope you're not just saying that..."
 
         "It's not your best look":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Well, honestly... It's not your best look, in my opinion."
 

@@ -138,7 +138,7 @@ label v10_chloe_hallway:
                                     jump v10_chloe_gym
 
                                 "Decline a Rematch":
-                                    $ addPoint("tm")
+                                    $ add_point(KCT.TROUBLEMAKER)
                                     $ chloeLike -= 1
 
                                     u "Uhm, I shouldn't, I have a lot to do. Sorry."

@@ -482,7 +482,7 @@ label v12s32:
 
     menu:
         "Boost Aubrey":
-            $ addPoint ("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ v12s32_Aubrey_Boost = True
             $ aubrey.points += 1
 
@@ -505,7 +505,7 @@ label v12s32:
             u "*Whisper* You got this, just be yourself."
 
         "Leave it alone":
-            $ addPoint ("bro")
+            $ add_point(KCT.BRO)
             scene v12s32_21c 
             with dissolve
 
@@ -833,7 +833,7 @@ label v12s32:
     menu: 
         "Get Aubrey flowers":
             $ s12v32_get_aubrey_flowers = True
-            $ addPoint ("bf")
+            $ add_point(KCT.BOYFRIEND)
             u "Wait a minute, Aubrey."
 
             scene v12s32_33d # aubrey turns around, looks at mc, curious, mouth open

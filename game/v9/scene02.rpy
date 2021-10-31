@@ -36,7 +36,7 @@ label v9_start_apes:
 
     menu:
         "Not a pledge anymore":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Not a pledge anymore."
 
@@ -120,7 +120,7 @@ label v9_start_apes:
 
     menu:
         "Defend your honor":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "I do fine. And they ALL call me Big Daddy."
 
@@ -167,7 +167,7 @@ label v9_start_apes:
 
     menu:
         "Excited reply":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ mcBrawlStance3 = True
 
             u "Pledge vs pledge!?"

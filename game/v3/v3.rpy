@@ -504,7 +504,7 @@ label conl:
 
     menu:
         "Ask her about it":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             label cq_a: #for compatibility only
 
             scene s216 # chloe walking next to the volleyball
@@ -600,7 +600,7 @@ label conl:
 
     menu:
         "Win the game":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             # volleybal hit sounds
 
@@ -1545,7 +1545,7 @@ label conl:
                         pause 0.5
 
                     "Refuse":
-                        $ addPoint("tm")
+                        $ add_point(KCT.TROUBLEMAKER)
 
                         scene s254e
                         with dissolve
@@ -1780,7 +1780,7 @@ label conl:
 
 
                     "Dare":
-                        $ addPoint("tm")
+                        $ add_point(KCT.TROUBLEMAKER)
                         $ add_point(KCT.BRO)
 
                 scene s254m
@@ -2020,7 +2020,7 @@ label conl:
                 au "Okay, now it's your turn again."
 
             "Dare":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ add_point(KCT.BRO)
 
         scene s254m
@@ -2548,7 +2548,7 @@ label continuen:
             u "Yeah, I'd love to."
 
         "I don't know...":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s268a
             with dissolve
@@ -2676,7 +2676,7 @@ label continueq:
                     play sound "sounds/rejectcall.mp3"
 
                 "I can't, sorry.":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     u "Sorry, Julia... I'm really busy this weekend."
 
@@ -2696,7 +2696,7 @@ label continueq:
             stop sound
             play sound "sounds/rejectcall.mp3"
 
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ dontanswerjulia = True
             # phone call declined sound
 
@@ -2923,7 +2923,7 @@ label continueq:
 
     menu:
         "Insult Ryan":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             
             u "Cause you were too fucking pussy to do it yourself."
 
@@ -3047,7 +3047,7 @@ label continueq:
             ri "Oh uhm... yeah, that sounds really good. I'm happy for you."
 
         "She's into me.":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s281a
             with dissolve
@@ -3074,7 +3074,7 @@ label continueq:
             menu:
                 "Kiss her":
                     $ rileykiss = True
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     show rikiss2
                     pause(1)
@@ -3256,7 +3256,7 @@ label continueq:
                     jump dk_ad
 
                 "Don't tell her.":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     u "(Lauren seems to value loyalty, she might be upset if she finds out and I don't wanna ruin our date before it even started.)"
 
@@ -3344,7 +3344,7 @@ label continueq:
 
                 menu:
                     "Reach under her skirt":
-                        $ addPoint("tm")
+                        $ add_point(KCT.TROUBLEMAKER)
 
                         scene s291a # same camera angle but your hand is under her skirt
                         with dissolve
@@ -3355,7 +3355,7 @@ label continueq:
 
                         menu:
                             "Keep going":
-                                $ addPoint("tm")
+                                $ add_point(KCT.TROUBLEMAKER)
                                 $ laurentoofar = True
                                 $ laurenrs = False
 
