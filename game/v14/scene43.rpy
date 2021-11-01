@@ -30,26 +30,26 @@ label v14s43_continue:
         scene v14s43_3a # TPP. Same as v14s43_3, MC looking down at his phone, slight smile, mouth closed
         with dissolve
 
-        $ contact_Emily.newMessage("Hey you. How's your day going?", queue=False)
-        $ contact_Emily.addReply("It's barely started, haha. What about yours?")
-        $ contact_Emily.newMessage("Not bad. Still in bed... Lol")
-        $ contact_Emily.addReply("Oh yeah?")
-        $ contact_Emily.newMessage("Haha...")
-        $ contact_Emily.newImgMessage("images/v14/Scene 43/v14s43_emily_pic.webp")
-        $ contact_Emily.addReply("...Yes")
-        $ contact_Emily.newMessage("Hahaha")
-        $ contact_Emily.addReply("I mean, no. I might need some more evidence...")
-        $ contact_Emily.newMessage("Hehe ;) Get to class, we'll talk soon, I miss you <3")
-        $ contact_Emily.addReply("Fine... miss you more :)")
+        $ emily.messenger.newMessage("Hey you. How's your day going?", queue=False)
+        $ emily.messenger.addReply("It's barely started, haha. What about yours?")
+        $ emily.messenger.newMessage("Not bad. Still in bed... Lol")
+        $ emily.messenger.addReply("Oh yeah?")
+        $ emily.messenger.newMessage("Haha...")
+        $ emily.messenger.newImgMessage("images/v14/Scene 43/v14s43_emily_pic.webp")
+        $ emily.messenger.addReply("...Yes")
+        $ emily.messenger.newMessage("Hahaha")
+        $ emily.messenger.addReply("I mean, no. I might need some more evidence...")
+        $ emily.messenger.newMessage("Hehe ;) Get to class, we'll talk soon, I miss you <3")
+        $ emily.messenger.addReply("Fine... miss you more :)")
 
         if False: #just making sure it shows on lint
             scene v14s43_emily_pic
             with dissolve
 
         label v14s43_PhoneContinueEmily:
-            if contact_Emily.getReplies():
+            if emily.messenger.getReplies():
                 call screen phone
-            if contact_Emily.getReplies():
+            if emily.messenger.getReplies():
                 u "(I should check my phone.)"
                 jump v14s43_PhoneContinueEmily
 
