@@ -441,6 +441,7 @@ default v10_ri_hat_good = False
 default emily_europe = False
 default josh_europe = False
 default v10_ambersex = False
+default v10_lauren_sg = False
 
 # 11.0
 default laurenLike = 0
@@ -657,6 +658,7 @@ default jennyrs = False
 default v14_PenArgScene = False
 default v14_PenelopePartner = False
 default v14_RileyPartner = False
+default sceneList = set() #$ sceneList.add(aubrey)
 
 ###to be looked at:
 #lindseysupport.points ???
