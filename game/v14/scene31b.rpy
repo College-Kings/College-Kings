@@ -155,9 +155,9 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
     u "*Sighs*"
 
     menu: 
-        "Trust Choloe": # -Event1 Trust her- LindseyPopularity minus 3
+        "Trust Chloe": # -Event1 Trust her- LindseyPopularity minus 3
             $ v14_lindsey_popularity -= 3
-            $ v14s31bTrustChole = True
+            $ v14s31bTrustChloe = True
             $ add_point(KCT.BOYFRIEND)
             $ chloe.points +=1
 
@@ -430,7 +430,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
     # -They all go to the bean bag room in the Apes house, dim colorful lights, pillows and blankets everywhere, bongs, panties on the ground, beer cans in the corner-
     # -Chloe and Aubrey sit next to each other while MC and Grayson sit apart from each other, across from them.-
-    scene v14s31b_16  # TPP. Aubrey leads Chloe, Grayson, and MC out of the dining room. Chole and MC are neutral; others are happy. All mouths are closed.
+    scene v14s31b_16  # TPP. Aubrey leads Chloe, Grayson, and MC out of the dining room. Chloe and MC are neutral; others are happy. All mouths are closed.
     with dissolve
 
     pause 0.75
@@ -781,7 +781,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
     gr "Just us?"
 
-    if v14s31bTrustChole: # -If trust Chloe    
+    if v14s31bTrustChloe: # -If trust Chloe    
         scene v14s31b_18f
         with dissolve
 
@@ -982,12 +982,12 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         au "Ha, you know me well."
         
         # -Chloe and MC walk outside-
-        scene v14s31b_25  # TPP. MC following Chole into the dark hallway (their backs are to the camera).
+        scene v14s31b_25  # TPP. MC following Chloe into the dark hallway (their backs are to the camera).
         with dissolve
 
         pause 0.75
 
-        scene v14s31b_26  # TPP. MC following Chole walk out of the front door of the Ape House.
+        scene v14s31b_26  # TPP. MC following Chloe walk out of the front door of the Ape House.
         with dissolve
 
         pause 0.75
@@ -1071,7 +1071,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         scene v14s31b_28
         with dissolve
 
-        u "Goodnight, Chlo."
+        u "Goodnight, Chloe."
 
         # -Chloe gives MC a hug-
         scene v14s31b_29a # TPP. Chloe hugs MC 
@@ -1276,7 +1276,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
             u "Whatever man."
 
-        else: # -If not ChloeRS or ChloeGF
+        else: # -If not chloers or chloegf
             scene v14s31b_31
             with dissolve
 

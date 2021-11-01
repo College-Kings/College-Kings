@@ -597,7 +597,7 @@ label v14s23:
                 
                 if v14s23_agree and v14s23_disagree:
                     $ LindseyPopularity -= 1
-                    $ v14_pw_half_chris_support
+                    $ v14_pw_half_chris_support = True
                     scene v14s23_2c
                     with dissolve
 

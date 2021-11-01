@@ -57,7 +57,7 @@ label v14s25:
         scene v14s25_4e # FPP. Same as v14s25_4d, Amber standing infront of MC, Looking at eachother, Amber slight smile, mouth closed.
         with dissolve
 
-    if v14s03a_take_wallet:
+    else:
         scene v14s25_4e
         with dissolve
 
@@ -807,6 +807,7 @@ label v14s25:
             menu:
                 "Let her stay":
                     $ add_point(KCT.TROUBLEMAKER)
+                    $ v14s25_letherstay = True
                     u "(Ha, hard as stone on the outside but a softie on the inside.)"
 
                     scene v14s25_17e # TPP. Show MC going back to sleep with his arm around Amber as she lays on him.
@@ -899,7 +900,7 @@ label v14s25:
 
             pause
             
-            if v14s24a_twezzlers or v14s24a_gummyfish:
+            if v14s03a_take_wallet: # if candy shopping with Aubrey
                 
                 scene v14s25_19a # TPP. Same as v14s25_19, Double Vision, Show MC and Amber eating snacks.
                 with fade

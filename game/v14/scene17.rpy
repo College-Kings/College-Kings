@@ -638,6 +638,8 @@ label v14s17:
 
             if kct == "loyal":
                 call screen kctPopup
+                
+                $ v14_lauren_sabotage = True
             
                 scene v14s17_10a
                 with dissolve

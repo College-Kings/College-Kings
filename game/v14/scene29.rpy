@@ -87,7 +87,7 @@ label v14s29:
 
         jump v14s31
 
-    elif not v14_support_chloe:
+    elif not v14_help_chloe:
 
         u "Just like that, huh?"
 

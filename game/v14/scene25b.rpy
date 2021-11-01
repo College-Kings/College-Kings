@@ -63,7 +63,7 @@ label v14s25b:
         scene v14s25b_7 # TPP. Show MC looking at Amber, MC, mouth closed, slight smile, Amber, slight smile, mouth closed
         with dissolve
 
-        if let_her_stay: #placeholder
+        if v14s25_letherstay: #placeholder
             scene v14s25b_8 # TPP. Show MC tucking Amber in bed, MC, slight smile, mouth closed, Amber, eyes closed, slight smile, mouth closed
             with dissolve
 
@@ -98,13 +98,10 @@ label v14s25b:
     pause 0.75
 
     if v14_help_lindsey: 
-
         jump v14s26
     
-    elif Lauren_sabotage:
-
+    elif v14_lauren_sabotage:
         jump v14s26a
 
     else:
-
         jump v14s26a

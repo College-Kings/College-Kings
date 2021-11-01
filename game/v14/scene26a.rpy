@@ -27,7 +27,7 @@ label v14s26a:
 
     u "I'm sorry I couldn't help, was there no one else willing to help you?"
 
-    if lauren_sabotage:
+    if v14_lauren_sabotage:
         scene v14s26a_2a
         with dissolve
 
@@ -164,7 +164,7 @@ label v14s26a:
 
     li "Here."
 
-    if lauren_sabotage:
+    if v14_lauren_sabotage:
 
         scene v14s26a_2d
         with dissolve
@@ -318,8 +318,7 @@ label v14s26a:
 
     u "So? How'd you do?"
 
-    if lauren_sabotage:
-
+    if v14_lauren_sabotage:
         scene v14s26a_2a
         with dissolve
 
@@ -331,7 +330,6 @@ label v14s26a:
         u "That's good, at least you made a small profit. Are you closing up shop now?"
 
     else:
-
         scene v14s26a_2a
         with dissolve
 

@@ -644,3 +644,6 @@ default v14s46a_love_lauren_more = False # MC love Lauren more because of her se
 default v14_talk_to_chris = False
 default ElijahFriend = False
 default penelopeloyal = True
+default v14_lauren_sabotage = False
+default v14_PenRomScene = False
+default v14s25_letherstay = False

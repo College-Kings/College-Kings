@@ -176,7 +176,7 @@ label v14s12:
 
     u "(Still keeping this job a secret is really suspicious... And having to go to New York of all places is pretty... Odd. Oh, well.)"
 
-    if joinwolves: 
+    if joinwolves:
         scene v14s12_5 # TPP. MC opening the door to the wolves frat house, slight smile, mouth closed.
         with fade
         pause 0.75

@@ -38,14 +38,12 @@ label v14s24a:
     with dissolve
 
     menu:
-
         "Twezzlers":         
             scene v14a24a_8  # TPP. MC, smiling, grabs Twezzlers from the shelf.
             with dissolve            
 
         "Gummy Fish":
             $ v14s24a_gummyfish = True
-            
             scene v14s24a_8a # Same as v14s24a but MC grabs Gummy Fish from the shelf.
             with dissolve  
     
