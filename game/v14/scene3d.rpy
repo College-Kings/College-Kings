@@ -280,6 +280,7 @@ label v14s03d:
             pause 0.75
 
             scene v14s03d_13a # TPP Same angle as 13, Satin still holding MC's face, she is smiling at him with her mouth open
+            with dissolve
 
             satin "Fuck me while I'm on my back."
 

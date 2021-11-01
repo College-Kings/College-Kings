@@ -3,7 +3,6 @@
 # Characters: MC (Outfit:9), GRAYSON (Gas Station Outfit)
 # Time: Evening (Tuesday)
 
-
 label v14s24a:
     scene v14s24a_1  # TPP. MC, smiling, walking towards the door of the gas station.
     with dissolve
@@ -31,6 +30,7 @@ label v14s24a:
     pause 0.75
 
     scene v14s24a_6  # TPP. MC stops in the middle of the candy aisle and looks at candy.
+    with dissolve
 
     u "Hmm... (What candy would Amber like best?)"
 

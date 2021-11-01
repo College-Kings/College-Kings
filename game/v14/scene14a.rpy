@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: just boxers and 9)
 # Time: Morning
 
-
 label v14s14a:
     play sound "sounds/vibrate.mp3"
 
