@@ -643,3 +643,4 @@ default v14s39_id_wait = False # Tell Penelope you'd wait till they got home
 default v14s46a_love_lauren_more = False # MC love Lauren more because of her sex experimenting on MC.
 default v14_talk_to_chris = False
 default ElijahFriend = False
+default penelopeloyal = True
