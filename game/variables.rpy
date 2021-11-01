@@ -632,3 +632,4 @@ default v14s37_focus_on_us = False # Tell Penelope to focus on them during the d
 default v14s39_id_wait = False # Tell Penelope you'd wait till they got home
 default v14_talk_to_chris = False
 default ElijahFriend = False
+default AmberLoyal = False
