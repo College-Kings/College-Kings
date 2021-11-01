@@ -398,7 +398,7 @@ label v14s45a:
         scene v14s45a_7 # TPP. MC looking at his phone, slight smile, mouth closed.
         with dissolve
 
-        $ Lindsey.messenger.newMessage("Hey! Chloe just left the house for the concert, now's the perfect time to make a dent in her pockets.")
+        $ Lindsey.messenger.newMessage("Hey! Chloe is getting ready to leave for the concert, now's the perfect time to make a dent in her pockets.")
         $ Lindsey.messenger.addReply("Roger that, OMW")
 
         label s45a_PhoneContinue:
@@ -420,7 +420,7 @@ label v14s45a:
 
         scene v14s45a_9 # TPP. MC walking down the sidewalk near the park, slight smile, mouth closed
         with fade
-
+        
     elif v14_money_theft_date_ditch: # Placeholder for choosing to ditch the date you set up with Chloe to steal money
         play sound "sounds/call.mp3"
 
@@ -454,59 +454,17 @@ label v14s45a:
 
         u "Yeah, yeah… I was just testing you. *Chuckles*"
 
+        u "Text me in 5, I am going to start heading over..."
+
         scene v14s45a_10
         with dissolve
 
-        li "Text Chloe to meet you at Classico Cuisine. I'll stay on the phone while you do it so we can make sure things go as planned."
+        li "Perfect! See you soon..."
 
         scene v14s45a_10a
         with dissolve
 
-        u "Cool, one sec..."
-
-        scene v14s45a_7
-        with dissolve
-
-        if chloegf:
-            $ Chloe.messenger.addReply("Hey… Think I'm in the mood for a little Italian cuisine and a beautiful woman across from me…")
-            $ Chloe.messenger.newMessage("Haha, hi there Mr Sweet Talk…")
-            $ Chloe.messenger.newMessage("I could definitely eat, and… I suppose I’m down to see you ;)")
-            $ Chloe.messenger.addReply("Well then, I suppose I’ll see you soon :)")
-        else:
-            $ Chloe.messenger.addReply("Hey… Think we can meet at that new Italian place, Classico Cuisine? I'm hungry and need some company.")
-            $ Chloe.messenger.newMessage("What am I, just a lunch buddy?")
-            $ Chloe.messenger.addReply("Sorry, these are hungry person texts, haha.")
-            $ Chloe.messenger.newMessage("Haha, okay. Let's go now?")
-            $ Chloe.messenger.addReply("Yeah, sounds great")
-
-        label s45aChloe_PhoneContinue:
-        if Chloe.messenger.replies:
-            call screen phone
-        if Chloe.messenger.replies:
-            "(I should reply to Chloe.)"
-            jump s45aChloe_PhoneContinue
-
-        scene v14s45a_7b
-        with dissolve
-
-        u "Okay, we should be good."
-
-        scene v14s45a_10
-        with dissolve
-
-        li "Let’s see…"
-
-        li "*Whispers* Yep! She's walking out the door now, great work. *Chuckles*"
-
-        scene v14s45a_10a
-        with dissolve
-
-        u "Perfect, I'm on my way."
-
-        scene v14s45a_10
-        with dissolve
-
-        li "Sounds good, see you soon."
+        u "Cya!"
 
         play sound "sounds/rejectcall.mp3"
 
