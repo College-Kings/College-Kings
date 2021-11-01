@@ -64,7 +64,7 @@ label v14s36:
     scene v14s36_4a # FPP. same as v14s36_4 Jenny's mouth is closed
     with dissolve
 
-    u "*Chuckles* So tell me, what made you wanna hangout tonight?"
+    u "*Chuckles* So tell me, what made you wanna hang out tonight?"
 
     scene v14s36_4
     with dissolve
@@ -483,7 +483,6 @@ label v14s36:
     jen "I have. That's how I know that I can trust you and... You know, be myself."
 
     menu:
-        
         "Not fair":
             $ v14_jennypoints += 1
             $ add_point(KCT.BOYFRIEND)
@@ -607,7 +606,7 @@ label v14s36:
         scene v14s36_5c
         with dissolve
 
-        jen "I was excited to hangout with you after the Penelope stuff was settled and well, obviously it didn't happen till now."
+        jen "I was excited to hang out with you after the Penelope stuff was settled and well, obviously it didn't happen till now."
 
         scene v14s36_5e # FPP. same as v14s36_5c Jenny's mouth is closed, and her fingers move to a slighlty different position but still on the top of MC's hand
         with dissolve
