@@ -1280,7 +1280,7 @@ label v14s36:
 
     pause 0.75
 
-    if LaurenGF:
+    if laurenrs:
 
         play sound "sounds/vibrate.mp3"
 

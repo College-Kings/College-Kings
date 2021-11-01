@@ -39,7 +39,7 @@ label v14s46a:
 
     la "Go ahead and lie down on the bed."
 
-    if laurengf: # -IF LaurenGF
+    if laurenrs: # -IF LaurenGF
         scene v14s46a_4a   # FPP. Same as v14s46a_3, but Lauren's mouth closed.
         with dissolve
 
@@ -50,7 +50,7 @@ label v14s46a:
 
         la "*Chuckles* Stop it. You have to focus."
 
-    elif laurenfs: # -IF LaurenFriend
+    else: # -IF LaurenFriend
         scene v14s46a_4a
         with dissolve
 
@@ -186,11 +186,11 @@ label v14s46a:
 
     u "I'll try again."
 
-    if laurengf:
+    if laurenrs:
         pass #  replace with -LaurenGF plays some incredibly calming meditation music with an ocean gently lapping from her phone or radio.
         
      
-    elif laurenrs: 
+    else: 
         pass # replace with -LaurenFriend plays some incredibly calming meditation music with birds singing in the background from her phone or radio.
 
     scene v14s46a_7
@@ -225,7 +225,7 @@ label v14s46a:
 
     u "(Zzzz...)"
 
-    if laurengf: # -IF LaurenGF:
+    if laurenrs: # -IF LaurenGF:
         scene v14s46a_7
         with dissolve
 
@@ -513,7 +513,7 @@ label v14s46a:
 
             la "I'm glad. *Chuckles*"
 
-    if laurenrs: # -If LaurenFriend or else
+    else: # -If LaurenFriend or else
         scene v14s46a_7
         with dissolve
 
