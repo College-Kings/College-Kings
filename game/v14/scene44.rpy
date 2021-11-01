@@ -96,7 +96,7 @@ label v14s44:
 
     menu:
         "Chloe":
-            $ LindseyPopularity -= 2
+            $ v14_lindsey_popularity -= 2
 
             scene v14s44_4
             with dissolve
@@ -114,7 +114,7 @@ label v14s44:
             u "Ha. Yeah."
 
         "Lindsey":
-            $ LindseyPopularity += 2
+            $ v14_lindsey_popularity += 2
 
             scene v14s44_4
             with dissolve
