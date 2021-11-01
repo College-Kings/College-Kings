@@ -154,7 +154,7 @@ label v14s01:
             with dissolve
             pause  
 
-            ri "Oh... F-f-fuuuuck... [Name]!"
+            ri "Oh... F-f-fuuuuck... [name]!"
 
             au "*Moans* It's been way too long..."
 
@@ -375,7 +375,7 @@ label v14s01:
             scene v14s01_1j # FPP. Same as v14s01_1f, but both slight smiles
             with dissolve
 
-            ri "Hope you feel better soon, [Name]."
+            ri "Hope you feel better soon, [name]."
 
             scene v14s01_1k # FPP. Same as v14s01_1e, but both slight smiles
             with dissolve
