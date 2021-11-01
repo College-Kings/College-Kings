@@ -1411,11 +1411,17 @@ label v14s36:
         scene v14s36_16 # TPP. Show mc leaving the lagoon entrance, full smile, mouth closed
         with dissolve
 
+        pause 0.75
+
         scene v14s36_17 # TPP. Show mc walking on the sidewalk, full smile, mouth closed
         with dissolve
 
+        pause 0.75
+
         scene v14s36_18 # TPP. Show MC seeing in the distance and waves at her, full smile, mouth open, Lindsey looks back and see's MC, slight smile, mouth closed
         with fade
+
+        pause 0.75
 
         jump v14s38
 
@@ -1424,10 +1430,16 @@ label v14s36:
         scene v14s36_16
         with dissolve
 
+        pause 0.75
+
         scene v14s36_17
         with dissolve
 
+        pause 0.75
+
         scene v14s36_18
         with fade
+
+        pause 0.75
 
         jump v14s38
