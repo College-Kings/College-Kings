@@ -420,7 +420,7 @@ label v14s45a:
 
         scene v14s45a_9 # TPP. MC walking down the sidewalk near the park, slight smile, mouth closed
         with fade
-        
+
     elif v14_money_theft_date_ditch: # Placeholder for choosing to ditch the date you set up with Chloe to steal money
         play sound "sounds/call.mp3"
 
@@ -454,7 +454,7 @@ label v14s45a:
 
         u "Yeah, yeah… I was just testing you. *Chuckles*"
 
-        u "Text me in 5, I am going to start heading over..."
+        u "Call me in 5, I am going to start heading over..."
 
         scene v14s45a_10
         with dissolve
