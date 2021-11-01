@@ -200,39 +200,39 @@ label v14s26a:
 
     if v11_lindsey_slogan == 1:
         #Lindsey by herself infront of slogan banner half-smiling that says Lindsey, Returning The Promise
-        $ kiwii_post = KiwiiPost("Lindsey", "v14/lindseyselfie1.webp", "Still selling treats to raise money for my campaign and the future of the Chicks! Don't forget to stop by <3 #Vote4Lindsey", numberLikes=593)
-        $ kiwii_post.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
-        $ kiwii_post.newComment("Nora", "Cutie <3", queue=False)
-        $ kiwii_post.newComment("Imre", "Actually, that cookie this morning made me shit myself!", queue=False)
-        $ kiwii_post.newComment("Chloe", "Eww...", queue=False)
-        $ kiwii_post.newComment("Lindsey", "Really, Imre... Please stop.", mentions="Imre", queue=False)
-        $ kiwii_post.newComment("Sebastian", "Yeah dude, and you gave me one of them...", queue=False)
-        $ kiwii_post.newComment("Imre", "Sorry dude! I thought I was doing something nice...", queue=False)
-        $ kiwii_post.newComment("Chloe", "Omg, you guys will have to try my family's chocolate chip cookies! Maybe I'll make some soon :)", queue=False)
-        $ kiwii_post.newComment("Imre", "Hell yeah Chloe", queue=False)
-        $ kiwii_post.addReply("Thank you for the cake! Mine tastes perfectly fine :)", mentions="Lindsey")
-        $ kiwii_post.newComment("Lindsey", "<3")
+        $ v14s26a_kiwiiPost1 = KiwiiPost("Lindsey", "v14/v14kw26a", "Still selling treats to raise money for my campaign and the future of the Chicks! Don't forget to stop by <3 #Vote4Lindsey", numberLikes=593)
+        $ v14s26a_kiwiiPost1.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
+        $ v14s26a_kiwiiPost1.newComment("Nora", "Cutie <3", queue=False)
+        $ v14s26a_kiwiiPost1.newComment("Imre", "Actually, that cookie this morning made me shit myself!", queue=False)
+        $ v14s26a_kiwiiPost1.newComment("Chloe", "Eww...", queue=False)
+        $ v14s26a_kiwiiPost1.newComment("Lindsey", "Really, Imre... Please stop.", mentions="Imre", queue=False)
+        $ v14s26a_kiwiiPost1.newComment("Sebastian", "Yeah dude, and you gave me one of them...", queue=False)
+        $ v14s26a_kiwiiPost1.newComment("Imre", "Sorry dude! I thought I was doing something nice...", queue=False)
+        $ v14s26a_kiwiiPost1.newComment("Chloe", "Omg, you guys will have to try my family's chocolate chip cookies! Maybe I'll make some soon :)", queue=False)
+        $ v14s26a_kiwiiPost1.newComment("Imre", "Hell yeah Chloe", queue=False)
+        $ v14s26a_kiwiiPost1.addReply("Thank you for the cake! Mine tastes perfectly fine :)", mentions="Lindsey")
+        $ v14s26a_kiwiiPost1.newComment("Lindsey", "<3")
 
 # Kiwi Post: v14kw26a_1 - Lindsey Selfie in front of her banner (Lindsey, Say Bye To The Bullshit) on the banner
 
     else: 
         #Lindsey by herself infront of slogan banner half-smiling that says Lindsey, Say Bye To The Bullshit
-        $ kiwii_post = KiwiiPost("Lindsey", "v14/lindseyselfie2.webp", "Still selling treats to raise money for my campaign and the future of the Chicks! Don't forget to stop by <3 #Vote4Lindsey", numberLikes=593)
-        $ kiwii_post.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
-        $ kiwii_post.newComment("Nora", "Cutie <3", queue=False)
-        $ kiwii_post.newComment("Imre", "Actually, that cookie this morning made me shit myself!", queue=False)
-        $ kiwii_post.newComment("Chloe", "Eww...", queue=False)
-        $ kiwii_post.newComment("Lindsey", "Really, Imre... Please stop.", mentions="Imre", queue=False)
-        $ kiwii_post.newComment("Sebastian", "Yeah dude, and you gave me one of them...", queue=False)
-        $ kiwii_post.newComment("Imre", "Sorry dude! I thought I was doing something nice...", queue=False)
-        $ kiwii_post.newComment("Chloe", "Omg, you guys will have to try my family's chocolate chip cookies! Maybe I'll make some soon :)", queue=False)
-        $ kiwii_post.newComment("Imre", "Hell yeah Chloe", queue=False)
-        $ kiwii_post.addReply("Thank you for the cake! Mine tastes perfectly fine :)", mentions="Lindsey")
-        $ kiwii_post.newComment("Lindsey", "<3")
+        $ v14s26a_kiwiiPost2 = KiwiiPost("Lindsey", "v14/v14kw26a_1.webp", "Still selling treats to raise money for my campaign and the future of the Chicks! Don't forget to stop by <3 #Vote4Lindsey", numberLikes=593)
+        $ v14s26a_kiwiiPost2.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
+        $ v14s26a_kiwiiPost2.newComment("Nora", "Cutie <3", queue=False)
+        $ v14s26a_kiwiiPost2.newComment("Imre", "Actually, that cookie this morning made me shit myself!", queue=False)
+        $ v14s26a_kiwiiPost2.newComment("Chloe", "Eww...", queue=False)
+        $ v14s26a_kiwiiPost2.newComment("Lindsey", "Really, Imre... Please stop.", mentions="Imre", queue=False)
+        $ v14s26a_kiwiiPost2.newComment("Sebastian", "Yeah dude, and you gave me one of them...", queue=False)
+        $ v14s26a_kiwiiPost2.newComment("Imre", "Sorry dude! I thought I was doing something nice...", queue=False)
+        $ v14s26a_kiwiiPost2.newComment("Chloe", "Omg, you guys will have to try my family's chocolate chip cookies! Maybe I'll make some soon :)", queue=False)
+        $ v14s26a_kiwiiPost2.newComment("Imre", "Hell yeah Chloe", queue=False)
+        $ v14s26a_kiwiiPost2.addReply("Thank you for the cake! Mine tastes perfectly fine :)", mentions="Lindsey")
+        $ v14s26a_kiwiiPost2.newComment("Lindsey", "<3")
 
     if False: ##just making sure it shows up on lint
-        scene lindseyselfie1
-        scene lindseyselfie2
+        scene v14kw26a
+        scene v14kw26a_1
 
     if v14_amber_drugs:
 

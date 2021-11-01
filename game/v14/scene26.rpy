@@ -267,39 +267,39 @@ label v14s26:
     if v11_lindsey_slogan == 1:
 
         #Selfie with Lauren in front of slogan banner that says Lindsey, Returning The Promise
-        $ kiwii_post = KiwiiPost("Lindsey", "v14/lindseylauren1.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! All proceeds go to my campaign fund and to the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
-        $ kiwii_post.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
-        $ kiwii_post.newComment("Nora", "Cuties <3", queue=False)
-        $ kiwii_post.newComment("Imre", "Actually that cookie this morning made me shit myself!", queue=False)
-        $ kiwii_post.newComment("Chloe", "Eww...", queue=False)
-        $ kiwii_post.newComment("Lauren", "Oh, is that why you came back for three more?", mentions="Imre", queue=False)
-        $ kiwii_post.newComment("Sebastian", "Yeah dude, you gave me one of them, lol. Tasted great ladies!", queue=False)
-        $ kiwii_post.newComment("Imre", "Whatever, so what?", queue=False)
-        $ kiwii_post.newComment("Chloe", "...", queue=False)
-        $ kiwii_post.addReply("Thank you for the cake! It's amazing you guys...", mentions="Lindsey")
-        $ kiwii_post.newComment("Lindsey", "<3")
-        $ kiwii_post.newComment("Lauren", ":)")
+        $ v14s26_kiwiiPost1 = KiwiiPost("Lindsey", "v14/v14kw26.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! All proceeds go to my campaign fund and to the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
+        $ v14s26_kiwiiPost1.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
+        $ v14s26_kiwiiPost1.newComment("Nora", "Cuties <3", queue=False)
+        $ v14s26_kiwiiPost1.newComment("Imre", "Actually that cookie this morning made me shit myself!", queue=False)
+        $ v14s26_kiwiiPost1.newComment("Chloe", "Eww...", queue=False)
+        $ v14s26_kiwiiPost1.newComment("Lauren", "Oh, is that why you came back for three more?", mentions="Imre", queue=False)
+        $ v14s26_kiwiiPost1.newComment("Sebastian", "Yeah dude, you gave me one of them, lol. Tasted great ladies!", queue=False)
+        $ v14s26_kiwiiPost1.newComment("Imre", "Whatever, so what?", queue=False)
+        $ v14s26_kiwiiPost1.newComment("Chloe", "...", queue=False)
+        $ v14s26_kiwiiPost1.addReply("Thank you for the cake! It's amazing you guys...", mentions="Lindsey")
+        $ v14s26_kiwiiPost1.newComment("Lindsey", "<3")
+        $ v14s26_kiwiiPost1.newComment("Lauren", ":)")
 
 # Kiwi Post: v14kw26_1 - Lindsey and Lauren Selfie in front of her banner (Lindsey, Say Bye To The Bullshit) on the banner
 
     else:
         #Selfie with Lauren in front of slogan banner that says Lindsey, Say Bye To The Bullshit
-        $ kiwii_post = KiwiiPost("Lindsey", "v14/lindseylauren2.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! All proceeds go to my campaign fund and to the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
-        $ kiwii_post.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
-        $ kiwii_post.newComment("Nora", "Cuties <3", queue=False)
-        $ kiwii_post.newComment("Imre", "Actually that cookie this morning made me shit myself!", queue=False)
-        $ kiwii_post.newComment("Chloe", "Eww...", queue=False)
-        $ kiwii_post.newComment("Lauren", "Oh, is that why you came back for three more?", mentions="Imre", queue=False)
-        $ kiwii_post.newComment("Sebastian", "Yeah dude, you gave me one of them, lol. Tasted great ladies!", queue=False)
-        $ kiwii_post.newComment("Imre", "Whatever, so what?", queue=False)
-        $ kiwii_post.newComment("Chloe", "...", queue=False)
-        $ kiwii_post.addReply("Thank you for the cake! It's amazing you guys...", mentions="Lindsey")
-        $ kiwii_post.newComment("Lindsey", "<3")
-        $ kiwii_post.newComment("Lauren", ":)")
+        $ v14s26_kiwiiPost2 = KiwiiPost("Lindsey", "v14/v14kw26_1.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! All proceeds go to my campaign fund and to the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
+        $ v14s26_kiwiiPost2.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
+        $ v14s26_kiwiiPost2.newComment("Nora", "Cuties <3", queue=False)
+        $ v14s26_kiwiiPost2.newComment("Imre", "Actually that cookie this morning made me shit myself!", queue=False)
+        $ v14s26_kiwiiPost2.newComment("Chloe", "Eww...", queue=False)
+        $ v14s26_kiwiiPost2.newComment("Lauren", "Oh, is that why you came back for three more?", mentions="Imre", queue=False)
+        $ v14s26_kiwiiPost2.newComment("Sebastian", "Yeah dude, you gave me one of them, lol. Tasted great ladies!", queue=False)
+        $ v14s26_kiwiiPost2.newComment("Imre", "Whatever, so what?", queue=False)
+        $ v14s26_kiwiiPost2.newComment("Chloe", "...", queue=False)
+        $ v14s26_kiwiiPost2.addReply("Thank you for the cake! It's amazing you guys...", mentions="Lindsey")
+        $ v14s26_kiwiiPost2.newComment("Lindsey", "<3")
+        $ v14s26_kiwiiPost2.newComment("Lauren", ":)")
 
     if False: ##just making sure it shows up on lint
-        scene lindseylauren1
-        scene lindseylauren2
+        scene v14kw26
+        scene v14kw26_1
 
     if v14_amber_drugs:
         play sound "sounds/vibrate.mp3"
