@@ -507,7 +507,7 @@ label v14s25:
             scene v14s25_8k
             with dissolve
 
-            u "You're influenctial, Amber. And being influential is a great thing if you influence people to do good."
+            u "You're influential, Amber. And being influential is a great thing if you influence people to do good."
 
             u "Sadly..."
 
@@ -659,7 +659,7 @@ label v14s25:
             scene v14s25_8
             with dissolve
 
-            am "*Sighs* On other topics, Lindsey has her bakesale tomorrow and I'm actually looking forward to it."
+            am "*Sighs* On other topics, Lindsey has her bake sale tomorrow and I'm actually looking forward to it."
 
             scene v14s25_8a
             with dissolve

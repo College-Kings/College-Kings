@@ -1,4 +1,4 @@
-# SCENE 26: If lauren helps lindsey LAUREN AND LINDSEY BAKESALE
+# SCENE 26: If lauren helps lindsey LAUREN AND LINDSEY BAKE SALE
 # Locations: On Campus
 # Characters: MC (Outfit: 2), LINDSEY (Outfit: 1), LAUREN (Outfit: 3), AMBER (Outfit: 2)
 # Time: Morning
@@ -7,7 +7,7 @@
 
 label v14s26:
 
-    scene v14s26_1 # TPP. Show mc slight smile, mouth closed, walking through campus and MC heads to the bakesale and sees Lindsey behind the counter
+    scene v14s26_1 # TPP. Show mc slight smile, mouth closed, walking through campus and MC heads to the bake sale and sees Lindsey behind the counter
     with dissolve
 
     pause 0.75

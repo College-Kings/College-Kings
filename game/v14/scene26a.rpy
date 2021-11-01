@@ -7,7 +7,7 @@
 
 label v14s26a:
 
-    scene v14s26a_1 # TPP. You can use the render from v14s26_1 because they are the same scene. Otherwise the description is as follows: Show mc slight smile, mouth closed, walking through campus and MC heads to the bakesale and sees Lindsey behind the counter
+    scene v14s26a_1 # TPP. You can use the render from v14s26_1 because they are the same scene. Otherwise the description is as follows: Show mc slight smile, mouth closed, walking through campus and MC heads to the bake sale and sees Lindsey behind the counter
     with dissolve
 
     pause 0.75

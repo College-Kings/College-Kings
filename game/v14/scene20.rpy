@@ -233,7 +233,7 @@ label v14s20:
 
         u "That girl can give anyone a good time, but she's very influential. She knows how to..."
 
-        u "...lure other people to the darkside. *Chuckles* If you know what I mean."
+        u "...lure other people to the dark side. *Chuckles* If you know what I mean."
 
         scene v14s20_3f
         with dissolve

@@ -43,7 +43,7 @@ label v14s25b:
         scene v14s25b_6a # FPP. Same as v14s25b_6, mouth closed
         with dissolve
 
-        u "Yeah, gonna go check on this bakesale situation."
+        u "Yeah, gonna go check on this bake sale situation."
 
         scene v14s25b_6b # FPP. Same as v14s25b_6, Same as v14s25b_6, concerned expression
         with dissolve
