@@ -116,7 +116,7 @@ label v14s46a:
 
     u "..."
 
-    if v13_smoke_weed or v14_smoke_weed_with_aubrey: # -If smoked weed in Amsterdam or at Apes house with Aubrey
+    if v13_smoke_weed or v14s31b_smoke_weed_with_aubrey: # -If smoked weed in Amsterdam or at Apes house with Aubrey
         scene v14s46a_6c  # TPP. Same as v14s46a_6b, but MC slightly sitting up, covering mouth with hand, coughing.
         with dissolve
 
