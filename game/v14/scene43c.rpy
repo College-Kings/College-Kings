@@ -37,7 +37,7 @@ label v14s43c:
     menu:
 
         "Romantic Scene":
-            PenRomScene = True
+            $ PenRomScene = True
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.BRO)
 
@@ -97,7 +97,7 @@ label v14s43c:
             pe "It’s settled then, romantic scene it is."
 
         "Argument Scene":
-            PenArgScene = True
+            $ PenArgScene = True
             $ add_point(KCT.TROUBLEMAKER)
             $ add_point(KCT.BRO)
 

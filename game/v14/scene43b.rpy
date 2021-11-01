@@ -228,7 +228,7 @@ label v14s43b:
     menu:
 
         "Work with Penelope":
-            PenelopePartner = True
+            $ PenelopePartner = True
 
             scene v14s43b_9a
             with dissolve
@@ -331,13 +331,13 @@ label v14s43b:
                 scene v14s43b_13 # FPP. MC looks down at his phone in his hand and checks his phone, Only show Mc's hand and lap in the render, no other characters present
                 with dissolve
 
-                chloe.newMessage("GRAYSON IS SUCH AN ASSHOLE")
-                chloe.newMessage("FUCK him, and FUCK THE APES!!!!")
-                chloe.newMessage("UGH! I’m going to turn this around. It won’t hurt my campaign even a little bit, I’ll make sure of it.")
+                $ chloe.newMessage("GRAYSON IS SUCH AN ASSHOLE")
+                $ chloe.newMessage("FUCK him, and FUCK THE APES!!!!")
+                $ chloe.newMessage("UGH! I’m going to turn this around. It won’t hurt my campaign even a little bit, I’ll make sure of it.")
 
-                To: chloe.addReply("I’m so sorry that this is happening. I don’t even know what to say.")
-                chloe.newMessage("I know, I know… I'm just venting. And I’m really thankful that you didn't post anything.")
-                chloe.addReply("I’d never do that.")
+                $ chloe.addReply("I’m so sorry that this is happening. I don’t even know what to say.")
+                $ chloe.newMessage("I know, I know… I'm just venting. And I’m really thankful that you didn't post anything.")
+                $ chloe.addReply("I’d never do that.")
 
                 # Kiwi Post: v14kw43b - Sexy pic of Chloe is on Kiwii from Ryan, Grayson and Cameron's accounts-
 
@@ -437,7 +437,7 @@ label v14s43b:
                 jump v14s43c
 
         "Work with Riley":
-            RileyPartner = True
+            $ RileyPartner = True
 
             scene v14s43b_9a
             with dissolve
@@ -541,13 +541,13 @@ label v14s43b:
                 scene v14s43b_13
                 with dissolve
 
-                chloe.newMessage("GRAYSON IS SUCH AN ASSHOLE")
-                chloe.newMessage("FUCK him, and FUCK THE APES!!!!")
-                chloe.newMessage("UGH! I’m going to turn this around. It won’t hurt my campaign even a little bit, I’ll make sure of it.")
+                $ chloe.newMessage("GRAYSON IS SUCH AN ASSHOLE")
+                $ chloe.newMessage("FUCK him, and FUCK THE APES!!!!")
+                $ chloe.newMessage("UGH! I’m going to turn this around. It won’t hurt my campaign even a little bit, I’ll make sure of it.")
 
-                To: chloe.addReply(“I’m so sorry that this is happening. I don’t even know what to say.")
-                chloe.newMessage("I know, I know… I'm just venting. And I’m really thankful that you didn't post anything.")
-                chloe.addReply(“I’d never do that.")
+                $ chloe.addReply("I’m so sorry that this is happening. I don’t even know what to say.")
+                $ chloe.newMessage("I know, I know… I'm just venting. And I’m really thankful that you didn't post anything.")
+                $ chloe.addReply("I’d never do that.")
 
                 # Kiwi Post: v14kw43b - Sexy pic of Chloe is on Kiwii from Ryan, Grayson and Cameron's accounts-
 

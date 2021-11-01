@@ -54,12 +54,12 @@ label v14s38:
 
     u "I wasn't trying to-"
 
-    scene v14s38_3
+    scene v14s38_4
     with dissolve
 
     jen "*Chuckles* Relax, I'm kidding."
 
-    scene v14s38_3a
+    scene v14s38_4a
     with dissolve
 
     u "*Laughs* Cool, I don't want you thinking I'm some creep."

@@ -822,6 +822,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         menu:  # -Aubrey offers MC the vape that she took from Grayson-
             "Vape": # -Event1 Sure
                 # -Montage of MC and Aubrey passing the vape while they relax.-
+                $ v14s31b_smoke_weed_with_aubrey = True
                 scene v14s31b_23  # TPP. MC smokes the vaporizer
                 with dissolve
 
