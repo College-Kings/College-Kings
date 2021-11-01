@@ -545,7 +545,6 @@ label v14s36:
     with dissolve
 
     menu:
-
         "Yeah, or something...":
             $ v14_jennypoints += 1
             $ add_point(KCT.BOYFRIEND)
