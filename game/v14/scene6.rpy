@@ -54,7 +54,23 @@ label v14s06:
     scene v14s06_7
     with dissolve
 
-    u "Yeah, I can finish packing real quick. Are we riding the bus or...?"
+    u "Yeah, I can finish packing real quick."
+
+    if v14s03a_take_wallet:
+        scene v14s06_7a
+        with dissolve
+
+        imre "By the way, Luuk has some American dollars, if you wanted to exchange any money."
+
+        scene v14s06_7
+        with dissolve
+        
+        u "Oh shit, good idea!"
+
+    scene v14s06_7
+    with dissolve
+    
+    u "Tell me, are we riding the bus or...?"
 
     scene v14s06_7a
     with dissolve
@@ -112,5 +128,31 @@ label v14s06:
     with dissolve
 
     pause 0.75
+
+    if v14s03a_take_wallet or True:
+        scene v13s18_2
+        with fade
+       
+        luuk "My man [name]!"
+
+        scene v13s06_6a
+        with dissolve
+        
+        luuk "Need some American money, I assume?"
+
+        scene v13s06_6
+        with dissolve
+        
+        u "*Chuckles* (This guy is on top of everything...)"
+        
+        scene v13s21_3
+        with fade
+        
+        pause 0.5
+        
+        scene v13s06_6
+        with fade
+        
+        u "Perfect. Thanks for everything, Luuk!"
 
     jump v14s07
