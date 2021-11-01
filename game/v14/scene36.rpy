@@ -652,81 +652,6 @@ label v14s36:
         with dissolve
 
         menu:
-
-            "Don't kiss her":
-                $ jennyawkward = True
-                if chloegf or LaurenGF or penelopers:
-                    $ add_point(KCT.BOYFRIEND)
-                else:
-                    $ add_point(KCT.TROUBLEMAKER)
-
-                scene v14s36_5f
-                with dissolve
-
-                u "Ha. um, sorry... it's kinda cold out here, don't you think?"
-
-                scene v14s36_3e # TPP. same as v14s36_3a Jenny removes her hand and sits up, Jenny slightly embarrassed expression mouth closed looking away from MC, MC looking at Jenny no expression mouth closed
-                with dissolve
-
-                pause 0.75
-
-                scene v14s36_4l # FPP. same as v14s36_4 Jenny is looking at mc, has an embarrassed expression, mouth open
-                with dissolve
-
-                jen "Umm, yeah. I, uh... I guess it is kinda cold."
-
-                scene v14s36_4
-                with dissolve
-
-                jen "Maybe I should've brought more clothes, haha."
-
-                scene v14s36_4a
-                with dissolve
-
-                u "*Chuckles* Maybe we should-"
-
-                scene v14s36_4
-                with dissolve
-
-                jen "I should probably get back anyway."
-
-                scene v14s36_4a
-                with dissolve
-
-                u "Okay, yeah. I'll see you soon?"
-
-                scene v14s36_4m # FPP. same as v14s36_4 Jenny has no expression, mouth open
-                with dissolve
-
-                jen "Right, yeah... For sure. Thanks again for coming."
-
-                scene v14s36_4n # FPP. same as v14s36_4m Jenny's mouth is closed
-                with dissolve
-
-                u "Of course."
-
-                scene v14s36_3f # TPP. same as v14s36_3 Jenny and mc have no feet in the water, are looking at each other, no expressions, mouths closed
-                with dissolve
-
-                pause 0.75
-
-                scene v14s36_2b # FPP. same as v14s36_2 Jenny is looking at mc, no expression, mouth open
-                with dissolve
-
-                jen "Goodnight."
-
-                pause 0.75
-
-                scene v14s36_3g # TPP. same as v14s36_3f Jenny hugs MC awkwardly, trying not to fully hug him, Jenny and Mc no expressions mouths closed
-                with dissolve
-
-                pause 0.75
-
-                scene v14s36_2c # FPP. same as v14s36_2b Jenny's mouth is closed
-                with dissolve
-
-                u "Goodnight."
-
             "Kiss her":
                 $ jennyrs = True
                 if chloegf or LaurenGF or penelopers:
@@ -1211,6 +1136,80 @@ label v14s36:
                 with dissolve
 
                 u "(My life is never dull, haha!)"
+
+            "Don't kiss her":
+                $ jennyawkward = True
+                if chloegf or LaurenGF or penelopers:
+                    $ add_point(KCT.BOYFRIEND)
+                else:
+                    $ add_point(KCT.TROUBLEMAKER)
+
+                scene v14s36_5f
+                with dissolve
+
+                u "Ha. um, sorry... it's kinda cold out here, don't you think?"
+
+                scene v14s36_3e # TPP. same as v14s36_3a Jenny removes her hand and sits up, Jenny slightly embarrassed expression mouth closed looking away from MC, MC looking at Jenny no expression mouth closed
+                with dissolve
+
+                pause 0.75
+
+                scene v14s36_4l # FPP. same as v14s36_4 Jenny is looking at mc, has an embarrassed expression, mouth open
+                with dissolve
+
+                jen "Umm, yeah. I, uh... I guess it is kinda cold."
+
+                scene v14s36_4
+                with dissolve
+
+                jen "Maybe I should've brought more clothes, haha."
+
+                scene v14s36_4a
+                with dissolve
+
+                u "*Chuckles* Maybe we should-"
+
+                scene v14s36_4
+                with dissolve
+
+                jen "I should probably get back anyway."
+
+                scene v14s36_4a
+                with dissolve
+
+                u "Okay, yeah. I'll see you soon?"
+
+                scene v14s36_4m # FPP. same as v14s36_4 Jenny has no expression, mouth open
+                with dissolve
+
+                jen "Right, yeah... For sure. Thanks again for coming."
+
+                scene v14s36_4n # FPP. same as v14s36_4m Jenny's mouth is closed
+                with dissolve
+
+                u "Of course."
+
+                scene v14s36_3f # TPP. same as v14s36_3 Jenny and mc have no feet in the water, are looking at each other, no expressions, mouths closed
+                with dissolve
+
+                pause 0.75
+
+                scene v14s36_2b # FPP. same as v14s36_2 Jenny is looking at mc, no expression, mouth open
+                with dissolve
+
+                jen "Goodnight."
+
+                pause 0.75
+
+                scene v14s36_3g # TPP. same as v14s36_3f Jenny hugs MC awkwardly, trying not to fully hug him, Jenny and Mc no expressions mouths closed
+                with dissolve
+
+                pause 0.75
+
+                scene v14s36_2c # FPP. same as v14s36_2b Jenny's mouth is closed
+                with dissolve
+
+                u "Goodnight."
 
     else:
         $ jennyfriend = True
