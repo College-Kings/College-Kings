@@ -129,7 +129,7 @@ label v14s06:
 
     pause 0.75
 
-    if v14s03a_take_wallet or True:
+    if v14s03a_take_wallet:
         scene v13s18_2
         with fade
        
