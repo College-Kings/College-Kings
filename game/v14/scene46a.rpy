@@ -188,7 +188,6 @@ label v14s46a:
 
     if laurenrs:
         pass #  replace with -LaurenGF plays some incredibly calming meditation music with an ocean gently lapping from her phone or radio.
-        
      
     else: 
         pass # replace with -LaurenFriend plays some incredibly calming meditation music with birds singing in the background from her phone or radio.
