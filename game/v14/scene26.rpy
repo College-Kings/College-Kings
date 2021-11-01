@@ -6,6 +6,7 @@
 # Kiwi Post: v14kw26_1 - Lindsey and Lauren Selfie in front of her banner (Lindsey, Say Bye To The Bullshit) on the banner
 
 label v14s26:
+
     scene v14s26_1 # TPP. Show mc slight smile, mouth closed, walking through campus and MC heads to the bake sale and sees Lindsey behind the counter
     with dissolve
 

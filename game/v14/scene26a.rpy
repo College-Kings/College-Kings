@@ -6,6 +6,7 @@
 # Kiwi Post: v14kw26a_1 - Lindsey Selfie in front of her banner (Lindsey, Say Bye To The Bullshit) on the banner
 
 label v14s26a:
+
     scene v14s26a_1 # TPP. You can use the render from v14s26_1 because they are the same scene. Otherwise the description is as follows: Show mc slight smile, mouth closed, walking through campus and MC heads to the bake sale and sees Lindsey behind the counter
     with dissolve
 
