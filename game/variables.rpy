@@ -656,4 +656,4 @@ default jennyfriend = False
 default jennyrs = False
 default v14_PenArgScene = False
 default v14_PenelopePartner = False
-default RileyPartner = False
+default v14_RileyPartner = False
