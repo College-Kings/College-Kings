@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 2), CHLOE (Outfit: 1), AUBREY (Outfit: 1), GRAYSON (Outfit: 3) Wednesday
 # Time: Afternoon
 
-
 label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already there waiting, she's nervous about asking MC if she can seduce Grayson on her own-
     scene v14s31b_1   # TPP. MC, mouth closed, neutral expression walking on the side walk (towards the Ape's house).
     with dissolve
