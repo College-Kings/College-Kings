@@ -72,7 +72,7 @@ label v14s38:
     scene v14s38_5a
     with dissolve
 
-    u "So, since you haven't said anything by now…"
+    u "So, since you haven't said anything by now..."
 
     scene v14s38_4
     with dissolve
