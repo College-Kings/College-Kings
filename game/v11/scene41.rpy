@@ -239,7 +239,7 @@ label v11_chloe_bathroom:
                 $ chloers = True
 
                 if not chloers and not chloegf:
-                    call screen kctPopup
+                    call screen kct_popup
                 stop music fadeout 3
                 jump v11_chloe_sex_scene
 
