@@ -656,7 +656,7 @@ label v14s36:
         menu:
 
             "Don't kiss her":
-                $ JennyAwkward = True
+                $ jennyawkward = True
                 if chloegf or LaurenGF or penelopers:
                     $ add_point(KCT.BOYFRIEND)
                 else:
@@ -730,7 +730,7 @@ label v14s36:
                 u "Goodnight."
 
             "Kiss her":
-                $ Jennyrs = True
+                $ jennyrs = True
                 if chloegf or LaurenGF or penelopers:
                     $ add_point(KCT.TROUBLEMAKER)
                 else:
@@ -1215,9 +1215,7 @@ label v14s36:
                 u "(My life is never dull, haha!)"
 
     else:
-
-        $ JennyFriend = True
-
+        $ jennyfriend = True
         scene v14s36_4
         with dissolve
 

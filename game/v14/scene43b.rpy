@@ -226,9 +226,8 @@ label v14s43b:
     with dissolve
 
     menu:
-
         "Work with Penelope":
-            $ PenelopePartner = True
+            $ v14_PenelopePartner = True
 
             scene v14s43b_9a
             with dissolve
@@ -314,7 +313,7 @@ label v14s43b:
 
             lee "After that, you'll come up with a short scene involving a king and a queen interaction that you'll present next week to the rest of the class."
 
-            if ApesPostChloePics:
+            if v14_ApesPostChloePics:
 
                 scene v14s43b_12 # FPP. MC looks at Penelope in the seat next to him, Penelope looking at MC, slight smile, mouth open
                 with dissolve
@@ -436,7 +435,7 @@ label v14s43b:
                 jump v14s43c
 
         "Work with Riley":
-            $ RileyPartner = True
+            $ v14_RileyPartner = True
 
             scene v14s43b_9a
             with dissolve
@@ -522,7 +521,7 @@ label v14s43b:
 
             lee "After that, you'll come up with a short scene involving a king and a queen interaction that you'll present next week to the rest of the class."
 
-            if ApesPostChloePics:
+            if v14_ApesPostChloePics:
                 scene v14s43b_20 # FPP. MC and Riley are sitting at the desk they sat in from v14s43b_18, Riley is looking at MC, slight smile, mouth open
                 with dissolve
 

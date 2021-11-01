@@ -283,7 +283,7 @@ label v14s41a:
             "Stay quiet":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ lindseysupport.points += 2
-                $ ApesPostChloePics = True
+                $ v14_ApesPostChloePics = True
 
                 scene v14s41a_5a
                 with dissolve
@@ -441,7 +441,7 @@ label v14s41a:
 
                         else:
                             $ lindseysupport.points += 2
-                            $ ApesPostChloePics = True
+                            $ v14_ApesPostChloePics = True
 
                             scene v14s41a_5a
                             with dissolve

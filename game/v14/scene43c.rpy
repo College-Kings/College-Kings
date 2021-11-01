@@ -5,7 +5,6 @@
 # 12 Unique Renders, 53 Total Renders
 
 label v14s43c:
-
     scene v14s43c_1 # FPP. MC looking at Penelope, Penelope looking at MC, Penelope slight smile, mouth open
     with dissolve
 
@@ -96,7 +95,7 @@ label v14s43c:
             pe "It's settled then, romantic scene it is."
 
         "Argument Scene":
-            $ PenArgScene = True
+            $ v14_PenArgScene = True
             $ add_point(KCT.TROUBLEMAKER)
             $ add_point(KCT.BRO)
 
