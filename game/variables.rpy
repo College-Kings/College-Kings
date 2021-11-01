@@ -619,6 +619,7 @@ default v14_rw_half_chris_support = False # Chris backs half the cost of the rea
 default v14_ryan_satin = False
 default v14s03a_left_cup = False
 default v14s03a_take_wallet = False
+default v14_lindsey_money_theft = False
 default v14s23_agree = False
 default v14s23_disagree = False
 default v14s24a_gummyfish = False
