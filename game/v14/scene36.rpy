@@ -654,7 +654,7 @@ label v14s36:
         menu:
             "Kiss her":
                 $ jennyrs = True
-                if chloegf or LaurenGF or penelopers:
+                if chloegf or laurenrs or penelopers:
                     $ add_point(KCT.TROUBLEMAKER)
                 else:
                     $ add_point(KCT.BOYFRIEND)
