@@ -19,11 +19,11 @@ label v14s35:
     $ jenny.messenger.addReply(_("You wanna go now?"))
     $ jenny.messenger.newMessage(_("Yeah, why not? ;) Penelope is busy, so I wanted to see if you'd be down."))
     $ jenny.messenger.addReply(_("Okay sure, where's this lagoon at?"))
-    $ jenny.messenger.newImgMessage(_("Picture of the Lagoon, somehow with a location marker in the photo"))
+    $ jenny.messenger.newImgMessage(_("images/v14/Scene 35/v14s35_lagoon_pic.webp")) #Picture of the Lagoon, somehow with a location marker in the photo
     $ jenny.messenger.newMessage(_("See you soon!"))
 
     if False: ### just making sure it shows up on lint
-        scene v14jenText
+        scene v14s35_lagoon_pic
 
     label s35_PhoneContinue:
         if jenny.messenger.replies:
