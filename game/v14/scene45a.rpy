@@ -44,6 +44,7 @@ label v14s45a:
 
         menu:
             "Not a bad idea.":
+                $ add_point(KCT.TROUBLEMAKER)
                 scene v14s45a_1b
                 with dissolve
                
@@ -195,6 +196,7 @@ label v14s45a:
 
             "Be supportive":
                 $ AmberLoyal = True
+                $ add_point(KCT.BOYFRIEND)
 
                 scene v14s45a_1d
                 with dissolve
