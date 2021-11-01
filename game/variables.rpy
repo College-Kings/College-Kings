@@ -647,3 +647,4 @@ default penelopeloyal = True
 default v14_lauren_sabotage = False
 default v14_PenRomScene = False
 default v14s25_letherstay = False
+default v14_jennypoints = 0
