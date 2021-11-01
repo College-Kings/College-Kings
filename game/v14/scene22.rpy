@@ -15,7 +15,7 @@ label v14s22:
     pause 0.75
 
     scene v14s22_3 # FPP. The entire room is decorated with her campaign material and flyers, lindsey is in the corner with her back turned to the mc
-    with dissolve    
+    with dissolve
 
     pause 0.75
 

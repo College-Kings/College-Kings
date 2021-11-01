@@ -258,7 +258,7 @@ label v14s41a:
         scene v14s41a_5a
         with dissolve
 
-        gr "Good. So I'm gonna send this picture to all of you, and I want you to post it to your Kiwii'ss right now."
+        gr "Good. So I'm gonna send this picture to all of you, and I want you to post it to your Kiwiis right now."
 
         scene v14s41a_5d
         with dissolve

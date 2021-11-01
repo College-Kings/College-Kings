@@ -257,7 +257,7 @@ label v14s11:
                 $ add_point(KCT.BRO)
 
                 scene v14s11_4i
-                with dissolve       
+                with dissolve
 
                 u "Well, for starters... It means a lot to me to know that the feeling is mutual. *Chuckles*"
 

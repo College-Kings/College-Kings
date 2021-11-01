@@ -96,7 +96,7 @@ label v14s17:
         u "(Hot damn... I like when she does that sneaky shit, haha.)"
 
         scene v14s17_7 # TPP. MC Now sitting beside lauren, both looking at eachother, both slight smile, mouths closed
-        with dissolve    
+        with dissolve
 
         pause 0.75
 
@@ -117,13 +117,13 @@ label v14s17:
         pause 0.75
 
         scene v14s17_7 
-        with dissolve    
+        with dissolve
 
         pause 0.75
     
     if laurenrs: #placeholder
         scene v14s17_7a # TPP. Same as v14s17_7, Show MC and Lauren kissing
-        with dissolve 
+        with dissolve
 
         pause 0.75   
 
@@ -340,7 +340,7 @@ label v14s17:
     u "I mean, damn... Look at you getting in nice and good with the people on the inside."
 
     scene v14s17_10a
-    with dissolve 
+    with dissolve
 
     la "Mhmm, that's more like it. *Chuckles*"
 

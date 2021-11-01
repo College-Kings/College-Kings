@@ -344,7 +344,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
     scene v14s31b_15  # FPP. Aubrey, smiling, mouth open, looking at Chloe (off Camera).
     with dissolve
 
-    au "Well, isn't this a crazy bunch. Two greek heads who used to date, the hot shot freshman that everyone knows, and of course..."
+    au "Well, isn't this a crazy bunch. Two Greek heads who used to date, the hot shot freshman that everyone knows, and of course..."
 
     scene v14s31b_15a # FPP. Aubrey, smiling, laughing, pointing at herself. 
     with dissolve
@@ -1032,7 +1032,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
                 scene v14s31b_28
                 with dissolve
 
-                u "Good, I figured. Just don't want any mixed messages."            
+                u "Good, I figured. Just don't want any mixed messages."
             
             "Leave it be": # -If Leave it be
                 scene v14s31b_28
@@ -1095,7 +1095,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
             
         else:
             scene v14s31b_30a # Same as v14s31b_30, but MC walking towards the front door of the Ape house.
-            with dissolve 
+            with dissolve
 
         pause 1
 

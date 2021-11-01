@@ -56,7 +56,7 @@ label v14s01:
             scene v14s01_4 # TPP. Show Aubrey and Riley moving to suck MC's dick, all smiling, mouths closed
             with dissolve
 
-            pause  
+            pause
 
             image v14auridbj = Movie(play="images/v14/Scene 1/v14auridbj.webm", loop=True, image="images/v14/Scene 1/v14auridbjStart.webp", start_image="images/v14/Scene 1/v14auridbjStart.webp") # double blowjob
             image v14auridbjf = Movie(play="images/v14/Scene 1/v14auridbjf.webm", loop=True, image="images/v14/Scene 1/v14auridbjStart.webp", start_image="images/v14/Scene 1/v14auridbjStart.webp") # double blowjob spedup
@@ -90,7 +90,7 @@ label v14s01:
             scene v14s01_5 # TPP. Show Riley moving to climb on top of MC in reverse cowgirl and Aubrey moving to stay in front of Riley to kiss her
             with dissolve
 
-            pause  
+            pause
 
             image v14aurircg = Movie(play="images/v14/Scene 1/v14aurircg.webm", loop=True, image="images/v14/Scene 1/v14aurircgStart.webp", start_image="images/v14/Scene 1/v14aurircgStart.webp") # Chloe Table top
             image v14aurircgf = Movie(play="images/v14/Scene 1/v14aurircgf.webm", loop=True, image="images/v14/Scene 1/v14aurircgStart.webp", start_image="images/v14/Scene 1/v14aurircgStart.webp") # Chloe Table top spedup
@@ -133,7 +133,7 @@ label v14s01:
             scene v14s01_6 # TPP. Show Riley kissing Aubrey very passionately (Make sure position matches v14auricg animation)
             with dissolve
 
-            pause  
+            pause
 
             scene v14s01_7 # TPP. Show Riley moving to sit on MC's face with one hand on the wall, Riley mouth open, sexy smirk
             with dissolve
@@ -143,7 +143,7 @@ label v14s01:
             scene v14s01_8 # TPP. Show Riley sitting on MC's face and Aubrey getting on MC's dick in cowgirl
             with dissolve
 
-            pause  
+            pause
 
             image v14auridcg = Movie(play="images/v14/Scene 1/v14auridcg.webm", loop=True, image="images/v14/Scene 1/v14auridcgStart.webp", start_image="images/v14/Scene 1/v14auridcgStart.webp") # Chloe Table top
             image v14auridcgf = Movie(play="images/v14/Scene 1/v14auridcgf.webm", loop=True, image="images/v14/Scene 1/v14auridcgStart.webp", start_image="images/v14/Scene 1/v14auridcgStart.webp") # Chloe Table top spedup
@@ -152,7 +152,7 @@ label v14s01:
 
             scene v14auridcg # Ignore as animation
             with dissolve
-            pause  
+            pause
 
             ri "Oh... F-f-fuuuuck... [name]!"
 
@@ -160,7 +160,7 @@ label v14s01:
 
             scene v14auridcgf # Ignore as animation
             with dissolve
-            pause  
+            pause
 
             u "*Moans*"
 
@@ -168,7 +168,7 @@ label v14s01:
 
             scene v14auridcg2 # Ignore as animation
             with dissolve
-            pause  
+            pause
 
             au "Ha... Mmm... She's right. *Moans*"
 
@@ -176,7 +176,7 @@ label v14s01:
 
             scene v14auridcg2f # Ignore as animation
             with dissolve
-            pause  
+            pause
 
             u "*Mumbles*"
 
@@ -190,7 +190,7 @@ label v14s01:
             scene v14s01_10 # TPP. Show Aubrey ready to suck MC's dick and Riley ready to suck on his balls
             with dissolve
 
-            pause  
+            pause
 
             image v14aurido = Movie(play="images/v14/Scene 1/v14aurido.webm", loop=True, image="images/v14/Scene 1/v14auridoStart.webp", start_image="images/v14/Scene 1/v14auridoStart.webp") # Chloe Table top
             image v14auridof = Movie(play="images/v14/Scene 1/v14auridof.webm", loop=True, image="images/v14/Scene 1/v14auridoStart.webp", start_image="images/v14/Scene 1/v14auridoStart.webp") # Chloe Table top spedup
@@ -199,7 +199,7 @@ label v14s01:
 
             scene v14aurido # Ignore as animation
             with dissolve
-            pause  
+            pause
 
             u "Wow, I... I have the best fucking life... *Moans*"
 
@@ -217,7 +217,7 @@ label v14s01:
 
             scene v14aurido2f # Ignore as animation
             with dissolve
-            pause  
+            pause
             au "Mmm! *Gags*"
 
             u "Fuck..."
@@ -302,7 +302,7 @@ label v14s01:
             scene v14s01_12 # TPP. Show Riley and Aubrey putting on their bras (Panties already on)
             with dissolve
 
-            pause  
+            pause
 
             scene v14s01_13 # FPP. Show the girls leaving the room (in their underwear), focus on their asses
             with dissolve

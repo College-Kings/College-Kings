@@ -584,7 +584,7 @@ label v14s46a:
         scene v14s46a_30   # TPP. MC, expression: having a bad dream, hands out protecting his crotch, eyes closed laying in Lauren's bed in Lauren's room.
         with dissolve
         
-        u "*Zzzz...*  *Grunts*"
+        u "*Zzzz...* *Grunts*"
 
         scene v14s46a_31   # TPP. Green Grassy Field: Close up of the horse frowning (angry) and nipping at MC's crotch area.
         with dissolve

@@ -204,7 +204,7 @@ label v14s30a:
     menu:
         "Run":
             scene v14s30a_11 # TPP. MC walking backwards getting prepared to run, MC worried face, mouth open.
-            with dissolve    
+            with dissolve
 
             u "AH! Oh! Stop it! No, ugh!"
 

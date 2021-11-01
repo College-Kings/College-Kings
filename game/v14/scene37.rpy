@@ -112,7 +112,7 @@ label v14s37:
     scene v14s37_10
     with dissolve
 
-    pe  "I need a few minutes."
+    pe "I need a few minutes."
 
     scene v14s37_9b
     with dissolve
@@ -137,7 +137,7 @@ label v14s37:
     scene v14s37_10a
     with dissolve
 
-    pe "I just really like this place! *Chuckles* Is it bad if I don't order anything?"  
+    pe "I just really like this place! *Chuckles* Is it bad if I don't order anything?"
 
     scene v14s37_10b
     with dissolve
@@ -372,7 +372,7 @@ label v14s37:
         "Be serious...":
             $ add_point(KCT.BOYFRIEND)
             scene v14s37_10b
-            with dissolve 
+            with dissolve
             
             u "Woah, I didn't know that was a thing. Why'd it get cancelled?"
 
@@ -411,7 +411,7 @@ label v14s37:
     scene v14s37_10c
     with dissolve
 
-    pe  "Because of the case I had, for some reason she thinks I'm the devil now. I tried to-"
+    pe "Because of the case I had, for some reason she thinks I'm the devil now. I tried to-"
 
     scene v14s37_15
     with vpunch
@@ -785,7 +785,7 @@ label v14s37:
         scene v14s37_23 # TPP. Show Penelope and MC walking away from the front of the Restaurant/ 
         with fade
 
-        pause        
+        pause
 
         scene v14s37_24 # FPP. MC and Penelope on the sidewalk, Penelope looking at MC, MC looking at Penelope, Penelope slight smile, mouth closed.
         with dissolve

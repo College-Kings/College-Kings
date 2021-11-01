@@ -169,7 +169,7 @@ label v14s36:
     scene v14s36_4e # FPP. same as v14s36_4 Jenny rolls her eyes, and laughs, mouth open
     with dissolve
 
-    jen "Oh, pfft... *Laughs*  There's no way she'll lose to some chick named Lindsey, haha."
+    jen "Oh, pfft... *Laughs* There's no way she'll lose to some chick named Lindsey, haha."
 
     scene v14s36_4
     with dissolve
@@ -204,7 +204,7 @@ label v14s36:
     scene v14s36_4g
     with dissolve
 
-    jen "It's kinda weird but, I could never bring myself to join greek life, but I always liked guys who did. *Chuckles*"
+    jen "It's kinda weird but, I could never bring myself to join Greek life, but I always liked guys who did. *Chuckles*"
 
     scene v14s36_4h
     with dissolve
@@ -633,7 +633,7 @@ label v14s36:
         scene v14s36_5d
         with dissolve
 
-        jen "You're a loyal person that cares about your friends and you don't make stupid decsions that harm others."
+        jen "You're a loyal person that cares about your friends and you don't make stupid decisions that harm others."
 
         scene v14s36_5e
         with dissolve
@@ -809,7 +809,7 @@ label v14s36:
                 scene v14s36_4p
                 with dissolve
 
-                u "I feel like we've built a real connection tonight and along with everything we;ve already been through..."
+                u "I feel like we've built a real connection tonight and along with everything we've already been through..."
 
                 scene v14s36_4p
                 with dissolve

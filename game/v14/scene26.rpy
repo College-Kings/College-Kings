@@ -173,7 +173,7 @@ label v14s26:
         with dissolve
 
     scene v14s26_5
-    with dissolve       
+    with dissolve
 
     u "Wait a minute, is that the slogan I came up with?"
 
@@ -380,7 +380,7 @@ label v14s26:
     pause 0.75
 
     scene v14s26_2
-    with dissolve    
+    with dissolve
 
     u "So? How'd it go?"
 
