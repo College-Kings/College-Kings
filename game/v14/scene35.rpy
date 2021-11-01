@@ -25,12 +25,12 @@ label v14s35:
     if False: ### just making sure it shows up on lint
         scene v14s35_lagoon_pic
 
-    label s35_PhoneContinue:
+    label v14s35_PhoneContinue:
         if jenny.messenger.replies:
             call screen phone
         if jenny.messenger.replies:
             "(I should reply to Jenny.)"
-            jump s35_PhoneContinue
+            jump v14s35_PhoneContinue
 
     if joinwolves:
         scene v14s35_3 # TPP. Show MC standing naked in his wolves room, slight smile, mouth closed.
