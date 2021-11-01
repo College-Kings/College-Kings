@@ -175,7 +175,7 @@ label v14s17:
             scene v14s17_8a
             with dissolve
 
-            u "Responsible would be an understatement. I've never seen you focus on anything other than your future.."
+            u "Responsible would be an understatement. I've never seen you focus on anything other than your future..."
 
             scene v14s17_8
             with dissolve
@@ -679,7 +679,7 @@ label v14s17:
                 scene v14s17_10b
                 with dissolve
 
-                u "You say that like it's nothing.., Lauren, that's perfect. Everything will go south without you."
+                u "You say that like it's nothing... Lauren, that's perfect. Everything will go south without you."
 
                 scene v14s17_10h
                 with dissolve
@@ -753,7 +753,7 @@ label v14s17_end:
     scene v14s17_17b
     with dissolve
 
-    la "*Chuckles* Bye.."
+    la "*Chuckles* Bye..."
 
     scene v14s17_17c
     with dissolve

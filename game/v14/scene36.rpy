@@ -139,7 +139,7 @@ label v14s36:
     scene v14s36_4d # FPP. same as v14s36_4 Jenny has a shocked expression, mouth open
     with dissolve
 
-    jen "Get the fuck out of here! You're joking..?"
+    jen "Get the fuck out of here! You're joking...?"
 
     scene v14s36_4a
     with dissolve
@@ -355,7 +355,7 @@ label v14s36:
     scene v14s36_4a
     with dissolve
 
-    u "Three..?"
+    u "Three...?"
 
     scene v14s36_4j # FPP. same as v14s36_4e Jenny has a slightly upset expression
     with dissolve
@@ -445,7 +445,7 @@ label v14s36:
     scene v14s36_4a
     with dissolve
 
-    u "And that is..?"
+    u "And that is...?"
 
     scene v14s36_4g
     with dissolve
@@ -976,7 +976,7 @@ label v14s36:
                 with dissolve
                 pause
 
-                u "Ha... I... Shhhit,.."
+                u "Ha... I... Shhhit..."
 
                 scene v14jenbj2f # Ignore as anim
                 with dissolve

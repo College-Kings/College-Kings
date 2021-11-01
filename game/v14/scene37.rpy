@@ -504,7 +504,7 @@ label v14s37:
     scene v14s37_10m # FPP. Same as v14s37_10a, Penelope confused worried face, mouth open.
     with dissolve
 
-    pe "Julia..?"
+    pe "Julia...?"
 
     scene v14s37_10b
     with dissolve

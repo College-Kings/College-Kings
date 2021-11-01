@@ -465,7 +465,7 @@ label v14s43b:
             scene v14s43b_9a
             with dissolve
 
-            u "Haha,.. I just wanted to see you squirm for a second. *Chuckles* I wouldn't actually do you like that, have fun with Penelope."
+            u "Haha... I just wanted to see you squirm for a second. *Chuckles* I wouldn't actually do you like that, have fun with Penelope."
 
             scene v14s43b_9d # FPP. same as same as v14s43b_9c Imre happy expression, slight smile, mouth open
             with dissolve

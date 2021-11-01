@@ -329,7 +329,7 @@ label v14s22_steal:
         scene v14s22_5f
         with dissolve
 
-        li "Yeah, but.."
+        li "Yeah, but..."
 
         scene v14s22_5g
         with dissolve

@@ -59,7 +59,7 @@ label v14s46a:
         scene v14s46a_4
         with dissolve
 
-        la "*Chuckles* We'll see about that.."
+        la "*Chuckles* We'll see about that..."
 
     scene v14s46a_4a
     with dissolve
@@ -196,7 +196,7 @@ label v14s46a:
     scene v14s46a_7
     with dissolve
 
-    la "*Speaking softly* You are starting to feel relaxed... You are feeling safe.. And completely comfortable."
+    la "*Speaking softly* You are starting to feel relaxed... You are feeling safe... And completely comfortable."
 
     scene v14s46a_8   # FPP. MC's perspective, head turned looking at Lauren, who is smiling, mouth open.
     with dissolve
@@ -554,7 +554,7 @@ label v14s46a:
         scene v14s46a_8d
         with dissolve
 
-        u "*Zzzz...* Hm.."
+        u "*Zzzz...* Hm..."
 
         scene v14s46a_27a  # TPP. MC smiling, relaxed mouth closed standing in the green grassy field, with the bottom of MC's shirt stuck in the horse's mouth (or something to suggest the horse is eating his shirt) similar to v14s46a_27
         with dissolve
