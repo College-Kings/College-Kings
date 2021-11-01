@@ -107,7 +107,7 @@ label v14s31:
     with dissolve
 
     # -Transition to Scene 31a/31b based on planning board choices-
-    if VARIABLE_UNKNOWN:
+    if v14s31_talkcameron:
         jump v14s31a
 
     else:
