@@ -124,7 +124,7 @@ label v14s20:
 
     u "Yeah, they seem to get along surprisingly well, haha."
 
-    if laurenmad:
+    if laurenmad or laurenrs_v11aubrey:
         scene v14s20_3g # FPP Same angle as 3, Autumn with neutral expression, mouth open
         with dissolve
 
