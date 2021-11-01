@@ -100,8 +100,5 @@ label v14s25b:
     if v14_help_lindsey: 
         jump v14s26
     
-    elif v14_lauren_sabotage:
-        jump v14s26a
-
     else:
         jump v14s26a
