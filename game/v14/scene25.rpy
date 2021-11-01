@@ -901,7 +901,6 @@ label v14s25:
             pause
             
             if v14s03a_take_wallet: # if candy shopping with Aubrey
-                
                 scene v14s25_19a # TPP. Same as v14s25_19, Double Vision, Show MC and Amber eating snacks.
                 with fade
 

@@ -34,7 +34,7 @@ label v14s25b:
 
     u "*Whispers* Amber... Amber!"
 
-    if AmberClean: #placeholder
+    if v14_amber_clean: #placeholder
         scene v14s25b_6 # FPP. MC now looking at Amber as she is laying in bed, Amber, slight smile, mouth open
         with dissolve
 
