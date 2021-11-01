@@ -1338,7 +1338,7 @@ label v11_quiz_bonus:
 
     if (laurenrs or (kct == "loyal" and (v1_kissLauren or beachfirstkiss))) and not v11_aubrey_sex:
         if not laurenrs:
-            call screen kctPopup
+            call screen kct_popup
 
         scene v11las44f # FPP. Lauren has her hands around MC's neck, she is looking into his eyes, she is nervous, mouth open
         with dissolve

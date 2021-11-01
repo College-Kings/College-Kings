@@ -1616,7 +1616,7 @@ label v10s33_deergirl21:
                     u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
 
                     if kct == "loyal":
-                        call screen kctPopup
+                        call screen kct_popup
 
                         scene v10cfrla1
                         with dissolve
@@ -1817,7 +1817,7 @@ label v10s33_deergirl21:
                     u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
 
                     if kct == "loyal":
-                        call screen kctPopup
+                        call screen kct_popup
 
                         scene v10cfrla3d
                         with dissolve
