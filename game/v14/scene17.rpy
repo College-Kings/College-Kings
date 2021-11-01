@@ -637,7 +637,7 @@ label v14s17:
             u "You're the most loyal person I know, Lauren. That's why I'm asking you, the one person I trust with anything and everything."
 
             if kct == "loyal":
-                call screen kctPopup
+                call screen kct_popup
                 
                 $ v14_lauren_sabotage = True
             

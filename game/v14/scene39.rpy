@@ -172,7 +172,7 @@ label v14s39:
 
     if v14s37_focus_on_us or kct == "loyal":
         if not v14s37_focus_on_us:
-            call screen kctPopup
+            call screen kct_popup
 
         scene v14s39_4b # FPP. Same as v14s39_4, Penelope nervous smile, mouth open.
         with dissolve

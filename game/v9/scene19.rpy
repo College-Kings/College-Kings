@@ -567,7 +567,7 @@ label v9_lau_dorm:
 
         if beachfirstkiss and not laurenrs and kct == "loyal":
             if kct == "loyal":
-                call screen kctPopup
+                call screen kct_popup
 
             menu:
                 "Kiss Lauren":

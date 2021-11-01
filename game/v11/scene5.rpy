@@ -630,7 +630,7 @@ label v11s4_PhoneContinueJosh1:
     # If made Candy smile 3 or more times
 
     if candyLike < 3:
-        call screen kctPopup
+        call screen kct_popup
 
     scene v11swc6l
     with dissolve

@@ -565,7 +565,7 @@ label v10_riley_sex:
 
     elif kct == "confident": # -If not rileyrs with KCT Confident #
 
-        call screen kctPopup
+        call screen kct_popup
 
         scene v10srds3a
         with dissolve

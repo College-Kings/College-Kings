@@ -751,7 +751,7 @@ label hd_bd:
 
         if kct == "confident":
             $ noraclose = True
-            call screen kctPopup
+            call screen kct_popup
 
             scene s699f # nora curious smile
             with dissolve
@@ -1172,7 +1172,7 @@ label hd_ad:
             u "No worries, it was a nice walk."
 
             if kct == "confident":
-                call screen kctPopup
+                call screen kct_popup
 
             elif not rileykiss:
                 scene s708 # riley smiling
@@ -1750,7 +1750,7 @@ label apologylauren:
 
     elif kct == "loyal":
         $ laurenmad = False
-        call screen kctPopup
+        call screen kct_popup
 
         scene s717
         with dissolve
@@ -1939,7 +1939,7 @@ label thisbelauren:
                     u "You. Of course I want you. That's all I want. I promise. It's never gonna happen again."
 
                     if kct == "loyal":
-                        call screen kctPopup
+                        call screen kct_popup
 
                         $ laurenrs = True
                         $ laurenmad = True
@@ -2412,7 +2412,7 @@ label thisbewalk:
                     u "Yeah, definitely. Just let me know when you're making them."
 
                 elif kct == "loyal":
-                    call screen kctPopup
+                    call screen kct_popup
 
                     $ signs = True
 
@@ -3281,7 +3281,7 @@ label beachlauren:
                 with dissolve
 
                 if kct == "loyal":
-                    call screen kctPopup
+                    call screen kct_popup
 
                     menu:
                         "Kiss her":
@@ -6609,7 +6609,7 @@ label hc_asking_amber:
     am "Sorry [name]."
 
     if kct == "popular":
-        call screen kctPopup
+        call screen kct_popup
 
         $ amberEcstasyOffer = True
 
@@ -6876,7 +6876,7 @@ label hc_asking_chloe:
         $ hcGirl = "chloe"
 
         if not volleyball:
-            call screen kctPopup
+            call screen kct_popup
 
         scene s937d # chloe smiling eyebrow raised
         with dissolve
@@ -7016,7 +7016,7 @@ label hc_asking_lauren:
         $ hcGirl = "lauren"
         
         if not beachfirstkiss:
-            call screen kctPopup
+            call screen kct_popup
 
         $ laurenrs = True
 
@@ -7175,7 +7175,7 @@ label hc_asking_riley:
         $ hcGirl = "riley"
 
         if not rileyrs:
-            call screen kctPopup
+            call screen kct_popup
 
         $ rileyrs = True
 
@@ -16283,7 +16283,7 @@ label fr4grayson1:
 
                 if kct == "confident":
                     $ preventgrayson = True
-                    call screen kctPopup
+                    call screen kct_popup
 
                     scene sfr4gr1b
                     with dissolve
@@ -16554,7 +16554,7 @@ label fr4lockerroomchloe:
                     u "You don't have to. Let's just get out of here."
 
                     if kct == "popular":
-                        call screen kctPopup
+                        call screen kct_popup
 
                         scene sfr4cl52b
                         with dissolve

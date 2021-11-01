@@ -562,7 +562,7 @@ label v14s36:
 
     if v14_jennypoints >= 3 or kct == "loyal":
         if v14_jennypoints < 3:
-            call screen kctPopup
+            call screen kct_popup
 
         scene v14s36_3c # TPP same as v14s36_3a Jenny scoots closer to MC, looking down at his lap, slight smile mouth closed, Mc has a slightly concerned expression, mouth closed
         with dissolve

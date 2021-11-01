@@ -172,7 +172,7 @@ label v10_linds_room:
     scene v10slds3d
     with dissolve
     menu:
-       "Keep listening":
+        "Keep listening":
 
             scene v10slds3c
             with dissolve
@@ -212,7 +212,7 @@ label v10_linds_room:
                     li "Honestly, just venting it all out already has me feeling a lot better."
 
 
-       "Make a joke":
+        "Make a joke":
             
             if kct == "confident": # RCS - if MC chooses 'Make a joke' with KCT confident
 
@@ -221,7 +221,7 @@ label v10_linds_room:
 
                 u "Hey, at least you're not gonna end up like that sailor that followed the North Star and ended up freezing to death in a snow storm, right?"
 
-                call screen kctPopup
+                call screen kct_popup
                 
                 scene v10slds3f # FPP. Same camera as v10slds3. Show Lindsey, with a somewhat amused smile, mouth open.
                 with dissolve
@@ -369,7 +369,7 @@ label v10_linds_room:
                 with dissolve
                 u "I'd never say no to any attention you wanted to give."
 
-                call screen kctPopup
+                call screen kct_popup
 
                 scene v10slds3f
                 with dissolve

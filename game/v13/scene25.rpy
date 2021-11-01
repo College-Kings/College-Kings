@@ -127,7 +127,7 @@ label v13s25:
 
             if v12s24_emmymatch or kct == "confident": 
                 if not v12s24_emmymatch:
-                    call screen kctPopup
+                    call screen kct_popup
 
                 scene v13s25_3c
                 with dissolve

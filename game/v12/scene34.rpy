@@ -65,7 +65,7 @@ label v12_amber_after_spa:
                 
     if v11_tease_amber <= 2 or kct == "popular":
         if not (v11_tease_amber <= 2):
-            call screen kctPopup
+            call screen kct_popup
 
         scene v12ams2b
         with dissolve
