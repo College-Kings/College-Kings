@@ -658,5 +658,9 @@ default v14_PenArgScene = False
 default v14_PenelopePartner = False
 default v14_RileyPartner = False
 
-
+###to be looked at:
 #lindseysupport.points ???
+#lauren variables
+#v14s31_talkcameron
+#v14_plushwolf
+#v14_realwolf
