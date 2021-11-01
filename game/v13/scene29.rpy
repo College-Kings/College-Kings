@@ -284,6 +284,7 @@ label v13s29:
             
         "Okay":
             $ add_point(KCT.BRO)
+            $ v13_smoke_weed = True
             u "Okay, sure."
 
             scene v13s29_18 # TPP. Show MC hitting bong, bong full of smoke

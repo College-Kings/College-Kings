@@ -96,12 +96,12 @@ label v14s03d:
     image v14satdtFPP = Movie(play="images/v14/Scene 3d/v14satdtFPP.webm", loop=True, image="images/v14/Scene 3d/v14satdtFPP.webp", start_image="images/v14/Scene 3d/v14satdtFPP.webp")
     image v14satdtFPPf = Movie(play="images/v14/Scene 3d/v14satdtFPPf.webm", loop=True, image="images/v14/Scene 3d/v14satdtFPP.webp", start_image="images/v14/Scene 3d/v14satdtFPP.webp")
 
-    scene v14satdtFPP
+    scene v14satdtFPP # Ignore as animation
     with dissolve
 
     satin "*Gags* Mmmghh!"
 
-    scene v14satdtFPPf
+    scene v14satdtFPPf # Ignore as animation
     with dissolve
 
     u "S-shit! You're a fucking professional! (She's deepthroating like a goddess.)"
@@ -110,12 +110,12 @@ label v14s03d:
     image v14satdtTPP = Movie(play="images/v14/Scene 3d/v14satdtTPP.webm", loop=True, image="images/v14/Scene 3d/v14satdtFPP.webp", start_image="images/v14/Scene 3d/v14satdtFPP.webp")
     image v14satdtTPPf = Movie(play="images/v14/Scene 3d/v14satdtTPPf.webm", loop=True, image="images/v14/Scene 3d/v14satdtFPP.webp", start_image="images/v14/Scene 3d/v14satdtFPP.webp")
 
-    scene v14satdtTPP
+    scene v14satdtTPP # Ignore as animation
     with dissolve
 
     u "*Moans* Satin... (If this is what being a \"nice guy\" gets you, then call me Mr. Nice Guy.)"
 
-    scene v14satdtTPPf
+    scene v14satdtTPPf # Ignore as animation
     with dissolve
 
     pause
@@ -208,14 +208,14 @@ label v14s03d:
             image v14satcgTPP1 = Movie(play="images/v14/Scene 3d/v14satcgTPP1.webm", loop=True, image="images/v14/Scene 3d/v14satcgTPP1.webp", start_image="images/v14/Scene 3d/v14satcgTPP1.webp")
             image v14satcgTPP1f = Movie(play="images/v14/Scene 3d/v14satcgTPP1f.webm", loop=True, image="images/v14/Scene 3d/v14satcgTPP1.webp", start_image="images/v14/Scene 3d/v14satcgTPP1.webp")
 
-            scene v14satcgTPP1
+            scene v14satcgTPP1 # Ignore as animation
             with dissolve
 
             u "Oh f-fuck... You're soaking wet!"
 
             satin "*Moans* I guess having a nice guy for once is turning me on quite a bit."
 
-            scene v14satcgTPP1f
+            scene v14satcgTPP1f # Ignore as animation
             with dissolve
 
             u "I... *Moans* Damn, Satin..."
@@ -226,12 +226,12 @@ label v14s03d:
             image v14satcgTPP2 = Movie(play="images/v14/Scene 3d/v14satcgTPP2.webm", loop=True, image="images/v14/Scene 3d/v14satcgTPP2.webp", start_image="images/v14/Scene 3d/v14satcgTPP2.webp")
             image v14satcgTPP2f = Movie(play="images/v14/Scene 3d/v14satcgTPP2f.webm", loop=True, image="images/v14/Scene 3d/v14satcgTPP2.webp", start_image="images/v14/Scene 3d/v14satcgTPP2.webp")
 
-            scene v14satcgTPP2
+            scene v14satcgTPP2 # Ignore as animation
             with dissolve
 
             satin "Ha! *Panting* You must be enjoying yourself."
 
-            scene v14satcgTPPf
+            scene v14satcgTPPf # Ignore as animation
             with dissolve
 
             u "That's an understatement, baby."
@@ -246,12 +246,12 @@ label v14s03d:
             image v14satrcgTPP1 = Movie(play="images/v14/Scene 3d/v14satrcgTPP1.webm", loop=True, image="images/v14/Scene 3d/v14satrcgTPP1.webp", start_image="images/v14/Scene 3d/v14satrcgTPP1.webp")
             image v14satrcgTPP1f = Movie(play="images/v14/Scene 3d/v14satrcgTPP1f.webm", loop=True, image="images/v14/Scene 3d/v14satrcgTPP1.webp", start_image="images/v14/Scene 3d/v14satrcgTPP1.webp")
 
-            scene v14satrcgTPP1
+            scene v14satrcgTPP1 # Ignore as animation
             with dissolve
 
             satin "*Moans* FUCK!"
 
-            scene v14satrcgTPP1f
+            scene v14satrcgTPP1f # Ignore as animation
             with dissolve
 
             u "Your body is so... goddamn perfect. Mmm!"
@@ -260,14 +260,14 @@ label v14s03d:
             image v14satrcgTPP2 = Movie(play="images/v14/Scene 3d/v14satrcgTPP2.webm", loop=True, image="images/v14/Scene 3d/v14satrcgTPP2.webp", start_image="images/v14/Scene 3d/v14satrcgTPP2.webp")
             image v14satrcgTPP2f = Movie(play="images/v14/Scene 3d/v14satrcgTPP2f.webm", loop=True, image="images/v14/Scene 3d/v14satrcgTPP2.webp", start_image="images/v14/Scene 3d/v14satrcgTPP2.webp")
 
-            scene v14satrcgTPP2
+            scene v14satrcgTPP2 # Ignore as animation
             with dissolve
 
             satin "*Moans* Thank you, but... please... stop talking."
 
             u "(She wants me to just sit here? *Chuckles*)"            
 
-            scene v14satrcgTPP2f
+            scene v14satrcgTPP2f # Ignore as animation
             with dissolve
 
             satin "*Whispers* Ahh, yes! Fuck me... Will!"
@@ -328,12 +328,12 @@ label v14s03d:
             image v14satbpTPP1 = Movie(play="images/v14/Scene 3d/v14satbpTPP1.webm", loop=True, image="images/v14/Scene 3d/v14satbpTPP1.webp", start_image="images/v14/Scene 3d/v14satbpTPP1.webp")
             image v14satbpTPP1f = Movie(play="images/v14/Scene 3d/v14satbpTPP1f.webm", loop=True, image="images/v14/Scene 3d/v14satbpTPP1.webp", start_image="images/v14/Scene 3d/v14satbpTPP1.webp")
 
-            scene v14satbpTPP1
+            scene v14satbpTPP1 # Ignore as animation
             with dissolve 
 
             satin "*Moans* So... fucking... good!"
 
-            scene v14satbpTPP1f
+            scene v14satbpTPP1f # Ignore as animation
             with dissolve
 
             satin "*Whisper* Fuck me, Will! Oh, yes... F-fuck..."
@@ -344,14 +344,14 @@ label v14s03d:
             image v14satbpTPP2 = Movie(play="images/v14/Scene 3d/v14satbpTPP2.webm", loop=True, image="images/v14/Scene 3d/v14satbpTPP2.webp", start_image="images/v14/Scene 3d/v14satbpTPP2.webp")
             image v14satbpTPP2f = Movie(play="images/v14/Scene 3d/v14satbpTPP2f.webm", loop=True, image="images/v14/Scene 3d/v14satbpTPP2.webp", start_image="images/v14/Scene 3d/v14satbpTPP2.webp")
 
-            scene v14satbpTPP2
+            scene v14satbpTPP2 # Ignore as animation
             with dissolve
 
             u "I'm... *Moans* I'm cumming... Fuckkk!"
 
             satin "Yes! Please... Cum in me!"
 
-            scene v14satbpTPP2f
+            scene v14satbpTPP2f # Ignore as animation
             with dissolve
 
             u "Mmm... AH I-, YES SATIN, YES!"
