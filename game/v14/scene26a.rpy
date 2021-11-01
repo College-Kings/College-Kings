@@ -234,7 +234,7 @@ label v14s26a:
         scene lindseyselfie1
         scene lindseyselfie2
 
-    if AmberDrugs:
+    if v14_amber_drugs:
 
         play sound "sounds/vibrate.mp3"
 

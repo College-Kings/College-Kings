@@ -74,7 +74,7 @@ label v14s25b:
 
             pause 0.75 
 
-    if AmberDrugs: #placeholder
+    if v14_amber_drugs: #placeholder
         scene v14s25b_6c # FPP. Same as v14s25b_6, Amber now turns and faces away from MC while laying in bed, MC doesn't see her face
         with dissolve
     
