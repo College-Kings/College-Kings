@@ -5,7 +5,6 @@
 # Render Count: 21 Unique, 88 Total
 
 label v14s36:
-
     scene v14s36_1 # TPP. MC arrives at the lagoon and see's Jenny in the distant in a very sexy bikini standing next to the lagoon, looking at the water, not in the water yet, Jenny has denim shorts over the bikin bottom at this point, Jenny has a slight smile, mouth closed, Mc is wearing the same swimming trunks and shirt from the v14s35_5 render
     with dissolve
 
