@@ -825,7 +825,7 @@ label v12_escape_room:
 
         menu:
             "You're right, we shouldn't do this":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 scene v12esr29f # FPP. Same as v12esr29d, Lindsey slightly worried, mouth closed
                 with dissolve
 
@@ -854,7 +854,7 @@ label v12_escape_room:
                 jump v12_after_sex
 
             "Is it? I want this...":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 scene v12esr29f
                 with dissolve
 
@@ -886,7 +886,7 @@ label v12_lindsey_kiss_or_not:
 
     menu:
         "Kiss her":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v12esr30 # TPP. Show MC and Lindsey kissing
             with dissolve
 
@@ -903,7 +903,7 @@ label v12_lindsey_kiss_or_not:
                 jump v12_after_sex
                 
         "Don't kiss her":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v12esr29e
             with dissolve
 
@@ -929,7 +929,7 @@ label v12_lindsey_kiss_or_not:
 label v12_lindsey_sex:
     $ v12_lindsey_sex = True
     $ lindseyrs = True
-    #$ addPoint("tm", sum([ v11_aubrey_sex, v11_msrose_scene, v11_samantha_spa, v11_rileysex, v11_chloe_sex ])) ###Loyaltymod
+    #$ add_point(KCT.TROUBLEMAKER, sum([ v11_aubrey_sex, v11_msrose_scene, v11_samantha_spa, v11_rileysex, v11_chloe_sex ])) ###Loyaltymod
 
     scene v12esr29g # FPP. Same as v12esr29c, Lindsey eyes open, slight smile, mouth open, face close to MC
     with dissolve

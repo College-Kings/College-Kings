@@ -3,8 +3,6 @@
 # Characters: MC (Outfit: Boxers / 1), PENELOPE (Outfit: Lingerie / 1)
 # Time: Morning
 
-default penelopeloyal = True
-
 label v14s42a:
     scene v14s42a_1 # TPP. Show MC sleeping on Penelope's bed, Penelope awake laying next to him, caressing his cheek, Penelope smiling, mouth closed
     with fade
@@ -39,7 +37,7 @@ label v14s42a:
     scene v14s42a_2a
     with dissolve
 
-    pe "*Chuckles* I wanted to mention that, I’m sorry for last night."
+    pe "*Chuckles* I wanted to mention that, I'm sorry for last night."
 
     scene v14s42a_2b # FPP. Same as v14s42a_2, Penelope slightly sad, mouth closed
     with dissolve
@@ -54,7 +52,7 @@ label v14s42a:
     scene v14s42a_2b
     with dissolve
 
-    u "Penelope…"
+    u "Penelope..."
 
     scene v14s42a_2c
     with dissolve
@@ -86,7 +84,7 @@ label v14s42a:
             scene v14s42a_2
             with dissolve
 
-            u "There’s nothing to apologize for, I wouldn't change a thing about last night."
+            u "There's nothing to apologize for, I wouldn't change a thing about last night."
 
             scene v14s42a_2a
             with dissolve
@@ -117,7 +115,7 @@ label v14s42a:
             scene v14s42a_2f # FPP. Same as v14s42a_2, Penelope slightly uncomfortable, mouth closed
             with dissolve
 
-            u "Well, yeah, I can’t lie. When you came out looking like that… *Chuckles* I kinda thought something was gonna end up happening."
+            u "Well, yeah, I can't lie. When you came out looking like that... *Chuckles* I kinda thought something was gonna end up happening."
 
             scene v14s42a_2g # FPP. Same as v14s42a_2f, Penelope slightly uncomfortable, mouth open
             with dissolve
@@ -127,7 +125,7 @@ label v14s42a:
             scene v14s42a_2f
             with dissolve
 
-            u "It’s no problem, I had a nice night and slept great as well."
+            u "It's no problem, I had a nice night and slept great as well."
 
             scene v14s42a_2g
             with dissolve
@@ -137,7 +135,7 @@ label v14s42a:
     scene v14s42a_2
     with dissolve
 
-    u "So… Are you ready to leave for class?"
+    u "So... Are you ready to leave for class?"
 
     scene v14s42a_2a
     with dissolve
@@ -187,7 +185,7 @@ label v14s42a:
     scene v14s42a_6
     with dissolve
 
-    u "Hey! What’s that supposed to mean? *Chuckles*"
+    u "Hey! What's that supposed to mean? *Chuckles*"
 
     scene v14s42a_6a
     with dissolve

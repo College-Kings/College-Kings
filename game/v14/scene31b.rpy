@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 2), CHLOE (Outfit: 1), AUBREY (Outfit: 1), GRAYSON (Outfit: 3) Wednesday
 # Time: Afternoon
 
-
 label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already there waiting, she's nervous about asking MC if she can seduce Grayson on her own-
     scene v14s31b_1   # TPP. MC, mouth closed, neutral expression walking on the side walk (towards the Ape's house).
     with dissolve
@@ -156,10 +155,10 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
     u "*Sighs*"
 
     menu: 
-        "Trust Choloe": # -Event1 Trust her- LindseyPopularity minus 3
+        "Trust Chloe": # -Event1 Trust her- LindseyPopularity minus 3
             $ v14_lindsey_popularity -= 3
             $ v14s31bTrustChloe = True
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ chloe.points +=1
 
             scene v14s31b_3
@@ -431,7 +430,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
     # -They all go to the bean bag room in the Apes house, dim colorful lights, pillows and blankets everywhere, bongs, panties on the ground, beer cans in the corner-
     # -Chloe and Aubrey sit next to each other while MC and Grayson sit apart from each other, across from them.-
-    scene v14s31b_16  # TPP. Aubrey leads Chloe, Grayson, and MC out of the dining room. Chole and MC are neutral; others are happy. All mouths are closed.
+    scene v14s31b_16  # TPP. Aubrey leads Chloe, Grayson, and MC out of the dining room. Chloe and MC are neutral; others are happy. All mouths are closed.
     with dissolve
 
     pause 0.75
@@ -782,7 +781,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
     gr "Just us?"
 
-    if v14s31bTrustChole: # -If trust Chloe    
+    if v14s31bTrustChloe: # -If trust Chloe    
         scene v14s31b_18f
         with dissolve
 
@@ -822,6 +821,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         menu:  # -Aubrey offers MC the vape that she took from Grayson-
             "Vape": # -Event1 Sure
                 # -Montage of MC and Aubrey passing the vape while they relax.-
+                $ v14s31b_smoke_weed_with_aubrey = True
                 scene v14s31b_23  # TPP. MC smokes the vaporizer
                 with dissolve
 
@@ -982,12 +982,12 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         au "Ha, you know me well."
         
         # -Chloe and MC walk outside-
-        scene v14s31b_25  # TPP. MC following Chole into the dark hallway (their backs are to the camera).
+        scene v14s31b_25  # TPP. MC following Chloe into the dark hallway (their backs are to the camera).
         with dissolve
 
         pause 0.75
 
-        scene v14s31b_26  # TPP. MC following Chole walk out of the front door of the Ape House.
+        scene v14s31b_26  # TPP. MC following Chloe walk out of the front door of the Ape House.
         with dissolve
 
         pause 0.75
@@ -1071,7 +1071,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         scene v14s31b_28
         with dissolve
 
-        u "Goodnight, Chlo."
+        u "Goodnight, Chloe."
 
         # -Chloe gives MC a hug-
         scene v14s31b_29a # TPP. Chloe hugs MC 
@@ -1276,7 +1276,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
             u "Whatever man."
 
-        else: # -If not ChloeRS or ChloeGF
+        else: # -If not chloers or chloegf
             scene v14s31b_31
             with dissolve
 

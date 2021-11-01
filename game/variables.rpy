@@ -1,3 +1,7 @@
+init python:
+    import os
+
+
 ## Init
 define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
@@ -7,8 +11,10 @@ default menu_set = set()
 default achievementAtList = None
 default freeRoam = False
 
-default kct = "confident"
-default sortedKCT = ["confident", "loyal", "popular"]
+
+    ## Phone
+default contacts_file_path = os.path.join(config.basedir, "game", "images", "phone", "contacts")
+
 
     ## Kiwii Vars
 default kiwiiUsers = kiwii_users()
@@ -25,6 +31,14 @@ default enemyhealth = 0
     ## Free Roam
 default previous_location = ""
 
+# KCT
+default kct = "confident"
+default sortedKCT = ["confident", "loyal", "popular"]
+
+default bro = 1
+default boyfriend = 2
+default troublemaker = 1
+
 # 1.0 - 6.0
 default v1_sda = False
 default evelynmove = False
@@ -39,9 +53,6 @@ default youHealth = 5
 default influencetut = False
 default meetlauren = False
 default laurenrs = False
-default bro = 1
-default boyfriend = 2
-default troublemaker = 1
 default phoneTutorialPage = 1
 default freeRoamTutorialPage = 1
 default v1_freeRoam1_riley = False
@@ -94,7 +105,6 @@ default w = "w"
 default q = "q"
 default e = "e"
 default r = "r"
-default qwer = True
 default fighttom = False
 default notcool = False
 default difficulty = None
@@ -629,8 +639,24 @@ default v14s30b_pw_image_two = False  # MC chose the second photo of the Plush W
 default v14s30b_rw_image_one = False  # MC chose the first photo of the Real Wolf for Chloe's kiwi post
 default v14s30b_rw_image_two = False  # MC chose the second photo of the Real Wolf for Chloe's kiwi post
 default v14s31bTrustChloe = False # MC trust Chloe alone with Grayson
+default v14s31b_smoke_weed_with_aubrey = False # s31b smoking weed with Aubrey at Ape's House
 default v14s37_focus_on_us = False # Tell Penelope to focus on them during the date.
 default v14s39_id_wait = False # Tell Penelope you'd wait till they got home
+default v14s46a_love_lauren_more = False # MC love Lauren more because of her sex experimenting on MC.
 default v14_talk_to_chris = False
 default ElijahFriend = False
 default AmberLoyal = False
+default penelopeloyal = True
+default v14_lauren_sabotage = False
+default v14_PenRomScene = False
+default v14s25_letherstay = False
+default v14_jennypoints = 0
+default v14s22_steal_fund = False
+default v14s31_talkcameron = False
+default v14_ApesPostChloePics = False
+default jennyawkward = False
+default jennyfriend = False
+default jennyrs = False
+default v14_PenArgScene = False
+default v14_PenelopePartner = False
+default v14_RileyPartner = False

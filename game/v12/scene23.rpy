@@ -153,8 +153,8 @@ label v12_ms_rose_sex:
                 pause 0.75
 
             "Let's go":
-                $ addPoint("tm")
-                #$ addPoint("tm", sum([ v11_samantha_spa, v11_rileysex, v11_chloe_sex, v12_lindsey_sex ])) ###Loyaltymod
+                $ add_point(KCT.TROUBLEMAKER)
+                #$ add_point(KCT.TROUBLEMAKER, sum([ v11_samantha_spa, v11_rileysex, v11_chloe_sex, v12_lindsey_sex ])) ###Loyaltymod
                 
                 $ v12_msrose_sex = True
 

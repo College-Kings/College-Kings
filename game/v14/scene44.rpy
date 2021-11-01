@@ -236,7 +236,7 @@ label v14s44:
             with dissolve
 
         "I'm Eli's friend":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ ElijahFriend = True
 
             scene v14s44_10
@@ -304,7 +304,7 @@ label v14s44:
     scene v14s44_12a # TPP. Same as v14s44_12, Show Elijah getting in the car.
     with dissolve
 
-    play sound "sound/doorclose.mp3"
+    play sound "sounds/doorclose.mp3"
 
     u "(I did not expect Elijah's mom to be a complete fucking MILF?! God... Damn...)"
 

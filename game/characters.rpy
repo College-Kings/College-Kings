@@ -149,3 +149,4 @@ define character.rub = Character("Rubee", who_color="#8b0000", who_outlines=[ (2
 define character.trainer = Character("Trainer", who_color="#147efb", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.lady = Character("Lady")
 define character.gentleman = Character("Gentleman")
+define character.elm = Character("Elijah's mother")

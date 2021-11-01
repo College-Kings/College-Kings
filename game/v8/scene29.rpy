@@ -621,11 +621,11 @@ label after_drugs:
             "Go with her":
                 $ amberSexAtJoshs = True
                 $ amberrs = True
-                #$ addPoint("tm", sum([ v7_rileysex, bathroomblowjob, v8_chloesex, v8_riley_lewd_ending ])) ###Loyaltymod
+                #$ add_point(KCT.TROUBLEMAKER, sum([ v7_rileysex, bathroomblowjob, v8_chloesex, v8_riley_lewd_ending ])) ###Loyaltymod
                 if laurenrs:
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
                 else:
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                 u "*Whispers* Fuck yes! Let's go!"
 
@@ -634,7 +634,7 @@ label after_drugs:
             "Reject her advances":
                 $ amberrs = False
                 if laurenrs:
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                 u "*Whispers* Sorry Amber, I'm not feeling it tonight."
 

@@ -87,7 +87,7 @@ label v14s31:
 
         menu:
             "I'm glad she's focused":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene v14s31_5 # FPP Show Chloe's campaign poster hung nearby
                 with dissolve
@@ -95,7 +95,7 @@ label v14s31:
                 u "(I'm glad she's focused, this is how it should be right now.)"
 
             "That's a turn off":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene v14s31_4b # TPP Same angle as 4, MC looks annoyed and repulsed, like he just tasted something bad
                 with dissolve
@@ -107,7 +107,7 @@ label v14s31:
     with dissolve
 
     # -Transition to Scene 31a/31b based on planning board choices-
-    if VARIABLE_UNKNOWN:
+    if v14s31_talkcameron:
         jump v14s31a
 
     else:

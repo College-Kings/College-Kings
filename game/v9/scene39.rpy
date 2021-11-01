@@ -80,7 +80,7 @@ label v9_hang_w_linds:
         menu:
             "Play it cool":
                 $ playCoolWLins = True
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 u "Damn right! You gonna be there to cheer me on?"
 
@@ -110,7 +110,7 @@ label v9_hang_w_linds:
                 li "Sure do." 
 
             "Get real":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "I'm sure everyone's expecting me to fall in my first fight."
 
@@ -148,10 +148,10 @@ label v9_hang_w_linds:
     menu:
         "Let Lindsey grab your hand":
             if chloers:
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
             else:
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
             
             scene v9hwl6a # TPP. Same camera as v9hwl6, Lindsey now holding MC's hand, looking into his eyes.
             with dissolve
@@ -201,13 +201,13 @@ label v9_hang_w_linds:
             menu:
                 "Make out with Lindsey":
                     if chloers:
-                        $ addPoint("tm")
+                        $ add_point(KCT.TROUBLEMAKER)
                     
                     else:
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
 
                     $ lindseyfirstkiss = True
-                    #$ addPoint("tm", sum([ amberSexAtJoshs, v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley ])) ###Loyaltymod
+                    #$ add_point(KCT.TROUBLEMAKER, sum([ amberSexAtJoshs, v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley ])) ###Loyaltymod
                     
                     scene v9links # Animations pls ignore
                     with dissolve
@@ -313,7 +313,7 @@ label v9_hang_w_linds:
                     $ renpy.end_replay()
                 "Pull away":
                     if chloers:
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
                         
                     scene v9hwl7b # TPP. Same camera as v9hwl7, Show MC pulling away from Lindsey who is trying to kiss him.
                     with dissolve

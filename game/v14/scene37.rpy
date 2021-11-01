@@ -369,15 +369,15 @@ label v14s37:
     pe "I signed up to be a hall monitor."
 
     menu:
-        "Be serious":
-            $ addPoint("bf")
+        "Be serious...":
+            $ add_point(KCT.BOYFRIEND)
             scene v14s37_10b
             with dissolve 
             
             u "Woah, I didn't know that was a thing. Why'd it get cancelled?"
 
         "Laugh":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v14s37_10b
             with dissolve
             
@@ -449,15 +449,15 @@ label v14s37:
     with dissolve
 
     menu:
-        "Same here":
-            $ addPoint("bro")
+        "Same here...":
+            $ add_point(KCT.BRO)
             scene v14s37_10h
             with dissolve
 
             u "If she keeps going at him like that, I am too."
 
-        "Focus on us":
-            $ addPoint("bf")
+        "Focus on us...":
+            $ add_point(KCT.BOYFRIEND)
             $ v14s37_focus_on_us = True
             scene v14s37_10h
             with dissolve

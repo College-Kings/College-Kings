@@ -112,7 +112,7 @@ label v11_lauren_airport_convo:
 
                 menu:
                     "Yes":
-                        $ addPoint("tm")
+                        $ add_point(KCT.TROUBLEMAKER)
                         $ v11_want_date_aubrey = True
 
                         scene v11laac2e
@@ -216,7 +216,7 @@ label v11_lauren_airport_convo:
 
             menu:
                 "Play it cool":
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
 
                     scene v11laac2h # FPP. Same as v11laac2e, Lauren has a slightly seductive look, mouth closed
                     with dissolve
@@ -224,7 +224,7 @@ label v11_lauren_airport_convo:
                     u "*Smirks* Sounds nice."
 
                 "Act clueless":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                     scene v11laac2h
                     with dissolve

@@ -3,7 +3,6 @@
 # Characters: None
 # Time: Midday
 
-
 label v14s21b:
     scene v14s21b_1 # TPP. Show the sky, it's midday
     with dissolve

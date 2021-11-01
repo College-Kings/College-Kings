@@ -289,7 +289,7 @@ label v13s34:
             clipps "Your words mean nothing."
 
         "Push him":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v13s34_18 # TPP. Show MC pushing Clipps back, MC, angry expression mouth closed, Clipps, serious expression, mouth closed 
             with dissolve
 
@@ -465,7 +465,7 @@ label v13s34:
 
     menu:
         "Stop this":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v13s34_26 # FPP. MC starts walking over to Riley
             with dissolve
 
@@ -537,7 +537,7 @@ label v13s34:
             u "*Sighs*"
 
         "Let them scare her":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v13s34_24
             with dissolve
 

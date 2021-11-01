@@ -671,7 +671,7 @@ label v11_start:
             u "No further comments. I know you as the board will make the right decision."
 
         "I won":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene v11coc12b
             with dissolve

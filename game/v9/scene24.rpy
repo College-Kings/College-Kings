@@ -12,7 +12,7 @@ label v9_walk_w_sam:
 
     menu:
         "Joke around":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             jump v9_walk_w_sam_joke
         "Be serious":
             jump v9_walk_w_sam_serious
@@ -241,7 +241,7 @@ label v9_walk_w_sam_cont2:
     menu:
 
         "Ask to go out again":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             jump v9_walk_w_sam_walk_again
         "Say goodbye":
             jump v9_walk_w_sam_walk_goodbye

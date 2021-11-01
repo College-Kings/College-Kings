@@ -5,7 +5,6 @@
 # 12 Unique Renders, 53 Total Renders
 
 label v14s43c:
-
     scene v14s43c_1 # FPP. MC looking at Penelope, Penelope looking at MC, Penelope slight smile, mouth open
     with dissolve
 
@@ -35,9 +34,8 @@ label v14s43c:
     with dissolve
 
     menu:
-
         "Romantic Scene":
-            PenRomScene = True
+            $ v14_PenRomScene = True
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.BRO)
 
@@ -59,9 +57,9 @@ label v14s43c:
             scene v14s43c_1
             with dissolve
 
-            pe "*Chuckles* Right…"
+            pe "*Chuckles* Right..."
 
-            if PenelopeLoyal:
+            if penelopeloyal:
 
                 scene v14s43c_1c
                 with dissolve
@@ -89,15 +87,15 @@ label v14s43c:
                 scene v14s43c_1c
                 with dissolve
 
-                pe "*Chuckles* Okay… Wow."
+                pe "*Chuckles* Okay... Wow."
 
             scene v14s43c_1
             with dissolve
 
-            pe "It’s settled then, romantic scene it is."
+            pe "It's settled then, romantic scene it is."
 
         "Argument Scene":
-            PenArgScene = True
+            $ v14_PenArgScene = True
             $ add_point(KCT.TROUBLEMAKER)
             $ add_point(KCT.BRO)
 
@@ -119,7 +117,7 @@ label v14s43c:
             scene v14s43c_1
             with dissolve
 
-            pe "Hmm, okay… Let's roll with it, I guess."
+            pe "Hmm, okay... Let's roll with it, I guess."
 
     scene v14s43c_3 # TPP. show mc and penelope standing up facing each other, slight smiles, mouths closed, looking at each other
     with dissolve
@@ -154,12 +152,12 @@ label v14s43c:
     scene v14s43c_4
     with dissolve
 
-    pe "Alright, let’s improv for a bit and see where it takes us."
+    pe "Alright, let's improv for a bit and see where it takes us."
 
     scene v14s43c_4a
     with dissolve
 
-    u "Okay, umm… You begin?"
+    u "Okay, umm... You begin?"
 
     scene v14s43c_4
     with dissolve
@@ -169,7 +167,7 @@ label v14s43c:
     scene v14s43c_4a
     with dissolve
 
-    u "*British accent* The hunt went well, m’lady. A few targets got away but we made quite the haul nonetheless."
+    u "*British accent* The hunt went well, m'lady. A few targets got away but we made quite the haul nonetheless."
 
     scene v14s43c_4c # FPP. same as v14s43c_4 Penelope has a serious expression and holds a fist in the air, mouth open
     with dissolve
@@ -199,7 +197,7 @@ label v14s43c:
     scene v14s43c_4e
     with dissolve
 
-    pe "*Whispers* Oh okay, I'll change it. Ahem…"
+    pe "*Whispers* Oh okay, I'll change it. Ahem..."
 
     scene v14s43c_4c
     with dissolve
@@ -289,7 +287,7 @@ label v14s43c:
     scene v14s43c_1i # FPP. same as v14s43c_1h Penelope mouth closed
     with dissolve
 
-    u "*British accent* What?! But… I've done nothing of the sort!"
+    u "*British accent* What?! But... I've done nothing of the sort!"
 
     scene v14s43c_1i
     with dissolve
@@ -306,12 +304,12 @@ label v14s43c:
 
     u "*British accent* I haven't lied!"
 
-    if PenelopeLoyal and chloegf or PenelopeLoyal and laurengf:
+    if penelopeloyal and (chloegf or laurengf):
 
         scene v14s43c_1j #FPP. same as v14s43c_1b Penelope has a slightly confused expression, mouth closed
         with dissolve
 
-        u "(Have I? Wait…)"
+        u "(Have I? Wait...)"
 
         scene v14s43c_1k # FPP. same as v14s43c_1j Penelope mouth open
         with dissolve
@@ -321,14 +319,14 @@ label v14s43c:
     scene v14s43c_1a
     with dissolve
 
-    u "*Whispers* Wait… Is this a romance or an argument scene?"
+    u "*Whispers* Wait... Is this a romance or an argument scene?"
 
     scene v14s43c_1a
     with dissolve
 
-    pe "*Whispers* Just play along! Ahem…"
+    pe "*Whispers* Just play along! Ahem..."
 
-    if PenRomScene:
+    if v14_PenRomScene:
 
         scene v14s43c_1l # FPP. same as v14s43c_1 Penelope has a smug expression, mouth open
         with dissolve
@@ -343,7 +341,7 @@ label v14s43c:
         scene v14s43c_1l
         with dissolve
 
-        pe "*British accent* Very well, then… On the night before last, at what time did General Pines leave to go to his quarters?"
+        pe "*British accent* Very well, then... On the night before last, at what time did General Pines leave to go to his quarters?"
 
         scene v14s43c_1m
         with dissolve
@@ -363,17 +361,17 @@ label v14s43c:
         scene v14s43c_1o # FPP. same as v14s43c_1n has lowered her hands, mouth still open
         with dissolve
 
-        pe "*British accent* That… That's exactly what the general's wife said…"
+        pe "*British accent* That... That's exactly what the general's wife said..."
 
         scene v14s43c_1p # FPP. same as v14s43c_1o Penelopes mouth is closed
         with dissolve
 
-        u "*British accent* And you dare accuse the king… Your accusation was out of line, you know where my loyalty lies."
+        u "*British accent* And you dare accuse the king... Your accusation was out of line, you know where my loyalty lies."
 
         scene v14s43c_1o
         with dissolve
 
-        pe "*British accent* My accusation was misplaced, yes, but sadly… It wasn't the worst thing I've done tonight."
+        pe "*British accent* My accusation was misplaced, yes, but sadly... It wasn't the worst thing I've done tonight."
 
         scene v14s43c_1p
         with dissolve
@@ -383,7 +381,7 @@ label v14s43c:
         scene v14s43c_1q # FPP. same as v14s43c_1o Penelope begins tearing up, mouth open
         with dissolve
 
-        pe "*British accent* My love, I'm so sorry… *Sniffles*"
+        pe "*British accent* My love, I'm so sorry... *Sniffles*"
 
         scene v14s43c_1r # FPP. same as v14s43c_1q Penelope's mouth is closed
         with dissolve
@@ -401,7 +399,7 @@ label v14s43c:
         scene v14s43c_1s # FPP. same as v14s43c_1c Penelope has slight tears in her eyes, mouth closed
         with dissolve
 
-        u "(Oh, shit…)"
+        u "(Oh, shit...)"
 
         scene v14s43c_1q
         with dissolve
@@ -416,7 +414,7 @@ label v14s43c:
         scene v14s43c_1t # FPP. same as v14s43c_1q Penelope pretends to eat food
         with dissolve
 
-        u "*British accent* Wait… You… You poisoned me?!"
+        u "*British accent* Wait... You... You poisoned me?!"
 
         scene v14s43c_1q
         with dissolve
@@ -436,7 +434,7 @@ label v14s43c:
         scene v14s43c_1r
         with dissolve
 
-        u "*British accent* The kingdom… The children! Who will be there if not we?"
+        u "*British accent* The kingdom... The children! Who will be there if not we?"
 
         scene v14s43c_1q
         with dissolve
@@ -451,7 +449,7 @@ label v14s43c:
         scene v14s43c_4f # FPP. same as v14s43c_4 Penelope has a sad/worried expression, slight tears in her eyes, mouth closed, looking at MC
         with dissolve
 
-        u "*British accent* I… I'm fading…"
+        u "*British accent* I... I'm fading..."
 
         scene v14s43c_3b # TPP. same as v14s43c_3a MC closes his eyes and lays down on the floor, Penelope looking at MC laying on the floor
         with dissolve
@@ -466,17 +464,17 @@ label v14s43c:
         scene v14s43c_6
         with dissolve
 
-        u "(She’s lying on me? *Chuckles*)"
+        u "(She's lying on me? *Chuckles*)"
 
         scene v14s43c_6
         with dissolve
 
-        pe "*British accent* Goodbye, be free, and… *Sniffles* I'm sorry…"
+        pe "*British accent* Goodbye, be free, and... *Sniffles* I'm sorry..."
 
         scene v14s43c_6
         with dissolve
 
-        pe "And… SCENE!"
+        pe "And... SCENE!"
 
         scene v14s43c_7 # FPP. Mc is laying down so the background would resemble as such, Penelope is still laying on top of MC, one hand over his cheek, full smile, and blushing looking at MC, mouth closed
         with dissolve
@@ -501,7 +499,7 @@ label v14s43c:
         scene v14s43c_1h
         with dissolve
 
-        pe "No need for words, you dirty slag. Ole Brittle has sworn on her life and children that her accusations are true… and you dare say she's a liar?!"
+        pe "No need for words, you dirty slag. Ole Brittle has sworn on her life and children that her accusations are true... and you dare say she's a liar?!"
 
         scene v14s43c_1i
         with dissolve
@@ -511,7 +509,7 @@ label v14s43c:
         scene v14s43c_1h
         with dissolve
 
-        pe "I won't hear anymore of this. I’m finished."
+        pe "I won't hear anymore of this. I'm finished."
 
         scene v14s43c_5g # TPP. same as v14s43c_5 Penelope is still sitting looking up at MC mouth closed, Mc looking down at Penelope slight sngry expression, mouth open
         with dissolve
@@ -521,7 +519,7 @@ label v14s43c:
         scene v14s43c_5h # TPP. same as v14s43c_5 MC blinks and stumbles backwards
         with dissolve
 
-        u "*Coughs* I can’t… Breathe… I…"
+        u "*Coughs* I can't... Breathe... I..."
 
         scene v14s43c_5i # TPP. same as v14s43c_5h Penelope stands up with an evil smile looking at MC, Mc stumbles back even more and blinks again
         with dissolve
@@ -531,7 +529,7 @@ label v14s43c:
         scene v14s43c_4g # FPP. same as v14s43c_4b Penelope has an evil smile, mouth closed
         with dissolve
 
-        u "You! What… *Moans* What did you do to me?!"
+        u "You! What... *Moans* What did you do to me?!"
 
         scene v14s43c_4h # FPP. same as v14s43c_4g Penelope's mouth is open
         with dissolve
@@ -561,7 +559,7 @@ label v14s43c:
         scene v14s43c_6
         with dissolve
 
-        pe "And… SCENE!"
+        pe "And... SCENE!"
 
     scene v14s43c_3
     with dissolve
@@ -581,7 +579,7 @@ label v14s43c:
     scene v14s43c_4a
     with dissolve
 
-    u "Ha… ha… ha… *Chuckles* So, are we done?"
+    u "Ha... ha... ha... *Chuckles* So, are we done?"
 
     scene v14s43c_4
     with dissolve
@@ -598,7 +596,7 @@ label v14s43c:
 
     pe "Good, see ya!"
 
-    if PenelopeLoyal and PenRomScene:
+    if penelopeloyal and v14_PenRomScene:
 
         scene v14s43c_3c # same as v14s43c_3c Penelope quickly kisses MC on the cheek, Penelope eyes closed, Mc eyes open, slight smile
         with dissolve
@@ -606,7 +604,7 @@ label v14s43c:
     scene v14s43c_9 # Penelope runs off down the hallway back turned to MC
     with dissolve
 
-    u "Oh- (I didn't even say bye… *Laughs* Maybe she was in a rush?)"
+    u "Oh- (I didn't even say bye... *Laughs* Maybe she was in a rush?)"
 
     scene v14s43c_10 # TPP. Mc walks down the hallway, slight smile, mouth closed
     with dissolve

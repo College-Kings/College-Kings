@@ -6,51 +6,51 @@
 
 init python:
     def v9s16_reply1():
-        contact_Lindsey.newMessage(_("I see you're still riding high from that fight"))
-        contact_Lindsey.addReply(_("Maybe a little. But I'm still happy you texted"))
-        contact_Lindsey.newMessage(_("I just wanted to say goodnight... and I was thinking about you"))
-        contact_Lindsey.addReply(_("I'll definitely be thinking about you now instead of sleeping ;)"))
-        contact_Lindsey.newMessage(_("Can I text you before the Brawl?"))
-        contact_Lindsey.addReply(_("YES! Can't wait. Goodnight to you too"))
-        contact_Lindsey.newMessage(_("Goodnight"))
+        lindsey.messenger.newMessage(_("I see you're still riding high from that fight"))
+        lindsey.messenger.addReply(_("Maybe a little. But I'm still happy you texted"))
+        lindsey.messenger.newMessage(_("I just wanted to say goodnight... and I was thinking about you"))
+        lindsey.messenger.addReply(_("I'll definitely be thinking about you now instead of sleeping ;)"))
+        lindsey.messenger.newMessage(_("Can I text you before the Brawl?"))
+        lindsey.messenger.addReply(_("YES! Can't wait. Goodnight to you too"))
+        lindsey.messenger.newMessage(_("Goodnight"))
 
     def v9s16_reply2():
-        contact_Lindsey.newMessage(_("Yeah, just wanted to say hi. I was thinking about you"))
-        contact_Lindsey.addReply(_("Oooh, anything interesting? ;)"))
-        contact_Lindsey.newMessage(_("A little ;)"))
-        contact_Lindsey.addReply(_("Do tell!"))
-        contact_Lindsey.newMessage(_("Maybe after the Brawl... if you win"))
-        contact_Lindsey.addReply(_("I sure will now!"))
-        contact_Lindsey.newMessage(_("Fingers crossed. Goodnight!"))
+        lindsey.messenger.newMessage(_("Yeah, just wanted to say hi. I was thinking about you"))
+        lindsey.messenger.addReply(_("Oooh, anything interesting? ;)"))
+        lindsey.messenger.newMessage(_("A little ;)"))
+        lindsey.messenger.addReply(_("Do tell!"))
+        lindsey.messenger.newMessage(_("Maybe after the Brawl... if you win"))
+        lindsey.messenger.addReply(_("I sure will now!"))
+        lindsey.messenger.newMessage(_("Fingers crossed. Goodnight!"))
         
     def v9s16_reply3():
-        contact_Lindsey.newMessage(_("I was thinking about you"))
-        contact_Lindsey.addReply(_("Oh? Anything fun?"))
-        contact_Lindsey.newMessage(_("Maybe ;)"))
-        contact_Lindsey.addReply(_("I'd love to hear more"))
-        contact_Lindsey.newMessage(_("What do you think about me checking on you again tomorrow?"))
-        contact_Lindsey.addReply(_("I think I should get punched more often!"))
-        contact_Lindsey.newMessage(_("You're so sweet, goodnight :)"))
-        contact_Lindsey.addReply(_("Goodnight"))
+        lindsey.messenger.newMessage(_("I was thinking about you"))
+        lindsey.messenger.addReply(_("Oh? Anything fun?"))
+        lindsey.messenger.newMessage(_("Maybe ;)"))
+        lindsey.messenger.addReply(_("I'd love to hear more"))
+        lindsey.messenger.newMessage(_("What do you think about me checking on you again tomorrow?"))
+        lindsey.messenger.addReply(_("I think I should get punched more often!"))
+        lindsey.messenger.newMessage(_("You're so sweet, goodnight :)"))
+        lindsey.messenger.addReply(_("Goodnight"))
 
     def v9s16_reply4():
-        contact_Lindsey.newMessage(_("I just couldn't stop worrying about you"))
-        contact_Lindsey.addReply(_("That's very nice of you"))
-        contact_Lindsey.newMessage(_("Can I check on you again tomorrow?"))
-        contact_Lindsey.addReply(_("Sure! Anytime"))
-        contact_Lindsey.newMessage(_("Good, maybe we can meet up, let me get a good look at you before the Brawl"))
-        contact_Lindsey.addReply(_("I'd love too!"))
-        contact_Lindsey.newMessage(_("Great, goodnight :)"))
-        contact_Lindsey.addReply(_("Goodnight"))
+        lindsey.messenger.newMessage(_("I just couldn't stop worrying about you"))
+        lindsey.messenger.addReply(_("That's very nice of you"))
+        lindsey.messenger.newMessage(_("Can I check on you again tomorrow?"))
+        lindsey.messenger.addReply(_("Sure! Anytime"))
+        lindsey.messenger.newMessage(_("Good, maybe we can meet up, let me get a good look at you before the Brawl"))
+        lindsey.messenger.addReply(_("I'd love too!"))
+        lindsey.messenger.newMessage(_("Great, goodnight :)"))
+        lindsey.messenger.addReply(_("Goodnight"))
 
     def v9s16_reply5():
-        contact_Emily.newImgMessage("images/v9/scene 16/v9emiKiwii.webp")
-        contact_Emily.addReply(_("Be right there!"))
-        contact_Emily.newMessage(_("See you soon!"))
+        emily.messenger.newImgMessage("images/v9/scene 16/v9emiKiwii.webp")
+        emily.messenger.addReply(_("Be right there!"))
+        emily.messenger.newMessage(_("See you soon!"))
 
     def v9s16_reply6():
-        contact_Emily.newImgMessage("images/v9/scene 16/v9emiKiwii.webp")
-        contact_Emily.addReply(_("Be right there!"))
+        emily.messenger.newImgMessage("images/v9/scene 16/v9emiKiwii.webp")
+        emily.messenger.addReply(_("Be right there!"))
 
 label v9_room_thur_night:
 
@@ -68,14 +68,14 @@ label v9_room_thur_night:
 
             u "(Ugh, now what.)"
 
-            $ contact_Emily.newMessage(_("I'm bored. Come hang out."), queue=False)
-            $ contact_Emily.addReply(_("Sure! Gimme a sec."))
-            $ contact_Emily.addReply(_("It's kinda late"), v9s16_reply5)
+            $ emily.messenger.newMessage(_("I'm bored. Come hang out."), queue=False)
+            $ emily.messenger.addReply(_("Sure! Gimme a sec."))
+            $ emily.messenger.addReply(_("It's kinda late"), v9s16_reply5)
 
             label s16_PhoneContinueW:
-                if contact_Emily.replies:
+                if emily.messenger.replies:
                     call screen phone
-                if contact_Emily.replies:
+                if emily.messenger.replies:
                     "(I should reply to Emily.)"
                     jump s16_PhoneContinueW
 
@@ -103,14 +103,14 @@ label v9_room_thur_night:
 
             u "(Ugh, now what.)"
 
-            $ contact_Emily.newMessage(_("I'm bored. Come hang out."), queue=False)
-            $ contact_Emily.addReply(_("Sure! Gimme a sec."))
-            $ contact_Emily.addReply(_("It's kinda late"), v9s16_reply6)
+            $ emily.messenger.newMessage(_("I'm bored. Come hang out."), queue=False)
+            $ emily.messenger.addReply(_("Sure! Gimme a sec."))
+            $ emily.messenger.addReply(_("It's kinda late"), v9s16_reply6)
             
             label s16_PhoneContinueA:
-                if contact_Emily.replies:
+                if emily.messenger.replies:
                     call screen phone
-                if contact_Emily.replies:
+                if emily.messenger.replies:
                     "(I should reply to Emily.)"
                     jump s16_PhoneContinueA
 
@@ -208,7 +208,7 @@ label v9_emily_dorm:
 
         menu:
             "Let Emily gloat":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "You're just so much better than me."
 
@@ -248,7 +248,7 @@ label v9_emily_dorm:
                 em "You always were a slick one, [name]."
 
             "Say you were winning":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "I was one second away from the holy grail."
 
@@ -339,7 +339,7 @@ label v9_emily_dorm:
 
         menu:
             "Brag":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "I guess that makes you my Adrian."
 
@@ -359,7 +359,7 @@ label v9_emily_dorm:
                 em "Well, in that case..."
 
             "Play it off":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 u "Aww, you don't have anything to worry about. One punch isn't gonna change me."
 
@@ -426,7 +426,7 @@ label v9_emily_dorm:
             "Make a move on Emily":
                 u "(This feels like the right time)"
                 $ v9_em_dorm_scene = True
-                #$ addPoint("tm", sum([ bathroomblowjob, v8_chloesex, v8_riley_lewd_ending, v8_hocoamber, amberSexAtJoshs, v9_aubrey_lake ])) ###Loyaltymod
+                #$ add_point(KCT.TROUBLEMAKER, sum([ bathroomblowjob, v8_chloesex, v8_riley_lewd_ending, v8_hocoamber, amberSexAtJoshs, v9_aubrey_lake ])) ###Loyaltymod
 
             "Head home":
                 scene v9emi37 # TPP. Show MC walking towards the exit of Emily's room, Emily in view still sat on the bed, cheeky grin, mouth open, MC smile, mouth closed.
@@ -443,7 +443,7 @@ label v9_emily_dorm:
 
         menu:
             "Be Macho":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 u "I've been training. Gotta learn to take a punch as much as land one."
 
@@ -857,19 +857,19 @@ label v9_thur_night_aft_em_w:
         u "(I need to get some sleep.)"
 
     if hl_punch:
-        $ contact_Lindsey.newMessage(_("How are you doing tonight?"), queue=False)
-        $ contact_Lindsey.addReply(_("Better now that I'm talking to you"), v9s16_reply1)
-        $ contact_Lindsey.addReply(_("Super. You getting ready for bed?"), v9s16_reply2)
+        $ lindsey.messenger.newMessage(_("How are you doing tonight?"), queue=False)
+        $ lindsey.messenger.addReply(_("Better now that I'm talking to you"), v9s16_reply1)
+        $ lindsey.messenger.addReply(_("Super. You getting ready for bed?"), v9s16_reply2)
 
     else:
-        $ contact_Lindsey.newMessage(_("Hey, how you feeling?"), queue=False)
-        $ contact_Lindsey.addReply(_("Better now that I'm talking to you"), v9s16_reply3)
-        $ contact_Lindsey.addReply(_("I'm ok, it's really not that bad"), v9s16_reply4)
+        $ lindsey.messenger.newMessage(_("Hey, how you feeling?"), queue=False)
+        $ lindsey.messenger.addReply(_("Better now that I'm talking to you"), v9s16_reply3)
+        $ lindsey.messenger.addReply(_("I'm ok, it's really not that bad"), v9s16_reply4)
 
     label s16_ContinueW1:
-        if contact_Lindsey.replies:
+        if lindsey.messenger.replies:
             call screen phone
-        if contact_Lindsey.replies:
+        if lindsey.messenger.replies:
             "(I should reply to Lindsey.)"
             jump s16_ContinueW1
 
@@ -904,19 +904,19 @@ label v9_thur_night_aft_em_a:
         u "(I need to get some sleep.)"
 
     if hl_punch:
-        $ contact_Lindsey.newMessage(_("How are you doing tonight?"), queue=False)
-        $ contact_Lindsey.addReply(_("Better now that I'm talking to you"), v9s16_reply1)
-        $ contact_Lindsey.addReply(_("Super. You getting ready for bed?"), v9s16_reply2)
+        $ lindsey.messenger.newMessage(_("How are you doing tonight?"), queue=False)
+        $ lindsey.messenger.addReply(_("Better now that I'm talking to you"), v9s16_reply1)
+        $ lindsey.messenger.addReply(_("Super. You getting ready for bed?"), v9s16_reply2)
 
     else:
-        $ contact_Lindsey.newMessage(_("Hey, how you feeling?"), queue=False)
-        $ contact_Lindsey.addReply(_("Better now that I'm talking to you"), v9s16_reply3)
-        $ contact_Lindsey.addReply(_("I'm ok, it's really not that bad"), v9s16_reply4)
+        $ lindsey.messenger.newMessage(_("Hey, how you feeling?"), queue=False)
+        $ lindsey.messenger.addReply(_("Better now that I'm talking to you"), v9s16_reply3)
+        $ lindsey.messenger.addReply(_("I'm ok, it's really not that bad"), v9s16_reply4)
 
     label s16_ContinueA1:
-        if contact_Lindsey.replies:
+        if lindsey.messenger.replies:
             call screen phone
-        if contact_Lindsey.replies:
+        if lindsey.messenger.replies:
             "(I should reply to Lindsey.)"
             jump s16_ContinueA1
 

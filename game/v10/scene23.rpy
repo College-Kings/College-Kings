@@ -30,7 +30,7 @@ label v10_aft_walk_home:
     with dissolve
     menu:
         "Check it out":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v10smwh3 # FPP. POV is MC and Josh close in the alley, talking. Show Josh, normal expression, mouth closed.
             with fade
 
@@ -264,7 +264,7 @@ label v10_aft_walk_home:
             pause 0.5
         
         "Keep walking":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v10smwh2b
             with dissolve
 
@@ -281,14 +281,14 @@ label v10_aft_walk_home:
     play sound "sounds/vibrate.mp3"
 
     python:
-        contact_Lauren.newMessage("Hey, wanna hang out? I have some free time in between study sessions.", queue=False)
-        contact_Lauren.addReply("Sure, on my way")
-        contact_Lauren.newMessage(":)")
+        lauren.messenger.newMessage("Hey, wanna hang out? I have some free time in between study sessions.", queue=False)
+        lauren.messenger.addReply("Sure, on my way")
+        lauren.messenger.newMessage(":)")
 
     label v10s23_phoneCheckLau:
-        if contact_Lauren.replies:
+        if lauren.messenger.replies:
             call screen phone
-        if contact_Lauren.replies:
+        if lauren.messenger.replies:
             u "(I should reply to Lauren)"
             jump v10s23_phoneCheckLau
 

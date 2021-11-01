@@ -73,11 +73,11 @@ label prot_w_au:
 
     menu:
         "Pretend you know what you're doing":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             jump prot_w_au_wing
 
         "Ask what you need to do":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             jump prot_w_au_no_wing
 
 label prot_w_au_wing:
@@ -190,7 +190,7 @@ label prot_w_au_1:
 
     menu:
         "Pretend you know about it":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             jump prot_w_au_leg
         "Admit you don't know":
             jump prot_w_au_no_leg

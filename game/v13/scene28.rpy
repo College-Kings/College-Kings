@@ -174,7 +174,7 @@ label v13s28:
 
         menu:
             "Not a good idea, Sam":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 scene v13s28_7b # FPP. Same as v13s28_7, Samantha looking at MC, Samantha slight smile, mouth closed.
                 with dissolve
 

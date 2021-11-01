@@ -64,7 +64,7 @@ label v11_sam_spa:
 
     menu:
         "Check her out":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene v11sas3d # FPP. Same as v11sas3, but Samantha only in underwear
             with dissolve
@@ -718,8 +718,8 @@ label v11s28a_galleryScene:
     menu:
         "Massage her boob":
             $ v11_samantha_spa = True
-            $ addPoint("tm")
-            #$ addPoint("tm", sum([ v10_lauren_suck, v10_ambersex, v10_chloe_locker, v10_ri_sex, v11_fucked_candy, v11_aubrey_sex ])) ###Loyaltymod
+            $ add_point(KCT.TROUBLEMAKER)
+            #$ add_point(KCT.TROUBLEMAKER, sum([ v10_lauren_suck, v10_ambersex, v10_chloe_locker, v10_ri_sex, v11_fucked_candy, v11_aubrey_sex ])) ###Loyaltymod
 
             scene v11sas18a # TPP. Same as v11sas18, MC has his hands over her boob, she is smiling, mouth closed
             with dissolve
@@ -747,7 +747,7 @@ label v11s28a_galleryScene:
             u "Oh."
 
         "Don't massage her boob":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene v11sas18
             with dissolve

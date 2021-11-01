@@ -75,7 +75,7 @@ label v13s11:
 
     menu (fail_label="v13_push_ryan"):
         "Pretend to tie Ryan's shoe":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v13s11_7 # TPP. MC bends down and pretends to tie ryan's shoe
             with dissolve
 
@@ -124,7 +124,7 @@ label v13s11:
             jump v13_imre_continue
 
         "Push Ryan in front of Imre":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             pass
 
     label v13_push_ryan:
@@ -650,9 +650,9 @@ label v13_imre_continue:
 
         "Stick up for Ryan":
             if joinwolves:
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
             else:
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
         
             scene v13s11_33a
             with dissolve

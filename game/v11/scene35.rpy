@@ -89,7 +89,7 @@ label v11_riley_sex:
 
         menu:
             "Ladies love me":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 scene v11ris3e # FPP. Same as v11ris3d, different pose
                 with dissolve
@@ -147,7 +147,7 @@ label v11_riley_sex:
                 u "*Chuckles* Night Riley."
 
             "Wasn't a ladies man":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene v11ris3e
                 with dissolve
@@ -458,7 +458,7 @@ label v11_riley_sex:
 
             "Do something about it":
                 $ v11_rileysex = True
-                #$ addPoint("tm", sum([ v10_chloe_locker, v11_fucked_candy, v11_aubrey_sex, v11_msrose_scene, v11_samantha_spa ])) ###Loyaltymod
+                #$ add_point(KCT.TROUBLEMAKER, sum([ v10_chloe_locker, v11_fucked_candy, v11_aubrey_sex, v11_msrose_scene, v11_samantha_spa ])) ###Loyaltymod
                 $ rileyLike += 1
 
                 u "Keep talking like that and I will."

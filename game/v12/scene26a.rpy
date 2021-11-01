@@ -127,8 +127,8 @@ label v12_follow_chris:
 
     menu:
         "She wasn't overreacting":
-            $ addPoint("bf")
-            $ addPoint("tm")
+            $ add_point(KCT.BOYFRIEND)
+            $ add_point(KCT.TROUBLEMAKER)
             $ chrismad = True
 
             scene v12chf4a
@@ -219,7 +219,7 @@ label v12_follow_chris:
                 else:
                     $ grant_achievement("best_frenemies")
             
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v12chf4l # FPP. Same as v12chf4a, different pose
             with dissolve
 

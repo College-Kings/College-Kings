@@ -104,6 +104,9 @@ label v14s18:
 
     li "I'm worried that without your help, I'm a lost cause. I mean, we're friends... right?"
 
+    if v12_lindsey_sex: #to ensure compatibility flow with v12s17
+        $ lindseyrs = True
+
     if lindseyrs:
         scene v14s18_4a
         with dissolve

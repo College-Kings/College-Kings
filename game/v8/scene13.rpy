@@ -6,16 +6,16 @@
 
 init python:
     def v8s13_reply1(): # phn_chloe11_a
-        contact_Chloe.newMessage(_("Guess you'll have to wait and see ;)"))
-        contact_Chloe.addReply(_("I'm moving my stuff now. How about we get started tonight?"))
-        contact_Chloe.newMessage(_("You're such a flirt. Have a good night!"))
+        chloe.messenger.newMessage(_("Guess you'll have to wait and see ;)"))
+        chloe.messenger.addReply(_("I'm moving my stuff now. How about we get started tonight?"))
+        chloe.messenger.newMessage(_("You're such a flirt. Have a good night!"))
 
     def v8s13_reply2(): # phn_chloe11_b
-        contact_Chloe.newMessage(_("Aww, I like talking to you too. You're sweet."))
-        contact_Chloe.addReply(_("Sweet? Not hot? Or sexy? Or... anything but sweet?"))
-        contact_Chloe.newMessage(_("Sweet and cute ;)"))
-        contact_Chloe.addReply(_("I'll take it. For now. Talk to you when I get settled."))
-        contact_Chloe.newMessage(_("Good night."))
+        chloe.messenger.newMessage(_("Aww, I like talking to you too. You're sweet."))
+        chloe.messenger.addReply(_("Sweet? Not hot? Or sexy? Or... anything but sweet?"))
+        chloe.messenger.newMessage(_("Sweet and cute ;)"))
+        chloe.messenger.addReply(_("I'll take it. For now. Talk to you when I get settled."))
+        chloe.messenger.newMessage(_("Good night."))
 
 # SCENE 13: MOVING INTO THE APES
 label after_apes_ceremony:
@@ -45,9 +45,9 @@ label after_apes_ceremony:
     $ v8s13_kiwiiPost.newComment("Amber", _("Congrats people!!!"), mentions=["MC", "Ryan", "Caleb"], numberLikes=renpy.random.randint(50, 60), queue=False)
     $ v8s13_kiwiiPost.newComment("Caleb", _("Thanks everyone!"), numberLikes=renpy.random.randint(20, 30), queue=False)
 
-    $ contact_Chloe.newMessage(_("Congrats on getting in. Looks like we'll be seeing a lot of each other."), queue=False)
-    $ contact_Chloe.addReply(_("Exactly how much is a lot? ;)"), v8s13_reply1)
-    $ contact_Chloe.addReply(_("Hope so. I like talking to you."), v8s13_reply2)
+    $ chloe.messenger.newMessage(_("Congrats on getting in. Looks like we'll be seeing a lot of each other."), queue=False)
+    $ chloe.messenger.addReply(_("Exactly how much is a lot? ;)"), v8s13_reply1)
+    $ chloe.messenger.addReply(_("Hope so. I like talking to you."), v8s13_reply2)
 
     play sound "sounds/vibrate.mp3"
 
@@ -55,9 +55,9 @@ label after_apes_ceremony:
     with dissolve
 
     label phn_chloe11:
-        if contact_Chloe.replies:
+        if chloe.messenger.replies:
             call screen phone
-        if contact_Chloe.replies:
+        if chloe.messenger.replies:
             u "(I should probably reply.)"
             jump phn_chloe11
 
@@ -118,7 +118,7 @@ label phn_chloe11_done:
 
     menu:
         "Party":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ rejectedApesFun = False
 
             scene v8apes25d
@@ -134,7 +134,7 @@ label phn_chloe11_done:
             pause 0.5
 
         "Stay back and study":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ rejectedApesFun = True
 
             scene v8apes25d
@@ -173,7 +173,7 @@ label phn_chloe11_done:
     with dissolve
     ry "Woohoooo!"
 
-    if contact_Chloe.get_message("Guess you'll have to wait and see ;)"):
+    if chloe.messenger.get_message("Guess you'll have to wait and see ;)"):
         scene v8apes28 # FPP. MC inside the room now and he notices Chloe and Caleb chitchatting
         with dissolve
         u "(Oh, Chloe is here.)"
@@ -293,7 +293,7 @@ label phn_chloe11_done:
 
     menu:
         "Press it":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene v8apes34c
             with dissolve
@@ -304,7 +304,7 @@ label phn_chloe11_done:
             ca "It's just..."
 
         "Let it go":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene v8apes34c
             with dissolve

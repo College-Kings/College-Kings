@@ -277,7 +277,7 @@ label v14s22_sell_car:
     jump v14s22_end
 
 label v14s22_steal:
-    $ v14_lindsey_money_theft = True
+    $ v14s22_steal_fund = True
     scene v14s22_5j # FPP. same as v14s22_5 lindsey is really excited, and throws her hands up in the air
     with dissolve
 

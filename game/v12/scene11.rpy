@@ -304,7 +304,7 @@ label v12_paris_hotel:
 
     menu:
         "Support her choice":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v12pht9d
             with dissolve
 
@@ -323,7 +323,7 @@ label v12_paris_hotel:
 
         "Help Chris":
             $ v12_help_chris += 1
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v12pht9d
             with dissolve
 
@@ -362,7 +362,7 @@ label v12_paris_hotel:
 
     menu:
         "Yes":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v12pht9h
             with dissolve
 
@@ -374,7 +374,7 @@ label v12_paris_hotel:
             no "Haha, I'll think about it."
 
         "No":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v12pht9h 
             with dissolve
 

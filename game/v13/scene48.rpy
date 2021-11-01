@@ -134,14 +134,14 @@ label v13s48:
     
     menu:
         "Stay quiet":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v13s48_6
             with dissolve
 
             u "(I'll let her work.)"
 
         "DAMNNN...!":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v13s48_6
             with dissolve
             
@@ -302,11 +302,11 @@ label v13s48:
 
     menu:
         "Because we're friends":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             u "Because we're friends and it'd be nice to know you a bit better. *Chuckles*"
 
         "Because I like you":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             u "Because I like you, and it'd be nice to add more reasons why I like you to my list. *Chuckles*"
 
     scene v13s48_8a
@@ -536,7 +536,7 @@ label v13s48:
     menu :
         "Get her chocolates":
             $ aubrey.points += 1
-            $ addPoint ("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ v13s48_get_aubrey_chocolate = True
 
             u "Wait right here okay?"
@@ -647,7 +647,7 @@ label v13s48:
         
         menu:
             "I meant as friends":
-                $ addPoint ("bro")
+                $ add_point(KCT.BRO)
                 scene v13s48_8
                 with dissolve
 
@@ -659,7 +659,7 @@ label v13s48:
                 au "Mhmm, okay. *Chuckles* When are you thinking about going?"
 
             "I meant as a date":
-                $ addPoint ("bf")
+                $ add_point(KCT.BOYFRIEND)
                 scene v13s48_8
                 with dissolve
 
@@ -722,7 +722,7 @@ label v13s48:
 
         menu :
             "Go on the date":
-                $ addPoint ("bro")
+                $ add_point(KCT.BRO)
                 $ v13s48_ryan_double_date = True
 
                 scene v13s48_12
@@ -741,7 +741,7 @@ label v13s48:
                 u "Alright, sounds good."
 
             "Don't go on the date":
-                $ addPoint ("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene v13s48_12
                 with dissolve

@@ -58,7 +58,7 @@ label v9_hc_cont1:
 
     menu:
         "Heckle":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             jump v9_hc_heckle
         "Stay quiet":
             jump v9_hc_quiet
@@ -129,7 +129,7 @@ label v9_hc_cont2:
 
     menu:
         "Grumble with Cameron":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             jump v9_hc_grumble
         "Be happy with Penelope":
             jump v9_hc_penelope
@@ -237,7 +237,7 @@ label v9_hc_cont3:
         "Be scared":
             jump v9_hc_scared
         "Be ready":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             jump v9_hc_ready
         
 label v9_hc_scared:

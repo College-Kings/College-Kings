@@ -12,8 +12,8 @@ label v12_penelope_roof:
 
     play music "music/v12/Scene 3/Track Scene 3_1.mp3" fadein 2
 
-    $ contact_Penelope.newMessage("Hey, are you up still?", queue=False)
-    $ contact_Penelope.newMessage("If you are, can you meet me in the hallway?", queue=False)
+    $ penelope.messenger.newMessage("Hey, are you up still?", queue=False)
+    $ penelope.messenger.newMessage("If you are, can you meet me in the hallway?", queue=False)
 
     u "(It's Penelope.)"
 
@@ -22,14 +22,14 @@ label v12_penelope_roof:
     menu:
         "Reply":
             if penelopers:
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
-            $ contact_Penelope.addReply("Yeah, one sec", func=None)
+            $ penelope.messenger.addReply("Yeah, one sec", func=None)
 
             label v12_penelope_roof_text:
-                if contact_Penelope.replies:
+                if penelope.messenger.replies:
                     call screen phone
-                if contact_Penelope.replies:
+                if penelope.messenger.replies:
                     u "(I should probably reply.)"
                     jump v12_penelope_roof_text
 
@@ -169,14 +169,14 @@ label v12_penelope_roof:
 
             menu:
                 "Sure is":
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
                     scene v12penr11 # FPP View of MC, who is laying on his back looking up at the stars
                     with dissolve
 
                     u "It really is."
 
                 "You sure are":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
                     u "Yes, you are."
 
                     scene v12penr10a # FPP Same angle as v12penr10, Penelope looking back at MC, neutral expression, mouth open
@@ -320,7 +320,7 @@ label v12_penelope_roof:
 
                 menu:
                     "Be shocked":
-                        $ addPoint("bro")
+                        $ add_point(KCT.BRO)
 
                         u "*Gulp*"
 
@@ -340,7 +340,7 @@ label v12_penelope_roof:
                         pe "*Laughs* Yeah, you've got a few other things to figure out before you start thinking about tying the knot."
 
                     "Be bold":
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
 
                         $ grant_achievement("a_person_like_me")
                         u "I'm a guy like me."
@@ -474,7 +474,7 @@ label v12_penelope_roof:
             pause 0.75
 
         "Don't reply":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene v12penr19 # FPP MC's view sitting on his bed, looking down at his phone, which he just turned off
             with dissolve

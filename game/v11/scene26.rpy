@@ -219,7 +219,7 @@ label v11_hotel_bar_wolves:
 
         menu:
             "Go to her room":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene v11hrs5a # TPP Same angle as v11hrs5, MC alone at bar, getting off of bar stool to leave
                 with dissolve

@@ -73,7 +73,7 @@ label v13s25:
 
     menu:
         "Yes":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
           
             scene v13s25_3d # FPP. Same as v13s25_3c Emmy's finger has moved from corner of lip to just under the lip, mouth closed
             with dissolve
@@ -156,7 +156,7 @@ label v13s25:
 
                 menu:
                     "Let her":
-                        $ addPoint("tm")
+                        $ add_point(KCT.TROUBLEMAKER)
                         label v13s25_emmysg:
 
                         scene v13s25_9
@@ -170,7 +170,7 @@ label v13s25:
                         emmy "Don't be gentle."
 
                         stop music fadeout 3
-                        #$ addPoint("tm", sum([ v12_lindsey_sex, v12_msrose_sex, v12_lauren_sex, v12_nora_sex, v13_rileysex ])) ###Loyaltymod
+                        #$ add_point(KCT.TROUBLEMAKER, sum([ v12_lindsey_sex, v12_msrose_sex, v12_lauren_sex, v12_nora_sex, v13_rileysex ])) ###Loyaltymod
 
                         if config_censored:
                             call screen censoredPopup("v13s25_nsfwSkipLabel1")
@@ -178,7 +178,7 @@ label v13s25:
                         jump v13_emmy_sex
 
                     "Stop her":
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
 
                         scene v13s25_9
                         with dissolve
@@ -272,7 +272,7 @@ label v13s25:
                 jump v13s25_no_sex
 
         "No":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v13s25_3
             with dissolve
 

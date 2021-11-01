@@ -43,7 +43,7 @@ label v12_amber_bus:
     menu:
         "Tease her":
             $ v11_tease_amber += 1
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v12amb3b # FPP. Same as v12amb3, Amber slight smile, mouth closed, different pose
             with dissolve
 
@@ -60,7 +60,7 @@ label v12_amber_bus:
             u "I may be willing to take that risk."
 
         "Convince her":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v12amb3b
             with dissolve
 
@@ -212,7 +212,7 @@ label v12_amber_bus:
             u "Exactly."
 
         "Say something":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ v12_amber_tell_riley = True
 
             u "You should just get it over with and tell her what's up."

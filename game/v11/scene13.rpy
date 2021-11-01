@@ -32,7 +32,7 @@ label v11_aubrey_plane_sex:
             "Go after her":
                 label v11_aubrey_plane_sex_sg:
                 $ v11_aubrey_sex = True
-                #$ addPoint("tm", sum([ aubrey_bathroom_sex, v10_lauren_suck, v10_ambersex, v10_chloe_locker, v10_ri_sex, v11_fucked_candy ])) ###Loyaltymod
+                #$ add_point(KCT.TROUBLEMAKER, sum([ aubrey_bathroom_sex, v10_lauren_suck, v10_ambersex, v10_chloe_locker, v10_ri_sex, v11_fucked_candy ])) ###Loyaltymod
 
                 scene v11aub4
                 with dissolve
@@ -314,14 +314,14 @@ label v11_aubrey_plane_sex:
 
                 menu:
                     "No, not really":
-                        $ addPoint("tm")
+                        $ add_point(KCT.TROUBLEMAKER)
                         scene v11aub18a # FPP. Same as v11aub18, Aubrey mouth closed, slightly smiling
                         with dissolve
 
                         u "Uhm... I'm not sure I agree."
                         
                     "Kinda hot":
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
                         scene v11aub18a
                         with dissolve
 

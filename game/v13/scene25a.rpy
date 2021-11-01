@@ -26,7 +26,7 @@ label v13s25a:
 
     menu:
         "Maybe":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene v13s25a_2
             with dissolve
@@ -123,7 +123,7 @@ label v13s25a:
             jump v13s27
 
         "No":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene v13s25a_2
             with dissolve

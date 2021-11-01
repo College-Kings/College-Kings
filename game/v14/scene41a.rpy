@@ -3,7 +3,6 @@
 # Characters: GRAYSON (Outfit: 3), MC (Outfit: 1), CAMERON (Outfit: 3), RYAN (Outfit: 1)
 # Time: Morning
 
-
 label v14s41a:
 
     scene v14s41a_1 # TPP. Show mc waking up in bed shocked expression, mouth open
@@ -68,7 +67,7 @@ label v14s41a:
         scene v14s41a_5
         with dissolve
 
-        gr "We're here, for whatever I say we're here for. I don't know what’s gotten into you lately, man."
+        gr "We're here, for whatever I say we're here for. I don't know what's gotten into you lately, man."
 
         scene v14s41a_4b # FPP. same as v14s41a_4 Cameron avoids looking at Grayson, no expression, mouth closed
         with dissolve
@@ -78,7 +77,7 @@ label v14s41a:
         scene v14s41a_6 # FPP. MC looks to his left and see's a close-up shot of just Ryan looking at Grayson, Ryan's mouth is open, Ryan has a slight smile
         with dissolve
 
-        ry "Umm… Anyway, if you're talking about the race that means you must've found a way to take Chloe down. Ha!"
+        ry "Umm... Anyway, if you're talking about the race that means you must've found a way to take Chloe down. Ha!"
 
         scene v14s41a_5b # FPP. same as v14s41a_5a Grayson is looking at Ryan, slight smile, mouth open
         with dissolve
@@ -98,7 +97,7 @@ label v14s41a:
         scene v14s41a_6b # FPP. same as v14s41a_6 Ryan is slightly angry
         with dissolve
 
-        ry "But… Why the fuck not?"
+        ry "But... Why the fuck not?"
 
         scene v14s41a_5c # FPP. same as v14s41a_5 Grayson is looking at Ryan, grayson is slightly annoyed
         with dissolve
@@ -108,7 +107,7 @@ label v14s41a:
         scene v14s41a_6a
         with dissolve
 
-        ry "Yeah, but like… Why are you saying so? You said it yourself, you guys have a rough past."
+        ry "Yeah, but like... Why are you saying so? You said it yourself, you guys have a rough past."
 
         scene v14s41a_4
         with dissolve
@@ -118,7 +117,7 @@ label v14s41a:
         scene v14s41a_5c
         with dissolve
 
-        gr "Look… Going against Chloe here isn't a good look for the Apes. If she ends up winning and we went after her, it'd backfire instantly and I don't want that. Make sense?"
+        gr "Look... Going against Chloe here isn't a good look for the Apes. If she ends up winning and we went after her, it'd backfire instantly and I don't want that. Make sense?"
 
         scene v14s41a_6
         with dissolve
@@ -157,7 +156,7 @@ label v14s41a:
         scene v14s41a_4
         with dissolve
 
-        ca "We’re all here now, what’s the news?"
+        ca "We're all here now, what's the news?"
 
         scene v14s41a_5e # FPP. same as v14s41a_5d Grayson is looking at Cameron, mouth open
         with dissolve
@@ -172,7 +171,7 @@ label v14s41a:
         scene v14s41a_5f # FPP. same as v14s41a_5a Grayson looks towards his pants and pulls his phone from his pocket
         with dissolve
 
-        gr "Heh…"
+        gr "Heh..."
 
         scene v14s41a_6c # FPP. same as v14s41a_6 Ryan increases to a full smile, mouth open
         with dissolve
@@ -207,14 +206,14 @@ label v14s41a:
         scene v14s41a_5j # FPP. same as v14s41a_5i Grayson is looking at MC, Grayson is still holding his phone, the image from v14s41a_3b is now on the TV screen behind Grayson, Grayson has a smug/grinning expression, mouth closed
         with dissolve
 
-        u "(Oh… shit!)"
+        u "(Oh... shit!)"
 
         if chloegf:
 
             scene v14s41a_9 # FPP. A close up view of just the TV with the image from v14s41a_3b being projected on the screen
             with dissolve
 
-            u "Wait…"
+            u "Wait..."
 
         scene v14s41a_5h
         with dissolve
@@ -229,7 +228,7 @@ label v14s41a:
         scene v14s41a_6c
         with dissolve
 
-        ry "Holy… Ffffffuck yeah, dude! How the hell did you get that?"
+        ry "Holy... Ffffffuck yeah, dude! How the hell did you get that?"
 
         scene v14s41a_5b
         with dissolve
@@ -259,7 +258,7 @@ label v14s41a:
         scene v14s41a_5a
         with dissolve
 
-        gr "Good. So I'm gonna send this picture to all of you, and I want you to post it to your Kiwii’ss right now."
+        gr "Good. So I'm gonna send this picture to all of you, and I want you to post it to your Kiwii'ss right now."
 
         scene v14s41a_5d
         with dissolve
@@ -282,9 +281,9 @@ label v14s41a:
         menu:
 
             "Stay quiet":
-                $ addpoint ("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ lindseysupport.points += 2
-                ApesPostChloePics = True
+                $ v14_ApesPostChloePics = True
 
                 scene v14s41a_5a
                 with dissolve
@@ -297,7 +296,7 @@ label v14s41a:
                 u "*Sighs* Whatever."
 
             "Stand up for Chloe":
-                $ addPoint ("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ lindseysupport.points -= 2
 
                 scene v14s41a_5l
@@ -318,7 +317,7 @@ label v14s41a:
                 scene v14s41a_6d # FPP. same as v14s41a_6b Ryan is now looking at mc, slightly angry, mouth open
                 with dissolve
 
-                ry "Oh my god, here we go…"
+                ry "Oh my god, here we go..."
 
                 scene v14s41a_6e # FPP. same as v14s41a_6d Ryan's mouth is closed
                 with dissolve
@@ -328,7 +327,7 @@ label v14s41a:
                 scene v14s41a_6d
                 with dissolve
 
-                ry "You’re supporting Chloe, all over again."
+                ry "You're supporting Chloe, all over again."
 
                 scene v14s41a_6e
                 with dissolve
@@ -346,7 +345,7 @@ label v14s41a:
                 menu:
 
                     "Bad look for Apes":
-                        $ addpoint ("bro")
+                        $ add_point(KCT.BRO)
                         $ lindseysupport.points -= 2
 
                         scene v14s41a_5l
@@ -370,19 +369,19 @@ label v14s41a:
                         u "Okay..."
 
                     "Not fair to Chloe":
-                        $ addpoint ("bf")
+                        $ add_point(KCT.BOYFRIEND)
 
                         scene v14s41a_5l
                         with dissolve
 
-                        u "As I said, it's not fair to Chloe. Having that photo posted all over Kiwii, and especially by all of her ex-boyfriend’s frat members, would be a horrible experience for her."
+                        u "As I said, it's not fair to Chloe. Having that photo posted all over Kiwii, and especially by all of her ex-boyfriend's frat members, would be a horrible experience for her."
 
                         scene v14s41a_5a
                         with dissolve
 
-                        gr "*Laughs* We don't give a fuck about all that. Feelings don’t mean shit, [name]."
+                        gr "*Laughs* We don't give a fuck about all that. Feelings don't mean shit, [name]."
 
-                        if kct = "popular"
+                        if kct == "popular":
                             $ lindseysupport.points -= 2
 
                             scene v14s41a_6a
@@ -398,7 +397,7 @@ label v14s41a:
                             scene v14s41a_5l
                             with dissolve
 
-                            mc "Feelings don't mean shit. That's what he said."
+                            u "Feelings don't mean shit. That's what he said."
 
                             scene v14s41a_5c
                             with dissolve
@@ -433,7 +432,7 @@ label v14s41a:
                             scene v14s41a_5l
                             with dissolve
 
-                            mc "Yes."
+                            u "Yes."
 
                             scene v14s41a_3c
                             with dissolve
@@ -442,7 +441,7 @@ label v14s41a:
 
                         else:
                             $ lindseysupport.points += 2
-                            ApesPostChloePics = True
+                            $ v14_ApesPostChloePics = True
 
                             scene v14s41a_5a
                             with dissolve

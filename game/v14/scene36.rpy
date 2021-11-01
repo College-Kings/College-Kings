@@ -19,7 +19,7 @@ label v14s36:
     scene v14s36_2a # FPP. same as v14s36_2 Jenny's mouth is closed
     with dissolve
 
-    u "Shit, Jenny… How'd you find this place?"
+    u "Shit, Jenny... How'd you find this place?"
 
     scene v14s36_2
     with dissolve
@@ -44,7 +44,7 @@ label v14s36:
     scene v14s36_2
     with dissolve
 
-    u "That's a good idea. Let’s start slow. *Laughs*"
+    u "That's a good idea. Let's start slow. *Laughs*"
 
     scene v14s36_3 # TPP. MC and Jenny are standing both put one foot into the water, no expressions, mouths closed
     with dissolve
@@ -74,12 +74,12 @@ label v14s36:
     scene v14s36_4a
     with dissolve
 
-    u "Oh. Haha… Is Penelope busy today?"
+    u "Oh. Haha... Is Penelope busy today?"
 
     scene v14s36_4
     with dissolve
 
-    jen "Yeah, she didn’t say much. Just that she was too busy to meet me."
+    jen "Yeah, she didn't say much. Just that she was too busy to meet me."
 
     scene v14s36_4
     with dissolve
@@ -104,7 +104,7 @@ label v14s36:
     scene v14s36_4
     with dissolve
 
-    jen "Hmm… I had a friend named Chloe when I was younger. *Chuckles*"
+    jen "Hmm... I had a friend named Chloe when I was younger. *Chuckles*"
 
     scene v14s36_4a
     with dissolve
@@ -114,24 +114,24 @@ label v14s36:
     scene v14s36_4
     with dissolve
 
-    jen "Tall, blonde, and a true badass… *Chuckles* We did pageants together when we were kids."
+    jen "Tall, blonde, and a true badass... *Chuckles* We did pageants together when we were kids."
 
     scene v14s36_4a
     with dissolve
 
-    u "*Chuckles* Well, the Chloe I know is definitely a badass, or a bad bitch, depending on who you ask… *Laughs*."
+    u "*Chuckles* Well, the Chloe I know is definitely a badass, or a bad bitch, depending on who you ask... *Laughs*."
 
     scene v14s36_4b
     with dissolve
 
-    jen "Haha! Wait, no way… What's her last name?"
+    jen "Haha! Wait, no way... What's her last name?"
 
     scene v14s36_4c
     with dissolve
 
     u "Moralez?"
 
-    scene v14s36_3b # TPP. same as v14s36_3a Jenny is shocked mouth open and grabs MC’s leg as a reaction
+    scene v14s36_3b # TPP. same as v14s36_3a Jenny is shocked mouth open and grabs MC's leg as a reaction
     with dissolve
 
     pause 0.75
@@ -149,7 +149,7 @@ label v14s36:
     scene v14s36_4
     with dissolve
 
-    jen "*Chuckles* This is crazy! Your Chloe is my Chloe…"
+    jen "*Chuckles* This is crazy! Your Chloe is my Chloe..."
 
     scene v14s36_4a
     with dissolve
@@ -164,12 +164,12 @@ label v14s36:
     scene v14s36_4a
     with dissolve
 
-    u "Well, like I said, she’s currently being challenged by a fellow Chick named Lindsey."
+    u "Well, like I said, she's currently being challenged by a fellow Chick named Lindsey."
 
     scene v14s36_4e # FPP. same as v14s36_4 Jenny rolls her eyes, and laughs, mouth open
     with dissolve
 
-    jen "Oh, pfft… *Laughs*  There's no way she’ll lose to some chick named Lindsey, haha."
+    jen "Oh, pfft... *Laughs*  There's no way she'll lose to some chick named Lindsey, haha."
 
     scene v14s36_4
     with dissolve
@@ -184,7 +184,7 @@ label v14s36:
     scene v14s36_4f # FPP. same as v14s36_4 Jenny has a serious expression, mouth open, hand on her chin, looking slightly down and away from MC
     with dissolve
 
-    jen "Chloe will focus on what's important and nothing else, which herself. I'm gonna have to see how I can get more involved in her campaign…"
+    jen "Chloe will focus on what's important and nothing else, which herself. I'm gonna have to see how I can get more involved in her campaign..."
 
     scene v14s36_4a
     with dissolve
@@ -214,7 +214,7 @@ label v14s36:
     scene v14s36_4
     with dissolve
 
-    jen "Too many reasons to count, ha. But, I don't know… The frat boys always knew how to have fun."
+    jen "Too many reasons to count, ha. But, I don't know... The frat boys always knew how to have fun."
 
     scene v14s36_4a
     with dissolve
@@ -230,9 +230,8 @@ label v14s36:
     with dissolve
 
     menu:
-
         "Depends":
-            $ jennysex.points += 1
+            $ v14_jennypoints += 1
             $ add_point(KCT.BRO)
 
             scene v14s36_4h
@@ -243,7 +242,7 @@ label v14s36:
             scene v14s36_4g
             with dissolve
 
-            jen "Well, I’m not some “Chick”. *Chuckles*"
+            jen "Well, I'm not some \"Chick\". *Chuckles*"
 
             scene v14s36_4g
             with dissolve
@@ -256,12 +255,12 @@ label v14s36:
             scene v14s36_4a
             with dissolve
 
-            u "Not really. I’m more of the reserved type I guess, because I like to focus on the serious stuff."
+            u "Not really. I'm more of the reserved type I guess, because I like to focus on the serious stuff."
 
             scene v14s36_4i # FPP. same as v14s36_4 Jenny has a slightly upset expression, mouth open
             with dissolve
 
-            jen "Oh, I see…"
+            jen "Oh, I see..."
 
             scene v14s36_4i
             with dissolve
@@ -271,7 +270,7 @@ label v14s36:
     scene v14s36_4a
     with dissolve
 
-    u "This is starting to make more and more sense…"
+    u "This is starting to make more and more sense..."
 
     scene v14s36_4
     with dissolve
@@ -286,12 +285,12 @@ label v14s36:
     scene v14s36_4a
     with dissolve
 
-    u "You're the one that’s secretly wild and leans on her for a bit of structure, and she's the structured one who leans on you for fun."
+    u "You're the one that's secretly wild and leans on her for a bit of structure, and she's the structured one who leans on you for fun."
 
     scene v14s36_4g
     with dissolve
 
-    jen "Haha…"
+    jen "Haha..."
 
     scene v14s36_4g
     with dissolve
@@ -316,7 +315,7 @@ label v14s36:
     scene v14s36_4a
     with dissolve
 
-    u "I guess there's a lot you can get to know about a person if you see them more than a few times… Weird. *Laughs*"
+    u "I guess there's a lot you can get to know about a person if you see them more than a few times... Weird. *Laughs*"
 
     scene v14s36_4g
     with dissolve
@@ -336,7 +335,7 @@ label v14s36:
     scene v14s36_4a
     with dissolve
 
-    u "I only remember the cafe… Oh! The meeting with the school board as well, I guess. We didn’t meet up more than twice, right?"
+    u "I only remember the cafe... Oh! The meeting with the school board as well, I guess. We didn't meet up more than twice, right?"
 
     scene v14s36_4g
     with dissolve
@@ -361,7 +360,7 @@ label v14s36:
     scene v14s36_4j # FPP. same as v14s36_4e Jenny has a slightly upset expression
     with dissolve
 
-    jen "Oh, come on…"
+    jen "Oh, come on..."
 
     scene v14s36_4
     with dissolve
@@ -371,12 +370,12 @@ label v14s36:
     scene v14s36_4a
     with dissolve
 
-    u "Oh… O-Oh! That's what you're talking about, haha. Well, that was an accident though, right?"
+    u "Oh... O-Oh! That's what you're talking about, haha. Well, that was an accident though, right?"
 
     scene v14s36_4k # FPP. same as v14s36_4f Jenny is slightly looking at Mc, with a shy expression, partially blushing
     with dissolve
 
-    jen "True, yeah… But it wasn't a mistake."
+    jen "True, yeah... But it wasn't a mistake."
 
     scene v14s36_4a
     with dissolve
@@ -386,7 +385,7 @@ label v14s36:
     scene v14s36_4
     with dissolve
 
-    jen "Well, like…"
+    jen "Well, like..."
 
     scene v14s36_4
     with dissolve
@@ -396,17 +395,17 @@ label v14s36:
     scene v14s36_4a
     with dissolve
 
-    u "Wait… Why not?"
+    u "Wait... Why not?"
 
     scene v14s36_4g
     with dissolve
 
-    jen "‘Cause it’s better that it was you rather than some creep, haha. At least it wasn't Imre or… What's his face…"
+    jen "‘Cause it's better that it was you rather than some creep, haha. At least it wasn't Imre or... What's his face..."
 
     scene v14s36_4h
     with dissolve
 
-    u "Who's ‘What's his face’? *Chuckles*"
+    u "Who's ‘What's his face'? *Chuckles*"
 
     scene v14s36_4f
     with dissolve
@@ -421,17 +420,17 @@ label v14s36:
     scene v14s36_4g
     with dissolve
 
-    jen "That's it! Yeah, at least It wasn’t either of them."
+    jen "That's it! Yeah, at least It wasn't either of them."
 
     scene v14s36_4h
     with dissolve
 
-    u "I mean, I don’t blame you, but… Why don't you like them?"
+    u "I mean, I don't blame you, but... Why don't you like them?"
 
     scene v14s36_4
     with dissolve
 
-    jen "I wouldn't say I don't like them, but… I can just tell from what I do know about them, that they're not my kind of people."
+    jen "I wouldn't say I don't like them, but... I can just tell from what I do know about them, that they're not my kind of people."
 
     scene v14s36_4a
     with dissolve
@@ -466,27 +465,27 @@ label v14s36:
     scene v14s36_4g
     with dissolve
 
-    jen "And being the lover of gossip that I am, I’m always around to gather the tea."
+    jen "And being the lover of gossip that I am, I'm always around to gather the tea."
 
     scene v14s36_4h
     with dissolve
 
-    u "Haha, okay. Well, in that case…"
+    u "Haha, okay. Well, in that case..."
 
     scene v14s36_4a
     with dissolve
 
-    u "I bet you’ve heard a lot from people other than Penelope."
+    u "I bet you've heard a lot from people other than Penelope."
 
     scene v14s36_4k
     with dissolve
 
-    jen "I have. That's how I know that I can trust you and… You know, be myself."
+    jen "I have. That's how I know that I can trust you and... You know, be myself."
 
     menu:
         
         "Not fair":
-            $ jennysex.points += 1
+            $ v14_jennypoints += 1
             $ add_point(KCT.BOYFRIEND)
 
             scene v14s36_4a
@@ -507,7 +506,7 @@ label v14s36:
             scene v14s36_4b
             with dissolve
 
-            jen "So, you’re saying that you want to get to know me?"
+            jen "So, you're saying that you want to get to know me?"
 
             scene v14s36_4c
             with dissolve
@@ -519,7 +518,7 @@ label v14s36:
 
             jen "Of course? *Chuckles* Are you trying to make me feel special or something?"
 
-        "You’re a spy?":
+        "You're a spy?":
             $ add_point(KCT.TROUBLEMAKER)
 
             scene v14s36_4a
@@ -547,8 +546,8 @@ label v14s36:
 
     menu:
 
-        "Yeah, or something…":
-            $ jennysex.points += 1
+        "Yeah, or something...":
+            $ v14_jennypoints += 1
             $ add_point(KCT.BOYFRIEND)
 
             scene v14s36_4h
@@ -564,8 +563,8 @@ label v14s36:
 
             u "Haha, I'm just trying to be a good friend."
 
-    if jennysex.points >= 3 or kct == "loyal":
-        if kct == "loyal":
+    if v14_jennypoints >= 3 or kct == "loyal":
+        if v14_jennypoints < 3:
             call screen kctPopup
 
         scene v14s36_3c # TPP same as v14s36_3a Jenny scoots closer to MC, looking down at his lap, slight smile mouth closed, Mc has a slightly concerned expression, mouth closed
@@ -599,12 +598,12 @@ label v14s36:
         scene v14s36_5c # FPP. same as v14s36_5b Jenny places Mc's hand palm down between her breasts, and grazes the top of his hand with her fingers
         with dissolve
 
-        jen "Well, honestly… I've been wanting to hang out with you like crazy."
+        jen "Well, honestly... I've been wanting to hang out with you like crazy."
 
         scene v14s36_5d # FPP. same as v14s36_5c Jenny looks slightly away from MC, and her fingers move to a slighlty different position but still on the top of MC's hand
         with dissolve
 
-        jen "I didn't know you guys were going to be in Europe for that long, I thought it was gonna be like a weekend thing, so…"
+        jen "I didn't know you guys were going to be in Europe for that long, I thought it was gonna be like a weekend thing, so..."
 
         scene v14s36_5c
         with dissolve
@@ -624,22 +623,22 @@ label v14s36:
         scene v14s36_5e
         with dissolve
 
-        u "You didn’t go out and meet other people?"
+        u "You didn't go out and meet other people?"
 
         scene v14s36_5c
         with dissolve
 
-        jen "I didn't really want to, haha. After meeting you and… You being so close with Penelope already… That's all I really need."
+        jen "I didn't really want to, haha. After meeting you and... You being so close with Penelope already... That's all I really need."
 
         scene v14s36_5d
         with dissolve
 
-        jen "You're a loyal person that cares about your friends and you don’t make stupid decsions that harm others."
+        jen "You're a loyal person that cares about your friends and you don't make stupid decsions that harm others."
 
         scene v14s36_5e
         with dissolve
 
-        u "(Debatable…) Thank you Jenny but-"
+        u "(Debatable...) Thank you Jenny but-"
 
         scene v14s36_5c
         with dissolve
@@ -657,8 +656,8 @@ label v14s36:
         menu:
 
             "Don't kiss her":
-                JennyAwkward = True
-                if ChloeGF or LaurenGF or Penelopers:
+                $ jennyawkward = True
+                if chloegf or LaurenGF or penelopers:
                     $ add_point(KCT.BOYFRIEND)
                 else:
                     $ add_point(KCT.TROUBLEMAKER)
@@ -666,7 +665,7 @@ label v14s36:
                 scene v14s36_5f
                 with dissolve
 
-                u "Ha. um, sorry… it's kinda cold out here, don't you think?"
+                u "Ha. um, sorry... it's kinda cold out here, don't you think?"
 
                 scene v14s36_3e # TPP. same as v14s36_3a Jenny removes her hand and sits up, Jenny slightly embarrassed expression mouth closed looking away from MC, MC looking at Jenny no expression mouth closed
                 with dissolve
@@ -676,7 +675,7 @@ label v14s36:
                 scene v14s36_4l # FPP. same as v14s36_4 Jenny is looking at mc, has an embarrassed expression, mouth open
                 with dissolve
 
-                jen "Umm, yeah. I, uh… I guess it is kinda cold."
+                jen "Umm, yeah. I, uh... I guess it is kinda cold."
 
                 scene v14s36_4
                 with dissolve
@@ -696,12 +695,12 @@ label v14s36:
                 scene v14s36_4a
                 with dissolve
 
-                u "Okay, yeah. I’ll see you soon?"
+                u "Okay, yeah. I'll see you soon?"
 
                 scene v14s36_4m # FPP. same as v14s36_4 Jenny has no expression, mouth open
                 with dissolve
 
-                jen "Right, yeah… For sure. Thanks again for coming."
+                jen "Right, yeah... For sure. Thanks again for coming."
 
                 scene v14s36_4n # FPP. same as v14s36_4m Jenny's mouth is closed
                 with dissolve
@@ -731,8 +730,8 @@ label v14s36:
                 u "Goodnight."
 
             "Kiss her":
-                Jennyrs = True
-                if ChloeGF or LaurenGF or Penelopers:
+                $ jennyrs = True
+                if chloegf or LaurenGF or penelopers:
                     $ add_point(KCT.TROUBLEMAKER)
                 else:
                     $ add_point(KCT.BOYFRIEND)
@@ -755,7 +754,7 @@ label v14s36:
                 scene v14s36_4o # FPP. same as v14s36_4 Jenny blushes happily, increase to full smile, mouth open, looking at MC's chest
                 with dissolve
 
-                jen "Ha, wow…"
+                jen "Ha, wow..."
 
                 scene v14s36_4p # FPP. same as v14s36_4o Jenny's mouth is closed
                 with dissolve
@@ -770,9 +769,9 @@ label v14s36:
                 scene v14s36_4
                 with dissolve
 
-                jen "I just…"
+                jen "I just..."
 
-                scene v14s36_3k # TPP. same as v14s36_3j Jenny kisses MC’s neck, close to his ear, Mc slight shocked expression mouth slightly open
+                scene v14s36_3k # TPP. same as v14s36_3j Jenny kisses MC's neck, close to his ear, Mc slight shocked expression mouth slightly open
                 with dissolve
 
                 jen "*Whispers* I didn't think you'd be down for this."
@@ -780,32 +779,32 @@ label v14s36:
                 scene v14s36_3k
                 with dissolve
 
-                u "(Oh fuuccckk…)"
+                u "(Oh fuuccckk...)"
 
-                scene v14s36_3l # TPP. same as v14s36_3k Jenny kisses the other side of MC’s neck, close to his jaw
+                scene v14s36_3l # TPP. same as v14s36_3k Jenny kisses the other side of MC's neck, close to his jaw
                 with dissolve
 
-                jen "*Whispers* With us not really knowing each other that much…"
+                jen "*Whispers* With us not really knowing each other that much..."
 
                 scene v14s36_3l
                 with dissolve
 
-                u "Mhmm…"
+                u "Mhmm..."
 
                 scene v14s36_3k
                 with dissolve
 
-                jen "*Whispers* But nonetheless, I’m really glad you are."
+                jen "*Whispers* But nonetheless, I'm really glad you are."
 
                 scene v14s36_3l
                 with dissolve
 
                 u "*Moans*"
 
-                scene v14s36_4q # FPP. same as v14s36_4 Jenny holds MC’s face in her hands and looks at him smiling/flirty, mouth closed
+                scene v14s36_4q # FPP. same as v14s36_4 Jenny holds MC's face in her hands and looks at him smiling/flirty, mouth closed
                 with dissolve
 
-                u "Ha, I mean…"
+                u "Ha, I mean..."
 
                 scene v14s36_4p
                 with dissolve
@@ -820,7 +819,7 @@ label v14s36:
                 scene v14s36_3m # TPP. same as v14s36_3l Jenny and MC kiss passionately, mc has a hand around the small of her back, Jenny has a hand up on mc's cheek
                 with dissolve
 
-                jen "I'm usually the date first, dessert second, type of girl… but right now I'm feeling… *Chuckles* Some type of way."
+                jen "I'm usually the date first, dessert second, type of girl... but right now I'm feeling... *Chuckles* Some type of way."
 
                 scene v14s36_4p
                 with dissolve
@@ -850,7 +849,7 @@ label v14s36:
                 scene v14s36_6a # FPP. same as v14s36_6 Show Jenny in the water pulling MC's pants off, full smile, mouth open
                 with dissolve
 
-                jen "Don’t worry about the suit. Come on."
+                jen "Don't worry about the suit. Come on."
 
                 pause
 
@@ -868,7 +867,7 @@ label v14s36:
                 with dissolve
                 pause
 
-                u "We need to get these things off of you, don't we? Hmm…"
+                u "We need to get these things off of you, don't we? Hmm..."
 
                 scene v14jenmof # Ignore as anim
                 with dissolve
@@ -898,7 +897,7 @@ label v14s36:
                 with dissolve
                 pause
 
-                jen "Hello? What’s happening… *Chuckles*"
+                jen "Hello? What's happening... *Chuckles*"
 
                 scene v14s36_lagsex_1b # TPP. same as v14s36_lagsex_1 Jenny starts blushing, full smile, slightly jerks backwards, mouth open
                 with dissolve
@@ -910,7 +909,7 @@ label v14s36:
                 with dissolve
                 pause
 
-                jen "*Gasps* Oh… My… *Chuckles* GOD!"
+                jen "*Gasps* Oh... My... *Chuckles* GOD!"
 
                 scene v14s36_lagsex_1d # TPP. same as v14s36_lagsex_1c MC comes up out of the water holding Jenny's bottoms in his mouth, one eybrow raised, looking at Jenny, Jenny holds both her hands to her cheeks, Jenny is blushing and has a shocked expression
                 with dissolve
@@ -921,13 +920,13 @@ label v14s36:
                 with dissolve
                 pause
                 
-                jen "Well, well… That was a fancy little trick. *Laughs*"
+                jen "Well, well... That was a fancy little trick. *Laughs*"
 
                 scene v14s36_lagsex_1f # TPP. same as v14s36_lagsex_1e Mc is holding her bottoms in the air in front of Jenny with one hand full smile mouth open, Jenny's mouth is closed biting her finger
                 with dissolve
                 pause
 
-                u "Haha… Want 'em back?"
+                u "Haha... Want 'em back?"
 
                 scene v14s36_lagsex_1g # TPP. same as v14s36_lagsex_1f Jenny's mouth is open
                 with dissolve
@@ -959,13 +958,13 @@ label v14s36:
                 with dissolve
                 pause
 
-                u "Jenny- Fffffuck, Jenny…"
+                u "Jenny- Fffffuck, Jenny..."
 
                 scene v14jenbjf # Ignore as anim
                 with dissolve
                 pause
 
-                u "*Moans* Yes, holy shit…"
+                u "*Moans* Yes, holy shit..."
 
                 scene v14jenbj2 # Ignore as anim
                 with dissolve
@@ -977,13 +976,13 @@ label v14s36:
                 with dissolve
                 pause
 
-                u "Ha... I… Shhhit,.."
+                u "Ha... I... Shhhit,.."
 
                 scene v14jenbj2f # Ignore as anim
                 with dissolve
                 pause
 
-                u "You’re so god damn sexy, Jenny... *Moans*"
+                u "You're so god damn sexy, Jenny... *Moans*"
 
                 scene v14s36_lagsex_2b # TPP. same as v14s36_lagsex_2a Jenny stops, smiles, wipes her mouth, Mc full smile mouth closed
                 with dissolve
@@ -1009,37 +1008,37 @@ label v14s36:
                 with dissolve
                 pause
 
-                jen "Fuck…"
+                jen "Fuck..."
 
                 scene v14jencgf # Ignore as anim
                 with dissolve
                 pause
 
-                u "Ha… You like that? *Moans*"
+                u "Ha... You like that? *Moans*"
 
                 scene v14jencg # Ignore as anim
                 with dissolve
                 pause
 
-                jen "Yes… *Moans* Yes, [name]..."
+                jen "Yes... *Moans* Yes, [name]..."
 
                 scene v14jencg2f # Ignore as anim
                 with dissolve
                 pause
 
-                u "(These beautiful fucking tits…)"
+                u "(These beautiful fucking tits...)"
 
                 scene v14jencg2f # Ignore as anim
                 with dissolve
                 pause
 
-                jen "*Gasps* Fuck, I’m- I’m cumming…"
+                jen "*Gasps* Fuck, I'm- I'm cumming..."
 
                 scene v14jencg2f # Ignore as anim
                 with dissolve
                 pause
 
-                u "*Moans* Yes, baby…"
+                u "*Moans* Yes, baby..."
 
                 scene v14jencg2f # Ignore as anim
                 with dissolve
@@ -1051,7 +1050,7 @@ label v14s36:
                 with dissolve
                 pause
 
-                u "Mmm... Fuck, Jenny…"
+                u "Mmm... Fuck, Jenny..."
 
                 scene v14s36_lagsex_2e # TPP. same as v14s36_lagsex_2d Jenny stands up and offers MC a hand, both full smiles mouths open looking at each other
                 with dissolve
@@ -1072,7 +1071,7 @@ label v14s36:
                 with dissolve
                 pause
 
-                u "Ahh, fuck… Jenny! You're… You’re gonna make me cum… *Moans*"
+                u "Ahh, fuck... Jenny! You're... You're gonna make me cum... *Moans*"
 
                 scene v14jenjof # Ignore as anim
                 with dissolve
@@ -1084,7 +1083,7 @@ label v14s36:
                 with dissolve
                 pause
 
-                u "Mmm- Yes! Yes, y-you are…"
+                u "Mmm- Yes! Yes, y-you are..."
 
                 scene v14jenjo2 # Ignore as anim
                 with dissolve
@@ -1102,7 +1101,7 @@ label v14s36:
                 with dissolve
                 pause
 
-                u "Mmm! Jenny… *Moans* I’m cumming…"
+                u "Mmm! Jenny... *Moans* I'm cumming..."
 
                 scene v14s36_lagsex_3 # FPP. MC cums and Jenny is there to catch it with her mouth open, tongue out, eyes open looking directly at mc
                 with dissolve
@@ -1124,13 +1123,13 @@ label v14s36:
                 with dissolve
                 pause
 
-                u "Ha… Damn, Jenny."
+                u "Ha... Damn, Jenny."
 
                 scene v14s36_lagsex_3c
                 with dissolve
                 pause
 
-                u "That was really nice, holy shit… *Panting*"
+                u "That was really nice, holy shit... *Panting*"
 
                 scene v14s36_8 # TPP. Jenny kisses Mc on the cheek eyes closed while holding mc's hand, Mc full smile mouth closed
                 with dissolve
@@ -1158,12 +1157,12 @@ label v14s36:
                 scene v14s36_9a
                 with dissolve
 
-                u "Haha… (I think) I can manage that."
+                u "Haha... (I think) I can manage that."
 
                 scene v14s36_9b # FPP. same as v14s36_9 Jenny uses her hands to cover her vagina and other arm to cover her breasts, mouth open, half smile, show her teeth possibly chattering 
                 with dissolve
 
-                jen "Okay, I’m freezing…"
+                jen "Okay, I'm freezing..."
 
                 scene v14s36_9c # FPP. same as v14s36_9b Jenny's mouth is closed
                 with dissolve
@@ -1188,12 +1187,12 @@ label v14s36:
                 scene v14s36_11
                 with dissolve
 
-                jen "I wasn't really expecting us to, you know… Do it, haha."
+                jen "I wasn't really expecting us to, you know... Do it, haha."
 
                 scene v14s36_11a # FPP. same as v14s36_11 Jenny's mouth is closed
                 with dissolve
 
-                u "Ha, yeah… Me either."
+                u "Ha, yeah... Me either."
 
                 scene v14s36_11
                 with dissolve
@@ -1216,9 +1215,7 @@ label v14s36:
                 u "(My life is never dull, haha!)"
 
     else:
-
-        JennyFriend = True
-
+        $ jennyfriend = True
         scene v14s36_4
         with dissolve
 
@@ -1242,7 +1239,7 @@ label v14s36:
         scene v14s36_4a
         with dissolve
 
-        u "*Chuckles* If I had a jacket I’d help you out."
+        u "*Chuckles* If I had a jacket I'd help you out."
 
         scene v14s36_4g
         with dissolve
@@ -1301,7 +1298,7 @@ label v14s36:
         scene v14s36_14a # TPP. same as v14s36_14 Lauren's mouth is open
         with dissolve
 
-        la "My mind… is completely… and utterly… blown away right now."
+        la "My mind... is completely... and utterly... blown away right now."
 
         scene v14s36_14
         with dissolve
@@ -1311,7 +1308,7 @@ label v14s36:
         scene v14s36_14a
         with dissolve
 
-        la "Well, I've been watching porn all night long and I've seen some very… interesting things."
+        la "Well, I've been watching porn all night long and I've seen some very... interesting things."
 
         scene v14s36_14b # TPP. same as v14s36_14 Lauren is now massaging one of her nipples, looking at the nipple she is massaging, mouth closed
         with dissolve
@@ -1341,7 +1338,7 @@ label v14s36:
         scene v14s36_14d # TPP. same as v14s36_14b lauren grabs her throat gently, full smile mouth open
         with dissolve
 
-        la "I wanna try so many things…"
+        la "I wanna try so many things..."
 
         scene v14s36_14e # TPP. same as v14s36_14d Laurens mouth is closed
         with dissolve
@@ -1351,7 +1348,7 @@ label v14s36:
         scene v14s36_14d
         with dissolve
 
-        la "Really! So, I'm gonna need you to watch some stuff too and, you know…"
+        la "Really! So, I'm gonna need you to watch some stuff too and, you know..."
 
         scene v14s36_14d
         with dissolve
@@ -1366,12 +1363,12 @@ label v14s36:
         scene v14s36_14b
         with dissolve
 
-        u "This is not at all like you, but I can’t say I’m not enjoying it. *Chuckles*"
+        u "This is not at all like you, but I can't say I'm not enjoying it. *Chuckles*"
 
         scene v14s36_14c
         with dissolve
 
-        la "Thank Amber for showing me this new world, but I think this is something that was hidden inside of me, deep down. I might be addicted to sex… *Laughs*"
+        la "Thank Amber for showing me this new world, but I think this is something that was hidden inside of me, deep down. I might be addicted to sex... *Laughs*"
 
         scene v14s36_14b
         with dissolve
@@ -1381,7 +1378,7 @@ label v14s36:
         scene v14s36_14c
         with dissolve
 
-        la "Haha, I'm sure you do… But, I should've gone to bed a long time ago and here I am."
+        la "Haha, I'm sure you do... But, I should've gone to bed a long time ago and here I am."
 
         scene v14s36_14
         with dissolve

@@ -20,12 +20,12 @@ label v14s43b:
     scene v14s43b_3 # FPP. Show Mr. Lee, full body shot, standing by his podium, fully smiling, mouth open, looking at MC, Mr. Lee and Podium are slightly left of center of the screen
     with dissolve
 
-    lee "Today is a very good day, everyone. Although, I understand that you’re unaware."
+    lee "Today is a very good day, everyone. Although, I understand that you're unaware."
 
     scene v14s43b_4 # FPP. Show Riley sitting a row just behind of MC and to MC's Left, Riley has a slight smile, mouth open, looking at Mr. Lee
     with dissolve
 
-    ri "Mind letting us know what’s happening?"
+    ri "Mind letting us know what's happening?"
 
     scene v14s43b_3a # FPP. same as v14s43b_3 Mr. Lee looks slightly to his right at Riley
     with dissolve
@@ -40,17 +40,17 @@ label v14s43b:
     scene v14s43b_3b # FPP. same as v14s43b_3 Mr. Lee's mouth is closed
     with dissolve
 
-    u "(Oh shit, please don't say it's me…)"
+    u "(Oh shit, please don't say it's me...)"
 
     scene v14s43b_3c # FPP. same as v14s43b_3 extends one arm outward towards MC's direction palm up
     with dissolve
 
-    lee "Let me introduce my new student assistant…"
+    lee "Let me introduce my new student assistant..."
 
     scene v14s43b_3c
     with dissolve
 
-    u "(Please, please, please…)"
+    u "(Please, please, please...)"
 
     scene v14s43b_3d # FPP. same as v14s43b_3c Mr lee Mr. Lee looks slightly to his right at Riley and extends his arm and open palm towards Riley
     with dissolve
@@ -100,12 +100,12 @@ label v14s43b:
     scene v14s43b_4d # FPP. same as v14s43b_4c Riley stands where she is and starts speaking, nervous expression, mouth open
     with dissolve
 
-    ri "For all of you who don't know me, my name is Riley. I'm a freshman and a free spirit…"
+    ri "For all of you who don't know me, my name is Riley. I'm a freshman and a free spirit..."
 
     scene v14s43b_4d
     with dissolve
 
-    ri "I'm very approachable, so I don't know what all my responsibilities will be as a teacher’s assistant, but feel free to talk to me."
+    ri "I'm very approachable, so I don't know what all my responsibilities will be as a teacher's assistant, but feel free to talk to me."
 
     scene v14s43b_4c
     with dissolve
@@ -115,7 +115,7 @@ label v14s43b:
     scene v14s43b_3a
     with dissolve
 
-    lee "Very good! Thank you. Now, on to class…"
+    lee "Very good! Thank you. Now, on to class..."
 
     scene v14s43b_3
     with dissolve
@@ -200,12 +200,12 @@ label v14s43b:
     scene v14s43b_9a
     with dissolve
 
-    u "Why is it that you’re always trying to stop me?"
+    u "Why is it that you're always trying to stop me?"
 
     scene v14s43b_9b # FPP. same as v14s43b_9 imre has a nervous expression, hand behind his head, mouth open
     with dissolve
 
-    imre "Look man… Ugh, please? Just let me work with her."
+    imre "Look man... Ugh, please? Just let me work with her."
 
     scene v14s43b_9a
     with dissolve
@@ -220,15 +220,14 @@ label v14s43b:
     scene v14s43b_9a
     with dissolve
 
-    u "*Laughs* Yeah. I get that, That means I’ll work with…"
+    u "*Laughs* Yeah. I get that, That means I'll work with..."
 
     scene v14s43b_9a
     with dissolve
 
     menu:
-
         "Work with Penelope":
-            PenelopePartner = True
+            $ v14_PenelopePartner = True
 
             scene v14s43b_9a
             with dissolve
@@ -265,14 +264,14 @@ label v14s43b:
 
             u "No, no, no. Me and you."
 
-            if PenelopeLoyal:
+            if penelopeloyal:
                     
                 scene v14s43b_8b
                 with dissolve
 
-                pe "No, no, no. You…"
+                pe "No, no, no. You..."
 
-                scene v14s43b_10 # TPP. Penelope gets close to mc’s lips without kissing them, Mc full smile mouth closed, Penelope full smile, mouth slightly open
+                scene v14s43b_10 # TPP. Penelope gets close to mc's lips without kissing them, Mc full smile mouth closed, Penelope full smile, mouth slightly open
                 with dissolve
 
                 pe "*Whispers* And me. *Chuckles*"
@@ -302,7 +301,7 @@ label v14s43b:
             scene v14s43b_3
             with dissolve
 
-            lee "Everyone’s paired up? Good!"
+            lee "Everyone's paired up? Good!"
 
             scene v14s43b_3
             with dissolve
@@ -312,9 +311,9 @@ label v14s43b:
             scene v14s43b_3
             with dissolve
 
-            lee "After that, you’ll come up with a short scene involving a king and a queen interaction that you'll present next week to the rest of the class."
+            lee "After that, you'll come up with a short scene involving a king and a queen interaction that you'll present next week to the rest of the class."
 
-            if ApesPostChloePics:
+            if v14_ApesPostChloePics:
 
                 scene v14s43b_12 # FPP. MC looks at Penelope in the seat next to him, Penelope looking at MC, slight smile, mouth open
                 with dissolve
@@ -331,39 +330,39 @@ label v14s43b:
                 scene v14s43b_13 # FPP. MC looks down at his phone in his hand and checks his phone, Only show Mc's hand and lap in the render, no other characters present
                 with dissolve
 
-                chloe.newMessage("GRAYSON IS SUCH AN ASSHOLE")
-                chloe.newMessage("FUCK him, and FUCK THE APES!!!!")
-                chloe.newMessage("UGH! I’m going to turn this around. It won’t hurt my campaign even a little bit, I’ll make sure of it.")
+                $ chloe.newMessage("GRAYSON IS SUCH AN ASSHOLE")
+                $ chloe.newMessage("FUCK him, and FUCK THE APES!!!!")
+                $ chloe.newMessage("UGH! I'm going to turn this around. It won't hurt my campaign even a little bit, I'll make sure of it.")
 
-                To: chloe.addReply("I’m so sorry that this is happening. I don’t even know what to say.")
-                chloe.newMessage("I know, I know… I'm just venting. And I’m really thankful that you didn't post anything.")
-                chloe.addReply("I’d never do that.")
+                $ chloe.addReply("I'm so sorry that this is happening. I don't even know what to say.")
+                $ chloe.newMessage("I know, I know... I'm just venting. And I'm really thankful that you didn't post anything.")
+                $ chloe.addReply("I'd never do that.")
 
-                # Kiwi Post: v14kw43b - Sexy pic of Chloe is on Kiwii from Ryan, Grayson and Cameron's accounts-
+                # Kiwi Post: v14kw43b - Sexy pic of Chloe is on Kiwii from Ryan, Grayson and Cameron's accounts- Private sexy pic of chloe same photo as in scene 41a
 
-                kiwii_post = KiwiiPost("Grayson", Private sexy pic of chloe same photo as in scene 41a, "#Vote4Chloe is a #Vote4Whore" mentions="Chloe", numberLikes=255)
-                kiwii_post.newComment("Chloe", "You weren’t calling me a whore when I was in your bed all  of last year. Wonder what changed? #Salty", queue=False)
-                kiwii_post.newComment("Aubrey", "Grayson, what the fuck?! Did Lindsey put you up to this?!", queue=False)
-                kiwii_post.newComment("Lindsey", "I would never, ever, EVER. Tell them to do this.", queue=False)
-                kiwii_post.newComment("Imre", "Ok sure, whatever Linds. Doesn’t matter to anyone, Chloe’s never going to lose against someone who reaches this low to win.", queue=False)
+                $ v14s43b_kiwiiPost1 = KiwiiPost("Grayson", "v14/v14kw43b.webp", "#Vote4Chloe is a #Vote4Whore", mentions="Chloe", numberLikes=255)
+                $ v14s43b_kiwiiPost1.newComment("Chloe", "You weren't calling me a whore when I was in your bed all  of last year. Wonder what changed? #Salty", queue=False)
+                $ v14s43b_kiwiiPost1.newComment("Aubrey", "Grayson, what the fuck?! Did Lindsey put you up to this?!", queue=False)
+                $ v14s43b_kiwiiPost1.newComment("Lindsey", "I would never, ever, EVER. Tell them to do this.", queue=False)
+                $ v14s43b_kiwiiPost1.newComment("Imre", "Ok sure, whatever Linds. Doesn't matter to anyone, Chloe's never going to lose against someone who reaches this low to win.", queue=False)
 
-                kiwii_post = KiwiiPost("Ryan", Private sexy pic of chloe same photo as in scene 41a, "#Vote4Chloe and she’ll send you pics, just like this!" mentions="Chloe", numberLikes=157)
-                kiwii_post.newComment("Chloe", "You too? Wow, why don’t you just suck Grayson’s dick while you’re at it, huh?", queue=False)
-                kiwii_post.newComment("Imre", "Ha, you fucking idiot. Choke on it, too.", queue=False)
-                kiwii_post.newComment("Ryan", "Sure Imre, right after you stop sucking on Chloe’s tits all the fucking time.", queue=False)
-                kiwii_post.newComment("Aubrey", "ENOUGH", queue=False)
+                $ v14s43b_kiwiiPost2 = KiwiiPost("Ryan", "v14/v14kw43b.webp", "#Vote4Chloe and she'll send you pics, just like this!", mentions="Chloe", numberLikes=157)
+                $ v14s43b_kiwiiPost2.newComment("Chloe", "You too? Wow, why don't you just suck Grayson's dick while you're at it, huh?", queue=False)
+                $ v14s43b_kiwiiPost2.newComment("Imre", "Ha, you fucking idiot. Choke on it, too.", queue=False)
+                $ v14s43b_kiwiiPost2.newComment("Ryan", "Sure Imre, right after you stop sucking on Chloe's tits all the fucking time.", queue=False)
+                $ v14s43b_kiwiiPost2.newComment("Aubrey", "ENOUGH", queue=False)
 
-                kiwii_post = KiwiiPost("Cameron", Private sexy pic of chloe same photo as in scene 41a, “Vote for Lindsey, not for this.”, numberLikes=417)
-                kiwii_post.newComment("Chloe", "This? Wow, Cam. Thanks…", queue=False)
-                kiwii_post.newComment("Samantha", "Cam, what are you doing?!", queue=False)
-                kiwii_post.newComment("Cameron", "Frat shit. What else would I be doing?", queue=False)
-                kiwii_post.newComment("Sebastian", "This is too far for just “frat shit”.", queue=False)
-                kiwii_post.newComment("Aubrey", "Pathetic.", queue=False)
+                $ v14s43b_kiwiiPost3 = KiwiiPost("Cameron", "v14/v14kw43b.webp", "Vote for Lindsey, not for this.", numberLikes=417)
+                $ v14s43b_kiwiiPost3.newComment("Chloe", "This? Wow, Cam. Thanks...", queue=False)
+                $ v14s43b_kiwiiPost3.newComment("Samantha", "Cam, what are you doing?!", queue=False)
+                $ v14s43b_kiwiiPost3.newComment("Cameron", "Frat shit. What else would I be doing?", queue=False)
+                $ v14s43b_kiwiiPost3.newComment("Sebastian", "This is too far for just \"frat shit\".", queue=False)
+                $ v14s43b_kiwiiPost3.newComment("Aubrey", "Pathetic.", queue=False)
 
                 scene v14s43b_13
                 with dissolve
 
-                u "(Fuck… I’m glad I didn’t go through with posting that shit.”)"
+                u "(Fuck... I'm glad I didn't go through with posting that shit.”)"
 
                 scene v14s43b_12
                 with dissolve
@@ -403,7 +402,6 @@ label v14s43b:
                 jump v14s43c
 
             else: 
-
                 scene v14s43b_12
                 with dissolve
 
@@ -437,17 +435,17 @@ label v14s43b:
                 jump v14s43c
 
         "Work with Riley":
-            RileyPartner = True
+            $ v14_RileyPartner = True
 
             scene v14s43b_9a
             with dissolve
 
-            u "Haha, sorry bro…"
+            u "Haha, sorry bro..."
 
             scene v14s43b_9a
             with dissolve
 
-            u "(Let’s mess with him a bit.) I'm working with Penelope."
+            u "(Let's mess with him a bit.) I'm working with Penelope."
 
             scene v14s43b_9c
             with dissolve
@@ -462,17 +460,17 @@ label v14s43b:
             scene v14s43b_9
             with dissolve
 
-            imre "Fuck, dude… I don’t know. Maybe she’ll pretend like it never happened? Or should I bring it up? What the fuck should i do here?"
+            imre "Fuck, dude... I don't know. Maybe she'll pretend like it never happened? Or should I bring it up? What the fuck should i do here?"
 
             scene v14s43b_9a
             with dissolve
 
-            u "Haha,.. I just wanted to see you squirm for a second. *Chuckles* I wouldn’t actually do you like that, have fun with Penelope."
+            u "Haha,.. I just wanted to see you squirm for a second. *Chuckles* I wouldn't actually do you like that, have fun with Penelope."
 
             scene v14s43b_9d # FPP. same as same as v14s43b_9c Imre happy expression, slight smile, mouth open
             with dissolve
 
-            imre "Oh shit, haha… Thanks man."
+            imre "Oh shit, haha... Thanks man."
 
             scene v14s43b_9a
             with dissolve
@@ -492,7 +490,7 @@ label v14s43b:
             scene v14s43b_17 # FPP. MC walks towards Riley, Cameron is seen walking away just looking where he is walking no expression mouth closed, Riley slight smile mouth closed looking at mc
             with dissolve
 
-            u "*Whisper* I'll be the “additional gentleman”, just for you."
+            u "*Whisper* I'll be the \"additional gentleman\", just for you."
 
             scene v14s43b_17a # FPP. same as v14s43b_17 Riley mouth open, Cameron has walked away and is no longer visible on screen
             with dissolve
@@ -505,14 +503,13 @@ label v14s43b:
             pause 0.75
 
             if v13_FirstThreesome:
-
-                scene v14s43b_19 # FPP. Riley and MC have sat down and Riley grabs and holds MC’s hand under the table they sat at from v14s43b_18, Riley half smile, mouth closed looking at MC
+                scene v14s43b_19 # FPP. Riley and MC have sat down and Riley grabs and holds MC's hand under the table they sat at from v14s43b_18, Riley half smile, mouth closed looking at MC
                 with dissolve
 
             scene v14s43b_3f # FPP. same as v14s43b_3 Mr Lee. is centered in the middle of the screen
             with dissolve
 
-            lee "Everyone’s paired up? Good!"
+            lee "Everyone's paired up? Good!"
 
             scene v14s43b_3f
             with dissolve
@@ -522,10 +519,9 @@ label v14s43b:
             scene v14s43b_3f
             with dissolve
 
-            lee "After that, you’ll come up with a short scene involving a king and a queen interaction that you'll present next week to the rest of the class."
+            lee "After that, you'll come up with a short scene involving a king and a queen interaction that you'll present next week to the rest of the class."
 
-            if ApesPostChloePics:
-
+            if v14_ApesPostChloePics:
                 scene v14s43b_20 # FPP. MC and Riley are sitting at the desk they sat in from v14s43b_18, Riley is looking at MC, slight smile, mouth open
                 with dissolve
 
@@ -541,39 +537,43 @@ label v14s43b:
                 scene v14s43b_13
                 with dissolve
 
-                chloe.newMessage("GRAYSON IS SUCH AN ASSHOLE")
-                chloe.newMessage("FUCK him, and FUCK THE APES!!!!")
-                chloe.newMessage("UGH! I’m going to turn this around. It won’t hurt my campaign even a little bit, I’ll make sure of it.")
+                $ chloe.newMessage("GRAYSON IS SUCH AN ASSHOLE")
+                $ chloe.newMessage("FUCK HIM, AND FUCK THE APES!!!!")
+                $ chloe.newMessage("UGH! I'm going to turn this around. It won't hurt my campaign even a little bit, I'll make sure of it.")
 
-                To: chloe.addReply(“I’m so sorry that this is happening. I don’t even know what to say.")
-                chloe.newMessage("I know, I know… I'm just venting. And I’m really thankful that you didn't post anything.")
-                chloe.addReply(“I’d never do that.")
+                $ chloe.addReply("I'm so sorry that this is happening. I don't even know what to say.")
+                $ chloe.newMessage("I know, I know... I'm just venting. And I'm really thankful that you didn't post anything.")
+                $ chloe.addReply("I'd never do that.")
 
-                # Kiwi Post: v14kw43b - Sexy pic of Chloe is on Kiwii from Ryan, Grayson and Cameron's accounts-
+                # Kiwi Post: v14kw43b - Sexy pic of Chloe is on Kiwii from Ryan, Grayson and Cameron's accounts- Private sexy pic of chloe same photo as in scene 41a
 
-                kiwii_post = KiwiiPost("Grayson", Private sexy pic of chloe same photo as in scene 41a, "#Vote4Chloe is a #Vote4Whore" mentions="Chloe", numberLikes=255)
-                kiwii_post.newComment("Chloe", "You weren’t calling me a whore when I was in your bed all  of last year. Wonder what changed? #Salty", queue=False)
-                kiwii_post.newComment("Aubrey", "Grayson, what the fuck?! Did Lindsey put you up to this?!", queue=False)
-                kiwii_post.newComment("Lindsey", "I would never, ever, EVER. Tell them to do this.", queue=False)
-                kiwii_post.newComment("Imre", "Ok sure, whatever Linds. Doesn’t matter to anyone, Chloe’s never going to lose against someone who reaches this low to win.", queue=False)
+                $ v14s43b_kiwiiPost4 = KiwiiPost("Grayson", "v14/v14kw43b.webp", "#Vote4Chloe is a #Vote4Whore", mentions="Chloe", numberLikes=255)
+                $ v14s43b_kiwiiPost4.newComment("Chloe", "You weren't calling me a whore when I was in your bed all  of last year. Wonder what changed? #Salty", queue=False)
+                $ v14s43b_kiwiiPost4.newComment("Aubrey", "Grayson, what the fuck?! Did Lindsey put you up to this?!", queue=False)
+                $ v14s43b_kiwiiPost4.newComment("Lindsey", "I would never, ever, EVER. Tell them to do this.", queue=False)
+                $ v14s43b_kiwiiPost4.newComment("Imre", "Ok sure, whatever Linds. Doesn't matter to anyone, Chloe's never going to lose against someone who reaches this low to win.", queue=False)
 
-                kiwii_post = KiwiiPost("Ryan", Private sexy pic of chloe same photo as in scene 41a, "#Vote4Chloe and she’ll send you pics, just like this!" mentions="Chloe", numberLikes=157)
-                kiwii_post.newComment("Chloe", "You too? Wow, why don’t you just suck Grayson’s dick while you’re at it, huh?", queue=False)
-                kiwii_post.newComment("Imre", "Ha, you fucking idiot. Choke on it, too.", queue=False)
-                kiwii_post.newComment("Ryan", "Sure Imre, right after you stop sucking on Chloe’s tits all the fucking time.", queue=False)
-                kiwii_post.newComment("Aubrey", "ENOUGH", queue=False)
+                $ v14s43b_kiwiiPost5 = KiwiiPost("Ryan", "v14/v14kw43b.webp", "#Vote4Chloe and she'll send you pics, just like this!", mentions="Chloe", numberLikes=157)
+                $ v14s43b_kiwiiPost5.newComment("Chloe", "You too? Wow, why don't you just suck Grayson's dick while you're at it, huh?", queue=False)
+                $ v14s43b_kiwiiPost5.newComment("Imre", "Ha, you fucking idiot. Choke on it, too.", queue=False)
+                $ v14s43b_kiwiiPost5.newComment("Ryan", "Sure Imre, right after you stop sucking on Chloe's tits all the fucking time.", queue=False)
+                $ v14s43b_kiwiiPost5.newComment("Aubrey", "ENOUGH", queue=False)
 
-                kiwii_post = KiwiiPost("Cameron", Private sexy pic of chloe same photo as in scene 41a, “Vote for Lindsey, not for this.”, numberLikes=417)
-                kiwii_post.newComment("Chloe", "This? Wow, Cam. Thanks…", queue=False)
-                kiwii_post.newComment("Samantha", "Cam, what are you doing?!", queue=False)
-                kiwii_post.newComment("Cameron", "Frat shit. What else would I be doing?", queue=False)
-                kiwii_post.newComment("Sebastian", "This is too far for just “frat shit”.", queue=False)
-                kiwii_post.newComment("Aubrey", "Pathetic.", queue=False)
+                $ v14s43b_kiwiiPost6 = KiwiiPost("Cameron", "v14/v14kw43b.webp", "Vote for Lindsey, not for this.", numberLikes=417)
+                $ v14s43b_kiwiiPost6.newComment("Chloe", "This? Wow, Cam. Thanks...", queue=False)
+                $ v14s43b_kiwiiPost6.newComment("Samantha", "Cam, what are you doing?!", queue=False)
+                $ v14s43b_kiwiiPost6.newComment("Cameron", "Frat shit. What else would I be doing?", queue=False)
+                $ v14s43b_kiwiiPost6.newComment("Sebastian", "This is too far for just \"frat shit\".", queue=False)
+                $ v14s43b_kiwiiPost6.newComment("Aubrey", "Pathetic.", queue=False)
+
+                if False: # just making sure it shows on lint
+                    scene v14kw43b
+                    with dissolve
 
                 scene v14s43b_13
                 with dissolve
 
-                u "(Fuck… I’m glad I didn’t go through with posting that shit.”)"
+                u "(Fuck... I'm glad I didn't go through with posting that shit.”)"
 
                 scene v14s43b_20a
                 with dissolve

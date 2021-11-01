@@ -249,7 +249,7 @@ label v11s23_mrlee1:
 
     menu:
         "Laugh":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v11frmlee1a
             with dissolve
 
@@ -261,7 +261,7 @@ label v11s23_mrlee1:
             lee "It wasn't so funny back then."
 
         "Feel bad":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene v11frmlee1b
             with dissolve
 
@@ -382,7 +382,7 @@ label v11s23_riley1:
 
     menu:
         "Seek revenge":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene v11frmri3a # FPP Same angle as v11frmri3, Riley smiling with mouth closed
             with dissolve
@@ -741,7 +741,7 @@ label v11s23_penelope1:
         menu:
             "Flirt":
                 $ v11s23_penelope_date = True
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene v11frmpe10
                 with dissolve
@@ -1147,7 +1147,7 @@ label v11s23_freeroamend:
             jump v11_hotel_bar
 
         "Sneak out":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene v11frm1b
             with dissolve

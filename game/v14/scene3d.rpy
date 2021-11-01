@@ -37,7 +37,7 @@ label v14s03d:
     scene v14s03d_2c
     with dissolve
 
-    u "Wanted to be loud and clear, you know? I can’t have you thinking that I’m slacking in what I'm packing. *Laughs*"
+    u "Wanted to be loud and clear, you know? I can't have you thinking that I'm slacking in what I'm packing. *Laughs*"
 
     scene v14s03d_2a
     with dissolve
@@ -104,7 +104,7 @@ label v14s03d:
     scene v14satdtFPPf # Ignore as animation
     with dissolve
 
-    u "S-shit! You’re a fucking professional! (She’s deepthroating like a goddess.)"
+    u "S-shit! You're a fucking professional! (She's deepthroating like a goddess.)"
 
     # From scene animations folder v14satdtTPP
     image v14satdtTPP = Movie(play="images/v14/Scene 3d/v14satdtTPP.webm", loop=True, image="images/v14/Scene 3d/v14satdtFPP.webp", start_image="images/v14/Scene 3d/v14satdtFPP.webp")
@@ -113,7 +113,7 @@ label v14s03d:
     scene v14satdtTPP # Ignore as animation
     with dissolve
 
-    u "*Moans* Satin… (If this is what being a “nice guy” gets you, then call me Mr. Nice Guy.)"
+    u "*Moans* Satin... (If this is what being a \"nice guy\" gets you, then call me Mr. Nice Guy.)"
 
     scene v14satdtTPPf # Ignore as animation
     with dissolve
@@ -123,14 +123,14 @@ label v14s03d:
     scene v14s03d_4c # FPP Same angle as 4, Satin doing a new sexy pose, her mouth open
     with dissolve
 
-    satin "So, you’re liking what you see? *Chuckles*"
+    satin "So, you're liking what you see? *Chuckles*"
 
     scene v14s03d_4a
     with dissolve
 
     menu:
         "You get what you pay for":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "*Chuckles* Hey, you get what you pay for right?"
 
@@ -142,12 +142,12 @@ label v14s03d:
             scene v14s03d_4e # FPP Same as 4d, Satin's mouth closed
             with dissolve
 
-            u "What? I just mean- Like, you are a girl working at a brothel… So."
+            u "What? I just mean- Like, you are a girl working at a brothel... So."
 
             scene v14s03d_4f # FPP Same angle as 4, Satin looks shocked and is covering herself with her clothes, mouth open
             with dissolve
 
-            satin "I don't know what this sudden switch of personality is all about, but you’re free to go."
+            satin "I don't know what this sudden switch of personality is all about, but you're free to go."
 
             scene v14s03d_8 # FPP Show Satin getting dressed, she looks angry, mouth closed
             with dissolve
@@ -162,7 +162,7 @@ label v14s03d:
             scene v14s03d_4h # FPP Same as 4g, Satin's mouth open
             with dissolve
 
-            u "What? I’m sorry for-"
+            u "What? I'm sorry for-"
 
             scene v14s03d_4g
             with dissolve
@@ -177,7 +177,7 @@ label v14s03d:
             scene v14s03d_9a # TPP Same angle as 9, MC now holding his clothes, looking ashamed, mouth open, Satin is pointing at the door, mouth closed
             with dissolve
 
-            u "Fine, fine! Again, I’m sorry."
+            u "Fine, fine! Again, I'm sorry."
 
             scene v14s03d_10 # TPP Show MC getting dressed
             with dissolve
@@ -218,7 +218,7 @@ label v14s03d:
             scene v14satcgTPP1f # Ignore as animation
             with dissolve
 
-            u "I... *Moans* Damn, Satin…"
+            u "I... *Moans* Damn, Satin..."
 
             u "I can't even fucking concentrate right now..."
 
@@ -234,7 +234,7 @@ label v14s03d:
             scene v14satcgTPPf # Ignore as animation
             with dissolve
 
-            u "That’s an understatement, baby."
+            u "That's an understatement, baby."
 
             # -Satin stands, turns around and performs reverse cowgirl while MC is seated-
             scene v14s03d_12a # TPP Same angle as 12, Show Satin turning around to ride MC in reverse cowgirl
@@ -254,7 +254,7 @@ label v14s03d:
             scene v14satrcgTPP1f # Ignore as animation
             with dissolve
 
-            u "Your body is so… goddamn perfect. Mmm!"
+            u "Your body is so... goddamn perfect. Mmm!"
 
             # From scene animations folder v14satrcgTPP2
             image v14satrcgTPP2 = Movie(play="images/v14/Scene 3d/v14satrcgTPP2.webm", loop=True, image="images/v14/Scene 3d/v14satrcgTPP2.webp", start_image="images/v14/Scene 3d/v14satrcgTPP2.webp")
@@ -280,6 +280,7 @@ label v14s03d:
             pause 0.75
 
             scene v14s03d_13a # TPP Same angle as 13, Satin still holding MC's face, she is smiling at him with her mouth open
+            with dissolve
 
             satin "Fuck me while I'm on my back."
 
@@ -336,7 +337,7 @@ label v14s03d:
             scene v14satbpTPP1f # Ignore as animation
             with dissolve
 
-            satin "*Whisper* Fuck me, Will! Oh, yes… F-fuck..."
+            satin "*Whisper* Fuck me, Will! Oh, yes... F-fuck..."
 
             u "(Will must be her boyfriend or something.)"
 
@@ -349,7 +350,7 @@ label v14s03d:
 
             u "I'm... *Moans* I'm cumming... Fuckkk!"
 
-            satin "Yes! Please… Cum in me!"
+            satin "Yes! Please... Cum in me!"
 
             scene v14satbpTPP2f # Ignore as animation
             with dissolve
@@ -379,12 +380,12 @@ label v14s03d:
             scene v14s03d_15d
             with dissolve
 
-            u "If I have to… *Laughs*"
+            u "If I have to... *Laughs*"
 
             scene v14s03d_17 # TPP MC and Satin standing up, Satin looking at MC, looking embarrased with her mouth open
             with dissolve
 
-            satin "I’m sorry that I kept asking you to be quiet..."
+            satin "I'm sorry that I kept asking you to be quiet..."
 
             scene v14s03d_18 # FPP MC looking at Satin, now standing. Satin looks embarrassed with her mouth open
             with dissolve
@@ -416,12 +417,12 @@ label v14s03d:
             scene v14s03d_18e # FPP Same angle as 18, Satin looking at MC, she looks very sad, tears are filling up her eyes, mouth open
             with dissolve
 
-            satin "I'm sorry...."
+            satin "I'm sorry..."
 
             scene v14s03d_18f # FPP Same as 18e, Satin's mouth closed
             with dissolve
 
-            u "Really, it’s fine-"
+            u "Really, it's fine-"
 
             scene v14s03d_18g # FPP Same angle as 18, Satin looking away, tears starting to stream down her face, mouth open
             with dissolve
@@ -441,7 +442,7 @@ label v14s03d:
             scene v14s03d_11
             with dissolve
 
-            u "(Well that didn’t end exactly how I had imagined.)"
+            u "(Well that didn't end exactly how I had imagined.)"
 
 # -Regardless of choice scene continued
 jump v14s03e # -Transition to Scene 3e

@@ -145,7 +145,7 @@ label v13s13b:
 
     menu:
         "Encourage her":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ penelope.points += 1
 
             u "C'mon Penelope, you got this."
@@ -257,7 +257,7 @@ label v13s13b:
             polly "Could've fooled me."
 
         "Thanks":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             u "Haha, thanks."
 
             scene v13s13b_5a # TPP Same angle as 5, Penelope kissing MC on the cheek
@@ -356,7 +356,7 @@ label v13s13b:
             polly "Oh, okay. Gotcha..."
 
         "Hell yeah!":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ v13_after_party = True
 
             u "Hell yeah! Who doesn't love a good nightclub?"

@@ -39,7 +39,7 @@ label v10_chloe_hallway:
 
         menu:
             "Cute":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "I'd say cute fits better..."
 
@@ -84,7 +84,7 @@ label v10_chloe_hallway:
 
                     menu:
                         "Ask Chloe how she is":
-                            $ addPoint("bf")
+                            $ add_point(KCT.BOYFRIEND)
                             $ chloeLike += 1
 
                             u "So uhm... how have you been?"
@@ -129,7 +129,7 @@ label v10_chloe_hallway:
 
                             menu:
                                 "Have a Rematch":
-                                    $ addPoint("bf")
+                                    $ add_point(KCT.BOYFRIEND)
                                     $ v10_chloe_rematch = True
                                     $ grant_achievement("on_the_court")
 
@@ -138,7 +138,7 @@ label v10_chloe_hallway:
                                     jump v10_chloe_gym
 
                                 "Decline a Rematch":
-                                    $ addPoint("tm")
+                                    $ add_point(KCT.TROUBLEMAKER)
                                     $ chloeLike -= 1
 
                                     u "Uhm, I shouldn't, I have a lot to do. Sorry."
@@ -222,7 +222,7 @@ label v10_chloe_hallway:
 
             "Sexy":
                 $ v10_chloe_sexy = True
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ chloeLike += 1
 
                 u "Definitely gotta go with sexy."
@@ -277,7 +277,7 @@ label v10_chloe_hallway:
 
         menu:
             "Have a Rematch":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ v10_chloe_rematch = True
                 $ chloeLike += 1
                 $ grant_achievement("on_the_court")

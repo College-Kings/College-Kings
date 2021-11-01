@@ -69,13 +69,13 @@ label emily_arcade:
 
         menu:
             "Take the bet":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ emilyArcade = 1
 
                 jump em_arcade_1
 
             "Make it more interesting":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ emilyArcade = 2
 
                 jump em_arcade_2
@@ -126,13 +126,13 @@ label emily_arcade:
 
         menu:
             "Take the bet":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ emilyArcade = 3
 
                 jump em_arcade_3
 
             "Make it more fun":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ emilyArcade = 4
 
                 jump em_arcade_4
@@ -802,9 +802,9 @@ label em_arcade_1:
     menu:
         "Kiss her":
             if laurenrs:
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
             else:
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
             $ kissedEmilyArcade = True
 
             scene v8arcade24
@@ -852,7 +852,7 @@ label em_arcade_1:
 
         "Good night":
             if laurenrs:
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
             $ kissedEmilyArcade = False
 
             scene v8arcade23a
@@ -1258,9 +1258,9 @@ label v8s20_nsfwSkipLabel1:
     menu:
         "Kiss her":
             if laurenrs:
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
             else:
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
             $ kissedEmilyArcade = True
 
             scene v8arcade24
@@ -1308,7 +1308,7 @@ label v8s20_nsfwSkipLabel1:
 
         "Good night":
             if laurenrs:
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
             $ kissedEmilyArcade = False
 
             scene v8arcade23a

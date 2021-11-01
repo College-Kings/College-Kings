@@ -5,17 +5,17 @@
 
 init python:
     def v11s5_reply1():
-        contact_Josh.newMessage("Really bro, that's lame.")
-        contact_Josh.addReply("No for real, I have to pack for the trip.")
+        josh.messenger.newMessage("Really bro, that's lame.")
+        josh.messenger.addReply("No for real, I have to pack for the trip.")
 
         if josh_europe:
-            contact_Josh.newMessage("Fuck, me too.")
+            josh.messenger.newMessage("Fuck, me too.")
         else:
-            contact_Josh.newMessage("Whatever man!")
+            josh.messenger.newMessage("Whatever man!")
 
     def v11s5_reply2():
         setattr(store, "v11_josh_nightclub", True)
-        contact_Josh.newMessage("Let's party!")
+        josh.messenger.newMessage("Let's party!")
 
 label v11_nightclub_with_josh:
     #scene v11seap4e # FPP. Show the Park, Show Emily just leaving
@@ -29,20 +29,20 @@ label v11_nightclub_with_josh:
 
     u "(Let's see who this is.)"
 
-    $ contact_Josh.newMessage("WE GETTIN FUCKED UP TONIGHT!", queue = False)
-    $ contact_Josh.addReply("Who?")
-    $ contact_Josh.newMessage("You and me, meet me at the bar on Stevenson.")
-    $ contact_Josh.addReply("There's a lot of bars on Stevenson.")
-    $ contact_Josh.newMessage("The Hive duh!")
-    $ contact_Josh.addReply("Josh, we can't even get in.")
-    $ contact_Josh.newMessage("With these fake IDs we can...")
-    $ contact_Josh.addReply("I can't be staying up anyway, I still have a ton of stuff to do tonight.", v11s5_reply1)
-    $ contact_Josh.addReply("LET'S FUCKING GOOOOO! OMW NOW!", v11s5_reply2)
+    $ josh.messenger.newMessage("WE GETTIN FUCKED UP TONIGHT!", queue = False)
+    $ josh.messenger.addReply("Who?")
+    $ josh.messenger.newMessage("You and me, meet me at the bar on Stevenson.")
+    $ josh.messenger.addReply("There's a lot of bars on Stevenson.")
+    $ josh.messenger.newMessage("The Hive duh!")
+    $ josh.messenger.addReply("Josh, we can't even get in.")
+    $ josh.messenger.newMessage("With these fake IDs we can...")
+    $ josh.messenger.addReply("I can't be staying up anyway, I still have a ton of stuff to do tonight.", v11s5_reply1)
+    $ josh.messenger.addReply("LET'S FUCKING GOOOOO! OMW NOW!", v11s5_reply2)
 
 label v11s4_PhoneContinueJosh1:
-    if contact_Josh.replies:
+    if josh.messenger.replies:
         call screen phone
-    if contact_Josh.replies:
+    if josh.messenger.replies:
         u "(I should check my phone.)"
         jump v11s4_PhoneContinueJosh1
 
@@ -105,7 +105,7 @@ label v11s4_PhoneContinueJosh1:
 
     menu:
         "Cool":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene v11swc3
             with dissolve
@@ -162,7 +162,7 @@ label v11s4_PhoneContinueJosh1:
     if not josh_europe:
         menu:
             "Invite to Europe":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ josh_europe = True
 
                 scene v11swc3
@@ -253,7 +253,7 @@ label v11s4_PhoneContinueJosh1:
 
     menu:
         "Henny":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene v11swc6c # FPP Same angle as v11swc6b, Bartender mouth closed
             with dissolve
@@ -809,7 +809,7 @@ label v11s4_PhoneContinueJosh1:
     pause 1
 
 label v11s5_galleryScene:
-    #$ addPoint("tm", sum([ v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck, v10_ambersex, v10_chloe_locker, v10_ri_sex ])) ###Loyaltymod
+    #$ add_point(KCT.TROUBLEMAKER, sum([ v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck, v10_ambersex, v10_chloe_locker, v10_ri_sex ])) ###Loyaltymod
 
     scene v11swc20 # FPP At Candy's house, show Candy smiling, mouth closed
     with fade

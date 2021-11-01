@@ -408,7 +408,7 @@ label v12s27a:
 
     menu:
         "It's not a bad look":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             u "Honestly Ryan, it's not a bad look. It's actually pretty cool."
 
             scene v12s27a_8
@@ -417,7 +417,7 @@ label v12s27a:
             ry "*Sighs* I hope you're not just saying that..."
 
         "It's not your best look":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Well, honestly... It's not your best look, in my opinion."
 

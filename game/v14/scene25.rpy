@@ -57,7 +57,7 @@ label v14s25:
         scene v14s25_4e # FPP. Same as v14s25_4d, Amber standing infront of MC, Looking at eachother, Amber slight smile, mouth closed.
         with dissolve
 
-    if v14s03a_take_wallet:
+    else:
         scene v14s25_4e
         with dissolve
 
@@ -452,8 +452,8 @@ label v14s25:
 
     menu:
         "No more drugs, Amber":
-            $ addPoint("bf")
-            $ addPoint("bro")
+            $ add_point(KCT.BOYFRIEND)
+            $ add_point(KCT.BRO)
             $ v14_amber_clean = True
             scene v14s25_8k
             with dissolve
@@ -806,14 +806,15 @@ label v14s25:
 
             menu:
                 "Let her stay":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
+                    $ v14s25_letherstay = True
                     u "(Ha, hard as stone on the outside but a softie on the inside.)"
 
                     scene v14s25_17e # TPP. Show MC going back to sleep with his arm around Amber as she lays on him.
                     with dissolve
 
                 "Move away":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
                     u "*Chuckles* (Sorry, Amber.)"
 
                     scene v14s25_17f # TPP. Show MC and Amber with their backs against each other sleeping.
@@ -822,7 +823,7 @@ label v14s25:
             jump v14s25b
 
         "Let Amber be Amber":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ v14_amber_drugs = True
             scene v14s25_8m
             with dissolve
@@ -899,8 +900,7 @@ label v14s25:
 
             pause
             
-            if v14s24a_twezzlers or v14s24a_gummyfish:
-                
+            if v14s03a_take_wallet: # if candy shopping with Aubrey
                 scene v14s25_19a # TPP. Same as v14s25_19, Double Vision, Show MC and Amber eating snacks.
                 with fade
 
@@ -948,7 +948,7 @@ label v14s25:
 
             menu:
                 "Fuck Amber":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
                     scene v14s25_21a # FPP. Same as v14s25_21, Amber flirtatious smile, mouth closed.
                     with dissolve
 
@@ -957,7 +957,7 @@ label v14s25:
                     jump v14s25a
 
                 "Don't fuck Amber": 
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
                     scene v14s25_21a
                     with dissolve
 
@@ -1038,14 +1038,14 @@ label v14s25:
 
                     menu:
                         "Let her stay":
-                            $ addPoint("tm")
+                            $ add_point(KCT.TROUBLEMAKER)
                             u "(Ha, hard as stone on the outside but a softie on the inside.)"
 
                             scene v14s25_17e
                             with dissolve
 
                         "Move away":
-                            $ addPoint("bf")
+                            $ add_point(KCT.BOYFRIEND)
                             u "*Chuckles* (Sorry, Amber.)"
 
                             scene v14s25_17f

@@ -75,7 +75,7 @@ label v12_chase_robber:
 
             menu (fail_label="v12s1a_failed_timer"):
                 "Dodge":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
                     $ v12_fight_win = True
                     scene v12car12 # TPP Show MC dodging robber's punch
                     with dissolve
@@ -306,7 +306,7 @@ label v12_chase_robber:
 
         menu:
             "Kick him":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 scene v12car16b # TPP Same angle as v12car16, show MC kicking robber
                 with dissolve
                 play sound "sounds/facepunch1.mp3"
@@ -529,8 +529,8 @@ label v12_chase_robber:
     $ v12s1a_kiwiiPost1.newComment("Charli", _("If you want a man Imre I can take you to a few bars... All you had to do was ask."), numberLikes=14, queue=False)
     $ v12s1a_kiwiiPost1.newComment("Ryan", _("LMAO"), numberLikes=1, mentions="Imre", queue=False)
 
-    $ contact_Imre.newMessage("Check Kiwii... you're welcome. :)", queue=False)
-    $ contact_Imre.addReply("Haha okay", func=None)
+    $ imre.messenger.newMessage("Check Kiwii... you're welcome. :)", queue=False)
+    $ imre.messenger.addReply("Haha okay", func=None)
 
     call screen phone
 
@@ -539,12 +539,12 @@ label v12_chase_robber:
     # There's a comment from Charli that says "If you want a man Imre I can take you to a few bars, all you had to do was ask."
     
     # MC replies back to Imre-
-    $ contact_Imre.addReply("Boosting me huh?", func=None)
-    $ contact_Imre.newMessage("You deserved it", queue=True)
-    $ contact_Imre.addReply("You see Charli's comment?", func=None)
-    $ contact_Imre.newMessage("No, one sec", queue=True)
-    $ contact_Imre.newMessage("I'm gonna beat his ass", queue=True)
-    $ contact_Imre.addReply("Haha", func=None)
+    $ imre.messenger.addReply("Boosting me huh?", func=None)
+    $ imre.messenger.newMessage("You deserved it", queue=True)
+    $ imre.messenger.addReply("You see Charli's comment?", func=None)
+    $ imre.messenger.newMessage("No, one sec", queue=True)
+    $ imre.messenger.newMessage("I'm gonna beat his ass", queue=True)
+    $ imre.messenger.addReply("Haha", func=None)
 
     scene v12car30a
     with dissolve

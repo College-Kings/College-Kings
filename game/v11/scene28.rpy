@@ -5,7 +5,7 @@
 
 label v11_ms_rose_sex:
     $ v11_msrose_scene = True
-    #$ addPoint("tm", sum([ v10_lauren_suck, v10_ambersex, v10_chloe_locker, v10_ri_sex, v11_fucked_candy, v11_aubrey_sex ])) ###Loyaltymod
+    #$ add_point(KCT.TROUBLEMAKER, sum([ v10_lauren_suck, v10_ambersex, v10_chloe_locker, v10_ri_sex, v11_fucked_candy, v11_aubrey_sex ])) ###Loyaltymod
 
     scene v11ros1 # TPP. Show MC walking thourgh the corridor, he is slightly nervous, mouth closed
     with fade
@@ -17,7 +17,7 @@ label v11_ms_rose_sex:
 
     menu:
         "Open the door":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene v11ros2a # FPP. Same as v11ros2, MC is grabbing the door handle
             with dissolve
@@ -36,7 +36,7 @@ label v11_ms_rose_sex:
             pause 1
 
         "Knock":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene v11ros2c # FPP. Same as v11ros2, show MC knocking on the door
             with dissolve

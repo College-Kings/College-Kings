@@ -128,7 +128,7 @@ label v14s11:
 
     menu:
         "He did":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene v14s11_4b
             with dissolve
@@ -141,7 +141,7 @@ label v14s11:
             ri "I wouldn't expect you to. He was worse to you than most of us."
 
         "He didn't":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene v14s11_4b
             with dissolve
@@ -254,7 +254,7 @@ label v14s11:
 
         menu:
             "Like us both":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 scene v14s11_4i
                 with dissolve       
@@ -355,8 +355,8 @@ label v14s11:
                 with dissolve
 
             "Pick one of us":
-                $ addPoint("tm")
-                $ addPoint("bf")
+                $ add_point(KCT.TROUBLEMAKER)
+                $ add_point(KCT.BOYFRIEND)
 
                 scene v14s11_4b
                 with dissolve

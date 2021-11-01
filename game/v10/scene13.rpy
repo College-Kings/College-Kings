@@ -84,7 +84,7 @@ label v10_wolves_redec:
 
     menu:
         "Accept help":
-            $ addPoint("bro", 1)
+            $ add_point(KCT.BRO)
 
             $ v10_perry_help_room = True
 

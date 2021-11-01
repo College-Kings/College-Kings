@@ -66,7 +66,7 @@ label v11_nora_chloe_hallway:
     menu:
         "I'll be there":
             $ noraLike += 1
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene v11nohall2b
             with dissolve
@@ -85,7 +85,7 @@ label v11_nora_chloe_hallway:
                 no "I just wish he'd make more of an effort."
 
         "Have a good time":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene v11nohall2d
             with dissolve
@@ -118,7 +118,7 @@ label v11_nora_chloe_hallway:
 
     menu:
         "Defend Chloe":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ noraLike -= 1
 
             scene v11nohall2d
@@ -251,7 +251,7 @@ label v11_nora_chloe_hallway:
 
     menu:
         "Mellow":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v11nohall11c # same 11b, just change pose a little so conversation isn't stale
             with dissolve
 
@@ -270,7 +270,7 @@ label v11_nora_chloe_hallway:
 
     menu:
         "Hanging with the girls":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v11nohall11c
             with dissolve
             u "Well, we'll be in another country surrounded by beautiful women... I'm sure you can imagine what I plan on doing. *Chuckles* Really though, I just wanna have fun no matter what."
@@ -358,7 +358,7 @@ label v11_nora_chloe_hallway:
                 menu:
                     "Apologize":
                         $ chloemad = False
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
 
                         scene v11clhall1c
                         with dissolve
@@ -395,7 +395,7 @@ label v11_nora_chloe_hallway:
 
                         menu:
                             "Yes":
-                                $ addPoint("bf")
+                                $ add_point(KCT.BOYFRIEND)
                                 $ chloeLike += 1
 
                                 scene v11clhall1f
@@ -622,7 +622,7 @@ label v11_nora_chloe_hallway:
 
                 menu:
                     "Yes":
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
                         $ chloeLike += 1
 
                         scene v11clhall1f

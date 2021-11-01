@@ -151,7 +151,7 @@ label v9_dinner_w_rose:
 
     menu:
         "Talk about working out":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene v9damr9
             with dissolve
@@ -306,7 +306,7 @@ label v9_dinner_w_rose:
 
     menu:
         "Offer to help":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene v9damr12f # FPP. Same camera as v9damr12, Show Ms. Rose now stood at the end of table, Imre seated to MC's right,neutral expressions,  Ms. Rose mouth closed, Imre mouth closed
             with dissolve

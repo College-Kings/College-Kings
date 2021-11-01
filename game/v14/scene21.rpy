@@ -1,4 +1,4 @@
-# SCENE 21: If ChloeRs Having sex and help Chloe
+# SCENE 21: If chloers Having sex and help Chloe
 # Locations: Outside Front of School building. And Parking lot.
 # Characters: CHLOE (Outfit: 2), MC (Outfit: 9)
 # Time: Afternoon
@@ -231,12 +231,12 @@ label v14s21:
 
     menu:
         "Continue":
-            $ addPoint("bf")
-            $ addPoint("tm")
+            $ add_point(KCT.BOYFRIEND)
+            $ add_point(KCT.TROUBLEMAKER)
             jump v14s21a
         
         "Pull back":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v14s21_10b # TPP. MC pulling away from the kissing, MC slight smile, mouth closed, Chloe confused expression, mouth open
             with dissolve
 

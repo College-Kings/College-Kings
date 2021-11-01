@@ -60,7 +60,7 @@ label v13s14a:
 
     menu:
         "Plead the fifth": 
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "I plead the fifth. *Chuckles*"
 
@@ -70,7 +70,7 @@ label v13s14a:
             polly "I think I got my answer. *Laughs*"
 
         "I'm a one woman man":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "I'm a one woman-man."
 

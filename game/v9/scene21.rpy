@@ -76,17 +76,17 @@ label v9_room_w_chris:
     scene v9rwc5 # TPP. Show MC checking his phone.
     with dissolve
 
-    $ contact_Julia.addReply(_("Hey, how's it going?"))
-    $ contact_Julia.newMessage(_("Hey! I was just thinking about you, how's school?"))
-    $ contact_Julia.addReply(_("Good! About to go have dinner with some of the guys in my house"))
-    $ contact_Julia.newMessage(_("I'm glad you're making friends, I'm so proud of you!"))
-    $ contact_Julia.addReply(_("Aww don't make me blush! They'll be here any second, I'll talk to you later"))
-    $ contact_Julia.newMessage(_("<3"))
+    $ julia.messenger.addReply(_("Hey, how's it going?"))
+    $ julia.messenger.newMessage(_("Hey! I was just thinking about you, how's school?"))
+    $ julia.messenger.addReply(_("Good! About to go have dinner with some of the guys in my house"))
+    $ julia.messenger.newMessage(_("I'm glad you're making friends, I'm so proud of you!"))
+    $ julia.messenger.addReply(_("Aww don't make me blush! They'll be here any second, I'll talk to you later"))
+    $ julia.messenger.newMessage(_("<3"))
     
     label s21_PhoneContinue:
-        if contact_Julia.replies:
+        if julia.messenger.replies:
             call screen phone
-        if contact_Julia.replies:
+        if julia.messenger.replies:
             "(I should text Julia.)"
             jump s21_PhoneContinue
 

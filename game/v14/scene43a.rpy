@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 1), PENELOPE (Outfit: 1)
 # Time: Morning
 
-
 label v14s43a:
     scene v14s43a_1 # TPP. Show MC and Penelope walking together, both smiling, mouths closed (NOT holding hands). They are in the college
     with dissolve
@@ -25,7 +24,7 @@ label v14s43a:
     scene v14s43a_3 # FPP. MC and Penelope in the college hallway, standing next to each other, Penelope smiling, mouth closed
     with dissolve
 
-    u "Oh,  and just so you know… You snore super loudly. *Laughs* I'm sure you already knew that though."
+    u "Oh,  and just so you know... You snore super loudly. *Laughs* I'm sure you already knew that though."
 
     scene v14s43a_3a # FPP. Same as v14s43a_3, Penelope smiling, mouth open
     with dissolve
@@ -35,7 +34,7 @@ label v14s43a:
     scene v14s43a_3
     with dissolve
 
-    u "You were like…"
+    u "You were like..."
 
     u "*Loud snoring sounds*"
 
@@ -52,7 +51,7 @@ label v14s43a:
     scene v14s43a_3
     with dissolve
 
-    u "Yeah, sure…"
+    u "Yeah, sure..."
 
     scene v14s43a_3a
     with dissolve
@@ -62,7 +61,7 @@ label v14s43a:
     scene v14s43a_3
     with dissolve
 
-    u "Haha! You weren't actually snoring… Just kidding."
+    u "Haha! You weren't actually snoring... Just kidding."
 
     scene v14s43a_3a
     with dissolve
@@ -72,17 +71,17 @@ label v14s43a:
     scene v14s43a_3
     with dissolve
 
-    u "I’ll be funny once I tell everyone that you snore, though."
+    u "I'll be funny once I tell everyone that you snore, though."
 
     scene v14s43a_3b
     with dissolve
 
-    pe "You wouldn’t do that."
+    pe "You wouldn't do that."
 
     scene v14s43a_3
     with dissolve
 
-    u "Wouldn’t I? *Chuckles*"
+    u "Wouldn't I? *Chuckles*"
 
     scene v14s43a_3c # FPP. Same as v14s43a_3, Penelope rolling her eyes and laughing
     with dissolve

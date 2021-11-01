@@ -61,7 +61,7 @@ label mr_aft_class:
 
         menu:
             "Ask more questions":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 jump ask_rose_more_q
             "Leave":
                 jump no_ask_rose_more_q

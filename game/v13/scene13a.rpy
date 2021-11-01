@@ -288,7 +288,7 @@ label v13s13a:
             polly "Ah, okay. *Chuckles*"
 
         "Hell, yeah!":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ v13_after_party = True
 
             u "Oh, hell yeah. Who doesn't love a good club?"

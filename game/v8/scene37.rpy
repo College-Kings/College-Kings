@@ -15,52 +15,52 @@ label v8_tues_evening:
         with dissolve
 
         if laurenrs:
-            $ contact_Lauren.addReply(_("Still fine with drinking instead of making out with me?"))
-            $ contact_Lauren.newMessage(_("Of course, that drink was just my cup of tea. :)"))
-            $ contact_Lauren.addReply(_("Oh haha, is that so? I think it at least poured a bit of courage in there."))
-            $ contact_Lauren.newMessage(_("Don't flatter yourself, witty cowboy. :)"))
-            $ contact_Lauren.addReply(_("You flatter me, ma'am."))
-            $ contact_Lauren.newMessage(_("Miss you."))
-            $ contact_Lauren.addReply(_("Kiss you*:)"))
-            $ contact_Lauren.newMessage(_(":)"))
+            $ lauren.messenger.addReply(_("Still fine with drinking instead of making out with me?"))
+            $ lauren.messenger.newMessage(_("Of course, that drink was just my cup of tea. :)"))
+            $ lauren.messenger.addReply(_("Oh haha, is that so? I think it at least poured a bit of courage in there."))
+            $ lauren.messenger.newMessage(_("Don't flatter yourself, witty cowboy. :)"))
+            $ lauren.messenger.addReply(_("You flatter me, ma'am."))
+            $ lauren.messenger.newMessage(_("Miss you."))
+            $ lauren.messenger.addReply(_("Kiss you*:)"))
+            $ lauren.messenger.newMessage(_(":)"))
 
         else:
-            $ contact_Lauren.addReply(_("Hey there, could you help me with studying?"))
-            $ contact_Lauren.newMessage(_("Umm, sure?"))
-            $ contact_Lauren.addReply(_("I'm puzzled just as much as I was back on that bench..."))
-            $ contact_Lauren.newMessage(_("You texted me just to make that reference, right?"))
-            $ contact_Lauren.addReply(_("Maybe?"))
-            $ contact_Lauren.newMessage(_("Seriously [name], I have things to do!"))
-            $ contact_Lauren.addReply(_("Later then."))
+            $ lauren.messenger.addReply(_("Hey there, could you help me with studying?"))
+            $ lauren.messenger.newMessage(_("Umm, sure?"))
+            $ lauren.messenger.addReply(_("I'm puzzled just as much as I was back on that bench..."))
+            $ lauren.messenger.newMessage(_("You texted me just to make that reference, right?"))
+            $ lauren.messenger.addReply(_("Maybe?"))
+            $ lauren.messenger.newMessage(_("Seriously [name], I have things to do!"))
+            $ lauren.messenger.addReply(_("Later then."))
 
         label v8s37_phoneContinue1:
-            if contact_Lauren.replies:
+            if lauren.messenger.replies:
                 call screen phone
-            if contact_Lauren.replies:
+            if lauren.messenger.replies:
                 u "I should reply to Lauren."
                 jump v8s37_phoneContinue1
 
         if rileyrs:
-            $ contact_Riley.addReply(_("If your legs were lies, you could call me a liar. For I would be gladly spreading them."))
-            $ contact_Riley.newMessage(_("That was the most corny, idiotic joke I've ever heard, Mr. Liar. :)"))
-            $ contact_Riley.addReply(_("Thinking of you makes it harder to study. And in some other places as well..."))
-            $ contact_Riley.newMessage(_("I'll be the judge of that. :)"))
-            $ contact_Riley.addReply(_("Can't wait. :)"))
+            $ riley.messenger.addReply(_("If your legs were lies, you could call me a liar. For I would be gladly spreading them."))
+            $ riley.messenger.newMessage(_("That was the most corny, idiotic joke I've ever heard, Mr. Liar. :)"))
+            $ riley.messenger.addReply(_("Thinking of you makes it harder to study. And in some other places as well..."))
+            $ riley.messenger.newMessage(_("I'll be the judge of that. :)"))
+            $ riley.messenger.addReply(_("Can't wait. :)"))
 
         else:
-            $ contact_Riley.addReply(_("I have a serious question to ask you."))
-            $ contact_Riley.newMessage(_("What is it?"))
-            $ contact_Riley.addReply(_("You get to chose between options A and B."))
-            $ contact_Riley.newMessage(_("OK?"))
-            $ contact_Riley.addReply(_("Option A is to make out with Mr. Lee."))
-            $ contact_Riley.newMessage(_("B. I choose B. Option B."))
-            $ contact_Riley.addReply(_("Haha"))
-            $ contact_Riley.newMessage(_("*yuck*"))
+            $ riley.messenger.addReply(_("I have a serious question to ask you."))
+            $ riley.messenger.newMessage(_("What is it?"))
+            $ riley.messenger.addReply(_("You get to chose between options A and B."))
+            $ riley.messenger.newMessage(_("OK?"))
+            $ riley.messenger.addReply(_("Option A is to make out with Mr. Lee."))
+            $ riley.messenger.newMessage(_("B. I choose B. Option B."))
+            $ riley.messenger.addReply(_("Haha"))
+            $ riley.messenger.newMessage(_("*yuck*"))
 
         label v8s37_phoneContinue2:
-            if contact_Riley.replies:
+            if riley.messenger.replies:
                 call screen phone
-            if contact_Riley.replies:
+            if riley.messenger.replies:
                 u "I should reply to Riley."
                 jump v8s37_phoneContinue2
 
@@ -83,52 +83,52 @@ label v8_tues_evening:
         with dissolve
 
         if laurenrs:
-            $ contact_Lauren.addReply(_("Still fine with drinking instead of making out with me?"))
-            $ contact_Lauren.newMessage(_("Of course, that drink was just my cup of tea. :)"))
-            $ contact_Lauren.addReply(_("Oh haha, is that so? I think it at least poured a bit of courage in there."))
-            $ contact_Lauren.newMessage(_("Don't flatter yourself, witty cowboy. :)"))
-            $ contact_Lauren.addReply(_("You flatter me, ma'am."))
-            $ contact_Lauren.newMessage(_("Miss you."))
-            $ contact_Lauren.addReply(_("Kiss you*:)"))
-            $ contact_Lauren.newMessage(_(":)"))
+            $ lauren.messenger.addReply(_("Still fine with drinking instead of making out with me?"))
+            $ lauren.messenger.newMessage(_("Of course, that drink was just my cup of tea. :)"))
+            $ lauren.messenger.addReply(_("Oh haha, is that so? I think it at least poured a bit of courage in there."))
+            $ lauren.messenger.newMessage(_("Don't flatter yourself, witty cowboy. :)"))
+            $ lauren.messenger.addReply(_("You flatter me, ma'am."))
+            $ lauren.messenger.newMessage(_("Miss you."))
+            $ lauren.messenger.addReply(_("Kiss you*:)"))
+            $ lauren.messenger.newMessage(_(":)"))
 
         else:
-            $ contact_Lauren.addReply(_("Hey there, could you help me with studying?"))
-            $ contact_Lauren.newMessage(_("Umm, sure?"))
-            $ contact_Lauren.addReply(_("I'm puzzled just as much as I was back on that bench..."))
-            $ contact_Lauren.newMessage(_("You texted me just to make that reference, right?"))
-            $ contact_Lauren.addReply(_("Maybe?"))
-            $ contact_Lauren.newMessage(_("Seriously [name], I have things to do!"))
-            $ contact_Lauren.addReply(_("Later then."))
+            $ lauren.messenger.addReply(_("Hey there, could you help me with studying?"))
+            $ lauren.messenger.newMessage(_("Umm, sure?"))
+            $ lauren.messenger.addReply(_("I'm puzzled just as much as I was back on that bench..."))
+            $ lauren.messenger.newMessage(_("You texted me just to make that reference, right?"))
+            $ lauren.messenger.addReply(_("Maybe?"))
+            $ lauren.messenger.newMessage(_("Seriously [name], I have things to do!"))
+            $ lauren.messenger.addReply(_("Later then."))
 
         label v8s37_phoneContinue3:
-            if contact_Lauren.replies:
+            if lauren.messenger.replies:
                 call screen phone
-            if contact_Lauren.replies:
+            if lauren.messenger.replies:
                 u "I should reply to Lauren."
                 jump v8s37_phoneContinue3
 
         if rileyrs:
-            $ contact_Riley.addReply(_("If your legs were lies, you could call me a liar. For I would be gladly spreading them."))
-            $ contact_Riley.newMessage(_("That was the most corny, idiotic joke I've ever heard, Mr. Liar. :)"))
-            $ contact_Riley.addReply(_("Thinking of you makes it harder to study. And in some other places as well..."))
-            $ contact_Riley.newMessage(_("I'll be the judge of that. :)"))
-            $ contact_Riley.addReply(_("Can't wait. :)"))
+            $ riley.messenger.addReply(_("If your legs were lies, you could call me a liar. For I would be gladly spreading them."))
+            $ riley.messenger.newMessage(_("That was the most corny, idiotic joke I've ever heard, Mr. Liar. :)"))
+            $ riley.messenger.addReply(_("Thinking of you makes it harder to study. And in some other places as well..."))
+            $ riley.messenger.newMessage(_("I'll be the judge of that. :)"))
+            $ riley.messenger.addReply(_("Can't wait. :)"))
 
         else:
-            $ contact_Riley.addReply(_("I have a serious question to ask you."))
-            $ contact_Riley.newMessage(_("What is it?"))
-            $ contact_Riley.addReply(_("You get to chose between options A and B."))
-            $ contact_Riley.newMessage(_("OK?"))
-            $ contact_Riley.addReply(_("Option A is to make out with Mr. Lee."))
-            $ contact_Riley.newMessage(_("B. I choose B. Option B."))
-            $ contact_Riley.addReply(_("Haha"))
-            $ contact_Riley.newMessage(_("*yuck*"))
+            $ riley.messenger.addReply(_("I have a serious question to ask you."))
+            $ riley.messenger.newMessage(_("What is it?"))
+            $ riley.messenger.addReply(_("You get to chose between options A and B."))
+            $ riley.messenger.newMessage(_("OK?"))
+            $ riley.messenger.addReply(_("Option A is to make out with Mr. Lee."))
+            $ riley.messenger.newMessage(_("B. I choose B. Option B."))
+            $ riley.messenger.addReply(_("Haha"))
+            $ riley.messenger.newMessage(_("*yuck*"))
 
         label v8s37_phoneContinue4:
-            if contact_Riley.replies:
+            if riley.messenger.replies:
                 call screen phone
-            if contact_Riley.replies:
+            if riley.messenger.replies:
                 u "I should reply to my phone."
                 jump v8s37_phoneContinue4
             

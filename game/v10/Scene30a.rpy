@@ -89,7 +89,7 @@ label v10_emily_course:
 
                 menu:
                     "Join Emily":
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
                         $ emilyLike += 1
                         $ v10_join_emi = True
                         $ forgiveemily = True
@@ -142,14 +142,14 @@ label v10_emily_course:
                         menu:
                             "Save Emily":
                                 $ v10_save_emi_cpr = True
-                                $ addPoint("bf")
+                                $ add_point(KCT.BOYFRIEND)
 
                                 u "Don't you die on us!"
 
                                 be "Looks like you two are really getting into it."                                
 
                             "Don't save Emily":
-                                $ addPoint("tm")
+                                $ add_point(KCT.TROUBLEMAKER)
                             
                                 u "Oh no, if only someone could save her."
 
@@ -173,7 +173,7 @@ label v10_emily_course:
 
                         menu:
                             "Agree with Emily":
-                                $ addPoint("bf")
+                                $ add_point(KCT.BOYFRIEND)
                                 $ emilyLike += 1
 
                                 $ v10_emi_nurse = True
@@ -231,7 +231,7 @@ label v10_emily_course:
                         jump v10_late_alley
 
                     "Leave":
-                        $ addPoint("tm")
+                        $ add_point(KCT.TROUBLEMAKER)
 
                         u "Shoot, what time is it?"
 
@@ -315,7 +315,7 @@ label v10_emily_course:
 
                 menu:
                     "Join Emily":
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
                         $ emilyLike += 1
                         $ v10_join_emi = True
                         $ forgiveemily = True
@@ -368,14 +368,14 @@ label v10_emily_course:
                         menu:
                             "Save Emily":
                                 $ v10_save_emi_cpr = True
-                                $ addPoint("bf")
+                                $ add_point(KCT.BOYFRIEND)
 
                                 u "Don't you die on us!"
 
                                 be "Looks like you two are really getting into it."                                
 
                             "Don't save Emily":
-                                $ addPoint("tm")
+                                $ add_point(KCT.TROUBLEMAKER)
                             
                                 u "Oh no, if only someone could save her."
 
@@ -399,7 +399,7 @@ label v10_emily_course:
 
                         menu:
                             "Agree with Emily":
-                                $ addPoint("bf")
+                                $ add_point(KCT.BOYFRIEND)
                                 $ emilyLike += 1
 
                                 $ v10_emi_nurse = True
@@ -457,7 +457,7 @@ label v10_emily_course:
                         jump v10_late_alley
 
                     "Leave":
-                        $ addPoint("tm")
+                        $ add_point(KCT.TROUBLEMAKER)
 
                         u "Shoot, what time is it?"
 

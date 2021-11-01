@@ -19,7 +19,7 @@ label v14s15:
 
     u "(Holy... shit... This is serious!)"
 
-    if v11_lindsey_slogan <= 1: # 0 or 1, just in case someone fudges the variables
+    if v11_lindsey_slogan == 1: # 0 or 1, just in case someone fudges the variables
         scene v14s15_4   # FPP. MC looking at a banner with the campaign slogan «Lindsey, Returning The Promise».
         with dissolve
         

@@ -57,7 +57,7 @@ label v10_ms_rose_fight:
 
     menu:
         "Speak up":
-            $ addPoint("bf", 1)
+            $ add_point(KCT.BOYFRIEND)
             $ v10_ms_r_interfere = True
             scene v10msf2 # FPP. Show MR Rose in foreground facing camera, Show MS rose at the door facing camera, Mr Rose Mouth closed, Ms rose mouth closed.
             with dissolve
@@ -142,7 +142,7 @@ label v10_ms_rose_fight:
 
     menu:
         "Insult him":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             scene v10msf4a # FPP. same camera as v10msf4, Show MS rose, crying mouth closed, FPP now from right infront of door to have conversation with ms rose.
             with dissolve
 
@@ -216,7 +216,7 @@ label v10_ms_rose_fight:
     menu:
         "Make a move":
             $ v10_ms_r_kiss = True
-            $ addPoint("bf", 1)
+            $ add_point(KCT.BOYFRIEND)
             scene v10msf5a # TPP. same camera as v10msf5, Show MS rose. Touching MC on the cheek, smiling,MC hand on Ms Rose Waist.
             with dissolve
 

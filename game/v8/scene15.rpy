@@ -91,7 +91,7 @@ label penelope_dorm_hack:
 
     menu:
         "Offer to help Penelope":
-            $ addPoint ("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ penHelpDean = True
             jump help_pen
 

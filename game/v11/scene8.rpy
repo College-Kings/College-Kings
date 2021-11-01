@@ -192,9 +192,9 @@ label v11_chicks_house:
     menu:
         "You should run":
             if lindseyfirstkiss:
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
             elif chloers:
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
             
             scene v11chh6a
             with dissolve

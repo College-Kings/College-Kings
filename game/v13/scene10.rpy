@@ -127,13 +127,13 @@ label v13s10:
 
             play sound "sounds/vibrate.mp3"
 
-            $ contact_Aubrey.newMessage("Still getting ready, meet you in about an hour? We still have plenty of time.", queue=False)
-            $ contact_Aubrey.addReply("Haha, OK ", func=None)
+            $ aubrey.messenger.newMessage("Still getting ready, meet you in about an hour? We still have plenty of time.", queue=False)
+            $ aubrey.messenger.addReply("Haha, OK ", func=None)
     
             label v13s9_PhoneContinueAubrey:
-                if contact_Aubrey.replies:
+                if aubrey.messenger.replies:
                     call screen phone
-                if contact_Aubrey.replies:
+                if aubrey.messenger.replies:
                     u "(I should check my phone.)"
                     jump v13s9_PhoneContinueAubrey
     
@@ -145,13 +145,13 @@ label v13s10:
 
             play sound "sounds/vibrate.mp3"
 
-            $ contact_Penelope.newMessage("Trying to finish some things for Ms. Rose, give me about an hour?", queue=False)
-            $ contact_Penelope.addReply("No worries, we have time.", func=None)
+            $ penelope.messenger.newMessage("Trying to finish some things for Ms. Rose, give me about an hour?", queue=False)
+            $ penelope.messenger.addReply("No worries, we have time.", func=None)
 
             label v13s9_PhoneContinuePenelope:
-                if contact_Penelope.replies:
+                if penelope.messenger.replies:
                     call screen phone
-                if contact_Penelope.replies:
+                if penelope.messenger.replies:
                     u "(I should check my phone.)"
                     jump v13s9_PhoneContinuePenelope
 

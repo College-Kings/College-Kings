@@ -3,7 +3,6 @@
 # Characters: MC (Outfit:9), GRAYSON (Gas Station Outfit)
 # Time: Evening (Tuesday)
 
-
 label v14s24a:
     scene v14s24a_1  # TPP. MC, smiling, walking towards the door of the gas station.
     with dissolve
@@ -31,6 +30,7 @@ label v14s24a:
     pause 0.75
 
     scene v14s24a_6  # TPP. MC stops in the middle of the candy aisle and looks at candy.
+    with dissolve
 
     u "Hmm... (What candy would Amber like best?)"
 
@@ -38,14 +38,12 @@ label v14s24a:
     with dissolve
 
     menu:
-
         "Twezzlers":         
             scene v14a24a_8  # TPP. MC, smiling, grabs Twezzlers from the shelf.
             with dissolve            
 
         "Gummy Fish":
             $ v14s24a_gummyfish = True
-            
             scene v14s24a_8a # Same as v14s24a but MC grabs Gummy Fish from the shelf.
             with dissolve  
     

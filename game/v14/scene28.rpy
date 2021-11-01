@@ -44,7 +44,10 @@ label v14s28:
 
         menu:
             "I love you too":
-                $ addPoint ("bf")
+                $ add_point(KCT.BOYFRIEND)
+                
+                $ v14_emily_ily = True
+                
                 scene v14s28_2a
                 with dissolve
 
@@ -91,7 +94,7 @@ label v14s28:
                 pause 0.75
 
             "It'll never work between us":
-                $ addPoint ("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 scene v14s28_2a
                 with dissolve
 

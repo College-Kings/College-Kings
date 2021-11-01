@@ -1,66 +1,66 @@
 init python:
     def v6_reply1():
-        addPoint("bro")
-        contact_Amber.newMessage(_("I'm playing drink or dare and got dared to send an underwear pic to a guy."))
-        contact_Amber.addReply(_("And you chose me, huh?"), v6_reply2)
-        contact_Amber.addReply(_("Feel free to do so anytime :)"), v6_reply3)
+        add_point(KCT.BRO)
+        amber.messenger.newMessage(_("I'm playing drink or dare and got dared to send an underwear pic to a guy."))
+        amber.messenger.addReply(_("And you chose me, huh?"), v6_reply2)
+        amber.messenger.addReply(_("Feel free to do so anytime :)"), v6_reply3)
 
     def v6_reply2():
-        addPoint("bro")
-        contact_Amber.newMessage(_("Maybe I picked someone at random ;)"))
+        add_point(KCT.BRO)
+        amber.messenger.newMessage(_("Maybe I picked someone at random ;)"))
 
     def v6_reply3():
-        addPoint("bf")
-        contact_Amber.newMessage(_("Maybe if you're lucky xx"))
+        add_point(KCT.BOYFRIEND)
+        amber.messenger.newMessage(_("Maybe if you're lucky xx"))
 
     def v6_reply4():
-        addPoint("bf")
-        contact_Amber.newMessage(_("I'm glad you like it xx"))
-        contact_Amber.addReply(_( "I hope there's more of that in the future :P"))
-        contact_Amber.newMessage(_("Maybe if you're lucky xx"))
+        add_point(KCT.BOYFRIEND)
+        amber.messenger.newMessage(_("I'm glad you like it xx"))
+        amber.messenger.addReply(_( "I hope there's more of that in the future :P"))
+        amber.messenger.newMessage(_("Maybe if you're lucky xx"))
 
     def v6_reply5():
-        addPoint("tm")
-        addPoint("bro")
-        contact_Amber.newMessage(_("Moment's passed..."))
+        add_point(KCT.TROUBLEMAKER)
+        add_point(KCT.BRO)
+        amber.messenger.newMessage(_("Moment's passed..."))
 
     def v6_reply6():
-        addPoint("bf")
-        contact_Amber.newMessage(_("You better xx"))
+        add_point(KCT.BOYFRIEND)
+        amber.messenger.newMessage(_("You better xx"))
 
     def v6_reply7():
         setattr(store, "meetaubrey", True)
-        contact_Aubrey.newMessage(_(":)"))
+        aubrey.messenger.newMessage(_(":)"))
 
     def v6_reply8():
         setattr(store, "meetaubrey", False)
-        contact_Aubrey.newMessage(_("Oh, okay"))
+        aubrey.messenger.newMessage(_("Oh, okay"))
 
     def v6_reply9():
         setattr(store, "homeworkout", True)
-        contact_Amber.newMessage(_("Yeah maybe we should xx"))
+        amber.messenger.newMessage(_("Yeah maybe we should xx"))
 
     def v6_reply10():
-        addPoint("bf")
+        add_point(KCT.BOYFRIEND)
         setattr(store, "homrworkout", False)
 
     def v6_reply11():
-        contact_Amber.addReply(_("I'm alone now, if the surprise is still on ;)"), v6_reply5)
-        contact_Amber.addReply(_("I'll make it up to you tho"), v6_reply6)
+        amber.messenger.addReply(_("I'm alone now, if the surprise is still on ;)"), v6_reply5)
+        amber.messenger.addReply(_("I'll make it up to you tho"), v6_reply6)
 
 label script06: #for compatibility only
 label v6start:
     if imremad and chloemad:
         menu:
             "Find Imre":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ chooseimre = True
                 $ meetchloe = False
 
                 jump imrecona
 
             "Keep talking to Amber":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ chooseimre = False
                 $ meetchloe = False
 
@@ -69,14 +69,14 @@ label v6start:
     elif imremad:
         menu:
             "Find Imre":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ chooseimre = True
                 $ meetchloe = False
 
                 jump imrecona
 
             "Meet Chloe":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ chooseimre = False
                 $ meetchloe = True
 
@@ -86,14 +86,14 @@ label v6start:
     elif chloemad:
         menu:
             "Help Imre":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ chooseimre = True
                 $ meetchloe = False
 
                 jump imreconb
 
             "Keep talking to Amber":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ chooseimre = False
                 $ meetchloe = False
 
@@ -102,14 +102,14 @@ label v6start:
     else:
         menu:
             "Help Imre":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ chooseimre = True
                 $ meetchloe = False
 
                 jump imreconb
 
             "Meet Chloe":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ chooseimre = False
                 $ meetchloe = True
 
@@ -147,7 +147,7 @@ label imrecona: # Find Imre
 
     menu:
         "Explain yourself":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s445c
             with dissolve
@@ -225,7 +225,7 @@ label imrecona: # Find Imre
                 imre "Fuck do you know about loyalty?! You just wanna be in control!"
 
         "Apologize":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ imreforgives = False
 
             scene s445c
@@ -352,15 +352,15 @@ label imreconc: # Keep talking to Amber
     scene s475 # MC in a remote location
     with fade
 
-    $ contact_Amber.addReply(_("I'm all by myself now."))
-    $ contact_Amber.newImgMessage("images/text2.webp")
-    $ contact_Amber.addReply(_("Woah, what was that for?"), v6_reply1)
-    $ contact_Amber.addReply(_("Oh wow, you're so fucking hot"), v6_reply4)
+    $ amber.messenger.addReply(_("I'm all by myself now."))
+    $ amber.messenger.newImgMessage("images/text2.webp")
+    $ amber.messenger.addReply(_("Woah, what was that for?"), v6_reply1)
+    $ amber.messenger.addReply(_("Oh wow, you're so fucking hot"), v6_reply4)
 
     label phonead:
-        if contact_Amber.replies:
+        if amber.messenger.replies:
             call screen phone
-        if contact_Amber.replies:
+        if amber.messenger.replies:
             u "(Time to text Amber.)"
             jump phonead
 
@@ -375,15 +375,15 @@ label imreconc: # Keep talking to Amber
 label imrecond: # Meet Chloe
     u "(Fuck it, Chloe's more important.)"
 
-    $ contact_Chloe.addReply(_("I'll make time for you :)"))
-    $ contact_Chloe.newMessage(_("That's what I like to hear :*"))
-    $ contact_Chloe.newMessage(_("Meet me at the school's swimming pool"))
-    $ contact_Chloe.addReply(_("Cool, see you there"))
+    $ chloe.messenger.addReply(_("I'll make time for you :)"))
+    $ chloe.messenger.newMessage(_("That's what I like to hear :*"))
+    $ chloe.messenger.newMessage(_("Meet me at the school's swimming pool"))
+    $ chloe.messenger.addReply(_("Cool, see you there"))
 
     label phoneac:
-        if contact_Chloe.replies:
+        if chloe.messenger.replies:
             call screen phone
-        if contact_Chloe.replies:
+        if chloe.messenger.replies:
             u "(I should reply to Chloe.)"
             jump phoneac
 
@@ -549,8 +549,8 @@ label imrecond: # Meet Chloe
 
     menu:
         "Just let it ring.":
-            $ addPoint("tm")
-            $ addPoint("bf")
+            $ add_point(KCT.TROUBLEMAKER)
+            $ add_point(KCT.BOYFRIEND)
 
             scene s460a # FIRST PERSON: chloe close up, she's turned around looking at her phone
             with dissolve
@@ -573,7 +573,7 @@ label imrecond: # Meet Chloe
             cl "I'll be right back."
 
         "You should get that.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s460a
             with dissolve
@@ -638,7 +638,7 @@ label imrecond: # Meet Chloe
 
     menu:
         "Ask about the call":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s463a # chloe sits down next to you with towel , mc looks at her mouth open
             with dissolve
@@ -651,7 +651,7 @@ label imrecond: # Meet Chloe
             cl "Oh, just a friend."
 
         "Don't ask":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s463b # same as s463a but mouth closed
             with dissolve
@@ -706,7 +706,7 @@ label imrecond: # Meet Chloe
 
     menu:
         "Follow her":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s466a # chloe walked a bit further
             with dissolve
@@ -739,7 +739,7 @@ label imrecond: # Meet Chloe
                 "Stay and listen":
                     $ chloemad = True
                     $ chloecaught = True
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     scene s469 # chloe and Aubrey close up talking
                     with dissolve
@@ -853,12 +853,12 @@ label imrecond: # Meet Chloe
                     u "*Sighs*"
 
                 "Leave":
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
 
                     u "(No, I should just get out of here and stop spying on her.)"
 
         "Trust her":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ grant_achievement("credulous")
 
             u "(I shouldn't spy on her. It's not right.)"
@@ -985,15 +985,15 @@ label continuebb:
     if chooseimre and chloemad: # Amber texts why you never got back to her
         play sound "sounds/vibrate.mp3"
         
-        $ contact_Amber.newMessage(_("I guess you didn't want my surprise :/"), queue=False)
-        $ contact_Amber.addReply(_("Sorry something important came up and I didn't have time."), v6_reply11)
+        $ amber.messenger.newMessage(_("I guess you didn't want my surprise :/"), queue=False)
+        $ amber.messenger.addReply(_("Sorry something important came up and I didn't have time."), v6_reply11)
 
         " "
 
         label phoneae:
-            if contact_Amber.replies:
+            if amber.messenger.replies:
                 call screen phone
-            if contact_Amber.replies:
+            if amber.messenger.replies:
                 u "(I should probably reply to my messages.)"
                 jump phoneae
 
@@ -1001,27 +1001,27 @@ label continuebb:
 
     elif chooseimre: # Amber texts you about the pic, chloe texts you about you not responding
         play sound "sounds/vibrate.mp3"
-        $ contact_Chloe.newMessage(_("I guess we'll do it another time..."), queue=False)
-        $ contact_Chloe.addReply(_("Sorry, something really important came up. Definitely another time"))
-        $ contact_Chloe.newMessage(_("Okay"))
+        $ chloe.messenger.newMessage(_("I guess we'll do it another time..."), queue=False)
+        $ chloe.messenger.addReply(_("Sorry, something really important came up. Definitely another time"))
+        $ chloe.messenger.newMessage(_("Okay"))
 
     elif chloemad and not chloecaught:
         jump continuebd
             
     play sound "sounds/vibrate.mp3"
     
-    $ contact_Amber.newMessage(_("Hey, you alone? xx"), queue=False)
-    $ contact_Amber.addReply(_("Yeah, I'm in my dorm, why?"))
-    $ contact_Amber.newImgMessage("images/text2.webp")
-    $ contact_Amber.addReply(_("Woah, what was that for?"), v6_reply1)
-    $ contact_Amber.addReply(_("Oh wow, you're so fucking hot"), v6_reply4)
+    $ amber.messenger.newMessage(_("Hey, you alone? xx"), queue=False)
+    $ amber.messenger.addReply(_("Yeah, I'm in my dorm, why?"))
+    $ amber.messenger.newImgMessage("images/text2.webp")
+    $ amber.messenger.addReply(_("Woah, what was that for?"), v6_reply1)
+    $ amber.messenger.addReply(_("Oh wow, you're so fucking hot"), v6_reply4)
 
     " "
 
     label phoneaf:
-        if contact_Amber.replies:
+        if amber.messenger.replies:
             call screen phone
-        if contact_Amber.replies:
+        if amber.messenger.replies:
             u "(I should probably reply to my messages.)"
             jump phoneaf
 
@@ -1328,7 +1328,7 @@ label continuebd:
 
             menu:
                 "Call after her":
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
 
                     scene s493b # Lauren at door
                     with dissolve
@@ -1341,7 +1341,7 @@ label continuebd:
                     u "Damn it."
 
                 "Leave her be":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                     scene s493b
                     with dissolve
@@ -1597,7 +1597,7 @@ label continuebd:
 
     menu:
         "What do you want?":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s501e
             with dissolve
@@ -1610,7 +1610,7 @@ label continuebd:
             gr "Join the Apes."
 
         "I guess we are.":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s501e
             with dissolve
@@ -1671,7 +1671,7 @@ label continuebd:
 
     menu:
         "Check it out":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ checkonrose = True
 
             scene s505 # First Person: Enter classrom, only Ms Rose at her laptop crying
@@ -1755,7 +1755,7 @@ label continuebd:
             with fade
 
         "Don't disturb":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ checkonrose = False
 
             scene s510 # Mc arrives at his dorm, down at his door there's a flyer (Matt's design)
@@ -1995,7 +1995,7 @@ label continuebd:
 
         menu:
             "It'll be an adventure.":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ evelyndate = False
 
                 scene s524e
@@ -2040,7 +2040,7 @@ label continuebd:
                 u "Damnit."
 
             "It'll be a nice dinner.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ evelyndate = True
 
                 scene s524e
@@ -2200,7 +2200,7 @@ label continuebd:
         "Accept call":
             stop sound
             play sound "sounds/answercall.mp3"
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             # aceept call sound
             if not forgiveemily:
@@ -2247,7 +2247,7 @@ label continuebd:
                 menu:
                     "Fine, I'll come.":
                         $ meetemily = True
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
 
                         scene s531b # mc empathy
                         with dissolve
@@ -2326,18 +2326,18 @@ label continuebd:
 
                         menu:
                             "Be understanding":
-                                $ addPoint("bf")
+                                $ add_point(KCT.BOYFRIEND)
 
                                 jump fz_a
 
                             "Be baffled":
-                                $ addPoint("tm")
+                                $ add_point(KCT.TROUBLEMAKER)
 
                                 jump fz_b
 
                     "No. (Hang up)":
                         $ meetemily = False
-                        $ addPoint("tm")
+                        $ add_point(KCT.TROUBLEMAKER)
 
                         scene s531
                         with dissolve
@@ -2447,13 +2447,13 @@ label continuebd:
                 menu:
                     "Be understanding":
                         $ forgiveemily = True
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
 
                         jump fz_a
 
                     "Be baffled":
                         $ forgiveemily = False
-                        $ addPoint("tm")
+                        $ add_point(KCT.TROUBLEMAKER)
 
                         jump fz_b
 
@@ -2461,7 +2461,7 @@ label continuebd:
         "Reject call":
             stop sound
             play sound "sounds/rejectcall.mp3"
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ meetemily = False
 
             scene s531d
@@ -2725,7 +2725,7 @@ label emsex_c:
 
 label emsex_a:
     $ v6_emilysex = True 
-    #$ addPoint("tm", sum([ aubreysex ])) ###Loyaltymod    
+    #$ add_point(KCT.TROUBLEMAKER, sum([ aubreysex ])) ###Loyaltymod    
     scene emvid2
     with dissolve
 
@@ -3168,7 +3168,7 @@ label fy_bd: # not gone to Emily's
 
         menu:
             "Hot":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 scene s550a
                 with dissolve
@@ -3181,7 +3181,7 @@ label fy_bd: # not gone to Emily's
                 ev "*Smirks* Of course you were."
 
             "Stunning":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene s550a
                 with dissolve
@@ -3334,7 +3334,7 @@ label fy_bd: # not gone to Emily's
 
         menu:
             "Make a joke":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 u "So uhm, is this the only eggplant you're looking to eat tonight?"
 
@@ -3351,7 +3351,7 @@ label fy_bd: # not gone to Emily's
                 pause 0.5
 
             "Say something smart":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "So did you hear about the new discoveries they made on Mars recently?"
 
@@ -3443,7 +3443,7 @@ label fy_bd: # not gone to Emily's
 
         menu:
             "Ask about her job":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ evelynrs = False
 
                 scene s558d
@@ -3479,7 +3479,7 @@ label fy_bd: # not gone to Emily's
                 u "(This date really isn't getting better.)"
 
             "Ask about her dreams":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ evelynrs = True
 
                 scene s558d
@@ -3626,9 +3626,9 @@ label fy_bd: # not gone to Emily's
                 "Kiss her":
                     $ kissevelyn = True
                     if laurenrs:
-                        $ addPoint("tm")
+                        $ add_point(KCT.TROUBLEMAKER)
                     else:
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
 
                     scene s563 # showing you and evelyn standing close to each other, smiling at each other
                     with dissolve
@@ -3649,9 +3649,9 @@ label fy_bd: # not gone to Emily's
                 "Don't kiss her":
                     $ kissevelyn = False
                     if laurenrs:
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
                     else:
-                        $ addPoint("bro")
+                        $ add_point(KCT.BRO)
 
         label gf_b: #for compatibility only
         scene s562
@@ -3674,17 +3674,17 @@ label fy_bd: # not gone to Emily's
             u "(We never really clicked. That probably means I missed my shot with her...)"
 
         play sound "sounds/vibrate.mp3"
-        $ contact_Aubrey.newMessage(_("Hey, I know it's late... but wanna come over?"), queue=False)
-        $ contact_Aubrey.addReply(_("Yeah, sure."), v6_reply7)
-        $ contact_Aubrey.addReply(_("Sorry, I can't tonight."), v6_reply8)
+        $ aubrey.messenger.newMessage(_("Hey, I know it's late... but wanna come over?"), queue=False)
+        $ aubrey.messenger.addReply(_("Yeah, sure."), v6_reply7)
+        $ aubrey.messenger.addReply(_("Sorry, I can't tonight."), v6_reply8)
 
         " "
 
         label phoneag:
             stop music fadeout 2.0
-            if contact_Aubrey.replies:
+            if aubrey.messenger.replies:
                 call screen phone
-            if contact_Aubrey.replies:
+            if aubrey.messenger.replies:
                 u "(I should check my messages.)"
                 jump phoneag
 
@@ -3701,9 +3701,9 @@ label fy_bd: # not gone to Emily's
         scene s546 # phone close up, it's 10:30 pm, message from Aubrey
         with dissolve
 
-        $ contact_Aubrey.newMessage(_("Hey, I know it's late... but wanna come over?"), queue=False)
-        $ contact_Aubrey.addReply(_("Yeah, sure."), v6_reply7)
-        $ contact_Aubrey.addReply(_("Sorry, I can't tonight."), v6_reply8)
+        $ aubrey.messenger.newMessage(_("Hey, I know it's late... but wanna come over?"), queue=False)
+        $ aubrey.messenger.addReply(_("Yeah, sure."), v6_reply7)
+        $ aubrey.messenger.addReply(_("Sorry, I can't tonight."), v6_reply8)
 
         u "(Shit, it's already 10:30? Wonder what Aubrey's messaging about.)"
 
@@ -3711,9 +3711,9 @@ label fy_bd: # not gone to Emily's
             scene s565 # mc sitting at his desk
             with dissolve
 
-            if contact_Aubrey.replies:
+            if aubrey.messenger.replies:
                 call screen phone
-            if contact_Aubrey.replies:
+            if aubrey.messenger.replies:
                 u "(I should probably reply to Aubrey.)"
                 jump v6_phoneah
 
@@ -3838,8 +3838,8 @@ label fy_bd: # not gone to Emily's
 
     menu:
         "A few different girls.":
-            $ addPoint("bro")
-            $ addPoint("tm")
+            $ add_point(KCT.BRO)
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "You know, a few different girls."
 
@@ -3867,8 +3867,8 @@ label fy_bd: # not gone to Emily's
 
                 menu:
                     "I think you know.":
-                        $ addPoint("bro")
-                        $ addPoint("tm")
+                        $ add_point(KCT.BRO)
+                        $ add_point(KCT.TROUBLEMAKER)
 
                         u "I think you know."
 
@@ -3883,8 +3883,8 @@ label fy_bd: # not gone to Emily's
                         au "I think I do."
 
                     "We're just friends.":
-                        $ addPoint("bf")
-                        $ addPoint("tm")
+                        $ add_point(KCT.BOYFRIEND)
+                        $ add_point(KCT.TROUBLEMAKER)
 
                         u "Uhm, Aubrey I think we should just stay friends."
 
@@ -3903,7 +3903,7 @@ label fy_bd: # not gone to Emily's
                         jump aubreytalk
 
         "No one, really.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "No one, really."
 
@@ -3933,8 +3933,8 @@ label fy_bd: # not gone to Emily's
 
                 menu:
                     "You got me.":
-                        $ addPoint("bro")
-                        $ addPoint("tm")
+                        $ add_point(KCT.BRO)
+                        $ add_point(KCT.TROUBLEMAKER)
 
                         u "You got me."
 
@@ -3949,8 +3949,8 @@ label fy_bd: # not gone to Emily's
                         au "That's what I thought."
 
                     "I'm not seducing you.":
-                        $ addPoint("bf")
-                        $ addPoint("tm")
+                        $ add_point(KCT.BOYFRIEND)
+                        $ add_point(KCT.TROUBLEMAKER)
 
                         u "Uhm, Aubrey I'm not trying to seduce you."
 
@@ -3992,7 +3992,7 @@ label aubreysexb: # aubreysex scene
     $ aubreyrs = True
     $ aubreysex2 = True
 
-    #$ addPoint("tm", sum([ v6_emilysex ])) ###Loyaltymod
+    #$ add_point(KCT.TROUBLEMAKER, sum([ v6_emilysex ])) ###Loyaltymod
 
     stop music fadeout 2.0
     play music "music/msexy.mp3"
@@ -4433,17 +4433,17 @@ label afteraubrey:
         play sound "sounds/vibrate.mp3"
 
         if config_censored:
-            $ contact_Aubrey.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
+            $ aubrey.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
         else:
-            $ contact_Aubrey.newImgMessage("images/text3.webp", queue=False)
+            $ aubrey.messenger.newImgMessage("images/text3.webp", queue=False)
 
         if meetaubrey:
-            $ contact_Aubrey.newMessage(_("Still shaking from earlier"), queue=False)
-            $ contact_Aubrey.addReply(_("Hahaha, we should definitely do this more ;)"))
+            $ aubrey.messenger.newMessage(_("Still shaking from earlier"), queue=False)
+            $ aubrey.messenger.addReply(_("Hahaha, we should definitely do this more ;)"))
 
         else:
-            $ contact_Aubrey.newMessage(_("You missed out today"), queue=False)
-            $ contact_Aubrey.addReply(_("Daaaamn, I'll be there next time"))
+            $ aubrey.messenger.newMessage(_("You missed out today"), queue=False)
+            $ aubrey.messenger.addReply(_("Daaaamn, I'll be there next time"))
 
         " "
 
@@ -4463,7 +4463,7 @@ label afteraubrey:
     menu:
         "Meet Grayson":
             $ meetgrayson = True
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             label meetgrayson: #for compatibility only
             u "(I wanna hear what he has to say.)"
@@ -4648,7 +4648,7 @@ label afteraubrey:
 
             menu:
                 "Empathize":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                     u "Man, I'm sorry. That's really terrible. I didn't know you had it so rough."
 
@@ -4671,7 +4671,7 @@ label afteraubrey:
                     gr "Good. We're here by the way."
 
                 "Question":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     u "That story sure sounds an awful lot like Cinderella."
 
@@ -4840,7 +4840,7 @@ label afteraubrey:
 
             menu:
                 "I'm in.":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
                     $ joinapes = True
 
                     u "Okay, I'm in."
@@ -4932,7 +4932,7 @@ label afteraubrey:
                     stop music fadeout 2.0
 
                 "I'm not in.":
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
                     $ joinapes = False
 
                     u "Sorry, Grayson. But I don't wanna be an Ape."
@@ -4993,7 +4993,7 @@ label afteraubrey:
 
         "Stay home":
             $ meetgrayson = False
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ grant_achievement("seems_fishy")
 
             u "(Fuck Grayson, I'm not meeting him.)"
@@ -5049,7 +5049,7 @@ label afteraubrey:
 
     menu (fail_label="timera"):
         "Save Lauren":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ save = 1
 
             scene s592 # Mc tackles Lauren out of the guns aim
@@ -5072,7 +5072,7 @@ label afteraubrey:
             jump wakeupa
 
         "Save Riley":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ save = 2
 
             scene s594 # Mc tackles Riley out of the guns aim
@@ -5419,29 +5419,29 @@ label wakeupa:
     scene s609 # mc walking home by himself after the gym
     with fade
     
-    $ contact_Amber.newMessage(_("Heyy, what are you up to? xx"), queue=False)
-    $ contact_Amber.addReply(_("Just walking back from the gym wbu?"))
-    $ contact_Amber.newMessage(_("Going to my next lecture x_x"))
-    $ contact_Amber.newMessage(_("Which gym do you go to? Maybe we can go together at some point"))
-    $ contact_Amber.addReply(_("Sports X and you?"))
-    $ contact_Amber.newMessage(_("Awww I'm SV Fitness :("))
-    $ contact_Amber.addReply(_("Maybe we should do a home workout together sometime ;)"), v6_reply9)
-    $ contact_Amber.addReply(_("Yeah, that's too bad :/"), v6_reply10)
+    $ amber.messenger.newMessage(_("Heyy, what are you up to? xx"), queue=False)
+    $ amber.messenger.addReply(_("Just walking back from the gym wbu?"))
+    $ amber.messenger.newMessage(_("Going to my next lecture x_x"))
+    $ amber.messenger.newMessage(_("Which gym do you go to? Maybe we can go together at some point"))
+    $ amber.messenger.addReply(_("Sports X and you?"))
+    $ amber.messenger.newMessage(_("Awww I'm SV Fitness :("))
+    $ amber.messenger.addReply(_("Maybe we should do a home workout together sometime ;)"), v6_reply9)
+    $ amber.messenger.addReply(_("Yeah, that's too bad :/"), v6_reply10)
 
     if bowling:
-        $ contact_Penelope.addReply(_("Hey, you wanna go bowling today? I'm free this afternoon"))
-        $ contact_Penelope.newMessage(_("Yeah, sounds good :)"))
-        $ contact_Penelope.newMessage(_("I have a lecture at 2:30 but I can go straight to the bowling alley afterwards"))
-        $ contact_Penelope.newMessage(_("Meet there at 4?"))
-        $ contact_Penelope.addReply(_("Yesss, see you there"))
+        $ penelope.messenger.addReply(_("Hey, you wanna go bowling today? I'm free this afternoon"))
+        $ penelope.messenger.newMessage(_("Yeah, sounds good :)"))
+        $ penelope.messenger.newMessage(_("I have a lecture at 2:30 but I can go straight to the bowling alley afterwards"))
+        $ penelope.messenger.newMessage(_("Meet there at 4?"))
+        $ penelope.messenger.addReply(_("Yesss, see you there"))
 
         u "(I should ask Penelope whether she wants to do bowling this afternoon.)"
 
         call screen phone
         label phoneak:
-            if contact_Penelope.replies:
+            if penelope.messenger.replies:
                 call screen phone
-            if contact_Penelope.replies:
+            if penelope.messenger.replies:
                 u "(I should really text Penelope.)"
                 jump phoneak
 
@@ -5584,7 +5584,7 @@ label wakeupa:
 
     menu:
         "Praise her":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "That was incredible."
 
@@ -5604,8 +5604,8 @@ label wakeupa:
             ri "Honestly, she's so brave. My heart goes out to her."
 
         "Mock her":
-            $ addPoint("bro")
-            $ addPoint("tm")
+            $ add_point(KCT.BRO)
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s614a
             with dissolve
@@ -5671,7 +5671,7 @@ label wakeupa:
 
     menu:
         "Praise him":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "Honestly, that was kinda profound."
 
@@ -5691,8 +5691,8 @@ label wakeupa:
             ri "Pff, you're ridiculous."
 
         "Mock him":
-            $ addPoint("bro")
-            $ addPoint("tm")
+            $ add_point(KCT.BRO)
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Okay, that was bad. He might as well perform whale sounds."
 
@@ -5767,8 +5767,8 @@ label wakeupa:
 
     menu:
         "Praise her":
-            $ addPoint("bro")
-            $ addPoint("tm")
+            $ add_point(KCT.BRO)
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "She was good."
 
@@ -5798,7 +5798,7 @@ label wakeupa:
             ri "Yeah, right."
 
         "Mock her":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "Man, that girl was into herself. You think she runs her own fan club?"
 
@@ -5850,7 +5850,7 @@ label wakeupa:
 
     menu:
         "Okay, I'll do it.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ perform = 1
 
             u "Okay, I'll do it."
@@ -5882,7 +5882,7 @@ label wakeupa:
 
             menu:
                 "Act out a lullaby.":
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
 
                     if kct == "confident":
                         call screen kctPopup
@@ -5952,7 +5952,7 @@ label wakeupa:
                         "*Crowd applauds"
 
                 "Make something up.":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     scene s627g
                     with dissolve
@@ -5981,7 +5981,7 @@ label wakeupa:
                     "*Crowd applauds"
 
         "No way I'm doing that.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ perform = 0
 
             u "No. No way. I'm not going up there."
@@ -6563,10 +6563,10 @@ label wakeupa:
             "Kiss her":
                 $ kisspenelope = True
                 if laurenrs:
-                    $ addPoint("tm")
-                    $ addPoint("bro")
+                    $ add_point(KCT.TROUBLEMAKER)
+                    $ add_point(KCT.BRO)
                 else:
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                 scene s658k
                 with dissolve
@@ -6605,7 +6605,7 @@ label wakeupa:
             "Say Goodbye":
                 $ kisspenelope = False
                 if laurenrs:
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
         u "I gotta go now and get ready for the Wolves' party, but I'll see you soon, okay?"
 
@@ -7045,7 +7045,7 @@ label v6_fr3josh1:
 
     menu:
         "Take the shot":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ takeshot = True
 
             u "Fuck it. Why not."
@@ -7069,7 +7069,7 @@ label v6_fr3josh1:
             with dissolve
 
         "Decline":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ takeshot = False
 
             u "Nah, I'm good."
@@ -7229,7 +7229,7 @@ label v6_fr3guy1:
 
     menu:
         "Kylie":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ kylie = True
 
             u "Yeah I agree, Kylie's way hotter."
@@ -7282,7 +7282,7 @@ label v6_fr3guy1:
             u "Alright, I'ma leave you guys to it."
 
         "Kourtney":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ kylie = False
 
             u "Definitely Kourtney."
@@ -7543,7 +7543,7 @@ label v6_fr3aubrey1:
 
         menu:
             "Anything for a girl like that.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ simp = True
 
                 u "Anything for a girl like that..."
@@ -7584,8 +7584,8 @@ label v6_fr3aubrey1:
                 u "*Chuckles* I'm sure we will."
 
             "What people do for pussy...":
-                $ addPoint("tm")
-                $ addPoint("bro")
+                $ add_point(KCT.TROUBLEMAKER)
+                $ add_point(KCT.BRO)
                 $ simp = False
 
                 u "What people do for pussy, am I right?"
@@ -7694,7 +7694,7 @@ label v6_fr3aubrey1:
 
         menu:
             "I was in love.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ simp = True
 
                 u "What can I say? I was young and in love."
@@ -7747,8 +7747,8 @@ label v6_fr3aubrey1:
                 au "Byeee."
 
             "It was nothing.":
-                $ addPoint("tm")
-                $ addPoint("bro")
+                $ add_point(KCT.TROUBLEMAKER)
+                $ add_point(KCT.BRO)
                 $ simp = False
 
                 u "Really, it was nothing. Was so long ago."
@@ -8310,7 +8310,7 @@ label v6_fr3riley1: #If you click on Riley and finn*
 
     menu:
         "Ask Riley something":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ askfinn = False
 
             scene sfr3ri2a
@@ -8379,7 +8379,7 @@ label v6_fr3riley1: #If you click on Riley and finn*
             ri "Okay, see you later then."
 
         "Ask Finn something":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ askfinn = True
 
             scene sfr3ri3a
@@ -8606,7 +8606,7 @@ label v6_fr3amber1:
 
     menu:
         "You're such a tease.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "Wow. You're such a tease."
 
@@ -8619,7 +8619,7 @@ label v6_fr3amber1:
             with dissolve
 
         "Not gonna happen.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "Mhhh... I don't think that's gonna happen."
 
@@ -8948,7 +8948,7 @@ label v6_fr3nora1:
     menu:
         "Defend Chloe":
             $ noramad = True
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "Chloe's not manipulative. She's just being bad mouthed because people like you see her as a threat."
 
@@ -8974,7 +8974,7 @@ label v6_fr3nora1:
             u "Fine. But you're wrong about Chloe."
 
         "Don't defend Chloe":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ noramad = False
 
             u "Yeah, it sounds kinda messed up."
@@ -9200,7 +9200,7 @@ label v6_fr3chloe1:
 
     menu:
         "Maybe you should step down.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ chloemad = True
 
             u "You ever think, maybe you should step down?"
@@ -9262,8 +9262,8 @@ label v6_fr3chloe1:
             u "Fine..."
 
         "Nora's being stupid.":
-            $ addPoint("bro")
-            $ addPoint("tm")
+            $ add_point(KCT.BRO)
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Nora's being stupid. You're a great president. You're smart, you're driven and you care so much..."
 
@@ -9890,8 +9890,8 @@ label upstairsaubrey:
 
         menu:
             "We could lock the door.":
-                $ addPoint("bro")
-                $ addPoint("tm")
+                $ add_point(KCT.BRO)
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "But we could also lock the door and be quiet..."
 
@@ -9910,7 +9910,7 @@ label upstairsaubrey:
                 u "(I should probably talk to Chris soon.)"
 
             "It was nice talking.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "It was nice talking though."
 
@@ -10038,7 +10038,7 @@ label upstairsaubrey:
 
         menu:
             "He turned down a threesome?!":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 scene sufr3au2c
                 with dissolve
@@ -10104,8 +10104,8 @@ label upstairsaubrey:
 
                 menu:
                     "We could lock the door.":
-                        $ addPoint("bro")
-                        $ addPoint("tm")
+                        $ add_point(KCT.BRO)
+                        $ add_point(KCT.TROUBLEMAKER)
 
                         u "But we could also lock the door and be quiet..."
 
@@ -10122,7 +10122,7 @@ label upstairsaubrey:
                         u "(I should probably talk to Chris soon.)"
 
                     "At least we got to talk.":
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
 
                         u "At least we got to talk a bit, haha."
 
@@ -10137,7 +10137,7 @@ label upstairsaubrey:
                         u "(I should probably talk to Chris soon.)"
 
             "I kinda get what he means.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ simp = True
                 $ aubreyrs = False
 

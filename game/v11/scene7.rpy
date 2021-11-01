@@ -407,7 +407,7 @@ label v11_room_aubrey_shopping:
     menu:
         "Of course":
             $ amberLike += 1
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene v11auw11b # FPP. Same cam as v11auw11, Amber mouth closed, slight smile
             with dissolve
@@ -430,7 +430,7 @@ label v11_room_aubrey_shopping:
             am "Thanks, Aubrey."
 
         "Tease":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ amberLike -= 1
             $ v11_tease_amber += 1
 

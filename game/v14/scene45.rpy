@@ -19,23 +19,23 @@ label v14s45:
     scene v14s45_2a # TPP. Same as v14s45_2, MC looking down at his phone, slight smile, mouth closed
     with dissolve
 
-    $ contact_Amber.newMessage("Hey, let's meet up...", queue=False)
-    $ contact_Amber.newMessage("I have some news to share.", queue=False)
-    $ contact_Amber.addReply("Ooh, okay.")
-    $ contact_Amber.newMessage("I'm close to the park, meet me there?")
-    $ contact_Amber.addReply("Kk")
+    $ amber.messenger.newMessage("Hey, let's meet up...", queue=False)
+    $ amber.messenger.newMessage("I have some news to share.", queue=False)
+    $ amber.messenger.addReply("Ooh, okay.")
+    $ amber.messenger.newMessage("I'm close to the park, meet me there?")
+    $ amber.messenger.addReply("Kk")
 
     label v14s43_PhoneContinueAmber:
-        if contact_Amber.getReplies():
+        if amber.messenger.getReplies():
             call screen phone
-        if contact_Amber.getReplies():
+        if amber.messenger.getReplies():
             u "(I should check my phone.)"
             jump v14s43_PhoneContinueAmber
     
     scene v14s45_2b # TPP. Show MC putting his phone away, slightly confused, mouth closed
     with dissolve
 
-    u "(News to share… Hmm.)"
+    u "(News to share... Hmm.)"
 
     scene v14s45_3 # TPP. Show MC walking on the sidewalk, going towards the park, slight smile, mouth closed
     with dissolve

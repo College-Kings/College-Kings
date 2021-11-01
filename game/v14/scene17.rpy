@@ -149,7 +149,7 @@ label v14s17:
 
     menu:
         "Joke":
-            $ addPoint ("bro")
+            $ add_point(KCT.BRO)
             scene v14s17_8a
             with dissolve
 
@@ -171,7 +171,7 @@ label v14s17:
             la "*Chuckles* Okay, okay... Fair enough."
 
         "Compliment":
-            $ addPoint ("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v14s17_8a
             with dissolve
 
@@ -638,6 +638,8 @@ label v14s17:
 
             if kct == "loyal":
                 call screen kctPopup
+                
+                $ v14_lauren_sabotage = True
             
                 scene v14s17_10a
                 with dissolve
