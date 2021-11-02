@@ -68,7 +68,7 @@ label v14s03a:
         
         "Never heard of it":
             scene v14s03a_2
-            with dissolve 
+            with dissolve
             
             u "I don't believe I have."
 
@@ -142,7 +142,7 @@ label v14s03a:
             pause 0.75
             
             scene v14s03a_2
-            with dissolve 
+            with dissolve
 
             ngam "First game no bet, just-"
 
@@ -394,7 +394,7 @@ label v14s03a:
             pause 0.75
 
             scene v14s03a_11 # FPP. Ryan, smiling, mouth open.
-            with dissolve 
+            with dissolve
 
             ry "DAMN! *Chuckles*"
 

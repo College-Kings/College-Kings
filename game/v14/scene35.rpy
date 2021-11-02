@@ -19,18 +19,18 @@ label v14s35:
     $ jenny.messenger.addReply(_("You wanna go now?"))
     $ jenny.messenger.newMessage(_("Yeah, why not? ;) Penelope is busy, so I wanted to see if you'd be down."))
     $ jenny.messenger.addReply(_("Okay sure, where's this lagoon at?"))
-    $ jenny.messenger.newImgMessage(_("Picture of the Lagoon, somehow with a location marker in the photo"))
+    $ jenny.messenger.newImgMessage("images/v14/Scene 35/v14s35_lagoon_pic.webp") #Picture of the Lagoon, somehow with a location marker in the photo
     $ jenny.messenger.newMessage(_("See you soon!"))
 
     if False: ### just making sure it shows up on lint
-        scene v14jenText
+        scene v14s35_lagoon_pic
 
-    label s35_PhoneContinue:
+    label v14s35_PhoneContinue:
         if jenny.messenger.replies:
             call screen phone
         if jenny.messenger.replies:
             "(I should reply to Jenny.)"
-            jump s35_PhoneContinue
+            jump v14s35_PhoneContinue
 
     if joinwolves:
         scene v14s35_3 # TPP. Show MC standing naked in his wolves room, slight smile, mouth closed.

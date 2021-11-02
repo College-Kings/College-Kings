@@ -257,7 +257,7 @@ label v14s11:
                 $ add_point(KCT.BRO)
 
                 scene v14s11_4i
-                with dissolve       
+                with dissolve
 
                 u "Well, for starters... It means a lot to me to know that the feeling is mutual. *Chuckles*"
 
@@ -309,7 +309,7 @@ label v14s11:
                 scene v14s11_4m
                 with dissolve
 
-                ri "I don't know, I mean- Yes! That was definitely a good wow..,"
+                ri "I don't know, I mean- Yes! That was definitely a good wow..."
 
                 scene v14s11_4m
                 with dissolve
@@ -349,7 +349,7 @@ label v14s11:
                 scene v14s11_4l
                 with dissolve
 
-                u "Ha.. Catch you later."
+                u "Ha... Catch you later."
             
                 scene v14s11_4o # FPP. same as v14s11_4 Riley's back is turned walking away from the mc, her face is not visible
                 with dissolve

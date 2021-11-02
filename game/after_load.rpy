@@ -615,6 +615,8 @@ label after_load:
         except NameError: emily_europe = False
         try: v11_check_on_nora
         except NameError: v11_check_on_nora = False
+        try: v10_lauren_sg
+        except NameError: v10_lauren_sg = False
 
         # v13 Errors
         try: v13_penelope_concert

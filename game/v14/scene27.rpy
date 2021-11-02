@@ -21,7 +21,7 @@ label v14s27:
 
     if v13_emilysex:
         scene v14s27_2a # FPP. Same as v14s27_2, Emily nervous smile, mouth closed.
-        with dissolve    
+        with dissolve
 
         u "What's up, Emily?"
 

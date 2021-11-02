@@ -112,7 +112,7 @@ label v14s37:
     scene v14s37_10
     with dissolve
 
-    pe  "I need a few minutes."
+    pe "I need a few minutes."
 
     scene v14s37_9b
     with dissolve
@@ -137,7 +137,7 @@ label v14s37:
     scene v14s37_10a
     with dissolve
 
-    pe "I just really like this place! *Chuckles* Is it bad if I don't order anything?"  
+    pe "I just really like this place! *Chuckles* Is it bad if I don't order anything?"
 
     scene v14s37_10b
     with dissolve
@@ -369,10 +369,10 @@ label v14s37:
     pe "I signed up to be a hall monitor."
 
     menu:
-        "Be serious...":
+        "Be serious":
             $ add_point(KCT.BOYFRIEND)
             scene v14s37_10b
-            with dissolve 
+            with dissolve
             
             u "Woah, I didn't know that was a thing. Why'd it get cancelled?"
 
@@ -411,7 +411,7 @@ label v14s37:
     scene v14s37_10c
     with dissolve
 
-    pe  "Because of the case I had, for some reason she thinks I'm the devil now. I tried to-"
+    pe "Because of the case I had, for some reason she thinks I'm the devil now. I tried to-"
 
     scene v14s37_15
     with vpunch
@@ -449,14 +449,14 @@ label v14s37:
     with dissolve
 
     menu:
-        "Same here...":
+        "Same here":
             $ add_point(KCT.BRO)
             scene v14s37_10h
             with dissolve
 
             u "If she keeps going at him like that, I am too."
 
-        "Focus on us...":
+        "Focus on us":
             $ add_point(KCT.BOYFRIEND)
             $ v14s37_focus_on_us = True
             scene v14s37_10h
@@ -504,7 +504,7 @@ label v14s37:
     scene v14s37_10m # FPP. Same as v14s37_10a, Penelope confused worried face, mouth open.
     with dissolve
 
-    pe "Julia..?"
+    pe "Julia...?"
 
     scene v14s37_10b
     with dissolve
@@ -785,7 +785,7 @@ label v14s37:
         scene v14s37_23 # TPP. Show Penelope and MC walking away from the front of the Restaurant/ 
         with fade
 
-        pause        
+        pause
 
         scene v14s37_24 # FPP. MC and Penelope on the sidewalk, Penelope looking at MC, MC looking at Penelope, Penelope slight smile, mouth closed.
         with dissolve

@@ -1898,7 +1898,7 @@ label v12s18_bet: # END OF FREE ROAM
 
             if amberrs or kct == "popular":
                 if not amberrs:
-                    call screen kctPopup
+                    call screen kct_popup
                 
                 scene v12slpbet17
                 with dissolve

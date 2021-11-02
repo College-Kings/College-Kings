@@ -36,7 +36,6 @@ label v14s24:
     u "*Sighs* (She's been acting off for a few days and now she \"could use a friend\"... Who knows what's going on now.)"
 
     if v14s03a_take_wallet:
-
         scene v14s24_4  # TPP. MC, happy, smiling mouth closed.
         with dissolve
 
@@ -55,7 +54,6 @@ label v14s24:
         jump v14s24a 
 
     else:
-
         scene v14s24_8  # TPP. MC walking down the side walk towards Amber's house.   
         with dissolve
         

@@ -1687,7 +1687,7 @@ label continueaf:
                         u "What? No, I'm just a friend looking for her, where is she?"
 
                         if kct == "confident":
-                            call screen kctPopup
+                            call screen kct_popup
 
                             unknown "Uhm, alright, she's at some classroom for her personality test thing."
 
@@ -1775,7 +1775,7 @@ label continueaf:
         u "I- I just got carried away."
 
         if kct == "loyal":
-            call screen kctPopup
+            call screen kct_popup
 
             scene s380b
             with dissolve
@@ -1916,7 +1916,7 @@ label continueaf:
         u "I- I just wanted to be honest with you."
 
         if kct == "loyal":
-            call screen kctPopup
+            call screen kct_popup
 
             $ laurenrs = True
 

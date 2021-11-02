@@ -213,7 +213,7 @@ style input:
 screen choice(items, seconds=3, fail_label=""):
     # Show KCT
     if showkct:
-        use kctChoice
+        use kct_choice
 
     image "gui/curves.webp"
     style_prefix "choice"

@@ -5,7 +5,6 @@
 # Render Count: 21 Unique, 88 Total
 
 label v14s36:
-
     scene v14s36_1 # TPP. MC arrives at the lagoon and see's Jenny in the distant in a very sexy bikini standing next to the lagoon, looking at the water, not in the water yet, Jenny has denim shorts over the bikin bottom at this point, Jenny has a slight smile, mouth closed, Mc is wearing the same swimming trunks and shirt from the v14s35_5 render
     with dissolve
 
@@ -64,7 +63,7 @@ label v14s36:
     scene v14s36_4a # FPP. same as v14s36_4 Jenny's mouth is closed
     with dissolve
 
-    u "*Chuckles* So tell me, what made you wanna hangout tonight?"
+    u "*Chuckles* So tell me, what made you wanna hang out tonight?"
 
     scene v14s36_4
     with dissolve
@@ -139,7 +138,7 @@ label v14s36:
     scene v14s36_4d # FPP. same as v14s36_4 Jenny has a shocked expression, mouth open
     with dissolve
 
-    jen "Get the fuck out of here! You're joking..?"
+    jen "Get the fuck out of here! You're joking...?"
 
     scene v14s36_4a
     with dissolve
@@ -169,7 +168,7 @@ label v14s36:
     scene v14s36_4e # FPP. same as v14s36_4 Jenny rolls her eyes, and laughs, mouth open
     with dissolve
 
-    jen "Oh, pfft... *Laughs*  There's no way she'll lose to some chick named Lindsey, haha."
+    jen "Oh, pfft... *Laughs* There's no way she'll lose to some chick named Lindsey, haha."
 
     scene v14s36_4
     with dissolve
@@ -204,7 +203,7 @@ label v14s36:
     scene v14s36_4g
     with dissolve
 
-    jen "It's kinda weird but, I could never bring myself to join greek life, but I always liked guys who did. *Chuckles*"
+    jen "It's kinda weird but, I could never bring myself to join Greek life, but I always liked guys who did. *Chuckles*"
 
     scene v14s36_4h
     with dissolve
@@ -355,7 +354,7 @@ label v14s36:
     scene v14s36_4a
     with dissolve
 
-    u "Three..?"
+    u "Three...?"
 
     scene v14s36_4j # FPP. same as v14s36_4e Jenny has a slightly upset expression
     with dissolve
@@ -445,7 +444,7 @@ label v14s36:
     scene v14s36_4a
     with dissolve
 
-    u "And that is..?"
+    u "And that is...?"
 
     scene v14s36_4g
     with dissolve
@@ -483,7 +482,6 @@ label v14s36:
     jen "I have. That's how I know that I can trust you and... You know, be myself."
 
     menu:
-        
         "Not fair":
             $ v14_jennypoints += 1
             $ add_point(KCT.BOYFRIEND)
@@ -545,7 +543,6 @@ label v14s36:
     with dissolve
 
     menu:
-
         "Yeah, or something...":
             $ v14_jennypoints += 1
             $ add_point(KCT.BOYFRIEND)
@@ -565,7 +562,7 @@ label v14s36:
 
     if v14_jennypoints >= 3 or kct == "loyal":
         if v14_jennypoints < 3:
-            call screen kctPopup
+            call screen kct_popup
 
         scene v14s36_3c # TPP same as v14s36_3a Jenny scoots closer to MC, looking down at his lap, slight smile mouth closed, Mc has a slightly concerned expression, mouth closed
         with dissolve
@@ -608,7 +605,7 @@ label v14s36:
         scene v14s36_5c
         with dissolve
 
-        jen "I was excited to hangout with you after the Penelope stuff was settled and well, obviously it didn't happen till now."
+        jen "I was excited to hang out with you after the Penelope stuff was settled and well, obviously it didn't happen till now."
 
         scene v14s36_5e # FPP. same as v14s36_5c Jenny's mouth is closed, and her fingers move to a slighlty different position but still on the top of MC's hand
         with dissolve
@@ -633,7 +630,7 @@ label v14s36:
         scene v14s36_5d
         with dissolve
 
-        jen "You're a loyal person that cares about your friends and you don't make stupid decsions that harm others."
+        jen "You're a loyal person that cares about your friends and you don't make stupid decisions that harm others."
 
         scene v14s36_5e
         with dissolve
@@ -654,84 +651,9 @@ label v14s36:
         with dissolve
 
         menu:
-
-            "Don't kiss her":
-                $ jennyawkward = True
-                if chloegf or LaurenGF or penelopers:
-                    $ add_point(KCT.BOYFRIEND)
-                else:
-                    $ add_point(KCT.TROUBLEMAKER)
-
-                scene v14s36_5f
-                with dissolve
-
-                u "Ha. um, sorry... it's kinda cold out here, don't you think?"
-
-                scene v14s36_3e # TPP. same as v14s36_3a Jenny removes her hand and sits up, Jenny slightly embarrassed expression mouth closed looking away from MC, MC looking at Jenny no expression mouth closed
-                with dissolve
-
-                pause 0.75
-
-                scene v14s36_4l # FPP. same as v14s36_4 Jenny is looking at mc, has an embarrassed expression, mouth open
-                with dissolve
-
-                jen "Umm, yeah. I, uh... I guess it is kinda cold."
-
-                scene v14s36_4
-                with dissolve
-
-                jen "Maybe I should've brought more clothes, haha."
-
-                scene v14s36_4a
-                with dissolve
-
-                u "*Chuckles* Maybe we should-"
-
-                scene v14s36_4
-                with dissolve
-
-                jen "I should probably get back anyway."
-
-                scene v14s36_4a
-                with dissolve
-
-                u "Okay, yeah. I'll see you soon?"
-
-                scene v14s36_4m # FPP. same as v14s36_4 Jenny has no expression, mouth open
-                with dissolve
-
-                jen "Right, yeah... For sure. Thanks again for coming."
-
-                scene v14s36_4n # FPP. same as v14s36_4m Jenny's mouth is closed
-                with dissolve
-
-                u "Of course."
-
-                scene v14s36_3f # TPP. same as v14s36_3 Jenny and mc have no feet in the water, are looking at each other, no expressions, mouths closed
-                with dissolve
-
-                pause 0.75
-
-                scene v14s36_2b # FPP. same as v14s36_2 Jenny is looking at mc, no expression, mouth open
-                with dissolve
-
-                jen "Goodnight."
-
-                pause 0.75
-
-                scene v14s36_3g # TPP. same as v14s36_3f Jenny hugs MC awkwardly, trying not to fully hug him, Jenny and Mc no expressions mouths closed
-                with dissolve
-
-                pause 0.75
-
-                scene v14s36_2c # FPP. same as v14s36_2b Jenny's mouth is closed
-                with dissolve
-
-                u "Goodnight."
-
             "Kiss her":
                 $ jennyrs = True
-                if chloegf or LaurenGF or penelopers:
+                if chloegf or laurenrs or penelopers:
                     $ add_point(KCT.TROUBLEMAKER)
                 else:
                     $ add_point(KCT.BOYFRIEND)
@@ -809,7 +731,7 @@ label v14s36:
                 scene v14s36_4p
                 with dissolve
 
-                u "I feel like we've built a real connection tonight and along with everything we;ve already been through..."
+                u "I feel like we've built a real connection tonight and along with everything we've already been through..."
 
                 scene v14s36_4p
                 with dissolve
@@ -976,7 +898,7 @@ label v14s36:
                 with dissolve
                 pause
 
-                u "Ha... I... Shhhit,.."
+                u "Ha... I... Shhhit..."
 
                 scene v14jenbj2f # Ignore as anim
                 with dissolve
@@ -1214,6 +1136,80 @@ label v14s36:
 
                 u "(My life is never dull, haha!)"
 
+            "Don't kiss her":
+                $ jennyawkward = True
+                if chloegf or LaurenGF or penelopers:
+                    $ add_point(KCT.BOYFRIEND)
+                else:
+                    $ add_point(KCT.TROUBLEMAKER)
+
+                scene v14s36_5f
+                with dissolve
+
+                u "Ha. um, sorry... it's kinda cold out here, don't you think?"
+
+                scene v14s36_3e # TPP. same as v14s36_3a Jenny removes her hand and sits up, Jenny slightly embarrassed expression mouth closed looking away from MC, MC looking at Jenny no expression mouth closed
+                with dissolve
+
+                pause 0.75
+
+                scene v14s36_4l # FPP. same as v14s36_4 Jenny is looking at mc, has an embarrassed expression, mouth open
+                with dissolve
+
+                jen "Umm, yeah. I, uh... I guess it is kinda cold."
+
+                scene v14s36_4
+                with dissolve
+
+                jen "Maybe I should've brought more clothes, haha."
+
+                scene v14s36_4a
+                with dissolve
+
+                u "*Chuckles* Maybe we should-"
+
+                scene v14s36_4
+                with dissolve
+
+                jen "I should probably get back anyway."
+
+                scene v14s36_4a
+                with dissolve
+
+                u "Okay, yeah. I'll see you soon?"
+
+                scene v14s36_4m # FPP. same as v14s36_4 Jenny has no expression, mouth open
+                with dissolve
+
+                jen "Right, yeah... For sure. Thanks again for coming."
+
+                scene v14s36_4n # FPP. same as v14s36_4m Jenny's mouth is closed
+                with dissolve
+
+                u "Of course."
+
+                scene v14s36_3f # TPP. same as v14s36_3 Jenny and mc have no feet in the water, are looking at each other, no expressions, mouths closed
+                with dissolve
+
+                pause 0.75
+
+                scene v14s36_2b # FPP. same as v14s36_2 Jenny is looking at mc, no expression, mouth open
+                with dissolve
+
+                jen "Goodnight."
+
+                pause 0.75
+
+                scene v14s36_3g # TPP. same as v14s36_3f Jenny hugs MC awkwardly, trying not to fully hug him, Jenny and Mc no expressions mouths closed
+                with dissolve
+
+                pause 0.75
+
+                scene v14s36_2c # FPP. same as v14s36_2b Jenny's mouth is closed
+                with dissolve
+
+                u "Goodnight."
+
     else:
         $ jennyfriend = True
         scene v14s36_4
@@ -1281,7 +1277,7 @@ label v14s36:
 
     pause 0.75
 
-    if LaurenGF:
+    if laurenrs:
 
         play sound "sounds/vibrate.mp3"
 
@@ -1412,11 +1408,17 @@ label v14s36:
         scene v14s36_16 # TPP. Show mc leaving the lagoon entrance, full smile, mouth closed
         with dissolve
 
+        pause 0.75
+
         scene v14s36_17 # TPP. Show mc walking on the sidewalk, full smile, mouth closed
         with dissolve
 
+        pause 0.75
+
         scene v14s36_18 # TPP. Show MC seeing in the distance and waves at her, full smile, mouth open, Lindsey looks back and see's MC, slight smile, mouth closed
         with fade
+
+        pause 0.75
 
         jump v14s38
 
@@ -1425,10 +1427,16 @@ label v14s36:
         scene v14s36_16
         with dissolve
 
+        pause 0.75
+
         scene v14s36_17
         with dissolve
 
+        pause 0.75
+
         scene v14s36_18
         with fade
+
+        pause 0.75
 
         jump v14s38

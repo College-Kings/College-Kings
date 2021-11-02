@@ -24,3 +24,42 @@ init python:
         # Notify user on KCT change
         if sortedKCT[0] != old_kct:
             renpy.notify("Your KCT has changed to " + kct)
+
+
+# KCT Screens
+screen kct_choice():
+    fixed:
+        xysize (298, 76)
+        xalign 1.0
+
+        add "gui/kct.webp"
+        text kct:
+            align (0.5, 0.5)
+            font "fonts/Freshman.ttf"
+            size 40
+            if kct == "popular":
+                color "#53d769"
+            if kct == "loyal":
+                color "#fecb2e"
+            if kct == "confident":
+                color "#fc3d39"
+
+
+screen kct_popup(required_kct=None):
+    modal True
+    zorder 300
+
+    use endfrTemplate:
+
+        if required_kct is None or required_kct == kct:
+            text "Congratulations! Your Key Character Trait {b}[kct]{/b} has just changed the outcome of a decision someone was making.":
+                style "endfree"
+                xalign 0.5
+        else:
+            text "You do not have the required Key Character Trait {b}([required_kct]){/b}.":
+                style "endfree"
+                xalign 0.5
+
+        textbutton "OK":
+            align (0.5, 1.0)
+            action Return()

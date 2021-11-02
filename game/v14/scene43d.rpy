@@ -43,7 +43,7 @@ label v14s43d:
     scene v14s43d_2
     with dissolve
 
-    ri "Well, I hope he was drunk,.. 'cause that was some harsh shit, ha."
+    ri "Well, I hope he was drunk... 'cause that was some harsh shit, ha."
 
     scene v14s43d_2a
     with dissolve

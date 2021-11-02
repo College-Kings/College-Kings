@@ -896,7 +896,7 @@ label v12_lindsey_kiss_or_not:
 
             if lindseyfirstkiss or kct == "popular" or len(v12s7_killList) >= 5:
                 if not lindseyfirstkiss and not len(v12s7_killList) >= 5:
-                    call screen kctPopup
+                    call screen kct_popup
                 jump v12_lindsey_sex
             
             else:
