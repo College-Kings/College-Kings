@@ -357,7 +357,7 @@ label v14s17:
     scene v14s17_11 # FPP. MC looks at Ryan who is sound asleep with his head lying on his desk, Ryan has saliva dripping out of his mouth
     with dissolve
 
-    pause 0.75
+    pause 1.5
 
     scene v14s17_10d
     with dissolve
@@ -372,7 +372,7 @@ label v14s17:
     scene v14s17_10a
     with dissolve
 
-    la "Lindsey is really ramping up this campaign of hers and she decided to ask for some help from a very serious influence."
+    la "Lindsey is really ramping up this campaign of hers and she decided to ask for some help from a very serious influencer."
 
     scene v14s17_12 # TPP. Show MC from Laurens perspective, MC looking to the right of him, serious expression, mouth closed
     with dissolve
