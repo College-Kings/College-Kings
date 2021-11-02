@@ -6,6 +6,13 @@ label before_main_menu:
         kiwiiApp.img = "images/phone/kiwii/appAssets/kiwiiIcon.webp"
 
 
+        # Set Chloe and Lindsey Votes
+        try: chloe.votes
+        except AttributeError: chloe.votes = 24
+        try: lindsey.votes
+        except AttributeError: lindsey.votes = 16
+
+
         # Create messenger contacts
         try: emily.messenger
         except AttributeError: emily.create_contact("emilyprofilepic.webp", locked=False)
@@ -52,6 +59,7 @@ label before_main_menu:
         except AttributeError: samantha.create_simplr()
         try: emmy.simplr
         except AttributeError: emmy.create_simplr()
+
 
         # Set up murder mystery stats
         chloe.stats["Competitive"] = True
