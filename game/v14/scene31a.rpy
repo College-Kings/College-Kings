@@ -161,7 +161,7 @@ label v14s31a:
     scene v14s31a_3d
     with dissolve
 
-    ca "I'm pretty slow [name], but I'm not stupid. You've never come to workout with me before."
+    ca "I'm pretty slow, [name], but I'm not stupid. You've never come to workout with me before."
 
     if joinwolves: # -If Wolves (extra dialog)
         scene v14s31a_3f # FPP Same angle as 3, Cameron looks annoyed, mouth open

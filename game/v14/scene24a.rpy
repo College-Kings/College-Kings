@@ -77,7 +77,7 @@ label v14s24a:
     scene v14s24a_11b # FPP. Same as a v14s24a_11a but with Grayson, mouth open.
     with dissolve
 
-    gr "Is something funny [name]?"
+    gr "Is something funny, [name]?"
 
     scene v14s24a_11a
     with dissolve

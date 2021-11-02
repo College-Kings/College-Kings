@@ -136,7 +136,7 @@ label v14s03e:
         scene v14s03e_6f # FPP. Same as v14s03e_6c, annoyed expression
         with dissolve
 
-        ry "Yeah, yeah. Whatever [name]."
+        ry "Yeah, yeah. Whatever, [name]."
 
         ry "I'll give you a pass this time since nothing happened."
 

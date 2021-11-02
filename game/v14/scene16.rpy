@@ -228,7 +228,7 @@ label v14s16:
             scene v14s16_2a
             with dissolve
 
-            u "Chloe I... I want to help you, but I don't have the time."
+            u "Chloe, I... I want to help you, but I don't have the time."
 
             scene v14s16_2
             with dissolve
@@ -259,7 +259,7 @@ label v14s16:
                 scene v14s16_2k
                 with dissolve
 
-                u "It's not that I don't want to Chloe, it's just that I'm kinda busy with my own Greek life. We just got back to campus for crying out loud, I mea-"
+                u "It's not that I don't want to, Chloe. It's just that I'm kinda busy with my own Greek life. We just got back to campus for crying out loud, I mea-"
 
                 scene v14s16_2j
                 with dissolve

@@ -158,7 +158,7 @@ label v14s17:
             scene v14s17_8c # FPP. Same as v14s17_8, slight laughing expression
             with dissolve
 
-            la "*Laughs* You're not funny [name]."
+            la "*Laughs* You're not funny, [name]."
 
             scene v14s17_8a
             with dissolve
@@ -229,7 +229,7 @@ label v14s17:
         scene v14s17_8g # FPP. Same as v14s17_8f, different posture 
         with dissolve
 
-        la "When you mess up [name], you mess up in such horrible ways."
+        la "When you mess up, [name], you mess up in such horrible ways."
 
         scene v14s17_8e
         with dissolve

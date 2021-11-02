@@ -120,7 +120,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         scene v14s31b_3a
         with dissolve
 
-        cl "I know how this sounds [name], but I think it's the only way this plan is going to work."
+        cl "I know how this sounds, [name], but I think it's the only way this plan is going to work."
 
     elif chloers:       # -If ChloeRS, NOT ChloeGF (extra dialogue)
         scene v14s31b_3
@@ -517,7 +517,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
     scene v14s31b_17c # FPP. Grayson, sitting back in his chair, smiling, eyelids slightly closed, mouth open.
     with dissolve
 
-    gr "Have you ever seen her wear her glasses [name]?"
+    gr "Have you ever seen her wear her glasses, [name]?"
 
     scene v14s31b_18c # FPP. Same as v14s31b_18, but Chloe, mouth closed, embarrassed. 
     with dissolve
@@ -527,7 +527,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
     scene v14s31b_17
     with dissolve
 
-    gr "No, my grandmother... Yes Chloe."
+    gr "No, my grandmother... Yes, Chloe."
 
     scene v14s31b_17d # FPP. Same as v14s31b_17c, but Grayson mouth closed, smiling.
     with dissolve
@@ -964,7 +964,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         scene v14s31b_24a
         with dissolve
 
-        cl "*Sighs* Let's go [name]."
+        cl "*Sighs* Let's go, [name]."
 
         scene v14s31b_19
         with dissolve
@@ -1027,7 +1027,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
                 scene v14s31b_28b # TPP. Same as v14s31b_28a, but Chloe rolling her eyes, mouth open.
                 with dissolve
 
-                cl "*Sighs* No [name], I didn't touch him..."
+                cl "*Sighs* No, [name], I didn't touch him..."
 
                 scene v14s31b_28
                 with dissolve
@@ -1066,7 +1066,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         scene v14s31b_28a
         with dissolve
 
-        cl "Goodnight [name]."
+        cl "Goodnight, [name]."
 
         scene v14s31b_28
         with dissolve
@@ -1269,7 +1269,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
             scene v14s31b_31
             with dissolve
 
-            gr "Good luck with her [name], she's manipulative as fuck."
+            gr "Good luck with her, [name], she's manipulative as fuck."
 
             scene v14s31b_31d # Same as v14s31b_31, but mouth closed.
             with dissolve
