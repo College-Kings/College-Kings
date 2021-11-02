@@ -117,7 +117,7 @@ label v14s21a:
 
     cl "So much has been going on, but... *Moans* Everything melts away... When I'm with you."
 
-    scene v14chlsmTPP2 # Same as above but faster
+    scene v14chlsmTPP2f # Same as above but faster
     with dissolve
 
     pause

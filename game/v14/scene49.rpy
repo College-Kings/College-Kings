@@ -115,7 +115,7 @@ label v14s49:
 
         play sound "sounds/rejectcall.mp3"
      
-    scene v14s49_2a # TPP. Same as v14s49_2, MC putting his phone away.
+    scene v14s49_2b # TPP. Same as v14s49_2a, MC putting his phone away.
     with dissolve
 
     pause 0.75
