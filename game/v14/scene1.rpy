@@ -5,7 +5,6 @@
 
 label v14start:
     if aubreyrs and rileyrs:
-        $ v13_FirstThreesome = True
         jump v14s01
     else:
         jump v14s01a
@@ -26,6 +25,7 @@ label v14s01:
 
     menu:
         "We're doing this":
+            $ v13_FirstThreesome = True
             u "I'm gonna feel much better after this."
 
             scene v14s01_1c # FPP. Samer as v14s01_1b, but Aubrey mouth open, Riley mouth closed, Aubrey looking at Riley, Riley looking at Aubrey
