@@ -64,7 +64,7 @@ label v14s49:
 
         if chloegf:
             $ chloe.messenger.addReply(_("Hey... Think I'm in the mood for a little Italian cuisine and a beautiful woman across from me..."), queue =False)
-            $ chloe.messenger.newMessage(_("Haha, hi there Mr Sweet Talk..."))
+            $ chloe.messenger.newMessage(_("Haha, hi there Mr. Sweet Talk..."))
             $ chloe.messenger.newMessage(_("I could definitely eat, and... I suppose I'm down to see you ;)"))
             $ chloe.messenger.addReply(_("Well then, I suppose I'll see you soon :)"))
 
