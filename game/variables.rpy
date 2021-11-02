@@ -460,6 +460,7 @@ default v11_fucked_candy = False
 default v11_samantha_spa = False
 default v11_aubrey_blue_outfit = False
 default v11_tease_amber = 0
+default v11_amber_sauna_convo = False
 default v11_manhunt_winner = "Ryan"
 default v11_pranked_seb = False
 default v11_aubrey_sex = False
@@ -629,6 +630,7 @@ default v14_rw_half_chris_support = False # Chris backs half the cost of the rea
 default v14_ryan_satin = False
 default v14s03a_left_cup = False
 default v14s03a_take_wallet = False
+default v14_lindsey_money_theft = False
 default v14s23_agree = False
 default v14s23_disagree = False
 default v14s24a_gummyfish = False
@@ -644,6 +646,7 @@ default v14s39_id_wait = False # Tell Penelope you'd wait till they got home
 default v14s46a_love_lauren_more = False # MC love Lauren more because of her sex experimenting on MC.
 default v14_talk_to_chris = False
 default ElijahFriend = False
+default AmberLoyal = False
 default penelopeloyal = True
 default v14_lauren_sabotage = False
 default v14_PenRomScene = False
@@ -658,11 +661,3 @@ default jennyrs = False
 default v14_PenArgScene = False
 default v14_PenelopePartner = False
 default v14_RileyPartner = False
-default sceneList = set() #$ sceneList.add(aubrey)
-
-###to be looked at:
-#lindseysupport.points ???
-#lauren variables
-#v14s31_talkcameron
-#v14_plushwolf
-#v14_realwolf
