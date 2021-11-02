@@ -128,7 +128,7 @@ label v14s03c:
 
     u "One is off having a little fun somewhere else, or at least I hope... *Chuckles* And the other is hitting it off with that girl right... there."
 
-    scene v14s03c_5 # FPP. MC looking off past the bar pointing over at Ryan and Emerald , Ryan and Emerald both slight smile, mouth closed.
+    scene v14s03c_5 # FPP. MC looking off past the bar pointing over at Ryan and Emerald, Ryan and Emerald both slight smile, mouth closed.
     with dissolve
 
     pause 0.75

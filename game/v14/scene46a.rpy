@@ -9,7 +9,7 @@ label v14s46a:
 
     pause 0.75
 
-    scene v14s46a_1a    # FPP. Lauren, excited, smiling, door open , mouth open.
+    scene v14s46a_1a    # FPP. Lauren, excited, smiling, door open, mouth open.
     with dissolve
 
     la "Hi."

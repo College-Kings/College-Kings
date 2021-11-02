@@ -156,7 +156,7 @@ label v14s18:
     scene v14s18_4c
     with dissolve
 
-    li "So... What do you say, will you help me win this thing?"
+    li "So... what do you say, will you help me win this thing?"
 
     scene v14s18_4b
     with dissolve
