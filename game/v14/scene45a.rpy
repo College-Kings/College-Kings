@@ -10,14 +10,12 @@ label v14s45a:
     u "Hey there. So, what's the news?"
 
     if v14_amber_drugs:
-
         scene v14s45a_1a # FPP. Same as v14s45a_1, MC looking at Amber, Amber now looking at MC, Amber tired and high, Amber neutral expression, mouth open.
         with dissolve
 
-        am "I just uh… I quit my job at Lew's."
+        am "I just uh... I quit my job at Lew's."
 
         if v11_amber_sauna_convo:
-
             am "Guess you can't tease me about it anymore, haha."
 
         scene v14s45a_1b # FPP. Same as v14s45a_1a, Amber tired and high, neutral expression, mouth closed.
@@ -28,9 +26,9 @@ label v14s45a:
         scene v14s45a_1a
         with dissolve
 
-        am "Just tired of it, honestly… It's not fun. *Chuckles*"
+        am "Just tired of it, honestly... It's not fun. *Chuckles*"
 
-        am "I know it sounds kinda… Whatever, I think I'm gonna try to be a private dancer or something."
+        am "I know it sounds kinda... Whatever, I think I'm gonna try to be a private dancer or something."
 
         scene v14s45a_1b
         with dissolve
@@ -40,7 +38,7 @@ label v14s45a:
         scene v14s45a_1a
         with dissolve
 
-        am "I looked into a nightclub that’s not too far from here. I could make really good money on the weekends."
+        am "I looked into a nightclub that's not too far from here. I could make really good money on the weekends."
 
         menu:
             "Not a bad idea.":
@@ -48,7 +46,7 @@ label v14s45a:
                 scene v14s45a_1b
                 with dissolve
                
-                u "Doesn’t sound like too bad of an idea, actually."
+                u "Doesn't sound like too bad of an idea, actually."
 
                 scene v14s45a_1a
                 with dissolve
@@ -58,7 +56,7 @@ label v14s45a:
                 scene v14s45a_1b
                 with dissolve
 
-                u "Sure. I am cool with it as long as you’re comfortable with it and it makes you happy. You know?"
+                u "Sure. I am cool with it as long as you're comfortable with it and it makes you happy. You know?"
 
                 scene v14s45a_1a
                 with dissolve
@@ -70,10 +68,9 @@ label v14s45a:
                 scene v14s45a_1b
                 with dissolve
 
-                u "Ha, good. I’m glad I could help."
+                u "Ha, good. I'm glad I could help."
 
             "Why a stripper?":
-
                 scene v14s45a_1b
                 with dissolve
                 
@@ -82,7 +79,7 @@ label v14s45a:
                 scene v14s45a_1a
                 with dissolve
 
-                am "Ugh… I knew you’d say that. It’s not a stripper it’s-"
+                am "Ugh... I knew you'd say that. It's not a stripper it's-"
 
                 scene v14s45a_1b
                 with dissolve
@@ -92,17 +89,17 @@ label v14s45a:
                 scene v14s45a_1a
                 with dissolve
 
-                am "Well regardless of what you call it, I’m doing it 'cause I want to. I didn't think I needed anyone’s permission to do that."
+                am "Well regardless of what you call it, I'm doing it 'cause I want to. I didn't think I needed anyone's permission to do that."
 
                 scene v14s45a_1b
                 with dissolve
 
-                u "You don't, but… You had a good, solid job and you're throwing it away for this?"
+                u "You don't, but... You had a good, solid job and you're throwing it away for this?"
 
                 scene v14s45a_1a
                 with dissolve
 
-                am "I wasn't happy at Lew’s and this dancing job… It seems like something I'll enjoy."
+                am "I wasn't happy at Lew's and this dancing job... It seems like something I'll enjoy."
 
                 scene v14s45a_1b
                 with dissolve
@@ -122,30 +119,30 @@ label v14s45a:
                 scene v14s45a_1a
                 with dissolve
 
-                am "*Sighs* Haha…"
-    elif v14_amber_clean:
+                am "*Sighs* Haha..."
 
+    elif v14_amber_clean:
         scene v14s45a_1c # FPP. Same as v14s45a_1, Amber looking at MC, Mc looking at Amber, Amber has on a nice pretty red lipstick, Amber slight smile, mouth open.
         with dissolve
 
-        am "I got a promotion at Lew's…"
+        am "I got a promotion at Lew's..."
 
         scene v14s45a_1d # FPP. Same as v14s45a_1c, Amber slight smile, mouth closed.
         with dissolve
 
-        u "Promotion?! Amber! That's…"
+        u "Promotion?! Amber! That's..."
 
         u "Promotion to what?"
 
         scene v14s45a_1c
         with dissolve
 
-        am "*Chuckles* I'm now the ‘Assistant to the Manager’."
+        am "*Chuckles* I'm now the ‘Assistant to the Manager'."
 
         scene v14s45a_1d
         with dissolve
 
-        u "Wait… The same manager that was being a dick to you that one day?"
+        u "Wait... The same manager that was being a dick to you that one day?"
 
         scene v14s45a_1c
         with dissolve
@@ -157,7 +154,7 @@ label v14s45a:
         scene v14s45a_1d
         with dissolve
 
-        u "Wow…"
+        u "Wow..."
 
         menu:
             "Make a joke":
@@ -166,7 +163,7 @@ label v14s45a:
                 scene v14s45a_1d
                 with dissolve
 
-                u "So, let me get this straight…"
+                u "So, let me get this straight..."
 
                 u "First, you just work at the rich kid shop, start wearing the rich kid clothes, and now you're moving up in the ranks?"
 
@@ -185,14 +182,14 @@ label v14s45a:
                 scene v14s45a_1c
                 with dissolve
 
-                am "Haha, okay dickhead…"
+                am "Haha, okay dickhead..."
 
                 am "When I become CEO and you need a job, I'll show you what an ass I can be."
 
                 scene v14s45a_1d
                 with dissolve
 
-                u "Oh wow. I’m scared. *Chuckles*"
+                u "Oh wow. I'm scared. *Chuckles*"
 
             "Be supportive":
                 $ AmberLoyal = True
@@ -206,12 +203,12 @@ label v14s45a:
                 scene v14s45a_2 # TPP. Show MC holding Amber's hand, both slight smile mouth closed.
                 with dissolve
 
-                pause .5
+                pause 0.5
 
                 scene v14s45a_1e # FPP. Same as v14s45a_1c, Amber's arm moved slightly forward to show that she is holding MC's hand, Slight smile, mouth closed.
                 with dissolve
 
-                u "You're really on the right track, I think. At this rate, I'll be asking you for a job at Lew’s one day. *Chuckles*"
+                u "You're really on the right track, I think. At this rate, I'll be asking you for a job at Lew's one day. *Chuckles*"
 
                 scene v14s45a_1f # FPP. Same as v14s45a_1e, Amber slight smile, mouth open.
                 with dissolve
@@ -221,10 +218,10 @@ label v14s45a:
     scene v14s45a_3 # TPP. Camera view from the park infront of them. MC and Amber looking at the Camera. Amber laying her head on MC's shoulder.
     with dissolve
 
-# -Note for music; This is where the slow version of ‘Blanket’ by Van Stee comes into play, see Mozzart for questions-
+# -Note for music; This is where the slow version of ‘Blanket' by Van Stee comes into play, see Mozzart for questions-
 # -Waiting on song to be ready. Song should start playing here.-
 
-    pause .25
+    pause 0.25
 
     scene v14s45a_3a # TPP. Same as v14s45a_3, Amber slight smile, mouth open, MC slight smile, mouth closed.
     with dissolve
@@ -241,7 +238,7 @@ label v14s45a:
 
     am "I appreciate you, a lot."
 
-    am "You’re like, a blanket. *Chuckles*"
+    am "You're like, a blanket. *Chuckles*"
 
     scene v14s45a_3b
     with dissolve
@@ -251,23 +248,23 @@ label v14s45a:
     scene v14s45a_3a
     with dissolve
 
-    am "I mean, like… You’re nice, and warm, like a blanket that wraps me up tight and makes me feel safe."
+    am "I mean, like... You're nice, and warm, like a blanket that wraps me up tight and makes me feel safe."
 
     scene v14s45a_3b
     with dissolve
 
-    u "(Holy shit, that;s the cutest thing I’ve ever heard.)"
+    u "(Holy shit, that's the cutest thing I've ever heard.)"
 
     scene v14s45a_3a
     with dissolve
 
-    am "A security blanket of some sorts... *Chuckles* Fucking it all up or doing it all perfectly, at the end of the day you’ve still got me feeling safe and warm."
+    am "A security blanket of some sorts... *Chuckles* Fucking it all up or doing it all perfectly, at the end of the day you've still got me feeling safe and warm."
 
     if amberrs:
         scene v14s45a_4 # TPP. Upclose of MC looking into Amber's eyes and Amber looking into MC's eyes, MC's finger lifting up Amber's chin, both slight smile, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.25
 
         play sound "sounds/kiss.mp3"
 
@@ -279,7 +276,7 @@ label v14s45a:
     scene v14s45a_3c # FPP. Same as v14s45a_3b, MC and Amber looking at each other, both slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.25
 
     scene v14s45a_1e
     with dissolve
@@ -289,7 +286,7 @@ label v14s45a:
     scene v14s45a_1g # FPP. Same as v14s45a_1f, Amber now with a fake playful angry face, mouth open
     with dissolve
 
-    am "I do, and… It takes a lot for me to say that, so don't take it lightly."
+    am "I do, and... It takes a lot for me to say that, so don't take it lightly."
 
     scene v14s45a_1h # FPP. Same as v14s45a_1g, Amber now with a fake playful angry face, mouth closed
     with dissolve
@@ -299,7 +296,7 @@ label v14s45a:
     scene v14s45a_1f
     with dissolve
 
-    pause .25
+    pause 0.25
 
     scene v14s45a_5 # TPP. Amber reaching behind the tree they are sitting under where we can't see, MC confused face, mouth closed, Amber slight smile, mouth closed.
     with dissolve
@@ -339,17 +336,17 @@ label v14s45a:
     scene v14s45a_3d # FPP. Same as v14s45a_3c, Amber and MC high fiving as they look at each other, both slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.25
 
     scene v14s45a_3e # FPP. Same as v14s45a_3d, Amber taking a sip from the Champagne bottle, both slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.25
 
     scene v14s45a_3f # FPP. Same as v14s45a_3e, Amber handing the bottle to MC, both slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.25
 
     scene v14s45a_3g # FPP. Same as v14s45a_3f, MC taking a sip from the Champagne bottle, both slight smile, mouth closed.
     with dissolve
@@ -381,18 +378,17 @@ label v14s45a:
     scene v14s45a_1k # FPP. Same as v14s45a_1j, Amber starting to get up, slight smile, mouth closed.
     with dissolve
     
-    pause .25
+    pause 0.25
 
     scene v14s45a_1l # FPP. Same as v14s45a_1k, Amber walking off, slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.25
 
     scene v14s45a_6 # FPP. MC looking out at the park
     with dissolve
 
     if v14_money_theft_concert_distraction: # Placeholder for choosing the concert to distract Chloe
-
         play sound "sounds/vibrate.mp3"
 
         u "(Let's check it out.)"
@@ -400,25 +396,25 @@ label v14s45a:
         scene v14s45a_7 # TPP. MC looking at his phone, slight smile, mouth closed.
         with dissolve
 
-        $ Lindsey.messenger.newMessage("Hey! Chloe is getting ready to leave for the concert, now's the perfect time to make a dent in her pockets.")
-        $ Lindsey.messenger.addReply("Roger that, OMW")
+        $ lindsey.messenger.newMessage("Hey! Chloe is getting ready to leave for the concert, now's the perfect time to make a dent in her pockets.")
+        $ lindsey.messenger.addReply("Roger that, OMW")
 
-        label s45a_PhoneContinue:
-        if Lindsey.messenger.replies:
+        label v14s45a_PhoneContinue:
+        if lindsey.messenger.replies:
             call screen phone
-        if Lindsey.messenger.replies:
+        if lindsey.messenger.replies:
             "(I should reply to Lindsey.)"
-            jump s45a_PhoneContinue
+            jump v14s45a_PhoneContinue
 
         scene v14s45a_7a # TPP. Same as v14s45a_7, MC putting his phone away, slight smile, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.25
 
         scene v14s45a_8 # TPP. MC starting to stand up, slight smile, mouth closed
         with dissolve
 
-        pause .25
+        pause 0.25
 
         scene v14s45a_9 # TPP. MC walking down the sidewalk near the park, slight smile, mouth closed
         with fade
@@ -429,7 +425,7 @@ label v14s45a:
         scene v14s45a_7
         with dissolve
 
-        u "Perfect timing…"
+        u "Perfect timing..."
 
         scene v14s45a_7b # TPP. Same as v14s45a_7, MC holding the phone to his ear, slight smile, mouth open.
         with dissolve
@@ -449,12 +445,12 @@ label v14s45a:
         scene v14s45a_10
         with dissolve
 
-        li "The Chloe, distraction? C'mon now…"
+        li "The Chloe, distraction? C'mon now..."
 
         scene v14s45a_10a
         with dissolve
 
-        u "Yeah, yeah… I was just testing you. *Chuckles*"
+        u "Yeah, yeah... I was just testing you. *Chuckles*"
 
         u "Call me in 5, I am going to start heading over..."
 
@@ -473,12 +469,12 @@ label v14s45a:
         scene v14s45a_7a
         with dissolve
 
-        pause .25
+        pause 0.25
 
         scene v14s45a_8
         with dissolve
 
-        pause .25
+        pause 0.25
 
         scene v14s45a_9
         with dissolve
@@ -489,7 +485,7 @@ label v14s45a:
         scene v14s45a_7
         with dissolve
 
-        u "Perfect timing…"
+        u "Perfect timing..."
 
         scene v14s45a_7b
         with dissolve
@@ -525,17 +521,18 @@ label v14s45a:
             scene v14s45a_10a
             with dissolve
 
-            u "Don’t apologize. I’ll be right there."
+            u "Don't apologize. I'll be right there."
 
             scene v14s45a_10
             with dissolve
 
-            li "Thank you, handsome…"
+            li "Thank you, handsome..."
 
             scene v14s45a_10a
             with dissolve
 
-            u "Yeah, yeah… *Chuckles*"
+            u "Yeah, yeah... *Chuckles*"
+
         else:
             scene v14s45a_10a
             with dissolve
@@ -550,7 +547,7 @@ label v14s45a:
             scene v14s45a_10a
             with dissolve
 
-            u "Uh, huh…"
+            u "Uh, huh..."
 
         scene v14s45a_10
         with dissolve
@@ -562,21 +559,21 @@ label v14s45a:
         scene v14s45a_7a
         with dissolve
 
-        pause .25
+        pause 0.25
 
         scene v14s45a_8
         with dissolve
 
-        pause .25
+        pause 0.25
 
         scene v14s45a_9
         with dissolve
-    else:
 
+    else:
         scene v14s45a_8
         with dissolve
 
-        pause .25
+        pause 0.25
 
         scene v14s45a_9
         with dissolve
