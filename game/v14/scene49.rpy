@@ -118,7 +118,7 @@ label v14s49:
     scene v14s49_2a # TPP. Same as v14s49_2, MC putting his phone away.
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s49_4 # TPP. Show Mc further up the sidewalk walking towards the chick house.
     with dissolve

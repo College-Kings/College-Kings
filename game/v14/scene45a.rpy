@@ -221,7 +221,7 @@ label v14s45a:
 # -Note for music; This is where the slow version of ‘Blanket' by Van Stee comes into play, see Mozzart for questions-
 # -Waiting on song to be ready. Song should start playing here.-
 
-    pause 0.25
+    pause 0.75
 
     scene v14s45a_3a # TPP. Same as v14s45a_3, Amber slight smile, mouth open, MC slight smile, mouth closed.
     with dissolve
@@ -264,7 +264,7 @@ label v14s45a:
         scene v14s45a_4 # TPP. Upclose of MC looking into Amber's eyes and Amber looking into MC's eyes, MC's finger lifting up Amber's chin, both slight smile, mouth closed.
         with dissolve
 
-        pause 0.25
+        pause 0.75
 
         play sound "sounds/kiss.mp3"
 
@@ -276,7 +276,7 @@ label v14s45a:
     scene v14s45a_3c # FPP. Same as v14s45a_3b, MC and Amber looking at each other, both slight smile, mouth closed.
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s45a_1e
     with dissolve
@@ -296,7 +296,7 @@ label v14s45a:
     scene v14s45a_1f
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s45a_5 # TPP. Amber reaching behind the tree they are sitting under where we can't see, MC confused face, mouth closed, Amber slight smile, mouth closed.
     with dissolve
@@ -336,17 +336,17 @@ label v14s45a:
     scene v14s45a_3d # FPP. Same as v14s45a_3c, Amber and MC high fiving as they look at each other, both slight smile, mouth closed.
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s45a_3e # FPP. Same as v14s45a_3d, Amber taking a sip from the Champagne bottle, both slight smile, mouth closed.
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s45a_3f # FPP. Same as v14s45a_3e, Amber handing the bottle to MC, both slight smile, mouth closed.
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s45a_3g # FPP. Same as v14s45a_3f, MC taking a sip from the Champagne bottle, both slight smile, mouth closed.
     with dissolve
@@ -378,12 +378,12 @@ label v14s45a:
     scene v14s45a_1k # FPP. Same as v14s45a_1j, Amber starting to get up, slight smile, mouth closed.
     with dissolve
     
-    pause 0.25
+    pause 0.75
 
     scene v14s45a_1l # FPP. Same as v14s45a_1k, Amber walking off, slight smile, mouth closed.
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s45a_6 # FPP. MC looking out at the park
     with dissolve
@@ -409,12 +409,12 @@ label v14s45a:
         scene v14s45a_7a # TPP. Same as v14s45a_7, MC putting his phone away, slight smile, mouth closed.
         with dissolve
 
-        pause 0.25
+        pause 0.75
 
         scene v14s45a_8 # TPP. MC starting to stand up, slight smile, mouth closed
         with dissolve
 
-        pause 0.25
+        pause 0.75
 
         scene v14s45a_9 # TPP. MC walking down the sidewalk near the park, slight smile, mouth closed
         with fade
@@ -469,12 +469,12 @@ label v14s45a:
         scene v14s45a_7a
         with dissolve
 
-        pause 0.25
+        pause 0.75
 
         scene v14s45a_8
         with dissolve
 
-        pause 0.25
+        pause 0.75
 
         scene v14s45a_9
         with dissolve
@@ -559,12 +559,12 @@ label v14s45a:
         scene v14s45a_7a
         with dissolve
 
-        pause 0.25
+        pause 0.75
 
         scene v14s45a_8
         with dissolve
 
-        pause 0.25
+        pause 0.75
 
         scene v14s45a_9
         with dissolve
@@ -573,7 +573,7 @@ label v14s45a:
         scene v14s45a_8
         with dissolve
 
-        pause 0.25
+        pause 0.75
 
         scene v14s45a_9
         with dissolve
