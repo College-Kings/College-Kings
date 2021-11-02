@@ -5,7 +5,7 @@
 
 label v14s39:
     scene v14s39_1 # FPP. MC and Penelope walking down the side walk, Penelope looking at MC, MC looking at Penelope, Penlope neutral face, mouth open.
-    with dissolve
+    with fade
 
     pe "That woman was so terrible! How could that man just sit there and take all of her shit?"
 

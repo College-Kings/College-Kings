@@ -150,6 +150,7 @@ label v14s37:
     pe "Hehe, good. I'll just leave a big tip for my water. *Laughs*"
 
     scene v14s37_10b
+    with dissolve
 
     u "*Chuckles* I've never heard anyone say that."
 
@@ -176,7 +177,7 @@ label v14s37:
     scene v14s37_11 # TPP. Shot of Penelope and MC staring in each others eyes and smiling at each other, both mouth closed.
     with dissolve
 
-    pause 
+    pause 1.25 
     
     scene v14s37_10a
     with dissolve
@@ -184,7 +185,7 @@ label v14s37:
     pe "Guess that makes two of us. *Chuckles*"
 
     scene v14s37_9d # FPP. Same as v14s37_9c, the host putting the glasses of water on the table for Penelope and MC.
-    with hpunch
+    with dissolve
 
     host "Here you go, guys."
 
@@ -216,12 +217,12 @@ label v14s37:
     scene v14s37_9c
     with dissolve
 
-    pause 
+    pause 0.75
 
     scene v14s37_12 # TPP. Show the host walking over to a table with another couple that is sat close to MC and Penelope.
     with dissolve
 
-    pause 
+    pause 0.75
 
     scene v14s37_13 # TPP. Close up of the Host at a table with the other couple, the gentleman, slight frown, mouth closed, the lady upset expression, mouth closed, host slight smile, mouth open.
     with dissolve
@@ -239,7 +240,7 @@ label v14s37:
     lady "Oh my good god, if you gave him all day, he'd take all day. We're ready to order."
 
     scene v14s37_15a # TPP. Same as v14s37_15, The lady looking at the Host (Host Off-camera), upset expression, mouth open.
-    with vpunch
+    with dissolve
 
     lady "I'll have a house salad and he'll have the same."
 
@@ -254,7 +255,7 @@ label v14s37:
     gentleman "Do you have-"
 
     scene v14s37_15a
-    with vpunch
+    with dissolve
     
     lady "None."
 
@@ -311,7 +312,7 @@ label v14s37:
     scene v14s37_10e # FPP. Same as v14s37_10d, Penlope turning to look over at the previous couple that was having issues, Penelope sad face, mouth closed.
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v14s37_10d
     with dissolve
@@ -321,12 +322,12 @@ label v14s37:
     scene v14s37_10c
     with dissolve
 
-    pe "I actually had an interview for an on-campus job but, it got cancelled."
+    pe "I actually had an interview for an on-campus job, but it got cancelled."
 
     scene v14s37_10e
     with dissolve
 
-    pause 
+    pause 0.75
 
     scene v14s37_10d
     with dissolve
@@ -469,7 +470,7 @@ label v14s37:
             scene v14s37_10c
             with dissolve
 
-            pause 
+            pause 0.75 
 
             scene v14s37_10j # FPP. Same as v14s37_10i, MC holding Penelope's hands across the table, Penelope slight sad face, mouth closed.
             with dissolve
@@ -524,7 +525,7 @@ label v14s37:
     scene v14s37_10n # FPP. Same as v14s30_10m, Penelope full smile, mouth closed.
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v14s37_10b
     with dissolve
@@ -594,7 +595,7 @@ label v14s37:
     scene v14s37_10o # FPP. Same as v14s37_10n, Penelope taking a drink of her water.
     with dissolve
 
-    pause 
+    pause 0.75
 
     scene v14s37_10b
     with dissolve
@@ -654,7 +655,7 @@ label v14s37:
     scene v14s37_10a
     with dissolve
 
-    pe "That's a longshot, but I'll give it a try."
+    pe "That's a long shot, but I'll give it a try."
 
     scene v14s37_10b
     with dissolve
@@ -664,12 +665,13 @@ label v14s37:
     scene v14s37_17 # TPP. Shot of both Penelope and MC starting to lean over the table to kiss each other.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v14s37_17a # TPP. Same as v14s37_17, Penelope and MC kissing across the table.
     with dissolve
+    play sound "sounds/kiss.mp3"
 
-    pause 
+    pause 1.75
 
     scene v14s37_10a
     with dissolve
@@ -720,10 +722,12 @@ label v14s37:
         scene v14s37_26 # FPP. MC standing next to the table and holding Penelope's hand and helping her get up, Penelope slight smile, mouth closed.
         with dissolve
 
-        pause 
+        pause 0.75
 
         scene v14s37_23
-        with fade
+        with dissolve
+
+        pause 0.75
 
     else:
         scene v14s37_10g
@@ -732,6 +736,7 @@ label v14s37:
         pe "Okay, that's it!"
 
         scene v14s37_10p # FPP. Same as v14s37_10o, Penelope starting to get up from her seat, Penelope angry face, mouth closed.
+        with dissolve
 
         u "Wait-"
 
@@ -743,7 +748,7 @@ label v14s37:
         scene v14s37_19 # TPP. Close up of Penelope putting her finger in the ladies face, Penleope angry face, mouth open, Lady shocked face, mouth closed.
         with dissolve
 
-        pe "Listen up, Princess! I came here to go on a wonderful date, just like you. And I CAN'T DO THAT because YOU won't stop being A BITCH!"
+        pe "Listen up, Princess! I came here to go on a wonderful date, just like you. And I CAN'T DO THAT because YOU won't stop being a BITCH!"
 
         scene v14s37_20 # TPP. Close up of Penelope and the Gentleman looking at each other, Gentleman slight frown, mouth closed, Penelope angry face, mouth open.
         with dissolve
@@ -755,7 +760,8 @@ label v14s37:
 
         pe "And you."
 
-        pe "Keep your shitty attitude, and your miserable life to yourself, okay? This world doesn't revolve around you. If I ever see you again and you're speaking to someone like this, I'll have more than just words to say next time."
+        pe "Keep your shitty attitude, and your miserable life to yourself, okay?"
+        pe "This world doesn't revolve around you. If I ever see you again and you're speaking to someone like this, I'll have more than just words to say next time."
 
         scene v14s37_19b # TPP. Same as v14ss37_19a, Penelope with a disgusted angry face, mouth closed, Lady shocked face, mouth open.
         with dissolve
@@ -783,12 +789,12 @@ label v14s37:
         pe "Positive."
 
         scene v14s37_23 # TPP. Show Penelope and MC walking away from the front of the Restaurant/ 
-        with fade
+        with dissolve
 
-        pause
+        pause 0.75
 
         scene v14s37_24 # FPP. MC and Penelope on the sidewalk, Penelope looking at MC, MC looking at Penelope, Penelope slight smile, mouth closed.
-        with dissolve
+        with fade
 
         u "Are you all good?"
 
