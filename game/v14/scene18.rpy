@@ -122,7 +122,7 @@ label v14s18:
         scene v14s18_4a
         with dissolve
 
-        li "I know you're like, dating Chloe, or whatever you're calling it... *Chuckles* But genuinely, my only chance at beating Chloe starts with you joining my team."
+        li "I know you're like, dating Chloe, or whatever you're calling it... *Chuckles* But genuinely, my only chance at beating her starts with you joining my team."
 
     if lindseyrs:
         scene v14s18_4f # FPP. Lindsey very close to MC, she is whispering, mouth open, seductive smile
@@ -140,9 +140,6 @@ label v14s18:
 
         li "*Laughs* I had a dream the other night, actually..."
 
-        scene v14s18_4g
-        with dissolve
-
         li "I was in the bathroom and I was..."
 
         scene v14s18_4a
@@ -150,7 +147,7 @@ label v14s18:
 
         li "Ah, nevermind. You can find out the rest later. *Chuckles*"
 
-        if not aubreyrs and not rileyrs:
+        if not v13_threesomeending:
             scene v14s18_4
             with dissolve
 
