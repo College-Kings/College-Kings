@@ -729,6 +729,11 @@ label v14s37:
 
         pause 0.75
 
+        scene v14s39_1 # FPP. MC and Penelope walking down the side walk, Penelope looking at MC, MC looking at Penelope, Penlope neutral face, mouth open.
+        with fade
+
+        pe "That woman was so terrible! How could that man just sit there and take all of her shit?"
+
     else:
         scene v14s37_10g
         with dissolve
@@ -793,19 +798,27 @@ label v14s37:
 
         pause 0.75
 
-        scene v14s37_24 # FPP. MC and Penelope on the sidewalk, Penelope looking at MC, MC looking at Penelope, Penelope slight smile, mouth closed.
+        #scene v14s37_24 # FPP. MC and Penelope on the sidewalk, Penelope looking at MC, MC looking at Penelope, Penelope slight smile, mouth closed.
+        scene v14s39_1a
         with fade
 
         u "Are you all good?"
 
-        scene v14s37_24a # FPP. Same as v14s37_24, Penelope slight smile, mouth open.
+        #scene v14s37_24a # FPP. Same as v14s37_24, Penelope slight smile, mouth open.
+        scene v14s39_1
         with dissolve
         
         pe "Yeah, I'm fine. She just really pissed me off, that's all."
 
-        scene v14s37_24
+        #scene v14s37_24
+        scene v14s39_1a
         with dissolve
 
         u "I understand why."
+
+        scene v14s39_1 # FPP. MC and Penelope walking down the side walk, Penelope looking at MC, MC looking at Penelope, Penlope neutral face, mouth open.
+        with dissolve
+
+        pe "That woman was so terrible! How could that man just sit there and take all of her shit?"
 
     jump v14s39

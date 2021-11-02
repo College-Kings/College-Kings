@@ -4,11 +4,6 @@
 # Time: Night
 
 label v14s39:
-    scene v14s39_1 # FPP. MC and Penelope walking down the side walk, Penelope looking at MC, MC looking at Penelope, Penlope neutral face, mouth open.
-    with fade
-
-    pe "That woman was so terrible! How could that man just sit there and take all of her shit?"
-
     scene v14s39_1a # FPP. Same as v14s39_1, Penelope neutral face, mouth closed.
     with dissolve
 
