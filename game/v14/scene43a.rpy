@@ -24,7 +24,7 @@ label v14s43a:
     scene v14s43a_3 # FPP. MC and Penelope in the college hallway, standing next to each other, Penelope smiling, mouth closed
     with dissolve
 
-    u "Oh,  and just so you know... You snore super loudly. *Laughs* I'm sure you already knew that though."
+    u "Oh, and just so you know... You snore super loudly. *Laughs* I'm sure you already knew that though."
 
     scene v14s43a_3a # FPP. Same as v14s43a_3, Penelope smiling, mouth open
     with dissolve

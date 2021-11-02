@@ -446,7 +446,7 @@ label v13s30:
     if v13_lauren_smoke or (kct == "loyal" and not v11_aubrey_sex):
         if not v13_lauren_smoke:
             $ v13_lauren_smoke = True
-            call screen kctPopup
+            call screen kct_popup
 
         scene v13s30_8a
         with dissolve

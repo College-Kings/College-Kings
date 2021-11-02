@@ -6,12 +6,12 @@
 label v14s41:
 # -Scene 40 and 41 are identical except for location
     scene v14s41_1 # TPP. MC walks into his apes room, tired expression, mouth closed
-    with dissolve    
+    with dissolve
 
     pause 0.75
 
     scene v14s41_2 # TPP. MC plops on his apes bed after removing his clothes, slight smile, mouth closed
-    with dissolve    
+    with dissolve
 
     u "(Finally, time for some sleep.)"
 
@@ -135,7 +135,7 @@ label v14s41:
                 scene v14s40_4d # Ignore as reused from another scene
                 with dissolve
 
-                la "I liked it, alot."
+                la "I liked it, a lot."
 
                 scene v14s40_4e # Ignore as reused from another scene
                 with dissolve

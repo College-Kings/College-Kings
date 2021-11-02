@@ -9,7 +9,7 @@ label v14s43:
     scene v14s43_1 # TPP. Show MC walking through the school, slight smile, mouth closed
     with fade
 
-    pause  
+    pause
 
     call screen elections
 

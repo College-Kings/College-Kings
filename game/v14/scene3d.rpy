@@ -265,7 +265,7 @@ label v14s03d:
 
             satin "*Moans* Thank you, but... please... stop talking."
 
-            u "(She wants me to just sit here? *Chuckles*)"            
+            u "(She wants me to just sit here? *Chuckles*)"
 
             scene v14satrcgTPP2f # Ignore as animation
             with dissolve
@@ -290,7 +290,7 @@ label v14s03d:
             satin "C'mon over here. What are you waiting for? *Chuckles*"
 
             scene v14s03d_14a # TPP Same angle as 14, MC climbing on top of Satin and getting ready to enter her, Satin's eyes closed, smiling with mouth open
-            with dissolve        
+            with dissolve
 
             satin "Now fuck me as hard as you can until you cum."
 
@@ -330,7 +330,7 @@ label v14s03d:
             image v14satbpTPP1f = Movie(play="images/v14/Scene 3d/v14satbpTPP1f.webm", loop=True, image="images/v14/Scene 3d/v14satbpTPP1.webp", start_image="images/v14/Scene 3d/v14satbpTPP1.webp")
 
             scene v14satbpTPP1 # Ignore as animation
-            with dissolve 
+            with dissolve
 
             satin "*Moans* So... fucking... good!"
 

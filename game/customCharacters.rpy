@@ -41,15 +41,12 @@ init python:
             self.points = 0
             self.opinion = None
 
-
         def create_contact(self, profile_picture, locked=True):
             self.messenger = Contact(self.name, profile_picture, locked)
             contacts.append(self.messenger)
-
         
         def create_simplr(self, condition="True"):
             self.simplr = SimplrContact(self.name, condition)
-
 
         def kill(self):
             # Check Competitive stat
@@ -76,7 +73,6 @@ init python:
             # Add character to kill list
             if self != cameron: # Except Cameron, because he's not playing
                 v12s7_killList.add(self)
-
 
         def reset_points(self):
             self.points = 0

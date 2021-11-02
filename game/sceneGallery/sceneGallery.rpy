@@ -23,7 +23,7 @@ init python:
     ## SCENE GALLERY ITEMS HERE
         # v1
     if renpy.loadable("v1/v1.rpy"):
-        SceneGallery("sexdream1") #Riley
+        SceneGallery("sexdream1") #Riley, day 1, v1_sda
         # v2
     if renpy.loadable("v2/v2.rpy"):
         SceneGallery("v1_tomShoutBack") #Tom
@@ -59,7 +59,7 @@ init python:
         SceneGallery("v10_mc_vs_ryan_fight") #6, Ryan
         SceneGallery("v10_mc_vs_imre_fight") #7, Imre
         SceneGallery("v10s17_galleryScene") #17, Aubrey, day 20, aubrey_bathroom_sex
-        SceneGallery("v10_lauren_room_sg", scope={"laurenrs": True}) #24, Lauren, day 21, v10_lauren_suck (otherwise forced)
+        SceneGallery("v10_lauren_room_sg", scope={"laurenrs": True}) #24, Lauren, day 21, v10_lauren_suck (otherwise forced) or v10_lauren_sg
         SceneGallery("v10_amber_skatepark_sg") #26, Amber, day 21, v10_ambersex
         SceneGallery("v10s30_galleryScene") #30, Chloe, day 22, v10_chloe_locker
         SceneGallery("v10s40_galleryScene", scope={"rileyrs": True}) #40, Riley, day 23, v10_ri_sex
@@ -85,11 +85,12 @@ init python:
         SceneGallery("v13s50a") #50a, Emily, day 40, v13_emilysex
         #v14
     if renpy.loadable("v14/scene1.rpy"):
-        SceneGallery("") #3d
-        SceneGallery("") #21a
-        SceneGallery("") #25a
-        SceneGallery("") #36
-        SceneGallery("") #53a
+        SceneGallery("") #1, Riley Aubrey
+        SceneGallery("") #3d, Satin
+        SceneGallery("") #21a, Chloe
+        SceneGallery("") #25a, Amber
+        SceneGallery("") #36, Jenny
+        SceneGallery("") #53a, Samantha
 
 screen spoiler():
     modal True

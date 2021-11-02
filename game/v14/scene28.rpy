@@ -13,7 +13,7 @@ label v14s28:
 
         em "So... You and I have been on and off, and on and off..."
 
-        em "Seems like you don't mind fucking me but when it comes to actually being nice person or ressurecting our relationship, you're not for it."
+        em "Seems like you don't mind fucking me but when it comes to actually being nice person or resurrecting our relationship, you're not for it."
 
         scene v14s28_2a # FPP. Same as v14s28_2, Emily worried smile, mouth closed.
         with dissolve

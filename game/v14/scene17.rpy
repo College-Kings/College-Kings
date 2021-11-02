@@ -96,7 +96,7 @@ label v14s17:
         u "(Hot damn... I like when she does that sneaky shit, haha.)"
 
         scene v14s17_7 # TPP. MC Now sitting beside lauren, both looking at eachother, both slight smile, mouths closed
-        with dissolve    
+        with dissolve
 
         pause 0.75
 
@@ -117,13 +117,13 @@ label v14s17:
         pause 0.75
 
         scene v14s17_7 
-        with dissolve    
+        with dissolve
 
         pause 0.75
     
     if laurenrs: #placeholder
         scene v14s17_7a # TPP. Same as v14s17_7, Show MC and Lauren kissing
-        with dissolve 
+        with dissolve
 
         pause 0.75   
 
@@ -175,7 +175,7 @@ label v14s17:
             scene v14s17_8a
             with dissolve
 
-            u "Responsible would be an understatement. I've never seen you focus on anything other than your future.."
+            u "Responsible would be an understatement. I've never seen you focus on anything other than your future..."
 
             scene v14s17_8
             with dissolve
@@ -340,7 +340,7 @@ label v14s17:
     u "I mean, damn... Look at you getting in nice and good with the people on the inside."
 
     scene v14s17_10a
-    with dissolve 
+    with dissolve
 
     la "Mhmm, that's more like it. *Chuckles*"
 
@@ -637,7 +637,7 @@ label v14s17:
             u "You're the most loyal person I know, Lauren. That's why I'm asking you, the one person I trust with anything and everything."
 
             if kct == "loyal":
-                call screen kctPopup
+                call screen kct_popup
                 
                 $ v14_lauren_sabotage = True
             
@@ -679,7 +679,7 @@ label v14s17:
                 scene v14s17_10b
                 with dissolve
 
-                u "You say that like it's nothing.., Lauren, that's perfect. Everything will go south without you."
+                u "You say that like it's nothing... Lauren, that's perfect. Everything will go south without you."
 
                 scene v14s17_10h
                 with dissolve
@@ -753,7 +753,7 @@ label v14s17_end:
     scene v14s17_17b
     with dissolve
 
-    la "*Chuckles* Bye.."
+    la "*Chuckles* Bye..."
 
     scene v14s17_17c
     with dissolve

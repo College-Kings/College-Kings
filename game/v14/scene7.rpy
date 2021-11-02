@@ -106,7 +106,7 @@ label v14s07:
     ro "I now invite you all to the bus so that we can get on our way to the airport."
 
     scene v14s07_5 # TPP. show Ms. Rose walking towards the hotel lobby front door with mc walking behind her
-    with dissolve 
+    with dissolve
     pause 0.75
 
     jump v14s08

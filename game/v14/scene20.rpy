@@ -124,7 +124,7 @@ label v14s20:
 
     u "Yeah, they seem to get along surprisingly well, haha."
 
-    if laurenmad:
+    if laurenmad or laurenrs_v11aubrey:
         scene v14s20_3g # FPP Same angle as 3, Autumn with neutral expression, mouth open
         with dissolve
 
@@ -233,7 +233,7 @@ label v14s20:
 
         u "That girl can give anyone a good time, but she's very influential. She knows how to..."
 
-        u "...lure other people to the darkside. *Chuckles* If you know what I mean."
+        u "...lure other people to the dark side. *Chuckles* If you know what I mean."
 
         scene v14s20_3f
         with dissolve

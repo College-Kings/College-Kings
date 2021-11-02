@@ -1119,7 +1119,7 @@ label v4start:
                 u "You have to believe me. I care about Lauren, I'd never do anything to hurt her."
 
                 if kct == "loyal":
-                    call screen kctPopup
+                    call screen kct_popup
 
                     scene s334d # autumn emphatic
                     with dissolve
@@ -1205,7 +1205,7 @@ label v4start:
                 u "You have to believe me. I care about Lauren, I'd never do anything to hurt her."
 
                 if kct == "loyal":
-                    call screen kctPopup
+                    call screen kct_popup
 
                     $ autumnmad = False
                     scene s334d # autumn emphatic

@@ -69,7 +69,7 @@ label v14s15:
 
     u "Hey man, what the hell is going on?"
 
-    scene v14s15_7f  # FPP  Same as v14s15_7d, but mouth open.
+    scene v14s15_7f  # FPP Same as v14s15_7d, but mouth open.
     with dissolve
 
     imre "Isn't it obvious? Lindsey is running for president, dude."

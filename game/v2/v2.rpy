@@ -1207,7 +1207,7 @@ label meet_lauren2:
                 $ laawk = False
 
                 if not v1_kissLauren:
-                    call screen kctPopup
+                    call screen kct_popup
 
                 scene s131 ### Lauren grabbing your hand on the table
                 with dissolve
@@ -3062,7 +3062,7 @@ label v2_nsfwSkipLabel3:
             u "Oh come on, Aubrey. I wanna see."
 
             if kct == "popular":
-                call screen kctPopup
+                call screen kct_popup
             else:
                 au "Sorry but... I'm gonna get dressed again."
 
@@ -3703,7 +3703,7 @@ label v1_caughtContinue:
             u "What are you talking about? You probably just saw my foot."
 
             if kct == "confident":
-                call screen kctPopup
+                call screen kct_popup
 
                 $ caughtpeekingaubreycounter = True
 
@@ -3826,7 +3826,7 @@ label v1_caughtContinue_pen:
             u "What are you talking about? You probably just saw my foot."
 
             if kct == "confident":
-                call screen kctPopup
+                call screen kct_popup
 
                 $ caughtpeekingpenelopecounter = True
 

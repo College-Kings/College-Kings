@@ -303,12 +303,6 @@ label v14s03e:
     ry "So did he. *Laughs*"
 
     menu:
-        "Don't tell Imre":
-            scene v14s03e_12
-            with dissolve
-
-            u "That's cold as hell Ryan, but... he's on his own with this one."
-
         "Tell Imre":
             scene v14s03e_12c # FPP. Same as v14s03e_12, serious expression
             with dissolve
@@ -316,6 +310,12 @@ label v14s03e:
             u "Bro, that's fucked up. What if the guy tries to-"
 
             u "Nah... I gotta stop this from happening, Ryan."
+
+        "Don't tell Imre":
+            scene v14s03e_12
+            with dissolve
+
+            u "That's cold as hell Ryan, but... he's on his own with this one."
 
     scene v14s03e_13 # TPP. Show MC walking away towards Imre's direction, neutral expression, mouth closed 
     with dissolve
@@ -353,7 +353,7 @@ label v14s03e:
     pause 0.75
 
     scene v14s03e_17b # FPP. Same as v14s03s_17, Ryan dodges in a different postion
-    with dissolve 
+    with dissolve
     
     pause 0.75 
 

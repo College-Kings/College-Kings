@@ -6,12 +6,12 @@
 label v14s40:
 # -Scene 40 and 41 are identical except for location
     scene v14s40_1 # TPP. MC walks into his wolves room, tired expression, mouth closed
-    with dissolve    
+    with dissolve
 
     pause 0.75
 
     scene v14s40_2 # TPP. MC plops on his wolves bed after removing his clothes, slight smile, mouth closed
-    with dissolve    
+    with dissolve
 
     u "(Finally, time for some sleep.)"
 
@@ -135,7 +135,7 @@ label v14s40:
                 scene v14s40_4d # FPP. same as v14s40_4a lauren moves her hand from her nipple down below her bellow button and just above her vagina, mouth open
                 with dissolve
 
-                la "I liked it, alot."
+                la "I liked it, a lot."
 
                 scene v14s40_4e # FPP. same as v14s40_4d laurens mouth is closed
                 with dissolve

@@ -798,7 +798,7 @@ label v12_lauren_sex:
                 $ v12_lauren_sex = True
 
                 if (kct == "loyal") and not (v12_lauren_points >= 3):
-                    call screen kctPopup
+                    call screen kct_popup
 
                 label v12_lauren_sex_sg:
                 

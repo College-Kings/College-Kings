@@ -110,7 +110,7 @@ label v14s03c:
     satin "Nice to meet you, [name]. You seem kind of young to be hanging around in a place like this."
 
     scene v14s03c_4f
-    with dissolve 
+    with dissolve
 
     u "Good genes. *Chuckles*"
 
@@ -296,7 +296,7 @@ label v14s03c:
             pause 0.75
 
             scene v14s03c_4l # FPP. Same as v14s03c_4k, Satin holding MC's hand, Satin flirting smile, mouth open.
-            with dissolve 
+            with dissolve
 
             satin "Then follow me. *Chuckles*"
 

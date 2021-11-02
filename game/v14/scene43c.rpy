@@ -34,7 +34,7 @@ label v14s43c:
     with dissolve
 
     menu:
-        "Romantic Scene":
+        "Romantic scene":
             $ v14_PenRomScene = True
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.BRO)
@@ -60,7 +60,6 @@ label v14s43c:
             pe "*Chuckles* Right..."
 
             if penelopeloyal:
-
                 scene v14s43c_1c
                 with dissolve
 
@@ -94,7 +93,7 @@ label v14s43c:
 
             pe "It's settled then, romantic scene it is."
 
-        "Argument Scene":
+        "Argument scene":
             $ v14_PenArgScene = True
             $ add_point(KCT.TROUBLEMAKER)
             $ add_point(KCT.BRO)
@@ -304,7 +303,7 @@ label v14s43c:
 
     u "*British accent* I haven't lied!"
 
-    if penelopeloyal and (chloegf or laurengf):
+    if penelopeloyal and (chloegf or laurenrs):
 
         scene v14s43c_1j #FPP. same as v14s43c_1b Penelope has a slightly confused expression, mouth closed
         with dissolve

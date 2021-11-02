@@ -5,7 +5,7 @@
 
 label v14s08:
     scene v14s08_1 # TPP. mc sees the bus and walks towards it, slight smile, mouth closed
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
@@ -45,7 +45,7 @@ label v14s08:
     menu:
         "Ask her what's wrong":
             scene v14s08_3c
-            with dissolve 
+            with dissolve
 
             u "Hey, what's wrong?"
 
@@ -134,7 +134,7 @@ label v14s08:
             scene v14s08_4d # FPP. same as v14s08_4c amber half smile, mouth open
             with dissolve
 
-            am "*Chuckles* For the first time ever, I think I see you as more than just a cute litte fucktoy."
+            am "*Chuckles* For the first time ever, I think I see you as more than just a cute little fucktoy."
 
             scene v14s08_4c
             with dissolve
