@@ -292,10 +292,7 @@ label v14s03e:
 
     u "What the fuck?!"
 
-    scene v14s03e_12
-    with dissolve
-
-    u "So, you set Imre up? I thought you two were finally getting along."
+    u "So you set Imre up? I thought you two were finally getting along."
 
     scene v14s03e_12a
     with dissolve

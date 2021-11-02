@@ -162,7 +162,7 @@ label v14s09:
                 scene v14s09_5d # FPP. same as v14s09_5a charli slight anger
                 with dissolve
 
-                charli "As a matter of fact, I think I've got it handled [name]."
+                charli "As a matter of fact, I think I've got it handled, [name]."
 
                 scene v14s09_5
                 with dissolve
@@ -177,12 +177,12 @@ label v14s09:
                 scene v14s09_7 # TPP. MC pats Charli on the back extra hard, mc slight smile mouth open, charli slight sad mouth closed
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
                 scene v14s09_7a # TPP. same as v14s09_7 Charli falls forward, slight shock, mouth open
-                with dissolve
+                with hpunch
 
-                pause 0.50
+                pause 0.75
 
                 scene v14s09_5
                 with dissolve
@@ -322,10 +322,10 @@ label v14s09:
 
         u "(Not for much longer...)"
 
-        scene v14s09_6c
-        with dissolve
+        #scene v14s09_6c
+        #with dissolve
 
-        pause 0.75   
+        #pause 0.75
 
     scene v14s09_8b
     with dissolve
@@ -397,12 +397,12 @@ label v14s09:
         scene v14s09_8b
         with dissolve
 
-        ro "Sam."
+        ro "Samantha."
 
         scene v14s09_8d # FPP. same as v14s09_8b Ms. Rose has a concerned expression
         with dissolve
 
-        ro "...Sam? Where's Sam?"
+        ro "...Sam? Where's Samantha?"
 
         scene v14s09_10 # FPP. show amber standing to the left and about 5 meters from Ms. Rose, looking at Ms Rose no expression mouth open, Ms. Rose looking at amber no expression mouth closed
         with dissolve
@@ -492,13 +492,13 @@ label v14s09:
     pause 0.75
 
     scene v14s09_13 # FPP. mc looking to his left and sees riey with her hand up waving at mc slight smile mouth open, 
-    with dissolve
+    with fade
 
-    pause 0.75
+    pause 1.25
 
     scene v14s09_14 # FPP. Mc sits down next to riley and looks at the screen on the headrest of the seat in front of him.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     jump v14s10
