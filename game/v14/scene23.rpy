@@ -417,7 +417,7 @@ label v14s23:
 
             ch "That's what I'm-"
 
-        elif not v14s23_agree:
+        else:
             $ v14_lindsey_popularity -= 1
             $ v14_rw_half_chris_support = True
             scene v14s23_2c
