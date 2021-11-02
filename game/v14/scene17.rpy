@@ -66,7 +66,7 @@ label v14s17:
         u "*Chuckles* I'll always find new ways to-"
 
         scene v14s17_5 # TPP. Show Ms. Rose slapping MC on his ass with her hand, Ms. Rose slight smile, mouth closed, MC, slight surprised expression, mouth closed
-        with dissolve
+        with hpunch
 
         pause 0.75
 
@@ -125,7 +125,9 @@ label v14s17:
         scene v14s17_7a # TPP. Same as v14s17_7, Show MC and Lauren kissing
         with dissolve
 
-        pause 0.75   
+        play sound "sounds/kiss.mp3"
+
+        pause 1.5  
 
         scene v14s17_8 # FPP. Lauren looking at MC, slight smile, mouth open 
         with dissolve
