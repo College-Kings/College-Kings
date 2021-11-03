@@ -255,77 +255,77 @@ label v14s39:
 
         jump v14s42
 
-        if not v14s37_focus_on_us or not kct == "loyal":
+    else:
+        scene v14s39_4
+        with dissolve
+
+        pe "Well, thanks for tonight. I'll see you around?"
+
+        scene v14s39_4h # FPP. Same as v14s39_4, Penelope puts up a fist for a fist bump, slight smile, mouth closed.
+        with dissolve
+
+        u "*Chuckles*"
+
+        scene v14s39_4i # FPP. Same as v14s39_4h, MC giving Penelope a fist bump, Penelope slight smile, mouth open
+        with dissolve
+
+        pe "I'm sorry, that was weird..."
+
+        scene v14s39_4a
+        with dissolve
+
+        u "It's fine, I'm sorry if tonight was... also weird,"
+
+        scene v14s39_4
+        with dissolve
+
+        pe "It's okay. At least you kept your promise, haha. I'm gonna go."
+
+        scene v14s39_4a
+        with dissolve
+
+        u "Okay, be safe."
+
+        if v14s39_id_wait:
             scene v14s39_4
             with dissolve
 
-            pe "Well, thanks for tonight. I'll see you around?"
+            pe "I mean..."
 
-            scene v14s39_4h # FPP. Same as v14s39_4, Penelope puts up a fist for a fist bump, slight smile, mouth closed.
-            with dissolve
-
-            u "*Chuckles*"
-
-            scene v14s39_4i # FPP. Same as v14s39_4h, MC giving Penelope a fist bump, Penelope slight smile, mouth open
-            with dissolve
-
-            pe "I'm sorry, that was weird..."
+            pe "Maybe we can try this again? Maybe with a little more planning or something? *Chuckles*"
 
             scene v14s39_4a
             with dissolve
 
-            u "It's fine, I'm sorry if tonight was... also weird,"
+            u "Yeah, that sounds great. Thank you."
 
             scene v14s39_4
             with dissolve
 
-            pe "It's okay. At least you kept your promise, haha. I'm gonna go."
+            pe "Perfect."
 
-            scene v14s39_4a
+        else:
+            scene v14s39_4
             with dissolve
-
-            u "Okay, be safe."
-
-            if v14s39_id_wait:
-                scene v14s39_4
-                with dissolve
-
-                pe "I mean..."
-
-                pe "Maybe we can try this again? Maybe with a little more planning or something? *Chuckles*"
-
-                scene v14s39_4a
-                with dissolve
-
-                u "Yeah, that sounds great. Thank you."
-
-                scene v14s39_4
-                with dissolve
-
-                pe "Perfect."
-
-            else:
-                scene v14s39_4
-                with dissolve
+    
+            pe "You too."
         
-                pe "You too."
-            
-            scene v14s39_8 # FPP. Show Penelope walking her way down the side walk.
-            with dissolve
+        scene v14s39_8 # FPP. Show Penelope walking her way down the side walk.
+        with dissolve
 
-            pause 0.75
+        pause 0.75
 
-            scene v14s39_9 # TPP. MC walking down the side walk to his room, slight smile, mouth closed.
-            with dissolve
+        scene v14s39_9 # TPP. MC walking down the side walk to his room, slight smile, mouth closed.
+        with dissolve
 
-            u "(*Sighs* That was a rocky night.)"
+        u "(*Sighs* That was a rocky night.)"
 
-            scene v14s39_9
-            with dissolve
+        scene v14s39_9
+        with dissolve
 
-            pause 0.75
+        pause 0.75
 
-            if joinwolves:
-                jump v14s40
-            else:
-                jump v14s41
+        if joinwolves:
+            jump v14s40
+        else:
+            jump v14s41
