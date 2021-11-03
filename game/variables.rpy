@@ -664,6 +664,7 @@ default v14_PenArgScene = False
 default v14_PenelopePartner = False
 default v14_RileyPartner = False
 default sceneList = set() #$ sceneList.add(aubrey)
+default AutumnTrust = False
 
 ###to be looked at:
 #lindseysupport.points ???

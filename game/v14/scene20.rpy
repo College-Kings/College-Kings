@@ -202,8 +202,8 @@ label v14s20:
 
             "It's going great":
                 # -It's going great (Creates AutumnTrust)
-                # NOT SURE WHAT THIS MEANS - I'M GUESSING POINTS
                 $ autumn.points += 1
+                $ AutumnTrust = True
 
                 u "It's going great so far."
 
