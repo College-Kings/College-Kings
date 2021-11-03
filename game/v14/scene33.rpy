@@ -5,10 +5,15 @@
 
 label v14s33:
     if joinwolves:
-        scene v14s33_1 # TPP. Show MC showering, slight smile, mouth closed
-        with dissolve
+        scene v14s12_5
+        with fade
+        
+        pause 0.75
 
-        pause 0.5
+        scene v14s33_1 # TPP. Show MC showering, slight smile, mouth closed
+        with fade
+
+        pause 0.75
 
         scene v14s33_2 # TPP. Show MC looking at his phone while sitting on the bed in his Wolves Room, slight smile, mouth closed.
         with dissolve
@@ -222,13 +227,20 @@ label v14s33:
                         jump v14s35
 
     else:
+        scene v14s12_6
+        with fade
+        
+        pause 0.75
+    
         scene v14s33_1 # TPP. Show MC showering, slight smile, mouth closed
-        with dissolve
+        with fade
 
-        pause 0.5
+        pause 0.75
 
         scene v14s33_4 # TPP. Show MC looking at his phone while sitting on the bed in his Apes room, slight smile, mouth closed.
         with dissolve
+        
+        pause 0.75
 
         if not laurenrs:
             scene v14s33_4a # TPP. Same as v14s33_4, Mc in a different pose looking at his phone in his Apes room, slight smile, mouth closed.
@@ -241,15 +253,14 @@ label v14s33:
 
             else:
                 jump v14s35
-        else:
-            pause 0.75
 
+        else:
             play sound "sounds/call.mp3"
 
             scene v14s33_2a
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             play sound "sounds/answercall.mp3"
 

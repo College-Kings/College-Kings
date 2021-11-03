@@ -706,9 +706,9 @@ label v14s32:
     scene v14s32_5f # TPP. Show Imre leaving towards the gym door.
     with dissolve
 
-    if v13_imre_disloyal:
-        pause 0.75
+    pause 0.75
 
+    if v13_imre_disloyal:
         scene v14s32_5g # TPP. Same as v14s32_5e, Imre looks over his shoulder, Imre neutral face, mouth open.
         with dissolve
 
@@ -749,4 +749,4 @@ label v14s32:
 
     pause 0.75
 
-    jump v14s33 
+    jump v14s33
