@@ -1138,7 +1138,7 @@ label v14s36:
 
             "Don't kiss her":
                 $ jennyawkward = True
-                if chloegf or LaurenGF or penelopers:
+                if chloegf or laurenrs or penelopers:
                     $ add_point(KCT.BOYFRIEND)
                 else:
                     $ add_point(KCT.TROUBLEMAKER)
