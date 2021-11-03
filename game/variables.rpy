@@ -645,6 +645,7 @@ default v14s31b_smoke_weed_with_aubrey = False # s31b smoking weed with Aubrey a
 default v14s37_focus_on_us = False # Tell Penelope to focus on them during the date.
 default v14s39_id_wait = False # Tell Penelope you'd wait till they got home
 default v14s46a_love_lauren_more = False # MC love Lauren more because of her sex experimenting on MC.
+default v14s50_listen_to_aubrey_lindsey = False # MC choses to listen to Lindsey and Aubrey's conversation. 
 default v14_talk_to_chris = False
 default ElijahFriend = False
 default AmberLoyal = False
