@@ -360,11 +360,11 @@ label v14s43b:
                 $ chloe.messenger.addReply("I'd never do that.")
 
                 label v14s43Chloe_PhoneContinue1:
-                        if chloe.messenger.replies:
-                            call screen phone
-                        if chloe.messenger.replies:
-                            "(I should reply to Chloe.)"
-                            jump v14s43Chloe_PhoneContinue1
+                    if chloe.messenger.replies:
+                        call screen phone
+                    if chloe.messenger.replies:
+                        "(I should reply to Chloe.)"
+                        jump v14s43Chloe_PhoneContinue1
 
                 scene v14s43b_13
                 with dissolve
@@ -578,11 +578,11 @@ label v14s43b:
                 $ chloe.messenger.addReply("I'd never do that.")
 
                 label v14s43Chloe_PhoneContinue2:
-                        if chloe.messenger.replies:
-                            call screen phone
-                        if chloe.messenger.replies:
-                            "(I should reply to Chloe.)"
-                            jump v14s43Chloe_PhoneContinue2
+                    if chloe.messenger.replies:
+                        call screen phone
+                    if chloe.messenger.replies:
+                        "(I should reply to Chloe.)"
+                        jump v14s43Chloe_PhoneContinue2
 
                 scene v14s43b_13
                 with dissolve
