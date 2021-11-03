@@ -589,14 +589,16 @@ label v14s25:
             scene v14s25_13d # FPP. Same as v14s25_13c, MC looking at Amber's empty room.
             with dissolve
 
-            pause 0.75
+            pause 0.5
 
             play sound "sounds/flush.mp3"
+            
+            pause 0.5
             
             scene v14s25_13d
             with dissolve
 
-            pause 0.75
+            pause 1.5
 
             scene v14s25_14 # FPP. Amber walking back in the room towards MC, Amber slight smile, mouth closed
             with dissolve
@@ -739,17 +741,17 @@ label v14s25:
             scene v14s25_15 # FPP. Amber walking out of the room.
             with dissolve
 
-            pause 
+            pause 1 
 
             scene v14s25_16 # TPP. Show MC in his boxers.
             with fade
 
-            pause 
+            pause 1
 
             scene v14s25_17 # TPP. Show MC laying in Amber's Bed.
             with fade
 
-            pause
+            pause 1
 
             scene v14s25_18 # TPP. (MC off Camera) Close up of Amber standing at the entrance of her room, Amber topless in a flirty pose, Wearing nothing but black panties, Amber Slight Smile, Mouth closed.
             with dissolve
@@ -819,6 +821,8 @@ label v14s25:
 
                     scene v14s25_17f # TPP. Show MC and Amber with their backs against each other sleeping.
                     with dissolve
+            
+            pause 0.75
             
             jump v14s25b
 
@@ -1050,5 +1054,7 @@ label v14s25:
 
                             scene v14s25_17f
                             with dissolve
+                    
+                    pause 0.75
                     
                     jump v14s25b

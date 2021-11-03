@@ -16,6 +16,7 @@ label v14s29:
 
     u "(And I know when my hotline bling!) *Chuckles*"
 
+    stop sound
     play sound "sounds/answercall.mp3"
 
     scene v14s29_2a # TPP. Same as v14s29_2, Show MC holding the phone to his ear, slight smile, mouth open.
@@ -32,7 +33,6 @@ label v14s29:
     with dissolve
 
     if v14_full_chris_support or v14_pw_half_chris_support or v14_rw_half_chris_support or v14_low_chris_support:
-
         u "Sorry man, I'm doing the Wolves photoshoot with Chris. You aren't?"
 
         scene v14s29_3
@@ -56,13 +56,14 @@ label v14s29:
         with dissolve
 
         if v14_full_chris_support or v14_rw_half_chris_support:
+            pause 0.75
             jump v14s30a
 
         elif v14_pw_half_chris_support or v14_low_chris_support:
+            pause 0.75
             jump v14s30
 
     elif not v14_talk_to_chris: #Placeholder for helping Chloe but didn't talk to Chris.
-
         u "Okay sure."
 
         scene v14s29_3
@@ -85,10 +86,11 @@ label v14s29:
         scene v14s29_5 # TPP. Show MC standing on the sidewalk, slight smile, mouth closed.
         with dissolve
 
+        pause 0.75
+
         jump v14s31
 
     elif not v14_help_chloe:
-
         u "Just like that, huh?"
 
         scene v14s29_3
@@ -103,5 +105,7 @@ label v14s29:
 
         scene v14s29_6 # TPP. Show MC starting to walk towards the gym, slight smile, mouth closed.
         with dissolve
+
+        pause 0.75
 
         jump v14s32
