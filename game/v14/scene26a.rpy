@@ -273,7 +273,7 @@ label v14s26a:
         scene v14s26_10b # Ignore as reused from another scene
         with dissolve
 
-        am "I was just scared ‘cause when I woke up you weren't here."
+        am "I was just scared 'cause when I woke up you weren't here."
 
         scene v14s26_10c # Ignore as reused from another scene
         with dissolve

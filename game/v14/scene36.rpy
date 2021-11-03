@@ -399,12 +399,12 @@ label v14s36:
     scene v14s36_4g
     with dissolve
 
-    jen "‘Cause it's better that it was you rather than some creep, haha. At least it wasn't Imre or... What's his face..."
+    jen "'Cause it's better that it was you rather than some creep, haha. At least it wasn't Imre or... What's his face..."
 
     scene v14s36_4h
     with dissolve
 
-    u "Who's ‘What's his face'? *Chuckles*"
+    u "Who's \"What's his face\"? *Chuckles*"
 
     scene v14s36_4f
     with dissolve

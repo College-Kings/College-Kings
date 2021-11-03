@@ -137,7 +137,7 @@ label v14s45a:
         scene v14s45a_1c
         with dissolve
 
-        am "*Chuckles* I'm now the ‘Assistant to the Manager'."
+        am "*Chuckles* I'm now the \"Assistant to the Manager\"."
 
         scene v14s45a_1d
         with dissolve
@@ -218,7 +218,7 @@ label v14s45a:
     scene v14s45a_3 # TPP. Camera view from the park infront of them. MC and Amber looking at the Camera. Amber laying her head on MC's shoulder.
     with dissolve
 
-# -Note for music; This is where the slow version of ‘Blanket' by Van Stee comes into play, see Mozzart for questions-
+# -Note for music; This is where the slow version of "Blanket" by Van Stee comes into play, see Mozzart for questions-
 # -Waiting on song to be ready. Song should start playing here.-
 
     pause 0.75

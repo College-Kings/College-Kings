@@ -341,7 +341,7 @@ label v14s26:
         scene v14s26_10b
         with dissolve
 
-        am "I was just scared ‘cause when I woke up you weren't here."
+        am "I was just scared 'cause when I woke up you weren't here."
 
         scene v14s26_10c
         with dissolve
