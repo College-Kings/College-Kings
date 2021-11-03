@@ -243,16 +243,16 @@ label v14s19a:
     scene v14s19a_6 # FPP Chloe walking off out of the library
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v14s19a_7 # TPP Show MC leaving the library
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v14s19a_8 # TPP Show MC arriving in the school halls
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     jump v14s20 # -Transition to Scene 20-
