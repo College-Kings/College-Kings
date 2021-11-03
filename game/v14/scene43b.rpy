@@ -330,14 +330,6 @@ label v14s43b:
                 scene v14s43b_13 # FPP. MC looks down at his phone in his hand and checks his phone, Only show Mc's hand and lap in the render, no other characters present
                 with dissolve
 
-                $ chloe.newMessage("GRAYSON IS SUCH AN ASSHOLE")
-                $ chloe.newMessage("FUCK him, and FUCK THE APES!!!!")
-                $ chloe.newMessage("UGH! I'm going to turn this around. It won't hurt my campaign even a little bit, I'll make sure of it.")
-
-                $ chloe.addReply("I'm so sorry that this is happening. I don't even know what to say.")
-                $ chloe.newMessage("I know, I know... I'm just venting. And I'm really thankful that you didn't post anything.")
-                $ chloe.addReply("I'd never do that.")
-
                 # Kiwi Post: v14kw43b - Sexy pic of Chloe is on Kiwii from Ryan, Grayson and Cameron's accounts- Private sexy pic of chloe same photo as in scene 41a
 
                 $ v14s43b_kiwiiPost1 = KiwiiPost("Grayson", "v14/v14kw43b.webp", "#Vote4Chloe is a #Vote4Whore", mentions="Chloe", numberLikes=255)
@@ -359,10 +351,25 @@ label v14s43b:
                 $ v14s43b_kiwiiPost3.newComment("Sebastian", "This is too far for just \"frat shit\".", queue=False)
                 $ v14s43b_kiwiiPost3.newComment("Aubrey", "Pathetic.", queue=False)
 
+                $ chloe.messenger.newMessage("GRAYSON IS SUCH AN ASSHOLE")
+                $ chloe.messenger.newMessage("FUCK him, and FUCK THE APES!!!!")
+                $ chloe.messenger.newMessage("UGH! I'm going to turn this around. It won't hurt my campaign even a little bit, I'll make sure of it.")
+
+                $ chloe.messenger.addReply("I'm so sorry that this is happening. I don't even know what to say.")
+                $ chloe.messenger.newMessage("I know, I know... I'm just venting. And I'm really thankful that you didn't post anything.")
+                $ chloe.messenger.addReply("I'd never do that.")
+
+                label v14s43Chloe_PhoneContinue1:
+                        if chloe.messenger.replies:
+                            call screen phone
+                        if chloe.messenger.replies:
+                            "(I should reply to Chloe.)"
+                            jump v14s43Chloe_PhoneContinue1
+
                 scene v14s43b_13
                 with dissolve
 
-                u "(Fuck... I'm glad I didn't go through with posting that shit.”)"
+                u "(Fuck... I'm glad I didn't go through with posting that shit.)"
 
                 scene v14s43b_12
                 with dissolve
@@ -537,14 +544,6 @@ label v14s43b:
                 scene v14s43b_13
                 with dissolve
 
-                $ chloe.newMessage("GRAYSON IS SUCH AN ASSHOLE")
-                $ chloe.newMessage("FUCK HIM, AND FUCK THE APES!!!!")
-                $ chloe.newMessage("UGH! I'm going to turn this around. It won't hurt my campaign even a little bit, I'll make sure of it.")
-
-                $ chloe.addReply("I'm so sorry that this is happening. I don't even know what to say.")
-                $ chloe.newMessage("I know, I know... I'm just venting. And I'm really thankful that you didn't post anything.")
-                $ chloe.addReply("I'd never do that.")
-
                 # Kiwi Post: v14kw43b - Sexy pic of Chloe is on Kiwii from Ryan, Grayson and Cameron's accounts- Private sexy pic of chloe same photo as in scene 41a
 
                 $ v14s43b_kiwiiPost4 = KiwiiPost("Grayson", "v14/v14kw43b.webp", "#Vote4Chloe is a #Vote4Whore", mentions="Chloe", numberLikes=255)
@@ -570,10 +569,25 @@ label v14s43b:
                     scene v14kw43b
                     with dissolve
 
+                $ chloe.messenger.newMessage("GRAYSON IS SUCH AN ASSHOLE")
+                $ chloe.messenger.newMessage("FUCK HIM, AND FUCK THE APES!!!!")
+                $ chloe.messenger.newMessage("UGH! I'm going to turn this around. It won't hurt my campaign even a little bit, I'll make sure of it.")
+
+                $ chloe.messenger.addReply("I'm so sorry that this is happening. I don't even know what to say.")
+                $ chloe.messenger.newMessage("I know, I know... I'm just venting. And I'm really thankful that you didn't post anything.")
+                $ chloe.messenger.addReply("I'd never do that.")
+
+                label v14s43Chloe_PhoneContinue2:
+                        if chloe.messenger.replies:
+                            call screen phone
+                        if chloe.messenger.replies:
+                            "(I should reply to Chloe.)"
+                            jump v14s43Chloe_PhoneContinue2
+
                 scene v14s43b_13
                 with dissolve
 
-                u "(Fuck... I'm glad I didn't go through with posting that shit.”)"
+                u "(Fuck... I'm glad I didn't go through with posting that shit.)"
 
                 scene v14s43b_20a
                 with dissolve
