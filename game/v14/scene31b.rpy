@@ -272,7 +272,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
     scene v14s31b_12a # TPP. Chloe and Aubey, smiling mouth closed, meet each other half way and hug each other.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v14s31b_12b # TPP. Aubrey, smiling, mouth closed, walks past MC, neutral, mouth closed, and through the dining room entrance.
     with dissolve
@@ -339,7 +339,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
     scene v14s31b_14d # TPP. Aubrey, smiling, mouth closed, sits in the chair opposite Chloe and next to Grayson.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v14s31b_15  # FPP. Aubrey, smiling, mouth open, looking at Chloe (off Camera).
     with dissolve
@@ -658,7 +658,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
     scene v14s31b_18h # FPP. Chloe, nervous, drinks her beer.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v14s31b_17c
     with dissolve
@@ -830,7 +830,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
                 scene v14s31b_23a # TPP. MC, slight smile, eyelids slightly closed (he's stoned), holding the vaporizer blowing out smoke.
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v14s31b_19e
                 with dissolve
@@ -840,7 +840,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
                 scene v14s31b_19i # FPP. Aubrey, slight smile, eyelids slightly closed (she's stoned), holding the vaporizer, blowing out smoke.
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v14s31b_23b # TPP. MC, smiling, mouth open, laughing.
                 with dissolve
@@ -872,7 +872,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
                 scene v14s31b_23d # TPP. Same as v14s31b_23c, but MC facing away from the camera.
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v14s31b_19e
                 with dissolve
@@ -929,7 +929,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         scene v14s31b_21f # FPP. Same as v14s31b_21e, but Grayson, smiling, mouth closed, sitting in his bean bag chair, Chloe standing in front of Grayson.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v14s31b_24  # FPP. Chloe, looking at slight downward angle (she's standing, but looking at someone sitting),neutral, mouth open.
         with dissolve
@@ -1061,7 +1061,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
             play sound "sounds/kiss.mp3"
 
-            pause 0.75        
+            pause 0.75
         
         scene v14s31b_28a
         with dissolve
@@ -1077,7 +1077,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         scene v14s31b_29a # TPP. Chloe hugs MC 
         with dissolve
         
-        pause 0.75 
+        pause 0.75
 
         scene v14s31b_28a
         with dissolve
@@ -1332,7 +1332,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         scene v14s31b_30b # TPP. Same as v14s31b_30, but MC standing centered in front of house on sidewalk, mouth closed, confused, watching Chloe, angry, mouth closed stomp away to the left.
         with dissolve
 
-        pause 0.75            
+        pause 0.75
         
         scene v14s31b_36 # FPP. Chloe, back/butt to camera, stomping down the sidewalk, away from MC (Ape house would be on the right but off camera). 
         with dissolve

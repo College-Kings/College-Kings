@@ -352,7 +352,7 @@ label v14s03e:
     scene v14s03e_17b # FPP. Same as v14s03s_17, Ryan dodges in a different postion
     with dissolve
     
-    pause 0.75 
+    pause 0.75
 
     scene v14s03e_18 # FPP. Imre looking in Ryans direction, annoyed expression, mouth open
     with dissolve

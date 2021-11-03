@@ -7,7 +7,7 @@ label v14s09:
     scene v14s09_1 # TPP. show mc walking through airport, pulling his luggae, slight smile, mouth closed
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v14s09_1a # TPP. same as v14s09_1 mc sees and looks at Mr. Lee and Ms. Rose looking over a checklist and hears them from a distance
     with dissolve

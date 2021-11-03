@@ -80,7 +80,7 @@ label v14s39:
             scene v14s39_1a
             with dissolve
 
-            u "Haha! I did not say it like that, I just meant"
+            u "Haha! I did not say it like that, I just meant..."
 
             scene v14s39_2 # FPP. MC and Penelope further up the sidewalk, change the background scenery to make it look like they are moving as they talk, Penelope slight smile, mouth closed.
             with dissolve
@@ -153,7 +153,7 @@ label v14s39:
     scene v14s39_3 # TPP. Show MC and Penelope stopping at a cross in the road.
     with dissolve
 
-    pause 
+    pause 0.75
 
     scene v14s39_4 # FPP. MC and Penelope at the Cross in the road, MC looking at Penelope, Penelope looking at MC, Penelope slight smile, mouth open.
     with dissolve
@@ -243,7 +243,7 @@ label v14s39:
         scene v14s39_6 # TPP. Show Penelope and MC kissing.
         with dissolve
 
-        pause 
+        pause 0.75
 
         scene v14s39_4e
         with dissolve

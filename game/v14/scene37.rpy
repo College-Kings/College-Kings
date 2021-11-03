@@ -470,7 +470,7 @@ label v14s37:
             scene v14s37_10c
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v14s37_10j # FPP. Same as v14s37_10i, MC holding Penelope's hands across the table, Penelope slight sad face, mouth closed.
             with dissolve

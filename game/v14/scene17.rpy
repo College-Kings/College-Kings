@@ -273,7 +273,7 @@ label v14s17:
     scene v14s17_9a # TPP. Same as v14s17_9, MC in the proccess of turning his page in his textbook, Lauren now looking at some note paper
     with dissolve
 
-    pause 0.75 
+    pause 0.75
     
     scene v14s17_10 # FPP. MC looking at Lauren, Lauren looking at her notes, slight smile, mouth slightly open
     with dissolve
