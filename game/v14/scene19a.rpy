@@ -146,6 +146,7 @@ label v14s19a:
 
     if not v14_help_lindsey: # -If don't help Lindsey
         $ chloe.points += 1
+        $ v14_talk_to_chris = True
 
         scene v14s19a_1g # FPP Same as 1f, Chloe's mouth closed, she is biting her lower lip slightly
         with dissolve
