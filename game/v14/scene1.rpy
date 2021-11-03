@@ -3,7 +3,7 @@
 # Characters: MC (Outfit: 3), AUBREY (Outfit: 6), RILEY (Outfit: 6)
 # Time: Night
 
-label v14start:
+label v14_start:
     if aubreyrs and rileyrs:
         $ v13_threesomeending = True
         jump v14s01
