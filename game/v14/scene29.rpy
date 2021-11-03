@@ -83,7 +83,8 @@ label v14s29:
 
         jump v14s32
         
-    elif not v14_talk_to_chris: #Placeholder for helping Chloe but didn't talk to Chris.
+    #elif not v14_talk_to_chris: #Placeholder for helping Chloe but didn't talk to Chris.
+    else:
         u "Okay sure."
 
         scene v14s29_3
