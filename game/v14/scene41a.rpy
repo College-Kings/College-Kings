@@ -8,7 +8,7 @@ label v14s41a:
     scene v14s41a_1 # TPP. Show mc waking up in bed shocked expression, mouth open
     with dissolve
 
-    gr "[name]! GET DOWN HERE!"
+    gr "[name!u]! GET DOWN HERE!"
 
     scene v14s41a_1a # TPP. same as v14s41a_1 mc is sitting on the side of his bed, slightly mad, mouth closed
     with dissolve
