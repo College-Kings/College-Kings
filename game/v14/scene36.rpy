@@ -966,7 +966,7 @@ label v14s36:
                 with dissolve
                 pause
 
-                jen "*Moans* Ohhh, fuck [name]! *Panting* Fuck me, yes!"
+                jen "*Moans* Ohhh, fuck, [name]! *Panting* Fuck me, yes!"
 
                 scene v14jencg2f # Ignore as anim
                 with dissolve
@@ -1119,7 +1119,7 @@ label v14s36:
                 scene v14s36_11
                 with dissolve
 
-                jen "*Chuckles* Have a good night [name]."
+                jen "*Chuckles* Have a good night, [name]."
 
                 scene v14s36_11a
                 with dissolve

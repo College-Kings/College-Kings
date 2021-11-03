@@ -6,10 +6,9 @@
 label v14s12:
     scene v14s12_1 # TPP. MC walking down the sidewalk back to San Vallejo, slight smile, mouth closed. 
     with dissolve
+    play sound "sounds/call.mp3"
 
     pause 0.75
-
-    play sound "sounds/call.mp3"
 
     scene v14s12_2 # TPP. MC standing still further down the side walk. Reaching for his pocket, slight smile, mouth closed.
     with dissolve
@@ -21,9 +20,11 @@ label v14s12:
     
     pause 0.75
 
+    stop sound
+    play sound "sounds/rejectcall.mp3"
+
     scene v14s12_2b # TPP. Same as v14s12_2b, MC holding phone to his ear, slight smile, mouth open.
     with dissolve
-    stop sound
 
     u "Hello?"
 

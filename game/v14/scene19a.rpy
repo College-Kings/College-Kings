@@ -144,7 +144,7 @@ label v14s19a:
 
     cl "So, do you think you can talk to Chris about this? Today?"
 
-    if not v13_help_lindsey: # -If don't help Lindsey
+    if not v14_help_lindsey: # -If don't help Lindsey
         $ chloe.points += 1
 
         scene v14s19a_1g # FPP Same as 1f, Chloe's mouth closed, she is biting her lower lip slightly

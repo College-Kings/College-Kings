@@ -17,7 +17,7 @@ label v14s13:
     scene v14s13_3 # TPP. Show MC looking at his desk, slight smile, mouth closed, Sebastian opening the door behind him, shirtless, slight smile, mouth closed
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v14s13_4 # FPP. Sebastian looking at MC, sitting on MC's bed, slight smile, mouth open
     with dissolve

@@ -15,21 +15,21 @@ label v14s10_continuation:
     scene v14s10_2 # TPP. Show MC and Riley sitting next to each other, Riley asleep on MC's shoulder, MC smiling, both mouths closed
     with dissolve
 
-    pause 1
+    pause 1.5
 
     scene v14s10_3 # TPP. Show Lauren and Amber sitting next to each other, both laughing
     with dissolve
 
-    pause 1
+    pause 1.5
 
     scene v14s10_4 # TPP. Show Ms. Rose sitting next to Mr. Lee, both slight smiles, Mr. Lee mouth open, Ms. Rose mouth closed
     with dissolve
 
-    pause 1
+    pause 1.5
 
     scene v14s10_5 # TPP. Show the plane landing
     with Fade(1,0.5,1)
 
-    pause 1
+    pause 1.5
 
     jump v14s11

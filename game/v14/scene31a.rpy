@@ -49,47 +49,47 @@ label v14s31a:
     scene v14s31a_4 # TPP Show MC on the ground on his chest in a lower pushup position
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s31a_4a # Same angle as 4, MC arms extended in upper pushup position # up 1
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s31a_4
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s31a_4a # up 2
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s31a_4
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s31a_4a # up 3
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s31a_4
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s31a_4a # up 4
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s31a_4
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     # jumps to his feet at 5
     scene v14s31a_4b # TPP Same angle as 4, show MC jumping to his feet between his hands, which are flat on the ground
@@ -106,32 +106,32 @@ label v14s31a:
     scene v14s31a_4c # TPP Same angle as 4, MC laying on the ground in lower situp position, knees bent, feet flat, arms over chest
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s31a_4d # TPP Same angle as 4, MC in upper situp position, arms crossed over chest, elbows touching knees # up 1
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s31a_4c
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s31a_4d # up 2
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s31a_4c
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s31a_4d # up 3
     with dissolve
 
-    pause 0.25
+    pause 0.75
 
     scene v14s31a_4e # TPP Same angle as 4, MC getting up from the ground to his feet
     with dissolve
@@ -161,7 +161,7 @@ label v14s31a:
     scene v14s31a_3d
     with dissolve
 
-    ca "I'm pretty slow [name], but I'm not stupid. You've never come to workout with me before."
+    ca "I'm pretty slow, [name], but I'm not stupid. You've never come to workout with me before."
 
     if joinwolves: # -If Wolves (extra dialog)
         scene v14s31a_3f # FPP Same angle as 3, Cameron looks annoyed, mouth open

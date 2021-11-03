@@ -9,7 +9,7 @@ label v14s46a:
 
     pause 0.75
 
-    scene v14s46a_1a    # FPP. Lauren, excited, smiling, door open , mouth open.
+    scene v14s46a_1a    # FPP. Lauren, excited, smiling, door open, mouth open.
     with dissolve
 
     la "Hi."
@@ -27,7 +27,7 @@ label v14s46a:
     scene v14s46a_2    # TPP. Lauren leading MC into her bedroom, both smiling, mouths closed.
     with dissolve
     
-    pause 0.75 
+    pause 0.75
 
     scene v14s46a_3    # TPP. MC and Lauren, both smiling, standing in Lauren's room, next to her bed.
     with dissolve
@@ -255,7 +255,7 @@ label v14s46a:
         scene v14s46a_9b  # TPP. Same as v14s46a_9, but MC looking right (as if searching for someone).
         with dissolve
 
-        pause 0.75 
+        pause 0.75
         
         scene v14s46a_10   # FPP. DREAM GIRL, smiling, mouth closed ( [random girl] Long blonde hair, blue eyes, tan, smoking hot body, and sexy bikin) lays on a towel on her stomach in the beach sand with a bottle of sun tan lotion next to her.
         with dissolve
@@ -307,7 +307,7 @@ label v14s46a:
         scene v14s46a_16b  # FPP. Same as v14s46a_16a, but nipples are fully erect and hard.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v14s46a_17   # FPP. Close up of Dream Girl's hand feeling MC's dick that is bulging in his swim trunks.        
         with dissolve
@@ -528,7 +528,7 @@ label v14s46a:
         scene v14s46a_24   # TPP. MC, smiling, mouth closed, walking BAREFOOT (normal clothes) through a green grassy field, with a bright sunny sky above him.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v14s46a_25   # FPP. MC looking out in the distance of the green grassy field, watching a horse trotting towards him.
         with dissolve
@@ -578,7 +578,7 @@ label v14s46a:
         scene v14s46a_29   # TPP. MC mouth open, shocked awake, standing in the grassy field with his hands out trying to prevent the horse from nudging his critch with its nose.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v14s46a_30   # TPP. MC, expression: having a bad dream, hands out protecting his crotch, eyes closed laying in Lauren's bed in Lauren's room.
         with dissolve

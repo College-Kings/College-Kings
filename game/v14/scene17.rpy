@@ -66,7 +66,7 @@ label v14s17:
         u "*Chuckles* I'll always find new ways to-"
 
         scene v14s17_5 # TPP. Show Ms. Rose slapping MC on his ass with her hand, Ms. Rose slight smile, mouth closed, MC, slight surprised expression, mouth closed
-        with dissolve
+        with hpunch
 
         pause 0.75
 
@@ -125,7 +125,9 @@ label v14s17:
         scene v14s17_7a # TPP. Same as v14s17_7, Show MC and Lauren kissing
         with dissolve
 
-        pause 0.75   
+        play sound "sounds/kiss.mp3"
+
+        pause 1.5  
 
         scene v14s17_8 # FPP. Lauren looking at MC, slight smile, mouth open 
         with dissolve
@@ -158,7 +160,7 @@ label v14s17:
             scene v14s17_8c # FPP. Same as v14s17_8, slight laughing expression
             with dissolve
 
-            la "*Laughs* You're not funny [name]."
+            la "*Laughs* You're not funny, [name]."
 
             scene v14s17_8a
             with dissolve
@@ -199,7 +201,10 @@ label v14s17:
 
             u "*Chuckles*"
 
-    if laurenrs_v11aubrey: #placeholder
+    if laurenrs_v11aubrey and (laurenrs or not v11_aubrey_sex): #correction for saves where this variable was defaulting to True - which can't be the case if v11_aubreysex is False, or if laurenrs is still True
+        $ laurenrs_v11aubrey = False
+
+    if laurenrs_v11aubrey or laurenmad: #placeholder
         $ laurenmad = True
         scene v14s17_8d # FPP. Same as v14s17_8, neutral expression
         with dissolve
@@ -229,7 +234,7 @@ label v14s17:
         scene v14s17_8g # FPP. Same as v14s17_8f, different posture 
         with dissolve
 
-        la "When you mess up [name], you mess up in such horrible ways."
+        la "When you mess up, [name], you mess up in such horrible ways."
 
         scene v14s17_8e
         with dissolve
@@ -268,7 +273,7 @@ label v14s17:
     scene v14s17_9a # TPP. Same as v14s17_9, MC in the proccess of turning his page in his textbook, Lauren now looking at some note paper
     with dissolve
 
-    pause 0.75 
+    pause 0.75
     
     scene v14s17_10 # FPP. MC looking at Lauren, Lauren looking at her notes, slight smile, mouth slightly open
     with dissolve
@@ -352,7 +357,7 @@ label v14s17:
     scene v14s17_11 # FPP. MC looks at Ryan who is sound asleep with his head lying on his desk, Ryan has saliva dripping out of his mouth
     with dissolve
 
-    pause 0.75
+    pause 1.5
 
     scene v14s17_10d
     with dissolve
@@ -367,7 +372,7 @@ label v14s17:
     scene v14s17_10a
     with dissolve
 
-    la "Lindsey is really ramping up this campaign of hers and she decided to ask for some help from a very serious influence."
+    la "Lindsey is really ramping up this campaign of hers and she decided to ask for some help from a very serious influencer."
 
     scene v14s17_12 # TPP. Show MC from Laurens perspective, MC looking to the right of him, serious expression, mouth closed
     with dissolve
@@ -557,191 +562,197 @@ label v14s17:
 
             u "(Unless...)"
 
-    menu:
-        "Ask Lauren to sabotage Lindsey":
-            scene v14s17_10b
-            with dissolve
-            
-            u "(That would be very beneficial for Chloe's campaign...)"
+            menu:
+                "Ask Lauren to sabotage Lindsey":
+                    scene v14s17_10b
+                    with dissolve
+                    
+                    u "(That would be very beneficial for Chloe's campaign...)"
 
-            scene v14s17_10e
-            with dissolve
-
-            u "Unless..."
-
-            scene v14s17_10h
-            with dissolve
-
-            la "Hm?"
-
-            scene v14s17_13 # TPP. Show MC whispering into Lauren's ear, slight smile, mouth open, Lauren, slight smile, mouth closed
-            with dissolve
-
-            u "*Whispers* Do you think you could... \"sabotage\" Lindsey's bake sale?"
-
-            scene v14s17_14 # TPP. Show MC from Laurens perspective, MC with one finger over his mouth, shushing expression, slight smile, mouth slightly open
-            with dissolve
-
-            pause 0.75
-
-            scene v14s17_13a # TPP. Same as v14s17_13, Lauren now whispering back into MCs ear, Lauren, mouth open, MC, mouth closed
-            with dissolve
-
-            la "*Whisper* What?! Are you crazy?"
-
-            scene v14s17_10b
-            with dissolve
-
-            u "Probably a little, yeah."
-
-            scene v14s17_13a
-            with dissolve
-
-            la "*Whispers* Shhh! Why? You just said not to get involved."
-
-            scene v14s17_13
-            with dissolve
-
-            u "*Whispers* Truth is, I don't want her to win."
-
-            u "*Whispers* It's Chloe's last year and if I can keep Lindsey from taking over, that's what I'll do. She doesn't need to be president."
-
-            scene v14s17_13a
-            with dissolve
-
-            la "*Whispers* And you want me to help you do that?!"
-
-            scene v14s17_13
-            with dissolve
-
-            u "*Whispers* Only you can! You have a perfect opportunity."
-
-            scene v14s17_13a
-            with dissolve
-
-            la "*Whispers* [name]! This is something I'd never do for anyone, you know that."
-
-            scene v14s17_13
-            with dissolve
-
-            u "*Whispers* I know, because you're loyal to those who respect you and want things to be exactly the way they're supposed to be."
-
-            scene v14s17_10h
-            with dissolve
-
-            la "Right..."
-
-            scene v14s17_10e
-            with dissolve
-
-            u "You're the most loyal person I know, Lauren. That's why I'm asking you, the one person I trust with anything and everything."
-
-            if kct == "loyal":
-                call screen kct_popup
-                
-                $ v14_lauren_sabotage = True
-            
-                scene v14s17_10a
-                with dissolve
-
-                la "I guess you're that one person for me too. It must feel like Lindsey is crossing the line by running against Chloe, no?"
-
-                scene v14s17_10e
-                with dissolve
-
-                u "Yeah, it does. She did go behind her friend's back just to do all of this."
-
-                scene v14s17_10h
-                with dissolve
-
-                la "You really believe this is really the right thing to do?"
-
-                scene v14s17_10b
-                with dissolve
-
-                u "I do."
-
-                scene v14s17_15 # TPP. Show MC looking at Lauren, slight smile, mouth closed, Lauren looking at MC intently, mouth closed  
-                with dissolve
-
-                pause 0.75
-
-                scene v14s17_10i # FPP. Same as v14s17_10a, Lauren looking to the side, neutral expresssion, mouth open
-                with dissolve
-
-                la "*Sighs* Look..."
-
-                scene v14s17_13a
-                with dissolve
-
-                la "*Whispers* All I'm willing to do is tell her that I'll help her and then... not show up."
-
-                scene v14s17_10b
-                with dissolve
-
-                u "You say that like it's nothing... Lauren, that's perfect. Everything will go south without you."
-
-                scene v14s17_10h
-                with dissolve
-
-                la "Okay, yeah I get it. Just don't bring it up again, okay?"
-
-                scene v14s17_10g
-                with dissolve
-
-                u "My lips are sealed."
-
-                scene v14s17_12b # TPP. Same as v14s17_12, MC looking at Lauren, pretending that he is zipping his lips, slight smile, mouth closed
-                with dissolve
-
-                pause 0.75
-                
-                if laurenrs:
-                    scene v14s17_16 # TPP. Show MC, neutral expression, mouth closed, Lauren beside and looking at MC, Lauren puts both her hands together, begging expression, mouth open
+                    scene v14s17_10e
                     with dissolve
 
-                    la "With a kiss?"
+                    u "Unless..."
 
-                    scene v14s17_16a # TPP. Same as v14s17_16, MC, slight smile, mouth open, Lauren, slight smile, mouth closed 
+                    scene v14s17_10h
                     with dissolve
 
-                    u "With a kiss."
+                    la "Hm?"
 
-                    scene v14s17_16b # TPP. Same position as v14s17_16, Show MC and Lauren kissing
+                    scene v14s17_13 # TPP. Show MC whispering into Lauren's ear, slight smile, mouth open, Lauren, slight smile, mouth closed
+                    with dissolve
+
+                    u "*Whispers* Do you think you could... \"sabotage\" Lindsey's bake sale?"
+
+                    scene v14s17_14 # TPP. Show MC from Laurens perspective, MC with one finger over his mouth, shushing expression, slight smile, mouth slightly open
                     with dissolve
 
                     pause 0.75
 
-            else: 
-                scene v14s17_17 # FPP. Lauren Looking at MC, serious expression, mouth open
-                with dissolve
+                    scene v14s17_13a # TPP. Same as v14s17_13, Lauren now whispering back into MCs ear, Lauren, mouth open, MC, mouth closed
+                    with dissolve
+
+                    la "*Whisper* What?! Are you crazy?"
+
+                    scene v14s17_10b
+                    with dissolve
+
+                    u "Probably a little, yeah."
+
+                    scene v14s17_13a
+                    with dissolve
+
+                    la "*Whispers* Shhh! Why? You just said not to get involved."
+
+                    scene v14s17_13
+                    with dissolve
+
+                    u "*Whispers* Truth is, I don't want her to win."
+
+                    u "*Whispers* It's Chloe's last year and if I can keep Lindsey from taking over, that's what I'll do. She doesn't need to be president."
+
+                    scene v14s17_13a
+                    with dissolve
+
+                    la "*Whispers* And you want me to help you do that?!"
+
+                    scene v14s17_13
+                    with dissolve
+
+                    u "*Whispers* Only you can! You have a perfect opportunity."
+
+                    scene v14s17_13a
+                    with dissolve
+
+                    la "*Whispers* [name]! This is something I'd never do for anyone, you know that."
+
+                    scene v14s17_13
+                    with dissolve
+
+                    u "*Whispers* I know, because you're loyal to those who respect you and want things to be exactly the way they're supposed to be."
+
+                    scene v14s17_10h
+                    with dissolve
+
+                    la "Right..."
+
+                    scene v14s17_10e
+                    with dissolve
+
+                    u "You're the most loyal person I know, Lauren. That's why I'm asking you, the one person I trust with anything and everything."
+
+                    if kct == "loyal":
+                        call screen kct_popup
+                        
+                        $ v14_lauren_sabotage = True
+                    
+                        scene v14s17_10a
+                        with dissolve
+
+                        la "I guess you're that one person for me too. It must feel like Lindsey is crossing the line by running against Chloe, no?"
+
+                        scene v14s17_10e
+                        with dissolve
+
+                        u "Yeah, it does. She did go behind her friend's back just to do all of this."
+
+                        scene v14s17_10h
+                        with dissolve
+
+                        la "You really believe this is really the right thing to do?"
+
+                        scene v14s17_10b
+                        with dissolve
+
+                        u "I do."
+
+                        scene v14s17_15 # TPP. Show MC looking at Lauren, slight smile, mouth closed, Lauren looking at MC intently, mouth closed  
+                        with dissolve
+
+                        pause 0.75
+
+                        scene v14s17_10i # FPP. Same as v14s17_10a, Lauren looking to the side, neutral expresssion, mouth open
+                        with dissolve
+
+                        la "*Sighs* Look..."
+
+                        scene v14s17_13a
+                        with dissolve
+
+                        la "*Whispers* All I'm willing to do is tell her that I'll help her and then... not show up."
+
+                        scene v14s17_10b
+                        with dissolve
+
+                        u "You say that like it's nothing... Lauren, that's perfect. Everything will go south without you."
+
+                        scene v14s17_10h
+                        with dissolve
+
+                        la "Okay, yeah I get it. Just don't bring it up again, okay?"
+
+                        scene v14s17_10g
+                        with dissolve
+
+                        u "My lips are sealed."
+
+                        scene v14s17_12b # TPP. Same as v14s17_12, MC looking at Lauren, pretending that he is zipping his lips, slight smile, mouth closed
+                        with dissolve
+
+                        pause 0.75
+                        
+                        if laurenrs:
+                            scene v14s17_16 # TPP. Show MC, neutral expression, mouth closed, Lauren beside and looking at MC, Lauren puts both her hands together, begging expression, mouth open
+                            with dissolve
+
+                            la "With a kiss?"
+
+                            scene v14s17_16a # TPP. Same as v14s17_16, MC, slight smile, mouth open, Lauren, slight smile, mouth closed 
+                            with dissolve
+
+                            u "With a kiss."
+
+                            scene v14s17_16b # TPP. Same position as v14s17_16, Show MC and Lauren kissing
+                            with dissolve
+
+                            pause 0.75
+
+                    else: 
+                        scene v14s17_17 # FPP. Lauren Looking at MC, serious expression, mouth open
+                        with dissolve
+                        
+                        la "Exactly, the most loyal person you know, and that's why you of all people should know that I wouldn't do something like that."
+
+                        scene v14s17_17a # FPP. Same as v14s17_17, mouth closed
+                        with dissolve
+
+                        u "*Awkward Chuckle* Yeah, yeah... I knew. I was just joking. *Laughs*"
+
+                        scene v14s17_17
+                        with dissolve
+
+                        la "Mhmm, sure you were."
+
+                        scene v14s17_17a
+                        with dissolve
+
+                        u "Ha! I was..."
+
+                    jump v14s17_end
                 
-                la "Exactly, the most loyal person you know, and that's why you of all people should know that I wouldn't do something like that."
-
-                scene v14s17_17a # FPP. Same as v14s17_17, mouth closed
-                with dissolve
-
-                u "*Awkward Chuckle* Yeah, yeah... I knew. I was just joking. *Laughs*"
-
-                scene v14s17_17
-                with dissolve
-
-                la "Mhmm, sure you were."
-
-                scene v14s17_17a
-                with dissolve
-
-                u "Ha! I was..."
-
-            jump v14s17_end
-        
-        "Don't ask her":
-
-            jump v14s17_end
+                "Don't ask her":
+                    u "(I'm not getting involved in that...)"
+                
+                    jump v14s17_end
         
 label v14s17_end:
+    scene clock2c
+    with fade
+
+    pause 0.75
+
     scene v14s17_17b # FPP. Same as v14s17_17, slight smile
-    with dissolve
+    with fade
 
     la "Oh perfect, class is over... Be careful about everything you do during this whole... \"mess\", okay?"
 
@@ -769,7 +780,9 @@ label v14s17_end:
         scene v14s17_19 # TPP. Show MC and Lauren kissing
         with dissolve
 
-        pause 0.75 
+        play sound "sounds/kiss.mp3"
+
+        pause 1.5
 
         scene v14s17_20 # FPP. MC watches Lauren walk out of the classroom, Lauren's back facing MC
         with dissolve

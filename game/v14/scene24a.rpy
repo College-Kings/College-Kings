@@ -7,12 +7,12 @@ label v14s24a:
     scene v14s24a_1  # TPP. MC, smiling, walking towards the door of the gas station.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v14s24a_2  # TPP. MC opening the door to enter the gas station.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v14s24a_3  # TPP. MC walking down an aisle looking for soemthing to buy.
     with dissolve
@@ -77,7 +77,7 @@ label v14s24a:
     scene v14s24a_11b # FPP. Same as a v14s24a_11a but with Grayson, mouth open.
     with dissolve
 
-    gr "Is something funny [name]?"
+    gr "Is something funny, [name]?"
 
     scene v14s24a_11a
     with dissolve

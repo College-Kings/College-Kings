@@ -311,7 +311,7 @@ label v14s26:
         scene v14s26_10 # FPP. show Amber mouth open fully scared talking on the phone in her house
         with dissolve
 
-        am "[name]!Are you okay?! Where are you?"
+        am "[name]! Are you okay?! Where are you?"
 
         scene v14s26_10a # FPP. same as v14s26_10 Amber half scared, mouth closed
         with dissolve

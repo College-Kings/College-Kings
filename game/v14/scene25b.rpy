@@ -12,7 +12,7 @@ label v14s25b:
     scene v14s25b_2 # TPP. Show MC getting out of bed, neutral expression, mouth closed
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v14s25b_3 # TPP. Show MC getting dressed, neutral expression, mouth closed
     with dissolve
@@ -72,7 +72,7 @@ label v14s25b:
             scene v14s25b_8a # TPP. Same as v14s25b_8, MC kisses Amber on her forehead
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
     if v14_amber_drugs: #placeholder
         scene v14s25b_6c # FPP. Same as v14s25b_6, Amber now turns and faces away from MC while laying in bed, MC doesn't see her face

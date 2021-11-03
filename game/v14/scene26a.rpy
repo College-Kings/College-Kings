@@ -141,7 +141,7 @@ label v14s26a:
     scene v14s26a_2a
     with dissolve
 
-    li "*Sighs* Look [name]. I'm not mad at you, okay?"
+    li "*Sighs* Look, [name]. I'm not mad at you, okay?"
 
     scene v14s26a_2a
     with dissolve
