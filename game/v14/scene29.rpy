@@ -63,6 +63,26 @@ label v14s29:
             pause 0.75
             jump v14s30
 
+    elif not v14_help_chloe:
+        u "Just like that, huh?"
+
+        scene v14s29_3
+        with dissolve
+
+        imre "Just like that! Hurry up, I'm headed there now."
+
+        scene v14s29_3a
+        with dissolve
+
+        u "I'm on my way."
+
+        scene v14s29_6 # TPP. Show MC starting to walk towards the gym, slight smile, mouth closed.
+        with dissolve
+
+        pause 0.75
+
+        jump v14s32
+        
     elif not v14_talk_to_chris: #Placeholder for helping Chloe but didn't talk to Chris.
         u "Okay sure."
 
@@ -89,23 +109,3 @@ label v14s29:
         pause 0.75
 
         jump v14s31
-
-    elif not v14_help_chloe:
-        u "Just like that, huh?"
-
-        scene v14s29_3
-        with dissolve
-
-        imre "Just like that! Hurry up, I'm headed there now."
-
-        scene v14s29_3a
-        with dissolve
-
-        u "I'm on my way."
-
-        scene v14s29_6 # TPP. Show MC starting to walk towards the gym, slight smile, mouth closed.
-        with dissolve
-
-        pause 0.75
-
-        jump v14s32
