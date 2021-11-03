@@ -511,17 +511,17 @@ label v14s32:
     scene v14s32_9 # TPP. Close up of Imre hitting the punching bag with his left fist.
     with dissolve
 
-    pause 0.15
+    pause 0.75
 
     scene v14s32_9a # TPP. Same as v14s32_9, Imre hitting the punching bag with his right fist.
     with dissolve
 
-    pause 0.15
+    pause 0.75
 
     scene v14s32_9b # TPP. Same as v14s32_9a, Imre kicking the punching bag with a roundhouse kick.
     with dissolve
 
-    pause 0.15
+    pause 0.75
 
     scene v14s32_2e
     with dissolve
@@ -556,17 +556,17 @@ label v14s32:
     scene v14s32_9c # TPP. Same as v14s32_9, MC punching the bag with his left fist.
     with dissolve
 
-    pause 0.15
+    pause 0.75
 
     scene v14s32_9d # TPP. Same as v14s32_9a, MC punching the bag with his right fist.
     with dissolve
 
-    pause 0.15
+    pause 0.75
 
     scene v14s32_9e # TPP. Same as v14s32_9b, MC kicking the punching bag with a roundhouse kick.
     with dissolve
 
-    pause 0.15
+    pause 0.75
 
     scene v14s32_2e
     with dissolve
@@ -707,7 +707,7 @@ label v14s32:
     with dissolve
 
     if v13_imre_disloyal:
-        pause 0.15
+        pause 0.75
 
         scene v14s32_5g # TPP. Same as v14s32_5e, Imre looks over his shoulder, Imre neutral face, mouth open.
         with dissolve
@@ -737,16 +737,16 @@ label v14s32:
     scene v14s32_5i # FPP. Same as v14s32_5h, Show Imre opening the door to leave the gym, Imre slight smile, mouth closed. 
     with dissolve
 
-    pause 0.15 
+    pause 0.75 
 
     scene v14s32_5j # FPP. Same as v14s32_5i, Show Imre leaving the gym. 
     with dissolve
 
-    pause 0.15
+    pause 0.75
 
     scene v14s32_5e
     with dissolve
 
-    pause 0.15
+    pause 0.75
 
     jump v14s33 
