@@ -4,14 +4,7 @@ label before_main_menu:
         statsApp.img = "images/phone/stats/appAssets/statsIcon.webp"
         achApp.img = "images/phone/achievements/appAssets/achievementsIcon.webp"
         kiwiiApp.img = "images/phone/kiwii/appAssets/kiwiiIcon.webp"
-
-
-        # Set Chloe and Lindsey Votes
-        try: chloe.votes
-        except AttributeError: chloe.votes = 24
-        try: lindsey.votes
-        except AttributeError: lindsey.votes = 16
-
+        
 
         # Create messenger contacts
         try: emily.messenger
