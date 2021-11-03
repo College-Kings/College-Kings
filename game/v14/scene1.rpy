@@ -5,8 +5,8 @@
 
 label v14start:
     if aubreyrs and rileyrs:
-        jump v14s01
         $ v13_threesomeending = True
+        jump v14s01
     else:
         jump v14s01a
     
