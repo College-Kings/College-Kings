@@ -219,7 +219,7 @@ label v14s50:
         "Go to Chloe's room":   # -Event1 Go to Chloe's room
             jump v14s51 # -Transition to Scene 51-
 
-        "Keep Listening": # -if Keep listening
+        "Keep listening": # -if Keep listening
             $ v14s50_listen_to_aubrey_lindsey = True
             scene v14s50_11b
             with dissolve
@@ -360,7 +360,7 @@ label v14s50:
                     scene v14s50_11b
                     with dissolve
 
-                    au "Haha. Come take a look at my collection.'"
+                    au "Haha. Come take a look at my collection."
 
                     li "Collection?! Oh my'"
 
@@ -385,7 +385,7 @@ label v14s50:
                         "Go to Chloe's room": # -if Go to Chloe's room
                             jump v14s51 # -Transition to Scene 51-
 
-                        "Keep Listening": # -if Keep listening
+                        "Keep listening": # -if Keep listening
                             scene v14s50_11d
                             with dissolve
 
@@ -437,5 +437,3 @@ label v14s50:
                             u "(I've wasted a lot of time here already, so I'd better hurry up and go to Chloe's room.)"
 
                             jump v14s51  # -Transition to Scene 51-
-
-
