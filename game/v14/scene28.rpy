@@ -354,7 +354,7 @@ label v14s28:
     if v14_emily_ily:
         u "(I'm sure I'll see her again, but still... It won't be the same around here.)"
 
-    u "(I see why she wanted to talk in private now, I wonder who all she's told.)"
+    u "(I see why she wanted to talk in private now, I wonder who else she's told.)"
 
     scene v14s28_6 # TPP. Show MC walking out of the Gym Lockerroom, slight smile, mouth closed.
     with dissolve
