@@ -17,7 +17,7 @@ init python:
         v14s47_kiwiiPost2.newComment("Lindsey", "You're a dork.")
     
     def v14s47_kiwiiReply4():
-        $ v14s47_kiwiiPost2.newComment("Lindsey", "Haha, I h8 you <3")
+        v14s47_kiwiiPost2.newComment("Lindsey", "Haha, I h8 you <3")
 
 label v14s47:
 # -Peace and Cheex can help with this scene: MC walks up to Lindsey and they have a convo by the car with a few images of the car. When MC is ready to take pictures we will go to a free roam shot of the car. Highlight the passenger side, driver side, hood, and trunk. MC chooses in any order where to take pics. Once they�ve taken the pic, revert back to the freeroam screen where their previous choice is now greyed out, and the other choices remain while ALSO having a �Finish� button in the bottom right. MC has to take one photo, but can choose whether to take all 4, or leave after each one. Revert back to the freeroam screen after each photo is taken, the player makes their choices, and when all 4 have been taken or if they click �finish�, -if finish dialogue.
