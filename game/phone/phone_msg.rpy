@@ -2,7 +2,7 @@ init python:
     class Contact:
         def __init__(self, name, profile_picture, locked=True):
             self.name = name
-            self.profile_picture = "images/phone/messages/profile_pictures/{}".format(profile_picture)
+            self.profile_picture = profile_picture
             self.locked = locked
             self.sentMessages = []
             self.pendingMessages = []
