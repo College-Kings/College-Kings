@@ -664,7 +664,11 @@ default v14_PenArgScene = False
 default v14_PenelopePartner = False
 default v14_RileyPartner = False
 default sceneList = set() #$ sceneList.add(aubrey)
-
+default v14s51_interaction = 0 
+default v14s51_bathroom_window = False
+default v14s51_kitchen_window = False
+default v14s51_take_money = False
+default v14s51_take_diary = False
 ###to be looked at:
 #lindseysupport.points ???
 #lauren variables
