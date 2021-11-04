@@ -11,8 +11,6 @@ label v14s43:
 
     pause
 
-    call screen elections
-
 label v14s43_continue:
     scene v14s43_2 # TPP. Show MC walking through the school (different location), slight smile, mouth closed
     with fade
