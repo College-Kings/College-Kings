@@ -621,6 +621,7 @@ default v13_FirstThreesome = False # Variable used to call for Riley and Aubrey 
 default v14_help_chloe = False
 default v14_help_lindsey = False
 default v14_amber_clean = False
+default v14_amber_drugs = False
 default v14_emily_ily = False
 default v14_full_chris_support = False
 default v14_lindsey_popularity = 45
@@ -663,11 +664,11 @@ default v14_PenArgScene = False
 default v14_PenelopePartner = False
 default v14_RileyPartner = False
 default sceneList = set() #$ sceneList.add(aubrey)
-default AutumnTrust = False
-default chrissus = 0
-default v14_noraWhere = False
-default v14_noraWorry = False
-
+default v14s51_interaction = 0 
+default v14s51_bathroom_window = False
+default v14s51_kitchen_window = False
+default v14s51_take_money = False
+default v14s51_take_diary = False
 ###to be looked at:
 #lindseysupport.points ???
 #lauren variables
