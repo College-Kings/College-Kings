@@ -654,7 +654,7 @@ default v14_PenRomScene = False
 default v14s25_letherstay = False
 default v14_jennypoints = 0
 default v14s22_steal_fund = False
-default v14s31_talkcameron = False
+default v14s31_talkcameron = False # Placeholder still
 default v14_ApesPostChloePics = False
 default jennyawkward = False
 default jennyfriend = False
@@ -674,10 +674,4 @@ default v14_noraWhere = False
 default v14_noraWorry = False
 default v14_chloeSus = False
 default v14_money_theft_date_ditch = False # Placeholder variable for using the date as distraction
-
-###to be looked at:
-#lindseysupport.points ???
-#lauren variables
-#v14s31_talkcameron
-#v14_plushwolf
-#v14_realwolf
+default v14_realwolf = False #Placeholder for choosing real wolf on planning board
