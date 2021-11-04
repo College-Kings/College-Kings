@@ -331,7 +331,7 @@ label v14s42:
 
         menu:
             "What'd I say?":
-                $ addpoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene v14s40_4b # Ignore as reused from another scene
                 with dissolve
@@ -357,7 +357,7 @@ label v14s42:
                 with dissolve
 
             "Yeah I'm tired":
-                $ addpoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene v14s40_4b # Ignore as reused from another scene
                 with dissolve
