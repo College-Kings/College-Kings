@@ -5,7 +5,6 @@
 # Render Count: 16 Unique, Total to be created 33, 8 Render's to be reused from another scene, 41 in Total
 
 label v14s42:
-
     scene v14s42_1 # FPP. Penelope and MC arrive just outside of Penlope's Dorm room, She open's the door with one hand, and leads mc into her room with the other, looking back at mc, slight smile, mouth open
     with dissolve
 
