@@ -288,6 +288,7 @@ label v14s51_pillow:
     if v14_money_theft_date_ditch:
         if v14s51_interaction == 1:
             jump v14s51_text
+
     else:
         call screen v14s51_room
 
