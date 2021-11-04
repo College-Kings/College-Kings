@@ -382,7 +382,7 @@ label v14s42:
                 scene v14s40_4d # Ignore as reused from another scene
                 with dissolve
 
-                la "I liked it, alot."
+                la "I liked it, a lot."
 
                 scene v14s40_4e # Ignore as reused from another scene
                 with dissolve
