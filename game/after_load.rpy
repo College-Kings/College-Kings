@@ -1,6 +1,11 @@
 python early:
     import os
 
+    if renpy.loadable("customCharacters.rpy"):
+        os.remove(os.path.join(config.basedir, "game", "customCharacters.rpy"))
+    if renpy.loadable("customCharacters.rpyc"):
+        os.remove(os.path.join(config.basedir, "game", "customCharacters.rpyc"))
+
     if renpy.loadable("bugTesting/bugTesting_Overwrite.rpy"):
         os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpy"))
     if renpy.loadable("bugTesting/bugTesting_Overwrite.rpyc"):
