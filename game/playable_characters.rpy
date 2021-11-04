@@ -16,4 +16,6 @@ init python:
             return (item in self.inventory.items)
 
 
+init offset = 1
+
 default mc = PlayableCharacter()
