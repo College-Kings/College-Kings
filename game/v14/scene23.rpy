@@ -350,7 +350,7 @@ label v14s23:
         cl "Ugh, asshole! *Chuckles* I'm being serious."
      
         if v14s23_agree:
-            $ v14_lindsey_popularity -= 5
+            $ set_presidency_percent(v14_lindsey_popularity - 5)
             $ v14_full_chris_support = True
             scene v14s23_2c
             with dissolve
@@ -418,7 +418,7 @@ label v14s23:
             ch "That's what I'm-"
 
         else:
-            $ v14_lindsey_popularity -= 1
+            $ set_presidency_percent(v14_lindsey_popularity - 1)
             $ v14_rw_half_chris_support = True
             scene v14s23_2c
             with dissolve
@@ -597,7 +597,7 @@ label v14s23:
                 ch "Haha, you two are something else, really."
                 
                 if v14s23_agree and v14s23_disagree:
-                    $ v14_lindsey_popularity -= 1
+                    $ set_presidency_percent(v14_lindsey_popularity - 1)
                     $ v14_pw_half_chris_support = True
                     scene v14s23_2c
                     with dissolve
@@ -656,7 +656,7 @@ label v14s23:
                     ch "That's what I'm-"
                         
                 else:
-                    $ v14_lindsey_popularity += 3
+                    $ set_presidency_percent(v14_lindsey_popularity + 3)
                     $ v14_low_chris_support = True
                     scene v14s23_2c
                     with dissolve

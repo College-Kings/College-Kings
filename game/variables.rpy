@@ -621,9 +621,10 @@ default v13_FirstThreesome = False # Variable used to call for Riley and Aubrey 
 default v14_help_chloe = False
 default v14_help_lindsey = False
 default v14_amber_clean = False
+default v14_amber_drugs = False
 default v14_emily_ily = False
 default v14_full_chris_support = False
-default v14_lindsey_popularity = 45
+default v14_lindsey_popularity = 45 # Use `set_presidency_percent(amount)`.
 default v14_low_chris_support = False
 default v14_pw_half_chris_support = False # Chris backs half the cost of the plush wolf photoshoot
 default v14_rw_half_chris_support = False # Chris backs half the cost of the real wolf photoshoot
@@ -663,10 +664,6 @@ default v14_PenArgScene = False
 default v14_PenelopePartner = False
 default v14_RileyPartner = False
 default sceneList = set() #$ sceneList.add(aubrey)
-default AutumnTrust = False
-default chrissus = 0
-default v14_noraWhere = False
-default v14_noraWorry = False
 
 ###to be looked at:
 #lindseysupport.points ???
