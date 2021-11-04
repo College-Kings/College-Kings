@@ -580,8 +580,6 @@ label v14s51_continue:
     $ lindsey.messenger.addReply(_("I'm around the back of the house. Come quick!"))
     $ lindsey.messenger.newMessage(_("OMW!"))
 
-    call screen phone
-
     label v14s51Lindsey_PhoneContinue:
         if lindsey.messenger.replies:
             call screen phone
@@ -592,7 +590,7 @@ label v14s51_continue:
     if v14_money_theft_date_ditch:
         play sound "sounds/vibrate.mp3"
 
-        u "(Uh oh... its a message from Chloe...)"
+        u "(Uh oh... it's a message from Chloe...)"
         $ chloemad = True
         $ chloe.messenger.newMessage(_("What the hell is going on?!"), queue =False)
         $ chloe.messenger.newMessage(_("[Name]??? I'm about to order food to go"))
