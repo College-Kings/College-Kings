@@ -16,12 +16,12 @@ screen chicks_presidency_bar(old_var, new_var):
 
         bar:
             value AnimatedValue(new_var, 100, 5, old_var)
-            left_bar Frame("gui/bar/left.webp", 10, 0)
-            right_bar Frame("gui/bar/right.webp", 10, 0)
+            left_bar Frame("images/v14/chicks_presidency_race/presidency_bar/left_bar.png", 10, 0)
+            right_bar Frame("images/v14/chicks_presidency_race/presidency_bar/right_bar.png", 10, 0)
             maximum (758, 32)
             align (0.5, 0.11)
             
-        add "images/presidency_bar/example.png" xalign 0.5
+        add "images/v14/chicks_presidency_race/presidency_bar/example.png" xalign 0.5
 
     timer 6 action Hide("lindsey_vs_chloe")
 
