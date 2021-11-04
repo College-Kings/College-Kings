@@ -241,12 +241,12 @@ label v14s03a:
             scene v14s03a_3e # FPP. Gambler's right hand on right cup; left hand on middle cup, switching places.
             with dissolve
 
-            pause 0.5
+            pause 0.51
 
             scene v14s03a_3f # FPP. Gambler's right hand on right cup, now in middle; left hand on middle cup; now on the right.
             with dissolve
 
-            pause 0.5
+            pause 0.51
 
             scene v14s03a_2a
             with dissolve

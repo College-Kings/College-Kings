@@ -901,23 +901,23 @@ label v14s25:
             scene v14s25_19 # TPP. Double Vision (like in homecoming Amber sex scene), Show MC and Amber dancing, both slight smile, mouths closed.
             with fade
 
-            pause
+            pause 2.5
             
-            if v14s03a_take_wallet: # if candy shopping with Aubrey
+            if v14s03a_take_wallet and not v14s24a_gummyfish: # if bought Twezzlers
                 scene v14s25_19a # TPP. Same as v14s25_19, Double Vision, Show MC and Amber eating snacks.
                 with fade
 
-                pause 
+                pause 2.5
             
             scene v14s25_19b # TPP. Same as v14s25_19a, Double Vision, Show MC and Amber tongue-kissing,
             with fade
             
-            pause 
+            pause 2.5
 
             scene v14s25_20 # TPP. Show Amber pinning MC against the wall as they kiss.
             with dissolve
 
-            pause 0.75
+            pause 1.75
 
             scene v14s25_21 # FPP. Amber pinning MC against the wall, Amber flirtatious smile, mouth open.
             with dissolve
@@ -927,7 +927,7 @@ label v14s25:
             scene v14s25_20a # TPP. Same as v14s25_20, MC kissing Amber's neck.
             with fade
 
-            pause 0.75
+            pause 1.5
 
             scene v14s25_22 # TPP. Close up of just Amber's face, Amber biting her lip.
             with dissolve

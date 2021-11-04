@@ -5,7 +5,7 @@
 
 label v14s05a:
     play sound "sounds/dooropen.mp3"
-    pause 0.5
+    pause 0.51
 
     scene v14s05a_1 # TPP. Show walking into his room, neutral expression, mouth closed
     with dissolve
