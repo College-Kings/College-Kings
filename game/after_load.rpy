@@ -211,7 +211,7 @@ label after_load:
             except AttributeError: pass
 
 
-        # Transfer Contact object to CustomCharacter class
+        # Transfer Contact object to NonPlayableCharacter class
         try:
             emily.messenger = contact_Emily
             del contact_Emily
@@ -317,39 +317,39 @@ label after_load:
 
         # v12 Renpy Fixes:
         try: chloe
-        except NameError: chloe = CustomCharacter("Chloe", "chloe.webp")
+        except NameError: chloe = NonPlayableCharacter("Chloe", "chloe.webp")
         try: amber
-        except NameError: amber = CustomCharacter("Amber", "amber.webp")
+        except NameError: amber = NonPlayableCharacter("Amber", "amber.webp")
         try: penelope
-        except NameError: penelope = CustomCharacter("Penelope", "penelope.webp")
+        except NameError: penelope = NonPlayableCharacter("Penelope", "penelope.webp")
         try: riley
-        except NameError: riley = CustomCharacter("Riley", "riley.webp")
+        except NameError: riley = NonPlayableCharacter("Riley", "riley.webp")
         try: lindsey
-        except NameError: lindsey = CustomCharacter("Lindsey", "lindsey.webp")
+        except NameError: lindsey = NonPlayableCharacter("Lindsey", "lindsey.webp")
         try: lauren
-        except NameError: lauren = CustomCharacter("Lauren", "lauren.webp")
+        except NameError: lauren = NonPlayableCharacter("Lauren", "lauren.webp")
         try: samantha
-        except NameError: samantha = CustomCharacter("Samantha", "samantha.webp")
+        except NameError: samantha = NonPlayableCharacter("Samantha", "samantha.webp")
         try: emily
-        except NameError: emily = CustomCharacter("Emily", "emily.webp")
+        except NameError: emily = NonPlayableCharacter("Emily", "emily.webp")
         try: ms_rose
-        except NameError: ms_rose = CustomCharacter("Ms Rose", "ms_rose.webp")
+        except NameError: ms_rose = NonPlayableCharacter("Ms Rose", "ms_rose.webp")
         try: nora
-        except NameError: nora = CustomCharacter("Nora", "nora.webp")
+        except NameError: nora = NonPlayableCharacter("Nora", "nora.webp")
         try: aubrey
-        except NameError: aubrey = CustomCharacter("Aubrey", "aubrey.webp")
+        except NameError: aubrey = NonPlayableCharacter("Aubrey", "aubrey.webp")
         try: ryan
-        except NameError: ryan = CustomCharacter("Ryan", "ryan.webp")
+        except NameError: ryan = NonPlayableCharacter("Ryan", "ryan.webp")
         try: imre
-        except NameError: imre = CustomCharacter("Imre", "imre.webp")
+        except NameError: imre = NonPlayableCharacter("Imre", "imre.webp")
         try: chris
-        except NameError: chris = CustomCharacter("Chris", "chris.webp")
+        except NameError: chris = NonPlayableCharacter("Chris", "chris.webp")
         try: charli
-        except NameError: charli = CustomCharacter("Charli", "charli.webp")
+        except NameError: charli = NonPlayableCharacter("Charli", "charli.webp")
         try: cameron
-        except NameError: cameron = CustomCharacter("Cameron", "cameron.webp")
+        except NameError: cameron = NonPlayableCharacter("Cameron", "cameron.webp")
         try: josh
-        except NameError: josh = CustomCharacter("Josh", "josh.webp")
+        except NameError: josh = NonPlayableCharacter("Josh", "josh.webp")
 
         chloe.name = "Chloe"
         amber.name = "Amber"
