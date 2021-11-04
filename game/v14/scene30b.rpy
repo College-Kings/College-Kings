@@ -149,7 +149,7 @@ label v14s30b:
     menu:
         "It's perfect":
             $ v14s30b_its_perfect = True
-            $ v14_lindsey_popularity += 3
+            $ set_presidency_percent(v14_lindsey_popularity + 3)
 
             scene v14s30b_2a
             with dissolve
@@ -162,7 +162,7 @@ label v14s30b:
             cl "*Chuckles* Exactly."
 
         "What about something else?":
-            $ v14_lindsey_popularity -= 3
+            $ set_presidency_percent(v14_lindsey_popularity - 3)
 
             scene v14s30b_2a
             with dissolve
