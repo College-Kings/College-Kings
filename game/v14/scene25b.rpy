@@ -34,7 +34,7 @@ label v14s25b:
 
     u "*Whispers* Amber... Amber!"
 
-    if v14_amber_clean: #placeholder
+    if v14_amber_clean:
         scene v14s25b_6 # FPP. MC now looking at Amber as she is laying in bed, Amber, slight smile, mouth open
         with dissolve
 
@@ -76,7 +76,7 @@ label v14s25b:
 
             pause 0.75
 
-    if v14_amber_drugs: #placeholder
+    else: #placeholder
         scene v14s25b_6c # FPP. Same as v14s25b_6, Amber now turns and faces away from MC while laying in bed, MC doesn't see her face
         with dissolve
     

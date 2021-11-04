@@ -165,7 +165,7 @@ label v14s01:
 
             u "*Moans*"
 
-            ri "This... Is perfect... *Moans*"
+            ri "This... is perfect... *Moans*"
 
             scene v14auridcg2 # Ignore as animation
             with dissolve
@@ -325,13 +325,6 @@ label v14s01:
 
             u "(Now that I'm awake I might as well go see what's going on. My sleep schedule is gonna be all fucked now, though. Feeling energized at night isn't a good thing...) *Sighs*"
 
-            scene v14s01_17 # TPP. Show MC walking through hotel room corridor, smiling, mouth closed
-            with dissolve
-
-            pause 0.75
-
-            jump v14s02
-
         "Stop them":
             scene v14s01_1e # FPP. Same as v14s01_1b, Aubrey and Riley shocked, mouths closed
             with dissolve
@@ -398,9 +391,9 @@ label v14s01:
 
             u "*Sighs* (My sleep schedule is gonna be fucked if I start waking up at night time. Oh well.)"
 
-            scene v14s01_17
-            with dissolve
+    scene v14s01_17
+    with dissolve
 
-            pause 0.75
+    pause 0.75
 
-            jump v14s02
+    jump v14s02

@@ -9,7 +9,7 @@ label v14s45a:
 
     u "Hey there. So, what's the news?"
 
-    if v14_amber_drugs:
+    if not v14_amber_clean:
         scene v14s45a_1a # FPP. Same as v14s45a_1, MC looking at Amber, Amber now looking at MC, Amber tired and high, Amber neutral expression, mouth open.
         with dissolve
 
@@ -121,7 +121,7 @@ label v14s45a:
 
                 am "*Sighs* Haha..."
 
-    elif v14_amber_clean:
+    else:
         scene v14s45a_1c # FPP. Same as v14s45a_1, Amber looking at MC, Mc looking at Amber, Amber has on a nice pretty red lipstick, Amber slight smile, mouth open.
         with dissolve
 

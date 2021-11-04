@@ -59,7 +59,7 @@ label v14s29:
             pause 0.75
             jump v14s30a
 
-        elif v14_pw_half_chris_support or v14_low_chris_support:
+        else:
             pause 0.75
             jump v14s30
 

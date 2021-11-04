@@ -300,7 +300,7 @@ label v14s26:
         scene v14kw26
         scene v14kw26_1
 
-    if v14_amber_drugs:
+    if not v14_amber_clean:
         play sound "sounds/vibrate.mp3"
 
         scene v14s26_9 # TPP. MC gets a call from Amber and answers

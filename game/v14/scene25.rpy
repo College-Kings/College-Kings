@@ -828,7 +828,6 @@ label v14s25:
 
         "Let Amber be Amber":
             $ add_point(KCT.TROUBLEMAKER)
-            $ v14_amber_drugs = True
             scene v14s25_8m
             with dissolve
 

@@ -232,7 +232,7 @@ label v14s26a:
         scene v14kw26a
         scene v14kw26a_1
 
-    if v14_amber_drugs:
+    if not v14_amber_clean:
         play sound "sounds/vibrate.mp3"
 
         scene v14s26_9 # Ignore as reused from another scene
