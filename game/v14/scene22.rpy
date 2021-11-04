@@ -324,7 +324,7 @@ label v14s22_steal:
         scene v14s22_5g
         with dissolve
 
-        u "There's nothing hard to swallow, Linds. It's the Chick's Treasury, right? To help fund the Chick's?"
+        u "There's nothing hard to swallow, Linds. It's the Chicks' Treasury, right? To help fund the Chicks?"
 
         scene v14s22_5f
         with dissolve
@@ -334,7 +334,7 @@ label v14s22_steal:
         scene v14s22_5g
         with dissolve
 
-        u "You're a chick. No buts. It all adds up to me. *Chuckles*"
+        u "You're a Chick. No buts. It all adds up to me. *Chuckles*"
 
     jump v14s22_end
 
