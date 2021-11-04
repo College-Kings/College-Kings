@@ -6,7 +6,6 @@
 # 22 Unique Renders, 46 Total
 
 label v14s43b:
-
     scene v14s43b_1 # FPP. Mr. Lee walks into the classroom happy and cheery, mouth open
     with dissolve
 
