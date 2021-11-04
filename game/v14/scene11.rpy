@@ -53,7 +53,7 @@ label v14s11:
         scene v14s11_2c # FPP. same as v14s11_2a Mr. Lee is walking away from Ms. Rose with his back turned, Ms Rose is looking at Mr. Lee, Ms. Rose mouth open, one hand pointing at Mr. Lee
         with dissolve
 
-        ro "I’m serious Bruce!"
+        ro "I'm serious Bruce!"
 
         scene v14s11_2d # FPP. same as v14s11_2c Mr. Lee raises an arm and hand above his head as he walks further away, Ms. Rose. mouth closed, no hand gesture.
         with dissolve
@@ -99,7 +99,7 @@ label v14s11:
     scene v14s11_4c # FPP. same as v14s11_4a Riley slight smile, mouth open, hand gesture
     with dissolve
 
-    ri "He definitely isn’t the best human out there in my opinion. *Chuckles* Even when I was giving him a chance, I knew that deep down."
+    ri "He definitely isn't the best human out there in my opinion. *Chuckles* Even when I was giving him a chance, I knew that deep down."
 
     scene v14s11_4b
     with dissolve
@@ -124,7 +124,7 @@ label v14s11:
     scene v14s11_4d # FPP. same as v14s11_4c Riley eyebrow raised, different hand gesture
     with dissolve
 
-    ri "You're telling me that Charli never said anything to you that made you think about the choices you’ve made or ponder about who you are as a person?"
+    ri "You're telling me that Charli never said anything to you that made you think about the choices you've made or ponder about who you are as a person?"
 
     menu:
         "He did":
@@ -237,7 +237,7 @@ label v14s11:
         scene v14s11_4a
         with dissolve
 
-        ri "I'm not exactly sure what those feelings are just yet, but I know they exist. And they’re the same feelings that I have for Aubrey too."
+        ri "I'm not exactly sure what those feelings are just yet, but I know they exist. And they're the same feelings that I have for Aubrey too."
 
         scene v14s11_4b
         with dissolve
@@ -289,12 +289,12 @@ label v14s11:
                 scene v14s11_4j
                 with dissolve
 
-                u "Haha, why wouldn't I be? That’s what life is all about right? Spending time with the people you like most?"
+                u "Haha, why wouldn't I be? That's what life is all about right? Spending time with the people you like most?"
 
                 scene v14s11_4l # FPP. same as v14s11_4k Riley mouth closed, increases to a full smile, no hand gesture
                 with dissolve
 
-                u "And if that means the three of us get to spend the most of our time together, I’m not complaining. *Chuckles* You’re my two favorite ladies."
+                u "And if that means the three of us get to spend the most of our time together, I'm not complaining. *Chuckles* You're my two favorite ladies."
 
                 scene v14s11_4m # FPP. same as v14s11_4l Riley mouth open, full smile, no hand gesture
                 with dissolve
@@ -314,7 +314,7 @@ label v14s11:
                 scene v14s11_4m
                 with dissolve
 
-                ri "I guess I just didn't think you’d be open to something like that. It’s kind of my fantasy... *Chuckles*"
+                ri "I guess I just didn't think you'd be open to something like that. It's kind of my fantasy... *Chuckles*"
 
                 scene v14s11_4l
                 with dissolve
@@ -361,7 +361,7 @@ label v14s11:
                 scene v14s11_4b
                 with dissolve
 
-                u "I'll be honest, I like you a lot Riley. The feelings are definitely mutual and I’m really happy you told me, but relationship-wise..."
+                u "I'll be honest, I like you a lot Riley. The feelings are definitely mutual and I'm really happy you told me, but relationship-wise..."
 
                 scene v14s11_4b
                 with dissolve
@@ -376,7 +376,7 @@ label v14s11:
                 scene v14s11_4h
                 with dissolve
 
-                ri "I... I completely understand. It definitely makes sense why you wouldn’t want that. I just wanted to be honest with you."
+                ri "I... I completely understand. It definitely makes sense why you wouldn't want that. I just wanted to be honest with you."
 
                 scene v14s11_4p
                 with dissolve

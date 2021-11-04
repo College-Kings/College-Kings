@@ -129,7 +129,7 @@ label v14s03a:
             scene v14s03a_5 # TPP. MC turns to walk away from Gambler.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v14s03a_5a # TPP. Gambler grabs MC's arm to prevent him from leaving. 
             with dissolve
@@ -163,12 +163,12 @@ label v14s03a:
             scene v14s03a_8 # TPP, same as v14s03a_5, but with Gamble mad/angry, holding his hand that Imre removed from MC.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v14s03a_8a # TPP, Imre and Ryan a few steps ahead of MC, all three walking away.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v14s03a_9 # FPP. Imre, Ryan backs to MC but heads slghtly turned toward MC walking towards brothel, both mouth closed
             with dissolve
@@ -406,7 +406,7 @@ label v14s03a:
             scene v14s03a_13 # FPP. Close up on a wallet on the ground, thick with a lot of paper money.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
             
             scene v14s03a_11a # Same as v14s03a_11, but with Ryan holding Gambler's thick wallet.
             with dissolve
@@ -474,7 +474,7 @@ label v14s03a:
                     scene v14s03a_4c # FPP. Imre holding, smiling, mouth closed holiding open wallet and handing a stack a cash to Ryan (off camera).
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v14s03a_11c # FPP. Ryan, neutral expression, mouth open, holding out his hands (refusing or saying no) to Imre (off camera).
                     with dissolve

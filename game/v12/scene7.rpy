@@ -1421,7 +1421,8 @@ label v12s7_chloe_kill:
 label v12s7_riley3:
     $ v12s7_riley3 = True
 
-    $ v12s7_endtalkList.remove(riley)
+    if riley in v12s7_endtalkList:
+        $ v12s7_endtalkList.remove(riley)
 
     $ v12s7_seenList = [chloe]
     if josh_europe and not v12s7_josh:

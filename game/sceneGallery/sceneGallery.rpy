@@ -29,7 +29,7 @@ init python:
         SceneGallery("v1_tomShoutBack") #Tom
         # v3
     if renpy.loadable("v3/v3.rpy"):
-        SceneGallery("continuem") #Aubrey, day 4, aubreysex
+        SceneGallery("continuem") #Aubrey, day 4, v3_aubsex
         # v5
     if renpy.loadable("v5/v5.rpy"):
         SceneGallery("fkcon") #Adam

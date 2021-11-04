@@ -15,7 +15,7 @@ label v14s05:
     scene v14s05_2 # TPP. MC, mouth closed, worried, walks towards his bed while Chloe sits on her bed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v14s05_3 # FPP. Chloe, mouth closed, smiling at MC.
     with dissolve
@@ -156,7 +156,7 @@ label v14s05:
         scene v14s05_6c # TPP. Same as v14s05_6a, but Chloe standing next to MC's bed, smiling, mouth closed, looking at MC.
         with dissolve
         
-        pause 0.75 
+        pause 0.75
     
     scene v14s05_8 # FPP. Chloe standing next to MC's bed, smiling, mouth open.
     with dissolve

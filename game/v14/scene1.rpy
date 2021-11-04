@@ -3,9 +3,9 @@
 # Characters: MC (Outfit: 3), AUBREY (Outfit: 6), RILEY (Outfit: 6)
 # Time: Night
 
-label v14start:
+label v14_start:
     if aubreyrs and rileyrs:
-        $ v13_FirstThreesome = True
+        $ v13_threesomeending = True
         jump v14s01
     else:
         jump v14s01a
@@ -26,6 +26,7 @@ label v14s01:
 
     menu:
         "We're doing this":
+            $ v13_FirstThreesome = True
             u "I'm gonna feel much better after this."
 
             scene v14s01_1c # FPP. Samer as v14s01_1b, but Aubrey mouth open, Riley mouth closed, Aubrey looking at Riley, Riley looking at Aubrey
@@ -164,7 +165,7 @@ label v14s01:
 
             u "*Moans*"
 
-            ri "This... Is perfect... *Moans*"
+            ri "This... is perfect... *Moans*"
 
             scene v14auridcg2 # Ignore as animation
             with dissolve
@@ -324,13 +325,6 @@ label v14s01:
 
             u "(Now that I'm awake I might as well go see what's going on. My sleep schedule is gonna be all fucked now, though. Feeling energized at night isn't a good thing...) *Sighs*"
 
-            scene v14s01_17 # TPP. Show MC walking through hotel room corridor, smiling, mouth closed
-            with dissolve
-
-            pause 0.75
-
-            jump v14s02
-
         "Stop them":
             scene v14s01_1e # FPP. Same as v14s01_1b, Aubrey and Riley shocked, mouths closed
             with dissolve
@@ -397,9 +391,9 @@ label v14s01:
 
             u "*Sighs* (My sleep schedule is gonna be fucked if I start waking up at night time. Oh well.)"
 
-            scene v14s01_17
-            with dissolve
+    scene v14s01_17
+    with dissolve
 
-            pause 0.75
+    pause 0.75
 
-            jump v14s02
+    jump v14s02

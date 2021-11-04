@@ -76,7 +76,7 @@ label v14s23:
     scene v14s23_2a
     with dissolve
 
-    ch "Chloe? You're here because of Chloe right?"
+    ch "Chloe? You're here because of Chloe, right?"
 
     scene v14s23_2b
     with dissolve
@@ -123,7 +123,7 @@ label v14s23:
     ch "I try to be. Chloe should be here-"
 
     scene v14s23_1b # TPP. Same as v14s23_1a, Show MC and Chris sitting on the porch, Chloe running towards the porch back facing the camera, MC and Chris both slight smile, mouth closed.
-    with vpunch
+    with dissolve
 
     cl "HEY GUYS!"
 
@@ -350,7 +350,7 @@ label v14s23:
         cl "Ugh, asshole! *Chuckles* I'm being serious."
      
         if v14s23_agree:
-            $ v14_lindsey_popularity -= 5
+            $ set_presidency_percent(v14_lindsey_popularity - 5)
             $ v14_full_chris_support = True
             scene v14s23_2c
             with dissolve
@@ -417,8 +417,8 @@ label v14s23:
 
             ch "That's what I'm-"
 
-        elif not v14s23_agree:
-            $ v14_lindsey_popularity -= 1
+        else:
+            $ set_presidency_percent(v14_lindsey_popularity - 1)
             $ v14_rw_half_chris_support = True
             scene v14s23_2c
             with dissolve
@@ -482,7 +482,8 @@ label v14s23:
 
             ch "That's what I'm-"
 
-    elif v14_plushwolf: # Placeholder for choosing the plushie wolf on Planning board
+    #elif v14_plushwolf: # Placeholder for choosing the plushie wolf on Planning board
+    else:
         scene v14s23_4a
         with dissolve
 
@@ -596,7 +597,7 @@ label v14s23:
                 ch "Haha, you two are something else, really."
                 
                 if v14s23_agree and v14s23_disagree:
-                    $ v14_lindsey_popularity -= 1
+                    $ set_presidency_percent(v14_lindsey_popularity - 1)
                     $ v14_pw_half_chris_support = True
                     scene v14s23_2c
                     with dissolve
@@ -655,7 +656,7 @@ label v14s23:
                     ch "That's what I'm-"
                         
                 else:
-                    $ v14_lindsey_popularity += 3
+                    $ set_presidency_percent(v14_lindsey_popularity + 3)
                     $ v14_low_chris_support = True
                     scene v14s23_2c
                     with dissolve

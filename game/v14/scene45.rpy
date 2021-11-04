@@ -26,9 +26,9 @@ label v14s45:
     $ amber.messenger.addReply("Kk")
 
     label v14s43_PhoneContinueAmber:
-        if amber.messenger.getReplies():
+        if amber.messenger.replies:
             call screen phone
-        if amber.messenger.getReplies():
+        if amber.messenger.replies:
             u "(I should check my phone.)"
             jump v14s43_PhoneContinueAmber
     

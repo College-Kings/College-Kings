@@ -96,7 +96,7 @@ label v14s44:
 
     menu:
         "Chloe":
-            $ v14_lindsey_popularity -= 2
+            $ set_presidency_percent(v14_lindsey_popularity - 2)
 
             scene v14s44_4
             with dissolve
@@ -114,7 +114,7 @@ label v14s44:
             u "Ha. Yeah."
 
         "Lindsey":
-            $ v14_lindsey_popularity += 2
+            $ set_presidency_percent(v14_lindsey_popularity + 2)
 
             scene v14s44_4
             with dissolve
@@ -158,7 +158,7 @@ label v14s44:
     scene v14s44_6 # TPP. The nice car with Elija's mom parking near Elijah and MC, Elijah's Mom slight smile, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v14s44_7 # TPP. Close up of Elijah's mom standing outside of the car with the driver door open looking over at Elijah, Elijah's Mom slight smile, mouth open.
     with dissolve

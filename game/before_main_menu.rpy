@@ -4,7 +4,7 @@ label before_main_menu:
         statsApp.img = "images/phone/stats/appAssets/statsIcon.webp"
         achApp.img = "images/phone/achievements/appAssets/achievementsIcon.webp"
         kiwiiApp.img = "images/phone/kiwii/appAssets/kiwiiIcon.webp"
-        
+
 
         # Create messenger contacts
         try: emily.messenger

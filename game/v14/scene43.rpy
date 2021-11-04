@@ -35,16 +35,12 @@ label v14s43_continue:
         $ emily.messenger.newMessage("Not bad. Still in bed... Lol")
         $ emily.messenger.addReply("Oh yeah?")
         $ emily.messenger.newMessage("Haha...")
-        $ emily.messenger.newImgMessage("images/v14/Scene 43/v14s43_emily_pic.webp")
+        $ emily.messenger.newImgMessage("images/v14/Scene 43/v14kw43.webp")
         $ emily.messenger.addReply("...Yes")
         $ emily.messenger.newMessage("Hahaha")
         $ emily.messenger.addReply("I mean, no. I might need some more evidence...")
         $ emily.messenger.newMessage("Hehe ;) Get to class, we'll talk soon, I miss you <3")
         $ emily.messenger.addReply("Fine... miss you more :)")
-
-        if False: #just making sure it shows on lint
-            scene v14s43_emily_pic
-            with dissolve
 
         label v14s43_PhoneContinueEmily:
             if emily.messenger.getReplies():

@@ -29,25 +29,26 @@ label v14s16:
 
     cl "\"Serious\" isn't even close."
 
-    scene v14s16_2
-    with dissolve
-    
     if chloegf:
         scene v14s16_3 # TPP. Close up of MC and Chloe, MC kissing Chloe's forehead, both slight smile, mouth closed.
         with dissolve
 
-        pause 0.75
+        play sound "sounds/kiss.mp3"
+
+        pause 1.25
 
         scene v14s16_3a # TPP. Chloe with her eyes closed, Chloe slight smile, mouth closed.
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
         scene v14s16_4 # TPP. MC stepping back from Chloe so they aren't as close, both slight smile, mouth closed.
         with dissolve
 
-    scene v14s16_2
-    with dissolve
+        pause 1.25
+
+        scene v14s16_2
+        with dissolve
 
     cl "*Sighs* I thought we'd get back and have a chance to get comfortable first, but I literally walked into a pro-Lindsey campus."
 
@@ -191,7 +192,7 @@ label v14s16:
             scene v14s16_2f
             with dissolve
 
-            cl "Meet me after your class in the library, we have lots to discuss!"
+            cl "Meet me in the library after your class, we have lots to discuss!"
 
             if chloers or chloegf:
                 scene v14s16_6a # TPP. Same as v14s16_6, Chloe kisses MC.
@@ -227,7 +228,7 @@ label v14s16:
             scene v14s16_2a
             with dissolve
 
-            u "Chloe I... I want to help you, but I don't have the time."
+            u "Chloe, I... I want to help you, but I don't have the time."
 
             scene v14s16_2
             with dissolve
@@ -258,7 +259,7 @@ label v14s16:
                 scene v14s16_2k
                 with dissolve
 
-                u "It's not that I don't want to Chloe, it's just that I'm kinda busy with my own Greek life. We just got back to campus for crying out loud, I mea-"
+                u "It's not that I don't want to, Chloe. It's just that I'm kinda busy with my own Greek life. We just got back to campus for crying out loud, I mea-"
 
                 scene v14s16_2j
                 with dissolve

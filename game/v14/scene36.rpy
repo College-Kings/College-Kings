@@ -399,12 +399,12 @@ label v14s36:
     scene v14s36_4g
     with dissolve
 
-    jen "‘Cause it's better that it was you rather than some creep, haha. At least it wasn't Imre or... What's his face..."
+    jen "'Cause it's better that it was you rather than some creep, haha. At least it wasn't Imre or... What's his face..."
 
     scene v14s36_4h
     with dissolve
 
-    u "Who's ‘What's his face'? *Chuckles*"
+    u "Who's \"What's his face\"? *Chuckles*"
 
     scene v14s36_4f
     with dissolve
@@ -966,7 +966,7 @@ label v14s36:
                 with dissolve
                 pause
 
-                jen "*Moans* Ohhh, fuck [name]! *Panting* Fuck me, yes!"
+                jen "*Moans* Ohhh, fuck, [name]! *Panting* Fuck me, yes!"
 
                 scene v14jencg2f # Ignore as anim
                 with dissolve
@@ -1119,7 +1119,7 @@ label v14s36:
                 scene v14s36_11
                 with dissolve
 
-                jen "*Chuckles* Have a good night [name]."
+                jen "*Chuckles* Have a good night, [name]."
 
                 scene v14s36_11a
                 with dissolve
@@ -1138,7 +1138,7 @@ label v14s36:
 
             "Don't kiss her":
                 $ jennyawkward = True
-                if chloegf or LaurenGF or penelopers:
+                if chloegf or laurenrs or penelopers:
                     $ add_point(KCT.BOYFRIEND)
                 else:
                     $ add_point(KCT.TROUBLEMAKER)

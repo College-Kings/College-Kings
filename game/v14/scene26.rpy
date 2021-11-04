@@ -300,7 +300,7 @@ label v14s26:
         scene v14kw26
         scene v14kw26_1
 
-    if v14_amber_drugs:
+    if not v14_amber_clean:
         play sound "sounds/vibrate.mp3"
 
         scene v14s26_9 # TPP. MC gets a call from Amber and answers
@@ -311,7 +311,7 @@ label v14s26:
         scene v14s26_10 # FPP. show Amber mouth open fully scared talking on the phone in her house
         with dissolve
 
-        am "[name]!Are you okay?! Where are you?"
+        am "[name]! Are you okay?! Where are you?"
 
         scene v14s26_10a # FPP. same as v14s26_10 Amber half scared, mouth closed
         with dissolve
@@ -341,7 +341,7 @@ label v14s26:
         scene v14s26_10b
         with dissolve
 
-        am "I was just scared ‘cause when I woke up you weren't here."
+        am "I was just scared 'cause when I woke up you weren't here."
 
         scene v14s26_10c
         with dissolve

@@ -4,11 +4,6 @@
 # Time: Night
 
 label v14s39:
-    scene v14s39_1 # FPP. MC and Penelope walking down the side walk, Penelope looking at MC, MC looking at Penelope, Penlope neutral face, mouth open.
-    with dissolve
-
-    pe "That woman was so terrible! How could that man just sit there and take all of her shit?"
-
     scene v14s39_1a # FPP. Same as v14s39_1, Penelope neutral face, mouth closed.
     with dissolve
 
@@ -85,7 +80,7 @@ label v14s39:
             scene v14s39_1a
             with dissolve
 
-            u "Haha! I did not say it like that, I just meant"
+            u "Haha! I did not say it like that, I just meant..."
 
             scene v14s39_2 # FPP. MC and Penelope further up the sidewalk, change the background scenery to make it look like they are moving as they talk, Penelope slight smile, mouth closed.
             with dissolve
@@ -158,7 +153,7 @@ label v14s39:
     scene v14s39_3 # TPP. Show MC and Penelope stopping at a cross in the road.
     with dissolve
 
-    pause 
+    pause 0.75
 
     scene v14s39_4 # FPP. MC and Penelope at the Cross in the road, MC looking at Penelope, Penelope looking at MC, Penelope slight smile, mouth open.
     with dissolve
@@ -248,7 +243,7 @@ label v14s39:
         scene v14s39_6 # TPP. Show Penelope and MC kissing.
         with dissolve
 
-        pause 
+        pause 0.75
 
         scene v14s39_4e
         with dissolve
@@ -260,77 +255,77 @@ label v14s39:
 
         jump v14s42
 
-        if not v14s37_focus_on_us or not kct == "loyal":
+    else:
+        scene v14s39_4
+        with dissolve
+
+        pe "Well, thanks for tonight. I'll see you around?"
+
+        scene v14s39_4h # FPP. Same as v14s39_4, Penelope puts up a fist for a fist bump, slight smile, mouth closed.
+        with dissolve
+
+        u "*Chuckles*"
+
+        scene v14s39_4i # FPP. Same as v14s39_4h, MC giving Penelope a fist bump, Penelope slight smile, mouth open
+        with dissolve
+
+        pe "I'm sorry, that was weird..."
+
+        scene v14s39_4a
+        with dissolve
+
+        u "It's fine, I'm sorry if tonight was... also weird,"
+
+        scene v14s39_4
+        with dissolve
+
+        pe "It's okay. At least you kept your promise, haha. I'm gonna go."
+
+        scene v14s39_4a
+        with dissolve
+
+        u "Okay, be safe."
+
+        if v14s39_id_wait:
             scene v14s39_4
             with dissolve
 
-            pe "Well, thanks for tonight. I'll see you around?"
+            pe "I mean..."
 
-            scene v14s39_4h # FPP. Same as v14s39_4, Penelope puts up a fist for a fist bump, slight smile, mouth closed.
-            with dissolve
-
-            u "*Chuckles*"
-
-            scene v14s39_4i # FPP. Same as v14s39_4h, MC giving Penelope a fist bump, Penelope slight smile, mouth open
-            with dissolve
-
-            pe "I'm sorry, that was weird..."
+            pe "Maybe we can try this again? Maybe with a little more planning or something? *Chuckles*"
 
             scene v14s39_4a
             with dissolve
 
-            u "It's fine, I'm sorry if tonight was... also weird,"
+            u "Yeah, that sounds great. Thank you."
 
             scene v14s39_4
             with dissolve
 
-            pe "It's okay. At least you kept your promise, haha. I'm gonna go."
+            pe "Perfect."
 
-            scene v14s39_4a
+        else:
+            scene v14s39_4
             with dissolve
-
-            u "Okay, be safe."
-
-            if v14s39_id_wait:
-                scene v14s39_4
-                with dissolve
-
-                pe "I mean..."
-
-                pe "Maybe we can try this again? Maybe with a little more planning or something? *Chuckles*"
-
-                scene v14s39_4a
-                with dissolve
-
-                u "Yeah, that sounds great. Thank you."
-
-                scene v14s39_4
-                with dissolve
-
-                pe "Perfect."
-
-            else:
-                scene v14s39_4
-                with dissolve
+    
+            pe "You too."
         
-                pe "You too."
-            
-            scene v14s39_8 # FPP. Show Penelope walking her way down the side walk.
-            with dissolve
+        scene v14s39_8 # FPP. Show Penelope walking her way down the side walk.
+        with dissolve
 
-            pause 0.75
+        pause 0.75
 
-            scene v14s39_9 # TPP. MC walking down the side walk to his room, slight smile, mouth closed.
-            with dissolve
+        scene v14s39_9 # TPP. MC walking down the side walk to his room, slight smile, mouth closed.
+        with dissolve
 
-            u "(*Sighs* That was a rocky night.)"
+        u "(*Sighs* That was a rocky night.)"
 
-            scene v14s39_9
-            with dissolve
+        scene v14s39_9
+        with dissolve
 
-            pause 0.75
+        pause 0.75
 
-            if joinwolves:
-                jump v14s40
-            else:
-                jump v14s41
+        if joinwolves:
+            jump v14s40
+        else:
+            jump v14s41

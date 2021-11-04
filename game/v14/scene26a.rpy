@@ -141,7 +141,7 @@ label v14s26a:
     scene v14s26a_2a
     with dissolve
 
-    li "*Sighs* Look [name]. I'm not mad at you, okay?"
+    li "*Sighs* Look, [name]. I'm not mad at you, okay?"
 
     scene v14s26a_2a
     with dissolve
@@ -164,7 +164,6 @@ label v14s26a:
     li "Here."
 
     if v14_lauren_sabotage:
-
         scene v14s26a_2d
         with dissolve
 
@@ -178,7 +177,7 @@ label v14s26a:
         scene v14s26a_2i
         with dissolve
 
-        u "I'm sure it'll be fine... Thanks Lindsey."
+        u "I'm sure it'll be fine... Thanks, Lindsey."
 
         scene v14s26a_2h
         with dissolve
@@ -199,7 +198,7 @@ label v14s26a:
 
     if v11_lindsey_slogan == 1:
         #Lindsey by herself infront of slogan banner half-smiling that says Lindsey, Returning The Promise
-        $ v14s26a_kiwiiPost1 = KiwiiPost("Lindsey", "v14/v14kw26a", "Still selling treats to raise money for my campaign and the future of the Chicks! Don't forget to stop by <3 #Vote4Lindsey", numberLikes=593)
+        $ v14s26a_kiwiiPost1 = KiwiiPost("Lindsey", "v14/v14kw26a.webp", "Still selling treats to raise money for my campaign and the future of the Chicks! Don't forget to stop by <3 #Vote4Lindsey", numberLikes=593)
         $ v14s26a_kiwiiPost1.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
         $ v14s26a_kiwiiPost1.newComment("Nora", "Cutie <3", queue=False)
         $ v14s26a_kiwiiPost1.newComment("Imre", "Actually, that cookie this morning made me shit myself!", queue=False)
@@ -233,8 +232,7 @@ label v14s26a:
         scene v14kw26a
         scene v14kw26a_1
 
-    if v14_amber_drugs:
-
+    if not v14_amber_clean:
         play sound "sounds/vibrate.mp3"
 
         scene v14s26_9 # Ignore as reused from another scene
@@ -275,7 +273,7 @@ label v14s26a:
         scene v14s26_10b # Ignore as reused from another scene
         with dissolve
 
-        am "I was just scared ‘cause when I woke up you weren't here."
+        am "I was just scared 'cause when I woke up you weren't here."
 
         scene v14s26_10c # Ignore as reused from another scene
         with dissolve
