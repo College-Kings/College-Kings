@@ -675,3 +675,4 @@ default v14_noraWorry = False
 default v14_chloeSus = False
 default v14_money_theft_date_ditch = False # Placeholder variable for using the date as distraction
 default v14_realwolf = False #Placeholder for choosing real wolf on planning board
+default v14_lindsey_car_sale = False #Placeholder for helping Lindsey sell her car
