@@ -666,6 +666,8 @@ default v14_RileyPartner = False
 default sceneList = set() #$ sceneList.add(aubrey)
 default AutumnTrust = False
 default chrissus = 0
+default v14_noraWhere = False
+default v14_noraWorry = False
 
 ###to be looked at:
 #lindseysupport.points ???

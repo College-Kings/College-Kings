@@ -4,6 +4,13 @@
 # Time: Night
 # Render Count: 19 Unique Renders, 53 Total
 
+init python:
+    def v14s52_reply1():
+        setattr(store, "v14_noraWhere", True)
+
+    def v14s52_reply2():
+        setattr(store, "v14_noraWorry", True)
+
 label v14s52:
     scene v14s52_1 # TPP. mc walks up and see's the wolves frat house
     with dissolve
@@ -374,8 +381,8 @@ label v14s52:
 
 # -remember variable of what he sent for future scene. NoraWorry would be text2 or NoraWhere would be text1
 
-    $ nora.messenger.addReply("Hey, Nora. Just checking in since I haven't heard from you in a while... Where are you?") #noraWhere = True
-    $ nora.messenger.addReply("Hey, you. I'm starting to worry that I haven't seen you around. At least let me know that he didn't hurt you... Please text me back, ASAP") #noraWorry = True
+    $ nora.messenger.addReply("Hey, Nora. Just checking in since I haven't heard from you in a while... Where are you?", v14s52_reply1)
+    $ nora.messenger.addReply("Hey, you. I'm starting to worry that I haven't seen you around. At least let me know that he didn't hurt you... Please text me back, ASAP", v14s52_reply2)
 
     label v14s52_PhoneContinueNora:
         if nora.messenger.replies:
@@ -423,9 +430,9 @@ label v14s52:
 
     u "Nora...?"
 
-    call screen phone
+    $ nora.messenger.newMessage("UNABLE TO DELIVER MESSAGE AT THIS TIME, PLEASE TRY AGAIN LATER.", queue=False)
 
-    $ nora.messenger.newMessage("UNABLE TO DELIVER MESSAGE AT THIS TIME, PLEASE TRY AGAIN LATER.")
+    call screen phone
 
     scene v14s52_16f # TPP. same as v14s52_16d Mc now has an angry expression
     with dissolve
