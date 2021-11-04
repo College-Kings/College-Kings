@@ -374,10 +374,15 @@ label v14s52:
 
 # -remember variable of what he sent for future scene. NoraWorry would be text2 or NoraWhere would be text1
 
-    ####To: nora.addReply("Hey, Nora. Just checking in since I haven't heard from you in a while... Where are you?"), func=None) 
-    ####    NoraWhere = True
-    ####    nora.addReply("Hey, you. I'm starting to worry that I haven't seen you around. At least let me know that he didn't hurt you... Please text me back, ASAP"), func=None) 
-    ####    NoraWorry = True
+    $ nora.messenger.addReply("Hey, Nora. Just checking in since I haven't heard from you in a while... Where are you?") #noraWhere = True
+    $ nora.messenger.addReply("Hey, you. I'm starting to worry that I haven't seen you around. At least let me know that he didn't hurt you... Please text me back, ASAP") #noraWorry = True
+
+    label v14s52_PhoneContinueNora:
+        if nora.messenger.replies:
+            call screen phone
+        if nora.messenger.replies:
+            u "(I should text Nora.)"
+            jump v14s52_PhoneContinueNora
 
 # -regardless of choice, MC exits his texts and puts the phone down on the desk-
 
@@ -418,7 +423,9 @@ label v14s52:
 
     u "Nora...?"
 
-    ####nora.newMessage("UNABLE TO DELIVER MESSAGE AT THIS TIME, PLEASE TRY AGAIN LATER.")
+    call screen phone
+
+    $ nora.messenger.newMessage("UNABLE TO DELIVER MESSAGE AT THIS TIME, PLEASE TRY AGAIN LATER.")
 
     scene v14s52_16f # TPP. same as v14s52_16d Mc now has an angry expression
     with dissolve
