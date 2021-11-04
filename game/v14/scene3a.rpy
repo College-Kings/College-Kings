@@ -554,5 +554,3 @@ label v14s03a:
     pause 0.75
 
     jump v14s03b
-
-    # end label

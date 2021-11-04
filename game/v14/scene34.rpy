@@ -133,4 +133,6 @@ label v14s34:
     scene v14s34_12 # TPP. Show MC outside walking towards the restraunt in his nice clothes, slight smile, mouth closed.
     with dissolve
 
+    pause 0.75
+
     jump v14s37

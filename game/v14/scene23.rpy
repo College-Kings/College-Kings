@@ -762,4 +762,6 @@ label v14s23:
     scene v14s23_7 # TPP. MC walking off and looking at his phone, slight smile, mouth closed.
     with dissolve
 
+    pause 0.75
+
     jump v14s24

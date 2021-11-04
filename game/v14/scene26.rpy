@@ -439,7 +439,6 @@ label v14s26:
     u "See you around, Linds."
 
     if lindseyrs:
-
         scene v14s26_13 # FPP. Lindsey winks at MC, slight smile, mouth open
         with dissolve
 
@@ -452,5 +451,7 @@ label v14s26:
 
     scene v14s26_15 # TPP. mc walking through the campus, no expression, mouth closed
     with dissolve
+
+    pause 0.75
 
     jump v14s27

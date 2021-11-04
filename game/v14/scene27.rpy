@@ -91,4 +91,6 @@ label v14s27:
     scene v14s27_3 #TPP. Show MC and Emily walking down the side walk together, both nervous smile, mouth closed.
     with dissolve
 
+    pause 0.75
+
     jump v14s28

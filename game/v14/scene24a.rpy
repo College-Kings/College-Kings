@@ -147,4 +147,6 @@ label v14s24a:
     scene v14s24a_14  # TPP. MC, smiling, walking down the side walk toward Amber's house. Candy is either in pocket or in a bag.  
     with dissolve
 
+    pause 0.75
+
     jump v14s25

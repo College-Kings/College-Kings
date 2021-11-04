@@ -869,6 +869,8 @@ label v14s51_continue:
         scene v14s51_42a # FPP. Same as v14s51_42, Lindsey slight smile, mouth closed.
         with dissolve
     
+        pause 0.75
+    
     $ freeRoam = False
     
     if joinwolves:

@@ -1278,7 +1278,6 @@ label v14s36:
     pause 0.75
 
     if laurenrs:
-
         play sound "sounds/vibrate.mp3"
 
         scene v14s36_13 # FPP. MC looks at his phone and see's that Lauren is calling him
@@ -1423,7 +1422,6 @@ label v14s36:
         jump v14s38
 
     else:
-
         scene v14s36_16
         with dissolve
 

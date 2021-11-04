@@ -569,6 +569,8 @@ label v14s45a:
         scene v14s45a_9
         with dissolve
 
+        pause 0.75
+
     else:
         scene v14s45a_8
         with dissolve
@@ -577,5 +579,7 @@ label v14s45a:
 
         scene v14s45a_9
         with dissolve
+
+        pause 0.75
 
     jump v14s46

@@ -364,4 +364,6 @@ label v14s28:
     scene v14s28_7 # TPP. Show MC walking outside, slight smile, mouth closed.
     with dissolve
 
+    pause 0.75
+
     jump v14s29

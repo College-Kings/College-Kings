@@ -323,4 +323,6 @@ label v14s16:
     scene v14s16_7a # TPP. Same as v14s16_7a, slight smile, mouth closed.
     with dissolve
 
+    pause 0.75
+
     jump v14s17

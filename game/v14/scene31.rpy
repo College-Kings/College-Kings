@@ -106,6 +106,8 @@ label v14s31:
     scene v14s31_6 # TPP Show MC heading out the door
     with dissolve
 
+    pause 0.75
+
     # -Transition to Scene 31a/31b based on planning board choices-
     if v14s31_talkcameron:
         jump v14s31a

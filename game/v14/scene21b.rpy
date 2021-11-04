@@ -16,7 +16,9 @@ label v14s21b:
 
     if v14_help_lindsey and not v14_talk_to_chris:
         jump v14s22
+
     elif v14_talk_to_chris:
         jump v14s23
+
     else:
         jump v14s24

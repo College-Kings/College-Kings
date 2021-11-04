@@ -404,14 +404,11 @@ label v14s44:
     scene v14s44_15a
     with dissolve
 
-
     imre "Sorry, [name]! I'll catch you later. I've got something fun planned and I'm about to be late."
 
     scene v14s44_16 # FPP. Show Imre running off away from MC, Imre slight smile, mouth closed.
     with dissolve
 
     u "(Forgot all about the Riley thing, I guess? Either that or he's avoiding the hell out of it, ha.)"
-
-    pause 0.75
 
     jump v14s45

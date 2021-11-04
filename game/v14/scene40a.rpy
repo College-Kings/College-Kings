@@ -123,4 +123,6 @@ label v14s40a:
     scene v14s40a_6 # TPP. Show MC entering the class hallways, slight smile, mouth closed.
     with fade
 
+    pause 0.75
+
     jump v14s43

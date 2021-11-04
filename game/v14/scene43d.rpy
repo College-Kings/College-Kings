@@ -287,7 +287,6 @@ label v14s43d:
     ri "Great, I gotta go chat with Aubrey. Catch you later?"
 
     if v13_FirstThreesome:
-
         scene v14s43d_2g
         with dissolve
 
@@ -307,6 +306,7 @@ label v14s43d:
         with dissolve
 
         u "Later!"
+
     else:
         scene v14s43d_2
         with dissolve
@@ -326,5 +326,6 @@ label v14s43d:
     scene v14s43d_6 # TPP. MC walking down the sidewalk of campus
     with dissolve
 
+    pause 0.75
+
     jump v14s44
-        

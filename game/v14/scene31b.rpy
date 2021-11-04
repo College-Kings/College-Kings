@@ -1350,4 +1350,3 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         pause 0.75
 
         jump v14s33
-
