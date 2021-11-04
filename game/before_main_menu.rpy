@@ -53,6 +53,7 @@ label before_main_menu:
         try: emmy.simplr
         except AttributeError: emmy.create_simplr()
 
+
         # Set up murder mystery stats
         chloe.stats["Competitive"] = True
         chloe.stats["Vindictive"] = [nora]
