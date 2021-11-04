@@ -122,6 +122,7 @@ label v14s30b:
 
                 scene v14s30b_3b
                 with dissolve
+
             "High-fiving the wolf":
                 $ v14s30b_rw_image_two = True
 
@@ -132,7 +133,6 @@ label v14s30b:
 
         scene v14s30b_2
         with dissolve
-
 
         cl "Good call. *Chuckles* I'm gonna post that one on Kiwii."
 
