@@ -21,7 +21,7 @@ screen chicks_presidency_bar(old_var, new_var):
             maximum (758, 32)
             align (0.5, 0.11)
             
-        add "images/presidency_bar/example.png" xalign 0.5
+        add "images/v14/chicks_presidency_race/presidency_bar/example.png" xalign 0.5
 
     timer 6 action Hide("lindsey_vs_chloe")
 
