@@ -177,9 +177,9 @@ label after_load:
             except AttributeError: contact.sentMessages = []
 
             try: contact.profile_picture
-            except AttributeError: contact.profile_picture = "images/phone/messages/profile_pictures/chloeprofilepic.webp"
+            except AttributeError: contact.profile_picture = "images/nonplayable_characters/profile_pictures/chloe.webp"
 
-            try: contact.profilePicture = "images/phone/messages/profile_pictures/chloeprofilepic.webp"
+            try: contact.profilePicture = "images/nonplayable_characters/profile_pictures/chloe.webp"
             except: pass
 
             # Messages
@@ -317,39 +317,39 @@ label after_load:
 
         # v12 Renpy Fixes:
         try: chloe
-        except NameError: chloe = CustomCharacter("Chloe")
+        except NameError: chloe = CustomCharacter("Chloe", "chloe.webp")
         try: amber
-        except NameError: amber = CustomCharacter("Amber")
+        except NameError: amber = CustomCharacter("Amber", "amber.webp")
         try: penelope
-        except NameError: penelope = CustomCharacter("Penelope")
+        except NameError: penelope = CustomCharacter("Penelope", "penelope.webp")
         try: riley
-        except NameError: riley = CustomCharacter("Riley")
+        except NameError: riley = CustomCharacter("Riley", "riley.webp")
         try: lindsey
-        except NameError: lindsey = CustomCharacter("Lindsey")
+        except NameError: lindsey = CustomCharacter("Lindsey", "lindsey.webp")
         try: lauren
-        except NameError: lauren = CustomCharacter("Lauren")
+        except NameError: lauren = CustomCharacter("Lauren", "lauren.webp")
         try: samantha
-        except NameError: samantha = CustomCharacter("Samantha")
+        except NameError: samantha = CustomCharacter("Samantha", "samantha.webp")
         try: emily
-        except NameError: emily = CustomCharacter("Emily")
+        except NameError: emily = CustomCharacter("Emily", "emily.webp")
         try: ms_rose
-        except NameError: ms_rose = CustomCharacter("Ms Rose")
+        except NameError: ms_rose = CustomCharacter("Ms Rose", "ms_rose.webp")
         try: nora
-        except NameError: nora = CustomCharacter("Nora")
+        except NameError: nora = CustomCharacter("Nora", "nora.webp")
         try: aubrey
-        except NameError: aubrey = CustomCharacter("Aubrey")
+        except NameError: aubrey = CustomCharacter("Aubrey", "aubrey.webp")
         try: ryan
-        except NameError: ryan = CustomCharacter("Ryan")
+        except NameError: ryan = CustomCharacter("Ryan", "ryan.webp")
         try: imre
-        except NameError: imre = CustomCharacter("Imre")
+        except NameError: imre = CustomCharacter("Imre", "imre.webp")
         try: chris
-        except NameError: chris = CustomCharacter("Chris")
+        except NameError: chris = CustomCharacter("Chris", "chris.webp")
         try: charli
-        except NameError: charli = CustomCharacter("Charli")
+        except NameError: charli = CustomCharacter("Charli", "charli.webp")
         try: cameron
-        except NameError: cameron = CustomCharacter("Cameron")
+        except NameError: cameron = CustomCharacter("Cameron", "cameron.webp")
         try: josh
-        except NameError: josh = CustomCharacter("Josh")
+        except NameError: josh = CustomCharacter("Josh", "josh.webp")
 
         chloe.name = "Chloe"
         amber.name = "Amber"
