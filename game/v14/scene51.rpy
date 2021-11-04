@@ -594,7 +594,7 @@ label v14s51_continue:
         u "(Uh oh... it's a message from Chloe...)"
         $ chloemad = True
         $ chloe.messenger.newMessage(_("What the hell is going on?!"), queue =False)
-        $ chloe.messenger.newMessage(_("[Name]??? I'm about to order food to go"))
+        $ chloe.messenger.newMessage(_("[name]??? I'm about to order food to go"))
         $ chloe.messenger.newMessage(_("Well, you were right. The food was to die for. You fucking prick."))
 
         label v14s51Chloe_PhoneContinue:
