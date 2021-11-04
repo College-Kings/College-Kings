@@ -168,12 +168,12 @@ label v14s52:
     scene v14s52_11a # FPP. same as v14s52_11 Aaron no expression, mouth open
     with dissolve
 
-    ar "Yeah, mine too."
+    aa "Yeah, mine too."
 
     scene v14s52_11a
     with dissolve
 
-    ar "You grow up seeing them so happy together and then one day your dad is packing up all his clothes and your mom is screaming at him to get the hell out, ha"
+    aa "You grow up seeing them so happy together and then one day your dad is packing up all his clothes and your mom is screaming at him to get the hell out, ha"
 
     scene v14s52_6
     with dissolve
@@ -314,7 +314,7 @@ label v14s52:
                 scene v14s52_13c
                 with dissolve
 
-                mc "Yeah, you-"
+                u "Yeah, you-"
 
                 scene v14s52_13j # FPP. Chris has walked into his bedroom and is no longer visible and the door is shut
                 with dissolve
