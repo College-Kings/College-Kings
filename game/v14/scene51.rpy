@@ -4,9 +4,17 @@
 # Time: Evening
 
 init python:
+    def v14s51_reply1():
+        chloe.messenger.newMessage(_("I'm already full on breadsticks... Ugh! Hurry up, [name]. Please?"))
+        chloe.messenger.addReply(_("I'll be there as soon as I can, Chloe."))
+        chloe.messenger.newMessage(_("I'll give you 10 more minutes. If you're still not here by then, I'm going home."))
+
     def v14s51_reply2():
         if chloers or chloegf:
-            chloeSus += 1
+            setattr(store, "v14_chloeSus", True)
+        chloe.messenger.newMessage(_("I'm already full on breadsticks... Ugh! Hurry up, [name]. Please?"))
+        chloe.messenger.addReply(_("I'll be there as soon as I can, Chloe."))
+        chloe.messenger.newMessage(_("I'll give you 10 more minutes. If you're still not here by then, I'm going home."))
 
 label v14s51:
     scene v14s51_1 # TPP. Show MC walking into Chloe's room and closing the door behind him, slight smile, mouth closed
@@ -59,11 +67,8 @@ label v14s51_text:
             $ chloe.messenger.newMessage(_("Hey, where are you??"), queue =False)
             $ chloe.messenger.addReply(_("Sorry, I'm running late. The cab broke down, waiting on another."))
             $ chloe.messenger.newMessage(_("I thought you'd already be here? Are you lying to me?"))
-            $ chloe.messenger.addReply(_("I'm coming, I promise. Just order your starter."), v14s51_Reply1)
+            $ chloe.messenger.addReply(_("I'm coming, I promise. Just order your starter."), v14s51_reply1)
             $ chloe.messenger.addReply(_("I'd never lie to you, I'll be there soon."), v14s51_reply2)
-            $ chloe.messenger.newMessage(_("I'm already full on breadsticks... Ugh! Hurry up, [name]. Please?"))
-            $ chloe.messenger.addReply(_("I'll be there as soon as I can, Chlo."))
-            $ chloe.messenger.newMessage(_("I'll give you 10 more minutes. If you're still not here by then, I'm going home."))
 
             label v14s51_PhoneContinue:
                 if chloe.messenger.replies:
@@ -71,6 +76,9 @@ label v14s51_text:
                 if chloe.messenger.replies:
                     "(I should reply to Chloe.)"
                     jump v14s51_PhoneContinue
+
+            if v14_chloeSus:
+                $ chloeSus += 1
 
             scene v14s51_3
             with dissolve
@@ -161,6 +169,7 @@ label v14s51_closet:
     if v14_money_theft_date_ditch:
         if v14s51_interaction == 1:
             jump v14s51_text
+
     else:
         call screen v14s51_room
 
@@ -220,6 +229,7 @@ label v14s51_purse:
     if v14_money_theft_date_ditch:
         if v14s51_interaction == 1:
             jump v14s51_text
+
     else:
         call screen v14s51_room
 
@@ -292,7 +302,6 @@ label v14s51_pillow:
 # -if MC chose to go to Chloe's room and did not keep listening, and has searched all 4 areas
 
 label v14s51_continue:
-
     scene v14s51_4 # TPP. Show MC slightly worried, mouth closed
     with dissolve
 
@@ -301,7 +310,7 @@ label v14s51_continue:
     scene v14s51_5 # FPP. MC looking at the bedroom door.
     with dissolve
 
-    unknown girls "*Distant chatter*"
+    unknown "*Distant chatter*"
 
     u "(Sounds like some of the girls just got home. I need to get out of here, NOW!)"
 
@@ -340,15 +349,15 @@ label v14s51_continue:
     scene v14s51_11 # FPP. Focus in on the shower, the shower glass steamy so that the girl can't see him.
     with dissolve
 
-    unknown girl "*Whistling badly*"
+    unknown "*Whistling badly*"
 
     u "(Shit, shit, shit!!! There's someone in the shower...) *Whispers* Fuck."
 
-    unknown girl "Hello? Who's there?"
+    unknown "Hello? Who's there?"
 
     u "(OH. SHIT.)"
 
-    unknown girl "Catie, is it you?"
+    unknown "Catie, is it you?"
 
     u "(Quick! Think of something before she steps out and sees me!)"
 
@@ -358,7 +367,7 @@ label v14s51_continue:
 
             u "(Why am I even in here? I need to get the fuck out.)"
 
-            unknown girl "If it's you, make sure you lock the door this time... *Chuckles*"
+            unknown "If it's you, make sure you lock the door this time... *Chuckles*"
 
             u "(These Chicks are wildin'.)"
 
@@ -389,7 +398,6 @@ label v14s51_continue:
 
             menu:
                 "Front door":
-
                     play sound "sounds/lock.mp3"
 
                     scene v14s51_17 # FPP. MC Reaching for the front door knob but doesn't grab it.
@@ -403,7 +411,7 @@ label v14s51_continue:
                     scene v14s51_18 # FPP. Show MC in the kitchen, A back door and a window in view.
                     with dissolve
 
-                    pause .10
+                    pause 0.10
                     
             scene v14s51_18
             with dissolve
@@ -432,6 +440,7 @@ label v14s51_continue:
                     with dissolve
 
                     pause
+
                 "Window":
                     scene v14s51_22
                     with dissolve
@@ -451,7 +460,7 @@ label v14s51_continue:
             scene v14s51_24 # TPP. Show MC climbing out of the window
             with dissolve
 
-            pause .25
+            pause 0.25
 
             scene v14s51_25 # TPP. Close up of MC's leg hitting a small vase that was on the counter
             with vpunch
@@ -461,7 +470,7 @@ label v14s51_continue:
             scene v14s51_26 # TPP. Close up of the Vase falling
             with dissolve
 
-            pause .25
+            pause 0.25
 
             play sound "sounds/thud.mp3"
 
@@ -492,7 +501,7 @@ label v14s51_continue:
 
             u "(I need to get the fuck out this house ASAP! Let's try the window.)"
 
-            unknown girl "If it's you, make sure you lock the door this time... *Chuckles*"
+            unknown "If it's you, make sure you lock the door this time... *Chuckles*"
 
             u "(Lock the door... What do these Chicks get up to in private?)"
 
@@ -501,11 +510,10 @@ label v14s51_continue:
             scene v14s51_30 # FPP. Show MC looking at the fogged up shower glass. Feint silhouette of a naked lady on the other side.
             with dissolve
             
-            unknown girl "Ow- Fuck! My toe! *Whines* Damn you, shampoo..."
+            unknown "Ow- Fuck! My toe! *Whines* Damn you, shampoo..."
             
             menu:
                 "Peek":
-                
                     scene v14s51_31 # FPP. MC peaking over the Shower door, the unknown girl bent over facing away from MC.
                     with dissolve
 
@@ -569,10 +577,10 @@ label v14s51_continue:
 
     u "(And now, a quick text to Lindsey...)"
 
-    call screen phone
-
     $ lindsey.messenger.addReply(_("I'm around the back of the house. Come quick!"))
     $ lindsey.messenger.newMessage(_("OMW!"))
+
+    call screen phone
 
     label v14s51Lindsey_PhoneContinue:
         if lindsey.messenger.replies:
@@ -605,12 +613,12 @@ label v14s51_continue:
     scene v14s51_40 # FPP. Show Lindsey standing infront of MC, MC looking at Lindsey, Lindsey looking at MC, Lindsey slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.25
 
     scene v14s51_41 # TPP. Show Lindsey and MC hugging, both slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.25
 
     scene v14s51_40a # FPP. same as v14s51_40, Lindsey slight smile, mouth open.
     with dissolve 
@@ -618,7 +626,6 @@ label v14s51_continue:
     li "*Whispers* Thank God that's over!"
 
     if v14s51_bathroom_window:
-
         li "*Whispers* What was that loud bang?! Was that you?"
 
         scene v14s51_40
@@ -741,7 +748,6 @@ label v14s51_continue:
         with dissolve
 
     if not v14s51_take_diary and not v14s51_take_money:
-        
         scene v14s51_40c
         with dissolve
 
@@ -778,7 +784,6 @@ label v14s51_continue:
         with dissolve
 
     if v14s51_take_money:
-
         scene v14s51_40
         with dissolve
 
@@ -792,7 +797,7 @@ label v14s51_continue:
         scene v14s51_41
         with dissolve
 
-        pause .25
+        pause 0.25
 
         scene v14s51_40
         with dissolve
@@ -855,6 +860,7 @@ label v14s51_continue:
 
             scene v14s51_43 # FPP. Lindsey kissing MC on the lips
             with dissolve
+
         else:
             play sound "sounds/kiss.mp3"
 
@@ -868,5 +874,6 @@ label v14s51_continue:
     
     if joinwolves:
         jump v14s52
+
     else:
         jump v14s53

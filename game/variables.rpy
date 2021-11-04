@@ -672,6 +672,7 @@ default AutumnTrust = False
 default chrissus = 0
 default v14_noraWhere = False
 default v14_noraWorry = False
+default v14_chloeSus = False
 default v14_money_theft_date_ditch = False # Placeholder variable for using the date as distraction
 
 ###to be looked at:
