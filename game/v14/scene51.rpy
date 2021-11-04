@@ -9,7 +9,6 @@ init python:
             chloeSus += 1
 
 label v14s51:
-
     scene v14s51_1 # TPP. Show MC walking into Chloe's room and closing the door behind him, slight smile, mouth closed
     with dissolve
 
@@ -40,6 +39,7 @@ label v14s51_bedside_table:
     if v14_money_theft_date_ditch:
         if v14s51_interaction == 1:
             jump v14s51_text
+
     else:
         call screen v14s51_room
 
@@ -56,19 +56,19 @@ label v14s51_text:
             scene v14s51_3 # TPP. Show MC looking at his phone, slight smile, mouth closed.
             with dissolve
 
-            $ Chloe.messenger.newMessage(_("Hey, where are you??"), queue =False)
-            $ Chloe.messenger.addReply(_("Sorry, I'm running late. The cab broke down, waiting on another."))
-            $ Chloe.messenger.newMessage(_("I thought you'd already be here? Are you lying to me?"))
-            $ Chloe.messenger.addReply(_("I'm coming, I promise. Just order your starter."), v14s51_Reply1)
-            $ Chloe.messenger.addReply(_("I'd never lie to you, I'll be there soon."), v14s51_reply2)
-            $ Chloe.messenger.newMessage(_("I'm already full on breadsticks... Ugh! Hurry up, [name]. Please?"))
-            $ Chloe.messenger.addReply(_("I'll be there as soon as I can, Chlo."))
-            $ Chloe.messenger.newMessage(_("I'll give you 10 more minutes. If you're still not here by then, I'm going home."))
+            $ chloe.messenger.newMessage(_("Hey, where are you??"), queue =False)
+            $ chloe.messenger.addReply(_("Sorry, I'm running late. The cab broke down, waiting on another."))
+            $ chloe.messenger.newMessage(_("I thought you'd already be here? Are you lying to me?"))
+            $ chloe.messenger.addReply(_("I'm coming, I promise. Just order your starter."), v14s51_Reply1)
+            $ chloe.messenger.addReply(_("I'd never lie to you, I'll be there soon."), v14s51_reply2)
+            $ chloe.messenger.newMessage(_("I'm already full on breadsticks... Ugh! Hurry up, [name]. Please?"))
+            $ chloe.messenger.addReply(_("I'll be there as soon as I can, Chlo."))
+            $ chloe.messenger.newMessage(_("I'll give you 10 more minutes. If you're still not here by then, I'm going home."))
 
             label v14s51_PhoneContinue:
-                if Chloe.messenger.replies:
+                if chloe.messenger.replies:
                     call screen phone
-                if Chloe.messenger.replies:
+                if chloe.messenger.replies:
                     "(I should reply to Chloe.)"
                     jump v14s51_PhoneContinue
 
@@ -571,13 +571,13 @@ label v14s51_continue:
 
     call screen phone
 
-    $ Lindsey.messenger.addReply(_("I'm around the back of the house. Come quick!"))
-    $ Lindsey.messenger.newMessage(_("OMW!"))
+    $ lindsey.messenger.addReply(_("I'm around the back of the house. Come quick!"))
+    $ lindsey.messenger.newMessage(_("OMW!"))
 
     label v14s51Lindsey_PhoneContinue:
-        if Lindsey.messenger.replies:
+        if lindsey.messenger.replies:
             call screen phone
-        if Lindsey.messenger.replies:
+        if lindsey.messenger.replies:
             "(I should reply to Lindsey.)"
             jump v14s51Lindsey_PhoneContinue
 
@@ -586,14 +586,14 @@ label v14s51_continue:
 
         u "(Uh oh... its a message from Chloe...)"
         $ chloemad = True
-        $ Chloe.messenger.newMessage(_("What the hell is going on?!"), queue =False)
-        $ Chloe.messenger.newMessage(_("[Name]??? I'm about to order food to go"))
-        $ Chloe.messenger.newMessage(_("Well, you were right. The food was to die for. You fucking prick."))
+        $ chloe.messenger.newMessage(_("What the hell is going on?!"), queue =False)
+        $ chloe.messenger.newMessage(_("[Name]??? I'm about to order food to go"))
+        $ chloe.messenger.newMessage(_("Well, you were right. The food was to die for. You fucking prick."))
 
         label v14s51Chloe_PhoneContinue:
-            if Chloe.messenger.replies:
+            if chloe.messenger.replies:
                 call screen phone
-            if Chloe.messenger.replies:
+            if chloe.messenger.replies:
                 "(I should reply to Chloe.)"
                 jump v14s51Chloe_PhoneContinue
 
@@ -863,6 +863,8 @@ label v14s51_continue:
 
         scene v14s51_42a # FPP. Same as v14s51_42, Lindsey slight smile, mouth closed.
         with dissolve
+    
+    $ freeRoam = False
     
     if joinwolves:
         jump v14s52
