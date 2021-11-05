@@ -5,7 +5,6 @@
 # Render 9 Unique 62 Total
 
 label v14s53:
-
     scene v14s53_1 # TPP. MC enters the Apes Frat house, slight smile, mouth closed
     with dissolve
 

@@ -419,7 +419,6 @@ label v14s51_continue:
 
             menu:
                 "Back door":
-
                     scene v14s51_19 # FPP. Show MC reaching for the back door knob.
                     with dissolve
                     
