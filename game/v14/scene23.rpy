@@ -668,7 +668,7 @@ label v14s23:
                     scene v14s23_2b
                     with dissolve
 
-                    u "I'm sorry man we can try to-"
+                    u "I'm sorry man, we can try to-"
 
                     scene v14s23_2c
                     with dissolve
@@ -704,7 +704,7 @@ label v14s23:
     scene v14s23_2a
     with vpunch
 
-    ch "Oh, you can get that bro."
+    ch "Oh, you can get that, bro."
 
     scene v14s23_2b
     with dissolve
