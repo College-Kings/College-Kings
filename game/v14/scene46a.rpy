@@ -167,7 +167,7 @@ label v14s46a:
     scene v14s46a_7
     with dissolve
 
-    la "*Speaking softly* My voice is all you can hear as you sink deeper and deeper... Into a peaceful...Pleasant... Relaxing state."
+    la "*Speaking softly* My voice is all you can hear as you sink deeper and deeper... into a peaceful... pleasant... relaxing state."
 
     scene v14s46a_6e  # TPP. Same as v14s46a_6b, but MC laughing, eyes open, mouth open.
     with dissolve
