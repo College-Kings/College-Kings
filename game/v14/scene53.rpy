@@ -328,6 +328,9 @@ label v14s53:
             scene v14s53_6k
             with dissolve
 
+            if badsinging_Sam:
+                $ grant_achievement("clean_joker")
+
             u "I know exactly what you mean, Sam. Look at me."
 
             scene v14s53_6l # FPP. same as v14s53_6i Sam lifts her chin and wipes her tears, making eye contact with MC, sad expression

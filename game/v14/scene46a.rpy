@@ -349,6 +349,8 @@ label v14s46a:
         scene v14s46a_6h  # TPP. Same as v14s46a_6g, but MC mouth closed, looking at Lauren, Lauren looking at MC, smiling, mouth open.
         with dissolve
 
+        $ grant_achievement("your_eyelids_are_heavy")
+
         la "*Chuckles** I'm so sorry! *Laughs* It was fun though, right? Did it feel real?"
 
         scene v14s46a_6i  # TPP. Same as v14s46a_6h, but MC mouth open and Lauren mouth closed.

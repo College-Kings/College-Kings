@@ -675,6 +675,8 @@ label v14s23:
 
                     ch "Don't change the plan because of me, it's really not a bad idea, but I don't wanna do it with you guys."
 
+                    $ grant_achievement("agree_to_disagree")
+
                     ch "I wish you luck with the campaign of course and I want the best for you, but this isn't the move for the Wolves or myself."
 
                     ch "Maybe something else will come up later on and I can help you out."

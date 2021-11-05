@@ -859,6 +859,8 @@ label v14s47_passenger:
                 $ v14s47_solo_bird = True
                 $ v14s47_pics += 1
 
+                $ grant_achievement("say_chirp")
+
                 u "Yeah, Linds. A crazy bird lady might buy the car simply because he's sitting on it. *Chuckles*"
 
                 scene v14s47_passenger_4a
