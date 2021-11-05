@@ -343,6 +343,8 @@ label v14s22_end:
         scene v14s22_8 # TPP. Lindsey embraces and kisses MC passionately
         with dissolve
 
+        pause 0.75
+
     scene v14s22_5
     with dissolve
 
