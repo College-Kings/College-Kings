@@ -710,7 +710,7 @@ label v14s51_continue:
         scene v14s51_40d
         with dissolve
 
-        li "*Whispers* I know, yeah...My campaign is really going to suffer without that money."
+        li "*Whispers* I know, yeah... My campaign is really going to suffer without that money."
 
         scene v14s51_40c
         with dissolve
@@ -747,7 +747,7 @@ label v14s51_continue:
         scene v14s51_42 # TPP. Show MC walking away from Lindsey, MC Neutral face, mouth closed, Lindsey in the background, Lindsey slight frown, mouth closed.
         with dissolve
 
-    if not v14s51_take_diary and not v14s51_take_money:
+    elif not v14s51_take_money:
         scene v14s51_40c
         with dissolve
 
@@ -783,7 +783,8 @@ label v14s51_continue:
         scene v14s51_42
         with dissolve
 
-    if v14s51_take_money:
+    #if v14s51_take_money:
+    else:
         scene v14s51_40
         with dissolve
 
