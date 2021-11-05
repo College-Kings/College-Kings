@@ -596,7 +596,7 @@ label v14s23:
 
                 ch "Haha, you two are something else, really."
                 
-                if v14s23_agree and v14s23_disagree:
+                if v14s23_agree:
                     $ set_presidency_percent(v14_lindsey_popularity - 1)
                     $ v14_pw_half_chris_support = True
                     scene v14s23_2c
