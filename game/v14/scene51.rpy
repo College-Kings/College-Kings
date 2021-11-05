@@ -155,6 +155,7 @@ label v14s51_closet:
     menu :
         "Take the $900":
             $ v14s51_take_money = True
+            $ v14s51_take_900 = True
             scene v14s51_closet_3b # FPP. Same as v14s51_closet_3a, MC holding the money, the box not in sight
             with fade
 
@@ -215,6 +216,7 @@ label v14s51_purse:
     menu:
         "Take the $300":
             $ v14s51_take_money = True
+            $ v14s51_take_300 = True
             scene v14s51_purse_2d # FPP. Same as v14s51_purse_2c, MC holding just the money and not the purse
             with dissolve
 

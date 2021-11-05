@@ -677,3 +677,5 @@ default v14s51_interaction = 0
 default v14s51_kitchen_window = False
 default v14s51_take_diary = False
 default v14s51_take_money = False
+default v14s51_take_300 = False
+default v14s51_take_900 = False
