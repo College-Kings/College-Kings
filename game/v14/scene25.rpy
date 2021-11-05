@@ -954,6 +954,7 @@ label v14s25:
             menu:
                 "Fuck Amber":
                     $ add_point(KCT.TROUBLEMAKER)
+                    $ v14_amber_sex = True
                     scene v14s25_21a # FPP. Same as v14s25_21, Amber flirtatious smile, mouth closed.
                     with dissolve
 

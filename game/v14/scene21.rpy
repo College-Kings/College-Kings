@@ -232,6 +232,7 @@ label v14s21:
         "Continue":
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.TROUBLEMAKER)
+            $ v14_chloe_sex = True
             jump v14s21a
         
         "Pull back":

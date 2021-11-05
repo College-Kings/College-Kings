@@ -653,10 +653,13 @@ label v14s36:
         menu:
             "Kiss her":
                 $ jennyrs = True
+                $ v14_jenny_sex = True
                 if chloegf or laurenrs or penelopers:
                     $ add_point(KCT.TROUBLEMAKER)
                 else:
                     $ add_point(KCT.BOYFRIEND)
+
+                label v14s36_sg:
 
                 scene v14s36_3h # TPP. same as v14s36_3d MC grabs Jenny's face and kisses her, both of their eyes are closed
                 with dissolve
@@ -1135,6 +1138,8 @@ label v14s36:
                 with dissolve
 
                 u "(My life is never dull, haha!)"
+
+                $ renpy.end_replay()
 
             "Don't kiss her":
                 $ jennyawkward = True

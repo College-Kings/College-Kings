@@ -26,6 +26,8 @@ label v14s01:
 
     menu:
         "We're doing this":
+            label v14s01_sg:
+        
             $ v13_FirstThreesome = True
             u "I'm gonna feel much better after this."
 
@@ -311,6 +313,8 @@ label v14s01:
             with dissolve
 
             u "(Am I just a lucky bastard or did I do something to deserve that? They sure did act like I earned this... Whatever I did, I need to keep doing it.)"
+
+            $ renpy.end_replay()
 
             scene v14s01_14 # TPP. Show MC getting out of his bed (he's naked), slight smile, mouth closed
             with dissolve

@@ -577,6 +577,9 @@ label v14s53:
             menu:
                 "Take your pants off":
                     $ add_point(KCT.TROUBLEMAKER)
+                    $ v14_samantha_sex = True
+                    
+                    label v14s53_sg:
 
                     scene v14s53_3k # FPP. same as v14s53_3j MC smirks and begins unbuttoning his pants, Sam leans slightly back and is grabbing in between mc's legs with one hand and has one hand down her shorts over her pussy with the other
                     with fade

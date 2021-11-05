@@ -282,4 +282,6 @@ label v14s53a:
 
     u "(Haha, guess I don't have to. Let's get to bed.)"
 
+    $ renpy.end_replay()
+
     jump v14s53b
