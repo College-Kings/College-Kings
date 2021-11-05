@@ -490,7 +490,7 @@ label v14s52:
 
         imre "Come the fuck on, [name]!"
 
-        jump v14s54
+        jump end14
 
     else: 
         scene v14s52_19 # TPP. Show a side view image of just Mc holding his phone in front of his face, looking at his phone, extremely angry expression, mouth open
@@ -498,4 +498,4 @@ label v14s52:
 
         pause 0.75
 
-        jump v14s54
+        jump end14
