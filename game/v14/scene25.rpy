@@ -1045,6 +1045,7 @@ label v14s25:
                     menu:
                         "Let her stay":
                             $ add_point(KCT.TROUBLEMAKER)
+                            $ v14s25_letherstay = True
                             u "(Ha, hard as stone on the outside but a softie on the inside.)"
 
                             scene v14s25_17e
