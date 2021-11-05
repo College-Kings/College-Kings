@@ -25,6 +25,7 @@ label v14s19:
     pause 0.75
 
     scene v14s19_4 # FPP. MC now inside room with Chloe, MC looking at Chloe, Chloe looking at mirror, Chloe mouth open
+    with dissolve
 
     cl "Took you long enough! Ready to get started?"
 
