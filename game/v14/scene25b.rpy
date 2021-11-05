@@ -65,7 +65,7 @@ label v14s25b:
 
         pause 0.75
 
-        if v14s25_letherstay: #placeholder
+        if v14s25_letherstay:
             scene v14s25b_8 # TPP. Show MC tucking Amber in bed, MC, slight smile, mouth closed, Amber, eyes closed, slight smile, mouth closed
             with dissolve
 
@@ -76,7 +76,7 @@ label v14s25b:
 
             pause 0.75
 
-    else: #placeholder
+    else:
         scene v14s25b_6c # FPP. Same as v14s25b_6, Amber now turns and faces away from MC while laying in bed, MC doesn't see her face
         with dissolve
     
