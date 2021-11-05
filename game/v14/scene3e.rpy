@@ -55,7 +55,7 @@ label v14s03e:
 
         ry "You know it!"
 
-    else: #placeholder
+    else:
         scene v14s03e_4 # TPP. Show MC walking through brothal corridor, neutral expression, mouth closed 
         with dissolve
 
