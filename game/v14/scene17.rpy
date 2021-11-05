@@ -204,7 +204,7 @@ label v14s17:
     if laurenrs or not v11_aubrey_sex: #correction for saves where this variable was defaulting to True - which can't be the case if v11_aubreysex is False, or if laurenrs is still True
         $ laurenrs_v11aubrey = False
 
-    if laurenrs_v11aubrey or laurenmad: #placeholder
+    if laurenrs_v11aubrey or laurenmad:
         $ laurenmad = True
         scene v14s17_8d # FPP. Same as v14s17_8, neutral expression
         with dissolve
