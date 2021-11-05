@@ -218,7 +218,6 @@ label v14s21:
 
     cl "We can call it that."
 
-
     scene v14s21_10 # TPP. Show Chloe kissing MC.
     with dissolve
     play sound "sounds/kiss.mp3"
