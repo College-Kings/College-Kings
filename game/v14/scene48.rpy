@@ -77,7 +77,7 @@ label v14s48:
         scene v14s48_6
         with dissolve
 
-        li "Thanks for the coffee by the way. *Chuckles* I should be the one treating you though, don�t you think?�"
+        li "Thanks for the coffee by the way. *Chuckles* I should be the one treating you though, don't you think?"
 
         scene v14s48_6a
         with dissolve
@@ -118,7 +118,7 @@ label v14s48:
     scene v14s48_6b # FPP. Same as v14s48_6, Lindsey different pose
     with dissolve
 
-    li "*Laughs* I see you�re practicing your salesman skills already."
+    li "*Laughs* I see you're practicing your salesman skills already."
 
     scene v14s48_6c # FPP. Same as v14s48_6b, Lindsey mouth closed
     with dissolve
@@ -345,7 +345,7 @@ label v14s48_continue2:
         scene v14s48_6b
         with dissolve
 
-        li "But I think it depends on the customer who�s buying, no?"
+        li "But I think it depends on the customer who's buying, no?"
 
         scene v14s48_6
         with dissolve

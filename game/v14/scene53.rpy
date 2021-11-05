@@ -65,7 +65,6 @@ label v14s53:
     with dissolve
 
     menu:
-
         "Make a joke":
             $ badsinging_Sam = True
             $ add_point(KCT.TROUBLEMAKER)
@@ -178,14 +177,12 @@ label v14s53:
     with dissolve
 
     if v11_invite_sam_europe:
-
         scene v14s53_6d # FPP. same as v14s53_6c Sam is looking at MC, no expression, sams's mouth is open
         with dissolve
 
         sa "*Drunk* You know, I overdosed when we were in Amsterdam."
 
         if cameronBro:
-
             scene v14s53_6e # FPP. same as v14s53_6d Sam's mouth is closed
             with dissolve
 
@@ -197,21 +194,18 @@ label v14s53:
             u "I didn't think that meant an overdose, though. I'm so sorry."
 
             if v11_invite_sam_europe and v13_invite_samantha:
-
                 scene v14s53_6d
                 with dissolve
 
                 sa "*Drunk* For what? Haha... I make my own choices, you know."
 
             if v11_invite_sam_europe and not v13_invite_samantha:
-
                 scene v14s53_6f # FPP. same as v14s53_6d Sam has a slight smile
                 with dissolve
 
                 sa "*Drunk* Oh, don't be. You did the right thing; I just like to rebel. *Chuckles*"
 
         else:
-
             scene v14s53_6e
             with dissolve
 
@@ -233,7 +227,6 @@ label v14s53:
             sa "*Drunk* Why would he? It's like family shame, haha. You keep that shit hidden."
 
     else:
-
         scene v14s53_6d
         with dissolve
 
@@ -329,7 +322,6 @@ label v14s53:
     with dissolve
 
     menu:
-
         "Help Samantha be clean":
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.BRO)
@@ -370,14 +362,12 @@ label v14s53:
             u "Drugs give people a distraction from their problems for a moment, and that's fucking magical. I admit."
 
             if v11_invite_sam_europe:
-
                 scene v14s53_6m
                 with dissolve
 
                 u "But you don't have enough self-control to live this way. You overdosed. You're risking your life, Sam."
 
             else:
-
                 scene v14s53_6m
                 with dissolve
 
@@ -414,7 +404,6 @@ label v14s53:
             u "*Chuckles* What?"
 
             if SamanthaRS:
-
                 scene v14s53_3c # TPP. same as v14s53_3b Show sam pushing the bottle of beer and pills away from her on the couch, grabbing mc behind the head and pulling him in for a kiss, Sam's eyes are closed lustful expression, Mc's eyes are open slightly shocked expression
                 with dissolve
 
@@ -427,7 +416,6 @@ label v14s53:
                 with dissolve
 
                 menu:
-
                     "Accept the kiss":
                         $ add_point(KCT.BRO)
 
@@ -591,7 +579,9 @@ label v14s53:
                     scene v14s53_3k # FPP. same as v14s53_3j MC smirks and begins unbuttoning his pants, Sam leans slightly back and is grabbing in between mc's legs with one hand and has one hand down her shorts over her pussy with the other
                     with fade
 
-                jump v14s53a
+                    pause 0.75
+
+                    jump v14s53a
 
                 "Don't take your pants off":
                     $ add_point(KCT.BOYFRIEND)
@@ -613,14 +603,12 @@ label v14s53:
                     u "That's not the point. You're really drunk right now, and I just don't think it's a good idea."
 
                     if badsinging_Sam:
-
                         scene v14s53_6zf # FPP. same as v14s53_6zc Sam has increased to fully angry expression
                         with dissolve
 
                         sa "*Drunk* See, I was right! Ha! All of you are stupid dickheads. Every single one of you!"
 
                     else:
-
                         scene v14s53_6zc
                         with dissolve
 
@@ -643,5 +631,7 @@ label v14s53:
 
                     scene v14s53_8
                     with fade
+
+                    pause 0.75
 
                     jump v14s53b
