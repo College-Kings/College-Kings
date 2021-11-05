@@ -241,12 +241,12 @@ label v14s17:
 
         u "Lauren, I..."
 
-        u "I'm extremely sorry about all and any of the mistakes I've made, I really am. I hope that one day you can forgive me."
+        u "I'm extremely sorry about all and any of the mistakes I've made, I really am."
 
         scene v14s17_8d
         with dissolve
 
-        la "Yeah... One day maybe."
+        la "Yeah..."
 
         la "I've moved on from it regardless though... So..."
 
