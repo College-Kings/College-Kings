@@ -150,4 +150,4 @@ define character.trainer = Character("Trainer", who_color="#147efb", who_outline
 define character.lady = Character("Lady", who_color="#ff8afb", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.gentleman = Character("Gentleman", who_color="#147efb", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.elm = Character("Elijah's mother")
-define character.bitd = Character("Bird")
+define character.bird = Character("Bird")
