@@ -80,7 +80,7 @@ label v14s31:
     pause 0.5
 
     if chloegf: # -If ChloeGF
-        scene v14s31__4a # TPP Same angle as 4, MC crossing his arms over his chest and looking worried
+        scene v14s31_4a # TPP Same angle as 4, MC crossing his arms over his chest and looking worried
         with dissolve
 
         u "(Damn, if I didn't know this campaign was important to her, I know now. She's not even thinking about us.)"
