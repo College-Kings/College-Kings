@@ -272,11 +272,6 @@ label v14s03e:
 
     ry "*Laughs* No it wasn't."
 
-    #scene v14s03e_12
-    #with dissolve
-
-    #u "Huh? *Chuckles*"
-
     scene v14s03e_12b # FPP. Same as v14s03e_12a, slight smile
     with dissolve
 
