@@ -446,7 +446,6 @@ label v14s46a:
         la "You still love me, right?"
 
         menu: # -MC chooses Event1 or Event2
-            
             "Of course I do": # -Event1 Of course I do
                 scene v14s46a_22a
                 with dissolve

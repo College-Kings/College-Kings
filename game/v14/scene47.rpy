@@ -808,7 +808,6 @@ label v14s47_passenger:
 
         menu:
             "Scare bird away":
-
                 $ v14s47_solo_no_bird = True
                 $ v14s47_pics += 1
                 
@@ -857,7 +856,6 @@ label v14s47_passenger:
                 li "Alrighty... Anymore?"
 
             "Take photo of bird":
-
                 $ v14s47_solo_bird = True
                 $ v14s47_pics += 1
 
@@ -878,8 +876,8 @@ label v14s47_passenger:
                 scene v14s47_passenger_4a
                 with dissolve
 
-                li "Alrighty... Anymore?"
-            
+                li "Alrighty... Any more?"
+
 label v14s47_end:
     scene v14s47_end_1 # FPP. MC and Lindsey standing by the car, next to each other, Lindsey looking at MC, Lindsey smiling, mouth closed
     with dissolve

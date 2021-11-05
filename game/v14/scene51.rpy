@@ -294,7 +294,6 @@ label v14s51_pillow:
     else:
         call screen v14s51_room
 
-
 # More stuff for Oscar :D
 # -if MC chose to keep listening to Lindsey and Aubrey's conversation more than once and has searched 2 areas
 # -Automatic end of free roam
