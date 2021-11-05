@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 1), LINDSEY (Outfit: 3)
 # Time: Evening
 
-
 label v14s48:
     scene v14s48_1 # TPP. Show MC and Lindsey entering the coffee shop, both smiling, mouths closed
     with dissolve
