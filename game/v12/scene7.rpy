@@ -413,8 +413,6 @@ label v12s7fr:
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
-    $ freeRoam = True
-
     call screen v12s7_seating_front
 
 label v12s7_aubrey1:

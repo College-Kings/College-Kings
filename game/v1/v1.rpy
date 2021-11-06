@@ -875,7 +875,6 @@ label starta: #for compatibility only
     play sound "sounds/vibrate.mp3"
     
     # Enter free roam
-    $ freeRoam = True
     show screen freeRoamTutorial
     call screen v1_freeRoam1_1
     with dissolve
@@ -1207,7 +1206,6 @@ label starta: #for compatibility only
         call screen v1_freeRoam1_3
 
 label efra:
-    $ freeRoam = False
     scene s59
     stop music fadeout 2.0
     play sound "sounds/knock.mp3"
@@ -3005,8 +3003,7 @@ label aw_bd:
     with dissolve
 
     u "Alright, let's go."
-
-    $ freeRoam = True
+    
     call screen v1_freeRoam2_1
 
 label v1_freeRoam2_sam:
@@ -3737,7 +3734,6 @@ label v1_freeRoam2_grayson2:
 
 label v1_freeRoam2_end:
 label fr2end: #for compatibility only
-    $ freeRoam = False
 
     stop music fadeout 2.0
     
