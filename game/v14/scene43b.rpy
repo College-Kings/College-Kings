@@ -219,7 +219,7 @@ label v14s43b:
     scene v14s43b_9a
     with dissolve
 
-    u "*Laughs* Yeah. I get that, That means I'll work with..."
+    u "*Laughs* Yeah. I get that..."
 
     scene v14s43b_9a
     with dissolve
@@ -231,7 +231,7 @@ label v14s43b:
             scene v14s43b_9a
             with dissolve
 
-            u "Haha, sorry man. This will be too good to miss."
+            u "But sorry, man. This will be too good to miss."
 
             scene v14s43b_9c # FPP. same as v14s43b_9 shocked expression, mouth open
             with dissolve
@@ -442,7 +442,7 @@ label v14s43b:
             scene v14s43b_9a
             with dissolve
 
-            u "Haha, sorry bro..."
+            u "But sorry, bro..."
 
             scene v14s43b_9a
             with dissolve
@@ -482,7 +482,7 @@ label v14s43b:
             scene v14s43b_9
             with dissolve
 
-            imre "No shit,"
+            imre "No shit"
 
             scene v14s43b_10a # TPP. same as v14s43b_10 Imre instead of MC, Imre goes and sits next to Penelope, Imre looking at Penelope slight smile mouth open, Penelope slight disgusted exression, mouth closed, eyes wide open looking at Imre
             with dissolve
