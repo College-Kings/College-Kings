@@ -566,6 +566,7 @@ default v12s24_emmymatch = False
 default chrismad = False
 default v12_sauna_sneak1 = False
 default v12_girl = "na"
+default v12s7_riley2_convo = False
 
 # 13.0
 default v13_penelope_concert = False

@@ -20,7 +20,7 @@ screen murder_button_overlay(character):
         if v12s7_seenList:
             action Jump("v12s7_mc_caught")
         else:
-            if character.name == "riley" and v12s7_riley2:
+            if v12s7_riley2_convo:
                 action [ Function(character.kill), Jump("v12s7_{}_kill2".format(char_name)) ]
             else:
                 action [ Function(character.kill), Jump("v12s7_{}_kill".format(char_name)) ]

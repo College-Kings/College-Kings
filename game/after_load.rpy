@@ -622,6 +622,8 @@ label after_load:
         except NameError: v11_check_on_nora = False
         try: v10_lauren_sg
         except NameError: v10_lauren_sg = False
+        try: v12s7_riley2_convo
+        except NameError: v12s7_riley2_convo = False
 
         # v13 Errors
         try: v13_penelope_concert

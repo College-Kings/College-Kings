@@ -4134,6 +4134,7 @@ label v12s7_amber_kill:
 
 label v12s7_riley2:
     $ v12s7_riley2 = True
+    $ v12s7_riley2_convo = True
     $ v12s7_seenList = []
 
     show screen murder_button_overlay(riley)
@@ -4301,6 +4302,8 @@ label v12s7_riley2:
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
 
     $ v12s7_endtalkList.append(riley)
+
+    $ v12s7_riley2_convo = False
 
     call screen v12s7_right_gallery_front
 
