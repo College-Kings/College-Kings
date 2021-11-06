@@ -679,6 +679,16 @@ default v14_jenny_sex = False
 default v14_samantha_sex = False
 default v14_penelope_date = False
 default v14_money_theft_concert_distraction = False # Placeholder for choosing the concert to distract Chloe
-
+default v14_pics_with_linds = False
+default v14s47_linds_hood = False
+default v14s47_solo_hood = False
+default v14s47_linds_trunk = False
+default v14s47_solo_trunk = False
+default v14s47_linds_driver = False
+default v14s47_solo_driver = False
+default v14s47_linds_hips = False
+default v14s47_linds_knees = False
+default v14s47_solo_no_bird = False
+default v14s47_solo_bird = False
 
 #MENTAL NOTE: Adjust dialogue of 43b in case of pictures when mc is wolf

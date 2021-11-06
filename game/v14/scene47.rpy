@@ -346,7 +346,6 @@ label v14s47:
 
 label v14s47_hood:
     if v14_pics_with_linds:
-
         $ v14s47_linds_hood = True
         $ v14s47_pics += 1
 
@@ -543,7 +542,6 @@ label v14s47_trunk:
 
 label v14s47_driver:
     if v14_pics_with_linds:
-
         $ v14s47_linds_driver = True
         $ v14s47_pics += 1
 
