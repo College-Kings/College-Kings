@@ -203,7 +203,7 @@ label v14s48_continue:
         scene v14s48_6c
         with dissolve
 
-        u "True, let's hope there's someone out there who can see it's potential. *Chuckles*"
+        u "True, let's hope there's someone out there who can see its potential. *Chuckles*"
 
     scene v14s48_6
     with dissolve
