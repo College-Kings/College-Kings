@@ -694,5 +694,3 @@ default v14s48_lie = False # PLACEHOLDER - CHECK WITH OSCAR THE VARIABLE IN THE 
 default v14_badsinging_Sam = False
 default v14_SamanthaDrugs = False
 default v14s47_pics = 0
-
-#MENTAL NOTE: Adjust dialogue of 43b in case of pictures when mc is wolf
