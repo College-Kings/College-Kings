@@ -647,7 +647,6 @@ default v14_PenArgScene = False
 default v14_PenelopePartner = False
 default v14_PenRomScene = False
 default v14_realwolf = False #Placeholder for choosing real wolf on planning board
-default v14_RileyPartner = False
 default v14_ryan_satin = False
 default v14_talk_to_chris = False
 default v14s03a_left_cup = False

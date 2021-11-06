@@ -439,8 +439,6 @@ label v14s43b:
                 jump v14s43c
 
         "Work with Riley":
-            $ v14_RileyPartner = True
-
             scene v14s43b_9a
             with dissolve
 
