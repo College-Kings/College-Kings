@@ -7,14 +7,10 @@ define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
 define config.default_sfx_volume = 1
 default menu_set = set()
-
 default achievementAtList = None
-default freeRoam = False
-
 
     ## Phone
 default contacts_file_path = os.path.join(config.basedir, "game", "images", "phone", "contacts")
-
 
     ## Kiwii Vars
 default kiwiiUsers = kiwii_users()

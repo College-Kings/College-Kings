@@ -111,9 +111,6 @@ label v13s37:
 
     stop music fadeout 3
     play music "music/v13/Track Scene 37_2.mp3" fadein 2
-
-    $ freeRoam = True
-
     call screen v13s37_garden1
 
 label v13s37_nora:
@@ -861,8 +858,6 @@ label v13s37_chris:
     call screen v13s37_garden1
 
 label v13s37_end:
-    $ freeRoam = False
-
     scene v13s37end_1 # TPP. Show MC walking over to Lindsey, both slight smiles, mouths closed
     #with dissolve
 
