@@ -33,24 +33,24 @@ label v14s29:
     with dissolve
 
     if v14_talk_to_chris:
-        u "Sorry man, I'm doing the Wolves photoshoot with Chris. You aren't?"
+        u "Sorry man, I'm doing the Wolves photoshoot with Chloe."
 
         scene v14s29_3
         with dissolve
 
-        imre "Oh fuck, I forgot about that. Shit, guess I'll meet you there."
+        imre "Oh fuck, I forgot Chris told me about that."
 
         scene v14s29_3a
         with dissolve
 
-        u "Haha, see you soon."
+        u "Haha, no worries."
 
         play sound "sounds/rejectcall.mp3"
 
         scene v14s29_2
         with dissolve
 
-        u "(That guy!) *Chuckles*"
+        u "(I guess we'll do that another time.)"
 
         scene v14s29_4 # TPP. Show MC walking down the sidewalk towards the wolves house
         with dissolve
