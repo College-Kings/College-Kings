@@ -75,6 +75,8 @@ label v14s33:
                     la "Haha, I wish."
 
                 "I miss you too":
+                    $ add_point(KCT.BOYFRIEND)
+                    
                     scene v14s33_3a
                     with dissolve
 
