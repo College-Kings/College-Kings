@@ -6,7 +6,6 @@
 # 22 Unique Renders, 46 Total
 
 label v14s43b:
-
     scene v14s43b_1 # FPP. Mr. Lee walks into the classroom happy and cheery, mouth open
     with dissolve
 
@@ -220,7 +219,7 @@ label v14s43b:
     scene v14s43b_9a
     with dissolve
 
-    u "*Laughs* Yeah. I get that, That means I'll work with..."
+    u "*Laughs* Yeah. I get that..."
 
     scene v14s43b_9a
     with dissolve
@@ -232,7 +231,7 @@ label v14s43b:
             scene v14s43b_9a
             with dissolve
 
-            u "Haha, sorry man. This will be too good to miss."
+            u "But sorry, man. This will be too good to miss."
 
             scene v14s43b_9c # FPP. same as v14s43b_9 shocked expression, mouth open
             with dissolve
@@ -265,7 +264,6 @@ label v14s43b:
             u "No, no, no. Me and you."
 
             if penelopeloyal:
-                    
                 scene v14s43b_8b
                 with dissolve
 
@@ -277,7 +275,6 @@ label v14s43b:
                 pe "*Whispers* And me. *Chuckles*"
 
             else:
-
                 scene v14s43b_8b
                 with dissolve
 
@@ -314,7 +311,6 @@ label v14s43b:
             lee "After that, you'll come up with a short scene involving a king and a queen interaction that you'll present next week to the rest of the class."
 
             if v14_ApesPostChloePics:
-
                 scene v14s43b_12 # FPP. MC looks at Penelope in the seat next to him, Penelope looking at MC, slight smile, mouth open
                 with dissolve
 
@@ -369,6 +365,7 @@ label v14s43b:
                 scene v14s43b_13
                 with dissolve
 
+                $ set_presidency_percent(v14_lindsey_popularity + 3)
                 u "(Fuck... I'm glad I didn't go through with posting that shit.)"
 
                 scene v14s43b_12
@@ -442,12 +439,10 @@ label v14s43b:
                 jump v14s43c
 
         "Work with Riley":
-            $ v14_RileyPartner = True
-
             scene v14s43b_9a
             with dissolve
 
-            u "Haha, sorry bro..."
+            u "But sorry, bro..."
 
             scene v14s43b_9a
             with dissolve
@@ -487,7 +482,7 @@ label v14s43b:
             scene v14s43b_9
             with dissolve
 
-            imre "No shit,"
+            imre "No shit."
 
             scene v14s43b_10a # TPP. same as v14s43b_10 Imre instead of MC, Imre goes and sits next to Penelope, Imre looking at Penelope slight smile mouth open, Penelope slight disgusted exression, mouth closed, eyes wide open looking at Imre
             with dissolve
@@ -587,6 +582,7 @@ label v14s43b:
                 scene v14s43b_13
                 with dissolve
 
+                $ set_presidency_percent(v14_lindsey_popularity + 3)
                 u "(Fuck... I'm glad I didn't go through with posting that shit.)"
 
                 scene v14s43b_20a
@@ -627,7 +623,6 @@ label v14s43b:
                 jump v14s43d
 
             else:
-
                 scene v14s43b_20
                 with dissolve
 

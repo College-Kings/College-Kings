@@ -82,6 +82,8 @@ label v14s25:
             scene v14s25_4g # FPP. Same as v14s25_4f, Amber looking down as MC hands her the twezzlers candy, Amber slight smile, mouth open.  
             with dissolve
 
+            $ grant_achievement("how_did_you_know")
+
             am "How did you know these were my favorite?"
 
             scene v14s25_4e
@@ -901,23 +903,23 @@ label v14s25:
             scene v14s25_19 # TPP. Double Vision (like in homecoming Amber sex scene), Show MC and Amber dancing, both slight smile, mouths closed.
             with fade
 
-            pause
+            pause 2.5
             
-            if v14s03a_take_wallet: # if candy shopping with Aubrey
+            if v14s03a_take_wallet and not v14s24a_gummyfish: # if bought Twezzlers
                 scene v14s25_19a # TPP. Same as v14s25_19, Double Vision, Show MC and Amber eating snacks.
                 with fade
 
-                pause 
+                pause 2.5
             
             scene v14s25_19b # TPP. Same as v14s25_19a, Double Vision, Show MC and Amber tongue-kissing,
             with fade
             
-            pause 
+            pause 2.5
 
             scene v14s25_20 # TPP. Show Amber pinning MC against the wall as they kiss.
             with dissolve
 
-            pause 0.75
+            pause 1.75
 
             scene v14s25_21 # FPP. Amber pinning MC against the wall, Amber flirtatious smile, mouth open.
             with dissolve
@@ -927,7 +929,7 @@ label v14s25:
             scene v14s25_20a # TPP. Same as v14s25_20, MC kissing Amber's neck.
             with fade
 
-            pause 0.75
+            pause 1.5
 
             scene v14s25_22 # TPP. Close up of just Amber's face, Amber biting her lip.
             with dissolve
@@ -952,6 +954,7 @@ label v14s25:
             menu:
                 "Fuck Amber":
                     $ add_point(KCT.TROUBLEMAKER)
+                    $ v14_amber_sex = True
                     scene v14s25_21a # FPP. Same as v14s25_21, Amber flirtatious smile, mouth closed.
                     with dissolve
 
@@ -1042,6 +1045,7 @@ label v14s25:
                     menu:
                         "Let her stay":
                             $ add_point(KCT.TROUBLEMAKER)
+                            $ v14s25_letherstay = True
                             u "(Ha, hard as stone on the outside but a softie on the inside.)"
 
                             scene v14s25_17e

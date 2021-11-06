@@ -177,7 +177,7 @@ label v14s19a:
 
                 cl "Perfect! Thank you so much, [name]. This means the world to me."
 
-            "Talk to Lindsey":
+            "Make an excuse":
                 scene v14s19a_1g
                 with dissolve
                 u "I hate to state the obvious but, Chris and I aren't on the best of terms right now... And he's got Nora on his mind, so..."

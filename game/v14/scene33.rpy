@@ -24,7 +24,7 @@ label v14s33:
 
             pause 0.75
 
-            if v11s23_penelope_date:
+            if penelopers and v11s23_penelope_date:
                 jump v14s34
 
             else:
@@ -75,6 +75,8 @@ label v14s33:
                     la "Haha, I wish."
 
                 "I miss you too":
+                    $ add_point(KCT.BOYFRIEND)
+                    
                     scene v14s33_3a
                     with dissolve
 
@@ -163,7 +165,7 @@ label v14s33:
 
                     pause 0.75
 
-                    if v11s23_penelope_date:
+                    if penelopers and v11s23_penelope_date:
                         jump v14s34
                     else:
                         jump v14s35
@@ -220,7 +222,7 @@ label v14s33:
 
                     pause 0.75
                     
-                    if v11s23_penelope_date:
+                    if penelopers and v11s23_penelope_date:
                         jump v14s34
 
                     else:
@@ -248,7 +250,7 @@ label v14s33:
 
             pause 0.75
 
-            if v11s23_penelope_date:
+            if penelopers and v11s23_penelope_date:
                 jump v14s34
 
             else:
@@ -386,7 +388,7 @@ label v14s33:
 
                     pause 0.75
 
-                    if v11s23_penelope_date:
+                    if penelopers and v11s23_penelope_date:
                         jump v14s34
                     else:
                         jump v14s35
@@ -444,7 +446,7 @@ label v14s33:
 
                     pause 0.75
                     
-                    if v11s23_penelope_date:
+                    if penelopers and v11s23_penelope_date:
                         jump v14s34
                     else:
                         jump v14s35

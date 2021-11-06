@@ -162,12 +162,10 @@ label v14s26:
     pause 0.75
 
     if v11_lindsey_slogan == 1:
-
         scene v14s26_6 # FPP. Mc looks up at the banner above the counter, The banner reads "Lindsey, Returning The Promise"
         with dissolve
 
     else:
-
         scene v14s26_6a # FPP. same as v14s26_6 The banner instead reads "Lindsey, Say Bye To The Bullshit"
         with dissolve
 
@@ -262,9 +260,7 @@ label v14s26:
 # -Kiwii post of Lindsey's bake sale, 2 different renders needed for seperate slogans-
 
 # Kiwi Post: v14kw26 - Lindsey and Lauren Selfie in front of her banner (Lindsey, Returning The Promise) on the banner
-
     if v11_lindsey_slogan == 1:
-
         #Selfie with Lauren in front of slogan banner that says Lindsey, Returning The Promise
         $ v14s26_kiwiiPost1 = KiwiiPost("Lindsey", "v14/v14kw26.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! All proceeds go to my campaign fund and to the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
         $ v14s26_kiwiiPost1.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
@@ -280,7 +276,6 @@ label v14s26:
         $ v14s26_kiwiiPost1.newComment("Lauren", ":)")
 
 # Kiwi Post: v14kw26_1 - Lindsey and Lauren Selfie in front of her banner (Lindsey, Say Bye To The Bullshit) on the banner
-
     else:
         #Selfie with Lauren in front of slogan banner that says Lindsey, Say Bye To The Bullshit
         $ v14s26_kiwiiPost2 = KiwiiPost("Lindsey", "v14/v14kw26_1.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! All proceeds go to my campaign fund and to the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
@@ -439,7 +434,6 @@ label v14s26:
     u "See you around, Linds."
 
     if lindseyrs:
-
         scene v14s26_13 # FPP. Lindsey winks at MC, slight smile, mouth open
         with dissolve
 
@@ -452,5 +446,7 @@ label v14s26:
 
     scene v14s26_15 # TPP. mc walking through the campus, no expression, mouth closed
     with dissolve
+
+    pause 0.75
 
     jump v14s27

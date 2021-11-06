@@ -432,4 +432,6 @@ label v14s42:
     scene v14s42_16
     with fade
 
+    pause 0.75
+
     jump v14s42a

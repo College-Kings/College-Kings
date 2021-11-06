@@ -27,7 +27,7 @@ label v14s44:
     scene v14s44_2
     with dissolve
 
-    u "SO YOU'RE SUPPORTING CHLOE???"
+    u "So you're supporting Chloe???"
 
     scene v14s44_2a # TPP. Same as v14s44_2, Elijah now looking at MC, Elijah neutral face, mouth closed.
     with dissolve
@@ -96,8 +96,6 @@ label v14s44:
 
     menu:
         "Chloe":
-            $ set_presidency_percent(v14_lindsey_popularity - 2)
-
             scene v14s44_4
             with dissolve
 
@@ -106,6 +104,7 @@ label v14s44:
             scene v14s44_4a
             with dissolve
 
+            $ set_presidency_percent(v14_lindsey_popularity - 2)
             el "See? Good, logical choice."
 
             scene v14s44_4
@@ -114,8 +113,6 @@ label v14s44:
             u "Ha. Yeah."
 
         "Lindsey":
-            $ set_presidency_percent(v14_lindsey_popularity + 2)
-
             scene v14s44_4
             with dissolve
 
@@ -146,6 +143,7 @@ label v14s44:
             scene v14s44_4a
             with dissolve
 
+            $ set_presidency_percent(v14_lindsey_popularity + 2)
             el "Hmm..."
 
     play sound "sounds/carbrake.mp3"
@@ -404,14 +402,11 @@ label v14s44:
     scene v14s44_15a
     with dissolve
 
-
     imre "Sorry, [name]! I'll catch you later. I've got something fun planned and I'm about to be late."
 
     scene v14s44_16 # FPP. Show Imre running off away from MC, Imre slight smile, mouth closed.
     with dissolve
 
     u "(Forgot all about the Riley thing, I guess? Either that or he's avoiding the hell out of it, ha.)"
-
-    pause 0.75
 
     jump v14s45

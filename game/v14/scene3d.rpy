@@ -167,7 +167,7 @@ label v14s03d:
             scene v14s03d_4g
             with dissolve
 
-            satin "Just! Leave. Okay?"
+            satin "Just! Leave! Okay?!"
 
             scene v14s03d_9 # TPP Satin throwing MC's clothes at him, she looks angry, mouth open
             with dissolve
@@ -190,8 +190,7 @@ label v14s03d:
             u "(What the fuck is wrong with me?)"
 
         "Yes I do":
-
-            u "Yes... I... Do..."
+            u "Yes... I... do..."
 
             scene v14s03d_4i # FPP Same angle as 4, Satin leaning forward, her handson either side of MC's face, she's smiling with her mouth open, looking seductive
             with dissolve
@@ -444,5 +443,6 @@ label v14s03d:
 
             u "(Well that didn't end exactly how I had imagined.)"
 
+$ renpy.end_replay()
 # -Regardless of choice scene continued
 jump v14s03e # -Transition to Scene 3e

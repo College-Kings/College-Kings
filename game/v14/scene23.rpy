@@ -351,7 +351,7 @@ label v14s23:
      
         if v14s23_agree:
             $ set_presidency_percent(v14_lindsey_popularity - 5)
-            $ v14_full_chris_support = True
+            $ v14_chrissupport = 3
             scene v14s23_2c
             with dissolve
 
@@ -419,7 +419,7 @@ label v14s23:
 
         else:
             $ set_presidency_percent(v14_lindsey_popularity - 1)
-            $ v14_rw_half_chris_support = True
+            $ v14_chrissupport = 2
             scene v14s23_2c
             with dissolve
 
@@ -517,6 +517,8 @@ label v14s23:
         menu:
             "Agree with Chris":
                 $ add_point(KCT.BRO)
+                $ set_presidency_percent(v14_lindsey_popularity - 2)
+                $ v14_chrissupport = 3
 
                 scene v14s23_2b
                 with dissolve
@@ -596,9 +598,9 @@ label v14s23:
 
                 ch "Haha, you two are something else, really."
                 
-                if v14s23_agree and v14s23_disagree:
+                if v14s23_agree:
                     $ set_presidency_percent(v14_lindsey_popularity - 1)
-                    $ v14_pw_half_chris_support = True
+                    $ v14_chrissupport = 2
                     scene v14s23_2c
                     with dissolve
 
@@ -657,7 +659,7 @@ label v14s23:
                         
                 else:
                     $ set_presidency_percent(v14_lindsey_popularity + 3)
-                    $ v14_low_chris_support = True
+                    $ v14_chrissupport = 1
                     scene v14s23_2c
                     with dissolve
 
@@ -668,12 +670,14 @@ label v14s23:
                     scene v14s23_2b
                     with dissolve
 
-                    u "I'm sorry man we can try to-"
+                    u "I'm sorry man, we can try to-"
 
                     scene v14s23_2c
                     with dissolve
 
                     ch "Don't change the plan because of me, it's really not a bad idea, but I don't wanna do it with you guys."
+
+                    $ grant_achievement("agree_to_disagree")
 
                     ch "I wish you luck with the campaign of course and I want the best for you, but this isn't the move for the Wolves or myself."
 
@@ -702,9 +706,9 @@ label v14s23:
     play sound "sounds/vibrate.mp3"
 
     scene v14s23_2a
-    with vpunch
+    with dissolve
 
-    ch "Oh, you can get that bro."
+    ch "Oh, you can get that, bro."
 
     scene v14s23_2b
     with dissolve
@@ -761,5 +765,7 @@ label v14s23:
 
     scene v14s23_7 # TPP. MC walking off and looking at his phone, slight smile, mouth closed.
     with dissolve
+
+    pause 0.75
 
     jump v14s24

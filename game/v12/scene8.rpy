@@ -288,10 +288,10 @@ label v12_murder_mystery_reveal:
     with fade
     play sound "images/v12/Scene 7/animations/Track Scene - Ferry Ride (5 sec).mp3"
 
-    pause 5
+    pause 3.5
 
     scene v12mmr15 # TPP. Show MC sitting down, sleeping, mouth closed
-    with dissolve
+    with fade
 
     pause 0.75
 

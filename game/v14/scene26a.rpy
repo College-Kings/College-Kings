@@ -390,4 +390,6 @@ label v14s26a:
     scene v14s26_15 # Ignore as reused from another scene
     with dissolve
 
+    pause 0.75
+
     jump v14s27

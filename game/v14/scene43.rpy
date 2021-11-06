@@ -3,15 +3,13 @@
 # Characters: MC (Outfit: 1), PENELOPE (Outfit: 1)
 # Time: Morning
 # Phone Images: YES
-# v14s43_emily_pic: Emily is laying flat on her back in her bed, one arm holding the phone for selfie, the other trying to cover her nipples but slightly failing, we see a bit of the panties she has on, she's making a kissy face
+# v14kw43: Emily is laying flat on her back in her bed, one arm holding the phone for selfie, the other trying to cover her nipples but slightly failing, we see a bit of the panties she has on, she's making a kissy face
 
 label v14s43:
     scene v14s43_1 # TPP. Show MC walking through the school, slight smile, mouth closed
     with fade
 
     pause
-
-    call screen elections
 
 label v14s43_continue:
     scene v14s43_2 # TPP. Show MC walking through the school (different location), slight smile, mouth closed
@@ -73,7 +71,6 @@ label v14s43_continue:
     with dissolve
 
     if penelopers:
-
         pe "Saved, actually."
 
         scene v14s43_6
@@ -97,7 +94,6 @@ label v14s43_continue:
         pe "Sit down already, weirdo. *Chuckles*"
 
     else:
-
         pe "That depends..."
 
         scene v14s43_6

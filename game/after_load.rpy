@@ -1,6 +1,11 @@
 python early:
     import os
 
+    if renpy.loadable("customCharacters.rpy"):
+        os.remove(os.path.join(config.basedir, "game", "customCharacters.rpy"))
+    if renpy.loadable("customCharacters.rpyc"):
+        os.remove(os.path.join(config.basedir, "game", "customCharacters.rpyc"))
+
     if renpy.loadable("bugTesting/bugTesting_Overwrite.rpy"):
         os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpy"))
     if renpy.loadable("bugTesting/bugTesting_Overwrite.rpyc"):
@@ -177,9 +182,9 @@ label after_load:
             except AttributeError: contact.sentMessages = []
 
             try: contact.profile_picture
-            except AttributeError: contact.profile_picture = "images/phone/messages/profile_pictures/chloeprofilepic.webp"
+            except AttributeError: contact.profile_picture = "images/nonplayable_characters/profile_pictures/chloe.webp"
 
-            try: contact.profilePicture = "images/phone/messages/profile_pictures/chloeprofilepic.webp"
+            try: contact.profilePicture = "images/nonplayable_characters/profile_pictures/chloe.webp"
             except: pass
 
             # Messages
@@ -211,7 +216,7 @@ label after_load:
             except AttributeError: pass
 
 
-        # Transfer Contact object to CustomCharacter class
+        # Transfer Contact object to NonPlayableCharacter class
         try:
             emily.messenger = contact_Emily
             del contact_Emily
@@ -317,39 +322,39 @@ label after_load:
 
         # v12 Renpy Fixes:
         try: chloe
-        except NameError: chloe = CustomCharacter("Chloe")
+        except NameError: chloe = NonPlayableCharacter("Chloe", "chloe.webp")
         try: amber
-        except NameError: amber = CustomCharacter("Amber")
+        except NameError: amber = NonPlayableCharacter("Amber", "amber.webp")
         try: penelope
-        except NameError: penelope = CustomCharacter("Penelope")
+        except NameError: penelope = NonPlayableCharacter("Penelope", "penelope.webp")
         try: riley
-        except NameError: riley = CustomCharacter("Riley")
+        except NameError: riley = NonPlayableCharacter("Riley", "riley.webp")
         try: lindsey
-        except NameError: lindsey = CustomCharacter("Lindsey")
+        except NameError: lindsey = NonPlayableCharacter("Lindsey", "lindsey.webp")
         try: lauren
-        except NameError: lauren = CustomCharacter("Lauren")
+        except NameError: lauren = NonPlayableCharacter("Lauren", "lauren.webp")
         try: samantha
-        except NameError: samantha = CustomCharacter("Samantha")
+        except NameError: samantha = NonPlayableCharacter("Samantha", "samantha.webp")
         try: emily
-        except NameError: emily = CustomCharacter("Emily")
+        except NameError: emily = NonPlayableCharacter("Emily", "emily.webp")
         try: ms_rose
-        except NameError: ms_rose = CustomCharacter("Ms Rose")
+        except NameError: ms_rose = NonPlayableCharacter("Ms Rose", "ms_rose.webp")
         try: nora
-        except NameError: nora = CustomCharacter("Nora")
+        except NameError: nora = NonPlayableCharacter("Nora", "nora.webp")
         try: aubrey
-        except NameError: aubrey = CustomCharacter("Aubrey")
+        except NameError: aubrey = NonPlayableCharacter("Aubrey", "aubrey.webp")
         try: ryan
-        except NameError: ryan = CustomCharacter("Ryan")
+        except NameError: ryan = NonPlayableCharacter("Ryan", "ryan.webp")
         try: imre
-        except NameError: imre = CustomCharacter("Imre")
+        except NameError: imre = NonPlayableCharacter("Imre", "imre.webp")
         try: chris
-        except NameError: chris = CustomCharacter("Chris")
+        except NameError: chris = NonPlayableCharacter("Chris", "chris.webp")
         try: charli
-        except NameError: charli = CustomCharacter("Charli")
+        except NameError: charli = NonPlayableCharacter("Charli", "charli.webp")
         try: cameron
-        except NameError: cameron = CustomCharacter("Cameron")
+        except NameError: cameron = NonPlayableCharacter("Cameron", "cameron.webp")
         try: josh
-        except NameError: josh = CustomCharacter("Josh")
+        except NameError: josh = NonPlayableCharacter("Josh", "josh.webp")
 
         chloe.name = "Chloe"
         amber.name = "Amber"
@@ -617,6 +622,8 @@ label after_load:
         except NameError: v11_check_on_nora = False
         try: v10_lauren_sg
         except NameError: v10_lauren_sg = False
+        try: v12s7_riley2_convo
+        except NameError: v12s7_riley2_convo = False
 
         # v13 Errors
         try: v13_penelope_concert

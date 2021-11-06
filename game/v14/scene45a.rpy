@@ -41,7 +41,7 @@ label v14s45a:
         am "I looked into a nightclub that's not too far from here. I could make really good money on the weekends."
 
         menu:
-            "Not a bad idea.":
+            "Not a bad idea":
                 $ add_point(KCT.TROUBLEMAKER)
                 scene v14s45a_1b
                 with dissolve
@@ -422,6 +422,8 @@ label v14s45a:
     elif v14_money_theft_date_ditch: # Placeholder for choosing to ditch the date you set up with Chloe to steal money
         play sound "sounds/call.mp3"
 
+        pause 0.75
+
         scene v14s45a_7
         with dissolve
 
@@ -481,6 +483,8 @@ label v14s45a:
     
     elif v14_lindsey_car_sale: #Placeholder for helping Lindsey sell her car.
         play sound "sounds/call.mp3"
+
+        pause 0.75
 
         scene v14s45a_7
         with dissolve
@@ -569,7 +573,11 @@ label v14s45a:
         scene v14s45a_9
         with dissolve
 
+        pause 0.75
+
     else:
+        pause 0.75
+    
         scene v14s45a_8
         with dissolve
 
@@ -577,5 +585,7 @@ label v14s45a:
 
         scene v14s45a_9
         with dissolve
+
+        pause 0.75
 
     jump v14s46
