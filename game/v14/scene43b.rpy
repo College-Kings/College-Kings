@@ -482,7 +482,7 @@ label v14s43b:
             scene v14s43b_9
             with dissolve
 
-            imre "No shit"
+            imre "No shit."
 
             scene v14s43b_10a # TPP. same as v14s43b_10 Imre instead of MC, Imre goes and sits next to Penelope, Imre looking at Penelope slight smile mouth open, Penelope slight disgusted exression, mouth closed, eyes wide open looking at Imre
             with dissolve
