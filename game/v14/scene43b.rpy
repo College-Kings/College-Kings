@@ -586,6 +586,7 @@ label v14s43b:
                 scene v14s43b_13
                 with dissolve
 
+                $ set_presidency_percent(v14_lindsey_popularity + 3)
                 u "(Fuck... I'm glad I didn't go through with posting that shit.)"
 
                 scene v14s43b_20a
