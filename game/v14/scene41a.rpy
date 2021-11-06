@@ -373,7 +373,7 @@ label v14s41a:
 
                         gr "*Laughs* We don't give a fuck about all that. Feelings don't mean shit, [name]."
 
-                        if kct == "popular":
+                        if kct == "confident":
                             scene v14s41a_6a
                             with dissolve
 
