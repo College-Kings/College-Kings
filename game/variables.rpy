@@ -682,3 +682,4 @@ default v14_jenny_sex = False
 default v14_samantha_sex = False
 default v14_penelope_date = False
 default v14_money_theft_concert_distraction = False # Placeholder for choosing the concert to distract Chloe
+default v14_money_theft_date_ditch = False # Placeholder for choosing to ditch the date you set up with Chloe to steal money
