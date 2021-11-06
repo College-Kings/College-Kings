@@ -623,7 +623,6 @@ label v14s43b:
                 jump v14s43d
 
             else:
-
                 scene v14s43b_20
                 with dissolve
 
