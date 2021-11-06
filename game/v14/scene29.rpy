@@ -32,7 +32,7 @@ label v14s29:
     scene v14s29_3a # TPP. Same as v14s29_3, Imre on the phone, Imre slight smile, mouth closed.
     with dissolve
 
-    if v14_full_chris_support or v14_pw_half_chris_support or v14_rw_half_chris_support or v14_low_chris_support:
+    if v14_talk_to_chris:
         u "Sorry man, I'm doing the Wolves photoshoot with Chris. You aren't?"
 
         scene v14s29_3
@@ -55,7 +55,7 @@ label v14s29:
         scene v14s29_4 # TPP. Show MC walking down the sidewalk towards the wolves house
         with dissolve
 
-        if v14_full_chris_support or v14_rw_half_chris_support:
+        if v14_realwolf:
             pause 0.75
             jump v14s30a
 

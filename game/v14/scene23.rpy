@@ -351,7 +351,7 @@ label v14s23:
      
         if v14s23_agree:
             $ set_presidency_percent(v14_lindsey_popularity - 5)
-            $ v14_full_chris_support = True
+            $ v14_chrissupport = 3
             scene v14s23_2c
             with dissolve
 
@@ -419,7 +419,7 @@ label v14s23:
 
         else:
             $ set_presidency_percent(v14_lindsey_popularity - 1)
-            $ v14_rw_half_chris_support = True
+            $ v14_chrissupport = 2
             scene v14s23_2c
             with dissolve
 
@@ -517,6 +517,8 @@ label v14s23:
         menu:
             "Agree with Chris":
                 $ add_point(KCT.BRO)
+                $ set_presidency_percent(v14_lindsey_popularity - 2)
+                $ v14_chrissupport = 3
 
                 scene v14s23_2b
                 with dissolve
@@ -598,7 +600,7 @@ label v14s23:
                 
                 if v14s23_agree:
                     $ set_presidency_percent(v14_lindsey_popularity - 1)
-                    $ v14_pw_half_chris_support = True
+                    $ v14_chrissupport = 2
                     scene v14s23_2c
                     with dissolve
 
@@ -657,7 +659,7 @@ label v14s23:
                         
                 else:
                     $ set_presidency_percent(v14_lindsey_popularity + 3)
-                    $ v14_low_chris_support = True
+                    $ v14_chrissupport = 1
                     scene v14s23_2c
                     with dissolve
 
