@@ -390,7 +390,6 @@ label v14s47_hood:
         li "Nice. Now what?"
     
     else:
-
         $ v14s47_solo_hood = True
         $ v14s47_pics += 1
 
@@ -482,7 +481,6 @@ label v14s47_trunk:
         li "Okay. What's next?"
 
     else:
-
         $ v14s47_solo_trunk = True
         $ v14s47_pics += 1
 
@@ -570,11 +568,9 @@ label v14s47_driver:
         with dissolve
 
         if lindseyrs:
-
             u "Is that even a question? *Chuckles*"
 
         else:
-
             u "Um... Yes. *Laughs*"
 
         scene v14s47_driver_2c # FPP. Same as v14s47_driver_2, Lindsey posing by the door, sucking on the lollipop, making a sexy face at MC, mouth closed
@@ -615,7 +611,6 @@ label v14s47_driver:
         u "Beautiful. *Chuckles* What's next?"
     
     else:
-
         $ v14s47_solo_driver = True
         $ v14s47_pics += 1
 
@@ -707,7 +702,6 @@ label v14s47_passenger:
 
         menu:
             "Hand on hips":
-
                 $ v14s47_linds_hips = True
                 $ v14s47_pics += 1
 
@@ -739,7 +733,6 @@ label v14s47_passenger:
                 li "Alrighty... Anymore?"
 
             "On her knees":
-
                 $ v14s47_linds_knees = True
                 $ v14s47_pics += 1
 
@@ -884,12 +877,10 @@ label v14s47_end:
     scene v14s47_end_1 # FPP. MC and Lindsey standing by the car, next to each other, Lindsey looking at MC, Lindsey smiling, mouth closed
     with dissolve
 
-    if v14s47_pics  < 4:
-
+    if v14s47_pics < 4:
         u "Okay, I think that's enough."
     
     else:
-
         u "Alright. That's every angle of Grandpa's Wagen, I think."
 
     scene v14s47_end_1a # FPP. Same as v14s47_end_1, Lindsey mouth open
