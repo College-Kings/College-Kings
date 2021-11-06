@@ -24,7 +24,7 @@ label v14s48:
 
     pause 0.75
 
-    if v14s03a_take_wallet and v14s24a_gummyfish:
+    if v14s03a_take_wallet:
         scene v14s48_3a # TPP. Same camera as v14s47_3aShow Lindsey going to hand money to the barista, coffees on the counter, all smiling, mouths closed
         with dissolve
 
@@ -56,7 +56,7 @@ label v14s48:
 
     pause 0.75
 
-    if v14s03a_take_wallet and v14s24a_gummyfish and lindseyrs:
+    if v14s03a_take_wallet and lindseyrs:
         scene v14s48_5a # TPP. Same as v14s48_5, show Lindsey reaching over and kissing MC on the cheek
         with dissolve
 
@@ -72,7 +72,7 @@ label v14s48:
 
         u "Of course. *Chuckles*"
 
-    elif v14s03a_take_wallet and v14s24a_gummyfish and not lindseyrs:
+    elif v14s03a_take_wallet and not lindseyrs:
         scene v14s48_6
         with dissolve
 
