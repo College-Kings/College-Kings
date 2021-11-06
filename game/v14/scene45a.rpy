@@ -41,7 +41,7 @@ label v14s45a:
         am "I looked into a nightclub that's not too far from here. I could make really good money on the weekends."
 
         menu:
-            "Not a bad idea.":
+            "Not a bad idea":
                 $ add_point(KCT.TROUBLEMAKER)
                 scene v14s45a_1b
                 with dissolve
