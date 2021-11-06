@@ -65,7 +65,7 @@ label v14s53:
 
     menu:
         "Make a joke":
-            $ badsinging_Sam = True
+            $ v14_badsinging_Sam = True
             $ add_point(KCT.TROUBLEMAKER)
 
             scene v14s53_4c
@@ -328,8 +328,8 @@ label v14s53:
             scene v14s53_6k
             with dissolve
 
-            if badsinging_Sam:
-                $ grant_achievement("clean_joker")
+            if v14_amber_clean:
+                $ grant_achievement("clean_it_up")
 
             u "I know exactly what you mean, Sam. Look at me."
 
@@ -607,7 +607,7 @@ label v14s53:
 
                     u "That's not the point. You're really drunk right now, and I just don't think it's a good idea."
 
-                    if badsinging_Sam:
+                    if v14_badsinging_Sam:
                         scene v14s53_6zf # FPP. same as v14s53_6zc Sam has increased to fully angry expression
                         with dissolve
 
