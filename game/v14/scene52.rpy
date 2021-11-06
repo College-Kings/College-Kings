@@ -9,7 +9,7 @@ label v14s52:
     scene v14s52_1 # TPP. mc walks up and see's the wolves frat house
     with dissolve
 
-    paue 0.75
+    pause 0.75
 
     scene v14s52_2 # TPP. MC enters the front door of the Wolves house and Imre is seen in the hallway looking at mc, imre no expression, mouth closed
     with dissolve
