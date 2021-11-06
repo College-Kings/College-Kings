@@ -231,12 +231,9 @@ label v14s43d:
             scene v14s43d_2c
             with dissolve
 
-
             u "Haha. Umm..."
 
-
     if v13_FirstThreesome:
-
         u "You already know the answer to that question, I think. *Chuckles*"
 
         scene v14s43d_3 # TPP. Show MC winking at Riley, Both slight smile, mouth closed.
