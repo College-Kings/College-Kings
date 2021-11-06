@@ -500,13 +500,15 @@ label v14s46a:
             scene v14s46a_23   # TPP. MC and Lauren kiss each other on the lips.
             with dissolve
 
-            pause 0.5
+            pause 1
 
         else:
+            play sound "sounds/kiss.mp3"
+        
             scene v14s46a_23a  # TPP. MC and Lauren kiss each each other passionately.
             with dissolve
 
-            pause 1
+            pause 1.75
 
             scene v14s46a_22
             with dissolve
