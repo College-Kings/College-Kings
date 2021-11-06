@@ -844,11 +844,9 @@ label v14s47_passenger:
 
                 li "Alrighty... Anymore?"
 
-            "Take photo of bird":
+            "Take photo with bird":
                 $ v14s47_solo_bird = True
                 $ v14s47_pics += 1
-
-                $ grant_achievement("say_chirp")
 
                 u "Yeah, Linds. A crazy bird lady might buy the car simply because he's sitting on it. *Chuckles*"
 
@@ -858,6 +856,8 @@ label v14s47_passenger:
                 li "He is a cute little bird!"
 
                 play sound "sounds/capture.mp3" 
+
+                $ grant_achievement("say_chirp")
 
                 scene v14s47_passenger_3
                 with flash
