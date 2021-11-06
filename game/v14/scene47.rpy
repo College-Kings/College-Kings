@@ -342,8 +342,6 @@ label v14s47:
         with dissolve
 
         u "*Chuckles* Alright, let's start with..."
-
-    $ freeRoam = True
     call screen v14s47_car
 
 label v14s47_hood:
@@ -992,8 +990,6 @@ label v14s47_end:
 
     scene v14s47_end_4 # TPP. Show MC and Lindsey walking along the street, both smiling, mouths closed
     with fade
-
-    $ freeRoam = True
 
     pause 0.75
 

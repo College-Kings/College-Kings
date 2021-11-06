@@ -25,7 +25,6 @@ label v14s51:
     scene v14s51_2 # FPP. MC standing in Chloes room, make sure the bedside table, desk drawer, closet, purse, and bed pillow are all in sight.
     with dissolve
 
-    $ freeRoam = True
     call screen v14s51_room
 
 # This is all for you Oscar ;) 
@@ -873,8 +872,6 @@ label v14s51_continue:
         with dissolve
     
         pause 0.75
-    
-    $ freeRoam = False
     
     if joinwolves:
         jump v14s52
