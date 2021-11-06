@@ -65,7 +65,6 @@ label v14s28:
         menu:
             "I love you too":
                 $ add_point(KCT.BOYFRIEND)
-                
                 $ v14_emily_ily = True
                 
                 scene v14s28_2a
