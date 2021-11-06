@@ -213,7 +213,7 @@ label v14s50:
     scene v14s50_13   # TPP. Close up on MC face, uncertain/undecided, with his ear close to the slighly open door.
     with dissolve
 
-    u "(Lindsey said the secret word already. I should go to Chloe's room now and stop wasting time, but this conversation could get interesting')"
+    u "(Lindsey said the secret word already. I should go to Chloe's room now and stop wasting time, but this conversation could get interesting.)"
 
     menu: # -MC chooses Event1 or Event2
         "Go to Chloe's room":   # -Event1 Go to Chloe's room
@@ -348,7 +348,7 @@ label v14s50:
                     scene v14s50_12
                     with dissolve
 
-                    u "(Aubrey has some strong feelings about anal')"
+                    u "(Aubrey has some strong feelings about anal...)"
 
                     scene v14s50_11
                     with dissolve
@@ -379,7 +379,7 @@ label v14s50:
                     scene v14s50_13
                     with dissolve
 
-                    u "(As much as I'm enjoying this, I'm supposed to be rummaging through Chloe's room by now')"
+                    u "(As much as I'm enjoying this, I'm supposed to be rummaging through Chloe's room by now.)"
 
                     menu: 
                         "Go to Chloe's room": # -if Go to Chloe's room
@@ -418,7 +418,7 @@ label v14s50:
                             scene v14s50_14
                             with dissolve
 
-                            u "(Oh')"
+                            u "(Oh!)"
 
                             scene v14s50_12
                             with dissolve
@@ -429,7 +429,7 @@ label v14s50:
                                 scene v14s50_15   # TPP  Close up on MC face, smiling mischievously, thinking dirty thoughts, mouth closed.
                                 with dissolve
 
-                                u "(I'll have to keep this information in mind for the next time I get her alone')"
+                                u "(I'll have to keep this information in mind for the next time I get her alone...)"
 
                             scene v14s50_16   # TPP. Close up on MC face, concentrating, mouth closed, eyes looking at Chloe's bedroom (away from Aubrey's door, down the hall).
                             with dissolve
