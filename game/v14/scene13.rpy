@@ -1,7 +1,7 @@
 # SCENE 13: Wolves Jetlag Sleep
 # Locations: Wolves House/Room
-# Characters: MC (Outfit: 5), SEBASTIAN (Outfit: x), CHRIS (Outfit: 1)
-# Time: Evening                     : I left Sebastian X because I couldn't find his outfit in the spreadsheet and he is not wearing a shirt anywayc for this scene
+# Characters: MC (Outfit: 5), SEBASTIAN (Outfit: x), CHRIS (Outfit: 1):  I left Sebastian X because I couldn't find his outfit in the spreadsheet and he is not wearing a shirt anywayc for this scene
+# Time: Evening
 
 label v14s13:
     scene v14s13_1 # TPP. Show MC walking into his room, neutral expression, mouth closed

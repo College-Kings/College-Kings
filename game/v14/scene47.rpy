@@ -55,7 +55,7 @@ label v14s47:
         play sound "sounds/kiss.mp3"
 
         scene v14s47_4 # TPP. Close up of Lindsey kissing MC's cheek
-        with dissolve  
+        with dissolve
 
         pause
 
@@ -117,7 +117,7 @@ label v14s47:
             u "Oh, I will. *Chuckles* You look great."
 
         scene v14s47_2
-        with dissolve       
+        with dissolve
 
         li "Thank you, [name]."
 
@@ -830,7 +830,7 @@ label v14s47_passenger:
                 scene v14s47_passenger_2l # FPP. Same as v14s47_passenger_2f, but no bird, just the car
                 with dissolve
 
-                pause  
+                pause
 
                 play sound "sounds/capture.mp3" 
 

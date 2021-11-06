@@ -185,7 +185,7 @@ label v14s51_purse:
     scene v14s51_purse_2a # FPP. Same as v14s51_purse_2, MC holding the first item he pulls out which is a random receipt.
     with dissolve
 
-    pause  
+    pause
 
     scene v14s51_purse_2
     with dissolve 
@@ -195,12 +195,12 @@ label v14s51_purse:
     scene v14s51_purse_2b # FPP. Same as v14s51_purse_2a, MC holding some tampons that he pulled out of Chloe's purse
     with dissolve
 
-    pause  
+    pause
 
     scene v14s15_purse_2 
     with dissolve
 
-    pause  
+    pause
 
     scene v14s51_purse_2c # FPP. Same as v14s51_purse_2b, MC holding a stack of cash that he pulled out of Chloe's purse
     with dissolve

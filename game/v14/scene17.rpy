@@ -127,7 +127,7 @@ label v14s17:
 
         play sound "sounds/kiss.mp3"
 
-        pause 1.5  
+        pause 1.5 
 
         scene v14s17_8 # FPP. Lauren looking at MC, slight smile, mouth open 
         with dissolve
@@ -666,7 +666,7 @@ label v14s17:
 
                         u "I do."
 
-                        scene v14s17_15 # TPP. Show MC looking at Lauren, slight smile, mouth closed, Lauren looking at MC intently, mouth closed  
+                        scene v14s17_15 # TPP. Show MC looking at Lauren, slight smile, mouth closed, Lauren looking at MC intently, mouth closed 
                         with dissolve
 
                         pause 0.75

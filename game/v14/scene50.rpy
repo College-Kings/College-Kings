@@ -4,32 +4,32 @@
 # Time: Evening 
 
 label v14s50:
-    scene v14s50_1    # TPP. Camera over MC's left shoulder. MC standing in front door of the Chic's house.
+    scene v14s50_1 # TPP. Camera over MC's left shoulder. MC standing in front door of the Chic's house.
     with dissolve
 
     pause 0.75 
 
-    scene v14s50_1a   # TPP. MC raises his right hand, about to knock on the front door. Based on v14s50_1.
+    scene v14s50_1a # TPP. MC raises his right hand, about to knock on the front door. Based on v14s50_1.
     with dissolve
 
     pause 0.75
 
-    scene v14s50_1b   # TPP. MC's hand still raised from trying to knock on the door, when the door is slightly cracked open. Based on v14s50_1a.
+    scene v14s50_1b # TPP. MC's hand still raised from trying to knock on the door, when the door is slightly cracked open. Based on v14s50_1a.
     with dissolve
 
     pause 0.75
 
-    scene v14s50_1c   # TPP. Same as v14s50_1b, but door cracked open just enough to see Lindsey's face peeking though with her finger over her mouth gesturing "Shhh".
+    scene v14s50_1c # TPP. Same as v14s50_1b, but door cracked open just enough to see Lindsey's face peeking though with her finger over her mouth gesturing "Shhh".
     with dissolve
  
     li "Shhhh..."
 
-    scene v14s50_2    # FPP. Lindsey, serious, mouth slightly open, face appearing through the crack of the door.
+    scene v14s50_2 # FPP. Lindsey, serious, mouth slightly open, face appearing through the crack of the door.
     with dissolve
 
     li "*Whispers* Aubrey's in the next room. I need to deal with her first, so she doesn't see you."
 
-    scene v14s50_2a   # FPP. Same as v14s50_2, but Lindsey mouth closed.
+    scene v14s50_2a # FPP. Same as v14s50_2, but Lindsey mouth closed.
     with dissolve
 
     u "Got it."
@@ -45,12 +45,12 @@ label v14s50:
 
         u "*Whispers* You look cute, by the way. *Chuckles*"
 
-        scene v14s50_2b   # FPP. SAme as v14s50_2, but Lindsey slightly blushing, smiling, mouth slightly open, face appearing through the crack of the door.
+        scene v14s50_2b # FPP. SAme as v14s50_2, but Lindsey slightly blushing, smiling, mouth slightly open, face appearing through the crack of the door.
         with dissolve
 
         li "*Chuckles* Shh! Focus! Thank you!"
 
-        scene v14s50_2c   # FPP. Same as v14s50_2b, bur Lindsey mouth closed.50_
+        scene v14s50_2c # FPP. Same as v14s50_2b, bur Lindsey mouth closed.50_
         with dissolve
 
         u "*Chuckles*"
@@ -77,7 +77,7 @@ label v14s50:
 
     u "*Stifled laugh* *Whispers* Anal?"
 
-    scene v14s50_2d   # FPP. Same as v14s50_2, but smile bigger and mouth open a little bigger, still appearing through the crack of the door.
+    scene v14s50_2d # FPP. Same as v14s50_2, but smile bigger and mouth open a little bigger, still appearing through the crack of the door.
     with dissolve
 
     li "*Giggles* Shhh! *Whispers* Yes... Anal."
@@ -112,21 +112,21 @@ label v14s50:
 
     li "*Chuckles* Wait here."
 
-    scene v14s50_3    # TPP. MC, concentrating, mouth closed, squatting next to the slightly open door, with his ear close to the opening (listening inside the hosue).
+    scene v14s50_3 # TPP. MC, concentrating, mouth closed, squatting next to the slightly open door, with his ear close to the opening (listening inside the hosue).
     with dissolve
 
     li "Hey, Aubrey. I was wondering if I could talk to you about something."
 
     au "Yeah, of course. What's going on?"
 
-    scene v14s50_3a   # TPP. Same as v14s50_3, but MC smiling, mouth closed, squatting next to slightly open door, with his ear close to the opening (still listening).
+    scene v14s50_3a # TPP. Same as v14s50_3, but MC smiling, mouth closed, squatting next to slightly open door, with his ear close to the opening (still listening).
     with dissolve
 
     li "It's kind of private, actually. *Nervous chuckle* I don't want anyone else hearing."
 
     au "*Whispers* Lindsey! Are you...? You're not-"
 
-    scene v14s50_3b   # TPP. Same as v14s50_3a, but MC surpised, smiling, mouth closed, still squating by the open door, listening.
+    scene v14s50_3b # TPP. Same as v14s50_3a, but MC surpised, smiling, mouth closed, still squating by the open door, listening.
     with dissolve
 
     li "No, no! No, I am not pregnant. I promise. That's not it, haha."
@@ -140,49 +140,49 @@ label v14s50:
 
     au "Oooh, super serious! *Chuckles* Come on, let's go."
 
-    scene v14s50_4    # FPP. MC looking throught the crack in the door, seeing Lindsey following Aubrey, both disappearing up the stairs.
+    scene v14s50_4 # FPP. MC looking throught the crack in the door, seeing Lindsey following Aubrey, both disappearing up the stairs.
     with dissolve
 
     u "(Time to go.)"
 
-    scene v14s50_5    # TPP. Camera, inside the house, facing the front door, we see MC sneaking into the house through the front door.
+    scene v14s50_5 # TPP. Camera, inside the house, facing the front door, we see MC sneaking into the house through the front door.
     with dissolve
 
     pause 0.75
 
-    scene v14s50_6    # FPP. MC looking left and seeing a variety of dirty clothes and towles scattered around the house.
+    scene v14s50_6 # FPP. MC looking left and seeing a variety of dirty clothes and towles scattered around the house.
     with dissolve
 
     pause 0.75
 
-    scene v14s50_7    # FPP. MC looking right and seeing more clothes, towels, empty wine bottles, and half drunk wine in glasses, and empty ice cream tubs.
+    scene v14s50_7 # FPP. MC looking right and seeing more clothes, towels, empty wine bottles, and half drunk wine in glasses, and empty ice cream tubs.
     with dissolve
 
     pause 0.75 
 
-    scene v14s50_8    # TPP. MC, concentrating, squatting and tip toeing (trying to be quiet) up the stairs.
+    scene v14s50_8 # TPP. MC, concentrating, squatting and tip toeing (trying to be quiet) up the stairs.
     with dissolve
 
     u "(I feel like a ninja. *Chuckles*)"
 
-    scene v14s50_9    # TPP. MC, concentrating, mouth closed, at the top of the stairs, more dirty clothes scattered on the floor and stair railing.
+    scene v14s50_9 # TPP. MC, concentrating, mouth closed, at the top of the stairs, more dirty clothes scattered on the floor and stair railing.
     with dissolve
 
     pause 0.75 
 
-    scene v14s50_10   # TPP. MC, concentrating, mouth closed, in the hallway, crouched, back to the wall, being sneaky and quiet.
+    scene v14s50_10 # TPP. MC, concentrating, mouth closed, in the hallway, crouched, back to the wall, being sneaky and quiet.
     with dissolve
 
     pause 0.75
 
-    scene v14s50_11   # TPP. MC, concentrating, mouth closed, in the hallway, crouched next to Aubrey's room door, which is cracked open slightly, listening.
+    scene v14s50_11 # TPP. MC, concentrating, mouth closed, in the hallway, crouched next to Aubrey's room door, which is cracked open slightly, listening.
     with dissolve
 
     au "So... What can I help you with today? *Chuckles*"
 
     li "*Laughs* Thanks, Aubrey. I feel a little weird about asking, but..."
 
-    scene v14s50_11a  # TPP. Same as v14s50_11, MC, slighly shocked, covering his mouth, in the hallway crouched next to Aubrey's room door, slightly open.
+    scene v14s50_11a # TPP. Same as v14s50_11, MC, slighly shocked, covering his mouth, in the hallway crouched next to Aubrey's room door, slightly open.
     with dissolve
 
     li "Have you ever tried anal?"
@@ -196,27 +196,27 @@ label v14s50:
 
     li "Well, yeah-"
 
-    scene v14s50_11b  # TPP. Same as v14s50_11, MC, slightly smiling, eyes looking towards the slightly open door, listening.
+    scene v14s50_11b # TPP. Same as v14s50_11, MC, slightly smiling, eyes looking towards the slightly open door, listening.
     with dissolve
 
     au "Haha, you have nothing to be embarrassed about. You actually came to the perfect person"
 
     li "Ha, yeah. I figured. *Chuckles*"
 
-    scene v14s50_12   # TPP. Close up on MC face, big smile, with his ear close to the slightly open door (like he's waiting to hear something great).
+    scene v14s50_12 # TPP. Close up on MC face, big smile, with his ear close to the slightly open door (like he's waiting to hear something great).
     with dissolve
 
     au "So, yeah. I've tried it a few times."
 
     li "*Clears throat* And?"
 
-    scene v14s50_13   # TPP. Close up on MC face, uncertain/undecided, with his ear close to the slighly open door.
+    scene v14s50_13 # TPP. Close up on MC face, uncertain/undecided, with his ear close to the slighly open door.
     with dissolve
 
     u "(Lindsey said the secret word already. I should go to Chloe's room now and stop wasting time, but this conversation could get interesting.)"
 
     menu: # -MC chooses Event1 or Event2
-        "Go to Chloe's room":   # -Event1 Go to Chloe's room
+        "Go to Chloe's room": # -Event1 Go to Chloe's room
             jump v14s51 # -Transition to Scene 51-
 
         "Keep listening": # -if Keep listening
@@ -228,14 +228,14 @@ label v14s50:
 
             li "But I've heard horror stories about it. Like my friend, Maria."
 
-            scene v14s50_11c  # TPP. Same as v14s50_11, MC, cringing in imaginary pain, eyes squinting, but still leaning his ear close to the door.
+            scene v14s50_11c # TPP. Same as v14s50_11, MC, cringing in imaginary pain, eyes squinting, but still leaning his ear close to the door.
             with dissolve
 
             li "She had her ass, like... rip?"
 
             au "Oh, fuck!"
 
-            scene v14s50_14   # TPP. Close up on MC face, mouth open wide, eyes open wide, shocked.
+            scene v14s50_14 # TPP. Close up on MC face, mouth open wide, eyes open wide, shocked.
             with dissolve
 
             u "(What the fuck?!)"
@@ -288,7 +288,7 @@ label v14s50:
 
             u "(This isn't the best conversation to be eavesdropping on. *Chuckles* I should get to Chloe's room while I still have time.)"
 
-            menu:         
+            menu:
                 "Go to Chloe's room": # -if Go to Chloe's room
                     jump v14s51 # -Transition to Scene 51-
 
@@ -312,7 +312,7 @@ label v14s50:
 
                     li "Oh..."
 
-                    scene v14s50_11d  # TPP. same as v14s50_11m, MC, neutral expression, mouth closed, in the hallway crouched next to Aubrey's room door, slightly open.
+                    scene v14s50_11d # TPP. same as v14s50_11m, MC, neutral expression, mouth closed, in the hallway crouched next to Aubrey's room door, slightly open.
                     with dissolve
 
                     au "Like, it's scary to think about the pain, right? And weird to talk about? *Chuckles*"
@@ -426,14 +426,14 @@ label v14s50:
                             u "(I think I've heard enough about Maria's injury. And gained enough knowledge about anal thanks to Aubrey... *Chuckles*)"
 
                             if aubreyrs: # -if AubreyRS
-                                scene v14s50_15   # TPP  Close up on MC face, smiling mischievously, thinking dirty thoughts, mouth closed.
+                                scene v14s50_15 # TPP  Close up on MC face, smiling mischievously, thinking dirty thoughts, mouth closed.
                                 with dissolve
 
                                 u "(I'll have to keep this information in mind for the next time I get her alone...)"
 
-                            scene v14s50_16   # TPP. Close up on MC face, concentrating, mouth closed, eyes looking at Chloe's bedroom (away from Aubrey's door, down the hall).
+                            scene v14s50_16 # TPP. Close up on MC face, concentrating, mouth closed, eyes looking at Chloe's bedroom (away from Aubrey's door, down the hall).
                             with dissolve
 
                             u "(I've wasted a lot of time here already, so I'd better hurry up and go to Chloe's room.)"
 
-                            jump v14s51  # -Transition to Scene 51-
+                            jump v14s51 # -Transition to Scene 51-
