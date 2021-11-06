@@ -60,10 +60,10 @@ screen phoneTemplate():
 
         textbutton "Exit Phone":
             style "phonebutton"
-            if freeRoam:
-                action [Hide("tutorial"), Hide("phone")]
-            else:
-                action [Hide("tutorial"), Return()]
+            #if freeRoam:
+                #action [Hide("tutorial"), Hide("phone")]
+            #else:
+            action [Hide("tutorial"), Return()]
 
     # Button to prevent phone closing on phone ui
     button:
