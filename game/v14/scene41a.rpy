@@ -278,7 +278,6 @@ label v14s41a:
         menu:
             "Stay quiet":
                 $ add_point(KCT.TROUBLEMAKER)
-                $ v14_ApesPostChloePics = True
 
                 scene v14s41a_5a
                 with dissolve
@@ -339,6 +338,7 @@ label v14s41a:
                 menu:
                     "Bad look for Apes":
                         $ add_point(KCT.BRO)
+                        $ v14_ApesPostChloePics = False
 
                         scene v14s41a_5l
                         with dissolve
@@ -374,6 +374,7 @@ label v14s41a:
                         gr "*Laughs* We don't give a fuck about all that. Feelings don't mean shit, [name]."
 
                         if kct == "confident":
+                            $ v14_ApesPostChloePics = False
                             scene v14s41a_6a
                             with dissolve
 
@@ -430,8 +431,6 @@ label v14s41a:
                             pause 0.75
 
                         else:
-                            $ v14_ApesPostChloePics = True
-
                             scene v14s41a_5a
                             with dissolve
 
