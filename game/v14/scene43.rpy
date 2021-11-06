@@ -74,7 +74,6 @@ label v14s43_continue:
     with dissolve
 
     if penelopers:
-
         pe "Saved, actually."
 
         scene v14s43_6
@@ -98,7 +97,6 @@ label v14s43_continue:
         pe "Sit down already, weirdo. *Chuckles*"
 
     else:
-
         pe "That depends..."
 
         scene v14s43_6

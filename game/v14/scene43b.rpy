@@ -264,7 +264,6 @@ label v14s43b:
             u "No, no, no. Me and you."
 
             if penelopeloyal:
-                    
                 scene v14s43b_8b
                 with dissolve
 
@@ -276,7 +275,6 @@ label v14s43b:
                 pe "*Whispers* And me. *Chuckles*"
 
             else:
-
                 scene v14s43b_8b
                 with dissolve
 
