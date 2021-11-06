@@ -993,6 +993,8 @@ label v14s47_end:
     scene v14s47_end_4 # TPP. Show MC and Lindsey walking along the street, both smiling, mouths closed
     with fade
 
+    $ freeRoam = True
+
     pause 0.75
 
     if v14_pics_with_linds:
