@@ -278,7 +278,6 @@ label v14s41a:
         menu:
             "Stay quiet":
                 $ add_point(KCT.TROUBLEMAKER)
-                $ set_presidency_percent(v14_lindsey_popularity + 2)
                 $ v14_ApesPostChloePics = True
 
                 scene v14s41a_5a
@@ -293,7 +292,6 @@ label v14s41a:
 
             "Stand up for Chloe":
                 $ add_point(KCT.BOYFRIEND)
-                $ set_presidency_percent(v14_lindsey_popularity - 2)
 
                 scene v14s41a_5l
                 with dissolve
@@ -341,7 +339,6 @@ label v14s41a:
                 menu:
                     "Bad look for Apes":
                         $ add_point(KCT.BRO)
-                        $ set_presidency_percent(v14_lindsey_popularity - 2)
 
                         scene v14s41a_5l
                         with dissolve
@@ -377,8 +374,6 @@ label v14s41a:
                         gr "*Laughs* We don't give a fuck about all that. Feelings don't mean shit, [name]."
 
                         if kct == "popular":
-                            $ set_presidency_percent(v14_lindsey_popularity - 2)
-
                             scene v14s41a_6a
                             with dissolve
 
@@ -435,7 +430,6 @@ label v14s41a:
                             pause 0.75
 
                         else:
-                            $ set_presidency_percent(v14_lindsey_popularity + 2)
                             $ v14_ApesPostChloePics = True
 
                             scene v14s41a_5a

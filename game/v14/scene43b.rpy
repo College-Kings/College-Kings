@@ -313,7 +313,6 @@ label v14s43b:
             lee "After that, you'll come up with a short scene involving a king and a queen interaction that you'll present next week to the rest of the class."
 
             if v14_ApesPostChloePics:
-
                 scene v14s43b_12 # FPP. MC looks at Penelope in the seat next to him, Penelope looking at MC, slight smile, mouth open
                 with dissolve
 
@@ -368,6 +367,7 @@ label v14s43b:
                 scene v14s43b_13
                 with dissolve
 
+                $ set_presidency_percent(v14_lindsey_popularity + 3)
                 u "(Fuck... I'm glad I didn't go through with posting that shit.)"
 
                 scene v14s43b_12
