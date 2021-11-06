@@ -40,7 +40,7 @@ label v14s19:
 
         pause 0.75
 
-        scene v14s19_5 # TPP. Show MC kissing Chloe's cheek, Chloe serious face, Chloe paying no attention to MC
+        scene v14s19_5a # TPP. Same as v14s19_5, Show MC kissing Chloe's cheek, Chloe serious face, Chloe paying no attention to MC
         with dissolve
 
         pause 0.75
@@ -88,7 +88,7 @@ label v14s19:
     call screen chloe_board
 
 label v14s19_continue:
-    scene v14s19_5 # TPP. Show MC and Chloe standing infront of The Planning Board (a white board), both looking at the board, camera showing MC and Chloe, not the actual content of the board, MC and Chloe looking inquisitevely at the board
+    scene v14s19_99 # TPP. Show MC and Chloe standing infront of The Planning Board (a white board), both looking at the board, camera showing MC and Chloe, not the actual content of the board, MC and Chloe looking inquisitevely at the board, MC mouth open, Chloe mouth closed
     with dissolve
 
     u "From the options we have, these are the final decisions I'd go with."
@@ -99,7 +99,7 @@ label v14s19_continue:
     else:
         cl "I know Chris trusts me, so I'm pretty sure we've already got the Wolves on our side. Guess we'll find out, though..."
 
-    scene v14s19_5
+    scene v14s19_99a # TPP. Same as v14s19_99, but Chloe mouth open, MC mouth closed
     with dissolve
 
     cl "Hmm, okay..."
