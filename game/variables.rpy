@@ -681,3 +681,4 @@ default v14_amber_sex = False
 default v14_jenny_sex = False
 default v14_samantha_sex = False
 default v14_penelope_date = False
+default v14_money_theft_concert_distraction = False # Placeholder for choosing the concert to distract Chloe
