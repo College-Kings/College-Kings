@@ -640,7 +640,7 @@ default v14_lauren_sabotage = False
 default v14_lindsey_car_sale = False #Placeholder for helping Lindsey sell her car
 default v14_lindsey_money_theft = False
 default v14_lindsey_popularity = 45 # Use `set_presidency_percent(amount)`.
-default v14_money_theft_date_ditch = False # Placeholder variable for using the date as distraction
+default v14_money_theft_date_ditch = False # Placeholder for choosing to ditch the date you set up with Chloe to steal money
 default v14_noraWhere = False
 default v14_noraWorry = False
 default v14_PenArgScene = False
@@ -682,4 +682,6 @@ default v14_jenny_sex = False
 default v14_samantha_sex = False
 default v14_penelope_date = False
 default v14_money_theft_concert_distraction = False # Placeholder for choosing the concert to distract Chloe
-default v14_money_theft_date_ditch = False # Placeholder for choosing to ditch the date you set up with Chloe to steal money
+
+
+#MENTAL NOTE: Adjust dialogue of 43b in case of pictures when mc is wolf
