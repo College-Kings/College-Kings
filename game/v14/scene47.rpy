@@ -1009,7 +1009,7 @@ label v14s47_end:
         $ v14s47_kiwiiPost1.newComment("Nora", "Kick ass babe <3")
         $ v14s47_kiwiiPost1.newComment("Aubrey", "Aww, look at your cute little button!")
         $ v14s47_kiwiiPost1.newComment("Riley", "I have one too :) Hehe.")
-        $ v14s47_kiwiiPost1.newComment("Sebastian","Looking all official now, Linds!")
+        $ v14s47_kiwiiPost1.newComment("Sebastian", "Looking all official now, Linds!")
         $ v14s47_kiwiiPost1.addReply("Damn, she's cute... What is she selling? ;)", v14s47_kiwiiReply1)
         $ v14s47_kiwiiPost1.addReply("#ThatsMyPresident", v14s47_kiwiiReply2)
     
@@ -1018,7 +1018,7 @@ label v14s47_end:
         $ v14s47_kiwiiPost2.newComment("Nora", "Kick ass babe <3")
         $ v14s47_kiwiiPost2.newComment("Aubrey", "Aww, look at your cute little button!")
         $ v14s47_kiwiiPost2.newComment("Riley", "I have one too :) Hehe.")
-        $ v14s47_kiwiiPost2.newComment("Sebastian","Looking all official now, Linds!")
+        $ v14s47_kiwiiPost2.newComment("Sebastian", "Looking all official now, Linds!")
         $ v14s47_kiwiiPost2.addReply("Liked, commenting, where do I subscribe",~v14s47_kiwiiReply3)
         $ v14s47_kiwiiPost2.addReply("Oooh... ;)", v14s47_kiwiiReply4)
 

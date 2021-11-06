@@ -115,7 +115,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         scene v14s31b_3c
         with dissolve
 
-        u "It is,"
+        u "It is."
 
         scene v14s31b_3a
         with dissolve

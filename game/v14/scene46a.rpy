@@ -669,7 +669,7 @@ label v14s46a:
     scene v14s46a_38
     with dissolve
 
-    la "*Chuckles* Yeah,"
+    la "*Chuckles* Yeah..."
 
     scene v14s46a_39   # TPP. Lauren, smiling, walks MC, smiling, both mouths closed, to the her dormroom door.
     with dissolve
