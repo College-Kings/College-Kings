@@ -690,5 +690,6 @@ default v14s47_linds_hips = False
 default v14s47_linds_knees = False
 default v14s47_solo_no_bird = False
 default v14s47_solo_bird = False
+default v14s48_lie = False # PLACEHOLDER - CHECK WITH OSCAR THE VARIABLE IN THE APP!
 
 #MENTAL NOTE: Adjust dialogue of 43b in case of pictures when mc is wolf

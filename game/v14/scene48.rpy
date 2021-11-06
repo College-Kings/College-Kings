@@ -412,7 +412,6 @@ label v14s48_end:
     u "It's certainly a long process. *Chuckles*"
 
     if lindseyrs:
-
         scene v14s48_8 # TPP. Show Lindsey kissing MC (with tongue if possible)
         with dissolve
 
