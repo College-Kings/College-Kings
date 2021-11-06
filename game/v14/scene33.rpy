@@ -24,7 +24,7 @@ label v14s33:
 
             pause 0.75
 
-            if v11s23_penelope_date:
+            if penelopers and v11s23_penelope_date:
                 jump v14s34
 
             else:
@@ -163,7 +163,7 @@ label v14s33:
 
                     pause 0.75
 
-                    if v11s23_penelope_date:
+                    if penelopers and v11s23_penelope_date:
                         jump v14s34
                     else:
                         jump v14s35
@@ -220,7 +220,7 @@ label v14s33:
 
                     pause 0.75
                     
-                    if v11s23_penelope_date:
+                    if penelopers and v11s23_penelope_date:
                         jump v14s34
 
                     else:
@@ -248,7 +248,7 @@ label v14s33:
 
             pause 0.75
 
-            if v11s23_penelope_date:
+            if penelopers and v11s23_penelope_date:
                 jump v14s34
 
             else:
@@ -386,7 +386,7 @@ label v14s33:
 
                     pause 0.75
 
-                    if v11s23_penelope_date:
+                    if penelopers and v11s23_penelope_date:
                         jump v14s34
                     else:
                         jump v14s35
@@ -444,7 +444,7 @@ label v14s33:
 
                     pause 0.75
                     
-                    if v11s23_penelope_date:
+                    if penelopers and v11s23_penelope_date:
                         jump v14s34
                     else:
                         jump v14s35
