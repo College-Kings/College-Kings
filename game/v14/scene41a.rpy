@@ -38,7 +38,6 @@ label v14s41a:
     # Make sure variable is Chloe Seduced Grayson if: chloe seduced grayson
 
     if v14s31bTrustChloe:
-
         scene v14s41a_4 # FPP. Mc is looking to his right and sees a close-up shot of just Cameron, looking at Grayson, slightly annoyed, mouth open.
         with dissolve
 
@@ -147,7 +146,6 @@ label v14s41a:
         jump v14s43
 
     else:
-
         scene v14s41a_5d # FPP. same as v14s41a_5a Grayson has a devlish full smile, looking at MC, mouth closed
         with dissolve
 
@@ -209,7 +207,6 @@ label v14s41a:
         u "(Oh... shit!)"
 
         if chloegf:
-
             scene v14s41a_9 # FPP. A close up view of just the TV with the image from v14s41a_3b being projected on the screen
             with dissolve
 
@@ -279,7 +276,6 @@ label v14s41a:
         with dissolve
 
         menu:
-
             "Stay quiet":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ set_presidency_percent(v14_lindsey_popularity + 2)
@@ -343,7 +339,6 @@ label v14s41a:
                 with dissolve
 
                 menu:
-
                     "Bad look for Apes":
                         $ add_point(KCT.BRO)
                         $ set_presidency_percent(v14_lindsey_popularity - 2)
