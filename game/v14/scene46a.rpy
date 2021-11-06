@@ -167,7 +167,7 @@ label v14s46a:
     scene v14s46a_7
     with dissolve
 
-    la "*Speaking softly* My voice is all you can hear as you sink deeper and deeper... Into a peaceful...Pleasant... Relaxing state."
+    la "*Speaking softly* My voice is all you can hear as you sink deeper and deeper... into a peaceful... pleasant... relaxing state."
 
     scene v14s46a_6e  # TPP. Same as v14s46a_6b, but MC laughing, eyes open, mouth open.
     with dissolve
@@ -349,6 +349,8 @@ label v14s46a:
         scene v14s46a_6h  # TPP. Same as v14s46a_6g, but MC mouth closed, looking at Lauren, Lauren looking at MC, smiling, mouth open.
         with dissolve
 
+        $ grant_achievement("your_eyelids_are_heavy")
+
         la "*Chuckles** I'm so sorry! *Laughs* It was fun though, right? Did it feel real?"
 
         scene v14s46a_6i  # TPP. Same as v14s46a_6h, but MC mouth open and Lauren mouth closed.
@@ -446,7 +448,6 @@ label v14s46a:
         la "You still love me, right?"
 
         menu: # -MC chooses Event1 or Event2
-            
             "Of course I do": # -Event1 Of course I do
                 scene v14s46a_22a
                 with dissolve
@@ -499,13 +500,15 @@ label v14s46a:
             scene v14s46a_23   # TPP. MC and Lauren kiss each other on the lips.
             with dissolve
 
-            pause 0.5
+            pause 1
 
         else:
+            play sound "sounds/kiss.mp3"
+        
             scene v14s46a_23a  # TPP. MC and Lauren kiss each each other passionately.
             with dissolve
 
-            pause 1
+            pause 1.75
 
             scene v14s46a_22
             with dissolve
@@ -668,7 +671,7 @@ label v14s46a:
     scene v14s46a_38
     with dissolve
 
-    la "*Chuckles* Yeah,"
+    la "*Chuckles* Yeah..."
 
     scene v14s46a_39   # TPP. Lauren, smiling, walks MC, smiling, both mouths closed, to the her dormroom door.
     with dissolve

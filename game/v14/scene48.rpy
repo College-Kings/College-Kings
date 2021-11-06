@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 1), LINDSEY (Outfit: 3)
 # Time: Evening
 
-
 label v14s48:
     scene v14s48_1 # TPP. Show MC and Lindsey entering the coffee shop, both smiling, mouths closed
     with dissolve
@@ -25,7 +24,7 @@ label v14s48:
 
     pause 0.75
 
-    if v14s03a_take_wallet and v14s24a_gummyfish:
+    if v14s03a_take_wallet:
         scene v14s48_3a # TPP. Same camera as v14s47_3aShow Lindsey going to hand money to the barista, coffees on the counter, all smiling, mouths closed
         with dissolve
 
@@ -57,7 +56,7 @@ label v14s48:
 
     pause 0.75
 
-    if v14s03a_take_wallet and v14s24a_gummyfish and lindseyrs:
+    if v14s03a_take_wallet and lindseyrs:
         scene v14s48_5a # TPP. Same as v14s48_5, show Lindsey reaching over and kissing MC on the cheek
         with dissolve
 
@@ -73,11 +72,11 @@ label v14s48:
 
         u "Of course. *Chuckles*"
 
-    elif v14s03a_take_wallet and v14s24a_gummyfish and not lindseyrs:
+    elif v14s03a_take_wallet and not lindseyrs:
         scene v14s48_6
         with dissolve
 
-        li "Thanks for the coffee by the way. *Chuckles* I should be the one treating you though, don�t you think?�"
+        li "Thanks for the coffee by the way. *Chuckles* I should be the one treating you though, don't you think?"
 
         scene v14s48_6a
         with dissolve
@@ -118,7 +117,7 @@ label v14s48:
     scene v14s48_6b # FPP. Same as v14s48_6, Lindsey different pose
     with dissolve
 
-    li "*Laughs* I see you�re practicing your salesman skills already."
+    li "*Laughs* I see you're practicing your salesman skills already."
 
     scene v14s48_6c # FPP. Same as v14s48_6b, Lindsey mouth closed
     with dissolve
@@ -345,7 +344,7 @@ label v14s48_continue2:
         scene v14s48_6b
         with dissolve
 
-        li "But I think it depends on the customer who�s buying, no?"
+        li "But I think it depends on the customer who's buying, no?"
 
         scene v14s48_6
         with dissolve

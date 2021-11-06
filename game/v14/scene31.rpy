@@ -52,10 +52,10 @@ label v14s31:
 
     menu:
         "I got this":
-            u "Chloe, I got this. I know this is serious for you. I’m going to be on my best behavior. *Chuckles*"
+            u "Chloe, I got this. I know this is serious for you. I'm going to be on my best behavior. *Chuckles*"
 
         "Relax":
-            u "Chloe, relax. I'm doing the best I can for you, and that’s exactly what I promised."
+            u "Chloe, relax. I'm doing the best I can for you, and that's exactly what I promised."
 
     # -Continue regardless of choice
     scene v14s31_3e # FPP Same angle as 3, Chloe looks relieved with a slight smile, mouth open
@@ -80,7 +80,7 @@ label v14s31:
     pause 0.5
 
     if chloegf: # -If ChloeGF
-        scene v14s31__4a # TPP Same angle as 4, MC crossing his arms over his chest and looking worried
+        scene v14s31_4a # TPP Same angle as 4, MC crossing his arms over his chest and looking worried
         with dissolve
 
         u "(Damn, if I didn't know this campaign was important to her, I know now. She's not even thinking about us.)"
@@ -94,17 +94,19 @@ label v14s31:
 
                 u "(I'm glad she's focused, this is how it should be right now.)"
 
-            "That's a turn off":
+            "That's a turn-off":
                 $ add_point(KCT.TROUBLEMAKER)
 
                 scene v14s31_4b # TPP Same angle as 4, MC looks annoyed and repulsed, like he just tasted something bad
                 with dissolve
                 
-                u "(And it's kind of a turn off...)"
+                u "(And it's kind of a turn-off...)"
 
     # -Regardless of everything scene continued
     scene v14s31_6 # TPP Show MC heading out the door
     with dissolve
+
+    pause 0.75
 
     # -Transition to Scene 31a/31b based on planning board choices-
     if v14s31_talkcameron:

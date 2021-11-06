@@ -26,6 +26,8 @@ label v14s01:
 
     menu:
         "We're doing this":
+            label v14s01_sg:
+        
             $ v13_FirstThreesome = True
             u "I'm gonna feel much better after this."
 
@@ -165,7 +167,7 @@ label v14s01:
 
             u "*Moans*"
 
-            ri "This... Is perfect... *Moans*"
+            ri "This... is perfect... *Moans*"
 
             scene v14auridcg2 # Ignore as animation
             with dissolve
@@ -246,6 +248,8 @@ label v14s01:
             scene v14s01_11d # FPP. Same as v14s01_11c, Aubrey and Riley mouths closed
             with dissolve
 
+            $ grant_achievement("ready_player_three")
+
             u "*Chuckles* I feel absolutely amazing. Thank you ladies."
 
             scene v14s01_11e # FPP. Same as v14s01_11d, Riley mouth open, Aubrey mouth closed
@@ -310,6 +314,8 @@ label v14s01:
 
             u "(Am I just a lucky bastard or did I do something to deserve that? They sure did act like I earned this... Whatever I did, I need to keep doing it.)"
 
+            $ renpy.end_replay()
+
             scene v14s01_14 # TPP. Show MC getting out of his bed (he's naked), slight smile, mouth closed
             with dissolve
 
@@ -324,13 +330,6 @@ label v14s01:
             with dissolve
 
             u "(Now that I'm awake I might as well go see what's going on. My sleep schedule is gonna be all fucked now, though. Feeling energized at night isn't a good thing...) *Sighs*"
-
-            scene v14s01_17 # TPP. Show MC walking through hotel room corridor, smiling, mouth closed
-            with dissolve
-
-            pause 0.75
-
-            jump v14s02
 
         "Stop them":
             scene v14s01_1e # FPP. Same as v14s01_1b, Aubrey and Riley shocked, mouths closed
@@ -398,9 +397,9 @@ label v14s01:
 
             u "*Sighs* (My sleep schedule is gonna be fucked if I start waking up at night time. Oh well.)"
 
-            scene v14s01_17
-            with dissolve
+    scene v14s01_17
+    with dissolve
 
-            pause 0.75
+    pause 0.75
 
-            jump v14s02
+    jump v14s02

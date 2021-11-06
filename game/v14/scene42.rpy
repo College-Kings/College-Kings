@@ -5,7 +5,6 @@
 # Render Count: 16 Unique, Total to be created 33, 8 Render's to be reused from another scene, 41 in Total
 
 label v14s42:
-
     scene v14s42_1 # FPP. Penelope and MC arrive just outside of Penlope's Dorm room, She open's the door with one hand, and leads mc into her room with the other, looking back at mc, slight smile, mouth open
     with dissolve
 
@@ -39,7 +38,7 @@ label v14s42:
     scene v14s42_2c # FPP. same as v14s42_2b Penenlope's mouth is open
     with dissolve
 
-    pe "You're gonna make me blush, hehe…"
+    pe "You're gonna make me blush, hehe..."
 
     scene v14s42_2b
     with dissolve
@@ -84,17 +83,17 @@ label v14s42:
     scene v14s42_8 # FPP. MC is looking directly at Penelope in her lingere, full body shot of Penelope, She has a slight smile mouth closed, head slightly turned away and slightly looking at mc
     with dissolve
 
-    u "(Holy…)"
+    u "(Holy...)"
 
     scene v14s42_8a # FPP. same as v14s42_8 Penelope's mouth is open
     with dissolve
 
-    pe "What? Why are you staring? What’s wrong?"
+    pe "What? Why are you staring? What's wrong?"
 
     scene v14s42_8
     with dissolve
 
-    u "You… You look amazing!"
+    u "You... You look amazing!"
 
     scene v14s42_8a
     with dissolve
@@ -109,7 +108,7 @@ label v14s42:
     scene v14s42_8a
     with dissolve
 
-    pe "Hmm… Well, thank you I guess. *Chuckles*"
+    pe "Hmm... Well, thank you I guess. *Chuckles*"
 
     scene v14s42_9 # FPP. show Penelope turning the lights off, back turned to mc
     with dissolve
@@ -139,12 +138,12 @@ label v14s42:
     scene v14s42_12
     with dissolve
 
-    pe "Laying in bed snuggled up to a guy that I actually like…"
+    pe "Laying in bed snuggled up to a guy that I actually like..."
 
     scene v14s42_12
     with dissolve
 
-    pe "Every guy in the past just… wasn't what I needed. It seemed like those were the only kind of guys I could get, though."
+    pe "Every guy in the past just... wasn't what I needed. It seemed like those were the only kind of guys I could get, though."
 
     scene v14s42_12a
     with dissolve
@@ -159,12 +158,12 @@ label v14s42:
     scene v14s42_12a
     with dissolve
 
-    u "Well, those aren’t the type of people I like being around."
+    u "Well, those aren't the type of people I like being around."
 
     scene v14s42_12
     with dissolve
 
-    pe "And those aren’t the type of people I like laying next to. *Chuckles*"
+    pe "And those aren't the type of people I like laying next to. *Chuckles*"
 
     scene v14s42_12a
     with dissolve
@@ -209,7 +208,7 @@ label v14s42:
     scene v14s42_10a # TPP. same as v14s42_10 MC's eyes are closed, mc is yawning and stretching, Penelope is resting her head on mc's shoulder, slight smile, mouth closed, looking at mc, lights are off
     with dissolve
 
-    u "*Yawns* I do too…"
+    u "*Yawns* I do too..."
 
     scene v14s42_12c
     with dissolve
@@ -245,7 +244,6 @@ label v14s42:
     with dissolve
 
     if laurenrs:
-
         play sound "sounds/vibrate.mp3"
 
         scene v14s42_14a # TPP. same as v14s42_14 Mc sit's up and is looking at his phone
@@ -266,7 +264,7 @@ label v14s42:
         scene v14s40_3 # Ignore as reused from another scene
         with dissolve
 
-        la "Sorry, babe… I'm sure I just woke you but, I just had the most amazing experience of my life!"
+        la "Sorry, babe... I'm sure I just woke you but, I just had the most amazing experience of my life!"
 
         scene v14s40_3a # Ignore as reused from another scene
         with dissolve
@@ -276,12 +274,12 @@ label v14s42:
         scene v14s40_3 # Ignore as reused from another scene
         with dissolve
 
-        la "Don't laugh but…"
+        la "Don't laugh but..."
 
         scene v14s40_4 # Ignore as reused from another scene
         with dissolve
 
-        la "I just masturbated for the first time and… it felt amazing."
+        la "I just masturbated for the first time and... it felt amazing."
 
         scene v14s40_4a # Ignore as reused from another scene
         with dissolve
@@ -291,7 +289,7 @@ label v14s42:
         scene v14s40_4b # Ignore as reused from another scene
         with dissolve
 
-        u "Ha… Wow, I’m happy for you, I think? *Laughs* You've never touched yourself before?"
+        u "Ha... Wow, I'm happy for you, I think? *Laughs* You've never touched yourself before?"
 
         scene v14s40_4a # Ignore as reused from another scene
         with dissolve
@@ -306,40 +304,39 @@ label v14s42:
         scene v14s40_4b # Ignore as reused from another scene
         with dissolve
 
-        u "(\"There's a first time for everything\", The fuck am I on about? I need sleep…)"
+        u "(\"There's a first time for everything\", The fuck am I on about? I need sleep...)"
 
         scene v14s40_4 # Ignore as reused from another scene
         with dissolve
 
-        la "Haha, yeah I guess…"
+        la "Haha, yeah I guess..."
 
         scene v14s40_4c # Ignore as reused from another scene
         with dissolve
 
-        la "Are you tired or something? You don't sound like yourself…"
+        la "Are you tired or something? You don't sound like yourself..."
 
         scene v14s42_14c # TPP. same as v14s42_14b Penelope has turned towards Mc, MC has a shoked expression looking at Penelope, mouth closed
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v14s42_14d # TPP. same as v14s40_14c Penelope has turned back away from mc
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v14s42_14b
         with dissolve
 
         menu:
-
             "What'd I say?":
-                $ addpoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene v14s40_4b # Ignore as reused from another scene
                 with dissolve
 
-                u "What'd I say again? I don't even remember…"
+                u "What'd I say again? I don't even remember..."
 
                 scene v14s40_4a # Ignore as reused from another scene
                 with dissolve
@@ -360,7 +357,7 @@ label v14s42:
                 with dissolve
 
             "Yeah I'm tired":
-                $ addpoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene v14s40_4b # Ignore as reused from another scene
                 with dissolve
@@ -385,12 +382,12 @@ label v14s42:
                 scene v14s40_4d # Ignore as reused from another scene
                 with dissolve
 
-                la "I liked it, alot."
+                la "I liked it, a lot."
 
                 scene v14s40_4e # Ignore as reused from another scene
                 with dissolve
 
-                u "Ha, I’m glad. Most importantly, what did you wanna call and tell me?"
+                u "Ha, I'm glad. Most importantly, what did you wanna call and tell me?"
 
                 scene v14s40_4d # Ignore as reused from another scene
                 with dissolve
@@ -405,7 +402,7 @@ label v14s42:
                 scene v14s40_4d # Ignore as reused from another scene
                 with dissolve
 
-                la "Hehe… Goodnight, sweet [name]. I want to see you soon, okay?"
+                la "Hehe... Goodnight, sweet [name]. I want to see you soon, okay?"
 
                 scene v14s40_4e # Ignore as reused from another scene
                 with dissolve
@@ -415,7 +412,7 @@ label v14s42:
                 scene v14s42_14a
                 with dissolve
 
-                u "(Finally…)"
+                u "(Finally...)"
 
         scene v14s42_14e # TPP. same as v14s42_14 Mc puts his phone away and lays back down with penelope
         with dissolve
@@ -434,5 +431,7 @@ label v14s42:
 
     scene v14s42_16
     with fade
+
+    pause 0.75
 
     jump v14s42a

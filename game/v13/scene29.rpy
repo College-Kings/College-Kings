@@ -4,7 +4,6 @@
 # Time: Evening
 
 label v13s29:
-
     play music "music/v13/Track Scene 29_1.mp3" fadein 2
 
     if not v13_invite_samantha:

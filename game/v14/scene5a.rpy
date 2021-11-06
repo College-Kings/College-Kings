@@ -5,7 +5,7 @@
 
 label v14s05a:
     play sound "sounds/dooropen.mp3"
-    pause 0.5
+    pause 0.51
 
     scene v14s05a_1 # TPP. Show walking into his room, neutral expression, mouth closed
     with dissolve
@@ -45,7 +45,7 @@ label v14s05a:
 
     pause 0.75
 
-    if aubreyrs and rileyrs: #placeholder
+    if v13_FirstThreesome:
         scene v14s05a_7 # FPP. Riley just beside MC on her bedside sitting up straight, slight smile, mouth open
         with dissolve
 

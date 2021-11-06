@@ -88,8 +88,6 @@ label v14s43a:
 
     pause 0.75
 
-    call screen elections
-
 label v14s43a_continue:
     scene v14s43a_4 # TPP. Show MC and Penelope walking through the college, close to the classroom, both smiling, mouths closed (not holding hands)
     with dissolve

@@ -157,4 +157,6 @@ label v11_museum_tour:
 
     ri "Sounds good."
     stop music fadeout 3
+    
+    $ v11s23_penelope_date = False #variable was introduced late and defaults as True to enhance playability of saves already in progress. This is an unavoidable toggle to False for new playthroughs that will make the variable act as intended.
     jump v11s23_freeroamstart

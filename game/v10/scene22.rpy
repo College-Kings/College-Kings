@@ -207,7 +207,7 @@ label v10_cafe_w_jenny:
         menu:
             "Flirt":
                 $ add_point(KCT.BOYFRIEND)
-                if kct == "confident":
+                if kct == "loyal":
                     $ jennyLike += 1
 
                 else:

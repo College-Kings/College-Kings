@@ -85,12 +85,12 @@ init python:
         SceneGallery("v13s50a") #50a, Emily, day 40, v13_emilysex
         #v14
     if renpy.loadable("v14/scene1.rpy"):
-        SceneGallery("") #1, Riley Aubrey
-        SceneGallery("") #3d, Satin
-        SceneGallery("") #21a, Chloe
-        SceneGallery("") #25a, Amber
-        SceneGallery("") #36, Jenny
-        SceneGallery("") #53a, Samantha
+        SceneGallery("v14s01_sg") #1, Riley Aubrey, xx, v13_FirstThreesome
+        SceneGallery("v14s03c_sg") #3d, Satin, xx, v14_satin_sex
+        SceneGallery("v14s21a") #21a, Chloe, xx, v14_chloe_sex
+        SceneGallery("v14s25a") #25a, Amber, xx, v14_amber_sex
+        SceneGallery("v14s36_sg") #36, Jenny, xx, v14_jenny_sex
+        SceneGallery("v14s53_sg") #53a, Samantha, xx, v14_samantha_sex
 
 screen spoiler():
     modal True
