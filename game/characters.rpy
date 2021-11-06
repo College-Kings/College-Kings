@@ -149,5 +149,5 @@ define character.rub = Character("Rubee", who_color="#8b0000", who_outlines=[ (2
 define character.trainer = Character("Trainer", who_color="#147efb", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.lady = Character("Lady", who_color="#ff8afb", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.gentleman = Character("Gentleman", who_color="#147efb", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
-define character.elm = Character("Elijah's mother")
-define character.bird = Character("Bird")
+define character.elm = Character("Elijah's mother", who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.bird = Character("Bird", who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
