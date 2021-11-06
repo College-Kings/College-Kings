@@ -422,6 +422,8 @@ label v14s45a:
     elif v14_money_theft_date_ditch: # Placeholder for choosing to ditch the date you set up with Chloe to steal money
         play sound "sounds/call.mp3"
 
+        pause 0.75
+
         scene v14s45a_7
         with dissolve
 
@@ -481,6 +483,8 @@ label v14s45a:
     
     elif v14_lindsey_car_sale: #Placeholder for helping Lindsey sell her car.
         play sound "sounds/call.mp3"
+
+        pause 0.75
 
         scene v14s45a_7
         with dissolve
@@ -572,6 +576,8 @@ label v14s45a:
         pause 0.75
 
     else:
+        pause 0.75
+    
         scene v14s45a_8
         with dissolve
 
