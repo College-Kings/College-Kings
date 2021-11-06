@@ -1022,4 +1022,7 @@ label v14s47_end:
         $ v14s47_kiwiiPost2.addReply("Liked, commenting, where do I subscribe",~v14s47_kiwiiReply3)
         $ v14s47_kiwiiPost2.addReply("Oooh... ;)", v14s47_kiwiiReply4)
 
+    if False:
+        scene v14s47_lindsey_kiwii
+
     jump v14s48
