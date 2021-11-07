@@ -154,7 +154,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
     u "*Sighs*"
 
-    menu: 
+    menu:
         "Trust Chloe":
             $ set_presidency_percent(v14_lindsey_popularity - 3)
             $ v14s31bTrustChloe = True

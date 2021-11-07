@@ -227,6 +227,8 @@ label v14s30b:
     scene v14s30b_7 # TPP. Show MC walking down the Campus sidewalk.
     with dissolve
 
+    pause 0.75
+
     if joinwolves:
         scene v14s30b_8 # TPP. Show MC walking into the wolves house.
         with fade
