@@ -39,7 +39,7 @@ label v14s24a:
 
     menu:
         "Twezzlers":
-            scene v14a24a_8 # TPP. MC, smiling, grabs Twezzlers from the shelf.
+            scene v14s24a_8 # TPP. MC, smiling, grabs Twezzlers from the shelf.
             with dissolve
 
         "Gummy Fish":
