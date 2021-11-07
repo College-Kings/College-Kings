@@ -55,4 +55,6 @@ label v14s14a:
     scene v14s14a_4 # TPP. MC runs out of the room, mc's back is turned, face is not visible
     with dissolve
 
+    pause 0.75
+
     jump v14s15

@@ -76,11 +76,11 @@ label v14s49:
             $ chloe.messenger.addReply(_("Yeah, sounds great"))
 
         label v14s49Chloe_PhoneContinue:
-                if chloe.messenger.replies:
-                    call screen phone
-                if chloe.messenger.replies:
-                    "(I should reply to Chloe.)"
-                    jump v14s49Chloe_PhoneContinue
+            if chloe.messenger.replies:
+                call screen phone
+            if chloe.messenger.replies:
+                "(I should reply to Chloe.)"
+                jump v14s49Chloe_PhoneContinue
 
         scene v14s49_3a
         with dissolve

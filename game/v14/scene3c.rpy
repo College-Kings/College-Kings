@@ -278,6 +278,9 @@ label v14s03c:
 
     menu:
         "Go with her":
+            $ v14_satin_sex = True
+            label v14s03c_sg:
+        
             $ add_point(KCT.TROUBLEMAKER)
 
             scene v14s03c_4f
@@ -318,6 +321,8 @@ label v14s03c:
 
             scene v14s03c_4f
             with dissolve
+
+            $ grant_achievement("saving_ryans_privates")
 
             u "Please go save my friend."
 

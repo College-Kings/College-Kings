@@ -115,7 +115,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         scene v14s31b_3c
         with dissolve
 
-        u "It is,"
+        u "It is."
 
         scene v14s31b_3a
         with dissolve
@@ -156,13 +156,16 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
     menu: 
         "Trust Chloe": # -Event1 Trust her- v14_lindsey_popularity minus 3
-            $ v14_lindsey_popularity -= 3
+            $ set_presidency_percent(v14_lindsey_popularity - 3)
             $ v14s31bTrustChloe = True
             $ add_point(KCT.BOYFRIEND)
             $ chloe.points +=1
 
             scene v14s31b_3
             with dissolve
+
+            if chloegf:
+                $ grant_achievement("built_on_trust")
             
             u "*Sighs* I trust that you'll do what's best."
 
@@ -183,7 +186,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
             u "Yeah... Of course."
             
         "Don't trust Chloe": # -Event2 Don't trust her- v14_lindsey_popularity plus 3
-            $ v14_lindsey_popularity += 3    # -If Don't trust her- v14_lindsey_popularity plus 3
+            $ set_presidency_percent(v14_lindsey_popularity + 3)    # -If Don't trust her- v14_lindsey_popularity plus 3
             $ chloe.points -=1
 
             scene v14s31b_3
@@ -1350,4 +1353,3 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         pause 0.75
 
         jump v14s33
-

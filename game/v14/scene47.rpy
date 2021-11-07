@@ -17,10 +17,10 @@ init python:
         v14s47_kiwiiPost2.newComment("Lindsey", "You're a dork.")
     
     def v14s47_kiwiiReply4():
-        $ v14s47_kiwiiPost2.newComment("Lindsey", "Haha, I h8 you <3")
+        v14s47_kiwiiPost2.newComment("Lindsey", "Haha, I h8 you <3")
 
 label v14s47:
-# -Peace and Cheex can help with this scene: MC walks up to Lindsey and they have a convo by the car with a few images of the car. When MC is ready to take pictures we will go to a free roam shot of the car. Highlight the passenger side, driver side, hood, and trunk. MC chooses in any order where to take pics. Once they�ve taken the pic, revert back to the freeroam screen where their previous choice is now greyed out, and the other choices remain while ALSO having a �Finish� button in the bottom right. MC has to take one photo, but can choose whether to take all 4, or leave after each one. Revert back to the freeroam screen after each photo is taken, the player makes their choices, and when all 4 have been taken or if they click �finish�, -if finish dialogue.
+# -Peace and Cheex can help with this scene: MC walks up to Lindsey and they have a convo by the car with a few images of the car. When MC is ready to take pictures we will go to a free roam shot of the car. Highlight the passenger side, driver side, hood, and trunk. MC chooses in any order where to take pics. Once they've taken the pic, revert back to the freeroam screen where their previous choice is now greyed out, and the other choices remain while ALSO having a "Finish" button in the bottom right. MC has to take one photo, but can choose whether to take all 4, or leave after each one. Revert back to the freeroam screen after each photo is taken, the player makes their choices, and when all 4 have been taken or if they click "finish", -if finish dialogue.
 
 # -MC approaches Lindsey who is standing next to a dirty (needs to be seen that it hasn't been washed b/c dialogue) old Volkswagen. They both smile when they see each other-
 
@@ -390,7 +390,6 @@ label v14s47_hood:
         li "Nice. Now what?"
     
     else:
-
         $ v14s47_solo_hood = True
         $ v14s47_pics += 1
 
@@ -482,7 +481,6 @@ label v14s47_trunk:
         li "Okay. What's next?"
 
     else:
-
         $ v14s47_solo_trunk = True
         $ v14s47_pics += 1
 
@@ -570,11 +568,9 @@ label v14s47_driver:
         with dissolve
 
         if lindseyrs:
-
             u "Is that even a question? *Chuckles*"
 
         else:
-
             u "Um... Yes. *Laughs*"
 
         scene v14s47_driver_2c # FPP. Same as v14s47_driver_2, Lindsey posing by the door, sucking on the lollipop, making a sexy face at MC, mouth closed
@@ -615,7 +611,6 @@ label v14s47_driver:
         u "Beautiful. *Chuckles* What's next?"
     
     else:
-
         $ v14s47_solo_driver = True
         $ v14s47_pics += 1
 
@@ -707,7 +702,6 @@ label v14s47_passenger:
 
         menu:
             "Hand on hips":
-
                 $ v14s47_linds_hips = True
                 $ v14s47_pics += 1
 
@@ -739,7 +733,6 @@ label v14s47_passenger:
                 li "Alrighty... Anymore?"
 
             "On her knees":
-
                 $ v14s47_linds_knees = True
                 $ v14s47_pics += 1
 
@@ -808,7 +801,6 @@ label v14s47_passenger:
 
         menu:
             "Scare bird away":
-
                 $ v14s47_solo_no_bird = True
                 $ v14s47_pics += 1
                 
@@ -857,9 +849,10 @@ label v14s47_passenger:
                 li "Alrighty... Anymore?"
 
             "Take photo of bird":
-
                 $ v14s47_solo_bird = True
                 $ v14s47_pics += 1
+
+                $ grant_achievement("say_chirp")
 
                 u "Yeah, Linds. A crazy bird lady might buy the car simply because he's sitting on it. *Chuckles*"
 
@@ -878,18 +871,16 @@ label v14s47_passenger:
                 scene v14s47_passenger_4a
                 with dissolve
 
-                li "Alrighty... Anymore?"
-            
+                li "Alrighty... Any more?"
+
 label v14s47_end:
     scene v14s47_end_1 # FPP. MC and Lindsey standing by the car, next to each other, Lindsey looking at MC, Lindsey smiling, mouth closed
     with dissolve
 
-    if v14s47_pics  < 4:
-
+    if v14s47_pics < 4:
         u "Okay, I think that's enough."
     
     else:
-
         u "Alright. That's every angle of Grandpa's Wagen, I think."
 
     scene v14s47_end_1a # FPP. Same as v14s47_end_1, Lindsey mouth open
@@ -1002,6 +993,8 @@ label v14s47_end:
     scene v14s47_end_4 # TPP. Show MC and Lindsey walking along the street, both smiling, mouths closed
     with fade
 
+    $ freeRoam = True
+
     pause 0.75
 
     if v14_pics_with_linds:
@@ -1009,7 +1002,7 @@ label v14s47_end:
         $ v14s47_kiwiiPost1.newComment("Nora", "Kick ass babe <3")
         $ v14s47_kiwiiPost1.newComment("Aubrey", "Aww, look at your cute little button!")
         $ v14s47_kiwiiPost1.newComment("Riley", "I have one too :) Hehe.")
-        $ v14s47_kiwiiPost1.newComment("Sebastian","Looking all official now, Linds!")
+        $ v14s47_kiwiiPost1.newComment("Sebastian", "Looking all official now, Linds!")
         $ v14s47_kiwiiPost1.addReply("Damn, she's cute... What is she selling? ;)", v14s47_kiwiiReply1)
         $ v14s47_kiwiiPost1.addReply("#ThatsMyPresident", v14s47_kiwiiReply2)
     
@@ -1018,8 +1011,11 @@ label v14s47_end:
         $ v14s47_kiwiiPost2.newComment("Nora", "Kick ass babe <3")
         $ v14s47_kiwiiPost2.newComment("Aubrey", "Aww, look at your cute little button!")
         $ v14s47_kiwiiPost2.newComment("Riley", "I have one too :) Hehe.")
-        $ v14s47_kiwiiPost2.newComment("Sebastian","Looking all official now, Linds!")
+        $ v14s47_kiwiiPost2.newComment("Sebastian", "Looking all official now, Linds!")
         $ v14s47_kiwiiPost2.addReply("Liked, commenting, where do I subscribe",~v14s47_kiwiiReply3)
         $ v14s47_kiwiiPost2.addReply("Oooh... ;)", v14s47_kiwiiReply4)
+
+    if False:
+        scene v14s47_lindsey_kiwii
 
     jump v14s48

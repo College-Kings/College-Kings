@@ -304,7 +304,6 @@ label v14s43c:
     u "*British accent* I haven't lied!"
 
     if penelopeloyal and (chloegf or laurenrs):
-
         scene v14s43c_1j #FPP. same as v14s43c_1b Penelope has a slightly confused expression, mouth closed
         with dissolve
 
@@ -326,7 +325,6 @@ label v14s43c:
     pe "*Whispers* Just play along! Ahem..."
 
     if v14_PenRomScene:
-
         scene v14s43c_1l # FPP. same as v14s43c_1 Penelope has a smug expression, mouth open
         with dissolve
 
@@ -494,7 +492,6 @@ label v14s43c:
         pause 0.75
 
     else:
-
         scene v14s43c_1h
         with dissolve
 
@@ -599,6 +596,8 @@ label v14s43c:
 
         scene v14s43c_3c # same as v14s43c_3c Penelope quickly kisses MC on the cheek, Penelope eyes closed, Mc eyes open, slight smile
         with dissolve
+        
+        pause 0.75
 
     scene v14s43c_9 # Penelope runs off down the hallway back turned to MC
     with dissolve
@@ -608,10 +607,16 @@ label v14s43c:
     scene v14s43c_10 # TPP. Mc walks down the hallway, slight smile, mouth closed
     with dissolve
 
+    pause 0.75
+
     scene v14s43c_11 # TPP. Mc leaves the school, slight smile, mouth closed
     with dissolve
 
+    pause 0.75
+
     scene v14s43c_12 # TPP. MC starts walking along the sidewalk, slight smile, mouth closed
     with dissolve
+
+    pause 0.75
 
     jump v14s44

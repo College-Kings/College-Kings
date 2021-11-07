@@ -7,6 +7,7 @@ label v14s35:
     if joinwolves:
         scene v14s35_1 # TPP. Show MC chilling on his phone in his wolves room, slight smile, mouth closed.
         with dissolve
+
     else:
         scene v14s35_2 # TPP. Show MC chilling on his phone in his apes room, slight smile, mouth closed.
         with dissolve
@@ -33,6 +34,9 @@ label v14s35:
             jump v14s35_PhoneContinue
 
     if joinwolves:
+        if config_censored:
+            call screen censoredPopup("v14s35_nsfwSkipLabel1")
+
         scene v14s35_3 # TPP. Show MC standing naked in his wolves room, slight smile, mouth closed.
         with dissolve
 
@@ -43,10 +47,15 @@ label v14s35:
 
         pause 0.75
 
+        label v14s35_nsfwSkipLabel1:
+        
         scene v14s35_3b # TPP. Same as v14s35_3a, MC standing in the room with his swimming trunks fully on, slight smile, mouth closed
         with dissolve
 
     else:
+        if config_censored:
+            call screen censoredPopup("v14s35_nsfwSkipLabel2")
+    
         scene v14s35_4 # TPP. Show MC standing naked in his Apes room, slight smile, mouth closed.
         with dissolve
 
@@ -57,10 +66,16 @@ label v14s35:
 
         pause 0.75
 
+        label v14s35_nsfwSkipLabel2:
+
         scene v14s35_4b # TPP. Same as v14s35_4a, MC standing in the room with his swimming trunks fully on, slight smile, mouth closed
         with dissolve
 
+    pause 0.75
+
     scene v14s35_5 # TPP. Show MC walking to the Lagoon, slight smile, mouth closed.
     with fade
+
+    pause 0.75
 
     jump v14s36

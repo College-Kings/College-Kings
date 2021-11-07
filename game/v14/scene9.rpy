@@ -322,11 +322,6 @@ label v14s09:
 
         u "(Not for much longer...)"
 
-        #scene v14s09_6c
-        #with dissolve
-
-        #pause 0.75
-
     scene v14s09_8b
     with dissolve
 

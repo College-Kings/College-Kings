@@ -4,6 +4,8 @@
 # Time: Night
 
 label v14s34:
+    $ v14_penelope_date = True
+
     if joinwolves: 
         scene v14s34_1 # TPP. MC sitting on his bed in his wolves room, slight smile, mouth closed.
         with dissolve
@@ -132,5 +134,7 @@ label v14s34:
 
     scene v14s34_12 # TPP. Show MC outside walking towards the restraunt in his nice clothes, slight smile, mouth closed.
     with dissolve
+
+    pause 0.75
 
     jump v14s37

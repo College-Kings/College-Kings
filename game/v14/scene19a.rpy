@@ -146,6 +146,7 @@ label v14s19a:
 
     if not v14_help_lindsey: # -If don't help Lindsey
         $ chloe.points += 1
+        $ v14_talk_to_chris = True
 
         scene v14s19a_1g # FPP Same as 1f, Chloe's mouth closed, she is biting her lower lip slightly
         with dissolve
@@ -176,7 +177,7 @@ label v14s19a:
 
                 cl "Perfect! Thank you so much, [name]. This means the world to me."
 
-            "Talk to Lindsey":
+            "Make an excuse":
                 scene v14s19a_1g
                 with dissolve
                 u "I hate to state the obvious but, Chris and I aren't on the best of terms right now... And he's got Nora on his mind, so..."
@@ -242,16 +243,16 @@ label v14s19a:
     scene v14s19a_6 # FPP Chloe walking off out of the library
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v14s19a_7 # TPP Show MC leaving the library
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v14s19a_8 # TPP Show MC arriving in the school halls
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     jump v14s20 # -Transition to Scene 20-
