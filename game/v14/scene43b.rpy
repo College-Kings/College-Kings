@@ -369,7 +369,7 @@ label v14s43b:
 
                 $ set_presidency_percent(v14_lindsey_popularity + 3)
                 if joinwolves:
-                    u "(Fuck... Where did that come from?")
+                    u "(Fuck... Where did that come from?)"
                 else:
                     u "(Fuck... I'm glad I didn't go through with posting that shit.)"
 
@@ -591,7 +591,7 @@ label v14s43b:
 
                 $ set_presidency_percent(v14_lindsey_popularity + 3)
                 if joinwolves:
-                    u "(Fuck... Where did that come from?")
+                    u "(Fuck... Where did that come from?)"
                 else:
                     u "(Fuck... I'm glad I didn't go through with posting that shit.)"
                     
