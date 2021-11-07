@@ -130,7 +130,7 @@ label v14s43:
     
     pause 0.75
 
-    scene v15s43_9 # FPP. MC sitting down next to Penelope, Penelope looking at him, slight smile, mouth closed
+    scene v14s43_9 # FPP. MC sitting down next to Penelope, Penelope looking at him, slight smile, mouth closed
     with dissolve
 
     u "*Laughs* Good one."
