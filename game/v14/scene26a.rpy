@@ -315,7 +315,7 @@ label v14s26a:
 
     u "So? How'd you do?"
 
-    if v14_lauren_sabotage:
+    if not v14_lauren_sabotage:
         scene v14s26a_2a
         with dissolve
 
