@@ -4,8 +4,6 @@
 # Time: Night
 
 label v14s34:
-    $ v14_penelope_date = True
-
     if joinwolves: 
         scene v14s34_1 # TPP. MC sitting on his bed in his wolves room, slight smile, mouth closed.
         with dissolve
