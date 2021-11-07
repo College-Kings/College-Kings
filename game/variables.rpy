@@ -554,7 +554,6 @@ default v12s7_penelope = False
 default v12s7_riley = False
 default v12s7_riley_moved = False
 default v12s7_riley2 = False
-default v12s7_riley2_convo = False
 default v12s7_riley3 = False
 default v12s7_ryan = False
 default v12s7_samantha = False
