@@ -4132,7 +4132,6 @@ label v12s7_amber_kill:
 
 label v12s7_riley2:
     $ v12s7_riley2 = True
-    $ v12s7_riley2_convo = True
     $ v12s7_seenList = []
 
     show screen murder_button_overlay(riley)
@@ -4301,14 +4300,10 @@ label v12s7_riley2:
 
     $ v12s7_endtalkList.append(riley)
 
-    $ v12s7_riley2_convo = False
-
     call screen v12s7_right_gallery_front
 
 label v12s7_riley_kill2:
     hide screen murder_button_overlay
-
-    $ v12s7_riley2_convo = False
 
     scene v12ferrile3 # TPP. Show mc pointing finger gun at riley, mc mouth open
     with dissolve
