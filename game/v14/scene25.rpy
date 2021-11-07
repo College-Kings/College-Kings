@@ -911,6 +911,12 @@ label v14s25:
 
                 pause 2.5
             
+            elif v14s03a_take_wallet: # if bought gummy fish
+                scene v14s25_19c
+                with fade
+                
+                pause 2.5
+            
             scene v14s25_19b # TPP. Same as v14s25_19a, Double Vision, Show MC and Amber tongue-kissing,
             with fade
             
