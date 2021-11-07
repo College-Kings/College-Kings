@@ -45,7 +45,7 @@ label v14s51_bedside_table:
 label v14s51_text:
     if v14_money_theft_date_ditch: # Placeholder variable for using the date as distraction
         if v14s51_interaction == 1:
-            scene v14s15_2
+            scene v14s51_2
             with dissolve
 
             play sound "sounds/vibrate.mp3"
@@ -190,7 +190,7 @@ label v14s51_purse:
 
     pause  
 
-    scene v14s15_purse_2 
+    scene v14s51_purse_2 
     with dissolve
 
     pause  
