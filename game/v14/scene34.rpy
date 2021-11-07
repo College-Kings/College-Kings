@@ -64,7 +64,7 @@ label v14s34:
             $ jennyfriend = True
             $ jenny.messenger.addReply(_("Sorry, I was already planning to go out with Penelope tonight."))
             $ jenny.messenger.newMessage(_("Oh!"))
-            $ jenny.messenger.newMessage(_("No worries, that's fine. I'm happy for both of you!"))
+            $ jenny.messenger.newMessage(_("No worries, that's fine. I'm happy for both of you actually!"))
             $ jenny.messenger.newMessage(_("We'll catch up some other day :)"))
 
             label v14s34_PhoneContinue3:
