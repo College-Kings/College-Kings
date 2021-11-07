@@ -128,7 +128,7 @@ image wrath_of_pen = "images/achievements/v14/wrath_of_pen.webp"
 image your_eyelids_are_heavy = "images/achievements/v14/your_eyelids_are_heavy.webp"
 image say_chirp = "images/achievements/v14/say_chirp.webp"
 image grand_theft_chloe = "images/achievements/v14/grand_theft_chloe.webp"
-image clean_joker = "images/achievements/v14/clean_joker.webp"
+image clean_it_up = "images/achievements/v14/clean_it_up.webp"
 
 
 # v1.0 - v2.0
