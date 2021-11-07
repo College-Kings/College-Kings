@@ -510,14 +510,17 @@ label v14s32:
 
     scene v14s32_9 # TPP. Close up of Imre hitting the punching bag with his left fist.
     with dissolve
+    play sound "sounds/hs.mp3"
 
     pause 0.75
 
+    play sound "sounds/hs.mp3"
     scene v14s32_9a # TPP. Same as v14s32_9, Imre hitting the punching bag with his right fist.
     with dissolve
 
     pause 0.75
 
+    play sound "sounds/js.mp3"
     scene v14s32_9b # TPP. Same as v14s32_9a, Imre kicking the punching bag with a roundhouse kick.
     with dissolve
 
@@ -555,14 +558,17 @@ label v14s32:
 
     scene v14s32_9c # TPP. Same as v14s32_9, MC punching the bag with his left fist.
     with dissolve
+    play sound "sounds/hs.mp3"
 
     pause 0.75
 
+    play sound "sounds/hs.mp3"
     scene v14s32_9d # TPP. Same as v14s32_9a, MC punching the bag with his right fist.
     with dissolve
 
     pause 0.75
 
+    play sound "sounds/js.mp3"
     scene v14s32_9e # TPP. Same as v14s32_9b, MC kicking the punching bag with a roundhouse kick.
     with dissolve
 
