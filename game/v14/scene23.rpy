@@ -674,9 +674,8 @@ label v14s23:
                     scene v14s23_2c
                     with dissolve
 
-                    ch "Don't change the plan because of me, it's really not a bad idea, but I don't wanna do it with you guys."
-
                     $ grant_achievement("agree_to_disagree")
+                    ch "Don't change the plan because of me, it's really not a bad idea, but I don't wanna do it with you guys."
 
                     $ set_presidency_percent(v14_lindsey_popularity + 3) #tick
                     ch "I wish you luck with the campaign of course and I want the best for you, but this isn't the move for the Wolves or myself."
