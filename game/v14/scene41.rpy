@@ -17,12 +17,12 @@ label v14s41:
 
     if laurenrs:
         play sound "sounds/vibrate.mp3"
-        scene v14s40_2a # Ignore as reused from another scene
+        scene v14s41_2a
         with dissolve
 
         u "*Sighs*"
 
-        scene v14s40_2b # Ignore as reused from another scene
+        scene v14s41_2b
         with dissolve
 
         u "Hello?"
@@ -162,7 +162,7 @@ label v14s41:
 
                 u "You will, goodnight babe."
 
-                scene v14s40_2c # Ignore as reused from another scene
+                scene v14s41_2c
                 with dissolve
 
                 u "(Finally...)"
