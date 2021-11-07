@@ -367,7 +367,7 @@ label v14s43b:
                 scene v14s43b_13
                 with dissolve
 
-                $ set_presidency_percent(v14_lindsey_popularity + 3)
+                $ set_presidency_percent(v14_lindsey_popularity + 3) #tick
                 if joinwolves:
                     u "(Fuck... Where did that come from?)"
 
@@ -590,7 +590,7 @@ label v14s43b:
                 scene v14s43b_13
                 with dissolve
 
-                $ set_presidency_percent(v14_lindsey_popularity + 3)
+                $ set_presidency_percent(v14_lindsey_popularity + 3) #tick
                 if joinwolves:
                     u "(Fuck... Where did that come from?)"
 

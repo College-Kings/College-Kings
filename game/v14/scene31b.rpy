@@ -156,7 +156,6 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
     menu:
         "Trust Chloe":
-            $ set_presidency_percent(v14_lindsey_popularity - 3)
             $ v14s31bTrustChloe = True
             $ add_point(KCT.BOYFRIEND)
             $ chloe.points +=1
@@ -186,7 +185,6 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
             u "Yeah... Of course."
             
         "Don't trust Chloe":
-            $ set_presidency_percent(v14_lindsey_popularity + 3) # -If Don't trust her- v14_lindsey_popularity plus 3
             $ chloe.points -=1
 
             scene v14s31b_3
@@ -1008,6 +1006,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
         scene v14s31b_28a # TPP. Same as v14s31b_28, but mouth open. 
         with dissolve
 
+        $ set_presidency_percent(v14_lindsey_popularity - 3) #tick
         cl "Very, he actually listened. Maybe it was because he was high, I don't know, but I'll take it."
 
         menu: # -MC chooses Event1 or Event2-
@@ -1226,6 +1225,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
         scene v14s31b_31
         with dissolve
 
+        $ set_presidency_percent(v14_lindsey_popularity + 3) #tick
         gr "*Laughs* You're a fucking joke."
 
         scene v14s31b_31a
