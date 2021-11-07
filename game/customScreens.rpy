@@ -148,7 +148,7 @@ screen kiwiiPopup():
 
         textbutton "OK":
             align (0.5, 1.0)
-            action [SetVariable("kiwii_firstTime", False), Hide("kiwiiPopup")]
+            action [Function(kiwii_firstTimeMessages), SetVariable("kiwii_firstTime", False), Hide("kiwiiPopup")]
 
 # Fight Screens
 screen fightPopup(fightMove):
