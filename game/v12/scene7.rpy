@@ -4308,6 +4308,8 @@ label v12s7_riley2:
 label v12s7_riley_kill2:
     hide screen murder_button_overlay
 
+    $ v12s7_riley2_convo = False
+
     scene v12ferrile3 # TPP. Show mc pointing finger gun at riley, mc mouth open
     with dissolve
 
