@@ -26,9 +26,15 @@ label v14s34:
 
     play sound "sounds/calling.mp3"
 
+    pause 0.75
+
     scene v14s34_5 # TPP. Penelope wearing cute Pajamas, Show a sleepy Penelope holding the phone to her ear. slight tired smile, mouth open.
     with dissolve
 
+    pause 0.75
+
+    stop sound
+    play sound "sounds/answercall.mp3"
     pe "H-hello?"
 
     scene v14s34_5a # TPP. Same as v14s34_5, Penelope slight tired smile, mouth closed.
@@ -48,7 +54,8 @@ label v14s34:
     
     u "*Chuckles* Good, because I was thinking we could try going on that date we talked about in London."
 
-    scene v14s34_7 # TPP. Penelope standing up on her bed with the phone to her ear, slight smile, mouth closed.
+    #scene v14s34_7 # TPP. Penelope standing up on her bed with the phone to her ear, slight smile, mouth closed.
+    scene v14s34_6
     with dissolve
 
     pe "R-Right now?"
