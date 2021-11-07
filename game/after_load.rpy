@@ -78,6 +78,12 @@ python early:
     class CheatItem:
         pass
 
+    class CustomCharacter:
+        pass
+
+    class MainCharacter:
+        pass
+
 label after_load:
     python:
         # Disable skip transitions
