@@ -100,7 +100,7 @@ screen endFreeRoamConfirm(continueLabel):
             spacing 200
 
             textbutton "Yes":
-                action [Hide("endFreeRoamConfirm"), SetVariable("freeRoam", False), Jump(continueLabel)]
+                action [Hide("endFreeRoamConfirm"), Jump(continueLabel)]
                 
             textbutton "No":
                 action Hide("endFreeRoamConfirm")
