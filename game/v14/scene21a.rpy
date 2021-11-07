@@ -264,6 +264,8 @@ label v14s21a:
 
     u "I've missed you more, and hopefully again soon."
 
+    $ renpy.end_replay()
+
     scene v14s21a_16a # FPP Same as 16, Chloe's mouth open
     with dissolve
 

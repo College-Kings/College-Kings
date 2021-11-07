@@ -180,4 +180,6 @@ label v14s40:
     scene v14s40_5b # TPP. same as v14s40_5a differnet sleeping position
     with dissolve
 
+    pause 0.75
+
     jump v14s40a

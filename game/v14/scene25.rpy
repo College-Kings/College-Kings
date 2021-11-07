@@ -82,6 +82,8 @@ label v14s25:
             scene v14s25_4g # FPP. Same as v14s25_4f, Amber looking down as MC hands her the twezzlers candy, Amber slight smile, mouth open.  
             with dissolve
 
+            $ grant_achievement("how_did_you_know")
+
             am "How did you know these were my favorite?"
 
             scene v14s25_4e
@@ -589,14 +591,16 @@ label v14s25:
             scene v14s25_13d # FPP. Same as v14s25_13c, MC looking at Amber's empty room.
             with dissolve
 
-            pause 0.75
+            pause 0.5
 
             play sound "sounds/flush.mp3"
+            
+            pause 0.5
             
             scene v14s25_13d
             with dissolve
 
-            pause 0.75
+            pause 1.5
 
             scene v14s25_14 # FPP. Amber walking back in the room towards MC, Amber slight smile, mouth closed
             with dissolve
@@ -739,17 +743,17 @@ label v14s25:
             scene v14s25_15 # FPP. Amber walking out of the room.
             with dissolve
 
-            pause 
+            pause 1 
 
             scene v14s25_16 # TPP. Show MC in his boxers.
             with fade
 
-            pause 
+            pause 1
 
             scene v14s25_17 # TPP. Show MC laying in Amber's Bed.
             with fade
 
-            pause
+            pause 1
 
             scene v14s25_18 # TPP. (MC off Camera) Close up of Amber standing at the entrance of her room, Amber topless in a flirty pose, Wearing nothing but black panties, Amber Slight Smile, Mouth closed.
             with dissolve
@@ -820,11 +824,12 @@ label v14s25:
                     scene v14s25_17f # TPP. Show MC and Amber with their backs against each other sleeping.
                     with dissolve
             
+            pause 0.75
+            
             jump v14s25b
 
         "Let Amber be Amber":
             $ add_point(KCT.TROUBLEMAKER)
-            $ v14_amber_drugs = True
             scene v14s25_8m
             with dissolve
 
@@ -898,23 +903,23 @@ label v14s25:
             scene v14s25_19 # TPP. Double Vision (like in homecoming Amber sex scene), Show MC and Amber dancing, both slight smile, mouths closed.
             with fade
 
-            pause
+            pause 2.5
             
-            if v14s03a_take_wallet: # if candy shopping with Aubrey
+            if v14s03a_take_wallet and not v14s24a_gummyfish: # if bought Twezzlers
                 scene v14s25_19a # TPP. Same as v14s25_19, Double Vision, Show MC and Amber eating snacks.
                 with fade
 
-                pause 
+                pause 2.5
             
             scene v14s25_19b # TPP. Same as v14s25_19a, Double Vision, Show MC and Amber tongue-kissing,
             with fade
             
-            pause 
+            pause 2.5
 
             scene v14s25_20 # TPP. Show Amber pinning MC against the wall as they kiss.
             with dissolve
 
-            pause 0.75
+            pause 1.75
 
             scene v14s25_21 # FPP. Amber pinning MC against the wall, Amber flirtatious smile, mouth open.
             with dissolve
@@ -924,7 +929,7 @@ label v14s25:
             scene v14s25_20a # TPP. Same as v14s25_20, MC kissing Amber's neck.
             with fade
 
-            pause 0.75
+            pause 1.5
 
             scene v14s25_22 # TPP. Close up of just Amber's face, Amber biting her lip.
             with dissolve
@@ -949,6 +954,7 @@ label v14s25:
             menu:
                 "Fuck Amber":
                     $ add_point(KCT.TROUBLEMAKER)
+                    $ v14_amber_sex = True
                     scene v14s25_21a # FPP. Same as v14s25_21, Amber flirtatious smile, mouth closed.
                     with dissolve
 
@@ -1039,6 +1045,7 @@ label v14s25:
                     menu:
                         "Let her stay":
                             $ add_point(KCT.TROUBLEMAKER)
+                            $ v14s25_letherstay = True
                             u "(Ha, hard as stone on the outside but a softie on the inside.)"
 
                             scene v14s25_17e
@@ -1050,5 +1057,7 @@ label v14s25:
 
                             scene v14s25_17f
                             with dissolve
+                    
+                    pause 0.75
                     
                     jump v14s25b

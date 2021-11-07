@@ -9,7 +9,7 @@ label v14s45a:
 
     u "Hey there. So, what's the news?"
 
-    if v14_amber_drugs:
+    if not v14_amber_clean:
         scene v14s45a_1a # FPP. Same as v14s45a_1, MC looking at Amber, Amber now looking at MC, Amber tired and high, Amber neutral expression, mouth open.
         with dissolve
 
@@ -41,7 +41,7 @@ label v14s45a:
         am "I looked into a nightclub that's not too far from here. I could make really good money on the weekends."
 
         menu:
-            "Not a bad idea.":
+            "Not a bad idea":
                 $ add_point(KCT.TROUBLEMAKER)
                 scene v14s45a_1b
                 with dissolve
@@ -121,7 +121,7 @@ label v14s45a:
 
                 am "*Sighs* Haha..."
 
-    elif v14_amber_clean:
+    else:
         scene v14s45a_1c # FPP. Same as v14s45a_1, Amber looking at MC, Mc looking at Amber, Amber has on a nice pretty red lipstick, Amber slight smile, mouth open.
         with dissolve
 
@@ -137,7 +137,7 @@ label v14s45a:
         scene v14s45a_1c
         with dissolve
 
-        am "*Chuckles* I'm now the ‘Assistant to the Manager'."
+        am "*Chuckles* I'm now the \"Assistant to the Manager\"."
 
         scene v14s45a_1d
         with dissolve
@@ -218,7 +218,7 @@ label v14s45a:
     scene v14s45a_3 # TPP. Camera view from the park infront of them. MC and Amber looking at the Camera. Amber laying her head on MC's shoulder.
     with dissolve
 
-# -Note for music; This is where the slow version of ‘Blanket' by Van Stee comes into play, see Mozzart for questions-
+# -Note for music; This is where the slow version of "Blanket" by Van Stee comes into play, see Mozzart for questions-
 # -Waiting on song to be ready. Song should start playing here.-
 
     pause 0.75
@@ -422,6 +422,8 @@ label v14s45a:
     elif v14_money_theft_date_ditch: # Placeholder for choosing to ditch the date you set up with Chloe to steal money
         play sound "sounds/call.mp3"
 
+        pause 0.75
+
         scene v14s45a_7
         with dissolve
 
@@ -481,6 +483,8 @@ label v14s45a:
     
     elif v14_lindsey_car_sale: #Placeholder for helping Lindsey sell her car.
         play sound "sounds/call.mp3"
+
+        pause 0.75
 
         scene v14s45a_7
         with dissolve
@@ -569,7 +573,11 @@ label v14s45a:
         scene v14s45a_9
         with dissolve
 
+        pause 0.75
+
     else:
+        pause 0.75
+    
         scene v14s45a_8
         with dissolve
 
@@ -577,5 +585,7 @@ label v14s45a:
 
         scene v14s45a_9
         with dissolve
+
+        pause 0.75
 
     jump v14s46

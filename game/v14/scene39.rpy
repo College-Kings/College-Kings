@@ -274,7 +274,7 @@ label v14s39:
         scene v14s39_4a
         with dissolve
 
-        u "It's fine, I'm sorry if tonight was... also weird,"
+        u "It's fine, I'm sorry if tonight was... also weird."
 
         scene v14s39_4
         with dissolve

@@ -4,8 +4,14 @@
 # Time: Night
 # Render Count: 19 Unique Renders, 53 Total
 
-label v14s52:
+init python:
+    def v14s52_reply1():
+        setattr(store, "v14_noraWhere", True)
 
+    def v14s52_reply2():
+        setattr(store, "v14_noraWorry", True)
+
+label v14s52:
     scene v14s52_1 # TPP. mc walks up and see's the wolves frat house
     with dissolve
 
@@ -75,14 +81,12 @@ label v14s52:
     ch "But we've decided to break up. Officially, for good. I thought you should all know."
 
     if v13_imre_disloyal:
-
         scene v14s52_5a # TPP. same as v14s52_5 Mc and Imre are looking at each other, Mc no expression mouth closed Imre has a pissed off expression mouth closed, All the other Wolves have a shocked expression, mouths open, looking at Chris, Chris holding a hand behind his head with a look of disbelief in it himself, looking down and away from the wolves
         with dissolve
 
         pause 0.75
 
     else:
-
         scene v14s52_5b # TPP. same as v14s52_5a All the Wolves have a shocked expression, mouths open, looking at Chris, Chris holding a hand behind his head with a look of disbelief in it himself, looking down and away from the wolves
         with dissolve
 
@@ -171,12 +175,12 @@ label v14s52:
     scene v14s52_11a # FPP. same as v14s52_11 Aaron no expression, mouth open
     with dissolve
 
-    ar "Yeah, mine too."
+    aa "Yeah, mine too."
 
     scene v14s52_11a
     with dissolve
 
-    ar "You grow up seeing them so happy together and then one day your dad is packing up all his clothes and your mom is screaming at him to get the hell out, ha"
+    aa "You grow up seeing them so happy together and then one day your dad is packing up all his clothes and your mom is screaming at him to get the hell out, ha"
 
     scene v14s52_6
     with dissolve
@@ -213,8 +217,10 @@ label v14s52:
 
     u "(Why did he suddenly end the conversation when Imre asked where Nora is? He could have just said...)"
 
-    if NoraRS
+    if v12_nora_sex:
+        $ norars = True
 
+    if norars:
         scene v14s52_12
         with dissolve
 
@@ -222,11 +228,9 @@ label v14s52:
 
         scene v14s52_12
         with dissolve
-
         menu:
-
             "Ask Chris about Nora":
-                $ addpoint ChrisSus += 1
+                $ chrissus += 1
                 $ add_point(KCT.TROUBLEMAKER)
 
                 scene v14s52_12a # FPP. Mc see's chris waling away from him back turned to mc
@@ -317,7 +321,7 @@ label v14s52:
                 scene v14s52_13c
                 with dissolve
 
-                mc "Yeah, you-"
+                u "Yeah, you-"
 
                 scene v14s52_13j # FPP. Chris has walked into his bedroom and is no longer visible and the door is shut
                 with dissolve
@@ -377,10 +381,15 @@ label v14s52:
 
 # -remember variable of what he sent for future scene. NoraWorry would be text2 or NoraWhere would be text1
 
-    To: nora.addReply("Hey, Nora. Just checking in since I haven't heard from you in a while... Where are you?"), func=None) 
-        NoraWhere = True
-        nora.addReply("Hey, you. I'm starting to worry that I haven't seen you around. At least let me know that he didn't hurt you... Please text me back, ASAP"), func=None) 
-        NoraWorry = True
+    $ nora.messenger.addReply("Hey, Nora. Just checking in since I haven't heard from you in a while... Where are you?", v14s52_reply1)
+    $ nora.messenger.addReply("Hey, you. I'm starting to worry that I haven't seen you around. At least let me know that he didn't hurt you... Please text me back, ASAP", v14s52_reply2)
+
+    label v14s52_PhoneContinueNora:
+        if nora.messenger.replies:
+            call screen phone
+        if nora.messenger.replies:
+            u "(I should text Nora.)"
+            jump v14s52_PhoneContinueNora
 
 # -regardless of choice, MC exits his texts and puts the phone down on the desk-
 
@@ -421,7 +430,9 @@ label v14s52:
 
     u "Nora...?"
 
-    nora.newMessage("UNABLE TO DELIVER MESSAGE AT THIS TIME, PLEASE TRY AGAIN LATER.")
+    $ nora.messenger.newMessage("UNABLE TO DELIVER MESSAGE AT THIS TIME, PLEASE TRY AGAIN LATER.", queue=False)
+
+    call screen phone
 
     scene v14s52_16f # TPP. same as v14s52_16d Mc now has an angry expression
     with dissolve
@@ -429,7 +440,6 @@ label v14s52:
     u "(What the fuck does that mean?!)"
 
     if v13_imre_disloyal:
-
         scene v14s52_17 # FPP. show a full size image of mc's wolves bedroom door closed
         with dissolve
 
@@ -480,11 +490,12 @@ label v14s52:
 
         imre "Come the fuck on, [name]!"
 
-        jump v14s54
+        jump end14
 
     else: 
-
         scene v14s52_19 # TPP. Show a side view image of just Mc holding his phone in front of his face, looking at his phone, extremely angry expression, mouth open
         with dissolve
 
-        jump v14s54
+        pause 0.75
+
+        jump end14

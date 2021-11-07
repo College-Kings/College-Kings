@@ -14,7 +14,6 @@ label v11s23_freeroamstart: # Start of freeroam
     call screen v11s23_entrance
     
 label v11s23_chris1:
-
     $ v11s23_chris1 = True
 
     scene v11frmch1 # FPP Show Chris talking on the phone, neutral expression, mouth closed
@@ -28,14 +27,12 @@ label v11s23_chris1:
     ch "Look man, I'm sorry but I need to handle this right now. I can't talk."
 
     if not joinwolves: # if Apes
-
         scene v11frmch1
         with dissolve
 
         u "Right, sorry."
     
     else: # if Wolves
-
         scene v11frmch1
         with dissolve
 
@@ -135,7 +132,6 @@ label v11s23_chris1:
     call screen v11s23_mid
 
 label v11s23_mrlee1:
-
     $ v11s23_mrlee1 = True
 
     scene v11frmlee1 # FPP Show Mr. Lee with bust behind him, Mr. Lee looking at MC, neutral expression, mouth open
@@ -306,7 +302,6 @@ label v11s23_mrlee1:
     call screen v11s23_mid
 
 label v11s23_riley1:
-
     $ v11s23_riley1 = True
 
     scene v11frmri1 # FPP Show Riley leaning over barrier and reaching her arm out toward triceratops, Riley smiling with mouth closed
@@ -589,7 +584,6 @@ label v11s23_riley1:
     call screen v11s23_entrance
 
 label v11s23_penelope1:
-
     $ v11s23_penelope1 = True
 
     scene v11frmpe1 # FPP Show Penelope starting to walk away from helmet exhibit right as MC goes to talk to her

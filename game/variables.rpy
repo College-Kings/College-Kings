@@ -471,7 +471,7 @@ default v11s23_chris1 = False
 default v11s23_riley1 = False
 default v11s23_mrlee1 = False
 default v11s23_penelope1 = False
-default v11s23_penelope_date = False
+default v11s23_penelope_date = True # late addition, defaulting to True to enhance act 4 playability
 default v11s25_beer = True
 default v11_bartender_have_gf = False
 default msrosers = False
@@ -616,62 +616,72 @@ default v13s40fromgame = False
 default v13_chloe_sex = False
 
 # 14.0
-default v13_threesomeending = False
+default AmberLoyal = False
+default AutumnTrust = False
+default chrissus = 0
+default ElijahFriend = False
+default jennyawkward = False
+default jennyfriend = False
+default jennyrs = False
+default penelopeloyal = False
+default sceneList = set() #$ sceneList.add(aubrey)
 default v13_FirstThreesome = False # Variable used to call for Riley and Aubrey threesome happening.
+default v13_threesomeending = False
+default v14_amber_clean = False
+default v14_ApesPostChloePics = True #They always post unless MC is an Ape and stops them.
+default v14_chloe_apes = False #Placeholder
+default v14_chloeSus = False
+default v14_emily_ily = False
+default v14_chrissupport = 0 #3 = Full, 2 = Medium, 1 = Low
 default v14_help_chloe = False
 default v14_help_lindsey = False
-default v14_amber_clean = False
-default v14_amber_drugs = False
-default v14_emily_ily = False
-default v14_full_chris_support = False
-default v14_lindsey_popularity = 45
-default v14_low_chris_support = False
-default v14_pw_half_chris_support = False # Chris backs half the cost of the plush wolf photoshoot
-default v14_rw_half_chris_support = False # Chris backs half the cost of the real wolf photoshoot
+default v14_jennypoints = 0
+default v14_lauren_sabotage = False
+default v14_lindsey_car_sale = False #Placeholder for helping Lindsey sell her car
+default v14_lindsey_money_theft = False
+default v14_lindsey_popularity = 45 # Use `set_presidency_percent(amount)`.
+default v14_money_theft_date_ditch = False # Placeholder for choosing to ditch the date you set up with Chloe to steal money
+default v14_noraWhere = False
+default v14_noraWorry = False
+default v14_PenArgScene = False
+default v14_PenelopePartner = False
+default v14_PenRomScene = False
+default v14_realwolf = False #Placeholder for choosing real wolf on planning board
 default v14_ryan_satin = False
+default v14_talk_to_chris = False
 default v14s03a_left_cup = False
 default v14s03a_take_wallet = False
-default v14_lindsey_money_theft = False
+default v14s22_steal_fund = False
 default v14s23_agree = False
 default v14s23_disagree = False
 default v14s24a_gummyfish = False
+default v14s25_letherstay = False
 default v14s30b_its_perfect = False  # Telling Chloe that the caption is perfect
 default v14s30b_pw_image_one = False  # MC chose the first photo of the Plush Wolf for Chloe's kiwi post
 default v14s30b_pw_image_two = False  # MC chose the second photo of the Plush Wolf for Chloe's kiwi post
 default v14s30b_rw_image_one = False  # MC chose the first photo of the Real Wolf for Chloe's kiwi post
 default v14s30b_rw_image_two = False  # MC chose the second photo of the Real Wolf for Chloe's kiwi post
-default v14s31bTrustChloe = False # MC trust Chloe alone with Grayson
+default v14s31_talkcameron = False # Placeholder still
 default v14s31b_smoke_weed_with_aubrey = False # s31b smoking weed with Aubrey at Ape's House
+default v14s31bTrustChloe = False # MC trust Chloe alone with Grayson
 default v14s37_focus_on_us = False # Tell Penelope to focus on them during the date.
 default v14s39_id_wait = False # Tell Penelope you'd wait till they got home
 default v14s46a_love_lauren_more = False # MC love Lauren more because of her sex experimenting on MC.
 default v14s50_listen_to_aubrey_lindsey = False # MC choses to listen to Lindsey and Aubrey's conversation. 
-default v14_talk_to_chris = False
-default ElijahFriend = False
-default AmberLoyal = False
-default penelopeloyal = False
-default v14_lauren_sabotage = False
-default v14_PenRomScene = False
-default v14s25_letherstay = False
-default v14_jennypoints = 0
-default v14s22_steal_fund = False
-default v14s31_talkcameron = False
-default v14_ApesPostChloePics = False
-default jennyawkward = False
-default jennyfriend = False
-default jennyrs = False
-default v14_PenArgScene = False
-default v14_PenelopePartner = False
-default v14_RileyPartner = False
-default sceneList = set() #$ sceneList.add(aubrey)
-default v14s51_interaction = 0 
 default v14s51_bathroom_window = False
+default v14s51_interaction = 0 
 default v14s51_kitchen_window = False
-default v14s51_take_money = False
 default v14s51_take_diary = False
-###to be looked at:
-#lindseysupport.points ???
-#lauren variables
-#v14s31_talkcameron
-#v14_plushwolf
-#v14_realwolf
+default v14s51_take_money = False
+default v14s51_take_300 = False
+default v14s51_take_900 = False
+default v14_satin_sex = False
+default v14_chloe_sex = False
+default v14_amber_sex = False
+default v14_jenny_sex = False
+default v14_samantha_sex = False
+default v14_penelope_date = False
+default v14_money_theft_concert_distraction = False # Placeholder for choosing the concert to distract Chloe
+
+
+#MENTAL NOTE: Adjust dialogue of 43b in case of pictures when mc is wolf

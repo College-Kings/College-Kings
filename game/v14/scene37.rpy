@@ -738,6 +738,8 @@ label v14s37:
         scene v14s37_10g
         with dissolve
 
+        $ grant_achievement("wrath_of_pen")
+
         pe "Okay, that's it!"
 
         scene v14s37_10p # FPP. Same as v14s37_10o, Penelope starting to get up from her seat, Penelope angry face, mouth closed.

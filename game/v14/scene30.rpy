@@ -54,7 +54,7 @@ label v14s30:
 
     u "Damn."
 
-    if v14_pw_half_chris_support:
+    if v14_chrissupport >= 2:
         scene v14s30_3d
         with dissolve
 

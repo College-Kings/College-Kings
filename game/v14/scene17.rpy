@@ -54,7 +54,7 @@ label v14s17:
 
     u "That's pretty messed up to call Lauren the class clown behind her back..."
 
-    if msrosers: #placeholder
+    if msrosers:
         scene v14s17_4c
         with dissolve
 
@@ -121,7 +121,7 @@ label v14s17:
 
         pause 0.75
     
-    if laurenrs: #placeholder
+    if laurenrs:
         scene v14s17_7a # TPP. Same as v14s17_7, Show MC and Lauren kissing
         with dissolve
 
@@ -201,10 +201,10 @@ label v14s17:
 
             u "*Chuckles*"
 
-    if laurenrs_v11aubrey and (laurenrs or not v11_aubrey_sex): #correction for saves where this variable was defaulting to True - which can't be the case if v11_aubreysex is False, or if laurenrs is still True
+    if laurenrs or not v11_aubrey_sex: #correction for saves where this variable was defaulting to True - which can't be the case if v11_aubreysex is False, or if laurenrs is still True
         $ laurenrs_v11aubrey = False
 
-    if laurenrs_v11aubrey or laurenmad: #placeholder
+    if laurenrs_v11aubrey or laurenmad:
         $ laurenmad = True
         scene v14s17_8d # FPP. Same as v14s17_8, neutral expression
         with dissolve
@@ -241,12 +241,12 @@ label v14s17:
 
         u "Lauren, I..."
 
-        u "I'm extremely sorry about all and any of the mistakes I've made, I really am. I hope that one day you can forgive me."
+        u "I'm extremely sorry about all and any of the mistakes I've made, I really am."
 
         scene v14s17_8d
         with dissolve
 
-        la "Yeah... One day maybe."
+        la "Yeah..."
 
         la "I've moved on from it regardless though... So..."
 
@@ -683,6 +683,8 @@ label v14s17:
 
                         scene v14s17_10b
                         with dissolve
+
+                        $ grant_achievement("beastie_boy")
 
                         u "You say that like it's nothing... Lauren, that's perfect. Everything will go south without you."
 

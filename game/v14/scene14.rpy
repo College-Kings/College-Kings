@@ -38,12 +38,7 @@ label v14s14:
 
     $ chloe.messenger.newMessage(_("Right, you're probably asleep. When you read this, just meet me in the hall near Ms. Rose's classroom at 10."), queue=False)
 
-    #label v14s14_PhoneContinueChloe:
-        #if chloe.messenger.getReplies():
     call screen phone
-        #if chloe.messenger.getReplies():
-            #u "(I should check my phone.)"
-            #jump v14s14_PhoneContinueChloe
 
     scene v14s14_2b # TPP. Same as v14s14_2a, MC putting his phone aways, slight smile, mouth closed.
     with dissolve
