@@ -18,7 +18,7 @@ label v14s35:
     $ jenny.messenger.addReply(_("No, what's up?"))
     $ jenny.messenger.newMessage(_("Well, I've been wanting to swimming in this little lagoon I found."))
     $ jenny.messenger.addReply(_("You wanna go now?"))
-    $ jenny.messenger.newMessage(_("Yeah, why not? ;) Penelope is busy, so I wanted to see if you'd be down."))
+    $ jenny.messenger.newMessage(_("Yeah, why not? ;) Penelope doesn't seem to be up, so I wanted to see if you'd want to come."))
     $ jenny.messenger.addReply(_("Okay sure, where's this lagoon at?"))
     $ jenny.messenger.newImgMessage("images/v14/Scene 35/v14s35_lagoon_pic.webp") #Picture of the Lagoon, somehow with a location marker in the photo
     $ jenny.messenger.newMessage(_("See you soon!"))
@@ -30,8 +30,10 @@ label v14s35:
         if jenny.messenger.replies:
             call screen phone
         if jenny.messenger.replies:
-            "(I should reply to Jenny.)"
+            u "(I should reply to Jenny.)"
             jump v14s35_PhoneContinue
+
+label v14s35_afterinvite:
 
     if joinwolves:
         if config_censored:
