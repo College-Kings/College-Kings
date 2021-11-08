@@ -56,7 +56,7 @@ screen kct_popup(required_kct=None):
                 style "endfree"
                 xalign 0.5
         else:
-            text "Unfortunately, your Key Character Trait [kct] did not change the outcome of this decision.":
+            text "Unfortunately, your Key Character Trait {b}[kct]{/b} did not change the outcome of this decision.":
                 style "endfree"
                 xalign 0.5
 
