@@ -91,11 +91,6 @@ label v14s26:
 
     la "Right behind you..."
 
-    scene v14s26_2e
-    with dissolve
-
-    pause 0.75
-
     scene v14s26_3 # FPP. MC swings around and sees Lauren, Lauren has her hands up with a scary expression on her face
     with dissolve
 
@@ -200,9 +195,6 @@ label v14s26:
     with dissolve
 
     li "Haha, I don't know about [name], but if you join the Chicks I can help you, Lauren."
-
-    scene v14s26_5e
-    with dissolve
 
     li "Or I could even do some partnership work with the Deers, you know."
 
@@ -320,18 +312,12 @@ label v14s26:
 
         u "What? No. *Chuckles*"
 
-        scene v14s26_10c
-        with dissolve
-
         u "Are you all good? What's going on?"
 
         scene v14s26_10b
         with dissolve
 
         am "I'm fine, sorry..."
-
-        scene v14s26_10b
-        with dissolve
 
         am "I was just scared 'cause when I woke up you weren't here."
 
@@ -416,9 +402,6 @@ label v14s26:
     with dissolve
 
     u "*Chuckles* Maybe..."
-
-    scene v14s26_2
-    with dissolve
 
     u "Let me know when it's time for your next event and I'll be there."
 

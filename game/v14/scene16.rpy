@@ -102,9 +102,6 @@ label v14s16:
 
     hide screen loyalty_tutorial # Placeholder
 
-    scene v14s16_2
-    with dissolve
-
     cl "I need a lot of help if I'm going to beat her, [name]. It won't be as easy as I thought either."
 
     cl "Chris has pretty much promised that the Wolves will side with me so that's a blessing, but the main person I need support from is you."
@@ -126,9 +123,6 @@ label v14s16:
     with dissolve
 
     cl "If you'd be willing to help me win, I'd be so grateful..."
-
-    scene v14s16_2b
-    with dissolve
 
     cl "I'd do anything to thank you."
 
@@ -156,9 +150,6 @@ label v14s16:
         with dissolve
 
         u "(I think she means having an assistant in the bedroom...?!) I'm definitely following."
-
-    scene v14s16_2b
-    with dissolve
 
     cl "So, what's your answer? Will you help me try and win this campaign?"
 

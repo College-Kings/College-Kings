@@ -117,9 +117,6 @@ label v14s25:
 
             am "*Chuckles* Thank you."
 
-    scene v14s25_4f
-    with dissolve
-
     am "Did you have any trouble getting here?"
 
     scene v14s25_4e
@@ -961,6 +958,7 @@ label v14s25:
                 "Fuck Amber":
                     $ add_point(KCT.TROUBLEMAKER)
                     $ v14_amber_sex = True
+
                     scene v14s25_21a # FPP. Same as v14s25_21, Amber flirtatious smile, mouth closed.
                     with dissolve
 
@@ -970,6 +968,7 @@ label v14s25:
 
                 "Don't fuck Amber": 
                     $ add_point(KCT.BOYFRIEND)
+
                     scene v14s25_21a
                     with dissolve
 

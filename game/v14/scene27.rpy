@@ -24,6 +24,9 @@ label v14s27:
         with dissolve
 
         u "What's up, Emily?"
+        
+        scene v14s27_2
+        with dissolve
 
     else:
         scene v14s27_2a
@@ -36,9 +39,6 @@ label v14s27:
 
         em "Ha, okay..."
     
-    scene v14s27_2
-    with dissolve
-
     em "It's actually good that I ran into you."
 
     scene v14s27_2a

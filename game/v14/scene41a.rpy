@@ -266,9 +266,6 @@ label v14s41a:
 
         gr "Okay fine. Everyone except pussy boy here, post it."
 
-        scene v14s41a_5k
-        with dissolve
-
         gr "Happy now?"
 
         scene v14s41a_5l # FPP. same as v14s41a_5k Grayson's mouth is closed
@@ -339,9 +336,6 @@ label v14s41a:
                         $ add_point(KCT.BRO)
                         $ v14_ApesPostChloePics = False
 
-                        scene v14s41a_5l
-                        with dissolve
-
                         u "You of all people should know that doing something like this is gonna give us a bad look. Putting something out there publically like that is just asking for a shitty situation."
 
                         scene v14s41a_4c # FPP. same as v14s41a_4 Cameron is looking at MC, no expression, mouth open
@@ -361,9 +355,6 @@ label v14s41a:
 
                     "Not fair to Chloe":
                         $ add_point(KCT.BOYFRIEND)
-
-                        scene v14s41a_5l
-                        with dissolve
 
                         u "As I said, it's not fair to Chloe. Having that photo posted all over Kiwii, and especially by all of her ex-boyfriend's frat members, would be a horrible experience for her."
 

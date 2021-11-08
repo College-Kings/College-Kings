@@ -320,9 +320,6 @@ label v14s39:
 
         u "(*Sighs* That was a rocky night.)"
 
-        scene v14s39_9
-        with dissolve
-
         pause 0.75
 
         if joinwolves:

@@ -80,9 +80,6 @@ label v14s19:
 
     cl "The first phase of my campaign is to re-establish old loyalties. The first time I was elected, people loved me and I need to remind them why."
 
-    scene v14s19_4d
-    with dissolve
-
     cl "So, here's what I'm thinking for phase one."
 
     call screen chloe_board

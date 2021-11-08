@@ -140,9 +140,6 @@ label v14s42:
 
     pe "Laying in bed snuggled up to a guy that I actually like..."
 
-    scene v14s42_12
-    with dissolve
-
     pe "Every guy in the past just... wasn't what I needed. It seemed like those were the only kind of guys I could get, though."
 
     scene v14s42_12a
@@ -256,9 +253,6 @@ label v14s42:
 
         u "*Sighs*"
 
-        scene v14s42_14b
-        with dissolve
-
         u "Hello?"
 
         scene v14s40_3 # Ignore as reused from another scene
@@ -300,9 +294,6 @@ label v14s42:
         with dissolve
 
         u "Well, there certainly is a first time for everything."
-
-        scene v14s40_4b # Ignore as reused from another scene
-        with dissolve
 
         u "(\"There's a first time for everything\", The fuck am I on about? I need sleep...)"
 
@@ -363,9 +354,6 @@ label v14s42:
                 with dissolve
 
                 u "Honestly, yeah. I'm just so tired. Sorry if what I said sounded weird, ignore my stupid talk. *Chuckles*"
-
-                scene v14s40_4b # Ignore as reused from another scene
-                with dissolve
 
                 u "So... did you watch porn while you touched yourself?"
 

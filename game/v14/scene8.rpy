@@ -44,9 +44,6 @@ label v14s08:
 
     menu:
         "Ask her what's wrong":
-            scene v14s08_3c
-            with dissolve
-
             u "Hey, what's wrong?"
 
             scene v14s08_3d
@@ -120,9 +117,6 @@ label v14s08:
             with dissolve
 
             am "Uh, [name]..."
-
-            scene v14s08_4b
-            with dissolve
 
             am "Thanks for minding your own business."
 

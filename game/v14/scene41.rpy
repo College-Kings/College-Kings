@@ -67,9 +67,6 @@ label v14s41:
 
         u "Well, there certainly is a first time for everything."
 
-        scene v14s40_4b # Ignore as reused from another scene
-        with dissolve
-
         u "(\"There's a first time for everything\", The fuck am I on about? I need sleep...)"
 
         scene v14s40_4 # Ignore as reused from another scene
@@ -81,9 +78,6 @@ label v14s41:
         with dissolve
 
         la "Are you tired or something? You don't sound like yourself..."
-
-        scene v14s40_4c # Ignore as reused from another scene
-        with dissolve
 
         menu:
             "What'd I say?":
@@ -116,9 +110,6 @@ label v14s41:
                 with dissolve
 
                 u "Honestly, yeah. I'm just so tired. Sorry if what I said sounded weird, ignore my stupid talk. *Chuckles*"
-
-                scene v14s40_4b # Ignore as reused from another scene
-                with dissolve
 
                 u "So... did you watch porn while you touched yourself?"
 

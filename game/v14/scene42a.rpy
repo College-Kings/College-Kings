@@ -59,9 +59,6 @@ label v14s42a:
 
     pe "And then bringing you home and not doing anything..."
 
-    scene v14s42a_2c
-    with dissolve
-
     pe "I'm sure you were looking forward to something special."
 
     scene v14s42a_2b

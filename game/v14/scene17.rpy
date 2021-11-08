@@ -536,9 +536,6 @@ label v14s17:
 
             u "I seriously think it's best to just let Lindsey figure all of that out on her own."
 
-            scene v14s17_10b
-            with dissolve
-
             u "If she came to you for just another bake sale then it'd be different, but this is a bake sale with a hidden agenda."
 
             scene v14s17_10e

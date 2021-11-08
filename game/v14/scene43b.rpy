@@ -101,9 +101,6 @@ label v14s43b:
 
     ri "For all of you who don't know me, my name is Riley. I'm a freshman and a free spirit..."
 
-    scene v14s43b_4d
-    with dissolve
-
     ri "I'm very approachable, so I don't know what all my responsibilities will be as a teacher's assistant, but feel free to talk to me."
 
     scene v14s43b_4c
@@ -221,15 +218,9 @@ label v14s43b:
 
     u "*Laughs* Yeah. I get that..."
 
-    scene v14s43b_9a
-    with dissolve
-
     menu:
         "Work with Penelope":
             $ v14_PenelopePartner = True
-
-            scene v14s43b_9a
-            with dissolve
 
             u "But sorry, man. This will be too good to miss."
 
@@ -300,13 +291,7 @@ label v14s43b:
 
             lee "Everyone's paired up? Good!"
 
-            scene v14s43b_3
-            with dissolve
-
             lee "Now, once I'm finished speaking you may leave the classroom and begin reading pages 100-103 in your textbook."
-
-            scene v14s43b_3
-            with dissolve
 
             lee "After that, you'll come up with a short scene involving a king and a queen interaction that you'll present next week to the rest of the class."
 
@@ -364,9 +349,6 @@ label v14s43b:
                         "(I should reply to Chloe.)"
                         jump v14s43Chloe_PhoneContinue1
 
-                scene v14s43b_13
-                with dissolve
-
                 $ set_presidency_percent(v14_lindsey_popularity + 3) #tick
                 if joinwolves:
                     u "(Fuck... Where did that come from?)"
@@ -417,9 +399,6 @@ label v14s43b:
 
                 pe "Ooh, this sounds fun. *Chuckles*"
 
-                scene v14s43b_12
-                with dissolve
-
                 pe "We can just go sit outside on the stairs and work, if that's cool."
 
                 scene v14s43b_12a
@@ -445,9 +424,6 @@ label v14s43b:
                 jump v14s43c
 
         "Work with Riley":
-            scene v14s43b_9a
-            with dissolve
-
             u "But sorry, bro..."
 
             scene v14s43b_9a
@@ -519,13 +495,7 @@ label v14s43b:
 
             lee "Everyone's paired up? Good!"
 
-            scene v14s43b_3f
-            with dissolve
-
             lee "Now, once I'm finished speaking you may leave the classroom and begin reading pages 100-103 in your textbook."
-
-            scene v14s43b_3f
-            with dissolve
 
             lee "After that, you'll come up with a short scene involving a king and a queen interaction that you'll present next week to the rest of the class."
 

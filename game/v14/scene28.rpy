@@ -67,9 +67,6 @@ label v14s28:
                 $ add_point(KCT.BOYFRIEND)
                 $ v14_emily_ily = True
                 
-                scene v14s28_2a
-                with dissolve
-
                 u "Emily..."
 
                 u "I've had a hard time admitting to myself, let alone expressing to you, how I feel about you."
@@ -114,8 +111,6 @@ label v14s28:
 
             "It'll never work between us":
                 $ add_point(KCT.TROUBLEMAKER)
-                scene v14s28_2a
-                with dissolve
 
                 u "I'm not going to be rude or anything, but I have to be honest."
 

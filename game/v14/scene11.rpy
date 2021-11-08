@@ -317,9 +317,6 @@ label v14s11:
 
                 ri "I don't know, I mean- Yes! That was definitely a good wow..."
 
-                scene v14s11_4m
-                with dissolve
-
                 ri "I guess I just didn't think you'd be open to something like that. It's kind of my fantasy... *Chuckles*"
 
                 scene v14s11_4l
@@ -368,9 +365,6 @@ label v14s11:
                 with dissolve
 
                 u "I'll be honest, I like you a lot Riley. The feelings are definitely mutual and I'm really happy you told me, but relationship-wise..."
-
-                scene v14s11_4b
-                with dissolve
 
                 u "I'm just not the sharing type, I guess."
 
@@ -432,9 +426,6 @@ label v14s11:
 
         scene v14s11_4o
         with dissolve
-
-    scene v14s11_4o
-    with dissolve
 
     u "(Guess I need to get home myself. I can barely think with all this jetlag.)"
 

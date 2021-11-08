@@ -24,9 +24,6 @@ label v14s22a:
 
     u "Welcome to the world of fame, baby! *Chuckles*"
 
-    scene v14s22a_1a
-    with dissolve
-
     u "Everyone knows who you are now, Lindsey. That's what you wanted, right?"
 
     scene v14s22a_1

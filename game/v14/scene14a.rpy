@@ -23,9 +23,6 @@ label v14s14a:
 
     u "(Who's blowing up my phone?)"
 
-    scene v14s14a_1b
-    with dissolve
-
     $ chloe.messenger.newMessage(_("You won't believe what I'm looking at right now!!!! "))
     $ chloe.messenger.newMessage(_("Lindsey and I are NOT friends anymore. "))
     $ chloe.messenger.newMessage(_("I'm gonna need your help with the president thing, big time "))

@@ -39,18 +39,12 @@ label v14s22:
 
     u "Hell yeah, I love this."
 
-    scene v14s22_5a
-    with dissolve
-
     u "The real question is, how did you get permission to use it?"
 
     scene v14s22_5
     with dissolve
 
     li "I did a little favor for the janitor and now..."
-
-    scene v14s22_5
-    with dissolve
 
     li "Well, let's just say he's a big Lindsey supporter now. *Chuckles*"
 
@@ -93,9 +87,6 @@ label v14s22:
     with dissolve
 
     u "\"Just helped\"? You're an angel, Lindsey. *Chuckles*"
-
-    scene v14s22_5a
-    with dissolve
 
     u "What did Mr. Rose get out of all of this?"
 
@@ -145,9 +136,6 @@ label v14s22:
 
     li "Bingo!"
 
-    scene v14s22_5f
-    with dissolve
-
     li "Thankfully, I've planned out most of the campaign already. I just have a few areas where I could use your opinion."
 
     scene v14s22_5h # FPP. same as v14s22_5f lindsey holds up two fingers
@@ -175,9 +163,6 @@ label v14s22:
 
     li "Phase one of my plan is to secure funding. We don't have hidden funds or special resources like Chloe does."
 
-    scene v14s22_5f
-    with dissolve
-
     li "So money is priority number one, aka \"secure funding\"."
 
     scene v14s22_5g
@@ -199,9 +184,6 @@ label v14s22:
     with dissolve
 
     li "Right, so with that in mind now just have a look at my board and choose what you think is best."
-
-    scene v14s22_5e
-    with dissolve
 
     li "Both plans work and I'm comfortable with either one so... Whatever you decide is what I'll go with."
 
@@ -242,9 +224,6 @@ label v14s22_sell_car:
         with dissolve
 
         li "I just kinda figured that you wouldn't have chosen the other option. Based on your relationship with her, you know?"
-
-        scene v14s22_5e
-        with dissolve
 
         li "No worries though, we should get a good chunk of cash either way."
 
@@ -293,9 +272,6 @@ label v14s22_steal:
         with dissolve
 
         li "I know, me too. And..."
-
-        scene v14s22_5k
-        with dissolve
 
         li "I really do appreciate the lengths you're willing to go for me, [name]."
 

@@ -233,6 +233,7 @@ label v14s23:
         "Agree":
             $ v14s23_agree = True
             $ add_point(KCT.BOYFRIEND)
+
             scene v14s23_2b
             with dissolve
 
@@ -600,6 +601,7 @@ label v14s23:
                 
                 if v14s23_agree:
                     $ v14_chrissupport = 2
+
                     scene v14s23_2c
                     with dissolve
 
