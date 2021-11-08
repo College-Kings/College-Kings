@@ -52,11 +52,11 @@ screen kct_popup(required_kct=None):
     use endfrTemplate:
 
         if required_kct is None or required_kct == kct:
-            text "Congratulations! Your Key Character Trait {b}[kct]{/b} has just changed the outcome of a decision someone was making.":
+            text "Congratulations! Your Key Character Trait {b}[kct!c]{/b} has just changed the outcome of a decision someone was making.":
                 style "endfree"
                 xalign 0.5
         else:
-            text "Unfortunately, your Key Character Trait {b}[kct]{/b} did not change the outcome of this decision.":
+            text "Unfortunately, your Key Character Trait {b}[kct!c]{/b} did not change the outcome of this decision.":
                 style "endfree"
                 xalign 0.5
 
