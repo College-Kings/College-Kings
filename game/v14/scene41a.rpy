@@ -373,8 +373,6 @@ label v14s41a:
                         gr "*Laughs* We don't give a fuck about all that. Feelings don't mean shit, [name]."
 
                         if kct == "confident":
-                            call screen kct_popup
-                            
                             $ v14_ApesPostChloePics = False
                             scene v14s41a_6a
                             with dissolve
@@ -401,6 +399,7 @@ label v14s41a:
 
                             ca "I mean, fuck Chloe. And honestly, fuck Lindsey too. I don't really give a shit about who wins."
 
+                            call screen kct_popup
                             scene v14s41a_4d # FPP. same as v14s41a_4 Cameron has a concerned expression
                             with dissolve
 
