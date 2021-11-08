@@ -374,6 +374,8 @@ label v14s41a:
                         gr "*Laughs* We don't give a fuck about all that. Feelings don't mean shit, [name]."
 
                         if kct == "confident":
+                            call screen kct_popup
+                            
                             $ v14_ApesPostChloePics = False
                             scene v14s41a_6a
                             with dissolve
