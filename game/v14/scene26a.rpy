@@ -265,7 +265,7 @@ label v14s26a:
 
         u "Are you all good? What's going on?"
 
-        scene v14s26_10c # Ignore as reused from another scene
+        scene v14s26_10b # Ignore as reused from another scene
         with dissolve
 
         am "I'm fine, sorry..."
