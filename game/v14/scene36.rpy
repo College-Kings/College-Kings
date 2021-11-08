@@ -1216,6 +1216,7 @@ label v14s36:
                 u "Goodnight."
 
     else:
+        call screen kct_popup(required_kct="loyal")
         $ jennyfriend = True
         scene v14s36_4
         with dissolve

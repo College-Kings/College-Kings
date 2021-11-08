@@ -503,7 +503,8 @@ label v14s17:
 
                 la "I'll talk to her and see what she needs me to do."
 
-            else: 
+            else:
+                call screen kct_popup(required_kct="loyal")
                 scene v14s17_10g
                 with dissolve
 
@@ -725,7 +726,8 @@ label v14s17:
 
                             pause 0.75
 
-                    else: 
+                    else:
+                        call screen kct_popup(required_kct="loyal")
                         scene v14s17_17 # FPP. Lauren Looking at MC, serious expression, mouth open
                         with dissolve
                         

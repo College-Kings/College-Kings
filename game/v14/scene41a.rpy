@@ -433,6 +433,7 @@ label v14s41a:
                             pause 0.75
 
                         else:
+                            call screen kct_popup(required_kct="confident")
                             scene v14s41a_5a
                             with dissolve
 
