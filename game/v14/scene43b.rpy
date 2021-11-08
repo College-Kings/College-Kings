@@ -34,7 +34,7 @@ label v14s43b:
     scene v14s43b_3
     with dissolve
 
-    lee "The college has recently begun to advance it's usage of the teacher assistant program and so have I."
+    lee "The college has recently begun to advance its usage of the teacher assistant program and so have I."
 
     scene v14s43b_3b # FPP. same as v14s43b_3 Mr. Lee's mouth is closed
     with dissolve
