@@ -319,7 +319,7 @@ label v14s41a:
                 scene v14s41a_6d
                 with dissolve
 
-                ry "You're supporting Chloe, all over again."
+                ry "You're supporting Chloe all over again."
 
                 scene v14s41a_6e
                 with dissolve
