@@ -459,7 +459,7 @@ label v14s32:
         $ v14s32_kiwiiPost1.newComment("Chloe", _("Be civil at least, Grayson"), mentions="Grayson")
         $ v14s32_kiwiiPost1.newComment("Riley", _("Omg! Can I have that thing?"))
 
-        $ set_presidency_percent(v14_lindsey_popularity - 3)
+        $ set_presidency_percent(v14_lindsey_popularity - 2)
         imre "She just made an announcement on Kiwii, did you see it yet?"
 
         call screen phone
