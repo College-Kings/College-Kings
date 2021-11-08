@@ -7,8 +7,8 @@ screen endfrTemplate():
 
         background "images/endfr.webp"
 
-        # add "#00ff0080"
         transclude
+
 
 screen changeLanguage():
     tag menu
@@ -63,6 +63,7 @@ screen changeLanguage():
     textbutton _("Return"):
         align (0.99, 0.99)
         action ShowMenu("preferences")
+
 
 screen realmode():
     modal True
@@ -135,6 +136,7 @@ screen censoredPopup(continueLabel):
 screen timerBar(seconds=3):
     bar value AnimatedValue(0, seconds, seconds, seconds) at alpha_dissolve
 
+
 # Kiwii Screens
 screen kiwiiPopup():
     modal True
@@ -149,6 +151,7 @@ screen kiwiiPopup():
         textbutton "OK":
             align (0.5, 1.0)
             action [Function(kiwii_firstTimeMessages), SetVariable("kiwii_firstTime", False), Hide("kiwiiPopup")]
+
 
 # Fight Screens
 screen fightPopup(fightMove):
