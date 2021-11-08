@@ -127,7 +127,7 @@ label v14s17:
 
         play sound "sounds/kiss.mp3"
 
-        pause 1.5  
+        pause 1.5 
 
         scene v14s17_8 # FPP. Lauren looking at MC, slight smile, mouth open 
         with dissolve
@@ -332,7 +332,7 @@ label v14s17:
     scene v14s17_10b
     with dissolve
 
-    u "Ooooohhh...*Coughs* Nerd! *Coughs*"
+    u "Ooooohhh... *Coughs* Nerd! *Coughs*"
 
     scene v14s17_10d
     with dissolve
@@ -476,7 +476,12 @@ label v14s17:
 
             u "Plus, she came to you, of all people, for a reason. She trusts you, and knows what you're capable of."
 
-            if kct == "loyal": 
+            if laurenrs or kct == "loyal":
+                if not laurenrs:
+                    call screen kct_popup
+            
+                $ v14_lauren_helps_lindsey = True
+            
                 scene v14s17_10g
                 with dissolve
                 
@@ -498,7 +503,8 @@ label v14s17:
 
                 la "I'll talk to her and see what she needs me to do."
 
-            else: 
+            else:
+                call screen kct_popup(required_kct="loyal")
                 scene v14s17_10g
                 with dissolve
 
@@ -641,8 +647,9 @@ label v14s17:
 
                     u "You're the most loyal person I know, Lauren. That's why I'm asking you, the one person I trust with anything and everything."
 
-                    if kct == "loyal":
-                        call screen kct_popup
+                    if laurenrs or kct == "loyal":
+                        if not laurenrs:
+                            call screen kct_popup
                         
                         $ v14_lauren_sabotage = True
                     
@@ -666,7 +673,7 @@ label v14s17:
 
                         u "I do."
 
-                        scene v14s17_15 # TPP. Show MC looking at Lauren, slight smile, mouth closed, Lauren looking at MC intently, mouth closed  
+                        scene v14s17_15 # TPP. Show MC looking at Lauren, slight smile, mouth closed, Lauren looking at MC intently, mouth closed 
                         with dissolve
 
                         pause 0.75
@@ -719,7 +726,8 @@ label v14s17:
 
                             pause 0.75
 
-                    else: 
+                    else:
+                        call screen kct_popup(required_kct="loyal")
                         scene v14s17_17 # FPP. Lauren Looking at MC, serious expression, mouth open
                         with dissolve
                         

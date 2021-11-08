@@ -31,9 +31,9 @@ init python:
 
         def kill(self):
             # Check Competitive stat
-            if self.stats["Competitive"] == True and len(v12s7_killList) < 3:
+            if self.stats["Competitive"] and len(v12s7_killList) < 3:
                 self.points -= 1
-            elif self.stats["Competitive"] == False and len(v12s7_killList) < 3:
+            elif not self.stats["Competitive"] and len(v12s7_killList) < 3:
                 self.points += 1
 
             # Check Vindictive stat
@@ -44,11 +44,11 @@ init python:
                     self.points -= 1
 
             # Check Talkative stat
-            if self.stats["Talkative"] == True and self in v12s7_endtalkList:
+            if self.stats["Talkative"] and self in v12s7_endtalkList:
                 self.points += 1
-            elif self.stats["Talkative"] == True:
+            elif self.stats["Talkative"]:
                 self.points -= 1
-            elif self.stats["Talkative"] == False and self in v12s7_endtalkList:
+            elif not self.stats["Talkative"] and self in v12s7_endtalkList:
                 self.points -= 1
 
             # Add character to kill list

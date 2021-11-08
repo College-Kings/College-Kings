@@ -7,7 +7,7 @@ label v14s53b:
     scene v14s53b_1 # TPP. Show MC going to the door to leave the Apes Dream Room, tired, mouth closed
     with fade
 
-    if not SamanthaDrugs:
+    if not v14_SamanthaDrugs:
         u "(I think I deserve a good night's sleep.)"
 
     else:

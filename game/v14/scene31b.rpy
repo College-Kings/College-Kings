@@ -3,28 +3,28 @@
 # Characters: MC (Outfit: 2), CHLOE (Outfit: 1), AUBREY (Outfit: 1), GRAYSON (Outfit: 3) Wednesday
 # Time: Afternoon
 
-label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already there waiting, she's nervous about asking MC if she can seduce Grayson on her own-
-    scene v14s31b_1   # TPP. MC, mouth closed, neutral expression walking on the side walk (towards the Ape's house).
+label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already there waiting, she's nervous about asking MC if she can seduce Grayson on her own-
+    scene v14s31b_1 # TPP. MC, mouth closed, neutral expression walking on the side walk (towards the Ape's house).
     with dissolve
 
     pause 0.75
 
-    scene v14s31b_2   # TPP. MC, back to camera, standing in front of the Ape's house.
+    scene v14s31b_2 # TPP. MC, back to camera, standing in front of the Ape's house.
     with dissolve
 
     pause 0.75
 
-    scene v14s31b_2a  # TPP. MC, walking towards the side of the Ape's house (where he meets Chloe).
+    scene v14s31b_2a # TPP. MC, walking towards the side of the Ape's house (where he meets Chloe).
     with dissolve
 
     pause 0.75
 
-    scene v14s31b_3   # FPP. MC looks at Chloe, mouth closed and nervous and Chloe making eye contact back with MC.
+    scene v14s31b_3 # FPP. MC looks at Chloe, mouth closed and nervous and Chloe making eye contact back with MC.
     with dissolve
 
     u "Hey, you."
 
-    scene v14s31b_3a  # FPP. Same as v14s31b_3, but Chloe mouth open.
+    scene v14s31b_3a # FPP. Same as v14s31b_3, but Chloe mouth open.
     with dissolve
 
     cl "Hey..."
@@ -39,7 +39,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
     cl "Yeah, it just feels weird..."
 
-    scene v14s31b_3c  # FPP. Same as v14s31b_3, but eyes down avoiding eye contact with MC, nervous, mouth closed.
+    scene v14s31b_3c # FPP. Same as v14s31b_3, but eyes down avoiding eye contact with MC, nervous, mouth closed.
     with dissolve
 
     u "Yeah, this idea is kinda risky. *Chuckles* You said it'd be easy with a little alcohol in him right?"
@@ -49,7 +49,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
     cl "Well, yeah... It won't be hard at all."
 
-    scene v14s31b_3d  # FPP. Same as v14s31b_3c, but Chloe mouth open.
+    scene v14s31b_3d # FPP. Same as v14s31b_3c, but Chloe mouth open.
     with dissolve
 
     cl "But... I have something I wanted to say and I hope it doesn't come out wrong or anything."
@@ -92,17 +92,17 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
         u "You want to be alone..."
 
-        scene v14s31b_3e  # FPP. Same as v14s31b_3c, but eyes looking left avoiding eye contact with MC, nervous, mouth closed.
+        scene v14s31b_3e # FPP. Same as v14s31b_3c, but eyes looking left avoiding eye contact with MC, nervous, mouth closed.
         with dissolve
 
         u "In a room..."
 
-        scene v14s31b_3f  # FPP. Same as v14s31b_3c, but eyes looking up avoiding eye contact with MC, nervous, mouth closed.
+        scene v14s31b_3f # FPP. Same as v14s31b_3c, but eyes looking up avoiding eye contact with MC, nervous, mouth closed.
         with dissolve
 
         u "With your ex, ha."
 
-        scene v14s31b_3g  # FPP. Same as v14s31b_3c, but eyes looking right avoiding eye contact with MC, nervous, mouth closed.
+        scene v14s31b_3g # FPP. Same as v14s31b_3c, but eyes looking right avoiding eye contact with MC, nervous, mouth closed.
         with dissolve
 
         u "So that you can try to seduce him?"
@@ -122,7 +122,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
         cl "I know how this sounds, [name], but I think it's the only way this plan is going to work."
 
-    elif chloers:       # -If ChloeRS, NOT ChloeGF (extra dialogue)
+    elif chloers: # -If ChloeRS, NOT ChloeGF (extra dialogue)
         scene v14s31b_3
         with dissolve
 
@@ -137,7 +137,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
     # -Continue regardless of everything
 
-    scene v14s31b_3h  # FPP. Same as v14s31b_3, but Chloe's experession is nuetral/concentrating, mouth open, eye contact with MC.
+    scene v14s31b_3h # FPP. Same as v14s31b_3, but Chloe's experession is nuetral/concentrating, mouth open, eye contact with MC.
     with dissolve
 
     cl "I know Grayson too well."
@@ -149,14 +149,13 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
     cl "If you were there he'd know something was up. No matter how drunk he is."
 
-    scene v14s31b_3i  # FPP. Same as v14s31b_3h, but mouth closed.
+    scene v14s31b_3i # FPP. Same as v14s31b_3h, but mouth closed.
     with dissolve
 
     u "*Sighs*"
 
-    menu: 
-        "Trust Chloe": # -Event1 Trust her- v14_lindsey_popularity minus 3
-            $ set_presidency_percent(v14_lindsey_popularity - 3)
+    menu:
+        "Trust Chloe":
             $ v14s31bTrustChloe = True
             $ add_point(KCT.BOYFRIEND)
             $ chloe.points +=1
@@ -169,13 +168,13 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
             
             u "*Sighs* I trust that you'll do what's best."
 
-            scene v14s31b_3j  # FPP. Same as v14s31b_3, but Chloe's smiling, mouth open, eye contact with MC.
+            scene v14s31b_3j # FPP. Same as v14s31b_3, but Chloe's smiling, mouth open, eye contact with MC.
             with dissolve
 
             cl "Thank you."
 
-            if chloegf:  # -If ChloeGF she gives him a hug-
-                scene v14s31b_4   # TPP. Chloe hugging MC. 
+            if chloegf: # -If ChloeGF she gives him a hug-
+                scene v14s31b_4 # TPP. Chloe hugging MC. 
                 with dissolve
 
                 pause 0.75
@@ -185,8 +184,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
             u "Yeah... Of course."
             
-        "Don't trust Chloe": # -Event2 Don't trust her- v14_lindsey_popularity plus 3
-            $ set_presidency_percent(v14_lindsey_popularity + 3)    # -If Don't trust her- v14_lindsey_popularity plus 3
+        "Don't trust Chloe":
             $ chloe.points -=1
 
             scene v14s31b_3
@@ -214,37 +212,37 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
     cl "Let's go ahead and get inside. I'm pretty sure Aubrey is already here."
 
-    scene v14s31b_5   # TPP. MC following Chloe, both neutral, mouths closed, are on the side of the Ape house walking to the front.
+    scene v14s31b_5 # TPP. MC following Chloe, both neutral, mouths closed, are on the side of the Ape house walking to the front.
     with dissolve
 
     pause 0.75
 
-    scene v14s31b_6   # TPP. MC following Chloe, both neutral, mouths closed, are in front of the Ape house, walking towards the front door.
+    scene v14s31b_6 # TPP. MC following Chloe, both neutral, mouths closed, are in front of the Ape house, walking towards the front door.
     with dissolve
 
     pause 0.75
 
-    scene v14s31b_7   # TPP. MC following Chloe, both neutral, mouths closed, pushing open the front door to the Ape house.
+    scene v14s31b_7 # TPP. MC following Chloe, both neutral, mouths closed, pushing open the front door to the Ape house.
     with dissolve
 
     pause 0.75
 
-    scene v14s31b_8   # FPP. MC at the kitchen entrace with Chloe sees Aubrey and Grayson sitting at the table with a couple beers each, mouthes open slightly angry with the other (There is a vaping machine on the table next to Grayson).
+    scene v14s31b_8 # FPP. MC at the kitchen entrace with Chloe sees Aubrey and Grayson sitting at the table with a couple beers each, mouthes open slightly angry with the other (There is a vaping machine on the table next to Grayson).
     with dissolve
 
     pause 0.75
     
-    scene v14s31b_9   # FPP. Aubrey sitting back in the chair, holding a beer bottle, smiling, mouth open, head turned looking to Grayson (off camera).
+    scene v14s31b_9 # FPP. Aubrey sitting back in the chair, holding a beer bottle, smiling, mouth open, head turned looking to Grayson (off camera).
     with dissolve
 
     au "Grayson, you work at a fucking gas station."
 
-    scene v14s31b_10  # FPP. Grayson, sitting up in his chair, angry, mouth open, holding his beer and pointing at Aubrey (off camera) with his finger.
+    scene v14s31b_10 # FPP. Grayson, sitting up in his chair, angry, mouth open, holding his beer and pointing at Aubrey (off camera) with his finger.
     with dissolve
 
     gr "Keep your mouth shut about that, Aubrey."
 
-    scene v14s31b_9a  # FPP. Same as v14s31b_9 but, Aubrey, mouth open, head turned toward Grayson, laughing.
+    scene v14s31b_9a # FPP. Same as v14s31b_9 but, Aubrey, mouth open, head turned toward Grayson, laughing.
     with dissolve
 
     au "Haha! I'm not one of your little frat boys that you can intimidate, Gray."
@@ -256,18 +254,18 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
     gr "You're such a sleazy-"
 
-    scene v14s31b_11  # FPP. Chloe, neutral, mouth open, looking at Aubrey and Grayson (off Camera).
+    scene v14s31b_11 # FPP. Chloe, neutral, mouth open, looking at Aubrey and Grayson (off Camera).
     with dissolve
 
     cl "Uhh, hey guys."
 
-    scene v14s31b_9b  # FPP. Aubrey, smiling, mouth open, looking at MC and Chloe (camera)
+    scene v14s31b_9b # FPP. Aubrey, smiling, mouth open, looking at MC and Chloe (camera)
     with dissolve
 
     au "Hey! Finally! People other than Grayson!"
 
     # -Aubrey gets up to hug Chloe and then leaves the room to grab MC and Chloe a beer-
-    scene v14s31b_12  # TPP. MC and Chloe, smile, mouth closed, looking at Aubrey, smiling, mouth closed, standing up from her chair at the table.
+    scene v14s31b_12 # TPP. MC and Chloe, smile, mouth closed, looking at Aubrey, smiling, mouth closed, standing up from her chair at the table.
     with dissolve
 
     pause 0.75
@@ -292,7 +290,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
     gr "*Sighs*"
 
-    scene v14s31b_13  # FPP. Chloe (sitting at table), mouth open, smiling, looking at Grayson (off camera).
+    scene v14s31b_13 # FPP. Chloe (sitting at table), mouth open, smiling, looking at Grayson (off camera).
     with dissolve
 
     cl "Ha, where's Cameron?"
@@ -319,7 +317,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         u "Nah, it's not, ha."
     
     # -Aubrey returns and gives MC and Chloe a bottle of beer-
-    scene v14s31b_14  # TPP. Aubrey, smiling, happy enters through dining room entrance holding two bottles of beer.
+    scene v14s31b_14 # TPP. Aubrey, smiling, happy enters through dining room entrance holding two bottles of beer.
     with dissolve
 
     pause 0.75
@@ -344,7 +342,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
     pause 0.75
 
-    scene v14s31b_15  # FPP. Aubrey, smiling, mouth open, looking at Chloe (off Camera).
+    scene v14s31b_15 # FPP. Aubrey, smiling, mouth open, looking at Chloe (off Camera).
     with dissolve
 
     au "Well, isn't this a crazy bunch. Two Greek heads who used to date, the hot shot freshman that everyone knows, and of course..."
@@ -354,12 +352,12 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
     au "Me. The fun one."
 
-    scene v14s31b_13a  # FPP. Chloe (sitting at table), mouth open, laughing, looking at Aubrey (off camera).
+    scene v14s31b_13a # FPP. Chloe (sitting at table), mouth open, laughing, looking at Aubrey (off camera).
     with dissolve
 
     cl "*Chuckles*"
 
-    scene v14s31b_15b  # FPP. Aubrey, smiling, mouth closed, while holding a beer bottle looking at MC (camera).
+    scene v14s31b_15b # FPP. Aubrey, smiling, mouth closed, while holding a beer bottle looking at MC (camera).
     with dissolve
 
     u "The hot shot freshman, huh? Haven't heard that one yet. *Chuckles*"
@@ -433,7 +431,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
     # -They all go to the bean bag room in the Apes house, dim colorful lights, pillows and blankets everywhere, bongs, panties on the ground, beer cans in the corner-
     # -Chloe and Aubrey sit next to each other while MC and Grayson sit apart from each other, across from them.-
-    scene v14s31b_16  # TPP. Aubrey leads Chloe, Grayson, and MC out of the dining room. Chloe and MC are neutral; others are happy. All mouths are closed.
+    scene v14s31b_16 # TPP. Aubrey leads Chloe, Grayson, and MC out of the dining room. Chloe and MC are neutral; others are happy. All mouths are closed.
     with dissolve
 
     pause 0.75
@@ -668,8 +666,8 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
     gr "A lot of things were a force of habit when you looked at me, haha. Are you trying to start those again too?"
 
-    if chloegf or chloers:    # -If ChloeGF or ChloeRS
-        scene v14s31b_20  # TPP. MC sitting up in bean bag chair, frowning, angry, mouth open.
+    if chloegf or chloers: # -If ChloeGF or ChloeRS
+        scene v14s31b_20 # TPP. MC sitting up in bean bag chair, frowning, angry, mouth open.
         with dissolve
 
         u "What the f-"
@@ -784,7 +782,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
     gr "Just us?"
 
-    if v14s31bTrustChloe: # -If trust Chloe    
+    if v14s31bTrustChloe: # -If trust Chloe
         scene v14s31b_18f
         with dissolve
 
@@ -801,7 +799,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         cl "*Sighs*"
         
         # -Chloe leads Grayson out of the room-
-        scene v14s31b_21  # FPP. Chloe, neutral, mouth closed and Grayson, smiling, mouth closed, standing in front of their bean bag chairs.
+        scene v14s31b_21 # FPP. Chloe, neutral, mouth closed and Grayson, smiling, mouth closed, standing in front of their bean bag chairs.
         with dissolve
 
         pause 0.75
@@ -821,11 +819,11 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
         au "*Chuckles* Hit?"
 
-        menu:  # -Aubrey offers MC the vape that she took from Grayson-
+        menu: # -Aubrey offers MC the vape that she took from Grayson-
             "Vape": # -Event1 Sure
                 # -Montage of MC and Aubrey passing the vape while they relax.-
                 $ v14s31b_smoke_weed_with_aubrey = True
-                scene v14s31b_23  # TPP. MC smokes the vaporizer
+                scene v14s31b_23 # TPP. MC smokes the vaporizer
                 with dissolve
 
                 pause 0.75
@@ -934,7 +932,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
         pause 0.75
 
-        scene v14s31b_24  # FPP. Chloe, looking at slight downward angle (she's standing, but looking at someone sitting),neutral, mouth open.
+        scene v14s31b_24 # FPP. Chloe, looking at slight downward angle (she's standing, but looking at someone sitting),neutral, mouth open.
         with dissolve
 
         cl "So, it's official."
@@ -954,7 +952,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
         gr "You didn't need to be there. *Chuckles*"
 
-        scene v14s31b_24a  # FPP. Same as v14s31b_24, but Chloe frowning, upset, mouth open.
+        scene v14s31b_24a # FPP. Same as v14s31b_24, but Chloe frowning, upset, mouth open.
         with dissolve
 
         cl "Grayson, oh my god, stop! We literally just talked, that was it."
@@ -985,22 +983,22 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         au "Ha, you know me well."
         
         # -Chloe and MC walk outside-
-        scene v14s31b_25  # TPP. MC following Chloe into the dark hallway (their backs are to the camera).
+        scene v14s31b_25 # TPP. MC following Chloe into the dark hallway (their backs are to the camera).
         with dissolve
 
         pause 0.75
 
-        scene v14s31b_26  # TPP. MC following Chloe walk out of the front door of the Ape House.
+        scene v14s31b_26 # TPP. MC following Chloe walk out of the front door of the Ape House.
         with dissolve
 
         pause 0.75
 
-        scene v14s31b_27  # TPP. MC and Chloe face each other in front of the Ape's House. Both neutral expression, mouth closed.
+        scene v14s31b_27 # TPP. MC and Chloe face each other in front of the Ape's House. Both neutral expression, mouth closed.
         with dissolve
 
         pause 0.75
 
-        scene v14s31b_28  # TPP. Chloe, smiling mouth closed.
+        scene v14s31b_28 # TPP. Chloe, smiling mouth closed.
         with dissolve
 
         u "So, it went well?"
@@ -1008,6 +1006,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         scene v14s31b_28a # TPP. Same as v14s31b_28, but mouth open. 
         with dissolve
 
+        $ set_presidency_percent(v14_lindsey_popularity - 3) #tick
         cl "Very, he actually listened. Maybe it was because he was high, I don't know, but I'll take it."
 
         menu: # -MC chooses Event1 or Event2-
@@ -1093,7 +1092,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         u "Bye."
 
         if joinwolves:
-            scene v14s31b_30  # TPP. In front of the Ape, Chloe on the side walk walking to the left, MC on the side walk walking right (away from each other), neutral, mouths closed.
+            scene v14s31b_30 # TPP. In front of the Ape, Chloe on the side walk walking to the left, MC on the side walk walking right (away from each other), neutral, mouths closed.
             with dissolve
             
         else:
@@ -1104,7 +1103,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
 
         jump v14s33
     
-    else:  # -If Don't trust Chloe
+    else: # -If Don't trust Chloe
         scene v14s31b_18g
         with dissolve
 
@@ -1226,6 +1225,7 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         scene v14s31b_31
         with dissolve
 
+        $ set_presidency_percent(v14_lindsey_popularity + 3) #tick
         gr "*Laughs* You're a fucking joke."
 
         scene v14s31b_31a
@@ -1301,12 +1301,12 @@ label v14s31b:  # -MC arrives by the side of the Apes house and Chloe is already
         u "Sure."
 
         # -MC goes after Chloe outside-
-        scene v14s31b_34  # TPP. MC exiting Grayson room.
+        scene v14s31b_34 # TPP. MC exiting Grayson room.
         with dissolve
 
         pause 0.75
 
-        scene v14s31b_35  # Tpp./ MC walking out the front door of the Ape's House.
+        scene v14s31b_35 # Tpp./ MC walking out the front door of the Ape's House.
         with dissolve
 
         pause 0.75

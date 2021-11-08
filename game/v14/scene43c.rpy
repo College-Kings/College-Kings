@@ -515,7 +515,7 @@ label v14s43c:
         scene v14s43c_5h # TPP. same as v14s43c_5 MC blinks and stumbles backwards
         with dissolve
 
-        u "*Coughs* I can't... Breathe... I..."
+        u "*Coughs* I can't... breathe... I..."
 
         scene v14s43c_5i # TPP. same as v14s43c_5h Penelope stands up with an evil smile looking at MC, Mc stumbles back even more and blinks again
         with dissolve

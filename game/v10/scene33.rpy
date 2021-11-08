@@ -20,7 +20,6 @@ label v10_charity_freeroam:
 
     u "(Now this is an event!)"
     play music "music/v10/Scene 33/Track Scene 33 - Free Roam.mp3" fadein 3
-    $ freeRoam = True
 
     jump v10s33_autumn1
 

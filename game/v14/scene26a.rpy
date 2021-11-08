@@ -315,9 +315,11 @@ label v14s26a:
 
     u "So? How'd you do?"
 
-    if v14_lauren_sabotage:
+    if not v14_lauren_sabotage:
         scene v14s26a_2a
         with dissolve
+
+        $ set_presidency_percent(v14_lindsey_popularity + 1)
 
         li "*Sighs* It was a mini success, I banked $150 so, I'm not too mad."
 
@@ -329,6 +331,8 @@ label v14s26a:
     else:
         scene v14s26a_2a
         with dissolve
+
+        $ set_presidency_percent(v14_lindsey_popularity - 2)
 
         li "Double what I had when you left, $100. Honestly, this was a complete waste of time."
 

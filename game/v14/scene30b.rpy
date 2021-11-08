@@ -147,7 +147,6 @@ label v14s30b:
     menu:
         "It's perfect":
             $ v14s30b_its_perfect = True
-            $ set_presidency_percent(v14_lindsey_popularity + 3)
 
             scene v14s30b_2a
             with dissolve
@@ -160,8 +159,6 @@ label v14s30b:
             cl "*Chuckles* Exactly."
 
         "What about something else?":
-            $ set_presidency_percent(v14_lindsey_popularity - 3)
-
             scene v14s30b_2a
             with dissolve
 
@@ -227,6 +224,8 @@ label v14s30b:
     scene v14s30b_7 # TPP. Show MC walking down the Campus sidewalk.
     with dissolve
 
+    pause 0.75
+
     if joinwolves:
         scene v14s30b_8 # TPP. Show MC walking into the wolves house.
         with fade
@@ -255,7 +254,7 @@ label v14s30b:
     
     # Don't know if it was done correctly I tried my best :P
     if v14s30b_pw_image_one and v14s30b_its_perfect:
-        $ v14s30b_kiwiiPost1 = KiwiiPost("Chloe", "v14/chloeplush1perfect.webp", _("What's a Chick without her Wolf? <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=712)
+        $ v14s30b_kiwiiPost1 = KiwiiPost("Chloe", "v14/v14s30b_pw_image_one.webp", _("What's a Chick without her Wolf? <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=712)
         if v14_chrissupport > 1:
             $ v14s30b_kiwiiPost1.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ v14s30b_kiwiiPost1.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chloe <3"))
@@ -266,8 +265,8 @@ label v14s30b:
         $ v14s30b_kiwiiPost1.addReply(_("These turned out perfect! #Vote4Chloe"))
         $ v14s30b_kiwiiPost1.addReply(_("Aww, haha. Congrats!"))
 
-    if v14s30b_pw_image_one and not v14s30b_its_perfect:
-        $ v14s30b_kiwiiPost2 = KiwiiPost("Chloe", "v14/chloeplush1notperfect.webp", _("It's official! The Wolves and The Chicks are uniting as one to ensure that I stay president and furthermore, bring a wonderful balance to our new and improved sorority. #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=812)
+    elif v14s30b_pw_image_one:
+        $ v14s30b_kiwiiPost2 = KiwiiPost("Chloe", "v14/v14s30b_pw_image_one.webp", _("It's official! The Wolves and The Chicks are uniting as one to ensure that I stay president and furthermore, bring a wonderful balance to our new and improved sorority. #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=812)
         if v14_chrissupport > 1:
             $ v14s30b_kiwiiPost2.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ v14s30b_kiwiiPost2.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chloe <3"))
@@ -278,8 +277,8 @@ label v14s30b:
         $ v14s30b_kiwiiPost2.addReply(_("These turned out perfect! #Vote4Chloe"))
         $ v14s30b_kiwiiPost2.addReply(_("Aww, haha. Congrats!"))
 
-    if v14s30b_pw_image_two and v14s30b_its_perfect:
-        $ v14s30b_kiwiiPost3 = KiwiiPost("Chloe", "v14/chloeplush2perfect.webp", _("I'd like to officially announce The Chick's partnership with The Wolves! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=756)
+    elif v14s30b_pw_image_two and v14s30b_its_perfect:
+        $ v14s30b_kiwiiPost3 = KiwiiPost("Chloe", "v14/v14s30b_pw_image_two.webp", _("I'd like to officially announce The Chick's partnership with The Wolves! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=756)
         if v14_chrissupport > 1:
             $ v14s30b_kiwiiPost3.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ v14s30b_kiwiiPost3.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chloe <3"))
@@ -290,8 +289,8 @@ label v14s30b:
         $ v14s30b_kiwiiPost3.addReply(_("These turned out perfect! #Vote4Chloe"))
         $ v14s30b_kiwiiPost3.addReply(_("Aww, haha. Congrats!"))
 
-    if v14s30b_pw_image_two and not v14s30b_its_perfect:
-        $ v14s30b_kiwiiPost4 = KiwiiPost("Chloe", "v14/chloeplush2notperfect.webp", _("It's official! The Wolves and The Chicks are uniting as one to ensure that I stay president and furthermore, bring a wonderful balance to our new and improved sorority. #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=856)
+    elif v14s30b_pw_image_two:
+        $ v14s30b_kiwiiPost4 = KiwiiPost("Chloe", "v14/v14s30b_pw_image_two.webp", _("It's official! The Wolves and The Chicks are uniting as one to ensure that I stay president and furthermore, bring a wonderful balance to our new and improved sorority. #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=856)
         if v14_chrissupport > 1:
             $ v14s30b_kiwiiPost4.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ v14s30b_kiwiiPost4.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chloe <3"))
@@ -302,8 +301,8 @@ label v14s30b:
         $ v14s30b_kiwiiPost4.addReply(_("These turned out perfect! #Vote4Chloe"))
         $ v14s30b_kiwiiPost4.addReply(_("Aww, haha. Congrats!"))
 
-    if v14s30b_rw_image_one and v14s30b_its_perfect:
-        $ v14s30b_kiwiiPost5 = KiwiiPost("Chloe", "v14/chloereal1perfect.webp", _("What's a Chick without her Wolf? <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=973)
+    elif v14s30b_rw_image_one and v14s30b_its_perfect:
+        $ v14s30b_kiwiiPost5 = KiwiiPost("Chloe", "v14/v14s30b_rw_image_one.webp", _("What's a Chick without her Wolf? <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=973)
         if v14_chrissupport > 1:
             $ v14s30b_kiwiiPost5.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ v14s30b_kiwiiPost5.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chloe <3"))
@@ -314,8 +313,8 @@ label v14s30b:
         $ v14s30b_kiwiiPost5.addReply(_("These turned out perfect! #Vote4Chloe"))
         $ v14s30b_kiwiiPost5.addReply(_("Aww, haha. Congrats!"))
 
-    if v14s30b_rw_image_one and not v14s30b_its_perfect:
-        $ v14s30b_kiwiiPost6 = KiwiiPost("Chloe", "v14/chloereal1notperfect.webp", _("A vote for me is a vote for The Chicks AND a vote for The Wolves :) #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=1273)
+    elif v14s30b_rw_image_one:
+        $ v14s30b_kiwiiPost6 = KiwiiPost("Chloe", "v14/v14s30b_rw_image_one.webp", _("A vote for me is a vote for The Chicks AND a vote for The Wolves :) #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=1273)
         if v14_chrissupport > 1:
             $ v14s30b_kiwiiPost6.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ v14s30b_kiwiiPost6.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chloe <3"))
@@ -326,8 +325,8 @@ label v14s30b:
         $ v14s30b_kiwiiPost6.addReply(_("These turned out perfect! #Vote4Chloe"))
         $ v14s30b_kiwiiPost6.addReply(_("Aww, haha. Congrats!"))
 
-    if v14s30b_rw_image_two and v14s30b_its_perfect:
-        $ v14s30b_kiwiiPost7 = KiwiiPost("Chloe", "v14/chloereal2perfect.webp", _("Teamwork makes the dreamwork! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=981)
+    elif v14s30b_rw_image_two and v14s30b_its_perfect:
+        $ v14s30b_kiwiiPost7 = KiwiiPost("Chloe", "v14/v14s30b_rw_image_two.webp", _("Teamwork makes the dreamwork! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=981)
         if v14_chrissupport > 1:
             $ v14s30b_kiwiiPost7.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ v14s30b_kiwiiPost7.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chloe <3"))
@@ -338,8 +337,8 @@ label v14s30b:
         $ v14s30b_kiwiiPost7.addReply(_("These turned out perfect! #Vote4Chloe"))
         $ v14s30b_kiwiiPost7.addReply(_("Aww, haha. Congrats!"))
 
-    if v14s30b_rw_image_two and not v14s30b_its_perfect:
-        $ v14s30b_kiwiiPost8 = KiwiiPost("Chloe", "v14/chloereal2notperfect.webp", _("Teamwork makes the dreamwork! <3 #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=1294)
+    else: #possible because scene30b implies v14_talk_to_chris
+        $ v14s30b_kiwiiPost8 = KiwiiPost("Chloe", "v14/v14s30b_rw_image_two.webp", _("Teamwork makes the dreamwork! <3 #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=1294)
         if v14_chrissupport > 1:
             $ v14s30b_kiwiiPost8.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
         $ v14s30b_kiwiiPost8.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chloe <3"))
@@ -351,13 +350,15 @@ label v14s30b:
         $ v14s30b_kiwiiPost8.addReply(_("Aww, haha. Congrats!"))
 
     if False: ##just making sure it shows up on lint
-        scene chloeplush1perfect
-        scene chloeplush1notperfect
-        scene chloereal1perfect
-        scene chloereal1notperfect
-        scene chloeplush2notperfect
-        scene chloeplush2perfect
-        scene chloereal2notperfect
-        scene chloereal2perfect
+        scene v14s30b_pw_image_one
+        scene v14s30b_pw_image_two
+        scene v14s30b_rw_image_one
+        scene v14s30b_rw_image_two
         
+    if v14s30b_its_perfect:
+        $ set_presidency_percent(v14_lindsey_popularity - 1) #tick
+    else:
+        $ set_presidency_percent(v14_lindsey_popularity - 3) #tick
+    call screen phone
+
     jump v14s33

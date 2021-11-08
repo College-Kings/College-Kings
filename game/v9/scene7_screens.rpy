@@ -1,5 +1,5 @@
 screen v9s7_lakeFull(): ###### LAKE ZOOM OUT SCREEN
-    tag freeRoam
+    tag free_roam
 
     add "images/v9/scene 7/fr5lakefull.webp"
 
@@ -38,7 +38,7 @@ screen v9s7_lakeFull(): ###### LAKE ZOOM OUT SCREEN
 
 
 screen v9s7_lakeZoomIn(): ###### LAKE ZOOM OUT SCREEN
-    tag freeRoam
+    tag free_roam
 
     add "images/v9/scene 7/fr5lakezoomin.webp"
 

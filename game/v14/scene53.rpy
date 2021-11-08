@@ -65,7 +65,7 @@ label v14s53:
 
     menu:
         "Make a joke":
-            $ badsinging_Sam = True
+            $ v14_badsinging_Sam = True
             $ add_point(KCT.TROUBLEMAKER)
 
             scene v14s53_4c
@@ -328,8 +328,8 @@ label v14s53:
             scene v14s53_6k
             with dissolve
 
-            if badsinging_Sam:
-                $ grant_achievement("clean_joker")
+            if v14_amber_clean:
+                $ grant_achievement("clean_it_up")
 
             u "I know exactly what you mean, Sam. Look at me."
 
@@ -405,7 +405,8 @@ label v14s53:
 
             u "*Chuckles* What?"
 
-            if SamanthaRS:
+            #if SamanthaRS:
+            if v11_samantha_spa:
                 scene v14s53_3c # TPP. same as v14s53_3b Show sam pushing the bottle of beer and pills away from her on the couch, grabbing mc behind the head and pulling him in for a kiss, Sam's eyes are closed lustful expression, Mc's eyes are open slightly shocked expression
                 with dissolve
 
@@ -507,7 +508,7 @@ label v14s53:
                 jump v14s53b
 
         "Let Samantha enjoy drugs":
-            $ SamanthaDrugs = True
+            $ v14_SamanthaDrugs = True
             $ add_point(KCT.TROUBLEMAKER)
 
             scene v14s53_6k
@@ -607,7 +608,7 @@ label v14s53:
 
                     u "That's not the point. You're really drunk right now, and I just don't think it's a good idea."
 
-                    if badsinging_Sam:
+                    if v14_badsinging_Sam:
                         scene v14s53_6zf # FPP. same as v14s53_6zc Sam has increased to fully angry expression
                         with dissolve
 

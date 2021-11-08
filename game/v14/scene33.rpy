@@ -16,7 +16,7 @@ label v14s33:
         pause 0.75
 
         scene v14s33_2 # TPP. Show MC looking at his phone while sitting on the bed in his Wolves Room, slight smile, mouth closed.
-        with dissolve
+        with fade
 
         if not laurenrs:
             scene v14s33_2a # TPP. Same as v14s33_2, Mc in a different pose looking at his phone in his wolves room, slight smile, mouth closed.
@@ -240,7 +240,7 @@ label v14s33:
         pause 0.75
 
         scene v14s33_4 # TPP. Show MC looking at his phone while sitting on the bed in his Apes room, slight smile, mouth closed.
-        with dissolve
+        with fade
         
         pause 0.75
 

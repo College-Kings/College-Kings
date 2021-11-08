@@ -192,7 +192,7 @@ label v13s51_emily_fight:
             pause 0.75 
 
             scene v13s51_11a # TPP. Same as v13s52_11 but with MC and Emily (topkess) rotated where MC putting Emily's back to the wall.
-            with dissolve
+            with hpunch
 
             pause 0.75 
 

@@ -55,7 +55,7 @@ label v14s47:
         play sound "sounds/kiss.mp3"
 
         scene v14s47_4 # TPP. Close up of Lindsey kissing MC's cheek
-        with dissolve  
+        with dissolve
 
         pause
 
@@ -117,7 +117,7 @@ label v14s47:
             u "Oh, I will. *Chuckles* You look great."
 
         scene v14s47_2
-        with dissolve       
+        with dissolve
 
         li "Thank you, [name]."
 
@@ -342,13 +342,10 @@ label v14s47:
         with dissolve
 
         u "*Chuckles* Alright, let's start with..."
-
-    $ freeRoam = True
     call screen v14s47_car
 
 label v14s47_hood:
     if v14_pics_with_linds:
-
         $ v14s47_linds_hood = True
         $ v14s47_pics += 1
 
@@ -545,7 +542,6 @@ label v14s47_trunk:
 
 label v14s47_driver:
     if v14_pics_with_linds:
-
         $ v14s47_linds_driver = True
         $ v14s47_pics += 1
 
@@ -834,7 +830,7 @@ label v14s47_passenger:
                 scene v14s47_passenger_2l # FPP. Same as v14s47_passenger_2f, but no bird, just the car
                 with dissolve
 
-                pause  
+                pause
 
                 play sound "sounds/capture.mp3" 
 
@@ -848,11 +844,9 @@ label v14s47_passenger:
 
                 li "Alrighty... Anymore?"
 
-            "Take photo of bird":
+            "Take photo with bird":
                 $ v14s47_solo_bird = True
                 $ v14s47_pics += 1
-
-                $ grant_achievement("say_chirp")
 
                 u "Yeah, Linds. A crazy bird lady might buy the car simply because he's sitting on it. *Chuckles*"
 
@@ -862,6 +856,8 @@ label v14s47_passenger:
                 li "He is a cute little bird!"
 
                 play sound "sounds/capture.mp3" 
+
+                $ grant_achievement("say_chirp")
 
                 scene v14s47_passenger_3
                 with flash
@@ -993,8 +989,6 @@ label v14s47_end:
     scene v14s47_end_4 # TPP. Show MC and Lindsey walking along the street, both smiling, mouths closed
     with fade
 
-    $ freeRoam = True
-
     pause 0.75
 
     if v14_pics_with_linds:
@@ -1007,7 +1001,7 @@ label v14s47_end:
         $ v14s47_kiwiiPost1.addReply("#ThatsMyPresident", v14s47_kiwiiReply2)
     
     else:
-        $ v14s47_kiwiiPost2 = KiwiiPost("Lindsey", "v14/v14s47_lindsey_kiwii.webp", "Feeling on top today :)", numberLikes=682)
+        $ v14s47_kiwiiPost2 = KiwiiPost("Lindsey", "v14/v14s47_nolindsey_kiwii.webp", "Feeling on top today :)", numberLikes=682)
         $ v14s47_kiwiiPost2.newComment("Nora", "Kick ass babe <3")
         $ v14s47_kiwiiPost2.newComment("Aubrey", "Aww, look at your cute little button!")
         $ v14s47_kiwiiPost2.newComment("Riley", "I have one too :) Hehe.")
@@ -1017,5 +1011,6 @@ label v14s47_end:
 
     if False:
         scene v14s47_lindsey_kiwii
+        scene v14s47_nolindsey_kiwii
 
     jump v14s48

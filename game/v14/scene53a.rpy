@@ -157,12 +157,12 @@ label v14s53a:
     scene v14s53a_10 # TPP. Close up of Samantha's hand grabbing MC's hand as it is on her ass
     with dissolve
     
-    pause  
+    pause
 
     scene v14s53a_11 # TPP. Close up of Samantha's hand over MC's as it is place on her boob.
     with dissolve
 
-    pause  
+    pause
 
     scene v14samccgb # Ignore as animation
     with dissolve
@@ -174,7 +174,7 @@ label v14s53a:
 
     scene v14samccgbf # Ignore as animation
     with dissolve
-    pause   
+    pause
 
     sa "*Panting* Yes! Yes... I'm- I... Fuck me!"
 
@@ -182,13 +182,13 @@ label v14s53a:
 
     scene v14samccgb2 # Ignore as animation
     with dissolve 
-    pause  
+    pause
 
     sa "*Chuckles* Yeah? *Chuckles* Do it then... Fuck me... *Moans*"
 
     scene v14samccgb2f  # Ignore as animation
     with dissolve 
-    pause  
+    pause
 
     scene v14s53a_12 # TPP. Close up on MC's face as he struggles to hold in his load, mouth open
     with dissolve 
@@ -238,7 +238,7 @@ label v14s53a:
     scene v14s53a_15a # TPP. Same as v14s53a_15, Show MC putting on his shirt.
     with dissolve
 
-    pause  
+    pause
 
     scene v14s53a_16 # FPP. MC looking at Samantha laying on the couch curled up with her eyes closed, slight smile, mouth closed.
     with dissolve

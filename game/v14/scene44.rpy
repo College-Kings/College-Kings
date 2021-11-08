@@ -104,7 +104,7 @@ label v14s44:
             scene v14s44_4a
             with dissolve
 
-            $ set_presidency_percent(v14_lindsey_popularity - 2)
+            $ set_presidency_percent(v14_lindsey_popularity - 2) #tick
             el "See? Good, logical choice."
 
             scene v14s44_4
@@ -143,7 +143,7 @@ label v14s44:
             scene v14s44_4a
             with dissolve
 
-            $ set_presidency_percent(v14_lindsey_popularity + 2)
+            $ set_presidency_percent(v14_lindsey_popularity + 2) #tick
             el "Hmm..."
 
     play sound "sounds/carbrake.mp3"

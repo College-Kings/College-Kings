@@ -9,11 +9,10 @@ label v14s43:
     scene v14s43_1 # TPP. Show MC walking through the school, slight smile, mouth closed
     with fade
 
-    pause
+    pause 0.75
 
-label v14s43_continue:
     scene v14s43_2 # TPP. Show MC walking through the school (different location), slight smile, mouth closed
-    with fade
+    with dissolve
 
     pause 0.75
 
@@ -41,9 +40,9 @@ label v14s43_continue:
         $ emily.messenger.addReply("Fine... miss you more :)")
 
         label v14s43_PhoneContinueEmily:
-            if emily.messenger.getReplies():
+            if emily.messenger.replies:
                 call screen phone
-            if emily.messenger.getReplies():
+            if emily.messenger.replies:
                 u "(I should check my phone.)"
                 jump v14s43_PhoneContinueEmily
 
@@ -131,7 +130,7 @@ label v14s43_continue:
     
     pause 0.75
 
-    scene v15s43_9 # FPP. MC sitting down next to Penelope, Penelope looking at him, slight smile, mouth closed
+    scene v14s43_9 # FPP. MC sitting down next to Penelope, Penelope looking at him, slight smile, mouth closed
     with dissolve
 
     u "*Laughs* Good one."

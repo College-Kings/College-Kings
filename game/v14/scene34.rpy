@@ -4,16 +4,11 @@
 # Time: Night
 
 label v14s34:
-    $ v14_penelope_date = True
-
     if joinwolves: 
         scene v14s34_1 # TPP. MC sitting on his bed in his wolves room, slight smile, mouth closed.
         with dissolve
 
         u "(Hmm, I wonder if Penelope would be down for a little date night tonight. I'll give her a call.)"
-
-        scene v14s34_2 # TPP. Show MC holding the phone to his ear in his wolves room, slight smile, mouth closed.
-        with dissolve
 
     else:
         scene v14s34_3 # TPP. MC sitting on his bed in his Apes room, slight smile, mouth closed.
@@ -21,14 +16,94 @@ label v14s34:
 
         u "(Hmm, I wonder if Penelope would be down for a little date night tonight. I'll give her a call.)"
 
+    $ jenny.messenger.newMessage(_("Hey [name], you busy right now?"), queue =False)
+    $ jenny.messenger.addReply(_("Why, what's up?"))
+    $ jenny.messenger.newMessage(_("Well, I've been wanting to swimming in this little lagoon I found."))
+    $ jenny.messenger.addReply(_("You're wanting to go now?"))
+    $ jenny.messenger.newMessage(_("Yeah, why not? ;) Are you down?"))
+    play sound "sounds/vibrate.mp3"
+
+    pause 0.75
+
+    if joinwolves:
+        scene v14s33_2a
+        with dissolve
+
+    else:
+        scene v14s33_4a
+        with dissolve
+
+    u "(What the...)"
+
+    label v14s34_PhoneContinue:
+        if jenny.messenger.replies:
+            call screen phone
+        if jenny.messenger.replies:
+            u "(I should check my phone.)"
+            jump v14s34_PhoneContinue
+
+    u "(Damn, what a timing. I think I will...)"
+
+    menu:
+        "Accept Jenny's invite":
+            $ jenny.messenger.addReply(_("Okay sure, where's this lagoon at?"))
+            $ jenny.messenger.newImgMessage("images/v14/Scene 35/v14s35_lagoon_pic.webp") #Picture of the Lagoon, somehow with a location marker in the photo
+            $ jenny.messenger.newMessage(_("See you soon!"))
+
+            label v14s34_PhoneContinue2:
+                if jenny.messenger.replies:
+                    call screen phone
+                if jenny.messenger.replies:
+                    u "(I should reply to Jenny.)"
+                    jump v14s34_PhoneContinue2
+        
+        
+            jump v14s35_afterinvite
+
+        "Decline Jenny's invite":
+            $ jennyfriend = True
+            $ jenny.messenger.addReply(_("Sorry, I was already planning to go out with Penelope tonight."))
+            $ jenny.messenger.newMessage(_("Oh!"))
+            $ jenny.messenger.newMessage(_("No worries, that's fine. I'm happy for both of you actually!"))
+            $ jenny.messenger.newMessage(_("We'll catch up some other day :)"))
+
+            label v14s34_PhoneContinue3:
+                if jenny.messenger.replies:
+                    call screen phone
+                if jenny.messenger.replies:
+                    u "(I should reply to Jenny.)"
+                    jump v14s34_PhoneContinue3
+
+    if joinwolves:
+        scene v14s33_2a
+        with dissolve
+        
+        u "(Luckily she seems to have taken that in good spirits. Now to call Penelope...)"
+    
+        scene v14s34_2 # TPP. Show MC holding the phone to his ear in his wolves room, slight smile, mouth closed.
+        with dissolve
+    
+    else:
+        scene v14s33_4a
+        with dissolve
+        
+        u "(Luckily she seems to have taken that in good spirits. Now to call Penelope...)"
+    
         scene v14s34_4 # TPP. Show MC holding the phone to his ear in his Apes room, slight smile, mouth closed.
         with dissolve
 
+
     play sound "sounds/calling.mp3"
+
+    pause 0.75
 
     scene v14s34_5 # TPP. Penelope wearing cute Pajamas, Show a sleepy Penelope holding the phone to her ear. slight tired smile, mouth open.
     with dissolve
 
+    pause 0.75
+
+    stop sound
+    play sound "sounds/answercall.mp3"
     pe "H-hello?"
 
     scene v14s34_5a # TPP. Same as v14s34_5, Penelope slight tired smile, mouth closed.
@@ -48,7 +123,8 @@ label v14s34:
     
     u "*Chuckles* Good, because I was thinking we could try going on that date we talked about in London."
 
-    scene v14s34_7 # TPP. Penelope standing up on her bed with the phone to her ear, slight smile, mouth closed.
+    #scene v14s34_7 # TPP. Penelope standing up on her bed with the phone to her ear, slight smile, mouth closed.
+    scene v14s34_6
     with dissolve
 
     pe "R-Right now?"
