@@ -447,8 +447,22 @@ label v14s32:
 
     imre "She didn't have to, I saw a need and I filled it."
     
-    if v14_chrissupport > 1:
+    if v14_chrissupport > 1 or not v14_help_chloe:
         imre "Chris got on board to have the Wolves support her because of me."
+
+    if not v14_help_chloe:
+        $ v14s32_kiwiiPost1 = KiwiiPost("Chloe", "v14/v14s30b_pw_image_two.webp", _("I'd like to officially announce The Chick's partnership with The Wolves! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=756)
+        $ v14s32_kiwiiPost1.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
+        $ v14s32_kiwiiPost1.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chloe <3"))
+        $ v14s32_kiwiiPost1.newComment("Imre", _("Yessss!!!!!"))
+        $ v14s32_kiwiiPost1.newComment("Grayson", _("LMAO you're down bad, huh?"))
+        $ v14s32_kiwiiPost1.newComment("Chloe", _("Be civil at least, Grayson"), mentions="Grayson")
+        $ v14s32_kiwiiPost1.newComment("Riley", _("Omg! Can I have that thing?"))
+
+        $ set_presidency_percent(v14_lindsey_popularity - 3)
+        imre "She just made an announcement on Kiwii, did you see it yet?"
+
+        call screen phone
 
     scene v14s32_7a
     with dissolve
