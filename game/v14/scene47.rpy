@@ -1001,7 +1001,7 @@ label v14s47_end:
         $ v14s47_kiwiiPost1.addReply("#ThatsMyPresident", v14s47_kiwiiReply2)
     
     else:
-        $ v14s47_kiwiiPost2 = KiwiiPost("Lindsey", "v14/v14s47_lindsey_kiwii.webp", "Feeling on top today :)", numberLikes=682)
+        $ v14s47_kiwiiPost2 = KiwiiPost("Lindsey", "v14/v14s47_nolindsey_kiwii.webp", "Feeling on top today :)", numberLikes=682)
         $ v14s47_kiwiiPost2.newComment("Nora", "Kick ass babe <3")
         $ v14s47_kiwiiPost2.newComment("Aubrey", "Aww, look at your cute little button!")
         $ v14s47_kiwiiPost2.newComment("Riley", "I have one too :) Hehe.")
@@ -1011,5 +1011,6 @@ label v14s47_end:
 
     if False:
         scene v14s47_lindsey_kiwii
+        scene v14s47_nolindsey_kiwii
 
     jump v14s48
