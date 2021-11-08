@@ -445,7 +445,10 @@ label v14s32:
     scene v14s32_7
     with dissolve
 
-    imre "She didn't have to, I saw a need and I filled it. Chris got on board to have the Wolves support her because of me."
+    imre "She didn't have to, I saw a need and I filled it."
+    
+    if v14_chrissupport > 1:
+        imre "Chris got on board to have the Wolves support her because of me."
 
     scene v14s32_7a
     with dissolve
