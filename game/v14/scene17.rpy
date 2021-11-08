@@ -476,7 +476,12 @@ label v14s17:
 
             u "Plus, she came to you, of all people, for a reason. She trusts you, and knows what you're capable of."
 
-            if kct == "loyal": 
+            if laurenrs or kct == "loyal":
+                if not laurenrs:
+                    call screen kct_popup
+            
+                $ v14_lauren_helps_lindsey = True
+            
                 scene v14s17_10g
                 with dissolve
                 

@@ -691,3 +691,4 @@ default v14s51_take_300 = False
 default v14s51_take_900 = False
 default v14s51_take_diary = False
 default v14s51_take_money = False
+default v14_lauren_helps_lindsey = False
