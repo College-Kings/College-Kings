@@ -164,7 +164,7 @@ label v14s53a:
 
     pause
 
-    scene v14samccgb
+    scene v14samccgb # Ignore as animation
     with dissolve
     pause
 
@@ -172,7 +172,7 @@ label v14s53a:
 
     sa "*Moans*"
 
-    scene v14samccgbf
+    scene v14samccgbf # Ignore as animation
     with dissolve
     pause
 
@@ -180,13 +180,13 @@ label v14s53a:
 
     u "Fuck... I'm gonna cum, Sam!"
 
-    scene v14samccgb2
+    scene v14samccgb2 # Ignore as animation
     with dissolve 
     pause
 
     sa "*Chuckles* Yeah? *Chuckles* Do it then... Fuck me... *Moans*"
 
-    scene v14samccgb2f 
+    scene v14samccgb2f  # Ignore as animation
     with dissolve 
     pause
 

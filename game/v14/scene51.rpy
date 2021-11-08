@@ -524,7 +524,7 @@ label v14s51_continue:
 
                     pause 
 
-                    scene v14s51_32 # FPP. Show MC looking at the window in the bathroom.
+                    scene v14s51_44 # FPP. Show MC looking at the window in the bathroom.
                     with dissolve
 
                     u "(What a nice little treat. *Chuckles* Now it's time to get the fuck out of here.)"

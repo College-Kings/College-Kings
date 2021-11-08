@@ -905,12 +905,12 @@ label v14s47_end:
 
         u "Aw, come on. Don't act like that isn't our plan..."
 
-        scene v14s47_1a
+        scene v14s47_end_1a
         with dissolve
 
         li "Well, just... Don't say it out loud like that. *Chuckles*"
 
-        scene v14s47_1c
+        scene v14s47_end_1c
         with dissolve
 
         u "Haha, okay."
