@@ -156,11 +156,6 @@ label v14s26:
 
     u "Well, it's good to know I'm special. *Chuckles*"
 
-    scene v14s26_5
-    with dissolve
-
-    pause 0.75
-
     if v11_lindsey_slogan == 1:
         scene v14s26_6 # FPP. Mc looks up at the banner above the counter, The banner reads "Lindsey, Returning The Promise"
         with dissolve
@@ -168,6 +163,8 @@ label v14s26:
     else:
         scene v14s26_6a # FPP. same as v14s26_6 The banner instead reads "Lindsey, Say Bye To The Bullshit"
         with dissolve
+
+    pause 0.75
 
     scene v14s26_5
     with dissolve
