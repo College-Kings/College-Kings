@@ -123,7 +123,7 @@ label v14s43:
         scene v14s43_6a
         with dissolve
 
-        pe "Sit down already would you? People are starting to stare... *Laughs*"
+        pe "Sit down already, would you? People are starting to stare... *Laughs*"
 
     scene v14s43_8 # TPP. Show MC sitting down next to Penelope
     with dissolve
