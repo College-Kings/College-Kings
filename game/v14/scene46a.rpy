@@ -145,7 +145,7 @@ label v14s46a:
     scene v14s46a_6a
     with dissolve
 
-    la "*Speaking softly* And again. Breathe in... Breathe out... In... Out..."
+    la "*Speaking softly* And again. Breathe in... breathe out... in... out..."
 
     scene v14s46a_6b
     with dissolve
