@@ -56,7 +56,7 @@ screen kct_popup(required_kct=None):
                 style "endfree"
                 xalign 0.5
         else:
-            text "You do not have the required Key Character Trait {b}([required_kct]){/b}.":
+            text "You do not have the required Key Character Trait {b}[required_kct]{/b} to influence this decision.":
                 style "endfree"
                 xalign 0.5
 
