@@ -72,7 +72,7 @@ label v14s48:
 
         u "Of course. *Chuckles*"
 
-    elif v14s03a_take_wallet and not lindseyrs:
+    elif v14s03a_take_wallet:
         scene v14s48_6
         with dissolve
 
