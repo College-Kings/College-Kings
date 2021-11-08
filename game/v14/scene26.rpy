@@ -325,7 +325,7 @@ label v14s26:
 
         u "Are you all good? What's going on?"
 
-        scene v14s26_10c
+        scene v14s26_10b
         with dissolve
 
         am "I'm fine, sorry..."
