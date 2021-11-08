@@ -129,7 +129,7 @@ label v14s43b:
     scene v14s43b_3
     with dissolve
 
-    lee "It's all about the relationship between a king and a queen during medieval times. Each gentleman will be paired with a lady, but there will be an additional gentleman so Riley will be their partner."
+    lee "It's all about the relationship between a king and a queen during medieval times. Each gentleman will be paired with a lady, but we will need Riley to take part to make sure everyone can be paired up."
 
     scene v14s43b_4e # FPP. same as v14s43b_4c Riley's mouth is open
     with dissolve
@@ -159,16 +159,16 @@ label v14s43b:
     scene v14s43b_7b # FPP. same as v14s43b_7a Close up shot of Penelope
     with dissolve
 
-    u "(Guess we were meant to work together.)"
-
-    scene v14s43b_8 # FPP. Mc is still standing, show Penelope sitting down in a seat looking at Mc slight smile mouth closed
+    u "Guess we were meant to work together."
+    
+    scene v14s43b_7c
     with dissolve
 
     pause 0.75
-
-    scene v14s43b_8a # FPP. same as v14s43b_8 Imre has grabbed Mc's shoulder Imre no expression mouth closed, and walked into the left side of the frame
+    
+    scene v14s43b_8 # FPP. Mc is still standing, show Penelope sitting down in a seat looking at Mc slight smile mouth closed
     with dissolve
-
+    
     pause 0.75
 
     scene v14s43b_9 # FPP. Show just imre looking at MC, no expression, mouth open, Mc has shifted his view to his left to look only at Imre
