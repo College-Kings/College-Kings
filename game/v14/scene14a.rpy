@@ -32,6 +32,8 @@ label v14s14a:
     $ chloe.messenger.newMessage(_("[name!u]!!! "))
     $ chloe.messenger.newMessage(_("Right, you're probably asleep. When you read this, just meet me in the hall near Ms. Rose's classroom at 10. "))
 
+    call screen phone
+    
     scene v14s14a_1c # TPP. same as v14s14a_1b MC puts his phone away
     with dissolve
 
