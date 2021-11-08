@@ -70,40 +70,65 @@ label v14s22a:
 
     li "Your phone is buzzing I think."
 
-    scene v14s22a_1a
-    with dissolve
-
-    u "Yeah, oh well. It can wait. *Chuckles*"
-
-    scene v14s22a_1
-    with dissolve
-
-    li "No, no. It may be important. Besides, I need to run anyway."
-
-    scene v14s22a_1b
-    with dissolve
-
-    li "Thank you, once again, for everything."
-
-    scene v14s22a_1a
-    with dissolve
-
-    u "Once again, always."
-
-    scene v14s22a_2 # TPP. lindsey waves good bye, full smile, mouth open and rushes off 
-    with dissolve
-
-    pause 0.75
-
     if v14_talk_to_chris:
+        scene v14s22a_1a
+        with dissolve
+
+        u "Yeah, I should probably take this."
+
+        scene v14s22a_1
+        with dissolve
+
+        li "Alright, I need to run anyway."
+
+        scene v14s22a_1b
+        with dissolve
+
+        li "Thank you, once again, for everything."
+
+        scene v14s22a_1a
+        with dissolve
+
+        u "Once again, always."
+
+        scene v14s22a_2 # TPP. lindsey waves good bye, full smile, mouth open and rushes off 
+        with dissolve
+
+        pause 0.75
+
         scene v14s22a_3 # TPP. MC starts walking outside and is looking at his phone as he walks
         with dissolve
 
-        u "(Oh, right, Chloe's on her way to the Wolves house, I should get going.)"
+        u "(Oh, right, Chloe's on her way to the Wolves house. Need to rush now.)"
 
         jump v14s23
 
     else:
+        scene v14s22a_1a
+        with dissolve
+
+        u "Yeah, oh well. It can wait. *Chuckles*"
+
+        scene v14s22a_1
+        with dissolve
+
+        li "No, no. It may be important. Besides, I need to run anyway."
+
+        scene v14s22a_1b
+        with dissolve
+
+        li "Thank you, once again, for everything."
+
+        scene v14s22a_1a
+        with dissolve
+
+        u "Once again, always."
+
+        scene v14s22a_2 # TPP. lindsey waves good bye, full smile, mouth open and rushes off 
+        with dissolve
+
+        pause 0.75
+
         scene v14s22a_3 # TPP. MC starts walking outside and is looking at his phone as he walks
         with dissolve
 
