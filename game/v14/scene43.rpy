@@ -7,7 +7,7 @@
 
 label v14s43:
     scene v14s43_1 # TPP. Show MC walking through the school, slight smile, mouth closed
-    with dissolve
+    with fade
 
     pause 0.75
 
