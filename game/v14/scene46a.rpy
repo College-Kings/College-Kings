@@ -591,7 +591,7 @@ label v14s46a:
         scene v14s46a_31 # TPP. Green Grassy Field: Close up of the horse frowning (angry) and nipping at MC's crotch area.
         with dissolve
 
-        la "*Speaking softly* He's starting to get angry. You can feel his teeth trying to bite their way through the fabric of your jeans... But you can't move."
+        la "*Speaking softly* He's starting to get angry. You can feel his teeth trying to bite their way through the fabric of your jeans... but you can't move."
 
         scene v14s46a_32 # TPP. MC shocked, standing in the green grassy field, naked with his hands covering his crotch 
         with dissolve

@@ -332,7 +332,7 @@ label v14s17:
     scene v14s17_10b
     with dissolve
 
-    u "Ooooohhh...*Coughs* Nerd! *Coughs*"
+    u "Ooooohhh... *Coughs* Nerd! *Coughs*"
 
     scene v14s17_10d
     with dissolve
