@@ -5,7 +5,7 @@
 
 label v14s23:
     scene v14s23_1 # TPP. Show MC walking up to the steps of the wolves house and seeing Chris, Chris looking at the sky, Both slight smile, mouth closed.
-    with dissolve
+    with fade
 
     pause 0.75
 

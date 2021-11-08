@@ -95,14 +95,18 @@ label v14s22a:
 
     pause 0.75
 
-    scene v14s22a_3 # TPP. MC starts walking outside and is looking at his phone as he walks
-    with dissolve
+    if v14_talk_to_chris:
+        scene v14s22a_3 # TPP. MC starts walking outside and is looking at his phone as he walks
+        with dissolve
 
-    pause 0.75
+        u "(Oh, right, Chloe's on her way to the Wolves house, I should get going.)"
 
-    scene v14s22a_4 # TPP. mc sits on a bench outside
-    with dissolve
+        jump v14s23
 
-    u "(Let's see who this is...)"
+    else:
+        scene v14s22a_3 # TPP. MC starts walking outside and is looking at his phone as he walks
+        with dissolve
 
-    jump v14s24
+        u "(Let's see who this is...)"
+
+        jump v14s24
