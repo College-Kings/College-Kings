@@ -4,7 +4,6 @@
 # Time: Morning
 
 label v14s41a:
-
     scene v14s41a_1 # TPP. Show mc waking up in bed shocked expression, mouth open
     with dissolve
 
@@ -179,7 +178,7 @@ label v14s41a:
         scene v14s41a_5g # FPP. same as v14s41a_5f Grayson holds his phone in front of him chest level, Grayson is looking at Ryan, half smile, mouth open
         with dissolve
 
-        gr "The image I have on this phone is the one shot we needed to knock her down a peg."
+        gr "The image I have on this phone is the one shot we needed to knock Chloe down a peg."
 
         scene v14s41a_6c
         with dissolve
