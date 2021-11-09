@@ -485,7 +485,8 @@ label v14s17:
             
                 scene v14s17_10g
                 with dissolve
-                
+             
+                $ set_presidency_percent(v14_lindsey_popularity + 3)
                 la "You're right. I guess in the end it's all about loyalty, huh?"
 
                 if v11_hp_points == 3:
@@ -514,6 +515,7 @@ label v14s17:
                 scene v14s17_10h # FPP. Same as v14s17_10a, serious expression 
                 with dissolve
 
+                $ set_presidency_percent(v14_lindsey_popularity + 1)
                 la "I do want to think about it a bit more before I decide."
 
             scene v14s17_10e
@@ -654,6 +656,7 @@ label v14s17:
                         scene v14s17_10a
                         with dissolve
 
+                        $ set_presidency_percent(v14_lindsey_popularity - 2)
                         la "I guess you're that one person for me too. It must feel like Lindsey is crossing the line by running against Chloe, no?"
 
                         scene v14s17_10e
@@ -729,6 +732,7 @@ label v14s17:
                         scene v14s17_17 # FPP. Lauren Looking at MC, serious expression, mouth open
                         with dissolve
                         
+                        $ set_presidency_percent(v14_lindsey_popularity + 1)
                         la "Exactly, the most loyal person you know, and that's why you of all people should know that I wouldn't do something like that."
 
                         scene v14s17_17a # FPP. Same as v14s17_17, mouth closed
@@ -749,6 +753,7 @@ label v14s17:
                     jump v14s17_end
                 
                 "Don't ask her":
+                    $ set_presidency_percent(v14_lindsey_popularity + 1)                
                     u "(I'm not getting involved in that...)"
                 
                     jump v14s17_end
