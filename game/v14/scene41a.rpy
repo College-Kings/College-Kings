@@ -67,7 +67,7 @@ label v14s41a:
         scene v14s41a_5
         with dissolve
 
-        gr "We're here, for whatever I say we're here for. I don't know what's gotten into you lately, man."
+        gr "We're here for whatever I say we're here for. I don't know what's gotten into you lately, man."
 
         scene v14s41a_4b # FPP. same as v14s41a_4 Cameron avoids looking at Grayson, no expression, mouth closed
         with dissolve
@@ -82,7 +82,7 @@ label v14s41a:
         scene v14s41a_5b # FPP. same as v14s41a_5a Grayson is looking at Ryan, slight smile, mouth open
         with dissolve
 
-        gr "Opposite of that actually. Despite the rough past that Chloe and I have, we will not be sabotaging her in the race."
+        gr "Opposite of that, actually. Despite the rough past that Chloe and I have, we will not be sabotaging her in the race."
 
         scene v14s41a_6a # FPP. same as v14s41a_6 Ryan is slightly confused
         with dissolve
