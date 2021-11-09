@@ -117,7 +117,8 @@ label v14s41a:
         scene v14s41a_5c
         with dissolve
 
-        gr "Look... Going against Chloe here isn't a good look for the Apes. If she ends up winning and we went after her, it'd backfire instantly and I don't want that. Make sense?"
+        gr "Look... Going against Chloe here isn't a good look for the Apes."
+        gr "If she ends up winning and we went after her, it'd backfire instantly and I don't want that. Make sense?"
 
         scene v14s41a_6
         with dissolve
@@ -306,7 +307,8 @@ label v14s41a:
                 scene v14s41a_5l
                 with dissolve
 
-                u "If you don't want her to win then fine, we'll stay out of the race. But sabotaging her isn't fair, it's not cool, and this photo is a complete invasion of privacy."
+                u "If you don't want her to win then fine, we'll stay out of the race."
+                u "But sabotaging her isn't fair, it's not cool, and this photo is a complete invasion of privacy."
 
                 scene v14s41a_6d # FPP. same as v14s41a_6b Ryan is now looking at mc, slightly angry, mouth open
                 with dissolve
@@ -341,7 +343,8 @@ label v14s41a:
                         $ add_point(KCT.BRO)
                         $ v14_ApesPostChloePics = False
 
-                        u "You of all people should know that doing something like this is gonna give us a bad look. Putting something out there publically like that is just asking for a shitty situation."
+                        u "You of all people should know that doing something like this is gonna give us a bad look."
+                        u "Putting something out there publically like that is just asking for a shitty situation."
 
                         scene v14s41a_4c # FPP. same as v14s41a_4 Cameron is looking at MC, no expression, mouth open
                         with dissolve
@@ -361,7 +364,8 @@ label v14s41a:
                     "Not fair to Chloe":
                         $ add_point(KCT.BOYFRIEND)
 
-                        u "As I said, it's not fair to Chloe. Having that photo posted all over Kiwii, and especially by all of her ex-boyfriend's frat members, would be a horrible experience for her."
+                        u "As I said, it's not fair to Chloe, having that photo posted all over Kiwii."
+                        u "And especially by all of her ex-boyfriend's frat members, it would be a horrible experience for her."
 
                         scene v14s41a_5a
                         with dissolve

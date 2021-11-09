@@ -91,7 +91,8 @@ label v14s19_continue:
     u "From the options we have, these are the final decisions I'd go with."
 
     if v14_chloe_apes: # PLACEHOLDER
-        cl "Getting the Apes to side with us could take a lot of convincing but... If we manage to pull it off, a Chicks and Apes alliance would make for an interesting future of the Chicks."
+        cl "Getting the Apes to side with us could take a lot of convincing but..."
+        cl "If we manage to pull it off, a Chicks and Apes alliance would make for an interesting future of the Chicks."
 
     else:
         cl "I know Chris trusts me, so I'm pretty sure we've already got the Wolves on our side. Guess we'll find out, though..."

@@ -362,8 +362,6 @@ label v14s26:
     scene v14s26_2b
     with dissolve
 
-    $ set_presidency_percent(v14_lindsey_popularity + 3)
-
     li "It went great! I'm closing up now."
 
     scene v14s26_2

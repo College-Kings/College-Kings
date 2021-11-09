@@ -65,17 +65,14 @@ label v14s11:
             scene v14s11_3 #FPP. MC sees Charli with his bag leaving the airport, without speaking to anyone, Charli's back is turned
             with dissolve
 
-            u "(He came into our lives with a bang, trying to show his ass off, and look at him now... A sad dude, walking away all alone, just as he was when he first arrived.)"
-
-            u "(Definitely didn't like the guy, but I do get this weird feeling seeing him go.)"
-
         else:
             scene v14s11_3a #FPP. MC sees Charli with his bag leaving the airport, without speaking to anyone, Charli's back is turned
             with dissolve
 
-            u "(He came into our lives with a bang, trying to show his ass off, and look at him now... A sad dude, walking away all alone, just as he was when he first arrived.)"
+        u "(He came into our lives with a bang, trying to show his ass off, and look at him now...)"
+        u "(A sad dude, walking away all alone, just as he was when he first arrived.)"
 
-            u "(Definitely didn't like the guy, but I do get this weird feeling seeing him go.)"
+        u "(Definitely didn't like the guy, but I do get this weird feeling seeing him go.)"
 
     scene v14s11_4 # FPP. Mc turns around and see's Riley approaching him, Riley looking at mc, Riley no expression, mouth closed
     with dissolve
@@ -197,7 +194,8 @@ label v14s11:
     scene v14s11_4g
     with dissolve
 
-    ri "Knowing Aubrey she probably doesn't wanna talk about that stuff right now either. Being around her is probably the safest way to stay out of any Chicks drama. *Chuckles*"
+    ri "Knowing Aubrey she probably doesn't wanna talk about that stuff right now either."
+    ri "Being around her is probably the safest way to stay out of any Chicks drama. *Chuckles*"
 
     if rileyrs:
         scene v14s11_4a

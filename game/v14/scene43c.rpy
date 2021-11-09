@@ -171,7 +171,8 @@ label v14s43c:
     scene v14s43c_4c # FPP. same as v14s43c_4 Penelope has a serious expression and holds a fist in the air, mouth open
     with dissolve
 
-    pe "*British accent* I didn't mean the hunt for food, I meant the hunt for traitors. We need to find those who wish to destroy our society and remove them as a threat."
+    pe "*British accent* I didn't mean the hunt for food, I meant the hunt for traitors."
+    pe "*British accent* We need to find those who wish to destroy our society and remove them as a threat."
 
     scene v14s43c_4d # FPP. same as v14s43c_4c Penelope has lowered her fist, mouth closed
     with dissolve

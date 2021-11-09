@@ -313,7 +313,8 @@ label v14s43d:
     scene v14s43d_4 # TPP. Show Riley walking out of the classroom, slight smile, mouth closed.
     with dissolve
 
-    u "(Should've known she'd choose to do the whole thing on a whim... As long as I get a passing grade, she can have as much fun as she wants with the class, haha.)"
+    u "(Should've known she'd choose to do the whole thing on a whim...)"
+    u "(As long as I get a passing grade, she can have as much fun as she wants with the class, haha.)"
 
     scene v14s43d_5 # TPP. Show MC walking outside of the Campus building, slight smile, mouth closed
     with fade

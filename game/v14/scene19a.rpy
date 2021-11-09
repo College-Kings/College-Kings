@@ -84,7 +84,8 @@ label v14s19a:
     scene v14s19a_2
     with dissolve
 
-    cl "Exactly, and though Chris may support me as a leader, it doesn't mean all of the Wolves will want to... That's where a little favor from my favorite guy comes in. *Chuckles*"
+    cl "Exactly, and though Chris may support me as a leader, it doesn't mean all of the Wolves will want to..."
+    cl "That's where a little favor from my favorite guy comes in. *Chuckles*"
 
     scene v14s19a_2b # TPP Same angle as 2, Chloe's hand still on MC's arm, Chloe smiling, mouth closed, MC smiling and rolling his eyes, mouth open
     with dissolve

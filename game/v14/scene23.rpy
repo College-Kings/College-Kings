@@ -177,7 +177,8 @@ label v14s23:
 
     ch "Now look, Chloe... I did agree to help you, but I didn't specify how involved or supportive I'd be."
 
-    ch "Putting my head out there in full support of you means that the Wolves must all be convinced or we'll have a divided frat with similar issues to what you have now."
+    ch "Putting my head out there in full support of you means that the Wolves must all be convinced."
+    ch "Or else we'll have a divided frat with similar issues to what you have now."
 
     scene v14s23_4a
     with dissolve
@@ -333,7 +334,8 @@ label v14s23:
         scene v14s23_4a
         with dissolve
 
-        cl "Oh no, Chris. I'd never do that. The whole reason I want your support is because I believe the Wolves are a well-respected frat and deserving of a brotherhood title."
+        cl "Oh no, Chris. I'd never do that."
+        cl "The whole reason I want your support is because I believe the Wolves are a well-respected frat and deserving of a brotherhood title."
 
         scene v14s23_2c
         with dissolve
@@ -523,11 +525,15 @@ label v14s23:
                 scene v14s23_2b
                 with dissolve
 
-                u "Looking back on it now, a plush toy probably wasn't the best idea... but let's be clear, any \"image\" we put out will be the image of supporting Chloe's campaign."
+                u "Looking back on it now, a plush toy probably wasn't the best idea..."
+                u "But let's be clear, any \"image\" that gets out will be the image of supporting Chloe's campaign."
 
                 u "It's not really about what the Wolves will look like."
 
-                u "The only thing put on the Wolves is that you're supporting Chloe because you're respectable and trustworthy, and that's the image you want right?"
+                if joinwolves:
+                    u "The only thing put on the Wolves is that you're supporting Chloe because you're respectable and trustworthy, and that's the image you want right?"
+                else:
+                    u "The only thing put on the Wolves is that we're supporting Chloe because we're respectable and trustworthy, and that's the image you want right?"
 
                 scene v14s23_2a
                 with dissolve
