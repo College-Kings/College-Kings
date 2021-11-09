@@ -42,7 +42,8 @@ label v14s19a:
     scene v14s19a_2a # TPP Same angle as 2, Chloe standing with her arms folded across her chest, smiling and addressing MC like a speech
     with dissolve
 
-    cl "Chris and I share the same principles when it comes to leadership and loyalty. You can't blame all of the issues on the leader and give up on them, throwing them away, thinking that'll change things."
+    cl "Chris and I share the same principles when it comes to leadership and loyalty."
+    cl "You can't blame all of the issues on the leader and give up on them, throwing them away, thinking that'll change things."
 
     scene v14s19a_1d # FPP Same angle as 1, Chloe with her arms out to her sides, smiling like she's giving a speech
     with dissolve
@@ -72,7 +73,8 @@ label v14s19a:
     scene v14s19a_1
     with dissolve
 
-    cl "Whatever's happening between Chris and Nora is their business, and I think because I don't get involved as much as others, we have this unspoken respective relationship, you know?"
+    cl "Whatever's happening between Chris and Nora is their business..."
+    cl "And I think because I don't get involved as much as others, we have this unspoken respective relationship, you know?"
 
     scene v14s19a_1a
     with dissolve
@@ -132,7 +134,8 @@ label v14s19a:
     scene v14s19a_1
     with dissolve
 
-    cl "And honestly when it comes to Imre, he's had a crush on me for as long as I can remember. *Laughs* When I called him this morning he picked up right away and was way too excited to help..."
+    cl "And honestly when it comes to Imre, he's had a crush on me for as long as I can remember. *Laughs*"
+    cl "When I called him this morning he picked up right away and was way too excited to help..."
 
     scene v14s19a_1a
     with dissolve

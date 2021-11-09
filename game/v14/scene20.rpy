@@ -77,7 +77,8 @@ label v14s20:
     scene v14s20_3
     with dissolve
 
-    aut "We didn't really. We just had some major exterior renovations and they also renamed the place. It took a few weeks and we wanted to have a little celebration day for the community."
+    aut "We didn't really. We just had some major exterior renovations and they also renamed the place."
+    aut "It took a few weeks and we wanted to have a little celebration day for the community."
 
     scene v14s20_3a
     with dissolve
@@ -117,7 +118,8 @@ label v14s20:
     scene v14s20_3f
     with dissolve
 
-    aut "I know my sister as the \"risk free, never do a bad thing, sweetheart.\" She's definitely loosened up since you guys returned and I'm sure Amber had much to do with that. *Laughs*"
+    aut "I know my sister as the \"risk free, never do a bad thing, sweetheart.\""
+    aut "She's definitely loosened up since you guys returned and I'm sure Amber had much to do with that. *Laughs*"
 
     scene v14s20_3a
     with dissolve

@@ -332,7 +332,8 @@ label v14s46a:
         scene v14s46a_18b # TPP. Same as v14s46a_18a, but Dream Girl's mouth all the way down on MC's erect cock.
         with dissolve
 
-        la "*Speaking softly* She slowly pulls them down and immediately takes your full, throbbing member in her mouth. She starts to suck on it, her soft lips hugging every inch of you. Sucking and sucking and sucking until–"
+        la "*Speaking softly* She slowly pulls them down and immediately takes your full, throbbing member in her mouth."
+        la "She starts to suck on it, her soft lips hugging every inch of you. Sucking and sucking and sucking until–"
 
         scene v14s46a_18c # FPP. Same as v14s46a_18b, but different camera angle (from MC's perspective looking down at her sucking his cock.)
         with vpunch

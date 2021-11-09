@@ -103,7 +103,8 @@ label v14s22:
     scene v14s22_5e
     with dissolve
 
-    li "He said it with a smile and the janitor laughed, but it really seemed like a \"deal with the devil\" type of moment... We should be careful about making deals with him in the future."
+    li "He said it with a smile and the janitor laughed, but it really seemed like a \"deal with the devil\" type of moment..."
+    li "We should be careful about making deals with him in the future."
 
     scene v14s22_5a
     with dissolve

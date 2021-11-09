@@ -126,7 +126,8 @@ label v14s43b:
     scene v14s43b_3
     with dissolve
 
-    lee "It's all about the relationship between a king and a queen during medieval times. Each gentleman will be paired with a lady, but we will need Riley to take part to make sure everyone can be paired up."
+    lee "It's all about the relationship between a king and a queen during medieval times."
+    lee "Each gentleman will be paired with a lady, but we will need Riley to take part to make sure everyone can be paired up."
 
     scene v14s43b_4e # FPP. same as v14s43b_4c Riley's mouth is open
     with dissolve
