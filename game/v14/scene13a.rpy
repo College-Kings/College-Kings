@@ -77,7 +77,12 @@ label v14s13a:
     scene v14s13a_4b
     with dissolve
 
-    gr "That's on a need to know basis, and you do not need to know."
+    gr "All you need to know is that you should stay clean, be a good boy, and get into shape."
+    
+    scene v14s13a_4a
+    with dissolve
+    
+    u "Are we fighting soon?"
 
     scene v14s13a_4
     with dissolve
