@@ -94,7 +94,7 @@ label v14s46a:
     scene v14s46a_6a # TPP. Same as v14s46a_6 except MC, eyes closed, relaxed smile.
     with dissolve
 
-    la "*Speaking softly* Let's start by getting nice and relaxed with some breathing exercises."
+    la "*Softly* Let's start by getting nice and relaxed with some breathing exercises."
 
     scene v14s46a_7 # FPP. Lauren, smiling, mouth open.
     with dissolve
@@ -109,7 +109,7 @@ label v14s46a:
     scene v14s46a_7
     with dissolve
 
-    la "*Speaking softly* Hold it for 2 seconds..."
+    la "*Softly* Hold it for 2 seconds..."
 
     scene v14s46a_6b
     with dissolve
@@ -145,7 +145,7 @@ label v14s46a:
     scene v14s46a_6a
     with dissolve
 
-    la "*Speaking softly* And again. Breathe in... breathe out... in... out..."
+    la "*Softly* And again. Breathe in... breathe out... in... out..."
 
     scene v14s46a_6b
     with dissolve
@@ -155,19 +155,19 @@ label v14s46a:
     scene v14s46a_7
     with dissolve
 
-    la "*Speaking softly* You are now falling into deep relaxation..."
+    la "*Softly* You are now falling into deep relaxation..."
 
     scene v14s46a_6a
     with dissolve
 
-    la "*Speaking softly* Falling deeper and deeper..."
+    la "*Softly* Falling deeper and deeper..."
 
-    la "*Speaking softly* As you listen to the sound of my voice..."
+    la "*Softly* As you listen to the sound of my voice..."
 
     scene v14s46a_7
     with dissolve
 
-    la "*Speaking softly* My voice is all you can hear as you sink deeper and deeper... into a peaceful... pleasant... relaxing state."
+    la "*Softly* My voice is all you can hear as you sink deeper and deeper... into a peaceful... pleasant... relaxing state."
 
     scene v14s46a_6e # TPP. Same as v14s46a_6b, but MC laughing, eyes open, mouth open.
     with dissolve
@@ -195,17 +195,17 @@ label v14s46a:
     scene v14s46a_7
     with dissolve
 
-    la "*Speaking softly* You are starting to feel relaxed... You are feeling safe... And completely comfortable."
+    la "*Softly* You are starting to feel relaxed... You are feeling safe... And completely comfortable."
 
     scene v14s46a_8 # FPP. MC's perspective, head turned looking at Lauren, who is smiling, mouth open.
     with dissolve
 
-    la "*Speaking softly* As you drift off into a deep and pleasant state of relaxation, deeper and deeper... Listening and feeling the gentle caress of the natural elements around you."
+    la "*Softly* As you drift off into a deep and pleasant state of relaxation, deeper and deeper... Listening and feeling the gentle caress of the natural elements around you."
 
     scene v14s46a_8a # FPP. Same as v14s46a_8, but Photoshop MC's vision closing his eyes 1/4 (simulate getting drowsy).
     with dissolve
 
-    la "*Speaking softly* The longer you listen to my voice, the deeper you sink into pure relaxation."
+    la "*Softly* The longer you listen to my voice, the deeper you sink into pure relaxation."
 
     scene v14s46a_8b # FPP. Same as v14s46a_8a, but Photoshop MC's vision closing his eyes 1/2.
     with dissolve
@@ -215,7 +215,7 @@ label v14s46a:
     scene v14s46a_8c # FPP. Same as v14s46a_8b, but Photoshop MC's vision closing his eyes 3/4
     with dissolve
 
-    la "*Speaking softly* Deeper and deeper..."
+    la "*Softly* Deeper and deeper..."
 
     la "*Whispers* More relaxed than you've ever felt before."
 
@@ -228,14 +228,14 @@ label v14s46a:
         scene v14s46a_7
         with dissolve
 
-        la "*Speaking softly* You are now walking along a beach. It's the most beautiful day. So sunny and warm, you can feel the light dancing on your skin."
+        la "*Softly* You are now walking along a beach. It's the most beautiful day. So sunny and warm, you can feel the light dancing on your skin."
 
-        la "*Speaking softly* The sand between your toes is soft to the touch and feels like a freshly dried blanket. You're calm... you're relaxed..."
+        la "*Softly* The sand between your toes is soft to the touch and feels like a freshly dried blanket. You're calm... you're relaxed..."
 
         scene v14s46a_6a
         with dissolve
 
-        la "*Speaking softly* You've never felt this relaxed before... You're the happiest you've ever been."
+        la "*Softly* You've never felt this relaxed before... You're the happiest you've ever been."
 
         scene v14s46a_8d
         with dissolve
@@ -245,7 +245,7 @@ label v14s46a:
         scene v14s46a_9 # TPP. MC, wearing swim trunks, walking along a sandy beach, smiling.
         with dissolve
         
-        la "*Speaking softly* There's a girl in a bikini, laying on a beach towel. Do you see her?"
+        la "*Softly* There's a girl in a bikini, laying on a beach towel. Do you see her?"
 
         scene v14s46a_9a # TPP. Same as v14s46a_9, but MC looking left (as if searching for someone).
         with dissolve
@@ -282,7 +282,7 @@ label v14s46a:
         scene v14s46a_13 # TPP. MC smiling, sitting behind dream girl, rubbing lotion on her back. Dream Girl, smiling, eyes closed.
         with dissolve
 
-        la "*Speaking softly* As you rub the lotion into her back, she removes her bikini top and turns around to face you. She's now asking you to massage the lotion into her breasts."
+        la "*Softly* As you rub the lotion into her back, she removes her bikini top and turns around to face you. She's now asking you to massage the lotion into her breasts."
 
         scene v14s46a_14 # FPP. MC looking down at Dream Girl, eyes open, smiling sexy, laying on her back, breasts fully exposed, holding the bottle of lotion towards her breasts.
         with dissolve
@@ -292,7 +292,7 @@ label v14s46a:
         scene v14s46a_15 # FPP. MC looking down at Dream Girl, eyes closed, smiling sexy, hands to her side while MC's hands cup her breasts as if he's rubbing lotion on them (keep the nipples visible).
         with dissolve
 
-        la "*Speaking softly* Rubbing into her soft skin you can feel her nipples, getting excited by your touch."
+        la "*Softly* Rubbing into her soft skin you can feel her nipples, getting excited by your touch."
 
         scene v14s46a_16 # FPP. Close up on Dream Girl's nipple(s) showing the nipples slightly raised.
         with dissolve
@@ -312,7 +312,7 @@ label v14s46a:
         scene v14s46a_17 # FPP. Close up of Dream Girl's hand feeling MC's dick that is bulging in his swim trunks. 
         with dissolve
 
-        la "*Speaking softly* She feels your... pulsing cock. *Embarrassed giggle* It's hard. Your swim trunks feel like they're about to burst at the seams..."
+        la "*Softly* She feels your... pulsing cock. *Embarrassed giggle* It's hard. Your swim trunks feel like they're about to burst at the seams..."
 
         scene v14s46a_17a # FPP. Same as v14s46a_17, but slightly different hand position (as if Dream girl is rubbing MC's cock). 
         with dissolve
@@ -332,8 +332,8 @@ label v14s46a:
         scene v14s46a_18b # TPP. Same as v14s46a_18a, but Dream Girl's mouth all the way down on MC's erect cock.
         with dissolve
 
-        la "*Speaking softly* She slowly pulls them down and immediately takes your full, throbbing member in her mouth."
-        la "She starts to suck on it, her soft lips hugging every inch of you. Sucking and sucking and sucking until–"
+        la "*Softly* She slowly pulls them down and immediately takes your full, throbbing member in her mouth."
+        la "*Softly* She starts to suck on it, her soft lips hugging every inch of you. Sucking and sucking and sucking until–"
 
         scene v14s46a_18c # FPP. Same as v14s46a_18b, but different camera angle (from MC's perspective looking down at her sucking his cock.)
         with vpunch
@@ -520,9 +520,9 @@ label v14s46a:
         scene v14s46a_7
         with dissolve
 
-        la "*Speaking softly* You are now walking through a fresh, grassy field in your bare feet. It's the most beautiful day. So sunny and warm, you can feel the light dancing on your skin."
+        la "*Softly* You are now walking through a fresh, grassy field in your bare feet. It's the most beautiful day. So sunny and warm, you can feel the light dancing on your skin."
 
-        la "*Speaking softly* The grass between your toes is gentle to the touch. You're calm... you're relaxed... you're the happiest you've ever been..."
+        la "*Softly* The grass between your toes is gentle to the touch. You're calm... you're relaxed... you're the happiest you've ever been..."
 
         scene v14s46a_8d
         with dissolve
@@ -537,12 +537,12 @@ label v14s46a:
         scene v14s46a_25 # FPP. MC looking out in the distance of the green grassy field, watching a horse trotting towards him.
         with dissolve
                 
-        la "*Speaking softly* You see a majestic horse trotting towards you. The closer it gets, the more calm you feel."
+        la "*Softly* You see a majestic horse trotting towards you. The closer it gets, the more calm you feel."
 
         scene v14s46a_26 # FPP. Close up of MC hand, holding a red apple.
         with dissolve
 
-        la "*Speaking softly* You notice you have an apple in your hand."
+        la "*Softly* You notice you have an apple in your hand."
 
         scene v14s46a_25a # FPP. MC looking at the horse standing in front of him, the horse is looking at the apple in MC's hand. 
         with dissolve
@@ -552,7 +552,7 @@ label v14s46a:
         scene v14s46a_27 # TPP. MC, smiling, relaxed mouth closed standing in the green grassy field, using his right hand to feed an apple to the horse.
         with dissolve
         
-        la "*Speaking softly* You feed it to the horse."
+        la "*Softly* You feed it to the horse."
 
         scene v14s46a_8d
         with dissolve
@@ -562,7 +562,7 @@ label v14s46a:
         scene v14s46a_27a # TPP. MC smiling, relaxed mouth closed standing in the green grassy field, with the bottom of MC's shirt stuck in the horse's mouth (or something to suggest the horse is eating his shirt) similar to v14s46a_27
         with dissolve
 
-        la "*Speaking softly* The horse has finished the apple, but he's still hungry... He starts to eat your shirt."
+        la "*Softly* The horse has finished the apple, but he's still hungry... He starts to eat your shirt."
 
         scene v14s46a_27b # TPP. Similar to v14s46a_27a with the horse still eating the shirt, but now half of MC's shirt is gone. 
         with dissolve
@@ -572,12 +572,12 @@ label v14s46a:
         scene v14s46a_27c # TPP. Simliar to v14s46a_27b but MC TOPLESS (NO SHIRT) and the horse still stands in front of MC.
         with dissolve
         
-        la "*Speaking softly* You can't stop him! In an instant, he's eaten your whole shirt..."
+        la "*Softly* You can't stop him! In an instant, he's eaten your whole shirt..."
 
         scene v14s46a_28 # TPP. MC with a slight frown, concerns, standing in the green grassy field TOPLESS (NO SHIRT).
         with dissolve
 
-        la "*Speaking softly* But he's not stopping there... He's hungry for something else now. Before you know it, he's chewing at your dick."
+        la "*Softly* But he's not stopping there... He's hungry for something else now. Before you know it, he's chewing at your dick."
 
         scene v14s46a_29 # TPP. MC mouth open, shocked awake, standing in the grassy field with his hands out trying to prevent the horse from nudging his critch with its nose.
         with dissolve
@@ -592,17 +592,17 @@ label v14s46a:
         scene v14s46a_31 # TPP. Green Grassy Field: Close up of the horse frowning (angry) and nipping at MC's crotch area.
         with dissolve
 
-        la "*Speaking softly* He's starting to get angry. You can feel his teeth trying to bite their way through the fabric of your jeans... but you can't move."
+        la "*Softly* He's starting to get angry. You can feel his teeth trying to bite their way through the fabric of your jeans... but you can't move."
 
         scene v14s46a_32 # TPP. MC shocked, standing in the green grassy field, naked with his hands covering his crotch 
         with dissolve
 
-        la "*Speaking softly* Your feet are glued to the ground as you try to push the horse away, but somehow he manages to rip off your pants."
+        la "*Softly* Your feet are glued to the ground as you try to push the horse away, but somehow he manages to rip off your pants."
 
         scene v14s46a_33 # TPP. CLOSEUP: Horse's mouth nipping towards MC's (naked) hands that are covering his crotch.
         with dissolve
 
-        la "*Speaking softly* The horse has his eyes on the prize now... Before you know it, he takes one quick bite towards your dick and-"
+        la "*Softly* The horse has his eyes on the prize now... Before you know it, he takes one quick bite towards your dick and-"
 
         scene v14s46a_34 # TPP. SHOT OF MC waste up: MC, mouth open, SCREAMING IN PAIN, hands down towards his crotch.
         with dissolve
