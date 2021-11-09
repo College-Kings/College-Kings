@@ -37,7 +37,7 @@ label v14s03c:
     scene v14s03c_3
     with dissolve
 
-    madame "I'll be right back with your drinks. *Chuckles*"
+    madame "I'll be right back with your drinks."
 
     scene v14s03c_3a
     with dissolve
@@ -117,7 +117,7 @@ label v14s03c:
     scene v14s03c_4e
     with dissolve
 
-    satin "Same here. *Chuckles*"
+    satin "Same here."
 
     satin "So, what are you doing here at the bar all alone?"
 
@@ -126,7 +126,7 @@ label v14s03c:
 
     u "I came here with two of my buddies, actually."
 
-    u "One is off having a little fun somewhere else, or at least I hope... *Chuckles* And the other is hitting it off with that girl right... there."
+    u "One is off having a little fun somewhere else, or at least I hope... And the other is hitting it off with that girl right... there."
 
     scene v14s03c_5 # FPP. MC looking off past the bar pointing over at Ryan and Emerald, Ryan and Emerald both slight smile, mouth closed.
     with dissolve
@@ -199,12 +199,12 @@ label v14s03c:
     scene v14s03c_4h # FPP. Same as v14s03c_4e, Satin different pose, slight smile, mouth open.
     with dissolve
 
-    satin "I like you, good genes. *Chuckles* You're not like most of the guys that walk in here."
+    satin "I like you, good genes. You're not like most of the guys that walk in here."
 
     scene v14s03c_4i # FPP. Same as v14s03c_4f, Satin different pose, slight smile, mouth closed.
     with dissolve
 
-    u "I try to be a little different. *Chuckles*"
+    u "I try to be a little different."
 
     scene v14s03c_4h
     with dissolve
@@ -248,7 +248,7 @@ label v14s03c:
     scene v14s03c_4i
     with dissolve
 
-    u "Fair point. *Chuckles*"
+    u "Fair point."
 
     scene v14s03c_4e
     with dissolve
@@ -302,7 +302,7 @@ label v14s03c:
             scene v14s03c_4l # FPP. Same as v14s03c_4k, Satin holding MC's hand, Satin flirting smile, mouth open.
             with dissolve
 
-            satin "Then follow me. *Chuckles*"
+            satin "Then follow me."
 
             scene v14s03c_6 # TPP. Show Satin holding MC's hand leading him towards the private booth, both slight smile, mouth closed.
             with dissolve

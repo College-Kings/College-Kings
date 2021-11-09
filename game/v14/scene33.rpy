@@ -60,7 +60,7 @@ label v14s33:
             scene v14s33_3
             with dissolve
 
-            la "Not much, I just miss you. *Chuckles* I've been thinking about you all night..."
+            la "Not much, I just miss you. I've been thinking about you all night..."
 
             menu:
                 "Want me to come over?":
@@ -111,7 +111,7 @@ label v14s33:
 
             la "I'm in bed naked, all alone, and I'm thinking I should try to watch some porn and..."
 
-            la "*Chuckles* I don't know... See what it does for me?"
+            la "I don't know... See what it does for me?"
 
             menu:
                 "Laugh":
@@ -130,7 +130,7 @@ label v14s33:
                     scene v14s33_3a
                     with dissolve
 
-                    u "Well, be sure to tell me how it goes. *Chuckles*"
+                    u "Well, be sure to tell me how it goes."
 
                     scene v14s33_3
                     with dissolve
@@ -179,7 +179,7 @@ label v14s33:
                     scene v14s33_3
                     with dissolve
 
-                    la "*Chuckles* We think a lot alike."
+                    la "We think a lot alike."
 
                     scene v14s33_3a
                     with dissolve
@@ -194,12 +194,12 @@ label v14s33:
                     scene v14s33_3a
                     with dissolve
 
-                    u "O-Oh! *Chuckles* Well shit, I guess I'll let you go handle your biz."
+                    u "O-Oh! Well shit, I guess I'll let you go handle your biz."
 
                     scene v14s33_3
                     with dissolve
 
-                    la "When we get together again, I wanna talk about it. *Chuckles*"
+                    la "When we get together again, I wanna talk about it."
 
                     scene v14s33_3a
                     with dissolve
@@ -284,7 +284,7 @@ label v14s33:
             scene v14s33_3
             with dissolve
 
-            la "Not much, I just miss you. *Chuckles* I've been thinking about you all night..."
+            la "Not much, I just miss you. I've been thinking about you all night..."
 
             menu:
                 "Want me to come over?":
@@ -334,7 +334,7 @@ label v14s33:
 
             la "I'm in bed naked, all alone, and I'm thinking I should try to watch some porn and..."
 
-            la "*Chuckles* I don't know... See what it does for me?"
+            la "I don't know... See what it does for me?"
 
             menu:
                 "Laugh":
@@ -353,7 +353,7 @@ label v14s33:
                     scene v14s33_3a
                     with dissolve
 
-                    u "Well, be sure to tell me how it goes. *Chuckles*"
+                    u "Well, be sure to tell me how it goes."
 
                     scene v14s33_3
                     with dissolve
@@ -377,7 +377,7 @@ label v14s33:
                     scene v14s33_3a
                     with dissolve
 
-                    u "Will do. *Chuckles*"
+                    u "Will do."
 
                     play sound "sounds/rejectcall.mp3"
 
@@ -403,7 +403,7 @@ label v14s33:
                     scene v14s33_3
                     with dissolve
 
-                    la "*Chuckles* We think a lot alike."
+                    la "We think a lot alike."
 
                     scene v14s33_3a
                     with dissolve
@@ -418,12 +418,12 @@ label v14s33:
                     scene v14s33_3a
                     with dissolve
 
-                    u "O-Oh! *Chuckles* Well shit, I guess I'll let you go handle your biz."
+                    u "O-Oh! Well shit, I guess I'll let you go handle your biz."
 
                     scene v14s33_3
                     with dissolve
 
-                    la "When we get together again, I wanna talk about it. *Chuckles*"
+                    la "When we get together again, I wanna talk about it."
 
                     scene v14s33_3a
                     with dissolve

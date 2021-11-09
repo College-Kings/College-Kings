@@ -75,7 +75,7 @@ label v14s05:
     scene v14s05_3c # FPP. Chloe, neutral expression, mouth closed.
     with dissolve
 
-    u "*Chuckles* No, you're right..."
+    u "No, you're right..."
 
     scene v14s05_3 
     with dissolve

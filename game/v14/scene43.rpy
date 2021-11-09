@@ -98,7 +98,7 @@ label v14s43:
         scene v14s43_6
         with dissolve
 
-        u "*Chuckles* On what?"
+        u "On what?"
 
         scene v14s43_6a
         with dissolve
@@ -138,6 +138,6 @@ label v14s43:
     scene v14s43_9a # FPP. Same as v14s43_9, Penelope slight smile, mouth open
     with dissolve
 
-    pe "Thank you. *Chuckles*"
+    pe "Thank you."
 
     jump v14s43b

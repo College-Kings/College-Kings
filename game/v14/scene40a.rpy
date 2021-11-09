@@ -78,7 +78,7 @@ label v14s40a:
             scene v14s40a_5
             with dissolve
 
-            se "Your loss. *Chuckles*"
+            se "Your loss."
 
     se "Anyway... Just a little heads up. There may be a drug test coming up soon so make sure you're clean. Are you clean?"
 

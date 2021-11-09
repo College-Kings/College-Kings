@@ -52,7 +52,7 @@ label v14s49:
         scene v14s49_3
         with dissolve
 
-        li "I'll stay on the phone while you do it so we can make sure she actually takes the bait. *Chuckles*"
+        li "I'll stay on the phone while you do it so we can make sure she actually takes the bait."
 
         scene v14s49_3a
         with dissolve

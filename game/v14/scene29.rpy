@@ -95,14 +95,14 @@ label v14s29:
         scene v14s29_3a
         with dissolve
 
-        u "*Chuckles* Okay."
+        u "Okay."
 
         play sound "sounds/rejectcall.mp3"
         
         scene v14s29_2
         with dissolve
 
-        u "(This dude's weird.) *Chuckles*"
+        u "(This dude's weird.)"
 
         scene v14s29_5 # TPP. Show MC standing on the sidewalk, slight smile, mouth closed.
         with dissolve

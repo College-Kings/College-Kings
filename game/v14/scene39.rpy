@@ -87,7 +87,7 @@ label v14s39:
 
             pe "Oh, haha, sorry. I thought you meant- Well, you know what I thought."
 
-            pe "Discussing it at home sounds perfect. *Chuckles*"
+            pe "Discussing it at home sounds perfect."
 
             scene v14s39_2a # FPP. Same as v14s39_2, Penelope slight smile, mouth closed.
             with dissolve
@@ -107,13 +107,13 @@ label v14s39:
             scene v14s39_2
             with dissolve
 
-            pe "*Chuckles* You're naughty..."
+            pe "You're naughty..."
 
         "Hell yeah!":
             scene v14s39_1a
             with dissolve
         
-            u "Hell yeah, I would. *Chuckles* I don't care what the reason is. I wouldn't just let you talk to me like that in front of everyone."
+            u "Hell yeah, I would. I don't care what the reason is. I wouldn't just let you talk to me like that in front of everyone."
 
             scene v14s39_2
             with dissolve
@@ -179,7 +179,7 @@ label v14s39:
         scene v14s39_4c # FPP. Same as v14s39_4b, Penelope nervous smile, mouth closed.
         with dissolve
 
-        u "What do you want, Penelope? *Chuckles* Just say the words."
+        u "What do you want, Penelope? Just say the words."
 
         scene v14s39_4b
         with dissolve
@@ -194,7 +194,7 @@ label v14s39:
         scene v14s39_4d # FPP. Same as v14s39_4c, Penelope's arms extended out holding MC's, Penelope slight smile, mouth closed.
         with dissolve
 
-        u "*Chuckles* Okay, sure. What do you wanna do?"
+        u "Okay, sure. What do you wanna do?"
 
         scene v14s39_4e # FPP. Same as v14s39_4c, Still holding hands, Penelope slight smile, mouth open.
         with dissolve
@@ -292,7 +292,7 @@ label v14s39:
 
             pe "I mean..."
 
-            pe "Maybe we can try this again? Maybe with a little more planning or something? *Chuckles*"
+            pe "Maybe we can try this again? Maybe with a little more planning or something?"
 
             scene v14s39_4a
             with dissolve

@@ -17,7 +17,7 @@ label v14s46a:
     scene v14s46a_1b # FPP. Same as v14s46a_1a, but Lauren's mouth closed.
     with dissolve
 
-    u "Hello, Dr. Lauren. I'm here for my hypnosis appointment. *Chuckles*"
+    u "Hello, Dr. Lauren. I'm here for my hypnosis appointment."
 
     scene v14s46a_1a
     with dissolve
@@ -74,7 +74,7 @@ label v14s46a:
     scene v14s46a_4a
     with dissolve
 
-    u "*Chuckles* It's fine, I'm just teasing."
+    u "It's fine, I'm just teasing."
 
     scene v14s46a_5 # TPP. MC lays on Lauren bed.
     with dissolve
@@ -354,7 +354,7 @@ label v14s46a:
 
         $ grant_achievement("your_eyelids_are_heavy")
 
-        la "*Chuckles** I'm so sorry! *Laughs* It was fun though, right? Did it feel real?"
+        la "I'm so sorry! *Laughs* It was fun though, right? Did it feel real?"
 
         scene v14s46a_6i # TPP. Same as v14s46a_6h, but MC mouth open and Lauren mouth closed.
         with dissolve
@@ -364,7 +364,7 @@ label v14s46a:
         scene v14s46a_7
         with dissolve
 
-        la "*Chuckles* That's so crazy... You can just go in the bathroom and clean yourself up, ha."
+        la "That's so crazy... You can just go in the bathroom and clean yourself up, ha."
 
         scene v14s46a_6i
         with dissolve
@@ -374,7 +374,7 @@ label v14s46a:
         scene v14s46a_6h
         with dissolve
 
-        la "I said sorry! *Chuckles*"
+        la "I said sorry!"
 
         scene v14s46a_19 # TPP. MC, frustrated, mouth closed, getting up from the bed with a large wet spot in his crotch, Lauren sitting next to the bed, smiling, mouth open.
         with dissolve
@@ -418,7 +418,7 @@ label v14s46a:
         scene v14s46a_22 # FPP. Lauren, smiling, mouth open.
         with dissolve
         
-        la "*Chuckles* I didn't know what was going to happen, [name]. I was just exploring."
+        la "I didn't know what was going to happen, [name]. I was just exploring."
 
         scene v14s46a_22a # FPP. Same as v14s46a_22, but Lauren's mouth closed.
         with dissolve
@@ -455,7 +455,7 @@ label v14s46a:
                 scene v14s46a_22a
                 with dissolve
 
-                u "Of course I do. *Chuckles*"
+                u "Of course I do."
 
             "Even more":
                 $ v14s46a_love_lauren_more = True
@@ -464,7 +464,7 @@ label v14s46a:
                 scene v14s46a_22a
                 with dissolve
 
-                u "Even more than I did before. *Chuckles*"
+                u "Even more than I did before."
 
                 scene v14s46a_22b # FPP. Same as v14s46a_22, but Lauren's eyes are open wider, she wears a subtle sexy smile, mouth open.
                 with dissolve
@@ -516,7 +516,7 @@ label v14s46a:
             scene v14s46a_22
             with dissolve
 
-            la "I'm glad. *Chuckles*"
+            la "I'm glad."
 
     else: # -If LaurenFriend or else
         scene v14s46a_7
@@ -675,7 +675,7 @@ label v14s46a:
     scene v14s46a_38
     with dissolve
 
-    la "*Chuckles* Yeah..."
+    la "Yeah..."
 
     scene v14s46a_39 # TPP. Lauren, smiling, walks MC, smiling, both mouths closed, to the her dormroom door.
     with dissolve
@@ -700,7 +700,7 @@ label v14s46a:
     scene v14s46a_1b
     with dissolve
 
-    u "You're welcome, I guess. *Chuckles*"
+    u "You're welcome, I guess."
 
     scene v14s46a_1a
     with dissolve
@@ -710,7 +710,7 @@ label v14s46a:
     scene v14s46a_1b
     with dissolve
 
-    u "*Chuckles* Yeah sure, but if it's another hypnosis session... Maybe I'll send Imre instead."
+    u "Yeah sure, but if it's another hypnosis session... Maybe I'll send Imre instead."
 
     scene v14s46a_1a
     with dissolve
@@ -732,7 +732,7 @@ label v14s46a:
     scene v14s46a_42 # TPP. MC standing in front of Lauren's closed door.
     with dissolve
 
-    u "(Hmm, well that was interesting... *Chuckles*)"
+    u "(Hmm, well that was interesting...)"
 
     if joinwolves: # -If Wolves, transition to scene 52
         jump v14s52

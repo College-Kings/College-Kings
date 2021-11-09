@@ -79,7 +79,7 @@ label v14s21a:
     scene v14s21a_8 # FPP Show Chloe, close to MC with her back against the wall, she has a seductive expression, mouth open
     with dissolve
 
-    cl "*Chuckles* Did you miss me?"
+    cl "Did you miss me?"
 
     scene v14s21a_8a # FPP Same as 8, Chloe's mouth closed
     with dissolve
@@ -232,7 +232,7 @@ label v14s21a:
 
     u "*Moans*"
 
-    cl "Mmm! *Chuckles*"
+    cl "Mmm!"
 
     scene v14s21a_14 # FPP Show Chloe, sucking MC's dick as he cums in her mouth
     with dissolve
@@ -269,12 +269,12 @@ label v14s21a:
     scene v14s21a_16a # FPP Same as 16, Chloe's mouth open
     with dissolve
 
-    cl "Haha, I'll make time for some self-rejuvenation between presidency events. *Chuckles*"
+    cl "Haha, I'll make time for some self-rejuvenation between presidency events."
 
     scene v14s21a_16
     with dissolve
 
-    u "I like the sound of that. *Chuckles*"
+    u "I like the sound of that."
 
     scene v14s21a_17 # TPP Show MC grabbing Chloe's face and kissing her on the forehead, Chloe with a big smile
     with dissolve
@@ -319,12 +319,12 @@ label v14s21a:
     scene v14s21a_16
     with dissolve
 
-    u "See ya. *Chuckles*"
+    u "See ya."
 
     scene v14s21a_18 # FPP Show Chloe walking off
     with dissolve
 
-    u "(The girl who everyone says is the hottest on campus, and she's fawning over me... *Chuckles* Wow, [name]. Just, wow...)"
+    u "(The girl who everyone says is the hottest on campus, and she's fawning over me... Wow, [name]. Just, wow...)"
 
     scene v14s21a_19 # TPP Show MC walking away
     with dissolve

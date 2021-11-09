@@ -58,7 +58,7 @@ label v14s30a:
     scene v14s30a_6
     with dissolve
 
-    wtrain "*Chuckles* Unimportant. Just know, your life lies safely in my hands."
+    wtrain "Unimportant. Just know, your life lies safely in my hands."
 
     scene v14s30a_6a
     with dissolve
@@ -236,7 +236,7 @@ label v14s30a:
             scene v14s30a_13
             with dissolve
 
-            wtrain "Australian thing... You must have some good meat. *Chuckles*"
+            wtrain "Australian thing... You must have some good meat."
 
             scene v14s30a_13b # TPP. Same as v14s30a_13, Chloe and Wolf Trainer looking towards MC, Wolf Trainer and Chloe slight smile, mouth closed.
             with dissolve
@@ -270,7 +270,7 @@ label v14s30a:
             scene v14s30a_13
             with dissolve
 
-            wtrain "Exactly what you're doing now, mate. Seems as though he just likes your meat! *Chuckles*"
+            wtrain "Exactly what you're doing now, mate. Seems as though he just likes your meat!"
 
             scene v14s30a_13d # TPP. Same as v14s30a_13, Chloe slight smile, mouth open, Wolf Trainer slight smile, mouth closed.
             with dissolve

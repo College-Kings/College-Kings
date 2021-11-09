@@ -18,7 +18,7 @@ label v14s42:
     scene v14s42_2a # FPP. same as v14s42_2 Penelope mouth open
     with dissolve
 
-    pe "I just love sleepovers, honestly and I'm kind of a sucker for cuddling. *Chuckles*"
+    pe "I just love sleepovers, honestly and I'm kind of a sucker for cuddling."
 
     scene v14s42_2
     with dissolve
@@ -108,7 +108,7 @@ label v14s42:
     scene v14s42_8a
     with dissolve
 
-    pe "Hmm... Well, thank you I guess. *Chuckles*"
+    pe "Hmm... Well, thank you I guess."
 
     scene v14s42_9 # FPP. show Penelope turning the lights off, back turned to mc
     with dissolve
@@ -160,7 +160,7 @@ label v14s42:
     scene v14s42_12
     with dissolve
 
-    pe "And those aren't the type of people I like laying next to. *Chuckles*"
+    pe "And those aren't the type of people I like laying next to."
 
     scene v14s42_12a
     with dissolve
@@ -170,7 +170,7 @@ label v14s42:
     scene v14s42_12b # FPP. same as v14s42_12 Penelope points at mc with the hand she was rubbing his chest with, increase to half smile, mouth open, lights are off
     with dissolve
 
-    pe "*Chuckles* I know what you're doing, but I'll play your little game."
+    pe "I know what you're doing, but I'll play your little game."
 
     scene v14s42_12c # FPP. same as v14s42_12a Penelope Rests her head on mc's shoulder, looking up at him, slight smile, mouth closed, lights are off
     with dissolve
@@ -190,12 +190,12 @@ label v14s42:
     scene v14s42_12d
     with dissolve
 
-    pe "Oh my gosh... *Chuckles*"
+    pe "Oh my gosh..."
 
     scene v14s42_12c
     with dissolve
 
-    u "Haha, sorry. Just marking off the list. *Chuckles*"
+    u "Haha, sorry. Just marking off the list."
 
     scene v14s42_12d
     with dissolve
@@ -353,7 +353,7 @@ label v14s42:
                 scene v14s40_4b # Ignore as reused from another scene
                 with dissolve
 
-                u "Honestly, yeah. I'm just so tired. Sorry if what I said sounded weird, ignore my stupid talk. *Chuckles*"
+                u "Honestly, yeah. I'm just so tired. Sorry if what I said sounded weird, ignore my stupid talk."
 
                 u "So... did you watch porn while you touched yourself?"
 
@@ -385,7 +385,7 @@ label v14s42:
                 scene v14s40_4e # Ignore as reused from another scene
                 with dissolve
 
-                u "I'm always thinking about you. *Chuckles*"
+                u "I'm always thinking about you."
 
                 scene v14s40_4d # Ignore as reused from another scene
                 with dissolve

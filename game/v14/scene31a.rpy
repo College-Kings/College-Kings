@@ -27,7 +27,7 @@ label v14s31a:
     scene v14s31a_3b # FPP Same as 3a, Cameron's mouth closed
     with dissolve
 
-    u "Couldn't have said it better myself. *Chuckles*"
+    u "Couldn't have said it better myself."
 
     scene v14s31a_3a
     with dissolve
@@ -37,7 +37,7 @@ label v14s31a:
     scene v14s31a_3c # FPP Same angle as 3, Cameron laughing with his eyes closed
     with dissolve
 
-    ca "Ah! Couldn't have said that better myself. *Chuckles*"
+    ca "Ah! Couldn't have said that better myself."
 
     scene v14s31a_3b
     with dissolve
@@ -282,7 +282,7 @@ label v14s31a:
     scene v14s31a_3e
     with dissolve
 
-    u "*Chuckles* Of course."
+    u "Of course."
 
     scene v14s31a_3h
     with dissolve

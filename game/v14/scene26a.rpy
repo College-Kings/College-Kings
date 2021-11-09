@@ -70,7 +70,7 @@ label v14s26a:
     scene v14s26a_2d # FPP. same as v14s26a_2a lindsey slight smile, mouth open
     with dissolve
 
-    li "*Chuckles* If I get naked, stand on this table and start shaking my ass for sales."
+    li "If I get naked, stand on this table and start shaking my ass for sales."
 
     scene v14s26a_2e # FPP. same as v14s26a_2d lindsey mouth closed
     with dissolve
@@ -85,7 +85,7 @@ label v14s26a:
     scene v14s26a_2g # FPP. same as v14s26a_2f lindsey's decreased to slightly angry, mouth closed
     with dissolve
 
-    u "You're pretty pissed about this, aren't you? *Chuckles*"
+    u "You're pretty pissed about this, aren't you?"
 
     scene v14s26a_2f
     with dissolve
@@ -240,7 +240,7 @@ label v14s26a:
         scene v14s26_10c # Ignore as reused from another scene
         with dissolve
 
-        u "What? No. *Chuckles*"
+        u "What? No."
 
         u "Are you all good? What's going on?"
 
@@ -254,22 +254,12 @@ label v14s26a:
         scene v14s26_10c # Ignore as reused from another scene
         with dissolve
 
-        u "*Chuckles* That's okay."
-
-        scene v14s26_10d # Ignore as reused from another scene
-        with dissolve
-
-        am "I don't remember much from last night, ha. Did we have fun?"
-
-        scene v14s26_10c # Ignore as reused from another scene
-        with dissolve
-
-        u "*Chuckles* One of the best nights of my life."
+        u "Haha, I didn't wanna wake you."
 
         scene v14s26_10e # Ignore as reused from another scene
         with dissolve
 
-        am "Haha, well I'm glad. Sorry for panicking, talk to you later?"
+        am "Haha, oh ok. Sorry for panicking, talk to you later?"
 
         scene v14s26_10f # Ignore as reused from another scene
         with dissolve
@@ -279,7 +269,7 @@ label v14s26a:
         scene v14s26_11 # Ignore as reused from another scene
         with dissolve
 
-        u "(She's a handful.) *Chuckles*"
+        u "(She's a handful.)"
 
     scene v14s26_12 # Ignore as reused from another scene
     with dissolve
@@ -328,7 +318,7 @@ label v14s26a:
     scene v14s26a_2d
     with dissolve
 
-    li "Yeah, I am. I'm ready for a nap. *Chuckles*"
+    li "Yeah, I am. I'm ready for a nap."
 
     scene v14s26a_2e
     with dissolve

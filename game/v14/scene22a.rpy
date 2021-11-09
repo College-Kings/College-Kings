@@ -29,7 +29,7 @@ label v14s22a:
     scene v14s22a_1
     with dissolve
 
-    li "It's what I needed, yes. If you ask me what I wanted we'd be speaking of fantasies. *Chuckles*"
+    li "It's what I needed, yes. If you ask me what I wanted we'd be speaking of fantasies."
 
     scene v14s22a_1a
     with dissolve
@@ -54,7 +54,7 @@ label v14s22a:
     scene v14s22a_1a
     with dissolve
 
-    u "*Chuckles* You know I'm here for you though."
+    u "You know I'm here for you though."
 
     scene v14s22a_1
     with dissolve
@@ -104,7 +104,7 @@ label v14s22a:
         scene v14s22a_1a
         with dissolve
 
-        u "Yeah, oh well. It can wait. *Chuckles*"
+        u "Yeah, oh well. It can wait."
 
         scene v14s22a_1
         with dissolve

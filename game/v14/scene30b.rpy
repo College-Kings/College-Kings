@@ -36,7 +36,7 @@ label v14s30b:
     scene v14s30b_2
     with dissolve
 
-    cl "My posing definitely isn't as good as Aubrey's though. *Chuckles*"
+    cl "My posing definitely isn't as good as Aubrey's though."
 
     scene v14s30b_2a
     with dissolve
@@ -51,7 +51,7 @@ label v14s30b:
     scene v14s30b_2a
     with dissolve
 
-    u "*Chuckles* She is your VP."
+    u "I guess she is your VP."
 
     scene v14s30b_2
     with dissolve
@@ -99,7 +99,7 @@ label v14s30b:
         scene v14s30b_2
         with dissolve
 
-        cl "Good call. *Chuckles* I'm gonna post that one on Kiwii."
+        cl "Good call. I'm gonna post that one on Kiwii."
 
     else:
         cl "I know the entire school is gonna be off the wall about these photos, haha."
@@ -132,7 +132,7 @@ label v14s30b:
         scene v14s30b_2
         with dissolve
 
-        cl "Good call. *Chuckles* I'm gonna post that one on Kiwii."
+        cl "Good call. I'm gonna post that one on Kiwii."
 
     scene v14s30b_2a
     with dissolve

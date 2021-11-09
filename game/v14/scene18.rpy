@@ -22,7 +22,7 @@ label v14s18:
     scene v14s18_4 # FPP. MC standing in front of Lindsey, Lindsey looking at MC, Lindsey slight smile, mouth closed (Don't show the stack of flyers)
     with dissolve
 
-    u "You don't have enough of those up already? *Chuckles*"
+    u "You don't have enough of those up already?"
 
     scene v14s18_4a # FPP. Same as v14s18_4, Lindsey mouth open
     with dissolve
@@ -122,7 +122,7 @@ label v14s18:
         scene v14s18_4a
         with dissolve
 
-        li "I know you're like, dating Chloe, or whatever you're calling it... *Chuckles* But genuinely, my only chance at beating her starts with you joining my team."
+        li "I know you're like, dating Chloe, or whatever you're calling it... But genuinely, my only chance at beating her starts with you joining my team."
 
     if lindseyrs:
         scene v14s18_4f # FPP. Lindsey very close to MC, she is whispering, mouth open, seductive smile
@@ -145,7 +145,7 @@ label v14s18:
         scene v14s18_4a
         with dissolve
 
-        li "Ah, nevermind. You can find out the rest later. *Chuckles*"
+        li "Ah, nevermind. You can find out the rest later."
 
         if not v13_threesomeending:
             scene v14s18_4
@@ -191,7 +191,7 @@ label v14s18:
             scene v14s18_4a
             with dissolve
 
-            li "Meet me at dawn in the janitor's closet, aka my presidential headquarters. *Chuckles*"
+            li "Meet me at dawn in the janitor's closet, aka my presidential headquarters."
 
             scene v14s18_4
             with dissolve

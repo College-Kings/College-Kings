@@ -193,7 +193,7 @@ label v14s30:
     scene v14s30_6a
     with dissolve
 
-    cl "I try not to ask too many questions, you know? *Chuckles*"
+    cl "I try not to ask too many questions, you know?"
 
     cl "Alright, let's head back and look at these closely so we can pick a good one."
 

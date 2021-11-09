@@ -59,7 +59,7 @@ label v14s03a:
             scene v14s03a_2
             with dissolve
         
-            u "Of course, who hasn't is a better question. *Chuckles*"
+            u "Of course, who hasn't is a better question."
 
             scene v14s03a_2a
             with dissolve
@@ -396,7 +396,7 @@ label v14s03a:
             scene v14s03a_11 # FPP. Ryan, smiling, mouth open.
             with dissolve
 
-            ry "DAMN! *Chuckles*"
+            ry "DAMN!"
 
             scene v14s03a_12 # FPP. Gambler in fetal position on ground in pain grabbing back, looking at camera, mouth open.
             with dissolve

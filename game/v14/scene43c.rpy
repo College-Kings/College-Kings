@@ -128,7 +128,7 @@ label v14s43c:
     scene v14s43c_4 # FPP. Mc and Penelope are now standing up, show Penelope looking at MC, slight smile, mouth open
     with dissolve
 
-    pe "So, let's try and base it off of some actual history, since it's a history class. *Chuckles*"
+    pe "So, let's try and base it off of some actual history, since it's a history class."
 
     scene v14s43c_4a # FPP. same as v14s43c_4 Penelope mouth closed
     with dissolve
@@ -229,7 +229,7 @@ label v14s43c:
     scene v14s43c_1e # FPP. same as v14s43c_1 Penelope raises an eyebrow
     with dissolve
 
-    pe "*British accent* The meal they're serving tonight is supposed to be one to die for. *Chuckles*"
+    pe "*British accent* The meal they're serving tonight is supposed to be one to die for."
 
     scene v14s43c_1a
     with dissolve
@@ -491,7 +491,7 @@ label v14s43c:
         scene v14s43c_7
         with dissolve
 
-        pe "Gotta make it seem as real as possible. *Chuckles*"
+        pe "Gotta make it seem as real as possible."
 
         scene v14s43c_3
         with dissolve

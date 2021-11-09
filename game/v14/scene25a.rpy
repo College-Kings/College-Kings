@@ -72,7 +72,7 @@ label v14s25a:
     scene v14s25a_8a # FPP Same as 8, Amber's mouth closed, biting her lower lip
     with dissolve
 
-    u "*Chuckles* What do you want then?"
+    u "What do you want then?"
 
     scene v14s25a_7a # TPP Same angle as 7, MC teasing Amber's clitoris with his finger
     with dissolve
@@ -252,7 +252,7 @@ label v14s25a:
     scene v14s25a_15 # FPP Amber sucking MC's dick clean
     with dissolve
 
-    am "Mmm... *Chuckles*"
+    am "Mmm..."
 
     scene v14s25a_15a # FPP Same angle as 15, Amber getting the last of MC's cum into her mouth with her finger
     with dissolve
@@ -272,7 +272,7 @@ label v14s25a:
     scene v14s25a_18 # FPP MC's view of Amber, who is laying close to him on the bed, mouth closed
     with dissolve
 
-    u "I can't even feel my fingers. *Chuckles*"
+    u "I can't even feel my fingers."
 
     scene v14s25a_18a # FPP Same as 18, Amber's mouth open
     with dissolve
