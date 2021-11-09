@@ -5,8 +5,6 @@
 # Time: Day
 
 label v10_autumn_announcement:
-    $ freeRoam = False
-    
     scene v10samw1 # FPP. Show Autumn standing near the mud wrestling pool, smiling, mouth open.
     with dissolve
     stop music fadeout 3

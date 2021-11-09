@@ -91,11 +91,6 @@ label v14s26:
 
     la "Right behind you..."
 
-    scene v14s26_2e
-    with dissolve
-
-    pause 0.75
-
     scene v14s26_3 # FPP. MC swings around and sees Lauren, Lauren has her hands up with a scary expression on her face
     with dissolve
 
@@ -156,20 +151,15 @@ label v14s26:
 
     u "Well, it's good to know I'm special. *Chuckles*"
 
-    scene v14s26_5
-    with dissolve
-
-    pause 0.75
-
     if v11_lindsey_slogan == 1:
-
         scene v14s26_6 # FPP. Mc looks up at the banner above the counter, The banner reads "Lindsey, Returning The Promise"
         with dissolve
 
     else:
-
         scene v14s26_6a # FPP. same as v14s26_6 The banner instead reads "Lindsey, Say Bye To The Bullshit"
         with dissolve
+
+    pause 0.75
 
     scene v14s26_5
     with dissolve
@@ -205,9 +195,6 @@ label v14s26:
     with dissolve
 
     li "Haha, I don't know about [name], but if you join the Chicks I can help you, Lauren."
-
-    scene v14s26_5e
-    with dissolve
 
     li "Or I could even do some partnership work with the Deers, you know."
 
@@ -262,9 +249,7 @@ label v14s26:
 # -Kiwii post of Lindsey's bake sale, 2 different renders needed for seperate slogans-
 
 # Kiwi Post: v14kw26 - Lindsey and Lauren Selfie in front of her banner (Lindsey, Returning The Promise) on the banner
-
     if v11_lindsey_slogan == 1:
-
         #Selfie with Lauren in front of slogan banner that says Lindsey, Returning The Promise
         $ v14s26_kiwiiPost1 = KiwiiPost("Lindsey", "v14/v14kw26.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! All proceeds go to my campaign fund and to the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
         $ v14s26_kiwiiPost1.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
@@ -280,7 +265,6 @@ label v14s26:
         $ v14s26_kiwiiPost1.newComment("Lauren", ":)")
 
 # Kiwi Post: v14kw26_1 - Lindsey and Lauren Selfie in front of her banner (Lindsey, Say Bye To The Bullshit) on the banner
-
     else:
         #Selfie with Lauren in front of slogan banner that says Lindsey, Say Bye To The Bullshit
         $ v14s26_kiwiiPost2 = KiwiiPost("Lindsey", "v14/v14kw26_1.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! All proceeds go to my campaign fund and to the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
@@ -328,18 +312,12 @@ label v14s26:
 
         u "What? No. *Chuckles*"
 
-        scene v14s26_10c
-        with dissolve
-
         u "Are you all good? What's going on?"
-
-        scene v14s26_10c
-        with dissolve
-
-        am "I'm fine, sorry..."
 
         scene v14s26_10b
         with dissolve
+
+        am "I'm fine, sorry..."
 
         am "I was just scared 'cause when I woke up you weren't here."
 
@@ -386,6 +364,8 @@ label v14s26:
     scene v14s26_2b
     with dissolve
 
+    $ set_presidency_percent(v14_lindsey_popularity + 3)
+
     li "It went great! I'm closing up now."
 
     scene v14s26_2
@@ -423,9 +403,6 @@ label v14s26:
 
     u "*Chuckles* Maybe..."
 
-    scene v14s26_2
-    with dissolve
-
     u "Let me know when it's time for your next event and I'll be there."
 
     scene v14s26_2a
@@ -439,7 +416,6 @@ label v14s26:
     u "See you around, Linds."
 
     if lindseyrs:
-
         scene v14s26_13 # FPP. Lindsey winks at MC, slight smile, mouth open
         with dissolve
 
@@ -452,5 +428,7 @@ label v14s26:
 
     scene v14s26_15 # TPP. mc walking through the campus, no expression, mouth closed
     with dissolve
+
+    pause 0.75
 
     jump v14s27

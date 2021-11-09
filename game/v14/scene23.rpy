@@ -5,7 +5,7 @@
 
 label v14s23:
     scene v14s23_1 # TPP. Show MC walking up to the steps of the wolves house and seeing Chris, Chris looking at the sky, Both slight smile, mouth closed.
-    with dissolve
+    with fade
 
     pause 0.75
 
@@ -233,6 +233,7 @@ label v14s23:
         "Agree":
             $ v14s23_agree = True
             $ add_point(KCT.BOYFRIEND)
+
             scene v14s23_2b
             with dissolve
 
@@ -350,8 +351,7 @@ label v14s23:
         cl "Ugh, asshole! *Chuckles* I'm being serious."
      
         if v14s23_agree:
-            $ set_presidency_percent(v14_lindsey_popularity - 5)
-            $ v14_full_chris_support = True
+            $ v14_chrissupport = 3
             scene v14s23_2c
             with dissolve
 
@@ -395,6 +395,7 @@ label v14s23:
             scene v14s23_2c
             with dissolve
 
+            $ set_presidency_percent(v14_lindsey_popularity - 5) #tick
             ch "I'm very serious. I like the plan you guys came up with, I like the respect you're giving to the Wolves, and I like you as President."
 
             scene v14s23_5 # TPP. Show Chloe hugging Chris, Chris not hugging her back yet, Chris surprised face, Chloe excited smile, both mouth closed
@@ -418,8 +419,7 @@ label v14s23:
             ch "That's what I'm-"
 
         else:
-            $ set_presidency_percent(v14_lindsey_popularity - 1)
-            $ v14_rw_half_chris_support = True
+            $ v14_chrissupport = 2
             scene v14s23_2c
             with dissolve
 
@@ -460,6 +460,7 @@ label v14s23:
             scene v14s23_2c
             with dissolve
 
+            $ set_presidency_percent(v14_lindsey_popularity - 1) #tick
             ch "I'm very serious. I like the plan you guys came up with, I like the respect you're giving to the Wolves, and I like you as President."
 
             scene v14s23_5
@@ -517,6 +518,7 @@ label v14s23:
         menu:
             "Agree with Chris":
                 $ add_point(KCT.BRO)
+                $ v14_chrissupport = 3
 
                 scene v14s23_2b
                 with dissolve
@@ -530,6 +532,7 @@ label v14s23:
                 scene v14s23_2a
                 with dissolve
 
+                $ set_presidency_percent(v14_lindsey_popularity - 2) #tick
                 ch "Okay, damn, you little politician... *Laughs* I'm not all for the idea of it, but if you think that's our best option, I trust you."
 
                 scene v14s23_4a
@@ -596,9 +599,9 @@ label v14s23:
 
                 ch "Haha, you two are something else, really."
                 
-                if v14s23_agree and v14s23_disagree:
-                    $ set_presidency_percent(v14_lindsey_popularity - 1)
-                    $ v14_pw_half_chris_support = True
+                if v14s23_agree:
+                    $ v14_chrissupport = 2
+
                     scene v14s23_2c
                     with dissolve
 
@@ -618,6 +621,7 @@ label v14s23:
 
                     ch "Half of everything."
 
+                    $ set_presidency_percent(v14_lindsey_popularity - 1) #tick
                     ch "The photoshoot, the fee for the wolf, everything. The Wolves have got half of it all."
 
                     scene v14s23_2e
@@ -656,8 +660,7 @@ label v14s23:
                     ch "That's what I'm-"
                         
                 else:
-                    $ set_presidency_percent(v14_lindsey_popularity + 3)
-                    $ v14_low_chris_support = True
+                    $ v14_chrissupport = 1
                     scene v14s23_2c
                     with dissolve
 
@@ -668,13 +671,15 @@ label v14s23:
                     scene v14s23_2b
                     with dissolve
 
-                    u "I'm sorry man we can try to-"
+                    u "I'm sorry man, we can try to-"
 
                     scene v14s23_2c
                     with dissolve
 
+                    $ grant_achievement("agree_to_disagree")
                     ch "Don't change the plan because of me, it's really not a bad idea, but I don't wanna do it with you guys."
 
+                    $ set_presidency_percent(v14_lindsey_popularity + 3) #tick
                     ch "I wish you luck with the campaign of course and I want the best for you, but this isn't the move for the Wolves or myself."
 
                     ch "Maybe something else will come up later on and I can help you out."
@@ -702,9 +707,9 @@ label v14s23:
     play sound "sounds/vibrate.mp3"
 
     scene v14s23_2a
-    with vpunch
+    with dissolve
 
-    ch "Oh, you can get that bro."
+    ch "Oh, you can get that, bro."
 
     scene v14s23_2b
     with dissolve
@@ -761,5 +766,7 @@ label v14s23:
 
     scene v14s23_7 # TPP. MC walking off and looking at his phone, slight smile, mouth closed.
     with dissolve
+
+    pause 0.75
 
     jump v14s24

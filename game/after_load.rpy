@@ -1,6 +1,11 @@
 python early:
     import os
 
+    if renpy.loadable("customCharacters.rpy"):
+        os.remove(os.path.join(config.basedir, "game", "customCharacters.rpy"))
+    if renpy.loadable("customCharacters.rpyc"):
+        os.remove(os.path.join(config.basedir, "game", "customCharacters.rpyc"))
+
     if renpy.loadable("bugTesting/bugTesting_Overwrite.rpy"):
         os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpy"))
     if renpy.loadable("bugTesting/bugTesting_Overwrite.rpyc"):
@@ -72,6 +77,15 @@ python early:
 
     class CheatItem:
         pass
+
+
+init 100 python:
+    class CustomCharacter(NonPlayableCharacter):
+        pass
+
+    class MainCharacter(PlayableCharacter):
+        pass
+
 
 label after_load:
     python:
@@ -176,8 +190,7 @@ label after_load:
             try: contact.sentMessages
             except AttributeError: contact.sentMessages = []
 
-            try: contact.profile_picture
-            except AttributeError: contact.profile_picture = "images/nonplayable_characters/profile_pictures/chloe.webp"
+            contact.profile_picture = "images/nonplayable_characters/profile_pictures/{}.webp".format(contact.name.lower())
 
             try: contact.profilePicture = "images/nonplayable_characters/profile_pictures/chloe.webp"
             except: pass
@@ -209,6 +222,7 @@ label after_load:
                         try: reply.disabled
                         except AttributeError: reply.disabled = False
             except AttributeError: pass
+
 
 
         # Transfer Contact object to NonPlayableCharacter class

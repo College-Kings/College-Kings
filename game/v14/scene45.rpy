@@ -25,12 +25,12 @@ label v14s45:
     $ amber.messenger.newMessage("I'm close to the park, meet me there?")
     $ amber.messenger.addReply("Kk")
 
-    label v14s43_PhoneContinueAmber:
+    label v14s45_PhoneContinueAmber:
         if amber.messenger.replies:
             call screen phone
         if amber.messenger.replies:
             u "(I should check my phone.)"
-            jump v14s43_PhoneContinueAmber
+            jump v14s45_PhoneContinueAmber
     
     scene v14s45_2b # TPP. Show MC putting his phone away, slightly confused, mouth closed
     with dissolve
@@ -47,7 +47,7 @@ label v14s45:
 
     pause 0.75
 
-    scene v1s45_5 # FPP. MC in the park, looks at Amber sitting on the bench under the tree, he is far from her, she is tired and sad
+    scene v14s45_5 # FPP. MC in the park, looks at Amber sitting on the bench under the tree, he is far from her, she is tired and sad
     with dissolve
 
     pause 0.75

@@ -3,8 +3,8 @@
 # Characters: MC (Outfit: 3), NIGHT GAMBLER (Outfit: x), IMRE (Outfit: 2), RYAN (Outfit: 1)
 # Time: Night
 
-label v14s03a:  
-    scene v14s03a_1  # TPP. MC with Imre and Ryan right behind him, far away, walking towards the night gambler, MC/Gambler neutral expression, mouth closed,Ryan/Imre, smile, mouth closed
+label v14s03a:
+    scene v14s03a_1 # TPP. MC with Imre and Ryan right behind him, far away, walking towards the night gambler, MC/Gambler neutral expression, mouth closed,Ryan/Imre, smile, mouth closed
     with dissolve
 
     pause 0.75
@@ -241,12 +241,12 @@ label v14s03a:
             scene v14s03a_3e # FPP. Gambler's right hand on right cup; left hand on middle cup, switching places.
             with dissolve
 
-            pause 0.5
+            pause 0.51
 
             scene v14s03a_3f # FPP. Gambler's right hand on right cup, now in middle; left hand on middle cup; now on the right.
             with dissolve
 
-            pause 0.5
+            pause 0.51
 
             scene v14s03a_2a
             with dissolve
@@ -554,5 +554,3 @@ label v14s03a:
     pause 0.75
 
     jump v14s03b
-
-    # end label

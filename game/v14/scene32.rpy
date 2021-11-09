@@ -445,7 +445,24 @@ label v14s32:
     scene v14s32_7
     with dissolve
 
-    imre "She didn't have to, I saw a need and I filled it. Chris got on board to have the Wolves support her because of me."
+    imre "She didn't have to, I saw a need and I filled it."
+    
+    if v14_chrissupport > 1 or not v14_help_chloe:
+        imre "Chris got on board to have the Wolves support her because of me."
+
+    if not v14_help_chloe:
+        $ v14s32_kiwiiPost1 = KiwiiPost("Chloe", "v14/v14s30b_pw_image_two.webp", _("I'd like to officially announce The Chick's partnership with The Wolves! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=756)
+        $ v14s32_kiwiiPost1.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
+        $ v14s32_kiwiiPost1.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chloe <3"))
+        $ v14s32_kiwiiPost1.newComment("Imre", _("Yessss!!!!!"))
+        $ v14s32_kiwiiPost1.newComment("Grayson", _("LMAO you're down bad, huh?"))
+        $ v14s32_kiwiiPost1.newComment("Chloe", _("Be civil at least, Grayson"), mentions="Grayson")
+        $ v14s32_kiwiiPost1.newComment("Riley", _("Omg! Can I have that thing?"))
+
+        $ set_presidency_percent(v14_lindsey_popularity - 2)
+        imre "She just made an announcement on Kiwii, did you see it yet?"
+
+        call screen phone
 
     scene v14s32_7a
     with dissolve
@@ -510,14 +527,17 @@ label v14s32:
 
     scene v14s32_9 # TPP. Close up of Imre hitting the punching bag with his left fist.
     with dissolve
+    play sound "sounds/hs.mp3"
 
     pause 0.75
 
+    play sound "sounds/hs.mp3"
     scene v14s32_9a # TPP. Same as v14s32_9, Imre hitting the punching bag with his right fist.
     with dissolve
 
     pause 0.75
 
+    play sound "sounds/js.mp3"
     scene v14s32_9b # TPP. Same as v14s32_9a, Imre kicking the punching bag with a roundhouse kick.
     with dissolve
 
@@ -555,14 +575,17 @@ label v14s32:
 
     scene v14s32_9c # TPP. Same as v14s32_9, MC punching the bag with his left fist.
     with dissolve
+    play sound "sounds/hs.mp3"
 
     pause 0.75
 
+    play sound "sounds/hs.mp3"
     scene v14s32_9d # TPP. Same as v14s32_9a, MC punching the bag with his right fist.
     with dissolve
 
     pause 0.75
 
+    play sound "sounds/js.mp3"
     scene v14s32_9e # TPP. Same as v14s32_9b, MC kicking the punching bag with a roundhouse kick.
     with dissolve
 

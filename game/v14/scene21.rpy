@@ -218,7 +218,6 @@ label v14s21:
 
     cl "We can call it that."
 
-
     scene v14s21_10 # TPP. Show Chloe kissing MC.
     with dissolve
     play sound "sounds/kiss.mp3"
@@ -233,6 +232,7 @@ label v14s21:
         "Continue":
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.TROUBLEMAKER)
+            $ v14_chloe_sex = True
             jump v14s21a
         
         "Pull back":

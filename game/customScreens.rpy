@@ -7,8 +7,8 @@ screen endfrTemplate():
 
         background "images/endfr.webp"
 
-        # add "#00ff0080"
         transclude
+
 
 screen changeLanguage():
     tag menu
@@ -64,6 +64,7 @@ screen changeLanguage():
         align (0.99, 0.99)
         action ShowMenu("preferences")
 
+
 screen realmode():
     modal True
     
@@ -100,7 +101,7 @@ screen endFreeRoamConfirm(continueLabel):
             spacing 200
 
             textbutton "Yes":
-                action [Hide("endFreeRoamConfirm"), SetVariable("freeRoam", False), Jump(continueLabel)]
+                action [Hide("endFreeRoamConfirm"), Jump(continueLabel)]
                 
             textbutton "No":
                 action Hide("endFreeRoamConfirm")
@@ -135,6 +136,7 @@ screen censoredPopup(continueLabel):
 screen timerBar(seconds=3):
     bar value AnimatedValue(0, seconds, seconds, seconds) at alpha_dissolve
 
+
 # Kiwii Screens
 screen kiwiiPopup():
     modal True
@@ -148,7 +150,8 @@ screen kiwiiPopup():
 
         textbutton "OK":
             align (0.5, 1.0)
-            action [SetVariable("kiwii_firstTime", False), Hide("kiwiiPopup")]
+            action [Function(kiwii_firstTimeMessages), SetVariable("kiwii_firstTime", False), Hide("kiwiiPopup")]
+
 
 # Fight Screens
 screen fightPopup(fightMove):

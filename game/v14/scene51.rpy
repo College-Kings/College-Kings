@@ -25,7 +25,6 @@ label v14s51:
     scene v14s51_2 # FPP. MC standing in Chloes room, make sure the bedside table, desk drawer, closet, purse, and bed pillow are all in sight.
     with dissolve
 
-    $ freeRoam = True
     call screen v14s51_room
 
 # This is all for you Oscar ;) 
@@ -44,48 +43,46 @@ label v14s51_bedside_table:
 
     u "(Pretty basic bedside table for a woman... Wonder how often she uses that thing. *Chuckles* Let's search somewhere else.)"
 
-    if v14_money_theft_date_ditch:
-        if v14s51_interaction == 1:
-            jump v14s51_text
+    if v14_money_theft_date_ditch and v14s51_interaction == 1:
+        jump v14s51_text
 
     else:
         call screen v14s51_room
 
 label v14s51_text:
-    if v14_money_theft_date_ditch: # Placeholder variable for using the date as distraction
-        if v14s51_interaction == 1:
-            scene v14s15_2
-            with dissolve
+    if v14_money_theft_date_ditch and v14s51_interaction == 1: # Placeholder variable for using the date as distraction
+        scene v14s51_2
+        with dissolve
 
-            play sound "sounds/vibrate.mp3"
+        play sound "sounds/vibrate.mp3"
 
-            u "(That's probably Chloe texting me, fuck.)"
+        u "(That's probably Chloe texting me, fuck.)"
 
-            scene v14s51_3 # TPP. Show MC looking at his phone, slight smile, mouth closed.
-            with dissolve
+        scene v14s51_3 # TPP. Show MC looking at his phone, slight smile, mouth closed.
+        with dissolve
 
-            $ chloe.messenger.newMessage(_("Hey, where are you??"), queue =False)
-            $ chloe.messenger.addReply(_("Sorry, I'm running late. The cab broke down, waiting on another."))
-            $ chloe.messenger.newMessage(_("I thought you'd already be here? Are you lying to me?"))
-            $ chloe.messenger.addReply(_("I'm coming, I promise. Just order your starter."), v14s51_reply1)
-            $ chloe.messenger.addReply(_("I'd never lie to you, I'll be there soon."), v14s51_reply2)
+        $ chloe.messenger.newMessage(_("Hey, where are you??"), queue =False)
+        $ chloe.messenger.addReply(_("Sorry, I'm running late. The cab broke down, waiting on another."))
+        $ chloe.messenger.newMessage(_("I thought you'd already be here? Are you lying to me?"))
+        $ chloe.messenger.addReply(_("I'm coming, I promise. Just order your starter."), v14s51_reply1)
+        $ chloe.messenger.addReply(_("I'd never lie to you, I'll be there soon."), v14s51_reply2)
 
-            label v14s51_PhoneContinue:
-                if chloe.messenger.replies:
-                    call screen phone
-                if chloe.messenger.replies:
-                    "(I should reply to Chloe.)"
-                    jump v14s51_PhoneContinue
+        label v14s51_PhoneContinue:
+            if chloe.messenger.replies:
+                call screen phone
+            if chloe.messenger.replies:
+                "(I should reply to Chloe.)"
+                jump v14s51_PhoneContinue
 
-            if v14_chloeSus:
-                $ chloeSus += 1
+        if v14_chloeSus:
+            $ chloeSus += 1
 
-            scene v14s51_3
-            with dissolve
+        scene v14s51_3
+        with dissolve
 
-            u "(*Sighs* I can't worry right now about Chloe being angry with me. Back to the search.)"
+        u "(*Sighs* I can't worry right now about Chloe being angry with me. Back to the search.)"
 
-            call screen v14s51_room
+        call screen v14s51_room
 
 label v14s51_desk_drawer:
     $ v14s51_interaction += 1
@@ -119,9 +116,9 @@ label v14s51_desk_drawer:
 
     u "(No money here though, so that's more time wasted. *Sighs*)"
 
-    if v14_money_theft_date_ditch:
-        if v14s51_interaction == 1:
-            jump v14s51_text
+    if v14_money_theft_date_ditch and v14s51_interaction == 1:
+        jump v14s51_text
+
     else:
         call screen v14s51_room
 
@@ -155,6 +152,7 @@ label v14s51_closet:
     menu :
         "Take the $900":
             $ v14s51_take_money = True
+            $ v14s51_take_900 = True
             scene v14s51_closet_3b # FPP. Same as v14s51_closet_3a, MC holding the money, the box not in sight
             with fade
 
@@ -166,9 +164,8 @@ label v14s51_closet:
 
             u "(I guess I'm having second thoughts about this... I can't take nearly a thousand dollars from Chloe's private closet. What the fuck was I thinking?)"
 
-    if v14_money_theft_date_ditch:
-        if v14s51_interaction == 1:
-            jump v14s51_text
+    if v14_money_theft_date_ditch and v14s51_interaction == 1:
+        jump v14s51_text
 
     else:
         call screen v14s51_room
@@ -188,7 +185,7 @@ label v14s51_purse:
     scene v14s51_purse_2a # FPP. Same as v14s51_purse_2, MC holding the first item he pulls out which is a random receipt.
     with dissolve
 
-    pause  
+    pause
 
     scene v14s51_purse_2
     with dissolve 
@@ -198,12 +195,12 @@ label v14s51_purse:
     scene v14s51_purse_2b # FPP. Same as v14s51_purse_2a, MC holding some tampons that he pulled out of Chloe's purse
     with dissolve
 
-    pause  
+    pause
 
-    scene v14s15_purse_2 
+    scene v14s51_purse_2 
     with dissolve
 
-    pause  
+    pause
 
     scene v14s51_purse_2c # FPP. Same as v14s51_purse_2b, MC holding a stack of cash that he pulled out of Chloe's purse
     with dissolve
@@ -215,6 +212,7 @@ label v14s51_purse:
     menu:
         "Take the $300":
             $ v14s51_take_money = True
+            $ v14s51_take_300 = True
             scene v14s51_purse_2d # FPP. Same as v14s51_purse_2c, MC holding just the money and not the purse
             with dissolve
 
@@ -226,9 +224,8 @@ label v14s51_purse:
 
             u "(I guess my conscience has caught up with me. It doesn't feel right to take it.)"
 
-    if v14_money_theft_date_ditch:
-        if v14s51_interaction == 1:
-            jump v14s51_text
+    if v14_money_theft_date_ditch and v14s51_interaction == 1:
+        jump v14s51_text
 
     else:
         call screen v14s51_room
@@ -285,13 +282,11 @@ label v14s51_pillow:
 
             u "(There's going to be some extremely private things in here... It's best if I leave it.)"
     
-    if v14_money_theft_date_ditch:
-        if v14s51_interaction == 1:
-            jump v14s51_text
+    if v14_money_theft_date_ditch and v14s51_interaction == 1:
+        jump v14s51_text
 
     else:
         call screen v14s51_room
-
 
 # More stuff for Oscar :D
 # -if MC chose to keep listening to Lindsey and Aubrey's conversation more than once and has searched 2 areas
@@ -419,7 +414,6 @@ label v14s51_continue:
 
             menu:
                 "Back door":
-
                     scene v14s51_19 # FPP. Show MC reaching for the back door knob.
                     with dissolve
                     
@@ -520,7 +514,7 @@ label v14s51_continue:
 
                     pause 
 
-                    scene v14s51_32 # TPP. Close up of the unknown girls wet naked butt.
+                    scene v14s51_44 # TPP. Close up of the unknown girls wet naked butt.
                     with dissolve
 
                     u "(Sheeeeeesh...)"
@@ -530,7 +524,7 @@ label v14s51_continue:
 
                     pause 
 
-                    scene v14s51_32 # FPP. Show MC looking at the window in the bathroom.
+                    scene v14s51_44 # FPP. Show MC looking at the window in the bathroom.
                     with dissolve
 
                     u "(What a nice little treat. *Chuckles* Now it's time to get the fuck out of here.)"
@@ -709,7 +703,7 @@ label v14s51_continue:
         scene v14s51_40d
         with dissolve
 
-        li "*Whispers* I know, yeah...My campaign is really going to suffer without that money."
+        li "*Whispers* I know, yeah... My campaign is really going to suffer without that money."
 
         scene v14s51_40c
         with dissolve
@@ -746,7 +740,7 @@ label v14s51_continue:
         scene v14s51_42 # TPP. Show MC walking away from Lindsey, MC Neutral face, mouth closed, Lindsey in the background, Lindsey slight frown, mouth closed.
         with dissolve
 
-    if not v14s51_take_diary and not v14s51_take_money:
+    elif not v14s51_take_money:
         scene v14s51_40c
         with dissolve
 
@@ -782,7 +776,8 @@ label v14s51_continue:
         scene v14s51_42
         with dissolve
 
-    if v14s51_take_money:
+    #if v14s51_take_money:
+    else:
         scene v14s51_40
         with dissolve
 
@@ -811,6 +806,8 @@ label v14s51_continue:
         if v14s51_take_diary:
             scene v14s51_40
             with dissolve
+
+            $ grant_achievement("grand_theft_chloe")
 
             u "*Whispers* I also found this..."
 
@@ -869,7 +866,7 @@ label v14s51_continue:
         scene v14s51_42a # FPP. Same as v14s51_42, Lindsey slight smile, mouth closed.
         with dissolve
     
-    $ freeRoam = False
+        pause 0.75
     
     if joinwolves:
         jump v14s52

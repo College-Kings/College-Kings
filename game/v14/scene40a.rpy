@@ -71,6 +71,9 @@ label v14s40a:
 
             u "A little."
 
+            scene v14s40a_5
+            with dissolve
+
         "Don't do it again":
             scene v14s40a_5a
             with dissolve
@@ -81,9 +84,6 @@ label v14s40a:
             with dissolve
 
             se "Your loss. *Chuckles*"
-
-    scene v14s40a_5
-    with dissolve
 
     se "Anyway... Just a little heads up. There may be a drug test coming up soon so make sure you're clean. Are you clean?"
 
@@ -122,5 +122,7 @@ label v14s40a:
 
     scene v14s40a_6 # TPP. Show MC entering the class hallways, slight smile, mouth closed.
     with fade
+
+    pause 0.75
 
     jump v14s43

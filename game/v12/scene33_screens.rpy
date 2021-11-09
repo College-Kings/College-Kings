@@ -7,7 +7,7 @@ screen v12s33_sneak_off_overlay(sneak_label):
 
 
 screen v12s33_three_doors():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         idle "images/v12/Scene 33/Buttons/SaunaDoors.webp"

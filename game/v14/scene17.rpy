@@ -54,7 +54,7 @@ label v14s17:
 
     u "That's pretty messed up to call Lauren the class clown behind her back..."
 
-    if msrosers: #placeholder
+    if msrosers:
         scene v14s17_4c
         with dissolve
 
@@ -121,13 +121,13 @@ label v14s17:
 
         pause 0.75
     
-    if laurenrs: #placeholder
+    if laurenrs:
         scene v14s17_7a # TPP. Same as v14s17_7, Show MC and Lauren kissing
         with dissolve
 
         play sound "sounds/kiss.mp3"
 
-        pause 1.5  
+        pause 1.5 
 
         scene v14s17_8 # FPP. Lauren looking at MC, slight smile, mouth open 
         with dissolve
@@ -201,10 +201,10 @@ label v14s17:
 
             u "*Chuckles*"
 
-    if laurenrs_v11aubrey and (laurenrs or not v11_aubrey_sex): #correction for saves where this variable was defaulting to True - which can't be the case if v11_aubreysex is False, or if laurenrs is still True
+    if laurenrs or not v11_aubrey_sex: #correction for saves where this variable was defaulting to True - which can't be the case if v11_aubreysex is False, or if laurenrs is still True
         $ laurenrs_v11aubrey = False
 
-    if laurenrs_v11aubrey or laurenmad: #placeholder
+    if laurenrs_v11aubrey or laurenmad:
         $ laurenmad = True
         scene v14s17_8d # FPP. Same as v14s17_8, neutral expression
         with dissolve
@@ -241,12 +241,12 @@ label v14s17:
 
         u "Lauren, I..."
 
-        u "I'm extremely sorry about all and any of the mistakes I've made, I really am. I hope that one day you can forgive me."
+        u "I'm extremely sorry about all and any of the mistakes I've made, I really am."
 
         scene v14s17_8d
         with dissolve
 
-        la "Yeah... One day maybe."
+        la "Yeah..."
 
         la "I've moved on from it regardless though... So..."
 
@@ -332,7 +332,7 @@ label v14s17:
     scene v14s17_10b
     with dissolve
 
-    u "Ooooohhh...*Coughs* Nerd! *Coughs*"
+    u "Ooooohhh... *Coughs* Nerd! *Coughs*"
 
     scene v14s17_10d
     with dissolve
@@ -476,7 +476,12 @@ label v14s17:
 
             u "Plus, she came to you, of all people, for a reason. She trusts you, and knows what you're capable of."
 
-            if kct == "loyal": 
+            if laurenrs or kct == "loyal":
+                if not laurenrs:
+                    call screen kct_popup
+            
+                $ v14_lauren_helps_lindsey = True
+            
                 scene v14s17_10g
                 with dissolve
                 
@@ -498,7 +503,8 @@ label v14s17:
 
                 la "I'll talk to her and see what she needs me to do."
 
-            else: 
+            else:
+                call screen kct_popup(required_kct="loyal")
                 scene v14s17_10g
                 with dissolve
 
@@ -529,9 +535,6 @@ label v14s17:
             with dissolve
 
             u "I seriously think it's best to just let Lindsey figure all of that out on her own."
-
-            scene v14s17_10b
-            with dissolve
 
             u "If she came to you for just another bake sale then it'd be different, but this is a bake sale with a hidden agenda."
 
@@ -641,8 +644,9 @@ label v14s17:
 
                     u "You're the most loyal person I know, Lauren. That's why I'm asking you, the one person I trust with anything and everything."
 
-                    if kct == "loyal":
-                        call screen kct_popup
+                    if laurenrs or kct == "loyal":
+                        if not laurenrs:
+                            call screen kct_popup
                         
                         $ v14_lauren_sabotage = True
                     
@@ -666,7 +670,7 @@ label v14s17:
 
                         u "I do."
 
-                        scene v14s17_15 # TPP. Show MC looking at Lauren, slight smile, mouth closed, Lauren looking at MC intently, mouth closed  
+                        scene v14s17_15 # TPP. Show MC looking at Lauren, slight smile, mouth closed, Lauren looking at MC intently, mouth closed 
                         with dissolve
 
                         pause 0.75
@@ -683,6 +687,8 @@ label v14s17:
 
                         scene v14s17_10b
                         with dissolve
+
+                        $ grant_achievement("beastie_boy")
 
                         u "You say that like it's nothing... Lauren, that's perfect. Everything will go south without you."
 
@@ -717,7 +723,8 @@ label v14s17:
 
                             pause 0.75
 
-                    else: 
+                    else:
+                        call screen kct_popup(required_kct="loyal")
                         scene v14s17_17 # FPP. Lauren Looking at MC, serious expression, mouth open
                         with dissolve
                         

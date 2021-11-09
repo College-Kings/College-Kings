@@ -34,7 +34,7 @@ label v14s43b:
     scene v14s43b_3
     with dissolve
 
-    lee "The college has recently begun to advance it's usage of the teacher assistant program and so have I."
+    lee "The college has recently begun to advance its usage of the teacher assistant program and so have I."
 
     scene v14s43b_3b # FPP. same as v14s43b_3 Mr. Lee's mouth is closed
     with dissolve
@@ -101,9 +101,6 @@ label v14s43b:
 
     ri "For all of you who don't know me, my name is Riley. I'm a freshman and a free spirit..."
 
-    scene v14s43b_4d
-    with dissolve
-
     ri "I'm very approachable, so I don't know what all my responsibilities will be as a teacher's assistant, but feel free to talk to me."
 
     scene v14s43b_4c
@@ -129,7 +126,7 @@ label v14s43b:
     scene v14s43b_3
     with dissolve
 
-    lee "It's all about the relationship between a king and a queen during medieval times. Each gentleman will be paired with a lady, but there will be an additional gentleman so Riley will be their partner."
+    lee "It's all about the relationship between a king and a queen during medieval times. Each gentleman will be paired with a lady, but we will need Riley to take part to make sure everyone can be paired up."
 
     scene v14s43b_4e # FPP. same as v14s43b_4c Riley's mouth is open
     with dissolve
@@ -159,16 +156,16 @@ label v14s43b:
     scene v14s43b_7b # FPP. same as v14s43b_7a Close up shot of Penelope
     with dissolve
 
-    u "(Guess we were meant to work together.)"
-
-    scene v14s43b_8 # FPP. Mc is still standing, show Penelope sitting down in a seat looking at Mc slight smile mouth closed
+    u "Guess we were meant to work together."
+    
+    scene v14s43b_7c
     with dissolve
 
     pause 0.75
-
-    scene v14s43b_8a # FPP. same as v14s43b_8 Imre has grabbed Mc's shoulder Imre no expression mouth closed, and walked into the left side of the frame
+    
+    scene v14s43b_8 # FPP. Mc is still standing, show Penelope sitting down in a seat looking at Mc slight smile mouth closed
     with dissolve
-
+    
     pause 0.75
 
     scene v14s43b_9 # FPP. Show just imre looking at MC, no expression, mouth open, Mc has shifted his view to his left to look only at Imre
@@ -219,19 +216,13 @@ label v14s43b:
     scene v14s43b_9a
     with dissolve
 
-    u "*Laughs* Yeah. I get that, That means I'll work with..."
-
-    scene v14s43b_9a
-    with dissolve
+    u "*Laughs* Yeah. I get that..."
 
     menu:
         "Work with Penelope":
             $ v14_PenelopePartner = True
 
-            scene v14s43b_9a
-            with dissolve
-
-            u "Haha, sorry man. This will be too good to miss."
+            u "But sorry, man. This will be too good to miss."
 
             scene v14s43b_9c # FPP. same as v14s43b_9 shocked expression, mouth open
             with dissolve
@@ -264,7 +255,6 @@ label v14s43b:
             u "No, no, no. Me and you."
 
             if penelopeloyal:
-                    
                 scene v14s43b_8b
                 with dissolve
 
@@ -276,7 +266,6 @@ label v14s43b:
                 pe "*Whispers* And me. *Chuckles*"
 
             else:
-
                 scene v14s43b_8b
                 with dissolve
 
@@ -302,18 +291,11 @@ label v14s43b:
 
             lee "Everyone's paired up? Good!"
 
-            scene v14s43b_3
-            with dissolve
-
             lee "Now, once I'm finished speaking you may leave the classroom and begin reading pages 100-103 in your textbook."
-
-            scene v14s43b_3
-            with dissolve
 
             lee "After that, you'll come up with a short scene involving a king and a queen interaction that you'll present next week to the rest of the class."
 
             if v14_ApesPostChloePics:
-
                 scene v14s43b_12 # FPP. MC looks at Penelope in the seat next to him, Penelope looking at MC, slight smile, mouth open
                 with dissolve
 
@@ -355,8 +337,10 @@ label v14s43b:
                 $ chloe.messenger.newMessage("UGH! I'm going to turn this around. It won't hurt my campaign even a little bit, I'll make sure of it.")
 
                 $ chloe.messenger.addReply("I'm so sorry that this is happening. I don't even know what to say.")
-                $ chloe.messenger.newMessage("I know, I know... I'm just venting. And I'm really thankful that you didn't post anything.")
-                $ chloe.messenger.addReply("I'd never do that.")
+                $ chloe.messenger.newMessage("I know, I know... I'm just venting.")
+                if not joinwolves:
+                    $ chloe.messenger.newMessage("And I'm really thankful that you didn't post anything.")
+                    $ chloe.messenger.addReply("I'd never do that.")
 
                 label v14s43Chloe_PhoneContinue1:
                     if chloe.messenger.replies:
@@ -365,10 +349,12 @@ label v14s43b:
                         "(I should reply to Chloe.)"
                         jump v14s43Chloe_PhoneContinue1
 
-                scene v14s43b_13
-                with dissolve
+                $ set_presidency_percent(v14_lindsey_popularity + 3) #tick
+                if joinwolves:
+                    u "(Fuck... Where did that come from?)"
 
-                u "(Fuck... I'm glad I didn't go through with posting that shit.)"
+                else:
+                    u "(Fuck... I'm glad I didn't go through with posting that shit.)"
 
                 scene v14s43b_12
                 with dissolve
@@ -413,9 +399,6 @@ label v14s43b:
 
                 pe "Ooh, this sounds fun. *Chuckles*"
 
-                scene v14s43b_12
-                with dissolve
-
                 pe "We can just go sit outside on the stairs and work, if that's cool."
 
                 scene v14s43b_12a
@@ -441,12 +424,7 @@ label v14s43b:
                 jump v14s43c
 
         "Work with Riley":
-            $ v14_RileyPartner = True
-
-            scene v14s43b_9a
-            with dissolve
-
-            u "Haha, sorry bro..."
+            u "But sorry, bro..."
 
             scene v14s43b_9a
             with dissolve
@@ -486,7 +464,7 @@ label v14s43b:
             scene v14s43b_9
             with dissolve
 
-            imre "No shit,"
+            imre "No shit."
 
             scene v14s43b_10a # TPP. same as v14s43b_10 Imre instead of MC, Imre goes and sits next to Penelope, Imre looking at Penelope slight smile mouth open, Penelope slight disgusted exression, mouth closed, eyes wide open looking at Imre
             with dissolve
@@ -517,13 +495,7 @@ label v14s43b:
 
             lee "Everyone's paired up? Good!"
 
-            scene v14s43b_3f
-            with dissolve
-
             lee "Now, once I'm finished speaking you may leave the classroom and begin reading pages 100-103 in your textbook."
-
-            scene v14s43b_3f
-            with dissolve
 
             lee "After that, you'll come up with a short scene involving a king and a queen interaction that you'll present next week to the rest of the class."
 
@@ -573,8 +545,10 @@ label v14s43b:
                 $ chloe.messenger.newMessage("UGH! I'm going to turn this around. It won't hurt my campaign even a little bit, I'll make sure of it.")
 
                 $ chloe.messenger.addReply("I'm so sorry that this is happening. I don't even know what to say.")
-                $ chloe.messenger.newMessage("I know, I know... I'm just venting. And I'm really thankful that you didn't post anything.")
-                $ chloe.messenger.addReply("I'd never do that.")
+                $ chloe.messenger.newMessage("I know, I know... I'm just venting.")
+                if not joinwolves:
+                    $ chloe.messenger.newMessage("And I'm really thankful that you didn't post anything.")
+                    $ chloe.messenger.addReply("I'd never do that.")
 
                 label v14s43Chloe_PhoneContinue2:
                     if chloe.messenger.replies:
@@ -586,8 +560,13 @@ label v14s43b:
                 scene v14s43b_13
                 with dissolve
 
-                u "(Fuck... I'm glad I didn't go through with posting that shit.)"
+                $ set_presidency_percent(v14_lindsey_popularity + 3) #tick
+                if joinwolves:
+                    u "(Fuck... Where did that come from?)"
 
+                else:
+                    u "(Fuck... I'm glad I didn't go through with posting that shit.)"
+                    
                 scene v14s43b_20a
                 with dissolve
 
@@ -626,7 +605,6 @@ label v14s43b:
                 jump v14s43d
 
             else:
-
                 scene v14s43b_20
                 with dissolve
 

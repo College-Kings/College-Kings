@@ -739,8 +739,6 @@ label v11_start:
     stop music fadeout 3
 
     play music "music/v11/Scene 1/Track Scene 1_4.mp3" fadein 2
-
-    $ freeRoam = True
     call screen v11s1_hallway1
 
 label v11s1_riley:
@@ -1055,8 +1053,6 @@ label v11s1_delib:
         # -Back to free roam-
 
 label v11_case_verdict:
-    $ freeRoam = False
-
     scene v11coc22a # TPP. Same as cam 22, MC, Jenny and Penelope walking back in the room, nervous expression, mouth closed
     #with dissolve
 

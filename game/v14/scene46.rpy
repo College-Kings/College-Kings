@@ -3,37 +3,37 @@
 # Characters: MC (Outfit: 1), LAUREN (Outfit: 1) Thursday
 # Time: Afternoon
 
-label v14s46:  # -MC is walking along the sidewalk when he gets a call from Lauren-
-    scene v14s46_1    # TPP. MC, neutral expression, mouth closed, walking from the left to the right (facing right) on the side walk.
+label v14s46: # -MC is walking along the sidewalk when he gets a call from Lauren-
+    scene v14s46_1 # TPP. MC, neutral expression, mouth closed, walking from the left to the right (facing right) on the side walk.
     with dissolve
 
     play sound "sounds/call.mp3"
 
     pause 0.75
 
-    scene v14s46_2    # FPP. MC, looking at his phone. (if Possible, have picture of Lauren show on the screen).
+    scene v14s46_2 # FPP. MC, looking at his phone. (if Possible, have picture of Lauren show on the screen).
     with dissolve
 
     u "(I'm famous today. *Chuckles*)"
    
     play sound "sounds/answercall.mp3"
 
-    scene v14s46_3    # TPP. MC, smiling, mouth open, holding his phone to his ear,v facing right, head looking slghtly right with background 1.
+    scene v14s46_3 # TPP. MC, smiling, mouth open, holding his phone to his ear,v facing right, head looking slghtly right with background 1.
     with dissolve
     
     u "Hello?"
 
-    scene v14s46_4    # TPP. Lauren, smiling, excited, mouth open, holding her phone to her ear, facing left, head looking slightly left.
+    scene v14s46_4 # TPP. Lauren, smiling, excited, mouth open, holding her phone to her ear, facing left, head looking slightly left.
     with dissolve
 
     la "Hey, so... I just learned something really cool and I have to try it."
 
-    scene v14s46_3a   # TPP. Same as v14s46_3, but with MC's different epression (but smiling) and head position but still mostly looking/facing right with background 2 (so it looks like he's walking).
+    scene v14s46_3a # TPP. Same as v14s46_3, but with MC's different epression (but smiling) and head position but still mostly looking/facing right with background 2 (so it looks like he's walking).
     with dissolve
 
     u "What is it?"
 
-    scene v14s46_4a   # TPP. Same as v14s46_4, but Lauren with a different expression but still facing/looking slightly left.
+    scene v14s46_4a # TPP. Same as v14s46_4, but Lauren with a different expression but still facing/looking slightly left.
     with dissolve
 
     la "I learned the theory of hypnosis, and now I want to try and hypnotize someone... aka you. *Chuckles*"
@@ -66,14 +66,14 @@ label v14s46:  # -MC is walking along the sidewalk when he gets a call from Laur
 
         play sound "sounds/rejectcall.mp3"
         
-        scene v14s46_5  # TPP. MC, back to camera, slight angle, walking from left to right on sidewalk.
+        scene v14s46_5 # TPP. MC, back to camera, slight angle, walking from left to right on sidewalk.
         with dissolve
 
         pause 0.75
 
         jump v14s46a
 
-    else:  # -If helping Lindsey
+    else: # -If helping Lindsey
         scene v14s46_3a
         with dissolve
 

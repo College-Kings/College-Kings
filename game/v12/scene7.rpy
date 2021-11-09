@@ -15,7 +15,7 @@ label v12s7fr:
     with fade
     play sound "images/v12/Scene 7/animations/Track Scene - Ferry Ride (5 sec).mp3"
 
-    pause 5
+    pause 3.5
 
     $ v12s7_victims = 12
     $ v12s7_victims += sum([ v11_invite_sam_europe, emily_europe, josh_europe, v11_pen_goes_europe ])
@@ -412,8 +412,6 @@ label v12s7fr:
 
     stop music fadeout 3
     play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
-
-    $ freeRoam = True
 
     call screen v12s7_seating_front
 

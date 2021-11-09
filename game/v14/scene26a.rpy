@@ -43,8 +43,8 @@ label v14s26a:
 
         li "I asked her but she ended up not feeling well enough to come over last night... Something about a stomach ache. *Sighs*"
 
-    scene v14s26a_2b
-    with dissolve
+        scene v14s26a_2b
+        with dissolve
 
     u "Well, what's going on? Everyone loves baked goods... *Laughs*"
 
@@ -53,18 +53,12 @@ label v14s26a:
 
     li "Apparently not, [name]."
 
-    scene v14s26a_2c
-    with dissolve
-
     li "So far I've only made fifty bucks and that was all from my family. *Sighs*"
 
     scene v14s26a_2b
     with dissolve
 
     u "Damn. Okay, well..."
-
-    scene v14s26a_2b
-    with dissolve
 
     u "Do you have a plan to get it going?"
 
@@ -108,9 +102,6 @@ label v14s26a:
 
     li "I'm not trying to put this on you, [name] because it's not like the whole campaign depended on you, but..."
 
-    scene v14s26a_2h
-    with dissolve
-
     li "I was counting on you, and this."
 
     scene v14s26a_2i # FPP. same as v14s26a_2h lindsey's mouth is closed
@@ -122,9 +113,6 @@ label v14s26a:
     with dissolve
 
     li "Like I said before, I'm not interested in hearing your reasons for not being able to help me."
-
-    scene v14s26a_2k
-    with dissolve
 
     li "Because honestly, if the reason isn't a good one it's just gonna upset me even more than I already am."
 
@@ -142,9 +130,6 @@ label v14s26a:
     with dissolve
 
     li "*Sighs* Look, [name]. I'm not mad at you, okay?"
-
-    scene v14s26a_2a
-    with dissolve
 
     li "I don't want you thinking that."
 
@@ -173,9 +158,6 @@ label v14s26a:
         with dissolve
 
         u "(Damn, so that's how she sabotaged her. Good cooking, Lauren!)"
-
-        scene v14s26a_2i
-        with dissolve
 
         u "I'm sure it'll be fine... Thanks, Lindsey."
 
@@ -260,18 +242,12 @@ label v14s26a:
 
         u "What? No. *Chuckles*"
 
-        scene v14s26_10c # Ignore as reused from another scene
-        with dissolve
-
         u "Are you all good? What's going on?"
-
-        scene v14s26_10c # Ignore as reused from another scene
-        with dissolve
-
-        am "I'm fine, sorry..."
 
         scene v14s26_10b # Ignore as reused from another scene
         with dissolve
+
+        am "I'm fine, sorry..."
 
         am "I was just scared 'cause when I woke up you weren't here."
 
@@ -315,9 +291,11 @@ label v14s26a:
 
     u "So? How'd you do?"
 
-    if v14_lauren_sabotage:
+    if not v14_lauren_sabotage:
         scene v14s26a_2a
         with dissolve
+
+        $ set_presidency_percent(v14_lindsey_popularity + 1)
 
         li "*Sighs* It was a mini success, I banked $150 so, I'm not too mad."
 
@@ -330,15 +308,14 @@ label v14s26a:
         scene v14s26a_2a
         with dissolve
 
+        $ set_presidency_percent(v14_lindsey_popularity - 2)
+
         li "Double what I had when you left, $100. Honestly, this was a complete waste of time."
 
         scene v14s26a_2b
         with dissolve
 
         u "Hey... Trial and error, right?"
-
-        scene v14s26a_2b
-        with dissolve
 
         u "Plus, promoting your campaign and being out here doing this, is the entire point of having a bake sale, remember?"
 
@@ -389,5 +366,7 @@ label v14s26a:
 
     scene v14s26_15 # Ignore as reused from another scene
     with dissolve
+
+    pause 0.75
 
     jump v14s27

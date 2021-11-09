@@ -4,42 +4,42 @@
 # Time: Evening (Tuesday)
 
 label v14s24a:
-    scene v14s24a_1  # TPP. MC, smiling, walking towards the door of the gas station.
+    scene v14s24a_1 # TPP. MC, smiling, walking towards the door of the gas station.
     with dissolve
 
     pause 0.75
 
-    scene v14s24a_2  # TPP. MC opening the door to enter the gas station.
+    scene v14s24a_2 # TPP. MC opening the door to enter the gas station.
     with dissolve
 
     pause 0.75
 
-    scene v14s24a_3  # TPP. MC walking down an aisle looking for soemthing to buy.
+    scene v14s24a_3 # TPP. MC walking down an aisle looking for soemthing to buy.
     with dissolve
     
     u "What to buy, what to buy..."
 
-    scene v14s24a_4  # TPP. MC walking down a different aisle looking for something to buy.
+    scene v14s24a_4 # TPP. MC walking down a different aisle looking for something to buy.
     with dissolve
 
     pause 0.75
 
-    scene v14s24a_5  # TPP. MC walking down the candy aisle looking for something to buy.
+    scene v14s24a_5 # TPP. MC walking down the candy aisle looking for something to buy.
     with dissolve
 
     pause 0.75
 
-    scene v14s24a_6  # TPP. MC stops in the middle of the candy aisle and looks at candy.
+    scene v14s24a_6 # TPP. MC stops in the middle of the candy aisle and looks at candy.
     with dissolve
 
     u "Hmm... (What candy would Amber like best?)"
 
-    scene v14s24a_7  # FPP. Close up on the candy MC has to choose from Twezzlers or Gummy Fish?
+    scene v14s24a_7 # FPP. Close up on the candy MC has to choose from Twezzlers or Gummy Fish?
     with dissolve
 
     menu:
-        "Twezzlers":         
-            scene v14a24a_8  # TPP. MC, smiling, grabs Twezzlers from the shelf.
+        "Twezzlers":
+            scene v14s24a_8 # TPP. MC, smiling, grabs Twezzlers from the shelf.
             with dissolve
 
         "Gummy Fish":
@@ -50,7 +50,7 @@ label v14s24a:
     pause 0.75
 
     if v14s24a_gummyfish:
-        scene v14s24a_9  # TPP. MC, smiling, walks with the gummy fish towards the cash register (do not show the cashier).
+        scene v14s24a_9 # TPP. MC, smiling, walks with the gummy fish towards the cash register (do not show the cashier).
         with dissolve
     
     else:
@@ -64,7 +64,7 @@ label v14s24a:
 
     pause 0.75
 
-    scene v14s24a_11  # FPP. MC looking at the clerk, who has his back to MC. 
+    scene v14s24a_11 # FPP. MC looking at the clerk, who has his back to MC. 
     with dissolve
 
     pause 0.75
@@ -134,17 +134,19 @@ label v14s24a:
 
     u "*Chuckles* Later man."
 
-    scene v14s24a_12  # TPP. MC, big smile, mouth closed, pushing on the door to leave the store. Candy is either in pocket (not visible) or you need a bag. 
+    scene v14s24a_12 # TPP. MC, big smile, mouth closed, pushing on the door to leave the store. Candy is either in pocket (not visible) or you need a bag. 
     with dissolve
 
     pause 0.75
 
-    scene v14s24a_13  # TPP. MC,laughing, mouth open, walking past the front of the store, walking towards Amber's house. Candy is either in pocket or in a bag. 
+    scene v14s24a_13 # TPP. MC,laughing, mouth open, walking past the front of the store, walking towards Amber's house. Candy is either in pocket or in a bag. 
     with dissolve
 
     pause 0.75
     
-    scene v14s24a_14  # TPP. MC, smiling, walking down the side walk toward Amber's house. Candy is either in pocket or in a bag.  
+    scene v14s24a_14 # TPP. MC, smiling, walking down the side walk toward Amber's house. Candy is either in pocket or in a bag.  
     with dissolve
+
+    pause 0.75
 
     jump v14s25

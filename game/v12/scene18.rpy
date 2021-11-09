@@ -337,8 +337,6 @@ label v12_slumber_party:
     $ v12s18_kiwiiPost1.addReply(_("Just say when and where! Had a lot of fun :)"), mentions="Aubrey", numberLikes=renpy.random.randint(250, 330))
     $ v12s18_kiwiiPost1.addReply(_("You deserve the best! Glad you enjoyed it ;)"), mentions="Lindsey", numberLikes=renpy.random.randint(250, 330))
     $ v12s18_kiwiiPost1.newComment("Lindsey", _("Haha, thank you guys <3"), numberLikes=renpy.random.randint(150,300))
-
-    $ freeRoam = True
     call screen v12s18_room1
 
 # -Start of free roam-
@@ -1451,8 +1449,6 @@ label v12s18_fmk:
     call screen v12s18_room2
 
 label v12s18_bet: # END OF FREE ROAM
-    $ freeRoam = False
-
     scene v12slpbet1 # FPP. Amber lying on the bed, looking at MC, Amber slight smile, mouth open, MC standing in front of the bed
     #with dissolve
 

@@ -4,52 +4,52 @@
 # Time: Night
 
 label v14s38:
-    scene v14s38_1   # TPP. Camera slightly behind and over MC's shoulder showing MC (walking) and Jenny (her back) just a few feet in front of him, walking.
+    scene v14s38_1 # TPP. Camera slightly behind and over MC's shoulder showing MC (walking) and Jenny (her back) just a few feet in front of him, walking.
     with dissolve
 
     pause 0.75
 
-    scene v14s38_2   # FPP. Jenny, walking down the side walk, her back to MC.
+    scene v14s38_2 # FPP. Jenny, walking down the side walk, her back to MC.
     with dissolve
 
     u "Jenny!"
 
-    scene v14s38_2a  # FPP. Jenny, smiling, mouth open, turing around and looking at MC.
+    scene v14s38_2a # FPP. Jenny, smiling, mouth open, turing around and looking at MC.
     with dissolve
 
     jen "Oh, hey again. *Chuckles*"
 
-    scene v14s38_2b  # FPP. same as v14s38_2a, but Jenny mouth closed.
+    scene v14s38_2b # FPP. same as v14s38_2a, but Jenny mouth closed.
     with dissolve
 
     u "I hung back for a quick phone call, I thought you'd be gone by now."
 
-    scene v14s38_3   # FPP. Jenny's body facing forward, her head turned toward MC (camera), smiling, mouth open, background 1 behind Jenny.
+    scene v14s38_3 # FPP. Jenny's body facing forward, her head turned toward MC (camera), smiling, mouth open, background 1 behind Jenny.
     with dissolve
 
     jen "Oh, I'm honestly taking my sweet time tonight. *Chuckles*"
 
-    scene v14s38_3a  # FPP. Same as v14s38_3, but Jenny's mouth closed
+    scene v14s38_3a # FPP. Same as v14s38_3, but Jenny's mouth closed
     with dissolve
 
     u "It doesn't bother you to walk around alone at night?"
 
-    scene v14s38_4   # FPP. Same as v14s38_3, but Jenny's head has a subtle tilt and background 2 behind Jenny (so it looks like they are walking).
+    scene v14s38_4 # FPP. Same as v14s38_3, but Jenny's head has a subtle tilt and background 2 behind Jenny (so it looks like they are walking).
     with dissolve
 
     jen "Not really, I used to do it all the time growing up. Nothing's happened so far, haha."
 
-    scene v14s38_4a  # FPP. Same as v14s38_3a, but background 2 behind Jenny.
+    scene v14s38_4a # FPP. Same as v14s38_3a, but background 2 behind Jenny.
     with dissolve
 
     u "Okay, well don't say it like that. *Laughs* Hopefully nothing ever happens."
 
-    scene v14s38_5   # FPP. Same as v14s38_4, but Jenny's head has a subtle tilt different than v14s38_4 and background 3 behind Jenny.
+    scene v14s38_5 # FPP. Same as v14s38_4, but Jenny's head has a subtle tilt different than v14s38_4 and background 3 behind Jenny.
     with dissolve
 
     jen "If you keep stalking me I won't even have to worry."
 
-    scene v14s38_5a  # FPP. Same as v14s38_4a, but background 3 behind Jenny.
+    scene v14s38_5a # FPP. Same as v14s38_4a, but background 3 behind Jenny.
     with dissolve
 
     u "I wasn't trying to-"
@@ -84,22 +84,22 @@ label v14s38:
 
     u "*Chuckles*"
 
-    scene v14s38_4b  # # FPP. Same as v14s38_4, but Jenny laughing, but use the same background from v14s38_4. 
+    scene v14s38_4b # # FPP. Same as v14s38_4, but Jenny laughing, but use the same background from v14s38_4. 
     with dissolve
 
     jen "*Laughs*"
 
-    scene v14s38_6   # TPP. MC and Jenny reach fork in the path and Jenny is heading in the opposite direction than MC. Both looking at each other, smiling, mouths closed.
+    scene v14s38_6 # TPP. MC and Jenny reach fork in the path and Jenny is heading in the opposite direction than MC. Both looking at each other, smiling, mouths closed.
     with dissolve
 
     pause 0.75
 
-    scene v14s38_7   # FPP. Jenny completlly facing MC, smiling, mouth closed.
+    scene v14s38_7 # FPP. Jenny completlly facing MC, smiling, mouth closed.
     with dissolve
     
     u "Oh, guess this is where our paths change for the night."
 
-    scene v14s38_7a  # FPP. same as v14s38_7, but Jenny's mouth open.
+    scene v14s38_7a # FPP. same as v14s38_7, but Jenny's mouth open.
     with dissolve
 
     jen "Yep, haha. See you soon?"
@@ -109,7 +109,7 @@ label v14s38:
 
     u "You better."
 
-    scene v14s38_6a  # TPP. same as v14s38_6, but MC and and Jenny each walking in opposite directions, neutral expression, mouths closed.
+    scene v14s38_6a # TPP. same as v14s38_6, but MC and and Jenny each walking in opposite directions, neutral expression, mouths closed.
     with dissolve
 
     pause 0.75

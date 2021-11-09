@@ -50,6 +50,11 @@ label v14s14:
 
     u "Nine fifty ni- OH, SHIT!"
 
+    scene v14s14_99
+    with dissolve
+    
+    pause 0.75
+
     scene v14s14_4 # TPP. Show MC bolting for the door, worried face, mouth closed.
     with dissolve
 

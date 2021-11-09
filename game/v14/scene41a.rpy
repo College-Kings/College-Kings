@@ -4,7 +4,6 @@
 # Time: Morning
 
 label v14s41a:
-
     scene v14s41a_1 # TPP. Show mc waking up in bed shocked expression, mouth open
     with dissolve
 
@@ -38,7 +37,6 @@ label v14s41a:
     # Make sure variable is Chloe Seduced Grayson if: chloe seduced grayson
 
     if v14s31bTrustChloe:
-
         scene v14s41a_4 # FPP. Mc is looking to his right and sees a close-up shot of just Cameron, looking at Grayson, slightly annoyed, mouth open.
         with dissolve
 
@@ -147,7 +145,6 @@ label v14s41a:
         jump v14s43
 
     else:
-
         scene v14s41a_5d # FPP. same as v14s41a_5a Grayson has a devlish full smile, looking at MC, mouth closed
         with dissolve
 
@@ -181,7 +178,7 @@ label v14s41a:
         scene v14s41a_5g # FPP. same as v14s41a_5f Grayson holds his phone in front of him chest level, Grayson is looking at Ryan, half smile, mouth open
         with dissolve
 
-        gr "The image I have on this phone is the one shot we needed to knock her down a peg."
+        gr "The image I have on this phone is the one shot we needed to knock Chloe down a peg."
 
         scene v14s41a_6c
         with dissolve
@@ -209,7 +206,6 @@ label v14s41a:
         u "(Oh... shit!)"
 
         if chloegf:
-
             scene v14s41a_9 # FPP. A close up view of just the TV with the image from v14s41a_3b being projected on the screen
             with dissolve
 
@@ -270,20 +266,14 @@ label v14s41a:
 
         gr "Okay fine. Everyone except pussy boy here, post it."
 
-        scene v14s41a_5k
-        with dissolve
-
         gr "Happy now?"
 
         scene v14s41a_5l # FPP. same as v14s41a_5k Grayson's mouth is closed
         with dissolve
 
         menu:
-
             "Stay quiet":
                 $ add_point(KCT.TROUBLEMAKER)
-                $ set_presidency_percent(v14_lindsey_popularity + 2)
-                $ v14_ApesPostChloePics = True
 
                 scene v14s41a_5a
                 with dissolve
@@ -297,7 +287,6 @@ label v14s41a:
 
             "Stand up for Chloe":
                 $ add_point(KCT.BOYFRIEND)
-                $ set_presidency_percent(v14_lindsey_popularity - 2)
 
                 scene v14s41a_5l
                 with dissolve
@@ -327,7 +316,7 @@ label v14s41a:
                 scene v14s41a_6d
                 with dissolve
 
-                ry "You're supporting Chloe, all over again."
+                ry "You're supporting Chloe all over again."
 
                 scene v14s41a_6e
                 with dissolve
@@ -343,13 +332,9 @@ label v14s41a:
                 with dissolve
 
                 menu:
-
                     "Bad look for Apes":
                         $ add_point(KCT.BRO)
-                        $ set_presidency_percent(v14_lindsey_popularity - 2)
-
-                        scene v14s41a_5l
-                        with dissolve
+                        $ v14_ApesPostChloePics = False
 
                         u "You of all people should know that doing something like this is gonna give us a bad look. Putting something out there publically like that is just asking for a shitty situation."
 
@@ -371,9 +356,6 @@ label v14s41a:
                     "Not fair to Chloe":
                         $ add_point(KCT.BOYFRIEND)
 
-                        scene v14s41a_5l
-                        with dissolve
-
                         u "As I said, it's not fair to Chloe. Having that photo posted all over Kiwii, and especially by all of her ex-boyfriend's frat members, would be a horrible experience for her."
 
                         scene v14s41a_5a
@@ -381,9 +363,8 @@ label v14s41a:
 
                         gr "*Laughs* We don't give a fuck about all that. Feelings don't mean shit, [name]."
 
-                        if kct == "popular":
-                            $ set_presidency_percent(v14_lindsey_popularity - 2)
-
+                        if kct == "confident":
+                            $ v14_ApesPostChloePics = False
                             scene v14s41a_6a
                             with dissolve
 
@@ -409,6 +390,7 @@ label v14s41a:
 
                             ca "I mean, fuck Chloe. And honestly, fuck Lindsey too. I don't really give a shit about who wins."
 
+                            call screen kct_popup
                             scene v14s41a_4d # FPP. same as v14s41a_4 Cameron has a concerned expression
                             with dissolve
 
@@ -440,9 +422,7 @@ label v14s41a:
                             pause 0.75
 
                         else:
-                            $ set_presidency_percent(v14_lindsey_popularity + 2)
-                            $ v14_ApesPostChloePics = True
-
+                            call screen kct_popup(required_kct="confident")
                             scene v14s41a_5a
                             with dissolve
 

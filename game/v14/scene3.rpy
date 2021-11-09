@@ -72,4 +72,6 @@ label v14s03:
     scene v14s03_4 # TPP. MC walking over to the night gambler with imre and ryan right behind him
     with dissolve
 
+    pause 0.75
+
     jump v14s03a

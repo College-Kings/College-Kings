@@ -23,15 +23,14 @@ label v14s14a:
 
     u "(Who's blowing up my phone?)"
 
-    scene v14s14a_1b
-    with dissolve
-
     $ chloe.messenger.newMessage(_("You won't believe what I'm looking at right now!!!! "))
     $ chloe.messenger.newMessage(_("Lindsey and I are NOT friends anymore. "))
     $ chloe.messenger.newMessage(_("I'm gonna need your help with the president thing, big time "))
     $ chloe.messenger.newMessage(_("[name!u]!!! "))
     $ chloe.messenger.newMessage(_("Right, you're probably asleep. When you read this, just meet me in the hall near Ms. Rose's classroom at 10. "))
 
+    call screen phone
+    
     scene v14s14a_1c # TPP. same as v14s14a_1b MC puts his phone away
     with dissolve
 
@@ -54,5 +53,7 @@ label v14s14a:
 
     scene v14s14a_4 # TPP. MC runs out of the room, mc's back is turned, face is not visible
     with dissolve
+
+    pause 0.75
 
     jump v14s15

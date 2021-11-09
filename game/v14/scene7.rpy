@@ -107,8 +107,7 @@ label v14s07:
 
     scene v14s07_5 # TPP. show Ms. Rose walking towards the hotel lobby front door with mc walking behind her
     with dissolve
+    
     pause 0.75
 
     jump v14s08
-
-# -Transition to Scene 8-
