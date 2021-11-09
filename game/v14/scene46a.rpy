@@ -230,7 +230,7 @@ label v14s46a:
 
         la "*Speaking softly* You are now walking along a beach. It's the most beautiful day. So sunny and warm, you can feel the light dancing on your skin."
 
-        la "*Speaking softly* The sand between your toes is soft to the touch and feels like a freshly dried blanket. You're calm. You're relaxed."
+        la "*Speaking softly* The sand between your toes is soft to the touch and feels like a freshly dried blanket. You're calm... you're relaxed..."
 
         scene v14s46a_6a
         with dissolve
@@ -521,7 +521,7 @@ label v14s46a:
 
         la "*Speaking softly* You are now walking through a fresh, grassy field in your bare feet. It's the most beautiful day. So sunny and warm, you can feel the light dancing on your skin."
 
-        la "*Speaking softly* The grass between your toes is gentle to the touch. You're calm... You're relaxed... You're the happiest you've ever been..."
+        la "*Speaking softly* The grass between your toes is gentle to the touch. You're calm... you're relaxed... you're the happiest you've ever been..."
 
         scene v14s46a_8d
         with dissolve
