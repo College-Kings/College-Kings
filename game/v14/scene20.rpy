@@ -12,7 +12,7 @@ label v14s20:
     scene v14s20_1a # FPP Same angle as 1, someone taking candy and saying something to Autumn, Autumn responding, smiling with mouth open
     with dissolve
 
-    aut "*Chuckles* Thank you so much!"
+    aut "Thank you so much!"
 
     scene v14s20_2 # FPP Autumn seeing MC and jogging up to him, with a big smile
     with dissolve
@@ -37,7 +37,7 @@ label v14s20:
     scene v14s20_3c # FPP Same angle as 3, Autumn looks embarrassed, mouth open
     with dissolve
     
-    aut "*Chuckles* I'm not kidnapping you, haha."
+    aut "I'm not kidnapping you, haha."
 
     scene v14s20_3a
     with dissolve
@@ -103,7 +103,7 @@ label v14s20:
     scene v14s20_3e # FPP Same angle as 3, Autumn's eyebrow raised, mouth closed
     with dissolve
 
-    u "Drama filled, fun filled, boredom filled. A little dose of everything. *Chuckles*"
+    u "Drama filled, fun filled, boredom filled. A little dose of everything."
 
     scene v14s20_3f # FPP Same as 3e, Autumn's mouth open
     with dissolve
@@ -150,7 +150,7 @@ label v14s20:
         scene v14s20_3a
         with dissolve
 
-        u "*Chuckles* Not completely..."
+        u "Not completely..."
 
     elif laurenrs:
         scene v14s20_3f
@@ -175,7 +175,7 @@ label v14s20:
                 scene v14s20_3
                 with dissolve
 
-                aut "And to think I bumped into you first on day one... *Chuckles* Guess I found my sister's boyfriend for her."
+                aut "And to think I bumped into you first on day one... Guess I found my sister's boyfriend for her."
 
                 scene v14s20_3a
                 with dissolve
@@ -200,7 +200,7 @@ label v14s20:
                 scene v14s20_3
                 with dissolve
 
-                aut "Of course. *Chuckles*"
+                aut "Of course."
 
             "It's going great":
                 # -It's going great (Creates AutumnTrust)
@@ -235,7 +235,7 @@ label v14s20:
 
         u "That girl can give anyone a good time, but she's very influential. She knows how to..."
 
-        u "...lure other people to the dark side. *Chuckles* If you know what I mean."
+        u "...lure other people to the dark side. If you know what I mean."
 
         scene v14s20_3f
         with dissolve
@@ -250,7 +250,7 @@ label v14s20:
         scene v14s20_3
         with dissolve
 
-        aut "*Chuckles* I'm glad to hear that. But, I don't worry much about her anymore. She's become very independent since the start of the semester."
+        aut "I'm glad to hear that. But, I don't worry much about her anymore. She's become very independent since the start of the semester."
 
         scene v14s20_3a
         with dissolve
@@ -276,7 +276,7 @@ label v14s20:
     scene v14s20_3a
     with dissolve
 
-    u "*Chuckles* You two are nothing alike."
+    u "You two are nothing alike."
 
     scene v14s20_3d
     with dissolve
@@ -291,12 +291,12 @@ label v14s20:
     scene v14s20_3f
     with dissolve
 
-    aut "Well... maybe one of us is adopted? That would be the shock of the century. *Chuckles*"
+    aut "Well... maybe one of us is adopted? That would be the shock of the century."
 
     scene v14s20_3e
     with dissolve
 
-    u "Indeed it would. *Chuckles* Your parents would have some explaining to do..."
+    u "Indeed it would. Your parents would have some explaining to do..."
 
     scene v14s20_3
     with dissolve
@@ -306,7 +306,7 @@ label v14s20:
     scene v14s20_3a
     with dissolve
 
-    u "Hero? *Chuckles* His name was Hero?"
+    u "Hero? His name was Hero?"
 
     scene v14s20_3
     with dissolve
@@ -341,7 +341,7 @@ label v14s20:
     scene v14s20_3
     with dissolve
 
-    aut "I only tell good stories. *Chuckles*"
+    aut "I only tell good stories."
 
     scene v14s20_3a
     with dissolve
@@ -356,7 +356,7 @@ label v14s20:
     scene v14s20_3a
     with dissolve
 
-    u "I've literally never seen you with anyone. Besides Lauren. Maybe. *Chuckles*"
+    u "I've literally never seen you with anyone. Besides Lauren. Maybe."
 
     scene v14s20_3g
     with dissolve
@@ -401,7 +401,7 @@ label v14s20:
     scene v14s20_3
     with dissolve
 
-    aut "*Chuckles* Thanks."
+    aut "Thanks."
 
     scene v14s20_3f
     with dissolve
@@ -411,7 +411,7 @@ label v14s20:
     scene v14s20_3e
     with dissolve
 
-    u "With me being close as I am to Lauren, yeah. It is a bit odd, isn't it? *Chuckles*"
+    u "With me being close as I am to Lauren, yeah. It is a bit odd, isn't it?"
 
     scene v14s20_3f
     with dissolve
@@ -453,7 +453,7 @@ label v14s20:
             scene v14s20_3a
             with dissolve
 
-            u "I'll be waiting by the phone. *Chuckles*"
+            u "I'll be waiting by the phone."
 
             scene v14s20_3
             with dissolve
@@ -473,7 +473,7 @@ label v14s20:
             scene v14s20_3a
             with dissolve
 
-            u "Yeah, see ya. *Chuckles*"
+            u "Yeah, see ya."
 
         "It was nice catching up":
             u "It was really nice catching up with you, but I actually need to hurry. I've got this thing..."
@@ -481,14 +481,14 @@ label v14s20:
             scene v14s20_3
             with dissolve
 
-            aut "Oh, right, yeah! Don't let me make you late, go ahead. *Chuckles*"
+            aut "Oh, right, yeah! Don't let me make you late, go ahead."
 
             scene v14s20_3a
             with dissolve
 
             u "*Chuckles* Thanks."
 
-            u "Yeah, see ya. *Chuckles*"
+            u "Yeah, see ya."
 
     # -Regardless of everything scene continued
 

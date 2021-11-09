@@ -109,7 +109,7 @@ label v14s40:
                 scene v14s40_4b
                 with dissolve
 
-                u "Honestly, yeah. I'm just so tired. Sorry if what I said sounded weird, ignore my stupid talk. *Chuckles*"
+                u "Honestly, yeah. I'm just so tired. Sorry if what I said sounded weird, ignore my stupid talk."
 
                 u "So... did you watch porn while you touched yourself?"
 

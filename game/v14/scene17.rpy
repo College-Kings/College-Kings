@@ -22,7 +22,7 @@ label v14s17:
     scene v14s17_4 # FPP. Ms. Rose looking at MC, slight smile, mouth open
     with dissolve
 
-    ro "Hey [name], I'm sensing that you're a bit confused about the look of the classroom. *Chuckles*"
+    ro "Hey [name], I'm sensing that you're a bit confused about the look of the classroom."
 
     scene v14s17_4a # FPP. Same as v14s17_4, mouth closed
     with dissolve
@@ -63,7 +63,7 @@ label v14s17:
         scene v14s17_4a
         with dissolve
 
-        u "*Chuckles* I'll always find new ways to-"
+        u "I'll always find new ways to-"
 
         scene v14s17_5 # TPP. Show Ms. Rose slapping MC on his ass with her hand, Ms. Rose slight smile, mouth closed, MC, slight surprised expression, mouth closed
         with hpunch
@@ -73,7 +73,7 @@ label v14s17:
         scene v14s17_4d # FPP. Same as v14s17_4a, Smirking expression
         with dissolve
 
-        u "Ow! *Chuckles* What the hell-"
+        u "Ow! What the hell-"
 
         scene v14s17_4
         with dissolve
@@ -132,7 +132,7 @@ label v14s17:
         scene v14s17_8 # FPP. Lauren looking at MC, slight smile, mouth open 
         with dissolve
     
-        la "*Chuckles* Hey, you." 
+        la "Hey, you." 
 
     scene v14s17_8a # FPP. Same as v14s17_8, mouth closed
     with dissolve
@@ -142,13 +142,13 @@ label v14s17:
     scene v14s17_8b # FPP. Same as v14s17_8, slightly surprised expression
     with dissolve
 
-    la "*Chuckles* Wow..."
+    la "Wow..."
 
     scene v14s17_8
     with dissolve
 
     la "I don't know if I should be offended that you think my life revolves only around my education..."
-    la "...or flattered because that just means you consider me responsible... *Chuckles*"
+    la "...or flattered because that just means you consider me responsible..."
 
     menu:
         "Joke":
@@ -348,7 +348,7 @@ label v14s17:
     scene v14s17_10a
     with dissolve
 
-    la "Mhmm, that's more like it. *Chuckles*"
+    la "Mhmm, that's more like it."
 
     scene v14s17_10b
     with dissolve
@@ -363,12 +363,12 @@ label v14s17:
     scene v14s17_10d
     with dissolve
 
-    la "*Chuckles* No... We can talk."
+    la "No... We can talk."
 
     scene v14s17_10e
     with dissolve
 
-    u "Ooooh... *Chuckles* About what?"
+    u "Ooooh... About what?"
 
     scene v14s17_10a
     with dissolve
@@ -428,7 +428,7 @@ label v14s17:
     scene v14s17_10e
     with dissolve
 
-    u "*Chuckles* How could I miss 'em?"
+    u "How could I miss 'em?"
 
     scene v14s17_10a
     with dissolve
@@ -448,7 +448,7 @@ label v14s17:
     scene v14s17_10b
     with dissolve
 
-    u "Is this the part where you ask me what I think you should do? *Chuckles*"
+    u "Is this the part where you ask me what I think you should do?"
 
     scene v14s17_10d
     with dissolve
@@ -493,7 +493,7 @@ label v14s17:
                     scene v14s17_10b
                     with dissolve
 
-                    u "A true Pofflehoof... *Chuckles*"
+                    u "A true Pofflehoof..."
 
                     scene v14s17_10d
                     with dissolve
@@ -772,12 +772,12 @@ label v14s17_end:
     scene v14s17_17c # FPP. Same as v14s17_17b, mouth closed
     with dissolve
 
-    u "Yeah, I will. You too. *Chuckles*"
+    u "Yeah, I will. You too."
 
     scene v14s17_17b
     with dissolve
 
-    la "*Chuckles* Bye..."
+    la "Bye..."
 
     scene v14s17_17c
     with dissolve

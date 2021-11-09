@@ -27,7 +27,7 @@ label v14s03b:
     scene v14s03b_3a # FPP Same angle as 3, Imre farther away, almost to girls, ignoring MC and Ryan
     with dissolve
 
-    u "*Chuckles* Nevermind."
+    u "Nevermind."
 
     scene v14s03b_4 # FPP Show Ryan, looking at MC. Ryan has an awkward, embarrased expression, mouth open
     with dissolve
@@ -236,7 +236,7 @@ label v14s03b:
             scene v14s03b_5c
             with dissolve
 
-            u "*Chuckles* Not at all. I think you should go for it."
+            u "Not at all. I think you should go for it."
 
         "Don't ruin your first time":
             u "Well, honestly... I wouldn't want my first time to be in a brothel."
@@ -261,7 +261,7 @@ label v14s03b:
     scene v14s03b_8 # FPP Show Emerald, looking at MC and Ryan, smiling with mouth open
     with dissolve
 
-    emerald "Do you see any other handsome men around here? *Chuckles*"
+    emerald "Do you see any other handsome men around here?"
 
     scene v14s03b_8a # FPP Same as 8, Emerald's mouth closed
     with dissolve

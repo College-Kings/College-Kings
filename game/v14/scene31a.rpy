@@ -282,7 +282,7 @@ label v14s31a:
     scene v14s31a_3e
     with dissolve
 
-    u "*Chuckles* Of course."
+    u "Of course."
 
     scene v14s31a_3h
     with dissolve

@@ -36,7 +36,7 @@ label v14s30b:
     scene v14s30b_2
     with dissolve
 
-    cl "My posing definitely isn't as good as Aubrey's though. *Chuckles*"
+    cl "My posing definitely isn't as good as Aubrey's though."
 
     scene v14s30b_2a
     with dissolve

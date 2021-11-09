@@ -79,7 +79,7 @@ label v14s43d:
     scene v14s43d_2a
     with dissolve
 
-    u "*Chuckles* Alright, well... What ideas did you have for the scene?"
+    u "Alright, well... What ideas did you have for the scene?"
 
     scene v14s43d_2
     with dissolve
@@ -203,7 +203,7 @@ label v14s43d:
     scene v14s43d_2
     with dissolve
 
-    ri "You couldn't tell? Obviously I wanna do a little sub/dom action. *Chuckles*"
+    ri "You couldn't tell? Obviously I wanna do a little sub/dom action."
 
     menu:
         "I'm dominant": # ;)
@@ -215,7 +215,7 @@ label v14s43d:
             scene v14s43d_2b
             with dissolve
 
-            ri "Oh... You like taking control, huh? *Chuckles*"
+            ri "Oh... You like taking control, huh?"
 
         "I'm submissive": # ;O 
             scene v14s43d_2
@@ -226,7 +226,7 @@ label v14s43d:
             scene v14s43d_2b
             with dissolve
 
-            ri "You like being told what to do, huh? *Chuckles*"
+            ri "You like being told what to do, huh?"
 
             scene v14s43d_2c
             with dissolve
@@ -234,7 +234,7 @@ label v14s43d:
             u "Haha. Umm..."
 
     if v13_FirstThreesome:
-        u "You already know the answer to that question, I think. *Chuckles*"
+        u "You already know the answer to that question, I think."
 
         scene v14s43d_3 # TPP. Show MC winking at Riley, Both slight smile, mouth closed.
         with dissolve
@@ -259,7 +259,7 @@ label v14s43d:
     scene v14s43d_2
     with dissolve
 
-    ri "*Chuckles* Good start."
+    ri "Good start."
 
     ri "Also, we'll have to include at least something about history so that we don't mess it up by giving Mr. Lee the chance to interrupt."
 

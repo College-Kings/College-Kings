@@ -32,12 +32,12 @@ label v14s19a:
     scene v14s19a_1c # FPP Same angle as 1, Chloe with neutral expression, mouth closed
     with dissolve
 
-    u "The Wolves supporting you already? I ran into Imre this morning while he was chanting in your favor. *Chuckles*"
+    u "The Wolves supporting you already? I ran into Imre this morning while he was chanting in your favor."
 
     scene v14s19a_2 # TPP Chloe talking to MC, Chloe's hand on MC's arm, Chloe laughing, mouth open
     with dissolve
 
-    cl "Oh... *Chuckles* That's simple."
+    cl "Oh.. That's simple."
 
     scene v14s19a_2a # TPP Same angle as 2, Chloe standing with her arms folded across her chest, smiling and addressing MC like a speech
     with dissolve
@@ -85,7 +85,7 @@ label v14s19a:
     with dissolve
 
     cl "Exactly, and though Chris may support me as a leader, it doesn't mean all of the Wolves will want to..."
-    cl "That's where a little favor from my favorite guy comes in. *Chuckles*"
+    cl "That's where a little favor from my favorite guy comes in."
 
     scene v14s19a_2b # TPP Same angle as 2, Chloe's hand still on MC's arm, Chloe smiling, mouth closed, MC smiling and rolling his eyes, mouth open
     with dissolve
@@ -208,7 +208,7 @@ label v14s19a:
     scene v14s19a_4a # FPP Same angle as 4, Chloe still looking toward the source of the sound and looking a little scared, mouth closed
     with dissolve
 
-    u "*Chuckles* Relax..."
+    u "Relax..."
 
     scene v14s19a_4b # FPP Same angle as 4, Chloe looking at MC, still jumpy but more relaxed, mouth open
     with dissolve
@@ -224,7 +224,7 @@ label v14s19a:
     scene v14s19a_1
     with dissolve
 
-    cl "*Chuckles* Cliche library kids."
+    cl "Cliche library kids."
 
     scene v14s19a_1a
     with dissolve
@@ -234,7 +234,7 @@ label v14s19a:
     scene v14s19a_1
     with dissolve
 
-    cl "*Chuckles* Right. Well, I need to be on my way. Thanks again for helping me with the plan."
+    cl "Right. Well, I need to be on my way. Thanks again for helping me with the plan."
 
     scene v14s19a_1a
     with dissolve

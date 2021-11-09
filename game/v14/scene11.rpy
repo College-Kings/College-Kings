@@ -102,7 +102,7 @@ label v14s11:
     scene v14s11_4c # FPP. same as v14s11_4a Riley slight smile, mouth open, hand gesture
     with dissolve
 
-    ri "He definitely isn't the best human out there in my opinion. *Chuckles* Even when I was giving him a chance, I knew that deep down."
+    ri "He definitely isn't the best human out there in my opinion. Even when I was giving him a chance, I knew that deep down."
 
     scene v14s11_4b
     with dissolve
@@ -174,7 +174,7 @@ label v14s11:
     scene v14s11_4g # FPP. same as v14s11_4c Riley no hand gesture
     with dissolve
 
-    ri "*Chuckles* I am, I just need to head back home."
+    ri "I am, I just need to head back home."
 
     scene v14s11_4h # FPP. same as v14s11_4g Riley has a concerned expression
     with dissolve
@@ -231,7 +231,7 @@ label v14s11:
         scene v14s11_4b
         with dissolve
 
-        u "I'm listening... *Chuckles*"
+        u "I'm listening..."
 
         scene v14s11_4i # FPP. same as v14s11_4a Riley is blushing, shy expression, slightly looking away from mc, mouth open
         with dissolve
@@ -263,7 +263,7 @@ label v14s11:
                 scene v14s11_4i
                 with dissolve
 
-                u "Well, for starters... It means a lot to me to know that the feeling is mutual. *Chuckles*"
+                u "Well, for starters... It means a lot to me to know that the feeling is mutual."
 
                 scene v14s11_4c
                 with dissolve
@@ -303,7 +303,7 @@ label v14s11:
                 scene v14s11_4m # FPP. same as v14s11_4l Riley mouth open, full smile, no hand gesture
                 with dissolve
 
-                ri "*Chuckles* Wow..."
+                ri "Wow..."
 
                 scene v14s11_4l
                 with dissolve
@@ -315,7 +315,7 @@ label v14s11:
 
                 ri "I don't know, I mean- Yes! That was definitely a good wow..."
 
-                ri "I guess I just didn't think you'd be open to something like that. It's kind of my fantasy... *Chuckles*"
+                ri "I guess I just didn't think you'd be open to something like that. It's kind of my fantasy..."
 
                 scene v14s11_4l
                 with dissolve
@@ -325,12 +325,12 @@ label v14s11:
                 scene v14s11_4n # FPP. same as v14s11_4m Riley non-aggressively shoves mc's shoulder
                 with dissolve
 
-                ri "*Chuckles* Stop it, loser! I'm actually really relieved."
+                ri "Stop it, loser! I'm actually really relieved."
 
                 scene v14s11_4l
                 with dissolve
 
-                u "Glad I could do that for you. *Chuckles*"
+                u "Glad I could do that for you."
 
                 scene v14s11_4m
                 with dissolve

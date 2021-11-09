@@ -125,7 +125,7 @@ label v14s19_continue:
     scene v14s19_6b
     with dissolve
 
-    cl "Okay, okay, fine. *Chuckles*"
+    cl "Okay, okay, fine."
 
     scene v14s19_7 # FPP. MC looking at Chloe, Chloe halfway out the door, Chloe looking back at MC smiling, Chloe mouth closed.
     with dissolve

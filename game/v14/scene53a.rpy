@@ -57,7 +57,7 @@ label v14s53a:
     with dissolve
     pause
     
-    sa "*Drunk* Well I love your cock. *Chuckles*"
+    sa "*Drunk* Well I love your cock."
     
     scene v14s53a_5 # TPP. MC sitting on the couch no shirt and pants around his ankles, Samantha bent over infront of him, Samantha's ass sticking out towards him, Samantha biting her lip, MC slight smile, mouth closed.
     with dissolve

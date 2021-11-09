@@ -23,7 +23,7 @@ label v14s36:
     scene v14s36_2
     with dissolve
 
-    jen "I was literally just driving by and saw a sign for it. Apparently it's brand new so I wanted to enjoy it before it becomes the new hotspot. *Chuckles*"
+    jen "I was literally just driving by and saw a sign for it. Apparently it's brand new so I wanted to enjoy it before it becomes the new hotspot."
 
     scene v14s36_2a
     with dissolve
@@ -38,7 +38,7 @@ label v14s36:
     scene v14s36_2a
     with dissolve
 
-    jen "Maybe. I thought I would but the water is a little colder than I expected. *Chuckles* I will put my feet in though."
+    jen "Maybe. I thought I would but the water is a little colder than I expected. I will put my feet in though."
 
     scene v14s36_2
     with dissolve
@@ -63,12 +63,12 @@ label v14s36:
     scene v14s36_4a # FPP. same as v14s36_4 Jenny's mouth is closed
     with dissolve
 
-    u "*Chuckles* So tell me, what made you wanna hang out tonight?"
+    u "So tell me, what made you wanna hang out tonight?"
 
     scene v14s36_4
     with dissolve
 
-    jen "Honestly? I was just bored. *Chuckles*"
+    jen "Honestly? I was just bored."
 
     scene v14s36_4a
     with dissolve
@@ -101,7 +101,7 @@ label v14s36:
     scene v14s36_4
     with dissolve
 
-    jen "Hmm... I had a friend named Chloe when I was younger. *Chuckles*"
+    jen "Hmm... I had a friend named Chloe when I was younger."
 
     scene v14s36_4a
     with dissolve
@@ -111,12 +111,12 @@ label v14s36:
     scene v14s36_4
     with dissolve
 
-    jen "Tall, blonde, and a true badass... *Chuckles* We did pageants together when we were kids."
+    jen "Tall, blonde, and a true badass... We did pageants together when we were kids."
 
     scene v14s36_4a
     with dissolve
 
-    u "*Chuckles* Well, the Chloe I know is definitely a badass, or a bad bitch, depending on who you ask... *Laughs*."
+    u "Well, the Chloe I know is definitely a badass, or a bad bitch, depending on who you ask... *Laughs*."
 
     scene v14s36_4b
     with dissolve
@@ -146,7 +146,7 @@ label v14s36:
     scene v14s36_4
     with dissolve
 
-    jen "*Chuckles* This is crazy! Your Chloe is my Chloe..."
+    jen "This is crazy! Your Chloe is my Chloe..."
 
     scene v14s36_4a
     with dissolve
@@ -171,7 +171,7 @@ label v14s36:
     scene v14s36_4
     with dissolve
 
-    jen "Chloe wins anything she puts her mind to. She's a do-whatever-you-gotta-do-to-win type of player. *Chuckles*"
+    jen "Chloe wins anything she puts her mind to. She's a do-whatever-you-gotta-do-to-win type of player."
 
     scene v14s36_4a
     with dissolve
@@ -201,7 +201,7 @@ label v14s36:
     scene v14s36_4g
     with dissolve
 
-    jen "It's kinda weird but, I could never bring myself to join Greek life, but I always liked guys who did. *Chuckles*"
+    jen "It's kinda weird but, I could never bring myself to join Greek life, but I always liked guys who did."
 
     scene v14s36_4h
     with dissolve
@@ -266,7 +266,7 @@ label v14s36:
     scene v14s36_4
     with dissolve
 
-    jen "What? *Chuckles*"
+    jen "What?"
 
     scene v14s36_4a
     with dissolve
@@ -290,7 +290,7 @@ label v14s36:
     scene v14s36_4
     with dissolve
 
-    jen "It's not something I show on first impression... *Chuckles*"
+    jen "It's not something I show on first impression..."
 
     scene v14s36_4a
     with dissolve
@@ -307,7 +307,7 @@ label v14s36:
     scene v14s36_4h
     with dissolve
 
-    u "Once. *Chuckles*"
+    u "Once."
 
     scene v14s36_4
     with dissolve
@@ -322,7 +322,7 @@ label v14s36:
     scene v14s36_4g
     with dissolve
 
-    jen "I didn't ask how many times we've met up, I asked how many times we'd seen each other. *Chuckles*"
+    jen "I didn't ask how many times we've met up, I asked how many times we'd seen each other."
 
     scene v14s36_4h
     with dissolve
@@ -384,7 +384,7 @@ label v14s36:
     scene v14s36_4h
     with dissolve
 
-    u "Who's \"What's his face\"? *Chuckles*"
+    u "Who's \"What's his face\"?"
 
     scene v14s36_4f
     with dissolve
@@ -429,7 +429,7 @@ label v14s36:
     scene v14s36_4g
     with dissolve
 
-    jen "Penelope of course. *Chuckles*"
+    jen "Penelope of course."
 
     scene v14s36_4h
     with dissolve
@@ -494,7 +494,7 @@ label v14s36:
             scene v14s36_4
             with dissolve
 
-            jen "Of course? *Chuckles* Are you trying to make me feel special or something?"
+            jen "Of course? Are you trying to make me feel special or something?"
 
         "You're a spy?":
             $ add_point(KCT.TROUBLEMAKER)
@@ -507,7 +507,7 @@ label v14s36:
             scene v14s36_4g
             with dissolve
 
-            jen "What? No! *Chuckles* I just hear things about everyone from everyone."
+            jen "What? No! I just hear things about everyone from everyone."
 
             scene v14s36_4h
             with dissolve
@@ -530,7 +530,7 @@ label v14s36:
             scene v14s36_4h
             with dissolve
 
-            u "Or something, yeah. *Chuckles*"
+            u "Or something, yeah."
 
         "Just being a good friend":
             $ add_point(KCT.BRO)
@@ -559,7 +559,7 @@ label v14s36:
 
         jen "I'm really happy you decided to come out tonight."
 
-        jen "I'm kind of glad that Penelope turned me down, actually. *Chuckles*"
+        jen "I'm kind of glad that Penelope turned me down, actually."
 
         scene v14s36_5a # FPP. same as v14s36_5 Jenny's mouth is closed
         with dissolve
@@ -589,7 +589,7 @@ label v14s36:
         scene v14s36_5e # FPP. same as v14s36_5c Jenny's mouth is closed, and her fingers move to a slighlty different position but still on the top of MC's hand
         with dissolve
 
-        u "Well, thank you. *Chuckles* But also, why me?"
+        u "Well, thank you. But also, why me?"
 
         scene v14s36_5d
         with dissolve
@@ -665,7 +665,7 @@ label v14s36:
                 scene v14s36_4g
                 with dissolve
 
-                jen "No! Not at all. *Chuckles*"
+                jen "No! Not at all."
 
                 scene v14s36_4
                 with dissolve
@@ -711,7 +711,7 @@ label v14s36:
                 scene v14s36_3m # TPP. same as v14s36_3l Jenny and MC kiss passionately, mc has a hand around the small of her back, Jenny has a hand up on mc's cheek
                 with dissolve
 
-                jen "I'm usually the date first, dessert second, type of girl... but right now I'm feeling... *Chuckles* Some type of way."
+                jen "I'm usually the date first, dessert second, type of girl... but right now I'm feeling... Some type of way."
 
                 scene v14s36_4p
                 with dissolve
@@ -789,7 +789,7 @@ label v14s36:
                 with dissolve
                 pause
 
-                jen "Hello? What's happening... *Chuckles*"
+                jen "Hello? What's happening..."
 
                 scene v14s36_lagsex_1b # TPP. same as v14s36_lagsex_1 Jenny starts blushing, full smile, slightly jerks backwards, mouth open
                 with dissolve
@@ -801,7 +801,7 @@ label v14s36:
                 with dissolve
                 pause
 
-                jen "*Gasps* Oh... My... *Chuckles* GOD!"
+                jen "*Gasps* Oh... My... GOD!"
 
                 scene v14s36_lagsex_1d # TPP. same as v14s36_lagsex_1c MC comes up out of the water holding Jenny's bottoms in his mouth, one eybrow raised, looking at Jenny, Jenny holds both her hands to her cheeks, Jenny is blushing and has a shocked expression
                 with dissolve
@@ -824,7 +824,7 @@ label v14s36:
                 with dissolve
                 pause
 
-                jen "Nope, they belong to you now. *Chuckles*"
+                jen "Nope, they belong to you now."
 
                 scene v14s36_lagsex_1h # TPP. same as v14s36_lagsex_1g MC walks to Jenny, picks her up and places her on a rock near the edge, both full smiles mouths closed
                 with dissolve
@@ -1041,7 +1041,7 @@ label v14s36:
                 scene v14s36_9a # FPP. same as v14s36_9 Jenny's mouth is closed
                 with dissolve
 
-                u "I'm definitely looking forward to finding out. *Chuckles*"
+                u "I'm definitely looking forward to finding out."
 
                 scene v14s36_9
                 with dissolve
@@ -1091,7 +1091,7 @@ label v14s36:
                 scene v14s36_11
                 with dissolve
 
-                jen "*Chuckles* Have a good night, [name]."
+                jen "Have a good night, [name]."
 
                 scene v14s36_11a
                 with dissolve
@@ -1140,7 +1140,7 @@ label v14s36:
                 scene v14s36_4a
                 with dissolve
 
-                u "*Chuckles* Maybe we should-"
+                u "Maybe we should-"
 
                 scene v14s36_4
                 with dissolve
@@ -1210,7 +1210,7 @@ label v14s36:
         scene v14s36_4a
         with dissolve
 
-        u "*Chuckles* If I had a jacket I'd help you out."
+        u "If I had a jacket I'd help you out."
 
         scene v14s36_4g
         with dissolve
@@ -1273,7 +1273,7 @@ label v14s36:
         scene v14s36_14
         with dissolve
 
-        u "*Chuckles* Why's that?"
+        u "Why's that?"
 
         scene v14s36_14a
         with dissolve
@@ -1327,7 +1327,7 @@ label v14s36:
         scene v14s36_14b
         with dissolve
 
-        u "This is not at all like you, but I can't say I'm not enjoying it. *Chuckles*"
+        u "This is not at all like you, but I can't say I'm not enjoying it."
 
         scene v14s36_14c
         with dissolve
@@ -1361,7 +1361,7 @@ label v14s36:
         scene v14s36_14a
         with dissolve
 
-        la "Very soon. *Chuckles* Goodnight handsome."
+        la "Very soon. Goodnight handsome."
 
         scene v14s36_14g # TPP. same as v14s36_14 Lauren puts her fingers inside of her pussy, her hand squeezing her phone, eye's closed, a look of ectasy comes over her face
         with dissolve

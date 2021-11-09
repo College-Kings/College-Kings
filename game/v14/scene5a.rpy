@@ -49,12 +49,12 @@ label v14s05a:
         scene v14s05a_7 # FPP. Riley just beside MC on her bedside sitting up straight, slight smile, mouth open
         with dissolve
 
-        ri "It was a crazy day too. *Chuckles*"
+        ri "It was a crazy day too."
 
         scene v14s05a_7a # FPP. Same as v14s05a_7, mouth closed
         with dissolve
 
-        u "That was definitely unexpected, but well appreciated of course. *Chuckles*"
+        u "That was definitely unexpected, but well appreciated of course."
 
         scene v14s05a_7
         with dissolve
@@ -144,7 +144,7 @@ label v14s05a:
         scene v14s05a_13
         with dissolve
 
-        u "*Chuckles* Goodnight Riley."
+        u "Goodnight Riley."
 
         scene v14s05a_13a
         with dissolve
@@ -199,7 +199,7 @@ label v14s05a:
         scene v14s05a_7a
         with dissolve
 
-        u "Okay, then... I wanna know how that goes. *Chuckles*"
+        u "Okay, then... I wanna know how that goes."
 
         scene v14s05a_7b
         with dissolve

@@ -17,7 +17,7 @@ label v14s48:
     scene v14s48_2a # FPP. Same as v14s48_2, Lindsey smiling, mouth open
     with dissolve
 
-    li "*Chuckles* Always smells so good in here."
+    li "Always smells so good in here."
 
     scene v14s48_3 # TPP. Show the barista arriving with MC and Lindey's coffee, all smiling, mouths closed
     with dissolve
@@ -70,18 +70,18 @@ label v14s48:
         scene v14s48_6a # FPP. Same as v14s48_6, Lindsey mouth closed
         with dissolve
 
-        u "Of course. *Chuckles*"
+        u "Of course."
 
     elif v14s03a_take_wallet:
         scene v14s48_6
         with dissolve
 
-        li "Thanks for the coffee by the way. *Chuckles* I should be the one treating you though, don't you think?"
+        li "Thanks for the coffee by the way. I should be the one treating you though, don't you think?"
 
         scene v14s48_6a
         with dissolve
 
-        u "*Chuckles* Okay, you can buy it next time."
+        u "Okay, you can buy it next time."
 
         scene v14s48_6
         with dissolve
@@ -102,7 +102,7 @@ label v14s48:
         scene v14s48_6
         with dissolve
 
-        li "Oh, don't worry about it. After today, I owe you at least a cup of coffee. *Chuckles*"
+        li "Oh, don't worry about it. After today, I owe you at least a cup of coffee."
 
         scene v14s48_6a
         with dissolve
@@ -112,7 +112,7 @@ label v14s48:
     scene v14s48_7 # TPP. Show MC looking at his phone, smiling, mouth open (don't show the screen), Lindsey taking a sip of her coffee, looking a tMC's phone as well, mouth closed
     with dissolve
 
-    u "Okay, so... I've created a draft listing for your highly-collectable, highly desirable vintage vehicle. *Chuckles*"
+    u "Okay, so... I've created a draft listing for your highly-collectable, highly desirable vintage vehicle."
 
     scene v14s48_6b # FPP. Same as v14s48_6, Lindsey different pose
     with dissolve
@@ -122,7 +122,7 @@ label v14s48:
     scene v14s48_6c # FPP. Same as v14s48_6b, Lindsey mouth closed
     with dissolve
 
-    u "You could say I'm \"Getting them into gear\". *Chuckles*"
+    u "You could say I'm \"Getting them into gear\"."
 
     li "..."
 
@@ -144,7 +144,7 @@ label v14s48:
     scene v14s48_6b
     with dissolve
 
-    li "Please, keep them to yourself. *Chuckles*"
+    li "Please, keep them to yourself."
 
     scene v14s48_6c
     with dissolve
@@ -154,12 +154,12 @@ label v14s48:
     scene v14s48_6b
     with dissolve
 
-    li "*Chuckles* So, how's it looking?"
+    li "So, how's it looking?"
 
     scene v14s48_7
     with dissolve
 
-    u "Well, we've got some choices to make on how we're going to sell this rust bucket. *Chuckles* Here, take a look at the photos first."
+    u "Well, we've got some choices to make on how we're going to sell this rust bucket. Here, take a look at the photos first."
 
     call screen iBuy
 
@@ -176,18 +176,18 @@ label v14s48_continue:
     scene v14s48_6a
     with dissolve
 
-    u "Thanks. I'm a natural... *Chuckles*"
+    u "Thanks. I'm a natural..."
 
     if v14_pics_with_linds:
         scene v14s48_6
         with dissolve
 
-        li "Who's the hot girl? *Chuckles*"
+        li "Who's the hot girl?"
 
         scene v14s48_6c
         with dissolve
 
-        u "I don't know, but I hope she comes with the car. *Chuckles*"
+        u "I don't know, but I hope she comes with the car."
 
         scene v14s48_6b
         with dissolve
@@ -203,7 +203,7 @@ label v14s48_continue:
         scene v14s48_6c
         with dissolve
 
-        u "True, let's hope there's someone out there who can see its potential. *Chuckles*"
+        u "True, let's hope there's someone out there who can see its potential."
 
     scene v14s48_6
     with dissolve
@@ -223,7 +223,7 @@ label v14s48_continue:
     scene v14s48_6c
     with dissolve
 
-    u "*Chuckles* Okay, okay. Let me think..."
+    u "Okay, okay. Let me think..."
 
     scene v14s48_7
     with dissolve
@@ -255,7 +255,7 @@ label v14s48_continue2:
         scene v14s48_6e # FPP. Same as v14s48_6d, Lindsey mouth closed
         with dissolve
 
-        u "*Chuckles* You want to sell it, don't you?"
+        u "You want to sell it, don't you?"
 
         scene v14s48_6d
         with dissolve
@@ -270,7 +270,7 @@ label v14s48_continue2:
         scene v14s48_6b
         with dissolve
 
-        li "*Chuckles* Yeah, I guess you're right. Let's go for it then. I just don't want them to be angry at us when they see the car in person, haha."
+        li "Yeah, I guess you're right. Let's go for it then. I just don't want them to be angry at us when they see the car in person, haha."
 
         scene v14s48_6c
         with dissolve
@@ -328,7 +328,7 @@ label v14s48_continue2:
     scene v14s48_6c
     with dissolve
 
-    u "It would sell fast though... I would think! *Chuckles*"
+    u "It would sell fast though... I would think!"
 
     scene v14s48_6b
     with dissolve
@@ -339,7 +339,7 @@ label v14s48_continue2:
         scene v14s48_6c
         with dissolve
 
-        u "Seriously, I don't think we'll get any more than like six hundred bucks. And that's being generous. *Chuckles*"
+        u "Seriously, I don't think we'll get any more than like six hundred bucks. And that's being generous."
 
         scene v14s48_6b
         with dissolve
@@ -405,12 +405,12 @@ label v14s48_end:
     scene v14s48_6
     with dissolve
 
-    li "Finally, the advert is live! I didn't realize selling a car would take so fucking long. *Chuckles*"
+    li "Finally, the advert is live! I didn't realize selling a car would take so fucking long."
 
     scene v14s48_6a
     with dissolve
 
-    u "It's certainly a long process. *Chuckles*"
+    u "It's certainly a long process."
 
     if lindseyrs:
         scene v14s48_8 # TPP. Show Lindsey kissing MC (with tongue if possible)
@@ -421,7 +421,7 @@ label v14s48_end:
         scene v14s48_6c
         with dissolve
 
-        u "Mmmm... Caramel. *Chuckles*"
+        u "Mmmm... Caramel."
 
     scene v14s48_6
     with dissolve
@@ -431,22 +431,22 @@ label v14s48_end:
     scene v14s48_6a
     with dissolve
 
-    u "We haven't sold it yet. *Chuckles*"
+    u "We haven't sold it yet."
 
     scene v14s48_6b
     with dissolve
 
-    li "*Chuckles* I know but, thank you anyway. I really enjoy spending time with you."
+    li "I know but, thank you anyway. I really enjoy spending time with you."
 
     scene v14s48_6c
     with dissolve
 
-    u "I'm enjoying it too. We make a pretty good team. *Chuckles*"
+    u "I'm enjoying it too. We make a pretty good team."
 
     scene v14s48_6b
     with dissolve
 
-    li "We do... *Chuckles*"
+    li "We do..."
 
     scene v14s48_6
     with dissolve

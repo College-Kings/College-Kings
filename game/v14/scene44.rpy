@@ -265,7 +265,7 @@ label v14s44:
             scene v14s44_9c
             with dissolve
 
-            elm "[name]. I'll remember that. *Chuckles*"
+            elm "[name]. I'll remember that."
 
             scene v14s44_9e # FPP. Same as v14s44_9c, Elijah's mom looking at MC, slight smile, mouth closed.
             with dissolve

@@ -46,12 +46,12 @@ label v14s12:
     scene v14s12_3a
     with dissolve
 
-    u "Safe or not, I'm happy to be back. *Chuckles*"
+    u "Safe or not, I'm happy to be back."
 
     scene v14s12_3
     with dissolve
 
-    ju "Oh hush. *Chuckles*"
+    ju "Oh hush."
 
     scene v14s12_3a
     with dissolve

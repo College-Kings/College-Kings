@@ -18,7 +18,7 @@ label v14s53:
     scene v14s53_2a # TPP. same as v14s53_2 Mc, slight smile mouth open
     with dissolve
 
-    u "(Is that Sam singing? *Chuckles* Where's it coming from?)"
+    u "(Is that Sam singing? Where's it coming from?)"
 
     scene v14s53_3 # TPP. MC walks into the apes Dream Room to find Samantha alone on the couch. She has a bottle of beer in hand. She swigs from it, Mc slight smile, mouth closed looking at samantha
     with dissolve
@@ -43,12 +43,12 @@ label v14s53:
     scene v14s53_4b # FPP. same as v14s53_4a Sam has a slight smile, mouth closed, still looking at mc, Sam has lowered her arms to her sides and is still holding the bottle
     with dissolve
 
-    u "Not too long. Looks like you're having a great time there, Sam. *Chuckles*"
+    u "Not too long. Looks like you're having a great time there, Sam."
 
     scene v14s53_4c # FPP. same as v14s53_4b Sam's mouth is open
     with dissolve
 
-    sa "I am. *Chuckles*"
+    sa "I am."
 
     scene v14s53_4b
     with dissolve
@@ -152,7 +152,7 @@ label v14s53:
     scene v14s53_6a # FPP. same as v14s53_6 Sam has lowered both the bottle and pills to her sides
     with dissolve
 
-    sa "My friend just said if I wanted a good time, this bag is full of them. *Chuckles*"
+    sa "My friend just said if I wanted a good time, this bag is full of them."
 
     scene v14s53_6b # FPP. same as v14s53_6a Sam's mouth is closed
     with dissolve
@@ -276,7 +276,7 @@ label v14s53:
     scene v14s53_6a
     with dissolve
 
-    sa "*Drunk* I was just having a good time and went too far. *Chuckles* I make a habit of that."
+    sa "*Drunk* I was just having a good time and went too far. I make a habit of that."
 
     scene v14s53_6b
     with dissolve
@@ -461,7 +461,7 @@ label v14s53:
                         scene v14s53_6t # FPP. same as v14s53_6s Sam's mouth is open
                         with dissolve
 
-                        sa "It's okay. This is bad timing. *Chuckles*"
+                        sa "It's okay. This is bad timing."
 
                         scene v14s53_6s
                         with dissolve
@@ -476,7 +476,7 @@ label v14s53:
                 scene v14s53_6v # FPP. same as v14s53_6u Mc holds his hand out, Sam has a slight smile, mouth closed
                 with dissolve
 
-                u "*Chuckles* Good idea. Absolutely."
+                u "Good idea. Absolutely."
 
                 scene v14s53_6w # FPP same as v14s53_6v Samantha puts the pills into mc's hand, no expression, looking at the pills
                 with dissolve
@@ -491,7 +491,7 @@ label v14s53:
                 scene v14s53_6y # FPP. same as v14s53_6x Sam's mouth is closed
                 with dissolve
 
-                u "Another great idea. *Chuckles*"
+                u "Another great idea."
 
                 scene v14s53_3h # TPP. same as v14s53_3g Samantha gives MC a friendly hug both arm's around his neck and shoulders, mc gives sam a friendly hug back, slight smiles, mouth closed, The bottle can be seen behind sam and the pills can be seen behind mc
                 with dissolve

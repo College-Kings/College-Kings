@@ -275,12 +275,12 @@ label v14s43b:
             scene v14s43b_8c
             with dissolve
 
-            u "Fine... *Chuckles* You and me."
+            u "Fine... You and me."
 
             scene v14s43b_8d # FPP. same as v14s43b_8b Penelope full smile 
             with dissolve
 
-            pe "*Chuckles* Yay."
+            pe "Yay."
 
             scene v14s43b_11 # TPP. Mc sits back down with Penelope, slight smiles, mouths closed, looking towards Mr. Lee at the front of the class
             with dissolve
@@ -300,7 +300,7 @@ label v14s43b:
                 scene v14s43b_12 # FPP. MC looks at Penelope in the seat next to him, Penelope looking at MC, slight smile, mouth open
                 with dissolve
 
-                pe "Ooh, this sounds fun. *Chuckles*"
+                pe "Ooh, this sounds fun."
 
                 play sound "sounds/vibrate.mp3"
 
@@ -398,7 +398,7 @@ label v14s43b:
                 scene v14s43b_12
                 with dissolve
 
-                pe "Ooh, this sounds fun. *Chuckles*"
+                pe "Ooh, this sounds fun."
 
                 pe "We can just go sit outside on the stairs and work, if that's cool."
 
@@ -450,7 +450,7 @@ label v14s43b:
             scene v14s43b_9a
             with dissolve
 
-            u "Haha... I just wanted to see you squirm for a second. *Chuckles* I wouldn't actually do you like that, have fun with Penelope."
+            u "Haha... I just wanted to see you squirm for a second. I wouldn't actually do you like that, have fun with Penelope."
 
             scene v14s43b_9d # FPP. same as same as v14s43b_9c Imre happy expression, slight smile, mouth open
             with dissolve

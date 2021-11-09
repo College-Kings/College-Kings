@@ -131,7 +131,7 @@ label v14s03e:
 
         u "Sorry bro, I wasn't thinking with my head..."
 
-        u "I was thinking with my... head. *Chuckles*"
+        u "I was thinking with my... head."
 
         scene v14s03e_6f # FPP. Same as v14s03e_6c, annoyed expression
         with dissolve

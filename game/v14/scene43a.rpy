@@ -56,7 +56,7 @@ label v14s43a:
     scene v14s43a_3a
     with dissolve
 
-    pe "[name]! *Chuckles*"
+    pe "[name]!"
 
     scene v14s43a_3
     with dissolve
@@ -81,7 +81,7 @@ label v14s43a:
     scene v14s43a_3
     with dissolve
 
-    u "Wouldn't I? *Chuckles*"
+    u "Wouldn't I?"
 
     scene v14s43a_3c # FPP. Same as v14s43a_3, Penelope rolling her eyes and laughing
     with dissolve

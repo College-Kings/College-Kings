@@ -72,7 +72,7 @@ label v14s25a:
     scene v14s25a_8a # FPP Same as 8, Amber's mouth closed, biting her lower lip
     with dissolve
 
-    u "*Chuckles* What do you want then?"
+    u "What do you want then?"
 
     scene v14s25a_7a # TPP Same angle as 7, MC teasing Amber's clitoris with his finger
     with dissolve

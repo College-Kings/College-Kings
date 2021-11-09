@@ -22,7 +22,7 @@ label v14s03d:
     scene v14s03d_2b # FPP Same angle as 2, Satin has one eyebrow raised, smiling with mouth open
     with dissolve
 
-    satin "Oh, and you aren't a virgin like your friend, right? *Chuckles*"
+    satin "Oh, and you aren't a virgin like your friend, right?"
 
     scene v14s03d_2c # FPP Same as 2b, Satin's mouth closed
     with dissolve
@@ -306,7 +306,7 @@ label v14s03d:
             scene v14s03d_15
             with dissolve
 
-            u "*Chuckles* Alright."
+            u "Alright."
 
             scene v14s03d_16 # FPP Close up on MC's dick entering Satin in a prone position
             with dissolve

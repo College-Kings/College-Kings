@@ -27,7 +27,7 @@ label v14s38:
     scene v14s38_3 # FPP. Jenny's body facing forward, her head turned toward MC (camera), smiling, mouth open, background 1 behind Jenny.
     with dissolve
 
-    jen "Oh, I'm honestly taking my sweet time tonight. *Chuckles*"
+    jen "Oh, I'm honestly taking my sweet time tonight."
 
     scene v14s38_3a # FPP. Same as v14s38_3, but Jenny's mouth closed
     with dissolve
@@ -57,7 +57,7 @@ label v14s38:
     scene v14s38_4
     with dissolve
 
-    jen "*Chuckles* Relax, I'm kidding."
+    jen "Relax, I'm kidding."
 
     scene v14s38_4a
     with dissolve

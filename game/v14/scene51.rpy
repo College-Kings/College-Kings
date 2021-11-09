@@ -363,7 +363,7 @@ label v14s51_continue:
 
             u "(Why am I even in here? I need to get the fuck out.)"
 
-            unknown "If it's you, make sure you lock the door this time... *Chuckles*"
+            unknown "If it's you, make sure you lock the door this time..."
 
             u "(These Chicks are wildin'.)"
 
@@ -496,7 +496,7 @@ label v14s51_continue:
 
             u "(I need to get the fuck out this house ASAP! Let's try the window.)"
 
-            unknown "If it's you, make sure you lock the door this time... *Chuckles*"
+            unknown "If it's you, make sure you lock the door this time..."
 
             u "(Lock the door... What do these Chicks get up to in private?)"
 
@@ -834,7 +834,7 @@ label v14s51_continue:
             scene v14s51_40a
             with dissolve
 
-            li "*Whispers* True, he probably can. *Chuckles*"
+            li "*Whispers* True, he probably can."
 
         scene v14s51_40
         with dissolve
