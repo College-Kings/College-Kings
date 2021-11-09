@@ -536,10 +536,6 @@ label v14s43b:
                 $ v14s43b_kiwiiPost6.newComment("Sebastian", "This is too far for just \"frat shit\".", queue=False)
                 $ v14s43b_kiwiiPost6.newComment("Aubrey", "Pathetic.", queue=False)
 
-                if False: # just making sure it shows on lint
-                    scene v14kw43b
-                    with dissolve
-
                 $ chloe.messenger.newMessage("GRAYSON IS SUCH AN ASSHOLE")
                 $ chloe.messenger.newMessage("FUCK HIM, AND FUCK THE APES!!!!")
                 $ chloe.messenger.newMessage("UGH! I'm going to turn this around. It won't hurt my campaign even a little bit, I'll make sure of it.")
