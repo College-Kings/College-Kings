@@ -123,7 +123,7 @@ label v14s03d:
     scene v14s03d_4c # FPP Same angle as 4, Satin doing a new sexy pose, her mouth open
     with dissolve
 
-    satin "So, you're liking what you see? *Chuckles*"
+    satin "So, you're liking what you see?"
 
     scene v14s03d_4a
     with dissolve

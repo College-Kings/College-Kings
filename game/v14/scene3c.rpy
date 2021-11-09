@@ -87,7 +87,7 @@ label v14s03c:
     scene v14s03c_4e # FPP. Same as v14s03c_4c, Satin slight smile, mouth open.
     with dissolve
 
-    satin "A guy in a place like this, is asking a girl if she's okay? That's a first. *Chuckles*"
+    satin "A guy in a place like this, is asking a girl if she's okay? That's a first..."
 
     scene v14s03c_4f # FPP. Same as v14s03c_4c, Satin slight smile, mouth closed
     with dissolve

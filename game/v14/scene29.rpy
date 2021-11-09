@@ -14,7 +14,7 @@ label v14s29:
     scene v14s29_2 # TPP. Close up of MC looking at his phone while standing on the sidewalk, slight smile, mouth open.
     with vpunch
 
-    u "(And I know when my hotline bling!) *Chuckles*"
+    u "(And I know when my hotline bling!)"
 
     stop sound
     play sound "sounds/answercall.mp3"
@@ -95,7 +95,7 @@ label v14s29:
         scene v14s29_3a
         with dissolve
 
-        u "Okay."
+        u "Uhh.. O-okay..."
 
         play sound "sounds/rejectcall.mp3"
         

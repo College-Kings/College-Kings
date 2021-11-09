@@ -59,7 +59,7 @@ label v14s46a:
         scene v14s46a_4
         with dissolve
 
-        la "*Chuckles* We'll see about that..."
+        la "We'll see about that..."
 
     scene v14s46a_4a
     with dissolve
@@ -423,7 +423,7 @@ label v14s46a:
         scene v14s46a_22a # FPP. Same as v14s46a_22, but Lauren's mouth closed.
         with dissolve
 
-        u "You were exploring and I was exploding. *Chuckles*"
+        u "You were exploring and I was exploding..."
 
         scene v14s46a_22
         with dissolve

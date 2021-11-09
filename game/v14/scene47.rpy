@@ -252,7 +252,7 @@ label v14s47:
     scene v14s47_8a
     with dissolve
 
-    u "Alright. You're the boss."
+    u "Alright, you're the boss."
 
     scene v14s47_10 # TPP. Show MC grabbing his phonem, getting ready to take pics, smiling, mouth closed
     with dissolve
@@ -832,7 +832,7 @@ label v14s47_passenger:
 
                 pause
 
-                play sound "sounds/capture.mp3" 
+                play sound "sounds/capture.mp3"
 
                 scene v14s47_passenger_3
                 with flash
@@ -855,7 +855,7 @@ label v14s47_passenger:
 
                 li "He is a cute little bird!"
 
-                play sound "sounds/capture.mp3" 
+                play sound "sounds/capture.mp3"
 
                 $ grant_achievement("say_chirp")
 

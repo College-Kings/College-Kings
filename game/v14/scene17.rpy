@@ -171,7 +171,7 @@ label v14s17:
             scene v14s17_8c
             with dissolve
 
-            la "*Chuckles* Okay, okay... Fair enough."
+            la "Okay, okay... Fair enough."
 
         "Compliment":
             $ add_point(KCT.BOYFRIEND)

@@ -487,7 +487,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
     gr "What?! I haven't said anything bad. I'm just reminiscing..."
 
-    gr "All of freshman year you'd sit right there and have like, twenty different books from god knows how many classes. *Chuckles*"
+    gr "All of freshman year you'd sit right there and have like, twenty different books from god knows how many classes."
 
     scene v14s31b_18a # FPP. Same as v14s31b_18, but Chloe frowning, focused; not angry. 
     with dissolve
@@ -648,7 +648,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
     scene v14s31b_18c
     with dissolve
 
-    gr "I haven't heard that in a long time. *Chuckles*"
+    gr "I haven't heard that in a long time, you know?"
 
     scene v14s31b_18g # FPP. Same as v14s31b_18, but Chloe nervous, mouth open.
     with dissolve
@@ -697,7 +697,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
     scene v14s31b_17c
     with dissolve
 
-    gr "*Chuckles* Strong shit isn't it?"
+    gr "Strong shit, isn't it?"
 
     scene v14s31b_19f
     with dissolve
@@ -732,7 +732,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
     scene v14s31b_17c
     with dissolve
 
-    gr "Probably, but I wasn't talking about her. *Chuckles* I was talking about her husband."
+    gr "Probably, but I wasn't talking about her. I was talking about her husband."
 
     scene v14s31b_19g
     with dissolve
@@ -791,7 +791,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
         scene v14s31b_17c
         with dissolve
 
-        gr "Okay, lead the way. You know your way around here."
+        gr "Okay, lead the way. You do know your way around here..."
 
         scene v14s31b_18
         with dissolve
@@ -950,7 +950,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
         scene v14s31b_17c
         with dissolve
 
-        gr "You didn't need to be there."
+        gr "You didn't need to be there..."
 
         scene v14s31b_24a # FPP. Same as v14s31b_24, but Chloe frowning, upset, mouth open.
         with dissolve

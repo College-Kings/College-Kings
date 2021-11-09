@@ -58,7 +58,7 @@ label v14s30a:
     scene v14s30a_6
     with dissolve
 
-    wtrain "Unimportant. Just know, your life lies safely in my hands."
+    wtrain "Well, that's unimportant. Just know, your life lies safely in my hands."
 
     scene v14s30a_6a
     with dissolve
@@ -115,7 +115,7 @@ label v14s30a:
     scene v14s30a_6
     with dissolve
 
-    wtrain "No man, this is a completely different wolf. *Chuckles*"
+    wtrain "No mate, this is a completely different wolf..."
 
     scene v14s30a_6a
     with dissolve
@@ -160,7 +160,7 @@ label v14s30a:
     scene v14s30a_5a
     with dissolve
 
-    cl "Make us look good. *Chuckles*"
+    cl "Make us look good."
 
     if chloegf:
         scene v14s30a_5

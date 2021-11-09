@@ -41,7 +41,7 @@ label v14s51_bedside_table:
 
     u "(No money here. But there is a vibrator.)"
 
-    u "(Pretty basic bedside table for a woman... Wonder how often she uses that thing. Let's search somewhere else.)"
+    u "(Pretty basic bedside table for a woman... Wonder how often she uses that thing... Let's search somewhere else.)"
 
     if v14_money_theft_date_ditch and v14s51_interaction == 1:
         jump v14s51_text
@@ -109,7 +109,7 @@ label v14s51_desk_drawer:
     scene v14s51_deskdrawer_2c # FPP. Same as v14s51_deskdrawer_2b, Show MC holding the family photo with Chloe, her mom, her dad, and the pet pig.
     with dissolve
 
-    u "(This must be Chloe's parents. And she has a pig as a pet? I'm learning a lot about her today.)"
+    u "(This must be Chloe's parents. And she has a pig as a pet? I'm learning a lot about her today...)"
 
     scene v14s51_deskdrawer_2d # FPP. Same as v14s51_deskdrawer_2c, MC with the photo flipped over, on the back it says Mom, Dad, Chloe and Porkchop with a heart.
     with dissolve
@@ -527,7 +527,7 @@ label v14s51_continue:
                     scene v14s51_44 # FPP. Show MC looking at the window in the bathroom.
                     with dissolve
 
-                    u "(What a nice little treat. *Chuckles* Now it's time to get the fuck out of here.)"
+                    u "(What a nice little treat... Now it's time to get the fuck out of here.)"
 
                 "Don't peek":
                     scene v14s51_32

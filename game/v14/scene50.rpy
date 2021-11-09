@@ -131,7 +131,7 @@ label v14s50:
 
     li "No, no! No, I am not pregnant. I promise. That's not it, haha."
 
-    au "For fuck's sake! *Chuckles* Thank God."
+    au "For fuck's sake! Thank God."
 
     scene v14s50_3a
     with dissolve
@@ -163,7 +163,7 @@ label v14s50:
     scene v14s50_8 # TPP. MC, concentrating, squatting and tip toeing (trying to be quiet) up the stairs.
     with dissolve
 
-    u "(I feel like a ninja.)"
+    u "(I feel like a ninja, haha.)"
 
     scene v14s50_9 # TPP. MC, concentrating, mouth closed, at the top of the stairs, more dirty clothes scattered on the floor and stair railing.
     with dissolve
@@ -269,7 +269,7 @@ label v14s50:
             scene v14s50_12
             with dissolve
             
-            u "(Is this story real or did she just pull this out of her ass? Pun intended.)"
+            u "(Is this story real or did she just pull this out of her ass? Pun intended...)"
 
             scene v14s50_11b
             with dissolve
@@ -423,7 +423,7 @@ label v14s50:
                             scene v14s50_12
                             with dissolve
 
-                            u "(I think I've heard enough about Maria's injury. And gained enough knowledge about anal thanks to Aubrey... *Chuckles*)"
+                            u "(I think I've heard enough about Maria's injury. And gained enough knowledge about anal thanks to Aubrey...)"
 
                             if aubreyrs: # -if AubreyRS
                                 scene v14s50_15 # TPP  Close up on MC face, smiling mischievously, thinking dirty thoughts, mouth closed.

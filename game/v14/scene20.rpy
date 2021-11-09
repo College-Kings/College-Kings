@@ -423,12 +423,12 @@ label v14s20:
 
     menu:
         "We should hang out more":
-            u "We should just hang out more. *Laughs*"
+            u "We should just hang out more. *Chuckles*"
 
             scene v14s20_3
             with dissolve
 
-            aut "*Chuckles* You think so?"
+            aut "You think so?"
 
             scene v14s20_3a
             with dissolve
