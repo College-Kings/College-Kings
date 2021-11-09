@@ -309,7 +309,7 @@ label v14s46a:
 
         pause 0.75
 
-        scene v14s46a_17 # FPP. Close up of Dream Girl's hand feeling MC's dick that is bulging in his swim trunks.        
+        scene v14s46a_17 # FPP. Close up of Dream Girl's hand feeling MC's dick that is bulging in his swim trunks. 
         with dissolve
 
         la "*Speaking softly* She feels your... pulsing cock. *Embarrassed giggle* It's hard. Your swim trunks feel like they're about to burst at the seams..."
