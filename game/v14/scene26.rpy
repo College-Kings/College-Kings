@@ -246,6 +246,8 @@ label v14s26:
     scene v14s26_8 # TPP. MC checks his phone
     with dissolve
 
+    pause 0.75
+
 # -Kiwii post of Lindsey's bake sale, 2 different renders needed for seperate slogans-
 
 # Kiwi Post: v14kw26 - Lindsey and Lauren Selfie in front of her banner (Lindsey, Returning The Promise) on the banner
@@ -279,10 +281,6 @@ label v14s26:
         $ v14s26_kiwiiPost2.addReply("Thank you for the cake! It's amazing you guys...", mentions="Lindsey")
         $ v14s26_kiwiiPost2.newComment("Lindsey", "<3")
         $ v14s26_kiwiiPost2.newComment("Lauren", ":)")
-
-    if False: ##just making sure it shows up on lint
-        scene v14kw26
-        scene v14kw26_1
 
     if not v14_amber_clean:
         play sound "sounds/vibrate.mp3"

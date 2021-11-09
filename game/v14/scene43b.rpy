@@ -1,4 +1,4 @@
-# SCENE 43b: Mr Lee's History Class 
+# SCENE 43b: Mr Lee's History Class
 # Locations: Mr. Lees Classrom
 # Characters: MR. LEE (Outfit: 1), MC (Outfit: 1), RILEY (Outfit: 4), CAMERON (Outfit: 3), IMRE (Outfit: 2), PENELOPE (Outfit: 1)
 # Time: Morning
@@ -126,7 +126,8 @@ label v14s43b:
     scene v14s43b_3
     with dissolve
 
-    lee "It's all about the relationship between a king and a queen during medieval times. Each gentleman will be paired with a lady, but we will need Riley to take part to make sure everyone can be paired up."
+    lee "It's all about the relationship between a king and a queen during medieval times."
+    lee "Each gentleman will be paired with a lady, but we will need Riley to take part to make sure everyone can be paired up."
 
     scene v14s43b_4e # FPP. same as v14s43b_4c Riley's mouth is open
     with dissolve
@@ -535,10 +536,6 @@ label v14s43b:
                 $ v14s43b_kiwiiPost6.newComment("Cameron", "Frat shit. What else would I be doing?", queue=False)
                 $ v14s43b_kiwiiPost6.newComment("Sebastian", "This is too far for just \"frat shit\".", queue=False)
                 $ v14s43b_kiwiiPost6.newComment("Aubrey", "Pathetic.", queue=False)
-
-                if False: # just making sure it shows on lint
-                    scene v14kw43b
-                    with dissolve
 
                 $ chloe.messenger.newMessage("GRAYSON IS SUCH AN ASSHOLE")
                 $ chloe.messenger.newMessage("FUCK HIM, AND FUCK THE APES!!!!")

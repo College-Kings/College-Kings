@@ -107,8 +107,8 @@ label v14s03d:
     u "S-shit! You're a fucking professional! (She's deepthroating like a goddess.)"
 
     # From scene animations folder v14satdtTPP
-    image v14satdtTPP = Movie(play="images/v14/Scene 3d/v14satdtTPP.webm", loop=True, image="images/v14/Scene 3d/v14satdtFPP.webp", start_image="images/v14/Scene 3d/v14satdtFPP.webp")
-    image v14satdtTPPf = Movie(play="images/v14/Scene 3d/v14satdtTPPf.webm", loop=True, image="images/v14/Scene 3d/v14satdtFPP.webp", start_image="images/v14/Scene 3d/v14satdtFPP.webp")
+    image v14satdtTPP = Movie(play="images/v14/Scene 3d/v14satdtTPP.webm", loop=True, image="images/v14/Scene 3d/v14satdtTPP.webp", start_image="images/v14/Scene 3d/v14satdtTPP.webp")
+    image v14satdtTPPf = Movie(play="images/v14/Scene 3d/v14satdtTPPf.webm", loop=True, image="images/v14/Scene 3d/v14satdtTPP.webp", start_image="images/v14/Scene 3d/v14satdtTPP.webp")
 
     scene v14satdtTPP # Ignore as animation
     with dissolve

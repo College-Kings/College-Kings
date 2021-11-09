@@ -79,7 +79,7 @@ label v14s25:
         pause 0.75
 
         if not v14s24a_gummyfish:
-            scene v14s25_4g # FPP. Same as v14s25_4f, Amber looking down as MC hands her the twezzlers candy, Amber slight smile, mouth open.  
+            scene v14s25_4g # FPP. Same as v14s25_4f, Amber looking down as MC hands her the twezzlers candy, Amber slight smile, mouth open. 
             with dissolve
 
             $ grant_achievement("how_did_you_know")

@@ -78,19 +78,20 @@ label v14s36:
     scene v14s36_4
     with dissolve
 
-    jen "Yeah, she didn't say much. Just that she was too busy to meet me."
-
-    jen "I think she just didn't want to come out. *Chuckles*"
+    jen "Oh, I tried texting her but she told me she was sleeping early."
 
     scene v14s36_4a
     with dissolve
 
-    u "Haha, maybe."
+    u "Oh, alright..."
+    
+    if penelopers and v11s23_penelope_date:
+        u "(Maybe it's a good thing I didn't try calling her...)"
 
     scene v14s36_4b # FPP. same as v14s36_4 Jenny has a curious expression, mouth open
     with dissolve
 
-    jen "I've been noticing a lot of campaign stuff going on at SVC. I believe it's with the Chicks house?"
+    jen "Say, I've been noticing a lot of campaign stuff going on at SVC. I believe it's with the Chicks house?"
 
     scene v14s36_4c # FPP. same as v14s36_4b Jenny's mouth is closed
     with dissolve

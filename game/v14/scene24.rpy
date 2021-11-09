@@ -54,7 +54,7 @@ label v14s24:
         jump v14s24a 
 
     else:
-        scene v14s24_8 # TPP. MC walking down the side walk towards Amber's house.   
+        scene v14s24_8 # TPP. MC walking down the side walk towards Amber's house. 
         with dissolve
         
         pause 0.75

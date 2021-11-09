@@ -37,6 +37,8 @@ label v14s41a:
     # Make sure variable is Chloe Seduced Grayson if: chloe seduced grayson
 
     if v14s31bTrustChloe:
+        $ v14_ApesPostChloePics = False
+        
         scene v14s41a_4 # FPP. Mc is looking to his right and sees a close-up shot of just Cameron, looking at Grayson, slightly annoyed, mouth open.
         with dissolve
 
@@ -65,7 +67,7 @@ label v14s41a:
         scene v14s41a_5
         with dissolve
 
-        gr "We're here, for whatever I say we're here for. I don't know what's gotten into you lately, man."
+        gr "We're here for whatever I say we're here for. I don't know what's gotten into you lately, man."
 
         scene v14s41a_4b # FPP. same as v14s41a_4 Cameron avoids looking at Grayson, no expression, mouth closed
         with dissolve
@@ -80,7 +82,7 @@ label v14s41a:
         scene v14s41a_5b # FPP. same as v14s41a_5a Grayson is looking at Ryan, slight smile, mouth open
         with dissolve
 
-        gr "Opposite of that actually. Despite the rough past that Chloe and I have, we will not be sabotaging her in the race."
+        gr "Opposite of that, actually. Despite the rough past that Chloe and I have, we will not be sabotaging her in the race."
 
         scene v14s41a_6a # FPP. same as v14s41a_6 Ryan is slightly confused
         with dissolve
@@ -275,6 +277,9 @@ label v14s41a:
             "Stay quiet":
                 $ add_point(KCT.TROUBLEMAKER)
 
+                if v14_chloe_apes and not v14_chloe_grayson:
+                    u "(Even Cameron isn't speaking up, and he has an incentive to help Chloe win. I shouldn't press this further...)"
+
                 scene v14s41a_5a
                 with dissolve
 
@@ -395,6 +400,9 @@ label v14s41a:
                             with dissolve
 
                             ca "But I would give a shit if someone posted a photo like that of me, or even worse... Sam. Not sure if I can do this one, man."
+
+                            if v14_chloe_apes and not v14_chloe_grayson:
+                                u "(Thanks for the help, bro. Looks like that pep talk got to him...)"
 
                             scene v14s41a_5
                             with dissolve

@@ -11835,7 +11835,7 @@ label penelopehocodate:
     scene sfr4pe8d
     with dissolve
 
-    pe "No way, you were never cliff Jumping."
+    pe "No way, you were never cliff jumping."
 
     scene sfr4pe8e
     with dissolve

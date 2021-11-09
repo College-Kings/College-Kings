@@ -388,7 +388,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
     gr "Spark up already, Aubrey! I can't ease into this without being high."
 
-    scene v14s31b_13c # FPP. Same as v14s31b_13b, but mouth closed, disappointed, looking at Grayson (off camera).  
+    scene v14s31b_13c # FPP. Same as v14s31b_13b, but mouth closed, disappointed, looking at Grayson (off camera). 
     with dissolve
 
     cl "*Sighs*"
@@ -916,7 +916,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
         u "*Sighs*"
 
-        # -Grayson and Chloe come back and Grayson sits down but Chloe keeps standing-   # -Grayson is smiling-
+        # -Grayson and Chloe come back and Grayson sits down but Chloe keeps standing- # -Grayson is smiling-
         scene v14s31b_21d # FPP. Chloe appears from the dark hallway entrance, neutral, mouth closed.
         with dissolve
 
@@ -1347,7 +1347,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
             with dissolve
             
         else:
-            scene v14s31b_30d # TPP. Same as v14s31b_30c, but cut Chloe, MC walking towards the front door of the Ape's house.  
+            scene v14s31b_30d # TPP. Same as v14s31b_30c, but cut Chloe, MC walking towards the front door of the Ape's house. 
             with dissolve
 
         pause 0.75

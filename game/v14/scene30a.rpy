@@ -246,7 +246,7 @@ label v14s30a:
             scene v14s30a_13
             with dissolve
 
-            wtrain "Back back, Niko."
+            wtrain "Back! Back, Niko!"
 
             scene v14s30a_13c # TPP. Same as v14s30a_13b, The Wolf goes back to sitting next to Chloe, Both slight smile, mouth closed.
             with dissolve
