@@ -520,7 +520,8 @@ label v14s46a:
         scene v14s46a_7
         with dissolve
 
-        la "*Softly* You are now walking through a fresh, grassy field in your bare feet. It's the most beautiful day. So sunny and warm, you can feel the light dancing on your skin."
+        la "*Softly* You are now walking through a fresh, grassy field in your bare feet."
+        la "*Softly* It's the most beautiful day. So sunny and warm, you can feel the light dancing on your skin."
 
         la "*Softly* The grass between your toes is gentle to the touch. You're calm... you're relaxed... you're the happiest you've ever been..."
 

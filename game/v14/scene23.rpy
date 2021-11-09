@@ -333,7 +333,8 @@ label v14s23:
         scene v14s23_4a
         with dissolve
 
-        cl "Oh no, Chris. I'd never do that. The whole reason I want your support is because I believe the Wolves are a well-respected frat and deserving of a brotherhood title."
+        cl "Oh no, Chris. I'd never do that."
+        cl "The whole reason I want your support is because I believe the Wolves are a well-respected frat and deserving of a brotherhood title."
 
         scene v14s23_2c
         with dissolve

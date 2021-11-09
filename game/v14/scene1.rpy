@@ -329,7 +329,8 @@ label v14s01:
             scene v14s01_16 # TPP. Show MC leaving the hotel room, smiling, mouth closed
             with dissolve
 
-            u "(Now that I'm awake I might as well go see what's going on. My sleep schedule is gonna be all fucked now, though. Feeling energized at night isn't a good thing...) *Sighs*"
+            u "(Now that I'm awake I might as well go see what's going on.)"
+            u "(My sleep schedule is gonna be all fucked now, though. Feeling energized at night isn't a good thing...) *Sighs*"
 
         "Stop them":
             scene v14s01_1e # FPP. Same as v14s01_1b, Aubrey and Riley shocked, mouths closed

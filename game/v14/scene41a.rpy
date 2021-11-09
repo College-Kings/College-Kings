@@ -117,7 +117,8 @@ label v14s41a:
         scene v14s41a_5c
         with dissolve
 
-        gr "Look... Going against Chloe here isn't a good look for the Apes. If she ends up winning and we went after her, it'd backfire instantly and I don't want that. Make sense?"
+        gr "Look... Going against Chloe here isn't a good look for the Apes."
+        gr "If she ends up winning and we went after her, it'd backfire instantly and I don't want that. Make sense?"
 
         scene v14s41a_6
         with dissolve

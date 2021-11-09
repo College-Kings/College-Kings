@@ -197,7 +197,8 @@ label v14s11:
     scene v14s11_4g
     with dissolve
 
-    ri "Knowing Aubrey she probably doesn't wanna talk about that stuff right now either. Being around her is probably the safest way to stay out of any Chicks drama. *Chuckles*"
+    ri "Knowing Aubrey she probably doesn't wanna talk about that stuff right now either."
+    ri "Being around her is probably the safest way to stay out of any Chicks drama. *Chuckles*"
 
     if rileyrs:
         scene v14s11_4a

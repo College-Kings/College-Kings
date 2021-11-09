@@ -151,7 +151,8 @@ label v14s03c:
     scene v14s03c_4f
     with dissolve
 
-    u "Well, it's actually the last pitstop of our vacation. My friend Imre is a jack rabbit, but Ryan over there is a virgin. Something I found out minutes ago, actually."
+    u "Well, it's actually the last pitstop of our vacation."
+    u "My friend Imre is a jack rabbit, but Ryan over there is a virgin. Something I found out minutes ago, actually."
 
     scene v14s03c_4e
     with dissolve
