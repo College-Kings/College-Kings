@@ -54,7 +54,12 @@ label v12_simplr_convo:
         $ emmy.simplr.newMessage("Good, I know it's late so goodnight handsome ;)")
         $ emmy.simplr.addReply("Goodnight ;)")
 
-        call screen phone
+        label v12s24_PhoneContinueEmmy:
+            if emmy.simplr.replies:
+                call screen phone
+            if emmy.simplr.replies:
+                u "(I should check Simplr.)"
+                jump v12s24_PhoneContinueEmmy
 
         scene v12sic1a
         with dissolve
@@ -62,6 +67,8 @@ label v12_simplr_convo:
         u "(Very interesting... *Chuckles* Now, I need to sleep.)"
     
     else:
+        call screen phone
+
         scene v12sic1c
         with dissolve
 
