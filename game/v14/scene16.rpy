@@ -98,10 +98,6 @@ label v14s16:
 
     cl "*Speaking fast* Like, what the actual fuck!? Am I missing something?! I have to win this race! She can't just, fuck everything up all because she doesn't trust me!"
 
-    show screen loyalty_tutorial # Placeholder
-
-    hide screen loyalty_tutorial # Placeholder
-
     cl "I need a lot of help if I'm going to beat her, [name]. It won't be as easy as I thought either."
 
     cl "Chris has pretty much promised that the Wolves will side with me so that's a blessing, but the main person I need support from is you."
@@ -114,7 +110,9 @@ label v14s16:
 
     cl "I know I've asked you before, but this time I need a final answer. Are you going to help me with this campaign so I can beat Lindsey?"
 
-    cl "It would include planning campaign events like parties, making T-shirts, that kind of stuff."
+    show screen loyalty_tutorial # Placeholder
+
+    hide screen loyalty_tutorial # Placeholder
 
     if v13_help_chloe:
         cl "I remember how you said you'd support me before but..."

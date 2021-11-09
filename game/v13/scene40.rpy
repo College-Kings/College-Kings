@@ -153,6 +153,7 @@ label v13s40:
     call screen v13s40_chloe
 
 label v13s40_honey:
+    $ v13s40_chloe_turned_on += 1
     scene v13s40ho_1 # TPP. Show MC pouring the honey on Chloe's breasts, Chloe slight smile, mouth closed
     #with dissolve
 
@@ -202,6 +203,7 @@ label v13s40_honey:
     call screen v13s40_chloe
 
 label v13s40_feather:
+    $ v13s40_chloe_turned_on += 1
     scene v13s40fe_1 # TPP. Show MC taking the feather and placing it on her chest, Chloe smiling, mouth closed
     #with dissolve
 
@@ -250,6 +252,7 @@ label v13s40_feather:
     call screen v13s40_chloe
 
 label v13s40_spanker:
+    $ v13s40_chloe_turned_on += 1
     scene v13s40sp_1 # TPP. Show MC untying Chloe, both smiling, mouths closed
     #with dissolve
 
@@ -467,6 +470,7 @@ label v13s40_shoulder:
             pause
 
         "Kiss":
+            $ v13s40_chloe_turned_on += 1
             scene v13s40shoulder_3 # TPP. Show MC kissing Chloe left shoulder, Chloe slight smile, mouth closed
             with dissolve
 
@@ -480,7 +484,7 @@ label v13s40_shoulder:
     call screen v13s40_chloe
         
 label v13s40_end_free_roam:
-    if v13s40_chloe_turned_on == 4:
+    if v13s40_chloe_turned_on >= 2:
         $ v13_chloesex = True
     
         scene v13s40end_1 # FPP. MC standing next to Chloe, Chloe looking up at MC, Chloe smiling, mouth open
