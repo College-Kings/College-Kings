@@ -484,6 +484,7 @@ label v14s31a:
     scene v14s31a_3i
     with dissolve
 
+    $ set_presidency_percent(v14_lindsey_popularity - 1)
     ca "Fine. I'll talk to Grayson."
 
     scene v14s31a_5f # FPP Same angle as 5, Chloe looking at Cameron, she looks very excited, like she's bouncing, mouth open

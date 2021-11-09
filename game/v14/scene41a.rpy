@@ -277,6 +277,9 @@ label v14s41a:
             "Stay quiet":
                 $ add_point(KCT.TROUBLEMAKER)
 
+                if v14_chloe_apes and not v14_chloe_grayson:
+                    u "(Even Cameron isn't speaking up, and he has an incentive to help Chloe win. I shouldn't press this further...)"
+
                 scene v14s41a_5a
                 with dissolve
 
@@ -397,6 +400,9 @@ label v14s41a:
                             with dissolve
 
                             ca "But I would give a shit if someone posted a photo like that of me, or even worse... Sam. Not sure if I can do this one, man."
+
+                            if v14_chloe_apes and not v14_chloe_grayson:
+                                u "(Thanks for the help, bro. Looks like that pep talk got to him...)"
 
                             scene v14s41a_5
                             with dissolve
