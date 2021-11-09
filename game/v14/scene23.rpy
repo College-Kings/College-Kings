@@ -177,7 +177,8 @@ label v14s23:
 
     ch "Now look, Chloe... I did agree to help you, but I didn't specify how involved or supportive I'd be."
 
-    ch "Putting my head out there in full support of you means that the Wolves must all be convinced or we'll have a divided frat with similar issues to what you have now."
+    ch "Putting my head out there in full support of you means that the Wolves must all be convinced."
+    ch "Or else we'll have a divided frat with similar issues to what you have now."
 
     scene v14s23_4a
     with dissolve

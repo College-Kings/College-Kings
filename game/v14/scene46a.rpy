@@ -200,7 +200,8 @@ label v14s46a:
     scene v14s46a_8 # FPP. MC's perspective, head turned looking at Lauren, who is smiling, mouth open.
     with dissolve
 
-    la "*Softly* As you drift off into a deep and pleasant state of relaxation, deeper and deeper... Listening and feeling the gentle caress of the natural elements around you."
+    la "*Softly* As you drift off into a deep and pleasant state of relaxation, deeper and deeper..."
+    la "*Softly* Listening and feeling the gentle caress of the natural elements around you."
 
     scene v14s46a_8a # FPP. Same as v14s46a_8, but Photoshop MC's vision closing his eyes 1/4 (simulate getting drowsy).
     with dissolve
@@ -282,7 +283,8 @@ label v14s46a:
         scene v14s46a_13 # TPP. MC smiling, sitting behind dream girl, rubbing lotion on her back. Dream Girl, smiling, eyes closed.
         with dissolve
 
-        la "*Softly* As you rub the lotion into her back, she removes her bikini top and turns around to face you. She's now asking you to massage the lotion into her breasts."
+        la "*Softly* As you rub the lotion into her back, she removes her bikini top and turns around to face you."
+        la "*Softly* She's now asking you to massage the lotion into her breasts."
 
         scene v14s46a_14 # FPP. MC looking down at Dream Girl, eyes open, smiling sexy, laying on her back, breasts fully exposed, holding the bottle of lotion towards her breasts.
         with dissolve
