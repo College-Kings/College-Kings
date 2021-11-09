@@ -39,7 +39,7 @@ label v14s47:
     scene v14s47_2 # FPP. MC now standing in front of Lindsey, Lindsey looking at MC, mouth open, smiling
     with dissolve
 
-    li "There he is. *Chuckles*"
+    li "There he is."
 
     scene v14s47_3 # TPP. Show MC looking confused, but smiling, to his right, mouth open, Lindsey laughing
     with dissolve
@@ -50,7 +50,7 @@ label v14s47:
         scene v14s47_2
         with dissolve
 
-        li "A handsome man... Who's ready to take some photos, I hope? *Chuckles*"
+        li "A handsome man... Who's ready to take some photos, I hope?"
 
         play sound "sounds/kiss.mp3"
 
@@ -73,7 +73,7 @@ label v14s47:
             scene v14s47_6 # TPP. Show MC twirling Lindsey around, Lindsey smiling, mouth open, MC smiling, mouth closed
             with dissolve
 
-            li "*Chuckles* I said I'd get dressed up nice."
+            li "I said I'd get dressed up nice."
 
             scene v14s47_2a
             with dissolve
@@ -89,7 +89,7 @@ label v14s47:
             scene v14s47_6
             with dissolve
 
-            li "*Chuckles* Like what you see?"
+            li "Like what you see?"
 
             scene v14s47_2a
             with dissolve
@@ -114,7 +114,7 @@ label v14s47:
             scene v14s47_2a
             with dissolve
 
-            u "Oh, I will. *Chuckles* You look great."
+            u "Oh, I will. You look great."
 
         scene v14s47_2
         with dissolve
@@ -140,7 +140,7 @@ label v14s47:
         scene v14s47_2
         with dissolve
 
-        li "*Chuckles* Okay, no. I think that's enough praise for today..."
+        li "Okay, no. I think that's enough praise for today..."
 
         if v14_pics_with_linds:
             scene v14s47_2a
@@ -167,7 +167,7 @@ label v14s47:
             scene v14s47_2a
             with dissolve
 
-            u "*Chuckles* You look nice by the way. Going out tonight?"
+            u "You look nice by the way. Going out tonight?"
 
             scene v14s47_2
             with dissolve
@@ -197,12 +197,12 @@ label v14s47:
     scene v14s47_8 # FPP. MC and Lindsey standing next to each other, close to the car, bodies facing the car, but looking at each other, Lindsey smiling, mouth open
     with dissolve
 
-    li "Yep. *Chuckles* This was my high school graduation present from my grandpa."
+    li "Yep. This was my high school graduation present from my grandpa."
 
     scene v14s47_8a # FPP. Same as v14s47_8, Lindsey mouth closed
     with dissolve
 
-    u "Oh, really? *Chuckles* And you're selling it?"
+    u "Oh, really? And you're selling it?"
 
     scene v14s47_8b # FPP. Same as v14s47_8, Lindsey looking down, smiling, mouth open
     with dissolve
@@ -222,7 +222,7 @@ label v14s47:
     scene v14s47_8a
     with dissolve
 
-    u "Hm... Sounds like a nice Grandpa. *Chuckles*"
+    u "Hm... Sounds like a nice Grandpa."
 
     scene v14s47_8b
     with dissolve
@@ -237,7 +237,7 @@ label v14s47:
     scene v14s47_8c # FPP. Same as v14s47_8, Lindsey looking at the car, smiling, mouth open
     with dissolve
 
-    li "I haven't had time! *Chuckles* This thing has been sitting around collecting dust for-"
+    li "I haven't had time! This thing has been sitting around collecting dust for-"
 
     scene v14s47_8a
     with dissolve
@@ -252,7 +252,7 @@ label v14s47:
     scene v14s47_8a
     with dissolve
 
-    u "*Chuckles* Alright. You're the boss."
+    u "Alright. You're the boss."
 
     scene v14s47_10 # TPP. Show MC grabbing his phonem, getting ready to take pics, smiling, mouth closed
     with dissolve
@@ -268,7 +268,7 @@ label v14s47:
         scene v14s47_8
         with dissolve
 
-        li "Hell yeah! *Chuckles* I'm excited for this."
+        li "Hell yeah! I'm excited for this."
 
         scene v14s47_8a
         with dissolve
@@ -293,7 +293,7 @@ label v14s47:
         scene v14s47_8a
         with dissolve
 
-        u "Either that or... Desperate for four wheels and a piece of metal. *Chuckles*"
+        u "Either that or... Desperate for four wheels and a piece of metal."
 
         scene v14s47_8
         with dissolve
@@ -329,7 +329,7 @@ label v14s47:
         scene v14s47_8a
         with dissolve
 
-        u "Right... Some people can be so easily offended. *Chuckles*"
+        u "Right... Some people can be so easily offended."
 
         u "I kind of meant because of how gross it is, though. *Laughs*"
 
@@ -341,7 +341,7 @@ label v14s47:
         scene v14s47_11
         with dissolve
 
-        u "*Chuckles* Alright, let's start with..."
+        u "Alright, let's start with..."
     call screen v14s47_car
 
 label v14s47_hood:
@@ -418,7 +418,7 @@ label v14s47_hood:
         scene v14s47_hood_5a
         with dissolve
 
-        u "Thank you. *Chuckles*"
+        u "Thank you."
 
         play sound "sounds/capture.mp3"
 
@@ -458,7 +458,7 @@ label v14s47_trunk:
         scene v14s47_trunk_2
         with dissolve
 
-        li "*Chuckles* I can try."
+        li "I can try."
 
         scene v14s47_trunk_2b # FPP. Same as v14s47_trunk_2, Lindsey on the tip of her toes, to get her ass higher, Lindsey sexy smile, mouth closed
         with dissolve
@@ -489,7 +489,7 @@ label v14s47_trunk:
         scene v14s47_trunk_2c # FPP. Same as v14s47_trunk_2, but no Lindsey
         with dissolve
 
-        u "*Chuckles* It honestly kind of looks like a clown car from the circus."
+        u "It honestly kind of looks like a clown car from the circus."
 
         scene v14s47_trunk_3 # FPP. Lindsey standing next to MC, Lindsey looking at MC, smiling, mouth open
         with dissolve
@@ -509,7 +509,7 @@ label v14s47_trunk:
         scene v14s47_trunk_3c # FPP. Same as v14s47_trunk_3, Lindsey smirking, mouth closed
         with dissolve
 
-        u "Not if you're a clown. *Chuckles*"
+        u "Not if you're a clown."
 
         scene v14s47_trunk_3d # FPP. Same as v14s47_trunk_3c, Lindsey smirking, mouth open
         with dissolve
@@ -572,7 +572,7 @@ label v14s47_driver:
         scene v14s47_driver_2c # FPP. Same as v14s47_driver_2, Lindsey posing by the door, sucking on the lollipop, making a sexy face at MC, mouth closed
         with dissolve
 
-        u "Holy shit, Linds... I wouldn't be able to turn down an offer like that either. *Chuckles*"
+        u "Holy shit, Linds... I wouldn't be able to turn down an offer like that either."
 
         scene v14s47_driver_2d # FPP. Same as v14s47_driver_2c, Lindsey mouth open
         with dissolve
@@ -604,7 +604,7 @@ label v14s47_driver:
         scene v14s47_driver_2c
         with dissolve
 
-        u "Beautiful. *Chuckles* What's next?"
+        u "Beautiful. What's next?"
     
     else:
         $ v14s47_solo_driver = True
@@ -628,7 +628,7 @@ label v14s47_driver:
         scene v14s47_driver_4a # FPP. Same as v14s47_driver_4, Lindsey mouth open
         with dissolve
 
-        li "Ha, um... Pretty sure the action happens in the back seat. *Chuckles*"
+        li "Ha, um... Pretty sure the action happens in the back seat."
 
         scene v14s47_driver_4
         with dissolve
@@ -675,7 +675,7 @@ label v14s47_driver:
         scene v14s47_driver_4
         with dissolve
 
-        u "Beautiful. *Chuckles* What's next?"
+        u "Beautiful. What's next?"
     
     call screen v14s47_car
 
@@ -790,7 +790,7 @@ label v14s47_passenger:
         scene v14s47_passenger_4a # FPP. Same as v14s47_passenger_4, but Lindsey mouth open
         with dissolve
 
-        li "Hmm... Maybe the animal lovers will like it? *Chuckles*"
+        li "Hmm... Maybe the animal lovers will like it?"
 
         scene v14s47_passenger_4
         with dissolve
@@ -800,7 +800,7 @@ label v14s47_passenger:
                 $ v14s47_solo_no_bird = True
                 $ v14s47_pics += 1
                 
-                u "Nah. Scare it away before it poops! *Chuckles*"
+                u "Nah. Scare it away before it poops!"
 
                 scene v14s47_passenger_2g # FPP. Same as v14s47_passenger_2f, Lindsey walking over to the brid, arms raised, mouth open, trying to scare it away (Lindsey was standing next to MC)
                 with dissolve
@@ -908,7 +908,7 @@ label v14s47_end:
         scene v14s47_end_1a
         with dissolve
 
-        li "Well, just... Don't say it out loud like that. *Chuckles*"
+        li "Well, just... Don't say it out loud like that."
 
         scene v14s47_end_1c
         with dissolve
@@ -954,7 +954,7 @@ label v14s47_end:
     scene v14s47_end_1c
     with dissolve
 
-    u "Are you reading my mind? *Chuckles*"
+    u "Are you reading my mind? "
 
     scene v14s47_end_1b
     with dissolve
