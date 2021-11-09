@@ -216,7 +216,7 @@ label v14s25a:
     scene v14ambjoFPPf # Jerkoff faster
     with dissolve
 
-    u "*Whispers* All he had to do was aim... *Chuckles*"
+    u "*Whispers* All he had to do was aim..."
 
     # ANIMATION: Jerkoff angle 2
     image v14ambjoTPP = Movie(play="images/v14/Scene 25a/v14ambjoTPP.webm", loop=True, image="images/v14/Scene 25a/v14ambjoTPP.webp", start_image="images/v14/Scene 25a/v14ambjoTPP.webp")
@@ -252,7 +252,7 @@ label v14s25a:
     scene v14s25a_15 # FPP Amber sucking MC's dick clean
     with dissolve
 
-    am "Mmm... *Chuckles*"
+    am "Mmm..."
 
     scene v14s25a_15a # FPP Same angle as 15, Amber getting the last of MC's cum into her mouth with her finger
     with dissolve
@@ -272,7 +272,7 @@ label v14s25a:
     scene v14s25a_18 # FPP MC's view of Amber, who is laying close to him on the bed, mouth closed
     with dissolve
 
-    u "I can't even feel my fingers. *Chuckles*"
+    u "Whoa, I can't even feel my fingers..."
 
     scene v14s25a_18a # FPP Same as 18, Amber's mouth open
     with dissolve

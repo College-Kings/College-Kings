@@ -1258,7 +1258,7 @@ label v14s36:
         scene v14s36_13 # FPP. MC looks at his phone and see's that Lauren is calling him
         with dissolve
 
-        u "(Speaking of life never being dull...) *Chuckles*"
+        u "(Speaking of life never being dull...)"
 
         scene v14s36_14 # TPP. show Lauren in her bed naked sitting on her bed with her knees bent, one hand holding her phone, with the other hand on her clit, full smile mouth closed, looking between her legs, also show her laptop next to her
         with dissolve

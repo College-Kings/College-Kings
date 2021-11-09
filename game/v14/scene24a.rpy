@@ -132,7 +132,7 @@ label v14s24a:
     scene v14s24a_11a
     with dissolve
 
-    u "*Chuckles* Later man."
+    u "Haha, later man."
 
     scene v14s24a_12 # TPP. MC, big smile, mouth closed, pushing on the door to leave the store. Candy is either in pocket (not visible) or you need a bag. 
     with dissolve

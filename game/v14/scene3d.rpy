@@ -32,7 +32,7 @@ label v14s03d:
     scene v14s03d_2b
     with dissolve
 
-    satin "You said that with a puffed out chest. *Chuckles*"
+    satin "You said that with a puffed out chest."
 
     scene v14s03d_2c
     with dissolve
@@ -123,7 +123,7 @@ label v14s03d:
     scene v14s03d_4c # FPP Same angle as 4, Satin doing a new sexy pose, her mouth open
     with dissolve
 
-    satin "So, you're liking what you see? *Chuckles*"
+    satin "So, you're liking what you see?"
 
     scene v14s03d_4a
     with dissolve
@@ -264,7 +264,7 @@ label v14s03d:
 
             satin "*Moans* Thank you, but... please... stop talking."
 
-            u "(She wants me to just sit here? *Chuckles*)"
+            u "(She wants me to just sit here?)"
 
             scene v14satrcgTPP2f # Ignore as animation
             with dissolve

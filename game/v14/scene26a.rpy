@@ -279,7 +279,7 @@ label v14s26a:
         scene v14s26_11 # Ignore as reused from another scene
         with dissolve
 
-        u "(She's a handful.) *Chuckles*"
+        u "(She's a handful.)"
 
     scene v14s26_12 # Ignore as reused from another scene
     with dissolve

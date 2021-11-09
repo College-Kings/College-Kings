@@ -94,7 +94,7 @@ label v14s03e:
         scene v14s03e_6
         with dissolve
 
-        u "Oh, my bad. *Chuckles* I was, you know... busy. You weren't?"
+        u "Oh, my bad. I was, you know... busy. You weren't?"
 
         scene v14s03e_6a
         with dissolve
@@ -238,7 +238,7 @@ label v14s03e:
     scene v14s03e_8f # FPP. Same as v14s03e_8d, different posture
     with dissolve
 
-    imre "Guess you're not so bad after all. *Chuckles*"
+    imre "Guess you're not so bad after all."
 
     scene v14s03e_9
     with dissolve

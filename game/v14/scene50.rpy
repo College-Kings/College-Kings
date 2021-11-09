@@ -43,7 +43,7 @@ label v14s50:
         scene v14s50_2a
         with dissolve
 
-        u "*Whispers* You look cute, by the way. *Chuckles*"
+        u "*Whispers* You look cute, by the way."
 
         scene v14s50_2b # FPP. SAme as v14s50_2, but Lindsey slightly blushing, smiling, mouth slightly open, face appearing through the crack of the door.
         with dissolve
@@ -131,14 +131,14 @@ label v14s50:
 
     li "No, no! No, I am not pregnant. I promise. That's not it, haha."
 
-    au "For fuck's sake! *Chuckles* Thank God."
+    au "For fuck's sake! Thank God."
 
     scene v14s50_3a
     with dissolve
 
     li "Ha! Can we go up to your room?"
 
-    au "Oooh, super serious! *Chuckles* Come on, let's go."
+    au "Oooh, super serious! Come on, let's go."
 
     scene v14s50_4 # FPP. MC looking throught the crack in the door, seeing Lindsey following Aubrey, both disappearing up the stairs.
     with dissolve
@@ -163,7 +163,7 @@ label v14s50:
     scene v14s50_8 # TPP. MC, concentrating, squatting and tip toeing (trying to be quiet) up the stairs.
     with dissolve
 
-    u "(I feel like a ninja. *Chuckles*)"
+    u "(I feel like a ninja, haha.)"
 
     scene v14s50_9 # TPP. MC, concentrating, mouth closed, at the top of the stairs, more dirty clothes scattered on the floor and stair railing.
     with dissolve
@@ -269,7 +269,7 @@ label v14s50:
             scene v14s50_12
             with dissolve
             
-            u "(Is this story real or did she just pull this out of her ass? Pun intended *Chuckles*)"
+            u "(Is this story real or did she just pull this out of her ass? Pun intended...)"
 
             scene v14s50_11b
             with dissolve
@@ -286,7 +286,7 @@ label v14s50:
             scene v14s50_13
             with dissolve
 
-            u "(This isn't the best conversation to be eavesdropping on. *Chuckles* I should get to Chloe's room while I still have time.)"
+            u "(This isn't the best conversation to be eavesdropping on. I should get to Chloe's room while I still have time.)"
 
             menu:
                 "Go to Chloe's room": # -if Go to Chloe's room
@@ -423,7 +423,7 @@ label v14s50:
                             scene v14s50_12
                             with dissolve
 
-                            u "(I think I've heard enough about Maria's injury. And gained enough knowledge about anal thanks to Aubrey... *Chuckles*)"
+                            u "(I think I've heard enough about Maria's injury. And gained enough knowledge about anal thanks to Aubrey...)"
 
                             if aubreyrs: # -if AubreyRS
                                 scene v14s50_15 # TPP  Close up on MC face, smiling mischievously, thinking dirty thoughts, mouth closed.

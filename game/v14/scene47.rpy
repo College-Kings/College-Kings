@@ -252,7 +252,7 @@ label v14s47:
     scene v14s47_8a
     with dissolve
 
-    u "*Chuckles* Alright. You're the boss."
+    u "Alright, you're the boss."
 
     scene v14s47_10 # TPP. Show MC grabbing his phonem, getting ready to take pics, smiling, mouth closed
     with dissolve
@@ -268,7 +268,7 @@ label v14s47:
         scene v14s47_8
         with dissolve
 
-        li "Hell yeah! *Chuckles* I'm excited for this."
+        li "Hell yeah! I'm excited for this."
 
         scene v14s47_8a
         with dissolve

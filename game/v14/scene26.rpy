@@ -119,7 +119,7 @@ label v14s26:
     scene v14s26_5
     with dissolve
 
-    u "Wow, that's... Thanks. *Chuckles*"
+    u "Wow, that's... Thanks!"
 
     scene v14s26_5a
     with dissolve
@@ -347,7 +347,7 @@ label v14s26:
         scene v14s26_11 # TPP. MC hangs up the phone, slight smile, mouth closed
         with dissolve
 
-        u "(She's a handful.) *Chuckles*"
+        u "(She's a handful.)"
 
     scene v14s26_12 # TPP. MC gets up and heads over to Lindsey's stand, Lauren has left
     with dissolve

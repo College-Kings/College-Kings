@@ -14,7 +14,7 @@ label v14s46: # -MC is walking along the sidewalk when he gets a call from Laure
     scene v14s46_2 # FPP. MC, looking at his phone. (if Possible, have picture of Lauren show on the screen).
     with dissolve
 
-    u "(I'm famous today. *Chuckles*)"
+    u "(I'm famous today...)"
    
     play sound "sounds/answercall.mp3"
 

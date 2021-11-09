@@ -466,7 +466,7 @@ label v14s43c:
         scene v14s43c_6
         with dissolve
 
-        u "(She's lying on me? *Chuckles*)"
+        u "(She's lying on me?)"
 
         scene v14s43c_6
         with dissolve
@@ -491,7 +491,7 @@ label v14s43c:
         scene v14s43c_7
         with dissolve
 
-        pe "Gotta make it seem as real as possible. *Chuckles*"
+        pe "Gotta make it seem as real as possible, right?"
 
         scene v14s43c_3
         with dissolve

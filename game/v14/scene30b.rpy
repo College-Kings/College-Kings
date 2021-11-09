@@ -51,7 +51,7 @@ label v14s30b:
     scene v14s30b_2a
     with dissolve
 
-    u "*Chuckles* She is your VP."
+    u "*She is your VP..."
 
     scene v14s30b_2
     with dissolve
@@ -99,7 +99,7 @@ label v14s30b:
         scene v14s30b_2
         with dissolve
 
-        cl "Good call. *Chuckles* I'm gonna post that one on Kiwii."
+        cl "Good call. I'm gonna post that one on Kiwii then."
 
     else:
         cl "I know the entire school is gonna be off the wall about these photos, haha."
@@ -132,7 +132,7 @@ label v14s30b:
         scene v14s30b_2
         with dissolve
 
-        cl "Good call. *Chuckles* I'm gonna post that one on Kiwii."
+        cl "Good call. I'm gonna post that one on Kiwii then."
 
     scene v14s30b_2a
     with dissolve

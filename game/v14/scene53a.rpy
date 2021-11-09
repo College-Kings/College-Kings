@@ -126,7 +126,7 @@ label v14s53a:
     scene v14s53a_8
     with dissolve
 
-    sa "*Moans* Yes sir... *Chuckles*"
+    sa "*Moans* Yes sir..."
 
     scene v14s53a_9
     with dissolve
@@ -184,7 +184,7 @@ label v14s53a:
     with dissolve 
     pause
 
-    sa "*Chuckles* Yeah? *Chuckles* Do it then... Fuck me... *Moans*"
+    sa "Yeah? Do it then... Fuck me... *Moans*"
 
     scene v14samccgb2f  # Ignore as animation
     with dissolve 
@@ -258,7 +258,7 @@ label v14s53a:
     scene v14s53a_16a
     with dissolve
 
-    sa "*Wasted* Yeah, perfect... *Chuckles* I'm going to sleep now."
+    sa "*Wasted* Yeah, perfect... I'm going to sleep now."
 
     scene v14s53a_16
     with dissolve

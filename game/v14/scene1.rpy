@@ -346,7 +346,7 @@ label v14s01:
             scene v14s01_1g # FPP. Same as v14s01_1e, but Riley mouth closed, Aubrey mouth open
             with dissolve
 
-            au "*Chuckles* Wow, I was not expecting that."
+            au "Wow, I was not expecting that."
 
             scene v14s01_1f
             with dissolve

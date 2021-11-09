@@ -324,7 +324,7 @@ label v14s21a:
     scene v14s21a_18 # FPP Show Chloe walking off
     with dissolve
 
-    u "(The girl who everyone says is the hottest on campus, and she's fawning over me... *Chuckles* Wow, [name]. Just, wow...)"
+    u "(The girl who everyone says is the hottest on campus, and she's fawning over me... Wow, [name]. Just, wow...)"
 
     scene v14s21a_19 # TPP Show MC walking away
     with dissolve

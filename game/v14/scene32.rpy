@@ -359,7 +359,7 @@ label v14s32:
     scene v14s32_6a
     with dissolve
 
-    u "Bye. Good luck finding your friend. *Chuckles*"
+    u "Bye. Good luck finding your friend."
 
     scene v14s32_5c # TPP. Same as v14s32_5b, Rubee starting to walk to the gym door.
     with dissolve
@@ -371,7 +371,7 @@ label v14s32:
     scene v14s32_5d # TPP. Same as v14s32_5c, Rubee holding the door open for herself and looking back at MC, slight smile, mouth open.
     with dissolve
 
-    rub "*Chuckles* Thanks!"
+    rub "Thanks!"
 
     play sound "sounds/doorclose.mp3"
 
@@ -481,7 +481,7 @@ label v14s32:
 
     u "(He's obviously hiding something.)"
 
-    u "*Chuckles* If you say so."
+    u "If you say so."
 
     scene v14s32_7
     with dissolve

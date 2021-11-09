@@ -86,7 +86,7 @@ label v14s22:
     scene v14s22_5a
     with dissolve
 
-    u "\"Just helped\"? You're an angel, Lindsey. *Chuckles*"
+    u "\"Just helped\"? You're an angel, Lindsey!"
 
     u "What did Mr. Rose get out of all of this?"
 
@@ -179,7 +179,7 @@ label v14s22:
     scene v14s22_5g
     with dissolve
 
-    u "*Chuckles* (Chloe.)"
+    u "(Chloe...)"
 
     scene v14s22_5e
     with dissolve

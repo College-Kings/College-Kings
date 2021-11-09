@@ -59,7 +59,7 @@ label v14s46a:
         scene v14s46a_4
         with dissolve
 
-        la "*Chuckles* We'll see about that..."
+        la "We'll see about that..."
 
     scene v14s46a_4a
     with dissolve
@@ -423,7 +423,7 @@ label v14s46a:
         scene v14s46a_22a # FPP. Same as v14s46a_22, but Lauren's mouth closed.
         with dissolve
 
-        u "You were exploring and I was exploding. *Chuckles*"
+        u "You were exploring and I was exploding..."
 
         scene v14s46a_22
         with dissolve
@@ -732,7 +732,7 @@ label v14s46a:
     scene v14s46a_42 # TPP. MC standing in front of Lauren's closed door.
     with dissolve
 
-    u "(Hmm, well that was interesting... *Chuckles*)"
+    u "(Hmm, well that was interesting...)"
 
     if joinwolves: # -If Wolves, transition to scene 52
         jump v14s52
