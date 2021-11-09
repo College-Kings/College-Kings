@@ -360,7 +360,8 @@ label v14s48_continue2:
         scene v14s48_6a
         with dissolve
 
-        u "I really think we can get a solid four hundred bucks for it. It's turning to rust, but they know that from the pictures and our description. At Least it still runs. *Chuckles*"
+        u "I really think we can get a solid four hundred bucks for it."
+        u "It's turning to rust, but they know that from the pictures and our description. At least it still runs. *Chuckles*"
 
     scene v14s48_6d
     with dissolve

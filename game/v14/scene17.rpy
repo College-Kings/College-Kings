@@ -147,7 +147,8 @@ label v14s17:
     scene v14s17_8
     with dissolve
 
-    la "I don't know if I should be offended that you think my life revolves only around my education, or flattered because that just means you consider me responsible... *Chuckles*"
+    la "I don't know if I should be offended that you think my life revolves only around my education..."
+    la "...or flattered because that just means you consider me responsible... *Chuckles*"
 
     menu:
         "Joke":
