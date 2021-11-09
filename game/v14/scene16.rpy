@@ -96,7 +96,8 @@ label v14s16:
     scene v14s16_2
     with dissolve
 
-    cl "*Speaking fast* Like, what the actual fuck!? Am I missing something?! I have to win this race! She can't just, fuck everything up all because she doesn't trust me!"
+    cl "Like, what the actual fuck!? Am I missing something?!"
+    cl "I have to win this race! She can't just, fuck everything up all because she doesn't trust me!"
 
     cl "I need a lot of help if I'm going to beat her, [name]. It won't be as easy as I thought either."
 

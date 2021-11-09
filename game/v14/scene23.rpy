@@ -525,11 +525,15 @@ label v14s23:
                 scene v14s23_2b
                 with dissolve
 
-                u "Looking back on it now, a plush toy probably wasn't the best idea... but let's be clear, any \"image\" we put out will be the image of supporting Chloe's campaign."
+                u "Looking back on it now, a plush toy probably wasn't the best idea..."
+                u "But let's be clear, any \"image\" that gets out will be the image of supporting Chloe's campaign."
 
                 u "It's not really about what the Wolves will look like."
 
-                u "The only thing put on the Wolves is that you're supporting Chloe because you're respectable and trustworthy, and that's the image you want right?"
+                if joinwolves:
+                    u "The only thing put on the Wolves is that you're supporting Chloe because you're respectable and trustworthy, and that's the image you want right?"
+                else:
+                    u "The only thing put on the Wolves is that we're supporting Chloe because we're respectable and trustworthy, and that's the image you want right?"
 
                 scene v14s23_2a
                 with dissolve

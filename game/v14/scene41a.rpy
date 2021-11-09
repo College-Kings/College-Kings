@@ -307,7 +307,8 @@ label v14s41a:
                 scene v14s41a_5l
                 with dissolve
 
-                u "If you don't want her to win then fine, we'll stay out of the race. But sabotaging her isn't fair, it's not cool, and this photo is a complete invasion of privacy."
+                u "If you don't want her to win then fine, we'll stay out of the race."
+                u "But sabotaging her isn't fair, it's not cool, and this photo is a complete invasion of privacy."
 
                 scene v14s41a_6d # FPP. same as v14s41a_6b Ryan is now looking at mc, slightly angry, mouth open
                 with dissolve

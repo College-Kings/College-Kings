@@ -62,7 +62,8 @@ label v14s03b:
     scene v14s03b_5b # FPP Same angle as 5, Ryan is looking at MC, he looks confused and embarrased, mouth open
     with dissolve
 
-    ry "All I know is that I have a boner watching naked women walk around this room, but I have no idea what kind of place this is or what we're supposed to do here."
+    ry "All I know is that I have a boner watching naked women walk around this room."
+    ry "But I have no idea what kind of place this is or what we're supposed to do here."
 
     scene v14s03b_5a
     with dissolve
