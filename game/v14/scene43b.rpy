@@ -491,6 +491,8 @@ label v14s43b:
                 scene v14s43b_19 # FPP. Riley and MC have sat down and Riley grabs and holds MC's hand under the table they sat at from v14s43b_18, Riley half smile, mouth closed looking at MC
                 with dissolve
 
+                pause 0.75
+
             scene v14s43b_3f # FPP. same as v14s43b_3 Mr Lee. is centered in the middle of the screen
             with dissolve
 

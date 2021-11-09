@@ -215,6 +215,8 @@ label v14s30b:
         play sound "sounds/kiss.mp3"
         scene v14s30b_5 # FPP. Chloe kissing MC.
         with dissolve
+        
+        pause 1.5
 
     scene v14s30b_6 # FPP. Show Chloe running off away from MC.
     with dissolve

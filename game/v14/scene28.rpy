@@ -32,6 +32,8 @@ label v14s28:
         scene v14s28_2a
         with dissolve
         
+        pause 0.01 #close and open mouth due to many dialogue lines
+        
         scene v14s28_2
         with dissolve
 
@@ -42,6 +44,8 @@ label v14s28:
         scene v14s28_2a
         with dissolve
         
+        pause 0.01 #close and open mouth due to many dialogue lines
+        
         scene v14s28_2
         with dissolve
 
@@ -51,6 +55,8 @@ label v14s28:
 
         scene v14s28_2a
         with dissolve
+        
+        pause 0.01 #close and open mouth due to many dialogue lines
         
         scene v14s28_2
         with dissolve

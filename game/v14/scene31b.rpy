@@ -1138,6 +1138,8 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
         scene v14s31b_21j # TPP. Grayson, smiling, mouth closed, sits on his bed, Chloe, nervous, mouth closed, stands in front of him. MC, nuetral, mouth closed, stands close to the door.
         with dissolve
 
+        pause 0.75
+
         scene v14s31b_31 # Grayson, sitting on his bed, smiling, mouth open.
         with dissolve
         

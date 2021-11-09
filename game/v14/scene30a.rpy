@@ -290,6 +290,7 @@ label v14s30a:
             scene v14s30a_13c
             with dissolve
 
+    pause 0.75
 
     scene v14s30a_8
     with dissolve

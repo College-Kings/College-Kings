@@ -99,12 +99,22 @@ label v14s16:
     cl "Like, what the actual fuck!? Am I missing something?!"
     cl "I have to win this race! She can't just, fuck everything up all because she doesn't trust me!"
 
+    scene v14s16_2a
+    with dissolve
+    
+    pause 0.01 #close and open mouth due to many dialogue lines
+    
+    scene v14s16_2
+    with dissolve
+
     cl "I need a lot of help if I'm going to beat her, [name]. It won't be as easy as I thought either."
 
     cl "Chris has pretty much promised that the Wolves will side with me so that's a blessing, but the main person I need support from is you."
 
     scene v14s16_2a
     with dissolve
+    
+    pause 0.01 #close and open mouth due to many dialogue lines
     
     scene v14s16_2
     with dissolve

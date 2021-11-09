@@ -568,6 +568,8 @@ label v14s36:
 
         scene v14s36_5b # FPP. same as Jenny v14s36_5a reaches with her left hand and grabs Mc's right hand towards her chest
         with dissolve
+        
+        pause 0.75
 
         scene v14s36_5c # FPP. same as v14s36_5b Jenny places Mc's hand palm down between her breasts, and grazes the top of his hand with her fingers
         with dissolve
@@ -1028,6 +1030,8 @@ label v14s36:
 
                 scene v14s36_8a # TPP. Jenny gets out of the water and is standing on the edge of the lagoon looking down at Mc still in the water, full smile mouth closed, mc is looking up at her full smile mouth closed
                 with dissolve
+                
+                pause 0.75
 
                 scene v14s36_9 # FPP. Mc looks up from where he is standing and see's a full body shot of Jenny, water glistening down her body, the scar on her hip bone from render v14s36_4s should be in the same place in this image, Jenny is looking down at Mc full smile mouth open
                 with dissolve

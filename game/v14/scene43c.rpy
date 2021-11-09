@@ -82,6 +82,8 @@ label v14s43c:
 
                 scene v14s43c_2 # TPP. MC and Penelope still sitting on the stairs, MC leans in and kisses Penelope, one hand behind her head pulling her closer, Penelope has one hand up and touching Mc's chest and one on his leg
                 with dissolve
+                
+                pause 0.75
 
                 scene v14s43c_1c
                 with dissolve
@@ -393,6 +395,8 @@ label v14s43c:
 
         scene v14s43c_5e # TPP. same as v14s43c_5d Penelope kisses MC romantically, french kiss, Penelope has one hand behind mc's head and one on his cheek, Penelope's eyes are closed, Mc slightly shocked eyes open
         with dissolve
+        
+        pause 1.75
 
         scene v14s43c_1s # FPP. same as v14s43c_1c Penelope has slight tears in her eyes, mouth closed
         with dissolve
@@ -476,6 +480,8 @@ label v14s43c:
 
         scene v14s43c_7 # FPP. Mc is laying down so the background would resemble as such, Penelope is still laying on top of MC, one hand over his cheek, full smile, and blushing looking at MC, mouth closed
         with dissolve
+        
+        pause 0.75
 
         scene v14s43c_7a # FPP. same as v14s43c_7 Penelope's mouth is closed
         with dissolve
