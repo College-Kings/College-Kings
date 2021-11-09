@@ -832,7 +832,7 @@ label v14s47_passenger:
 
                 pause
 
-                play sound "sounds/capture.mp3" 
+                play sound "sounds/capture.mp3"
 
                 scene v14s47_passenger_3
                 with flash
@@ -855,7 +855,7 @@ label v14s47_passenger:
 
                 li "He is a cute little bird!"
 
-                play sound "sounds/capture.mp3" 
+                play sound "sounds/capture.mp3"
 
                 $ grant_achievement("say_chirp")
 
