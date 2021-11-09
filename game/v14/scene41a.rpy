@@ -200,7 +200,7 @@ label v14s41a:
         scene v14s41a_3b # FPP. same as v14s41a_3a A picture of Chloe in very seductive lingerie is projected on the TV screen, Ryan is looking at the TV screen and throws both his hands up in the air in excitement full smile mouth open, Cameron is looking, laughing, and pointing at the TV screen, Grayson is holding his phone in one hand with his other raised at the TV screen palm outward with a smug/grinning look on his face mouth closed
         with dissolve
 
-        pause 0.75
+        pause
 
         scene v14s41a_5j # FPP. same as v14s41a_5i Grayson is looking at MC, Grayson is still holding his phone, the image from v14s41a_3b is now on the TV screen behind Grayson, Grayson has a smug/grinning expression, mouth closed
         with dissolve
@@ -231,7 +231,7 @@ label v14s41a:
         scene v14s41a_5b
         with dissolve
 
-        gr "I have my ways, but that's not the point. The point is, this is what's gonna fuck Chloe up and make Lindsey win."
+        gr "It's from back in the day when we used to date, but that's not the point. The point is, this is what's gonna fuck Chloe up and make Lindsey win."
 
         scene v14s41a_4
         with dissolve

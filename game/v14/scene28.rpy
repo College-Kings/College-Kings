@@ -267,6 +267,8 @@ label v14s28:
     scene v14s28_3a # TPP. Same as v14s28_3, Show MC and Emily giving eachother a casual hug, both slight smile, mouth closed.
     with dissolve
 
+    pause 0.75
+
     if v14_emily_ily:
         scene v14s28_2g # FPP. Same as v14s28_2f, Emily slight smile, mouth open.
         with dissolve

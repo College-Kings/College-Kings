@@ -53,7 +53,7 @@ label v14s29:
         u "(I guess we'll do that another time.)"
 
         scene v14s29_4 # TPP. Show MC walking down the sidewalk towards the wolves house
-        with dissolve
+        with fade
 
         if v14_realwolf:
             pause 0.75

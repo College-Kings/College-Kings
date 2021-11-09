@@ -427,7 +427,7 @@ label v14s25:
     scene v14s25_9 # TPP. Close up of Amber looking at the pill bottle, MC off camera, slight frown, mouth closed.
     with dissolve
 
-    pause 1.25
+    pause
 
     scene v14s25_8d
     with dissolve

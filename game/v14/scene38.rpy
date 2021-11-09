@@ -34,22 +34,22 @@ label v14s38:
 
     u "It doesn't bother you to walk around alone at night?"
 
-    scene v14s38_4 # FPP. Same as v14s38_3, but Jenny's head has a subtle tilt and background 2 behind Jenny (so it looks like they are walking).
+    scene v14s38_3 # FPP. Same as v14s38_3, but Jenny's head has a subtle tilt and background 2 behind Jenny (so it looks like they are walking).
     with dissolve
 
     jen "Not really, I used to do it all the time growing up. Nothing's happened so far, haha."
 
-    scene v14s38_4a # FPP. Same as v14s38_3a, but background 2 behind Jenny.
+    scene v14s38_3a # FPP. Same as v14s38_3a, but background 2 behind Jenny.
     with dissolve
 
     u "Okay, well don't say it like that. *Laughs* Hopefully nothing ever happens."
 
-    scene v14s38_5 # FPP. Same as v14s38_4, but Jenny's head has a subtle tilt different than v14s38_4 and background 3 behind Jenny.
+    scene v14s38_4 # FPP. Same as v14s38_4, but Jenny's head has a subtle tilt different than v14s38_4 and background 3 behind Jenny.
     with dissolve
 
     jen "If you keep stalking me I won't even have to worry."
 
-    scene v14s38_5a # FPP. Same as v14s38_4a, but background 3 behind Jenny.
+    scene v14s38_4a # FPP. Same as v14s38_4a, but background 3 behind Jenny.
     with dissolve
 
     u "I wasn't trying to-"
@@ -64,12 +64,12 @@ label v14s38:
 
     u "*Laughs* Cool, I don't want you thinking I'm some creep."
 
-    scene v14s38_5
+    scene v14s38_4
     with dissolve
 
     jen "Trust me, if I did, I would've said something by now."
 
-    scene v14s38_5a
+    scene v14s38_4a
     with dissolve
 
     u "So, since you haven't said anything by now..."
@@ -84,7 +84,7 @@ label v14s38:
 
     u "*Chuckles*"
 
-    scene v14s38_4b # # FPP. Same as v14s38_4, but Jenny laughing, but use the same background from v14s38_4. 
+    scene v14s38_4 # # FPP. Same as v14s38_4, but Jenny laughing, but use the same background from v14s38_4. 
     with dissolve
 
     jen "*Laughs*"

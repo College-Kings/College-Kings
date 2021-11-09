@@ -706,6 +706,8 @@ label v14s23:
 
     play sound "sounds/vibrate.mp3"
 
+    u "*Phone vibrates*"
+
     scene v14s23_2a
     with dissolve
 
@@ -717,6 +719,7 @@ label v14s23:
     u "Nah, it shouldn't be important. It's okay."
 
     play sound "sounds/vibrate.mp3"
+    u "*Phone vibrates*"
 
     scene v14s23_4b
     with dissolve
