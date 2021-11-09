@@ -468,29 +468,27 @@ label v14s20:
 
             pause 0.75
 
-        "It was nice catching up":
-            u "It was really nice catching up with you, but I actually need to hurry. I've got this thing..."
-
             scene v14s20_3a
             with dissolve
 
-            aut "Oh, right, yeah! Don't let me make you late, go ahead. *Chuckles*"
+            u "Yeah, see ya. *Chuckles*"
+
+        "It was nice catching up":
+            u "It was really nice catching up with you, but I actually need to hurry. I've got this thing..."
 
             scene v14s20_3
             with dissolve
 
+            aut "Oh, right, yeah! Don't let me make you late, go ahead. *Chuckles*"
+
+            scene v14s20_3a
+            with dissolve
+
             u "*Chuckles* Thanks."
 
+            u "Yeah, see ya. *Chuckles*"
+
     # -Regardless of everything scene continued
-    scene v14s20_3
-    with dissolve
-
-    aut "So, I'll see you around?"
-
-    scene v14s20_3a
-    with dissolve
-
-    u "Yeah, see ya. *Chuckles*"
 
     scene v14s20_5 # FPP Show Autumn walking off down the hall toward more people
     with dissolve

@@ -78,22 +78,20 @@ label v14s36:
     scene v14s36_4
     with dissolve
 
-    jen "Yeah, she didn't say much. Just that she was too busy to meet me."
-
-    scene v14s36_4
-    with dissolve
-
-    jen "I think she just didn't want to come out. *Chuckles*"
+    jen "Oh, I tried texting her but she told me she was sleeping early."
 
     scene v14s36_4a
     with dissolve
 
-    u "Haha, maybe."
+    u "Oh, alright..."
+    
+    if penelopers and v11s23_penelope_date:
+        u "(Maybe it's a good thing I didn't try calling her...)"
 
     scene v14s36_4b # FPP. same as v14s36_4 Jenny has a curious expression, mouth open
     with dissolve
 
-    jen "I've been noticing a lot of campaign stuff going on at SVC. I believe it's with the Chicks house?"
+    jen "Say, I've been noticing a lot of campaign stuff going on at SVC. I believe it's with the Chicks house?"
 
     scene v14s36_4c # FPP. same as v14s36_4b Jenny's mouth is closed
     with dissolve
@@ -243,9 +241,6 @@ label v14s36:
 
             jen "Well, I'm not some \"Chick\". *Chuckles*"
 
-            scene v14s36_4g
-            with dissolve
-
             jen "So what I consider fun is usually something wild and exhilarating. Like going to a strip club, spontaneous skinny dipping, stuff like that."
 
         "Not really":
@@ -260,9 +255,6 @@ label v14s36:
             with dissolve
 
             jen "Oh, I see..."
-
-            scene v14s36_4i
-            with dissolve
 
             jen "Well, that's too bad."
 
@@ -281,18 +273,12 @@ label v14s36:
 
     u "Your friendship with Penelope."
 
-    scene v14s36_4a
-    with dissolve
-
     u "You're the one that's secretly wild and leans on her for a bit of structure, and she's the structured one who leans on you for fun."
 
     scene v14s36_4g
     with dissolve
 
     jen "Haha..."
-
-    scene v14s36_4g
-    with dissolve
 
     jen "I've never taken the time to break down our friendship like that and look at it but, yeah. I guess you're right."
 
@@ -310,9 +296,6 @@ label v14s36:
     with dissolve
 
     u "Haha, I see."
-
-    scene v14s36_4a
-    with dissolve
 
     u "I guess there's a lot you can get to know about a person if you see them more than a few times... Weird. *Laughs*"
 
@@ -385,9 +368,6 @@ label v14s36:
     with dissolve
 
     jen "Well, like..."
-
-    scene v14s36_4
-    with dissolve
 
     jen "I'm not mad that it happened, and I don't regret it or anything. *Chuckles*"
 
@@ -579,9 +559,6 @@ label v14s36:
 
         jen "I'm really happy you decided to come out tonight."
 
-        scene v14s36_5
-        with dissolve
-
         jen "I'm kind of glad that Penelope turned me down, actually. *Chuckles*"
 
         scene v14s36_5a # FPP. same as v14s36_5 Jenny's mouth is closed
@@ -647,16 +624,16 @@ label v14s36:
 
         jen "How could I want to be around anyone else?"
 
-        scene v14s36_5f
-        with dissolve
-
         menu:
             "Kiss her":
                 $ jennyrs = True
+                $ v14_jenny_sex = True
                 if chloegf or laurenrs or penelopers:
                     $ add_point(KCT.TROUBLEMAKER)
                 else:
                     $ add_point(KCT.BOYFRIEND)
+
+                label v14s36_sg:
 
                 scene v14s36_3h # TPP. same as v14s36_3d MC grabs Jenny's face and kisses her, both of their eyes are closed
                 with dissolve
@@ -698,18 +675,12 @@ label v14s36:
 
                 jen "*Whispers* I didn't think you'd be down for this."
 
-                scene v14s36_3k
-                with dissolve
-
                 u "(Oh fuuccckk...)"
 
                 scene v14s36_3l # TPP. same as v14s36_3k Jenny kisses the other side of MC's neck, close to his jaw
                 with dissolve
 
                 jen "*Whispers* With us not really knowing each other that much..."
-
-                scene v14s36_3l
-                with dissolve
 
                 u "Mhmm..."
 
@@ -732,9 +703,6 @@ label v14s36:
                 with dissolve
 
                 u "I feel like we've built a real connection tonight and along with everything we've already been through..."
-
-                scene v14s36_4p
-                with dissolve
 
                 u "Something is there, I feel it. And I like it a lot."
 
@@ -1136,6 +1104,8 @@ label v14s36:
 
                 u "(My life is never dull, haha!)"
 
+                $ renpy.end_replay()
+
             "Don't kiss her":
                 $ jennyawkward = True
                 if chloegf or laurenrs or penelopers:
@@ -1211,6 +1181,7 @@ label v14s36:
                 u "Goodnight."
 
     else:
+        call screen kct_popup(required_kct="loyal")
         $ jennyfriend = True
         scene v14s36_4
         with dissolve
@@ -1278,7 +1249,6 @@ label v14s36:
     pause 0.75
 
     if laurenrs:
-
         play sound "sounds/vibrate.mp3"
 
         scene v14s36_13 # FPP. MC looks at his phone and see's that Lauren is calling him
@@ -1316,9 +1286,6 @@ label v14s36:
 
         la "Ha, sorry!"
 
-        scene v14s36_14c
-        with dissolve
-
         la "Did you know that there's like hundreds of different sex positions and depending on the position, you can feel different things?"
 
         scene v14s36_14b
@@ -1345,9 +1312,6 @@ label v14s36:
         with dissolve
 
         la "Really! So, I'm gonna need you to watch some stuff too and, you know..."
-
-        scene v14s36_14d
-        with dissolve
 
         la "Get some ideas of what you're comfortable with."
 
@@ -1423,7 +1387,6 @@ label v14s36:
         jump v14s38
 
     else:
-
         scene v14s36_16
         with dissolve
 

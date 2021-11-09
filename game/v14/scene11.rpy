@@ -60,16 +60,22 @@ label v14s11:
 
         lee "I am too!"
 
-    else: 
-        scene v14s11_3 #FPP. MC sees Charli with his bag leaving the airport, without speaking to anyone, Charli's back is turned
-        with dissolve
+    else:
+        if v13s20_bleach_suitcase:
+            scene v14s11_3 #FPP. MC sees Charli with his bag leaving the airport, without speaking to anyone, Charli's back is turned
+            with dissolve
 
-        u "(He came into our lives with a bang, trying to show his ass off, and look at him now... A sad dude, walking away all alone, just as he was when he first arrived.)"
+            u "(He came into our lives with a bang, trying to show his ass off, and look at him now... A sad dude, walking away all alone, just as he was when he first arrived.)"
 
-        scene v14s11_3
-        with dissolve
+            u "(Definitely didn't like the guy, but I do get this weird feeling seeing him go.)"
 
-        u "(Definitely didn't like the guy, but I do get this weird feeling seeing him go.)"
+        else:
+            scene v14s11_3a #FPP. MC sees Charli with his bag leaving the airport, without speaking to anyone, Charli's back is turned
+            with dissolve
+
+            u "(He came into our lives with a bang, trying to show his ass off, and look at him now... A sad dude, walking away all alone, just as he was when he first arrived.)"
+
+            u "(Definitely didn't like the guy, but I do get this weird feeling seeing him go.)"
 
     scene v14s11_4 # FPP. Mc turns around and see's Riley approaching him, Riley looking at mc, Riley no expression, mouth closed
     with dissolve
@@ -311,9 +317,6 @@ label v14s11:
 
                 ri "I don't know, I mean- Yes! That was definitely a good wow..."
 
-                scene v14s11_4m
-                with dissolve
-
                 ri "I guess I just didn't think you'd be open to something like that. It's kind of my fantasy... *Chuckles*"
 
                 scene v14s11_4l
@@ -362,9 +365,6 @@ label v14s11:
                 with dissolve
 
                 u "I'll be honest, I like you a lot Riley. The feelings are definitely mutual and I'm really happy you told me, but relationship-wise..."
-
-                scene v14s11_4b
-                with dissolve
 
                 u "I'm just not the sharing type, I guess."
 
@@ -427,9 +427,6 @@ label v14s11:
         scene v14s11_4o
         with dissolve
 
-    scene v14s11_4o
-    with dissolve
-
     u "(Guess I need to get home myself. I can barely think with all this jetlag.)"
 
     scene v14s11_6 # TPP. show mc walking through the airport, no expression, mouth closed
@@ -439,5 +436,7 @@ label v14s11:
 
     scene v14s11_6a # TPP. same as v14s11_6 Mc exiting the airport
     with dissolve
+
+    pause 0.75
 
     jump v14s12

@@ -26,6 +26,8 @@ label v14s01:
 
     menu:
         "We're doing this":
+            label v14s01_sg:
+        
             $ v13_FirstThreesome = True
             u "I'm gonna feel much better after this."
 
@@ -246,6 +248,8 @@ label v14s01:
             scene v14s01_11d # FPP. Same as v14s01_11c, Aubrey and Riley mouths closed
             with dissolve
 
+            $ grant_achievement("ready_player_three")
+
             u "*Chuckles* I feel absolutely amazing. Thank you ladies."
 
             scene v14s01_11e # FPP. Same as v14s01_11d, Riley mouth open, Aubrey mouth closed
@@ -309,6 +313,8 @@ label v14s01:
             with dissolve
 
             u "(Am I just a lucky bastard or did I do something to deserve that? They sure did act like I earned this... Whatever I did, I need to keep doing it.)"
+
+            $ renpy.end_replay()
 
             scene v14s01_14 # TPP. Show MC getting out of his bed (he's naked), slight smile, mouth closed
             with dissolve

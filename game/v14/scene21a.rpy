@@ -173,7 +173,7 @@ label v14s21a:
     scene v14chlcgTPPf # Same as above but faster
     with dissolve
 
-    cl "Ha...*Moans* O-Okay, oh... Fuck, [name]."
+    cl "Ha... *Moans* O-Okay, oh... Fuck, [name]."
 
     scene v14s21a_11a # TPP Same angle as 11, Chloe looking up toward the sky and arching her back as she orgasms, mouth open
     with dissolve
@@ -263,6 +263,8 @@ label v14s21a:
     with dissolve
 
     u "I've missed you more, and hopefully again soon."
+
+    $ renpy.end_replay()
 
     scene v14s21a_16a # FPP Same as 16, Chloe's mouth open
     with dissolve

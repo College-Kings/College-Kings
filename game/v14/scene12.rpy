@@ -175,11 +175,12 @@ label v14s12:
     scene v14s12_4 # FPP. MC walking down the side walk looking at the San Vallejo college.
     with dissolve
 
-    u "(Still keeping this job a secret is really suspicious... And having to go to New York of all places is pretty... Odd. Oh, well.)"
+    u "(Still keeping this job a secret is really suspicious... And having to go to New York of all places is pretty... odd. Oh, well.)"
 
     if joinwolves:
         scene v14s12_5 # TPP. MC opening the door to the wolves frat house, slight smile, mouth closed.
         with fade
+
         pause 0.75
 
         jump v14s13
@@ -187,6 +188,7 @@ label v14s12:
     else:
         scene v14s12_6 # TPP. MC opening the doorr to the apes frat house, slight smile, mouth closed
         with fade
+
         pause 0.75
 
         jump v14s13a

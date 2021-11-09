@@ -129,9 +129,6 @@ label v14s09:
 
         menu:
             "Scare him":
-                scene v14s09_5b
-                with dissolve
-
                 u "(This should be fun.)"
 
                 scene v14s09_6 # FPP. MC looks at Mr. Lee, show just Mr. Lee looking at mc, holding a clipboard with one hand and a pen in the other, no expression, mouth closed
@@ -199,9 +196,6 @@ label v14s09:
     with dissolve
 
     lee "Students, please say \"here\" when we call your name."
-
-    scene v14s09_6a
-    with dissolve
 
     lee "[name]."
 
@@ -322,11 +316,6 @@ label v14s09:
 
         u "(Not for much longer...)"
 
-        #scene v14s09_6c
-        #with dissolve
-
-        #pause 0.75
-
     scene v14s09_8b
     with dissolve
 
@@ -409,9 +398,6 @@ label v14s09:
 
         am "Oh, she-"
 
-        scene v14s09_10
-        with dissolve
-
         am "She already left this morning with her brother."
 
         scene v14s09_8
@@ -451,9 +437,6 @@ label v14s09:
 
         ro "And last but not least..."
 
-        scene v14s09_8b
-        with dissolve
-
         ro "Our adorable assistant, Penelope."
 
         scene v14s09_11 # FPP. show penelope looking up at Ms. Rose, slight smile, mouth open
@@ -470,9 +453,6 @@ label v14s09:
         with dissolve
 
         pe "Oh... *Chuckles* Right, sorry!"
-
-        scene v14s09_11
-        with dissolve
 
         pe "Umm, I'm here... Lorraine. *Chuckles*"
 

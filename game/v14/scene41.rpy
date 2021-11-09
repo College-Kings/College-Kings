@@ -5,11 +5,6 @@
 
 label v14s41:
 # -Scene 40 and 41 are identical except for location
-    scene v14s41_1 # TPP. MC walks into his apes room, tired expression, mouth closed
-    with dissolve
-
-    pause 0.75
-
     scene v14s41_2 # TPP. MC plops on his apes bed after removing his clothes, slight smile, mouth closed
     with dissolve
 
@@ -17,12 +12,12 @@ label v14s41:
 
     if laurenrs:
         play sound "sounds/vibrate.mp3"
-        scene v14s40_2a # Ignore as reused from another scene
+        scene v14s41_2a
         with dissolve
 
         u "*Sighs*"
 
-        scene v14s40_2b # Ignore as reused from another scene
+        scene v14s41_2b
         with dissolve
 
         u "Hello?"
@@ -67,9 +62,6 @@ label v14s41:
 
         u "Well, there certainly is a first time for everything."
 
-        scene v14s40_4b # Ignore as reused from another scene
-        with dissolve
-
         u "(\"There's a first time for everything\", The fuck am I on about? I need sleep...)"
 
         scene v14s40_4 # Ignore as reused from another scene
@@ -81,9 +73,6 @@ label v14s41:
         with dissolve
 
         la "Are you tired or something? You don't sound like yourself..."
-
-        scene v14s40_4c # Ignore as reused from another scene
-        with dissolve
 
         menu:
             "What'd I say?":
@@ -116,9 +105,6 @@ label v14s41:
                 with dissolve
 
                 u "Honestly, yeah. I'm just so tired. Sorry if what I said sounded weird, ignore my stupid talk. *Chuckles*"
-
-                scene v14s40_4b # Ignore as reused from another scene
-                with dissolve
 
                 u "So... did you watch porn while you touched yourself?"
 
@@ -162,7 +148,7 @@ label v14s41:
 
                 u "You will, goodnight babe."
 
-                scene v14s40_2c # Ignore as reused from another scene
+                scene v14s41_2c
                 with dissolve
 
                 u "(Finally...)"
@@ -179,5 +165,7 @@ label v14s41:
 
     scene v14s41_5b # TPP. same as v14s40_5a differnet sleeping position
     with dissolve
+
+    pause 0.75
 
     jump v14s41a

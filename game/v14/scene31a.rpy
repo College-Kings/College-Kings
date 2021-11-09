@@ -32,7 +32,7 @@ label v14s31a:
     scene v14s31a_3a
     with dissolve
 
-    ca "You need to workout too, you look like a fucking fifth grader."
+    ca "You need to work out too, you look like a fucking fifth grader."
 
     scene v14s31a_3c # FPP Same angle as 3, Cameron laughing with his eyes closed
     with dissolve
@@ -161,7 +161,7 @@ label v14s31a:
     scene v14s31a_3d
     with dissolve
 
-    ca "I'm pretty slow, [name], but I'm not stupid. You've never come to workout with me before."
+    ca "I'm pretty slow, [name], but I'm not stupid. You've never come to work out with me before."
 
     if joinwolves: # -If Wolves (extra dialog)
         scene v14s31a_3f # FPP Same angle as 3, Cameron looks annoyed, mouth open
@@ -484,6 +484,7 @@ label v14s31a:
     scene v14s31a_3i
     with dissolve
 
+    $ set_presidency_percent(v14_lindsey_popularity - 1)
     ca "Fine. I'll talk to Grayson."
 
     scene v14s31a_5f # FPP Same angle as 5, Chloe looking at Cameron, she looks very excited, like she's bouncing, mouth open
@@ -563,6 +564,7 @@ label v14s31a:
                 ca "Ha... Alright."
 
             "She says what she needs to": # -If She says what she needs to (creates cameronBro for Wolves)
+                $ add_point(KCT.BRO)
                 $ cameronBro = True
                 u "She knows what she needs to say. She's damn good at it too."
 

@@ -67,9 +67,6 @@ label v14s06:
         
         u "Oh shit, good idea!"
 
-    scene v14s06_7
-    with dissolve
-    
     u "Tell me, are we riding the bus or...?"
 
     scene v14s06_7a

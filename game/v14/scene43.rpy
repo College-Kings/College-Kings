@@ -3,19 +3,16 @@
 # Characters: MC (Outfit: 1), PENELOPE (Outfit: 1)
 # Time: Morning
 # Phone Images: YES
-# v14s43_emily_pic: Emily is laying flat on her back in her bed, one arm holding the phone for selfie, the other trying to cover her nipples but slightly failing, we see a bit of the panties she has on, she's making a kissy face
+# v14kw43: Emily is laying flat on her back in her bed, one arm holding the phone for selfie, the other trying to cover her nipples but slightly failing, we see a bit of the panties she has on, she's making a kissy face
 
 label v14s43:
     scene v14s43_1 # TPP. Show MC walking through the school, slight smile, mouth closed
     with fade
 
-    pause
+    pause 0.75
 
-    call screen elections
-
-label v14s43_continue:
     scene v14s43_2 # TPP. Show MC walking through the school (different location), slight smile, mouth closed
-    with fade
+    with dissolve
 
     pause 0.75
 
@@ -43,9 +40,9 @@ label v14s43_continue:
         $ emily.messenger.addReply("Fine... miss you more :)")
 
         label v14s43_PhoneContinueEmily:
-            if emily.messenger.getReplies():
+            if emily.messenger.replies:
                 call screen phone
-            if emily.messenger.getReplies():
+            if emily.messenger.replies:
                 u "(I should check my phone.)"
                 jump v14s43_PhoneContinueEmily
 
@@ -73,7 +70,6 @@ label v14s43_continue:
     with dissolve
 
     if penelopers:
-
         pe "Saved, actually."
 
         scene v14s43_6
@@ -97,7 +93,6 @@ label v14s43_continue:
         pe "Sit down already, weirdo. *Chuckles*"
 
     else:
-
         pe "That depends..."
 
         scene v14s43_6
@@ -128,14 +123,14 @@ label v14s43_continue:
         scene v14s43_6a
         with dissolve
 
-        pe "Sit down already would you? People are starting to stare... *Laughs*"
+        pe "Sit down already, would you? People are starting to stare... *Laughs*"
 
     scene v14s43_8 # TPP. Show MC sitting down next to Penelope
     with dissolve
     
     pause 0.75
 
-    scene v15s43_9 # FPP. MC sitting down next to Penelope, Penelope looking at him, slight smile, mouth closed
+    scene v14s43_9 # FPP. MC sitting down next to Penelope, Penelope looking at him, slight smile, mouth closed
     with dissolve
 
     u "*Laughs* Good one."

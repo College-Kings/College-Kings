@@ -7,13 +7,15 @@ label v14s28:
     scene v14s28_1 # TPP. Show MC and Emily standing in the Gym Lockerroom (Same room as the Chloe Lockerroom sex scene.), Both nervous smile, mouth closed.
     with dissolve
 
+    pause 0.75
+
     if v13_emilysex:
         scene v14s28_2 # FPP. Emily looking at MC, MC Looking at Emily, Emily worried smile, mouth open.
         with dissolve
 
         em "So... You and I have been on and off, and on and off..."
 
-        em "Seems like you don't mind fucking me but when it comes to actually being nice person or resurrecting our relationship, you're not for it."
+        em "Seems like you don't mind fucking me but when it comes to actually being a nice person or resurrecting our relationship, you're not for it."
 
         scene v14s28_2a # FPP. Same as v14s28_2, Emily worried smile, mouth closed.
         with dissolve
@@ -26,14 +28,32 @@ label v14s28:
         em "Please, let me finish."
 
         em "I've made mistakes, not just the cheating either."
+        
+        scene v14s28_2a
+        with dissolve
+        
+        scene v14s28_2
+        with dissolve
 
         em "I've made dozens of more mistakes since we've been in college, but regardless of that, I know how I feel and have always felt about you."
 
         em "I..."
 
+        scene v14s28_2a
+        with dissolve
+        
+        scene v14s28_2
+        with dissolve
+
         em "I love you, [name]."
 
         em "Even if you don't feel the same way."
+
+        scene v14s28_2a
+        with dissolve
+        
+        scene v14s28_2
+        with dissolve
 
         em "But deep down, of course... I hope that you still love me too."
 
@@ -45,12 +65,8 @@ label v14s28:
         menu:
             "I love you too":
                 $ add_point(KCT.BOYFRIEND)
-                
                 $ v14_emily_ily = True
                 
-                scene v14s28_2a
-                with dissolve
-
                 u "Emily..."
 
                 u "I've had a hard time admitting to myself, let alone expressing to you, how I feel about you."
@@ -77,9 +93,9 @@ label v14s28:
                 u "I do."
 
                 scene v14s28_3 # TPP. Show Emily hugging MC tightly, both slight smile, Emily crying, both mouth closed.
-                with vpunch
+                with dissolve
 
-                pause 
+                pause 2
 
                 scene v14s28_2c
                 with dissolve
@@ -95,8 +111,6 @@ label v14s28:
 
             "It'll never work between us":
                 $ add_point(KCT.TROUBLEMAKER)
-                scene v14s28_2a
-                with dissolve
 
                 u "I'm not going to be rude or anything, but I have to be honest."
 
@@ -261,17 +275,17 @@ label v14s28:
 
         em "This is real. So, I know we can."
 
-        play sound "sounds/kiss.mp3"
-
         scene v14s28_2h # FPP. Emily kissing MC.
         with dissolve
 
-        pause
+        pause 1.5
 
         scene v14s28_4 # TPP. Show Emily and MC passionately kissing.
         with dissolve
 
-        pause 
+        play sound "sounds/kiss.mp3"
+
+        pause 2
 
         scene v14s28_2g
         with dissolve
@@ -334,7 +348,7 @@ label v14s28:
     if v14_emily_ily:
         u "(I'm sure I'll see her again, but still... It won't be the same around here.)"
 
-    u "(I see why she wanted to talk in private now, I wonder who all she's told.)"
+    u "(I see why she wanted to talk in private now, I wonder who else she's told.)"
 
     scene v14s28_6 # TPP. Show MC walking out of the Gym Lockerroom, slight smile, mouth closed.
     with dissolve
@@ -343,5 +357,7 @@ label v14s28:
 
     scene v14s28_7 # TPP. Show MC walking outside, slight smile, mouth closed.
     with dissolve
+
+    pause 0.75
 
     jump v14s29

@@ -117,6 +117,19 @@ image voyeur = "images/achievements/v13/voyeur.webp"
 image dammit_emily = "images/achievements/v13/dammit_emily.webp"
 image calm_down_big_fella = "images/achievements/v13/calm_down_big_fella.webp"
 
+image ready_player_three = "images/achievements/v14/ready_player_three.webp"
+image saving_ryans_privates = "images/achievements/v14/saving_ryans_privates.webp"
+image beastie_boy = "images/achievements/v14/beastie_boy.webp"
+image double_agent = "images/achievements/v14/double_agent.webp"
+image agree_to_disagree = "images/achievements/v14/agree_to_disagree.webp"
+image how_did_you_know = "images/achievements/v14/how_did_you_know.webp"
+image built_on_trust = "images/achievements/v14/built_on_trust.webp"
+image wrath_of_pen = "images/achievements/v14/wrath_of_pen.webp"
+image your_eyelids_are_heavy = "images/achievements/v14/your_eyelids_are_heavy.webp"
+image say_chirp = "images/achievements/v14/say_chirp.webp"
+image grand_theft_chloe = "images/achievements/v14/grand_theft_chloe.webp"
+image clean_it_up = "images/achievements/v14/clean_it_up.webp"
+
 
 # v1.0 - v2.0
 image s14 = "images/s14.webp"

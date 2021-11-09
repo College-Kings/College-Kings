@@ -5,7 +5,6 @@
 # Phone Images: None
 
 label v12_murder_mystery_reveal:
-    $ freeRoam = False
     hide screen murder_button_overlay
 
     scene v12mmr1 # FPP. Mr. Lee and Ms. Rose standing in front of the students, addressing them, only Mr. Lee in shot. Mr. Lee smiling, mouth open, looking at MC
@@ -289,10 +288,10 @@ label v12_murder_mystery_reveal:
     with fade
     play sound "images/v12/Scene 7/animations/Track Scene - Ferry Ride (5 sec).mp3"
 
-    pause 5
+    pause 3.5
 
     scene v12mmr15 # TPP. Show MC sitting down, sleeping, mouth closed
-    with dissolve
+    with fade
 
     pause 0.75
 

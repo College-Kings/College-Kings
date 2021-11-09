@@ -32,30 +32,30 @@ label v14s29:
     scene v14s29_3a # TPP. Same as v14s29_3, Imre on the phone, Imre slight smile, mouth closed.
     with dissolve
 
-    if v14_full_chris_support or v14_pw_half_chris_support or v14_rw_half_chris_support or v14_low_chris_support:
-        u "Sorry man, I'm doing the Wolves photoshoot with Chris. You aren't?"
+    if v14_talk_to_chris:
+        u "Sorry man, I'm doing the Wolves photoshoot with Chloe."
 
         scene v14s29_3
         with dissolve
 
-        imre "Oh fuck, I forgot about that. Shit, guess I'll meet you there."
+        imre "Oh fuck, I forgot Chris told me about that."
 
         scene v14s29_3a
         with dissolve
 
-        u "Haha, see you soon."
+        u "Haha, no worries."
 
         play sound "sounds/rejectcall.mp3"
 
         scene v14s29_2
         with dissolve
 
-        u "(That guy!) *Chuckles*"
+        u "(I guess we'll do that another time.)"
 
         scene v14s29_4 # TPP. Show MC walking down the sidewalk towards the wolves house
         with dissolve
 
-        if v14_full_chris_support or v14_rw_half_chris_support:
+        if v14_realwolf:
             pause 0.75
             jump v14s30a
 

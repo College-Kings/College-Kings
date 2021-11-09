@@ -299,4 +299,6 @@ label v14s25a:
 
     pause 0.75
 
+    $ renpy.end_replay()
+
     jump v14s25b # -Transition to Scene 25b-
