@@ -231,17 +231,14 @@ label v14s03c:
     scene v14s03c_4i
     with dissolve
 
-    "Yes, kinda":
+    menu:
+        "Yes, kinda":
+            $ add_point(KCT.BRO)
+            u "Yeah, but I don't have that kind of money."
 
-        $ add_point(KCT.BRO)
-
-        u "Yeah, but I don't have that kind of money."
-
-    "No, not really":
-
-        $ add_point(KCT.BOYFRIEND)
-        
-        u "Oh, no. I don't have that kind of money."
+        "No, not really":
+            $ add_point(KCT.BOYFRIEND)
+            u "Oh, no. I don't have that kind of money."
 
     scene v14s03c_4h
     with dissolve

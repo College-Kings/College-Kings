@@ -119,38 +119,35 @@ label v14s03e:
         scene v14s03e_6
         with dissolve
 
-        "I'm glad you waited":
+        menu:
+            "I'm glad you waited":
+                $ add_point(KCT.BRO)
+                u "I'm glad you did."
 
-            $ add_point(KCT.BRO)
+                scene v14s03e_6b
+                with dissolve
 
-            u "I'm glad you did."
+                ry "Ha... Why are you glad?"
 
-            scene v14s03e_6b
-            with dissolve
+                scene v14s03e_6
+                with dissolve
 
-            ry "Ha... Why are you glad?"
+                u "That girl you were talking to... She had herpes."
 
-            scene v14s03e_6
-            with dissolve
+            "You should've done it":
+                $ add_point(KCT.TROUBLEMAKER)
 
-            u "That girl you were talking to... She had herpes."
+                u "I don't know man, I think you should've done it."
 
-        "You should've done it":
+                scene v14s03e_6b
+                with dissolve
 
-            $ add_point(KCT.TROUBLEMAKER)
+                ry "Shit, you really think so?"
 
-            u "I don't know man, I think you should've done it."
+                scene v14s03e_6
+                with dissolve
 
-            scene v14s03e_6b
-            with dissolve
-
-            ry "Shit, you really think so?"
-
-            scene v14s03e_6
-            with dissolve
-
-            u "Although, that girl did have herpes."
-
+                u "Although, that girl did have herpes."
 
         scene v14s03e_6c # FPP. Same as v14s03e_6a, angry expression, mouth open 
         with dissolve
@@ -417,10 +414,9 @@ label v14s03e:
     scene v14s03e_20a # FPP. Same as v14s03e_20, slight smile, mouth closed
     with dissolve
 
+    menu:
         "That was hilarious":
-
             $ add_point(KCT.TROUBLEMAKER)
-
             u "Haha, that was hilarious."
 
             scene v14s03e_20
@@ -429,9 +425,7 @@ label v14s03e:
             ry "Right???"
 
         "Not cool, Ryan":
-
             $ add_point(KCT.BOYFRIEND)
-
             u "Not cool, Ryan."
 
             scene v14s03e_20
