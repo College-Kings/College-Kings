@@ -112,7 +112,15 @@ label v14s34:
     scene v14s34_5a # TPP. Same as v14s34_5, Penelope slight tired smile, mouth closed.
     with dissolve
 
-    u "Hey, princess. Did I wake you?"
+    menu:
+
+        "Hey Princess...":
+            $ add_point(KCT.BOYFRIEND)
+            u "Hey, princess. Did I wake you?"
+
+        "Hey Penelope...":
+            $ add_point(KCT.BRO)
+            u "Hey, Penelope. Did I wake you?"
 
     scene v14s34_6 # TPP. Penelope sitting up in her bed holding the phone to her ear, one of her boobs popping out of her shirt, slight smile, mouth open
     with dissolve

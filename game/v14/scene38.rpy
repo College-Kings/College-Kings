@@ -49,35 +49,51 @@ label v14s38:
 
     jen "If you keep stalking me I won't even have to worry."
 
-    scene v14s38_4a # FPP. Same as v14s38_4a, but background 3 behind Jenny.
-    with dissolve
+    menu:
 
-    u "I wasn't trying to-"
+        "Apologize":
+            $ add_point(KCT.BOYFRIEND)
 
-    scene v14s38_4
-    with dissolve
+            scene v14s38_4a # FPP. Same as v14s38_4a, but background 3 behind Jenny.
+            with dissolve
 
-    jen "Relax, I'm kidding."
+            u "I wasn't trying to-"
 
-    scene v14s38_4a
-    with dissolve
+            scene v14s38_4
+            with dissolve
 
-    u "*Laughs* Cool, I don't want you thinking I'm some creep."
+            jen "Relax, I'm kidding."
 
-    scene v14s38_4
-    with dissolve
+            scene v14s38_4a
+            with dissolve
 
-    jen "Trust me, if I did, I would've said something by now."
+            u "*Laughs* Cool, I don't want you thinking I'm some creep."
 
-    scene v14s38_4a
-    with dissolve
+            scene v14s38_4
+            with dissolve
 
-    u "So, since you haven't said anything by now..."
+            jen "Trust me, if I did, I would've said something by now."
 
-    scene v14s38_4
-    with dissolve
+            scene v14s38_4a
+            with dissolve
 
-    jen "I want to be stalked by you, yes."
+            u "So, since you haven't said anything by now..."
+
+            scene v14s38_4
+            with dissolve
+
+            jen "I want to be stalked by you, yes."
+
+        "Compliment her":
+            $ add_point(KCT.BRO)
+
+            u "Well maybe if you weren't so cute I wouldn't have to pretend to run into you all the time, haha."
+
+            scene v14s38_4
+            with dissolve
+
+            jen "Awww, haha. Fine you can keep stalking me."
+
 
     scene v14s38_4a
     with dissolve

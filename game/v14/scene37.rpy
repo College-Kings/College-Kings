@@ -274,7 +274,7 @@ label v14s37:
     scene v14s37_15
     with dissolve
 
-    lady "For suck's sake, you're like a child. That'll be all for now."
+    lady "For fuck's sake, you're like a child. That'll be all for now."
 
     scene v14s37_14a # TPP. Same as v14s37_14, Gentleman looking at the lady (Lady off-camera), gentleman slight frown, mouth open.
     with dissolve
@@ -607,7 +607,7 @@ label v14s37:
     scene v14s37_10a
     with dissolve
 
-    pe "Yeah, I do. It pays really fucking good and literally no one else has applied in the last two weeks that the posting has been up."
+    pe "Yeah, I do. It pays really good and literally no one else has applied in the last two weeks that the posting has been up."
 
     scene v14s37_10b
     with dissolve
@@ -632,7 +632,7 @@ label v14s37:
     scene v14s37_10b
     with dissolve
 
-    u "Say something, Penelope."
+    u "Why don't you say something to the board?"
 
     scene v14s37_10a
     with dissolve
@@ -695,7 +695,7 @@ label v14s37:
 
     lady "And that's also why you can't keep a fucking job, you're a loser!"
 
-    if v14s37_focus_on_us or kct == "loyal":
+    if v14s37_focus_on_us or kct == "confident":
         scene v14s37_10h
         with dissolve
 

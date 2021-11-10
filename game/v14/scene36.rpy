@@ -73,12 +73,36 @@ label v14s36:
     scene v14s36_4a
     with dissolve
 
-    u "Oh. Haha... Is Penelope busy today?"
+    menu:
+
+        "Happy to help":
+            $ add_point(KCT.BOYFRIEND)
+            u "Oh, happy to help... Is Penelope busy today?"
+
+            scene v14s36_4
+            with dissolve
+
+            jen "Yeah, I tried texting her but she told me she was sleeping early."
+
+        "Ouch that hurts":
+            $ add_point(KCT.TROUBLEMAKER)
+
+            u "Ouch, can't believe I'm just a boredom reliever."
+
+            scene v14s36_4
+            with dissolve
+
+            jen "Haha you're not. Well, just a bit maybe."
+
+            scene v14s36_4a
+            with dissolve
+
+            u "So I assume Penelope's busy today?"
 
     scene v14s36_4
     with dissolve
 
-    jen "Oh, I tried texting her but she told me she was sleeping early."
+    jen "Yeah, I tried texting her but she told me she was sleeping early."
 
     scene v14s36_4a
     with dissolve
@@ -181,7 +205,7 @@ label v14s36:
     scene v14s36_4f # FPP. same as v14s36_4 Jenny has a serious expression, mouth open, hand on her chin, looking slightly down and away from MC
     with dissolve
 
-    jen "Chloe will focus on what's important and nothing else, which herself. I'm gonna have to see how I can get more involved in her campaign..."
+    jen "Chloe will focus on what's important and nothing else. I'm gonna have to see how I can get more involved in her campaign..."
 
     scene v14s36_4a
     with dissolve
@@ -227,14 +251,14 @@ label v14s36:
     with dissolve
 
     menu:
-        "Depends":
+        "Yeah I am":
             $ v14_jennypoints += 1
             $ add_point(KCT.BRO)
 
             scene v14s36_4h
             with dissolve
 
-            u "Depends on what you consider fun."
+            u "Yeah I am. I guess it depends on what you consider fun."
 
             scene v14s36_4g
             with dissolve
@@ -540,7 +564,7 @@ label v14s36:
 
             u "Haha, I'm just trying to be a good friend."
 
-    if v14_jennypoints >= 3 or kct == "loyal":
+    if v14_jennypoints >= 3 or kct == "popular":
         if v14_jennypoints < 3:
             call screen kct_popup
 
@@ -1288,14 +1312,31 @@ label v14s36:
         scene v14s36_14b # TPP. same as v14s36_14 Lauren is now massaging one of her nipples, looking at the nipple she is massaging, mouth closed
         with dissolve
 
-        u "Oh, okay. That was unexpected. *Chuckles*"
+        menu:
 
-        scene v14s36_14c # TPP same as v14s36_14b Laurens mouth is closed
-        with dissolve
+            "What kind of things?":
+                $ add_point(KCT.BOYFRIEND)
 
-        la "Ha, sorry!"
+                u "Haha, what kind of things?"
 
-        la "Did you know that there's like hundreds of different sex positions and depending on the position, you can feel different things?"
+                scene v14s36_14c # TPP same as v14s36_14b Laurens mouth is closed
+                with dissolve
+
+                la "Like, did you know that there's like hundreds of different sex positions and depending on the position, you can feel different things?"
+
+
+            "You watching porn sounds hot":
+                $ add_point(KCT.BRO)
+
+                u "You watching porn just sounds really hot."
+
+                scene v14s36_14c # TPP same as v14s36_14b Laurens mouth is closed
+                with dissolve
+
+                la "I know... It kind of was. You should've been there."
+
+                la "Did you know that there's like hundreds of different sex positions and depending on the position, you can feel different things?"
+
 
         scene v14s36_14b
         with dissolve

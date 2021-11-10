@@ -168,7 +168,7 @@ label v14s39:
 
     u "Okay, I'm this way."
 
-    if v14s37_focus_on_us or kct == "loyal":
+    if v14s37_focus_on_us or kct == "confident":
         if not v14s37_focus_on_us:
             call screen kct_popup
 

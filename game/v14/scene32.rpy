@@ -78,12 +78,30 @@ label v14s32:
     scene v14s32_2d
     with dissolve
 
-    u "Ryan?"
+    menu:
 
-    scene v14s32_2e
-    with dissolve
+        "Chris":
 
-    imre "Bingo."
+            $ add_point(KCT.TROUBLEMAKER)
+
+            u "Chris?"
+
+            scene v14s32_2e
+            with dissolve
+
+            imre "What? No. Ryan."
+        
+
+        "Ryan":
+
+            $ add_point(KCT.BRO)
+
+            u "Ryan?"
+
+            scene v14s32_2e
+            with dissolve
+
+            imre "Bingo."
 
     scene v14s32_2d
     with dissolve
@@ -111,25 +129,40 @@ label v14s32:
 
     scene v14s32_2d
     with dissolve
+    
+    menu:
 
-    u "*Sighs*"
+        "You're right":
+            $ add_point(KCT.BRO)
 
-    u "It'd be really nice if you two just got along."
+            u "Yeah, I guess it is kinda messed up that Ryan doesn't tell the whole story."
 
-    scene v14s32_2e
-    with dissolve
+            scene v14s32_2e
+            with dissolve
 
-    imre "Not gonna happen, don't even start. I tried and he fucked me over again."
+            imre "Exactly. That's what I'm saying!"
 
-    scene v14s32_2d
-    with dissolve
+        "Please just get along":
 
-    u "Whatever man, but don't say I didn't tell you that this is going to cause more harm than good, for both of you."
+            $ add_point(KCT.BOYFRIEND)
+            u "*Sighs*"
 
-    scene v14s32_2e
-    with dissolve
+            u "It'd be really nice if you two just got along."
 
-    imre "Uh-huh."
+            scene v14s32_2e
+            with dissolve
+
+            imre "Not gonna happen, don't even start. I tried and he fucked me over again."
+
+            scene v14s32_2d
+            with dissolve
+
+            u "Whatever man, but don't say I didn't tell you that this is going to cause more harm than good, for both of you."
+
+            scene v14s32_2e
+            with dissolve
+
+            imre "Uh-huh."
 
     scene v14s32_2d
     with dissolve
