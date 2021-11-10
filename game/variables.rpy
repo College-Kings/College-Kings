@@ -694,3 +694,5 @@ default v14s51_take_diary = False
 default v14s51_take_money = False
 default v14_lauren_helps_lindsey = False
 default irisStrikes = 0
+default v14s4_tell_imre = False
+default v14s5a_riley_should_join_chicks = False

@@ -133,27 +133,39 @@ label v14s03b:
     scene v14s03b_5c
     with dissolve
 
-    u "*Laughs*"
+    menu:
 
-    scene v14s03b_5d # FPP Same angle as 5, Ryan looking at MC, looking angry, mouth open
-    with dissolve
+        "Take him seriously":
+            
+            $ add_point(KCT.BRO)
 
-    ry "*Whispers* Don't laugh!"
+            u "Oh shit."
 
-    scene v14s03b_5e # FPP Same as 5d, Ryan's mouth closed
-    with dissolve
+        "Take it as a joke":
 
-    u "Oh, you're being serious?"
+            $ add_point(KCT.TROUBLEMAKER)
 
-    scene v14s03b_5d
-    with dissolve
+            u "*Laughs*"
 
-    ry "Yeah, I am... dickhead."
+            scene v14s03b_5d # FPP Same angle as 5, Ryan looking at MC, looking angry, mouth open
+            with dissolve
 
-    scene v14s03b_5e
-    with dissolve
+            ry "*Whispers* Don't laugh!"
 
-    u "Oh damn..."
+            scene v14s03b_5e # FPP Same as 5d, Ryan's mouth closed
+            with dissolve
+
+            u "Oh, you're being serious?"
+
+            scene v14s03b_5d
+            with dissolve
+
+            ry "Yeah, I am... dickhead."
+
+            scene v14s03b_5e
+            with dissolve
+
+            u "Oh damn..."
 
     # -If blessed with Emily (extra dialog)
     # I HAVE NO IDEA WHAT VARIABLE THIS IS ASKING FOR

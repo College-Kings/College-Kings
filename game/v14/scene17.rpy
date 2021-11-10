@@ -333,22 +333,39 @@ label v14s17:
     scene v14s17_10b
     with dissolve
 
-    u "Ooooohhh... *Coughs* Nerd! *Coughs*"
+    menu:
 
-    scene v14s17_10d
-    with dissolve
+        "Make fun of her":
 
-    la "Ugh, you are so rude! *Chuckles*"
+            $ add_point(KCT.TROUBLEMAKER)
 
-    scene v14s17_10e # FPP. Same as v14s17_10b, different posture 
-    with dissolve
+            u "Ooooohhh... *Coughs* Nerd! *Coughs*"
 
-    u "I mean, damn... Look at you getting in nice and good with the people on the inside."
+            scene v14s17_10d
+            with dissolve
 
-    scene v14s17_10a
-    with dissolve
+            la "Ugh, you are so rude! *Chuckles*"
 
-    la "Mhmm, that's more like it."
+            scene v14s17_10e # FPP. Same as v14s17_10b, different posture 
+            with dissolve
+
+            u "I mean, damn... Look at you getting in nice and good with the people on the inside."
+
+            scene v14s17_10a
+            with dissolve
+
+            la "Mhmm, that's more like it."
+
+        "Compliment her":
+
+            $ add_point(KCT.BOYFRIEND)
+
+            u "Damn, well done."
+
+            scene v14s17_10d
+            with dissolve
+
+            la "Haha, thank you."
 
     scene v14s17_10b
     with dissolve

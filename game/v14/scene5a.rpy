@@ -199,12 +199,22 @@ label v14s05a:
         scene v14s05a_7a
         with dissolve
 
-        u "Okay, then... I wanna know how that goes."
+        menu:
+            "I think you should":
+                $ v14s5a_riley_should_join_chicks = True
+                $ add_point(KCT.BRO)
+
+                u "I think you should. You'd really fit in there."
+
+            "You sure it's for you?":
+                $ add_point(KCT.BOYFRIEND)
+
+                u "Hmm, are you sure it's for you?"
 
         scene v14s05a_7b
         with dissolve
 
-        ri "I'll keep you posted but for now, I'm going to sleep."
+        ri "I guess. I really don't know yet, to be honest. For now, I'm going to sleep."
 
         scene v14s05a_12
         with dissolve

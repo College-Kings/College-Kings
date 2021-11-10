@@ -98,7 +98,7 @@ label v14s22:
     scene v14s22_5a
     with dissolve
 
-    u "(Yep, he's definitely the devil.)"
+    u "(What a weird dude...)"
 
     scene v14s22_5e
     with dissolve

@@ -107,12 +107,26 @@ label v14s15:
     scene v14s15_7e
     with dissolve
 
-    u "Ha... You never fail to surprise me, Imre."
+    menu:
 
-    scene v14s15_7f
-    with dissolve
+        "It's genius":
+            $ add_point(KCT.BRO)
+            u "Not gonna lie, that seems like a genius way to decide things, haha."
 
-    imre "I'm honest, handsome and always true to form."
+            scene v14s15_7f
+            with dissolve
+
+            imre "Many call me the Einstein of decision making."
+
+        "It's idiotic":
+            $ add_point(KCT.TROUBLEMAKER)
+
+            u "Not gonna lie, that is a ridiculously stupid way to make decisions, haha."
+
+            scene v14s15_7f
+            with dissolve
+
+            imre "I'm just ahead of my time."
 
     scene v14s15_7e
     with dissolve

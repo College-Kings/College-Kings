@@ -22,7 +22,15 @@ label v14s04:
     scene v14s04_4 # TPP. Show MC looking for Imre in the eating area of the hotel lobby, slightly annoyed, mouth closed
     with dissolve
 
-    u "(Fuck it, I'll talk to him later I guess.)"
+    menu:
+        "(I'll talk to him later)":
+            $ v14s4_tell_imre = True
+            $ add_point(KCT.BRO)
+            u "(Fuck it, I'll talk to him later I guess.)"
+
+        "(It's not that important)":
+            $ add_point(KCT.TROUBLEMAER)
+            u "(Fuck it, I'll talk to him later I guess.)"
 
     scene v14s04_5 # TPP. Show MC walking through the hotel corridor, slightly annoyed, mouth closed
     with dissolve

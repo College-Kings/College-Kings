@@ -32,17 +32,34 @@ label v14s02:
     scene v14s02_2a # FPP. imre slight smile mouth closed
     with dissolve
 
-    u "Not at all, bro."
+    menu:
 
-    scene v14s02_2
-    with dissolve
+        "A little bit":
 
-    imre "Damnit! I'll get you one day, for sure."
+            $ add_point(KCT.BOYFRIEND)
+
+            u "Maybe a little bit."
+
+            scene v14s02_2
+            with dissolve
+
+            imre "Haha, I knew it."
+
+        "Not at all":
+
+            $ add_point(KCT.TROUBLEMAKER)
+
+            u "Not at all, bro."
+
+            scene v14s02_2
+            with dissolve
+
+            imre "Damnit! I'll get you one day, for sure."
 
     scene v14s02_2a
     with dissolve
 
-    u "Whatever you say, haha. What are you doing tonight?"
+    u "Haha, what are you doing tonight?"
 
     scene v14s02_2
     with dissolve

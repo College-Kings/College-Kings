@@ -115,12 +115,28 @@ label v14s23:
     scene v14s23_2b
     with dissolve
 
-    u "That's a very selfless way to live."
+    menu: 
+        "That's very selfless":
 
-    scene v14s23_2a
-    with dissolve
+            $ add_point(KCT.BRO)
 
-    ch "I try to be. Chloe should be here-"
+            u "That's a very selfless way to live."
+
+            scene v14s23_2a
+            with dissolve
+
+            ch "I try to be. Chloe should be here-"
+
+        "It sounds inconsiderate":
+
+            $ add_point(KCT.TROUBLEMAKER)
+
+            u "I don't know man, it sounds a bit inconsiderate."
+
+            scene v14s23_2a
+            with dissolve
+
+            ch "I don't think you get what's at stake here. Chloe-"
 
     scene v14s23_1b # TPP. Same as v14s23_1a, Show MC and Chris sitting on the porch, Chloe running towards the porch back facing the camera, MC and Chris both slight smile, mouth closed.
     with dissolve

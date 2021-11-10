@@ -98,13 +98,26 @@ label v14s20:
     scene v14s20_3a
     with dissolve
 
-    u "The trip was really nice."
+    menu:
 
-    scene v14s20_3e # FPP Same angle as 3, Autumn's eyebrow raised, mouth closed
-    with dissolve
+        "It was great":
 
-    u "Drama filled, fun filled, boredom filled. A little dose of everything."
+            u "The trip was rgreat."
 
+            scene v14s20_3e # FPP Same angle as 3, Autumn's eyebrow raised, mouth closed
+            with dissolve
+
+            u "Drama, fun and excitement. A little dose of everything."
+
+        "It was alright":
+
+            u "Yeah it was alright."
+
+            scene v14s20_3e # FPP Same angle as 3, Autumn's eyebrow raised, mouth closed
+            with dissolve
+
+            u "A lot of drama, but otherwise quite fun."
+    
     scene v14s20_3f # FPP Same as 3e, Autumn's mouth open
     with dissolve
 

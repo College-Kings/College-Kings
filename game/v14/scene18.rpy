@@ -201,7 +201,11 @@ label v14s18:
             scene v14s18_5a # TPP. Same as v14s18_5, but MC is giving her the flyer back
             with dissolve
 
-            pause 0.75
+            if v14_help_chloe:
+                u "(I have to make sure they don't find out I'm helping both of them... That might end badly.)"
+
+            else:
+                pause 0.75
 
         "Don't help Lindsey":
             scene v14s18_4i # FPP. Same as v14s18_4, Lindsey sad

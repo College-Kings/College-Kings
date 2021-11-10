@@ -112,12 +112,29 @@ label v14s03c:
     scene v14s03c_4f
     with dissolve
 
-    u "Good genes. *Chuckles*"
+    menu:
 
-    scene v14s03c_4e
-    with dissolve
+        "Good genes":
 
-    satin "Same here."
+            $ add_point(KCT.BRO)
+
+            u "Good genes. *Chuckles*"
+
+            scene v14s03c_4e
+            with dissolve
+
+            satin "Same here."
+
+        "My friends dragged me here":
+
+            $ add_point(KCT.BOYFRIEND)
+
+            u "My friends dragged me in here."
+
+            scene v14s03c_4e
+            with dissolve
+
+            satin "Haha, right."
 
     satin "So, what are you doing here at the bar all alone?"
 
@@ -199,7 +216,7 @@ label v14s03c:
     scene v14s03c_4h # FPP. Same as v14s03c_4e, Satin different pose, slight smile, mouth open.
     with dissolve
 
-    satin "I like you, good genes. You're not like most of the guys that walk in here."
+    satin "I like you. You're not like most of the guys that walk in here."
 
     scene v14s03c_4i # FPP. Same as v14s03c_4f, Satin different pose, slight smile, mouth closed.
     with dissolve
@@ -209,12 +226,22 @@ label v14s03c:
     scene v14s03c_4h
     with dissolve
 
-    satin "I'm curious though, did you come here looking for an escort?"
+    satin "I'm curious though, are you looking for an escort?"
 
     scene v14s03c_4i
     with dissolve
 
-    u "Oh, no. I don't have that kind of money."
+    "Yes, kinda":
+
+        $ add_point(KCT.BRO)
+
+        u "Yeah, but I don't have that kind of money."
+
+    "No, not really":
+
+        $ add_point(KCT.BOYFRIEND)
+        
+        u "Oh, no. I don't have that kind of money."
 
     scene v14s03c_4h
     with dissolve
@@ -355,7 +382,7 @@ label v14s03c:
             scene v14s03c_5d # FPP. Same as v14s03c_5c, Satin leading Ryan towards the private booth, Ryan excited expression looking at MC, mouth closed, Satin slight smile, mouth closed, Emerald sad expression, mouth closed.
             with dissolve
 
-            u "*Sighs* (I'll try to sit here and not be jealous.)"
+            u "(Can't believe I'm doing this for Ryan.)"
 
             scene v14s03c_3b
             with dissolve

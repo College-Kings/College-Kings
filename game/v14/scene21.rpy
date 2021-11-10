@@ -136,22 +136,34 @@ label v14s21:
     scene v14s21_2g
     with dissolve
 
-    u "I'm a patient man when it comes to the things I care about, Chloe. I know your situation and I understand that this campaign is more important right now."
+    menu:
+
+        "That does kinda suck.":
+
+            $ add_point(KCT.TROUBLEMAKER)
+
+            u "That does kinda suck. I guess we'll have to make the most out of the time we have."
+
+        "Don't worry about it.":
+
+            $ add_point(KCT.BOYFRIEND)
+
+            u "I'm a patient man when it comes to the things I care about, Chloe. I know your situation and I understand that this campaign is more important right now."
+
+            scene v14s21_2f
+            with dissolve
+
+            cl "*Sighs* You really are the best."
+
+            scene v14s21_2g
+            with dissolve
+
+            u "Thank you, you are too."
 
     scene v14s21_2f
     with dissolve
 
-    cl "*Sighs* You really are the best."
-
-    scene v14s21_2g
-    with dissolve
-
-    u "Thank you, you are too."
-
-    scene v14s21_2f
-    with dissolve
-
-    cl "Haha. You know, I have some time right now..."
+    cl "You know, I have some time right now..."
 
     scene v14s21_2g
     with dissolve
