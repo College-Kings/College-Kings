@@ -230,7 +230,7 @@ label v14s03d:
 
             satin "Ha! *Panting* You must be enjoying yourself."
 
-            scene v14satcgTPPf # Ignore as animation
+            scene v14satcgTPP2f # Ignore as animation
             with dissolve
 
             u "That's an understatement, baby."
