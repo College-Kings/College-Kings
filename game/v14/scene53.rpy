@@ -28,17 +28,17 @@ label v14s53:
     scene v14s53_3a # TPP. Samantha doesn't see MC as he stands in the doorway watching her, she raises both her hands in the air in excitement, full smile, mouth open
     with dissolve
 
-    sa "*Drunk singing* And she goes ooh, ooh, yeaaaah... *Laughs*"
+    sa "*Singing* And she goes ooh, ooh, yeaaaah... *Laughs*"
 
     scene v14s53_4 # FPP. Mc is still syanding in the doorway, only show sam still sitting on the couch, still holding her bottle, full smile, mouth open, arms waving in a different direction from v14s53_3a, she still hasn't seen mc and is looking somewhere else in the room
     with dissolve
 
-    sa "*Drunk singing* Maybe make her, maybe break her, the girl of your dreaaammss..."
+    sa "*Singing* Maybe make her, maybe break her, the girl of your dreaaammss..."
 
     scene v14s53_4a # FPP. same as v14s53_4 Samantha suddenly becomes aware of MC, Samantha has a shocked expression, mouth open, looking directly at Mc, one hand clecnh's her chest and the other arm still holding the bottle in the air, some liquid spills from the bottle from her sudden movement
     with dissolve
 
-    sa "*Drunk* Oh, my God! Haha... How long have you been standing there staring at me weirdo?"
+    sa "Oh, my God! Haha... How long have you been standing there staring at me weirdo?"
 
     scene v14s53_4b # FPP. same as v14s53_4a Sam has a slight smile, mouth closed, still looking at mc, Sam has lowered her arms to her sides and is still holding the bottle
     with dissolve
@@ -58,7 +58,7 @@ label v14s53:
     scene v14s53_4c
     with dissolve
 
-    sa "*Drunk* I don't know. I was just making it up. Why, was it good?"
+    sa "I don't know. I was just making it up. Why, was it good?"
 
     scene v14s53_4b
     with dissolve
@@ -76,7 +76,7 @@ label v14s53:
             scene v14s53_4d # FPP. same as v14s53_4b Sam has an angry expression
             with dissolve
 
-            sa "*Drunk* Okay, dickhead. It's not like I was trying that hard! I'm just singing what comes naturally."
+            sa "Okay, dickhead. It's not like I was trying that hard! I'm just singing what comes naturally."
 
             scene v14s53_4e # FPP. same as v14s53_4d Sam's mouth is closed
             with dissolve
@@ -86,7 +86,7 @@ label v14s53:
             scene v14s53_4d
             with dissolve
 
-            sa "*Drunk* Why do guys have to be so stupid all the fucking time?"
+            sa "Why do guys have to be so stupid all the fucking time?"
 
             scene v14s53_4e
             with dissolve
@@ -96,7 +96,7 @@ label v14s53:
             scene v14s53_4b
             with dissolve
 
-            sa "*Drunk* Guess I forgot to laugh then..."
+            sa "Guess I forgot to laugh then..."
 
             scene v14s53_5 # FPP. close up shot of Sam winking and giving the thumbs up to mc, (Use this picture https://img.memecdn.com/i-amp-039-m-good_o_7184111.jpg as reference)
             with dissolve
@@ -117,7 +117,7 @@ label v14s53:
             scene v14s53_4g # FPP. same as v14s53_4b Sam has a full smile
             with dissolve
 
-            sa "*Drunk* Do you really think so? Thank you! I do enjoy it a lot, not many people know."
+            sa "Do you really think so? Thank you! I do enjoy it a lot, not many people know."
 
     scene v14s53_4c
     with dissolve
@@ -127,7 +127,7 @@ label v14s53:
     scene v14s53_4b
     with dissolve
 
-    sa "*Drunk* I just wanted some privacy."
+    sa "I just wanted some privacy."
 
     scene v14s53_4h # FPP same as v14s53_4g She takes another swig of beer, not looking at mc, eyes closed
     with dissolve
@@ -137,7 +137,7 @@ label v14s53:
     scene v14s53_4b
     with dissolve
 
-    sa "*Drunk* Well, you're here now. You might as well come in and talk with me."
+    sa "Well, you're here now. You might as well come in and talk with me."
 
     scene v14s53_3b # TPP. same as v14s53_3a MC goes and sits down next to Samantha on the couch, a bottle is beside her, Samantha is looking at Mc, full smile, mouth open
     with dissolve
@@ -147,7 +147,7 @@ label v14s53:
     scene v14s53_6 # FPP. Mc is sitting next to Sam on the couch, Show only Sam, Sam holds up and shows a small bag of pills towards mc with one of her hands with the bottle in the other hand, full smile, mouth open, looking at Mc
     with dissolve
 
-    sa "*Drunk* I bought these pills today, but I don't even know what they are, haha!"
+    sa "I bought these pills today, but I don't even know what they are, haha!"
 
     scene v14s53_6a # FPP. same as v14s53_6 Sam has lowered both the bottle and pills to her sides
     with dissolve
@@ -162,7 +162,7 @@ label v14s53:
     scene v14s53_6a
     with dissolve
 
-    sa "*Drunk* Oh, relax. I haven't taken any yet, daddy..."
+    sa "Oh, relax. I haven't taken any yet, daddy..."
 
     scene v14s53_6b
     with dissolve
@@ -172,7 +172,7 @@ label v14s53:
     scene v14s53_6a
     with dissolve
 
-    sa "*Drunk* I'm thinking about it though."
+    sa "I'm thinking about it though."
 
     scene v14s53_6c # FPP. same as v14s53_6 Sam holds the bottle and pills in front of her and is looking at them, no expression, mouth closed
     with dissolve
@@ -181,7 +181,7 @@ label v14s53:
         scene v14s53_6d # FPP. same as v14s53_6c Sam is looking at MC, no expression, sams's mouth is open
         with dissolve
 
-        sa "*Drunk* You know, I overdosed when we were in Amsterdam."
+        sa "You know, I overdosed when we were in Amsterdam."
 
         if cameronBro:
             scene v14s53_6e # FPP. same as v14s53_6d Sam's mouth is closed
@@ -198,13 +198,13 @@ label v14s53:
                 scene v14s53_6d
                 with dissolve
 
-                sa "*Drunk* For what? Haha... I make my own choices, you know."
+                sa "For what? Haha... I make my own choices, you know."
 
             if v11_invite_sam_europe and not v13_invite_samantha:
                 scene v14s53_6f # FPP. same as v14s53_6d Sam has a slight smile
                 with dissolve
 
-                sa "*Drunk* Oh, don't be. You did the right thing; I just like to rebel. *Chuckles*"
+                sa "Oh, don't be. You did the right thing; I just like to rebel. *Chuckles*"
 
         else:
             scene v14s53_6e
@@ -215,7 +215,7 @@ label v14s53:
             scene v14s53_6f
             with dissolve
 
-            sa "*Drunk* Ha, yup..."
+            sa "Ha, yup..."
 
             scene v14s53_6g # FPP. same as v14s53_6f Sam's mouth is closed
             with dissolve
@@ -225,13 +225,13 @@ label v14s53:
             scene v14s53_6f
             with dissolve
 
-            sa "*Drunk* Why would he? It's like family shame, haha. You keep that shit hidden."
+            sa "Why would he? It's like family shame, haha. You keep that shit hidden."
 
     else:
         scene v14s53_6d
         with dissolve
 
-        sa "*Drunk* I relapsed pretty badly while you were away..."
+        sa "I relapsed pretty badly while you guys were away..."
 
         scene v14s53_6e
         with dissolve
@@ -241,12 +241,12 @@ label v14s53:
         scene v14s53_6h # FPP same as v14s53_6c Sam's mouth is open
         with dissolve
 
-        sa "*Drunk* Nothing bad, but... I just can't find another source of happiness or comfort, [name]."
+        sa "Nothing bad, but... I just can't find another source of happiness or comfort, [name]."
 
         scene v14s53_6d
         with dissolve
 
-        sa "*Drunk* Cameron knows something is up, but I can't talk to him. One mention of wanting to pop a pill, and he'll throw me into the hospital."
+        sa "Cameron knows something is up, but I can't talk to him. One mention of wanting to pop a pill, and he'll throw me into the hospital."
 
         scene v14s53_6e
         with dissolve
@@ -266,7 +266,7 @@ label v14s53:
     scene v14s53_6a
     with dissolve
 
-    sa "*Drunk* Anyway, that happened. I survived. And it wasn't on purpose, just so you know."
+    sa "Anyway, that happened. I survived. And it wasn't on purpose, just so you know."
 
     scene v14s53_6b
     with dissolve
@@ -276,7 +276,7 @@ label v14s53:
     scene v14s53_6a
     with dissolve
 
-    sa "*Drunk* I was just having a good time and went too far. I make a habit of that."
+    sa "I was just having a good time and went too far. I make a habit of that."
 
     scene v14s53_6b
     with dissolve
@@ -296,7 +296,7 @@ label v14s53:
     scene v14s53_6h
     with dissolve
 
-    sa "*Drunk* I take drugs because I can't deal with any of my emotional baggage without them."
+    sa "I take drugs because I can't deal with any of my emotional baggage without them."
 
     scene v14s53_6d
     with dissolve
@@ -311,7 +311,7 @@ label v14s53:
     scene v14s53_6j # FPP. same as v14s53_6i MC grabs Sam's hands and holds them, Sam's mouth is open, sam is still crying
     with dissolve
 
-    sa "*Drunk* And when I'm around other people who take drugs... *Sniffles*"
+    sa "And when I'm around other people who take drugs... *Sniffles*"
 
     scene v14s53_6j
     with dissolve
@@ -399,7 +399,7 @@ label v14s53:
             scene v14s53_6p # FPP. same as v14s53_6o Sam is now looking at MC, still a sad expression, mouth open
             with dissolve
 
-            sa "*Drunk* Will you help me?"
+            sa "Will you help me?"
 
             scene v14s53_6q # FPP. same as v14s53_6p Sam's mouth is closed
             with dissolve
@@ -486,7 +486,7 @@ label v14s53:
                 scene v14s53_6x # FPP. same as v14s53_6w Mc's and sams hands are at their sides, the bottle is still sitting beside sam, Sam looks at mc and smiles, mouth open
                 with dissolve
 
-                sa "*Drunk* I need to go to bed now..."
+                sa "I need to go to bed now... Haha."
 
                 scene v14s53_6y # FPP. same as v14s53_6x Sam's mouth is closed
                 with dissolve
@@ -496,7 +496,7 @@ label v14s53:
                 scene v14s53_3h # TPP. same as v14s53_3g Samantha gives MC a friendly hug both arm's around his neck and shoulders, mc gives sam a friendly hug back, slight smiles, mouth closed, The bottle can be seen behind sam and the pills can be seen behind mc
                 with dissolve
 
-                sa "*Drunk* Thank you."
+                sa "Thank you."
 
                 scene v14s53_3i # TPP. same as v14s53_3h Samantha is looking down at the pills behind mc's back, no expression
                 with dissolve
@@ -545,7 +545,7 @@ label v14s53:
             scene v14s53_6f
             with dissolve
 
-            sa "*Drunk* Thank you. *Chuckles*"
+            sa "Thank you. *Chuckles*"
 
             scene v14s53_6g
             with dissolve
@@ -555,7 +555,7 @@ label v14s53:
             scene v14s53_6z # FPP. same as v14s53_6r Sam's mouth is open enough to talk now
             with dissolve
 
-            sa "*Drunk* Sometimes I feel like you're the only one who's ever fully understood me."
+            sa "Sometimes I feel like you're the only one who's ever fully understood me."
 
             scene v14s53_6za # FPP. same as v14s53_6z Sam takes her top off, revealing her lacy black bra, mouth is closed
             with dissolve
@@ -570,7 +570,7 @@ label v14s53:
             scene v14s53_6zc # FPP. same as v14s53_6zb Sam's mouth is open
             with dissolve
 
-            sa "*Drunk* The last guy I let inside me never had anything nice to say... I always attract the jerks."
+            sa "The last guy I let inside me never had anything nice to say... I always attract the jerks."
 
             scene v14s53_6zc
             with dissolve
@@ -590,7 +590,7 @@ label v14s53:
             scene v14s53_6zc
             with dissolve
 
-            sa "*Drunk* Take these pants off. I want you. Now."
+            sa "Take these pants off. I want you. Now."
 
             scene v14s53_6zb
             with dissolve
@@ -621,24 +621,29 @@ label v14s53:
                     scene v14s53_6zd # FPP. same as v14s53_6zc Sam has a slightly angry expression, mouth is still open
                     with dissolve
 
-                    sa "*Drunk* What? W- Why not?! You think I'm hot, don't you?"
+                    sa "What? W- Why not?! You think I'm hot, don't you?"
 
                     scene v14s53_6ze # FPP. same as v14s53_6zc Sam's mouth is closed
                     with dissolve
 
-                    u "That's not the point. You're really drunk right now, and I just don't think it's a good idea."
+                    u "That's not the point. You've been drinking, and I just don't think it's a good idea."
+
+                    scene v14s53_6zd
+                    with dissolve
+
+                    sa "This is my second beer, [name]."
 
                     if v14_badsinging_Sam:
                         scene v14s53_6zf # FPP. same as v14s53_6zc Sam has increased to fully angry expression
                         with dissolve
 
-                        sa "*Drunk* See, I was right! Ha! All of you are stupid dickheads. Every single one of you!"
+                        sa "See, I was right! Ha! All of you are stupid dickheads. Every single one of you!"
 
                     else:
                         scene v14s53_6zc
                         with dissolve
 
-                        sa "*Drunk* What the fuck do you want from me then, [name]? Why did you even come talk to me?"
+                        sa "What the fuck do you want from me then, [name]? Why did you even come talk to me?"
 
                     scene v14s53_9 # FPP. Mc is still sitting on the couch, sam stands up in front of him and puts back on her shirt, angry expression, mouth closed not looking at mc
                     with dissolve
@@ -653,7 +658,7 @@ label v14s53:
                     scene v14s53_8
                     with dissolve
 
-                    u "*Sighs* (I bet she doesn't remember a single thing in the morning...)"
+                    u "*Sighs* (I hope she doesn't hate me in the morning.)"
 
                     scene v14s53_8
                     with fade

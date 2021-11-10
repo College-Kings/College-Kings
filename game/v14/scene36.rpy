@@ -799,6 +799,11 @@ label v14s36:
                 with dissolve
                 pause
 
+                scene v14s36_99
+                with dissolve
+
+                pause
+
                 scene v14s36_lagsex_1 # TPP. MC starts to goes underwater, Jenny has a curious expression looking at Mc, mouth closed
                 with dissolve
 
