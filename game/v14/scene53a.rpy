@@ -77,7 +77,7 @@ label v14s53a:
 
     sa "Yes! *Moans* This is exactly what I needed..."
 
-    scene v14s53a_ccgf # Ignore as animation
+    scene v14samccgf # Ignore as animation
     with dissolve
     pause
 
@@ -121,7 +121,7 @@ label v14s53a:
 
     sa "I want to have your baby..."
     
-    scene v14samcg2f # Ignore as animation.
+    scene v14samccg2f # Ignore as animation.
     with dissolve
     pause
 
@@ -129,10 +129,10 @@ label v14s53a:
 
     sa "*Laughs* Fuck me, already! *Moans* I'm so close, daddy. Please..."
 
-    image v14samccgb = Movie(play="images/v14/Scene 53a/v14samccgb.webm", loop=True, image="images/v14/Scene 53a/v14samccgb.webp", start_image="images/v14/Scene 53a/v14samccgb.webp")
-    image v14samccgbf = Movie(play="images/v14/Scene 53a/v14samccgbf.webm", loop=True, image="images/v14/Scene 53a/v14samccgbf.webp", start_image="images/v14/Scene 53a/v14samccgbf.webp")
-    image v14samccgb2 = Movie(play="images/v14/Scene 53a/v14samccgb2.webm", loop=True, image="images/v14/Scene 53a/v14samccgb2.webp", start_image="images/v14/Scene 53a/v14samccgb2.webp")
-    image v14samccgb2f = Movie(play="images/v14/Scene 53a/v14sambccgb2f.webm", loop=True, image="images/v14/Scene 53a/v14sambccgb2f.webp", start_image="images/v14/Scene 53a/v14samccgb2f.webp")
+    image v14samccgb = Movie(play="images/v14/Scene 53a/v14samccgb.webm", loop=True, image="images/v14/Scene 53a/v14samccgbStart.webp", start_image="images/v14/Scene 53a/v14samccgbStart.webp")
+    image v14samccgbf = Movie(play="images/v14/Scene 53a/v14samccgbf.webm", loop=True, image="images/v14/Scene 53a/v14samccgbStart.webp", start_image="images/v14/Scene 53a/v14samccgbStart.webp")
+    image v14samccgb2 = Movie(play="images/v14/Scene 53a/v14samccgb2.webm", loop=True, image="images/v14/Scene 53a/v14samccgb2Start.webp", start_image="images/v14/Scene 53a/v14samccgb2Start.webp")
+    image v14samccgb2f = Movie(play="images/v14/Scene 53a/v14sambccgb2f.webm", loop=True, image="images/v14/Scene 53a/v14samccgb2Start.webp", start_image="images/v14/Scene 53a/v14samccgb2Start.webp")
     
     scene v14s53a_10 # TPP. Close up of Samantha's hand grabbing MC's hand as it is on her ass
     with dissolve
