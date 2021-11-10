@@ -17,10 +17,10 @@ label v14s53a:
     scene v14s53a_2 # TPP. Close up of Samantha leaning over her lips close to MC's dick, Samantha biting her lip as she looks at MC's dick.
     with dissolve
 
-    image v14sambj = Movie(play="images/v14/Scene 53a/v14sambj.webm", loop=True, image="images/v14/Scene 53a/v14sambj.webp", start_image="images/v14/Scene 53a/v14sambj.webp")
-    image v14sambjf = Movie(play="images/v14/Scene 53a/v14sambjf.webm", loop=True, image="images/v14/Scene 53a/v14sambjf.webp", start_image="images/v14/Scene 53a/v14sambjf.webp")
-    image v14sambj2 = Movie(play="images/v14/Scene 53a/v14sambj2.webm", loop=True, image="images/v14/Scene 53a/v14sambj2.webp", start_image="images/v14/Scene 53a/v14sambj2.webp")
-    image v14sambj2f = Movie(play="images/v14/Scene 53a/v14sambj2f.webm", loop=True, image="images/v14/Scene 53a/v14sambj2f.webp", start_image="images/v14/Scene 53a/v14sambj2f.webp") 
+    image v14sambj = Movie(play="images/v14/Scene 53a/v14sambj.webm", loop=True, image="images/v14/Scene 53a/v14sambjStart.webp", start_image="images/v14/Scene 53a/v14sambjStart.webp")
+    image v14sambjf = Movie(play="images/v14/Scene 53a/v14sambjf.webm", loop=True, image="images/v14/Scene 53a/v14sambjStart.webp", start_image="images/v14/Scene 53a/v14sambjStart.webp")
+    image v14sambj2 = Movie(play="images/v14/Scene 53a/v14sambj2.webm", loop=True, image="images/v14/Scene 53a/v14sambj2Start.webp", start_image="images/v14/Scene 53a/v14sambj2Start.webp")
+    image v14sambj2f = Movie(play="images/v14/Scene 53a/v14sambj2f.webm", loop=True, image="images/v14/Scene 53a/v14sambj2Start.webp", start_image="images/v14/Scene 53a/v14sambj2Start.webp") 
 
     scene v14sambj # Ignore as animation
     with dissolve
@@ -64,10 +64,10 @@ label v14s53a:
 
     pause
 
-    image v14samccg = Movie(play="images/v14/Scene 53a/v14samccg.webm", loop=True, image="images/v14/Scene 53a/v14samccg.webp", start_image="images/v14/Scene 53a/v14samccg.webp")
-    image v14samccgf = Movie(play="images/v14/Scene 53a/v14samccgf.webm", loop=True, image="images/v14/Scene 53a/v14samccgf.webp", start_image="images/v14/Scene 53a/v14samccgf.webp")
-    image v14samccg2 = Movie(play="images/v14/Scene 53a/v14samccg2.webm", loop=True, image="images/v14/Scene 53a/v14samccg2.webp", start_image="images/v14/Scene 53a/v14samccg2.webp")
-    image v14samccg2f = Movie(play="images/v14/Scene 53a/v14sambccg2f.webm", loop=True, image="images/v14/Scene 53a/v14sambccg2f.webp", start_image="images/v14/Scene 53a/v14samccg2f.webp") 
+    image v14samccg = Movie(play="images/v14/Scene 53a/v14samccg.webm", loop=True, image="images/v14/Scene 53a/v14samccgStart.webp", start_image="images/v14/Scene 53a/v14samccgStart.webp")
+    image v14samccgf = Movie(play="images/v14/Scene 53a/v14samccgf.webm", loop=True, image="images/v14/Scene 53a/v14samccgStart.webp", start_image="images/v14/Scene 53a/v14samccgStart.webp")
+    image v14samccg2 = Movie(play="images/v14/Scene 53a/v14samccg2.webm", loop=True, image="images/v14/Scene 53a/v14samccg2Start.webp", start_image="images/v14/Scene 53a/v14samccg2Start.webp")
+    image v14samccg2f = Movie(play="images/v14/Scene 53a/v14sambccg2f.webm", loop=True, image="images/v14/Scene 53a/v14samccg2Start.webp", start_image="images/v14/Scene 53a/v14samccg2Start.webp") 
 
     scene v14samccg # Ignore as animation
     with dissolve
