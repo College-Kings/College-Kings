@@ -4,6 +4,11 @@
 # Time: Morning
 
 label v14s40a:
+    scene v14s40a_1
+    with dissolve
+
+    pause 0.75
+
     scene v14s40a_2 # TPP. Show MC standing in his room putting on pants 
     with dissolve
     
