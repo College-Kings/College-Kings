@@ -297,6 +297,9 @@ label after_load:
 
 
         # Simplr Contacts
+        for contact in simplr_contacts:
+            contact.profile_picture = os.path.join(contacts_file_path, contact.name.lower(), "{}_profile_picture".format(contact.name.lower()))
+            
         try:
             beth.simplr = simplr_Beth
             del simplr_Beth

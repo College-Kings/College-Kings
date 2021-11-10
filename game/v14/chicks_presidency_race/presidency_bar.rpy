@@ -11,24 +11,23 @@ init python:
 
 
 screen chicks_presidency_bar(old_var, new_var):
-    fixed:
-        at presidency_bar
+    bar:
+        # at presidency_bar
+        value AnimatedValue(new_var, 100, 0.5, old_var)
+        left_bar Frame("images/v14/chicks_presidency_race/presidency_bar/left_bar.png", 10, 0)
+        right_bar Frame("images/v14/chicks_presidency_race/presidency_bar/right_bar.png", 10, 0)
+        maximum (758, 32)
+        align (0.5, 0.11)
 
-        bar:
-            value AnimatedValue(new_var, 100, 5, old_var)
-            left_bar Frame("images/v14/chicks_presidency_race/presidency_bar/left_bar.png", 10, 0)
-            right_bar Frame("images/v14/chicks_presidency_race/presidency_bar/right_bar.png", 10, 0)
-            maximum (758, 32)
-            align (0.5, 0.11)
-            
-        add "images/v14/chicks_presidency_race/presidency_bar/example.png" xalign 0.5
+    add "images/v14/chicks_presidency_race/presidency_bar/example.png":
+        # at presidency_bar
+        xalign 0.5
 
-    timer 6 action Hide("lindsey_vs_chloe")
+    timer 4 action Hide("lindsey_vs_chloe")
 
 
 transform presidency_bar:
-    ypos -200
-    linear 0.5 xpos 0 ypos 0
-    5.0
-    linear 0.5 xpos 0 ypos -200
-    
+    yoffset -200
+    linear 0.5 yoffset 0
+    3.0
+    linear 0.5 yoffset -200
