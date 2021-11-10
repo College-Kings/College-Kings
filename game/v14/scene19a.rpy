@@ -170,6 +170,7 @@ label v14s19a:
 
         menu:
             "Talk to Chris":
+                $ add_point(KCT.BOYFRIEND)
                 $ chloe.points += 1
                 $ v14_talk_to_chris = True
 
@@ -181,6 +182,7 @@ label v14s19a:
                 cl "Perfect! Thank you so much, [name]. This means the world to me."
 
             "Make an excuse":
+                $ add_point(KCT.BRO)
                 u "I hate to state the obvious but, Chris and I aren't on the best of terms right now... And he's got Nora on his mind, so..."
 
                 scene v14s19a_1c

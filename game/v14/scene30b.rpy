@@ -146,6 +146,7 @@ label v14s30b:
 
     menu:
         "It's perfect":
+            $ add_point(KCT.BOYFRIEND)
             $ v14s30b_its_perfect = True
 
             scene v14s30b_2a
@@ -159,6 +160,7 @@ label v14s30b:
             cl "*Chuckles* Exactly."
 
         "What about something else?":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v14s30b_2a
             with dissolve
 

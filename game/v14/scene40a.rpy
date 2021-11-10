@@ -46,6 +46,7 @@ label v14s40a:
 
     menu:
         "I don't hate it":
+            $ add_point(KCT.BOYFRIEND)
             scene v14s40a_5a
             with dissolve
 
@@ -75,6 +76,7 @@ label v14s40a:
             with dissolve
 
         "Don't do it again":
+            $ add_point(KCT.BRO)
             scene v14s40a_5a
             with dissolve
 
@@ -89,12 +91,15 @@ label v14s40a:
 
     menu:
         "I'm clean":
+            $ add_point(KCT.BOYFRIEND)
             scene v14s40a_5a
             with dissolve
 
             u "I am, yeah."
 
         "I'm not clean":
+            $ add_point(KCT.BRO)
+            $ add_point(KCT.TROUBLEMAKER)
             scene v14s40a_5a
             with dissolve
     

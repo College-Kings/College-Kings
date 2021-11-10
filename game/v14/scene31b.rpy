@@ -185,6 +185,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
             u "Yeah... Of course."
             
         "Don't trust Chloe":
+            $ add_point(KCT.BRO)
             $ chloe.points -=1
 
             scene v14s31b_3
@@ -821,6 +822,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
         menu: # -Aubrey offers MC the vape that she took from Grayson-
             "Vape": # -Event1 Sure
+                $ add_point(KCT.TROUBLEMAKER)
                 # -Montage of MC and Aubrey passing the vape while they relax.-
                 $ v14s31b_smoke_weed_with_aubrey = True
                 scene v14s31b_23 # TPP. MC smokes the vaporizer
@@ -854,6 +856,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
                 pause 1
 
             "Pass": # -Event 2 Nah
+                $ add_point(KCT.BOYFRIEND)
                 # -Montage of Aubrey smoking while MC relaxes-
                 scene v14s31b_23c # TPP. MC, eyes closed, leaning back in the bean bag chair, hands behind his head, relaxing.
                 with dissolve
@@ -1011,6 +1014,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
         menu: # -MC chooses Event1 or Event2-
             "Ask for details": # -If Ask for details
+                $ add_point(KCT.TROUBLEMAKER)
                 scene v14s31b_28
                 with dissolve
 
@@ -1037,6 +1041,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
                 u "Good, I figured. Just don't want any mixed messages."
             
             "Leave it be": # -If Leave it be
+                $ add_point(KCT.BOYFRIEND)
                 scene v14s31b_28
                 with dissolve
 

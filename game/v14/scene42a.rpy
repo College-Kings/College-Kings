@@ -76,6 +76,7 @@ label v14s42a:
 
     menu:
         "I wouldn't have changed a thing":
+            $ add_point(KCT.BOYFRIEND)
             $ penelopeloyal = True
 
             scene v14s42a_2
@@ -109,6 +110,7 @@ label v14s42a:
             pe "Yes. Yes it is."
 
         "Sex would've been nice":
+            $ add_point(KCT.BRO)
             scene v14s42a_2f # FPP. Same as v14s42a_2, Penelope slightly uncomfortable, mouth closed
             with dissolve
 

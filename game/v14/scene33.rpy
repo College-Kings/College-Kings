@@ -66,6 +66,7 @@ label v14s33:
 
             menu:
                 "Want me to come over?":
+                    $ add_point(KCT.BRO)
                     scene v14s33_3a
                     with dissolve
 
@@ -117,6 +118,7 @@ label v14s33:
 
             menu:
                 "Laugh":
+                    $ add_point(KCT.BOYFRIEND)
                     scene v14s33_3a
                     with dissolve
 
@@ -173,6 +175,8 @@ label v14s33:
                         jump v14s35
 
                 "Get excited":
+                    $ add_point(KCT.BRO)
+                    $ add_point(KCT.TROUBLEMAKER)
                     scene v14s33_3a
                     with dissolve
 
@@ -285,6 +289,7 @@ label v14s33:
 
             menu:
                 "Want me to come over?":
+                    $ add_point(KCT.BRO)
                     scene v14s33_3a
                     with dissolve
 
@@ -335,6 +340,7 @@ label v14s33:
 
             menu:
                 "Laugh":
+                    $ add_point(KCT.BRO)
                     scene v14s33_3a
                     with dissolve
 

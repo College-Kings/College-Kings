@@ -257,6 +257,8 @@ label v14s23:
             u "You're right. It is expensive, but money is just an object when it comes to keeping the Chicks legacy in good hands."
             
         "Disagree":
+            $ add_point(KCT.TROUBLEMAKER)
+            $ add_point(KCT.BRO)
             scene v14s23_2b
             with dissolve
 

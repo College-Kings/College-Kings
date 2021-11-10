@@ -101,8 +101,9 @@ label v14s20:
     menu:
 
         "It was great":
+            $ add_point(KCT.BRO)
 
-            u "The trip was rgreat."
+            u "The trip was great."
 
             scene v14s20_3e # FPP Same angle as 3, Autumn's eyebrow raised, mouth closed
             with dissolve
@@ -110,6 +111,7 @@ label v14s20:
             u "Drama, fun and excitement. A little dose of everything."
 
         "It was alright":
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Yeah it was alright."
 
@@ -436,6 +438,7 @@ label v14s20:
 
     menu:
         "We should hang out more":
+            $ add_point(KCT.TROUBLEMAKER)
             u "We should just hang out more. *Chuckles*"
 
             scene v14s20_3
@@ -489,6 +492,7 @@ label v14s20:
             u "Yeah, see ya."
 
         "It was nice catching up":
+            $ add_point(KCT.BOYFRIEND)
             u "It was really nice catching up with you, but I actually need to hurry. I've got this thing..."
 
             scene v14s20_3

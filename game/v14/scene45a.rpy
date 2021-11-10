@@ -71,6 +71,7 @@ label v14s45a:
                 u "Ha, good. I'm glad I could help."
 
             "Why a stripper?":
+                $ add_point(KCT.BOYFRIEND)
                 scene v14s45a_1b
                 with dissolve
                 

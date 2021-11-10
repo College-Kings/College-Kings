@@ -184,6 +184,7 @@ label v14s53a:
 
     menu: # should be a timed event
         "Cum inside Samantha":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v14s53a_9a
             with vpunch
 
@@ -200,6 +201,7 @@ label v14s53a:
             u "(Oh, shit... I actually came inside of her?! I hope I don't live to regret that.)"
 
         "Pull out":
+            $ add_point(KCT.BOYFRIEND)
             scene v14s53a_14 # FPP. Show MC's hand lifting up Samantha's ass as he pulls out
             with dissolve
 

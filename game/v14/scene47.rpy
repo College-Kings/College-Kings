@@ -698,6 +698,7 @@ label v14s47_passenger:
 
         menu:
             "Hand on hips":
+                $ add_point(KCT.BOYFRIEND)
                 $ v14s47_linds_hips = True
                 $ v14s47_pics += 1
 
@@ -729,6 +730,8 @@ label v14s47_passenger:
                 li "Alrighty... Anymore?"
 
             "On her knees":
+                $ add_point(KCT.BRO)
+                $ add_point(KCT.TROUBLEMAKER)
                 $ v14s47_linds_knees = True
                 $ v14s47_pics += 1
 

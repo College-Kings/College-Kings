@@ -207,6 +207,7 @@ label v14s43d:
 
     menu:
         "I'm dominant": # ;)
+            $ add_point(KCT.BRO)
             scene v14s43d_2
             with dissolve
 
@@ -218,6 +219,7 @@ label v14s43d:
             ri "Oh... You like taking control, huh?"
 
         "I'm submissive": # ;O 
+            $ add_point(KCT.BOYFRIEND) 
             scene v14s43d_2
             with dissolve
             

@@ -299,6 +299,7 @@ label v14s31a:
 
     menu:
         "So Lindsey doesn't win":
+            $ add_point(KCT.BOYFRIEND)
             u "Duh, so Lindsey doesn't win."
 
             scene v14s31a_3a
@@ -406,6 +407,7 @@ label v14s31a:
 
     menu:
         "Say Chloe is the hotter chick":
+            $ add_point(KCT.BRO)
             u "Tell everyone Chloe is the hotter chick and that the hottest chick should be the Chicks president."
 
             scene v14s31a_3a
@@ -414,6 +416,7 @@ label v14s31a:
             ca "Yeah... Again, that means nothing to me."
 
         "Collaboration":
+            $ add_point(KCT.BOYFRIEND)
             u "I don't know exactly, we haven't decided just yet."
 
             u "Maybe just some sort of collaborative post on Kiwii would get the ball rolling and make people start talking."

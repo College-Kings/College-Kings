@@ -188,6 +188,12 @@ label v14s18:
 
     menu:
         "Help Lindsey":
+            if chloegf:
+                $ add_point(KCT.TROUBLEMAKER)
+            elif v12_lindsey_sex:
+                $ add_point(KCT.BOYFRIEND)
+            else:
+                $ add_point(KCT.BRO)
             $ v14_help_lindsey = True
 
             if v14_help_chloe:
@@ -233,6 +239,11 @@ label v14s18:
                 pause 0.75
 
         "Don't help Lindsey":
+            if chloegf:
+                $ add_point(KCT.BOYFRIEND)
+            elif v12_lindsey_sex:
+                $ add_point(KCT.TROUBLEMAKER)
+                
             scene v14s18_4i # FPP. Same as v14s18_4, Lindsey sad
             with dissolve
 
