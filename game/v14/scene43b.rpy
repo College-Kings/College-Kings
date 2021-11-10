@@ -5,7 +5,52 @@
 # Kiwi Post: v14kw43b - Sexy pic of Chloe is on Kiwii from Ryan, Grayson and Cameron's accounts-
 # 22 Unique Renders, 46 Total
 
+init python:
+    def v14_iris_simplr1():
+        iris.simplr.addReply(_("I'm more than happy that we matched, especially after knowing that you're just as excited as I am, haha!"), v14_iris_simplr2)
+
+    def v14_iris_simplr2():
+        iris.simplr.addReply(_("So, how are you? Who are you? What are you up to? Lmao"), v14_iris_simplr3)
+        iris.simplr.addReply(_("You're single, right?"), v14_iris_simplr4)
+        
+    def v14_iris_simplr3():
+        iris.simplr.newMessage(":) I am doing perfectly well now that I'm talking to you, hehe.", queue=False)
+        iris.simplr.newMessage("I'm a 20 year old college student, studying Literature. And at this very moment I am practicing my French. As that's where I'm currently studying, haha", queue=False)
+        iris.simplr.addReply(_("You're in France?! We literally just got back to America from a class trip to Europe..."),v14_iris_simplr6)
+        
+    def v14_iris_simplr4():
+        setattr(store, "irisStrikes", irisStrikes +1)
+        iris.simplr.newMessage("Umm, yes? I wouldn't be here if I weren't. Aren't you?", queue=False)
+        iris.simplr.addReply(_("Uh, yeah. Of course! I just felt like I needed to ask for some reason."), v14_iris_simplr5)
+        
+    def v14_iris_simplr5():
+        iris.simplr.newMessage("Right...", queue=False)
+        iris.simplr.addReply("So, single Iris... How are you, who are you and what are you up to?")
+        iris.simplr.newMessage("I'm a 20 year old college student, studying Literature. And at this very moment I am practicing my French. As that's where I'm currently studying, haha", queue=False)
+        iris.simplr.addReply(("You're in France?! We literally just got back to America from a class trip to Europe..."), v14_iris_simplr6)
+        
+    def v14_iris_simplr6():
+        iris.simplr.newMessage("No way! I guess fate decided that we shouldn't have met...")
+        iris.simplr.addReply("Not yet, at least ;) Maybe this is where our love story begins?")
+        iris.simplr.newMessage("...")
+        iris.simplr.newMessage("You can't say things like that unless you mean it.")
+        iris.simplr.addReply("What makes you think I didn't mean it?")
+        iris.simplr.newMessage("Haha... Okay, Prince Charming.")
+        iris.simplr.newMessage("I better sign off of here before I fall too fast... Lol")
+        iris.simplr.addReply("Yeah, me too... Sheesh...")
+        iris.simplr.newMessage("Oh, whatever! Hahaha. Talk again soon?")
+        iris.simplr.addReply("Looking forward to it :)")
+        iris.simplr.addReply(_("Sure thing, hottie."), v14_iris_simplr7)
+        
+    def v14_iris_simplr7():
+        setattr(store, "irisStrikes", irisStrikes +1)
+
 label v14s43b:
+    if iris.simplr in simplr_contacts:
+        $ iris.simplr.newMessage("Soooo....", queue=False)
+        $ iris.simplr.newMessage("I'm guessing you aren't that happy about it considering it's been a few days now with no response, haha. Sorry.", queue=False)
+        $ iris.simplr.addReply(_("Hey, Iris. So sorry if you felt like I wasn't interested, my Simplr has just been glitchy and I've been stuck out of it for a while. Back for good now."), v14_iris_simplr1)
+
     scene v14s43b_1 # FPP. Mr. Lee walks into the classroom happy and cheery, mouth open
     with dissolve
 

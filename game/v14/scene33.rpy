@@ -4,12 +4,14 @@
 # Time: Evening
 
 label v14s33:
-    if joinwolves:
-        scene v14s12_5
-        with fade
-        
-        pause 0.75
+    if iris.simplr in simplr_contacts:
+        $ iris.simplr.newMessage("Hi... You're so cute. Haha", queue=False)
+        $ iris.simplr.newMessage("Sorry if that was too forward, lol", queue=False)
+        $ iris.simplr.newMessage("I guess what I mean is that I'm happy that we matched", queue=False)
+    elif iris.simplr in simplr_pendingContacts:
+        $ iris.simplr.removeContact()
 
+    if joinwolves:
         scene v14s33_1 # TPP. Show MC showering, slight smile, mouth closed
         with fade
 
@@ -229,11 +231,6 @@ label v14s33:
                         jump v14s35
 
     else:
-        scene v14s12_6
-        with fade
-        
-        pause 0.75
-    
         scene v14s33_1 # TPP. Show MC showering, slight smile, mouth closed
         with fade
 
