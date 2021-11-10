@@ -5,7 +5,7 @@
 
 label v14s12:
     scene v14s12_1 # TPP. MC walking down the sidewalk back to San Vallejo, slight smile, mouth closed. 
-    with dissolve
+    with fade
     play sound "sounds/call.mp3"
 
     pause 0.75
