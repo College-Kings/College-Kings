@@ -7,7 +7,7 @@ label v14s25b:
     scene v14s25b_1 # TPP. Show MC birds eye view in bed, looking up to the roof, slight smile, mouth closed, Amber beside him, sleeping on her right side though, neutral expression, mouth closed
     with dissolve
 
-    u "(I'm not used to being the first one awake. *Chuckles*)"
+    u "(I'm not used to being the first one awake...)"
 
     scene v14s25b_2 # TPP. Show MC getting out of bed, neutral expression, mouth closed
     with dissolve
@@ -82,7 +82,7 @@ label v14s25b:
     
         am "*Mumbles*"
 
-        u "(Guess she's too fucked up from last night. *Chuckles*)"
+        u "(Guess she's too fucked up from last night. Oh well...)"
 
         scene v14s25b_9 # TPP. Show MC thinking to himself, slight smile, mouth closed
         with dissolve

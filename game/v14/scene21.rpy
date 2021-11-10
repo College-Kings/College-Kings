@@ -27,7 +27,7 @@ label v14s21:
     scene v14s21_2b # FPP. Same as v14s21_2a, Chloe reaches MC and is standing still infront of him, Chloe looking at MC, Chloe slight smile, mouth closed.
     with dissolve
 
-    u "*Chuckles* What's happening? Something wrong?"
+    u "What's happening? Something wrong?"
 
     scene v14s21_2c # FPP. Same as v14s21_2b, Chloe slight smile, mouth open.
     with dissolve
@@ -51,6 +51,8 @@ label v14s21:
     scene v14s21_2b
     with dissolve
     
+    pause 0.01 #close and open mouth due to many dialogue lines
+    
     scene v14s21_2c
     with dissolve
 
@@ -60,6 +62,8 @@ label v14s21:
 
     scene v14s21_2b
     with dissolve
+    
+    pause 0.01 #close and open mouth due to many dialogue lines
     
     scene v14s21_2c
     with dissolve
@@ -108,7 +112,7 @@ label v14s21:
     scene v14s21_2g # FPP. Same as v14s21_2f, Chloe slight smile, mouth closed.
     with dissolve
 
-    u "*Chuckles* I do now, I suppose. Although, I'm not completely agreeing with you on that one..."
+    u "I do now, I suppose. Although, I'm not completely agreeing with you on that one..."
 
     scene v14s21_2f
     with dissolve
@@ -142,7 +146,7 @@ label v14s21:
     scene v14s21_2g
     with dissolve
 
-    u "*Chuckles* Thank you, you are too."
+    u "Thank you, you are too."
 
     scene v14s21_2f
     with dissolve
@@ -318,6 +322,6 @@ label v14s21:
             scene v14s21_8g # FPP. Same as v14s21_8f, Chloe walking away from MC.
             with dissolve
 
-            u "(She's something else. *Chuckles*)"
+            u "(She's something else.)"
 
             jump v14s21b

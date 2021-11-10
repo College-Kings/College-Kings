@@ -36,7 +36,7 @@ label v14s30b:
     scene v14s30b_2
     with dissolve
 
-    cl "My posing definitely isn't as good as Aubrey's though. *Chuckles*"
+    cl "My posing definitely isn't as good as Aubrey's though."
 
     scene v14s30b_2a
     with dissolve
@@ -51,7 +51,7 @@ label v14s30b:
     scene v14s30b_2a
     with dissolve
 
-    u "*Chuckles* She is your VP."
+    u "*She is your VP..."
 
     scene v14s30b_2
     with dissolve
@@ -99,7 +99,7 @@ label v14s30b:
         scene v14s30b_2
         with dissolve
 
-        cl "Good call. *Chuckles* I'm gonna post that one on Kiwii."
+        cl "Good call. I'm gonna post that one on Kiwii then."
 
     else:
         cl "I know the entire school is gonna be off the wall about these photos, haha."
@@ -132,7 +132,7 @@ label v14s30b:
         scene v14s30b_2
         with dissolve
 
-        cl "Good call. *Chuckles* I'm gonna post that one on Kiwii."
+        cl "Good call. I'm gonna post that one on Kiwii then."
 
     scene v14s30b_2a
     with dissolve
@@ -215,6 +215,8 @@ label v14s30b:
         play sound "sounds/kiss.mp3"
         scene v14s30b_5 # FPP. Chloe kissing MC.
         with dissolve
+        
+        pause 1.5
 
     scene v14s30b_6 # FPP. Show Chloe running off away from MC.
     with dissolve
@@ -349,12 +351,8 @@ label v14s30b:
         $ v14s30b_kiwiiPost8.addReply(_("These turned out perfect! #Vote4Chloe"))
         $ v14s30b_kiwiiPost8.addReply(_("Aww, haha. Congrats!"))
 
-    if False: ##just making sure it shows up on lint
-        scene v14s30b_pw_image_one
-        scene v14s30b_pw_image_two
-        scene v14s30b_rw_image_one
-        scene v14s30b_rw_image_two
-        
+    u "Let me check how the announcement came out."
+
     if v14s30b_its_perfect:
         $ set_presidency_percent(v14_lindsey_popularity - 1) #tick
     else:

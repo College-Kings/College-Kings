@@ -22,7 +22,7 @@ label v14s07:
     scene v14s07_2a # FPP. same asv14s07_2 ms rose has put her hand down
     with dissolve
 
-    ro "I've enjoyed this trip quite a bit, but I am very much ready to head home. *Chuckles*"
+    ro "I've enjoyed this trip quite a bit, but I am very much ready to head home."
 
     scene v14s07_2b # FPP. same as v14s07_2a Ms. Rose looks to her left, mouth closed
     with dissolve
@@ -42,7 +42,7 @@ label v14s07:
     scene v14s07_3 # FPP. Mc looks to his left and sees aubrey looking at riley with a flirtatious look, mouth open, and riley looking at aubrey with a shocked expression mouth open
     with dissolve
 
-    au "*Whispers* Involved with each other... *Chuckles*"
+    au "*Whispers* Involved with each other..."
 
     scene v14s07_3b
     with dissolve
@@ -73,7 +73,7 @@ label v14s07:
         scene v14s07_2c
         with dissolve
 
-        u "(Okay Rose, let's try to be a little less obvious here.) *Chuckles*"
+        u "(Okay Rose, let's try to be a little less obvious here.)"
 
         scene v14s07_2a
         with dissolve
@@ -93,7 +93,7 @@ label v14s07:
     scene v14s07_2d # FPP. same as v14s07_2b ms. rose looks to her right, mouth open
     with dissolve
 
-    ro "Maybe not. *Chuckles*"
+    ro "Maybe not..."
 
     scene v14s07_4a # FPP. same as v14s07_4 Imre is blushing and smiling after Ms. Rose laughs and smiles at him
     with dissolve

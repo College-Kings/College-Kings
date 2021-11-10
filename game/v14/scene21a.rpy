@@ -15,8 +15,8 @@ label v14s21a:
     pause 0.75
 
     # -Chloe makeout animation-
-    image v14chlmkTPP1 = Movie(play="images/v14/Scene 3d/v14chlmkTPP1.webm", loop=True, image="images/v14/Scene 3d/v14chlmkTPP1.webp", start_image="images/v14/Scene 3d/v14chlmkTPP1.webp")
-    image v14chlmkTPP1f = Movie(play="images/v14/Scene 3d/v14chlmkTPP1f.webm", loop=True, image="images/v14/Scene 3d/v14chlmkTPP1.webp", start_image="images/v14/Scene 3d/v14chlmkTPP1.webp")
+    image v14chlmkTPP1 = Movie(play="images/v14/Scene 21a/v14chlmkTPP1.webm", loop=True, image="images/v14/Scene 21a/v14chlmkTPP1.webp", start_image="images/v14/Scene 21a/v14chlmkTPP1.webp")
+    image v14chlmkTPP1f = Movie(play="images/v14/Scene 21a/v14chlmkTPP1f.webm", loop=True, image="images/v14/Scene 21a/v14chlmkTPP1.webp", start_image="images/v14/Scene 21a/v14chlmkTPP1.webp")
 
     scene v14chlmkTPP1 # Chloe and MC making out
     with dissolve
@@ -28,8 +28,8 @@ label v14s21a:
 
     pause
 
-    image v14chlmkTPP2 = Movie(play="images/v14/Scene 3d/v14chlmkTPP2.webm", loop=True, image="images/v14/Scene 3d/v14chlmkTPP2.webp", start_image="images/v14/Scene 3d/v14chlmkTPP2.webp")
-    image v14chlmkTPP2f = Movie(play="images/v14/Scene 3d/v14chlmkTPP2f.webm", loop=True, image="images/v14/Scene 3d/v14chlmkTPP2.webp", start_image="images/v14/Scene 3d/v14chlmkTPP2.webp")
+    image v14chlmkTPP2 = Movie(play="images/v14/Scene 21a/v14chlmkTPP2.webm", loop=True, image="images/v14/Scene 21a/v14chlmkTPP2.webp", start_image="images/v14/Scene 21a/v14chlmkTPP2.webp")
+    image v14chlmkTPP2f = Movie(play="images/v14/Scene 21a/v14chlmkTPP2f.webm", loop=True, image="images/v14/Scene 21a/v14chlmkTPP2.webp", start_image="images/v14/Scene 21a/v14chlmkTPP2.webp")
 
     scene v14chlmkTPP2 # Chloe and MC making out angle 2
     with dissolve
@@ -79,7 +79,7 @@ label v14s21a:
     scene v14s21a_8 # FPP Show Chloe, close to MC with her back against the wall, she has a seductive expression, mouth open
     with dissolve
 
-    cl "*Chuckles* Did you miss me?"
+    cl "Did you miss me?"
 
     scene v14s21a_8a # FPP Same as 8, Chloe's mouth closed
     with dissolve
@@ -96,8 +96,8 @@ label v14s21a:
 
     pause 0.75
 
-    image v14chlsmTPP1 = Movie(play="images/v14/Scene 3d/v14chlsmTPP1.webm", loop=True, image="images/v14/Scene 3d/v14chlsmTPP1.webp", start_image="images/v14/Scene 3d/v14chlsmTPP1.webp")
-    image v14chlsmTPP1f = Movie(play="images/v14/Scene 3d/v14chlsmTPP1f.webm", loop=True, image="images/v14/Scene 3d/v14chlsmTPP1.webp", start_image="images/v14/Scene 3d/v14chlsmTPP1.webp")
+    image v14chlsmTPP1 = Movie(play="images/v14/Scene 21a/v14chlsmTPP1.webm", loop=True, image="images/v14/Scene 21a/v14chlsmTPP1.webp", start_image="images/v14/Scene 21a/v14chlsmTPP1.webp")
+    image v14chlsmTPP1f = Movie(play="images/v14/Scene 21a/v14chlsmTPP1f.webm", loop=True, image="images/v14/Scene 21a/v14chlsmTPP1.webp", start_image="images/v14/Scene 21a/v14chlsmTPP1.webp")
 
     scene v14chlsmTPP1 # Against the wall
     with dissolve
@@ -109,8 +109,8 @@ label v14s21a:
 
     u "I... I needed this too..."
 
-    image v14chlsmTPP2 = Movie(play="images/v14/Scene 3d/v14chlsmTPP2.webm", loop=True, image="images/v14/Scene 3d/v14chlsmTPP2.webp", start_image="images/v14/Scene 3d/v14chlsmTPP2.webp")
-    image v14chlsmTPP2f = Movie(play="images/v14/Scene 3d/v14chlsmTPP2f.webm", loop=True, image="images/v14/Scene 3d/v14chlsmTPP2.webp", start_image="images/v14/Scene 3d/v14chlsmTPP2.webp")
+    image v14chlsmTPP2 = Movie(play="images/v14/Scene 21a/v14chlsmTPP2.webm", loop=True, image="images/v14/Scene 21a/v14chlsmTPP2.webp", start_image="images/v14/Scene 21a/v14chlsmTPP2.webp")
+    image v14chlsmTPP2f = Movie(play="images/v14/Scene 21a/v14chlsmTPP2f.webm", loop=True, image="images/v14/Scene 21a/v14chlsmTPP2.webp", start_image="images/v14/Scene 21a/v14chlsmTPP2.webp")
 
     scene v14chlsmTPP2 # Against the wall angle 2
     with dissolve
@@ -147,8 +147,8 @@ label v14s21a:
 
     pause 0.75
 
-    image v14chlcgFPP = Movie(play="images/v14/Scene 3d/v14chlcgFPP.webm", loop=True, image="images/v14/Scene 3d/v14chlcgFPP.webp", start_image="images/v14/Scene 3d/v14chlcgFPP.webp")
-    image v14chlcgFPPf = Movie(play="images/v14/Scene 3d/v14chlcgFPPf.webm", loop=True, image="images/v14/Scene 3d/v14chlcgFPP.webp", start_image="images/v14/Scene 3d/v14chlcgFPP.webp")
+    image v14chlcgFPP = Movie(play="images/v14/Scene 21a/v14chlcgFPP.webm", loop=True, image="images/v14/Scene 21a/v14chlcgFPP.webp", start_image="images/v14/Scene 21a/v14chlcgFPP.webp")
+    image v14chlcgFPPf = Movie(play="images/v14/Scene 21a/v14chlcgFPPf.webm", loop=True, image="images/v14/Scene 21a/v14chlcgFPP.webp", start_image="images/v14/Scene 21a/v14chlcgFPP.webp")
 
     scene v14chlcgFPP # Cowgirl
     with dissolve
@@ -162,8 +162,8 @@ label v14s21a:
 
     u "N-No... It feels great, baby."
 
-    image v14chlcgTPP = Movie(play="images/v14/Scene 3d/v14chlcgTPP.webm", loop=True, image="images/v14/Scene 3d/v14chlcgTPP.webp", start_image="images/v14/Scene 3d/v14chlcgTPP.webp")
-    image v14chlcgTPPf = Movie(play="images/v14/Scene 3d/v14chlcgTPPf.webm", loop=True, image="images/v14/Scene 3d/v14chlcgTPP.webp", start_image="images/v14/Scene 3d/v14chlcgTPP.webp")
+    image v14chlcgTPP = Movie(play="images/v14/Scene 21a/v14chlcgTPP.webm", loop=True, image="images/v14/Scene 21a/v14chlcgTPP.webp", start_image="images/v14/Scene 21a/v14chlcgTPP.webp")
+    image v14chlcgTPPf = Movie(play="images/v14/Scene 21a/v14chlcgTPPf.webm", loop=True, image="images/v14/Scene 21a/v14chlcgTPP.webp", start_image="images/v14/Scene 21a/v14chlcgTPP.webp")
 
     scene v14chlcgTPP # Cowgirl angle 2
     with dissolve
@@ -200,8 +200,8 @@ label v14s21a:
 
     pause 0.75
 
-    image v14chlffFPP = Movie(play="images/v14/Scene 3d/v14chlffFPP.webm", loop=True, image="images/v14/Scene 3d/v14chlffFPP.webp", start_image="images/v14/Scene 3d/v14chlffFPP.webp")
-    image v14chlffFPPf = Movie(play="images/v14/Scene 3d/v14chlffFPPf.webm", loop=True, image="images/v14/Scene 3d/v14chlffFPP.webp", start_image="images/v14/Scene 3d/v14chlffFPP.webp")
+    image v14chlffFPP = Movie(play="images/v14/Scene 21a/v14chlffFPP.webm", loop=True, image="images/v14/Scene 21a/v14chlffFPP.webp", start_image="images/v14/Scene 21a/v14chlffFPP.webp")
+    image v14chlffFPPf = Movie(play="images/v14/Scene 21a/v14chlffFPPf.webm", loop=True, image="images/v14/Scene 21a/v14chlffFPP.webp", start_image="images/v14/Scene 21a/v14chlffFPP.webp")
 
     scene v14chlffFPP # BJ
     with dissolve
@@ -217,8 +217,8 @@ label v14s21a:
 
     cl "*Humming* Mmhmmmmm?"
 
-    image v14chlffTPP = Movie(play="images/v14/Scene 3d/v14chlffTPP.webm", loop=True, image="images/v14/Scene 3d/v14chlffTPP.webp", start_image="images/v14/Scene 3d/v14chlffTPP.webp")
-    image v14chlffTPPf = Movie(play="images/v14/Scene 3d/v14chlffTPPf.webm", loop=True, image="images/v14/Scene 3d/v14chlffTPP.webp", start_image="images/v14/Scene 3d/v14chlffTPP.webp")
+    image v14chlffTPP = Movie(play="images/v14/Scene 21a/v14chlffTPP.webm", loop=True, image="images/v14/Scene 21a/v14chlffTPP.webp", start_image="images/v14/Scene 21a/v14chlffTPP.webp")
+    image v14chlffTPPf = Movie(play="images/v14/Scene 21a/v14chlffTPPf.webm", loop=True, image="images/v14/Scene 21a/v14chlffTPP.webp", start_image="images/v14/Scene 21a/v14chlffTPP.webp")
 
     scene v14chlffTPP # BJ angle 2
     with dissolve
@@ -232,7 +232,7 @@ label v14s21a:
 
     u "*Moans*"
 
-    cl "Mmm! *Chuckles*"
+    cl "Mmm!"
 
     scene v14s21a_14 # FPP Show Chloe, sucking MC's dick as he cums in her mouth
     with dissolve
@@ -269,12 +269,12 @@ label v14s21a:
     scene v14s21a_16a # FPP Same as 16, Chloe's mouth open
     with dissolve
 
-    cl "Haha, I'll make time for some self-rejuvenation between presidency events. *Chuckles*"
+    cl "Haha, I'll make time for some self-rejuvenation between presidency events."
 
     scene v14s21a_16
     with dissolve
 
-    u "I like the sound of that. *Chuckles*"
+    u "I like the sound of that."
 
     scene v14s21a_17 # TPP Show MC grabbing Chloe's face and kissing her on the forehead, Chloe with a big smile
     with dissolve
@@ -319,12 +319,12 @@ label v14s21a:
     scene v14s21a_16
     with dissolve
 
-    u "See ya. *Chuckles*"
+    u "See ya."
 
     scene v14s21a_18 # FPP Show Chloe walking off
     with dissolve
 
-    u "(The girl who everyone says is the hottest on campus, and she's fawning over me... *Chuckles* Wow, [name]. Just, wow...)"
+    u "(The girl who everyone says is the hottest on campus, and she's fawning over me... Wow, [name]. Just, wow...)"
 
     scene v14s21a_19 # TPP Show MC walking away
     with dissolve

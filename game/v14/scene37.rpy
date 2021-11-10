@@ -29,7 +29,7 @@ label v14s37:
     scene v14s37_3a # FPP. Same as v14s37_3, Penelope slight smile, mouth open.
     with dissolve
 
-    pe "*Chuckles* Thank you. You too. As always."
+    pe "Thank you. You too. As always."
 
     scene v14s37_3
     with dissolve
@@ -39,7 +39,7 @@ label v14s37:
     scene v14s37_3a
     with dissolve
 
-    pe "If I'm being honest, I started getting dressed as soon as you called and got here as quickly as I could. *Chuckles*"
+    pe "If I'm being honest, I started getting dressed as soon as you called and got here as quickly as I could."
 
     scene v14s37_3
     with dissolve
@@ -129,7 +129,7 @@ label v14s37:
     scene v14s37_10a # FPP. Same as v14s37_10, Penelope looking at MC, MC looking at Penelope, Penelope slight smile, mouth open.
     with dissolve
 
-    pe "I'll be honest... I'm not hungry at all. *Chuckles*"
+    pe "I'll be honest... I'm not hungry at all."
 
     scene v14s37_10b # FPP. Same as v14s37_10a, Penelope slight smile, mouth closed.
     with dissolve
@@ -139,7 +139,7 @@ label v14s37:
     scene v14s37_10a
     with dissolve
 
-    pe "I just really like this place! *Chuckles* Is it bad if I don't order anything?"
+    pe "I just really like this place! Is it bad if I don't order anything?"
 
     scene v14s37_10b
     with dissolve
@@ -159,7 +159,7 @@ label v14s37:
     scene v14s37_10a
     with dissolve
 
-    pe "I'm a trendsetter, [name]. *Chuckles* You can still order whatever you want, though."
+    pe "I'm a trendsetter, [name]. You can still order whatever you want, though."
 
     scene v14s37_10b
     with dissolve
@@ -184,7 +184,7 @@ label v14s37:
     scene v14s37_10a
     with dissolve
 
-    pe "Guess that makes two of us. *Chuckles*"
+    pe "Guess that makes two of us."
 
     scene v14s37_9d # FPP. Same as v14s37_9c, the host putting the glasses of water on the table for Penelope and MC.
     with dissolve
@@ -209,12 +209,12 @@ label v14s37:
     scene v14s37_9b
     with dissolve
 
-    host "*Chuckles* I know what you mean. You two just enjoy your evening and if you want anything, just give me a holler."
+    host "I know what you mean. You two just enjoy your evening and if you want anything, just let me know."
 
     scene v14s37_9a
     with dissolve
 
-    u "We will, thank you. *Chuckles*"
+    u "We will, thank you."
 
     scene v14s37_9c
     with dissolve
@@ -394,7 +394,7 @@ label v14s37:
             scene v14s37_10d
             with dissolve
 
-            u "*Chuckles* I'm sorry. I just... I thought of a cartoon I used to watch that had a hall monitor episode, and it made me-"
+            u "I'm sorry. I just... I thought of a cartoon I used to watch that had a hall monitor episode, and it made me-"
 
             scene v14s37_10f # FPP. Same as v14s37_10c, Penelope neutral face as she is unamused, mouth closed.
             with dissolve
@@ -502,7 +502,7 @@ label v14s37:
     scene v14s37_10b
     with dissolve
 
-    u "Definitely feels like we didn't miss a beat. *Chuckles* Classes, frat stuff, Julia across the country... Everything just picked right back up."
+    u "Definitely feels like we didn't miss a beat. Classes, frat stuff, Julia across the country... Everything just picked right back up."
 
     scene v14s37_10m # FPP. Same as v14s37_10a, Penelope confused worried face, mouth open.
     with dissolve
@@ -537,7 +537,7 @@ label v14s37:
     scene v14s37_10a
     with dissolve
 
-    pe "It's kinda weird listening to how involved you are in everything and here I am with nothing to do. *Chuckles*"
+    pe "It's kinda weird listening to how involved you are in everything and here I am with nothing to do."
 
     scene v14s37_10b
     with dissolve
@@ -552,7 +552,7 @@ label v14s37:
     scene v14s37_10b
     with dissolve
 
-    u "No? *Chuckles*"
+    u "No?"
 
     scene v14s37_10a
     with dissolve
@@ -647,7 +647,7 @@ label v14s37:
     scene v14s37_10a
     with dissolve
 
-    pe "Fun for you maybe. *Chuckles*"
+    pe "Fun for you maybe."
 
     scene v14s37_10b
     with dissolve
@@ -662,7 +662,7 @@ label v14s37:
     scene v14s37_10b
     with dissolve
 
-    u "Good. And if it fails, I will gladly come running to your defense. *Chuckles*"
+    u "Good. And if it fails, I will gladly come running to your defense."
 
     scene v14s37_17 # TPP. Shot of both Penelope and MC starting to lean over the table to kiss each other.
     with dissolve

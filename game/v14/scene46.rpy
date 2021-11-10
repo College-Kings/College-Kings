@@ -14,7 +14,7 @@ label v14s46: # -MC is walking along the sidewalk when he gets a call from Laure
     scene v14s46_2 # FPP. MC, looking at his phone. (if Possible, have picture of Lauren show on the screen).
     with dissolve
 
-    u "(I'm famous today. *Chuckles*)"
+    u "(I'm famous today...)"
    
     play sound "sounds/answercall.mp3"
 
@@ -36,7 +36,7 @@ label v14s46: # -MC is walking along the sidewalk when he gets a call from Laure
     scene v14s46_4a # TPP. Same as v14s46_4, but Lauren with a different expression but still facing/looking slightly left.
     with dissolve
 
-    la "I learned the theory of hypnosis, and now I want to try and hypnotize someone... aka you. *Chuckles*"
+    la "I learned the theory of hypnosis, and now I want to try and hypnotize someone... aka you."
 
     scene v14s46_3
     with dissolve

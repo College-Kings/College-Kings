@@ -26,7 +26,7 @@ label v14s45a:
         scene v14s45a_1a
         with dissolve
 
-        am "Just tired of it, honestly... It's not fun. *Chuckles*"
+        am "Just tired of it, honestly... It's not fun."
 
         am "I know it sounds kinda... Whatever, I think I'm gonna try to be a private dancer or something."
 
@@ -137,7 +137,7 @@ label v14s45a:
         scene v14s45a_1c
         with dissolve
 
-        am "*Chuckles* I'm now the \"Assistant to the Manager\"."
+        am "I'm now the \"Assistant to the Manager\"."
 
         scene v14s45a_1d
         with dissolve
@@ -167,7 +167,7 @@ label v14s45a:
 
                 u "First, you just work at the rich kid shop, start wearing the rich kid clothes, and now you're moving up in the ranks?"
 
-                u "Should I call you Ma'am now, when I stop by? *Chuckles*"
+                u "Should I call you Ma'am now, when I stop by?"
 
                 scene v14s45a_1c
                 with dissolve
@@ -189,7 +189,7 @@ label v14s45a:
                 scene v14s45a_1d
                 with dissolve
 
-                u "Oh wow. I'm scared. *Chuckles*"
+                u "Oh wow. I'm scared."
 
             "Be supportive":
                 $ AmberLoyal = True
@@ -238,7 +238,7 @@ label v14s45a:
 
     am "I appreciate you, a lot."
 
-    am "You're like, a blanket. *Chuckles*"
+    am "You're like, a blanket."
 
     scene v14s45a_3b
     with dissolve
@@ -356,7 +356,7 @@ label v14s45a:
     scene v14s45a_1c
     with dissolve
 
-    u "*Chuckles* Mmm, not bad."
+    u "Mmm, not bad."
 
     scene v14s45a_1d
     with dissolve
@@ -519,7 +519,7 @@ label v14s45a:
         scene v14s45a_10
         with dissolve
 
-        li "Oh damn, sorry. *Chuckles*"
+        li "Oh damn, sorry."
 
         if lindseyrs:
             scene v14s45a_10a
@@ -535,7 +535,7 @@ label v14s45a:
             scene v14s45a_10a
             with dissolve
 
-            u "Yeah, yeah... *Chuckles*"
+            u "Yeah, yeah..."
 
         else:
             scene v14s45a_10a

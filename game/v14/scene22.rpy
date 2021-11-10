@@ -32,7 +32,7 @@ label v14s22:
     scene v14s22_5 # FPP. lindsey full smile, mouth open
     with dissolve
 
-    li "Hey, you! *Chuckles* Thanks for coming. You like the spot, huh?"
+    li "Hey, you! Thanks for coming. You like the spot, huh?"
 
     scene v14s22_5a # FPP. same as v14s22_5 lindsey mouth closed
     with dissolve
@@ -46,7 +46,7 @@ label v14s22:
 
     li "I did a little favor for the janitor and now..."
 
-    li "Well, let's just say he's a big Lindsey supporter now. *Chuckles*"
+    li "Well, let's just say he's a big Lindsey supporter now."
 
     scene v14s22_5a
     with dissolve
@@ -66,7 +66,7 @@ label v14s22:
     scene v14s22_5a
     with dissolve
 
-    u "*Whispers* Thank fucking god... *Chuckles*"
+    u "*Whispers* Thank fucking god..."
 
     scene v14s22_5
     with dissolve
@@ -86,14 +86,14 @@ label v14s22:
     scene v14s22_5a
     with dissolve
 
-    u "\"Just helped\"? You're an angel, Lindsey. *Chuckles*"
+    u "\"Just helped\"? You're an angel, Lindsey!"
 
     u "What did Mr. Rose get out of all of this?"
 
     scene v14s22_5e 
     with dissolve
 
-    li "That man's like the devil... All he said to the janitor was \"you owe me a favor\". *Chuckles*"
+    li "That man's like the devil... All he said to the janitor was \"you owe me a favor\"."
 
     scene v14s22_5a
     with dissolve
@@ -103,7 +103,8 @@ label v14s22:
     scene v14s22_5e
     with dissolve
 
-    li "He said it with a smile and the janitor laughed, but it really seemed like a \"deal with the devil\" type of moment... We should be careful about making deals with him in the future."
+    li "He said it with a smile and the janitor laughed, but it really seemed like a \"deal with the devil\" type of moment..."
+    li "We should be careful about making deals with him in the future."
 
     scene v14s22_5a
     with dissolve
@@ -146,7 +147,7 @@ label v14s22:
     scene v14s22_5g
     with dissolve
 
-    u "Roger that. Can do. *Chuckles*"
+    u "Roger that. Can do."
 
     scene v14s22_5f
     with dissolve
@@ -168,7 +169,7 @@ label v14s22:
     scene v14s22_5g
     with dissolve
 
-    u "Gotcha, we have to actually put in some work. *Chuckles*"
+    u "Gotcha, we have to actually put in some work."
 
     scene v14s22_5i # FPP. same as v14s22_5f lindsey rolls her eyes
     with dissolve
@@ -178,7 +179,7 @@ label v14s22:
     scene v14s22_5g
     with dissolve
 
-    u "*Chuckles* (Chloe.)"
+    u "(Chloe...)"
 
     scene v14s22_5e
     with dissolve
@@ -212,7 +213,7 @@ label v14s22_sell_car:
     scene v14s22_5
     with dissolve
 
-    li "Haha, good choice. *Chuckles*"
+    li "Haha, good choice."
 
     scene v14s22_5a
     with dissolve
@@ -230,7 +231,7 @@ label v14s22_sell_car:
         scene v14s22_5a
         with dissolve
 
-        u "Yeah, I think we'll be alright. I'm quite confident in myself. *Chuckles*"
+        u "Yeah, I think we'll be alright. I'm quite confident in myself."
 
     else:
         scene v14s22_5
@@ -251,7 +252,7 @@ label v14s22_sell_car:
         scene v14s22_5a
         with dissolve
 
-        u "Mmm... Probably. *Chuckles*"
+        u "Mmm... Probably."
     
     jump v14s22_end
 
@@ -310,7 +311,7 @@ label v14s22_steal:
         scene v14s22_5g
         with dissolve
 
-        u "You're a Chick. No buts. It all adds up to me. *Chuckles*"
+        u "You're a Chick. No buts. It all adds up to me."
 
     jump v14s22_end
 
@@ -324,7 +325,7 @@ label v14s22_end:
     scene v14s22_5
     with dissolve
 
-    li "*Chuckles* Thank you."
+    li "Thank you."
 
     scene v14s22_5a
     with dissolve
@@ -344,7 +345,7 @@ label v14s22_end:
     scene v14s22_5
     with dissolve
 
-    li "*Chuckles* Really."
+    li "Really."
 
     scene v14s22_5f
     with dissolve
@@ -359,7 +360,7 @@ label v14s22_end:
     scene v14s22_5f
     with dissolve
 
-    li "Guess we'll never know. *Chuckles*"
+    li "Guess we'll never know."
 
     scene v14s22_5g
     with dissolve
@@ -374,7 +375,7 @@ label v14s22_end:
     scene v14s22_5g
     with dissolve
 
-    u "*Chuckles* Good idea."
+    u "Good idea."
 
     scene v14s22_9 # TPP. Mc starts to walk away from Lindsey
     with dissolve

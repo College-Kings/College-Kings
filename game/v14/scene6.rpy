@@ -140,7 +140,7 @@ label v14s06:
         scene v13s06_6
         with dissolve
         
-        u "*Chuckles* (This guy is on top of everything...)"
+        u "(This guy is on top of everything...)"
         
         scene v13s21_3
         with fade

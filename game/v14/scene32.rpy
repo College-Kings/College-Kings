@@ -221,7 +221,7 @@ label v14s32:
     scene v14s32_2d
     with dissolve
 
-    u "No, I'm just good. *Chuckles*"
+    u "No, I'm just good."
 
     scene v14s32_2e
     with dissolve
@@ -332,7 +332,7 @@ label v14s32:
     scene v14s32_6
     with dissolve
 
-    rub "As far as you know... *Chuckles*"
+    rub "As far as you know..."
 
     rub "Just kidding, haha. Sorry about that, though. It's been a while since we've all gotten home so maybe I'm just imagining things."
 
@@ -359,7 +359,7 @@ label v14s32:
     scene v14s32_6a
     with dissolve
 
-    u "Bye. Good luck finding your friend. *Chuckles*"
+    u "Bye. Good luck finding your friend."
 
     scene v14s32_5c # TPP. Same as v14s32_5b, Rubee starting to walk to the gym door.
     with dissolve
@@ -371,7 +371,7 @@ label v14s32:
     scene v14s32_5d # TPP. Same as v14s32_5c, Rubee holding the door open for herself and looking back at MC, slight smile, mouth open.
     with dissolve
 
-    rub "*Chuckles* Thanks!"
+    rub "Thanks!"
 
     play sound "sounds/doorclose.mp3"
 
@@ -388,7 +388,7 @@ label v14s32:
     scene v14s32_7a # FPP. Same as v14s32_7, Imre slight smile, mouth closed.
     with dissolve
 
-    u "Quit whispering compliments to them when they're standing right next to you? *Chuckles*"
+    u "Quit whispering compliments to them when they're standing right next to you?"
 
     scene v14s32_7
     with dissolve
@@ -425,7 +425,7 @@ label v14s32:
     scene v14s32_7
     with dissolve
 
-    imre "Is there really a difference? *chuckles*"
+    imre "Is there really a difference?"
 
     scene v14s32_7a
     with dissolve
@@ -481,7 +481,7 @@ label v14s32:
 
     u "(He's obviously hiding something.)"
 
-    u "*Chuckles* If you say so."
+    u "If you say so."
 
     scene v14s32_7
     with dissolve
@@ -506,7 +506,7 @@ label v14s32:
     scene v14s32_2d
     with dissolve
 
-    u "Wow, you thought about that for a long time, didn't you? *Chuckles*"
+    u "Wow, you thought about that for a long time, didn't you?"
 
     scene v14s32_2e
     with dissolve

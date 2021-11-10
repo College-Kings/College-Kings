@@ -75,7 +75,7 @@ label v14s05:
     scene v14s05_3c # FPP. Chloe, neutral expression, mouth closed.
     with dissolve
 
-    u "*Chuckles* No, you're right..."
+    u "No, you're right..."
 
     scene v14s05_3 
     with dissolve
@@ -145,6 +145,8 @@ label v14s05:
 
         scene v14s05_6b # TPP. Same as v14s05_6a, but Chloe bending down, leaning in to give MC a kiss.
         with dissolve
+        
+        pause 0.75
 
         scene v14s05_7 # TPP. Close up (head shot), Chloe kissing MC while he is laying in bed.
         with dissolve

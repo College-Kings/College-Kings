@@ -32,17 +32,18 @@ label v14s19a:
     scene v14s19a_1c # FPP Same angle as 1, Chloe with neutral expression, mouth closed
     with dissolve
 
-    u "The Wolves supporting you already? I ran into Imre this morning while he was chanting in your favor. *Chuckles*"
+    u "The Wolves supporting you already? I ran into Imre this morning while he was chanting in your favor."
 
     scene v14s19a_2 # TPP Chloe talking to MC, Chloe's hand on MC's arm, Chloe laughing, mouth open
     with dissolve
 
-    cl "Oh... *Chuckles* That's simple."
+    cl "Oh.. That's simple."
 
     scene v14s19a_2a # TPP Same angle as 2, Chloe standing with her arms folded across her chest, smiling and addressing MC like a speech
     with dissolve
 
-    cl "Chris and I share the same principles when it comes to leadership and loyalty. You can't blame all of the issues on the leader and give up on them, throwing them away, thinking that'll change things."
+    cl "Chris and I share the same principles when it comes to leadership and loyalty."
+    cl "You can't blame all of the issues on the leader and give up on them, throwing them away, thinking that'll change things."
 
     scene v14s19a_1d # FPP Same angle as 1, Chloe with her arms out to her sides, smiling like she's giving a speech
     with dissolve
@@ -72,7 +73,8 @@ label v14s19a:
     scene v14s19a_1
     with dissolve
 
-    cl "Whatever's happening between Chris and Nora is their business, and I think because I don't get involved as much as others, we have this unspoken respective relationship, you know?"
+    cl "Whatever's happening between Chris and Nora is their business..."
+    cl "And I think because I don't get involved as much as others, we have this unspoken respective relationship, you know?"
 
     scene v14s19a_1a
     with dissolve
@@ -82,7 +84,8 @@ label v14s19a:
     scene v14s19a_2
     with dissolve
 
-    cl "Exactly, and though Chris may support me as a leader, it doesn't mean all of the Wolves will want to... That's where a little favor from my favorite guy comes in. *Chuckles*"
+    cl "Exactly, and though Chris may support me as a leader, it doesn't mean all of the Wolves will want to..."
+    cl "That's where a little favor from my favorite guy comes in."
 
     scene v14s19a_2b # TPP Same angle as 2, Chloe's hand still on MC's arm, Chloe smiling, mouth closed, MC smiling and rolling his eyes, mouth open
     with dissolve
@@ -132,7 +135,8 @@ label v14s19a:
     scene v14s19a_1
     with dissolve
 
-    cl "And honestly when it comes to Imre, he's had a crush on me for as long as I can remember. *Laughs* When I called him this morning he picked up right away and was way too excited to help..."
+    cl "And honestly when it comes to Imre, he's had a crush on me for as long as I can remember. *Laughs*"
+    cl "When I called him this morning he picked up right away and was way too excited to help..."
 
     scene v14s19a_1a
     with dissolve
@@ -204,7 +208,7 @@ label v14s19a:
     scene v14s19a_4a # FPP Same angle as 4, Chloe still looking toward the source of the sound and looking a little scared, mouth closed
     with dissolve
 
-    u "*Chuckles* Relax..."
+    u "Relax..."
 
     scene v14s19a_4b # FPP Same angle as 4, Chloe looking at MC, still jumpy but more relaxed, mouth open
     with dissolve
@@ -220,7 +224,7 @@ label v14s19a:
     scene v14s19a_1
     with dissolve
 
-    cl "*Chuckles* Cliche library kids."
+    cl "Cliche library kids."
 
     scene v14s19a_1a
     with dissolve
@@ -230,7 +234,7 @@ label v14s19a:
     scene v14s19a_1
     with dissolve
 
-    cl "*Chuckles* Right. Well, I need to be on my way. Thanks again for helping me with the plan."
+    cl "Right. Well, I need to be on my way. Thanks again for helping me with the plan."
 
     scene v14s19a_1a
     with dissolve

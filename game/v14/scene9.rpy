@@ -22,7 +22,7 @@ label v14s09:
     scene v14s09_2a # FPP. same as v14s09_2 Mr. Lee slight smile
     with dissolve
 
-    lee "Honestly, I don't think I fully knew what I had signed up for. *Chuckles*"
+    lee "Honestly, I don't think I fully knew what I had signed up for."
 
     scene v14s09_2b # FPP. same as v14s09_2a Ms. Rose mouth open
     with dissolve
@@ -37,7 +37,7 @@ label v14s09:
     scene v14s09_2b
     with dissolve
 
-    ro "Isn't that the type of fun you prefer? *Chuckles*"
+    ro "Isn't that the type of fun you prefer?"
 
     scene v14s09_2c # FPP. same as v14s09_2a Mr. Lee has an eyebrow raised
     with dissolve
@@ -242,7 +242,7 @@ label v14s09:
     scene v14s09_6c
     with dissolve
 
-    ri "Here! *Chuckles*"
+    ri "Here!"
 
     scene v14s09_8
     with dissolve
@@ -442,7 +442,7 @@ label v14s09:
         scene v14s09_11 # FPP. show penelope looking up at Ms. Rose, slight smile, mouth open
         with dissolve
 
-        pe "*Chuckles* Yes... I'm here, Ms. Rose."
+        pe "Yes... I'm here, Ms. Rose."
 
         scene v14s09_8b
         with dissolve
@@ -454,7 +454,7 @@ label v14s09:
 
         pe "Oh... *Chuckles* Right, sorry!"
 
-        pe "Umm, I'm here... Lorraine. *Chuckles*"
+        pe "Umm, I'm here... Lorraine."
 
     scene v14s09_8e # FPP. same as v14s09_8 Ms. Rose looks at mc
     with dissolve

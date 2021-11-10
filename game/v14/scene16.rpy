@@ -96,11 +96,16 @@ label v14s16:
     scene v14s16_2
     with dissolve
 
-    cl "*Speaking fast* Like, what the actual fuck!? Am I missing something?! I have to win this race! She can't just, fuck everything up all because she doesn't trust me!"
+    cl "Like, what the actual fuck!? Am I missing something?!"
+    cl "I have to win this race! She can't just, fuck everything up all because she doesn't trust me!"
 
-    show screen loyalty_tutorial # Placeholder
-
-    hide screen loyalty_tutorial # Placeholder
+    scene v14s16_2a
+    with dissolve
+    
+    pause 0.01 #close and open mouth due to many dialogue lines
+    
+    scene v14s16_2
+    with dissolve
 
     cl "I need a lot of help if I'm going to beat her, [name]. It won't be as easy as I thought either."
 
@@ -109,12 +114,16 @@ label v14s16:
     scene v14s16_2a
     with dissolve
     
+    pause 0.01 #close and open mouth due to many dialogue lines
+    
     scene v14s16_2
     with dissolve
 
     cl "I know I've asked you before, but this time I need a final answer. Are you going to help me with this campaign so I can beat Lindsey?"
 
-    cl "It would include planning campaign events like parties, making T-shirts, that kind of stuff."
+    show screen loyalty_tutorial # Placeholder
+
+    hide screen loyalty_tutorial # Placeholder
 
     if v13_help_chloe:
         cl "I remember how you said you'd support me before but..."

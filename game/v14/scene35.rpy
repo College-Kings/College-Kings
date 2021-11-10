@@ -23,9 +23,6 @@ label v14s35:
     $ jenny.messenger.newImgMessage("images/v14/Scene 35/v14s35_lagoon_pic.webp") #Picture of the Lagoon, somehow with a location marker in the photo
     $ jenny.messenger.newMessage(_("See you soon!"))
 
-    if False: ### just making sure it shows up on lint
-        scene v14s35_lagoon_pic
-
     label v14s35_PhoneContinue:
         if jenny.messenger.replies:
             call screen phone

@@ -1,11 +1,56 @@
-# SCENE 43b: Mr Lee's History Class 
+# SCENE 43b: Mr Lee's History Class
 # Locations: Mr. Lees Classrom
 # Characters: MR. LEE (Outfit: 1), MC (Outfit: 1), RILEY (Outfit: 4), CAMERON (Outfit: 3), IMRE (Outfit: 2), PENELOPE (Outfit: 1)
 # Time: Morning
 # Kiwi Post: v14kw43b - Sexy pic of Chloe is on Kiwii from Ryan, Grayson and Cameron's accounts-
 # 22 Unique Renders, 46 Total
 
+init python:
+    def v14_iris_simplr1():
+        iris.simplr.addReply(_("I'm more than happy that we matched, especially after knowing that you're just as excited as I am, haha!"), v14_iris_simplr2)
+
+    def v14_iris_simplr2():
+        iris.simplr.addReply(_("So, how are you? Who are you? What are you up to? Lmao"), v14_iris_simplr3)
+        iris.simplr.addReply(_("You're single, right?"), v14_iris_simplr4)
+        
+    def v14_iris_simplr3():
+        iris.simplr.newMessage(":) I am doing perfectly well now that I'm talking to you, hehe.", queue=False)
+        iris.simplr.newMessage("I'm a 20 year old college student, studying Literature. And at this very moment I am practicing my French. As that's where I'm currently studying, haha", queue=False)
+        iris.simplr.addReply(_("You're in France?! We literally just got back to America from a class trip to Europe..."),v14_iris_simplr6)
+        
+    def v14_iris_simplr4():
+        setattr(store, "irisStrikes", irisStrikes +1)
+        iris.simplr.newMessage("Umm, yes? I wouldn't be here if I weren't. Aren't you?", queue=False)
+        iris.simplr.addReply(_("Uh, yeah. Of course! I just felt like I needed to ask for some reason."), v14_iris_simplr5)
+        
+    def v14_iris_simplr5():
+        iris.simplr.newMessage("Right...", queue=False)
+        iris.simplr.addReply("So, single Iris... How are you, who are you and what are you up to?")
+        iris.simplr.newMessage("I'm a 20 year old college student, studying Literature. And at this very moment I am practicing my French. As that's where I'm currently studying, haha", queue=False)
+        iris.simplr.addReply(("You're in France?! We literally just got back to America from a class trip to Europe..."), v14_iris_simplr6)
+        
+    def v14_iris_simplr6():
+        iris.simplr.newMessage("No way! I guess fate decided that we shouldn't have met...")
+        iris.simplr.addReply("Not yet, at least ;) Maybe this is where our love story begins?")
+        iris.simplr.newMessage("...")
+        iris.simplr.newMessage("You can't say things like that unless you mean it.")
+        iris.simplr.addReply("What makes you think I didn't mean it?")
+        iris.simplr.newMessage("Haha... Okay, Prince Charming.")
+        iris.simplr.newMessage("I better sign off of here before I fall too fast... Lol")
+        iris.simplr.addReply("Yeah, me too... Sheesh...")
+        iris.simplr.newMessage("Oh, whatever! Hahaha. Talk again soon?")
+        iris.simplr.addReply("Looking forward to it :)")
+        iris.simplr.addReply(_("Sure thing, hottie."), v14_iris_simplr7)
+        
+    def v14_iris_simplr7():
+        setattr(store, "irisStrikes", irisStrikes +1)
+
 label v14s43b:
+    if iris.simplr in simplr_contacts:
+        $ iris.simplr.newMessage("Soooo....", queue=False)
+        $ iris.simplr.newMessage("I'm guessing you aren't that happy about it considering it's been a few days now with no response, haha. Sorry.", queue=False)
+        $ iris.simplr.addReply(_("Hey, Iris. So sorry if you felt like I wasn't interested, my Simplr has just been glitchy and I've been stuck out of it for a while. Back for good now."), v14_iris_simplr1)
+
     scene v14s43b_1 # FPP. Mr. Lee walks into the classroom happy and cheery, mouth open
     with dissolve
 
@@ -126,7 +171,8 @@ label v14s43b:
     scene v14s43b_3
     with dissolve
 
-    lee "It's all about the relationship between a king and a queen during medieval times. Each gentleman will be paired with a lady, but we will need Riley to take part to make sure everyone can be paired up."
+    lee "It's all about the relationship between a king and a queen during medieval times."
+    lee "Each gentleman will be paired with a lady, but we will need Riley to take part to make sure everyone can be paired up."
 
     scene v14s43b_4e # FPP. same as v14s43b_4c Riley's mouth is open
     with dissolve
@@ -274,12 +320,12 @@ label v14s43b:
             scene v14s43b_8c
             with dissolve
 
-            u "Fine... *Chuckles* You and me."
+            u "Fine... You and me."
 
             scene v14s43b_8d # FPP. same as v14s43b_8b Penelope full smile 
             with dissolve
 
-            pe "*Chuckles* Yay."
+            pe "Yay."
 
             scene v14s43b_11 # TPP. Mc sits back down with Penelope, slight smiles, mouths closed, looking towards Mr. Lee at the front of the class
             with dissolve
@@ -299,7 +345,7 @@ label v14s43b:
                 scene v14s43b_12 # FPP. MC looks at Penelope in the seat next to him, Penelope looking at MC, slight smile, mouth open
                 with dissolve
 
-                pe "Ooh, this sounds fun. *Chuckles*"
+                pe "Ooh, this sounds fun."
 
                 play sound "sounds/vibrate.mp3"
 
@@ -397,7 +443,7 @@ label v14s43b:
                 scene v14s43b_12
                 with dissolve
 
-                pe "Ooh, this sounds fun. *Chuckles*"
+                pe "Ooh, this sounds fun."
 
                 pe "We can just go sit outside on the stairs and work, if that's cool."
 
@@ -449,7 +495,7 @@ label v14s43b:
             scene v14s43b_9a
             with dissolve
 
-            u "Haha... I just wanted to see you squirm for a second. *Chuckles* I wouldn't actually do you like that, have fun with Penelope."
+            u "Haha... I just wanted to see you squirm for a second. I wouldn't actually do you like that, have fun with Penelope."
 
             scene v14s43b_9d # FPP. same as same as v14s43b_9c Imre happy expression, slight smile, mouth open
             with dissolve
@@ -489,6 +535,8 @@ label v14s43b:
             if v13_FirstThreesome:
                 scene v14s43b_19 # FPP. Riley and MC have sat down and Riley grabs and holds MC's hand under the table they sat at from v14s43b_18, Riley half smile, mouth closed looking at MC
                 with dissolve
+
+                pause 0.75
 
             scene v14s43b_3f # FPP. same as v14s43b_3 Mr Lee. is centered in the middle of the screen
             with dissolve
@@ -535,10 +583,6 @@ label v14s43b:
                 $ v14s43b_kiwiiPost6.newComment("Cameron", "Frat shit. What else would I be doing?", queue=False)
                 $ v14s43b_kiwiiPost6.newComment("Sebastian", "This is too far for just \"frat shit\".", queue=False)
                 $ v14s43b_kiwiiPost6.newComment("Aubrey", "Pathetic.", queue=False)
-
-                if False: # just making sure it shows on lint
-                    scene v14kw43b
-                    with dissolve
 
                 $ chloe.messenger.newMessage("GRAYSON IS SUCH AN ASSHOLE")
                 $ chloe.messenger.newMessage("FUCK HIM, AND FUCK THE APES!!!!")

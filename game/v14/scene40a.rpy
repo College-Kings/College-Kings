@@ -4,11 +4,6 @@
 # Time: Morning
 
 label v14s40a:
-    scene v14s40a_1 # TPP. A awaking MC slowly sitting up in bed, slight smile, mouth closed.
-    with dissolve
-
-    pause
-
     scene v14s40a_2 # TPP. Show MC standing in his room putting on pants 
     with dissolve
     
@@ -83,7 +78,7 @@ label v14s40a:
             scene v14s40a_5
             with dissolve
 
-            se "Your loss. *Chuckles*"
+            se "Your loss."
 
     se "Anyway... Just a little heads up. There may be a drug test coming up soon so make sure you're clean. Are you clean?"
 

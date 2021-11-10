@@ -12,7 +12,7 @@ label v14s13:
     scene v14s13_2 # TPP. MCs back facing the camera, looking at his bed
     with dissolve
     
-    u "(Look at that beautiful bed... Oh, the things I'm gonna do to you.) *Chuckles*"
+    u "(Look at that beautiful bed... Oh, the things I'm gonna do to you.)"
 
     scene v14s13_3 # TPP. Show MC looking at his desk, slight smile, mouth closed, Sebastian opening the door behind him, shirtless, slight smile, mouth closed
     with dissolve

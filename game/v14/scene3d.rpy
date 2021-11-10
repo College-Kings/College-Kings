@@ -22,7 +22,7 @@ label v14s03d:
     scene v14s03d_2b # FPP Same angle as 2, Satin has one eyebrow raised, smiling with mouth open
     with dissolve
 
-    satin "Oh, and you aren't a virgin like your friend, right? *Chuckles*"
+    satin "Oh, and you aren't a virgin like your friend, right?"
 
     scene v14s03d_2c # FPP Same as 2b, Satin's mouth closed
     with dissolve
@@ -32,7 +32,7 @@ label v14s03d:
     scene v14s03d_2b
     with dissolve
 
-    satin "You said that with a puffed out chest. *Chuckles*"
+    satin "You said that with a puffed out chest."
 
     scene v14s03d_2c
     with dissolve
@@ -107,8 +107,8 @@ label v14s03d:
     u "S-shit! You're a fucking professional! (She's deepthroating like a goddess.)"
 
     # From scene animations folder v14satdtTPP
-    image v14satdtTPP = Movie(play="images/v14/Scene 3d/v14satdtTPP.webm", loop=True, image="images/v14/Scene 3d/v14satdtFPP.webp", start_image="images/v14/Scene 3d/v14satdtFPP.webp")
-    image v14satdtTPPf = Movie(play="images/v14/Scene 3d/v14satdtTPPf.webm", loop=True, image="images/v14/Scene 3d/v14satdtFPP.webp", start_image="images/v14/Scene 3d/v14satdtFPP.webp")
+    image v14satdtTPP = Movie(play="images/v14/Scene 3d/v14satdtTPP.webm", loop=True, image="images/v14/Scene 3d/v14satdtTPP.webp", start_image="images/v14/Scene 3d/v14satdtTPP.webp")
+    image v14satdtTPPf = Movie(play="images/v14/Scene 3d/v14satdtTPPf.webm", loop=True, image="images/v14/Scene 3d/v14satdtTPP.webp", start_image="images/v14/Scene 3d/v14satdtTPP.webp")
 
     scene v14satdtTPP # Ignore as animation
     with dissolve
@@ -123,7 +123,7 @@ label v14s03d:
     scene v14s03d_4c # FPP Same angle as 4, Satin doing a new sexy pose, her mouth open
     with dissolve
 
-    satin "So, you're liking what you see? *Chuckles*"
+    satin "So, you're liking what you see?"
 
     scene v14s03d_4a
     with dissolve
@@ -264,7 +264,7 @@ label v14s03d:
 
             satin "*Moans* Thank you, but... please... stop talking."
 
-            u "(She wants me to just sit here? *Chuckles*)"
+            u "(She wants me to just sit here?)"
 
             scene v14satrcgTPP2f # Ignore as animation
             with dissolve
@@ -306,7 +306,7 @@ label v14s03d:
             scene v14s03d_15
             with dissolve
 
-            u "*Chuckles* Alright."
+            u "Alright."
 
             scene v14s03d_16 # FPP Close up on MC's dick entering Satin in a prone position
             with dissolve

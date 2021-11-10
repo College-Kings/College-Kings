@@ -43,12 +43,12 @@ label v14s50:
         scene v14s50_2a
         with dissolve
 
-        u "*Whispers* You look cute, by the way. *Chuckles*"
+        u "*Whispers* You look cute, by the way."
 
         scene v14s50_2b # FPP. SAme as v14s50_2, but Lindsey slightly blushing, smiling, mouth slightly open, face appearing through the crack of the door.
         with dissolve
 
-        li "*Chuckles* Shh! Focus! Thank you!"
+        li "Shh! Focus! Thank you!"
 
         scene v14s50_2c # FPP. Same as v14s50_2b, bur Lindsey mouth closed.50_
         with dissolve
@@ -100,7 +100,7 @@ label v14s50:
     scene v14s50_2d
     with dissolve
 
-    li "*Chuckles* *Whispers* Let's get on with it."
+    li "*Whispers* Let's get on with it."
 
     scene v14s50_2a
     with dissolve
@@ -131,14 +131,14 @@ label v14s50:
 
     li "No, no! No, I am not pregnant. I promise. That's not it, haha."
 
-    au "For fuck's sake! *Chuckles* Thank God."
+    au "For fuck's sake! Thank God."
 
     scene v14s50_3a
     with dissolve
 
     li "Ha! Can we go up to your room?"
 
-    au "Oooh, super serious! *Chuckles* Come on, let's go."
+    au "Oooh, super serious! Come on, let's go."
 
     scene v14s50_4 # FPP. MC looking throught the crack in the door, seeing Lindsey following Aubrey, both disappearing up the stairs.
     with dissolve
@@ -163,7 +163,7 @@ label v14s50:
     scene v14s50_8 # TPP. MC, concentrating, squatting and tip toeing (trying to be quiet) up the stairs.
     with dissolve
 
-    u "(I feel like a ninja. *Chuckles*)"
+    u "(I feel like a ninja, haha.)"
 
     scene v14s50_9 # TPP. MC, concentrating, mouth closed, at the top of the stairs, more dirty clothes scattered on the floor and stair railing.
     with dissolve
@@ -178,7 +178,7 @@ label v14s50:
     scene v14s50_11 # TPP. MC, concentrating, mouth closed, in the hallway, crouched next to Aubrey's room door, which is cracked open slightly, listening.
     with dissolve
 
-    au "So... What can I help you with today? *Chuckles*"
+    au "So... What can I help you with today?"
 
     li "*Laughs* Thanks, Aubrey. I feel a little weird about asking, but..."
 
@@ -192,7 +192,7 @@ label v14s50:
     scene v14s50_11
     with dissolve
 
-    au "*Chuckles* Oh. Is that it?"
+    au "Oh. Is that it?"
 
     li "Well, yeah-"
 
@@ -201,7 +201,7 @@ label v14s50:
 
     au "Haha, you have nothing to be embarrassed about. You actually came to the perfect person"
 
-    li "Ha, yeah. I figured. *Chuckles*"
+    li "Ha, yeah. I figured."
 
     scene v14s50_12 # TPP. Close up on MC face, big smile, with his ear close to the slightly open door (like he's waiting to hear something great).
     with dissolve
@@ -269,7 +269,7 @@ label v14s50:
             scene v14s50_12
             with dissolve
             
-            u "(Is this story real or did she just pull this out of her ass? Pun intended *Chuckles*)"
+            u "(Is this story real or did she just pull this out of her ass? Pun intended...)"
 
             scene v14s50_11b
             with dissolve
@@ -286,7 +286,7 @@ label v14s50:
             scene v14s50_13
             with dissolve
 
-            u "(This isn't the best conversation to be eavesdropping on. *Chuckles* I should get to Chloe's room while I still have time.)"
+            u "(This isn't the best conversation to be eavesdropping on. I should get to Chloe's room while I still have time.)"
 
             menu:
                 "Go to Chloe's room": # -if Go to Chloe's room
@@ -296,7 +296,7 @@ label v14s50:
                     scene v14s50_11
                     with dissolve
 
-                    li "*Chuckles* Noted. So, what does it feel like?"
+                    li "Noted. So, what does it feel like?"
 
                     au "It feels..."
 
@@ -315,14 +315,14 @@ label v14s50:
                     scene v14s50_11d # TPP. same as v14s50_11m, MC, neutral expression, mouth closed, in the hallway crouched next to Aubrey's room door, slightly open.
                     with dissolve
 
-                    au "Like, it's scary to think about the pain, right? And weird to talk about? *Chuckles*"
+                    au "Like, it's scary to think about the pain, right? And weird to talk about?"
 
                     li "Right!"
 
                     scene v14s50_11b
                     with dissolve
 
-                    au "That's a part of the pleasure, I think. *Chuckles* It's going to hurt a little. Or a lot, ha!"
+                    au "That's a part of the pleasure, I think. It's going to hurt a little. Or a lot, ha!"
 
                     au "And it's a thrill."
 
@@ -343,7 +343,7 @@ label v14s50:
                     scene v14s50_11b
                     with dissolve
 
-                    au "Hey, you asked! *Chuckles* There's pressure, pleasure, pain..."
+                    au "Hey, you asked! There's pressure, pleasure, pain..."
 
                     scene v14s50_12
                     with dissolve
@@ -394,7 +394,7 @@ label v14s50:
                             scene v14s50_11
                             with dissolve
 
-                            au "Definitely not this one then. *Chuckles*"
+                            au "Definitely not this one then."
 
                             scene v14s50_11a
                             with dissolve
@@ -423,7 +423,7 @@ label v14s50:
                             scene v14s50_12
                             with dissolve
 
-                            u "(I think I've heard enough about Maria's injury. And gained enough knowledge about anal thanks to Aubrey... *Chuckles*)"
+                            u "(I think I've heard enough about Maria's injury. And gained enough knowledge about anal thanks to Aubrey...)"
 
                             if aubreyrs: # -if AubreyRS
                                 scene v14s50_15 # TPP  Close up on MC face, smiling mischievously, thinking dirty thoughts, mouth closed.

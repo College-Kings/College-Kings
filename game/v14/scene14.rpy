@@ -26,13 +26,15 @@ label v14s14:
     $ chloe.messenger.newMessage(_("I'm gonna need your help with the president thing, big time"), queue=False)
     play sound "sounds/vibrate.mp3"
 
-    pause 0.75
+    u "*Phone vibrates*"
 
     scene v14s14_2a # TPP. Same as v14s14_2, MC looking at his phone which he is now holding, confused face, mouth closed.
     with dissolve
 
     $ chloe.messenger.newMessage(_("[name]!!!"), queue=False)
     play sound "sounds/vibrate.mp3"
+
+    u "*Phone vibrates*"
 
     u "(Who's blowing up my phone?)"
 

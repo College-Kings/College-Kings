@@ -4,6 +4,10 @@
 # Time: Night
 
 label v14_start:
+    if emmy.simplr.pendingMessages: #for compatibility with v12 players where emmy replies were not forced to be seen
+        $ emmy.simplr.pendingMessages = []
+        $ emmy.simplr.sentMessages[-1].replies = []
+
     if aubreyrs and rileyrs:
         $ v13_threesomeending = True
         jump v14s01
@@ -44,7 +48,7 @@ label v14s01:
             scene v14s01_1b
             with dissolve
 
-            u "Yes, ma'am... That I can do. *Chuckles*"
+            u "Yes, ma'am... That I can do."
 
             scene v14s01_2 # TPP. Show Riley helping MC remove his shirt while Aubrey is removing her panties
             with dissolve
@@ -115,7 +119,7 @@ label v14s01:
 
             au "Look at you, babe. You've definitely done this before."
 
-            ri "*Chuckles* Once or t-twice."
+            ri "Once or t-twice."
 
             scene v14aurircg2 # Ignore as animation
             with dissolve
@@ -141,7 +145,7 @@ label v14s01:
             scene v14s01_7 # TPP. Show Riley moving to sit on MC's face with one hand on the wall, Riley mouth open, sexy smirk
             with dissolve
 
-            ri "*Chuckles* I'll take care of that..."
+            ri "I'll take care of that..."
 
             scene v14s01_8 # TPP. Show Riley sitting on MC's face and Aubrey getting on MC's dick in cowgirl
             with dissolve
@@ -188,7 +192,7 @@ label v14s01:
             scene v14s01_9 # TPP. Close up of Aubrey, she's moving to suck his dick again, her mouth is open, looking at Riley
             with dissolve
 
-            au "*Chuckles* I'll take that as a yes. C'mon, Riley."
+            au "I'll take that as a yes. C'mon, Riley."
 
             scene v14s01_10 # TPP. Show Aubrey ready to suck MC's dick and Riley ready to suck on his balls
             with dissolve
@@ -238,7 +242,7 @@ label v14s01:
             scene v14s01_11b # FPP. Same as v14s01_11a, Aubrey and Riley looking at each other, both sexy smiling, Aubrey mouth open, Riley mouth closed
             with dissolve
 
-            au "*Chuckles* Well, I have to admit..."
+            au "Well, I have to admit..."
 
             scene v14s01_11c # FPP. Same as v14s01_11a, Aubrey mouth open, Riley mouth closed, both looking at MC, sexy smile
             with dissolve
@@ -267,7 +271,7 @@ label v14s01:
             scene v14s01_11b
             with dissolve
 
-            au "We may have to do this again, Riley. *Chuckles*"
+            au "We may have to do this again, Riley."
 
             scene v14s01_11g # FPP. Same as v14s01_11b, Riley mouth open, Aubrey mouth closed
             with dissolve
@@ -302,7 +306,7 @@ label v14s01:
             scene v14s01_11e
             with dissolve
             
-            ri "Catch you later, [name]. Glad you're feeling better. *Chuckles*."
+            ri "Catch you later, [name]. Glad you're feeling better."
 
             scene v14s01_12 # TPP. Show Riley and Aubrey putting on their bras (Panties already on)
             with dissolve
@@ -329,7 +333,8 @@ label v14s01:
             scene v14s01_16 # TPP. Show MC leaving the hotel room, smiling, mouth closed
             with dissolve
 
-            u "(Now that I'm awake I might as well go see what's going on. My sleep schedule is gonna be all fucked now, though. Feeling energized at night isn't a good thing...) *Sighs*"
+            u "(Now that I'm awake I might as well go see what's going on.)"
+            u "(My sleep schedule is gonna be all fucked now, though. Feeling energized at night isn't a good thing...) *Sighs*"
 
         "Stop them":
             scene v14s01_1e # FPP. Same as v14s01_1b, Aubrey and Riley shocked, mouths closed
@@ -345,7 +350,7 @@ label v14s01:
             scene v14s01_1g # FPP. Same as v14s01_1e, but Riley mouth closed, Aubrey mouth open
             with dissolve
 
-            au "*Chuckles* Wow, I was not expecting that."
+            au "Wow, I was not expecting that."
 
             scene v14s01_1f
             with dissolve
@@ -360,7 +365,7 @@ label v14s01:
             scene v14s01_1e
             with dissolve
 
-            u "*Chuckles* Yeah, I'm not very aware right now. I do feel like getting up though I think."
+            u "Yeah, I'm not very aware right now. I do feel like getting up though I think."
 
             scene v14s01_1h # FPP. Same as v14s01_1f, but Riley and Aubrey looking at each other, both slight smiles
             with dissolve

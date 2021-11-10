@@ -626,6 +626,7 @@ default v14_amber_sex = False
 default v14_ApesPostChloePics = True #They always post unless MC is an Ape and stops them.
 default v14_badsinging_Sam = False
 default v14_chloe_apes = False #Placeholder
+default v14_chloe_grayson = False
 default v14_chloe_sex = False
 default v14_chloeSus = False
 default v14_chrissupport = 0 #3 = Full, 2 = Medium, 1 = Low
@@ -692,3 +693,4 @@ default v14s51_take_900 = False
 default v14s51_take_diary = False
 default v14s51_take_money = False
 default v14_lauren_helps_lindsey = False
+default irisStrikes = 0

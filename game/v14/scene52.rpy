@@ -45,6 +45,8 @@ label v14s52:
     scene v14s52_4 # TPP. MC follows Imre into the next room, no expressions, mouths closed
     with dissolve
 
+    pause 0.75
+
     scene v14s52_5 # TPP. In the next room, MC and Imre are standing in the back row by themselves from left to right, Sebastian, Aaron, Finn and Perry are standing in front of them in that order from left to right all of them are looking at Chris standing in front of them, Chris is looking at Mc, no expression, mouth open
     with dissolve
 

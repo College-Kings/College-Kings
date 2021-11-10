@@ -42,7 +42,7 @@ label v14s23:
     scene v14s23_2a
     with dissolve
 
-    ch "*Chuckles* Yeah..."
+    ch "Yeah..."
 
     ch "Sometimes taking a moment to relax despite having too much shit to do, is what you need to do most."
 
@@ -64,7 +64,7 @@ label v14s23:
     scene v14s23_2a
     with dissolve
 
-    ch "*Chuckles* I just wish I learned that lesson sooner rather than later."
+    ch "I just wish I learned that lesson sooner rather than later."
 
     scene v14s23_2b
     with dissolve
@@ -140,7 +140,7 @@ label v14s23:
     scene v14s23_2c # FPP. Same as v14s23_2b, Chris looking at Chloe (Chloe off camera) standing infront of them, slight smile, mouth open.
     with dissolve
 
-    ch "Speaking of the devil. *Chuckles*"
+    ch "Speaking of the devil."
 
     scene v14s23_4 # FPP. MC looking at Chloe, Chloe looking at Chris (Chris off camera), Chloe confused smile, mouth open.
     with dissolve
@@ -177,7 +177,8 @@ label v14s23:
 
     ch "Now look, Chloe... I did agree to help you, but I didn't specify how involved or supportive I'd be."
 
-    ch "Putting my head out there in full support of you means that the Wolves must all be convinced or we'll have a divided frat with similar issues to what you have now."
+    ch "Putting my head out there in full support of you means that the Wolves must all be convinced."
+    ch "Or else we'll have a divided frat with similar issues to what you have now."
 
     scene v14s23_4a
     with dissolve
@@ -207,7 +208,7 @@ label v14s23:
     scene v14s23_4c
     with dissolve
 
-    u "I like the motivation. *Chuckles*"
+    u "I like the motivation."
 
     scene v14s23_4b
     with dissolve
@@ -333,7 +334,8 @@ label v14s23:
         scene v14s23_4a
         with dissolve
 
-        cl "Oh no, Chris. I'd never do that. The whole reason I want your support is because I believe the Wolves are a well-respected frat and deserving of a brotherhood title."
+        cl "Oh no, Chris. I'd never do that."
+        cl "The whole reason I want your support is because I believe the Wolves are a well-respected frat and deserving of a brotherhood title."
 
         scene v14s23_2c
         with dissolve
@@ -500,7 +502,7 @@ label v14s23:
         scene v14s23_4a
         with dissolve
 
-        cl "*Chuckles* I'm serious! I think it'd be cute."
+        cl "I'm serious! I think it'd be cute."
 
         scene v14s23_2c
         with dissolve
@@ -523,11 +525,15 @@ label v14s23:
                 scene v14s23_2b
                 with dissolve
 
-                u "Looking back on it now, a plush toy probably wasn't the best idea... but let's be clear, any \"image\" we put out will be the image of supporting Chloe's campaign."
+                u "Looking back on it now, a plush toy probably wasn't the best idea..."
+                u "But let's be clear, any \"image\" that gets out will be the image of supporting Chloe's campaign."
 
                 u "It's not really about what the Wolves will look like."
 
-                u "The only thing put on the Wolves is that you're supporting Chloe because you're respectable and trustworthy, and that's the image you want right?"
+                if joinwolves:
+                    u "The only thing put on the Wolves is that you're supporting Chloe because you're respectable and trustworthy, and that's the image you want right?"
+                else:
+                    u "The only thing put on the Wolves is that we're supporting Chloe because we're respectable and trustworthy, and that's the image you want right?"
 
                 scene v14s23_2a
                 with dissolve
@@ -548,7 +554,7 @@ label v14s23:
                 scene v14s23_2c
                 with dissolve
 
-                ch "*Whispers* Adorable... *Chuckles*"
+                ch "*Whispers* Adorable..."
 
             "Disagree with Chris":
                 $ v14s23_disagree = True
@@ -570,7 +576,7 @@ label v14s23:
 
                 cl "Sorry for laughing, honestly. It's just..."
 
-                cl "I know you're not some fruity fraternity and everyone else knows that too. *Chuckles*"
+                cl "I know you're not some fruity fraternity and everyone else knows that too."
 
                 scene v14s23_4b
                 with dissolve
@@ -587,12 +593,12 @@ label v14s23:
                 scene v14s23_2c
                 with dissolve
 
-                ch "Hmm... You're not wrong... That's pretty damn cute. *Chuckles*"
+                ch "Hmm... You're not wrong... That's pretty damn cute."
 
                 scene v14s23_2b
                 with dissolve
 
-                u "Good marketing right there. *Chuckles*"
+                u "Good marketing right there."
 
                 scene v14s23_2a
                 with dissolve
@@ -702,9 +708,11 @@ label v14s23:
                     scene v14s23_4a
                     with dissolve
 
-                    cl "*Chuckles* Thanks for talking with me. I know it's-"
+                    cl "Thanks for talking with me. I know it's-"
 
     play sound "sounds/vibrate.mp3"
+
+    u "*Phone vibrates*"
 
     scene v14s23_2a
     with dissolve
@@ -717,6 +725,7 @@ label v14s23:
     u "Nah, it shouldn't be important. It's okay."
 
     play sound "sounds/vibrate.mp3"
+    u "*Phone vibrates*"
 
     scene v14s23_4b
     with dissolve

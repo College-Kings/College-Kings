@@ -79,7 +79,7 @@ label v14s25:
         pause 0.75
 
         if not v14s24a_gummyfish:
-            scene v14s25_4g # FPP. Same as v14s25_4f, Amber looking down as MC hands her the twezzlers candy, Amber slight smile, mouth open.  
+            scene v14s25_4g # FPP. Same as v14s25_4f, Amber looking down as MC hands her the twezzlers candy, Amber slight smile, mouth open. 
             with dissolve
 
             $ grant_achievement("how_did_you_know")
@@ -115,7 +115,7 @@ label v14s25:
             scene v14s25_4f
             with dissolve
 
-            am "*Chuckles* Thank you."
+            am "Thank you."
 
     am "Did you have any trouble getting here?"
 
@@ -132,7 +132,7 @@ label v14s25:
     scene v14s25_4e
     with dissolve
 
-    u "*Chuckles* What the fuck? I don't know if I should laugh or feel bad for wanting to laugh."
+    u "What the fuck? I don't know if I should laugh or feel bad for wanting to laugh."
 
     scene v14s25_4f
     with dissolve
@@ -142,7 +142,7 @@ label v14s25:
     scene v14s25_4e
     with dissolve
 
-    u "Haha evil! You're something else. *Chuckles*"
+    u "Haha evil! You're something else."
 
     scene v14s25_4f
     with dissolve
@@ -197,7 +197,7 @@ label v14s25:
     scene v14s25_8c # FPP. Same as v14s25_8, Amber holding a bottle of pills up, slight smile, mouth open.
     with dissolve
 
-    am "As you can see, I'm still on vacation... *Chuckles*"
+    am "As you can see, I'm still on vacation..."
 
     scene v14s25_8a
     with dissolve
@@ -207,7 +207,7 @@ label v14s25:
     scene v14s25_8
     with dissolve
 
-    am "I call 'em a good time. *Chuckles*"
+    am "I call 'em a good time."
 
     scene v14s25_8a
     with dissolve
@@ -369,7 +369,7 @@ label v14s25:
     scene v14s25_8j # FPP. Same as v14s25_8d, Amber slight frown, Amber crying lightly, mouth open.
     with dissolve
 
-    am "*Chuckles* That's all my parents wanted me to do when I was little..."
+    am "That's all my parents wanted me to do when I was little..."
 
     am "\"Just tell the priest what you did, Amber. Confess to your sins, Amber.\""
 
@@ -405,7 +405,7 @@ label v14s25:
     scene v14s25_8m
     with dissolve
 
-    u "That sounds close to torture... *Chuckles*"
+    u "That sounds close to torture..."
 
     u "I hate that you've had to go through those things."
 
@@ -427,7 +427,7 @@ label v14s25:
     scene v14s25_9 # TPP. Close up of Amber looking at the pill bottle, MC off camera, slight frown, mouth closed.
     with dissolve
 
-    pause 1.25
+    pause
 
     scene v14s25_8d
     with dissolve
@@ -576,7 +576,7 @@ label v14s25:
             scene v14s25_13
             with dissolve
 
-            am "You think I'm joking? *Chuckles*"
+            am "You think I'm joking?"
 
             am "Stay here."
 
@@ -614,14 +614,14 @@ label v14s25:
 
             u "I'm speechless right now, Amber. I mean..."
 
-            u "I'm so fucking proud of you. *Chuckles*"
+            u "I'm so fucking proud of you."
 
             scene v14s25_8
             with dissolve
 
             am "Don't start acting all sappy, I'm still the same, snappy Amber."
 
-            am "I'll beat your ass if you make fun of me about this or anything else. *Chuckles*"
+            am "I'll beat your ass if you make fun of me about this or anything else."
 
             scene v14s25_8a
             with dissolve
@@ -631,7 +631,7 @@ label v14s25:
             scene v14s25_8
             with dissolve
 
-            am "*Chuckles* For real though, I needed to hear everything you said."
+            am "For real though, I needed to hear everything you said."
 
             am "And as my friend, I'd appreciate you keeping me accountable and helping make sure I stay clean?"
 
@@ -680,7 +680,7 @@ label v14s25:
             scene v14s25_8
             with dissolve
 
-            am "I heard that she can't cook for shit. *Chuckles* So..."
+            am "I heard that she can't cook for shit. So..."
 
             am "Unless she has some help in the kitchen, it's gonna be hilarious."
 
@@ -760,7 +760,7 @@ label v14s25:
             scene v14s25_18a # TPP. Same as v14s25_18, Amber slight smile, mouth open.
             with dissolve
 
-            am "What? *Chuckles* You've seen tits before, haven't you?"
+            am "What? You've seen tits before, haven't you?"
 
             scene v14s25_18
             with dissolve
@@ -816,7 +816,7 @@ label v14s25:
 
                 "Move away":
                     $ add_point(KCT.BOYFRIEND)
-                    u "*Chuckles* (Sorry, Amber.)"
+                    u "(Sorry, Amber.)"
 
                     scene v14s25_17f # TPP. Show MC and Amber with their backs against each other sleeping.
                     with dissolve
@@ -880,7 +880,7 @@ label v14s25:
             scene v14s25_8l
             with dissolve
 
-            am "*Chuckles* No. Not at all."
+            am "No. Not at all."
 
             scene v14s25_8m
             with dissolve
@@ -942,7 +942,7 @@ label v14s25:
             scene v14s25_22a # TPP. Same as v14s25_22, Amber flirtatious smile, mouth open.
             with dissolve
 
-            am "*Moans* And it's definitely turning me on... *Chuckles*"
+            am "*Moans* And it's definitely turning me on..."
 
             scene v14s25_23 # TPP. Amber's hand on MC's crotch.
             with dissolve
@@ -1058,7 +1058,7 @@ label v14s25:
 
                         "Move away":
                             $ add_point(KCT.BOYFRIEND)
-                            u "*Chuckles* (Sorry, Amber.)"
+                            u "(Sorry, Amber.)"
 
                             scene v14s25_17f
                             with dissolve

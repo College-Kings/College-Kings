@@ -20,7 +20,7 @@ label v14s01a:
     u "Huh?"
 
     scene v14s01a_2 # TPP. Show MC startled, waking up (still night time), he is laying on his bed, mouth open
-    with dissolve
+    with flash
 
     u "What the- holy shit...!"
 
@@ -30,7 +30,7 @@ label v14s01a:
     u "(A fucking dream?! Ugh! I need to get up and do something. I can't sleep right now, I don't care what time it is.)"
 
     scene v14s01a_4 # TPP. Show MC leaving the hotel room door, slightly annoyed, mouth closed
-    with dissolve
+    with fade
 
     u "(No more dreaming for me.)"
 

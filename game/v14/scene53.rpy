@@ -18,7 +18,7 @@ label v14s53:
     scene v14s53_2a # TPP. same as v14s53_2 Mc, slight smile mouth open
     with dissolve
 
-    u "(Is that Sam singing? *Chuckles* Where's it coming from?)"
+    u "(Is that Sam singing? Where's it coming from?)"
 
     scene v14s53_3 # TPP. MC walks into the apes Dream Room to find Samantha alone on the couch. She has a bottle of beer in hand. She swigs from it, Mc slight smile, mouth closed looking at samantha
     with dissolve
@@ -43,12 +43,12 @@ label v14s53:
     scene v14s53_4b # FPP. same as v14s53_4a Sam has a slight smile, mouth closed, still looking at mc, Sam has lowered her arms to her sides and is still holding the bottle
     with dissolve
 
-    u "Not too long. Looks like you're having a great time there, Sam. *Chuckles*"
+    u "Not too long. Looks like you're having a great time there, Sam."
 
     scene v14s53_4c # FPP. same as v14s53_4b Sam's mouth is open
     with dissolve
 
-    sa "I am. *Chuckles*"
+    sa "I am."
 
     scene v14s53_4b
     with dissolve
@@ -111,6 +111,8 @@ label v14s53:
 
             scene v14s53_4f # FPP. same as v14s53_4a Sam has a full smile, happy expression
             with dissolve
+            
+            pause 0.75
 
             scene v14s53_4g # FPP. same as v14s53_4b Sam has a full smile
             with dissolve
@@ -150,7 +152,7 @@ label v14s53:
     scene v14s53_6a # FPP. same as v14s53_6 Sam has lowered both the bottle and pills to her sides
     with dissolve
 
-    sa "My friend just said if I wanted a good time, this bag is full of them. *Chuckles*"
+    sa "My friend just said if I wanted a good time, this bag is full of them."
 
     scene v14s53_6b # FPP. same as v14s53_6a Sam's mouth is closed
     with dissolve
@@ -259,6 +261,8 @@ label v14s53:
         scene v14s53_6b
         with dissolve
 
+        pause 0.75
+
     scene v14s53_6a
     with dissolve
 
@@ -272,7 +276,7 @@ label v14s53:
     scene v14s53_6a
     with dissolve
 
-    sa "*Drunk* I was just having a good time and went too far. *Chuckles* I make a habit of that."
+    sa "*Drunk* I was just having a good time and went too far. I make a habit of that."
 
     scene v14s53_6b
     with dissolve
@@ -301,6 +305,8 @@ label v14s53:
 
     scene v14s53_6i # FPP. same as v14s53_6 Samantha starts crying, looking at Mc, sad expression, mouth closed
     with dissolve
+    
+    pause 0.75
 
     scene v14s53_6j # FPP. same as v14s53_6i MC grabs Sam's hands and holds them, Sam's mouth is open, sam is still crying
     with dissolve
@@ -409,6 +415,8 @@ label v14s53:
             if v11_samantha_spa:
                 scene v14s53_3c # TPP. same as v14s53_3b Show sam pushing the bottle of beer and pills away from her on the couch, grabbing mc behind the head and pulling him in for a kiss, Sam's eyes are closed lustful expression, Mc's eyes are open slightly shocked expression
                 with dissolve
+                
+                pause 0.75
 
                 scene v14s53_6r
                 with dissolve
@@ -424,15 +432,21 @@ label v14s53:
 
                         scene v14s53_3e # TPP. same as v14s53_3d MC grabs Sam's face, kiss her back passionately
                         with dissolve
+                        
+                        pause 0.75
 
                         scene v14s53_3f # TPP. same as v14s53_3e They pull away smiling from each other
                         with dissolve
+                        
+                        pause 0.75
 
                     "Reject the kiss":
                         $ add_point(KCT.BOYFRIEND)
 
                         scene v14s53_3g # TPP. same as v14s53_3d MC lightly pulls Sam off him, Mc is holding a hand to her cheek with one hand, and holding one of her hands with the other, Mc is looking at Sam with a compassionate not sexual expression, Sam has put both her hands to her side, looking at Mc slightly sad expression, mouth closed
                         with dissolve
+                        
+                        pause 0.75
 
                         scene v14s53_6s # FPP. same as v14s53_6r Sam has a slightly sad but understanding expression, slight smile, mouth closed, looking at mc
                         with dissolve
@@ -447,7 +461,7 @@ label v14s53:
                         scene v14s53_6t # FPP. same as v14s53_6s Sam's mouth is open
                         with dissolve
 
-                        sa "It's okay. This is bad timing. *Chuckles*"
+                        sa "It's okay. This is bad timing."
 
                         scene v14s53_6s
                         with dissolve
@@ -462,10 +476,12 @@ label v14s53:
                 scene v14s53_6v # FPP. same as v14s53_6u Mc holds his hand out, Sam has a slight smile, mouth closed
                 with dissolve
 
-                u "*Chuckles* Good idea. Absolutely."
+                u "Good idea. Absolutely."
 
                 scene v14s53_6w # FPP same as v14s53_6v Samantha puts the pills into mc's hand, no expression, looking at the pills
                 with dissolve
+                
+                pause 0.75
 
                 scene v14s53_6x # FPP. same as v14s53_6w Mc's and sams hands are at their sides, the bottle is still sitting beside sam, Sam looks at mc and smiles, mouth open
                 with dissolve
@@ -475,7 +491,7 @@ label v14s53:
                 scene v14s53_6y # FPP. same as v14s53_6x Sam's mouth is closed
                 with dissolve
 
-                u "Another great idea. *Chuckles*"
+                u "Another great idea."
 
                 scene v14s53_3h # TPP. same as v14s53_3g Samantha gives MC a friendly hug both arm's around his neck and shoulders, mc gives sam a friendly hug back, slight smiles, mouth closed, The bottle can be seen behind sam and the pills can be seen behind mc
                 with dissolve
@@ -544,6 +560,8 @@ label v14s53:
             scene v14s53_6za # FPP. same as v14s53_6z Sam takes her top off, revealing her lacy black bra, mouth is closed
             with dissolve
 
+            pause 0.75
+
             scene v14s53_6zb # FPP. same as v14s53_6za Sam's top is fully off, looking at mc with a lustful expression, mouth is still closed, full smile
             with dissolve
 
@@ -561,6 +579,8 @@ label v14s53:
 
             scene v14s53_3j # TPP. same as v14s53_3d The bottle and pills are in between sam and mc, Sam has removed her shirt and is wearing the lacey black bra from render v14s53_6za
             with dissolve
+            
+            pause 0.75
 
             scene v14s53_6zb
             with dissolve

@@ -32,7 +32,7 @@ label v14s02:
     scene v14s02_2a # FPP. imre slight smile mouth closed
     with dissolve
 
-    u "Not at all. *Chuckles*"
+    u "Not at all, bro."
 
     scene v14s02_2
     with dissolve
