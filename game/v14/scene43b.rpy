@@ -84,17 +84,17 @@ label v14s43b:
     scene v14s43b_3b # FPP. same as v14s43b_3 Mr. Lee's mouth is closed
     with dissolve
 
-    u "(Oh shit, please don't say it's me...)"
+    u "(Oh, haha... That's why Riley is here.)"
 
     scene v14s43b_3c # FPP. same as v14s43b_3 extends one arm outward towards MC's direction palm up
     with dissolve
 
     lee "Let me introduce my new student assistant..."
 
-    scene v14s43b_3c
+    scene v14s43b_4
     with dissolve
 
-    u "(Please, please, please...)"
+    u "Oh!"
 
     scene v14s43b_3d # FPP. same as v14s43b_3c Mr lee Mr. Lee looks slightly to his right at Riley and extends his arm and open palm towards Riley
     with dissolve
@@ -104,22 +104,22 @@ label v14s43b:
     scene v14s43b_4a # FPP. same as v14s43b_4 Riley has a shocked expression, mouth open, looking at Mr. Lee
     with dissolve
 
-    ri "What? I didn't sign up to be a-"
+    ri "I, thank you... I mean, you could've just told me that's what was happening. *Chuckles* But really, thanks. Im excited!"
 
     scene v14s43b_3e # FPP. same as v14s43b_3d Mr. Lee raises his eyebrow
     with dissolve
 
-    lee "You don't remember us talking in Europe, when you said you wanted to help out this semester?"
+    lee "So are we. Right class?"
 
     scene v14s43b_4b # FPP. same as v14s43b_4a Riley slightly scared, mouth open, looking at Mr. Lee
     with dissolve
 
-    ri "*Gulp* Oh umm, that's what you mean. Yeah, yeah. I remember. Sorry, I just got confused for a second."
+    ri "Haha, it's okay."
 
     scene v14s43b_3b
     with dissolve
 
-    u "(*Laughs* He's getting her back.)"
+    u "(This should be interesting... haha.)"
 
     scene v14s43b_3d
     with dissolve
@@ -139,14 +139,22 @@ label v14s43b:
     scene v14s43b_4c # FPP. same as v14s43b_4a Riley no expression, mouth closed
     with dissolve
 
-    ri "*Sighs*"
+    ri "Okay..."
 
     scene v14s43b_4d # FPP. same as v14s43b_4c Riley stands where she is and starts speaking, nervous expression, mouth open
     with dissolve
 
     ri "For all of you who don't know me, my name is Riley. I'm a freshman and a free spirit..."
 
-    ri "I'm very approachable, so I don't know what all my responsibilities will be as a teacher's assistant, but feel free to talk to me."
+    scene v14s43b_3a
+    with dissolve
+
+    lee "True, tried, and tested!"
+
+    scene v14s43b_4d
+    with dissolve
+
+    ri "Ahem, I uh... I'm very approachable, so I don't know what all my responsibilities will be as a teacher's assistant, but feel free to talk to me."
 
     scene v14s43b_4c
     with dissolve
