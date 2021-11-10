@@ -52,9 +52,11 @@ label v14s31:
 
     menu:
         "I got this":
+            $ add_point(KCT.BOYFRIEND)
             u "Chloe, I got this. I know this is serious for you. I'm going to be on my best behavior."
 
         "Relax":
+            $ add_point(KCT.BRO)
             u "Chloe, relax. I'm doing the best I can for you, and that's exactly what I promised."
 
     # -Continue regardless of choice

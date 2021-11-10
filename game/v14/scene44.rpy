@@ -96,6 +96,11 @@ label v14s44:
 
     menu:
         "Chloe":
+            if chloegf:
+                $ add_point(KCT.BOYFRIEND)
+            elif lindseyrs:
+                $ add_point(KCT.TROUBLEMAKER)
+            
             scene v14s44_4
             with dissolve
 
@@ -113,6 +118,10 @@ label v14s44:
             u "Ha. Yeah."
 
         "Lindsey":
+            if lindseyrs:
+                $ add_point(KCT.BOYFRIEND)
+            elif chloegf:
+                $ add_point(KCT.TROUBLEMAKER)
             scene v14s44_4
             with dissolve
 
@@ -205,6 +214,7 @@ label v14s44:
 
     menu:
         "Introduce yourself":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v14s44_10 # TPP. Show MC shaking Elijah's mom's hand, Elijah's mom slight smile, mouth closed, MC slight smile, mouth open.
             with dissolve
 

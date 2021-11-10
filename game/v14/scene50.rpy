@@ -217,9 +217,11 @@ label v14s50:
 
     menu: # -MC chooses Event1 or Event2
         "Go to Chloe's room": # -Event1 Go to Chloe's room
+            $ add_point(KCT.BOYFRIEND)
             jump v14s51 # -Transition to Scene 51-
 
         "Keep listening": # -if Keep listening
+            $ add_point(KCT.BRO)
             $ v14s50_listen_to_aubrey_lindsey = True
             scene v14s50_11b
             with dissolve
@@ -290,9 +292,11 @@ label v14s50:
 
             menu:
                 "Go to Chloe's room": # -if Go to Chloe's room
+                    $ add_point(KCT.BOYFRIEND)
                     jump v14s51 # -Transition to Scene 51-
 
                 "Keep listening": # -if Keep listening
+                    $ add_point(KCT.BRO)
                     scene v14s50_11
                     with dissolve
 
@@ -383,9 +387,11 @@ label v14s50:
 
                     menu: 
                         "Go to Chloe's room": # -if Go to Chloe's room
+                            $ add_point(KCT.BOYFRIEND)
                             jump v14s51 # -Transition to Scene 51-
 
                         "Keep listening": # -if Keep listening
+                            $ add_point(KCT.BRO)
                             scene v14s50_11d
                             with dissolve
 

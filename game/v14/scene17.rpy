@@ -587,6 +587,7 @@ label v14s17:
 
             menu:
                 "Ask Lauren to sabotage Lindsey":
+                    $ add_point(KCT.TROUBLEMAKER)
                     scene v14s17_10b
                     with dissolve
                     
@@ -770,6 +771,7 @@ label v14s17:
                     jump v14s17_end
                 
                 "Don't ask her":
+                    $ add_point(KCT.BOYFRIEND)
                     $ set_presidency_percent(v14_lindsey_popularity + 1)                
                     u "(I'm not getting involved in that...)"
                 

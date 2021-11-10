@@ -164,6 +164,12 @@ label v14s16:
 
     menu:
         "I'll help":
+            if chloegf:
+                $ add_point(KCT.BOYFRIEND)
+            elif v12_lindsey_sex:
+                $ add_point(KCT.TROUBLEMAKER)
+            else:
+                $ add_point(KCT.BRO)
             $ v14_help_chloe = True
             scene v14s16_2e # FPP. Same as v14s16_2, Chloe slight smile, mouth closed.
             with dissolve
@@ -225,6 +231,11 @@ label v14s16:
                 pause 0.75
                 
         "I don't have the time":
+            if chloegf:
+                $ add_point(KCT.TROUBLEMAKER)
+            elif v12_lindsey_sex:
+                $ add_point(KCT.BOYFRIEND)
+                
             scene v14s16_2a
             with dissolve
 

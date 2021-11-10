@@ -30,6 +30,7 @@ label v14s01:
 
     menu:
         "We're doing this":
+            $ add_point(KCT.TROUBLEMAKER)
             label v14s01_sg:
         
             $ v13_FirstThreesome = True
@@ -337,6 +338,7 @@ label v14s01:
             u "(My sleep schedule is gonna be all fucked now, though. Feeling energized at night isn't a good thing...) *Sighs*"
 
         "Stop them":
+            $ add_point(KCT.BOYFRIEND)
             scene v14s01_1e # FPP. Same as v14s01_1b, Aubrey and Riley shocked, mouths closed
             with dissolve
 

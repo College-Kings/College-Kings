@@ -46,6 +46,8 @@ label v14s34:
 
     menu:
         "Accept Jenny's invite":
+            $ add_point(KCT.TROUBLEMAKER)
+            $ add_point(KCT.BRO)
             $ jenny.messenger.addReply(_("Okay sure, where's this lagoon at?"))
             $ jenny.messenger.newImgMessage("images/v14/Scene 35/v14s35_lagoon_pic.webp") #Picture of the Lagoon, somehow with a location marker in the photo
             $ jenny.messenger.newMessage(_("See you soon!"))
@@ -61,6 +63,7 @@ label v14s34:
             jump v14s35_afterinvite
 
         "Decline Jenny's invite":
+            $ add_point(KCT.BOYFRIEND)
             $ jennyfriend = True
             $ jenny.messenger.addReply(_("Sorry, I was already planning to go out with Penelope tonight."))
             $ jenny.messenger.newMessage(_("Oh!"))

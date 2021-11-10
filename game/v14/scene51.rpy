@@ -211,6 +211,7 @@ label v14s51_purse:
 
     menu:
         "Take the $300":
+            $ add_point(KCT.TROUBLEMAKER)
             $ v14s51_take_money = True
             $ v14s51_take_300 = True
             scene v14s51_purse_2d # FPP. Same as v14s51_purse_2c, MC holding just the money and not the purse
@@ -219,6 +220,7 @@ label v14s51_purse:
             u "(If I don't take this money, I could be the reason Lindsey loses this race. I don't want it to be my fault.)"
 
         "Don't take the money":
+            $ add_point(KCT.BOYFRIEND)
             scene v14s51_purse_2
             with dissolve
 
@@ -270,6 +272,7 @@ label v14s51_pillow:
 
     menu:
         "Take Chloe's diary":
+            $ add_point(KCT.TROUBLEMAKER)
             $ v14s51_take_diary = True
             scene v14s51_pillow_1a
             with dissolve 
@@ -277,6 +280,7 @@ label v14s51_pillow:
             u "(I think Lindsey will appreciate this little bonus item. Plus, I'm curious to see what we'll learn.)"
 
         "Don't take the diary":
+            $ add_point(KCT.BOYFRIEND)
             scene v14s51_pillow_3b # FPP. Same as v14s51_pillow_3a, MC putting the Diary back where it was
             with dissolve
 
@@ -509,6 +513,7 @@ label v14s51_continue:
             
             menu:
                 "Peek":
+                    $ add_point(KCT.TROUBLEMAKER)
                     scene v14s51_31 # FPP. MC peaking over the Shower door, the unknown girl bent over facing away from MC.
                     with dissolve
 
@@ -530,6 +535,7 @@ label v14s51_continue:
                     u "(What a nice little treat... Now it's time to get the fuck out of here.)"
 
                 "Don't peek":
+                    $ add_point(KCT.BOYFRIEND)
                     scene v14s51_32
                     with dissolve
 

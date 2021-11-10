@@ -56,6 +56,8 @@ label v14s39:
 
     menu:
         "I'd wait":
+            $ add_point(KCT.BOYFRIEND)
+            $ add_point(KCT.TROUBLEMAKER)
             $ v14s39_id_wait = True
             scene v14s39_1a
             with dissolve
@@ -110,6 +112,7 @@ label v14s39:
             pe "You're naughty..."
 
         "Hell yeah!":
+            $ add_point(KCT.BRO)
             scene v14s39_1a
             with dissolve
         

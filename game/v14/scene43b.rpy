@@ -274,6 +274,10 @@ label v14s43b:
 
     menu:
         "Work with Penelope":
+            if penelopeloyal:
+                $ add_point(KCT.BOYFRIEND)
+            else:
+                $ add_point(KCT.TROUBLEMAKER)
             $ v14_PenelopePartner = True
 
             u "But sorry, man. This will be too good to miss."
@@ -478,6 +482,7 @@ label v14s43b:
                 jump v14s43c
 
         "Work with Riley":
+            $ add_point(KCT.BRO)
             u "But sorry, bro..."
 
             scene v14s43b_9a
