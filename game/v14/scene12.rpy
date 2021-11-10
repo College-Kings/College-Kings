@@ -3,6 +3,27 @@
 # Characters: MC (Outfit: 5), JULIA (Outfit: 1)
 # Time: Afternoon 
 
+init python:
+    def v14_emmy_simplr1():
+        emmy.simplr.newMessage("I never said we didn't")
+        emmy.simplr.newMessage("I just wanted you to know the truth before I was gone. What we did was a mistake.")
+        emmy.simplr.addReply("No, it wasn't")
+        emmy.simplr.addReply("Yeah, it was.")
+        emmy.simplr.newMessage("Goodbye, [name].")
+        simplr_contacts.remove(emmy.simplr)
+    
+    def v14_emmy_simplr2():
+        emmy.simplr.newMessage("That's completely fair")
+        emmy.simplr.newMessage("I just wanted you to know the truth before I was gone. What we did was a mistake.")
+        emmy.simplr.addReply("No, it wasn't")
+        emmy.simplr.addReply("Yeah, it was.")
+        emmy.simplr.newMessage("Goodbye, [name].")
+        simplr_contacts.remove(emmy.simplr)
+
+    def v14_emmy_simplr3():
+        emmy.simplr.newMessage("Well, regardless of what it is I've chosen to delete this app. So, this is goodbye.")
+        simplr_contacts.remove(emmy.simplr)
+
 label v14s12:
     scene v14s12_1 # TPP. MC walking down the sidewalk back to San Vallejo, slight smile, mouth closed. 
     with dissolve
@@ -176,6 +197,32 @@ label v14s12:
     with dissolve
 
     u "(Still keeping this job a secret is really suspicious... And having to go to New York of all places is pretty... odd. Oh, well.)"
+
+    if emmy.simplr in simplr_contacts:
+        if v13_emmysex:
+            $ emmy.simplr.newMessage("Oh, hey...", queue=False)
+            $ emmy.simplr.addReply("Hey, we had a great time together, hope to see you again <3")
+            $ emmy.simplr.newMessage("I had a good time as well, but...")
+            $ emmy.simplr.newMessage("I have to be honest with you")
+            $ emmy.simplr.addReply("Oof, I sense that a bomb is about to drop, haha")
+            $ emmy.simplr.newMessage("Well, yeah. Um, I have a boyfriend actually")
+            $ emmy.simplr.addReply("What the fuck?! Wait, you... what?")
+            $ emmy.simplr.newMessage("Trust me, I already know what you’re thinking.")
+            $ emmy.simplr.addReply("I'm not sure that you do")
+            $ emmy.simplr.newMessage("Well, regardless of what it is I've chosen to delete this app. So, this is goodbye.")
+            $ emmy.simplr.newMessage("And most importantly I want to apologize for not telling you the truth. I was just trying to have a good time, you know?")
+            $ emmy.simplr.addReply(_("We did. We had a good time."), v14_emmy_simplr1)
+            $ emmy.simplr.addReply(_("Apology not accepted..."), v14_emmy_simplr2)
+        else:
+            $ emmy.simplr.newMessage("Oh, hey...", queue=False)
+            $ emmy.simplr.newMessage("I have to be honest with you", queue=False)
+            $ emmy.simplr.addReply("Oof, I sense that a bomb is about to drop, haha")
+            $ emmy.simplr.newMessage("Well, yeah. Um, I have a boyfriend actually")
+            $ emmy.simplr.addReply("What the fuck?! Wait, you... what?")
+            $ emmy.simplr.newMessage("Trust me, I already know what you’re thinking.")
+            $ emmy.simplr.addReply(_("I'm not sure that you do"), v14_emmy_simplr3)
+    elif emmy.simplr in simplr_pendingContacts:
+        $ emmy.simplr.removeContact()
 
     if joinwolves:
         scene v14s12_5 # TPP. MC opening the door to the wolves frat house, slight smile, mouth closed.

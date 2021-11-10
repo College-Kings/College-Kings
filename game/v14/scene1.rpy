@@ -4,6 +4,10 @@
 # Time: Night
 
 label v14_start:
+    if emmy.simplr.pendingMessages: #for compatibility with v12 players where emmy replies were not forced to be seen
+        $ emmy.simplr.pendingMessages = []
+        $ emmy.simplr.sentMessages[-1].replies = []
+
     if aubreyrs and rileyrs:
         $ v13_threesomeending = True
         jump v14s01
