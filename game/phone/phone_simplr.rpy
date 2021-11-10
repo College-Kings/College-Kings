@@ -152,7 +152,7 @@ screen simplr_app():
             if (simplr_contact is not None) and (hasattr(simplr_contact, "profile_picture_large")):
                 add Transform(simplr_contact.profile_picture_large[0], size=(362, 585)) align (0.5, 0.5)
             elif simplr_contact is not None:
-                add Transform(simplr_contact.profilePictureLarge, size=(362, 585)) align (0.5, 0.5)
+                add Transform(simplr_contact.large_profile_pictures, size=(362, 585)) align (0.5, 0.5)
 
             # Bottom UI
             hbox:
