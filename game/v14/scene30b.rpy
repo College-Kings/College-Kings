@@ -351,6 +351,8 @@ label v14s30b:
         $ v14s30b_kiwiiPost8.addReply(_("These turned out perfect! #Vote4Chloe"))
         $ v14s30b_kiwiiPost8.addReply(_("Aww, haha. Congrats!"))
 
+    u "Let me check how the announcement came out."
+
     if v14s30b_its_perfect:
         $ set_presidency_percent(v14_lindsey_popularity - 1) #tick
     else:

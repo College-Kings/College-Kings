@@ -5,11 +5,6 @@
 
 label v14s33:
     if joinwolves:
-        scene v14s12_5
-        with fade
-        
-        pause 0.75
-
         scene v14s33_1 # TPP. Show MC showering, slight smile, mouth closed
         with fade
 
@@ -229,11 +224,6 @@ label v14s33:
                         jump v14s35
 
     else:
-        scene v14s12_6
-        with fade
-        
-        pause 0.75
-    
         scene v14s33_1 # TPP. Show MC showering, slight smile, mouth closed
         with fade
 
