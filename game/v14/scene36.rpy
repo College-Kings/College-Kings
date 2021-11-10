@@ -564,7 +564,7 @@ label v14s36:
 
             u "Haha, I'm just trying to be a good friend."
 
-    if v14_jennypoints >= 3 or kct == "loyal":
+    if v14_jennypoints >= 3 or kct == "popular":
         if v14_jennypoints < 3:
             call screen kct_popup
 

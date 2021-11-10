@@ -695,7 +695,7 @@ label v14s37:
 
     lady "And that's also why you can't keep a fucking job, you're a loser!"
 
-    if v14s37_focus_on_us or kct == "loyal":
+    if v14s37_focus_on_us or kct == "confident":
         scene v14s37_10h
         with dissolve
 
