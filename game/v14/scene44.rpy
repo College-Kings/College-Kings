@@ -304,7 +304,7 @@ label v14s44:
 
     play sound "sounds/doorclose.mp3"
 
-    u "(I did not expect Elijah's mom to be a complete fucking MILF?! God... Damn...)"
+    u "(I did not expect Elijah's mom to look like that. Damn...)"
 
     scene v14s44_6a # TPP. Same as v14s44_6a, Elijah's mom and Elijah in the car, the car backing out, both slight smile, mouth closed.
     with dissolve
@@ -365,10 +365,25 @@ label v14s44:
     scene v14s44_15
     with dissolve
 
-    u "She was pretty fucking hot. *Laughs*"
+    menu:
 
-    scene v14s44_15a
-    with dissolve
+        "She was pretty hot":
+            $ add_point(KCT.BRO)
+
+            u "She was pretty fucking hot. *Laughs*"
+
+            scene v14s44_15a
+            with dissolve
+
+        "Meh, not my type.":
+            $ add_point(KCT.TROUBLEMAKER)
+
+            u "Meh, she's not really my type."
+
+            scene v14s44_15a
+            with dissolve
+
+            imre "Are you kidding me???"
 
     imre "I'm gonna have to apologize to my mom..."
 

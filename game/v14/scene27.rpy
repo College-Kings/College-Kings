@@ -64,19 +64,27 @@ label v14s27:
     scene v14s27_2a
     with dissolve
 
-    u "Is it that serious that you can't say it here?"
+    menu:
 
-    scene v14s27_2b # FPP. Same as v14s27_2, Emily slightly upset, mouth open.
-    with dissolve
+        "Of course":
+            $ add_point(KCT.BOYFRIEND)
+            u "Of course. Where do you wanna go?"
 
-    em "Oh my god, [name]. What the fuck?"
+        "Can't we speak here?":
+            $ add_point(KCT.TROUBLEMAKER)
+            u "Is it that serious that you can't say it here?"
 
-    em "Can you give me a single ounce of decency? All I asked was to speak to you in private, okay?"
+            scene v14s27_2b # FPP. Same as v14s27_2, Emily slightly upset, mouth open.
+            with dissolve
 
-    scene v14s27_2a
-    with dissolve
+            em "Oh my god, [name]. What the fuck?"
 
-    u "*Sighs* Okay, let's talk."
+            em "Can you give me a single ounce of decency? All I asked was to speak to you in private, okay?"
+
+            scene v14s27_2a
+            with dissolve
+
+            u "*Sighs* Okay, let's talk."
 
     scene v14s27_2
     with dissolve

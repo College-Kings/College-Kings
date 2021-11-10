@@ -175,32 +175,39 @@ label v14s31a:
 
     u "Damn, okay... I mean, shit..."
 
-    u "I did have something I wanted to talk to you about, but I was enjoying our bonding experience."
+    menu:
 
-    scene v14s31a_3f
-    with dissolve
+        "Butter him up":
+            $ add_point(KCT.BOYFRIEND)
+            u "I did have something I wanted to talk to you about, but I was enjoying our bonding experience."
 
-    ca "I take working out too seriously for anyone to enjoy working out with me. Let alone call it a \"bonding experience.\""
+            scene v14s31a_3f
+            with dissolve
 
-    scene v14s31a_3e
-    with dissolve
+            ca "I take working out too seriously for anyone to enjoy working out with me. Let alone call it a \"bonding experience.\""
 
-    u "Ta-fucking-da! Here I am."
+            scene v14s31a_3e
+            with dissolve
 
-    u "Maybe if you didn't assume that no one enjoyed you, you'd find out that they actually do."
+            u "Ta-fucking-da! Here I am."
 
-    scene v14s31a_3f
-    with dissolve
+            u "Maybe if you didn't assume that no one enjoyed you, you'd find out that they actually do."
 
-    ca "Yeah, yeah."
+            scene v14s31a_3f
+            with dissolve
 
-    scene v14s31a_3d
-    with dissolve
+            ca "Yeah, yeah."
 
-    ca "What do you want?"
+            scene v14s31a_3d
+            with dissolve
 
-    scene v14s31a_3e
-    with dissolve
+            ca "What do you want?"
+
+            scene v14s31a_3e
+            with dissolve
+
+        "Cut to the chase":
+            $ add_point(KCT.BRO)
 
     u "I wanna talk to you about what everyone is talking about."
 
