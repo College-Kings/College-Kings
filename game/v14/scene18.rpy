@@ -42,7 +42,7 @@ label v14s18:
     scene v14s18_4a
     with dissolve
 
-    li "The support for my campaign is beginning to ramp up."
+    li "The support for my campaign is beginning to really build up, so I'm trying to do last minute things. Anything to help in the end, you know?"
 
     scene v14s18_4b # FPP. Same as v14s18_4, Lindsey different pose
     with dissolve
@@ -52,37 +52,47 @@ label v14s18:
     scene v14s18_4c # FPP. Same as v14s18_4b, Lindsey mouth open
     with dissolve
 
-    li "The race isn't won 'til the votes are counted, so I'll be taking all the help I can get until then."
-
-    scene v14s18_4a
-    with dissolve
-
-    li "And if I can't get any help then I'll just be putting in the extra work every day. To make sure I've done everything I possibly can."
+    li "The race isn't won 'til the votes are counted, [name]! So until then, I'll be taking all the help I can get."
 
     scene v14s18_4
     with dissolve
 
-    u "You definitely know how to put in some work... Look at these halls!"
+    u "Ha, alright... Just don't work yourself too hard."
 
     scene v14s18_4a
     with dissolve
 
-    li "Despite what it may seem, I do actually want the help."
-
-    scene v14s18_4c
-    with dissolve
-
-    li "I still have a shit ton of campaign planning to do and I can't exactly let just anyone in on that... but I would enjoy your advice."
+    li "I’ll most likely be putting in extra work every day, haha. I have to make sure I’ve done everything I possibly can."
 
     scene v14s18_4b
     with dissolve
 
-    u "Lindsey..."
+    u "You need to get a dream team to help you out, people you can trust."
+
+    scene v14s18_4a
+    with dissolve
+
+    li "I could really use the help."
 
     scene v14s18_4c
     with dissolve
 
-    li "I know I've already asked before, but now I really need to know, are you willing to help me with my campaign?"
+    li "I still have a shit ton of campaign planning to do and I can't exactly let just anyone in on that…"
+
+    scene v14s18_4b
+    with dissolve
+
+    u "I get that."
+
+    scene v14s18_4c
+    with dissolve
+
+    li "I mean, I know I've already asked you before, but..."
+
+    scene v14s18_4a
+    with dissolve
+
+    li "Are you willing to help me?"
 
     scene v14s18_4
     with dissolve
@@ -92,17 +102,27 @@ label v14s18:
     scene v14s18_4a
     with dissolve
 
-    li "Wait! Before you answer, let me just say this..."
+    li "Okay, wait... Before you answer, let me just say this."
 
     scene v14s18_4d # FPP. Same as v14s18_4a, Lindsey slightly worried, looking down, mouth open
     with dissolve
 
-    li "Honestly, [name]... I need you. I need your help."
+    li "Honestly, [name]... I need you, ha. I need your help."
 
     scene v14s18_4e # FPP. Same as v14s18_4d, Lindsey looking at MC now
     with dissolve
 
-    li "I'm worried that without your help, I'm a lost cause. I mean, we're friends... right?"
+    li "I'm worried that without your help, I'll have a little if no chance of winning."
+
+    scene v14s18_4i
+    with dissolve
+
+    u "You can win regardless of having me on your team, Linds. You have a really good chance, actually."
+
+    scene v14s18_4d
+    with dissolve
+
+    li "We’re friends... Right?"
 
     if v12_lindsey_sex: #to ensure compatibility flow with v12s17
         $ lindseyrs = True
@@ -116,13 +136,18 @@ label v14s18:
         scene v14s18_4d
         with dissolve
         
-        li "Nevermind, it doesn't matter."
+        li "Nevermind, that doesn't matter."
 
     if chloegf:
         scene v14s18_4a
         with dissolve
 
-        li "I know you're like, dating Chloe, or whatever you're calling it... But genuinely, my only chance at beating her starts with you joining my team."
+        li "I know you’re like... Dating her, or whatever you’re calling it… *Chuckles*"
+
+    scene v14s18_4c
+    with dissolve
+
+    li "I genuinely think that my only chance at beating Chloe starts with you joining my team."
 
     if lindseyrs:
         scene v14s18_4f # FPP. Lindsey very close to MC, she is whispering, mouth open, seductive smile
@@ -140,7 +165,7 @@ label v14s18:
 
         li "*Laughs* I had a dream the other night, actually..."
 
-        li "I was in the bathroom and I was..."
+        li "I was in the bathroom and I..."
 
         scene v14s18_4a
         with dissolve
@@ -191,7 +216,7 @@ label v14s18:
             scene v14s18_4a
             with dissolve
 
-            li "Meet me at dawn in the janitor's closet, aka my presidential headquarters."
+            li "Well then, partner... Meet me at dawn in the janitor's closet, aka my presidential headquarters. *Chuckles*"
 
             scene v14s18_4
             with dissolve
@@ -211,19 +236,19 @@ label v14s18:
             scene v14s18_4i # FPP. Same as v14s18_4, Lindsey sad
             with dissolve
 
-            u "Look, I've been thinking about it and now that we're actually back on campus I'm finally starting to get back into the swing of things. So, I don't think-"
+            u "I’ve been thinking about it, and now that we're actually back on campus I'm finally starting to get back into the swing of things. So, I don't think-"
 
             scene v14s18_4j # FPP. Same as v14s18_4i, Lindsey mouth open
             with dissolve
 
             li "I really don't need you to run through the list of reasons why you can't help me, ha."
 
-            li "Honestly, I'm majorly surprised that you decided not to... But, I'm not gonna harp on it."
+            li "Honestly, I'm pretty shocked about it... But, I'm not gonna let it ruin my day."
 
             scene v14s18_4i
             with dissolve
 
-            u "I'm sorry Lindsey, but-"
+            u "I'm sorry, but-"
 
             scene v14s18_4j
             with dissolve
