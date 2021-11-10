@@ -40,7 +40,7 @@ label v14s53a:
     with dissolve
     pause
 
-    sa "*Drunk* *Muffled* You like that, baby?"
+    sa "*Muffled* You like that, baby?"
 
     scene v14sambj2f # Ignore as animation
     with dissolve
@@ -57,7 +57,7 @@ label v14s53a:
     with dissolve
     pause
     
-    sa "*Drunk* Well I love your cock."
+    sa "Well, I love your cock."
     
     scene v14s53a_5 # TPP. MC sitting on the couch no shirt and pants around his ankles, Samantha bent over infront of him, Samantha's ass sticking out towards him, Samantha biting her lip, MC slight smile, mouth closed.
     with dissolve
@@ -106,32 +106,12 @@ label v14s53a:
     scene v14s53a_8 # TPP. Close up of Samantha's face as she moans while riding MC with her eyes closed.
     with vpunch
 
-    sa "Fuck me, Jason! Fuck... me...!"
+    sa "*Chuckles* Thank you..."
 
     scene v14s53a_9 # TPP. Close up of MC's face, slightly concerned and confusied, mouth closed.
     with dissolve
 
-    u "(Who the fuck is Jason?!)"
-
-    scene v14s53a_8
-    with dissolve
-
-    sa "FUCK ME! YES! *Moans*"
-
-    scene v14s53a_9a # TPP. Same as v14s53a_9, MC slightly concerned and confused, mouth open.
-    with dissolve
-
-    u "It's [name]..."
-
-    scene v14s53a_8
-    with dissolve
-
-    sa "*Moans* Yes sir..."
-
-    scene v14s53a_9
-    with dissolve
-
-    u "(Fuck... She's lucky she's hot.)"
+    u "(Fuck...)"
 
     scene v14samccg2 # Ignore as animation
     with dissolve
@@ -139,7 +119,7 @@ label v14s53a:
 
     sa "*Panting* Cum inside of me."
 
-    sa "*Wasted* I want to have your baby..."
+    sa "I want to have your baby..."
     
     scene v14samcg2f # Ignore as animation.
     with dissolve
@@ -168,7 +148,7 @@ label v14s53a:
     with dissolve
     pause
 
-    u "(What is happening right now?)"
+    u "(She said she didn't take any of those pills, right?)"
 
     sa "*Moans*"
 
@@ -243,12 +223,12 @@ label v14s53a:
     scene v14s53a_16 # FPP. MC looking at Samantha laying on the couch curled up with her eyes closed, slight smile, mouth closed.
     with dissolve
     
-    u "Samantha?"
+    u "You okay? *Chuckles*"
 
     scene v14s53a_16a # FPP. Same as v14s53a_16, Samantha slight smile, mouth open.
     with dissolve
 
-    sa "*Wasted* Mmm?"
+    sa "*Mumbling* Mmm?"
 
     scene v14s53a_16
     with dissolve
@@ -258,17 +238,17 @@ label v14s53a:
     scene v14s53a_16a
     with dissolve
 
-    sa "*Wasted* Yeah, perfect... I'm going to sleep now."
+    sa "Yeah, perfect... I'm going to sleep now."
 
     scene v14s53a_16
     with dissolve
 
-    u "Ha, okay. Sleep tight, okay?"
+    u "Ha, alright. Sleep tight, okay?"
 
     scene v14s53a_16a
     with dissolve
 
-    sa "*Wasted* I love you, [name]."
+    sa "Mhmm... I love you, [name]..."
 
     scene v14s53a_16
     with dissolve
