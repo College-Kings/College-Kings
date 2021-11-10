@@ -29,7 +29,7 @@ label v14s04:
             u "(Fuck it, I'll talk to him later I guess.)"
 
         "(It's not that important)":
-            $ add_point(KCT.TROUBLEMAER)
+            $ add_point(KCT.TROUBLEMAKER)
             u "(Fuck it, I'll talk to him later I guess.)"
 
     scene v14s04_5 # TPP. Show MC walking through the hotel corridor, slightly annoyed, mouth closed
