@@ -1,7 +1,11 @@
 init python:
     class PlanningBoardApproach:
-        def __init__(self):
+        def __init__(self, name, opinion):
+            self.name = name
+            self.opinion = opinion
+
             self.tasks = []
+            self.completed = False
 
 
     class PlanningBoardTask:
@@ -17,18 +21,15 @@ init python:
 
 
     class PlanningBoard:
-        def __init__(self, background, num_approaches=0):
+        def __init__(self, background):
             self.background = background
 
             self.approaches = []
             self.approach = None
             self.selected_task = None
 
-            for i in range(num_approaches):
-                self.add_approach()
-
-        def add_approach(self):
-            self.approaches.append(PlanningBoardApproach())
+        def add_approach(self, name, opinion=""):
+            self.approaches.append(PlanningBoardApproach(name, opinion))
 
         def add_task(self, approach_index, name, opinion="", people=None, cost=0):
             approach = self.approaches[approach_index]
@@ -154,6 +155,29 @@ screen planning_board_blank(xypos):
             action NullAction()
 
 
+screen planning_board_approach_desc(approach):
+    zorder 100
+
+    fixed:
+        xysize (804, 337)
+        align (0.5, 0.5)
+
+        add "images/v14/chicks_presidency_race/planning_boards/task_background.webp"
+
+        vbox:
+            spacing 20
+            xalign 0.5
+            ypos 50
+
+            text approach.name:
+                color "#777777"
+                size 30
+
+            text task.opinion:
+                color "#777777"
+                size 22
+
+
 screen planning_board_task_desc(task):
     zorder 100
 
@@ -172,10 +196,9 @@ screen planning_board_task_desc(task):
                 color "#777777"
                 size 30
 
-            if task.opinion is not None:
-                text task.opinion:
-                    color "#777777"
-                    size 22
+            text task.opinion:
+                color "#777777"
+                size 22
 
             hbox:
                 spacing -10
