@@ -151,6 +151,7 @@ screen planning_board(planning_board):
     if not renpy.get_screen("planning_board_bottom"):
         use planning_board_help("Please select an approach")
 
+
 screen planning_board_blank(xypos):
     zorder 100
 
@@ -174,14 +175,14 @@ screen planning_board_approach_desc(approach):
 
         vbox:
             spacing 20
-            xalign 0.5
-            ypos 50
+            pos (50, 30)
+            xsize 704
 
             text approach.name:
                 color "#777777"
                 size 30
 
-            text task.opinion:
+            text approach.opinion:
                 color "#777777"
                 size 22
 
@@ -197,8 +198,8 @@ screen planning_board_task_desc(task):
 
         vbox:
             spacing 20
-            xalign 0.5
-            ypos 50
+            pos (50, 30)
+            xsize 704
 
             text task.name:
                 color "#777777"
