@@ -8,8 +8,10 @@ init python:
         def __init__(self, name, opinion, people, cost):
             self.name = name
             self.opinion = opinion
-            self.people = people
             self.cost = cost
+
+            if people is None: self.people = []
+            else: self.people = people
 
             self.completed = False
 
@@ -28,11 +30,11 @@ init python:
         def add_approach(self):
             self.approaches.append(PlanningBoardApproach())
 
-        def add_task(self, approach_index, name, opinion=None, people=[], cost=0):
+        def add_task(self, approach_index, name, opinion="", people=None, cost=0):
             approach = self.approaches[approach_index]
             approach.tasks.append(PlanningBoardTask(name, opinion, people, cost))
 
-        def add_subtask(self, approach_index, name, opinion=None, people=[], cost=0):
+        def add_subtask(self, approach_index, name, opinion="", people=None, cost=0):
             approach = self.approaches[approach_index]
             if isinstance(approach.tasks[-1], list):
                 approach.tasks[-1].append(PlanningBoardTask(name, opinion, people, cost))
