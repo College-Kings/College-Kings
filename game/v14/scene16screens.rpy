@@ -1,8 +1,11 @@
 screen loyalty_tutorial():
+    add "images/darker.webp"
 
     add "gui/frame.webp":
         align (0.5,0.5)
         ysize 450
+
+    
 
     vbox:
         xsize 800
@@ -22,6 +25,7 @@ screen loyalty_tutorial():
             xalign 0.5
 
 screen loyalty_tutorial2():
+    
 
     add "gui/frame.webp":
         align (0.5,0.5)

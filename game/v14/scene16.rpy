@@ -164,6 +164,7 @@ label v14s16:
 
     menu:
         "I'll help":
+            $ set_presidency_percent(v14_lindsey_popularity - 5)
             if chloegf:
                 $ add_point(KCT.BOYFRIEND)
             elif v12_lindsey_sex:

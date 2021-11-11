@@ -188,6 +188,7 @@ label v14s18:
 
     menu:
         "Help Lindsey":
+            $ set_presidency_percent(v14_lindsey_popularity + 5)
             if chloegf:
                 $ add_point(KCT.TROUBLEMAKER)
             elif v12_lindsey_sex:
@@ -277,10 +278,11 @@ label v14s18:
     pause 0.75
 
     if v14_help_chloe:
+        
         scene v14s18_9 # TPP. Show MC standing in hallway, slight smile, mouth open
         with dissolve
 
-        u "Well, oddly enough, it's time to go help Chloe."
+        u "(Well, oddly enough, it's time to go help Chloe.)"
 
         scene v14s18_10 # TPP. Show MC leaving the college, going outside, slight smile, mouth closed
         with fade
