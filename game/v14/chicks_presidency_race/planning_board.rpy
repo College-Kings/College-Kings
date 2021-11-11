@@ -57,8 +57,9 @@ screen planning_board(planning_board):
         pos (435, 502)
         idle "images/v14/chicks_presidency_race/planning_boards/select_approach_left.webp"
         selected_idle "images/v14/chicks_presidency_race/planning_boards/selected_approach_left.webp"
+        selected_hover "images/v14/chicks_presidency_race/planning_boards/selected_approach_left.webp"
         selected planning_board.approach == planning_board.approaches[0]
-        action Show("planning_board_confirm_approach", None, planning_board, planning_board.approaches[0], xypos=(963, 46))
+        action [SetField(planning_board, "approach", planning_board.approaches[0], None), Show("planning_board_confirm_approach", None, "Please select optional tasks", xypos=(963, 46))]
 
     vbox:
         pos (130, 661)
@@ -101,9 +102,10 @@ screen planning_board(planning_board):
     imagebutton:
         pos (1324, 485)
         idle "images/v14/chicks_presidency_race/planning_boards/select_approach_right.webp"
-        # selected_idle "images/v14/chicks_presidency_race/planning_boards/selected_approach_right.webp"
+        selected_idle "images/v14/chicks_presidency_race/planning_boards/selected_approach_right.webp"
+        selected_hover "images/v14/chicks_presidency_race/planning_boards/selected_approach_right.webp"
         selected planning_board.approach == planning_board.approaches[1]
-        action Show("planning_board_confirm_approach", None, planning_board, planning_board.approaches[1], xypos=(43, 46))
+        action [SetField(planning_board, "approach", planning_board.approaches[1], None), Show("planning_board_confirm_approach", None, "Please select optional tasks", xypos=(43, 46))]
 
     vbox:
         pos (1052, 660)
@@ -126,7 +128,7 @@ screen planning_board(planning_board):
 
                                 text "{})".format(alphabet) yalign 0.5
                                 textbutton subtask.name:
-                                    sensitive (planning_board.approach is not None) and (subtask.cost <= mc.money)
+                                    sensitive (planning_board.approach is not None) and (subtask.cost <= v14s48_campaign_money)
                                     selected planning_board.selected_task == subtask
                                     hovered Show("planning_board_task_desc", None, subtask)
                                     unhovered Hide("planning_board_task_desc")
@@ -233,10 +235,9 @@ screen planning_board_help(message=""):
 
 
 # Confirm Screens
-screen planning_board_confirm_approach(planning_board, approach, xypos):
+screen planning_board_confirm_approach(message, xypos):
     tag planning_board_bottom
     zorder 100
-    modal True
 
     hbox:
         xalign 0.5
@@ -245,7 +246,7 @@ screen planning_board_confirm_approach(planning_board, approach, xypos):
 
         imagebutton:
             idle "images/v14/chicks_presidency_race/planning_boards/confirm.webp"
-            action [SetField(planning_board, "approach", approach), Show("planning_board_blank", None, xypos), Show("planning_board_help", message="Please select optional tasks"), Hide("planning_board_confirm_approach")]
+            action [Show("planning_board_blank", None, xypos), Show("planning_board_help", None, message), Hide("planning_board_confirm_approach")]
 
         imagebutton:
             idle "images/v14/chicks_presidency_race/planning_boards/cancel.webp"
