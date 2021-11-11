@@ -105,7 +105,6 @@ label v14s01:
             image v14aurircg2 = Movie(play="images/v14/Scene 1/v14aurircg2.webm", loop=True, image="images/v14/Scene 1/v14aurircg2Start.webp", start_image="images/v14/Scene 1/v14aurircg2Start.webp") # Chloe Table top FPP
             image v14aurircg2f = Movie(play="images/v14/Scene 1/v14aurircg2f.webm", loop=True, image="images/v14/Scene 1/v14aurircg2Start.webp", start_image="images/v14/Scene 1/v14aurircg2Start.webp") # Chloe Table top FPP spedup
 
-
             scene v14aurircg # Ignore as animation
             with dissolve
             pause
