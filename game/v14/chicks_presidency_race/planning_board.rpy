@@ -46,6 +46,7 @@ screen planning_board(planning_board):
 
     # Left Side
     $ approach = planning_board.approaches[0]
+
     imagebutton:
         pos (435, 502)
         idle "images/v14/chicks_presidency_race/planning_boards/select_approach_left.png"
@@ -78,21 +79,19 @@ screen planning_board(planning_board):
                                     selected planning_board.selected_task == subtask
                                     hovered Show("planning_board_task_desc", None, subtask)
                                     unhovered Hide("planning_board_task_desc")
-                                    action Show("planning_board_confirm_task", None, planning_board, subtask)
+                                    action [SetField(planning_board, "selected_task", subtask), Show("planning_board_confirm_tasks", None, planning_board)]
 
                 else:
                     textbutton task.name:
                         sensitive planning_board.approach is not None
-                        selected planning_board.selected_task == task
+                        selected planning_board.approach == approach
                         hovered Show("planning_board_task_desc", None, task)
                         unhovered Hide("planning_board_task_desc")
-                        action Show("planning_board_confirm_task", None, planning_board, task)
-
-
+                        action NullAction()
 
     # Right Side
     $ approach = planning_board.approaches[1]
-    ## Need Right Selected Button.
+
     imagebutton:
         pos (1324, 485)
         idle "images/v14/chicks_presidency_race/planning_boards/select_approach_right.png"
@@ -125,16 +124,18 @@ screen planning_board(planning_board):
                                     selected planning_board.selected_task == subtask
                                     hovered Show("planning_board_task_desc", None, subtask)
                                     unhovered Hide("planning_board_task_desc")
-                                    action Show("planning_board_confirm_task", None, planning_board, subtask)
+                                    action [SetField(planning_board, "selected_task", subtask), Show("planning_board_confirm_tasks", None, planning_board)]
 
                 else:
                     textbutton task.name:
                         sensitive planning_board.approach is not None
-                        selected planning_board.selected_task == task
+                        selected planning_board.approach == approach
                         hovered Show("planning_board_task_desc", None, task)
                         unhovered Hide("planning_board_task_desc")
-                        action Show("planning_board_confirm_task", None, planning_board, task)
+                        action NullAction()
 
+    if not renpy.get_screen("planning_board_bottom"):
+        use planning_board_help("Please select an approach")
 
 screen planning_board_blank(xypos):
     zorder 100
@@ -192,8 +193,19 @@ screen planning_board_task_desc(task):
             color "#777777"
 
 
+screen planning_board_help(message=""):
+    tag planning_board_bottom
+    zorder 200
+
+    text message:
+        italic True
+        xalign 0.5
+        ypos 933
+
+
 # Confirm Screens
 screen planning_board_confirm_approach(planning_board, approach, xypos):
+    tag planning_board_bottom
     zorder 100
     modal True
 
@@ -204,16 +216,16 @@ screen planning_board_confirm_approach(planning_board, approach, xypos):
 
         imagebutton:
             idle "images/v14/chicks_presidency_race/planning_boards/confirm.png"
-            action [SetField(planning_board, "approach", approach), Show("planning_board_blank", None, xypos), Hide("planning_board_confirm_approach")]
+            action [SetField(planning_board, "approach", approach), Show("planning_board_blank", None, xypos), Show("planning_board_help", message="Please select optional tasks"), Hide("planning_board_confirm_approach")]
 
         imagebutton:
             idle "images/v14/chicks_presidency_race/planning_boards/cancel.png"
             action Hide("planning_board_confirm_approach")
 
 
-screen planning_board_confirm_task(planning_board, task):
+screen planning_board_confirm_tasks(planning_board):
+    tag planning_board_bottom
     zorder 100
-    modal True
 
     hbox:
         xalign 0.5
@@ -222,11 +234,11 @@ screen planning_board_confirm_task(planning_board, task):
 
         imagebutton:
             idle "images/v14/chicks_presidency_race/planning_boards/confirm.png"
-            action [SetField(planning_board, "selected_task", task), Hide("planning_board_confirm_task"), Hide("planning_board_task_desc"), Hide("planning_board_blank"), Return()]
+            action [Hide("planning_board_confirm_tasks"), Hide("planning_board_task_desc"), Hide("planning_board_blank"), Return()]
 
         imagebutton:
             idle "images/v14/chicks_presidency_race/planning_boards/cancel.png"
-            action [Hide("planning_board_confirm_task"), Hide("planning_board_task_desc")]
+            action [SetField(planning_board, "selected_task", None), Show("planning_board_help", message="Please select optional tasks"), Hide("planning_board_confirm_tasks"), Hide("planning_board_task_desc")]
 
 
 style task_text is text:
@@ -237,6 +249,7 @@ style task_button_text is text:
     size 23
     font "fonts/OpenSans-Bold.ttf"
     outlines [(0, "#000", 0, 0)]
-    idle_color "#fff"
+    idle_color "#aaa"
+    insensitive_color "#aaa"
     hover_color "#FFD166"
-    selected_color "#FFD166"
+    selected_color "#fff"
