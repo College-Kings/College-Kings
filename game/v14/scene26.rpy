@@ -116,20 +116,38 @@ label v14s26:
 
     la "*Laughs* My bad. Let me make it up to you by giving you a cake."
 
-    scene v14s26_5
-    with dissolve
+    menu:
+        "Oh thanks...":
+            scene v14s26_5
+            with dissolve
 
-    u "Wow, that's... Thanks!"
+            u "Wow, that’s… Thanks. *Chuckles*"
+        
+            scene v14s26_5a
+            with dissolve
 
-    scene v14s26_5a
-    with dissolve
+            la "Of course! Just give me like... five dollars."
 
-    la "Of course! Just give me like five dollars."
+            scene v14s26_5
+            with dissolve
 
-    scene v14s26_5
-    with dissolve
+            u "Oh, I thought..."
+        
+        "I'm not hungry":
+            scene v14s26_5
+            with dissolve
 
-    u "Oh, I thought..."
+            u "Oh, no thanks, haha. I'm not hungry."
+
+            scene v14s26_5a
+            with dissolve
+
+            la "Good, cause that would've been five dollars!"
+
+            scene v14s26_5
+            with dissolve
+
+            u "Oh shit, okay..."
 
     scene v14s26_5b # FPP. same as v14s26_5 lauren mouth closed, lindeys mouth open
     with dissolve
