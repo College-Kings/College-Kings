@@ -293,6 +293,9 @@ label v14s46a:
         la "*Softly* As you rub the lotion into her back, she removes her bikini top and turns around to face you."
         la "*Softly* She's now asking you to massage the lotion into her breasts."
 
+        if config_censored:
+            call screen censoredPopup("v14s46_nsfwSkipLabel1")
+
         scene v14s46a_14 # FPP. MC looking down at Dream Girl, eyes open, smiling sexy, laying on her back, breasts fully exposed, holding the bottle of lotion towards her breasts.
         with dissolve
 
@@ -348,6 +351,8 @@ label v14s46a:
         with vpunch
 
         u "*Moans* Fuck..."
+
+        label v14s46_nsfwSkipLabel1:
 
         la "*Laughs* Oh my God. I'm so sorry, I didn't think you'd-"
 

@@ -9,6 +9,9 @@ label v14s53a:
 
     pause 
 
+    if config_censored:
+        call screen censoredPopup("v14s53a_nsfwSkipLabel1")
+
     scene v14s53a_1a # TPP. Same as v14s53a_1, Both sat on the couch still, MC's pants around his ankles, Samantha leaning towards MC and kissing him passionately as her hand sits on his lap near his dick.
     with dissolve
 
@@ -69,7 +72,7 @@ label v14s53a:
     image v14samccg = Movie(play="images/v14/Scene 53a/v14samccg.webm", loop=True, image="images/v14/Scene 53a/v14samccgStart.webp", start_image="images/v14/Scene 53a/v14samccgStart.webp")
     image v14samccgf = Movie(play="images/v14/Scene 53a/v14samccgf.webm", loop=True, image="images/v14/Scene 53a/v14samccgStart.webp", start_image="images/v14/Scene 53a/v14samccgStart.webp")
     image v14samccg2 = Movie(play="images/v14/Scene 53a/v14samccg2.webm", loop=True, image="images/v14/Scene 53a/v14samccg2Start.webp", start_image="images/v14/Scene 53a/v14samccg2Start.webp")
-    image v14samccg2f = Movie(play="images/v14/Scene 53a/v14sambccg2f.webm", loop=True, image="images/v14/Scene 53a/v14samccg2Start.webp", start_image="images/v14/Scene 53a/v14samccg2Start.webp") 
+    image v14samccg2f = Movie(play="images/v14/Scene 53a/v14samccgb2f.webm", loop=True, image="images/v14/Scene 53a/v14samccg2Start.webp", start_image="images/v14/Scene 53a/v14samccg2Start.webp") 
 
     scene v14samccg # Ignore as animation
     with dissolve
@@ -134,7 +137,7 @@ label v14s53a:
     image v14samccgb = Movie(play="images/v14/Scene 53a/v14samccgb.webm", loop=True, image="images/v14/Scene 53a/v14samccgbStart.webp", start_image="images/v14/Scene 53a/v14samccgbStart.webp")
     image v14samccgbf = Movie(play="images/v14/Scene 53a/v14samccgbf.webm", loop=True, image="images/v14/Scene 53a/v14samccgbStart.webp", start_image="images/v14/Scene 53a/v14samccgbStart.webp")
     image v14samccgb2 = Movie(play="images/v14/Scene 53a/v14samccgb2.webm", loop=True, image="images/v14/Scene 53a/v14samccgb2Start.webp", start_image="images/v14/Scene 53a/v14samccgb2Start.webp")
-    image v14samccgb2f = Movie(play="images/v14/Scene 53a/v14sambccgb2f.webm", loop=True, image="images/v14/Scene 53a/v14samccgb2Start.webp", start_image="images/v14/Scene 53a/v14samccgb2Start.webp")
+    image v14samccgb2f = Movie(play="images/v14/Scene 53a/v14samccgb2f.webm", loop=True, image="images/v14/Scene 53a/v14samccgb2Start.webp", start_image="images/v14/Scene 53a/v14samccgb2Start.webp")
     
     scene v14s53a_10 # TPP. Close up of Samantha's hand grabbing MC's hand as it is on her ass
     with dissolve
@@ -187,6 +190,7 @@ label v14s53a:
     menu: # should be a timed event
         "Cum inside Samantha":
             $ add_point(KCT.TROUBLEMAKER)
+            $ v14_samantha_cum = True
             scene v14s53a_9a
             with vpunch
 
@@ -213,6 +217,8 @@ label v14s53a:
             with dissolve
 
             u "(Damn, that was a close one!)"
+
+    label v14s53a_nsfwSkipLabel1:
 
     scene v14s53a_15 # TPP. Show MC standing in the Ape's basement pulling up his pants, slight smile,mouth closed.
     with dissolve

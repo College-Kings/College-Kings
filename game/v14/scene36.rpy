@@ -804,6 +804,9 @@ label v14s36:
 
                 pause
 
+                if config_censored:
+                    call screen censoredPopup("v14s36_nsfwSkipLabel1")
+
                 scene v14s36_lagsex_1 # TPP. MC starts to goes underwater, Jenny has a curious expression looking at Mc, mouth closed
                 with dissolve
 
@@ -1096,6 +1099,8 @@ label v14s36:
                 with dissolve
 
                 pause 0.75
+
+                label v14s36_nsfwSkipLabel1:
 
                 scene v14s36_10a # TPP. same as v14s36_10 MC puts on his shirt and Jenny puts on her bikini top, use the clothes from render v14s36_1
                 with dissolve

@@ -54,6 +54,9 @@ label v14s03d:
 
     pause 0.75
 
+    if config_censored:
+        call screen censoredPopup("v14s03d_nsfwSkipLabel1")
+
     scene v14s03d_4 # FPP Show Satin removing her clothes
     with dissolve
 
@@ -432,6 +435,8 @@ label v14s03d:
             with dissolve
 
             u "Uh, yeah. I'll go."
+
+            label v14s03d_nsfwSkipLabel1:
 
             scene v14s03d_10
             with dissolve

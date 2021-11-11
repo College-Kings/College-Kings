@@ -9,6 +9,9 @@ label v14s21a:
 
     pause 1.25
 
+    if config_censored:
+        call screen censoredPopup("v14s21a_nsfwSkipLabel1")
+
     scene v14s21a_1a # TPP Same angle as 1. Chloe, now topless, removing MC's shirt
     with dissolve
 
@@ -258,6 +261,8 @@ label v14s21a:
     with dissolve
 
     cl "*Panting* Who knows the next time we'll be able to have fun like that... I missed you."
+
+    label v14s21a_nsfwSkipLabel1:
 
     scene v14s21a_16 # FPP Show Chloe, now dressed, smiling with mouth closed
     with dissolve

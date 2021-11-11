@@ -25,6 +25,9 @@ label v14s25a:
 
     u "*Drowsy* Get over here, you..."
 
+    if config_censored:
+        call screen censoredPopup("v14s25a_nsfwSkipLabel1")
+
     scene v14s25a_3 # TPP Show Amber landing on the bed, smiling with mouth open, MC with arms out as if he just threw her onto the bed
     with dissolve
 
@@ -287,7 +290,11 @@ label v14s25a:
 
     $ renpy.end_replay()
 
+    label v14s25a_nsfwSkipLabel1:
+
     scene black
     with fade
+    
     pause 0.75
+
     jump v14s25b # -Transition to Scene 25b-
