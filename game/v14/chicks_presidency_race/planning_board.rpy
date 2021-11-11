@@ -1,6 +1,7 @@
 init python:
     class PlanningBoardApproach:
-        def __init__(self, name, opinion):
+        def __init__(self, id, name, opinion):
+            self.id = id
             self.name = name
             self.opinion = opinion
 
@@ -29,7 +30,7 @@ init python:
             self.selected_task = None
 
         def add_approach(self, id, name, opinion=""):
-            approach = PlanningBoardApproach(name, opinion)
+            approach = PlanningBoardApproach(id, name, opinion)
             self.approaches[id] = approach
             return approach
 
