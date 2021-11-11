@@ -62,7 +62,7 @@ label v14s18:
     scene v14s18_4a
     with dissolve
 
-    li "I’ll most likely be putting in extra work every day, haha. I have to make sure I’ve done everything I possibly can."
+    li "I'll most likely be putting in extra work every day, haha. I have to make sure I've done everything I possibly can."
 
     scene v14s18_4b
     with dissolve
@@ -122,7 +122,7 @@ label v14s18:
     scene v14s18_4d
     with dissolve
 
-    li "We’re friends... Right?"
+    li "We're friends... Right?"
 
     if v12_lindsey_sex: #to ensure compatibility flow with v12s17
         $ lindseyrs = True
@@ -142,7 +142,7 @@ label v14s18:
         scene v14s18_4a
         with dissolve
 
-        li "I know you’re like... Dating her, or whatever you’re calling it… *Chuckles*"
+        li "I know you're like... Dating her, or whatever you're calling it… *Chuckles*"
 
     scene v14s18_4c
     with dissolve
@@ -247,7 +247,7 @@ label v14s18:
             scene v14s18_4i # FPP. Same as v14s18_4, Lindsey sad
             with dissolve
 
-            u "I’ve been thinking about it, and now that we're actually back on campus I'm finally starting to get back into the swing of things. So, I don't think-"
+            u "I've been thinking about it, and now that we're actually back on campus I'm finally starting to get back into the swing of things. So, I don't think-"
 
             scene v14s18_4j # FPP. Same as v14s18_4i, Lindsey mouth open
             with dissolve
