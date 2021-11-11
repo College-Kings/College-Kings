@@ -142,7 +142,7 @@ label v14s30b:
     scene v14s30b_2
     with dissolve
 
-    cl "Well, I'll definitely include \"#PresidentialStatus\"."
+    cl "Well, I’ll definitely include \"#PresidentialStatus\". Then something about voting for me."
 
     menu:
         "It's perfect":
@@ -152,7 +152,7 @@ label v14s30b:
             scene v14s30b_2a
             with dissolve
 
-            u "Yeah, that's perfect. Standing tall and proud with a short and sweet caption."
+            u "Yeah, that's perfect. Standing tall and proud with a short and sweet caption, the main feature is you."
 
             scene v14s30b_2
             with dissolve
@@ -174,7 +174,7 @@ label v14s30b:
             scene v14s30b_2a
             with dissolve
 
-            u "Well, yeah. Like something about the Chicks and the Wolves."
+            u "Well, yeah. Like something about the Chicks and the Wolves, so it feel like a team effort?"
 
             scene v14s30b_2
             with dissolve
