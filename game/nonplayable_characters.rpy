@@ -90,3 +90,4 @@ default emmy = NonPlayableCharacter("Emmy", "emmy.webp")
 
 default wolf = NonPlayableCharacter("Wolf", "chloe.webp")
 default trainer = NonPlayableCharacter("Trainer", "chloe.webp")
+default buyer = NonPlayableCharacter("Buyer", "chloe.webp")
