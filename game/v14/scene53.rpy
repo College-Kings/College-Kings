@@ -468,60 +468,60 @@ label v14s53:
 
                         u "(Phew...)"
 
-                scene v14s53_6u # FPP. same as v14s53_6 Sam has no expession looking at mc, mouth open, holding the pills towards Mc, the bottle is sitting beside her
-                with dissolve
+            scene v14s53_6u # FPP. same as v14s53_6 Sam has no expession looking at mc, mouth open, holding the pills towards Mc, the bottle is sitting beside her
+            with dissolve
 
-                sa "I uh, I don't want to take these pills anymore... Could you throw them away for me?"
+            sa "I uh, I don't want to take these pills anymore... Could you throw them away for me?"
 
-                scene v14s53_6v # FPP. same as v14s53_6u Mc holds his hand out, Sam has a slight smile, mouth closed
-                with dissolve
+            scene v14s53_6v # FPP. same as v14s53_6u Mc holds his hand out, Sam has a slight smile, mouth closed
+            with dissolve
 
-                u "Good idea. Absolutely."
+            u "Good idea. Absolutely."
 
-                scene v14s53_6w # FPP same as v14s53_6v Samantha puts the pills into mc's hand, no expression, looking at the pills
-                with dissolve
-                
-                pause 0.75
+            scene v14s53_6w # FPP same as v14s53_6v Samantha puts the pills into mc's hand, no expression, looking at the pills
+            with dissolve
+            
+            pause 0.75
 
-                scene v14s53_6x # FPP. same as v14s53_6w Mc's and sams hands are at their sides, the bottle is still sitting beside sam, Sam looks at mc and smiles, mouth open
-                with dissolve
+            scene v14s53_6x # FPP. same as v14s53_6w Mc's and sams hands are at their sides, the bottle is still sitting beside sam, Sam looks at mc and smiles, mouth open
+            with dissolve
 
-                sa "I need to go to bed now... Haha."
+            sa "I need to go to bed now... Haha."
 
-                scene v14s53_6y # FPP. same as v14s53_6x Sam's mouth is closed
-                with dissolve
+            scene v14s53_6y # FPP. same as v14s53_6x Sam's mouth is closed
+            with dissolve
 
-                u "Another great idea."
+            u "Another great idea."
 
-                scene v14s53_3h # TPP. same as v14s53_3g Samantha gives MC a friendly hug both arm's around his neck and shoulders, mc gives sam a friendly hug back, slight smiles, mouth closed, The bottle can be seen behind sam and the pills can be seen behind mc
-                with dissolve
+            scene v14s53_3h # TPP. same as v14s53_3g Samantha gives MC a friendly hug both arm's around his neck and shoulders, mc gives sam a friendly hug back, slight smiles, mouth closed, The bottle can be seen behind sam and the pills can be seen behind mc
+            with dissolve
 
-                sa "Thank you."
+            sa "Thank you."
 
-                scene v14s53_3i # TPP. same as v14s53_3h Samantha is looking down at the pills behind mc's back, no expression
-                with dissolve
+            scene v14s53_3i # TPP. same as v14s53_3h Samantha is looking down at the pills behind mc's back, no expression
+            with dissolve
 
-                u "You're welcome, Sam."
+            u "You're welcome, Sam."
 
-                scene v14s53_3h
-                with dissolve
+            scene v14s53_3h
+            with dissolve
 
-                pause 0.75
+            pause 0.75
 
-                scene v14s53_7 # FPP. Mc is sitting on the couch as Samantha walks out of the room, she is looking back at mc slight smile mouth closed, waving at mc
-                with dissolve
+            scene v14s53_7 # FPP. Mc is sitting on the couch as Samantha walks out of the room, she is looking back at mc slight smile mouth closed, waving at mc
+            with dissolve
 
-                pause 0.75
+            pause 0.75
 
-                scene v14s53_8 # FPP. MC stays sitting alone for a moment, holding both the bottle and the pills in his hands in front of him
-                with dissolve
+            scene v14s53_8 # FPP. MC stays sitting alone for a moment, holding both the bottle and the pills in his hands in front of him
+            with dissolve
 
-                u "(*Sighs* I feel good about that. I think I did the right thing.)"
+            u "(*Sighs* I feel good about that. I think I did the right thing.)"
 
-                scene v14s53_8
-                with fade
+            scene v14s53_8
+            with fade
 
-                jump v14s53b
+            jump v14s53b
 
         "Let Samantha enjoy drugs":
             $ v14_SamanthaDrugs = True
