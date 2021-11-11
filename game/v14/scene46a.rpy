@@ -243,6 +243,7 @@ label v14s46a:
 
         u "(Zzzz...) *Heavy breathing*"
 
+        show screen fantasyOverlay
         scene v14s46a_9 # TPP. MC, wearing swim trunks, walking along a sandy beach, smiling.
         with dissolve
         
@@ -273,12 +274,12 @@ label v14s46a:
         scene v14s46a_11 # TPP. MC, back to camera, walking towards Dream Girl, who is laying on her stomach on a towel on the beach with sun tan lotion.
         with dissolve
 
-        pause 0.75
+        pause 1.5
 
         scene v14s46a_12 # FPP. MC looking down at Dream Girl, laying on her stomach, sun tan lotion by her head, hair pulled to the side, tan body, bikini top untied showing a generous view of side boob.
         with dissolve
 
-        pause 0.75
+        pause 1.5
 
         scene v14s46a_13 # TPP. MC smiling, sitting behind dream girl, rubbing lotion on her back. Dream Girl, smiling, eyes closed.
         with dissolve
@@ -344,6 +345,7 @@ label v14s46a:
 
         la "*Laughs* Oh my God. I'm so sorry, I didn't think you'd-"
 
+        hide screen fantasyOverlay
         scene v14s46a_6g # TPP. Same as v14s46a_6, but MC, mouth open, shocked, sitting up in bed (legs remain out), looking down at the large wet spot in the crotch of his pants, Lauren sitting next to him, look at his wet spt, laughing, mouth closed.
         with dissolve
 
@@ -532,10 +534,11 @@ label v14s46a:
 
         u "*Zzzz...* *Heavy breathing*"
 
+        show screen fantasyOverlay
         scene v14s46a_24 # TPP. MC, smiling, mouth closed, walking BAREFOOT (normal clothes) through a green grassy field, with a bright sunny sky above him.
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
         scene v14s46a_25 # FPP. MC looking out in the distance of the green grassy field, watching a horse trotting towards him.
         with dissolve
@@ -550,7 +553,7 @@ label v14s46a:
         scene v14s46a_25a # FPP. MC looking at the horse standing in front of him, the horse is looking at the apple in MC's hand. 
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
         scene v14s46a_27 # TPP. MC, smiling, relaxed mouth closed standing in the green grassy field, using his right hand to feed an apple to the horse.
         with dissolve
@@ -612,6 +615,7 @@ label v14s46a:
 
         u "Aahhh! Fuck! Oww! M-My balls!"
 
+        hide screen fantasyOverlay
         scene v14s46a_35 # TPP. MC, in Lauren's bed, shocked (liked he snapped out of a bad dream),sitting up but legs extended out on the bed, slightly angry, mouth open.
         with dissolve
 
@@ -620,7 +624,7 @@ label v14s46a:
         scene v14s46a_36 # FPP. MC looking at the foot of the bed seeing Lauren with a big smile, holding the straw side of the broom with the broom handle against MC's balls.
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
         scene v14s46a_35
         with dissolve
