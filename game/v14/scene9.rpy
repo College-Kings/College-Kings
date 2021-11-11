@@ -192,7 +192,7 @@ label v14s09:
                 scene v14s09_5f # FPP. same as v14s09_5b charli has a relieved expression on his face
                 with dissolve
 
-                u "(I've done enough)"
+                u "(I've done enough to mess with him.)"
 
     scene v14s09_6a
     with dissolve
@@ -220,15 +220,24 @@ label v14s09:
 
     u "(So her favorite part was probably...)"
 
-    menu:
-        "Canoeing":
-            u "(Probably when we went canoeing, that was interesting to say the least.)"
-
-        "Becoming a model":
-            u "(Definitely when she became a model at Naomi’s photoshoot.)"
-
-        "Going to the concert" if v13_aubrey_concert:
-            u "(When I took her to the concert. She seemed to have a good time.)"
+    if v13_aubrey_concert:
+        menu:
+            "Canoeing":
+                u "(Probably when we went canoeing, that was interesting to say the least.)"
+    
+            "Becoming a model":
+                u "(Definitely when she became a model at Naomi’s photoshoot.)"
+    
+            "Going to the concert" if v13_aubrey_concert:
+                u "(When I took her to the concert. She seemed to have a good time.)"
+    
+    else:
+        menu:
+            "Canoeing":
+                u "(Probably when we went canoeing, that was interesting to say the least.)"
+    
+            "Becoming a model":
+                u "(Definitely when she became a model at Naomi’s photoshoot.)"
 
     scene v14s09_6b # FPP. same as v14s09_6a Mr. Lee looking to his left
     with dissolve
@@ -264,15 +273,24 @@ label v14s09:
 
     u "(Chloe's favorite part was most likely...)"
 
-    menu:
-        "The Pier":
-            u "(The pier. She was super excited about it when she asked me to come.)"
-
-        "Murder Mystery":
-            u "(She had a decent time getting into that “poor person” role.)"
-
-        "Being tied to the bed" if chloegf:
-            u "(When I had her tied to the bed… That was definitely the best part, haha.)"
+    if chloegf:
+        menu:
+            "The Pier":
+                u "(The pier. She was super excited about it when she asked me to come.)"
+    
+            "Murder Mystery":
+                u "(She had a decent time getting into that “poor person” role.)"
+    
+            "Being tied to the bed" if chloegf:
+                u "(When I had her tied to the bed… That was definitely the best part, haha.)"
+    
+    else:
+        menu:
+            "The Pier":
+                u "(The pier. She was super excited about it when she asked me to come.)"
+    
+            "Murder Mystery":
+                u "(She had a decent time getting into that “poor person” role.)"
 
     scene v14s09_6d # FPP. same as v14s09_6b Mr. Lee looking to his right
     with dissolve
@@ -286,15 +304,24 @@ label v14s09:
 
     u "(Oh and Riley's...)"
 
-    menu:
-        "Revenge against Charli":
-            u "(Charli was the worst, so getting revenge must have felt amazing.)"
-
-        "Mr. Lee’s riddles":
-            u "(She did seem to have fun while solving Mr. Lee's riddles.)"
-
-        "The threesome" if v13_FirstThreesome:
-            u "(That fucking threesome... It has to be her favorite part of the trip, haha.)"
+    if v13_FirstThreesome:
+        menu:
+            "Revenge against Charli":
+                u "(Charli was the worst, so getting revenge must have felt amazing.)"
+    
+            "Mr. Lee’s riddles":
+                u "(She did seem to have fun while solving Mr. Lee's riddles.)"
+    
+            "The threesome" if v13_FirstThreesome:
+                u "(That fucking threesome... It has to be her favorite part of the trip, haha.)"
+    
+    else:
+        menu:
+            "Revenge against Charli":
+                u "(Charli was the worst, so getting revenge must have felt amazing.)"
+    
+            "Mr. Lee’s riddles":
+                u "(She did seem to have fun while solving Mr. Lee's riddles.)"
 
     scene v14s09_8
     with dissolve
@@ -308,15 +335,24 @@ label v14s09:
 
     u "(I wonder about Nora's favorite part...)"
 
-    menu:
-        "London Museum":
-            u "(The museum was really cool and she certainly loved London.)"
-
-        "Carriage ride Chloe roast":
-            u "(She really destroyed Chloe on that carriage ride.)"
-
-        "Having sex with me" if v12_nora_sex:
-            u "(Having sex with Nora certainly was one of my favorite parts… I’d assume it might be hers as well.)"
+    if v12_nora_sex:
+        menu:
+            "London Museum":
+                u "(The museum was really cool and she certainly loved London.)"
+    
+            "Carriage ride Chloe roast":
+                u "(She really destroyed Chloe on that carriage ride.)"
+    
+            "Having sex with me" if v12_nora_sex:
+                u "(Having sex with Nora certainly was one of my favorite parts… I’d assume it might be hers as well.)"
+    
+    else:
+        menu:
+            "London Museum":
+                u "(The museum was really cool and she certainly loved London.)"
+    
+            "Carriage ride Chloe roast":
+                u "(She really destroyed Chloe on that carriage ride.)"
 
     scene v14s09_6b
     with dissolve
@@ -352,15 +388,24 @@ label v14s09:
 
     u "(Lindsey's...)"
 
-    menu:
-        "Escape Room":
-            u "(Her birthday at the escape room was really cool, that was probably her favorite part of the trip.)"
-
-        "Secretly planning her campaign":
-            u "(I know she's really been planning to take Chloe down, I wouldn't be surprised if she enjoyed planning that even more than Europe.)"
-
-        "The ferris wheel" if not v13s40fromgame:
-            u "(The ferris wheel was really nice. Definitely could've been her favorite part.)"
+    if not v13s40fromgame:
+        menu:
+            "Escape Room":
+                u "(Her birthday at the escape room was really cool, that was probably her favorite part of the trip.)"
+    
+            "Secretly planning her campaign":
+                u "(I know she's really been planning to take Chloe down, I wouldn't be surprised if she enjoyed planning that even more than Europe.)"
+    
+            "The ferris wheel" if not v13s40fromgame:
+                u "(The ferris wheel was really nice. Definitely could've been her favorite part.)"
+    
+    else:
+        menu:
+            "Escape Room":
+                u "(Her birthday at the escape room was really cool, that was probably her favorite part of the trip.)"
+    
+            "Secretly planning her campaign":
+                u "(I know she's really been planning to take Chloe down, I wouldn't be surprised if she enjoyed planning that even more than Europe.)"
 
     if v13_charli_exposed:
         scene v14s09_6d
@@ -404,15 +449,24 @@ label v14s09:
 
         u "(Right, Charli.)"
 
+    if v13_charli_exposed:
         menu:
             "Who fucking cares?":
                 u "(Who fucking cares what that douche's favorite part was...)"
-
+    
             "Being a bitch":
                 u "(Being a bitch seemed to be his favorite activity, in my opinion.)"
-
+    
             "Getting straddled by Mr. Lee" if v13_charli_exposed:
                 u "(I wouldn't be surprised if he enjoyed that…)"
+    
+    else:
+        menu:
+            "Who fucking cares?":
+                u "(Who fucking cares what that douche's favorite part was...)"
+    
+            "Being a bitch":
+                u "(Being a bitch seemed to be his favorite activity, in my opinion.)"
 
     scene v14s09_8b
     with dissolve
@@ -426,15 +480,24 @@ label v14s09:
 
     u "(Lauren's favorite part was definitely...)"
 
-    menu:
-        "Bike Tour":
-            u "(The bike tour. Lauren loves nature and we had a couple wild encounters, haha.)"
-
-        "The murder mystery":
-            u "(I think that was a pretty memorable event for all of us, and I know she had fun.)"
-
-        "Our first time together" if v12_lauren_sex:
-            u "(We shared an incredible night together. I don't think either of us will ever forget it.)"
+    if v12_lauren_sex:
+        menu:
+            "Bike Tour":
+                u "(The bike tour. Lauren loves nature and we had a couple wild encounters, haha.)"
+    
+            "The murder mystery":
+                u "(I think that was a pretty memorable event for all of us, and I know she had fun.)"
+    
+            "Our first time together" if v12_lauren_sex:
+                u "(We shared an incredible night together. I don't think either of us will ever forget it.)"
+    
+    else:
+        menu:
+            "Bike Tour":
+                u "(The bike tour. Lauren loves nature and we had a couple wild encounters, haha.)"
+    
+            "The murder mystery":
+                u "(I think that was a pretty memorable event for all of us, and I know she had fun.)"
 
     scene v14s09_6d
     with dissolve
@@ -463,15 +526,24 @@ label v14s09:
 
     u "(And Ryan's favorite part was...)"
 
-    menu:
-        "When Imre got catfished":
-            u "(Ryan does really enjoy seeing Imre's misfortune, I don’t think he’ll ever let him live that one down.)"
-
-        "Being Imre’s Husband":
-            u "(Okay, maybe I’m just a troll, but they were a really cute couple.)"
-
-        "Sex with a stripper" if v14_ryan_satin:
-            u "(Losing his virginity, even if to a stripper, has got to be his highlight.)"
+    if v14_ryan_satin:
+        menu:
+            "When Imre got catfished":
+                u "(Ryan does really enjoy seeing Imre's misfortune, I don’t think he’ll ever let him live that one down.)"
+    
+            "Being Imre’s Husband":
+                u "(Okay, maybe I’m just a troll, but they were a really cute couple.)"
+    
+            "Sex with a stripper" if v14_ryan_satin:
+                u "(Losing his virginity, even if to a stripper, has got to be his highlight.)"
+    
+    else:
+        menu:
+            "When Imre got catfished":
+                u "(Ryan does really enjoy seeing Imre's misfortune, I don’t think he’ll ever let him live that one down.)"
+    
+            "Being Imre’s Husband":
+                u "(Okay, maybe I’m just a troll, but they were a really cute couple.)"
 
     scene v14s09_9a # FPP. same as v14s09_9 imre looking at ryan, mouth open, slight smile, ryan looking at imre slight smile mouth closed
     with dissolve
@@ -490,15 +562,24 @@ label v14s09:
 
     u "(Imre must have loved...)"
 
-    menu:
-        "The Red Light District":
-            u "(Boobs and booze, I have never seen him happier than when we first arrived at the RLD.)"
-
-        "Being Ryan’s Wife":
-            u "(Greatest. Couple. Ever.)"
-
-        "Robbing the hustler" if v14s03a_take_wallet:
-            u "(He did seem pretty confident after robbing that hustler. Maybe that was his favorite moment...)"
+    if v14s03a_take_wallet:
+        menu:
+            "The Red Light District":
+                u "(Boobs and booze, I have never seen him happier than when we first arrived at the RLD.)"
+    
+            "Being Ryan’s Wife":
+                u "(Greatest. Couple. Ever.)"
+    
+            "Robbing the hustler" if v14s03a_take_wallet:
+                u "(He did seem pretty confident after robbing that hustler. Maybe that was his favorite moment...)"
+    
+    else:
+        menu:
+            "The Red Light District":
+                u "(Boobs and booze, I have never seen him happier than when we first arrived at the RLD.)"
+    
+            "Being Ryan’s Wife":
+                u "(Greatest. Couple. Ever.)"
 
     scene v14s09_9c # FPP. same as v14s09_9a imre mouth closed, slightly annoyed, ryan looking and pointing at imre laughing
     with dissolve
@@ -569,15 +650,24 @@ label v14s09:
 
         u "(So Josh's favorite Europe moment...)"
 
-        menu:
-            "Playing Leopard Lord":
-                u "(He was definitely a fan of his role during the murder mystery.)"
-
-            "Drinks in London":
-                u "(We had a good round of drinks together in London, maybe that was his favorite part.)"
-
-            "Fancy dinner" if not joshmad:
-                u "(That fancy dinner Mr. Lee set up was free and delicious, I’m sure Josh loved that, haha.)"
+        if not joshmad:
+            menu:
+                "Playing Leopard Lord":
+                    u "(He was definitely a fan of his role during the murder mystery.)"
+        
+                "Drinks in London":
+                    u "(We had a good round of drinks together in London, maybe that was his favorite part.)"
+        
+                "Fancy dinner" if not joshmad:
+                    u "(That fancy dinner Mr. Lee set up was free and delicious, I’m sure Josh loved that, haha.)"
+        
+        else:
+            menu:
+                "Playing Leopard Lord":
+                    u "(He was definitely a fan of his role during the murder mystery.)"
+        
+                "Drinks in London":
+                    u "(We had a good round of drinks together in London, maybe that was his favorite part.)"
 
     if v11_pen_goes_europe:
         scene v14s09_8b
@@ -606,15 +696,24 @@ label v14s09:
 
         u "(And Penelope's favorite...)"
 
-        menu:
-            "Cleaning the ship":
-                u "(Haha, Mr. Lee really made her do a lot of annoying shit throughout the trip. I think she had a good time though.)"
-
-            "The London Museum":
-                u "(I think she really enjoyed the museum.)"
-
-            "Going to the concert" if v13_penelope_concert:
-                u "(She loved the concert, so I can definitely see that being her favorite part of the trip.)"
+        if v13_penelope_concert:
+            menu:
+                "Cleaning the ship":
+                    u "(Haha, Mr. Lee really made her do a lot of annoying shit throughout the trip. I think she had a good time though.)"
+        
+                "The London Museum":
+                    u "(I think she really enjoyed the museum.)"
+        
+                "Going to the concert" if v13_penelope_concert:
+                    u "(She loved the concert, so I can definitely see that being her favorite part of the trip.)"
+        
+        else:
+            menu:
+                "Cleaning the ship":
+                    u "(Haha, Mr. Lee really made her do a lot of annoying shit throughout the trip. I think she had a good time though.)"
+        
+                "The London Museum":
+                    u "(I think she really enjoyed the museum.)"
 
     scene v14s09_8e # FPP. same as v14s09_8 Ms. Rose looks at mc
     with dissolve

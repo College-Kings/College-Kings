@@ -383,8 +383,8 @@ label v14s52:
 
 # -remember variable of what he sent for future scene. NoraWorry would be text2 or NoraWhere would be text1
 
-    $ nora.messenger.addReply("Hey, Nora. Just checking in since I haven't heard from you in a while... Where are you?", v14s52_reply1)
-    $ nora.messenger.addReply("Hey, you. I'm starting to worry that I haven't seen you around. At least let me know that he didn't hurt you... Please text me back, ASAP", v14s52_reply2)
+    $ nora.messenger.addReply(_("Hey, Nora. Just checking in since I haven't heard from you in a while... Where are you?"), v14s52_reply1)
+    $ nora.messenger.addReply(_("Hey, you. I'm starting to worry that I haven't seen you around. At least let me know that he didn't hurt you... Please text me back, ASAP"), v14s52_reply2)
 
     label v14s52_PhoneContinueNora:
         if nora.messenger.replies:

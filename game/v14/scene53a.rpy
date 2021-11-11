@@ -17,6 +17,8 @@ label v14s53a:
     scene v14s53a_2 # TPP. Close up of Samantha leaning over her lips close to MC's dick, Samantha biting her lip as she looks at MC's dick.
     with dissolve
 
+    pause
+
     image v14sambj = Movie(play="images/v14/Scene 53a/v14sambj.webm", loop=True, image="images/v14/Scene 53a/v14sambjStart.webp", start_image="images/v14/Scene 53a/v14sambjStart.webp")
     image v14sambjf = Movie(play="images/v14/Scene 53a/v14sambjf.webm", loop=True, image="images/v14/Scene 53a/v14sambjStart.webp", start_image="images/v14/Scene 53a/v14sambjStart.webp")
     image v14sambj2 = Movie(play="images/v14/Scene 53a/v14sambj2.webm", loop=True, image="images/v14/Scene 53a/v14sambj2Start.webp", start_image="images/v14/Scene 53a/v14sambj2Start.webp")

@@ -4,20 +4,6 @@
 # Time: Tuesday night
 
 label v14s25a:
-    # -Animation of MC and Amber making out- 
-    image v14ambmoTPP = Movie(play="images/v14/Scene 25a/v14ambmoTPP.webm", loop=True, image="images/v14/Scene 25a/v14ambmoTPP.webp", start_image="images/v14/Scene 25a/v14ambmoTPP.webp")
-    image v14ambmoTPPf = Movie(play="images/v14/Scene 25a/v14ambmoTPPf.webm", loop=True, image="images/v14/Scene 25a/v14ambmoTPP.webp", start_image="images/v14/Scene 25a/v14ambmoTPP.webp")
-
-    scene v14ambmoTPP # MC and Amber making out
-    with dissolve
-
-    pause
-
-    scene v14ambmoTPPf # Makout animation faster
-    with dissolve
-
-    pause
-
     # -Amber and MC remove their clothes, vision is a little foggy, maybe colored lights are going-
     scene v14s25a_1 # TPP Show MC and Amber removing their clothes
     with dissolve
