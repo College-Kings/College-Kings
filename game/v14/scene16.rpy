@@ -121,9 +121,9 @@ label v14s16:
 
     cl "I know I've asked you before, but this time I need a final answer. Are you going to help me with this campaign so I can beat Lindsey?"
 
-    show screen loyalty_tutorial # Placeholder
+    call screen loyalty_tutorial # Placeholder
 
-    hide screen loyalty_tutorial # Placeholder
+    label after_loyalty_tutorial:
 
     if v13_help_chloe:
         cl "I remember how you said you'd support me before but..."

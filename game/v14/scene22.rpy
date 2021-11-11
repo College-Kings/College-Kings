@@ -206,33 +206,33 @@ label v14s22:
     # Lindsey's planning board appears and MC makes his choices from the UI screen
 label test2:
     python:
-        lindsey_board.add_approach("Wolves", opinion="")
-        lindsey_board.add_approach("Apes", opinion="")
+        lindsey_board.add_approach("Sell Lindsey's Car", opinion="\"An old car that sits around in my Grandfather's barn, he' allowing me to have it. It's not the prettiest, but it gets you where you need to go.\"")
+        lindsey_board.add_approach("Steal from the Chick's treasury", opinion="\"I know this sounds crazy... Why would I want to steal from the Chick's, right? Well, Chloe holds all of our funds in her bedroom and right now she's using them towards her campaign. We have to get that money before she spends it all on herself.\"")
         
         lindsey_board.add_subtask(0, "Take images of Lindsey's car without Lindsey on them.",
-            opinion="The buyers probably want clear, detailed photos. Use your phone to get  pictures of all angles so they know exactly what they're buying.",
+            opinion="\"The buyers probably want clear, detailed photos. Use your phone to get  pictures of all angles so they know exactly what they're buying.\"",
             people=[mc, lindsey])
         lindsey_board.add_subtask(0, "Take images of Lindsey's car with Lindsey on them.",
-            opinion="The advertisement has to be PERFECT considering what this piece of junk looks like. I'll get dressed up really nice and we'll make sure we get pictures of all angles so they know exactly what they're buying",
+            opinion="\"The advertisement has to be PERFECT considering what this piece of junk looks like. I'll get dressed up really nice and we'll make sure we get pictures of all angles so they know exactly what they're buying\"",
             people=[mc, lindsey])
         lindsey_board.add_task(0, "Customize online listing",
-            opinion="Not only does our ad have to catch people's eye, but we also need to make sure we come up with an attractive description of the car. Most importantly, we also need to decide how much we're asking for.",
+            opinion="\"Not only does our ad have to catch people's eyes, but we also need to make sure we come up with an attractive description of the car. Most importantly, we also need to decide how much we're asking for.\"",
             people=[mc, lindsey])
         lindsey_board.add_task(0, "Meet with potential buyers",
-            opinion="Once we have a few interested buyers, we'll ask them meet up with us so they can look at the car. Who knows what kind of people we'll run into, either way we have to convince them to buy. And try to get as much money as possible.",
+            opinion="\"Once we have a few interested buyers, we'll ask them meet up with us so they can look at the car. Who knows what kind of people we'll run into, either way we have to convince them to buy. And try to get as much money as possible.\"",
             people=[mc, lindsey, buyer])
 
         lindsey_board.add_subtask(1, "Make sure Chloe isn't home with concert tickets ",
-            opinion= "If we want to get Chloe away from her room for the night, all we need are two tickets to the concert happening this Thursday. She won't be able to say no, she's been wanting to see this band for a whlle.",
+            opinion= "\"If we want to get Chloe away from her room for the night, all we need are two tickets to the concert happening this Thursday. She won't be able to say no, she's been wanting to see this band for a whlle.\"",
             people=[mc, chloe])
         lindsey_board.add_subtask(1, "Invite her and then not show up to something",
-            opinion="The budget-friendly way to keep Chloe occupied is to make sure she's waiting for you to show up at dinner. I'll get you a reservation for two at that new Italian place, all you have to do is make her go there and wait for you as long as she possibly will.",
+            opinion="\"The budget-friendly way to keep Chloe occupied is to make sure she's waiting for you to show up at dinner. I'll get you a reservation for two at that new Italian place, all you have to do is make her go there and wait for you as long as she possibly will.\"",
             people=[mc, chloe])
         lindsey_board.add_task(1, "Lindsey distracts Aubrey",
-            opinion="The only person left to distract will be Aubrey, and I can take care of that with a simple 'Hey Aubrey, I think I want to try anal!' line.",
+            opinion="\"The only person left to distract will be Aubrey, and I can take care of that with a simple \"Hey Aubrey, I think I want to try anal!\" line.\"",
             people=[lindsey, aubrey])
         lindsey_board.add_task(1, "MC steals the chick's money from Chloe's room",
-            opinion="The final and most important part, you get into Chloe's room and sniff out the cash. It could be in multiple places, so check everywhere. And honestly... See what else you can find that might help us out in the future.",
+            opinion="\"The final and most important part, you get into Chloe's room and sniff out the cash. It could be in multiple places, so check everywhere. And honestly... See what else you can find that might help us out in the future.\"",
             people=[mc])
 
     call screen planning_board(lindsey_board)

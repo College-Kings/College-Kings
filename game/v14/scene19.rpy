@@ -83,29 +83,29 @@ label v14s19:
     cl "So, here's what I'm thinking for phase one."
 label test:
     python:
-        chloe_board.add_approach("Wolves", opinion="")
-        chloe_board.add_approach("Apes", opinion="")
+        chloe_board.add_approach("Announce the Wolves as official brotherhood of the chicks", opinion="\"The Wolves and The Chicks already have a special bond, but we can convince Chris to make the Wolves our official brotherhood frat. This means a lifetime of loyalty and support, which is  exactly what I need right now.\"")
+        chloe_board.add_approach("\"Get the Apes on our side", opinion="Chris is basically like an open wound right now, and I don't want to rub salt on everything he's going through. If we use this vulnerable time to talk some sense into him, maybe we can get him to focus on himself, the Wolves, and most importantly, me as the President of the Chicks. Just make sure you don't say the wrong thing...\"")
 
         chloe_board.add_task(0, "Talk to Chris about getting his full support in return for this.",
-            opinion="Chris is basically like an open wound right now, and I don't want to rub salt on everything he's going through. If we use this vulnerable time to talk some sense into him, maybe we can get him to focus on himself, the Wolves, and most importantly, me as the President of the Chicks. Just make sure you don't say the wrong thing...",
+            opinion="\"Chris is basically like an open wound right now, and I don't want to rub salt on everything he's going through. If we use this vulnerable time to talk some sense into him, maybe we can get him to focus on himself, the Wolves, and most importantly, me as the President of the Chicks. Just make sure you don't say the wrong thing...\"",
             people=[mc, chloe, chris])
         chloe_board.add_subtask(0, "Announce it via Kiwii (photoshoot with a real wolf)",
-            opinion="We can Rent-A-Wolf for an hour in exchange for a pretty penny. Can you imagine what people will say when they see that the Chicks have partnered with the Wolves, and I'm posing with a real wolf?!",
+            opinion="\"We can Rent-A-Wolf for an hour in exchange for a pretty penny. Can you imagine what people will say when they see that the Chicks have partnered with the Wolves, and I'm posing with a real wolf?!\"",
             people=[mc, chloe, wolf, trainer],
             cost=450)
         chloe_board.add_subtask(0, "Announce it via Kiwii (photoshoot with plush toy wolf)",
-            opinion="I could easily grab a wolf plushy to pose with. It's a little less interesting than a real wolf, but definitely less expensive and of course, the safer option.",
+            opinion="\"I could easily grab a wolf plushy to pose with. It's a little less interesting than a real wolf, but definitely less expensive and of course, the safer option.\"",
             people=[mc, chloe],
             cost=50)
 
         chloe_board.add_task(1, "Host a small get together with Cameron, Grayson, Chloe, Aubrey and MC",
-            opinion= "First thing's first: Get them all in a room, give them each a beer, and put on some good music. As soon as we've set the mood, we can get down to business.",
+            opinion= "\"First thing's first: Get them all in a room, give them each a beer, and put on some good music. As soon as we've set the mood, we can get down to business.\"",
             people=[mc, chloe, aubrey, grayson, cameron])
         chloe_board.add_subtask(1, "Talk to Cameron about a strategic alliance",
-            opinion="Cameron secretly has amazing leadership skills, and I know he plans to use them one day. If we tell Cameron exactly what he wants to hear in terms of the future of the Apes, he'll no reason to vote against me",
+            opinion="\"Cameron secretly has amazing leadership skills, and I know he plans to use them one day. If we tell Cameron exactly what he wants to hear in terms of the future of the Apes, he'll have no reason to vote against me\"",
             people=[mc, chloe, cameron])
         chloe_board.add_subtask(1, "Seduce Grayson",
-            opinion="Don't get me wrong, I know this sounds a little... manipulative, but you have to admit, I can easily get Grayson on our side with a pinch of flirting. And trust me, it won't have to be much, especially with a few drinks in him.",
+            opinion="\"Don't get me wrong, I know this sounds a little... manipulative, but you have to admit, I can easily get Grayson on our side with a pinch of flirting. And trust me, it won't have to be much, especially with a few drinks in him.\"",
             people=[mc, chloe, grayson])
 
     call screen planning_board(chloe_board)
