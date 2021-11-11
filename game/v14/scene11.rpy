@@ -439,11 +439,10 @@ label v14s11:
 
     stop music
 
-    image ferry_depart = Movie(play="images/v14/Scene 11/Act_4_Intro.webm", loop=False)
-    scene ferry_depart
+    image act4intro = Movie(play="images/v14/Scene 11/Act_4_Intro.webm", loop=False)
+    scene act4intro
     with fade
     
     pause 43
-    
     
     jump v14s12
