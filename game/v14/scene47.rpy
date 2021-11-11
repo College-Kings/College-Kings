@@ -995,10 +995,10 @@ label v14s47_end:
     pause 0.75
 
     $ v14s47_kiwiiPost1 = KiwiiPost("Lindsey", "v14/v14s47_lindsey_kiwii.webp", "Making big moves ;)", numberLikes=720)
-    $ v14s47_kiwiiPost1.newComment("Nora", "Kick ass babe <3")
-    $ v14s47_kiwiiPost1.newComment("Aubrey", "Aww, look at your cute little button!")
-    $ v14s47_kiwiiPost1.newComment("Riley", "I have one too :) Hehe.")
-    $ v14s47_kiwiiPost1.newComment("Sebastian", "Looking all official now, Linds!")
+    $ v14s47_kiwiiPost1.newComment("Nora", "Kick ass babe <3", queue=False)
+    $ v14s47_kiwiiPost1.newComment("Aubrey", "Aww, look at your cute little button!", queue=False)
+    $ v14s47_kiwiiPost1.newComment("Riley", "I have one too :) Hehe.", queue=False)
+    $ v14s47_kiwiiPost1.newComment("Sebastian", "Looking all official now, Linds!", queue=False)
     if v14_pics_with_linds:
         $ v14s47_kiwiiPost1.addReply("Damn, she's cute... What is she selling? ;)", v14s47_kiwiiReply1)
         $ v14s47_kiwiiPost1.addReply("#ThatsMyPresident", v14s47_kiwiiReply2)
