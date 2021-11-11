@@ -170,9 +170,10 @@ screen planning_board_task_desc(task):
                 color "#777777"
                 size 30
 
-            text task.opinion:
-                color "#777777"
-                size 22
+            if task.opinion is not None:
+                text task.opinion:
+                    color "#777777"
+                    size 22
 
             hbox:
                 spacing -10
