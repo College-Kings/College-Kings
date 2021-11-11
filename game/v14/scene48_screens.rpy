@@ -53,7 +53,7 @@ screen iBuy():
 
     button:
         area (945, 650, 786, 208)
-        action SetVariable("v14s48_car_description", CarDescription.TRUTH)   
+        action SetVariable("v14s48_car_description", CarDescription.TRUTH) 
 
 
     # Determine Price

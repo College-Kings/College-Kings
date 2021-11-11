@@ -1,4 +1,4 @@
-# SCENE 43b: Mr Lee's History Class
+# SCENE 43b: Mr. Lee's History Class
 # Locations: Mr. Lees Classrom
 # Characters: MR. LEE (Outfit: 1), MC (Outfit: 1), RILEY (Outfit: 4), CAMERON (Outfit: 3), IMRE (Outfit: 2), PENELOPE (Outfit: 1)
 # Time: Morning
@@ -96,7 +96,7 @@ label v14s43b:
 
     u "Oh!"
 
-    scene v14s43b_3d # FPP. same as v14s43b_3c Mr lee Mr. Lee looks slightly to his right at Riley and extends his arm and open palm towards Riley
+    scene v14s43b_3d # FPP. same as v14s43b_3c Mr. lee Mr. Lee looks slightly to his right at Riley and extends his arm and open palm towards Riley
     with dissolve
 
     lee "Riley!"
@@ -197,7 +197,7 @@ label v14s43b:
 
     pause 0.75
 
-    scene v14s43b_7 # FPP. MC has walked towards the front of the class and see's Riley talking to Mr. Lee, Mr Lee's mouth is closed slight smile Riley's is open no expression, Imre is walking by Riley avoiding eye contact with her, Penelope and Cameron are standing awakwardly next to each other, Penelope no expression mouth closed, cameron no expression mouth closed
+    scene v14s43b_7 # FPP. MC has walked towards the front of the class and see's Riley talking to Mr. Lee, Mr. Lee's mouth is closed slight smile Riley's is open no expression, Imre is walking by Riley avoiding eye contact with her, Penelope and Cameron are standing awakwardly next to each other, Penelope no expression mouth closed, cameron no expression mouth closed
     with dissolve
 
     pause 0.75
@@ -551,7 +551,7 @@ label v14s43b:
 
                 pause 0.75
 
-            scene v14s43b_3f # FPP. same as v14s43b_3 Mr Lee. is centered in the middle of the screen
+            scene v14s43b_3f # FPP. same as v14s43b_3 Mr. Lee. is centered in the middle of the screen
             with dissolve
 
             lee "Everyone's paired up? Good!"

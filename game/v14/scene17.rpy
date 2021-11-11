@@ -772,7 +772,7 @@ label v14s17:
                 
                 "Don't ask her":
                     $ add_point(KCT.BOYFRIEND)
-                    $ set_presidency_percent(v14_lindsey_popularity + 1)                
+                    $ set_presidency_percent(v14_lindsey_popularity + 1) 
                     u "(I'm not getting involved in that...)"
                 
                     jump v14s17_end

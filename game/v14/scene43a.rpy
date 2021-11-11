@@ -1,4 +1,4 @@
-# SCENE 43a: Walk to Mr Lee's class with Penelope
+# SCENE 43a: Walk to Mr. Lee's class with Penelope
 # Locations: College, Mr. Lee Classroom
 # Characters: MC (Outfit: 1), PENELOPE (Outfit: 1)
 # Time: Morning

@@ -1,4 +1,4 @@
-# SCENE 43: Walk to Mr Lee's class by yourself
+# SCENE 43: Walk to Mr. Lee's class by yourself
 # Locations: College, Mr. Lee Classroom
 # Characters: MC (Outfit: 1), PENELOPE (Outfit: 1)
 # Time: Morning

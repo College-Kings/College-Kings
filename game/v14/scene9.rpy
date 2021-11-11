@@ -226,7 +226,7 @@ label v14s09:
                 u "(Probably when we went canoeing, that was interesting to say the least.)"
     
             "Becoming a model":
-                u "(Definitely when she became a model at Naomi’s photoshoot.)"
+                u "(Definitely when she became a model at Naomi's photoshoot.)"
     
             "Going to the concert" if v13_aubrey_concert:
                 u "(When I took her to the concert. She seemed to have a good time.)"
@@ -237,7 +237,7 @@ label v14s09:
                 u "(Probably when we went canoeing, that was interesting to say the least.)"
     
             "Becoming a model":
-                u "(Definitely when she became a model at Naomi’s photoshoot.)"
+                u "(Definitely when she became a model at Naomi's photoshoot.)"
 
     scene v14s09_6b # FPP. same as v14s09_6a Mr. Lee looking to his left
     with dissolve
@@ -282,7 +282,7 @@ label v14s09:
                 u "(She had a decent time getting into that “poor person” role.)"
     
             "Being tied to the bed" if v13s40fromgame:
-                u "(When I had her tied to the bed… That was definitely the best part, haha.)"
+                u "(When I had her tied to the bed... That was definitely the best part, haha.)"
     
     else:
         menu:
@@ -309,7 +309,7 @@ label v14s09:
             "Revenge against Charli":
                 u "(Charli was the worst, so getting revenge must have felt amazing.)"
     
-            "Mr. Lee’s riddles":
+            "Mr. Lee's riddles":
                 u "(She did seem to have fun while solving Mr. Lee's riddles.)"
     
             "The threesome" if v13_FirstThreesome:
@@ -320,7 +320,7 @@ label v14s09:
             "Revenge against Charli":
                 u "(Charli was the worst, so getting revenge must have felt amazing.)"
     
-            "Mr. Lee’s riddles":
+            "Mr. Lee's riddles":
                 u "(She did seem to have fun while solving Mr. Lee's riddles.)"
 
     scene v14s09_8
@@ -344,7 +344,7 @@ label v14s09:
                 u "(She really destroyed Chloe on that carriage ride.)"
     
             "Having sex with me" if v12_nora_sex:
-                u "(Having sex with Nora certainly was one of my favorite parts… I’d assume it might be hers as well.)"
+                u "(Having sex with Nora certainly was one of my favorite parts... I'd assume it might be hers as well.)"
     
     else:
         menu:
@@ -517,10 +517,10 @@ label v14s09:
     if v14_ryan_satin:
         menu:
             "When Imre got catfished":
-                u "(Ryan does really enjoy seeing Imre's misfortune, I don’t think he’ll ever let him live that one down.)"
+                u "(Ryan does really enjoy seeing Imre's misfortune, I don't think he'll ever let him live that one down.)"
     
-            "Being Imre’s Husband":
-                u "(Okay, maybe I’m just a troll, but they were a really cute couple.)"
+            "Being Imre's Husband":
+                u "(Okay, maybe I'm just a troll, but they were a really cute couple.)"
     
             "Sex with a stripper" if v14_ryan_satin:
                 u "(Losing his virginity, even if to a stripper, has got to be his highlight.)"
@@ -528,10 +528,10 @@ label v14s09:
     else:
         menu:
             "When Imre got catfished":
-                u "(Ryan does really enjoy seeing Imre's misfortune, I don’t think he’ll ever let him live that one down.)"
+                u "(Ryan does really enjoy seeing Imre's misfortune, I don't think he'll ever let him live that one down.)"
     
-            "Being Imre’s Husband":
-                u "(Okay, maybe I’m just a troll, but they were a really cute couple.)"
+            "Being Imre's Husband":
+                u "(Okay, maybe I'm just a troll, but they were a really cute couple.)"
 
     scene v14s09_9a # FPP. same as v14s09_9 imre looking at ryan, mouth open, slight smile, ryan looking at imre slight smile mouth closed
     with dissolve
@@ -555,7 +555,7 @@ label v14s09:
             "The Red Light District":
                 u "(Boobs and booze, I have never seen him happier than when we first arrived at the RLD.)"
     
-            "Being Ryan’s Wife":
+            "Being Ryan's Wife":
                 u "(Greatest. Couple. Ever.)"
     
             "Robbing the hustler" if v14s03a_take_wallet:
@@ -566,7 +566,7 @@ label v14s09:
             "The Red Light District":
                 u "(Boobs and booze, I have never seen him happier than when we first arrived at the RLD.)"
     
-            "Being Ryan’s Wife":
+            "Being Ryan's Wife":
                 u "(Greatest. Couple. Ever.)"
 
     scene v14s09_9c # FPP. same as v14s09_9a imre mouth closed, slightly annoyed, ryan looking and pointing at imre laughing
@@ -647,7 +647,7 @@ label v14s09:
                     u "(We had a good round of drinks together in London, maybe that was his favorite part.)"
         
                 "Fancy dinner" if not joshmad:
-                    u "(That fancy dinner Mr. Lee set up was free and delicious, I’m sure Josh loved that, haha.)"
+                    u "(That fancy dinner Mr. Lee set up was free and delicious, I'm sure Josh loved that, haha.)"
         
         else:
             menu:
