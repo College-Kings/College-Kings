@@ -281,7 +281,7 @@ label v14s09:
             "Murder Mystery":
                 u "(She had a decent time getting into that “poor person” role.)"
     
-            "Being tied to the bed" if chloegf:
+            "Being tied to the bed" if v13s40fromgame:
                 u "(When I had her tied to the bed… That was definitely the best part, haha.)"
     
     else:
@@ -449,18 +449,6 @@ label v14s09:
 
         u "(Right, Charli.)"
 
-    if v13_charli_exposed:
-        menu:
-            "Who fucking cares?":
-                u "(Who fucking cares what that douche's favorite part was...)"
-    
-            "Being a bitch":
-                u "(Being a bitch seemed to be his favorite activity, in my opinion.)"
-    
-            "Getting straddled by Mr. Lee" if v13_charli_exposed:
-                u "(I wouldn't be surprised if he enjoyed that…)"
-    
-    else:
         menu:
             "Who fucking cares?":
                 u "(Who fucking cares what that douche's favorite part was...)"
