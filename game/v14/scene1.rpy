@@ -25,6 +25,9 @@ label v14s01:
 
     u "(Oh, shit. This is happening.)"
 
+    if config_censored:
+        call screen censoredPopup("v14s01_nsfwSkipLabel1")
+
     scene v14s01_1b # FPP. Same as v14s01_1a, Riley and Aubrey topless, looking at MC seductively, both mouths closed
     with dissolve
 
@@ -392,6 +395,8 @@ label v14s01:
             with dissolve
 
             u "(They really wanted to have a threesome... Those girls are fucking wild.)"
+
+            label v14s01_nsfwSkipLabel1:
 
             scene v14s01_14a # TPP. Same as v14s01_14, but MC is fully clothed
             with dissolve

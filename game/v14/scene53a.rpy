@@ -9,6 +9,9 @@ label v14s53a:
 
     pause 
 
+    if config_censored:
+        call screen censoredPopup("v14s53a_nsfwSkipLabel1")
+
     scene v14s53a_1a # TPP. Same as v14s53a_1, Both sat on the couch still, MC's pants around his ankles, Samantha leaning towards MC and kissing him passionately as her hand sits on his lap near his dick.
     with dissolve
 
@@ -213,6 +216,8 @@ label v14s53a:
             with dissolve
 
             u "(Damn, that was a close one!)"
+
+    label v14s53a_nsfwSkipLabel1:
 
     scene v14s53a_15 # TPP. Show MC standing in the Ape's basement pulling up his pants, slight smile,mouth closed.
     with dissolve
