@@ -206,8 +206,8 @@ label v14s22:
     # Lindsey's planning board appears and MC makes his choices from the UI screen
 label test2:
     python:
-        lindsey_board.add_approach("Wolves", opinion="")
-        lindsey_board.add_approach("Apes", opinion="")
+        lindsey_board.add_approach("Sell Lindsey's Car", opinion="An old car that sits around in my Grandfather's barn, he' allowing me to have it. It's not the prettiest, but it gets you where you need to go.")
+        lindsey_board.add_approach("Steal from the Chick's treasury", opinion="I know this sounds crazy... Why would I want to steal from the Chick's, right? Well, Chloe holds all of our funds in her bedroom and right now she's using them towards her campaign. We have to get that money before she spends it all on herself.")
         
         lindsey_board.add_subtask(0, "Take images of Lindsey's car without Lindsey on them.",
             opinion="The buyers probably want clear, detailed photos. Use your phone to get  pictures of all angles so they know exactly what they're buying.",
@@ -216,7 +216,7 @@ label test2:
             opinion="The advertisement has to be PERFECT considering what this piece of junk looks like. I'll get dressed up really nice and we'll make sure we get pictures of all angles so they know exactly what they're buying",
             people=[mc, lindsey])
         lindsey_board.add_task(0, "Customize online listing",
-            opinion="Not only does our ad have to catch people's eye, but we also need to make sure we come up with an attractive description of the car. Most importantly, we also need to decide how much we're asking for.",
+            opinion="Not only does our ad have to catch people's eyes, but we also need to make sure we come up with an attractive description of the car. Most importantly, we also need to decide how much we're asking for.",
             people=[mc, lindsey])
         lindsey_board.add_task(0, "Meet with potential buyers",
             opinion="Once we have a few interested buyers, we'll ask them meet up with us so they can look at the car. Who knows what kind of people we'll run into, either way we have to convince them to buy. And try to get as much money as possible.",
