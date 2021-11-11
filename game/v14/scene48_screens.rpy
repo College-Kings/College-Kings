@@ -14,6 +14,14 @@ screen iBuy():
 
     add "images/v14/iBuy/background.png"
 
+    vbox:
+        xalign 0.5
+
+        text "Car Description: {}".format(v14s48_car_description.name):
+            xalign 0.5
+        text "Car Price: {}".format(v14s48_campaign_money):
+            xalign 0.5
+
     hbox:
         xalign 0.5
         ypos 186
