@@ -41,15 +41,22 @@ screen iBuy():
             sensitive car_images_index < len(car_images) - 1
             yalign 0.5
 
-    imagemap:
-        idle "images/v14/iBuy/descriptions_only.png"
+
+    # Select Car Description
+    add "images/v14/iBuy/descriptions_only.png":
         xalign 0.5
         ypos 583
 
-        hotspot (174, 629, 771, 208) action SetVariable("v14s48_car_description", CarDescription.LIE)
+    button:
+        area (174, 650, 771, 208)
+        action SetVariable("v14s48_car_description", CarDescription.LIE)
 
-        hotspot (945, 629, 786, 208) action SetVariable("v14s48_car_description", CarDescription.TRUTH)
+    button:
+        area (945, 650, 786, 208)
+        action SetVariable("v14s48_car_description", CarDescription.TRUTH)   
 
+
+    # Determine Price
     bar:
         value VariableValue("v14s48_campaign_money", 800)
         pos (703, 868)
@@ -59,12 +66,9 @@ screen iBuy():
         xalign 0.5
         ypos 868
 
-    text str(v14s48_campaign_money)
-        
-
+    # Confirm
     imagebutton:
         idle "images/v14/iBuy/confirm.png"
-        sensitive v14s48_car_description is not None
         action Hide("iBuy")
         xalign 0.5
         ypos 973
