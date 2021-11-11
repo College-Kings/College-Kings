@@ -10,7 +10,7 @@ default menu_set = set()
 default achievementAtList = None
 
     ## Phone
-default contacts_file_path = os.path.join(config.basedir, "game", "images", "phone", "contacts")
+define contacts_file_path = os.path.join(config.basedir, "game", "images", "nonplayable_characters")
 
     ## Kiwii Vars
 default kiwiiUsers = kiwii_users()
