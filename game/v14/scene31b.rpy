@@ -537,7 +537,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
     menu:
         "Don't think so":
             
-            u "Hmm, no… I don't think so."
+            u "Hmm, no... I don't think so."
 
         "Not yet":
             $ add_point(KCT.BOYFRIEND)

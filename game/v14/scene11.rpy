@@ -15,7 +15,7 @@ label v14s11:
     u "(It feels so good to be back on home turf.)"
 
     if v13_charli_exposed:
-        scene v14s11_2 # FPP. MC looks over sees and overhears Mr. Lee talking to Ms. Rose, Mr Lee. extends one hand out slightly palm up, no expression mouth open, Ms. Rose. no expression, mouth closed
+        scene v14s11_2 # FPP. MC looks over sees and overhears Mr. Lee talking to Ms. Rose, Mr. Lee. extends one hand out slightly palm up, no expression mouth open, Ms. Rose. no expression, mouth closed
         with dissolve
 
         lee "Right, well... I need to be on my way! It's insisted that I attend Charli's meeting with the dean."

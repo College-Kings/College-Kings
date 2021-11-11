@@ -97,6 +97,9 @@ label test:
             opinion="\"I could easily grab a wolf plushy to pose with. It's a little less interesting than a real wolf, but definitely less expensive and of course, the safer option.\"",
             people=[mc, chloe],
             cost=50)
+        chloe_board.add_task(0, "Post the photo on Kiwii",
+            opinion="\"The last step is to post the photo with a good caption and hope for the best.\"",
+            people=[mc, chloe])
 
         chloe_board.add_task("Apes", "Host a small get together with Cameron, Grayson, Chloe, Aubrey and MC",
             opinion= "\"First thing's first: Get them all in a room, give them each a beer, and put on some good music. As soon as we've set the mood, we can get down to business.\"",

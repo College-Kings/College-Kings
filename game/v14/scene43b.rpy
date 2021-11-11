@@ -1,4 +1,4 @@
-# SCENE 43b: Mr Lee's History Class
+# SCENE 43b: Mr. Lee's History Class
 # Locations: Mr. Lees Classrom
 # Characters: MR. LEE (Outfit: 1), MC (Outfit: 1), RILEY (Outfit: 4), CAMERON (Outfit: 3), IMRE (Outfit: 2), PENELOPE (Outfit: 1)
 # Time: Morning
@@ -96,7 +96,7 @@ label v14s43b:
 
     u "Oh!"
 
-    scene v14s43b_3d # FPP. same as v14s43b_3c Mr lee Mr. Lee looks slightly to his right at Riley and extends his arm and open palm towards Riley
+    scene v14s43b_3d # FPP. same as v14s43b_3c Mr. lee Mr. Lee looks slightly to his right at Riley and extends his arm and open palm towards Riley
     with dissolve
 
     lee "Riley!"
@@ -197,7 +197,7 @@ label v14s43b:
 
     pause 0.75
 
-    scene v14s43b_7 # FPP. MC has walked towards the front of the class and see's Riley talking to Mr. Lee, Mr Lee's mouth is closed slight smile Riley's is open no expression, Imre is walking by Riley avoiding eye contact with her, Penelope and Cameron are standing awakwardly next to each other, Penelope no expression mouth closed, cameron no expression mouth closed
+    scene v14s43b_7 # FPP. MC has walked towards the front of the class and see's Riley talking to Mr. Lee, Mr. Lee's mouth is closed slight smile Riley's is open no expression, Imre is walking by Riley avoiding eye contact with her, Penelope and Cameron are standing awakwardly next to each other, Penelope no expression mouth closed, cameron no expression mouth closed
     with dissolve
 
     pause 0.75
@@ -390,9 +390,9 @@ label v14s43b:
                 $ v14s43b_kiwiiPost3.newComment("Sebastian", "This is too far for just \"frat shit\".", queue=False)
                 $ v14s43b_kiwiiPost3.newComment("Aubrey", "Pathetic.", queue=False)
 
-                $ chloe.messenger.newMessage("GRAYSON IS SUCH AN ASSHOLE")
-                $ chloe.messenger.newMessage("FUCK him, and FUCK THE APES!!!!")
-                $ chloe.messenger.newMessage("UGH! I'm going to turn this around. It won't hurt my campaign even a little bit, I'll make sure of it.")
+                $ chloe.messenger.newMessage("GRAYSON IS SUCH AN ASSHOLE", queue=False)
+                $ chloe.messenger.newMessage("FUCK HIM AND FUCK THE APES AND FUCK THEIR KIWIIS!!!!", queue=False)
+                $ chloe.messenger.newMessage("UGH! I'm going to turn this around. It won't hurt my campaign even a little bit, I'll make sure of it.", queue=False)
 
                 $ chloe.messenger.addReply("I'm so sorry that this is happening. I don't even know what to say.")
                 $ chloe.messenger.newMessage("I know, I know... I'm just venting.")
@@ -551,7 +551,7 @@ label v14s43b:
 
                 pause 0.75
 
-            scene v14s43b_3f # FPP. same as v14s43b_3 Mr Lee. is centered in the middle of the screen
+            scene v14s43b_3f # FPP. same as v14s43b_3 Mr. Lee. is centered in the middle of the screen
             with dissolve
 
             lee "Everyone's paired up? Good!"

@@ -282,7 +282,7 @@ label v14s30b:
         $ v14s30b_kiwiiPost2.addReply(_("Aww, haha. Congrats!"))
 
     elif v14s30b_pw_image_two and v14s30b_its_perfect:
-        $ v14s30b_kiwiiPost3 = KiwiiPost("Chloe", "v14/v14s30b_pw_image_two.webp", _("I'd like to officially announce The Chick's partnership with The Wolves! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=756)
+        $ v14s30b_kiwiiPost3 = KiwiiPost("Chloe", "v14/v14s30b_pw_image_two.webp", _("I'd like to officially announce The Chicks' partnership with The Wolves! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=756)
         if v14_chrissupport > 1:
             $ v14s30b_kiwiiPost3.newComment("Chris", _("Haha, perfect! #Vote4Chloe"), queue=False)
         $ v14s30b_kiwiiPost3.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chloe <3"), queue=False)
