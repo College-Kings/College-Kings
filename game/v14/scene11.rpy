@@ -435,7 +435,7 @@ label v14s11:
     scene v14s11_6a # TPP. same as v14s11_6 Mc exiting the airport
     with dissolve
 
-    pause 0.75
+    pause
 
     stop music
 
