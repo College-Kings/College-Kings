@@ -207,7 +207,7 @@ label v14s12:
             $ emmy.simplr.addReply("Oof, I sense that a bomb is about to drop, haha")
             $ emmy.simplr.newMessage("Well, yeah. Um, I have a boyfriend actually")
             $ emmy.simplr.addReply("What the fuck?! Wait, you... what?")
-            $ emmy.simplr.newMessage("Trust me, I already know what you’re thinking.")
+            $ emmy.simplr.newMessage("Trust me, I already know what you're thinking.")
             $ emmy.simplr.addReply("I'm not sure that you do")
             $ emmy.simplr.newMessage("Well, regardless of what it is I've chosen to delete this app. So, this is goodbye.")
             $ emmy.simplr.newMessage("And most importantly I want to apologize for not telling you the truth. I was just trying to have a good time, you know?")
@@ -219,7 +219,7 @@ label v14s12:
             $ emmy.simplr.addReply("Oof, I sense that a bomb is about to drop, haha")
             $ emmy.simplr.newMessage("Well, yeah. Um, I have a boyfriend actually")
             $ emmy.simplr.addReply("What the fuck?! Wait, you... what?")
-            $ emmy.simplr.newMessage("Trust me, I already know what you’re thinking.")
+            $ emmy.simplr.newMessage("Trust me, I already know what you're thinking.")
             $ emmy.simplr.addReply(_("I'm not sure that you do"), v14_emmy_simplr3)
     elif emmy.simplr in simplr_pendingContacts:
         $ emmy.simplr.removeContact()

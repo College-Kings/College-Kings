@@ -142,7 +142,7 @@ label v14s30b:
     scene v14s30b_2
     with dissolve
 
-    cl "Well, I’ll definitely include \"#PresidentialStatus\". Then something about voting for me."
+    cl "Well, I'll definitely include \"#PresidentialStatus\". Then something about voting for me."
 
     menu:
         "It's perfect":

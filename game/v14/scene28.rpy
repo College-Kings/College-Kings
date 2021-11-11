@@ -168,7 +168,7 @@ label v14s28:
     menu:
         "Stay calm":
             
-            u "What? Emily… Why?"
+            u "What? Emily... Why?"
 
         "Be angry":
 

@@ -76,6 +76,12 @@ label v14s46a:
 
     u "It's fine, I'm just teasing."
 
+    if laurenrs:
+        label v14s46a_sga:
+        
+    else:
+        label v14s46a_sgb:
+
     scene v14s46a_5 # TPP. MC lays on Lauren bed.
     with dissolve
 
@@ -431,6 +437,7 @@ label v14s46a:
         with dissolve
 
         la "*Laughs*"
+        $ renpy.end_replay()
 
         scene v14s46a_22a
         with dissolve
@@ -666,6 +673,8 @@ label v14s46a:
 
         la "Haha! Perfect."
         
+    $ renpy.end_replay()
+
     scene v14s46a_38 # FPP. Lauren, smiling, mouth open, in her room.
     with dissolve
 
