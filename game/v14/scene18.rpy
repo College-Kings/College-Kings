@@ -77,7 +77,7 @@ label v14s18:
     scene v14s18_4c
     with dissolve
 
-    li "I still have a shit ton of campaign planning to do and I can't exactly let just anyone in on that…"
+    li "I still have a shit ton of campaign planning to do and I can't exactly let just anyone in on that..."
 
     scene v14s18_4b
     with dissolve
@@ -142,7 +142,7 @@ label v14s18:
         scene v14s18_4a
         with dissolve
 
-        li "I know you're like... Dating her, or whatever you're calling it… *Chuckles*"
+        li "I know you're like... Dating her, or whatever you're calling it... *Chuckles*"
 
     scene v14s18_4c
     with dissolve

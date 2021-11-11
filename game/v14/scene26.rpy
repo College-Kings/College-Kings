@@ -124,7 +124,7 @@ label v14s26:
             scene v14s26_5
             with dissolve
 
-            u "Wow, that's… Thanks. *Chuckles*"
+            u "Wow, that's... Thanks. *Chuckles*"
         
             scene v14s26_5a
             with dissolve
