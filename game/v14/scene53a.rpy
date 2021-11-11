@@ -69,7 +69,7 @@ label v14s53a:
     image v14samccg = Movie(play="images/v14/Scene 53a/v14samccg.webm", loop=True, image="images/v14/Scene 53a/v14samccgStart.webp", start_image="images/v14/Scene 53a/v14samccgStart.webp")
     image v14samccgf = Movie(play="images/v14/Scene 53a/v14samccgf.webm", loop=True, image="images/v14/Scene 53a/v14samccgStart.webp", start_image="images/v14/Scene 53a/v14samccgStart.webp")
     image v14samccg2 = Movie(play="images/v14/Scene 53a/v14samccg2.webm", loop=True, image="images/v14/Scene 53a/v14samccg2Start.webp", start_image="images/v14/Scene 53a/v14samccg2Start.webp")
-    image v14samccg2f = Movie(play="images/v14/Scene 53a/v14sambccg2f.webm", loop=True, image="images/v14/Scene 53a/v14samccg2Start.webp", start_image="images/v14/Scene 53a/v14samccg2Start.webp") 
+    image v14samccg2f = Movie(play="images/v14/Scene 53a/v14samccgb2f.webm", loop=True, image="images/v14/Scene 53a/v14samccg2Start.webp", start_image="images/v14/Scene 53a/v14samccg2Start.webp") 
 
     scene v14samccg # Ignore as animation
     with dissolve
@@ -134,7 +134,7 @@ label v14s53a:
     image v14samccgb = Movie(play="images/v14/Scene 53a/v14samccgb.webm", loop=True, image="images/v14/Scene 53a/v14samccgbStart.webp", start_image="images/v14/Scene 53a/v14samccgbStart.webp")
     image v14samccgbf = Movie(play="images/v14/Scene 53a/v14samccgbf.webm", loop=True, image="images/v14/Scene 53a/v14samccgbStart.webp", start_image="images/v14/Scene 53a/v14samccgbStart.webp")
     image v14samccgb2 = Movie(play="images/v14/Scene 53a/v14samccgb2.webm", loop=True, image="images/v14/Scene 53a/v14samccgb2Start.webp", start_image="images/v14/Scene 53a/v14samccgb2Start.webp")
-    image v14samccgb2f = Movie(play="images/v14/Scene 53a/v14sambccgb2f.webm", loop=True, image="images/v14/Scene 53a/v14samccgb2Start.webp", start_image="images/v14/Scene 53a/v14samccgb2Start.webp")
+    image v14samccgb2f = Movie(play="images/v14/Scene 53a/v14samccgb2f.webm", loop=True, image="images/v14/Scene 53a/v14samccgb2Start.webp", start_image="images/v14/Scene 53a/v14samccgb2Start.webp")
     
     scene v14s53a_10 # TPP. Close up of Samantha's hand grabbing MC's hand as it is on her ass
     with dissolve
