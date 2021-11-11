@@ -21,15 +21,41 @@ label v14s37:
 
     pause 0.75
 
-    scene v14s37_3 # FPP. MC and Penlope outside of the restaurant, Penelope looking at MC, MC looking at Penelope, Penelope slight smile, mouth closed.
-    with dissolve
+    menu:
+        "Greet":
+            scene v14s37_3
+            with dissolve
 
-    u "Hey, Penelope. You look stunning."
+            u "Hey, you."
 
-    scene v14s37_3a # FPP. Same as v14s37_3, Penelope slight smile, mouth open.
-    with dissolve
+            scene v14s37_3a
+            with dissolve
 
-    pe "Thank you. You too. As always."
+            pe "Hey, handsome."
+
+        "Greet with a compliment":
+            $ add_point(KCT.BOYFRIEND)
+            $ penelope.points += 1
+
+            scene v14s37_3
+            with dissolve
+
+            u "Hello, gorgeous."
+
+            scene v14s37_3a
+            with dissolve
+
+            pe "Haha, hi."
+
+            scene v14s37_3
+            with dissolve
+
+            u "You seriously look amazing."
+
+            scene v14s37_3a
+            with dissolve
+
+            pe "*Chuckles* Thank you. You too. As always."
 
     scene v14s37_3
     with dissolve
