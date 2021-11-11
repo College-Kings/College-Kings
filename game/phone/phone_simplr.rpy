@@ -17,9 +17,8 @@ init python:
 
             self.profile_picture = os.path.join(contacts_file_path, name.lower(), "{}_profile_picture".format(name.lower()))
             
-            self.large_profile_pictures = []
             for (dirpath, dirname, filenames) in os.walk(os.path.join(contacts_file_path, name.lower(), "large_profile_pictures")):
-                self.large_profile_pictures.extend([os.path.join(dirpath, filename) for filename in filenames])
+                self.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/{}".format(name.lower(), filename) for filename in filenames]
 
             self.sentMessages = []
             self.pendingMessages = []
@@ -152,7 +151,7 @@ screen simplr_app():
             if (simplr_contact is not None) and (hasattr(simplr_contact, "profile_picture_large")):
                 add Transform(simplr_contact.profile_picture_large[0], size=(362, 585)) align (0.5, 0.5)
             elif simplr_contact is not None:
-                add Transform(simplr_contact.large_profile_pictures, size=(362, 585)) align (0.5, 0.5)
+                add Transform(simplr_contact.large_profile_pictures[0], size=(362, 585)) align (0.5, 0.5)
 
             # Bottom UI
             hbox:
