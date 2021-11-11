@@ -146,34 +146,31 @@ label v14s53a:
 
     pause
 
-    if False: ###bypassing because it doesn't exist
-        scene v14samccgb # Ignore as animation
-        with dissolve
-        pause
+    scene v14samccgb # Ignore as animation
+    with dissolve
+    pause
 
-        u "(She said she didn't take any of those pills, right?)"
+    u "(She said she didn't take any of those pills, right?)"
 
-        sa "*Moans*"
+    sa "*Moans*"
 
-        scene v14samccgbf # Ignore as animation
-        with dissolve
-        pause
+    scene v14samccgbf # Ignore as animation
+    with dissolve
+    pause
 
     sa "*Panting* Yes! Yes... I'm- I... Fuck me!"
 
     u "Fuck... I'm gonna cum, Sam!"
 
-    if False: ###bypassing because it doesn't exist
-        scene v14samccgb2 # Ignore as animation
-        with dissolve 
-        pause
+    scene v14samccgb2 # Ignore as animation
+    with dissolve 
+    pause
 
     sa "Yeah? Do it then... Fuck me... *Moans*"
 
-    if False: ###bypassing because it doesn't exist
-        scene v14samccgb2f  # Ignore as animation
-        with dissolve 
-        pause
+    scene v14samccgb2f  # Ignore as animation
+    with dissolve 
+    pause
 
     scene v14s53a_12 # TPP. Close up on MC's face as he struggles to hold in his load, mouth open
     with dissolve 
