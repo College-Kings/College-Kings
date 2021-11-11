@@ -113,6 +113,13 @@ label test:
 label v14s19_continue:
     if chloe_board.approach.name == "Apes":
         $ v14_chloe_apes = True
+        
+        #if subtask B:
+            #$ v14_chloe_grayson = True
+    else:
+        #if subtask A:
+            #$ v14_realwolf = True            
+        pass
 
     scene v14s19_99 # TPP. Show MC and Chloe standing infront of The Planning Board (a white board), both looking at the board, camera showing MC and Chloe, not the actual content of the board, MC and Chloe looking inquisitevely at the board, MC mouth open, Chloe mouth closed
     with dissolve
