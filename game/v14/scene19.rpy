@@ -83,6 +83,9 @@ label v14s19:
     cl "So, here's what I'm thinking for phase one."
 label test:
     python:
+        chloe_board.add_approach("Wolves", opinion="")
+        chloe_board.add_approach("Apes", opinion="")
+
         chloe_board.add_task(0, "Talk to Chris about getting his full support in return for this.")
         chloe_board.add_subtask(0, "Announce it via Kiwii (photoshoot with a real Wolf)",
             opinion="",
