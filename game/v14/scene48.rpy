@@ -238,7 +238,7 @@ label v14s48_continue:
 # -BE HONEST: Classic car from the 1970s. A great restoration project. Ideal for collectors and enthusiasts. Runs OK but in desperate need of some TLC. Still, a great deal for the right person!-
 
 label v14s48_continue2:
-    if v14s48_lie: # PLACEHOLDER - CHECK WITH OSCAR THE VARIABLE IN THE APP!
+    if v14s48_car_description == CarDescription.LIE: # PLACEHOLDER - CHECK WITH OSCAR THE VARIABLE IN THE APP!
         scene v14s48_7
         with dissolve
 

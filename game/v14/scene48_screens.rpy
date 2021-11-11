@@ -1,3 +1,11 @@
+init python:
+    from enum import Enum
+
+    class CarDescription(Enum):
+        LIE = 1
+        TRUTH = 2
+
+
 screen iBuy():
     zorder 100
 
@@ -30,9 +38,9 @@ screen iBuy():
         xalign 0.5
         ypos 583
 
-        hotspot (174, 629, 771, 208) action NullAction()
+        hotspot (174, 629, 771, 208) action SetVariable("v14s48_car_description", CarDescription.LIE)
 
-        hotspot (945, 629, 786, 208) action NullAction()
+        hotspot (945, 629, 786, 208) action SetVariable("v14s48_car_description", CarDescription.TRUTH)
 
     bar:
         value VariableValue("v14s48_campaign_money", 800)
@@ -48,6 +56,7 @@ screen iBuy():
 
     imagebutton:
         idle "images/v14/iBuy/confirm.png"
-        action NullAction()
+        sensitive v14s48_car_description is not None
+        action Hide("iBuy")
         xalign 0.5
         ypos 973
