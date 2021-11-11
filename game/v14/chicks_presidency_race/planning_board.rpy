@@ -32,7 +32,7 @@ init python:
             approach = self.approaches[approach_index]
             approach.tasks.append(PlanningBoardTask(name, opinion, people, cost))
 
-        def add_subtask(self, approach_index, name, opinion, people, cost):
+        def add_subtask(self, approach_index, name, opinion=None, people=[], cost=0):
             approach = self.approaches[approach_index]
             if isinstance(approach.tasks[-1], list):
                 approach.tasks[-1].append(PlanningBoardTask(name, opinion, people, cost))
