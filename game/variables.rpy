@@ -696,3 +696,5 @@ default v14_lauren_helps_lindsey = False
 default irisStrikes = 0
 default v14s4_tell_imre = False
 default v14s5a_riley_should_join_chicks = False
+
+default chloe_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/background.webp", 2)

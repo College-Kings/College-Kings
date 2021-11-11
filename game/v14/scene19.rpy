@@ -82,7 +82,16 @@ label v14s19:
 
     cl "So, here's what I'm thinking for phase one."
 
-    call screen chloe_board
+    python:
+        chloe_board.add_task(0, "Talk to Chris about getting his full support in return for this.")
+        chloe_board.add_subtask(0, "Announce it via Kiwii (photoshoot with a real Wolf)", cost=450)
+        chloe_board.add_subtask(0, "Announce it via Kiwii (photoshoot with plush toy wold", cost=50)
+
+        chloe_board.add_task(1, "Host a small get together with Cameron, Grayson, Chloe, Aubrey and MC")
+        chloe_board.add_subtask(1, "Talk to Cameron about a strategic alliance")
+        chloe_board.add_subtask(1, "Seduce Grayson")
+
+    call screen planning_board(chloe_board)
 
 label v14s19_continue:
     scene v14s19_99 # TPP. Show MC and Chloe standing infront of The Planning Board (a white board), both looking at the board, camera showing MC and Chloe, not the actual content of the board, MC and Chloe looking inquisitevely at the board, MC mouth open, Chloe mouth closed

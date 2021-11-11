@@ -15,17 +15,20 @@ init python:
 
 
     class PlanningBoard:
-        def __init__(self, background):
+        def __init__(self, background, num_approaches=0):
             self.background = background
 
             self.approaches = []
             self.approach = None
             self.selected_task = None
 
+            for i in range(num_approaches):
+                self.add_approach()
+
         def add_approach(self):
             self.approaches.append(PlanningBoardApproach())
 
-        def add_task(self, approach_index, name, opinion, people, cost):
+        def add_task(self, approach_index, name, opinion=None, people=[], cost=0):
             approach = self.approaches[approach_index]
             approach.tasks.append(PlanningBoardTask(name, opinion, people, cost))
 
