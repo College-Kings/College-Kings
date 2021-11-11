@@ -49,8 +49,8 @@ screen planning_board(planning_board):
 
     imagebutton:
         pos (435, 502)
-        idle "images/v14/chicks_presidency_race/planning_boards/select_approach_left.png"
-        selected_idle "images/v14/chicks_presidency_race/planning_boards/selected_approach_left.png"
+        idle "images/v14/chicks_presidency_race/planning_boards/select_approach_left.webp"
+        selected_idle "images/v14/chicks_presidency_race/planning_boards/selected_approach_left.webp"
         selected planning_board.approach == planning_board.approaches[0]
         action Show("planning_board_confirm_approach", None, planning_board, planning_board.approaches[0], xypos=(963, 46))
 
@@ -94,8 +94,8 @@ screen planning_board(planning_board):
 
     imagebutton:
         pos (1324, 485)
-        idle "images/v14/chicks_presidency_race/planning_boards/select_approach_right.png"
-        # selected_idle "images/v14/chicks_presidency_race/planning_boards/selected_approach_right.png"
+        idle "images/v14/chicks_presidency_race/planning_boards/select_approach_right.webp"
+        # selected_idle "images/v14/chicks_presidency_race/planning_boards/selected_approach_right.webp"
         selected planning_board.approach == planning_board.approaches[1]
         action Show("planning_board_confirm_approach", None, planning_board, planning_board.approaches[1], xypos=(43, 46))
 
@@ -156,7 +156,7 @@ screen planning_board_task_desc(task):
         xysize (804, 337)
         align (0.5, 0.5)
 
-        add "images/v14/chicks_presidency_race/planning_boards/task_background.png"
+        add "images/v14/chicks_presidency_race/planning_boards/task_background.webp"
 
         vbox:
             spacing 20
@@ -215,11 +215,11 @@ screen planning_board_confirm_approach(planning_board, approach, xypos):
         spacing 40
 
         imagebutton:
-            idle "images/v14/chicks_presidency_race/planning_boards/confirm.png"
+            idle "images/v14/chicks_presidency_race/planning_boards/confirm.webp"
             action [SetField(planning_board, "approach", approach), Show("planning_board_blank", None, xypos), Show("planning_board_help", message="Please select optional tasks"), Hide("planning_board_confirm_approach")]
 
         imagebutton:
-            idle "images/v14/chicks_presidency_race/planning_boards/cancel.png"
+            idle "images/v14/chicks_presidency_race/planning_boards/cancel.webp"
             action Hide("planning_board_confirm_approach")
 
 
@@ -233,11 +233,11 @@ screen planning_board_confirm_tasks(planning_board):
         spacing 40
 
         imagebutton:
-            idle "images/v14/chicks_presidency_race/planning_boards/confirm.png"
+            idle "images/v14/chicks_presidency_race/planning_boards/confirm.webp"
             action [Hide("planning_board_confirm_tasks"), Hide("planning_board_task_desc"), Hide("planning_board_blank"), Return()]
 
         imagebutton:
-            idle "images/v14/chicks_presidency_race/planning_boards/cancel.png"
+            idle "images/v14/chicks_presidency_race/planning_boards/cancel.webp"
             action [SetField(planning_board, "selected_task", None), Show("planning_board_help", message="Please select optional tasks"), Hide("planning_board_confirm_tasks"), Hide("planning_board_task_desc")]
 
 
