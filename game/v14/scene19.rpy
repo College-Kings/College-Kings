@@ -81,10 +81,13 @@ label v14s19:
     cl "The first phase of my campaign is to re-establish old loyalties. The first time I was elected, people loved me and I need to remind them why."
 
     cl "So, here's what I'm thinking for phase one."
-
+label test:
     python:
         chloe_board.add_task(0, "Talk to Chris about getting his full support in return for this.")
-        chloe_board.add_subtask(0, "Announce it via Kiwii (photoshoot with a real Wolf)", cost=450)
+        chloe_board.add_subtask(0, "Announce it via Kiwii (photoshoot with a real Wolf)",
+            opinion="",
+            people=[],
+            cost=450)
         chloe_board.add_subtask(0, "Announce it via Kiwii (photoshoot with plush toy wold", cost=50)
 
         chloe_board.add_task(1, "Host a small get together with Cameron, Grayson, Chloe, Aubrey and MC")
