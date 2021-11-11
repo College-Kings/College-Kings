@@ -6,10 +6,9 @@ init python:
         TRUTH = 2
 
 
-screen iBuy():
+screen iBuy(car_images):
     zorder 100
 
-    default car_images = ["car1.webp"]
     default car_images_index = 0
 
     add "images/v14/iBuy/background.webp"
