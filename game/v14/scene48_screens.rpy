@@ -34,16 +34,16 @@ screen iBuy():
 
         hotspot (945, 629, 786, 208) action NullAction()
 
+    bar:
+        value VariableValue("v14s48_campaign_money", 800)
+        pos (703, 868)
+        maximum (897, 50)
+
     add "images/v14/iBuy/price_scale.png":
         xalign 0.5
         ypos 868
 
     text str(v14s48_campaign_money)
-
-    # bar:
-    #     value VariableValue("v14s48_campaign_money", 1000)
-    #     xalign 0.5
-    #     ypos 844
         
 
     imagebutton:
