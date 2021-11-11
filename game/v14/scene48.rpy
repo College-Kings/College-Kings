@@ -163,9 +163,6 @@ label v14s48:
 
     call screen iBuy
 
-# -The iBuy app car advert appears for MC to make choices from the UI screen-
-# -MC is going to focus on one thing at a time. Gray out the description boxes and price bar until we get to them. Once the player is done clicking through the photos, we should have a continue button where they can move on to the next dialogue bit.
-# -Top of the page shows all the photos that were taken, players can click through all of them. Past variables determine what the pictures are. See scene 14.48 and Cheex put the list of all possible images in transcribing channel on discord-
 
 label v14s48_continue:
     scene v14s48_7a # TPP. Same as v14s48_7, Lindsey mouth open, MC mouth closed, Lindsey not sipping on coffee
