@@ -280,11 +280,14 @@ label v14s25a:
 
     am "Oh, yeahhhh... I'm so stupid, I forgot what I just said to you. *Laughs* Goodnight."
 
-    scene v14s25a_17b # TPP Same angle as 17, show MC and Amber sleeping together in some weird position - something that would only be comfortable when you're high
-    with dissolve
+    #scene v14s25a_17b # TPP Same angle as 17, show MC and Amber sleeping together in some weird position - something that would only be comfortable when you're high
+    #with dissolve
 
-    pause 0.75
+    #pause 1.25
 
     $ renpy.end_replay()
 
+    scene black
+    with fade
+    pause 0.75
     jump v14s25b # -Transition to Scene 25b-
