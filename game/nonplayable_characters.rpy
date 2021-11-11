@@ -87,3 +87,6 @@ default beth = NonPlayableCharacter("Beth", "beth.webp")
 default iris = NonPlayableCharacter("Iris", "iris.webp")
 default samantha = NonPlayableCharacter("Samantha", "samantha.webp")
 default emmy = NonPlayableCharacter("Emmy", "emmy.webp")
+
+default wolf = NonPlayableCharacter("Wolf", "chloe.webp")
+default trainer = NonPlayableCharacter("Trainer", "chloe.webp")
