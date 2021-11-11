@@ -37,7 +37,7 @@ init python:
 
         def add_subtask(self, approach_index, name, opinion="", people=None, cost=0):
             approach = self.approaches[approach_index]
-            if isinstance(approach.tasks[-1], list):
+            if approval.tasks and (isinstance(approach.tasks[-1], list)):
                 approach.tasks[-1].append(PlanningBoardTask(name, opinion, people, cost))
             else:
                 approach.tasks.append([PlanningBoardTask(name, opinion, people, cost)])
