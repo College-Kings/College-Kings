@@ -203,14 +203,13 @@ screen planning_board_task_desc(task):
             hbox:
                 spacing -10
 
-                if len(task.people) < 4:
-                    for person in task.people:
-                        add person.profile_picture
+                for i in range(3):
+                    try: task.people[i]
+                    except KeyError: break
 
-                else:
-                    for i in range(3):
-                        add task.people[i].profile_picture
-                    
+                    add Transform(task.people[i].profile_picture, size=(55, 55))
+
+                if len(task.people) > 3:
                     null width 35
                     text "+{}".format(len(task.people) - 3):
                         color "#777777"
