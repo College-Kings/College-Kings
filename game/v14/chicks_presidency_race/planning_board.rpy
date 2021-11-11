@@ -205,11 +205,11 @@ screen planning_board_task_desc(task):
 
                 if len(task.people) < 4:
                     for person in task.people:
-                        add person.profile_picture
+                        add Transform(person.profile_picture, size=(55, 55))
 
                 else:
                     for i in range(3):
-                        add task.people[i].profile_picture
+                        add Transform(task.people[i].profile_picture, size=(55, 55))
                     
                     null width 35
                     text "+{}".format(len(task.people) - 3):
