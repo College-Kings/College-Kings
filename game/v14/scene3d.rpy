@@ -411,7 +411,7 @@ label v14s03d:
 
             satin "Oh my god... That's so embarrassing I-"
 
-            u "It's fine., Really. I get it."
+            u "It's fine, really. I get it."
 
             scene v14s03d_18e # FPP Same angle as 18, Satin looking at MC, she looks very sad, tears are filling up her eyes, mouth open
             with dissolve
