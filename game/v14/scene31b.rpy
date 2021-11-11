@@ -531,10 +531,24 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
     gr "No, my grandmother... Yes, Chloe."
 
-    scene v14s31b_17d # FPP. Same as v14s31b_17c, but Grayson mouth closed, smiling.
+    scene v14s31b_17c
     with dissolve
 
-    u "Hmm, no... I don't think so."
+    menu:
+        "Don't think so":
+            
+            u "Hmm, no… I don't think so."
+
+        "Not yet":
+            $ add_point(KCT.BOYFRIEND)
+            $ add_point(KCT.TROUBLEMAKER)
+
+            u "Not yet, ha. I guess she's still got a few more surprises in store."
+
+            scene v14s31b_18a
+            with dissolve
+
+            cl "Haha..."
 
     scene v14s31b_17c
     with dissolve
@@ -1284,7 +1298,15 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
             scene v14s31b_31d # Same as v14s31b_31, but mouth closed.
             with dissolve
 
-            u "Whatever man."
+            menu:
+                "Whatever":
+                    
+                    u "Whatever, man."
+
+                "Apologize":
+                    
+                    u "Sorry man. I don't-"
+                
 
         else: # -If not chloers or chloegf
             scene v14s31b_31
@@ -1295,7 +1317,14 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
             scene v14s31b_31d
             with dissolve
 
-            u "Sorry man..."
+            menu:
+                "Whatever":
+                    
+                    u "Whatever, man."
+                    
+                "Apologize":
+                    
+                    u "Sorry man. I don't-"
 
         scene v14s31b_31b
         with dissolve
