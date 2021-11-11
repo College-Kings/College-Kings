@@ -7,12 +7,12 @@ label v14s21a:
     scene v14s21a_1 # TPP Show Chloe leaning back from MC and removing her shirt
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v14s21a_1a # TPP Same angle as 1. Chloe, now topless, removing MC's shirt
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     # -Chloe makeout animation-
     image v14chlmkTPP1 = Movie(play="images/v14/Scene 21a/v14chlmkTPP1.webm", loop=True, image="images/v14/Scene 21a/v14chlmkTPP1.webp", start_image="images/v14/Scene 21a/v14chlmkTPP1.webp")

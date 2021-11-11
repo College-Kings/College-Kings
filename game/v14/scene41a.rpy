@@ -5,7 +5,7 @@
 
 label v14s41a:
     scene v14s41a_1 # TPP. Show mc waking up in bed shocked expression, mouth open
-    with dissolve
+    with fade
 
     gr "[name!u]! GET DOWN HERE!"
 

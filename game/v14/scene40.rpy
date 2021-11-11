@@ -6,7 +6,7 @@
 label v14s40:
 # -Scene 40 and 41 are identical except for location
     scene v14s40_2 # TPP. MC plops on his wolves bed after removing his clothes, slight smile, mouth closed
-    with dissolve
+    with fade
 
     u "(Finally, time for some sleep.)"
 
