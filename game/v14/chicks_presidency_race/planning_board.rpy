@@ -24,23 +24,29 @@ init python:
         def __init__(self, background):
             self.background = background
 
-            self.approaches = []
+            self.approaches = {}
             self.approach = None
             self.selected_task = None
 
-        def add_approach(self, name, opinion=""):
-            self.approaches.append(PlanningBoardApproach(name, opinion))
+        def add_approach(self, id, name, opinion=""):
+            approach = PlanningBoardApproach(name, opinion)
+            self.approaches[id] = approach
+            return approach
 
-        def add_task(self, approach_index, name, opinion="", people=None, cost=0):
-            approach = self.approaches[approach_index]
-            approach.tasks.append(PlanningBoardTask(name, opinion, people, cost))
+        def add_task(self, approach_id, name, opinion="", people=None, cost=0):
+            approach = self.approaches[approach_id]
+            task = PlanningBoardTask(name, opinion, people, cost)
+            approach.tasks.append(task)
+            return task
 
-        def add_subtask(self, approach_index, name, opinion="", people=None, cost=0):
-            approach = self.approaches[approach_index]
+        def add_subtask(self, approach_id, name, opinion="", people=None, cost=0):
+            approach = self.approaches[approach_id]
+            subtask = PlanningBoardTask(name, opinion, people, cost)
             if approach.tasks and (isinstance(approach.tasks[-1], list)):
-                approach.tasks[-1].append(PlanningBoardTask(name, opinion, people, cost))
+                approach.tasks[-1].append(subtask)
             else:
-                approach.tasks.append([PlanningBoardTask(name, opinion, people, cost)])
+                approach.tasks.append([subtask])
+            return subtask
 
 
 screen planning_board(planning_board):
@@ -51,15 +57,15 @@ screen planning_board(planning_board):
     add planning_board.background
 
     # Left Side
-    $ approach = planning_board.approaches[0]
+    $ approach = planning_board.approaches.values()[0]
 
     imagebutton:
         pos (435, 502)
         idle "images/v14/chicks_presidency_race/planning_boards/select_approach_left.webp"
         selected_idle "images/v14/chicks_presidency_race/planning_boards/selected_approach_left.webp"
         selected_hover "images/v14/chicks_presidency_race/planning_boards/selected_approach_left.webp"
-        selected planning_board.approach == planning_board.approaches[0]
-        action [SetField(planning_board, "approach", planning_board.approaches[0], None), Show("planning_board_confirm_approach", None, "Please select optional tasks", xypos=(963, 46))]
+        selected planning_board.approach == approach
+        action [SetField(planning_board, "approach", approach, None), Show("planning_board_confirm_approach", None, "Please select optional tasks", xypos=(963, 46))]
 
     vbox:
         pos (130, 661)
@@ -97,15 +103,15 @@ screen planning_board(planning_board):
                         action NullAction()
 
     # Right Side
-    $ approach = planning_board.approaches[1]
+    $ approach = planning_board.approaches.values()[1]
 
     imagebutton:
         pos (1324, 485)
         idle "images/v14/chicks_presidency_race/planning_boards/select_approach_right.webp"
         selected_idle "images/v14/chicks_presidency_race/planning_boards/selected_approach_right.webp"
         selected_hover "images/v14/chicks_presidency_race/planning_boards/selected_approach_right.webp"
-        selected planning_board.approach == planning_board.approaches[1]
-        action [SetField(planning_board, "approach", planning_board.approaches[1], None), Show("planning_board_confirm_approach", None, "Please select optional tasks", xypos=(43, 46))]
+        selected planning_board.approach == approach
+        action [SetField(planning_board, "approach", approach, None), Show("planning_board_confirm_approach", None, "Please select optional tasks", xypos=(43, 46))]
 
     vbox:
         pos (1052, 660)
