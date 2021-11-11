@@ -116,6 +116,9 @@ label v14s26:
 
     la "*Laughs* My bad. Let me make it up to you by giving you a cake."
 
+    scene v14s26_5
+    with dissolve
+
     menu:
         "Oh thanks...":
             scene v14s26_5

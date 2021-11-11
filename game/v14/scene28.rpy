@@ -165,7 +165,24 @@ label v14s28:
     scene v14s28_2a
     with dissolve
 
-    u "Huh? Emily... Why?"
+    menu:
+        "Stay calm":
+            
+            u "What? Emily… Why?"
+
+        "Be angry":
+
+            u "You're what? Why the fuck-"
+
+            scene v14s28_2
+            with dissolve
+            
+            em "I don't want to argue. Please."
+
+            scene v14s28_2a
+            with dissolve
+            
+            u "*Sighs*"
 
     scene v14s28_2
     with dissolve
