@@ -314,7 +314,7 @@ label v14s51_continue:
 
     u "(Sounds like some of the girls just got home. I need to get out of here, NOW!)"
 
-    scene v14s51_6 # TPP. Show MC carefully closing the door behind him as he leaves Chloe's room into the hallway of the Chick's house, slight worried face, mouth closed.
+    scene v14s51_6 # TPP. Show MC carefully closing the door behind him as he leaves Chloe's room into the hallway of the Chicks' house, slight worried face, mouth closed.
     with dissolve
 
     pause 
@@ -341,7 +341,7 @@ label v14s51_continue:
 
     pause 
 
-    scene v14s51_10 # TPP. Show MC entering into the Chick's bathroom that has a window in it.
+    scene v14s51_10 # TPP. Show MC entering into the Chicks' bathroom that has a window in it.
     with dissolve
 
     pause
@@ -573,7 +573,7 @@ label v14s51_continue:
 
             u "Phew!"
 
-    scene v14s51_38 # TPP. Show MC standing at the back of this chicks house looking at his phone, slight smile, mouth closed.
+    scene v14s51_38 # TPP. Show MC standing at the back of this Chicks house looking at his phone, slight smile, mouth closed.
     with dissolve
 
     u "(And now, a quick text to Lindsey...)"

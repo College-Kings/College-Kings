@@ -1,10 +1,10 @@
 # SCENE 49: Make sure Chloe is distracted with concert tickets for $100
-# Locations: Sidwalk to Chick's house, Lindsey's room
+# Locations: Sidwalk to Chicks' house, Lindsey's room
 # Characters: MC (Outfit: 1), LINDSEY (Outfit: x)
 # Time: 
 
 label v14s49:
-    scene v14s49_1 # TPP. Show MC walking down the sidewalk towards the Chick's house, slight smile, mouth closed.
+    scene v14s49_1 # TPP. Show MC walking down the sidewalk towards the Chicks' house, slight smile, mouth closed.
     with dissolve
 
     play sound "sounds/vibrate.mp3"
@@ -120,7 +120,7 @@ label v14s49:
 
     pause 0.75
 
-    scene v14s49_4 # TPP. Show Mc further up the sidewalk walking towards the chick house.
+    scene v14s49_4 # TPP. Show Mc further up the sidewalk walking towards the Chicks' house.
     with dissolve
 
     u "(Time to commit the perfect crime.)"

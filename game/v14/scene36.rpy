@@ -664,17 +664,18 @@ label v14s36:
                 scene v14s36_3h # TPP. same as v14s36_3d MC grabs Jenny's face and kisses her, both of their eyes are closed
                 with dissolve
 
-                pause 0.75
+                pause 1.5
 
+                play sound "sounds/kiss.mp3"
                 scene v14s36_3i # TPP. same as v14s36_3h Jenny sits up and kisses MC some more
                 with dissolve
 
-                pause 0.75
+                pause 1.5
 
                 scene v14s36_3j # TPP. same as v14s36_3i MC is smiling while removing his shirt, Jenny watches mc take his shirt off with a smile on her face, happy expression
                 with dissolve
 
-                pause 0.75
+                pause 1.5
 
                 scene v14s36_4o # FPP. same as v14s36_4 Jenny blushes happily, increase to full smile, mouth open, looking at MC's chest
                 with dissolve

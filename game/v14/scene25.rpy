@@ -446,7 +446,7 @@ label v14s25:
 
     menu:
 
-        "Empathise with her":
+        "Empathize with her":
             $ add_point(KCT.BOYFRIEND)
 
             u "That sounds close to torture..."

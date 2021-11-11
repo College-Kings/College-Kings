@@ -219,7 +219,7 @@ label v14s43d:
             ri "Oh... You like taking control, huh?"
 
         "I'm submissive": # ;O 
-            $ add_point(KCT.BOYFRIEND) 
+            $ add_point(KCT.BOYFRIEND)
             scene v14s43d_2
             with dissolve
             

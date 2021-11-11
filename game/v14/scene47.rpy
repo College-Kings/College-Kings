@@ -130,7 +130,7 @@ label v14s47:
         scene v14s47_2b
         with dissolve
 
-        li "My saviour. My hero. My-"
+        li "My savior. My hero. My-"
 
         scene v14s47_2c # FPP. Same as v14s47_2b, Lindsey mouth closed
         with dissolve
@@ -710,7 +710,7 @@ label v14s47_passenger:
                 scene v14s47_passenger_2c # FPP. Same as v14s47_passenger_2b, Lindsey mouth open
                 with dissolve
 
-                li "Damn, okay Mr Photography..."
+                li "Damn, okay Mr. Photography..."
 
                 scene v14s47_passenger_2d # FPP. Same as v14s47_passenger_2b, Lindsey with one hand on her hip, another on the roof, smiling, mouth closed (a bit sexy, not too much)
                 with dissolve
