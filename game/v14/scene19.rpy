@@ -83,10 +83,9 @@ label v14s19:
     cl "So, here's what I'm thinking for phase one."
 label test:
     python:
-
         chloe_board.add_approach("Wolves", opinion="")
         chloe_board.add_approach("Apes", opinion="")
-        
+
         chloe_board.add_task(0, "Talk to Chris about getting his full support in return for this.",
             opinion="Chris is basically like an open wound right now, and I don't want to rub salt on everything he's going through. If we use this vulnerable time to talk some sense into him, maybe we can get him to focus on himself, the Wolves, and most importantly, me as the President of the Chicks. Just make sure you don't say the wrong thing...",
             people=[mc, chloe, chris])
