@@ -190,6 +190,7 @@ label v14s53a:
     menu: # should be a timed event
         "Cum inside Samantha":
             $ add_point(KCT.TROUBLEMAKER)
+            $ v14_samantha_cum = True
             scene v14s53a_9a
             with vpunch
 
