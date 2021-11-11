@@ -209,27 +209,31 @@ label test2:
         lindsey_board.add_approach("Wolves", opinion="")
         lindsey_board.add_approach("Apes", opinion="")
         
-        lindsey_board.add_task(0, "Talk to Chris about getting his full support in return for this.",
-            opinion="Chris is basically like an open wound right now, and I don't want to rub salt on everything he's going through. If we use this vulnerable time to talk some sense into him, maybe we can get him to focus on himself, the Wolves, and most importantly, me as the President of the Chicks. Just make sure you don't say the wrong thing...",
-            people=[mc, chloe, chris])
-        lindsey_board.add_subtask(0, "Announce it via Kiwii (photoshoot with a real wolf)",
-            opinion="We can Rent-A-Wolf for an hour in exchange for a pretty penny. Can you imagine what people will say when they see that the Chicks have partnered with the Wolves, and I'm posing with a real wolf?!",
-            people=[mc, chloe, wolf, trainer],
-            cost=450)
-        lindsey_board.add_subtask(0, "Announce it via Kiwii (photoshoot with plush toy wolf)",
-            opinion="I could easily grab a wolf plushy to pose with. It's a little less interesting than a real wolf, but definitely less expensive and of course, the safer option.",
-            people=[mc, chloe],
-            cost=50)
+        lindsey_board.add_subtask(0, "Take images of Lindsey's car without Lindsey on them.",
+            opinion="The buyers probably want clear, detailed photos. Use your phone to get  pictures of all angles so they know exactly what they're buying.",
+            people=[mc, lindsey])
+        lindsey_board.add_subtask(0, "Take images of Lindsey's car with Lindsey on them.",
+            opinion="The advertisement has to be PERFECT considering what this piece of junk looks like. I'll get dressed up really nice and we'll make sure we get pictures of all angles so they know exactly what they're buying",
+            people=[mc, lindsey])
+        lindsey_board.add_task(0, "Customize online listing",
+            opinion="Not only does our ad have to catch people's eye, but we also need to make sure we come up with an attractive description of the car. Most importantly, we also need to decide how much we're asking for.",
+            people=[mc, lindsey])
+        lindsey_board.add_task(0, "Meet with potential buyers",
+            opinion="Once we have a few interested buyers, we'll ask them meet up with us so they can look at the car. Who knows what kind of people we'll run into, either way we have to convince them to buy. And try to get as much money as possible.",
+            people=[mc, lindsey, buyer])
 
-        lindsey_board.add_task(1, "Host a small get together with Cameron, Grayson, Chloe, Aubrey and MC",
-            opinion= "First thing's first: Get them all in a room, give them each a beer, and put on some good music. As soon as we've set the mood, we can get down to business.",
-            people=[mc, chloe, aubrey, grayson, cameron])
-        lindsey_board.add_subtask(1, "Talk to Cameron about a strategic alliance",
-            opinion="Cameron secretly has amazing leadership skills, and I know he plans to use them one day. If we tell Cameron exactly what he wants to hear in terms of the future of the Apes, he'll no reason to vote against me",
-            people=[mc, chloe, cameron])
-        lindsey_board.add_subtask(1, "Seduce Grayson",
-            opinion="Don't get me wrong, I know this sounds a little... manipulative, but you have to admit, I can easily get Grayson on our side with a pinch of flirting. And trust me, it won't have to be much, especially with a few drinks in him.",
-            people=[mc, chloe, grayson])
+        lindsey_board.add_subtask(1, "Make sure Chloe isn't home with concert tickets ",
+            opinion= "If we want to get Chloe away from her room for the night, all we need are two tickets to the concert happening this Thursday. She won't be able to say no, she's been wanting to see this band for a whlle.",
+            people=[mc, chloe])
+        lindsey_board.add_subtask(1, "Invite her and then not show up to something",
+            opinion="The budget-friendly way to keep Chloe occupied is to make sure she's waiting for you to show up at dinner. I'll get you a reservation for two at that new Italian place, all you have to do is make her go there and wait for you as long as she possibly will.",
+            people=[mc, chloe])
+        lindsey_board.add_task(1, "Lindsey distracts Aubrey",
+            opinion="The only person left to distract will be Aubrey, and I can take care of that with a simple 'Hey Aubrey, I think I want to try anal!' line.",
+            people=[lindsey, aubrey])
+        lindsey_board.add_task(1, "MC steals the chick's money from Chloe's room",
+            opinion="The final and most important part, you get into Chloe's room and sniff out the cash. It could be in multiple places, so check everywhere. And honestly... See what else you can find that might help us out in the future.",
+            people=[mc])
 
     call screen planning_board(lindsey_board)
 
