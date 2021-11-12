@@ -15,7 +15,7 @@ label v14s53b:
     else:
         u "*Sighs* (I'm so ready for bed.)"
 
-    play music "Track Scene 53b_2 SFX Bag Over Head.mp3"
+    play music "music/v14/Track Scene 53b_2 SFX Bag Over Head.mp3"
     scene v14s53b_2 # TPP. Show a bag coming over MC's head as he passes thought the door (don't show who is putting the bag on his head), show MC's shocked face as the bag comes on his head
     with vpunch
 

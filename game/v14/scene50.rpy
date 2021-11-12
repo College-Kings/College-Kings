@@ -220,6 +220,7 @@ label v14s50:
     menu: # -MC chooses Event1 or Event2
         "Go to Chloe's room": # -Event1 Go to Chloe's room
             $ add_point(KCT.BOYFRIEND)
+            stop music fadeout 3
             jump v14s51 # -Transition to Scene 51-
 
         "Keep listening": # -if Keep listening

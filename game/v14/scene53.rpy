@@ -525,6 +525,7 @@ label v14s53:
             scene v14s53_8
             with fade
 
+            stop music fadeout 3
             jump v14s53b
 
         "Let Samantha enjoy drugs":
