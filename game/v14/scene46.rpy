@@ -8,8 +8,6 @@ label v14s46: # -MC is walking along the sidewalk when he gets a call from Laure
     scene v14s46_1 # TPP. MC, neutral expression, mouth closed, walking from the left to the right (facing right) on the side walk.
     with dissolve
 
-    
-
     play sound "sounds/call.mp3"
 
     pause 0.75

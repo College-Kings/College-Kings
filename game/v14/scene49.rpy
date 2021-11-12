@@ -73,7 +73,7 @@ label v14s49:
 
         else:
             $ chloe.messenger.addReply(_("Hey... Think we can meet at that new Italian place, Classico Cuisine? I'm hungry and need some company."))
-            $ chloe.messenger.newMessage(_("What am I, just a lunch buddy?"))
+            $ chloe.messenger.newMessage(_("What am I, just a meal buddy?"))
             $ chloe.messenger.addReply(_("Sorry, these are hungry person texts, haha."))
             $ chloe.messenger.newMessage(_("Haha, okay. Let's go now?"))
             $ chloe.messenger.addReply(_("Yeah, sounds great"))
