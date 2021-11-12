@@ -35,313 +35,313 @@ label v14s01:
     menu:
         "We're doing this":
             $ add_point(KCT.TROUBLEMAKER)
-            label v14s01_sg:
-        
-            $ v13_FirstThreesome = True
-            u "I'm gonna feel much better after this."
-
-            scene v14s01_1c # FPP. Samer as v14s01_1b, but Aubrey mouth open, Riley mouth closed, Aubrey looking at Riley, Riley looking at Aubrey
-            with dissolve
-
-            au "*Chuckles* I knew he'd like the idea."
-
-            scene v14s01_1d # FPP. Same as v14s01_1b, Aubrey and Riley looking at MC, Riley mouth open, Aubrey mouth closed
-            with dissolve
-
-            ri "Haha... You just relax, okay?"
-
-            scene v14s01_1b
-            with dissolve
-
-            u "Yes, ma'am... That I can do."
-
-            scene v14s01_2 # TPP. Show Riley helping MC remove his shirt while Aubrey is removing her panties
-            with dissolve
-
-            pause
-
-            scene v14s01_3 # TPP. Show Aubrey helping MC remove his pants and boxers while Riley is removing her panties
-            with dissolve
-
-            pause
-
-            scene v14s01_4 # TPP. Show Aubrey and Riley moving to suck MC's dick, all smiling, mouths closed
-            with dissolve
-
-            pause
-
-            image v14auridbj = Movie(play="images/v14/Scene 1/v14auridbj.webm", loop=True, image="images/v14/Scene 1/v14auridbjStart.webp", start_image="images/v14/Scene 1/v14auridbjStart.webp") # double blowjob
-            image v14auridbjf = Movie(play="images/v14/Scene 1/v14auridbjf.webm", loop=True, image="images/v14/Scene 1/v14auridbjStart.webp", start_image="images/v14/Scene 1/v14auridbjStart.webp") # double blowjob spedup
-            image v14auridbj2 = Movie(play="images/v14/Scene 1/v14auridbj2.webm", loop=True, image="images/v14/Scene 1/v14auridbj2Start.webp", start_image="images/v14/Scene 1/v14auridbj2Start.webp") # double blowjob FPP
-            image v14auridbj2f = Movie(play="images/v14/Scene 1/v14auridbj2f.webm", loop=True, image="images/v14/Scene 1/v14auridbj2Start.webp", start_image="images/v14/Scene 1/v14auridbj2Start.webp") # double blowjob FPP spedup
-
-            scene v14auridbj # Ignore as animation
-            with dissolve
-            pause
-
-            u "*Moans* Damn, ladies... That feels unbelievable."
-
-            scene v14auridbjf # Ignore as animation
-            with dissolve
-            pause
-
-            u "You two are so fucking beautiful."
-
-            scene v14auridbj2 # Ignore as animation
-            with dissolve
-            pause
-
-            u "Mmm, fuck! O-okay... Come here, now."
-
-            scene v14auridbj2f # Ignore as animation
-            with dissolve
-            pause
-
-            ri "Hehe... Yes, sir."
-
-            scene v14s01_5 # TPP. Show Riley moving to climb on top of MC in reverse cowgirl and Aubrey moving to stay in front of Riley to kiss her
-            with dissolve
-
-            pause
-
-            image v14aurircg = Movie(play="images/v14/Scene 1/v14aurircg.webm", loop=True, image="images/v14/Scene 1/v14aurircgStart.webp", start_image="images/v14/Scene 1/v14aurircgStart.webp") # Chloe Table top
-            image v14aurircgf = Movie(play="images/v14/Scene 1/v14aurircgf.webm", loop=True, image="images/v14/Scene 1/v14aurircgStart.webp", start_image="images/v14/Scene 1/v14aurircgStart.webp") # Chloe Table top spedup
-            image v14aurircg2 = Movie(play="images/v14/Scene 1/v14aurircg2.webm", loop=True, image="images/v14/Scene 1/v14aurircg2Start.webp", start_image="images/v14/Scene 1/v14aurircg2Start.webp") # Chloe Table top FPP
-            image v14aurircg2f = Movie(play="images/v14/Scene 1/v14aurircg2f.webm", loop=True, image="images/v14/Scene 1/v14aurircg2Start.webp", start_image="images/v14/Scene 1/v14aurircg2Start.webp") # Chloe Table top FPP spedup
-
-            scene v14aurircg # Ignore as animation
-            with dissolve
-            pause
-
-            ri "*Moans* Oh yes! It gets better... every... time!"
-
-            au "Mmm... *Chuckles*"
-
-            scene v14aurircgf # Ignore as animation
-            with dissolve
-            pause
-
-            au "Look at you, babe. You've definitely done this before."
-
-            ri "Once or t-twice."
-
-            scene v14aurircg2 # Ignore as animation
-            with dissolve
-            pause
-
-            u "*Moans* She does a... damn good job, too."
-
-            ri "*Panting* Ha!"
-
-            scene v14aurircg2f # Ignore as animation
-            with dissolve
-            pause
-
-            au "You know what? You haven't eaten in a long, long time, [name]."
-
-            u "Ha... Wait. Huh?"
-
-            scene v14s01_6 # TPP. Show Riley kissing Aubrey very passionately (Make sure position matches v14auricg animation)
-            with dissolve
-
-            pause
-
-            scene v14s01_7 # TPP. Show Riley moving to sit on MC's face with one hand on the wall, Riley mouth open, sexy smirk
-            with dissolve
-
-            ri "I'll take care of that..."
-
-            scene v14s01_8 # TPP. Show Riley sitting on MC's face and Aubrey getting on MC's dick in cowgirl
-            with dissolve
-
-            pause
-
-            image v14auridcg = Movie(play="images/v14/Scene 1/v14auridcg.webm", loop=True, image="images/v14/Scene 1/v14auridcgStart.webp", start_image="images/v14/Scene 1/v14auridcgStart.webp") # Chloe Table top
-            image v14auridcgf = Movie(play="images/v14/Scene 1/v14auridcgf.webm", loop=True, image="images/v14/Scene 1/v14auridcgStart.webp", start_image="images/v14/Scene 1/v14auridcgStart.webp") # Chloe Table top spedup
-            image v14auridcg2 = Movie(play="images/v14/Scene 1/v14auridcg2.webm", loop=True, image="images/v14/Scene 1/v14auridcg2Start.webp", start_image="images/v14/Scene 1/v14auridcg2Start.webp") # Chloe Table top FPP
-            image v14auridcg2f = Movie(play="images/v14/Scene 1/v14auridcg2f.webm", loop=True, image="images/v14/Scene 1/v14auridcg2Start.webp", start_image="images/v14/Scene 1/v14auridcg2Start.webp") # Chloe Table top FPP spedup
-
-            scene v14auridcg # Ignore as animation
-            with dissolve
-            pause
-
-            ri "Oh... F-f-fuuuuck... [name]!"
-
-            au "*Moans* It's been way too long..."
-
-            scene v14auridcgf # Ignore as animation
-            with dissolve
-            pause
-
-            u "*Moans*"
-
-            ri "This... is perfect... *Moans*"
-
-            scene v14auridcg2 # Ignore as animation
-            with dissolve
-            pause
-
-            au "Ha... Mmm... She's right. *Moans*"
-
-            au "Are you feeling any better, [name]?"
-
-            scene v14auridcg2f # Ignore as animation
-            with dissolve
-            pause
-
-            u "*Mumbles*"
-
-            ri "Ha! Mmm, that tickled... *Chuckles*"
-
-            scene v14s01_9 # TPP. Close up of Aubrey, she's moving to suck his dick again, her mouth is open, looking at Riley
-            with dissolve
-
-            au "I'll take that as a yes. C'mon, Riley."
-
-            scene v14s01_10 # TPP. Show Aubrey ready to suck MC's dick and Riley ready to suck on his balls
-            with dissolve
-
-            pause
-
-            image v14aurido = Movie(play="images/v14/Scene 1/v14aurido.webm", loop=True, image="images/v14/Scene 1/v14auridoStart.webp", start_image="images/v14/Scene 1/v14auridoStart.webp") # Chloe Table top
-            image v14auridof = Movie(play="images/v14/Scene 1/v14auridof.webm", loop=True, image="images/v14/Scene 1/v14auridoStart.webp", start_image="images/v14/Scene 1/v14auridoStart.webp") # Chloe Table top spedup
-            image v14aurido2 = Movie(play="images/v14/Scene 1/v14aurido2.webm", loop=True, image="images/v14/Scene 1/v14aurido2Start.webp", start_image="images/v14/Scene 1/v14aurido2Start.webp") # Chloe Table top FPP
-            image v14aurido2f = Movie(play="images/v14/Scene 1/v14aurido2f.webm", loop=True, image="images/v14/Scene 1/v14aurido2Start.webp", start_image="images/v14/Scene 1/v14aurido2Start.webp") # Chloe Table top FPP spedup
-
-            scene v14aurido # Ignore as animation
-            with dissolve
-            pause
-
-            u "Wow, I... I have the best fucking life... *Moans*"
-
-            scene v14auridof # Ignore as animation
-            with dissolve
-            pause
-
-            ri "*Chuckles*"
-
-            scene v14aurido2 # Ignore as animation
-            with dissolve
-            pause
-
-            u "Sh-shit... Mmmm, I'm getting ready to... *Moans*"
-
-            scene v14aurido2f # Ignore as animation
-            with dissolve
-            pause
-            au "Mmm! *Gags*"
-
-            u "Fuck..."
-
-            scene v14s01_11 # FPP. MC looking at Aubrey, Aubrey with his dick fully in her mouth, Riley sucking MC's balls
-            with vpunch
-
-            pause
-
-            scene v14s01_11a # FPP. Aubrey licking her lips, seductive look, Riley stops sucking MC's balls, both looking at MC, mouths closed
-            with dissolve
-
-            pause 
-
-            scene v14s01_11b # FPP. Same as v14s01_11a, Aubrey and Riley looking at each other, both sexy smiling, Aubrey mouth open, Riley mouth closed
-            with dissolve
-
-            au "Well, I have to admit..."
-
-            scene v14s01_11c # FPP. Same as v14s01_11a, Aubrey mouth open, Riley mouth closed, both looking at MC, sexy smile
-            with dissolve
-
-            au "That was the best sex I've ever had, haha. How are you feeling over there, big guy?"
-
-            scene v14s01_11d # FPP. Same as v14s01_11c, Aubrey and Riley mouths closed
-            with dissolve
-
-            $ grant_achievement("ready_player_three")
-
-            u "*Chuckles* I feel absolutely amazing. Thank you ladies."
-
-            scene v14s01_11e # FPP. Same as v14s01_11d, Riley mouth open, Aubrey mouth closed
-            with dissolve
-
-            ri "*Laughs* I call that a job well done."
-
-            play sound "sounds/kiss.mp3"
-
-            scene v14s01_11f # FPP. Same as v14s01_11d, Aubrey and Riley kissing
-            with dissolve
-
-            pause
-
-            scene v14s01_11b
-            with dissolve
-
-            au "We may have to do this again, Riley."
-
-            stop music fadeout 3
-            play music "music/v14/Track Scene 1_2.mp3" fadein 2
-
-            scene v14s01_11g # FPP. Same as v14s01_11b, Riley mouth open, Aubrey mouth closed
-            with dissolve
-
-            ri "Okay! I'm down. *Chuckles*"
-
-            scene v14s01_11c
-            with dissolve
-
-            au "[name]?"
-
-            scene v14s01_11d
-            with dissolve
-
-            u "Always! I mean, uh... Yeah, whenever."
-
-            scene v14s01_11c
-            with dissolve
-
-            au "*Laughs* Good."
-
-            scene v14s01_11b
-            with dissolve
-
-            au "Riley, let's go clean up."
-
-            scene v14s01_11g
-            with dissolve
-
-            ri "Yeah, let's go."
-
-            scene v14s01_11e
-            with dissolve
             
-            ri "Catch you later, [name]. Glad you're feeling better."
+            label v14s01_sg:
+                $ v13_FirstThreesome = True
+                u "I'm gonna feel much better after this."
 
-            scene v14s01_12 # TPP. Show Riley and Aubrey putting on their bras (Panties already on)
-            with dissolve
+                scene v14s01_1c # FPP. Samer as v14s01_1b, but Aubrey mouth open, Riley mouth closed, Aubrey looking at Riley, Riley looking at Aubrey
+                with dissolve
 
-            pause
+                au "*Chuckles* I knew he'd like the idea."
 
-            scene v14s01_13 # FPP. Show the girls leaving the room (in their underwear), focus on their asses
-            with dissolve
+                scene v14s01_1d # FPP. Same as v14s01_1b, Aubrey and Riley looking at MC, Riley mouth open, Aubrey mouth closed
+                with dissolve
 
-            u "(Am I just a lucky bastard or did I do something to deserve that? They sure did act like I earned this... Whatever I did, I need to keep doing it.)"
+                ri "Haha... You just relax, okay?"
 
-            $ renpy.end_replay()
+                scene v14s01_1b
+                with dissolve
 
-            scene v14s01_14 # TPP. Show MC getting out of his bed (he's naked), slight smile, mouth closed
-            with dissolve
+                u "Yes, ma'am... That I can do."
 
-            pause 0.75
+                scene v14s01_2 # TPP. Show Riley helping MC remove his shirt while Aubrey is removing her panties
+                with dissolve
 
-            scene v14s01_15 # TPP. Show MC putting on his shirt (pants already on)
-            with dissolve
+                pause
 
-            pause 0.75
+                scene v14s01_3 # TPP. Show Aubrey helping MC remove his pants and boxers while Riley is removing her panties
+                with dissolve
 
-            scene v14s01_16 # TPP. Show MC leaving the hotel room, smiling, mouth closed
-            with dissolve
+                pause
 
-            u "(Now that I'm awake I might as well go see what's going on.)"
-            u "(My sleep schedule is gonna be all fucked now, though. Feeling energized at night isn't a good thing...) *Sighs*"
+                scene v14s01_4 # TPP. Show Aubrey and Riley moving to suck MC's dick, all smiling, mouths closed
+                with dissolve
+
+                pause
+
+                image v14auridbj = Movie(play="images/v14/Scene 1/v14auridbj.webm", loop=True, image="images/v14/Scene 1/v14auridbjStart.webp", start_image="images/v14/Scene 1/v14auridbjStart.webp") # double blowjob
+                image v14auridbjf = Movie(play="images/v14/Scene 1/v14auridbjf.webm", loop=True, image="images/v14/Scene 1/v14auridbjStart.webp", start_image="images/v14/Scene 1/v14auridbjStart.webp") # double blowjob spedup
+                image v14auridbj2 = Movie(play="images/v14/Scene 1/v14auridbj2.webm", loop=True, image="images/v14/Scene 1/v14auridbj2Start.webp", start_image="images/v14/Scene 1/v14auridbj2Start.webp") # double blowjob FPP
+                image v14auridbj2f = Movie(play="images/v14/Scene 1/v14auridbj2f.webm", loop=True, image="images/v14/Scene 1/v14auridbj2Start.webp", start_image="images/v14/Scene 1/v14auridbj2Start.webp") # double blowjob FPP spedup
+
+                scene v14auridbj # Ignore as animation
+                with dissolve
+                pause
+
+                u "*Moans* Damn, ladies... That feels unbelievable."
+
+                scene v14auridbjf # Ignore as animation
+                with dissolve
+                pause
+
+                u "You two are so fucking beautiful."
+
+                scene v14auridbj2 # Ignore as animation
+                with dissolve
+                pause
+
+                u "Mmm, fuck! O-okay... Come here, now."
+
+                scene v14auridbj2f # Ignore as animation
+                with dissolve
+                pause
+
+                ri "Hehe... Yes, sir."
+
+                scene v14s01_5 # TPP. Show Riley moving to climb on top of MC in reverse cowgirl and Aubrey moving to stay in front of Riley to kiss her
+                with dissolve
+
+                pause
+
+                image v14aurircg = Movie(play="images/v14/Scene 1/v14aurircg.webm", loop=True, image="images/v14/Scene 1/v14aurircgStart.webp", start_image="images/v14/Scene 1/v14aurircgStart.webp") # Chloe Table top
+                image v14aurircgf = Movie(play="images/v14/Scene 1/v14aurircgf.webm", loop=True, image="images/v14/Scene 1/v14aurircgStart.webp", start_image="images/v14/Scene 1/v14aurircgStart.webp") # Chloe Table top spedup
+                image v14aurircg2 = Movie(play="images/v14/Scene 1/v14aurircg2.webm", loop=True, image="images/v14/Scene 1/v14aurircg2Start.webp", start_image="images/v14/Scene 1/v14aurircg2Start.webp") # Chloe Table top FPP
+                image v14aurircg2f = Movie(play="images/v14/Scene 1/v14aurircg2f.webm", loop=True, image="images/v14/Scene 1/v14aurircg2Start.webp", start_image="images/v14/Scene 1/v14aurircg2Start.webp") # Chloe Table top FPP spedup
+
+                scene v14aurircg # Ignore as animation
+                with dissolve
+                pause
+
+                ri "*Moans* Oh yes! It gets better... every... time!"
+
+                au "Mmm... *Chuckles*"
+
+                scene v14aurircgf # Ignore as animation
+                with dissolve
+                pause
+
+                au "Look at you, babe. You've definitely done this before."
+
+                ri "Once or t-twice."
+
+                scene v14aurircg2 # Ignore as animation
+                with dissolve
+                pause
+
+                u "*Moans* She does a... damn good job, too."
+
+                ri "*Panting* Ha!"
+
+                scene v14aurircg2f # Ignore as animation
+                with dissolve
+                pause
+
+                au "You know what? You haven't eaten in a long, long time, [name]."
+
+                u "Ha... Wait. Huh?"
+
+                scene v14s01_6 # TPP. Show Riley kissing Aubrey very passionately (Make sure position matches v14auricg animation)
+                with dissolve
+
+                pause
+
+                scene v14s01_7 # TPP. Show Riley moving to sit on MC's face with one hand on the wall, Riley mouth open, sexy smirk
+                with dissolve
+
+                ri "I'll take care of that..."
+
+                scene v14s01_8 # TPP. Show Riley sitting on MC's face and Aubrey getting on MC's dick in cowgirl
+                with dissolve
+
+                pause
+
+                image v14auridcg = Movie(play="images/v14/Scene 1/v14auridcg.webm", loop=True, image="images/v14/Scene 1/v14auridcgStart.webp", start_image="images/v14/Scene 1/v14auridcgStart.webp") # Chloe Table top
+                image v14auridcgf = Movie(play="images/v14/Scene 1/v14auridcgf.webm", loop=True, image="images/v14/Scene 1/v14auridcgStart.webp", start_image="images/v14/Scene 1/v14auridcgStart.webp") # Chloe Table top spedup
+                image v14auridcg2 = Movie(play="images/v14/Scene 1/v14auridcg2.webm", loop=True, image="images/v14/Scene 1/v14auridcg2Start.webp", start_image="images/v14/Scene 1/v14auridcg2Start.webp") # Chloe Table top FPP
+                image v14auridcg2f = Movie(play="images/v14/Scene 1/v14auridcg2f.webm", loop=True, image="images/v14/Scene 1/v14auridcg2Start.webp", start_image="images/v14/Scene 1/v14auridcg2Start.webp") # Chloe Table top FPP spedup
+
+                scene v14auridcg # Ignore as animation
+                with dissolve
+                pause
+
+                ri "Oh... F-f-fuuuuck... [name]!"
+
+                au "*Moans* It's been way too long..."
+
+                scene v14auridcgf # Ignore as animation
+                with dissolve
+                pause
+
+                u "*Moans*"
+
+                ri "This... is perfect... *Moans*"
+
+                scene v14auridcg2 # Ignore as animation
+                with dissolve
+                pause
+
+                au "Ha... Mmm... She's right. *Moans*"
+
+                au "Are you feeling any better, [name]?"
+
+                scene v14auridcg2f # Ignore as animation
+                with dissolve
+                pause
+
+                u "*Mumbles*"
+
+                ri "Ha! Mmm, that tickled... *Chuckles*"
+
+                scene v14s01_9 # TPP. Close up of Aubrey, she's moving to suck his dick again, her mouth is open, looking at Riley
+                with dissolve
+
+                au "I'll take that as a yes. C'mon, Riley."
+
+                scene v14s01_10 # TPP. Show Aubrey ready to suck MC's dick and Riley ready to suck on his balls
+                with dissolve
+
+                pause
+
+                image v14aurido = Movie(play="images/v14/Scene 1/v14aurido.webm", loop=True, image="images/v14/Scene 1/v14auridoStart.webp", start_image="images/v14/Scene 1/v14auridoStart.webp") # Chloe Table top
+                image v14auridof = Movie(play="images/v14/Scene 1/v14auridof.webm", loop=True, image="images/v14/Scene 1/v14auridoStart.webp", start_image="images/v14/Scene 1/v14auridoStart.webp") # Chloe Table top spedup
+                image v14aurido2 = Movie(play="images/v14/Scene 1/v14aurido2.webm", loop=True, image="images/v14/Scene 1/v14aurido2Start.webp", start_image="images/v14/Scene 1/v14aurido2Start.webp") # Chloe Table top FPP
+                image v14aurido2f = Movie(play="images/v14/Scene 1/v14aurido2f.webm", loop=True, image="images/v14/Scene 1/v14aurido2Start.webp", start_image="images/v14/Scene 1/v14aurido2Start.webp") # Chloe Table top FPP spedup
+
+                scene v14aurido # Ignore as animation
+                with dissolve
+                pause
+
+                u "Wow, I... I have the best fucking life... *Moans*"
+
+                scene v14auridof # Ignore as animation
+                with dissolve
+                pause
+
+                ri "*Chuckles*"
+
+                scene v14aurido2 # Ignore as animation
+                with dissolve
+                pause
+
+                u "Sh-shit... Mmmm, I'm getting ready to... *Moans*"
+
+                scene v14aurido2f # Ignore as animation
+                with dissolve
+                pause
+                au "Mmm! *Gags*"
+
+                u "Fuck..."
+
+                scene v14s01_11 # FPP. MC looking at Aubrey, Aubrey with his dick fully in her mouth, Riley sucking MC's balls
+                with vpunch
+
+                pause
+
+                scene v14s01_11a # FPP. Aubrey licking her lips, seductive look, Riley stops sucking MC's balls, both looking at MC, mouths closed
+                with dissolve
+
+                pause 
+
+                scene v14s01_11b # FPP. Same as v14s01_11a, Aubrey and Riley looking at each other, both sexy smiling, Aubrey mouth open, Riley mouth closed
+                with dissolve
+
+                au "Well, I have to admit..."
+
+                scene v14s01_11c # FPP. Same as v14s01_11a, Aubrey mouth open, Riley mouth closed, both looking at MC, sexy smile
+                with dissolve
+
+                au "That was the best sex I've ever had, haha. How are you feeling over there, big guy?"
+
+                scene v14s01_11d # FPP. Same as v14s01_11c, Aubrey and Riley mouths closed
+                with dissolve
+
+                $ grant_achievement("ready_player_three")
+
+                u "*Chuckles* I feel absolutely amazing. Thank you ladies."
+
+                scene v14s01_11e # FPP. Same as v14s01_11d, Riley mouth open, Aubrey mouth closed
+                with dissolve
+
+                ri "*Laughs* I call that a job well done."
+
+                play sound "sounds/kiss.mp3"
+
+                scene v14s01_11f # FPP. Same as v14s01_11d, Aubrey and Riley kissing
+                with dissolve
+
+                pause
+
+                scene v14s01_11b
+                with dissolve
+
+                au "We may have to do this again, Riley."
+
+                stop music fadeout 3
+                play music "music/v14/Track Scene 1_2.mp3" fadein 2
+
+                scene v14s01_11g # FPP. Same as v14s01_11b, Riley mouth open, Aubrey mouth closed
+                with dissolve
+
+                ri "Okay! I'm down. *Chuckles*"
+
+                scene v14s01_11c
+                with dissolve
+
+                au "[name]?"
+
+                scene v14s01_11d
+                with dissolve
+
+                u "Always! I mean, uh... Yeah, whenever."
+
+                scene v14s01_11c
+                with dissolve
+
+                au "*Laughs* Good."
+
+                scene v14s01_11b
+                with dissolve
+
+                au "Riley, let's go clean up."
+
+                scene v14s01_11g
+                with dissolve
+
+                ri "Yeah, let's go."
+
+                scene v14s01_11e
+                with dissolve
+                
+                ri "Catch you later, [name]. Glad you're feeling better."
+
+                scene v14s01_12 # TPP. Show Riley and Aubrey putting on their bras (Panties already on)
+                with dissolve
+
+                pause
+
+                scene v14s01_13 # FPP. Show the girls leaving the room (in their underwear), focus on their asses
+                with dissolve
+
+                u "(Am I just a lucky bastard or did I do something to deserve that? They sure did act like I earned this... Whatever I did, I need to keep doing it.)"
+
+                $ renpy.end_replay()
+
+                scene v14s01_14 # TPP. Show MC getting out of his bed (he's naked), slight smile, mouth closed
+                with dissolve
+
+                pause 0.75
+
+                scene v14s01_15 # TPP. Show MC putting on his shirt (pants already on)
+                with dissolve
+
+                pause 0.75
+
+                scene v14s01_16 # TPP. Show MC leaving the hotel room, smiling, mouth closed
+                with dissolve
+
+                u "(Now that I'm awake I might as well go see what's going on.)"
+                u "(My sleep schedule is gonna be all fucked now, though. Feeling energized at night isn't a good thing...) *Sighs*"
 
         "Stop them":
             $ add_point(KCT.BOYFRIEND)

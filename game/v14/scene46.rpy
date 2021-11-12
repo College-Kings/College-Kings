@@ -74,6 +74,7 @@ label v14s46: # -MC is walking along the sidewalk when he gets a call from Laure
 
         pause 0.75
 
+        stop music fadeout 3
         jump v14s46a
 
     else: # -If helping Lindsey

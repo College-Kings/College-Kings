@@ -1304,7 +1304,7 @@ label v14s36:
         u "(Speaking of life never being dull...)"
 
         stop music fadeout 3
-        play music "music/v14/Track Scene 1_2.mp3" fadein 2
+        play music "music/v14/Track Scene 36_4.mp3" fadein 2
 
         scene v14s36_14 # TPP. show Lauren in her bed naked sitting on her bed with her knees bent, one hand holding her phone, with the other hand on her clit, full smile mouth closed, looking between her legs, also show her laptop next to her
         with dissolve
