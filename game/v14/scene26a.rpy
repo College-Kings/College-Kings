@@ -287,7 +287,7 @@ label v14s26a:
         scene v14s26a_2a
         with dissolve
 
-        $ v14_lindsey_money +=150
+        $ lindsey_board.money += 150
         li "*Sighs* It was a mini success, I banked $150 so, I'm not too mad."
 
         scene v14s26a_2b
@@ -299,7 +299,7 @@ label v14s26a:
         scene v14s26a_2a
         with dissolve
 
-        $ v14_lindsey_money +=100
+        $ lidnsey_board.money += 100
         li "Double what I had when you left, $100. Honestly, this was a complete waste of time."
 
         scene v14s26a_2b
