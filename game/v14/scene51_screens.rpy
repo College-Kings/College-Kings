@@ -8,7 +8,11 @@ screen v14s51_room():
         if v14s50_listen_to_aubrey_lindsey_2:
             if v14s51_interaction <= 1:
                 if not v14s51_bedside:
-                    hotspot (1008, 367, 191, 136) action Jump("v14s51_bedside_table")
+                    imagebutton:
+                        idle "images/v14/Scene 51/v14s51_bedside.webp"
+                        hover "images/v14/Scene 51/v14s51_bedside_hover.webp"
+                        action Jump("v14s51_bedside_table")
+                    #hotspot (1008, 367, 191, 136) action Jump("v14s51_bedside_table")
                 if not v14s51_desk:
                     hotspot (1728, 535, 191, 202) action Jump("v14s51_desk_drawer")
                 if not v14s51_closet:
@@ -52,12 +56,6 @@ screen v14s51_room():
             else:
                 pass
                 
-    button:
-        align (0.5, 0.95)
-        action Jump ("v14s51_continue")
-        maximum (707, 104)
-        add "gui/center.webp"
-        text "Leave Chloe's Room" align (0.5, 0.5)
 
 
         #-if MC chose to keep listening to Lindsey and Aubrey's conversation more than one time, MC can only choose 2 areas.
