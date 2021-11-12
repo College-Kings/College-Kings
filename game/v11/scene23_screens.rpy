@@ -1,5 +1,5 @@
 screen v11s23_entrance():
-    tag tag_freeRoam
+    tag free_roam
 
     if v11_pen_goes_europe:
         imagemap:
@@ -36,7 +36,7 @@ screen v11s23_entrance():
             hotspot (287, 0, 1373, 186) action Show("v11s23_mid")
 
 screen v11s23_mid():
-    tag tag_freeRoam
+    tag free_roam
 
     imagemap:
         idle "images/v11/scene 23/v11s23idle.webp"
@@ -60,7 +60,7 @@ screen v11s23_mid():
             hotspot (1637, 171, 280, 846) action Show("v11s23_helm")
 
 screen v11s23_helm():
-    tag tag_freeRoam
+    tag free_roam
 
     imagemap:
         idle "images/v11/scene 23/v11s23idle.webp"

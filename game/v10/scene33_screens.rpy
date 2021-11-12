@@ -1,5 +1,5 @@
 screen v10s33_entrance():
-    tag tag_freeRoam
+    tag free_roam
 
     # Background
     if not v10s33_toldChloe and v10s33_riley and not v10s33_ryan:
@@ -42,7 +42,7 @@ screen v10s33_entrance():
 
 
 screen v10s33_cakestatue():
-    tag tag_freeRoam
+    tag free_roam
 
     # Background
     if v10s33_laurenBakeSale:
@@ -88,7 +88,7 @@ screen v10s33_cakestatue():
 
 
 screen v10s33_bench():
-    tag tag_freeRoam
+    tag free_roam
 
     # Background
     if v10s33_toldChloe:
@@ -122,7 +122,7 @@ screen v10s33_bench():
         
  
 screen v10s33_toilet(): # NO
-    tag tag_freeRoam
+    tag free_roam
 
     # Background
     if v10s33_ryan:
@@ -167,7 +167,7 @@ screen v10s33_toilet(): # NO
 
 
 screen v10s33_bodypaint():
-    tag tag_freeRoam
+    tag free_roam
 
     # Background
     if v10s33_riley:
@@ -211,7 +211,7 @@ screen v10s33_bodypaint():
 
 
 screen v10s33_thrift():
-    tag tag_freeRoam
+    tag free_roam
 
     # Background
     if v10s33_riley:
@@ -250,7 +250,7 @@ screen v10s33_thrift():
 
 
 screen v10s33_stagefromleft():
-    tag tag_freeRoam
+    tag free_roam
 
     # Background 
     if v10s33_riley and v10s33_toldChloe:
@@ -278,7 +278,7 @@ screen v10s33_stagefromleft():
 
 
 screen v10s33_stage():
-    tag tag_freeRoam
+    tag free_roam
 
     # Background
     if v10s33_riley:
@@ -341,7 +341,7 @@ screen v10s33_stage():
 
 
 screen v10s33_bagtoss():
-    tag tag_freeRoam
+    tag free_roam
 
     # Background
     if v10s33_toldChloe:
@@ -389,7 +389,7 @@ screen v10s33_bagtoss():
 
 
 screen v10s33_centeraisle():
-    tag tag_freeRoam
+    tag free_roam
 
     # Background
     if v10s33_toldChloe and v10s33_riley and v10s33_ryan:
@@ -464,7 +464,7 @@ screen v10s33_centeraisle():
 
 
 screen v10s33_mudwrestling():
-    tag tag_freeRoam
+    tag free_roam
 
     # Background
     if v10s33_toldChloe:
