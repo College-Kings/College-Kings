@@ -57,9 +57,9 @@ screen iBuy(car_images=["car1.webp"]):
 
     # Determine Price
     bar:
-        value VariableValue("v14s48_campaign_money", 800)
-        pos (703, 868)
-        maximum (897, 50)
+        value VariableValue("v14s48_campaign_money",offset=100, range=700)
+        pos (765, 870)
+        maximum (800, 50)
 
     add "images/v14/iBuy/price_scale.webp":
         xalign 0.5

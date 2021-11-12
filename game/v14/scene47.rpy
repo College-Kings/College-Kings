@@ -729,7 +729,7 @@ label v14s47_passenger:
 
                 li "Alrighty... Anymore?"
 
-            "On her knees":
+            "Stand there and look pretty":
                 $ add_point(KCT.BRO)
                 $ add_point(KCT.TROUBLEMAKER)
                 $ v14s47_linds_knees = True
@@ -738,22 +738,22 @@ label v14s47_passenger:
                 scene v14s47_passenger_2b
                 with dissolve
 
-                u "Maybe get on your knees? Sit nice and pretty like a \"good girl\". *Laughs*"
+                u "Just... Stand there and look pretty or something. *Laughs*"
 
                 scene v14s47_passenger_2c
                 with dissolve
 
-                li "Oh fuck... *Chuckles* They're going to think the car comes with a sex slave, [name]."
+                li "Wow! Great idea, [name]. So creative..."
 
                 scene v14s47_passenger_2b
                 with dissolve
 
-                u "Hey. If that doesn't increase our total pay out, I'm not sure what will. *Laughs*"
+                u "Haha, sorry. You look great no matter what, so it doesn't technically matter."
 
                 scene v14s47_passenger_2c
                 with dissolve
 
-                li "Okay, I'm going down. This one should seal the deal... I hope."
+                li "Well, thank you, haha. I just hope the buyers think the same thing."
 
                 scene v14s47_passenger_2e # FPP. Same as v14s47_passenger_2b, Lindsey on her knees, hands on her thighs, posing sexily with a mischievous smile, mouth closed
                 with dissolve
