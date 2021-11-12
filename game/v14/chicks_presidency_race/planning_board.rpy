@@ -289,7 +289,7 @@ screen planning_board_confirm_tasks(planning_board):
 
         imagebutton:
             idle "images/v14/chicks_presidency_race/planning_boards/confirm.webp"
-            sensitive get_total_cost() <= self.money
+            sensitive planning_board.get_total_cost() <= self.money
             action [Hide("planning_board_confirm_tasks"), Hide("planning_board_task_desc"), Hide("planning_board_blank"), Return()]
 
         imagebutton:
