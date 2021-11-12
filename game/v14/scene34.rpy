@@ -139,8 +139,7 @@ label v14s34:
     
     u "*Chuckles* Good, because I was thinking we could try going on that date we talked about in London."
 
-    #scene v14s34_7 # TPP. Penelope standing up on her bed with the phone to her ear, slight smile, mouth closed.
-    scene v14s34_6
+    scene v14s34_7 # TPP. Penelope standing up on her bed with the phone to her ear, slight smile, mouth closed.
     with dissolve
 
     pe "R-Right now?"
