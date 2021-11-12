@@ -320,7 +320,7 @@ style task_button_text is text:
     selected_color "#fff"
 
 style lindsey_board is task_button_text:
-    idle_color "#877E54"
-    insensitive_color "#877E54"
-    hover_color "#FFD166"
+    idle_color "#b9b18d"
+    insensitive_color "#b9b18d"
+    hover_color "#877E54"
     selected_color "#877E54"
