@@ -390,9 +390,9 @@ label v14s43b:
                 $ v14s43b_kiwiiPost3.newComment("Sebastian", "This is too far for just \"frat shit\".", queue=False)
                 $ v14s43b_kiwiiPost3.newComment("Aubrey", "Pathetic.", queue=False)
 
-                $ chloe.messenger.newMessage("GRAYSON IS SUCH AN ASSHOLE")
-                $ chloe.messenger.newMessage("FUCK him, and FUCK THE APES!!!!")
-                $ chloe.messenger.newMessage("UGH! I'm going to turn this around. It won't hurt my campaign even a little bit, I'll make sure of it.")
+                $ chloe.messenger.newMessage("GRAYSON IS SUCH AN ASSHOLE", queue=False)
+                $ chloe.messenger.newMessage("FUCK HIM AND FUCK THE APES AND FUCK THEIR KIWIIS!!!!", queue=False)
+                $ chloe.messenger.newMessage("UGH! I'm going to turn this around. It won't hurt my campaign even a little bit, I'll make sure of it.", queue=False)
 
                 $ chloe.messenger.addReply("I'm so sorry that this is happening. I don't even know what to say.")
                 $ chloe.messenger.newMessage("I know, I know... I'm just venting.")

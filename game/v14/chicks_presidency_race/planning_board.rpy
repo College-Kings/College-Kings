@@ -1,6 +1,7 @@
 init python:
     class PlanningBoardApproach:
-        def __init__(self, name, opinion):
+        def __init__(self, id, name, opinion):
+            self.id = id
             self.name = name
             self.opinion = opinion
 
@@ -24,23 +25,29 @@ init python:
         def __init__(self, background):
             self.background = background
 
-            self.approaches = []
+            self.approaches = {}
             self.approach = None
             self.selected_task = None
 
-        def add_approach(self, name, opinion=""):
-            self.approaches.append(PlanningBoardApproach(name, opinion))
+        def add_approach(self, id, name, opinion=""):
+            approach = PlanningBoardApproach(id, name, opinion)
+            self.approaches[id] = approach
+            return approach
 
-        def add_task(self, approach_index, name, opinion="", people=None, cost=0):
-            approach = self.approaches[approach_index]
-            approach.tasks.append(PlanningBoardTask(name, opinion, people, cost))
+        def add_task(self, approach_id, name, opinion="", people=None, cost=0):
+            approach = self.approaches[approach_id]
+            task = PlanningBoardTask(name, opinion, people, cost)
+            approach.tasks.append(task)
+            return task
 
-        def add_subtask(self, approach_index, name, opinion="", people=None, cost=0):
-            approach = self.approaches[approach_index]
+        def add_subtask(self, approach_id, name, opinion="", people=None, cost=0):
+            approach = self.approaches[approach_id]
+            subtask = PlanningBoardTask(name, opinion, people, cost)
             if approach.tasks and (isinstance(approach.tasks[-1], list)):
-                approach.tasks[-1].append(PlanningBoardTask(name, opinion, people, cost))
+                approach.tasks[-1].append(subtask)
             else:
-                approach.tasks.append([PlanningBoardTask(name, opinion, people, cost)])
+                approach.tasks.append([subtask])
+            return subtask
 
 
 screen planning_board(planning_board):
@@ -51,14 +58,15 @@ screen planning_board(planning_board):
     add planning_board.background
 
     # Left Side
-    $ approach = planning_board.approaches[0]
+    $ approach = planning_board.approaches.values()[0]
 
     imagebutton:
         pos (435, 502)
         idle "images/v14/chicks_presidency_race/planning_boards/select_approach_left.webp"
         selected_idle "images/v14/chicks_presidency_race/planning_boards/selected_approach_left.webp"
-        selected planning_board.approach == planning_board.approaches[0]
-        action Show("planning_board_confirm_approach", None, planning_board, planning_board.approaches[0], xypos=(963, 46))
+        selected_hover "images/v14/chicks_presidency_race/planning_boards/selected_approach_left.webp"
+        selected planning_board.approach == approach
+        action [SetField(planning_board, "approach", approach, None), Show("planning_board_confirm_approach", None, "Please select optional tasks", xypos=(963, 46))]
 
     vbox:
         pos (130, 661)
@@ -96,14 +104,15 @@ screen planning_board(planning_board):
                         action NullAction()
 
     # Right Side
-    $ approach = planning_board.approaches[1]
+    $ approach = planning_board.approaches.values()[1]
 
     imagebutton:
         pos (1324, 485)
         idle "images/v14/chicks_presidency_race/planning_boards/select_approach_right.webp"
-        # selected_idle "images/v14/chicks_presidency_race/planning_boards/selected_approach_right.webp"
-        selected planning_board.approach == planning_board.approaches[1]
-        action Show("planning_board_confirm_approach", None, planning_board, planning_board.approaches[1], xypos=(43, 46))
+        selected_idle "images/v14/chicks_presidency_race/planning_boards/selected_approach_right.webp"
+        selected_hover "images/v14/chicks_presidency_race/planning_boards/selected_approach_right.webp"
+        selected planning_board.approach == approach
+        action [SetField(planning_board, "approach", approach, None), Show("planning_board_confirm_approach", None, "Please select optional tasks", xypos=(43, 46))]
 
     vbox:
         pos (1052, 660)
@@ -126,7 +135,7 @@ screen planning_board(planning_board):
 
                                 text "{})".format(alphabet) yalign 0.5
                                 textbutton subtask.name:
-                                    sensitive (planning_board.approach is not None) and (subtask.cost <= mc.money)
+                                    sensitive (planning_board.approach is not None) and (subtask.cost <= v14s48_campaign_money)
                                     selected planning_board.selected_task == subtask
                                     hovered Show("planning_board_task_desc", None, subtask)
                                     unhovered Hide("planning_board_task_desc")
@@ -142,6 +151,7 @@ screen planning_board(planning_board):
 
     if not renpy.get_screen("planning_board_bottom"):
         use planning_board_help("Please select an approach")
+
 
 screen planning_board_blank(xypos):
     zorder 100
@@ -166,14 +176,14 @@ screen planning_board_approach_desc(approach):
 
         vbox:
             spacing 20
-            xalign 0.5
-            ypos 50
+            pos (50, 30)
+            xsize 704
 
             text approach.name:
                 color "#777777"
                 size 30
 
-            text task.opinion:
+            text approach.opinion:
                 color "#777777"
                 size 22
 
@@ -189,8 +199,8 @@ screen planning_board_task_desc(task):
 
         vbox:
             spacing 20
-            xalign 0.5
-            ypos 50
+            pos (50, 30)
+            xsize 704
 
             text task.name:
                 color "#777777"
@@ -233,10 +243,9 @@ screen planning_board_help(message=""):
 
 
 # Confirm Screens
-screen planning_board_confirm_approach(planning_board, approach, xypos):
+screen planning_board_confirm_approach(message, xypos):
     tag planning_board_bottom
     zorder 100
-    modal True
 
     hbox:
         xalign 0.5
@@ -245,7 +254,7 @@ screen planning_board_confirm_approach(planning_board, approach, xypos):
 
         imagebutton:
             idle "images/v14/chicks_presidency_race/planning_boards/confirm.webp"
-            action [SetField(planning_board, "approach", approach), Show("planning_board_blank", None, xypos), Show("planning_board_help", message="Please select optional tasks"), Hide("planning_board_confirm_approach")]
+            action [Show("planning_board_blank", None, xypos), Show("planning_board_help", None, message), Hide("planning_board_confirm_approach")]
 
         imagebutton:
             idle "images/v14/chicks_presidency_race/planning_boards/cancel.webp"

@@ -206,8 +206,8 @@ label v14s22:
     # Lindsey's planning board appears and MC makes his choices from the UI screen
 label test2:
     python:
-        lindsey_board.add_approach("Sell Lindsey's Car", opinion="\"An old car that sits around in my Grandfather's barn, he' allowing me to have it. It's not the prettiest, but it gets you where you need to go.\" - Lindsey")
-        lindsey_board.add_approach("Steal from the Chick's treasury", opinion="\"I know this sounds crazy... Why would I want to steal from the Chick's, right? Well, Chloe holds all of our funds in her bedroom and right now she's using them towards her campaign. We have to get that money before she spends it all on herself.\" - Lindsey")
+        lindsey_board.add_approach(0, "Sell Lindsey's Car", opinion="\"An old car that sits around in my Grandfather's barn, he' allowing me to have it. It's not the prettiest, but it gets you where you need to go.\"")
+        lindsey_board.add_approach(1, "Steal from the Chick's treasury", opinion="\"I know this sounds crazy... Why would I want to steal from the Chick's, right? Well, Chloe holds all of our funds in her bedroom and right now she's using them towards her campaign. We have to get that money before she spends it all on herself.\"")
         
         lindsey_board.add_subtask(0, "Take images of Lindsey's car without Lindsey in them",
             opinion="\"The buyers probably want clear, detailed photos. Use your phone to get pictures of all angles so they know exactly what they're buying.\" - Lindsey",

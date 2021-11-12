@@ -699,6 +699,6 @@ default v14s5a_riley_should_join_chicks = False
 default v14_samantha_cum = False
 
 default chloe_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/chloe_background.webp")
-default lindsey_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/chloe_background.webp")
+default lindsey_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/lindsey_background.webp")
 
 default v14s48_campaign_money = 0
