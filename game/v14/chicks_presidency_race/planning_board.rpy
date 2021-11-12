@@ -75,6 +75,8 @@ screen planning_board(planning_board):
         selected_idle "images/v14/chicks_presidency_race/planning_boards/selected_approach_left.webp"
         selected_hover "images/v14/chicks_presidency_race/planning_boards/selected_approach_left.webp"
         selected planning_board.approach == approach
+        hovered Show("planning_board_approach_desc", None, approach)
+        unhovered Hide("planning_board_approach_desc")
         action [SetField(planning_board, "approach", approach, None), Show("planning_board_confirm_approach", None, "Please select optional tasks", xypos=(963, 46))]
 
     vbox:
@@ -121,6 +123,8 @@ screen planning_board(planning_board):
         selected_idle "images/v14/chicks_presidency_race/planning_boards/selected_approach_right.webp"
         selected_hover "images/v14/chicks_presidency_race/planning_boards/selected_approach_right.webp"
         selected planning_board.approach == approach
+        hovered Show("planning_board_approach_desc", None, approach)
+        unhovered Hide("planning_board_approach_desc")
         action [SetField(planning_board, "approach", approach, None), Show("planning_board_confirm_approach", None, "Please select optional tasks", xypos=(43, 46))]
 
     vbox:
