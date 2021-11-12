@@ -320,7 +320,7 @@ label v14s30b:
         $ v14s30b_kiwiiPost5.addReply(_("Aww, haha. Congrats!"))
 
     elif v14s30b_rw_image_one:
-        $ v14s30b_kiwiiPost6 = KiwiiPost("Chloe", "v14/v14s30b_rw_image_one.webp", _("A vote for me is a vote for The Chicks AND a vote for The Wolves :) #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=1273)
+        $ v14s30b_kiwiiPost6 = KiwiiPost("Chloe", "v14/v14s30b_rw_image_one.webp", _("   A vote for me is a vote for The Chicks AND a vote for The Wolves :) #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=1273)
         if v14_chrissupport > 1:
             $ v14s30b_kiwiiPost6.newComment("Chris", _("Haha, perfect! #Vote4Chloe"), queue=False)
         $ v14s30b_kiwiiPost6.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chloe <3"), queue=False)
