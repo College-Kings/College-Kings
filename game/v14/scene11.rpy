@@ -443,6 +443,6 @@ label v14s11:
     scene act4intro
     with fade
     
-    pause 43
+    pause 42.5
     
     jump v14s12
