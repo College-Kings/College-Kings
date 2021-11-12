@@ -17,7 +17,7 @@ screen v14s47_car():
         hotspot (1620, 306, 190, 450):
             if v14_pics_no_linds and not v14s47_solo_trunk:
                 action Jump("v14s47_trunk")
-        if v14s47_pics >= 1:
+        if len(v14s47_car_pics) >= 1:
             button:
                 align (0.5, 0.95)
                 action Jump ("v14s47_end")
