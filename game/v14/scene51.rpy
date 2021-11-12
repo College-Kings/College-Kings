@@ -162,6 +162,7 @@ label v14s51_closet:
         "Take the $900":
             $ v14s51_take_money = True
             $ v14s51_take_900 = True
+            $ lindsey.money += 900
             scene v14s51_closet_3b # FPP. Same as v14s51_closet_3a, MC holding the money, the box not in sight
             with fade
 
@@ -223,6 +224,8 @@ label v14s51_purse:
             $ add_point(KCT.TROUBLEMAKER)
             $ v14s51_take_money = True
             $ v14s51_take_300 = True
+            $ lindsey.money += 900
+
             scene v14s51_purse_2d # FPP. Same as v14s51_purse_2c, MC holding just the money and not the purse
             with dissolve
 
