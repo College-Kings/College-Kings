@@ -10,6 +10,8 @@ label v14s36:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 36_1.mp3" fadein 2
+
     scene v14s36_2 # FPP. Mc walks up face to face to Jenny, Jenny see's MC and is now looking at him, full smile, mouth open
     with dissolve
 
@@ -661,6 +663,9 @@ label v14s36:
 
                 label v14s36_sg:
 
+                stop music fadeout 3
+                play music "music/v14/Track Scene 36_2.mp3" fadein 2
+
                 scene v14s36_3h # TPP. same as v14s36_3d MC grabs Jenny's face and kisses her, both of their eyes are closed
                 with dissolve
 
@@ -1108,6 +1113,9 @@ label v14s36:
 
                 pause 0.75
 
+                stop music fadeout 3
+                play music "music/v14/Track Scene 36_3.mp3" fadein 2
+
                 scene v14s36_11 # FPP. Mc and Jenny are now both dressed, Jenny looking directly at mc, full smile, mouth open
                 with dissolve
 
@@ -1295,6 +1303,9 @@ label v14s36:
 
         u "(Speaking of life never being dull...)"
 
+        stop music fadeout 3
+        play music "music/v14/Track Scene 1_2.mp3" fadein 2
+
         scene v14s36_14 # TPP. show Lauren in her bed naked sitting on her bed with her knees bent, one hand holding her phone, with the other hand on her clit, full smile mouth closed, looking between her legs, also show her laptop next to her
         with dissolve
 
@@ -1440,6 +1451,8 @@ label v14s36:
 
         pause 0.75
 
+        stop music fadeout 3
+
         jump v14s38
 
     else:
@@ -1457,5 +1470,7 @@ label v14s36:
         with fade
 
         pause 0.75
+
+        stop music fadeout 3
 
         jump v14s38

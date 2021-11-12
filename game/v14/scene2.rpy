@@ -4,6 +4,7 @@
 # Time: Night
 
 label v14s02:
+    play music "music/v14/Track Scene 2_1.mp3" fadein 2
     scene v14s02_1 # TPP. show mc in the hotel lobby and looking around everywhere, no expression, mouth closed
     with dissolve
 
@@ -165,5 +166,7 @@ label v14s02:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s03

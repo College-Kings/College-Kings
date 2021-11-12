@@ -17,6 +17,8 @@ label v14s33:
 
         pause 0.75
 
+        play music "music/v14/Track Scene 33.mp3" fadein 2
+
         scene v14s33_2 # TPP. Show MC looking at his phone while sitting on the bed in his Wolves Room, slight smile, mouth closed.
         with fade
 
@@ -25,6 +27,8 @@ label v14s33:
             with dissolve
 
             pause 0.75
+
+            stop music fadeout 3
 
             if penelopers and v11s23_penelope_date:
                 jump v14s34
@@ -169,6 +173,8 @@ label v14s33:
 
                     pause 0.75
 
+                    stop music fadeout 3
+
                     if penelopers and v11s23_penelope_date:
                         jump v14s34
                     else:
@@ -227,6 +233,8 @@ label v14s33:
                     u "(Lauren is watching porn for the first time...)"
 
                     pause 0.75
+
+                    stop music fadeout 3
                     
                     if penelopers and v11s23_penelope_date:
                         jump v14s34
@@ -240,6 +248,8 @@ label v14s33:
 
         pause 0.75
 
+        play music "music/v14/Track Scene 33.mp3" fadein 2
+
         scene v14s33_4 # TPP. Show MC looking at his phone while sitting on the bed in his Apes room, slight smile, mouth closed.
         with fade
         
@@ -250,6 +260,8 @@ label v14s33:
             with dissolve
 
             pause 0.75
+
+            stop music fadeout 3
 
             if penelopers and v11s23_penelope_date:
                 jump v14s34
@@ -391,6 +403,8 @@ label v14s33:
 
                     pause 0.75
 
+                    stop music fadeout 3
+
                     if penelopers and v11s23_penelope_date:
                         jump v14s34
                     else:
@@ -448,6 +462,8 @@ label v14s33:
                     u "(Lauren is watching porn for the first time...)"
 
                     pause 0.75
+
+                    stop music fadeout 3
                     
                     if penelopers and v11s23_penelope_date:
                         jump v14s34

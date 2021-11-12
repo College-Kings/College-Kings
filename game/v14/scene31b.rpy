@@ -9,6 +9,8 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
     pause 0.75
 
+    play music "music/v14/Track Scene 31b_1.mp3" fadein 2
+
     scene v14s31b_2 # TPP. MC, back to camera, standing in front of the Ape's house.
     with dissolve
 
@@ -228,6 +230,9 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v14/Track Scene 31b_2.mp3" fadein 2
+
     scene v14s31b_8 # FPP. MC at the kitchen entrace with Chloe sees Aubrey and Grayson sitting at the table with a couple beers each, mouthes open slightly angry with the other (There is a vaping machine on the table next to Grayson).
     with dissolve
 
@@ -441,6 +446,9 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v14/Track Scene 31b_3.mp3" fadein 2
 
     scene v14s31b_16b # FPP. Aubrey, Chloe, and Grayson are in a line in front of MC, who can only see the back of their heads, the edges of the room, and the dim colored lights.
     with dissolve
@@ -1110,6 +1118,9 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
         u "Bye."
 
+        stop music fadeout 3
+        play music "music/v14/Track Scene 31b_1.mp3" fadein 2
+
         if joinwolves:
             scene v14s31b_30 # TPP. In front of the Ape, Chloe on the side walk walking to the left, MC on the side walk walking right (away from each other), neutral, mouths closed.
             with dissolve
@@ -1119,6 +1130,8 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
             with dissolve
 
         pause 1
+
+        stop music fadeout 3
 
         jump v14s33
     
@@ -1143,6 +1156,9 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
         with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
+        play music "music/v14/Track Scene 31b_4.mp3" fadein 2
 
         scene v14s31b_21h # TPP. Grayson disappeared in the dark hallways (off camera), Chloe entering the dark hallway with MC following her.
         with dissolve
@@ -1342,6 +1358,9 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
         pause 0.75
 
+        stop music fadeout 3
+        play music "music/v14/Track Scene 31b_1.mp3" fadein 2
+
         scene v14s31b_35 # Tpp./ MC walking out the front door of the Ape's House.
         with dissolve
 
@@ -1387,5 +1406,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
             with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
 
         jump v14s33

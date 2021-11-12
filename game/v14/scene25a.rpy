@@ -10,6 +10,8 @@ label v14s25a:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 25a_1.mp3" fadein 2
+
     scene v14s25a_2 # FPP Show Amber, smiling with mouth closed, image should have foggy, trippy effects
     with dissolve
 
@@ -253,6 +255,9 @@ label v14s25a:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v14/Track Scene 25a_2.mp3" fadein 2
+
     scene v14s25a_17 # TPP Show Amber laying on the bed next to MC, her mouth open
     with dissolve
 
@@ -296,5 +301,7 @@ label v14s25a:
     with fade
     
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s25b # -Transition to Scene 25b-

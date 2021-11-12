@@ -9,6 +9,8 @@ label v14s30b:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 30b.mp3" fadein 2
+
     scene v14s30b_2 # FPP. MC looking at Chloe, Chloe looking down at her phone, Chloe slight smile, mouth open.
     with dissolve
 
@@ -360,5 +362,7 @@ label v14s30b:
     else:
         $ set_presidency_percent(v14_lindsey_popularity - 3) #tick
     call screen phone
+
+    stop music fadeout 3
 
     jump v14s33

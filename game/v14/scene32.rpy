@@ -9,6 +9,8 @@ label v14s32:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 32.mp3" fadein 2
+
     play sound "sounds/hs.mp3"
 
     scene v14s32_2 # FPP. MC looking at Imre who is punching the punching bag, Imre slight smile, mouth closed.
@@ -804,5 +806,7 @@ label v14s32:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s33

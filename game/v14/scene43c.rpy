@@ -10,6 +10,8 @@ label v14s43c:
 
     pe "Honestly, I don't even need to read the pages. *Chuckles*"
 
+    play music "music/v14/Track Scene 43c.mp3" fadein 2
+
     scene v14s43c_1a # FPP. Penelope mouth closed
     with dissolve
 
@@ -625,5 +627,7 @@ label v14s43c:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s44

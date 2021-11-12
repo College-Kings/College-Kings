@@ -8,9 +8,13 @@ label v14s35:
         scene v14s35_1 # TPP. Show MC chilling on his phone in his wolves room, slight smile, mouth closed.
         with dissolve
 
+        pause 0.75
+
     else:
         scene v14s35_2 # TPP. Show MC chilling on his phone in his apes room, slight smile, mouth closed.
         with dissolve
+        
+        pause 0.75
 
     play sound "sounds/vibrate.mp3"
 
@@ -41,6 +45,8 @@ label v14s35_afterinvite:
 
         pause 0.75
 
+        play music "music/v14/Track Scene 35.mp3" fadein 2
+
         scene v14s35_3a # TPP. Same as v14s35_3, MC pulling up his swimming trunks still slightly naked, slight smile, mouth closed
         with dissolve
 
@@ -60,6 +66,8 @@ label v14s35_afterinvite:
 
         pause 0.75
 
+        play music "music/v14/Track Scene 35.mp3" fadein 2
+
         scene v14s35_4a # TPP. Same as v14s35_4, MC pulling up his swimming trunks still slightly naked, slight smile, mouth closed
         with dissolve
 
@@ -76,5 +84,7 @@ label v14s35_afterinvite:
     with fade
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s36

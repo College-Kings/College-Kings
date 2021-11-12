@@ -9,6 +9,8 @@ label v14s44:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 44.mp3" fadein 2
+
     scene v14s44_1a # TPP. Same as v14s44_1, Show MC squinting looking off at the distance, slight smile, mouth closed.
     with dissolve
 
@@ -433,5 +435,7 @@ label v14s44:
     with dissolve
 
     u "(Forgot all about the Riley thing, I guess? Either that or he's avoiding the hell out of it, ha.)"
+
+    stop music fadeout 3
 
     jump v14s45

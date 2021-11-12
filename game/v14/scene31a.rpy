@@ -9,6 +9,8 @@ label v14s31a:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 31a.mp3" fadein 2
+
     scene v14s31a_2 # FPP Show Cameron working out outside of Apes' house
     with dissolve
 
@@ -668,5 +670,7 @@ label v14s31a:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s33

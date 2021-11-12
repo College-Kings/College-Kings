@@ -4,6 +4,9 @@
 # Time: Night
 
 label v14s03:
+
+    play music "music/v14/Track Scene 3.mp3" fadein 2
+    
     scene v14s03_1 # TPP. MC Imre and ryan arriving at red light district
     with dissolve
     
@@ -73,5 +76,7 @@ label v14s03:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s03a

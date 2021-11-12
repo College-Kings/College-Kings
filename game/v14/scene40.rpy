@@ -10,6 +10,8 @@ label v14s40:
 
     u "(Finally, time for some sleep.)"
 
+    play music "music/v14/Track Scene 40.mp3" fadein 2
+
     if laurenrs:
         play sound "sounds/vibrate.mp3"
         scene v14s40_2a # TPP. MC gets a call from Lauren, MC looks at his phone, no expression
@@ -167,5 +169,7 @@ label v14s40:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s40a

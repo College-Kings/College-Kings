@@ -7,6 +7,8 @@ label v14s31:
     scene v14s31_1 # TPP Show MC holding and looking down at his phone
     with dissolve
 
+    play music "music/v14/Track Scene 31.mp3" fadein 2
+
     play sound "sounds/vibrate.mp3"
     pause
 
@@ -109,6 +111,8 @@ label v14s31:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     # -Transition to Scene 31a/31b based on planning board choices-
     if v14s31_talkcameron:
