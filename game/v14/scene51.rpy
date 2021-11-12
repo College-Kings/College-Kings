@@ -152,27 +152,48 @@ label v14s51_closet:
     scene v14s51_closet_3a # FPP. Same as v14s51_closet_3, MC holding the opened box with a pair of shoes in them, in between the shoes a stack of cash.
     with dissolve
 
-    u "(Jackpot! That's $900, baby! *Laughs*)"
+    if v14_realwolf:
+        u "(Jackpot! That's $500, baby! *Laughs*)"
+    else:
+        u "(Jackpot! That's $900, baby! *Laughs*)"
 
     u "(I'm here for the money and all, but now that it's in my hands...)"
 
     u "(Can I really do this to her?)"
 
-    menu :
-        "Take the money":
-            $ v14s51_take_money = True
-            $ v14s51_take_cash_large = True
-            $ lindsey_board.money += 900
-            scene v14s51_closet_3b # FPP. Same as v14s51_closet_3a, MC holding the money, the box not in sight
-            with fade
+    if v14_realwolf:
+        menu:
+            "Take the $500":
+                $ v14s51_take_money = True
+                $ v14s51_take_cash_large = True
+                $ lindsey_board.money += 500
+                scene v14s51_closet_3b # FPP. Same as v14s51_closet_3a, MC holding the money, the box not in sight
+                with fade
 
-            u "(I've come this far already. I'm here to help Lindsey, and that's what I'm going to do.)"
+                u "(I've come this far already. I'm here to help Lindsey, and that's what I'm going to do.)"
 
-        "Don't take the money":
-            scene v14s51_closet_3c # FPP. Same as v14s51_closet_3b, MC putting the lid back on the shoe box.
-            with dissolve
+            "Don't take the money":
+                scene v14s51_closet_3c # FPP. Same as v14s51_closet_3b, MC putting the lid back on the shoe box.
+                with dissolve
 
-            u "(I guess I'm having second thoughts about this... I can't take nearly a thousand dollars from Chloe's private closet. What the fuck was I thinking?)"
+                u "(I guess I'm having second thoughts about this... I can't take nearly a thousand dollars from Chloe's private closet. What the fuck was I thinking?)"
+
+    else:
+        menu:
+            "Take the $900":
+                $ v14s51_take_money = True
+                $ v14s51_take_cash_large = True
+                $ lindsey_board.money += 900
+                scene v14s51_closet_3b # FPP. Same as v14s51_closet_3a, MC holding the money, the box not in sight
+                with fade
+
+                u "(I've come this far already. I'm here to help Lindsey, and that's what I'm going to do.)"
+
+            "Don't take the money":
+                scene v14s51_closet_3c # FPP. Same as v14s51_closet_3b, MC putting the lid back on the shoe box.
+                with dissolve
+
+                u "(I guess I'm having second thoughts about this... I can't take nearly a thousand dollars from Chloe's private closet. What the fuck was I thinking?)"
 
     if v14_date_distraction and v14s51_interaction == 1:
         jump v14s51_text
