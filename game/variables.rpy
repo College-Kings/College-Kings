@@ -613,7 +613,7 @@ default v13s9_go_to_concert = False
 
 #BOARD
 ##CHLOE
-default chloe_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/chloe_background.webp", "#4E91D7aa", money=1200)
+default chloe_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/chloe_background.webp", "#4E91D7aa", money=1500)
 default v14_chloe_wolves = False ##APPROACH A
 default v14_realwolf = False ##TASK A2A
 default v14_plushwolf = False ##TASK A2B

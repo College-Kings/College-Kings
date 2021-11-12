@@ -167,6 +167,7 @@ label v14s51_closet:
                 $ v14s51_take_money = True
                 $ v14s51_take_cash_large = True
                 $ lindsey_board.money += 500
+                $ chloe_board.money -= 500
                 scene v14s51_closet_3b # FPP. Same as v14s51_closet_3a, MC holding the money, the box not in sight
                 with fade
 
@@ -184,6 +185,7 @@ label v14s51_closet:
                 $ v14s51_take_money = True
                 $ v14s51_take_cash_large = True
                 $ lindsey_board.money += 900
+                $ chloe_board.money -= 900
                 scene v14s51_closet_3b # FPP. Same as v14s51_closet_3a, MC holding the money, the box not in sight
                 with fade
 
@@ -246,6 +248,7 @@ label v14s51_purse:
             $ v14s51_take_money = True
             $ v14s51_take_cash_small = True
             $ lindsey_board.money += 300
+            $ chloe_board.money -= 300
 
             scene v14s51_purse_2d # FPP. Same as v14s51_purse_2c, MC holding just the money and not the purse
             with dissolve
