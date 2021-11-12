@@ -197,7 +197,7 @@ label v14s22:
 label test2:
     python:
         lindsey_board.add_approach("Sell", "Sell Lindsey's Car", opinion="\"An old car that sits around in my Grandfather's barn, he' allowing me to have it. It's not the prettiest, but it gets you where you need to go.\"")
-        lindsey_board.add_approach("Steal", "Steal from the Chick's treasury", opinion="\"I know this sounds crazy... Why would I want to steal from the Chick's, right? Well, Chloe holds all of our funds in her bedroom and right now she's using them towards her campaign. We have to get that money before she spends it all on herself.\"")
+        lindsey_board.add_approach("Steal", "Steal from the Chicks' treasury", opinion="\"I know this sounds crazy... Why would I want to steal from the Chicks', right? Well, Chloe holds all of our funds in her bedroom and right now she's using them towards her campaign. We have to get that money before she spends it all on herself.\"")
         
         v14s22_pics_no_linds = lindsey_board.add_subtask("Sell", "Take images of the car without Lindsey in them",
             opinion="\"The buyers probably want clear, detailed photos. Use your phone to get pictures of all angles so they know exactly what they're buying.\" - Lindsey",
@@ -222,7 +222,7 @@ label test2:
         lindsey_board.add_task("Steal", "Lindsey distracts Aubrey",
             opinion="\"The only person left to distract will be Aubrey, and I can take care of that with a simple \"Hey Aubrey, I think I want to try anal!\" line.\" - Lindsey",
             people=[lindsey, aubrey])
-        lindsey_board.add_task("Steal", "You steal the Chick's money from Chloe's room",
+        lindsey_board.add_task("Steal", "You steal the Chicks money from Chloe's room",
             opinion="\"The final and most important part, you get into Chloe's room and sniff out the cash. It could be in multiple places, so check everywhere. And honestly... See what else you can find that might help us out in the future.\" - Lindsey",
             people=[mc])
 
