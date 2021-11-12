@@ -850,11 +850,10 @@ label v14s47_passenger:
                 scene v14s47_passenger_4a
                 with dissolve
 
+                $ grant_achievement("say_chirp")
                 li "He is a cute little bird!"
 
                 play sound "sounds/capture.mp3"
-
-                $ grant_achievement("say_chirp")
 
                 scene v14s47_passenger_3
                 with flash
