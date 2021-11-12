@@ -22,8 +22,9 @@ init python:
 
 
     class PlanningBoard:
-        def __init__(self, background):
+        def __init__(self, background, money=0):
             self.background = background
+            self.money = money
 
             self.approaches = {}
             self.approach = None
@@ -48,6 +49,14 @@ init python:
             else:
                 approach.tasks.append([subtask])
             return subtask
+
+        def get_total_cost(self):
+            for task in self.approach.tasks:
+                total_cost = 0
+                try: total_cost += task.cost
+                except AttributeError: total_cost = self.selected_task.cost
+
+            return total_cost
 
 
 screen planning_board(planning_board):
@@ -135,11 +144,14 @@ screen planning_board(planning_board):
 
                                 text "{})".format(alphabet) yalign 0.5
                                 textbutton subtask.name:
-                                    sensitive (planning_board.approach is not None) and (subtask.cost <= v14_lindsey_money)
+                                    sensitive planning_board.approach is not None
                                     selected planning_board.selected_task == subtask
                                     hovered Show("planning_board_task_desc", None, subtask)
                                     unhovered Hide("planning_board_task_desc")
-                                    action [SetField(planning_board, "selected_task", subtask), Show("planning_board_confirm_tasks", None, planning_board)]
+                                    if subtask.cost <= planning_board.money:
+                                        action [SetField(planning_board, "selected_task", subtask), Show("planning_board_confirm_tasks", None, planning_board)]
+                                    else:
+                                        NullAction()
 
                 else:
                     textbutton task.name:
@@ -272,6 +284,7 @@ screen planning_board_confirm_tasks(planning_board):
 
         imagebutton:
             idle "images/v14/chicks_presidency_race/planning_boards/confirm.webp"
+            sensitive get_total_cost() <= self.money
             action [Hide("planning_board_confirm_tasks"), Hide("planning_board_task_desc"), Hide("planning_board_blank"), Return()]
 
         imagebutton:
