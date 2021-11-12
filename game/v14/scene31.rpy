@@ -115,7 +115,7 @@ label v14s31:
     stop music fadeout 3
 
     # -Transition to Scene 31a/31b based on planning board choices-
-    if v14s31_talkcameron:
+    if v14_chloe_cameron:
         jump v14s31a
 
     else:

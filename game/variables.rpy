@@ -681,7 +681,6 @@ default v14s30b_pw_image_one = False  # MC chose the first photo of the Plush Wo
 default v14s30b_pw_image_two = False  # MC chose the second photo of the Plush Wolf for Chloe's kiwi post
 default v14s30b_rw_image_one = False  # MC chose the first photo of the Real Wolf for Chloe's kiwi post
 default v14s30b_rw_image_two = False  # MC chose the second photo of the Real Wolf for Chloe's kiwi post
-default v14s31_talkcameron = False # Placeholder still
 default v14s31b_smoke_weed_with_aubrey = False # s31b smoking weed with Aubrey at Ape's House
 default v14s31bTrustChloe = False # MC trust Chloe alone with Grayson
 default v14s37_focus_on_us = False # Tell Penelope to focus on them during the date.

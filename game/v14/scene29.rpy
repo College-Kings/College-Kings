@@ -34,7 +34,7 @@ label v14s29:
     scene v14s29_3a # TPP. Same as v14s29_3, Imre on the phone, Imre slight smile, mouth closed.
     with dissolve
 
-    if v14_talk_to_chris:
+    if v14_chloe_wolves:
         u "Sorry man, I'm doing the Wolves photoshoot with Chloe."
 
         scene v14s29_3
