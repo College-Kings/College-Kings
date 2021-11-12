@@ -4,6 +4,9 @@
 # Time: 
 
 label v14s49:
+
+    play music "music/v14/Track Scene 49.mp3" fadein 2
+
     scene v14s49_1 # TPP. Show MC walking down the sidewalk towards the Chicks' house, slight smile, mouth closed.
     with dissolve
 
@@ -125,4 +128,6 @@ label v14s49:
 
     u "(Time to commit the perfect crime.)"
 
+    stop music fadeout 3
+    
     jump v14s50

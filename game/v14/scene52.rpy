@@ -12,6 +12,8 @@ init python:
         setattr(store, "v14_noraWorry", True)
 
 label v14s52:
+
+    play music "music/v14/Track Scene 52_1.mp3" fadein 2
     scene v14s52_1 # TPP. mc walks up and see's the wolves frat house
     with dissolve
 
@@ -442,10 +444,15 @@ label v14s52:
     u "(What the fuck does that mean?!)"
 
     if v13_imre_disloyal:
+
         scene v14s52_17 # FPP. show a full size image of mc's wolves bedroom door closed
         with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
+
+        play music "music/v14/Track Scene 52_2.mp3" fadein 2
 
         scene v14s52_17a # FPP. same as v14s52_17 Imre walks through the door angry expression, mouth closed
         with dissolve
@@ -492,6 +499,8 @@ label v14s52:
 
         imre "Come the fuck on, [name]!"
 
+        stop music fadeout 3
+
         jump end14
 
     else: 
@@ -499,5 +508,7 @@ label v14s52:
         with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
 
         jump end14

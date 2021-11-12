@@ -5,6 +5,9 @@
 # Render 9 Unique 62 Total
 
 label v14s53:
+
+    play music "music/v14/Track Scene 53_1.mp3" fadein 2
+
     scene v14s53_1 # TPP. MC enters the Apes Frat house, slight smile, mouth closed
     with dissolve
 
@@ -607,6 +610,8 @@ label v14s53:
 
                     pause 0.75
 
+                    stop music fadeout 3
+
                     jump v14s53a
 
                 "Don't take your pants off":
@@ -664,5 +669,7 @@ label v14s53:
                     with fade
 
                     pause 0.75
+
+                    stop music fadeout 3
 
                     jump v14s53b

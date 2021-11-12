@@ -20,6 +20,8 @@ init python:
         v14s47_kiwiiPost1.newComment("Lindsey", "Haha, I h8 you <3")
 
 label v14s47:
+
+    play music "music/v14/Track Scene 47_1.mp3" fadein 2
 # -Peace and Cheex can help with this scene: MC walks up to Lindsey and they have a convo by the car with a few images of the car. When MC is ready to take pictures we will go to a free roam shot of the car. Highlight the passenger side, driver side, hood, and trunk. MC chooses in any order where to take pics. Once they've taken the pic, revert back to the freeroam screen where their previous choice is now greyed out, and the other choices remain while ALSO having a "Finish" button in the bottom right. MC has to take one photo, but can choose whether to take all 4, or leave after each one. Revert back to the freeroam screen after each photo is taken, the player makes their choices, and when all 4 have been taken or if they click "finish", -if finish dialogue.
 
 # -MC approaches Lindsey who is standing next to a dirty (needs to be seen that it hasn't been washed b/c dialogue) old Volkswagen. They both smile when they see each other-
@@ -256,6 +258,10 @@ label v14s47:
 
     scene v14s47_10 # TPP. Show MC grabbing his phonem, getting ready to take pics, smiling, mouth closed
     with dissolve
+
+    stop music fadeout 3
+
+    play music "music/v14/Track Scene 47_2.mp3" fadein 2
 
     pause 0.75
 
@@ -870,6 +876,11 @@ label v14s47_passenger:
     call screen v14s47_car
 
 label v14s47_end:
+
+    stop music fadeout 3
+
+    play music "music/v14/Track Scene 47_3.mp3" fadein 2
+
     scene v14s47_end_1 # FPP. MC and Lindsey standing by the car, next to each other, Lindsey looking at MC, Lindsey smiling, mouth closed
 
     if len(v14s47_car_pics) < 4:
@@ -989,6 +1000,9 @@ label v14s47_end:
     with fade
 
     pause 0.75
+
+    stop music fadeout 3
+
 
     $ v14s47_kiwiiPost1 = KiwiiPost("Lindsey", "v14/v14s47_lindsey_kiwii.webp", "Making big moves ;)", numberLikes=720)
     $ v14s47_kiwiiPost1.newComment("Nora", "Kick ass babe <3", queue=False)

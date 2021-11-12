@@ -17,6 +17,8 @@ init python:
         chloe.messenger.newMessage(_("I'll give you 10 more minutes. If you're still not here by then, I'm going home."))
 
 label v14s51:
+
+    play music "music/v14/Track Scene 51_1.mp3" fadein 2
     scene v14s51_1 # TPP. Show MC walking into Chloe's room and closing the door behind him, slight smile, mouth closed
     with dissolve
 
@@ -350,6 +352,10 @@ label v14s51_continue:
 
     u "(Sounds like some of the girls just got home. I need to get out of here, NOW!)"
 
+    stop music fadeout 3
+
+    play music "music/v14/Track Scene 51_2.mp3" fadein 2
+
     scene v14s51_6 # TPP. Show MC carefully closing the door behind him as he leaves Chloe's room into the hallway of the Chicks' house, slight worried face, mouth closed.
     with dissolve
 
@@ -611,6 +617,10 @@ label v14s51_continue:
 
     scene v14s51_38 # TPP. Show MC standing at the back of this Chicks house looking at his phone, slight smile, mouth closed.
     with dissolve
+
+    stop music fadeout 3
+
+    play music "music/v14/Track Scene 51_3.mp3" fadein 2
 
     u "(And now, a quick text to Lindsey...)"
 
@@ -911,6 +921,8 @@ label v14s51_continue:
         with dissolve
     
         pause 0.75
+
+    stop music fadeout 3
     
     if joinwolves:
         jump v14s52

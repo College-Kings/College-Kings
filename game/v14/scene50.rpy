@@ -4,6 +4,8 @@
 # Time: Evening 
 
 label v14s50:
+
+    play music "music/v14/Track Scene 50.mp3" fadein 2
     scene v14s50_1 # TPP. Camera over MC's left shoulder. MC standing in front door of the Chic's house.
     with dissolve
 
@@ -293,6 +295,8 @@ label v14s50:
             menu:
                 "Go to Chloe's room": # -if Go to Chloe's room
                     $ add_point(KCT.BOYFRIEND)
+                    stop music fadeout 3
+
                     jump v14s51 # -Transition to Scene 51-
 
                 "Keep listening": # -if Keep listening
@@ -389,6 +393,9 @@ label v14s50:
                     menu: 
                         "Go to Chloe's room": # -if Go to Chloe's room
                             $ add_point(KCT.BOYFRIEND)
+
+                            stop music fadeout 3
+
                             jump v14s51 # -Transition to Scene 51-
 
                         "Keep listening": # -if Keep listening
@@ -443,5 +450,7 @@ label v14s50:
                             with dissolve
 
                             u "(I've wasted a lot of time here already, so I'd better hurry up and go to Chloe's room.)"
+
+                            stop music fadeout 3
 
                             jump v14s51 # -Transition to Scene 51-

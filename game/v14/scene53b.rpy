@@ -4,6 +4,8 @@
 # Time: Night
 
 label v14s53b:
+    
+    play music "music/v14/Track Scene 46a_4.mp3" fadein 2
     scene v14s53b_1 # TPP. Show MC going to the door to leave the Apes Dream Room, tired, mouth closed
     with fade
 
@@ -17,6 +19,8 @@ label v14s53b:
     with vpunch
 
     pause
+
+    stop music fadeout 3
 
     jump end14
 
