@@ -6,7 +6,7 @@ init python:
         TRUTH = 2
 
 
-screen iBuy(car_images):
+screen iBuy(car_images=["car1.webp"]):
     zorder 100
 
     default car_images_index = 0
