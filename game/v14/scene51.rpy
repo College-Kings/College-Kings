@@ -23,7 +23,7 @@ label v14s51:
     if v14s50_listen_to_aubrey_lindsey_2:
         
         u "(Listening in for so long definitely cost me a lot of time. I won't be able to look through most of Chloe's stuff, so I really need to prioritize which locations I want to search.)"
-    elif: v14s50_listen_to_aubrey_lindsey:
+    elif v14s50_listen_to_aubrey_lindsey:
 
         u "(Listening in may have cost me a bit of time, hopefully I'll still have enough to look through most Chloe's stuff, but I definitely won't be able to search everywhere.)"
     
@@ -48,7 +48,6 @@ label v14s51_bedside_table:
     $ v14s51_bedside = True
     $ v14s51_interaction += 1
     scene v14s51_bedside_1 # FPP. MC looking at her bedside table, on the table there is a lamp, lip balm, hand lotion, and a pink vibrator.
-    with dissolve
 
     u "(No money here. But there is a vibrator.)"
 
@@ -63,7 +62,7 @@ label v14s51_bedside_table:
 label v14s51_text:
     if v14_money_theft_date_ditch and v14s51_interaction == 1: # Placeholder variable for using the date as distraction
         scene v14s51_2
-        with dissolve
+
 
         play sound "sounds/vibrate.mp3"
 
@@ -99,7 +98,6 @@ label v14s51_desk_drawer:
     $ v14s51_desk = True
     $ v14s51_interaction += 1
     scene v14s51_deskdrawer_1 # FPP. MC looking at Chloe's Desk
-    with dissolve
 
     u "(Let's see what's hiding in this drawer.)"
 
@@ -139,7 +137,6 @@ label v14s51_closet:
     $ v14s51_interaction += 1
 
     scene v14s51_closet_1 # FPP. MC looking in the open closet, a shoe box in sight on the top shelf.
-    with dissolve
 
     u "(A mystery box? Perfect.)"
 
@@ -187,7 +184,6 @@ label v14s51_purse:
     $ v14s51_purse = True
     $ v14s51_interaction += 1
     scene v14s51_purse_1 # FPP. MC standing near the purse and looking at the purse.
-    with dissolve
 
     u "(Surely this is too obvious...)"
 
@@ -250,7 +246,6 @@ label v14s51_pillow:
     $ v14s51_pillow = True
     $ v14s51_interaction += 1
     scene v14s51_pillow_1 # FPP. MC standing at the side of her bed looking at her pillow, Next to the pillow sits the teddy bear from the hotel scene in Amsterdam.
-    with dissolve
 
     pause 
 
@@ -318,7 +313,6 @@ label v14s51_pillow:
 
 label v14s51_continue:
     scene v14s51_4 # TPP. Show MC slightly worried, mouth closed
-    with dissolve
 
     u "(Huh? What was that?)"
 
