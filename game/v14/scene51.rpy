@@ -20,7 +20,17 @@ label v14s51:
     scene v14s51_1 # TPP. Show MC walking into Chloe's room and closing the door behind him, slight smile, mouth closed
     with dissolve
 
-    u "(I need to focus right now. Where would Chloe keep the money?)"
+    if v14s50_listen_to_aubrey_lindsey_2:
+        
+        u "(Listening in for so long definitely cost me a lot of time. I won't be able to look through most of Chloe's stuff, so I really need to prioritize which locations I want to search.)"
+    elif: v14s50_listen_to_aubrey_lindsey:
+
+        u "(Listening in may have cost me a bit of time, hopefully I'll still have enough to look through most Chloe's stuff, but I definitely won't be able to search everywhere.)"
+    
+    else:
+        u "(I think Lindsey will be able to hold Aubrey off a bit, so hopefully I'll have enough time to look everywhere.)"
+
+    u "(So... where would Chloe keep the money?)"
 
     scene v14s51_2 # FPP. MC standing in Chloes room, make sure the bedside table, desk drawer, closet, purse, and bed pillow are all in sight.
     with dissolve
