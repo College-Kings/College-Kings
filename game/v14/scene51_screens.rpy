@@ -6,7 +6,7 @@ screen v14s51_room():
         hover "images/v14/Scene 51/v14s51_2_screen_hover.webp"
 
         if v14s50_listen_to_aubrey_lindsey_2:
-            if v14s51_interaction <= 2:
+            if v14s51_interaction < 2:
                 if not v14s51_bedside:
                     imagebutton:
                         idle "images/v14/Scene 51/v14s51_bedside.png"
@@ -41,7 +41,7 @@ screen v14s51_room():
                 timer 0.75 action Jump("v14s51_continue")
 
         elif v14s50_listen_to_aubrey_lindsey:
-            if v14s51_interaction <= 3:
+            if v14s51_interaction < 3:
                 if not v14s51_bedside:
                     imagebutton:
                         idle "images/v14/Scene 51/v14s51_bedside.png"
@@ -76,7 +76,7 @@ screen v14s51_room():
                 timer 0.75 action Jump("v14s51_continue")
 
         else:
-            if v14s51_interaction <= 4:
+            if v14s51_interaction < 4:
                 if not v14s51_bedside:
                     imagebutton:
                         idle "images/v14/Scene 51/v14s51_bedside.png"
