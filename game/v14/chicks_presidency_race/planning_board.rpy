@@ -22,8 +22,9 @@ init python:
 
 
     class PlanningBoard:
-        def __init__(self, background, money=0):
+        def __init__(self, background, background_color, money=0):
             self.background = background
+            self.background_color = background_color
             self.money = money
 
             self.approaches = {}
@@ -125,7 +126,7 @@ screen planning_board(planning_board):
         selected planning_board.approach == approach
         hovered Show("planning_board_approach_desc", None, approach)
         unhovered Hide("planning_board_approach_desc")
-        action [SetField(planning_board, "approach", approach, None), Show("planning_board_confirm_approach", None, "Please select optional tasks", xypos=(43, 46))]
+        action [SetField(planning_board, "approach", approach, None), Show("planning_board_confirm_approach", None, "Please select optional tasks", background=planning_board.background_color, xypos=(43, 46))]
 
     vbox:
         pos (1052, 660)
@@ -169,7 +170,7 @@ screen planning_board(planning_board):
         use planning_board_help("Please select an approach")
 
 
-screen planning_board_blank(xypos):
+screen planning_board_blank(background_color, xypos):
     zorder 100
 
     fixed:
@@ -177,7 +178,7 @@ screen planning_board_blank(xypos):
         xysize (914, 990)
 
         imagebutton:
-            idle "#4E91D7aa"
+            idle background_color + "aa"
             action NullAction()
 
 
@@ -259,7 +260,7 @@ screen planning_board_help(message=""):
 
 
 # Confirm Screens
-screen planning_board_confirm_approach(message, xypos):
+screen planning_board_confirm_approach(message, background, xypos):
     tag planning_board_bottom
     zorder 100
 
@@ -270,7 +271,7 @@ screen planning_board_confirm_approach(message, xypos):
 
         imagebutton:
             idle "images/v14/chicks_presidency_race/planning_boards/confirm.webp"
-            action [Show("planning_board_blank", None, xypos), Show("planning_board_help", None, message), Hide("planning_board_confirm_approach")]
+            action [Show("planning_board_blank", None, background, xypos), Show("planning_board_help", None, message), Hide("planning_board_confirm_approach")]
 
         imagebutton:
             idle "images/v14/chicks_presidency_race/planning_boards/cancel.webp"
