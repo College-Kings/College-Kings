@@ -13,6 +13,7 @@ screen v14s51_room():
                 hotspot (7, 417, 292, 316) action Show("v14s51_purse")
                 hotspot (1198, 442, 165, 77) action Show("v14s51_pillow")
             else:
+                pass
                 ## Continue button 
 
         elif v14s50_listen_to_aubrey_lindsey:
@@ -23,6 +24,7 @@ screen v14s51_room():
                 hotspot (7, 417, 292, 316) action Show("v14s51_purse")
                 hotspot (1198, 442, 165, 77) action Show("v14s51_pillow")
             else:
+                pass
                 ## Continue utton
 
         else:
@@ -33,6 +35,7 @@ screen v14s51_room():
                 hotspot (7, 417, 292, 316) action Show("v14s51_purse")
                 hotspot (1198, 442, 165, 77) action Show("v14s51_pillow")
             else:
+                pass
                 ## Continue button
 
 
