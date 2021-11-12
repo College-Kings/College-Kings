@@ -686,6 +686,7 @@ label v14s47_passenger:
     pause 0.75
 
     if v14_pics_with_linds:
+        $ v14s47_linds_passenger = True
         scene v14s47_passenger_2 # FPP. Lindsey standing by the passenger door, MC looking at her (he's in a place where he can take her pic), Lindsey slightly confused, mouth open
         with dissolve
 
@@ -779,6 +780,7 @@ label v14s47_passenger:
     
     else:
         scene v14s47_passenger_2f # FPP. Same as v14s47_passenger_2, Lindsey not in shot, there is a bird on the roof, looking at the camera
+        $ v14s47_solo_passenger = True
         with dissolve
 
         u "Oh- We have a photo-bombing bird!"
@@ -856,11 +858,10 @@ label v14s47_passenger:
                 scene v14s47_passenger_4a
                 with dissolve
 
+                $ grant_achievement("say_chirp")
                 li "He is a cute little bird!"
 
                 play sound "sounds/capture.mp3"
-
-                $ grant_achievement("say_chirp")
 
                 scene v14s47_passenger_3
                 with flash

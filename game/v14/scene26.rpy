@@ -395,7 +395,7 @@ label v14s26:
     scene v14s26_2b
     with dissolve
 
-    $ lidnsey_board.money +=450
+    $ lindsey_board.money +=450
     li "I made $450... *Laughs*"
 
     scene v14s26_2
