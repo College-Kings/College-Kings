@@ -722,3 +722,4 @@ default v14s51_closet = False
 default v14s51_purse = False 
 default v14s51_pillow = False 
 default v14s50_listen_to_aubrey_lindsey_2 = False
+default v14s50_listen_to_aubrey_lindsey_3 = False
