@@ -4,6 +4,8 @@
 # Time: Evening
 
 label v14s22:
+    $ v14s48_campaign_money +=100
+
     scene v14s22_1 # TPP. MC is walking on campus and stumbles upon the janitor's closet, slight smile, mouth closed
     with dissolve
 
@@ -213,7 +215,7 @@ label test2:
             people=[mc, lindsey, buyer])
 
         v14s22_concert = lindsey_board.add_subtask("Steal", "Remove Chloe with concert tickets",
-            opinion="\"If we want to get Chloe away from her room for the night, all we need are two tickets to the concert happening this Thursday. She won't be able to say no, she's been wanting to see this band for a while.\" - Lindsey",
+            opinion="\"If we want to get Chloe away from her room for the night, all we need are two tickets to the concert happening this Thursday. She won't be able to say no, she's been wanting to see this band for a while. But this will take almost all the money I have at the moment.\" - Lindsey",
             people=[mc, chloe],
             cost=100)
         v14s22_date = lindsey_board.add_subtask("Steal", "Ask Chloe out and stand her up",
