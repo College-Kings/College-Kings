@@ -56,6 +56,8 @@ label v14s43b:
 
     lee "Good morning, students!"
 
+    play music "music/v14/Track Scene 43b.mp3" fadein 2
+
     scene v14s43b_2 # FPP. Mr. Lee walks further into the classroom, happy and cheery, mouth closed
     with dissolve
 
@@ -449,6 +451,8 @@ label v14s43b:
 
                 pause 0.75
 
+                stop music fadeout 3
+
                 jump v14s43c
 
             else: 
@@ -478,6 +482,8 @@ label v14s43b:
                 with dissolve
 
                 pause 0.75
+
+                stop music fadeout 3
 
                 jump v14s43c
 
@@ -659,6 +665,8 @@ label v14s43b:
 
                 pause 0.75
 
+                stop music fadeout 3
+
                 jump v14s43d
 
             else:
@@ -701,5 +709,7 @@ label v14s43b:
                 with dissolve
 
                 pause 0.75
+
+                stop music fadeout 3
 
                 jump v14s43d

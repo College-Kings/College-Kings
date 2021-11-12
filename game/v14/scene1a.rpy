@@ -4,6 +4,9 @@
 # Time: Night
 
 label v14s01a:
+
+    play music "music/v14/Track Scene 1a_1.mp3" fadein 2
+
     scene v14s01a_1 # TPP. Same positioning as v13s62a_10a, MC moving in for a kiss on Lindsey (not kissing yet), Lindsey smiling, mouth closed
     with dissolve
 
@@ -18,6 +21,9 @@ label v14s01a:
     with dissolve
 
     u "Huh?"
+
+    stop music fadeout 3
+    play music "music/v14/Track Scene 1a_2.mp3" fadein 2
 
     scene v14s01a_2 # TPP. Show MC startled, waking up (still night time), he is laying on his bed, mouth open
     with flash
@@ -43,5 +49,7 @@ label v14s01a:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s02

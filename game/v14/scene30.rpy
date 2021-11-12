@@ -9,6 +9,8 @@ label v14s30:
 
     pause 0.5
 
+    play music "music/v14/Track Scene 30.mp3" fadein 2
+
     scene v14s30_2 # TPP. Show MC finding Chloe in the woods pressing button on the camera, both slight smile, mouth closed.
     with dissolve
 
@@ -212,5 +214,7 @@ label v14s30:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s30b

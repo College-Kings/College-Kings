@@ -10,6 +10,8 @@ label v14s41:
 
     u "(Finally, time for some sleep.)"
 
+    play music "music/v14/Track Scene 40.mp3" fadein 2
+
     if laurenrs:
         play sound "sounds/vibrate.mp3"
         scene v14s41_2a
@@ -167,5 +169,7 @@ label v14s41:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s41a

@@ -9,6 +9,8 @@ label v14s27:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 27.mp3" fadein 2
+
     scene v14s27_1a # TPP. Same as v14s27_1, Getting closer as they walk towards each other, both slight smile, mouth closed.
     with dissolve
 
@@ -100,5 +102,7 @@ label v14s27:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s28

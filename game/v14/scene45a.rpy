@@ -9,6 +9,8 @@ label v14s45a:
 
     u "Hey there. So, what's the news?"
 
+    play music "music/v14/Track Scene 45a_1.mp3" fadein 2
+
     if not v14_amber_clean:
         scene v14s45a_1a # FPP. Same as v14s45a_1, MC looking at Amber, Amber now looking at MC, Amber tired and high, Amber neutral expression, mouth open.
         with dissolve
@@ -386,6 +388,9 @@ label v14s45a:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v14/Track Scene 45a_2.mp3" fadein 2
+
     scene v14s45a_6 # FPP. MC looking out at the park
     with dissolve
 
@@ -588,5 +593,7 @@ label v14s45a:
         with dissolve
 
         pause 0.75
+
+    stop music fadeout 3
 
     jump v14s46

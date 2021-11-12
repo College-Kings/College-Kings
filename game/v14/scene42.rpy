@@ -10,6 +10,8 @@ label v14s42:
 
     pe "I can't lie, I'm really excited."
 
+    play music "music/v14/Track Scene 42.mp3" fadein 2
+
     scene v14s42_2 # FPP. Mc and Penelope are inside of Penelope's Dorm Room, Penelope is looking at MC, has a slight smile mouth closed 
     with dissolve
 
@@ -421,5 +423,7 @@ label v14s42:
     with fade
 
     pause 0.75
+    
+    stop music fadeout 3
 
     jump v14s42a

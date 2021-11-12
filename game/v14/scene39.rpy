@@ -9,6 +9,8 @@ label v14s39:
 
     u "Some people would just rather not deal with the confrontation."
 
+    play music "music/v14/Track Scene 38.mp3" fadein 2
+
     scene v14s39_1
     with dissolve
 
@@ -256,6 +258,10 @@ label v14s39:
         scene v14s39_7 # TPP. Show MC and Penelope holding hands and walking down the sidewalk towards Penelope's dorm, both slight smile, mouth closed.
         with dissolve
 
+        pause 0.75
+
+        stop music fadeout 3
+
         jump v14s42
 
     else:
@@ -324,6 +330,8 @@ label v14s39:
         u "(*Sighs* That was a rocky night.)"
 
         pause 0.75
+
+        stop music fadeout 3
 
         if joinwolves:
             jump v14s40

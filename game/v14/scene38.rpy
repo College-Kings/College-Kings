@@ -9,6 +9,8 @@ label v14s38:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 38.mp3" fadein 2
+
     scene v14s38_2 # FPP. Jenny, walking down the side walk, her back to MC.
     with dissolve
 
@@ -129,6 +131,8 @@ label v14s38:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     if joinwolves:
         jump v14s40

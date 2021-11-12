@@ -11,6 +11,8 @@ label v14s43:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 43.mp3" fadein 2
+
     scene v14s43_2 # TPP. Show MC walking through the school (different location), slight smile, mouth closed
     with dissolve
 
@@ -139,5 +141,7 @@ label v14s43:
     with dissolve
 
     pe "Thank you."
+
+    stop music fadeout 3
 
     jump v14s43b

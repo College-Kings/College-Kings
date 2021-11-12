@@ -9,6 +9,8 @@ label v14s25b:
 
     u "(I'm not used to being the first one awake...)"
 
+    play music "music/v14/Track Scene 25b.mp3" fadein 2
+
     scene v14s25b_2 # TPP. Show MC getting out of bed, neutral expression, mouth closed
     with dissolve
 
@@ -98,6 +100,8 @@ label v14s25b:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     if v14_lauren_helps_lindsey: 
         jump v14s26

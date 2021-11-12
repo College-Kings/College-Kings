@@ -10,6 +10,8 @@ label v14s43d:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 43c.mp3" fadein 2
+
     scene v14s43d_2 # FPP. MC and Riley sitting across from each other. MC looking at Riley, Riley looking at MC, Riley slight smile, mouth open.
     with dissolve
 
@@ -327,5 +329,7 @@ label v14s43d:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s44

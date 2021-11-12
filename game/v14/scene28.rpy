@@ -9,6 +9,8 @@ label v14s28:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 28.mp3" fadein 2
+
     if v13_emilysex:
         scene v14s28_2 # FPP. Emily looking at MC, MC Looking at Emily, Emily worried smile, mouth open.
         with dissolve
@@ -384,5 +386,7 @@ label v14s28:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s29

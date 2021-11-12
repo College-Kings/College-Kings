@@ -15,6 +15,7 @@ label v14_start:
         jump v14s01a
     
 label v14s01:
+    play music "music/v14/Track Scene 1_1.mp3" fadein 2
     scene v14s01_1 # FPP. MC sitting on bed, looking at Riley and Aubrey making out, show some caressing between them
     with dissolve
 
@@ -276,6 +277,9 @@ label v14s01:
 
             au "We may have to do this again, Riley."
 
+            stop music fadeout 3
+            play music "music/v14/Track Scene 1_2.mp3" fadein 2
+
             scene v14s01_11g # FPP. Same as v14s01_11b, Riley mouth open, Aubrey mouth closed
             with dissolve
 
@@ -412,5 +416,7 @@ label v14s01:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s02
