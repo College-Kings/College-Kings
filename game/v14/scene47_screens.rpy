@@ -15,7 +15,7 @@ screen v14s47_car():
             if not v14s47_linds_passenger and not v14s47_solo_passenger:
                 action Jump("v14s47_passenger")
         hotspot (1620, 306, 190, 450):
-            if v14s47_linds_trunk and not v14s47_solo_trunk:
+            if not v14s47_linds_trunk and not v14s47_solo_trunk:
                 action Jump("v14s47_trunk")
         if len(v14s47_car_pics) >= 1:
             button:
