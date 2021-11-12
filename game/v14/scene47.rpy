@@ -776,6 +776,8 @@ label v14s47_passenger:
         with flash
 
         pause
+
+        call screen v14s47_car
     
     else:
         scene v14s47_passenger_2f # FPP. Same as v14s47_passenger_2, Lindsey not in shot, there is a bird on the roof, looking at the camera
