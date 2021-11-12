@@ -171,16 +171,6 @@ label v14s22:
 
     u "Gotcha, we have to actually put in some work."
 
-    scene v14s22_5i # FPP. same as v14s22_5f lindsey rolls her eyes
-    with dissolve
-
-    li "Right. Unlike, well... others."
-
-    scene v14s22_5g
-    with dissolve
-
-    u "(Chloe...)"
-
     scene v14s22_5e
     with dissolve
 
