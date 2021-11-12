@@ -8,15 +8,15 @@ screen v14s51_room():
         if v14s50_listen_to_aubrey_lindsey_2:
             if v14s51_interaction <= 1:
                 if not v14s51_bedside:
-                    hotspot (1020, 383, 148, 103) action Jump("v14s51_bedside_table")
+                    hotspot (1008, 367, 191, 136) action Jump("v14s51_bedside_table")
                 if not v14s51_desk:
-                    hotspot (1758, 557, 161, 139) action Jump("v14s51_desk_drawer")
+                    hotspot (1728, 535, 191, 202) action Jump("v14s51_desk_drawer")
                 if not v14s51_closet:
-                    hotspot (297, 51, 241, 483) action Jump("v14s51_closet")
+                    hotspot (280, 39, 269, 494) action Jump("v14s51_closet")
                 if not v14s51_purse:
-                    hotspot (7, 417, 292, 316) action Jump("v14s51_purse")
+                    hotspot (0, 265, 301, 527) action Jump("v14s51_purse")
                 if not v14s51_pillow:
-                    hotspot (1198, 442, 165, 77) action Jump("v14s51_pillow")
+                    hotspot (1146, 424, 263, 96) action Jump("v14s51_pillow")
             else:
                 pass
                 ## Continue button 
@@ -24,15 +24,15 @@ screen v14s51_room():
         elif v14s50_listen_to_aubrey_lindsey:
             if v14s51_interaction <= 2:
                 if not v14s51_bedside:
-                    hotspot (1020, 383, 148, 103) action Jump("v14s51_bedside_table")
+                    hotspot (1008, 367, 191, 136) action Jump("v14s51_bedside_table")
                 if not v14s51_desk:
-                    hotspot (1758, 557, 161, 139) action Jump("v14s51_desk_drawer")
+                    hotspot (1728, 535, 191, 202) action Jump("v14s51_desk_drawer")
                 if not v14s51_closet:
-                    hotspot (297, 51, 241, 483) action Jump("v14s51_closet")
+                    hotspot (280, 39, 269, 494) action Jump("v14s51_closet")
                 if not v14s51_purse:
-                    hotspot (7, 417, 292, 316) action Jump("v14s51_purse")
+                    hotspot (0, 265, 301, 527) action Jump("v14s51_purse")
                 if not v14s51_pillow:
-                    hotspot (1198, 442, 165, 77) action Jump("v14s51_pillow")
+                    hotspot (1146, 424, 263, 96) action Jump("v14s51_pillow")
             else:
                 pass
                 ## Continue utton
@@ -40,15 +40,15 @@ screen v14s51_room():
         else:
             if v14s51_interaction <= 3:
                 if not v14s51_bedside:
-                    hotspot (1020, 383, 148, 103) action Jump("v14s51_bedside_table")
+                    hotspot (1008, 367, 191, 136) action Jump("v14s51_bedside_table")
                 if not v14s51_desk:
-                    hotspot (1758, 557, 161, 139) action Jump("v14s51_desk_drawer")
+                    hotspot (1728, 535, 191, 202) action Jump("v14s51_desk_drawer")
                 if not v14s51_closet:
-                    hotspot (297, 51, 241, 483) action Jump("v14s51_closet")
+                    hotspot (280, 39, 269, 494) action Jump("v14s51_closet")
                 if not v14s51_purse:
-                    hotspot (7, 417, 292, 316) action Jump("v14s51_purse")
+                    hotspot (0, 265, 301, 527) action Jump("v14s51_purse")
                 if not v14s51_pillow:
-                    hotspot (1198, 442, 165, 77) action Jump("v14s51_pillow")
+                    hotspot (1146, 424, 263, 96) action Jump("v14s51_pillow")
             else:
                 pass
                 
