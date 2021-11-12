@@ -300,9 +300,6 @@ label after_load:
 
 
         # Simplr Contacts
-        for contact in simplr_contacts:
-            contact.profile_picture = os.path.join(contacts_file_path, contact.name.lower(), "{}_profile_picture".format(contact.name.lower()))
-            
         try:
             beth.simplr = simplr_Beth
             del simplr_Beth
@@ -319,6 +316,12 @@ label after_load:
             emmy.simplr = simplr_Emmy
             del simplr_Emmy
         except NameError: pass
+
+        for contact in simplr_contacts + simplr_pendingContacts:
+            contact.profile_picture = "images/nonplayable_characters/{0}/{0}_profile_picture.webp".format(contact.name.lower())
+            
+            for (dirpath, dirname, filenames) in os.walk(os.path.join(contacts_file_path, contact.name.lower(), "large_profile_pictures")):
+                contact.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/{}".format(contact.name.lower(), filename) for filename in filenames]
 
         
         # Items
