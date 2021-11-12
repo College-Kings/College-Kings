@@ -155,7 +155,7 @@ screen planning_board(planning_board):
                                     if subtask.cost <= planning_board.money:
                                         action [SetField(planning_board, "selected_task", subtask), Show("planning_board_confirm_tasks", None, planning_board)]
                                     else:
-                                        NullAction()
+                                        action NullAction()
 
                 else:
                     textbutton task.name:
