@@ -812,10 +812,13 @@ label v14s25:
 
             pause 1
 
-            scene v14s25_17 # TPP. Show MC laying in Amber's Bed.
-            with fade
+            #scene v14s25_17 # TPP. Show MC laying in Amber's Bed.
+            #with fade
 
-            pause 1
+            #pause 1
+
+            if config_censored:
+                call screen censoredPopup("v14s25_nsfwSkipLabel1")
 
             scene v14s25_18 # TPP. (MC off Camera) Close up of Amber standing at the entrance of her room, Amber topless in a flirty pose, Wearing nothing but black panties, Amber Slight Smile, Mouth closed.
             with dissolve
@@ -851,6 +854,8 @@ label v14s25:
             with dissolve
 
             pause 0.75
+
+            label v14s25_nsfwSkipLabel1:
 
             scene v14s25_17a # TPP. Same as v14s25_17, Show MC and Amber laying in bed, both slight smile, mouth closed.
             with dissolve
