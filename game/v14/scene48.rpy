@@ -4,6 +4,8 @@
 # Time: Evening
 
 label v14s48:
+
+    play music "music/v14/Track Scene 48.mp3" fadein 2
     scene v14s48_1 # TPP. Show MC and Lindsey entering the coffee shop, both smiling, mouths closed
     with dissolve
 
@@ -485,6 +487,8 @@ label v14s48_end:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     if joinwolves:
         jump v14s52

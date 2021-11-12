@@ -4,6 +4,7 @@
 # Time: Evening
 
 label v14s46a:
+    play music "music/v14/Track Scene 46a_1.mp3" fadein 2
     scene v14s46a_1 # TPP. MC knocking on Lauren's door.
     with dissolve
 
@@ -192,11 +193,15 @@ label v14s46a:
 
     u "I'll try again."
 
+    stop music fadeout 3
+
     if laurenrs:
-        pass #  replace with -LaurenGF plays some incredibly calming meditation music with an ocean gently lapping from her phone or radio.
+        play music "music/v14/Track Scene 46a_2.mp3" fadein 2
+        #  replace with -LaurenGF plays some incredibly calming meditation music with an ocean gently lapping from her phone or radio.
      
     else: 
-        pass # replace with -LaurenFriend plays some incredibly calming meditation music with birds singing in the background from her phone or radio.
+        play music "music/v14/Track Scene 46a_3.mp3" fadein 2
+        # replace with -LaurenFriend plays some incredibly calming meditation music with birds singing in the background from her phone or radio.
 
     scene v14s46a_7
     with dissolve
@@ -357,6 +362,10 @@ label v14s46a:
         la "*Laughs* Oh my God. I'm so sorry, I didn't think you'd-"
 
         hide screen fantasyOverlay
+
+        stop music fadeout 3
+
+        play music "music/v14/Track Scene 46a_4.mp3" fadein 2
         scene v14s46a_6g # TPP. Same as v14s46a_6, but MC, mouth open, shocked, sitting up in bed (legs remain out), looking down at the large wet spot in the crotch of his pants, Lauren sitting next to him, look at his wet spt, laughing, mouth closed.
         with dissolve
 
@@ -628,6 +637,11 @@ label v14s46a:
         u "Aahhh! Fuck! Oww! M-My balls!"
 
         hide screen fantasyOverlay
+
+        stop music fadeout 3
+
+        play music "music/v14/Track Scene 46a_4.mp3" fadein 2
+
         scene v14s46a_35 # TPP. MC, in Lauren's bed, shocked (liked he snapped out of a bad dream),sitting up but legs extended out on the bed, slightly angry, mouth open.
         with dissolve
 
@@ -751,6 +765,9 @@ label v14s46a:
     with dissolve
 
     u "(Hmm, well that was interesting...)"
+
+    stop music fadeout 3
+
 
     if joinwolves: # -If Wolves, transition to scene 52
         jump v14s52

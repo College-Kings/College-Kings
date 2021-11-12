@@ -4,6 +4,8 @@
 # Time: Night
 
 label v14s53a:
+
+    play music "music/v14/Track Scene 53a.mp3" fadein 2
     scene v14s53a_1 # TPP. Show MC pulling his pants down while sitting on the couch, Samantha next to him biting her lips as she looks at MC's crotch in a seductive sitting position.
     with dissolve
 
@@ -273,5 +275,7 @@ label v14s53a:
     u "(Haha, guess I don't have to. Let's get to bed.)"
 
     $ renpy.end_replay()
+
+    stop music fadeout 3
 
     jump v14s53b

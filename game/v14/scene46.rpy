@@ -4,8 +4,11 @@
 # Time: Afternoon
 
 label v14s46: # -MC is walking along the sidewalk when he gets a call from Lauren-
+    play music "music/v14/Track Scene 46.mp3" fadein 2
     scene v14s46_1 # TPP. MC, neutral expression, mouth closed, walking from the left to the right (facing right) on the side walk.
     with dissolve
+
+    
 
     play sound "sounds/call.mp3"
 
@@ -105,6 +108,8 @@ label v14s46: # -MC is walking along the sidewalk when he gets a call from Laure
         with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
 
         if v14_lindsey_sell: # Sell Car Scene 47 
             jump v14s47
