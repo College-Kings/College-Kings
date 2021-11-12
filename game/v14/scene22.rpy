@@ -4,8 +4,6 @@
 # Time: Evening
 
 label v14s22:
-    $ v14s48_campaign_money +=100
-
     scene v14s22_1 # TPP. MC is walking on campus and stumbles upon the janitor's closet, slight smile, mouth closed
     with dissolve
 

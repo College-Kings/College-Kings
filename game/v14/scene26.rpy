@@ -395,6 +395,7 @@ label v14s26:
     scene v14s26_2b
     with dissolve
 
+    $ v14_lindsey_money +=450
     li "I made $450... *Laughs*"
 
     scene v14s26_2
