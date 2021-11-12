@@ -35,6 +35,7 @@ label v14s51:
 # -Grey out areas that have been checked already, ad grey out all areas when MC has checked all allowed locations, giving them a button to continue-
 
 label v14s51_bedside_table:
+    $ v14s51_bedside = True
     $ v14s51_interaction += 1
     scene v14s51_bedside_1 # FPP. MC looking at her bedside table, on the table there is a lamp, lip balm, hand lotion, and a pink vibrator.
     with dissolve
@@ -85,6 +86,7 @@ label v14s51_text:
         call screen v14s51_room
 
 label v14s51_desk_drawer:
+    $ v14s51_desk = True
     $ v14s51_interaction += 1
     scene v14s51_deskdrawer_1 # FPP. MC looking at Chloe's Desk
     with dissolve
@@ -123,6 +125,7 @@ label v14s51_desk_drawer:
         call screen v14s51_room
 
 label v14s51_closet:
+    $ v14s51_closet = True
     $ v14s51_interaction += 1
 
     scene v14s51_closet_1 # FPP. MC looking in the open closet, a shoe box in sight on the top shelf.
@@ -171,6 +174,7 @@ label v14s51_closet:
         call screen v14s51_room
 
 label v14s51_purse:
+    $ v14s51_purse = True
     $ v14s51_interaction += 1
     scene v14s51_purse_1 # FPP. MC standing near the purse and looking at the purse.
     with dissolve
@@ -233,6 +237,7 @@ label v14s51_purse:
         call screen v14s51_room
 
 label v14s51_pillow:
+    $ v14s51_pillow = True
     $ v14s51_interaction += 1
     scene v14s51_pillow_1 # FPP. MC standing at the side of her bed looking at her pillow, Next to the pillow sits the teddy bear from the hotel scene in Amsterdam.
     with dissolve
