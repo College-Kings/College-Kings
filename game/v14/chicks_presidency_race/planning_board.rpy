@@ -78,7 +78,7 @@ screen planning_board(planning_board):
         selected planning_board.approach == approach
         hovered Show("planning_board_approach_desc", None, approach)
         unhovered Hide("planning_board_approach_desc")
-        action [SetField(planning_board, "approach", approach, None), Show("planning_board_confirm_approach", None, "Please select optional tasks", xypos=(963, 46))]
+        action [SetField(planning_board, "approach", approach, None), Show("planning_board_confirm_approach", None, "Please select optional tasks", background=planning_board.background_color, xypos=(963, 46))]
 
     vbox:
         pos (130, 661)
