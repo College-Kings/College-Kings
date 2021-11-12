@@ -6,7 +6,7 @@ screen v14s51_room():
         hover "images/v14/Scene 51/v14s51_2_screen_hover.webp"
 
         if v14s50_listen_to_aubrey_lindsey_2:
-            if v14s51_interaction <= 2:
+            if v14s51_interaction <= 1:
                 if not v14s51_bedside:
                     hotspot (1020, 383, 148, 103) action Jump("v14s51_bedside_table")
                 if not v14s51_desk:
@@ -22,7 +22,7 @@ screen v14s51_room():
                 ## Continue button 
 
         elif v14s50_listen_to_aubrey_lindsey:
-            if v14s51_interaction <= 3:
+            if v14s51_interaction <= 2:
                 if not v14s51_bedside:
                     hotspot (1020, 383, 148, 103) action Jump("v14s51_bedside_table")
                 if not v14s51_desk:
@@ -38,7 +38,7 @@ screen v14s51_room():
                 ## Continue utton
 
         else:
-            if v14s51_interaction <= 4:
+            if v14s51_interaction <= 3:
                 if not v14s51_bedside:
                     hotspot (1020, 383, 148, 103) action Jump("v14s51_bedside_table")
                 if not v14s51_desk:
