@@ -392,6 +392,7 @@ label v14s50:
                             jump v14s51 # -Transition to Scene 51-
 
                         "Keep listening": # -if Keep listening
+                            $ v14s50_listen_to_aubrey_lindsey_3 = True
                             $ add_point(KCT.BRO)
                             scene v14s50_11d
                             with dissolve
