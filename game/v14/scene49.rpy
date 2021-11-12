@@ -63,13 +63,13 @@ label v14s49:
         with dissolve
 
         if chloegf:
-            $ chloe.messenger.addReply(_("Hey... Think I'm in the mood for a little Italian cuisine and a beautiful woman across from me..."), queue =False)
+            $ chloe.messenger.addReply(_("Hey... Think I'm in the mood for a little Italian cuisine and a beautiful woman across from me..."))
             $ chloe.messenger.newMessage(_("Haha, hi there Mr. Sweet Talk..."))
             $ chloe.messenger.newMessage(_("I could definitely eat, and... I suppose I'm down to see you ;)"))
             $ chloe.messenger.addReply(_("Well then, I suppose I'll see you soon :)"))
 
         else:
-            $ chloe.messenger.addReply(_("Hey... Think we can meet at that new Italian place, Classico Cuisine? I'm hungry and need some company."), queue =False)
+            $ chloe.messenger.addReply(_("Hey... Think we can meet at that new Italian place, Classico Cuisine? I'm hungry and need some company."))
             $ chloe.messenger.newMessage(_("What am I, just a lunch buddy?"))
             $ chloe.messenger.addReply(_("Sorry, these are hungry person texts, haha."))
             $ chloe.messenger.newMessage(_("Haha, okay. Let's go now?"))

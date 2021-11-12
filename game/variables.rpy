@@ -613,6 +613,7 @@ default v13s9_go_to_concert = False
 
 #BOARD
 ##CHLOE
+default chloe_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/chloe_background.webp", money=1200)
 default v14_chloe_wolves = False ##APPROACH A
 default v14_realwolf = False ##TASK A2A
 default v14_plushwolf = False ##TASK A2B
@@ -621,6 +622,8 @@ default v14_chloe_apes = False ##APPROACH B
 default v14_chloe_grayson = False ##TASK B2A
 default v14_chloe_cameron = False ##TASK B2B
 
+##LINDSEY
+default lindsey_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/lindsey_background.webp", money=200)
 default v14_lindsey_sell = False ##APPROACH A
 default v14_pics_no_linds = False ##TASK A1A
 default v14_pics_with_linds = False ##TASK A1B
@@ -628,6 +631,7 @@ default v14_pics_with_linds = False ##TASK A1B
 default v14_lindsey_steal = False ##APPROACH B
 default v14_concert_distraction = False ##APPROACH B1A
 default v14_date_distraction = False ###APPROACH B1B
+
 
 ##Rest of 14
 default AmberLoyal = False
@@ -708,9 +712,6 @@ default irisStrikes = 0
 default v14s4_tell_imre = False
 default v14s5a_riley_should_join_chicks = False
 default v14_samantha_cum = False
-
-default chloe_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/chloe_background.webp")
-default lindsey_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/lindsey_background.webp", money=100)
 
 default v14s48_car_price = 100
 
