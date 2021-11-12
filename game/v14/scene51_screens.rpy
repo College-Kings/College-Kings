@@ -51,7 +51,13 @@ screen v14s51_room():
                     hotspot (1198, 442, 165, 77) action Jump("v14s51_pillow")
             else:
                 pass
-                ## Continue button
+                
+    button:
+        align (0.5, 0.95)
+        action Jump ("v14s51_continue")
+        maximum (707, 104)
+        add "gui/center.webp"
+        text "Leave Chloe's Room" align (0.5, 0.5)
 
 
         #-if MC chose to keep listening to Lindsey and Aubrey's conversation more than one time, MC can only choose 2 areas.
