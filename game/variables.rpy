@@ -623,7 +623,7 @@ default v14_chloe_grayson = False ##TASK B2A
 default v14_chloe_cameron = False ##TASK B2B
 
 ##LINDSEY
-default lindsey_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/lindsey_background.webp", "#f6e388", money=200)
+default lindsey_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/lindsey_background.webp", "#f6e388", money=200, style="lindsey_board")
 default v14_lindsey_sell = False ##APPROACH A
 default v14_pics_no_linds = False ##TASK A1A
 default v14_pics_with_linds = False ##TASK A1B
