@@ -130,6 +130,8 @@ label after_load:
         except NameError: pass
         try: v11s9a_kiwiiPost2.img = "images/phone/kiwii/posts/v11/sebnaked.webp"
         except NameError: pass
+        try: v13s49_kiwiiPost1.img = "images/phone/kiwii/posts/v13/aubrey_beach.webp"
+        except NameError: pass
 
         for kiwiiPost in kiwiiPosts:
             try: kiwiiPost.img = kiwiiPost.image
