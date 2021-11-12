@@ -680,6 +680,7 @@ label v14s47_driver:
     call screen v14s47_car
 
 label v14s47_passenger:
+    $ v14s47_passenger = True
     scene v14s47_passenger_1 # TPP. Show MC and Lindsey walking towards the passenger door
     with dissolve
 

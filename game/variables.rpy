@@ -705,6 +705,7 @@ default v14s48_campaign_money = 0
 
 default v14s48_car_price = 100
 
+default v14s47_passenger = False
 default v14s51_bedside = False
 default v14s51_desk = False
 default v14s51_closet = False 
