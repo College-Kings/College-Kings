@@ -46,6 +46,9 @@ screen iBuy(car_images=["car1.webp"]):
         xalign 0.5
         ypos 583
 
+    if v14s48_car_description == CarDescription.LIE:
+        add "images/v14/iBuy/lie_hover.webp" pos (233, 750)
+
     button:
         area (174, 650, 771, 208)
         action SetVariable("v14s48_car_description", CarDescription.LIE)
@@ -53,6 +56,9 @@ screen iBuy(car_images=["car1.webp"]):
     button:
         area (945, 650, 786, 208)
         action SetVariable("v14s48_car_description", CarDescription.TRUTH) 
+
+    if v14s48_car_description == CarDescription.TRUTH:
+        add "images/v14/iBuy/truth_hover.webp" pos (1650, 750)
 
 
     # Determine Price
