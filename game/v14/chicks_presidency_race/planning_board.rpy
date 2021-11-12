@@ -22,9 +22,8 @@ init python:
 
 
     class PlanningBoard:
-        def __init__(self, background, background_color, money=0, style=None):
+        def __init__(self, background, money=0, style=None):
             self.background = background
-            self.background_color = background_color
             self.money = money
             self.style = style
 
@@ -79,7 +78,7 @@ screen planning_board(planning_board):
         selected planning_board.approach == approach
         hovered Show("planning_board_approach_desc", None, approach)
         unhovered Hide("planning_board_approach_desc")
-        action [SetField(planning_board, "approach", approach, None), Show("planning_board_confirm_approach", None, "Please select optional tasks", background=planning_board.background_color, xypos=(963, 46))]
+        action [SetField(planning_board, "approach", approach), Show("planning_board_help", message="Please select optional tasks")]
 
     vbox:
         pos (130, 661)
@@ -102,7 +101,7 @@ screen planning_board(planning_board):
 
                                 text "{})".format(alphabet) yalign 0.5
                                 textbutton subtask.name:
-                                    sensitive planning_board.approach is not None
+                                    sensitive planning_board.approach == approach
                                     selected planning_board.selected_task == subtask
                                     hovered Show("planning_board_task_desc", None, subtask)
                                     unhovered Hide("planning_board_task_desc")
@@ -112,13 +111,18 @@ screen planning_board(planning_board):
 
                 else:
                     textbutton task.name:
-                        sensitive planning_board.approach is not None
+                        sensitive planning_board.approach == approach
                         selected planning_board.approach == approach
                         hovered Show("planning_board_task_desc", None, task)
                         unhovered Hide("planning_board_task_desc")
                         action NullAction()
                         if planning_board.style is not None:
                             text_style planning_board.style
+
+
+    text "Budget: ${}".format(planning_board.money):
+        align (0.5, 0.1)
+        outlines [(1, "#000", 0, 0)]
 
     # Right Side
     $ approach = planning_board.approaches.values()[1]
@@ -131,7 +135,7 @@ screen planning_board(planning_board):
         selected planning_board.approach == approach
         hovered Show("planning_board_approach_desc", None, approach)
         unhovered Hide("planning_board_approach_desc")
-        action [SetField(planning_board, "approach", approach, None), Show("planning_board_confirm_approach", None, "Please select optional tasks", background=planning_board.background_color, xypos=(43, 46))]
+        action [SetField(planning_board, "approach", approach, None), Show("planning_board_help", message="Please select optional tasks")]
 
     vbox:
         pos (1052, 660)
@@ -154,7 +158,7 @@ screen planning_board(planning_board):
 
                                 text "{})".format(alphabet) yalign 0.5
                                 textbutton subtask.name:
-                                    sensitive planning_board.approach is not None
+                                    sensitive planning_board.approach == approach
                                     selected planning_board.selected_task == subtask
                                     hovered Show("planning_board_task_desc", None, subtask)
                                     unhovered Hide("planning_board_task_desc")
@@ -167,7 +171,7 @@ screen planning_board(planning_board):
 
                 else:
                     textbutton task.name:
-                        sensitive planning_board.approach is not None
+                        sensitive planning_board.approach == approach
                         selected planning_board.approach == approach
                         hovered Show("planning_board_task_desc", None, task)
                         unhovered Hide("planning_board_task_desc")
@@ -175,20 +179,8 @@ screen planning_board(planning_board):
                         if planning_board.style is not None:
                             text_style planning_board.style
 
-    if not renpy.get_screen("planning_board_bottom"):
-        use planning_board_help("Please select an approach")
-
-
-screen planning_board_blank(background_color, xypos):
-    zorder 100
-
-    fixed:
-        pos xypos
-        xysize (914, 990)
-
-        imagebutton:
-            idle background_color + "aa"
-            action NullAction()
+    
+    on "show" action Show("planning_board_help", message="Please select an approach")
 
 
 screen planning_board_approach_desc(approach):
@@ -266,27 +258,10 @@ screen planning_board_help(message=""):
         italic True
         xalign 0.5
         ypos 933
+        outlines [(1, "#000", 0, 0)]
 
 
 # Confirm Screens
-screen planning_board_confirm_approach(message, background, xypos):
-    tag planning_board_bottom
-    zorder 100
-
-    hbox:
-        xalign 0.5
-        ypos 933
-        spacing 40
-
-        imagebutton:
-            idle "images/v14/chicks_presidency_race/planning_boards/confirm.webp"
-            action [Show("planning_board_blank", None, background, xypos), Show("planning_board_help", None, message), Hide("planning_board_confirm_approach")]
-
-        imagebutton:
-            idle "images/v14/chicks_presidency_race/planning_boards/cancel.webp"
-            action Hide("planning_board_confirm_approach")
-
-
 screen planning_board_confirm_tasks(planning_board):
     tag planning_board_bottom
     zorder 100
