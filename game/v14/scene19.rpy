@@ -93,7 +93,7 @@ label test:
             opinion="\"We can Rent-A-Wolf for an hour in exchange for a pretty penny. Can you imagine what people will say when they see that the Chicks have partnered with the Wolves, and I'm posing with a real wolf?!\" - Chloe",
             people=[mc, chloe, wolf, trainer],
             cost=450)
-        chloe_board.add_subtask("Wolves", "Photoshoot with plush toy wolf",
+        v14s19_plush_wolf = chloe_board.add_subtask("Wolves", "Photoshoot with plush toy wolf",
             opinion="\"I could easily grab a wolf plushie to pose with. It's a little less interesting than a real wolf, but definitely less expensive and of course, the safer option.\" - Chloe",
             people=[mc, chloe],
             cost=50)
@@ -104,7 +104,7 @@ label test:
         chloe_board.add_task("Apes", "Host a small get together with Cameron, Grayson, Chloe, Aubrey and MC",
             opinion= "\"First thing's first: Get them all in a room, give them each a beer, and put on some good music. As soon as we've set the mood, we can get down to business.\" - Chloe",
             people=[mc, chloe, aubrey, grayson, cameron])
-        chloe_board.add_subtask("Apes", "Talk to Cameron about a strategic alliance",
+        v14s19_talk_cameron = chloe_board.add_subtask("Apes", "Talk to Cameron about a strategic alliance",
             opinion="\"Cameron secretly has amazing leadership skills, and I know he plans to use them one day. If we tell Cameron exactly what he wants to hear in terms of the future of the Apes, he'll have no reason to vote against me\" - Chloe",
             people=[mc, chloe, cameron])
         v14s19_seduce_grayson = chloe_board.add_subtask("Apes", "Seduce Grayson",
@@ -114,16 +114,20 @@ label test:
     call screen planning_board(chloe_board)
 
 label v14s19_continue:
+    $ v14_chloe_wolves = chloe_board.approach.id == "Wolves"
+    $ v14_realwolf = chloe_board.selected_task == v14s19_real_wolf
+    $ v14_plushwolf = chloe_board.selected_task == v14s19_plush_wolf
+    
     $ v14_chloe_apes = chloe_board.approach.id == "Apes"
     $ v14_chloe_grayson = chloe_board.selected_task == v14s19_seduce_grayson
-    $ v14_realwolf = chloe_board.selected_task == v14s19_real_wolf
+    $ v14_chloe_cameron = chloe_board.selected_task == v14s19_talk_cameron
 
     scene v14s19_99 # TPP. Show MC and Chloe standing infront of The Planning Board (a white board), both looking at the board, camera showing MC and Chloe, not the actual content of the board, MC and Chloe looking inquisitevely at the board, MC mouth open, Chloe mouth closed
     with dissolve
 
     u "From the options we have, these are the final decisions I'd go with."
 
-    if v14_chloe_apes: # PLACEHOLDER
+    if v14_chloe_apes:
         cl "Getting the Apes to side with us could take a lot of convincing but..."
         cl "If we manage to pull it off, a Chicks and Apes alliance would make for an interesting future of the Chicks."
 

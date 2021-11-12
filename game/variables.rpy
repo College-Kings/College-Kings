@@ -610,6 +610,26 @@ default v13s48_ryan_double_date = False
 default v13s9_go_to_concert = False
 
 # 14.0
+
+#BOARD
+##CHLOE
+default v14_chloe_wolves = False ##APPROACH A
+default v14_realwolf = False ##TASK A2A
+default v14_plushwolf = False ##TASK A2B
+
+default v14_chloe_apes = False ##APPROACH B
+default v14_chloe_grayson = False ##TASK B2A
+default v14_chloe_cameron = False ##TASK B2B
+
+default v14_lindsey_sell = False ##APPROACH A
+default v14_pics_no_linds = False ##TASK A1A
+default v14_pics_with_linds = False ##TASK A1B
+
+default v14_lindsey_steal = False ##APPROACH B
+default v14_concert_distraction = False ##APPROACH B1A
+default v14_date_distraction = False ###APPROACH B1B
+
+##Rest of 14
 default AmberLoyal = False
 default AutumnTrust = False
 default chrissus = 0
@@ -625,8 +645,6 @@ default v14_amber_clean = False
 default v14_amber_sex = False
 default v14_ApesPostChloePics = True #They always post unless MC is an Ape and stops them.
 default v14_badsinging_Sam = False
-default v14_chloe_apes = False #Placeholder
-default v14_chloe_grayson = False
 default v14_chloe_sex = False
 default v14_chloeSus = False
 default v14_chrissupport = 0 #3 = Full, 2 = Medium, 1 = Low
@@ -636,19 +654,13 @@ default v14_help_lindsey = False
 default v14_jenny_sex = False
 default v14_jennypoints = 0
 default v14_lauren_sabotage = False
-default v14_lindsey_car_sale = False #Placeholder for helping Lindsey sell her car
-default v14_lindsey_money_theft = False
 default v14_lindsey_popularity = 45 # Use `set_presidency_percent(amount)`.
-default v14_money_theft_concert_distraction = False # Placeholder for choosing the concert to distract Chloe
-default v14_money_theft_date_ditch = False # Placeholder for choosing to ditch the date you set up with Chloe to steal money
 default v14_noraWhere = False
 default v14_noraWorry = False
 default v14_PenArgScene = False
 default v14_penelope_date = False
 default v14_PenelopePartner = False
 default v14_PenRomScene = False
-default v14_pics_with_linds = False
-default v14_realwolf = False #Placeholder for choosing real wolf on planning board
 default v14_ryan_satin = False
 default v14_samantha_sex = False
 default v14_SamanthaDrugs = False
@@ -656,7 +668,6 @@ default v14_satin_sex = False
 default v14_talk_to_chris = False
 default v14s03a_left_cup = False
 default v14s03a_take_wallet = False
-default v14s22_steal_fund = False
 default v14s23_agree = False
 default v14s23_disagree = False
 default v14s24a_gummyfish = False

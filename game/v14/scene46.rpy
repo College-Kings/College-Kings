@@ -106,7 +106,7 @@ label v14s46: # -MC is walking along the sidewalk when he gets a call from Laure
 
         pause 0.75
 
-        if not v14s22_steal_fund: # Sell Car Scene 47 
+        if v14_lindsey_sell: # Sell Car Scene 47 
             jump v14s47
 
         else: # Steal fund/distract Chloe Scene 49

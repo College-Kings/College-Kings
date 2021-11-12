@@ -53,16 +53,15 @@ label v14s51_bedside_table:
 
     u "(Pretty basic bedside table for a woman... Wonder how often she uses that thing... Let's search somewhere else.)"
 
-    if v14_money_theft_date_ditch and v14s51_interaction == 1:
+    if v14_date_distraction and v14s51_interaction == 1:
         jump v14s51_text
 
     else:
         call screen v14s51_room
 
 label v14s51_text:
-    if v14_money_theft_date_ditch and v14s51_interaction == 1: # Placeholder variable for using the date as distraction
+    if v14_date_distraction and v14s51_interaction == 1:
         scene v14s51_2
-
 
         play sound "sounds/vibrate.mp3"
 
@@ -126,7 +125,7 @@ label v14s51_desk_drawer:
 
     u "(No money here though, so that's more time wasted. *Sighs*)"
 
-    if v14_money_theft_date_ditch and v14s51_interaction == 1:
+    if v14_date_distraction and v14s51_interaction == 1:
         jump v14s51_text
 
     else:
@@ -174,7 +173,7 @@ label v14s51_closet:
 
             u "(I guess I'm having second thoughts about this... I can't take nearly a thousand dollars from Chloe's private closet. What the fuck was I thinking?)"
 
-    if v14_money_theft_date_ditch and v14s51_interaction == 1:
+    if v14_date_distraction and v14s51_interaction == 1:
         jump v14s51_text
 
     else:
@@ -236,7 +235,7 @@ label v14s51_purse:
 
             u "(I guess my conscience has caught up with me. It doesn't feel right to take it.)"
 
-    if v14_money_theft_date_ditch and v14s51_interaction == 1:
+    if v14_date_distraction and v14s51_interaction == 1:
         jump v14s51_text
 
     else:
@@ -296,7 +295,7 @@ label v14s51_pillow:
 
             u "(There's going to be some extremely private things in here... It's best if I leave it.)"
     
-    if v14_money_theft_date_ditch and v14s51_interaction == 1:
+    if v14_date_distraction and v14s51_interaction == 1:
         jump v14s51_text
 
     else:
@@ -598,7 +597,7 @@ label v14s51_continue:
             "(I should reply to Lindsey.)"
             jump v14s51Lindsey_PhoneContinue
 
-    if v14_money_theft_date_ditch:
+    if v14_date_distraction:
         play sound "sounds/vibrate.mp3"
 
         u "(Uh oh... it's a message from Chloe...)"

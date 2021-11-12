@@ -394,7 +394,7 @@ label v14s45a:
     scene v14s45a_6 # FPP. MC looking out at the park
     with dissolve
 
-    if v14_money_theft_concert_distraction: # Placeholder for choosing the concert to distract Chloe
+    if v14_concert_distraction: #choosing the concert to distract Chloe
         play sound "sounds/vibrate.mp3"
 
         u "(Let's check it out.)"
@@ -425,7 +425,7 @@ label v14s45a:
         scene v14s45a_9 # TPP. MC walking down the sidewalk near the park, slight smile, mouth closed
         with fade
 
-    elif v14_money_theft_date_ditch: # Placeholder for choosing to ditch the date you set up with Chloe to steal money
+    elif v14_date_distraction: #choosing to ditch the date you set up with Chloe to steal money
         play sound "sounds/call.mp3"
 
         pause 0.75
@@ -487,7 +487,7 @@ label v14s45a:
         scene v14s45a_9
         with dissolve
     
-    elif v14_lindsey_car_sale: #Placeholder for helping Lindsey sell her car.
+    elif v14_lindsey_sell: #helping Lindsey sell her car.
         play sound "sounds/call.mp3"
 
         pause 0.75
@@ -581,7 +581,7 @@ label v14s45a:
 
         pause 0.75
 
-    else:
+    else: #not helping Lindsey
         pause 0.75
     
         scene v14s45a_8

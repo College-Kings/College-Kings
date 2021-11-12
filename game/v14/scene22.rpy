@@ -206,33 +206,33 @@ label v14s22:
     # Lindsey's planning board appears and MC makes his choices from the UI screen
 label test2:
     python:
-        lindsey_board.add_approach(0, "Sell Lindsey's Car", opinion="\"An old car that sits around in my Grandfather's barn, he' allowing me to have it. It's not the prettiest, but it gets you where you need to go.\"")
-        lindsey_board.add_approach(1, "Steal from the Chick's treasury", opinion="\"I know this sounds crazy... Why would I want to steal from the Chick's, right? Well, Chloe holds all of our funds in her bedroom and right now she's using them towards her campaign. We have to get that money before she spends it all on herself.\"")
+        lindsey_board.add_approach("Sell", "Sell Lindsey's Car", opinion="\"An old car that sits around in my Grandfather's barn, he' allowing me to have it. It's not the prettiest, but it gets you where you need to go.\"")
+        lindsey_board.add_approach("Steal", "Steal from the Chick's treasury", opinion="\"I know this sounds crazy... Why would I want to steal from the Chick's, right? Well, Chloe holds all of our funds in her bedroom and right now she's using them towards her campaign. We have to get that money before she spends it all on herself.\"")
         
-        lindsey_board.add_subtask(0, "Take images of the car without Lindsey in them",
+        v14s22_pics_no_linds = lindsey_board.add_subtask("Sell", "Take images of the car without Lindsey in them",
             opinion="\"The buyers probably want clear, detailed photos. Use your phone to get pictures of all angles so they know exactly what they're buying.\" - Lindsey",
             people=[mc, lindsey])
-        lindsey_board.add_subtask(0, "Take images of the car with Lindsey in them",
+        v14s22_pics_with_linds = lindsey_board.add_subtask("Sell", "Take images of the car with Lindsey in them",
             opinion="\"The advertisement has to be PERFECT considering what this piece of junk looks like. I'll get dressed up really nice and we'll make sure we get pictures of all angles so they know exactly what they're buying\" - Lindsey",
             people=[mc, lindsey])
-        lindsey_board.add_task(0, "Customize online listing",
+        lindsey_board.add_task("Sell", "Customize online listing",
             opinion="\"Not only does our ad have to catch people's eyes, but we also need to make sure we come up with a decent description of the car. Most importantly, we also need to decide how much money we're asking for.\" - Lindsey",
             people=[mc, lindsey])
-        lindsey_board.add_task(0, "Meet with potential buyers",
+        lindsey_board.add_task("Sell", "Meet with potential buyers",
             opinion="\"Once we have a few interested buyers, we'll ask them to meet up with us so they can look at the car. We have to convince them to buy and try to get as much money as possible.\" - Lindsey",
             people=[mc, lindsey, buyer])
 
-        lindsey_board.add_subtask(1, "Remove Chloe with concert tickets",
-            opinion= "\"If we want to get Chloe away from her room for the night, all we need are two tickets to the concert happening this Thursday. She won't be able to say no, she's been wanting to see this band for a while.\" - Lindsey",
+        v14s22_concert = lindsey_board.add_subtask("Steal", "Remove Chloe with concert tickets",
+            opinion="\"If we want to get Chloe away from her room for the night, all we need are two tickets to the concert happening this Thursday. She won't be able to say no, she's been wanting to see this band for a while.\" - Lindsey",
             people=[mc, chloe],
             cost=100)
-        lindsey_board.add_subtask(1, "Ask Chloe out and stand her up",
+        v14s22_date = lindsey_board.add_subtask("Steal", "Ask Chloe out and stand her up",
             opinion="\"The budget-friendly way to keep Chloe occupied is for you to ask her out to somewhere fancy and get her to wait for you as long as she possibly will. She'll also be upset, which is a nice bonus... For me.\" - Lindsey",
             people=[mc, chloe])
-        lindsey_board.add_task(1, "Lindsey distracts Aubrey",
+        lindsey_board.add_task("Steal", "Lindsey distracts Aubrey",
             opinion="\"The only person left to distract will be Aubrey, and I can take care of that with a simple \"Hey Aubrey, I think I want to try anal!\" line.\" - Lindsey",
             people=[lindsey, aubrey])
-        lindsey_board.add_task(1, "MC steals the Chick's money from Chloe's room",
+        lindsey_board.add_task("Steal", "MC steals the Chick's money from Chloe's room",
             opinion="\"The final and most important part, you get into Chloe's room and sniff out the cash. It could be in multiple places, so check everywhere. And honestly... See what else you can find that might help us out in the future.\" - Lindsey",
             people=[mc])
 
@@ -240,7 +240,20 @@ label test2:
 
     # Once concluded the screen disappears
 
-label v14s22_sell_car: 
+label v14s22_continue:
+    $ v14_lindsey_sell = lindsey_board.approach.id == "Sell"
+    $ v14_pics_no_linds = lindsey_board.selected_task == v14s22_pics_no_linds
+    $ v14_pics_with_linds = lindsey_board.selected_task == v14s22_pics_with_linds
+
+    $ v14_lindsey_steal = lindsey_board.approach.id == "Steal"
+    $ v14_concert_distraction = lindsey_board.selected_task == v14s22_concert
+    $ v14_date_distraction = lindsey_board.selected_task == v14s22_date
+
+    if v14_lindsey_steal:
+        jump v14s22_steal
+
+
+label v14s22_sell_car:
     scene v14s22_5
     with dissolve
 
@@ -288,7 +301,6 @@ label v14s22_sell_car:
     jump v14s22_end
 
 label v14s22_steal:
-    $ v14s22_steal_fund = True
     scene v14s22_5j # FPP. same as v14s22_5 lindsey is really excited, and throws her hands up in the air
     with dissolve
 

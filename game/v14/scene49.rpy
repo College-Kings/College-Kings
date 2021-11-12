@@ -11,7 +11,7 @@ label v14s49:
 
     u "(What do we have here?)"
 
-    if v14_money_theft_concert_distraction: #Placeholder for concert distraction
+    if v14_concert_distraction: #Placeholder for concert distraction
         scene v14s49_2 # TPP. MC stopped walking looking at his phone, slight smile, mouth closed.
         with dissolve
 
@@ -32,7 +32,7 @@ label v14s49:
                 "(I should reply to Lindsey.)"
                 jump v14s49Lindsey_PhoneContinue
 
-    elif v14_money_theft_date_ditch: #Placeholder for date ditch distraction
+    elif v14_date_distraction: #Placeholder for date ditch distraction
         scene v14s49_2a # TPP. MC holding the phone to his ear, slight smile, mouth open.
         with dissolve
 

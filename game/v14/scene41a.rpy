@@ -282,7 +282,7 @@ label v14s41a:
             "Stay quiet":
                 $ add_point(KCT.TROUBLEMAKER)
 
-                if v14_chloe_apes and not v14_chloe_grayson:
+                if v14_chloe_cameron:
                     u "(Even Cameron isn't speaking up, and he has an incentive to help Chloe win. I shouldn't press this further...)"
 
                 scene v14s41a_5a
@@ -376,8 +376,8 @@ label v14s41a:
 
                         gr "*Laughs* We don't give a fuck about all that. Feelings don't mean shit, [name]."
 
-                        if kct == "confident" or (v14_chloe_apes and not v14_chloe_grayson):
-                            if not (v14_chloe_apes and not v14_chloe_grayson):
+                        if kct == "confident" or v14_chloe_cameron:
+                            if not v14_chloe_cameron:
                                 call screen kct_popup
                         
                             $ v14_ApesPostChloePics = False
@@ -412,7 +412,7 @@ label v14s41a:
 
                             ca "But I would give a shit if someone posted a photo like that of me, or even worse... Sam. Not sure if I can do this one, man."
 
-                            if v14_chloe_apes and not v14_chloe_grayson:
+                            if v14_chloe_cameron:
                                 u "(Thanks for the help, bro. Looks like that pep talk got to him...)"
 
                             scene v14s41a_5
