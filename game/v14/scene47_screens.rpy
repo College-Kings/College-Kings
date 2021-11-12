@@ -12,7 +12,7 @@ screen v14s47_car():
             if not v14s47_linds_driver and not v14s47_solo_driver:
                 action Jump("v14s47_driver")
         hotspot (643, 197, 952, 83):
-            if not v14s47_linds_hood and not v14s47_solo_hood:
+            if not v14s47_linds_passenger and not v14s47_solo_passenger:
                 action Jump("v14s47_passenger")
         hotspot (1620, 306, 190, 450):
             if v14_pics_no_linds and not v14s47_solo_trunk:
