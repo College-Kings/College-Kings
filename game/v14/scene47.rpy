@@ -347,7 +347,7 @@ label v14s47:
 label v14s47_hood:
     if v14_pics_with_linds:
         $ v14s47_linds_hood = True
-        $ v14s47_pics += 1
+        $ v14s47_car_pics.append("v14s47_hood_2.webp")
 
         scene v14s47_hood_1 # TPP. MC walking over to the position he'll take Lindsey's picture, Lindsey moving towards the side of the hood
 
@@ -387,7 +387,7 @@ label v14s47_hood:
     
     else:
         $ v14s47_solo_hood = True
-        $ v14s47_pics += 1
+        $ v14s47_car_pics.append("v14s47_hood_2b.webp")
 
         scene v14s47_hood_1
 
@@ -436,7 +436,7 @@ label v14s47_trunk:
     if v14_pics_with_linds:
 
         $ v14s47_linds_trunk = True
-        $ v14s47_pics += 1
+        $ v14s47_car_pics.append("v14s47_trunk_2b.webp")
 
         scene v14s47_trunk_1 # TPP. MC and Lindsey walking over to the trunk of the car, both smiling, mouths closed
 
@@ -476,7 +476,7 @@ label v14s47_trunk:
 
     else:
         $ v14s47_solo_trunk = True
-        $ v14s47_pics += 1
+        $ v14s47_car_pics.append("v14s47_trunk_2c.webp")
 
         scene v14s47_trunk_1
 
@@ -539,7 +539,7 @@ label v14s47_trunk:
 label v14s47_driver:
     if v14_pics_with_linds:
         $ v14s47_linds_driver = True
-        $ v14s47_pics += 1
+        $ v14s47_car_pics.append("v14s47_driver_2c.webp")
 
         scene v14s47_driver_1 # TPP. Show MC and Lindsey walking over to the driver side of the car, both smiling, mouths closed
 
@@ -603,7 +603,7 @@ label v14s47_driver:
     
     else:
         $ v14s47_solo_driver = True
-        $ v14s47_pics += 1
+        $ v14s47_car_pics.append("v14s47_driver_2e.webp")
 
         scene v14s47_driver_1
 
@@ -694,7 +694,7 @@ label v14s47_passenger:
             "Hand on hips":
                 $ add_point(KCT.BOYFRIEND)
                 $ v14s47_linds_hips = True
-                $ v14s47_pics += 1
+                $ v14s47_car_pics.append("v14s47_passenger_2b.webp")
 
                 scene v14s47_passenger_2b # FPP. Same as v14s47_passenger_2, Lindsey mouth closed, smiling
                 with dissolve
@@ -727,7 +727,7 @@ label v14s47_passenger:
                 $ add_point(KCT.BRO)
                 $ add_point(KCT.TROUBLEMAKER)
                 $ v14s47_linds_knees = True
-                $ v14s47_pics += 1
+                $ v14s47_car_pics.append("v14s47_passenger_2e.webp")
 
                 scene v14s47_passenger_2b
                 with dissolve
@@ -795,7 +795,7 @@ label v14s47_passenger:
         menu:
             "Scare bird away":
                 $ v14s47_solo_no_bird = True
-                $ v14s47_pics += 1
+                $ v14s47_car_pics.append("v14s47_passenger_2l.webp")
                 
                 u "Nah. Scare it away before it poops!"
 
@@ -843,7 +843,7 @@ label v14s47_passenger:
 
             "Take photo with bird":
                 $ v14s47_solo_bird = True
-                $ v14s47_pics += 1
+                $ v14s47_car_pics.append("v14s47_passenger_2f.webp")
 
                 u "Yeah, Linds. A crazy bird lady might buy the car simply because he's sitting on it. *Chuckles*"
 
@@ -871,7 +871,7 @@ label v14s47_passenger:
 label v14s47_end:
     scene v14s47_end_1 # FPP. MC and Lindsey standing by the car, next to each other, Lindsey looking at MC, Lindsey smiling, mouth closed
 
-    if v14s47_pics < 4:
+    if len(v14s47_car_pics) < 4:
         u "Okay, I think that's enough."
     
     else:
