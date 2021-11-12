@@ -35,7 +35,7 @@ screen iBuy():
             sensitive car_images_index > 0
             yalign 0.5
 
-        add Transform("images/v14/iBuy/{}".format(v14s47_car_pics[car_images_index]), size=(929, 358))
+        add Transform("images/v14/Scene 47/{}".format(v14s47_car_pics[car_images_index]), size=(929, 358))
 
         imagebutton:
             idle "images/v14/iBuy/arrow_right.webp"
