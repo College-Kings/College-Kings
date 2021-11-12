@@ -18,7 +18,7 @@ screen iBuy(car_images=["car1.webp"]):
 
     hbox:
         xalign 0.78
-        yalign 0.895
+        yalign 0.9
         spacing 20
 
         text "Car Price: ${}".format(v14s48_car_price):
@@ -45,7 +45,7 @@ screen iBuy(car_images=["car1.webp"]):
 
 
     # Select Car Description
-    add "images/v14/iBuy/descriptions_only.png":
+    add "images/v14/iBuy/descriptions_only.webp":
         xalign 0.5
         ypos 583
 
@@ -77,6 +77,6 @@ screen iBuy(car_images=["car1.webp"]):
     # Confirm
     imagebutton:
         idle "images/v14/iBuy/confirm.webp"
-        action Hide("iBuy")
+        action [Hide("iBuy"), Jump ("v14s48_end")]
         xalign 0.5
         ypos 973
