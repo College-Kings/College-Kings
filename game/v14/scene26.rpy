@@ -276,7 +276,7 @@ label v14s26:
 # Kiwi Post: v14kw26 - Lindsey and Lauren Selfie in front of her banner (Lindsey, Returning The Promise) on the banner
     if v11_lindsey_slogan == 1:
         #Selfie with Lauren in front of slogan banner that says Lindsey, Returning The Promise
-        $ v14s26_kiwiiPost1 = KiwiiPost("Lindsey", "v14/v14kw26.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! All proceeds go to my campaign fund and to the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
+        $ v14s26_kiwiiPost1 = KiwiiPost("Lindsey", "v14/v14kw26.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! For the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
         $ v14s26_kiwiiPost1.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
         $ v14s26_kiwiiPost1.newComment("Nora", "Cuties <3", queue=False)
         $ v14s26_kiwiiPost1.newComment("Imre", "Actually that cookie this morning made me shit myself!", queue=False)
@@ -292,7 +292,7 @@ label v14s26:
 # Kiwi Post: v14kw26_1 - Lindsey and Lauren Selfie in front of her banner (Lindsey, Say Bye To The Bullshit) on the banner
     else:
         #Selfie with Lauren in front of slogan banner that says Lindsey, Say Bye To The Bullshit
-        $ v14s26_kiwiiPost2 = KiwiiPost("Lindsey", "v14/v14kw26_1.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! All proceeds go to my campaign fund and to the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
+        $ v14s26_kiwiiPost2 = KiwiiPost("Lindsey", "v14/v14kw26_1.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! For the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
         $ v14s26_kiwiiPost2.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
         $ v14s26_kiwiiPost2.newComment("Nora", "Cuties <3", queue=False)
         $ v14s26_kiwiiPost2.newComment("Imre", "Actually that cookie this morning made me shit myself!", queue=False)

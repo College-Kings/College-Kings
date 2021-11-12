@@ -522,9 +522,6 @@ label v14s53:
 
             u "(*Sighs* I feel good about that. I think I did the right thing.)"
 
-            scene v14s53_8
-            with fade
-
             stop music fadeout 3
             jump v14s53b
 
