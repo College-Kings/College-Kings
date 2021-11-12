@@ -101,7 +101,7 @@ label test:
             opinion="\"The last step is to post the photo with a good caption and hope for the best.\" - Chloe",
             people=[mc, chloe])
 
-        chloe_board.add_task("Apes", "Host a small get together with Cameron, Grayson, Chloe, Aubrey and MC",
+        chloe_board.add_task("Apes", "Host a small get together with Cameron, Grayson, Chloe, Aubrey and you",
             opinion= "\"First thing's first: Get them all in a room, give them each a beer, and put on some good music. As soon as we've set the mood, we can get down to business.\" - Chloe",
             people=[mc, chloe, aubrey, grayson, cameron])
         v14s19_talk_cameron = chloe_board.add_subtask("Apes", "Talk to Cameron about a strategic alliance",
