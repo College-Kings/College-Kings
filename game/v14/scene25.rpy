@@ -660,6 +660,7 @@ label v14s25:
             scene v14s25_8
             with dissolve
 
+            stop sound
             am "That's the last time you'll ever see me with drugs."
 
             scene v14s25_8a
