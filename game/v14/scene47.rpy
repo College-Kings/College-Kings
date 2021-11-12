@@ -350,7 +350,6 @@ label v14s47_hood:
         $ v14s47_pics += 1
 
         scene v14s47_hood_1 # TPP. MC walking over to the position he'll take Lindsey's picture, Lindsey moving towards the side of the hood
-        with dissolve
 
         pause 0.75
 
@@ -391,7 +390,6 @@ label v14s47_hood:
         $ v14s47_pics += 1
 
         scene v14s47_hood_1
-        with dissolve
 
         pause 0.75
 
@@ -441,7 +439,6 @@ label v14s47_trunk:
         $ v14s47_pics += 1
 
         scene v14s47_trunk_1 # TPP. MC and Lindsey walking over to the trunk of the car, both smiling, mouths closed
-        with dissolve
 
         pause 0.75
 
@@ -482,7 +479,6 @@ label v14s47_trunk:
         $ v14s47_pics += 1
 
         scene v14s47_trunk_1
-        with dissolve
 
         pause 0.75
 
@@ -546,7 +542,6 @@ label v14s47_driver:
         $ v14s47_pics += 1
 
         scene v14s47_driver_1 # TPP. Show MC and Lindsey walking over to the driver side of the car, both smiling, mouths closed
-        with dissolve
 
         pause 0.75
 
@@ -611,7 +606,6 @@ label v14s47_driver:
         $ v14s47_pics += 1
 
         scene v14s47_driver_1
-        with dissolve
 
         pause 0.75
 
@@ -682,7 +676,6 @@ label v14s47_driver:
 label v14s47_passenger:
     $ v14s47_passenger = True
     scene v14s47_passenger_1 # TPP. Show MC and Lindsey walking towards the passenger door
-    with dissolve
 
     pause 0.75
 
@@ -877,7 +870,6 @@ label v14s47_passenger:
 
 label v14s47_end:
     scene v14s47_end_1 # FPP. MC and Lindsey standing by the car, next to each other, Lindsey looking at MC, Lindsey smiling, mouth closed
-    with dissolve
 
     if v14s47_pics < 4:
         u "Okay, I think that's enough."
