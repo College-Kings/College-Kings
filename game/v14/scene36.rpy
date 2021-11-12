@@ -32,17 +32,14 @@ label v14s36:
 
     u "Well, I feel honored to be one of the first people to use it, haha."
 
-    scene v14s36_2
-    with dissolve
-
     u "Are you planning on swimming?"
 
-    scene v14s36_2a
+    scene v14s36_2
     with dissolve
 
     jen "Maybe. I thought I would but the water is a little colder than I expected. I will put my feet in though."
 
-    scene v14s36_2
+    scene v14s36_2a
     with dissolve
 
     u "That's a good idea. Let's start slow. *Laughs*"
@@ -80,11 +77,6 @@ label v14s36:
         "Happy to help":
             $ add_point(KCT.BOYFRIEND)
             u "Oh, happy to help... Is Penelope busy today?"
-
-            scene v14s36_4
-            with dissolve
-
-            jen "Yeah, I tried texting her but she told me she was sleeping early."
 
         "Ouch that hurts":
             $ add_point(KCT.TROUBLEMAKER)
@@ -517,10 +509,7 @@ label v14s36:
 
             u "That'd be nice, yeah. Of course."
 
-            scene v14s36_4
-            with dissolve
 
-            jen "Of course? Are you trying to make me feel special or something?"
 
         "You're a spy?":
             $ add_point(KCT.TROUBLEMAKER)
@@ -544,7 +533,11 @@ label v14s36:
             with dissolve
 
             jen "*Chuckles* Whatever."
+    scene v14s36_4
+    with dissolve
 
+    jen "Of course? Are you trying to make me feel special or something?"
+    
     scene v14s36_4a
     with dissolve
 
