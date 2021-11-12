@@ -105,6 +105,9 @@ label after_load:
         achApp.img = "images/phone/achievements/appAssets/achievementsIcon.webp"
         kiwiiApp.img = "images/phone/kiwii/appAssets/kiwiiIcon.webp"
 
+        # Playable Character
+        mc.profile_picture = profile_pictures[0]
+
         # Kiwii Users
         kiwiiUsers = kiwii_users()
 
