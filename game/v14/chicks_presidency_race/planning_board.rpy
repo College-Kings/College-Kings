@@ -22,10 +22,11 @@ init python:
 
 
     class PlanningBoard:
-        def __init__(self, background, background_color, money=0):
+        def __init__(self, background, background_color, money=0, style=None):
             self.background = background
             self.background_color = background_color
             self.money = money
+            self.style = style
 
             self.approaches = {}
             self.approach = None
@@ -106,6 +107,8 @@ screen planning_board(planning_board):
                                     hovered Show("planning_board_task_desc", None, subtask)
                                     unhovered Hide("planning_board_task_desc")
                                     action [SetField(planning_board, "selected_task", subtask), Show("planning_board_confirm_tasks", None, planning_board)]
+                                    if planning_board.style is not None:
+                                        text_style planning_board.style
 
                 else:
                     textbutton task.name:
@@ -114,6 +117,8 @@ screen planning_board(planning_board):
                         hovered Show("planning_board_task_desc", None, task)
                         unhovered Hide("planning_board_task_desc")
                         action NullAction()
+                        if planning_board.style is not None:
+                            text_style planning_board.style
 
     # Right Side
     $ approach = planning_board.approaches.values()[1]
@@ -157,6 +162,8 @@ screen planning_board(planning_board):
                                         action [SetField(planning_board, "selected_task", subtask), Show("planning_board_confirm_tasks", None, planning_board)]
                                     else:
                                         action NullAction()
+                                    if planning_board.style is not None:
+                                        text_style planning_board.style
 
                 else:
                     textbutton task.name:
@@ -165,6 +172,8 @@ screen planning_board(planning_board):
                         hovered Show("planning_board_task_desc", None, task)
                         unhovered Hide("planning_board_task_desc")
                         action NullAction()
+                        if planning_board.style is not None:
+                            text_style planning_board.style
 
     if not renpy.get_screen("planning_board_bottom"):
         use planning_board_help("Please select an approach")
@@ -309,3 +318,9 @@ style task_button_text is text:
     insensitive_color "#aaa"
     hover_color "#FFD166"
     selected_color "#fff"
+
+style lindsey_board is task_button_text:
+    idle_color "#b9b18d"
+    insensitive_color "#b9b18d"
+    hover_color "#877E54"
+    selected_color "#877E54"
