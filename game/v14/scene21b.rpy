@@ -9,6 +9,8 @@ init python:
         simplr_contacts.remove(beth.simplr)
 
 label v14s21b:
+    play music "music/v14/Track Scene 21b.mp3" fadein 2
+
     scene v14s21b_1 # TPP. Show the sky, it's midday
     with dissolve
 
@@ -25,6 +27,7 @@ label v14s21b:
 
     pause 1
 
+    stop music fadeout 3
     if v14_help_lindsey:
         jump v14s22
 

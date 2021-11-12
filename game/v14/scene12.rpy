@@ -25,6 +25,8 @@ init python:
         simplr_contacts.remove(emmy.simplr)
 
 label v14s12:
+    play music "music/v14/Track Scene 12.mp3" fadein 2
+
     scene v14s12_1 # TPP. MC walking down the sidewalk back to San Vallejo, slight smile, mouth closed. 
     with fade
     play sound "sounds/call.mp3"
@@ -224,6 +226,7 @@ label v14s12:
     elif emmy.simplr in simplr_pendingContacts:
         $ emmy.simplr.removeContact()
 
+    stop music fadeout 3
     if joinwolves:
         scene v14s12_5 # TPP. MC opening the door to the wolves frat house, slight smile, mouth closed.
         with fade

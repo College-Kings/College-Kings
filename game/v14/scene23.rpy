@@ -4,6 +4,8 @@
 # Time: Evening 
 
 label v14s23:
+    play music "music/v14/Track Scene 23_1.mp3" fadein 2
+
     scene v14s23_1 # TPP. Show MC walking up to the steps of the wolves house and seeing Chris, Chris looking at the sky, Both slight smile, mouth closed.
     with fade
 
@@ -137,6 +139,9 @@ label v14s23:
             with dissolve
 
             ch "I don't think you get what's at stake here. Chloe-"
+
+    stop music fadeout 3
+    play music "music/v14/Track Scene 23_2.mp3" fadein 2
 
     scene v14s23_1b # TPP. Same as v14s23_1a, Show MC and Chris sitting on the porch, Chloe running towards the porch back facing the camera, MC and Chris both slight smile, mouth closed.
     with dissolve
@@ -796,4 +801,5 @@ label v14s23:
 
     pause 0.75
 
+    stop music fadeout 3
     jump v14s24

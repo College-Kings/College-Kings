@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v14s16:
+    play music "music/v14/Track Scene 16.mp3" fadein 2
+    
     scene v14s16_1 # TPP. MC starting to turn around, Chloe running towards him from a distance, MC slight smile, mouth closed, Chloe slightly annoyed, mouth closed.
     with dissolve
 
@@ -337,4 +339,5 @@ label v14s16:
 
     pause 0.75
 
+    stop music fadeout 3
     jump v14s17

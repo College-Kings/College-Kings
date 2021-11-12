@@ -4,6 +4,8 @@
 # Time: Afternoon
 
 label v14s09:
+    play music "music/v14/Track Scene 9.mp3" fadein 2
+    
     scene v14s09_1 # TPP. show mc walking through airport, pulling his luggae, slight smile, mouth closed
     with dissolve
 
@@ -728,4 +730,5 @@ label v14s09:
 
     pause 1.25
 
+    stop music fadeout 3
     jump v14s10

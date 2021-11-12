@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v14s07:
+    play music "music/v14/Track Scene 7.mp3" fadein 2
+
     scene v14s07_1 # TPP. # MC arrives in the hotel lobby and he sees Aubrey and Riley together holding their bags, looking at each other with flirtatious expressions, mouths closed, Imre standing with Chris both of them with concerned expression looking over at Ms. Rose and Nora, Ms. Rose with a hand on Nora's soulder both of them looking at each other, slight frowns, mouths closed
     with dissolve
 
@@ -110,4 +112,5 @@ label v14s07:
     
     pause 0.75
 
+    stop music fadeout 3
     jump v14s08

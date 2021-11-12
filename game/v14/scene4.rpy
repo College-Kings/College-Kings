@@ -4,6 +4,8 @@
 # Time: Night
 
 label v14s04:
+    play music "music/v14/Track Scene 4.mp3" fadein 2
+
     scene v14s04_1 # TPP. Show MC enteting the hotel lobby, neutral expression, mouth closed
     with dissolve
 
@@ -37,6 +39,7 @@ label v14s04:
 
     pause 0.75
 
+    stop music fadeout 3
     if v11_riley_roomate:
         jump v14s05a
 

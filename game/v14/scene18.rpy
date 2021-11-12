@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v14s18:
+    play music "music/v14/Track Scene 18.mp3" fadein 2
+
     scene v14s18_1 # TPP. Show MC leaving the classroom, slight smile, mouth closed
     with dissolve
 
@@ -289,6 +291,7 @@ label v14s18:
 
         pause 0.75
 
+        stop music fadeout 3
         jump v14s19 
 
     else:
@@ -297,4 +300,5 @@ label v14s18:
 
         pause 0.75
 
+        stop music fadeout 3
         jump v14s20

@@ -4,6 +4,8 @@
 # Time: Evening
 
 label v14s22a:
+    play music "music/v14/Track Scene 22a.mp3" fadein 2
+
     scene v14s22a_1 # FPP. show just lindsey, looking at mc, half smile, mouth open, hand up gesture
     with dissolve
 
@@ -101,6 +103,7 @@ label v14s22a:
 
         u "(Oh, right, Chloe's on her way to the Wolves house. Need to rush now.)"
 
+        stop music fadeout 3
         jump v14s23
 
     else:
@@ -134,4 +137,5 @@ label v14s22a:
 
         u "(Let's see who this is...)"
 
+        stop music fadeout 3
         jump v14s24

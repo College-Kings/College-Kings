@@ -4,6 +4,8 @@
 # Time: Evening 
 
 label v14s05:
+    play music "music/v14/Track Scene 5.mp3" fadein 2
+
     play sound "sounds/dooropen.mp3"
     pause 0.51
 
@@ -197,4 +199,5 @@ label v14s05:
     
     u "(And as quickly as it began, my day has concluded.)"
 
+    stop music fadeout 3
     jump v14s06

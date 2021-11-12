@@ -4,6 +4,8 @@
 # Time: Tuesday
 
 label v14s20:
+    play music "music/v14/Track Scene 20.mp3" fadein 2
+
     scene v14s20_1 # FPP Show Autumn, in school hallway, handing out candy to people walking by, smiling with mouth open
     with dissolve
 
@@ -519,6 +521,7 @@ label v14s20:
 
     pause 0.75
 
+    stop music fadeout 3
     # -Transition to Scene 21 if chloers/gf and Talk to Chris for Chloe-
     if (chloers or chloegf) and v14_talk_to_chris: # ADD TALK TO CHRIS VARIABLE TO SCENE 19a
         jump v14s21

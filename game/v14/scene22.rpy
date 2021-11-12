@@ -4,6 +4,8 @@
 # Time: Evening
 
 label v14s22:
+    play music "music/v14/Track Scene 22.mp3" fadein 2
+
     scene v14s22_1 # TPP. MC is walking on campus and stumbles upon the janitor's closet, slight smile, mouth closed
     with dissolve
 
@@ -430,4 +432,5 @@ label v14s22_end:
 
     pause 0.75
 
+    stop music fadeout 3
     jump v14s22a

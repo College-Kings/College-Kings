@@ -4,6 +4,8 @@
 # Time: Sunday
 
 label v14s03b:
+    play music "music/v14/Track Scene 3b.mp3" fadein 2
+
     scene v14s03b_1 # TPP Show MC, Imre, and Ryan coming in the brothel door, Imre pointing and looking toward the girls, mouth open
     with dissolve
 
@@ -317,4 +319,5 @@ label v14s03b:
 
     pause 0.75
 
+    stop music fadeout 3
     jump v14s03c # -Transition to Scene 3c-

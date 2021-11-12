@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v14s14:
+    play music "music/v14/Track Scene 14.mp3" fadein 2
+
     scene black
     with fade
     
@@ -67,4 +69,5 @@ label v14s14:
     
     pause 0.75
 
+    stop music fadeout 3
     jump v14s15

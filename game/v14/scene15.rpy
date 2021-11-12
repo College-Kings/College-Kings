@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v14s15:
+    play music "music/v14/Track Scene 15.mp3" fadein 2
+
     scene v14s15_1 # TPP. Outside, MC running between campus buildings. 
     with dissolve
 
@@ -155,4 +157,5 @@ label v14s15:
 
     u "(That man is a whole ass character... But I think he has more than one reason why he's on Chloe's side. *Laughs*)"
 
+    stop music fadeout 3
     jump v14s16

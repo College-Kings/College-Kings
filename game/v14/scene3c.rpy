@@ -4,6 +4,8 @@
 # Time: Night 
 
 label v14s03c:
+    play music "music/v14/Track Scene 3c.mp3" fadein 2
+
     scene v14s03c_1 # TPP. Show MC walking in the Brothel bar, slight smile, mouth open.
     with dissolve
 
@@ -333,6 +335,7 @@ label v14s03c:
 
             pause 0.75
 
+            stop music fadeout 3
             jump v14s03d
            
         "Help Ryan":
@@ -386,4 +389,5 @@ label v14s03c:
 
             pause 0.75
 
+            stop music fadeout 3
             jump v14s03e

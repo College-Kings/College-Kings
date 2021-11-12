@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v14s06:
+    play music "music/v14/Track Scene 6.mp3" fadein 2
+
     scene black
     with fade
     
@@ -154,4 +156,5 @@ label v14s06:
         
         u "Perfect. Thanks for everything, Luuk!"
 
+    stop music fadeout 3
     jump v14s07

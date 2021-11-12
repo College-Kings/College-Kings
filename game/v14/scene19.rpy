@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v14s19:
+    play music "music/v14/Track Scene 19.mp3" fadein 2
+
     scene v14s19_1 # TPP. Show MC walking toward library, MC looking around for sign of Chloe, MC mouth closed.
     with dissolve
 
@@ -174,4 +176,5 @@ label v14s19_continue:
 
     pause 0.75
 
+    stop music fadeout 3
     jump v14s19a

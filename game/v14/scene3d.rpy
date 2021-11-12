@@ -4,6 +4,8 @@
 # Time: 
 
 label v14s03d:
+    play music "music/v14/Track Scene 3d_1.mp3" fadein 2
+
     scene v14s03d_1 # TPP View from behind Satin, show Satin pushing MC into a sitting position with a hand on his shoulder, Satin's mouth open if visible
     with dissolve
 
@@ -384,6 +386,9 @@ label v14s03d:
 
             u "If I have to... *Laughs*"
 
+            stop music fadeout 3
+            play music "music/v14/Track Scene 3d_2.mp3" fadein 2
+
             scene v14s03d_17 # TPP MC and Satin standing up, Satin looking at MC, looking embarrased with her mouth open
             with dissolve
 
@@ -450,4 +455,5 @@ label v14s03d:
 
 $ renpy.end_replay()
 # -Regardless of choice scene continued
+stop music fadeout 3
 jump v14s03e # -Transition to Scene 3e

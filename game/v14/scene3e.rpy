@@ -4,6 +4,8 @@
 # Time: Night
 
 label v14s03e:
+    play music "music/v14/Track Scene 3e.mp3" fadein 2
+
     if v14_ryan_satin: 
         scene v14s03e_1 # TPP. Show MC standing outside of room, neutral expression, mouth closed 
         with fade
@@ -458,4 +460,5 @@ label v14s03e:
     
     pause 0.75
 
+    stop music fadeout 3
     jump v14s04

@@ -4,6 +4,8 @@
 # Time: 
 
 label v14s19a:
+    play music "music/v14/Track Scene 19a_1.mp3" fadein 2
+
     scene v14s19a_1 # FPP Show Chloe, in library, looking at MC, smiling with mouth open
     with dissolve
 
@@ -196,6 +198,9 @@ label v14s19a:
                 cl "*Sighs* Yeah, I get it. His head isn't in the right space around you. Smart thinking."
 
     # -Continue regardless of everything
+    stop music fadeout 3
+    play music "music/v14/Track Scene 19a_2.mp3" fadein 2
+
     scene v14s19a_3 # Show a book dropping flat on the ground with a loud "smack"
     with vpunch
     play sound "sounds/hs.mp3"
@@ -258,4 +263,5 @@ label v14s19a:
 
     pause 0.75
 
+    stop music fadeout 3
     jump v14s20 # -Transition to Scene 20-

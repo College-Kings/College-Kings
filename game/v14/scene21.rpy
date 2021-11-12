@@ -4,6 +4,8 @@
 # Time: Afternoon
 
 label v14s21:
+    play music "music/v14/Track Scene 21.mp3" fadein 2
+
     scene v14s21_1 # TPP. Show MC walking outside infront of the school, slight smile, mouth closed.
     with dissolve
 
@@ -249,6 +251,7 @@ label v14s21:
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.TROUBLEMAKER)
             $ v14_chloe_sex = True
+            stop music fadeout 3
             jump v14s21a
         
         "Pull back":
@@ -336,4 +339,5 @@ label v14s21:
 
             u "(She's something else.)"
 
+            stop music fadeout 3
             jump v14s21b

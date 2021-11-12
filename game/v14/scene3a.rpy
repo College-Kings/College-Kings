@@ -4,6 +4,8 @@
 # Time: Night
 
 label v14s03a:
+    play music "music/v14/Track Scene 3a_1.mp3" fadein 2
+    
     scene v14s03a_1 # TPP. MC with Imre and Ryan right behind him, far away, walking towards the night gambler, MC/Gambler neutral expression, mouth closed,Ryan/Imre, smile, mouth closed
     with dissolve
 
@@ -133,6 +135,9 @@ label v14s03a:
             with dissolve
 
             pause 0.75
+            
+            stop music fadeout 3
+            play music "music/v14/Track Scene 3a_2.mp3" fadein 2
 
             scene v14s03a_5a # TPP. Gambler grabs MC's arm to prevent him from leaving. 
             with dissolve
@@ -204,6 +209,9 @@ label v14s03a:
             u "*Chuckles*"
 
         "Give it a try": # -If Give it a try
+            stop music fadeout 3
+            play music "music/v14/Track Scene 3a_2.mp3" fadein 2
+
             $ add_point(KCT.TROUBLEMAKER)
             scene v14s03a_2
             with dissolve
@@ -559,4 +567,5 @@ label v14s03a:
 
     pause 0.75
 
+    stop music fadeout 3
     jump v14s03b

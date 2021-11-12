@@ -4,6 +4,8 @@
 # Time: Night
 
 label v14s05a:
+    play music "music/v14/Track Scene 5.mp3" fadein 2
+
     play sound "sounds/dooropen.mp3"
     pause 0.51
 
@@ -292,4 +294,5 @@ label v14s05a:
 
     pause 0.75
 
+    stop music fadeout 3
     jump v14s06

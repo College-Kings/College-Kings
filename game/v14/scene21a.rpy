@@ -4,6 +4,8 @@
 # Time: Tuesday night
 
 label v14s21a:
+    play music "music/v14/Track Scene 21a.mp3" fadein 2
+
     scene v14s21a_1 # TPP Show Chloe leaning back from MC and removing her shirt
     with dissolve
 
@@ -336,4 +338,5 @@ label v14s21a:
 
     pause 0.75
 
+    stop music fadeout 3
     jump v14s21b # -Transition to Scene 21b-
