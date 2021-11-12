@@ -222,7 +222,7 @@ label test2:
         lindsey_board.add_task("Steal", "Lindsey distracts Aubrey",
             opinion="\"The only person left to distract will be Aubrey, and I can take care of that with a simple \"Hey Aubrey, I think I want to try anal!\" line.\" - Lindsey",
             people=[lindsey, aubrey])
-        lindsey_board.add_task("Steal", "MC steals the Chick's money from Chloe's room",
+        lindsey_board.add_task("Steal", "You steal the Chick's money from Chloe's room",
             opinion="\"The final and most important part, you get into Chloe's room and sniff out the cash. It could be in multiple places, so check everywhere. And honestly... See what else you can find that might help us out in the future.\" - Lindsey",
             people=[mc])
 
