@@ -13,12 +13,15 @@ screen iBuy(car_images=["car1.webp"]):
 
     add "images/v14/iBuy/background.webp"
 
-    vbox:
-        xalign 0.5
+    add "images/v14/iBuy/price_scale_background.png":
+        pos(301,865)
 
-        text "Car Description: {}".format(v14s48_car_description.name):
-            xalign 0.5
-        text "Car Price: {}".format(v14s48_campaign_money):
+    hbox:
+        xalign 0.78
+        yalign 0.895
+        spacing 20
+
+        text "Car Price: ${}".format(v14s48_car_price):
             xalign 0.5
 
     hbox:
@@ -42,7 +45,7 @@ screen iBuy(car_images=["car1.webp"]):
 
 
     # Select Car Description
-    add "images/v14/iBuy/descriptions_only.webp":
+    add "images/v14/iBuy/descriptions_only.png":
         xalign 0.5
         ypos 583
 
@@ -57,7 +60,7 @@ screen iBuy(car_images=["car1.webp"]):
 
     # Determine Price
     bar:
-        value VariableValue("v14s48_campaign_money",offset=100, range=700)
+        value VariableValue("v14s48_car_price",offset=100, range=700)
         pos (765, 870)
         maximum (800, 50)
 
