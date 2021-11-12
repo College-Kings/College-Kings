@@ -6,7 +6,7 @@ init python:
         TRUTH = 2
 
 
-screen iBuy(car_images=["car1.webp"]):
+screen iBuy():
     zorder 100
 
     default car_images_index = 0
@@ -35,12 +35,12 @@ screen iBuy(car_images=["car1.webp"]):
             sensitive car_images_index > 0
             yalign 0.5
 
-        add Transform("images/v14/iBuy/{}".format(car_images[car_images_index]), size=(929, 358))
+        add Transform("images/v14/iBuy/{}".format(v14s47_car_pics[car_images_index]), size=(929, 358))
 
         imagebutton:
             idle "images/v14/iBuy/arrow_right.webp"
             action SetScreenVariable("car_images_index", car_images_index + 1)
-            sensitive car_images_index < len(car_images) - 1
+            sensitive car_images_index < len(v14s47_car_pics) - 1
             yalign 0.5
 
 
