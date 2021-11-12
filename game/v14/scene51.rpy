@@ -312,6 +312,7 @@ label v14s51_pillow:
 # -if MC chose to go to Chloe's room and did not keep listening, and has searched all 4 areas
 
 label v14s51_continue:
+    play sound "sounds/doorclose.mp3"
     scene v14s51_4 # TPP. Show MC slightly worried, mouth closed
 
     u "(Huh? What was that?)"
