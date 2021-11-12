@@ -9,36 +9,36 @@ screen v14s51_room():
             if v14s51_interaction <= 1:
                 if not v14s51_bedside:
                     imagebutton:
-                        idle "images/v14/Scene 51/v14s51_bedside.webp"
-                        hover "images/v14/Scene 51/v14s51_bedside_hover.webp"
+                        idle "images/v14/Scene 51/v14s51_bedside.png"
+                        hover "images/v14/Scene 51/v14s51_bedside_hover.png"
                         action Jump("v14s51_bedside_table")
                         pos (0, 0)
                     #hotspot (1008, 367, 191, 136) action Jump("v14s51_bedside_table")
                 if not v14s51_desk:
                     imagebutton:
-                        idle "images/v14/Scene 51/v14s51_desk.webp"
-                        hover "images/v14/Scene 51/v14s51_desk_hover.webp"
+                        idle "images/v14/Scene 51/v14s51_desk.png"
+                        hover "images/v14/Scene 51/v14s51_desk_hover.png"
                         action Jump("v14s51_desk_drawer")
                         pos (0, 0)
                     #hotspot (1728, 535, 191, 202) action Jump("v14s51_desk_drawer")
                 if not v14s51_closet:
                     imagebutton:
-                        idle "images/v14/Scene 51/v14s51_closet.webp"
-                        hover "images/v14/Scene 51/v14s51_closet_hover.webp"
+                        idle "images/v14/Scene 51/v14s51_closet.png"
+                        hover "images/v14/Scene 51/v14s51_closet_hover.png"
                         action Jump("v14s51_closet")
                         pos (0, 0)
                     #hotspot (280, 39, 269, 494) action Jump("v14s51_closet")
                 if not v14s51_purse:
                     imagebutton:
-                        idle "images/v14/Scene 51/v14s51_purse.webp"
-                        hover "images/v14/Scene 51/v14s51_purse_hover.webp"
+                        idle "images/v14/Scene 51/v14s51_purse.png"
+                        hover "images/v14/Scene 51/v14s51_purse_hover.png"
                         action Jump("v14s51_purse")
                         pos (0, 0)
                     #hotspot (0, 265, 301, 527) action Jump("v14s51_purse")
                 if not v14s51_pillow:
                     imagebutton:
-                        idle "images/v14/Scene 51/v14s51_pillow.webp"
-                        hover "images/v14/Scene 51/v14s51_pillow.webp"
+                        idle "images/v14/Scene 51/v14s51_pillow.png"
+                        hover "images/v14/Scene 51/v14s51_pillow.png"
                         action Jump("v14s51_pillow")
                         pos (0, 0)
                     #hotspot (1146, 424, 263, 96) action Jump("v14s51_pillow")
@@ -48,38 +48,38 @@ screen v14s51_room():
 
         elif v14s50_listen_to_aubrey_lindsey:
             if v14s51_interaction <= 2:
-                f not v14s51_bedside:
+                if not v14s51_bedside:
                     imagebutton:
-                        idle "images/v14/Scene 51/v14s51_bedside.webp"
-                        hover "images/v14/Scene 51/v14s51_bedside_hover.webp"
+                        idle "images/v14/Scene 51/v14s51_bedside.png"
+                        hover "images/v14/Scene 51/v14s51_bedside_hover.png"
                         action Jump("v14s51_bedside_table")
                         pos (0, 0)
                     #hotspot (1008, 367, 191, 136) action Jump("v14s51_bedside_table")
                 if not v14s51_desk:
                     imagebutton:
-                        idle "images/v14/Scene 51/v14s51_desk.webp"
-                        hover "images/v14/Scene 51/v14s51_desk_hover.webp"
+                        idle "images/v14/Scene 51/v14s51_desk.png"
+                        hover "images/v14/Scene 51/v14s51_desk_hover.png"
                         action Jump("v14s51_desk_drawer")
                         pos (0, 0)
                     #hotspot (1728, 535, 191, 202) action Jump("v14s51_desk_drawer")
                 if not v14s51_closet:
                     imagebutton:
-                        idle "images/v14/Scene 51/v14s51_closet.webp"
-                        hover "images/v14/Scene 51/v14s51_closet_hover.webp"
+                        idle "images/v14/Scene 51/v14s51_closet.png"
+                        hover "images/v14/Scene 51/v14s51_closet_hover.png"
                         action Jump("v14s51_closet")
                         pos (0, 0)
                     #hotspot (280, 39, 269, 494) action Jump("v14s51_closet")
                 if not v14s51_purse:
                     imagebutton:
-                        idle "images/v14/Scene 51/v14s51_purse.webp"
-                        hover "images/v14/Scene 51/v14s51_purse_hover.webp"
+                        idle "images/v14/Scene 51/v14s51_purse.png"
+                        hover "images/v14/Scene 51/v14s51_purse_hover.png"
                         action Jump("v14s51_purse")
                         pos (0, 0)
                     #hotspot (0, 265, 301, 527) action Jump("v14s51_purse")
                 if not v14s51_pillow:
                     imagebutton:
-                        idle "images/v14/Scene 51/v14s51_pillow.webp"
-                        hover "images/v14/Scene 51/v14s51_pillow.webp"
+                        idle "images/v14/Scene 51/v14s51_pillow.png"
+                        hover "images/v14/Scene 51/v14s51_pillow.png"
                         action Jump("v14s51_pillow")
                         pos (0, 0)
             else:
@@ -88,38 +88,38 @@ screen v14s51_room():
 
         else:
             if v14s51_interaction <= 3:
-                f not v14s51_bedside:
+                if not v14s51_bedside:
                     imagebutton:
-                        idle "images/v14/Scene 51/v14s51_bedside.webp"
-                        hover "images/v14/Scene 51/v14s51_bedside_hover.webp"
+                        idle "images/v14/Scene 51/v14s51_bedside.png"
+                        hover "images/v14/Scene 51/v14s51_bedside_hover.png"
                         action Jump("v14s51_bedside_table")
                         pos (0, 0)
                     #hotspot (1008, 367, 191, 136) action Jump("v14s51_bedside_table")
                 if not v14s51_desk:
                     imagebutton:
-                        idle "images/v14/Scene 51/v14s51_desk.webp"
-                        hover "images/v14/Scene 51/v14s51_desk_hover.webp"
+                        idle "images/v14/Scene 51/v14s51_desk.png"
+                        hover "images/v14/Scene 51/v14s51_desk_hover.png"
                         action Jump("v14s51_desk_drawer")
                         pos (0, 0)
                     #hotspot (1728, 535, 191, 202) action Jump("v14s51_desk_drawer")
                 if not v14s51_closet:
                     imagebutton:
-                        idle "images/v14/Scene 51/v14s51_closet.webp"
-                        hover "images/v14/Scene 51/v14s51_closet_hover.webp"
+                        idle "images/v14/Scene 51/v14s51_closet.png"
+                        hover "images/v14/Scene 51/v14s51_closet_hover.png"
                         action Jump("v14s51_closet")
                         pos (0, 0)
                     #hotspot (280, 39, 269, 494) action Jump("v14s51_closet")
                 if not v14s51_purse:
                     imagebutton:
-                        idle "images/v14/Scene 51/v14s51_purse.webp"
-                        hover "images/v14/Scene 51/v14s51_purse_hover.webp"
+                        idle "images/v14/Scene 51/v14s51_purse.png"
+                        hover "images/v14/Scene 51/v14s51_purse_hover.png"
                         action Jump("v14s51_purse")
                         pos (0, 0)
                     #hotspot (0, 265, 301, 527) action Jump("v14s51_purse")
                 if not v14s51_pillow:
                     imagebutton:
-                        idle "images/v14/Scene 51/v14s51_pillow.webp"
-                        hover "images/v14/Scene 51/v14s51_pillow.webp"
+                        idle "images/v14/Scene 51/v14s51_pillow.png"
+                        hover "images/v14/Scene 51/v14s51_pillow.png"
                         action Jump("v14s51_pillow")
                         pos (0, 0)
             else:
