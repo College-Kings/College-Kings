@@ -320,6 +320,7 @@ label after_load:
         for contact in simplr_contacts + simplr_pendingContacts:
             contact.profile_picture = "images/nonplayable_characters/{0}/{0}_profile_picture.webp".format(contact.name.lower())
             
+            contact.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/1.webp".format(contact.name.lower())]
             for (dirpath, dirname, filenames) in os.walk(os.path.join(contacts_file_path, contact.name.lower(), "large_profile_pictures")):
                 contact.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/{}".format(contact.name.lower(), filename) for filename in filenames]
 
