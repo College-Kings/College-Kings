@@ -309,23 +309,36 @@ label v14s30a:
 
     u "Fuck's sake... Never living that one down."
 
+    call screen take_picture("v14s30a_pic1")
+
+    label v14s30a_pic1:
+
     scene v14s30a_8b # TPP. Same as v14s30a_8a, Chloe posing with one hand on her hip and one hand on the wolf's head, Chloe smiling proudly, Mouth closed.
     with flash
 
-    pause 0.5
+    call screen take_picture("v14s30a_pic2")
 
+
+    label v14s30a_pic2:
+        
     scene v14s30a_8c # TPP. Same as v14s30a_8b, Chloe giving the wolf a high five, Chloe slight smile, mouth closed.
     with flash
 
-    pause 0.5
+    call screen take_picture("v14s30a_pic3")
+
+
+    label v14s30a_pic3:
 
     scene v14s30a_8d # TPP. Same as v14s30a_8c, Chloe with her hands in the shape of Wolf's claws acting scary for the camera, The wolf growling towards the camera, Chloe Intimidating face, mouth closed.
     with flash
 
-    pause 0.5
+    call screen take_picture("v14s30a_pic4")
+
+
+    label v14s30a_pic4:
 
     scene v14s30a_8
-    with dissolve
+    with flash
 
     u "Alright."
 

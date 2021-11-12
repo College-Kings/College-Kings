@@ -704,3 +704,5 @@ default lindsey_board = PlanningBoard("images/v14/chicks_presidency_race/plannin
 default v14s48_campaign_money = 0
 
 default v14s48_car_price = 100
+
+default v14s47_passenger = False
