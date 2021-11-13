@@ -288,13 +288,13 @@ screen simplr_reply(contact=None):
             if isinstance(reply, Reply):
                 textbutton reply.message:
                     style "replies_style"
-                    action [Hide("reply"), Function(contact.selectedReply, reply)]
+                    action [Hide("simplr_reply"), Function(contact.selectedReply, reply)]
 
             elif isinstance(reply, ImgReply):
                 imagebutton:
                     idle Transform(reply.image, zoom=0.15)
                     style "replies_style"
-                    action [Hide("reply"), Function(contact.selectedReply, reply)]
+                    action [Hide("simplr_reply"), Function(contact.selectedReply, reply)]
 
 
 screen simplr_image(img=None):
