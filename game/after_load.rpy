@@ -395,6 +395,24 @@ label after_load:
         cameron.name = "Cameron"
         josh.name = "Josh"
 
+        chloe.profile_picture = "images/nonplayable_characters/profile_pictures/chloe.webp"
+        amber.profile_picture = "images/nonplayable_characters/profile_pictures/amber.webp"
+        penelope.profile_picture = "images/nonplayable_characters/profile_pictures/penelope.webp"
+        riley.profile_picture = "images/nonplayable_characters/profile_pictures/riley.webp"
+        lindsey.profile_picture = "images/nonplayable_characters/profile_pictures/lindsey.webp"
+        lauren.profile_picture = "images/nonplayable_characters/profile_pictures/lauren.webp"
+        samantha.profile_picture = "images/nonplayable_characters/profile_pictures/samantha.webp"
+        emily.profile_picture = "images/nonplayable_characters/profile_pictures/emily.webp"
+        ms_rose.profile_picture = "images/nonplayable_characters/profile_pictures/ms_rose.webp"
+        nora.profile_picture = "images/nonplayable_characters/profile_pictures/nora.webp"
+        aubrey.profile_picture = "images/nonplayable_characters/profile_pictures/aubrey.webp"
+        ryan.profile_picture = "images/nonplayable_characters/profile_pictures/ryan.webp"
+        imre.profile_picture = "images/nonplayable_characters/profile_pictures/imre.webp"
+        chris.profile_picture = "images/nonplayable_characters/profile_pictures/chris.webp"
+        charli.profile_picture = "images/nonplayable_characters/profile_pictures/charli.webp"
+        cameron.profile_picture = "images/nonplayable_characters/profile_pictures/cameron.webp"
+        josh.profile_picture = "images/nonplayable_characters/profile_pictures/josh.webp"
+
         try: v6_emilysex
         except NameError: v6_emilysex = False
         try: v7_seencrowning
