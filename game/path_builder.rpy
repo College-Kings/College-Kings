@@ -24,7 +24,7 @@ screen pathBuilder():
 
     add "gui/path builder/path_builder_background.png"
 
-    text "BUILD YOUR OWN PATH":
+    text "PATH BUILDER":
         size 50
         align (0.5, 0.1)
 
@@ -71,7 +71,7 @@ screen pathBuilder():
 
             textbutton "BACK":        
                 xalign 0
-                action Show ("MainMenu")
+                action ShowMenu("main_menu")
 
             textbutton "NEXT":          
                 xalign 1.0
@@ -83,7 +83,7 @@ screen pathBuilder2():
 
     add "gui/path builder/path_builder_background.png"
 
-    text "BUILD YOUR OWN PATH":
+    text "PATH BUILDER":
         size 50
         align (0.5, 0.1)
 
@@ -154,7 +154,7 @@ screen pathBuilder2():
 
             textbutton "BACK":        
                 xalign 0
-                action Show ("pathBuilder1")
+                action Show ("pathBuilder")
 
             textbutton "NEXT":          
                 xalign 1.0
@@ -166,7 +166,7 @@ screen pathBuilder3():
 
     add "gui/path builder/path_builder_background.png"
 
-    text "BUILD YOUR OWN PATH":
+    text "PATH BUILDER":
         size 50
         align (0.5, 0.1)
 
@@ -377,7 +377,7 @@ screen pathBuilder4():
 
     add "gui/path builder/path_builder_background.png"
 
-    text "BUILD YOUR OWN PATH":
+    text "PATH BUILDER":
         size 50
         align (0.5, 0.1)
 

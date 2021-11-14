@@ -428,10 +428,7 @@ screen main_menu():
     tag menu
     style_prefix "main_menu"
 
-    if config.enable_steam:
-        add "gui/mainMenu/mainMenuBackgroundSteam.webp"
-    else:
-        add "gui/mainMenu/mainMenuBackground.webp"
+    add "gui/mainMenu/mainMenuBackground.webp"
 
     vbox:
         pos (520, 187)
@@ -455,6 +452,11 @@ screen main_menu():
             hover "gui/mainMenu/sceneHover.webp"
             action ShowMenu("spoiler")
 
+        imagebutton:
+            idle "gui/mainMenu/pathIdle.webp"
+            hover "gui/mainMenu/pathHover.webp"
+            action ShowMenu("spoiler2")
+
         hbox:
             spacing 23
 
@@ -468,12 +470,6 @@ screen main_menu():
                 hover "gui/mainMenu/quitHover.webp"
                 action Quit(confirm= main_menu)
 
-        
-    imagebutton:
-        pos (80, 850)
-        idle "gui/path builder/path_builder_button.png"
-        hover "gui/path builder/path_builder_button_hover.png"
-        action ShowMenu("spoiler2")
 
     
     if config.enable_steam: # Steam Version
@@ -482,12 +478,12 @@ screen main_menu():
             spacing 200
 
             imagebutton:
-                idle "gui/mainMenu/patreonIdle.webp"
+                idle "gui/mainMenu/discordIdle.webp"
                 hover "gui/mainMenu/discordHover.webp"
                 action OpenURL("http://discord.collegekingsgame.com")
 
             imagebutton:
-                idle "gui/mainMenu/patreonIdle.webp"
+                idle "gui/mainMenu/discordIdle.webp"
                 hover "gui/mainMenu/websiteHover.webp"
                 action OpenURL("http://collegekingsgame.com")
 
@@ -502,12 +498,12 @@ screen main_menu():
                 action OpenURL("https://www.patreon.com/collegekings")
 
             imagebutton:
-                idle "gui/mainMenu/patreonIdle.webp"
+                idle "gui/mainMenu/discordIdle.webp"
                 hover "gui/mainMenu/discordHover.webp"
                 action OpenURL("http://discord.collegekingsgame.com")
 
             imagebutton:
-                idle "gui/mainMenu/patreonIdle.webp"
+                idle "gui/mainMenu/websiteIdle.webp"
                 hover "gui/mainMenu/websiteHover.webp"
                 action OpenURL("http://collegekingsgame.com")
 
