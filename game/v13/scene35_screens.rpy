@@ -65,7 +65,7 @@ screen v13s35_end_shopping_confirm():
             spacing 200
 
             textbutton "Yes":
-                action [Hide("v13s35_end_shopping_confirm"), SetVariable("freeRoam", False), Jump("v13s35_adult_shop_continue")]
+                action [Hide("v13s35_end_shopping_confirm"), Jump("v13s35_adult_shop_continue")]
                 
             textbutton "No":
                 action Hide("v13s35_end_shopping_confirm")

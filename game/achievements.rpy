@@ -178,4 +178,4 @@ init python:
     Achievement("your_eyelids_are_heavy", "Lauren uses her hypnosis powers for good")
     Achievement("say_chirp", "Take a photo with the bird")
     Achievement("grand_theft_chloe", "Steal the diary and all the money")
-    Achievement("clean_joker", "Joke around and don't let Samantha do drugs")
+    Achievement("clean_it_up", "Be a positive influence on Amber and Samantha")

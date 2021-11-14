@@ -150,9 +150,6 @@ label v13s40:
     with dissolve
 
     u "*Chuckles* Shhh."
-
-    $ freeRoam = True
-
     call screen v13s40_chloe
 
 label v13s40_honey:
@@ -483,8 +480,6 @@ label v13s40_shoulder:
     call screen v13s40_chloe
         
 label v13s40_end_free_roam:
-    $ freeRoam = False
-
     if v13s40_chloe_turned_on == 4:
         $ v13_chloesex = True
     

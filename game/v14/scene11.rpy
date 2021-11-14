@@ -60,16 +60,22 @@ label v14s11:
 
         lee "I am too!"
 
-    else: 
-        scene v14s11_3 #FPP. MC sees Charli with his bag leaving the airport, without speaking to anyone, Charli's back is turned
-        with dissolve
+    else:
+        if v13s20_bleach_suitcase:
+            scene v14s11_3 #FPP. MC sees Charli with his bag leaving the airport, without speaking to anyone, Charli's back is turned
+            with dissolve
 
-        u "(He came into our lives with a bang, trying to show his ass off, and look at him now... A sad dude, walking away all alone, just as he was when he first arrived.)"
+            u "(He came into our lives with a bang, trying to show his ass off, and look at him now... A sad dude, walking away all alone, just as he was when he first arrived.)"
 
-        scene v14s11_3
-        with dissolve
+            u "(Definitely didn't like the guy, but I do get this weird feeling seeing him go.)"
 
-        u "(Definitely didn't like the guy, but I do get this weird feeling seeing him go.)"
+        else:
+            scene v14s11_3a #FPP. MC sees Charli with his bag leaving the airport, without speaking to anyone, Charli's back is turned
+            with dissolve
+
+            u "(He came into our lives with a bang, trying to show his ass off, and look at him now... A sad dude, walking away all alone, just as he was when he first arrived.)"
+
+            u "(Definitely didn't like the guy, but I do get this weird feeling seeing him go.)"
 
     scene v14s11_4 # FPP. Mc turns around and see's Riley approaching him, Riley looking at mc, Riley no expression, mouth closed
     with dissolve

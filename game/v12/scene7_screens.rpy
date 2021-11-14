@@ -1,5 +1,5 @@
 screen murder_button_overlay(character):
-    tag freeRoam
+    tag free_roam
 
     $ char_name = character.name.lower().replace(" ", "_")
 
@@ -20,7 +20,7 @@ screen murder_button_overlay(character):
         if v12s7_seenList:
             action Jump("v12s7_mc_caught")
         else:
-            if character.name == "riley" and v12s7_riley2:
+            if char_name == "riley" and v12s7_riley2 and not v12s7_riley3:
                 action [ Function(character.kill), Jump("v12s7_{}_kill2".format(char_name)) ]
             else:
                 action [ Function(character.kill), Jump("v12s7_{}_kill".format(char_name)) ]
@@ -32,7 +32,7 @@ screen v12s7_minimap(location):
 
 ### Lower Floor
 screen v12s7_seating_back():
-    tag freeRoam
+    tag free_roam
 
     if (emily_europe and not v12s7_emily and not emily in v12s7_killList and lauren not in v12s7_killList): #Emily and Lauren
         imagemap:
@@ -87,7 +87,7 @@ screen v12s7_seating_back():
     on "replaced" action SetVariable("previous_location", "v12s7_seating_back")
 
 screen v12s7_seating_front():
-    tag freeRoam
+    tag free_roam
 
     # No one
     if (v12s7_samantha and ms_rose in v12s7_killList) or (ms_rose in v12s7_killList and not v11_invite_sam_europe):
@@ -136,7 +136,7 @@ screen v12s7_seating_front():
 
 
 screen v12s7_walkway():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         idle "images/v12/Scene 7/Screens/Navigation 3.webp"
@@ -152,7 +152,7 @@ screen v12s7_walkway():
 
 
 screen v12s7_right_walkway_middle():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         idle "images/v12/Scene 7/Screens/Navigation 4.webp"
@@ -168,7 +168,7 @@ screen v12s7_right_walkway_middle():
 
 
 screen v12s7_left_walkway_middle():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         idle "images/v12/Scene 7/Screens/Navigation 5.webp"
@@ -185,7 +185,7 @@ screen v12s7_left_walkway_middle():
 
 
 screen v12s7_left_walkway_back():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         if ms_rose in v12s7_killList:
@@ -203,7 +203,7 @@ screen v12s7_left_walkway_back():
 
 
 screen v12s7_rear():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         if v12s7_lindsey_moved and lindsey not in v12s7_killList:
@@ -228,7 +228,7 @@ screen v12s7_rear():
 
 
 screen v12s7_right_walkway_back():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         if (v12s7_samantha and samantha not in v12s7_killList):
@@ -253,7 +253,7 @@ screen v12s7_right_walkway_back():
 
 
 screen v12s7_right_walkway_front():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         idle "images/v12/Scene 7/Screens/Navigation 9.webp"
@@ -269,7 +269,7 @@ screen v12s7_right_walkway_front():
 
 
 screen v12s7_kitchen():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         if v12s7_emily and not emily in v12s7_killList and not chris in v12s7_killList: # Chris and Emily
@@ -306,7 +306,7 @@ screen v12s7_kitchen():
 
 
 screen v12s7_bow():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         if v12s7_emily and emily not in v12s7_killList:
@@ -332,7 +332,7 @@ screen v12s7_bow():
 
 
 screen v12s7_left_walkway_front():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         if v11_pen_goes_europe and penelope not in v12s7_killList:
@@ -358,7 +358,7 @@ screen v12s7_left_walkway_front():
 
 
 screen v12s7_foyer():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         if v12s7_imre and imre not in v12s7_killList:
@@ -384,7 +384,7 @@ screen v12s7_foyer():
 
 # MIDDLE FLOOR
 screen v12s7_left_viewpoint():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         if riley not in v12s7_killList and chloe not in v12s7_killList and (v12s7_riley2 or not v12s7_riley_moved):
@@ -429,7 +429,7 @@ screen v12s7_left_viewpoint():
 
 
 screen v12s7_right_viewpoint():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         if josh_europe and not v12s7_josh and josh not in v12s7_killList:
@@ -461,7 +461,7 @@ screen v12s7_right_viewpoint():
 
 
 screen v12s7_rear_gallery():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         if v11_invite_sam_europe and v12s7_samantha:
@@ -501,7 +501,7 @@ screen v12s7_rear_gallery():
 
 
 screen v12s7_right_gallery_back():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         if not v12s7_imre:
@@ -534,7 +534,7 @@ screen v12s7_right_gallery_back():
 
 
 screen v12s7_right_gallery_front():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         if v12s7_riley_moved and not v12s7_riley2 and amber not in v12s7_killList and riley not in v12s7_killList:
@@ -569,7 +569,7 @@ screen v12s7_right_gallery_front():
 
 
 screen v12s7_utility():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         if v12s7_josh and josh not in v12s7_killList:
@@ -597,7 +597,7 @@ screen v12s7_utility():
 
 
 screen v12s7_front_gallery():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         if v12s7_riley_moved and not v12s7_riley2 and amber not in v12s7_killList and riley not in v12s7_killList:
@@ -643,7 +643,7 @@ screen v12s7_front_gallery():
 
 
 screen v12s7_balcony_middle():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         idle "images/v12/Scene 7/Screens/Navigation 20a.webp"
@@ -659,7 +659,7 @@ screen v12s7_balcony_middle():
 
 
 screen v12s7_balcony_left():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         if nora in v12s7_killList:
@@ -685,7 +685,7 @@ screen v12s7_balcony_left():
 
 
 screen v12s7_balcony_right():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         if aubrey in v12s7_killList or v12s7_aubrey_moved:
@@ -711,7 +711,7 @@ screen v12s7_balcony_right():
 
 
 screen v12s7_left_gallery_back():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         if aubrey in v12s7_killList or not v12s7_aubrey_moved:
@@ -729,7 +729,7 @@ screen v12s7_left_gallery_back():
 
 
 screen v12s7_left_gallery_front():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         if aubrey in v12s7_killList or not v12s7_aubrey_moved:
@@ -748,7 +748,7 @@ screen v12s7_left_gallery_front():
 
 
 screen v12s7_bathroom():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         if aubrey in v12s7_killList or not v12s7_aubrey_moved:
@@ -777,7 +777,7 @@ screen v12s7_bathroom():
 
 
 screen v12s7_captains_room():
-    tag freeRoam
+    tag free_roam
     
     imagemap:
         if not v12s7_lindsey_moved:

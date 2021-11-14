@@ -70,39 +70,68 @@ label v14s22a:
 
     li "Your phone is buzzing I think."
 
-    scene v14s22a_1a
-    with dissolve
+    if v14_talk_to_chris:
+        scene v14s22a_1a
+        with dissolve
 
-    u "Yeah, oh well. It can wait. *Chuckles*"
+        u "Yeah, I should probably take this."
 
-    scene v14s22a_1
-    with dissolve
+        scene v14s22a_1
+        with dissolve
 
-    li "No, no. It may be important. Besides, I need to run anyway."
+        li "Alright, I need to run anyway."
 
-    scene v14s22a_1b
-    with dissolve
+        scene v14s22a_1b
+        with dissolve
 
-    li "Thank you, once again, for everything."
+        li "Thank you, once again, for everything."
 
-    scene v14s22a_1a
-    with dissolve
+        scene v14s22a_1a
+        with dissolve
 
-    u "Once again, always."
+        u "Once again, always."
 
-    scene v14s22a_2 # TPP. lindsey waves good bye, full smile, mouth open and rushes off 
-    with dissolve
+        scene v14s22a_2 # TPP. lindsey waves good bye, full smile, mouth open and rushes off 
+        with dissolve
 
-    pause 0.75
+        pause 0.75
 
-    scene v14s22a_3 # TPP. MC starts walking outside and is looking at his phone as he walks
-    with dissolve
+        scene v14s22a_3 # TPP. MC starts walking outside and is looking at his phone as he walks
+        with dissolve
 
-    pause 0.75
+        u "(Oh, right, Chloe's on her way to the Wolves house. Need to rush now.)"
 
-    scene v14s22a_4 # TPP. mc sits on a bench outside
-    with dissolve
+        jump v14s23
 
-    u "(Let's see who this is...)"
+    else:
+        scene v14s22a_1a
+        with dissolve
 
-    jump v14s24
+        u "Yeah, oh well. It can wait. *Chuckles*"
+
+        scene v14s22a_1
+        with dissolve
+
+        li "No, no. It may be important. Besides, I need to run anyway."
+
+        scene v14s22a_1b
+        with dissolve
+
+        li "Thank you, once again, for everything."
+
+        scene v14s22a_1a
+        with dissolve
+
+        u "Once again, always."
+
+        scene v14s22a_2 # TPP. lindsey waves good bye, full smile, mouth open and rushes off 
+        with dissolve
+
+        pause 0.75
+
+        scene v14s22a_3 # TPP. MC starts walking outside and is looking at his phone as he walks
+        with dissolve
+
+        u "(Let's see who this is...)"
+
+        jump v14s24

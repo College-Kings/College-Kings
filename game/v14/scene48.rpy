@@ -60,7 +60,7 @@ label v14s48:
         scene v14s48_5a # TPP. Same as v14s48_5, show Lindsey reaching over and kissing MC on the cheek
         with dissolve
 
-        pause  
+        pause
 
         scene v14s48_6 # FPP. MC and Lindsey sitting at the table, looking at each other, Lindsey smiling, holding her coffee, mouth open
         with dissolve
@@ -203,7 +203,7 @@ label v14s48_continue:
         scene v14s48_6c
         with dissolve
 
-        u "True, let's hope there's someone out there who can see it's potential. *Chuckles*"
+        u "True, let's hope there's someone out there who can see its potential. *Chuckles*"
 
     scene v14s48_6
     with dissolve
@@ -252,7 +252,7 @@ label v14s48_continue2:
 
         li "You think we should lie?!"
 
-        scene v14s48_6e  # FPP. Same as v14s48_6d, Lindsey mouth closed
+        scene v14s48_6e # FPP. Same as v14s48_6d, Lindsey mouth closed
         with dissolve
 
         u "*Chuckles* You want to sell it, don't you?"
@@ -412,11 +412,10 @@ label v14s48_end:
     u "It's certainly a long process. *Chuckles*"
 
     if lindseyrs:
-
         scene v14s48_8 # TPP. Show Lindsey kissing MC (with tongue if possible)
         with dissolve
 
-        pause  
+        pause
 
         scene v14s48_6c
         with dissolve
@@ -467,7 +466,7 @@ label v14s48_end:
         scene v14s48_9 # TPP. Show Lindsey giving MC a peck on the lips
         with dissolve
 
-        pause  
+        pause
 
     scene v14s48_10 # TPP. Show Lindsey getting up, MC still sitting down, both smiling, mouths closed
     with dissolve

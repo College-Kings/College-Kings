@@ -352,8 +352,10 @@ label v14s43b:
                 $ chloe.messenger.newMessage("UGH! I'm going to turn this around. It won't hurt my campaign even a little bit, I'll make sure of it.")
 
                 $ chloe.messenger.addReply("I'm so sorry that this is happening. I don't even know what to say.")
-                $ chloe.messenger.newMessage("I know, I know... I'm just venting. And I'm really thankful that you didn't post anything.")
-                $ chloe.messenger.addReply("I'd never do that.")
+                $ chloe.messenger.newMessage("I know, I know... I'm just venting.")
+                if not joinwolves:
+                    $ chloe.messenger.newMessage("And I'm really thankful that you didn't post anything.")
+                    $ chloe.messenger.addReply("I'd never do that.")
 
                 label v14s43Chloe_PhoneContinue1:
                     if chloe.messenger.replies:
@@ -365,8 +367,12 @@ label v14s43b:
                 scene v14s43b_13
                 with dissolve
 
-                $ set_presidency_percent(v14_lindsey_popularity + 3)
-                u "(Fuck... I'm glad I didn't go through with posting that shit.)"
+                $ set_presidency_percent(v14_lindsey_popularity + 3) #tick
+                if joinwolves:
+                    u "(Fuck... Where did that come from?)"
+
+                else:
+                    u "(Fuck... I'm glad I didn't go through with posting that shit.)"
 
                 scene v14s43b_12
                 with dissolve
@@ -569,8 +575,10 @@ label v14s43b:
                 $ chloe.messenger.newMessage("UGH! I'm going to turn this around. It won't hurt my campaign even a little bit, I'll make sure of it.")
 
                 $ chloe.messenger.addReply("I'm so sorry that this is happening. I don't even know what to say.")
-                $ chloe.messenger.newMessage("I know, I know... I'm just venting. And I'm really thankful that you didn't post anything.")
-                $ chloe.messenger.addReply("I'd never do that.")
+                $ chloe.messenger.newMessage("I know, I know... I'm just venting.")
+                if not joinwolves:
+                    $ chloe.messenger.newMessage("And I'm really thankful that you didn't post anything.")
+                    $ chloe.messenger.addReply("I'd never do that.")
 
                 label v14s43Chloe_PhoneContinue2:
                     if chloe.messenger.replies:
@@ -582,9 +590,13 @@ label v14s43b:
                 scene v14s43b_13
                 with dissolve
 
-                $ set_presidency_percent(v14_lindsey_popularity + 3)
-                u "(Fuck... I'm glad I didn't go through with posting that shit.)"
+                $ set_presidency_percent(v14_lindsey_popularity + 3) #tick
+                if joinwolves:
+                    u "(Fuck... Where did that come from?)"
 
+                else:
+                    u "(Fuck... I'm glad I didn't go through with posting that shit.)"
+                    
                 scene v14s43b_20a
                 with dissolve
 

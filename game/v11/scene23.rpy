@@ -9,8 +9,6 @@
 
 label v11s23_freeroamstart: # Start of freeroam
     play music "music/v11/Scene 14/Track Scene 14.mp3" fadein 2
-    $ freeRoam = True
-
     call screen v11s23_entrance
     
 label v11s23_chris1:
@@ -1054,8 +1052,6 @@ label v11s23_penelope1:
     call screen v11s23_helm
 
 label v11s23_freeroamend:
-    $ freeRoam = False
-
     scene v11frm1 # FPP Show Nora sitting on black seating looking annoyed and not looking at anything in particular, arms crossed over her chest, mouth closed
     #with dissolve
 

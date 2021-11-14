@@ -4,6 +4,8 @@
 # Time: Night
 
 label v14s37:
+    $ v14_penelope_date = True
+
     scene v14s37_1 # TPP. Show MC arriving at the restaurant wearing the nice clothes he put on in scene 34, his clothes slightly blowing from the wind, MC slight smile, mouth closed. 
     with fade
 

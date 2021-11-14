@@ -1,5 +1,5 @@
 screen v12s18_room1():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         if not v12s18_bottlespin_played:
@@ -18,7 +18,7 @@ screen v12s18_room1():
 
 
 screen v12s18_room2():
-    tag freeRoam
+    tag free_roam
 
     imagemap:
         idle "images/v12/scene 18/Screens/v12s18Room2.webp"

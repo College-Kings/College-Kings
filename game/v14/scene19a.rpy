@@ -162,7 +162,7 @@ label v14s19a:
         scene v14s19a_1g
         with dissolve
 
-        u "(Damn, I can't help her with this and talk to Lindsey at the same time. Gonna have to decide what to do here...)"
+        u "(Damn, I promised to go meet Lindsey later. Do I have time for both? This \"double agent\" life might get tricky...)"
 
         menu:
             "Talk to Chris":

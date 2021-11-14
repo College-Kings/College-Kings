@@ -47,7 +47,7 @@ label v14s45:
 
     pause 0.75
 
-    scene v1s45_5 # FPP. MC in the park, looks at Amber sitting on the bench under the tree, he is far from her, she is tired and sad
+    scene v14s45_5 # FPP. MC in the park, looks at Amber sitting on the bench under the tree, he is far from her, she is tired and sad
     with dissolve
 
     pause 0.75

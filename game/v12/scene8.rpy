@@ -5,7 +5,6 @@
 # Phone Images: None
 
 label v12_murder_mystery_reveal:
-    $ freeRoam = False
     hide screen murder_button_overlay
 
     scene v12mmr1 # FPP. Mr. Lee and Ms. Rose standing in front of the students, addressing them, only Mr. Lee in shot. Mr. Lee smiling, mouth open, looking at MC
