@@ -468,6 +468,13 @@ screen main_menu():
                 hover "gui/mainMenu/quitHover.webp"
                 action Quit(confirm= main_menu)
 
+        
+    imagebutton:
+        pos (80, 850)
+        idle "gui/path builder/path_builder_button.png"
+        hover "gui/path builder/path_builder_button_hover.png"
+        action ShowMenu("spoiler2")
+
     
     if config.enable_steam: # Steam Version
         vbox:
