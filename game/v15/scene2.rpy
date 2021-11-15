@@ -3,9 +3,9 @@
 # Characters: MC (Outfit: 1), CAMERON (Outfit: 3)
 # Time: Night
 
-def v14s51_reply1():
+def v15s2_reply1():
 
-def v14s51_reply2():
+def v15s2_reply2():
 
 label v15s2:
 
@@ -336,7 +336,7 @@ label v15s2:
 
     $ lauren.messenger.newMessage("Hey gang! You're invited to Lauren's birthday party tomorrow night at the Deer's house! It's a Halloween theme of course, so make sure you dress to impress your ghoulish empress, haha! -Lauren")
 
-    scene v14s15_9a
+    scene v15s2_9a
     with dissolve
     
     u "(\"Dress to impress your ghoulish empress...\") *Chuckles*"
