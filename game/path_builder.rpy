@@ -73,7 +73,7 @@ screen pathBuilder():
                 xalign 0
                 action ShowMenu("main_menu")
 
-            textbutton "NEXT":          
+            textbutton "PICK KCT":          
                 xalign 1.0
                 action Show ("pathBuilder2")
 
@@ -103,7 +103,7 @@ screen pathBuilder2():
                     else:
                         idle "gui/path builder/pb_button.png"
                     hover "gui/path builder/pb_selected.png"
-                    action SetVariable("kct", "loyal")
+                    action [SetVariable("kct", "loyal"), SetVariable("bro", 2),SetVariable("boyfriend", 2),SetVariable("troublemaker", 0)]
 
                 text "Loyal":
                     align (0.5, 0.5)
@@ -117,7 +117,7 @@ screen pathBuilder2():
                     else:
                         idle "gui/path builder/pb_button.png"
                     hover "gui/path builder/pb_selected.png"
-                    action SetVariable("kct", "popular")
+                    action [SetVariable("kct", "popular"), SetVariable("bro", 2),SetVariable("boyfriend", 0),SetVariable("troublemaker", 2)]
 
                 text "Popular":
                     align (0.5, 0.5)
@@ -131,7 +131,7 @@ screen pathBuilder2():
                     else:
                         idle "gui/path builder/pb_button.png"
                     hover "gui/path builder/pb_selected.png"
-                    action SetVariable("kct", "confident")
+                    action [SetVariable("kct", "confident"), SetVariable("bro", 0),SetVariable("boyfriend", 2),SetVariable("troublemaker", 2)]
 
                 text "Confident":
                     align (0.5, 0.5)
@@ -142,7 +142,17 @@ screen pathBuilder2():
             spacing 20
             yoffset -30
             imagebutton:
-                idle "gui/path builder/pb_tick.png"
+                if bro == 1000 or boyfriend == 1000 or troublemaker == 1000:
+                    idle "gui/path builder/pb_ticked.png"
+                else:
+                    idle "gui/path builder/pb_tick.png"
+                hover "gui/path builder/pb_ticked.png"
+                if kct == "confident": 
+                    action [SetVariable("bro", 0),SetVariable("boyfriend", 1000),SetVariable("troublemaker", 1000)]
+                elif kct == "popular": 
+                    action [SetVariable("bro", 1000),SetVariable("boyfriend", 0),SetVariable("troublemaker", 1000)]
+                else:
+                    action [SetVariable("bro", 1000),SetVariable("boyfriend", 1000),SetVariable("troublemaker", 0)]
 
             text "Lock KCT (Prevent it from changing)":
                 yoffset -7
@@ -156,7 +166,7 @@ screen pathBuilder2():
                 xalign 0
                 action Show ("pathBuilder")
 
-            textbutton "NEXT":          
+            textbutton "PICK RELATIONSHIPS":          
                 xalign 1.0
                 action Show ("pathBuilder3")
 
@@ -367,7 +377,7 @@ screen pathBuilder3():
                 xalign 0
                 action Show ("pathBuilder2")
 
-            textbutton "NEXT":          
+            textbutton "PICK STARTING LOCATION":          
                 xalign 1.0
                 action Show ("pathBuilder4")
 
@@ -392,14 +402,14 @@ screen pathBuilder4():
 
             vbox:
                 imagebutton:
-                    if start_location == "v8start":
+                    if start_location == "v7_homecoming":
                         idle "gui/path builder/pb_selected.png"
                     else:
                         idle "gui/path builder/pb_button.png"
                     hover "gui/path builder/pb_selected.png"
-                    action SetVariable("start_location", "v8start")
+                    action SetVariable("start_location", "v7_homecoming")
 
-                text "Start of Act 2":
+                text "Homecoming":
                     align (0.5, 0.5)
                     yoffset -70
                     color "#000"
@@ -440,6 +450,133 @@ screen pathBuilder4():
                 xalign 0
                 action Show ("pathBuilder3")
 
-            textbutton "Start Game":          
-                xalign 1.0
-                action Start (start_location)
+            if start_location == "v7_homecoming":
+                textbutton "PICK DATE":          
+                    xalign 1.0
+                    action Show ("pathBuilder5")
+
+            else:
+                textbutton "START GAME":          
+                    xalign 1.0
+                    action Start (start_location)
+
+screen pathBuilder5():
+    tag menu
+    modal True
+
+    add "gui/path builder/path_builder_background.png"
+
+    text "PATH BUILDER":
+        size 50
+        align (0.5, 0.1)
+
+    vbox:
+        pos (200,300)
+        spacing 50
+
+        text "Step 5: Pick your homecoming date"
+
+        vpgrid:
+            cols 4
+            xspacing 50
+            yspacing 20
+            ysize 700
+        
+            
+
+
+            vbox:
+                imagebutton:
+                    if hcGirl == "chloe":
+                        idle "gui/path builder/pb_selected.png"
+                    else:
+                        idle "gui/path builder/pb_button.png"
+                    hover "gui/path builder/pb_selected.png"
+                    action ToggleVariable("hcGirl", "chloe")
+
+                text "Chloe":
+                    align (0.5, 0.5)
+                    yoffset -70
+                    color "#000"
+
+            vbox:
+                imagebutton:
+                    if hcGirl == "riley":
+                        idle "gui/path builder/pb_selected.png"
+                    else:
+                        idle "gui/path builder/pb_button.png"
+                    hover "gui/path builder/pb_selected.png"
+                    action ToggleVariable("hcGirl", "riley")
+
+                text "Riley":
+                    align (0.5, 0.5)
+                    yoffset -70
+                    color "#000"
+
+            vbox:
+                imagebutton:
+                    if hcGirl == "lauren":
+                        idle "gui/path builder/pb_selected.png"
+                    else:
+                        idle "gui/path builder/pb_button.png"
+                    hover "gui/path builder/pb_selected.png"
+                    action ToggleVariable("hcGirl", "lauren")
+
+                text "Lauren":
+                    align (0.5, 0.5)
+                    yoffset -70
+                    color "#000"
+
+            vbox:
+                imagebutton:
+                    if hcGirl == "penelope":
+                        idle "gui/path builder/pb_selected.png"
+                    else:
+                        idle "gui/path builder/pb_button.png"
+                    hover "gui/path builder/pb_selected.png"
+                    action ToggleVariable("hcGirl", "penelope")
+
+                text "Penelope":
+                    align (0.5, 0.5)
+                    yoffset -70
+                    color "#000"
+
+            vbox:
+                imagebutton:
+                    if hcGirl == "emily":
+                        idle "gui/path builder/pb_selected.png"
+                    else:
+                        idle "gui/path builder/pb_button.png"
+                    hover "gui/path builder/pb_selected.png"
+                    action ToggleVariable("hcGirl", "emily")
+
+                text "Emily":
+                    align (0.5, 0.5)
+                    yoffset -70
+                    color "#000"
+
+            vbox:
+                imagebutton:
+                    if hcGirl == "amber":
+                        idle "gui/path builder/pb_selected.png"
+                    else:
+                        idle "gui/path builder/pb_button.png"
+                    hover "gui/path builder/pb_selected.png"
+                    action ToggleVariable("hcGirl", "amber")
+
+                text "Amber":
+                    align (0.5, 0.5)
+                    yoffset -70
+                    color "#000"
+
+        hbox: 
+                yoffset -450
+                spacing 200
+
+                textbutton "BACK":        
+                    xalign 0
+                    action Show ("pathBuilder4")
+
+                textbutton "START GAME":          
+                    xalign 1.0
+                    action Start (start_location)

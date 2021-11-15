@@ -475,7 +475,7 @@ screen main_menu():
     if config.enable_steam: # Steam Version
         vbox:
             pos (1619, 216)
-            spacing 200
+            spacing 25
 
             imagebutton:
                 idle "gui/mainMenu/discordIdle.webp"
@@ -483,7 +483,7 @@ screen main_menu():
                 action OpenURL("http://discord.collegekingsgame.com")
 
             imagebutton:
-                idle "gui/mainMenu/discordIdle.webp"
+                idle "gui/mainMenu/websiteIdle.webp"
                 hover "gui/mainMenu/websiteHover.webp"
                 action OpenURL("http://collegekingsgame.com")
 
