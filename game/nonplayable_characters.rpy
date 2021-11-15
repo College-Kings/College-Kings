@@ -23,7 +23,6 @@ init python:
             }
 
             self.points = 0
-            self.opinion = None
 
         def create_contact(self, locked=True):
             self.messenger = Contact(self.name, self.profile_picture, locked)
