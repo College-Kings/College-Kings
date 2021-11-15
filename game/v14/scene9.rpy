@@ -230,7 +230,7 @@ label v14s09:
             "Becoming a model":
                 u "(Definitely when she became a model at Naomi's photoshoot.)"
     
-            "Going to the concert" if v13_aubrey_concert:
+            "Going to the concert":
                 u "(When I took her to the concert. She seemed to have a good time.)"
     
     else:
@@ -283,7 +283,7 @@ label v14s09:
             "Murder Mystery":
                 u "(She had a decent time getting into that “poor person” role.)"
     
-            "Being tied to the bed" if v13s40fromgame:
+            "Being tied to the bed":
                 u "(When I had her tied to the bed... That was definitely the best part, haha.)"
     
     else:
@@ -314,7 +314,7 @@ label v14s09:
             "Mr. Lee's riddles":
                 u "(She did seem to have fun while solving Mr. Lee's riddles.)"
     
-            "The threesome" if v13_FirstThreesome:
+            "The threesome":
                 u "(That fucking threesome... It has to be her favorite part of the trip, haha.)"
     
     else:
@@ -345,7 +345,7 @@ label v14s09:
             "Carriage ride Chloe roast":
                 u "(She really destroyed Chloe on that carriage ride.)"
     
-            "Having sex with me" if v12_nora_sex:
+            "Having sex with me":
                 u "(Having sex with Nora certainly was one of my favorite parts... I'd assume it might be hers as well.)"
     
     else:
@@ -398,7 +398,7 @@ label v14s09:
             "Secretly planning her campaign":
                 u "(I know she's really been planning to take Chloe down, I wouldn't be surprised if she enjoyed planning that even more than Europe.)"
     
-            "The ferris wheel" if not v13s40fromgame:
+            "The ferris wheel":
                 u "(The ferris wheel was really nice. Definitely could've been her favorite part.)"
     
     else:
@@ -478,7 +478,7 @@ label v14s09:
             "The murder mystery":
                 u "(I think that was a pretty memorable event for all of us, and I know she had fun.)"
     
-            "Our first time together" if v12_lauren_sex:
+            "Our first time together":
                 u "(We shared an incredible night together. I don't think either of us will ever forget it.)"
     
     else:
@@ -524,7 +524,7 @@ label v14s09:
             "Being Imre's Husband":
                 u "(Okay, maybe I'm just a troll, but they were a really cute couple.)"
     
-            "Sex with a stripper" if v14_ryan_satin:
+            "Sex with a stripper":
                 u "(Losing his virginity, even if to a stripper, has got to be his highlight.)"
     
     else:
@@ -560,7 +560,7 @@ label v14s09:
             "Being Ryan's Wife":
                 u "(Greatest. Couple. Ever.)"
     
-            "Robbing the hustler" if v14s03a_take_wallet:
+            "Robbing the hustler":
                 u "(He did seem pretty confident after robbing that hustler. Maybe that was his favorite moment...)"
     
     else:
@@ -648,7 +648,7 @@ label v14s09:
                 "Drinks in London":
                     u "(We had a good round of drinks together in London, maybe that was his favorite part.)"
         
-                "Fancy dinner" if not joshmad:
+                "Fancy dinner":
                     u "(That fancy dinner Mr. Lee set up was free and delicious, I'm sure Josh loved that, haha.)"
         
         else:
@@ -694,7 +694,7 @@ label v14s09:
                 "The London Museum":
                     u "(I think she really enjoyed the museum.)"
         
-                "Going to the concert" if v13_penelope_concert:
+                "Going to the concert":
                     u "(She loved the concert, so I can definitely see that being her favorite part of the trip.)"
         
         else:

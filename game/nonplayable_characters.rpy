@@ -8,10 +8,13 @@ init python:
             profile_picture (str): The file name for the characters profile picture, located in "images/nonplayable_characters/profile_pictures/"
         """
 
-        def __init__(self, name, profile_picture):
+        def __init__(self, name, profile_picture, messenger=False, simplr=False):
             self.name = name
             self.name = name.replace(" ", "_")
             self.profile_picture = "images/nonplayable_characters/profile_pictures/{}".format(profile_picture)
+
+            if messenger: self.create_contact()
+            if simplr: self.create_simplr()
 
             self.stats = {
                 "Competitive": None,
@@ -20,9 +23,8 @@ init python:
             }
 
             self.points = 0
-            self.opinion = None
 
-        def create_contact(self, profile_picture, locked=True):
+        def create_contact(self, locked=True):
             self.messenger = Contact(self.name, self.profile_picture, locked)
             contacts.append(self.messenger)
         
@@ -60,33 +62,33 @@ init python:
 
 init offset = 1
 
-default chloe = NonPlayableCharacter("Chloe", "chloe.webp")
-default amber = NonPlayableCharacter("Amber", "amber.webp")
-default penelope = NonPlayableCharacter("Penelope", "penelope.webp")
-default riley = NonPlayableCharacter("Riley", "riley.webp")
-default lindsey = NonPlayableCharacter("Lindsey", "lindsey.webp")
-default lauren = NonPlayableCharacter("Lauren", "lauren.webp")
-default emily = NonPlayableCharacter("Emily", "emily.webp")
+default chloe = NonPlayableCharacter("Chloe", "chloe.webp", messenger=True)
+default amber = NonPlayableCharacter("Amber", "amber.webp", messenger=True)
+default penelope = NonPlayableCharacter("Penelope", "penelope.webp", messenger=True)
+default riley = NonPlayableCharacter("Riley", "riley.webp", messenger=True)
+default lindsey = NonPlayableCharacter("Lindsey", "lindsey.webp", messenger=True)
+default lauren = NonPlayableCharacter("Lauren", "lauren.webp", messenger=True)
+default emily = NonPlayableCharacter("Emily", "emily.webp", messenger=True)
 default ms_rose = NonPlayableCharacter("Ms Rose", "ms_rose.webp")
-default nora = NonPlayableCharacter("Nora", "nora.webp")
-default aubrey = NonPlayableCharacter("Aubrey", "aubrey.webp")
-default ryan = NonPlayableCharacter("Ryan", "ryan.webp")
-default imre = NonPlayableCharacter("Imre", "imre.webp")
+default nora = NonPlayableCharacter("Nora", "nora.webp", messenger=True)
+default aubrey = NonPlayableCharacter("Aubrey", "aubrey.webp", messenger=True)
+default ryan = NonPlayableCharacter("Ryan", "ryan.webp", messenger=True)
+default imre = NonPlayableCharacter("Imre", "imre.webp", messenger=True)
 default chris = NonPlayableCharacter("Chris", "chris.webp")
 default charli = NonPlayableCharacter("Charli", "charlie.webp")
 default cameron = NonPlayableCharacter("Cameron", "cameron.webp")
-default josh = NonPlayableCharacter("Josh", "josh.webp")
-default julia = NonPlayableCharacter("Julia", "Julia.webp")
+default josh = NonPlayableCharacter("Josh", "josh.webp", messenger=True)
+default julia = NonPlayableCharacter("Julia", "julia.webp", messenger=True)
 default evelyn = NonPlayableCharacter("Evelyn", "evelyn.webp")
-default autumn = NonPlayableCharacter("Autumn", "autumn.webp")
-default sebastian = NonPlayableCharacter("Sebastian", "sebastian.webp")
-default grayson = NonPlayableCharacter("Grayson", "grayson.webp")
-default jenny = NonPlayableCharacter("Jenny", "jenny.webp")
+default autumn = NonPlayableCharacter("Autumn", "autumn.webp", messenger=True)
+default sebastian = NonPlayableCharacter("Sebastian", "sebastian.webp", messenger=True)
+default grayson = NonPlayableCharacter("Grayson", "grayson.webp", messenger=True)
+default jenny = NonPlayableCharacter("Jenny", "jenny.webp", messenger=True)
 
-default beth = NonPlayableCharacter("Beth", "beth.webp")
-default iris = NonPlayableCharacter("Iris", "iris.webp")
-default samantha = NonPlayableCharacter("Samantha", "samantha.webp")
-default emmy = NonPlayableCharacter("Emmy", "emmy.webp")
+default beth = NonPlayableCharacter("Beth", "beth.webp", simplr=True)
+default iris = NonPlayableCharacter("Iris", "iris.webp", simplr=True)
+default samantha = NonPlayableCharacter("Samantha", "samantha.webp", simplr=True)
+default emmy = NonPlayableCharacter("Emmy", "emmy.webp", simplr=True)
 
 default wolf = NonPlayableCharacter("Wolf", "wolf.webp")
 default trainer = NonPlayableCharacter("Trainer", "trainer.webp")
