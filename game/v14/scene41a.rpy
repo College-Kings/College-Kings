@@ -39,8 +39,6 @@ label v14s41a:
     # Make sure variable is Chloe Seduced Grayson if: chloe seduced grayson
 
     if v14s31bTrustChloe:
-        $ v14_ApesPostChloePics = False
-        
         scene v14s41a_4 # FPP. Mc is looking to his right and sees a close-up shot of just Cameron, looking at Grayson, slightly annoyed, mouth open.
         with dissolve
 
