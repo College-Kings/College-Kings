@@ -468,7 +468,7 @@ screen v10s33_mudwrestling():
 
     # Background
     if v10s33_toldChloe:
-       add "images/v10/scene 33/fr6mudwrestlingwithnoraandchloe.webp"
+        add "images/v10/scene 33/fr6mudwrestlingwithnoraandchloe.webp"
     else:
         add "images/v10/scene 33/fr6mudwrestling.webp"
 
