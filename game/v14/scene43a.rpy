@@ -90,7 +90,7 @@ label v14s43a:
 
     pause 0.75
 
-    if emilyrs:
+    if v14_emily_ily:
         play sound "sounds/vibrate.mp3"
 
         scene v14s43_3 # TPP. Show MC walking through the school, close to where he was in v14s43_2, grabbing his phone, slightly confused, mouth closed
