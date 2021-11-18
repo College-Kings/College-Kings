@@ -692,3 +692,11 @@ default v14s51_take_900 = False
 default v14s51_take_diary = False
 default v14s51_take_money = False
 default v14_lauren_helps_lindsey = False
+
+# 15.0
+default AutumnLunchBreak = False
+default AutumnFreeMug = False
+default SmokedWithAutumn = False
+default TraitAnimalLover = False
+default TraitPrankster = False
+default TraitHardass = False
