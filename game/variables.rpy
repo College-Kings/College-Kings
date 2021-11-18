@@ -700,3 +700,5 @@ default SmokedWithAutumn = False
 default TraitAnimalLover = False
 default TraitPrankster = False
 default TraitHardass = False
+default v15_DamageLindseyRep = False
+default v15_LessChickTuition = False
