@@ -1031,8 +1031,7 @@ label v11_apes_manhunt:
                     scene v11amh51 # TPP. Show MC on the horse, the horse is rearing, MC is in control, smiling, mouth open
                     with dissolve
 
-                    if True:
-                        $ grant_achievement("hold_your_horses")
+                    $ grant_achievement("hold_your_horses")
                     u "Woah! *Laughs* Guess he is having a good time."
 
                     scene v11amh44b # FPP. Same as v11amh44, Cameron is slightly annoyed, mouth open
@@ -1092,8 +1091,7 @@ label v11_apes_manhunt:
                     scene v11amh51a # TPP. Same as v11amh51, but MC is not in control, he is unbalanced on the horse, mouth closed, startled face
                     with dissolve
 
-                    if True:
-                        $ grant_achievement("off_your_high_horse")
+                    $ grant_achievement("off_your_high_horse")
                     hor "NEIGHHHHHH!!!"
 
                     scene v11amh51b # TPP. Same as v11amh51, but MC is midair, startled expression, mouth open
@@ -1137,8 +1135,7 @@ label v11_horse_fall:
     scene v11amh51a
     with dissolve
 
-    if True:
-        $ grant_achievement("off_your_high_horse")
+    $ grant_achievement("off_your_high_horse")
     u "(I can't balance.)"
 
     scene v11amh51b

@@ -168,8 +168,7 @@ label v13s15a:
 
         menu:
             "Stay with Riley":
-                if True:
-                    $ grant_achievement("gentlemen_prefer_gingers")
+                $ grant_achievement("gentlemen_prefer_gingers")
                 u "Is that even a question?"
 
                 scene v13s15a_9 # TPP. Show MC removing his pants, shirt already off, smiling, mouth closed

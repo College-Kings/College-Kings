@@ -859,8 +859,7 @@ label v14s51_continue:
             scene v14s51_40
             with dissolve
 
-            if True:
-                $ grant_achievement("grand_theft_chloe")
+            $ grant_achievement("grand_theft_chloe")
 
             u "*Whispers* I also found this..."
 

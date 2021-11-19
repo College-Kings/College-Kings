@@ -820,8 +820,7 @@ label fr5aubrey1:
                     scene v9slake17vid # mc and aubrey make out animation
                     with dissolve
                     
-                    if True:
-                        $ grant_achievement("relaxing_day")
+                    $ grant_achievement("relaxing_day")
 
                     " "
 

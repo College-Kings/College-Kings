@@ -774,8 +774,7 @@ label v14s37:
         scene v14s37_10g
         with dissolve
 
-        if True:
-            $ grant_achievement("wrath_of_pen")
+        $ grant_achievement("wrath_of_pen")
 
         pe "Okay, that's it!"
 

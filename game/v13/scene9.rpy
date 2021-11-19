@@ -370,8 +370,7 @@ label v13s9:
             scene v13s9_12e
             with dissolve
 
-            if True:
-                $ grant_achievement("indecisive")
+            $ grant_achievement("indecisive")
             u "Honestly, I'm going into the grey-zone on this one. I don't want anyone, you or her, to feel betrayed."
 
             scene v13s9_12f

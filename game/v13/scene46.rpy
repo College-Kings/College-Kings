@@ -41,8 +41,7 @@ label v13s46:
             with dissolve
 
             if v13_told_emmy_city:
-                if True:
-                    $ grant_achievement("urbanizer_womanizer")
+                $ grant_achievement("urbanizer_womanizer")
 
             u "I don't hate being outside, but... *Chuckles* I'm definitely a city person."
 
@@ -450,8 +449,7 @@ label v13s46:
             scene v13s46_13b
             with dissolve
 
-            if True:
-                $ grant_achievement("voyeur")
+            $ grant_achievement("voyeur")
             u "Okay, lead the way. *Chuckles*"
 
             scene v13s46_15 # FPP. MC and Lauren sneak closer to the couple, just laurens head is visible full smile mouth open looking at the couple and find them fully nude in the arch sex position, male body should resemble an arch, google search sex position 173 arch, first google image for reference

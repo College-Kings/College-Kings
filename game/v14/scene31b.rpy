@@ -167,8 +167,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
             with dissolve
 
             if chloegf:
-                if True:
-                    $ grant_achievement("built_on_trust")
+                $ grant_achievement("built_on_trust")
             
             u "*Sighs* I trust that you'll do what's best."
 
