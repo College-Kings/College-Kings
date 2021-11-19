@@ -215,9 +215,11 @@ label v12_follow_chris:
             $ v12_help_chris += 1
             if v12_help_chris >= 4:
                 if joinwolves:
-                    $ grant_achievement("brotherhood_of_men")
+                    if True:
+                        $ grant_achievement("brotherhood_of_men")
                 else:
-                    $ grant_achievement("best_frenemies")
+                    if True:
+                        $ grant_achievement("best_frenemies")
             
             $ add_point(KCT.BRO)
             scene v12chf4l # FPP. Same as v12chf4a, different pose

@@ -101,7 +101,8 @@ label penelope_dorm_hack:
 
 label help_pen:
 
-    $ grant_achievement("thick_and_thin")
+    if True:
+        $ grant_achievement("thick_and_thin")
 
     u "If you want, I can talk to the dean on Monday on your behalf. I'm sure we could work something out if we tried and be smart about it."
 

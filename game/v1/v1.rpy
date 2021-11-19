@@ -1,12 +1,14 @@
 init python:
     # Emily's messages
     def v1_reply1():
-        grant_achievement("no_hard_feelings")
+        if True:
+            grant_achievement("no_hard_feelings")
 
         emily.messenger.newMessage(_("Cool :)"))
 
     def v1_reply2():
-        grant_achievement("open_wound")
+        if True:
+            grant_achievement("open_wound")
 
         add_point(KCT.TROUBLEMAKER)
         emily.messenger.newMessage(_("Ugh :/"))
@@ -1148,7 +1150,8 @@ label starta: #for compatibility only
                 scene s56no1a
                 with dissolve
 
-                $ grant_achievement("keep_it_moving")
+                if True:
+                    $ grant_achievement("keep_it_moving")
 
                 u "Actually, I knew that. I just wanted to talk to you 'cause you're really cute."
 
@@ -2755,7 +2758,9 @@ label aw_bd:
                 scene s90
                 with dissolve # kiss
                 $ v1_kissLauren = True
-                $ grant_achievement("romeo")
+                
+                if True:
+                    $ grant_achievement("romeo")
 
                 play sound "sounds/kiss.mp3"
 
@@ -3462,7 +3467,8 @@ label v1_freeRoam2_mason:
             scene fr2ma1a
             with dissolve
 
-            $ grant_achievement("big_mouth")
+            if True:
+                $ grant_achievement("big_mouth")
                 
             u "Yeah, he better watch out, or I'll kick his ass."
 
