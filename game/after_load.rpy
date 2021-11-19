@@ -108,6 +108,7 @@ label after_load:
         # Playable Character
         mc.profile_picture = profile_pictures[0]
 
+
         # NonPlayable Character
         if isinstance(chloe, CustomCharacter):
             char_points = chloe.points
@@ -476,6 +477,8 @@ label after_load:
         try: kiwiiPost1
         except NameError: kiwii_firstTime = False
 
+
+        # v12 Renpy Fixes:
         chloe.name = "Chloe"
         amber.name = "Amber"
         penelope.name = "Penelope"

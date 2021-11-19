@@ -159,6 +159,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
     menu:
         "Trust Chloe":
             $ v14s31bTrustChloe = True
+            $ v14_ApesPostChloePics = False
             $ add_point(KCT.BOYFRIEND)
             $ chloe.points +=1
 

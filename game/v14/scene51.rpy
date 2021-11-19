@@ -581,7 +581,7 @@ label v14s51_continue:
                     scene v14s51_32
                     with dissolve
 
-                    u "(No time for peeking, [name]. Don't even think about it. FOCUS []].)"
+                    u "(No time for peeking, [name]. Don't even think about it. FOCUS!)"
 
             scene v14s51_33 # FPP. Show MC opening the Bathroom window.
             with dissolve
