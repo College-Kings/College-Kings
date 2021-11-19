@@ -28,6 +28,7 @@ default enemyhealth = 0
 default previous_location = ""
 
 # KCT
+default locked_kct = False
 default kct = "confident"
 default sortedKCT = ["confident", "loyal", "popular"]
 
