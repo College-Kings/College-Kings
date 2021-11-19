@@ -455,7 +455,7 @@ screen main_menu():
         imagebutton:
             idle "gui/mainMenu/pathIdle.webp"
             hover "gui/mainMenu/pathHover.webp"
-            action ShowMenu("spoiler2")
+            action ShowMenu("spoiler_path_builder")
 
         hbox:
             spacing 23
