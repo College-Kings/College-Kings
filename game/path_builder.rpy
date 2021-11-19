@@ -1,4 +1,87 @@
-screen spoiler2():
+init python:
+    pb_item = []
+    pb_catagories = []
+
+    class PathBuilderCatagories(Enum):
+        FRATERNITY = "Step 1: Pick a fraternity"
+        KCT = "Step 2: Pick your starting KCT"
+        GIRL = "Step 3: Pick which girls you want to be romantically involved with"
+        START_LOCATION = "Step 4: Pick your starting location"
+    
+
+    class PathBuilderItem:
+        def __init__(self, catagory, name, variables=None, values=None, func="set_variables"):
+            self.catagory = catagory
+            self.name = name
+            self.func = func
+
+            if variables is None: self.variables = []
+            elif isinstance(variables, list): self.variables = variables
+            else: self.variables = [variables]
+
+            if values is None: self.values = []
+            elif isinstance(values, list): self.values = values
+            else: self.values = [values]
+
+            pb_item.append(self)
+
+        def set_variables(self):
+            for variable, value in zip(self.variables, self.values):
+                setattr(store, variable, value)
+
+        def toggle_variables(self):
+            for variable in self.variables:
+                if getattr(store, variable):
+                    setattr(store, variable, False)
+                else:
+                    setattr(store, variable, True)
+
+
+    def get_catagory(step):
+        for catagory in PathBuilderCatagories:
+            if catagory.value.startswith("Step {}".format(step)):
+                return catagory
+        return None
+
+
+define PB_WOLVES = PathBuilderItem(PathBuilderCatagories.FRATERNITY, "Wolves", "joinwolves", True)
+define PB_APES = PathBuilderItem(PathBuilderCatagories.FRATERNITY, "APES", "joinwolves", False)
+
+define PB_LOYAL = PathBuilderItem(
+    PathBuilderCatagories.KCT,
+    "Loyal",
+    ["kct", "bro", "boyfriend", "troublemaker"],
+    ["loyal", 2, 2, 0])
+define PB_POPULAR = PathBuilderItem(
+    PathBuilderCatagories.KCT,
+    "Popular",
+    ["kct", "bro", "boyfriend", "troublemaker"],
+    ["popular", 2, 0, 2])
+define PB_CONFIDENT = PathBuilderItem(
+    PathBuilderCatagories.KCT,
+    "Confident",
+    ["kct", "bro", "boyfriend", "troublemaker"],
+    ["confident", 0, 2, 2])
+
+define PB_CHLOE = PathBuilderItem(PathBuilderCatagories.GIRL, "Chloe", "chloegf", "toggle_variables")
+define PB_NORA = PathBuilderItem(PathBuilderCatagories.GIRL, "Nora", "norars", "toggle_variables")
+define PB_AUBREY = PathBuilderItem(PathBuilderCatagories.GIRL, "Aubrey", "aubreyrs", "toggle_variables")
+define PB_RILEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Riley", "rileyrs", "toggle_variables")
+define PB_LAUREN = PathBuilderItem(PathBuilderCatagories.GIRL, "Lauren", "laurenrs", "toggle_variables")
+define PB_PENELOPE = PathBuilderItem(PathBuilderCatagories.GIRL, "Penelope", "penelopers", "toggle_variables")
+define PB_AMBER = PathBuilderItem(PathBuilderCatagories.GIRL, "Amber", "amberrs", "toggle_variables")
+define PB_LINDSEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Lindsey", "lindseyrs", "toggle_variables")
+define PB_MS_ROSE = PathBuilderItem(PathBuilderCatagories.GIRL, "Ms Rose", "msrosers", "toggle_variables")
+define PB_SAMANTHA = PathBuilderItem(PathBuilderCatagories.GIRL, "Samantha", "v11_samantha_spa", "toggle_variables")
+define PB_JENNY = PathBuilderItem(PathBuilderCatagories.GIRL, "Jenny", "jennyrs", "toggle_variables")
+define PB_EMILY = PathBuilderItem(PathBuilderCatagories.GIRL, "Emily", "emilyrs", "toggle_variables")
+
+define PB_HOMECOMING = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Homecoming", "start_location", "v7_homecoming", "set_start_location")
+define PB_ACT_3 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Start of Act 3", "start_location", "v11_start", "set_start_location")
+define PB_ACT_4 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Start of Act 4", "start_location", "v14_start", "set_start_location")
+
+
+screen spoiler_path_builder():
     modal True
 
     add "images/darker.webp"
@@ -13,570 +96,137 @@ screen spoiler2():
             spacing 200
 
             textbutton "Yes":
-                action [Hide("spoiler2"), Show("pathBuilder")]
+                action [Hide("spoiler_path_builder"), Show("path_builder")]
 
             textbutton "No":
-                action Hide("spoiler2")
+                action Hide("spoiler_path_builder")
 
-screen pathBuilder():
-    tag menu
-    modal True
 
-    add "gui/path builder/path_builder_background.png"
+screen path_builder_base(header=""):
+    add "images/path builder/path_builder_background.png"
 
     text "PATH BUILDER":
         size 50
         align (0.5, 0.1)
 
     vbox:
-        spacing 50
-        pos (200,300)
+        spacing 20
+        pos (200, 300)
 
-        text "Step 1: Pick a fraternity"
+        text header
 
-        hbox:
-            spacing 75
+        transclude
 
-            vbox:
-                imagebutton:
-                    if joinwolves:
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action SetVariable("joinwolves", True)
-
-                text "Wolves":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-            vbox:
-                imagebutton:
-                    if not joinwolves:
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action SetVariable("joinwolves", False)
-
-                text "Apes":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-        hbox: 
-            yoffset -30
-            spacing 200
-
-            textbutton "BACK":        
-                xalign 0
-                action ShowMenu("main_menu")
-
-            textbutton "PICK KCT":          
-                xalign 1.0
-                action Show ("pathBuilder2")
-
-screen pathBuilder2():
+screen path_builder(catagory_step=1):
     tag menu
     modal True
 
-    add "gui/path builder/path_builder_background.png"
+    default catagory = get_catagory(catagory_step)
+    default items = [item for item in pb_item if item.catagory == catagory]
 
-    text "PATH BUILDER":
-        size 50
-        align (0.5, 0.1)
+    default start_location = "start"
 
-    vbox:
-        spacing 50
-        pos (200,300)
-
-        text "Step 2: Pick your starting KCT"
-
-        hbox:
-            spacing 75
-
-            vbox:
-                imagebutton:
-                    if kct == "loyal":
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action [SetVariable("kct", "loyal"), SetVariable("bro", 2),SetVariable("boyfriend", 2),SetVariable("troublemaker", 0)]
-
-                text "Loyal":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-            vbox:
-                imagebutton:
-                    if kct == "popular":
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action [SetVariable("kct", "popular"), SetVariable("bro", 2),SetVariable("boyfriend", 0),SetVariable("troublemaker", 2)]
-
-                text "Popular":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-            vbox:
-                imagebutton:
-                    if kct == "confident":
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action [SetVariable("kct", "confident"), SetVariable("bro", 0),SetVariable("boyfriend", 2),SetVariable("troublemaker", 2)]
-
-                text "Confident":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-        hbox:
-            spacing 20
-            yoffset -30
-            imagebutton:
-                if bro == 1000 or boyfriend == 1000 or troublemaker == 1000:
-                    idle "gui/path builder/pb_ticked.png"
-                else:
-                    idle "gui/path builder/pb_tick.png"
-                hover "gui/path builder/pb_ticked.png"
-                if kct == "confident": 
-                    action [SetVariable("bro", 0),SetVariable("boyfriend", 1000),SetVariable("troublemaker", 1000)]
-                elif kct == "popular": 
-                    action [SetVariable("bro", 1000),SetVariable("boyfriend", 0),SetVariable("troublemaker", 1000)]
-                else:
-                    action [SetVariable("bro", 1000),SetVariable("boyfriend", 1000),SetVariable("troublemaker", 0)]
-
-            text "Lock KCT (Prevent it from changing)":
-                yoffset -7
-
-
-        hbox: 
-            yoffset -30
-            spacing 200
-
-            textbutton "BACK":        
-                xalign 0
-                action Show ("pathBuilder")
-
-            textbutton "PICK RELATIONSHIPS":          
-                xalign 1.0
-                action Show ("pathBuilder3")
-
-screen pathBuilder3():
-    tag menu
-    modal True
-
-    add "gui/path builder/path_builder_background.png"
-
-    text "PATH BUILDER":
-        size 50
-        align (0.5, 0.1)
-
-    vbox:
-        pos (200,300)
-        spacing 50
-
-        text "Step 3: Pick which girls you want to be romantically involved with"
-
+    use path_builder_base(header=catagory.value):
         vpgrid:
             cols 4
             xspacing 50
             yspacing 20
-            ysize 700
-        
-            
 
+            for item in items:
+                vbox:
+                    imagebutton:
+                        idle "images/path builder/pb_button.png"
+                        hover "images/path builder/pb_selected.png"
+                        selected_idle "images/path builder/pb_selected.png"
+                        if item.func == "set_variables":
+                            selected all(getattr(store, variable) == value for variable, value in zip(item.variables, item.values))
+                            action Function(item.set_variables)
+                        elif item.func == "toggle_variables":
+                            selected all(getattr(store, variable) == True for variable in item.variables)
+                            action Function(item.toggle_variables)
+                        elif item.func == "set_start_location":
+                            action SetScreenVariable("start_location", item.values[0])
 
-            vbox:
+                    text item.name:
+                        align (0.5, 0.5)
+                        yoffset -70
+                        color "#000"
+
+        # Option to lock KCT
+        if catagory == PathBuilderCatagories.KCT:
+            hbox:
+                spacing 20
+                
                 imagebutton:
-                    if chloegf:
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action ToggleVariable("chloegf", True)
+                    idle "images/path builder/pb_tick.png"
+                    hover "images/path builder/pb_ticked.png"
+                    selected_idle "images/path builder/pb_ticked.png"
+                    action ToggleVariable("locked_kct")
 
-                text "Chloe":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
+                text "Lock KCT (Prevent it from changing)":
+                    yoffset -7
 
-            vbox:
-                imagebutton:
-                    if norars:
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action ToggleVariable("norars", True)
-
-                text "Nora":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-            vbox:
-                imagebutton:
-                    if aubreyrs:
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action ToggleVariable("aubreyrs", True)
-
-                text "Aubrey":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-            vbox:
-                imagebutton:
-                    if rileyrs:
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action ToggleVariable("rileyrs", True)
-
-                text "Riley":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-
-            vbox:
-                imagebutton:
-                    if laurenrs:
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action ToggleVariable("laurenrs", True)
-
-                text "Lauren":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-
-            vbox:
-                imagebutton:
-                    if penelopers:
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action ToggleVariable("penelopers", True)
-
-                text "Penelope":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-
-            vbox:
-                imagebutton:
-                    if amberrs:
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action ToggleVariable("amberrs", True)
-
-                text "Amber":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-
-            vbox:
-                imagebutton:
-                    if lindseyrs:
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action ToggleVariable("lindseyrs", True)
-
-                text "Lindsey":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-
-            vbox:
-                imagebutton:
-                    if msrosers:
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action ToggleVariable("msrosers", True)
-
-                text "Ms. Rose":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-            vbox:
-                imagebutton:
-                    if v11_samantha_spa:
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action ToggleVariable("v11_samantha_spa", True)
-
-                text "Samantha":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-            vbox:
-                imagebutton:
-                    if jennyrs:
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action ToggleVariable("jennyrs", True)
-
-                text "Jenny":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-
-            vbox:
-                imagebutton:
-                    if emilyrs:
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action ToggleVariable("emilyrs", True)
-
-                text "Emily":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-        
         hbox: 
-            yoffset -300
             spacing 200
 
-            textbutton "BACK":        
+            textbutton "BACK":
                 xalign 0
-                action Show ("pathBuilder2")
+                selected False
+                if catagory_step > 1:
+                    action Show("path_builder", None, catagory_step - 1)
+                else:
+                    action ShowMenu("main_menu")
 
-            textbutton "PICK STARTING LOCATION":          
+            textbutton "CONTINUE":          
                 xalign 1.0
-                action Show ("pathBuilder4")
+                selected False
+                if catagory_step < len(PathBuilderCatagories):
+                    action Show("path_builder", None, catagory_step + 1)
+                elif start_location == "v7_homecoming":
+                    action Show("pb_select_homecoming_date")
+                else:
+                    action Start(start_location)
 
-screen pathBuilder4():
+
+screen pb_select_homecoming_date():
     tag menu
     modal True
 
-    add "gui/path builder/path_builder_background.png"
+    default items = [
+        ["Chloe", "hcGirl", "chloe"],
+        ["Riley", "hcGirl", "riley"],
+        ["Lauren", "hcGirl", "lauren"],
+        ["Penelope", "hcGirl", "penelope"],
+        ["Emily", "hcGirl", "emily"],
+        ["Amber", "hcGirl", "amber"],
+    ]
 
-    text "PATH BUILDER":
-        size 50
-        align (0.5, 0.1)
-
-    vbox:
-        spacing 50
-        pos (200,300)
-
-        text "Step 4: Pick your starting location"
-
-        hbox:
-            spacing 75
-
-            vbox:
-                imagebutton:
-                    if start_location == "v7_homecoming":
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action SetVariable("start_location", "v7_homecoming")
-
-                text "Homecoming":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-            vbox:
-                imagebutton:
-                    if start_location == "v11_start":
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action SetVariable("start_location", "v11_start")
-
-                text "Start of Act 3":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-            vbox:
-                imagebutton:
-                    if start_location == "v14_start":
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action SetVariable("start_location", "v14_start")
-
-                text "Start of Act 4":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-        hbox: 
-            yoffset -30
-            spacing 200
-
-            textbutton "BACK":        
-                xalign 0
-                action Show ("pathBuilder3")
-
-            if start_location == "v7_homecoming":
-                textbutton "PICK DATE":          
-                    xalign 1.0
-                    action Show ("pathBuilder5")
-
-            else:
-                textbutton "START GAME":          
-                    xalign 1.0
-                    action Start (start_location)
-
-screen pathBuilder5():
-    tag menu
-    modal True
-
-    add "gui/path builder/path_builder_background.png"
-
-    text "PATH BUILDER":
-        size 50
-        align (0.5, 0.1)
-
-    vbox:
-        pos (200,300)
-        spacing 50
-
-        text "Step 5: Pick your homecoming date"
-
+    use path_builder_base(header="Step 5: Pick your homecoming date"):
         vpgrid:
             cols 4
             xspacing 50
             yspacing 20
-            ysize 700
-        
-            
 
+            for name, variable, value in items:
+                vbox:
+                    imagebutton:
+                        idle "images/path builder/pb_button.png"
+                        hover "images/path builder/pb_selected.png"
+                        selected_idle "images/path builder/pb_selected.png"
+                        action ToggleVariable(variable, value)
 
-            vbox:
-                imagebutton:
-                    if hcGirl == "chloe":
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action ToggleVariable("hcGirl", "chloe")
-
-                text "Chloe":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-            vbox:
-                imagebutton:
-                    if hcGirl == "riley":
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action ToggleVariable("hcGirl", "riley")
-
-                text "Riley":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-            vbox:
-                imagebutton:
-                    if hcGirl == "lauren":
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action ToggleVariable("hcGirl", "lauren")
-
-                text "Lauren":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-            vbox:
-                imagebutton:
-                    if hcGirl == "penelope":
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action ToggleVariable("hcGirl", "penelope")
-
-                text "Penelope":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-            vbox:
-                imagebutton:
-                    if hcGirl == "emily":
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action ToggleVariable("hcGirl", "emily")
-
-                text "Emily":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
-
-            vbox:
-                imagebutton:
-                    if hcGirl == "amber":
-                        idle "gui/path builder/pb_selected.png"
-                    else:
-                        idle "gui/path builder/pb_button.png"
-                    hover "gui/path builder/pb_selected.png"
-                    action ToggleVariable("hcGirl", "amber")
-
-                text "Amber":
-                    align (0.5, 0.5)
-                    yoffset -70
-                    color "#000"
+                    text name:
+                        align (0.5, 0.5)
+                        yoffset -70
+                        color "#000"
 
         hbox: 
-                yoffset -450
-                spacing 200
+            spacing 200
 
-                textbutton "BACK":        
-                    xalign 0
-                    action Show ("pathBuilder4")
+            textbutton "BACK":        
+                xalign 0
+                action Show("path_builder", catagory_step=3)
 
-                textbutton "START GAME":          
-                    xalign 1.0
-                    action Start (start_location)
+            textbutton "CONTINUE":          
+                xalign 1.0
+                action Start("v7_homecoming")
