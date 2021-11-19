@@ -45,7 +45,7 @@ init python:
 
 
 define PB_WOLVES = PathBuilderItem(PathBuilderCatagories.FRATERNITY, "Wolves", "joinwolves", True)
-define PB_APES = PathBuilderItem(PathBuilderCatagories.FRATERNITY, "APES", "joinwolves", False)
+define PB_APES = PathBuilderItem(PathBuilderCatagories.FRATERNITY, "Apes", "joinwolves", False)
 
 define PB_LOYAL = PathBuilderItem(
     PathBuilderCatagories.KCT,
