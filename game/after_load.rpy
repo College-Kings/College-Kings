@@ -477,6 +477,7 @@ label after_load:
         try: kiwiiPost1
         except NameError: kiwii_firstTime = False
 
+
         # v12 Renpy Fixes:
         chloe.name = "Chloe"
         amber.name = "Amber"
