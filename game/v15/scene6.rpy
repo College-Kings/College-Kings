@@ -1,6 +1,6 @@
 # SCENE 6: School hallway towards library
 # Locations: School hallway
-# Characters: MC (Outfit: 5)
+# Characters: MC (Outfit: 5), Chloe (Outfit: 2)
 # Time: Friday
 
 
